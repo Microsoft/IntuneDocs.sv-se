@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0ea421c63cbb6c2228ea94bf82d795ece01f46ac
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: fd58fae2f48791e8c63b9391a825838040b1202f
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150332"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863118"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Ta bort enheten från företagsportalen
 
@@ -30,18 +30,19 @@ Om du inte längre vill att enheten ska hanteras av ditt företag eller din orga
 
 Så här tar du bort din enhet:
 
-1. På [webbplatsen för företagsportalen](https://go.microsoft.com/fwlink/?linkid=2010980) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) väljer du knappen __Meny__ > __Enheter__.  
 
-   ![En bild av webbplatsen för företagsportalen med en utökad sidomeny till vänster på skärmen med knapparna Start, Alla appar, Mina enheter, Support och Logga ut.](/media/iwp-expanded-sidebar.png)
+2. Välj den enhet som du vill ta bort.  
 
-2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill ta bort.
+    ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/rename-reset-device-step2-1808.png) 
 
-    ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Välj **Ta bort**. Om borttagningsalternativet inte visas längst upp på sidan väljer du **Mer (…)** > **Ta bort**.  
 
-3. Enheten öppnas i ett popup-fönster. Klicka på knappen **Ta bort**.
+   ![Sidan med enhetsinformation för en vald enhet på webbplatsen för företagsportalen, med en lista över länkar längst upp som visar Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/rename-reset-device-1808.png)  
+  
 
-   ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
+    ![Närbild på ikonen Mer, markerad med en röd pil.](./media/rename-reset-device-step3-more-1808.png)   
 
-4. Läs varningsmeddelandet och tryck sedan på **Ta bort** för att ta bort enheten från företagsportalen.
+4. Ett meddelande visas som varnar dig om att du är på väg att ta bort enheten. Bekräfta åtgärden genom att välja **Ta bort**.  
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

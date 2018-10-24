@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d42133d8a2e52300a2414de9105db2ef26bae445
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: 635853cb744395e6ae519985eaed62b53e88578e
+ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799684"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307431"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -91,9 +91,7 @@ Alla appar som har integrerats med [Intune App-SDK](/intune/app-sdk) eller inslu
 Intune markerar all data i appen som "företag" eller "personligt." Data anses som "företagets" när det kommer från en företagsplats. För Office-apparna betraktar Intune följande platser som företagets: e-post (Exchange) eller molnlagring (OneDrive-app med ett konto för OneDrive för företag).
 
 **Vilka är de ytterligare krav som ställs för användning av Skype för företag?**<br></br>
-Se licenskraven för [Skype för företag](https://products.office.com/skype-for-business/it-pros).
-  >[!NOTE]
-  > Skype för företag-mobilappen har för närvarande endast stöd för Skype för företag – Online.
+Se licenskraven för [Skype för företag](https://products.office.com/skype-for-business/it-pros). Skype för företag (SfB) hybrid och lokala konfigurationer, se [Hybrid Modern autentisering för SfB och Exchange blir allmänt tillgängliga](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) och [Modern autentisering för SfB OnPrem med AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), respektive.
 
 ## <a name="app-protection-features"></a>Appskyddsfunktioner
 

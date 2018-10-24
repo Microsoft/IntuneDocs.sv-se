@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/02/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8abaef622fcf633eecde3a2bb2ee261cb7c8fc9e
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b39afeaf6daf8b08c58becd0b4af07299bd79e7a
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330270"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102007"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -31,7 +31,8 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att ge anpassade konf
 När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare och alla enheter**. 
 
 >[!NOTE]
->Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen med inbyggda optimeringar för att förenkla för dig. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du själv har skapat.
+>Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen med inbyggda optimeringar för att förenkla för dig. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du själv har skapat.<p></p>
+>Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.
 
 När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen kan du även välja de specifika grupper som du vill exkludera. Mer information finns i [Inkludera och exkludera apptilldelningar i Microsoft Intune](apps-inc-exl-assignments.md).
 
@@ -58,7 +59,7 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 8.  I fönstret **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**.
 9. Välj **Format för konfigurationsinställningar**. Välj något av följande för att lägga till XML-information:
     - **Använd Configuration Designer**
-    - **Ange XML-data**<br></br>
+    - **Ange XML-data**<br><br>
     Information om hur du använder Configuration Designer finns i [Använda Configuration Designer](#use-configuration-designer). Information om hur du anger XML-data finns i [Ange XML-data](#enter-xml-data). 
 10. När du har lagt till XML-informationen väljer du **OK** och sedan väljer du **Lägg till** för att lägga till konfigurationsprincipen. Översiktsfönstret för konfigurationsprincipen visas.
 11. Välj **Tilldelningar** för att visa alternativen för att inkludera och exkludera. 
@@ -95,6 +96,17 @@ Microsoft Intune ger konfigurationsinställningar som är unika för en app. Du 
 2. Välj **Ta bort**.
 
 Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för andra ändamål.
+
+### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Tillåt endast konfigurerade organisationskonton i appar med flera identiteter 
+
+Använd följande nyckel-/värdepar för Android-enheter:
+
+| **Nyckel** | IntuneMAMAllowedAccountsOnly |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Värden** | <ul><li>**Aktiverad**: Det enda kontot med behörighet är det hanterade användarkonto som definierats av nyckeln [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Inaktiverad** (eller ett värde som inte är en skiftlägesokänslig matchning till **aktiverad**): Alla konton är tillåtna.</li></ul> |
+
+   > [!NOTE]
+   > Du måste använda OneDrive för iOS 10.34 eller senare och Outlook för iOS 2.99.0 eller senare, när endast konfigurerade organisationskonton med flera identiteter tillåts.
 
 ## <a name="enter-xml-data"></a>Ange XML-data
 

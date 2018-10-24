@@ -2,10 +2,10 @@
 title: Skapa en efterlevnadsprincip för Android-arbetsprofil i Microsoft Intune – Azure | Microsoft Docs
 description: Skapa eller konfigurera en enhetsefterlevnadsprincip i Microsoft Intune för Android-arbetsprofilenheter. Välj att tillåta jailbrokade enheter, ställ in godkänd hotnivå, kontrollera efter Google Play, ange lägsta och högsta operativsystemversion, välj dina lösenordskrav och tillåt program med separat inläsning.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 0c7f1c7c47f2fa4c950cbffeaf8fe274fe239a63
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905095"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828167"
 ---
 # <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Lägga till en efterlevnadsprincip för Android-arbetsprofilenheter i Intune
 
@@ -113,7 +113,11 @@ Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökni
 - **Blockera appar från okända källor:** Du behöver inte konfigurera den här inställningen eftersom Android-arbetsprofilenheter alltid begränsar installationer från okända källor.
 - **Körningsintegritet för företagsportalappen**: Kontrollerar om företagsportalappen har körningsmiljön standard installerad, är korrekt signerad, inte är i felsökningsläge och har installerats från en känd källa.
 - **Blockera USB-felsökning på enheten**: Du behöver inte konfigurera de här inställningarna eftersom USB-felsökning redan är inaktiverat på Android-arbetsprofilenheter.
-- **Lägsta säkerhetskorrigeringsnivå**: Välj den äldsta säkerhetskorrigeringsnivå som en enhet kan ha. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste anges i formatet `YYYY-MM-DD`.
+- **Lägsta säkerhetskorrigeringsnivå**: Välj den äldsta säkerhetskorrigeringsnivå som en enhet kan ha. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste anges i formatet *ÅÅÅÅ-MM-DD*.
+- **Begränsade appar**: Du kan begränsa appar genom att lägga till deras paket-ID:n till principen. Om en enhet sedan har appen installerad kommer enheten att markeras som ej kompatibel. 
+   - **Appnamn**: Ange ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t. 
+   - **Appsamlings-id**: Ange det unika samlings-ID:t för approvidern. För Android hämtas appsamlings-ID:t från appens butiks-URL. Exempel: Om appens URL i appbutiken är *https://play.google.com/store/apps/details?id=com.Slack* är appsamlings-ID:t *com.Slack*.
+
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/12/2018
+ms.date: 10/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 368c804fa044dc303b22e2ae9cf8d273d6cd051a
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 3478308e8e2c219631d0df864ca2add6cc57cda2
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231822"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075871"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -127,7 +127,10 @@ För att skapa de här principerna bläddrar du till **Klientappar** > **Appskyd
 
 ![Skärmbild av bladet Lägg till en princip där alternativet Rikta till alla typer av appar är valt](./media/app-protection-policies-target-all.png)
 
-För att iOS-appar ska anses vara ”hanterade” måste konfigurationsinställningen **IntuneMAMUPN** för princip distribueras för varje app. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+För iOS-krävs ytterligare appkonfigurationsinställningar för att rikta in appinställningar till appar på Intune-registrerade enheter:
+- **IntuneMAMUPN** måste konfigureras för alla MDM-hanterade program.  Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+- **IntuneMAMDeviceID** måste konfigureras för alla tredje parters LOB MDM-hanterade program. **IntuneMAMDeviceID** ska konfigureras till enhetens ID-token. Till exempel `key=IntuneMAMDeviceID, value={{deviceID}}`. Mer information finns i [Lägg till appkonfigurationsprinciper för hanterade iOS-enheter](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
+- Om bara **IntuneMAMDeviceID** är konfigurerat kan Intune App betrakta enheten som ohanterad.  
 
 > [!NOTE]
 > Läs [MAM protection policies targeted based on management state](whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.

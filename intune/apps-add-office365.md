@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b4905e637f7ef709c88371a41ec9275115d571e1
-ms.sourcegitcommit: ddf90877d1ea9da70fd0ef228560f455625e35ba
+ms.openlocfilehash: 95c9e2282336e565ddd5bd3cc4484776aa45a6eb
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46563253"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828405"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
@@ -106,7 +106,8 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
     - **Ta bort MSI från slutanvändarenheter** – Välj om du vill ta bort befintliga Office .MSI-appar från slutanvändarenheter. Installationen kommer inte lyckas om det finns redan befintliga .MSI-appar på slutanvändarenheter. Apparna som ska avinstalleras är inte begränsade till de appar som valts för installation i **Konfigurera appsviten**, utan alla Office-appar (MSI) tas bort från slutanvändarens enhet. Mer information finns i [Ta bort befintliga MSI-versioner av Office vid uppgradering till Office 365 ProPlus](https://docs.microsoft.com/en-us/deployoffice/upgrade-from-msi-version). 
     - **Godkänn applicensavtalet för slutanvändare**: Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
     - **Använd aktivering på delad dator**: Välj det här alternativet när flera användare delar en dator. Mer information finns i [översikt över delad aktivering för Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
-    - **Språk**: Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.
+    - **Språk**: Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet. <p></p>
+    Du kan distribuera ytterligare språk för Office 365 Pro Plus-appar som hanteras via Intune. I listan med tillgängliga språk står även **typen** av språkpaket med (kärnspråk, delspråk och språkverktyg). Gå till Azure Portal och välj **Microsoft Intune** > **Klientappar** > **Appar** > **Lägg till**. I listan **Apptyp** på bladet **Lägg till app** väljer du **Windows 10** under **Office 365 Suite**. Välj **Språk** på bladet **Inställningar för appsviten**. Mer information finns i [översikten över språkdistribution i Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 
 ## <a name="finish-up"></a>Slutför
 

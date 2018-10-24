@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b92a5c7bcddbecc438aa5e72989ab2302440da7a
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: 5bcaabd66a2a9a24c3ee3f7c49cf7689d1f60eed
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562892"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863152"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -61,6 +61,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | Inbyggd iOS-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Inbyggd Android-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Webbappar  | Webbapp  | Välj **Webblänk** som **apptyp** och ange sedan en giltig URL som pekar till webbappen.  |
+| Windows-app (Win32)  | Verksamhetsspecifik app  | Välj **Windows-app (Win32)** som **apptyp**, välj **appaketfilen** och välj sedan en installationsfil med tillägget **.intunewin**.  |
 
 Du kan lägga till en app i Microsoft Intune genom att välja **Klientappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. 
 
@@ -194,3 +195,4 @@ Information om hur du lägger till appar för varje plattform till Intune finns 
 - [Office 365-appar för Windows 10](apps-add-office365.md)
 - [Office 365-appar för macOS](apps-add-office365-macos.md)
 - [Inbyggda appar](apps-add-built-in.md)
+- [Win32-appar](apps-win32-app-management.md) 

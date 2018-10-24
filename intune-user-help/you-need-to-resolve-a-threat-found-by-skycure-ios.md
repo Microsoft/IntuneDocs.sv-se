@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: a4bdb394407155be8716cf8039f997f3905f3998
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 86cd3f37215ec42cc89c865136e6ecd5dc3b9c11
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148440"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863016"
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Lösa ett hot som hittas av Symantec Endpoint Protection Mobile
 
@@ -32,9 +32,9 @@ Symantec Endpoint Protection (SEP) Mobile är en tjänst för skydd mot mobila h
 * Synkronisera företagsfiler med OneDrive
 * Få åtkomst till företagsappar
 
-Den här artikeln beskriver hur du kan känna igen hotaviseringar från SEP Mobile och vad du kan göra för att lösa dem. 
+Den här artikeln beskriver hur du får åtkomst till företagets resurser när SEP Mobile identifierar ett säkerhets- eller apphot.  
 
-## <a name="resolve-virus-or-security-threat"></a>Lösa virus- eller säkerhetshot  
+## <a name="troubleshoot-a-virus-or-security-threat"></a>Felsöka ett virus- eller säkerhetshot
 
 1. Du får ett meddelande som liknar det i skärmbilden nedan när du försöker få åtkomst till företagets e-post eller webbplatser. Tryck på länken till **enhetshanteringsportalen** för att öppna [företagsportalens webbplats](https://portal.manage.microsoft.com/devices).
 
@@ -43,11 +43,13 @@ Den här artikeln beskriver hur du kan känna igen hotaviseringar från SEP Mobi
 2. Välj din enhet.  
 3. Läs varningen som visas under enheten. Den ger dig instruktioner för hur du öppnar SEP Mobile för att åtgärda virus- eller säkerhetshotet.    
 
-## <a name="resolve-an-app-threat"></a>Lösa ett apphot  
+    ![Exempel på skärmbild av enhetssidan i företagsportalen, som visar varningen från SEP Mobile.](./media/CP-lookout-virus-banner-1808.png)
+
+## <a name="troubleshoot-an-app-threat"></a>Felsöka ett apphot
 
 Om du installerar en app som ses som ett hot mot din enhet får du ett meddelande i appen SEP Mobile. Om den berörda appen finns kvar på enheten kan du inte komma åt företagsresurser.  
 
 Lös detta genom att välja appen i listan över hot i SEP Mobile. Följ sedan anvisningarna på skärmen för att ta bort och avinstallera appen.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).   
 

@@ -1,31 +1,31 @@
 ---
-title: Hantera Windows Holographic-enheter med Microsoft Intune – Azure | Microsoft Docs
-description: Med Microsoft Intune kan du slutföra olika aktiviteter på enheter som kör Windows Holographic for Business, inklusive att konfigurera företagsportalen, skapa en policy för efterlevnad, anpassa OMA-URI-inställningar, distribuera appar, kategorisera enheter i grupper, skapa profiler, begränsa enheter, aktivera programuppdateringar, definiera användningsvillkor, konfigurera inställningar för VPN och trådlöst nätverk, och använda Hello för företag.
+title: Använda Windows Holographic-enheter med Microsoft Intune – Azure | Microsoft Docs
+description: Med Microsoft Intune kan du hantera och slutföra olika aktiviteter på enheter som kör Windows Holographic for Business och HoloLens, inklusive att konfigurera företagsportalen, skapa en policy för efterlevnad, anpassa OMA-URI-inställningar, distribuera appar, kategorisera enheter i grupper, skapa profiler, begränsa enheter, aktivera programuppdateringar, definiera användningsvillkor, konfigurera inställningar för VPN och trådlöst nätverk, och använda Hello för företag.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/11/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 825ceb1eee8f6fdd38f8a203324ce3cad7291918
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 81a11ce35cbf0f256f59bf26d317933977750d6e
+ms.sourcegitcommit: b33ff64514abdc5e939ff59ea722b3704cd56c78
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43318024"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49065772"
 ---
-# <a name="customize-devices-running-windows-holographic-with-intune"></a>Anpassa enheter som kör Windows Holographic med Intune
+# <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda Windows Holographic- och HoloLens-enheter med Intune
 
-Microsoft Intune har stöd för enheter som kör Windows Holographic for Business, som till exempel [Microsoft HoloLens](https://docs.microsoft.com/en-us/hololens/).
+Microsoft Intune innehåller många funktioner för att hantera enheter som kör Windows Holographic for Business, såsom [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Du kan använda Intune för att bekräfta att enheterna är kompatibla med regler för din organisation och du kan anpassa enheten genom att lägga till en VPN- eller Wi-Fi-profil. En annan viktig funktion är att använda enheten som en Kiosk och köra en viss app eller en specifik uppsättning av appar.
 
-För att kunna hantera enheter som kör Windows Holographic med Microsoft Intune, måste du skapa en profil för uppgradering av utgåvan. Uppgraderingsprofilen uppgraderar enheter från Windows Holographic till Windows Holographic for Business. Du kan köpa Commercial Suite för att få licensen som krävs för uppgraderingen för Microsoft HoloLens. Mer information finns i [Uppgradera enheter som kör Windows Holographic till Windows Holographic for Business](holographic-upgrade.md).
+Aktiviteterna i den här artikeln hjälper dig att hantera, anpassa och skydda dina enheter som kör Windows Holographic for Business, inklusive programuppdateringar och använda Windows Hello för företag.
 
-Du kan använda uppgifterna i den här artikeln till att hantera och anpassa dina enheter som kör Windows Holographic for Business. Du kan till exempel hantera programuppdateringar, konfigurera VPN-inställningar och mycket mer.
+Om du vill använda Windows Holographic-enheter med Intune måste du skapa en profil för versionsuppgradering. Uppgraderingsprofilen uppgraderar enheter från Windows Holographic till Windows Holographic for Business. Du kan köpa Commercial Suite för att få licensen som krävs för uppgraderingen för Microsoft HoloLens. Mer information finns i [Uppgradera enheter som kör Windows Holographic till Windows Holographic for Business](holographic-upgrade.md).
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 

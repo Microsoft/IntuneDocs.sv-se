@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2018
+ms.date: 10/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 80b860810800ca887ac55de6fbfc41b2fded3b12
-ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
+ms.openlocfilehash: 48bf2e6daf05dba6baebbd49be45a17a5a56e820
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028740"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828303"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln beskrivs hur du kan konfigurera din infrastruktur och sedan skapa och tilldela SCEP-certifikatprofiler (Simple Certificate Enrollment Protocol) med Intune.
 
@@ -350,6 +348,113 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 5. Från listrutan **Profil** väljer du **SCEP-certifikat**.
 6. I fönstret **SCEP-certifikat** konfigurerar du följande inställningar:
 
+   - **Certifikattyp**: Välj **Användare** för användarcertifikat. Välj **Enhet** för användarlösa enheter, till exempel informationsdatorer. **Enhetscertifikat** är tillgängliga för följande plattformar:  
+     - iOS
+     - Windows 8.1 och senare
+     - Windows 10 och senare
+
+   - **Ämnesnamnets format**: Välj hur ämnesnamnet i certifikatbegäran ska skapas av Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
+
+        **Certifikattypen Användare**  
+
+        Du kan ta med användarens e-postadress i ämnesnamnet. Välj mellan:
+
+        - **Inte konfigurerat**
+        - **Allmänt namn**
+        - **Eget namn, inklusive e-post**
+        - **Eget namn som e-post**
+        - **IMEI (International Mobile Equipment Identity)**
+        - **Serienummer**
+        - **Anpassad**: När du väljer det här alternativet visas textrutan **Anpassad** också. Använd det här fältet om du vill ange ett anpassat format för ämnesnamnet, inklusive variabler. Två variabler stöds för det anpassade formatet: **Eget namn (cn)** och **E-post (e)**. **Eget namn (cn)** kan ställas in till någon av följande variabler:
+
+            - **CN={{UserName}}**: Användarens unika namn, till exempel janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}**: Ett ID som tilldelas när du registrerar en enhet i Azure Active Directory (AD). Detta ID används vanligtvis för att autentisera med Azure AD.
+            - **CN={{SERIALNUMBER}}**: Det unika serienumret (SN) som vanligtvis används av tillverkaren för att identifiera en enhet
+            - **CN={{IMEINumber}}**: Det unika IMEI (International Mobile Equipment Identity)-numret som används för att identifiera en mobiltelefon
+            - **CN={{OnPrem_Distinguished_Name}}**: En serie relativa unika namn som är avgränsade med kommatecken, till exempel `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+
+                Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
+
+            - **CN = {{onPremisesSamAccountName}}**: Administratörer kan synkronisera samAccountName attribut från Active Directory till Azure AD med Azure AD connect till ett attribut som kallas `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
+
+                Om du vill använda variabeln `{{onPremisesSamAccountName}}` måste du synkronisera användarattributet `onPremisesSamAccountName` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
+
+            Genom att kombinera en eller flera av dessa variabler och statiska strängar kan du skapa ett anpassat format för ämnesnamnet, till exempel:  
+
+            **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
+
+            I det här exemplet skapade du ett format som utöver variablerna CN och E använder strängar för värdena organisationsenhet, organisation, plats, delstat och land. [CertStrToName-funktionen](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beskriver den här funktionen och dess strängar som stöds.
+
+        **Certifikattypen Enhet**  
+
+        När du använder certifikattypen **Enhet** kan du också använda följande enhetscertifikatsvariabler för värdet:  
+
+        ```
+        "{{AAD_Device_ID}}",
+        "{{Device_Serial}}",
+        "{{Device_IMEI}}",
+        "{{SerialNumber}}",
+        "{{IMEINumber}}",
+        "{{AzureADDeviceId}}",
+        "{{WiFiMacAddress}}",
+        "{{IMEI}}",
+        "{{DeviceName}}",
+        "{{FullyQualifiedDomainName}}",
+        "{{MEID}}",
+        ```
+
+        Dessa variabler kan läggas till med statisk text i en textruta för anpassat värde. Till exempel DNS-attributet kan läggas till som `DNS = {{AzureADDeviceId}}.domain.com`.
+
+        > [!IMPORTANT]
+        >  - I den statiska texten för SAN fungerar inte klammerparenteser **{}**, pipe-symboler **|** eller semikolon **;**. 
+        >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}**.
+        >  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
+        >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
+
+
+   - **Alternativt namn för certifikatmottagare**: Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
+
+        **Certifikattypen Användare**  
+
+        Följande attribut är tillgängliga:
+
+        - E-postadress
+        - UPN (User Principal Name)
+
+            Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om ett klientcertifikat används för att autentisera mot en nätverksprincipserver, måste du ange alternativt mottagarnamn som UPN. 
+
+        **Certifikattypen Enhet**  
+
+        En textruta för tabellformat som du kan anpassa. Följande attribut är tillgängliga:
+
+        - DNS
+        - E-postadress
+        - UPN (User Principal Name)
+
+        Med certifikattypen **Enhet** kan du använda följande variabler för enhetscertifikat för värdet:  
+
+        ```
+        "{{AAD_Device_ID}}",
+        "{{Device_Serial}}",
+        "{{Device_IMEI}}",
+        "{{SerialNumber}}",
+        "{{IMEINumber}}",
+        "{{AzureADDeviceId}}",
+        "{{WiFiMacAddress}}",
+        "{{IMEI}}",
+        "{{DeviceName}}",
+        "{{FullyQualifiedDomainName}}",
+        "{{MEID}}",
+        ```
+
+        Dessa variabler kan läggas till med statisk text i textrutan för anpassat värde. Till exempel DNS-attributet kan läggas till som `DNS = {{AzureADDeviceId}}.domain.com`.
+
+        > [!IMPORTANT]
+        >  - I den statiska texten för SAN fungerar inte klammerparenteser **{}**, pipe-symboler **|** eller semikolon **;**. 
+        >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}**.
+        >  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
+        >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
+
    - **Certifikatets giltighetsperiod**: Du kan ange hur lång tid som ska återstå innan certifikatet går ut om du körde kommandot `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` på certifikatutfärdaren. Kommandot gör att du kan ställa in en anpassad giltighetsperiod.<br>Du kan ange ett värde som är lägre men inte högre än giltighetsperioden i certifikatmallen. Om giltighetsperioden i certifikatmallen till exempel är två år kan du ange ett värde på ett år, men inte fem år. Värdet måste också vara lägre än den återstående giltighetsperioden för certifikatutfärdaren. 
    - **Nyckellagringsprovider (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): Ange var nyckeln för certifikatet lagras. Välj något av följande värden:
      - **Registrera till nyckellagringsprovider för TPM (Trusted Platform Module) om TPM finns, annars till programvaruprovider för nyckellagring**
@@ -357,40 +462,17 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
      - **Registrera på Passport, rapportera annars fel (Windows 10 och senare)**
      - **Registrera till programvaruprovider för nyckellagring**
 
-   - **Format för namn på certifikatmottagare**: I listan kan du välja hur mottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om certifikatet avser en användare kan du ange användarens e-postadress i mottagarnamnet. Välj mellan:
-     - **Inte konfigurerat**
-     - **Allmänt namn**
-     - **Eget namn, inklusive e-post**
-     - **Eget namn som e-post**
-     - **IMEI (International Mobile Equipment Identity)**
-     - **Serienummer**
-     - **Anpassad**: När du väljer det här alternativet visas ett annat nedrullningsbart fält. Använd det här fältet för att ange ett anpassat format för namn på certifikatmottagaren. Två variabler stöds för det anpassade formatet: **Eget namn (cn)** och **E-post (e)**. **Eget namn (cn)** kan ställas in till någon av följande variabler:
-       - **CN={{UserName}}**: Användarens unika namn, till exempel janedoe@contoso.com
-       - **CN={{AAD_Device_ID}}**: Ett ID som tilldelas när du registrerar en enhet i Azure Active Directory (AD). Detta ID används vanligtvis för att autentisera med Azure AD.
-       - **CN={{SERIALNUMBER}}**: Det unika serienumret (SN) som vanligtvis används av tillverkaren för att identifiera en enhet
-       - **CN={{IMEINumber}}**: Det unika IMEI (International Mobile Equipment Identity)-numret som används för att identifiera en mobiltelefon
-       - **CN={{OnPrem_Distinguished_Name}}**: En serie relativa unika namn som är avgränsade med kommatecken, till exempel `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
-
-          Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
-
-       - **CN = {{onPremisesSamAccountName}}**: Administratörer kan synkronisera samAccountName attribut från Active Directory till Azure AD med Azure AD connect till ett attribut som kallas `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
-
-          Om du vill använda variabeln `{{onPremisesSamAccountName}}` måste du synkronisera användarattributet `onPremisesSamAccountName` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
-
-       Genom att kombinera en eller fler av dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. <br/> I det här exemplet skapade du ett format som utöver variablerna CN och E använder strängar för värdena organisationsenhet, organisation, plats, delstat och land. [CertStrToName-funktionen](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beskriver den här funktionen och dess strängar som stöds.
-
-- **Alternativt namn för certifikatmottagare**: Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om klientcertifikatet används för att autentisera mot en nätverksprincipserver måste du ange användarens huvudnamn som alternativt mottagarnamn.
-- **Nyckelanvändning**: Ange alternativen för nyckelanvändning för certifikatet. Alternativen är:
-  - **Nyckelchiffrering:** Tillåt bara nyckelutbyte när nyckeln är krypterad
-  - **Digital signatur:** Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
-- **Nyckelstorlek (bitar)**: Välj antalet bitar i nyckeln
-- **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för.
-- **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen.
-- **Utökad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
-- **Registreringsinställningar**
-  - **Tröskelvärde för förnyelse (%)**: Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
-  - **Webbadresser för SCEP-server**: Ange en eller flera webbadresser för NDES-servrar som utfärdar certifikat via SCEP.
-  - Välj **OK** och **Skapa** sedan din profil.
+   - **Nyckelanvändning**: Ange alternativen för nyckelanvändning för certifikatet. Alternativen är:
+     - **Nyckelchiffrering:** Tillåt bara nyckelutbyte när nyckeln är krypterad
+     - **Digital signatur:** Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
+   - **Nyckelstorlek (bitar)**: Välj antalet bitar i nyckeln
+   - **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för.
+   - **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen.
+   - **Utökad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
+   - **Registreringsinställningar**
+     - **Tröskelvärde för förnyelse (%)**: Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
+     - **Webbadresser för SCEP-server**: Ange en eller flera webbadresser för NDES-servrar som utfärdar certifikat via SCEP.
+     - Välj **OK** och **Skapa** sedan din profil.
 
 Profilen skapas och visas i fönstret med profillistan.
 

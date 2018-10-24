@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 841cfdeea1d33876c1b678a531c88663aea3759e
-ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
+ms.openlocfilehash: af1804f657041055467e302c4dc8913e1035749d
+ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403603"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48799667"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -138,6 +138,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     ![Skärmbild av installation av Företagsportalen med VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
 7. Om du väljer en token för **Installera Företagsportalen med VPP** kan du välja att låsa enheten i enkelt appläge (specifikt företagsportalappen) direkt efter att installationsassistenten har slutförts. Välj **Ja** för **Run Company Portal in Single App Mode until authentication** (Kör företagsportalappen i enkelt appläge till autentisering) för att ange detta alternativ. För att kunna använda enheten måste användaren först autentisera genom att logga in med företagsportalen.
+    Den här funktionen fungerar bäst med iOS 11.3.1 och senare. Med äldre versioner kan det ta lång tid att installera.
 
 8. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
 

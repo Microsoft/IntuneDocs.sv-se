@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdf927eff77b6a97e4c763ec0d75c7e44e4c6840
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: e7e740d03453a437572f8f960ed21927f4fcbace
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799594"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102046"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -29,7 +29,9 @@ ms.locfileid: "48799594"
 Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar till Android-arbetsprofilappar. Apputvecklaren måste exponera Android-hanterade konfigurationsinställningarna för att ange konfigurationsinställningar för appen. Tilldela appkonfigurationsprincipen till den grupp där du vill tillämpa inställningarna.  Principinställningarna används när appen söker efter dem, oftast första gången den körs.
 
 > [!Note]  
-> Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
+> Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.<p></p>
+> Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.<p></p>
+> För Microsoft Word, Microsoft Excel, Microsoft PowerPoint, måste du använda Android 16.0.9327.1000 och senare.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
@@ -69,6 +71,16 @@ Du kan välja följande alternativ om du väljer variabel som värdetyp:
 - User ID — till exempel **3ec2c00f-b125-4519-acf0-302ac3761822**
 - User Name – till exempel **Johan Danielsson**
 
+### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Tillåt endast konfigurerade organisationskonton i appar med flera identiteter 
+
+Använd följande nyckel-/värdepar för Android-enheter:
+
+| **Nyckel** | com.microsoft.intune.mam.AllowedAccountUPNs |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Värden** | <ul><li>Ett eller flera <code>;</code>-avgränsade UPN-namn.</li><li>Endast tillåtna konton är de hanterade användarkonton som anges av den här nyckeln.</li><li> För Intune-registrerade enheter, kan <code>{{userprincipalname}}</code>-token användas för att representera det registrerade användarkontot.</li></ul> |
+
+   > [!NOTE]
+   > Du måste använda Outlook för Android 2.2.222 eller senare, när endast konfigurerade organisationskonton med flera identiteter tillåts. 
 
 ## <a name="enter-the-json-editor"></a>Gå in i JSON-redigeraren
 

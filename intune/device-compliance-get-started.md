@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3da8a3f13e592483513daf81bc5ff1ad8af0f7e6
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 151a445bf7c5c17f8ff1b5ee403df8744f2d8ba6
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268914"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102063"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -153,7 +153,7 @@ Du kan även använda policyer för enhetsefterlevnad utan villkorlig åtkomst. 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sätt att distribuera policyer för efterlevnad för enheter
 Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om alla användarens enheter uppfyller efterlevnadskraven.
 
-**Inställningar för policyer för efterlevnad** (Azure Portal > Enhetsefterlevnad) innefattar:
+**Standardinställningar för policyer för efterlevnad** (Azure Portal > Enhetsefterlevnad) innefattar:
 
 - **Markera enheter som saknar en policy för efterlevnad som**: Den här egenskapen har två värden:
 

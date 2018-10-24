@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: fdd33ea0b5d8189712c6390861131c684cfaa67d
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313504"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101961"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurera iOS-uppdateringsprinciper i Intune
 
@@ -23,7 +23,7 @@ Med programvaruuppdateringsprinciper kan du tvinga övervakade iOS-enheter att a
 
 Enheten checkar in med Intune ungefär var 8:e timme. Om en uppdatering är tillgänglig och den aktuella tiden inte är en begränsad tid laddar enheten ned och installerar den senaste uppdateringen för operativsystemet. Det krävs inga användaråtgärder för att uppdatera enheten. Principen förhindrar inte att en användare uppdaterar operativsystemet manuellt.
 
-Den här funktionen stöder enheter som kör iOS 10.3 och senare.
+Den här funktionen stöder enheter som kör iOS 10.3 och senare versioner. Fördröjningsinställningen är tillgänglig i iOS 11.3 och senare versioner.
 
 ## <a name="configure-the-policy"></a>Konfigurera principen
 1. Logga in på [Azure Portal](https://portal.azure.com).

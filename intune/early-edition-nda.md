@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/17/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0f6447f4a5cfb2638278a59414e83f744adb8c81
-ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
+ms.openlocfilehash: e37a45122ab4950e2a85cc1c6f6696759d429a3f
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45978271"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828286"
 ---
-# <a name="the-early-edition-for-microsoft-intune---september-2018"></a>Den tidiga utgåvan för Microsoft Intune – september 2018
+# <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Den tidiga utgåvan för Microsoft Intune – Oktober 2018
 
 > [!Note]
 > Meddelande om sekretessavtal: Följande ändringar håller på att utvecklas för Intune. Den här informationen har mycket begränsad spridning, i enlighet med sekretessavtalet. Sprid inte den här informationen vidare på sociala medier eller offentliga webbplatser, till exempel Twitter, UserVoice, Reddit och så vidare. 
@@ -39,35 +39,63 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
  
 ## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
 
-<!-- 1809 start -->
+<!-- 1810 start -->
 
-### <a name="user-account-access-of-intune-apps-on-managed-android-and-ios-devices-----1248496----"></a>Åtkomst till användarkonto för Intune-appar på hanterade Android- och iOS-enheter <!-- ! 1248496  -->
+### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Använd Microsofts rekommenderade inställningar med säkerhetsbaslinjer <!-- 2055484 -->
+Intune integrerar med andra tjänster som fokuserar på säkerhet, inklusive Windows Defender ATP och Office 365 ATP. Kunder efterfrågar en gemensam strategi och en sammanhängande uppsättning säkerhetsarbetsflöden från slutpunkt till slutpunkt för alla Microsoft 365-tjänster. Vårt mål är att optimera strategier och skapa lösningar som kan hantera säkerhetsåtgärder och vanliga administratörsuppgifter. I Intune vill vi uppnå det här målet genom att publicera en uppsättning Microsoft-rekommenderade ”säkerhetsbaslinjer” (**Intune** > **Security baselines** ((Säkerhetsbaslinjer)).  En administratör kommer att kunna skapa säkerhetsprinciper direkt från dessa baslinjer, och sedan distribuera dem till sina användare. De kan också anpassa rekommendationerna om bästa praxis för att uppfylla behoven i deras organisation. Intune kontrollerar att enheterna uppfyller baslinjerna och meddelar administratören om användare eller enheter inte uppfyller efterlevnadskraven.
 
-Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. 
+### <a name="remove-ability-for-admins-to-wipe-personal-devices-and-reset-passcodes----2934699---"></a>Administratörer kan inte rensa personliga enheter och återställa lösenord <!-- 2934699 -->
+För att användarna inte ska behöva oroa sig för att företagets administratörer rensar deras personliga enheter har fjärråtgärderna för [rensning](devices-wipe.md#wipe) och [lösenordsåterställning](device-passcode-reset.md) inaktiverats för personliga enheter. Byt typen av enhetsägarskap till företagsägd enhet om du vill aktivera dessa åtgärder för enheter som ägs av organisationen.
 
-### <a name="create-dns-suffixes-in-vpn-configuration-profiles-on-devices-running-windows-10----1333668---"></a>Skapa DNS-suffix i VPN-konfigurationsprofiler på enheter som kör Windows 10 <!-- 1333668 -->
-När du skapar en profil för VPN-enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  plattform: **Windows 10 och senare** > profiltyp: **VPN**), anger du vissa DNS-inställningar. Du kan även ange flera **DNS-suffix** i Intune. När du använder DNS-suffix, kan du söka efter en nätverksresurs med dess korta namn i stället för det fullständiga domännamnet (FQDN). I och med den här uppdateringen kan du ändra ordningen på DNS-suffix i Intune.
-[Windows 10-VPN-inställningar](vpn-settings-windows-10.md#dns-settings) visar en lista över aktuella DNS-inställningar.
-Gäller för: Windows 10-enheter
+### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices----1048100---"></a>Autopilot-stöd för Azure Active Directory-anslutna hybridenheter <!-- 1048100 -->
+Du kan konfigurera Azure Active Directory-anslutna hybridenheter med hjälp av Autopilot. Enheterna måste vara anslutna till organisationens nätverk för att du ska kunna använda Autopilot-hybridfunktionen.
 
-### <a name="support-for-always-on-vpn-for-android-enterprise-work-profiles----1333705---"></a>Stöd för ständig VPN för Android-arbetsprofiler <!-- 1333705 -->
-Du kan använda ständiga VPN-anslutningar på Android-företagsenheter med hanterade arbetsprofiler. Ständiga VPN-anslutningar förblir anslutna eller återansluter omedelbart när användaren låser upp sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. Du kan också placera anslutningen i ”låst” läge, vilket blockerar all nätverkstrafik tills VPN-anslutningen aktiveras.
-Inställningar för Ständig VPN finns i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android-företag** som plattform > **Enhetsbegränsningar** under **Endast arbetsprofiler** som Profiltyp > inställningar för **Anslutning**. 
+### <a name="scope-tags-for-apps---1081941---"></a>Omfattningstaggar för appar <!--1081941 -->
+Du kommer att kunna skapa omfångstaggar som begränsar åtkomsten till Intune-resurser. Lägg till en omfångstagg till en rolltilldelning och lägg sedan till omfångstaggen i en konfigurationsprofil. Rollen får endast åtkomst till resurser med konfigurationsprofiler som har matchande omfångstaggar (eller inga omfångstaggar).
+Om du vill skapa en omfångstagg väljer du **Intune-roller** > **Scope (Tags) (Omfång (taggar))** > **Skapa**.
+För att lägga till en omfångstagg till en rolltilldelning väljer du **Intune-roller** > **Alla roller** > **Princip- och profilhanterare** > **Tilldelningar** > **Scope (Tags)** (Omfång (taggar)).
+För att lägga till en omfångstagg till en konfigurationsprofil väljer du **Enhetskonfiguration** > **Profiler** > välj en profil > **Egenskaper** > **Scope (Tags)** (Omfång (taggar)).
 
-### <a name="outlook-for-ios-and-android-app-configuration-policy---1828527---"></a>Outlook för iOS och Android – Princip för appkonfiguration <!--1828527 -->
-Du kan skapa en appkonfigurationsprincip för iOS för Outlook för iOS och Android. Ytterligare konfigurationsinställningar läggs till vartefter de aktiveras för Outlook för iOS och Android.
+## <a name="tenant-health-dashboard----1124854---"></a>Instrumentpanelen Hälsa för klientorganisation <!-- 1124854 -->
+På sidan med klientorganisationens status i Intune hittar du information om klientorganisationens status på ett och samma ställe. Sidan är uppdelad i fyra delar:  
+- **Information om klientorganisationen**: Innehåller information, till exempel MDM-utfärdare, totalt antal registrerade enheter i klientorganisationen och antal licenser. I det här avsnittet visas även den aktuella versionen av tjänsten för din klientorganisation.
+- **Status för anslutningsprogrammet**: Innehåller information om konfigurerade anslutningsappar, till exempel Apple VPP, Windows Store för företag och certifikatanslutningar. Baserat på deras aktuella tillstånd är anslutningsapparna flaggade med *Felfri*, *Varning* eller *Ej felfri*.
+- **Hälsotillstånd för Intune-tjänsten**: Innehåller aktiva incidenter eller avbrott i klientorganisationen. Informationen i det här avsnittet hämtas direkt från meddelandecentret för Office ([https://portal.office.com](https://portal.office.com)).
+- **Nytt i Intune**: Innehåller aktiva meddelanden för din klientorganisation, t.ex. aviseringar om att klientorganisationen har fått de senaste funktionerna i Intune. Informationen i det här avsnittet hämtas direkt från meddelandecentret för Office ([https://portal.office.com](https://portal.office.com)).
 
-###  <a name="windows-line-of-business-lob-app-file-extensions----1884873---"></a>Filnamnstillägg för verksamhetsspecifika appar (LOB) för Windows <!-- 1884873 -->
-Filnamnstillägg för LOB-appar på Windows omfattar *.msi*, *.appx*, *.appxbundle*, *.msix* och *.msixbundle*. Du kan lägga till en app i Microsoft Intune genom att välja **Klientappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. När det gäller LOB-appar i Windows väljer du först **Verksamhetsspecifik app** som apptyp, sedan **Appaketfil** och anger därefter en installationsfil med rätt filnamnstillägg.
+### <a name="enrollment-abandonment-report----1382924---"></a>Rapport över avbrutna registreringar <!-- 1382924 -->
+En ny rapport som innehåller information om övergivna registreringar kommer att finnas tillgänglig under **Enhetsregistrering** > **Övervaka**.
 
-### <a name="remotely-lock-noncompliant-devices----2064495---"></a>Fjärrlåsa icke-kompatibla enheter <!-- 2064495 -->
-När en enhet inte är kompatibel, kan du skapa en åtgärd i kompatibilitetsprincipen som låser enheten via en fjärranslutning. I Intune > **Enhetskompatibilitet** skapar du en ny princip eller väljer en befintlig princip. Välj **Åtgärder vid inkompatibilitet** > **Lägg till** och välj att fjärrlåsa enheten.
-Stöds på: 
-- Android
-- iOS
-- macOS
-- Windows 10 Mobil 
-- Windows Phone 8.1 och senare 
+### <a name="deployed-wip-policies-without-user-enrollment----1434452---"></a>Distribuerade WIP-principer utan användarregistrering <!-- 1434452 -->
+WIP-principer (Windows Information Protection) kommer att kunna distribueras utan att MDM-användare behöver registrera sina Windows 10-enheter. Med den här konfigurationen kan företag skydda sina företagsdokument baserat på WIP-konfigurationen, samtidigt som användarna kan fortsätta att hantera sina egna Windows-enheter. När dokument skyddas med en WIP-princip kan skyddade data rensas selektivt av en Intune-administratör. Genom att välja användaren och enheten, och skicka en rensningsbegäran, blir alla data som skyddades via WIP-principen oanvändbara. Från Intune på Azure-portalen väljer du **Mobilapp** > **Selektiv radering av app**.
+
+
+### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Lägga till en anpassad varumärkesbild för företagsportalappen <!-- 1916266 -->
+Som Microsoft Intune-administratör kommer du att kunna ladda upp en anpassad varumärkesbild som visas som bakgrundsbild på användarens profilsida i företagsportalappen. Mer information om hur du konfigurerar företagsportalappen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
+
+### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Gruppera Windows Autopilot-registrerade enheter efter korrelator-ID <!-- 2075110 -->
+Intune stöder gruppering av Windows-enheter med ett korrelator-ID när de har registrerats med hjälp av [Autopilot för befintliga enheter](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. Korrelator-ID:t är en parameter i Autopilot-konfigurationsfilen. Intune matchar automatiskt [Azure AD-enhetsattributet enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) med ”OfflineAutopilotprofile-\<korrelator-ID:t\>”. På så sätt kan godtyckligt dynamiska grupper i Azure AD skapas baserat på korrelator-ID via attributet enrollmentprofileName för Autopilot-offlineregistreringar. 
+
+
+### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Stöd för iOS 12 OAuth i iOS-e-postprofiler <!--2155106 -->
+Intunes iOS-e-postprofiler kommer att ha stöd för iOS 12 OAuth. Du kommer åt den här funktionen genom att välja **Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **OAuth**. Om den här inställningen är aktiverad händer två saker:
+1. En ny profil skickas till enheter som redan har konfigurerats som mål.
+2. Slutanvändarna uppmanas att ange sina autentiseringsuppgifter igen.
+
+### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Ny standardinställning för ”Krav på lösenordstyp” för Android, Android-företag<!-- 2649963 -->
+När du skapar en ny efterlevnadsprincip (**Intune** > **Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Android** eller **Android-företag** för Plattform > Systemsäkerhet), kommer standardvärdet för **Krav på lösenordstyp** att ändras. Nuvarande standardvärde: Standard för enheten. Nytt standardvärde: Minst numeriskt. Gäller för: Android, Android-företag
+
+### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Tilldela Autopilot-profiler till den virtuella gruppen Alla enheter <!--2715522 -->
+Du kommer att kunna tilldela Autopilot-profiler till den virtuella gruppen Alla enheter. Om du vill göra det väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > välj en profil >  **Tilldelningar** > under **Tilldela till** väljer du **Alla enheter**.
+
+### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Ny funktion för Azure Active Directory-användningsvillkor <!-- 2870393 -->
+Azure Active Directory har en funktion för användningsvillkor som du kan använda i stället för de befintliga Intune-villkoren. Funktionen för användningsvillkor i Azure AD ger större flexibilitet över vilka villkor som ska visas och när, bättre lokaliseringsstöd, bättre kontroll över hur villkoren återges och bättre rapportering. Funktionen för användningsvillkor i Azure AD kräver Azure Active Directory Premium P1 som också är en del av programsviten Enterprise Mobility + Security E3.
+
+
+### <a name="intune-will-maintain-the-office-localized-language-when-updating-office-on-end-users-machines----2971030---"></a>Intune bevarar det lokaliserade språket i Office när Office uppdateras på slutanvändarnas datorer <!-- 2971030 -->
+När Intune installerar Office på slutanvändarnas datorer får användarna automatiskt samma språkpaket som de hade med tidigare .MSI Office-installationer. 
+
+<!-- 1809 start -->  
 
 ### <a name="intune-app-data-transfer-settings-on-ios-mdm-enrolled-devices----2244713---"></a>Inställningar för Intune APP-dataöverföring på MDM-registrerade iOS-enheter <!-- 2244713 -->
 Du kan skilja kontroll över inställningar för Intune APP-dataöverföring på MDM-registrerade iOS-enheter från att ange identiteten för den registrerade användaren. Administratörer som inte använder IntuneMAMUPN kommer inte att se någon funktionalitetsförändring. När den här funktionen är tillgänglig, bör administratörer som använder IntuneMAMUPN för att styra beteende för dataöverföring på registrerade enheter granska de nya inställningarna och uppdatera sina APP-inställningar efter behov.
@@ -76,56 +104,17 @@ Du kan skilja kontroll över inställningar för Intune APP-dataöverföring på
 Du kan använda en i förväg delad nyckel (PSK) med säkerhetsprotokollet WPA/WPA2-Personal för att autentisera en Wi-Fi-konfigurationsprofil för Windows 10.
 För närvarande måste du importera en Wi-Fi-profil eller skapa en anpassad profil för att använda en i förväg delad nyckel. [Wi-Fi-inställningar för Windows 10](wi-fi-settings-windows.md) visar en lista över de aktuella inställningarna. 
 
-### <a name="app-protection-policy-app-settings-for-web-data----2662995-eeready---"></a>APP-inställningar (App Protection Policy) för webbdata <!-- 2662995 eeready -->
+### <a name="app-protection-policy-app-settings-for-web-data----2662995---"></a>APP-inställningar (App Protection Policy) för webbdata <!-- 2662995 -->
 Principinställningarna för webbinnehåll på både Android och iOS-enheter kommer att uppdateras så att de blir bättre på att hantera både http- och https-länkar liksom dataöverföring via universella iOS-länkar och Android App-länkar.  
 
 ### <a name="autopilot-device-sync-frequency-increasing-to-every-12-hours----2753673---"></a>Frekvensen för Autopilot-enhetssynkronisering ökar till var 12:e timme <!-- 2753673 -->
 Autopilot-enheter synkroniserar var 12:e timme i stället för var 24:e timme.
 
-### <a name="apply-autopilot-profile-to-enrolled-win-10-devices-not-already-registered-for-autopilot----1558983---"></a>Använda Autopilot-profil för registrerade Windows 10-enheter som inte redan har registrerats för Autopilot <!-- 1558983 -->
-Du kan använda Autopilot-profiler för registrerade Windows 10-enheter som inte redan har registrerats för Autopilot. I Autopilot-profilen väljer du alternativet **Omvandla alla målenheter till Autopilot** för att automatiskt registrera andra än Autopilot-enheter med Autopilot-distributionstjänsten. Det kan ta upp till 48 timmar för registreringen att bearbetas. Autopilot konfigurerar enheten efter att den har avregistrerats och återställts. 
-
-### <a name="create-and-assign-multiple-enrollment-status--page-profiles-to-azure-ad-groups----2526564--"></a>Skapa flera profiler för sidan för registreringsstatus och tilldela dem till Azure AD-grupper <!-- 2526564-->
-Du kan skapa flera profiler för en sida för registreringsstatus och tilldela dem till AAD-grupper.
-
 ### <a name="intune-landing-page-updates-and-node-rename---2867309---"></a>Uppdatering av Intune-landningsidan och byte av nodnamn <!--2867309 -->
 Uppdateringar på Intune-landningssidan omfattar nya och ändrade övervakningspaneler och diagram för bättre datavisualisering. Noden **Mobilappar** ändras till **Klientappar**.
 
 ### <a name="increased-end-user-access-using-the-company-portal-app----772203---"></a>Ökad åtkomst för slutanvändare med företagsportalappen <!-- 772203 -->
-Slutanvändare kommer att få åtkomst till viktiga kontoåtgärder, till exempel återställning av lösenord och AAD-profil, från företagsportalappen.
-
-### <a name="issue-scep-certificates-to-user-less-devices----1744554---"></a>Utfärda SCEP-certifikat till användarlösa enheter <!-- 1744554 -->
-För närvarande utfärdas certifikat till användare. Du kommer att kunna utfärda SCEP-certifikat till enheter, inklusive användarlösa enheter som informationsdatorer (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** som plattform > **SCEP-certifikat** som profil). Övriga uppdateringar:
-- Egenskapen **Ämne** i en SCEP-profil är nu en anpassad textruta och kan innehålla nya variabler. 
-- Egenskapen **Alternativt namn för certifikatmottagare (SAN)** i en SCEP-profil är nu i tabellformat och kan innehålla nya variabler. I tabellen kan en administratör lägga till ett attribut och fylla i värdet i en anpassad textruta. SAN stöder följande attribut: 
-  - DNS
-  - E-postadress
-  - UPN Dessa nya variabler kan läggas till med statisk text i en textruta för anpassat värde. Till exempel DNS-attributet kan läggas till som `DNS = {{AzureADDeviceId}}.domain.com`.
-  > [!NOTE]
-  > Klammerparenteser { }, semikolon ; och vertikalstreck | fungerar inte i den statiska texten för SAN. Klammerparenteser får endast omfatta en av de nya variablerna för enhetscertifikat för antingen `Subject` eller `Subject alternative name`. Nya variabler för enhetscertifikat:  
-```
-"{{AAD_Device_ID}}",
-"{{Device_Serial}}",
-"{{Device_IMEI}}",
-"{{SerialNumber}}",
-"{{IMEINumber}}",
-"{{AzureADDeviceId}}",
-"{{WiFiMacAddress}}",
-"{{IMEI}}",
-"{{DeviceName}}",
-"{{FullyQualifiedDomainName}}",
-"{{MEID}}",
-```
-
-> [!NOTE]
->  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
->  -  När du anger enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, tänk på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten. 
-
-[Skapa en SCEP-certifikatprofil](certificates-scep-configure.md#create-a-scep-certificate-profile) visar en lista över aktuella variabler när du skapar en konfigurationsprofil för SCEP. 
-
-Gäller för: Windows 10 och senare samt iOS, stöds för Wi-Fi
-
-
+Slutanvändare kommer att få åtkomst till viktiga kontoåtgärder, till exempel återställning av lösenord och AAD-profil, från företagsportalappen.  
 
 <!-- 1808 start -->
 
@@ -143,13 +132,6 @@ I en kommande uppdatering tas tillbakadragna enheter bort från instrumentpanele
 ### <a name="change-in-the-update-process-for-on-premises-connectors----2277554---"></a>Ändra i uppdateringsprocessen för lokala anslutningsappar <!-- 2277554 -->
 Baserat på feedback från kunder kommer det sätt som uppdateringar av lokala anslutningsappar sker på att ändras. När du först installerar en lokal anslutningsapp sker uppdateringar automatiskt. Den här ändringen börjar i och med den nya PFX-certifikatanslutningsappen för Microsoft Intune och kommer därefter att distribueras till andra typer av lokala anslutningsappar. 
 
-### <a name="windows-10-and-later-kiosk-profile-improvements-in-the-azure-portal----2748224-eeready---"></a>Profilförbättringar för informationsdatorer med Windows 10 och senare i Azure Portal <!-- 2748224 eeready -->
-Profilen för enhetskonfiguration för informationsdatorer med Windows 10 (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  plattform: **Windows 10 och senare** > profiltyp: **VPN**) förbättras: 
-- För närvarande kan du skapa flera informationsdatorprofiler på samma enhet. I och med den här uppdateringen stöder Intune endast en informationsdatorprofil per enhet. Om du fortfarande behöver flera informationsdatorprofiler på en enskild enhet kan du använda en anpassad URI.
-– I en profil för **informationsdator med flera appar** kan du välja programikonernas storlek och ordning i **Startmenylayout** i programrutnätet. Om du vill anpassa mera, kan du ladda upp en XML-fil.
-- Inställningarna för webbläsare för informationsdator flyttas till inställningarna för **Informationsdator**. För närvarande har inställningarna för **Webbläsare för informationsdator** sin egen kategori i Azure Portal.
-Gäller: Windows 10 och senare
-
 <!-- 1807 start -->
 
 ### <a name="improved-company-portal-app-experience-for-device-enrollment-manager-users----675800---"></a>Förbättrade funktioner i appen Företagsportal för användare av enhetsregistreringshanterare <!-- 675800 -->
@@ -165,16 +147,10 @@ Gäller för Windows 10 och senare
 ### <a name="alerts-for-expiring-vpp-token-or-company-portal-license-running-low----2237572---"></a>Aviseringar om utgående VPP-token eller om att kvarvarande licenser för företagsportalen håller på att ta slut <!-- 2237572 -->
 Om du använder Volume Purchase Program (VPP) för att företablera företagsportalen vid DEP-registrering visas en varning i Intune när en VPP-token håller på att upphöra och när licenserna för företagsportalen nästan är slut.
 
-### <a name="additional-security-settings-for-windows-installer----2282430---"></a>Ytterligare säkerhetsinställningar för Windows Installer <!-- 2282430 -->
-Du kommer att kunna tillåta användare att styra appinstallationer. Om den här inställningen är aktiverad tillåts installationer som i annat fall skulle stoppats på grund av en säkerhetsöverträdelse. Du kommer att kunna ange att Windows-installationsprogrammet ska använda förhöjd behörighet när program installeras i ett system. Du kommer även att kunna ange att WIP-objekt (Windows Information Protection) ska indexeras och att deras metadata ska lagras på en okrypterad plats. När principen är inaktiverad kommer Windows-informationsskyddade objekt inte att indexeras och visas inte i resultaten i Cortana eller Utforskaren. Funktionerna för dessa alternativ kommer att vara inaktiverade som standard. 
-
 <!-- 1806 start -->
 
 ### <a name="3rd-party-keyboards-can-be-blocked-by-app-settings-on-ios----1248481---"></a>Du kan blockera tangentbord från tredje part via APP-inställningarna i iOS <!-- 1248481 -->
 Intune-administratörer kan blockera användningen av tredjepartstangentbord på iOS-enheter vid åtkomst till organisationens data i skyddade appar. När APP (Application Protection Policy) är inställt på att blockera tredjepartstangentbord visas ett meddelande första gången användaren interagerar med företagsdata och använder ett tredjepartstangentbord. Alla alternativ förutom det interna tangentbordet är blockerade och visas inte för användaren. Enhetsanvändarna ser bara det här meddelandet en gång. 
-
-### <a name="office-365-pro-plus-language-packs----1833450---"></a>Språkpaket för Office 365 Pro Plus <!-- 1833450 -->
-Som Intune-administratör kommer du att kunna distribuera ytterligare språk för Office 365 Pro Plus-appar som hanteras via Intune. I listan med tillgängliga språk står även **typen** av språkpaket med (kärnspråk, delspråk och språkverktyg). Gå till Azure Portal och välj **Microsoft Intune** > **Mobilappar** > **Appar** > **Lägg till**. I listan **Apptyp** på bladet **Lägg till app** väljer du **Windows 10** under **Office 365 Suite**. Välj **Språk** på bladet **Inställningar för appsviten**.
 
 <!-- 1805 start -->
 

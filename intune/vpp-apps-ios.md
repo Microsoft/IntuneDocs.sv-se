@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cbe9f28b66031f6eddef4804c157f01ca79ad81d
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 4a5333f4e94db0b41b81dcb2589133956c040725
+ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347526"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48903513"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
@@ -93,7 +93,8 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
         > När du byter land uppdateras apparnas metadata och butikens URL vid nästa synkronisering med Apple-tjänsten för appar som har skapats med denna token. Appen uppdateras inte om den inte finns i det nya landets butik.
 
     - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
-    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat identifierar Intune VPP-appuppdateringar i appbutiken och push-installerar dem automatiskt på enheten när den checkas in.
+    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat identifierar Intune VPP-appuppdateringar i appbutiken och push-installerar dem automatiskt på enheten när den checkas in. Automatiska appuppdateringar för Apple VPP-appar uppdaterar endast de appar automatiskt som distribuerats med **krävd** installeringsavsikt. För appar som distribueras med **tillgänglig** installeringsavsikt, genererar den automatiska uppdateringen ett meddelande åt dig (admin) som informerar dig om att en ny version av appen är tillgänglig. Användaren måste klicka på Installera för att installera den nya versionen av appen. Dessutom ser användaren appen som inte installerad på Företagsportalen, även om en tidigare version av appen är installerad. I det här fallet användaren kan installera appen på nytt.
+    
         > [!NOTE]
         > Automatiska appuppdateringar fungerar för både enhets- och användarlicensierade appar för iOS version 11.0 och senare.
 6. När du är klar väljer du **Skapa**.

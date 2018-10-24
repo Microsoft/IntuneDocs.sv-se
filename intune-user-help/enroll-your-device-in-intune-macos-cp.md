@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: af5c7492563c8df0168eff3250ae1bbad2cc323e
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
+ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147725"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48260257"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
@@ -80,8 +80,17 @@ Använd följande steg för att registrera macOS-enheter som kör OS X El Capita
 
 9. Den första skärmen som visas i företagsportalappen uppmanar dig att **Logga in**. Använd samma arbets- eller skolkonto som du använde för att logga in på företagsportalens webbplats.
 
-10. Företagsportalen bekräftar kontoinformationen och visar statusen för **Enhetsregistrering** och **Enhetsefterlevnad**. Gula trianglar markerar de åtgärder du måste utföra för att skydda din macOS-enhet för skolan eller arbetet. Klicka på **Börja** för att starta registreringen. Läs om [vad din organisation kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) när du registrerar en enhet.
+10. Företagsportalen bekräftar kontoinformationen och visar statusen för **Enhetsregistrering** och **Enhetsefterlevnad**. Gula trianglar markerar de åtgärder du måste utföra för att skydda din macOS-enhet för skolan eller arbetet. Klicka på **Börja** för att starta registreringen. 
 
-11. Du kan uppmanas att ange din dators inloggningsinformation. Det kan ta några minuter att registrera enheten i hantering. Du kan göra andra saker på enheten under tiden. Du får ett meddelande när du har slutfört konfigurationen av företagsåtkomst så att du vet att du är färdig.  
+11. Om du uppmanas att göra det anger du datorns inloggningsinformation.  
+
+Det kan ta några minuter att registrera enheten i hantering. Du kan göra andra saker på enheten under tiden. Du får ett meddelande när du har slutfört konfigurationen av företagsåtkomst så att du vet att du är färdig.  
+
+## <a name="unverified-profiles"></a>Overifierade profiler
+När du visar de installerade MDM-profilerna för hantering av mobilenheter för din macOS-enhet kan vissa profiler visas med statusen **Inte verifierad**. Så länge som **Hanteringsprofil** visar statusen **Verifierad** behöver du inte bry dig om detta.  
+
+Hanteringsprofilen är vad som definierar MDM-kanalanslutningen. Så länge hanteringsprofilen är verifierad ärver alla andra profiler som levereras till datorn, via kanalen, hanteringsprofilens säkerhetsegenskaper.
+
+Och eftersom de övriga profilerna inte kräver enskilda verifieringar genereras och levereras de snabbare till enheter. 
 
 Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

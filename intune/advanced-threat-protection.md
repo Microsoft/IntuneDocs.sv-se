@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/27/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b89ca2c4320db733f39ce9b67d275169f4cba5c6
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 58b157cfe639651aa65e8dfb510b857d0128589a
+ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313799"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49102131"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Aktivera Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -89,6 +89,10 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
 6. Konfigurera inställningarna:
 
   - **Windows Defender ATP client configuration package type** (Typ av konfigurationspaket för Windows Defender ATP-klient): Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
+  
+    > [!NOTE] 
+    > Om du har upprättat en anslutning korrekt med Windows Defender ATP, kommer Intune automatiskt att **publicera** konfigurationsprofilen för dig.
+  
   - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel kan samlas in och delas med Windows Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Windows Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Windows Defender ATP.
   - **Skicka frekvensvärde för telemetrirapportering**: För enheter som har hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Windows Defender ATP oftare.
 

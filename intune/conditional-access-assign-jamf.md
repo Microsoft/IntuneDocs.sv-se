@@ -3,8 +3,8 @@ title: Efterlevnadsprincip för Jamf-enheter
 titlesuffix: Microsoft Intune
 description: Använd Microsoft Intunes efterlevnadsprinciper med Azure Active Directorys villkorliga åtkomst för att skydda Jamf-hanterade enheter.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 02/16/2018
 ms.topic: article
@@ -15,12 +15,12 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 990c17dcb7a25e5ea6676326f785d49ac6ca3320
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: d4c41d3a4cdfada81b91a3dffeffdfe15e8a470f
+ms.sourcegitcommit: 17094728cfd9eb3f77ca39745fdcde9be0a8dda1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34482343"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48812829"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
@@ -73,9 +73,9 @@ Slutanvändare behöver starta företagsportalappen via Jamf Self Service att re
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Ta bort en Jamf-hanterad enhet från Intune
 
-Du kan inte ta bort en Jamf-hanterad enhet från Intune. Du måste ta bort Jamf-hanterade enheter från Jamf Pro. Då tas de även bort från Intune. 
+Du kan ta bort en Jamf-hanterad enhet från Intune-konsolen genom att välja **Ta bort** i vyn **Alla enheter**. Du kan aktivera massborttagning av enheter genom att välja flera enheter och klicka på **Ta bort**.
 
-Lär dig hur du [tar bort en Jamf-hanterad enhet i Jamf Pro-dokumenten](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Du kan även skicka in ett supportärende med [Jamf-support](https://www.jamf.com/support/) för ytterligare hjälp. 
+Få information om hur du [tar bort en Jamf-hanterad enhet i Jamf Pro-dokumenten](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Du kan även skicka in ett supportärende med [Jamf-support](https://www.jamf.com/support/) för ytterligare hjälp. 
 
 ## <a name="next-steps"></a>Nästa steg
 

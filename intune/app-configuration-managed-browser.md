@@ -1,42 +1,40 @@
 ---
-title: Hantera webbåtkomst med Managed Browser-appen
+title: Hantera webbåtkomst med en principskyddad webbläsare
 titlesuffix: Microsoft Intune
-description: Distribuera Managed Browser för att begränsa webbsurfning och överföring av webbdata till andra appar.
+description: Använd en principskyddad webbläsare för att begränsa webbsurfning och överföring av webbdata.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
-ms.reviewer: maxles
+ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb4a80a9de03844c6fffa5e56f09c375645f9188
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
+ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864549"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863169"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Hantera internetåtkomst med principer för skyddade webbläsare med Microsoft Intune
+# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Hantera internetåtkomst med principer för skyddade webbläsare med Microsoft Intune  
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Exempel på skyddade webbläsare är Microsoft Edge och Intune Managed Browser. Edge och Managed Browser är webbläsarappar som du kan ladda ned från offentliga appbutiker och använda i din organisation. När du konfigurerar skyddade webbläsare i Intune kan de:
-- Användas för att få åtkomst till företagets webbplatser och SaaS-program med enkel inloggning via tjänsten MyApps, samtidigt som webbdata skyddas.
-- Vara förkonfigurerad med en lista över URL:er och domäner som begränsar vilka webbplatser användaren kan navigera till i företagets miljö.
-- Vara förkonfigurerad med en startsida och de bokmärken som du anger.
+Med en webbläsare som skyddas med Intune-principer (Microsoft Edge eller Intune Managed Browser) kan du vara säker på att åtkomsten till företagswebbplatser alltid är skyddad.  När de har konfigurerats med Intune kan skyddade webbläsare dra nytta av följande:
 
-Eftersom Edge och Managed Browser har integrering med Intune SDK kan du också använda appskyddsprinciper för dem, som att:
-- Styra användningen av klipp ut, kopiera och klistra in
-- Förhindra skärmdumpar
-- Se till att länkar till innehåll som användare väljer endast öppnas i andra hanterade appar.
+- Programskyddsprinciper.
+- Villkorlig åtkomst.
+- Enkel inloggning.
+- Inställningar för programkonfiguration.
+- Integrering av en Azure-programproxy.
 
-Mer information finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
+## <a name="getting-started"></a>Komma igång
 
 Du kan tillämpa inställningarna för att:
 
@@ -57,9 +55,7 @@ Du kan skapa principer för skyddade webbläsare för följande enhetstyper:
 
 >[!IMPORTANT]
 >Tidigare versioner av Android och iOS kommer att kunna fortsätta att använda Managed Browser, men kommer inte att kunna installera nya versioner av appen och kanske inte använda alla funktioner. Vi rekommenderar att du uppdaterar de här enheterna till en version av operativsystemet som stöds.
-
-
-Microsoft Edge och Intune Managed Browser har stöd för att öppna webbinnehåll från [Microsoft Intune-programpartner](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Villkorlig åtkomst för skyddade webbläsare
 
@@ -94,11 +90,11 @@ När du har konfigurerat principen ovan tvingas användarna använda Intune Mana
 
 Managed Browser har inget stöd för klassiska principer för villkorlig åtkomst. Mer information finns i [Migrera klassiska principer i Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration).
 
-##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Enkel inloggning till Azure AD-anslutna webbappar i Intune Managed Browser
+##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Enkel inloggning till Azure AD-anslutna webbappar i principskyddade webbläsare
 
-Intune Managed Browser-programmet i iOS och Android kan nu dra nytta av enkel inloggning till alla webbappar (SaaS och lokala) som är Azure AD-anslutna. Om Microsoft Authenticator-appen finns på iOS eller Intune-företagsportalappen på Android, kommer användarna av Intune Managed Browser att ha åtkomst till Azure AD-anslutna webbprogram utan att behöva ange sina autentiseringsuppgifter på nytt.
+Microsoft Edge och Intune Managed Browser i iOS och Android kan dra nytta av enkel inloggning till alla webbappar (SaaS och lokala) som är Azure AD-anslutna. Om Microsoft Authenticator-appen finns i iOS eller Intune-företagsportalappen i Android, kommer användare av principskyddade webbläsare att kunna komma åt Azure AD-anslutna webbappar utan att ange sina autentiseringsuppgifter på nytt.
 
-Enkel inloggning i Intune Managed Browser kräver att enheten har registrerats av Microsoft Authenticator-appen på iOS eller Intunes företagsportal på Android. Användare med Authenticator-appen eller Intune-företagsportalen uppmanas att registrera sin enhet när de navigerar till en Azure AD-ansluten webbapp i Intune Managed Browser, om enheten inte redan har registrerats av ett annat program. När enheten är registrerad med kontot som hanteras av Intune, kommer detta konto ha enkel inloggning aktiverat för Azure AD-anslutna webbappar. 
+Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticator-appen i iOS eller på Intune-företagsportalen i Android. Användare med Authenticator-appen eller Intune-företagsportalen uppmanas att registrera sin enhet när de navigerar till en Azure AD-ansluten webbapp i en principskyddad webbläsare, om enheten inte redan har registrerats av ett annat program. När enheten är registrerad med kontot som hanteras av Intune, kommer detta konto ha enkel inloggning aktiverat för Azure AD-anslutna webbappar. 
 
 > [!NOTE]
 > Enhetsregistrering är en enkel incheckning med Azure AD-tjänsten. Det kräver inte fullständig enhetsregistrering och inte ger IT-avdelningen ytterligare behörighet på enheten.

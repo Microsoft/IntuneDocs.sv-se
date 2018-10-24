@@ -3,10 +3,10 @@ title: Skapa och distribuera en WIP-appskyddsprincip
 titlesuffix: Microsoft Intune
 description: Skapa och distribuera en WIP-appskyddsprincip med Microsoft Intune
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: c1d530059d7c5b5f759516e86d4ee3dbf8512aa5
+ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347315"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48799633"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -46,19 +46,27 @@ Du måste känna till några grundläggande begrepp när du lägger till en WIP-
 
 ## <a name="prerequisites"></a>Krav
 
-Du måste konfigurera MAM-providern innan du kan skapa en WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](app-protection-policies-configure-windows-10.md).
+Du måste konfigurera MAM-providern innan du kan skapa en WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](app-protection-policies-configure-windows-10.md).  
+
+> [!IMPORTANT]
+> RIA stöder inte multi-identitet. Det kan bara finnas en hanterad identitet åt gången.
 
 Du måste dessutom ha följande licens och uppdatering:
 
 -   [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)-licens
 -   [Windows Creators-uppdatering](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
-> [!IMPORTANT]
-> RIA stöder inte multi-identitet. Det kan bara finnas en hanterad identitet åt gången.
+
+
+
 
 ## <a name="to-add-a-wip-app-protection-policy"></a>Lägga till en WIP-appskyddsprincip
 
 När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik princip.
+
+> [!TIP]  
+> Mer information om hur du skapar WIP-principer för Intune, inklusive tillgängliga inställningar och hur du konfigurerar dem, finns i [Skapa en princip för Windows Information Protection (WIP) med MAM med hjälp av Azure-portalen för Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) i dokumentationsbiblioteket för Windows-säkerhet. 
+
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.
@@ -123,7 +131,7 @@ När du arbetar med WIP-aktiverade appar och okända WIP-appar rekommenderar vi 
 ### <a name="what-are-the-protection-modes"></a>Vad är skyddslägen?
 
 #### <a name="block"></a>Blockera
-WIP söker efter olämpliga datadelningsmetoder och stoppar från att utföra åtgärden. Detta kan inkludera delning av information till appar som inte skyddas av företaget, och delning av företagsdata mellan andra personer och enheter utanför organisationen.
+WIP söker efter olämpliga datadelningsmetoder och stoppar från att utföra åtgärden. Exempel på blockerade åtgärder kan vara delning av information till appar som inte skyddas av företaget, och delning av företagsdata mellan andra personer och enheter utanför organisationen.
 
 #### <a name="allow-overrides"></a>Tillåt åsidosättningar
 Windows informationsskydd söker efter olämplig delning av data och varnar användarna om de gör något som kan vara potentiellt osäkert. I det här läget kan dock användaren åsidosätta principen och dela data genom att logga åtgärden i din granskningslogg.

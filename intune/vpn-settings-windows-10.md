@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/26/2018
+ms.date: 9/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: faf07b58c4480689d5f6f44bf09d6100a2eae9db
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312858"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48827861"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Windows 10 VPN-inställningar i Intune
 
@@ -43,7 +43,7 @@ Beroende på vilka inställningar du väljer, kanske inte alla värden är konfi
   - **Importera**: Bläddra till en kommateckenavgränsad fil som innehåller en lista med servrar i formatet: beskrivning, IP-adress eller FQDN, samt standardserver. Välj **OK** för att importera dessa servrar till listan **Servrar**.
   - **Exportera**: Exporterar listan med servrar till en kommateckenavgränsad fil (csv)
 
-- **Registrera IP-adresser med internt DNS**: Välj **Aktivera** för att konfigurera Windows 10 VPN-profilen så att den dynamiskt registrerar IP-adresser som har tilldelats till VPN-gränssnittet med internt DNS, eller välj **Inaktivera** om du inte vill registrera IP-adresserna dynamiskt.
+- **Registrera IP-adresser med internt DNS**: Välj **Aktivera** om du vill konfigurera Windows 10 VPN-profilen för dynamisk registrering av IP-adresserna som tilldelats till VPN-gränssnittet med internt DNS. Välj **Inaktivera** om du inte vill registrera IP-adresserna dynamiskt.
 
 - **Anslutningstyp**: Välj VPN-anslutningstypen från leverantörslistan nedan:
 
@@ -59,7 +59,7 @@ Beroende på vilka inställningar du väljer, kanske inte alla värden är konfi
   - **PPTP**
 
   När du väljer en VPN-anslutningstyp, kan du också efterfrågas om följande inställningar:  
-    - **Alltid på**: Aktivera för att automatiskt ansluta till VPN-anslutningen när följande inträffar: 
+    - **Alltid på**: Välj **Aktivera** för att automatiskt ansluta till VPN-anslutningen när följande händelser inträffar: 
       - Användarna loggar in på sina enheter
       - Nätverket på enheten ändras
       - Skärmen på enheten sätts på efter att ha varit avstängd 
@@ -114,7 +114,7 @@ Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfigurat
 
 ## <a name="conditional-access"></a>Villkorlig åtkomst
 
-- **Villkorlig åtkomst för den här VPN-anslutningen**: Aktiverar enhetskompatibilitetsflöde från klienten. När det är aktiverat försöker VPN-klienten kommunicera med Azure Active Directory (AD) för att få ett certifikat för autentisering. VPN-klienten måste vara inställd på användning av certifikatautentisering och VPN-servern måste lita på den server som returneras av Azure Active Directory.
+- **Villkorlig åtkomst för den här VPN-anslutningen**: Aktiverar enhetskompatibilitetsflöde från klienten. När den här inställningen är aktiverad kommunicerar VPN-klienten med Azure Active Directory (AD) för att få ett certifikat för autentisering. VPN-klienten måste vara inställd på användning av certifikatautentisering och VPN-servern måste lita på den server som returneras av Azure Active Directory.
 
 - **Enkel inloggning (SSO) med alternativt certifikat**: Använd ett annat certifikat än VPN-autentiseringscertifikatet vid Kerberos-autentisering för att uppnå enhetskompatibilitet. Ange certifikatet med följande inställningar:
 
@@ -124,14 +124,24 @@ Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfigurat
 
 ## <a name="dns-settings"></a>DNS-inställningar
 
-**Domän och servrar för den här VPN-anslutningen**: Lägg till domänen och DNS-servern som VPN-anslutningen ska använda. Du kan välja vilka DNS-servrar som ska användas av VPN-anslutningen när anslutningen har upprättats. För varje server anger du:
+- **Söklista för DNS-suffix**: I **DNS-suffix** anger du ett DNS-suffix och klickar sedan på **Lägg till**. Du kan lägga till flera suffix.
+
+  När du använder DNS-suffix, kan du söka efter en nätverksresurs med dess korta namn i stället för det fullständiga domännamnet (FQDN). När du söker med hjälp av det korta namnet bestäms suffixet automatiskt av DNS-servern. Till exempel finns `utah.contoso.com` med i listan över DNS-suffix. Du pingar `DEV-comp`. I det här scenariot matchas det till `DEV-comp.utah.contoso.com`.
+
+  DNS-suffix matchas i den angivna ordningen, och ordningen kan ändras. Till exempel finns `colorado.contoso.com` och `utah.contoso.com` i DNS-suffixlistan och båda har en resurs med namnet `DEV-comp`. Eftersom `colorado.contoso.com` är först i listan matchas det som `DEV-comp.colorado.contoso.com`.
+  
+  Om du vill ändra ordningen klickar du på punkterna till vänster om DNS-suffixet och drar sedan suffixet längst upp:
+
+  ![Välj de tre punkterna och klicka och dra för att flytta DNS-suffixet](./media/vpn-settings-windows10-move-dns-suffix.png)
+
+- **Domän och servrar för den här VPN-anslutningen**: Lägg till domänen och DNS-servern som VPN-anslutningen ska använda. Du kan välja vilka DNS-servrar som ska användas av VPN-anslutningen när anslutningen har upprättats. För varje server anger du:
 - **Domän**
 - **DNS-server**
 - **Proxy**
 
 ## <a name="proxy-settings"></a>Proxyinställningar
 
-- **Skript för automatisk konfiguration**: Använd en fil för att konfigurera proxyservern. Ange den **URL för proxyserver**, exempelvis `http://proxy.contoso.com`, som innehåller konfigurationsfilen.
+- **Skript för automatisk konfiguration**: Använd en fil för att konfigurera proxyservern. Ange **URL:n för proxyservern**, t.ex. `http://proxy.contoso.com`, som innehåller konfigurationsfilen.
 - **Adress**: Ange proxyserverns adress såsom en IP-adress eller `vpn.contoso.com`
 - **Portnummer**: Ange TCP-portnumret som används av proxyservern
 - **Kringgå proxy för lokala adresser**: Om du inte vill använda en proxyserver för lokala adresser, välj då Aktivera. Den här inställningen gäller om VPN-servern kräver en proxyserver för anslutningen.

@@ -6,21 +6,21 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 10/3/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
-ms.reviewer: mghadial
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7822e9e5a0e2bc5b054ccc3e93b9aa51bca5b79
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: f96ca3075bab5c8bacaea62bb4fc04bd957cf01e
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329418"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863186"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune
 
@@ -61,7 +61,7 @@ För iOS kan du konfigurera åtgärder för följande inställningar med hjälp 
 -  Enhetsmodell(er)
 
 Om du vill använda inställningen **Enhetsmodell(er)** anger du en semikolonavgränsad lista över iOS-modellidentifierare. Du hittar en iOS-modellidentifierare under kolumnen Enhetstyp i [Supportdokumentationen för HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
-Exempel på indata: *iPhone5,2; iPhone5,3*
+Exempel på indata: *iPhone5,2;iPhone5,3*
 
 På slutanvändarens enheter kan Intune-klienten utföra åtgärder baserat på en enkel matchning av enhetsmodellsträngar som angetts i Intune för programskyddsprinciper. Matchningen beror helt på vad enheten rapporterar. Du (IT-administratören) uppmuntras säkerställa att det avsedda beteendet fungerar genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. Standardvärdet är **Inte konfigurerat**.<br>
 Ange en av följande åtgärder: 
@@ -69,7 +69,7 @@ Ange en av följande åtgärder:
 - Tillåt angivna (Rensa icke-angivna)
 
 **Vad händer om IT-administratören matar in en annan lista över iOS-modellidentifierare mellan principer för samma appar för samma användare i Intune?**<br>
-När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför en del av de listade iOS modellidentifierarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar till exempel ”iPhone5,2; iPhone5,3” medan *Princip B* specificerar”iPhone5,3”. Den resulterande principen som Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”iPhone5,3”. 
+När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför en del av de listade iOS modellidentifierarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar till exempel ”iPhone5,2;iPhone5,3” medan *Princip B* specificerar”iPhone5,3”. Den resulterande principen för Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”iPhone5,3”. 
 
 ### <a name="android-policy-settings"></a>Principinställningar för Android
 
@@ -83,10 +83,10 @@ För Android kan du konfigurera åtgärder för följande inställningar med hj�
 -  Enhetstillverkare
 
 Om du vill använda inställningen **Enhetstillverkare** anger du en semikolonavgränsad lista över Android-tillverkare. Du hittar Android-tillverkaren av en enhet under Enhetsinställningar.<br>
-Exempel på indata: *Tillverkare A; Tillverkare B* 
+Exempel på indata: *Tillverkare A;Tillverkare B* 
 
 >[!NOTE]
-> Det här är några vanliga tillverkare som rapporteras från enheter som använder Intune, och de kan användas som indata: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk
+> Det här är några vanliga tillverkare som rapporteras från enheter som använder Intune, och de kan användas som indata: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 På slutanvändarens enheter kan Intune-klienten utföra åtgärder baserat på en enkel matchning av enhetsmodellsträngar som angetts i Intune för programskyddsprinciper. Matchningen beror helt på vad enheten rapporterar. Du (IT-administratören) uppmuntras att säkerställa att det avsedda beteendet fungerar genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. Standardvärdet är **Inte konfigurerat**.<br>
 Ange en av följande åtgärder: 
@@ -94,7 +94,7 @@ Ange en av följande åtgärder:
 - Tillåt angivna (Rensa på icke-angivna)
 
 **Vad händer om IT-administratören matar in en annan lista över Android-tillverkare mellan principer för samma appar för samma användare i Intune?**<br>
-När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför vara en del av de listade Android-tillverkarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar t.ex ”Google, Samsung” medan *Princip B* specificerar”Google”. Den resulterande principen för Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”Google”. 
+När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför vara en del av de listade Android-tillverkarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar t.ex ”Google,Samsung” medan *Princip B* specificerar”Google”. Den resulterande principen för Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”Google”. 
 
 ### <a name="additional-settings-and-actions"></a>Ytterligare inställningar och åtgärder 
 
@@ -119,5 +119,3 @@ Mer information om Intune-appskyddsprinciper finns här:
 - [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md)
 - [Inställningar för iOS-appskyddsprinciper](app-protection-policy-settings-ios.md)
 - [Inställningar för Android-appskyddsprinciper i Microsoft Intune](app-protection-policy-settings-android.md) 
-
-

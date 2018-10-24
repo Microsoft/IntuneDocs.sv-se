@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: f4725b76517bc9d3a27f07d7289f178c54a31bce
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 5eba9f6f920b4bf868e26b47e4043babe62a8945
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148039"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828048"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Åtgärda ett hot som har upptäckts av SandBlast Mobile Protect
 
@@ -37,7 +37,12 @@ Den här artikeln beskriver hur du kan känna igen hotaviseringar från SandBlas
 ## <a name="troubleshoot-virus-or-security-threat"></a>Felsöka virus- eller säkerhetshot  
 Om ett virus- eller säkerhetshot identifieras agerar SandBlast Mobile Protect-appen enligt organisationens åtkomstprinciper. Åtkomstprinciper kan förhindra att du kommer åt arbetets nätverk, appar och e-post.  
 
-SandBlast Mobile Protect uppmanar dig att vidta åtgärder för att återfå den åtkomst som du har förlorat. Välj hotet och följ instruktionerna i appen för att lösa det.  
+![Exempel på skärmbild för ett aviseringsmeddelande från SEP Mobile-appen.](./media/skycure-list-of-potential-issues-android.png)  
+SandBlast Mobile Protect uppmanar dig att vidta åtgärder för att återfå den åtkomst som du har förlorat. Välj hotet och följ instruktionerna i appen för att lösa det.
+
+Eftersom appen är integrerad med företagets MDM-provider kan du även se en varning om begränsad åtkomst till företagsportalappen. Varningen ger dig instruktioner om att öppna Sandblast Mobile Protect för att åtgärda virus- eller säkerhetshotet.  
+
+  ![Exempel på skärmbild av enhetssidan på företagsportalen, som visar varningen från Sandblast Mobile Protect.](./media/CP-lookout-virus-banner-1808.png)  
 
 ## <a name="troubleshoot-an-app-threat"></a>Felsöka ett apphot  
 
@@ -45,4 +50,4 @@ Om du installerar en app som ses som ett hot mot din enhet får du ett meddeland
 
 Lös detta genom att välja appen i listan över hot i SandBlast Mobile Protect. Följ sedan anvisningarna för att ta bort och avinstallera appen.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980)
+Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

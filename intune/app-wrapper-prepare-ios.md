@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: daaed6ded0c20551567a63890d324abcbaaf41d7
-ms.sourcegitcommit: 9f99b4a7f20ab4175d6fa5735d9f4fd6a03e0d3a
+ms.openlocfilehash: 652157f41f0fbefa14e9f22fea01c918cb7704a1
+ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40251778"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169506"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -39,13 +39,13 @@ Innan du kör programhanteringsverktyget måste du uppfylla vissa allmänna krav
 
 * Ladda ned [Microsoft Intunes programhanteringsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) från GitHub.
 
-* En Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-verktygsuppsättningen version 5 eller senare installerad.
+* En Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-verktygsuppsättningen version 9 eller senare installerad.
 
 * iOS-appen för indata måste vara utvecklad och signerad av ditt företag eller en oberoende programvaruleverantör (ISV).
 
   * App-filen för indata måste ha filnamnstillägget **.ipa** eller **.app**.
 
-  * Indataappen måste kompileras för iOS 8.0. eller senare.
+  * Indataappen måste kompileras för iOS 10 eller senare.
 
   * Indataappen kan vara krypterad.
 
@@ -315,7 +315,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Funktioner som stöds för programhanteringsverktyg för iOS
 
-|Funktion|Description|Råd|
+|Funktion|Beskrivning|Råd|
 |--------------|---------------|------------------------|
 |Appgrupper|Använd appgrupper om du vill ge flera appar åtkomst till delade container och tillåta ytterligare kommunikation mellan processer för olika appar.<br /><br />Om du vill aktivera appgrupper öppnar du rutan **Funktioner** och klickar på **PÅ** i **Appgrupper**. Du kan lägga till app-grupper eller välja befintliga.|Använd omvänd DNS-notering när du använder app-grupper:<br /><br />*group.com.companyName.AppGroup*|
 |Bakgrundslägen|Om du aktiverar bakgrundslägen kan din iOS-app fortsätta att köras i bakgrunden.||

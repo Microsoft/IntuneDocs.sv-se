@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/31/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7508f2c2eca06ceacf203103ab2cad53abc39a65
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
+ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347440"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866362"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
 Microsoft Intune har för närvarande stöd för en mängd olika typer av appar och distributionsscenarier på Windows 10-enheter. När du har lagt till en app till Intune kan du tilldela appen till användare och enheter. Följande information innehåller mer detaljer om de Windows 10-scenarier som stöds. Dessutom innehåller följande information viktiga punkter att tänka på när du distribuerar appar till Windows. 
 
-Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de typer av appar som stöds på Windows 10-enheter.
+Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de typer av appar som stöds på Windows 10-enheter. Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx**, **.appxbundle**, **.msix** och **.msixbundle**.  
 
 > [!Note]
 > Den minsta nödvändiga Windows 10-uppdateringen för att distribuera appar i enhetssammanhang är [May 23, 2018—KB4100403 (OS Build 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
@@ -46,9 +46,6 @@ Beroende på apptypen kan appen installeras på en Windows 10-enhet på ett av t
     - Moderna verksamhetsspecifika appar och Microsoft Store för företag-appar (både online och offline) kan distribueras i användarkontext och stöder både avsikten Krävs och Tillgänglig.
 - **Enhetskontext**: När en app distribueras i enhetskontext installeras den hanterade appen direkt till enheten av Intune.
     - Endast moderna verksamhetsspecifika appar och onlinelicensierade Microsoft Store för företag-appar kan distribueras i enhetskontext och stöder endast avsikten Krävs.
-
-> [!Note]
-> Distribuering av MSI över MDM i enhetskontext stöds ännu inte på Windows 10-enheter.
 
 När en app distribueras i enhetskontext lyckas endast installationen när den riktas till en enhet som stöder enhetskontext. Dessutom stöder distribuering i enhetskontext dessutom följande villkor:
 - Om en app distribueras i enhetskontext och riktas mot en användare kommer installationen att misslyckas med följande status och fel som visas i administratörskonsolen:

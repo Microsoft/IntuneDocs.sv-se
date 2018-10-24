@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/13/2017
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,41 +15,39 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 8a83602d992ff7ea08be84272eee086ea364be0a
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 452ee2b386130a4c7ca6dc5026d3e2489c5ea33a
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147051"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863058"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Så här uppdaterar du företagsportalappen
 
 I den här artikeln beskrivs hur du uppdaterar din version av företagsportalappen när:  
-* det finns en nyare version av företagsportalappen
-* din version av företagsportalappen inte stöds längre.
+* Det finns en nyare version av företagsportalen.
+* Din version av företagsportalen stöds inte längre.
 
-De här stegen beskriver hur du uppdaterar appen på enheter som kör Android, iOS och Windows.    
+Dessa steg beskriver hur du uppdaterar eller hämtar den senaste versionen av appen på Android-, iOS- och Windows-enheter.    
 
-## <a name="update-the-intune-company-portal-app-on-your-android-device"></a>Uppdatera Intune-företagsportalappen på en Android-enhet
+## <a name="update-the-company-portal-app-on-your-android-device"></a>Uppdatera företagsportalappen på en Android-enhet  
 
-Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Du kommer inte att bli uppmanad att uppdatera i själva företagsportalappen. Välj aviseringen och följ anvisningarna om att uppdatera din enhet.  
+Google Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Du kommer inte att bli uppmanad att uppdatera i själva företagsportalappen. Välj butikens avisering och följ anvisningarna för att uppdatera appen. 
 
-## <a name="update-the-intune-company-portal-app-on-your-ios-device"></a>Uppdatera Intune-företagsportalappen på en iOS-enhet
+## <a name="update-the-company-portal-app-on-your-ios-device"></a>Uppdatera företagsportalappen på en iOS-enhet  
 
-När en ny version är tillgänglig visas alternativet Uppdatera vid appen i listan över installerade appar.  
+När en ny version är tillgänglig visas alternativet **Uppdatera** i listan över installerade appar, bredvid företagsportalappen.  
 
-1. Öppna App Store och sök efter **intune**.
+1. Öppna App Store och sök efter **Intune**.  
+2. När du har hittat appen trycker du på **Uppdatera**.  
 
-2. När du har hittat appen trycker du på **Uppdatera**.
+## <a name="update-the-company-portal-app-on-your-windows-device"></a>Uppdatera företagsportalappen på en Windows-enhet
+Om du vill få uppdateringar automatiskt när de blir tillgängliga går du till **Inställningar**. Aktivera sedan **Appuppdateringar**. Om du vill visa de senaste uppdateringarna och appar som väntar i nedladdningskön går du till **Program och uppdateringar**.  
 
-## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Uppdatera Intune-företagsportalappen på en Windows-enhet
-
-1.  Gå till Microsoft Store och sök efter **Intune-företagsportalen**.
-
-2.  Följ installationsanvisningarna.
-
-    > [!NOTE]
-    > Kontakta företagets support om du inte kan komma åt Microsoft Store.
+Utför stegen nedan om du föredrar att uppdatera appen manuellt eller om **Appuppdateringar** har inaktiverats av ditt företag.  
+1. Öppna Microsoft Store.
+2. Skriv **Företagsportal** i sökfältet.
+3. Klicka på appen om du vill installera den senaste versionen på enheten. 
 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
