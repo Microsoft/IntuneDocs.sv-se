@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f2a244337b152af7bcf8bf17cf7e643bdb3faa59
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 183518caed7276719204830a38b1b9d552a79428
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231465"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642904"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrera Windows Hello för företag med Microsoft Intune
 
@@ -52,7 +52,7 @@ Använd den här artikeln för att skapa en standardprincip för Windows Hello f
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Skapa en princip för Windows Hello för företag
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune**.
+1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** > **Övervakning och hantering** > **Intune**.
 
 2. I Intune-fönstret väljer du **Enhetsregistrering** och sedan **Windows-registrering** > **Windows Hello för företag**.
 

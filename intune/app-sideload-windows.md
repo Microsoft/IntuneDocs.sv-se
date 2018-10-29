@@ -5,19 +5,19 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 1c0c197536cb6d6b452ff5e3607ad1af2d5a4ca8
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: 0c1daa93ff38d1f76ab8c203bf2d989318ecdf62
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058905"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425231"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
@@ -77,7 +77,7 @@ Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows 
 
     -   WinPhoneCompanyPortal.ps1 – Ett Powershell-skript som du kan använda för att signera företagsportalappfilen så att den kan användas för Windows Phone 8.1-enheter
 
-    Du kan också hämta Windows Phone 8.1-företagsportalen (offline-licensierat paket) eller Windows 10-företagsportalen (offline-licensierat paket) från [Microsoft Store för företag](http://businessstore.microsoft.com/). Företagsportalappen måste anskaffas med en offline-licens och lämpligt paket hämtas för användning offline. Listor med plattformar för Windows 8 och Windows Phone 8 i urvalet avser deras 8.1-motsvarigheter. Mer information om hur du gör detta med Intune finns i [Hantera appar som du har köpt från Microsoft Store för företag](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+    Du kan också hämta Windows Phone 8.1-företagsportalen (offline-licensierat paket) eller Windows 10-företagsportalen (offline-licensierat paket) från [Microsoft Store för företag](http://businessstore.microsoft.com/). Företagsportalappen måste anskaffas med en offline-licens och lämpligt paket hämtas för användning offline. Listor med plattformar för Windows 8 och Windows Phone 8 i urvalet avser deras 8.1-motsvarigheter. Mer information om hur du gör detta med Intune finns i [Hantera appar som du har köpt från Microsoft Store för företag](windows-store-for-business.md).
 
 2.  **Hämta Windows Phone SDK** Hämta Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=615570) och installera SDK:n på datorn. Detta SDK behövs för att generera en token för programregistrering.
 
@@ -119,7 +119,7 @@ Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows 
 
     -   `-EnterpriseId` – Företags-ID. Antingen detta argument eller 'AetxPath' måste tillhandahållas. Om det här argumentet inte anges, läses företags-ID:t från AETX-filen. Till exempel, 1000000001
 
-6.  Distribuera Windows Phone 8.1-företagsportalappen (SSP.appx). Om du behöver hjälp kan du läsa [Så här lägger du till verksamhetsspecifika Windows Phone-appar (LOB)](lob-apps-windows-phone.md) ([klassisk portal](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
+6.  Distribuera Windows Phone 8.1-företagsportalappen (SSP.appx). Om du behöver hjälp kan du läsa [Så här lägger du till verksamhetsspecifika Windows Phone-appar (LOB)](lob-apps-windows-phone.md).
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Så här förnyar du Symantec-företagscertifikatet för kodsignering
 
@@ -191,7 +191,7 @@ Så här registrerar och distribuerar du appen:
 2. Hämta Windows 10-företagsportalappen från Microsoft Store för företag så som beskrivs ovan.  
 3. Kör skriptet med de indataparametrar som beskrivs i skripthuvudet, så att Windows 10-företagsportalsappen signeras (se utdrag nedan). Beroenden behöver inte överföras till skriptet. Detta krävs enbart om appen överförs till Intune-aministratörskonsolen.
 
-|       Parameter       |                                                                    Description                                                                    |
+|       Parameter       |                                                                    Beskrivning                                                                    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             Sökvägen till platsen där appxbundle-källfilen finns.                                              |
 | OutputWin10AppxBundle |                                                  Sökvägen för utdata för den signerade appxbundle-filen.                                                  |

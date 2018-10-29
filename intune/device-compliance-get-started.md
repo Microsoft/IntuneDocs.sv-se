@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/28/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 151a445bf7c5c17f8ff1b5ee403df8744f2d8ba6
-ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
+ms.openlocfilehash: 1a70b6369bab130918bad472172995e6296ee4a6
+ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49102063"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49391577"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -151,7 +151,7 @@ Du kan ge enheter som följer principreglerna åtkomst till e-post och andra fö
 Du kan även använda policyer för enhetsefterlevnad utan villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. När du använder policyer för efterlevnad utan villkorlig åtkomst tillämpas inga åtkomstbegränsningar på företagsresurser.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sätt att distribuera policyer för efterlevnad för enheter
-Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om alla användarens enheter uppfyller efterlevnadskraven.
+Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om alla användarens enheter uppfyller efterlevnadskraven. På Windows 10 version 1803 och senare enheter, rekommenderar vi för att distribuera till enhetsgrupper *om* den primära användaren inte registrerat enheten. Användning av enhetsgrupper i det här scenariot hjälper till med kompabilitetsrapportering.
 
 **Standardinställningar för policyer för efterlevnad** (Azure Portal > Enhetsefterlevnad) innefattar:
 

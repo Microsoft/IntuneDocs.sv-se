@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/30/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0af5fb071c6abb01a2819a5d9c73f4e01bf7cb7a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3c103049d22c9834ecb01065686e8678144c9cae
+ms.sourcegitcommit: 8a22afcc8c7479c437c8c66da9cb2117890f0ab0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312840"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410371"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -140,6 +140,9 @@ Rapporten **Enhetsefterlevnad** > **Inställningskompatibilitet** visar det tota
 ![Visa en lista över alla inställningar i olika principer](./media/compliance-policy-monitor/idc-10.png)
 
 När du väljer en specifik inställning kan du se **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för alla enheter som den inställningen är inriktad på.
+
+> [!NOTE]
+> Windows 10-enheter som är anslutna till Azure AD kan visa systemkontot som en icke-kompatibel användare. Detta är normalt och påverkar inte den övergripande enhetsefterlevnaden. 
 
 ## <a name="view-status-of-device-policies"></a>Visa status för enhetsprinciper
 

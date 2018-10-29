@@ -13,13 +13,13 @@ ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 8e22c0caf7b99bcb7a81259829369b7671056abe
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.custom: intune
+ms.openlocfilehash: 5cb90b7f1dc72a67f48ba40db8a6ab4ffe598243
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058956"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425044"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -131,7 +131,7 @@ Både Android och iOS använder version- och build-nummer för appar. Men båda 
 
 Kom ihåg att använda både version- och build-nummer när du utvecklar ett verksamhetsspecifikt program för användning i Intune. Apphantering i Intune har funktioner som förlitar sig på en meningsfull **CFBundleVersion** (för iOS) och **PackageVersionCode** (för Android). De här numren ingår i appmanifestet. 
 
-Intune|iOS|Android|Description|
+Intune|iOS|Android|Beskrivning|
 |---|---|---|---|
 Versionsnummer|CFBundleShortVersionString|PackageVersionName |Det här numret anger en specifik version av appen för slutanvändare.|
 Versionsnummer|CFBundleVersion|PackageVersionCode |Numret används för att indikera en iteration i appkoden.|
@@ -161,9 +161,9 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
     * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
 
-* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](/intune-classic/deploy-use/ios-mam-policy-settings) och [Android-appskyddsprinciper](/intune-classic/deploy-use/android-mam-policy-settings).
+* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
 
-* **Felsök**: Om du stöter på problem vid manuell testning av hur användare interagerar med din app kan du även läsa informationen om att [felsöka MAM](/intune-classic/troubleshoot/troubleshoot-mam). Den här artikeln hjälper dig med vanliga problem, dialogrutor och felmeddelanden som kan uppstå i Intune-hanterade appar. 
+* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna installerar din app, kan du gå till [Felsöka appinstallationsproblem](troubleshoot-app-install.md). 
 
 ### <a name="badge-your-app-optional"></a>Ge din app en skylt (valfritt)
 

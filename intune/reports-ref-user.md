@@ -15,12 +15,12 @@ ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b6161540b4b05ebab35942a1657adc30bce6afdb
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
+ms.openlocfilehash: 1ce1d429b830ac6f494346697bd7e44ac250d9b6
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727483"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642978"
 ---
 # <a name="reference-for-user-entity"></a>Referens för användarentitet
 
@@ -48,4 +48,4 @@ Entitetssamlingen **Användare** innehåller användardata. De här posterna inn
 
 ## <a name="next-steps"></a>Nästa steg
  - Du kan använda entitetssamlingen **aktuell användare** för att begränsa användardata till användare som för närvarande är aktiva. Mer information finns i [referens för den aktuella användarentiteten](reports-ref-current-user.md).
- - Läs mer om hur informationslagret spårar en användares livstid i Intune i [representation av användarlivstid Intune-informationslagret](reports-ref-user-timeline.md).
+ - Mer information om hur informationslagret spårar en användares livstid i Intune finns i [Representation av användarens livstid i Intunes informationslager](reports-ref-user-timeline.md).

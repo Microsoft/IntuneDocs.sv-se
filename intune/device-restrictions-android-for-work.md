@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6a633b73856b5f9f50ffe0b9993713b888b969b
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 2a521eadea2bcf118b4b0c643802fd8478f7ace2
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828150"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652112"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Inställning av enhetsbegränsningar för arbetsenheter i Intune
 
@@ -124,6 +124,7 @@ I den här artikeln beskrivs alla begränsningsinställningar för Microsoft Int
     > [!IMPORTANT]
     >  - Den VPN-klient som du väljer måste vara installerad på enheten och den måste ha stöd för ”per app-VPN” i arbetsprofiler. Annars uppstår ett fel. 
     >  - Du måste godkänna VPN-klientappen i **den hanterade Google Play Store-butiken**, synkronisera appen till Intune och distribuera appen till enheten. När du har gjort det installeras appen i användarens arbetsprofil.
+    >  - Det finns kända problem när du använder per app-VPN med F5-åtkomst för Android 3.0.3. Du hittar mer information i [F5:s viktig information för F5-åtkomst för Android 3.0.3](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-3.html#relnotes_known_issues_f5_access_android).
 
 - **Låsningsläge**: **Aktivera** om du vill tvinga all nätverkstrafik att använda VPN-tunneln. Om en anslutning till VPN inte upprättas har inte enheten åtkomst till nätverket.
 

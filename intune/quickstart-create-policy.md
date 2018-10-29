@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/17/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 73e1e0a27d128d567a924e6f2b343026b11f1a44
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 9d9169ab353da30e0f7b292cea4f5b9c93e316aa
+ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581786"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49391560"
 ---
 # <a name="quickstart-add-a-device-compliance-policy-for-a-windows-10-device"></a>Snabbstart: Lägg till en enhetsefterlevnadsprincip för en Windows 10-enhet
 En efterlevnadsprincip i Intune för Windows-enheter anger de regler och inställningar som Windows-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med [villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access) för att tillåta eller blockera åtkomst till företagets resurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet.
 
 I den här snabbstarten får du skapa en enhetsefterlevnadsprincip för en Windows 10-enhet och sedan tilldela principen en enhetsgrupp.
 
-Om du inte har en Intune-prenumeration [så registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
+Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Krav
 - För att kunna slutföra den här snabbstarten måste du först [skapa en användare](quickstart-create-user.md) och [skapa en grupp](quickstart-create-group.md).
@@ -53,4 +53,4 @@ Ta bort principen när du inte längre behöver den. Gör det genom att välja p
 I den här snabbstarten har du skapat och tilldelat en enkel enhetsefterlevnadsprincip. Om du vill registrera en Windows 10-enhet som ska ta emot principen fortsätter du till snabbstarten och konfigurerar automatisk registrering. 
  
 > [!div class="nextstepaction"]
-> [Konfigurera automatisk registrering](quickstart-setup-auto-enrollment.md)
+> [Ange längd för enhetens lösenord](quickstart-set-password-length-android.md)

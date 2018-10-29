@@ -15,14 +15,14 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.openlocfilehash: c3edbf3663d3226f806bf36af97b97cdf4d169c1
+ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863169"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357095"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Hantera internetåtkomst med principer för skyddade webbläsare med Microsoft Intune  
+# <a name="manage-internet-access-using-an-microsoft-intune-policy-protected-browser"></a>Hantera internetåtkomst med en Microsoft Intune princip-skyddad webbläsare
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -36,26 +36,37 @@ Med en webbläsare som skyddas med Intune-principer (Microsoft Edge eller Intune
 
 ## <a name="getting-started"></a>Komma igång
 
+Microsoft Edge och Intune Managed Browser är webbappar för webbläsare som du och slutanvändarna kan hämta från offentliga appbutiker för användning i din organisation. 
+
+Operativsystemkrav för webbläsarprinciper:
+- Android 4 och senare eller
+- iOS 8.0 och senare.
+
+Tidigare versioner av Android och iOS kommer att kunna fortsätta att använda Managed Browser, men kommer inte att kunna installera nya versioner av appen och kanske inte använda alla funktioner. Vi rekommenderar att du uppdaterar de här enheterna till en version av operativsystemet som stöds.
+
+>[!NOTE]
+>Managed Browser inte har stöd för det kryptografiska protokollet Secure Sockets Layer version 3 (SSLv3).
+
+
+## <a name="application-protection-policies-for-protected-browsers"></a>Principer för programskydd för skyddade webbläsare
+
+Eftersom Edge och Managed Browser har integrering med Intune SDK kan du också använda appskyddsprinciper för dem, som att:
+- Styra användningen av klipp ut, kopiera och klistra in.
+- Förhindra skärmdumpar.
+- Säkerställa att företagets länkar bara öppnas i hanterade appar och webbläsare.
+
+Mer information finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
+
 Du kan tillämpa inställningarna för att:
 
 - Enheter som har registrerats med Intune
 - Registrerade med en annan MDM-produkt
 - Ohanterade enheter
 
-Om användarna installerar Managed Browser från appbutiken och Intune inte hanterar den, kan den användas som en vanlig webbläsare med stöd för enkel inloggning via webbplatsen Microsoft MyApps. Användarna dirigeras direkt till webbplatsen MyApps där de kan se alla sina etablerade SaaS-program.
+>[!NOTE]
+>Om användarna installerar Managed Browser från appbutiken och Intune inte hanterar den, kan den användas som en vanlig webbläsare med stöd för enkel inloggning via webbplatsen Microsoft MyApps. Användarna dirigeras direkt till webbplatsen MyApps där de kan se alla sina etablerade SaaS-program.
 Eftersom Managed Browser och Edge inte hanteras av Intune har de inte åtkomst till några data från andra Intune-hanterade program. 
 
-Managed Browser inte har stöd för det kryptografiska protokollet Secure Sockets Layer version 3 (SSLv3).
-
-Du kan skapa principer för skyddade webbläsare för följande enhetstyper:
-
--   Enheter som kör Android 4 och senare
-
--   Enheter som kör iOS 10.0 och senare
-
->[!IMPORTANT]
->Tidigare versioner av Android och iOS kommer att kunna fortsätta att använda Managed Browser, men kommer inte att kunna installera nya versioner av appen och kanske inte använda alla funktioner. Vi rekommenderar att du uppdaterar de här enheterna till en version av operativsystemet som stöds.
-    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Villkorlig åtkomst för skyddade webbläsare
 
@@ -82,7 +93,7 @@ Om du vill begränsa Azure AD-anslutna webbappars användning av Intune Managed 
 8. I avsnittet **Tilldelningar** väljer du **Användare och grupper** och sedan de användare eller grupper som du vill tilldela den här principen till. 
 
     > [!NOTE]
-    > Användarna måste också vara mål för Intunes appskyddsprincip. Mer information om att skapa Intune-appskyddsprinciper finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
+    > Användarna måste också använda principen Intune-appskydd för att kunna ta emot principer för appkonfiguration. Mer information om att skapa Intune-appskyddsprinciper finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
 
 9. I avsnittet **Tilldelningar** går du till **Molnappar** och väljer vilka appar som ska skyddas med den här principen.
 
@@ -101,6 +112,9 @@ Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticat
 
 ## <a name="create-a-protected-browser-app-configuration"></a>Skapa en appkonfiguration för en skyddad webbläsare
 
+>[!IMPORTANT]
+>För att appkonfigurationer ska tillämpas så måste den användarskyddade webbläsaren eller en annan app på enheten redan hanteras av [Intunes appskyddsprincip]( app-protection-policy.md)
+
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3.  På bladet **Klientappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
@@ -114,8 +128,6 @@ Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticat
 11. På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.
 12. Den nya konfigurationen skapas och visas på bladet **Appkonfiguration**.
 
->[!IMPORTANT]
->Managed Browser förlitar sig för närvarande på automatisk registrering. För att appkonfigurationer ska tillämpas så måste ett annat program på enheten redan hanteras av Intunes appskyddsprinciper.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Tilldela de konfigurationsinställningar som du har skapat
 
@@ -275,18 +287,7 @@ En lista över de inställningar som finns lagrade i apploggarna finns i [gransk
 ### <a name="turn-off-usage-data"></a>Stäng av användningsdata
 Microsoft samlar automatiskt in anonyma data om prestanda och användning av Managed Browser för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.
 
-
 -   Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS-enheter.
--   Managed Browser använder inte inställningar som användare gör i den inbyggda webbläsaren på sina enheter. Managed Browser har inte åtkomst till de här inställningarna.
-
--   Om du konfigurerar alternativet **Kräv enkel PIN-kod för åtkomst** eller **Kräv företagets autentiseringsuppgifter för åtkomst** i en appskyddsprincip som är associerad med Managed Browser och en användare väljer hjälplänken på autentiseringssidan så kan användaren bläddra på alla webbplatser, oavsett om de har lagts till i en blockeringslista i principen.
-
--   Managed Browser kan endast blockera åtkomst till webbplatser när de öppnas direkt. Den blockerar inte åtkomst när mellanliggande tjänster (till exempel en översättningstjänst) används för åtkomst till webbplatsen.
-
--   För att tillåta autentisering och få åtkomst till Intune-dokumentationen är **&#42;.microsoft.com** undantaget från listan Tillåt eller blockera. Den tillåts alltid.
-
-### <a name="turn-off-usage-data"></a>Stäng av användningsdata
-Microsoft samlar automatiskt in anonyma data om prestanda och användning av Managed Browser för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.
 
 ## <a name="next-steps"></a>Nästa steg
 

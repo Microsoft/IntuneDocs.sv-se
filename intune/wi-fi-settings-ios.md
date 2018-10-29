@@ -1,82 +1,133 @@
 ---
-title: Konfigurera Microsoft Intunes WiFi-inställningar för enheter som kör iOS
+title: Konfigurera Wi-Fi-inställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Läs om Intunes WiFi-konfigurationsinställningar för enheter som kör iOS
+description: Skapa eller lägg till en Wi-Fi-enhetskonfigurationsprofil för iOS-enheter. Se de olika inställningarna, inklusive att lägga till certifikat, välja en EAP-typ och välja en autentiseringsmetod i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/5/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4b723bd23681d98463adae83be5f74b556dc779e
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: fa81e8979f48a0b027f4860cfc5d2a88e3b30772
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321160"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425248"
 ---
-# <a name="wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
+# <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina iOS-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk, lägga till ett PKS- eller ett SCEP-certifikat och mycket mer.
 
-I den här artikeln beskrivs de WiFi-inställningar som du kan konfigurera i Microsoft Intune för enheter som kör iOS.
+Dessa Wi-Fi-inställningar är uppdelade i två kategorier: Grundläggande inställningar och inställningar på företagsnivå.
 
-## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Wi-Fi-inställningar för bas- och företagsprofiler
+Den här artikeln beskriver dessa inställningar.
 
-- **Nätverksnamn** – Ange ett namn för den här Wi-Fi-anslutningen. Detta är det namn som användarna ser när de bläddrar i listan med tillgängliga anslutningar på sin enhet.
-- **SSID** – Förkortning för nätverksnamn. Detta är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det nätverksnamn som du konfigurerade när de väljer anslutningen.
-- **Anslut automatiskt** – Gör att enheten ansluter när den är inom intervallet för det här nätverket.
-- **Dolt nätverk** – Förhindrar att det här nätverket visas i listan över tillgängliga nätverk på enheten.
-- **I förväg delad nyckel** - 
-- **Proxyinställningar** – Välj från:
-    - **Ingen** – Inga proxyinställningar konfigureras.
-    - **Manuell** – Ange **proxyserveradressen** (som en IP-adress) och dess tillhörande **portnummer**.
-    - **Automatisk** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+## <a name="before-you-begin"></a>Innan du börjar
 
-## <a name="wi-fi-settings-for-basic-profiles-only"></a>Wi-Fi-inställningar endast för basprofiler
+[Skapa en enhetsprofil](device-profile-create.md).
 
-- **Säkerhetstyp** – Välj det säkerhetsprotokoll som ska användas för att autentisera med Wi-Fi-nätverket:
-    - **Öppet (ingen autentisering)** – Använd bara det här alternativet om nätverket är oskyddat.
-    - **WPA/WPA2 – Personal**
-    - **WEP**
+## <a name="basic-profiles"></a>Grundläggande profiler
 
-## <a name="wi-fi-settings-for-enterprise-profiles-only"></a>Wi-Fi-inställningar endast för företagsprofiler
+- **Wi-Fi-typ**: Välj **Grundläggande**.
+- **Nätverksnamn**: Ange ett namn på Wi-Fi-anslutningen. Detta värde är det namn som användarna ser när de bläddrar i listan med tillgängliga anslutningar på sin enhet.
+- **SSID**: Förkortning för **Service Set Identifier**. Den här egenskapen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det nätverksnamn som du konfigurerade när de väljer anslutningen.
+- **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
+- **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
+- **Säkerhetstyp**: Välj det säkerhetsprotokoll som autentiserar med Wi-Fi-nätverket. Alternativen är:
 
-- **EAP-typ** – Välj den EAP-typ (Extensible Authentication Protocol) som ska användas för att autentisera skyddade trådlösa anslutningar:
-    - **EAP-FAST**
-    - **EAP-SIM**
-    - **EAP-TLS**
-    - **EAP-TTLS**
-    - **LEAP**
-    - **PEAP**
+  - **Öppet (ingen autentisering)**: Använd bara det här alternativet om nätverket är oskyddat.
+  - **WPA/WPA2 – Personlig**: Ange lösenordet i **I förväg delad nyckel**. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet.
+  - **WEP**
 
-### <a name="further-options-when-you-choose-an-eap-type"></a>Ange ytterligare alternativ när du väljer en EAP-typ
+- **Proxyinställningar**: Dina alternativ:
+  - **Inga**: Inga proxyinställningar konfigureras.
+  - **Manuell** – Ange **Proxyserveradress** som en IP-adress och dess **Portnummer**.
+  - **Automatisk**: Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `http://proxy.contoso.com`) som innehåller konfigurationsfilen.
 
+## <a name="enterprise-profiles"></a>Företagsprofiler
 
-|Inställningsnamn|Mer information|Använd när|
-|--------------|-------------|----------|
-|**PAC-inställningar (Protected Access Credential)**|Välj det här alternativet om du vill etablera en autentiserad tunnel mellan klienten och autentiseringsservern. Välj en av:<br>- **Använd PAC** – Använd en befintlig PAC-fil om det finns en sådan.<br>- **Använd och etablera PAC** – Etablerar PAC-filen till dina enheter.<br>- **Använd och etablera PAC anonymt** – Etablera PAC-filen till dina enheter och säkerställ att PAC-filen etableras utan att servern autentiseras.|EAP-typen är **EAP-FAST**|
+- **Wi-Fi-typ**: Välj **Företag**.
+- **SSID**: Förkortning för **Service Set Identifier**. Den här egenskapen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det nätverksnamn som du konfigurerade när de väljer anslutningen.
+- **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
+- **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
 
-#### <a name="server-trust"></a>Serverförtroende
+- **EAP-typ**: Välj den EAP-typ (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar. Alternativen är:
 
+  - **EAP-FAST**: Ange **PAC-inställningar (Protected Access Credential)**. Det här alternativet använder autentiseringsuppgifter för skyddad åtkomst till att skapa en autentiserad tunnel mellan klienten och autentiseringsservern. Alternativen är:
+    - **Använd inte (PAC)**
+    - **Använd (PAC)**: Om det finns en befintlig PAC-fil använder du den.
+    - **Använd och etablera PAC**: Skapa och lägg till PAC-filen till dina enheter.
+    - **Använd och etablera PAC anonymt**: Skapa och lägg till PAC-filen i dina enheter utan att autentisera till servern.
 
-|Inställningsnamn|Mer information|Använd när|
-|--------------|-------------|----------|
-|**Certifikatservernamn**|Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användarnas enheter när de ansluter till WiFi-nätverket.|EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**.|
-|**Rotcertifikat för serververifiering**|Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen. |EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**|
-|**Identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|EAP-typen är **PEAP**|
+  - **EAP-SIM**
 
+  - **EAP-TLS**: Ange också:
 
-#### <a name="client-authentication"></a>Klientautentisering
+    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
+    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
 
+      Klicka på **OK** för att spara ändringarna.
 
-| Inställningsnamn | Mer information | Använd när |
-|---|---|---|
-| **Klientcertifikat för klientautentisering (identitetscertifikat)**** |  Välj den SCEP- eller PKCS-certifikatsprofil som ska användas för att autentisera anslutningen.  |    EAP-typen är **EAP-TLS**    |
-| **Autentiseringsmetod** | Välj autentiseringsmetod för anslutningen:<br>- **Certifikat** för att markera det SCEP- eller PKCS- klientcertifikat som är identitetscertifikatet som presenterats för servern.<br><br>- **Användarnamn och lösenord** för att ange en annan metod för autentisering. <br><br>Om du har valt **Användarnamn och lösenord**, konfigurera:<br><br>-  **Annan metod än EAP (inre identitet)** och välj sedan hur du ska autentisera anslutningen:<br>- **Inga**<br>- **Okrypterat lösenord (PAP)**<br>- **CHAP (Challenge Handshake Authentication Protocol)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP Version 2 (MS-CHAP v2)**<br>Vilka alternativ som är tillgängliga beror på vilken EAP-typ du väljer.<br><br>**och**<br><br>- **Identitetssekretess (yttre identitet)** – Ange texten som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel. | EAP-typen är **EAP-TTLS** eller * |
+    - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
+      Klicka på **OK** för att spara ändringarna.
+
+  - **EAP-TTLS**: Ange också:
+
+    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
+    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+
+      Klicka på **OK** för att spara ändringarna.
+
+    - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
+
+      - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
+        - **Annan metod än EAP (inre identitet)**: Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
+
+          Dina alternativ: **PAP (Password Authentication Protocol)**, **CHAP (Challenge Handshake Authentication Protocol)**, **MS-CHAP (Microsoft CHAP)** eller **MS-CHAP v2 (Microsoft CHAP Version 2)**
+
+      - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+
+        Klicka på **OK** för att spara ändringarna.
+
+      - **Identitetsskydd (yttre identitet)**: Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+
+  - **LEAP**
+
+  - **PEAP**: Ange också:
+
+    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
+    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+
+      Klicka på **OK** för att spara ändringarna.
+
+    - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
+
+      - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. 
+
+      - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+
+        Klicka på **OK** för att spara ändringarna.
+
+      - **Identitetsskydd (yttre identitet)**: Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+
+- **Proxyinställningar**: Dina alternativ:
+  - **Inga**: Inga proxyinställningar konfigureras.
+  - **Manuell** – Ange **Proxyserveradress** som en IP-adress och dess **Portnummer**.
+  - **Automatisk**: Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `http://proxy.contoso.com`) som innehåller konfigurationsfilen.
+
+Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
+
+## <a name="next-steps"></a>Nästa steg
+
+Profilen har skapats, men den gör inte något än. Nu ska vi [tilldela den här profilen](device-profile-assign.md).
+
+## <a name="more-resources"></a>Fler resurser
+
+[Översikt över Wi-Fi-inställningar](wi-fi-settings-configure.md), inklusive andra tillgängliga plattformar.

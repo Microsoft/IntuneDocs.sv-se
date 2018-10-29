@@ -15,12 +15,12 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3ba8caa74b673127a17a431d5b821d52f9767c49
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
+ms.openlocfilehash: 5680e0c53a9decfa5b172e08c04fbfe4025f2d7c
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727466"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642900"
 ---
 # <a name="data-warehouse-data-model"></a>Datamodellen informationslager
 
@@ -61,6 +61,6 @@ Lagret är nedströms från dina Intune-data. Intune tar en daglig ögonblicksbi
 
 ## <a name="next-steps"></a>Nästa steg
 
- - Läs mer om hur informationslagret spårar en användares livstid i Intune i [representation av användarlivstid Intune-informationslagret](reports-ref-user-timeline.md).
- - Läs mer om hur du arbetar med informationslager i [skapa första informationslagret](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
+ - Mer information om hur informationslagret spårar en användares livstid i Intune finns i [Representation av användarens livstid i Intunes informationslager](reports-ref-user-timeline.md).
+ - Mer information om hur du arbetar med informationslager finns i [Skapa första informationslagret](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
  - Mer information om hur du arbetar med Power BI och ett informationslager finns i [skapa en ny Power BI-rapport genom att importera en datauppsättning](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 

@@ -14,12 +14,12 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: edac1701de22fd94eac3990949d18389841a5444
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: a2d2d7eb609db07d4f41254f2937120412f2f4b1
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231550"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643050"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrering av nätverksåtkomstkontroll (NAC) i Intune
 
@@ -27,7 +27,7 @@ Intune kan integreras med en NAC-partner (Network Access Control) som hjälper d
 
 ## <a name="how-do-intune-and-nac-solutions-help-protect-your-organization-resources"></a>Hur skyddar man företagets resurser med Intune och NAC-lösningar?
 
-NAC-lösningarna kontrollerar enhetens registrering och kompatibilitetstillstånd mot uppgifterna i Intune och fattar sedan ett beslut om att bevilja eller neka åtkomst. Om enheten inte finns registrerad, eller finns registrerad men saknar kompatibilitet med vissa principer, omdirigeras i så fall enheten till Intune för registrering och/eller för en kompatibilitetskontroll.
+NAC-lösningarna kontrollerar enhetens registrering och kompatibilitetstillstånd mot uppgifterna i Intune och fattar sedan ett beslut om att bevilja eller neka åtkomst. Om enheten inte finns registrerad, eller om den är registrerad men saknar kompatibilitet med vissa Intune-principer, ska enheten omdirigeras till Intune för registrering och/eller en efterlevnadskontroll.
 
 ### <a name="example"></a>Exempel
 

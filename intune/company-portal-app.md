@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2defc433ef39562750c4579f302a9c5367c6464a
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
+ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828252"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307414"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -61,7 +61,7 @@ Ange ditt företags supportinformation så att de anställda har kontaktuppgifte
 
 
 ## <a name="company-branding-customization"></a>Varumärkesanpassning       
-Du kan anpassa företagsportalen med företagets logotyp, företagets namn, temafärg och bakgrund.     
+Du kan anpassa företagsportalen med företagets logotyp, företagets namn, temafärg och bakgrund. För att snabbt förhandsgranska konfigurerad företagsanpassning utan en testenhet, kan du gå till [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Observera att den logotyp du överför kommer att användas för e-postmallar.      
 
 ### <a name="theme-color"></a>Temafärg
 Välj en temafärg för företagsportalen. Välj en standardfärg eller ange en hexadecimal sexsiffrig kod för en egen färg.
@@ -82,3 +82,30 @@ Ladda upp företagets logotyp så att den blir synlig för användarna i Intune.
 |**Visa företagets namn bredvid logotypen**| Välj det här alternativet om du vill visa företagsnamnet du angav bredvid den uppladdade logotypen. |
 
 När du har sparat ändringarna kan du välja **Förhandsgranska inställningarna på Intune Web-portalen** längst upp för att se hur konfigurationen kommer att se ut.
+
+## <a name="windows-company-portal-keyboard-shortcuts"></a>Kortkommandon för Windows-företagsportalen
+
+Slutanvändare kan utlösa app- och enhetsåtgärder i Windows-företagsportalen med hjälp av kortkommandon (acceleratorer).
+
+Följande kortkommandon är tillgängliga i Windows-företagsportalappen.
+
+| Område | Beskrivning | Kortkommando |
+|:------------------:|:--------------:|:-----------------:|
+| Navigeringsmenyn | Navigering | Alt + M |
+|  | Hem | Alt + H |
+|  | Alla appar | Alt + A |
+|  | Installerade appar | Alt+I |
+|  | Skicka feedback | Alt + F |
+|  | Min profil | Alt + U |
+|  | Inställningar | Alt + T |
+| Start – Enhetspanel | Byt namn | F2 |
+|  | Ta bort | CTRL + D eller ta bort |
+|  | Kontrollera åtkomst | CTRL + M eller F9 |
+| Information om enhet | Byt namn | F2 |
+|  | Ta bort | CTRL + D eller ta bort |
+|  | Kontrollera åtkomst | CTRL + M eller F9 |
+| Appinformation | Installera | Ctrl + I |
+
+## <a name="next-steps"></a>Nästa steg
+
+- [Lägga till appen Företagsportal för Windows 10 manuellt med Microsoft Intune](store-apps-company-portal-app.md)

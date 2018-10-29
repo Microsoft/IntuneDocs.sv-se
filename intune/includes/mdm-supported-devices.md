@@ -2,7 +2,7 @@
 
 ### <a name="apple"></a>Apple
 - Apple iOS 10.0 och senare
-- Mac OS X 10.11 och senare
+- Mac OS X 10.11 och senare (i december 2018 ändras versionen som stöds till 10.12 och senare)
 
 ### <a name="google"></a>Google
 - Android 4.4 och senare (inklusive Samsung KNOX Standard 4.4 och senare)

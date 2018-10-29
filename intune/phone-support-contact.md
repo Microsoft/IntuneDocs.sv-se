@@ -1,7 +1,7 @@
 ---
 title: Kontakta telefonsupporten för Microsoft Intune
 titlesuffix: Microsoft Intune
-description: Listar telefonnumren för telefonsupporten för Microsoft Intune.
+description: Visar en lista med telefonnumren till Microsoft Intunes telefonsupport.
 keywords: öppettider
 author: dougeby
 ms.author: dougeby
@@ -15,12 +15,12 @@ ms.assetid: 1326e65e-56cc-4987-9006-3a788597ca19
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: efecd454c2e6ba8454cfd68291a96c6d4c8a2703
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a7af46f0f9db0d849e3c75da36c5fe9354554107
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31030267"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643118"
 ---
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontakta telefonsupporten för Microsoft Intune
 
@@ -76,7 +76,7 @@ Det här avsnittet listar kontaktinformation för telefonsupporten för Microsof
 |    Liechtenstein    |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)   | Franska&#42;, tyska&#42;, italienska&#42;, engelska |                                                                       0800000300                                                                       |                                                                          0227614114                                                                           |
 |      Litauen      |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 EET (UTC + 2)   |            Litauiska&#42;, engelska             |                                                                       880030960                                                                        |                                                                                                                                                               |
 |     Luxemburg      |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)   |        Franska&#42;, tyska&#42;, engelska        |                                                                        80021094                                                                        |                                                                           24871510                                                                            |
-|      Republiken Makedonien      |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)   |                     Engelska                     |                  0800-94288<br /><br />Steg 1: Ring telefonnummer<br /><br />Steg 2: Ange: 001<br /><br />Steg 3: Ange 877 663 5075                   |                                                                                                                                                               |
+|      Makedonien      |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)   |                     Engelska                     |                  0800-94288<br /><br />Steg 1: Ring telefonnummer<br /><br />Steg 2: Ange: 001<br /><br />Steg 3: Ange 877 663 5075                   |                                                                                                                                                               |
 |      Malaysia       |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 18:00 MYT (UTC +8)   |        Bahasa&#42;, malajiska&#42;, engelska         |                                                                      1800 220030                                                                       |                                                                           362074606                                                                           |
 |        Malta        |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)   |                     Engelska                     |                                                                       0 80062231                                                                       |                                                                                                                                                               |
 |       Mexiko        |                        24 × 7                         |  Måndag-fredag<br /><br />09:00 – 17:00 CST (UTC -6)   |              Spanska&#42;, engelska              |                                                                     01-8005630605                                                                      |                                                                          55473856567                                                                          |

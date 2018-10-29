@@ -12,17 +12,20 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6aa2ade550a01a9e4758024213a67e6a7ddd8f03
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3a3fd4c57edba6f4d9abfdd4188c94627543cb43
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313861"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652163"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
+
+> [!Note]
+> Det är inte alla alternativ som är tillgängliga i alla utgåvor av Windows
 
 ## <a name="general"></a>Allmänt
 - **Skärmbild (endast mobil)** – Gör det möjligt för användaren att hämta enhetens skärm som en bild.
@@ -400,3 +403,6 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 - **Meddelandesynkronisering (endast mobil)** – Inaktivera meddelandefunktioner överallt och säkerhetskopiering och återställning av textmeddelanden.
 - **MMS (endast mobil)** – Inaktivera funktionen för att skicka och ta emot MMS på enheten.
 - **RCS (endast mobil)** – Inaktivera funktionen för att skicka och ta emot Rich Communication Services på enheten.
+
+## <a name="more-information"></a>Mer Information
+Mer teknisk information om varje inställning och vilka utgåvor av Windows som stöds finns i [CSP-referens för Windows 10-princip](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider)

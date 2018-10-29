@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,21 +15,23 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 61bb874fd914c69669197110ee5901ccfbc3f594
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866362"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075618"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
 Microsoft Intune har för närvarande stöd för en mängd olika typer av appar och distributionsscenarier på Windows 10-enheter. När du har lagt till en app till Intune kan du tilldela appen till användare och enheter. Följande information innehåller mer detaljer om de Windows 10-scenarier som stöds. Dessutom innehåller följande information viktiga punkter att tänka på när du distribuerar appar till Windows. 
 
-Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de typer av appar som stöds på Windows 10-enheter. Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx**, **.appxbundle**, **.msix** och **.msixbundle**.  
+Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de typer av appar som stöds på Windows 10-enheter. Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx** och **.appxbundle**.  
 
 > [!Note]
-> Den minsta nödvändiga Windows 10-uppdateringen för att distribuera appar i enhetssammanhang är [May 23, 2018—KB4100403 (OS Build 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
+> De minsta nödvändiga Windows 10-uppdateringarna för att distribuera moderna appar är följande:
+> - För Windows 10 1803, [23 maj 2018 – KB4100403 (OS-version 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403).
+> - För Windows 10 1709 [21 juni 2018 – KB4284822 (OS-version 16299.522)](https://support.microsoft.com/help/4284822).
 
 ## <a name="windows-10-line-of-business-apps"></a>Verksamhetsspecifika Windows 10-appar
 
@@ -44,8 +46,13 @@ Beroende på apptypen kan appen installeras på en Windows 10-enhet på ett av t
 
 - **Användarkontext**: När en app distribueras i användarkontext installeras den hanterade appen för den användaren på enheten när användaren loggar in på enheten. Observera att installationen av appen inte lyckas förrän användaren loggar in på enheten. 
     - Moderna verksamhetsspecifika appar och Microsoft Store för företag-appar (både online och offline) kan distribueras i användarkontext och stöder både avsikten Krävs och Tillgänglig.
+    - Win32-appar som skapats som **användarläge** eller **dubbelläge** kan distribueras i användarkontext och stöder både **krävd** och **tillgänglig** avsikt. 
 - **Enhetskontext**: När en app distribueras i enhetskontext installeras den hanterade appen direkt till enheten av Intune.
     - Endast moderna verksamhetsspecifika appar och onlinelicensierade Microsoft Store för företag-appar kan distribueras i enhetskontext och stöder endast avsikten Krävs.
+    - Win32-appar som skapats som **datorläge** eller **dubbelläge** kan distribueras i användarkontext och stöder endast **krävd** avsikt.
+
+> [!NOTE]
+> För Win32-appar som skapats som **dubbelläge**-appar (admin) måste du välja om appen ska fungera som **användarläge** eller **datorläge** för alla tilldelningar som är associerade med denna instans. Distributionskontexten kan inte ändras per tilldelning.  
 
 När en app distribueras i enhetskontext lyckas endast installationen när den riktas till en enhet som stöder enhetskontext. Dessutom stöder distribuering i enhetskontext dessutom följande villkor:
 - Om en app distribueras i enhetskontext och riktas mot en användare kommer installationen att misslyckas med följande status och fel som visas i administratörskonsolen:

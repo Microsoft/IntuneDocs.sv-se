@@ -1,6 +1,6 @@
 ---
 title: Aktivera eSIM-dataanslutningar i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller använd eSIM för att få Internet- och dataåtkomst med hjälp av olika dataplaner. I Intune lägger du till eller importerar aktiveringskoder och tilldelar sedan dessa aktiveringskoder med hjälp av en konfigurationsprofil. Du kan även övervaka eSIM-profilerna och kontrollera status för de eSIM-aktiverade enheterna.
+description: Lägg till eller använd eSIM för att få Internet- och dataåtkomst med hjälp av olika dataplaner. I Intune lägger du till eller importerar aktiveringskoder och tilldelar sedan dessa aktiveringskoder med hjälp av en konfigurationsprofil. Du kan även övervaka eSIM-profilerna och kontrollera statusen för de eSIM-aktiverade enheterna.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b03c46a9095c0f300869ebd14d1a81698e294f7
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 654c9af4d72ca5d07a9852ba4a653d9404ea16d2
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43314031"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642931"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 

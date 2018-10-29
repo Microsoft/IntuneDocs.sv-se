@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e7e740d03453a437572f8f960ed21927f4fcbace
-ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
+ms.openlocfilehash: f41c228e7b5dd4084e7ebb2fab1148913b76880f
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49102046"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642970"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -31,7 +31,7 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 > [!Note]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.<p></p>
 > Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.<p></p>
-> För Microsoft Word, Microsoft Excel, Microsoft PowerPoint, måste du använda Android 16.0.9327.1000 och senare.
+> För Microsoft Word, Microsoft Excel, Microsoft PowerPoint, måste du använda appversion 16.0.9327.1000 och senare.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.

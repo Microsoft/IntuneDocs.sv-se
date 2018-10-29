@@ -1,7 +1,7 @@
 ---
-title: Konfigurera Wi-Fi-inställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
+title: Konfigurera Wi-Fi-inställningar för Android Enterprise- och Kiosk-enheter – Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Skapa eller lägga till en Wi-Fi-enhetskonfigurationsprofil för Android. Se de olika inställningarna, inklusive att lägga till certifikat, välja en EAP-typ och välja en autentiseringsmetod i Microsoft Intune.
+description: Skapa eller lägg till en konfigurationsprofil för Wi-Fi-enheter för Android Enterprise och Android Kiosk. Se de olika inställningarna, inklusive att lägga till certifikat, välja en EAP-typ och välja en autentiseringsmetod i Microsoft Intune. För Kiosk-enheter anger du också den i förväg delade nyckeln för ditt nätverk.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -13,18 +13,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7c0d11e7670134c6a2cd9ce2eb72714ba64aa03
+ms.openlocfilehash: c2983f2f7b7079f73c857bf7caafe4236373c5dc
 ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 10/18/2018
-ms.locfileid: "49424993"
+ms.locfileid: "49431943"
 ---
-# <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för enheter som kör Android i Microsoft Intune
+# <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för enheter som kör Android Enterprise och Android Kiosk i Microsoft Intune
 
-Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina Android-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk, lägga till ett PKS- eller ett SCEP-certifikat och mycket mer.
-
-Dessa Wi-Fi-inställningar är uppdelade i två kategorier: Grundläggande inställningar och inställningar på företagsnivå.
+Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina Android Enterprise- och Android Kiosk-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk med en i förväg delad nyckel och mycket mer.
 
 Den här artikeln beskriver dessa inställningar.
 
@@ -32,7 +30,25 @@ Den här artikeln beskriver dessa inställningar.
 
 [Skapa en enhetsprofil](device-profile-create.md).
 
-## <a name="basic-profile"></a>Grundläggande profil
+## <a name="device-owner-only---kiosk"></a>Endast enhetens ägare – helskärmsläge
+
+Välj det här alternativet om du använder en Android Enterprise-enhet i helskärmsläge.
+
+- **Nätverksnamn**: Ange ett namn på Wi-Fi-anslutningen. Detta värde är det namn som användarna ser när de bläddrar i listan med tillgängliga anslutningar på sin enhet.
+- **SSID**: Förkortning för **Service Set Identifier**. Den här inställningen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **nätverksnamn** som du konfigurerade när de väljer anslutningen.
+- **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
+- **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
+- **Wi-Fi-typ**: Välj det säkerhetsprotokoll som ska autentiseras med Wi-Fi-nätverket. Alternativen är:
+
+  - **Öppet (ingen autentisering)**: Använd bara det här alternativet om nätverket är oskyddat.
+  - **I förväg delad WEP-nyckel**: Ange lösenordet i **I förväg delad nyckel**. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet.
+  - **I förväg delad WPA-nyckel**: Ange lösenordet i **I förväg delad nyckel**. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet.
+
+Klicka på **OK** för att spara ändringarna.
+
+## <a name="work-profile-only"></a>Endast arbetsprofil
+
+### <a name="basic-settings"></a>Grundläggande inställningar
 
 - **Wi-Fi-typ**: Välj **Grundläggande**.
 - **SSID**: Förkortning för **Service Set Identifier**. Den här inställningen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till.
@@ -103,6 +119,5 @@ Profilen har skapats, men den gör inte något än. Nu ska vi [tilldela den här
 
 ## <a name="more-resources"></a>Fler resurser
 
+- Se inställningarna som är tillgängliga för Android-enheter i [Wi-Fi-inställningar för enheter som kör Android](wi-fi-settings-android.md).
 - [Översikt över Wi-Fi-inställningar](wi-fi-settings-configure.md), inklusive andra plattformar.
-
-- Använder du Android Enterprise- eller Android Kiosk-enheter? Om ja, se [Wi-Fi-inställningar för enheter som kör Android Enterprise och Android Kiosk](wi-fi-settings-android-enterprise.md).

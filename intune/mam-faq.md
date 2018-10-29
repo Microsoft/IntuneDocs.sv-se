@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 635853cb744395e6ae519985eaed62b53e88578e
-ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
+ms.openlocfilehash: f27baf7d40a6eb4d89769eeab7a6e035e3468825
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307431"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643033"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -174,7 +174,11 @@ Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på sluta
 När du hanterar olika typer av inställningar får ett krav på appversion företräde, följt av kravet på Android-operativsystemets version och kravet på Android-korrigeringsprogrammets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning.
 
 ## <a name="app-experience-on-ios"></a>App-upplevelse på iOS
-
+**Vad händer om jag lägger till eller tar bort ett fingeravtryck eller ansikte till/från min enhet?**
+Intunes appskyddsprinciper kan styra åtkomst till den Intune-licensierade användaren. Ett sätt att styra åtkomst till appen är att kräva antingen Apples Touch-ID eller ansikts-ID på enheter som stöds. Intune implementerar ett beteende där, om det förekommer ändringar till enhetens biometriska databas, Intune uppmanar användaren att ange en PIN-kod när nästa tidsgränsen för inaktivitet uppfylls. Ändringar av biometriska data inkluderar tillägg eller borttagning av ett fingeravtryck eller ansikte. Om Intune-användare inte har en PIN-kod, leds de till att ställa in en PIN-kod i Intune.
+ 
+Syftet med detta är att fortsätta att hålla din organisations data i appen säkra och skyddade på appnivå. Den här funktionen är endast tillgänglig för iOS och kräver medverkan av program som integrerar Intune APP SDK för iOS, version 9.0.1 eller senare. Integrering av SDK krävs så att beteendet kan tillämpas på de berörda programmen. Den här integreringen händer på löpande bas, och är beroende av specifika programteam. Vissa appar som deltar omfattar WXP, Outlook, Managed Browser och Yammer. 
+  
 **Jag kan använda delningtillägg i iOS för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?**<br></br>
 Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune  _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
 

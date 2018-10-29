@@ -1,6 +1,6 @@
 ---
 title: Skapa en efterlevnadsprincip för Windows-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Skapa eller konfigurera en enhetsefterlevnadsprincip i Microsoft Intune för Windows Phone 8.1, Windows 8.1 och senare, och Windows 10 och senare enheter. Kontrollera efterlevnad på det lägsta och högsta operativsystemet, ange begränsningar för lösenord och längd, kräv bitlocker, sök efter AV-lösningar från tredje part, kontrollera ställ in godkänd hotnivå och aktivera kryptering för lagring av data, inklusive Surface Hub och Windows Holographic för företag.
+description: Skapa eller konfigurera en enhetsefterlevnadsprincip i Microsoft Intune för Windows Phone 8.1, Windows 8.1 och senare, och Windows 10 och senare enheter. Kontrollera efterlevnad på det lägsta och högsta operativsystemet, ange begränsningar för lösenord och längd, kräv BitLocker, sök efter AV-lösningar från tredje part, ställ in godkänd hotnivå och aktivera kryptering för lagring av data, inklusive Surface Hub och Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11ccace4ca8e43e09b8aebeb92530629cf50a472
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: e38e6f615220135e9c4c9c786ab260f5921890ea
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602324"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642920"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lägg till en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
@@ -119,8 +119,6 @@ Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsyst
 
 Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om [kryptografiprovidern för hälsoattesteringstjänsten](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 
-Information om hur du konfigurerar Windows Defender ATP (Advanced Threat Protection – Avancerat skydd) som skyddstjänst finns i [Aktivera Windows Defender ATP med villkorsstyrd åtkomst](advanced-threat-protection.md).
-
 ### <a name="device-properties"></a>Egenskaper för enheten
 
 - **Lägsta operativsystemsversion**: Ange den lägsta tillåtna versionen i formatet **major.minor.build.CU**. Öppna en kommandotolk och skriv `ver` för att visa det korrekta värdet. Kommandot `ver` returnerar versionen i följande format:
@@ -183,6 +181,8 @@ Information om hur du konfigurerar Windows Defender ATP (Advanced Threat Protect
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
   - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
   - **Hög**: Det här alternativet är det minst säkra och det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
+  
+  Information om hur du konfigurerar Windows Defender ATP (Advanced Threat Protection – Avancerat skydd) som skyddstjänst finns i [Aktivera Windows Defender ATP med villkorsstyrd åtkomst](advanced-threat-protection.md).
 
 ## <a name="windows-holographic-for-business"></a>Windows 10 Holographic for Business
 
