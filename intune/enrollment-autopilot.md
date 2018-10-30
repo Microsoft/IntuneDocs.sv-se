@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: b6381a7a5a8032340910d2c8ff2a0f7db91ef2dd
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: aa51cbea1ab1ea5f1bfc903a17638192aca59326
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828133"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075905"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrera Windows-enheter med hjälp av Windows Autopilot  
 Med Windows Autopilot blir det enklare att registrera enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -152,6 +152,16 @@ Om du inte är intresserad av hantering av mobilenheter kan du använda Autopilo
 - Visa ändringar i profiltilldelningar som har gjorts i en annan portal
 - Synkronisera profiltilldelningar som har gjorts i en annan portal
 - Visa ändringar i listan över enheter som har gjorts i en annan portal
+
+## <a name="redeploying-windows-autopilot"></a>Omdistribuera Windows Autopilot
+
+Du kan gruppera Windows-enheter med ett korrelator-ID vid registrering med hjälp av [Autopilot för befintliga enheter](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. Korrelator-ID:t är en parameter i Autopilot-konfigurationsfilen. [Azure Active Directory-enhetsattributet enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) ställs automatiskt in till lika med ”OfflineAutopilotprofile-<correlator ID>”. På så sätt kan godtyckligt dynamiska grupper i Azure Active Directory skapas baserat på korrelator-ID genom att använda attributet enrollmentprofileName för Autopilot-offlineregistreringar.
+
+Om du uppgraderar äldre Windows-versioner som inte stöder Autopilot-registrering, kan du använda en offline Autopilot-profil. Autopilot kan hjälpa dig vid en ren installation av Windows 10 1809 eller över. Som en del av profilen som är offline kan du ange ett korrelator-ID. 
+
+VARNING: Eftersom ett korrelator-ID inte är förinställt i Intune, kan användare välja att registrera sig under vilket korrelator-ID de vill. Om du skapar ett korrelator-ID som matchar ett Autopilot- eller Apples DEP-profilnamn, läggs enheten till en dynamisk Azure Active Directory-enhetsgrupp som baseras på enrollmentProfileName-attributet. Så här undviker du konflikten:
+- Skapa alltid regler för dynamisk matchning mot *hela* enrollmentProfileName-värdet
+- Namnge aldrig Autopilot- eller Apple DEP-profiler med början ”OfflineAutopilotprofile-”.
 
 ## <a name="next-steps"></a>Nästa steg
 Lär dig hur du hanterar enheterna när du har konfigurerat Windows Autopilot för registrerade Windows 10-enheter. Mer information finns i [Vad är Microsoft Intune-enhetshantering?](https://docs.microsoft.com/intune/device-management)
