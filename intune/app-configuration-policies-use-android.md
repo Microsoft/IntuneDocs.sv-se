@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f41c228e7b5dd4084e7ebb2fab1148913b76880f
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: f08e6275bb8f3dfb689dcc7e14d92ab65d588471
+ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642970"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50149112"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -29,9 +29,7 @@ ms.locfileid: "49642970"
 Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar till Android-arbetsprofilappar. Apputvecklaren måste exponera Android-hanterade konfigurationsinställningarna för att ange konfigurationsinställningar för appen. Tilldela appkonfigurationsprincipen till den grupp där du vill tillämpa inställningarna.  Principinställningarna används när appen söker efter dem, oftast första gången den körs.
 
 > [!Note]  
-> Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.<p></p>
-> Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.<p></p>
-> För Microsoft Word, Microsoft Excel, Microsoft PowerPoint, måste du använda appversion 16.0.9327.1000 och senare.
+> Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
@@ -80,7 +78,9 @@ Använd följande nyckel-/värdepar för Android-enheter:
 | **Värden** | <ul><li>Ett eller flera <code>;</code>-avgränsade UPN-namn.</li><li>Endast tillåtna konton är de hanterade användarkonton som anges av den här nyckeln.</li><li> För Intune-registrerade enheter, kan <code>{{userprincipalname}}</code>-token användas för att representera det registrerade användarkontot.</li></ul> |
 
    > [!NOTE]
-   > Du måste använda Outlook för Android 2.2.222 eller senare, när endast konfigurerade organisationskonton med flera identiteter tillåts. 
+   > Du måste använda Outlook för Android 2.2.222 eller senare, när endast konfigurerade organisationskonton med flera identiteter tillåts.<p></p>
+   > Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.<p></p>
+   > För Microsoft Word, Microsoft Excel, Microsoft PowerPoint, måste du använda appversion 16.0.9327.1000 och senare. 
 
 ## <a name="enter-the-json-editor"></a>Gå in i JSON-redigeraren
 
@@ -96,7 +96,7 @@ När den tilldelade appen körs på en enhet, körs den med de inställningar so
 
 ## <a name="preconfigure-the-permissions-grant-state-for-apps"></a>Förkonfigurera behörigheterna för att bevilja tillstånd för appar
 
-Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till funktioner i Android-enheten. Som standard kommer Android-appar som kräver enhetsbehörigheter, t.ex. åtkomst till en plats eller enhetens kamera, att uppmana användarna att godkänna eller neka behörigheter. Om till exempel en app ska använda enhetens mikrofon, ombeds användaren att bevilja appen behörighet att använda mikrofonen.
+Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till funktioner i Android-enheten. Som standard kommer Android-appar som kräver enhetsbehörigheter, t.ex. åtkomst till en plats eller enhetens kamera, att uppmana användarna att godkänna eller neka behörigheter. Om till exempel en app ska använda enhetens mikrofon, ombeds användaren att bevilja appen behörighet att använda mikrofonen.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.

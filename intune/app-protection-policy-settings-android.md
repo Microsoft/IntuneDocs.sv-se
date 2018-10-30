@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3778675366a19eb6ba1774f26bbb3523cdcdf92f
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: ae031f601792251f1dcf7b93fb914a740bc36300
+ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828337"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136989"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -61,6 +61,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
   | com.android.webview |[Webview](https://developer.android.com/reference/android/webkit/WebView.html), som krävs för många appar, däribland Outlook.|
   | com.google.android.tts | Googles ”text till tal”-funktion |
   | com.android.providers.settings | Android-systeminställningar |
+  | com.android.settings | Android-systeminställningar |
   | com.azure.authenticator | Azure Authenticator-appen, som krävs för autentisering i många scenarier. |
   | com.microsoft.windowsintune.companyportal | Intune Företagsportal|
 

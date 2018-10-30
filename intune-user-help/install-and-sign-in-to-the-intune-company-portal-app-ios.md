@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f8ca89168e46e038b57fba9cc2e159416795e112
-ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
+ms.openlocfilehash: 870590df70474db02dc4b3e4ba5a8251aeeb2f26
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260206"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959476"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installera och logga in i företagsportalappen
 
@@ -32,7 +32,7 @@ Installera företagsportalappen på din iOS-enhet för att få åtkomst till din
 
 2.  Ladda ner appen för **Intune-företagsportalen**.
 
-    ![Skärmbild som visar hur appen för Intune-företagsportalen ser ut i App Store.](./media/cp_iosredesign_after_1803_04.png)
+    ![Skärmbild som visar hur appen för Intune-företagsportalen ser ut i App Store.](./media/CP_iosRedesign_after_1803_04.PNG)
 
 3.  Öppna företagsportalappen, ange din e-postadress och ditt lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
 
