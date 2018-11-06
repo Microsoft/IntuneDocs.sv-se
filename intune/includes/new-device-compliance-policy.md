@@ -8,14 +8,13 @@ ms.topic: include
 ms.date: 04/16/2018
 ms.author: mandia
 ms.custom: include file
-ms.openlocfilehash: 9bc4da7e379782045e02a0dfb19670f946a1177a
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 26dba56aad238ff20f7d9e90c4eaf62793ef6b59
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38941048"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236738"
 ---
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
-4. Ange ett **Namn** och en **Beskrivning**.
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
+3. Ange ett **Namn** och en **Beskrivning**.
