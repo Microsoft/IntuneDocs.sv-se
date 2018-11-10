@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: ad949cc9d20e0e46ab986b4646059af733018255
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: bdf08ccac21407bc2572f1133b2fe8d45548342f
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232814"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679261"
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Vilken information kan företaget se när jag registrerar min enhet?
 
@@ -50,5 +50,5 @@ Ditt företag inte kan se din personliga information när du registrerar en enhe
 
 -  Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för ditt företag. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
 -  Plats: Företaget kan aldrig se var enheten finns, förutom om du har en iOS-enhet som övervakas och har försvunnit. [Hur vet jag?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Appinventering: om ditt företag använder skydd mot mobilhot, kommer de att kunna se mer information om apparna som är på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Appinventering: om ditt företag använder Mobile Threat Defense kan de visa fler detaljer om apparna som finns på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
 - Nätverksinformation: en del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din företagssupport. Om ditt företag till exempel kräver att enheter ska finnas kvar i en viss byggnad, kan din enhet identifiera nätverket som den är ansluten till. 

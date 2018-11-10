@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 2e3b356cc7c09b00916c24340dbbe1923540889b
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313707"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915741"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter – Intune
 
@@ -39,7 +39,7 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Geoplats (endast Samsung Knox)** – Tillåter att enheten använder platsinformation.
 - **Avstängning (endast Samsung Knox)** – Tillåter att användaren stänger av enheten.<br>Om det är inaktiverat så går det inte att ställa in **antal felaktiga inloggningar innan enheten rensas**.
 - **Skärmdump (endast Samsung Knox)** – Låter användaren fånga skärminnehållet som en bild.
-- **Röstassistent (endast Samsung Knox)** – Tillåter användning av röstassistentens programvara på enheten.
+- **Röstassistent (endast Samsung Knox)** – Tillåter användning av S Voice-tjänsten och S Voice-appen på enheten. Detta gäller inte för Bixby eller röstassistenten för hjälpmedel som läser upp skärmens innehåll.
 - **YouTube (endast Samsung Knox)** – Tillåter användning av YouTube-appen på enheten.
 - **Delade enheter (endast Samsung Knox)** – Konfigurera en hanterad Samsung Knox Standard-enhet som delad. I det här läget så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.<br>När detta används tillsammans med en SCEP-certifikatprofil gör den här funktionen det möjligt för användarna att dela en enhet med samma uppsättning appar till alla användare, men med deras egna SCEP-certifikat för användare.  Alla appdata rensas när användaren loggar ut.  Den här funktionen är begränsad till endast LOB-appar.
 - **Blockera datum- och tidsändringar (Samsung Knox)** – Hindra användaren från att ändra datum- och tidsinställningar på enheten. 

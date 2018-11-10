@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a70b6369bab130918bad472172995e6296ee4a6
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
+ms.openlocfilehash: 226713d893e05c2c2aeea49cde2ce92591d06391
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49391577"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915707"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -153,7 +153,7 @@ Du kan även använda policyer för enhetsefterlevnad utan villkorlig åtkomst. 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sätt att distribuera policyer för efterlevnad för enheter
 Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om alla användarens enheter uppfyller efterlevnadskraven. På Windows 10 version 1803 och senare enheter, rekommenderar vi för att distribuera till enhetsgrupper *om* den primära användaren inte registrerat enheten. Användning av enhetsgrupper i det här scenariot hjälper till med kompabilitetsrapportering.
 
-**Standardinställningar för policyer för efterlevnad** (Azure Portal > Enhetsefterlevnad) innefattar:
+En uppsättning inbyggda **inställningar för efterlevnadsprinciper** (Azure-portalen > Enhetsefterlevnad) utvärderas på alla Intune-registrerade enheter. Dessa omfattar:
 
 - **Markera enheter som saknar en policy för efterlevnad som**: Den här egenskapen har två värden:
 
@@ -171,7 +171,7 @@ Du kan distribuera policyer för efterlevnad till användare i användargrupper 
 
 - **Giltighetstid för efterlevnadsstatus (dagar)**: Ange inom vilken tidsperiod enheterna rapporterar status för alla mottagna policyer för efterlevnad. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar.
 
-Alla enheter har en **standardpolicy för enhetsefterlevnad** (Azure Portal > Enhetsefterlevnad > Policy för efterlevnad). Använd den här standardprincipen för att övervaka de här inställningarna.
+Alla enheter har en **inbyggd enhetsefterlevnadsprincip** (Azure-portalen > Enhetsefterlevnad > Principefterlevnad). Använd den här inbyggda principen för att övervaka de här inställningarna.
 
 Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats finns i [Troubleshooting device profiles](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned) (Felsöka enhetsprofiler).
 

@@ -15,36 +15,50 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f5460db2d646d8bd417baa50d8188acbf69a251d
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 08d76d6b76ee7838633435ae095c171e0a3cdf8e
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48827997"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236500"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
  
-Under enhetskonfigurationen visas installationsinformation om enheten på sidan för registreringsstatus. Vissa program, profiler och certifikat kanske inte är helt installerade när en användare registreras. På statussidan kan användaren se statusen för sina enheter under och efter registreringen. Du kan aktivera statussidan för alla användare eller skapa profiler riktade till specifika användargrupper.  Du kan ange profiler för att visa installationsförloppet, blockera användningen tills installationen är klar, tillåta återställning och så vidare.
+Under enhetskonfigurationen visas installationsinformation om enheten på sidan för registreringsstatus. Vissa program, profiler och certifikat kanske inte har installerats när en användare som slutför den fördefinierade registreringen loggar in på enheten. En statussida för registreringen kan hjälpa användaren att förstå statusen för sina enheter under enhetskonfigurationen. Du kan skapa flera profiler för sidan för registreringsstatus och tillämpa dem på olika grupper. Profiler kan ställas in att:
+- Visa installationsförloppet.
+- Blockera användningen tills installationen är klar.
+- Ange vad en användare kan göra om enhetskonfigurationen misslyckas.
+
+Du kan också ange prioritetsordningen för varje profil om det skulle uppstå konflikter mellan profiltilldelningar för samma användare eller enhet.
+
  
 ## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Aktivera standardsidan för registreringsstatus för alla användare
 
-Följ stegen nedan om du vill aktivera statussidan för registrering för alla slutanvändare.
+Följ stegen nedan om du vill aktivera sidan för registreringsstatus.
  
-1.  I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)**.
-2.  På bladet **Statussidan för registrering**  väljer du **Standard** > **Inställningar**.
-3.  Välj **Ja** för **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler).
-4.  Välj övriga inställningar som du vill aktivera och välj sedan **Spara**.
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)**.
+2. På bladet **Statussidan för registrering**  väljer du **Standard** > **Inställningar**.
+3. Välj **Ja** för **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler).
+4. Välj övriga inställningar som du vill aktivera och välj sedan **Spara**.
 
-## <a name="create-enrollment-status-page-profile-to-target-specific-users"></a>Skapa en profil för registreringsstatussidan för specifika användare
+## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Skapa en profil för registreringsstatussidan och tilldela den till en grupp
 
-1.  I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)** > **Skapa profil**.
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)** > **Skapa profil**.
 2. Ange ett **namn** och en **beskrivning**.
 3. Välj **Skapa**.
 4. Välj den nya profilen i listan **Statussidan för registrering**.
 5. Välj **Tilldelningar** > **Välj grupper** > välj de grupper som ska använda den här profilen > **Välj** > **Spara**.
 6. Välj **Inställningar** > välj de inställningar som du vill använda för den här profilen > **Spara**.
+
+## <a name="set-the-enrollment-status-page-priority"></a>Ange prioritet för registreringsstatussidan
+
+En enhet eller användare kan tillhöra flera grupper och ha flera profiler för registreringsstatussidan. För att lösa dessa konflikter kan du ange prioriteten för varje profil. Om någon har mer än en profil för registreringsstatussidan, tillämpas endast profilen med högst prioritet.
+
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)**.
+2. Hovra över profilen i listan.
+3. Använd de tre lodräta punkterna och dra profilen till önskad plats i listan.
 
 
 ## <a name="enrollment-status-page-tracking-information"></a>Spårningsinformation på statussidan för registrering
@@ -65,8 +79,9 @@ För enhetskonfiguration spårar statussidan för registrering följande objekt 
     - Verksamhetskritiska (LoB) MSI-appar per dator.
     - LoB-lagringsappar med installationskontext = Enhet.
     - Offlinelagrings- och LoB-lagringsappar med installationskontext = Enhet.
-- Anslutningsprofiler (VPN och Wi-Fi) spåras inte än, och visar därför alltid ”0 av 0”.
-- Certifikat spåras inte än, och visar därför alltid ”0 av 0”.
+- Anslutningsprofiler
+    - VPN- eller Wi-Fi-profiler som har tilldelats **Alla enheter** eller en enhetsgrupp som enheten som registreras är medlem i, men endast för Autopilot-enheter
+- Certifikatprofiler som har tilldelats **Alla enheter** eller en enhetsgrupp som enheten som registreras är medlem i, men endast för Autopilot-enheter
 
 ### <a name="account-setup"></a>Kontokonfiguration
 För kontokonfiguration spårar statussidan för registrering följande objekt:

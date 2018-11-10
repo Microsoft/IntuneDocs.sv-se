@@ -7,18 +7,18 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 66426e9e22c2624b9828440906e3b1b947f4b60a
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410777"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Snabbstart – Skapa och tilldela en anpassad roll
 
 I den här Intune-snabbstarten får du skapa en anpassad roll med särskilda behörigheter för en säkerhetsåtgärdsavdelning. Du måste tilldela en grupp med sådana operatörer rollen. Det finns flera standardroller som du kan använda direkt. Men genom att skapa anpassade roller som den här kan du ha exakt åtkomstkontroll till alla delar av ditt system för hantering av mobilenheter.
 
-Om du inte har en Intune-prenumeration [så registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
+Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Krav
 
@@ -47,7 +47,7 @@ När du skapar en anpassad roll kan du ange behörigheter för en mängd olika �
 
 Innan din säkerhetsoperatör kan använda de nya behörigheterna måste du tilldela rollen till en grupp som innehåller säkerhetsanvändaren.
 
-1. Välj **Roller** > **Alla roller** > **Fjärrenhetssupport** i Intune.
+1. I Intune väljer du **Roller** > **Alla roller** > **Säkerhetsåtgärder**.
 2. Välj **Tilldelningar** > **Tilldela** under **Intune-roller**.
 3. Ange *Säkerhetsalternativ* i rutan **Tilldelningsnamn**.
 4. Välj **Medlemmar (grupper)** > **Lägg till**.

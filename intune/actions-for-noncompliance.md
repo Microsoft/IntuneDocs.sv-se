@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fae8faf54c7b41bb547912853285cf09ec9c46d5
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 953b468337d3317027344573d147b65d765e3db3
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828116"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236449"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter – Intune
 
@@ -71,7 +71,7 @@ Om du vill skicka ett e-postmeddelande till användarna skapar du en mall för a
 
    ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/actionsfornoncompliance-1.PNG)
 
-4. När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas.
+4. När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas. Observera att logotypen som du laddar upp som en del av varumärkesanpassningen av företagsportalen används för e-postmallar. Läs mer om varumärkesanpassning av företagsportalen i [Varumärkesanpassning för företagsidentitet](company-portal-app.md#company-identity-branding-customization).  
 
 > [!NOTE]
 > Du kan också redigera en meddelandemall som du skapat tidigare.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6bbb09944db602b4b5a70c89e8089b1692c45223
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: a0d9d0ac3c0cd8804ffc401cd3041d5b9a17e64f
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321449"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236415"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Lägg till en enhetsefterlevnadsprincip för macOS-enheter med Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 En Intune macOS-enhetsefterlevnadsprincip anger de regler och inställningar som macOS-enheter måste uppfylla för att vara kompatibla. När du använder principer för enhetsefterlevnad med villkorlig åtkomst kan du tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du kan skapa efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
@@ -90,6 +88,17 @@ Brandväggen skyddar enheter mot obehörig nätverksåtkomst. Du kan använda br
 - **Brandvägg**: **Aktivera** för att skydda enheter mot obehörig åtkomst. Genom att aktivera den här funktionen kan du hantera inkommande Internetanslutningar och använda dolt läge. **Inte konfigurerad** (standard) lämnar brandväggen avstängd, och nätverkstrafik tillåts (inte blockerad).
 - **Inkommande anslutningar**: **Blockera** alla inkommande nätverksanslutningar förutom de som behövs för grundläggande internettjänster, som DHCP, Bonjour och IPSec. Den här inställningen blockerar även alla delningstjänster, inklusive skärmdelning, fjärråtkomst, iTunes-musikdelning med mera. **Inte konfigurerad** (standard) tillåter inkommande anslutningar och delningstjänster. 
 - **Dolt läge**: **Aktivera** dolt läge om du vill förhindra att enheten svarar på avsökningsförfrågningar, vilka kan utföras av användare som vill vålla skada. När det här är aktiverat fortsätter enheten att besvara inkommande begäranden för godkända appar. **Inte konfigurerad** (standard) lämnar dolt läge avstängt.
+
+### <a name="gatekeeper"></a>Gatekeeper
+
+**Tillåt nedladdade appar från de här platserna**: Gör att program som stöds kan installeras på dina enheter från olika platser. Du kan välja mellan följande platsalternativ:
+
+- **Inte konfigurerat**: Standard. Gatekeeper-alternativet har ingen effekt på kompatibilitet eller inkompatibilitet. 
+- **Mac App Store**: Installera endast appar för Mac App Store. Appar kan inte installeras från tredje part eller identifierade utvecklare. Om en användare väljer Gatekeeper för att installera appar utanför Mac App Store utvärderas enheten som inkompatibel.
+- **Mac App Store och identifierade utvecklare**: Installera appar för Mac App Store och från identifierade utvecklare. macOS kontrollerar utvecklarens identitet och gör vissa andra kontroller för att kontrollera appintegriteten. Om en användare väljer Gatekeeper för att installera appar som inte matchar dessa alternativ utvärderas enheten som inkompatibel.
+- **Överallt**: Appar kan installeras från valfri plats och utvecklare. Det här alternativet är det minst säkra.
+
+Mer information i Apple-dokumentationen finns i avsnittet om [Gatekeeper på macOS](https://support.apple.com/HT202491).
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 

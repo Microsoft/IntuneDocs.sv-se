@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/30/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,28 +13,66 @@ ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e15a7b034c9277fcd960e8c704f4318f0f5c1da2
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 58a6681c22672b5aa2c8337708456b30361f741f
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329655"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236483"
 ---
-# <a name="wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
+# <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Lägga till Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
 
-Wi-Fi-inställningar används i en konfigurationsprofil som tillämpas för enheter som kör Windows 10 och senare. Alternativen är:
+Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina enheter med Windows 10 eller senare. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk med en i förväg delad nyckel och mycket mer.
 
-- Grundläggande
-- Företag
+Den här artikeln beskriver dessa inställningar.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
 [Skapa en enhetsprofil](device-profile-create.md).
 
-## <a name="settings-for-basic-and-enterprise-profiles"></a>Inställningar för grundläggande profiler och företagsprofiler
+## <a name="basic-profile"></a>Grundläggande profil
+
+- **Wi-Fi-typ**: Välj **Grundläggande**. 
 
 - **Wi-Fi-namn (SSID)**: Förkortning för nätverksnamn. Det här värdet är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **anslutningsnamn** som du konfigurerar när de väljer anslutningen.
+
 - **Anslutningsnamn**: Ange ett användarvänligt för den här Wi-Fi-anslutningen. Den text som du anger är det namn som användarna ser när de bläddrar i tillgängliga anslutningar på sin enhet.
+
+- **Connect automatically when in range** (Anslut automatiskt inom räckvidd): När det här är **Yes** (Ja) ansluter enheter automatiskt när de är inom räckvidden för det här nätverket. När det är **No** (Nej) ansluter enheter inte automatiskt.
+
+  - **Connect to more preferred network if available** (Anslut till ett mer prioriterat nätverk om det är tillgängligt): Om enheterna är inom räckvidden för ett mer prioriterat nätverk väljer du **Yes** (Ja) för att använda det föredragna nätverket. Välj **No** (Nej) om du vill använda Wi-Fi-nätverket i den här konfigurationsprofilen.
+
+    Exempelvis kan du skapa ett Wi-Fi-nätverk med namnet **ContosoCorp** och använda **ContosoCorp** i konfigurationsprofilen. Du har även ett **ContosoGuest**-Wi-Fi-nätverk inom räckvidd. När företagets enheter är inom räckvidd vill du att de automatiskt ska anslutas till **ContosoCorp**. I det här scenariot ställer du in egenskapen **Connect to more preferred network if available** (Anslut till ett mer prioriterat nätverk om det är tillgängligt) till **No** (Nej).
+
+  - **Connect to this network, even when it is not broadcasting its SSID** (Anslut till det här nätverket även om det inte sänder sitt SSID): Välj **Yes** (Ja) för att konfigurationsprofilen automatiskt ska ansluta till nätverket, även om nätverket är dolt (det vill säga att dess SSID inte sänds offentligt). Välj **No** (Nej) om du inte vill att den här konfigurationsprofilen ska ansluta till ditt dolda nätverk.
+
+- **Gräns för anslutningar med datapriser**: En administratör kan välja hur nätverkstrafiken mäts. Program kan sedan justera sitt nätverkstrafiksbeteende baserat på den här inställningen. Alternativen är:
+
+  - **Obegränsat**: Standard. Anslutningen är inte avgiftsbelagd och det finns inga trafikbegränsningar.
+  - **Fast**: Använd det här alternativet om nätverket är konfigurerat med en fast gräns för nätverkstrafik. När den här gränsen har nåtts är nätverksåtkomst förbjuden.
+  - **Variabel**: Använd det här alternativet om nätverkstrafiken debiteras per byte (kostnad per byte).
+
+- **Trådlös säkerhetstyp**: Ange det säkerhetsprotokoll som används för att autentisera enheter i nätverket. Alternativen är:
+  - **Öppet (ingen autentisering)**: Använd bara det här alternativet om nätverket är oskyddat.
+  - **WPA/WPA2-personligt**: Ett säkrare alternativ, som ofta används för Wi-Fi-anslutning. För ökad säkerhet kan du också ange lösenordet för en i förväg delad nyckel eller en nätverksnyckel. 
+
+    - **I förväg delad nyckel** (PSK): Valfritt. Visas när du väljer **WPA/WPA2-personligt** som säkerhetstyp. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet. Ange en sträng på mellan 8 och 64 tecken. Om lösenordet eller nätverksnyckeln är 64 tecken, anger du hexadecimala tecken.
+
+- **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
+  - **Inga**: Inga proxyinställningar konfigureras.
+  - **Konfigurera manuellt**: Ange **proxyserverns IP-adress** och dess **portnummer**.
+  - **Konfigurera automatiskt**: Ange URL:en som pekar på ett PAC-skript (Proxy Auto-Configuration). Ange till exempel `http://proxy.contoso.com/proxy.pac`.
+
+Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
+
+## <a name="enterprise-profile"></a>Företagsprofil
+
+- **Wi-Fi-typ**: Välj **Företag**. 
+
+- **Wi-Fi-namn (SSID)**: Förkortning för nätverksnamn. Det här värdet är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **anslutningsnamn** som du konfigurerar när de väljer anslutningen.
+
+- **Anslutningsnamn**: Ange ett användarvänligt för den här Wi-Fi-anslutningen. Den text som du anger är det namn som användarna ser när de bläddrar i tillgängliga anslutningar på sin enhet.
+
 - **Connect automatically when in range** (Anslut automatiskt inom räckvidd): När det här är **Yes** (Ja) ansluter enheter automatiskt när de är inom räckvidden för det här nätverket. När det är **No** (Nej) ansluter enheter inte automatiskt.
   - **Connect to more preferred network if available** (Anslut till ett mer prioriterat nätverk om det är tillgängligt): Om enheterna är inom räckvidden för ett mer prioriterat nätverk väljer du **Yes** (Ja) för att använda det föredragna nätverket. Välj **No** (Nej) om du vill använda Wi-Fi-nätverket i den här konfigurationsprofilen.
 
@@ -42,18 +80,11 @@ Wi-Fi-inställningar används i en konfigurationsprofil som tillämpas för enhe
 
   - **Connect to this network, even when it is not broadcasting its SSID** (Anslut till det här nätverket även om det inte sänder sitt SSID): Välj **Yes** (Ja) för att konfigurationsprofilen automatiskt ska ansluta till nätverket, även om nätverket är dolt (det vill säga att dess SSID inte sänds offentligt). Välj **No** (Nej) om du inte vill att den här konfigurationsprofilen ska ansluta till ditt dolda nätverk.
 
-- **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
-  - **Inga**: Inga proxyinställningar konfigureras.
-  - **Konfigurera manuellt**: Ange **proxyserverns IP-adress** och dess **portnummer**.
-  - **Konfigurera automatiskt**: Ange den URL som pekar till ett PAC-skript (Proxy Auto-Configuration). Ange till exempel `http://proxy.contoso.com/proxy.pac`.
+- **Gräns för anslutningar med datapriser**: En administratör kan välja hur nätverkstrafiken mäts. Program kan sedan justera sitt nätverkstrafiksbeteende baserat på den här inställningen. Alternativen är:
 
-## <a name="settings-for-basic-profiles-only"></a>Inställningar endast för basprofiler
-
-- **Trådlös säkerhetstyp**: Ange det säkerhetsprotokoll som används för att autentisera enheter i nätverket. Alternativen är:
-  - **Öppet (ingen autentisering)**: Använd bara det här alternativet om nätverket är oskyddat.
-  - **WPA/WPA2-personligt**
-
-## <a name="settings-for-enterprise-profiles-only"></a>Inställningar endast för företagsprofiler
+  - **Obegränsat**: Standard. Anslutningen är inte avgiftsbelagd och det finns inga trafikbegränsningar.
+  - **Fast**: Använd det här alternativet om nätverket är konfigurerat med en fast gräns för nätverkstrafik. När den här gränsen har nåtts är nätverksåtkomst förbjuden.
+  - **Variabel**: Använd det här alternativet om nätverkstrafiken debiteras per byte.
 
 - **Enkel inloggning (SSO)**: Gör att du kan konfigurera enkel inloggning (SSO), där autentiseringsuppgifter delas för nätverksinloggning med dator och Wi-Fi. Alternativen är:
   - **Inaktivera**: Inaktiverar SSO-beteende. Användaren måste autentisera till nätverket separat.
@@ -107,11 +138,24 @@ Wi-Fi-inställningar används i en konfigurationsprofil som tillämpas för enhe
 
         **Identitetssekretess (yttre identitet)**: Använd med EAP-typen **EAP-TTLS**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
+- **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
+  - **Inga**: Inga proxyinställningar konfigureras.
+  - **Konfigurera manuellt**: Ange **proxyserverns IP-adress** och dess **portnummer**.
+  - **Konfigurera automatiskt**: Ange den URL som pekar till ett PAC-skript (Proxy Auto-Configuration). Ange till exempel `http://proxy.contoso.com/proxy.pac`.
+
 - **Tvinga Wi-Fi-profilen att följa FIPS-standarden (Federal Information Processing Standard)**: Välj **Ja** vid validering mot FIPS 140-2-standarden. Den här standarden krävs för alla amerikanska federala myndigheter som använder kryptografibaserade säkerhetssystem för att skydda känslig men ej klassificerad information som lagras digitalt. Välj **Nej** för att inte vara FIPS-kompatibel.
+
+Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
 
 ## <a name="use-an-imported-settings-file"></a>Använd en importerad inställningsfil
 
 För alla inställningar som inte är tillgängliga i Intune kan du exportera Wi-Fi-inställningar från en annan Windows-enhet. Den här exporten skapar en XML-fil med alla inställningarna. Importera sedan den här filen i Intune och använd den som Wi-Fi-profilen. Se [Exportera och importera Wi-Fi-inställningar för Windows-enheter](wi-fi-settings-import-windows-8-1.md).
 
 ## <a name="next-steps"></a>Nästa steg
-[Konfigurera Wi-Fi-inställningar i Intune](wi-fi-settings-configure.md)
+
+Profilen har skapats, men den gör inte något än. Nu ska vi [tilldela den här profilen](device-profile-assign.md).
+
+## <a name="more-resources"></a>Fler resurser
+
+- Se inställningarna som är tillgängliga för [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
+- [Översikt över Wi-Fi-inställningar](wi-fi-settings-configure.md), inklusive andra plattformar

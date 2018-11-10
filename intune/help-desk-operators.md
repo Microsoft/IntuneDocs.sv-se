@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
-ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
+ms.openlocfilehash: 90756da72ecdcbd049b14b45014433bb5843a5ed
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229083"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236670"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -96,13 +96,14 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 | Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
 | Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
 | Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
+| Appinstallation | Anger om en appinstallation har lyckats eller misslyckats på den enskilda enheten. |
 | Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
 | OS-version         | Enhetens operativsystemversionsnummer.                                                                                  |
 | Senaste incheckning      | Namnet på enhetstypen.                                                                                                     |
 
 ### <a name="app-protection-status"></a>Appskyddsstatus
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik (Enterprise Mobility Solution). Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik (Enterprise Mobility Solution). Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
 
 | Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -115,7 +116,7 @@ En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-tekn
 
 ## <a name="app-protection-policies-reference"></a>Appskyddsprinciper för referens
 
-En appskyddsprincip är tillgänglig för mobilappar som integrerar med EMS-teknik. De här principerna skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilapparna. 
+En appskyddsprincip är tillgänglig för mobilappar som integrerar med EMS-teknik. De här principerna skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilapparna. 
 
 ### <a name="properties"></a>Enheter
 
@@ -180,7 +181,7 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 
 ### <a name="app-protection-policies"></a>Appskyddsprinciper
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
 
 | Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -193,7 +194,7 @@ En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-tekn
 
 ## <a name="configuration-policies-reference"></a>Referens för konfigurationsprinciper
 
-En appskyddsprincip är tillgänglig för mobilappar med leverantörsspecifika konfigurationer. 
+En appskyddsprincip är tillgänglig för mobilappar med leverantörsspecifika konfigurationer. 
 
 ### <a name="properties"></a>Enheter
 
@@ -226,7 +227,7 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 
 ### <a name="app-protection-policies"></a>Appskyddsprinciper
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
 
 | Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|

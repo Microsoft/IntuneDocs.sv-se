@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 99d217c2d1960a1ca163bf697bfbd28e5406b58f
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 25236453f0440978eda34e3a1a8b1b93daf4c6e1
+ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075854"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51025176"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -94,7 +94,7 @@ Mer information om det här avsnittet finns [Hantera appar](app-management.md).
 - **Applicenser**: Visa, tilldela och övervaka volyminköpta appar från appbutiker. Mer information finns i:
     - [Volyminköpsprogram för iOS-appar (VPP)](vpp-apps-ios.md).
     - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md).
-- **Identifierade appar**: Visa alla appar som har tilldelats av Intune och installerats på en enhet. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Identifierade appar**: Visa appar som har tilldelats av Intune eller installerats på en enhet. Mer information finns i [Visa enhetsinformation med Microsoft Intune](device-inventory.md).
 - **Appinstallationsstatus**: Visa status för en apptilldelning som du skapat. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Användarstatus för appskydd** : Visa status för en skyddsprincip hos en användare som du väljer.
 - **Granskningsloggar**: Visa den Intune app-relaterade aktiviteten för alla IT-administratörer.

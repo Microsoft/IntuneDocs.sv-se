@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d013ad2aefbfee5eea8f240277b0f84c2c6bf05a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 05dfd1e756a7c05d29116cd9077182225f3b9fa5
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312957"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679312"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Vanliga problem och lösningar med enhetsprofiler i Microsoft Intune
 
@@ -130,9 +130,9 @@ När du tar bort en profil, eller när du tar bort en enhet från en grupp som h
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Jag ändrade en enhets begränsningsprofil, men ändringarna har inte börjar gälla
 Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva profilen har redan tillämpats för enheten.
 
-Du kan, beroende på enhetsplattform, sedan återställa säkerhetsprinciperna om du vill ändra profilen till ett mindre säkert värde. I Windows sveper du till exempel från höger på skrivbordet och väljer **Inställningar** > **Kontrollpanelen**. Välj appleten **Användarkonton** .
+Om du vill ändra profilen till ett mindre säkert värde återställer du säkerhetsprinciperna. I Windows 8.1. sveper du till exempel från höger på skrivbordet och väljer **Inställningar** > **Kontrollpanelen**. Välj appleten **Användarkonton** . Längst ned på den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper**. Markera den och välj sedan **Återställ principer**.
 
-Längst ned på den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper**. Markera den och välj sedan **Återställ principer**. Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande profil.
+Andra MDM-enheter, som Android, Windows Phone 8.1 och senare, iOS och Windows 10, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande profil.
 
 ## <a name="next-steps"></a>Nästa steg
 Behöver du mer hjälp? Se [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).

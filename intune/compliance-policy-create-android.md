@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,18 +14,22 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed2dcda510c455be1ad532228bfbcbeb898d971a
-ms.sourcegitcommit: b7789fd2f34528275c13a717699cf53a289ed04e
+ms.openlocfilehash: 1108a208a324b5ed4c46248dc986dcf08e6293fe
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891037"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236551"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Lägg till en efterlevnadsprincip för Android-enheter i Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+En Intune-enhetsefterlevnadsprincip för Android anger de regler och inställningar som Android-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med [villkorsstyrd åtkomst](conditional-access.md) för att tillåta eller blockera åtkomst till organisationens resurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. 
 
-En Intune-enhetsefterlevnadsprincip för Android anger de regler och inställningar som Android-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du skapar efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+
+Det här avsnittet innehåller de inställningar som du kan använda i en efterlevnadsprincip för Android-enheter.
+
+## <a name="non-compliance-and-conditional-access"></a>Inkompatibilitet och villkorlig åtkomst
 
 Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
 
@@ -43,106 +47,124 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 --------------------------
 
-**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. (Till exempel om användaren tvingas att ange en PIN-kod.)
+**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. Till exempel om användaren tvingas att ange en PIN-kod.
 
-**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
+**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. Till exempel om Android-enheter inte tvingar användaren att kryptera enheten. När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
 
-- Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
-- Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.
+  - Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
+  - Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.
 
 ## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. För **Plattform**, välj **Android**. Välj **Inställningar** för att konfigurera och ange inställningar för **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet**. När du är klar väljer **OK** och **Skapa**.
-
-<!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant based on the configured settings in this policy.
-5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
-6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
-7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
-8. Choose **Add** to finish creating the action.
-9. You can create multiple actions and the sequence in which they should occur. Choose **OK** when you are finished creating all the actions.--->
-
-<!---##  Compliance policy settings--->
+4. För **Plattform**, välj **Android**. 
+5. Välj **Konfigurera inställningar**. Ange inställningar för **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet** genom att följa anvisningarna i den här artikeln.
 
 ## <a name="device-health"></a>Device health
 
-- **Rotade enheter**: Om du aktiverar den här inställningen utvärderas jailbrokade enheter som inkompatibla.
-- **Kräv att enheten ska vara på eller under hotnivån för enheten**: Använd den här inställningen för att använda riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Välj högsta tillåtna hotnivå:
-  - **Säkrad**: Det här alternativet är det säkraste eftersom enheten inte kan ha några hot. Om hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
+- **Rotade enheter**: Välj **Blockera** för att markera rotade (jailbreakade) enheter som inkompatibla. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
+- **Kräv att enheten ska vara på eller under hotnivån för enheten**: Använd den här inställningen för att använda riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen. Om du vill använda den här inställningen väljer du den tillåtna hotnivån:
+  - **Säkrad**: Det här alternativet är det säkraste eftersom enheten inte kan ha några hot. Om hot på någon nivå identifieras på enheten betraktas den som inkompatibel.
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
-  - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
+  - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
   - **Hög**: Det här alternativet är det minst säkra och det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
-- **Google Play-tjänster har konfigurerats**: Kräver att appen Google Play-tjänster är installerad och aktiverad. Google Play-tjänster tillåter säkerhetsuppdateringar, vilket är ett beroende på grundnivå för många säkerhetsfunktioner på certifierade Google-enheter.
-- **Uppdaterad säkerhetsprovider**: Kräv att en uppdaterad säkerhetsprovider kan skydda en enhet från kända säkerhetsproblem.
-- **Hotgenomsökning för appar**: Kräv att Android-funktionen **Verifiera appar** har aktiverats.
+- **Google Play-tjänster har konfigurerats**: **Kräv** att appen Google Play-tjänster är installerad och aktiverad. Google Play-tjänster tillåter säkerhetsuppdateringar, vilket är ett beroende på grundnivå för många säkerhetsfunktioner på certifierade Google-enheter. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
+- **Uppdaterad säkerhetsprovider**: **Kräv** att en uppdaterad säkerhetsprovider kan skydda en enhet från kända säkerhetsproblem. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
+- **Hotgenomsökning för appar**: **Kräv** att Android-funktionen **Verifiera appar** är aktiverad. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 
   > [!NOTE]
-  > Den här funktionen är en kompatibilitetsinställning på den äldre Android-plattformen. Intune kan bara kontrollera om den här inställningen är aktiverad på enhetsnivå. På enheter med Android-arbetsprofiler finns den här inställningen som en konfigurationsinställning för principen. På så sätt kan administratörer aktivera inställningen för en enhet.
-
-  Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökning för appar** för registrerade enheter. Upprätta en enhetsprofil och kräv systemsäkerhetsinställningen. Mer information finns i [Enhetsbegränsningar i Intune med Android for Work](device-restrictions-android-for-work.md).
+  > Den här funktionen är en kompatibilitetsinställning på den äldre Android-plattformen. Intune kan bara kontrollera om den här inställningen är aktiverad på enhetsnivå.
 
 - **Attesteringen av enhetens SafetyNet**: Ange den nivå av [SafetyNet-attestering](https://developer.android.com/training/safetynet/attestation.html) som måste uppfyllas. Alternativen är:
-  - **Inte konfigurerat**
+  - **Ej konfigurerad** (standard): Ingen kompatibilitetskontroll görs för den här inställningen.
   - **Kontrollera grundläggande integritet**
   - **Kontrollera grundläggande integritet och certifierade enheter**
 
 ## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
 - **Lägsta operativsystemversion**: När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
-- **Högsta version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
+- **Högsta version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Den här enheten kan inte komma åt företagsresurser förrän en regel ändras att tillåta operativsystemversionen.
 
 ## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
 ### <a name="password"></a>Lösenord
 
-- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som användarens lösenordet måste innehålla.
-- **Krav på lösenordstyp**: Välj om ett lösenord endast ska ha numeriska tecken, eller om det ska vara en blandning av siffror och andra tecken. Välj mellan:
+- **Krav på lösenordstyp**: Välj om ett lösenord ska innehålla endast numeriska tecken eller en blandning av siffror och andra tecken. Alternativen är:
   - **Standard för enheten**
   - **Låg säkerhetsbiometri**
-  - **Minst numeriskt**
-  - **Numeriskt avancerat**: Upprepade eller efterföljande siffror (till exempel ”1 111” eller ”1234”) är inte tillåtna.
-  - **Minst alfabetiskt**
+  - **Minst numeriskt** (standard)
+  - **Numeriskt avancerat**: Upprepade eller efterföljande siffror, till exempel `1111` eller `1234`, tillåts inte.
+  - **Minst alfabetiskt** 
   - **Minst alfanumeriskt**
   - **Minst alfanumeriskt med symboler**
-- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
+
+- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Lösenordets giltighetstid (dagar)**: Ange antalet dagar tills lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
 - **Förhindra återanvändning av tidigare lösenord**: Ange antalet senast använda lösenord som inte får återanvändas. Använd den här inställningen för att förhindra att användaren återanvänder tidigare använda lösenord.
 
 ### <a name="encryption"></a>Kryptering
 
-- **Kryptering för lagring av data på en enhet** (Android 4.0 och senare, eller KNOX 4.0 och senare): Välj **Kräv** för att kryptera lagring av data på dina enheter. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**.
+- **Kryptering för lagring av data på en enhet** (Android 4.0 och senare, eller KNOX 4.0 och senare): Välj **Kräv** för att kryptera lagring av data på dina enheter. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 
 ### <a name="device-security"></a>Enhetssäkerhet
 
-- **Blockera appar från okända källor**: Välj att blockera enheter med ”Säkerhet > Okända källor” aktiverade källor (Android 4.0–Android 7.x. Stöds inte av Android 8.0 och senare). Om du vill att läsa in appar separat, måste okända källor tillåtas. Om du inte läser in Android-appar separat, aktivera då den här efterlevnadsprincipen.
+- **Blockera appar från okända källor**: Välj att **blockera** enheter med ”Säkerhet > Okända källor”-aktiverade källor (stöds på Android 4.0 – Android 7.x; stöds inte av Android 8.0 och senare). Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
+
+  Om du vill att läsa in appar separat, måste okända källor tillåtas. Om du inte läser in Android-appar separat konfigurerar du den här funktionen med **Blockera** om du vill aktivera den här efterlevnadsprincipen. 
 
   > [!IMPORTANT]
-  > Inställningen **Blockera appar från okända källor** måste vara aktiverad för program med separat inläsning. Du bör endast tillämpa denna efterlevnadsprincip om du inte läser in Android-appar separat på enheter.
+  > Inställningen **Blockera appar från okända källor** måste vara aktiverad för program med separat inläsning. Du bör endast tillämpa den här efterlevnadsprincipen om du inte läser in Android-appar separat på enheter.
 
-- **Körningsintegritet för företagsportalappen**: Kontrollerar om företagsportalappen har körningsmiljön standard installerad, är korrekt signerad, inte är i felsökningsläge och har installerats från en känd källa.
-- **Blockera USB-felsökning på enheten** (Android 4.2 eller senare): Välj att förhindra att enheter använder funktionen USB-felsökning.
+- **Körningsintegritet för appen Företagsportal**: Välj **Kräv** för att bekräfta att företagsportalappen uppfyller följande krav:
+
+  - Har standardkörningsmiljön installerad
+  - Är korrekt signerad
+  - Är inte i felsökningsläge
+  - Har installerats från en känd källa
+
+  Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
+
+- **Blockera USB-felsökning på enheten** (Android 4.2 eller senare): Välj **Blockera** för att förhindra att enheter använder funktionen USB-felsökning. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Lägsta säkerhetskorrigeringsnivå** (Android 6.0 eller senare): Välj den äldsta säkerhetskorrigeringsnivå som en enhet kan ha. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste anges i formatet `YYYY-MM-DD`.
+- **Begränsade appar**: Ange **appnamnet** och **appsamlings-ID:t** för appar som ska vara begränsade. Välj **Lägg till**. En enhet med minst en begränsad app installerad har markerats som inkompatibel.
+
+När du är klar väljer du **OK** > **OK** för att spara dina ändringar.
 
 ## <a name="locations"></a>Platser
 
 Välj bland befintliga platser i din princip. Har du inga platser ännu? Du kan läsa mer i [Använda platser (nätverksstängsel) i Intune](use-network-locations.md).
 
-1. Välj **Välj platser**.
+1. Välj **Platser**.
 2. Välj en plats från listan och välj **Välj**.
 3. **Spara** principen.
-4. Välj **Åtgärder för inkompatibilitet**. Standardåtgärden markerar enheten som inkompatibel omedelbart. Den här åtgärden gäller när du väljer minst en plats, och om enheten inte är ansluten till de valda platserna.
 
-  Du kan ändra den här åtgärden för att uppdatera schemat när enheten är markerad som icke-kompatibel, exempelvis efter en dag. Du kan också konfigurera en andra åtgärd som skickar ett e-postmeddelande till användaren när enheten inte längre är kompatibel med platserna.
+## <a name="actions-for-noncompliance"></a>Åtgärder för inkompatibilitet
+
+Välj **Åtgärder för inkompatibilitet**. Standardåtgärden markerar enheten som inkompatibel omedelbart.
+
+Du kan ändra schemat när enheten har markerats som inkompatibel, till exempel efter en dag. Du kan också konfigurera en andra åtgärd som skickar ett e-postmeddelande till användaren när enheten inte är kompatibel.
+
+[Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) innehåller mer information, inklusive anvisningar för hur du skapar ett e-postmeddelande till användarna.
+
+Anta till exempel att du använder funktionen Platser och lägger till en plats i en efterlevnadsprincip. Standardåtgärden för inkompatibilitet tillämpas när du väljer minst en plats. Om enheten inte är ansluten till de valda platserna utvärderas den omedelbart som inkompatibel. Du kan ge användarna en respitperiod, till exempel en dag.
+
+## <a name="scope-tags"></a>Omfångstaggar
+
+Omfångstaggar är ett bra sätt att tilldela principer till specifika grupper, till exempel Försäljning, Teknik, HR och så vidare. Du kan lägga till omfångstaggar till efterlevnadsprinciper. Mer information finns i avsnittet [Använda omfångstaggar för att filtrera principer](scope-tags.md). 
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
+
+När en princip har skapats gör den inte något förrän du tilldelar principen. Så här tilldelar du principen: 
 
 1. Välj en princip som du har konfigurerat. Befintliga principer finns i **Enhetsefterlevnad** > **Principer**.
 2. Välj principen och välj **Tilldelningar**. Du kan inkludera eller exkludera säkerhetsgrupper i Azure Active Directory (AD).
 3. Välj **Valda grupper** för att se dina Azure AD-säkerhetsgrupper. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj **Spara** för att distribuera principen till användare.
 
-Du har tillämpat principen på användarna. Enheterna som används av de användare som principen är inriktad på kommer att utvärderas för att se om de följer standard.
+Du har tillämpat principen på användarna. Enheter som används av användare som omfattas av principen utvärderas för att kontrollera att de är kompatibla.
 
 ## <a name="next-steps"></a>Nästa steg
 [Automatisera e-post och lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md)  
-[Övervaka efterlevnadsprinciper för Intune-enheter](compliance-policy-monitor.md)
+[Övervaka efterlevnadsprinciper för Intune-enheter](compliance-policy-monitor.md)  
+[Inställningar för efterlevnadsprinciper för Android Enterprise](compliance-policy-create-android-for-work.md)

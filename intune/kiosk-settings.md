@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59e2ab4635c8488b99781ac123aacd0854967dc8
-ms.sourcegitcommit: c3ac9e5f6240223cb5dfed8b44c7425066d6ea86
+ms.openlocfilehash: b3de4d79e6121505718a75ffe64102bb1bc18347
+ms.sourcegitcommit: 244456907e3ab4a4389d32d06060606a9591cfba
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49380039"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751651"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Kioskinställningar för Windows 10 (och senare) i Intune
 
@@ -66,7 +66,7 @@ När du väljer helskärmsläge för enskilda appar kan du ange följande instä
 
   Ange följande inställningar:
 
-  - **Webbadress till standardhemsida**: Ange standard-URL:en som ska visas i webbläsaren på kioskenheten när webbläsaren startas om. Ange till exempel `http://bing.com` eller `http://www.contoso.com`.
+  - **Webbadress till standardhemsida**: Ange standard-URL:en som ska visas när Kiosk Browser öppnas eller när webbläsaren startas om. Ange till exempel `http://bing.com` eller `http://www.contoso.com`.
 
   - **Startknapp**: **Visa** eller **dölj** knappen på startsidan i webbläsaren på kioskenheten. Standardinställningen är att knappen inte visas.
 
@@ -76,7 +76,7 @@ När du väljer helskärmsläge för enskilda appar kan du ange följande instä
 
   - **Uppdatera webbläsaren efter viloläge**: Ange efter hur lång tids inaktivitet (1–1440 minuter) webbläsaren på kioskenheten ska startas om. Hur inaktivitetstiden är antalet minuter sedan den senaste interaktionen från en användare. Värdet är tomt som standard, vilket innebär att det inte finns någon tidsgräns för inaktivitet.
 
-  - **Tillåtna webbplatser**: Använd den här inställningen för att tillåta att vissa webbplatser öppnas. Med andra ord kan du använda denna funktion till att begränsa eller förhindra webbplatser på enheten. Du kan till exempel tillåta alla webbplatser på `http://contoso.com*` öppnas. Som standard tillåts alla webbplatser.
+  - **Tillåtna webbplatser**: Använd den här inställningen för att tillåta att vissa webbplatser öppnas. Med andra ord kan du använda denna funktion till att begränsa eller förhindra webbplatser på enheten. Du kan till exempel tillåta att alla webbplatser på `http://contoso.com*` öppnas. Som standard tillåts alla webbplatser.
 
     Ladda upp en .csv-fil som innehåller en lista med tillåtna webbplatser om du vill tillåta specifika webbplatser. Om du inte lägger till någon .csv-fil tillåts alla webbplatser. Intune stöder * (asterisk) som jokertecken.
 
@@ -105,7 +105,7 @@ När du väljer helskärmsläge för flera appar kan du ange följande inställn
 
     - **Programnamn**: Krävs. Ange ett namn på programmet.
     - **Lokal sökväg**: Krävs. Ange sökvägen till den körbara filen, till exempel `C:\Program Files (x86)\Microsoft VS Code\Code.exe` eller `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-    - **ID för programanvändarmodell (AUMID)**: Valfritt. Ange ID för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Information om hur du hittar detta ID finns i [Hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **ID för programanvändarmodell (AUMID)**: Ange ID:t för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Information om hur du hittar detta ID finns i [Hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
     - **Panelstorlek**: Krävs. Välj storleken Liten, Medel, Bred eller Stor för appanelen.
   
   - **Lägg till via AUMID**: Använd det här alternativet för att lägga till inkorgens Windows-appar, till exempel Anteckningar eller Kalkylatorn. Ange följande egenskaper: 

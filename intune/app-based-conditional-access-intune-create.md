@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,25 +14,25 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d6d67454409cf8a8749d28cba6ac76f591da9e3
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: ba5035dfcbab4b938b1ed31786ad0f70dceb2d8c
+ms.sourcegitcommit: b165a38b5d6de396f2edab6411742cb50a9b8816
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50253478"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Konfigurera appbaserade villkorliga åtkomstprinciper med Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-I den här artikeln beskrivs hur du konfigurerar appbaserade villkorliga åtkomstprinciper för appar som ingår i listan med godkända appar. Listan över godkända appar består av appar som har testats av Microsoft.
+Konfigurera appbaserade principer för villkorlig åtkomst för appar som finns med i listan över godkända appar. Listan över godkända appar består av appar som har testats av Microsoft.
 
 > [!IMPORTANT]
-> Den här artikeln innehåller stegvisa anvisningar som beskriver hur du lägger till en princip för appbaserad villkorlig åtkomst. Observera att du kan följa samma steg när du lägger till appar som SharePoint Online, Microsoft Teams och Microsoft Exchange Online från listan över godkända appar.
+> Den här artikeln innehåller stegvisa anvisningar som beskriver hur du lägger till en princip för appbaserad villkorlig åtkomst. Du kan följa samma steg när du lägger till appar som SharePoint Online, Microsoft Teams och Microsoft Exchange Online från listan över godkända appar.
 
 ## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Skapa appbaserade principer för villkorlig åtkomst i Azure AD-arbetsbelastning
 
-IT-administratörer kan skapa principer för appbaserad villkorlig åtkomst från Azure Active Directory-arbetsbelastningen. Det här är bekvämt och gör att du inte behöver växla mellan Azure- och Intune-arbetsbelastningar.
+IT-administratörer kan skapa principer för appbaserad villkorlig åtkomst från Azure Active Directory-arbetsbelastningen. Den här åtkomsten innebär att du inte behöver växla mellan Azure- och Intune-arbetsbelastningar.
 
 > [!IMPORTANT]
 > Du måste ha en Azure AD Premium-licens för att kunna skapa Azure AD-principer för villkorlig åtkomst från Intune Azure Portal.

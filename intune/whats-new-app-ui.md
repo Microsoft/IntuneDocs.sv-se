@@ -15,17 +15,24 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb1599085687c258c6853eacf269e2d1b11cbaf1
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 924326de480073d7bca8e6bec2d6f7e9c11d0cc1
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425095"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236653"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 Läs mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Att förstå dessa uppdateringar underlättar din användarkommunikation och eventuell uppdaterad anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-october-22-2018"></a>Veckan då den 22 oktober 2018 infaller
+
+### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Lägga till en anpassad varumärkesbild för företagsportalappen <!-- 1916266 -->
+Som Microsoft Intune-administratör kan du ladda upp en anpassad varumärkesbild som visas som bakgrundsbild på användarens profilsida i iOS-företagsportalappen. Mer information om hur du konfigurerar företagsportalappen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
+
+
 
 ## <a name="week-of-august-27-2018"></a>Veckan 27 augusti 2018  
 
@@ -163,7 +170,7 @@ Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur d
 ## <a name="week-of-october-16-2017"></a>Veckan som börjar med 16 oktober 2017
 
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Sökförbättringar på företagsportalwebbplatsen <!-- 1331697 -->
-Vi förbättrar appsökfunktionerna och börjar med [företagsportalwebbplatsen](https://portal.manage.microsoft.com). Sökningar utförs nu även på appkategorier, utöver fälten Namn och Beskrivning. Resultaten sorteras i fallande relevansordning som standard. 
+Vi förbättrar appsökfunktionerna och börjar med [företagsportalwebbplatsen](https://portal.manage.microsoft.com). Sökningar utförs nu även på appkategorier, utöver fälten Namn och Beskrivning. Resultaten sorteras i fallande relevansordning som standard. 
 
 Även iOS-användare får denna ändring, eftersom företagsportalwebbplatsen också används som en del av företagsportalappen för iOS. Företagsportalapparna för Android och Windows får liknande uppdateringar under de kommande månaderna.
 
@@ -177,7 +184,7 @@ I den här versionen åtgärdas ett känt problem med hur iOS företagsportal vi
 ## <a name="week-of-october-2-2017"></a>Veckan då den 2 oktober 2017 infaller
 
 ### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Förbättringar av arbetsflödet för enhetskonfiguration i företagsportalen <!-- 1490692 -->
-Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappen för Android. Språket är mer användarvänligt och specifikt för ditt företag, och vi har kombinerat skärmar där det är möjligt. 
+Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappen för Android. Språket är mer användarvänligt och specifikt för ditt företag, och vi har kombinerat skärmar där det är möjligt. 
 
 |Före|Efter|
 |---|---|
@@ -205,7 +212,7 @@ Vi har även uppdaterat e-postaktiveringsskärmen för villkorlig åtkomst.
 
 ## <a name="week-of-september-11-2017"></a>Veckan då den 11 september 2017 infaller
 
-### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Enklare formuleringar i företagsportalappen för Android <!-- 1396349 -->  
+### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Enklare formuleringar i företagsportalappen för Android <!-- 1396349 -->  
 
 Registreringen av företagsportalappen för Android har förenklats med ny text som gör det enklare för slutanvändarna att registrera sig. Om du har anpassad registreringsdokumentation bör du uppdatera den så att den återspeglar de nya skärmarna. Du hittar exempelbilder nedan:
 
@@ -222,7 +229,7 @@ Registreringen av företagsportalappen för Android har förenklats med ny text 
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>E-postprogrammet för iOS 11 stöder OAuth<!-- 1196951 -->
 
-Villkorlig åtkomst med Intune stöder säkrare autentisering på iOS-enheter med OAuth. Ett annat flöde på företagsportalappen för iOS kommer att användas för att möjliggöra säkrare autentisering. När användare försöker logga in på ett nytt Exchange-konto i e-postprogrammet visas en dialogruta om webbvyn. Vid registreringen i Intune visas en dialogruta som ger det inbyggda e-postprogrammet åtkomst till ett certifikat. De flesta användarna kommer inte att se e-postmeddelanden i karantän längre. För befintliga e-postkonton används även i fortsättningen det grundläggande protokollet för autentisering, så dessa användare kommer fortfarande att få e-postmeddelanden i karantän levererade till sig. Den här inloggningen för slutanvändare liknar den på Office-mobilappar.
+Villkorlig åtkomst med Intune stöder säkrare autentisering på iOS-enheter med OAuth. Ett annat flöde på företagsportalappen för iOS kommer att användas för att möjliggöra säkrare autentisering. När användare försöker logga in på ett nytt Exchange-konto i e-postprogrammet visas en dialogruta om webbvyn. Vid registreringen i Intune visas en dialogruta som ger det inbyggda e-postprogrammet åtkomst till ett certifikat. De flesta användarna kommer inte att se e-postmeddelanden i karantän längre. För befintliga e-postkonton används även i fortsättningen det grundläggande protokollet för autentisering, så dessa användare kommer fortfarande att få e-postmeddelanden i karantän levererade till sig. Den här inloggningen för slutanvändare liknar den på Office-mobilappar.
 
 ![Välj kontotyp i det inbyggda e-postprogrammet.](./media/ios-11-ca-email-after-1708-01.png)
 

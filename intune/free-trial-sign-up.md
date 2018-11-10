@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 11/01/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37445cb2536e02937cf3002dc1cb56ab4b78f12f
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 2f150db2e1d5fbc8e08bb7f7fcee50f0eda23ca7
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581401"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915690"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad 
 
@@ -70,20 +70,27 @@ Du kan prova Intune utan kostnad i 30 dagar. Om du redan har ett arbets- eller s
 
 När du registrerar dig för en utvärderingsversion skickas dessutom ett e-postmeddelande med din kontoinformation till den e-postadress som du angav när du registrerade dig. E-postmeddelandet bekräftar att din utvärderingsversion är aktiv.
 
+> [!TIP]
+> När du arbetar med Azure-portalen kanske du får bättre resultat om du arbetar med en webbläsare i standardläge, i stället för i privat läge.
+
 ## <a name="set-the-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
 
-Inställningen av hantering av mobil enhet bestämmer hur du ska hantera dina enheter. Som IT-administratör måste du ange en utfärdare för hantering av mobila enheter innan användarna kan registrera enheter för hantering.
+När du har loggat in på Azure-portalen och valt Intune kanske du ser en orangefärgad banderoll som anger att du inte har angett MDM-utfärdaren. Inställningen av hantering av mobil enhet bestämmer hur du ska hantera dina enheter. MDM-utfärdaren måste anges innan användarna kan registrera enheter för hantering.
 
 Följ dessa steg om du vill ställa in utfärdare för hantering av mobila enheter till Intune.
 
 1. Öppna ett nytt webbläsarfönster och ange **https://portal.azure.com** i adressfältet. 
 2. Välj **Alla tjänster** > **Microsoft Intune**.
-3. Välj den orangefärgade banderollen för att öppna inställningen **Utfärdare av Hantering av mobila enheter**. 
+3. Välj banderollen som anger att du inte har aktiverat enhetshantering, eller välj **Enhetsregistrering** om du inte genast ser popup-meddelandet. Bladet **Välj utfärdare av mobilenhetshantering** visas om du inte har aktiverat enhetshantering än.
 
     > [!NOTE]
     > Den orangefärgade banderollen visas bara om du inte har angett MDM-utfärdaren än.
 
-4. Under **Utfärdare av Hantering av mobila enheter** väljer du **Intune som utfärdare av hantering av mobila enheter**.
+    ![Bild av bladet Välj utfärdare av mobilenhetshantering](./media/choose-mdm-authority.png) 
+
+4. Under **Välj utfärdare av mobilenhetshantering** anger du MDM-utfärdaren till **Intune-utfärdare för mobilenhetshantering**.
+
+Mer information om MDM-utfärdaren finns i [Ange utfärdare för hantering av mobila enheter](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Så här konfigurerar du ditt domännamn (valfritt)
 
@@ -120,4 +127,4 @@ Det finns två portaler som du kan använda:
 Du har skapat en kostnadsfri prenumeration för att prova Intune i en testmiljö och eventuellt konfigurerat ett anpassat domännamn i den här snabbstarten. Om du vill veta mer om Microsoft Intune kan du fortsätta till nästa snabbstart om att lägga till användare och tilldela licenser.
 
 > [!div class="nextstepaction"]
-> [Skapa en användare](get-started-users.md)
+> [Skapa en användare](quickstart-create-user.md)

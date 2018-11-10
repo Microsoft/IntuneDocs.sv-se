@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
-ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
+ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307414"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236296"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -60,28 +60,48 @@ Ange ditt företags supportinformation så att de anställda har kontaktuppgifte
 | **Ytterligare information**| 120 | Visas på sidan **Kontakta IT-avdelningen**. |
 
 
-## <a name="company-branding-customization"></a>Varumärkesanpassning       
-Du kan anpassa företagsportalen med företagets logotyp, företagets namn, temafärg och bakgrund. För att snabbt förhandsgranska konfigurerad företagsanpassning utan en testenhet, kan du gå till [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Observera att den logotyp du överför kommer att användas för e-postmallar.      
+## <a name="company-identity-branding-customization"></a>Varumärkesanpassning för företagsidentitet      
+Du kan anpassa företagsportalen med företagets logotyp, företagets namn, temafärg och bakgrund.     
 
-### <a name="theme-color"></a>Temafärg
+### <a name="theme-color-and-logo-in-the-company-portal"></a>Temafärg och logotyp på företagsportalen
 Välj en temafärg för företagsportalen. Välj en standardfärg eller ange en hexadecimal sexsiffrig kod för en egen färg.
 
 |Fältnamn|Mer information|
 |---|---|
-|**Färgtyp**| Välj en temafärg som ska användas på företagsportalen. Du kan välja en standardfärg eller ange en specifik hexadecimal kod. |
-|**Välj färg** eller **Hexadecimal färgkod**| Välj en temafärg som ska användas på företagsportalen. Du kan välja en standardfärg eller ange en specifik hexadecimal kod. Dessa alternativ är tillgängliga baserat på den **färgtyp** du väljer.  |
+|**Välj en standardfärg eller ange en sexsiffrig hexadecimal kod**| Välj **Standard** om du vill välja en färg genom att klicka på den. Välj **Anpassad** om du vill välja en specifik färg baserat på en hexadecimal kod.|
+|**Välj temafärg**| Välj en temafärg som ska användas på företagsportalen. Du kan välja en standardfärg eller ange en specifik hexadecimal kod. |
+|**Visning**| Välj om du vill visa **företagslogotypen och företagsnamnet**, **endast företagslogotypen** eller **endast företagsnamnet**. |
+|**Ladda upp företagslogotypen**|Du kan överföra företagslogotypen så att den visas på företagsportalen. Observera att textfärgen väljs automatiskt för optimal kontrast. För bäst resultat rekommenderar vi att du laddar upp en logotyp med genomskinlig bakgrund.<p><ul><li>Maximal bildstorlek: 400 × 400 px</li><li>Maximal filstorlek: 750 kB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
-### <a name="company-logo"></a>Företagslogotyp
-Ladda upp företagets logotyp så att den blir synlig för användarna i Intune.
+När du har överfört logotypen visas den med temafärgen i förhandsgranskningsområdet. Om du valde att visa ditt företagsnamn visas det i svart eller vitt på företagsportalen, beroende på vad som ger bäst kontrast baserat på din temafärg. Ditt företagsnamn visas inte i förhandsgranskningsområdet på skärmen. 
+
+### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Logotyp som ska användas på vita eller ljusa bakgrunder
+Välj en logotyp som ser bäst ut på vita eller ljusa bakgrunder.
 
 |Fältnamn|Mer information|
 |---|---|
-|**Visa företagslogotyp**|Om du aktiverar det här alternativet kan du ladda upp företagets logotyp så att den visas på företagsportalen. Du kan ladda upp två logotyper: en logotyp som visas när företagsportalens bakgrund är vit och en logotyp som visas när företagsportalens bakgrund har din valda temafärg. |
-|**Ladda upp en logotyp att använda i bakgrunder med temafärger**| Det här alternativet är tillgängligt om du har valt att visa företagets logotyp. En logotyp måste vara en .png- eller .jpg-fil med en högsta upplösning på 400 × 400 bildpunkter och en största storlek på 750 kB. |
-|**Ladda upp en logotyp att använda i ljusa bakgrunder**| Det här alternativet är tillgängligt om du har valt att visa företagets logotyp. En logotyp måste vara en .png- eller .jpg-fil med en högsta upplösning på 400 × 400 bildpunkter och en största storlek på 750 kB. |
-|**Visa företagets namn bredvid logotypen**| Välj det här alternativet om du vill visa företagsnamnet du angav bredvid den uppladdade logotypen. |
+|**Ladda upp din logotyp**| Det här alternativet är tillgängligt om du har valt att visa företagets logotyp. För bäst resultat rekommenderar vi att du laddar upp en logotyp med genomskinlig bakgrund.<p><ul><li>Maximal bildstorlek: 400 × 400 px</li><li>Maximal filstorlek: 750 kB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
-När du har sparat ändringarna kan du välja **Förhandsgranska inställningarna på Intune Web-portalen** längst upp för att se hur konfigurationen kommer att se ut.
+### <a name="brand-image-for-company-portal"></a>Varumärkesbild för företagsportalen
+
+Visa en varumärkesbild som återspeglar ditt företags varumärke. Stöd för varumärkesbilder håller på att läggas till i företagsportalapparna, men kanske inte visas på alla plattformar.
+
+|Fältnamn|Mer information|
+|---|---|
+|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p><ul><li>Rekommenderad bildbredd: Större än 1 125 px, men inte mindre än 640 px</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+
+Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på företagsportalen. Här följer några tips på hur du kan hitta, välja ut och optimera bilden för företagsportalen. 
+
+- Kontakta företagets marknadsförings- eller designavdelning. De kanske redan har en godkänd uppsättning företagsanpassade varumärkesbilder. De kanske också kan hjälpa dig att optimera bilderna om det behövs. 
+
+- Överväg både stående och liggande bilder. Det bör finnas tillräckligt med bakgrund runt bildens mittpunkt. Bilden kan beskäras på olika sätt beroende på enhetens storlek och orientering. 
+
+- Undvik att använda en generisk bild. Bilden bör återspegla ditt företags varumärke och vara välbekant för användarna. Om du inte har någon bild är det bättre att inte använda någon bild över huvud taget än att använda vilken bild som helst som inte är meningsfull för dina användare. 
+
+- Ta bort onödiga metadata. Bildfilen kan innehålla metadata, till exempel kameraprofil, geografisk plats, rubrik, beskrivning och så vidare. Ta bort den här informationen med hjälp av ett bildoptimeringsverktyg för att upprätthålla kvaliteten och uppfylla storleksgränsen för filer. 
+
+När du har sparat ändringarna kan du välja **Förhandsgranska inställningarna** på Intune-webbportalen längst upp på bladet för att se hur dina konfigurationer kommer att se ut. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS-enhet, inte på Intune-webbportalen. 
+
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Kortkommandon för Windows-företagsportalen
 

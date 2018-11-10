@@ -15,18 +15,18 @@ ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a4468f2e6919349095d934790740afc8c347282
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 2b52265bb9b3df800c0e13450a2154e46098a933
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410828"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Snabbstart: Skapa en grupp för att hantera användare
 
 I den här snabbstarten använder du Intune för att skapa en grupp baserad på en befintlig användare. Grupper används för att hantera användare och styra de anställdas åtkomst till företagets resurser. Resurserna kan tillhöra ditt företags intranät eller kan vara externa resurser, t.ex. SharePoint-webbplatser, SaaS-appar eller webbappar.
 
-Om du inte har en Intune-prenumeration [så registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
+Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
 >[!NOTE]
 >Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen med inbyggda optimeringar för att förenkla för dig.
@@ -37,21 +37,23 @@ Om du inte har en Intune-prenumeration [så registrera dig för ett kostnadsfrit
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. Du hittar Intune i Azure Portal genom att välja **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+Logga in i [Intune](https://aka.ms/intuneportal) som [global administratör eller Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-a-group"></a>Skapa en grupp
+
+Du ska skapa en grupp som ska användas senare i den här snabbstarten.
+
 1. När du har öppnat fönstret **Microsoft Intune** väljer du **Grupper** > **Ny grupp**.
-2. Välj **Grupptyp** > **Säkerhet** i fönstret **Grupp**.
+2. Välj **Säkerhet** i listrutan **Grupptyp**.
 3. Ange ”Contoso-testare” som **Namn** och lägg till en **Beskrivning** för gruppen.
-4. Ange **Tilldelad** som **medlemskapstyp**. 
-5. Klicka på **Medlemmar** och välj **Medlemmar** till gruppen i den befintliga listan.
+4. Ange **Typ av medlemskap** till **Tilldelad**. 
+5. Klicka på **Medlemmar** och välj en eller flera medlemmar för gruppen från den befintliga listan.
 
     ![Skärmbild som visar hur en grupp skapas i Microsoft Intune](./media/quickstart-use-groups-01.png)
 
-6. Klicka på **Välj**.
-7. Klicka på **Skapa**.
+6. Klicka på **Välj** > **Skapa**.
 
-Om du lyckas skapa gruppen visas den i listan **Alla grupper**. 
+När du har skapat gruppen visas den i listan **Alla grupper**. 
 
 ## <a name="next-steps"></a>Nästa steg
 
