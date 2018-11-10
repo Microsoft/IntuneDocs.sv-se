@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,44 +14,65 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0195e138b59fae019fa2bc02aadf211257a65cac
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f9e98575c92d403d51708f7403109bea2184176e
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31022058"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983133"
 ---
-# <a name="custom-settings-for-android-devices---intune"></a>Anpassade inställningar för Android-enheter – Intune
+# <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Använda anpassade inställningar för Android-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Android-enheter med hjälp av en ”anpassad profil”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
-Anpassade profiler använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) till att konfigurera olika funktioner på Android-enheter. De här inställningarna används vanligtvis av tillverkare av mobila enheter till att styra funktioner på enheten.
+Anpassade profiler för Android använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera olika funktioner på Android-enheter. De här inställningarna används vanligtvis av tillverkare av mobila enheter för att styra dessa funktioner.
 
-Med hjälp av en anpassad profil kan du konfigurera och tilldela följande Android-inställningar. De här inställningarna är inte inbyggda i Intune-principerna:
+Med hjälp av en anpassad profil kan du konfigurera och tilldela följande Android-inställningar. Följande inställningar är inte inbyggda i Intune:
 
 - [Skapa en Wi-Fi-profil med en i förväg delad nyckel](/intune/wi-fi-profile-shared-key)
 - [Skapa en VPN-profil per app](/intune/android-pulse-secure-per-app-vpn)
 - [Tillåta och blockera appar för Samsung Knox Standard-enheter](/intune/samsung-knox-apps-allow-block)
 
 >[!IMPORTANT]
-> Det är bara inställningarna i listan som kan konfigureras med den här profiltypen. Android-enheter visar inte hela listan med OMA-URI-inställningar som du kan konfigurera. Om du vill se fler inställningar kan du rösta på detta på [Intunes UserVoice-webbplats](https://microsoftintune.uservoice.com/forums/291681-ideas).
+> Endast de inställningar som anges kan konfigureras med hjälp av en anpassad profil. Android-enheter visar inte hela listan med OMA-URI-inställningar som du kan konfigurera. Om du vill se fler inställningar kan du rösta på detta på [Intunes UserVoice-webbplats](https://microsoftintune.uservoice.com/forums/291681-ideas).
 
-## <a name="custom-profile-settings-for-android-devices"></a>Anpassade profilinställningar för Android-enheter
+Den här artikeln beskriver hur du skapar en anpassad profil för Android-enheter.
 
-1. Logga in på [Azure Portal](https://portal.azure.com). 
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Skapa en anpassad profil med hjälp av Android-plattformen. Anvisningar finns i [Konfigurera anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
-4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till** och sedan **Lägg till rad**.
-5. Ange följande egenskaper:
+## <a name="create-the-profile"></a>Skapa profilen
 
-   - **Namn** – Ange ett unikt namn för OMA-URI-inställningen så att du lätt kan hitta den.
-   - **Beskrivning** – Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
-   - **Datatyp** – Ange den datatyp som du använder för OMA-URI-inställningen. Välj mellan **Sträng**, **Sträng (XML)**, **Datum och tid**, **Heltal**, **Flyttal** och **Boolesk**.
-   - **OMA-URI** – Ange önskad OMA-URI.
-   - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande inställningar:
 
-6. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
+    - **Namn**: Ange ett namn för profilen, till exempel `android custom profile`.
+    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Plattform**: Välj **Android**.
+    - **Profiltyp**: Välj **Anpassad**.
+
+4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
+
+    - **Namn**: Ange ett unikt namn för OMA-URI-inställningen så att du lätt kan hitta den.
+    - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
+    - **OMA-URI**: Ange den OMA-URI som du vill använda som inställning.
+    - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
+
+      - Sträng
+      - Sträng (XML-fil)
+      - Datum och tid
+      - Heltal
+      - Flyttal
+      - Boolesk
+      - Base64 (fil)
+
+    - **Värde**: Ange det datavärde som du vill associera med den OMA-URI som du har angett. Värdet beror på vilken datatyp du valt. Om du till exempel valde **Datum och tid**, väljer du värdet från en datumväljare.
+
+    När du har lagt till några inställningar kan du välja **Exportera**. **Exportera** skapar en lista över alla värden som du har lagt till i en fil med kommaavgränsade värden (.csv).
+
+5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov. 
+6. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-När du slutför inställningarna skapas profilen och visas sedan i listan. Information om hur du tilldelar den här profilen till grupper finns i [Tilldela enhetsprofiler](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+
+Se hur du [skapar profilen på Android Enterprise-enheter](custom-settings-android-for-work.md).

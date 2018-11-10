@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c94357d90f89e77be03df0db9ba9e2d89836623b
-ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
+ms.openlocfilehash: 57de118c2e13182a0d26aa36d1dc5b1f7ea9c4e9
+ms.sourcegitcommit: 46f6f3d4e1c7c0a5a716503f759ea5cf03c1a02b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48799531"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136972"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
@@ -39,7 +39,7 @@ Du kan använda appkonfigurationsprinciper med hanterade appar som har stöd fö
       Beskrivning av den profil som visas i Azure Portal.
     - **Enhetsregistreringstyp**  
       Välj **Hantera appar**.
-6. Välj **Associerad app** för att välja den app som du ska konfigurera. Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
+6. Välj  **Associerad app**  för att välja den app som du ska konfigurera. Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
 7. För varje konfigurationsinställning som stöds av appen anger du **Namn** och **Värde**, och väljer sedan ellipsen (**...**).  
     Välj ellipsen (**...**) och välj **Ta bort** för att ta bort en konfiguration.  
     
@@ -51,13 +51,13 @@ Intune kan generera vissa token och skicka dem till det hanterade programmet. Om
 
 Intune stöder följande typer av token i konfigurationsinställningarna. Andra anpassade nyckel/värde-par stöds inte.
 
-- \{\{userprincipalname\}\} – till exempel **John@contoso.com**
-- \{\{mail\}\} – till exempel **John@contoso.com**
-- \{\{partialupn\}\} – till exempel **John**
-- \{\{accountid\}\} – till exempel **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
-- \{\{userid\}\} – till exempel **3ec2c00f-b125-4519-acf0-302ac3761822**
-- \{\{username\}\} – till exempel **Johan Danielsson**
-- \{\{PrimarySMTPAddress\}\} – till exempel **testuser@ad.domain.com** 
+- \{\{userprincipalname\}\} – till exempel John@contoso.com
+- \{\{mail\}\} – till exempel John@contoso.com
+- \{\{partialupn\}\} – till exempel John
+- \{\{accountid\}\} – till exempel fc0dc142-71d8-4b12-bbea-bae2a8514c81
+- \{\{userid\}\} – till exempel 3ec2c00f-b125-4519-acf0-302ac3761822
+- \{\{username\}\} – till exempel Johan Danielsson
+- \{\{PrimarySMTPAddress\}\} – till exempel testuser@ad.domain.com
 
 
 > [!Note]  

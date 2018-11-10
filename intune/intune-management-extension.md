@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/30/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb7d8b35cb88223a3fbfa45e0ad8e2f8d2852a96
-ms.sourcegitcommit: ab801d715aa26f6d97f1a0c42a07e55146a14e6f
+ms.openlocfilehash: ad8e874dda47b7c6deeb614b0f893f7c922241ce
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35289031"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236347"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 Intunes hanteringstillägg gör det möjligt att ladda upp PowerShell-skript i Intune för att köra Windows 10-enheter. Hanteringstillägget kompletterar funktioner för hantering av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att flytta till modern hantering.
@@ -33,7 +33,7 @@ Tillägget för Intune -hantering kompletterar de inbyggda funktionerna i Window
 
 ## <a name="prerequisites"></a>Krav
 Intune-hanteringstillägget har följande krav:
-- Enheter måste vara domänanslutna till Azure AD. Detta inkluderar inte Hybrid AD-anslutna enheter.
+- Enheter måste vara domänanslutna till Azure AD. Intune-hanteringstillägget har stöd för Azure Active Directory-anslutna, hybriddomänanslutna och samhanterade registrerade Windows-enheter.
 - Enheter måste köra Windows 10 version 1607 eller senare.
 - Automatisk MDM-registrering måste vara [aktiverat i Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) och enheter måste registreras automatiskt i Intune.
 
@@ -56,7 +56,8 @@ Intune-hanteringstillägget har följande krav:
 
 > [!NOTE]
 > - PowerShell-skript kan inte tillämpas på datorgrupper.
-> - PowerShell-skript körs på enheter endast när en Azure Active Directory-användare (AD) är inloggad på enheten.
+> - Slutanvändare behöver inte vara inloggade på enheten för att köra PowerShell-skript. 
+> - PowerShell-skript i Intune kan riktas till säkerhetsgrupper för AAD-enheter.
 
 Intune-hanteringstillägget synkroniserar till Intune en gång i timmen. När du tilldelar principen till Azure AD-grupper körs PowerShell-skriptet och körningsresultaten rapporteras. 
  

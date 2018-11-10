@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/24/2016
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,60 +14,71 @@ ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: maxles
+ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1c57c8bfa9f2727ec201acb506f5a41327fddc75
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146661"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959510"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
+Hanterade appar konfigureras för att uppfylla din organisations säkerhetskrav och för att skydda arbets- och skoldata. De här apparna görs tillgängliga för dig på din enhet, där de kan installeras eller användas automatiskt. 
 
-Hanterade appar är appar som företagets support kan konfigurera för att skydda företagsdata som du kan komma åt i appen. När du använder företagets data i en hanterad app på en Android-enhet kanske du märker att appen inte fungerar riktigt som du förväntat dig. Du kanske inte kan kopiera och klistra in skyddade företagsdata, eller så kanske du inte kan spara data på vissa platser.
+Innan du tar emot och installerar en hanterad app, konfigureras appens behörigheter av din organisation. Appfunktioner eller användarinteraktioner kan begränsas så att appens data inte kan delas eller ses av obehöriga. Exempelvis kan en organisation blockera kopierings- och inklistringsfunktionerna i appen. Eller så kan de hindra dig från att spara data till enhetens lokala lagring.
 
-Det kan också finnas flera hanterade appar som samverkar med varandra i enheten. Det gör att du kan utföra dina vardagsuppgifter samtidigt som företagets data skyddas. Om du till exempel öppnar en företagsfil i en hanterad app, och en annan hanterad app krävs för att visa filen, öppnas automatiskt den hanterade appen som gör att du kan visa filen. Om en nödvändig app inte är tillgänglig kanske du inte kan komma åt alla åtgärder. Du kanske inte kan öppna ett dokument eller använda en webblänk i ett hanterat dokument.
+För att maximera dataskyddet kan din organisation konfigurera flera hanterade appar så att de fungerar tillsammans. Exempel:
+1. Du ansluter till din organisations nätverk i en hanterad webbläsare, till exempel Microsoft Edge.
+2. Du klickar på en länk för att öppna en kollegas presentationsfil.
+3. Filen öppnas i lämplig hanterad app, till exempel Microsoft PowerPoint.
 
-När du använder företagsdata i en hanterad app visas ett meddelande (se nedan) så att du vet att appen du öppnar är en hanterad app.
+Organisationer kan kräva att du använder en hanterad app för att göra något, till exempel för att öppna en arbetsfil eller komma åt en webblänk. Om du inte har appen kanske du inte kan slutföra åtgärden. Vissa hanterade appar är tillgängliga för installation, men är inte obligatoriska.
 
-![open-managed-apps-message](./media/managed-apps-message.png)
+## <a name="how-do-i-know-im-using-a-managed-app"></a>Hur vet jag om jag använder en hanterad app?
+Första gången du kommer åt arbets- eller skoldata i en hanterad app får du ett meddelande som liknar det i exemplet i skärmbilden nedan. Meddelandet uppmanar dig att starta om appen för att fortsätta.
 
-## <a name="how-do-i-get-managed-apps"></a>Hur skaffar jag hanterade appar?
-Du kan hämta hanterade appar på ett par olika sätt:
+![Skärmbild av meddelandet som visas när en användare öppnar en hanterad app på sin enhet. Meddelandet ”Your organization is not protecting its data in this app. You need to restart the app to continue." (Din organisation skyddar inte sina data i den här appen. Du måste starta om appen för att fortsätta.) visas, följt av en OK-knapp.](./media/managed-apps-message.png)
 
--   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan företagets support installera den på enheten. Mer information om registrering finns i [Registrera din enhet i Intune](enroll-your-device-in-Intune-android.md).
+## <a name="commonly-managed-apps"></a>Vanliga hanterade appar  
+Exempel på vanliga obligatoriska eller tillgängliga hanterade appar i skolor och på arbetsplatser är:
 
--   Du installerar en app från Play Store och loggar sedan in med ditt företagskonto som hanteras av Intune.
+-   Microsoft Edge
 
-## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?
-Följande är några exempel på vad företagets support kan hantera i en app och hur det kan påverka din användning av företagsdata på enheten:
-
--   Åtkomst till vissa webbplatser
-
--   Överföring av data mellan appar
-
--   Spara filer
-
--   Kopiera och klistra in
-
--   Krav på åtkomst via PIN-kod
-
--   Din inloggning, med företagets autentiseringsuppgifter
-
--   Möjligheten att säkerhetskopiera till molnet
-
--   Möjligheten att ta skärmdumpar
-
--   Krav på datakryptering
-
-Några vanliga appar som IT-avdelningen kan hantera:
-
--   Intune Managed Browser
-
--   Visningsprogram för Microsoft Azure Information Protection
+-   Microsoft Outlook
 
 -   Microsoft Word, Excel och PowerPoint
+
+## <a name="how-do-i-get-managed-apps"></a>Hur skaffar jag hanterade appar?
+Först måste du installera Företagsportalen och, om det behövs, få din enhet hanterad. När det är klart kan du få tag på hanterade appar på tre sätt.
+* Din organisation installerar automatiskt appar på din enhet i samband med registreringen. Mer information om registrering finns i [Registrera din enhet i Intune](enroll-your-device-in-Intune-android.md).
+* Din organisation gör hanterade appar tillgängliga för dig på Företagsportalen. Gå till appen eller webbplatsen för Företagsportalen för att söka efter, visa eller installera dessa appar. 
+* Du installerar en app från Google Play Butik och loggar sedan in i appen med ditt arbets- eller skolkonto.  
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?
+Följande lista beskriver de inställningar som företagets support kan hantera inifrån en app. De här inställningarna påverkar hur du ser, kommer åt och i övrigt använder arbets- eller skoldata på din enhet:
+
+* Åtkomst till vissa webbplatser  
+
+* Åtkomst till interna företagswebbplatser via Edge och Azure Active Directory-proxyn  
+
+* Lägsta version av appen, operativsystemversion
+
+* Möjlighet att dela och överföra data mellan appar  
+
+* Hur och var du sparar filer  
+
+* Kopierings- och inklistringsfunktioner  
+
+* Krav på åtkomst via PIN-kod  
+
+* Hur du loggar in med företagets autentiseringsuppgifter  
+
+* Möjlighet att säkerhetskopiera data till molnet  
+
+* Möjligheten att ta skärmdumpar  
+
+* Krav på datakryptering  
 
 Kontakta företagets support om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

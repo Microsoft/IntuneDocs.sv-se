@@ -1,34 +1,30 @@
 ---
-title: Konfigurera e-postinställningar i Microsoft Intune
+title: Konfigurera e-postinställningar i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Läs om att konfigurera Microsoft Intune för att skapa anslutningar till företagets e-post på enheter som du hanterar.
+description: Skapa en e-postprofil i Microsoft Intune och distribuera profilen till Android Enterprise-, iOS- och Windows-enheter. Använd en e-postprofil för att konfigurera vanliga e-postinställningar, inklusive en e-postserver och autentiseringsmetod metod för att ansluta till företagets e-post på enheter som du hanterar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 41f16cf0dacc059546a09145a0c241f7c2a4a076
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905317"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236330"
 ---
-# <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Så här konfigurerar du e-postinställningar i Microsoft Intune
+# <a name="add-email-settings-to-devices-using-intune"></a>Lägg till e-postinställningar på enheter med Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Microsoft Intune innehåller olika e-postinställningar som du kan distribuera till enheter i din organisation. En IT-administratör kan skapa e-postprofiler med specifika inställningar för att ansluta till en e-postserver, till exempel Office 365 och Gmail. Användare kan sedan ansluta, autentisera och synkronisera sina e-postkonton för organisationen på sina mobila enheter. Genom att skapa och distribuera en e-postprofil kan du bekräfta att inställningarna är gemensamma för många enheter. Och minska antalet supportsamtal från slutanvändare som inte vet de rätta e-postinställningarna.
 
-Du kan använda e-postprofiler till att konfigurera de enheter som du hanterar med de inställningar som krävs för att ansluta till och synkronisera med företagets e-post. Detta gör det enklare för dig att se till att standardinställningarna är gemensamma för alla dina enheter, och det bidrar även till att minska antalet supportsamtal från slutanvändare som vill veta de rätta e-postinställningarna.
-
-Den inbyggda e-postklienten stöds för de flesta plattformar. Merparten av e-postapparna från tredje part stöds inte.
-
-Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
+Du kan använda e-postprofiler för att konfigurera de inbyggda e-postinställningarna för följande enheter:
 
 - Android Samsung Knox Standard 4.0 och senare
 - Android-arbetsprofilenheter
@@ -36,17 +32,15 @@ Du kan använda e-postprofiler för att konfigurera den interna e-postklienten p
 - Windows Phone 8.1 och senare
 - Windows 10 Desktop och Windows 10 Mobile
 
-Använd informationen i den här artikeln om du vill lära dig grunderna för hur du konfigurerar en e-postprofil. Läs sedan de specifika avsnitten om respektive plattform om du vill ha mer detaljerad information.
+Den här artikeln visar hur du skapar en e-postprofil i Microsoft Intune. Den innehåller också länkar till de olika plattformarna för mer specifika inställningar.
 
-## <a name="create-a-device-profile-containing-email-settings"></a>Skapa en enhetsprofil som innehåller e-postinställningar
+## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
-2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
-3. I fönstret Profiler väljer du **Skapa profil**.
-4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för e-postprofilen.
-5. Välj den enhetsplattform på vilken du vill tillämpa e-postinställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för enhetsinställningar för e-post:
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange **Namn** och **Beskrivning** för e-postprofilen.
+4. Välj din **plattform** från den nedrullningsbara listan. Alternativen är:
+
     - **Android** (endast Samsung Android Knox Standard)
     - **Android enterprise**
     - **iOS**
@@ -54,43 +48,50 @@ Använd informationen i den här artikeln om du vill lära dig grunderna för hu
     - **Windows Phone 8.1**
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
-6. Välj **E-post** i listrutan **Profil**.
-7. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
+
+5. Välj **E-post** från listrutan **Profil**.
+6. Vilka inställningar du kan konfigurera kan vara olika för varje plattform. För specifika inställningar, välj din plattform:
+
     - [Inställningar för Android-arbetsprofil och Samsung Knox Standard](email-settings-android.md)
     - [Inställningar för iOS](email-settings-ios.md)
     - [Inställningar för Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](email-settings-windows-10.md)
-8. När du är klar går du tillbaka till fönstret **Skapa profil** och trycker på **Skapa**.
 
-Profilen skapas och visas i fönstret med profillistan.
-Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
+När du har angett dina inställningar och skapar profilen, visas din profil i profillistan. Härnäst [tilldela profilen till vissa grupper](device-profile-assign.md).
 
-## <a name="further-information"></a>Ytterligare information
+## <a name="remove-an-email-profile"></a>Ta bort en e-postprofil
 
-### <a name="remove-an-email-profile"></a>Ta bort en e-postprofil
+E-postprofiler tilldelas till enhetsgrupper, inte till användargrupper. Du kan ta bort en e-postprofil från en enhet på olika sätt, även om det bara finns en e-postprofil på enheten:
 
-Om du vill ta bort en e-postprofil från en enhet redigerar du tilldelningen och tar bort alla grupper där enheten är medlem. Du kan inte ta bort en e-postprofil på det här sättet om det är den enda e-postprofilen på en enhet.
+- **Alternativ 1**: Öppna e-postprofilen (**Enhetskonfiguration** > **Profiler**) och välj **Tilldelningar**. Fliken **Inkludera** visar de grupper som har tilldelats profilen. Högerklicka på gruppen > **Ta bort**. **Spara** dina ändringar.
 
-### <a name="securing-email-access"></a>Skydda e-poståtkomst
+- **Alternativ 2**: [Rensa eller dra tillbaka enheten](devices-wipe.md). Du kan använda de här åtgärderna för att selektivt eller helt ta bort data och inställningar.
 
-Du kan skydda e-postprofiler på något av följande två sätt:
+## <a name="secure-email-access"></a>Säkra åtkomst till e-post
 
-1. **Certifikat** – När du skapar en e-postprofil väljer du en certifikatprofil som du tidigare har skapat i Intune. Detta kallas identitetscertifikat och används för att autentisera mot en betrodd certifikatprofil (eller ett rotcertifikat) för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet tilldelas datorn som verifierar e-postanslutningen, vanligtvis den interna e-postservern.
-Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Konfigurera certifikat i Intune](certificates-configure.md).
-2. **Användarnamn och lösenord** – Användaren autentiseras mot den interna e-postservern genom att ange sitt användarnamn och lösenord.
-Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de ansluter till sin e-post.
+Du kan skydda e-postprofiler med hjälp av följande alternativ:
 
+- **Certifikat**: När du skapar en e-postprofil väljer du en certifikatprofil som tidigare skapats i Intune. Certifikatet kallas för identitetscertifikat. Det autentiserar mot en betrodd certifikatprofil eller ett rotcertifikat för att bekräfta att en användares enhet får ansluta. Det betrodda certifikatet tilldelas datorn som verifierar e-postanslutningen. Den här datorn är vanligtvis den interna e-postservern.
 
-### <a name="how-intune-handles-existing-email-accounts"></a>Hur Intune hanterar befintliga e-postkonton
+  Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Konfigurera certifikat i Intune](certificates-configure.md).
 
-Om användaren redan har konfigurerat ett e-postkonto beror resultatet av tilldelningen av Intune e-postprofil på enhetsplattformen:
+- **Användarnamn och lösenord** – Användaren autentiseras mot den interna e-postservern genom att ange ett användarnamn och lösenord. Lösenordet finns inte i e-postprofilen. Därför måste användaren ange lösenordet när hen ansluter till e-post.
 
-- **iOS**: En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. E-postprofildubbletten blockerar tilldelningen av en Intune-profil. I det här fallet informerar företagsportalen användaren om att denne inte uppfyller kraven och uppmanar användaren att ta bort den manuellt konfigurerade profilen. Om du vill förhindra det här problemet bör du uppmana användarna registrera sig innan de installerar någon e-postprofil, så att Intune kan konfigurera profilen.
+## <a name="how-intune-handles-existing-email-accounts"></a>Hur Intune hanterar befintliga e-postkonton
+
+Om användaren redan konfigurerat ett e-postkonto, tilldelas e-postprofilen på olika sätt, beroende på plattformen.
+
+- **iOS**: En befintlig duplicerad e-postprofil identifieras baserat på värdnamn och e-postadress. E-postprofildubbletten blockerar tilldelningen av en Intune-profil. I det här fallet meddelar företagsportalen användaren om att denne inte uppfyller kraven och uppmanar användaren att ta bort den manuellt konfigurerade profilen. Om du vill förhindra det här sceneriet bör du be användarna registrera sig *innan* de installerar någon e-postprofil, så att Intune kan konfigurera profilen.
+
 - **Windows** En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av användaren.
-- **Android Samsung Knox Standard**: En befintlig, duplicerad e-postprofil identifieras baserat på e-postadressen, och skrivs över med Intune-profilen.
-Eftersom Android inte använder värdnamn för att identifiera profilen, rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom dessa kommer att skriva över varandra.
-- **Android-arbetsprofiler** Intune har två e-postprofiler för Android-arbetsprofiler, en för vardera Gmail- och Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och installeras i enhetens arbetsprofil. Så de kan inte resultera i dubblettprofiler. Båda apparna stöder anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postprofil. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
 
-### <a name="update-an-email-profile"></a>Uppdatera en e-postprofil
+- **Android Samsung Knox Standard**: En befintlig, duplicerad e-postprofil identifieras baserat på e-postadressen, och skrivs över med Intune-profilen. Android använder inte värdnamn för att identifiera profilen. Skapa inte flera e-postprofiler på samma e-postadress på olika värdar. Profilerna kommer att skriva över varandra.
+
+- **Android-arbetsprofiler**: Intune har två e-postprofiler för arbete för Android, en för Gmail-appen och en för Nine Work-appen. De här apparna är tillgängliga i Google Play Butik och installeras i enhetens arbetsprofil. De här apparna kommer inte att skapa dubblettprofiler. Båda apparna stöder anslutningar till Exchange. Om du vill använda e-postanslutningen, distribuerar du en av dessa e-postappar till användarnas enheter. Skapa och distribuera sedan den lämpliga e-postprofilen. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
+
+## <a name="changes-to-assigned-email-profiles"></a>Ändringar av tilldelade e-postprofiler
 
 Om du gör ändringar i en e-postprofil som du tidigare tilldelat, kan användarna få ett meddelande som ber dem godkänna omkonfigurationen av deras e-postinställningar.
+
+## <a name="next-steps"></a>Nästa steg
+När profilen har skapats gör den ingenting ännu. Härnäst [tilldela profilen till några enheter](device-profile-assign.md).

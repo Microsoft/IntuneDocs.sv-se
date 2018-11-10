@@ -1,39 +1,72 @@
 ---
-title: Anpassade inställningar i Microsoft Intune för enheter som kör macOS
+title: Lägga till anpassade inställningar för macOS-enheter i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Läs om vilka inställningar du kan använda i en anpassad macOS-profil i Microsoft Intune.
+description: Exportera macOS-inställningar från Apple Configurator eller Apples Profile Manager och importera sedan dessa inställningar till Microsoft Intune. De här inställningarna kan skapa, använda och kontrollera anpassade inställningar och funktioner på macOS-enheter. Den här anpassade profilen kan sedan tilldelas eller distribueras till macOS-enheter i din organisation för att skapa en baslinje eller standard.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 849bf23429ed689ee995784c3a47a802ba7dbf71
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 3bb4691ff46b4d28254d11fb94fa5b2fbcffaa6f
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31832427"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983184"
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-macos"></a>Anpassade enhetsinställningar i Microsoft Intune för enheter som kör macOS
+# <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Använda anpassade inställningar för macOS-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina macOS-enheter med hjälp av en ”anpassad profil”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
-Använd Microsoft Intunes anpassade macOS-profil för att tilldela inställningar som du har skapat med hjälp av [Apple Configurator-verktyget](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12) till macOS-enheter. Med detta verktyg kan du skapa många inställningar som styr driften av dessa enheter och exportera dem till en konfigurationsprofil. Sedan kan du importera konfigurationsprofilen till en anpassad macOS-profil i Intune och tilldela inställningarna till användare och enheter i organisationen.
+När du använder macOS-enheter kan du hämta anpassade inställningar till Intune på två sätt:
 
-Med den här funktionen kan du tilldela macOS-inställningar som inte kan konfigureras med andra Intune-profiltyper.
+- [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
+- [Apple Profile Manager](https://support.apple.com/profile-manager)
 
+Du kan använda dessa verktyg för att exportera inställningar till en konfigurationsprofil. I Intune importerar du den här filen och tilldelar sedan profilen till dina macOS-användare och macOS-enheter. När de har tilldelats distribueras inställningarna och en baslinje eller standard skapas för macOS i din organisation.
 
-1. Kom igång med hjälp av anvisningarna i [Hur man konfigurerar anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
-2. I fönstret **Anpassad konfigurationsprofil** konfigurerar du var och en av följande inställningar:
+Den här artikeln beskriver hur du skapar en anpassad profil för macOS-enheter. Den innehåller även viss vägledning om hur du använder Apple Configurator och Apple Profile Manager.
 
-- **Namn på anpassad konfigurationsfil** – Ge principen ett namn eftersom det ska visas på enheten och i Intune-statusen.
-- **Fil för konfigurationsprofil** – Bläddra till den konfigurationsprofil som du skapat med hjälp av Apple Configurator.
-Se till att inställningarna du exporterar från verktyget Apple Configurator är kompatibla med macOS-versionen på de enheter som du tilldelar den anpassade macOS-principen. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
+## <a name="before-you-begin"></a>Innan du börjar
 
-Filen som du har importerat visas i fönsterområdet **Filinnehåll**.
+- När du använder **Apple Configurator** för att skapa konfigurationsprofilen måste du kontrollera att de inställningar som du exporterar är kompatibla med macOS-versionen på de enheter som du använder. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
+
+- Om du använder **Apple Profile Manager** måste du göra följande:
+
+  - Aktivera [hantering av mobila enheter](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C) i Profile Manager.
+  - Lägg till [macOS-enheter](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) i Profile Manager.
+  - När du har lagt till en enhet i Profile Manager går du till **Under biblioteket** > **Enheter** > välj din enhet > **Inställningar**. Ange allmänna inställningar och säkerhets-, sekretess-, katalog- och certifikatinställningar för enheten.
+
+    Hämta och spara den här filen. Du ska lägga till den här filen i Intune-profilen. 
+
+  - Kontrollera att de inställningar som du exporterar från Apple Profile Manager är kompatibla med macOS-versionen på de enheter som du använder. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
+
+## <a name="create-the-profile"></a>Skapa profilen
+
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande inställningar:
+
+    - **Namn**: Ange ett namn för profilen, till exempel `macos custom profile`.
+    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Plattform**: Välj **macOS**.
+    - **Profiltyp**: Välj **Anpassad**.
+
+4. I **Anpassad konfiguration** anger du följande inställningar:
+
+    - **Anpassat namn på konfigurationsprofil**: Ange ett namn för principen. Det här namnet visas på enheten och i Intune-statusen.
+    - **Konfigurationsprofilfil**: Bläddra till konfigurationsprofilen som du skapade med Apple Configurator eller Apple Profile Manager. Filen som du importerade visas i området **Filinnehåll**.
+
+5. Välj **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
+
+## <a name="next-steps"></a>Nästa steg
+
+Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+
+Se hur du [skapar profilen på iOS-enheter](custom-settings-ios.md).

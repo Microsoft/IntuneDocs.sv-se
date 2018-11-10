@@ -1,42 +1,68 @@
 ---
-title: Anpassade inställningar i Microsoft Intune för enheter som kör Windows Phone 8.1
+title: Lägga till anpassade inställningar för Windows Phone 8.1-enheter i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Läs om inställningarna du kan använda i en anpassad Windows 8.1-profil.
+description: Lägg till eller skapa en anpassad profil för att använda OMA-URI-inställningarna för enheter som kör Windows Phone 8.1 i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b21464016dff3396b25861af568fa90d8b7a260f
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f2202d7abf80c6a78fd365a4629e970bc9ec36ce
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834761"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983099"
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-phone-81"></a>Anpassade enhetsinställningar i Microsoft Intune för enheter som kör Windows Phone 8.1
+# <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Använda anpassade inställningar för Windows Phone 8.1-enheter i Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Windows Phone 8.1-enheter med hjälp av ”anpassade profiler”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
-Använd profilen **Anpassad** för Windows Phone 8.1 i Microsoft Intune för att tilldela OMA-URI-inställningar som kan användas till att styra funktioner på Windows Phone 8.1-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
+Anpassade profiler i Windows Phone 8.1 använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera olika funktioner. De här inställningarna används vanligtvis av tillverkare av mobila enheter till att styra funktioner på enheten.
 
-Funktionen är avsedd för att kunna tilldela inställningar som inte går att konfigurera med andra Intune-principer.
+Den här artikeln visar hur du skapar en anpassad profil för Windows Phone 8.1-enheter. 
 
-## <a name="custom-policy-settings-for-windows-phone-81-devices"></a>Anpassade principinställningar för Windows Phone 8.1-enheter
+## <a name="create-the-profile"></a>Skapa profilen
 
-1. Kom igång med hjälp av anvisningarna i [Hur man konfigurerar anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
-2. I fönstret **Anpassade OMA-URI-inställningar** väljer du **Lägg till** för att lägga till en eller flera OMA-URI-inställningar.
-3. I fönstret **Lägg till rad** konfigureras följande värden för varje inställning:
-    - **Namn** – Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
-    - **Beskrivning** – Tillhandahåll en beskrivning som ger en översikt över inställningen och annan relevant information som gör det enkelt att hitta den.
-    - **OMA-URI** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
-    - **Datatyp** – Ange den datatyp som du vill specificera den här OMA-URI-inställningen med. Välj mellan **Sträng**, **Sträng (XML)**, **Datum och tid**, **Heltal**, **Flyttal**, **Boolesk** eller **Base64**.
-    - **Värde** – Ange det värde eller den fil som du vill associera med den OMA-URI som du har angett.
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande inställningar:
 
-4. Klicka på **OK** när du är klar och fortsätt sedan att lägga till fler inställningar efter behov.
+    - **Namn**: Ange ett namn för profilen, till exempel `windows phone custom profile`.
+    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Plattform**: Välj **Windows Phone 8.1**.
+    - **Profiltyp**: Välj **Anpassad**.
+
+4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
+
+    - **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
+    - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen och eventuell annan relevant information som gör det enklare att hitta profilen.
+    - **OMA-URI** (skiftlägeskänsligt): Ange den OMA-URI som du vill använda som inställning.
+    - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
+
+        - Sträng
+        - Sträng (XML-fil)
+        - Datum och tid
+        - Heltal
+        - Flyttal
+        - Boolesk
+        - Base64 (fil)
+
+    - **Värde**: Ange det datavärde som du vill associera med den OMA-URI som du har angett. Värdet beror på vilken datatyp du valt. Om du till exempel valde **Datum och tid**, väljer du värdet från en datumväljare.
+
+    När du har lagt till några inställningar kan du välja **Exportera**. **Exportera** skapar en lista över alla värden som du har lagt till i en fil med kommaavgränsade värden (.csv).
+
+5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
+6. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
+
+## <a name="next-steps"></a>Nästa steg
+
+Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+
+Se hur du skapar en anpassad profil på [Windows 10-enheter](custom-settings-windows-10.md).

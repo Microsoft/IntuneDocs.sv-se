@@ -1,12 +1,11 @@
 ---
-title: Anpassade profilinställningar i Intune för Android-arbetsprofiler
-titlesuffix: Microsoft Intune
-description: Läs hur du skapar anpassade profilinställningar i Microsoft Intune för Android-arbetsprofilenheter.
+title: Lägga till anpassade inställningar för Android Enterprise-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Lägga till eller skapa en anpassad profil för Android Enterprise-enheter i Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/12/2017
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,42 +14,85 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 109c50acf194598017aa507a0979ad3b9298de9e
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a622264ed7cc091849bacbd02f8ae7bdb33603fe
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905299"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983150"
 ---
-# <a name="create-intune-custom-profile-settings-for-android-work-profile-devices"></a>Skapa anpassade profilinställningar i Intune för Android-arbetsprofilenheter
+# <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Använda anpassade inställningar för Android Enterprise-enheter i Microsoft Intune
 
-Använd en anpassad konfigurationsprincip för Android-arbetsprofiler i Intune för att tilldela OMA-URI-inställningar som kan användas till att styra funktioner på Android-arbetsprofilenheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
+Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Android Enterprise-enheter med hjälp av en ”anpassad profil”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
-Funktionen är avsedd för att kunna tilldela Android-inställningar som inte går att konfigurera med Intune-principer. Intune har för närvarande stöd för ett begränsat antal anpassade Android-principer. Se exemplen i den här artikeln för att ta reda på vilka principer du kan konfigurera.
+Anpassade profiler för Android Enterprise använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att styra funktioner på Android Enterprise-enheter. De här inställningarna används vanligtvis av tillverkare av mobila enheter för att styra dessa funktioner.
 
-## <a name="create-a-custom-profile"></a>Skapa en anpassad profil
+Intune stöder ett begränsat antal anpassade Android-profiler.
 
-1. Kom igång med hjälp av anvisningarna i [Konfigurera anpassade enhetsinställningar](custom-settings-configure.md). I **Plattform** väljer du **Android enterprise** och i **Profiltyp** väljer du **Anpassad**.
-2. På bladet **Anpassade OMA-URI-inställningar** väljer du **Lägg till** för att lägga till en ny inställning.
-3. På bladet **Lägg till rad** konfigurerar du följande:
-    - **Namn** – Ange ett unikt namn för de anpassade inställningarna för Android-arbetsprofiler, som hjälper dig att identifiera den i Azure Portal.
-    - **Beskrivning** – Ange en beskrivning med en översikt av den anpassade Android-principen, samt annan information som gör det enkelt att hitta den.
-    - **OMA-URI** – Ange den OMA-URI som du vill ange en inställning för.
-    - **Datatyp** – Ange den datatyp som du vill specificera den här OMA-URI-inställningen med. Välj mellan **Sträng**, **Sträng (XML-fil)**, **Datum och tid**, **Heltal**, **Flyttal**, **Boolesk** eller **Base64 (fil)**.
-    - **Värde** – Ange det värde som ska associeras med den OMA-URI som du tidigare angav. Metoden du använder för att ange värdet varierar beroende på datatypen som du har valt. Om du till exempel har valt **Datum och tid**, väljer du värdet från en datumväljare.
-4. När du är klar väljer du OK för att återgå till **Anpassade OMA-URI-inställningar**. Lägg sedan till fler inställningar eller välj **Skapa** för att skapa den anpassade profilen.
+Den här artikeln beskriver hur du skapar en anpassad profil för Android Enterprise-enheter. Den innehåller också ett exempel på en anpassad profil som blockerar kopierings- och inklistringsfunktionerna.
 
+## <a name="create-the-profile"></a>Skapa profilen
+
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande inställningar:
+
+    - **Namn**: Ange ett namn för profilen, till exempel `android enterprise custom profile`
+    - **Beskrivning:** Ange en beskrivning för profilen
+    - **Plattform**: Välj **Android-företag**
+    - **Profiltyp**: Välj **Anpassad**
+
+4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
+
+    - **Namn**: Ange ett unikt namn för OMA-URI-inställningen så att du lätt kan hitta den.
+    - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
+    - **OMA-URI**: Ange den OMA-URI som du vill använda som inställning.
+    - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
+
+      - Sträng
+      - Sträng (XML-fil)
+      - Datum och tid
+      - Heltal
+      - Flyttal
+      - Boolesk
+      - Base64 (fil)
+
+    - **Värde**: Ange det datavärde som du vill associera med den OMA-URI som du har angett. Värdet beror på vilken datatyp du valt. Om du till exempel valde **Datum och tid**, väljer du värdet från en datumväljare.
+
+    När du har lagt till några inställningar kan du välja **Exportera**. **Exportera** skapar en lista över alla värden som du har lagt till i en fil med kommaavgränsade värden (.csv).
+
+5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
+6. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
 
 ## <a name="example"></a>Exempel
 
-I det här exemplet skapar du en anpassad profil som kan användas för att begränsa om åtgärderna för att kopiera och klistra in mellan arbetsappar och personliga appar ska vara tillåtna på Android-arbetsprofilenheter.
+I det här exemplet skapar du en anpassad profil som begränsar kopierings- och inklistringsåtgärder mellan arbetsappar och personliga appar på Android Enterprise-enheter.
 
-1. Använd metoden i den här artikeln för att skapa en anpassad profil för Android-arbetsprofilenheter med följande värden:
-    - **Namn** – Ange ”Blockera kopiera och klistra in” eller välj en egen text.
-    - **Beskrivning** – Ange ”Blockera kopiera/klistra in mellan arbetsappar och personliga appar” eller välj en egen text.
-    - **OMA-URI** – Ange **./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste**.
-    - **Datatyp** – Välj **Boolesk** för att visa att värdet för den här OMA-URI:n är antingen **Sant** eller **Falskt**.
-    - **Värde** – Välj **Sant**.
-2. Du bör få en inställning som liknar den här bilden.
-![Blockera kopiera och klistra in för Android-arbetsprofil.](./media/custom-policy-afw-copy-paste.png)
-3. Nu när du tilldelar den här anpassade profilen till Android-arbetsprofilenheter som du hanterar, kommer funktionen för att kopiera och klistra in att blockeras mellan arbetsappar och personliga profiler.
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande inställningar:
+
+    - **Namn**: Ange ett namn för profilen, till exempel `android ent block copy paste custom profile`.
+    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Plattform**: Välj **Android-företag**.
+    - **Profiltyp**: Välj **Anpassad**.
+
+4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
+
+    - **Namn**: Ange något som exempelvis `Block copy and paste`.
+    - **Beskrivning**: Ange något som exempelvis `Blocks copy/paste between work and personal apps`.
+    - **OMA-URI**: Ange `./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste`.
+    - **Datatyp**: Välj **Booleskt** så att värdet för den här OMA-URI:n är **Sant** eller **Falskt**.
+    - **Värde**: Välj **Sant**.
+
+5. När du har angett inställningarna bör din miljö likna följande bild:
+
+    ![Blockera kopiering och inklistring för Android-arbetsprofil.](./media/custom-policy-afw-copy-paste.png)
+
+När du tilldelar den här profilen till Android Enterprise-enheter som du hanterar blockeras kopierings- och inklistringsfunktionerna mellan appar i arbetsprofiler och personliga profiler.
+
+## <a name="next-steps"></a>Nästa steg
+
+Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+
+Se hur du [skapar profilen på Android-enheter](custom-settings-android.md).

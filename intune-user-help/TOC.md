@@ -107,11 +107,13 @@
 #### [Min macOS-version stöds inte ännu](your-macos-version-isnt-yet-supported.md)
 #### [Uppdatera din macOS-enhet](you-need-to-update-your-macos-device.md)
 #### [Rapportera företagsportalfel](send-errors-macos.md)
+#### [Enheten är tilldelad till någon annan](unable-to-get-macOS-device-managed.md)
 #### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-macos.md)
 #### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
 #### [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-macos.md)
 #### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 #### [Enhetsgränsen har nåtts](device-limit-wpj-macos.md)
+#### [Problem med att få virtuell macOS-dator hanterad](unable-to-get-macOS-device-managed.md) 
 
 ## [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
 ### [Vad händer när jag registrerar en Windows 10-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)

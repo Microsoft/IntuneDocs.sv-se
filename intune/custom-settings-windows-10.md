@@ -1,54 +1,75 @@
 ---
-title: Anpassade inställningar för Windows 10-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Konfigurera anpassade OMA-URI-inställningar på enheter som kör Windows 10 med en anpassad profil i Microsoft Intune.
+title: Lägga till anpassade inställningar för Windows 10-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Lägg till eller skapa en anpassad profil för att använda OMA-URI-inställningarna för enheter som kör Windows 10 i Microsoft Intune. Använd en anpassad profil för att lägga till anpassade inställningar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/18/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdbb6643a4ee8aace0db22cd7f9189f7ac6445f0
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 78ed923c7502744ccd7f23e341049ce8ee8a8d86
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232834"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983218"
 ---
-# <a name="custom-oma-uri-settings-for-windows-10-devices---intune"></a>Anpassade OMA-URI-inställningar för Windows 10-enheter – Intune
+# <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Använda anpassade inställningar för Windows 10-enheter i Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Windows 10-enheter med hjälp av ”anpassade profiler”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
-Använd Microsoft Intunes **anpassade** profil för Windows 10 och Windows 10 Mobile för att distribuera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier). De här inställningarna används för att styra funktioner på enheter. I Windows 10 finns flera CSP-inställningar (Configuration Service Provider), t.ex. [Princip-CSP (Policy Configuration Service Provider)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+Anpassade profiler i Windows 10 använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera olika funktioner. De här inställningarna används vanligtvis av tillverkare av mobila enheter till att styra funktioner på enheten. 
 
-Kom ihåg att om du letar efter en specifik inställning så innehåller [enhetsbegränsningsprofilen i Windows 10](device-restrictions-windows-10.md) många inställningar som är inbyggda i Intune och inte kräver anpassade värden.
+I Windows 10 finns flera CSP-inställningar (Configuration Service Provider), t.ex. [Princip-CSP (Policy Configuration Service Provider)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 
-## <a name="configure-custom-settings"></a>Konfigurera anpassade inställningar
+Glöm inte att [enhetsbegränsningsprofilen i Windows 10](device-restrictions-windows-10.md) innehåller många inbyggda inställningar som du kan använda. Det betyder att du kanske inte behöver ange anpassade värden.
 
-1. Skapa en ny konfigurationsprofil med hjälp av profiltypen **Anpassad**. Stegen finns i [Konfigurera anpassade enhetsinställningar](custom-settings-configure.md).
-2. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till** för att skapa en ny inställning. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
-3. Ange följande information för varje OMA-URI-inställning som du vill lägga till:
+Den här artikeln:
 
-- **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
-- **Beskrivning** – Ange en beskrivning för inställningen (valfritt).
-- **OMA-URI (skiftlägeskänslig)**: Ange den OMA-URI som du vill tillhandahålla en inställning för.
-- **Datatyp**: Välj bland:
-  - **Sträng**
-  - **Sträng (XML)**
-  - **Datum och tid**
-  - **Heltal**
-  - **Flyttal**
-  - **Boolesk**
-  - **Base64**
-- **Värde**: Ange det värde eller den fil som du vill associera med den OMA-URI som du har angett.
+- Beskriver hur du skapar en anpassad profil för Windows 10-enheter
+- Innehåller en lista med rekommenderade OMA-URI-inställningar
+- Innehåller ett exempel på en anpassad profil som öppnar en VPN-anslutning
 
-4. När du är klar väljer du **OK**. I **Skapa profil** väljer du **Skapa**. Profilen skapas och visas i profillistan.
+## <a name="create-the-profile"></a>Skapa profilen
+
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande inställningar:
+
+    - **Namn**: Ange ett namn för profilen, till exempel `windows 10 custom profile`.
+    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Plattform**: Välj **Windows 10 och senare**.
+    - **Profiltyp**: Välj **Anpassad**.
+
+4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
+
+    - **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
+    - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
+    - **OMA-URI** (skiftlägeskänsligt): Ange den OMA-URI som du vill använda som inställning.
+    - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
+
+        - Sträng
+        - Sträng (XML-fil)
+        - Datum och tid
+        - Heltal
+        - Flyttal
+        - Boolesk
+        - Base64 (fil)
+
+    - **Värde**: Ange det datavärde som du vill associera med den OMA-URI som du har angett. Värdet beror på vilken datatyp du valt. Om du till exempel valde **Datum och tid**, väljer du värdet från en datumväljare.
+
+    När du har lagt till några inställningar kan du välja **Exportera**. **Exportera** skapar en lista över alla värden som du har lagt till i en fil med kommaavgränsade värden (.csv).
+
+5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
+6. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
 
 ## <a name="example"></a>Exempel
+
 I följande exempel är inställningen **Connectivity/AllowVPNOverCellular** aktiverad. Med den här inställningen kan en Windows 10-enhet öppna en VPN-anslutning vid användning av ett mobilnät.
 
 ![Exempel på en anpassad princip som innehåller VPN-inställningar](./media/custom-policy-example.png)
@@ -59,4 +80,8 @@ Du hittar en lista med alla konfigurationstjänstleverantörer (CSP) som Windows
 
 Alla inställningar är inte kompatibla med alla versioner av Windows 10. I [referensen till konfigurationstjänstleverantörer](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) står det vilka versioner som stöds för varje CSP.
 
-Dessutom stödjer Intune inte alla inställningar som anges. Om du vill veta om Intune har stöd för den inställning som du vill använda, kan du öppna artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.
+Observera att Intune inte stöder alla inställningar i [referensen för konfigurationstjänstleverantörer](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Om du vill veta om Intune har stöd för den inställning som du vill använda, kan du öppna artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.
+
+## <a name="next-steps"></a>Nästa steg
+
+Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).

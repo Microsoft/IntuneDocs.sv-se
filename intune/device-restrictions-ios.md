@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 677b3853d1923a52572d8088c885f794175c4d52
-ms.sourcegitcommit: a13d1eafc979a9cfeb4adbdea861e2784c2b1068
+ms.openlocfilehash: 67a1eba8208140306c697b7fe7dddb987e4b75c9
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46330005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001617"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
 
@@ -215,8 +215,8 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 -   **Anslut till trådlösa nätverk med endast konfigurationsprofiler (endast övervakat)** – Tillåter endast att enheten ansluter till trådlösa nätverk som har konfigurerats med en Wi-Fi-profil i Intune.
 
 - **Regler för mobilanvändning (endast hanterade appar)** – Gör det möjligt att definiera de datatyper som hanterade appar kan använda i mobilnät. Välj mellan:
-    - **Blockera användning av mobildata** – Du kan blockera användningen av mobildata för ** Alla hanterade appar** eller **Välj särskilda appar**.
-    - **Blockera användning av mobildata vid nätverksväxling** – Du kan blockera användningen av mobildata för ** Alla hanterade appar** eller **Välj särskilda appar**.
+    - **Blockera användning av mobildata** – Du kan blockera användningen av mobildata för **alla hanterade appar** eller **välja särskilda appar**.
+    - **Blockera användning av mobildata vid nätverksväxling** – Du kan blockera användningen av mobildata för **alla hanterade appar** eller **välja särskilda appar**.
 
 ## <a name="connected-devices"></a>Anslutna enheter
 

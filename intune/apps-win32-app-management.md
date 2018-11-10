@@ -1,30 +1,13 @@
 ---
-title: Lägga till Win32-appar i Microsoft Intune
-titlesuffix: ''
-description: Lär dig mer om att lägga till och hantera Win32-appar i Microsoft Intune.
-keywords: ''
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 10/08/2018
-ms.topic: article
-ms.prod: ''
-ms.service: microsoft-intune
-ms.technology: ''
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-ms.reviewer: mghadial
-ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: f11d1a0f51935e1bcb7318c7b0c7ba674ba2d54b
-ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
-ms.translationtype: HT
-ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357112"
+rubrik: Lägg till Win32-appar i Microsoft Intune-titelsuffix: beskrivning: Lär dig hur du lägger till, distribuerar och hanterar Win32-appar med Microsoft Intune. Det här avsnittet innehåller en översikt över Intunes leverans- och hanteringsfunktioner för Win32-appar, samt felsökningsinformation för Win32-appar. nyckelord: författare: Erikre ms.author: erikre manager: dougeby <<<<<<< HEAD ms.date: 10/23/2018 === ms.date: 10/19/2018
+>>>>>>> 14fdd9aac5e66324acfe83ae31b126d8216d7da4 ms.topic: artikel ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
+
+ms.reviewer: mghadial ms.suite: ems ms.custom: intune-azure
 ---
+
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Fristående Intune – Win32-apphantering (offentlig förhandsversion)
 
-Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-appar. Molnanslutna kunder kan använda Configuration Manager för Win32-apphantering, men kunder med fristående Intune har tillgång till bättre hanteringsfunktioner för sina verksamhetsspecifika Win32-appar. Det här dokumentet innehåller en översikt över hanterings- och felsökningsfunktionerna för Intune Win32-appar.
+Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-appar. Molnanslutna kunder kan använda Configuration Manager för Win32-apphantering, men kunder med fristående Intune har tillgång till bättre hanteringsfunktioner för sina verksamhetsspecifika Win32-appar. Det här avsnittet innehåller en översikt över Intunes hanterings- och felsökningsfunktioner för Win32-appar.
 
 ## <a name="prerequisites-for-public-preview"></a>Krav för den offentliga förhandsversionen
 
@@ -32,7 +15,7 @@ Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-ap
 - Windows 10-klienten måste vara: 
     - ansluten till Azure Active Directory (AAD) eller Hybrid Azure Active Directory och
     - registrerad i Intune (MDM-hanterad)
-- Storleken för Windows-program är högst 2 GB per app i den offentliga förhandsversionen 
+- Storleken för Windows-program är högst 8 GB per app i den offentliga förhandsversionen 
 
 > [!NOTE]
 > För närvarande testar vi Pro- och Education-versionerna av Windows 10 version 1607 och vi vill gärna höra dina synpunkter.
@@ -109,6 +92,11 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 3.  Lägg till den fullständiga kommandoraden för avinstallation av appen baserat på appens GUID. 
 
     Exempelvis: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+    > [!NOTE]
+    > Du kan konfigurera att en Win32-app installeras i kontexten **Användare** eller **System**. Kontexten **Användare** avser bara en viss användare. Kontexten **System** avser alla användare av en Windows 10-enhet.
+    >
+    > Slutanvändare behöver inte vara inloggade på enheten för att installera Win32-appar.
 
 4.  Välj **OK** när du är klar.
 
@@ -233,7 +221,6 @@ Agentloggar på klientdatorn finns vanligtvis i `C:\ProgramData\Microsoft\Intune
 ### <a name="troubleshooting-areas-to-consider"></a>Felsökningsområden att tänka på
 - Kontrollera målet och att agenten är installerad på enheten – En Win32-app som riktas mot en grupp eller ett PowerShell-skript som riktas mot en grupp skapar agentinstallationsprinciper för säkerhetsgruppen.
 - Kontrollera operativsystemversionen – Windows 10 1607 och senare.  
-- Är AAD-användaren inloggad på klientdatorn?
 - Kontrollera Windows 10 SKU – Windows 10 S eller Windows-versioner som körs med S-läge aktiverat har inte stöd för MSI-installation.
 
 ## <a name="next-steps"></a>Nästa steg

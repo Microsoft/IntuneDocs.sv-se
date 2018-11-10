@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f27baf7d40a6eb4d89769eeab7a6e035e3468825
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: 57c69c1610168aa25d33c8124c38f585eb715251
+ms.sourcegitcommit: 3d44c06045fa986fc9b9eb43b667caf8928dbaf0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643033"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225462"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -186,6 +186,15 @@ Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enhe
 Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får rensningar företräde, följt av blockeringar och därefter varningar som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta iOS-operativsysteminställning som varnar en användare för att göra en uppdatering av sin iOS-version efter den lägsta iOS-operativsysteminställningen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar det äldsta iOS-operativsystemet till 11.0.0.0 och det äldsta iOS-operativsystemet (endast varning) till 11.1.0.0, medan enheten som försöker få åtkomst till appen hade iOS-version 10 blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta iOS-operativsystemversionen. Det leder till blockerad åtkomst.
 
 När du hanterar olika typer av inställningar får ett krav på Intune App SDK-version företräde, följt av kravet på appversion, och därefter kravet på iOS-operativsystemets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning. Vi rekommenderar att du endast konfigurerar Intune App SDK-versionskraven vid vägledning från Intune-produktteamet för väsentliga blockeringsscenarier.
+
+## <a name="app-protection-policies---policy-refresh"></a>Appskyddsprinciper – principuppdatering
+- Appar checkar in till APP-tjänsten var 30:e minut.
+- Tröskelvärdet på 30 minuter baseras på en timer.
+    - Om appen är aktiv i 30 minuter, checkar den in när det har gått 30 minuter.
+    - Om appen är i viloläge när det har gått 30 minuter, checkar den in vid nästa tillfälle.
+- Om ingen princip har tilldelats till en användare sker incheckningen var åttonde timme.
+- Om ingen Intune-licens har tilldelats sker incheckningen var 24:e timme.
+
 
 ## <a name="see-also"></a>Se även
 - [Implementera din Intune plan](planning-guide-onboarding.md)

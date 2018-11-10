@@ -15,17 +15,17 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16d57ee6a722e8d840b8e8a09ba583698fcb67be
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: e4c44552a0df369767bb91749351674af9eab4b3
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562909"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959561"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Med Intune kan du hantera telekomkostnader för dataanvändning på företagsägda mobila enheter. Intune implementerar den här funktionen genom integrering med tredjepartsprogramutvecklaren Saaswedos lösning för kostnadsuppföljning av telekommunikation, Datalert. Datalert är en programvara för kostnadsuppföljning av telekommunikation som låter dig hantera telekommunikationens dataanvändning. Den hjälper dig att undvika kostsam och oväntad överförbrukning av data och nätverksväxling för dina Intune-hanterade enheter.
+Med Intune kan du hantera telekomkostnader för dataanvändning på företagsägda mobila enheter. Intune implementerar den här funktionen genom integrering med tredjepartsprogramutvecklaren Saaswedos [lösning för kostnadsuppföljning av telekommunikation, Datalert](http://datalert.biz/get-started). Datalert är en programvara för kostnadsuppföljning av telekommunikation som låter dig hantera telekommunikationens dataanvändning. Den hjälper dig att undvika kostsam och oväntad överförbrukning av data och nätverksväxling för dina Intune-hanterade enheter.
 
 Med Intunes Datalert-integrering kan du centralt konfigurera, övervaka och tillämpa gränser för nätverksväxling och lokal dataanvändning. Automatiserade aviseringar utlöses när gränserna överskrider definierade tröskelvärden. Du kan konfigurera tjänsten så att olika åtgärder tillämpas på enskilda personer eller grupper med slutanvändare (t.ex. inaktivering av nätverksväxling eller när tröskelvärdet överskrids). Rapporter med information om övervakning och dataanvändning är tillgängliga från Datalerts hanteringskonsol.
 
@@ -61,19 +61,31 @@ Innan du börjar kontrollerar du att du har en Intune-prenumeration och en prenu
 
 2. I Datalert-hanteringskonsolen går du till fliken **Settings** (Inställningar) och sedan till **MDM configuration** (MDM-konfiguration).
 
-3. Välj **Unblock** (Lås upp) så att du kan ange inställningarna på sidan.
+3. Välj **Avblockera** längst ned på sidan, vilket gör att du kan ändra inställningar på sidan.
 
-4. För **Server MDM** (Server-MDM) väljer du **Microsoft Intune**.
+4. I avsnittet **Intune / Datalert Connection** (Intune/Datalert-anslutning) väljer du **Microsoft Intune** för **Server MDM** (Server-MDM).    
 
-5. För **Azure AD Domain** (Azure AD-domän) anger du ditt Azure-klient-ID och väljer **Connection** (Anslutning).
+5. För **Azure AD-domän** anger du ID:t för din Azure-klientorganisation och väljer sedan **Anslutning**.
 
-    När du väljer **Connection** (Anslutning) kontrollerar Datalert att det inte finns några befintliga Datalert-anslutningar med Intune. Efter några sekunder visas Microsofts inloggningssida, följt av Azure-autentiseringen för Datalert.
+    När du väljer **Anslutning** kontrollerar Datalert-tjänsten att det inte redan finns några Datalert-anslutningar med Intune. Efter några sekunder visas Microsofts inloggningssida, följt av Azure-autentiseringen för Datalert.
 
-6. Välj **Godkänn** på Microsofts autentiseringssida. Du omdirigeras till Datalerts ”Tack”-sida som stängs efter några sekunder. Datalert verifierar anslutningen och visar gröna bockmarkeringar bredvid listan med objekt som har verifierats. Om valideringen misslyckas visas ett meddelande i rött och du bör kontakta Datalerts support för att få hjälp.
+6. Välj **Godkänn** på Microsofts autentiseringssida. Du omdirigeras till en **Tack**-sida i Datalert som stängs efter några sekunder. Datalert verifierar anslutningen och visar gröna bockmarkeringar bredvid en lista med objekt som har verifierats. Om valideringen misslyckas visas ett meddelande i rött och du bör kontakta Datalerts support för att få hjälp.
 
     I följande skärmbild ser du de gröna bockmarkeringar som visas när anslutningen har upprättats.
 
-   ![Datalert-sidan visar att anslutningen har lyckats](./media/tem-mdm-configuration-mdm-server-page.png)
+   ![Datalert-sidan visar att anslutningen har lyckats](./media/tem-datalert-connection.png)
+
+7. I avsnittet **Datalert App / ADAL Consent** (Datalert-app / ADAL-medgivande) växlar du inställningen till **På**. Välj **Godkänn** på Microsofts autentiseringssida. Du omdirigeras till en **Tack**-sida i Datalert som stängs efter några sekunder. Datalert verifierar anslutningen och visar gröna bockmarkeringar bredvid en lista med objekt som har verifierats. Om valideringen misslyckas visas ett meddelande i rött och du bör kontakta Datalerts support för att få hjälp.    
+
+    I följande skärmbild ser du de gröna bockmarkeringar som visas när anslutningen har upprättats.
+
+   ![Datalert-sidan visar att anslutningen har lyckats](./media/tem-datalert-adal-consent.png)
+
+8. I avsnittet **MDM Profiles management (optional)** (Hantering av MDM-profiler (valfritt)) växlar du inställningen till **På** så att Datalert kan läsa de tillgängliga profilerna i Intune och hjälpa dig att konfigurera principer. Välj **Godkänn** på Microsofts autentiseringssida. Du omdirigeras till en **Tack**-sida i Datalert som stängs efter några sekunder. Datalert verifierar anslutningen och visar gröna bockmarkeringar bredvid en lista med objekt som har verifierats. Om valideringen misslyckas visas ett meddelande i rött och du bör kontakta Datalerts support för att få hjälp.    
+
+    I följande skärmbild ser du de gröna bockmarkeringar som visas när anslutningen har upprättats.
+
+   ![Datalert-sidan visar att anslutningen har lyckats](./media/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Steg 2: Kontrollera att funktionen för kostnadsuppföljning av telekommunikation är aktiv i Intune
 
