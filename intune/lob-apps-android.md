@@ -15,12 +15,12 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f01ff78ed833e8c621783363a7d6ad1405df6f14
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: a57ae54787069f85798519a3a6bc051842db6c2b
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602239"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212333"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Android i Microsoft Intune
 
@@ -55,7 +55,6 @@ En verksamhetsspecifik app är en app som du lägger till i Intune från en appi
     - **Beskrivning**: Ange beskrivningen av appen. Beskrivningen visas i företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
     - **Lägsta operativsystemversion**: Välj den lägsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
-    - **Ignorera appversion**: Ange **Ja** om apputvecklaren uppdaterar appen automatiskt.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
     - **Visa den här som aktuell app på företagsportalen**: Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
     - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas i företagsportalen.

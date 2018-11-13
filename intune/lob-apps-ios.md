@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bbf02fc9633cca5059a6c58c3ef021f05469be60
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 43ca9d165bd44684a23f7e82eaed04f833b30449
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075601"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212350"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
 
@@ -55,7 +55,6 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
     - **Lägsta operativsystemversion**: Välj den lägsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
-    - **Ignorera appversion**: Ange **Ja** om apputvecklaren uppdaterar appen automatiskt.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
     - **Visa den här som aktuell app på företagsportalen**: Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
     - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas i företagsportalen.

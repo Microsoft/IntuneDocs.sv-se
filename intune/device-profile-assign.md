@@ -14,12 +14,12 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa1a1b1085d196411a03a6228eefa808399397ea
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 439c89f7b0158111f63d2d8327291c2b5a5c1e38
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31024812"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298079"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
@@ -48,9 +48,6 @@ Säg att du t.ex. vill tilldela en profil till alla enheter i din organisation, 
 Exkluderingsfunktionen tittar bara på direkta medlemmar av gruppen, ingen hänsyn tas till de enheter som eventuellt finns kopplade till användaren. Principen tilldelas inte till enheter som inte har någon användare. Det beror på att dessa enheter inte har någon relation till gruppen **Alla användare**.
 
 Om du inkluderar **Alla enheter** och exkluderar **Alla användare**, tilldelas principen till alla enheter. I det här scenariot är avsikten att exkludera de enheter som har en associerad användare från den här principen. Men detta exkluderar inte enheterna eftersom exkluderingsfunktionen endast jämför direkta medlemmar av gruppen.
-
->[!TIP]
->Exkluderingsfunktionen kan för närvarande inte användas tillsammans med kompatibilitetsprinciper eller apptilldelningar. Om du vill exkludera medlemmar från en tilldelning kan du använda värdet **Tillgängligt** respektive **Inte tillämpligt**. Du kan t.ex. tilldela en app till **Alla företagsanvändare** genom att välja värdet **Tillgängligt** och därefter välja värdet **Ej tillämpligt** för **Ledningsgrupp**. Appen tilldelas till alla användare *utom* användarna i gruppen **Ledningsgrupp**. Om du tilldelar appen till **Alla företagsanvändare** med värdet **Obligatoriskt** inkluderas även gruppen **Ledningsgrupp**.
 
 ## <a name="next-steps"></a>Nästa steg
 Se [Övervaka enhetsprofiler](device-profile-monitor.md) för vägledning i hur du övervakar tilldelningar av enhetsprofiler.

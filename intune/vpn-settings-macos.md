@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d1224c00a1f7e8cf303304b3a0f038ade79b9633
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e4330d8e8095df49b14ab60c4b08aae44d134452
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679227"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-macos"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör macOS
 
@@ -56,6 +56,6 @@ Om du har valt **Anpassat VPN** kan du konfigurera inställningarna ytterligare:
 
 ## <a name="proxy-settings"></a>Proxyinställningar
 
-- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `** http://proxy.contoso.com**`) som innehåller konfigurationsfilen.
 - **Adress** – Ange proxyns serveradress (som en IP-adress).
 - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.

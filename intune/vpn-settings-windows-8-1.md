@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 30aa56913cc3bda2d1c8b8b67e982c565c44a2a8
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2b6ae135f298f4632d35db756f6f2d7e7e6a1730
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834178"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679244"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Windows 8.1
 
@@ -86,7 +86,7 @@ Mer information om hur du skriver anpassade XML-kommandon finns i varje tillverk
 ## <a name="proxy-settings"></a>Proxyinställningar
 
 - **Identifiera proxyinställningar automatiskt** – Om VPN-servern kräver en proxyserver för anslutningen, kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
-- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `** http://proxy.contoso.com**`) som innehåller konfigurationsfilen.
 - **Använd proxyserver** – Aktivera det här alternativet om du vill ange inställningarna för proxyservern manuellt.
     - **Adress** – Ange proxyns serveradress (som en IP-adress).
     - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.

@@ -15,12 +15,12 @@ ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: e54b35d677d34067bfbd0ad6aad86e3dfe17fb90
-ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
+ms.openlocfilehash: 5fb0de1af9c8336cb277572faf526f1471108591
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50971490"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225959"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Intune-informationslagersamlingar
 
@@ -165,7 +165,7 @@ Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista öve
 | Misslyckades    | Antalet unika enheter med tillståndet misslyckades.                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
-Entiteten  **DeviceConfigurationProfileUserActivity**  innehåller en lista över antalet användare med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om en användare har tilldelats två profiler, en med tillståndet lyckades och den andra med tillståndet fel, räknas användaren i feltillståndet. Entiteten  **DeviceConfigurationProfileUserActivity**  innehåller en lista över antalet användare i olika tillstånd under en viss dag inom de senaste 30 dagarna. 
+Entiteten **DeviceConfigurationProfileUserActivity** innehåller en lista över antalet användare med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om en användare har tilldelats två profiler, en med tillståndet lyckades och den andra med tillståndet fel, räknas användaren i feltillståndet. Entiteten **DeviceConfigurationProfileUserActivity** visar hur många användare som varit i ett visst tillstånd en viss dag under de senaste 30 dagarna. 
 
 | Egenskap  | Beskrivning  | Exempel  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
