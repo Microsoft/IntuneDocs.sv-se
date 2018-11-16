@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 ms.custom: intune-azure
-ms.openlocfilehash: 5b2c2bb6e76bd6b2da7ee7c12282c0ff22d7d3e3
-ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
+ms.openlocfilehash: 270f19b6f0babb347b04731ca270a3c5bea18217
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31617217"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225684"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Kräv multifaktorautentisering för enhetsregistreringar i Intune
 
@@ -48,24 +48,18 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 >Konfigurera inte **Enhetsbaserade åtkomstregler** för Microsoft Intune-registrering.
 
 1. Logga in med dina autentiseringsuppgifter på [Microsoft Azure Portal](https://portal.azure.com).
-2. Välj **Azure Active Directory** i portalen.
-2. I **Azure Active Directory** väljer du **Hantera** > **Företagsprogram**.
-3. I **Företagsprogram** väljer du **Hantera** > **Alla program**. En lista visas över alla Azure-appar som du hanterar.
-3. Välj **Microsoft Intune-registrering** i listan.
-4. I **Microsoft Intune-registrering** väljer du **Säkerhet** > **Villkorlig åtkomst**.
-5. Välj **Ny princip**.
-6. I **Ny** princip anger du ett beskrivande namn för principen.
-7. Välj **Tilldelningar** i avsnittet **Användare och grupper**.
-8. I **Användare och grupper** väljer du de användare eller grupper som principen ska tilldelas. Välj sedan **Klart**.
-9. I avsnittet **Tilldelningar** väljer du **Molnappar**.
-10. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**.
-11. I avsnittet **Tilldelningar** väljer du **Villkor**.
-12. I **Villkor** behöver du inte ange några inställningar för MFA.
-13. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
-14. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering** .
-    Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats.
-15. Välj **Välj**.
-16. I **Ny princip**, väljer du **Aktivera princip** > **På** och väljer sedan **Skapa**.
+2. I portalen går du till **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)**.
+3. I **Azure Active Directory** går du till Säkerhet och väljer **[Villkorlig åtkomst](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)**.
+4. Välj **Ny princip**.
+5. I **Ny** princip anger du ett beskrivande namn för principen.
+6. Välj **Tilldelningar** i avsnittet **Användare och grupper**.
+7. I **Användare och grupper** väljer du **Välj användare eller grupper** och markerar **Användare och grupper**. Välj sedan de användare och/eller grupper som ska få den här principen. Välj sedan **Klart**.
+8. I avsnittet **Tilldelningar** väljer du **Molnappar**.
+9. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**.
+10. I avsnittet **Tilldelningar** behöver du för **Villkor** inte ange några inställningar för MFA.
+11. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
+12. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering** . Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats. Välj sedan **Välj**.
+13. I **Ny princip**, väljer du **Aktivera princip** > **På** och väljer sedan **Skapa**.
 
 
 

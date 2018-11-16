@@ -15,12 +15,12 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6880d3891891fe27a41d04a118e14ac9d4782b3
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 04c9c6b184fac2082649e8be8e60e6ac3f5a5669
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828184"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212435"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows i Microsoft Intune
 
@@ -55,7 +55,7 @@ En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinst
     - **Namn**: Ange namnet på appen så som det visas på företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
-    - **Ignorera appversion**: Ange **Ja** om apputvecklaren uppdaterar appen automatiskt.
+    - **Ignorera appversion**: Ange **Ja** om apputvecklaren uppdaterar appen automatiskt. Det här alternativet gäller endast mobila .msi-appar.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
     - **Visa den här som aktuell app på företagsportalen**: Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
     - **Informations-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller information om appen. Webbadressen visas i företagsportalen.

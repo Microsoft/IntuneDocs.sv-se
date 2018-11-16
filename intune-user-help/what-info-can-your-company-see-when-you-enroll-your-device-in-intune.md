@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: bdf08ccac21407bc2572f1133b2fe8d45548342f
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
+ms.openlocfilehash: 63295d7e05889f5a8beb44e399f36a4fbe27544d
+ms.sourcegitcommit: 76c7b315b83eb6cb5b996facf1d250fb3e22f1bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679261"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51276123"
 ---
-# <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Vilken information kan företaget se när jag registrerar min enhet?
+# <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Vilken information min organisation se när jag registrerar min enhet?
 
-Ditt företag inte kan se din personliga information när du registrerar en enhet med Microsoft Intune. När du registrerar en enhet ger du företaget behörighet att visa vissa typer av information på din enhet, till exempel enhetsmodell och serienummer. Företaget använder den här informationen för att skydda företagsdata på enheten.
+Organisationen kan inte se din personliga information när du registrerar en enhet med Microsoft Intune. När du registrerar en enhet ger du organisationen behörighet att visa vissa typer av information på din enhet, till exempel enhetsmodell och serienummer. Organisationen använder den här informationen för att skydda företagsdata på enheten.
 
-**Det här kan företaget aldrig se:**
+**Vad din organisation aldrig kan se:**
 
 - Historik för samtal och surfning
 - E-post och textmeddelanden
@@ -35,20 +35,23 @@ Ditt företag inte kan se din personliga information när du registrerar en enhe
 - Kalender
 -   Lösenord
 - Bilder (inte heller de som ingår i appen Foton eller i Kamerabilder)
+- Filer
 
-**Det här kan företaget alltid se:**
+**Vad din organisation alltid kan se:**
 
 - Enhetsmodell som Google Pixel
-- Tillverkare, som t.ex. Microsoft
-- Operativsystem, som t.ex. iOS
-- Programnamn, som t.ex. Microsoft Word
+- Enhetstillverkare, t.ex. Microsoft
+- Operativsystem och version, t.ex. iOS 12.0.1
+- Appnamn såsom Microsoft Word: på personliga enheter kan organisationen bara se din hanterade appinventering. På företagsägda enheter kan organisationen se hela din appinventering.
 - Enhetens ägare
 - Enhetsnamn
-- Serienummer
+- Enhetens serienummer
+- IMEI
 
-**Det här kan företaget kanske se:**
+**Det här kan organisationen kanske se:**
 
--  Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för ditt företag. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
--  Plats: Företaget kan aldrig se var enheten finns, förutom om du har en iOS-enhet som övervakas och har försvunnit. [Hur vet jag?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Appinventering: om ditt företag använder Mobile Threat Defense kan de visa fler detaljer om apparna som finns på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
-- Nätverksinformation: en del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din företagssupport. Om ditt företag till exempel kräver att enheter ska finnas kvar i en viss byggnad, kan din enhet identifiera nätverket som den är ansluten till. 
+-  Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för organisationen. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
+- Lagringsutrymme för enheten: om du inte kan installera en obligatorisk app kan organisationen titta på din enhets lagringsutrymme för att ta reda på om det är för lågt.  
+-  Plats: organisationen kan aldrig se var enheten finns, förutom om du har en iOS-enhet som övervakas och har försvunnit. [Hur vet jag?](https://go.microsoft.com/fwlink/?linkid=853816)
+- Appinventering: om organisationen använder skydd mot mobilhot kommer de att kunna se mer information om apparna som är på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Nätverksinformation: en del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din organisationssupport. Om organisationen till exempel kräver att enheter ska finnas kvar i en viss byggnad kan din enhet identifiera det nätverk som den är ansluten till. 

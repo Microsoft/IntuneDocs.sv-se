@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2018
+ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f150db2e1d5fbc8e08bb7f7fcee50f0eda23ca7
-ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
+ms.openlocfilehash: 6b6e270e01102ae05f04253ec57759aad35c26cf
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915690"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51511000"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad 
 
@@ -51,7 +51,7 @@ Du kan prova Intune utan kostnad i 30 dagar. Om du redan har ett arbets- eller s
 
     ![Skärmbild av webbsidan med kontoregistrering för en utvärderingsversion av Microsoft Intune](./media/account-sign-up-site-user-id.png)
 
-    Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationsportalen för Office 365 som beskrivs senare i artikeln.
+    Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationsportalen för Office 365 enligt beskrivningen senare i artikeln.
 
 3. I slutet av registreringsprocessen får du ett meddelande med din nya kontoinformation.
 
@@ -124,7 +124,9 @@ Det finns två portaler som du kan använda:
 
 ## <a name="next-steps"></a>Nästa steg
 
-Du har skapat en kostnadsfri prenumeration för att prova Intune i en testmiljö och eventuellt konfigurerat ett anpassat domännamn i den här snabbstarten. Om du vill veta mer om Microsoft Intune kan du fortsätta till nästa snabbstart om att lägga till användare och tilldela licenser.
+I den här snabbstarten skapade du en kostnadsfri prenumeration för att prova Intune i en testmiljö. Mer information om hur du konfigurerar Intune finns i [Konfigurera Intune](setup-steps.md).
+
+Om du vill följa den här serien med Intune-snabbstarter fortsätter du till nästa snabbstart.
 
 > [!div class="nextstepaction"]
-> [Skapa en användare](quickstart-create-user.md)
+> [Snabbstart: Skapa en användare och tilldela användaren en licens](quickstart-create-user.md)

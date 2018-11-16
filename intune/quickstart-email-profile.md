@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/29/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b797951c878dd90cbb7bb716b5108f94f48921c5
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 21dda51d2ddde74f07fcc173c5a4dd2a13c9c8b8
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231958"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225755"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Snabbstart: skapa en e-postenhetsprofil för iOS
 
@@ -69,7 +69,7 @@ Om du inte planerar att använda profilen du skapade för fler självstudier ell
 
 ## <a name="next-steps"></a>Nästa steg
 
-I den här snabbstarten skapade du en e-postprofil för iOS-enheter. Nu kan du använda den här profilen för att avgöra om en iOS-enhet är kompatibel genom att skapa en efterlevnadsprincip som markerar iOS-enheter som inte matchar profilen som icke-kompatibla. För ytterligare skydd, kan du skapa en villkorlig åtkomstprincip som blockerar icke-kompatibla iOS-enheter från att komma åt e-post.
+I den här snabbstarten skapade du en e-postprofil för iOS-enheter. Nu kan du använda den här profilen för att avgöra om en iOS-enhet är kompatibel genom att skapa en efterlevnadsprincip som markerar iOS-enheter som inte matchar profilen som icke-kompatibla. För ytterligare skydd, kan du skapa en villkorlig åtkomstprincip som blockerar icke-kompatibla iOS-enheter från att komma åt e-post. Mer information om efterlevnadsprinciper för enheter i [Kom igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
-> [Komma igång med policyer för efterlevnad för enheter i Intune](device-compliance-get-started.md)
+> [Självstudie: Skydda e-post i Exchange Online på hanterade enheter](tutorial-protect-email-on-enrolled-devices.md)

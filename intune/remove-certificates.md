@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d4287322fd494c97cf24feb8cc16435a4405f2af
-ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
+ms.openlocfilehash: a823ea2f04d8e3a8f1ca5a2f1364060840686501
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150123"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561949"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Ta bort SCEP- och PKCS-certifikat i Microsoft Intune
 
@@ -131,7 +131,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören tar bort användaren eller gruppen från Azure AD
   - Administratören ändrar eller uppdaterar PKCS-profilen
 
-## <a name="android--android-enterprise-devices"></a>Android och Android Enterprise-enheter
+## <a name="android-knox-devices"></a>Android KNOX-enheter
 
 #### <a name="scep-certificates"></a>SCEP-certifikat
 
@@ -177,6 +177,10 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören ändrar eller uppdaterar PKCS-profilen
   - Konfigurationsprofilen tas bort från grupptilldelningen
   - Efterlevnadsprincipen tas bort från grupptilldelningen 
+  
+  
+> [!NOTE]
+> Android for Work-enheter har inte verifierats för scenarierna ovan. Äldre Android-enheter (alla enheter som inte kommer från Samsung och inte har en arbetsprofil) har inte aktiverats för borttagning av certifikat. 
 
 ## <a name="macos-certificates"></a>macOS-certifikat
 

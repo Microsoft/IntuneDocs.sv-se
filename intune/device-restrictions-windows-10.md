@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/26/2018
+ms.date: 11/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a95f68f0a9794047b8adb7f9ab729bb4905f2379
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
+ms.openlocfilehash: ac0348736e5975633776c86dee88555dfceb6919
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679397"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576893"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
@@ -31,7 +31,7 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Skärmbild (endast mobil)** – Gör det möjligt för användaren att hämta enhetens skärm som en bild.
 - **Kopiera och klistra in (endast mobil)** – Tillåter funktionen att kopiera och klistra in mellan appar på enheten.
 - **Manuell avregistrering** – Tillåter att användaren manuellt tar bort sitt arbetsplatskonto från enheten.
-   - Den här inställningen används inte om datorn är ansluten till Azure Active Directory och automatisk registrering har aktiverats. 
+   - Den här inställningen används inte om datorn är ansluten till Azure AD och automatisk registrering har aktiverats. 
    - Den här principinställningen gäller inte för datorer som kör Windows 10 Home.
 - **Manuell installation av rotcertifikat (endast mobil)** – Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
 
@@ -51,9 +51,9 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Enhetsidentifiering** – Blockerar en enhet från att identifieras av andra enheter.
 - **Växla mellan aktiviteter (endast mobil)** – Blockerar funktionen Växla mellan aktiviteter på enheten.
 - **Dialogruta om SIM-kortsfel (endast mobil)** – Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
-- **Ink-arbetsytan** – Blockerar användare från att komma åt Ink-arbetsytan. När den här inställningen inte är konfigurerad är Ink-arbetsytan aktiverad (funktionen är på) och användaren kan använda den ovanför låsskärmen.
+- **Ink-arbetsytan** – Blockerar användare från att komma åt Ink-arbetsytan. När den här inställningen är inställd på **Inte konfigurerat** är Ink-arbetsytan aktiverad (funktionen är på) och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution** – Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
-- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)** – Välj **Kräv** om du vill kräva att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under installationen av Windows 10. När den här funktionen är i förhandsversion krävs Windows Insider-version 1809 eller senare för att använda den här inställningen.
+- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)** – Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10. När den här funktionen är i förhandsversion krävs Windows Insider-version 1809 eller senare för att använda den här inställningen.
 
 ## <a name="password"></a>Lösenord
 -   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
@@ -70,14 +70,14 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 ## <a name="personalization"></a>Anpassning
 
-- **URL för skrivbordsbakgrundsbild (endast skrivbord)** – Ange URL:en till en bild i JPEG-format som du vill använda som skrivbordsbakgrund i Windows. Användare kan inte ändra det här.
+- **URL för skrivbordsbakgrundsbild (endast skrivbord)** – Ange URL:en till en bild i JPEG-format som du vill använda som skrivbordsbakgrund i Windows. Användare kan inte ändra bilden.
 
 ## <a name="privacy"></a>Sekretess
 
 -   **Anpassning av inmatning** – Tillåt inte användning av molnbaserade taltjänster för Cortana, diktering eller Microsoft Store-appar. Om du tillåter dessa tjänster kan det hända att Microsoft samlar in röstdata för att förbättra tjänsten.
 -   **Automatiskt godkännande av frågor om användarens medgivande till parkoppling och sekretess** – Tillåt Windows att automatiskt godkänna meddelanden om medgivande till parkoppling och sekretess när appar körs.
-- **Publicera användaraktiviteter**: Ställ in den här på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen.
-- **Endast lokala aktiviteter**: Ställ in det här alternativet på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen baserat på lokala aktiviteter.
+- **Publicera användaraktiviteter**: **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen.
+- **Endast lokala aktiviteter**: **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen baserat på lokala aktiviteter.
 
 Du kan ange information som alla appar på enheten kan komma åt. Du kan också definiera undantag per app med hjälp av **Sekretessundantag per app**.
 
@@ -98,8 +98,8 @@ Du kan ange information som alla appar på enheten kan komma åt. Du kan också 
 - **Telefon** – Definiera om den här appen kan komma åt telefonen.
 - **Radio** – Vissa appar kan använda radiofunktioner (t.ex. Bluetooth) i din enhet för att skicka och ta emot data och behöver sätta igång eller stänga av de här radiofunktionerna. Definiera om den här appen kan styra dessa radiofunktioner.
 - **Uppgifter** – Definiera om den här appen kan komma åt dina uppgifter.
-- **Betrodda enheter** – Definiera om den här appen kan använda betrodda enheter (maskinvara du redan har anslutit eller som medföljer den här datorn, surfplattan eller telefonen). Till exempel: TV-apparater, projektorer och så vidare.
-- **Feedback och diagnostik** – Definiera om den här appen kan komma åt diagnostisk information.
+- **Betrodda enheter** – Välj huruvida den här appen kan använda betrodda enheter (maskinvara som du redan har anslutit eller som medföljer den här datorn, surfplattan eller telefonen). Till exempel: TV-apparater, projektorer och så vidare.
+- **Feedback och diagnostik** – Välj huruvida den här appen kan komma åt diagnostisk information.
 - **Synkronisering med enheter** – Definiera om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med den här datorn, surfplattan eller telefonen.
 
 ## <a name="per-app-privacy-exceptions"></a>Sekretessundantag per app
@@ -146,45 +146,45 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Installation av betrodd app** – Appar som signeras med ett betrott certifikat läses in separat.
 -   **Lås upp via utvecklare** – Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av användaren.
 -   **Dela appdata mellan användare** – Tillåter att appar delar data mellan olika användare på samma enhet.
--   **Använd endast privat katalog** – Aktivera det här alternativet för att endast tillåta att användarna hämtar appar från din privata katalog.
+-   **Använd endast privat katalog** – Aktivera för att endast tillåta att användarna hämtar appar från din privata katalog.
 -   **Start av appar från Store** – Används för att inaktivera alla appar som har förinstallerats på enheten eller hämtats från Microsoft Store.
 -   **Installera appdata på systemvolym** – Hindrar appar från att lagra data på enhetens systemvolym.
 -   **Installera appar på systemenhet** – Hindrar appar från att lagra data på enhetens systemenhet.
 -   **Game DVR (endast skrivbord)** – Konfigurerar om registrering och sändning av spel tillåts.
 -   **Endast appar från butik** – Konfigurerar om användare kan installera appar från andra platser än appbutiken.
 
-## <a name="edge-browser"></a>Microsoft Edge-webbläsare
+## <a name="microsoft-edge-browser"></a>Microsoft Edge-webbläsaren
 
--   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
--   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
--   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
--   **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
+-   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Microsoft Edge-webbläsaren på enheten.
+-   **Listruta i adressfältet (endast skrivbord)** – Hindrar Microsoft Edge från att visa en listruta med förslag när du skriver. Det här alternativet hjälper till att minimera användningen av nätverksbandbredd mellan Microsoft Edge och Microsoft-tjänster.
+-   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Microsoft Edge.
+-   **Skicka Do Not Track-huvuden** – Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
--   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Edge-webbläsaren.
+-   **JavaScript** – Tillåter att skript, exempelvis JavaScript, körs i Microsoft Edge-webbläsaren.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 -   **Skicka intranätstrafik till Internet Explorer** – Låter användarna öppna intranätswebbplatser i Internet Explorer (endast Windows 10 Desktop).
 -   **Autofyll** – Tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren (endast Windows 10 Desktop).
 -   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
 -   **Plats för webbplatslista för företagsläge** – Anger var du hittar listan med webbplatser som kan öppnas i företagsläge. Användare kan inte redigera den här listan.<br>(Endast Windows 10 Desktop.)
--   **Utvecklarverktyg** – Förhindrar att användaren kan öppna Edge-utvecklingsverktygen.
--   **Tillägg** – Tillåter att användaren installerar Edge-tillägg på enheten.
+-   **Utvecklarverktyg** – Förhindrar att användaren öppnar utvecklarverktygen för Microsoft Edge.
+-   **Tillägg** – Tillåter att användaren installerar Microsoft Edge-tillägg på enheten.
 -   **InPrivate-surfning** – Förhindrar att användaren öppnar InPrivate-surfningssessioner.
--   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Edge.
+-   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Microsoft Edge.
     -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Microsoft Edge (endast Windows 10 Mobile).
 -   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Microsoft Edge-webbläsaren (endast skrivbord).
--   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
+-   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Microsoft Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
 -   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Microsoft Edge som innehåller inställningar för utvecklare och experiment.
--   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
+-   **localhost-ip-adress via WebRtc** – Blockera användarens IP-adress till localhost från att visas vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
--   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
--   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Microsoft Edge.
+-   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Microsoft Edge.
+-   **Datainsamling för levande panel** – Hindrar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Microsoft Edge.
 -  **Listan Favoriter** – Definierar sökvägen till filen med favoriter. Till exempel http://contoso.com/favorites.html.
--  **Begränsa ändringar i Favoriter** – Ställ in detta på **Blockera** för att hindra användarna från att lägga till, importera, sortera och redigera i listan Favoriter. 
+-  **Begränsa ändringar i Favoriter** - **Blockera** för att hindra användarna från att lägga till, importera, sortera och redigera i listan Favoriter. 
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
-- **SmartScreen för Microsoft Edge** – Aktivera Edge SmartScreen för att komma åt plats och filhämtningar.
+- **SmartScreen för Microsoft Edge** – Aktivera Microsoft Edge SmartScreen för åtkomst av plats och filnedladdningar.
 - **Obehörig åtkomst** – Blockera användare från att ignorera varningarna från Windows Defender SmartScreen-filtret och blockera dem från att gå till webbplatsen.
 - **Overifierad filhämtning** – Blockera användare från att ignorera varningarna från Windows Defender SmartScreen-filtret och blockera dem från att hämta overifierade filer.
 
@@ -235,7 +235,27 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 ## <a name="start"></a>Start
 
-- **Ta bort appar från aktivitetsfältet** – Hindra användaren från att ta bort appar i Start-menyn.
+- **Layout för Start-menyn** – Om du vill anpassa Start-menyn på stationära enheter kan du ladda upp en XML-fil som innehåller dina anpassningar, inklusive den ordning som apparna som visas i listan och mer. Användare kan inte ändra den layout för Start-menyn som du anger.
+- **Fäst webbplatser på paneler på Start-menyn** – Importera bilder från Microsoft Edge som visas som länkar i Windows Start-menyn för stationära enheter.
+- **Ta bort appar från aktivitetsfältet** – Välj **Blockera** om du vill hindra användaren från att ta bort appar från Start-menyn.
+- **Snabbt användarbyte** – Välj **Blockera** om du vill förhindra växling mellan användare som är inloggade samtidigt utan utloggning.
+- **Appar som används oftast** – Välj **Blockera** om du vill hindra de vanligast använda apparna från att visas på Start-menyn. Detta inaktiverar även motsvarande reglage i appen Inställningar.
+- **Nyligen tillagda appar** – Välj **Blockera** om du vill hindra nyligen tillagda appar från att visas på Start-menyn. Detta inaktiverar även motsvarande reglage i appen Inställningar.
+- **Starta skärmläge** – Välj hur Start-skärmen ska visas. Välja att visa den som **helskärm** eller **icke-helskärm**.
+- **Nyligen öppnade objekt i snabblistor** – Välj **Blockera** om du vill hindra de senaste snabblistorna från att visas på Start-menyn och i verktygsfältet. Detta inaktiverar även motsvarande reglage i appen Inställningar.
+- **Applista** – Välj hur appen Inställningar ska visas. Alternativen är: 
+  - Dölj
+  - Dölj och inaktivera appen Inställningar 
+  - Döljer och inaktiverar appen Inställningar
+- **Strömknapp** – Välj **Blockera** om du vill hindra strömknappen från att visas på Start-menyn.
+- **Användarpanel** – Välj **Blockera** om du vill hindra användarpanelen från att visas på Start-menyn.
+  - **Lås** – Välj **Blockera** om du vill hindra alternativet `Lock` från att visas i användarpanelen på Start-menyn.
+  - **Logga ut** – Välj **Blockera** om du vill hindra alternativet `Sign out` från att visas i användarpanelen på Start-menyn.
+- **Stäng av** – Välj **Blockera** om du vill hindra alternativen `Update and shut down` och `Shut down` från att visas i strömknappen på Start-menyn.
+- **Strömsparläge** – Välj **Blockera** om du vill hindra alternativet `Sleep` från att visas i strömknappen på Start-menyn.
+- **Viloläge** – Välj **Blockera** om du vill hindra alternativet `Hibernate` från att visas i strömknappen på Start-menyn.
+- **Växla konto** – Välj **Blockera** om du vill hindra `Switch account` från att visas i användarpanelen på Start-menyn.
+- **Omstartsalternativ** – Välj **Blockera** om du vill hindra alternativen `Update and restart` och `Restart` från att visas i strömknappen på Start-menyn.
 - **Dokument på Start** – Dölj eller visa mappen Dokument i Start-menyn i Windows.
 - **Nedladdningar på Start** – Dölj eller visa mappen Nedladdningar i Start-menyn i Windows.
 - **Utforskaren på Start** – Dölj eller visa Utforskaren i Start-menyn i Windows.
@@ -269,7 +289,7 @@ En helskärmsenhet kör normalt en app eller en specifik uppsättning appar. Anv
 #### <a name="single-app-kiosks"></a>Helskärmsläge för enskilda appar
 Ange följande inställningar:
 
-- **Användarkonto** – Ange det lokala (för enheten) användarkontot, ett AD-domänkonto eller en Azure AD-kontoinloggning som är associerad med helskärmsappen.
+- **Användarkonto** – Ange det lokala (för enheten) användarkontot, ett AD-domänkonto eller ett Azure AD-konto som är associerat med helskärmsappen.
   - Lokalt konto: Ange som `devicename\accountname`, `.\accountname`, eller `accountname`
   - Domänkonto: Ange som `domain\accountname`
   - Azure AD-konto: Ange som `AzureAD\emailaddress`. Se till att ange ”AzureAD”, eftersom det är ett fast domännamn. Ange sedan Azure AD-e-postadressen. Ange till exempel `AzureAD\user@contoso.onmicrosoft.com`.
@@ -300,7 +320,7 @@ Använd knappen **Lägg till** för att skapa en helskärmskonfiguration (eller 
 
   I [Create a Windows 10 kiosk that runs multiple apps](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) (Skapa ett Windows 10-helskärmsläge som kör flera appar) finns mer information om hur du använder och skapar XML-filer.
 
-- **Tilldelad användare** – Lägg till ett eller flera användarkonton som kan använda de appar som du lägger till. När användaren med kontot loggar in är bara de appar som definierats i konfigurationen tillgängliga. Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen.
+- **Tilldelad användare** – Lägg till ett eller flera användarkonton som kan använda de appar som du lägger till. När användaren med kontot loggar in är bara de appar som definierats i konfigurationen tillgängliga. Kontot kan vara lokalt på enheten eller ett Azure AD-konto som är associerat med kioskappen.
 
     Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `domain\user@tenant.com`.
 
@@ -347,9 +367,9 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 ## <a name="network-proxy"></a>Nätverksproxy
 
 -   **Identifiera proxyinställningar automatiskt** – När det här alternativet är aktiverat kommer enheten att försöka hitta sökvägen till ett PAC-skript.
--   **Använd proxyskript** – Välj detta alternativ om du vill ange en sökväg till ett PAC-skript för att konfigurera proxyservern.
+-   **Använd proxyskript** – Välj det här alternativet om du vill ange en sökväg till ett PAC-skript för att konfigurera proxyservern.
     -   **Ställ in webbadress till skript** – Ange webbadressen för ett PAC-skript som du vill använda för att konfigurera proxyservern.
--   **Använd manuell proxyserver** – Välj detta alternativ om du vill ange proxyserverinformationen manuellt.
+-   **Använd manuell proxyserver** – Välj det här alternativet om du vill ange proxyserverinformationen manuellt.
     -   **Adress** – Ange namn eller IP-adress för proxyservern.
     -   **Portnummer** – Ange portnumret till proxyservern.
     -   **Proxy-undantag** – Ange de webbadresser som inte får använda proxyservern. Använd semikolon för att avgränsa varje objekt.
@@ -374,12 +394,15 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 
 ## <a name="cloud-printer"></a>Molnskrivare
 
-- **URL för skrivaridentifiering** – Slutpunkt för identifiering av molnskrivare.
-- **URL för utfärdare av skrivaråtkomst** – Autentiseringsslutpunkt för att hämta OAuth-token.
-- **GUID för inbyggd Azure-klientapp** – GUID för ett klientprogram som har behörighet att hämta OAuth-token från OAuthAuthority.
-- **Resurs-URI för utskriftstjänst** – OAuth resurs-URI för utskriftstjänster som konfigurerats i Azure-portalen.
-- **Maxantal skrivare att fråga efter (endast mobil)** – maximalt antal skrivare som ska efterfrågas från en slutpunkt för identifiering.
-- **Resurs-URI för identifiering av utskriftstjänst** – OAuth resurs-URI för identifiering av utskriftstjänster som konfigurerats i Azure-portalen.
+- **URL för skrivaridentifiering** – Ange URL för identifiering av molnskrivare.
+- **URL för utfärdare av skrivaråtkomst** – Ange URL för autentiseringsslutpunkt för att hämta OAuth-token. Ange något i stil med `https://login.microsoftonline.com/your Azure AD Tenant ID`.
+- **GUID för inbyggd Azure-klientapp** – Ange GUID för ett klientprogram som har behörighet att hämta OAuth-token från OAuthAuthority.
+- **Resurs-URI för utskriftstjänst** – Ange OAuth resurs-URI för utskriftstjänster som konfigurerats i Azure-portalen. Ange något i stil med `http://MicrosoftEnterpriseCloudPrint/CloudPrint`.
+- **Maxantal skrivare att fråga efter (endast mobil)** – Ange maximalt antal skrivare som du vill att frågor körs mot. Ange till exempel `10`.
+- **Resurs-URI för identifiering av utskriftstjänst** – Ange OAuth resurs-URI för identifiering av utskriftstjänster som konfigurerats i Azure-portalen. Ange något i stil med `http://MopriaDiscoveryService/CloudPrint`.
+
+> [!TIP]
+> När du har konfigurerat en [Windows Server Hybrid Cloud Print](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview) kan du konfigurera dessa inställningar och sedan distribuera till Windows-enheter.
 
 ## <a name="local-printer"></a>Lokal skrivare
 - **Skrivare** – Lista över lokala skrivare som har lagts till.

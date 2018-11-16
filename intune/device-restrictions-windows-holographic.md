@@ -1,6 +1,6 @@
 ---
 title: Enhetsbegränsningar för Windows Holographic for Business i Microsoft Intune – Azure | Microsoft Docs
-description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Microsoft Edge, Windows Defender, sökning, moln och lagring, bluetooth-anslutning, systemtid och användningsdata i Azure.
+description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Microsoft Edge, Windows Defender, sökning, moln och lagring, Bluetooth-anslutning, systemtid och användningsdata i Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9d7f54ce0e288025a4a7f0f45bf5b10de5323021
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: f79985c9854af462fa9a456304a3184128283b9c
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321853"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576808"
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Inställningar för enhetsbegränsningar för Windows Holographic for Business i Intune
 
@@ -41,7 +41,7 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 -   **Installation av betrodd app** – Appar som signeras med ett betrott certifikat läses in separat.
 -   **Lås upp via utvecklare** – Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av användaren.
 
-## <a name="edge-browser"></a>Microsoft Edge-webbläsare
+## <a name="microsoft-edge-browser"></a>Microsoft Edge-webbläsaren
 
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
@@ -51,7 +51,7 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
-- **SmartScreen för Microsoft Edge** – Aktivera Edge SmartScreen för att komma åt plats och filhämtningar.
+- **SmartScreen för Microsoft Edge** – Aktivera Microsoft Edge SmartScreen för åtkomst av plats och filnedladdningar.
 
 ## <a name="search"></a>Sök
 - **Sök plats** – Ange om platsinformation får användas i sökning. information

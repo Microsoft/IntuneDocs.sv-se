@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 003bf4046a997e3633105e4dc41c93a82e16ee40
-ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
+ms.openlocfilehash: 17b99c4a089fc426ecfeea803737fa8704f3b0a6
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46505724"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212316"
 ---
 # <a name="fix-common-issues-with-your-macos-device"></a>Åtgärda vanliga problem med din macOS-enhet
 
@@ -33,3 +33,6 @@ Felsöka vanliga problem macOS-problem som uppstår under och efter registrering
 - [Min Jamf-hanterade enhet är inte kompatibel](device-little-different-jamf.md)
 - [Jag kan inte hitta serienumret](how-do-i-find-the-serial-number-on-my-device-macos.md)
 - [Jag har ombetts att identifiera min enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
+- [Ett fel inträffade när jag skulle registrera en virtuell macOS-dator](unable-to-get-macOS-device-managed.md)  
+- [Jag fick ett meddelande om att serienumret för min macOS-enhet är begränsat](unable-to-get-macOS-device-managed.md)  
+- [Min enhet kan redan ha tilldelats till någon annan](unable-to-get-macOS-device-managed.md)  

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 11/8/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 58a6681c22672b5aa2c8337708456b30361f741f
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 2252c81757b7745ed15ca86a4e7db310f03df19d
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236483"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298164"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Lägga till Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
 
@@ -57,6 +57,9 @@ Den här artikeln beskriver dessa inställningar.
   - **WPA/WPA2-personligt**: Ett säkrare alternativ, som ofta används för Wi-Fi-anslutning. För ökad säkerhet kan du också ange lösenordet för en i förväg delad nyckel eller en nätverksnyckel. 
 
     - **I förväg delad nyckel** (PSK): Valfritt. Visas när du väljer **WPA/WPA2-personligt** som säkerhetstyp. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet. Ange en sträng på mellan 8 och 64 tecken. Om lösenordet eller nätverksnyckeln är 64 tecken, anger du hexadecimala tecken.
+    
+      > [!NOTE]
+      > När du sparar Wi-Fi-profilen visas inte det PSK-värde som du angav av säkerhetsskäl. Vattenstämpeln för den i förväg delade nyckeln visar fortfarande **Inte konfigurerad** trots att PSK har sparats i profilen. För att ändra PSK anger du en ny nyckel och sparar profilen. Om du sparar en PSK, redigerar principen och lämnar PSK tomt fortsätter befintlig PSK att användas.
 
 - **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
   - **Inga**: Inga proxyinställningar konfigureras.

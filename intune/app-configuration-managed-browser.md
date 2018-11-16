@@ -15,14 +15,14 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3edbf3663d3226f806bf36af97b97cdf4d169c1
-ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
+ms.openlocfilehash: 0c2a4ff4654b937449f8e7a36778a67a978bd6db
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357095"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576876"
 ---
-# <a name="manage-internet-access-using-an-microsoft-intune-policy-protected-browser"></a>Hantera internetåtkomst med en Microsoft Intune princip-skyddad webbläsare
+# <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -50,7 +50,7 @@ Tidigare versioner av Android och iOS kommer att kunna fortsätta att använda M
 
 ## <a name="application-protection-policies-for-protected-browsers"></a>Principer för programskydd för skyddade webbläsare
 
-Eftersom Edge och Managed Browser har integrering med Intune SDK kan du också använda appskyddsprinciper för dem, som att:
+Eftersom Microsoft Edge och Managed Browser har integrering med Intune SDK kan du även använda appskyddsprinciper för dem, som att:
 - Styra användningen av klipp ut, kopiera och klistra in.
 - Förhindra skärmdumpar.
 - Säkerställa att företagets länkar bara öppnas i hanterade appar och webbläsare.
@@ -65,7 +65,7 @@ Du kan tillämpa inställningarna för att:
 
 >[!NOTE]
 >Om användarna installerar Managed Browser från appbutiken och Intune inte hanterar den, kan den användas som en vanlig webbläsare med stöd för enkel inloggning via webbplatsen Microsoft MyApps. Användarna dirigeras direkt till webbplatsen MyApps där de kan se alla sina etablerade SaaS-program.
-Eftersom Managed Browser och Edge inte hanteras av Intune har de inte åtkomst till några data från andra Intune-hanterade program. 
+Eftersom Managed Browser och Microsoft Edge inte hanteras av Intune har de inte åtkomst till några data från andra Intune-hanterade program. 
 
 
 ## <a name="conditional-access-for-protected-browsers"></a>Villkorlig åtkomst för skyddade webbläsare
@@ -83,7 +83,7 @@ Om du vill begränsa Azure AD-anslutna webbappars användning av Intune Managed 
 
 5. I avsnittet **Tilldelningar** väljer du **Villkor** > **Klientappar**. Bladet **Klientappar** visas.
 6. Klicka på **Ja** under **Konfigurera** för att tillämpa principen på specifika klientappar.
-7. Kontrollera att **Webbläsare** är valt som en klientapp.
+7. Kontrollera att **Webbläsare** har valts som klientapp.
 
     ![Azure AD – Managed Browser – Välj klientappar](./media/managed-browser-conditional-access-02.png)
 
@@ -151,30 +151,30 @@ Microsoft Edge, Intune Managed Browser och [Azure AD-programproxy]( https://docs
 - Konfigurera dina interna program via Azure AD-programproxyn.
     - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started) för att konfigurera programproxy och publicera program. 
 - Du måste använda version 1.2.0 eller senare av Managed Browser-appen.
-- Användare av Managed Browser eller Edge har en [princip för Intune-appskydd]( app-protection-policy.md) tilldelad till appen.
+- Användare av Managed Browser eller Microsoft Edge har en [Intune-appskyddsprincip]( app-protection-policy.md) tilldelad till appen.
 
     > [!NOTE]
-    > Det kan ta upp till 24 timmar innan omdirigeringsdata för en uppdaterad programproxy börjar gälla i Managed Browser eller Edge.
+    > Det kan ta upp till 24 timmar innan omdirigeringsdata för en uppdaterad programproxy börjar gälla i Managed Browser eller Microsoft Edge.
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Steg 1: Aktivera automatisk omdirigering till en skyddad webbläsare från Outlook
 Outlook måste konfigureras med en appskyddsprincip som aktiverar inställningen **Begränsa webbinnehåll till visning i Managed Browser**.
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Steg 2: Tilldela en appkonfigurationsprincip som har tilldelats den skyddade webbläsaren.
-Den här proceduren konfigurerar Managed Browser eller Edge för omdirigering via en programproxy. Använd proceduren för att skapa en appkonfiguration för Edge eller Managed Browser och ange följande nyckel- och värdepar:
+Den här proceduren konfigurerar Managed Browser eller Microsoft Edge för omdirigering via en programproxy. Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
 
 | Tangent                                                             | Värde    |
 |-----------------------------------------------------------------|----------|
 | **com.microsoft.intune.mam.managedbrowser.AppProxyRedirection** | **true** |
 
-Mer information om hur du kan använda Managed Browser, Edge och en Azure AD-programproxy tillsammans för sömlös (och skyddad) åtkomst till lokala webbappar finns i Enterprise Mobility + Security-blogginlägget [Bättre tillsammans: Intune och Azure Active Directory samarbetar för att förbättra användaråtkomsten](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access).
+Mer information om hur du kan använda Managed Browser, Microsoft Edge och en Azure AD-programproxy tillsammans för sömlös (och skyddad) åtkomst till lokala webbappar finns i Enterprise Mobility + Security-blogginlägget [Bättre tillsammans: Intune och Azure Active Directory samarbetar för att förbättra användaråtkomsten](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access).
 
 > [!NOTE]
-> Edge använder samma nyckel/värde-par som Managed Browser. 
+> Microsoft Edge använder samma nyckel/värde-par som Managed Browser. 
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Så här konfigurerar du startsidan för en skyddad webbläsare
 
-Den här inställningen gör att du kan konfigurera vilken startsida användarna ser när de startar en skyddad webbläsare eller öppnar en ny flik. Använd proceduren för att skapa en appkonfiguration för Edge eller Managed Browser och ange följande nyckel- och värdepar:
+Den här inställningen gör att du kan konfigurera vilken startsida användarna ser när de startar en skyddad webbläsare eller öppnar en ny flik. Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
 
 |                                Tangent                                |                                                           Värde                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -182,13 +182,13 @@ Den här inställningen gör att du kan konfigurera vilken startsida användarna
 
 ## <a name="how-to-configure-bookmarks-for-a-protected-browser"></a>Så här konfigurerar du bokmärken för en skyddad webbläsare
 
-Med den här inställningen kan du konfigurera en uppsättning bokmärken som är tillgängliga för användare i Edge eller Managed Browser.
+Med den här inställningen kan du konfigurera en uppsättning bokmärken som är tillgängliga för användare i Microsoft Edge eller Managed Browser.
 
 - De här bokmärkena kan inte tas bort eller ändras av användare
 - De här bokmärkena visas överst i listan. Alla bokmärken som användare skapar visas under de här bokmärkena.
 - Om du har aktiverat omdirigering av App Proxy kan du lägga till App Proxy-webbappar med antingen deras interna eller externa URL-adress.
 
-Använd proceduren för att skapa en appkonfiguration för Edge eller Managed Browser och ange följande nyckel- och värdepar:
+Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
 
 |                                Tangent                                 |                                                                                                                                                                                                                                                         Värde                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -196,7 +196,7 @@ Använd proceduren för att skapa en appkonfiguration för Edge eller Managed Br
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>Så här anger du tillåtna och blockerade webbadresser för en skyddad webbläsare
 
-Använd proceduren för att skapa en appkonfiguration för Edge eller Managed Browser och ange följande nyckel- och värdepar:
+Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
 
 |Tangent|Värde|
 |-|-|

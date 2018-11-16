@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/14/2018
+ms.date: 11/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2a4b4a4b2b0df706504e76b418c5b87eb66b1111
-ms.sourcegitcommit: 23997b701365bb514347d75edc2357eff1f1443f
+ms.openlocfilehash: 87f49c9aafa8b6f9f281a00e4d7bd297c354f90b
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237671"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51511050"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
 
@@ -391,6 +391,28 @@ När du har åtgärdat problemen med VPP-token, måste du rensa enheterna som ha
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Säg till användarna att starta om registreringsprocessen
 När du har rensat de blockerade enheterna kan du be användarna att starta om registreringsprocessen.
+
+## <a name="macos-issues"></a>macOS-problem
+
+### <a name="macos-enrollment-errors"></a>Fel vid macOS-registrering
+**Felmeddelande 1:** *Det verkar som att du använder en virtuell dator. Kontrollera att du har konfigurerat den virtuella datorn fullständigt, inklusive serienummer och maskinvarumodell. Om det här inte är en virtuell dator bör du kontakta supporten.*  
+
+**Felmeddelande 2:** *Det är problem med att hantera din enhet. Det här problemet kan uppstå om du använder en virtuell dator, har ett begränsat serienummer eller om den här enheten redan har tilldelats till någon annan. Ta reda på hur du löser de här problemen eller kontakta företagets support.*
+
+**Problem:** Det här meddelandet kan bero på något av följande orsaker:  
+* En virtuell macOS-dator (VM) har inte konfigurerats korrekt  
+* Du har aktiverat enhetsbegränsningar som kräver att enheten är företagsägd eller har ett registrerat enhetsserienummer i Intune  
+* Enheten har redan registrerats och är fortfarande tilldelad till någon annan i Intune  
+
+**Lösning:** Hör först med användaren för att fastställa vilket av problemen som påverkar användarens enhet. Genomför sedan den mest relevanta av följande lösningar:
+* Om användaren registrerar en virtuell dator för testning kontrollerar du att den har konfigurerats fullständigt så att Intune kan identifiera dess serienummer och maskinvarumodell. Lär dig mer om hur du [konfigurerar virtuella datorer](macos-enroll.md#enroll-virtual-macos-machines-for-testing) i Intune.  
+* Om din organisation aktiverade registreringsbegränsningar som blockerar personliga macOS-enheter måste du manuellt [lägga till den personliga enhetens serienummer](corporate-identifiers-add.md#manually-enter-corporate-identifiers) till Intune.  
+* Om enheten fortfarande är tilldelad till en annan användare i Intune använde den tidigare ägaren inte företagsportalappen att ta bort eller återställa den. Så här rensar du den inaktuella enhetsposten från Intune:  
+
+    1. Gå till [Intune i Azure-portalen](https://portal.manage.microsoft.com) och logga in med dina administrativa autentiseringsuppgifter.
+    2. Gå till Intune > **Enheter** > **Alla enheter**.  
+    3. Hitta enheten med registreringsproblemet. Sök efter enhetsnamn eller MAC/HW-adress för att begränsa resultaten.
+    4. Välj enheten > **Ta bort**. Ta bort alla andra poster som hör till enheten.  
 
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problem när du använder System Center Configuration Manager med Intune
 ### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner

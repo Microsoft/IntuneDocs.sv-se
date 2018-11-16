@@ -15,12 +15,12 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e12ab106b44d217d7e7b4b1a466fd5b12a9fb528
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: c24630dd3cc45b35e6313e9e66db74a548bb0851
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231839"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298113"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune Azure
 
@@ -43,7 +43,7 @@ Följande tabell innehåller kraven för datorn där du installerar den lokala E
 |            Krav             |                                                                                                                                                                                                        Mer information                                                                                                                                                                                                        |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         Operativsystem          |                                                               Intune har stöd för den lokala Exchange-anslutningsappen på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 eller Windows Server 2016.<br /><br />Anslutningen stöds inte i Server Core-installationen.                                                                |
-|         Microsoft Exchange         |                                                                           För lokala anslutningar krävs Microsoft Exchange 2010 SP1 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den <strong>nya</strong> eller <strong>äldre</strong> konfigurationen kontaktar du din kontoansvariga.                                                                           |
+|         Microsoft Exchange         |                                                                           För lokala anslutningar krävs Microsoft Exchange 2010 SP3 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den <strong>nya</strong> eller <strong>äldre</strong> konfigurationen kontaktar du din kontoansvariga.                                                                           |
 | Utfärdare för hantering av mobila enheter |                                                                                                                              [Ange utfärdare för hantering av mobila enheter till Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).                                                                                                                               |
 |              Maskinvara              |                                                                                                                                                     Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.                                                                                                                                                      |
 |  Active Directory-synkronisering  |                                                                                      Innan du kan använda anslutningsappen för att ansluta Intune till Exchange Server måste du [konfigurera Active Directory-synkronisering](users-add.md) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.                                                                                      |
@@ -70,7 +70,7 @@ Du måste skapa ett Active Directory-användarkonto som används av den lokala E
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Ladda ner installationspaketet för den lokala Exchange-anslutningsappen
 
-1. I ett Windows Server-operativsystem som stöder den lokala Exchange-anslutningsappen öppnar du [Azure Portal](http://portal.azure.com) och loggar in med ett användarkonto som är administratör på den lokala Exchange-servern och som har licens för att använda Exchange Server.
+1. I ett Windows Server-operativsystem som stöder den lokala Exchange-anslutningsappen öppnar du [Azure-portalen](http://portal.azure.com) och loggar in med ett användarkonto som är administratör på den lokala Exchange-servern och som har licens för att använda Exchange Server.
 
 2. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 

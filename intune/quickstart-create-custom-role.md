@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: 5c83af252b1c728b9e3d4015cdc8bb4fd3668ad1
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410777"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561932"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Snabbstart – Skapa och tilldela en anpassad roll
 
@@ -64,7 +64,9 @@ Om du inte vill använda den nya anpassade rollen mer kan du ta bort den. Välj 
 
 ## <a name="next-steps"></a>Nästa steg
 
-I den här snabbstarten har du skapat en anpassad säkerhetsåtgärdsroll och tilldelat den till en grupp. Mer information om säkerhetsproblem finns i följande artikel.
+I den här snabbstarten har du skapat en anpassad säkerhetsåtgärdsroll och tilldelat den till en grupp. Mer information om roller i Intune finns i [Rollbaserad administrationskontroll (RBAC) med Microsoft Intune](role-based-access-control.md)
+
+Om du vill följa den här serien med Intune-snabbstarter fortsätter du till nästa snabbstart.
 
 > [!div class="nextstepaction"]
-> [Komma igång med principer för enhetsefterlevnad](device-compliance-get-started.md)
+> [Snabbstart: Skapa en e-postenhetsprofil för iOS](quickstart-email-profile.md)
