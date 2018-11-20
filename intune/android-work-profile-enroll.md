@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc1943781dcf95209b575cdb6e36d5065275626f
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: a38c5db1e608cb5d9a047dc72ee9109e840096e0
+ms.sourcegitcommit: 4d5e811d451aeb6307e0f64818e182e471ae1ed4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255078"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51618998"
 ---
 # <a name="set-up-enrollment-of-android-work-profile-devices"></a>Konfigurera registrering av Android-arbetsprofilenheter
 
@@ -56,5 +56,5 @@ Så här godkänner du Intune-företagsportalen:
 5.  Välj **Keep approved when app requests new permissions** (Behåll godkända när appen begär nya behörigheter) och klicka sedan på **Spara.**
 
 ## <a name="next-steps-for-android-work-profiles"></a>Nästa steg för Android-arbetsprofiler
-- [Distribuera Android-arbetsprofilappar](store-apps-android.md)
+- [Distribuera Android-arbetsprofilappar](apps-add-android-for-work.md)
 - [Lägga till konfigurationsprinciper för Android-arbetsprofiler](device-profiles.md)
