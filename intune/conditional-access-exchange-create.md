@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d44b7483d65eeb7b2a39783fb113c444184db4f3
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: b1e07bd67d4bf8b776500be01571deddb1e5e58f
+ms.sourcegitcommit: 630dfe1413c1819f35aa941ffc888a7084771a55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232230"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51709146"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
 
@@ -66,7 +66,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera följande:
 - EAS-e-postklienter och **Android-arbetsprofilenheter:** Endast **Gmail** och **Nine Work for Android Enterprise** i **arbetsprofilen** stöds på Android-arbetsprofilenheter. För villkorlig åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för Gmail eller Nine Work for Android Enterprise-appen och distribuera de apparna som en nödvändig installation.
 
 > [!NOTE]
-> Microsoft Outlook-appen for Android and iOS stöds inte. 
+> Microsoft Outlook för Android och iOS stöds inte via den lokala Exchange-anslutningsappen. Om du vill dra nytta av principerna för villkorsstyrd åtkomst för Azure Active Directory och Intune-appskydd med Outlook för iOS och Android för dina lokala postlådor bör du läsa [Använda modern hybridautentisering med Outlook för iOS och Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
 
 ### <a name="support-for-pcs"></a>Stöd för datorer
 
@@ -79,9 +79,9 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 1. När du har loggat in visas **Azure-instrumentpanelen**.
 
-1. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
+1. Välj  **Alla tjänster**  på den vänstra menyn och skriv sedan  **Intune**  i textrutans filter.
 
-1. Välj **Intune**. **Intune-instrumentpanelen** visas.
+1. Välj  **Intune**. **Intune-instrumentpanelen** visas.
 
 1. Välj **Lokal åtkomst**. Fönstret **Lokal åtkomst** visar status för den villkorliga åtkomstprincipen och de enheter som påverkas av den.
 

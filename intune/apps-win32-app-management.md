@@ -1,10 +1,27 @@
 ---
-rubrik: Lägg till Win32-appar i Microsoft Intune-titelsuffix: beskrivning: Lär dig hur du lägger till, distribuerar och hanterar Win32-appar med Microsoft Intune. Det här avsnittet innehåller en översikt över Intunes leverans- och hanteringsfunktioner för Win32-appar, samt felsökningsinformation för Win32-appar. nyckelord: författare: Erikre ms.author: erikre manager: dougeby <<<<<<< HEAD ms.date: 10/23/2018 === ms.date: 10/19/2018
->>>>>>> 14fdd9aac5e66324acfe83ae31b126d8216d7da4 ms.topic: artikel ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-
-ms.reviewer: mghadial ms.suite: ems ms.custom: intune-azure
+title: Lägga till Win32-appar i Microsoft Intune
+titlesuffix: ''
+description: Lär dig hur du lägger till, distribuerar och hanterar Win32-appar med Microsoft Intune. Det här avsnittet innehåller en översikt över Intunes leverans- och hanteringsfunktioner för Win32-appar, samt felsökningsinformation för Win32-appar.
+keywords: ''
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 11/15/2018
+ms.topic: article
+ms.prod: ''
+ms.service: microsoft-intune
+ms.technology: ''
+ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
+ms.reviewer: mghadial
+ms.suite: ems
+ms.custom: intune-azure
+ms.openlocfilehash: 8e152e3dc5bc42545bf8bee8595b7bbca2fab0eb
+ms.sourcegitcommit: 618c3076a7973b3b54ce3038ee007a33aa82efeb
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51830125"
 ---
-
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Fristående Intune – Win32-apphantering (offentlig förhandsversion)
 
 Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-appar. Molnanslutna kunder kan använda Configuration Manager för Win32-apphantering, men kunder med fristående Intune har tillgång till bättre hanteringsfunktioner för sina verksamhetsspecifika Win32-appar. Det här avsnittet innehåller en översikt över Intunes hanterings- och felsökningsfunktioner för Win32-appar.
@@ -43,6 +60,13 @@ Du kan ladda ned [förberedelseverktyget för Win32-appuppladdning till Microsof
 |:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |    `IntuneWinAppUtil -h`    |    Det här kommandot visar användningsinformation för verktyget.    |
 |    `IntuneWinAppUtil -c <setup_folder> -s <source_setup_file> -o <output_folder> <-q>`    |    Det här kommandot genererar `.intunewin`-filen från den angivna källmappen och installationsfilen. För MSI-installationsfilen hämtar det här verktyget nödvändig information för Intune. Om `-q` anges körs kommandot i tyst läge och om utdatafilen redan finns skrivs den över. Om utdatamappen inte finns, skapas den automatiskt.    |
+
+När du genererar en *.intunewin*-fil placerar du alla de filer som du måste referera till i en undermapp i installationsmappen. Referera sedan till den specifika fil du behöver med en relativ sökväg. Exempel:
+
+**Installationens källmapp:** *c:\testapp\v1.0*<br>
+**Licensfil:** *c:\testapp\v1.0\licenses\license.txt*
+
+Referera till filen *license.txt* med hjälp av den relativa sökvägen *licenses\license.txt*.
 
 ## <a name="create-assign-and-monitor-a-win32-app"></a>Skapa, tilldela och övervaka en Win32-app
 

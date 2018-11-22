@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d510596f021725292c7221e3056986c2c3fc93c
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: d7ff5a63b6afb619fbbe762d23208c1058e99943
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410794"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610149"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrera enheter med ett konto för enhetsregistreringshanteraren
 
@@ -34,7 +34,7 @@ DEM-användarkonton och enheter som har registrerats med ett DEM-användarkonto 
   - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
   - DEM-användarkonton kan inte använda apparna för Apples volymköpsprogram (VPP) med Apple VPP-användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
   - Enheter kan installera VPP-appar om de har Apple VPP-enhetslicenser.
-  
+  - Enheter har blockerats för villkorlig åtkomst med undantag för Windows 10 1803+
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare

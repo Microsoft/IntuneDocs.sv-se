@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e5442b45ed180d10943dfd5d1a1ef1546d693b2b
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
+ms.openlocfilehash: f7b875d370880f28fa6a611bd5f66fb54b02955d
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903428"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610115"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -58,7 +58,7 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**.
 7. Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
 8. Välj en **Tilldelningstyp** för den specifika appen:
-   - **Tillgänglig för registrerade enheter**: Användarna installerar appen från företagsportalappen eller webbplatsen.
+   - **Tillgänglig för registrerade enheter**: Tilldela appen till grupper användare som kan installera appen från företagsportalappen eller webbplatsen.
    - **Tillgänglig med eller utan registrering**: Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Appar från Managed Google Play stöder inte den här funktionen. 
    - **Obligatoriskt**: Appen installeras på enheter i valda grupper.
    - **Avinstallera**: Appen avinstalleras från enheter i valda grupper.

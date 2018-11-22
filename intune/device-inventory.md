@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
-ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
+ms.openlocfilehash: 2c47cd8ea136bcead14e70769f63df7b9b8f0e20
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47187809"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610098"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -45,7 +45,7 @@ Den här artikeln beskriver hur du visar alla dina enheter och deras egenskaper 
      - Starta en fjärrhjälpssession
    - Använd **Egenskaper** för att tilldela en [enhetskategori som du skapar](device-group-mapping.md), samt för att ändra ägarskap för enheten till en personlig enhet eller företagets enhet.
    - **Maskinvara** innehåller information om enheten, bland annat enhets-ID, operativsystem och version, lagringsutrymme, modell och tillverkare, inställningar för villkorlig åtkomst.
-   - **Identifierade appar** visar alla installerade appar på enheten som Intune hittat och deras versioner. Du kan också **Exportera** applistan till en .csv-fil.
+   - **Identifierade appar** visar alla installerade appar på enheten som Intune hittat och deras versioner. Du kan också **Exportera** applistan till en .csv-fil. Den här listan uppdateras var sjunde dag.
    - **Enhetsefterlevnad** visar alla tilldelade efterlevnadsprinciper, samt om enheten är kompatibel eller inkompatibel.
    - **Enhetskonfiguration** visar alla enhetskonfigurationsprinciper som är tilldelade till enheten, samt om principen har lyckats eller misslyckats.
 
@@ -60,8 +60,10 @@ Intune samlar endast in en applista från företagsägda enheter. Appar på pers
 |iOS|Endast hanterade appar|Alla appar som är installerade på enheten|
 |macOS|Alla appar som är installerade på enheten|Alla appar som är installerade på enheten|  
 |Android|Endast hanterade appar|Alla appar som är installerade på enheten|  
+|Android enterprise|Endast hanterade appar|Endast appar som har installerats i arbetsprofilen|  
 
 ## <a name="hardware-device-details"></a>Information om maskinvaruenheten
+Eventuellt samlas inte all information in, beroende på vilken operatör enheterna använder
 
 |Detalj|Beskrivning|Plattform| 
 |--------------|----------------------|----|  

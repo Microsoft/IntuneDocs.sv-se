@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 6a249962c4ac75e51be082112b884a5825d4ef2a
+ms.sourcegitcommit: 490f68479af814fbea1d9bd222011736fcbb1dd6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236296"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811520"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -29,7 +29,7 @@ ms.locfileid: "50236296"
 Microsofts företagsportal för Intune är den plats där användare kan komma åt företagets data och utföra vanliga aktiviteter som att registrera enheter, installera appar och hitta information för att få hjälp från IT-avdelningen.        
 
 > [!Tip]        
-> När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar.       
+> När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar. Observera att användarna måste ha tilldelats en Intune-licens för att få åtkomst till webbplatsen Företagsportal.
 
 Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Du gör det genom att välja **Installation** > **Anpassning av företagsportalen** i arbetsbelastningen **Klientappar** och sedan konfigurera de inställningar som krävs.  
 
@@ -48,7 +48,7 @@ Fält som har markerats med en asterisk (*) är obligatoriska.
 | **URL för sekretesspolicy** |     79     | Du kan ange en egen sekretesspolicy för ditt företag som visas när användaren klickar på en länk på företagsportalen. Du måste ange en giltig URL i formatet `<https://www.contoso.com>`. |
 
 ## <a name="support-information"></a>Supportinformation      
-Ange ditt företags supportinformation så att de anställda har kontaktuppgifter för Intune-relaterade frågor.       
+Ange ditt företags supportinformation så att de anställda har kontaktuppgifter för Intune-relaterade frågor.          
 
 |Fältnamn|Högsta längd|Mer information|
 |---|---|---|
@@ -84,28 +84,37 @@ Välj en logotyp som ser bäst ut på vita eller ljusa bakgrunder.
 
 ### <a name="brand-image-for-company-portal"></a>Varumärkesbild för företagsportalen
 
-Visa en varumärkesbild som återspeglar ditt företags varumärke. Stöd för varumärkesbilder håller på att läggas till i företagsportalapparna, men kanske inte visas på alla plattformar.
+Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har sparat ändringarna kan du välja **Förhandsgranska inställningarna** på Intune-webbportalen längst upp på bladet för att se hur dina konfigurationer kommer att se ut. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS-enhet, inte på Intune-webbportalen. 
 
 |Fältnamn|Mer information|
 |---|---|
-|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p><ul><li>Rekommenderad bildbredd: Större än 1 125 px, men inte mindre än 640 px</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p>*Obs!* Avbildningen kan visas på olika sätt för olika plattformar.<p><ul><li>Rekommenderad bildbredd: Större än 1 125 px, men inte mindre än 640 px</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på företagsportalen. Här följer några tips på hur du kan hitta, välja ut och optimera bilden för företagsportalen. 
 
 - Kontakta företagets marknadsförings- eller designavdelning. De kanske redan har en godkänd uppsättning företagsanpassade varumärkesbilder. De kanske också kan hjälpa dig att optimera bilderna om det behövs. 
 
-- Överväg både stående och liggande bilder. Det bör finnas tillräckligt med bakgrund runt bildens mittpunkt. Bilden kan beskäras på olika sätt beroende på enhetens storlek och orientering. 
+- Överväg både stående och liggande bilder. Det bör finnas tillräckligt med bakgrund runt bildens mittpunkt. Bilden kan beskäras på olika sätt beroende på enhetens storlek, orientering och plattform. 
 
 - Undvik att använda en generisk bild. Bilden bör återspegla ditt företags varumärke och vara välbekant för användarna. Om du inte har någon bild är det bättre att inte använda någon bild över huvud taget än att använda vilken bild som helst som inte är meningsfull för dina användare. 
 
 - Ta bort onödiga metadata. Bildfilen kan innehålla metadata, till exempel kameraprofil, geografisk plats, rubrik, beskrivning och så vidare. Ta bort den här informationen med hjälp av ett bildoptimeringsverktyg för att upprätthålla kvaliteten och uppfylla storleksgränsen för filer. 
 
-När du har sparat ändringarna kan du välja **Förhandsgranska inställningarna** på Intune-webbportalen längst upp på bladet för att se hur dina konfigurationer kommer att se ut. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS-enhet, inte på Intune-webbportalen. 
+När en varumärkesavbildning läggs till eller ändras i Intune ser slutanvändaren eventuellt inte ändringen på iOS-enheter förrän Företagsportalen har identifieras ändringen vid start, och sedan har startats om för att kunna visa varumärkesavbildningen. 
 
+### <a name="brand-image-examples"></a>Exempel på varumärkesavbildning
+
+Följande bild visar ett exempel på en iPad-varumärkesavbildning:
+
+![Skärmbild av en iPhone-varumärkesavbildning](media/company-portal-app/company-portal-app-03.png)
+
+Följande bild visar ett exempel på en iPhone-varumärkesavbildning:
+
+![Skärmbild av en iPad-varumärkesavbildning](media/company-portal-app/company-portal-app-02.png)
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Kortkommandon för Windows-företagsportalen
 
-Slutanvändare kan utlösa app- och enhetsåtgärder i Windows-företagsportalen med hjälp av kortkommandon (acceleratorer).
+Slutanvändare kan utlösa navigerings-, app- och enhetsåtgärder i Windows-företagsportalen med hjälp av kortkommandon (acceleratorer).
 
 Följande kortkommandon är tillgängliga i Windows-företagsportalappen.
 
@@ -125,6 +134,10 @@ Följande kortkommandon är tillgängliga i Windows-företagsportalappen.
 |  | Ta bort | CTRL + D eller ta bort |
 |  | Kontrollera åtkomst | CTRL + M eller F9 |
 | Appinformation | Installera | Ctrl + I |
+
+Slutanvändarna kommer också att kunna se tillgängliga genvägar i Windows-företagsportalens app.
+
+![Skärmbild av tillgängliga genvägar i Windows-företagsportalens app](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Nästa steg
 

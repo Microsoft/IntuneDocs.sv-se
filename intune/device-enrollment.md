@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: a9761c57b15700e147bc092b7577fe1b32c78c18
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: c46a90d36ba8b50703e62fc663b1d090ac1bcfc7
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44254164"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610132"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,7 +42,6 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 |**[USB-Direct](#usb-direct)**| Nej |    Nej  | Nej|[Mer information](./apple-configurator-direct-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Registreringsmetoder för macOS
-
 | **Metod** |  **Återställning krävs** |  **Användartillhörighet** | **Låst** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nej| Ja | Nej | [Mer information](./macos-enroll.md)|
@@ -56,7 +55,11 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 |**[BYOD](#bring-your-own-device)** | Nej |  Ja |   Nej | [Mer information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  |[Mer information](device-enrollment-manager-enroll.md)|
 |**Registrera automatiskt** | Nej |Ja |Nej | [Mer information](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Autopilot** |Ja |Ja |Nej | [Mer information](enrollment-autopilot.md)]
 |**Massregistrering** |Nej |Nej |Nej | [Mer information](./windows-bulk-enroll.md) |
+|**Samhantering** |Nej |Ja |Nej | [Mer information](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
+|**GPO** |Nej |Ja |Nej | [Mer information](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]
+
 
 ## <a name="android-enrollment-methods"></a>Metoder för Android-registrering
 

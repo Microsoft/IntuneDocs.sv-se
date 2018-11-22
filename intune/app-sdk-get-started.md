@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: a8cbe80154e5eac6a48c86101c76faed4602288a
-ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
+ms.openlocfilehash: 3362de6231aa8b045d064d1f3764cb2b13f5be3c
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915724"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167441"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -106,9 +106,6 @@ Microsoft Intune samlar in data för användningsstatistik för din app.
 
     * Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
-
- Versionsnummer för verksamhetsspecifika iOS och Android-program är synliga <!-- 1380712 -->
-
 ## <a name="line-of-business-app-version-numbers"></a>Versionsnummer för verksamhetsspecifika appar
 
 Verksamhetsspecifika appar i Intune visar nu versionsnummer för iOS och Android-appar. Numret visas på Azure Portal i listan över appar och på bladet med översikt över appar. Slutanvändarna kan se appnumret i företagsportalappen och i webbportalen.
@@ -164,6 +161,23 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 * **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
 
 * **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna installerar din app, kan du gå till [Felsöka appinstallationsproblem](troubleshoot-app-install.md). 
+
+### <a name="give-your-app-access-to-the-intune-app-protection-service-optional"></a>Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)
+
+Om din app använder sina egna anpassade AAD-inställningar för autentisering, bör du vidta följande steg för såväl gemensamma arkivappar som interna verksamhetsspecifika appar. Du behöver inte genomföra stegen **om appen använder standardklient-ID:t för Intune SDK**. 
+
+När du har registrerat din app i en Azure-klientorganisation, och den visas tenant under **Alla program** måste du ge appen åtkomst till Intune-appskyddstjänsten (tidigare känd som MAM-tjänsten). På Azure-portalen:
+
+1.  Gå till bladet **Azure Active Directory**.
+2.  Välj konfigurationen **Appregistrering** för programmet.
+3.  I **Inställningar** och under rubriken **API-åtkomst** väljer du **Required permission** (Nödvändig behörighet). 
+4.  Klicka på **+ Lägg till**.
+5.  Klicka på **Välj ett API**. 
+6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
+7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
+8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
+9.  Klicka på **Klar**.
+10. Klicka på **Bevilja** och klicka sedan på **Ja**. 
 
 ### <a name="badge-your-app-optional"></a>Ge din app en skylt (valfritt)
 

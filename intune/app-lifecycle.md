@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: apps; get-started
-ms.openlocfilehash: ad9eea41d0d40eed9aee07bcf5a77118c0efdab8
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 77a8adb418759386fdd02409a51b16a734d79ba8
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253762"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167399"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Översikt över applivscykeln i Microsoft Intune
 
@@ -35,7 +35,7 @@ Det första steget i appdistributionen är att lägga till de appar som du vill 
 
 ## <a name="deploy"></a>Distribuera
 
-När du har lagt till appen i Intune kan du sedan [tilldela den till användare och enheter som du hanterar](apps-deploy.md). I Intune är den här processen enkel och när appen har distribuerats kan du [övervaka framgången](apps-monitor.md) för distributionen från Intune i Azure-portalen. Dessutom kan du i vissa appbutiker, till exempel appbutikerna för [Apple](vpp-apps-ios.md) och [Windows](windows-store-for-business.md), köpa applicenser gruppvis till företaget. Intune kan synkronisera data med dessa butiker så att du kan distribuera och spåra licensanvändning för dessa typer av appar direkt från Intune-administrationskonsolen.
+När du har lagt till appen i Intune kan du sedan [tilldela den till användare och enheter som du hanterar](apps-deploy.md). I Intune är den här processen enkel och när appen har distribuerats kan du [övervaka framgången](apps-monitor.md) för distributionen från Intune i Azure Portal. Dessutom kan du i vissa appbutiker, till exempel appbutikerna för [Apple](vpp-apps-ios.md) och [Windows](windows-store-for-business.md), köpa applicenser gruppvis till företaget. Intune kan synkronisera data med dessa butiker så att du kan distribuera och spåra licensanvändning för dessa typer av appar direkt från Intune-administrationskonsolen.
 
 ## <a name="configure"></a>Konfigurera
 

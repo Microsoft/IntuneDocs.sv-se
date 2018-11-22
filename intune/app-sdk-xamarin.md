@@ -5,7 +5,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 11/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: d2531cc203c5c2b255378e836099feb0a9216d45
-ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
+ms.openlocfilehash: 07fe31d8b668d14a51a5c31fa321e4789a0302c0
+ms.sourcegitcommit: dec09e9c91322ca347276785aca3c50036956f32
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51298130"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51859519"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -53,7 +53,7 @@ Xamarin-appar som skapats med Intune App SDK Xamarin-bindningar kan nu ta emot I
 
 Granska [licensvillkoren](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Skriv ut och behåll en kopia av licensvillkoren för framtida referens. Genom att ladda ned och använda Intune App SDK Xamarin-bindningar godkänner du licensvillkoren. Om du inte accepterar villkoren har du inte rätt att använda programvaran.
 
-SDK använder [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) för [autentisering](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) och villkorsstyrda startscenarier som kräver att apparna är konfigurerade med [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Konfigurationsvärdena förmedlas till SDK via AndroidManifest-metadata. Läs vår dokumentation om att [Konfigurera ADAL för din app](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+SDK använder [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) för [autentisering](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) och villkorsstyrda startscenarier som kräver att apparna har konfigurerats med [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Aktivera Intune-appskyddsprinciper i din iOS-mobilapp
 1. Lägg till [Microsoft.Intune.MAM.Xamarin.iOS NuGet-paketet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.iOS) i ditt Xamarin.iOS-projekt.
@@ -85,16 +85,17 @@ SDK använder [ADAL](https://azure.microsoft.com/documentation/articles/active-d
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Aktivera skyddsprinciper för Intune-appar i din Android-mobilapp
 
-För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser och följer du [utvecklarguiden för Intune App SDK för Android](app-sdk-android.md). För din Xamarin-baserade Android-app måste du ersätta klassen, metoder och aktiviteter med deras MAM-motsvarigheter baserat på [tabellen](app-sdk-android.md#class-and-method-replacements) som ingår i handboken. Om din app inte definierar en `android.app.Application`-klass måste du skapa en och se till att du ärver från `MAMApplication`.
+För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser och följer du [utvecklarguiden för Intune App SDK för Android](app-sdk-android.md). För din Xamarin-baserade Android-app måste du ersätta klassen, metoder och aktiviteter med deras MAM-motsvarigheter baserat på [tabellen för klass- och metodersättningar](app-sdk-android.md#class-and-method-replacements) som ingår i handboken. Om din app inte definierar en `android.app.Application`-klass måste du skapa en och se till att du ärver från `MAMApplication`. ADAL-konfigurationsvärdena förmedlas till SDK via AndroidManifest-metadata. Läs vår dokumentation om att [Konfigurera ADAL för din app](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
 
 ### <a name="xamarinandroid-integration"></a>Xamarin.Android integration
 
 1. Lägg till den senaste versionen av [Microsoft.Intune.MAM.Xamarin.Android NuGet-paketet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android) i ditt Xamarin.Android-projekt. Då har du de nödvändiga referenserna för att aktivera Intune för appen.
 
 2. Läs och följ [Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md) fullständigt, och var särskilt uppmärksam på följande:
+
     1. [Hela avsnittet om klass- och metodersättningar](app-sdk-android.md#class-and-method-replacements). 
     2. [Avsnittet MAMApplication](app-sdk-android.md#mamapplication). Se till att din underklass är korrekt dekorerad med attributet `[Application]` och åsidosätter konstruktorn `(IntPtr, JniHandleOwnership)`.
-    3. [Avsnittet om ADAL-integrering](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) om din app utför autentisering mot AAD.
+    3. [Avsnittet om ADAL-integrering](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) om din app utför autentisering mot AAD. 
     4. [Avsnittet om MAM-WE-registrering](app-sdk-android.md#app-protection-policy-without-device-enrollment) om du planerar att hämta principen från MAM-tjänsten i din app.
 
 > [!NOTE]
@@ -114,9 +115,6 @@ För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser och
 > [!NOTE]
 > Eftersom den här åtgärden skriver om ett beroende som Visual Studio använder för Intellisense (automatisk komplettering), kan du behöva starta om Visual Studio efter första ommappningen så att Intellisense korrekt identifierar ändringarna. 
 
-
-## <a name="support"></a>Stöd
-
 Du har slutfört stegen för att bygga in komponenten i din app. Nu kan du följa stegen i Xamarin Android-exempelappen. Vi tillhandahåller två exempel, ett för Xamarin.Forms och ett för Android.
 
 ## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Kräva Intune-appskyddsprinciper för att använda en Xamarin-baserad verksamhetsspecifik Android-app (valfritt) 
@@ -124,22 +122,12 @@ Du har slutfört stegen för att bygga in komponenten i din app. Nu kan du följ
 Följande steg beskriver hur du säkerställer att Xamarin-baserade verksamhetsspecifika Android-appar endast kan användas av Intune-skyddade användare på deras enheter. 
 
 ### <a name="general-requirements"></a>Allmänna krav
-* Registrera din apps program-ID. Du hittar det på [Azure-portalen](https://portal.azure.com/), under **Alla program**, i kolumnen för **program-ID**. På Azure-portalen:
-1.  Gå till bladet **Azure Active Directory**.
-2.  Välj konfigurationen **Appregistrering** för programmet.
-3.  I **Inställningar** och under rubriken **API-åtkomst** väljer du **Required permission** (Nödvändig behörighet). 
-4.  Klicka på **+ Lägg till**.
-5.  Klicka på **Välj ett API**. 
-6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
-7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
-8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
-9.  Klicka på **Klar**.
-10. Klicka på **Bevilja** och klicka sedan på **Ja**. 
+* Se till att stegen som ger din Xamarin appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](app-sdk-get-started.md#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”. 
     
 ### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
 De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
 
-1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
 > [!NOTE] 
 > Termen ”klient-id” är samma som termen ”program-id” från Azure-portalen som är kopplad till din app. 
 * Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
@@ -159,5 +147,5 @@ Dessa instruktioner är ett krav för .NET/Xamarin-appar som kräver Intune-apps
 > [!NOTE] 
 > Nästa version av .NET ADAL (3.17.4) förväntas innehålla den korrigering som krävs för att detta ska fungera.
 
+## <a name="support"></a>Stöd
 Om organisationen är en befintlig Intune-kund kan du kontakta din representant från Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) så hjälper vi dig så snart vi kan. 
-

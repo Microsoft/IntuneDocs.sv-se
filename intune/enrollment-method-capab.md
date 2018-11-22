@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c9e440aef7f434cbe675506fd6f22a9bd26b2c31
-ms.sourcegitcommit: 528d2bc70bfd25803a2d9f0fe9372c8a5f5e7dad
+ms.openlocfilehash: 457acdc212855767687f97f7d03b731f35afad46
+ms.sourcegitcommit: 490f68479af814fbea1d9bd222011736fcbb1dd6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446828"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811537"
 ---
 # <a name="capabilities-by-enrollment-method-for-windows-devices"></a>Funktioner efter registreringsmetod för Windows-enheter
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47446828"
 Med Intune kan du hantera personalens enheter och appar, samt hur de kommer åt företagsdata. Enheterna måste först registreras i Intune-tjänsten. Det finns flera metoder för att registrera personalens enheter. Olika metoder har olika metodtips och funktioner, som du ser i tabellerna nedan.
 
 ## <a name="best-practices-by-enrollment-method"></a>Metodtips efter registreringsmetod
-| **Metodtips** | **[Azure AD-ansluten](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Azure AD-ansluten med Autopilot](enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **GPO** |
+| **Metodtips** | **[Azure AD-ansluten](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Azure AD-ansluten med Autopilot](enrollment-autopilot.md)** |**[Massregistrering](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Vanliga i EDU|![X](media/xmark.png)|![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|
 |Enheter kan användas som delade enheter|![X](media/xmark.png)|![X](media/xmark.png)|![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|
@@ -36,7 +36,7 @@ Med Intune kan du hantera personalens enheter och appar, samt hur de kommer åt 
 
 ## <a name="capabilities-by-enrollment-method"></a>Funktioner efter registreringsmetod
 
-| **Funktioner** | **[Azure AD-ansluten](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Azure AD-ansluten med Autopilot](enrollment-autopilot.md)** |**[Massregistrering](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **GPO** |
+| **Funktioner** | **[Azure AD-ansluten](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Azure AD-ansluten med Autopilot](enrollment-autopilot.md)** |**[Massregistrering](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Villkorlig åtkomst                                      |![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|
 |Användaren associeras med enheten                    |![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|![Markering](media/checkmark.png)|![Markering](media/checkmark.png)|
@@ -52,5 +52,5 @@ Med Intune kan du hantera personalens enheter och appar, samt hur de kommer åt 
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Registreringsalternativ](enrollment-options.md)
+[Konfigurera registrering för Windows](windows-enroll.md)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2018
+ms.date: 11/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: ef21f22a4808518ce8557b761e4181f8f6a655c3
-ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
+ms.openlocfilehash: f311d8a389d551ed834d955c5d1c59dbc9c3c4a2
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45978254"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610030"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Du kan använda Microsoft Intune för att hantera Windows-datorer som antingen [mobila enheter med hantering av mobila enheter (MDM)](windows-enroll.md) eller som datorer med Intune-programvaruklienten enligt beskrivningen nedan. Microsoft rekommenderar dock att kunderna [använder MDM-hanteringslösningen](windows-enroll.md) närhelst det är möjligt.
+> Du kan använda Microsoft Intune för att hantera Windows-datorer som antingen [mobila enheter med hantering av mobila enheter (MDM)](windows-enroll.md) eller som datorer med Intune-programvaruklienten enligt beskrivningen nedan. Microsoft rekommenderar dock att kunderna [använder MDM-hanteringslösningen](windows-enroll.md) närhelst det är möjligt. Mer information finns i [Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter](pc-management-comparison.md) 
 
 Intune är en omfattande lösning som gör att organisationer kan hantera mobila enheter. Intune kan hantera Windows-datorer som mobila enheter med hjälp av de hanteringsfunktioner för moderna enheter som är inbyggda i operativsystemet Windows 10. För att uppfylla organisationens hanteringsbehov kan Intune även hantera Windows-datorer som datorer med Intune-programvaruklienten. Den här hanteringsmetoden använder traditionella funktioner för datorhantering i tidigare Windows-operativsystem.
 
@@ -40,7 +40,8 @@ Intune stöder hantering av Windows-datorer som datorer med hjälp av programvar
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Krav för hantering av Intune-klienten
 
-**Maskinvara**: Minsta maskinvarukrav för att installera Intune-klientprogrammet:
+**Maskinvara**:  
+Minsta maskinvarukrav för att installera Intune-klientprogrammet:
 
 |Krav|Mer information|
 |---------------|--------------------|
@@ -48,7 +49,8 @@ Intune stöder hantering av Windows-datorer som datorer med hjälp av programvar
 |Processor och minne|Se RAM- och processorkraven för datorns operativsystem.|
 |Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet har installerats.|
 
-**Programvara**: Programvarukrav för att installera klientprogrammet:
+**Programvara**:  
+Programvarukrav för att installera klientprogrammet:
 
 |Krav|Mer information|
 |---------------|--------------------|

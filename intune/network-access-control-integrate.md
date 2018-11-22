@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1adfdba49ab8ac5ae55f792e71a99f4aef4c8a6
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 00f660d2ac228fbebe218c53482d00e59f09ce56
+ms.sourcegitcommit: be6f6b750635ebc7956dd2d60a0e131d124b2fc3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236160"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947334"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrering av nätverksåtkomstkontroll (NAC) i Intune
 
@@ -59,12 +59,21 @@ Följande lista är en översikt över hur NAC-integrationen fungerar när du ha
 8. Om enheten är registrerad och kompatibel kan NAC-partnerlösningen verifiera tillståndet hos Intune.
 9. En anslutning upprättas och enheten får tillgång till företagets resurser.
 
-## <a name="use-nac-on-your-ios-devices"></a>Använda NAC på dina iOS-enheter
+## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Använda NAC för VPN på dina iOS-enheter  
+NAC för Cisco Legacy AnyConnect, F5 Access Legacy och Citrix VPN stöds utan att behöva aktivera NAC i VPN-profilen.
 
-Åtkomstkontroll för nätverk stöds inte för följande VPN-klienter på iOS:
+NAC för Citrix SSO stöds också. Så här aktiverar du NAC för Citrix SSO för iOS:
+- Använd Citrix Gateway 12.0.59 eller senare.  
+- Användare måste ha Citrix SSO 1.1.6 eller senare installerat.
+- [Integrera NetScaler med Intune för NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) som beskrivs i produktdokumentationen för Citrix.
+- Markera kryssrutan **Jag godkänner** för **Aktivera nätverksåtkomstkontroll (NAC)** i konfigurationsinställningarna för Bas-VPN.
+
+När du använder Citrix SSO för iOS kopplas VPN-anslutningen av säkerhetsskäl från en gång per dygn. VPN-anslutningen kan omedelbart återanslutas.
+
+
+**Nätverksåtkomstkontroll stöds inte för följande VPN-klienter på iOS**:
 -   Cisco AnyConnect
 -   F5 Access
--   Citrix SSO  
 
 Vi arbetar med våra partners för att släppa en NAC-lösning för dessa nyare klienter. När vi har lösningar redo kommer vi att uppdatera den här artikeln med ytterligare information. 
 
