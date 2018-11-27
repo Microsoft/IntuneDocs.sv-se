@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b2a31a90dc0d88386a829756116edebd28990f9
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: 5cd16a351beefd851d51175717abd4400382c216
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602188"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52185244"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Inställningar för helskärmsläge för Android-enheter i Intune
 
@@ -47,7 +48,7 @@ Om **Helskärmsläge** = **kioskenhet för flera appar** anges för en kioskenhe
 
 Följ dessa steg om du vill ange en Android-kioskenhet för flera appar:
 
-1. [Importera och distribuera Managed Home Screen-appen från Managed Google Play](#import-and -deploy-the-managed-home-screen-app)
+1. [Importera och distribuera Managed Home Screen-appen från Managed Google Play](#import-and-deploy-the-managed-home-screen-app)
 2. [Lägga till och tilldela appar som kan användas i helskärmsläge](#add-and-assign-apps-that-can-be-used-in-kiosk-mode)
 3. (Valfritt) [Lägga till webblänkar som kan användas i helskärmsläge](#add-web-links-that-can-be-used-in-kiosk-mode)
 
