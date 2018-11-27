@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d9c9027964648ad83c552f7dd7067598cacf560e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: cf5146946fef464d2d74271e0ad801dabbdce13e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836533"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186876"
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Konfigurera Intune Certificate Connector för webbtjänsten Symantec PKI Manager
 
@@ -281,7 +282,7 @@ Certifikatprofil-OID:n är associerad med en certifikatprofilsmall i Symantec CA
    > [!IMPORTANT]
    > Följande parametrar för PKCS-certifikatprofilen måste konfigureras med angivna värden i följande tabellen som det visas i skärmbilden för att utfärda PKCS-certifikat via Intune Certificate Connector från Symantec CA:n. 
 
-    |PKCS-certifikatparameter | Värde | Description |
+    |PKCS-certifikatparameter | Värde | Beskrivning |
     | --- | --- | --- |
     | Certifikatutfärdare | pki-ws.symauth.com | Det här värdet måste vara bastjänst-FQDN för Symantec-certifikatutfärdaren utan avslutande snedstreck.  Om du inte är säker på om det här är rätt bastjänst-FQDN för din Symantec CA-prenumeration så kan du kontakta Symantecs kundsupport. <br><br> Om detta FQDN är felaktigt så utfärdar inte Intune Certificate Connector PKCS-certifikat från Symantec-certifikatutfärdaren.| 
     | Namn på certifikatutfärdare | Symantec | Det här värdet måste vara strängen **Symantec**. <br><br> Om det här värdet ändras, kommer Intune Certificate Connector inte att utfärda PKCS-certifikat från Symantec CA:n.|

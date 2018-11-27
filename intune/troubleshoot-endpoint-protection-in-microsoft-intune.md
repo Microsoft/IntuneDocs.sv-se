@@ -14,13 +14,14 @@ ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ROBOTS: ''
 ms.reviewer: tscott
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 1d8794345f22b2c19cf89eca2d3603fe8ac68161
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: f828394c48b5b7d55d9180da875d9cb3062f23c6
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643067"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181691"
 ---
 # <a name="troubleshoot-endpoint-protection-in-intune"></a>Felsöka Endpoint Protection i Intune
 
@@ -35,7 +36,7 @@ I det här avsnittet beskrivs möjliga orsaker och lösningar vid följande fel 
 |---------------|--------------------|-----------------------|
 |**Endpoint Protection-motorn är inte tillgänglig**|Motorn för Endpoint Protection i Intune är skadad eller har tagits bort.|Om motorn för Endpoint Protection i Intune är skadad kan du prova att uppdatera eller installera om programvaran.<br /><br />Om du vill framtvinga en omedelbar uppdatering klickar du på **Uppdatera** i Endpoint Protection-klientprogrammet (i verktygsfältet på hanterade datorer).<br /><br />Om motorn inte kan uppdateras måste du installera om Endpoint Protection-motorn.<br /><br />Leta upp **Microsoft Intune Endpoint Protection Agent** i listan över installerade program på Kontrollpanelen på den hanterade datorn och avinstallera programmet.<br /><br />Microsoft Online Management Update Manager identifierar programmet som saknas under nästa uppdateringssynkronisering och installerar om det på den schemalagda installationstiden.|
 |**Endpoint Protection är inaktiverat**|Intunes slutpunktsskydd har inaktiverats av en administratör med hjälp av en konfigurationsprofil, eller av en användare på en hanterad dator.|Aktivera slutpunktsskyddet. Läs mer om att [lägga till inställningar för slutpunktsskydd](endpoint-protection-configure.md) i Intune, eller [starta Windows Defender för att komma åt företagets resurser](/intune-user-help/turn-on-defender-windows).|
-|**Realtidsskydd är inaktiverat**|Realtidsskydd har inaktiverats av en administratör med hjälp av en profil, eller av en användare på en hanterad dator.|Aktivera slutpunktsskyddet. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus) i Intune, eller [starta realtidsskyddet för att komma åt företagets resurser](/intune-user-help/turn-on-defender-windows). |
+|**Realtidsskydd är inaktiverat**|Realtidsskydd har inaktiverats av en administratör med hjälp av en profil, eller av en användare på en hanterad dator.|Aktivera slutpunktsskyddet. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus) i Intune, eller [starta realtidsskyddet för att få åtkomst till företagets resurser](/intune-user-help/turn-on-defender-windows). |
 |**Genomsökning av hämtningar är inaktiverat**|Genomsökningen av hämtningar har inaktiverats av en administratör med hjälp av en profil, eller av en användare på en hanterad dator.|Aktivera genomsökningen. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus) i Intune, eller [starta realtidsskyddet för att få åtkomst till företagets resurser](/intune-user-help/turn-on-defender-windows). |
 |**Fil- och programaktivitetsövervakning inaktiverad**|Övervakningen av fil- och programaktiviteter har inaktiverats av en administratör med hjälp av en profil, eller av en användare på en hanterad dator.|Aktivera fil- och programaktiviteter. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus) i Intune, eller [starta realtidsskyddet för att få åtkomst till företagets resurser](/intune-user-help/turn-on-defender-windows). |
 |**Beteendeövervakning är inaktiverat**|Beteendeövervakning har inaktiverats av en administratör med hjälp av en profil, eller av en användare på en hanterad dator.|Aktivera beteendeövervakningen. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus) i Intune, eller [starta realtidsskyddet för att få åtkomst till företagets resurser](/intune-user-help/turn-on-defender-windows). |

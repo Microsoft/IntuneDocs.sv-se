@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3b7652c8c4f471a0a0c32da23d8ac1859e84eb13
-ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
+ms.openlocfilehash: 2b2b3ba5443cd95cd81bdca6d386ab95a2c831eb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400359"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190123"
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -30,7 +31,7 @@ Du kan hantera följande Android-enheter som Intune-administratör:
 - Android-enheter, inklusive Samsung Knox Standard-enheter.
 - Android enterprise-enheter, inklusive [Android-arbetsprofilenheter](#enable-enrollment-of-android-for-work-devices) och Android-kioskenheter.
 
-Enheter som kör Samsung Knox Standard har stöd för hantering av flera användare med Intune. Det innebär att användarna kan logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten är centralt hanterad oavsett om den används eller inte. När användare loggar in får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
+Enheter som kör Samsung Knox Standard har stöd för hantering av flera användare med Intune. Det innebär att användarna kan logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten är centralt hanterad oavsett om den används eller inte. När användare loggar in får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
 
 ## <a name="prerequisite"></a>Krav
 

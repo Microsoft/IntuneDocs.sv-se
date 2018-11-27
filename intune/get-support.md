@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 47917943188b2b3d0448845b1e356d181ec8f3af
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: 103b509a562e777a28882f21aef2ca36354533f5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410845"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183260"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune
 
@@ -116,7 +117,7 @@ I den här vyn kan du göra följande:
 4. [Visa supportärenden](#view-support-cases) som du har skapat tidigare med det nya arbetsflödet  
 
 ### <a name="specify-details-about-an-issue"></a>Ange information om ett problem
-När du öppnar Hjälp och support från en plats som har stöd av den nya upplevelsen visas sidan  **Behöver du hjälp?** Du kan ange information om ett problem på den här sidan. När du anger information visar konsolen vanliga frågor baserat på de nyckelord som du använder. Du kan välja ett av förslagen som visas eller skriva en egen problembeskrivning. Om du anger en egen beskrivning väljer du **Få hjälp** för att skicka den. När du har skickat en fråga returnerar konsolen sammanhangsberoende information som kan hjälp dig att lösa problemet.
+När du öppnar Hjälp och support från en plats som har stöd av den nya upplevelsen visas sidan  Behöver du hjälp? Du kan ange information om ett problem på den här sidan. När du anger information visar konsolen vanliga frågor baserat på de nyckelord som du använder. Du kan välja ett av förslagen som visas eller skriva en egen problembeskrivning. Om du anger en egen beskrivning väljer du **Få hjälp** för att skicka den. När du har skickat en fråga returnerar konsolen sammanhangsberoende information som kan hjälp dig att lösa problemet.
 
 Här följer några exempel på frågor som du kan skicka:
   

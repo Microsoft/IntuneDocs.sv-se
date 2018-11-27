@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 932feb064552e05536821d0e75e27059387bcf56
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9a15c84ded066a26254737f75293b0d743fe5eab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31029816"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181232"
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Så här konfigurerar du Intune-utbildningsinställningar för delade iPad-enheter
 
@@ -183,7 +184,7 @@ Enheten är nu associerad med enhetskategorin. Upprepa proceduren för alla enhe
 5. I profilfönstret väljer du **Skapa profil**.
 6. Ange ett **Namn** och en **Beskrivning** i fönstret **Skapa association**.
 7. Välj **Välj klasser** > **Konfigurera** för att associera grupper med kundvagnsprofilen.
-8. Välj de klasser du vill inkludera i kundvagnsprofilen och välj sedan **Välj**. 
+8. Välj de klasser du vill inkludera i kundvagnsprofilen och välj sedan **Välj**. 
 9. Välj **Välj kundvagnar** > **Konfigurera** för att associera grupper med kundvagnsprofilen.
 10. Välj de grupper du vill inkludera i kundvagnsprofilen och välj sedan **Välj**.
 11. Välj **Spara** i fönstret **Skapa association** för att spara kundvagnsprofilen.
@@ -198,7 +199,7 @@ Profilen skapas och visas i fönstret med profillistan.
 4. Välj **Övervaka** > **Tilldelningsstatus** i fönstret **Enhetskonfiguration**.
 5. Välj den **Kundvagnsprofil** du skapade i fönstret **Tilldelningsstatus**.
 6. Välj **Tilldelningar** i fönstret **Kundvagnsprofil** och välj **Välj grupper att ta med** under **Inkludera**.
-7. Välj de klasser du vill ange som mål kundvagnsprofilen (välj inte en grupp) och välj sedan **Välj**. 
+7. Välj de klasser du vill ange som mål kundvagnsprofilen (välj inte en grupp) och välj sedan **Välj**. 
 8. Välj **Spara** när du är klar.
 
 Tilldelningen slutförs och Intune distribuerar klassrumsprofilen till målenheterna baserat på klassrumstilldelningen.

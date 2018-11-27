@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: 8e73a9cf189ba44a9f093559b9175dfa947a38e1
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
+ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864599"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186502"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -34,11 +35,11 @@ Intune-designen baseras på den information du samlar in och de beslut du fattar
 
 -   Överväganden för enhetsplattform
 
--   Krav som ska levereras  
+-   Krav som ska levereras  
 
 Även om kraven på lokal infrastruktur är minimala kan en utformningsplan hjälpa dig att se till att du har rätt lösning för mobil enhetshantering som uppfyller dina mål, delmål och krav.
 
-Vi ska gå igenom dessa områden mer detaljerat. 
+Vi ska gå igenom dessa områden mer detaljerat. 
 
 ## <a name="record-your-current-environment"></a>Registrera din aktuella miljö
 Det är dessutom vanligt att det sker utformningsändringar under implementerings- och testfaserna. Använd utformningsplanen för att dokumentera dessa ändringar och tanken bakom dem när de sker.

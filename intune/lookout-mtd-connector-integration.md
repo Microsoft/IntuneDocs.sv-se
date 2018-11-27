@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fe8a55153ccc2b28c23ec2f32a4285d20afaaf6a
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: f0ff43e5a25a2f2d7d97564e638d01b014ab81cb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232196"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181079"
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurera Lookout Mobile Threat Defense-integreringen med Intune
 
@@ -50,11 +51,11 @@ Din Lookout Mobility Endpoint Security-klient kommer att associeras med din Azur
 
 Använd följande steg för att samla in den information du måste förse Lookout-supportteamet med.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com) och välj prenumeration. 
+1. Logga in på [Azure-portalen](https://portal.azure.com) och välj prenumeration. 
 
-2. När du väljer namnet på din prenumeration måste den URL som bildas omfatta prenumerations-ID.  Om du har problem med att hitta ditt prenumerations-ID kan du läsa den här [Microsoft support-artikeln](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) och få hjälp.
+2. När du väljer namnet på din prenumeration måste den URL som bildas omfatta prenumerations-ID.  Om du har problem med att hitta ditt prenumerations-ID kan du läsa den här [Microsoft support-artikeln](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) och få hjälp.
 
-3. Hitta ditt grupp-ID för Azure AD. Lookout-konsolen stöder två åtkomstnivåer:  
+3. Hitta ditt grupp-ID för Azure AD. Lookout-konsolen stöder två åtkomstnivåer:  
    * **Fullständig åtkomst:** Azure AD-administratören kan skapa en grupp för användare som har fullständig åtkomst och även skapa en grupp med användare som har begränsad åtkomst.  Endast användare i dessa grupper kommer att kunna logga in till **Lookout-konsolen**.
    * **Begränsad åtkomst:** Användarna i den här gruppen har inte åtkomst till ett flertal konfigurations- och registreringsrelaterade moduler i Lookout-konsolen. De har skrivskyddad åtkomst till modulen **Säkerhetsprincip** i Lookout-konsolen.  
 

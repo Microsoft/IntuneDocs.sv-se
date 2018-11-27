@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ff1f4f6a728fc041241371a413ce9d2dfdf89605
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: a606f63bd22ce2ed543b6c5863ddc4f35d7ea212
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236466"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186213"
 ---
 # <a name="add-a-device-compliance-policy-for-android-enterprise-devices-in-intune"></a>Lägg till en enhetsefterlevnadsprincip för Android Enterprise-enheter i Intune
 
@@ -69,7 +70,7 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 - **Google Play-tjänster har konfigurerats**: **Kräv** att appen Google Play-tjänster är installerad och aktiverad. Google Play-tjänster tillåter säkerhetsuppdateringar, vilket är ett beroende på grundnivå för många säkerhetsfunktioner på certifierade Google-enheter. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Uppdaterad säkerhetsprovider**: **Kräv** att en uppdaterad säkerhetsprovider kan skydda en enhet från kända säkerhetsproblem. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Attesteringen av enhetens SafetyNet**: Ange den nivå av [SafetyNet-attestering](https://developer.android.com/training/safetynet/attestation.html) som måste uppfyllas. Alternativen är:
-  - **Ej konfigurerad** (standard): Ingen kompatibilitets- eller inkompatibilitetsutvärdering görs.
+  - **Ej konfigurerad** (standard): Ingen kompatibilitetskontroll görs för den här inställningen.
   - **Kontrollera grundläggande integritet**
   - **Kontrollera grundläggande integritet och certifierade enheter**
 

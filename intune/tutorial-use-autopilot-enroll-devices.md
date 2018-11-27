@@ -13,12 +13,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up Windows Autopilot so that users can enroll in Intune.
-ms.openlocfilehash: a90f53bfc5841cc0f773751e7df917d8fc8b6cf8
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune
+ms.openlocfilehash: 087f890f84c9bc0ff0c46f129ef84b8a268c738e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49431942"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187743"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
 Med Windows Autopilot blir det enklare att registrera enheter. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och tillämpa anpassade operativsystemavbildningar. 
@@ -71,7 +75,7 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 Nu ska du skapa en enhetsgrupp där du placerar de Autopilot-enheter som du nyss läste in.
 
-1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Grupper** > **Ny grupp**.
+1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Grupper** > **Ny grupp**.
 2. På bladet **Grupp**:
     1. Välj **Säkerhet** för **Grupptyp**.
     2. I **Gruppnamn** anger du *Autopilot-grupp*. I **Gruppbeskrivning** anger du *Testgrupp för Autopilot-enheter*.

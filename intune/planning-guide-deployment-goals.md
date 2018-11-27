@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 24cf9d97-db39-4b95-a664-4aa2e33edb87
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: f76e227037efd6ea8ee7ea95d61f3358698af1d9
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 10598f4868a42b9736b6b33a6d9b5c4b4b308967
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "29961490"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189358"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Fastställa distributionsmål, delmål och utmaningar
 
@@ -78,7 +79,7 @@ Distributionsdelmål är de åtgärder din organisation kan vidta för att uppn�
 
 Distributionsutmaningar är problem som är viktigast för en organisation och som kan ha en negativ inverkan på distributionen. De är ibland relaterade till äldre problem som man har upplevt med tidigare projekt och som du kanske vill undvika, eller nya problem som är relaterade till det aktuella distributionsarbetet. Nedan visas några exempel på en Intune-distributionsutmaningar tillsammans med möjliga lösningar.
 
--   Supportberedskap och användarupplevelse ingår inte i den inledande projektomfattningen. Detta leder till dåligt anammande hos slutanvändarna, och till stora utmaningar för supportavdelningen.
+-   Supportberedskap och användarupplevelse ingår inte i den inledande projektomfattningen. Detta leder till dåligt anammande hos slutanvändarna, och till stora utmaningar för supportavdelningen.
 
     -   **Lösningar:** Lägg till supportutbildning. Verifiera slutanvändarnas erfarenhet av framgångsmått i din distributionsplan.
 

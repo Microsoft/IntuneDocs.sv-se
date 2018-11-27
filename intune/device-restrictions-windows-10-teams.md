@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c251a45f8c319bdebbc6904c10fbf423bb1c1128
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: be0d80828327550e248d1ed5417b373c273a7a56
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34562168"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184870"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Inställningar för begränsningar för Windows 10 Team-enheter i Microsoft Intune
 
@@ -37,8 +38,7 @@ I den här artikeln visas inställningarna av enhetsbegränsningar som du kan ko
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
-- 
-  **Operational Insights i Azure** – Operational Insights i Azure är en del av Microsoft Operations Manager-programsviten och samlar in, lagrar och analyserar loggfilsdata från Windows 10 Team-enheter.
+- **Operational Insights i Azure** – Operational Insights i Azure är en del av Microsoft Operations Manager-programsviten och samlar in, lagrar och analyserar loggfilsdata från Windows 10 Team-enheter.
 Om du vill kunna ansluta till Azure Operational Insights måste du ange ett **Arbetsyte-ID** och en **Arbetsytenyckel**.
 
 ## <a name="maintenance"></a>Underhåll
