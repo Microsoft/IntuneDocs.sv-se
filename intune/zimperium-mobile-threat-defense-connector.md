@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6deed5de94b72ec3dfb5e8336cc2a58678b4748f
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231482"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187471"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-anslutning med Intune
 
@@ -58,7 +59,7 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 
-Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket, samt skydda åtkomsten till WiFi-nätverk baserat på enhetsrisken.
+Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket, samt skydda åtkomsten till WiFi-nätverk baserat på enhetsrisken.
 
 **Blockera nätverksåtkomst via Wi-Fi:**
 
@@ -70,7 +71,7 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket, samt s
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 
-Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och förhindra synkronisering av företagsfiler baserat på enhetsrisken.
+Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket och förhindra synkronisering av företagsfiler baserat på enhetsrisken.
 
 **Blockera SharePoint Online när hot identifieras på nätverket:**
 
@@ -94,7 +95,7 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och fö
 
 -   Prenumeration på Zimperium Mobile Threat Defense
 
-    -   Mer information finns på [Zimperiums webbplats](https://www.zimperium.com/zips-mobile-ips).
+    -   Mer information finns på  [Zimperiums webbplats](https://www.zimperium.com/zips-mobile-ips) .
 
 ## <a name="next-steps"></a>Nästa steg
 

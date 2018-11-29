@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2017
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,17 +14,26 @@ ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 05502c901f01ba134475ec69df3c42aa6e0e7480
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: eedbc17147c6f9e2988d954308f2332de10d00ab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231784"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189851"
 ---
 # <a name="review-client-app-protection-logs"></a>Granska loggarna för klientappskydd
 
-Läs om vilka inställningar du kan granska i appskyddsloggarna. Kom åt loggarna genom att aktivera Intunes diagnostikläge för ett program på en mobil klient. Följande tabell visar namn och en förklaring av de inställningar som har registrerats i loggen.
+Läs om vilka inställningar du kan granska i appskyddsloggarna. Få åtkomst till loggarna genom att aktivera Intune-diagnostik på en mobil klient. 
+
+Processen för att aktivera och samla in loggar varierar efter plattform:
+- **Android-enheter** – Använd *Företagsportalen*. Se [Skicka loggar till företagets support via e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
+- **iOS-enheter** – Använd en Managed Browser eller *Microsoft Edge* till att samla in loggar. Mer information finns i Intune-supportteamets blogg [New Intune Diagnostic Console for Log Submission in the Intune Managed Browser](https://blogs.technet.microsoft.com/intunesupport/2017/11/10/support-tip-new-intune-diagnostic-console-for-log-submission-in-the-intune-managed-browser). 
+- **Windows 10-enheter** – Använd *MDMDiag* och händelseloggar. Se [Diagnostisera MDM-fel i Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) i Windows-klientens hanteringsinnehåll och bloggen [Felsökning av Windows 10 vid Intune-principfel](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures)
+
+
+Följande tabell visar namn och en förklaring av de inställningar som har registrerats i loggen.
 
 ## <a name="app-protection-policy-settings"></a>Principinställningar för appskydd
 

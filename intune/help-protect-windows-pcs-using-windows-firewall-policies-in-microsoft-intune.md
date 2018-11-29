@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: a38ff69b878880ffa16e327eace0afe64d336f43
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: db9cdf539f0cf80fb4640ba41929c67e643956c4
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310580"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181130"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
 
@@ -38,7 +39,7 @@ Med principen för Windows-brandväggen kan du skapa och distribuera inställnin
 > [!NOTE]
 > Om Microsoft Intune-principen och grupprincipen har konfigurerats för att hantera samma inställning på samma dator åsidosätter grupprincipen principinställningen för Microsoft Intune. Information om hur du undviker konflikter mellan Intune-principer och grupprinciper finns i [Åtgärda konflikter mellan grupprincipobjekt och Microsoft Intune-principer](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Om du vill distribuera inställningar för Windows-brandväggen på datorer som kör Windows Vista, måste du först installera [Hotfix KB971800](http://support2.microsoft.com/kb/971800) på dessa datorer.
+> Om du vill distribuera inställningar för Windows-brandväggen på datorer som kör Windows Vista måste du först installera [Hotfix KB971800](http://support2.microsoft.com/kb/971800) på dessa datorer.
 
 > [!IMPORTANT]
 > Om du vill hantera Windows-brandväggen med hjälp av Intune ser du till att följande två tjänster är aktiverade på de datorer som du hanterar:
@@ -79,7 +80,7 @@ De här principinställningarna konfigurerar Windows-brandväggen så att inkomm
 Standardvärdet för var och en av de här inställningarna är **Ja**, vilket är det säkraste värdet.
 
 > [!IMPORTANT]
-> Om det finns hanterade datorer som kör Windows Vista utan något Service Pack i din miljö måste du antingen installera uppdateringen som är kopplad till [artikel 971800](http://go.microsoft.com/fwlink/?LinkId=188405) i Microsoft Knowledge Base eller inaktivera principinställningarna **Blockera alla inkommande anslutningar** i principer som distribueras till dessa datorer.
+> Om det finns hanterade datorer som kör Windows Vista utan något Service Pack i din miljö måste du antingen installera uppdateringen som är associerad med [artikel 971800](http://go.microsoft.com/fwlink/?LinkId=188405) i Microsoft Knowledge Base eller inaktivera principinställningarna **Blockera alla inkommande anslutningar** i principer som distribueras till dessa datorer.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Meddela användaren när ett nytt program blockeras av Windows-brandväggen
 

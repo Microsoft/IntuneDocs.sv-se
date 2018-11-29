@@ -5,20 +5,21 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 60d9398b80a30adee194470ac4e5c6c1efc0bd4c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 7cb7c23e673c9e0c074f45991333fde9bfc8e930
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744643"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186196"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
@@ -58,7 +59,10 @@ När anslutningen har konfigurerats är du redo att fjärradministrera en enhet.
 
 ![Exempel på hur du fjärradministrerar en Android-enhet](./media/android-teamviewer.png)
 
-När du startar en fjärrsession visas en meddelandeflagga på ikonen för företagsportalappen på slutanvändarens enhet. Ett meddelande visas också när appen öppnas. Användaren kan sedan acceptera begäran om fjärrhjälp.
+När du startar en fjärrsession ser användarna en meddelandeflagga på ikonen för företagsportalappen på enheten. Ett meddelande visas också när appen öppnas. Användarna kan då godkänna begäran om fjärrhjälp.
+
+> [!NOTE]
+> Windows-enheter som registreras med hjälp av ”användarlösa” metoder, t. ex. DEM och WCD, visar inte TeamViewer-meddelandet i företagsportalappen. I dessa fall rekommenderar vi att TeamViewer-portalen används för att skapa sessionen.
 
 I TeamViewer kan du utföra ett antal åtgärder på enheten, till exempel ta kontroll över enheten. Fullständig information om vad du kan göra finns i [vägledningen för TeamViewer](https://www.teamviewer.com/support/documents/).
 

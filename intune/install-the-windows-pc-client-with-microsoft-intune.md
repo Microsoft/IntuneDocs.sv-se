@@ -12,13 +12,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 322a60101132d5ef435752079bb5c52a7a4b3a78
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425027"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179098"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
 
@@ -117,9 +118,9 @@ Användare installerar Intune-klientprogrammet genom att gå till [företagsport
 
 Om användarna inte har tilldelats en licens för Intune eller om organisationens MDM-auktoritet inte har konfigurerats för Intune kan användarna inte se några alternativ för att registrera sig.
 
-Om användarna inte har tilldelats en licens för Intune och organisationens MDM-auktoritet har konfigurerats för Intune:
+Om användarna inte har tilldelats någon licens för Intune och organisationens MDM-utfärdare har konfigurerats för Intune:
 
-- Användare med Windows 7 eller Windows 8-datorer kan ENDAST se alternativet att registrera på Intune genom att hämta och installera klientprogrammet för datorer som är unik för deras organisation.
+- Användare med Windows 7 eller Windows 8-datorer kan ENDAST se alternativet att registrera på Intune, genom att hämta och installera den klientprogramvara som är unik för deras organisation.
 
 - Användare av Windows 10- eller Windows 8.1-datorer visas två registreringsalternativ:
 
@@ -256,7 +257,7 @@ Kontrollera "%ProgramFiles%\Microsoft\OnlineManagement" och se till att följand
 
 Avregistreringsprocessen tar inte bort mappen OnlineManagement. Vänta i 30 minuter efter avinstallationen och kör sedan det här kommandot. Om du kör det för tidigt kan avinstallationen lämnas i ett okänt tillstånd. Starta en kommandotolk med förhöjd behörighet och kör följande för att ta bort mappen:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Nästa steg
 [Hantera enheter med Microsoft Intune](device-management.md)

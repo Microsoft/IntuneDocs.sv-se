@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 28c8863e8739563a6b6c9152a46abb6bf50f2db5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312825"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189205"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -33,7 +34,7 @@ Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter
 
 Åtgärden **Rensa** återställer en enhet till standardinställningarna från fabriken. Användardata sparas om du markerar kryssrutan **Behåll registreringstillstånd och användarkonto**. I annat fall raderas enheten på ett säkert sätt.
 
-|Åtgärden Rensa|**Behåll registreringstillstånd och användarkonto**|Borttagen från Intune-hanteringen|Description|
+|Åtgärden Rensa|**Behåll registreringstillstånd och användarkonto**|Borttagen från Intune-hanteringen|Beskrivning|
 |:-------------:|:------------:|:------------:|------------|
 |**Rensning**| Inte markerad | Ja | Rensar alla användarkonton, data, MDM-principer och inställningar. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
 |**Rensning**| Markerad | Nej | Rensar alla MDM-principer. Behåller användarkonton och data. Återställer användarinställningar till standard. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
@@ -130,7 +131,7 @@ Du kan endast rensa kioskenheter. Du kan inte dra tillbaka Android-kioskenheter.
 
 ### <a name="windows"></a>Windows
 
-|Datatyp|Windows 8.1 (MDM) och Windows RT 8.1|Windows RT|Windows Phone 8.1 och Windows Phone 8|Windows 10|
+|Datatyp|Windows 8.1 (MDM) och Windows RT 8.1|Windows RT|Windows Phone 8.1 och Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Företagsappar och associerade data som installerats av Intune|Nycklar återkallas för filer som skyddas av EFS. Användaren kan inte öppna filerna.|Företagsappar tas inte bort.|Appar som ursrpungligen installerats via företagsportalen avinstalleras. Data som hör till företagsappar tas bort.|Apparna avinstalleras. Nycklar för separat inläsning tas bort.<br>För Windows 10 version 1703 (Creator Update) och senare tas inte Office 365 ProPlus-appar bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|

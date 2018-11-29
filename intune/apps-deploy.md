@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f7b875d370880f28fa6a611bd5f66fb54b02955d
-ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
+ms.openlocfilehash: a9afde942f2784cb2fb42b13d11a127e3c9811a1
+ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51610115"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267262"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -65,6 +66,8 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 
      > [!NOTE]
      > **Endast för iOS-appar**: Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app kan du välja VPN-profilen under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
+     >
+     > **Endast för Android-appar**: Om du distribuerar en Android-app som **Tillgänglig med eller utan registrering** blir den rapporterade statusen endast tillgänglig på registrerade enheter.
 
 9. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av den här apptilldelningen.
 10. Klicka på **Välj** när du har valt en eller flera grupper som ska inkluderas.

@@ -13,17 +13,18 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ff5686e2d83831259bd21bee164b3c187e1c0ee
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 20a99290d2a84c22bc2bee823d7a3bb42e43aced
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231363"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180586"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i Intune
 
-Från och med version 1704 av Intune kan administratörer se den rapportinformation som relaterar till Exchange ActiveSync-enhetsposter som har synkroniserats med Intune via Exchange Connector lokalt eller Intune Service to Service Connector (Exchange Online Connector). Efterlevnadsrapporteringen för villkorlig åtkomst innehåller en översikt över enheter med olika synkroniseringstillstånd:
+Från och med version 1704 av Intune kan administratörer se den rapportinformation som avser Exchange ActiveSync-enhetsposter som har synkroniserats med Intune via Exchange Connector lokalt, eller Intune Service to Service Connector (Exchange Online Connector). Efterlevnadsrapporteringen för villkorlig åtkomst innehåller en översikt över enheter med olika synkroniseringstillstånd:
 
 -   **Tillåt**
 
@@ -37,9 +38,9 @@ Från och med version 1704 av Intune kan administratörer se den rapportinformat
 
 2.  När du har loggat in visas **Azure-instrumentpanelen**.
 
-3.  Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
+3.  Välj  **Alla tjänster**  på den vänstra menyn och skriv sedan  **Intune**  i textrutans filter.
 
-4.  Välj **Intune**. **Intune-instrumentpanelen** visas.
+4.  Välj  **Intune**. **Intune-instrumentpanelen** visas.
 
 5.  Välj först **Villkorlig åtkomst** och sedan **Översikt**.
 

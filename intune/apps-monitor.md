@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 09e4cfc314ea21294cd3de62611a089ec724a683
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075635"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181895"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Övervaka appinformation och tilldelningar med Microsoft Intune
 
@@ -67,7 +68,9 @@ Diagrammet visar antal appar för följande status:
 >    - En måländring för en installerad app som hanteras kan göra att antalet installerade appar på statusbladet minskar, men appen rapporteras fortfarande som identifierad.
 >    - Om flera instanser av samma app är mål i en klientorganisation blir antalen olika eftersom användare eller enheter kan överlappa. Varje instans av appen räknar överlappande användare, men det kommer att finnas dubbletter bland de identifierade apparna.
 >    - Identifierade appar och appstatus samlas in under olika tidsintervall, och det här kan leda till avvikelser i antalet appar.
- 
+> 
+> Tänk också på att Android-appar som distribueras som **Tillgänglig med eller utan registrering** bara rapporterar appens installationsstatus för registrerade enheter. Appens installationsstatus är inte tillgänglig för enheter som inte har registrerats i Intune.
+
 ### <a name="device-install-status"></a>Installationsstatus för enhet
 
 En statuslista för enheten visas när du väljer **Installationsstatus för enhet** i avsnittet **Övervakare** i menyn. Tabellen med information innehåller följande kolumner:

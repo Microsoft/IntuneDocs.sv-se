@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad8e874dda47b7c6deeb614b0f893f7c922241ce
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 29a3f6c6e320f970ef7b2b086b8d25ab82453199
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236347"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179413"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 Intunes hanteringstillägg gör det möjligt att ladda upp PowerShell-skript i Intune för att köra Windows 10-enheter. Hanteringstillägget kompletterar funktioner för hantering av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att flytta till modern hantering.
@@ -27,9 +28,9 @@ Intunes hanteringstillägg gör det möjligt att ladda upp PowerShell-skript i I
 ## <a name="moving-to-modern-management"></a>Flytta till modern hantering
 Slutanvändarens databehandling genomgår en digital transformation. Klassisk, traditionell IT fokuserar på en enskild enhetsplattform, företagsägda enheter, användare som arbetar från kontoret och en mängd manuella, reaktiva IT-processer. Men en modern arbetsplats har flera enhetsplattformar som är både användarägda och företagsägda, låter användarna arbeta från valfri plats och tillhandahåller automatiska och proaktiva IT-processer. 
 
-MDM-tjänster som Microsoft Intune kan hantera Windows 10-enheter med hjälp av MDM-protokollet. Den inbyggda Windows 10-hanteringsklienten kan kommunicera med Intune för att utföra hanteringsuppgifter för företag. Den hjälper dig att satsa på modern hantering på Windows 10-enheter. Vissa funktioner som du kan behöva är dock för närvarande inte är tillgängliga i Windows 10 MDM. Till exempel, avancerad enhetskonfiguration, felsökning och äldre Win32-apphantering. För de här funktionerna kan du köra Intune-programvaruklienten på Windows 10-enheter. Därför kan du inte använda de nya funktionerna som Windows 10 MDM tillhandahåller. [Jämför Intune-programvaruklienten och Windows 10 MDM](https://docs.microsoft.com/intune-classic/deploy-use/pc-management-comparison).
+MDM-tjänster som Microsoft Intune kan hantera Windows 10-enheter med hjälp av MDM-protokollet. Den inbyggda Windows 10-hanteringsklienten kan kommunicera med Intune för att utföra hanteringsuppgifter för företag. Den hjälper dig att satsa på modern hantering på Windows 10-enheter. Vissa funktioner som du kan behöva, t.ex. avancerad enhetskonfiguration, är dock för närvarande inte tillgängliga i de inbyggda MDM-funktionerna i Windows 10.
 
-Tillägget för Intune -hantering kompletterar de inbyggda funktionerna i Windows 10 MDM. Du kan skapa PowerShell-skript som tillhandahåller de funktioner som du behöver och sedan köra dessa på Windows 10-enheter. Du kan till exempel skapa ett PowerShell-skript som installerar en äldre Win32-app på Windows 10-enheter, ladda upp skriptet till Intune, tilldela det till en grupp i Azure Active Directory (AD) och sedan köra skriptet på Windows 10-enheter. Du kan sedan övervaka körstatusen för skriptet på Windows 10-enheter från början till slut.
+Tillägget för Intune -hantering kompletterar de inbyggda funktionerna i Windows 10 MDM. Du kan skapa PowerShell-skript som tillhandahåller de funktioner som du behöver och sedan köra dessa på Windows 10-enheter. Du kan skapa ett PowerShell-skript som konfigurerar dina anpassade inställningar, laddar upp skriptet till Intune, tilldelar det till en grupp i Azure Active Directory (AD) och sedan kör skriptet på Windows 10-enheter. Skriptet kan sedan övervakas för att se körstatus för skriptet på Windows 10-enheter från början till slut.
 
 ## <a name="prerequisites"></a>Krav
 Intune-hanteringstillägget har följande krav:
@@ -55,7 +56,6 @@ Intune-hanteringstillägget har följande krav:
 3. Välj en eller flera grupper som innehåller de användare vars enheter skriptet ska köras på. **Välj** att tilldela principen till de valda grupperna.
 
 > [!NOTE]
-> - PowerShell-skript kan inte tillämpas på datorgrupper.
 > - Slutanvändare behöver inte vara inloggade på enheten för att köra PowerShell-skript. 
 > - PowerShell-skript i Intune kan riktas till säkerhetsgrupper för AAD-enheter.
 

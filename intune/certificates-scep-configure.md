@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b0ee2b2ad8d25d1040577a7f8abff4377704d2d5
-ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
+ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52167543"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303880"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -66,7 +67,7 @@ Vi rekommenderar starkt att du publicerar NDES-servern via en omvänd proxy, til
 |**Certifikatmall**|Konfigurera den här mallen hos den utfärdande certifikatutfärdaren.|
 |**Certifikat för klientautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från en offentlig certifikatutfärdare. Du installerar certifikatet på NDES-servern.|
 |**Certifikat för serverautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från en offentlig certifikatutfärdare. Du installerar och binder SSL-certifikatet i IIS på NDES-servern. Om certifikatet har användningarna av klientens och serverns autentiseringsnycklar inställt på (**Förbättrad nyckelanvändning**) kan du använda samma certifikat.|
-|**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta certifikat som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren. Sedan tilldelar du den till enheter med hjälp av certifikatprofilen för betrodd certifikatutfärdare.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
+|**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta certifikat som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren. Sedan tilldelar du den till användare, enheter eller båda med hjälp av certifikatprofilen för betrodd certifikatutfärdare.<br /><b>Obs!<b /> När en profil för SCEP-certifikatet har tilldelats så måste du tilldela den betrodda rotcertifikatsprofil som refereras i SCEP-certifikatprofilen till samma användare eller enhetsgrupp.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
 
 ### <a name="accounts"></a>Konton
 
@@ -481,7 +482,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
      - **Digital signatur:** Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
    - **Nyckelstorlek (bitar)**: Välj antalet bitar i nyckeln
    - **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för.
-   - **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen.
+   - **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren och/eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen. Glöm inte att tilldela den här betrodda rotcertifikatprofilen till samma grupp som tilldelats i SCEP-certifikatprofilen.
    - **Utökad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
    - **Registreringsinställningar**
      - **Tröskelvärde för förnyelse (%)**: Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
