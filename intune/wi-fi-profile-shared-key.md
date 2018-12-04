@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 59736ad188cf88c994ff93b4a505731afad8f550
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: a7250471e698d32a305755147943311d2150f0b2
+ms.sourcegitcommit: a27a9c4cae47be50807aa3c890f0d5c0c023f04a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186332"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52618194"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,9 +34,8 @@ I förväg delade nycklar (PSK) används vanligtvis för att autentisera använd
 ## <a name="before-you-begin"></a>Innan du börjar
 
 - Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen längre ned i den här artikeln.
-- För Android kan du också använda [Androids PSK-generator](http://intunepskgenerator.johnathonb.com/).
 - Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
-- För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda [PSK-generatorn för mobil konfiguration för iOS](http://intunepskgenerator.johnathonb.com/).
+- För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator.
 - PSK kräver en sträng med 64 hexadecimala siffror eller en lösenfras med 8 till 63 utskrivbara ASCII-tecken. Vissa tecken, till exempel asterisk (*), stöds inte.
 
 ## <a name="create-a-custom-profile"></a>Skapa en anpassad profil
