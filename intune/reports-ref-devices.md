@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2782190f043a6d0c2d1af52d5a77fd3ce53b739f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 69c8b4a5b786768d315bfe6ec707b8c4b915c93a
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181459"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112943"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -316,7 +316,7 @@ Entiteten **DevicePropertyHistory** innehåller samma egenskaper som enhetstabel
 
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
-Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder av inventeringsinformation för mobilenhetshanterade enheter (MDM) under de senaste 90 dagarna. I kolumnen DateKey visas radens dag. Vissa egenskaper kanske inte kan användas eller har inte fyllts i för alla enheter. Mer information finns på den här sidan. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune).
+Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder av inventeringsinformation för mobilenhetshanterade enheter (MDM) under de senaste 90 dagarna. I kolumnen DateKey visas radens dag. Vissa egenskaper kanske inte kan användas eller har inte fyllts i för alla enheter. Mer information finns på den här sidan. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](device-inventory.md).
 
 | Egenskap  | Beskrivning |
 |---------|------------|

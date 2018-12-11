@@ -15,12 +15,12 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 27f3a184e355f63d20a79fd92e8326206f6eee15
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9bbf6f30b7a7490608f9896ae8fe54e27341ccae
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185635"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112331"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune i Azure-konsolen och äldre Intune PC-klient
 
@@ -53,7 +53,7 @@ Vi kommer att fortsätta att stödja befintliga Intune PC-klientfunktioner enbar
 
 ## <a name="mdm-capabilities"></a>MDM-funktioner
 
-En detaljerad jämförelse mellan funktionerna i PC-klienten och MDM finns i [jämför hantering av Windows-datorer som datorer eller mobila enheter](https://docs.microsoft.com/intune-classic/deploy-use/pc-management-comparison). MDM-uppdateringar kommer att fortsätta introducera nya hanteringsfunktioner till MDM-registrerade Windows 10-enheter, inklusive utvärdering av alternativ för Win 32-appar. Visa [nyheter](https://docs.microsoft.com/intune/whats-new) för de senaste versionstilläggen till tjänsten.
+En detaljerad jämförelse mellan funktionerna i PC-klienten och MDM finns i [jämför hantering av Windows-datorer som datorer eller mobila enheter](pc-management-comparison.md). MDM-uppdateringar kommer att fortsätta introducera nya hanteringsfunktioner till MDM-registrerade Windows 10-enheter, inklusive utvärdering av alternativ för Win 32-appar. Visa [nyheter](https://docs.microsoft.com/intune/whats-new) för de senaste versionstilläggen till tjänsten.
 
 ## <a name="switch-from-pc-client-to-mdm"></a>Växla från PC-klienten till MDM
 
