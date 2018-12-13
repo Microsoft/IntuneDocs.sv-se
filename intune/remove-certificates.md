@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dabd5b6ca2f8bb01421c24cb7c16ab57cf59ef56
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 06b568ee7cc2dc55a8d44cf04b96078b47d8c4b3
+ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52579174"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Ta bort SCEP- och PKCS-certifikat i Microsoft Intune
 
@@ -43,8 +43,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
   - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
+  - Certifikatprofilen tas bort från grupptilldelningen
 
 - Ett SCEP-certifikat återkallas när:
   - Administratören ändrar eller uppdaterar SCEP-profilen
@@ -53,7 +52,6 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - En slutanvändare avregistrerar sig
   - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
 
 - SCEP-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
   - En slutanvändare förlorar sin Intune-licens
@@ -78,8 +76,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören drar tillbaka Intune-licensen
   - Administratören tar bort användaren eller gruppen från Azure AD
   - Administratören ändrar eller uppdaterar PKCS-profilen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
-  - Efterlevnadsprincipen tas bort från grupptilldelningen 
+  - Certifikatprofilen tas bort från grupptilldelningen
 
 
 ## <a name="ios-devices"></a>iOS-enheter
@@ -92,8 +89,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
   - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
+  - Certifikatprofilen tas bort från grupptilldelningen
 
 - Ett SCEP-certifikat återkallas när:
   - Administratören ändrar eller uppdaterar SCEP-profilen
@@ -102,7 +98,6 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - En slutanvändare avregistrerar sig
   - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
 
 - SCEP-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
   - En slutanvändare förlorar sin Intune-licens
@@ -118,8 +113,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
 
 - Ett PKCS-certifikat tas bort när:
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
+  - Certifikatprofilen tas bort från grupptilldelningen
   
 - Rotcertifikat tas bort när:
   - En slutanvändare avregistrerar sig
@@ -143,8 +137,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
 - Ett SCEP-certifikat återkallas när:
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
   - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
+  - Certifikatprofilen tas bort från grupptilldelningen
   - Administratören tar bort användaren eller gruppen från Azure Active Directory (AD)
   - Administratören ändrar eller uppdaterar SCEP-profilen
 
@@ -176,8 +169,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - Administratören drar tillbaka Intune-licensen
   - Administratören tar bort användaren eller gruppen från Azure AD
   - Administratören ändrar eller uppdaterar PKCS-profilen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
-  - Efterlevnadsprincipen tas bort från grupptilldelningen 
+  - Certifikatprofilen tas bort från grupptilldelningen
   
   
 > [!NOTE]
@@ -191,8 +183,7 @@ Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- 
   - En slutanvändare avregistrerar sig
   - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
   - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Efterlevnadsprincipen tas bort från grupptilldelningen
-  - Konfigurationsprofilen tas bort från grupptilldelningen
+  - Certifikatprofilen tas bort från grupptilldelningen
 
 - Ett SCEP-certifikat återkallas när:
   - Administratören ändrar eller uppdaterar SCEP-profilen

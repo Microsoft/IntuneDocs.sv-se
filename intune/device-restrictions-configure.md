@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/27/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9b84877d37d26dababda2987801fc7267cb3c2e6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 11b241a14ed70a2e999fa505449cd12cdd1e025e
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181215"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728794"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurera inställningar för enhetsbegränsningar i Microsoft Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Med enhetsbegränsningar kan du kontrollera en mängd olika inställningar och funktioner som du hanterar i flera kategorier, bland annat:
 - Säkerhet
@@ -36,20 +34,24 @@ Lär dig grunderna för enhetsbegränsningsprofiler och läs sedan ytterligare a
 
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Skapa en enhetsprofil med inställningar för enhetsbegränsningar
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-4. Ange ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
-5. Välj den enhetsplattform på vilken du vill tillämpa anpassade inställningar från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
+1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+4. Välj den enhetsplattform på vilken du vill tillämpa anpassade inställningar från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
+
     - **Android**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
-6. I listrutan **Profil** väljer du **Enhetsbegränsningar**. Om du vill skapa en enhetsbegränsningsprofil för Windows 10 Team-enheter, som en Surface Hub, väljer du **Enhetsbegränsningar (Windows 10 Team)**.
-7. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
+
+5. I listrutan **Profil** väljer du **Enhetsbegränsningar**. För att skapa en enhetsbegränsningsprofil för Windows 10 Team-enheter, som en Surface Hub, väljer du sedan **Enhetsbegränsningar (Windows 10 Team)**.
+6. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Välj din plattforms detaljerade inställningar:
+
     - [Inställningar för Android](device-restrictions-android.md)
+    - [Inställningar för Android Enterprise](device-restrictions-android-for-work.md)
     - [Inställningar för iOS](device-restrictions-ios.md)
     - [Inställningar för macOS](device-restrictions-macos.md)
     - [Inställningar för Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
@@ -57,11 +59,14 @@ Lär dig grunderna för enhetsbegränsningsprofiler och läs sedan ytterligare a
     - [Inställningar för Windows 10](device-restrictions-windows-10.md)
     - [Inställningar för Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Inställningar för Windows Holographic for Business](device-restrictions-windows-holographic.md)
-    - [Inställningar för Android-arbetsprofil](device-restrictions-android-for-work.md)
-8. När du är klar går du tillbaka till sidan **Skapa profil** och klickar på **Skapa**.
 
-Profilen skapas och visas på sidan med profillistan.
-Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
+7. När du är klar går du tillbaka till sidan **Skapa profil** och väljer **Skapa**.
+
+Profilen skapas och visas på sidan med profillistan. 
+
+## <a name="next-step"></a>Nästa steg
+
+När profilen har skapats är den klar att tilldelas. Se [tilldela enhetsprofiler](device-profile-assign.md) för anvisningar. 
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/15/2018
+ms.date: 12/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0dc1974a57e5a5aa6808936c37e02fd31a7cac7b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187302"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829155"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Fristående Intune – Win32-apphantering (offentlig förhandsversion)
 
@@ -29,15 +29,11 @@ Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-ap
 
 ## <a name="prerequisites-for-public-preview"></a>Krav för den offentliga förhandsversionen
 
-- Windows 10 version 1607 eller senare (företag)
+- Windows 10 version 1607 eller senare (Enterprise- och Pro Education-versionerna)
 - Windows 10-klienten måste vara: 
     - ansluten till Azure Active Directory (AAD) eller Hybrid Azure Active Directory och
     - registrerad i Intune (MDM-hanterad)
 - Storleken för Windows-program är högst 8 GB per app i den offentliga förhandsversionen 
-
-> [!NOTE]
-> För närvarande testar vi Pro- och Education-versionerna av Windows 10 version 1607 och vi vill gärna höra dina synpunkter.
-
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Förbereda Win32-appinnehållet för uppladdning
 
@@ -227,6 +223,10 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 8.  I appfönstret **Tilldelningar** väljer du **Spara**.
 
 Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Information om tilldelning och övervakning av appar finns i [Tilldela appar till grupper med Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) och [Övervaka appinformation och tilldelningar med Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+
+## <a name="delivery-optimization"></a>Leveransoptimering
+
+Windows 10 RS3 och högre klienter hämtar Intune Win32-appinnehåll med en komponent för leveransoptimering på Windows 10-klienten. Leveransoptimering ger Peer-to-Peer-funktioner som är aktiverat som standard. Leveransoptimering kan konfigureras av en grupprincip och i framtiden via Intune MDM. Mer information finns i [leveransoptimering för Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 ## <a name="install-required-and-available-apps-on-devices"></a>Installera nödvändiga och tillgängliga appar på enheter
 

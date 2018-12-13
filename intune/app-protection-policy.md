@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d974e6db3543ef3ba0b11cf67989260e429dde4c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
+ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179175"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389877"
 ---
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
@@ -66,9 +66,9 @@ Det finns ytterligare fördelar med att använda MDM med appskyddsprinciper. Fö
 
 
 ### <a name="supported-platforms-for-app-protection-policies"></a>Plattformar som stöds för appskyddsprinciper
-Plattformsstödet för Intune-appskyddsprinciper är synkroniserat med plattformsstödet för Office-mobilprogram. Mer information finns i avsnittet **Mobilappar** i [Systemkrav för Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
+Plattformsstödet för Intune-appskyddsprinciper är synkroniserat med plattformsstödet för Office-mobilprogram för Android- och iOS-enheter. Mer information finns i avsnittet **Mobilappar** i [Systemkrav för Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-Windows-enheter stöds inte för tillfället. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+Windows-enheter stöds inte för tillfället. Du kan dock använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>Hur appskyddsprinciper skyddar appdata
@@ -146,7 +146,9 @@ Medan den **Globala** principen gäller för alla användare i din klient kommer
 
 Med appar som stöder flera identiteter kan du använda olika konton (arbetskonton och privata konton) för att få åtkomst till samma appar, där appskyddsprinciperna endast tillämpas när apparna används i arbetskontexten.
 
-Anta exempelvis att en användare startar appen OneDrive med sitt arbetskonto. De kan inte flytta filerna till en personlig lagringsplats i ett arbetskontext. Om användaren senare använder OneDrive med ett personligt konto kan hen kopiera och flytta data från sin personliga OneDrive utan begränsningar.
+För ett exempel på privat kontext, anta att en användare som startar ett nytt dokument i Word, då anses detta vara privat kontext så Intune-appskyddsprinciper tillämpas inte. När dokumentet sparas på företagets OneDrive-konto kommer det anses vara företagskontext och Intune-appskyddsprinciperna tillämpas.
+
+Anta som ett exempel på ett arbetskontext att en användare startar appen OneDrive med sitt arbetskonto. De kan inte flytta filerna till en personlig lagringsplats i ett arbetskontext. Om användaren senare använder OneDrive med ett personligt konto kan hen kopiera och flytta data från sin personliga OneDrive utan begränsningar.
 
 - Mer information om appar som stöder [MAM och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.
 

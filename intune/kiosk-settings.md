@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7552c9c1fa8e94560505a8971143886160cff6ce
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 574bc38fb9ce47d2b051a74f3f931139c0de7224
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185968"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728845"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Kioskinställningar för Windows 10 (och senare) i Intune
 
@@ -200,3 +200,5 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
 ## <a name="next-steps"></a>Nästa steg
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+
+Du kan också skapa profiler för helskärmsläge för [Android](device-restrictions-android.md#kiosk)- och [Android Enterprise](device-restrictions-android-for-work.md#kiosk-settings)-enheter.

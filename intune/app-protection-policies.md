@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2018
+ms.date: 11//28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2e0331210a10727ff5753e6c227777cd1ebb16d9
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185979"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728828"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -74,10 +74,14 @@ Nya principer som du skapar distribueras inte till alla användare förrän du u
 
    ![Skärmbild av fönstret Tilldelningar med menyalternativet Välj grupper att ta med markerat](./media/app-protection-policy-add-users.png)
 
-3.  En lista över alla säkerhetsgrupper i **Azure Active Directory** visas. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. När du väljer **Välj** distribueras principen till användarna.
+3.  En lista över alla säkerhetsgrupper i **Azure Active Directory** visas. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. 
 
     ![Skärmbild av fönstret Lägg till användargrupp som visar listan med Azure Active Directory-användare](./media/azure-ad-user-group-list.png)
 
+4.  När du har inkluderat och exkluderat grupper sparar du konfigurationen genom att välja **Spara** och distribuera principen till användarna. Om du väljer **Ignorera** innan du sparar konfigurationen ignoreras alla ändringar som du har gjort på flikarna *Inkludera* och *Exkludera*.   
+ 
+     ![Skärmbild som visar alternativen för att spara och ta bort](./media/save-assignment.png)
+  
 Nu har du skapat en princip och distribuerat den till användare.
 
 Endast användare med tilldelade Microsoft Intune-licenser påverkas av principen. De användare i den valda säkerhetsgruppen som inte har en tilldelad Intune-licens påverkas inte.
@@ -109,9 +113,13 @@ För att kunna se effekten av ändringarna direkt måste slutanvändaren logga u
 
 2.  I fönstret *Intune-appskydd* väljer du **Tilldelningar** för att öppna fönstret **Intune-appskydd – Tilldelningar** som visar en lista med aktuella användargrupper som har den här principen.
 
-3.  Om du vill lägga till en ny användargrupp för principen väljer du **Välj grupper att ta med** på fliken **Inkludera** och sedan användargruppen. Välj **Välj** om du vill distribuera principen till den grupp du valt.
+3.  Om du vill lägga till en ny användargrupp för principen väljer du **Välj grupper att ta med** på fliken *Inkludera* och sedan användargruppen. Lägg till gruppen genom att välja **Välj**. 
 
-4.  Om du vill ta bort en användargrupp väljer du **Välj grupper att utesluta** på fliken **Undanta** och sedan användargruppen. Välj **Välj** för att ta bort användargruppen.
+4.  Om du vill exkludera en användargrupp väljer du **Välj grupper att exkludera** på fliken *Exkludera* och väljer sedan användargruppen. Välj **Välj** för att ta bort användargruppen.  
+
+5.  Om du vill ta bort grupper som har lagts till tidigare markerar du ellipsen (...) och väljer **Ta bort** på någon av flikarna *Inkludera* eller *Exkludera*. 
+
+5.  När dina ändringar av tilldelningarna är klar sparar du konfigurationen genom att välja **Spara** och distribuerar principen till den nya uppsättningen användare. Om du väljer **Ignorera** innan du sparar konfigurationen ignoreras alla ändringar som du har gjort på flikarna *Inkludera* och *Exkludera*.
 
 ### <a name="to-change-policy-settings"></a>Ändra principinställningar
 

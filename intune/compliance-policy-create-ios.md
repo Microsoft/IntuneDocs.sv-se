@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 56427f5b6d72d952ce9c388b4d5289d3075b7df0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 35091139e3afaabac4fad0b22fc6096cf7ada7c3
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182286"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728879"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Lägga till en enhetsefterlevnadsprincip för iOS-enheter i Intune
 
@@ -54,7 +54,8 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 ## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. För **Plattform**, välj **iOS**. Välj **Inställningar** för att konfigurera och ange inställningar för **E-post**, **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet**. När du är klar väljer du **OK**, och **Skapa**.
+4. För **Plattform**, välj **iOS**. 
+5. Välj **Inställningar** för att konfigurera och ange inställningar för **E-post**, **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet** som beskrivs i det här avsnittet. När du är klar väljer du **OK**, och **Skapa**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -88,6 +89,8 @@ Information om e-postprofiler finns i [Konfigurera åtkomst till företagets e-p
 
 - **Lägsta operativsystemversion som krävs**: När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Användarna kan välja att uppgradera sina enheter. Därefter har de åtkomst till företagsresurser.
 - **Högsta tillåtna version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
+- **Lägsta OS-versionsnumret**: När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av Operativsystemet. Använd denna funktion för att ange ett minsta tillåtna versionsnummer på enheten. Den här kompatibilitetskontrollen stöder enheter som kör iOS 8.0 och senare. 
+- **Högsta OS-versionsnumret**: När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av Operativsystemet. Använd denna funktion för att ange ett högsta tillåtna versionsnummer på enheten. Den här kompatibilitetskontrollen stöder enheter som kör iOS 8.0 och senare.
 
 ## <a name="system-security"></a>Systemsäkerhet
 

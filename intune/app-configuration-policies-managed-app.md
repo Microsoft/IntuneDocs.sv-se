@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2407225bfd0cdb5892663bf2e66de36157aaf4e0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 24b64d4d7b2ccd376f666e9d7961706025b6eaad
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182014"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829112"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
@@ -40,7 +40,7 @@ Du kan använda appkonfigurationsprinciper med hanterade appar som har stöd fö
       Beskrivning av den profil som visas i Azure Portal.
     - **Enhetsregistreringstyp**  
       Välj **Hantera appar**.
-6. Välj  **Associerad app**  för att välja den app som du ska konfigurera. Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
+6. Välj den app som ska konfigureras genom att välja **Associerad app** . Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
 7. För varje konfigurationsinställning som stöds av appen anger du **Namn** och **Värde**, och väljer sedan ellipsen (**...**).  
     Välj ellipsen (**...**) och välj **Ta bort** för att ta bort en konfiguration.  
     

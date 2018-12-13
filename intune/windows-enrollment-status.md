@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ada9fee575824d27a6bfdd8f14d4845d228467db
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b953ea281ad785d8a0ce7bee4b0f6d420b785dd9
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186101"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52729049"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
@@ -61,6 +61,16 @@ En enhet eller användare kan tillhöra flera grupper och ha flera profiler för
 2. Hovra över profilen i listan.
 3. Använd de tre lodräta punkterna och dra profilen till önskad plats i listan.
 
+## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Blockera åtkomst till en enhet tills ett visst program har installerats
+
+Du kan ange vilka appar som måste installeras innan användaren kan komma åt skrivbordet.
+
+1. I Intune väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)**.
+2. Välj en profil > **Inställningar**.
+3. Välj **Ja** för **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler).
+4. Välj **Ja** för **Block device use until all apps and profiles are installed** (Blockera enhetsanvändning tills alla appar och profiler är installerade).
+5. Välj **Valda** för **Block device use until these required apps are installed if they are assigned to the user/device** (Blockera enhetsanvändning tills följande obligatoriska appar har installerats, om de är tilldelade till användaren/enheten).
+ 6. Välj **Välj appar** > välj apparna > **Välj** > **Spara**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Spårningsinformation på statussidan för registrering
 

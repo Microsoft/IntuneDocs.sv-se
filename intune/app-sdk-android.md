@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 12c48a00e4b755409b698d5f2ee6182403802f23
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c556bab6deadc0db0ea625ee3c26bba636ea497d
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190412"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829189"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -639,21 +639,9 @@ Inga ytterligare manifestvärden behöver konfigureras.
 
 Authority och NonBrokerRedirectURI kan anges om det behövs.
 
-Registrera din app med Azure AD med hjälp av följande steg.
-
-På Azure-portalen:
-1.  Gå till bladet **Azure Active Directory**.
-2.  Välj konfigurationen **Appregistrering** för programmet.
-3.  I **Inställningar** och under rubriken **API-åtkomst** väljer du **Required permission** (Nödvändig behörighet). 
-4.  Klicka på **+ Lägg till**.
-5.  Klicka på **Välj ett API**. 
-6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
-7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
-8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
-9.  Klicka på **Klar**.
-10. Klicka på **Bevilja** och klicka sedan på **Ja**. 
-
-Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
+Registrera din app med Azure AD med hjälp av följande steg:
+* Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
+* Se till att stegen som ger din Android appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”. 
 
 Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
 
@@ -922,7 +910,7 @@ Med Intune kan du använda alla tillgängliga [funktioner för automatisk säker
     ```
 
 
-2. **[Valfritt]**  Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
+2. **[Valfritt] ** Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
 
 3. När du har bestämt vilken typ av fullständig säkerhetskopiering som din app ska använda (ofiltrerad, filtrerad eller ingen) ska du ange attributet `android:fullBackupContent` som sant, falskt eller till en XML-resurs i appen.
 

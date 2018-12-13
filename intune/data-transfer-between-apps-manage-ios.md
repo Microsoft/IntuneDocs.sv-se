@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d5a2bc0939da5ee4cb35585a930f145b832a58ad
-ms.sourcegitcommit: 0dbce0415e53fe963dc7f927ac4b0c06411f199c
+ms.openlocfilehash: e252822569723be6cfe18e488f79a7605f21193c
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281113"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728675"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -38,7 +38,7 @@ Använd appskyddsprinciper med iOS-funktionen **Öppna i hantering** för att sk
 
 -   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningarna för appskyddsprincipen med **Tillåt endast att appen överför data till principhanterade appar**. Beteendet *Öppna-i* för en principhanterad app visar enbart andra principhanterade appar som alternativ för delning. Om en användare försöker skicka en principskyddad fil som en bilaga från OneDrive i den inbyggda e-postappen kommer det inte gå att läsa filen.
 
--   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Tillåt att appen överför data till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Tillåt att appen tar emot data från andra appar** och väljer önskad nivå för datamottagning. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-relocation-settings).   
+-   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Tillåt att appen överför data till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Tillåt att appen tar emot data från andra appar** och väljer önskad nivå för datamottagning. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-protection-settings).   
 
 -   **Enheter som hanteras av en MDM-lösning från tredje part:** Du kan begränsa dataöverföringen till endast hanterade appar med hjälp av iOS-funktionen **Öppna i hantering**.
 För att säkerställa att appar som du distribuerar med en MDM-lösning från tredje part också är associerade med dina Intune-appskyddsprinciper måste du konfigurera användarinställningen för UPN enligt beskrivningen i följande avsnitt: [Konfigurera användarinställningar för UPN](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). När appar distribueras med användarinställningen för UPN så tillämpas appskyddsprinciperna på appen när användaren loggar in med sitt arbetskonto.
@@ -52,7 +52,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 3.  Distribuera appen med följande appkonfigurationsinställningar:
 
-      **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
+      **nyckel** = IntuneMAMUPN, **värde** = <username@company.com>
 
       Exempel: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
@@ -65,7 +65,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 2. Ange följande inställning i avsnittet för programkonfiguration:
 
-   **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
+   **nyckel** = IntuneMAMUPN, **värde** = <username@company.com>
 
    Den exakta syntaxen för nyckel/värde-paret kan variera beroende på MDM-lösning. I följande tabell finns exempel på tredjepartsleverantörer av MDM-lösningar och de exakta värden som du bör ange för nyckel/värde-paret.
 

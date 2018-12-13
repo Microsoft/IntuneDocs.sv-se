@@ -16,12 +16,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2ef7ebf495511e1d5c04aa8a9c459ba48f3dbb42
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 3a0f9a55fd3d5db8b36db09f4a83d5c09db29725
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180871"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829121"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrera Windows-enheter med hjälp av Windows Autopilot  
 Med Windows Autopilot blir det enklare att registrera enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -82,8 +82,8 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     - **Självdistribution (förhandsversion)**: (nyaste [Windows 10 Insider Preview-version](https://docs.microsoft.com/windows-insider/at-work-pro/) krävs) Enheter med den här profilen associeras inte med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten.
 5. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
 6. Välj **välkomstprogrammet (OOBE)**, konfigurera följande alternativ och välj **Spara**:
-    - **Språk (Region)***: Välj språket du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
-    - **Konfigurera tangentbord automatiskt***: Om ett **Språk (Region)** har valts väljer du **Ja** för att hoppa över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
+    - **Språk (Region)**\*: Välj språket du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
+    - **Konfigurera tangentbord automatiskt**\*: Om ett **Språk (Region)** har valts väljer du **Ja** för att hoppa över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
     - **Licensavtal för slutanvändare (EULA)**: (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
     - **Sekretessinställningar**: Välj om du vill visa sekretessinställningar för användarna.
     - **Hide change acount options (Windows Insider only)** (Dölj alternativ för att ändra konto (endast Windows Insider)): Välj **Dölj** om du vill förhindra att alternativ för att ändra konto visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).

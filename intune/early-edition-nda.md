@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/5/2018
+ms.date: 12/3/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: fbe8cc0fc3e835ee5807dfbe56ea1aa3c728547e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d00c367cdcd0b8172d64c3ebbcd0dec2165407c9
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184734"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829138"
 ---
-# <a name="the-early-edition-for-microsoft-intune---november-2018"></a>Den tidiga utgåvan för Microsoft Intune – November 2018
+# <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Den tidiga utgåvan för Microsoft Intune – December 2018
 
 > [!Note]
 > Meddelande om sekretessavtal: Följande ändringar håller på att utvecklas för Intune. Den här informationen har mycket begränsad spridning, i enlighet med sekretessavtalet. Sprid inte den här informationen vidare på sociala medier eller offentliga webbplatser, till exempel Twitter, UserVoice, Reddit och så vidare. 
@@ -40,40 +40,105 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
  
 ## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
 
-<!-- 1811 start -->
+<!-- 1812 start -->
 
-### <a name="uninstalling-apps-on-corporate-owned-supervised-ios-devices----1281677---"></a>Avinstallera appar på företagsägda övervakade iOS-enheter <!-- 1281677 -->
-Du kommer att kunna ta bort alla appar på företagsägda övervakade iOS-enheter. Du kan ta bort en app genom att rikta antingen användar- eller enhetsgrupper med tilldelningstypen **avinstallera**. För personliga eller ej kontrollerade iOS-enheter kommer du fortsätta kunna ta bort appar som har installerats med hjälp av Intune.
+### <a name="android-enterprise-app-we-app-deployment----1171203---"></a>Appdistribution för Android Enterprise APP-WE <!-- 1171203 -->
+För Android-enheter i ett distributionsscenario med en appskyddsprincip utan registrering (APP-WE) kommer du att kunna använda hanterade Google Play för att distribuera store-appar och LOB-appar till användare. Mer specifikt kan IT-avdelningen kan ge slutanvändarna en app-katalog och installationsupplevelse som inte längre kräver att slutanvändare minskar säkerhetspositionen för sina enheter genom att tillåta installationer från okända källor. Dessutom kan det här distributionsscenariot ge en förbättrad slutanvändarupplevelse.
 
-### <a name="track-installation-of-office-proplus---2620217--"></a>Spåra installation av Office ProPlus <!--2620217-->
-Du kommer att kunna följa installationsförloppet för [Office ProPlus](apps-add-office365.md) med hjälp av sidan [Registreringsstatus](windows-enrollment-status.md).
+### <a name="new-options-to-automatically-connect-and-persist-rules-when-using-dns-settings-on-windows-10-and-later-devices----1333665-2999078---"></a>Nya alternativ för att automatiskt ansluta och bevara regler när du använder DNS-inställningarna på Windows 10 och senare enheter <!-- 1333665, 2999078 -->
+I Windows 10 och senare enheter kommer du att kunna skapa en VPN-profil som innehåller en lista över DNS-servrar för att lösa domäner, som till exempel contoso.com. Detta omfattar nya inställningar för namnmatchning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj  **Windows 10 och senare** för plattform > välj **VPN** för Profiltyp > **DNS-inställningarna** >**Lägg till**): 
 
-### <a name="macos-device-enrollment-program-support-for-apple-school-manager-accounts---3006133--"></a>macOS DEP-stöd för Apple School Manager-konton <!--3006133-->
-Intune stöder användning av programmet för enhetsregistrering (DEP) på macOS-enheter för Apple School Manager-konton.
+- **Anslut automatiskt**: När **Aktiverad**, ansluter enheten automatiskt till VPN-anslutningen när en enhet kontaktar en domän som du anger, t.ex contoso.com.
+- **Beständig**: Som standard är alla NRPT-regler (principtabell för namnmatchning) aktiva så länge enheten är ansluten med hjälp av den här VPN-profilen. När inställningen är **aktiverad** på en NRPT-regel förblir regeln aktiv på enheten, även om VPN-anslutningen kopplas bort eller VPN-profilen tas bort. Regeln är där tills den tas bort manuellt, vilket kan göras med hjälp av PowerShell.
 
-### <a name="temporarily-pause-kiosk-mode-on-android-devices-to-make-changes----3041935---"></a>Pausa tillfälligt helskärmsläge på Android-enheter för att göra ändringar <!-- 3041935 -->
-När du använder Android-enheter i helskärmsläge för flera appar, kan en IT-administratör behöva göra ändringar i enheten. En ny inställning för helskärmsläge för flera appar gör att en IT-administratör tillfälligt kan pausa helskärmsläget med hjälp av en PIN-kod och få åtkomst till hela enheten.
-Om du vill se de aktuella inställningarna för helskärmsläge, se [Android-helskärmsinställningar](android-kiosk-settings.md).
+[Windows 10 VPN-inställningar](vpn-settings-windows-10.md) beskriver den aktuella listan över inställningar. 
 
-### <a name="set-custom-background-in-managed-home-screen-app-----3041945---"></a>Ange en anpassad bakgrund den hanterade hemskärmsappen  <!-- 3041945 -->
-Vi ska lägga till en inställning som låter dig anpassa bakgrundsutseendet på den hanterade hemskärmsappen på Android Enterprise, flera appar, enheter i helskärmsläge.  För att konfigurera **Anpassad URL-bakgrund** går du till Intune i Azure portal > Enhetskonfiguration. Välj en aktuell enhetskonfigurationsprofil eller skapa en ny om du vill redigera dess inställningar för helskärmsläge.
+### <a name="help-and-support-page-in-the-windows-company-portal-app----1488939---"></a>Hjälp- och supportsidan i företagsportalappen för Windows <!-- 1488939 -->
+En ny sida läggs till i företagsportalappen för Windows. Sidan Hjälp och support ger kontaktinformation för support. Slutanvändarna kommer också att kunna skicka loggar från företagsportalen i händelse av att de har problem. Sidan innehåller också ett avsnitt med frågor och svar för att hjälpa slutanvändarna.
 
-### <a name="enable-virtual-home-button-on-android-enterprise-kiosk-devices-----3042021---"></a>Aktivera den virtuella hemknappen på Android-företagsenheter i helskärmsläge  <!-- 3042021 -->
-En ny inställning låter användare trycka på en programstyrd knapp på sin enhet för att växla mellan den hanterade hemskärmsappen och andra tilldelade appar på sin enhet för helskärmsläget för flera appar. Den här inställningen är särskilt användbart i scenarier där en användares app för helskärmsläge inte svarar på rätt sätt på knappen ”Bakåt”. Du kommer att kunna konfigurera den här inställningen för företagsägda Android-enheter för enskild användning. För att aktivera eller inaktivera den **virtuella hemknappen**, går du till Intune i Azure Portal > enhetskonfiguration. Välj en aktuell enhetskonfigurationsprofil eller skapa en ny om du vill redigera dess inställningar för helskärmsläge.
+### <a name="use-trusted-network-detection-for-vpn-profiles-on-windows-10-devices----1500165---"></a>Använd identifiering av betrott nätverk för VPN-profiler på Windows 10-enheter <!-- 1500165 -->
+När du använder identifiering av betrott nätverk, kommer du att kunna förhindra VPN-profiler från att automatiskt skapa en VPN-anslutning när användaren redan är i ett betrott nätverk. Du kommer att kunna lägga till DNS-suffix om du vill aktivera identifiering av betrott nätverk på enheter som kör Windows 10 och senare (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform > **VPN** för profiltyp).
+[Windows 10-VPN-inställningar](vpn-settings-windows-10.md) visar en lista över aktuella VPN-inställningar.
 
-### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Spara och tillämpa tilldelning av appskyddsprincip <!-- 3104570 -->
-Du får bättre kontroll över dina tilldelningar av appskyddsprincip. Genom att spara och tillämpa dina tilldelningar av appskyddsprincip påverkas endast de avsedda användarna direkt av en tilldelningsprincip av appskydd.
+### <a name="support-for-android-corporate-owned-fully-managed-devices----574342---"></a>Stöd för Android företagsägda, fullständigt hanterade enheter <!-- 574342 -->
+Intune stöder helt hanterade Android-enheter, ett företagsägt scenario av ”enhetsägare” där enheter hanteras noggrant av IT och är kopplade till enskilda användare. Detta gör att administratörer kan hantera hela enheten, tillämpa en utökad uppsättning principkontroller som inte är tillgängliga för arbetsprofiler och begränsa användare från att installera appar från hanterad Google Play endast. För att konfigurera fullständigt hanterade Android-enheter, gå till **Enhetsregistrering** > **Android-registrering** > **Företagsägda, fullständigt hanterade användarenheter**.
 
-### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nya Microsoft Edge-webbläsarinställningar för Windows 10 och senare <!-- 3174639 -->
-En ny inställning läggs till för att styra och hantera Microsoft Edge-webbläsaren på dina enheter. En lista över de aktuella inställningarna finns i [Enhetsbegränsning för Windows 10 (och senare)](device-restrictions-windows-10.md#microsoft-edge-browser).
+### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK stöder 256-bitars krypteringsnycklar <!-- 1832174 -->
+Intune App SDK för iOS använder 256-bitars krypteringsnycklar när kryptering har aktiverats av appskyddsprinciper. SDK fortsätter att stödja 128-bitars nycklar för kompatibilitet med innehåll och appar som använder äldre versioner av SDK.
 
-### <a name="select-apps-tracked-on-the-enrollment-status-page---2531007---"></a>Välj appar som spårats på sidan för registreringsstatus<!-- 2531007 -->
-Du kommer att kunna välja vilka appar som spåras på sidan för registreringsstatus.
+### <a name="enabled-shared-pc-settings-in-intune-profile----1907917---"></a>Aktiverade delade datorinställningar i Intune-profil <!-- 1907917 -->
+För närvarande kan du konfigurera delade datorinställningar på Windows 10 desktop-enheter som använder en anpassad OMA-URI-inställning. En ny profil kommer att läggas till i konfigurera delade datorinställningar (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  **Windows 10 och senare** > **Delad fleranvändarenhet**).
+Gäller för: Windows 10 och senare, Windows 10 Holographic for Business
 
-### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Uppdatering av användargränssnitt för Intune-appskyddsprinciper <!-- 3251427 -->
+### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation-----1927359---"></a>Uppdatering av Intune-principers autentiseringsmetod och installation av företagsportalappen  <!-- 1927359 -->
+Intune stöder inte längre företagsportalappen på vissa enheter när den installeras från App store. Den här ändringen gäller endast när du autentiserar med Apple-installationsassistenten under registreringen. Den här ändringen påverkar också bara iOS-enheter som registrerats via:  
+* Apple configurator
+* Apple Business Manager
+* Apple School Manager
+* Apples program för enhetsregistrering (DEP)
 
-Med Intune-appskyddsprinciper kan du konfigurera olika dataskyddsinställningar för Intune-skyddade appar, till exempel Microsoft Outlook och Word. Vi ändrar inställningen och knappetiketterna så att varje princip blir lättare att förstå. Kontrollerna kommer att ändras från kontrollerna **ja**/**nej** till främst kontrollerna **blockera**/**tillåta** och **inaktivera**/**aktivera**, och etiketterna kommer också att uppdateras för tydlighetens skull. Inställningarna kommer också formateras så att inställningen och dess etikett är sida vid sida i kontrollen, vilket ger bättre navigering. Standardinställningar och antal inställningar förblir detsamma, men den här ändringen gör att användarna kan förstå, navigera och använda inställningar enklare för att tillämpa valda appskyddsprinciper.
+Om användare installerar företagsportalappen från App store och sedan försöker att registrera enheterna genom den, får de ett felmeddelande. Dessa enheter kommer förväntas att bara använda företagsportalen när den har skickats automatiskt av Intune under registreringen. Profiler för registrering i Intune i Azure-portalen kommer att uppdateras så att du kan ange hur enheter ska autentiseras och om de får företagsportalappen. Om du vill att dina DEP-enhetsanvändare ska ha företagsportalen behöver du ange dina preferenser i en registreringsprofil. Dessutom kommer skärmen **Identifiera din enhet** i företagsportalappen snart att bli föråldrad.  
+För att installera företagsportalen på redan registrerade DEP-enheter, måste du gå till Intune > Klientappar, och skicka den som en hanterad app med konfigurationsprinciper för appar. Information om hur du utför dessa steg kommer att ges i framtida dokument.
 
+### <a name="non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379---"></a>Icke-administratörer kan aktivera BitLocker på Windows 10-enheter som är anslutna till Azure AD<!-- 2147379 -->
+När du aktiverar BitLocker-inställningar på Windows 10-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  **Windows 10 och senare** för plattform > **Endpoint protection** för Profiltyp > **Windows-kryptering**), lägger du till BitLocker-inställningar. Den här uppdateringen innehåller en ny inställning för BitLocker för att låta standardanvändare (icke-administratörer) aktivera kryptering. De aktuella inställningarna finns i [Endpoint protection-inställningar för Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+### <a name="intune-app-pin----2298397---"></a>Intune-appens PIN-kod <!-- 2298397 -->
+Som IT-administratör kommer du att kunna konfigurera hur många dagar som en användare kan vänta tills Intune-appens PIN-kod måste ändras. Den nya inställningen är tillgänglig i Azure Portal genom att välja **Intune** > **Klientappar** > **Appskyddsprinciper** > **Skapa princip** > **Inställningar** > **Åtkomstbehörigheter**. Den här funktionen blir tillgänglig för iOS- och Android-enheter. Den här inställningen stöder ett positivt heltalsvärde.
+
+### <a name="new-windows-10-update-settings----2626030-2512994---"></a>Nya Windows 10 Update-inställningar <!-- 2626030 2512994 -->
+För dina Windows 10-uppdateringsringar, kommer du att kunna:
+- återställa de ursprungliga inställningarna för automatisk uppdatering på en Windows 10-dator på datorer som kör *uppdateringen från oktober 2018*
+- Konfigurera en ny programuppdateringsplats som gör att du kan blockera eller tillåta användarna att pausa uppdateringsinstallationen från *Inställningar* på deras datorer. 
+
+
+
+### <a name="ios-email-profiles-can-use-smime-signing-and-encryption----2662949---"></a>iOS e-postprofiler kan använda S/MIME-signering och kryptering <!-- 2662949 -->
+Du kommer att kunna skapa en e-postprofil som innehåller olika inställningar. Detta inkluderar S/MIME-inställningar som kan användas för signering och kryptering av e-postmeddelanden på iOS-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **iOS** för plattform > **E-post** för profiltyp).
+
+[iOS e-konfigurationsinställningar](email-settings-ios.md) visar en lista över de aktuella inställningarna.
+
+### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509---"></a>Hoppa över flera skärmar för installationsassistenten på en iOS DEP-enhet <!-- 2687509 -->
+Förutom skärmar som du kan hoppa över just nu, kommer du att kunna ställa in så att iOS DEP-enheter hoppar över följande skärmar i installationsassistenten när en användare registrerar enheten: Visa ton, Sekretess, Android-migrering, Start-knappen, iMessage och FaceTime, Onboarding, Bevaka migrering, Utseende, Skärmtid, Programuppdateringen, SIM-installation.
+Om du vill välja vilka skärmar som ska hoppas över, går du till **Enhetsregistrering** > **Apple-registrering** > **Tokens för registreringsprogram** > välj en token > **Profiler** > välj en profil > **Egenskaper** > **Anpassning av installationsassistenten** > välj **Dölj** för alla skärmar som du vill hoppa över > **OK**.
+
+### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Vissa inställningar för BitLocker har stöd för Windows 10 Pro-versionen <!-- 2727036 -->
+Du kommer att kunna skapa en konfigurationsprofil som anger endpoint protection-inställningar för Windows 10-enheter, inklusive BitLocker. Detta lägger till stöd för Windows 10 Professional-versionen för vissa BitLocker-inställningar. De aktuella Windows 10-inställningarna finns i [Endpoint protection-inställningar för Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+Intune ger ytterligare fält för enhetsrapportering inklusive Android-tillverkare, modell och version av säkerhetsppdatering samt iOS-modell. I Intune, är dessa fält tillgängliga genom att välja **Klientappar** > **Appskyddsstatus** och sedan välja **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodell (Android och iOS) och lägsta inställning för version av Android-säkerhetsuppdatering. 
+
+### <a name="shared-device-configuration-is-renamed-to-lock-screen-message-for-ios-devices-in-the-azure-portal----2809362---"></a>Konfiguration av delad enhet har bytt namn till Meddelande på låsskärmen för iOS-enheter i Azure Portal <!-- 2809362 -->
+När du skapar en profil för iOS-enheter ska du kunna lägga till inställningar för **Konfiguration för delad enhet** för att visa specifik text på låsskärmen. Det här innehåller följande ändringar: 
+
+- Inställningarna **Konfiguration för delad enhet** i Azure-portalen har bytt namn till ”Meddelande på låsskärmen (endast övervakat)” (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **iOS** för plattform > välj **Enhetsfunktioner** för Profiltyp > **Meddelande på låsskärmen**).
+- När du lägger till meddelande på låsskärmen, kan du infoga ett serienummer, ett enhetsnamn eller ett annat enhetsspecifikt värde som en variabel i **resurstagginformation**. Du kan till exempel ange `Device name: {{device name}}` eller `Serial number is {{serial number}}` med hjälp av klammerparenteser. [iOS-token](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) visar en lista över de tillgängliga token som kan användas.
+
+[Inställningar för att visa meddelanden på låsskärmen](shared-device-settings-ios.md) visar en lista över de aktuella inställningarna.
+
+### <a name="more-detailed-enrollment-restriction-failure-messaging----3111564--"></a>Mer detaljerade felmeddelanden för registreringsbegränsning <!-- 3111564-->
+Mer detaljerade felmeddelanden blir tillgängliga när registreringsbegränsningar inte har uppfyllts. Om du vill se dessa meddelanden går du till **Intune** > **Felsök** > och markerar tabellen Registreringsfel.
+
+### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Inställningar för nytt meddelande, tips och keyguard för enhetsägare av Android Enterprise-enheter <!-- 3201839 3201843 -->
+Den här uppdateringen innehåller flera nya funktioner på Android Enterprise-enheter vid körning som enhetsägare. Om du vill använda dessa funktioner, gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Android Enterprise** > i **Profiltyp**, välj **Endast enhetens ägare** > **Enhetsbegränsningar**.
+Nya funktioner som ingår: 
+- Inaktivera systemmeddelanden till att inte visas, inklusive inkommande anrop, systemaviseringar, systemfel och mer
+- Föreslår hoppa över start av självstudier och tips för appar som öppnas för första gången
+- Inaktivera avancerad keyguard-inställningar, till exempel kamera, meddelanden, upplåsning med fingeravtryck med mera
+
+Om du vill visa de aktuella inställningarna går du till [Enhetsbegränsningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+
+### <a name="android-enterprise-device-owner-devices-can-use-always-on-vpn-connections----3202194---"></a>Enhetsägda Android Enterprise-enheter kan använda Always On VPN-anslutningar <!-- 3202194 -->
+I den här uppdateringen kan du använda VPN-anslutningar som alltid är aktiva på Android Enterprise-enheter. Ständiga VPN-anslutningar förblir anslutna eller återansluter omedelbart när användaren låser upp sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. Du kan också placera anslutningen i ”låst” läge, vilket blockerar all nätverkstrafik tills VPN-anslutningen aktiveras.
+Du kan aktivera VPN-anslutningar som alltid är aktiva i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar** för enhetsägare endast > **Anslutningar**. Om du vill visa de aktuella inställningarna går du till [Enhetsbegränsningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+
+### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices----3285177---"></a>Ny inställning för slutprocesser i Aktivitetshanteraren på Windows 10-enheter <!-- 3285177 --> 
+Den här uppdateringen innehåller en ny inställning för att avsluta processer med hjälp av Aktivitetshanteraren på Windows 10-enheter. Med hjälp av en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform** , välj **Windows 10** > i **Profiltyp**, välj **Enhetsbegränsningar** > **Allmänna** inställningar), väljer du att tillåta eller förhindra den här inställningen.
+Om du vill visa de aktuella inställningarna går du till [Inställningar av begränsningar för Windows 10-enheter](device-restrictions-windows-10.md).
+Gäller: Windows 10 och senare
+
+### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Administrativa mallar finns i offentlig förhandsversion och flyttas till deras egna konfigurationsprofil <!-- 3322847 -->
+Administrativa mallar i Intune (**Enhetskonfiguration** > **Administrationsmallar**) är för tillfället i privat förhandsvisning. Med den här uppdateringen: Inkluderar administrativa mallar ungefär 300 inställningar som kan hanteras i Intune. De här inställningarna fanns tidigare endast i redigeraren.
+Administrativa mallar finns i offentlig förhandsversion, administrativa mallar flyttar från **Enhetskonfiguration** > **Administrationsmallar** till **Enhetskonfiguration** > **Profiler** >**Skapa profil** > i **Plattform**, välj  **Windows 10 och senare**i **Profiltyp**, välj **Administrationsmallar**.
+Rapportering är aktiverad gäller för: Windows 10 och senare
 
 
 <!-- 1810 start -->
@@ -109,11 +174,6 @@ Principinställningarna för webbinnehåll på både Android och iOS-enheter kom
 ### <a name="apple-vpp-token-used-by-another-mdm----1488946---"></a>Apple VPP-token som används av en annan MDM <!-- 1488946 -->
 Intune identifierar och visar information om en token för volyminköpt Apple-program (VPP) används av både Intune och en annan MDM.
 
-### <a name="ios-and-macos-version-numbers-and-build-numbers-are-available-in-compliance-policies----1892471---"></a>Versionsnummer och byggenummer för iOS och macOS finns i efterlevnadsprinciperna <!-- 1892471 -->
-I **Enhetsefterlevnad** > **Enhetsefterlevnad** visas operativsystemsversionerna iOS och macOS. De är tillgängliga för användning i efterlevnadsprinciper. I en framtida uppdatering kommer även byggenumret att kunna konfigureras för båda plattformarna.
-
-När säkerhetsuppdateringar lanseras låter Apple vanligtvis versionsnumret vara som det är men uppdaterar byggenumret. Genom att använda byggenumret i en efterlevnadsprincip kan du enkelt kontrollera om en säkerhetsriskuppdatering har installerats.
-
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Tillbakadragna enheter i instrumentpanelen för enhetsefterlevnad <!-- 1981119 -->
 I en kommande uppdatering tas tillbakadragna enheter bort från instrumentpanelen för enhetsefterlevnad. Detta ändrar dina efterlevnadsnummer.
 
@@ -130,12 +190,7 @@ Du kan till exempel kräva att alla programuppdateringar installeras på enheter
 
 Gäller för Windows 10 och senare
 
-### <a name="alerts-for-expiring-vpp-token-or-company-portal-license-running-low----2237572---"></a>Aviseringar om utgående VPP-token eller om att kvarvarande licenser för företagsportalen håller på att ta slut <!-- 2237572 -->
-Om du använder Volume Purchase Program (VPP) för att företablera företagsportalen vid DEP-registrering visas en varning i Intune när en VPP-token håller på att upphöra och när licenserna för företagsportalen nästan är slut.
 
-
-
-<!-- the following are present prior to 1711 -->
 
 ## <a name="notices"></a>Meddelanden
 

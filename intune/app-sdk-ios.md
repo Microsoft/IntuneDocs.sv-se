@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: db9f0ca860186222491906aa35baf1e92d14e548
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0fc0e5bdb261b3cfbc2e5507e1206354d8cc4051
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181351"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630059"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -199,8 +199,9 @@ Om din app redan använder ADAL, krävs följande konfigurationer:
 
 3. Under ordlistan **IntuneMAMSettings** med nyckelnamnet `ADALRedirectUri` anger du också den omdirigerings-URI som ska användas för ADAL-anrop. Du kan också ange `ADALRedirectScheme` i stället om programmets omdirigerings-URI är i formatet `scheme://bundle_id`.
 
-
 Dessutom kan appar åsidosätta de här Azure AD-inställningarna under körning. Gör detta genom att ange egenskaperna `aadAuthorityUriOverride`, `aadClientIdOverride` och `aadRedirectUriOverride` på instansen `IntuneMAMPolicyManager`.
+
+4. Se till att stegen som ger din iOS appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”.  
 
 > [!NOTE]
 > Metoden Info.plist rekommenderas för alla inställningar som är statiska och behöver inte fastställas vid körning. Värden som tilldelats egenskaperna `IntuneMAMPolicyManager` har företräde framför alla motsvarande värden som anges i Info.plist och behålls även när appen startas om. SDK fortsätter att använda dem för principkontroller tills användaren har avregistrerats eller värdena har rensats eller ändrats.

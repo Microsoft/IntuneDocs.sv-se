@@ -1,12 +1,12 @@
 ---
-title: Registrera macOS-enheter – Programmet för enhetsregistrering
+title: Registrera macOS-enheter – Programmet för enhetsregistrering eller Apple School Manager
 titleSuffix: Microsoft Intune
 description: Läs hur du registrerar företagsägda macOS-enheter med programmet för enhetsregistrering.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 10/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,22 +16,22 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 92ddad3e7e8de4a10c67f9feae10d2441ec560bd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 12a59165cd9ebe43826f8ec63ed5b045e5f3e991
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180773"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728760"
 ---
-# <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Registrera macOS-enheter automatiskt med Apples program för enhetsregistrering
+# <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Registrera macOS-enheter automatiskt med Programmet för enhetsregistrering eller Apple School Manager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln hjälper dig att konfigurera registrering av macOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Du kan konfigurera DEP-registrering för ett stort antal enheter utan att behöva röra dem. Du kan leverera macOS-enheter direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i Intune-hanteringen.
+Den här artikeln hjälper dig att konfigurera registrering av macOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com) eller [Apple School Manager](https://school.apple.com/). Du kan använda endera av dessa registreringsmetoder för ett stort antal enheter utan att behöva röra dem. Du kan leverera macOS-enheter direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i Intune-hanteringen.
 
-Om du vill konfigurera DEP-registrering kan du använda både Intune och Apples DEP-portal. Du kan skapa DEP-registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
+Om du vill konfigurera registrering kan du använda både Intunes och Apples DEP-portaler. Du kan skapa registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
-DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md) eller [Apple School Manager](apple-school-manager-set-up-ios.md).
+Varken DEP-registrering eller Apple School Manager fungerar dock med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -42,19 +42,19 @@ DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## <a name="prerequisites"></a>Krav
-- Enheter som köpts i [Apples enhetsregistreringsprogram](http://deploy.apple.com)
+- Enheter som köpts i [Apple School Manager](https://school.apple.com/) eller [Apples enhetsregistreringsprogram](http://deploy.apple.com)
 - En lista över serienummer eller ett inköpsordernummer. 
 - [MDM-utfärdare](mdm-authority-set.md)
 - [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-dep-token"></a>Hämta en Apple DEP-token
 
-Innan du kan registrera macOS-enheter med DEP behöver du en DEP-tokenfil (.p7m) från Apple. Med denna token kan Intune synkronisera information om DEP-enheter som ditt företag äger. Intune kan också ladda upp registreringsprofiler till Apple och olika enheter.
+Innan du kan registrera macOS-enheter med DEP eller Apple School Manager behöver du en DEP-tokenfil (.p7m) från Apple. Med denna token kan Intune synkronisera information om de enheter som ditt företag äger. Intune kan också ladda upp registreringsprofiler till Apple och olika enheter.
 
-Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också använda DEP-portalen för att tilldela enheter till Intune för hantering.
+Du kan skapa en token med hjälp av Apple-portalen. Du kan också använda Apple-portalen för att tilldela enheter till Intune för hantering.
 
 > [!NOTE]
-> Om du tar bort denna token från den klassiska Intune-portalen innan du migrerar till Azure, kan Intune återställa en borttagen Apple DEP-token. Du kan ta bort DEP-token från Azure-portalen igen.
+> Om du tar bort denna token från den klassiska Intune-portalen innan du migrerar till Azure, kan Intune återställa en borttagen Apple-token. Du kan ta bort token från Azure Portal igen.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckeln som krävs för att skapa token.
 
@@ -66,15 +66,14 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
    ![Skärmbild av rutan Registreringsprogramtoken i arbetsytan för Apple-certifikat. Nedladdning av offentlig nyckel.](./media/device-enrollment-program-enroll-ios-newui/add-enrollment-program-token-pane.png)
 
-3. Välj **Hämta den offentliga nyckeln** om du vill hämta och spara krypteringsnyckelfilen (.pem) lokalt. Filen .pem används för att begära ett förtroendecertifikat från portalen Apples DEP.
+3. Välj **Hämta den offentliga nyckeln** om du vill hämta och spara krypteringsnyckelfilen (.pem) lokalt. .pem-filen används för att begära ett förtroendecertifikat från Apple-portalen.
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Steg 2. Använd din nyckel för att hämta en token från Apple.
 
-1. Välj **Skapa en token för Apples enhetsregistreringsprogram** för att öppna Apples portal för distributionsprogram och logga in med ditt företags Apple-ID. Du måste använda detta Apple-ID för att kunna förnya DEP-token.
-2.  Gå till Apples [portal för driftsättningsprogram](https://deploy.apple.com) och välj **Kom igång** för **Enhetsregistreringsprogram**.
-
-3. På sidan **Hantera servrar** väljer du **Lägg till MDM-server**.
+1. Välj **Skapa en token för Apples enhetsregistreringsprogram** eller **Skapa en token via Apple School Manager** när du vill öppna lämplig Apple-portal och logga in med ditt företags Apple-ID. Du kan förnya din token genom att använda detta Apple-ID.
+2.  När det gäller DEP väljer du **Kom igång** i Apple-portalen för **Enhetsregistreringsprogram** > **Hanteringsservrar** > **Lägg till MDM Server**.
+3.  När det gäller Apple School Manage väljer du **MDM-servrar** > **Lägg till MDM-server** i Apple-portalen.
 4. Ange **MDM-servernamnet** och välj **Nästa**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
 
 5. Dialogrutan **Lägg till &lt;ServerName&gt;** öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
@@ -89,9 +88,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 8. Välj **Assign to Server** (Tilldela till server) för **Välj åtgärd** och välj **servernamnet** som angetts för Microsoft Intune och sedan &lt;OK&gt;. Apples portal tilldelar de angivna enheterna till Intune-servern för hantering och visar sedan meddelandet **Assignment Complete** (Tilldelningen är klar).
 
-   Gå till Apple-portalen och **Driftsättningsprogram** &gt; **Enhetsregistreringsprogram** &gt; **View Assignment History (Visa historik för tilldelning)** för att se en lista över enheter och deras MDM-servertilldelning.
-
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Steg 3. Spara det Apple-ID som användes för att skapa den här token.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Steg 3. Spara det Apple-ID som användes för att skapa den här token
 
 I Intune på Azure-portalen anger du ditt Apple-ID för framtida bruk.
 
@@ -102,7 +99,7 @@ I rutan **Apple-token**, bläddrar du till certifikatfilen (.pem), väljer **Öp
 
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
 
-Nu när du har installerat din token kan skapa du en registreringsprofil för DEP-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
+Nu när du har installerat din token kan skapa du en registreringsprofil för enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 2. Välj en token, välj **Profiler** och välj sedan **Skapa profil**.
@@ -185,7 +182,7 @@ Du kan välja en macOS- och iOS-profil av standardtyp som ska tillämpas för al
 2. Välj **Ange standardprofil**, välj en profil i listmenyn och välj sedan **Spara**. Den här profilen kommer att tillämpas på alla enheter som registreras med token.
 
 ## <a name="distribute-devices"></a>Distribuera enheter
-Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har rensats.
+Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har rensats.
 
 ## <a name="renew-a-dep-token"></a>Ladda upp en DEP-token  
 1. Gå till deploy.apple.com.  

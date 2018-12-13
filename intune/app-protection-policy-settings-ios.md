@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 79df4e20a1dcd4a5cbc30ab0c887d53bf205ebbf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5ff7876ef5c04eb59d1e89ac03b640d4f443cca6
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184751"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728964"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -30,7 +30,7 @@ De principinställningar som beskrivs i den här artikeln kan [konfigureras](app
 
 Det finns tre typer av principinställningar: *Dataflytt*, *Åtkomstkrav* och *Villkorlig start*. I den här artikeln används termen ***principhanterade appar*** för att hänvisa till appar som har konfigurerats med appskyddsprinciper.
 
-##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
+##  <a name="data-protection-settings"></a>Inställningar för dataskydd
 
 | Inställningen | Använd så här |  
 |------|------| 
@@ -47,7 +47,7 @@ Det finns tre typer av principinställningar: *Dataflytt*, *Åtkomstkrav* och *V
 
 
 > [!NOTE]
-> Ingen av inställningarna för dataflytt styr den Apple-hanterade ”öppna med”-funktionen på iOS-enheter. Se [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](data-transfer-between-apps-manage-ios.md) för hantering av ”öppna med”.
+> Ingen av dataskyddsinställningarna styr den Apple-hanterade ”öppna med”-funktionen på iOS-enheter. Se [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](data-transfer-between-apps-manage-ios.md) för hantering av ”öppna med”.
 
 ## <a name="data-transfer-exemptions"></a>Undantag vid dataöverföring
 

@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d86df4c38e0d4313dbff6ff2cd9111b2126dbaba
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180943"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630025"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
@@ -175,7 +175,12 @@ Mer information om hur du kan använda Managed Browser, Microsoft Edge och en Az
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Så här konfigurerar du startsidan för en skyddad webbläsare
 
-Den här inställningen gör att du kan konfigurera vilken startsida användarna ser när de startar en skyddad webbläsare eller öppnar en ny flik. Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
+Den här inställningen gör att du kan konfigurera vilken startsida användarna ser när de startar en skyddad webbläsare eller öppnar en ny flik. 
+- Den här inställningen visar webbsidan i Managed Browser.  Edge visar en genväg till startsidan i stället.
+- Genvägsikonen för startsidan visas som en ikon under sökkontrollen.  Den kan inte redigeras eller tas bort.
+- Genvägen till startsidan visar namnet på din organisation för att särskilja den.  Den visas alltid som den första ikonen.
+
+Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
 
 |                                Tangent                                |                                                           Värde                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
