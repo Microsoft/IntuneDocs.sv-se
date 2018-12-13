@@ -15,15 +15,15 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 5ea4d41477f2f0c6dc1314e47072d2c4cf862e23
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184836"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032001"
 ---
-# <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera registrering av Android enterprise-kioskenheter
+# <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera Intune-registrering av Android Enterprise-kioskenheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -56,8 +56,8 @@ Du måste skapa en registreringsprofil så att du kan registrera dina kioskenhet
 
 1. Gå till [Intune-portalen](https://portal.azure.com) och välj **Enhetsregistrering** > **Android-registrering** > **Registreringar av kiosk- och uppgiftsenheter**.
 2. Välj **Skapa** och fyll i de obligatoriska fälten.
-    - **Namn**: Ange ett namn som du vill använda när du tilldelar profilen till den dynamiska enhetsgruppen.
-    - **Tokenförfallodatum**: Datumet då token går ut. Google använder ett maxvärde på 90 dagar.
+    - **Namn**: Skriv ett namn som ska användas när du tilldelar profilen till den dynamiska enhetsgruppen.
+    - **Förfallodatum för token**: Det datum när token upphör att gälla. Google använder ett maxvärde på 90 dagar.
 3. Spara profilen genom att välja **Skapa**.
 
 ### <a name="create-a-device-group"></a>Skapa en enhetsgrupp
@@ -67,11 +67,11 @@ Du kan rikta appar och principer till tilldelade eller dynamiska enhetsgrupper. 
 1. Gå till [Intune-portalen](https://portal.azure.com) och välj **Grupper** > **Alla grupper** > **Ny grupp**.
 2. På bladet **Grupp** fyller du i de obligatoriska fälten så här:
     - **Grupptyp**: Säkerhet
-    - **Gruppnamn**: Ange ett intuitivt namn (till exempel Fabrik 1-enheter)
-    - **Medlemskapstyp**: Dynamisk enhet
+    - **Gruppnamn:** Ange ett intuitivt namn (till exempel Fabrik 1-enheter)
+    - **Typ av medlemskap**: Dynamisk enhet
 3. Välj **Lägg till dynamisk fråga**.
 4. På bladet **Regler för dynamiskt medlemskap** fyller du i fälten så här:
-    - **Lägg till dynamisk medlemsregel**: Enkel regel
+    - **Lägg till dynamisk medlemskapsregel**: Enkel regel
     - **Lägg till enheter där**: enrollmentProfileName
     - Välj **Matchning** i mittenrutan.
     - I det sista fältet anger du registreringsprofilnamnet som du har skapat tidigare.
@@ -82,7 +82,7 @@ Du kan rikta appar och principer till tilldelade eller dynamiska enhetsgrupper. 
 
 Du kan ersätta eller ta bort token och QR-koder.
 
-- **Ersätt token**: Du kan generera en ny token/QR-kod när en håller på att gå ut genom at använda Ersätt token.
+- **Ersätt token**: Du kan generera en ny token/QR-kod som håller på att förfalla med hjälp av Ersätt token.
 - **Återkalla token**: Du kan omedelbart återkalla token/QR-koden. Då kan token/QR-koden inte längre användas. Du kan använda det här alternativet om du:
     - av misstag delar token/QR-koden med en obehörig part
     - slutför alla registreringar och inte längre behöver token/QR-koden

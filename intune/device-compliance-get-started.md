@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 470c3b7ac273e051af047eba95012b36a8ea1deb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fd3a38b331507ddc50a7b5e4ce8794e71d0e5dc5
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186009"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977362"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -40,6 +40,9 @@ Ett efterlevnadskrav är i princip samma sak som en regel, t. ex. att kräva en 
 - Kräv att enheten måste ligga på eller under nivån för skydd mot mobilhot
 
 Du kan också använda principer för enhetsefterlevnad för att övervaka enheters efterlevnadsstatus.
+
+> [!IMPORTANT]
+> Intune följer enhetens incheckningsschema för alla efterlevnadsutvärderingar på enheten. [Mer information om enhetens incheckningsschema](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 
 <!---### Actions for noncompliance
 
@@ -156,21 +159,21 @@ Du kan distribuera policyer för efterlevnad till användare i användargrupper 
 
 En uppsättning inbyggda **inställningar för efterlevnadsprinciper** (Azure-portalen > Enhetsefterlevnad) utvärderas på alla Intune-registrerade enheter. Dessa omfattar:
 
-- **Markera enheter som saknar en policy för efterlevnad som**: Den här egenskapen har två värden:
+- **Markera enheter utan någon tilldelad policy för efterlevnad som**: Den här egenskapen har två värden:
 
   - **Följer standard**: säkerhetsfunktion av
   - **Följer inte standard** (standard): säkerhetsfunktion på
 
   Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **Kompatibel**. Om du använder villkorlig åtkomst rekommenderar vi att du ändrar inställningen till **Inte kompatibel**. Om en användare inte följer standard eftersom en princip inte är tilldelad visar företagsportalen `No compliance policies have been assigned`.
 
-- **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad gör den så att iOS-enheter checkar in med Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarnas platsdata lagras inte av Intune.
+- **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad kommer iOS-enheter checka in till Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarnas platsdata lagras inte av Intune.
 
   När du aktiverar den här inställningen kräver den följande av enheter:
   - Aktivera platstjänster på operativsystemsnivån
   - Tillåter att företagsportalen använder platstjänsterna
   - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel. Utvärderingen utlöses antingen genom att företagsportalappen öppnas eller att enheten fysiskt flyttas 500 meter eller längre.
 
-- **Giltighetstid för efterlevnadsstatus (dagar)**: Ange inom vilken tidsperiod enheterna rapporterar status för alla mottagna policyer för efterlevnad. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar.
+- **Giltighetsperiod för efterlevnadsstatus (dagar)**: Ange inom vilken tidsperiod enheterna ska rapportera status för alla mottagna efterlevnadsprinciper. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar.
 
 Alla enheter har en **inbyggd enhetsefterlevnadsprincip** (Azure-portalen > Enhetsefterlevnad > Principefterlevnad). Använd den här inbyggda principen för att övervaka de här inställningarna.
 

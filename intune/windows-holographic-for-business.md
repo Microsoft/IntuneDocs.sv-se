@@ -5,22 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: fd99a168747bd4a0f5852404e767d658b8400ba2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure, seodec18
+ms.openlocfilehash: 062adf12f743fdbbe42c1f29e91f2a16414ca457
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180841"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032273"
 ---
-# <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda Windows Holographic- och HoloLens-enheter med Intune
+# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda olika enhetshanteringsfunktioner på Windows Holographic- och HoloLens-enheter med Intune
 
 Microsoft Intune innehåller många funktioner för att hantera enheter som kör Windows Holographic for Business, såsom [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Du kan använda Intune för att bekräfta att enheterna är kompatibla med regler för din organisation och du kan anpassa enheten genom att lägga till en VPN- eller Wi-Fi-profil. En annan viktig funktion är att använda enheten som en Kiosk och köra en viss app eller en specifik uppsättning av appar.
 
@@ -32,11 +32,11 @@ Om du vill använda Windows Holographic-enheter med Intune måste du skapa en pr
 
 Azure Active Directory (AD) är en utmärkt resurs för att hantera och kontrollera dina enheter som kör Windows Holographic for Business. Med Intune och Azure AD kan du göra följande: 
 
-- **[Konfigurera enheter som är anslutna till Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: I Azure Active Directory (AD) kan du lägga till organisationens Windows 10 -enheter, inklusive enheter som kör Windows Holographic for Business. Den här funktionen gör att Azure AD kan styra enheten. Det hjälper till att bekräfta att användarna kommer åt företagets resurser från enheter som uppfyller dina säkerhets- och efterlevnadskrav.
+- **[Anslut enheter till Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: I Azure Active Directory (AD) kan du lägga till organisationens Windows 10-enheter, inklusive enheter som kör Windows Holographic for Business. Den här funktionen gör att Azure AD kan styra enheten. Det hjälper till att bekräfta att användarna kommer åt företagets resurser från enheter som uppfyller dina säkerhets- och efterlevnadskrav.
 
-  I artikeln med [introduktion till enhetshantering i Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction) finns mer information.
+  I [Enhetshantering i Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) finns mer information.
 
-- **[Massregistrering för Windows-enheter](windows-bulk-enroll.md)**: Som administratör kan du ansluta ett stort antal nya Windows-enheter till Azure Active Directory (AD) och Intune. Den här funktionen kallas massregistrering och använder konfigurationspaket. Med dessa paket ansluts enheter som kör Windows Holographic for Business till Azure AD-klienten och registrerar dem i Intune.
+- **[Massregistrering för Windows-enheter](windows-bulk-enroll.md)**: Du kan ansluta ett stort antal nya Windows-enheter till Azure Active Directory (AD) och Intune. Den här funktionen kallas massregistrering och använder konfigurationspaket. Med dessa paket ansluts enheter som kör Windows Holographic for Business till Azure AD-klienten och registrerar dem i Intune.
 
 ## <a name="company-portal"></a>Företagsportal
 **[Konfigurera företagsportalappen](company-portal-app.md)**
@@ -49,7 +49,6 @@ Med företagsportalappen kan du också köra följande åtgärder:
 - [Byta namn på en enhet](/intune-user-help/rename-your-device-cpapp)
 - [Installera appar](/intune-user-help/install-apps-cpapp-windows) på en enhet
 - [Synkronisera enheter manuellt](/intune-user-help/sync-your-device-manually-windows) från inställningsappen eller företagsportalappen
-
 
 ## <a name="compliance-policy"></a>Policy för efterlevnad
 **[Skapa en policy för efterlevnad för enheter](compliance-policy-create-windows.md)**
@@ -85,11 +84,11 @@ Intune har vissa inbyggda åtgärder som gör att IT-administratörer kan utför
 
 Följande inställningar kan användas för enheter som kör Windows Holographic for Business: 
 
-- **[Rensa](devices-wipe.md#wipe)**: Åtgärden **Rensa** tar bort enheten från Intune och återställer enheten till fabriksinställningarna. Använd den här åtgärden innan du ger enheten till en ny användare eller om enheten tappas bort eller blir stulen.
+- **[Rensning](devices-wipe.md#wipe)**: Åtgärden **Rensa** tar bort enheten från Intune och återställer enheten till fabriksinställningarna. Använd den här åtgärden innan du ger enheten till en ny användare eller om enheten tappas bort eller blir stulen.
 
 - **[Dra tillbaka](devices-wipe.md#retire)**: Åtgärden **Dra tillbaka** tar bort enheten från Intune. Den tar även bort hanterade appdata, inställningar och e-postprofiler som har tilldelats av Intune. Användarens personliga data finns kvar på enheten.
 
-- **[Synkronisera enheter för att hämta de senaste principerna och åtgärderna](device-sync.md)**: **Synkroniseringsåtgärden** tvingar enheten att checka in i Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen hjälper dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
+- **[Synkronisera enheter för att få de senaste principerna och åtgärderna](device-sync.md)**: Åtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen hjälper dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
 
 **[Vad är enhetshantering i Microsoft Intune?](device-management.md)** är en bra resurs för att lära dig hantera enheter med hjälp av Azure-portalen. 
 

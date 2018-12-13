@@ -1,5 +1,5 @@
 ---
-title: Konfigurera principer för enhetsefterlevnad och apphantering under en Intune-migrering
+title: Konfigurera enhets- och appefterlevnad under en Intune-migrering
 titlesuffix: Microsoft Intune
 description: Den här artikeln visar de steg som krävs för att konfigurera principer för enhetsefterlevnad och apphantering under en Microsoft Intune-migrering.
 keywords: ''
@@ -15,12 +15,13 @@ ms.assetid: 0062d08e-e5b3-4f73-8b64-5ad95adbe945
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 651612ac403db01ff2c5b7574216459c7ee2bd16
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 99f8f1eb297ac1530f9379dd4f033b72eee0b0f4
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183808"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031831"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurera principer för enhetsefterlevnad och apphantering vid migrering till Microsoft Intune
 
@@ -49,7 +50,7 @@ Enhetsgrupper är användbara när du hanterar enheter som inte har dedikerade a
 
 Genom att konfigurera enhetsgrupper före enhetsregistreringen kan du använda enhetskategorier för att automatiskt gruppera enheterna vid registrering. De får sedan sin grupps enhetsprinciper automatiskt. [Kom igång med grupper](groups-get-started.md).
 
-### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Uppgift 2: Använd resursåtkomstprofiler (Wi-Fi, VPN och e-certifikat)
+### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Uppgift 2: Använd resursåtkomstprofiler (Wi-Fi, VPN och e-postcertifikat)
 
 Resursåtkomstprofiler tillhandahåller registrerade enheter med certifikat och åtkomstkonfigurationer. Om du använder certifikatbaserad autentisering kan du [konfigurera certifikat](certificates-configure.md).
 
@@ -59,9 +60,9 @@ Du måste skapa en enhetskonfigurationsprofil om du vill framtvinga inställning
 
 ####  <a name="directly-import-ios-configuration-profiles-optional"></a>Direktimport av iOS-konfigurationsprofiler (valfritt)
 
--   **Apple Configurator-profiler för iOS (iOS 7.1 och senare):** Om den befintliga MDM-lösningen använder Apple Configurator-profiler (.mobileconfig-filer) kan Intune importera dem direkt som anpassade konfigurationsprinciper.
+-   **Apple Configurator-profiler för iOS (iOS 7.1 och senare):** Om den befintliga MDM-lösningen använder Apple Configurator-profiler (.mobileconfig-filer), kan Intune importera dem direkt som anpassade konfigurationsprinciper.
 
--   **iOS-konfigurationsprinciper för mobila program:** Om din befintliga MDM-lösning använder iOS-konfigurationsprinciper för mobila program kan Intune importera dem direkt förutsatt att de uppfyller det XML-format för egenskapslistor som anges av Apple.
+-   **iOS-konfigurationsprinciper för mobilappar:** Om din befintliga MDM-lösning använder iOS-konfigurationsprinciper för mobila program, kan Intune importera dem direkt förutsatt att de uppfyller det XML-format för egenskapslistor som anges av Apple.
 
 - Lär dig hur du lägger till en anpassad princip för [iOS](custom-settings-ios.md).
 
@@ -89,7 +90,7 @@ När du använder Intune MDM kan du tillhandahålla appar genom att kräva att d
 
 -   [Distribuera appar](apps-deploy.md).
 
-### <a name="task-6-enable-device-enrollment"></a>Uppgift 6: Aktivera enhetsregistrering
+### <a name="task-6-enable-device-enrollment"></a>Uppgift 6: Aktivera registrering av enheter
 
 Enhetsregistrering krävs för att hantera enheten. Lär dig mer om [hur du förbereder dig för att registrera företagsägda enheter och användarnas personliga enheter](device-enrollment.md).
 

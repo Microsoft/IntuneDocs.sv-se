@@ -1,12 +1,12 @@
 ---
-title: Konfigurera Intune-registrering för Hybrid Active Directory-anslutna enheter med Windows Autopilot
-titleSuffix: Microsoft Intune
-description: Använd Windows Autopilot för att registrera Hybrid Active Directory-anslutna enheter i Intune.
+title: Registrering för Hybrid Active Directory-anslutna enheter – Windows Autopilot
+titleSuffix: ''
+description: Använd Windows Autopilot till att registrera Hybrid Active Directory-anslutna enheter i Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/2/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 77a0c3f3a2e1ed0ee2dbc652049bb7057c736010
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ced67b2dcdd5720a9708868808ec885938b8ddcd
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189970"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112450"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Distribuera Hybrid Azure AD-anslutna enheter med Intune och Autopilot för Windows (förhandsversion)
 Du kan använda Intune och Windows Autopilot för att konfigurera Hybrid Azure Active Directory-anslutna enheter. Du gör det genom att följa stegen nedan.
@@ -68,7 +68,7 @@ Enheter som ska registreras måste också:
 
 Intune Connector för Active Directory skapar Autopilot-registrerade datorer i den lokala Active Directory-domänen. Värddatorn för Intune Connector måste ha behörighet att skapa datorobjekt i domänen. 
 
-I vissa domäner beviljas inte datorer behörighet att skapa datorer. Eller så kanske administratörer inte vill öka gränsen för hela domänens datorkonton. I dessa fall kan rättigheter delegeras till organisationsenheten där Azure AD-anslutna enheter skapas.
+I vissa domäner beviljas inte datorer behörighet att skapa datorer. Domäner har dessutom en inbyggd gräns (10 som standard) som gäller för alla användare och datorer som inte har delegerad behörighet att skapa datorobjekt. Därför måste behörigheter delegeras till datorer som är värdar för Intune Connector på organisationsenheten där de Hybrid Azure AD-anslutna enheterna skapas.
 
 Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
 - organisationsenheten som anges i domänanslutningsprofilen
@@ -122,7 +122,7 @@ Intune Connector för Active Directory måste installeras på en dator som kör 
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurera webbproxyinställningar
 
-Om du har en webbproxy i din nätverksmiljö följer du anvisningarna här så att Intune Connector för Active Directory fungerar korrekt: [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
+Om du har en webbproxy i din nätverksmiljö följer du anvisningarna här, för att Intune Connector för Active Directory ska fungera korrekt: [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
 
 
 ## <a name="create-a-device-group"></a>Skapa en enhetsgrupp
@@ -201,7 +201,7 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från **Inte ti
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 2. Ange följande egenskaper:
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
-   - **Beskrivning:** Ange en beskrivning för profilen.
+   - **Beskrivning**: Ange en beskrivning av profilen.
    - **Plattform**: Välj **Windows 10 och senare**.
    - **Profiltyp**: Välj **Domänanslutning (förhandsversion)**.
 3. Välj **Inställningar** och ange ett **datornamnprefix**, ett **domännamn** och en **organisationsenhet** (valfritt). 

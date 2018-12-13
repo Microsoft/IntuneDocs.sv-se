@@ -1,12 +1,12 @@
 ---
-title: Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
+title: Registrera Android-enheter automatiskt med hjälp av Samsung Knox Mobile-registrering
 titlesuffix: Microsoft Intune
 description: Lär dig att registrera Android-enheter med hjälp av Samsung KME
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: ''
-ms.date: 05/08/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: fdd99d7c3987eee852399c37108c890a827e1111
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 47627bc9f223c301fd04b88c0080b3a6fea26fe8
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189749"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032482"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -49,9 +49,9 @@ För att registrera dig till Intune med KME måste du först registrera ditt fö
 
 3.  [Nätverkskrav](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Kontrollera att nödvändiga åtkomstregler för brandvägg och nätverk tillåts i nätverket.
 
-4.  [Registrera dig för ett Samsung-konto](https://www2.samsungknox.com/en/user/register): Ett Samsung-konto krävs för att registrera och aktivera KME och hantera alla Knox Enterprise-rättigheter på en enda plats.
+4.  [Registrera ett Samsung-konto](https://www2.samsungknox.com/en/user/register): Ett Samsung-konto krävs för att registrera och aktivera KME, samt hantera alla Knox Enterprise-rättigheter på en enda plats.
 
-5.  Registreringsgranskning: När din profil har slutförts och skickats, utför Samsung en granskning av ditt program och godkänner det direkt eller placerar det i en väntande granskningsstatus för ytterligare åtgärder. När ditt konto har godkänts, kan du fortsätta med ytterligare steg.
+5.  Registreringsgranskning: När din profil har slutförts och skickats, utför Samsung en granskning av ditt program och antingen godkänner det direkt eller placerar det i en väntande granskningsstatus för ytterligare uppföljning. När ditt konto har godkänts, kan du fortsätta med ytterligare steg.
 
 ## <a name="create-mdm-profile"></a>Skapa MDM-profil
 
@@ -102,9 +102,9 @@ Du måste tilldela en MDM-profil till enheter som lagts till i Knox-portalen inn
 
 För enheter som registrerats i Intune med KME för Android kan du konfigurera hur en användare loggar in på följande sätt:
 
-- **Utan association till användarnamnet:** I Knox-portalen under **Enhetsinformation**, lämnar fältet **Användar-ID** och **Lösenord** tomt för enheter som lagts till. Detta kräver att användaren måste ange både användarnamn och lösenord vid registrering i Intune.
+- **Utan association till användarnamnet:** I Knox-portalen under **Enhetsinformation** lämnar du fältet **Användar-ID** och **Lösenord** tomt för de enheter som har lagts till. Detta kräver att användaren måste ange både användarnamn och lösenord vid registrering i Intune.
 
-- **Med association till användarnamnet:** I Knox-portalen under **Enhetsinformation**, ange ett **Användar-ID** (till exempel ett användarnamn för den tilldelade användaren eller ett konto för [Enhetsregistreringshanteraren](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) för enheter som lagts till. Detta fyller i användarnamnet i förväg och kräver att användaren måste ange ett lösenord vid registrering i Intune.
+- **Med association till användarnamnet:** I Knox-portalen under **Enhetsinformation** anger du ett **Användar-ID** (till exempel ett användarnamn för den tilldelade användaren eller ett konto för [Enhetsregistreringshanteraren](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) för de enheter som har lagts till. Detta fyller i användarnamnet i förväg och kräver att användaren måste ange ett lösenord vid registrering i Intune.
 
 > [!NOTE]
 >
@@ -119,13 +119,15 @@ Behöver du fortfarande hjälp? Kolla in hela [Användarhandboken för Knox Mobi
 
 ## <a name="frequently-asked-questions"></a>Vanliga frågor och svar
 
-- **Stöd för enhetsägare:** Intune stöder registrering av enheter till endast helskärmsläge med Android Enterprise. Stöd för andra Android Enterprise-enhetsägarlägen implementeras allt eftersom de blir tillgängliga i Intune.
+- **Stöd för enhetsägare:** Intune stöder registrering av enheter till enbart helskärmsläge med Android Enterprise. Stöd för andra Android Enterprise-enhetsägarlägen implementeras allt eftersom de blir tillgängliga i Intune.
 
-- **Fabriksåterställning för registrering till Android Enterprise:** Om syftet för redan konfigurerade enheter ändras måste enheterna fabriksåterställas när de registreras i Android Enterprise.
+- **Inget stöd för arbetsprofiler:** KME är en metod för registrering av företagets enheter och enheter som registreras i Android-arbetsprofiler som säkerställer att arbetsrelaterade och personliga data separeras på de privata enheterna. Registrering av enheter till arbetsprofilen med KME är därför inte ett scenario som stöds i Intune.
 
-- **Uppdateringar med Google Play-konto:** Ett Google Play-konto är inte nödvändigt för att registrera enheten i Microsoft Intune. Men framtida uppdateringar till företagsportalappen kan kräva ett Google Play-konto på enheten. Inget Google Play-konto krävs vid registrering i Google-enhetsägarläge.
+- **Fabriksåterställning vid registrering i Android Enterprise:** Om syftet för redan konfigurerade enheter ändras, måste enheterna fabriksåterställas när de registreras i Android Enterprise.
 
-- **Fältet ”lösenord” ignoreras:** Om fältet **lösenord** fylls i vid **Enhetsinformation** i Knox-portalen ignoreras det av Intune-företagsportalappen under Android-registreringen. Användaren måste ange ett lösenord på enheten för att slutföra enhetsregistreringen.
+- **Uppdateringar med hjälp av Google Play-konto:** Ett Google Play-konto är inte nödvändigt för att registrera enheten till Microsoft Intune. Men framtida uppdateringar till företagsportalappen kan kräva ett Google Play-konto på enheten. Inget Google Play-konto krävs vid registrering i Google-enhetsägarläge.
+
+- **Fältet ”Lösenord” ignoreras:** Om fältet **Lösenord** fylls i vid **Enhetsinformation** i Knox-portalen, ignoreras det av Intune-företagsportalappen under Android-registreringen. Användaren måste ange ett lösenord på enheten för att slutföra enhetsregistreringen.
 
 
 ## <a name="getting-support"></a>Få support

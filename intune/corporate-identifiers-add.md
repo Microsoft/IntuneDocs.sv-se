@@ -1,6 +1,6 @@
 ---
 title: Lägg till företagsidentifierare i Intune
-titlesuffix: Microsoft Intune
+titlesuffix: ''
 description: Läs mer om hur du kan lägga till företagsidentifierare (registreringsmetod, IMEI- och serienummer) i Microsoft Intune.
 keywords: ''
 author: ErikjeMS
@@ -15,13 +15,13 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: cc65cc3440d260adc3bd2c7de3a311374681327d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 38c1d982dc627ccddf2844bf7a6334157e1f0b92
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183459"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032256"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -67,7 +67,7 @@ CSV-filen när den visas i en textredigerare:
 
 > [!IMPORTANT]
 > Vissa Android-enheter har flera IMEI-nummer. Intune läser bara ett IMEI-nummer per registrerad enhet. Om du importerar ett IMEI-nummer som inte är det IMEI-nummer som är inventerat i Intune så kommer enheten att klassificeras som en personlig enhet i stället för en enhet som ägs av företaget. Om du importerar flera IMEI-nummer för en enhet så visas registreringsstatus för icke-inventerade nummer som **Okänt**.<br>
->Observera även att serienummer för Android inte är garanterat unika – de kanske inte ens finns. Hör efter med enhetens leverantören huruvida serienumret är ett tillförlitligt enhets-ID eller inte.
+>Observera även: Serienummer för Android är inte garanterat unika – de kanske inte ens finns. Hör efter med enhetens leverantören huruvida serienumret är ett tillförlitligt enhets-ID eller inte.
 >Serienummer som rapporteras av enheten till Intune kanske inte matchar det ID som visas i menyerna Android-inställningar/Om på enheten. Kontrollera vilken typ av serienummer som rapporterats av tillverkaren av enheten.
 >Vid försök att ladda upp en fil med serienummer som innehåller punkter (.) misslyckas överföringen. Serienummer med punkter stöds inte.
 
@@ -77,7 +77,7 @@ CSV-filen när den visas i en textredigerare:
 
    ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/add-corp-id.png)
 
-2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**.
+2. På bladet **Lägg till identifierare** anger du ID-typen: **IMEI** eller **Seriell**.
 
 3. Klicka på mappikonen och ange sökvägen till listan du vill importera. Gå till CSV-filen och välj **Lägg till**. 
 
@@ -87,7 +87,7 @@ CSV-filen när den visas i en textredigerare:
 
 1. I [Intune på Azure Portal](https://portal.azure.com) väljer du **Enhetsregistrering** > **ID:n för företagsenheter** > **Lägg till** > **Ange manuellt**.
 
-2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**.
+2. På bladet **Lägg till identifierare** anger du ID-typen: **IMEI** eller **Seriell**.
 
 3. Ange **Identifierare** och **Information** för varje identifierare som du vill lägga till. När du har angett identifierarna väljer du **Lägg till**.
 

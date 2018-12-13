@@ -1,11 +1,12 @@
 ---
 title: Enheten saknar ett certifikat som krävs | Microsoft Docs
-description: ''
+titlesuffix: Microsoft Intune
+description: Android-enheten saknar ett certifikat som företagets support kräver.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,13 +17,13 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.custom: intune-enduser
-ms.openlocfilehash: 043b04688630f345be625456fb9cfec586e2f790
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.custom: intune-enduser; seodec18
+ms.openlocfilehash: e40ac2fd81375b84084dd229f4cb5a6ab3e9915f
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150760"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032222"
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Enheten saknar ett certifikat som krävs
 
@@ -38,6 +39,6 @@ Om Android-enheten inte har registrerats i Intune och den saknar ett certifikat 
 
 Det första steget du ska ta är att se om enheten [saknar ett certifikat som vanligtvis är förinstallerat på den](your-device-is-missing-a-preinstalled-certificate-android.md).
 
-Om detta inte fungerar kan företagets support [kräva att du installerar ett andra certifikat för ytterligare säkerhet](your-device-is-missing-an-IT-required-certificate-android.md).
+Om detta inte löser problemen med certifikat kan företagets support [kräva att du installerar ett certifikat till för ytterligare säkerhet](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

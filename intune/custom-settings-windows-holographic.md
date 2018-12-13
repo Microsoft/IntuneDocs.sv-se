@@ -1,11 +1,11 @@
 ---
-title: Anpassade inställningar för Windows Holographic for Business-enheter i Microsoft Intune – Azure | Microsoft Docs
+title: Anpassade inställningar – Windows Holographic for Business-enheter – Microsoft Intune
 description: Lägg till eller skapa en anpassad profil för att använda OMA-URI-inställningar för enheter som kör Windows Holographic for Business i Microsoft Intune, inklusive Microsoft Hololens. Du kan ange CSP-principinställningarna AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates och ApplicationLaunchRestrictions.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 12/06/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.topic: article
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b66adc535d51fdaf2e3fc7a4bb1b11d34433db98
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 2c4e6041f00ad55b18f8b20996da8002f5ce0247
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185584"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032205"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Använda anpassade inställningar för Windows Holographic for Business-enheter i Intune
 
@@ -40,7 +40,7 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Windows Hologr
 3. Ange följande inställningar:
 
     - **Namn**: Ange ett namn för profilen, till exempel `hololens custom profile`.
-    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Beskrivning**: Ange en beskrivning av profilen.
     - **Plattform**: Välj **Windows 10 och senare**.
     - **Profiltyp**: Välj **Anpassad**.
 
@@ -48,7 +48,7 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Windows Hologr
 
     - **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
     - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
-    - **OMA-URI** (skiftlägeskänsligt): Ange den OMA-URI som du vill använda som inställning.
+    - **OMA-URI** (skiftlägeskänslig): Ange den OMA-URI som du vill använda som inställning.
     - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
 
         - Sträng

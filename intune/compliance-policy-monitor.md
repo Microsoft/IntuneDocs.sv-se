@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f835f2bd2802454bbcdb27251524dfa4d2400f1a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e26de8691e78e4b35e8618c48f38c7972af233f8
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178386"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977311"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -56,7 +56,10 @@ När du går in djupare i dessa rapporter kan du även se eventuella specifika e
 
 ### <a name="device-compliance-status-report"></a>Rapport för enhetens efterlevnadsstatus
 
-Diagrammet visar efterlevnadsstatus för alla Intune-registrerade enheter. Status för enhetsefterlevnad sparas i två olika databaser: Intune och Azure Active Directory. 
+Diagrammet visar efterlevnadsstatus för alla Intune-registrerade enheter. Kompatibilitetstillstånden finns i två olika databaser: Intune och Azure Active Directory. 
+
+> [!IMPORTANT]
+> Intune följer enhetens incheckningsschema för alla efterlevnadsutvärderingar på enheten. [Mer information om enhetens incheckningsschema](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 
 Beskrivningar av statusar för enhetsefterlevnadsprinciper:
 
@@ -68,9 +71,9 @@ Beskrivningar av statusar för enhetsefterlevnadsprinciper:
 
 - **Inte utvärderat**: Ett ursprungligt tillstånd för nyregistrerade enheter. Eller enheter som inte har tilldelats en efterlevnadsprincip och inte har en utlösare för att kontrollera efterlevnad.
 
-- **Inte kompatibel**: Enheten har inte tillämpat en eller flera principinställningar för enhetsefterlevnad. Eller så har användaren inte efterlevt principerna.
+- **Inkompatibel:** Enheten kunde inte tillämpa en eller flera principinställningar för enhetsefterlevnad. Eller så har användaren inte efterlevt principerna.
 
-- **Enheten har inte synkroniserats:** Enheten kunde inte rapportera sin enhetsefterlevnadsstatus på grund av någon av följande orsaker:
+- **Enheten har inte synkroniserats:** Enheten kunde inte rapportera sin status för enhetsefterlevnadsprincipen på grund av någon av följande orsaker:
 
   - **Okänd**: Enheten är offline eller kunde inte kommunicera med Intune eller Azure AD av andra orsaker.
 
@@ -155,7 +158,7 @@ Den här funktionen ingår i statusrapporteringen för enheter:
     - Lyckades: Principen tillämpas
     - Fel: Det gick inte att tillämpa principen. Detta meddelande visas vanligtvis med en felkod som länkar till en förklaring. 
     - Konflikt: Två inställningar tillämpas på samma enhet och Intune kan inte lösa konflikten. En administratör bör granska.
-    - Väntar: Enheten har inte kontaktar Intune ännu för att ta emot principen. 
+    - Väntar: Enheten har inte checkats in i Intune ännu för att ta emot principen. 
     - Inte tillämpligt: Enheten kan inte ta emot principen. Principen uppdaterar t.ex. en inställning som är specifik för iOS 11.1, men enheten använder iOS 10. 
 
 3. Om du vill visa information om de enheter som använder den här principen väljer du en av statusarna. Välj till exempel **Lyckades**. I nästa fönster visas specifik enhetsinformation, inklusive enhetsnamn och distributionsstatus.

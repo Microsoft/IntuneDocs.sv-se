@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d9a7ad5d77f0c085fc1e91b6991657e6b848b3f3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187845"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112960"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -67,7 +67,7 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
 
 ## <a name="set-device-type-restrictions"></a>Ange begränsningar för enhetstyp
 
-Du kan ändra inställningarna för en begränsning för enhetstyp genom att följa stegen nedan. Dessa begränsningar påverkar inte enheter som redan har registrerats. Enheter som registreras med [Intune PC-agenten](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) kan inte blockeras med den här funktionen.
+Du kan ändra inställningarna för en begränsning för enhetstyp genom att följa stegen nedan. Dessa begränsningar påverkar inte enheter som redan har registrerats. Enheter som registreras med [Intune PC-agenten](manage-windows-pcs-with-microsoft-intune.md) kan inte blockeras med den här funktionen.
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
@@ -123,7 +123,7 @@ Du kan ändra inställningarna för en begränsning för enhetsgräns genom att 
 6. Välj **Spara**.
 
 
-Ett meddelande visas för användarna med information om att de har uppnått gränsen för registrerade enheter. På iOS ser det till exempel ut så här:
+Vid BYOD-registrering ser användarna information om att de har uppnått gränsen för antalet registrerade enheter. På iOS ser det till exempel ut så här:
 
 ![Avisering om enhetsbegränsning på iOS](./media/enrollment-restrictions-ios-set-limit-notification.png)
 

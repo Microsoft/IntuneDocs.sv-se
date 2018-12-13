@@ -1,7 +1,7 @@
 ---
-title: Hämta ett Apple MDM-pushcertifikat
-titlesuffix: Microsoft Intune
-description: Läs om stegen för att hämta ett Apple MDM-pushcertifikat som kan hantera iOS-enheter med Intune.
+title: Hämta ett Apple MDM-pushcertifikat för Intune
+titlesuffix: ''
+description: Hämta ett Apple MDM-pushcertifikat för att hantera iOS-enheter med Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,19 +15,19 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 927da6f2e7584cb3b43bede77cfbc19ec91b568a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 053e3f42553268aaeff0502e2cfe05b33b18618b
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189477"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032171"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Hämta ett Apple MDM-pushcertifikat
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Intune stöder hantering av mobila enheter (MDM) för iPad-, iPhone- och Mac-enheter och ger användarna åtkomst till företagets e-post och appar. Ett Apple MDM-pushcertifikat krävs för att Intune ska kunna hantera iOS- och macOS-enheter. När du har lagt till certifikatet i Intune kan dina användare registrera sina enheter med hjälp av följande:
+Ett Apple MDM-pushcertifikat krävs för att Intune ska kunna hantera iOS- och macOS-enheter. När du har lagt till certifikatet i Intune kan dina användare registrera sina enheter med hjälp av följande:
 
 - Företagsportalsappen
 

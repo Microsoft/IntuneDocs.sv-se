@@ -1,5 +1,5 @@
 ---
-title: Skapa en design
+title: Skapa din Microsoft Intune-design
 titlesuffix: Microsoft Intune
 description: Den här artikeln hjälper till att skapa en utformning för utformning och implementering av Microsoft Intune i molnet.
 keywords: ''
@@ -15,13 +15,13 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
-ms.custom: ''
-ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f0159b4d33112e507556ceb53505eedc57ec05f7
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186502"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112994"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -257,8 +257,8 @@ Du bör skapa minst en konfigurationsprincip per plattform. Du kan skapa flera k
 
 | **Principnamn** | **Enhetsplattform** | **Inställningar** | **Målgrupp** |   
 |:---:|:---:|:---:|:---:|
-| Företag – iOS | iOS | PIN-kod krävs, längd: 6, begränsa säkerhetskopiering i molnet | Företagsenheter |                                                           
-| Företag – Android | Android | PIN-kod krävs, längd: 6, begränsa säkerhetskopiering i molnet | Företagsenheter |                                                           
+| Företag – iOS | iOS | PIN-kod krävs, längd: 6, Begränsa molnsäkerhetskopiering | Företagsenheter |                                                           
+| Företag – Android | Android | PIN-kod krävs, längd: 6, Begränsa molnsäkerhetskopiering | Företagsenheter |                                                           
 | BYOD – iOS  | iOS | PIN-kod krävs, längd: 4 | BYOD-enheter |
 | BYOD – Android  | Android | PIN-kod krävs, längd: 4 | BYOD-enheter |
 
@@ -402,7 +402,7 @@ Villkorlig åtkomst används för att endast tillåta att kompatibla enheter få
 
 Vid onlineåtkomst fastställer du vilka plattformar och användargrupper som du riktar in villkorliga åtkomstprinciper på. Du måste även fastställa om du behöver installera eller konfigurera Intune Service-to-Service Connector för Exchange Online eller Exchange On-premises. Läs mer om att installera och konfigurera Intune Service-to-Service Connector: <!---these links are correct--->
 
--   [Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
+-   [Exchange Online](exchange-service-connector-configure.md)
 
 -   [Exchange On-premises](exchange-connector-install.md)
 

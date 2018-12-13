@@ -14,12 +14,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de80092647462f83fb92303080239fd30198bd3c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1b8d08e60b9cd656eb9467fd5289b9dfc428d183
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180242"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168002"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Aktivera Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -89,13 +89,13 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
 5. För **Profiltyp** väljer du **Windows Defender ATP (Windows 10 Desktop)**.
 6. Konfigurera inställningarna:
 
-  - **Windows Defender ATP client configuration package type** (Typ av konfigurationspaket för Windows Defender ATP-klient): Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
+  - **Pakettyp för konfiguration av Windows Defender ATP-klient**: Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
   
     > [!NOTE] 
-    > Om du har upprättat en anslutning korrekt med Windows Defender ATP, kommer Intune automatiskt att **publicera** konfigurationsprofilen för dig.
+    > Om du har upprättat en anslutning på rätt sätt med Windows Defender ATP, kommer Intune automatiskt **publicera** konfigurationsprofilen åt dig, och inställningen **Pakettyp för konfiguration av Windows Defender ATP-klient** kommer inte vara tillgänglig.
   
-  - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel kan samlas in och delas med Windows Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Windows Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Windows Defender ATP.
-  - **Skicka frekvensvärde för telemetrirapportering**: För enheter som har hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Windows Defender ATP oftare.
+  - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel samlas in och delas med Windows Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Windows Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Windows Defender ATP.
+  - **Skicka frekvensvärde för telemetrirapportering**: För enheter med hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Windows Defender ATP oftare.
 
     [Publicera Windows 10-datorer med hjälp av System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection) innehåller mer information om dessa Windows Defender ATP-inställningar.
 
@@ -112,8 +112,8 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 
   - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
   - **Låg**: Enheten följer standard om det enbart finns hot på låg nivå på enheten. Enheter med medel- eller hög risk är inte kompatibla.
-  - **Medel**: Enheten är kompatibel om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-  - **Hög**: Den här nivån är det minst säkra och den tillåter alla hotnivåer. Så enheter med höga, medel eller låga risknivåer anses uppfylla kraven.
+  - **Medel**: Enheten följer standard om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
+  - **Hög**: Den här nivån är den minst säkra och tillåter alla hotnivåer. Så enheter med höga, medel eller låga risknivåer anses uppfylla kraven.
 
 6. Välj **OK** och **Skapa** för att spara ändringarna (och skapar profilen).
 

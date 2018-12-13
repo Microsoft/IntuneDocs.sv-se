@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: 8841354b268f70634a61040fb06ed857120e9cfc
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181980"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112433"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -35,7 +35,7 @@ Du behöver inte källkoden för att använda verktyget, men du behöver autenti
 
 Apphanteringsverktyget stöder **inte** appar i Apple App Store eller Google Play Store. Det stöder inte heller vissa funktioner som kräver utvecklarintegration (se följande tabell med funktionsjämförelser).
 
-Mer information om programhanteringsverktyget för appskyddsprinciper på enheter som inte har registrerats i Intune finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
+Mer information om programhanteringsverktyget för appskyddsprinciper på enheter som inte har registrerats i Intune finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune](apps-add.md).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Skäl för att använda programhanteringsverktyget
 * Din app har inte några inbyggda dataskyddsfunktioner
@@ -98,7 +98,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Blockera skärmdump (endast Android)|X|X|
 |Stöd för MAM utan enhetsregistrering|X|X|
 |Fullständig rensning av enheten|X|X|
-|Selektiv rensning <br></br>**Obs!** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
+|Selektiv rensning <br></br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
 |Förhindra ”Spara som”|X||
 |Konfiguration av målprogram|X||
 |Stöd för flera identiteter|X||
@@ -117,4 +117,4 @@ Mer information om appskyddsprinciper i Intune finns i följande avsnitt:
 
   - [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)</br>
   - [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)</br>
-  - [Aktivera hantering av mobilprogram i appar med SDK](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+  - [Aktivera hantering av mobilprogram i appar med SDK](app-sdk.md)

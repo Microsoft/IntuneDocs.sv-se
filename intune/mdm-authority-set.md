@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0eb3ccf85c8851f16dcfe303603f65517fcf7312
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 6f0138da6e9ea427ad07ad3b41dd22b7319bb044
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183765"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112586"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -41,7 +41,7 @@ Möjliga konfigurationerna är:
 - **Hantering av mobilenheter i Office 365** – Integrering av Office 365 med Intunes molnlösning. Du kan konfigurera Intune från administrationscentret för Office 365. Innehåller en delmängd av de funktioner som är tillgängliga i Fristående Intune. Ange utfärdare för hantering av mobila enheter i administrationscentret för Office 365.
 
 > [!IMPORTANT]
-> I Configuration Manager version 1610 och senare och i Microsoft Intune version 1705 kan du ändra MDM-utfärdaren utan att behöva kontakta Microsoft Support och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. Mer information finns i [Vad ska jag göra om jag väljer fel inställning för MDM-utfärdare?](/intune-classic/deploy-use/prerequisites-for-enrollment#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
+> I Configuration Manager version 1610 och senare och i Microsoft Intune version 1705 kan du ändra MDM-utfärdaren utan att behöva kontakta Microsoft Support och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. Mer information finns i [Förbereda ändringen av MDM-utfärdare till Configuration Manager](mdm-authority-set.md#prepare-to-change-the-mdm-authority-to-configuration-manager).
 
 ## <a name="set-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
 
@@ -90,8 +90,8 @@ Läs följande information som beskriver hur du förbereder övergången till MD
     > [!NOTE]    
     > Om MDM-utfärdaren visas som **Hanteras av Intune och Office 365** kommer dina Office 365-hanterade MDM-enheter inte längre att hanteras när du ändrar MDM-utfärdaren till **Configuration Manager** (hybrid). Vi rekommenderar att du licensierar dessa användare för Intune eller Enterprise Mobility Suite innan du ändrar MDM-utfärdare.   
 
-- Ta bort rollen Enhetsregistreringshanterare i [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com). Mer information finns i [Ta bort en enhetsregistreringshanterare från Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune#delete-a-device-enrollment-manager-from-intune).
-- Inaktivera alla konfigurerade enhetsgruppmappningar. Mer information finns i avsnittet [Kategorisera enheter med enhetsgruppmappning i Microsoft Intune](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune).
+- Ta bort rollen Enhetsregistreringshanterare i [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com). Mer information finns i [Ta bort en enhetsregistreringshanterare från Intune](device-enrollment-manager-enroll.md#remove-device-enrollment-manager-permissions).
+- Inaktivera alla konfigurerade enhetsgruppmappningar. Mer information finns i avsnittet [Kategorisera enheter med enhetsgruppmappning i Microsoft Intune](device-group-mapping.md).
 - Slutanvändarna bör inte påverkas nämnvärt under övergången till den nya MDM-utfärdaren. Det kan dock vara bra att informera användarna om ändringen så att de har sina enheter påslagna och ansluter till tjänsten så snart som möjligt efter ändringen. Detta säkerställer att så många enheter som möjligt ansluter till och registreras med tjänsten via den nya utfärdaren så fort som möjligt.
 - Om du använder fristående Intune för att hantera iOS-enheter före ändringen av MDM-utfärdare, måste du se till att samma APNs-certifikat (Apple Push Notification service) som användes tidigare i Intune förnyas och används för att konfigurera klienten igen i Configuration Manager (hybrid).    
 

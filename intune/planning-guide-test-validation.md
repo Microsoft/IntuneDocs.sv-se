@@ -15,12 +15,12 @@ ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: bbcf6e21b9f5dd0474461e88ff54d6dde97590aa
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ba214e059e9a5ddb17a8b1344d4d30ab1d7b40fa
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179940"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112467"
 ---
 # <a name="intune-testing-and-validation"></a>Testning och validering av Intune
 
@@ -38,11 +38,11 @@ Vi rekommenderar att du dokumenterar följande:
 
 Om en designkomponent inte finns i minst ett testningskriterium som är knutet till ett krav eller scenario bör du överväga om designkomponenten är nödvändig eller inte. Se även till att ha följande poster:
 
--   **Konton:** Testkonton som licensierats för EMS och Office 365 för att testa alla användningsfallsscenarier.
+-   **Konton:** Testkonton som licensierats för EMS och Office 365 för att kunna testa alla användningsfallsscenarier.
 
 -   **Enheter:** Testenheter som kan rensas eller återställas till fabriksinställningarna.
 
--   **Integrationskomponenter:** Alla integrationskomponenter (Certificate Connector, Intune Service-to-Service Connector för värdbaserad Exchange och Intune On-Premises Connector för lokal Exchange) bör installeras och konfigureras efter behov.
+-   **Integrationskomponenter:** Alla integrationskomponenter (Certificate Connector, Intune Service to Service Connector för värdbaserad Exchange och Intune On-Premises Connector för Exchange) bör installeras och konfigureras efter behov.
 
 Designändringar kan krävas i händelse av oförutsedda problem. Dessutom bör alla ändringar dokumenteras fullständigt med orsaken för varje ändring. Här visas ett exempel som illustrerar vad en ändring kan vara:
 
@@ -52,7 +52,7 @@ Du kanske ställs inför utmaningar eller problem som kräver teknisk hjälp ell
 
 -   [Så här får du support för Intune](get-support.md)
 
--   [Kontakta telefonsupporten för Microsoft Intune](/intune-classic/troubleshoot/contact-assisted-phone-support-for-microsoft-intune)
+-   [Kontakta telefonsupporten för Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Funktionell valideringstestning
 

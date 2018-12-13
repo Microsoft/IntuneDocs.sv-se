@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: efb850e0f08c94cfee7948f50411220216eb8418
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9562eb2c8fae49628ac042f28f172fb9f8fd5106
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188083"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112552"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -55,7 +55,7 @@ Intune har stöd för hantering av flera användare för enheter som kör Window
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Förenkla Windows-registreringen utan Azure AD Premium
 Du kan förenkla registreringen genom att skapa ett DNS-alias (CNAME-posttyp) som omdirigerar registreringsbegäranden till Intune-servrarna. I annat fall måste användare som försöker ansluta till Intune ange Intune-servernamnet under registreringen.
 
-**Steg 1: Skapa CNAME-poster** (valfritt)<br>
+**Steg 1: Skapa CNAME** (valfritt)<br>
 Skapa CNAME-DNS-resursposter för företagsdomänen. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
 
 Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas, uppmanas användarna att manuellt ange MDM-servernamnet, enrollment.manage.microsoft.com.
@@ -102,4 +102,4 @@ Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvänd
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Tänk på detta när du hanterar Windows-enheter med Intune i Azure](/intune-classic/deploy-use/intune-on-azure).
+- [Tänk på detta när du hanterar Windows-enheter med Intune i Azure](intune-legacy-pc-client.md).

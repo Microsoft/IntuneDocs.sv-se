@@ -16,12 +16,12 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 034919a7ae7d223a30b11b4c3aa1f495e028e89c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 00e8b0e35514fe583027d15fdcc810295aa9fa9e
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184632"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977294"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -48,8 +48,8 @@ Beroende på apptypen kan appen installeras på en Windows 10-enhet på ett av t
 - **Användarkontext**: När en app distribueras i användarkontext installeras den hanterade appen för den användaren på enheten när användaren loggar in på enheten. Observera att installationen av appen inte lyckas förrän användaren loggar in på enheten. 
     - Moderna verksamhetsspecifika appar och Microsoft Store för företag-appar (både online och offline) kan distribueras i användarkontext och stöder både avsikten Krävs och Tillgänglig.
     - Win32-appar som skapats som **användarläge** eller **dubbelläge** kan distribueras i användarkontext och stöder både **krävd** och **tillgänglig** avsikt. 
-- **Enhetskontext**: När en app distribueras i enhetskontext installeras den hanterade appen direkt till enheten av Intune.
-    - Endast moderna verksamhetsspecifika appar och onlinelicensierade Microsoft Store för företag-appar kan distribueras i enhetskontext och stöder endast avsikten Krävs.
+- **Enhetskontext**: När en app distribueras i enhetskontext installeras den hanterade appen direkt på enheten av Intune.
+    - Endast moderna verksamhetsspecifika appar och offlinelicensierade appar i Microsoft Store för företag kan distribueras i enhetskontext och stöder endast avsikten Krävs.
     - Win32-appar som skapats som **datorläge** eller **dubbelläge** kan distribueras i användarkontext och stöder endast **krävd** avsikt.
 
 > [!NOTE]
@@ -57,11 +57,11 @@ Beroende på apptypen kan appen installeras på en Windows 10-enhet på ett av t
 
 När en app distribueras i enhetskontext lyckas endast installationen när den riktas till en enhet som stöder enhetskontext. Dessutom stöder distribuering i enhetskontext dessutom följande villkor:
 - Om en app distribueras i enhetskontext och riktas mot en användare kommer installationen att misslyckas med följande status och fel som visas i administratörskonsolen:
-    - Status: Failed (Misslyckades).
-    - Error: A user can’t be targeted with a Device context install. (Fel: En användare kan inte riktas till med en enhetskontextinstallation.)
+    - Status: Misslyckades.
+    - Fel: Det går inte att rikta sig mot en användare med en kontextinstallation för enheter.
 - Om en app distribueras i enhetskontext men riktas mot en enhet som inte stöder enhetskontext kommer installationen att misslyckas med följande status och fel i administratörskonsolen:
-    - Status: Failed (Misslyckades).
-    - Error: This platform does not support device context installs. (Fel: Den här plattformen stöder inte enhetskontextinstallation.) 
+    - Status: Misslyckades.
+    - Fel: Den här plattformen stöder inte kontextinstallationer för enheter. 
 
 > [!Note]
 > När en apptilldelning sparas med en specifik distribution går det inte att ändra kontexten för den tilldelningen förutom för moderna appar. I fallet med moderna appar går det att ändra kontexten från användarkontext till enhetskontext. 

@@ -5,22 +5,22 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 12/05/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
-ms.reviewer: angerobe
+ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 13ffb9e7091b484c59f44802de675b1ab45b1c77
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5876b0df6787640e465952cb1cca17f4f3105762
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183476"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977345"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Snabbstart: Registrera din Windows 10-enhet
 
@@ -29,7 +29,7 @@ I den här snabbstarten antar du först rollen som Intune-användare och registr
 Om du registrerar dina enheter i Microsoft Intune kan dina Windows 10-enheter få åtkomst till organisationens skyddade data, t.ex. e-post, filer och andra resurser. Detta gäller för både Windows 10 Desktop- och Windows 10 Mobile-enheter. Genom att registrera dina enheter kan du skydda både din och organisationens åtkomst och dessutom hålla arbetsdata åtskilda från personliga data.
 
 > [!TIP]
-> Ta reda på vad som händer när du [registrerar din enhet i Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och hur [informationen på enheten](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) påverkas.
+> Ta reda på vad som händer när du [registrerar din enhet i Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows) och hur [informationen på enheten](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) påverkas.
 
 Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
@@ -58,7 +58,7 @@ Innan du registrerar ditt Windows 10 Desktop måste du bekräfta den version av 
 4. Bekräfta att **versionen** av Windows 10 är **1607 eller senare**.
 
     > [!IMPORTANT]
-    > De steg som visas i den här snabbstarten gäller för Windows 10-version **1607 eller senare**. Om du har version **1511 eller äldre** fortsätter du med [de här stegen](/intune-user-help/enroll-your-w10-device-your-account.md).
+    > De steg som visas i den här snabbstarten gäller för Windows 10-version **1607 eller senare**. Om du har version **1511 eller äldre** fortsätter du med [de här stegen](/intune-user-help/enroll-your-w10-device-your-account).
 
 ## <a name="enroll-windows-10-desktop"></a>Registrera Windows 10 Desktop
 
@@ -85,7 +85,7 @@ Innan du registrerar ditt Windows 10 Desktop måste du bekräfta den version av 
 
    ![Skärmbild av nyligen tillagt konto](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Om du har följt de föregående stegen, men ändå inte kan komma åt din e-post eller dina filer på arbetet eller i skolan, kan du följa anvisningarna i [Felsökningssteg att följa för Åtkomst för arbete eller skola](/intune-user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Om du har följt de föregående stegen, men ändå inte kan komma åt din e-post eller dina filer på arbetet eller i skolan, kan du följa anvisningarna i [Felsökningssteg att följa för Åtkomst för arbete eller skola](/intune-user-help/troubleshoot-your-windows-10-device-windows#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Bekräfta din enhetsregistrering i Intune
 
@@ -97,11 +97,11 @@ Innan du registrerar ditt Windows 10 Desktop måste du bekräfta den version av 
 
 ## <a name="clean-up-resources"></a>Rensa resurser
 
-Om du vill avregistrera din Windows-enhet läser du [Ta bort din Windows-enhet från hanteringen](/intune-user-help/unenroll-your-device-from-intune-windows.md).
+Om du vill avregistrera din Windows-enhet läser du [Ta bort din Windows-enhet från hanteringen](/intune-user-help/unenroll-your-device-from-intune-windows).
 
 ## <a name="next-steps"></a>Nästa steg
 
-I den här snabbstarten lärde du dig att registrera en Windows 10-enhet i Intune. Du kan lära dig andra sätt att registrera enheter på alla plattformar. Mer information om hur du använder enheter med Intune finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/use-managed-devices-to-get-work-done.md).
+I den här snabbstarten lärde du dig att registrera en Windows 10-enhet i Intune. Du kan lära dig andra sätt att registrera enheter på alla plattformar. Mer information om hur du använder enheter med Intune finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/use-managed-devices-to-get-work-done).
 
 Om du vill följa den här serien med Intune-snabbstarter fortsätter du till nästa snabbstart.
 

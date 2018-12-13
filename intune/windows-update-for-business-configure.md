@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: a715fe518331d20b9a47d8374a37ce66ec59055d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c39faf6bb6a22cb861eb655edd6358b345b87c7e
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189328"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112773"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -28,7 +28,7 @@ Windows som tjänst är ett sätt att uppdatera Windows 10-enheter. I Windows 10
 
 Genom att använda Windows Update för företag förenklar du hanteringen av uppdateringar. Du behöver inte godkänna enskilda uppdateringar för grupper av enheter. Du kan hantera risker i dina miljöer genom att konfigurera en distributionsstrategi för uppdateringen. Med Windows Update blir dessutom uppdateringarna installerade vid rätt tidpunkt. I Microsoft Intune kan du konfigurera uppdateringsinställningar för enheterna och skjuta upp installationen av uppdateringar. Intune lagrar inte uppdateringar, utan enbart uppdateringarnas principtilldelning. Enheter får åtkomst till Windows Update direkt för uppdateringarna. Använd Intune för att konfigurera och hantera **Windows 10-uppdateringstestgrupper**. En uppdateringsring innehåller en grupp med inställningar som anger när och hur uppdateringar av Windows 10 ska installeras. Du kan till exempel konfigurera följande inställningar:
 
-- **Windows 10-underhållskanal**: Välj den underhållskanal som du vill att grupper av enheter ska ta emot uppdateringar från. Följande kanaler är tillgängliga: 
+- **Underhållskanal för Windows 10**: Välj den underhållskanal som du vill att grupper av enheter ska ta emot uppdateringar från. Följande kanaler är tillgängliga: 
   - Halvårskanal
   - Halvårskanal (riktad)
   - Windows Insider – snabb
@@ -37,11 +37,11 @@ Genom att använda Windows Update för företag förenklar du hanteringen av upp
       
   Mer information om tillgängliga underhållskanaler finns i [Översikt för Windows som en tjänst](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
 - **Inställningar för uppskjutning**: Konfigurera inställningar för uppskjutning av uppdateringar om du vill fördröja uppdateringsinstallationer för grupper av enheter. Använd inställningarna för att mellanlagra uppdateringsdistributionen, så att du kan granska förloppet medan det pågår.
-- **Pausa**: Om det inträffar ett problem under uppdateringsdistributionen kan du senarelägga installationen av uppdateringen. 
-- **Underhållsperiod**: Konfigurera under vilka timmar som uppdateringar ska kunna installeras.
-- **Typer av uppdateringar**: Ange vilka typer av uppdateringar som ska kunna installeras. Exempel: kvalitetsuppdateringar, funktionsuppdateringar och drivrutiner.
+- **Pausa**: Om det inträffar ett problem under uppdateringsdistributionen, kan du senarelägga installationen av uppdateringen. 
+- **Underhållsperiod**: Konfigurera under vilka timmar uppdateringar ska kunna installeras.
+- **Uppdateringstyp**: Ange vilka typer av uppdateringar som ska kunna installeras. Exempel: kvalitetsuppdateringar, funktionsuppdateringar och drivrutiner.
 - **Installationsbeteende**: Konfigurerar hur uppdateringen installeras. Det kan t.ex. vara om enheten ska startas om automatiskt efter installationen.
-- **Peerhämtning**: Du kan välja om du vill konfigurera peerhämtning. Om konfigurerat det och en enhet har slutfört hämtningen av en uppdatering, så kan andra enheter hämta uppdateringen från enheten. Inställningen påskyndar hämtningsprocessen.
+- **Peer-hämtning**: Du kan välja om du vill konfigurera peer-hämtning. Om konfigurerat det och en enhet har slutfört hämtningen av en uppdatering, så kan andra enheter hämta uppdateringen från enheten. Inställningen påskyndar hämtningsprocessen.
 
 När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom att använda uppdateringsringar kan skapa du en uppdateringsstrategi som speglar dina affärsbehov. Mer information finns i [Hantera uppdateringar med hjälp av Windows Update för företag](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
@@ -79,26 +79,26 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 4. Ange exempelvis följande information i **Inställningar**:
 
    - **Underhållskanal**: Ange den kanal som enheten tar emot Windows-uppdateringar från.
-   - **Microsoft-produktuppdateringar**: Välj om du vill söka efter appuppdateringar i Microsoft Update.
-   - **Windows-drivrutiner**: Välj om du vill undanta Windows Update-drivrutiner under uppdateringar.
+   - **Uppdateringar av Microsoft-produkter**: Välj om du vill söka efter appuppdateringar i Microsoft Update.
+   - **Windows-drivrutiner**: Välj om du vill undanta Windows Update-drivrutiner under uppdateringarna.
    - **Funktionssätt för automatisk uppdatering**: Välj hur automatiska uppdateringar installeras, samt om datorn ska startas om. Mer information finns i [Uppdatera/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
      - **Frekvens för automatiska funktioner**: Om du väljer alternativet för **automatisk installation och omstart vid schemalagd tid** för uppdateringen så visas den här inställningen. Använd inställningen om du vill schemalägga när uppdateringarna ska installeras, inklusive vecka, dag och tid.
 
    - **Omstartskontroller**: Aktiverat som standard. När du startar om en enhet utförs vissa kontroller, exempelvis kontroll av aktiva användare, batterinivå, spel som körs och mycket mer. Om du vill hoppa över de här kontrollerna när du startar om en enhet väljer du **Hoppa över**.
 
-   - **Uppskjutningsperiod för kvalitetsuppdatering (dagar)** – Ange i hur många dagar kvalitetsuppdateringar ska skjutas upp. Du kan fördröja mottagandet av dessa kvalitetsuppdateringar i upp till 30 dagar från att de har släppts.
+   - **Uppskjutningsperiod för kvalitetsuppdatering (dagar)**: Ange i hur många dagar kvalitetsuppdateringar ska skjutas upp. Du kan fördröja mottagandet av dessa kvalitetsuppdateringar i upp till 30 dagar från att de har släppts.
 
      Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner och publiceras vanligtvis den andra tisdagen varje månad. Kvalitetsuppdateringar via Windows Update endast för företag får endast dessa uppdateringar (”B”-versionen), men andra uppdateringar kan släppas när som helst av Microsoft. Du kan definiera om och hur länge du senarelägger mottagandet av kvalitetsuppdateringar efter att de blivit tillgängliga i Windows Update. Mer information finns i [Distribuera uppdateringar med hjälp av Windows Update för företag](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).
 
-   - **Uppskjutningsperiod för funktionsuppdatering (dagar)** – Ange i hur många dagar funktionsuppdateringar ska skjutas upp. Du kan fördröja mottagandet av dessa funktionsuppdateringar i upp till 180 dagar från att de har släppts.
+   - **Uppskjutningsperiod för funktionsuppdatering (dagar)**: Ange i hur många dagar funktionsuppdateringar ska skjutas upp. Du kan fördröja mottagandet av dessa funktionsuppdateringar i upp till 180 dagar från att de har släppts.
 
      Funktionsuppdateringarna är för det mesta nya funktioner i Windows. När du har konfigurerat inställningen **Underhållskanal** definierar du om och hur lång tid du ska senarelägga mottagandet av funktionsuppdateringar efter att de blivit tillgängliga i Windows Update.
 
-     Till exempel: **Underhållskanalen är inställd på Halvårskanal (riktad) och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
+     Exempel: **Om underhållskanalen är inställd på Halvårskanal (riktad) och uppskjutningsperioden är 30 dagar**: Vi tänker oss att Funktionsuppdatering X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
 
-     **Underhållskanalen är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att halvårskanalversionen har släppts och uppdateras därför i maj.
+     **Om underhållskanalen är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att Funktionsuppdatering X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att halvårskanalversionen har släppts och uppdateras därför i maj.
 
-   - **Leveransoptimeringens nedladdningsläge** – Välj den metod som enheterna laddar ner Windows-uppdateringar med. Mer information finns i [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+   - **Leveransoptimering av nedladdningsläge**: Välj den metod som ska användas när enheterna laddar ner Windows-uppdateringar. Mer information finns i [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
 
 5. När du är klar väljer du **OK**. I **Skapa uppdateringsring** väljer du **Skapa**.
 
@@ -131,16 +131,16 @@ Du kan visa uppdateringsefterlevnad i Intune, eller genom att använda en kostna
 ### <a name="review-update-compliance-using-oms"></a>Granska uppdateringsefterlevnad med OMS
 Du kan övervaka uppdateringsdistributioner av Windows 10 genom att använda den kostnadsfria lösningen Uppdateringsefterlevnad. Mer information finns i [Övervaka Windows-uppdateringar med Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). När du använder den här lösningen kan du distribuera ett kommersiellt ID till någon av dina Intune-hanterade Windows 10 enheter för vilken du vill rapportera uppdateringsefterlevnad.
 
-I Intune kan du konfigurera det kommersiella ID:t med hjälp av OMA-URI-inställningarna för en anpassad princip. Mer information finns i [Intune-principinställningar för Windows 10-enheter i Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
+I Intune kan du konfigurera det kommersiella ID:t med hjälp av OMA-URI-inställningarna för en anpassad princip. Mer information finns i [Intune-principinställningar för Windows 10-enheter i Microsoft Intune](custom-settings-windows-10.md).   
 
 Den OMA-URI-sökväg (skiftlägeskänslig) du använder när du ska konfigurera det kommersiella ID:t är: ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
 
 Du kan t.ex. använda följande värden i **Lägga till eller redigera OMA-URI-inställningen**:
 
-- **Inställningsnamn**: Windows Analytics Commercial ID
-- **Inställningsbeskrivning**: Konfigurera kommersiellt ID för Windows Analytics-lösning
+- **Inställningsnamn**: Kommersiellt ID för Windows Analytics
+- **Beskrivning av inställning**: Konfigurera kommersiellt ID för Windows Analytics-lösningar
 - **OMA-URI** (skiftlägeskänsligt): ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
-- **Datatyp:** Sträng
+- **Datatyp**: Sträng
 - **Värde**: *Använder det GUID som visas på fliken Windows-telemetri på din OMS-arbetsyta*>
 
 ![OMA-URI-inställning – Redigera rad](./media/commID-edit.png)

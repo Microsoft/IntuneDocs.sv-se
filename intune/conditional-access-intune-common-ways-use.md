@@ -1,6 +1,6 @@
 ---
-title: Villkorlig åtkomst med Microsoft Intune
-titlesuffix: ''
+title: Scenarier för villkorlig åtkomst
+titlesuffix: Microsoft Intune
 description: Läs om hur villkorlig åtkomst med Intune ofta används för enhetsbaserad och appbaserad villkorlig åtkomst.
 keywords: ''
 author: brenduns
@@ -14,13 +14,13 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7c47e7e82928ea40d0b39dfbb17472441eac4f5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; get-started; seodec18
+ms.openlocfilehash: 7073c5c617806bcf35934aba73bf15a9a195a506
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187675"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112484"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -45,7 +45,7 @@ Enhetsbaserad villkorlig åtkomst för Exchange Online och andra Office 365-prod
 
 -   Läs mer om [Intunes enhetsefterlevnad](device-compliance.md).
 
--   Lär dig mer om [skydd av e-post, Office 365 och andra tjänster med villkorlig åtkomst i Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+-   Lär dig mer om [skydd av e-post, Office 365 och andra tjänster med villkorlig åtkomst i Intune](app-based-conditional-access-intune.md).
 
 > [!NOTE]
 > På Android-enheter när du aktiverar Enhetsåtkomst för Sharepoint Online måste användare aktivera alternativet **Aktivera webbläsaråtkomst** på den registrerade enheten enligt följande:
@@ -125,7 +125,7 @@ När mobila enheter har Mobile Threat Defense-agenten installerad, kan denna ski
 
 Intune och integrerat mobilhotsskydd spelar en viktig roll vid beslut om villkorlig åtkomst baserat på enhetsrisk.
 
--   Läs mer om [Intunes mobilhotsskydd](https://docs.microsoft.com/intune-classic/deploy-use/mobile-threat-defense).
+-   Läs mer om [Intunes mobilhotsskydd](mobile-threat-defense.md).
 
 ### <a name="conditional-access-for-windows-pcs"></a>Villkorlig åtkomst för Windows-datorer
 
@@ -133,11 +133,11 @@ Villkorlig åtkomst för datorer har ungefär samma funktioner som för mobila e
 
 #### <a name="corporate-owned"></a>Företagsägd
 
--   **Lokalt domänanslutet AD:** Det här alternativet används ofta av organisationer som är relativt nöjda med sitt sätt att hantera datorer via AD-grupprinciper och/eller System Center Configuration Manager.
+-   **Lokalt domänansluten AD:** Det här alternativet används ofta av organisationer som är relativt nöjda med sitt sätt att hantera datorer via AD-grupprinciper och/eller System Center Configuration Manager.
 
--   **Domänanslutet Azure AD och Intune-hantering:** Det här scenariot är vanligtvis avsett för CYOD (Choose Your Own Device) och roaming-scenarier för bärbara datorer där dessa enheter sällan är anslutna till företagets nätverk. Enheten ansluter till Azure AD och registreras i Intune, vilket tar bort alla beroenden på AD lokalt och på domänkontrollanter. Detta kan användas som villkor för villkorlig åtkomst vid anslutning till företagets resurser.
+-   **Domänansluten Azure AD och Intune-hantering:** Det här scenariot är vanligtvis avsett för CYOD (Choose Your Own Device) och roaming-scenarier för bärbara datorer, där dessa enheter sällan är anslutna till företagets nätverk. Enheten ansluter till Azure AD och registreras i Intune, vilket tar bort alla beroenden på AD lokalt och på domänkontrollanter. Detta kan användas som villkor för villkorlig åtkomst vid anslutning till företagets resurser.
 
--   **Domänanslutet AD och System Center Configuration Manager:** Från och med den aktuella grenen tillhandahåller System Center Configuration Manager funktioner för villkorlig åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
+-   **Domänansluten AD och System Center Configuration Manager:** Från och med den aktuella grenen tillhandahåller System Center Configuration Manager funktioner för villkorlig åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
 
     -   Har datorn krypterats?
 

@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: df84438ca93e50c392b085eb439abe02f074e5c3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd238a7b779dd5e52e3cf8fb06c8f89db1f76559
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189732"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112933"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
 
@@ -53,7 +53,7 @@ Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar
 Dessa problem kan uppstå på alla enhetsplattformar.
 
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
-**Problem:** En användare får ett fel på under registreringen (som **Företagsportalen är otillgänglig för tillfället**) och DMPdownloader.log på konfigurationshanteraren innehåller felet **DeviceCapReached**.
+**Problem:** En användare råkar ut för ett fel under registreringen (t.ex. **Företagsportalen är inte tillgänglig för tillfället**) och DMPdownloader.log i Configuration Manager innehåller felet **DeviceCapReached**.
 
 **Lösning:**
 
@@ -73,12 +73,12 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
 > [!NOTE]
 > 
-> Du kan undvika taket för enhetsregistrering genom att använda ett enhetsregistreringshanterarkonto. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+> Du kan undvika taket för enhetsregistrering genom att använda ett enhetsregistreringshanterarkonto. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](device-enrollment-manager-enroll.md).
 > 
 > Ett användarkonto som läggs till i enhetsregistreringshanterarkontot kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Företagsportalen är för tillfället otillgänglig
-**Problem:** Användare får felet **Företagsportalen är för tillfället otillgänglig** på enheten.
+**Problem:** Användarna får felet **Företagsportalen är inte tillgänglig för tillfället** på enheten.
 
 **Lösning:**
 
@@ -93,7 +93,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera Intune-företagsportalappen och därefter kan du prova att registrera dig igen.
 
 ### <a name="mdm-authority-not-defined"></a>MDM-auktoritet har inte definierats
-**Problem:** Användaren får felet **MDM-utfärdare har inte definierats**.
+**Problem:** En användare får felet **MDM-utfärdare har inte definierats**.
 
 **Lösning:**
 
@@ -130,10 +130,10 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Det går inte att skapa en princip eller registrera enheter om företagets namn innehåller specialtecken
 **Problem:** Du kan inte skapa en princip eller registrera enheter.
 
-**Lösning:** I [administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
+**Lösning:** I [Administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Det går inte att logga in eller registrera enheter om det finns flera verifierade domäner
-**Problem:** detta problem kan uppstå när du lägger till en andra verifierad domän till din ADFS. Användare med UPN-suffixet (användarens huvudnamn) för den andra domänen kanske inte kan logga in på portalerna eller registrera enheter.
+**Problem:** Detta problem kan uppstå när du lägger till ytterligare en verifierad domän i ditt ADFS. Användare med UPN-suffixet (användarens huvudnamn) för den andra domänen kanske inte kan logga in på portalerna eller registrera enheter.
 
 
 <strong>Lösning:</strong> Microsoft Office 365-kunder måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix om de:
@@ -157,7 +157,7 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Enheter kan inte checka in med Intune-tjänsten och visas som "Ohälsosamma" i Intune-administrationskonsolen
-**Problem:** vissa Samsung-enheter som kör Android 4.4.x och 5.x kan sluta checka in med Intune-tjänsten. Om enheter inte checkar in:
+**Problem:** Vissa Samsung-enheter som kör Android-versionerna 4.4.x och 5.x kan sluta checka in med Intune-tjänsten. Om enheter inte checkar in:
 
 - Kan de inte ta emot princip, appar och fjärranslutna kommandon från Intune-tjänsten.
 - Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
@@ -220,7 +220,7 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 ### <a name="android-certificate-issues"></a>Certifikatfel (Android)
 
-**Problem**: Användare får följande meddelande på sina enheter: *Du kan inte logga in eftersom din enhet saknar ett obligatoriskt certifikat.*
+**Problem**: Användarna får följande meddelande på enheten: *Du kan inte logga in eftersom din enhet saknar ett certifikat som krävs.*
 
 **Lösning 1**:
 
@@ -266,12 +266,12 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 |Felmeddelande|Problem|Lösning|
 |-------------|-----|----------|
 |NoEnrollmentPolicy|Ingen registreringsprincip hittades|Kontrollera att alla krav för registrering har konfigurerats, till exempel APNs-certifikatet (Apple Push Notification Service), och att ”iOS som en plattform” är aktiverat. Anvisningar finns i [Konfigurera iOS- och Mac-enhetshantering](ios-enroll.md).|
-|DeviceCapReached|Det finns redan för många registrerade mobila enheter.|För att kunna registrera en ny enhet måste användaren först ta bort en registrerad mobil enhet från företagsportalen. Se anvisningar för den typ av enhet som du använder: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
+|DeviceCapReached|Det finns redan för många registrerade mobila enheter.|För att kunna registrera en ny enhet måste användaren först ta bort en registrerad mobil enhet från företagsportalen. Se anvisningarna för den typ av enhet som du använder: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
 |APNSCertificateNotValid|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information om hur du konfigurerar användare finns i [Synkronisera Active Directory och lägga till användare i Intune](users-add.md) och [Ordna användare och enheter](groups-add.md).|
 |AccountNotOnboarded|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information finns i [Konfigurera och iOS- och Mac-hantering med Microsoft Intune](ios-enroll.md).|
 |DeviceTypeNotSupported|Användaren kan ha försökt att registrera en enhet som inte är iOS. Den mobila enhetstyp som du försöker registrera stöds inte.<br /><br />Kontrollera att enheten kör iOS-version 8.0 eller senare.<br /><br />|Kontrollera att din användares enhet kör iOS version 8.0 eller senare.|
 |UserLicenseTypeInvalid|Enheten kan inte registreras eftersom användarens konto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer:<ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>de använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Se följande artiklar för mer information:<br /><br />Läs [Konfigurera iOS- och Mac-hantering med Microsoft Intune](ios-enroll.md) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](users-add.md) och [Ordna användare och enheter](groups-add.md).|
-|MdmAuthorityNotDefined|Utfärdaren för hantering av mobila enheter har inte definierats.<br /><br />|Utfärdaren för hantering av mobila enheter har inte definierats i Intune.<br /><br />Läs punkt 1 i avsnittet ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](free-trial-sign-up.md).|
+|MdmAuthorityNotDefined|Utfärdaren för hantering av mobila enheter har inte definierats.<br /><br />|Utfärdaren för hantering av mobila enheter har inte definierats i Intune.<br /><br />Granska objekt nr 1 i ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](free-trial-sign-up.md).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cant-communicate-with-them"></a>Enheterna är inaktiva eller så kan administratörskonsolen inte kommunicera med dem
 **Problem:** iOS-enheter checkar inte in med Intune-tjänsten. Enheter måste regelbundet checka in med tjänsten för att behålla åtkomst till skyddade företagsresurser. Om enheter inte checkar in:
@@ -280,7 +280,7 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 - Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
 - Användare som är skyddade med principer för villkorlig åtkomst kan förlora åtkomst till företagets resurser.
 
-**Lösning:** Dela följande lösningar med dina slutanvändare för att hjälpa dem att återfå åtkomst till företagets resurser.
+**Lösning:** Dela följande lösningar med dina slutanvändare för att hjälpa dem att återfå åtkomsten till företagets resurser.
 
 När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om den identifierar att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta (användaren ser då meddelandet **Försöker synkronisera…** ).
 
@@ -348,7 +348,7 @@ Exempel läggs snart till om vad du ska leta efter i loggfilerna.
 
 ### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Användarens iOS-enhet har fastnat på en registreringsskärm i mer än 10 minuter
 
-**Problemet**: en registrerande enhet kan fastna på någon av två skärmar:
+**Problem**: En registrerande enhet kan fastna på någon av följande två skärmar:
 - Väntar på slutlig konfiguration från Microsoft
 - Interaktiv åtkomstapp inte tillgänglig. Kontakta din administratör.
 
@@ -364,7 +364,7 @@ Det här problemet kan inträffa om:
 | Installera företagsportalen med VPP | Använd token: tokenadress |
 | Kör företagsportalen i enkelt appläge tills autentisering | Ja |
 
-**Lösning**: åtgärda problemet genom att:
+**Lösning**: Du måste åtgärda problemet genom att:
 1. Avgöra om det finns något fel med VPP-token och åtgärda det.
 2. Identifiera vilka enheter som är blockerade.
 3. Rensa de berörda enheterna.
@@ -398,14 +398,14 @@ När du har rensat de blockerade enheterna kan du be användarna att starta om r
 ### <a name="macos-enrollment-errors"></a>Fel vid macOS-registrering
 **Felmeddelande 1:** *Det verkar som att du använder en virtuell dator. Kontrollera att du har konfigurerat den virtuella datorn fullständigt, inklusive serienummer och maskinvarumodell. Om det här inte är en virtuell dator bör du kontakta supporten.*  
 
-**Felmeddelande 2:** *Det är problem med att hantera din enhet. Det här problemet kan uppstå om du använder en virtuell dator, har ett begränsat serienummer eller om den här enheten redan har tilldelats till någon annan. Ta reda på hur du löser de här problemen eller kontakta företagets support.*
+**Felmeddelande 2:** *Vi har problem med att hantera din enhet. Det här problemet kan uppstå om du använder en virtuell dator, har ett begränsat serienummer eller om den här enheten redan har tilldelats till någon annan. Ta reda på hur du löser de här problemen eller kontakta företagets support.*
 
-**Problem:** Det här meddelandet kan bero på något av följande orsaker:  
+**Problem:** Det här meddelandet kan bero på någon av följande orsaker:  
 * En virtuell macOS-dator (VM) har inte konfigurerats korrekt  
 * Du har aktiverat enhetsbegränsningar som kräver att enheten är företagsägd eller har ett registrerat enhetsserienummer i Intune  
 * Enheten har redan registrerats och är fortfarande tilldelad till någon annan i Intune  
 
-**Lösning:** Hör först med användaren för att fastställa vilket av problemen som påverkar användarens enhet. Genomför sedan den mest relevanta av följande lösningar:
+**Lösning:** Ta först kontakt med användaren för att se vilket av problemen som påverkar enheten. Genomför sedan den mest relevanta av följande lösningar:
 * Om användaren registrerar en virtuell dator för testning kontrollerar du att den har konfigurerats fullständigt så att Intune kan identifiera dess serienummer och maskinvarumodell. Lär dig mer om hur du [konfigurerar virtuella datorer](macos-enroll.md#enroll-virtual-macos-machines-for-testing) i Intune.  
 * Om din organisation aktiverade registreringsbegränsningar som blockerar personliga macOS-enheter måste du manuellt [lägga till den personliga enhetens serienummer](corporate-identifiers-add.md#manually-enter-corporate-identifiers) till Intune.  
 * Om enheten fortfarande är tilldelad till en annan användare i Intune använde den tidigare ägaren inte företagsportalappen att ta bort eller återställa den. Så här rensar du den inaktuella enhetsposten från Intune:  
@@ -417,9 +417,9 @@ När du har rensat de blockerade enheterna kan du be användarna att starta om r
 
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problem när du använder System Center Configuration Manager med Intune
 ### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner
-**Problem:** När har registrerat en mobil enhet i Configuration Manager så försvinner den från samlingen med mobila enheter. Men enheten har fortfarande Hanteringsprofilen och visas i CSS Gateway.
+**Problem:** När du har registrerat en mobil enhet i Configuration Manager så försvinner den från samlingen med mobila enheter. Men enheten har fortfarande Hanteringsprofilen och visas i CSS Gateway.
 
-**Lösning:** det här problemet kan bero på att:
+**Lösning:** Det här problemet kan uppstå när:
 - Du har en egen process som tar bort icke-domänanslutna enheter eller 
 - användaren har dragit tillbaka enheten från prenumerationen.
 Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
@@ -466,7 +466,7 @@ Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas.
 1. Ta bort följande registernyckel om den finns: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
 1. Försök att registrera igen.
-1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Om datorn fortfarande inte kan registreras, letar du upp och tar bort följande nyckel om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
 1. Försök att registrera igen.
 
     > [!IMPORTANT]
@@ -491,7 +491,7 @@ Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 |0x80043008, 0x80CF3008|Det gick inte att starta tjänsten Uppdatering av Microsoft onlinehantering.|Kontakta Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).|
 |0x80043009, 0x80CF3009|Klientdatorn har redan registrerats i tjänsten.|Du måste inaktivera klientdatorn innan du kan registrera den igen i tjänsten.|
 |0x8004300B, 0x80CF300B|Det går inte att köra installationspaketet för klientprogramvaran eftersom den version av Windows som körs på klienten inte stöds.|Intune stöder inte den version av Windows som körs på klientdatorn.|
-|0xAB2|Windows Installer kunde inte komma åt VBScript-runtimen för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL-filen kan du behöva använda de verktyg som beskrivs i [Microsoft Support-artikeln KB198038: Användbara verktyg för paket- och distributionsproblem](https://support.microsoft.com/kb/198038).|
+|0xAB2|Windows Installer kunde inte komma åt VBScript-runtimen för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL:en kan du behöva använda verktygen som beskrivs i [Microsoft Support-artikeln KB198038: Useful Tools for Package and Deployment Issues](https://support.microsoft.com/kb/198038).|
 |0x80cf0440|Anslutningen till tjänstslutpunkten avbröts.|Utvärderings- eller betalkontot har inaktiverats tillfälligt. Skapa ett nytt utvärderings- eller betalkonto och registrera dig igen.|
 
 

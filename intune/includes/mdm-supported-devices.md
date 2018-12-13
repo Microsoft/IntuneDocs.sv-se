@@ -2,7 +2,7 @@
 
 ### <a name="apple"></a>Apple
 - Apple iOS 10.0 och senare
-- Mac OS X 10.11 och senare (i december 2018 ändras versionen som stöds till 10.12 och senare)
+- Mac OS X 10.12 och senare
 
 ### <a name="google"></a>Google
 - Android 4.4 och senare (inklusive Samsung KNOX Standard 4.4 och senare)
@@ -26,8 +26,8 @@
 - Windows Phone 8.1, Windows 8.1 RT och datorer som kör Windows 8.1 (hanteringsläge)
 
 > [!NOTE]
-> Intune kan inte användas för att hantera operativsystem med Windows Server.
+> Intune kan inte användas för att hantera operativsystem med Windows Server. Start-SKU:n stöder inte alla Intune-funktioner
 
-Kunder med Enterprise Management + Security (EMS) kan också [registrera Windows 10-enheter med Azure Active Directory (Azure AD)](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
+Kunder med Enterprise Management + Security (EMS) kan också [registrera Windows 10-enheter med Azure Active Directory (Azure AD)](/intune/windows-enroll.md).
 
 

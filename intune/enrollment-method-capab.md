@@ -1,7 +1,7 @@
 ---
-title: Intune-funktioner efter registreringsmetod för Windows-enheter
+title: Funktioner i Intune-registreringsmetoden för Windows-enheter
 titlesuffix: Microsoft Intune
-description: Se vilka funktioner som varje registreringsmetod stöder för Windows-enheter.
+description: Funktioner i varje registreringsmetod för Windows-enheter.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 38bb88015261aa50d6c27aec026614f1205aebe8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f32a0967c094c16b76ad4c4572ebd8e80c6115b2
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189817"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032137"
 ---
-# <a name="capabilities-by-enrollment-method-for-windows-devices"></a>Funktioner efter registreringsmetod för Windows-enheter
+# <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Funktioner i Intune-registreringsmetoden för Windows-enheter
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Med Intune kan du hantera personalens enheter och appar, samt hur de kommer åt företagsdata. Enheterna måste först registreras i Intune-tjänsten. Det finns flera metoder för att registrera personalens enheter. Olika metoder har olika metodtips och funktioner, som du ser i tabellerna nedan.
+Det finns flera olika metoder för att registrera personalens enheter i Intune. Olika metoder har olika metodtips och funktioner, som du ser i tabellerna nedan.
 
 ## <a name="best-practices-by-enrollment-method"></a>Metodtips efter registreringsmetod
 | **Metodtips** | **[Azure AD-ansluten](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Azure AD-ansluten med Autopilot](enrollment-autopilot.md)** |**[Massregistrering](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |

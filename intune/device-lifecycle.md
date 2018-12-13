@@ -5,20 +5,20 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 12/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: b78f7414e4ba383e934abd467a9f4c7c67c6bac5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune
+ms.openlocfilehash: c0d6dcc4bee31ce0197699a8106a25dbcd71af17
+ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182609"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52887142"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Översikt över livscykeln för hantering av mobila enheter (MDM) i Microsoft Intune
 
@@ -29,20 +29,24 @@ Alla enheter du hanterar har en *livscykel*. Intune kan hjälpa dig att hantera 
 ![Enhetslivscykeln](./media/device-lifecycle.png "Intune-enhetens livscykel")
 
 ## <a name="enroll"></a>Registrera
-Dagens strategier för hantering av mobila enheter (MDM) omfattar många olika telefoner, surfplattor och datorer (iOS, Android, Windows och Mac OS X). Om du behöver kunna hantera enheten, vilket ofta är fallet för företagsägda enheter, är det första steget att [konfigurera enhetsregistrering](device-enrollment.md) ([klassisk portal](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune)). Du kan även hantera Windows-datorer genom att registrera dem med Intune (MDM) eller genom att [installera Intune-klientprogrammet](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
+Dagens strategier för hantering av mobila enheter (MDM) omfattar många olika telefoner, surfplattor och datorer (iOS, Android, Windows och Mac OS X). Om du behöver kunna hantera enheten, vilket ofta är fallet för företagsägda enheter, är det första steget att [konfigurera registrering av enheter](device-enrollment.md). Du kan även hantera Windows-datorer genom att registrera dem med Intune (MDM) eller genom att [installera Intune-klientprogrammet](manage-windows-pcs-with-microsoft-intune.md).
 
 ## <a name="configure"></a>Konfigurera
 Registrering av enheter är bara det första steget. Om du vill dra nytta av allt som Intune har att erbjuda och se till att enheterna är skyddade och kompatibla med företagets standarder, finns en mängd olika principer att välja bland. Med principer kan du konfigurera nästan alla aspekter av hur hanterade enheter fungerar. Bör användare till exempel ha ett lösenord på enheter som innehåller företagsdata? Du kan kräva det. Har du företags-Wi-Fi? Du kan konfigurera det automatiskt. Dessa konfigurationsalternativ finns tillgängliga:
 
-- [**Enhetskonfiguration**](device-profiles.md) ([klassisk portal](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)). Med de här principerna kan du konfigurera funktioner på enheter som du hanterar. Du kan till exempel kräva ett lösenord på Windows-telefoner eller inaktivera kameran på iPhones.
-- [**Åtkomst till företagsresurser**](device-profiles.md) ([klassisk portal](/intune-classic/deploy-use/enable-access-to-company-resources-with-microsoft-intune)). När du ger användarna åtkomst till deras arbete på deras personliga enhet kan det medföra utmaningar. Hur säkerställer du till exempel att alla enheter som behöver åtkomst till företagets e-post är korrekt konfigurerade? Hur kan du säkerställa att användarna har åtkomst till företagets nätverk med en VPN-anslutning utan att behöva känna till avancerade inställningar? Intune kan minska det här problemet genom att automatiskt konfigurera de enheter som du hanterar för åtkomst till gemensamma företagsresurser.
-- [**Principer för hantering av Windows-datorer (med Intune-klientprogramvaran)**](/intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client). Registrering av Windows-datorer med Intune ger flest funktioner för enhetshantering, men Intune fortsätter att stödja hantering av Windows-datorer med Intune-klientprogramvaran. Börja här om du behöver information om några av uppgifterna som du kan utföra med datorer.
+- [**Enhetskonfiguration**](device-profiles.md). Med de här principerna kan du konfigurera funktioner på enheter som du hanterar. Du kan till exempel kräva ett lösenord på Windows-telefoner eller inaktivera kameran på iPhones.
+- [**Åtkomst till företagsresurs**](device-profiles.md). När du ger användarna åtkomst till deras arbete på deras personliga enhet kan det medföra utmaningar. Hur säkerställer du till exempel att alla enheter som behöver åtkomst till företagets e-post är korrekt konfigurerade? Hur kan du säkerställa att användarna har åtkomst till företagets nätverk med en VPN-anslutning utan att behöva känna till avancerade inställningar? Intune kan minska det här problemet genom att automatiskt konfigurera de enheter som du hanterar för åtkomst till gemensamma företagsresurser.
+- [**Principer för hantering av Windows-datorer (med Intune-klientprogramvaran)**](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). Registrering av Windows-datorer med Intune ger flest funktioner för enhetshantering, men Intune fortsätter att stödja hantering av Windows-datorer med Intune-klientprogramvaran. Börja här om du behöver information om några av uppgifterna som du kan utföra med datorer.
 
 ## <a name="protect"></a>Skydda
 I dagens IT är en av de viktigaste uppgifterna att skydda enheter så att inte obehöriga kan komma åt dem. Förutom punkterna i steget **Konfigurera** i enhetslivscykeln tillhandahåller Intune ytterligare funktioner som skyddar de enheter som du hanterar från obehörig åtkomst eller skadliga attacker:
-- [**Multi-factor Authentication**](/intune-classic/deploy-use/protect-your-devices-with-microsoft-intune). Att lägga till ett extra lager av autentisering för användarinloggningar kan göra enheter ännu säkrare. Många enheter stöder Multi-factor Authentication som kräver en andra nivå av autentisering, till exempel ett telefonsamtal eller SMS, innan användarna kan få åtkomst.
-- [**Inställningar för Windows Hello för företag**](windows-hello.md) ([klassisk portal](/intune-classic/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)). Windows Hello för företag är en alternativ inloggningsmetod där användarna kan använda en *gest*, till exempel ett fingeravtryck eller Windows Hello, för att logga in utan lösenord.
-- [**Principer för att skydda Windows-datorer (med Intune-klientprogramvaran)**](/intune-classic/deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune). När du hanterar Windows-datorer med Intune-klientprogramvaran finns det principer som gör att du kan styra inställningar för Endpoint Protection, programuppdateringar och Windows-brandväggen på de datorer som du hanterar.
+- [**Multi-factor Authentication**](multi-factor-authentication.md). Att lägga till ett extra lager av autentisering för användarinloggningar kan göra enheter ännu säkrare. Många enheter stöder Multi-factor Authentication som kräver en andra nivå av autentisering, till exempel ett telefonsamtal eller SMS, innan användarna kan få åtkomst.
+- [**Windows Hello för företag-inställningar**](windows-hello.md). Windows Hello för företag är en alternativ inloggningsmetod där användarna kan använda en *gest*, till exempel ett fingeravtryck eller Windows Hello, för att logga in utan lösenord.
+- [**Principer för att skydda Windows-datorer (med Intune-klientprogramvaran)**](policies-to-protect-windows-pcs-in-microsoft-intune.md). När du hanterar Windows-datorer med Intune-klientprogramvaran finns det principer som gör att du kan styra inställningar för Endpoint Protection, programuppdateringar och Windows-brandväggen på de datorer som du hanterar.
 
 ## <a name="retire"></a>Pensionera
-Om en enhet blir stulen eller tappas bort, när enheten behöver bytas ut eller när användaren får en annan tjänst, är det vanligtvis dags att [dra tillbaka eller rensa](device-management.md) ([klassisk portal](/intune-classic/deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune)) enheten. Det finns ett antal sätt att göra det, till exempel att återställa enheten, ta bort den från hantering eller rensa företagsdata på den.
+När en enhet blir stulen eller tappas bort, när enheten behöver bytas ut eller när användarna flyttar till en annan tjänst är det vanligtvis dags att [dra tillbaka eller rensa](device-management.md) enheten. Det finns ett antal sätt att göra det, till exempel att återställa enheten, ta bort den från hantering eller rensa företagsdata på den.
+
+## <a name="next-steps"></a>Nästa steg
+
+- Läs mer om [enhetshantering i Microsoft Intune](device-management.md)

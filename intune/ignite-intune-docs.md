@@ -1,11 +1,12 @@
 ---
-title: Välkommen till Ignite
+title: Välkommen till Ignite 2018
+titlesuffix: Microsoft Intune
 description: ''
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/08/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,29 +15,33 @@ ms.reviewer: ''
 ROBOTS: NOINDEX,NOFOLLOW
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: ec5127adcb12bc1196604d27ae2ac6501de03d08
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 5735a2059690655a76425b049eff9e26f5ab8179
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187117"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032579"
 ---
-# <a name="microsoft-intune-documentation-40ignite-special-edition41"></a>Microsoft Intune-dokumentation &#40;Ignite särskild utgåva&#41;
+# <a name="microsoft-intune-documentation-40ignite-2018-special-edition41"></a>Microsoft Intune-dokumentation &#40;Ignite 2018 särskild utgåva&#41;
 Välkommen till Microsoft Ignite 2018! Tack för att du tittade in. Medan du besöker oss på Microsoft Ignite 2018 kan du titta på några av de Intune-resurser som vi har skapat åt dig.
 
-## <a name="try-our-hands-on-labs-at-ignite"></a>Prova våra praktiska labbövningar på Ignite!
-- **HOL3004**: skydda företagsdata på mobila enheter med Microsoft 365 och Microsoft Intune, till exempel villkorlig åtkomst och Windows Defender Advanced Threat Protection (ATP)
-- **WRK3007**: komma igång med samhantering med hjälp av System Center Configuration Manager och Intune
+## <a name="try-our-hands-on-labs-at-ignite-2018"></a>Prova våra praktiska labbövningar på Ignite 2018!
+- **HOL3004**: Skydda företagsdata på mobila enheter med Microsoft 365 och Microsoft Intune, med till exempel villkorlig åtkomst och Windows Defender Advanced Threat Protection (ATP)
+- **WRK3007**: Kom igång med samhantering med hjälp av System Center Configuration Manager och Intune
 
 ## <a name="quickstarts"></a>Snabbstarter
 Vi har uppdaterat och skapat några nya snabbstarter. Slutför följande snabbstarter (i ordning) för att komma igång med Intune och genomför några vanliga uppgifter på kortast möjliga tid.
 
 - [Prova Intune utan kostnad](free-trial-sign-up.md): Skapa en kostnadsfri prenumeration för att prova Intune i en testmiljö.    
-- [Skapa en användare](quickstart-create-user.md): Skapa en användare som du sedan tilldelar en licens.
-- [Skapa en grupp](quickstart-create-group.md): Använd Intune för att skapa en grupp baserad på en befintlig användare.
-- [Tilldela principer](get-started-policies.md): Skapa en enhetsefterlevnadsprincip för en Windows 10-enhet och sedan tilldela principen en enhetsgrupp.
-- [Ställ in automatisk registrering](quickstart-setup-auto-enrollment.md): Konfigurera Microsoft Intune till att automatiskt registrera enheter när specifika användare loggar in på Windows 10-enheter.
+- [Skapa en användare](quickstart-create-user.md): Skapa en användare som du sedan tilldelar en licens till.
+- [Skapa en grupp](quickstart-create-group.md): Använd Intune för att skapa en grupp som baseras på en befintlig användare.
+- [Konfigurera automatisk registrering](quickstart-setup-auto-enrollment.md): Konfigurera Microsoft Intune till att automatiskt registrera enheter när specifika användare loggar in på Windows 10-enheter.
+- [Registrera din Windows 10-enhet](quickstart-enroll-windows-device.md): Genom att ta rollen som en Intune-användare kan du registrera din Windows 10-enhet i Microsoft Intune, och sedan gå tillbaka till Intune för att bekräfta den registrerade enheten.
+- [Skapa en efterlevnadsprincip för enheter](quickstart-set-password-length-android.md): Skapa en efterlevnadsprincip för enheter som kräver att användarna anger ett lösenord med en viss längd innan åtkomst beviljas till information på deras Android-enheter.
+- [Skicka meddelanden till icke-kompatibla enheter](quickstart-send-notification.md): Skapa ett aviseringsmeddelande. Lägg sedan till och tilldela en inkompatibilitetsprincip.
+- [Lägg till och tilldela en klientapp](quickstart-add-assign-app.md): Lägg till och tilldela en klientapp till företagets personal.
+- [Skapa och tilldela en appskyddsprincip](quickstart-create-assign-app-policy.md): Skapa och tilldela en appskyddsprincip till en klientapp på en slutanvändarenhet. 
 - [Skapa och tilldela en anpassad roll](quickstart-create-custom-role.md): Skapa och tilldela en anpassad roll med särskilda behörigheter för en säkerhetsåtgärdsavdelning. 
 - [Skapa en e-enhetsprofil för iOS](quickstart-email-profile.md) – skapa en e-postenhetsprofil för iOS-enheter.
 
@@ -46,7 +51,7 @@ Vi har uppdaterat och skapat några nya snabbstarter. Slutför följande snabbst
 
 ## <a name="contribute-to-docs"></a>Bidra till dokument
 - [Bli en Intune-dokumentdeltagare](https://github.com/MicrosoftDocs/IntuneDocs/blob/master/README.md)  
-- [De främsta Intune-dokumentdeltagarna den här månaden](https://github.com/MicrosoftDocs/IntuneDocs/graphs/contributors?from=2018-09-01&to=2018-11-30&type=c)  
+- [De främsta Intune-dokumentdeltagarna](https://github.com/MicrosoftDocs/IntuneDocs/graphs/contributors?from=2018-10-01&to=2019-12-31&type=c)  
 
 ## <a name="start-using-intune"></a>Börja använda Intune
 - [Licenser där Intune ingår](licenses.md)

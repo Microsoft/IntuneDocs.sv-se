@@ -15,15 +15,15 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: e407b2059d986841541c969e387d77e71c5e5b4b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ecc5228eef9e9d7be5ba567db6b32c84e95df1b6
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181368"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032307"
 ---
-# <a name="manage-your-companys-terms-and-conditions-for-user-access"></a>Hantera företagets villkor för användaråtkomst
+# <a name="terms-and-conditions-for-user-access"></a>Allmänna villkor för användaråtkomst
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -56,8 +56,8 @@ Slutför stegen nedan för att skapa allmänna villkor. Namn och beskrivning som
 
    ![Skärmbild för att godkänna slutanvändarvillkor med en sammanfattning av villkoren](./media/terms-summary-create.png)
 
-   - **Rubrik**: namnet på dina villkor som användarna ser i företagsportalen ovanför **sammanfattningen**.
-   - **Sammanfattning av villkoren**: Text som förklarar vad det innebär om användarna accepterar villkoren. Till exempel, ”Genom att registrera din enhet accepterar du användningsvillkoren som anges av Contoso. Läs villkoren noggrant innan du fortsätter.”
+   - **Rubrik**: Namnet på dina villkor som användarna ser i företagsportalen ovanför **Sammanfattning**.
+   - **Sammanfattning av villkoren**: Text som förklarar vad det innebär när användarna accepterar villkoren. Till exempel, ”Genom att registrera din enhet accepterar du användningsvillkoren som anges av Contoso. Läs villkoren noggrant innan du fortsätter.”
    - **Allmänna villkor**: De villkor som användarna ser och antingen måste godkänna eller avvisa.
 
 5. Välj **OK** > **Skapa**.

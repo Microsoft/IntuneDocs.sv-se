@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: db655c49277051267036d76e518cc870757f67c2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fafc9381f59ceb4e78e3e76d24694cd0acdcf8d0
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183051"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112382"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -31,7 +31,7 @@ Läs den här artikeln för att lära dig om kända problem i Microsoft Intune.
 
 Om du vill rapportera en bugg som inte visas här, [öppnar du en supportförfrågan](get-support.md).
 
-Om du vill föreslå en ny funktion för Intune så kan du skicka in en rapport på [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console)-webbplatsen.
+Om du vill föreslå en ny funktion för Intune, kan du skicka in en rapport på [Microsoft Intune Feedback](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migrering
 
@@ -44,13 +44,13 @@ Principer för enhetsefterlevnad som skapats i den klassiska Azure-portalen upph
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Äldre Intune-PC-klientfunktioner är endast tillgängliga i Silverlight-konsolen
 
-Möjligheten att hantera Windows 10 i Intune på Azure Portal är tillgänglig via Windows MDM-registrering. Mer information finns i [Intune i Azure-konsolen och den äldre Intune PC-klienten](https://docs.microsoft.com/intune-classic/deploy-use/intune-on-azure).
+Möjligheten att hantera Windows 10 i Intune på Azure Portal är tillgänglig via Windows MDM-registrering. Mer information finns i [Intune i Azure-konsolen och den äldre Intune PC-klienten](intune-legacy-pc-client.md).
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Grupper som skapats av Intune under migreringen kan påverka funktionen för andra Microsoft-produkter
 
 När du migrerar från Intune till Azure-portalen kan det visas en ny grupp med namnet **All Users - b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Den gruppen innehåller alla användare i Azure Active Directory, inte bara Intune-licensierade användare. Det kan orsaka problem med andra Microsoft-produkter om du förväntar dig att vissa befintliga eller nya användare inte ska vara medlemmar i några grupper.
 
-### <a name="status-blades-for-migrated-policies-do-not-work"></a>Statusbladen för migrerade principer fungerar inte
+### <a name="status-blades-for-migrated-policies-dont-work"></a>Statusbladen för migrerade principer fungerar inte
 
 Du kan inte visa statusinformation i Azure Portal för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen. Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
 
@@ -60,7 +60,7 @@ Du kan inte visa statusinformation i Azure Portal för principer som har migrera
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Upprepade uppmaningar om appinstallation för vissa VPP-appar
 Du kan se flera uppmaningar om appinstallation för vissa VPP-appar som redan är installerade på slutanvändarnas enheter. Det här problemet uppstår om alternativet **Automatiska appuppdateringar** har angetts till **På** för den VPP-token som du har laddat upp till Intune i Azure Portal.    
 
-Du kan lösa det här problemet genom att inaktivera alternativet **Automatiska appuppdateringar** för VPP-token. Gör det genom att öppna Microsoft Intune i Azure Portal. Från Intune väljer du **Klientappar** > **iOS VPP-token**. Välj den VPP-token som har distribuerat den berörda appen och välj sedan **Redigera** > **Automatiska appuppdateringar** > **Av** > **Spara**. Alternativt kan du stoppa distributionen av den berörda appen som en VPP-app. Då visas inga fler uppmaningar.    
+Lös problemet genom att inaktivera alternativet **Automatiska appuppdateringar** för VPP-token. Gör det genom att öppna Microsoft Intune i Azure Portal. Från Intune väljer du **Klientappar** > **iOS VPP-token**. Välj den VPP-token som har distribuerat den berörda appen och välj sedan **Redigera** > **Automatiska appuppdateringar** > **Av** > **Spara**. Alternativt kan du stoppa distributionen av den berörda appen som en VPP-app. Då visas inga fler uppmaningar.    
 
 Det här är ett känt problem i den aktuella versionen. Vi har en kommande korrigering som löser problemet. När korrigeringen har implementerats visas inga upprepade uppmaningar om appinstallation för användarna.
 

@@ -1,55 +1,59 @@
 ---
-title: E-postinställningar för Android- och Android-arbetsprofilenheter i Microsoft Intune – Azure | Microsoft Docs
-description: Skapa en e-postprofil för enhetskonfiguration som använder Exchange-servrar och hämtar attribut från Azure Active Directory. Du kan även aktivera SSL eller SMIME, autentisera användare med certifikat eller användarnamn/lösenord och synkronisera e-post och scheman på Android- och Android-arbetsprofilenheter med hjälp av Microsoft Intune.
+title: E-postinställningar för Android och Android Enterprise i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa e-postprofiler för en enhetskonfiguration som använder Exchange-servrar och hämta attribut från Azure Active Directory. Aktivera SSL eller SMIME, autentisera användare med certifikat eller användarnamn/lösenord, samt synkronisera e-post och scheman på Android-enheter och Android-arbetsprofilenheter med hjälp av Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/20/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b8ab8dfadb113d81922119a54aefcac43d15b5a1
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ffe25f7e4870f2ea6969d1261f33c69362d75469
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187437"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032035"
 ---
-# <a name="email-profile-settings-for-devices-running-android-and-android-enterprise---intune"></a>E-postprofilinställningar för enheter som kör Android och Android enterprise – Intune
+# <a name="android-and-android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Enhetsinställningar för Android- och Android Enterprise-enheter för att konfigurera e-post, autentisering och synkronisering i Intune
 
-Använd e-postprofilinställningarna till att konfigurera dina enheter som kör Android.
+Den här artikeln beskriver de olika e-postinställningar som du kan styra på Android- och Android Enterprise-enheter. Som en del av din lösning för hantering av mobilenheter kan du använda dessa inställningar till att konfigurera en e-postserver, använda SSL för att kryptera e-postmeddelanden och mycket mer.
 
 Som en Intune-administratör kan du skapa och tilldela e-postinställningar till följande Android-enheter:
 
 - Android Samsung Knox Standard
 - Android enterprise
 
+## <a name="before-you-begin"></a>Innan du börjar
+
+[Skapa en enhetskonfigurationsprofil](email-settings-configure.md).
+
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
-- **E-postserver**: Ange värdnamnet för din Exchange-server.
+- **E-postserver**: Ange värddatornamnet för din Exchange-server.
 - **Kontonamn**: Ange visningsnamnet för e-postkontot. Namnet visas för användare på deras enheter.
-- **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
-  - **UPN (User Principal Name)**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
-  - **Användarnamn**: Hämtar bara namnet, till exempel `user1`
-  - **sAM-kontonamn**: Kräver domänen, till exempel `domain\user1`. sAM-kontonamnet kan bara användas med Android-enheter. Android enterprise stöds inte.
+- **Användarnamnattribut från AAD**: Namnet är det attribut som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
+  - **User Principal Name**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
+  - **Användarnamn**: Hämtar enbart namnet, till exempel `user1`
+  - **SAM-kontonamn**: Kräver domänen, till exempel `domain\user1`. sAM-kontonamnet kan bara användas med Android-enheter. Android enterprise stöds inte.
 
     Ange även:  
     - **Källa för användardomännamn**: Välj **AAD** (Azure Active Directory) eller **Anpassat**.
 
       När du väljer att hämta attributen från **AAD** anger du:
-      - **Attribut för användardomännamn från AAD**: Välj att hämta attributet för **Fullständigt domännamn** eller **NetBIOS-namn** för användaren
+      - **Attribut för användardomännamn från AAD**: Välj att hämta attributet **Fullständigt domännamn** eller **NetBIOS-namn** för användaren
 
       När du väljer att använda **anpassade** attribut anger du:
-      - **Anpassat domännamn att använda**: Ange ett värde som Intune använder för domännamnet, till exempel `contoso.com` eller `contoso`
+      - **Anpassat domännamn som används**: Ange ett värde som Intune använder för domännamnet, till exempel `contoso.com` eller `contoso`
 
-- **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska skapas. Välj **UPN (User Principal Name)** (`user1@contoso.com` eller `user1`) om du vill använda det fullständiga huvudnamnet som e-postadress eller **Primär SMTP-adress** (`user1@contoso.com`) om du vill använda den primära SMTP-adressen för att logga in på Exchange.
+- **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska genereras. Välj **UPN (User Principal Name)** (`user1@contoso.com` eller `user1`) om du vill använda det fullständiga huvudnamnet som e-postadress eller **Primär SMTP-adress** (`user1@contoso.com`) om du vill använda den primära SMTP-adressen för att logga in på Exchange.
 
-- **Autentiseringsmetod**: Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som ska användas av e-postprofilen.
+- **Autentiseringsmetod**: Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som används av e-postprofilen.
   - Om du väljer **Certifikat** så väljer du en klients SCEP- eller PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen.
 
 ### <a name="security-settings"></a>Säkerhetsinställningar
@@ -60,12 +64,12 @@ Som en Intune-administratör kan du skapa och tilldela e-postinställningar till
 
 ### <a name="synchronization-settings"></a>Synkroniseringsinställningar
 
-- **Mängd e-post som ska synkroniseras**: Välj antalet dagar med e-post som du vill synkronisera eller välj **Obegränsad** för att synkronisera alla tillgängliga e-postmeddelanden.
-- **Synkroniseringsschema**: Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer**, vilket synkroniserar data när den kommer eller **Manuell**, där enhetens användare måste starta synkroniseringen.
+- **Antal e-postmeddelanden som ska synkroniseras**: Ange hur många dagars e-post som ska synkroniseras, eller välj **Obegränsat** om du vill synkronisera alla tillgängliga e-postmeddelanden.
+- **Synkroniseringsschema**: Välj det schema som ska användas av enheterna när de synkroniserar data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer**, vilket synkroniserar data när den kommer eller **Manuell**, där enhetens användare måste starta synkroniseringen.
 
 ### <a name="content-sync-settings"></a>Synkroniseringsinställningar för innehåll
 
-- **Innehållstyp som ska synkroniseras**: Välj vilka innehållstyper som du vill synkronisera till enheterna från:
+- **Innehållstyp som ska synkroniseras:** Välj vilka typer av innehåll som enheterna ska synkroniseras från:
   - **Kontakter**
   - **Kalender**
   - **aktiviteter**
@@ -73,14 +77,14 @@ Som en Intune-administratör kan du skapa och tilldela e-postinställningar till
 ## <a name="android-enterprise"></a>Android enterprise
 
 - **E-postapp**: Välj antingen **Gmail** eller **Nine Work**
-- **E-postserver**: Värdnamnet för din Exchange-server.
-- **Användarnamn-attribut för AAD**: Det här namnet är attributet i Active Directory (AD) eller Azure AD, som används för att generera användarnamnet för den här e-postprofilen. Välj **Primär SMTP-adress**, t.ex. user1@contoso.comeller **Användarens huvudnamn (UPN)** som user1 eller user1@contoso.com.
-- **E-postadressattribut från AAD**: Hur e-postadressen för användaren på varje enhet ska skapas. Välj **User Principal Name** för att använda det fullständiga huvudnamnet som e-postadress eller **Användarnamn**.
-- **Autentiseringsmetod**: Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som ska användas av e-postprofilen.
+- **E-postserver**: Värddatornamnet för din Exchange-server.
+- **Användarnamnattribut från AAD**: Namnet är attributet i Active Directory (AD) eller Azure AD som används för att generera användarnamnet för den här e-postprofilen. Välj **Primär SMTP-adress**, t.ex. user1@contoso.comeller **Användarens huvudnamn (UPN)** som user1 eller user1@contoso.com.
+- **E-postadressattribut från AAD**: Hur e-postadressen för användaren på varje enhet genereras. Välj **User Principal Name** för att använda det fullständiga huvudnamnet som e-postadress eller **Användarnamn**.
+- **Autentiseringsmetod**: Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som används av e-postprofilen.
   - Om du valde **Certifikat**, väljer du en klients SCEP- eller PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen.
 - **SSL**: Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
-- **Mängd e-post som ska synkroniseras**: Välj antalet dagar med e-post som du vill synkronisera eller välj **Obegränsad** för att synkronisera alla tillgängliga e-postmeddelanden.
-- **Innehållstyp att synkronisera** (enbart Nine Work): välj den innehållstyp som du vill synkronisera enheter från:
+- **Antal e-postmeddelanden som ska synkroniseras**: Ange hur många dagars e-post som ska synkroniseras, eller välj **Obegränsat** om du vill synkronisera alla tillgängliga e-postmeddelanden.
+- **Innehållstyp som ska synkroniseras** (enbart Nine Work): Välj vilka typer av innehåll som enheterna ska synkroniseras från:
   - **Kontakter**
   - **Kalender**
   - **aktiviteter**

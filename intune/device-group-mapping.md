@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 159079686507815ad4cf1738ca4157467352f681
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 0abc42de95f90b3690e91908f92bb53d11a802d8
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189528"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031772"
 ---
-# <a name="categorize-devices-into-groups-for-easier-management"></a>Kategorisera enheter i grupper för enklare hantering
+# <a name="categorize-devices-into-groups"></a>Kategorisera enheter i grupper
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Använd Microsoft Intune enhetskategorier för att automatiskt lägga till enheter i grupper baserat på kategorier som du definierar. Det gör det enklare för dig att hantera enheterna.
+Om du vill få en enklare hantering av enheter kan du använda Microsoft Intunes enhetskategorier för att automatiskt lägga till enheter i grupper baserat på kategorier som du definierar.
 
 Enhetskategorier använder följande arbetsflöde:
 1. Skapa kategorier som användare kan välja från när de registrerar sina enheter.
@@ -42,7 +42,7 @@ Du kan skapa vilken typ av enhetskategori som du vill. Exempel:
 
 ## <a name="how-to-configure-device-categories"></a>Så här konfigurerar du enhetsinställningar
 
-### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Steg 1: Skapa enhetskategorier på Intune-bladet på Azure-portalen
+### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Steg 1: Skapa enhetskategorier på Intune-bladet i Azure-portalen
 1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering**.
 2. På bladet **Enhetsregistrering** väljer du **Enhetskategorier**.
 3. På sidan **Enhetskategorier** väljer du **Skapa** för att lägga till en ny kategori.
