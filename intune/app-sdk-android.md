@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 12/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c556bab6deadc0db0ea625ee3c26bba636ea497d
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: c073040275f63b4623ea28a25ad0940dea563b75
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168036"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -34,15 +34,15 @@ Med Microsoft Intune App SDK för Android kan du lägga till Intune-appskyddspri
 
 Intune App SDK består av följande filer:
 
-* **Microsoft.Intune.MAM.SDK.aar**: SDK-komponenterna, med undantag för JAR-filerna för stödbiblioteket.
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: De klasser som behövs för att aktivera MAM i appar som använder Androids v4-stödbiblioteket.
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: De klasser som behövs för att aktivera MAM i appar som använder Androids v7-stödbiblioteket.
-* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: De klasser som behövs för att aktivera MAM i appar som använder Androids v17-stödbiblioteket. 
-* **Microsoft.Intune.MAM.SDK.Support.Text.jar**: De klasser som behövs för att aktivera MAM i appar som använder Android-stödbiblioteksklasser i paketet `android.support.text`.
-* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Den här JAR-filen innehåller stub-rutiner för Android-systemklasser som endast finns på nya enheter men som refereras till av metoder i MAMActivity. Nya enheter ignorerar de här stub-klasserna. Den här JAR-filen krävs endast om din app utför reflektion på klasser härledda från MAMActivity. För de flesta appar behövs den inte. Var noga med att utesluta klasser från ProGuard om du använder JAR-filen. De finns under rotpaketet ”android”
-* **com.microsoft.Intune.mam.build.JAR**: Ett Gradle-plugin-program som [underlättar integreringen av SDK](#build-tooling).
+* **Microsoft.Intune.MAM.SDK.aar**: SDK-komponenterna, med undantag för JAR-filerna i stödbiblioteket.
+* **Microsoft.Intune.MAM.SDK.Suppeller till ent.v4.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android v4-supportbiblioteket.
+* **Microsoft.Intune.MAM.SDK.Suppeller till ent.v7.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android v7-supportbiblioteket.
+* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android v17-supportbiblioteket. 
+* **Microsoft.Intune.MAM.SDK.Support.Text.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android-stödbiblioteksklasser i paketet `android.support.text`.
+* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Den här JAR-filen innehåller stub-rutiner för Android-systemklasser som endast finns på nya enheter, men som refereras av metoder i MAMActivity. Nya enheter ignorerar de här stub-klasserna. Den här JAR-filen krävs endast om din app utför reflektion på klasser härledda från MAMActivity. För de flesta appar behövs den inte. Var noga med att utesluta klasser från ProGuard om du använder JAR-filen. De finns under rotpaketet ”android”
+* **com.microsoft.intune.mam.build.jar**: Ett plugin-program för Gradle som [hjälper till med integrering av SDK:n](#build-tooling).
 * **CHANGELOG.txt**: Innehåller en post med ändringar som gjorts i varje SDK-version.
-* **THIRDPARTYNOTICES.TXT**: Information om tredjeparts- och/eller OSS-kod som ingår i appen.
+* **THIRDPARTYNOTICES.TXT**:  Information om tredjeparts- och/eller OSS-kod som ingår i appen.
 
 ## <a name="requirements"></a>Krav
 
@@ -573,11 +573,11 @@ Följande meddelanden skickas till appen och några av dem kan kräva appens med
 
 * **WIPE_USER_DATA**: Det här meddelandet skickas i en `MAMUserNotification`-klass. När meddelandet tas emot förväntas appen ta bort alla data som är associerade med företagsidentiteten som skickades med `MAMUserNotification`. För närvarande skickas det här meddelandet när APP-WE-tjänsten avregistreras. Användarens primära namn anges normalt under registreringen. Om du registrerar dig för det här meddelandet måste appen kontrollera att alla användarens data har tagits bort. Om du inte registrerar dig för det här meddelandet utförs det fördefinierade beteendet för selektiv rensning.
 
-* **WIPE_USER_AUXILIARY_DATA**: Appar kan registreras för det här meddelandet om man vill att Intune App SDK ska utföra standardbeteendet för selektiv rensning, men dessutom vill ta bort vissa ytterligare data när rensningen utförs. Det här meddelandet skickas inte till appar med en enda identitet. Det skickas endast till appar med flera identiteter.
+* **WIPE_USER_AUXILIARY_DATA**: Appar kan registreras för det här meddelandet om de vill att Intune App SDK ska använda standardbeteendet för selektiva rensningar, men fortfarande vill ta bort vissa extra data när rensningen utförs. Det här meddelandet skickas inte till appar med en enda identitet. Det skickas endast till appar med flera identiteter.
 
 * **REFRESH_POLICY**: Det här meddelandet skickas i en `MAMUserNotification`. När det här meddelandet tas emot måste cachelagrade Intune-principer ogiltigförklaras och uppdateras. Detta hanteras vanligtvis av SDK, men bör hanteras av appen om principen används permanent.
 
-* **MANAGEMENT_REMOVED**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen att den håller på att blir ohanterad. När den är ohanterad kommer den inte längre kunna läsa krypterade filer, läsa data som krypterats med MAMDataProtectionManager, interagera med krypterade urklipp eller på annat sätt delta i ekosystemet för hanterade appar.
+* **MANAGEMENT_REMOVED**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen att den håller på att bli ohanterad. När den är ohanterad kommer den inte längre kunna läsa krypterade filer, läsa data som krypterats med MAMDataProtectionManager, interagera med krypterade urklipp eller på annat sätt delta i ekosystemet för hanterade appar.
 
 
 > [!NOTE]
@@ -844,7 +844,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 * Stöd för nationella moln kräver att auktoriteten anges.
 #### <a name="registration"></a>Registrering
 
-* Metoderna för registreringen är idempotenta. Det innebär exempelvis att `registerAccountForMAM()` endast kommer att registrera ett konto och försöka registrera appen om kontot inte är redan registrerat, och `unregisterAccountForMAM()` kommer bara att avregistrera ett konto om det är registrerat. Efterföljande anrop blir inte några åtgärder, så det gör inget om man anropar metoderna mer än en gång. Förhållandet mellan anrop till dessa metoder och meddelanden om resultat är inte garanterat: dvs. om `registerAccountForMAM` anropas för en identitet som redan har registrerats, kommer meddelandet kanske inte att skickas igen för den identiteten. Det är möjligt att meddelanden skickas som inte motsvarar något anrop till dessa metoder, eftersom SDK:n regelbundet kan försöka registrera i bakgrunden och avregistreringar kan utlösas av rensningsbegäranden från Intune-tjänsten.
+* Metoderna för registreringen är idempotenta. Det innebär exempelvis att `registerAccountForMAM()` endast kommer att registrera ett konto och försöka registrera appen om kontot inte är redan registrerat, och `unregisterAccountForMAM()` kommer bara att avregistrera ett konto om det är registrerat. Efterföljande anrop blir inte några åtgärder, så det gör inget om man anropar metoderna mer än en gång. Dessutom är förhållandet mellan anrop till dessa metoder och meddelanden om resultatet inte garanterade: Det innebär att om `registerAccountForMAM` anropas för en identitet som redan har registrerats, kan meddelandet inte skickas igen för den identiteten. Det är möjligt att meddelanden skickas som inte motsvarar något anrop till dessa metoder, eftersom SDK:n regelbundet kan försöka registrera i bakgrunden och avregistreringar kan utlösas av rensningsbegäranden från Intune-tjänsten.
 
 * Registreringsmetoderna kan anropas för valfritt antal olika identiteter, men för närvarande kan bara ett användarkonto registreras. Om flera användarkonton som har licens för Intune och ska ha appskyddsprincipen har registrerats samtidigt, går det inte att förutse vilket konto som ”vinner”.
 
@@ -910,7 +910,7 @@ Med Intune kan du använda alla tillgängliga [funktioner för automatisk säker
     ```
 
 
-2. **[Valfritt] ** Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
+2. **[Valfritt]**  Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
 
 3. När du har bestämt vilken typ av fullständig säkerhetskopiering som din app ska använda (ofiltrerad, filtrerad eller ingen) ska du ange attributet `android:fullBackupContent` som sant, falskt eller till en XML-resurs i appen.
 
@@ -924,7 +924,7 @@ Med Intune kan du använda alla tillgängliga [funktioner för automatisk säker
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:value="true" />  
     ```
 
-    **Exempel 2**: Om du vill att din app ska använda sin anpassade BackupAgent och välja bort fullständiga Intune-principkompatibla, automatiska säkerhetskopieringar, måste du ange attributet och metadatataggen till **false**:
+    **Exempel 2**: Om du vill att din app ska använda sin anpassade BackupAgent och välja bort fullständiga, Intune-principkompatibla och automatiska säkerhetskopieringar, måste du ange attributet och metadatataggen till **false**:
 
     ```xml
     android:fullBackupContent="false"
@@ -1548,7 +1548,7 @@ public interface MAMAppConfig {
 
 ### <a name="notification"></a>Meddelande
 Programkonfiguration lägger till en ny meddelandetyp:
-* **REFRESH_APP_CONFIG**: det här meddelandet skickas en `MAMUserNotification` och informerar appen att nya app config-data är tillgängliga.
+* **REFRESH_APP_CONFIG**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen om att nya appkonfigurationsdata finns tillgängliga.
 
 Mer information om funktionerna i Graph API finns i [Graph API-referens](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
@@ -1616,9 +1616,8 @@ De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare
 4. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
    > [!NOTE] 
    > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
-
-> [!NOTE]
-    > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det görs andra försök att anropa MAMEnrollmentManager-API:er.
+   >
+   > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det görs andra försök att anropa MAMEnrollmentManager-API:er.
 
 3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet:
 ```xml
@@ -1639,7 +1638,7 @@ För stora kodbaser som körs utan [ProGuard](http://proguard.sourceforge.net/),
 
 ### <a name="policy-enforcement-limitations"></a>Principtillämpningsgränser
 
-* **Skärmdump**: SDK kan inte framtvinga ett nytt värde för skärmdumpsinställningen i aktiviteter som redan har gått igenom Activity.onCreate. Detta kan resultera i en viss tidsperiod då appen är konfigurerad att inaktivera skärmdumpar men då skärmdumpar fortfarande kan tas.
+* **Skärmdump**: SDK:n kan inte framtvinga ett nytt värde för skärmdumpsinställningen i Aktiviteter som redan har gått igenom Activity.onCreate. Detta kan resultera i en viss tidsperiod då appen är konfigurerad att inaktivera skärmdumpar men då skärmdumpar fortfarande kan tas.
 
 * **Med hjälp av innehållsmatchare**: Överförings- eller mottagningsprincipen i Intune kan blockera eller delvis blockera användningen av en innehållsmatchare för att få åtkomst till innehållsleverantören i en annan app. Detta innebär att ContentResolver-metoder returnerar null eller genererar ett felvärde (t.ex. genererar `openOutputStream` felet `FileNotFoundException` om den blockeras). Appen kan avgöra om en misslyckad dataskrivning till en innehållsmatchare orsakades av en princip (eller kan orsakas av en princip) genom att göra anropet:
     ```java

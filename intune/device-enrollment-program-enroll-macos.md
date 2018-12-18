@@ -1,12 +1,12 @@
 ---
 title: Registrera macOS-enheter – Programmet för enhetsregistrering eller Apple School Manager
-titleSuffix: Microsoft Intune
+titleSuffix: ''
 description: Läs hur du registrerar företagsägda macOS-enheter med programmet för enhetsregistrering.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 12a59165cd9ebe43826f8ec63ed5b045e5f3e991
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.custom: seodec18
+ms.openlocfilehash: 2bd9b244947f5f0b8fcb832682951c7a241f96a4
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728760"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032358"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Registrera macOS-enheter automatiskt med Programmet för enhetsregistrering eller Apple School Manager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln hjälper dig att konfigurera registrering av macOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com) eller [Apple School Manager](https://school.apple.com/). Du kan använda endera av dessa registreringsmetoder för ett stort antal enheter utan att behöva röra dem. Du kan leverera macOS-enheter direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i Intune-hanteringen.
+Du kan konfigurera Intune-registrering av macOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com) eller [Apple School Manager](https://school.apple.com/). Du kan använda endera av dessa registreringsmetoder för ett stort antal enheter utan att behöva röra dem. Du kan leverera macOS-enheter direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i Intune-hanteringen.
 
 Om du vill konfigurera registrering kan du använda både Intunes och Apples DEP-portaler. Du kan skapa registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
@@ -123,7 +123,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för en
  
 7. Välj **OK**.
 
-8. Välj **Inställningar för inställningsassistenten** för att konfigurera följande profilinställningar: ![Anpassning av inställningsassistenten.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+8. Välj **Inställningar för inställningsassistenten** och konfigurera följande profilinställningar:  ![Anpassning av installationsassistenten.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Avdelningsinställningar | Beskrivning |
     |---|---|

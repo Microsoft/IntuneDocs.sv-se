@@ -15,19 +15,19 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 94e7bc3e3b936489ea34170616d1ab0ad49bafd3
-ms.sourcegitcommit: 8ddd3b0d4636a4516b2a05fa83c60ec111903c6c
+ms.custom: seodec18
+ms.openlocfilehash: 9f27d8b2334ff38146949c28898040da6a714e0a
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52546048"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032494"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln hjälper dig att aktivera registrering av iOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Du kan aktivera DEP-registrering för ett stort antal enheter utan att behöva röra dem. Du kan leverera enheter som iPhone och iPad direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
+Du kan konfigurera Intune till att registrera iOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Du kan aktivera DEP-registrering för ett stort antal enheter utan att behöva röra dem. Du kan leverera enheter som iPhone och iPad direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
 
 Om du vill aktivera DEP-registrering kan du använda både Intune och Apples DEP-portal. En lista med serienummer eller inköpsordernummer krävs så att du kan tilldela enheter till Intune för hantering. Du kan skapa DEP-registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
@@ -108,6 +108,10 @@ I rutan **Apple-token**, bläddrar du till certifikatfilen (.pem), väljer **Öp
 
 Nu när du har installerat din token kan skapa du en registreringsprofil för DEP-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
+> [!NOTE]
+> Enheterna kommer att blockeras om det inte finns tillräckligt med licenser i företagsportalen för en VPP-token, eller om token har upphört att gälla. Intune visar en varning när en token snart upphör att gälla, eller om licenserna börjar ta slut.
+ 
+
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 2. Välj en token, välj **Profiler** och välj sedan **Skapa profil**.
 
@@ -149,8 +153,8 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
     Användare meddelas att deras enheter är övervakade på två sätt:
 
-   - Låsskärmen säger: ”Den här iPhone hanteras av Contoso.”
-   - Skärmen **Inställningar** > **Allmänt** > **Om** säger: ”Den här iPhone är övervakad. Contoso can monitor your Internet traffic and locate this device." (Denna iPhone är övervakad. Contoso kan övervaka din Internettrafik och hitta denna enhet.)
+   - Låsskärmen säger: ”Denna iPhone hanteras av Contoso.”
+   - Skärmen **Inställningar** > **Allmänt** > **Om** säger: ”Denna iPhone är övervakad. Contoso can monitor your Internet traffic and locate this device." (Denna iPhone är övervakad. Contoso kan övervaka din Internettrafik och hitta denna enhet.)
 
      > [!NOTE]
      > En enhet som registrerats utan övervakning kan bara återställas genom att använda Apple Configurator. Om du återställer enheten på det här sättet, måste du ansluta en iOS-enhet till en Mac-dator med en USB-kabel. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3).
@@ -163,7 +167,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
 12. Välj **OK**.
 
-13. Välj **Anpassa inställningsassistenten** för att konfigurera följande profilinställningar: ![Anpassa inställningsassistenten.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+13. Välj **Anpassning av installationsassistenten** och konfigurera följande profilinställningar: ![Anpassning av installationsassistenten.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Avdelningsinställningar | Beskrivning |

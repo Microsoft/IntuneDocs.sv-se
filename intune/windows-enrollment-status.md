@@ -1,7 +1,7 @@
 ---
 title: Konfigurera en sida för registreringsstatus
 titleSuffix: Microsoft Intune
-description: Visa en hälsning för användare som registrerar Windows 10-enheter.
+description: Konfigurera en hälsningssida för användare som registrerar Windows 10-enheter.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,19 +15,19 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b953ea281ad785d8a0ce7bee4b0f6d420b785dd9
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.custom: seodec18
+ms.openlocfilehash: b87e0d24c000e3083eaebeac1a4cf6026d495ccf
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52729049"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032103"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
  
-Under enhetskonfigurationen visas installationsinformation om enheten på sidan för registreringsstatus. Vissa program, profiler och certifikat kanske inte har installerats när en användare som slutför den fördefinierade registreringen loggar in på enheten. En statussida för registreringen kan hjälpa användaren att förstå statusen för sina enheter under enhetskonfigurationen. Du kan skapa flera profiler för sidan för registreringsstatus och tillämpa dem på olika grupper. Profiler kan ställas in att:
+Under enhetskonfigurationen med Intune visas installationsinformation om enheten på sidan för registreringsstatus. Vissa program, profiler och certifikat kanske inte har installerats när en användare som slutför den fördefinierade registreringen loggar in på enheten. En statussida för registreringen kan hjälpa användaren att förstå statusen för sina enheter under enhetskonfigurationen. Du kan skapa flera profiler för sidan för registreringsstatus och tillämpa dem på olika grupper. Profiler kan ställas in att:
 - Visa installationsförloppet.
 - Blockera användningen tills installationen är klar.
 - Ange vad en användare kan göra om enhetskonfigurationen misslyckas.
