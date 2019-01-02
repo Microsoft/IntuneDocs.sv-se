@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a4d40915cce17846ca2aaab29bb597c6580e8920
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 30155227f68f5b98eb1808cfc255b368f134ce91
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180671"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305921"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram med Microsoft Intune
 
@@ -35,7 +35,7 @@ Med Microsoft Intune kan du synkronisera, hantera och tilldela böcker som du k�
 Procedurerna för att hantera böcker liknar att [hantera VPP-appar](vpp-apps-ios.md).
 
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>Hantera böcker som köpts genom volyminköpsprogrammet för iOS-enheter
-Du köper flera licenser för e-böcker i iOS via [Apples volymköpsprogram för företag](http://www.apple.com/business/vpp/) eller [Apples volymköpsprogram för utbildning](http://volume.itunes.apple.com/us/store). Processen innebär bland annat att skapa ett Apple VPP-konto från Apples webbplats och ladda upp en Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av böcker som du köpt med volyminköpsprogrammet.
+Du köper flera licenser för e-böcker i iOS via [Apples volymköpsprogram för företag](https://www.apple.com/business/vpp/) eller [Apples volymköpsprogram för utbildning](https://volume.itunes.apple.com/us/store). Processen innebär bland annat att skapa ett Apple VPP-konto från Apples webbplats och ladda upp en Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av böcker som du köpt med volyminköpsprogrammet.
 
 ## <a name="before-you-start"></a>Innan du börjar
 Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till ditt Intune-konto. Dessutom:

@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: 470bafba548c38870e57a545c4514459dde219b4
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 76f155d84a3f447cf067970c614d2bd7fd4f1798
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189401"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305904"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Flytta Intune-kontodata för informationslager 
 
@@ -81,4 +81,4 @@ Kunden X begär att ett konto flyttas med start 2018-01-06. Kunden får som svar
 ## <a name="next-steps"></a>Nästa steg
 
  - Läs mer om [vad som är nytt i Intune varje vecka](whats-new.md). Du kan också läsa mer om kommande ändringar, viktiga meddelanden om tjänsten och information om tidigare versioner.
- - Läs [Microsoft Intune-bloggen](http://go.microsoft.com/fwlink/?LinkID=273882).
+ - Läs [Microsoft Intune-bloggen](https://go.microsoft.com/fwlink/?LinkID=273882).

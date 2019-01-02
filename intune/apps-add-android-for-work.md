@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c7d5d29df0f91a4cff1060cd10a5d2355e196e39
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180152"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305938"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Tilldela appar till Android-arbetsprofilenheter med Intune
 
@@ -56,7 +56,7 @@ Kontrollera att du har konfigurerat Intune och Android-arbetsprofiler så att de
 
     ![Alternativ för att hantera nya begäranden om app-behörighet](media/approve-app-settings.png)
 
-    Appen godkänns och den visas i IT-administrationskonsolen. Därefter kan du [synkronisera Android-arbetsprofilappen med Intune](apps-add-android-for-work.md#sync-an-android-for-work-app-with-intune). 
+    Appen godkänns och den visas i IT-administrationskonsolen. Därefter kan du [synkronisera Android-arbetsprofilappen med Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synkronisera en Managed Google Play-app med Intune
 
@@ -84,7 +84,7 @@ När apputvecklare uppdaterar behörigheter med en ny version av appen tillåts 
 
 Du bör regelbundet besöka den hanterade Google Play-konsolen för att söka efter nya behörigheter. Du kan konfigurera Google Play att skicka dig eller andra ett e-postmeddelande när nya behörigheter krävs för en godkänd app. Om du tilldelar en app och noterar att den inte installeras på enheterna, söker du efter nya behörigheter genom att göra följande:
 
-1. Gå till [Google Play](http://play.google.com/work).
+1. Gå till [Google Play](https://play.google.com/work).
 2. Logga in med det Google-konto som du använde för att publicera och godkänna apparna.
 3. Välj fliken **Uppdateringar** och kontrollera om några appar behöver en uppdatering.  
     Alla listade appar kräver nya behörigheter och tilldelas inte innan de tillämpas.
