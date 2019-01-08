@@ -14,19 +14,19 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 66402d9e2bc66ec96de88f64dd61c41e1ddb34e5
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179098"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553647"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Du kan använda Microsoft Intune för att hantera Windows-datorer som antingen [mobila enheter med hantering av mobila enheter (MDM)](windows-enroll.md) eller som datorer med Intune-programvaruklienten enligt beskrivningen nedan. Microsoft rekommenderar dock att kunderna [använder MDM-hanteringslösningen](windows-enroll.md) närhelst det är möjligt.
+> Du kan använda Microsoft Intune för att hantera Windows-datorer som antingen [mobila enheter med hantering av mobila enheter (MDM)](windows-enroll.md) eller som datorer med Intune-programvaruklienten enligt beskrivningen nedan. Microsoft rekommenderar dock att kunderna [använder MDM-hanteringslösningen](windows-enroll.md) närhelst det är möjligt. Mer information finns i [Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter](pc-management-comparison.md) 
 
 
 Windows-datorer kan registreras genom att installera Intune-klientprogrammet. Intune-klientprogrammet kan installeras med följande metoder:
@@ -124,8 +124,8 @@ Om användarna inte har tilldelats någon licens för Intune och organisationens
 
 - Användare av Windows 10- eller Windows 8.1-datorer visas två registreringsalternativ:
 
-  -  **Registrera Windows-datorer som mobila enheter**: Användare trycker på knappen **Läs mer om att registrera** och tas till anvisningar om hur du registrerar datorn som en mobil enhet. Den här knappen visas tydligt eftersom MDM-registreringen anses vara det registreringsalternativ som är standard och föredras. Dock gäller inte MDM-alternativet för det här avsnittet, som endast omfattar installationen av klientprogrammet.
-  - **Registrera datorn med Intune-klientprogrammet**: Du måste berätta för användarna att de ska välja länken **Klicka här om du vill ladda ned** som tar dem genom installationen av klientprogrammet.
+  -  **Registrera datorn som en mobil enhet**: Användarna väljer knappen **Läs mer om att registrera** för att se anvisningar om hur datorn registreras som en mobil enhet. Den här knappen visas tydligt eftersom MDM-registreringen anses vara det registreringsalternativ som är standard och föredras. Dock gäller inte MDM-alternativet för det här avsnittet, som endast omfattar installationen av klientprogrammet.
+  - **Registrera datorn med Intune-klientprogrammet**: Du måste berätta för användarna att de ska välja länken **Klicka här om du vill ladda ned** som vägleder dem genom installationen av klientprogrammet.
 
 Följande tabell innehåller en sammanfattning av alternativen.
 
@@ -260,4 +260,4 @@ Avregistreringsprocessen tar inte bort mappen OnlineManagement. Vänta i 30 minu
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Nästa steg
-[Hantera enheter med Microsoft Intune](device-management.md)
+[Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

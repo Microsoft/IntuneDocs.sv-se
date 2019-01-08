@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032001"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626092"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera Intune-registrering av Android Enterprise-kioskenheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android stöder kioskenheter med COSU-lösningsuppsättningen (Corporate-Owned, Single-Use – företagsägd, en användning). Sådana enheter används bara för ett ändamål, till exempel digitala skyltar, biljettutskrifter eller lagerhantering. Administratörer låser användningen av enheten för en begränsad uppsättning appar och webblänkar. Användarna kan heller inte lägga till andra appar eller att vidta andra åtgärder på enheten.
+Android stöder kioskenheter med lösningsuppsättningen [Dedikerade enheter](https://developers.google.com/android/work/overview#company-owned-devices-for-dedicated-use). Sådana enheter används bara för ett ändamål, till exempel digitala skyltar, biljettutskrifter eller lagerhantering. Administratörer låser användningen av enheten för en begränsad uppsättning appar och webblänkar. Användarna kan heller inte lägga till andra appar eller att vidta andra åtgärder på enheten.
 
 Intune hjälper dig att distribuera appar och inställningar för Android-kioskenheter. Specifik information om Android enterprise finns i [Krav för Android enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a0fb9aca406c1a49c979b59e5d879d66a730c1c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9cd03d4953376d20e96ec146ece91120d592cb99
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185898"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429788"
 ---
-# <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
+# <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -99,8 +99,8 @@ Använd [guiden för planering, utformning och implementering för distribution 
 ### <a name="determine-the-type-of-app-for-your-solution"></a>Bestämma typ av app för en lösning
 
 Du kan välja bland följande app-typer:
-- **Appar från Store**: Appar som har laddats upp till antingen Microsoft Store, iOS Store eller Android Store är store-appar. En store-apps provider underhåller och tillhandahåller uppdateringar för appen. Du väljer appen i Store-listan och lägger till den med hjälp av Intune som en app som är tillgänglig för användarna.
-- **Appar om skrivits internt (verksamhetsspecifika)**: Appar som skapats internt är verksamhetsspecifika appar (LOB). Funktionerna i den här apptypen har skapats för någon av plattformarna som stöds av Intune, som Windows, iOS eller Android. Din organisation skapar och förser dig med uppdateringar som en separat fil. Du ger användarna uppdateringar för appen genom att lägga till och distribuera uppdateringarna med Intune.
+- **Appar från butiken**: Appar som har laddats upp till antingen Microsoft Store, iOS Store eller Android Store kallas för butiksappar. En store-apps provider underhåller och tillhandahåller uppdateringar för appen. Du väljer appen i Store-listan och lägger till den med hjälp av Intune som en app som är tillgänglig för användarna.
+- **Appar som har skrivits internt (verksamhetsspecifika)**: Appar som har skapats internt kallas för verksamhetsspecifika appar (LOB). Funktionerna i den här apptypen har skapats för någon av plattformarna som stöds av Intune, som Windows, iOS eller Android. Din organisation skapar och förser dig med uppdateringar som en separat fil. Du ger användarna uppdateringar för appen genom att lägga till och distribuera uppdateringarna med Intune.
 - **Appar på webben**: Webbappar är klientserverprogram. Servern tillhandahåller webbappen, som inkluderar användargränssnitt, innehåll och funktioner. Dessutom erbjuder moderna webbtjänstplattformar dessutom vanligen säkerhet, belastningsutjämning och andra förmåner. Den här typen av app underhålls separat på webben. Du använder Intune för att peka på den här apptypen. Du tilldelar också vilka användargrupper som ska kunna få åtkomst till den här appen. Observera att Android inte har stöd för webbappar.
 
 När du bestämmer vilka appar som krävs för din organisation behov, bör du överväga hur apparna integrerar med molntjänster, vilka data apparna kan få åtkomst till, om apparna är tillgängliga för BYOD-användare och om apparna kräver internetåtkomst.
@@ -118,9 +118,9 @@ Intune-hanterade appar kan även aktivera appskydd utan att kräva registrering.
 
 ### <a name="understanding-licensed-apps"></a>Förstå licensierade appar
 Utöver att förstå webbappar, Store-appar och verksamhetsspecifika appar bör du också vara medveten om destinationen för appar för volymköpsprogram och licensierade appar som: 
-- **Apples program för volyminköp för företag (iOS)**: I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag. Mer information finns i [Hantera volyminköpta iOS-appar](vpp-apps-ios.md).
-- **Android-arbetsprofil**: Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till Android-standardenheter. Alla appar som du installerar för Android-arbetsprofiler kommer från den hanterade Google Play-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
-- **Microsoft Store för företag (Windows 10)**: I Microsoft Store för företag kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program i Azure-portalen. Mer information finns i [Hantera appar från Microsoft Store för företag](windows-store-for-business.md).
+- **Apples volyminköpsprogram för företag (iOS)**: I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag. Mer information finns i [Hantera volyminköpta iOS-appar](vpp-apps-ios.md).
+- **Android-arbetsprofil**: Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till vanliga Android-enheter. Alla appar som du installerar för Android-arbetsprofiler kommer från den hanterade Google Play-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
+- **Microsoft Store för företag (Windows 10)**: I Microsoft Store för företag kan du söka efter och köpa appar till din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program i Azure-portalen. Mer information finns i [Hantera appar från Microsoft Store för företag](windows-store-for-business.md).
 
     > [!NOTE]
     > Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx**, **.appxbundle**, **.msix** och **.msixbundle**.  

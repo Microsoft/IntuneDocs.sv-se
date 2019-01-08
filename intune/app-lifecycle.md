@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
-ms.openlocfilehash: 048b8472be00c544611fe2ea8763b16019cebc0b
-ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
+ms.openlocfilehash: e122f2c0c62fbde04a328b1423416be82dcfa1f9
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52887057"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734229"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Översikt över applivscykeln i Microsoft Intune
 
@@ -28,7 +28,7 @@ ms.locfileid: "52887057"
 
 Applivscykeln i Microsoft Intune börjar när en app läggs till och fortsätter genom fler faser tills du tar bort appen. Om du förstår faserna har du den information du behöver för att komma igång med apphantering i Intune.
 
-![Applivscykeln](./media/app-lifecycle.png "Intune-appens livscykel")
+![Appens livscykel – Lägg till, distribuera, konfigurera, skydda och ta ur bruk.](./media/app-lifecycle.png "Intune-appens livscykel")
 
 ## <a name="add"></a>Lägg till
 

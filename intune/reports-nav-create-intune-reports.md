@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 13054bcaf885173e768fefb585cb71f266e9ca9e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 02bf1672db70bce57e527a0992f6a979b2e099e7
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184666"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429584"
 ---
-# <a name="use-the-intune-data-warehouse"></a>Använda Intune-informationslagret
+# <a name="use-the-microsoft-intune-data-warehouse"></a>Använda Microsoft Intune-informationslager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -31,6 +31,8 @@ Använd Intune-informationslagret för att skapa rapporter som ger inblick i fö
 -   Trend för användarnas registrering i Intune så att du kan optimera licensinköpen
 -   Information på detaljnivå om app- och operativsystemversioner så att du kan granska status för mobila enheter
 -   Trender för registrering och regelefterlevnad för enheter så att du smidigt kan rulla ut principuppdateringar
+
+## <a name="data-warehouse-benefits"></a>Fördelar med informationslager
 
 Informationslagret ger dig tillgång till mer information om din mobila miljö än Azure Portal. Med Intune-informationslagret får du tillgång till:
 
@@ -45,7 +47,7 @@ Informationslagret ger dig tillgång till mer information om din mobila miljö �
 > Det går nu att använda v1.0-versionen av Intune-informationslagret genom att ange frågeparametern `api-version=v1.0`. Uppdateringar av samlingar i datalagret är additiva och avbryter inte befintliga scenarier.<br><br>
 > Du kan testa de nya funktionerna i betaversionen av informationslagret. För att kunna använda betaversionen måste webbadressen innehålla frågeparametern `api-version=beta`. Betaversionen innehåller funktioner som ännu inte är allmänt tillgängliga som en tjänst som stöds. Allt eftersom nya funktioner läggs till i Intune kan betaversionen ändra funktionssätt och datakontrakt. Eventuell anpassad kod eller rapportverktyg som är beroende av betaversionen kan sluta att fungera på grund av pågående uppdateringar.
 
-**Nästa steg**
+## <a name="next-steps"></a>Nästa steg
 
 - Få en länk och använd Power BI för att få mer information. Mer information finns i [Ansluta till Intune-informationslagret med Power BI](reports-proc-get-a-link-powerbi.md).
 - Med länken skapar du en anpassad rapport med Power BI. Det finns anvisningar i [Skapa en rapport från OData-feeden med Power BI](reports-proc-create-with-odata.md).

@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: b08746965c23c8d247a53bcd0b0844a24581b4e6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 730195b200448d529d2a56ac8e8a45548264de2d
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179107"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429652"
 ---
-#  <a name="intune-data-warehouse-api"></a>API för Intune-informationslager
+#  <a name="microsoft-intune-data-warehouse-api"></a>API för Microsoft Intune-informationslager
 
 Med API:t för Intune-informationslagret får du tillgång till Intune-data i ett maskinläsligt format som kan användas i valfritt analysverktyg. Du kan använda API:et för att skapa rapporter som ger information om företagets mobilmiljö. API:t använder OData-protokollet som följer standardmönstret för:
 
@@ -66,6 +66,6 @@ OData definierar en abstrakt datamodell och ett protokoll som ger alla klienter 
 
 Läs mer om att arbeta med Azure AD genom att läsa [Autentiseringsscenarier i Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-Hitta OData-resurser på [odata.org](http://www.odata.org).
+Hitta OData-resurser på [odata.org](https://www.odata.org).
   
-Granska ODatas standardversion 4.0 på [OData Version 4.0] (http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+Granska ODatas standardversion 4.0 på [OData Version 4.0] (https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 42b554f025f80546a0a2dd93de92549f2f037b3f
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: e9d3b82fb544b1c73671438440b108573343795a
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112890"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324913"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -45,7 +45,7 @@ Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-con
 
 -   Appen måste ha utvecklats av eller för ditt företag. Du kan inte använda verktyget på appar som har hämtats från Google Play-butiken.
 
--   För att kunna köra programhanteringsverktyget måste du installera den senaste versionen av [Java Runtime Environment](http://java.com/download/) och sedan kontrollera att Java-sökvägsvariabeln är inställd på C:\ProgramData\Oracle\Java\javapath i Windows-miljövariablerna. Mer hjälp finns i [Java-dokumentationen](http://java.com/download/help/).
+-   För att kunna köra programhanteringsverktyget måste du installera den senaste versionen av [Java Runtime Environment](https://java.com/download/) och sedan kontrollera att Java-sökvägsvariabeln är inställd på C:\ProgramData\Oracle\Java\javapath i Windows-miljövariablerna. Mer hjälp finns i [Java-dokumentationen](https://java.com/download/help/).
 
     > [!NOTE]
     > I vissa fall kan 32-bitarsversionen av Java orsaka minnesproblem. Det är en bra idé att installera 64-bitarsversionen.
@@ -71,12 +71,12 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 
 2. Från mappen där du installerade verktyget importerar du PowerShell-modulen för programhanteringsverktyget:
 
-   ```
+   ```PowerShell
    Import-Module .\IntuneAppWrappingTool.psm1
    ```
 
 3. Kör verktyget genom att använda kommandot **invoke-AppWrappingTool**, med följande användningssyntax:
-   ```
+   ```PowerShell
    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
    ```
@@ -99,18 +99,18 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 
 - Om du vill se detaljerad användningsinformation för verktyget anger du kommandot:
 
-    ```
+    ```PowerShell
     Help Invoke-AppWrappingTool
     ```
 
 **Exempel:**
 
 Importera PowerShell-modulen.
-```
+```PowerShell
 Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
 Kör programhanteringsverktyget på den interna appen HelloWorld.apk.
-```
+```PowerShell
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
 
@@ -142,7 +142,7 @@ För att förhindra eventuell förfalskning, avslöjande av information och priv
 
 -   Importera utdataprogrammet till Intune på samma dator som där verktyget körs. Mer information om Java Keytool finns i [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
 
--   Om utdataappen och verktyget finns på en UNC-sökväg (Universal Naming Convention) och du inte kör verktyget och indatafilerna på samma dator, konfigurerar du en säker miljö med hjälp av [IPsec (Internet Protocol Security)](http://wikipedia.org/wiki/IPsec) eller [signering med SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
+-   Om utdataappen och verktyget finns på en UNC-sökväg (Universal Naming Convention) och du inte kör verktyget och indatafilerna på samma dator, konfigurerar du en säker miljö med hjälp av [IPsec (Internet Protocol Security)](https://wikipedia.org/wiki/IPsec) eller [signering med SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
 
 -   Kontrollera att programmet kommer från en betrodd källa.
 
@@ -167,11 +167,17 @@ De här anvisningarna är specifika för alla Android- och Xamarin-appar som vil
 > Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal som är kopplat till din app. 
 > * Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
 
-2. Aktivera standardregistrering genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+2. Aktivera standardregistrering genom att ange följande värde i manifestet:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
+   ```
    > [!NOTE] 
    > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
 
-3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
    > [!NOTE] 
    > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
 

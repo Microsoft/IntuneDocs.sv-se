@@ -1,12 +1,12 @@
 ---
 title: Lägga till företagsportalappen för Windows 10 manuellt
 titleSuffix: Microsoft Intune
-description: Läs om hur du lägger till företagsportalappen för Windows 10 manuellt.
+description: Lär dig hur personalen manuellt kan lägga till företagsportalappen för Windows 10 i sina datorer från Microsoft Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7808d9c189f429e15cdf916d18412ba951c7e696
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 755e836c5954b9cbbf3c7729755aaa25062710d8
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190276"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642599"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Lägga till appen Företagsportal för Windows 10 manuellt med Microsoft Intune
 
@@ -51,7 +51,7 @@ Användarna kan själva installera appen Företagsportal från Microsoft Store f
 
 7. Hämta alla paket under Nödvändiga ramverk genom att välja **Ladda ned**.  
     Den här åtgärden måste slutföras för x86-, x64- och ARM-arkitekturer, totalt 12 paket.
-8. Innan du laddar upp appen Företagsportal till Intune, skapar du en mapp (t.ex. C:\Företagsportal) med paketen strukturerade på följande sätt:
+8. Innan du laddar upp företagsportalappen till Intune skapar du en mapp (till exempel: C:\Company Portal) med paketen strukturerade på följande sätt:
    - Placera företagsportalspaketet i C:\Company Portal. Skapa även undermappen *Beroenden* på den här platsen.  
 
      ![Mappen Beroenden sparad med APPXBUN-filen](./media/Win10CP-Dependencies-save.png)

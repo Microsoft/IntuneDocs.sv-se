@@ -15,12 +15,12 @@ ms.reviewer: erikre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7cb6e5e603b353be5d3c0d3fdaca4f1d8af675ad
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1e2b97970a7ab440a032eb29f5307e4dbeddc3bc
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181198"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306023"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -39,9 +39,9 @@ MAM skyddar företagets data inom ett program. Med MAM utan registrering (MAM-WE
 
 **Vilka enhetskonfigurationer har MAM stöd för?**<br></br>
 Intune MAM stöder två konfigurationer:
-- **Intune MDM + MAM**: IT-administratörer kan bara hantera appar med MAM och appskyddsprinciper på enheter som är registrerade med Intune mobil enhetshantering (MDM). För att hantera appar med hjälp av MDM + MAM, ska kunder använda Intune-konsolen i Azure-portalen på https://portal.azure.com.
+- **Intune MDM + MAM**: IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). För att hantera appar med hjälp av MDM + MAM, ska kunder använda Intune-konsolen i Azure-portalen på https://portal.azure.com.
 
-- **MAM utan enhetsregistrering**: Med MAM utan enhetsregistrering, eller MAM-WE, kan IT-administratörer hantera appar med hjälp av MAM och appskyddsprinciper på enheter som inte har registrerats med Intune MDM. Detta innebär att appar kan hanteras av Intune på enheter som registrerats med tredje parts EMM-leverantörer. För att hantera appar med hjälp av MAM-WE, ska kunder använda Intune-konsolen i Azure-portalen på http://portal.azure.com. Appar kan också hanteras av Intune på enheter som har registrerats med tredje parts-leverantörer av Enterprise Mobility Management (EMM) eller inte har registrerats alls med MDM.
+- **MAM utan enhetsregistrering**: Med MAM utan enhetsregistrering, eller MAM-WE, kan IT-administratörer hantera appar med hjälp av MAM och appskyddsprinciper på enheter som inte har registrerats med Intune MDM. Detta innebär att appar kan hanteras av Intune på enheter som registrerats med tredje parts EMM-leverantörer. För att hantera appar med hjälp av MAM-WE, ska kunder använda Intune-konsolen i Azure-portalen på https://portal.azure.com. Appar kan också hanteras av Intune på enheter som har registrerats med tredje parts-leverantörer av Enterprise Mobility Management (EMM) eller inte har registrerats alls med MDM.
 
 
 ## <a name="app-protection-policies"></a>Appskyddsprinciper
@@ -64,7 +64,7 @@ Alla appar som har integrerats med [Intune App-SDK](/intune/app-sdk) eller inslu
 - Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](/intune/licenses-assign) för information om hur du tilldelar Intune-licenser till slutanvändare.
 
 - Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål.
- Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](http://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Office-portalen](http://portal.office.com).
+ Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Office-portalen](https://portal.office.com).
 
 - Slutanvändaren måste logga in på appen med sitt AAD-konto.
 
@@ -79,7 +79,7 @@ Alla appar som har integrerats med [Intune App-SDK](/intune/app-sdk) eller inslu
 
 **Vilka är de ytterligare kraven för att använda [Word-, Excel- och PowerPoint](https://products.office.com/business/office)-apparna?**
 
-- Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](https://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddsprincipen Förhindra spara som. Om den hanterade platsen till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen vara konfigurerad i slutanvändarens Word-, Excel- eller PowerPoint-app.
 
@@ -113,8 +113,8 @@ PIN-kod (Personal Identification Number) är ett lösenord som används för att
 
 - **Hur ofta kommer användaren uppmanas att ange PIN-koden för Intune?**<br></br> IT-administratören kan definiera Intune-appskyddsprincipen ”Kontrollera åtkomskraven igen efter (minuter)” i Intune-administratörskonsolen. Den här inställningen anger hur lång tid som ska passera innan åtkomstkraven kontrolleras på enheten och appens PIN-skärm visas igen. Detta är dock viktig information om PIN-koden som påverkar hur ofta användaren uppmanas: 
 
-    - **PIN-koden delas mellan appar från samma utgivare för att förbättra användarvänligheten:** I iOS delas en app-PIN-kod mellan alla appar **från samma apputgivare**. På Android delas en app-PIN mellan alla appar.
-    - **Beteendet ”Kontrollera åtkomstkraven igen efter (minuter)” efter omstart av enheten:** en ”PIN-timer” spårar det antal minuter med inaktivitet som bestämmer när Intune-appens PIN ska visas nästa gång. På iOS påverkas inte PIN-timern av enhetsomstart. Därför påverkar inte enhetsomstart det antal minuter som användaren har varit inaktiv från en iOS-app med en Intune PIN-princip. På Android återställs PIN-timern när enheten startas om. Därför är det troligt att Android-appar med en Intune PIN-princip frågar efter en app-PIN-kod oavsett värdet på inställningen ”Kontrollera åtkomstkraven igen efter (minuter)” **efter en omstart av enheten**.  
+    - **PIN-koden delas mellan appar från samma utgivare för att förbättra användarvänligheten:** I iOS delas en apps PIN-kod mellan alla appar **från samma apputgivare**. På Android delas en app-PIN mellan alla appar.
+    - **Beteendet ”Kontrollera åtkomstkraven igen efter (minuter)” efter en omstart av enheten:** En ”PIN-timer” spårar antalet minuter av inaktivitet som bestämmer när du ska visa Intune-appens PIN-kod nästa gång. På iOS påverkas inte PIN-timern av enhetsomstart. Därför påverkar inte enhetsomstart det antal minuter som användaren har varit inaktiv från en iOS-app med en Intune PIN-princip. På Android återställs PIN-timern när enheten startas om. Därför är det troligt att Android-appar med en Intune PIN-princip frågar efter en app-PIN-kod oavsett värdet på inställningen ”Kontrollera åtkomstkraven igen efter (minuter)” **efter en omstart av enheten**.  
     - **Den löpande funktionen för timern som är kopplad till PIN-koden:** När en PIN-kod anges för att få åtkomst till en app (app A) och appen lämnar enhetens förgrund (huvudfokus) kommer PIN-timern att återställas för den PIN-koden. De appar (t.ex. app B) som delar denna PIN-kod kommer inte uppmana användaren att ange PIN-kod eftersom timern har återställts. Uppmaningen visas igen när värdet ”Kontrollera åtkomstkraven igen efter (minuter)” uppfylls igen.
 
 För iOS-enheter visas meddelandet igen när värdet **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** uppfylls igen för den app som inte är huvudfokus, även om PIN-koden delas mellan appar från olika utgivare. En användare har till exempel appen _A_ från utgivare _X_ och appen _B_ från utgivare _Y_, och dessa två appar delar samma PIN-kod. Användaren fokuserar på app _A_ (förgrund) och app _B_ minimeras. När värdet **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** uppfylls och användaren växlar till app _B_ krävs PIN-koden.

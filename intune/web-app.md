@@ -1,12 +1,12 @@
 ---
 title: Lägga till webbappar i Microsoft Intune
 titleSuffix: ''
-description: Läs mer om att lägga till webbappar i Microsoft Intune.
+description: Läs mer om att lägga till webbappar (klient/serverprogram) i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ace65aab5ded1449b1e1fd092936e9e2a019f6c1
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4f0c5d79c17c3cc2ada275337d266c134eed7e91
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187641"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642548"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -46,18 +46,18 @@ Om du vill lägga till en app i Intune som en genväg till en app på webben gö
 6. Välj typen **Webblänk** i listrutan **Typ av app** i fönsterrutan **Lägg till app**.
 7. Välj **Konfigurera**.
 8. Lägg till följande information i fönstret **Appinformation**:
-    - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen. 
+    - **Namn**:  Ange namnet på appen så som den ska visas i företagsportalen. 
     
         > [!NOTE]
         > Om du ändrar namnet på appen via Intune i Azure Portal när du har distribuerat och installerat den kan du inte längre använda appen som mål i dina kommandon.
     
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
-    - **App-URL**: Ange webbadressen till den webbplats där den app som du vill tilldela finns.
-    - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen**: Välj det här alternativet för att visa appsviten på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Kräv en hanterad webbläsare för att öppna den här länken**: Välj det här alternativet om du vill tilldela användarna en länk till en webbplats eller en webbapp som du kan de öppna i Intune Managed Browser. Den här webbläsaren måste installeras på enheterna.
-    - **Logotyp**: Ladda upp en ikon som ska associeras med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
+    - **Appens webbadress**: Ange webbadressen till den webbplats där den app som du vill tilldela finns.
+    - **Kategori**: Du kan även välja en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
+    - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
+    - **Kräv en hanterad webbläsare för att öppna den här länken**: Välj det här alternativet om du vill tilldela en länk till användarna till en webbplats eller en webbapp som de kan öppna i en Intune-hanterad webbläsare. Den här webbläsaren måste installeras på enheterna.
+    - **Logotyp**: Överför en ikon som ska kopplas till appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
 9. Välj **OK**.
 10. I fönstret **Lägg till app** väljer du **Lägg till**.
 

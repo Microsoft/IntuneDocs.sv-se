@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b4a45ac5a73d199ec883e3dda95a97a8f3c09d9a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fee473cd6cb6fa7e8a092ebd70192f2b7f8a8b84
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181524"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737941"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -50,7 +50,7 @@ Tilldela en app till grupper med hjälp av en tilldelning för att inkludera ell
 5. Markera appen som du vill tilldela. En instrumentpanel visar information om appen. 
 6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**. 
 
-    ![Apptilldelningar i Intune](./media/apps-inc-exl-01.png)
+    ![Inkludera apptilldelningar när du tilldelar appar](./media/apps-inc-exl-01.png)
 7. Välj **Lägg till grupp** för att lägga till grupper av användare som har tilldelats appen. 
 8. I fönstret **Lägg till grupp**, väljer du en **Tilldelningstyp** från tillgängliga tilldelningstyper.
 9. Välj **Tillgänglig med eller utan registrering** som tilldelningstyp.

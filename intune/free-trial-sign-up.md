@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 12/20/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 827766d76a66ea7d69ebbd3ba77efe785689e7e2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2257253d023c97d14418b3566c0c493a3cd8f615
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189188"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737924"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad 
 
@@ -50,7 +50,7 @@ Du kan prova Intune utan kostnad i 30 dagar. Om du redan har ett arbets- eller s
 
 2. Skapa ett konto med företagets namn följt av **.onmicrosoft.com**. 
 
-    ![Skärmbild av webbsidan med kontoregistrering för en utvärderingsversion av Microsoft Intune](./media/account-sign-up-site-user-id.png)
+    ![Skärmbild av ny autentiseringsprocess för Microsoft Intunes konto för kostnadsfri utvärderingsversion](./media/account-sign-up-site-user-id.png)
 
     Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationsportalen för Office 365 enligt beskrivningen senare i artikeln.
 
@@ -106,13 +106,13 @@ Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmi
 
 3. Skriv ditt eget domännamn. Välj **Nästa**.
 
-   ![Skärmbild av administrationscenter för Office 365, där Inställningar > Domäner har valts och ett nytt domännamn läggs till](./media/domain-custom-add.png)
+   ![Skärmbild av Administrationscenter för Office 365 – Lägg till domän](./media/domain-custom-add.png)
 
 4. Kontrollera att du är ägare till domänen som du angav tidigare. 
     
     Om du väljer att **skicka kod via e-post** skickas ett e-postmeddelande till den registrerade kontakten för din domän. När du har fått e-postmeddelandet kopierar du koden och anger den i fältet som är märkt **Ange verifieringskoden här**. Om verifieringskoden matchar läggs domänen till din klient. E-postmeddelandet som visas kanske inte ser bekant ut. Vissa registratorer döljer den verkliga e-postadressen och sedan vad som har angetts när domänen registrerades.
 
-   ![Skärmbild av Administrationscenter för Office 365 – verifiera domännamnet som har lagts till](./media/domain-custom-verify.png)
+   ![Skärmbild av Administrationscenter för Office 365 – Verifiera domän](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > TXT-postverifieringsinformation finns i [Skapa DNS-poster för alla DNS-värdtjänster för Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
@@ -130,4 +130,4 @@ I den här snabbstarten skapade du en kostnadsfri prenumeration för att prova I
 Om du vill följa den här serien med Intune-snabbstarter fortsätter du till nästa snabbstart.
 
 > [!div class="nextstepaction"]
-> [Snabbstart: Skapa en användare och tilldela användaren en licens](quickstart-create-user.md)
+> [Snabbstart: Skapa en användare och tilldela en licens till den](quickstart-create-user.md)

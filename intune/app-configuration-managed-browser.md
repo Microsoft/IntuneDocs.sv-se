@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
-ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
+ms.openlocfilehash: 65f3598282bd46d422f8748d2653dbf8e18cf9b7
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52630025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324981"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
@@ -150,7 +150,7 @@ Microsoft Edge, Intune Managed Browser och [Azure AD-programproxy]( https://docs
 ### <a name="before-you-start"></a>Innan du börjar
 
 - Konfigurera dina interna program via Azure AD-programproxyn.
-    - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started) för att konfigurera programproxy och publicera program. 
+    - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#get-started) för att konfigurera programproxy och publicera program. 
 - Du måste använda version 1.2.0 eller senare av Managed Browser-appen.
 - Användare av Managed Browser eller Microsoft Edge har en [Intune-appskyddsprincip]( app-protection-policy.md) tilldelad till appen.
 
@@ -161,7 +161,7 @@ Microsoft Edge, Intune Managed Browser och [Azure AD-programproxy]( https://docs
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Steg 1: Aktivera automatisk omdirigering till en skyddad webbläsare från Outlook
 Outlook måste konfigureras med en appskyddsprincip som aktiverar inställningen **Begränsa webbinnehåll till visning i Managed Browser**.
 
-#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Steg 2: Tilldela en appkonfigurationsprincip som har tilldelats den skyddade webbläsaren.
+#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Steg 2: Tilldela en appkonfigurationsprincip som har tilldelats till den skyddade webbläsaren.
 Den här proceduren konfigurerar Managed Browser eller Microsoft Edge för omdirigering via en programproxy. Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller Managed Browser och ange följande nyckel- och värdepar:
 
 | Tangent                                                             | Värde    |
@@ -261,6 +261,19 @@ Använd följande information för att lära dig om tillåtna format och jokerte
   - `http://www.contoso.com:*`
 
   - `http://www.contoso.com: /*`
+## <a name="opening-links-within-the-intune-managed-browser-vs-microsoft-edge"></a>Öppna länkar i Intune Managed Browser jämfört med Microsoft Edge 
+
+Både Intune Managed Browser och Microsoft Edge anses nu vara principhanterade webbläsare/skyddade webbläsare. I dag resulterar befintliga appskyddsprinciper att webblänkar från Intune-hanterade appar öppnas i en viss webbläsare beroende på scenario och plattform. 
+
+I Android: 
+* Managed Browser om både MB och Edge finns på enheten, såvida inte appkonfigurationsinställningen ”com.microsoft.intune.useEdge” är inställd på ”true” för alla Intune-hanterade appar där en principhanterad webbläsare krävs.  
+* Microsoft Edge om enbart Microsoft Edge finns på enheten och är mål för principen.
+* Managed Browser om bara Managed Browser finns på enheten och är mål för principen. 
+
+I iOS, för appar som har integrerat Intune SDK för iOS med 9.0.9+: 
+* Managed Browser om både MB och Edge finns på enheten, såvida inte appkonfigurationsinställningen ”com.microsoft.intune.useEdge” är inställd på ”true” för alla Intune-hanterade appar där en principhanterad webbläsare krävs **eller** Microsoft Edge om Microsoft Edge är installerad och har tagit emot principen. 
+* Microsoft Edge om enbart Microsoft Edge finns på enheten, är mål för principen och har tagit emot principen. 
+* Managed Browser om enbart Managed Browser finns på enheten, är mål för principen och har tagit emot principen.
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Komma åt loggar för hanterade appar med Managed Browser i iOS
 

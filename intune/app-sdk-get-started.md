@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 4ccbdff5eac7fef8d28696d8340eb498bae95176
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 03840b0a4a7ce3f4735e22a227f5d2856d532b11
+ms.sourcegitcommit: 02f75d241b3cbb125cb235d16d447f8855b1806d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187862"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657788"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -79,11 +79,11 @@ Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda
 
 Du behöver en av följande utvecklarguider för att hjälpa dig att integrera Intune App SDK till din app:
 
-* **[Utvecklarguide för Intune App SDK för iOS](app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
+* **[iOS-utvecklarhandbok för Intune App SDK](app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
 
-* **[Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
+* **[Android-utvecklarhandbok för Intune App SDK](app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
 
-* **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
+* **[Handbok för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
 
 
 
@@ -159,9 +159,9 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
     * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
 
-* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
+* **Appskyddsprinciper i Intune**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
 
-* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna installerar din app, kan du gå till [Felsöka appinstallationsproblem](troubleshoot-app-install.md). 
+* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna kommer att installera din app, kan du gå till [Felsökning av appinstallationsproblem](troubleshoot-app-install.md). 
 
 ### <a name="give-your-app-access-to-the-intune-app-protection-service-optional"></a>Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)
 
@@ -188,7 +188,7 @@ Den här skylten talar om att din app fungerar med principer för Intune app fö
 
 Skylten är en ikon föreställande en portfölj och syns i exemplen nedan:
 
-![Skyltexempel 1](./media/badge-example-1.png) ![Skyltexempel 2](./media/badge-example-2.png)
+![Intune-appskyddsprinciper – Aktivitetsikon exempel 1](./media/badge-example-1.png) ![Intune-appskyddsprinciper – Aktivitetsikon exempel 2](./media/badge-example-2.png)
 
 **Det här behöver du göra för att ge din app en skylt**:
 

@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 228b662739d161a4f4d6d145746fc68e7c3b87e0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ce4689aaecd40d7d44f0064b1e951823fa0bb2c2
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188117"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738009"
 ---
-# <a name="data-warehouse-data-model"></a>Datamodellen informationslager
+# <a name="microsoft-intune-data-warehouse-data-model"></a>Datamodell för Microsoft Intune-informationslager
 
 Intune-informationslagret samplar dagligen data för att ge en historik över den ständigt föränderliga miljön med mobila enheter. Vyn består av relaterade entiteter i tid.
 
@@ -48,7 +48,7 @@ Dessa områden innehåller entiteterna som är viktiga för din Intune-miljö. D
   -  [Aktuell användare](reports-ref-current-user.md)
   -  [Användarenhetsassociation](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>Relationer: Star-schemamodellen
+## <a name="relationships-star-schema-model"></a>Relationer: Star-schemamodell
 
 Lagret organiserar entiteterna i relationer som är meningsfulla för den typ av frågor du vill ställa. Du kan till exempel granska antalet installationer av ett internt utvecklat Android-program. Informationslagrets struktur ger dig en lättöverskådlig bild av den mobila miljön. Analysverktyg, exempelvis Microsoft Power BI, kan i sin tur använda informationslagerdatamodellen för att skapa visualiseringar och dynamiska instrumentpaneler.
 
@@ -56,7 +56,7 @@ Enheter och relationer använder en star-schemamodell. Ett star-schema visar fak
 
 Ett stjärnschema är utformat för maximal flexibilitet och dataanalys så att du kan skapade de rapporter som behövs för att förstå din föränderliga mobilmiljö.
 
-## <a name="time-daily-snapshots"></a>Tid: dagliga ögonblicksbilder
+## <a name="time-daily-snapshots"></a>Tid: Dagliga ögonblicksbilder
 
 Lagret är nedströms från dina Intune-data. Intune tar en daglig ögonblicksbild vid midnatt UTC-tid och lagrar den i lagret. Varaktigheten för kvarhållna ögonblicksbilder varierar mellan faktatabeller. Vissa kan kvarhållas sju dagar, andra 30 dagar och vissa till och med längre.
 

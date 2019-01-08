@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,23 +17,32 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f44b281bc8a0edd39e25bf966841a5f458c6677e
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
+ms.openlocfilehash: 3c06bb8efd0d6f7795094f36dcb513c5dca63e77
+ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903479"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570799"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Ett befintligt e-postkonto för företag hittades
 
-Du har redan ett e-postkonto med din organisation eller ditt företag och nu vill du komma åt det kontot på din mobila enhet. Företagets support behöver din hjälp för att skydda din e-poståtkomst på vägen från personen som skickade e-postmeddelandet till din enhet. Din nuvarande e-postkonfiguration kanske fungerade, men genom att utföra de här stegen är din information säkrare.
+Du kan ha haft mobil enhetsåtkomst till ditt arbetes eller din skolas e-postkonto *innan* din enhet hanterades. Om din enhet hanteras nu, rekommenderar vi att du:
 
-1.  Hitta **Inställningarna** för din enhet och ta bort den anslutning som du tidigare konfigurerade för ditt företags-e-postkonto.  På en iOS-enhet kan du till exempel trycka på **Inställningar** > **E-post** > **Konton**. Välj ditt e-postkonto för arbetet och tryck sedan på **Ta bort**.
+* Kopplar från arbetets befintliga e-postkonto från din enhet.
+* Gör en ny synkronisering av enhetsinställningarna från företagsportalappen.  
 
-2.  Avsluta **Inställningar** och öppna företagsportalappen på enheten.  
+De här stegen garanterar att enheten uppfyller företagets säkerhetskrav och att dina e-postmeddelanden förblir säkra.
 
-3. Gå till **Enhet** och välj den enhet som du vill uppdatera.
+1.  På din enhet går du till **Inställningar** och letar reda på dina anslutna konton. På en iOS 11+-enhet kan du till exempel välja **Lösenord och konton**.
+ 
+2. Markera och ta bort ditt e-postkonto för arbetet.
 
-4. Välj **Kontrollera inställningar**. Efter en liten stund uppdateras enheten med de nya e-postinställningarna.
+3. Öppna företagsportalappen på din enhet.  
+
+4. Välj den enhet som du vill uppdatera i enhetslistan.
+
+5. Välj **Kontrollera inställningar**. Efter en liten stund synkroniseras enheten med de nya e-postinställningarna.
+
+6. Logga in med ditt arbets- eller skolkonto.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

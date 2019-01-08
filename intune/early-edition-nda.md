@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 35298713738c666ca19d57e647412729a85bbc4a
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 21d89d97355430f071763391d69fe332cf3ef369
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112841"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642905"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Den tidiga utgåvan för Microsoft Intune – December 2018
 
@@ -50,11 +50,11 @@ För Android-enheter i ett distributionsscenario med en appskyddsprincip utan re
 I Windows 10 och senare enheter kommer du att kunna skapa en VPN-profil som innehåller en lista över DNS-servrar för att lösa domäner, som till exempel contoso.com. Detta omfattar nya inställningar för namnmatchning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj  **Windows 10 och senare** för plattform > välj **VPN** för Profiltyp > **DNS-inställningarna** >**Lägg till**): 
 
 - **Anslut automatiskt**: När den är **Aktiverad**, ansluter enheten automatiskt till VPN-anslutningen när en enhet kontaktar en domän som du anger, t.ex contoso.com.
-- **Beständig**: Som standard är alla NRPT-regler (principtabell för namnmatchning) aktiva så länge enheten är ansluten med hjälp av den här VPN-profilen. När inställningen är **aktiverad** på en NRPT-regel förblir regeln aktiv på enheten, även om VPN-anslutningen kopplas bort eller VPN-profilen tas bort. Regeln är där tills den tas bort manuellt, vilket kan göras med hjälp av PowerShell.
+- **Beständig**: Som standard är alla NRPT-regler (principtabell för namnmatchning) aktiva så länge enheten är ansluten med hjälp av den här VPN-profilen. När inställningen är **Aktiverad** för en NRPT-regel förblir regeln aktiv på enheten, även om VPN-anslutningen kopplas bort. Regeln gäller tills VPN-profilen tas bort eller tills regeln tas bort manuellt, vilket kan göras med hjälp av PowerShell.
 
 [Windows 10 VPN-inställningar](vpn-settings-windows-10.md) beskriver den aktuella listan över inställningar. 
 
-### <a name="use-smime-to-encrypt-and-sign-a-users-multiple-devices-----1333642-eeready---"></a>Använda S/MIME för att kryptera och signera en användares enheter <!-- 1333642 eeready -->
+### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user----1333642-eeready---"></a>Använda S/MIME för att kryptera och signera flera enheter för en användare <!-- 1333642 eeready -->
 S/MIME-krypteringen av e-post använder en ny importerad certifikatprofil som kommer att stödjas (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj plattform > profiltypen **PKCS-importerat certifikat**). Du kan importera certifikat i PFX-format i Intune. Intune kan sedan leverera samma certifikat till flera enheter som registrerats av en enda användare. Detta omfattar även följande:
 
 - Den interna e-postprofilen för iOS har stöd för att aktivera S/MIME-kryptering med importerade certifikat i PFX-format.
@@ -73,14 +73,14 @@ När du använder identifiering av betrott nätverk, kommer du att kunna förhin
 [Windows 10-VPN-inställningar](vpn-settings-windows-10.md) visar en lista över aktuella VPN-inställningar.
 
 ### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK stöder 256-bitars krypteringsnycklar <!-- 1832174 -->
-Intune App SDK för iOS använder 256-bitars krypteringsnycklar när kryptering har aktiverats av appskyddsprinciper. SDK fortsätter att stödja 128-bitars nycklar för kompatibilitet med innehåll och appar som använder äldre versioner av SDK.
+Intune App SDK för Android använder 256-bitars krypteringsnycklar när kryptering har aktiverats av appskyddsprinciperna. SDK fortsätter att stödja 128-bitars nycklar för kompatibilitet med innehåll och appar som använder äldre versioner av SDK.
 
 ### <a name="enabled-shared-pc-settings-in-intune-profile----1907917---"></a>Aktiverade delade datorinställningar i Intune-profil <!-- 1907917 -->
 För närvarande kan du konfigurera delade datorinställningar på Windows 10 desktop-enheter som använder en anpassad OMA-URI-inställning. En ny profil kommer att läggas till i konfigurera delade datorinställningar (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  **Windows 10 och senare** > **Delad fleranvändarenhet**).
 Gäller för: Windows 10 och senare, Windows 10 Holographic for Business
 
 ### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation-----1927359---"></a>Uppdatering av Intune-principers autentiseringsmetod och installation av företagsportalappen  <!-- 1927359 -->
-Intune stöder inte längre företagsportalappen på vissa enheter när den installeras från App store. Den här ändringen gäller endast när du autentiserar med Apple-installationsassistenten under registreringen. Den här ändringen påverkar också bara iOS-enheter som registrerats via:  
+På enheter som redan har registrerats via Installationsassistenten med någon av Apples metoder för registrering av företagsenheter, stöder Intune inte längre företagsportalen om den installeras manuellt av slutanvändarna från App Store. Den här ändringen gäller endast när du autentiserar med Apple-installationsassistenten under registreringen. Den här ändringen påverkar också bara iOS-enheter som registrerats via:  
 * Apple configurator
 * Apple Business Manager
 * Apple School Manager
@@ -113,6 +113,9 @@ Om du vill välja vilka skärmar som ska hoppas över, går du till **Enhetsregi
 
 ### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Vissa inställningar för BitLocker har stöd för Windows 10 Pro-versionen <!-- 2727036 -->
 Du kommer att kunna skapa en konfigurationsprofil som anger endpoint protection-inställningar för Windows 10-enheter, inklusive BitLocker. Detta lägger till stöd för Windows 10 Professional-versionen för vissa BitLocker-inställningar. De aktuella Windows 10-inställningarna finns i [Endpoint protection-inställningar för Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+
+### <a name="intune-device-reporting-fields----2748738---"></a>Intune-enhetens rapportfält <!-- 2748738 -->
 Intune ger ytterligare fält för enhetsrapportering inklusive Android-tillverkare, modell och version av säkerhetsppdatering samt iOS-modell. I Intune, är dessa fält tillgängliga genom att välja **Klientappar** > **Appskyddsstatus** och sedan välja **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodell (Android och iOS) och lägsta inställning för version av Android-säkerhetsuppdatering. 
 
 ### <a name="intune-device-reporting-fields----2748738---"></a>Intune-enhetens rapportfält <!-- 2748738 -->

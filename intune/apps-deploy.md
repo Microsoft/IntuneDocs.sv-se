@@ -1,12 +1,12 @@
 ---
 title: Tilldela appar till grupper i Microsoft Intune
 titlesuffix: ''
-description: Lär dig hur du tilldelar en Intune-app till grupper av användare eller enheter.
+description: Lär dig att tilldela en Intune-app till användargrupper eller enheter med Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9afde942f2784cb2fb42b13d11a127e3c9811a1
-ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
+ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267262"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734280"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -29,20 +29,22 @@ ms.locfileid: "52267262"
 
 När du har [lagt till en app](apps-add.md) till Microsoft Intune kan du tilldela appen till användare och enheter. Lägg märke till att du kan tilldela en app till en enhet oavsett om enheten hanteras av Intune eller inte. 
 
+> [!NOTE]
+> Tillgänglig distributionsavsikt stöds inte för enhetsgrupper – det är bara användargrupper som stöds.
+
 I följande tabell visas de olika alternativen för att tilldela appar till användare och enheter:
 
-||||
-|-|-|-|-|
-|&nbsp;|**Enheter som registrerats med Intune**|**Enheter som inte registrerats med Intune**|
-|Tilldela till användare|Ja|Ja|
-|Tilldela till enheter|Ja|Nej|
-|Tilldela omslutna appar eller appar med Intune SDK (för skydd av apprinciper)|Ja|Ja|
-|Tilldela appar som är tillgängliga|Ja|Ja|
-|Tilldela appar vid behov|Ja|Nej|
-|Avinstallera appar|Ja|Nej|
-|Ta emot appuppdateringar från Intune|Ja|Nej|
-|Slutanvändare installerar tillgängliga appar från företagsportalappen|Ja|Nej|
-|Slutanvändare installerar tillgängliga appar från den webbaserade företagsportal|Ja|Ja|
+|   | Enheter registrerade med Intune | Enheter ej registrerade med Intune |
+|-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
+| Tilldela till användare | Ja | Ja |
+| Tilldela till enheter | Ja | Nej |
+| Tilldela omslutna appar eller appar med Intune SDK (för skydd av apprinciper) | Ja | Ja |
+| Tilldela appar som är tillgängliga | Ja | Ja |
+| Tilldela appar vid behov | Ja | Nej |
+| Avinstallera appar | Ja | Nej |
+| Ta emot appuppdateringar från Intune | Ja | Nej |
+| Slutanvändare installerar tillgängliga appar från företagsportalappen | Ja | Nej |
+| Slutanvändare installerar tillgängliga appar från den webbaserade företagsportal | Ja | Ja |
 
 > [!NOTE]
 > För närvarande kan du tilldela iOS- och Android-appar (verksamhetsspecifika och butiksköpta appar) till enheter som inte är registrerade med Intune.
@@ -59,15 +61,15 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**.
 7. Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
 8. Välj en **Tilldelningstyp** för den specifika appen:
-   - **Tillgänglig för registrerade enheter**: Tilldela appen till grupper användare som kan installera appen från företagsportalappen eller webbplatsen.
-   - **Tillgänglig med eller utan registrering**: Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Appar från Managed Google Play stöder inte den här funktionen. 
-   - **Obligatoriskt**: Appen installeras på enheter i valda grupper.
-   - **Avinstallera**: Appen avinstalleras från enheter i valda grupper.
+   - **Tillgänglig för registrerade enheter**: Tilldela appen till användargrupper som kan installera appen från företagsportalappen eller webbplatsen.
+   - **Tillgänglig med eller utan registrering**: Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Appar från Managed Google Play stöder inte den här funktionen. Användarna måste tilldelas en Intune-licens, se [Intune-licenser](licenses.md).
+   - **Obligatoriskt**: Appen installeras på enheter i valda grupper. Vissa plattformar kan ha ytterligare uppmaningar som användaren ska bekräfta innan appinstallationen påbörjas.
+   - **Avinstallera**: Appen avinstalleras från enheter i valda grupper om Intune tidigare har installerat programmet på enheten via tilldelningen ”Tillgänglig för registrerade enheter” eller ”Obligatorisk” med hjälp av samma distribution. Webblänkar kan inte tas bort efter distributionen.
 
      > [!NOTE]
-     > **Endast för iOS-appar**: Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app kan du välja VPN-profilen under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
+     > **Endast för iOS-appar**: Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app, kan du välja VPN-profilen under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
      >
-     > **Endast för Android-appar**: Om du distribuerar en Android-app som **Tillgänglig med eller utan registrering** blir den rapporterade statusen endast tillgänglig på registrerade enheter.
+     > **Endast för Android-appar**: Om du distribuerar en Android-app som **Tillgänglig med eller utan registrering**, blir den rapporterade statusen endast tillgänglig på registrerade enheter.
 
 9. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av den här apptilldelningen.
 10. Klicka på **Välj** när du har valt en eller flera grupper som ska inkluderas.
@@ -83,9 +85,8 @@ Appen har nu tilldelats till de grupper du valde. Mer information om hur du inkl
 
 Ibland har samma app tilldelats flera grupper, men med olika avsikter. Informationen i tabellen nedan kan hjälpa dig att förstå resulterande avsikt när detta inträffar:
 
-||||
-|-|-|-|
-|**Avsikt för grupp 1**|**Avsikt för grupp 2**|**Resulterande avsikt**|
+| Avsikt för grupp 1 | Avsikt för grupp 2 | Resulterande avsikt |
+|-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Nödvändig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
 |Nödvändig för användare|Inte tillgänglig för användare|Obligatoriskt|
 |Nödvändig för användare|Avinstalleras för användare|Obligatoriskt|

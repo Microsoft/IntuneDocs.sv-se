@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 44923d89647118268c7a55746599354ac88fbfd2
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: 12d050bb7ef959b940e2b758284863319282f179
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861021"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553664"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -81,7 +81,7 @@ Följande tabeller beskriver vilka data som tas bort och hur åtgärden **Dra ti
 
 |Datatyp|iOS|
 |-------------|-------|
-|Företagsappar och associerade data som installerats av Intune|**Appar som installeras med hjälp av företagsportalen:** Alla appdata och appar tas bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** Personliga appdata tas bort. Företagets appdata och appar tas inte bort.|
+|Företagsappar och associerade data som installerats av Intune|**Appar som installeras med hjälp av företagsportalen:** Alla appdata och appar tas bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** Data som hör till företagsappar tas bort. Personliga appdata och appar tas inte bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|

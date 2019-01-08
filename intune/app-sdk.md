@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 02f276c5ddcd77b2800eb7b83a269b47a0ba5233
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5180682489e693e49e8142d7912302bc8ea2f7a8
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180688"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429703"
 ---
-# <a name="intune-app-sdk-overview"></a>Översikt över Intune App SDK
+# <a name="microsoft-intune-app-sdk-overview"></a>Översikt över Microsoft Intune App SDK
 Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appskyddsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app.
 
 När du har aktiverat din app för appskyddsprinciper kan IT-administratörer distribuera dessa principer för att skydda företagsdata i appen.
@@ -75,4 +75,8 @@ Med appskydd utan enhetsregistrering kan Microsoft Intune-tjänsten distribuera 
 ### <a name="on-demand-application-vpn-connections-with-citrix-mvpn"></a>VPN-anslutningar för program på begäran med Citrix mVPN 
 Du kan hantera enheter och appar med en kombination av Citrix XenMobile MDX och Microsoft Intune. Den här kombinationen innebär att du kan hantera appar med princip för Intune-appskydd samtidigt som du använder Citrix mVPN-teknik. Integrationen med Citrix finns för Intune App SDK för iOS och Android, och med Intunes programhanteringsverktyg för iOS och Android (med flaggan -citrix).
  
-Mer information om Citrix MDX finns i [Om MDX Toolkit](http://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [Programhanteringsverktyget Citrix MDX för iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) och [Programhanteringsverktyget Citrix MDX för Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
+Mer information om Citrix MDX finns i [Om MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [Programhanteringsverktyget Citrix MDX för iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) och [Programhanteringsverktyget Citrix MDX för Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
+
+## <a name="next-steps"></a>Nästa steg
+
+- Läs mer om [appskyddsprinciper](app-protection-policy.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dd18b882af8c685bb640468ef7076ed6317126a5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 685803f6ef30994a943969e3642bd8349dcf9f6e
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184615"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324947"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -100,14 +100,14 @@ Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Tillåt endast konfigurerade organisationskonton i appar med flera identiteter 
 
-Använd följande nyckel-/värdepar för Android-enheter:
+Använd följande nyckel-/värdepar för iOS-enheter:
 
 | **Nyckel** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Värden** | <ul><li>**Aktiverad**: Det enda kontot med behörighet är det hanterade användarkonto som definierats av nyckeln [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Inaktiverad** (eller ett värde som inte är en skiftlägesokänslig matchning till **aktiverad**): Alla konton är tillåtna.</li></ul> |
+| **Värden** | <ul><li>**Aktiverad**: Det enda kontot som tillåts är det hanterade användarkonto som definierats av nyckeln [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Inaktiverad** (eller ett värde som inte är en skiftlägesokänslig matchning till **Aktiverad**): Alla konton tillåts.</li></ul> |.
 
    > [!NOTE]
-   > Du måste använda OneDrive för iOS 10.34 eller senare och Outlook för iOS 2.99.0 eller senare, när endast konfigurerade organisationskonton med flera identiteter tillåts.
+   > Du måste använda OneDrive för iOS 10.34 eller senare och Outlook för iOS 2.99.0 eller senare. Appen måste vara riktad mot [Intunes appskyddsprinciper](app-protection-policy.md) där endast konfigurerade organisationskonton med flera identiteter tillåts.
 
 ## <a name="enter-xml-data"></a>Ange XML-data
 
@@ -123,7 +123,7 @@ Läs mer om XML-egenskapslistor:
 
 När du skapar en appkonfigurationsfil kan du ange ett eller flera av följande värden med hjälp av det här formatet:
 
-```
+```xml
 <dict>
   <key>userprincipalname</key>
   <string>{{userprincipalname}}</string>

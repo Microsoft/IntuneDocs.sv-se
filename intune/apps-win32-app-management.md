@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: 11a698628e3ca1342f10f088045012523c8ac745
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829155"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734297"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Fristående Intune – Win32-apphantering (offentlig förhandsversion)
 
@@ -69,20 +69,20 @@ Referera till filen *license.txt* med hjälp av den relativa sökvägen *license
 
 Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Microsoft Intune. Den här typen av app skrivs vanligtvis internt på företaget eller av en tredje part. Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-app i Intune.
 
-### <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange platsen för programinstallationsfilen
+### <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 
 1.  Logga in på [Azure Portal](https://portal.azure.com/).
 2.  Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3.  I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
 4.  I appfönstret **Lägg till** väljer du **Windows-app (Win32) – förhandsversion** från den nedrullningsbara listan.
 
-    ![Skärmbild av den nedrullningsbara listrutan Lägg till app – Lägg till typ](./media/apps-win32-app-01.png)
+    ![Skärmbild av bladet Lägg till app – Listrutan Lägg till typ](./media/apps-win32-app-01.png)
 
-### <a name="step-2-upload-the-app-package-file"></a>Steg 2: Överföra appaketfilen
+### <a name="step-2-upload-the-app-package-file"></a>Steg 2: Ladda upp appaketfilen
 
 1.  I fönstret **Lägg till app** väljer du **Appaketfil** för att välja en fil. Fönstret Appaketfil visas.
 
-    ![Skärmbild av appaketfil](./media/apps-win32-app-02.png)
+    ![Skärmbild av bladet Appaketfil](./media/apps-win32-app-02.png)
 
 2.  I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en Windows-installationsfil med tillägget *.intunewin*.
 3.  Välj **OK** när du är klar.
@@ -91,16 +91,16 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 
 1.  I fönstret **Lägg till app** väljer du **Appinformation** för att konfigurera appen.
 2.  Konfigurera följande information i fönstret **Appinformation**. Vissa värden i det här fönstret kan fyllas i automatiskt.
-    - **Namn**: Ange namnet på appen så som det visas på företagsportalen. Om samma appnamn förekommer två gånger visas varje app på företagsportalen.
+    - **Namn**: Ange namnet på appen så som det visas i företagsportalen. Om samma appnamn förekommer två gånger visas varje app på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
-    - **Utgivare**: Ange namnet på appens utgivare.
+    - **Utgivar**e: Ange namnet på appens utgivare.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen**: Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller information om appen. Webbadressen visas i företagsportalen.
-    - **Sekretess-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller sekretessinformation för appen. Webbadressen visas i företagsportalen.
+    - **Visa denna som en aktuell app i företagsportalen**: Visa appen tydligt på huvudsidan för företagsportalen när användare söker efter appar.
+    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om appen. Webbadressen visas i företagsportalen.
+    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation om appen. Webbadressen visas i företagsportalen.
     - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
     - **Ägare**: Alternativt kan du ange ett namn på appägaren. Ett exempel är **Personalavdelningen**.
-    - **Anteckningar**: Ange eventuella kommentarer som du vill koppla till den här appen.
+    - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Logotyp**: Ladda upp en ikon som är associerad med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
 3.  Välj **OK** när du är klar.
 
@@ -125,11 +125,11 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 
 1.  I fönstret **Lägg till app** väljer du **Krav** för att konfigurera de krav som enheter måste uppfylla innan appen installeras.
 2.  I fönstret **Krav** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
-    - **Operativsystemsarkitektur**: Välj arkitekturerna som krävs för att installera appen.
-    - **Lägsta operativsystemsversion**: Välj det lägsta operativsystem som krävs för att installera appen.
+    - **Operativsystemarkitektur**: Välj de arkitekturer som krävs för att installera appen.
+    - **Lägsta operativsystemversion**: Välj det lägsta operativsystem som krävs för att installera appen.
     - **Diskutrymme som krävs (MB)**: Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
     - **Fysiskt minne som krävs (MB)**: Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
-    - **Lägsta antal logiska processorer som krävs**: Om du vill kan du lägga till det minsta antalet logiska processorer som krävs för att installera appen.
+    - **Lägsta antal logiska processorer som krävs**: Om du vill kan du lägga till det lägsta antal logiska processorer som krävs för att installera appen.
     - **Lägsta processorhastighet som krävs (MHz)**: Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
 3.  Välj **OK** när du är klar.
 
@@ -182,15 +182,17 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
     - **Använd ett anpassat identifieringsskript** – Ange PowerShell-skriptet som ska användas för att identifiera den här appen. 
     
         1.  **Skriptfil** – Välj ett PowerShell-skript som ska identifiera förekomsten av appen på klienten. Appen kommer att identifieras när skriptet både returnerar en slutkod med värdet 0 och skriver ett strängvärde till STDOUT.
-        2.  **Kör skript som 32-bitarsprocess på 64-bitarsklienter** – Välj **Ja** om du vill köra skriptet med autentiseringsuppgifterna för den inloggade slutanvändaren. Välj **Nej** (standard) om du vill köra skriptet i systemkontexten.
+
+        2.  **Kör skript som 32-bitarsprocess på 64-bitarsklienter** – Välj **Ja** om du vill köra skriptet i en 32-bitarsprocess på 64-bitarsklienter. Välj **Nej** (standard) för att köra skriptet i en 64-bitarsprocess på 64-bitarsklienter. 32-bitarsklienter kör skriptet i en 32-bitarsprocess.
+
         3.  **Framtvinga signaturkontroll av skript** – Välj **Ja** om du vill kontrollera att skriptet har signerats av en betrodd utgivare, vilket innebär att skriptet kan köras utan att varningar eller uppmaningar visas. Skriptet körs oblockerat. Välj **Nej** (standard) om du vill köra skriptet med slutanvändarens bekräftelse utan signaturverifiering.
     
-        Intune kontrollerar resultaten från skriptet och läser de värden som skrivits av skriptet till standardutdataströmmen (STDOUT), standardfelströmmen (STDERR) och slutkoden. Om skriptet avslutas med ett annat värde än noll misslyckas skriptet och programidentifieringsstatusen är Inte installerad. Om slutkoden är noll och STDOUT innehåller data är programidentifieringsstatus Installerad. 
-    
-        > [!NOTE]
-        > När skriptet avslutas med värdet 0 betyder det att skriptkörningen lyckades. Den andra utdatakanalen anger att appen identifierades – STDOUT-data anger att appen hittades på klienten. Vi letar inte efter en viss sträng från STDOUT.
-    
-3.  När du har lagt till dina regler väljer du **Lägg till** > **OK**.
+            Intune-agenten kontrollerar resultaten från skriptet. och läser de värden som skrivits av skriptet till standardutdataströmmen (STDOUT), standardfelströmmen (STDERR) och slutkoden. Om skriptet avslutas med ett annat värde än noll misslyckas skriptet och programidentifieringsstatusen är Inte installerad. Om slutkoden är noll och STDOUT innehåller data är programidentifieringsstatus Installerad. 
+
+            > [!NOTE]
+            > När skriptet avslutas med värdet 0 betyder det att skriptkörningen lyckades. Den andra utdatakanalen anger att appen identifierades – STDOUT-data anger att appen hittades på klienten. Vi letar inte efter en viss sträng från STDOUT.
+
+        4.  När du har lagt till dina regler väljer du **Lägg till** > **OK**.
 
 ### <a name="step-7-configure-app-return-codes"></a>Steg 7: Konfigurera appreturkoder
 
@@ -203,7 +205,7 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
     - **Lyckades** – Returvärdet som anger att appen installerades.
 3.  Välj **OK** när du har lagt till eller ändrat listan över returkoder.
 
-### <a name="step-8-add-the-app"></a>Steg 8: Lägga till appen
+### <a name="step-8-add-the-app"></a>Steg 8: Lägg till appen
 
 1.  I fönstret **Lägg till app** kontrollerar du att appinformationen är rätt konfigurerad.
 2.  Välj **Lägg till** för att ladda upp appen till Intune.
@@ -213,9 +215,9 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 1.  I appfönstret väljer du **Tilldelningar**.
 2.  Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
 3.  Välj en **Tilldelningstyp** för den specifika appen:
-    - **Tillgänglig för registrerade enheter**: Användarna installerar appen från företagsportalappen eller webbplatsen för företagsportalen.
-    - **Obligatoriskt**: Appen installeras på enheter i valda grupper.
-    - **Avinstallera**: Appen avinstalleras från enheter i valda grupper.
+    - **Tillgänglig för registrerade enheter**: Användarna installerar appen från företagsportalappen eller företagsportalens webbplats.
+    - **Obligatoriskt**: Appen installeras på enheter i de valda grupperna.
+    - **Avinstallera**: Appen avinstalleras från enheter i de valda grupperna.
 4.  Välj **Grupper som omfattas** och tilldela de grupper som ska använda den här appen.
 5.  Klicka på **OK** i fönstret **Tilldela** för att slutföra valet av inkluderade grupper.
 6.  Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
@@ -232,16 +234,16 @@ Windows 10 RS3 och högre klienter hämtar Intune Win32-appinnehåll med en komp
 
 Slutanvändaren ser popup-meddelanden i Windows för nödvändiga och tillgängliga appinstallationer. Följande bild visar ett exempel på ett popup-meddelande där appinstallationen inte är klar förrän enheten har startats om. 
 
-![Skärmbild med exempel på popup-meddelanden för en appinstallation i Windows](./media/apps-win32-app-08.png)    
+![Skärmbild som visar popup-meddelanden för en appinstallation i Windows](./media/apps-win32-app-08.png)    
 
 Följande bild meddelar slutanvändaren att appändringar görs på enheten.
 
-![Skärmbild med exempel på hur slutanvändaren meddelas om att appändringar görs på enheten](./media/apps-win32-app-09.png)    
+![Skärmbild som meddelar användaren att appändringar görs](./media/apps-win32-app-09.png)    
 
 ## <a name="troubleshoot-win32-app-issues"></a>Felsöka problem med Win32-appar
 Agentloggar på klientdatorn finns vanligtvis i `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Du kan använda `CMTrace.exe` för att visa dessa loggfiler. *CMTrace.exe* kan laddas ned från [SCCM-klientverktygen](https://docs.microsoft.com/sccm/core/support/tools). 
 
-![Skärmbild av agentloggar](./media/apps-win32-app-10.png)    
+![Skärmbild av agentloggar på klientdatorn](./media/apps-win32-app-10.png)    
 
 ### <a name="troubleshooting-areas-to-consider"></a>Felsökningsområden att tänka på
 - Kontrollera målet och att agenten är installerad på enheten – En Win32-app som riktas mot en grupp eller ett PowerShell-skript som riktas mot en grupp skapar agentinstallationsprinciper för säkerhetsgruppen.

@@ -14,12 +14,12 @@ ms.reviewer: kmyrup
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
+ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303880"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597383"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -29,21 +29,21 @@ I den här artikeln beskrivs hur du kan konfigurera din infrastruktur och sedan 
 
 - **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
 
-- **Certifikatutfärdare** (CA): Måste vara en utfärdare av företagscertifikat (CA) som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdare](http://technet.microsoft.com/library/jj125375.aspx).
+- **Certifikatutfärdare**: Måste vara en Microsoft-utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdare](http://technet.microsoft.com/library/jj125375.aspx).
     Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
 
 - **NDES-server**: På en Windows Server 2012 R2 eller senare konfigurerar du serverrollen Registreringstjänst för nätverksenheter (NDES). Intune stöder inte användning av registreringstjänsten för nätverksenheter på en server som även kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för NDES.
 NDES-servern måste vara ansluten till en domän i samma skog som företagscertifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune-certifikatanslutningsapp**: Ladda ned installationsprogrammet för **certifikatanslutningsappen** (**NDESConnectorSetup.exe**) från Intune-administrationsportalen. Du kör installationsprogrammet på servern med NDES-rollen.  
+- **Microsoft Intune Certificate Connector**: Ladda ned installationsprogrammet för **Certificate Connector** (**NDESConnectorSetup.exe**) från Intune-administrationsportalen. Du kör installationsprogrammet på servern med NDES-rollen.  
 
   - NDES-certifikatanslutningsappen har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
 
-- **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som en Web Application Proxy-server (WAP). Den här konfigurationen:
+- **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som WAP-server (Web Application Proxy). Den här konfigurationen:
   - Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
   - Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
   
-- **Azure Active Directory-programproxy** (valfritt): Azure Active Directory-programproxy kan användas i stället för en dedikerad webbprogramproxy (WAP)-server för att publicera NDES-servern till Internet. Mer information finns i [Så här tillhandahåller du säker fjärråtkomst till lokala program](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD-programproxy** (valfritt): Azure AD-programproxyn kan användas i stället för en dedikerad WAP-server när NDES-servern ska publiceras på Internet. Mer information finns i [Så här tillhandahåller du säker fjärråtkomst till lokala program](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 #### <a name="additional"></a>Mer information
 
@@ -261,7 +261,7 @@ I det här steget kommer du att:
 
     Certifikatet för klientautentisering måste ha följande egenskaper:
 
-    - **Förbättrad nyckelanvändning**: Det här värdet måste innehålla **Klientautentisering**
+    - **Förbättrad nyckelanvändning**: Värdet måste innehålla **Klientautentisering**
 
     - **Ämnesnamn**: Värdet måste vara samma som DNS-namnet på servern där du installerar certifikatet (NDES-servern)
 
@@ -368,7 +368,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
      - Windows 10 och senare
      - Android enterprise
 
-   - **Ämnesnamnets format**: Välj hur ämnesnamnet i certifikatbegäran ska skapas av Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
+   - **Ämnesnamnets format**: Välj hur ämnesnamnet i certifikatbegäran ska skapas automatiskt av Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
 
         **Certifikattypen Användare**  
 
@@ -380,17 +380,17 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         - **Eget namn som e-post**
         - **IMEI (International Mobile Equipment Identity)**
         - **Serienummer**
-        - **Anpassad**: När du väljer det här alternativet visas textrutan **Anpassad** också. Använd det här fältet om du vill ange ett anpassat format för ämnesnamnet, inklusive variabler. Två variabler stöds för det anpassade formatet: **Eget namn (cn)** och **E-post (e)**. **Eget namn (cn)** kan ställas in till någon av följande variabler:
+        - **Anpassad**: När du väljer det här alternativet visas även textrutan **Anpassad**. Använd det här fältet om du vill ange ett anpassat format för ämnesnamnet, inklusive variabler. Anpassat format stöder två variabler: **Eget namn (CN)** och **E-postadress (E)**. **Eget namn (cn)** kan ställas in till någon av följande variabler:
 
-            - **CN={{UserName}}**: Användarens unika namn, till exempel janedoe@contoso.com
+            - **CN={{UserName}}**: Användarens huvudnamn, t.ex. janedoe@contoso.com
             - **CN={{AAD_Device_ID}}**: Ett ID som tilldelas när du registrerar en enhet i Azure Active Directory (AD). Detta ID används vanligtvis för att autentisera med Azure AD.
             - **CN={{SERIALNUMBER}}**: Det unika serienumret (SN) som vanligtvis används av tillverkaren för att identifiera en enhet
-            - **CN={{IMEINumber}}**: Det unika IMEI (International Mobile Equipment Identity)-numret som används för att identifiera en mobiltelefon
+            - **CN={{IMEINumber}}**: Det unika IMEI-numret (International Mobile Equipment Identity) som används för att identifiera en mobiltelefon
             - **CN={{OnPrem_Distinguished_Name}}**: En serie relativa unika namn som är avgränsade med kommatecken, till exempel `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
 
-            - **CN = {{onPremisesSamAccountName}}**: Administratörer kan synkronisera samAccountName attribut från Active Directory till Azure AD med Azure AD connect till ett attribut som kallas `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
+            - **CN={{onPremisesSamAccountName}}**: Administratörer kan synkronisera samAccountName-attributet från Active Directory till Azure AD genom att Azure AD kopplas till ett attribut med namnet `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
 
                 Om du vill använda variabeln `{{onPremisesSamAccountName}}` måste du synkronisera användarattributet `onPremisesSamAccountName` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
 
@@ -428,7 +428,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         >  - Profilen kan inte installeras på enheten om de angivna enhetsvariablerna inte stöds. Om {{IMEI}} t.ex. används i ämnesnamnet för SCEP-profilen som tilldelats till en enhet som inte har ett IMEI-nummer, misslyckas profilinstallationen. 
 
 
-   - **Alternativt namn för certifikatmottagare**: Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
+   - **Alternativt namn för certifikatmottagare**: Ange hur Intune automatiskt ska skapa värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
 
         **Certifikattypen Användare**  
 
@@ -470,23 +470,23 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
         >  - Profilen kan inte installeras på enheten om de angivna enhetsvariablerna inte stöds. Om {{IMEI}} t.ex. används i alternativt namn för certifikatmottagare för SCEP-profilen som tilldelats till en enhet som inte har ett IMEI-nummer, misslyckas profilinstallationen.  
 
-   - **Certifikatets giltighetsperiod**: Du kan ange hur lång tid som ska återstå innan certifikatet går ut om du körde kommandot `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` på certifikatutfärdaren. Kommandot gör att du kan ställa in en anpassad giltighetsperiod.<br>Du kan ange ett värde som är lägre men inte högre än giltighetsperioden i certifikatmallen. Om giltighetsperioden i certifikatmallen till exempel är två år kan du ange ett värde på ett år, men inte fem år. Värdet måste också vara lägre än den återstående giltighetsperioden för certifikatutfärdaren. 
-   - **Nyckellagringsprovider (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): Ange var nyckeln för certifikatet lagras. Välj något av följande värden:
+   - **Certifikatets giltighetsperiod**: Om du körde kommandot `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` på certifikatutfärdaren, vilket gör att en anpassad giltighetsperiod kan användas, kan du ange hur lång tid som återstår innan certifikatet går ut.<br>Du kan ange ett värde som är lägre men inte högre än giltighetsperioden i certifikatmallen. Om giltighetsperioden i certifikatmallen till exempel är två år kan du ange ett värde på ett år, men inte fem år. Värdet måste också vara lägre än den återstående giltighetsperioden för certifikatutfärdaren. 
+   - **Nyckellagringsprovider (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): Ange var nyckeln till certifikatet lagras. Välj något av följande värden:
      - **Registrera till nyckellagringsprovider för TPM (Trusted Platform Module) om TPM finns, annars till programvaruprovider för nyckellagring**
      - **Registrera till nyckellagringsprovider för TPM (Trusted Platform Module), rapportera annars fel**
      - **Registrera på Passport, rapportera annars fel (Windows 10 och senare)**
      - **Registrera till programvaruprovider för nyckellagring**
 
-   - **Nyckelanvändning**: Ange alternativen för nyckelanvändning för certifikatet. Alternativen är:
-     - **Nyckelchiffrering:** Tillåt bara nyckelutbyte när nyckeln är krypterad
-     - **Digital signatur:** Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
+   - **Nyckelanvändning**: Ange nyckelanvändningsalternativen för certifikatet. Alternativen är:
+     - **Nyckelchiffrering**: Tillåt bara nyckelutbyte när nyckeln är krypterad
+     - **Digital signatur**: Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
    - **Nyckelstorlek (bitar)**: Välj antalet bitar i nyckeln
    - **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för.
    - **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren och/eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen. Glöm inte att tilldela den här betrodda rotcertifikatprofilen till samma grupp som tilldelats i SCEP-certifikatprofilen.
-   - **Utökad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
+   - **Förbättrad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
    - **Registreringsinställningar**
      - **Tröskelvärde för förnyelse (%)**: Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
-     - **Webbadresser för SCEP-server**: Ange en eller flera webbadresser för NDES-servrar som utfärdar certifikat via SCEP.
+     - **Webbadresser för SCEP-server**: Ange en eller flera webbadresser för de NDES-servrar som utfärdar certifikat via SCEP. Ange exempelvis något i stil med `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Välj **OK** och **Skapa** sedan din profil.
 
 Profilen skapas och visas i fönstret med profillistan.

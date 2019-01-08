@@ -5,7 +5,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c96d66a11f49db68d20511aeae9b2abbab53b172
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4e37675186ef21d219627ec3ec1973e6e9944d1d
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181250"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737975"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
@@ -34,10 +34,10 @@ Stegen nedan hjälper dig att få nödvändiga certifikat och signera appen. Du 
 
 
 1. **Registrera dig som Microsoft-utvecklare**<br>
-   [Registrera dig som Microsoft-utvecklare](http://go.microsoft.com/fwlink/?LinkId=268442) med hjälp av företagets kontoinformation som du använde när du loggade in för att köpa ditt företagskonto. Den här begäran måste godkännas av en företagsrepresentant innan du får ett signeringscertifikat med kod.
+   [Registrera dig som Microsoft-utvecklare](https://go.microsoft.com/fwlink/?LinkId=268442) med hjälp av företagets kontoinformation som du använde när du loggade in för att köpa ditt företagskonto. Den här begäran måste godkännas av en företagsrepresentant innan du får ett signeringscertifikat med kod.
 
 2. **Få ett företagskonto från Symantec**<br>
-  Köpa ett certifikat från [Symantec-webbplatsen](http://go.microsoft.com/fwlink/?LinkId=268441) med hjälp av ditt Symantec-ID. När du har köpt certifikatet får företagets godkännare, som du angav när du registrerade dig som Microsoft-utvecklare, ett e-postmeddelande där personen ombeds godkänna certifikatbegäran. Du hittar mer information om kraven för Symantec-certifikat under [Varför Windows Phone kräver ett Symantec-certifikat](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Vanliga frågor och svar om registrering av Windows-enhet.
+  Köpa ett certifikat från [Symantec-webbplatsen](https://go.microsoft.com/fwlink/?LinkId=268441) med hjälp av ditt Symantec-ID. När du har köpt certifikatet får företagets godkännare, som du angav när du registrerade dig som Microsoft-utvecklare, ett e-postmeddelande där personen ombeds godkänna certifikatbegäran. Du hittar mer information om kraven för Symantec-certifikat under [Varför Windows Phone kräver ett Symantec-certifikat](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Vanliga frågor och svar om registrering av Windows-enhet.
 
 3.  **Importera certifikat**<br>
     När din begäran har godkänts, kommer du att få ett e-postmeddelande som innehåller instruktioner om hur du importerar certifikat. Följ anvisningarna i e-postmeddelandet för att importera certifikaten.
@@ -45,14 +45,14 @@ Stegen nedan hjälper dig att få nödvändiga certifikat och signera appen. Du 
 4.  **Verifiera importerade certifikat**<br>
     Du kan kontrollera att certifikaten har importerats genom att gå till snapin-modulen **Certifikat**, högerklicka på **Certifikat** och välja **Sök efter certifikat**. I fältet **Innehåller** skriver du ”Symantec” och klickar på **Sök nu**. De certifikat som du har importerat ska visas i resultaten.
 
-    ![Hitta Symantec-certifikatet](./media/wit.gif)
+    ![Certifikatresultaten visas i listan i dialogrutan Sök efter certifikat](./media/wit.gif)
 
 5. **Exportera ett signeringscertifikat**<br>
     När du har kontrollerat att certifikaten finns kan du exportera .pfx-filen så att du kan signera företagsportalen. Välj Symantec-certifikatet med **avsett syfte** ”kodsignering.” Högerklicka på det kodsignerade certifikatet och välj **Exportera**.
 
     ![Exportera signeringscertifikatet](./media/wit-walk-cert2.gif)
 
-    I **Guiden Exportera certifikat**väljer du **Ja, exportera den privata nyckeln** och klickar sedan på **Nästa**. Välj **Personal Information Exchange –PKCS #12 (.PFX)** och markera **Inkludera om möjligt alla certifikat i certifieringssökvägen**. Slutför guiden. Mer information finns i [Exportera certifikat med privat nyckel](http://go.microsoft.com/fwlink/?LinkID=203031).
+    I **Guiden Exportera certifikat**väljer du **Ja, exportera den privata nyckeln** och klickar sedan på **Nästa**. Välj **Personal Information Exchange –PKCS #12 (.PFX)** och markera **Inkludera om möjligt alla certifikat i certifieringssökvägen**. Slutför guiden. Mer information finns i [Exportera certifikat med privat nyckel](https://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Överför appen till Intune**<br>
     Överför den signerade appfilen och ditt kodsigneringscertifikat för att göra appen tillgänglig för dina slutanvändare.
@@ -72,32 +72,32 @@ Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows 
 
 1.  **Ladda ned företagsportalen**
 
-    För att distribuera företagsportalappen med Intune, kan du hämta [Microsoft Intune-företagsportalappen för Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkId=615799) från Download Center och kör den självuppackande filen(.exe). Denna fil innehåller två filer:
+    För att distribuera företagsportalappen med Intune, kan du hämta [Microsoft Intune-företagsportalappen för Windows Phone 8.1](https://go.microsoft.com/fwlink/?LinkId=615799) från Download Center och kör den självuppackande filen(.exe). Denna fil innehåller två filer:
 
     -   CompanyPortal.appx – Installationsappen för företagsportalen för Windows Phone 8.1
 
     -   WinPhoneCompanyPortal.ps1 – Ett Powershell-skript som du kan använda för att signera företagsportalappfilen så att den kan användas för Windows Phone 8.1-enheter
 
-    Du kan också hämta Windows Phone 8.1-företagsportalen (offline-licensierat paket) eller Windows 10-företagsportalen (offline-licensierat paket) från [Microsoft Store för företag](http://businessstore.microsoft.com/). Företagsportalappen måste anskaffas med en offline-licens och lämpligt paket hämtas för användning offline. Listor med plattformar för Windows 8 och Windows Phone 8 i urvalet avser deras 8.1-motsvarigheter. Mer information om hur du gör detta med Intune finns i [Hantera appar som du har köpt från Microsoft Store för företag](windows-store-for-business.md).
+    Du kan också hämta Windows Phone 8.1-företagsportalen (offline-licensierat paket) eller Windows 10-företagsportalen (offline-licensierat paket) från [Microsoft Store för företag](https://businessstore.microsoft.com/). Företagsportalappen måste anskaffas med en offline-licens och lämpligt paket hämtas för användning offline. Listor med plattformar för Windows 8 och Windows Phone 8 i urvalet avser deras 8.1-motsvarigheter. Mer information om hur du gör detta med Intune finns i [Hantera appar som du har köpt från Microsoft Store för företag](windows-store-for-business.md).
 
-2.  **Hämta Windows Phone SDK** Hämta Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=615570) och installera SDK:n på datorn. Detta SDK behövs för att generera en token för programregistrering.
+2.  **Hämta Windows Phone SDK** Hämta Windows Phone SDK 8.0](https://go.microsoft.com/fwlink/?LinkId=615570) och installera SDK:n på datorn. Detta SDK behövs för att generera en token för programregistrering.
 
 3.  **Generera en AETX-fil** Generera en tokenfil (.aetx) för programregistrering från Symantec PFX-filen med AETGenerator.exe, en del av Windows Phone SDK 8.0. Instruktioner om hur du skapar en AETX-fil hittar du på [Hur man genererar en tokenfil för programregistrering för Windows Phone](https://msdn.microsoft.com/library/windows/apps/jj735576.aspx)
 
-4.  **Hämta Windows SDK för Windows 8.1**Hämta och installera [Windows Phone SDK](http://go.microsoft.com/fwlink/?LinkId=613525) (http://go.microsoft.com/fwlink/?LinkId=613525). Observera att det Powershell-skript som medföljer företagsportalappen använder standardinstallationsplatsen, `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Om du installerar någon annanstans måste du inkludera platsen i en cmdlet-parameter.
+4.  **Hämta Windows SDK för Windows 8.1**Hämta och installera [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=613525) (https://go.microsoft.com/fwlink/?LinkId=613525). Observera att det Powershell-skript som medföljer företagsportalappen använder standardinstallationsplatsen, `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Om du installerar någon annanstans måste du inkludera platsen i en cmdlet-parameter.
 
 5.  **Kodsignera appen med Powershell** Öppna **Windows Powershell** som administratör på värddatorn där Windows SDK och Symantec-certifikatet med mobil kodsignering för företag har installerats, navigera till Sign-WinPhoneCompanyPortal.ps1-filen och kör skriptet.
 
     **Exempel 1**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -AetxPath 'C:\signing\cert.aetx'
     ```
     Detta exempel signerar CompanyPortal.appx i C:\temp\ och skapar CompanyPortalEnterpriseSigned.appx. Det skulle använda PFX-lösenordet 1234 och läsa publicerings-ID:t från PFX-filen. Det läser även företags-ID:t från cert.aetx-filen.
 
     **Exempel 2**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -PublisherId 'OID.0.9.2342.19200300.100.1.1=1000000001, CN="Test, Inc.", OU=Test 1' -EnterpriseId 1000000001
     ```
     Detta exempel signerar CompanyPortal.appx i C:\temp\ och skapar CompanyPortalEnterpriseSigned.appx. Det skulle använda PFX-lösenordet 1234 och använda det angivna publicerings-ID:t.
@@ -128,7 +128,7 @@ Symantec-certifikatet som används för att distribuera Windows- och Windows Pho
 
 1.  Ett e-postmeddelande om förnyelsen skickas från Symantec ungefär 14 dagar innan certifikatet upphör att gälla. E-postmeddelandet innehåller anvisningar från Symantec om att du bör förnya ditt företagscertifikat.
 
-    Mer information om Symantec-certifikat finns på [www.symantec.com](http://www.symantec.com). Du kan också ringa 1-877-438-8776 eller 1-650-426-3400.
+    Mer information om Symantec-certifikat finns på [www.symantec.com](https://www.symantec.com). Du kan också ringa 1-877-438-8776 eller 1-650-426-3400.
 
 2.  Gå till webbplatsen (till exempel [https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do](https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do)) och logga in med utgivar-ID:t för Symantec och e-postadressen som är associerad med certifikatet. Kom ihåg att använda samma dator för att starta förnyelsen som du använde för att hämta certifikatet.
 
@@ -155,7 +155,7 @@ Du kan distribuera Windows 10 företagsportalappen manuellt direkt från Intune,
 1. Logga in på kontot i [Microsoft Store för företag](https://www.microsoft.com/business-store) och hämta **offline-licensversionen** av företagsportalappen.  
 2. När du har införskaffat appen markerar du den på sidan **Inventering**.  
 3. Välj **Windows 10 – alla enheter** som **plattform**, sedan lämplig **arkitektur** och ladda ned. Det behövs inte någon applicensfil för den här appen.
-![Bild av Windows 10 – alla enheter och information om Architecture X86-paketet för hämtning](./media/Win10CP-all-devices.png)
+![Bild av Windows 10 X86-paketinformation för nedladdning](./media/Win10CP-all-devices.png)
 4. Hämta alla paket under Nödvändiga ramverk. Detta måste göras för x86-, x64- och ARM-arkitekturer – vilket ger totalt 9 paket så som visas nedan.
 
 ![Bild av beroendefiler att hämta ](./media/Win10CP-dependent-files.png)
@@ -164,7 +164,7 @@ Du kan distribuera Windows 10 företagsportalappen manuellt direkt från Intune,
    ![Bild av beroendemappen sparad med APPXBUN-filen](./media/Win10CP-Dependencies-save.png)
    2. Placera de nio beroendepaketen i mappen Dependencies.  
    Om beroendena inte placeras i det här formatet kommer Intune inte att kunna känna igen och överföra dem under paketöverföringen, vilket innebär att överföringen kommer att misslyckas med följande fel.  
-   ![Det gick inte att hitta Windows-appberoendet för den här programinstallationen i programmappen. Du kan fortsätta att skapa och distribuera det här programmet, men det kan inte köras förrän de saknade Windows-appberoendena har tillhandahållits.](./media/Win10CP-error-message.png)
+   ![Felmeddelande – Windows-appberoendet måste anges.](./media/Win10CP-error-message.png)
 6. Gå tillbaka till Intune och överför företagsportalsappen som en ny app. Distribuera den som en obligatorisk app för den önskade uppsättningen målanvändare.  
 
 Mer information om hur Intune hanterar beroenden för universella appar finns i [Distribuera ett appxbundle med beroenden via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  

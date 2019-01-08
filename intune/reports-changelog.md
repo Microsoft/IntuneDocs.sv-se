@@ -1,7 +1,7 @@
 ---
 title: Ändringslogg för Intune-informationslagret
 titlesuffix: Microsoft Intune
-description: En lista över ändringar i Intunes informationslager-API.
+description: Det här avsnittet innehåller en lista med ändringar för Microsoft Intune-informationslagrets API.
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: dfdbaffeb8872e8b121d138ee0aca0315279e718
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189953"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642769"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
@@ -95,4 +95,4 @@ Du kan nu skapa rapporter och datavisualiseringar med hjälp av enhetens associa
 
 ## <a name="next-steps"></a>Nästa steg
  - Läs mer om [vad som är nytt i Intune varje vecka](whats-new.md). Du kan också läsa mer om kommande ändringar, viktiga meddelanden om tjänsten och information om tidigare versioner.
- - Läs [Microsoft Intune-bloggen](http://go.microsoft.com/fwlink/?LinkID=273882).
+ - Läs [Microsoft Intune-bloggen](https://go.microsoft.com/fwlink/?LinkID=273882).

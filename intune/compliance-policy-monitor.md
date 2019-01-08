@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e26de8691e78e4b35e8618c48f38c7972af233f8
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.openlocfilehash: fd401875e1a98690d9673243b28b48347e4c6183
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977311"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642820"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -69,7 +69,12 @@ Beskrivningar av statusar för enhetsefterlevnadsprinciper:
 
   - Läs mer om [åtgärder för inkompatibla enheter](actions-for-noncompliance.md).
 
-- **Inte utvärderat**: Ett ursprungligt tillstånd för nyregistrerade enheter. Eller enheter som inte har tilldelats en efterlevnadsprincip och inte har en utlösare för att kontrollera efterlevnad.
+- **Inte utvärderat**: Ett ursprungligt tillstånd för nyregistrerade enheter. Andra möjliga orsaker till detta tillstånd kan vara:
+
+  - Enheter som inte har tilldelats någon efterlevnadsprincip och som saknar en utlösare för att kontrollera efterlevnaden
+  - Enheter som inte har checkats in sedan efterlevnadsprincipen senast uppdaterades
+  - Enheter som inte är associerade till en specifik användare
+  - Enheter som har registrerats med ett konto för enhetsregistreringshantering (DEM)
 
 - **Inkompatibel:** Enheten kunde inte tillämpa en eller flera principinställningar för enhetsefterlevnad. Eller så har användaren inte efterlevt principerna.
 

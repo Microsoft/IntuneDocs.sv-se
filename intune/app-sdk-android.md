@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2018
+ms.date: 12/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c073040275f63b4623ea28a25ad0940dea563b75
-ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
+ms.openlocfilehash: d5d29db61191306e60b0c3ac756620e836b56dd6
+ms.sourcegitcommit: 121e550bf686f38cba1a02fa37f7039358b4a446
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168036"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53378291"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -86,7 +86,7 @@ Verktygen utför endast [direkta ersättningar](#class-and-method-replacements).
 ### <a name="gradle-build-plugin"></a>Plugin-program för Gradle-utveckling
 Om din app inte utvecklas med gradle går du vidare till [Integrera med kommandoradsverktyget](#command-line-build-tool). 
 
-Plugin-programmet för App SDK distribueras som en del av SDK:n som **GradlePlugin/com.microsoft.intune.mam.build.jar**. För att Gradle ska kunna hitta plugin-programmet måste det läggas till i buildscript-klassökvägen. Plugin-programmet är beroende av [Javassist](http://jboss-javassist.github.io/javassist/), som också måste läggas till. Du lägger till dem i klassökvägen genom att lägga till följande i din rot-`build.gradle`
+Plugin-programmet för App SDK distribueras som en del av SDK:n som **GradlePlugin/com.microsoft.intune.mam.build.jar**. För att Gradle ska kunna hitta plugin-programmet måste det läggas till i buildscript-klassökvägen. Plugin-programmet är beroende av [Javassist](https://jboss-javassist.github.io/javassist/), som också måste läggas till. Du lägger till dem i klassökvägen genom att lägga till följande i din rot-`build.gradle`
 
 ```groovy
 buildscript {
@@ -170,7 +170,7 @@ Om du svarar ”Ja” på båda dessa frågor måste du ta med biblioteket i `in
 
 #### <a name="dependencies"></a>Beroenden
 
-Gradle-plugin-programmet har ett beroende till [Javassist](http://jboss-javassist.github.io/javassist/), som måste vara tillgängligt för Gradles beroendematchning (se beskrivningarna ovan). Javassist används endast under apputvecklingen när plugin-programmet körs. Ingen Javassist-kod läggs till i din app.
+Gradle-plugin-programmet har ett beroende till [Javassist](https://jboss-javassist.github.io/javassist/), som måste vara tillgängligt för Gradles beroendematchning (se beskrivningarna ovan). Javassist används endast under apputvecklingen när plugin-programmet körs. Ingen Javassist-kod läggs till i din app.
 
 > [!NOTE]
 > Du måste använda version 3.0 eller senare av Gradle-plugin-programmet för Android och Gradle 4.1 eller senare.
@@ -338,7 +338,7 @@ Dessa behörigheter krävs av Azures autentiseringsbibliotek för Active Directo
 
 Loggning ska initieras tidigt för att få ut det mesta från loggade data. `Application.onMAMCreate()` är vanligtvis den bästa platsen för att initiera loggning.
 
-Ta emot MAM-loggar i din app genom att skapa en [Java-hanterare](http://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) och lägg till den i `MAMLogHandlerWrapper`. Detta anropar `publish()` i programhanteraren för varje loggmeddelande.
+Ta emot MAM-loggar i din app genom att skapa en [Java-hanterare](https://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) och lägg till den i `MAMLogHandlerWrapper`. Detta anropar `publish()` i programhanteraren för varje loggmeddelande.
 
 ```java
 /**
@@ -499,12 +499,12 @@ MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(
 SaveLocation service, String username);
 ```
 
-... där `service` är en av följande SaveLocations:
+Parametern `service` måste ha ett av följande `SaveLocation`-värden:
 
 
-    * SaveLocation.ONEDRIVE_FOR_BUSINESS
-    * SaveLocation.LOCAL
-    * SaveLocation.SHAREPOINT
+- `SaveLocation.ONEDRIVE_FOR_BUSINESS`
+- `SaveLocation.LOCAL`
+- `SaveLocation.SHAREPOINT`
 
 Den tidigare metoden att bestämma om en användarprincip tillät dem att spara data till olika platser, var `getIsSaveToPersonalAllowed()` inom samma **AppPolicy**-klass. Den här funktionen är nu **inaktuell** och bör inte användas. Följande anrop motsvarar `getIsSaveToPersonalAllowed()`:
 
@@ -798,7 +798,7 @@ Result getRegisteredAccountStatus(String upn);
 
 Program som är [kopplade till nationella moln](https://www.microsoft.com/en-us/trustcenter/cloudservices/nationalcloud) **måste** ange `authority` till `registerAccountForMAM()`.  Det gör du genom att ange `instance_aware=true` i ADAL:s [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters följt av ett anrop till `getAuthority()` på AuthenticationCallback AuthenticationResult.
 
-```
+```java
 mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBehavior.FORCE_PROMPT, "instance_aware=true",
         new AuthenticationCallback<AuthenticationResult>() {
             @Override
@@ -817,7 +817,8 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 > [!NOTE]
 > Ange inte AndroidManifest.xml-metadataauktoriteten.
 <br/>
-```
+
+```xml
 <meta-data
     android:name="com.microsoft.intune.mam.aad.Authority"
     android:value="https://AAD authority/" />
@@ -892,7 +893,7 @@ Den registrerade användarens kontostatus kan ändras när ett registreringsmedd
 
 ## <a name="protecting-backup-data"></a>Skydda säkerhetskopierade data
 
-Från och med Android Marshmallow (API-23) kan en app säkerhetskopiera data på två sätt. Alla alternativ är tillgängliga för din app och kräver olika steg för att säkerställa att Intune-dataskyddet har implementerats korrekt. Tabellen nedan innehåller information om relevanta åtgärder som krävs för korrekt dataskydd.  Du kan läsa mer om säkerhetskopieringsmetoderna i [Android API-guiden](http://developer.android.com/guide/topics/data/backup.html).
+Från och med Android Marshmallow (API-23) kan en app säkerhetskopiera data på två sätt. Alla alternativ är tillgängliga för din app och kräver olika steg för att säkerställa att Intune-dataskyddet har implementerats korrekt. Tabellen nedan innehåller information om relevanta åtgärder som krävs för korrekt dataskydd.  Du kan läsa mer om säkerhetskopieringsmetoderna i [Android API-guiden](https://developer.android.com/guide/topics/data/backup.html).
 
 ### <a name="auto-backup-for-apps"></a>Automatisk säkerhetskopiering för appar
 
@@ -1413,7 +1414,7 @@ En appregistrering för `WIPE_USER_DATA` kan inte dra nytta av standardbeteendet
 Programspecifika nyckelvärdepar kan konfigureras i Intune-konsolen. Dessa nyckel-värdepar tolkas inte av Intune utan de skickas till appen. Program som ska ta emot sådan konfiguration kan använda klasserna `MAMAppConfigManager` och `MAMAppConfig` för detta. Om flera principer är inriktade på samma app kan det finnas flera motstridiga värden för samma nyckel.
 
 ### <a name="example"></a>Exempel
-```
+```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
 String identity = "user@contoso.com"
 MAMAppConfig appConfig = configManager.getAppConfig(identity);
@@ -1434,7 +1435,7 @@ LOGGER.info("Found value " + valueToUse);
 
 ### <a name="mamappconfig-reference"></a>MAMAppConfig Reference
 
-```
+```java
 public interface MAMAppConfig {
     /**
      * Conflict resolution types for Boolean values.
@@ -1609,20 +1610,27 @@ De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare
    > Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal. 
 2. Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
 
-3. Aktivera standardregistrering genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+3. Aktivera standardregistrering genom att ange följande värde i manifestet:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
+   ```
    > [!NOTE] 
    > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
 
-4. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+4. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
    > [!NOTE] 
    > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
    >
    > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det görs andra försök att anropa MAMEnrollmentManager-API:er.
 
 3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet:
-```xml
-<meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
-```
+
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
 
 > [!NOTE] 
 > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.

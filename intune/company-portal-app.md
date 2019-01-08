@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1d645de0dfa9c215a9670246f43375de5153286
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 72349a609485096b5abd6eaff3c252a510a978a7
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185431"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738026"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -72,7 +72,7 @@ Välj en temafärg för företagsportalen. Välj en standardfärg eller ange en 
 |**Välj en standardfärg eller ange en sexsiffrig hexadecimal kod**| Välj **Standard** om du vill välja en färg genom att klicka på den. Välj **Anpassad** om du vill välja en specifik färg baserat på en hexadecimal kod.|
 |**Välj temafärg**| Välj en temafärg som ska användas på företagsportalen. Du kan välja en standardfärg eller ange en specifik hexadecimal kod. |
 |**Visning**| Välj om du vill visa **företagslogotypen och företagsnamnet**, **endast företagslogotypen** eller **endast företagsnamnet**. |
-|**Ladda upp företagslogotypen**|Du kan överföra företagslogotypen så att den visas på företagsportalen. Observera att textfärgen väljs automatiskt för optimal kontrast. För bäst resultat rekommenderar vi att du laddar upp en logotyp med genomskinlig bakgrund.<p><ul><li>Maximal bildstorlek: 400 × 400 px</li><li>Maximal filstorlek: 750 kB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp företagslogotypen**|Du kan överföra företagslogotypen så att den visas på företagsportalen. Observera att textfärgen väljs automatiskt för optimal kontrast. För bäst resultat rekommenderar vi att du laddar upp en logotyp med genomskinlig bakgrund.<p><ul><li>Maximal bildstorlek: 400 x 400 bildpunkter</li><li>Maximal filstorlek: 750 KB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 När du har överfört logotypen visas den med temafärgen i förhandsgranskningsområdet. Om du valde att visa ditt företagsnamn visas det i svart eller vitt på företagsportalen, beroende på vad som ger bäst kontrast baserat på din temafärg. Ditt företagsnamn visas inte i förhandsgranskningsområdet på skärmen. 
 
@@ -81,7 +81,7 @@ Välj en logotyp som ser bäst ut på vita eller ljusa bakgrunder.
 
 |Fältnamn|Mer information|
 |---|---|
-|**Ladda upp din logotyp**| Det här alternativet är tillgängligt om du har valt att visa företagets logotyp. För bäst resultat rekommenderar vi att du laddar upp en logotyp med genomskinlig bakgrund.<p><ul><li>Maximal bildstorlek: 400 × 400 px</li><li>Maximal filstorlek: 750 kB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp din logotyp**| Det här alternativet är tillgängligt om du har valt att visa företagets logotyp. För bäst resultat rekommenderar vi att du laddar upp en logotyp med genomskinlig bakgrund.<p><ul><li>Maximal bildstorlek: 400 x 400 bildpunkter</li><li>Maximal filstorlek: 750 KB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 ### <a name="brand-image-for-company-portal"></a>Varumärkesbild för företagsportalen
 
@@ -89,7 +89,7 @@ Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har 
 
 |Fältnamn|Mer information|
 |---|---|
-|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p>*Obs!* Avbildningen kan visas på olika sätt för olika plattformar.<p><ul><li>Rekommenderad bildbredd: Större än 1 125 px, men inte mindre än 640 px</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p>*Obs!* Bilden kan visas på olika sätt på olika plattformar.<p><ul><li>Rekommenderad bildbredd: Större än 1 125 bildpunkter, men inte mindre än 640 bildpunkter</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på företagsportalen. Här följer några tips på hur du kan hitta, välja ut och optimera bilden för företagsportalen. 
 
@@ -138,7 +138,7 @@ Följande kortkommandon är tillgängliga i Windows-företagsportalappen.
 
 Slutanvändarna kommer också att kunna se tillgängliga genvägar i Windows-företagsportalens app.
 
-![Skärmbild av tillgängliga genvägar i Windows-företagsportalens app](media/company-portal-app/company-portal-app-01.png)
+![Skärmbild av tillgängliga genvägar i Windows-företagsportalen](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Nästa steg
 

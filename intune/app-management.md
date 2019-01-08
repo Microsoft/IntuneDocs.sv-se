@@ -1,12 +1,12 @@
 ---
 title: Vad är apphantering i Microsoft Intune?
 titlesuffix: ''
-description: Lär dig grunderna om apphantering med Microsoft Intune.
+description: Läs mer om klientappens hanteringsfunktioner per plattform i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 366fab51d88587233f945fe7d880e3b6881bef45
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f156accf5b51e7fff51db738c70b0b0840d7e365
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179192"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642837"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -78,13 +78,13 @@ I följande fyra avsnitt beskrivs alternativ som är tillgängliga i fönstret *
     - [Lägga till appar](apps-add.md).
     - [Tilldela appar](apps-deploy.md).
     - [Övervaka appar](apps-monitor.md).
-- **Konfigurationsprinciper**: Välj det här alternativet om du vill definiera inställningar som kan krävas när en användare kör en app. Mer information finns i:
+- **Appkonfigurationsprinciper**: Välj det här alternativet om du vill ange inställningar som kan krävas när en användare kör en app. Mer information finns i:
     - [Appkonfigurationsprinciper för Intune](app-configuration-policies-overview.md).
         - [Konfigurationsprinciper för iOS-appar](app-configuration-policies-use-ios.md).
         - [Konfigurationsprinciper för Android-appar](app-configuration-policies-use-android.md).
-- **Appskyddsprinciper**: Välj det här alternativet för att koppla inställningar till en app och skydda företagets data som den använder. Du kan till exempel begränsa möjligheterna för en app att kommunicera med andra appar eller du kan kräva att användaren anger en PIN-kod för att få åtkomst till en företagsapp. Mer information finns i:
+- **Appskyddsprinciper**: Välj det här alternativet för att koppla inställningar till en app och skydda de data som företaget använder. Du kan till exempel begränsa möjligheterna för en app att kommunicera med andra appar eller du kan kräva att användaren anger en PIN-kod för att få åtkomst till en företagsapp. Mer information finns i:
     - [Appskyddsprinciper](app-protection-policies.md).
-- **Selektiv rensning för app**: Välj det här alternativet för att endast ta bort företagsdata från en vald användares enhet. Mer information finns i:
+- **Selektiv radering av app**: Välj det här alternativet för att ta bort enbart företagsdata från en vald användares enhet. Mer information finns i:
     - [Appselektiv rensning](apps-selective-wipe.md).
 - **Etableringsprofiler för iOS-app**: iOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla. Mer information finns i:
     - [iOS-appetableringsprofiler](app-provisioning-profile-ios.md).
@@ -96,29 +96,29 @@ Mer information om det här avsnittet finns [Hantera appar](app-management.md).
     - [Volyminköpsprogram för iOS-appar (VPP)](vpp-apps-ios.md).
     - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md).
 - **Identifierade appar**: Visa appar som har tilldelats av Intune eller installerats på en enhet. Mer information finns i [Visa enhetsinformation med Microsoft Intune](device-inventory.md).
-- **Appinstallationsstatus**: Visa status för en apptilldelning som du skapat. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
-- **Användarstatus för appskydd** : Visa status för en skyddsprincip hos en användare som du väljer.
-- **Granskningsloggar**: Visa den Intune app-relaterade aktiviteten för alla IT-administratörer.
+- **Status för appinstallation**: Visa status för en apptilldelning som du har skapat. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Appskyddsstatus**: Visa status för en appskyddsprincip hos en användare som du väljer.
+- **Granskningsloggar**: Visa den Intune-apprelaterade aktiviteten för alla IT-administratörer.
 
 Mer information om det här avsnittet finns [Övervaka appar](apps-monitor.md).
 
 ### <a name="set-up"></a>Konfigurera
-- **iOS VPP-token**: Tillämpa och visa dina licenser för iOS Volume Purchase Program (VPP). Mer information finns i:
+- **iOS VPP-token**: Tillämpa och visa dina licenser för iOS volymköpsprogram (VPP). Mer information finns i:
     - [Volyminköpta iOS-appar](vpp-apps-ios.md)
-- **Windows företagscertifikat**: Använd eller visa status för ett kodsigneringscertifikat som används för att distribuera branschspecifika appar till dina hanterade Windows-enheter.
-- **Windows Symantec-certifikat**: Använd eller visa status för ett Symantec-kodsigneringscertifikat som behövs för att distribuera XAP- och WP8.x appx-filer till Windows 10 Mobile-enheter.
-- **Microsoft Store för företag**: Installationsintegrering till Microsoft Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser. Mer information finns i:
+- **Windows företagscertifikat**: Tillämpa eller visa status för ett kodsigneringscertifikat som används för att distribuera verksamhetsspecifika appar till dina hanterade Windows-enheter.
+- **Windows Symantec-certifikat**: Tillämpa eller visa status för ett Symantec-kodsigneringscertifikat som behövs för att distribuera XAP- och WP8.x appx-filer till Windows 10 Mobile-enheter.
+- **Microsoft Store för företag**: Konfigurera integration till Microsoft Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser. Mer information finns i:
     - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md).
-- **Windows-nycklar för separat inläsning**: Lägg till en Windows-nyckel för separat inläsning som kan användas för att installera en app direkt till enheter i stället för att publicera och hämta appen från Windows store. Mer information finns i:
+- **Windows-nycklar för separat inläsning**: Lägg till en Windows-nyckel för separat inläsning som kan användas för att installera en app direkt till enheter, i stället för att appen publiceras och hämtas från Windows Store. Mer information finns i:
     - [Separat inläsning av en Windows-app](app-sideload-windows.md).
-- **Anpassa företagsportalen.**: Anpassa företagsportalen enligt ert varumärke. Mer information finns i:
+- **Logotyp för företagsportal**: Anpassa företagsportalen efter ert varumärke. Mer information finns i:
     - [Företagsportalkonfiguration](company-portal-app.md).
 - **Appkategorier**: Lägg till, fäst och ta bort appkategorinamn.
 - **Android-arbetsprofil**: Godkänn och synkronisera de appar som du har godkänt för ditt företag. Mer information finns i:
     - [Android Work-profilappar](apps-add-android-for-work.md).
 
 ### <a name="help-and-support"></a>Hjälp och support
-- **Hjälp och support**: Felsök, begär support eller visa Intune-status. Mer information finns i:
+- **Hjälp och support**: Felsök, begär support eller visa Intunes status. Mer information finns i:
     - [Felsökning av problem](help-desk-operators.md).
 
 ## <a name="next-steps"></a>Nästa steg

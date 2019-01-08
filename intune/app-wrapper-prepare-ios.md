@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 26bf759722b5cb92bda28b0e60c9365a7edc7710
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 94e4f955a57f5a505bfbbdc84ae236bbfb85fe8b
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112891"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738060"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -100,7 +100,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 4. Klicka på **Certifikat, ID och profiler**.
 
-   ![Apple Developer-portalen](./media/iOS-signing-cert-1.png)
+   ![Apple Developer-portalen – Certifikat, ID:n och profiler](./media/iOS-signing-cert-1.png)
 
 5. Klicka på ![plustecknet i övre högra hörnet av](./media/iOS-signing-cert-2.png) Apple Developer-portalen för att lägga till ett iOS-certifikat.
 
@@ -125,7 +125,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 11. Följ instruktionerna från Apple-utvecklarwebbplatsen ovanför om hur du skapar en CSR-fil. Spara CSR-filen på din Mac OS-dator.
 
-    ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](./media/iOS-signing-cert-6.png)
+    ![Ange information för det certifikat som du begär](./media/iOS-signing-cert-6.png)
 
 12. Gå tillbaka till Apple-utvecklarwebbplatsen. Klicka på **Fortsätt**. Ladda sedan upp CSR-filen.
 
@@ -141,7 +141,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 16. Ett informationsfönster visas. Bläddra till slutet och titta under etiketten **Fingeravtryck**. Kopiera strängen **SHA1** (har gjorts suddig) för att använda den som argument för "-c" för programhanteringsverktyget.
 
-    ![Lägg till certifikatet i en nyckelring](./media/iOS-signing-cert-9.png)
+    ![iPhone-information – SHA1-sträng för fingeravtryck](./media/iOS-signing-cert-9.png)
 
 
 
@@ -179,7 +179,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 Öppna macOS-terminalen och kör följande kommando:
 
-```
+```bash
 /Volumes/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
 ```
 
@@ -188,7 +188,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 **Exempel:** Följande exempelkommando kör programhanteringsverktyget i appen MyApp.ipa. En etableringsprofil och en SHA-1-hash för signeringscertifikatet anges och används för att signera den omslutna appen. Utdata-appen (MyApp_Wrapped.ipa) skapas och lagras i mappen Skrivbord.
 
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB"  -v true
 ```
 
@@ -289,7 +289,7 @@ Appar som har omslutits med hjälp av programhanteringsverktyget genererar logga
 
 3.  Filtrera de sparade loggarna för utdata från appbegränsningarna genom att ange följande skript i konsolen:
 
-    ```
+    ```bash
     grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
     ```
     Du kan skicka de filtrerade loggarna till Microsoft.
@@ -368,20 +368,20 @@ Granska befintliga rättigheter för en signerad app och en etableringsprofil:
 
 3.  Använd codesign-verktyget för att kontrollera rättigheterna för .app-paketet, där `YourApp.app` är namnet på .app-paketet:
 
-    ```
+    ```bash
     $ codesign -d --entitlements :- "Payload/YourApp.app"
     ```
 
 4.  Använd säkerhetsverktyget för att kontrollera rättigheterna för appens inbäddade etableringsprofil, där `YourApp.app` är namnet på .app-paketet.
 
-    ```
+    ```bash
     $ security -D -i "Payload/YourApp.app/embedded.mobileprovision"
     ```
 
 ### <a name="remove-entitlements-from-an-app-by-using-the-e-parameter"></a>Ta bort rättigheter från en app med hjälp av parametern -e
 Det här kommandot tar bort alla aktiverade funktioner i appen som inte ingår i rättighetsfilen. Om du tar bort funktioner som används av appen kan appen skadas. Ett exempel på när du kan ta bort funktioner som saknas är om du har en leverantörsutvecklad app där alla funktioner är standard.
 
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
 ```
 
@@ -416,12 +416,12 @@ Om du vill använda flaggan `-citrix` måste du även installera [Citrix MDX-pro
 Kör helt enkelt ditt vanliga programhanteringskommando med flaggan `-citrix` på slutet. Flaggan `-citrix` har för närvarande inte några argument.
 
 **Användningsformat**:
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
 ```
 
 **Exempelkommando**:
-```
+```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fd3a38b331507ddc50a7b5e4ce8794e71d0e5dc5
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
+ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977362"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531336"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -171,7 +171,7 @@ En uppsättning inbyggda **inställningar för efterlevnadsprinciper** (Azure-po
   När du aktiverar den här inställningen kräver den följande av enheter:
   - Aktivera platstjänster på operativsystemsnivån
   - Tillåter att företagsportalen använder platstjänsterna
-  - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel. Utvärderingen utlöses antingen genom att företagsportalappen öppnas eller att enheten fysiskt flyttas 500 meter eller längre.
+  - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel. Utvärderingen utlöses antingen genom att företagsportalappen öppnas eller att enheten fysiskt flyttas 500 meter eller längre. Om enheten inte flyttas 500 meter inom 72 timmar, måste användaren öppna företagsportalappen för utökad utvärdering av upplåsningen.
 
 - **Giltighetsperiod för efterlevnadsstatus (dagar)**: Ange inom vilken tidsperiod enheterna ska rapportera status för alla mottagna efterlevnadsprinciper. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar.
 

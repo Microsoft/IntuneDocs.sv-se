@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 931aa360b82efcf4ef643fb40bc4982c05e589ee
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183000"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429720"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Skapa en rapport från OData-feeden med Power BI
 
@@ -106,7 +106,7 @@ Nu har du ett visuellt objekt som visar din organisations distribution av enhete
 Du kan lägga till ett filter till din trädkarta så att du kan svara på fler frågor med programmet.
 
 
-1. Lägg till ett filter genom att välja rapportarbetsytan och sedan **utsnittsikonen** (![trädkarta med data](media/reports-create-slicer.png)) under **Visualiseringar**.
+1. Lägg till ett filter genom att välja rapportarbetsytan och sedan **Utsnittsikonen** (![trädkarta med datamodell och relationer som stöds](media/reports-create-slicer.png)) under **Visualiseringar**.
 2. Leta reda på tabellen **ownerTypes** och dra datafältet **ownerTypeName** under avsnittet **Filter** i panelen **Visualiseringar**.  
 
    Under enhetstabellen finns det ett datafält som heter **OwnerTypeKey** som innehåller en kod som anger om enhet är företagsägd eller privatägd. Eftersom du vill visa egna namn i det här filtret håller du utkik efter tabellen **ownerTypes** och drar **ownerTypeName**. Detta exempel visar hur datamodellen stöder relationer mellan tabeller.

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/13/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: e677b62c7610739079184bc5ef59e47544f833bb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 73caf328bd25cb31bacea6b964c1db7601f3aec6
+ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190225"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570816"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -47,6 +47,7 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nej| Ja | Nej | [Mer information](./macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  | [Mer information](./device-enrollment-manager-enroll.md)|
+|**[DEP](#apple-device-enrollment-program)**|   Ja |   Valfri |  Valfri|[Mer information](./device-enrollment-program-enroll-macos.md)|
 
 
 ## <a name="windows-enrollment-methods"></a>Metoder för Windows-registrering
@@ -56,10 +57,10 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 |**[BYOD](#bring-your-own-device)** | Nej |  Ja |   Nej | [Mer information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  |[Mer information](device-enrollment-manager-enroll.md)|
 |**Registrera automatiskt** | Nej |Ja |Nej | [Mer information](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Ja |Ja |Nej | [Mer information](enrollment-autopilot.md)]
+|**Autopilot** |Ja |Ja |Nej | [Mer information](enrollment-autopilot.md)
 |**Massregistrering** |Nej |Nej |Nej | [Mer information](./windows-bulk-enroll.md) |
-|**Samhantering** |Nej |Ja |Nej | [Mer information](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
-|**GPO** |Nej |Ja |Nej | [Mer information](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]
+|**Samhantering** |Nej |Ja |Nej | [Mer information](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)
+|**GPO** |Nej |Ja |Nej | [Mer information](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 
 ## <a name="android-enrollment-methods"></a>Metoder för Android-registrering
@@ -81,7 +82,7 @@ Bring Your Own Device (BYOD) omfattar personliga telefoner, surfplattor och dato
 Enhetsregistreringshanteraren (DEM) är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Dessa typer av enheter är till exempel bra för verktygs- eller kassaappar (Point-of-Sale), men inte för användare som behöver åtkomst till e-post eller företagsresurser. Läs mer om [DEM](./device-enrollment-manager-enroll.md). 
 
 ### <a name="apple-device-enrollment-program"></a>Apples DEP (Device Enrollment Program)
-Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för övervakat läge för iOS som gör det möjligt att konfigurera en enhet med specifika funktioner.
+Med Apples program för enhetsregistrering kan du skapa och distribuera principen ”trådlöst” till iOS- och macOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör installationsassistenten. Den här metoden har stöd för övervakat läge för iOS som gör det möjligt att konfigurera en enhet med specifika funktioner.
 
 Läs mer om iOS DEP-registrering:
 

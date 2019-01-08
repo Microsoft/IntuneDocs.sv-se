@@ -15,12 +15,12 @@ ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: d6020207ab32a4e7c18f59f74caeedc9e4f17bf4
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 90398729a99a10667d87646a4beaaaf8a7f6201f
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031695"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266927"
 ---
 # <a name="licenses-that-include-intune"></a>Licenser där Intune ingår
 
@@ -39,10 +39,9 @@ Följande tabell visar vilka versioner av Intune som är tillgängliga i respekt
 | Microsoft 365 E3 | Intune | [Läs mer](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
 | Microsoft 365 E5 | Intune | [Läs mer](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
 | Microsoft 365 F1 | Intune | [Läs mer](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
-| Office 365 F1 | Inga | [Läs mer](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
 | Microsoft 365 Business | Intune | [Läs mer](https://www.microsoft.com/en-us/microsoft-365/business) |
-| Office 365 Business Premium | Inga | [Läs mer](https://www.microsoft.com/en-us/microsoft-365/business) |
-| Azure Active Directory Free, Basic, Premium P1, Premium P2 | Inga | [Läs mer](https://azure.microsoft.com/pricing/details/active-directory/) |
+
+Intune ingår inte i licenser som inte finns i den här listan.
 
 En riktig licens krävs om en användare direkt eller indirekt utnyttjar en funktion som omfattas av licensen.
 
