@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/3/2018
+ms.date: 01/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,14 +17,14 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 21d89d97355430f071763391d69fe332cf3ef369
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 94125ced318f304e5b2bdc8f09472280fc05b08a
+ms.sourcegitcommit: 662afec5e87639a7f541bb89700cc0fec5037bb0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642905"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069361"
 ---
-# <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Den tidiga utgåvan för Microsoft Intune – December 2018
+# <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Den tidiga utgåvan för Microsoft Intune – Januari 2019
 
 > [!Note]
 > Sekretessavtalsmeddelande: Följande ändringar är under utveckling för Intune. Den här informationen har mycket begränsad spridning, i enlighet med sekretessavtalet. Sprid inte den här informationen vidare på sociala medier eller offentliga webbplatser, till exempel Twitter, UserVoice, Reddit och så vidare. 
@@ -40,6 +40,45 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 -->
  
 ## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
+
+<!-- 1901 start -->
+
+### <a name="android-enterprise-apps----1352553----"></a>Android Enterprise-appar <!-- 1352553  -->
+Du kommer att kunna ta bort hanterade Google Play-appar från Microsoft Intune. Om du vill ta bort en hanterad Google Play-app måste du öppna Microsoft Intune i Azure-portalen och välja **Klientappar** > **Appar**. Från listan över appar väljer du ellipserna (...) till höger om den hanterade Google Play-appen och väljer sedan **Ta bort** från den visade listan. När du tar bort en hanterad Google Play-app från applistan blir den hanterade Google Play-appen automatiskt ej godkänd.
+
+### <a name="managed-google-play-app-type----1352580---"></a>Hanterade Google Play-apptyper <!-- 1352580 -->
+Den **hanterade Google Play**-apptypen gör att du kan lägga till mer specifikt [hanterade Google Play-appar](https://play.google.com/work/search?q=microsoft&c=apps) till Intune. Som Intune-administratör kommer du nu att kunna bläddra, söka, godkänna, synkronisera och tilldela godkända hanterad Google Play-appar i Intune. Du behöver inte längre bläddra till den hantera Google Play-konsolen separat och du kommer inte längre behöva autentisera dig på nytt. I Intune, väljer du **Klientappar** > **Appar** > **Lägg till**. I listan **Apptyp** väljer du **Hanterat Google Play-konto** som apptyp.
+
+### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Förhandsgranskning av stöd för företagsägda, fullständigt hanterade Android-enheter <!-- 1574342  -->
+Intune stöder helt hanterade Android-enheter, ett företagsägt scenario av ”enhetsägare” där enheter hanteras noggrant av IT och är kopplade till enskilda användare. Detta gör att administratörer kan hantera hela enheten, tillämpa en utökad uppsättning principkontroller som inte är tillgängliga för arbetsprofiler och begränsa användare från att installera appar från hanterad Google Play endast. För att konfigurera fullständigt hanterade Android-enheter, går du till **Enhetsregistrering** > **Android-registrering** > **Företagsägda, fullständigt hanterade användarenheter**. Observera att den här funktionen är en förhandsversion. Vissa Intune-funktioner, till exempel certifikat, efterlevnad och villkorlig åtkomst, är inte tillgängliga med fullständigt hanterade Android-användarenheter.
+
+### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660----"></a>Distribution av online-licensierade Microsoft Store för företag-appar <!-- 16726660  -->
+Du kommer att kunna tilldela nödvändiga online-licensierade Microsoft Store för företag-appar i kontexten för enheten. Genom att distribuera en Microsoft Store för företag-app på detta sätt, kan appen installeras för alla användare på enheten. Detta gäller endast för Windows 10 RS4+ desktop-enheter. Alternativet att installera i kontexten för enheten finns på sidan Tilldelning av klientappar för MSFB Online-licensierade appar.
+
+### <a name="configure-profile-to-skip-some-screens-during-setup-assistant----2276470----"></a>Konfigurera profilen om du vill hoppa över vissa av skärmarna i installationsassistenten <!-- 2276470  -->
+När du skapar en macOS-registreringsprofil kommer du att kunna konfigurera den för att hoppa över valfria följande skärmar när en användare går igenom installationsassistenten:
+- Android-migrering
+- Visningston
+- Sekretess
+- iCloudStorage
+
+### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522----"></a>Tilldela Autopilot-profiler till den virtuella gruppen Alla enheter <!--2715522  -->
+Du kommer att kunna tilldela Autopilot-profiler till den virtuella gruppen Alla enheter. Om du vill göra det väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > välj en profil >  **Tilldelningar** > under **Tilldela till** väljer du **Alla enheter**. Mer information om Autopilot-profiler finns i [Registrera Windows-enheter med hjälp av Windows Autopilot](enrollment-autopilot.md).
+
+### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile----2809324----"></a>Anpassa bakgrund på övervakade iOS-enheter med hjälp av en profil för enhetskonfiguration <!-- 2809324  -->
+När du skapar en profil för enhetskonfiguration för iOS-enheter kommer du att kunna tillåta och begränsa vissa inställningar i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltypen. Den här uppdateringen innehåller nya inställningar för **Bakgrund** som gör att en administratör kan använda en .png-, .jpg- eller .jpeg-bild som bakgrund, förhandsgranska bilden och blockera användare från att ändra bakgrundsbilden. Inställningar för bakgrund gäller endast för övervakade enheter. En lista över de aktuella inställningarna finns i [Enhetsbegränsningar för iOS](device-restrictions-ios.md).
+
+### <a name="toast-notifications-for-win32-apps----3136566-----"></a>Popup-meddelanden för Win32-appar <!-- 3136566   -->
+Du kommer att kunna förhindra att visa slutanvändares popup-meddelanden per apptilldelning. Från Intune, väljer du **Klientappar** > **Appar** > välj appen > **Tilldelningar** > **Inkludera grupper**. 
+
+### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise----3598396---"></a>Dela kontakter via Bluetooth har tagits bort i Enhetsbegränsningar > Enhetens ägare för Android Enterprise <!-- 3598396 -->
+När du skapar en profil för enhetsbegränsningar för Android Enterprise-enheter finns inställningen **Dela kontakter via Bluetooth**. I den här uppdateringen kommer inställningen **Dela kontakter via Bluetooth** att tas bort (**Enhetskonfiguration** > **Profiler**  >  **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar > Enhetens ägare** för profiltyp >  **Allmän**). 
+
+Inställningen **Dela kontakter via Bluetooth** har inte stöd för hantering av Android Enterprise-enhetens ägare. Så när den här inställningen tas bort, påverkar det inga enheter eller klienter, även om den här inställningen är aktiverad och konfigurerad i din miljö.
+
+Om du vill se den aktuella listan över inställningar, gå till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner](device-restrictions-android-for-work.md).
+
+Gäller för: Ägare av Android Enterprise-enhet
 
 <!-- 1812 start -->
 
@@ -75,8 +114,9 @@ När du använder identifiering av betrott nätverk, kommer du att kunna förhin
 ### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK stöder 256-bitars krypteringsnycklar <!-- 1832174 -->
 Intune App SDK för Android använder 256-bitars krypteringsnycklar när kryptering har aktiverats av appskyddsprinciperna. SDK fortsätter att stödja 128-bitars nycklar för kompatibilitet med innehåll och appar som använder äldre versioner av SDK.
 
-### <a name="enabled-shared-pc-settings-in-intune-profile----1907917---"></a>Aktiverade delade datorinställningar i Intune-profil <!-- 1907917 -->
+### <a name="enabled-shared-pc-settings-in-intune-profile----1907917-1063203---"></a>Aktiverade delade datorinställningar i Intune-profil <!-- 1907917, 1063203 -->
 För närvarande kan du konfigurera delade datorinställningar på Windows 10 desktop-enheter som använder en anpassad OMA-URI-inställning. En ny profil kommer att läggas till i konfigurera delade datorinställningar (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  **Windows 10 och senare** > **Delad fleranvändarenhet**).
+
 Gäller för: Windows 10 och senare, Windows 10 Holographic for Business
 
 ### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation-----1927359---"></a>Uppdatering av Intune-principers autentiseringsmetod och installation av företagsportalappen  <!-- 1927359 -->
@@ -113,10 +153,6 @@ Om du vill välja vilka skärmar som ska hoppas över, går du till **Enhetsregi
 
 ### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Vissa inställningar för BitLocker har stöd för Windows 10 Pro-versionen <!-- 2727036 -->
 Du kommer att kunna skapa en konfigurationsprofil som anger endpoint protection-inställningar för Windows 10-enheter, inklusive BitLocker. Detta lägger till stöd för Windows 10 Professional-versionen för vissa BitLocker-inställningar. De aktuella Windows 10-inställningarna finns i [Endpoint protection-inställningar för Windows 10](endpoint-protection-windows-10.md#windows-encryption).
-
-
-### <a name="intune-device-reporting-fields----2748738---"></a>Intune-enhetens rapportfält <!-- 2748738 -->
-Intune ger ytterligare fält för enhetsrapportering inklusive Android-tillverkare, modell och version av säkerhetsppdatering samt iOS-modell. I Intune, är dessa fält tillgängliga genom att välja **Klientappar** > **Appskyddsstatus** och sedan välja **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodell (Android och iOS) och lägsta inställning för version av Android-säkerhetsuppdatering. 
 
 ### <a name="intune-device-reporting-fields----2748738---"></a>Intune-enhetens rapportfält <!-- 2748738 -->
 Intune ger ytterligare fält för enhetsrapportering inklusive Android-tillverkare, modell och version av säkerhetsppdatering samt iOS-modell. I Intune, är dessa fält tillgängliga genom att välja **Klientappar** > **Appskyddsstatus** och sedan välja **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodell (Android och iOS) och lägsta inställning för version av Android-säkerhetsuppdatering. 
@@ -155,6 +191,8 @@ Administrativa mallar i Intune (**Enhetskonfiguration** > **Administrationsmalla
 Administrativa mallar finns i offentlig förhandsversion, administrativa mallar flyttar från **Enhetskonfiguration** > **Administrationsmallar** till **Enhetskonfiguration** > **Profiler** >**Skapa profil** > i **Plattform**, välj  **Windows 10 och senare**i **Profiltyp**, välj **Administrationsmallar**.
 Rapportering är aktiverad och gäller för: Windows 10 och senare
 
+### <a name="intune-macos-company-portal-dark-mode----3300524---"></a>Mörkt läge i Intune macOS-företagsportalen <!-- 3300524 -->
+Nu stöder Intune macOS-företagsportalen mörkt läge för macOS. När du aktiverar mörkt läge på en macOS 10.14 +-enhet kommer företagsportalen att justera dess utseende till färger som speglar detta läge.
 
 <!-- 1810 start -->
 

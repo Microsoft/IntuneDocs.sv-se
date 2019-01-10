@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 72349a609485096b5abd6eaff3c252a510a978a7
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 6d9d6cb1eccd91e7832a9456504c36cb983b4810
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738026"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817389"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -89,7 +89,7 @@ Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har 
 
 |Fältnamn|Mer information|
 |---|---|
-|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p>*Obs!* Bilden kan visas på olika sätt på olika plattformar.<p><ul><li>Rekommenderad bildbredd: Större än 1 125 bildpunkter, men inte mindre än 640 bildpunkter</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p>*Obs!* Bilden kan visas på olika sätt på olika plattformar.<p><ul><li>Rekommenderad bildbredd: Mindre än 1 125 bildpunkter, men inte mindre än 640 bildpunkter</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på företagsportalen. Här följer några tips på hur du kan hitta, välja ut och optimera bilden för företagsportalen. 
 

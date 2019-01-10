@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 01/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
-ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
+ms.openlocfilehash: 3599146aaebc2e3788fa96e8e04657ce4db41c4f
+ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429720"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54067456"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Skapa en rapport från OData-feeden med Power BI
 
@@ -61,7 +61,7 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 7. Klistra in den anpassade feed-URL:en i URL-rutan i fönstret **OData feed** (OData-feed).
 8. Välj **Grundläggande**.
 
-    ![OData-feed](media/reports-create-01-odatafeed.png)
+    ![OData-feeden för klientens Intune Data Warehouse](media/reports-create-01-odatafeed.png)
 
 9. Välj **OK**.
 10. Välj **Organisationskonto** och logga in med dina autentiseringsuppgifter för Intune.
@@ -70,7 +70,7 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 
 11. Välj **Anslut**. Navigatören öppnas och visar listan över tabeller i Intune-informationslagret.
 
-    ![Navigatör](media/reports-create-02-loadentities.png)
+    ![Skärmbild av Navigator – listan över Data Warehouse-tabeller](media/reports-create-02-loadentities.png)
 
 12. Markera tabellerna **enheter** och **ownerTypes**.  Välj **Läs in**. Power BI läser in data i modellen.
 
@@ -78,7 +78,7 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 
 Du kan importera flera tabeller för att inte endast analysera data i en enda tabell utan även relaterade data i flera tabeller.  PowerBI har en funktion som heter **Identifiera automatiskt** som försöker hitta och skapa relationer åt dig. Tabellerna i informationslagret har skapats för att fungera med PowerBI:s funktion Identifiera automatiskt. Men även om PowerBI inte hittar relationerna automatiskt hanterar du fortfarande relationerna.
 
-![Hantera relationer](media/reports-create-03-managerelationships.png)
+![Hantera relationer för relaterade data i tabeller](media/reports-create-03-managerelationships.png)
 
 1. Välj **Hantera relationer**.
 2. Välj **Identifiera automatiskt...** om inte PowerBI redan har identifierat relationerna.
@@ -99,7 +99,7 @@ Ett trädkarta-diagram visar hierarkiska data som rutor i rutor. Varje gren i hi
 
 Nu har du ett visuellt objekt som visar din organisations distribution av enheternas tillverkare.
 
-![Trädkarta med data](media/reports-create-06-treemapwdata.png)
+![Trädkarta med data – distribution av tillverkare av enheter](media/reports-create-06-treemapwdata.png)
 
 ## <a name="add-a-filter"></a>Lägga till ett filter
 
@@ -111,7 +111,7 @@ Du kan lägga till ett filter till din trädkarta så att du kan svara på fler 
 
    Under enhetstabellen finns det ett datafält som heter **OwnerTypeKey** som innehåller en kod som anger om enhet är företagsägd eller privatägd. Eftersom du vill visa egna namn i det här filtret håller du utkik efter tabellen **ownerTypes** och drar **ownerTypeName**. Detta exempel visar hur datamodellen stöder relationer mellan tabeller.
 
-![Trädkarta med filter](media/reports-create-08_ownertype.png)
+![Trädkarta med filter – stöder relationer mellan tabeller](media/reports-create-08_ownertype.png)
 
 Nu har du ett interaktivt filter som du kan använda för att växla mellan företagsägda och privatägda enheter. Använd det här filtret om du vill se hur distributionen ändras.
 
