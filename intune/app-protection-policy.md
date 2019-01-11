@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
-ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
+ms.openlocfilehash: 49ecdebc2777112ce8c8c97af1f98b3c12b200e1
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389877"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006292"
 ---
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
@@ -37,14 +37,14 @@ Du kan använda Intunes appskyddsprinciper **oberoende av någon lösning för h
 
 Appskyddsprinciper kan konfigureras för appar som körs på enheter som är:
 
-- **Registrerade i Microsoft Intune:** Enheterna är vanligtvis företagsägda.
+- **Har registrerats i Microsoft Intune:** Dessa enheter är vanligtvis företagsägda.
 
-- **Registrerade i en hanteringslösning för mobila enheter (MDM) från tredje part:**   Enheterna är vanligtvis företagsägda.
+- **Registrerade i en hanteringslösning för mobila enheter (MDM) från tredje part:** Dessa enheter är vanligtvis företagsägda.
 
   > [!NOTE]
   > Principer för mobilapphantering ska inte användas med tredje parts mobilapphantering eller säkra containerlösningar.
 
-- **Inte registrerade i någon hanteringslösning för mobila enheter:** Enheterna är vanligtvis personalägda enheter som inte hanteras eller som inte är registrerade i Intune eller andra MDM-lösningar.
+- **Har inte registrerats i någon lösning för hantering av mobila enheter:** Enheterna är vanligtvis personalägda enheter som inte hanteras eller som inte är registrerade i Intune eller andra MDM-lösningar.
 
 > [!IMPORTANT]
 > Du kan skapa hanteringsprinciper för mobila appar för Office-mobilappar som ansluter till Office 365-tjänster. Du kan även skydda åtkomsten till lokala Exchange-postlådor genom att skapa Intune-appskyddsprinciper för Outlook för iOS och Android där modern hybridautentisering är aktiverad. Innan du använder den här funktionen måste du se till att du uppfyller [kraven för Outlook för iOS och Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Appskyddsprinciper stöds inte för andra appar som ansluter till lokala Exchange- eller SharePoint-tjänster.
@@ -75,14 +75,14 @@ Windows-enheter stöds inte för tillfället. Du kan dock använda Windows Infor
 
 #### <a name="apps-without-app-protection-policies"></a>Appar utan appskyddsprinciper
 
-![Bild som visar hur data kan flyttas fritt mellan appar när inga appskyddsprinciper tillämpas](./media/apps-without-protection-policies.png)
+![Konceptbild av dataförflyttning mellan appar utan befintliga principer](./media/apps-without-protection-policies.png)
 
 När appar används utan begränsningar kan företagsrelaterade och personliga data blandas. Företagsdata kan hamna på platser som personlig lagring eller överföras till appar som du inte har kontroll över, vilket leder till dataförlust. Pilarna i föregående diagram visar hur data flyttas utan begränsningar mellan både företagsdata och personliga dataappar och till lagringsplatser.
 
 
 ### <a name="data-protection-with-app-protection-policies"></a>Dataskydd med appskyddsprinciper
 
-![Bild som visar hur företagsdata skyddas när appskyddsprinciper tillämpas ](./media/apps-with-protection-policies.png)
+![Konceptbild som visar företagsdata som skyddas av principer](./media/apps-with-protection-policies.png)
 
 
 Du kan använda appskyddsprinciper för att förhindra att företagets data sparas till enhetens lokala lagring. Du kan även begränsa dataflytten till andra appar som inte skyddas av appskyddsprinciper. Principinställningar för appskydd inkluderar:

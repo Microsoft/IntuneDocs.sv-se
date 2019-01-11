@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3da4208b3036b0252e2e5bd26d8361d04642183a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 83371d14215eb9ed2298796279d232ffbc7d129f
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189715"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817049"
 ---
-# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Snabbstart: skapa en e-postenhetsprofil för iOS
+# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Snabbstart: Skapa en e-postenhetsprofil för iOS
 
 I den här snabbstarten visas hur du skapar en e-postenhetsprofil för iOS-enheter. Den här profilen anger inställningar som krävs för att den inbyggda e-postappen på iOS-enhet ska kunna ansluta till företagets e-post. Med e-postenhetsprofiler uppnår du konsekvens över flera enheter och ger slutanvändarna åtkomst till företagets e-post på sina personliga enheter utan de behöver konfigurera något själva. För att ytterligare skydda din e-post kan du använda en e-postprofil för att avgöra om enheterna är kompatibla och sedan konfigurera villkorlig åtkomst så att endast kompatibla enheter får åtkomst till e-post. Mer information om e-postprofiler finns i [Konfigurera e-postinställningar i Microsoft Intune](email-settings-configure.md)
 
@@ -45,16 +45,16 @@ Logga in på [Intune](https://aka.ms/intuneportal) som global administratör ell
    - För **Plattform**, välj **iOS**.
    - För **Profiltyp** väljer du **e-post**.
     
-     ![Skapa en e-postprofil för iOS](media/quickstart-email-profile/ios-email-profile-name.png)
+     ![Skapa en e-postprofil för användning med iOS](media/quickstart-email-profile/ios-email-profile-name.png)
 
 5. Välj **inställningar** och ange följande inställningar (lämna standardinställningarna för alla andra inställningar):
    - **E-postserver**: I den här snabbstarten använder vi **outlook.office365.com**. Den här inställningen anger Exchange-platsen (URL) för e-postservern som iOS e-postappen använder för att ansluta till e-post.
-   - **Kontonamn**: Ange **företagets e-post**.
-   - **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (Azure AD). Intune genererar användarnamnet som används av den här profilen. I den här snabbstarten kommer vi att anta att **User Principal Name** ska användas som användarnamn för profilen (till exempel user1@contoso.com).
-   - **E-postadressattribut från AAD**: den här inställningen är e-postadressen från Azure AD som används för att logga in på Exchange. I den här snabbstarten använder vi **User Principal Name**.
-   - **Autentiseringsmetod**: i den här snabbstarten väljer vi **användarnamn och lösenord**. (Du kan också välja **Certifikat** om du redan har konfigurerat ett certifikat för Intune.)
+   - **Kontonamn**: Ange **Företagets e-postadress**.
+   - **Användarnamnattribut från AAD**: Namnet är det attribut som Intune hämtar från Azure Active Directory (Azure AD). Intune genererar användarnamnet som används av den här profilen. I den här snabbstarten kommer vi att anta att **User Principal Name** ska användas som användarnamn för profilen (till exempel user1@contoso.com).
+   - **E-postadressattribut från AAD**: Den här inställningen är e-postadressen från Azure AD som används för att logga in på Exchange. I den här snabbstarten använder vi **User Principal Name**.
+   - **Autentiseringsmetod**: I den här snabbstarten väljer vi **användarnamn och lösenord**. (Du kan också välja **Certifikat** om du redan har konfigurerat ett certifikat för Intune.)
     
-     ![Skapa en e-postprofil för iOS](media/quickstart-email-profile/ios-email-profile.png)
+     ![Skapa en e-postprofil för användning med iOS](media/quickstart-email-profile/ios-email-profile.png)
 
 6. Välj **OK**.
 7. Välj **Skapa**. Den nya profilen visas i profillistan med instrumentpanelen öppen så att du kan övervaka hur profilen har tilldelats till iOS-enheter och iOS-användare.

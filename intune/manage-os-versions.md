@@ -1,23 +1,23 @@
 ---
-title: Hantera operativsystemversioner med Microsoft Intune
+title: Hantera operativsystemversioner med Microsoft Intune | Microsoft Intune
 description: Lär dig mer om att hantera versioner av operativsystemet på plattformar med Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2017
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
-ms.openlocfilehash: c75956cd1e3e9bba0017a624b99dcc090d32978b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 27a581a72c20c940a04a791ef9e63a2dc8bf5b24
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182235"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816998"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Hantera versioner av operativsystem med Intune
 På moderna bärbara och stationära plattformar, viktiga uppdateringar, korrigeringar och nya versioner snabbt. Du har kontroller för att fullständigt hantera uppdateringar och korrigeringar i Windows, men för andra plattformar som iOS och Android krävs att slutanvändarna deltar i processen.  Microsoft Intune har funktioner som hjälper dig att strukturera versionshanteringen av operativsystem på olika plattformar.
@@ -59,13 +59,12 @@ Mer information finns i [Kom igång med enhetsefterlevnad](https://docs.microsof
 Med Intunes appskyddsprinciper och åtkomstinställningar för hantering av mobilprogram (MAM) kan du ange en lägsta operativsystemversion i appnivån. På så sätt kan du informera och uppmuntra, eller kräva, att dina slutanvändare uppdaterar sina operativsystem till en viss lägstaversion.
  
 Du har två olika alternativ: 
+- **Varna** – Varna informerar slutanvändaren om att han eller hon ska uppgradera om de öppnar en app med en programskyddsprincip eller MAM-åtkomstinställningar på en enhet med ett operativsystem som är äldre än den angivna versionen. Åtkomst tillåts för programmet och organisationens data.
+  ![Bild av Android-dialogruta med uppdateringsvarning](./media/os-version-update-warning.png) 
 
-|Varna  |Blockera  |
-|---------|---------|
-|Varna informerar slutanvändaren om att han eller hon ska uppgradera om de öppnar en app med en programskyddsprincip eller MAM-åtkomstinställningar på en enhet med ett operativsystem som är äldre än den angivna versionen. Åtkomst tillåts för programmet och organisationens data.|Blockera informerar slutanvändaren om att han eller hon måste uppgradera när han eller hon öppnar en app med en programskyddsprincip eller MAM-åtkomstinställningar på en enhet med ett operativsystem som är äldre än den angivna versionen. Åtkomst tillåts inte för programmet och organisationens data.|
-|![Android-dialogruta med uppdateringsvarning](./media/os-version-update-warning.png)    |![Dialogruta för blockerad programåtkomst](./media/os-version-access-blocked.png)          |
+- **Blockera** – Blockera informerar slutanvändaren om att han eller hon måste uppgradera när han eller hon öppnar en app med en programskyddsprincip eller MAM-åtkomstinställningar på en enhet med ett operativsystem som är äldre än den angivna versionen. Åtkomst tillåts inte för programmet och organisationens data.
+  ![Bild av dialogruta för blockerad programåtkomst](./media/os-version-access-blocked.png)
 
- 
 ### <a name="in-practice"></a>I praktiken
 Organisationer använder principinställningar för appskydd idag när appar öppnas eller återupptas som ett sätt att utbilda slutanvändarna om behovet av att hålla sina program uppdaterade. En exempelkonfiguration betyder att slutanvändarna varnas om de använder aktuell version minus en och blockeras vid aktuell version minus två.
  
@@ -73,12 +72,12 @@ Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar]
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Hantera distribution av en ny operativsystemversion
 Du kan använda Intune-funktionerna som beskrivs i den här artikeln för att flytta organisationen till en ny operativsystemversion inom tidslinjen du anger. I följande steg finns en exempel-distributionsmodell för att flytta dina användare från operativsystemet v1 till operativsystemet v2 på sju dagar.
-- **Steg 1**: Använd begränsningar för registrering för att kräva operativsystemet v2 som den lägsta versionen för att registrera enheten. Det säkerställer att nya slutanvändarenheter är kompatibla vid registreringen.
+- **Steg 1**: Använd begränsningar för registrering för att kräva operativsystem v2 som den lägsta versionen för att registrera enheten. Det säkerställer att nya slutanvändarenheter är kompatibla vid registreringen.
 - **Steg 2a**: Använd Intune-appskyddsprinciper för att varna användare när appen öppnas eller återupptas om att operativsystem v2 krävs.
 - **Steg 2b**. Använd efterlevnadsprinciper för enheter för att kräva operativsystem v2 som lägsta version för att en enhet ska vara kompatibel. Använd **Åtgärder** för icke-kompatibilitet för att tillåta en sju dagar lång respitperiod och för att skicka ett e-postmeddelande till slutanvändarna med din tidslinje och dina krav.
   -  Dessa principer informerar slutanvändarna om att befintliga enheter måste uppdateras via e-post, via Intune-företagsportalen, och informera när appen öppnas för appar som aktiverats med en appskyddsprincip.
   - Du kan köra en efterlevnadsrapport för att identifiera användare som inte följer standard. 
-- **Steg 3a**: Använd Intune-appskyddsprinciper för att blockera användare när en app öppnas eller återupptas om enheten inte kör operativsystemet v2.
+- **Steg 3a**: Använd Intune-appskyddsprinciper för att blockera användare när en app öppnas eller återupptas om enheten inte kör operativsystem v2.
 - **Steg 3b**: Använd efterlevnadsprinciper för enheter för att kräva operativsystem v2 som lägsta version för att en enhet ska vara kompatibel.
   - Principerna kräver att enheterna ska vara uppdaterade för att de ska fortsätta att få åtkomst till organisationsdata. Skyddade tjänster blockeras när de används med villkorlig åtkomst för enheten. Appar som är aktiverade med en appskyddsprincip blockeras när de öppnas eller när de får åtkomst till organisationsdata.
 

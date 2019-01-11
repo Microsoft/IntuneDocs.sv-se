@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11//28/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 35fd4650d5508995f879f4d83030f70fe9c550b8
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728828"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817372"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -72,11 +72,11 @@ Nya principer som du skapar distribueras inte till alla användare förrän du u
 
 2. I ***Intune-appskydd** väljer du **Tilldelningar** för att öppna fönstret **Intune-appskydd – Tilldelningar**. På fliken *Inkludera* väljer du **Välj grupper att inkludera**. 
 
-   ![Skärmbild av fönstret Tilldelningar med menyalternativet Välj grupper att ta med markerat](./media/app-protection-policy-add-users.png)
+   ![Skärmbild av fönstret Tilldelningar med menyn Välj grupper att ta med](./media/app-protection-policy-add-users.png)
 
 3.  En lista över alla säkerhetsgrupper i **Azure Active Directory** visas. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. 
 
-    ![Skärmbild av fönstret Lägg till användargrupp som visar listan med Azure Active Directory-användare](./media/azure-ad-user-group-list.png)
+    ![Skärmbild av fönstret Lägg till användargrupp med lista över Azure AD-användare](./media/azure-ad-user-group-list.png)
 
 4.  När du har inkluderat och exkluderat grupper sparar du konfigurationen genom att välja **Spara** och distribuera principen till användarna. Om du väljer **Ignorera** innan du sparar konfigurationen ignoreras alla ändringar som du har gjort på flikarna *Inkludera* och *Exkludera*.   
  
@@ -138,7 +138,7 @@ Eftersom Intune-appskyddsprinciper som är riktade till en användares identitet
 
 För att skapa de här principerna bläddrar du till **Klientappar** > **Appskyddsprinciper** i Intune-konsolen och välj **Skapa princip**. Du kan även redigera eller en befintlig princip. För att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter bekräftar du att inställningen **Target to all app types** (Gäller för alla apptyper) är inställd på standardvärdet **Ja**. Om du vill tilldela detaljerade inställningar baserat på hanteringstillståndet ställer du in **Gäller för alla apptyper** till **Nej**. 
 
-![Skärmbild av bladet Lägg till en princip där alternativet Rikta till alla typer av appar är valt](./media/app-protection-policies-target-all.png)
+![Skärmbild av bladet Lägg till en princip med alternativet Rikta till alla typer av appar](./media/app-protection-policies-target-all.png)
 
 För iOS-krävs ytterligare appkonfigurationsinställningar för att rikta in appinställningar till appar på Intune-registrerade enheter:
 - **IntuneMAMUPN** måste konfigureras för alla MDM-hanterade program. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).

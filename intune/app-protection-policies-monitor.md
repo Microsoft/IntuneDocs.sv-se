@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 765fae6f0e860935f5ceccadfdf1d9c3fe45d60e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c0603b3cfd2b8fbe1d26e782118fb07526849cfa
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181912"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816848"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
 ![Panelen Sammanfattning i fönstret Hantering av mobilprogram i Intune](./media/app-protection-user-status-summary.png)
 
--   **Användare:** Totalt antal användare på företaget som använder en app som är associerad med principen i ett arbetssammanhang.
+-   **Användare**: Totalt antal användare på företaget som använder en app som är associerad med principen i ett arbetssammanhang.
 
 -   **HANTERAS AV PRINCIP**: Antal användare som har använt en app som har en princip tilldelad till dem i ett arbetssammanhang.
 
@@ -72,7 +72,7 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
 
   - **Incheckad**: Principen har distribuerats till användaren och appen användes i arbetskontexten minst en gång.
 
-  - **Inte incheckad:** Principen har distribuerats till användaren, men appen har inte använts i arbetskontexten sedan dess.
+  - **Inte incheckad**: Principen har distribuerats till användaren, men appen har inte använts i arbetskontexten sedan dess.
 
 >[!NOTE]
 > Om MAM-principen inte har distribuerats till de användare som du sökte efter, visas ett meddelande om att inga MAM-principer tillämpas på användaren.
@@ -81,7 +81,7 @@ Visa rapporter för en användare genom att följa anvisningarna:
 
 1.  Välj panelen **Sammanfattning** för att välja en användare.
 
-    ![Skärmbild som visar panelen Sammanfattning på bladet Inställningar i Hantering av mobilprogram i Intune](./media/MAM-reporting-6.png)
+    ![Skärmbild av panelen Sammanfattning i hantering av mobilprogram i Intune](./media/MAM-reporting-6.png)
 
 2. I fönstret **Apprapportering** som öppnas väljer du **Välj användare** för att söka efter en Azure Active Directory-användare.
 
@@ -98,9 +98,9 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
 ![Skärmbild som visar två rapporter som är tillgängliga i fönstret Inställningar](./media/MAM-reporting-7.png)
 
--   **Rapport om appskyddsanvändare:** Visar en översikt över samma information som du hittar i rapporten **Användarstatus** under avsnittet Detaljerad vy ovan.
+-   **Användarrapport för appskydd:** Visar en översikt över samma information som du hittar i rapporten **Användarstatus** under avsnittet Detaljerad vy ovan.
 
--   **Rapport om appskyddsappar:** Tillhandahåller två olika statusar om appskydd som administratörer kan välja innan de skapar rapporten. Statusen kan vara skyddad eller oskyddad.
+-   **Apprapport för appskydd:** Tillhandahåller två olika statusar om appskydd som administratörer kan välja innan de skapar rapporten. Statusen kan vara skyddad eller oskyddad.
 
     -   Användarstatus för hanterad MAM-aktivitet (Skyddad): Den här rapporten ger en översikt över hur alla hanterade MAM-appar opererar, per användare.
 
@@ -112,13 +112,13 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
         -   Alla appar är incheckade men kommer inte åt MAM-principer.
 
-![Skärmbild som visar bladet Apprapportering för en användare med en tabell med information för tre registrerade appar](./media/MAM-reporting-4.png)
+![Skärmbild av en användares blad för apprapportering med information för 3 appar](./media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Tabellgruppering
 
 När data för **användarrapporten för appskydd** visas kan du sammanställa informationen enligt följande:
 
-- **Verifieringsresultat:** Informationen visas grupperad efter appskyddsstatus, vilken kan vara fel, varning eller klar.
+- **Valideringsresultat:** Informationen visas grupperad efter appskyddsstatus, vilken kan vara fel, varning eller klar.
 - **Appnamn:** Informationen visas grupperad efter appar (det faktiska appnamnet) som fel, varning eller klar.
 
 ## <a name="export-app-protection-activities-to-csv"></a>Exportera appskyddsaktiviteter till CSV
@@ -129,7 +129,7 @@ Generera appskyddsrapporten genom att följa dessa anvisningar:
 
 1. Välj **Appskyddsrapport** i fönstret Hantering av mobilprogram i Intune.
 
-    ![Skärmbild som visar nedladdningslänken Appskydd i fönstret Hantering av mobilprogram i Intune](./media/app-protection-report-csv-2.png)
+    ![Skärmbild av nedladdningslänken för appskydd](./media/app-protection-report-csv-2.png)
 
 2. Välj först Ja om du vill spara rapporten, välj sedan Spara som och ange den mapp som du vill spara rapporten i.
 

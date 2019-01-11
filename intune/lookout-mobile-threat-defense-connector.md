@@ -1,6 +1,5 @@
 ---
-title: Lookout MTD-anslutningsprogram med Microsoft Intune
-titlesuffix: ''
+title: Lookout MTD-anslutningsprogram med Microsoft Intune | Microsoft Intune
 description: Läs mer om hur du integrerar Intune med Lookout Mobile Threat Defense (MTD) för att styra mobil enhetsåtkomst till företagets resurser.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d7a545fe08acc9ab88086fa92be934c860ae4716
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bd61b10ee60e1f9413c22d0d618bc5c270dc76a6
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179549"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817083"
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Lookout Mobile Threat Defense-anslutningsprogram med Intune
 
@@ -63,34 +62,34 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 **Blockera när skadliga appar identifieras:**
 
-![diagram som visar en princip för villkorlig åtkomst som blockerar åtkomsten när en enhet bedöms vara icke-kompatibel på grund av skadliga appar på enheten](./media/malicious-apps-blocked.png)
+![Konceptbild av hur principen blockerar åtkomst på grund av skadliga appar](./media/malicious-apps-blocked.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![diagram som visar hur en princip för villkorlig åtkomst beviljar åtkomst när en enhet bedöms vara kompatibel efter problemet åtgärdats](./media/malicious-apps-unblocked.png)
+![Konceptbild som visar när åtkomst beviljas till enheter efter åtgärd](./media/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och skydda åtkomsten till WiFi-nätverk baserat på enhetens risk.
 
 **Blockera nätverksåtkomst via Wi-Fi:**
 
-![diagram som visar hur villkorlig åtkomst blockerar WiFi-åtkomst baserat på nätverkshot](./media/network-wifi-blocked.png)
+![Bild som visar blockering av WiFi-åtkomst baserat på nätverkshot](./media/network-wifi-blocked.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![diagram som visar hur villkorlig åtkomst beviljar åtkomst efter att hotet har oskadliggjorts](./media/network-wifi-unblocked.png)
+![Konceptbild av villkorlig åtkomst som beviljas efter åtgärd](./media/network-wifi-unblocked.png)
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 
 Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och förhindra synkronisering av företagsfiler baserat på enhetens risk för angrepp.
 
 **Blockera SharePoint Online när hot identifieras på nätverket:**
 
-![Diagram som visar hur villkorlig åtkomst blockerar enheter från att få åtkomst till SharePoint Online baserat på identifiering av hot](./media/network-spo-blocked.png)
+![Konceptbild som visar blockerad åtkomst till SharePoint Online](./media/network-spo-blocked.png)
 
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Diagram som visar hur villkorlig åtkomst beviljar åtkomst efter att hotet har oskadliggjorts](./media/network-spo-unblocked.png)
+![Konceptbild som visar beviljad åtkomst efter att nätverkshot har åtgärdats](./media/network-spo-unblocked.png)
 
 ## <a name="next-steps"></a>Nästa steg
 Här följer de åtgärder du måste utföra för att implementera den här lösningen:

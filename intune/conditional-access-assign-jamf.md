@@ -1,12 +1,12 @@
 ---
-title: Efterlevnadsprincip för Jamf-enheter
+title: Efterlevnadsprincip för Jamf-enheter | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Använd Microsoft Intunes efterlevnadsprinciper med Azure Active Directorys villkorliga åtkomst för att skydda Jamf-hanterade enheter.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6fa89e96b05e5344dec32fb452be8ebeaa58bc12
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d7d054b11a4abc969ad411169d0222be37fd6711
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182031"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817236"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
-Gäller för: Intune på Azure Portal
+Gäller för: Intune i Azure Portal
 
 Du kan använda Azure Active Directory och Microsoft Intunes principer för villkorlig åtkomst för att tillse att dina slutanvändare efterlever organisationens krav. Du kan tillämpa de här principerna på Mac-datorer som är [hanterade med Jamf Pro](conditional-access-integrate-jamf.md). Detta kräver tillgång till både Intune- och Jamf Pro-konsolerna.
 
@@ -57,7 +57,7 @@ Du bör distribuera företagsportalappen för macOS i Jamf Pro som en bakgrundsi
 ## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Skapa en princip i Jamf Pro för att få användarna att registrera sina enheter med Azure Active Directory
 
 > [!NOTE]
-> Du behöver [distribuera företagsportalen](conditional-access-assign-jamf.md#require-the-company-portal-app-for-macos) för macOS innan du går igenom nästa steg.  
+> Du behöver [distribuera företagsportalen](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) för macOS innan du går igenom nästa steg.  
 
 Slutanvändare behöver starta företagsportalappen via Jamf Self Service att registrera enheten med Azure AD som en enhet som hanteras av Jamf Pro. Detta kräver att slutanvändarna vidtar åtgärder. Vi rekommenderar att du [kontaktar användaren](end-user-educate.md) via e-post, Jamf Pro-meddelanden eller på andra sätt för att be dem att klicka på knappen i Jamf Self Service.
 

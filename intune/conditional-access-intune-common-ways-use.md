@@ -1,6 +1,5 @@
 ---
-title: Scenarier för villkorlig åtkomst
-titlesuffix: Microsoft Intune
+title: Scenarion för villkorlig åtkomst | Microsoft Intune
 description: Läs om hur villkorlig åtkomst med Intune ofta används för enhetsbaserad och appbaserad villkorlig åtkomst.
 keywords: ''
 author: brenduns
@@ -15,12 +14,12 @@ ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
-ms.openlocfilehash: 7073c5c617806bcf35934aba73bf15a9a195a506
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 753ad125e541936586f2939985a23ed3b06ea7ea
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112484"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817168"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 

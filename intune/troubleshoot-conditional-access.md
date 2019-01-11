@@ -1,5 +1,5 @@
 ---
-title: Felsöka villkorlig åtkomst
+title: Felsöka villkorlig åtkomst | Microsoft Intune
 description: Vad du kan göra om användarna inte lyckas komma åt resurser via villkorlig åtkomst i Intune.
 keywords: ''
 author: brenduns
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 642a4da6a1ca3c368e90f2d3007c1fc6a068af78
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d24b96408ed02413f25957e2558704385c5e1bfd
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189239"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817151"
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
@@ -73,7 +73,7 @@ Om en enhet har åtkomst trots att den är inkompatibel vidtar du följande åtg
 - Granska dina mål- och undantagsgrupper. Om användare inte är i rätt målgrupp, eller är i en undantagsgrupp, blockeras de inte. Efterlevnad kontrolleras endast för enheter som har användare i en målgrupp.
 - Kontrollera att enheten identifieras. Pekar Exchange Connector på en Exchange 2010-klientåtkomstserver när användaren har en Exchange 2013-servern? I så fall kan Intune inte känna till enhetens anslutning till Exchange om Exchange-standardregeln är Tillåt, även om användaren är i målgruppen.
 - Kontrollera om enhetens finns/enhetens åtkomststatus i Exchange:
-  - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: "Get-ActiveSyncDeviceStatistics -mailbox mbx'. Om enheten inte visas har den inte åtkomst till Exchange.
+  - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: Get-ActiveSyncDeviceStatistics -mailbox mbx. Om enheten inte visas har den inte åtkomst till Exchange.
   - Om enheten visas använder du cmdleten Get-CASmailbox -identity:’upn’ | fl för att få detaljerad information om enhetens åtkomststatus och ange den informationen till Microsoft Support.
 
 ## <a name="next-steps"></a>Nästa steg

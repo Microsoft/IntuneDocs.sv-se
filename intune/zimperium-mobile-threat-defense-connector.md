@@ -16,18 +16,18 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b94b4228f05abd2e7c815797f2f187efb8b303e4
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187471"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817253"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-anslutning med Intune
 
 Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst. Den baseras på riskbedömning som utförs av Zimperium, en Mobile Threat Defense-lösning (MTD) som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Zimperium-appen.
 
-Du kan konfigurera principer för villkorlig åtkomst baserat på Zimperiums riskbedömning. Den aktiveras via Intunes efterlevnadsprinciper för enheter, som du kan använda för att tillåta eller blockera icke-kompatibla enheter för företagets resurser baserat på de hot som har identifierats.
+Du kan konfigurera principer för villkorlig åtkomst baserat på Zimperiums riskbedömning som aktiveras via Intunes principer för enhetsefterlevnad. Riskbedömningspolicyn kan tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Hur skyddar Intune och Zimperium företagets resurser?
 
@@ -51,11 +51,11 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 **Blockera när skadliga appar identifieras:**
 
-![Skadliga appar har identifierats](./media/Maliciousapps_blocked_Zimperium.png)
+![Konceptbild av skadliga appar som har identifierats](./media/Maliciousapps_blocked_Zimperium.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Beviljad åtkomst till skadliga appar upptäcktes](./media/maliciousapps_unblocked_Zimperium.png)
+![Konceptbild av beviljad åtkomst när problemet är löst](./media/maliciousapps_unblocked_Zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 
@@ -95,7 +95,7 @@ Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket och
 
 -   Prenumeration på Zimperium Mobile Threat Defense
 
-    -   Mer information finns på  [Zimperiums webbplats](https://www.zimperium.com/zips-mobile-ips) .
+    -   Mer information finns på  [Zimperiums webbplats](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -6,19 +6,19 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 07/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
-ms.openlocfilehash: 8eeb55ca9e2c698d2d9e1814e9ea17f779326732
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 313c20699c30d20d1bbc9bb6aea9189a83b61f53
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178502"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816641"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Better Mobile Threat Defense-anslutning i Intune
 
@@ -48,7 +48,7 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 **Blockera när skadliga appar identifieras:**
 
-![Skadliga appar har identifierats](./media/better_mobile_maliciousapps_blocked.png)
+![Bild som visar att skadliga appar har identifierats](./media/better_mobile_maliciousapps_blocked.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
@@ -64,7 +64,7 @@ Identifiera hot mot ditt nätverk såsom **man-in-the-middle**-angrepp, och skyd
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Åtkomst beviljad när problemet är löst](./media/better_mobile_network_wifi_unblocked.png)
+![Bild av beviljad åtkomst när problemet är löst](./media/better_mobile_network_wifi_unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 

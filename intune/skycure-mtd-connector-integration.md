@@ -1,6 +1,5 @@
 ---
-title: Konfigurera Symantec-integration med Microsoft Intune
-titlesuffix: ''
+title: Konfigurera Symantec-integration med Microsoft Intune | Microsoft Intune
 description: Konfigurera Symantec Endpoint Protection Mobile-lösningen med Microsoft Intune för att styra mobil enhetsåtkomst till företagets resurser.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: accd8dea2b997a6eb1cfec22a6e822e984ef710d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4b519c30f432a6d8584c2bd5bca94ead95a862b1
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180161"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817355"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Konfigurera Symantec Endpoint Protection Mobile-integrering med Intune
 
@@ -53,7 +52,7 @@ SEP Mobile har stöd för två integreringslägen med Intune:
 
 -   **Android-app:** Slutanvändarna kan logga in på Azure AD med en Android-app.
 
--   **Hanteringsapp:** Detta är SEP Mobile Azure AD-app för flera innehavare som möjliggör kommunikation från tjänst till tjänst med Intune.
+-   **Hanteringsapp:** Detta är SEP Mobile Azure AD-appen för flera innehavare som möjliggör kommunikation från tjänst till tjänst med Intune.
 
 ## <a name="to-set-up-the-read-only-integration-between-intune-and-sep-mobile"></a>Så här konfigurerar du skrivskyddad integrering mellan Intune och SEP Mobile
 
@@ -68,7 +67,7 @@ SEP Mobile har stöd för två integreringslägen med Intune:
 
 4.  Bredvid **iOS-appen**, välj **Lägg till i Active Directory**.
 
-    ![Bild av iOS-appen på [Symantec Endpoint Protection Mobile-hanteringskonsolen]](./media/symantec-portal-basic-add.png)
+    ![Bild av Symantec Endpoint Protection Mobile-hanteringskonsolen](./media/symantec-portal-basic-add.png)
 
 5.  När inloggningssidan öppnas anger du dina autentiseringsuppgifter för Intune och väljer sedan på **Acceptera**.
 
@@ -90,7 +89,7 @@ Du måste lägga till en Azure AD-säkerhetsgrupp som innehåller alla enheter s
 
 SEP Mobile synkroniserar de enheter som kör Mobile Threat Defense-tjänsten med Azure AD-säkerhetsgrupperna.
 
-![Bild som visar att säkerhetsgruppens konfiguration slutfördes i SEP Mobile-hanteringskonsolen](./media/symantec-portal-basic-status.png)
+![Bild som visar säkerhetsgruppens konfiguration i SEP Mobile-hanteringskonsolen](./media/symantec-portal-basic-status.png)
 
 ## <a name="to-set-up-the-full-integration-between-intune-and-sep-mobile"></a>Konfigurera fullständig integrering mellan Intune och SEP Mobile
 

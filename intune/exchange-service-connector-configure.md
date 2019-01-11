@@ -1,12 +1,11 @@
 ---
-title: Intune Exchange Connector för Exchange Online
-titleSuffix: ''
+title: Intune Exchange Connector för Exchange Online | Microsoft Intune
 description: Anslut Intune till Office 365 Exchange-tjänsten för att stödja Exchange ActiveSync MDM (mobil enhetshantering).
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 318bde24e42bfdf9bbcf15d83f42405fc06f7901
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9845ed1b809b611975c07c6c8335acd237d845c0
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184224"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816709"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Konfigurera Exchange-tjänstens anslutningsprogram för Intune och Exchange Online
 Den här artikeln visar hur du ansluter Microsoft Intune-tjänsten till Exchange Online eller den nya Exchange Online Dedicated-tjänsten. Om du vill ta reda på om Exchange Online Dedicated-miljön är den **nya** eller **äldre** versionen kontaktar du din kontoansvariga.
@@ -52,7 +51,7 @@ Du måste även skapa ett Exchange Online-användarkonto som används av Intune 
 
 ## <a name="set-up-the-service-to-service-connector"></a>Konfigurera tjänst till tjänstanslutning
 
-1. Logga in på [Azure Portal](http://portal.azure.com) med ett konto som har administratörsrättigheter för Exchange och behörigheter för cmdletarna som [beskrivs ovan](#exchange-cmdlet-requirements), en giltig Intune-licens och rollen Global administratör. Microsoft Intune använder den inloggade användarens e-postadress för att upprätta anslutningen.
+1. Logga in på [Azure Portal](https://portal.azure.com) med ett konto som har administratörsrättigheter för Exchange och behörigheter för cmdletarna som [beskrivs ovan](#exchange-cmdlet-requirements), en giltig Intune-licens och rollen Global administratör. Microsoft Intune använder den inloggade användarens e-postadress för att upprätta anslutningen.
 
 2. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 

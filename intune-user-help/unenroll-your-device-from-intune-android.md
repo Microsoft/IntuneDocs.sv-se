@@ -1,11 +1,11 @@
 ---
 title: Ta bort en Android-enhet från Intune | Microsoft Docs
-description: Beskriver hur du avregistrerar en Android-enhet från Intune
+description: Ta bort en Android-enhet från Intune-företagsportalen
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d932005c955afed7f16e9766b559b77b2cd43182
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: 75b26e178badbaa7905199eb91490134d2b72ba9
+ms.sourcegitcommit: 61ed365f7f8826451c41bcab5e19bef97b5a3c72
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959493"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54057346"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Avregistrera din Android-enhet från hanteringen  
 
@@ -51,8 +51,23 @@ Så här tar du bort alla data som företagsportalappen för Android lagrar på 
 -   Ta bort mappen \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal
 
 ## <a name="uninstall-the-company-portal-app"></a>Avinstallera företagsportalappen  
-Eftersom Företagsportalen är en enhetshanteringsapp går det inte att avinstallera den förrän du [avregistrerat din enhet från dess hantering](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). När du har gjort det trycker du på och håller ned ikonen för företagsportalappen tills du ser **Avinstallera**. Tryck på **Avinstallera** för att ta bort appen från enheten.  
+Företagsportalen är en app för enhetshantering. Den kan inte avinstalleras förrän du [avregistrerat din enhet från dess hantering](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). När du har gjort det trycker du på och håller ned ikonen för företagsportalappen tills du ser **Avinstallera**. Tryck på **Avinstallera** för att ta bort appen från enheten.  
 
 Du kan också trycka på **Inställningar** > **Appar** > **Företagsportal** > **Avinstallera**.  
+
+### <a name="remove-company-portal-app-as-device-administrator"></a>Ta bort företagsportalappen som enhetsadministratör  
+Som en sista utväg kan du avinstallera appen från din enhet genom att ta bort den som enhetsadministratör.  
+
+Om du har en enhet som ägs av företaget kanske din organisation kräver att företagsportalen alltid ska finnas på din enhet. Om du avinstallerar den kan du förlora åtkomst till skyddade företagsresurser, till exempel e-post, appar, Wi-Fi eller VPN, tills appen har installerats om. Mer information om hur du installerar, uppdaterar eller tar bort obligatoriska appar finns i [Lägga till appar i Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+
+Slutför stegen nedan för att inaktivera företagsportalen som enhetsadministratör. De faktiska namnen på varje inställning kan skilja sig åt beroende på Android-enhet.  
+
+**Android-steg, alternativ 1**:  
+1. Välj **Inställningar** > **Säkerhet** > **Övriga säkerhetsinställningar** > **Enhetsadministratörer**.  
+2. Avmarkera **Företagsportal**.  
+
+**Android-steg, alternativ 2**:  
+1. Välj **Inställningar** > **Låsskärm och säkerhet** > **Övriga säkerhetsinställningar** > **Enhetsadministratörsappar**.  
+2. Avmarkera **Företagsportal**.    
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980)

@@ -1,12 +1,11 @@
 ---
-title: Lägga till och tilldela MTD-appar i Microsoft Intune
-titleSuffix: ''
+title: Lägga till och tilldela MTD-appar i Microsoft Intune | Microsoft Intune
 description: Använda Intune för att lägga till MTD-program, Microsoft Authenticator-app och iOS-konfigurationsprincip i Azure-portalen.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +15,19 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: afc5028e4ed57757832844637298caf1656d610c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d08a7332ba96f552b488ad3f5d00004d0445d7ec
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181181"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996005"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune
 
 > [!NOTE] 
 > Detta avsnitt gäller alla Mobile Threat Defense-partner.
 
-Du kan använda Intune för att lägga till och distribuera MTD-apparna så att slutanvändarna får ett meddelande när ett hot har identifierats i deras mobila enheter och anvisningar för att åtgärda hoten.
+Du kan använda Intune för att lägga till och distribuera MTD-apparna (Mobile Threat Defense) så att slutanvändarna får ett meddelande när ett hot har identifierats i deras mobila enheter och anvisningar för att åtgärda hoten.
 
 
 ## <a name="before-you-begin"></a>Innan du börjar
@@ -38,13 +37,12 @@ Följande steg måste utföras i [Azure-portalen](https://portal.azure.com/). Ko
   -   [Lägga till en app i Intune](apps-add.md).
   -   [Lägga till en konfigurationsprincip för iOS-appar i Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
   -   [Tilldela en app med Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune).
-  -   [ Lägga till en konfigurationsprincip för iOS-appar](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
 
 > [!TIP]
 > Intune-företagsportalen fungerar som broker på Android-enheter så att användare kan få sina identiteter kontrollerade av Azure AD.
 
 ## <a name="configure-microsoft-authenticator-for-ios"></a>Konfigurera Microsoft Authenticator för iOS
-För iOS-enheter krävs [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) så att användarnas identiteter kan kontrolleras av Azure AD. Dessutom behövs konfigurationsprincipen för iOS-appar som identifierar MTD iOS-appen för användning med Intune.
+För iOS-enheter krävs [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) så att användarnas identiteter kan kontrolleras av Azure AD. Dessutom behövs en konfigurationsprincip för iOS-appar som konfigurerar MTD iOS-appen för användning med Intune.
 
 Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Microsoft Authenticator-appbutiken](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) i **steg 12** under avsnittet **Konfigurera appinformation**.
 
@@ -145,11 +143,11 @@ Välj det avsnitt som motsvarar din MTD-provider:
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Konfigurationsprincip för Lookout for Work-app
 
-- Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i avsnittet om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
+- Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i artikeln om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
 
 ### <a name="sep-mobile-app-configuration-policy"></a>Konfigurationsprincip för SEP Mobile-app
 
--   Använd samma Azure AD-konto som tidigare konfigurerades i [Symantec Endpoint Protection-hanteringskosolen](https://aad.skycure.com), vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
+-   Använd samma Azure AD-konto som tidigare konfigurerades i [Symantec Endpoint Protection-hanteringskonsolen](https://aad.skycure.com), vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
 
 -   Så här **laddar du ned** konfigurationsprincipen för iOS-appen: 
     -   Gå till [Symantec Endpoint Protection-hanteringskonsol](https://aad.skycure.com) och logga in med dina administratörsautentiseringsuppgifter.

@@ -130,6 +130,7 @@
 ### [Vad händer om du återställer din enhet?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-windows.md)
 ### [Synkronisera enheten manuellt](sync-your-device-manually-windows.md)
+### [Få hjälp och support](help-support-windows-cpapp.md)
 
 ### [Felsöka vanliga problem för Windows](troubleshoot-your-device-windows.md)
 #### [Åtgärda problem med åtkomstpunktsbegränsningar](resolve-access-point-restrictions.md)

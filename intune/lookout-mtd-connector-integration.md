@@ -1,12 +1,11 @@
 ---
-title: Konfigurera Lookout-integreringen med Microsoft Intune
-titlesuffix: ''
+title: Konfigurera Lookout-integreringen med Microsoft Intune | Microsoft Intune
 description: Läs mer om hur du integrerar Intune med Lookout Mobile Threat Defense för att styra mobila enheters åtkomst till företagsresurser.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f0ff43e5a25a2f2d7d97564e638d01b014ab81cb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 84bc12d568fce0f5cd6e460595eedf0af0d6296e
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181079"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816879"
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurera Lookout Mobile Threat Defense-integreringen med Intune
 
@@ -77,11 +76,11 @@ Använd följande steg för att samla in den information du måste förse Lookou
 
 3. I [Lookout-konsolen](https://aad.lookout.com) går du till **System**-modulen och väljer fliken **Kopplingar** och sedan **Intune**.
 
-   ![skärmbild som visar Lookout-konsolen med fliken för anslutningar öppen och alternativet Intune markerat](./media/lookout_mtp_setup-intune-connector.png)
+   ![Bild som visar Lookout-konsolen med alternativet Intune på fliken för anslutningar](./media/lookout_mtp_setup-intune-connector.png)
 
 4. Välj **Kopplingar** > **Anslutningsinställningar** och ange **Pulsslagsfrekvens** i minuter.
 
-   ![skärmbild av fliken för anslutningsinställningar som visar hur pulsslagsfrekvensen konfigurerats](./media/lookout-mtp-connection-settings.png)
+   ![Bild av fliken för anslutningsinställningar som visar hur pulsslagsfrekvensen konfigurerats](./media/lookout-mtp-connection-settings.png)
 
 ## <a name="configure-enrollment-groups"></a>Konfigurera registreringsgrupper
 1. Du bör skapa en Azure AD-säkerhetsgrupp i [Azure AD-hanteringsportalen](https://manage.windowsazure.com) som innehåller ett litet antal användare för att testa Lookout-integreringen.
@@ -95,10 +94,10 @@ Använd följande steg för att samla in den information du måste förse Lookou
 
     >[!IMPORTANT]
     > **Visningsnamn** är skiftlägeskänsligt i säkerhetsgruppens **Egenskaper** i Azure-portalen. Som bilden nedan visar är säkerhetsgruppens **Visningsnamn** en kamelnotation medan titeln endast använder gemener. I Lookout-konsolen är skiftläget för **Visningsnamn** samma som för säkerhetsgruppen.
-    >![skärmbild av egenskaper-sidan för Azure Active Directory-tjänsten i Azure-portalen](./media/aad-group-display-name.png)
+    >![Bild av egenskapssidan för Azure Active Directory-tjänsten i Azure-portalen](./media/aad-group-display-name.png)
 
     >[!NOTE] 
-    >Det rekommenderas att använda de inställningar som är standard (fem minuter) för tidsintervallerna då nya enheter eftersöks. Aktuella begränsningar: **Lookout kan inte verifiera gruppvisningsnamn:** Se till att fältet **VISNINGSNAMN** i Azure-portalen matchar Azure AD-säkerhetsgruppen exakt. **Det går inte att skapa kapslade grupper:** Azure AD-säkerhetsgrupper som används i Lookout får endast innehålla användare. De får inte innehålla andra grupper.
+    >Det rekommenderas att använda de inställningar som är standard (fem minuter) för tidsintervallerna då nya enheter eftersöks. Nuvarande begränsningar, **Lookout kan inte validera visningsnamn för gruppen:** Se till att fältet **VISNINGSNAMN** i Azure-portalen exakt matchar Azure AD-säkerhetsgruppen. **Det går inte att skapa kapslade grupper:**  Azure AD-säkerhetsgrupper som används i Lookout får endast innehålla användare. De får inte innehålla andra grupper.
 
 3.  Första gången en användare öppnar Lookout for Work-appen på en enhet efter att en grupp har lagts till aktiveras enheten i Lookout.
 
@@ -115,7 +114,7 @@ Ange den e-postadress som ska ta emot felrapporter i alternativet **Error Manage
 ## <a name="configure-enrollment-settings"></a>Konfigurera registreringsinställningar
 I modulen **System** på sidan **Kopplingar** anger hur många dagar innan en enhet betraktas som frånkopplad.  Frånkopplade enheter betraktas som icke-kompatibla och kommer att blockeras från att komma åt företagsprogrammen baserat på principer för villkorlig åtkomst i Intune. Du kan ange värden mellan 1 och 90 dagar.
 
-![Lookout-registreringsinställningar](./media/lookout-console-enrollment-settings.png)
+![Lookout-registreringsinställningar i modulen System](./media/lookout-console-enrollment-settings.png)
 
 ## <a name="configure-email-notifications"></a>Konfigurera e-postaviseringar
 Logga in i [Lookout-konsolen](https://aad.lookout.com) med det användarkonto som ska ta emot meddelanden om du vill ta emot e-postaviseringar för hot. På fliken **Inställningar** i **System**-modulen väljer du de hotnivåer som ska generera meddelanden och ställer in dem på **PÅ**. Spara ändringarna.
@@ -123,7 +122,7 @@ Logga in i [Lookout-konsolen](https://aad.lookout.com) med det användarkonto so
 ![skärmbild som visar sidan för inställningar där användarkontot visas](./media/lookout-mtp-email-notifications.png) Om du inte längre vill ta emot e-postaviseringar väljer du alternativet **AV** för meddelanden och sparar ändringarna.
 
 ### <a name="configure-threat-classification"></a>Konfigurera hotklassificering
-Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-hotklassificeringar](http://personal.support.lookout.com/hc/articles/114094130693) är kopplade till standardrisknivåer. Dessa kan ändras när som helst för att passa företagets krav.
+Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-hotklassificeringar](https://personal.support.lookout.com/hc/articles/114094130693) är kopplade till standardrisknivåer. Dessa kan ändras när som helst för att passa företagets krav.
 
 ![skärmbild av sidan för principer som visar hot och klassificeringar](./media/lookout-mtp-threat-classification.png)
 

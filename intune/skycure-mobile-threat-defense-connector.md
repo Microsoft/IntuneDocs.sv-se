@@ -1,6 +1,5 @@
 ---
-title: Symantec-anslutningsprogram med Microsoft Intune
-titlesuffix: ''
+title: Symantec-anslutningsprogram med Microsoft Intune | Microsoft Intune
 description: Läs mer om hur du integrerar Intune med Symantec Endpoint Protection Mobile för att styra mobil enhetsåtkomst till företagets resurser.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1503bdb9b62e7e9fb4b2d5a0482e058d6fed31f7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5ba90d47f13ac22465927fc5724a254f121c800e
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187709"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817134"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-anslutningsprogram
 
@@ -67,11 +66,11 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 **Blockera när skadliga appar identifieras:**
 
-![Skadliga appar har identifierats](./media/symantec-arch-1.png)
+![Konceptbild av skadliga appar som har identifierats](./media/symantec-arch-1.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Åtkomst beviljad när problemet är löst efter att skadliga appar har identifierats](./media/symantec-arch-2.png)
+![Bild av Åtkomst beviljad när problemet är löst efter att skadliga appar har identifierats](./media/symantec-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 

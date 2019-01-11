@@ -1,6 +1,5 @@
 ---
-title: Hantera dataöverföring mellan iOS-appar
-titlesuffix: Microsoft Intune
+title: Hantera dataöverföring mellan iOS-appar | Microsoft Intune
 description: Läs om hur du använder principer för hantering av mobilappar i Microsoft Intune för att hantera dataöverföringar mellan appar.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e252822569723be6cfe18e488f79a7605f21193c
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: bbd0272b37b56f9f9e66cdf00ddc89a827f3c875
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728675"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816981"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -40,7 +39,7 @@ Använd appskyddsprinciper med iOS-funktionen **Öppna i hantering** för att sk
 
 -   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Tillåt att appen överför data till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Tillåt att appen tar emot data från andra appar** och väljer önskad nivå för datamottagning. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-protection-settings).   
 
--   **Enheter som hanteras av en MDM-lösning från tredje part:** Du kan begränsa dataöverföringen till endast hanterade appar med hjälp av iOS-funktionen **Öppna i hantering**.
+-   **Enheter som hanteras av en MDM-lösning från tredje part:** Du kan begränsa dataöverföringen till endast hanterade appar med hjälp av funktionen **Öppna i hantering** i iOS.
 För att säkerställa att appar som du distribuerar med en MDM-lösning från tredje part också är associerade med dina Intune-appskyddsprinciper måste du konfigurera användarinställningen för UPN enligt beskrivningen i följande avsnitt: [Konfigurera användarinställningar för UPN](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). När appar distribueras med användarinställningen för UPN så tillämpas appskyddsprinciperna på appen när användaren loggar in med sitt arbetskonto.
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurera inställningen för användar-UPN för Microsoft Intune eller en EMM-lösning från tredje part
@@ -77,7 +76,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Sträng | %upn% |
 
 
-### <a name="example-2-end-user-experience"></a>Exempel 2: Slutanvändarupplevelse
+### <a name="example-2-end-user-experience"></a>Exempel 2: Upplevelse för slutanvändaren
 
 1.  En användare installerar Microsoft Word-appen på en enhet.
 

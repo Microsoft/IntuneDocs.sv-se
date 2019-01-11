@@ -1,6 +1,5 @@
 ---
-title: Övervaka villkorlig åtkomst i Exchange i Microsoft Intune
-titlesuffix: ''
+title: Övervaka villkorlig åtkomst i Exchange i Microsoft Intune | Microsoft Intune
 description: Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online via Intune Azure Portal.
 keywords: ''
 author: brenduns
@@ -15,12 +14,12 @@ ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 20a99290d2a84c22bc2bee823d7a3bb42e43aced
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 8c9602dbe183501cc779fcb9b5d5a1e6e4bf6154
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180586"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816778"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i Intune
 
@@ -64,8 +63,8 @@ I fönstret med enhetsinformation visas mer information:
 
 -   **Identifierade appar:** Här visas alla program som har installerats på enheten. Du kan också exportera listan över installerade appar i .CSV-format.
 
--   **Kompatibilitet:** Här visas all information om enhetens efterlevnadsprincip.
+-   **Efterlevnad:** Här visas all information om enhetens efterlevnadsprincip.
 
--   **Enhetskonfiguration:** Här visas all information om enhetens konfiguration.
+-   **Enhetskonfiguration:** Här visas information om enhetskonfiguration.
 
 -   **Exchange-åtkomst:** Här kan du läsa mer om enhetens tillstånd efter det att principerna för villkorlig åtkomst har tillämpats.

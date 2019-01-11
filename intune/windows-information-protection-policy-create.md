@@ -1,6 +1,5 @@
 ---
-title: Skapa och distribuera en WIP-appskyddsprincip
-titlesuffix: Microsoft Intune
+title: Skapa och distribuera en WIP-appskyddsprincip | Microsoft Intune
 description: Skapa och distribuera en WIP-appskyddsprincip med Microsoft Intune
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b5599e98b9712d30979c327167b19b159d3ff5dc
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 57d0aaebd0ed07a78b32eec64a6dc2817bf5e7f5
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181341"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817321"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -35,15 +34,15 @@ Du måste känna till några grundläggande begrepp när du lägger till en WIP-
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Lista över tillåtna och undantagna appar
 
--   **Skyddade appar**: Dessa appar måste följa den här principen.
+-   **Skyddade appar:** Dessa appar måste följa den här principen.
 
--   **Undantagna appar**: De här apparna har undantagits från den här principen och har åtkomst till företagets data utan begränsningar.
+-   **Undantagna appar:** De här apparna har undantagits från den här principen och har åtkomst till företagets data utan begränsningar.
 
 ### <a name="types-of-apps"></a>Apptyper
 
 -   **Rekommenderade appar:** En i förväg ifylld lista med appar (huvudsakligen för Microsoft Office) som du enkelt kan importera till principen.
 -   **Store-appar:** Du kan lägga till valfri app från Windows Store i principen.
--   **Windows-skrivbordsappar:** Du kan lägga till valfria traditionella Windows-skrivbordsappar i principen (t.ex. exe, dll osv.)
+-   **Windows-skrivbordsappar:** Du kan lägga till valfria traditionella Windows-skrivbordsappar i principen (t.ex. .exe, .dll osv.)
 
 ## <a name="prerequisites"></a>Krav
 
@@ -78,7 +77,7 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
     - **Namn:** Skriv ett namn (obligatoriskt) för den nya principen.
     - **Beskrivning:** (Valfritt) Ge en beskrivning.
     - **Plattform:** Välj **Windows 10** som den plattform som stöds för din appskyddsprincip.
-    - **Registreringstillstånd:** Välj **Utan registrering** som din princips registreringstillstånd.
+    - **Registreringsstatus:** Välj **Utan registrering** som din princips registreringsstatus.
 7.  Välj **Skapa**. Principen skapas och visas i tabellen på bladet **Appskyddsprinciper**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Lägga till rekommenderade appar i listan över skyddade appar
@@ -149,7 +148,7 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
 1.  Välj principens namn på bladet **Apprincip** och välj sedan **Nödvändiga inställningar**.
 
-    ![Skärmdump av utbildningsläge](./media/learning-mode-sc1.png)
+    ![Skärmbild av fönstret Inlärningsläge](./media/learning-mode-sc1.png)
 
 1.  Välj en inställning och välj sedan **Spara**.
 
