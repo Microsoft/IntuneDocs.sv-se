@@ -1,12 +1,11 @@
 ---
-title: Ta reda på hur du kan få support för Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Så här får du support för Microsoft Intune | Microsoft Intune
 description: Få online- och telefonsupport för Microsoft Intunes betalda prenumerationer och provprenumerationer.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: cacamp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2feb18f9c21929d803bbb3605842effa8f63d75d
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 6a57a3a26a786e86775ce1509c5f751d2856f95b
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247177"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817304"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune
 
@@ -49,11 +48,11 @@ Om de vanliga lösningarna inte hjälper kan du välja **supportbegäran**. En n
 
 1. Logga in på Azure Portal (<https://portal.azure.com>) med dina administratörsautentiseringsuppgifter för Intune och välj **?** i det övre högra hörnet i portalen. Välj sedan **Hjälp + support** för att gå till sidan [Azure Hjälp + support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
-   ![Skärmbild av frågetecknet som är länken till hjälp + support med länken markerad](./media/azure-get-support.png)
+   ![Bild av länken med frågetecken med länken Hjälp och support markerad](./media/azure-get-support.png)
 
 2. På sidan **Hjälp och support** i Azure väljer du **Ny supportbegäran**.
 
-   ![Skärmbild av sidan Azure Hjälp och support med länken för ny supportbegäran markerad](media/azure-support-ticket-link.png)
+   ![Bild av länken Ny supportbegäran markerad på Hjälp och support-sidan](media/azure-support-ticket-link.png)
 
 3. På fliken **Grundläggande** kan du för de flesta tekniska problem med Intune välja följande alternativ:
    - **Ärendetyp**: **Teknisk**
@@ -63,18 +62,18 @@ Om de vanliga lösningarna inte hjälper kan du välja **supportbegäran**. En n
    - **Undergrupp av problem**: Välj din undergrupp av problem från den nedrullningsbara menyn.
    - **Ämne**: Beskriv kort ditt problem.
 
-   ![Skärmbild av fliken Grunder i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-basics.png)
+   ![Bild av fliken Grunder i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-basics.png)
 
    Välj **Nästa: Lösningar** för att fortsätta.
 4. På fliken **Lösningar** kan du granska de rekommenderade stegen som kan hjälpa dig lösa problemet utan att skicka in något ärende. Om du fortfarande vill skapa en supportbegäran efter att ha granskat stegen, klickar du på **Nästa: Information**.
 
-   ![Skärmbild av fliken Lösningar i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-solutions.png)
+   ![Bild av fliken Lösningar i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-solutions.png)
 5. På fliken **Information** fyller du i informationen om ditt problem, supportmetod och din kontaktinformation. Klicka sedan på **Nästa: Granska och skapa**.
 
-   ![Skärmbild av fliken Information i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-details.png)
+   ![Bild av fliken Detaljer i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-details.png)
 6. Granska informationen och kontrollera att den är korrekt. Välj sedan **Skapa** för att skicka din supportbegäran.
 
-   ![Skärmbild av fliken Granska och skapa i Hjälp och support – sidan Ny supportbegäran](./media/get-support/help-new-support-case-create.png)
+   ![Bild av fliken Granskning och skapa på sidan Ny supportbegäran](./media/get-support/help-new-support-case-create.png)
 
 <!--
   - **Support plan**: **Technical support - included** (for Intune technical issues, support is complimentary) or **Premier**
@@ -117,7 +116,7 @@ Du kan visa en supportbegäran via Azure Portal. Så här gör du:
 ## <a name="new-help-and-support-experience"></a>Ny hjälp- och supportupplevelse
 *Följande information gäller endast när du använder enhetshanteringsportalen och är en del av distributionen av den nya hjälp- och supportupplevelsen. Deltagare i den här distributionen väljs ut slumpmässigt bland de tillgängliga Intune-klientorganisationerna.*  
 
-Hjälp- och supportuppdateringen för Intune är en ny upplevelse som är tillgänglig på [enhetshanteringsportalen för Microsoft 365](http://devicemanagement.microsoft.com) för vissa men inte alla klientorganisationer. Den här upplevelsen liknar den i [Administrationscenter för Microsoft 365](https://portal.office.com/AdminPortal/Home) och ersätter den tidigare hjälp- och supportupplevelsen vid åtkomst från vissa platser i enhetshanteringskonsolen.  
+Hjälp- och supportuppdateringen för Intune är en ny upplevelse som är tillgänglig på [enhetshanteringsportalen för Microsoft 365](https://devicemanagement.microsoft.com) för vissa men inte alla klientorganisationer. Den här upplevelsen liknar den i [Administrationscenter för Microsoft 365](https://portal.office.com/AdminPortal/Home) och ersätter den tidigare hjälp- och supportupplevelsen vid åtkomst från vissa platser i enhetshanteringskonsolen.  
 
 På enhetshanteringsportalen kommer du åt den nya upplevelsen när du väljer **Hjälp och support** från något av bladen under **Alla tjänster** > **Enhetshantering**, utom bladet **Felsökning**. När du går till hjälp- och supportavsnittet från andra platser, t.ex. från **Felsökning**, via **?**-alternativet längst upp till höger i konsolens banderoll, eller när du väljer **Hjälp och support** från listan med tjänster i den vänstra rutan, så kommer du till den ursprungliga upplevelsen.  
 
@@ -143,7 +142,7 @@ Här följer några exempel på frågor som du kan skicka:
 
 ### <a name="view-context-sensitive-help"></a>Visa sammanhangsberoende hjälp
 När du väljer ett av förslagen som visas eller när du skickar en egen fråga visas sammanhangsberoende resultat under **Visa lösningar**. De här resultaten omfattar både Intune-specifik självhjälp och ytterligare resultat som returneras från en webbsökning baserat på frågekriterierna.  
-![Visa resultat](./media/get-support/view-results.png)
+![Bild av fönstret Visa resultat](./media/get-support/view-results.png)
 
 ### <a name="get-support"></a>Få support
 Om självhjälpen eller den webbaserade vägledningen inte hjälper dig att lösa problemet kan du använda konsolen för att skapa ett supportärende för e-post eller telefon.  
@@ -151,16 +150,16 @@ På sidan **Behöver du hjälp?** väljer du det alternativ som du vill använda
 
 - För en begäran om support via e-post anger du din e-postadress. Du kan lägga till bifogade filer om du vill. Välj **Skicka** för att skapa begäran.  
 
-  ![E-postbegäran](./media/get-support/email-support.png)
+  ![Bild av fönstret E-postbegäran](./media/get-support/email-support.png)
   
 - För en begäran om support via telefon anger du ditt telefonnummer. Om du vill kan du även ange din e-postadress och bifoga filer. Välj Ring mig för att skicka begäran.  
 
-   ![Telefonbegäran](./media/get-support/phone-support.png)
+   ![Bild av fönstret Telefonbegäran](./media/get-support/phone-support.png)
 
 ### <a name="view-support-cases"></a>Visa supportärenden
 Välj historikknappen för att visa supportärenden som du har skapat.  
 
-![Visa supportärenden](./media/get-support/view-support-tickets.png)
+![Bild av fönster Visa supportfall](./media/get-support/view-support-tickets.png)
 
 - Endast supportärenden som du skapar med det nya arbetsflödet visas inifrån det här arbetsflödet. Om du vill visa dem använder du en hjälp- och supportvy från enhetshanteringskonsolen som hör till den nya upplevelsen. Dessa ärenden har nummer som är åtta siffror långa. Du kan också visa dessa ärenden från Administrationscenter för Microsoft 365.  
 
@@ -173,5 +172,5 @@ Välj historikknappen för att visa supportärenden som du har skapat.
 ## <a name="additional-resources"></a>Ytterligare resurser
 - [Kontakta telefonsupporten för Microsoft Intune](phone-support-contact.md)
 - [Support för fakturering och prenumerationer](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Volymlicensiering](http://go.microsoft.com/fwlink/p/?LinkID=282015)
+- [Volymlicensiering](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Felsöka Intune-problem](help-desk-operators.md)
