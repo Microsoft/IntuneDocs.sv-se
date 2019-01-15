@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 742b4892c4dbe9ee2dfa2bb03eebb2667803c6bf
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112433"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210762"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -98,7 +98,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Blockera skärmdump (endast Android)|X|X|
 |Stöd för MAM utan enhetsregistrering|X|X|
 |Fullständig rensning av enheten|X|X|
-|Selektiv rensning <br></br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
+|Selektiv rensning <br><br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
 |Förhindra ”Spara som”|X||
 |Konfiguration av målprogram|X||
 |Stöd för flera identiteter|X||
@@ -115,6 +115,6 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 
 Mer information om appskyddsprinciper i Intune finns i följande avsnitt:
 
-  - [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)</br>
-  - [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)</br>
+  - [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)<br>
+  - [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)<br>
   - [Aktivera hantering av mobilprogram i appar med SDK](app-sdk.md)
