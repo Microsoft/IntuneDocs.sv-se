@@ -16,12 +16,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: af767ce47b9382012f01de48ccd280c29ccfc27c
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 17e60e489b024b5f70c0c3c9a1fe564ed227172e
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112882"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210864"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -31,7 +31,7 @@ Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa
 - [Automatisk registrering i Windows aktiverad](windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium-prenumeration](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
-## <a name="how-to-get-the-csv-for-import-in-intune"></a>Hämta CSV-filen för import i InTune
+## <a name="how-to-get-the-csv-for-import-in-intune"></a>Hämta CSV-filen för import i Intune
 
 Se avsnittet om PowerShell-cmdleten för information om hur du använder den.
 
@@ -79,20 +79,20 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 3. Om du vill att alla enheter i de tilldelade grupperna automatiskt ska omvandlas till Autopilot väljer du **Ja** för **Omvandla alla målenheter till Autopilot**. Enheter som inte är Autopilot-enheter i tilldelade grupper registreras med Autopilot-distributionstjänsten. Det kan ta upp till 48 timmar för registreringen att bearbetas. När enheten har avregistrerats och återställts registreras den av Autopilot. När en enhet har registrerats på det här sättet tas inte enheten bort från Autopilot-distributionstjänsten om det här alternativet inaktiveras eller om profiltilldelningen tas bort. Du måste i stället [ta bort enheten direkt](enrollment-autopilot.md#delete-autopilot-devices).
 4. Välj något av följande två alternativ för **Distributionsläge**:
     - **Användarstyrda**: Enheter med den här profilen är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs för att registrera enheten.
-    - **Självdistribution (förhandsversion)**: (nyaste [Windows 10 Insider Preview-version](https://docs.microsoft.com/windows-insider/at-work-pro/) krävs) Enheter med den här profilen associeras inte med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten.
+    - **Självdistribution (förhandsversion)**: (kräver Windows 10, version 1809 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten.
 5. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
 6. Välj **välkomstprogrammet (OOBE)**, konfigurera följande alternativ och välj **Spara**:
     - **Språk (Region)**\*: Välj et språk som du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
     - **Konfigurera tangentbord automatiskt**\*: Om ett **Språk (Region)** har valts väljer du **Ja** för att hoppa över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
     - **Licensavtal för slutanvändare (EULA)**: (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
     - **Sekretessinställningar**: Välj om du vill visa sekretessinställningar för användarna.
-    - **Dölj alternativ för att ändra konto (endast Windows Insider)**: Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    - **Dölj alternativ för att ändra konto (kräver Windows 10, version 1809 eller senare)**: Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Användarkontotyp**: Välj användarens kontotyp (**Administratör** eller **Standardanvändare**).
-    - **Använd mall för datornamn (endast Windows Insider)**: Välj **Ja** för att skapa en mall som ska användas när du namnger en enhet under registreringen. Namn får innehålla högst 15 tecken, och får innehålla bokstäver, siffror och bindestreck. Namn kan inte bestå av enbart siffror. Använd [makrot %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till ett maskinvaruspecifikt serienummer. Du kan även använda [makrot %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till en slumpmässig sträng med siffror, där x motsvarar antalet siffror som ska läggas till. 
+    - **Använd mall för datornamn (kräver Windows 10, version 1809 eller senare)**: Välj **Ja** för att skapa en mall som ska användas när du namnger en enhet under registreringen. Namn får innehålla högst 15 tecken, och får innehålla bokstäver, siffror och bindestreck. Namn kan inte bestå av enbart siffror. Använd [makrot %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till ett maskinvaruspecifikt serienummer. Du kan även använda [makrot %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till en slumpmässig sträng med siffror, där x motsvarar antalet siffror som ska läggas till. 
 
 6. Välj **Skapa** när du vill skapa profilen. Autopilot-distributionsprofilen kan nu tilldelas till enheterna.
 
-*Både **Språk (region)** och **Konfigurera tangentbord automatiskt** är endast tillgängliga om du har valt **Självdistribution (förhandsversion)** som **Distributionsläge** (senaste [Windows 10 Insider Preview-version](https://docs.microsoft.com/windows-insider/at-work-pro/) krävs).
+*Både **Språk (Region)** och **Konfigurera tangentbord automatiskt** är endast tillgängliga om du har valt **Självdistribution (förhandsversion)** för **Distributionsläge**  (kräver Windows 10, version 1809 eller senare).
 
 
 ## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Tilldela en Autopilot-distributionsprofil till en enhetsgrupp
@@ -100,6 +100,9 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > välj en profil.
 2. Välj **Tilldelningar** på det specifika profilbladet. 
 3. Välj **Välj grupper**, sedan väljer du de grupper som du vill tilldela appen på bladet **Välj grupper** och slutligen väljer du **Välj**.
+
+> [!NOTE]
+> Intune söker regelbundet efter nya enheter i de tilldelade grupperna och påbörjar sedan processen med att tilldela profiler till dessa enheter. Det kan ta flera minuter att slutföra processen. Se till att processen har slutförs innan du distribuerar en enhet.  Du kan kontrollera detta under **Enhetsregistrering** > **Windows-registrering ** > **Enheter**, där du bör se att profilstatusen ändras från ”Ej tilldelad” till ”Tilldelar” och slutligen ”Tilldelad”.
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Redigera en Autopilot-distributionsprofil
 När du har skapat en Autopilot-distributionsprofil kan du redigera vissa delar av den.   
@@ -125,7 +128,7 @@ Om du vill visa aviseringar för otilldelade enheter väljer du **Enhetsregistre
 
 Du kan tilldela en användare till en specifik Autopilot-enhet. Den här tilldelningen gör att en användare fylls i på förhand från Azure Active Directory på den [företagsanpassade](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) inloggningssidan under Windows-installationen. Du kan även ange ett anpassat namn för hälsning. Windows-inloggningen fylls inte i i förväg och ändras inte. Endast licensierade Intune-användare kan tilldelas på detta sätt.
 
-Krav: Azure Active Directory-företagsportalen har konfigurerats och senaste [förhandsversion av Windows 10 Insider](https://docs.microsoft.com/windows-insider/at-work-pro/).
+Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, version 1809 eller senare.
 
 1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > väljer enheten > **Tilldela användare**.
 
