@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0c09a80f97056f7cb08d69d6a8deedc4e421a556
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 37483f0fa33db109510ee537772a7bdead79e4f3
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190310"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203560"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -254,7 +254,7 @@ Tabellen för registreringsfel visar misslyckade registreringsförsök. En enhet
 
 När du väljer en felrad visas mer information.
 
-| Avsnitt | Beskrivning |
+| Sektion | Beskrivning |
 |-------------|----------|
 | Information om felet | En mer detaljerad förklaring av felet. |
 | Potentiella åtgärder | Föreslagna steg för att lösa problemet. Vissa fel kanske inte har någon rekommenderad åtgärd. |
@@ -271,6 +271,15 @@ När du väljer en felrad visas mer information.
 | Registreringsauktoriseringen misslyckades | Ett registreringsförsök gjordes med hjälp av en äldre version av företagsportalen. |
 | Enheten stöds inte | Enheten uppfyller inte minimikraven för Intune-registrering. |
 | Registreringsbegränsningarna uppfylls inte | Registreringen blockerades på grund av att en administratör har konfigurerat registreringsbegränsningar. |
+| Enhetsversionen är för låg | Administratören har konfigurerat en registreringsbegränsning som kräver en högre enhetsversion. |
+| Enhetsversionen är för hög | Administratören har konfigurerat en registreringsbegränsning som kräver en lägre enhetsversion. |
+| Enheten kan inte registreras som privat | Administratören har konfigurerat en registreringsbegränsning för att blockera privata registreringar och enheten som misslyckades var inte fördefinierad som företagsenhet. |
+| Enhetsplattform har blockerats | Administratören har konfigurerat en registreringsbegränsning som blockerar den här enhetens plattform. |
+| Masstoken har upphört att gälla | Masstoken i konfigurationspaketet har upphört att gälla. |
+| Autopilot-enheten eller informationen hittades inte | Autopilot-enheten hittades inte vid försök till registrering. |
+| Autopilot-profilen hittades inte eller har inte tilldelats | Enheten har ingen aktiv Autopilot-profil. |
+| Oväntad registreringsmetod för Autopilot | Enheten försökte registrera med en otillåten metod. |
+| Autopilot-enheten har tagits bort | Enheten som försökte registrera har tagits bort från Autopilot för det här kontot. |
 | Enhetstaket har nåtts | Registreringen blockerades på grund av att en administratör har konfigurerat enhetsbegränsningar. |
 | Apple-registrering | Inga iOS-enheter registrerades vid detta tillfälle eftersom ett Apple MDM-pushcertifikat i Intune saknas eller har upphört att gälla. |
 | Enheten har inte förregistrerats | Enheten har inte förregistrerats som företagsägd och alla personliga registreringar blockerades av en administratör. |

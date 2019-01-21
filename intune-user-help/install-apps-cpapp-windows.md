@@ -1,11 +1,11 @@
 ---
 title: Installerar appar från Intune-företagsportalappen för Windows
-description: Läs hur du installerar och delar appar från företagsportalappen för Windows
+description: Installera och dela appar från företagsportalappen för Windows
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e2bf5ffd5c913b4e2c51c9efd0aa40ba3d3f0fa7
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.openlocfilehash: 5c57db351aae613d0213e4ef439084ad9577a3fc
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863101"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203237"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 Installera appar på enheten från företagsportalappen för Windows.
@@ -34,10 +34,10 @@ Installera appar på enheten från företagsportalappen för Windows.
     ![Hemsida för företagsportalappen för Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)    
 2. Hitta och installera appar från något av följande avsnitt i företagsportalappen:  
 
-    * **Start**: välj från en lista över din organisations aktuella appar.  
-    * **Visa alla**: från avsnittet **Startsida** > **Appar**, klickar du på **Visa alla** för att visa alla tillgängliga appar.  
-    * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella.  
-    * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
+    * **Startsida**: Välj från en lista över din organisations aktuella appar.  
+    * **Visa alla**: Från avsnittet **Startsida** > **Appar** klickar du på **Visa alla** för att visa alla tillgängliga appar.  
+    * **Alla appar**: Välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella.  
+    * **Sök efter appar**: Det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
     * **Alla appar**: Visa, sortera och filtrera alla tillgängliga appar. Sökresultat sorteras automatiskt efter relevans.  
 
 3. Välj en app.   
@@ -63,4 +63,16 @@ Dela och rekommendera appar till dina arbets- och skolkontakter. Följande steg 
 
 När du delar får mottagaren en länk och ett meddelande för att visa appens information. Länken öppnar företagsportalens **appinformationssida**. 
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="available-apps"></a>Tillgängliga appar  
+
+Din organisation väljer appar som är lämpliga och användbara för dig på jobbet eller i skolan. Dessa appar är de enda du hittar i Företagsportal.  
+
+Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för Windows har du åtkomst till Windows-appar men inte iOS-appar.  
+
+## <a name="request-an-app-for-work-or-school"></a>Begär en app för arbete eller skola  
+Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Kontaktuppgifter för **supportavdelningen** finns på sidan Hjälp och support i appen Företagsportal. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).    
+
+  ![Appen Företagsportal för Windows 10, sidan Hjälp och support, med information om supportavdelningen markerad. ](./media/1812_UCP_Help_Support_helpdesk.png)  
+
+
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

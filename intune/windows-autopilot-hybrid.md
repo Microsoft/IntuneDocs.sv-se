@@ -16,18 +16,15 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9de47f996706255c072926524860cfcc833e8b8b
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: f6a78c6612f98903fcbaa9d33b8037c5ea4a3960
+ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642565"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149669"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Distribuera Hybrid Azure AD-anslutna enheter med Intune och Autopilot för Windows (förhandsversion)
 Du kan använda Intune och Windows Autopilot för att konfigurera Hybrid Azure Active Directory-anslutna enheter. Du gör det genom att följa stegen nedan.
-
-> [!NOTE]
-> Den här funktionen kommer att lanseras till hela användarbasen under de närmaste dagarna. Därför kanske du inte kan följa stegen förrän funktionen har distribuerats till ditt konto.
 
 ## <a name="prerequisites"></a>Krav
 
@@ -204,7 +201,7 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från **Inte ti
    - **Beskrivning**: Ange en beskrivning av profilen.
    - **Plattform**: Välj **Windows 10 och senare**.
    - **Profiltyp**: Välj **Domänanslutning (förhandsversion)**.
-3. Välj **Inställningar** och ange **Datornamnprefix**, **Domännamn** och **Organisationsenhet** i DN-format (valfritt). 
+3. Välj **Inställningar** och ange **Datornamnprefix**, **Domännamn** och (valfritt) **Organisationsenhet** i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 4. Välj **OK** > **Skapa**. Profilen skapas och visas i listan.
 5. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](device-profile-assign.md#assign-a-device-profile). 
 

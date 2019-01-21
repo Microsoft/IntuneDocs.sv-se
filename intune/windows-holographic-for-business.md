@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 062adf12f743fdbbe42c1f29e91f2a16414ca457
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032273"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203390"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda olika enhetshanteringsfunktioner på Windows Holographic- och HoloLens-enheter med Intune
 
@@ -123,6 +123,11 @@ Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säke
 #### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Konfigurera ett trådlöst nätverk](wi-fi-settings-configure.md)
 
 Du kan också skapa en profil för trådlöst nätverk i Intune för att tilldela trådlösa nätverksinställningar till dina Windows Holographic for Business-enheter. När du tilldelar en profil för trådlöst nätverk får dina slutanvändare åtkomst till företagets nätverk, utan att någon nätverkskonfiguration behövs. Du kan exempelvis skapa ett trådlöst nätverk som endast är dedikerat till dina Windows Holographic for Business-enheter.
+
+## <a name="shared-multi-user-devices"></a>Delade enheter för flera användare
+[Delade enheter](shared-user-device-settings-windows-holographic.md)
+
+Enheter som kör Windows Holographic for Business, till exempel Microsoft HoloLens, kan ha flera användare. Intune innehåller inställningar för att styra olika funktioner på de här delade enheterna, till exempel energisparfunktioner, användning av lokal lagring och kontohantering. Konfigurationsprofilerna kan också tillämpas på enheter med olika operativsystem. Enheter som kör RS2 och RS3 kan exempelvis ingå i samma grupp.
 
 ## <a name="software-updates"></a>Programuppdateringar
 **[Hantera programuppdateringar](windows-update-for-business-configure.md)**

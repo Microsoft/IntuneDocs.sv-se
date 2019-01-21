@@ -16,12 +16,12 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 81f84c2e645a9a6a20ff901239117b562a26b0aa
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9d6c894e30b050ec6e824e1e77d0c476d4dc15bc
+ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186655"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149635"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Hantera användarenhetslänkar för Windows-datorer
 
@@ -43,7 +43,7 @@ Länka en användare till en dator:
 
    - Om du vill låta datorn fortsätta att vara kopplad till den aktuella användaren, om det finns en sådan, väljer du **Avbryt**.
 
-   - Om du vill ta bort länken till den aktuella användaren, om det finns en sådan, väljer du <strong>Ta bort länk **&gt; **OK</strong>.
+   - Om du vill ta bort länken till den aktuella användaren, om det finns en sådan, väljer du <strong>Ta bort länk **&gt;** OK</strong>.
 
    - För att länka datorn till en ny användare väljer du en användare i listan **Alla användare** . Bekräfta att användardatan är korrekt och välj sedan **OK**.
 

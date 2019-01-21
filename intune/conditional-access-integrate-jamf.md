@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2018
+ms.date: 01/12/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cc547926d95e3fa1bec54b4ea55f764b5701b3b7
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 8e607dc612f71cdf72322b9fa7ecf14abb5fd809
+ms.sourcegitcommit: d54a12a836503f7e8b90346f16b7ad2d83b710dc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816828"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270596"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
@@ -38,53 +38,50 @@ Du behöver följande för att konfigurera villkorlig åtkomst med Jamf Pro:
 
 ## <a name="connecting-intune-to-jamf-pro"></a>Anslut Intune till Jamf Pro
 
-Du kan ansluta Intune till Jamf Pro genom att:
+Du ansluter Intune till Jamf Pro så här:
 
 1. Skapa ett nytt program i Azure
-2. Låta Intune integreras med Jamf Pro
+2. Låt Intune integreras med Jamf Pro
 3. Konfigurera villkorlig åtkomst i Jamf Pro
 
-## <a name="create-a-new-application-in-azure-active-directory"></a>Skapa ett nytt program i Azure Active Directory
+## <a name="create-an-application-in-azure-active-directory"></a>Skapa ett program i Azure Active Directory
 
-1. Öppna **Azure Active Directory** > **Appregistreringar**.
-2. Klicka på **+Ny programregistrering**.
+1. På [Azure-portalen](https://portal.azure.com) går du till **Azure Active Directory** > **Appregistreringar**.
+2. Välj **+Ny programregistrering**.
 3. Ange ett **visningsnamn**, som **Jamf villkorlig åtkomst**.
 4. Välj **webbapp / API**.
 5. Ange **inloggnings-URL** med URL:en för din Jamf Pro-instans.
-6. Klicka på **skapa program**.
-7. Spara det nyligen skapade **Program-ID:t**, öppna sedan **Inställningar** och gå till **API-åtkomst** > **Nycklar** för att skapa en ny programnyckel. Ange en **beskrivning** och hur lång tid som ska passera innan den **Förfaller**. Spara sedan programnyckeln.
+6. Välj **Skapa**. Programmet skapas och programinformationen visas på portalen.
+7. Spara en kopia av **program-ID** för det nya programmet. Du anger detta ID i en senare procedur. Välj sedan **Inställningar** och gå till **API-åtkomst** > **Nycklar**.
+8. I fönstret *Nycklar* anger du en **Beskrivning**, hur lång tid som ska passera innan den **Förfaller** och väljer sedan **Spara** för att skapa programnyckeln (värde).
 
    > [!IMPORTANT]
    > Programnyckeln visas bara en gång under den här processen. Glöm inte att spara den någonstans där du enkelt kan hämta den.
 
-8. Öppna **Inställningar** och gå till **API-åtkomst** > **Nödvändiga behörigheter** och ta bort alla behörigheter.
-
-   > [!NOTE]
-   > Lägg till en ny nödvändig behörighet. Programmet kan endast fungera korrekt om det har den enda nödvändiga behörigheten.
-
-9. Välj **Microsoft Intune API** och klicka på **välj**.
-10. Välj **skicka enhetsattribut till Microsoft Intune** och klicka på **välj**.
-11. Klicka på knappen **bevilja behörighet** när du har sparat de nödvändiga behörigheterna för programmet.
+8. I fönstret *Inställningar* för appen går du till **API-åtkomst** > **Nödvändiga behörigheter**. Markera eventuella befintliga behörigheter och klicka sedan på **Ta bort** och ta bort alla behörigheter. Du måste ta bort befintliga behörigheter när du lägger till en ny behörighet, och programmet fungerar bara om det har den enskilda nödvändiga behörigheten.  
+9. Om du vill tilldela en ny behörighet väljer du **+Lägg till** > **Välj en API** > **Microsoft Intune API** och klickar sedan på **Välj**.
+10. I fönstret *Aktivera åtkomst* väljer du **Skicka enhetsattribut till Microsoft Intune**, klickar på **Välj** och sedan på **Klar**.
+11. I fönstret *Nödvändiga behörigheter* väljer du **Bevilja behörigheter** och sedan **Ja** för att tillämpa nödvändiga behörigheter i programmet.
 
     > [!NOTE]
     > Om programnyckeln upphör att gälla, måste du skapa en ny programnyckel i Microsoft Azure och uppdatera data för villkorlig åtkomst i Jamf Pro. Azure låter dig ha både den gamla och nya nyckeln aktiv för att förhindra tjänsteavbrott.
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Låt Intune integreras med Jamf Pro
 
-1. I Microsoft Azure Portal öppnar du **Microsoft Intune** > **enhetskompatibilitet** > **Enhetshantering för partner**.
-2. Aktivera Compliance Connector för Jamf genom att klistra in program-ID i fältet **Jamf Azure Active Directory App-ID**.
-3. Klicka på **Spara**.
+1. På [Azure-portalen](https://portal.azure.com) går du till **Microsoft Intune** > **Enhetsefterlevnad** > **	Enhetshantering för partner**.
+2. Aktivera Compliance Connector för Jamf genom att klistra in det program-ID du sparade under föregående procedur i fältet **Jamf Azure Active Directory App-ID**.
+3. Välj **Spara**.
 
 ## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurera Microsoft Intune-integrering i Jamf Pro
 
 1. I Jamf Pro, går du till **global hantering** > **villkorlig åtkomst**. Klicka på knappen **Redigera** på fliken **Microsoft Intune-integrering**.
 2. Klicka i kryssrutan **Aktivera Microsoft Intune-integrering**.
 3. Ange nödvändig information om din Azure-klient, inklusive **plats**, **domännamn** och den **program-ID** och **programnyckel** du sparade från föregående steg.
-4. Klicka på **Spara**. Jamf Pro testar dina inställningar och verifierar att det fungerar.
+4. Välj **Spara**. Jamf Pro testar dina inställningar och verifierar att det fungerar.
 
 ## <a name="set-up-compliance-policies-and-register-devices"></a>Ställ in efterlevnadsprinciper och registrera enheter
 
-När du har konfigurerat integrationen mellan Intune och Jamf måste du [applicera principer för efterlevnad för enheter som hanteras av Jamf](conditional-access-assign-jamf.md).
+När du har konfigurerat integrationen mellan Intune och Jamf måste du [tillämpa efterlevnadsprinciper för enheter som hanteras av Jamf](conditional-access-assign-jamf.md).
 
 ## <a name="information-shared-from-jamf-pro-to-intune"></a>Information som delas från Jamf Pro till Intune
 

@@ -14,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 65457a65504b633018bb61851f16c8c65fa1c806
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2282ba4dd3caf8c71c8624884bc124393ea52d2f
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185686"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203101"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Lägga till funktionsinställningar för iOS- eller macOS-enheter i Intune
 
@@ -30,7 +30,7 @@ Med enhetsfunktioner kan du kontrollera en rad inställningar och funktioner på
 - Inställningar för AirPrint och AirPlay
 - Startsideslayout
 - Meddelanden från appar
-- Konfiguration av delad enhet
+- Meddelande på låsskärm
 - Konfigurera enkel inloggning
 - Filtrera webbinnehåll
 
@@ -44,7 +44,7 @@ I den här artikeln finns det information om grunderna i hur du konfigurerar pro
 4. Ange följande egenskaper:
 
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
-   - **Beskrivning:** Ange en beskrivning för profilen. (Detta är valfritt, men rekommenderas.)
+   - **Beskrivning**: Ange en beskrivning av profilen. (Den här inställningen är valfri, men rekommenderas.)
    - **Plattform**: Välj din plattformstyp:
      - **iOS**
      - **macOS**
@@ -55,7 +55,7 @@ I den här artikeln finns det information om grunderna i hur du konfigurerar pro
      - [AirPlay-inställningar för iOS](airplay-settings-ios.md)
      - [Layoutinställningar för iOS-startskärm](home-screen-settings-ios.md)
      - [Appaviseringsinställningar för iOS](app-notification-settings-ios.md)
-     - [Konfigurationsinställningar för delade enheter för iOS](shared-device-settings-ios.md)
+     - [Inställningar för Meddelande på låsskärm för iOS](shared-device-settings-ios.md)
      - [Konfigurera enkel inloggning i Intune för iOS-enheter](sso-ios.md)
      - [Inställningar för webbinnehållsfilter för iOS](web-content-filter-settings-ios.md)
 

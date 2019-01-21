@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: d5b07262dad3eaab76dd4854b82f0e45b3921b26
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959510"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203509"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
 Hanterade appar konfigureras för att uppfylla din organisations säkerhetskrav och för att skydda arbets- och skoldata. De här apparna görs tillgängliga för dig på din enhet, där de kan installeras eller användas automatiskt. 
@@ -56,7 +56,15 @@ Först måste du installera Företagsportalen och, om det behövs, få din enhet
 * Din organisation gör hanterade appar tillgängliga för dig på Företagsportalen. Gå till appen eller webbplatsen för Företagsportalen för att söka efter, visa eller installera dessa appar. 
 * Du installerar en app från Google Play Butik och loggar sedan in i appen med ditt arbets- eller skolkonto.  
 
-## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?
+ ## <a name="available-apps"></a>Tillgängliga appar   
+ Din organisation väljer appar som är lämpliga och användbara för dig på jobbet eller i skolan. Dessa appar är de enda du hittar i Företagsportal.   
+
+ Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för Android har du åtkomst till Android-appar men inte iOS-appar.   
+
+ ## <a name="request-an-app-for-work-or-school"></a>Begär en app för arbete eller skola   
+ Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Kontaktuppgifter för **supportavdelningen** finns i på fliken **Kontakta IT** i appen Företagsportal. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).   
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?  
 Följande lista beskriver de inställningar som företagets support kan hantera inifrån en app. De här inställningarna påverkar hur du ser, kommer åt och i övrigt använder arbets- eller skoldata på din enhet:
 
 * Åtkomst till vissa webbplatser  

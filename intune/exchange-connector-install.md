@@ -15,12 +15,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28886382da00f5c07129f4e69e0bbadf97634420
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 3e66dd3d77cc36a6d311afea82e0f2087b469495
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817270"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239599"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune Azure
 
@@ -42,7 +42,7 @@ Följande tabell innehåller kraven för datorn där du installerar den lokala E
 
 |            Krav             |                                                                                                                                                                                                        Mer information                                                                                                                                                                                                        |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         Operativsystem          |                                                               Intune har stöd för den lokala Exchange-anslutningsappen på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 eller Windows Server 2016.<br /><br />Anslutningen stöds inte i Server Core-installationen.                                                                |
+|         Operativsystem          |                                                               Intune har stöd för den lokala Exchange-anslutningsappen på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 eller Windows Server 2016.<br /><br />Anslutningsappen stöds inte i Server Core-installationer.                                                                |
 |         Microsoft Exchange         |                                                                           För lokala anslutningar krävs Microsoft Exchange 2010 SP3 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den <strong>nya</strong> eller <strong>äldre</strong> konfigurationen kontaktar du din kontoansvariga.                                                                           |
 | Utfärdare för hantering av mobila enheter |                                                                                                                              [Ange utfärdare för hantering av mobila enheter till Intune](mdm-authority-set.md).                                                                                                                               |
 |              Maskinvara              |                                                                                                                                                     Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.                                                                                                                                                      |
@@ -97,7 +97,7 @@ Utför följande steg för att installera den lokala Exchange-anslutningsappen f
 
    ![Bild som visar var du väljer Exchange Server-typ](./media/intune-sa-exchange-connector-config.png)
 
-   För en lokal Exchange-server anger du antingen servernamnet eller det fullständigt kvalificerade domännamnet för Exchange-servern som är värd för **klientåtkomstserverrollen**.
+   För en on-premises Exchange-server anger du antingen servernamnet eller det fullständigt kvalificerade domännamnet för Exchange-servern som är värd för **klientåtkomstserverrollen**.
 
    För en värdbaserad Exchange-server anger du adressen till Exchange-servern. Så här hittar du URL-adressen till den värdbaserade Exchange-servern:
 
@@ -116,15 +116,15 @@ Utför följande steg för att installera den lokala Exchange-anslutningsappen f
 
        4. Välj **OK**.
 
-   5. I fälten **Användare (domän\användare)** och **Lösenord** anger du autentiseringsuppgifterna som krävs för att ansluta till Exchange-servern.
+4. I fälten **Användare (domän\användare)** och **Lösenord** anger du autentiseringsuppgifterna som krävs för att ansluta till Exchange-servern.
 
-   6.  Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att kunna skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med villkorliga åtkomstprinciper i Intune.  
+5. Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att kunna skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med villkorliga åtkomstprinciper i Intune.  
 
-       Kontrollera att tjänsten för automatisk upptäckt och Exchange Web Services har konfigurerats på Exchange-klientåtkomstservern. Mer information finns i avsnittet om [klientåtkomstservern](https://technet.microsoft.com/library/dd298114.aspx).
+       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
 
-   7.  I fältet **Lösenord** anger du lösenordet för detta konto för att möjliggöra för Intune att ansluta till Exchange-servern.
+6. I fältet **Lösenord** anger du lösenordet för detta konto för att möjliggöra för Intune att ansluta till Exchange-servern.
 
-   8. Välj **Anslut**.
+7. Välj **Anslut**.
 
    > [!NOTE]
    > Det kan ta några minuter innan anslutningen har konfigurerats.
@@ -142,7 +142,7 @@ Intune har stöd för flera lokala Exchange-anslutningsappar per prenumeration. 
 Funktionerna för hög tillgänglighet, övervakning och manuell synkronisering som beskrivs i följande avsnitt stöds för varje Exchange-organisation som är ansluten till Intune.
 
 ## <a name="on-premises-exchange-connector-high-availability-support"></a>Support med hög tillgänglighet för lokalt Exchange-anslutningsprogram 
-När Exchange-anslutningsappen skapar en anslutning till Exchange med angiven CAS, har anslutningsappen möjlighet att identifiera andra CAS. Om den primära certifikatutfärdaren blir otillgänglig, kommer anslutningsappen att växla till en annan certifikatutfärdare, om tillgänglig, tills den primära certifikatutfärdaren blir tillgänglig. Som standard är den här funktionen aktiverad. Du kan inaktivera funktionen med hjälp av följande procedur:
+När Exchange-anslutningsappen skapar en anslutning till Exchange med angiven CAS, kan anslutningsappen identifiera andra CAS. Om den primära certifikatutfärdaren blir otillgänglig, kommer anslutningsappen att växla till en annan certifikatutfärdare, om tillgänglig, tills den primära certifikatutfärdaren blir tillgänglig. Som standard är den här funktionen aktiverad. Du kan inaktivera funktionen med hjälp av följande procedur:
 1. På servern där Exchange Connector är installerad går du till %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
 2. Med en textredigerare öppnar du **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 3. Ändra &lt;IsCasFailoverEnabled&gt;**SANT**&lt;/IsCasFailoverEnabled&gt; till &lt;IsCasFailoverEnabled&gt;**false** &lt;/IsCasFailoverEnabled&gt; för att inaktivera funktionen.    
@@ -157,12 +157,12 @@ När du har konfigurerat dina Exchange-anslutningsappar kan du se status för an
 
 Du kan också kontrollera datum och tid för det senaste lyckade synkroniseringsförsöket.
 
-### <a name="system-center-operations-manager-scom-management-pack"></a>Hanteringspaket för System Center Operations Manager (SCOM)
+### <a name="system-center-operations-manager-management-pack"></a>Hanteringspaket för System Center Operations Manager
 
-Från och med versionen Intune 1710 kan du använda [SCOM-hanteringspaketet för Exchange Connector och Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Det ger dig flera olika sätt att övervaka Exchange Connector när du behöver felsöka problem.
+Från och med versionen Intune 1710 kan du använda [Operations Manager-hanteringspaketet för Exchange Connector och Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Det ger dig flera olika sätt att övervaka Exchange Connector när du behöver felsöka problem.
 
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Tvinga en snabbsynkronisering eller en fullständig synkronisering manuellt
-En lokal Exchange-anslutningsapp synkroniserar automatiskt och regelbundet EAS- och Intune-enhetsposterna. Om kompatibilitetsstatusen för en enhet ändras uppdateras posterna i den automatiska synkroniseringsprocessen så att enheten kan blockeras eller tillåtas.
+En lokal Exchange Connector synkroniserar automatiskt och regelbundet EAS- och Intune-enhetsposterna. Om kompatibilitetsstatusen för en enhet ändras uppdateras posterna i den automatiska synkroniseringsprocessen så att enheten kan blockeras eller tillåtas.
 
    - **Snabbsynkroniseringar** görs regelbundet flera gånger om dagen. Vid en snabbsynkronisering hämtas enhetsinformation för Intune-licensierade och lokala, villkorsstyrda Exchange-användare som har ändrats sedan den senaste synkroniseringen.
 

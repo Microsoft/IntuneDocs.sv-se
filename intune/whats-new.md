@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: a84683531481410d54f527ddd35400dcfe504fc5
-ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
+ms.openlocfilehash: 0cc94da03e1288de519d08acadbf3374bb76fcd7
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996039"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210915"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,6 +42,131 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även kommande ä
 ### Role-based access control
 
 -->     
+
+
+## <a name="week-of-january-7-2019"></a>Veckan som börjar med 7 januari 2019
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="intune-app-pin----2298397---"></a>Intune-appens PIN-kod <!-- 2298397 -->
+Som IT-administratör kan du nu konfigurera hur många dagar en användare kan vänta tills Intune-appens PIN-kod måste ändras. Den nya inställningen är *Återställ PIN-kod efter antal dagar* och är tillgänglig i Azure-portalen genom att välja **Intune** > **Klientappar** > **Appskyddsprinciper** > **Skapa princip** > **Inställningar** > **Åtkomstbehörigheter**. Den här funktionen, som är tillgänglig för [iOS](app-protection-policy-settings-ios.md)- och [Android](app-protection-policy-settings-android.md)-enheter, stöder ett positivt heltalsvärde.
+
+
+#### <a name="intune-device-reporting-fields----2748738---"></a>Intune-enhetens rapportfält <!-- 2748738 -->
+Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS-modell. I Intune är dessa fält tillgängliga genom att välja **Klientappar** > **Appskyddsstatus** och sedan välja **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodell (Android och iOS) och lägsta inställning för version av Android-säkerhetsuppdatering. 
+
+
+### <a name="device-configuration"></a>Enhetskonfiguration
+
+#### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Administrativa mallar finns i offentlig förhandsversion och flyttas till deras egna konfigurationsprofil <!-- 3322847 -->
+
+Administrativa mallar i Intune (**Enhetskonfiguration** > **Administrationsmallar**) är för tillfället i privat förhandsvisning. I denna uppdatering:
+
+- De administrativa mallarna innehåller ungefär 300 inställningar som kan hanteras i Intune. De här inställningarna fanns tidigare endast i redigeraren.
+- Administrativa mallar finns i offentlig förhandsversion.
+- Administrativa mallar flyttar från **Enhetskonfiguration** > **Administrativa mallar** till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj  **Windows 10 och senare** > i **Profiltyp**, välj **	Administrativa mallar**.
+- Rapportering är aktiverad
+
+Mer information om den här funktionen finns i [Windows 10-mallar för att konfigurera grupprincipinställningar](administrative-templates-windows.md).
+
+Gäller för: Windows 10 och senare
+
+#### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user-----1333642---"></a>Använda S/MIME för att kryptera och signera flera enheter för en användare <!-- 1333642 -->
+Den här uppdateringen innehåller S/MIME-e-postkryptering som använder en ny importerad certifikatprofil (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj plattformen > profiltypen **PKCS-importerat certifikat**). Du kan importera certifikat i PFX-format i Intune. Intune kan sedan leverera samma certifikat till flera enheter som registrerats av en enda användare. Detta omfattar även följande:
+- Den interna e-postprofilen för iOS har stöd för att aktivera S/MIME-kryptering med importerade certifikat i PFX-format.
+- Den interna e-postappen på Windows Phone 10-enheter använder S/MIME-certifikatet automatiskt.
+- Det privata certifikatet kan levereras över flera plattformar. Men alla e-postappar har inte stöd för S/MIME.
+- På andra plattformar kan du behöva konfigurera e-postappen manuellt för att aktivera S/MIME.  
+- E-postappar som har stöd för S/MIME-kryptering kan hantera hämtning av certifikat för S/MIME-kryptering av e-post på ett sätt som MDM inte stöder, till exempel genom att läsa från utgivarens certifikatarkiv.
+Mer information om den här funktionen finns i [S/MIME-översikt för att signera och kryptera e-post](certificates-s-mime-encryption-sign.md).
+Stöds på: Windows, Windows Phone 10, macOS, iOS och Android
+
+#### <a name="new-options-to-automatically-connect-and-persist-rules-when-using-dns-settings-on-windows-10-and-later-devices----1333665-2999078---"></a>Nya alternativ för att automatiskt ansluta och bevara regler när du använder DNS-inställningarna på Windows 10 och senare enheter <!-- 1333665, 2999078 -->
+I Windows 10 och senare enheter kan du skapa en VPN-profil som innehåller en lista över DNS-servrar för att lösa domäner, som till exempel contoso.com. Den här uppdateringen omfattar nya inställningar för namnmatchning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **Windows 10 och senare** för plattform > välj **VPN** för Profiltyp > **DNS-inställningarna** >**Lägg till**): 
+- **Anslut automatiskt**: När den är **Aktiverad**, ansluter enheten automatiskt till VPN-anslutningen när en enhet kontaktar en domän som du anger, t.ex contoso.com.
+- **Beständig**: Som standard är alla NRPT-regler (principtabell för namnmatchning) aktiva så länge enheten är ansluten med hjälp av den här VPN-profilen. När inställningen är **Aktiverad** för en NRPT-regel förblir regeln aktiv på enheten, även om VPN-anslutningen kopplas bort. Regeln gäller tills VPN-profilen tas bort eller tills regeln tas bort manuellt, vilket kan göras med hjälp av PowerShell.
+[Windows 10 VPN-inställningar](vpn-settings-windows-10.md) beskriver inställningarna. 
+
+#### <a name="use-trusted-network-detection-for-vpn-profiles-on-windows-10-devices----1500165---"></a>Använd identifiering av betrott nätverk för VPN-profiler på Windows 10-enheter <!-- 1500165 -->
+När du använder identifiering av betrott nätverk kan du förhindra VPN-profiler från att automatiskt skapa en VPN-anslutning när användaren redan är i ett betrott nätverk. Med den här uppdateringen kan du lägga till DNS-suffix om du vill aktivera identifiering av betrott nätverk på enheter som kör Windows 10 och senare (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform > **VPN** för profiltyp).
+[Windows 10-VPN-inställningar](vpn-settings-windows-10.md) visar en lista över aktuella VPN-inställningar.
+
+#### <a name="manage-windows-holographic-for-business-devices-used-by-multiple-users----1907917-1063203---"></a>Hantera Windows Holographic for Business-enheter som används av flera användare <!-- 1907917, 1063203 -->
+För närvarande kan du konfigurera delade datorinställningar på Windows 10- och Windows Holographic for Business-enheter med en anpassad OMA-URI-inställning. Med den här uppdateringen läggs en ny profil till för att konfigurera delade enhetsinställningar (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** > **Delad enhet för flera användare**).
+Mer information om den här funktionen finns i [Intune-inställningar för att hantera delade enheter](shared-user-device-settings.md).
+Gäller för: Windows 10 och senare, Windows 10 Holographic for Business
+
+#### <a name="new-windows-10-update-settings---2626030--2512994----"></a>Nya Windows 10 Update-inställningar <!--2626030  2512994  -->
+För dina [Windows 10-uppdateringsringar](windows-update-for-business-configure.md) kan du konfigurera:
+- **Funktionssätt för automatisk uppdatering** – Använd ett nytt alternativ, *Återställ till standard*, för att återställa de ursprungliga inställningarna för automatisk uppdatering på Windows 10-datorer som kör *uppdateringen från oktober 2018*
+- **Blockera användaren från att pausa Windows-uppdateringar** – Konfigurera en ny programuppdateringsinställning som gör att du kan blockera eller tillåta användarna att pausa uppdateringsinstallationen från *Inställningar* på deras datorer. 
+
+#### <a name="ios-email-profiles-can-use-smime-signing-and-encryption----2662949---"></a>iOS e-postprofiler kan använda S/MIME-signering och kryptering <!-- 2662949 -->
+Du kan skapa en e-postprofil som innehåller olika inställningar. Den här uppdateringen inkluderar S/MIME-inställningar som kan användas för signering och kryptering av e-postmeddelanden på iOS-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **iOS** för plattform > **E-post** för profiltyp).
+[iOS e-postkonfigurationsinställningar](email-settings-ios.md) visar en lista över inställningarna.
+
+#### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Vissa inställningar för BitLocker har stöd för Windows 10 Pro-versionen <!-- 2727036 -->
+Du kan skapa en konfigurationsprofil som anger inställningar för slutpunktsskydd för Windows 10-enheter, inklusive BitLocker. Den här uppdateringen lägger till stöd för Windows 10 Professional-versionen för vissa BitLocker-inställningar. De här skyddsinställningarna finns i [Inställningar för slutpunktsskydd för Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+#### <a name="shared-device-configuration-is-renamed-to-lock-screen-message-for-ios-devices-in-the-azure-portal---2809362---"></a>Konfiguration av delad enhet har bytt namn till Meddelande på låsskärm för iOS-enheter i Azure-portalen<!-- 2809362 -->
+När du skapar en profil för iOS-enheter kan du lägga till inställningar för **Konfiguration för delad enhet** för att visa specifik text på låsskärmen. Den här uppdateringen innehåller följande ändringar: 
+- Inställningarna **Konfiguration för delad enhet** i Azure-portalen har bytt namn till ”Meddelande på låsskärmen (endast övervakat)” (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **iOS** för plattform > välj **Enhetsfunktioner** för Profiltyp > **Meddelande på låsskärmen**).
+- När du lägger till meddelanden på låsskärmen kan du infoga ett serienummer, ett enhetsnamn eller ett annat enhetsspecifikt värde som en variabel i **Resurstagginformation** och **Fotnot på låsskärmen**. Du kan till exempel ange `Device name: {{devicename}}` eller `Serial number is {{serialnumber}}` med hjälp av klammerparenteser. [iOS-token](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) visar en lista över de tillgängliga token som kan användas.
+[Inställningar för att visa meddelanden på låsskärmen](shared-device-settings-ios.md) visar en lista över inställningarna.
+
+#### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices----2827760--"></a>Nya inställningar för enhetsbegränsning av App Store, dokumentvisning, spel har lagts till i iOS-enheter <!-- 2827760-->
+I **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **App Store, dokumentvisning, spel** läggs följande inställningar till: Tillåt hanterade appar att skriva kontakter till ohanterade kontaktkonton (endast övervakat) Tillåt ohanterade appar att läsa från hanterade kontaktkonton (endast övervakat) Om du vill se de här inställningarna går du till [iOS-enhetsbegränsningar](device-restrictions-ios.md#app-store-doc-viewing-gaming).
+
+#### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Inställningar för nytt meddelande, tips och keyguard för enhetsägare av Android Enterprise-enheter <!-- 3201839 3201843 -->
+Den här uppdateringen innehåller flera nya funktioner på Android Enterprise-enheter vid körning som enhetsägare. Om du vill använda dessa funktioner, gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Android Enterprise** > i **Profiltyp**, välj **Endast enhetens ägare** > **Enhetsbegränsningar**.
+Nya funktioner som ingår: 
+- Inaktivera systemmeddelanden till att inte visas, inklusive inkommande anrop, systemaviseringar, systemfel och mer
+- Föreslår hoppa över start av självstudier och tips för appar som öppnas för första gången
+- Inaktivera avancerade keyguard-inställningar, till exempel kamera, meddelanden, upplåsning med fingeravtryck med mera. Om du vill se inställningarna går du till avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+
+#### <a name="android-enterprise-device-owner-devices-can-use-always-on-vpn-connections----3202194---"></a>Enhetsägda Android Enterprise-enheter kan använda Always On VPN-anslutningar <!-- 3202194 -->
+I den här uppdateringen kan du använda VPN-anslutningar som alltid är aktiva på Android Enterprise-enheter. Ständiga VPN-anslutningar förblir anslutna eller återansluter omedelbart när användaren låser upp sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. Du kan också placera anslutningen i ”låst” läge, vilket blockerar all nätverkstrafik tills VPN-anslutningen aktiveras.
+Du kan aktivera VPN-anslutningar som alltid är aktiva i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar** för enhetsägare endast > **Anslutningar**. Om du vill visa inställningarna går du till avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+
+#### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices----3285177---"></a>Ny inställning för slutprocesser i Aktivitetshanteraren på Windows 10-enheter <!-- 3285177 --> 
+Den här uppdateringen innehåller en ny inställning för att avsluta processer med hjälp av Aktivitetshanteraren på Windows 10-enheter. Med hjälp av en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform** , välj **Windows 10** > i **Profiltyp**, välj **Enhetsbegränsningar** > **Allmänna** inställningar), väljer du att tillåta eller förhindra den här inställningen.
+Om du vill visa de här inställningarna går du till [Inställningar av begränsningar för Windows 10-enheter](device-restrictions-windows-10.md).
+Gäller för: Windows 10 och senare
+
+
+### <a name="device-enrollment"></a>Enhetsregistrering
+
+#### <a name="more-detailed-enrollment-restriction-failure-messaging----3111564---"></a>Mer detaljerade felmeddelanden för registreringsbegränsning <!-- 3111564 -->
+Mer detaljerade felmeddelanden är tillgängliga när registreringsbegränsningar inte har uppfyllts. Om du vill se dessa meddelanden går du till **Intune** > **Felsök** > och markerar tabellen Registreringsfel. Mer information finns i [listan över registreringsfel](help-desk-operators.md#configuration-policies-reference).
+
+#### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509---"></a>Hoppa över flera skärmar för installationsassistenten på en iOS DEP-enhet <!-- 2687509 -->
+Förutom de skärmar som du kan hoppa över just nu kan du ange att iOS DEP-enheter hoppar över följande skärmar i installationsassistenten när en användare registrerar enheten: Skärmton, Sekretess, Android-migrering, Start-knapp, iMessage och FaceTime, Registrering, Bevaka migrering, Utseende, Skärmtid, Programuppdatering, SIM-installation.
+Om du vill välja vilka skärmar som ska hoppas över, går du till **Enhetsregistrering** > **Apple-registrering** > **Tokens för registreringsprogram** > välj en token > **Profiler** > välj en profil > **Egenskaper** > **Anpassning av installationsassistenten** > välj **Dölj** för alla skärmar som du vill hoppa över > **OK**.
+
+
+### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
+
+#### <a name="tenant-status-dashboard-----1124854---"></a>Instrumentpanelen Klientorganisationsstatus <!-- 1124854 -->
+Den nya [sidan Klientorganisationsstatus](tenant-status.md) utgör en enskild plats där du kan visa status och relaterad information för din klient.  Instrumentpanelen är uppdelad i fyra områden:
+- **Information om klientorganisation** – Visar information som innefattar klientens namn och plats, MDM-utfärdare, totalt antal registrerade enheter i klientorganisationen och antal licenser. I det här avsnittet visas även den aktuella versionen av tjänsten för din klientorganisation.
+- **Status för anslutningsprogrammet** – Visar information om tillgängliga anslutningsprogram du har konfigurerat och kan även visa dem som du inte har aktiverat ännu.  
+   Baserat på det aktuella tillståndet för varje anslutningsprogram är de flaggade med Felfri, Varning eller Ej felfri. Välj ett anslutningsprogram för att visa detaljer och visa information eller konfigurera ytterligare information för det.
+-  **Hälsotillstånd för Intune-tjänsten** – Visar information om aktiva incidenter eller avbrott i klientorganisationen. Informationen i det här avsnittet hämtas direkt från meddelandecentret för Office.
+-  **Nytt i Intune** – Visar aktiva meddelanden för klientorganisationen. Meddelanden omfattar till exempel aviseringar när klientorganisationen får de senaste funktionerna för Intune.  Informationen i det här avsnittet hämtas direkt från meddelandecentret för Office.
+
+#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10----1488939--"></a>Ny hjälp- och supportupplevelse i Företagsportal för Windows 10 <!-- 1488939-->
+Den nya sidan Hjälp och support i Företagsportal hjälper användare att felsöka och be om hjälp med problem med appen och åtkomst. Från den nya sidan kan de skicka fel- och diagnostiklogginformation via e-post och hitta information om organisationens supportavdelning. De hittar också avsnittet Vanliga frågor och svar med länkar till relevant Intune-dokumentation. 
+
+#### <a name="new-help-and-support-experience-for-intune------3307080---"></a>Ny hjälp- och supportupplevelse för Intune   <!-- #3307080 -->
+Vi lanserar den nya hjälp- och supportupplevelsen för alla klientorganisationer under de närmaste dagarna. Den här nya upplevelsen är tillgänglig för Intune och kan nås när du använder Intune-bladen på [Azure-portalen](https://portal.azure.com/).
+Med den nya upplevelsen kan du beskriva problemet med egna ord och ta emot felsökningsinsikter och webbaserat åtgärdsinnehåll. De här lösningarna är tillgängliga via en regelbaserad maskininlärningsalgoritm som drivs av användarfrågor. Utöver problemspecifika rekommendationer använder du det nya arbetsflödet för att öppna ett supportärende via e-post eller telefon. Den här nya upplevelsen ersätter den tidigare hjälp- och supportupplevelsen av en statisk uppsättning förvalda alternativ som är baserade på området i konsolen du befinner dig i när du öppnar Hjälp och support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).
+
+### <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
+
+#### <a name="scope-tags-for-apps----1081941---"></a>Omfattningstaggar för appar <!-- 1081941 -->
+Du kan skapa omfångstaggar som begränsar åtkomsten för roller och appar. Du kan lägga till en omfångstagg för en app så att endast personer med roller som också tilldelats den omfångstaggen har åtkomst till appen. Mer information finns i [Använda omfångstaggar för att filtrera principer](scope-tags.md).
+
+
 
 ## <a name="week-of-december-10-2018"></a>Veckan som börjar med 10 december 2018
 
@@ -244,7 +369,7 @@ Azure Active Directory har en funktion för användningsvillkor som du kan anvä
 För registrering av Samsung Knox-registrering, stöder nu Intune registrering av enheter till läget för hantering av Android-enhetens ägare. Användarna på Wi-Fi eller mobila nätverk kan registrera sig med bara några få tryck när de aktiverar på sina enheter för första gången. Mer information finns i [Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering](android-samsung-knox-mobile-enroll.md).
 
 ### <a name="device-management"></a>Enhetshantering
-#### <a name="new-settings-for-software-updates------1907869--wnready---"></a>Nya inställningar för programuppdateringar   <!-- 1907869  wnready -->  
+#### <a name="new-settings-for-software-updates------1907869---"></a>Nya inställningar för programuppdateringar   <!-- 1907869 -->  
 - Du kan nu konfigurera att vissa meddelanden aviserar slutanvändarna om de omstarter som krävs för att slutföra installationen av de senaste programuppdateringarna.   
 - Du kan nu konfigurera en omstartsvarning vid omstarter som sker utanför arbetstid, vilket har stöd för BYOD-scenarier.
 
@@ -281,7 +406,7 @@ För kunder som är en del av distributionen, ersätter den här nya upplevelsen
 
 *Denna nya hjälp- och supportupplevelse distribueras till vissa men inte alla klienter och är tillgänglig i enhetshanteringsportalen. Deltagare i den här nya upplevelsen väljs ut slumpmässigt bland de tillgängliga Intune-klientorganisationerna. Nya klienter läggs till då vi expanderar distributionen.*  
 
-Mer information finns i [Ny hjälp- och supportupplevelse](get-support.md#new-help-and-support-experience) i Så här får du stöd för Microsoft Intune.  
+Mer information finns i [Hjälp- och supportupplevelse](get-support.md#help-and-support-experience) i Ta reda på hur du kan få support för Microsoft Intune.  
 
 ### <a name="powershell-module-for-intune--preview-available----951068---"></a>PowerShell-modul för Intune – en förhandsversion är tillgänglig <!-- 951068 -->
 Nu finns en ny PowerShell-modul, som har stöd för Intune-API:et via Microsoft Graph, tillgänglig som en förhandsversion på [GitHub]( https://aka.ms/intunepowershell). Mer information om hur du använder den här modulen finns i Viktigt-filen på den platsen. 

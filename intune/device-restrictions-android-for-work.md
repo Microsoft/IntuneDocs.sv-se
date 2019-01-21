@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: c9e2e0df79625329310171c509327395989f3a7c
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 671c713be805038c7c2f2608dbadd9d8afdce344
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032545"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203611"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -77,6 +77,10 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
   - **Endast Wi-Fi**
   - **Alltid**
 
+- **Meddelandefönster**: När **Inaktivera** har valts visas inte fönstermeddelanden, bland annat popup-fönster, inkommande samtal, utgående samtal, systemaviseringar och systemfel, på enheten. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa meddelanden.
+- **Hoppa över tips vid första start**: Välj **Aktivera** om du vill dölja eller hoppa över förslag från appar om att gå igenom självstudier eller läsa inledande tips när appen startar. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa de här förslagen när appen startar.
+
+
 ### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
 - **Hotgenomsökning för appar**: **Kräv** innebär att inställningen **Verifiera appar** är aktiverad för arbetsprofiler och personliga profiler.
@@ -126,6 +130,7 @@ Du kan konfigurera en enhet för att köra en app eller flera appar. När en enh
 ### <a name="device-password-settings"></a>Inställningar för enhetslösenord
 
 - **Keyguard**: Välj **Inaktivera** för att förhindra att användarna använder Keyguard-funktionen för att låsa skärmen på enheten. **Inte konfigurerad** tillåter användaren att använda Keyguard-funktioner.
+- **Keyguard-funktioner har inaktiverats**: När keyguard har aktiverats på enheten väljer du vilka funktioner som ska inaktiveras. När **Säker kamera** är markerad är till exempel kamerafunktionen inaktiverad på enheten. Funktioner som inte är markerade är aktiverade på enheten.
 - **Lösenordstyp som krävs**: Definiera typen av lösenord som krävs för enheten. Alternativen är:
   - **Minst numeriskt**
   - **Numeriskt avancerat**: Upprepade eller efterföljande siffror, till exempel ”1111” eller ”1234”, tillåts inte.
@@ -145,6 +150,32 @@ Du kan konfigurera en enhet för att köra en app eller flera appar. När en enh
 - **Lägg till nya användare**: Välj **Blockera** för att förhindra att användarna lägger till nya användare. Varje användare har ett personligt utrymme på enheten för anpassade startskärmar, konton, appar och inställningar. **Inte konfigurerad** tillåter användare att lägga till andra användare på enheten.
 - **Borttagning av användare**: Välj **Blockera** för att förhindra att användarna tar bort användare. **Inte konfigurerad** låter användare att ta bort andra användare på enheten.
 - **Kontoändringar**: Välj **Blockera** för att förhindra att användarna ändrar konton. **Inte konfigurerad** låter användare att uppdatera användarkonton på enheten.
+
+### <a name="connectivity"></a>Anslutning
+
+- **Konstant VPN-anslutning**: Välj **Aktivera** om du vill konfigurera en konstant VPN-klient som automatiskt ansluter och återansluter till VPN. VPN-anslutningar som alltid är aktiva är alltid anslutna eller ansluter direkt när användaren låser sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. 
+
+  Välj **Inte konfigurerad** om du inte vill att VPN-anslutningarna alltid ska vara aktiva. Inställningen tillämpas på alla VPN-klienter.
+
+  > [!IMPORTANT]
+  > Var noga med att endast distribuera en princip för VPN som alltid är aktivt för en enskild enhet. Det går inte att distribuera flera principer av den här typen till en enskild enhet.
+
+- **VPN-klient**: Välj en VPN-klient som har stöd för AlwaysOn. Alternativen är:
+  - Cisco AnyConnect
+  - F5 Access
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - Anpassad
+    - **Paket-ID**: Ange paket-ID:t för appen i Google Play Butik. Om URL:en för appen i Google Play Store exempelvis är `https://play.google.com/store/details?id=com.contosovpn.android.prod` är paket-ID:t `com.contosovpn.android.prod`.
+
+  > [!IMPORTANT]
+  >  - Den VPN-klient som du väljer måste vara installerad på enheten och den måste ha stöd för ”per app-VPN” i arbetsprofiler. Annars uppstår ett fel. 
+  >  - Du måste godkänna VPN-klientappen i **den hanterade Google Play Store-butiken**, synkronisera appen till Intune och distribuera appen till enheten. När du har gjort det installeras appen i användarens arbetsprofil.
+  >  - Det kan finnas kända problem när du använder per app-VPN med F5-åtkomst för Android 3.0.4. Du hittar mer information i [Viktig F5-information för F5-åtkomst i Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+
+- **Låst läge**: Välj **Aktivera** om du vill tvinga all nätverkstrafik att använda VPN-tunneln. Om en anslutning till VPN inte upprättas har inte enheten åtkomst till nätverket.
+
+  Välj **Inte konfigurerad** om du vill tillåta att trafik flödar via VPN-tunneln eller det mobila nätverket.
 
 ## <a name="work-profile-only"></a>Endast arbetsprofil 
 
@@ -249,7 +280,7 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
   >  - Du måste godkänna VPN-klientappen i **den hanterade Google Play Store-butiken**, synkronisera appen till Intune och distribuera appen till enheten. När du har gjort det installeras appen i användarens arbetsprofil.
   >  - Det kan finnas kända problem när du använder per app-VPN med F5-åtkomst för Android 3.0.4. Du hittar mer information i [Viktig F5-information för F5-åtkomst i Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
-- **Låst läge**: **Aktivera** om du vill tvinga all nätverkstrafik att använda VPN-tunneln. Om en anslutning till VPN inte upprättas har inte enheten åtkomst till nätverket.
+- **Låst läge**: Välj **Aktivera** om du vill tvinga all nätverkstrafik att använda VPN-tunneln. Om en anslutning till VPN inte upprättas har inte enheten åtkomst till nätverket.
 
   Välj **Inte konfigurerad** om du vill tillåta att trafik flödar via VPN-tunneln eller det mobila nätverket.
 

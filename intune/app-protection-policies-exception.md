@@ -3,10 +3,10 @@ title: Undantag för dataöverföringsprinciper i appar
 titleSuffix: Microsoft Intune
 description: Skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring.
 keywords: ''
-author: brenduns
-ms.author: brenduns
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2018
+ms.date: 11/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,16 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6a2507dc7b920d446b6f7fe78aa7b90f6c31322f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 94798e7745b5802a551c4dda6908ff9f5f803d8f
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178411"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297357"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Så här skapar du undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Som administratör kan du skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring. Med ett undantag kan du uttryckligen välja vilka ohanterade appar som får överföra data till och från hanterade appar. De ohanterade appar som du lägger i undantagslistan måste vara betrodda av IT-avdelningen. 
+Som administratör kan du skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring. Med ett undantag kan du uttryckligen välja vilka ohanterade appar som får överföra data till och från hanterade appar. IT-avdelningen måste ange de ohanterade apparna som du lägger i undantagslistan som betrodda. 
 
 >[!WARNING] 
 > Du ansvarar för att göra ändringar i undantagsprincipen för dataöverföring. Tillägg till den här principen tillåter att ohanterade appar (som inte hanteras av Intune) får åtkomst till data som skyddas av hanterade appar. Den här åtkomsten till skyddade data kan resultera i datasäkerhetsläckor. Lägg endast till dataöverföringsundantag för appar som din organisation måste använda, men som saknar stöd för Intunes principer för programskydd. Dessutom bör du bara lägga till undantag för appar som du inte anser utgöra någon risk för dataläckor.
@@ -53,13 +51,13 @@ Du kan konfigurera dataöverföringsundantag för en princip med Android som må
 ### <a name="example"></a>Exempel
 Genom att lägga till **Webex**-paketet som ett undantag till MAM-dataöverföringsprincipen, tillåts att Webex-länkar i ett hanterat e-postmeddelande i Outlook öppnas direkt i Webex-programmet. Dataöverföringen är fortfarande begränsad i andra ohanterade appar.
 
-- **Webex**-exempel för iOS: Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>wbx</code>
+- **Webex**-exempel för iOS:   Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>wbx</code>
     
- - **Maps**-exempel för iOS: Om du vill göra ett undantag för den ursprungliga **Maps**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>maps</code>
+ - **Kartor**-exempel för iOS:  Om du vill göra ett undantag för den inbyggda appen **Kartor** så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>maps</code>
 
-- **Webex**-exempel för Android: Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>com.cisco.webex.meetings</code>
+- **Webex**-exempel för Android:   Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>com.cisco.webex.meetings</code>
     
-- **SMS**-exempel för Android: För att undanta den överordnade länkens interna **SMS**-app så att den kan anropas av Intune-hanterade appar via olika meddelandeappar och Android-enheter, måste du lägga till undantag för dataöverföring för följande strängar: 
+- **SMS**-exempel för Android:   Om du vill göra ett undantag för den inbyggda **SMS**-appen så att den kan anropas av Intune-hanterade appar via olika meddelandeappar och Android-enheter, måste du lägga till undantag för dataöverföring för följande strängar: 
     <code>com.google.android.apps.messaging</code>
     
     <code>com.android.mms</code>

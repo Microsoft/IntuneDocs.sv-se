@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 1/17/2018
+ms.date: 1/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 305799fa21ae7c3464caf8f7019dcf9e8170d3ac
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 32281ae37b7b36dfbf49503275a8a1e6c35d8f6d
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181487"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210796"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Vanliga problem och lösningar med enhetsprofiler i Microsoft Intune
 
@@ -48,17 +48,17 @@ När en princip eller en app tilldelas börjar Intune genast att uppmana enheten
 
 Om enheten inte kontaktar tjänsten för att be om principen när den första aviseringen har skickats, görs ytterligare tre försök. Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjänsten enligt följande:
 
-- iOS och macOS: var sjätte timme
-- Android: var åttonde timme
-- Windows Phone: var åttonde timme
-- Windows 8.1- och Windows 10-datorer som har registrerats som enheter: var åttonde timme
+- iOS och macOS: var 6:e timme
+- Android: var 8:e timme
+- Windows Phone: var 8:e timme
+- Windows 8.1- och Windows 10-datorer som har registrerats som enheter: var 8:e timme
 
 Om enheten nyligen har registrerats sker kontrollerna oftare enligt följande:
 
-- iOS och macOS: var 15:e minut i sex timmar och därefter var sjätte timme
-- Android: var tredje minut i 15 minuter, därefter var 15:e minut i två timmar och sedan var åttonde timme
-- Windows Phone: var femte minut i 15 minuter, därefter var 15:e minut i två timmar och sedan var åttonde timme
-- Windows-datorer som registrerats som enheter: var tredje minut i 30 minuter och därefter var åttonde timme
+- iOS och macOS: var 15:e minut i sex timmar och därefter var 6:e timme
+- Android: var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme
+- Windows Phone: var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme
+- Windows-datorer som registrerats som enheter: var 3:e minut i 30 minuter och sedan var 8:e timme
 
 Användarna kan också söka efter principer när som helst genom att öppna företagsportalappen och synkronisera enheten.
 
@@ -72,11 +72,11 @@ Andra ändringar, t.ex. en uppdatering av kontaktinformationen på företagsport
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Hur vet jag vilka inställningar som tillämpas om flera principer tilldelas samma användare eller enhet?
 Om två eller flera principer tilldelas till samma användare eller enhet avgörs vilka inställningar som ska tillämpas på inställningsnivå:
 
--   Inställningar för efterlevnadsprinciper har alltid högre prioritet än inställningar för konfigurationsprinciper.
+- Inställningar för efterlevnadsprinciper har alltid högre prioritet än inställningar för konfigurationsprinciper.
 
--   Om en efterlevnadsprincip utvärderas mot samma inställning i en annan efterlevnadsprincip gäller den mest restriktiva efterlevnadsprincipen.
+- Om en efterlevnadsprincip utvärderas mot samma inställning i en annan efterlevnadsprincip gäller den mest restriktiva efterlevnadsprincipen.
 
--   Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Azure Portal. I så fall löses dessa konflikter manuellt.
+- Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Azure Portal. I så fall löses dessa konflikter manuellt.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Vad händer när appskyddsprinciper står i konflikt med varandra? Vilken används för appen?
 Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en appskyddsprincip, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning). Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.
@@ -93,40 +93,43 @@ När du tilldelar en anpassad profil bör du se till att de konfigurerade instä
 ## <a name="what-happens-when-a-profile-is-deleted-or-no-longer-applicable"></a>Vad händer när en profil tas bort eller inte längre är tillämplig?
 När du tar bort en profil, eller när du tar bort en enhet från en grupp som har den profilen, tas profilen och inställningarna bort från enheten enligt följande listor:
 
-- Wi-Fi-, VPN-, certifikat- och e-postprofiler – De här profilerna tas bort från alla registrerade enheter som stöds.
+- Wi-Fi, VPN, certifikat och e-postprofiler: Dessa profiler tas bort från alla registrerade enheter som stöds.
 - Alla andra profiltyper:  
-    - **Windows- och Android-enheter**: Inställningarna tas inte bort från enheten
-    - **Windows Phone 8.1-enheter**: Följande inställningar tas bort:  
-        - Kräv ett lösenord för att låsa upp mobila enheter
-        - Tillåt enkla lösenord
-        - Minsta längd på lösenord
-        - Lösenordstyp krävs
-        - Lösenordets giltighetstid (i dagar)
-        - Kom ihåg tidigare lösenord
-        - Antal tillåtna, upprepad felinloggningar innan enheten rensas
-        - Antal minuters inaktivitet innan lösenord krävs
-        - Krävd lösenordstyp – minsta antal tecken
-        - Tillåt kamera
-        - Filkryptering på mobil enhet
-        - Tillåt flyttbara lagringsenheter
-        - Tillåt webbläsare
-        - Tillåt appbutik
-        - Tillåt skärmbild
-        - Tillåt geolokalisering
-        - Tillåt Microsoft-konto
-        - Tillåt kopiera och klistra in
-        - Tillåt Wi-Fi -delning
-        - Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter
-        - Tillåt rapportering av trådlösa surfpunkter
-        - Tillåt rensning
-        - Tillåt Bluetooth
-        - Tillåt NFC
-        - Tillåt Wi-Fi
 
-    - **iOS**: Alla inställningar tas bort, utom:
-        - Tillåt röstroaming
-        - Tillåt dataroaming
-        - Tillåt automatisk synkronisering vid roaming
+  - **Windows- och Android-enheter**: Inställningarna tas inte bort från enheten
+  - **Windows Phone 8.1-enheter**: Följande inställningar tas bort:  
+  
+    - Kräv ett lösenord för att låsa upp mobila enheter
+    - Tillåt enkla lösenord
+    - Minsta längd på lösenord
+    - Lösenordstyp krävs
+    - Lösenordets giltighetstid (i dagar)
+    - Kom ihåg tidigare lösenord
+    - Antal tillåtna, upprepad felinloggningar innan enheten rensas
+    - Antal minuters inaktivitet innan lösenord krävs
+    - Krävd lösenordstyp – minsta antal tecken
+    - Tillåt kamera
+    - Filkryptering på mobil enhet
+    - Tillåt flyttbara lagringsenheter
+    - Tillåt webbläsare
+    - Tillåt appbutik
+    - Tillåt skärmbild
+    - Tillåt geolokalisering
+    - Tillåt Microsoft-konto
+    - Tillåt kopiera och klistra in
+    - Tillåt Wi-Fi -delning
+    - Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter
+    - Tillåt rapportering av trådlösa surfpunkter
+    - Tillåt rensning
+    - Tillåt Bluetooth
+    - Tillåt NFC
+    - Tillåt Wi-Fi
+
+  - **iOS**: Alla inställningar tas bort, utom:
+  
+    - Tillåt röstroaming
+    - Tillåt dataroaming
+    - Tillåt automatisk synkronisering vid roaming
 
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Jag ändrade en enhets begränsningsprofil, men ändringarna har inte börjar gälla
 Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva profilen har redan tillämpats för enheten.
@@ -134,6 +137,14 @@ Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprin
 Om du vill ändra profilen till ett mindre säkert värde återställer du säkerhetsprinciperna. I Windows 8.1. sveper du till exempel från höger på skrivbordet och väljer **Inställningar** > **Kontrollpanelen**. Välj appleten **Användarkonton** . Längst ned på den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper**. Markera den och välj sedan **Återställ principer**.
 
 Andra MDM-enheter, som Android, Windows Phone 8.1 och senare, iOS och Windows 10, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande profil.
+
+## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Vissa inställningar i en Windows 10-profil returnerar ”ej tillämpligt”
+Vissa inställningar på Windows 10-enheter kan visas som ”ej tillämpligt”. När det sker stöds inte just den inställningen på den versionen eller utgåvan av Windows som körs på enheten. Meddelandet kan visas av följande orsaker:
+
+- Inställningen är bara tillgänglig för nyare versioner av Windows och inte den aktuella versionen av operativsystem (OS) på enheten.
+- Inställningen är bara tillgänglig för vissa Windows-utgåvor eller vissa SKU:er, som Home, Professional, Enterprise och Education.
+
+Mer information om versions- och SKU-krav för olika inställningar finns i [referensartikeln för konfigurationsprovider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="next-steps"></a>Nästa steg
 Behöver du mer hjälp? Se [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).

@@ -14,12 +14,12 @@ ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
-ms.openlocfilehash: 753ad125e541936586f2939985a23ed3b06ea7ea
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: a762f14fd93400d76c63d2108a41229bf2ffc34d
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817168"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122595"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -39,15 +39,14 @@ Intune och Azure Active Directory ser tillsammans till att endast hanterade och 
 Intune innehåller funktioner för enhetskompatibilitetprinciper som utvärderar enheternas efterlevnadsstatus. Kompatibilitetsstatusen rapporteras till Azure Active Directory som använder den för att verkställa den princip för villkorlig efterlevnad som skapas i Azure Active Directory när användaren försöker få åtkomst till företagets resurser.
 
 Enhetsbaserad villkorlig åtkomst för Exchange Online och andra Office 365-produkter konfigureras via [Azure-portalen](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
-
--   Läs mer om [villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+-   Läs mer om [Kräv hanterade enheter med villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-managed-devices).
 
 -   Läs mer om [Intunes enhetsefterlevnad](device-compliance.md).
 
--   Lär dig mer om [skydd av e-post, Office 365 och andra tjänster med villkorlig åtkomst i Intune](app-based-conditional-access-intune.md).
+-   Läs mer om [Webbläsare med villkorlig åtkomst som stöds i Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
-> På Android-enheter när du aktiverar Enhetsåtkomst för Sharepoint Online måste användare aktivera alternativet **Aktivera webbläsaråtkomst** på den registrerade enheten enligt följande:
+> När du på Android-enheter aktiverar enhetsbaserad åtkomst för Sharepoint Online eller webbläsarbaserad åtkomst till Exchange Online måste användare aktivera alternativet **Aktivera webbläsaråtkomst** på den registrerade enheten enligt följande:
 > 1. Starta **företagsportalappen**.
 > 2. Gå till sidan **Inställningar** från de tre punkterna (…) eller knappen för maskinvara.
 > 3. Tryck på knappen **Aktivera webbläsaråtkomst**. 
@@ -146,7 +145,9 @@ Villkorlig åtkomst för datorer har ungefär samma funktioner som för mobila e
 
 #### <a name="bring-your-own-device-byod"></a>BYOD (Bring Your Own Device)
 
--   **Arbetsplatsanslutning och Intune-hantering:** Här kan användaren ansluta sina personliga enheter och få åtkomst till företagets resurser och tjänster. Du kan använda arbetsplatsanslutning och registrera enheter i Intune och ta emot principer på enhetsnivå, vilket är ett alternativ till att utvärdera kriterier för villkorlig åtkomst.
+-   **Arbetsplatsanslutning och Intune-hantering:** Här kan användaren ansluta sina personliga enheter och få åtkomst till företagets resurser och tjänster. Du kan använda arbetsplatsanslutning och registrera enheter i Intune MDM och ta emot principer på enhetsnivå, vilket är ett annat alternativ för att utvärdera kriterier för villkorlig åtkomst.
+
+Läs mer om [enhetshantering i Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/overview).
 
 ## <a name="app-based-conditional-access"></a>Appbaserad villkorlig åtkomst
 

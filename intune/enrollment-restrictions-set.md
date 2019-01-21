@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: a8ebe8f8cd84ef5eb38bf7e17f413bcc6a0791cd
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112960"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122559"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -81,6 +81,8 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
     - Android-arbetsprofil har stöd för major.minor.rev.build.
     - iOS stöder major.minor.rev. Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
     - Windows stöder endast major.minor.rev.build för Windows 10.
+> [!Note]
+> Windows 10 tillhandahåller inte versionsnumret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registrering.
 8. Välj om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
 9. Välj **OK**.
 

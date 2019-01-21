@@ -1,12 +1,12 @@
 ---
-title: Tilldela appar till Android-arbetsprofilenheter
+title: Tilldela Managed Google Play-appar till Android enterprise-enheter
 titlesuffix: Microsoft Intune
-description: Förstå hur du synkroniserar och tilldelar appar till Android-arbetsprofilenheter från Managed Google Play Butik.
+description: Förstå hur du synkroniserar och tilldelar appar till Android enterprise-enheter från Managed Google Play Butik.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
-ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
+ms.openlocfilehash: 135aa120d8c0e441c59e9b9b3c5bb8ee6aa17229
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305938"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239582"
 ---
-# <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Tilldela appar till Android-arbetsprofilenheter med Intune
+# <a name="assign-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Tilldela Managed Google Play-appar till Android enterprise-enheter med Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android enterprise är ett program för Android-arbetsprofilenheter och kioskenheter. För Android-arbetsprofilenheter är Android enterprise en uppsättning funktioner och tjänster som avgränsar personliga appar och data från arbetsappar och data. Android enterprise ger tillgång till ytterligare hanteringsalternativ och sekretess när Android-enheter används i arbetet. Intune hjälper dig att distribuera appar och inställningar till Android-arbetsprofilenheter för att se till att arbetsrelaterad och personlig information hålls isär. Alla appar som du installerar på Android-arbetsprofilenheter kommer från Managed Google Play Butik. Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till vanliga Android-enheter. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
+Android enterprise är ett program för Android-arbetsprofilenheter, dedikerade enheter/kioskenheter samt fullständigt hanterade enheter. För Android-arbetsprofilenheter är Android enterprise en uppsättning funktioner och tjänster som avgränsar personliga appar och data från arbetsappar och data. Android enterprise ger tillgång till ytterligare hanteringsalternativ och sekretess när Android-enheter används i arbetet. Intune hjälper dig att distribuera appar och inställningar till Android-arbetsprofilenheter för att se till att arbetsrelaterad och personlig information hålls isär. Alla appar som du installerar på Android-arbetsprofilenheter kommer från Managed Google Play Butik. Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till vanliga Android-enheter. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
 
 Om du har skapat dina egna verksamhetsspecifika appar, kan du även tilldela dem på följande sätt:
 - Registrera dig för ett Google-utvecklarkonto som låter dig publicera appar på ett privat område i Google Play-butiken.

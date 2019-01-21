@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 44dc3f82b8d51007d3eaf1d71f1a416ebfe319b4
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 3993cb4e7ccbc04ccc1d341a9bd72594948f3262
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738077"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297527"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -46,7 +46,7 @@ Entiteten **DeviceTypes** är den enhetstyp som andra informationslagerentiteter
 | DeviceTypeKey |Unikt id för enhetstypen i informationslagret – surrogatnyckel |
 | DeviceTypeName |Enhetstyp |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | deviceTypeID  | Namn | Beskrivning |
 |---------|------------|--------|
@@ -81,7 +81,7 @@ Entiteten **ClientRegistrationStateTypes** är den registreringstyp som andra in
 | clientRegisterationStateKey |Unikt id för registreringstillståndet i informationslagret – surrogatnyckel |
 | clientRegisterationStateName |Registreringstillstånd |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | ClientRegisterationStateID  | Namn | Beskrivning |
 |---------|------------|--------|
@@ -95,6 +95,93 @@ Entiteten **ClientRegistrationStateTypes** är den registreringstyp som andra in
 | 7 |NotRegisteredPendingEnrollment |Inte registrerad, väntar på registrering |
 | 8 |Okänt |Okänt tillstånd |
 
+## <a name="enrollmentactivities"></a>enrollmentActivities 
+Entiteten **EnrollmentActivity** visar aktiviteten för en enhetsregistrering.
+
+| Egenskap                      | Beskrivning                                                               |
+|-------------------------------|---------------------------------------------------------------------------|
+| dateKey                       | Nyckeln för det datum då den här registreringsaktiviteten registrerades.               |
+| deviceEnrollmentTypeKey       | Nyckeln för registreringens typ.                                        |
+| deviceTypeKey                 | Nyckeln för enhetens typ.                                                |
+| enrollmentEventStatusKey      | Nyckeln för den status som visar om registreringen lyckades eller misslyckades.    |
+| enrollmentFailureCategoryKey  | Nyckeln för registreringsfelets kategori (om registreringen misslyckades).        |
+| enrollmentFailureReasonKey    | Nyckeln för registreringsfelets orsak (om registreringen misslyckades).          |
+| osVersion                     | Enhetens operativsystemversion.                               |
+| count                         | Totalt antal registreringsaktiviteter som matchar klassificeringarna ovan.  |
+
+## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
+Entiteten **EnrollmentEventStatus** visar resultatet för en enhetsregistrering.
+
+| Egenskap                   | Beskrivning                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| enrollmentEventStatusKey   | Unik identifierare för registreringsstatusen i informationslagret (surrogatnyckel)  |
+| enrollmentEventStatusName  | Namnet på registreringsstatusen. Se exemplen nedan.                            |
+
+### <a name="example"></a>Exempel
+
+| enrollmentEventStatusName  | Beskrivning                            |
+|----------------------------|----------------------------------------|
+| Klart                    | En lyckad enhetsregistrering         |
+| Misslyckades                     | En misslyckad enhetsregistrering             |
+| Inte tillgängligt              | Registreringsstatusen är inte tillgänglig.  |
+
+## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
+Entiteten **EnrollmentFailureCategory** visar varför en enhetsregistrering misslyckades. 
+
+| Egenskap                       | Beskrivning                                                                                 |
+|--------------------------------|---------------------------------------------------------------------------------------------|
+| enrollmentFailureCategoryKey   | Unik identifierare för registreringsfelets kategori i informationslagret (surrogatnyckel)  |
+| enrollmentFailureCategoryName  | Namnet på registreringsfelets kategori. Se exemplen nedan.                            |
+
+### <a name="example"></a>Exempel
+
+| enrollmentFailureCategoryName   | Beskrivning                                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Ej tillämpligt                  | Registreringsfelets kategori är inte tillämplig.                                                            |
+| Inte tillgängligt                   | Registreringsfelets kategori är inte tillgänglig.                                                             |
+| Okänt                         | Okänt fel.                                                                                                |
+| Autentisering                  | Autentiseringen misslyckades.                                                                                        |
+| Auktorisering                   | Anropet har autentiserats, men inte auktoriserats för registrering.                                                         |
+| AccountValidation               | Det gick inte att verifiera kontot för registrering. (Kontot är blockerat, registrering är inte aktiverat)                      |
+| UserValidation                  | Det gick inte att verifiera användaren. (Användaren finns inte, licens saknas)                                           |
+| DeviceNotSupported              | Enheten stöds inte för hantering av mobilenheter.                                                         |
+| InMaintenance                   | Kontot genomgår underhåll.                                                                                    |
+| BadRequest                      | Klienten skickade en begäran som inte förstås/stöds av tjänsten.                                        |
+| FeatureNotSupported             | Funktioner som används av den här registreringen stöds inte för det här kontot.                                        |
+| EnrollmentRestrictionsEnforced  | Registreringsbegränsningar som konfigurerats av administratören blockerade den här registreringen.                                          |
+| ClientDisconnected              | Klienten uppnådde tidsgränsen eller så avbröts registreringen av slutanvändaren.                                                        |
+| UserAbandonment                 | Registreringen lämnades av slutanvändaren. (Slutanvändaren inledde registrering men slutförde den inte inom rimlig tid)  |
+
+## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
+Entiteten **EnrollmentFailureReason** visar en mer detaljerad orsak till ett enhetsregistreringsfel inom en viss felkategori.  
+
+| Egenskap                     | Beskrivning                                                                               |
+|------------------------------|-------------------------------------------------------------------------------------------|
+| enrollmentFailureReasonKey   | Unik identifierare för registreringsfelets orsak i informationslagret (surrogatnyckel)  |
+| enrollmentFailureReasonName  | Namnet på registreringsfelets orsak. Se exemplen nedan.                            |
+
+### <a name="example"></a>Exempel
+
+| enrollmentFailureReasonName      | Beskrivning                                                                                                                                                                                            |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ej tillämpligt                   | Registreringsfelets orsak är inte tillämplig.                                                                                                                                                       |
+| Inte tillgängligt                    | Registreringsfelets orsak är inte tillgänglig.                                                                                                                                                        |
+| Okänt                          | Okänt fel.                                                                                                                                                                                         |
+| UserNotLicensed                  | Användaren hittades inte i Intune eller har inte någon giltig licens.                                                                                                                                     |
+| UserUnknown                      | Användaren är inte känd i Intune.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Endast en användare kan registrera en enhet. Den här enheten har tidigare registrerats av en annan användare.                                                                                                                |
+| EnrollmentOnboardingIssue        | Intune som utfärdare för hantering av mobilenheter (MDM) har inte konfigurerats ännu.                                                                                                                                 |
+| AppleChallengeIssue              | Installationen av iOS-hanteringsprofilen försenades eller misslyckades.                                                                                                                                         |
+| AppleOnboardingIssue             | Ett Apple MDM-pushcertifikat krävs för registrering i Intune.                                                                                                                                       |
+| DeviceCap                        | Användaren försökte registrera fler enheter än maximalt tillåtna.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Intune-registreringstjänsten kunde inte auktorisera den här begäran.                                                                                                                                            |
+| UnsupportedDeviceType            | Den här enheten uppfyller inte minimikraven för Intune-registrering.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Det gick inte att registrera den här enheten på grund av en konfigurerad regel för registreringsbegränsning.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Den här enhetens IMEI (International Mobile Equipment Identifier) eller serienummer hittades inte.  Utan den här identifieraren betraktas enheter som privatägda enheter som för närvarande blockeras.  |
+| FeatureNotSupported              | Användaren försökte få åtkomst till en funktion som ännu inte har släppts för alla kunder eller inte är kompatibel med Intune-konfigurationen.                                                            |
+| UserAbandonment                  | Registreringen lämnades av slutanvändaren. (Slutanvändaren inledde registrering men slutförde den inte inom rimlig tid)                                                                                           |
+| APNSCertificateExpired           | Apple-enheter kan inte hanteras med ett Apple MDM-pushcertifikat som har upphört att gälla.                                                                                                                            |
+
 ## <a name="enrollmenttypes"></a>EnrollmentTypes
 
 Entiteten **EnrollmentTypes** visar hur en enhet registrerades. Typ av registrering visar registreringsmetod. I exemplen visas olika typer av registrering och vad de innebär.
@@ -105,7 +192,7 @@ Entiteten **EnrollmentTypes** visar hur en enhet registrerades. Typ av registrer
 | managementStateKey |Unikt id för hanteringstillståndet i informationslagret – surrogatnyckel. |
 | managementStateName |Visar status för den fjärranslutna åtgärden som utförts på den här enheten. |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | enrollmentTypeID  | Namn | Beskrivning |
 |---------|------------|--------|
@@ -140,7 +227,7 @@ Entiteten **MdmStatuses** visar enhetens regelefterlevnadsstatus.
 | ComplianceStatus |Kompatibilitetstillstånd för enheten, måste ha ett av värdena i tabellen nedan | 
 
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | MdmStatusID  | ComplianceStatus | Beskrivning |
 |---------|------------|--------|
@@ -161,7 +248,7 @@ Entiteten **ManagementStates** innehåller information om enhetens tillstånd. I
 | managementStateKey | Unikt id för hanteringstillståndet i informationslagret – surrogatnyckel. |
 | managementStateName | Visar status för den fjärranslutna åtgärden som utförts på den här enheten. |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | managementStateID  | Namn | Beskrivning |
 |---------|------------|--------|
@@ -188,7 +275,7 @@ Entiteten **WorkPlaceJoinStateTypes** visar enhetens Azure Active Directory Work
 | WorkPlaceJoinStateKey | Unikt id för arbetsplatsanslutningsstatus i informationslagret – surrogatnyckel |
 | WorkPlaceJoinStateName | Arbetsplatsanslutningsstatus |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | workPlaceJoinStateID  | Namn | Beskrivning |
 |---------|------------|--------|
@@ -212,7 +299,7 @@ Entiteten **ManagementAgentTypes** visar de agenter som används för att hanter
 | ManagementAgentTypeKey | Unikt id för typ av hanteringsagent i informationslagret – surrogatnyckel. |
 | ManagementAgentTypeName |Visar vilken typ av agent som används för att hantera enheten. |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
 | ManagementAgentTypeID  | Namn | Beskrivning |
 |---------|------------|--------|

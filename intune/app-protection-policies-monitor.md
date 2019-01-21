@@ -3,10 +3,10 @@ title: Så här övervakar du appskyddsprinciper
 titleSuffix: Microsoft Intune
 description: Övervaka kompatibilitetsstatusen för hanteringsprinciper för mobilappar i Intune.
 keywords: ''
-author: brenduns
-ms.author: brenduns
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c0603b3cfd2b8fbe1d26e782118fb07526849cfa
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: f86ebd91125ec60d2ad0a28b47f5ac01fb62e8e2
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816848"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297306"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -44,20 +44,16 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Klientappar** i **Intune**-fönstret.
-4. Visa sammanfattningsvyn genom att välja **Övervaka** > **Status för appskydd** i arbetsbelastningen **Klientappar**:
+4. Visa sammanfattningsvyn genom att välja **Appskyddsstatus** i avsnittet **Övervaka** i arbetsbelastningen **Klientappar**:
 
 ![Panelen Sammanfattning i fönstret Hantering av mobilprogram i Intune](./media/app-protection-user-status-summary.png)
 
--   **Användare**: Totalt antal användare på företaget som använder en app som är associerad med principen i ett arbetssammanhang.
+-   **Tilldelade användare**: Det totala antalet tilldelade användare i företaget som använder en app som är associerad med en princip i en arbetskontext och är skyddade och licensierade, samt de tilldelade användare som är oskyddade och olicensierade.
+-   **Flaggade användare**: Antalet användare som har problem. Upplåsta enheter rapporteras under **Flaggade användare**.
+-   **Användarstatus för iOS** och **Användarstatus för Android**: Antal användare som har använt en app som har en princip tilldelad till dem i en arbetskontext för den relaterade plattformen. Den här informationen visar antalet användare som hanteras av principen, samt antalet användare som använder en app som ingen princip i en arbetskontext inriktar sig på. Du kan välja att lägga till dessa användare i principen.
 
--   **HANTERAS AV PRINCIP**: Antal användare som har använt en app som har en princip tilldelad till dem i ett arbetssammanhang.
-
--   **INGEN PRINCIP**: Antal användare som använder en app som ingen princip i ett arbetssammanhang inriktar sig på. Du kan välja att lägga till dessa användare i principen.
     > [!NOTE]
     > Om du har flera principer per plattform anses en användare vara hanterad av en princip när användaren har minst en tilldelad princip.
-
-- **Flaggade användare**: Antalet användare som har problem. För närvarande rapporteras endast användare med upplåsta enheter under **Flaggade användare**.
-
 
 ## <a name="detailed-view"></a>Detaljerad vy
 Du kommer till den detaljerade vyn av sammanfattningen genom att välja panelen **Användarstatus** (beroende på enhetens operativsystem) och panelen **Flaggade användare**.
@@ -79,7 +75,7 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
 
 Visa rapporter för en användare genom att följa anvisningarna:
 
-1.  Välj panelen **Sammanfattning** för att välja en användare.
+1.  Välj sammanfattningspanelen **Användarstatus** för att välja en användare.
 
     ![Skärmbild av panelen Sammanfattning i hantering av mobilprogram i Intune](./media/MAM-reporting-6.png)
 
@@ -94,18 +90,24 @@ I den detaljerade vyn visas felmeddelandet, appen som användes när felet intr�
 
 ## <a name="reporting-view"></a>Rapporteringsvy
 
-Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter som hjälper dig med efterlevnadsstatusen för MAM-principer:
+Du hittar samma rapporter på bladet **Appskyddsstatus**.
 
-![Skärmbild som visar två rapporter som är tillgängliga i fönstret Inställningar](./media/MAM-reporting-7.png)
+> [!NOTE]
+> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS-modell. I Intune är dessa fält tillgängliga genom att välja **Klientappar** > **Appskyddsstatus** och sedan välja **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodell (Android och iOS) och lägsta inställning för version av Android-säkerhetsuppdatering. 
 
--   **Användarrapport för appskydd:** Visar en översikt över samma information som du hittar i rapporten **Användarstatus** under avsnittet Detaljerad vy ovan.
+Det finns ytterligare rapporter som hjälper dig med efterlevnadsstatusen för MAM-principer. Du visar de rapporterna genom att välja **Klientappar** > **Appskyddsstatus** > **Rapporter**. 
 
--   **Apprapport för appskydd:** Tillhandahåller två olika statusar om appskydd som administratörer kan välja innan de skapar rapporten. Statusen kan vara skyddad eller oskyddad.
+På bladet **Rapporter** finns flera rapporter baserade på användare och app, bland annat följande:
+
+
+-   **Användarrapport**: Den här rapporten visar en översikt över samma information som du hittar i rapporten **Användarstatus** under avsnittet Detaljerad vy ovan.
+
+-   **Apprapport**: Den här rapporten tillhandahåller två olika statusar om appskydd som administratörer kan välja innan de skapar rapporten. Statusen kan vara skyddad eller oskyddad.
 
     -   Användarstatus för hanterad MAM-aktivitet (Skyddad): Den här rapporten ger en översikt över hur alla hanterade MAM-appar opererar, per användare.
 
         -   Den visar alla appar som är mål för MAM-principer för varje användare. Den visar även status för varje app, som incheckade med MAM-principer eller som mål för MAM-principer men inte incheckade.
-<br></br>
+<br><br>
     -   Användarstatus för icke-hanterad MAM-aktivitet (Oskyddad): Den här rapporten ger en översikt över hur MAM-aktiverade appar som är icke-hanterade opererar, per användare. Detta kan inträffa på grund av följande anledningar:
 
         -   De här apparna används antingen av en användare eller en app som för närvarande inte är mål för en MAM-princip.

@@ -1,11 +1,11 @@
 ---
-title: Enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs
-description: Översikt över olika Microsoft Intune-enhetsprofiler, bland annat funktioner, begräsningar, e-post, Wi-Fi, VPN, utbildning, certifikat, uppgradering av Windows 10, BitLocker och Windows Defender, Windows Information Protection och anpassade inställningar för enhetskonfiguration i Azure Portal. Använd dessa profiler för att hantera och skydda data och enheter i företaget.
+title: Funktioner och inställningar för enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Översikt över olika Microsoft Intune-enhetsprofiler, bland annat funktioner, begräsningar, e-post, Wi-Fi, VPN, utbildning, certifikat, uppgradering av Windows 10, BitLocker och Windows Defender, Windows Information Protection, administrativa mallar och anpassade inställningar för enhetskonfiguration i Azure-portalen. Använd dessa profiler för att hantera och skydda data och enheter i företaget.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,42 +15,101 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: c9a3146b1ad5f6f7c439d2e49cf534e14d154f76
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: bc28bca31c43140a7bca528655825bab60c53be1
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728709"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203526"
 ---
-# <a name="what-are-microsoft-intune-device-profiles"></a>Vad är enhetsprofiler i Microsoft Intune?
+# <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Tillämpa inställningar för funktioner på dina enheter med enhetsprofiler i Microsoft Intune
 
-Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner hanteras med hjälp av profiler. Några profilexempel: 
+Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter, olika plattformar, som iOS, Android och Windows, och sedan använda Intune för att tillämpa profilen på enheter i din organisation.
 
-- En WiFi-profil som ger olika enheter åtkomst till företagets trådlösa nätverk
-- En VPN-profil som ger olika enheter åtkomst till VPN-servern i företagsnätverket
+Några profilexempel:
 
-I den här artikeln ges en översikt över de olika profiler du kan skapa för dina enheter. Med de här profilerna kan du tillåta eller förhindra vissa funktioner på enheterna.
+- På Windows 10-enheter använder du en profilmall som blockerar ActiveX-kontroller i Internet Explorer.
+- Tillåt användare på iOS- och macOS-enheter att använda AirPrint-skrivare i organisationen.
+- Tillåt eller förhindra åtkomst till Bluetooth på enheten.
+- Skapa en WiFi- eller VPN-profil som ger olika enheter åtkomst till företagsnätverket.
+- Hantera programuppdateringar, till exempel när de installeras.
+- Kör en Android-enhet, en dedikerad kioskenhet som kan sköra en app eller kör många appar.
 
-## <a name="before-you-begin"></a>Innan du börjar
-
-Om du vill se tillgängliga funktioner öppnar du [Azure Portal](https://portal.azure.com) och din Intune-resurs. 
-
-**Enhetskonfiguration** omfattar följande alternativ:
-
-- **Översikt**: Visar status för dina profiler och ytterligare information om de profiler som du har tilldelat till användare och enheter
-- **Hantera**: Skapa enhetsprofiler och överför anpassade [PowerShell-skript](intune-management-extension.md) som ska köras i profilen
-- **Övervaka**: Kontrollera status för en profil och visa loggar för dina profiler
-- **Installation**: Lägg till en certifikatutfärdare (SCEP eller PFX) eller aktivera kostnadsuppföljning av telekommunikation i profilen
+Den här artikeln listar stegen för att skapa en profil och ger en översikt över de olika typerna av profiler du kan skapa. Med de här profilerna kan du tillåta eller förhindra vissa funktioner på enheterna.
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-[Skapa enhetsprofiler](device-profile-create.md) innehåller stegvisa anvisningar för att skapa en profil. 
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
 
-## <a name="device-features---ios-and-macos"></a>Enheten har funktioner för – iOS och macOS
+2. Välj **Enhetskonfiguration**. Du kan välja mellan följande alternativ:
 
-[Enhetsfunktioner](device-features-configure.md) styr funktioner på iOS- och macOS-enheter, t.ex. AirPrint, meddelanden och delade enhetskonfigurationer.
+    - **Översikt**: Visar status för dina profiler och ytterligare information om de profiler som du har tilldelat till användare och enheter.
+    - **Hantera**: Skapa enhetsprofiler, ladda upp anpassade [PowerShell-skript](intune-management-extension.md) att köra i profilen och lägg till dataplaner för enheter med hjälp av [eSIM](esim-device-configuration.md).
+    - **Övervaka**: Kontrollera status för en profil och visa loggar för dina profiler.
+    - **Installation**: Lägg till en SCEP- eller PFX-certifikatutfärdare eller aktivera [Kostnadsuppföljning av telekommunikation](telecom-expenses-monitor.md) i profilen.
+
+3. Välj **Profiler** > **Skapa profil**. Ange följande egenskaper:
+
+   - **Namn**: Ange ett beskrivande namn på profilen.
+   - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+   - **Plattform**: Välj plattform för dina enheter. Alternativen är:  
+
+       - **Android**
+       - **Android enterprise**
+       - **iOS**
+       - **macOS**
+       - **Windows Phone 8.1**
+       - **Windows 8.1 och senare**
+       - **Windows 10 och senare**
+
+   - **Profiltyp**: Välj den typ av inställningar du vill skapa. Listans innehåll beror på vilken **plattform** du väljer:
+
+       - [Administrativa mallar](administrative-templates-windows.md)
+       - [Anpassad](custom-settings-configure.md)
+       - [Leveransoptimering](delivery-optimization-windows.md)
+       - [Enhetsfunktioner](device-features-configure.md)
+       - [Enhetsbegränsningar](device-restrictions-configure.md)
+       - [Versionsuppgradering och lägesväxling](edition-upgrade-configure-windows-10.md)
+       - [Utbildning](education-settings-configure.md)
+       - [E-post](email-settings-configure.md)
+       - [Slutpunktsskydd](endpoint-protection-configure.md)
+       - [Identity Protection](identity-protection-configure.md)  
+       - [Helskärmsläge](kiosk-settings.md)
+       - [PKCS-certifikat](certficates-pfx-configure.md)
+       - [SCEP-certifikat](certificates-scep-configure.md)
+       - [Betrott certifikat](certificates-configure.md)
+       - [Uppdateringsprinciper](software-updates-ios.md)
+       - [VPN](vpn-settings-configure.md)
+       - [Wi-Fi](wi-fi-settings-configure.md)
+       - [Windows Defender ATP](advanced-threat-protection.md)
+       - [Windows informationsskydd](windows-information-protection-configure.md)
+
+     Om du till exempel väljer **iOS** som plattform ser profiltypen ut ungefär så här:
+
+     ![Skapa iOS-profil i Intune](./media/create-device-profile.png)
+
+4. Välj **Inställningar**. Inställningarna är ordnade efter kategori. Välj en kategori för att visa en lista över alla inställningar du kan konfigurera.
+
+5. Välj **OK** > **Skapa** när du är klar för att spara dina ändringar.
+
+Mer information om de olika profiltyperna finns i nästa avsnitt i den här artikeln.
+
+## <a name="administrative-templates-preview"></a>Administrativa mallar (förhandsversion)
+
+[Administrativa mallar](administrative-templates-windows.md) innehåller hundratals inställningar du kan konfigurera för Internet Explorer, OneDrive, fjärrskrivbord, Word, Excel och andra Office-program och mycket mer.
+
+Dessa mallar ger administratörer en lätt och förenklad vy över inställningar som liknar grupprinciper, men de är 100 % molnbaserade. 
 
 Den här funktionen stöder:
+
+- Windows 10 och senare
+
+## <a name="device-features"></a>Enhetsfunktioner
+
+[Enhetsfunktioner](device-features-configure.md) styr funktioner på iOS- och macOS-enheter, t.ex. AirPrint, meddelanden och låsskärmsmeddelanden.
+
+Den här funktionen stöder:
+
 - iOS 
 - macOS
 
@@ -167,6 +226,8 @@ Den här funktionen stöder:
 
 I [Uppdateringsprinciper för iOS](software-updates-ios.md) visas hur du skapar och tilldelar iOS-principer för installering av programuppdateringar på iOS-enheterna. Du kan också granska installationsstatusen.
 
+Se [Leveransoptimering](delivery-optimization-windows.md) för uppdateringsprinciper på Windows-enheter. 
+
 Den här funktionen stöder:
 - iOS
 
@@ -187,7 +248,19 @@ Den här funktionen stöder:
 [Windows informationsskydd](windows-information-protection-configure.md) skyddar mot dataläckage utan att störa medarbetarnas användning. Det skyddar även företagsappar och företagsdata mot oavsiktliga dataläckage i företagsägda enheter och personliga enheter som medarbetarna använder på jobbet. Windows informationsskydd kräver inte några ändringar i din miljö eller i andra appar.
 
 Den här funktionen stöder:
+
 - Windows 10 och senare
+
+## <a name="shared-multi-user-device"></a>Delad enhet för flera användare
+
+[Windows 10](shared-user-device-settings-windows.md) och [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) innehåller inställningar för att hantera enheter med flera användare, som också kallas för delade enheter eller delade datorer. När en användare loggar in på enheten väljer du om användaren kan ändra strömsparalternativen eller spara filer på enheten. I ett annat exempel kan du skapa en princip som tar bort inaktiva autentiseringsuppgifter från Windows HoloLens-enheter för att spara utrymme.
+
+Med dessa inställningar för delade enheter för flera användare kan en administratör kontrollera några av enhetens funktioner och hantera dessa delade enheter med Intune.
+
+Den här funktionen stöder:
+
+- Windows 10 och senare
+- Windows 10 Holographic for Business
 
 ## <a name="custom-profile"></a>Anpassad profil
 
@@ -203,3 +276,7 @@ Den här funktionen stöder:
 ## <a name="manage-and-troubleshoot"></a>Hantering och felsökning
 
 [Hantera dina profiler](device-profile-monitor.md) för att kontrollera statusen för enheter och tilldelade profiler. Hjälp även till att lösa konflikter genom att se inställningarna som orsakar en konflikt och de profiler som innehåller dessa inställningar. I [Vanliga problem och lösningar](device-profile-troubleshoot.md) finns frågor och svar som hjälp vid arbetet med profiler, bland annat vad som händer när en profil tas bort, vad som orsakar att meddelanden skickas till enheter etc.
+
+## <a name="next-steps"></a>Nästa steg
+Välj din plattform och sätt igång:
+

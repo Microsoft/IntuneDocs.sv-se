@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: 5a84bcd820b7596d1b1df01342604562c7853140
+ms.sourcegitcommit: a44359b426e19b8bf4b99eca6af2755c6d3c6fb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626092"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54098325"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera Intune-registrering av Android Enterprise-kioskenheter
 
@@ -112,7 +112,7 @@ För enheter med Android 5.1 och senare som stöder NFC kan du etablera enheter 
 
 ### <a name="enroll-by-using-a-token"></a>Registrera med en token
 
-För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **aft#setup**.
+För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **afw#setup**.
 
 1. Starta den rensade enheten.
 2. Välj språk på **välkomstskärmen**.

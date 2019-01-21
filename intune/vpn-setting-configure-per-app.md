@@ -15,12 +15,12 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f4cdd3c215fbd9eab4204eca0639d5d38fe4c97a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 12131fe0b78814850cfadee15533620dd5813f6c
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180739"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297408"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
@@ -33,9 +33,9 @@ VPN per app är för närvarande tillgängligt för följande providers:
  - Citrix
  - F5
  - Pulse Connect Secure
+ - Palo Alto Networks
  - SonicWall
- - Palo Alto Networks GlobalProtect
- - Zscaler
+ - Zscaler Private Access
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Krav för VPN per app
 
@@ -186,10 +186,12 @@ När VPN per app har konfigurerats och associerats med appen kontrollerar du att
     - Check Point Capsule Connect
     - Cisco AnyConnect
     - Citrix VPN
+    - Citrix SSO
     - F5 Access
+    - Palo Alto Networks GlobalProtect
     - Pulse Secure
     - SonicWall Mobile Connect
-    - Zscaler-app
+    - Zscaler
 
     > [!NOTE]
     > Om du använder Pulse Secure VPN-appen kan välja du att använda händelsedirigering nedåt på appnivå eller på paketnivå. Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå.

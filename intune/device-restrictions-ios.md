@@ -1,53 +1,58 @@
 ---
-title: Lägg till inställningar för iOS-enhetsbegränsningar i Microsoft Intune – Azure | Microsoft Docs
+title: iOS-enhetsinställningar i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Lägg till, konfigurera eller skapa inställningar på iOS-enheter när du vill ange lösenordskrav, kontrollera låst skärm, använda inbyggda appar, lägga till begränsade eller godkända appar, hantera bluetooth-enheter, ansluta till molnet för säkerhetskopiering och lagring, aktivera helskärmsläge, lägga till domäner och kontrollera hur användarna samverkar med Safari-webbläsaren i Microsoft Intune.
+description: Lägg till, konfigurera eller skapa inställningar på iOS-enheter när du vill begränsa funktioner, till exempel lösenordskrav, kontrollera låst skärm, använda inbyggda appar, lägga till begränsade eller godkända appar, hantera bluetooth-enheter, ansluta till molnet för säkerhetskopiering och lagring, aktivera helskärmsläge, lägga till domäner och kontrollera hur användarna samverkar med Safari-webbläsaren i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/28/2018
+ms.date: 12/13/2018
 ms.topic: article
 ms.prod: ''
-ms.service: microsoft-intune
+ms.service: microsoft-intune; seodec18
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a677742c5d2f876c0714f13c4f62d059ced98584
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: d6fb1c65199b68f7492b1f397c4f6075e345d3e8
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728981"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203679"
 ---
-# <a name="ios-device-restrictions-settings-list-in-microsoft-intune"></a>iOS-enhetsbegränsningslista i Microsoft Intune
+# <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune
 
-Den här artikeln visar en lista och beskriver alla enhetsbegränsningar som du kan konfigurera för iOS-enheter. Dessa inställningar läggs till en profil för enhetskonfiguration som sedan tilldelas eller distribueras till dina iOS-enheter med Microsoft Intune.
+Den här artikeln beskriver de olika inställningar som du kan styra på iOS-enheter. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa inställningar för att tillåta eller inaktivera funktioner, ange lösenordsregler, tillåta eller begränsa specifika appar med mera.
+
+Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som sedan tilldelas eller distribueras till dina iOS-enheter.
+
+## <a name="before-you-begin"></a>Innan du börjar
+[Skapa en enhetskonfigurationsprofil](device-restrictions-configure.md).
 
 ## <a name="general"></a>Allmänt
 
 - **Dela användningsdata**: Välj **Blockera** för att förhindra enheten från att skicka diagnostik- och användningsdata till Apple. **Inte konfigurerad** tillåter att dessa data skickas.
   - **Sändning av diagnostikdata**: **Blockera** hindrar användaren från att ändra inställningarna för diagnostiköverföring och appanalys i **Diagnostik och användning** (enhetsinställningar). Om du vill använda den här inställningen måste enheten vara i övervakat läge (iOS 9.3.2+). **Inte konfigurerad** gör att användaren kan ändra dessa enhetsinställningar.
-- **Skärmdump**: Välj **Blockera** när du vill förhindra skärmbilder eller skärmdumpar på enheten. **Inte konfigurerat** låter användaren fånga skärminnehållet som en bild.
+- **Skärmdump**: Välj **Blockera** för att förhindra skärmbilder eller skärmdumpar på enheten. **Inte konfigurerat** låter användaren fånga skärminnehållet som en bild.
   - **Fjärrskärmsvisning i appen Klassrum (endast övervakat)**: Välj **Blockera** om du vill förhindra appen Klassrum från att visa skärmarna på fjärranslutna enheter. Om du vill använda den här inställningen måste enheten vara i övervakat läge (iOS 9.3+). **Inte konfigurerad** tillåter appen Klassrum att visa skärmen.
-  - **Skärmvisning utan uppmaning i appen Klassrum (endast övervakat)**: Om den ställs in på **Tillåt** kan lärarna tyst övervaka skärmarna på elevernas iOS-enheter med hjälp av appen Klassrum utan att eleverna vet om det. Elevenheter som registrerats i en klass som använder appen Klassrum ger automatiskt behörighet till den kursens lärare. **Inte konfigurerad** förhindrar denna funktion.
+  - **Skärmvisning utan uppmaning i appen Klassrum (endast övervakat)**: Om det är inställt på **Tillåt** kan lärarna tyst övervaka skärmarna på elevernas iOS-enheter med hjälp av appen Klassrum utan att eleverna vet om det. Elevenheter som registrerats i en klass som använder appen Klassrum ger automatiskt behörighet till den kursens lärare. **Inte konfigurerad** förhindrar denna funktion.
 - **Ej betrodda TLS-certifikat**: Välj**Blockera** om du vill stoppa ej betrodda TLS-certifikat på enheten. **Inte konfigurerad** tillåter TLS-certifikat.
 - **Företagsappförtroende**: Välj **Blockera** om du vill ta bort knappen **Lita på företagsutvecklare** i Inställningar > Allmänt > Profiler och enhetshantering på enheten. **Inte konfigurerad** låter användaren välja att lita på appar som inte laddats ned från App Store.
-- **Kontoändring (endast övervakat)**: När den är inställd på **Blockera** kan användaren inte uppdatera enhetsspecifika inställningar från iOS-appens inställningar. Användaren kan t.ex. skapa nya enhetskonton eller ändra användarnamn eller lösenord. **Inte konfigurerad** låter användare ändra dessa inställningar.
+- **Kontoändring (endast övervakat)**: När det är inställt på **Blockera** kan användaren inte uppdatera enhetsspecifika inställningar från iOS-appens inställningar. Användaren kan t.ex. skapa nya enhetskonton eller ändra användarnamn eller lösenord. **Inte konfigurerad** låter användare ändra dessa inställningar.
   Den här funktionen gäller även för inställningar som kan nås från appen för iOS-inställningar, som E-post, Kontakter, Kalender, Facebook, Twitter med flera. Den här funktionen gäller inte för appar med kontoinställningar som inte konfigureras från appen för iOS-inställningar, som Microsoft Outlook-appen.
-- **Aktivera begränsningar i enhetsinställningarna (endast övervakat)**: Välj **Blockera** om du vill förhindra användare från att aktivera begränsningar i enhetsinställningarna. **Inte konfigurerad** låter användarna konfigurera enhetsbegränsningar (t.ex. kontrollfunktioner för föräldrar) på enheten.
-- **Användning av alternativet Radera allt innehåll och inställningar på enheten (endast övervakat)**: Välj **Blockera** så att användarna inte kan använda alternativet att radera allt innehåll och alla inställningar på enheten (endast övervakat). **Inte konfigurerad** ger användarna åtkomst till de här inställningarna.
-- **Namnbyte för enhet (endast övervakat)**: Välj **Blockera** så att enhetens namn inte kan ändras. **Inte konfigurerad** låter användaren ändra enhetens namn.
-- **Ändring av aviseringsinställningar (endast övervakat)**: Välj **Blockera** så att aviseringsinställningarna inte kan ändras. **Inte konfigurerad** låter användarna ändra enhetens meddelandeinställningar.
+- **Aktivera begränsningar i enhetsinställningarna (endast övervakat)**: Välj **Blockera** för att förhindra användare att aktivera begränsningar i enhetsinställningarna. **Inte konfigurerad** låter användarna konfigurera enhetsbegränsningar (t.ex. kontrollfunktioner för föräldrar) på enheten.
+- **Användning av alternativet Radera allt innehåll och inställningar på enheten (endast övervakat)**: Välj **Blockera** så att användarna inte kan alternativet att radera allt innehåll och inställningar på enheten (endast övervakat). **Inte konfigurerad** ger användarna åtkomst till de här inställningarna.
+- **Ändring av enhetens namn (endast övervakat)**: Välj **Blockera** så att enhetsnamnet inte kan ändras. **Inte konfigurerad** låter användaren ändra enhetens namn.
+- **Ändring av aviseringsinställningar (endast övervakat)**: Välj **Blockera** så att meddelandeinställningarna inte kan ändras. **Inte konfigurerad** låter användarna ändra enhetens meddelandeinställningar.
 - **Ändring av bakgrundsbild (endast övervakat)**: **Blockera** förhindrar att bakgrundsbilden ändras. **Inte konfigurerad** låter användaren ändra enhetens bakgrundsbild.
-- **Ändringar av inställningar för företagsappsförtroende (endast övervakat)**: **Blockera** förhindrar användaren från att ändra inställningarna för företagsappsförtroende på kontrollerade enheter. **Inte konfigurerad** tillåter användaren att lita på appar som inte laddats ned från App Store.
-- **Ändra konfigurationsprofil (endast övervakat)**: **Blockera** förhindrar ändringar av enhetens konfigurationsprofil. **Inte konfigurerad** låter användaren installera konfigurationsprofiler.
-- **Aktiveringslås (endast övervakat)**: Välj **Tillåt** om du vill aktivera aktiveringslåset på övervakade iOS-enheter. Aktiveringslåset gör det svårare att återaktivera en förlorad eller stulen enhet.
-- **Blockera borttagning av appar (endast övervakat)**: Välj **Blockera** om du vill förhindra användare från att ta bort appar. **Inte konfigurerad** låter användare att ta bort appar från enheten.
-- **Blockera USB-begränsat läge (endast övervakat)**: Välj **Blockera** om du vill inaktivera USB-begränsat läge på övervakade enheter. USB-begränsat läge blockerar USB-tillbehör från att utbyta data med en enhet som har varit låst i över en timma. **Inte konfigurerad** tillåter USB-begränsat läge.
-- **Framtvinga automatisk datum och tid (endast övervakat)**: **Kräv** tvingar övervakade enheter att konfigurera datum och tid automatiskt. Enhetens tidszon uppdateras när enheten har mobila anslutningar eller har aktiverats för Wi-Fi med platstjänster.
-- **Kräv att elever begär tillstånd att lämna Classroom-kurs (endast övervakat)**: **Kräv** tvingar elever som har registrerats i en ohanterad kurs med appen Classroom att begära tillstånd från läraren om att lämna kursen. Endast tillgängligt i iOS 11.3+. **Inte konfigurerad** tvingar inte eleven att be om behörighet.
+- **Ändring av behörighetsinställningar för företagsappar (endast övervakat)**: **Blockera** förhindrar användaren att ändra behörighetsinställningar i företagsappen på övervakade enheter. **Inte konfigurerad** tillåter användaren att lita på appar som inte laddats ned från App Store.
+- **Ändringar av konfigurationsprofil (endast övervakat)**: **Blockera** förhindrar ändringar av konfigurationsprofilen på enheten. **Inte konfigurerad** låter användaren installera konfigurationsprofiler.
+- **Aktiveringslås (endast övervakat)**: Välj **Tillåt** för att aktivera aktiveringslåset på övervakade iOS-enheter. Aktiveringslåset gör det svårare att återaktivera en förlorad eller stulen enhet.
+- **Blockera borttagning av appar (endast övervakat)**: Välj **Blockera** för att förhindra att användarna tar bort appar. **Inte konfigurerad** låter användare att ta bort appar från enheten.
+- **Blockerar USB-begränsat läge (endast övervakat)**: Välj **Blockera** för att inaktivera USB-begränsat läge på övervakade enheter. USB-begränsat läge blockerar USB-tillbehör från att utbyta data med en enhet som har varit låst i över en timma. **Inte konfigurerad** tillåter USB-begränsat läge.
+- **Framtvinga automatiskt datum och tid (endast övervakat)**: **Kräv** tvingar övervakade enheter att ange datum och tid automatiskt. Enhetens tidszon uppdateras när enheten har mobila anslutningar eller har aktiverats för Wi-Fi med platstjänster.
+- **Kräv att deltagarna begär tillstånd för att lämna klassrumskursen (endast övervakat)**: **Kräv** tvingar elever som har registrerats i en ohanterad kurs med appen Klassrum att begära tillstånd från läraren om att lämna kursen. Endast tillgängligt i iOS 11.3+. **Inte konfigurerad** tvingar inte eleven att be om behörighet.
 - **Tillåt trådlösa PKI-uppdateringar**: **Tillåt** låter dina användare ta emot programuppdateringar utan att ansluta sina enheter till en dator.
 - **Begränsa reklamspårning**: Välj **Begränsa** om du vill inaktivera enhetens reklamidentifierare. **Inte konfigurerad** behåller den aktiverad.
 - **Blockera VPN-skapande (endast övervakat)**: **Blockera** förhindrar användare från att skapa VPN-konfigurationsinställningar. **Inte konfigurerad** låter användarna skapa virtuella privata nätverk på enheten.
@@ -102,30 +107,30 @@ Den här artikeln visar en lista och beskriver alla enhetsbegränsningar som du 
 
 ## <a name="password"></a>Lösenord
 
-- **Lösenord**: Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten. Inte konfigurerad låter användare komma åt enheten utan att ange ett lösenord.
+- **Lösenord**: Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. Inte konfigurerad låter användare komma åt enheten utan att ange ett lösenord.
   - **Enkla lösenord**: Välj **Blockera** om du vill kräva mer avancerade lösenord. **Inte konfigurerad** tillåter enkla lösenord som `0000` och `1234`.
-  - **Krav på lösenordstyp**: Välj den typ av lösenord som din organisation kräver. Alternativen är:
+  - **Lösenordstyp som krävs**: Välj den typ av lösenord som din organisation kräver. Alternativen är:
     - **Standard för enheten**
     - **Numerisk**
     - **Alfanumerisk**
-  - **Antal icke-alfanumeriska tecken i lösenord**: Ange det antal symboltecken i lösenordet (t.ex. `#` eller `@`) som måste ingå i lösenordet.
-  - **Minsta längd på lösenord**: Ange den minsta längd som en användare måste ange (mellan 4 och 14 tecken).
-  - **Antal felaktiga inloggningar innan enheten rensas**: Ange antalet felaktiga inloggningar som tillåts innan enheten rensas (mellan 1–11).
+  - **Antal icke-alfanumeriska tecken i lösenord**: Ange antalet symboltecken (till exempel `#` eller `@`) som måste tas med i lösenordet.
+  - **Minsta lösenordslängd**: Ange den minsta längden som en användare måste ange (mellan 4 och 14 tecken).
+  - **Antal felaktiga inloggningar innan enheten rensas**: Anger antalet tillåtna felinloggningar innan enheten rensas (mellan 1 och 11).
   - **Maximalt antal minuter efter skärmlås innan ett lösenord krävs**<sup>1</sup>: Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt. Om den tid som du anger är längre än vad som är angivet i enhetens inställningar, så ignorerar enheten den tid som du anger. Stöds på enheter med iOS 8.0 och senare.
   - **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup>: Ange det maximala antal minuter av inaktivitet som ska tillåtas på enheten innan skärmen låses. Om den tid som du anger är längre än vad som är angivet i enhetens inställningar, så ignorerar enheten den tid som du anger.
-  - **Lösenordets giltighetstid (dagar)**: Ange antal dagar innan lösenordet för enheten måste ändras.
+  - **Lösenordets giltighetstid (dagar)**: Ange antalet dagar innan lösenordet måste ändras.
   - **Förhindra återanvändning av tidigare lösenord**: Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas.
   - **Upplåsning med fingeravtryck**: Välj **Blockera** om du vill förhindra att fingeravtryck används för att låsa upp enheten. **Inte konfigurerad** låter användare låsa upp enheten med ett fingeravtryck.
-- **Ändring av lösenkod (endast övervakat)**: Välj **Blockera** om du vill förhindra att lösenkoden ändras, läggs till eller tas bort. Ändringar av lösenkodsbegränsningar ignoreras på övervakade enheter när den här funktionen har blockerats. **Inte konfigurerad** tillåter att lösenord läggs till, ändras eller tas bort.
+- **Ändra lösenkod (endast övervakat):**: Välj **Blockera** om du vill förhindra att lösenkoden ändras, läggs till eller tas bort. Ändringar av lösenkodsbegränsningar ignoreras på övervakade enheter när den här funktionen har blockerats. **Inte konfigurerad** tillåter att lösenord läggs till, ändras eller tas bort.
   - **Ändring av fingeravtryck (endast övervakat)**: **Blockera** stoppar användaren från att ändra, lägga till eller ta bort TouchID-fingeravtryck. **Inte konfigurerad** tillåter att användaren uppdaterar TouchID-fingeravtryck på enheten.
-- **Blockera automatisk ifyllning av lösenord (endast övervakat)**: Välj **Blockera** om du vill förhindra att funktionen för automatisk ifyllning av lösenord används i iOS. När du väljer **Blockera** sker även följande:
+- **Blockera automatisk ifyllning av lösenord**: Förhindra användningen av funktionen för automatisk ifyllning av lösenord i iOS genom att välja **Blockera**. När du väljer **Blockera** sker även följande:
   - Användarna ombeds inte att använda ett sparat lösenord i Safari eller i någon app.
   - Automatisk starka lösenord inaktiveras och starka lösenord föreslås inte för användare.
 
   **Inte konfigurerad** tillåter dessa funktioner.
 
-- **Blockera förfrågningar om lösenordsnärhet (endast övervakat)**: Välj **Blockera** så att användarens enhet inte begär lösenord från enheter i närheten. **Inte konfigurerad** tillåter dessa lösenordsförfrågningar.
-- **Blockera lösenordsdelning (endast övervakat)**: **Blockera** förhindrar att lösenord delas mellan enheter med hjälp av AirDrop. **Inte konfigurerad** tillåter att lösenord delas.
+- **Blockera förfrågningar om lösenordsnärhet**: Välj **Blockera** så att användarens enhet inte begär lösenord från enheter i närheten. **Inte konfigurerad** tillåter dessa lösenordsförfrågningar.
+- **Blockera lösenordsdelning**: **Blockera** förhindrar att lösenord delas mellan enheter med hjälp av AirDrop. **Inte konfigurerad** tillåter att lösenord delas.
 
 <sup>1</sup> När du konfigurerar **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter fem minuter. Enheten låses efter ytterligare fem minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. När användaren i det här exemplet har stängt av skärmen låses enheten fem minuter senare.
 
@@ -133,20 +138,28 @@ Den här artikeln visar en lista och beskriver alla enhetsbegränsningar som du 
 
 - **Åtkomst till Kontrollcenter när enheten är låst**: Välj **Blockera** om du vill förhindra åtkomst till kontrollcenterappen när enheten är låst. **Inte konfigurerad** låter användare få åtkomst till kontrollcenterappen när enheten är låst.
 - **Meddelanden när enheten är låst**: **Blockera** förhindrar åtkomst till meddelanden när enheten är låst. **Inte konfigurerad** tillåter användaren att få åtkomst till aviseringsvyn utan att låsa upp enheten.
-- **Plånboksmeddelanden när enheten är låst**: **Blockera** förhindrar åtkomst till appen Plånbok när enheten är låst. **Inte konfigurerad** tillåter användare åtkomst till appen Plånbok när enheten är låst.
-- **Dagsvyn när enheten är låst**: **Block** förhindrar åtkomst till vyn Idag när enheten är låst. **Inte konfigurerad** tillåter användaren att se vyn Idag när enheten är låst.
+- **Wallet-notiser när enheten är låst**: **Blockera** förhindrar åtkomst till Wallet-appen när enheten är låst. **Inte konfigurerad** tillåter användare åtkomst till appen Plånbok när enheten är låst.
+- **Dagsvyn när enheten är låst**: **Blockera** förhindrar åtkomst till dagsvyn när enheten är låst. **Inte konfigurerad** tillåter användaren att se vyn Idag när enheten är låst.
 
 ## <a name="app-store-doc-viewing-gaming"></a>App Store, dokumentvisning, spel
 
 - **App Store**: **Blockera** förhindrar åtkomst till App Store på övervakade enheter. **Inte konfigurerad** tillåter åtkomst.
-  - **Installera appar från App Store (endast övervakat)**: Välj **Blockera** om du vill blockera App Store från enhetens startskärm. Användarna kan fortsätta att använda iTunes eller Apple Configurator-verktyget för att installera appar. **Inte konfigurerad** tillåter att App Store visas på hemskärmen.
+  - **Installera appar från App Store (endast övervakat)**: Välj **Blockera** för att blockera App Store från enhetens startskärm. Användarna kan fortsätta att använda iTunes eller Apple Configurator-verktyget för att installera appar. **Inte konfigurerad** tillåter att App Store visas på hemskärmen.
   - **Automatisk nedladdning av appar (endast övervakat)**: Välj **Blockera** om du vill förhindra automatisk nedladdning av appar som har köpts på andra enheter. Det påverkar inte uppdateringar av befintliga appar. **Inte konfigurerad** tillåter att appar som har köpts på andra iOS-enheter laddas ned på enheten.
-- **Lösenord till App Store**: **Kräv** innebär att användaren måste ange ett lösenord innan hen kan besöka App Store. **Inte konfigurerad** möjliggör åtkomst till App Store utan användning av lösenord.
-- **Köp i appar**: Välj **Blockera** om du vill förhindra att köp från butiken görs i appen. **Inte konfigurerad** tillåter köp i butiken från en app som körs.
-- **Stötande musik, podcaster eller nyhetsinnehåll i iTunes (endast övervakat)**: Välj **Blockera** om du vill stoppa explicit iTunes-musik, podcaster eller nyhetsinnehåll. **Inte konfigurerad** tillåter att enheten får åtkomst till sådant som är klassificerat som vuxet innehåll i butiken.
+- **Lösenord till appbutik**: **Kräv** att användarna anger ett lösenord innan de kan besöka appbutiken. **Inte konfigurerad** möjliggör åtkomst till App Store utan användning av lösenord.
+- **Köp i app**: Välj **Blockera** om du vill förhindra att köp från butiken görs i appen. **Inte konfigurerad** tillåter köp i butiken från en app som körs.
+- **Stötande innehåll i iTunes-musik, podcast eller nyheter**: Välj **Blockera** om du vill stoppa explicit iTunes-musik, podcaster eller nyhetsinnehåll. **Inte konfigurerad** tillåter att enheten får åtkomst till sådant som är klassificerat som vuxet innehåll i butiken.
 - **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”**: Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** tillåter att användare laddar ned böcker i kategorin Erotik.
 - **Visa företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av icke-företagsdokument i ohanterade appar. **Inte konfigurerad** tillåter visning av företagsdokument i vilken app som helst. Exempelvis vill du kanske förhindra användare från att spara filer från OneDrive-appen i Dropbox. Konfigurera den här inställningen som **Blockera**. När enheten har hämtat principen (t.ex. efter en omstart) kommer det inte längre att vara tillåtet att spara.
-- **Visa icke-företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av icke-företagsdokument i företagsappar. **Inte konfigurerad** tillåter visning av valfria dokument i företagshanterade appar.
+  - **Tillåt hanterade appar att skriva kontakter till ohanterade kontaktkonton (endast övervakat)**: När det är inställt på **Tillåt** kan användarna lägga till eller synkronisera en persons Outlook-kontaktinformation, till exempel affärs och företagskontakter, i den inbyggda appen Kontakter på enheter. När det är inställt på **Inte konfigurerad** kan användarna inte lägga till Outlook-kontakter i den inbyggda appen Kontakter på enheten.
+  
+    Om du vill använda inställningen ställer du in **Visa företagsdokument i ohanterade appar** på **Blockera**.
+  
+- **Visa dokument som inte gäller företag i företagsappar**: **Blockera** förhindrar visning av icke-företagsdokument i företagsappar. **Inte konfigurerad** tillåter visning av valfria dokument i företagshanterade appar.
+  - **Tillåt ohanterade appar att läsa från hanterade kontaktkonton (endast övervakat)**: När det är inställt på **Tillåt** kan användarna lägga till en persons kontaktinformation från iContacts-appen i into Outlook. **Inte konfigurerad** förhindrar läsning, inklusive ta bort dubbletter, från den inbyggda appen Kontakter på enheter.
+  
+    Om du vill använda inställningen ställer du in **Visa dokument som inte gäller företag i företagsappar** på **Blockera**.
+  
 - **Behandla AirDrop som ohanterat mål**: **Kräv** tvingar fram att AirDrop betraktas som ett ohanterat släppmål. Det förhindrar hanterade appar från att skicka data med hjälp av Airdrop. 
 - **Lägga till Game Center-vänner (endast övervakat)**: **Blockera** förhindrar användare från att lägga till Game Center-vänner. **Inte konfigurerad** tillåter användaren att lägga till vänner i Game Center.
 - **Game Center (endast övervakat)**: **Blockera** förhindrar användning av Game Center-appen. **Inte konfigurerad** tillåter användning av Game Center-appen på enheten.
@@ -161,14 +174,14 @@ Den här artikeln visar en lista och beskriver alla enhetsbegränsningar som du 
 - **Siri**: **Blockera** förhindrar åtkomst till Siri. **Inte konfigurerad** tillåter att röstassistenten Siri används på enheten.
   - **Siri när enheten är låst**: Välj **Blockera** om du vill förhindra åtkomst till Siri när enheten är låst. **Inte konfigurerad** tillåter att röstassistenten Siri används på enheten när den när låst.
   - **Filtrering av grovt språk i Siri (endast övervakat)**: **Kräv** förhindrar att Siri från dikterar eller talar ett olämpligt språk.
-  - **Siri skickar frågor om innehåll som skapats av användare från Internet (endast övervakat)**: **Blockera** förhindrar Siri från att få åtkomst till webbplatser för att kunna besvara frågor. **Inte konfigurerad** tillåter Siri att få åtkomst till användargenererat innehåll på Internet.
+  - **Siri skickar frågor om innehåll som skapats av användare från Internet (endast övervakat)**: **Blockera** förhindrar Siri att komma åt webbplatser för att besvara frågor. **Inte konfigurerad** tillåter Siri att få åtkomst till användargenererat innehåll på Internet.
 - **Apple News (endast övervakat)**: Välj **Blockera** om du vill förhindra åtkomst till Apple News-appen på enheten. **Inte konfigurerad** tillåter att Apple News-appen används.
-- **iBooks store (endast övervakat)**: **Blockera** förhindrar åtkomst till iBooks Store. **Inte konfigurerad** tillåter användare att söka efter och köpa böcker i iBooks Store.
+- **iBooks-butik (endast övervakat)**: **Blockera** förhindrar åtkomst till iBooks-butiken. **Inte konfigurerad** tillåter användare att söka efter och köpa böcker i iBooks Store.
 - **Appen Meddelanden på enheten (endast övervakat)**: Välj **Blockera** så att användare inte kan använda appen Meddelanden på enheten. **Inte konfigurerad** tillåter att appen Meddelanden skickar och läser textmeddelanden.
 - **Podcaster (endast övervakat)**: **Blockera** förhindrar användare från att använda appen Podcaster. **Inte konfigurerad** tillåter att Podcaster-appen används.
 - **Tjänsten Musik (endast övervakat)**: **Blockera** återställer appen Apple Music till klassiskt läge och inaktiverar tjänsten Musik. **Inte konfigurerad** tillåter att Apple Music-appen används.
 - **iTunes Radio-tjänsten (endast övervakat)**: **Blockera** förhindrar användare från att använda appen iTunes Radio. **Inte konfigurerad** tillåter att iTunes Radio-appen används.
-- **Ändringar av inställningarna för appen Find My Friends (endast övervakat)**: **Blockera** förhindrar att inställningarna för appen Find My Friends ändras. **Inte konfigurerad** tillåter att användaren ändrar inställningarna för appen Find My Friends.
+- **Ändringar av inställningarna för appen Hitta mina vänner (endast övervakat)**: **Blockera** förhindrar ändringar i Find My Friends-appinställningar. **Inte konfigurerad** tillåter att användaren ändrar inställningarna för appen Find My Friends.
 - **Spotlight-sökning som returnerar resultat från Internet (endast övervakat)**: **Blockera** förhindrar Spotlight från att returnera resultat från sökningar på Internet. **Inte konfigurerad** tillåter att Spotlight-sökningar ansluter till Internet för att kunna visa ytterligare sökresultat.
 - **Blockera borttagning av systemappar från enheten (endast övervakat)**: Om du väljer **Blockera** inaktiverar du möjligheten att ta bort systemappar från enheten. **Inte konfigurerad** tillåter användarna att ta bort systemappar från enheten.
 
@@ -187,7 +200,7 @@ Om du vill lägga till appar i listorna kan du:
 
   Du kan även använda iTunes för att hitta appen och sedan använda uppgiften **Kopiera länk** för att hämta appens webbadress.
 
-- Importera en CSV-fil med information om appen, inklusive webbadressen. Använd formatet <app url>, <app name>, <app publisher>. Eller exportera en befintlig lista som innehåller listan över begränsade appar i samma format.
+- Importera en CSV-fil med information om appen, inklusive webbadressen. Använd formatet `<app url>, <app name>, <app publisher>`. Eller exportera en befintlig lista som innehåller listan över begränsade appar i samma format.
 
 > [!IMPORTANT]
 > Enhetsprofiler som använder inställningar för begränsade appar måste tilldelas grupper av användare.
@@ -207,15 +220,15 @@ Om du vill lägga till appar i listorna kan du:
 
   Du kan även använda iTunes för att hitta appen och sedan använda uppgiften **Kopiera länk** för att hämta appens webbadress.
 
-- Importera en CSV-fil med information om appen, inklusive webbadressen. Använd formatet <app url>, <app name>, <app publisher>. Eller exportera en befintlig lista som innehåller listan över begränsade appar i samma format.
+- Importera en CSV-fil med information om appen, inklusive webbadressen. Använd formatet `<app url>, <app name>, <app publisher>`. Eller exportera en befintlig lista som innehåller listan över begränsade appar i samma format.
 
 ## <a name="wireless"></a>Trådlöst
 
-- **Dataroaming**: Välj **Blockera** om du vill förhindra dataroaming över det mobila nätverket. **Inte konfigurerad** tillåter dataroaming när enheten är i ett mobilnät.
-- **Global bakgrundssamling under nätverksväxling**: **Blockera** förhindrar att funktionen för global bakgrundssamling används under nätverksväxling i mobilnätverket. **Inte konfigurerad** tillåter att enheten att hämtar data, t.ex. e-post, när den nätverksväxlar i ett mobilnät.
+- **Datanätverksväxling**: Välj **Blockera** om du vill förhindra dataroaming över det mobila nätverket. **Inte konfigurerad** tillåter dataroaming när enheten är i ett mobilnät.
+- **Hämtning av global bakgrund under nätverksväxling**: **Blockera** förhindrar att funktionen för global bakgrundssamling används under nätverksväxling i mobilnätverket. **Inte konfigurerad** tillåter att enheten att hämtar data, t.ex. e-post, när den nätverksväxlar i ett mobilnät.
 - **Röstsamtal**: Välj **Blockera** om du vil förhindra användare från att använda enhetens röstsamtalsfunktion. **Inte konfigurerad** tillåter röstsamtal på enheten.
-- **Röstroaming**: Välj **Blockera** om du vill förhindra röstroaming över det mobila nätverket. **Inte konfigurerad** tillåter röstroaming när enheten är i ett mobilnät.
-- **Ändringar i inställningarna för användning av appmobildata (endast övervakat)**: Välj **Blockera** om du vill förhindra att inställningarna för användning av appmobildata ska kunna ändras. **Inte konfigurerad** tillåter att användaren bestämmer vilka appar som ska få använda mobildata.
+- **Röstnätverksväxling**: Välj **Blockera** om du vill förhindra röstroaming över det mobila nätverket. **Inte konfigurerad** tillåter röstroaming när enheten är i ett mobilnät.
+- **Ändringar av inställningar för mobildataanvändning (endast övervakat)**: Välj **Blockera** om du vill förhindra att inställningarna för användning av appmobildata ska kunna ändras. **Inte konfigurerad** tillåter att användaren bestämmer vilka appar som ska få använda mobildata.
 - **Internetdelning**: **Blockera** förhindrar att enheten används för Internetdelning. Den här inställningen kanske inte är kompatibel med vissa operatörer. **Inte konfigurerad** tillåter denna funktion.
 - **Anslut till trådlösa nätverk med endast konfigurationsprofiler (endast övervakat)**: **Kräv** tvingar enheten att endast använda trådlösa nätverk som har konfigurerats med Intunes konfigurationsprofiler. **Inte konfigurerad** tillåter enheten att använda andra trådlösa nätverk.
 - **Regler för mobilanvändning (endast hanterade appar)**: Definiera de datatyper som hanterade appar kan använda i mobilnät. Alternativen är:
@@ -240,7 +253,7 @@ Om du vill lägga till appar i listorna kan du:
 - **Orddefinitionssökning (endast övervakat)**: **Blockera** förhindrar användare från att markera ett ord och sedan söka upp dess definition på enheten. **Inte konfigurerad** ger åtkomst till definitionssökningsfunktionen.
 - **Tangentbord med förslag (endast övervakat)**: **Inte konfigurerad** tillåter tangentbord med förslag på ord som användaren kan ha nytta av. **Blockera** förhindrar den här funktionen.
 - **Autokorrigering (endast övervakat)**: **Inte konfigurerad** låter enheten automatiskt korrigera felstavade ord. **Blockera** förhindrar att autokorrigering används.
-- **Tangentbord med stavningskontroll (endast övervakat)**: **Inte konfigurerad** tillåter att stavningskontroll används på enheten. **Blockera** tillåter stavningskontroll.
+- **Tangentbord med stavningskontroll (endast övervakat)**: **Inte konfigurerad** tillåter användning av stavningskontroll på enheten. **Blockera** tillåter stavningskontroll.
 - **Kortkommandon (endast övervakat)**: **Inte konfigurerad** tillåter att kortkommandon används på enheten. **Blockera** hindrar användaren från att använda kortkommandon.
 - **Diktering (endast övervakat)**: **Blockera** hindrar användaren från att använda röstindata för att ange text. **Inte konfigurerat** tillåter användaren att använda röstindata.
 
@@ -269,7 +282,7 @@ Om du vill lägga till appar kan du:
 
 ## <a name="kiosk-supervised-only"></a>Helskärm (endast övervakat)
 
-- **App för att köra i helskärmsläge**: Välj den apptyp som du vill köra i helskärmsläge. Alternativen är: 
+- **App som ska köras i helskärmsläge**: Välj den apptyp som du vill köra i helskärmsläge. Alternativen är: 
   - **Store App**: Ange webbadressen till en app i iTunes App Store
   - **Hanterad app**: Välj en app som du lagt till i Intune
   - **Inbyggd app**: Ange den inbyggda appens [samlings-ID](#bundle-id-reference-for-built-in-ios-apps)
@@ -284,9 +297,9 @@ Om du vill lägga till appar kan du:
 - **Skärmrotation**: **Tillåt** att skärmrotationen ändras när användaren roterar enheten. **Inte konfigurerad** inaktiverar den här funktionen.
 - **Viloläge för skärm-knapp**: Välj **Tillåt** om du vill inaktivera enhetens knapp för viloläge. **Inte konfigurerad** aktiverar den här funktionen.
 - **Touch**: **Blockera** inaktiverar enhetens pekskärm. **Inte konfigurerad** tillåter användaren att använda pekskärmen.
-- **Inte konfigurerad**: **Tillåt** att enhetens volymknappar används. **Inte konfigurerad** inaktiverar volymknapparna.
-- **Assistivetouch-knapp**: **Tillåt** låter användarna använda funktionen AssistiveTouch. **Inte konfigurerad** inaktiverar den här funktionen.
-- **Invertera färger**: **Tillåt** att inställningarna för att inaktivera färger kan justeras. **Inte konfigurerad** inaktiverar den här funktionen.
+- **Volymknappar**: **Tillåt** att enhetens volymknappar används. **Inte konfigurerad** inaktiverar volymknapparna.
+- **AssistiveTouch-knapp**: **Tillåt** låter användarna använda funktionen AssistiveTouch. **Inte konfigurerad** inaktiverar den här funktionen.
+- **Invertera färger-knapp**: **Tillåt** att inställningarna för att invertera färger kan justeras. **Inte konfigurerad** inaktiverar den här funktionen.
 - **Läs upp markerad text**: **Tillåt** att hjälpmedelsinställningen Läs upp markering finns på enheten. Den här funktionen läser upp text som användaren väljer. **Inte konfigurerad** inaktiverar den här funktionen.
 - **VoiceOver-knapp**: **Tillåt** VoiceOver-ändringar så att användarna kan uppdatera VoiceOver-funktionen, t.ex. när det gäller hur snabbt texten ska läsas upp. **Inte konfigurerad** förhindrar VoiceOver-ändringar.
 - **Zoomkontroll**: **Tillåt** att användaren kan ändra zoominställningarna. **Inte konfigurerad** förhindrar zoominställningar.
@@ -351,7 +364,7 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
   - Tillåt cookies från aktuell webbplats
 - **JavaScript**: **Blockera** förhindrar att Java-skript i webbläsaren körs på enheten. **Inte konfigurerad** tillåter Java-skript.
 - **Bedrägerivarningar**: **Kräv** att bedrägerivarningar ska visas i webbläsaren på enheten. **Inte konfigurerad** inaktiverar den här funktionen.
-- **Popup-fönster**: **Blockera** så att blockering av popup-fönster inaktivas i webbläsaren. **Inte konfigurerad** tillåter popup-blockeraren.
+- **Popup-fönster**: **Blockera** så att blockering av popup-fönster inaktiveras i webbläsaren. **Inte konfigurerad** tillåter popup-blockeraren.
 
 ## <a name="domains"></a>Domains
 
@@ -369,4 +382,6 @@ Lägg till en eller flera webbadresser i listan i **Domänwebbadress**. Använda
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+
+Du kan även ange enhetsbegränsningar och inställningar på [macOS](device-restrictions-macos.md)-enheter.

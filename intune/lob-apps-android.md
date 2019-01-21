@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2d1bc4762f46062cc80bb584da0a71423140c234
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 8ed3bb57010535806d082f706b317839747fa881
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642786"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210830"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Android i Microsoft Intune
 
@@ -31,6 +31,9 @@ En verksamhetsspecifik app är en app som du lägger till i Intune från en appi
 
 > [!Note]
 > Läs mer om verksamhetsspecifika appar från Managed Google Play Butik i [Arbeta med en verksamhetsspecifik app från Managed Google Play Butik](apps-add-android-for-work.md?#working-with-a-line-of-business-app-from-the-managed-google-play-store). 
+
+> [!Note]
+> För Android for Work-enheter följer du [den här artikeln](https://docs.microsoft.com/intune/apps-add-android-for-work). 
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 

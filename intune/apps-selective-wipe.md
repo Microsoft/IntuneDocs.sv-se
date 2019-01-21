@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 01/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 57e22c7b999f2f672c67dc623a20bf643e739376
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: cd6ac0b1fdb64897a831c0111f7e0a611c85bede
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642582"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210711"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
@@ -30,7 +30,7 @@ ms.locfileid: "53642582"
 Om en enhet tappas bort eller blir stulen eller om medarbetaren som använder enheten slutar på företaget vill du förmodligen ta bort företagets appdata från enheten. Men du kanske inte vill ta bort personliga data på enheten, särskilt inte om enheten ägs av medarbetaren.
 
 >[!NOTE]
-> iOS och Android är de plattformar som för närvarande stöder rensning av företagsdata på Intune-hanterade appar.
+> iOS och Android är de plattformar som för närvarande stöder rensning av företagsdata på Intune-hanterade appar. Intune-hanterade appar är program som innehåller Intune APP-SDK:n och har ett licensierat användarkonto för organisationen. Distribution av programskyddsprinciper krävs inte för att aktivera selektiv radering av app.
 
 Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran genom att följa stegen i det här avsnittet. När begäran har slutförts tas företagsdata bort från appen nästa gång den körs på enheten. Utöver att skapa en rensningsbegäran kan du konfigurera en selektiv rensning av organisationens data som en ny åtgärd när villkoren för åtkomstinställningar för appskyddsprinciper inte uppfylls. Den här funktionen gör att du kan skydda och ta bort känsliga organisationsdata från appar baserat på förkonfigurerade kriterier.
 

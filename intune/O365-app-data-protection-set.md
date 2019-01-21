@@ -17,12 +17,12 @@ ms.reviewer: ayesham
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ef84a77961dafc1a881bdb54208fae602857ae32
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: 807bc306848a731e63f7f854a9d4b451264e21a8
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067473"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210813"
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Beskriver hur användarna upplever det grundläggande skyddet för hanterade Office 365-appar i Microsoft Intune
 
@@ -89,33 +89,32 @@ Det här artikeln använder OneDrive för företag som ett illustrerande exempel
 
 ## <a name="what-policies-does-this-wizard-set"></a>Vilka principer konfigurerar den här guiden?
 
-|     |       | |
-|----|--------|-|
-|**Namn**|Hantera Office 365-appar| |
-| **Beskrivning**|Skapats av guiden Hantera Office 365-appar| |
-| |  | |
-| **Namn** |**iOS-principvärde** | **Android-principvärde** |
-|Förhindra säkerhetskopiering av iTunes och iCloud| Nej | E.t. |
-|Förhindra Android-säkerhetskopieringar |E.t. | Nej|
-|Tillåt att appen överför information till andra appar | Alla appar | Alla appar|
-|Tillåt att appen hämtar data från andra appar| Alla appar | Alla appar|
-|Förhindra ”Spara som” | Nej | Nej|
-|Begränsa klipp ut, kopiera och klistra in med andra appar | Alla appar | Alla appar |
-|Begränsa webbinnehåll till att bara visas i en företagshanterad webbläsare | Nej| Nej|
-|Kryptera appdata | När enheten är låst | Ja|
-|Inaktivera synkronisering av kontakter | Nej| Nej|
-|Inaktivera utskrift | Nej | Nej|
-|Kräv PIN-kod för åtkomst | Nej | Ja|
-|Antal försök innan PIN-koden återställs | E.t. |5|
-|Tillåt enkel PIN-kod | E.t. |Ja|
-|PIN-kodslängd | E.t. | 4|
-|Tillåt fingeravtryck istället för PIN | E.t. | Ja |
-|Kräv företagets autentiseringsuppgifter för åtkomst | Nej | Nej|
-|Hindra hanterade appar från att köras på jailbrokade eller rotade enheter | Nej | Nej|
-|Kontrollera åtkomstbehörigheterna på nytt efter (minuter) – tidsgräns | 30 | 30|
-|Kontrollera åtkomstbehörigheterna på nytt efter (minuter) – offline-respitperiod | 720 |720|
-|Offlineintervall (dagar) innan appdata rensas | 90 | 90|
-|Blockera skärmdump (endast Android-enheter) | E.t. | Nej |
+**Namn**: Hantera Office 365-appar<br>
+**Beskrivning**: Skapats av guiden Hantera Office 365-appar
+
+| Inställningsnamn | iOS-principvärde | Android-principvärde |
+|------------------------------------------------------------------------|-----------------------|----------------------|
+| Förhindra säkerhetskopiering av iTunes och iCloud | Nej | E.t. |
+| Förhindra Android-säkerhetskopieringar | E.t. | Nej |
+| Tillåt att appen överför information till andra appar | Alla appar | Alla appar |
+| Tillåt att appen hämtar data från andra appar | Alla appar | Alla appar |
+| Förhindra ”Spara som” | Nej | Nej |
+| Begränsa klipp ut, kopiera och klistra in med andra appar | Alla appar | Alla appar |
+| Begränsa webbinnehåll till att bara visas i en företagshanterad webbläsare | Nej | Nej |
+| Kryptera appdata | När enheten är låst | Ja |
+| Inaktivera synkronisering av kontakter | Nej | Nej |
+| Inaktivera utskrift | Nej | Nej |
+| Kräv PIN-kod för åtkomst | Nej | Ja |
+| Antal försök innan PIN-koden återställs | E.t. | 5 |
+| Tillåt enkel PIN-kod | E.t. | Ja |
+| PIN-kodslängd | E.t. | 4 |
+| Tillåt fingeravtryck istället för PIN | E.t. | Ja |
+| Kräv företagets autentiseringsuppgifter för åtkomst | Nej | Nej |
+| Hindra hanterade appar från att köras på jailbrokade eller rotade enheter | Nej | Nej |
+| Kontrollera åtkomstbehörigheterna på nytt efter (minuter) – tidsgräns | 30 | 30 |
+| Kontrollera åtkomstbehörigheterna på nytt efter (minuter) – offline-respitperiod | 720 | 720 |
+| Offlineintervall (dagar) innan appdata rensas | 90 | 90 |
+| Blockera skärmdump (endast Android-enheter) | E.t. | Nej |
 
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Varför konfigureras en PIN-kodsprincip för appar enbart för Android-enheter?
 Kryptering fungerar på olika sätt på iOS och Android.

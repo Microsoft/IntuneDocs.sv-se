@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,184 +14,184 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 06b568ee7cc2dc55a8d44cf04b96078b47d8c4b3
-ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
+ms.openlocfilehash: f653cd8c7eb0181581d9c21b7f9bc35a008c6df6
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52579174"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122560"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Ta bort SCEP- och PKCS-certifikat i Microsoft Intune
 
-I Microsoft Intune kan du lägga till SCEP- och PKCS-certifikat till enheter. Dessa certifikat kan också tas bort när du [rensar](devices-wipe.md#wipe) eller [drar tillbaka](devices-wipe.md#retire) enheten. Det finns några andra scenarier då certifikaten tas bort automatiskt och vissa scenarier då certifikaten bevaras på enheten.
+I Microsoft Intune kan du lägga till SCEP-certifikat (Simple Certificate Enrollment Protocol) och PKCS-certifikat (Public Key Cryptography Standards) i enheter. Dessa certifikat kan också tas bort när du [rensar](devices-wipe.md#wipe) eller [drar tillbaka](devices-wipe.md#retire) enheten. 
 
-Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- och SCEP-certifikat.
+Det finns några andra scenarier då certifikaten tas bort automatiskt och vissa scenarier då certifikaten bevaras på enheten. Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- och SCEP-certifikat.
 
 > [!NOTE]
-> Om du vill ta bort och återkalla certifikat för en användare som tas bort från Active Directory (AD) eller Azure AD måste du följa stegen i angiven ordning:
+> Om du vill ta bort och återkalla certifikat för en användare som tas bort från lokal Active Directory eller Azure Active Directory (Azure AD) följer du dessa steg i ordning:
 >
->    1. Rensa eller dra tillbaka användarens enhet
->    2. Ta bort användaren från AD eller Azure AD
+> 1. Rensa eller dra tillbaka användarens enhet.
+> 2. Ta bort användaren från lokal Active Directory eller Azure AD.
 
 ## <a name="windows-devices"></a>Windows-enheter
 
 #### <a name="scep-certificates"></a>SCEP-certifikat
 
-- Ett SCEP-certifikat återkallas *och* tas bort när:
+Ett SCEP-certifikat återkallas *och* tas bort när:
 
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
-  - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Certifikatprofilen tas bort från grupptilldelningen
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
+- Enheten tas bort från en Azure AD-grupp.
+- En certifikatprofil tas bort från grupptilldelningen.
 
-- Ett SCEP-certifikat återkallas när:
-  - Administratören ändrar eller uppdaterar SCEP-profilen
+Ett SCEP-certifikat återkallas när:
+- En administratör ändrar eller uppdaterar SCEP-profilen.
 
-- Rotcertifikat tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+Ett rotcertifikat tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- SCEP-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
+SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
 
 #### <a name="pkcs-certificates"></a>PKCS-certifikat
 
-- Ett PKCS-certifikat återkallas *och* tas bort när:
+Ett PKCS-certifikat återkallas *och* tas bort när:
 
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- Rotcertifikat tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+Ett rotcertifikat tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- PKCS-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
-  - Administratören ändrar eller uppdaterar PKCS-profilen
-  - Certifikatprofilen tas bort från grupptilldelningen
+PKCS-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
+- En administratör ändrar eller uppdaterar PKCS-profilen.
+- En certifikatprofil tas bort från grupptilldelningen.
 
 
 ## <a name="ios-devices"></a>iOS-enheter
 
 #### <a name="scep-certificates"></a>SCEP-certifikat
 
-- Ett SCEP-certifikat återkallas *och* tas bort när:
+Ett SCEP-certifikat återkallas *och* tas bort när:
 
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
-  - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Certifikatprofilen tas bort från grupptilldelningen
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
+- Enheten tas bort från Azure AD-gruppen.
+- En certifikatprofil tas bort från grupptilldelningen.
 
-- Ett SCEP-certifikat återkallas när:
-  - Administratören ändrar eller uppdaterar SCEP-profilen
+Ett SCEP-certifikat återkallas när:
+- En administratör ändrar eller uppdaterar SCEP-profilen.
 
-- Rotcertifikat tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+Ett rotcertifikat tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- SCEP-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
+SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
 
 #### <a name="pkcs-certificates"></a>PKCS-certifikat
 
-- Ett PKCS-certifikat återkallas *och* tas bort när:
+Ett PKCS-certifikat återkallas *och* tas bort när:
 
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- Ett PKCS-certifikat tas bort när:
-  - Certifikatprofilen tas bort från grupptilldelningen
+Ett PKCS-certifikat tas bort när:
+- En certifikatprofil tas bort från grupptilldelningen.
   
-- Rotcertifikat tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+Ett rotcertifikat tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- PKCS-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
-  - Administratören ändrar eller uppdaterar PKCS-profilen
+PKCS-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
+- En administratör ändrar eller uppdaterar PKCS-profilen.
 
 ## <a name="android-knox-devices"></a>Android KNOX-enheter
 
 #### <a name="scep-certificates"></a>SCEP-certifikat
 
-- Ett SCEP-certifikat återkallas *och* tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
+Ett SCEP-certifikat återkallas *och* tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
 
-- Ett SCEP-certifikat återkallas när:
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
-  - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Certifikatprofilen tas bort från grupptilldelningen
-  - Administratören tar bort användaren eller gruppen från Azure Active Directory (AD)
-  - Administratören ändrar eller uppdaterar SCEP-profilen
+Ett SCEP-certifikat återkallas när:
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
+- Enheten tas bort från en Azure AD-grupp.
+- En certifikatprofil tas bort från grupptilldelningen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
+- En administratör ändrar eller uppdaterar SCEP-profilen.
 
-- Rotcertifikat tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+Ett rotcertifikat tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- SCEP-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
+SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
 
 #### <a name="pkcs-certificates"></a>PKCS-certifikat
 
-- Ett PKCS-certifikat återkallas *och* tas bort när:
+Ett PKCS-certifikat återkallas *och* tas bort när:
 
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- Rotcertifikat tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [rensningsåtgärden](devices-wipe.md#wipe)
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
+Ett rotcertifikat tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
+- En administratör kör [tillbakadragningsåtgärden](devices-wipe.md#retire).
 
-- PKCS-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
-  - Administratören ändrar eller uppdaterar PKCS-profilen
-  - Certifikatprofilen tas bort från grupptilldelningen
+PKCS-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
+- En administratör ändrar eller uppdaterar PKCS-profilen.
+- En certifikatprofil tas bort från grupptilldelningen.
   
   
 > [!NOTE]
-> Android for Work-enheter har inte verifierats för scenarierna ovan. Äldre Android-enheter (alla enheter som inte kommer från Samsung och inte har en arbetsprofil) har inte aktiverats för borttagning av certifikat. 
+> Android for Work-enheter har inte verifierats för scenarierna ovan. Äldre Android-enheter (alla enheter som inte kommer från Samsung och inte har arbetsprofiler) har inte aktiverats för borttagning av certifikat. 
 
 ## <a name="macos-certificates"></a>macOS-certifikat
 
 #### <a name="scep-certificates"></a>SCEP-certifikat
 
-- Ett SCEP-certifikat återkallas *och* tas bort när:
-  - En slutanvändare avregistrerar sig
-  - Administratören kör [tillbakadragningsåtgärden](devices-wipe.md#retire)
-  - Enheten tas bort från Azure Active Directory-gruppen (AD)
-  - Certifikatprofilen tas bort från grupptilldelningen
+Ett SCEP-certifikat återkallas *och* tas bort när:
+- En användare avregistrerar sig.
+- En administratör kör en [tillbakadragningsåtgärd](devices-wipe.md#retire).
+- Enheten tas bort från en Azure AD-grupp.
+- En certifikatprofil tas bort från grupptilldelningen.
 
-- Ett SCEP-certifikat återkallas när:
-  - Administratören ändrar eller uppdaterar SCEP-profilen
+Ett SCEP-certifikat återkallas när:
+- En administratör ändrar eller uppdaterar SCEP-profilen.
 
-- SCEP-certifikat **bevaras** på enheten (certifikaten återkallas inte och tas inte bort) när:
-  - En slutanvändare förlorar sin Intune-licens
-  - Administratören drar tillbaka Intune-licensen
-  - Administratören tar bort användaren eller gruppen från Azure AD
+SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas inte bort) när:
+- En användare förlorar sin Intune-licens.
+- En administratör drar tillbaka Intune-licensen.
+- En administratör tar bort användaren eller gruppen från Azure AD.
 
 > [!NOTE]
 > Det går inte att använda [rensningsåtgärden](devices-wipe.md#wipe) för att fabriksåterställa macOS-enheter.

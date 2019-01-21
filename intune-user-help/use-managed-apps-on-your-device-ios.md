@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/14/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0f8139d5a17d1a6594354994fda6c0eef64a22f3
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: c3f1c28fb94823dd3370080c62c0d6f3d0da521e
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147510"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203271"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Använda hanterade appar på iOS-enheten
 
@@ -34,7 +34,7 @@ När du använder företagsdata i en hanterad app visas ett meddelande (se nedan
 
 ![managed-apps-message-ios](./media/managed-apps-message.png)
 
-### <a name="how-do-i-get-managed-apps"></a>Hur skaffar jag hanterade appar?
+## <a name="how-do-i-get-managed-apps"></a>Hur skaffar jag hanterade appar?  
 Du kan hämta hanterade appar på ett par olika sätt:
 
 -   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan företagets support installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
@@ -43,7 +43,16 @@ Du kan hämta hanterade appar på ett par olika sätt:
 
 Företagets support kan ibland köpa flera licenser för en app som du installerar. Om du ser ett meddelande som ber dig godkänna Apples Volymköpsprogram är det normalt och du kan godkänna det. Om du inte godkänner det kan du inte installera appen.
 
-### <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?
+## <a name="available-apps"></a>Tillgängliga appar   
+ Din organisation väljer appar som är lämpliga och användbara för dig på jobbet eller i skolan. Dessa appar är de enda du hittar i Företagsportal.   
+
+ Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för iOS har du åtkomst till iOS-appar men inte Android-appar.   
+
+## <a name="request-an-app-for-work-or-school"></a>Begär en app för arbete eller skola   
+ Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Kontaktuppgifter för **supportavdelningen** finns i på fliken **Support** i appen Företagsportal. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ 
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?  
 Följande är några exempel på vad företagets support kan hantera i en app och hur det kan påverka din användning av företagsdata på enheten:
 
 -   Åtkomst till vissa webbplatser

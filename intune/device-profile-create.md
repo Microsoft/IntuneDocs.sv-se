@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,27 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6bc6f5d2f32ff060eb2eec568b0048628ad0e09c
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: cb6e3f0a9f62348d55b5dc2284c1007ea7faf088
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303863"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203220"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Skapa profilen
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
 
-2. I **Microsoft Intune** väljer du **Enhetskonfiguration** och sedan **Profiler**. Välj sedan **Skapa profil**.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 
 3. Ange följande egenskaper:
 
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
-   - **Beskrivning:** Ange en beskrivning för profilen. (Detta är valfritt, men rekommenderas.)
+   - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
    - **Plattform**: Välj plattformstyp:  
 
        - **Android**
@@ -45,8 +46,8 @@ ms.locfileid: "52303863"
        - **Windows 8.1 och senare**
        - **Windows 10 och senare**
 
-   - **Profiltyp**: Välj vilken typ du vill skapa. Listans innehåll beror på vilken plattform du väljer.
-   - **Inställningar**: Läs en beskrivning av inställningarna för varje profiltyp i följande avsnitt:
+   - **Profiltyp**: Välj den typ som du vill skapa. Listans innehåll beror på vilken plattform du väljer.
+   - **Inställningar**: Läs en beskrivning av inställningarna för varje profiltyp i följande artiklar:
 
        -  [Enhetsfunktioner](device-features-configure.md)
        -  [Enhetsbegränsningar](device-restrictions-configure.md)

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1af474063ec7b6ccac2a36afbec421767f79444a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: afddf57f93ef2308ce8e8fd8aab8d74c3419a3ea
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642854"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203424"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -192,7 +192,15 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     | <strong>Zoom</strong> | Ge användaren möjlighet att zooma in på skärmen under konfigurationen. |
     | <strong>Siri</strong> | Ge användaren möjlighet att ställa in Siri. |
     | <strong>Diagnostikdata</strong> | Visa skärmen **Diagnostik** för användaren. På den här skärmen kan användaren välja att skicka diagnostikdata till Apple. |
-
+    | <strong>Visningston</strong> | Ge användaren möjlighet att aktivera Visningston. |
+    | <strong>Sekretess</strong> | Visa sekretesskärmen för användaren. |
+    | <strong>Android-migrering</strong> | Ge användaren möjlighet att migrera data från en Android-enhet. |
+    | <strong>iMessage och FaceTime</strong> | Ge användaren möjlighet att konfigurera iMessage och FaceTime. |
+    | <strong>Registrering</strong> | Visa informationsskärmar för registrering för användarutbildning, som försättsblad och multitasking och kontrollcenter. |
+    | <strong>Klockmigrering</strong> | Ge användaren möjlighet att migrera data från en klockenhet. |
+    | <strong>Skärmtid</strong> | Visa skärmen Skärmtid. |
+    | <strong>Programuppdatering</strong> | Visa skärmen för obligatorisk programuppdatering. |
+    | <strong>SIM-installation</strong> | Ge användaren möjlighet att lägga till ett mobilabonnemang. |
 
 14. Välj **OK**.
 

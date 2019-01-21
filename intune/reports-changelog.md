@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 01/11/2010
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,25 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 3fce49decb7574d32d1923a77bb2cca28384ce11
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642769"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297238"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Håll dig uppdaterad om uppdateringar för Intune-informationslagret.
+
+## <a name="1812"></a>1812 
+_Publicerad december 2018_
+
+### <a name="enrollment-activities-collection-released-to-v10"></a>Samlingen Registreringsaktiviteter har släppts som v1.0 
+
+Samlingen Registreringsaktiviteter finns nu i v1.0. Du kan använda den här samlingen för att förstå volym och trender för registreringsfel i din miljö. Mer information finns i [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities), [enrollmentEventStatuses](intune-data-warehouse-collections.md#enrollmenteventstatuses), [enrollmentFailureCategories](intune-data-warehouse-collections.md#enrollmentfailurecategories) och [ enrollmentFailureReasons](intune-data-warehouse-collections.md#enrollmentfailurereasons).
 
 ## <a name="1808"></a>1808
 _Publicerad augusti 2018_
@@ -36,9 +43,9 @@ _Publicerad augusti 2018_
 
 Det går nu att använda v1.0-versionen av Intune-informationslagret genom att ange frågeparametern `api-version=v1.0`. Uppdateringar av samlingar i datalagret är additiva och avbryter inte befintliga scenarier.
 
-### <a name="enrollment-failure-collection-released-to-beta"></a>Samlingen Registreringsfel utgiven som betaversion
+### <a name="enrollment-activities-collection-released-to-beta"></a>Samlingen Registreringsaktiviteter har släppts som betaversion
 
-Den nya samlingen `Enrollment Failure` har släppts som betaversion. Du kan använda den här samlingen för att förstå hur registreringen framskrider genom att granska de vanligaste felen. 
+Den nya samlingen `Enrollment Activities` har släppts som betaversion. Du kan använda den här samlingen för att förstå hur registreringen framskrider genom att granska de vanligaste felen. 
 
 
 ## <a name="1805"></a>1805

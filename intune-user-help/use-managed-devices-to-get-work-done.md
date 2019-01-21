@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,26 +17,26 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150674"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203156"
 ---
-# <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
-Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.
+# <a name="use-managed-devices-to-access-work-or-school-resources"></a>Använda hanterade enheter för att få åtkomst till resurser för arbete eller skola
+Microsoft Intune är ett enhetshanteringssystem som organisationer kan använda till att hantera åtkomst till enheter, appar och e-post. Med enhetshantering kan du, och andra medarbetare och studerande, få åtkomst till jobbinformation praktiskt taget var som helst, på nästan vilken enhet som helst. Även när du arbetar fjärranslutet kan du och organisationens information skyddas.
 
-När du registrerar en enhet för hantering med Intune kan IT-avdelningen hantera dessa arbets- eller skolresurser, skydda dem och du har samtidigt friheten att använda den enhet du önskar för att utföra ditt arbete. Ett vanligt sätt att göra detta på är genom att registrera enheten för hantering via företagsportalen.
+Microsoft Intune är den programvara som ditt företag använder till att konfigurera säkerhets- och enhetskrav. När du är redo att få din enhet hanterad använder du appen Företagsportal i Intune. Med appen kan du använda valfri enhet för åtkomst till resurser för arbete eller skola. 
 
-## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Vilken information kan mitt företag se när jag registrerar enheten i Intune?
-Företagets support kan se information som är relevant för arbetet, men inte din personliga information. Detta är särskilt viktigt att känna till när du registrerar en personlig enhet för användning i arbetet. Vi visar mer i detalj vad de [kan se och inte kan se i nästa artikel i användarhjälpen](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+## <a name="what-information-can-my-company-see-when-i-get-my-device-managed"></a>Vilken information kan företaget se när jag får min enhet hanterad?
+När du har konfigurerats i Företagsportal kan företagets support bara se den information som är relevant för arbetet. De kan inte se någon personlig information. Detta är särskilt viktigt att känna till när du registrerar en personlig enhet för användning i arbetet. Läs om exakt vad de [kan och inte kan se i nästa artikel](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
-## <a name="how-do-i-get-the-company-portal"></a>Hur skaffar jag företagsportalen?
-Du kan skaffa företagsportalen på två olika sätt:
+## <a name="how-do-i-get-company-portal"></a>Hur skaffar jag Företagsportal?
+Du kan skaffa Företagsportal så här:
 
-- Genom att installera företagsportalappen på din enhet. Du kommer normalt till företagsportalappen genom att gå till appbutiken på enheten, men företagets support kan även installera företagsportalappen åt dig.
-- Genom att gå till [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980) som företagets support har konfigurerat.
+- Installera appen Företagsportal på din enhet. Du kommer normalt till företagsportalappen genom att gå till appbutiken på enheten, men företagets support kan även installera företagsportalappen åt dig.
+- Gå till [webbplatsen för Företagsportal](https://go.microsoft.com/fwlink/?linkid=2010980) som företagets support har konfigurerat.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Vad är skillnaden mellan appen och webbplatsen?
 Det finns några mindre skillnader mellan företagsportalappen och företagsportalens webbplats, men du kan utföra likartade uppgifter på båda två. Några uppgifter som du kan utföra är:

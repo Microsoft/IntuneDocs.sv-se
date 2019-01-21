@@ -2,10 +2,10 @@
 title: Konfigurera inställningar av Windows Update för företag i Microsoft Intune – Azure | Microsoft Docs
 description: Uppdatera inställningarna för programuppdateringar i en profil för att skapa en uppdateringsring, granska kompatibiliteten och pausa uppdateringar i Windows Update för företag-inställningarna med hjälp av Microsoft Intune på Windows 10-enheter.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 01/15/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: c39faf6bb6a22cb861eb655edd6358b345b87c7e
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: ccb91082a3226ec4091a139d31796fd77bdf0616
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112773"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297391"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -76,16 +76,12 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster**, filtrerar på **Intune** och väljer sedan **Microsoft Intune**.
 2. Välj **Programuppdateringar** > **Windows 10-uppdateringsringar** > **Skapa**.
 3. Ange ett namn, en beskrivning (valfritt) och välj sedan **Konfigurera**.
-4. Ange exempelvis följande information i **Inställningar**:
+4. Ange exempelvis följande information i **Inställningar**:  
 
+   **Uppdatera inställningar**  
    - **Underhållskanal**: Ange den kanal som enheten tar emot Windows-uppdateringar från.
    - **Uppdateringar av Microsoft-produkter**: Välj om du vill söka efter appuppdateringar i Microsoft Update.
    - **Windows-drivrutiner**: Välj om du vill undanta Windows Update-drivrutiner under uppdateringarna.
-   - **Funktionssätt för automatisk uppdatering**: Välj hur automatiska uppdateringar installeras, samt om datorn ska startas om. Mer information finns i [Uppdatera/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
-     - **Frekvens för automatiska funktioner**: Om du väljer alternativet för **automatisk installation och omstart vid schemalagd tid** för uppdateringen så visas den här inställningen. Använd inställningen om du vill schemalägga när uppdateringarna ska installeras, inklusive vecka, dag och tid.
-
-   - **Omstartskontroller**: Aktiverat som standard. När du startar om en enhet utförs vissa kontroller, exempelvis kontroll av aktiva användare, batterinivå, spel som körs och mycket mer. Om du vill hoppa över de här kontrollerna när du startar om en enhet väljer du **Hoppa över**.
-
    - **Uppskjutningsperiod för kvalitetsuppdatering (dagar)**: Ange i hur många dagar kvalitetsuppdateringar ska skjutas upp. Du kan fördröja mottagandet av dessa kvalitetsuppdateringar i upp till 30 dagar från att de har släppts.
 
      Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner och publiceras vanligtvis den andra tisdagen varje månad. Kvalitetsuppdateringar via Windows Update endast för företag får endast dessa uppdateringar (”B”-versionen), men andra uppdateringar kan släppas när som helst av Microsoft. Du kan definiera om och hur länge du senarelägger mottagandet av kvalitetsuppdateringar efter att de blivit tillgängliga i Windows Update. Mer information finns i [Distribuera uppdateringar med hjälp av Windows Update för företag](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).
@@ -96,9 +92,21 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
      Exempel: **Om underhållskanalen är inställd på Halvårskanal (riktad) och uppskjutningsperioden är 30 dagar**: Vi tänker oss att Funktionsuppdatering X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
 
-     **Om underhållskanalen är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att Funktionsuppdatering X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att halvårskanalversionen har släppts och uppdateras därför i maj.
+     **Om underhållskanalen är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att Funktionsuppdatering X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att halvårskanalversionen har släppts och uppdateras därför i maj.  
 
-   - **Leveransoptimering av nedladdningsläge**: Välj den metod som ska användas när enheterna laddar ner Windows-uppdateringar. Mer information finns i [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+   **Inställningar för användargränssnitt**
+   
+   - **Funktionssätt för automatisk uppdatering**: Välj hur automatiska uppdateringar installeras, samt om datorn ska startas om. Mer information finns i [Uppdatera/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
+
+     Inställningen *Återställ till standard* återställer de ursprungliga inställningarna för automatisk uppdatering på Windows 10-datorer som kör *oktober 2018-uppdateringen* eller senare.  
+
+     - **Frekvens för automatiska funktioner**: Om du väljer alternativet för **automatisk installation och omstart vid schemalagd tid** för uppdateringen så visas den här inställningen. Använd inställningen om du vill schemalägga när uppdateringarna ska installeras, inklusive vecka, dag och tid.
+
+   - **Omstartskontroller**: Aktiverat som standard. När du startar om en enhet utförs vissa kontroller, exempelvis kontroll av aktiva användare, batterinivå, spel som körs och mycket mer. Om du vill hoppa över de här kontrollerna när du startar om en enhet väljer du **Hoppa över**.
+
+   - **Blockera användare från att pausa Windows-uppdateringar**: Tillåts som standard. Använd den här inställningen för att blockera eller tillåta dina användare att pausa installation av uppdateringar från *inställningarna* på deras datorer. 
+      
+   - **Leveransoptimering av nedladdningsläge**: Leveransoptimering konfigureras inte längre som en del av en Windows 10-uppdateringsring under Programuppdateringar. Leveransoptimering anges nu via enhetskonfiguration. Men tidigare konfigurationer finns kvar i konsolen. Du kan ta bort dessa tidigare konfigurationer genom att ändra dem till inställningen *Inte konfigurerad*, men de kan inte ändras på något annat sätt. Information om hur du undviker konflikter mellan ny och gammal princip finns i [Flytta från befintliga uppdateringsringar till leveransoptimering](delivery-optimization-windows.md#move-from-existing-update-rings-to-delivery-optimization). Flytta sedan dina inställningar till en leveransoptimeringsprofil. 
 
 5. När du är klar väljer du **OK**. I **Skapa uppdateringsring** väljer du **Skapa**.
 

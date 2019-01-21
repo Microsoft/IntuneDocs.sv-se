@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 03840b0a4a7ce3f4735e22a227f5d2856d532b11
-ms.sourcegitcommit: 02f75d241b3cbb125cb235d16d447f8855b1806d
+ms.openlocfilehash: e0bb198b078695b567756c6a7db832d00e7a8c5b
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657788"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210847"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -158,6 +158,8 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
     * Om du är en ISV som aktiverar dina iOS eller Android store-appar för Intunes appskyddsprincip så får du en kampanjkod när du har slutfört registreringen med Microsoft Intune, enligt beskrivningen i registreringssteget. Kampanjkoden låter dig registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning.
 
     * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
+    
+    * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Office-administrationsportalens webbplats efter att ha logga in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/en-ca/intune/licenses-assign).
 
 * **Appskyddsprinciper i Intune**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
 

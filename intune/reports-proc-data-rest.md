@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: f587fdf7c1690dbb0a31388a9c70b780179e541e
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642888"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210881"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -47,7 +47,7 @@ Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten 
     3.  Skriv en webbadress för **Inloggningswebbadress**. Inloggningswebbadressen beror på den särskilda situationen men om du tänkt använda Postman skriver du `https://www.getpostman.com/oauth2/callback`. Du kommer sedan använda callback (återanrop) för klientautentiseringen när du autentiserar till Azure AD.
 4.  Välj **Skapa**.
 
-     ![API för Intune-informationslager](./media/reports-get_rest_data_client_overview.png)
+     ![Intune Data Warehouse-klientapp](./media/reports-get_rest_data_client_overview.png)
 
 5. Observera appens värde för **Program-ID**. Det här värdet ska användas i nästa avsnitt.
 
@@ -134,7 +134,7 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 
 12. Välj **Request Token** (Begär token).
 
-    ![Information för token](./media/reports-postman_getnewtoken.png)
+    ![Information för åtkomsttoken](./media/reports-postman_getnewtoken.png)
 
 13. Ange dina autentiseringsuppgifter på auktoriseringssidan i Active AD. I listan över token i Postman finns nu token med namnet `Bearer`.
 14. Välj **Använd token**. Listan över sidhuvuden innehåller det nya nyckelvärdet för auktorisering och värdet `Bearer <your-authorization-token>`.
@@ -144,7 +144,7 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 1.  Välj **Skicka**.
 2.  Returnerade data visas i svarstexten i Postman.
 
-    ![Postman 200OK](./media/reports-postman_200OK.png)
+    ![Postman-klientstatusen är lika med 200 OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Skapa en REST-klient (C#) för att hämta data från Intune-informationslagret
 
@@ -161,7 +161,7 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 6. Välj **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.
 7. Öppna `Program.cs` från Solution Explorer.
 
-    ![Projekt i Visual Studio](./media/reports-get_rest_data_in.png)
+    ![Progam.cs och Solution Explorer i Visual Studio](./media/reports-get_rest_data_in.png)
 
 8. Ersätt koden i Program.cs med följande kod:  
    ```csharp
