@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: e9d3b82fb544b1c73671438440b108573343795a
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: e7b60ecbf2a9a110b68807f8d1dce4db21f8f61d
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324913"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316924"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -147,39 +147,6 @@ För att förhindra eventuell förfalskning, avslöjande av information och priv
 -   Kontrollera att programmet kommer från en betrodd källa.
 
 -   Skydda utdatakatalogen som innehåller den omslutna appen. Fundera på att i stället använda en katalog på användarnivå för utdatan.
-
-## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-wrapped-android-lob-app-and-enabling-adal-sso-optional"></a>Kräva uppmaning om användarinloggning för en automatisk APP-WE-tjänstregistrering, kräva Intune-appskyddsprinciper för att kunna använda en omsluten Android LOB-app och aktivera ADAL SSO (valfritt)
-
-Följande är vägledning för att kräva användaruppmaning vid start av appen för en automatisk APP-WE-tjänstregistrering (vi kallar detta **standardregistrering** i det här avsnittet), som kräver Intune-appskyddsprinciper för att endast tillåta att Intune-skyddade användare använder den omslutna Android LOB-appen. Det tar även upp hur du kan aktivera SSO för den omslutna Android LOB-appen. 
-
-> [!NOTE] 
-> Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
-
-### <a name="general-requirements"></a>Allmänna krav
-* Intune SDK-teamet kommer att kräva appens program-ID. Det går att hitta via [Azure Portal](https://portal.azure.com/), under **Alla program**, i kolumnen för **Program-ID**. Ett bra sätt att kontakta Intune SDK-teamet är att skicka e-post till msintuneappsdk@microsoft.com.
-     
-### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
-De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
-
-1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
-
-> [!NOTE]
-> Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal som är kopplat till din app. 
-> * Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
-
-2. Aktivera standardregistrering genom att ange följande värde i manifestet:
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
-   ```
-   > [!NOTE] 
-   > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
-
-3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet:
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
-   ```
-   > [!NOTE] 
-   > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
 
 ### <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)
