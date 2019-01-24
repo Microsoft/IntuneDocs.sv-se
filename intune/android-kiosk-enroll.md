@@ -1,12 +1,12 @@
 ---
-title: Registrera Android enterprise-kioskenheter i Intune
+title: Konfigurera Intune-registrering för dedikerade Android enterprise-enheter
 titlesuffix: Microsoft Intune
-description: Lär dig hur du registrera Android enterprise-kioskenheter i Intune.
+description: Lär dig hur du registrerar dedikerade Android enterprise-enheter i Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 6/21/2018
+ms.date: 1/15/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,43 +16,43 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 5a84bcd820b7596d1b1df01342604562c7853140
-ms.sourcegitcommit: a44359b426e19b8bf4b99eca6af2755c6d3c6fb8
+ms.openlocfilehash: 4a6818f67ab4e3b04364b412fb8ecf71227328d4
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54098325"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386903"
 ---
-# <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera Intune-registrering av Android Enterprise-kioskenheter
+# <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurera Intune-registrering för dedikerade Android enterprise-enheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android stöder kioskenheter med lösningsuppsättningen [Dedikerade enheter](https://developers.google.com/android/work/overview#company-owned-devices-for-dedicated-use). Sådana enheter används bara för ett ändamål, till exempel digitala skyltar, biljettutskrifter eller lagerhantering. Administratörer låser användningen av enheten för en begränsad uppsättning appar och webblänkar. Användarna kan heller inte lägga till andra appar eller att vidta andra åtgärder på enheten.
+Android stöder företagsägda engångsenheter av kiosktyp med dess dedikerade lösningsuppsättning. Sådana enheter används bara för ett ändamål, till exempel digitala skyltar, biljettutskrifter eller lagerhantering. Administratörer låser användningen av enheten för en begränsad uppsättning appar och webblänkar. Användarna kan heller inte lägga till andra appar eller att vidta andra åtgärder på enheten.
 
-Intune hjälper dig att distribuera appar och inställningar för Android-kioskenheter. Specifik information om Android enterprise finns i [Krav för Android enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Intune hjälper dig att distribuera appar och inställningar för dedikerade Android-enheter. Specifik information om Android enterprise finns i [Krav för Android enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 Enheter som du hanterar på det här sättet registreras i Intune utan ett användarkonto och kopplas inte till någon slutanvändare. De är inte avsedda för program eller appar för personligt bruk som har starka krav på användarspecifika kontodata, till exempel Outlook eller Gmail.
 
 ## <a name="device-requirements"></a>Krav på enheten
 
-Enheter måste uppfylla dessa krav för att kunna hanteras som en Android enterprise-kioskenhet:
+Enheter måste uppfylla dessa krav för att kunna hanteras som en dedikerad Android enterprise-enhet:
 
 - Android OS version 5.1 och senare.
 - Enheter måste köra en distribution av Android som har anslutningsfunktioner för Google Mobile Services (GMS). Enheter måste ha GMS tillgängligt för att kunna ansluta till GMS.
 
-## <a name="set-up-android-kiosk-management"></a>Konfigurera Android-kioskhantering
+## <a name="set-up-android-dedicated-device-management"></a>Konfigurera hantering av dedikerad Android-enhet
 
-Följ dessa steg för att konfigurera Android-kioskhantering:
+Du kan konfigurera hanteringen av dedikerade Android-enheter så här:
 
 1. Förbered hantering av mobila enheter genom att [ange MDM-utfärdare som **Microsoft Intune**](mdm-authority-set.md) för instruktioner. Du anger det här objektet bara när du konfigurerar Intune för hantering av mobila enheter.
 2. [Anslut ditt Intune-klientkonto till ditt Android enterprise-konto](connect-intune-android-enterprise.md).
 3. [Skapa en registreringsprofil](#create-an-enrollment-profile).
 4. [Skapa en enhetsgrupp](#create-a-device-group).
-5. [Registrera kioskenheterna](#enroll-the-kiosk-devices).
+5. [Registrera de dedikerade enheterna](#enroll-the-dedicated-devices).
 
 ### <a name="create-an-enrollment-profile"></a>Skapa en registreringsprofil
 
-Du måste skapa en registreringsprofil så att du kan registrera dina kioskenheter. När profilen har skapats får den en registreringstoken (slumpmässig sträng) och en QR-kod. Beroende på enhetens Android OS-version kan du använda token eller QR-koden för att [registrera kioskenheten](#enroll-the-kiosk-devices).
+Du måste skapa en registreringsprofil så att du kan registrera dina dedikerade enheter. När profilen har skapats får den en registreringstoken (slumpmässig sträng) och en QR-kod. Beroende på enhetens Android OS-version kan du använda token eller QR-koden för att [registrera den dedikerade enheten](#enroll-the-dedicated-devices).
 
 1. Gå till [Intune-portalen](https://portal.azure.com) och välj **Enhetsregistrering** > **Android-registrering** > **Registreringar av kiosk- och uppgiftsenheter**.
 2. Välj **Skapa** och fyll i de obligatoriska fälten.
@@ -95,81 +95,20 @@ När du ersätter eller återkallar en token/QR-kod påverkar inte enheter som r
 4. Välj **Ersätt token** om du vill ersätta token.
 5. Välj **Återkalla token** om du vill återkalla token.
 
-## <a name="enroll-the-kiosk-devices"></a>Registrera kioskenheterna
+## <a name="enroll-the-dedicated-devices"></a>Registrera de dedikerade enheterna
 
-När du har skapat registreringsprofilen och den dynamiska enhetsgruppen kan du registrera dina kioskenheterna. Hur du registrerar dina Android-enheter beror på operativsystem.
+Du kan nu [registrera dina dedikerade enheter](android-dedicated-devices-fully-managed-enroll.md).
 
-| Registreringsmetod | Lägsta Android OS-version som stöds |
-| ----- | ----- |
-| NFC (Near Field Communication) | 5.1 |
-| Token | 6.0 |
-| QR-kod | 7.0 |
-| Zero Touch | 8.0, för deltagande tillverkare |
+## <a name="managing-apps-on-android-dedicated-devices"></a>Hantera appar på dedikerade Android-enheter
 
-### <a name="enroll-by-using-near-field-communication-nfc"></a>Registrera med NFC (Near Field Communication)
-
-För enheter med Android 5.1 och senare som stöder NFC kan du etablera enheter genom att ange en särskilt formaterad NFC-tagg. Du kan använda en egen app eller valfritt verktyg som skapar NFC-taggar. Mer information finns i [Googles dokumentation om API för hantering av Android](https://developers.google.com/android/management/provision-device#nfc_method).
-
-### <a name="enroll-by-using-a-token"></a>Registrera med en token
-
-För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **afw#setup**.
-
-1. Starta den rensade enheten.
-2. Välj språk på **välkomstskärmen**.
-3. Anslut till ditt **Wi-Fi** och välj **NÄSTA**.
-4. Acceptera Googles villkor och välj **NÄSTA**.
-5. På Googles inloggningsskärm anger du **afw#setup** istället för ett Gmail-konto och sedan **NÄSTA**.
-6. Välj **INSTALLERA** för appen **Android Device Policy**.
-7. Fortsätt installationen av principen.  Vissa enheter kan kräva ytterligare godkännande av villkor. 
-8. På skärmen **Registrera den här enheten** låter du din enhet skanna QR-koden eller så väljer du att ange token manuellt.
-9. Följ anvisningarna på skärmen för att slutföra registreringen. 
-
-### <a name="enroll-by-using-a-qr-code"></a>Registrera med QR-kod
-
-På enheter med Android 7 och senare kan du skanna QR-koden från registreringsprofilen för att registrera enheten.
-
-> [!Note]
-> Webbläsarens zoom kan göra att enheter inte kan skanna QR-koder. Du löser problemet genom att öka webbläsarens zoom.
-
-1. Starta en QR-läsning på Android-enheten genom att trycka flera gånger på den första skärmen du ser efter en rensning.
-2. För enheter med Android 7 och 8 devices uppmanas du att installera en QR-läsare. Enheter med Android 9 och senare har redan en installerad QR-läsare.
-3. Använd QR-lädaren för att skanna registreringsprofilens QR-kod och följ sedan anvisningarna på skärmen för att registrera.
-
-### <a name="enroll-by-using-google-zero-touch"></a>Registrera genom att använda Google Zero Touch
-
-Om du vill använda Googles Zero Touch-system måste enheten ha stöd för det och vara kopplad till en leverantör som är en del av tjänsten.  Mer information finns på [webbplatsen för Googles Zero Touch-program](https://www.android.com/enterprise/management/zero-touch/). 
-
-
-1. Skapa en ny konfiguration i Zero Touch-konsolen.
-2. Välj **Microsoft Intune** i listrutan EMM DPC.
-3. I Googles Zero Touch-konsol kopierar du och klistrar in följande JSON i fältet DPC extras. Ersätt strängen *YourEnrollmentToken* med den registreringstoken du har skapat som en del av din registreringsprofil. Omge registreringstoken med dubbla citattecken.
-
-```
-{ 
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver", 
-
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg", 
-
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup", 
-
-    "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": { 
-        "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken" 
-    } 
-} 
-```
-4. Välj **Använd**.
-
-## <a name="managing-apps-on-android-kiosk-devices"></a>Hantera appar på Android-kioskenheter
-
-Det är bara appar med tilldelningstypen [Obligatorisk](apps-deploy.md#to-assign-an-app) som kan installeras på Android-kioskenheter. Appar installeras från Managed Google Play Butik på samma sätt som Android-arbetsprofilenheter.
+Det är bara appar med tilldelningstypen [Obligatorisk](apps-deploy.md#to-assign-an-app) som kan installeras på dedikerade Android-enheter. Appar installeras från Managed Google Play Butik på samma sätt som Android-arbetsprofilenheter.
 
 Appar uppdateras automatiskt på hanterade enheter när apputvecklaren publicerar en uppdatering på Google Play.
 
-Om du vill ta bort en app från Android-kioskenheter kan du göra något av följande:
+Om du vill ta bort en app från dedikerade Android-enheter kan du göra något av följande:
 -   Ta bort den obligatoriska appdistributionen.
 -   Skapa en avinstallation av distributionen för appen.
 
-
 ## <a name="next-steps"></a>Nästa steg
-- [Distribuera Android-kioskappar](apps-deploy.md)
-- [Lägga till Android-kioskkonfigurationsprinciper](device-profiles.md)
+- [Distribuera Android-appar](apps-deploy.md)
+- [Lägga till Android-konfigurationsprinciper](device-profiles.md)

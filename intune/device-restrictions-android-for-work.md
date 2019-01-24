@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 671c713be805038c7c2f2608dbadd9d8afdce344
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 62c44768f17ecc82dc748eb4dfda74da421ee3b5
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203611"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54387019"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -87,7 +87,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 
 ### <a name="kiosk-settings"></a>Kioskinställningar
 
-Du kan konfigurera en enhet för att köra en app eller flera appar. När en enhet är i helskärmsläge är det bara de appar som du lägger till som är tillgängliga.
+Du kan konfigurera en enhet för att köra en app eller flera appar. När en enhet är i helskärmsläge är det bara de appar som du lägger till som är tillgängliga. De här inställningarna gäller för dedikerade Android-enheter, men inte för fullständigt hanterade, dedikerade Android-enheter.
 
 **Helskärmsläge**: Välj om enheten ska köra en app eller flera appar.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/29/2018
+ms.date: ''
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad2d2842672853587da1396cae6c15ebd7ade44a
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: 1866d658503cb2dcdf482a050d7bbd73a914858b
+ms.sourcegitcommit: 398b8a0d98e928b3406f59ab3d061554643ef60b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122646"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54400032"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -47,7 +47,7 @@ En rensning är praktisk om du vill återställa en enhet innan du ger den till 
 
 ### <a name="wiping-a-device"></a>Rensa en enhet
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
+1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enheter** > **Alla enheter**.
 4. Välj namnet på den enhet som du vill rensa.
@@ -81,22 +81,20 @@ Följande tabeller beskriver vilka data som tas bort och hur åtgärden **Dra ti
 
 |Datatyp|iOS|
 |-------------|-------|
-|Företagsappar och associerade data som installerats av Intune|**Appar som installeras med hjälp av företagsportalen:** Alla appdata och appar tas bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** Data som hör till företagsappar tas bort. Personliga appdata och appar tas inte bort.|
+|Företagsappar och associerade data som installerats av Intune|**Appar som installerats med hjälp av Företagsportalen:** För appar som är fästa på hanteringsprofilen tas alla appdata och apparna bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** För appar som inte hanteras med hjälp av Företagsportalen kommer data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring att tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort. Personliga appdata och appar tas inte bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|
 |Hanteringsagenten|Hanteringsprofilen tas bort.|
 |E-post|E-postprofiler som tillhandahålls via Intune tas bort. Cachelagrad e-post på enheten tas bort.|
-|Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort. För detta krävs att Outlook-mobilappen först distribueras som en obligatorisk app till iOS-användare.|
 |Frånkoppling från Azure AD|Azure AD-posten tas bort.|
-|Kontakter |Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 
 ### <a name="android"></a>Android
 
 |Datatyp|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Webblänkar|Tas bort.|Tas bort.|
-|Google Play-appar som inte hanteras|Appar och data förblir installerade.|Appar och data förblir installerade.|
+|Google Play-appar som inte hanteras|Appar och data förblir installerade. <br /> <br />Data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort. |Appar och data förblir installerade. <br /> <br />Data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort.|
 |Verksamhetsspecifika appar som inte hanteras|Appar och data förblir installerade.|Apparna avinstalleras och data som är lokala för appen tas bort. Inga data utanför appen (till exempel på ett SD-kort) tas bort.|
 |Google Play-appar som hanteras|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering (Hantering av mobila program) utanför appen (t.ex. ett SD-kort) förblir krypterade och oanvändbara, men tas inte bort.|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (t.ex. ett SD-kort) förblir krypterade, men tas inte bort.|
 |Verksamhetsspecifika appar som hanteras|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (t.ex. ett SD-kort) förblir krypterade och oanvändbara, men tas inte bort.|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (t.ex. ett SD-kort) förblir krypterade och oanvändbara, men tas inte bort.|
@@ -105,9 +103,7 @@ Följande tabeller beskriver vilka data som tas bort och hur åtgärden **Dra ti
 |Certifikatprofilinställningar|Certifikat återkallas, men tas inte bort.|Certifikat tas bort och återkallas.|
 |Hanteringsagenten|Behörigheten som enhetsadministratör återkallas.|Behörigheten som enhetsadministratör återkallas.|
 |E-post|Ej tillämpligt (e-postprofiler stöds inte av Android-enheter)|E-postprofiler som tillhandahålls via Intune tas bort. Cachelagrad e-post på enheten tas bort.|
-|Outlook|E-post som tagits emot av Outlook-appen för Android tas bort, men bara om Outlook skyddas av MAM-principer. Annars rensas inte Outlook när enheten avregistreras.|E-post som tagits emot av Outlook-appen för Android tas bort, men bara om Outlook skyddas av MAM-principer. Annars rensas inte Outlook när enheten avregistreras.|
 |Frånkoppling från Azure AD|Azure AD-posten tas bort.|Azure AD-posten tas bort.|
-|Kontakter |Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 
 ### <a name="android-work-profile"></a>Android-arbetsprofil
 
@@ -142,7 +138,7 @@ Du kan endast rensa kioskenheter. Du kan inte dra tillbaka Android-kioskenheter.
 
 ### <a name="retire"></a>Pensionera
 
-1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
 2. Välj **Alla enheter** i fönstret **Enheter**.
 3. Välj namnet på den enhet som du vill dra tillbaka.
 4. I fönstret som visar enhetsnamnet väljer du **Dra tillbaka**. Välj **Ja** för att bekräfta.
@@ -153,12 +149,12 @@ Om enheten är på och ansluten sprids åtgärden **Dra tillbaka** över alla en
 
 Om du vill ta bort enheter från Intune-portalen kan du ta bort dem från det specifika enhetsfönstret. Nästa gång enheten checkar in tas alla företagets data bort.
 
-1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Alla enheter** > Välj de enheter som du vill ta bort > **Ta bort**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Ta bort enheter med rensningsregler automatiskt
 Du kan konfigurera Intune så att enheter som är inaktiva, inaktuella eller som inte svarar tas bort automatiskt. Dessa rensningsregler övervakar kontinuerligt dina enheter så att enhetsposterna är uppdaterade. Enheter som tas bort på det här sättet tas bort från Intune-hanteringen.
-1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Regler för rensning av enhet** > **Ja**.
 3. Ange ett nummer mellan 90 och 270 i rutan **Ta bort enheter som inte har checkats in på många dagar**.
 4. Välj **Spara**.
@@ -181,7 +177,7 @@ Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta 
 
 Följ dessa steg om du vill ta bort en Apples DEP-enhet från hantering av Intune fullständigt:
 
-1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Alla enheter** > välj enheten > **Dra tillbaka**.
 ![Skärmbild för dra tillbaka](./media/devices-wipe/retire.png)
 3. Välj **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtoken** > välj token > **Enheter** > välj kryssrutan för enheten > **Ta bort** > **Ja**.

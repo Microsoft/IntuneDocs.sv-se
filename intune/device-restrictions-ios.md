@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d6fb1c65199b68f7492b1f397c4f6075e345d3e8
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 80eb088063522ba3acb293776064fd98846b9a3e
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203679"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380511"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -151,12 +151,12 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Stötande innehåll i iTunes-musik, podcast eller nyheter**: Välj **Blockera** om du vill stoppa explicit iTunes-musik, podcaster eller nyhetsinnehåll. **Inte konfigurerad** tillåter att enheten får åtkomst till sådant som är klassificerat som vuxet innehåll i butiken.
 - **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”**: Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** tillåter att användare laddar ned böcker i kategorin Erotik.
 - **Visa företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av icke-företagsdokument i ohanterade appar. **Inte konfigurerad** tillåter visning av företagsdokument i vilken app som helst. Exempelvis vill du kanske förhindra användare från att spara filer från OneDrive-appen i Dropbox. Konfigurera den här inställningen som **Blockera**. När enheten har hämtat principen (t.ex. efter en omstart) kommer det inte längre att vara tillåtet att spara.
-  - **Tillåt hanterade appar att skriva kontakter till ohanterade kontaktkonton (endast övervakat)**: När det är inställt på **Tillåt** kan användarna lägga till eller synkronisera en persons Outlook-kontaktinformation, till exempel affärs och företagskontakter, i den inbyggda appen Kontakter på enheter. När det är inställt på **Inte konfigurerad** kan användarna inte lägga till Outlook-kontakter i den inbyggda appen Kontakter på enheten.
+  - **Tillåt hanterade appar att skriva kontakter till ohanterade kontaktkonton**: När det är inställt på **Tillåt** kan användarna lägga till eller synkronisera en persons Outlook-kontaktinformation, till exempel affärs och företagskontakter, i den inbyggda appen Kontakter på enheter. När det är inställt på **Inte konfigurerad** kan användarna inte lägga till Outlook-kontakter i den inbyggda appen Kontakter på enheten.
   
     Om du vill använda inställningen ställer du in **Visa företagsdokument i ohanterade appar** på **Blockera**.
   
 - **Visa dokument som inte gäller företag i företagsappar**: **Blockera** förhindrar visning av icke-företagsdokument i företagsappar. **Inte konfigurerad** tillåter visning av valfria dokument i företagshanterade appar.
-  - **Tillåt ohanterade appar att läsa från hanterade kontaktkonton (endast övervakat)**: När det är inställt på **Tillåt** kan användarna lägga till en persons kontaktinformation från iContacts-appen i into Outlook. **Inte konfigurerad** förhindrar läsning, inklusive ta bort dubbletter, från den inbyggda appen Kontakter på enheter.
+  - **Tillåt ohanterade appar att läsa från hanterade kontaktkonton**: När det är inställt på **Tillåt** kan användarna lägga till en persons kontaktinformation från iContacts-appen i into Outlook. **Inte konfigurerad** förhindrar läsning, inklusive ta bort dubbletter, från den inbyggda appen Kontakter på enheter.
   
     Om du vill använda inställningen ställer du in **Visa dokument som inte gäller företag i företagsappar** på **Blockera**.
   

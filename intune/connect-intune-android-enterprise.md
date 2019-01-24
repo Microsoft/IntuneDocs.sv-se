@@ -16,24 +16,24 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c32effb645b329c8095ec8757a980b1f3d80a4d7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 698bc4e7e2d2cf8ece1b1c17b091a91c76a7d178
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184294"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386892"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Ansluta ditt Intune-konto till ditt Android enterprise-konto
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-För att kunna stödja Android-arbetsprofilenheter och Android-kioskenheter måste du ansluta ditt Intune-klientkonto till ditt Android enterprise-konto. 
+För att kunna stödja [Android-arbetsprofilenheter](android-work-profile-enroll.md), [fullständigt hanterade Android-enheter](android-fully-managed-enroll.md) och [dedikerade Android-enheter](android-kiosk-enroll.md) måste du ansluta ditt Intune-klientkonto till ditt Android enterprise-konto.  
 
 > [!NOTE]
 > På grund av interaktion mellan Google- och Microsoft-domäner kan det i det här steget krävas att du justerar inställningarna för webbläsaren.  Se till att ”portal.azure.com” och ”play.google.com” finns i samma säkerhetszon i webbläsaren.
 
 1. Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
-2. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.  Om du använder en anpassad Intune-administratörsroll krävs läs- och uppdateringsbehörigheter för organisationen för åtkomst till detta.
+2. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.  Om du använder en anpassad Intune-administratörsroll krävs läs- och uppdateringsbehörigheter för organisationen för åtkomst till detta.
    
    ![Sidan för Android enterprise-registrering](./media/android-work-bind.png)
 

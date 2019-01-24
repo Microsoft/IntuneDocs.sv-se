@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 0efc84da6a9efb594600b9ca33aa5eb7622c8101
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: d1b553d262200e58a4c06dd0f4bcb72ca1398080
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203441"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386979"
 ---
 # <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Den tidiga utgåvan för Microsoft Intune – Januari 2019
 
@@ -39,7 +39,7 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 ## Notices
 -->
  
-## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
+## <a name="intune-in-the-azure-portal"></a>Intune i Azure-portalen
 
 <!-- 1901 start -->
 
@@ -48,9 +48,6 @@ Du kommer att kunna ta bort hanterade Google Play-appar från Microsoft Intune. 
 
 ### <a name="managed-google-play-app-type----1352580---"></a>Hanterade Google Play-apptyper <!-- 1352580 -->
 Den **hanterade Google Play**-apptypen gör att du kan lägga till mer specifikt [hanterade Google Play-appar](https://play.google.com/work/search?q=microsoft&c=apps) till Intune. Som Intune-administratör kommer du nu att kunna bläddra, söka, godkänna, synkronisera och tilldela godkända hanterad Google Play-appar i Intune. Du behöver inte längre bläddra till den hantera Google Play-konsolen separat och du kommer inte längre behöva autentisera dig på nytt. I Intune, väljer du **Klientappar** > **Appar** > **Lägg till**. I listan **Apptyp** väljer du **Hanterat Google Play-konto** som apptyp.
-
-### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Förhandsgranskning av stöd för företagsägda, fullständigt hanterade Android-enheter <!-- 1574342  -->
-Intune stöder helt hanterade Android-enheter, ett företagsägt scenario av ”enhetsägare” där enheter hanteras noggrant av IT och är kopplade till enskilda användare. Detta gör att administratörer kan hantera hela enheten, tillämpa en utökad uppsättning principkontroller som inte är tillgängliga för arbetsprofiler och begränsa användare från att installera appar från hanterad Google Play endast. För att konfigurera fullständigt hanterade Android-enheter, går du till **Enhetsregistrering** > **Android-registrering** > **Företagsägda, fullständigt hanterade användarenheter**. Observera att den här funktionen är en förhandsversion. Vissa Intune-funktioner, till exempel certifikat, efterlevnad och villkorlig åtkomst, är inte tillgängliga med fullständigt hanterade Android-användarenheter.
 
 ### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----1672660----"></a>Distribution av online-licensierade Microsoft Store för företag-appar <!-- 1672660  -->
 Du kommer att kunna tilldela nödvändiga online-licensierade Microsoft Store för företag-appar i kontexten för enheten. Genom att distribuera en Microsoft Store för företag-app på detta sätt, kan appen installeras för alla användare på enheten. Detta gäller endast för Windows 10 RS4+ desktop-enheter. Alternativet att installera i kontexten för enheten finns på sidan Tilldelning av klientappar för MSFB Online-licensierade appar.
@@ -130,9 +127,8 @@ Nu stöder Intune macOS-företagsportalen mörkt läge för macOS. När du aktiv
 ### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Använd Microsofts rekommenderade inställningar med säkerhetsbaslinjer <!-- 2055484 -->
 Intune integrerar med andra tjänster som fokuserar på säkerhet, inklusive Windows Defender ATP och Office 365 ATP. Kunder efterfrågar en gemensam strategi och en sammanhängande uppsättning säkerhetsarbetsflöden från slutpunkt till slutpunkt för alla Microsoft 365-tjänster. Vårt mål är att optimera strategier och skapa lösningar som kan hantera säkerhetsåtgärder och vanliga administratörsuppgifter. I Intune vill vi uppnå det här målet genom att publicera en uppsättning Microsoft-rekommenderade ”säkerhetsbaslinjer” (**Intune** > **Security baselines** ((Säkerhetsbaslinjer)).  En administratör kommer att kunna skapa säkerhetsprinciper direkt från dessa baslinjer, och sedan distribuera dem till sina användare. De kan också anpassa rekommendationerna om bästa praxis för att uppfylla behoven i deras organisation. Intune kontrollerar att enheterna uppfyller baslinjerna och meddelar administratören om användare eller enheter inte uppfyller efterlevnadskraven.
 
-### <a name="deployed-wip-policies-without-user-enrollment----1434452---"></a>Distribuerade WIP-principer utan användarregistrering <!-- 1434452 -->
-WIP-principer (Windows Information Protection) kommer att kunna distribueras utan att MDM-användare behöver registrera sina Windows 10-enheter. Med den här konfigurationen kan företag skydda sina företagsdokument baserat på WIP-konfigurationen, samtidigt som användarna kan fortsätta att hantera sina egna Windows-enheter. När dokument skyddas med en WIP-princip kan skyddade data rensas selektivt av en Intune-administratör. Genom att välja användaren och enheten, och skicka en rensningsbegäran, blir alla data som skyddades via WIP-principen oanvändbara. Från Intune på Azure-portalen väljer du **Mobilapp** > **Selektiv radering av app**.
-
+### <a name="selective-wipe-support-for-wip-without-enrollment-devices----1434452---"></a>Stöd för selektiv rensning för WIP-WE-enheter <!-- 1434452 -->
+Med WIP-WE (Windows Information Protection Without Enrollment) kan kunder skydda sina företagsdata på Windows 10-enheter utan att fullständig MDM-registrering krävs. När dokument skyddas med en WIP-WE-princip kan skyddade data rensas selektivt av en Intune-administratör. Genom att välja användaren och enheten, och skicka en rensningsbegäran, blir alla data som skyddades via WIP-WE-principen oanvändbara. Från Intune på Azure-portalen väljer du **Mobilapp** > **Selektiv radering av app**.
 
 <!-- 1809 start -->  
 

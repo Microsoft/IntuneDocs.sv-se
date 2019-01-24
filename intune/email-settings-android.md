@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/15/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ffe25f7e4870f2ea6969d1261f33c69362d75469
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: b96363d679a6f09327bf9a1b46421e786d1956a8
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032035"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316890"
 ---
 # <a name="android-and-android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Enhetsinställningar för Android- och Android Enterprise-enheter för att konfigurera e-post, autentisering och synkronisering i Intune
 
@@ -69,7 +69,9 @@ Som en Intune-administratör kan du skapa och tilldela e-postinställningar till
 
 ### <a name="content-sync-settings"></a>Synkroniseringsinställningar för innehåll
 
-- **Innehållstyp som ska synkroniseras:** Välj vilka typer av innehåll som enheterna ska synkroniseras från:
+- **Innehållstyp som ska synkroniseras:** Välj vilka typer av innehåll du vill synkronisera på enheterna. **Inte konfigurerad** inaktiverar den här inställningen. När värdet **Inte konfigurerad** har valts och om en slutanvändare aktiverar synkronisering på enheten, inaktiveras synkronisering igen när enheten synkroniseras med Intune i och med att principen genomdrivs. 
+
+  Du kan synkronisera följande innehåll: 
   - **Kontakter**
   - **Kalender**
   - **aktiviteter**
@@ -84,7 +86,9 @@ Som en Intune-administratör kan du skapa och tilldela e-postinställningar till
   - Om du valde **Certifikat**, väljer du en klients SCEP- eller PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen.
 - **SSL**: Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
 - **Antal e-postmeddelanden som ska synkroniseras**: Ange hur många dagars e-post som ska synkroniseras, eller välj **Obegränsat** om du vill synkronisera alla tillgängliga e-postmeddelanden.
-- **Innehållstyp som ska synkroniseras** (enbart Nine Work): Välj vilka typer av innehåll som enheterna ska synkroniseras från:
+- **Innehållstyp som ska synkroniseras** (enbart Nine Work): Välj vilka typer av innehåll du vill synkronisera på enheterna. **Inte konfigurerad** inaktiverar den här inställningen. När värdet **Inte konfigurerad** har valts och om en slutanvändare aktiverar synkronisering på enheten, inaktiveras synkronisering igen när enheten synkroniseras med Intune i och med att principen genomdrivs. 
+
+  Du kan synkronisera följande innehåll: 
   - **Kontakter**
   - **Kalender**
   - **aktiviteter**

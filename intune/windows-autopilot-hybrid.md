@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: f6a78c6612f98903fcbaa9d33b8037c5ea4a3960
-ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
+ms.openlocfilehash: f81875afffa461e036bc319febc9a6141967c440
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149669"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380473"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Distribuera Hybrid Azure AD-anslutna enheter med Intune och Autopilot för Windows (förhandsversion)
 Du kan använda Intune och Windows Autopilot för att konfigurera Hybrid Azure Active Directory-anslutna enheter. Du gör det genom att följa stegen nedan.
@@ -39,7 +39,7 @@ Enheter som ska registreras måste också:
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurera automatisk registrering i Windows 10
 
-1. Logga in på [Azure Portal](https://portal.azure.com) och välj **Azure Active Directory**.
+1. Logga in på [Azure-portalen](https://portal.azure.com) och välj **Azure Active Directory**.
 
    ![Skärmbild av Azure-portalen](./media/auto-enroll-azure-main.png)
 
@@ -116,6 +116,9 @@ Intune Connector för Active Directory måste installeras på en dator som kör 
 6. Välj **Logga in**.
 7. Ange autentiseringsuppgifter för rollen Global administratör eller Intune-administratör.
 8. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** och bekräfta att anslutningsstatusen är **Aktiv**.
+
+ > [!NOTE]
+ > När du har **loggat in** i Connector kan det ta några minuter innan det syns i [Intune](https://aka.ms/intuneportal). Tänk på att Connector endast visas om kommunikationen med Intune-tjänsten lyckas.
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurera webbproxyinställningar
 

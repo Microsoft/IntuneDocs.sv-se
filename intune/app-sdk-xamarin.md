@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: a698d7a57c59a27dbd39036b1e2607e80570029f
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 65a461928c377dd4a674f8f3f2eeeef148ab56b2
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210779"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316907"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -113,12 +113,10 @@ För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser och
 
 1.  Lägg till NuGet-paketet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) i projektet. Då läggs Intune APP SDK Xamarin-bindningarna till automatisk om du inte redan har inkluderat dem.
 
-2.  Lägg till ett anrop till `Xamarin.Forms.Forms.Init(Context, Bundle)` i funktionen `OnMAMCreate` för `MAMApplication`-klassen som du skapade i steg 2.2 ovan. Det behövs eftersom programmet kan startas i bakgrunden med Intune-hantering.
+2.  Lägg till ett anrop till `Xamarin.Forms.Forms.Init(Context, Bundle)` i funktionen `OnMAMActivity` för `MAMApplication`-klassen som du skapade i steg 2.2 ovan. Det behövs eftersom programmet kan startas i bakgrunden med Intune-hantering.
 
 > [!NOTE]
 > Eftersom den här åtgärden skriver om ett beroende som Visual Studio använder för Intellisense (automatisk komplettering), kan du behöva starta om Visual Studio efter första ommappningen så att Intellisense korrekt identifierar ändringarna. 
-
-Du har slutfört stegen för att bygga in komponenten i din app. Nu kan du följa stegen i Xamarin Android-exempelappen. Vi tillhandahåller två exempel, ett för Xamarin.Forms och ett för Android.
 
 ## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Kräva Intune-appskyddsprinciper för att använda en Xamarin-baserad verksamhetsspecifik Android-app (valfritt) 
 
@@ -144,8 +142,14 @@ De här anvisningarna är specifika för alla Android- och Xamarin-appar som vil
 Dessa instruktioner är ett krav för .NET/Xamarin-appar som kräver Intune-appskyddsprinciper för användning på en slutanvändarenhet.
 
 1. Följ alla steg i ADAL-dokumentationen under [Brokered Authentication for Android](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/tree/dev/adal#brokered-authentication-for-android) (Koordinerad autentisering för Android).
-> [!NOTE] 
-> Nästa version av .NET ADAL (3.17.4) förväntas innehålla den korrigering som krävs för att detta ska fungera.
+
+## <a name="potential-compilation-errors"></a>Potentiella kompileringsfel
+Det här är några av vanligaste kompileringsfelen när du utvecklar ett Xamarin-baserat program.
+
+* [Kompilatorfel CS0239](https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs0239): Det här felet hittas oftast i det här formatet ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+När ommappningen ändrar arvet för Xamarin-klasser, blir vissa funktioner `sealed` och en ny variant av MAM läggs i stället till. Byt bara namn på åsidosättningarna enligt instruktioner [här](https://docs.microsoft.com/en-us/intune/app-sdk-android#renamed-methods). Till exempel skulle `MainActivity.OnCreate()` få det nya namnet `MainActivity.OnMAMCreate()`
+
+* [Kompilatorfel CS0507](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0507): Det här felet hittas oftast i det här formatet ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. När ommappningsverktyget ändrar arv för några av Xamarin-klasserna ändras några av medlemsfunktionerna till `public`. Om du åsidosätter någon av dessa funktioner kan du även behöva ändra dessa åsidosättningar `public`.
 
 ## <a name="support"></a>Stöd
 Om organisationen är en befintlig Intune-kund kan du kontakta din representant från Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) så hjälper vi dig så snart vi kan. 

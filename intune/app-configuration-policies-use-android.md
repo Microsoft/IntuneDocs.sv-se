@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4b76625276a34c027ae8c74f1c6a3977c4a7e8bd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: db6aed3d87b8a8df55c5c95e52eb3dd9ccc690a7
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179957"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386956"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -62,13 +62,17 @@ För varje nyckel och värde i konfigurationen anger du:
 ### <a name="supported-variables-for-configuration-values"></a>Variabler för konfigurationsvärden
 
 Du kan välja följande alternativ om du väljer variabel som värdetyp:
-- User Principal Name – till exempel **John@contoso.com**
-- Mail – till exempel **John@contoso.com**
-- Partial UPN – till exempel **John**
-- Account ID – till exempel **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
-- Device ID – till exempel **b9841cd9-9843-405f-be28-b2265c59ef97**
-- User ID — till exempel **3ec2c00f-b125-4519-acf0-302ac3761822**
-- User Name – till exempel **Johan Danielsson**
+
+| Alternativ | Exempel |
+|----|----|
+| E-post | john@contoso.com |
+| UPN (User Principal Name) | john@contoso.com |
+| Partiellt UPN | john |
+| Domain | contoso.com |
+| Användarnamn | John Doe |
+| Konto-ID | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| Användar-ID | 3ec2c00f-b125-4519-acf0-302ac3761822 |
+| Enhets-ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Tillåt endast konfigurerade organisationskonton i appar med flera identiteter 
 
@@ -104,8 +108,8 @@ Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till
 3. Välj **Klientappar**.
 3. Under **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 4. Ange följande information:
-    - **Namn**. Namnet på den profil som visas i Azure Portal.
-    - **Beskrivning**. Beskrivning av den profil som visas i Azure Portal.
+    - **Namn**. Namnet på den profil som visas i Azure-portalen.
+    - **Beskrivning**. Beskrivning av den profil som visas i Azure-portalen.
     - **Enhetsregistreringstyp**. Välj **Hanterade enheter**.
     - **Plattform**. Välj **Android**.
 5. Välj **Tillhörande app** för att välja den app som du vill definiera en konfigurationsprincip för. Välj i listan med Android-arbetsprofilappar som du har godkänt och synkroniserat med Intune.

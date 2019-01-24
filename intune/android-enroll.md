@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 12/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 79a1a03f74db8e44dc3ee4d6575e193ce7841e24
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 3d86afec4e501533ab0048e866969a5bf73c2c57
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031899"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54387052"
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -29,9 +29,10 @@ ms.locfileid: "53031899"
 
 Du kan hantera följande Android-enheter som Intune-administratör:
 - Android-enheter, inklusive Samsung Knox Standard-enheter.
-- Android enterprise-enheter, inklusive [Android-arbetsprofilenheter](#enable-enrollment-of-android-for-work-devices) och Android-kioskenheter.
-
-Enheter som kör Samsung Knox Standard har stöd för hantering av flera användare med Intune. Det innebär att användarna kan logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten är centralt hanterad oavsett om den används eller inte. När användare loggar in får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
+- Android enterprise-enheter, inklusive:
+    - **Android-arbetsprofilenheter**: Personliga enheter ges åtkomst till företagets data. Administratörer kan hantera arbetskonton, appar och data. Personliga data på enheten lagras separat från arbetsdata och administratörer har ingen kontroll över personliga inställningar eller data. 
+    - **Dedikerade Android-enheter**: Företagsägda enheter med ett enda användningsområde, till exempel digital signering, biljettutskrift eller lagerhantering. Administratörer låser användningen av enheten för en begränsad uppsättning appar och webblänkar. Användarna kan heller inte lägga till andra appar eller att vidta andra åtgärder på enheten.
+    - **Fullständigt hanterade Android-enheter**: Företagsägda enheter med enskilda användare används enbart för arbete och inte för personligt bruk. Administratörer kan hantera hela enheten och tillämpa principkontroller som inte är tillgängliga för arbetsprofiler. 
 
 ## <a name="prerequisite"></a>Krav
 
@@ -52,14 +53,16 @@ Se [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md) för att
 
 ## <a name="set-up-android-enterprise-enrollment"></a>Konfigurera Android enterprise-registrering
 
-Android enterprise är en uppsättning funktioner och tjänster för Android-enheter som avgränsar personliga appar och data från en arbetsprofil som innehåller arbetsappar och data. Android enterprise-enheter omfattar arbetsprofilenheter och kioskenheter. 
+Android enterprise är en uppsättning funktioner och tjänster för Android-enheter som avgränsar personliga appar och data från en arbetsprofil som innehåller arbetsappar och data. Android enterprise-enheter omfattar arbetsprofilenheter, fullständigt hanterade enheter och dedikerade enheter. 
 
-Om du vill konfigurera registrering för Android enterprise-enheter måste först [ansluta Android enterprise till Intune](connect-intune-android-enterprise.md). När du har slutfört det här steget kan du:
-
-[Konfigurera Android-arbetsprofilregistreringar](android-work-profile-enroll.md)
-[Konfigurera Android-kioskregistreringar](android-kiosk-enroll.md)
+- [Konfigurera registrering av Android-arbetsprofiler](android-work-profile-enroll.md)
+- [Konfigurera registrering av dedikerade Android-enheter](android-kiosk-enroll.md)
+- [Konfigurera registrering av fullständigt hanterade Android-enheter](android-fully-managed-enroll.md)
 
 ## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Slutanvändarens upplevelse när en Samsung Knox-enhet registreras
+
+Samsung Knox Standard-enheter har stöd för hantering av flera användare med Intune. Det innebär att användarna kan logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten är centralt hanterad oavsett om den används eller inte. När användare loggar in får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
+
 Det finns flera saker att tänka på vid registrering av Samsung Knox-enheter:
 -   Även om inga principer kräver en PIN-kod, måste enheten ha en PIN-kod på minst fyra siffror för att kunna registreras. Om enheten inte har någon PIN-kod, uppmanas användaren att skapa en.
 -   Det finns inga användaråtgärder för Workplace Join-certifikat (WPJ).
@@ -69,3 +72,9 @@ Det finns flera saker att tänka på vid registrering av Samsung Knox-enheter:
 -   Det finns inga ytterligare användaruppmaningar att installera certifikat från en tjänst för åtkomst till företagsresurser.
 - Vissa äldre Knox-enheter uppmanar användaren om ytterligare certifikat som används för åtkomst till företagsresurser.
 - Om en Samsung Mini-enhet inte kan installera WPJ och får felet **Det gick inte att hitta certifikatet** eller **Det gick inte att registrera enheten**, installerar du de senaste uppdateringarna för inbyggd Samsung-programvara.
+
+## <a name="next-steps"></a>Nästa steg
+
+- [Konfigurera registrering av Android-arbetsprofiler](android-work-profile-enroll.md)
+- [Konfigurera registrering av dedikerade Android-enheter](android-kiosk-enroll.md)
+- [Konfigurera registrering av fullständigt hanterade Android-enheter](android-fully-managed-enroll.md)

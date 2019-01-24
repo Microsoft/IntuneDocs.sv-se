@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e607dc612f71cdf72322b9fa7ecf14abb5fd809
-ms.sourcegitcommit: d54a12a836503f7e8b90346f16b7ad2d83b710dc
+ms.openlocfilehash: 971dc851714045a8a3b60dfe8ff6c6acc4419294
+ms.sourcegitcommit: 7c41f42d6e398ed46aa602ec8aaa4f39aaf92772
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270596"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54325023"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
-Gäller för: Intune i Azure Portal
+Gäller för: Intune i Azure-portalen
 
 Om din organisation använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanvändares Mac-datorer, kan du använda Microsoft Intunes efterlevnadsprinciper med villkorlig åtkomst i Azure Active Directory för att se till att enheter inom din organisation är kompatibla.
 
@@ -83,51 +83,9 @@ Du ansluter Intune till Jamf Pro så här:
 
 När du har konfigurerat integrationen mellan Intune och Jamf måste du [tillämpa efterlevnadsprinciper för enheter som hanteras av Jamf](conditional-access-assign-jamf.md).
 
-## <a name="information-shared-from-jamf-pro-to-intune"></a>Information som delas från Jamf Pro till Intune
 
-Jamf Pro samlar in programvaruinventering om hanterade macOS-enheter. Jamf Pro rapporterar följande information till Intune:
-
-* Enhetens Azure AD-ID
-* JAMF-inventeringstillstånd (inventeringstillstånd på en dator som checkats in med Jamf Pro under de senaste 24 timmarna)
-* OS-version
-* Användarens Azure AD-ID
-* Krypterade (FileVault 2)
-* Gatekeeper-status
-* Lösenord: lägst antal teckenuppsättningar
-* Lösenordets giltighetstid (i dagar)
-* Lösenordstyp – enkel, alfanumerisk eller okänd
-* Förhindra automatisk inloggning
-* Nödvändig längd på lösenord
-* Lösenord: antalet tidigare lösenord för att förhindra återanvändning
-* Systemintegritetsskydd
-* Senaste incheckningstid
-* Arkitekturtyp
-* Tillgängliga RAM-minnesplatser
-* Batterikapacitet
-* Start-ROM
-* Busshastighet
-* Cachestorlek
-* Enhetsnamn
-* Domänanslutning
-* Jamf-ID
-* MAC-adress
-* Tillverkning
-* Modell
-* Modellidentifierare
-* NIC-hastighet
-* Antal kärnor
-* Antal processorer
-* Operativsystem
-* Plattform
-* Processorhastighet
-* Processortyp
-* Sekundär MAC-adress
-* Serienummer
-* SMC-version
-* RAM-minne totalt
-* UDID
-* Användarens e-post
 
 ## <a name="next-steps"></a>Nästa steg
 
 - [Tillämpa efterlevnadsprinciper för Jamf-hanterade enheter](conditional-access-assign-jamf.md)
+- [Data som Jamf skickar till Intune](data-jamf-sends-to-intune.md)
