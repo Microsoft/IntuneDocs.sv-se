@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 62c44768f17ecc82dc748eb4dfda74da421ee3b5
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 91f338a768ef67106a9b65de759dd74da2902138
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387019"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072566"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -48,7 +48,6 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 - **Ändringar i Wi-Fi-inställning**: Välj **Blockera** för att förhindra att användarna ändrar Wi-Fi-inställningar som skapats av enhetsägaren. Användarna kan skapa sina egna Wi-Fi-konfigurationer. **Inte konfigurerad** tillåter användare att ändra Wi-Fi-inställningar på enheten.
 - **Konfiguration av Wi-Fi-åtkomstpunkt**: Välj **Blockera** för att förhindra att användarna skapar eller ändrar Wi-Fi-konfigurationer. **Inte konfigurerad** tillåter användare att ändra Wi-Fi-inställningar på enheten.
 - **Bluetooth-konfiguration**: Välj **Blockera** för att förhindra att användarna konfigurerar Bluetooth på enheten. **Inte konfigurerad** tillåter användning av Bluetooth på enheten.
-- **Kontaktdelning via Bluetooth**: Välj **Blockera** för att förhindra åtkomst till arbetskontakter från en annan enhet, exempelvis ett bilsystem när en Android-enhet har anslutits med Bluetooth. **Inte konfigurerad** tillåter åtkomst till arbetskontakter på en annan Bluetooth-enhet som har anslutits till Android-enheten.
 - **Internetdelning och åtkomst till surfpunkter**: Välj **Blockera** för att förhindra Internetdelning och åtkomst till bärbara surfpunkter. **Inte konfigurerad** tillåter delning och åtkomst till bärbara surfzoner.
 - **USB-lagring**: Välj **Tillåt** för åtkomst till USB-lagring på enheten. **Inte konfigurerad** förhindrar åtkomst till USB-lagring.
 - **USB-filöverföring**: Välj **Blockera** för att förhindra överföring av filer via USB. **Inte konfigurerad** tillåter filöverföring.

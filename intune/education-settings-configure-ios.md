@@ -16,18 +16,19 @@ ms.reviewer: derriw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 40549d8fa9bead312f39ca9a782fb555e1022cd6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fd71af5d52f81d05ce424212e029f01c59a33a8d
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831589"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
->[!NOTE]
->Intune-inställningar för Classroom-appen har ersatts i Intune. Den här artikeln gäller endast för användare med befintliga utbildningsprofiler i Intune.
+
+> [!NOTE]
+> Intune-inställningar för Classroom-appen är inaktuella i Intune. Den här artikeln gäller endast för användare med befintliga utbildningsprofiler i Intune.
 
 ## <a name="introduction"></a>Introduktion
 [Klassrum](https://itunes.apple.com/app/id1085319084) är en app som hjälper lärare att styra undervisningen och kontrollera elevenheterna i klassrummet. Appen möjliggör t.ex. för lärare att:

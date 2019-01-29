@@ -15,12 +15,12 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 73caf328bd25cb31bacea6b964c1db7601f3aec6
-ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
+ms.openlocfilehash: a94722c4f4a1d199e32f6ba0c56ca4bdb2b3b09b
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53570816"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199463"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -106,9 +106,6 @@ Mer information om iOS-registrering finns i:
 
 - [Välj hur du vill registrera iOS-enheter](enrollment-method-choose-ios.md)
 - [Registrera iOS-enheter med Configurator och direktregistrering](apple-configurator-direct-enroll-ios.md)
-
-## <a name="mobile-device-management-with-exchange-activesync-and-intune"></a>Hantering av mobila enheter med Exchange ActiveSync och Intune
-Mobila enheter som inte är registrerade men som ansluter till Exchange ActiveSync (EAS), kan hanteras av Intune med EAS MDM-principen. Intune använder en Exchange-anslutning för att kommunicera med EAS, antingen lokalt eller i molnet. Mer information kommer snart.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla
 

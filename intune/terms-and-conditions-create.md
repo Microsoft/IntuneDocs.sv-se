@@ -16,12 +16,12 @@ ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ecc5228eef9e9d7be5ba567db6b32c84e95df1b6
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 7283b728e519eb2ca5a9a0b7516774c8cfc26f9b
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831521"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Allmänna villkor för användaråtkomst
 
@@ -29,7 +29,7 @@ ms.locfileid: "53032307"
 
 Som Intune-administratör kan du kräva att användarna godkänner företagets allmänna villkor innan de använder företagsportalen för att:
 - registrera enheter
-- komma åt resurser som appar och e-post.
+- komma åt resurser som appar och e-post.    
 Konfigurationen av de allmänna villkoren är valfri.
 
 Du kan skapa flera uppsättningar med villkor och tilldela dem till olika användargrupper, t.ex. med stöd för olika språk.

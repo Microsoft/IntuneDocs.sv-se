@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: df91908f3d3be7be23e3cecfa83e2d92b656b91e
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831606"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda olika enhetshanteringsfunktioner på Windows Holographic- och HoloLens-enheter med Intune
 
@@ -108,7 +108,7 @@ Du kan använda OMA-URI i dina profiler för att anpassa vissa inställningar, s
 
 Om du vill konfigurera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier) kan du skapa en anpassad profil i Intune. Du kan använda OMA-URI-inställningar för att styra olika funktioner på dina Windows Holographic for Business-enheter, till exempel aktivera VPN eller söka efter uppdateringar på Microsoft Update.
 
-#### <a name="configure-kiosk-modekiosk-settingsmdwindows-holographic-for-business"></a>[Konfigurera kioskläge](kiosk-settings.md#windows-holographic-for-business)
+#### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Konfigurera kioskläge](kiosk-settings-holographic.md)
 
 Med hjälp av delnings- eller gästdatorfunktionerna i Intune kan du konfigurera Windows Holographic for Business-enheter så att de körs som kiosk. Dessa enheter kan köra en app (kioskläge med en app) eller flera appar (kioskläge med flera appar).
 

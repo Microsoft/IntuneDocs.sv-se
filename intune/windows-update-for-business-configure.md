@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: ccb91082a3226ec4091a139d31796fd77bdf0616
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.openlocfilehash: d0fcb021545d96fe8f5bfdf742dd4d181c91fb1a
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831572"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -106,7 +106,7 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
    - **Blockera användare från att pausa Windows-uppdateringar**: Tillåts som standard. Använd den här inställningen för att blockera eller tillåta dina användare att pausa installation av uppdateringar från *inställningarna* på deras datorer. 
       
-   - **Leveransoptimering av nedladdningsläge**: Leveransoptimering konfigureras inte längre som en del av en Windows 10-uppdateringsring under Programuppdateringar. Leveransoptimering anges nu via enhetskonfiguration. Men tidigare konfigurationer finns kvar i konsolen. Du kan ta bort dessa tidigare konfigurationer genom att ändra dem till inställningen *Inte konfigurerad*, men de kan inte ändras på något annat sätt. Information om hur du undviker konflikter mellan ny och gammal princip finns i [Flytta från befintliga uppdateringsringar till leveransoptimering](delivery-optimization-windows.md#move-from-existing-update-rings-to-delivery-optimization). Flytta sedan dina inställningar till en leveransoptimeringsprofil. 
+   - **Leveransoptimering av nedladdningsläge**: Leveransoptimering konfigureras inte längre som en del av en Windows 10-uppdateringsring under Programuppdateringar. Leveransoptimering anges nu via enhetskonfiguration. Men tidigare konfigurationer finns kvar i konsolen. Du kan ta bort dessa tidigare konfigurationer genom att ändra dem till inställningen *Inte konfigurerad*, men de kan inte ändras på något annat sätt. Information om hur du undviker konflikter mellan ny och gammal princip finns i [Flytta från befintliga uppdateringsringar till leveransoptimering](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization). Flytta sedan dina inställningar till en leveransoptimeringsprofil. 
 
 5. När du är klar väljer du **OK**. I **Skapa uppdateringsring** väljer du **Skapa**.
 

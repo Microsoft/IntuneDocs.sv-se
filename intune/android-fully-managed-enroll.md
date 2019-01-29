@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 45c1d1f293454b32b97c8147f08809565714743a
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: d457ca413f3069e8528dc6f4951f834e3f1dac6a
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387211"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146918"
 ---
 # <a name="set-up-intune-enrollment-of-android-fully-managed-devices-preview"></a>Konfigurera Intune-registrering för fullständigt hanterade Android-enheter (förhandsversion)
 
@@ -38,7 +38,7 @@ Du måste ha en fristående Intune-klient för att hantera fullständigt hantera
 
 Enheter måste uppfylla dessa krav för att kunna hanteras som en fullständigt hanterad Android-enhet:
 
-- Android OS version 6.0 och senare.
+- Android OS version 5.1 och senare.
 - Enheter måste köra en version av Android som har anslutningsfunktioner för Google Mobile Services (GMS). Enheter måste ha GMS tillgängligt för att kunna ansluta till GMS.
 
 Det finns ingen begränsning på enhetstillverkare/OEM om ovanstående krav är uppfyllda.
