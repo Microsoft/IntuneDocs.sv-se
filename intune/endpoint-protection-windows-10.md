@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/26/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 5981b3dbb74209fbd4d7f0ab03adb5a35a41954b
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: d9dfa25c2528ea2f929c3db6714bc68fee013a7b
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203543"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072583"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Inställningar för Windows 10 (och senare) för att skydda delade enheter med Intune
 
@@ -152,6 +152,9 @@ Stöds i följande Windows 10-versioner:
 Grundläggande inställningar är universella BitLocker-inställningar för alla typer av dataenheter. De här inställningarna styr vilka enhetskrypteringsåtgärder eller konfigurationsalternativ som användaren kan ändra för alla typer av dataenheter.
 
 - **Varning för annan hårddiskkryptering**: Välj **Blockera** för att inaktivera varningsmeddelandet om en annan tjänst för hårddiskkryptering finns på enheten. **Inte konfigurerad** (standard) tillåter att varningarna visas.
+    - **Låt standardanvändare aktivera kryptering under Azure AD-anslutning**: När du väljer **Tillåt** kan standardanvändare/icke-administratörer aktivera BitLocker-kryptering när användaren är inloggad. Den här inställningen gäller bara för Azure Active Directory-anslutna enheter. **Inte konfigurerad** tillåter endast att administratörer aktiverar BitLocker-kryptering på enheten.
+      
+      Den här inställningen gäller bara för Azure Active Directory-anslutna enheter. Det krävs också att inställningen **Varning för annan hårddiskkryptering** anges till **Blockera**.
 - **Konfigurera krypteringsmetoder**: **Aktivera** den här inställningen för att konfigurera krypteringsalgoritmer för operativsystem, data och flyttbara enheter. När det här är **Inte konfigurerad** (standard) använder BitLocker 128-bitars XTS-AES som standardkrypteringsmetod eller använder den krypteringsmetod som anges av något installationsskript.
   - **Kryptering för operativsystemenheter**: Välj krypteringsmetod för operativsystemenheter. Vi rekommenderar att du använder XTS AES-algoritmen.
   - **Kryptering för fasta dataenheter**: Välj krypteringsmetod för fasta (inbyggda) dataenheter. Vi rekommenderar att du använder XTS AES-algoritmen.

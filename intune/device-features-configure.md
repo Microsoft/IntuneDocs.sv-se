@@ -1,68 +1,64 @@
 ---
 title: Skapa iOS- eller macOS-enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller skapa en iOS- eller macOS-enhetsprofil och konfigurera inställningarna för AirPrint, AirPlay, layout för startsidan, appmeddelanden, delad enhet, enkel inloggning och webbinnehållsfilter i Microsoft Intune.
+description: Lägg till eller skapa en iOS- eller macOS-enhetsprofil och konfigurera sedan inställningar för AirPrint, layout för startsidan, appmeddelanden, delad enhet, enkel inloggning och webbinnehållsfilter i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.reviewer: heenamac
+ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2282ba4dd3caf8c71c8624884bc124393ea52d2f
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 4542a65afa87668702620a1b50443c9844692a87
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831283"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Lägga till funktionsinställningar för iOS- eller macOS-enheter i Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Intune innehåller många funktioner och inställningar som hjälper administratörer styra iOS- och macOS-enheter. Administratörerna kan exempelvis:
 
-Med enhetsfunktioner kan du kontrollera en rad inställningar och funktioner på iOS- och macOS-enheter, som:
+- Ge användarna åtkomst till AirPrint-skrivare i nätverket
+- Lägga till appar och mappar på startsidan, inklusive att lägga till nya sidor
+- Välja om och hur appmeddelanden ska visas
+- Konfigurera att låsskärmen visar ett meddelande eller en resurstagg, vilket är särskilt användbart för delade enheter
+- Ge användarna en säker enkel inloggning för att kunna dela autentiseringsuppgifter mellan appar
+- Filtrera webbplatser som innehåller språk som är olämpligt för barn, samt tillåta eller blockera vissa webbplatser
 
-- Inställningar för AirPrint och AirPlay
-- Startsideslayout
-- Meddelanden från appar
-- Meddelande på låsskärm
-- Konfigurera enkel inloggning
-- Filtrera webbinnehåll
+Dessa funktioner är tillgängliga i Intune och kan konfigureras av administratören. Intune använder ”konfigurationsprofiler” till att skapa och anpassa inställningarna efter din organisations behov. När du har lagt till dessa funktioner i en profil, kan du skicka eller distribuera profilen till iOS- och macOS-enheter i din organisation.
 
-I den här artikeln finns det information om grunderna i hur du konfigurerar profiler för iOS-enhetsfunktioner. Efter det kan du läsa flera artiklar för att konfigurera plattformsspecifika inställningar för dina enheter.
+Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil. Artikeln innehåller även alla tillgängliga inställningar för [iOS](ios-device-features-settings.md)- och [macOS](macos-device-features-settings.md)-enheter.
 
 ## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**.
-3. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-4. Ange följande egenskaper:
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande egenskaper:
 
-   - **Namn**: Ange ett beskrivande namn på den nya profilen.
-   - **Beskrivning**: Ange en beskrivning av profilen. (Den här inställningen är valfri, men rekommenderas.)
-   - **Plattform**: Välj din plattformstyp:
-     - **iOS**
-     - **macOS**
-   - **Profiltyp**: Välj **Enhetsfunktioner**.
-   - **Inställningar**: Inställningarna beror på vilken plattform du väljer. Läs en beskrivning av inställningarna för varje profiltyp i följande artiklar:
+    - **Namn**: Ange ett beskrivande namn på den nya profilen.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj din plattform:
+        - **iOS**
+        - **macOS**
+    - **Profiltyp**: Välj **Enhetsfunktioner**.
+    - **Inställningar**: Ange vilka inställningar som du vill konfigurera. En lista med alla inställningar och vad de gör finns i:
 
-     - [AirPrint-inställningar för iOS och MacOS](air-print-settings-ios-macos.md)
-     - [AirPlay-inställningar för iOS](airplay-settings-ios.md)
-     - [Layoutinställningar för iOS-startskärm](home-screen-settings-ios.md)
-     - [Appaviseringsinställningar för iOS](app-notification-settings-ios.md)
-     - [Inställningar för Meddelande på låsskärm för iOS](shared-device-settings-ios.md)
-     - [Konfigurera enkel inloggning i Intune för iOS-enheter](sso-ios.md)
-     - [Inställningar för webbinnehållsfilter för iOS](web-content-filter-settings-ios.md)
+        - [iOS](ios-device-features-settings.md)
+        - [macOS](macos-device-features-settings.md)
 
-5. När du är klar väljer du **OK** och sedan **Skapa** för att spara dina ändringar.
+4. När du är klar väljer du **OK** och sedan **Skapa** för att spara dina ändringar.
 
-Profilen skapas och visas i listan.
+Profilen skapas och visas i listan. Kom ihåg att [tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-## <a name="next-step"></a>Nästa steg
+## <a name="next-steps"></a>Nästa steg
 
-Information om hur du tilldelar den här profilen till grupper finns i [Tilldela enhetsprofiler](device-profile-assign.md).
+När profilen har skapats är den klar att tilldelas. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+
+Visa alla enhetsfunktionsinställningar för [iOS](ios-device-features-settings.md)- och [macOS](macos-device-features-settings.md)-enheter.

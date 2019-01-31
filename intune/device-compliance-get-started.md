@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,32 +14,28 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
-ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
+ms.openlocfilehash: 806df8077045a4ad81cb7e221bd053059461a2fd
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531336"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199412"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Ett efterlevnadskrav är i princip samma sak som en regel, t. ex. att kräva en PIN-kod för en enhet eller att kräva kryptering. Policyer för efterlevnad definierar de regler och inställningar som en enhet måste följa för att anses vara kompatibel. Bland dessa regler finns:
+Många MDM-lösningar för hantering av mobilenheter skyddar organisationens data genom att kräva att användare och enheter uppfyller vissa krav. I Intune kan kallas den här funktionen för ”efterlevnadsprinciper”. Efterlevnadsprinciperna definierar de regler och inställningar som användare och enheter måste följa för att vara kompatibla. I kombination med villkorlig åtkomst kan administratörer blockera användare och enheter som inte följer reglerna. En Intune-administratör kan till exempel kräva att:
 
-- Använd lösenord för att få åtkomst till enheter
+- Slutanvändarna ska använda ett lösenord för att få åtkomst till organisationens data på mobila enheter
 
-- Kryptering
+- Att enheten inte är jailbrokad eller rotad
 
-- Om enheten är jailbrokad eller rotad
+- En högsta eller lägsta operativsystemversion finns på enheten
 
-- Lägsta tillåtna version av operativsystemet
+- Att enheten ligger på eller under en hotnivå
 
-- Högsta tillåtna version av operativsystemet
-
-- Kräv att enheten måste ligga på eller under nivån för skydd mot mobilhot
-
-Du kan också använda principer för enhetsefterlevnad för att övervaka enheters efterlevnadsstatus.
+Du kan också använda enhetsefterlevnadsprinciper till att övervaka enheternas efterlevnadsstatus.
 
 > [!IMPORTANT]
 > Intune följer enhetens incheckningsschema för alla efterlevnadsutvärderingar på enheten. [Mer information om enhetens incheckningsschema](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
@@ -68,7 +64,8 @@ compliance issues on the device. You can also use this time to create your actio
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
 ## <a name="prerequisites"></a>Krav
-Följande krävs för att använda policyer för efterlevnad för enheter:
+
+Om du vill använda enhetsefterlevnadsprinciper måste du:
 
 - Använd följande prenumerationer:
 
@@ -84,30 +81,28 @@ Följande krävs för att använda policyer för efterlevnad för enheter:
   - Windows Phone 8.1
   - Windows 10
 
-- Enheter måste registreras i Intune för att kunna rapportera efterlevnadsstatus
+- Registrera enheter i Intune för att se efterlevnadsstatusen
 
-- Enheter som registrerats till en användare eller enheter utan primär användare stöds. Flera användarkontexter stöds inte.
+- Registrera enheter för en användare, eller registrera utan någon primär användare. Enheter som har registrerats för flera användare stöds inte.
 
-## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Så här fungerar efterlevnadsprinciper för Intune med Azure AD
+## <a name="how-device-compliance-policies-work-with-azure-ad"></a>Så här fungerar enhetsefterlevnadsprinciper med Azure AD
 
 När en enhet registreras i Intune startas även registreringen i Azure AD, vilket uppdaterar enhetens egenskaper i Azure AD. Enhetens efterlevnadsstatus är viktig information. Enhetens efterlevnadsstatus används av villkorliga åtkomstprinciper för att blockera eller tillåta åtkomst till e-post eller andra företagsresurser.
 
 Läs mer i [registreringsprocessen i Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
 
-### <a name="assign-a-resulting-device-configuration-profile-status"></a>Tilldela en resulterande profilstatus för enhetskonfiguration
+## <a name="refresh-cycle-times"></a>Uppdatera cykeltider
 
-Om en enhet har flera konfigurationsprofiler och enheten har olika efterlevnadsstatus för två eller fler av de tilldelade konfigurationsprofilerna tilldelas en enda resulterande efterlevnadsstatus. Den här tilldelningen baseras på en konceptuell allvarlighetsgrad som tilldelas till varje efterlevnadsstatus. Varje efterlevnadsstatus har följande allvarlighetsgrad:
+Vid efterlevnadskontrollen använder Intune samma uppdateringscykel som konfigurationsprofilerna. I allmänhet görs detta:
 
-|Status  |Allvarlighetsgrad  |
-|---------|---------|
-|Väntar     |1|
-|Lyckades     |2|
-|Misslyckades     |3|
-|Fel     |4|
+- iOS: var 6:e timme
+- macOS: var 6:e timme
+- Android: var 8:e timme
+- Windows 10-datorer som har registrerats som enheter: var 8:e timme
+- Windows Phone: var 8:e timme
+- Windows 8.1: var 8:e timme
 
-När en enhet har flera konfigurationsprofiler tilldelas den högsta allvarlighetsgraden till alla profiler som är tilldelade till den enheten.
-
-Anta exempelvis att en enhet har tre tilldelade profiler: en med statusen Väntar (allvarlighetsgrad = 1), en med statusen Lyckades (allvarlighetsgrad = 2) och en med statusen Fel (allvarlighetsgrad = 4). Statusen Fel har högst allvarlighetsgrad så alla tre profilerna har efterlevnadsstatusen Fel.
+En efterlevnadskontroll utförs oftare omedelbart efter att en enhet har registrerats.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Tilldela en InGracePeriod-status
 
@@ -152,19 +147,19 @@ Anta exempelvis att en enhet har tre tilldelade efterlevnadsprinciper: en med st
 Du kan ge enheter som följer principreglerna åtkomst till e-post och andra företagsresurser. Om enheterna inte följer principreglerna får de inte åtkomst till företagsresurser. Det är det som kallas villkorlig åtkomst.
 
 #### <a name="without-conditional-access"></a>Utan villkorlig åtkomst
-Du kan även använda policyer för enhetsefterlevnad utan villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. När du använder policyer för efterlevnad utan villkorlig åtkomst tillämpas inga åtkomstbegränsningar på företagsresurser.
+Du kan även använda policyer för enhetsefterlevnad utan villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade, eller vilka enheter som är jailbrokade eller rotade. När du använder efterlevnadsprinciper utan villkorlig åtkomst, tillämpas inga åtkomstbegränsningar på organisationens resurser.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sätt att distribuera policyer för efterlevnad för enheter
 Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om alla användarens enheter uppfyller efterlevnadskraven. På Windows 10 version 1803 och senare enheter, rekommenderar vi för att distribuera till enhetsgrupper *om* den primära användaren inte registrerat enheten. Användning av enhetsgrupper i det här scenariot hjälper till med kompabilitetsrapportering.
 
-En uppsättning inbyggda **inställningar för efterlevnadsprinciper** (Azure-portalen > Enhetsefterlevnad) utvärderas på alla Intune-registrerade enheter. Dessa omfattar:
+En uppsättning inbyggda inställningar för efterlevnadsprinciper (**Intune** > **Enhetsefterlevnad**) utvärderas på alla Intune-registrerade enheter. Dessa omfattar:
 
 - **Markera enheter utan någon tilldelad policy för efterlevnad som**: Den här egenskapen har två värden:
 
   - **Följer standard**: säkerhetsfunktion av
   - **Följer inte standard** (standard): säkerhetsfunktion på
 
-  Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **Kompatibel**. Om du använder villkorlig åtkomst rekommenderar vi att du ändrar inställningen till **Inte kompatibel**. Om en användare inte följer standard eftersom en princip inte är tilldelad visar företagsportalen `No compliance policies have been assigned`.
+  Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **följer ej standard**. Om du använder villkorlig åtkomst rekommenderar vi att du ändrar inställningen till **Inte kompatibel**. Om en användare inte är kompatibel eftersom en princip inte har tilldelats, visar företagsportalen `No compliance policies have been assigned`.
 
 - **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad kommer iOS-enheter checka in till Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarnas platsdata lagras inte av Intune.
 

@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: b87e0d24c000e3083eaebeac1a4cf6026d495ccf
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: f01009a0cb35f4270bdb1e768ee781172c8bfa2f
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032103"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105195"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
@@ -32,7 +32,7 @@ Under enhetskonfigurationen med Intune visas installationsinformation om enheten
 - Blockera användningen tills installationen är klar.
 - Ange vad en användare kan göra om enhetskonfigurationen misslyckas.
 
-Du kan också ange prioritetsordningen för varje profil om det skulle uppstå konflikter mellan profiltilldelningar för samma användare eller enhet.
+Du kan också ange en prioritetsordning för varje profil om det skulle uppstå konflikter mellan profiltilldelningar för samma användare eller enhet.
 
  
 ## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Aktivera standardsidan för registreringsstatus för alla användare

@@ -1,12 +1,11 @@
 ---
-title: Wi-Fi-inställningar för Android Enterprise och enheter med helskärmsläge
-titleSuffix: Microsoft Intune
+title: Wi-Fi-inställningar för Android Enterprise-enheter och enheter med helskärmsläge – Microsoft Intune | Microsoft Docs
 description: Skapa eller lägg till en konfigurationsprofil för Wi-Fi-enheter för Android Enterprise och Android Kiosk. Se de olika inställningarna, inklusive att lägga till certifikat, välja en EAP-typ och välja en autentiseringsmetod i Microsoft Intune. För Kiosk-enheter anger du också den i förväg delade nyckeln för ditt nätverk.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,22 +13,22 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1424cd43c6ccde17724a4165fe74def4da291e29
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: ea72cda4cb72af9028c52078e2215619bb2bef3c
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831487"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för enheter som kör Android Enterprise och Android Kiosk i Microsoft Intune
 
 Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina Android Enterprise- och Android Kiosk-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk med en i förväg delad nyckel och mycket mer.
 
-Den här artikeln beskriver dessa inställningar.
+Den här artikeln beskriver dessa inställningar. I [Använda Wi-Fi på dina enheter](wi-fi-settings-configure.md) finns mer information om Wi-Fi-funktionen i Microsoft Intune.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-[Skapa en enhetsprofil](device-profile-create.md).
+[Skapa en enhetsprofil](wi-fi-settings-configure.md#create-a-device-profile).
 
 ## <a name="device-owner-only---kiosk"></a>Endast enhetens ägare – helskärmsläge
 
@@ -66,7 +65,7 @@ Klicka på **OK** för att spara ändringarna.
 
   - **EAP-TLS**: Ange även:
 
-    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -76,7 +75,7 @@ Klicka på **OK** för att spara ändringarna.
 
   - **EAP-TTLS**: Ange även:
 
-    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -95,7 +94,7 @@ Klicka på **OK** för att spara ändringarna.
 
   - **PEAP**: Ange även:
 
-    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -116,9 +115,6 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
 
 ## <a name="next-steps"></a>Nästa steg
 
-Profilen har skapats, men den gör inte något än. Nu ska vi [tilldela den här profilen](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. Därefter [tilldelar du profilen](device-profile-assign.md) och [övervakar dess status.](device-profile-monitor.md)
 
-## <a name="more-resources"></a>Fler resurser
-
-- Se inställningarna som är tillgängliga för Android-enheter i [Wi-Fi-inställningar för enheter som kör Android](wi-fi-settings-android.md).
-- [Översikt över Wi-Fi-inställningar](wi-fi-settings-configure.md), inklusive andra plattformar.
+Du kan också skapa Wi-Fi-profiler för [Android](wi-fi-settings-android.md)-, [iOS](wi-fi-settings-ios.md)-, [macOS](wi-fi-settings-macos.md)-, [Windows 10](wi-fi-settings-windows.md)- och [Windows 8.1](wi-fi-settings-import-windows-8-1.md)-enheter.

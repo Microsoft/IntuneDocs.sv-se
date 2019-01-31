@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,50 +14,34 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4839206db5e34a039c9e99dd74f5ab1bad328418
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 80d4cf8db5789e6eeb22a777eeef74dce3009856
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831300"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Uppgradera enheter som kör Windows Holographic till Windows Holographic for Business
 
+Microsoft Intune innehåller många inställningar som hanterar och skyddar dina enheter. I den här artikeln visas och beskrivs inställningarna för att uppgradera Windows Holographic-enheter till Windows Holographic for Business. De här inställningarna skapas i uppgraderingens konfigurationsprofil i Intune som sedan skickas eller distribueras till enheter.
 
-Om du vill hantera enheter som kör Windows Holographic med Microsoft Intune måste du uppgradera enheterna från Windows Holographic till Windows Holographic for Business. Du kan skapa en profil för versionsuppgradering för att genomföra uppgraderingen. Du kan köpa Commercial Suite för att få licensen som krävs för uppgraderingen för Microsoft-HoloLens. Mer information finns i [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) (Lås upp funktioner i Windows Holographic for Business).
+I din MDM-lösning (hantering av mobilenheter) använder du dessa inställningar när du uppgraderar dina Windows Holographic-enheter. Du kan köpa Commercial Suite om du behöver licensen som krävs vid uppgraderingen av Microsoft HoloLens. Mer information finns i [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) (Lås upp funktioner i Windows Holographic for Business).
 
-## <a name="to-set-up-an-edition-upgrade-device-configuration-profile"></a>Konfigurera en konfigurationsprofil för versionsuppgradering av enheter
+Mer information om den här funktionen finns i [Uppgradera Windows 10-utgåvor eller aktivera S-läget](edition-upgrade-configure-windows-10.md).
 
-1. Logga in på [Azure Portal](https://portal.azure.com) med ditt administratörskonto.
+## <a name="before-you-begin"></a>Innan du börjar
 
+[Skapa en enhetskonfigurationsprofil](edition-upgrade-configure-windows-10.md#create-the-profile).
 
-2.  Klicka på **Enhetskonfiguration**, **Profiler** och sedan **+ Skapa profil**.
+## <a name="edition-upgrade"></a>Versionsuppgradering
 
-    ![Skapa en profil](media/Holographic-create-profile.png)
+- **Utgåva att uppgradera till**: Välj **Windows 10 Holographic for Business**.
+- **Licensfil**: Bläddra till och välj den XML-licensfil som du har fått.
 
-3.  I fönstret **Skapa profil** anger du ett namn för profilen, väljer **Windows 10 och senare** för plattformen och väljer **Uppgradering av utgåva** för profiltypen. Klicka på **Konfigurera inställningar**.
-
-5. I fönstret **Uppgradering av utgåva** på **Version att uppgradera till** väljer du **Windows 10 Holographic for Business**. På **Licensfil** bläddrar du till och väljer XML-licensfilen som du fått.
-
-    ![Ange ett XML-filnamnet](media/Holographic-edition-upgrade.png)
+  ![Ange XML-filnamnet som innehåller licensinformationen för Holographic for Business](media/Holographic-edition-upgrade.png)
  
-5.  Klicka på **OK** och sedan på **Skapa** för att skapa profilen.
-
-
-## <a name="deploy-the-edition-upgrade-policy"></a>Distribuera utgåveuppgraderingsprincipen
-
-Därefter tilldelar du utgåveuppgraderingsprofilen till valda grupper eller enheter.
-
-1. På profilen som du skapade i föregående steg klickar du på **Tilldelningar**.
-
-2. I fönstret **Tilldelningar** väljer du användargrupperna och enheterna som du vill inkludera och exkludera med principen.
-
-![Inkludera och exkludera grupper](media/Holographic-groups.PNG)
-
-När dessa användare eller enheter registreras i Intune används utgåveuppgraderingsprofilen. 
-
 ## <a name="next-steps"></a>Nästa steg
 
-Mer information om de här grupperna finns i [Kom igång med grupper](get-started-groups.md).
+Profilen skapas, men den kanske inte gör något än. Kom ihåg att [tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-
+Du kan också skapa uppgraderingsprofiler för utgåvan till enheter som har [Windows 10 och senare](edition-upgrade-windows-settings.md).

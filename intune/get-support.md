@@ -15,12 +15,12 @@ ms.reviewer: cacamp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 11bcf3742270a3f32919b133efdc2ab3f0c4d2d1
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 87d25fa76b3d2716099178ca428c8032fd99886c
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831640"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune
 
@@ -42,7 +42,7 @@ Som IT-administratör kan du använda alternativet **Hjälp och support** för a
 
 ## <a name="help-and-support-experience"></a>Nytt gränssnitt för hjälp och support
 > [!TIP]   
-> I januari 2019 lanseras ett nytt Hjälp och support-gränssnitt för alla klientorganisationer. Om din klientorganisation ännu inte har dessa nya funktioner kan du hitta informationen om det tidigare gränssnittet i [Hjälp + support-gränssnittet i Azure](#azure-help-+-support-experience), i den här artikeln.  
+> Det finns en ny hjälp och support för alla klienter. Om du inte ser den här nya funktionen i din klient, kan du prova med att rensa webbläsarens cacheminne och sedan läsa in sidan på nytt.
 
 Hjälp och support-gränssnittet för Intune är tillgängligt via [Microsoft 365 Enhetshantering-portalen](http://devicemanagement.microsoft.com) och på alla blad (eller sidor) under Intune i Azure-portalen. 
 
@@ -72,7 +72,7 @@ I den här vyn kan du göra följande:
 4. [Visa supportärenden](#view-support-cases) som du har skapat tidigare med det nya arbetsflödet  
 
 ### <a name="specify-details-about-an-issue"></a>Ange information om ett problem
-När du öppnar Hjälp och support från en plats som har stöd av det nya gränssnittet visas sidan **Behöver du hjälp?**  . Du kan ange information om ett problem på den här sidan. När du anger information visar konsolen vanliga frågor baserat på de nyckelord som du använder. Du kan välja ett av förslagen som visas eller skriva en egen problembeskrivning. Om du anger en egen beskrivning väljer du **Få hjälp** för att skicka den. När du har skickat en fråga returnerar konsolen sammanhangsberoende information som kan hjälpa dig att lösa problemet.
+När du öppnar Hjälp och support från en plats som har stöd av det nya gränssnittet visas sidan **Behöver du hjälp?**  Behöver du hjälp? Du kan ange information om ett problem på den här sidan. När du anger information visar konsolen vanliga frågor baserat på de nyckelord som du använder. Du kan välja ett av förslagen som visas eller skriva en egen problembeskrivning. Om du anger en egen beskrivning väljer du **Få hjälp** för att skicka den. När du har skickat en fråga returnerar konsolen sammanhangsberoende information som kan hjälpa dig att lösa problemet.
 
 Här följer några exempel på frågor som du kan skicka:
   
