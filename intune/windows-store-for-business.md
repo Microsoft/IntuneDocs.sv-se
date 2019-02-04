@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1584344907df168a98f947e187d6f0f0ef4a492a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d6ee36785c4134dd1c346bdc464096e832df3a9c
+ms.sourcegitcommit: f854ed8619ac66fe626198d8e4a8cac2e0c0710a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54460063"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du appar som du har köpt från Microsoft Store för företag med Microsoft Intune
 
@@ -52,12 +52,12 @@ Relaterade uppsättningar och offlinelicensierade appar som synkroniseras från 
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Koppla ditt konto för Microsoft Store för företag till Intune
 Innan du aktiverar synkronisering i Intune-konsolen måste du konfigurera ditt Windows Store-konto för att använda Intune som ett hanteringsverktyg:
-1. Se till att du loggar in i Windows Store för företag med samma klientkonto som du använder för att logga in på Intune.
-2. Välj **Inställningar** > **Hanteringsverktyg** i Business Store.
-3. Välj **Lägg till ett hanteringsverktyg** och välj **Microsoft Intune** på sidan Hanteringsverktyg.
+1. Se till att du loggar in i [Microsoft Store för företag](https://www.microsoft.com/business-store) med samma klientkonto som du använder för att logga in på Intune.
+2. I Business Store väljer du fliken **Hantera** sedan **Inställningar**, och välj fliken **Distribuera**.
+3. Om du inte specifikt har **Microsoft Intune** tillgängligt som ett verktyg för hantering av mobila enheter, väljer du **Lägg till hanteringsverktyget** för att lägga till **Microsoft Intune**. Om du inte har **Microsoft Intune** aktiverat som ditt verktyg för hantering av mobila enheter, klickar du på **Aktivera** bredvid **Microsoft Intune**. Observera att du bör aktivera **Microsoft Intune** snarare än **Microsoft Intune-registrering**.
 
 > [!NOTE]
-> Tidigare kunde du bara associera ett hanteringsverktyg för att tilldelning av appar med Microsoft Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager.
+> Tidigare kunde du bara associera ett hanteringsverktyg för att tilldelning av appar med Microsoft Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager. 
 
 Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 
@@ -92,12 +92,12 @@ När du tilldelar en app från Microsoft Store för företag används en licens 
 
 ## <a name="remove-apps"></a>Ta bort appar
 
-Om du vill ta bort en app som synkroniseras från Microsoft Store för företag måste du logga in i Microsoft Store för företag och gå igenom återbetalningsstegen för appen.
+Om du vill ta bort en app som synkroniseras från Microsoft Store för företag måste du logga in i Microsoft Store för företag och gå igenom återbetalningsstegen för appen. Processen är samma oavsett om appen är kostnadsfri eller inte. För en kostnadsfri app återbetalar butiken 0 $. Exemplet nedan visar en återbetalning för en kostnadsfri app. 
 
 ![Skärmbild av information om appborttagning](./media/microsoft-store-for-business-01.png)
 
 > [!NOTE]
-> Det räcker inte att ta bort en apps synlighet i den privata katalogen för att Intune ska sluta synkronisera den. Du måste gå igenom återbetalningsstegen för appen.
+> Det räcker inte att ta bort en apps synlighet i den privata katalogen för att Intune ska sluta synkronisera appen. Du måste återbetala appen för att helt ta bort den.
 
 ## <a name="next-steps"></a>Nästa steg
 

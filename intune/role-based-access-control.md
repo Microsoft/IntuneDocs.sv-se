@@ -15,87 +15,86 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 07a1c0a0825faafa85b3fb2904dcb517268617bf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 745fd366520ba55e54a5b666d47469debb241ab9
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831538"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Rollbaserad administrationskontroll (RBAC) med Microsoft Intune
 
 RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i din organisation och vem aktiviteterna gäller för. Du kan antingen använda de inbyggda roller täcker vissa vanliga scenarier för Intune eller du kan skapa egna roller. En roll definieras av:
 
-- **Rolldefinition**: namnet på rollen, de resurser som den hanterar och behörigheterna för varje resurs.
-- **Medlemmar**: de användargrupper som har behörigheten.
-- **Omfång**: användar- eller enhetsgrupper som medlemmarna kan hantera.
-- **Tilldelning** – När definitionen, medlemmar och omfång har konfigurerats är rollen tilldelad.
+- **Rolldefinition**: Namnet på rollen, de resurser som den hanterar och behörigheterna för varje resurs.
+- **Medlemmar**: De användargrupper som har behörigheterna.
+- **Omfång**: Användar- eller enhetsgrupper som medlemmarna kan hantera.
+- **Tilldelning**: När definitionen, medlemmar och omfång har konfigurerats är rollen tilldelad.
 
 ![Intune RBAC-exempel](./media/intune-rbac-1.PNG)
 
 **Azure Active Directory (AD Azure)** innehåller två katalogroller som kan användas med Intune, med start i den nya Azure-portalen. Rollerna beviljas fullständig behörighet för att utföra alla aktiviteter i Intune:
 
-- **Global administratör:** användare med den här rollen har åtkomst till alla administrativa funktioner i Azure AD, samt tjänster som är underordnade Azure AD som Exchange Online, SharePoint Online och Skype för företag – Online. Personen som registrerar sig för Azure AD-klient blir global administratör. Endast globala administratörer kan tilldela andra administratörsroller i Azure AD. Det kan finnas mer än en global administratör i din organisation. Globala administratörer kan återställa lösenordet för alla användare och alla andra administratörer.
+- **Global administratör:** Användare med den här rollen har åtkomst till alla administrativa funktioner i Azure Active Directory, samt tjänster som är underordnade Azure Active Directory som Exchange Online, SharePoint Online och Skype för företag Online. Personen som registrerar sig för Azure AD-klient blir global administratör. Endast globala administratörer kan tilldela andra administratörsroller i Azure AD. Det kan finnas mer än en global administratör i din organisation. Globala administratörer kan återställa lösenordet för alla användare och alla andra administratörer.
 
-- **Intune Service-administratör:** användarna med den här rollen har globala behörigheter i Intune när tjänsten finns. Förutom eventuella ersättande Azure-begränsningar ger den här rollen möjlighet att hantera användare och enheter samt skapa och hantera Intune-grupper.
+- **Intune Service-administratör:** Användarna med den här rollen har globala behörigheter i Intune när tjänsten finns. Förutom eventuella ersättande Azure-begränsningar ger den här rollen möjlighet att hantera användare och enheter samt skapa och hantera Intune-grupper.
 
-- **Conditional Access Administrator (Administratör för villkorlig åtkomst):** Användare med den här rollen har endast behörighet att visa, skapa, ändra och ta bort principer för villkorlig åtkomst.
+- **Administratör av villkorsstyrd åtkomst:** Användare med den här rollen har endast behörighet att visa, skapa, ändra och ta bort principer för villkorlig åtkomst.
 
     > [!IMPORTANT]
     > Rollen som Intune Service-administratör ger inte möjlighet att hantera inställningar för villkorlig åtkomst i Azure AD.
-    > Medlemmar i Intune-roller kräver en licens för Intune.
+    > För att bli tilldelad en Intune-roll, måste användaren ha en Intune-licens.
 
     > [!TIP]
-    > Intune visar också tre Azure AD-tillägg: **Användare**, **Grupper** och **Villkorlig åtkomst** som kontrolleras med hjälp av Azure AD RBAC. Dessutom kan den **Användarkontoadministratören** endast utför aktiviteter för AAD-användare/-grupp och har inte fullständig behörighet att utföra alla aktiviteter i Intune. Se [RBAC med Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) för mer information.
+    > Intune visar också tre tillägg för Azure Active Directory: **Användare**, **Grupper** och **Villkorlig åtkomst**, som kontrolleras med hjälp av Azure Active Directory RBAC. Dessutom kan den **Användarkontoadministratören** endast utför aktiviteter för AAD-användare/-grupp och har inte fullständig behörighet att utföra alla aktiviteter i Intune. Mer information finns i [RBAC med Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
 
 ## <a name="roles-created-in-the-intune-classic-portal"></a>Roller som skapas i den klassiska Intune-portalen
 
-Endast Intunes **tjänstadministratörer** med fullständig behörighet migreras från den klassiska Intune-portalen till Intune i Azure-portalen. Du måste tilldela Intune **Service-administratörer** med åtkomsten ”skrivskyddad” eller ”supportavdelning” till Intune-roller i Azure portalen och ta bort dem från den klassiska portalen.
+Endast Intunes **tjänstadministratörer** med fullständig behörighet migreras från den klassiska Intune-portalen till Intune i Azure-portalen. Du måste tilldela Intune **Service-administratörer** igen med åtkomsten ”skrivskyddad” eller ”supportavdelning” till Intune-roller i Azure-portalen och ta bort dem från den klassiska portalen.
 
 > [!IMPORTANT]
 > Du kan behöva behålla Intunes tjänstadministratörsåtkomst i den klassiska portalen om dina administratörer fortfarande behöver åtkomst till att hantera datorer med Intune.
 
 ## <a name="built-in-roles"></a>Inbyggda roller
 
-Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan någon ytterligare konfiguration:
+Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du kan inte ta bort eller redigera en inbyggd roll.
 
-- **Supportavdelning**: Utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter.
+- **Supportavdelningen**: Utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter.
 - **Princip- och profilhanterare**: Hanterar principer för efterlevnad, konfigurationsprofiler, Apple-registrering och företagets enhetsidentifierare.
 - **Användare med skrivskydd**: Visar information om användare, enhet, registrering, konfiguration och programmet. Kan inte göra ändringar i Intune.
-- **Programhanterare**: hanterar mobila och hanterade program, kan läsa enhetsinformation och kan visa enhetsinformationsprofiler.
-- **Intune-rolladministratör**: hanterar anpassade Intune-roller och lägger till tilldelningar för inbyggda Intune-roller. Det är den enda Intune-rollen som kan tilldela behörigheter till administratörer.
+- **Programhanterare**: Hanterar mobila och hanterade program, kan läsa enhetsinformation och kan visa enhetsinformationsprofiler.
+- **Administratör för Intune-roll**: Hanterar anpassade Intune-roller och lägger till tilldelningar för inbyggda Intune-roller. Det är den enda Intune-rollen som kan tilldela behörigheter till administratörer.
 - **Skoladministratör**: Hanterar Windows 10-enheter i [Intune for Education](introduction-intune-education.md) och kan vidta följande åtgärder: 
 
-|Behörigheter|Aktivitet|
-|---|---|
-|Granska data|Läs|
-|DeviceConfigurations|Tilldela, skapa, ta bort, läsa, uppdatera|
-|Hanterare av enhetsregistrering|Läsa, uppdatera|
-|Hanterade enheter|Läsa, uppdatera<!--, Delete [To be added in 1803]-->|
-|Mobilappar|Tilldela, skapa, ta bort, läsa, uppdatera|
-|Rapporter|Läs|
-|Fjärråtgärder|Rensa dator, starta om, fjärrlåsning, dra tillbaka, synkronisera enheter, rensa|
-|Organisation|Läs|
+    |Behörigheter|Åtgärd|
+    |---|---|
+    |Granska data|Läs|
+    |DeviceConfigurations|Tilldela, skapa, ta bort, läsa, uppdatera|
+    |Hanterare av enhetsregistrering|Läsa, uppdatera|
+    |Hanterade enheter|Läsa, uppdatera<!--, Delete [To be added in 1803]-->|
+    |Mobilappar|Tilldela, skapa, ta bort, läsa, uppdatera|
+    |Rapporter|Läs|
+    |Fjärråtgärder|Rensa dator, starta om, fjärrlåsning, dra tillbaka, synkronisera enheter, rensa|
+    |Organisation|Läs|
 
 ### <a name="to-assign-a-built-in-role"></a>Tilldela en inbyggd roll
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. I fönstret **Intune** väljer du **Roller** > **Alla roller**.
-1. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
+4. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
 
-2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**.
+5. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**.
 
-    > [!NOTE]
-    > Du kan inte ta bort eller redigera inbyggda roller
+6. I fönstret för anpassad roll väljer du **Tilldela**.
 
-3. I fönstret för anpassad roll väljer du **Tilldela**.
+7. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen.
 
-4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
-    - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
-    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
+8. För **Medlemmar**, välj en grupp som innehåller den användare som du vill ge behörighet.
+
+9. För **Omfång**, välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
 <br></br>
-5. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
+10. När du är klar väljer du **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
 ### <a name="intune-rbac-table"></a>Intune RBAC-tabell
 
@@ -134,11 +133,13 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 
 3. I fönstret för anpassad roll väljer du **Tilldela**.
 
-4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
-    - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
-    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
-<br></br>
-5. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
+4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen.
+
+5. För **Medlemmar**, välj en grupp som innehåller den användare som du vill ge behörighet.
+
+6. För **Omfång**, välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
+
+7. När du är klar väljer du **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
 ## <a name="next-steps"></a>Nästa steg
 

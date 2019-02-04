@@ -1,12 +1,12 @@
 ---
-title: Komma igång med Microsoft Intune
+title: Vad kan Microsoft Intune göra för mitt företag
 titleSuffix: ''
-description: Gör ett antal korta praktiska snabbstarter för att lära dig mer om Intune.
+description: Microsoft Intune hjälper dig att lösa vanliga affärsproblem.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 8adb038fbd5fa1b4ad2400a215eb228b81433bde
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c8e15675beb97b396c9340e2ab3bfa86a3a43f76
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831436"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Vad kan Intune göra för mitt företag?
 Microsoft Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som hjälper anställda att vara produktiva samtidigt som företagets data skyddas.

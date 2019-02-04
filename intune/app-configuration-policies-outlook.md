@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 ms.reviewer: smithre4
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 691029cc7b9fd8880c5440a84b95bbf2462920d6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 433d15d91bc32ef409c9a89c4d71cacb7478e74d
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180331"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068313"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Microsoft Outlook-konfigurationsinställningar 
 
@@ -29,18 +29,9 @@ Information om hur du skapar en appkonfigurationsprincip för hanterade iOS-enhe
 
 ## <a name="configuration-settings"></a>Konfigurationsinställningar
 
-När du lägger till en konfigurationsprincip i Intune kan du ange specifika inställningar för att konfigurera Microsoft Outlook. I fönstret **Konfigurationsinställningar** kan du ange e-postkontokonfigurationen.
+När du lägger till en konfigurationsprincip i Intune kan du specificera inställningar för att konfigurera Microsoft Outlook på iOS och Android. I konfigurationsinställningsfönstret kan du ange e-postkonfigurationen och konfigurera appspecifika inställningar. Dessutom kan du konfigurera dessa inställningar och/eller använda namn-/värdepar.
 
-### <a name="basic-authentication-email-account-settings"></a>E-postkontoinställningar för grundläggande autentisering
-Outlook för iOS och Android erbjuder Exchangeadministratörer möjlighet att ”pusha” kontokonfigurationer till sina lokala användare som använder grundläggande autentisering med ActiveSync-protokollet. Mer information finns i [Kontokonfiguration i Outlook för iOS och Android med grundläggande autentisering](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/account-setup). Om du vill aktivera konfiguration av kontoinstallation kan du konfigurera följande inställningar:
-
-- **E-postserver**: Ange namnet på den lokala Exchange-servern (t.ex. mail.contoso.com).
-- **Namn på e-postkonto**: Ange visningsnamnet för e-postkontot. Namnet visas för användare på deras enheter.
-- **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (Azure AD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
-  - **UPN (User Principal Name)**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
-  - **Primär SMTP-adress**: Hämtar namnet i e-postadressformat, till exempel `user1@contoso.com`
-- **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska skapas. Välj **UPN (User Principal Name)** (`user1@contoso.com` eller `user1`) om du vill använda det fullständiga huvudnamnet som e-postadress eller **Primär SMTP-adress** (`user1@contoso.com`) om du vill använda den primära SMTP-adressen för att logga in på Exchange. Rekommendationen är att välja **Primär SMTP-adress**.
-- **Kontodomän**: (Valfritt) Domänen för kontot.
+Inställningsinformation för Outlook-konto och steg för iOS- och Android-enheter i Microsoft Intune finns i [Distribuera Outlook för iOS- och Android-appkonfigurationsinställningar](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Nästa steg
 [Konfigurera e-postinställningar i Intune](email-settings-configure.md)

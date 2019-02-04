@@ -16,23 +16,23 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9f9f95c42be252e0b2be515344e01a1d93e2cc6c
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 0eb12470c20efd8d455f8bb165455ae4266da956
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387224"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146901"
 ---
 # <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Registrera dedikerade Android-enheter eller fullständigt hanterade enheter (förhandsversion)
 
 När du har konfigurerat dina [dedikerade Android-enheter](android-kiosk-enroll.md) eller [fullständigt hanterade enheter](android-fully-managed-enroll.md) i Intune kan du registrera enheterna. Hur du registrerar dina Android-enheter beror på operativsystem.
 
-| Registreringsmetod | Lägsta Android OS-version för dedikerade enheter | Lägsta Android OS-version för fullständigt hanterade enheter |
-| ----- | ----- | ----- |
-| NFC (Near Field Communication) | 5.1 | 6.0 |
-| Token | 6.0 | 6.0 |
-| QR-kod | 7.0 | 7.0 |
-| Zero Touch  | 8.0\* | 8.0\* |
+| Registreringsmetod | Lägsta Android OS-version för dedikerade och fullständigt hanterade enheter |
+| ----- | ----- |
+| NFC (Near Field Communication) | 5.1 |
+| Token | 6.0 |
+| QR-kod | 7.0 |
+| Zero Touch  | 8.0\* |
 
 \* för deltagande tillverkare.
 
@@ -42,7 +42,7 @@ För enheter som stöder NFC kan du etablera enheter genom att ange en särskilt
 
 ### <a name="enroll-by-using-a-token"></a>Registrera med en token
 
-För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **aft#setup**.
+För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **afw#setup**.
 
 1. Starta den rensade enheten.
 2. Välj språk på **välkomstskärmen**.

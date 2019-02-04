@@ -14,12 +14,12 @@ ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aa16e180b016ec142ecca5644b7f93fb088d15f5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f814abc4d47517c17e24a188c7efb5da771bc328
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184311"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068279"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Starta om enheter med Intune med en fjärråtgärd
 
@@ -32,7 +32,7 @@ ms.locfileid: "52184311"
 
 - Windows – stöds på Windows 8.1 och senare
 - Windows Phone – stöds på Windows Phone 8.1 och senare
-- Android-kioskenheter – stöds
+- Android-kioskenheter – stöds på Android 7.0 och senare
 - iOS – stöds
 
     > [!Note]  

@@ -39,12 +39,16 @@ items:
     href: quickstart-email-profile.md
 - name: Självstudier
   items:
+  - name: Genomgång av Intune i Azure Portal
+    href: tutorial-walkthrough-intune-portal.md
   - name: Skydda e-post på hanterade enheter
     href: tutorial-protect-email-on-enrolled-devices.md
   - name: Skydda e-post på ohanterade enheter
     href: tutorial-protect-email-on-unmanaged-devices.md
   - name: Använda Autopilot till att registrera Windows-enheter
     href: tutorial-use-autopilot-enroll-devices.md
+  - name: Registrera iOS-enheter med DEP
+    href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Begrepp
   items:
   - name: Vad är enhetshantering?
@@ -945,9 +949,9 @@ items:
       href: data-outside-protect.md
     - name: Förhindra dataläckage på ej hanterade enheter
       href: data-leak-prevention.md
-ms.openlocfilehash: 70240d3c6969ffe86d3b32b14b50b390020b10b0
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: 9ba87d149285aea0e39e790f7e620bba52bb47bd
+ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072498"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55504552"
