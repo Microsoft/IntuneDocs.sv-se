@@ -231,19 +231,19 @@ items:
       href: troubleshoot-device-enrollment-in-intune.md
   - name: Ange enhetsefterlevnad
     items:
-    - name: Översikt över enhetskompatibilitet
+    - name: Översikt över efterlevnad
       href: device-compliance-get-started.md
-    - name: Skapa Android-princip
+    - name: Android-efterlevnad
       href: compliance-policy-create-android.md
-    - name: Skapa en profilprincip för Android-företag
+    - name: Android Enterprise-efterlevnad
       href: compliance-policy-create-android-for-work.md
-    - name: Skapa en princip för att aktivera Google Play Protect
+    - name: Aktivera Google Play Protect
       href: compliance-policy-create-google-play-protect.md
-    - name: Skapa iOS-princip
+    - name: iOS-efterlevnad
       href: compliance-policy-create-ios.md
-    - name: Skapa Windows-princip
+    - name: Windows-efterlevnad
       href: compliance-policy-create-windows.md
-    - name: Platsbaserad princip
+    - name: Platsbaserad efterlevnad
       href: use-network-locations.md
     - name: Utvärdera princip
       href: policy-evaluate.md
@@ -251,39 +251,39 @@ items:
       href: actions-for-noncompliance.md
     - name: Övervaka enhetsefterlevnad
       href: compliance-policy-monitor.md
-  - name: Konfigurera enheter
+  - name: Konfigurera enhetsinställningar
     items:
-    - name: Konfigurera enheter med hjälp av profiler
+    - name: Översikt över enhetskonfiguration
       href: device-profiles.md
     - name: Enhetsprofiler
       href: device-profile-create.md
     - name: Administrativa mallar
       href: administrative-templates-windows.md
-    - name: Enhetsfunktioner (iOS och MacOS)
+    - name: Enhetsfunktioner
       href: device-features-configure.md
-    - name: Enhetsbegränsningar
+    - name: Begränsa enhetsinställningar och funktioner
       href: device-restrictions-configure.md
-    - name: Leveransoptimering
+    - name: Leverera uppdateringar
       href: delivery-optimization-windows.md
-    - name: Versionsuppgradering och lägesväxling
+    - name: Uppgradera versioner och S-läge
       href: edition-upgrade-configure-windows-10.md
-    - name: E-postinställningar
+    - name: Konfigurera e-post
       href: email-settings-configure.md
-    - name: Kioskinställningar
+    - name: Aktivera helskärmsläge
       href: kiosk-settings.md
-    - name: VPN-inställningar
+    - name: Lägga till ett VPN
       href: vpn-settings-configure.md
       items:
       - name: Per app-VPN för Android
         href: android-pulse-secure-per-app-vpn.md
       - name: Per app-VPN för iOS
         href: vpn-setting-configure-per-app.md
-    - name: Wi-Fi-inställningar
+    - name: Lägga till ett trådlöst Wi-Fi-nätverk
       href: wi-fi-settings-configure.md
       items:
       - name: Wi-Fi med en i förväg delad nyckel
         href: wi-fi-profile-shared-key.md
-    - name: Utbildningsinställningar
+    - name: Education – appen Gör ett prov
       href: education-settings-configure.md
     - name: Delade enheter för flera användare
       href: shared-user-device-settings.md
@@ -295,7 +295,7 @@ items:
       href: device-profile-assign.md
     - name: Övervaka profiler
       href: device-profile-monitor.md
-    - name: Felsökning av profiler
+    - name: Vanliga frågor och svar
       href: device-profile-troubleshoot.md
   - name: Skydda data på enheter
     items:
@@ -854,6 +854,8 @@ items:
       items:
       - name: Intune API-referens
         href: https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview
+    - name: Graph API:er som används för att konfigurera enheter
+      href: graph-apis-used-by-intune-device-configuration-windows.md
 - name: Resurser
   items:
   - name: Microsoft Intune-dokumentationsguide
@@ -949,9 +951,9 @@ items:
       href: data-outside-protect.md
     - name: Förhindra dataläckage på ej hanterade enheter
       href: data-leak-prevention.md
-ms.openlocfilehash: 9ba87d149285aea0e39e790f7e620bba52bb47bd
-ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
+ms.openlocfilehash: 456d3f4205ca9e24c4358c97a3a2f6a33d1a421f
+ms.sourcegitcommit: 4a1ac07efd66b45c1435649bcd7215adbd84898f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55504552"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55645197"
