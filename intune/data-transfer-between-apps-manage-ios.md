@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 58d0cbbd503697575cd63e66fff80bd91e742e5e
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831462"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229907"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -37,7 +37,7 @@ Använd appskyddsprinciper med iOS-funktionen **Öppna i hantering** för att sk
 
 -   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningarna för appskyddsprincipen med **Tillåt endast att appen överför data till principhanterade appar**. Beteendet *Öppna-i* för en principhanterad app visar enbart andra principhanterade appar som alternativ för delning. Om en användare försöker skicka en principskyddad fil som en bilaga från OneDrive i den inbyggda e-postappen kommer det inte gå att läsa filen.
 
--   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Tillåt att appen överför data till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Tillåt att appen tar emot data från andra appar** och väljer önskad nivå för datamottagning. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-protection-settings).   
+-   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Tillåt att appen överför data till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Tillåt att appen tar emot data från andra appar** och väljer önskad nivå för datamottagning. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-protection).   
 
 -   **Enheter som hanteras av en MDM-lösning från tredje part:** Du kan begränsa dataöverföringen till endast hanterade appar med hjälp av funktionen **Öppna i hantering** i iOS.
 För att säkerställa att appar som du distribuerar med en MDM-lösning från tredje part också är associerade med dina Intune-appskyddsprinciper måste du konfigurera användarinställningen för UPN enligt beskrivningen i följande avsnitt: [Konfigurera användarinställningar för UPN](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). När appar distribueras med användarinställningen för UPN så tillämpas appskyddsprinciperna på appen när användaren loggar in med sitt arbetskonto.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2019
+ms.date: 02/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: d0fcb021545d96fe8f5bfdf742dd4d181c91fb1a
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 184f70aefbdc90c301ef2f97c5a3abb5ac49a4a8
+ms.sourcegitcommit: 12f8b7f0bca1baa2c1f68dd6af4f16a4814daa11
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831572"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737493"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -167,7 +167,7 @@ Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar 
 > När du utfärdar ett pauskommando får enheterna detta kommando nästa gång de checkar in på tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering.
 > Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
 
-### <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Avinstallera den senaste versionen från programuppdateringar för Windows 10 
+## <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Avinstallera den senaste versionen från programuppdateringar för Windows 10 
 Om det inträffar ett allvarligt problem på dina Windows 10-datorer kan du avinstallera den senaste funktionsuppdateringen eller den senaste kvalitetsuppdateringen. Du kan bara avinstallera en funktions- eller kvalitetsuppdatering via enhetens underhållskanal. Vid avinstallation utlöses en princip för att återställa den tidigare uppdateringen på Windows 10-datorerna. För funktionsuppdateringar specifikt kan du begränsa tiden från 2–60 dagar som en avinstallation av den senaste versionen kan tillämpas. Så här ställer du in alternativ för avinstallation av programvaruuppdatering:
 
 1. I Intune väljer du **Programuppdateringar**.
