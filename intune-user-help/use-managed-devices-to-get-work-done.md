@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 360715881e3d6b2f61e7bf251045fc3356c44f6b
-ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 44aad280f0b8714adbb3c8a1e109b68a5af46d4d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55690690"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838843"
 ---
 # <a name="use-managed-devices-to-access-work-or-school-resources"></a>Använda hanterade enheter för att få åtkomst till resurser för arbete eller skola
 Microsoft Intune är ett enhetshanteringssystem som organisationer kan använda till att hantera åtkomst till enheter, appar och e-post. Med enhetshantering kan du, och andra medarbetare och studerande, få åtkomst till jobbinformation praktiskt taget var som helst, på nästan vilken enhet som helst. Även när du arbetar fjärranslutet kan du och organisationens information skyddas.
