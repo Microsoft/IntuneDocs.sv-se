@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
-ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
+ms.openlocfilehash: d54c778923b0d217187f6e4c70e4bc8730788fbc
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260257"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690809"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
@@ -57,7 +57,7 @@ Använd följande steg för att registrera macOS-enheter som kör OS X El Capita
 
 4. På sidan __Enheter__ visas en lista över hanterade enheter eller ett meddelande. Vad som visas beror på om du redan har en hanterad enhet. 
     * Om du vill lägga till en enhet som inte visas i listan väljer du meddelandet **Tap here to tell us which device you're using or add a new device** (Tryck här för att berätta vilken enhet du använder eller lägga till en ny enhet).
-    * Om du inte har några enheter visas meddelandet: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
+    * Om du inte har några enheter får du följande meddelande: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
 
      ![En skärmbild av sidan Enheter med en röd ruta runt meddelandealternativet för att markera var du ska klicka.](./media/CP-enroll-MACOS-1808.png)  
 5.  Slutför det steg nedan som överensstämmer med det meddelande som visas i företagsportalen.  
@@ -93,4 +93,11 @@ Hanteringsprofilen är vad som definierar MDM-kanalanslutningen. Så länge hant
 
 Och eftersom de övriga profilerna inte kräver enskilda verifieringar genereras och levereras de snabbare till enheter. 
 
-Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## <a name="updating-the-company-portal-app"></a>Uppdatera företagsportalappen
+
+Företagsportalappen uppdateras på samma sätt som andra Office-appar, genom Microsoft AutoUpdate för Mac. Läs mer om [uppdatering av Microsoft-appar för macOS här](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+
+## <a name="next-steps"></a>Nästa steg  
+Behöver du mer hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+

@@ -14,12 +14,13 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1866d658503cb2dcdf482a050d7bbd73a914858b
-ms.sourcegitcommit: 398b8a0d98e928b3406f59ab3d061554643ef60b
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e24043bb1c41d68de04669ff27cc659624dc56c1
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54400032"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846833"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -47,7 +48,7 @@ En rensning är praktisk om du vill återställa en enhet innan du ger den till 
 
 ### <a name="wiping-a-device"></a>Rensa en enhet
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
+1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enheter** > **Alla enheter**.
 4. Välj namnet på den enhet som du vill rensa.
@@ -138,7 +139,7 @@ Du kan endast rensa kioskenheter. Du kan inte dra tillbaka Android-kioskenheter.
 
 ### <a name="retire"></a>Pensionera
 
-1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
 2. Välj **Alla enheter** i fönstret **Enheter**.
 3. Välj namnet på den enhet som du vill dra tillbaka.
 4. I fönstret som visar enhetsnamnet väljer du **Dra tillbaka**. Välj **Ja** för att bekräfta.
@@ -149,12 +150,12 @@ Om enheten är på och ansluten sprids åtgärden **Dra tillbaka** över alla en
 
 Om du vill ta bort enheter från Intune-portalen kan du ta bort dem från det specifika enhetsfönstret. Nästa gång enheten checkar in tas alla företagets data bort.
 
-1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Alla enheter** > Välj de enheter som du vill ta bort > **Ta bort**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Ta bort enheter med rensningsregler automatiskt
 Du kan konfigurera Intune så att enheter som är inaktiva, inaktuella eller som inte svarar tas bort automatiskt. Dessa rensningsregler övervakar kontinuerligt dina enheter så att enhetsposterna är uppdaterade. Enheter som tas bort på det här sättet tas bort från Intune-hanteringen.
-1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Regler för rensning av enhet** > **Ja**.
 3. Ange ett nummer mellan 90 och 270 i rutan **Ta bort enheter som inte har checkats in på många dagar**.
 4. Välj **Spara**.
@@ -177,7 +178,7 @@ Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta 
 
 Följ dessa steg om du vill ta bort en Apples DEP-enhet från hantering av Intune fullständigt:
 
-1. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal).
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Alla enheter** > välj enheten > **Dra tillbaka**.
 ![Skärmbild för dra tillbaka](./media/devices-wipe/retire.png)
 3. Välj **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtoken** > välj token > **Enheter** > välj kryssrutan för enheten > **Ta bort** > **Ja**.

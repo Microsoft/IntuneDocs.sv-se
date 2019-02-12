@@ -16,12 +16,13 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 65f3598282bd46d422f8748d2653dbf8e18cf9b7
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 64cd4aa629e980bf69557d6cd2c40f8bee7bd3c6
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324981"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086224"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
@@ -150,9 +151,9 @@ Microsoft Edge, Intune Managed Browser och [Azure AD-programproxy]( https://docs
 ### <a name="before-you-start"></a>Innan du börjar
 
 - Konfigurera dina interna program via Azure AD-programproxyn.
-    - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#get-started) för att konfigurera programproxy och publicera program. 
+    - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) för att konfigurera programproxy och publicera program. 
 - Du måste använda version 1.2.0 eller senare av Managed Browser-appen.
-- Användare av Managed Browser eller Microsoft Edge har en [Intune-appskyddsprincip]( app-protection-policy.md) tilldelad till appen.
+- Användare av Managed Browser eller Microsoft Edge har en [Intune-appskyddsprincip](app-protection-policy.md) tilldelad till appen.
 
     > [!NOTE]
     > Det kan ta upp till 24 timmar innan omdirigeringsdata för en uppdaterad programproxy börjar gälla i Managed Browser eller Microsoft Edge.

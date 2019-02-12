@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/25/2019
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +16,21 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 21fde80ec80492957b686a66dcfe4db55894c38e
-ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
+ms.openlocfilehash: 996b4d85da41b480d73d7a79011e2bbd732ea334
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55199497"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690843"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även kommande ändringar, [viktiga meddelanden](#notices) och information om [tidigare versioner](whats-new-archive.md). Vissa funktioner kan distribueras över flera veckor och kanske inte är tillgängliga för alla kunder den första veckan.
+Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även kommande ändringar, [viktiga meddelanden](#notices) och information om [tidigare versioner](whats-new-archive.md). 
 
 > [!Note]
+> Vissa funktioner kan distribueras över flera veckor och kanske inte är tillgängliga för alla kunder den första veckan.
+>
 > På [hybridsidan med senaste nytt](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) finns mer information om nya funktioner för hybridhantering av mobilenheter (MDM).
 
 **RSS-feed**: Håll dig informerad när den här sidan uppdateras genom att kopiera och klistra in följande webbadress i feed-läsaren: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
@@ -43,6 +45,13 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även kommande ä
 ### Role-based access control
 
 -->     
+## <a name="week-of-february-4-2019"></a>Veckan för 4 februari 2019
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="intune-macos-company-portal-dark-mode----3300524-eeready---"></a>Mörkt läge i Intune macOS-företagsportalen <!-- 3300524 eeready -->
+Nu stöder Intune macOS-företagsportalen mörkt läge för macOS. När du aktiverar mörkt läge på en macOS 10.14 +-enhet kommer företagsportalen att justera dess utseende till färger som speglar detta läge.
+
 ## <a name="week-of-january-21-2019"></a>Veckan som börjar den 21 januari 2019
 
 ### <a name="app-management"></a>Apphantering
@@ -52,15 +61,28 @@ Du kan förhindra att popup-meddelanden per apptilldelning visas för slutanvän
 
 #### <a name="intune-app-protection-policies-ui-update----3251427----"></a>Uppdatering av användargränssnitt för Intune-appskyddsprinciper <!-- 3251427  -->
 Vi har ändrat etiketterna för inställningar och knappar i Intunes appskydd för att de ska bli lättare att förstå. Några av ändringarna omfattar:  
-- Kontroller ändras från **ja** / **nej** till primärt **blockera**/**tillåt ** och **inaktivera** / **aktivera** kontroller. Även etiketterna har uppdaterats.  
+- Kontroller ändras från **ja** / **nej** till primärt **blockera** / **tillåt** och **inaktivera** / **aktivera** kontroller. Även etiketterna har uppdaterats.  
 - Inställningarna formateras om så att inställningen och dess etikett är sida vid sida i kontrollen, vilket ger bättre navigering.   
 
 Standardinställningar och antal inställningar förblir detsamma, men den här ändringen gör att användarna kan förstå, navigera och använda inställningar enklare för att tillämpa valda appskyddsprinciper. Mer information finns i [iOS-inställningar](app-protection-policy-settings-ios.md) och [Android-inställningar](app-protection-policy-settings-android.md).
 
 #### <a name="additional-settings-for-outlook----3301182----"></a>Ytterligare inställningar för Outlook <!-- 3301182  -->
-Nu kan du konfigurera ytterligare inställningar för Outlook för iOS och Android med hjälp av Intune.  Det här är några inställningar: Tillåt att endast arbets- eller skolkonton används för Outlook i iOS och Android Distribuera modern autentisering för Office 365 och lokala konton med modern hybridautentisering Använd `SAMAccountName` för fältet användarnamn i e-postprofilen när grundläggande autentisering väljs Tillåt att kontakter sparas Konfigurera externa mottagare E-post Tips Konfigurera **Fokuserad inkorg** Kräv biometri för åtkomst till Outlook för iOS Blockera externa bilder
+Nu kan du konfigurera följande ytterligare inställningar för Outlook för iOS och Android med hjälp av Intune:
+- Tillåt bara arbets- eller skolkonton att användas i Outlook i iOS och Android
+- Distribuera modern autentisering för Office 365 och lokala konton med modern hybridautentisering
+- Använd `SAMAccountName` för användarnamnfältet i e-postprofilen när grundläggande autentisering väljs
+
+Följande inställningar lanseras fortfarande gradvis och blir tillgängliga i konsolen snart:
+- Tillåt att kontakter sparas
+- Konfigurera e-posttips för externa mottagare
+- Konfigurera **Prioriterad inkorg**
+- Kräv biometri för åtkomst till Outlook för iOS
+
+Inställningen nedan visas i Intune-konsolen men fungerar inte som förväntat när den har konfigurerats. Det här problemet åtgärdas snart:
+- Blockera externa bilder
+
 > [!NOTE]
-> Om du använder principer för Intune-appskydd till att hantera åtkomsten för företagsidentiteter bör du inte aktivera att **kräva biometri**. Mer information finns i **Kräva företagsautentiseringsuppgifter för åtkomst** för [iOS-åtkomstinställningar](app-protection-policy-settings-ios.md#access-settings) och [Android-åtkomstinställningar](app-protection-policy-settings-android.md#access-settings).
+> Om du använder principer för Intune-appskydd till att hantera åtkomsten för företagsidentiteter bör du inte aktivera att **kräva biometri**. Mer information finns i **Kräva företagsautentiseringsuppgifter för åtkomst** för [iOS-åtkomstinställningar](app-protection-policy-settings-ios.md#access-requirements) och [Android-åtkomstinställningar](app-protection-policy-settings-android.md#access-requirements).
 
 #### <a name="delete-android-enterprise-apps----1352553---"></a>Ta bort Android Enterprise-appar <!-- 1352553 -->
 Du kan ta bort hanterade Google Play-appar från Microsoft Intune. Om du vill ta bort en hanterad Google Play-app öppnar du Microsoft Intune i Azure-portalen och väljer **Klientappar** > **Appar**. Från listan över appar väljer du ellipserna (...) till höger om den hanterade Google Play-appen och väljer sedan **Ta bort** från den visade listan. När du tar bort en hanterad Google Play-app från applistan blir den hanterade Google Play-appen automatiskt ej godkänd.
@@ -68,12 +90,16 @@ Du kan ta bort hanterade Google Play-appar från Microsoft Intune. Om du vill ta
 #### <a name="managed-google-play-app-type----1352580---"></a>Hanterade Google Play-apptyper <!-- 1352580 -->
 Den **hanterade Google Play**-apptypen gör att du kan lägga till mer specifikt [hanterade Google Play-appar](https://play.google.com/work/search?q=microsoft&c=apps) till Intune. Som Intune-administratör kan du bläddra, söka, godkänna, synkronisera och tilldela godkända hanterad Google Play-appar i Intune.  Du behöver inte längre bläddra till den hantera Google Play-konsolen separat och du behöver inte längre autentisera dig på nytt.  I Intune, väljer du **Klientappar** > **Appar** > **Lägg till**. I listan **Apptyp** väljer du **Hanterat Google Play-konto** som apptyp.
 
+### <a name="default-android-pin-keyboard----3802457---"></a>Standardtangentbord för PIN-kod i Android <!-- 3802457 -->
+För slutanvändare som har angett en PIN-kod för Intune-appskydd (APP) på sina Android-enheter med PIN-kodtypen ”Numerisk” visas nu standardtangentbordet för Android istället för det fasta Android-tangentbordsgränssnittet som utformats tidigare. Den här ändringen har gjorts för att vara konsekvent när standardtangentbord används på både Android och iOS, för båda PIN-typerna ”Numerisk” och/eller ”Lösenord”. Mer information om inställningar för slutanvändaråtkomst på Android, till exempel PIN-kod för APP finns i [Åtkomstkrav för Android](app-protection-policy-settings-android.md#access-requirements).
+
 ### <a name="device-configuration"></a>Enhetskonfiguration
 
 #### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview----2055484-----"></a>Använd Microsofts rekommenderade inställningar med säkerhetsbaslinjer (allmänt tillgänglig förhandsversion) <!-- 2055484   -->
-Obs! Den här funktionen är fortfarande under lansering och blir snart tillgänglig.
 
 Intune integrerar med andra tjänster som fokuserar på säkerhet, inklusive Windows Defender ATP och Office 365 ATP. Kunder efterfrågar en gemensam strategi och en sammanhängande uppsättning säkerhetsarbetsflöden från slutpunkt till slutpunkt för alla Microsoft 365-tjänster. Vårt mål är att optimera strategier och skapa lösningar som kan hantera säkerhetsåtgärder och vanliga administratörsuppgifter. I Intune vill vi uppnå det här målet genom att publicera en uppsättning Microsoft-rekommenderade ”säkerhetsbaslinjer” (**Intune** > **Security baselines** ((Säkerhetsbaslinjer)).  En administratör kan skapa säkerhetsprinciper direkt från dessa baslinjer, och sedan distribuera dem till sina användare. Du kan också anpassa rekommendationerna om bästa praxis för att uppfylla behoven i organisationen. Intune kontrollerar att enheterna uppfyller baslinjerna och meddelar administratören om användare eller enheter inte uppfyller efterlevnadskraven.
+
+Den här funktionen är en offentlig förhandsversion, så profiler som skapas nu flyttas inte över till säkerhetsbaslinjemallar som är allmänt tillgängliga. Du bör inte planera att använda dessa förhandsmallar i produktionsmiljö.
 
 Läs mer om säkerhetsbaslinjer i [Skapa en säkerhetsbaslinje för Windows 10 i Intune](security-baselines-monitor.md).
 
@@ -104,20 +130,13 @@ En lista över de här inställningarna finns i [Funktionsinställningar för iO
 I den här uppdateringen är funktionen helskärmsläge på Windows 10 och senare enheter allmänt tillgängligt (GA). Alla inställningar som du kan lägga till och konfigurera finns i [Inställningar för helskärmsläge för Windows 10 (och senare)](kiosk-settings.md).
 
 #### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise----3598396-----"></a>Dela kontakter via Bluetooth har tagits bort i Enhetsbegränsningar > Enhetens ägare för Android Enterprise <!-- 3598396   -->
-När du skapar en profil för enhetsbegränsningar för Android Enterprise-enheter finns inställningen **Dela kontakter via Bluetooth**. I den här uppdateringen tas inställningen **Dela kontakter via Bluetooth** bort (**Enhetskonfiguration** > **Profiler**  >  **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar > Enhetens ägare** för profiltyp >  **Allmän**). 
+När du skapar en profil för enhetsbegränsningar för Android Enterprise-enheter finns inställningen **Dela kontakter via Bluetooth**. I den här uppdateringen tas inställningen **Dela kontakter via Bluetooth** bort (**Enhetskonfiguration** > **Profiler**  >  **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar > Enhetens ägare** för profiltyp > **Allmän**). 
 
 Inställningen **Dela kontakter via Bluetooth** har inte stöd för hantering av Android Enterprise-enhetens ägare. Så när den här inställningen tas bort, påverkar det inga enheter eller klienter, även om den här inställningen är aktiverad och konfigurerad i din miljö.
 
 Om du vill se den aktuella listan över inställningar, gå till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner](device-restrictions-android-for-work.md).
 
 Gäller för: Ägare av Android Enterprise-enhet
-
-#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Uppdatering av användargränssnitt för Intune-appskyddsprinciper <!-- 3251427 -->
-Vi har ändrat etiketterna för inställningar och knappar i Intunes appskydd för att de ska bli lättare att förstå. Några av ändringarna omfattar:  
-- Kontroller ändras från **ja** / **nej** till primärt **blockera**/**tillåt ** och **inaktivera** / **aktivera** kontroller. Även etiketterna har uppdaterats.  
-- Inställningarna formateras om så att inställningen och dess etikett är sida vid sida i kontrollen, vilket ger bättre navigering.   
-
-Standardinställningar och antal inställningar förblir detsamma, men den här ändringen gör att användarna kan förstå, navigera och använda inställningar enklare för att tillämpa valda appskyddsprinciper. Mer information finns i [iOS-inställningar](app-protection-policy-settings-ios.md) och [Android-inställningar](app-protection-policy-settings-android.md).
 
 ### <a name="device-management"></a>Enhetshantering
 
@@ -137,7 +156,9 @@ Intune har inbyggd granskningsloggning som spårar händelser när de ändras. D
 Förutom de skärmar som du kan hoppa över just nu kan du ange att iOS DEP-enheter hoppar över följande skärmar i installationsassistenten när en användare registrerar enheten: Skärmton, Sekretess, Android-migrering, Start-knapp, iMessage och FaceTime, Registrering, Bevaka migrering, Utseende, Skärmtid, Programuppdatering, SIM-installation.
 Om du vill välja vilka skärmar som ska hoppas över, går du till **Enhetsregistrering** > **Apple-registrering** > **Tokens för registreringsprogram** > välj en token > **Profiler** > välj en profil > **Egenskaper** > **Anpassning av installationsassistenten** > välj **Dölj** för alla skärmar som du vill hoppa över > **OK**.
 Om du skapar en ny profil eller redigerar en profil måste den valda överhoppningsskärmen synkroniseras med Apple MDM-servern. Användare kan utfärda en manuell synkronisering av enheterna så att det inte sker någon fördröjning i att plocka upp profiländringarna.
-Funktionen håller på att lanseras men det kommer ta ett par dagar innan den är tillgänglig för alla kunder.
+
+#### <a name="android-enterprise-app-we-app-deployment----1171203---"></a>Appdistribution för Android Enterprise APP-WE <!-- 1171203 -->
+För Android-enheter i ett distributionsscenario med en appskyddsprincip utan registrering (APP-WE) kan du nu använda hanterad Google Play för att distribuera store-appar och LOB-appar till användare. Mer specifikt kan du ge slutanvändarna en appkatalog och installationsfunktioner som inte längre kräver att slutanvändare lättar på säkerhetshållningen för sina enheter genom att tillåta installationer från okända källor. Dessutom kan det här distributionsscenariot ge en förbättrad slutanvändarupplevelse.
 
 ## <a name="week-of-january-14-2019"></a>Veckan som börjar den 14 januari 2019
 
@@ -164,7 +185,7 @@ Administrativa mallar i Intune (**Enhetskonfiguration** > **Administrationsmalla
 
 - De administrativa mallarna innehåller ungefär 300 inställningar som kan hanteras i Intune. De här inställningarna fanns tidigare endast i redigeraren.
 - Administrativa mallar finns i offentlig förhandsversion.
-- Administrativa mallar flyttar från **Enhetskonfiguration** > **Administrativa mallar** till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj  **Windows 10 och senare** > i **Profiltyp**, välj **	Administrativa mallar**.
+- Administrativa mallar flyttar från **Enhetskonfiguration** > **Administrativa mallar** till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Windows 10 och senare** > i **Profiltyp**, välj **Administrativa mallar**.
 - Rapportering är aktiverad
 
 Mer information om den här funktionen finns i [Windows 10-mallar för att konfigurera grupprincipinställningar](administrative-templates-windows.md).
@@ -229,7 +250,7 @@ I den här uppdateringen kan du använda VPN-anslutningar som alltid är aktiva 
 Du kan aktivera VPN-anslutningar som alltid är aktiva i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar** för enhetsägare endast > **Anslutningar**. Om du vill visa inställningarna går du till avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
 
 #### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices----3285177---"></a>Ny inställning för slutprocesser i Aktivitetshanteraren på Windows 10-enheter <!-- 3285177 --> 
-Den här uppdateringen innehåller en ny inställning för att avsluta processer med hjälp av Aktivitetshanteraren på Windows 10-enheter. Med hjälp av en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform** , välj **Windows 10** > i **Profiltyp**, välj **Enhetsbegränsningar** > **Allmänna** inställningar), väljer du att tillåta eller förhindra den här inställningen.
+Den här uppdateringen innehåller en ny inställning för att avsluta processer med hjälp av Aktivitetshanteraren på Windows 10-enheter. Med hjälp av en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Windows 10** > i **Profiltyp**, välj **Enhetsbegränsningar** > **Allmänna** inställningar), väljer du att tillåta eller förhindra den här inställningen.
 Om du vill visa de här inställningarna går du till [Inställningar av begränsningar för Windows 10-enheter](device-restrictions-windows-10.md).
 Gäller för: Windows 10 och senare
 
@@ -400,7 +421,7 @@ Den här funktionen kommer att lanseras till hela användarbasen under de närma
 ### <a name="app-management"></a>Apphantering
 
 #### <a name="require-non-biometric-pin-after-a-specified-timeout----1506985---"></a>Kräv icke-biometrisk PIN efter en angiven tidsgräns <!-- 1506985 -->
-Genom att kräva en icke-biometrisk PIN-kod efter en tidsgräns angiven av en administratör förbättras säkerheten för appar som har aktiverats för hantering av mobilprogram (MAM) genom att användningen av biometrisk identifiering för åtkomst till företagets data begränsas av Intune. Inställningarna påverkar användare som använder sig av Touch ID (iOS), Face ID (iOS), Android Biometric eller någon annan framtida metod för biometrisk autentisering för åtkomst till sina APP/MAM-aktiverade program. De här inställningarna ger Intune-administratörer bättre kontroll över användarnas åtkomst. Du slipper situationer där en enhet med flera fingeravtryck eller andra metoder för biometrisk åtkomst kan avslöja företagets data för fel användare. Öppna **Microsoft Intune** i Azure Portal. Välj **Klientappar** > **Principer för appskydd** > **Lägg till en princip** > **Inställningar**. Leta upp avsnittet **Åtkomst** för specifika inställningar. Läs om åtkomstinställningar i [Inställningar för iOS](app-protection-policy-settings-ios.md#access-settings) och [Inställningar för Android](app-protection-policy-settings-android.md#access-settings).
+Genom att kräva en icke-biometrisk PIN-kod efter en tidsgräns angiven av en administratör förbättras säkerheten för appar som har aktiverats för hantering av mobilprogram (MAM) genom att användningen av biometrisk identifiering för åtkomst till företagets data begränsas av Intune. Inställningarna påverkar användare som använder sig av Touch ID (iOS), Face ID (iOS), Android Biometric eller någon annan framtida metod för biometrisk autentisering för åtkomst till sina APP/MAM-aktiverade program. De här inställningarna ger Intune-administratörer bättre kontroll över användarnas åtkomst. Du slipper situationer där en enhet med flera fingeravtryck eller andra metoder för biometrisk åtkomst kan avslöja företagets data för fel användare. Öppna **Microsoft Intune** i Azure Portal. Välj **Klientappar** > **Principer för appskydd** > **Lägg till en princip** > **Inställningar**. Leta upp avsnittet **Åtkomst** för specifika inställningar. Läs om åtkomstinställningar i [Inställningar för iOS](app-protection-policy-settings-ios.md#access-requirements) och [Inställningar för Android](app-protection-policy-settings-android.md#access-requirements).
 
 #### <a name="intune-app-data-transfer-settings-on-ios-mdm-enrolled-devices----2244713---"></a>Inställningar för Intune APP-dataöverföring på MDM-registrerade iOS-enheter <!-- 2244713 -->
 Du kan skilja kontroll över inställningar för Intune APP-dataöverföring på MDM-registrerade iOS-enheter från att ange identiteten för den registrerade användaren, även kända som UPN (User Principal Name). Administratörer som inte använder IntuneMAMUPN kommer inte att se någon funktionalitetsförändring. När den här funktionen är tillgänglig, bör administratörer som använder IntuneMAMUPN för att styra beteende för dataöverföring på registrerade enheter granska de nya inställningarna och uppdatera sina APP-inställningar efter behov.
@@ -1358,27 +1379,37 @@ Detta påverkar dig om du har eller planerar att ha enheter som kör macOS 10.14
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Du kanske ska informera supportavdelningen. Vi uppdaterar den här sidan när ändringen distribueras. Om du inte vill tillämpa den här lösenordsprincipen för macOS-enheter rekommenderar vi att du tar bort tilldelningen eller tar bort den befintliga macOS-principen.
 
+###<a name="plan-for-change-update-to-ios-setting-for-supervised-devices-in-the-intune-console"></a>Planera för förändring: Uppdatering av iOS-inställning för övervakade enheter i Intune-konsolen  
+Med februariuppdateringen av Intune-tjänsten byter inställningen ”Aktivera begränsningar i enhetsinställningarna” för övervakade iOS-enheter namn till ”Skärmtid (endast övervakat)”. Efter den här ändringen förändras funktionen för slutanvändare utifrån iOS-version.
 
-### <a name="reminder-intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo---2828727--"></a>Påminnelse: Intune-support för Premier-kunder nu i Azure i stället för MPO <!--2828727-->
-I september meddelande vi i MC147649 att vi skulle ta bort möjligheten att skapa Intune-supportbegäran från Microsoft Premier Online-portalen, MPO, (premier.microsoft.com) i december. Efter en smärre fördröjning kommer du nu i slutet av januari att omdirigeras för att skapa supportärenden endast i Intune på Azure. 
+####<a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+När inställningen ”Aktivera begränsningar i enhetsinställningarna (endast övervakat)” byter namn till ”Skärmtid (endast övervakat)” är följande miljön för övervakade enheter (enheter registrerade med Apples registreringsprogram): 
+
+För enheter med iOS 11.4 och tidigare: Den här inställningen kan användas till att förhindra användare att ändra enhetsbegränsningar som förut. Slutanvändarna ser ingen ändring i miljön.
+ 
+För enheter med iOS 12 och senare: Slutanvändarna ser inte längre fliken Begränsningar under Inställningar > Allmänt > Enhetshantering > Hanteringsprofil > Begränsningar.
+Istället blir det en del av Inställningar > Allmänt > Skärmtid. Om du konfigurerar inställningen med värdet ”Blockera” så blockeras användarna från att ändra inställningarna under Skärmtid på sina enheter, vilket också omfattar innehåll och sekretessbegränsningar.
+
+####<a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Uppdatera din vägledning för slutanvändare så att ändringen av funktioner noteras för enheter som uppgraderas till iOS 12 och senare versioner.
 
 
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Som en del av förbättringen av Premier-supportupplevelsen, kommer du när januari är slut att kunna skapa supportbegäranden endast i MPO.  Om du försöker göra detta, visas ett meddelande (som inte kan stängas) om omdirigering till Intune i Azure. Här kan du skapa en supportbegäran som dirigeras till Intune-dedikerade Microsoft Support för felsökning och problemlösning. Observera supportbegäranden som har skapats i MPO-portalen kan inte granskas i Azure-portalen. 
+###<a name="plan-for-change-workflow-changes-for-ios-12-enrollment-in-intune"></a>Planera för förändring: Ändringar av arbetsflödet för iOS 12-registrering i Intune
+Apple har tillkännagivit några ändringar relaterade till iOS-enheters registrering i MDM-tjänster. Ändringen kommer sannolikt i iOS-utgåvan som släpps på våren 2019 och alla framtida iOS-versioner.
 
-Azure-portalen har en ny supportupplevelse som vi meddelade nyligen i MC171941. Mer information om detta finns på [https://aka.ms/new_support_experience](https://aka.ms/new_support_experience) och på länken Ytterligare information.
+####<a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Om dina slutanvändare uppgraderar sina enheter till den här nya versionen av iOS 12 på våren bör du känna till att arbetsflödet ändras och att de måste vidta ytterligare åtgärder för att slutföra registreringen i Intune. När Apple introducerar dessa ändringar måste slutanvändarna: •            inleda registreringsprocessen i appen Företagsportal för att ladda ned en hanteringsprofil •            gå till Inställningar > Allmänt > Profiler •            välja rätt profil och klicka fram till Installera •            gå tillbaka till Företagsportal för att slutföra registreringen 
 
-Om du använder hybridhantering av mobilenheter (hybrid-MDM) eller samhantering, kan du fortsätta att använda MPO för att skapa supportbegäranden för ConfigMgr och börja använda Azure Portal för att skapa supportbegäranden för Intune. Vi påminner om att hybrid-MDM är [inaktuell](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures), och du bör planera att övergå till Intune i Azure så snart som möjligt. Mer information finns i [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+Enheter som redan har registrerats och uppgraderats till den nya iOS-versionen bör inte påverkas om de inte avregistreras och behöver en ny registrering.
+Registreringsprocessen på enheter med iOS 12.1 eller tidigare ändras inte med den här nya versionen av Apple.
 
-Observera att endast användare med rollen Global administratör, Intune-tjänstadministratör och Tjänstsupportadministratör kan skapa supportbegäranden i Azure Portal.
+####<a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Du bör planera en uppgradering av dokumentationen och vägledningen för slutanvändare. Du kanske också vill meddela supportavdelningen om ändringarna. Vi informerar dig via Meddelandecenter och sidan Nyheter när den här ändringen börjar gälla.
 
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-- Sluta använda MPO och börja använda Intune i Azure för att skapa och hantera alla dina Intune-supportbegäranden.  
-- Meddela din supportavdelning och uppdatera dokumentation enligt behov.
-- Om du har användare utan rollen Global administratör eller Intune-tjänstadministratör som för närvarande skapar supportärenden i MPO, tilldelar du dem rollen Tjänstsupportadministratör i Azure Active Directory så att de kan fortsätta att skapa supportbegäranden i Azure Portalen.
+Klicka på Ytterligare information så visas ett blogginlägg med skärmbilder och en video om det förväntade registreringsflödet.
 
-#### <a name="additional-information"></a>Ytterligare information
-[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
+####<a name="additional-information"></a>Ytterligare information
+https://aka.ms/iOS_enrollment_changes
 
 ### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Planera för förändring: Uppdatering av användarupplevelsen för appen Intune-företagsportal för iOS
 Vi är glada att kunna meddela att Intune snart lanserar en större uppdatering av användarupplevelsen i appen Företagsportal för iOS. Uppdateringen omfattar en visuell omarbetning av startsidan med avancerade filter och snabbare åtkomst till appar och böcker.
@@ -1398,12 +1429,12 @@ Du behöver inte vidta några åtgärder. De här ändringarna kommer att lanser
 
 
 ### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Planera för förändring: Exchange Online till Intune-anslutningsprogrammet kommer inte finnas tillgängligt i Intune <!-- 3105122 -->
-Vi kommer att inaktivera Exchange Online till Intune-anslutningsprogrammet ”Service to Service” för att förenkla din upplevelse med Exchange Online och villkorlig åtkomst. Förändringen börjar med tjänstuppdateringen i december och avslutas med tjänstuppdateringen i februari 2019.
+Vi kommer att inaktivera Exchange Online till Intune-anslutningsprogrammet ”Service to Service” för att förenkla din upplevelse med Exchange Online och villkorlig åtkomst.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Du får det här meddelandet eftersom våra uppgifter visar att du använder anslutningsfunktionen ”Service to Service” i din miljö. Anslutningsprogrammet ”Service to Service” stöder Intune-hantering av enheter med endast Exchange Active Sync för Exchange Online och stöder inte lokal infrastruktur. På grund av sättet som anslutningsprogrammet visas på konsolen verkar den vara nödvändig för villkorlig åtkomst (CA), men i verkligheten behövs den inte för CA. I decemberuppdateringen av Intune-tjänster kommer vi, för att göra detta tydligt i konsolen, att inaktivera knappen för att konfigurera nya anslutningsprogram. I februari 2019 kommer sedan alla befintliga anslutningar för Exchange Online till Intune att inaktiveras.
+Du får det här meddelandet eftersom våra uppgifter visar att du använder anslutningsfunktionen ”Service to Service” i din miljö. Anslutningsprogrammet ”Service to Service” stöder Intune-hantering av enheter med endast Exchange Active Sync för Exchange Online och stöder inte lokal infrastruktur. På grund av sättet som anslutningsprogrammet visas på konsolen verkar den vara nödvändig för villkorlig åtkomst (CA), men i verkligheten behövs den inte för CA. I februariuppdateringen av Intune-tjänster kommer vi, för att göra detta tydligt i konsolen, att inaktivera knappen för att konfigurera nya anslutningsprogram. I mars 2019 kommer sedan alla befintliga anslutningar för Exchange Online till Intune att inaktiveras.
 
-Om du använder dessa anslutningsprogram i din miljö kommer du inte kunna övervaka eller rensa enheter med endast Exchange Active Sync i Intune efter att anslutningsprogram har inaktiverats i februari. Det finns ingen förväntad påverkan för slutanvändare under ändringen.
+Om du använder dessa anslutningsprogram i din miljö kommer du inte kunna övervaka eller rensa enheter med endast Exchange Active Sync i Intune efter att anslutningsprogram har inaktiverats i mars. Det finns ingen förväntad påverkan för slutanvändare under ändringen.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 

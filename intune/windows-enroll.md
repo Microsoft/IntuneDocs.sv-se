@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3c100ef3e598bf377f0464bfba161d4ad689ba98
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: bab1656ec141b26cc3e9cb4195da7c1c24e401a1
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626055"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230179"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -82,6 +82,12 @@ Contosos DNS-administratör skapar följande CNAME-poster:
 `EnterpriseEnrollment-s.manage.microsoft.com` – Stöder en omdirigering till Intune-tjänsten med domänidentifiering från e-postens domännamn
 
 Distributionen av DNS-poständringarna kan ta upp till 72 timmar. Du kan inte verifiera DNS-ändringen i Intune förrän DNS-posten har spridits.
+
+## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Ytterligare slutpunkter stöds men rekommenderas inte
+EnterpriseEnrollment-s.manage.microsoft.com är det föredragna fullständiga domännamnet men det finns två andra slutpunkter som har används av kunder tidigare och stöds. Både EnterpriseEnrollment.manage.microsoft.com (utan -s) och manage.microsoft.com fungerar som mål för servern för automatisk identifiering men användare måste trycka på OK på ett bekräftelsemeddelande. Om du vill peka på EnterpriseEnrollment-s.manage.microsoft.commåste inte användaren göra det ytterligare bekräftelsesteget, så det är den rekommenderade konfigurationen
+
+## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternativa metoder för omdirigering stöds inte
+Det går inte att använda en annan metod än CNAME-konfigurationen. Till exempel stöds inte användning av en proxyserver för att omdirigera enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc till enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc eller manage.microsoft.com/EnrollmentServer/Discovery.svc.
 
 **Steg 2: Verifiera CNAME** (valfritt)<br>
 1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **CNAME-validering**.

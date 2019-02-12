@@ -15,12 +15,13 @@ ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 8c4e5e18c0b995ad84340cdbc07a8a11b09e4f3a
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 437740779e0739ec53d9c89e46234cd5b31857e4
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112790"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55835591"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 

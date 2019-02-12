@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: f2b75eb5a87dbfd7a17aee83f173d3d472920428
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203645"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230128"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -420,7 +420,7 @@ Du kan konfigurera den information som alla appar på enheten kan komma åt. Du 
 
 - **Layout för Start-menyn**: Om du vill anpassa Start-menyn på stationära enheter kan du ladda upp en XML-fil som innehåller dina anpassningar, inklusive den ordning som apparna visas i listan etc. Användarna kan inte ändra den layout för Start-menyn som du anger.
 - **Fäst webbplatser på paneler i Start-menyn**: Importera bilder från Microsoft Edge som visas som länkar i Windows Start-menyn för stationära enheter.
-- **Ta bort appar från aktivitetsfältet**: Välj **Blockera** om du vill hindra användaren från att ta bort appar från Start-menyn.
+- **Ta bort appar från aktivitetsfältet**: Välj **Blockera** om du vill hindra användaren från att ta bort appar från aktivitetsfältet.
 - **Snabbt användarbyte**: Välj **Blockera** om du vill förhindra växling mellan användare som är inloggade samtidigt utan utloggning.
 - **Appar som används oftast**: Välj **Blockera** om du vill dölja de appar som oftast används från att visas på Start-menyn. Detta inaktiverar även motsvarande reglage i appen Inställningar.
 - **Nyligen tillagda appar**: Välj **Blockera** om du vill hindra nyligen tillagda appar från att visas på Start-menyn. Detta inaktiverar även motsvarande reglage i appen Inställningar.

@@ -2,10 +2,10 @@
 title: Använda säkerhetsbaslinjer i Microsoft Intune – Azure | Microsoft Docs
 description: Lägg till eller konfigurera rekommenderade gruppsäkerhetsinställningar för att skydda användare och data på enheter som använder Microsoft Intune till att hantera mobilenheter. Aktivera BitLocker, konfigurera Windows Defender Avancerat skydd, styr Internet Explorer, använd SmartScreen, ange lokala säkerhetsprinciper, kräv ett lösenord, blockera hämtningar från Internet och mycket mer.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 02/01/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,23 +14,24 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d78adf8e7d6d2ce05951171e6248dcc8c389945d
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c610371760413cc157bee84382280666f387432b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55070296"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850836"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Skapa en säkerhetsbaslinje för Windows 10 i Intune
 
-Säkerhetsbaslinjer är en funktion som är tillgänglig i en förhandsversion för enheter som kör Windows 10 och senare. Den här funktionen innehåller många Intune-inställningar som skyddar dina användare och enheter. Inställningarna anges också automatiskt till värden som rekommenderas av säkerhetsteamen. Till exempel aktiverar baslinjen automatiskt BitLocker, kräver automatiskt ett lösenord för att låsa upp en enhet, inaktiverar automatiskt grundläggande autentisering och mycket mer.
+Säkerhetsbaslinjer är en funktion som är tillgänglig i en förhandsversion för enheter som kör Windows 10 och senare. Den här funktionen innehåller många inställningar som stöds av Intune som skyddar dina användare och enheter. Inställningarna anges också automatiskt till värden som rekommenderas av säkerhetsteamen. Till exempel aktiverar baslinjen automatiskt BitLocker, kräver automatiskt ett lösenord för att låsa upp en enhet, inaktiverar automatiskt grundläggande autentisering och mycket mer.
 
 Den här funktionen gäller för:
 
 - Windows 10 version 1809 och senare
 
 > [!NOTE]
-> När säkerhetsbaslinjer används i en förhandsversion rekommenderar Microsoft att man inte använder profiler i en produktionsmiljö, eftersom baslinjerna kan komma att ändras i förhandsversionen.
+> När säkerhetsbaslinjer används i en förhandsversion rekommenderar Microsoft att man inte använder profiler i en produktionsmiljö, eftersom baslinjerna kan komma att ändras i förhandsversionen. När säkerhetsbaslinjer är allmänt tillgängliga konverteras inte befintliga profiler till de senaste profilerna som stöds.
 
 Målet med att använda säkerhetsbaslinjer är att få ett säkert arbetsflöde från slutpunkt till slutpunkt när du arbetar med Microsoft 365. Några av fördelarna är:
 
@@ -94,6 +95,12 @@ När profilen har skapats är den klar att tilldelas till dina användare, enhet
 
 När du har sparat skickas profilen till enheterna när de checkar in med Intune. Därför kan detta inträffa omedelbart.
 
+## <a name="available-security-baselines"></a>Tillgängliga säkerhetsbaslinjer  
+
+Följande säkerhetsbaslinjer är tillgängliga för användning med Intune.
+- **Förhandsversion: MDM-säkerhetsbaslinje**
+  - Version: [Oktober 2018](security-baseline-settings-windows.md)
+
 ## <a name="q--a"></a>Frågor och svar
 
 #### <a name="why-these-settings"></a>Varför ska man använda de här inställningarna?
@@ -117,5 +124,5 @@ Egentligen inte. Microsofts säkerhetsteam har kontakt med organisationer, som e
 - Att migrera från lokala Active Directory-grupprinciper till en ren molnlösning med hjälp av Azure Active Directory (AD) och Microsoft Intune kan kännas övermäktigt. Som hjälp finns det dock tillhörande grupprincipobjekt som har publicerats för hybrid AD- och Azure AD-anslutna enheter. Dessa enheter kan hämta MDM-inställningar från molnet (Intune) och grupprincipinställningar från lokala domänkontrollanter när det behövs.
 
 ## <a name="next-steps"></a>Nästa steg
-
-Kontrollera statusen och övervaka [baslinje och profil](security-baselines-monitor.md).
+- Visa [inställningarna för Windows-säkerhetsbaslinjer](security-baseline-settings-windows.md) som stöds av Intune.  
+- Kontrollera statusen och övervaka [baslinje och profil](security-baselines-monitor.md).

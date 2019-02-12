@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 61cb1a3c9de10020381d62a2a7795d5ff728db22
-ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7886f533f6ffa379132ac7c898bc5c1a1dac9111
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55199429"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836548"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -101,7 +102,7 @@ När du väljer helskärmsläge för flera appar kan du ange följande inställn
 
     - **Programnamn**: Obligatoriskt. Ange ett namn på programmet.
     - **Lokal sökväg**: Obligatoriskt. Ange sökvägen till den körbara filen, till exempel `C:\Program Files (x86)\Microsoft VS Code\Code.exe` eller `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-    - **ID för programanvändarmodell (AUMID)**: Ange ID för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Information om hur du hittar detta ID finns i [Hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+    - **ID för programanvändarmodell (AUMID)**: Ange ID för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Se [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) för hur du hämtar detta ID.
     - **Panelstorlek**: Obligatoriskt. Välj storleken Liten, Medel, Bred eller Stor för appanelen.
   
   - **Lägg till via AUMID**: Använd det här alternativet för att lägga till inkorgens Windows-appar, till exempel Anteckningar eller Kalkylatorn. Ange följande egenskaper: 

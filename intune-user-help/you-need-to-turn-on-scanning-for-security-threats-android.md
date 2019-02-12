@@ -15,12 +15,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: c98980cca305bef01dd91e69d00a471b10e741a8
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 810e2175faef422eb0ccf9bd24ac8d9b43aee92d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147493"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846918"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Aktivera sökning efter säkerhetshot på din enhet 
 Om du installerar en osäker app utan vetskap, kanske dina data på enheten utsätts för risk. För att skydda data på enheten, rekommenderar vi att du: 

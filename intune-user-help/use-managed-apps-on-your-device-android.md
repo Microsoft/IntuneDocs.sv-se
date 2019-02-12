@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d5b07262dad3eaab76dd4854b82f0e45b3921b26
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3ba4ca5ccc9083f2132a8b8893c3bc2070ed3c50
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203509"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841342"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
 Hanterade appar konfigureras för att uppfylla din organisations säkerhetskrav och för att skydda arbets- och skoldata. De här apparna görs tillgängliga för dig på din enhet, där de kan installeras eller användas automatiskt. 

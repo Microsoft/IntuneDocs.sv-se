@@ -16,12 +16,13 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: db6aed3d87b8a8df55c5c95e52eb3dd9ccc690a7
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 512fc924f71ba9a9fdd46ba8f5f5c087de83c2dd
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54386956"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840424"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -108,8 +109,8 @@ Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till
 3. Välj **Klientappar**.
 3. Under **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 4. Ange följande information:
-    - **Namn**. Namnet på den profil som visas i Azure-portalen.
-    - **Beskrivning**. Beskrivning av den profil som visas i Azure-portalen.
+    - **Namn**. Namnet på den profil som visas i Azure Portal.
+    - **Beskrivning**. Beskrivning av den profil som visas i Azure Portal.
     - **Enhetsregistreringstyp**. Välj **Hanterade enheter**.
     - **Plattform**. Välj **Android**.
 5. Välj **Tillhörande app** för att välja den app som du vill definiera en konfigurationsprincip för. Välj i listan med Android-arbetsprofilappar som du har godkänt och synkroniserat med Intune.

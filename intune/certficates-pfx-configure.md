@@ -2,8 +2,8 @@
 title: Använda certifikat med privata och offentliga nycklar i Microsoft Intune – Azure | Microsoft Docs
 description: Lägg till eller skapa ett Public Key Cryptography Standards-certifikat (PKCS) med Microsoft Intune, inklusive stegen för att exportera ett rotcertifikat, konfigurera certifikatmallen, ladda ned och installera Microsoft Intune Certificate Connector (NDES), skapa en profil för enhetskonfiguration, skapa en PKCS-certifikatprofil i Azure och din certifikatutfärdare.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 12/10/2018
 ms.topic: article
@@ -11,16 +11,17 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 6a617f56e688d8dd6e9bca8e964e075865f05be1
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5c2c649df23a84d8836a68fd0456da6ce8dda2c0
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203628"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837313"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -136,6 +137,7 @@ För att autentisera med VPN, Wi-Fi eller andra resurser behöver du ett rot-CA-
 6. Vi rekommenderar att du på fliken **Avancerat** låter **Använd den här datorns systemkonto (standard)** vara markerat.
 7. **Tillämpa** > **Stäng**
 8. Gå tillbaka till Azure-portalen (**Intune** > **Enhetskonfiguration** > **Certifikatutfärdare**). Efter en stund visas en grön bockmarkering och **Anslutningsstatus** är **Aktiv**. Anslutningsservern kan nu kommunicera med Intune.
+9. Om du har en webbproxy i nätverksmiljön kan du behöva ytterligare konfigurationer för att anslutningsappen ska fungera. Mer information finns i [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) i Azure Active Directory-dokumentationen.
 
 > [!NOTE]
 > Stöd för TSL 1.2 ingår i Microsoft Intune-certifikatanslutningsappen. Om servern med Microsoft Intune-certifikatanslutningsappen installerad stödjer TLS 1.2 används därmed TLS 1.2. Om servern inte stödjer TLS 1.2 används TLS 1.1. För närvarande används TLS 1.1 för autentisering mellan enheter och servern.

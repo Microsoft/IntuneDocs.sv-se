@@ -16,12 +16,13 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4aa5cb24bc153839c6aac193f074128dd46a2e5f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 40278904cd3af75451d0323a7665e88f6b526928
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185414"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844266"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Tilldela Office 365 till macOS-enheter med Microsoft Intune
 
@@ -48,17 +49,17 @@ Lägg till Office 365 från fönstret **Appar**.
 7. Välj **Information om appsvit** för att få information om appsviten.  
     Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
 8. Ange följande information:
-    - **Paketnamn**: Ange namnet på appsviten så som det visas på företagsportalen. Kontrollera att alla svitnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
-    - **Svitbeskrivning**: Ange en beskrivning för appsviten.
+    - **Namn på programsvit**: Ange namnet på appsviten så som det visas i företagsportalen. Kontrollera att alla svitnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
+    - **Beskrivning av programsvit**: Ange en beskrivning av appsviten.
     - **Utgivare**: Microsoft visas som utgivare.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Inställningen gör det enklare för användarna att hitta appaketet när de söker på företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen**: Välj det här alternativet för att visa appsviten på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Sekretess-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
+    - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
+    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
+    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
     - **Utvecklare**: Microsoft visas som utvecklare.
     - **Ägare**: Microsoft visas som ägare.
-    - **Anteckningar**: Alternativt kanske du vill ge kommentarer som du vill koppla till den här appen.
-    - **Logo**: Office 365-logotypen visas med appen när användare söker på företagsportalen.
+    - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
+    - **Logotyp**: Office 365-logotypen visas med appen när användarna söker på företagsportalen.
 9. Välj **OK**.
 10. I fönstret **Lägg till app** väljer du **Lägg till**.  
     Programsviten visas som en enda post i listan över appar.

@@ -28,7 +28,9 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
    - **Alla** – Alla användare kan automatiskt registrera sina Windows 10-enheter
 
       > [!IMPORTANT]
-      > Om både **MAM-användaromfattning** och automatisk MDM-registrering (**MDM-användaromfattning**) är aktiverat för en grupp så är endast MAM aktiverat. Endast MAM läggs till för användare i gruppen när de arbetsplatsansluter personliga enheter. Enheter MDM-registreras inte automatiskt.
+      > För BYOD-enheter har MAM-användaromfattningen företräde om både MAM- och MDM-användaromfattningen (automatisk MDM-registrering) har aktiverats för alla användare (eller samma grupper av användare). Enheten använder WIP-principer (Windows Information Protection) (om du har konfigurerat dem) istället för att vara MDM-registrerade.
+      >
+      > För företagsenheter har MDM-användaromfattningen företräde om båda omfattningarna har aktiverats. Enheterna MDM-registreras.
 
    ![Skärmbild av Azure-portalen](../media/auto-enroll-scope.png)
 

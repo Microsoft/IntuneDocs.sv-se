@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d87d8c8da5511f641b785f28bad7d7ef6739d888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 86c822ba197851fe7e05d91ff8aa703fb9fe3811
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184462"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842803"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Använda anpassade inställningar för Windows 10-enheter i Intune
 
@@ -43,7 +44,7 @@ Den här artikeln:
 3. Ange följande inställningar:
 
     - **Namn**: Ange ett namn för profilen, till exempel `windows 10 custom profile`.
-    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Beskrivning**: Ange en beskrivning av profilen.
     - **Plattform**: Välj **Windows 10 och senare**.
     - **Profiltyp**: Välj **Anpassad**.
 
@@ -51,7 +52,7 @@ Den här artikeln:
 
     - **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
     - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
-    - **OMA-URI** (skiftlägeskänsligt): Ange den OMA-URI som du vill använda som inställning.
+    - **OMA-URI** (skiftlägeskänslig): Ange den OMA-URI som du vill använda som inställning.
     - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
 
         - Sträng

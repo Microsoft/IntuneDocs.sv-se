@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5f1423b0f2f216f65026d2b1a7bf52dda39c9f88
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cd4562b001eaefc8e10512a42b08d49385f75808
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642514"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834117"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Lägg till iOS Store-appar i Microsoft Intune
 
@@ -53,14 +54,14 @@ Du kan endast tilldela appar med den här metoden om de är gratis i App Store. 
 10. I resultatlistan väljer du den app du önskar och klickar sedan på **Välj**.
 11. I fönstret **Lägg till app** väljer du **Appinformation** för att konfigurera appen.
 12. Lägg till appinformationen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
-    - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
+    - **Namn**: Ange namnet på appen så som den ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
     - **Webbadress till appbutik**: Skriv App Stores URL för den app som du vill skapa.
     - **Lägsta operativsystemsversion**: Välj den tidigaste operativsystemsversion i listan som appen kan installeras i. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
     - **Tillämplig enhetstyp**: I listan väljer du de enheter som används av appen.
     - **Kategori**: Du kan även välja en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
-    - **Visa den som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användare söker efter appar.
+    - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
     - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
     - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
     - **Utvecklare**: Alternativt kan du ange apputvecklarens namn. Det här fältet visas bara för administratörer och är inte synligt för användarna.

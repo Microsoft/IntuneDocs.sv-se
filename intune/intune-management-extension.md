@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 063a5cbbe18efc5c406c9dc7f2fa40d614b2e48a
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: 444fd63f8c582d35891dfa5aedb9eadd6626e541
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860970"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303403"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 
@@ -38,7 +38,7 @@ Tillägget för Intune-hantering kompletterar de inbyggda funktionerna i Windows
 
 Intune-hanteringstillägget har följande krav:
 
-- Enheter måste vara anslutna till Azure AD och [automatiskt registrerade](windows-enroll.md#enable-windows-10-automatic-enrollment). Intune-hanteringstillägget har stöd för Azure AD-anslutna, hybriddomänanslutna och samhanterade registrerade Windows-enheter. GPO-registrerade enheter stöds inte.
+- Enheter måste anslutas till eller registreras i Azure AD och Azure AD konfigureras för [automatisk registrering i Intune](windows-enroll.md#enable-windows-10-automatic-enrollment). Intune-hanteringstillägget har stöd för Azure AD-anslutna, hybriddomänanslutna och samhanterade registrerade Windows-enheter.
 - Enheterna måste köra Windows 10 version 1607 eller senare.
 - Intune-hanteringstilläggsagenten installeras när ett PowerShell-skript eller en Win32-app distribueras till en användare eller en enhetssäkerhetsgrupp.
 
@@ -62,9 +62,9 @@ Intune-hanteringstillägget har följande krav:
 3. Välj en eller flera grupper som innehåller de användare vars enheter skriptet ska köras på. **Välj** att tilldela principen till de valda grupperna.
 
 > [!NOTE]
-> - PowerShell-skript kan inte tillämpas på datorgrupper.
 > - Slutanvändarna behöver inte vara inloggade på enheten för att köra PowerShell-skript.
 > - PowerShell-skript i Intune kan riktas mot säkerhetsgrupper för Azure AD-enheter.
+> - PowerShell-skript i Intune kan riktas mot säkerhetsgrupper för Azure AD-användare.
 
 Intune-hanteringstilläggsklienten kontrollerar Intune en gång i timmen. När du tilldelar principen till Azure AD-grupper körs PowerShell-skriptet och körningsresultaten rapporteras.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 01/30/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
-ms.openlocfilehash: a5a756cd3fd8b78893cee6a3c4629e49d6ac7c87
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: 8656e480c292fc9ed1212f9d2c180b791cb4f94c
+ms.sourcegitcommit: ce76541ceb783eb2e242032ef8579041d2f61532
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072549"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55431498"
 ---
 # <a name="ios-device-feature-settings-in-intune"></a>Funktionsinställningar för iOS-enheter i Intune
 
@@ -177,16 +177,23 @@ Välj hur installerade appar på iOS-enheter skickar meddelanden. Inställningar
 
 Använd de här inställningarna för att visa ett anpassat meddelande eller text i inloggningsfönstret och på låsskärmen. Du kan till exempel skriva ett meddelande av typen ”Upphittad enhet återlämnas till...” och resurstagginformation. 
 
-Inställningarna har stöd för övervakade enheter som kör iOS 9.3 och senare.
+Den här funktionen stöder övervakade enheter som kör:
 
-1. I **Inställningar** väljer du **Konfiguration för delad enhet (endast övervakat)**.
+- iOS 9.3 och senare
+
+1. I **Inställningar** väljer du **Meddelande på låsskärm (endast övervakat)**.
 2. Ange följande inställningar:
 
-    - **Resurstagginformation**: Ange information om resurstaggen för enheten. Ange till exempel `Owned by Contoso Corp`. 
+    - **Resurstagginformation**: Ange information om resurstaggen för enheten. Ange till exempel `Owned by Contoso Corp` eller `Serial Number: {{serialnumber}}`. 
 
       Den text du anger visas i inloggningsfönstret och på låsskärmen på enheten.
 
-    - **Fotnot på låsskärmen**: Ange en kommentar som kan hjälpa dig att få tillbaka enheten om den tappas bort eller blir stulen. Ange något i stil med `If found, call Contoso at ...`.
+    - **Fotnot på låsskärmen**: Ange en kommentar som kan hjälpa dig att få tillbaka enheten om den tappas bort eller blir stulen. Du kan ange valfri text. Ange något i stil med `If found, call Contoso at ...`.
+
+    Enhetstoken kan också användas för att lägga till enhetsspecifik information i de här fälten. Ange till exempel `Serial Number: {{serialnumber}}` om du vill visa serienumret. På låsskärmen visas texten ungefär som `Serial Number 123456789ABC`. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceName` eller andra enhetsspecifika värden.
+
+    > [!NOTE]
+    > Variabler verifieras inte i användargränssnittet. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{Devicename}}` istället för `{{devicename}}` visas litteralsträngen istället för enhetens unika namn.
 
 3. När du är klar väljer du **OK** för att spara ändringarna.
 
@@ -279,6 +286,8 @@ Dessa inställningar styr webbläsarens URL-åtkomst på iOS-enheter.
 ## <a name="wallpaper-settings"></a>Inställningar för bakgrundsbild
 
 Lägg till en anpassad PNG-, JPG- eller JPEG-bild till övervakade iOS-enheter. Till exempel kan du använda en företagslogotyp på låsskärmen.
+
+Ett oväntat beteende kan uppstå när en profil utan bild tilldelas till enheter med en befintlig bild. Exempel: Du skapar en profil utan någon bild. Profilen tilldelas till enheter som redan har en bild. I det här scenariot kan bilden ändras till enhetens standardinställda eller så kan den ursprungliga bilden stanna kvar på enheten. Det här beteendet styrs och begränsas av Apples MDM-plattform.
 
 - **Plats för visning av bakgrundsbild**: Välj en plats på enheten för att visa bilden. Alternativen är:
   - **Inte konfigurerad**: En anpassad bild inte har lagts till på enheten. Enheten använder standardoperativsystemet.

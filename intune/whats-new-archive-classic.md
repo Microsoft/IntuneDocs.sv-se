@@ -15,12 +15,13 @@ ROBOTS: noindex,nofollow
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 56d5d9c773a11b3884b4e72b55fab27e7044f1e9
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5186af2e02363d74f2f046188168efd38eee363
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112909"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55843433"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nyheter i den klassiska Intune-portalen – föregående månader
 
@@ -315,7 +316,7 @@ Intune markerar alla nya enheter som personliga såvida inte IT-administratören
 
 ### <a name="notices"></a>Meddelanden
 
-__Multifaktorautentisering vid registrering flyttar till Azure-portalen__  <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen kommer du nu att logga in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurera MFA-inställningar via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
+__Multifaktorautentisering vid registrering flyttar till Azure-portalen __ <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen kommer du nu att logga in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurera MFA-inställningar via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
 
 __Företagsportalappen för Android är nu tillgänglig i Kina__ <!--VSO 658093--> Vi publicerar företagsportalappen för Android för hämtning i Kina. På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta appar från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)

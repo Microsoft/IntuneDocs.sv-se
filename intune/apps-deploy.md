@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
-ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8ff89d1776d71dc24ea675de167f3fd22d6bdf04
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53734280"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838775"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -51,7 +52,7 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 >
 > För att ta emot app-uppdateringar på enheter som inte är registrerade med Intune, måste enhetsanvändare gå till sin organisations företagsportal och manuellt installera app-uppdateringarna.
 
-## <a name="to-assign-an-app"></a>Så här tilldelar du en app
+## <a name="assign-an-app"></a>Tilldela en app
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
@@ -62,7 +63,7 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 7. Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
 8. Välj en **Tilldelningstyp** för den specifika appen:
    - **Tillgänglig för registrerade enheter**: Tilldela appen till användargrupper som kan installera appen från företagsportalappen eller webbplatsen.
-   - **Tillgänglig med eller utan registrering**: Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Appar från Managed Google Play stöder inte den här funktionen. Användarna måste tilldelas en Intune-licens, se [Intune-licenser](licenses.md).
+   - **Tillgänglig med eller utan registrering**: Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Användarna måste tilldelas en Intune-licens, se [Intune-licenser](licenses.md).
    - **Obligatoriskt**: Appen installeras på enheter i valda grupper. Vissa plattformar kan ha ytterligare uppmaningar som användaren ska bekräfta innan appinstallationen påbörjas.
    - **Avinstallera**: Appen avinstalleras från enheter i valda grupper om Intune tidigare har installerat programmet på enheten via tilldelningen ”Tillgänglig för registrerade enheter” eller ”Obligatorisk” med hjälp av samma distribution. Webblänkar kan inte tas bort efter distributionen.
 
@@ -122,6 +123,9 @@ Ibland har samma app tilldelats flera grupper, men med olika avsikter. Informati
 > [!NOTE]
 > Endast för hanterade iOS Store-appar. När du lägger till dem i Microsoft Intune och tilldelar dem som **Nödvändiga** skapas apparna automatiskt med både avsikten **Nödvändig** och **Tillgänglig**.<br><br>
 > iOS Store-appar (inte iOS VPP-appar) som är riktade med nödvändigt syfte tillämpas på enheten vid tidpunkten för incheckning och visas även i företagsportalappen.
+
+## <a name="android-enterprise-app-we-app-deployment"></a>Appdistribution för Android Enterprise APP-WE
+För Android-enheter i ett distributionsscenario med en appskyddsprincip utan registrering (APP-WE) kan du nu använda hanterad Google Play för att distribuera store-appar och LOB-appar till användare. Mer specifikt kan du ge slutanvändarna en appkatalog och installationsfunktioner som inte längre kräver att slutanvändare lättar på säkerhetshållningen för sina enheter genom att tillåta installationer från okända källor. Dessutom kan det här distributionsscenariot ge en förbättrad slutanvändarupplevelse. Anvisningar för hur du tilldelar en app finns i [Tilldela en app](apps-deploy.md#assign-an-app).
 
 ## <a name="next-steps"></a>Nästa steg
 

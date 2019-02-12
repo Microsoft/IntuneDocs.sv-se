@@ -2,8 +2,8 @@
 title: Konfigurera uppdateringsprinciper för iOS-programvara i Microsoft Intune – Azure | Microsoft Docs
 description: I Microsoft Intune skapar du eller lägger till en konfigurationsprincip för att begränsa när programvaruuppdateringar installeras automatiskt på iOS-enheter som hanteras eller övervakas av Intune. Du kan välja datum och tid när uppdateringar inte installeras. Du kan även tilldela den här principen till grupper, användare eller enheter samt söka efter eventuella installationsfel.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 10/11/2018
 ms.topic: article
@@ -11,12 +11,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 search.appverid: MET150
-ms.openlocfilehash: 61bd7d5cf40355536aa7d5c361a771ce2b4f30ec
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cce77976ea0cb31596ca0a1fd6c4becc9e3cee34
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189885"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55833607"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurera iOS-uppdateringsprinciper i Intune
 
@@ -33,7 +34,10 @@ Den här funktionen stöder enheter som kör iOS 10.3 och senare versioner. För
 4. Ange ett namn och en beskrivning för principen.
 5. Välj **Inställningar**. 
 
-    Ange information om när iOS-enheter inte ska tvingas att installera de senaste uppdateringarna. Dessa inställningar skapar en begränsad tidsram. Du kan konfigurera **Dagar** i veckan, **Tidszon**, **Starttid**, **Sluttid** och **Fördröj visning av programuppdateringar (dagar)** för att ange användare. Du kan välja en fördröjningstid för programuppdateringar från 1 till 90 dagar. Om du inte vill ställa in en fördröjningstid för programuppdatering anger du 0. De här uppdateringsinställningarna gäller endast övervakade iOS-enheter.
+    Ange information om när iOS-enheter inte ska tvingas att installera de senaste uppdateringarna. Dessa inställningar skapar en begränsad tidsram. Du kan konfigurera **Dagar** i veckan, **Tidszon**, **Starttid**, **Sluttid** och **Fördröj visning av programuppdateringar (dagar)** för att ange användare. Du kan välja en fördröjningstid för programuppdateringar från 1 till 90 dagar. När fördröjningen upphör får användarna ett meddelande om att uppdatera till den tidigaste versionen av OS som var tillgänglig när fördröjningen utlöstes. Om du inte vill ställa in en fördröjningstid för programuppdatering anger du 0. De här uppdateringsinställningarna gäller endast övervakade iOS-enheter.
+  
+    Exempel: Om iOS 12.a är tillgänglig den **1 januari** och du har **fördröjning av OS-uppdateringar** inställt på **5 dagar** visas inte den versionen som en tillgänglig uppdateringar på några slutanvändarenheter tilldelade till den profilen. På den **sjätte dagen** efter utgivningen visas den uppdateringen som tillgänglig och alla slutanvändare kan starta en uppdatering.
+
 
 6. Klicka på **OK** för att spara ändringarna. Välj **Skapa** för att skapa principen.
 
@@ -44,7 +48,7 @@ Profilen skapas och visas i principlistan. Apple MDM tillåter inte att du tving
 1. I **Programuppdateringar** väljer du **Uppdateringsprinciper för iOS**.
 2. Välj en befintlig princip > **Egenskaper**.
 3. Uppdatera den begränsade tiden:
-
+    
     1. Välj veckodagar
     2. Välj den tidszon som den här principen tillämpas i
     3. Ange start- och sluttid för svartlistade timmar

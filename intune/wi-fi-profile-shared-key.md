@@ -15,12 +15,13 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a7250471e698d32a305755147943311d2150f0b2
-ms.sourcegitcommit: a27a9c4cae47be50807aa3c890f0d5c0c023f04a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 40711576af9b7799211971418a0b2529d12468cd
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52618194"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836395"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -122,7 +123,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ## <a name="eap-based-wi-fi-profile-example"></a>Exempel på EAP-baserad Wi-Fi-profil
-Följande exempel innehåller XML-koden för en EAP-baserad Wi-Fi-profil: Exemplet ges för att visa rätt format och ge mer information. Det är bara ett exempel och är inte avsett som en rekommenderad konfiguration för din miljö.
+Följande exempel på XML-koden för en EAP-baserad Wi-Fi-profil: Exemplet tillhandahålls för att visa rätt format och ge mer information. Det är bara ett exempel och är inte avsett som en rekommenderad konfiguration för din miljö.
 
 
 ```

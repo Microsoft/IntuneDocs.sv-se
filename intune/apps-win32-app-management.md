@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,30 +16,30 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cb52a9755dffd20e6d3d66419855cc4ee7fca293
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: ba77c14e470ed75a87f44adcaf0ba9b98cd06438
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55068330"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290765"
 ---
-# <a name="intune-standalone---win32-app-management-public-preview"></a>Fristående Intune – Win32-apphantering (offentlig förhandsversion)
+# <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
 Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-appar. Molnanslutna kunder kan använda Configuration Manager för Win32-apphantering, men kunder med fristående Intune har tillgång till bättre hanteringsfunktioner för sina verksamhetsspecifika Win32-appar. Det här avsnittet innehåller en översikt över Intunes hanterings- och felsökningsfunktioner för Win32-appar.
 
-## <a name="prerequisites-for-public-preview"></a>Krav för den offentliga förhandsversionen
+## <a name="prerequisites"></a>Krav
 
 - Windows 10 version 1607 eller senare (Enterprise- och Pro Education-versionerna)
 - Windows 10-klienten måste vara: 
     - ansluten till Azure Active Directory (AAD) eller Hybrid Azure Active Directory och
     - registrerad i Intune (MDM-hanterad)
-- Storleken för Windows-program är högst 8 GB per app i den offentliga förhandsversionen 
+- Storleken för Windows-program är högst 8 GB per app
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Förbereda Win32-appinnehållet för uppladdning
 
-Använd [förberedelseverktyget för Win32-appuppladdning till Microsoft Intune](https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool) för att förbearbeta Win32-appar. Paketeringsverktyget konverterar programinstallationsfilerna till formatet *.intunewin*. Paketeringsverktyget identifierar även vissa av de attribut som krävs av Intune för att fastställa programmets installationstillstånd. När du har använt det här verktyget med appinstallationsmappen kan du skapa en Win32-app i Intune-konsolen.
+Använd [förberedelseverktyget för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) för att förbearbeta Win32-appar. Verktyget konverterar programinstallationsfilerna till formatet *.intunewin*. Verktyget identifierar även vissa av de attribut som krävs av Intune för att fastställa programmets installationstillstånd. När du har använt det här verktyget med appinstallationsmappen kan du skapa en Win32-app i Intune-konsolen.
 
-Du kan ladda ned [förberedelseverktyget för Win32-appuppladdning till Microsoft Intune](https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool) från GitHub.
+Du kan ladda ned [förberedelseverktyget för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) från GitHub.
 
 ### <a name="available-command-line-parameters"></a>Tillgängliga kommandoradsparametrar 
 
@@ -74,7 +74,7 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 1.  Logga in på [Azure Portal](https://portal.azure.com/).
 2.  Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3.  I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
-4.  I appfönstret **Lägg till** väljer du **Windows-app (Win32) – förhandsversion** från den nedrullningsbara listan.
+4.  I appfönstret **Lägg till** väljer du **Windows-app (Win32)** från den nedrullningsbara listan.
 
     ![Skärmbild av bladet Lägg till app – Listrutan Lägg till typ](./media/apps-win32-app-01.png)
 
@@ -85,6 +85,10 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
     ![Skärmbild av bladet Appaketfil](./media/apps-win32-app-02.png)
 
 2.  I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en Windows-installationsfil med tillägget *.intunewin*.
+
+    > [!IMPORTANT]
+    > Se till att ha den senaste versionen av förberedelseverktyget för Microsoft Win32-innehåll. Om du inte använder den senaste versionen visas en varning om att appen har paketerats med en äldre version av förberedelseverktyget för Microsoft Win32-innehåll. 
+
 3.  Välj **OK** när du är klar.
 
 ### <a name="step-3-configure-app-information"></a>Steg 3: Konfigurera appinformation
@@ -171,7 +175,7 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
             
                 ![Skärmbild av fönstret för identifieringsregel – registernyckeln finns](./media/apps-win32-app-05.png)    
             
-            2.  Sök baserat på om registervärdet finns (**inte tillgängligt i förhandsversionen**).
+            2.  Kontrollera om det finns något registervärde.
         
                 ![Skärmbild av fönstret för identifieringsregel – registervärdet finns](./media/apps-win32-app-06.png)    
         

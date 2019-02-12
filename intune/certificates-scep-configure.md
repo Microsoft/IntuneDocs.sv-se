@@ -2,24 +2,25 @@
 title: Använda SCEP-certifikat med Microsoft Intune – Azure | Microsoft Docs
 description: Konfigurera ditt lokala AD-domän, skapa en certifikatutfärdare, konfigurera NDES-servern och installera Intune Certificate Connector om du vill använda SCEP-certifikat i Microsoft Intune. Sedan skapar du en SCEP-certifikatprofil och tilldelar den till grupper. Se även olika händelse-id:n och deras beskrivningar, samt diagnostikkoderna för Intune-anslutningsappen.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 1/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.reviewer: kmyrup
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
-ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 50235e4e21e738081dc1b41d8e6a8b6210430064
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597383"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838146"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -562,3 +563,4 @@ Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **
 
 - [Använda PKCS-certifikat](certficates-pfx-configure.md) eller [utfärda PKCS-certifikat från en Symantec PKI-hanterad webbtjänst](certificates-symantec-configure.md)
 - [Lägg till en tredjeparts-CA för att använda SCEP med Intune](certificate-authority-add-scep-overview.md)
+- Mer hjälp finns i guiden [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune) (Felsökning av SCEP-certifikatprofildistribution i Microsoft Intune).

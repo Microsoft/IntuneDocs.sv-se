@@ -1,7 +1,7 @@
 ---
-title: Registrering för Hybrid Active Directory-anslutna enheter – Windows Autopilot
+title: Registrering för Azure AD-anslutna hybridenheter – Windows Autopilot
 titleSuffix: ''
-description: Använd Windows Autopilot till att registrera Hybrid Active Directory-anslutna enheter i Microsoft Intune.
+description: Använd Windows Autopilot till att registrera Azure AD-anslutna hybridenheter i Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,20 +16,19 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 171e994be67a24e351b242967c8af934272da356
-ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
+ms.openlocfilehash: b952483fc0cb33b32769a4b83564618b082c4b87
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55105178"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303454"
 ---
-# <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Distribuera Hybrid Azure AD-anslutna enheter med Intune och Autopilot för Windows (förhandsversion)
-Du kan använda Intune och Windows Autopilot för att konfigurera Hybrid Azure Active Directory-anslutna enheter. Du gör det genom att följa stegen nedan.
+# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot (förhandsversion)
+Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
 
 ## <a name="prerequisites"></a>Krav
 
-- Konfigurera [Hybrid Azure Active Directory-ansluta enheter](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
-    - Verifiera [registreringen med hjälp av cmdleten Get-MsolDevice]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration).
+Konfigurera [Azure AD-anslutna hybridenheterna](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). [Verifiera enhetsregistreringen]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) med hjälp av cmdleten Get-MsolDevice.
 
 Enheter som ska registreras måste också:
 - Köra Windows 10 med [uppdateringen för oktober 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).
@@ -39,109 +38,112 @@ Enheter som ska registreras måste också:
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurera automatisk registrering i Windows 10
 
-1. Logga in på [Azure Portal](https://portal.azure.com) och välj **Azure Active Directory**.
+1. Logga in på [Azure Portal](https://portal.azure.com) och välj **Azure Active Directory** i det vänstra fönstret.
 
-   ![Skärmbild av Azure-portalen](./media/auto-enroll-azure-main.png)
+   ![Azure Portal](./media/auto-enroll-azure-main.png)
 
-2. Välj **Mobility (MDM och MAM)**.
+1. Välj **Mobility (MDM och MAM)**.
 
-   ![Skärmbild av Azure-portalen](./media/auto-enroll-mdm.png)
+   ![Azure Active Directory-fönstret](./media/auto-enroll-mdm.png)
 
-3. Välj **Microsoft Intune**.
+1. Välj **Microsoft Intune**.
 
-   ![Skärmbild av Azure-portalen](./media/auto-enroll-intune.png)
+   ![Fönstret Mobility (MDM och MAM)](./media/auto-enroll-intune.png)
 
-4. Kontrollera att användarna som distribuerar Azure Active Directory-anslutna enheter med Intune och Windows är medlemmar i en grupp som ingår i ditt **MDM-användaromfång**.
+1. Kontrollera att användarna som distribuerar Azure AD-anslutna enheter med Intune och Windows är medlemmar i en grupp som ingår i ditt **MDM-användaromfång**.
 
-   ![Skärmbild av Azure-portalen](./media/auto-enroll-scope.png)
+   ![Fönstret Konfigurera i Mobility (MDM och MAM)](./media/auto-enroll-scope.png)
 
-5. Använd standardvärdena för följande URL:er:
-    - **Webbadress till MDM-användarvillkor**
-    - **Webbadress till MDM-identifiering**
-    - **Webbadress till MDM-kompatibilitet**
-6. Välj **Spara**.
+1. Använd värdena i rutorna **MDM-användarvillkor-URL**, **Webbadress till MDM-identifiering** och **MDM-kompatibilitets-URL** och välj sedan **Spara**.
 
 ## <a name="increase-the-computer-account-limit-in-the-organizational-unit"></a>Öka gränsen för datorkontot i organisationsenheten
 
 Intune Connector för Active Directory skapar Autopilot-registrerade datorer i den lokala Active Directory-domänen. Värddatorn för Intune Connector måste ha behörighet att skapa datorobjekt i domänen. 
 
-I vissa domäner beviljas inte datorer behörighet att skapa datorer. Domäner har dessutom en inbyggd gräns (10 som standard) som gäller för alla användare och datorer som inte har delegerad behörighet att skapa datorobjekt. Därför måste behörigheter delegeras till datorer som är värdar för Intune Connector på organisationsenheten där de Hybrid Azure AD-anslutna enheterna skapas.
+I vissa domäner beviljas inte datorer behörighet att skapa datorer. Domäner har dessutom en inbyggd gräns (10 som standard) som gäller för alla användare och datorer som inte har delegerad behörighet att skapa datorobjekt. Därför måste behörigheter delegeras till datorer som är värdar för Intune Connector på organisationsenheten där de Azure AD-anslutna hybridenheterna skapas.
 
 Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
-- organisationsenheten som anges i domänanslutningsprofilen
-- eller, om ingen profil valts, datorns domännamn för din domän.
+- Organisationsenheten som anges i domänanslutningsprofilen.
+- Om ingen profil valts, datorns domännamn för din domän.
 
-1. Öppna **Active Directory – användare och datorer** (DSA.msc).
+1. Öppna **Active Directory – användare och datorer (DSA.msc)**.
 
-2. Högerklicka på den organisationsenhet som du ska använda för att skapa Hybrid Azure AD-anslutna datorer > **Delegera kontroll**.
+1. Högerklicka på den organisationsenhet som du ska använda för att skapa Azure AD-anslutna hybriddatorer och välj sedan **Delegera kontroll**.
 
-    ![Skärmbild av Delegera kontroll](media/windows-autopilot-hybrid/delegate-control.png)
+    ![Kommandot för delegering av kontroll](media/windows-autopilot-hybrid/delegate-control.png)
 
-3. I guiden för **delegering av kontroll** väljer du **Nästa** > **Lägg till** > **Objekttyper**.
+1. I guiden för **delegering av kontroll** väljer du **Nästa** > **Lägg till** > **Objekttyper**.
 
-4. I dialogrutan **Objekttyper** markerar du **Datorer** och väljer sedan **OK**.
+1. I fönstret **Objekttyper** markerar du kryssrutan **Datorer** och väljer sedan **OK**.
 
-    ![Skärmbild av Delegera kontroll](media/windows-autopilot-hybrid/object-types-computers.png)
+    ![Fönstret Objekttyper](media/windows-autopilot-hybrid/object-types-computers.png)
 
-5. I dialogrutan **Välj användare, datorer eller grupper** går du till rutan för att **ange de objektnamn som du vill välja** och anger namnet på datorn där anslutningsappen är installerad.
+1. I dialogrutan **Välj användare, datorer eller grupper** går du till rutan för att **ange de objektnamn som du vill välja** och anger namnet på datorn där anslutningsappen är installerad.
 
-    ![Skärmbild av Delegera kontroll](media/windows-autopilot-hybrid/enter-object-names.png)
+    ![Fönstret Välj användare, datorer eller grupper](media/windows-autopilot-hybrid/enter-object-names.png)
 
-6. Välj **Kontrollera namn** för att verifiera din inmatning och klicka sedan på **OK** > **Nästa**.
+1. Välj **Check Names** (Kontrollera namn) för att validera uppgiften och välj **OK**. Välj sedan **Next** (Nästa).
 
-7. Välj **Skapa en anpassad aktivitet och delegera kontroll för den** > **Nästa**.
+1. Välj **Skapa en anpassad aktivitet och delegera kontroll för den** > **Nästa**.
 
-8. Välj **Endast följande objekt i mappen** och kontrollera sedan följande alternativ:
-    - **Datorobjekt**
-    - **Skapa markerade objekt i den här mappen**
-    - **Ta bort markerade objekt i den här mappen**
+1. Markera kryssrutan **Endast följande objekt i mappen** och markera sedan kryssrutorna **Datorobjekt**, **Skapa valda objekt i den här mappen** och **Ta bort valda objekt i den här mappen**.
 
-    ![Skärmbild av Delegera kontroll](media/windows-autopilot-hybrid/only-following-objects.png)
+    ![Fönstret Objekttyp för Azure Active Directory](media/windows-autopilot-hybrid/only-following-objects.png)
     
-9. Välj **Nästa**.
+1. Välj **Nästa**.
 
-10. Under **Behörigheter** markerar du **Fullständig kontroll** (när du gör det markeras alla andra alternativ) > **Nästa** > **Slutför**.
+1. Under **Behörigheter** markerar du kryssrutan **Fullständig kontroll**.  
+    Den här åtgärden markerar alla de andra alternativen.
 
-    ![Skärmbild av Delegera kontroll](media/windows-autopilot-hybrid/full-control.png)
+    ![Fönstret Behörigheter](media/windows-autopilot-hybrid/full-control.png)
+
+1. Välj **Nästa** och sedan **Slutför**.
 
 ## <a name="install-the-intune-connector"></a>Installera Intune Connector
 
-Intune Connector för Active Directory måste installeras på en dator som kör Windows Server 2016 (eller senare) och som har åtkomst till Internet och din Active Directory. Om du vill öka skalningen och tillgängligheten eller om du vill ha stöd för flera Active Directory-domäner kan du installera flera anslutningsprogram i din miljö. Vi rekommenderar att du installerar anslutningsappen på en server som inte kör några andra Intune-anslutningsappar.
+Intune Connector för Active Directory måste installeras på en dator som kör Windows Server 2016 eller senare. Datorn måste också ha åtkomst till internet och din Active Directory. Om du vill öka skalningen och tillgängligheten eller om du vill ha stöd för flera Active Directory-domäner kan du installera flera anslutningsprogram i din miljö. Vi rekommenderar att du installerar anslutningsappen på en server som inte kör några andra Intune-anslutningsappar.
 
 1. Se till att du har ett språkpaket installerat och konfigurerat enligt beskrivningen i [Språkkrav för Intune Connector (förhandsversion)](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector).
 2. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** > **Lägg till anslutningsapp**. 
-3. Följ anvisningarna för att ladda ned anslutningsappen.
-4. Öppna konfigurationsfilen för det nedladdade anslutningsprogrammet för att installera programmet (ODJConnectorBootstrapper.exe).
-5. I slutet av installationen väljer du **Konfigurera**.
-6. Välj **Logga in**.
-7. Ange autentiseringsuppgifter för rollen Global administratör eller Intune-administratör. Användarkontot måste ha en tilldelad Intune-licens.
-8. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** och bekräfta att anslutningsstatusen är **Aktiv**.
+3. Följ anvisningarna för att ladda ned Connector.
+4. Öppna den nedladdade konfigurationsfilen för anslutningsappen, *ODJConnectorBootstrapper.exe*, för att installera Connector.
+5. Välj **Konfigurera** i slutet av konfigurationen.
+6. Välj **Logga in.**
+7. Ange autentiseringsuppgifter för rollen Global administratör eller Intune-administratör.  
+   Användarkontot måste ha en tilldelad Intune-licens.
+8. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** och bekräfta sedan att anslutningsstatusen är **Aktiv**.
 
- > [!NOTE]
- > När du har **loggat in** i Connector kan det ta några minuter innan det syns i [Intune](https://aka.ms/intuneportal). Tänk på att Connector endast visas om kommunikationen med Intune-tjänsten lyckas.
+> [!NOTE]
+> När du har loggat in på Connector kan det ta några minuter innan det visas i [Intune](https://aka.ms/intuneportal). Det visas bara om den kan kommunicera med Intune-tjänsten.
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurera webbproxyinställningar
 
-Om du har en webbproxy i din nätverksmiljö följer du anvisningarna här, för att Intune Connector för Active Directory ska fungera korrekt: [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
+Om du har en webbproxy i nätverksmiljön kontrollerar du att Intune Connector för Active Directory fungerar korrekt, i [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
 
 
 ## <a name="create-a-device-group"></a>Skapa en enhetsgrupp
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Grupper** > **Ny grupp**.
-2. På bladet **Grupp**:
-    1. Välj **Säkerhet** för **Grupptyp**.
-    2. Ange ett **gruppnamn** och en **gruppbeskrivning**.
-    3. Välj en **medlemskapstyp**.
-3. Om du väljer **Dynamiska enheter** för **Medlemstyp** ovan väljer du sedan **Dynamiska enhetsmedlemmar** på bladet **Grupp** och anger någon av följande koder i rutan **Avancerad regel**.
-    - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter anger du `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst beställnings-ID anger du `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881") `
-    - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst inköpsorder-ID anger du `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
+
+1. I fönstret **Grupp** gör du följande:
+
+    a. I **Grupptyp** väljer du **Säkerhet**.
+
+    b. Ange ett **gruppnamn** och en **gruppbeskrivning**.
+
+    c. Välj en **medlemskapstyp**.
+
+1. Om du har valt **Dynamiska enheter** som medlemskapstyp väljer du **Dynamiska enhetsmedlemmar** i fönstret **Grupp** och gör sedan något av följande i **Avancerad regel**:
+    - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter anger du `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
+    - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst beställnings-ID anger du `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
+    - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst beställnings-ID anger du `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
-    När du har lagt till koden för **Avancerad regel** väljer du **Spara**.
-5. Välj **Skapa**.  
+1. Välj **Spara**.
+
+1. Välj **Skapa**.  
 
 ## <a name="register-your-autopilot-devices"></a>Registrera dina Autopilot-enheter
 
-Välj något av följande sätt för att registrera dina Autopilot-enheter:
+Välj något av följande sätt för att registrera dina Autopilot-enheter.
 
 ### <a name="register-autopilot-devices-that-are-already-enrolled"></a>Registrera Autopilot-enheter som redan har registrerats
 
@@ -158,56 +160,56 @@ Om dina enheter inte har registrerats än kan du registrera dem själv. Mer info
 
 Om du köper nya enheter kan vissa OEM-tillverkare registrera enheterna åt dig. Mer information finns på [Windows Autopilot-sidan](http://aka.ms/WindowsAutopilot).
 
-När Autopilot-enheter har registrerats (och innan de har registrerats i Intune) visas de på tre platser (med namn som motsvarar deras serienummer):
-- Bladet Autopilot-enheter i Intune på Azure-portalen (**Enhetsregistrering** > **Windows-registrering** > **Enheter**).
-- Bladet Azure AD-enheter i Intune på Azure-portalen (**Enheter** > **Azure AD-enheter**).
-- Bladet Alla enheter i Azure Active Directory på Azure-portalen (**Enheter** > **Alla enheter**).
+När Autopilot-enheter har *registrerats* (och innan de har registrerats i Intune) visas de på tre platser (med namn som motsvarar deras serienummer):
+- Fönstret **Autopilot-enheter** i Intune i Azure Portal. Välj **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
+- Fönstret **Azure AD-enheter** i Intune i Azure Portal. Välj **Enheter** > **Azure AD-enheter**.
+- Fönstret **Alla enheter i Azure Active Directory** i Azure Portal (**Enheter** > **Alla enheter**).
 
-När Autopilot-enheter har registrerats visas de på fyra platser:
-- Bladet Autopilot-enheter i Intune på Azure-portalen (**Enhetsregistrering** > **Windows-registrering** > **Enheter**).
-- Bladet Azure AD-enheter i Intune på Azure-portalen (**Enheter** > **Azure AD-enheter**).
-- Bladet Alla enheter i Azure Active Directory på Azure-portalen (**Enheter** > **Alla enheter**).
-- Bladet Alla enheter i Intune på Azure-portalen (**Enheter** > **Alla enheter**).
+När Autopilot-enheterna har *registrerats* visas de på fyra platser:
+- Fönstret **Autopilot-enheter** i Intune i Azure Portal. Välj **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
+- Fönstret **Azure AD-enheter** i Intune i Azure Portal. Välj **Enheter** > **Azure AD-enheter**.
+- Fönstret **Alla enheter i Azure Active Directory** i Azure Portal. Välj **Enheter** > **Alla enheter**.
+- Fönstret **Alla enheter** i Intune i Azure Portal. Välj **Enheter** > **Alla enheter**.
 
-När Autopilot-enheter har registrerats ändras deras enhetsnamn till värdnamnet för enheten. Som standard börjar det med ”DESKTOP-”.
-
-
+När Autopilot-enheterna har registrerats ändras deras enhetsnamn till värdnamnet för enheten. Som standard börjar värdnamnet med *DESKTOP-*.
 
 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Skapa och tilldela en Autopilot-distributionsprofil
 Autopilot-distributionsprofiler används för att konfigurera Autopilot-enheterna.
 
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
-2. Ange ett **namn** och en valfri **beskrivning**.
-3. I **Distributionsläge** väljer du **Användarstyrd**.
-4. I rutan **Anslut till Azure AD som** väljer du **Hybrid Azure AD-ansluten (förhandsversion)**.
-5. Välj **Välkomstupplevelse (OOBE)**, konfigurera alternativen efter behov och välj sedan **Spara**.
-6. Välj **Skapa** när du vill skapa profilen. 
-7. På profilbladet väljer du **Tilldelningar**.
-8. Välj **Välj grupper** > på bladet **Välj grupper** väljer du enhetsgruppen > **Välj**.
+1. Skriv ett **namn** och (frivilligt) en **beskrivning**.
+1. I **Distributionsläge** väljer du **Användarstyrd**.
+1. I rutan **Anslut till Azure AD som** väljer du **Hybrid Azure AD-ansluten (förhandsversion)**.
+1. Välj **Välkomstupplevelse (OOBE)**, konfigurera alternativen efter behov och välj sedan **Spara**.
+1. Välj **Skapa** för att skapa profilen. 
+1. I profilfönstret väljer du **Tilldelningar**.
+1. Välj **Välj grupper**.
+1. I fönstret **Välj grupper** väljer du enhetsgruppen och klickar sedan på **Välj**.
 
-Det tar ungefär 15 minuter innan enhetsprofilens status ändras från **Inte tilldelad** till **Tilldelar** och slutligen till **Tilldelad**.
+Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte tilldelad* till *Tilldelar* och slutligen till *Tilldelad*.
 
-## <a name="turn-on-the-enrollment-status-page-optional"></a>Aktivera registreringsstatussidan (valfritt)
+## <a name="optional-turn-on-the-enrollment-status-page"></a>(Valfritt) Aktivera registreringsstatussidan
 
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)**.
-2. På bladet **Statussidan för registrering**  väljer du **Standard** > **Inställningar**.
-3. Välj **Ja** för **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler).
-4. Konfigurera de andra alternativen efter behov.
-5. Välj **Spara**.
+1. I fönstret **Statussidan för registrering** väljer du **Standard** > **Inställningar**.
+1. I rutan **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler) väljer du **Yes** (Ja).
+1. Konfigurera de andra alternativen efter behov.
+1. Välj **Spara**.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Skapa och tilldela en profil för domänanslutning
 
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-2. Ange följande egenskaper:
+1. Ange följande egenskaper:
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
    - **Beskrivning**: Ange en beskrivning av profilen.
    - **Plattform**: Välj **Windows 10 och senare**.
    - **Profiltyp**: Välj **Domänanslutning (förhandsversion)**.
-3. Välj **Inställningar** och ange **Datornamnprefix**, **Domännamn** och (valfritt) **Organisationsenhet** i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
-4. Välj **OK** > **Skapa**. Profilen skapas och visas i listan.
-5. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](device-profile-assign.md#assign-a-device-profile). 
+1. Välj **Inställningar** och ange sedan **Datornamnprefix**, **Domännamn** och (valfritt) **Organisationsenhet** i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+1. Välj **OK** > **Skapa**.  
+    Profilen skapas och visas i listan.
+1. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](device-profile-assign.md#assign-a-device-profile). 
 
 ## <a name="next-steps"></a>Nästa steg
 
-När du har konfigurerat Windows Autopilot rekommenderar vi att du går vidare och lär dig hur du hanterar dessa enheter. Mer information finns i [Vad är Microsoft Intune-enhetshantering?](device-management.md)
+När du har konfigurerat Windows Autopilot rekommenderar vi att du går vidare och lär dig hur du hanterar dessa enheter. Mer information finns i [Vad är Microsoft Intune-enhetshantering?](device-management.md).

@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ddf075828ca9b9a7d8030a88a2d7f58efbc0e980
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: aa48aae8f35ad55e3e836016262056268fd9cd89
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150130"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836294"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Skicka fel till företagets support vid problem med din iOS-enhet
 Ibland kan det uppstå ett fel när du använder företagsportalappen på din iOS-enhet. När detta inträffar kan du skicka information om felet till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.

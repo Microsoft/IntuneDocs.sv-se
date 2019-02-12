@@ -2,10 +2,10 @@
 title: Använd en PIN-kod för att logga in på Windows 10-enheter med Microsoft Intune – Azure | Microsoft Docs
 description: Använd Windows Hello för företag så att användarna kan logga in på enheter med hjälp av en PIN-kod, ett fingeravtryck med mera. Skapa en profil för identitetskyddskonfiguration i Intune för Windows 10-enheter med de här inställningarna och tilldela profilen till användargrupper och enhetsgrupper.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 843806681fcee4ddec175207c2c49d6db95e0f0d
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c917294ac11f8f0a19c0f8f361df8d2910cb461c
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831398"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838011"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Använd Windows Hello för företag på Windows 10 på enheter med Microsoft Intune
 
@@ -60,7 +61,7 @@ Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil. En list
 
 4. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
 
-Profilen skapas och visas i profillistan. Härnäst [tilldela](device-profile-assign.md) profilen till grupper.
+Profilen skapas och visas i profillistan. [Tilldela](device-profile-assign.md) sedan den här profilen till användar- och enhetsgrupper som uppfyller dina behov.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

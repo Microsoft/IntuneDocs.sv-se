@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 360715881e3d6b2f61e7bf251045fc3356c44f6b
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203156"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690690"
 ---
 # <a name="use-managed-devices-to-access-work-or-school-resources"></a>Använda hanterade enheter för att få åtkomst till resurser för arbete eller skola
 Microsoft Intune är ett enhetshanteringssystem som organisationer kan använda till att hantera åtkomst till enheter, appar och e-post. Med enhetshantering kan du, och andra medarbetare och studerande, få åtkomst till jobbinformation praktiskt taget var som helst, på nästan vilken enhet som helst. Även när du arbetar fjärranslutet kan du och organisationens information skyddas.
@@ -39,16 +39,9 @@ Du kan skaffa Företagsportal så här:
 - Gå till [webbplatsen för Företagsportal](https://go.microsoft.com/fwlink/?linkid=2010980) som företagets support har konfigurerat.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Vad är skillnaden mellan appen och webbplatsen?
-Det finns några mindre skillnader mellan företagsportalappen och företagsportalens webbplats, men du kan utföra likartade uppgifter på båda två. Några uppgifter som du kan utföra är:
+Varje Företagsportal-app för Windows 10, iOS, macOS och Android integreras sömlöst med enhetens respektive plattform. Webbplatsen är tillgänglig på valfri enhet och du får samma, universella miljö oavsett vilken enhet du använder. 
 
-- Registrera enheter i hantering
-- Visa status för enheterna
-- Hämta rekommenderade och obligatoriska appar för din organisation
-- Byta namn på enheten
-- Återställa enhetens PIN-kod eller lösenord
-- Kontakta IT-avdelningen för hjälp
-
-Om du vill se vad du kan göra med företagsportalens webbplats jämfört med vad du kan göra med företagsportalappen på enheten kan du klicka på någon av följande länkar:
+Du hittar vägledning för Företagsportal som är specifik för enhetens plattform, från registreringssteg, under följande länkar:  
 
 - [Använda din Android-enhet](using-your-android-device-with-intune.md)
 - [Använda en iOS-enhet](using-your-ios-device-with-intune.md)

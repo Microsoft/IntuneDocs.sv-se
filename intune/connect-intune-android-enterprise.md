@@ -16,12 +16,13 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 698bc4e7e2d2cf8ece1b1c17b091a91c76a7d178
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 421d9c56f959fe30d35c0c55ce34017a7a0ba5a6
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54386892"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838269"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Ansluta ditt Intune-konto till ditt Android enterprise-konto
 
@@ -33,7 +34,7 @@ För att kunna stödja [Android-arbetsprofilenheter](android-work-profile-enroll
 > På grund av interaktion mellan Google- och Microsoft-domäner kan det i det här steget krävas att du justerar inställningarna för webbläsaren.  Se till att ”portal.azure.com” och ”play.google.com” finns i samma säkerhetszon i webbläsaren.
 
 1. Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
-2. Logga in på [Intune i Azure-portalen](https://aka.ms/intuneportal), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.  Om du använder en anpassad Intune-administratörsroll krävs läs- och uppdateringsbehörigheter för organisationen för åtkomst till detta.
+2. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.  Om du använder en anpassad Intune-administratörsroll krävs läs- och uppdateringsbehörigheter för organisationen för åtkomst till detta.
    
    ![Sidan för Android enterprise-registrering](./media/android-work-bind.png)
 

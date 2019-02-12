@@ -14,12 +14,13 @@ ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1954f59a008c699c6dcdeb46686d3f37f941908a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ad3593dfab0326cec4003b794d50d415cf3c536
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180280"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844130"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -66,7 +67,7 @@ Intune samlar endast in en applista från företagsägda enheter. Appar på pers
 ## <a name="hardware-device-details"></a>Information om maskinvaruenheten
 Eventuellt samlas inte all information in, beroende på vilken operatör enheterna använder
 
-|Detalj|Beskrivning|Plattform| 
+|Information|Beskrivning|Plattform| 
 |--------------|----------------------|----|  
 |Namn|Namnet på enheten.|Windows, iOS|
 |Hanteringsnamn|Enhetsnamnet används endast i konsolen. Även om du ändrar det här namnet ändras inte namnet på enheten.|Windows, iOS|
