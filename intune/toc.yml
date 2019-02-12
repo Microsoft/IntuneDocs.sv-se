@@ -425,6 +425,8 @@ items:
       items:
       - name: Inställningar för Windows Update för företag
         href: windows-update-for-business-configure.md
+      - name: Efterlevnadsrapporter för Windows Update
+        href: windows-update-compliance-reports.md
       - name: iOS-uppdateringsprinciper
         href: software-updates-ios.md
   - name: Hantera appar
@@ -737,6 +739,8 @@ items:
           href: shared-user-device-settings-windows.md
         - name: Anpassad
           href: custom-settings-windows-10.md
+      - name: Windows Update-inställningar
+        href: windows-update-settings.md
     - name: Windows 10 Holographic for Business
       items:
       - name: Enhetsbegränsningar
@@ -953,9 +957,9 @@ items:
       href: data-outside-protect.md
     - name: Förhindra dataläckage på ej hanterade enheter
       href: data-leak-prevention.md
-ms.openlocfilehash: 1c293290d9d2e2dc2ba44278f77edf9976cb2a7c
-ms.sourcegitcommit: 01d6832978cb7ca23049000950696b300a87abd4
+ms.openlocfilehash: ace0bec62318d846cdcc37330abb63b2a89fef14
+ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55761015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986917"
