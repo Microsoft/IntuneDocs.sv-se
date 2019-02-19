@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ea7ee32794a120c12b0720be5fa11f3b97536ab
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ac9c8ca0b04cbb6f7cf570134a6f4bdce7bf57ed
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848818"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325460"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -41,7 +41,7 @@ _**Måste**_ du först registrera din app med Microsoft Intune och samtycka med 
 
 Intune administratörer kommer inte att ha möjlighet att tillämpa appskyddsprincipen på din apps djuplänk förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft kommer även att lägga till din app till sin [Microsoft Intune-partnersida](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Där kommer appikonen att visas för att visa att den stöder Intunes appskyddsprinciper.
 
-För att börja registreringen, och om du inte redan arbetar med en Microsoft-kontakt, fyller du i [frågeformuläret för Microsoft Intune-appartner](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6oOVGFZ3pxJmwSN1N_eXwJUQUc5Mkw2UVU0VzI5WkhQOEYyMENWNDBWRS4u).
+För att börja registreringen, och om du inte redan arbetar med en Microsoft-kontakt, fyller du i [frågeformuläret för Microsoft Intune-appartner](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR80SNPjnVA1KsGiZ89UxSdVUMEpZNUFEUzdENENOVEdRMjM5UEpWWjJFVi4u).
 
 Vi använder e-postadresserna som står i frågeformulärets svar för att kontakta dig och fortsätta registreringsprocessen. Vi använder även din e-postadress från registreringen för att kontakta dig om vi har frågor.
 

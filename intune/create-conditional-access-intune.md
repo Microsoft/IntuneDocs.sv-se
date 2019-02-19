@@ -3,8 +3,8 @@ title: Konfigurera enhetsbaserad villkorsstyrd åtkomst med Intune
 titlesuffix: Microsoft Intune
 description: Lär dig att skapa principer för enhetsbaserad villkorsstyrd åtkomst, baserat på Microsoft Intune enhetens efterlevnad och hantering av mobilappar.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 12/11/2018
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9fc2b2e973fdebfd303382e88630ef9999b517
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 03ca9a65d5a62c75c45541b42c9b2aa5c4871a18
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844164"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307795"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Skapa en princip för enhetsbaserad villkorsstyrd åtkomst
 

@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 951db22026725c2ec2e9c2be340bcccd44b2528b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 383370aaaca10cb44b614be6e250218106406cb4
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848108"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307761"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i Intune
 
-Från och med version 1704 av Intune kan administratörer se den rapportinformation som avser Exchange ActiveSync-enhetsposter som har synkroniserats med Intune via Exchange Connector lokalt, eller Intune Service to Service Connector (Exchange Online Connector). Efterlevnadsrapporteringen för villkorlig åtkomst innehåller en översikt över enheter med olika synkroniseringstillstånd:
+Från och med version 1704 av Intune kan administratörer se den rapportinformation som relaterar till Exchange ActiveSync-enhetsposter som har synkroniserats med Intune via Exchange Connector lokalt eller Intune Service to Service Connector (Exchange Online Connector). Efterlevnadsrapporteringen för villkorlig åtkomst innehåller en översikt över enheter med olika synkroniseringstillstånd:
 
 -   **Tillåt**
 
@@ -38,9 +38,9 @@ Från och med version 1704 av Intune kan administratörer se den rapportinformat
 
 2.  När du har loggat in visas **Azure-instrumentpanelen**.
 
-3.  Välj  **Alla tjänster**  på den vänstra menyn och skriv sedan  **Intune**  i textrutans filter.
+3.  Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 
-4.  Välj  **Intune**. **Intune-instrumentpanelen** visas.
+4.  Välj **Intune**. **Intune-instrumentpanelen** visas.
 
 5.  Välj först **Villkorlig åtkomst** och sedan **Översikt**.
 
