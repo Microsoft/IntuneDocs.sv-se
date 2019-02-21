@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b68206fd2170dd2bc156d844ae83caafaa08180
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ba3e4ae88423183d5d0317dedb59715d2adb4e11
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836582"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240035"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Lägg till hanterade Google Play-appar till Android enterprise-enheter med Intune
 
@@ -41,8 +41,8 @@ Kontrollera att du har konfigurerat Intune och Android-arbetsprofiler så att de
 >[!NOTE]
 >När du arbetar med Microsoft Intune, rekommenderar vi att du använder antingen webbläsaren Google Chrome eller Microsoft Edge.
 
-## <a name="managed-google-play-app-type"></a>Hanterade Google Play-apptyper 
-Den **hanterade Google Play**-apptypen gör att du kan lägga till mer specifikt [hanterade Google Play-appar](https://play.google.com/work/search?q=microsoft&c=apps) till Intune. Som Intune-administratör kan du bläddra, söka, godkänna, synkronisera och tilldela godkända hanterad Google Play-appar i Intune.  Du behöver inte längre bläddra till den hantera Google Play-konsolen separat och du behöver inte längre autentisera dig på nytt. 
+## <a name="managed-google-play-app-type"></a>Hanterade Google Play-apptyper
+Den **hanterade Google Play**-apptypen gör att du kan lägga till mer specifikt [hanterade Google Play-appar](https://play.google.com/work/search?q=microsoft&c=apps) till Intune. Som Intune-administratör kan du bläddra, söka, godkänna, synkronisera och tilldela godkända hanterad Google Play-appar i Intune.  Du behöver inte längre bläddra till den hantera Google Play-konsolen separat och du behöver inte längre autentisera dig på nytt.
 
 > [!NOTE]
 > Om du vill synkronisera en hanterad Google Play-app med Intune finns mer information i [Synkronisera en hanterad Google Play-app med Intune](apps-add-android-for-work.md#synchronize-a-managed-google-play-app-with-intune-alternative)
@@ -55,11 +55,12 @@ Den **hanterade Google Play**-apptypen gör att du kan lägga till mer specifikt
 3. I fönstret **Intune** väljer du **Klientappar** > **Appar**.
 5. Välj **Lägg till** i fönsterrutan **Appar**.
 6. I listrutan **Apptyp** väljer du **Hanterat Google Play-konto**.
-7. Välj **Hanterat Google Play – godkända appar** för att söka efter godkända appar för hanterat Google Play-konto.
-8. Klicka på varje app som du vill inkludera. Sedan, c
-9. Klicka på **Godkänn** för att godkänna den hanterade Google Play-appen och klicka på **Godkänn** för att acceptera appens behörigheter. 
-10. Klicka på **OK** för att inkludera appen.
-11. Klicka på **Lägg till** i **App**-fönstret för att synkronisera med den hanterade Google Play-tjänsten.
+7. Välj **Hanterad Google Play – Godkänn** för att öppna den hanterade Google Play-katalogen.
+8. Använd sökrutan för att söka efter appar som du vill inkludera.
+9. Klicka på **Godkänn** för att godkänna den hanterade Google Play-appen och klicka på **Godkänn** för att acceptera appens behörigheter.
+10. Välj **Keep approved when app requests new permissions** (Behåll godkända när appen begär nya behörigheter) i fönstret Inställningar för godkännande och klicka sedan på **Spara**. Om du inte väljer det här alternativet måste du manuellt godkänna alla nya behörigheter om apputvecklaren publicerar en uppdatering.  Detta innebär att installationer och uppdateringar av appen stoppas tills behörigheterna har godkänts. Av detta skäl rekommenderar vi att du väljer alternativet för att automatiskt godkänna nya behörigheter. 
+11. Klicka på **OK** för att inkludera de appar du har godkänt.
+12. Klicka på **Synkronisera** i **app**fönstret för att synkronisera med den hanterade Google Play-tjänsten.
 
 ## <a name="synchronize-a-managed-google-play-app-with-intune-alternative"></a>Synkronisera en hanterad Google Play-app med Intune (alternativ)
 Om du vill synkronisera en hanterad Google Play-app med Intune i stället för att lägga till den direkt med hjälp av Intune kan du använda följande steg.
@@ -75,8 +76,8 @@ Om du vill synkronisera en hanterad Google Play-app med Intune i stället för a
     I följande exempel har Microsoft Excel-appen valts.
 
     ![Knappen Godkänn i Managed Google Play Butik](media/approve.png)
-    
-   Ett fönster för appen öppnas där du uppmanas att tilldela behörigheter till appen för att utföra olika åtgärder. 
+
+   Ett fönster för appen öppnas där du uppmanas att tilldela behörigheter till appen för att utföra olika åtgärder.
 
 4. Välj **Godkänn** för att godkänna appbehörigheterna och fortsätta.
 
@@ -86,7 +87,7 @@ Om du vill synkronisera en hanterad Google Play-app med Intune i stället för a
 
     ![Alternativ för att hantera nya begäranden om app-behörighet](media/approve-app-settings.png)
 
-    Appen godkänns och den visas i IT-administrationskonsolen. Därefter kan du [synkronisera Android-arbetsprofilappen med Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
+    Appen godkänns och den visas i IT-administrationskonsolen. Därefter kan du [synkronisera Android-arbetsprofilappen med Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune).
 
 ### <a name="sync-a-managed-google-play-app-with-intune"></a>Synkronisera en Managed Google Play-app med Intune
 
@@ -121,7 +122,7 @@ Du bör regelbundet besöka den hanterade Google Play-konsolen för att söka ef
 3. Välj fliken **Uppdateringar** och kontrollera om några appar behöver en uppdatering.  
     Alla listade appar kräver nya behörigheter och tilldelas inte innan de tillämpas.
 
-Du kan också konfigurera Google Play att automatiskt godkänna app-behörigheter på nytt skilt för varje app. 
+Du kan också konfigurera Google Play att automatiskt godkänna app-behörigheter på nytt skilt för varje app.
 
 ## <a name="working-with-a-line-of-business-app-from-the-managed-google-play-store"></a>Arbeta med en verksamhetsspecifik app från Managed Google Play Butik
 
@@ -139,10 +140,9 @@ Du kan också konfigurera Google Play att automatiskt godkänna app-behörighete
 5. I noden **Appar** i butiken, kontrollerar du att den app som du har publicerat visas.  
     Appen godkänns automatiskt för att synkroniseras med Intune.
 
-## <a name="delete-managed-google-play-apps"></a>Radera hanterade Google Play-appar 
+## <a name="delete-managed-google-play-apps"></a>Radera hanterade Google Play-appar
 Du kommer att kunna ta bort hanterade Google Play-appar från Microsoft Intune om nödvändigt. Om du vill ta bort en hanterad Google Play-app öppnar du Microsoft Intune i Azure-portalen och väljer **Klientappar** > **Appar**. Från listan över appar väljer du ellipserna (...) till höger om den hanterade Google Play-appen och väljer sedan **Ta bort** från den visade listan. När du tar bort en hanterad Google Play-app från applistan blir den hanterade Google Play-appen automatiskt ej godkänd.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Tilldela appar till grupper](apps-deploy.md) 
-
+- [Tilldela appar till grupper](apps-deploy.md)

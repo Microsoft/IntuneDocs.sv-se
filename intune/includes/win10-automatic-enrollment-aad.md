@@ -32,6 +32,9 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
       >
       > För företagsenheter har MDM-användaromfattningen företräde om båda omfattningarna har aktiverats. Enheterna MDM-registreras.
 
+   > [!NOTE]
+   > MAM-användaromfånget måste anges till en användargrupp eller en samling.
+
    ![Skärmbild av Azure-portalen](../media/auto-enroll-scope.png)
 
 5. Använd standardvärdena för följande URL:er:

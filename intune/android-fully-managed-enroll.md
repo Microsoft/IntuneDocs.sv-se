@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a730dbb702286f71534623b2c08da6b388c3e499
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 482ae185f221b3ff77534c1cfd8cccd8278965b7
+ms.sourcegitcommit: 84ab7a49aad853591a4ae362382f293e29b360df
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55835851"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156176"
 ---
 # <a name="set-up-intune-enrollment-of-android-fully-managed-devices-preview"></a>Konfigurera Intune-registrering för fullständigt hanterade Android-enheter (förhandsversion)
 
@@ -35,7 +35,7 @@ Intune hjälper dig att distribuera appar och inställningar till Android enterp
 
 ## <a name="technical-requirements"></a>Tekniska krav
 
-Du måste ha en fristående Intune-klient för att hantera fullständigt hanterade Android-enheter. Hantering med fullständigt hanterade enheter är inte tillgängligt i hybridläge (SCCM-anslutet) eller i den äldre hanteringskonsolen Silverlight.
+Du måste ha en fristående Intune-klient för att hantera fullständigt hanterade Android-enheter. Hantering av fullständigt hanterade enheter är inte tillgängligt i hybridläge (SCCM-anslutet) eller i den äldre hanteringskonsolen Silverlight.
 
 Enheter måste uppfylla dessa krav för att kunna hanteras som en fullständigt hanterad Android-enhet:
 

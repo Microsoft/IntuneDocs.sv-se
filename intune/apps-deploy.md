@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ff89d1776d71dc24ea675de167f3fd22d6bdf04
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6b0c2bff4051a1adba1a68f38d8f0a9b80b914b4
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838775"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240069"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-När du har [lagt till en app](apps-add.md) till Microsoft Intune kan du tilldela appen till användare och enheter. Lägg märke till att du kan tilldela en app till en enhet oavsett om enheten hanteras av Intune eller inte. 
+När du har [lagt till en app](apps-add.md) till Microsoft Intune kan du tilldela appen till användare och enheter. Lägg märke till att du kan tilldela en app till en enhet oavsett om enheten hanteras av Intune eller inte.
 
 > [!NOTE]
 > Tillgänglig distributionsavsikt stöds inte för enhetsgrupper – det är bara användargrupper som stöds.
@@ -124,8 +124,19 @@ Ibland har samma app tilldelats flera grupper, men med olika avsikter. Informati
 > Endast för hanterade iOS Store-appar. När du lägger till dem i Microsoft Intune och tilldelar dem som **Nödvändiga** skapas apparna automatiskt med både avsikten **Nödvändig** och **Tillgänglig**.<br><br>
 > iOS Store-appar (inte iOS VPP-appar) som är riktade med nödvändigt syfte tillämpas på enheten vid tidpunkten för incheckning och visas även i företagsportalappen.
 
-## <a name="android-enterprise-app-we-app-deployment"></a>Appdistribution för Android Enterprise APP-WE
-För Android-enheter i ett distributionsscenario med en appskyddsprincip utan registrering (APP-WE) kan du nu använda hanterad Google Play för att distribuera store-appar och LOB-appar till användare. Mer specifikt kan du ge slutanvändarna en appkatalog och installationsfunktioner som inte längre kräver att slutanvändare lättar på säkerhetshållningen för sina enheter genom att tillåta installationer från okända källor. Dessutom kan det här distributionsscenariot ge en förbättrad slutanvändarupplevelse. Anvisningar för hur du tilldelar en app finns i [Tilldela en app](apps-deploy.md#assign-an-app).
+## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Hanterad Google Play-appdistribution till ohanterade enheter
+Om du har Android-enheter i ett distributionsscenario med en appskyddsprincip utan registrering (APP-WE), kan du använda hanterad Google Play till att distribuera Store-appar och verksamhetsspecifika appar (LOB) till användarna. Hanterade Google Play-appar som riktas mot **Tillgängliga med eller utan registrering** visas i Play Store-appen på slutanvändarens enhet och inte i företagsportalappen. Slutanvändaren kan bläddra och installera appar som distribueras på det här sättet från Play-appen. Eftersom apparna installeras från hanterad Google Play, behöver användaren inte ändra sina enhetsinställningar till att tillåta appinstallation från okända källor, vilket innebär att enheterna blir säkrare. Om apputvecklaren publicerar en ny version av en app i Play som har installerats på en användares enhet, kommer appen uppdateras automatiskt av Play. 
+
+Anvisningar för att tilldela en hanterad Google Play-app till ohanterade enheter:
+
+1. Anslut Intune-klientorganisationen till hanterade Google Play. Om du redan har gjort detta för att kunna hantera arbetsprofilen för Android Enterprise, dedikerade eller fullständigt hanterade enheter, behöver du inte göra det igen.
+2. Lägg till appar från hanterad Google Play i Intune-konsolen.
+3. Rikta hanterade Google Play-appar som **Tillgänglig med eller utan registrering** till önskad användargrupp. Appriktningarna **Obligatorisk** och **Avinstallera** stöds inte för icke-registrerade enheter.
+4. Tilldela en appskyddsprincip till användargruppen.
+5. Nästa gång slutanvändaren öppnar företagsportalappen visas ett meddelande om att det finns tillgängliga appar i Play Store-appen.  Användaren kan antingen trycka på meddelandet för att komma direkt till Play-appen och se företagets appar, eller navigera till Play Store-appen separat.
+6. Slutanvändarna kan expandera snabbmenyn i Play Store-appen och växla mellan sina personliga Google-konton (där de kan se sina privata appar) och sina arbetskonton (där de ser Store- och LOB-appar som är avsedda för dem). Slutanvändarna installerar apparna genom att trycka på Installera i Play Store-appen.
+
+När en selektiv rensning av appskyddsprinciper görs i Intune-konsolen, tas arbetskontot automatiskt bort från Play Store-appen. Slutanvändaren kommer därefter inte längre se några arbetsappar i Play Stores appkatalog. När arbetskontot tas bort från en enhet förblir appar som installerats från Play Store installerade på enheten och kommer inte att avinstalleras. 
 
 ## <a name="next-steps"></a>Nästa steg
 

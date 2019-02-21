@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 943b5dc8c0fe1c9b55b9c4971be2087353b60428
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230128"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307897"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -70,6 +71,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Microsoft-konto**: Låter användaren associera ett Microsoft-konto med enheten.
 - **Andra konton än Microsoft-konton**: Låter användaren lägga till e-postkonton på enheten som inte är associerade med något Microsoft-konto.
 - **Synkroniseringsinställningar för Microsoft-konto**: Tillåt att enhets- och appinställningar som har associerats med ett Microsoft-konto synkroniseras mellan enheter.
+- **Inloggningsassistent för Microsoft-konton**: Välj **Inaktivera** för att förhindra att slutanvändarna styr Microsofts inloggningsassistent (wlidsvc), genom att till exempel stoppa eller starta tjänsten manuellt. När **Inte konfigurerad** har angetts använder wlidsvc NT-tjänsten standardoperativsystemet, vilket kan tillåta att slutanvändarna startar och stoppar tjänsten. Den här tjänsten används av operativsystemet för att tillåta att användaren loggar in på sitt Microsoft-konto.
 
 ## <a name="cloud-printer"></a>Molnskrivare
 
@@ -136,6 +138,10 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Ink-arbetsytan**: Blockerar användare från att komma åt Ink-arbetsytan. **Inte konfigurerat** aktiverar Ink-arbetsytan och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution**: Tillåter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
 - **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)**: Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10. När den här funktionen är i förhandsversion krävs Windows Insider-version 1809 eller senare för att använda den här inställningen.
+- **Direkt minnesåtkomst**: **Blockera** förhindrar direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med enhetsbyte vid drift tills en användare loggar in i Windows. **Aktiverad** (standard) ger åtkomst till DMA, även när en användare inte har loggat in.
+
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+
 - **Avsluta processer från Aktivitetshanteraren**: Den här inställningen avgör om icke-administratörer kan använda Aktivitetshanteraren för att avsluta uppgifter. **Blockera** förhindrar standardanvändare (icke-administratörer) att använda Aktivitetshanteraren till att avsluta en process eller uppgift på enheten. **Inte konfigurerad** (standard) låter standardanvändare att avsluta en process eller uppgift med Aktivitetshanteraren.
 
 ## <a name="kiosk-preview---obsolete"></a>Helskärmsläge (förhandsgranskning) – föråldrad
@@ -192,7 +198,7 @@ Använd knappen **Lägg till** för att skapa en helskärmskonfiguration (eller 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
 - **Aviseringar från Åtgärdscenter (endast mobil)**: Aviseringar från Åtgärdscenter visas på enhetens låsskärm (endast Windows 10 Mobile).
-- **URL till bild på låst skärm (endast stationär dator)**: Anger webbadressen till en bild i JPEG-format som används som låsskärmsbild i Windows. Användarna kan inte ändra denna inställning.
+- **URL till bild på låst skärm (endast stationär dator)**: Anger webbadressen till en bild i JPEG-format som används som låsskärmsbild i Windows. Den här inställningen låser avbildningen. Avbildningen kan inte ändras efteråt.
 - **Skärmtidsgräns kan ställas in av användaren (endast Mobile)**: Användarna kan konfigurera tidslängden 
 - **Cortana på låst skärm (endast stationär dator)**: Tillåter inte att användaren interagerar med Cortana när enheten har låst skärm (endast Windows 10 Desktop).
 - **Popup-meddelanden på låst skärm**: Hindra att varningsmeddelanden visas på enhetens låsskärm.
@@ -313,7 +319,6 @@ Använd knappen **Lägg till** för att skapa en helskärmskonfiguration (eller 
   - **Förhindra återanvändning av tidigare lösenord**: Anger antalet tidigare använda lösenord som enheten sparar.
   - **Kräv lösenord när enheten återgår från viloläge (endast Mobile)**: Anger att användaren måste ange ett lösenord för att låsa upp enheten (endast Windows 10 Mobile).
   - **Enkla lösenord**: Låter dig använda enkla lösenord som 1111 och 1234. Dessutom tillåter eller blockerar den här inställningen användningen av Windows-bildlösenord.
-- **Kryptering**: Aktivera kryptering på målenheter.
 
 ## <a name="per-app-privacy-exceptions"></a>Sekretessundantag per app
 

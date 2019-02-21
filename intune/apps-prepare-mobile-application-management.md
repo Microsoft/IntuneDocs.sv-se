@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74445c678455dc881f79fed20ed68be6f090fe78
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 10b2ef5844c2d8889fd1d5c377fcefb8330be9e2
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834780"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325443"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -87,7 +87,6 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Tillåt att appen hämtar data från andra appar|X|X|
 |Begränsa klipp ut, kopiera och klistra in med andra appar|X|X|
 |Kräv enkel PIN-kod för åtkomst|X|X|
-|Ersätt appens inbyggda PIN-kod med PIN-koden för Intune|X||
 |Ange antal försök innan PIN-koden återställs|X|X|
 |Tillåt fingeravtryck istället för PIN|X|X|
 |Tillåt ansiktsigenkänning istället för PIN-kod (endast iOS)|X|X|
@@ -98,8 +97,8 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Ange offlinerespitperiod|X|X|
 |Blockera skärmdump (endast Android)|X|X|
 |Stöd för MAM utan enhetsregistrering|X|X|
-|Fullständig rensning av enheten|X|X|
-|Selektiv rensning <br><br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
+|Fullständig rensning av appdata|X|X|
+|Selektiv rensning av arbets- och skoldata i scenarier med flera identiteter <br><br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
 |Förhindra ”Spara som”|X||
 |Konfiguration av målprogram|X||
 |Stöd för flera identiteter|X||

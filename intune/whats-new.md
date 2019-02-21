@@ -16,12 +16,13 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 996b4d85da41b480d73d7a79011e2bbd732ea334
-ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f6d346d7f060b5e997577b09c3ee8b006843ab7b
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55690843"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302242"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -240,10 +241,15 @@ I **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för platt
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Inställningar för nytt meddelande, tips och keyguard för enhetsägare av Android Enterprise-enheter <!-- 3201839 3201843 -->
 Den här uppdateringen innehåller flera nya funktioner på Android Enterprise-enheter vid körning som enhetsägare. Om du vill använda dessa funktioner, gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Android Enterprise** > i **Profiltyp**, välj **Endast enhetens ägare** > **Enhetsbegränsningar**.
+
 Nya funktioner som ingår: 
-- Inaktivera systemmeddelanden till att inte visas, inklusive inkommande anrop, systemaviseringar, systemfel och mer
-- Föreslår hoppa över start av självstudier och tips för appar som öppnas för första gången
-- Inaktivera avancerade keyguard-inställningar, till exempel kamera, meddelanden, upplåsning med fingeravtryck med mera. Om du vill se inställningarna går du till avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+
+- Inaktivera systemmeddelanden till att inte visas, inklusive inkommande anrop, systemaviseringar, systemfel med mera.
+- Föreslår hoppa över start av självstudier och tips för appar som öppnas för första gången.
+- Inaktivera avancerade keyguard-inställningar, till exempel kamera, meddelanden, upplåsning med fingeravtryck med mera.
+
+
+Om du vill visa inställningarna går du till avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
 
 #### <a name="android-enterprise-device-owner-devices-can-use-always-on-vpn-connections----3202194---"></a>Enhetsägda Android Enterprise-enheter kan använda Always On VPN-anslutningar <!-- 3202194 -->
 I den här uppdateringen kan du använda VPN-anslutningar som alltid är aktiva på Android Enterprise-enheter. Ständiga VPN-anslutningar förblir anslutna eller återansluter omedelbart när användaren låser upp sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. Du kan också placera anslutningen i ”låst” läge, vilket blockerar all nätverkstrafik tills VPN-anslutningen aktiveras.
@@ -282,7 +288,7 @@ Med den nya upplevelsen kan du beskriva problemet med egna ord och ta emot fels�
 ### <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Omfattningstaggar för appar <!-- 1081941 -->
-Du kan skapa omfångstaggar som begränsar åtkomsten för roller och appar. Du kan lägga till en omfångstagg för en app så att endast personer med roller som också tilldelats den omfångstaggen har åtkomst till appen. Appar som har köpts med hjälp av Apples volymköpsprogram kan inte tilldelas omfångstaggar.  Mer information finns i [Använda omfångstaggar för att filtrera principer](scope-tags.md).
+Du kan skapa omfångstaggar som begränsar åtkomsten för roller och appar. Du kan lägga till en omfångstagg för en app så att endast personer med roller som också tilldelats den omfångstaggen har åtkomst till appen. För närvarande kan appar som har lagts till i Intune från hanterad Google Play eller appar som har köpts med hjälp av Apples volymköpsprogram (VPP) inte tilldelas omfångstaggar (men stöd för detta kommer i framtiden). Mer information finns i [Använda omfångstaggar för att filtrera principer](scope-tags.md).
 
 
 

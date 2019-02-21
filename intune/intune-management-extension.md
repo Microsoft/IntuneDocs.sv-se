@@ -15,12 +15,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 444fd63f8c582d35891dfa5aedb9eadd6626e541
-ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 573ca3aa10094e61165d297730d556e2ef559767
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303403"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302191"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 
@@ -30,9 +31,9 @@ Använd Intunes hanteringstillägg till att ladda upp PowerShell-skript i Intune
 
 Slutanvändarens databehandling genomgår en digital transformation. Klassisk, traditionell IT fokuserar på en enskild enhetsplattform, företagsägda enheter, användare som arbetar från kontoret och en mängd manuella, reaktiva IT-processer. En modern arbetsplats använder många plattformar som både är användarägda och företagsägda, vilket innebär att användarna kan arbeta från valfri plats och har åtkomst till automatiska och proaktiva IT-processer.
 
-MDM-tjänster (exempelvis Microsoft Intune) kan hantera mobila och stationära enheter som kör Windows 10. Den inbyggda Windows 10-hanteringsklienten kommunicerar med Intune när hanteringsuppgifter för företag utförs. Vissa uppgifter som du kan behöva är dock för närvarande inte är tillgängliga i Windows 10 MDM, till exempel avancerad enhetskonfiguration, felsökning och äldre Win32-apphantering. För de här funktionerna kan du köra Intunes programvaruklient på dina Windows 10-enheter. Att kunna [jämföra hanteringen av Windows-datorer som datorer respektive mobila enheter](pc-management-comparison.md) är mycket användbart.
+MDM-tjänster (exempelvis Microsoft Intune) kan hantera mobila och stationära enheter som kör Windows 10. Den inbyggda Windows 10-hanteringsklienten kommunicerar med Intune när hanteringsuppgifter för företag utförs. Det finns några uppgifter som du kan behöva göra, till exempel avancerad enhetskonfiguration och felsökning. Vid Win32-apphantering kan du använda funktionen [Win32-apphantering](apps-win32-app-management.md) på dina Windows 10-enheter.
 
-Tillägget för Intune-hantering kompletterar de inbyggda funktionerna i Windows 10 MDM. Du kan skapa PowerShell-skript som körs på Windows 10-enheter. Du kan till exempel skapa ett PowerShell-skript som installerar en äldre Win32-app, laddar upp skriptet till Intune, tilldelar det till en grupp i Azure Active Directory (AD) och sedan kör skriptet. Du kan sedan övervaka körstatusen för skriptet från början till slut.
+Tillägget för Intune-hantering kompletterar de inbyggda funktionerna i Windows 10 MDM. Du kan skapa PowerShell-skript som körs på Windows 10-enheter. Du kan till exempel skapa ett PowerShell-skript som utför avancerade enhetskonfigurationer, laddar upp skriptet till Intune, tilldelar det till en grupp i Azure Active Directory (AD) och sedan kör skriptet. Du kan sedan övervaka körstatusen för skriptet från början till slut.
 
 ## <a name="prerequisites"></a>Krav
 
@@ -46,7 +47,7 @@ Intune-hanteringstillägget har följande krav:
 
 1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Microsoft Intune**.
 2. Välj **Enhetskonfiguration** > **PowerShell-skript** > **Lägg till**.
-3. Ange ett **namn** och en **beskrivning** för PowerShell-skriptet. Navigera till PowerShell-skriptet för att ange **platsen för skriptet**. Skriptet måste vara mindre än 200 KB (ASCII) eller 100 KB (Unicode).
+3. Ange ett **namn** och en **beskrivning** för PowerShell-skriptet. Navigera till PowerShell-skriptet för att ange **platsen för skriptet**. Skriptet får inte vara större än 200 KB.
 4. Välj **Konfigurera**. Välj sedan att köra skriptet med användarens autentiseringsuppgifter på enheten (**Ja**), eller i systemkontexten (**Nej**). Som standard körs skriptet i systemkontexten. Välj **Ja** om inte skriptet kräver att det körs i systemkontexten. 
   ![Fönstret Lägg till PowerShell-skript](./media/mgmt-extension-add-script.png)
 5. Välj om skriptet måste signeras av en betrodd utgivare (**Ja**). Som standard finns inga krav på att skriptet ska signeras. 

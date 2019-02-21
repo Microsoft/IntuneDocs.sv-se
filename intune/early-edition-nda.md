@@ -17,14 +17,15 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: d50925d9f5422e1bfea01869233c63d6a2889109
-ms.sourcegitcommit: 12f8b7f0bca1baa2c1f68dd6af4f16a4814daa11
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 19994745a232a362d6bba0f09ed3934e492a17ed
+ms.sourcegitcommit: 2f431f122ce3ee6b5d0cdb04a0b748d00f83e295
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737510"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265680"
 ---
-# <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Den tidiga utgåvan för Microsoft Intune – Januari 2019
+# <a name="the-early-edition-for-microsoft-intune---february-2019"></a>Den tidiga utgåvan för Microsoft Intune – Februari 2019
 
 > [!Note]
 > Sekretessavtalsmeddelande: Följande ändringar är under utveckling för Intune. Den här informationen har mycket begränsad spridning, i enlighet med sekretessavtalet. Sprid inte den här informationen vidare på sociala medier eller offentliga webbplatser, till exempel Twitter, UserVoice, Reddit och så vidare. 
