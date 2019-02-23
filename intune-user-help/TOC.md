@@ -25,7 +25,6 @@
 
 ### [Åtgärda vanliga problem med Android](troubleshoot-your-device-android.md)
 #### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
-#### [E-postsynkronisering i Outlook med batterisparfunktionsläge](power-saving-mode-android.md)
 #### [Åtgärda vanliga problem med Samsung Knox](samsung-knox-errors-android.md)
 #### [Uppdatera din enhet för att installera Outlook](update-device-outlook-android.md)
 
