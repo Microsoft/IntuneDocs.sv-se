@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ecba61514c9143c21cb77e724fdcddbef42a37
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 8c5fd9998a4816775b3fc1d7803dc26e223b1e39
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845269"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742447"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Enhetsinställningar i Windows Holographic for Business för att köra helskärmsläge i Intune
 
@@ -82,4 +82,4 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Du kan också skapa helskärmsprofiler för enheter som kör [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#kiosk-settings) samt [Windows 10 och senare](kiosk-settings-windows.md).
+Du kan också skapa helskärmsprofiler för enheter som kör [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) samt [Windows 10 och senare](kiosk-settings-windows.md).

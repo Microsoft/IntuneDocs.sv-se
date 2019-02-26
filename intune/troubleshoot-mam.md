@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 02/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: ae8113a603ae4c091005f7c82045708f7e9e3e97
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086156"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655399"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Felsök hantering av mobilprogram
 
@@ -78,7 +78,7 @@ Felmeddelande eller dialogruta | Orsak | Åtgärder |
 **Appen har inte konfigurerats**: Den här appen har inte konfigurerats för att du ska kunna använda den. Kontakta IT-administratören om du behöver hjälp. | Det gick inte att identifiera en obligatorisk appskyddsprincip för appen. |Kontrollera att en appskyddsprincip för iOS har distribuerats till användarens säkerhetsgrupp och att den riktar sig mot den här appen.
 **Välkommen till Intune Managed Browser**: Den här appen fungerar bäst när den hanteras av Microsoft Intune. Du kan alltid använda appen för att söka på webben och om den hanteras av Microsoft Intune får du åtkomst till ytterligare dataskyddsfunktioner. | Det gick inte att identifiera en obligatorisk appskyddsprincip för Intune Managed Browser-appen. <br><br>Användaren kan fortfarande använda appen för att söka på webben, men appen hanteras inte av Intune. | Kontrollera att en appskyddsprincip för iOS har distribuerats till användarens säkerhetsgrupp och att den riktar sig mot Intune Managed Browser-appen.
 **Inloggningen misslyckades**: Vi kan inte logga in dig just nu. Försök igen senare. | Det gick inte att registrera användaren med MAM-tjänsten när användaren försökte logga in med sitt arbets- eller skolkonto. | Kontrollera att en appskyddsprincip för iOS har distribuerats till användarens säkerhetsgrupp och att den riktar sig mot den här appen.
-**Kontot har inte konfigurerats**: Din organisation har inte konfigurerat ditt konto så att du har åtkomst till arbets- eller skoldata. Kontakta IT-administratören om du behöver hjälp. | Användarkontot har inte någon licens för Intune A Direct. | Kontrollera att användarkontot har en licens för Intune som tilldelats i [Office-portalen](http://portal.office.com).
+**Kontot har inte konfigurerats**: Din organisation har inte konfigurerat ditt konto så att du har åtkomst till arbets- eller skoldata. Kontakta IT-administratören om du behöver hjälp. | Användarkontot har inte någon licens för Intune A Direct. | Kontrollera att användarkontot har en licens för Intune som tilldelats i [Office-portalen](https://portal.office.com).
 **Enheten är inte kompatibel**: Den här appen kan inte användas eftersom du använder en jailbrokad enhet. Kontakta IT-administratören om du behöver hjälp. | Intune har upptäckt att användaren finns på en jailbrokad enhet. | Återställ enheten till fabriksinställningarna. Följ [anvisningarna](https://support.apple.com/HT201274) från Apples supportwebbplats.
 **Internetanslutning krävs**: Du måste vara ansluten till Internet för att kunna verifiera att du får använda den här appen. | Enheten är inte ansluten till Internet. | Anslut enheten till ett WiFi- eller datanätverk.
 **Okänt fel**: Försök att starta om appen. Om problemet kvarstår kontaktar du IT-administratören för hjälp. | Ett okänt fel uppstod. | Vänta en stund och försök igen. Om felet kvarstår bör du skapa en [supportbegäran](get-support.md#create-an-online-support-ticket) med Intune.
@@ -97,7 +97,7 @@ Dialogruta/felmeddelande | Orsak | Åtgärder |
 **Inloggningen misslyckades**: Försök att logga in igen. Om problemet kvarstår kontaktar du IT-administratören för hjälp. | Det gick inte att autentisera kontot som användaren försökte logga in på. | Kontrollera att användaren loggar in med arbets- eller skolkontot som redan har registrerats med Intune MAM-tjänsten (det första arbets- eller skolkonto som har loggat in i den här appen). <br><br> Rensa appens data. <br><br> Kontrollera att appversionen är uppdaterad. <br><br> Kontrollera att företagsportalens version är uppdaterad.
 **Internetanslutning krävs**: Du måste vara ansluten till Internet för att kunna verifiera att du får använda den här appen. | Enheten är inte ansluten till Internet. | Anslut enheten till ett WiFi- eller datanätverk.
 **Enheten är inte kompatibel**: Den här appen kan inte användas eftersom du använder en rotad enhet. Kontakta IT-administratören om du behöver hjälp. | Intune har upptäckt att användaren finns på en rotad enhet. | Återställ enheten till fabriksinställningarna.
-**Kontot har inte konfigurerats**: Appen måste hanteras av Microsoft Intune, men ditt konto har inte konfigurerats. Kontakta IT-administratören om du behöver hjälp. | Användarkontot har inte någon licens för Intune A Direct. | Kontrollera att användarkontot har en licens för Intune som tilldelats i [Office-portalen](http://portal.office.com).
+**Kontot har inte konfigurerats**: Appen måste hanteras av Microsoft Intune, men ditt konto har inte konfigurerats. Kontakta IT-administratören om du behöver hjälp. | Användarkontot har inte någon licens för Intune A Direct. | Kontrollera att användarkontot har en licens för Intune som tilldelats i [Office-portalen](https://portal.office.com).
 **Det gick inte att registrera appen**: Appen måste hanteras av Microsoft Intune, men det gick inte att registrera den just nu. Kontakta IT-administratören om du behöver hjälp. | Det går inte att automatiskt registrera appen med MAM-tjänsten när appens skyddsprincip krävs. | Rensa appens data. <br><br> Skicka loggar till Intune via företagsportalappen, eller skicka en supportbegäran. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).
 
 ## <a name="next-steps"></a>Nästa steg

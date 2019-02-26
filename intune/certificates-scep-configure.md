@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50235e4e21e738081dc1b41d8e6a8b6210430064
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838146"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742745"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -364,10 +364,12 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 6. Ange följande inställningar:
 
    - **Certifikattyp**: Välj **Användare** för användarcertifikat. Välj **Enhet** för användarlösa enheter, till exempel informationsdatorer. **Enhetscertifikat** är tillgängliga för följande plattformar:  
+     - Android enterprise
      - iOS
+     - macOS
      - Windows 8.1 och senare
      - Windows 10 och senare
-     - Android enterprise
+
 
    - **Ämnesnamnets format**: Välj hur ämnesnamnet i certifikatbegäran ska skapas automatiskt av Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
 
