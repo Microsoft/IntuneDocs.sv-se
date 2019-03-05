@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af53739574a5ae7087b59d72bacd866e132a19ac
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 9444a124b9b8a47633f544205940dadb3df0fd8f
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843229"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335011"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Din Android-enhet verkar vara krypterad, men inte enligt företagsportalen
 
@@ -66,13 +66,13 @@ På vissa Android-enheter med version 7.0 och senare krypteras data på ett sät
 Om du har någon av följande enheter kan det här problemet uppstå om du inte har uppdaterat enheten till den senaste versionen av Android. Du kan installera uppdateringar för dessa enheter genom att gå till **Inställningar** > **Uppdatera**. 
 
 - [Huawei Honor 8](https://consumer.huawei.com/us/support/phones/honor-8/)
-- [Huawei P9](http://consumer.huawei.com/en/phones/p9/)
+- [Huawei P9](https://consumer.huawei.com/en/phones/p9/)
 
 ### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Kända enheter som inte kan uppdateras för att åtgärda problemet
 
 Det går inte att åtgärda det här problemet på enheterna nedan. Du kan behöva använda en annan enhet för att komma åt företagsresurser. 
 
 - [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
-- [OPPO-enheter](http://www.oppo.com/en/smartphones)
+- [OPPO-enheter](https://www.oppo.com/en/smartphones)
 - [Vivo-enheter](https://www.vivo.co.in)
 - [Xiaomi Mi-telefoner](https://xiaomi-mi.com/mi-smartphones/)

@@ -18,21 +18,18 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666779620aa0404c12107a374280c403d66bec3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840220"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335079"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
 
 När appinstallationens hastighet är lägre än idealet påbörjar du en manuell enhetssynkronisering. Manuella synkroniseringar tvingar din enhet att ansluta med Intune för de senaste uppdateringarna och kommunikationerna. Installationshastigheten kan öka när enhetssynkroniseringen är klar.
 
-Intune stöder manuell synkronisering från företagsportalappen, aktivitetsfältet på skrivbordet eller Start-menyn samt från enhetens inställningsapp. 
-
-Företagsportalappens funktioner har stöd på Windows 10-enheter som kör Creators uppdatering (1703) eller senare. 
-* [Synkronisera från företagsportalappen](#Sync-from-Company-Portal-app-for-Windows)  
+Intune stöder manuell synkronisering från företagsportalappen, aktivitetsfältet på skrivbordet eller Start-menyn samt från enhetens inställningsapp. Företagsportalappens funktioner har stöd på Windows 10-enheter som kör Creators uppdatering (1703) eller senare. 
 
 Alla Windows-enheter kan synkroniseras från enhetens inställningsapp, inklusive:
 
@@ -75,11 +72,11 @@ Följ stegen för att synkronisera dina Microsoft HoloLens-, Windows 10 desktop-
 
 3. Det finns flera versioner av Windows 10 för stationära datorer. Jämför din skärm med skärmbilderna nedan för att avgöra vilken uppsättning steg du ska följa. 
 
-    * Om skärmen visar **Åtkomst till arbetsplats eller skola**, går du vidare till stegen i [Åtkomst till arbetsplats eller skola](#access-work-or-school).
+    * Om skärmen visar **Åtkomst till arbetsplats eller skola**, går du vidare till stegen i [Åtkomst till arbetsplats eller skola](#access-work-or-school-steps).
 
     ![Alternativet Åtkomst till arbetsplats eller skola i inställningsappen](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-    * Om skärmen visar **Åtkomst till arbetsplats**, går du vidare till stegen under [Åtkomst till arbetsplats](#work-access).  
+    * Om skärmen visar **Åtkomst till arbetsplats**, går du vidare till stegen under [Åtkomst till arbetsplats](#work-access-steps).  
 
     ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png)
 

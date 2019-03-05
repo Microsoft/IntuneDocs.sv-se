@@ -6,19 +6,19 @@ ms.author: dougeby
 author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e7269eb6e396557a6bc19daa371a10be7154866
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f44d25f75ccc68912bea7b108ca56afe6aecb528
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844640"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57239058"
 ---
 # <a name="audit-logs-for-intune-activities"></a>Granskningsloggar för Intune-aktiviteter
 Granskningsloggar ger dig en post med aktiviteter som genererar en ändring i Microsoft Intune. Skapa, uppdatera (redigera), ta bort, och tilldela åtgärder eller uppgifter för fjärrhantering, generera granskningshändelser som du kan granska. Du kan gå igenom granskningsloggar för de flesta arbetsbelastningar i Intune. Granskning är aktiverat som standard för alla kunder och kan inte inaktiveras. Granskningshändelserna började registreras i funktionen i december 2017 och tidigare händelser är inte tillgängliga.

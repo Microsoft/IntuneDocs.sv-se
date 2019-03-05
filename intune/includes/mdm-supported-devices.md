@@ -28,6 +28,6 @@
 > [!NOTE]
 > Intune kan inte användas för att hantera operativsystem med Windows Server. Start-SKU:n stöder inte alla Intune-funktioner
 
-Kunder med Enterprise Management + Security (EMS) kan också [registrera Windows 10-enheter med Azure Active Directory (Azure AD)](/intune/windows-enroll.md).
+Kunder med Enterprise Management + Security (EMS) kan också [registrera Windows 10-enheter med Azure Active Directory (Azure AD)](/intune/windows-enroll).
 
 

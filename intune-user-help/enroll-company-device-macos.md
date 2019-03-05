@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acbfafcc26aa924a5a9d0a7712bb56119099af43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f84eddaf9fac6dd678c7046664bf1feb9ea8cfc1
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335249"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrera din macOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -64,7 +64,7 @@ Utför följande steg när du ska registrera din macOS-enhet för hantering. Om 
     * konfigurera din Mac  
 ## <a name="get-the-company-portal-app"></a>hämta appen för företagsportalen.      
 Ladda ned Intunes företagsportalsapp för macOS på din enhet. Med den här appen kan du övervaka, synkronisera, lägga till och ta bort enheten från hanteringen samt installera appar. Här beskrivs också hur du registrerar din enhet i företagsportalen.  
-1. Gå till http://portal.manage.microsoft.com/EnrollmentRedirect.aspx på din macOS-enhet.
+1. Gå till https://portal.manage.microsoft.com/EnrollmentRedirect.aspx på din macOS-enhet.
 2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto. 
 3. Hämta installationsprogrammet för företagsportalen för macOS genom att klicka på **Hämta appen**.
 4. Öppna pkg-filen när du uppmanas till detta och slutför installationen.

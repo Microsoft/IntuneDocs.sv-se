@@ -1,12 +1,12 @@
 ---
-title: 'Graph API: er används när du konfigurerar enheter i Microsoft Intune – Azure | Microsoft Docs'
+title: 'Graph API: er för att konfigurera enheter i Microsoft Intune – Azure | Microsoft Docs'
 titleSuffix: ''
-description: 'Visa en lista över alla Graph API: erna med matchande Windows CSP: N och förskjutning URI: N på Windows 10-enheter och senare används när du konfigurerar enheter i Microsoft Intune. Se de matchande API och CSP för delade datorer, endpoint protection, Windows Defender Avancerat skydd, identitetsskydd, Windows 10 team, helskärmsläge och Windows Update för företag.'
+description: 'Visa en lista över alla Graph API-entiteter med matchande Windows CSP: N och förskjutning URI: N på Windows 10-enheter och senare används när du konfigurerar enheter i Microsoft Intune. Se de matchande API och CSP för delade datorer, endpoint protection, Windows Defender Avancerat skydd, identitetsskydd, Windows 10 team, helskärmsläge och Windows Update för företag.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,30 +15,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ccc46914e53e72d941cc726b6a32fa421e23ca4
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: b2bed795125043eac07fce41a0f101a9b029bd06
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232139"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335317"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Graph API: er och matchar Windows 10 CSP: er används i Intune
 
-Microsoft Intune använder den [Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) att konfigurera enheter (**Intune** > **enhetskonfiguration**) som kör Windows 10 och senare. Graph API använder konfigurationstjänstleverantörer (CSP) för att läsa, ange, ändra och ta bort konfigurationsinställningar för enheter.
+Microsoft Intune använder den [Graph API entiteter](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (öppnas en annan plats för Docs) att konfigurera enheter (**Intune** > **enhetskonfiguration**) som kör Windows 10 och senare. Graph API använder konfigurationstjänstleverantörer (CSP) för att läsa, ange, ändra och ta bort konfigurationsinställningar för enheter.
 
 Den här listan gäller för:
 
 - Windows 10 och senare
 
-Den här artikeln innehåller Graph-egenskaper och deras matchande CSP: er för Windows 10 och förskjutning URI: er.
+Den här artikeln innehåller Graph entiteterna och deras motsvarande Windows-10 CSP: er och URI: er för förskjutning.
+
+Den här informationen är användbar för en mängd olika scenarier. Till exempel se vad som används av Intune, se inställningar för att inkludera i anpassade OMA-URI-konfigurationer och så vidare. 
 
 ## <a name="windows-10-csps"></a>Windows 10 CSPs
 
-Mer information om Windows 10 konfigurationstjänstleverantörer finns i den [referens för configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Mer information om Windows 10 konfigurationstjänstleverantörer finns i den [referens för configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (öppnas en annan plats för Docs).
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>Egenskaper för Graph API för CSP-mappning
 
-I följande lista visas Graph API-egenskaper som används av Microsoft Intune för Windows 10-enhetskonfiguration. Det visar även motsvarande Windows 10 CSP: N och förskjutning URI.
+I följande lista visas flesta av Graph API-entiteter som används av Microsoft Intune för Windows 10-enhetskonfiguration. Det visar även motsvarande Windows 10 CSP: N och förskjutning URI.
+
+Visa Windows 10-versioner av följande API: er gäller att använda Windows 10 [referens för configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (öppnas en annan plats för Docs).
 
 #### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
 **CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
@@ -237,8 +241,7 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **URI för förskjutning**: /Config/CredentialsUI/EnumerateAdministrators
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadditionalguardedfolders"></a>Windows10EndpointProtectionConfiguration.DefenderAdditionalGuardedFolders 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Offset URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadvancedransomewareprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderAdvancedRansomewareProtectionType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -257,23 +260,21 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **URI för förskjutning**: /Config/Defender/AttackSurfaceReductionRules (CSP/konfigurationen kräver Graph egenskaper: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
-**CSP**: ./Device/Vendor/MSFT/Policy/ **förskjutning URI**: /Config/ExploitGuard/ExploitProtectionSettings
+**CSP**: ./Device/Vendor/MSFT/Policy **förskjutning URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxmlfilename"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXmlFileName 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **URI för förskjutning**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardedfoldersallowedapppaths"></a>Windows10EndpointProtectionConfiguration.DefenderGuardedFoldersAllowedAppPaths 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**URI för förskjutning**: /Config/Defender/ControlledFolderAccessAllowedApplications
+**CSP**: ./Device/Vendor/MSFT/Policy **förskjutning URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardmyfolderstype"></a>Windows10EndpointProtectionConfiguration.DefenderGuardMyFoldersType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/Defender/EnableControlledFolderAccess
 
 #### <a name="windows10endpointprotectionconfigurationdefendernetworkprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderNetworkProtectionType 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**URI för förskjutning**: /Config/Defender/EnableNetworkProtection
+**CSP**: ./Device/Vendor/MSFT/Policy **förskjutning URI**: /Config/Defender/EnableNetworkProtection
 
 #### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunch"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunch 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -340,8 +341,7 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **URI för förskjutning**: /Config/Defender/AttackSurfaceReductionRules (CSP/konfigurationen kräver Graph egenskaper: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**URI för förskjutning**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
+**CSP**: ./Device/Vendor/MSFT/Policy **förskjutning URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableaccountui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAccountUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -416,19 +416,18 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **URI för förskjutning**: /Config/Defender/AttackSurfaceReductionRules (CSP/konfigurationen kräver Graph egenskaper: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
+**CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablevirtualizationbasedsecurity"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableVirtualizationBasedSecurity 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Offset URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlaunchsystemguard"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLaunchSystemGuard 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
+**CSP**: ./Device/Vendor/MSFT/Policy  
 **URI för förskjutning**: /Config/DeviceGuard/ConfigureSystemGuardLaunch
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlocalsystemauthoritycredentialguardsettings"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLocalSystemAuthorityCredentialGuardSettings 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
+**CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/DeviceGuard/LsaCfgFlags
 
 #### <a name="windows10endpointprotectionconfigurationdmaguarddeviceenumerationpolicy"></a>Windows10EndpointProtectionConfiguration.DmaGuardDeviceEnumerationPolicy 
@@ -868,12 +867,10 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **URI för förskjutning**: /Config/MSSecurityGuide/WDigestAuthentication
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenblockoverrideforfiles"></a>Windows10EndpointProtectionConfiguration.SmartScreenBlockOverrideForFiles 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Offset URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
+**CSP**: ./Device/Vendor/MSFT/Policy **förskjutning URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenenableinshell"></a>Windows10EndpointProtectionConfiguration.SmartScreenEnableInShell 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Offset URI**: /Config/SmartScreen/EnableSmartScreenInShell
+**CSP**: ./Device/Vendor/MSFT/Policy **förskjutning URI**: /Config/SmartScreen/EnableSmartScreenInShell
 
 #### <a name="windows10endpointprotectionconfigurationsolicitedremoteassistance"></a>windows10endpointprotectionconfiguration.solicitedRemoteAssistance 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -1030,6 +1027,9 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 #### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
 **CSP**: ./Vendor/MSFT/Policy  
 **URI för förskjutning**: /Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
+
+#### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
+**CSP**: Ej tillämpligt Graph API-anrop **förskjutning URI**: Ej tillämpligt Graph API-anrop
 
 #### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **CSP**: ./Vendor/MSFT/Policy  
@@ -2924,9 +2924,17 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **URI för förskjutning**: /Config/Update/PauseFeatureUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
+**CSP**: Ej tillämpligt – Graph API **förskjutning URI**: Ej tillämpligt – Graph API
+
 #### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
-**CSP**: ./Device/Vendor/MSFT/Policy  
-**URI för förskjutning**: / återställning/FeatureUpdate
+**CSP**: Ej tillämpligt – Graph API **förskjutning URI**: Ej tillämpligt – Graph API
+
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
+**CSP**: Ej tillämpligt – Graph API **förskjutning URI**: Ej tillämpligt – Graph API
+
+#### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/Update/ActiveHoursStart, /Config/Update/ActiveHoursEnd, /Config/Update/ScheduledInstallDay,  /Config/Update/ScheduledInstallTime
 
 #### <a name="windowsupdateforbusinessconfigurationmicrosoftupdateserviceallowed"></a>WindowsUpdateForBusinessConfiguration.MicrosoftUpdateServiceAllowed 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -2948,9 +2956,11 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/Update/PauseQualityUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
+**CSP**: Ej tillämpligt – Graph API **förskjutning URI**: Ej tillämpligt – Graph API
+
 #### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**CSP**: ./Device/Vendor/MSFT/Policy  
-**URI för förskjutning**: / återställning/QualityUpdate
+**CSP**: Ej tillämpligt – Graph API **förskjutning URI**: Ej tillämpligt – Graph API
 
 #### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -2976,4 +2986,4 @@ I följande lista visas Graph API-egenskaper som används av Microsoft Intune f�
 ## <a name="next-steps"></a>Nästa steg
 
 - [Enheten configuration-översikt](device-profiles.md)
-- [Referens för Configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
+- [Referens för Configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (öppnas en annan plats för Docs)

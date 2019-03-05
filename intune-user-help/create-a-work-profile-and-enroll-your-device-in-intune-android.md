@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 683156b968c743c4c82b472c6e566d5762c22c1a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: eab28cdd4515561ad34a433773e351150a87f626
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844674"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334960"
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Skapa en arbetsprofil och registrera din enhet i Intune
 
@@ -33,7 +33,7 @@ Företagets support kan bara hantera arbetsprofilen, som innehåller dina arbets
 
 För att skapa en arbetsprofil:
 
-1.  På Android-företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto. Ladda ned och installera den kostnadsfria appen från [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) om du inte redan har installerat den.
+1.  På Android-företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto. Ladda ned och installera den kostnadsfria appen från [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) om du inte redan har installerat den.
 
     ![Android-företagsportalsappens skärm Välkommen](./media/and-enroll-0-welcome-screen.png)
 
