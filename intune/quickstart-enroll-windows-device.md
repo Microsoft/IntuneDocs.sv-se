@@ -9,6 +9,7 @@ ms.date: 12/05/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c04dc3169fbf6a60d0c4d7db8358092909e90240
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55841830"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57389985"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Snabbstart: Registrera din Windows 10-enhet
 
@@ -59,7 +60,7 @@ Innan du registrerar ditt Windows 10 Desktop måste du bekräfta den version av 
 4. Bekräfta att **versionen** av Windows 10 är **1607 eller senare**.
 
     > [!IMPORTANT]
-    > De steg som visas i den här snabbstarten gäller för Windows 10-version **1607 eller senare**. Om du har version **1511 eller äldre** fortsätter du med [de här stegen](/intune-user-help/enroll-your-w10-device-your-account).
+    > De steg som visas i den här snabbstarten gäller för Windows 10-version **1607 eller senare**. Om du har version **1511 eller äldre** fortsätter du med [de här stegen](/intune-user-help/enroll-windows-10-device.md).  
 
 ## <a name="enroll-windows-10-desktop"></a>Registrera Windows 10 Desktop
 
