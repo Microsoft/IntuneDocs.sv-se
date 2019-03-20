@@ -9,18 +9,19 @@ ms.date: 12/06/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
-ms.topic: conceptual
+ms.localizationpriority: medium
+ms.topic: reference
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c6ec55db072cd02fae2b4eef659f601b63bb850
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: ee2084cd7b5ba2d51311b675c3f31c41cc83fc4f
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57231697"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566173"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Använda anpassade inställningar för Windows Holographic for Business-enheter i Intune
 
@@ -41,7 +42,7 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Windows Hologr
 3. Ange följande inställningar:
 
     - **Namn**: Ange ett namn för profilen, till exempel `hololens custom profile`.
-    - **Beskrivning**: Ange en beskrivning av profilen.
+    - **Beskrivning:** Ange en beskrivning för profilen.
     - **Plattform**: Välj **Windows 10 och senare**.
     - **Profiltyp**: Välj **Anpassad**.
 
@@ -49,7 +50,7 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Windows Hologr
 
     - **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
     - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
-    - **OMA-URI** (skiftlägeskänslig): Ange den OMA-URI som du vill använda som inställning.
+    - **OMA-URI** (skiftlägeskänsligt): Ange den OMA-URI som du vill använda som inställning.
     - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
 
         - Sträng

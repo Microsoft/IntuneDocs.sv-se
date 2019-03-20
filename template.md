@@ -14,11 +14,11 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: 68090a038cec49009b6bd0ce0515a075f62483b8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
-ms.translationtype: HT
+ms.openlocfilehash: d05559a46cfd2bf9e092378e7cff779022e21792
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "20283577"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadata- och markdownmall
@@ -37,7 +37,7 @@ Det fullständiga metadatablocket ligger över och det är indelat i obligatoris
 - Kolon i ett värde (t.ex. en rubrik) bryter metadataparsern. Använd istället HTML-kodningen &#58; (t.ex. "rubrik: Azure Rights Management&#58; Grunderna | "Azure RMS").
 - **rubrik**: den här rubriken visas i sökresultat. Rubriken ska avslutas med ett lodstreck (|) följt av namnet på tjänsten (se ovan). Rubriken behöver inte (och bör troligtvis inte) vara identisk med rubriken i H1 rubriken. Den bör innehålla ungefär 65 tecken (inklusive | TJÄNSTENS NAMN)
 - **författare**, **ansvarig**, **granskare**: Fältet Författare ska innehålla författarens **Github-användarnamn** och inte hans/hennes alias.  I fälten "ansvarig" och "granskare" ska du däremot ange alias. ms.reviewer anger namnet på projektledaren som är kopplad till artikeln eller tjänsten.
-- **ms.assetid**: Det här är artikelns GUID. När du skapar en ny markdownfil hämtar du GUID:en från [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.assetid**: Det här är artikelns GUID. När du skapar en ny markdownfil kan hämta ett GUID från [ https://www.guidgenerator.com ](https://www.guidgenerator.com). 
 - **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Du hittar möjliga värden för de här elementen [här](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Grundläggande markdown och GFM
@@ -117,7 +117,7 @@ När en webbadress finns i en markdownfil omvandlas den till en klickbar länk.
 
 ### <a name="unordered-lists"></a>Osorterade listor
 
-- Det här
+- Denna
 - är
 - en
 - punkt-

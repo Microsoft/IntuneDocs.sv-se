@@ -6,9 +6,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/14/2018
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a44b5b911d89a2e31f2a718aaa76702847ffb3d8
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: b6e51e936a70580643cbaa232441e0ba21c3db14
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849211"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566666"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -279,7 +280,7 @@ Om det inte går att slutföra programhanteringsverktyget visas något av följa
 |Indataappen du angav har inte signerats. Ange en giltig signerad app.|Appomslutningsverktyget kräver att apparna signeras. Läs utvecklardokumentationen om du vill veta hur du signerar en omsluten app.|
 |Indataappen du har angett måste vara i formatet IPA eller APP.|Endast appar med filnamnstilläggen APP och IPA godkänns av appomslutningsverktyget. Kontrollera att indatafilen har ett giltigt filnamnstillägg och har kompilerats som en APP- eller IPA-fil.|
 |Indataappen som du angav är redan omsluten och har den senaste versionen av principmallen.|Programhanteringsverktyget omsluter inte en befintlig omsluten app igen med den senaste versionen av principmallen.|
-|WARNING: Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
+|VARNING: Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
 
 ### <a name="log-files-for-the-app-wrapping-tool"></a>Loggfiler för programhanteringsverktyget
 Appar som har omslutits med hjälp av programhanteringsverktyget genererar loggar som skrivs till iOS-klientenhetskonsolen. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget. Använd följande steg för att hämta den här informationen:
@@ -438,7 +439,8 @@ Använd följande steg för att hämta loggar för dina omslutna program under f
 > [!NOTE]
 > Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
 
-### <a name="see-also"></a>Se även
-- [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)</br>
-- [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)</br>
+## <a name="see-also"></a>Se även
+
+- [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)
+- [Vanliga frågor, problem och lösningar med principer för enheter och profiler](device-profile-troubleshoot.md)
 - [Aktivera hantering av mobilprogram i appar med SDK](app-sdk.md)
