@@ -18,11 +18,11 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bdb3e5c79b348b323df129c2dec4c02af596215
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 85856e77fc8ebbd4054ef819a9110e0fa258ced3
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55844555"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Använda din Windows-enhet med Intune-företagsportalen
@@ -46,7 +46,7 @@ Företagsportalen har för närvarande stöd för enheter som kör följande ver
 Andra versioner av Windows, till exempel [Windows 10 Holographic](https://www.microsoft.com/hololens), stöds på företagsportalen. Dessa versioner omfattas dock inte i den här artikeln eftersom de används för mycket specifika områden.
 
 ## <a name="set-up-your-device-in-the-company-portal"></a>Konfigurera din enhet på företagsportalen
-- [Hämta min Windows-enhet som hanteras på företagsportalen](enroll-your-device-in-intune-windows.md)
+- [Hämta min Windows-enhet som hanteras på företagsportalen](windows-enrollment-company-portal.md)  
 - [Vad innebär det att min enhet *hanteras*?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [Vilken information kan mitt företag se på min enhet?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [Kryptera min enhet](encrypt-your-device-windows.md)

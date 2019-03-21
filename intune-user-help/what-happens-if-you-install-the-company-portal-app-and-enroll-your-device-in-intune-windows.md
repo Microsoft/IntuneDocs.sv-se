@@ -18,16 +18,16 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cace30f5120bb5c02d3569d9668d336a00f69ff
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 85ccfb526ada4d6851fb32b077d07d3538f90361
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55846850"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune?
 
-När du installerar företagsportalappen och sedan använder den för att registrera en Windows- eller Windows Phone-enhet låter du företagets support hantera din enhet för att skydda företags- eller skoldata. Det här avsnittet beskriver vad som händer med enheter som är äldre än Windows 10. För Windows 10-enheter läser du [motsvarande avsnitt](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+När du installerar företagsportalappen och sedan använder den för att registrera en Windows- eller Windows Phone-enhet låter du företagets support hantera din enhet för att skydda företags- eller skoldata. Det här avsnittet beskriver vad som händer med enheter som är äldre än Windows 10. För Windows 10-enheter läser du [motsvarande avsnitt](about-cp-app-for-windows-10.md).  
 
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Vad händer med alla Windows-enheter efter registreringen?
 Om du registrerar en Windows- eller Windows Phone-enhet i Intune kan du:

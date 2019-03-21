@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f19d347cb799a47d07ade4f8458fade68b1b99
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834661"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "56742541"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 Installera appar på enheten från företagsportalappen för Windows.
@@ -35,10 +35,11 @@ Installera appar på enheten från företagsportalappen för Windows.
     ![Hemsida för företagsportalappen för Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)    
 2. Hitta och installera appar från något av följande avsnitt i företagsportalappen:  
 
-    * **Startsida**: Välj från en lista över din organisations aktuella appar.  
-    * **Visa alla**: Från avsnittet **Startsida** > **Appar** klickar du på **Visa alla** för att visa alla tillgängliga appar.  
-    * **Alla appar**: Välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella.  
-    * **Sök efter appar**: Det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
+    * **Start**: välj från en lista över din organisations aktuella appar.  
+    * **Visa alla**: från avsnittet **Startsida** > **Appar**, klickar du på **Visa alla** för att visa alla tillgängliga appar.  
+    * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella.  
+    * **Appkategorier**: Välj den här sidan i navigeringsfönstret för att välja appar baserat på typ eller funktion. Appar sorteras under kategorier som **aktuell**, **Education**, och **produktivitet**.  
+    * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
     * **Alla appar**: Visa, sortera och filtrera alla tillgängliga appar. Sökresultat sorteras automatiskt efter relevans.  
 
 3. Välj en app.   

@@ -6,10 +6,11 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
-ms.topic: article
+ms.date: 02/28/2019
+ms.topic: archived
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: d081f466-45dd-41d1-ab25-6d974c72a52a
 ms.reviewer: owenyen
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 784ad8366391c55a97ac58d9c1f7ab7707062aa8
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 16992d8a80ca42db84cfa071422a779606a99891
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845677"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460087"
 ---
 # <a name="use-policies-to-help-protect-windows-pcs-that-run-the-intune-client-software"></a>Använd principer för att skydda Windows-datorer som kör Intune-klientprogramvaran
 
@@ -43,7 +44,6 @@ Windows-brandväggen hjälper till att hålla hackare, skadlig kod och andra hot
 
 Som IT-administratör är en av dina högsta prioriteter att [hålla Windows-datorer som du hanterar fria från skadlig kod och virus](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md). Intune integreras med Endpoint Protection för att ge realtidsskydd mot hot från skadlig kod, hålla definitioner för skadlig kod aktuella och skanna datorer automatiskt. Endpoint Protection innehåller dessutom verktyg som hjälper dig att hantera och övervaka angrepp från skadlig kod.
 
+## <a name="see-also"></a>Se även
 
-
-### <a name="see-also"></a>Se även
-[Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
+[Vanliga frågor, problem och lösningar med principer för enheter och profiler](device-profile-troubleshoot.md)

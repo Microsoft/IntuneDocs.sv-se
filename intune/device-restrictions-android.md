@@ -6,20 +6,22 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 11/13/2018
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f546fc66f7c602705289493eb2f5c96555ab7603
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: edb01e1cbe5fdbc79b48ee90e39fe45a2ccefb2a
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728947"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566360"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Intune
 
@@ -89,7 +91,7 @@ Om du ställer in **Krav på lösenordstyp** till **Numeriskt avancerad** och se
 Använd inställningarna för att tillåta eller förhindra specifika appar på enheten. Funktionen stöds på Android- och Samsung Knox Standard-enheter:
 
 - **Otillåtna appar**: En lista över appar som inte hanteras av Intune som du inte vill ha installerade på enheten. Om en användare installerar en app från den här listan kommer Intune att meddela dig.
-- **Godkända appar**: En lista över de appar som användare tillåts att installera. För att fortsätta vara kompatibla, får användare inte installera andra appar. Appar som hanteras av Intune tillåts automatiskt.
+- **Godkända appar**: En lista över de appar som användare tillåts att installera. Om användarna vill fortsätta följa standard får de inte installera andra appar. Appar som hanteras av Intune tillåts automatiskt.
 
 Om du vill lägga till en app i listorna kan du:
 
@@ -164,4 +166,4 @@ Inställningarna för helskärmsläget gäller endast för Samsung Knox Standard
 
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Du kan också skapa profiler för helskärmsläge för [Android Enterprise](device-restrictions-android-for-work.md#kiosk-settings)- och [Windows 10](kiosk-settings.md)-enheter.
+Du kan också skapa profiler för helskärmsläge för [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)- och [Windows 10](kiosk-settings.md)-enheter.

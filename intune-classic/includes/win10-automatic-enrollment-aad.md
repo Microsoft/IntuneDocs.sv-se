@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fbfff91d2993becc99e2132285bef78d245ff50e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
+ms.contentlocale: sv-SE
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "35289821"
+---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Aktivera automatisk registrering i Windows 10
 
 Med automatisk registrering kan användarna registrera sina Windows 10-enheter i Intune genom att lägga till sina arbetskonton till sina egna enheter, eller ansluta sina företagsägda enheter till din Azure Active Directory. Användarens enhet registreras och ansluts till Azure Active Directory i bakgrunden. När enheten har registrerats hanteras den med Intune.

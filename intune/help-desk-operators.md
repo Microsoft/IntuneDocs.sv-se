@@ -6,22 +6,23 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/23/2018
-ms.topic: conceptual
+ms.date: 03/11/2019
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba74c93e2ef7dc469ebd7f5086659181b72a0981
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 135e93bf3cfb93b5299dfd005a3ca70bbba84d77
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230031"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57787142"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -69,176 +70,180 @@ Du kan använda fönstret **Felsökning** för att granska användarinformation.
 | 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa i fönstret. <br>Du kan välja: <ul><li>Klientappar<li>Efterlevnadsprinciper<li> Konfigurationsprinciper<li>Appskyddsprinciper <li>Registreringsbegränsningar</ul>      |
 | 5.   | Gruppmedlemskap  | Visar de grupper som den valda användaren är medlem i.       |
 
-## <a name="client-apps-reference"></a>Referens för klientappar
+<!-- this section needs to be updated
 
-Apparna som kör enheter
-- hanteras av Intune och Azure Active Directory (AD) 
-- ägs av användare som hanteras av Intune och Azure Active Directory (AD).
+## Client apps reference
 
-### <a name="properties"></a>Enheter
+The apps that are running devices
+- managed by Intune and Azure Active Directory (AD) 
+- owned by users managed by Intune and Azure Active Directory (AD).
 
-Egenskaperna för klientappar.
+### Properties
 
-| Egenskap      | Beskrivning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+The properties of client apps.
+
+| Property      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Namn          | Namnet på programmet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Operativsystem            | Operativsystemet som är installerat på enheten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Typ          | Du kan välja en tilldelningstyp för varje program.  <br> **Tillgänglig** – Användarna installerar appen från företagsportalappen eller webbplatsen.  <br> **Inte tillämpligt** – Appen varken installeras eller visas i företagsportalen. <br> **Avinstallera** – Appen avinstalleras från enheter i valda grupper.  <br> **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. |
-| Senast ändrad | Namnet på enhetstypen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Name          | The name of the application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| OS            | The operating system installed on the device.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Type          | You can choose an assignment type for each app.  <br> **Available** - Users install the app from the Company Portal app or website.  <br> **Not Applicable** - The app is not installed or shown in the Company Portal. <br> **Uninstall** - The app is uninstalled from devices in the selected groups.  <br> **Available with or without enrollment** - Assign this app to groups of users whose devices are not enrolled with Intune. |
+| Last Modified | The name of the type of device.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### <a name="devices"></a>Egenskaper
+### Devices
 
-Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Egenskap           | Beskrivning                                                                                                                         |
+| Property           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
-| Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
-| Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
-| Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
-| Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Appinstallation | Anger om en appinstallation har lyckats eller misslyckats på den enskilda enheten. |
-| Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
-| OS-version         | Enhetens operativsystemversionsnummer.                                                                                  |
-| Senaste incheckning      | Namnet på enhetstypen.                                                                                                     |
+| Device name        | The name of the type of device.                                                                                                     |
+| Managed by         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| App install | Denotes whether an app install failure or success has occurred on the individual device. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last check-in      | The name of the type of device.                                                                                                     |
 
-### <a name="app-protection-status"></a>Appskyddsstatus
+### App protection status
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik (Enterprise Mobility Solution). Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
+An app protection policy is available to mobile apps that integrate with Enterprise Mobility Solution (EMS) technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-| Egenskap    | Beskrivning                                                                           |
+| Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Status      | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
-| Appnamn    | Namnet på programmet                                                           |
-| Enhetsnamn | Namnet på enhetstypen.                                                       |
-| Enhetstyp | Namnet på enhetstypen.                                                       |
-| Policys    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
-| Senaste synkronisering   | Tidsstämpel för den senaste gången enheten synkroniserades med Intune.                   |
+| Status      | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| App name    | The name of the application                                                           |
+| Device name | The name of the type of device.                                                       |
+| Device type | The name of the type of device.                                                       |
+| Policies    | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| Last sync   | The timestamp of the last time the device synchronized with Intune.                   |
 
-## <a name="app-protection-policies-reference"></a>Appskyddsprinciper för referens
+## App protection policies reference
 
-En appskyddsprincip är tillgänglig för mobilappar som integrerar med EMS-teknik. De här principerna skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilapparna. 
+An app protection policy is available to mobile apps that integrate with EMS technologies.These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-### <a name="properties"></a>Enheter
+### Properties
 
-I tabellen sammanfattas appskyddsprincipernas status för enheter som hanteras av Intune.
+The table summarizes app protection policies status for devices managed by Intune.
 
-| Egenskap    | Beskrivning                                                                                                                                |
+| Property    | Description                                                                                                                                |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Namn        | Namnet på programmet.                                                                                                        |
-| Distribuerad    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Plattform    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
-| Registrering  | Namnet på enhetstypen.                                                                                                     |
-| Senaste uppdateringen | Tidsstämpelprincipen har ändrats.                                                                                              |
+| Name        | The name of the application.                                                                                                        |
+| Deployed    | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Platform    | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Enrollment  | The name of the type of device.                                                                                                     |
+| Last Update | The timestamp the policy was modified.                                                                                              |
 
-### <a name="devices"></a>Egenskaper
+### Devices
 
-Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Egenskap           | Text                                                                                                                                |
+| Property           | Text                                                                                                                                |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
-| Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
-| Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
-| Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
-| Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
-| OS-version         | Enhetens operativsystemversionsnummer.                                                                                  |
-| Senaste incheckning      | Namnet på enhetstypen.                                                                                                     |
+| Device Name        | The name of the type of device.                                                                                                     |
+| Managed By         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last Check in      | The name of the type of device.                                                                                                     |
 
-## <a name="compliance-policies-reference"></a>Referens för efterlevnadsprinciper
+## Compliance policies reference
 
-Ser till att de enheter som används för åtkomst till företagets appar och data följer vissa regler, t.ex. använder en PIN-kod för att komma åt enheten, och kryptering av data som lagras på enheten.
+Makes sure that the devices used to access company apps and data, comply with certain rules like using a PIN to access the device, and encryption of data stored on the device.
 
-### <a name="properties"></a>Enheter
+### Properties
 
-Egenskaperna för efterlevnadsprinciperna.
+The properties of the compliance policies.
 
-| Egenskap      | Beskrivning                                                                                                                         |
+| Property      | Description                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Tilldelning    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Namn          | Namnet på programmet.                                                                                                        |
-| Operativsystem            | Operativsystemet som är installerat på enheten.                                                                                       |
-| Principtyp   | Typen av enhetsägarskap (**företag**, **personlig** och **okänd**).                                               |
-| Senast ändrad | Namnet på enhetstypen.                                                                                                     |
+| Assignment    | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Name          | The name of the application.                                                                                                        |
+| OS            | The operating system installed on the device.                                                                                       |
+| Policy Type   | The type of device ownership (**Company**, **Personal**, and **Unknown**).                                               |
+| Last Modified | The name of the type of device.                                                                                                     |
 
-### <a name="devices"></a>Egenskaper
+### Devices
 
-Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Egenskap           | Beskrivning                                                                                                                         |
+| Property           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
-| Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
-| Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** och **okänd**).                                               |
-| Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
-| Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
-| OS-version         | Enhetens operativsystemversionsnummer.                                                                                  |
-| Senaste incheckning      | Namnet på enhetstypen.                                                                                                     |
+| Device name        | The name of the type of device.                                                                                                     |
+| Managed by         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, and **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last check-in      | The name of the type of device.                                                                                                     |
 
-### <a name="app-protection-policies"></a>Appskyddsprinciper
+### App protection policies
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-| Egenskap    | Beskrivning                                                                           |
+| Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Status      | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
-| Appnamn    | Namnet på programmet                                                           |
-| Enhetsnamn | Namnet på enhetstypen.                                                       |
-| Enhetstyp | Namnet på enhetstypen.                                                       |
-| Policys    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
-| Senaste synkronisering   | Tidsstämpel för den senaste gången enheten synkroniserades med Intune.                   |
+| Status      | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| App name    | The name of the application                                                           |
+| Device name | The name of the type of device.                                                       |
+| Device type | The name of the type of device.                                                       |
+| Policies    | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| Last sync   | The timestamp of the last time the device synchronized with Intune.                   |
 
-## <a name="configuration-policies-reference"></a>Referens för konfigurationsprinciper
+## Configuration policies reference
 
-En appskyddsprincip är tillgänglig för mobilappar med leverantörsspecifika konfigurationer. 
+An app configuration policy is available to mobile apps with vendor-specific configuration. 
 
-### <a name="properties"></a>Enheter
+### Properties
 
-Egenskaperna för konfigurationspolicyerna.
+The properties of the configuration policies.
 
-| Egenskap      | Beskrivning                                                                                                                         |
+| Property      | Description                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Tilldelning    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Namn          | Namnet på programmet.                                                                                                        |
-| Operativsystem            | Operativsystemet som är installerat på enheten.                                                                                       |
-| Principtyp   | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
-| Senast ändrad | Namnet på enhetstypen.                                                                                                     |
+| Assignment    | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Name          | The name of the application.                                                                                                        |
+| OS            | The operating system installed on the device.                                                                                       |
+| Policy Type   | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Last Modified | The name of the type of device.                                                                                                     |
 
-### <a name="devices"></a>Egenskaper
+### Devices
 
-Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Egenskap           | Beskrivning                                                                                                                         |
+| Property           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
-| Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
-| Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
-| Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
-| Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
-| OS-version         | Enhetens operativsystemversionsnummer.                                                                                  |
-| Senaste incheckning      | Namnet på enhetstypen.                                                                                                     |
+| Device name        | The name of the type of device.                                                                                                     |
+| Managed by         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last check-in      | The name of the type of device.                                                                                                     |
 
 
-### <a name="app-protection-policies"></a>Appskyddsprinciper
+### App protection policies
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-| Egenskap    | Beskrivning                                                                           |
+| Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Status      | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
-| Appnamn    | Namnet på programmet                                                           |
-| Enhetsnamn | Namnet på enhetstypen.                                                       |
-| Enhetstyp | Namnet på enhetstypen.                                                       |
-| Policys    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
-| Senaste synkronisering   | Tidsstämpel för den senaste gången enheten synkroniserades med Intune.                   |
+| Status      | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| App name    | The name of the application                                                           |
+| Device name | The name of the type of device.                                                       |
+| Device type | The name of the type of device.                                                       |
+| Policies    | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| Last sync   | The timestamp of the last time the device synchronized with Intune.                   |
+
+-->
 
 ## <a name="enrollment-failure-reference"></a>Referens för registreringsfel
 
