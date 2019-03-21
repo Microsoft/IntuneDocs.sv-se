@@ -12,6 +12,8 @@ items:
     items:
     - name: Nyheter i användargränssnittet för programmet
       href: whats-new-app-ui.md
+    - name: Funktioner under utveckling
+      href: in-development.md
   expanded: true
 - name: Snabbstarter
   items:
@@ -75,8 +77,6 @@ items:
     href: windows-information-protection-configure.md
   - name: MAM VANLIGA FRÅGOR OCH SVAR
     href: mam-faq.md
-  - name: Frågor och svar om princip och profil
-    href: manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md
 - name: Instruktioner
   items:
   - name: Planera distribution
@@ -225,9 +225,7 @@ items:
       items:
       - name: Programmet för enhetsregistrering eller Apple School Manager
         href: device-enrollment-program-enroll-macos.md
-    - name: Installera Intune-klientprogrammet på Windows-datorer
-      href: install-the-windows-pc-client-with-microsoft-intune.md
-    - name: Rapport över avbrutna
+    - name: Ofullständig registreringsrapport
       href: enrollment-report-company-portal-abandon.md
     - name: Felsöka enhetsregistrering
       href: troubleshoot-device-enrollment-in-intune.md
@@ -258,7 +256,7 @@ items:
       href: device-logout-user.md
     - name: Ta bort användare
       href: device-remove-user.md
-    - name: Radera enhet
+    - name: Ta bort macOS-enhet
       href: device-erase.md
     - name: Fjärrstyr mobila enheter
       href: device-profile-android-teamviewer.md
@@ -307,6 +305,7 @@ items:
     - name: Begränsa enhetsinställningar och funktioner
       href: device-restrictions-configure.md
     - name: Leverera uppdateringar
+      displayName: delivery optimization; updates
       href: delivery-optimization-windows.md
     - name: Uppgradera versioner och S-läge
       href: edition-upgrade-configure-windows-10.md
@@ -363,7 +362,7 @@ items:
         - name: Data som Intune skickar till Google
           href: data-intune-sends-to-google.md
         - name: Information som delas från Jamf Pro till Intune
-          href: conditional-access-integrate-jamf.md
+          href: data-jamf-sends-to-intune.md
       - name: Visa och åtgärda personliga data
         href: privacy-data-view-correct.md
       - name: Granska, exportera, ta bort
@@ -376,6 +375,7 @@ items:
       - name: Installera Exchange On-Premises Connector
         href: exchange-connector-install.md
       - name: Skapa och tilldela princip för villkorlig åtkomst
+        href: conditional-access-exchange-create.md
       - name: Princip för enhetsbaserad villkorstyrd åtkomst
         href: create-conditional-access-intune.md
       - name: Tilldela principer för villkorlig åtkomst på nytt med den klassiska Intune-portalen
@@ -448,6 +448,8 @@ items:
       href: network-access-control-integrate.md
     - name: Windows Hello
       href: windows-hello.md
+    - name: Övervaka enhetskryptering
+      href: encryption-monitor.md
     - name: Certifikat
       href: certificates-configure.md
       items:
@@ -532,6 +534,8 @@ items:
         href: apps-inc-exl-assignments.md
       - name: Distribuera följande gäller för Windows 10-appar
         href: apps-windows-10-app-deploy.md
+      - name: Distribuera appar till myndighetsmiljöer
+        href: apps-deploy-gcc-dod.md
     - name: Övervakning av appar
       href: apps-monitor.md
     - name: Konfigurera appar
@@ -616,6 +620,8 @@ items:
       href: data-google-sends-to-intune.md
   - name: Få hjälp och support
     items:
+    - name: Klientstatus
+      href: tenant-status.md
     - name: Felsöka
       items:
       - name: Hjälpa användare att felsöka problem
@@ -624,6 +630,8 @@ items:
         href: troubleshoot-company-resource-access-problems.md
       - name: Felsöka problem med att installera appen
         href: troubleshoot-app-install.md
+      - name: Felsök hantering av mobilprogram
+        href: troubleshoot-mam.md
       - name: Granskningsloggar för Intune-aktiviteter
         href: monitor-audit-logs.md
       - name: Granska loggar med Azure Monitor
@@ -636,14 +644,12 @@ items:
         href: troubleshoot-software-updates-in-microsoft-intune.md
       - name: Felsöka Endpoint Protection
         href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-      - name: Felsöka principer
+      - name: Felsöka principer och profiler
         href: troubleshoot-policies-in-microsoft-intune.md
       - name: Felsöka villkorlig åtkomst
         href: troubleshoot-conditional-access.md
       - name: Felsöka Exchange Connector
         href: troubleshoot-exchange-connector.md
-    - name: Kända problem
-      href: known-issues.md
     - name: Få support
       href: get-support.md
 - name: Referens
@@ -660,14 +666,6 @@ items:
           href: device-restrictions-android.md
         - name: E-post
           href: email-settings-android.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: PKCS-importerat certifikat
-          href: certficates-pfx-configure.md#create-a-pkcs-imported-certificate-profile
-        - name: PKCS-certifikat
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: VPN
           href: vpn-settings-android.md#android-vpn-settings
         - name: Wi-Fi
@@ -687,16 +685,8 @@ items:
           href: device-restrictions-android-for-work.md
         - name: E-post
           href: email-settings-android-enterprise.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: PKCS-importerat certifikat
-          href: certficates-pfx-configure.md#create-a-pkcs-imported-certificate-profile
-        - name: PKCS-certifikat
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: VPN
-          href: vpn-settings-android.md#android-for-work-vpn-settings
+          href: vpn-settings-android.md#android-enterprise-vpn-settings
         - name: Wi-Fi
           href: wi-fi-settings-android-enterprise.md
         - name: Anpassad
@@ -713,12 +703,6 @@ items:
           href: device-restrictions-ios.md
         - name: E-post
           href: email-settings-ios.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: PKCS-certifikat
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: VPN
           href: vpn-settings-ios.md
         - name: Wi-Fi
@@ -737,26 +721,20 @@ items:
           href: device-restrictions-macos.md
         - name: Endpoint Protection
           href: endpoint-protection-macos.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
         - name: VPN
           href: vpn-settings-macos.md
         - name: Wi-Fi
           href: wi-fi-settings-macos.md
         - name: Anpassad
           href: custom-settings-macos.md
-    - name: Säkerhetsbaslinjer
-      items:
-      - name: Windows-inställningar för säkerhetsbaslinjer
-        href: security-baseline-settings-windows.md
     - name: Windows 10 och senare
       items:
       - name: Inställningar för efterlevnadsprinciper
         href: compliance-policy-create-windows.md#windows-10-and-later-policy-settings
       - name: Inställningar för konfigurationsprofil
         items:
+        - name: Inställningar för leveransoptimering
+          href: delivery-optimization-settings.md
         - name: Enhetsbegränsningar
           href: device-restrictions-windows-10.md
         - name: Enhetsbegränsningar (Windows 10 Team)
@@ -771,12 +749,6 @@ items:
           href: identity-protection-windows-settings.md
         - name: Helskärmsläge
           href: kiosk-settings-windows.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: PKCS-certifikat
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: VPN
           href: vpn-settings-windows-10.md
         - name: Wi-Fi
@@ -787,6 +759,8 @@ items:
           href: shared-user-device-settings-windows.md
         - name: Anpassad
           href: custom-settings-windows-10.md
+      - name: Inställningar för säkerhetsbaslinjer
+        href: security-baseline-settings-windows.md
       - name: Windows Update-inställningar
         href: windows-update-settings.md
     - name: Windows 10 Holographic for Business
@@ -809,10 +783,6 @@ items:
         items:
         - name: Enhetsbegränsningar
           href: device-restrictions-windows-8-1.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
         - name: VPN
           href: vpn-settings-windows-8-1.md
         - name: Wi-Fi-import
@@ -827,10 +797,6 @@ items:
           href: device-restrictions-windows-phone-8-1.md
         - name: E-post
           href: email-settings-windows-phone-8-1.md
-        - name: Betrott certifikat
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: SCEP-certifikat
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
         - name: VPN
           href: vpn-settings-windows-phone-8-1.md
         - name: Anpassad
@@ -854,6 +820,9 @@ items:
         href: app-wrapper-prepare-android.md
       - name: Intune App SDK för Android
         href: app-sdk-android.md
+        items:
+        - name: Android-testguide för Intune App SDK
+          href: app-sdk-android-testing-guide.md
       - name: Xamarin-bindningar för Intune App SDK
         href: app-sdk-xamarin.md
     - name: Använda Intune-informationslagret
@@ -912,34 +881,6 @@ items:
       href: graph-apis-used-by-intune-device-configuration-windows.md
 - name: Resurser
   items:
-  - name: Microsoft Intune-dokumentationsguide
-    href: intune-documentation.md
-  - name: Felsöka
-    items:
-    - name: Hjälpa användare att felsöka problem
-      href: help-desk-operators.md
-    - name: Felsökning av problem med åtkomst till företagsresurser
-      href: troubleshoot-company-resource-access-problems.md
-    - name: Felsöka problem med att installera appen
-      href: troubleshoot-app-install.md
-    - name: Felsök hantering av mobilprogram
-      href: troubleshoot-mam.md
-    - name: Granskningsloggar för Intune-aktiviteter
-      href: monitor-audit-logs.md
-    - name: Granska appskyddsloggar
-      href: app-protection-policy-settings-log.md
-    - name: Felsöka e-postprofiler
-      href: troubleshoot-email-profiles-in-microsoft-intune.md
-    - name: Felsöka programuppdateringar
-      href: troubleshoot-software-updates-in-microsoft-intune.md
-    - name: Felsöka Endpoint Protection
-      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-    - name: Felsöka principer
-      href: troubleshoot-policies-in-microsoft-intune.md
-    - name: Felsöka villkorlig åtkomst
-      href: troubleshoot-conditional-access.md
-    - name: Felsöka Exchange Connector
-      href: troubleshoot-exchange-connector.md
   - name: Arkiv
     items:
     - name: Nyhetsarkiv
@@ -1005,9 +946,9 @@ items:
       href: data-outside-protect.md
     - name: Förhindra dataläckage på ej hanterade enheter
       href: data-leak-prevention.md
-ms.openlocfilehash: 680ae510d7f3387b53ad6ae50c8e4d8ba194f8b9
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 2a7f7b7a1d1c56cf316362ef8dc2693343e64955
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742830"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306867"
