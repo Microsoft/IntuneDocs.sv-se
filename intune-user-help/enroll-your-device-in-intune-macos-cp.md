@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2c9ea11cd19fee8f491329020753501996b47f40
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55834729"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
@@ -58,7 +58,7 @@ Använd följande steg för att registrera macOS-enheter som kör OS X El Capita
 
 4. På sidan __Enheter__ visas en lista över hanterade enheter eller ett meddelande. Vad som visas beror på om du redan har en hanterad enhet. 
     * Om du vill lägga till en enhet som inte visas i listan väljer du meddelandet **Tap here to tell us which device you're using or add a new device** (Tryck här för att berätta vilken enhet du använder eller lägga till en ny enhet).
-    * Om du inte har några enheter får du följande meddelande: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
+    * Om du inte har några enheter visas meddelandet: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
 
      ![En skärmbild av sidan Enheter med en röd ruta runt meddelandealternativet för att markera var du ska klicka.](./media/CP-enroll-MACOS-1808.png)  
 5.  Slutför det steg nedan som överensstämmer med det meddelande som visas i företagsportalen.  

@@ -6,9 +6,10 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 09/25/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 5fa59501-5f33-46b7-a5f5-75eeae9f1209
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 522e2e8b424c3c8865b29a5503c301b80b3c36ba
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 50c147e13a59df00ce9527a0843784d223afec20
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845422"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460724"
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
@@ -74,7 +75,7 @@ Om en enhet har åtkomst trots att den är inkompatibel vidtar du följande åtg
 - Granska dina mål- och undantagsgrupper. Om användare inte är i rätt målgrupp, eller är i en undantagsgrupp, blockeras de inte. Efterlevnad kontrolleras endast för enheter som har användare i en målgrupp.
 - Kontrollera att enheten identifieras. Pekar Exchange Connector på en Exchange 2010-klientåtkomstserver när användaren har en Exchange 2013-servern? I så fall kan Intune inte känna till enhetens anslutning till Exchange om Exchange-standardregeln är Tillåt, även om användaren är i målgruppen.
 - Kontrollera om enhetens finns/enhetens åtkomststatus i Exchange:
-  - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: Get-ActiveSyncDeviceStatistics -mailbox mbx. Om enheten inte visas har den inte åtkomst till Exchange.
+  - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: "Get-ActiveSyncDeviceStatistics -mailbox mbx'. Om enheten inte visas har den inte åtkomst till Exchange.
   - Om enheten visas använder du cmdleten Get-CASmailbox -identity:’upn’ | fl för att få detaljerad information om enhetens åtkomststatus och ange den informationen till Microsoft Support.
 
 ## <a name="next-steps"></a>Nästa steg

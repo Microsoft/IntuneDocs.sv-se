@@ -7,9 +7,10 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/01/2018
-ms.topic: conceptual
+ms.topic: archived
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 ms.reviewer: owenyen
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94549f150b2c658ba422ea1d6f68c5b5df85e33
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 9c70dbee01c546f73052b8741ce339c7bfe92fc7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238497"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461149"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter
 
@@ -53,4 +54,5 @@ Organisationer kan använda Microsoft Intune för att hantera Windows-datorer so
 Hantering av Windows-datorer med modern hantering av mobila enheter har följande fördelar:
 - **Skalbarhet** – MDM-hanteringen skalas med Intunes molnhantering. Intune-programvaruklienten är begränsad till 7000 datorer.
 - **Enkelhet** – Använder de moderna hanteringsfunktioner som ingår i operativsystemet utan att behöva hämta någon programvaruklient
-- **Konsekvens** – Dina Windows-datorer hanteras precis som alla andra enheter i din organisation <!-- - **Cloud optimization** - -->
+- **Konsekvens** – Dina Windows-datorer hanteras precis som alla andra enheter i din organisation
+<!-- - **Cloud optimization** - -->

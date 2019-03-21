@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff0aad055aee08dfbf17622e3d9f9c3061165b8
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 666b61eec021fa6a2cdad5126f572234d97b6883
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233975"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566105"
 ---
 # <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurera VPN-inställningar för enheter som kör Android i Intune
 
@@ -36,12 +37,12 @@ Beroende på vilka inställningar du väljer kan bara vissa av följande värden
 
 ## <a name="android-vpn-settings"></a>VPN-inställningar för Android
 
-- **Anslutningens namn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar.
+- **Anslutningsnamn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar.
 - **IP-adress eller fullständigt domännamn**: Ange IP-adressen eller det fullständiga domännamnet för VPN-servern som enheterna ska ansluta till. Ange till exempel **192.168.1.1** eller **vpn.contoso.com**.
 
   - **Autentiseringsmetod**: Välj hur enheter autentiserar mot VPN-servern. Alternativen är:
 
-    - **Certifikat**: Välj en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](certificates-configure.md) visar stegen för att skapa en certifikatprofil.
+    - **Certifikat**:Välj en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](certificates-configure.md) visar stegen för att skapa en certifikatprofil.
     - **Användarnamn och lösenord**: Vid inloggning till VPN-servern uppmanas slutanvändarna att ange ett användarnamn och lösenord.
 
 - **Anslutningstyp**: Välj VPN-anslutningstyp. Alternativen är:
@@ -54,16 +55,16 @@ Beroende på vilka inställningar du väljer kan bara vissa av följande värden
   - **Citrix**
 
 - **Fingeravtryck** (endast Check Point Capsule VPN): Ange en sträng, till exempel **Contoso fingeravtryckskod**, för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan skickas till klienten så att den vet att den ska lita på alla servrar som har samma fingeravtryck vid anslutningen. Om enheten inte har fingeravtrycket uppmanar den användaren att lita på VPN-servern medan fingeravtrycket visas. Användaren verifierar fingeravtrycket manuellt och väljer betrodd för att ansluta.
-- **Ange nyckel och värdepar för Citrix VPN-attributen** (endast Citrix): Ange nyckel och värdepar som tillhandahålls av Citrix. Dessa värden konfigurerar egenskaperna för VPN-anslutningen.
+- **Ange nyckel-värdepar för Citrix VPN-attributen** (endast Citrix): Ange nyckel- och värdepar som tillhandahålls av Citrix. Dessa värden konfigurerar egenskaperna för VPN-anslutningen.
 
 ## <a name="android-enterprise-vpn-settings"></a>VPN-inställningar för Android Enterprise
 
-- **Anslutningens namn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar.
+- **Anslutningsnamn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar.
 - **IP-adress eller fullständigt domännamn**: Ange IP-adressen eller det fullständiga domännamnet för VPN-servern som enheterna ska ansluta till. Ange till exempel **192.168.1.1** eller **vpn.contoso.com**.
 
   - **Autentiseringsmetod**: Välj hur enheter autentiserar mot VPN-servern. Alternativen är:
   
-    - **Certifikat**: Välj en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](certificates-configure.md) visar stegen för att skapa en certifikatprofil.
+    - **Certifikat**:Välj en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](certificates-configure.md) visar stegen för att skapa en certifikatprofil.
     - **Användarnamn och lösenord**: Vid inloggning till VPN-servern uppmanas slutanvändarna att ange ett användarnamn och lösenord.
 
 - **Anslutningstyp**: Välj VPN-anslutningstyp. Alternativen är:
