@@ -262,8 +262,6 @@ items:
       href: device-profile-android-teamviewer.md
     - name: PIN-återställning i Windows 10
       href: device-windows-pin-reset.md
-    - name: Installera Exchange-tjänstanslutning
-      href: exchange-service-connector-configure.md
     - name: Synkronisera enhet
       href: device-sync.md
     - name: Granska enhetsinventering
@@ -329,6 +327,11 @@ items:
       href: education-settings-configure.md
     - name: Delade enheter för flera användare
       href: shared-user-device-settings.md
+    - name: Mobility Extensions på Zebra-enheter
+      href: android-zebra-mx-overview.md
+      items:
+      - name: StageNow-loggar och vanliga problem
+        href: android-zebra-mx-logs-troubleshoot.md
     - name: Övervaka telekomkostnader
       href: telecom-expenses-monitor.md
     - name: Anpassade enhetsinställningar
@@ -854,8 +857,6 @@ items:
             href: reports-ref-user-timeline.md
           - name: Referens för programenheter
             href: reports-ref-application.md
-          - name: Referens för aktuell användarentitet
-            href: reports-ref-current-user.md
           - name: Referens för datumentitet
             href: reports-ref-date.md
           - name: Referens för enhetsentiteter
@@ -946,9 +947,9 @@ items:
       href: data-outside-protect.md
     - name: Förhindra dataläckage på ej hanterade enheter
       href: data-leak-prevention.md
-ms.openlocfilehash: 2a7f7b7a1d1c56cf316362ef8dc2693343e64955
-ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
+ms.openlocfilehash: f342d2ce12fb45db49cf06263807ed4a155fba55
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306867"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394688"
