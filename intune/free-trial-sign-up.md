@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 03/11/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0ed363acca7fc0021569009b1f672a06101e29f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834185"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57756861"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad 
 
@@ -53,7 +54,7 @@ Du kan prova Intune utan kostnad i 30 dagar. Om du redan har ett arbets- eller s
 
     ![Skärmbild av ny autentiseringsprocess för Microsoft Intunes konto för kostnadsfri utvärderingsversion](./media/account-sign-up-site-user-id.png)
 
-    Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationsportalen för Office 365 enligt beskrivningen senare i artikeln.
+    Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationscentret för Microsoft 365 enligt beskrivningen senare i artikeln.
 
 3. I slutet av registreringsprocessen får du ett meddelande med din nya kontoinformation.
 
@@ -86,34 +87,34 @@ Följ dessa steg om du vill ställa in utfärdare för hantering av mobila enhet
 3. Välj banderollen som anger att du inte har aktiverat enhetshantering, eller välj **Enhetsregistrering** om du inte genast ser popup-meddelandet. Bladet **Välj utfärdare av mobilenhetshantering** visas om du inte har aktiverat enhetshantering än.
 
     > [!NOTE]
-    > Den orangefärgade banderollen visas bara om du inte har angett MDM-utfärdaren än.
+    > Om du har angett MDM-utfärdaren visas värdet för MDM-utfärdaren på bladet **Enhetsregistrering**. Den orangefärgade banderollen visas bara om du inte har angett MDM-utfärdaren än. 
 
     ![Bild av bladet Välj utfärdare av mobilenhetshantering](./media/choose-mdm-authority.png) 
 
-4. Under **Välj utfärdare av mobilenhetshantering** anger du MDM-utfärdaren till **Intune-utfärdare för mobilenhetshantering**.
+4. Om MDM-utfärdare inte har angetts ska du under **Välj utfärdare av mobilenhetshantering** ange **Intune-utfärdare för mobilenhetshantering** som din MDM-utfärdare.
 
 Mer information om MDM-utfärdaren finns i [Ange utfärdare för hantering av mobila enheter](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Så här konfigurerar du ditt domännamn (valfritt)
 
-Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationsportalen för Office 365. Du kommer att lägga till, verifiera och konfigurera ditt domännamn.  
+Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationscentret för Microsoft 365. Du kan lägga till, verifiera och konfigurera ditt anpassade domännamn med följande steg.  
 
 > [!IMPORTANT]
-> Du kan inte byta namn på eller ta bort det första **onmicrosoft.com**-domännamnet. Du kan lägga till, verifiera eller ta bort anpassade domännamn som används med Intune så att din företagsidentitet alltid är tydlig.
+> Du kan inte byta namn på eller ta bort den *första* delen av domännamnet, **onmicrosoft.com**. Däremot kan du lägga till, verifiera eller ta bort *anpassade* domännamn som används med Intune så att din företagsidentitet alltid är tydlig. Mer information finns i avsnittet [Så här konfigurerar du ett eget domännamn](custom-domain-name-configure.md).
 
-1. Gå till [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx) och logga in på ditt administratörskonto.
+1. Gå till [administrationscentret för Microsoft 365](https://admin.microsoft.com) och logga in med ditt administratörskonto.
 
 2. I navigeringsfönstret väljer du **Installation** > **Domäner** > **Lägg till domän**.
 
 3. Skriv ditt eget domännamn. Välj **Nästa**.
 
-   ![Skärmbild av Administrationscenter för Office 365 – Lägg till domän](./media/domain-custom-add.png)
+   ![Skärmbild av administrationscentret för Microsoft 365 – Lägg till domän](./media/domain-custom-add.png)
 
 4. Kontrollera att du är ägare till domänen som du angav tidigare. 
     
-    Om du väljer att **skicka kod via e-post** skickas ett e-postmeddelande till den registrerade kontakten för din domän. När du har fått e-postmeddelandet kopierar du koden och anger den i fältet som är märkt **Ange verifieringskoden här**. Om verifieringskoden matchar läggs domänen till din klient. E-postmeddelandet som visas kanske inte ser bekant ut. Vissa registratorer döljer den verkliga e-postadressen och sedan vad som har angetts när domänen registrerades.
+    Om du väljer att **skicka kod via e-post** skickas ett e-postmeddelande till den registrerade kontakten för din domän. När du har fått e-postmeddelandet kopierar du koden och anger den i fältet som är märkt **Ange verifieringskoden här**. Om verifieringskoden matchar läggs domänen till din klient. E-postmeddelandet som visas kanske inte ser bekant ut. Vissa registratorer dölja den verkliga e-postadressen. E-postadressen kan också vara en annan än den som har angetts när domänen registrerades.
 
-   ![Skärmbild av Administrationscenter för Office 365 – Verifiera domän](./media/domain-custom-verify.png)
+   ![Skärmbild av administrationscentret för Microsoft 365 – Verifiera domän](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > TXT-postverifieringsinformation finns i [Skapa DNS-poster för alla DNS-värdtjänster för Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
@@ -122,7 +123,7 @@ Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmi
 
 Det finns två portaler som du kan använda:
 - Intune-instrumentpanel i Azure ([portal.azure.com](https://portal.azure.com)) där du kan utforska [Intune-funktionerna](what-is-intune.md). Vanligtvis utför du ditt arbete i Intune-instrumentpanelen.
-- Administrationscenter för Office 365 ([portal.office.com](https://portal.office.com)) där du kan lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
+- Administrationscentret för Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) där du kan lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -4,6 +4,7 @@ description: Snabbstart – Skapa en användare i Intune.
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 10/30/2018
 ms.author: erikje
@@ -11,14 +12,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: b5653c67766a3312cf7ce2872e8b0cd4301b0e8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 98c71bd4c93e869b429b7677b4fb7c442aa58643
+ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189504"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57991089"
 ---
-# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Snabbstart: Skapa en användare och tilldela användaren en licens
+# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Snabbstart: Skapa en användare och tilldela en licens till den
 
 I den här snabbstarten ska du skapa en användare som du sedan tilldelar en licens. När du använder Intune måste varje person som du vill ska ha åtkomst till företagets data ha ett användarkonto. Intune-administratörer kan sedan konfigurera sådana användare för att hantera åtkomstkontroll.
 
@@ -45,9 +47,9 @@ Användare måste ha ett användarkonto för att kunna registrera sig för hante
 
 ## <a name="assign-a-license-to-the-user"></a>Tilldela användaren en licens
 
-När du har skapat en användare måste du använda [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) för att tilldela användaren en Intune-licens. Användare kan inte registrera sina enheter i Intune förrän du har tilldelat dem en licens. 
+När du har skapat en användare måste du använda [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) för att tilldela användaren en Intune-licens. Användare kan inte registrera sina enheter i Intune förrän du har tilldelat dem en licens. 
 
-1. Logga in på [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) med samma autentiseringsuppgifter du använde för att logga in på Intune.
+1. Logga in på [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) med samma autentiseringsuppgifter du använde för att logga in på Intune.
 2. Välj **Användare** > **Aktiva användare** > och välj den användare som du just har skapat.
 3. Välj sedan **Redigera** bredvid **Produktlicenser**.
 4. Välj en plats för användaren under **Plats**.
@@ -61,7 +63,7 @@ Den nya aktiva Intune-användaren visas nu som en användare med en **Intune**-l
 
 ## <a name="clean-up-resources"></a>Rensa resurser
 
-Om du inte längre behöver den här användaren kan du ta bort användaren genom att navigera till [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) och välja **Användare** > **Aktiva användare** > *välja användaren i listan* > **Ta bort användare** > **Ta bort användare** > **Bekräfta ändringar** > **Stäng**.
+Om du inte längre behöver den här användaren kan du ta bort användaren genom att navigera till [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) och välja **Användare** > **Aktiva användare** > *välja användaren i listan* > **Ta bort användare** > **Ta bort användare** > **Bekräfta ändringar** > **Stäng**.
 
 ## <a name="next-steps"></a>Nästa steg
 

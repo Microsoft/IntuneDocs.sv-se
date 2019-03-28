@@ -10,20 +10,22 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2586fce0-5dca-4686-b9c4-791778838401
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ae378550a75f756390053e44eb4fbd04f665612
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7dee5407b39d9299081bf526b117c64b5883a106
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179102"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57393367"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Snabbstart: Skapa och tilldela en appskyddsprincip
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Snabbstart: Skapa och tilldela en skyddsprincip för ett program
 
 I den här snabbstarten använder du Intune för att skapa och tilldela en appskyddsprincip till en klientapp på en slutanvändares enhet. Intune använder appskyddsprinciper för att bekräfta att dina appar uppfyller organisationens dataskyddskrav.
 
@@ -47,7 +49,7 @@ Använd följande steg för att skapa en appskyddsprincip:
     - **Namn**: *Windows 10-innehållsskydd*
     - **Beskrivning**: *Användare som är associerade med den här principen kommer inte att kunna klippa ut, kopiera eller klistra in innehåll mellan den tilldelade appen och andra icke-hanterade appar på enheten.*
     - **Plattform**: *Windows 10*
-    - **Registreringstillstånd**: *Med registrering*
+    - **Registreringsstatus**: *Med registrering*
 
 3. Välj **Skyddade appar** för att välja de appar som måste följa den här principen.
 4. Klicka på **Lägg till appar**.
@@ -84,4 +86,4 @@ I den här snabbstarten skapade och tilldelade du en appskyddsprincip. Användar
 Om du vill följa den här serien med Intune-snabbstarter fortsätter du till nästa snabbstart.
 
 > [!div class="nextstepaction"]
-> [Snabbstart – Skapa och tilldela en anpassad roll](quickstart-create-custom-role.md)
+> [Snabbstart: Skapa och tilldela en anpassad roll](quickstart-create-custom-role.md)

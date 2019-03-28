@@ -4,6 +4,7 @@ description: Snabbstart – Konfigurera automatisk registrering för Windows 10-
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 11/05/2018
 ms.author: erikje
@@ -11,12 +12,13 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0d6f210d055d8395985b4fe64b5a061b2c8a0304
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 810adbf06ddcd0aabb5c758f6a71c898116a9cee
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179677"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57394317"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Snabbstart: Konfigurera automatisk registrering för Windows 10-enheter
 

@@ -10,18 +10,20 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a1b89f2d-7937-46bb-926b-b05f6fa9c749
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: af24e1c56e43fe2edfc6a9241c31600b7cfe61a7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 757191515ca88cedf1a5edcdb243b1ecb730ec3c
+ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186264"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57991126"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Snabbstart: Skicka meddelanden till icke-kompatibla enheter
 
@@ -48,11 +50,11 @@ Om du vill skicka ett e-postmeddelande till användarna skapar du en mall för a
 2. Ange följande information:
 
    - **Namn**: *Contoso-administratör*
-   - **Ämne**: *Enhetsefterlevnad*
+   - **Ämne**: *Efterlevnad för enhet*
    - **Meddelande**: *Enheten uppfyller för närvarande inte organisationens efterlevnadskrav.*
-   - **E-postsidhuvud – Inkludera företagslogotyp**: Ställ in som **Aktiverat** för att visa organisationens logotyp.
-   - **E-postsidfot – Inkludera företagsnamn**: Ställ in som **Aktiverat** för att visa organisationens namn.
-   - **E-postsidfot – Inkludera kontaktuppgifter**: Ställ in som **Aktiverat** för att visa organisationens kontaktuppgifter.
+   - **E-postsidhuvud – Infoga företagets logotyp**: Ange som **Aktiverad** om du vill visa organisationens logotyp.
+   - **E-postsidfot – Infoga företagets namn**: Ange som **Aktiverad** om du vill visa organisationens namn.
+   - **E-postsidfot – Infoga kontaktinformation**: Ange som **Aktiverad** om du vill visa organisationens kontaktinformation.
 
    ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/quickstart-send-notification-01.png)
 
@@ -84,7 +86,7 @@ Följande steg skapar en efterlevnadsprincip för Windows 10-enheter.
     ![Inställningar för systemsäkerhet för en ny efterlevnadsprincip](./media/quickstart-send-notification-02.png) 
 
 7. Klicka på **OK**, **OK** och **Skapa** för att skapa efterlevnadsprincipen.
-8. Välj namnet på den nya principen: **Windows 10-efterlevnad**.
+8. Välj namn på den nya principen: **Windows 10-efterlevnad**.
 9. Välj **Egenskaper** > **Åtgärd vid icke-kompatibilitet** > **Lägg till**.
 10. I listrutan **Åtgärd** bekräftar du att **Skicka e-post till slutanvändare** har valts.
 11. Välj **Meddelandemall** > **Contoso-administratör** > **Välj** för att välja den meddelandemall som du skapade tidigare i det här avsnittet.

@@ -10,20 +10,22 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6d0a7485aa25dee74bf54192fa931d081be81cd8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 40f321b02565f696554e2380d488c41a3b1f24eb
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57391875"
 ---
-# <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägga till och tilldela en klientapp
+# <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
 I den här snabbstarten använder du Intune för att lägga till och tilldela en klientapp till företagets personal. En av en administratörs prioriteringar är att säkerställa att användarna har åtkomst till appar som de behöver för att utföra sitt arbete. 
 
@@ -90,7 +92,7 @@ Du måste installera och använda företagsportalappen för att installera den *
 4. Klicka på den app som du lade till med hjälp av Intune. I den här snabbstarten lade du till appen **Microsoft Office 365-appaket**.
 
     > [!NOTE]
-    > Om du inte kunde tilldela några appar till Intune-användaren visas följande meddelande: *Your IT administrator did not make any apps available to you.* (IT-administratören inte har gjort några appar tillgängliga för dig).
+    > Om du inte kunde tilldela några appar till Intune-användaren visas följande meddelande: *Din IT-administratör har inte gjort några appar tillgängliga för dig.*
 
 5. Klicka på **Installera**.
 
