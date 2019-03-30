@@ -1,11 +1,11 @@
 ---
-title: Felsökning av problem med åtkomst till företagsresurser | Microsoft Docs
-description: Använd Microsoft Intune-felkoder och statuskoder som hjälp för att felsöka problem med resursåtkomst.
+title: Felkoderna och statuskoderna i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över felen, statuskod, beskrivningar och lösningar när du använder MDM-hanterade enheter, få åtkomst till företagets resurser, fel på iOS-enheter och OMA svar fel i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2018
+ms.date: 03/20/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebb311eab93abd66f6a23e58737573622b68f3e8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2e4d2b940a0079794c5b17e8d1c1900f630d14cd
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461506"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330486"
 ---
-# <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Felsökning av problem med åtkomst till företagsresurser med Microsoft Intune
+# <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Vanliga felkoder och beskrivningar i Microsoft Intune
 
-Använd fel- och statuskoderna i det här avsnittet för att felsöka problem när en åtgärd i Microsoft Intune returnerar en felkod.
+Den här artikeln innehåller vanliga fel, statuskoder, beskrivningar och lösningar vid åtkomst till organisationens resurser. Använd den här informationen för att felsöka åtkomstrelaterade problem när du använder Microsoft Intune.
 
-Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](get-support.md), som beskriver hur du kan få hjälp på fler sätt.
+Om du behöver support hjälp, se [få support för Microsoft Intune](get-support.md).
 
 ## <a name="status-codes-for-mdm-managed-windows-devices"></a>Statuskoder för MDM-hanterade Windows enheter
 
@@ -385,5 +385,6 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016345912|0x87D100C8|SyncML-kommandot har utförts.|
 |-2016346011|0x87D10065|Det angivna SyncML-kommandot genomförs, men har ännu inte slutförts.|
 
-### <a name="next-steps"></a>Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).
+## <a name="next-steps"></a>Nästa steg
+
+Kontakta Microsoft Support till [få support för Microsoft Intune](get-support.md).

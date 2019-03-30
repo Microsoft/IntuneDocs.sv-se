@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 03/19/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39052860cefc562700608beda7f42c4146ccdf34
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d47d7a52a212733955d441b463ef66d89f8d9143
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566037"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358195"
 ---
 # <a name="reference-for-application-entities"></a>Referens för programenheter
 
@@ -128,17 +128,5 @@ Entiteten **MobileAppInstallState** representerar installationstillståndet för
 | AppInstallState | Uppräkningsvärde för appens installationstillstånd. |
 | AppInstallStateName | Namn på appens installationstillstånd. |
 
-## <a name="mobileappdeviceuserinstallstatus"></a>MobileAppDeviceUserInstallStatus
 
-**MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
-
-
-|      Egenskap      |                                                         Beskrivning                                                         |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------|
-|      DateKey       |                                  Nyckeln för det datum då appens installationstillstånd registrerades.                                  |
-|       AppKey       |                             Nyckeln för mobilappen som används för att identifiera en instans av AppRevision.                              |
-|     DeviceKey      |                              Nyckeln för en målenhet som används för att identifiera en instans av enheten.                               |
-|      UserKey       |                                Nyckeln för en målanvändare som används för att identifiera en instans av användaren.                                 |
-| AppInstallStateKey |                     Nyckeln för appens installationstillstånd som används för att identifiera en instans av MobileAppInstallState.                     |
-|     Felkod      | Felkoden som returnerades av appens installationsprogram, mobila plattformar eller tjänsten som hör till appens installation. |
 

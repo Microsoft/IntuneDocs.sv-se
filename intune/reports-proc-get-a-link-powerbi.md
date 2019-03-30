@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 03/28/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3342eec0ea9797f4ce21b53e589ff4f427d03bb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5b93bb9911fa93998e443a797d085a568280c278
+ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564813"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618509"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
 
@@ -57,7 +57,7 @@ Power BI-filen (pbix) innehåller anslutningsinformation för klientorganisation
 > Varje Power BI-fil (pbix) kan vara olika beroende på klientens plats. Om du hanterar flera Intune-klienter så måste du använda den fil som hämtats från Azure Portal när du är inloggad i den klienten.  
 
 1.  Logga in på Azure Portal och välj **Övervakning + hantering** > **Intune**. Du kan också söka efter resurser för **Intune**.  
-2.  Öppna bladet **API för Microsoft Intune-informationslager (förhandsversion)** .
+2.  Öppna den **konfigurera Intune Data Warehouse** bladet.
 3.  Välj **Ladda ned PowerBI-fil**. Filen med filnamnstillägget pbix laddas ned till den plats du angett.
 4.  Öppna filen med Power BI. *Intune Data Warehouse Reports* läses in men det kan ta någon sekund innan klientorganisationens data nås.
 5.  Välj **Uppdatera** så att klientorganisationens data läses in, och granska rapporterna.
@@ -68,7 +68,7 @@ Power BI-filen (pbix) innehåller anslutningsinformation för klientorganisation
 När en klient har autentiserats med Azure AD ansluter OData-webbadressen till RESTful-slutpunkten i informationslager-API:t som gör datamodellen tillgänglig för rapporteringsklienten. Följ de här anvisningarna för att ansluta och skapa egna rapporter med hjälp av Power BI Desktop. Du är inte begränsad till enbart Power BI Desktop utan kan använda ett valfritt analysverktyg med OData-webbadressen så länge klienten har stöd för OAUTH2.0-autentisering och OData v4.0-standarden.
 
 1.  Logga in på Azure Portal och välj **Övervakning + hantering** > **Intune**. Du kan också söka efter resurser för **Intune**.  
-2.  Öppna bladet **API för Microsoft Intune-informationslager (förhandsversion)** .
+2.  Öppna den **konfigurera Intune Data Warehouse** bladet.
 3. Hämta webbadressen till anpassad feed på rapportbladet, till exempel `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 4. Öppna **Power BI Desktop**.
 5. Välj **Hem** > **Hämta data**. Välj**OData-feed**.

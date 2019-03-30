@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 03/19/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1e3e510cf1ef7e13e653f7793433045b0610ef
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f3addd79b20c685c5643a2b99fb7120e958cdecb
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565483"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394889"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -87,6 +87,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Tillåt att appen överför information till andra appar|X|X|
 |Tillåt att appen hämtar data från andra appar|X|X|
 |Begränsa klipp ut, kopiera och klistra in med andra appar|X|X|
+|Ange antalet tecken som kan klipps ut eller kopieras från en hanterad app|X|X|
 |Kräv enkel PIN-kod för åtkomst|X|X|
 |Ange antal försök innan PIN-koden återställs|X|X|
 |Tillåt fingeravtryck istället för PIN|X|X|
