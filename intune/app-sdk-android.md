@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a7ccc2da5fd99c3c72c8c9beb765f292e896eee
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
-ms.translationtype: HT
+ms.openlocfilehash: 965dcfbb711eac1b38977e023d1975f4dc0e8b81
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069466"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514505"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -832,7 +832,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     > [!NOTE]
     > Se till att din app använder den `resourceId` och `aadId` parametrar skickades till `acquireToken()` så att rätt token hämtas.
 
-    ```
+    ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
         public String acquireToken(String upn, String aadId, String resourceId) {
         return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
@@ -1633,7 +1633,7 @@ Om en app med flera identiteter registreras för `WIPE_USER_DATA`-meddelandet ä
 
 En appregistrering för `WIPE_USER_DATA` kan inte dra nytta av standardbeteendet för selektiv rensning i SDK:n. För appar som kan hantera flera identiteter kan denna förlust vara mer betydelsefull, eftersom en selektiv standardrensning med MAM endast rensar filer vars identitet ska rensas. Om ett program som kan hantera flera identiteter önskar att MAM:s selektiva standardrensning ska göras _**och**_ vill utföra egna åtgärder för rensningen, måste det registrera sig för `WIPE_USER_AUXILIARY_DATA`-meddelanden. Det här meddelandet skickas omedelbart av SDK:n innan den utför MAM:s selektiva standardrensning. En app bör aldrig registreras för både `WIPE_USER_DATA` och `WIPE_USER_AUXILIARY_DATA`.
 
-Selektiv standardrensning stängs appen korrekt och slutföra aktiviteter och avslutar processen app. Om din app åsidosätter seletive standardrensningen, kan du pröva att stänga appen manuellt för att hindra användaren från att komma åt data i minnet när en rensningen utförs.
+Selektiv standardrensning stängs appen korrekt och slutföra aktiviteter och avslutar processen app. Om din app åsidosätter förvalda selektiva rensning, kan du pröva att stänga appen manuellt för att hindra användaren från att komma åt data i minnet när en rensningen utförs.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Aktivera MAM-riktad konfiguration för Android-appar (valfritt)
@@ -1785,7 +1785,7 @@ Intune SDK använder kontraktet som tillhandahålls av Android-API:et, även om 
 
 ## <a name="telemetry"></a>Telemetri
 
-Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar telemetridata som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts policy samlar vi inte in någon personligt identifierbar information (PII).
+Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar systemgenererade data som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts Policy vi inte samlar in alla personliga data.
 
 > [!NOTE]
 > Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 

@@ -1,23 +1,30 @@
 ---
-ms.openlocfilehash: dc86f2c22410236368753acd4dd3b66698037241
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+title: inkludera fil
+description: inkludera fil
+author: ErikjeMS
+ms.service: microsoft-intune
+ms.topic: include
+ms.date: 03/28/2019
+ms.author: erikje
+ms.custom: include file
+ms.openlocfilehash: 073115d33f9a4f22fe3706ef15860c2a8d8a68ee
+ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57736851"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675501"
 ---
-
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda för framtida ändringar i Intune och funktioner. 
 
 ### <a name="change-in-enrollment-workflow-with-intune-company-portal-on-corporate-ios-devices-authenticating-with-setup-assistant----1927359---"></a>Ändra i arbetsflöde för registrering med Intune-Företagsportalen på företagets iOS-enheter autentiseras med Installationsassistenten <!-- 1927359 -->
 Det finns en förändring i arbetsflödet för registrering av iOS-enheter via någon av Apples företagets registreringsmetoder för enheter – Apple Configurator, Apples Business Manager, Apple School Manager eller Apple Device Enrollment Program (DEP) när du använder installationsprogrammet Installationsassistent för autentisering. Den här ändringen gäller endast för enheter som registrerats med användartillhörighet.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-När den här ändringen lanseras i ~~april~~ kommer profiler för registrering i Intune i Azure-portalen att uppdateras så att du kan ange hur enheter ska autentiseras och om de får företagsportalappen. Det blir ett förbättrat arbetsflöde för att registrera iOS-enheter med de metoder som anges ovan. Obs!
+När den här ändringen lanseras i ~~april~~ kommer profiler för registrering i Intune i Azure-portalen att uppdateras så att du kan ange hur enheter ska autentiseras och om de får företagsportalappen. Det blir ett förbättrat arbetsflöde för att registrera iOS-enheter med de metoder som anges ovan. 
 
 - När registrera nya enheter och autentisering med Installationsassistenten, du kommer att kunna välja om du vill distribuera automatiskt i appen företagsportal. Slutanvändarna kommer inte längre visas skärmen ”Identifiera enhet” och ”bekräfta din enhet”-skärmen i flödet för registrering.  
 - Du måste vidta åtgärder om du vill aktivera villkorlig åtkomst på enheter som redan har registrerats via Installationsassistenten genom någon av Apples metoder för registrering av företagsenheter. Du måste konfigurera en princip för appkonfiguration med en specifik xml till push-Företagsportalen till dessa enheter. Anvisningar för att göra detta finns i blogginlägget på länken ytterligare Information. Om du väljer att skicka Företagsportalen på detta sätt, visas inte längre slutanvändare skärmen ”Identifiera enhet” och ”bekräfta din enhet”-skärmen i flödet för registrering. 
-- När den här ändringen distribueras, om du inte har distribuerat Företagsportalen med app-Konfigurationsprofil som nämns ovan och om slutanvändarna ladda ned företagsportalappen från App store, kommer de kan logga in, men de kommer att får ett felmeddelande. De kommer inte att kunna använda appen för villkorlig åtkomst. 
+- När den här ändringen distribueras, om du inte har distribuerat Företagsportalen med app-Konfigurationsprofil som nämns ovan och om slutanvändarna ladda ned företagsportalappen från App store, de kan logga in, men de kommer att får ett felmeddelande. De kommer inte att kunna använda appen för villkorlig åtkomst. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Om du tänker använda det ändrade arbetsflödet, kommer du vill uppdatera din vägledning för slutanvändare för att visa att:
@@ -32,52 +39,6 @@ Se vår support-blogginlägget på länken ytterligare Information för mer info
 #### <a name="additional-information"></a>Ytterligare information 
 [https://aka.ms/enrollment_setup_assistant](https://aka.ms/enrollment_setup_assistant)
 
-
-### <a name="company-portal-changes-for-ios-122-enrollment-in-intune"></a>Portalen företagsändringar för iOS 12.2 registrering i Intune
-Vi meddelande i MC172534 att Apple har tillkännagivit några ändringar relaterade till iOS-enheters registrering i MDM-tjänster. Ändringen visas sannolikt i denna version av iOS som kommer i mars 2019 samt alla framtida iOS-versioner. Vi gör vissa uppdateringar i Företagsportalen så att ändringar av Apple. 
- 
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Om dina slutanvändare uppgraderar sina enheter till iOS 12.2 och ovan, vet du att det finns en ändrade arbetsflödet och de måste vidta ytterligare åtgärder för att slutföra en registrering i Intune. När mars-uppdatering till Intune är här vad de ska göra följande:  
-
-- Börja registreringen i företagsportalappen för att ladda ned en hanteringsprofil
-- Gå till Inställningar > Allmänt > profiler och leta efter ett meddelande i rött märket
-- Välj rätt profil och klicka här för att installera
-- Gå tillbaka till Företagsportalen för att slutföra en registrering
-
-Klicka på mer detaljerad information om registrering flödet.
-
-Om de är avregistreras och behöver en ny registrering, enheter som redan är registrerade och uppgradera till iOS 12.2 och ovan bör inte påverkas. Registreringsprocessen på enheter som kör iOS 12.1 eller tidigare ändras inte med den här nya versionen från Apple. Enheter som registrerats via en eller Apples metoder för företagets registrering (Program för Enhetsregistrering, Apple School Manager eller Apple Business Manager) påverkas inte.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Du bör planera en uppgradering av dokumentationen och vägledningen för slutanvändare. Du kanske också vill meddela supportavdelningen om ändringarna. Vi håller dig informerad via vår sidan med nyheter om den här ändringen går live. 
-
-Om du vill dra nytta av företagsportal-ändringar som Vi presenterar be slutanvändarna att uppdatera enheten till den nya versionen för iOS efter mars-uppdatering till Intune service när Företagsportalen appversion 3.9.0. släpps.
-
-Klicka på ytterligare Information för ett blogginlägg för support med förhandsversion skärmdumpar av Företagsportalen ändringarna.
-
-Ytterligare information [https://aka.ms/CP_changes_iOS12](https://aka.ms/CP_changes_iOS12)
-
-### <a name="plan-for-change-workflow-changes-for-ios-12-enrollment-in-intune"></a>Planera för förändring: ändras arbetsflödet för registrering av iOS 12 i Intune
-Apple har tillkännagivit några ändringar relaterade till iOS-enheters registrering i MDM-tjänster. Ändringen kommer sannolikt i iOS-utgåvan som släpps på våren 2019 och alla framtida iOS-versioner.
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Om dina slutanvändare uppgraderar sina enheter till den här nya versionen av iOS 12 under våren bör du känna till att arbetsflödet ändras och att de behöver vidta ytterligare åtgärder för att slutföra registreringen till Intune. När Apple introducerar dessa ändringar, måste slutanvändare:
-
-- Börja registreringen i företagsportalappen för att ladda ned en hanteringsprofil
-- Gå till Inställningar > Allmänt > profiler
-- Välj rätt profil och klicka här för att installera
-- Gå tillbaka till Företagsportalen för att slutföra en registrering 
-
-Såvida de inte har avregistrerats och behöver en ny registrering borde inte enheter som redan har registrerats och uppgraderats till den nya iOS-versionen påverkas.
-
-Registreringsprocessen på enheter som kör iOS 12.1 eller tidigare ändras inte med den här nya versionen från Apple.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Du bör planera en uppgradering av dokumentationen och vägledningen för slutanvändare. Du kanske också vill meddela supportavdelningen om ändringarna. Vi informerar dig via Meddelandecenter och sidan Nyheter när den här ändringen börjar gälla.
-
-#### <a name="additional-information"></a>Ytterligare information
-[Stöd för blogginlägget med skärmbilder och video med det förväntade flödet](https://aka.ms/iOS_enrollment_changes).
-
 ### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Ändringsplan: Uppdatering av användarupplevelsen för appen Intune-företagsportal för iOS
 Vi är glada att kunna meddela att Intune snart lanserar en större uppdatering av användarupplevelsen i appen Företagsportal för iOS. Uppdateringen omfattar en visuell omarbetning av startsidan med avancerade filter och snabbare åtkomst till appar och böcker.
 
@@ -88,35 +49,13 @@ Nuvarande iOS-funktioner i Företagsportalen bevaras, men den här uppdateringen
 - Möjligheten att söka i e-böcker
 - Sökhistorik för appar och e-böcker
 
-Om du deltar i Apple TestFlight-programmet kommer du att meddelas om förhandsversionen av Intunes uppdaterade företagsportalapp för iOS när den blir tillgänglig. Om du inte deltar i Apple TestFlight-programmet är det inte för sent att registrera dig. Om du registrerar dig kan du använda den uppdaterade appen Företagsportal innan den är tillgänglig för dina slutanvändare. Du kommer också kan ge feedback direkt till Intune-teamet.  
+Om du deltar i Apple TestFlight-programmet kommer du att meddelas om förhandsversionen av Intunes uppdaterade företagsportalapp för iOS när den blir tillgänglig. Om du inte deltar i Apple TestFlight-programmet är det inte för sent att registrera dig. Om du registrerar dig kan du använda den uppdaterade appen Företagsportal innan den är tillgänglig för dina slutanvändare. Du kan även tillhandahålla feedback direkt till Intune-teamet.  
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Du behöver inte vidta några åtgärder. De här ändringarna lanseras i en kommande version av appen iOS FP. 
 
 #### <a name="additional-information"></a>Ytterligare information
 [https://aka.ms/cp_update_iOS](https://aka.ms/cp_update_iOS)
-
-
-### <a name="reminder-removal-of-existing-exchange-online-to-intune-connectors----3105122---"></a>Påminnelse: Borttagning av befintliga Exchange Online till Intune-kopplingar <!-- 3105122 -->
-I MC165575 meddelade vi att vi skulle tar bort Exchange Online till Intune Service to Service connector-funktioner i en kommande uppdatering. Med den februari uppdateringen till Intune-tjänsten, kommer vi att inaktivera knappen för att konfigurera nya anslutningar. Vi planerar att ta bort alla befintliga Exchange Online till Intune-kopplingar i mars 2019.
- 
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Du får det här meddelandet eftersom våra uppgifter visar att du använder anslutningsfunktionen ”Service to Service” i din miljö. ”Service to Service”-anslutningsprogrammet stöder Intune-hantering av enheter med endast Exchange Active Sync för Exchange Online, och stöder inte lokal infrastruktur. På grund av det sätt som anslutningsprogrammet visas på konsolen verkar det vara nödvändigt för villkorlig åtkomst (CA), men i verkligheten behövs det inte för CA. Du kanske har använt den här anslutningen för att förstå användningen av Exchange Online innan du tillämpar villkorlig åtkomst. Den här informationen tillhandahålls redan av Microsoft 365 Admin Center. Här hittar du tillhandahåller användningsrapporter för Exchange Online, inklusive appen skriver som används för mellan 7 och 180 dagar. Mer information finns i [Office 365-rapporter i Administrationscenter - användningen för e-post-appar](https://docs.microsoft.com/office365/admin/activity-reports/email-apps-usage?view=o365-worldwide).  
- 
-Om du använder det här anslutningsprogrammet i din miljö kommer du inte kunna övervaka eller rensa enheter med endast Exchange Active Sync i Intune efter att anslutningsprogram har inaktiverats i februari. Det finns ingen förväntad påverkan för slutanvändare under den här ändringen.
- 
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Om du har anslutningsprogrammet ”Service to Service” konfigurerat och enheter med endast Exchange Active Sync måste du byta till andra hanteringsmetoder för dina enheter. Du kan välja mellan följande alternativ:
-
-- Registrera enheter i hantering av mobilenheter (MDM) 
-- Använd Intunes appskyddsprinciper för att hantera dina enheter 
-- Använd Exchange-kontrollerna enligt beskrivningen i dokumentationen [här](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online) 
-
-#### <a name="additional-information"></a>Ytterligare information  
-https://docs.microsoft.com/intune/exchange-service-connector-configure
-
-
-
 
 ### <a name="check-your-delay-visibility-of-software-updates-setting-in-intune"></a>Kontrollera din ”fördröjning av programuppdateringar” inställningar i Intune 
 
@@ -140,3 +79,38 @@ Se vår support blogginlägget för mer Information finns mer information om hur
 
 #### <a name="additional-information"></a>Ytterligare information 
 [https://aka.ms/Delay_visibility_setting_iOS](https://aka.ms/Delay_visibility_setting_iOS)
+
+### <a name="plan-for-change-upcoming-fix-for-windows-10-email-profiles-in-intune---3904031--"></a>Planera för förändring: korrigering för Windows 10 e-postprofiler i Intune <!--3904031-->
+Vi uppdaterar hur Intune skriver e-post profiler för Windows 10 i April uppdatera till Intune-tjänsten för att åtgärda en bugg samt att säkerställa att din e-postprofiler fortsätter att fungera i framtida versioner av Windows 10. Det finns åtgärder som du måste utföra när den här snabbkorrigeringen har distribuerats.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Den här ändringen påverkar du om du använder Windows 10 e-postprofiler med
+- Den inbyggda e-klienten i Windows 10-datorer eller
+- Outlook-e-klienten på Windows 10 Mobile
+
+Detta påverkar både Intune fristående och hybrid-Mobile Device Management (MDM)-kunder.
+
+När den April distribueras, måste du återskapa dessa profiler i Intune-konsolen (i Configuration Manager-administratörskonsolen om du använder hybrid-MDM).
+
+Om du inte vidta åtgärder, är här vad du ser för profiler som skapats före uppdateringen April:
+
+- Den befintliga e-postprofiler visas i feltillstånd i Intune-konsolen eller Configuration Manager-administratörskonsolen, men användarna har fortfarande åtkomst till e-post. När en efterföljande Windows distribueras, fungerar inte de här profilerna. Slutanvändare på enheter som är riktade mot de här profilerna förlorar åtkomsten till e-post.
+- Ändringar som gjorts till dessa profiler efter April inte återspeglas i målenheterna.
+- Selektiv rensning fungerar inte för att ta bort de här profilerna även efter att korrigeringen lanseras i April.
+
+Om du vidta åtgärder och skapa e-postprofiler behöver slutanvändarna gå igenom steg som är samma som när en e-postprofil har distribuerats för första gången. Sin e-post kommer att blockeras från att synkronisera tills de accepterar den uppdatering som gäller den nya profilen.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Du måste vidta åtgärder endast efter att korrigeringen distribueras med April uppdateringen. Vi kommer att kontakta dig via meddelandecenter när den här ändringen lanseras så du kan börja skapa dina profiler i Intune.
+
+Om du använder Windows 10 e-postprofiler i Intune, behöver du vidta följande åtgärder:
+
+1. Samla in befintliga konfigurationsupplevelsen för Windows 10-profilinställningar
+2. Ta bort tilldelning av och/eller ta bort befintliga profiler
+3. Skapa nya profiler med hjälp av de avbildade inställningarna och tilldela nya profiler till samma grupper
+
+Du kan behöva meddela slutanvändarna och låt supportavdelningen känner till den här ändringen. Läs blogginlägget support för mer Information finns information om fel och instruktioner för att återskapa de här profilerna.
+
+#### <a name="additional-information"></a>Ytterligare information
+https://aka.ms/Win10EmailProfiles
+

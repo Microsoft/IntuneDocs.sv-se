@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b47decc297c58feadb7cd507a3ff09070d46d4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 55a0cb45cd3e3a8e367b0bff7bd8e856b02af953
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565748"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429699"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -176,6 +176,7 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
       Klicka på **OK** för att spara ändringarna.
 
+    - **AutoLaunch**: valfritt. Välj ett program till AutoLaunch när användaren loggar in. Endast en enda app kan vara AutoLaunched.
     - **Panelstorlek**: Krävs. Välj storleken Liten, Medel, Bred eller Stor för appanelen.
 
   > [!TIP]
@@ -184,6 +185,8 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 - **Använd alternativ startlayout**: Välj **Ja** för att ange en XML-fil som beskriver hur apparna ska visas på startmenyn, inklusive apparnas inbördes ordning. Använd det här alternativet om du behöver anpassa mer på startmenyn. [Anpassa och exportera Start-layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) innehåller viss vägledning och XML-exempel.
 
 - **Aktivitetsfältet**: Välj att **visa** eller **dölja** aktivitetsfältet. Standardinställningen är att aktivitetsfältet inte visas. Ikoner som exempelvis Wi-Fi-ikonen visas, men inställningarna kan inte ändras av slutanvändarna.
+
+- **Tillåt åtkomst till hämtar mappen**: Välj **Ja** så att användarna kan komma åt mappen hämtade filer i Windows Explorer. Åtkomst till mappen hämtade filer är inaktiverad som standard. Den här funktionen används ofta för slutanvändare för att få tillgång till objekt som hämtats från en webbläsare.
 
 Klicka på **OK** för att spara ändringarna.
 

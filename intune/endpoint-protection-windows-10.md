@@ -2,8 +2,8 @@
 title: Skyddsinställningar för Windows 10-enheter i Microsoft Intune – Azure | Microsoft Docs
 description: På Windows 10-enheter kan du använda eller konfigurera inställningar för slutpunktsskydd för att aktivera Windows Defender-funktionalitet, inklusive Application Guard, brandvägg, SmartScreen, kryptering och bitlocker, Exploit Guard, programreglering, Säkerhetscenter och säkerhet på lokala enheter i Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2019
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbbdbbb92c033a99f1c439271c745c1abfbcd562
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 4c2df888e146a7f240530e5cbc6628dbce34cb61
+ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566700"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343005"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Inställningar för Windows 10 (och senare) för att skydda delade enheter med Intune
 
@@ -40,7 +40,7 @@ Information om att konfigurera Windows Defender Antivirus finns i [Enhetsbegrän
 
 Stöds i följande Windows 10-versioner:
 
-- Enterprise
+- Företag
 - Professionell
 
 När du använder Microsoft Edge Windows Defender Application Guard skyddas din miljö från webbplatser som inte är betrodda av din organisation. När användare besöker webbplatser som inte listas i din isolerade nätverksgräns, öppnas webbplatserna i en virtuell webbläsarsession i Hyper-V. Betrodda webbplatser definieras av en nätverksgräns som konfigureras i enhetskonfigurationen.
@@ -62,7 +62,7 @@ Stöds i följande Windows 10-versioner:
 - Hem
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -87,8 +87,7 @@ De här inställningarna avser alla nätverkstyper.
 
 De här inställningarna gäller för specifika nätverkstyper, inklusive **Domännätverk (arbetsplats)**, **Privat (identifierbart) nätverk** och **Offentligt (inte identifierbart) nätverk**.
 
-#### <a name="general-settings"></a>Allmänna inställningar
-
+#### <a name="general-settings"></a>Allmänna inställningar  
 - **Windows Defender-brandväggen**: Välj **Aktivera** för att aktivera brandväggen och avancerad säkerhet. **Inte konfigurerad** (standard) tillåter all nätverkstrafik oavsett eventuella andra principinställningar.
 - **Dolt läge**: **Blockera** brandväggen från att arbeta i dolt läge. Om du blockerar dolt läge blockeras även **IPsec-skyddat paketundantag**. **Inte konfigurerad** (standard) gör så att brandväggen arbetar i dolt läge, vilket hjälper till att förhindra svar på avsökningsbegäranden.
 - **Avskärmad**: **Blockera** inaktiverar den här funktionen. **Inte konfigurerad** (standard) aktiverar den här inställningen. När den här inställningen och Windows Defender-brandväggen är aktiverade blockeras all inkommande trafik, oavsett eventuella andra principinställningar.
@@ -109,7 +108,7 @@ Stöds i följande Windows 10-versioner med Microsoft Edge installerat:
 - Hem
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -127,7 +126,7 @@ Stöds i följande Windows 10-versioner:
 
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -145,7 +144,7 @@ Stöds i följande Windows 10-versioner:
 
 Stöds i följande Windows 10-versioner:
 
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -165,7 +164,7 @@ Grundläggande inställningar är universella BitLocker-inställningar för alla
 ### <a name="bitlocker-os-drive-settings"></a>BitLocker-inställningar för operativsystemenheten
 Stöds i följande Windows 10-versioner:
 
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -202,7 +201,7 @@ Dessa inställningar gäller specifikt för operativsystemets dataenheter.
 
 Stöds i följande Windows 10-versioner:
 
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -226,7 +225,7 @@ Stöds i följande Windows 10-versioner:
 
 Stöds i följande Windows 10-versioner:
 
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -244,7 +243,7 @@ Stöds i följande Windows 10-versioner:
 - Hem
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -337,13 +336,13 @@ Stöds i följande Windows 10-versioner:
 **Hantering av mobilenheter (MDM)**: 
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
 
 **Grupprinciphantering**: 
-- Enterprise
+- Företag
 
 Använd **Kodintegritetsprinciper för programkontroll** för att välja ytterligare appar som granskas av eller som är betrodda att köras av Windows Defender Application Control. Windows-komponenter och alla appar från Windows Store är automatiskt betrodda att köras.
 
@@ -355,7 +354,7 @@ När det är aktiverat kan programkontrollen endast inaktiveras genom att ändra
 
 Stöds i följande Windows 10-versioner:
 
-- Enterprise
+- Företag
 
 Windows Defender Credential Guard skyddar mot attacker för stöld av autentiseringsuppgifter. Den isolerar hemligheter så att endast privilegierad programvara kan komma åt dem.
 
@@ -382,7 +381,7 @@ Stöds i följande Windows 10-versioner:
 - Hem
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 - Mobiltelefon
 - Mobile Enterprise
@@ -415,7 +414,7 @@ Stöds i följande Windows 10-versioner:
 - Hem
 - Professionell
 - Företag
-- Enterprise
+- Företag
 - Utbildning
 
 Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningarna på Windows 10-enheter.
