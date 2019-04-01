@@ -10,18 +10,20 @@ ms.date: 01/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 2eae4ea2bfabe1b41af88ae34b81fbf12ef5f9d9
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2cdf7ea715a13809c860e77412914e3fd2b45a28
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297510"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57400491"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Intune-informationslagersamlingar
 
@@ -505,7 +507,10 @@ Entiteten **ownerType** visar om en enhet är företagsägd, privat ägd eller o
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikt id för ägartyp.                                                                                                                                               |                            |
 | ownerTypeKey  | Unik identifierare för ägartypen i informationslagret – surrogatnyckel.                                                                                                       |                            |
-| ownerTypeName | Representerar enheternas ägartyp:  Företag – enheten är företagsägd.  Privat – enheten är privatägd (BYOD).   Okänd – det finns ingen information om enheten. | Företag Privat Okänd |
+| ownerTypeName | Representerar ägartypen för enheterna: Företag – enheten är företagsägd.  Privat – enheten är privatägd (BYOD).   Okänd – det finns ingen information om enheten. | Företag privat okänd |
+
+> [!Note]  
+> För den `ownerTypeName` filter i AzureAD när du skapar dynamiska grupper för enheter, måste du ange värdet `deviceOwnership` som `Company`. Mer information finns i [regler för enheters](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>policies
 Entiteten **Princip** innehåller en lista över enhetskonfigurationsprofiler, appkonfigurationsprofiler och efterlevnadsprinciper. Principerna med hantering av mobilenheter (MDM) kan tilldelas en grupp i företaget.

@@ -6,10 +6,11 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
-ms.topic: conceptual
+ms.date: 03/05/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a21194b218cc7df230bf1ef1969b8d4483940d75
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 7ea3e2c87055e4f111c8f12c47c468dff2c4e587
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238769"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565697"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referens för MAM-entiteter (hantering av mobilappshantering)
 
@@ -83,12 +84,12 @@ Entiteten **MamCheckin** visar data som samlas in när en hanterad mobilappinsta
 | Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
 | DateKey |Datumnyckel när incheckningen av MAM-appen registrerades i informationslagret. | 20160703 |
-| ApplicationInstanceKey |Nyckel för appinstansen som är kopplad till incheckningen av den mobilappshanterade appen. |1900-05-02 12:00:00 |
-| UserKey |Nyckel för användaren som är kopplad till incheckningen av MAM-appen. |1900-01-12 12:00:00 |
-| ApplicationKey |Nyckeln för den incheckade MAM-appen. |1900-01-10 12:00:00 |
-| DeviceHealthKey |Nyckel för DeviceHealth som är koppla till den här incheckningen av MAM-appen. |1900-01-02 12:00:00 |
-| PlatformKey |Visar plattformen för enheten som är kopplad till den här incheckningen av MAM-appen. |1900-01-01 12:00:00 |
-| EffectiveAppliedPolicyKey |Visar gällande tillämpad princip som är kopplad till den här incheckade MAM-appen. En gällande tillämpad princip är en sammansättning av alla principer som är relevanta för en viss app och användare. |1900-05-02 12:00:00 |
+| ApplicationInstanceKey |Nyckel för appinstansen som är kopplad till incheckningen av den mobilappshanterade appen. | 123 |
+| UserKey |Nyckel för användaren som är kopplad till incheckningen av MAM-appen. | 4323 |
+| ApplicationKey |Nyckeln för den incheckade MAM-appen. |234 |
+| DeviceHealthKey |Nyckel för DeviceHealth som är koppla till den här incheckningen av MAM-appen. | 321 |
+| PlatformKey |Visar plattformen för enheten som är kopplad till den här incheckningen av MAM-appen. |123 |
+| EffectiveAppliedPolicyKey |Visar gällande tillämpad princip som är kopplad till den här incheckade MAM-appen. En gällande tillämpad princip är en sammansättning av alla principer som är relevanta för en viss app och användare. | 322 |
 | LastCheckInDate |Datum och tid för den senaste incheckningen av MAM-appen. Värdet kan vara null. |2016-11-23 12:00:00 |
 
 ## <a name="mamdevicehealth"></a>MamDeviceHealth
@@ -97,8 +98,8 @@ Entiteten **MamDeviceHealth** motsvarar de enheter där principer för mobilapps
 
 | Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
-| DeviceHealthKey |Unikt id för enheten med tillhörande hälsostatus i informationslagret – surrogatnyckel. |1900-01-01 12:00:00 |
-| DeviceHealth |Unikt id för enheten och dess tillhörande hälsostatus, liknar DeviceHealthKey men id:t är en naturlig nyckel. |1900-01-01 12:00:00 |
+| DeviceHealthKey |Unikt id för enheten med tillhörande hälsostatus i informationslagret – surrogatnyckel. |123 |
+| DeviceHealth |Unikt id för enheten och dess tillhörande hälsostatus, liknar DeviceHealthKey men id:t är en naturlig nyckel. |b66bc706-ffff-7777-0340-032819502773 |
 | DeviceHealthName |Visar enhetens status. <br>Inte tillgänglig: det finns ingen information om enheten. <br>Felfri: enheten är inte jailbrokad. <br>Ej felfri: enheten är jailbrokad. |Inte tillgänglig Felfri Ej felfri |
 | RowLastModifiedDateTimeUtc |Datum och tid i UTC för senaste ändring av hälsotillståndet för mobilappshanterad enhet i informationslagret. |2016-11-23 12:00:00 |
 

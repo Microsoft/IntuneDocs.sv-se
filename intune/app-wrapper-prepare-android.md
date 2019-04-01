@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2018
-ms.topic: conceptual
+ms.date: 03/11/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b554bd4eb6aa5e49354501e69326b6eeb11098ef
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236989"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566054"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -30,7 +31,6 @@ ms.locfileid: "57236989"
 Använd Microsoft Intunes programhanteringsverktyg för Android om du vill ändra funktionssättet för interna Android-appar genom att begränsa funktionerna i appen utan att ändra koden i själva appen.
 
 Verktyget är ett kommandoradsprogram för Windows som körs i PowerShell och som skapar en omslutning runt Android-appen. När appen har omslutits kan du ändra appens funktioner genom att konfigurera [hanteringsprinciper för mobilprogram](app-protection-policies.md) i Intune.
-
 
 Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-considerations-for-running-the-app-wrapping-tool) innan du kör verktyget. Om du vill ladda ned verktyget går du till [Microsoft Intunes programhanteringsverktyg för Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) på GitHub.
 
@@ -53,10 +53,12 @@ Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-con
 
 - Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
 
-> [!NOTE]
-> Intunes programhanteringsverktyg har inte stöd för Googles signaturscheman v2 och v3 (kommande) för signering av appar. När du har omslutit .apk-filen med Intunes programhanteringsverktyg bör du använda [Googles Apksigner-verktyg]( https://developer.android.com/studio/command-line/apksigner). Då ser du till att appen kan startas enligt Android-standard när den skickats till slutanvändarnas enheter. 
+    > [!NOTE]
+    > Intunes programhanteringsverktyg har inte stöd för Googles signaturscheman v2 och v3 (kommande) för signering av appar. När du har omslutit .apk-filen med Intunes programhanteringsverktyg bör du använda [Googles Apksigner-verktyg]( https://developer.android.com/studio/command-line/apksigner). Då ser du till att appen kan startas enligt Android-standard när den skickats till slutanvändarnas enheter. 
 
-- (Valfritt) Aktivera Multidex i indataappen. Ibland kan en app uppnå storleksgränsen i Dalvik för körbara filer (DEX) på grund av de MAM SDK-klasser i Intune som läggs till vid omslutning. DEX-filer ingår i kompileringen av en Android-app. I det här scenariot är det bäst att aktivera Multidex i själva appen. I vissa organisationer kan du behöva kontakta den som kompilerar appen (t.ex. apputvecklaren). 
+- (Valfritt) Ibland kan en app uppnå storleksgränsen i Dalvik för körbara filer (DEX) på grund av de MAM SDK-klasser i Intune som läggs till vid omslutning. DEX-filer ingår i kompileringen av en Android-app. Intune App Wrapping-verktyget hanterar automatiskt DEX filen dataspill vid wrapping för appar med en minsta API-nivå av 21 eller högre (från och med [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). För appar med en minsta API-nivå av < 21 bästa praxis är att öka det minsta värdet API-nivå med hjälp av omslutningen `-UseMinAPILevelForNativeMultiDex` flaggan. Följande DEX spill lösningar är tillgängliga för kunder som är det går inte att öka appens minsta API-nivå. I vissa organisationer kan du behöva kontakta den som kompilerar appen (dvs. apputvecklingsteamet):
+* Använd ProGuard för att eliminera outnyttjade klassreferenser från appens primära DEX-fil.
+* För kunder som använder v3.1.0 eller senare för Android Gradle-plugin-programmet, inaktivera den [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
 
@@ -93,6 +95,7 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 |**-KeyAlias**&lt;String&gt;|Namnet på nyckeln som ska användas för signering.| |
 |**-KeyPassword**&lt;SecureString&gt;|Lösenordet som används för att dekryptera den privata nyckeln som ska användas för signering.| |
 |**-SigAlg**&lt;SecureString&gt;| (Valfritt) Namnet på signaturalgoritmen som ska användas för signering. Algoritmen måste vara kompatibel med den privata nyckeln.|Exempel: SHA256withRSA, SHA1withRSA|
+|**-UseMinAPILevelForNativeMultiDex**| (Valfritt) Använd den här flaggan för att öka källa Android appens minsta API-nivå 21. Den här flaggan uppmanas bekräfta som den kommer att begränsa vem som kan installera den här appen. Användare kan hoppa över dialogrutan genom att lägga till parametern ”-bekräfta: $false” till sina PowerShell-kommando. Flaggan bör endast användas av kunder på appar med min API < 21 som inte vill att omsluta har på grund av fel i DEX dataspill. | |
 | **&lt;CommonParameters&gt;** | (Valfritt) Kommandot stöder vanliga PowerShell-parametrar som verbose och debug. |
 
 

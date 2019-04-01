@@ -5,20 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
-ms.topic: article
+ms.date: 03/04/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 518bb2ab0f59b5692ff2c2391fe971abba0639c6
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e6e82e24f051e64d07487d915ac6fd0848727ecf
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072532"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566819"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lägg till en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
@@ -40,7 +42,7 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 | **E-postprofil** | Inte tillämpligt | Inte tillämpligt |   
 | **Lägsta version av operativsystemet** | I karantän | I karantän |   
 | **Högsta version av operativsystemet** | I karantän | I karantän |   
-| **Attestering av hälsotillstånd i Windows** | I karantän: Windows 10 och Windows 10 Mobile|Inte tillämpligt: Windows 8,1 |
+| **Attestering av hälsotillstånd i Windows** | I karantän: Windows 10 och Windows 10 Mobile|Inte tillämpligt: Windows 8.1 |
 
 -------------------------------
 
@@ -73,8 +75,8 @@ Dessa inställningar gäller för enheter som kör följande plattformar:
 
 ### <a name="device-properties"></a>Egenskaper för enheten
 
-- **Lägsta version av operativsystem som krävs**: När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
-- **Högsta tillåtna version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som angivits i regeln, blockeras åtkomsten till företagets resurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän du ändrar regeln för att tillåta operativsystemets version.
+- **Lägsta operativsystemversion som krävs:** När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
+- **Högsta tillåtna version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän du ändrar regeln för att tillåta operativsystemets version.
 
 Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsystemsversion är inställd på Windows 8.1 för Windows rapporteras enheten som inkompatibel även om den har Windows 8.1.
 
@@ -82,9 +84,9 @@ Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsyst
 
 #### <a name="password"></a>Lösenord
 
-- **Kräv ett lösenord för att låsa upp mobila enheter**: **Kräv** att användarna anger ett lösenord innan de får åtkomst till sin enhet.
-- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användarna inte ska kunna skapa enkla lösenord, som exempelvis **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
-- **Minsta längd på lösenord**: Ange det minsta antal siffror eller tecken som lösenordet måste innehålla.
+- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
+- **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
 
   För enheter som kör Windows och som nås med ett Microsoft-konto, kan inte efterlevnadsprincipen utvärdera korrekt:
   - Om minsta längd på lösenordet är längre än åtta tecken
@@ -92,7 +94,7 @@ Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsyst
 
 - **Lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
   
-  - **Antal icke-alfanumeriska tecken i lösenord**: Om alternativet för **Krav på lösenordstyp** är **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
+  - **Antal icke-alfanumeriska tecken i lösenordet:** Om **Krav på lösenordstyp** är inställt till **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
     - Gemener
     - Versaler
     - Symboler
@@ -103,47 +105,47 @@ Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsyst
     - Om minsta längd på lösenordet är längre än åtta tecken
     - Eller om minsta antal teckenuppsättningar är större än två
 
-- **Maximalt antal minuters inaktivitet innan lösenord krävs**: Ange efter hur lång tids inaktivitet som användaren måste ange sitt lösenord igen.
-- **Förfallotid för lösenord (dagar)**: Ange antalet dagar tills lösenordet upphör att gälla och användaren måste skapa ett nytt.
-- **Antal tidigare lösenord för att förhindra återanvändning**: Ange antal tidigare använda lösenord som inte får återanvändas.
+- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
+- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
+- **Antal tidigare lösenord för att förhindra återanvändning**: Ange det antal tidigare lösenord som inte får återanvändas.
 
 #### <a name="encryption"></a>Kryptering
 
-- **Kräv filkryptering på mobil enhet**: **Kräv** att enheten krypteras för att ansluta till datalagringsresurser.
+- **Kräv kryptering på mobila enheter**: **Kräv** att enheten krypteras för att ansluta till data-lagringsresurser.
 
 ## <a name="windows-10-and-later-policy-settings"></a>Windows 10 och senare principinställningar
 
 ### <a name="device-health"></a>Device health
 
-- **Kräv BitLocker**: När BitLocker är på kan enheten skydda lagrade data på enheten från obehörig åtkomst när systemet är avstängt eller försätts i viloläge. Med Windows BitLocker-diskkryptering krypteras alla data på volymen för Windows-operativsystemet. BitLocker använder TPM för att skydda Windows-operativsystemet och användardata. Det kan också bekräfta att en dator inte manipuleras, även om den lämnas obevakad, tappas bort eller blir stulen. Om datorn är utrustad med en kompatibel TPM använder BitLocker TPM för att låsa krypteringsnycklarna som skyddar data. Därför är nycklarna inte tillgängliga förrän TPM verifierar datorns tillstånd.
-- **Kräv att säker start ska vara aktiverat på enheten**: När Säker start har aktiverats tvingas systemet att starta med tillförlitliga fabriksinställningar. När säker start är aktiverat måste huvudkomponenterna som används för att starta datorn dessutom ha rätt kryptografiska signaturer som är betrodda av den organisation som tillverkade enheten. UEFI-baserad inbyggd programvara kontrollerar signaturen innan den låter datorn starta. Om filer har manipulerats, vilket delar deras signatur, kan systemet inte starta om.
+- **Kräv BitLocker**: När Bitlocker är på kan enheten skydda data lagrad på enheten från obehörig åtkomst när datorn är avstängd eller försätts i viloläge. Med Windows BitLocker-diskkryptering krypteras alla data på volymen för Windows-operativsystemet. BitLocker använder TPM för att skydda Windows-operativsystemet och användardata. Det kan också bekräfta att en dator inte manipuleras, även om den lämnas obevakad, tappas bort eller blir stulen. Om datorn är utrustad med en kompatibel TPM använder BitLocker TPM för att låsa krypteringsnycklarna som skyddar data. Därför är nycklarna inte tillgängliga förrän TPM verifierar datorns tillstånd.
+- **Kräv att säker start är aktiverat på enheten:** När säker start är aktiverat tvingas systemet att starta i ett fabriksinställt betrott läge. När säker start är aktiverat måste huvudkomponenterna som används för att starta datorn dessutom ha rätt kryptografiska signaturer som är betrodda av den organisation som tillverkade enheten. UEFI-baserad inbyggd programvara kontrollerar signaturen innan den låter datorn starta. Om filer har manipulerats, vilket delar deras signatur, kan systemet inte starta om.
 
   > [!NOTE]
-  > Inställningen **Kräv att säker start är aktiverat på enheten** stöds på TPM 1.2- och 2.0-enheter. För enheter som inte stöder TPM 2.0 eller senare, visas principstatusen i Intune som **Ej ompatibel**. Detta är en begränsning av tjänsten [Attesteringen av enhetens hälsotillstånd](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) i Windows 10.
+  > Inställningen **Kräv att säker start är aktiverat på enheten** stöds på vissa TPM 1.2- och 2.0-enheter. För enheter som inte stöder TPM 2.0 eller senare, visas principstatusen i Intune som **Ej ompatibel**. Mer information om versioner som stöds finns i [Hälsoattestering för enhet](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
-- **Kräv kodintegritet**: Kodintegritet är en funktion som kontrollerar integriteten för en drivrutin eller systemfil varje gång de läses in i minnet. Kodintegritet kontrollerar om en osignerad drivrutin eller systemfil läses in i kerneln. Den upptäcker också om en systemfil ändras av skadlig programvara som körs av ett användarkonto med administratörsbehörighet.
+- **Kräv kodintegritet:** Kodintegritet är en funktion som kontrollerar integriteten för en drivrutin eller systemfil varje gång den läses in i minnet. Kodintegritet kontrollerar om en osignerad drivrutin eller systemfil läses in i kerneln. Den upptäcker också om en systemfil ändras av skadlig programvara som körs av ett användarkonto med administratörsbehörighet.
 
 Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om [kryptografiprovidern för hälsoattesteringstjänsten](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 
 ### <a name="device-properties"></a>Egenskaper för enheten
 
-- **Lägsta version av operativsystemet**: Ange den lägsta tillåtna versionen i formatet **major.minor.build.CU**. Öppna en kommandotolk och skriv `ver` för att visa det korrekta värdet. Kommandot `ver` returnerar versionen i följande format:
+- **Lägsta operativsystemsversion**: Ange den lägsta tillåtna versionen i formatet **major.minor.build.CU**. Öppna en kommandotolk och skriv `ver` för att visa det korrekta värdet. Kommandot `ver` returnerar versionen i följande format:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
   Om en enhet har en tidigare version än operativsystemsversionen du anger rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändarna kan välja att uppgradera sina enheter. När de har uppgraderat har de åtkomst till företagsresurser.
 
-- **Högsta version av operativsystemet**: Ange den högsta tillåtna versionen i formatet **major.minor.build.revision**. Öppna en kommandotolk och skriv `ver` för att visa det korrekta värdet. Kommandot `ver` returnerar versionen i följande format:
+- **Maximal operativsystemversion**: Ange den högsta tillåtna versionen i formatet **major.minor.build.revision**. Öppna en kommandotolk och skriv `ver` för att visa det korrekta värdet. Kommandot `ver` returnerar versionen i följande format:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
   När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte komma åt företagsresurser förrän regeln ändras så att operativsystemversionen tillåts.
 
-- **Lägsta version av operativsystemet som krävs för mobila enheter**: Ange den lägsta tillåtna versionen i formatet major.minor.versionsnummer.
+- **Lägsta operativsystemversion som krävs för mobila enheter**: Ange den lägsta tillåtna versionen i formatet major.minor.build number.
 
   Om en enhet har en tidigare version än operativsystemsversionen du anger rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändarna kan välja att uppgradera sina enheter. När de har uppgraderat har de åtkomst till företagsresurser.
 
-- **Högsta version av operativsystemet som krävs för mobila enheter**: Ange den högsta tillåtna versionen enligt major.minor.versionsnummer.
+- **Högsta operativsystemversion som krävs för mobila enheter**: Ange den högsta tillåtna versionen i formatet major.minor.build number.
 
   När en enhet använder en senare version av operativsystemet än den du anger i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte komma åt företagsresurser förrän regeln ändras så att operativsystemversionen tillåts.
 
@@ -153,7 +155,7 @@ Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om
 
 Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter med enbart Intune returnerar statusen inte tillgänglig.
 
-- **Kräv enhetskompatibilitet från System Center Configuration Manager**: Välj **Kräv** för att tvinga alla inställningar (konfigurationsobjekt) i System Center Configuration Manager att vara kompatibla. 
+- **Kräv enhetens efterlevnad från System Center Configuration Manager**: Välj **kräver** att tvinga alla inställningar (konfigurationsobjekt) i System Center Configuration Manager att vara kompatibel. 
 
   Du kan till exempel kräva att alla programuppdateringar installeras på enheter. Det här kravet har tillståndet ”installerad” i Configuration Manager. Om några program på enheten är i ett okänt tillstånd är enheten inte kompatibel i Intune.
   
@@ -163,11 +165,11 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 
 #### <a name="password"></a>Lösenord
 
-- **Kräv ett lösenord för att låsa upp mobila enheter**: **Kräv** att användarna anger ett lösenord innan de får åtkomst till sin enhet.
-- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användarna inte ska kunna skapa enkla lösenord, som exempelvis **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
+- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
 - **Lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
 
-  - **Antal icke-alfanumeriska tecken i lösenord**: Om alternativet för **Krav på lösenordstyp** är **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
+  - **Antal icke-alfanumeriska tecken i lösenordet:** Om **Krav på lösenordstyp** är inställt till **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
     - Gemener
     - Versaler
     - Symboler
@@ -175,31 +177,31 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 
     Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
 
-- **Minsta lösenordslängd**: Ange det minsta antal siffror eller tecken som lösenordet måste innehålla.
-- **Maximalt antal minuters inaktivitet innan lösenord krävs**: Ange efter hur lång tids inaktivitet som användaren måste ange sitt lösenord igen.
-- **Förfallotid för lösenord (dagar)**: Ange antalet dagar tills lösenordet upphör att gälla och användaren måste skapa ett nytt.
-- **Antal tidigare lösenord för att förhindra återanvändning**: Ange antal tidigare använda lösenord som inte får återanvändas.
-- **Kräv lösenord när enheten återgår från viloläge (Mobile och Holographic)**: Tvinga användare att ange lösenordet varje gång enheten lämnar inaktivt läge.
+- **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
+- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
+- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
+- **Antal tidigare lösenord för att förhindra återanvändning**: Ange det antal tidigare lösenord som inte får återanvändas.
+- **Kräv lösenord när enheten lämnar inaktivt läge (mobil och holografiskt)**: Tvinga användare att ange lösenordet varje gång enheten lämnar inaktivt läge.
 
 #### <a name="encryption"></a>Kryptering
 
-- **Kryptering av datalagring på en enhet**: Välj **Kräv** för att kryptera lagring av data på dina enheter.
+- **Kryptering för lagring av data på en enhet**: Välj **Kräv** för att kryptera lagring av data på dina enheter.
 
   > [!NOTE]
   > Inställningen **Kryptering för lagring av data på en enhet** kontrollerar om kryptering används på enheten. Om du behöver en starkare krypteringsinställning bör du överväga att använda **Kräv BitLocker**, som använder Attestering för Windows-enhetens hälsotillstånd för att verifiera Bitlocker-status på TPM-nivå.
 
 #### <a name="device-security"></a>Enhetssäkerhet
 
-- **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med antivirusprogram som är registrerade i Windows Security Center, t.ex. Symantec eller Windows Defender. När Intune **inte är konfigurerat** görs inga sökningar efter AV-lösningar installerade på enheten.
-- **AntiSpyware**: När **Kräv** har valts kan du kontrollera efterlevnaden med något av de antispionprogram som har registrerats med Windows Security Center, t.ex. Symantec eller Windows Defender. När Intune **inte är konfigurerat** görs inga sökningar efter lösningar med antispionprogram installerade på enheten.
+- **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med hjälp av antivirusprogram som är registrerade i [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), till exempel Symantec och Windows Defender. När Intune **inte är konfigurerat** görs inga sökningar efter AV-lösningar installerade på enheten.
+- **Antispionprogram**: När **Kräv** har valts kan du kontrollera efterlevnaden med antispionprogram som har registrerats med [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), till exempel Symantec och Windows Defender. När Intune **inte är konfigurerat** görs inga sökningar efter lösningar med antispionprogram installerade på enheten.
 
 ### <a name="windows-defender-atp"></a>Windows Defender ATP
 
-- **Kräv att enheten ska hållas vid eller under riskpoängen**: Använd den här inställningen för att använda riskbedömningen från dina tjänster för skydd mot hot som ett villkor för efterlevnad. Välj högsta tillåtna hotnivå:
-  - **Rensa**: Det här alternativet är det säkraste eftersom enheten inte kan ha några hot. Om hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
-  - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på låg nivå. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
-  - **Medel**: Enheten utvärderas som kompatibel om befintliga hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
-  - **Hög**: Det här alternativet är det minst säkra och tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
+- **Kräv att enheten ska vara på eller under hotnivån för datorn**: Använd den här inställningen för att använda riskbedömningen från dina tjänster för skydd mot hot som ett villkor för efterlevnad. Välj högsta tillåtna hotnivå:
+  - **Säkrad**: Det här alternativet är det säkraste eftersom enheten inte kan ha några hot. Om hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
+  - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
+  - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
+  - **Hög**: Det här alternativet är det minst säkra och det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
   
   Information om hur du konfigurerar Windows Defender ATP (Advanced Threat Protection – Avancerat skydd) som skyddstjänst finns i [Aktivera Windows Defender ATP med villkorsstyrd åtkomst](advanced-threat-protection.md).
 

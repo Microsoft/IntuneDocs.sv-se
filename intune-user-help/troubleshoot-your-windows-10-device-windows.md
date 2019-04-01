@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/13/2017
+ms.date: 03/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,15 +18,15 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dba2401240b19b93318946af0e8760fef121518
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55837585"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Felsöka registreringen av din Windows 10-enhet
-Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md), men ändå inte har åtkomst till din e-post eller filer på arbetet eller i skolan, så försök med följande felsökningsåtgärder.
+Om du har registrerat enheten, men fortfarande inte komma åt ditt arbete eller skolans e-post och filer, försök med dessa felsökningssteg.  
 
 1.  Ta en titt på de två följande skärmarna och se om någon av dem liknar vad du ser på din enhet. Följ de steg som gäller för den skärm som du ser på din enhet.
 
@@ -48,13 +48,13 @@ Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-en
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-   - Om du anslutningsinformationen ovan inte visas, eller om det visas, men utan något eller några av alternativen, så tryck på **Anslut** och logga sedan in med autentiseringsuppgifterna för ditt arbets- eller skolkonto. Nu bör du vara ansluten.
+   - Om du inte ser den anslutningsinformation som visas ovan, eller du ser det, men den saknar några av alternativen, trycker du på **Connect**. Anslut sedan genom att logga in med dina autentiseringsuppgifter för arbetsplats- eller skolkonto.  
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Felsökningssteg att följa om du ser ”Ditt konto”
 
 Om du följde stegen ovan men ändå inte har åtkomst till din e-post, dina filer eller annan information på arbetet eller i skolan, så gå tillbaka till **Konton** och tryck på **Åtkomst till arbetsplats**.
 
-- Ser du ditt konto för arbetet eller skolan? Grattis! Du är ansluten.
+- Om du ser ditt arbets- eller skolkonto i listan, är du ansluten.  
 
 - Om du inte ser ditt arbets- eller skolkonto trycker du på **Anslut** och loggar in med dina användaruppgifter.
 

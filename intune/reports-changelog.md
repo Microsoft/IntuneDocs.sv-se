@@ -6,10 +6,11 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2010
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
@@ -17,18 +18,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8e10549e05f814975337831e3eb9821d87a3f43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834015"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565646"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Håll dig uppdaterad om uppdateringar för Intune-informationslagret.
+
+## <a name="1902"></a>1902 
+_Publicerat i februari 2019_
+
+### <a name="power-bi-compliance-app"></a>Power BI-appen för efterlevnad 
+
+Få åtkomst till ditt Intune-informationslager i Power BI Online med hjälp av den [Intunes Efterlevnadsprinciper (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) app. Du kan nu komma åt och dela förinställda rapporter utan konfiguration och utan att lämna din webbläsare med den här Power BI-appen. 
+
+> [!NOTE]
+> Det finns två ytterligare filter som du kan använda för appen Intune-efterlevnad.
+
+#### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Lägga till ytterligare filter i appen för Intunes Efterlevnadsprinciper
+1. Öppna den [Intunes Efterlevnadsprinciper (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) appen i ditt webb-browers.
+2. Klicka på **icke-kompatibla enheter** och välj **icke-kompatibla** i den **complianceStatus** filter. 
+3. Klicka på **okända enheter** och välj **finns ännu inte** i den **complianceStatus** filter. 
 
 ## <a name="1812"></a>1812 
 _Publicerad december 2018_
@@ -60,7 +76,7 @@ En korrigering har gjorts till samlingen **Enheter** som kan minska det totala a
 ## <a name="1801"></a>1801
 _Publicerad i januari 2018_
 
-### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Autentisering endast med program för Intune-informationslager <!-- 1867540 -->
+### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Autentisering för enbart Intune-informationslagerprogram <!-- 1867540 -->
 
 Du kan konfigurera ett program med Azure Active Directory (Azure AD) och autentisera till Intune-informationslagret. Mer information finns i [Autentisering endast med program för Intune-informationslager](data-warehouse-app-only-auth.md).
 
@@ -83,7 +99,7 @@ Du kan använda <code>$select</code> som en OData-frågeparameter. Den aktuella 
 ## <a name="1710"></a>1710
 _Publicerat november 2017_
 
-### <a name="a-new-entity-collection-named-current-user-is-limited-to-currently-active-user-data----1544273---"></a>En ny entitetssamling med namnet aktuell användare, är begränsad till aktuell aktiv användardata <!-- 1544273 -->
+### <a name="a-new-entity-collection-named-current-user-is-limited-to-currently-active-user-data----1544273---"></a>En ny entitetssamling med namnet Aktuell användare är begränsad till för närvarande aktiva användardata <!-- 1544273 -->
 
 Entitetssamlingen **Användare** innehåller alla Azure Active Directory-användare (Azure AD) med tilldelade licenser i ditt företag. De här posterna innehåller användarens tillstånd vid datainsamlingsperioden, även om användaren har tagits bort. En användare kan till exempel läggas till i Intune och sedan tas bort under den senaste månaden. Användaren är då inte tillgänglig vid tidpunkten för rapporten, men användaren och tillståndet finns i data. Du kan skapa en rapport som visar varaktigheten för användarens historiska förekomst i dina data.
 
@@ -96,7 +112,7 @@ _Publicerad oktober 2017_
 
 Du kan nu skapa rapporter och datavisualiseringar med hjälp av enhetens associationsinformation som associerar användaren och enhetens entitetssamlingar. Datamodellen kan nås via Power BI-filen (PBIX) som hämtas från Intune-sidan Informationslager via OData-slutpunkten, eller genom att utveckla en anpassad klient. Mer information finns i [användarenhetens associering](reports-ref-user-device.md).
 
-### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nya entiteter i datamodellen för Intune-informationslagret <!-- 1479526 --><!-- -->
+### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nya entiteter i datamodellen för informationslager <!-- 1479526 --><!-- -->
 
  - Entiteten [**UserDeviceAssociation**](reports-ref-user-device.md) har lagts till. **UserDeviceAssociation** innehåller användarenhetsassociationer i din organisation. Du kan nu skapa rapporter och datavisualiseringar med hjälp av enhetens associationsinformation som associerar användaren och enhetens entitetssamlingar.  
  - Entiteten, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), har lagts till. **IntuneManagementExtension** innehåller entiteter för mobila enheter som spårar information, t.ex. version och installationsstatus.

@@ -18,10 +18,10 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91ea3aab5cd04624bfa036615b8d7710573bcae1
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55846986"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Vilken information min organisation se när jag registrerar min enhet?
@@ -43,7 +43,7 @@ Organisationen kan inte se din personliga information när du registrerar en enh
 - Enhetsmodell som Google Pixel
 - Enhetstillverkare, t.ex. Microsoft
 - Operativsystem och version, t.ex. iOS 12.0.1
-- Programnamn, som t.ex. Microsoft Word: På personliga enheter kan organisationen bara se din hanterade appinventering. På företagsägda enheter kan organisationen se hela din appinventering.
+- Appnamn såsom Microsoft Word: på personliga enheter kan organisationen bara se din hanterade appinventering. På företagsägda enheter kan organisationen se hela din appinventering.
 - Enhetens ägare
 - Enhetsnamn
 - Enhetens serienummer
@@ -51,8 +51,8 @@ Organisationen kan inte se din personliga information när du registrerar en enh
 
 **Det här kan organisationen kanske se:**
 
--  Telefonnummer: För **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för organisationen. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
-- Enhetens lagringsutrymme: Om du inte kan installera en obligatorisk app kan organisationen se om du har för lite lagringsutrymme på din enhet.  
--  Plats: Din organisation kan aldrig se enhetens plats, såvida du inte behöver återställa en övervakad iOS-enhet som har försvunnit. Gå till [dokumentationen för Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) för att få mer information om övervakade enheter.  
-- Appinventering: Om organisationen använder skydd mot mobilhot kommer de att kunna se information om apparna som finns på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
-- Nätverksinformation: En del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din organisationssupport. Om organisationen till exempel kräver att enheter ska finnas kvar i en viss byggnad kan din enhet identifiera det nätverk som den är ansluten till. 
+-  Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för organisationen. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
+- Lagringsutrymme för enheten: om du inte kan installera en obligatorisk app kan organisationen titta på din enhets lagringsutrymme för att ta reda på om det är för lågt.  
+-  Plats: din organisation kan aldrig se enhetens plats, såvida du inte behöver återställa en övervakad iOS-enhet som har försvunnit. Gå till [dokumentationen för Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) för att få mer information om övervakade enheter.  
+- Appinventering: om organisationen använder skydd mot mobilhot kommer de att kunna se information om apparna som är på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Nätverksinformation: en del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din organisationssupport. Om organisationen till exempel kräver att enheter ska finnas kvar i en viss byggnad kan din enhet identifiera det nätverk som den är ansluten till. 

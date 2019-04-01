@@ -1,18 +1,26 @@
+---
+ms.openlocfilehash: 9a18bceb6b42f06464baf31a4cdd4dea21d19675
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
+ms.contentlocale: sv-SE
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461302"
+---
 ## <a name="april-2017"></a>April 2017
 
 ### <a name="new-capabilities"></a>Nya funktioner
 
-#### <a name="myapps-available-for-managed-browser---822308-822303--"></a>MyApps tillgängligt för hanterad webbläsare <!--822308, 822303-->
+#### <a name="myapps-available-for-managed-browser---822308-822303--"></a>MyApps tillgängligt för Managed Browser <!--822308, 822303-->
 
 Microsoft MyApps har nu bättre stöd i den hanterade webbläsaren. Användare av hanterad webbläsare som inte är mål för hantering flyttas direkt till tjänsten MyApps där de kan komma åt sina administratörsetablerade SaaS-appar. Användare som är mål för Intune-hantering har även i fortsättningen åtkomst till MyApps från det inbyggda bokmärket för hanterad webbläsare.
 
-#### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431-971473--"></a>Nya ikoner för den hanterade webbläsaren och företagsportalen <!--918433, 918431, 971473-->
+#### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431-971473--"></a>Nya ikoner för Managed Browser och företagsportalen <!--918433, 918431, 971473-->
 
 Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-versionerna av appen. Den nya ikonen innehåller det uppdaterade Intune-märket så att det blir mer konsekvent med andra appar i Enterprise Mobility + Security (EM+S). Du kan se den nya ikonen för Managed Browser på sidan med [nyheter i användargränssnittet i Intune-appen](/intune/whats-new-app-ui).
 
 Företagsportalen får också uppdaterade ikoner för Android-, iOS- och Windows-versioner av appen för att förbättra enhetligheten med andra appar i EM+S. Dessa ikoner släpps gradvis till plattformarna från april till slutet av maj.
 
-#### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
+#### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggningen i Android-företagsportalen <!--953374-->
 
 En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen. Du kan se de nya skärmarna för företagsportalsappen för Android på [sidan Nyheter i användargränssnittet i Intune-appen](/intune/whats-new-app-ui).
 
@@ -23,10 +31,10 @@ Nu kan du skapa en appbaserad princip för villkorlig åtkomst för att blockera
 #### <a name="single-sign-in-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Stöd för enkel inloggning från företagsportalen för iOS till Outlook för iOS <!--834012-->
 Användarna behöver inte längre logga in i Outlook-appen om de är inloggade på företagsportalappen för iOS på samma enhet med samma konto. När användarna startar Outlook-appen kan de välja sitt konto och logga in automatiskt. Vi arbetar också med att lägga till den här funktionen för andra Microsoft-appar.
 
-#### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Förbättrade statusmeddelanden i Företagsportalappen för iOS <!--744866-->
+#### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Förbättrade statusmeddelanden i företagsportalappen för iOS <!--744866-->
 Nya och mer specifika felmeddelanden visas nu i Företagsportalappen för iOS för att ger mer tillgänglig information om vad som händer i enheter. Dessa felärenden inkluderades tidigare i ett allmänt felmeddelande med titeln "Företagsportalen är för tillfället otillgänglig". Om en användare startar Företagsportalen på iOS när det inte finns en internetanslutning visas dessutom ett permanent statusfält på startsidan med texten "Ingen internetanslutning".
 
-#### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Appens installationsstatus har förbättrats för Företagsportalappen för Windows 10 <!--676495-->
+#### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Förbättrade appinstallationsstatus för företagsportalappen för Windows 10 <!--676495-->
 
 Nya förbättringar för appinstallationer i företagsportalappen för Windows 10 är:
 -   Snabbare rapportering av installationsförlopp för MSI-paket
@@ -37,9 +45,9 @@ Du kan se den nya förloppsindikatorn på sidan [nyheter i användargränssnitte
 
 #### <a name="bulk-enroll-windows-10-devices----747607---"></a>Massregistrera Windows 10-enheter <!-- 747607 -->
 
-Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](/intune-classic/deploy-use/bulk-enroll-windows) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter kommer Azure AD att anslutas, registreras i Intune och vara redo för att Azure AD-användarna ska logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
+Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](/intune-classic/deploy-use/bulk-enroll-windows) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter kommer Azure AD att anslutas, registreras i Intune och vara redo för att Azure AD-användarna ska logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
 
-### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Vad är nytt i den offentliga förhandsversion av Intunes adminstratörsupplevelse på Azure <!--736542-->
+### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Nyheter i den offentliga förhandsversion av Intunes adminstratörsupplevelse på Azure <!--736542-->
 
 Tidigt under 2017 kommer vi att migrera vår fullständiga administratörsupplevelse till Azure, vilket ger kraftfull och integrerad hantering av EMS-kärnarbetsflöden på en modern tjänsteplattform som kan utökas med Graph API:er.
 
@@ -51,7 +59,7 @@ Du kan se vad som är nytt i Intunes förhandsversion i Azure [här](/intune/wha
 
 ### <a name="notices"></a>Meddelanden
 
-#### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Direkt åtkomst till Apples registreringscenarier<!--951869-->
+#### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Direkt åtkomst till Apples registreringscenarier <!--951869-->
 
 För Intune-konto som har skapats senare än januari 2017 har Intune möjliggjort direktåtkomst till Apples-registreringsscenarier med arbetsbelastningen Registrera enheter i Azure Preview-portalen. Tidigare var Apples förhandsregistrering enbart tillgänglig från länkar i den klassiska Intune-portalen. Intune-konton som skapats före januari 2017 behöver migreras vid ett tillfälle innan de här funktionerna finns tillgängliga i Azure. Schemat för migreringen har inte tillkännagivits än men informationen kommer att vara tillgänglig så snart som möjligt. Vi rekommenderar starkt att skapa ett utvärderingskonto för att testa den nya upplevelsen om ditt befintliga konto har inte åtkomst till förhandsversionen.
 
@@ -73,7 +81,7 @@ Efter migreringen behöver du överföra appx igen som en PC-appx om du vill gö
 
 #### <a name="administration-roles-being-replaced-in-azure-portal"></a>Administratörsroller ersätts i Azure Portal
 
-De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) som används i den klassiska Intune-portalen (Silverlight) ersätts med en helt ny uppsättning rollbaserade administratörskontroller (RBAC) i Intune Azure Portal. När du har migrerat till Azure Portal måste du tilldela dina administratörer dessa nya administratörsroller. Mer information om RBAC och nya de nya rollerna finns i [Rollbaserad åtkomstkontroll för Microsoft Intune](/intune/role-based-access-control).
+De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) som används i den klassiska Intune-portalen (Silverlight) ersätts med en helt ny uppsättning rollbaserade administratörskontroller (RBAC) i Intune Azure-portalen. När du har migrerat till Azure Portal måste du tilldela dina administratörer dessa nya administratörsroller. Mer information om RBAC och nya de nya rollerna finns i [Rollbaserad åtkomstkontroll för Microsoft Intune](/intune/role-based-access-control).
 
 ### <a name="whats-coming"></a>Kommande nyheter
 
@@ -83,13 +91,13 @@ Vi informerar om en förändring som kommer under de kommande månaderna som kom
 
 Du hittar skärmdumpar av föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet på sidan [Nyheter i appens användargränssnitt](/intune/whats-new-app-ui).
 
-#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plan för ändringar: Intune ändrar Intune-partnerportalens gränssnitt<!-- 1050016 -->
+#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plan för ändringar: Intune ändrar Intune-partnerportalens funktion <!-- 1050016 -->
 
 Vi tar bort sidan Intune-Partner från manage.microsoft.com från och med tjänstuppdateringen i mitten på maj 2017.  
 
 Om du är partneradministratör, kommer du inte längre att kunna visa och vidta åtgärder åt dina kunder från sidan Intune Partner. I stället måste du logga in på en av två andra partnerportaler hos Microsoft.
 
-Både [Microsoft Partner Center](https://partnercenter.microsoft.com/) och [Administrationscenter för Microsoft Office 365 Partner](https://portal.office.com/) gör att du kan logga in på kundkonton som du hanterar. I framtiden kan du som partner använda en av dessa webbplatser för att hantera dina kunder.
+Både [Microsoft Partner Center](https://partnercenter.microsoft.com/) och [Microsoft 365-administrationscentret](https://admin.microsoft.com/) gör att du kan logga in på de kundkonton som du hanterar. I framtiden kan du som partner använda en av dessa webbplatser för att hantera dina kunder.
 
 
 #### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple kräver uppdateringar för Application Transport Security <!--748318-->
@@ -129,7 +137,7 @@ Mer information om dessa ändringar finns i [UI-uppdateringar för Intunes sluta
 
 Som en del av designändringarna på företagsportalens webbplats ska iOS- och Android-användare kunna installera appar som har tilldelats dem som "tillgänglig utan registrering" på sina icke-hanterade enheter. Med sina Intune-autentiseringsuppgifter kan användare logga in på företagsportalens webbplats och se en lista över appar som tilldelats dem. App-paket för apparna som är "tillgängliga utan registrering" görs tillgängliga för hämtning via företagsportalens webbplats. Appar som kräver registrering för installation påverkas inte av den här ändringen, eftersom användarna uppmanas att registrera sina enheter om de vill installera apparna.
 
-#### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Registrera skript för företagsportalen i Windows 10 <!--941642-->
+#### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Registrera skript för Windows 10-företagsportalen <!--941642-->
 
 Om du behöver hämta och läsa in Windows 10-företagsportalsappen separat kan du nu använda ett skript för att förenkla och effektivisera appsigneringsprocessen för din organisation.   Information om hur du hämtar skriptet och anvisningarna om hur du använder det finns i [Microsoft Intune-signeringsskript för företagsportalen i Windows 10](https://aka.ms/win10cpscript) i TechNet-galleriet. Mer information om det här meddelandet finns i [Uppdatera din Windows 10-företagsportalsapp](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) på Intune Support-teambloggen.
 
@@ -142,7 +150,7 @@ Version 10.3 av iOS började distribueras till iOS-användare den 27 mars 2017. 
 
 Det finns för närvarande inga kända problem att rapportera. Om du stöter på problem med iOS 10.3 så kontakta gärna [Intunes supportgrupp](/intune-classic/troubleshoot/contact-assisted-phone-support-for-microsoft-intune).
 
-#### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Förbättrat stöd för Android-användare i Kina <!--720444-->
+#### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Förbättrade stödet för Android-användare i Kina <!--720444-->
 
 På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta appar från kinesiska marknadsplatser. Företagsportalen kommer att stödja det här arbetsflödet genom att omdirigera Android-användare i Kina till att ladda ned appar för Företagsportalen och Outlook från lokala appbutiker. Detta förbättrar slutanvändarens upplevelse när principer för villkorlig åtkomst är tillämpliga, både för hantering av mobila enheter och för hantering av mobilappar. Appar för Företagsportalen och Outlook för Android är tillgängliga i följande kinesiska appbutiker:
 
@@ -152,7 +160,7 @@ På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta
 - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
-#### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Bästa praxis: Kontrollera att dina företagsportalsappar är aktuella<!--879465-->
+#### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Bästa praxis: Se till att dina företagsportalsappar är aktuella <!--879465-->
 
 I December 2016 släppte vi en uppdatering som framtvingande multifaktorautentisering (MFA) för en grupp användare när de registrerar en iOS-, Android-, Windows 8.1+- eller Windows Phone 8.1+-enhet. Den här funktionen fungerar inte utan vissa grundversioner av företagsportalsappen för Android (v5.0.3419.0+) och iOS (v2.1.17+).
 
@@ -175,18 +183,18 @@ Företagsportalens webbplats kommer att ha stöd för appar som är avsedda för
 
 ### <a name="notices"></a>Meddelanden
 
-#### <a name="group-migration-will-not-require-any-updates-to-groups-or-policies-for-ios-devices---898837--"></a>Gruppmigrering kräver inte några uppdateringar för grupper eller principer för iOS-enheter<!--898837-->
+#### <a name="group-migration-will-not-require-any-updates-to-groups-or-policies-for-ios-devices---898837--"></a>Gruppmigrering kräver inte några uppdateringar för grupper eller principer för iOS-enheter <!--898837-->
 För varje Intune-enhetsgrupp som tilldelas i förväg av en profil för registrering av företagsenhet skapas en motsvarande dynamisk enhetsgrupp i AAD. Det görs baserat på namnet på profilen för registrering av företagsenhet under migreringen till Azure Active Directory-enhetsgrupper. Detta säkerställer att enheter automatiskt grupperas och tar emot samma principer och appar som den ursprungliga Intune-gruppen när de registreras.
 
 När en klient startar migreringsprocessen för att gruppera och ange mål skapar Intune automatiskt en dynamisk AAD-grupp som motsvarar en Intune-grupp som är mål för en profil för registrering av företagsenheter. Om Intune-administratören tar bort Intune-målgruppen tas inte motsvarande dynamiska AAD-grupp bort. Gruppens medlemmar och den dynamiska frågan kommer att tas bort, men själva gruppen finns kvar tills IT-administratören tar bort den via AAD-portalen.
 
 Och om IT-administratören ändrar vilken grupp Intune riktas mot av en profil för registrering av företagsenheter skapar Intune en ny dynamisk grupp som avspeglar den nya profiltilldelningen. Den nya dynamiska gruppen som har skapats för den gamla tilldelningen tas inte bort.
 
-### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Standardvärde för hantering av Windows Desktop-enheter via Windows-inställningar <!--663050-->
+### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Standardbeteendet för hantering av Windows-skrivbordsenheter via Windows-inställningar <!--663050-->
 Standardbeteendet för att registrera Windows 10-datorer ändras. Nya registreringar följer det normala MDM-agentregistreringsflödet i stället för via datoragenten. Webbplatsen för företagsportalen ger Windows 10 Desktop-användare registreringsanvisningar som leder dem genom processen med att lägga till Windows 10 Desktop-datorer som mobila enheter. Detta påverkar inte datorer som är registrerade och företaget kan fortfarande hantera Windows 10-datorer med datoragenten [om så önskas](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune).
 
 #### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Förbättra stöd i hantering av mobila appar för selektiv rensning <!--581242-->
-Slutanvändare får ytterligare vägledning för hur de kan återfå åtkomsten till arbets- eller skoldata som tas bort automatiskt till följd av principen "Offlineintervall innan appdata rensas".<!--, or the removal of the Intune Company Portal on Android.-->
+Slutanvändare får ytterligare vägledning om hur de kan återfå åtkomsten till arbets- eller skoldata som tas bort automatiskt till följd av principen "Offlineintervall innan appdata rensas".<!--, or the removal of the Intune Company Portal on Android.-->
 
 #### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Länkar till företagsportalen för iOS öppnas i appen <!--665954-->
 Länkar i företagsportalappen för iOS, inklusive sådana som leder till dokumentation och appar, öppnas direkt i företagsportalappen med en Safari-vy i appen. Den här uppdateringen skickas separat från tjänstuppdateringen i januari.
@@ -204,10 +212,10 @@ Från och med mars följer företagsportalsappen för Android [riktlinjer för m
 
 Du kan hitta före och efter-bilder på [sidan med UI-uppdateringar](/intune/whats-new-app-ui).
 
-### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Koppla flera hanteringsverktyg till Microsoft Store för företag<!--926135-->
+### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Koppla flera hanteringsverktyg till Microsoft Store för företag <!--926135-->
 Om du använder fler än ett hanteringsverktyg för att distribuera appar från Microsoft Store för företag kunde du tidigare bara koppla ett av dem till Microsoft Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager. Mer information finns i [Hantera appar som du har köpt från Microsoft Store för företag med Microsoft Intune](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune#associate-your-windows-store-for-business-account-with-intune).
 
-## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Vad är nytt i den offentliga förhandsversion av Intunes adminstratörsupplevelse på Azure <!--736542-->
+## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Nyheter i den offentliga förhandsversion av Intunes adminstratörsupplevelse på Azure <!--736542-->
 
 Tidigt under 2017 kommer vi att migrera vår fullständiga administratörsupplevelse till Azure, vilket ger kraftfull och integrerad hantering av EMS-kärnarbetsflöden på en modern tjänsteplattform som kan utökas med Graph API:er.
 
@@ -232,13 +240,13 @@ När användarnas enheter förlorar kontakt med Intune kan du ge dem nya felsök
 
 ### <a name="notices"></a>Meddelanden
 
-#### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Standardvärde för hantering av Windows Desktop-enheter via Windows-inställningar <!--663050-->
+#### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Standardbeteendet för hantering av Windows-skrivbordsenheter via Windows-inställningar <!--663050-->
 Standardbeteendet för att registrera Windows 10-datorer ändras. Nya registreringar följer det normala MDM-agentregistreringsflödet i stället för via datoragenten.
 
 Webbplatsen för företagsportalen ger Windows 10 Desktop-användare registreringsanvisningar som leder dem genom processen med att lägga till Windows 10 Desktop-datorer som mobila enheter. Detta påverkar inte datorer som är registrerade och företaget kan fortfarande hantera Windows 10-datorer med datoragenten [om så önskas](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune).
 
 #### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Förbättra stöd i hantering av mobila appar för selektiv rensning <!--581242-->
-Slutanvändare får ytterligare vägledning för hur de kan återfå åtkomsten till arbets- eller skoldata som tas bort automatiskt till följd av principen "Offlineintervall innan appdata rensas".<!--, or the removal of the Intune Company Portal on Android.-->
+Slutanvändare får ytterligare vägledning om hur de kan återfå åtkomsten till arbets- eller skoldata som tas bort automatiskt till följd av principen "Offlineintervall innan appdata rensas".<!--, or the removal of the Intune Company Portal on Android.-->
 
 #### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Länkar till företagsportalen för iOS öppnas i appen <!--665954-->
 Länkar i företagsportalappen för iOS, inklusive sådana som leder till dokumentation och appar, öppnas direkt i företagsportalappen med en Safari-vy i appen. Den här uppdateringen skickas separat från tjänstuppdateringen i januari.
@@ -246,7 +254,7 @@ Länkar i företagsportalappen för iOS, inklusive sådana som leder till dokume
 #### <a name="modernizing-the-company-portal-website---753980--"></a>Modernisera företagsportalswebbplatsen <!--753980-->
 Från och med februari kommer företagsportalens webbplats att ha stöd för appar som är avsedda för användare som inte har några hanterade enheter. Webbplatsen anpassas med andra Microsoft-produkter och tjänster med hjälp av ett nytt kontrasterande färgschema, dynamiska bilder och en "hamburgarmeny", ![Hamburgarmeny på företagsportalens webbplats](/intune/whats-new-app-ui).
 
-#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Ny dokumentationen för appskyddsprinciper<!--583398-->
+#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Ny dokumentation för appskyddsprinciper <!--583398-->
 Vi har uppdaterat dokumentationen för administratörer och apputvecklare som vill aktivera appskyddsprinciper (kallas MAM-principer) i sina iOS- och Android-appar med Intune programhanteringsverktyg eller Intune App SDK.
 
 Följande artiklar har uppdaterats:
@@ -266,18 +274,21 @@ Företagsportalen för iOS lanserar en förloppsindikator på startskärmen som 
 
 ## <a name="december-2016"></a>December 2016
 
-### <a name="public-preview-of-the-new-intune-admin-experience-on-azure---736542--"></a>Offentlig förhandsversion av den nya Intune-adminstratörsupplevelsen på Azure <!--736542-->
+### <a name="public-preview-of-the-new-intune-admin-experience-on-azure---736542--"></a>Offentlig förhandsversion av nya Intune adminstratörsupplevelse på Azure <!--736542-->
 Tidigt under 2017 kommer vi att migrera vår fullständiga administratörsupplevelse till Azure, vilket ger kraftfull och integrerad hantering av EMS-kärnarbetsflöden på en modern tjänsteplattform som kan utökas med Graph API:er. Innan den här portalen får allmän tillgång för alla klienter i Intune, är vi glada att kunna meddela att vi ska börja lansera en förhandsversion av den här nya administratörupplevelsen senare denna månad för att välja klienter.
 
 Administratörsupplevelsen i Azure-portalen använder den redan meddelade nya grupperings- och målfunktionen. När din befintliga klient migreras till den nya grupperingsupplevelsen migreras du även till att förhandsgranska den nya administratörsupplevelsen på din klient. Under tiden kan du ta reda på mer om vad vi har på lager för Microsoft Intune i Azure-portalen i vår [nya dokumentation](/intune/what-is-intune).
 
-__Integrering av telekomkostnadshantering i förhandsversionen av Azure-portalen__ <!--747605-->Vi börjar nu att förhandsgranska integrering med tredje parters hantering av telekomkostnad (TEM) i Azure-portalen. Du kan använda Intune för att tvinga gränser för nationell och central dataanvändning. Vi börjar de här integreringarna med [Saaswedo](http://www.saaswedo.com/). Om du vill aktivera den här funktionen i utvärderingsversionen av klienten kan du [kontakta Microsoft Support](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune).
+__Integrering av hantering av telekomkostnad i den offentliga förhandsversionen av Azure-portalen__ <!--747605-->
+Vi börjar nu att förhandsgranska integrering med tredje parters hantering av telekomkostnad (TEM) i Azure-portalen. Du kan använda Intune för att tvinga gränser för nationell och central dataanvändning. Vi börjar de här integreringarna med [Saaswedo](http://www.saaswedo.com/). Om du vill aktivera den här funktionen i utvärderingsversionen av klienten kan du [kontakta Microsoft Support](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune).
 
 ### <a name="new-capabilities"></a>Nya funktioner
 
-__Multifaktorautentisering på alla plattformar__ <!--747590--> Du kan nu använda multifaktorautentisering (MFA) på en grupp av användare när de registrerar en iOS-, Android-, Windows 8.1+- eller Windows Phone 8.1+-enhet från Azure-hanteringsportalen genom att konfigurera MFA på registreringsprogrammet för Microsoft Intune i Azure Active Directory.
+__Multifaktorautentisering på alla plattformar__ <!--747590-->
+Du kan nu använda multifaktorautentisering (MFA) på en grupp av användare när de registrerar en iOS-, Android-, Windows 8.1+- eller Windows Phone 8.1+-enhet från Azure-hanteringsportalen genom att konfigurera MFA på registreringsprogrammet för Microsoft Intune i Azure Active Directory.
 
-__Möjlighet att begränsa registrering av mobila enheter__ <!--747596--> Intune lägger till nya registreringsbegränsningar som avgör vilka plattformar som mobila enheter ska kunna registrera. Intune skiljer mellan mobilplattformar som iOS, macOS, Android, Windows och Windows Mobile.
+__Möjlighet att begränsa registrering av mobila enheter__ <!--747596-->
+Intune lägger till nya registreringsbegränsningar som avgör vilka plattformar som mobila enheter ska kunna registrera. Intune skiljer mellan mobilplattformar som iOS, macOS, Android, Windows och Windows Mobile.
 * Begränsningen av registrering av mobila enheter begränsar inte registreringen av datorklienter.
 * För iOS finns det ytterligare ett alternativ för att blockera registrering av personligt ägda enheter.
 
@@ -285,9 +296,11 @@ Intune markerar alla nya enheter som personliga såvida inte IT-administratören
 
 ### <a name="notices"></a>Meddelanden
 
-__Multifaktorautentisering vid registrering flyttar till Azure-portalen__  <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen loggar du nu in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurerar MFA-inställningarna via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
+__Multifaktorautentisering vid registrering flyttar till Azure-portalen__ <!--VSO 750545-->
+Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen loggar du nu in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurerar MFA-inställningarna via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
 
-__Företagsportalappen för Android är nu tillgänglig i Kina__ <!--VSO 658093--> Vi publicerar företagsportalappen för Android för hämtning i Kina. På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta appar från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:
+__Företagsportalappen för Android är nu tillgänglig i Kina__ <!--VSO 658093-->
+Vi publicerar företagsportalappen för Android för hämtning i Kina. På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta appar från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 * [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
@@ -306,11 +319,14 @@ Företagsportalappen för Android använder Google Play-tjänster för att kommu
 
 ### <a name="deprecations"></a>Föråldringar
 
-__Firefox ska inte längre ha stöd för Silverlight__ <!--VSO TBA--> Mozilla tar bort sitt stöd för Silverlight i version 52 av [webbläsaren Firefox](https://www.mozilla.org/firefox), sker i mars 2017. Därför kommer du inte längre att kunna logga in på den befintliga Intune-konsolen med Firefox-versioner som är senare än 51. Vi rekommenderar att du använder Internet Explorer 10 eller 11 för att komma åt administrationskonsolen, eller en [version av Firefox före version 52](https://ftp.mozilla.org/pub/firefox/releases/). Intunes övergång till Azure-portalen gör att den stöder ett antal [moderna webbläsare](/azure/azure-preview-portal-supported-browsers-devices) utan att vara beroende av Silverlight.
+__Firefox har inte längre stöd för Silverlight__ <!--VSO TBA-->
+Mozilla tar bort sitt stöd för Silverlight i version 52 av [webbläsaren Firefox](https://www.mozilla.org/firefox), sker i mars 2017. Därför kommer du inte längre att kunna logga in på den befintliga Intune-konsolen med Firefox-versioner som är senare än 51. Vi rekommenderar att du använder Internet Explorer 10 eller 11 för att komma åt administrationskonsolen, eller en [version av Firefox före version 52](https://ftp.mozilla.org/pub/firefox/releases/). Intunes övergång till Azure-portalen gör att den stöder ett antal [moderna webbläsare](/azure/azure-preview-portal-supported-browsers-devices) utan att vara beroende av Silverlight.
 
-__Borttagning av principer för Exchange Online mobila inkorgar__ <!--770687--> Från och med december kommer administratörer inte längre att kunna visa eller konfigurera principer för mobila postlådor för Exchange Online (EAS) i Intune-konsolen. Den här ändringen kommer att lanseras till alla klienter i Intune under december och januari. Alla befintliga principer kommer att förbli såsom konfigurerade. Använd Exchange Management Shell för att konfigurera nya principer. Ta reda på mer [här](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
+__Borttagning av principer för den mobila inkorgen i Exchange Online__ <!--770687-->
+Från och med december kommer administratörer inte längre att kunna visa eller konfigurera principer för mobila postlådor för Exchange Online (EAS) i Intune-konsolen. Den här ändringen kommer att lanseras till alla klienter i Intune under december och januari. Alla befintliga principer kommer att förbli såsom konfigurerade. Använd Exchange Management Shell för att konfigurera nya principer. Ta reda på mer [här](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
 
-__Apparna Intune AV Player, Image Viewer och PDF Viewer stöds inte längre på Android__ <!--747553--> Från mitten av december 2016 och framåt kommer användarna inte längre att kunna använda apparna Intune AV Player, Image Viewer och PDF Viewer. De här apparna har ersatts med appen Azure Information Protection. Lär dig mer om appen Azure Information Protection [här](/information-protection/rms-client/mobile-app-faq).
+__Apparna Intune AV Player, Image Viewer och PDF Viewer stöds inte längre på Android__ <!--747553-->
+Från mitten av december 2016 och framåt kommer användarna inte längre att kunna använda apparna Intune AV Player, Image Viewer och PDF Viewer. De här apparna har ersatts med appen Azure Information Protection. Lär dig mer om appen Azure Information Protection [här](/information-protection/rms-client/mobile-app-faq).
 
 ## <a name="november-2016"></a>November 2016
 

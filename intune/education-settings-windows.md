@@ -6,9 +6,10 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 ms.reviewer: heenamac
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32c15037bad21ca90f81ed239ac24a9bac8d7499
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 206bc3276f3c175fe61852f235c722b835ad60b4
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228331"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57564864"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurera appen Gör ett prov på Windows 10-enheter med Intune
 
@@ -41,12 +42,12 @@ Dessa inställningar läggs till en profil för enhetskonfiguration som sedan ti
   - Azure AD-konto
   - Domänkonto
   - Lokalt konto
-- **Användarnamn för kontot**: Ange användarnamnet för det konto som används till appen Gör ett prov. Du kan ange konton i följande format:
+- **Kontoanvändarnamn**: Ange användarnamnet för det konto som används med appen Gör ett prov. Du kan ange konton i följande format:
   - `user@contoso.com`
   - `domain\username`
   - `user@contoso.com`
   - `computerName\username`
-- **Webbadress till begränsad provmiljö**: Ange webbadressen till det prov som du vill att användarna ska göra. Mer information om hur du hämtar webbadressen finns i [dokumentationen för Gör ett prov](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Utvärderings-URL**: Ange URL:en till det prov som du vill att användarna ska göra. Mer information om hur du hämtar webbadressen finns i [dokumentationen för Gör ett prov](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
 - **Skärmövervakning**: Välj **Tillåt** för att övervaka skärmaktiviteten medan användarna gör provet. **Inte konfigurerad** förhindrar dig från att övervaka skärmen under provet.
 - **Textförslag**: Välj **Tillåt** så kan provdeltagarna se textförslag. **Inte konfigurerat** blockerar textförslag medan användarna gör ett prov.
 

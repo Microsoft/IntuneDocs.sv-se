@@ -7,20 +7,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2176eda7ce54906c6af5b34cc3db49e21ecda274
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 1c6a2f4fc3e3cae171cea96520d075a659d4d1ca
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57231969"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566343"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Uppgradera enheter som kör Windows Holographic till Windows Holographic for Business
 
@@ -36,7 +37,7 @@ Mer information om den här funktionen finns i [Uppgradera Windows 10-utgåvor e
 
 ## <a name="edition-upgrade"></a>Versionsuppgradering
 
-- **Utgåva att uppgradera till**: Välj **Windows 10 Holographic for Business**.
+- **Utgåva att uppgradera till**: Välj **Windows 10 Holographic för företag**.
 - **Licensfil**: Bläddra till och välj den XML-licensfil som du har fått.
 
   ![Ange XML-filnamnet som innehåller licensinformationen för Holographic for Business](media/Holographic-edition-upgrade.png)

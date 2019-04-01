@@ -6,10 +6,11 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 02/25/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caf4401a2274a74050ec0eb404363cfc15b23e76
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: e0e56c2dd4e26c68a82d5cb9d902e4480e1b98c8
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55851448"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57396496"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>API-slutpunkt för Intune-informationslager
 
@@ -57,11 +58,13 @@ Webbadressen innehåller följande element:
 
 ## <a name="api-version-information"></a>API-versionsinformation
 
-Den aktuella API-versionen är: `beta`. 
+Det går nu att använda v1.0-versionen av Intune-informationslagret genom att ange frågeparametern `api-version=v1.0`. Uppdateringar av samlingar i datalagret är additiva och avbryter inte befintliga scenarier.
+
+Du kan testa de nya funktionerna i betaversionen av informationslagret. För att kunna använda betaversionen måste webbadressen innehålla frågeparametern `api-version=beta`. Betaversionen innehåller funktioner som ännu inte är allmänt tillgängliga som en tjänst som stöds. Allt eftersom nya funktioner läggs till i Intune kan betaversionen ändra funktionssätt och datakontrakt. Eventuell anpassad kod eller rapportverktyg som är beroende av betaversionen kan sluta att fungera på grund av pågående uppdateringar.
 
 ## <a name="odata-query-options"></a>OData-frågealternativ
 
-Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter, $orderby, $select, $skip,` och `$top`.
+Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter`, `$select`, `$skip,` och `$top`. I `$filter`, endast `DateKey` eller `RowLastModifiedDateTimeUTC` kanske stöds när kolumnerna som är tillämpliga och andra egenskaper som ska utlösa en felaktig begäran.
 
 ## <a name="datekey-range-filters"></a>DateKey-intervallfilter
 
@@ -73,15 +76,12 @@ Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter
 ## <a name="filter-examples"></a>Filterexempel
 
 > [!NOTE]
-> I filterexemplen antas att dagens datum är 2018-02-21.
+> I filterexemplen antas att dagens datum är 2019-02-21.
 
 |                             Filter                             |           Prestandaoptimering           |                                          Beskrivning                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    Fullständig                                      |    Returnera data med `DateKey` mellan 20180214 och 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Fullständig                                      |    Returnera data med `DateKey` lika med 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Fullständig                                      |    Returnera data med `DateKey` mellan 20180214 och 20180220.                                     |
-|    `maxhistorydays=7&$filter=Id gt 1`                            |    Delvis; Id gt 1 optimeras inte    |    Returnera data med `DateKey` mellan 20180214 och 20180221 och Id som är större än 1.             |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Fullständig                                      |    Returnera data med `DateKey` lika med 20180214. `maxhistorydays` ignoreras.                            |
-|    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Inga                                      |    Behandlas inte som `DateKey`-intervallfilter, och därför sker ingen prestandaökning.                              |
-|    `$filter=DateKey ne 20180214`                                 |    Inga                                      |    Behandlas inte som `DateKey`-intervallfilter, och därför sker ingen prestandaökning.                              |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Inga                                      |    Behandlas inte som `DateKey`-intervallfilter, och därför sker ingen prestandaökning. `maxhistorydays` ignoreras.    |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Fullständig                                       |    Returnera data med `RowLastModifiedDateTimeUTC` är större än eller lika med `2018-02-21T23:18:51.3277273Z`                             |

@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9444a124b9b8a47633f544205940dadb3df0fd8f
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
-ms.translationtype: HT
+ms.openlocfilehash: 55935b2f69f9573d8df5ea5ca32fb4587c652b26
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57335011"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57389470"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Din Android-enhet verkar vara krypterad, men inte enligt företagsportalen
 
@@ -63,16 +63,15 @@ På vissa Android-enheter med version 7.0 och senare krypteras data på ett sät
 
 ### <a name="known-devices-that-can-be-updated-to-fix-this-issue"></a>Kända enheter som kan uppdateras för att åtgärda problemet
 
-Om du har någon av följande enheter kan det här problemet uppstå om du inte har uppdaterat enheten till den senaste versionen av Android. Du kan installera uppdateringar för dessa enheter genom att gå till **Inställningar** > **Uppdatera**. 
+Om du inte har uppdaterat enheten till den senaste versionen av Android, går du till enhetens **inställningar** och välj **uppdatering**. Dessa enheter kan se ut som icke kompatibla förrän du har uppdaterat:  
 
-- [Huawei Honor 8](https://consumer.huawei.com/us/support/phones/honor-8/)
-- [Huawei P9](https://consumer.huawei.com/en/phones/p9/)
+- Huawei Honor 8
+- Huawei P9
 
 ### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Kända enheter som inte kan uppdateras för att åtgärda problemet
+Följande enheter visas alltid krypterad och kan inte användas för att komma åt företagets resurser. Om du vill komma åt företagets resurser, måste du använda en annan enhet.  
 
-Det går inte att åtgärda det här problemet på enheterna nedan. Du kan behöva använda en annan enhet för att komma åt företagsresurser. 
-
-- [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
-- [OPPO-enheter](https://www.oppo.com/en/smartphones)
-- [Vivo-enheter](https://www.vivo.co.in)
-- [Xiaomi Mi-telefoner](https://xiaomi-mi.com/mi-smartphones/)
+- Huawei Mate 8
+- OPPO-enheter
+- Vivo-enheter
+- Xiaomi Mi-smartphones

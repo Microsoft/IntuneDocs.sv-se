@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f93ad05decb3cb4bf1fd6db87e9fb08f17280fcf
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: fed8c33bbf4ff302d08576dc5e34ce1257425090
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237613"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565255"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Windows Holographic for Business tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -33,32 +34,32 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Windows
 
 ## <a name="general"></a>Allmänt
 
-- **Manuell avregistrering**: Tillåter att användaren manuellt raderar sitt arbetsplatskonto från enheten.
-- **Cortana**: Aktivera eller inaktivera röstassistenten Cortana.
-- **Geoplats**: Anger om enheten kan använda tjänsterna för platsinformation.
+- **Manuell avregistrering**: Låter användaren ta bort sitt arbetsplatskonto från enheten manuellt.
+- **Cortana**: Aktiverar eller inaktiverar röstassistenten Cortana.
+- **Geoplats**: Anger om enheten kan använda information om platstjänster.
 
 ## <a name="password"></a>Lösenord
 
-- **Lösenord**: Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
-- **Kräv lösenord när enheten återgår från viloläge**: Anger att användaren måste mata in ett lösenord för att låsa upp enheten.
+- **Lösenord**: Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
+- **Kräv lösenord när enheten lämnar inaktivt läge**: Anger att användaren måste ange ett lösenord för att kunna låsa upp enheten.
 
 ## <a name="app-store"></a>Appbutik
 
-- **Uppdatera appar automatiskt från Store:**: Tillåter att appar som installeras från Microsoft Store uppdateras automatiskt.
-- **Installation av betrodd app**: Tillåter att appar som signeras med ett betrott certifikat läses in separat.
-- **Lås upp via utvecklare**: Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av slutanvändaren.
+- **Uppdatera appar automatiskt från Store**: Appar som installeras från Microsoft Store uppdateras automatiskt.
+- **Installation av betrodd app**: Appar som signeras med ett betrott certifikat läses in separat.
+- **Lås upp via utvecklare**: Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av användaren.
 
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge-webbläsaren
 
-- **Cookies**: Innebär att webbläsaren sparar Internetcookies på enheten.
+- **Cookies**: Gör att webbläsaren sparar Internetcookies på enheten.
 - **Popup-fönster**: Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
-- **Sökförslag**: Tillåter att din sökmotor föreslår platser när du skriver sökord.
+- **Sökförslag**: Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 - **Lösenordshanteraren**: Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
 - **Skicka Do Not Track-huvuden**: Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
-- **SmartScreen för Microsoft Edge**: Aktivera Microsoft Edge SmartScreen för att komma åt webbplats och filhämtningar.
+- **SmartScreen för Microsoft Edge**: Aktivera Microsoft Edge SmartScreen för åtkomst till webbplats och filnedladdningar.
 
 ## <a name="search"></a>Sök
 
@@ -71,12 +72,12 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Windows
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
 
 - **Bluetooth**: Styr om användaren kan aktivera och konfigurera Bluetooth på enheten.
-- **Bluetooth-identifiering**: Innebär att enheten kan upptäckas av andra Bluetooth-aktiverade enheter.
-- **Bluetooth-annonsering**: Innebär att enheten kan ta emot annonser via Bluetooth.
+- **Bluetooth-identifiering**: Tillåter att enheten kan upptäckas av andra Bluetooth-aktiverade enheter.
+- **Bluetooth-annonsering**: Låter enheten ta emot annonser via Bluetooth.
 
 ## <a name="control-panel-and-settings"></a>Kontrollpanel och inställningar
 
-- **Ändring av systemtid**: Förhindrar att slutanvändaren ändrar enhetens datum och tid.
+- **Ändra systemtid**: Förhindrar att slutanvändaren ändrar enhetens datum och tid.
 
 ## <a name="kiosk---obsolete"></a>Kiosk – föråldrad
 
@@ -86,9 +87,9 @@ En helskärmslägesenhet kör vanligtvis en viss app. Användarna kommer inte å
 
 - **Helskärmsläge**: Identifierar den typ av helskärmsläge som stöds av principen. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Den här principen aktiverar inte något helskärmsläge. 
-  - **Helskärmsläge för enskilda appar**: Profilen innebär att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
-  - **Helskärmsläge för flera appar**: Profilen innebär att enheten kan köra flera appar. Endast de appar som du lägger till är tillgängliga för användaren. Med helskärmsläge för flera appar skapas en mer användarvänlig upplevelse för användarna eftersom de endast ser de appar de behöver. Och de appar användarna inte behöver tas bort från deras vy. 
+  - **Inte konfigurerad** (standard): Den här principen aktiverar inte ett kioskläge. 
+  - **Helskärmsläge för enskilda appar**: Profilen gör att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
+  - **Helskärmsläge för flera appar**: Profilen gör att enheten kan köra flera appar. Endast de appar som du lägger till är tillgängliga för användaren. Med helskärmsläge för flera appar skapas en mer användarvänlig upplevelse för användarna eftersom de endast ser de appar de behöver. Och de appar användarna inte behöver tas bort från deras vy. 
   
     När du lägger till appar för helskärmsläge för flera appar måste du också lägga till en layoutfil för startmenyn. [Layoutfilen för startmenyn](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) innehåller exempel-XML som kan användas i Intune. 
 
@@ -96,15 +97,15 @@ En helskärmslägesenhet kör vanligtvis en viss app. Användarna kommer inte å
 
 Ange följande inställningar:
 
-- **Användarkonto**: Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som är associerad med helskärmsappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
+- **Användarkonto**: Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som associeras med helskärmsappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
 
     Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `AzureAD\user@contoso.com`.
 
-- **ID för programanvändarmodell (AUMID) för appen**: Ange AUMID för helskärmsappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
+- **Appens programanvändarmodell-ID (AUMID)**: Ange AUMID för helskärmsappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
 ## <a name="reporting-and-telemetry"></a>Rapportering och telemetri
 
-- **Dela användningsdata**: Välj nivå för de diagnostikdata som ska skickas.
+- **Dela användningsdata**: Välj nivå av diagnostikdata som skickas.
 
 ## <a name="next-steps"></a>Nästa steg
 

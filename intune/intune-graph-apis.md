@@ -7,20 +7,22 @@ author: dougeby
 manager: dougeby
 ms.author: dougeby
 ms.date: 03/08/2018
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5129484a3cfea873be4009849b5989f9c2acd888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8625eddaa3c6223767c7c93022275b028b4a145b
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187460"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566564"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
@@ -146,13 +148,13 @@ __Utföra användarpåverkande fjärråtgärder på Microsoft Intune-enheter__ |
 __Läsa och skriva Microsoft Intune-enheter__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Läsa Microsoft Intune-enheter__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Läsa och skriva RBAC-inställningar för Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
-__Läsa RBAC-inställningar för Microsoft Intune__ | [DeviceManagementRBAC.Read.All](#rac=ro)
+__Läsa RBAC-inställningar för Microsoft Intune__ | DeviceManagementRBAC.Read.All
 __Läsa och skriva Microsoft Intune-appar__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
 __Läsa Microsoft Intune-appar__ | [DeviceManagementApps.Read.All](#app-ro)
-__Läsa och skriva enhetskonfiguration och principer för Microsoft Intune__ | [DeviceManagementConfiguration.ReadWrite.All](#cfg-rw)
+__Läsa och skriva enhetskonfiguration och principer för Microsoft Intune__ | DeviceManagementConfiguration.ReadWrite.All
 __Läsa enhetskonfiguration och principer för Microsoft Intune__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
 __Läsa och skriva Microsoft Intune-konfiguration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
-__Läsa Microsoft Intune-konfiguration__ | [DeviceManagementServiceConfig.Read.All](#svc-ra)
+__Läsa Microsoft Intune-konfiguration__ | DeviceManagementServiceConfig.Read.All
 
 Tabellen innehåller inställningarna i den ordning de visas i Azure-portalen. I följande avsnitt beskrivs omfattningarna i alfabetisk ordning.
 
@@ -588,7 +590,7 @@ Kom ihåg att lägga till användaren i andra roller om det behövs. Om du till 
 
 Du kan också:
 
-- Använd https://portal.office.com om du vill tilldela en Intune-licens till ditt användarkonto.
+- Använd https://admin.microsoft.com om du vill tilldela en Intune-licens till ditt användarkonto.
 
 - Uppdatera programkod för att autentisera till klientens Azure AD-klientdomän i stället för din egen.
 

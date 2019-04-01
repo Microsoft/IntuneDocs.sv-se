@@ -6,22 +6,23 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: conceptual
+ms.date: 03/05/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28f5b7a37e1ed21c4680a57098bdd0a43a79346
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: af0c544540798a52dc018c749909da6cea50df6c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238412"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566683"
 ---
 # <a name="reference-for-policy-entities"></a>Referens för principentiteter
 
@@ -59,7 +60,7 @@ Entiteten **PolicyType** innehåller en lista över typer av enhetskonfiguration
 
 ## <a name="deviceconfiguration"></a>DeviceConfiguration
 
-Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista över antalet enheter med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer, ökar antalet lyckade med ett för den dagen. Om det finns två tilldelade principer för en enhet, en med tillståndet lyckades och en med tillståndet fel, ökar antalet lyckade och enheten försätts i feltillstånd. Entiteten visar hur många enheter som har en viss status vid en viss dag under de senaste 30 dagarna.
+Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista över antalet **enheter** med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en **enhet** exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om det finns två tilldelade principer för en enhet, en med tillståndet lyckades och en med tillståndet fel, ökar antalet lyckade och enheten försätts i feltillstånd. Entiteten visar hur många enheter som har en viss status vid en viss dag under de senaste 30 dagarna.
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
@@ -69,9 +70,7 @@ Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista öve
 | Fel |Antalet unika enheter med feltillstånd. |10 |
 | Misslyckades |Antalet unika enheter med tillståndet misslyckades. |2 |
 
-
-
-Entiteten **DeviceConfigurationProfileUserActivity** innehåller en lista över antalet användare med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om en användare har tilldelats två profiler, en med tillståndet lyckades och den andra med tillståndet fel, räknas användaren i feltillståndet.  Entiteten **DeviceConfigurationProfileUserActivity** visar hur många användare som varit i ett visst tillstånd en viss dag under de senaste 30 dagarna.
+Entiteten **DeviceConfigurationProfileUserActivity** innehåller en lista över antalet **användare** med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en **användare** exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om en användare har tilldelats två profiler, en med tillståndet lyckades och den andra med tillståndet fel, räknas användaren i feltillståndet.  Entiteten **DeviceConfigurationProfileUserActivity** visar hur många användare som varit i ett visst tillstånd en viss dag under de senaste 30 dagarna.
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|

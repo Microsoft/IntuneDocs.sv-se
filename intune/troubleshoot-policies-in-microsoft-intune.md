@@ -6,9 +6,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2019
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ROBOTS: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90c92eb7ea08fbe89464911c9f1eb5c6aea452db
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 6d1f790aeedff1e13ecc220ed7a6d8f311e12585
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237511"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460520"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -55,19 +56,19 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
       - Skyddsprinciper för appar (hantering av mobilprogram) kräver inte att enheter är registrerade. Mer information finns i [Skapa och tilldela skyddsprinciper för appar](app-protection-policies.md).
 
-    - **Azure AD-anslutningstyp**: Ska vara inställt på **Arbetsplats** eller **AzureAD**.
+    - **Azure AD-anslutningstyp**: ska vara inställd på **arbetsplats** eller **AzureAD**.
  
       - Om kolumnen är **Inte registrerad** kan det finnas ett problem med registreringen. Normalt löser du problemet genom att avregistrera och registrera på nytt.
 
-    - **Intune-kompatibel**: Ska vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
+    - **Intune-kompatibel**: bör vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
 
       Mer information finns i [Komma igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md).
 
-    - **Azure AD-kompatibel**: Ska vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
+    - **Azure AD-kompatibel**: bör vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
 
       Mer information finns i [Komma igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md).
 
-    - **Senaste incheckning**: Ska vara en nylig tid och ett nyligt datum. Som standard checkar Intune-enheter in var 8:e timme.
+    - **Senaste incheckning**: ska vara ett datum och klockslag. Som standard checkar Intune-enheter in var 8:e timme.
 
       - Om **Senaste incheckning** är mer än 24 timmar sedan kan det vara problem med enheten. En enhet som inte kan checka in tar inte emot dina principer från Intune.
 
@@ -86,7 +87,7 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
       **Principtillstånd**:
 
-      - **Inte tillämpligt**: Principen stöds inte på den här plattformen. Till exempel fungerar inte iOS-principer på Android. Samsung KNOX-principer fungerar inte på Windows-enheter.
+      - **Inte tillämpligt**: den här principen stöds inte på den här plattformen. Till exempel fungerar inte iOS-principer på Android. Samsung KNOX-principer fungerar inte på Windows-enheter.
       - **Konflikt**: Det finns en befintlig inställning på enheten som Intune inte kan åsidosätta. Eller så har du distribuerat två principer med samma inställning med olika värden.
       - **Väntar**: Enheten har inte checkats in i Intune för att få principen. Eller så har enheten tagit emot principen men har inte rapporterat statusen till Intune.
       - **Fel**: Du hittar fel och möjliga lösningar i [Felsöka åtkomstproblem för företagsresurser](troubleshoot-company-resource-access-problems.md).
@@ -105,18 +106,18 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
     - **Överensstämmer**: Enheten har tagit emot profilen och rapporterar till Intune att den överensstämmer med inställningen.
 
-    - **Ej tillämpligt**: Profilinställningen är inte tillämplig. Till exempel är e-postinställningar för iOS-enheter inte tillämpliga för Android-enheter.
+    - **Inte tillämplig**: Profilinställningen är inte tillämplig. Till exempel är e-postinställningar för iOS-enheter inte tillämpliga för Android-enheter.
 
     - **Väntar**: Profilen har skickats till enheten men har inte rapporterat statusen till Intune. Till exempel kräver kryptering på Android användaraktivering, vilket kan leda till att krypteringen väntar.
 
-**Användbar länk**: [Övervaka enhetsprofiler för konfiguration](device-profile-monitor.md)
+**Användbara länken**: [övervaka konfigurationsprofiler för enheten](device-profile-monitor.md)
 
 > [!NOTE]
 > Om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, tillämpas den mer restriktiva principen.
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Avisering: Det gick inte att spara åtkomstregler i Exchange
 
-**Problem**: Du får aviseringen **Det gick inte att spara åtkomstregler i Exchange** i administrationskonsolen.
+**Problem**: Du får aviseringen **Det gick inte att spara åtkomstregler i Exchange**  i administrationskonsolen.
 
 Om du har skapat principer på arbetsytan Exchange On-premises-princip (administrationskonsolen) men använder Office 365, tillämpas inte de konfigurerade principinställningarna av Intune. Observera principkällan i aviseringen. Ta bort de gamla reglerna under arbetsytan Exchange On-premises-princip. De gamla reglerna är globala Exchange-regler i Intune för lokal Exchange och är inte relevanta för Office 365. Skapa sedan en ny princip för Office 365.
 
@@ -156,7 +157,7 @@ För Windows-datorer som hanteras med Intune-programklienten kan principfel i fi
 
 4. Dra meddelandereglaget till standardinställningen.
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>ERROR: Det går inte att hämta värdet från datorn, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>Fel: Det går inte att hämta värdet från datorn, 0x80041013
 
 Inträffar om tiden på det lokala systemet är felsynkroniserat med fem minuter eller mer. Om tiden på den lokala datorn inte är rätt synkroniserad misslyckas säkra transaktioner eftersom tidsstämplarna blir ogiltiga.
 

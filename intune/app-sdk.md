@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: article
+ms.date: 02/21/2018
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
@@ -17,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71f4ce34abdb0c1b3d7dbc2bbd3f41f618715fb3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 065535bc6bb4dc586ab45ffa0a9a1250c0a1c908
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55837415"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566496"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Översikt över Microsoft Intune App SDK
-Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appskyddsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app.
+Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att stödja Intune-[appskyddsprinciper](app-protection-policy.md). När din app har appskyddsprinciper tillämpas, kan hanteras av Intune och känns igen av Intune som en hanterad app. SDK:n arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda SDK:ns API:er för att anpassa din apps beteende till att stödja funktioner som kräver medverkan av din app.
 
-När du har aktiverat din app för appskyddsprinciper kan IT-administratörer distribuera dessa principer för att skydda företagsdata i appen.
+När du har aktiverat din app för att stödja Intune-appskyddsprinciper kan IT-administratörer distribuera dessa principer för att skydda företagsdata i appen.
 
 ## <a name="app-protection-features"></a>Appskyddsfunktioner
 
@@ -51,13 +52,13 @@ IT-administratörer kan tvinga webblänkar i appen att öppnas i [Intune-appen M
 ### <a name="enforce-a-pin-policy"></a>Tillämpa en PIN-princip
 IT-administratörer kan kräva att slutanvändaren anger en PIN-kod innan de ansluter till företagets data i appen. Detta garanterar att användaren som använder appen är samma användare som ursprungligen loggade in med sitt registrerade arbets- eller skolkonto. När slutanvändarna konfigurerar sina PIN-koder använder Intune App SDK Azure Active Directory för att kontrollera autentiseringsuppgifterna för slutanvändare mot det registrerade Intune-kontot.
 
-### <a name="require-users-to-sign-in-with-work-or-school-account-for-app-access"></a>Kräv att användare loggar in med arbets-eller skolkonto för åtkomst till appen
+### <a name="require-users-to-sign-in-with-a-work-or-school-account-for-app-access"></a>Kräv att användare loggar in med ett arbets-eller skolkonto för åtkomst till appen
 IT-administratörer kan kräva att användarna loggar in med sina arbets- eller skolkonto för att använda appen. Intune App SDK använder Azure Active Directory för att tillhandahålla enkel inloggning, där de autentiseringsuppgifter som anges återanvänds vid efterföljande inloggningar. Vi stöder även autentisering av identitetshanteringslösningar som är federerade med Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Kontrollera enhetens hälsotillstånd och efterlevnad
 IT-administratörer kan kontrollera enhetens hälsotillstånd och huruvida enheten följer Intunes principer innan slutanvändarna kan komma åt appar. På iOS kontrollerar den här principen om enheten har blivit jailbrokad. På Android kontrollerar den här principen om enheten har blivit rotad.
 
-### <a name="multi-identity-support"></a>Stöd för flera identiteter
+### <a name="support-multi-identity"></a>Stödja flera identiteter
 Stöd för flera identiteter är en SDK-funktion som gör att principhanterade konton (företag) och icke-hanterade konton (personliga) kan finnas i samma app.
 
 Många användare konfigurerar till exempel både företagsspecifika och personliga e-postkonton i Office-mobilappar för iOS och Android. När en användare kommer åt data med sitt företagskonto måste IT-administratören vara säker på att appskyddsprincipen tillämpas. När en användare kommer åt ett personligt e-postkonto ska dessa data dock vara utanför IT-administratörens kontroll. Intune App SDK uppnår detta genom att rikta appskyddsprincipen **endast** mot företagsidentiteten i appen.
@@ -80,4 +81,4 @@ Mer information om Citrix MDX finns i [Om MDX Toolkit](https://docs.citrix.com/e
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Läs mer om [appskyddsprinciper](app-protection-policy.md).
+- [Kom igång med Microsoft Intune App SDK](app-sdk-get-started.md).

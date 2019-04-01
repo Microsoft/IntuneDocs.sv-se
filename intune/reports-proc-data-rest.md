@@ -7,9 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/10/2019
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c43b27a07aa5eafc19ce1528bbfe34c1a6dbb1d
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 0e57d197cadf2ba6586aa39fdc5dbb9cddba554c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839489"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566581"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -99,7 +100,7 @@ Du behöver även slutpunkten. Du behöver URL för det anpassade flödet för a
 3. Välj **Konfigurera Intune Data Warehouse** under **Andra uppgifter**.
 4. Kopiera URL för det anpassade flödet under **Använd rapporteringstjänster från tredje part**. Det bör se ut ungefär så här: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 
-Slutpunkten följer följande format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`.
+Slutpunkten följer följande format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
 Entiteten **datum** ser till exempel ut som: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 
@@ -164,7 +165,7 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 
     ![Progam.cs och Solution Explorer i Visual Studio](./media/reports-get_rest_data_in.png)
 
-8. Ersätt koden i Program.cs med följande kod:  
+8. Ersätt koden i *Program.cs* med följande kod:  
    ```csharp
    namespace IntuneDataWarehouseSamples
    {

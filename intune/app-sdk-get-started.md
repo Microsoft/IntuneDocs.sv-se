@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
-ms.topic: article
+ms.date: 02/24/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
@@ -16,31 +17,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac9c8ca0b04cbb6f7cf570134a6f4bdce7bf57ed
-ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
-ms.translationtype: HT
+ms.openlocfilehash: 23c254094281c7591730b2972ec0de41f5243e66
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56325460"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566394"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
-Den här guiden hjälper dig att snabbt aktivera din mobilapp för appskyddsprinciper med Microsoft Intune. Det kan vara bra att först förstå fördelarna med Intune App SDK:n som räknas upp i [Intune App SDK-översikt](app-sdk.md).
+Den här guiden hjälper dig att snabbt aktivera din mobilapp för att stödja appskyddsprinciper med Microsoft Intune. Det kan vara bra att först förstå fördelarna med Intune App SDK:n som räknas upp i [Intune App SDK-översikt](app-sdk.md).
 
-Intune App SDK:n stöder liknande scenarier över iOS och Android och är avsedd att ge IT-administratörer en enhetlig upplevelse över båda plattformarna. På grund av plattformsbegränsningar förekommer dock smärre skillnader vad gäller stöd av vissa funktioner.
+Intune App SDK:n stöder liknande scenarier över iOS och Android och är avsedd att ge IT-administratörer en enhetlig upplevelse över båda plattformarna. På grund av plattformsskillnader och -begränsningar förekommer dock smärre skillnader vad gäller stöd av vissa funktioner.
 
 ## <a name="register-your-store-app-with-microsoft"></a>Registrera din Store-app med Microsoft
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Om din app är en intern app för din organisation som inte ska publiceras offentlig:
 
-Du *behöver inte* att registrera din app. För interna affärsappar distribuerar IT-administratören appen internt. Intune identifierar att appen har skapats med SDK:n och tillåter att IT-administratören tillämpar appskyddsprinciper på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-app för appskyddsprinciper](#enable-your-iOS-or-Android-app-for-app-protection-policy).
+Du _**behöver inte**_ registrera din app. För interna [line-of-business (LOB) appar](apps-add.md#app-types-in-microsoft-intune) som har skrivits av eller för ditt företags IT-administratören distribuerar appen internt. Intune identifierar att appen har skapats med SDK:n och tillåter att IT-administratören tillämpar appskyddsprinciper på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-app för appskyddsprinciper](#enable-your-iOS-or-Android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Om din app kommer att publiceras på en offentlig appbutik som Apple App Store eller Google Play:
 
-_**Måste**_ du först registrera din app med Microsoft Intune och samtycka med villkoren för registrering. Därefter kan IT-administratörer tillämpa appskyddsprinciper för den hanterade appen, som listas som en Intune-appartner.
+_**Måste**_ du först registrera din app med Microsoft Intune och samtycka med villkoren för registrering. Därefter kan IT-administratörer tillämpa en appskyddsprincip på den hanterade appen, som kommer att anges som en [Intune-skyddad partnerapp](apps-supported-intune-apps.md#partner-apps).
 
 Intune administratörer kommer inte att ha möjlighet att tillämpa appskyddsprincipen på din apps djuplänk förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft kommer även att lägga till din app till sin [Microsoft Intune-partnersida](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Där kommer appikonen att visas för att visa att den stöder Intunes appskyddsprinciper.
 
+### <a name="the-registration-process"></a>Registreringsprocessen
 För att börja registreringen, och om du inte redan arbetar med en Microsoft-kontakt, fyller du i [frågeformuläret för Microsoft Intune-appartner](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR80SNPjnVA1KsGiZ89UxSdVUMEpZNUFEUzdENENOVEdRMjM5UEpWWjJFVi4u).
 
 Vi använder e-postadresserna som står i frågeformulärets svar för att kontakta dig och fortsätta registreringsprocessen. Vi använder även din e-postadress från registreringen för att kontakta dig om vi har frågor.
@@ -80,11 +82,11 @@ Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda
 
 Du behöver en av följande utvecklarguider för att hjälpa dig att integrera Intune App SDK till din app:
 
-* **[iOS-utvecklarhandbok för Intune App SDK](app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
+* **[Utvecklarguide för Intune App SDK för iOS](app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
 
-* **[Android-utvecklarhandbok för Intune App SDK](app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
+* **[Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
 
-* **[Handbok för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
+* **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
 
 
 
@@ -94,7 +96,7 @@ Du behöver en av följande utvecklarguider för att hjälpa dig att integrera I
  
  * Appen har byggts med [Autentiseringsbibliotek för Azure ActiveDirectory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) och aktiverats för AAD broker-autentisering.
  
- * [Klient-ID för AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application) för din app måste vara unikt i iOS- och Android-plattformar.
+ * [Klient-ID för AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) för din app måste vara unikt i iOS- och Android-plattformar.
  
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurera telemetri för din app
 
@@ -158,13 +160,13 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
     * Om du är en ISV som aktiverar dina iOS eller Android store-appar för Intunes appskyddsprincip så får du en kampanjkod när du har slutfört registreringen med Microsoft Intune, enligt beskrivningen i registreringssteget. Kampanjkoden låter dig registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning.
 
-    * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
+    * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
     
-    * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Office-administrationsportalens webbplats efter att ha logga in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/en-ca/intune/licenses-assign).
+    * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/en-ca/intune/licenses-assign).
 
-* **Appskyddsprinciper i Intune**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
+* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md).
 
-* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna kommer att installera din app, kan du gå till [Felsökning av appinstallationsproblem](troubleshoot-app-install.md). 
+* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna installerar din app, kan du gå till [Felsöka appinstallationsproblem](troubleshoot-app-install.md). 
 
 ### <a name="give-your-app-access-to-the-intune-app-protection-service-optional"></a>Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)
 
