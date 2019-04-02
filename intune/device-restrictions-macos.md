@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fa6a68d1b5a8d2ccf87587ecab36c7807770d48
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0a59c40a5f1095e832f84c4b21d553e3c5f11ed7
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565357"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330427"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -46,7 +46,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   Den här funktionen gäller för:  
   - macOS 10.13 och senare
 
-- **Skjuta upp programuppdateringar (endast övervakat)**: när **inte konfigurerad** (standard), programuppdateringar visas på enheten som Apple släpper dem. Till exempel om en uppdatering av macOS hämtar släpps av Apple på ett specifikt datum, visas sedan uppdateringen naturligt på enheten runt lanseringsdatumet.
+- **Skjuta upp programuppdateringar**: när **inte konfigurerad** (standard), programuppdateringar visas på enheten som Apple släpper dem.. Till exempel om en uppdatering av macOS hämtar släpps av Apple på ett specifikt datum, visas sedan uppdateringen naturligt på enheten runt lanseringsdatumet. Startvärdesklassen build uppdateringar tillåts utan fördröjning.
 
   **Aktivera** gör att du kan fördröja när programuppdateringar visas på enheter, från 0 – 90 dagar. Den här inställningen styr inte när uppdateringar är eller inte är installerade. 
 
