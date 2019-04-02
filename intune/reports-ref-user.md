@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccd9a14c29db5039ce0173d0c09fd3d2851755f3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 4ab0674304f1e74c8bf2ad1aeecd419575484e5f
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566258"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358178"
 ---
 # <a name="reference-for-user-entity"></a>Referens för användarentitet
 
@@ -40,13 +40,10 @@ Entitetssamlingen **Användare** innehåller användardata. De här posterna inn
 | UserKey |Unikt id för användaren i informationslagret – surrogatnyckel. |123 |
 | UserId |Unikt id för användaren, liknar UserKey men är en naturlig nyckel. |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |Användarens e-postadress. |John@constoso.com |
-| UPN | Användarens huvudnamn. | John@constoso.com |
+| userPrincipalName | Användarens huvudnamn. | John@constoso.com |
 | DisplayName |Användarens visningsnamn. |John |
 | IntuneLicensed |Anger om användaren är Intune-licensierad eller inte. |Sant/falskt |
 | IsDeleted | Anger om alla användarens licenser har gått ut och om användaren därför har tagits bort från Intune. Den här flaggan ändras inte för en enskild post. Istället skapas en ny post för ett nytt användartillstånd. |Sant/falskt |
-| StartDateInclusiveUTC |Om IsDeleted = falskt, DateTime i UTC när användaren har tilldelats en licens och börjat vara med i Intune. Om IsDeleted = sant, DateTime i UTC när användarens licenser gick ut och den togs bort från Intune. |2016-11-23 12:00:00 |
-| EndDateExclusiveUTC |Om IsDeleted = falskt, DateTime i UTC när användarens licenser gick ut och den togs bort från Intune. Licensen gick ut någon gång under föregående dag. Om IsDeleted = sant, DateTime i UTC när användaren fick en ny licens och återskapades i Intune.  |2016-11-23 12:00:00 |
-| IsCurrent |Anger om den här posten representerar användarens senaste tillstånd. Flera poster kan finnas för en enskild användare, men endast en av dem representerar det aktuella tillståndet.  |Sant/falskt |
 | RowLastModifiedDateTimeUTC |Datum och tid i UTC när posten senast ändrades i informationslagret  |2016-11-23 12:00:00 |
 
 ## <a name="next-steps"></a>Nästa steg

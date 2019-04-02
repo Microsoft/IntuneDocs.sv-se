@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise innehåller Microsoft Intune. Se hur Intun
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 03/29/2018
 ms.topic: conceptual
 audience: ITPro
 ms.prod: microsoft-365-enterprise
@@ -16,16 +16,16 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e34c3de77dde59b87829617b8cbbd2614f7081
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: ea24101600c7a0e485440f50fc043c14bd840968
+ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57231255"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58646496"
 ---
 # <a name="what-is-device-management"></a>Vad är enhetshantering? 
 
-En viktig uppgift för alla administratörer är att skydda och säkra en organisations resurser och data. Den här uppgiften är enhetshantering. Användare har många enheter från vilka de öppnar och delar personliga filer, besöker webbplatser och installerar appar och spel. Dessa användare är också anställda och studenter och vill använda sina enheter för att få åtkomst till arbets- och skolrelaterade resurser, t.ex. e-post och OneNote. *Enhetshantering* innebär att organisationer kan skydda och säkra sina resurser och data. 
+En viktig uppgift för alla administratörer är att skydda och säkra en organisations resurser och data. Den här uppgiften är *enhetshantering*. Användare har många enheter från vilka de öppnar och delar personliga filer, besöker webbplatser och installerar appar och spel. Dessa användare är också anställda och studenter och vill använda sina enheter för att få åtkomst till arbets- och skolrelaterade resurser, t.ex. e-post och OneNote. Enhetshantering innebär att organisationer kan skydda och säkra sina resurser och data. 
 
 Med hjälp av en enhetshanteringslprovider kan organisationen se till att endast behöriga personer och enheter får åtkomst till skyddad information. På samma sätt kan enhetsanvändare enkelt få åtkomst till arbetsdata från sina telefoner eftersom de vet att deras enheter uppfyller organisationens säkerhetskrav. Å organisationens vägnar kan du ställa frågan **Vad ska vi använda för att skydda våra resurser?**
 

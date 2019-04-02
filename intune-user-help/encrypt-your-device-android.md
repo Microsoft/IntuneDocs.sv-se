@@ -1,11 +1,11 @@
 ---
-title: Skydda en Android-enhet med kryptering | Microsoft Docs
-description: Skydda din Android-enhet
+title: Kryptera Android-enhet för Intune-företagsportal | Microsoft Docs
+description: Steg för att aktivera enhetskryptering på en Android-enhet
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 03/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,31 +18,47 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 115025d60038daea6f43c97cbdc03a20d5b0bf59
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c9f1e7bbbad243e37f34cb298466adf886be9273
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838180"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490595"
 ---
-# <a name="how-to-protect-your-android-device-using-encryption"></a>Skydda en Android-enhet med kryptering
+# <a name="encrypting-your-android-device"></a>Kryptera din Android-enhet
 
-När du krypterar en enhet omsluter du informationen på den i ett lager med skyddande kod som förhindrar att obehöriga personer får åtkomst till den. Organisationen kräver att du krypterar din Android-enhet för att skydda innan du kommer åt företagsfiler, -e-post eller -data som ett steg mot att se till att informationen är skyddad.
+Enhetskryptering skyddar filer och mappar från obehörig åtkomst om enheten tappas bort eller blir stulen. När du har aktiverat kryptering för enheten kan kommer endast personer med rätt lösenord eller PIN-kod att kunna logga in på din enhet. 
+
+Innan du kan komma åt resurser skolan eller arbetet, kräver din organisation att du krypterar Android-enheten. Vissa nyare Android-enheter krypteras som standard out-of the box.  
+
+## <a name="turn-on-encryption"></a>Aktivera kryptering
+
+Utför följande steg om du får ett meddelande i Företagsportalen som du behöver för att kryptera din enhet. 
 
 > [!Note]
-> Vissa Android-enheter, inklusive vissa av Huawei och de som gjorts av Vivo och OPPO, kan inte krypteras. Läs mer [här](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
+> Vissa Android-enheter från Huawei, Vivo och OPPO kan inte krypteras. Läs mer [här](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-Om du avregistrerar telefonen förblir den krypterad.
+1.  Ange en skärmlås för enheten.  
+    a. Gå till **Inställningar** > **Låsskärm och säkerhet** > **Skärmlåstyp**.  
+    b. Välj antingen **PIN-kod**, **lösenord**, eller **mönstret**.  
+    c. Följ instruktionerna på skärmen för att konfigurera ditt skärmlås.  
 
-1.  Kontrollera att en PIN-kod eller ett lösenord för skärmlås har angetts för enheten.
+2. Gå tillbaka till **Låsskärm och säkerhet** och välj **säker Start**.
+3. Välj **Kräv PIN-kod när du aktiverar enheten** > **OK**.
+4. Ange din PIN-kod för att bekräfta och kryptera din enhet.
+5. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera enhetsinställningar**.  
 
-2.  Under **Inställningar** väljer du **Säkerhet** > **Kryptera enhet**.
-    (På vissa telefoner måste du välja **Lagring**  >  **Lagringskryptering** eller **Lagring**  > **Låsskärm och säkerhet** > **Andra säkerhetsinställningar** för att hitta krypteringsalternativet).
+Enheter som kör Android 4.4 och tidigare kanske inte har den **säker Start** alternativet. I så fall utför följande steg för att kryptera din enhet.
 
-3.  Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
+1. Gå till **inställningar** > **Security** > **kryptera enheten**. På skärmen etiketter varierar mellan Android-enheter. Om du inte ser den **kryptera enheten** alternativet, checka in:
+    * **Storage** > **lagringskryptering**
+    * **Storage** > **Låsskärm och säkerhet** > **andra säkerhetsinställningar** 
 
-### <a name="what-to-do-if-you-have-issues"></a>Vad du gör om du har problem
-**Problem**: Du har redan krypterat enheten och du ser något av följande:
+2. Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
+3. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera enhetsinställningar**.  
+
+## <a name="troubleshoot"></a>Felsöka  
+**Problemet**: du har redan krypterat enheten och
 
 - Krypteringsknappen är inaktiverad.
 - Du ser ett meddelande om att du fortfarande behöver kryptera enheten.
@@ -50,20 +66,7 @@ Om du avregistrerar telefonen förblir den krypterad.
 
 **Saker du kan prova**
 
-- Kontrollera att enheten är laddad och inkopplad.
-- Kontrollera att du har ställt in en PIN-kod eller ett lösenord på enheten.
-- Om du redan har ställt in en PIN-kod eller ett lösenord på enheten kan du prova följande steg, som företagets support kan kräva för att göra enheten säkrare. Menynamnen i de här stegen kan skilja sig något från de som visas på din enhet, beroende på vilken typ av Android-enhet du har.
+- Kontrollera att enheten är laddad och inkopplad.  
+- Kontrollera att du har ställt in en PIN-kod eller ett lösenord på enheten.  
 
-    1. Gå till **Inställningar** > **Låsskärm och säkerhet** > **Skärmlås**. Bekräfta din aktuella PIN-kod eller ditt lösenord.
-
-    2. På skärmen **Välj skärmlås** väljer du vilken typ av skärmlås du vill använda. 
-
-    3. När du har valt skärmlås går du tillbaka till skärmen **Låsskärm och säkerhet** och väljer **Säker start**. 
-    
-    4. På skärmen **Säker start** trycker du på **Kräv PIN-kod för att starta enheten** och sedan på **Fortsätt**.
-
-    5. Välj en PIN-kod (du kan ange samma som du angav tidigare) och tryck på **Bekräfta din PIN-kod**.
-
-    6. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera efterlevnad**.
-
-Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.  

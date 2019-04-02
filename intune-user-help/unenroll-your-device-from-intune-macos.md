@@ -1,11 +1,11 @@
 ---
-title: Avregistrera en macOS-enhet från Intune | Microsoft Docs
-description: Beskriver hur du avregistrerar en macOS-enhet från Intune
+title: Avregistrera din macOS-enhet från Intune-företagsportal | Microsoft Docs
+description: Beskriver hur du avregistrerar en macOS-enhet från Intune-företagsportal
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/12/2018
+ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,24 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3518707aa90c3866fbf8b24936db6d781712bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19cb76df318abe84670c1a7d703e85e3b7e7539a
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55839999"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330406"
 ---
-# <a name="unenroll-your-macos-device-from-intune"></a>Avregistrera en macOS-enhet från Intune
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Avregistrera din macOS-enhet från Företagsportalen
 
-När du avregistrerar macOS-enheten från Intune har enheten inte längre åtkomst till företagets resurser.
+När du avregistrerar din macOS-enhet från Intune kan enheten inte längre komma åt företagets resurser.
 
 Så här avregistrerar du en macOS-enhet från hanteringen:
 
-1.  Välj den enhet som du vill avregistrera under **Mina enheter** i företagsportalappen.
+1.  Logga in på företagsportalen för macOS.
+2.  Gå till **Enheter** och välj den enhet du vill avregistrera.
 
-2.  Klicka på **Ta bort** > **Ta bort**.
+3.  Välj ellipserna menyikonen > **ta bort**.
+4.  Ett bekräftelsemeddelande visas. Välj **ta bort** att avregistrera enheten. 
 
 När du avregistrerar en enhet från Intune händer följande:
 

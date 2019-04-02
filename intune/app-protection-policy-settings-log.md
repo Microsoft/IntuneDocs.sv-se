@@ -6,24 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2018
+ms.date: 03/19/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
-ms.reviewer: andcerat
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff80a5911c4bb027cbe2f9289a415ed9797277a6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 6c42003f53e5d4ff7afa8afe9c242ef2470b5ee3
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460503"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394801"
 ---
 # <a name="review-client-app-protection-logs"></a>Granska loggarna för klientappskydd
 
@@ -43,6 +43,7 @@ Följande tabell visar namn och en förklaring av de inställningar som har regi
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x minuter                                                                                                                                                                                                                                                                                                   | [Åtkomst] Kontrollera åtkomstbehörigheter – offline-respitperiod<br>Obs! Det här är tidsperioden innan åtkomstkraven för appen kontrolleras på nytt om enheten är offline.             |
 | AccessRecheckOnlineTimeout  | _x_ minuter                                                                                                                                                                                                                                                                                                   | [Åtkomst] Kontrollera åtkomstbehörigheterna igen – timeout.<br>Obs! Det här är tidsperioden innan åtkomstkraven för appen kontrolleras på nytt efter att appen startas om när enheten är online. |
+| AllowedOutboundClipboardSharingExceptionLength               | x tecken                                                                                                                                                                                                                                                                                           | [Åtkomst] Ange antalet tecken som kan klipps ut eller kopieras från en hanterad app.  Den här inställningen åsidosätter den `AllowedOutboundClipboardSharingLevel` begränsning. Standardvärdet '0' innebär att inget undantag tillåts. 
 | AppPinDisabled              | 0 = Nej<br>1 = Ja                                                                                                                                                                                                                                                                                           | [Åtkomst] Inaktivera PIN-kod för appen när enhetens PIN-kod hanteras.                                                                                                                                     |
 | AppSharingFromLevel         | 0 = Inga appar<br>1 = Hanterade appar<br>2 = Alla appar.                                                                                                                                                                                                                                                              | [Dataflytt] Tillåt att appen tar emot data från andra appar.                                                                                                                        |
 | AppSharingToLevel           | 0 = Inga appar<br>1 = Hanterade appar<br>2 = Alla appar.                                                                                                                                                                                                                                                              | [Dataflytt] Tillåt att appen överför data till andra appar.                                                                                                                         |

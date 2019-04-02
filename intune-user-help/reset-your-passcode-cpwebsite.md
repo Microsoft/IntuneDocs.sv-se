@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e973e18a79c18af6b201194fc1a6534da5fa38a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
+ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838044"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58163436"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Så återställer du enhetens lösenord från företagsportalens webbplats
 
@@ -32,7 +32,7 @@ Om du har tappat bort PIN-koden eller lösenordet kan du återställa det på [f
 Om du använder en företagsregistrerad enhet kan det hända att du inte ser alternativet för att återställa enhetens lösenord. Kontakta företagets support som kan återställa lösenordet åt dig.
 
    > [!NOTE]
-   > Du kan inte återställa lösenord för enheter med Android 7.0 och senare. Om du glömmer ett lösenord måste du återställa enheten till fabriksinställningarna. 
+   > Du kan inte återställa lösenord för enheter som kör Android 7.0 eller senare. Om du glömmer ditt lösenord måste du återställa enheten till fabriksinställningarna. 
 
 ## <a name="reset-your-passcode"></a>Återställa lösenordet
 
