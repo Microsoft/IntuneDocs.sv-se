@@ -1,11 +1,11 @@
 ---
 title: Enhetsbegränsningsinställningar för Windows 10 i Microsoft Intune – Azure | Microsoft Docs
-description: Se en lista med alla inställningar och deras beskrivningar för att skapa enhetsbegränsningar i enheter med Windows 10 och senare. Använd dessa inställningar i en konfigurationsprofil för att styra skärmdumpar, lösenordskrav, inställningar för helskärmsläge, appar i butiken, Edge-webbläsaren, Windows Defender, åtkomst till molnet, startmenyn etc. i Microsoft Intune.
+description: Se en lista med alla inställningar och deras beskrivningar för att skapa enhetsbegränsningar i enheter med Windows 10 och senare. Använd dessa inställningar i en konfigurationsprofil för att styra skärmbilder, lösenordskrav, inställningar för helskärmsläge, appar i butiken, Microsoft Edge-webbläsaren, Windows Defender, åtkomst till molnet, startmenyn och mer i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8190365ad2b50dfa7369b8899e8984b6a52f1cba
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 7ca34826f3a235fe620b5ac0dcb95d57dabf4c71
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566761"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58395008"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -29,7 +29,7 @@ Den här artikeln beskriver alla olika inställningar som du kan styra på enhet
 Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som sedan tilldelas eller distribueras till dina Windows 10-enheter.
 
 > [!Note]
-> Det är inte alla alternativ som är tillgängliga i alla utgåvor av Windows
+> Alla alternativ finns inte tillgängliga i alla utgåvor av Windows. Om du vill se versionerna som stöds, referera till den [princip CSP: er](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (öppnas ett annat Microsoft-webbplats).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -59,13 +59,13 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Bluetooth-identifiering**: Tillåter att enheten kan upptäckas av andra Bluetooth-aktiverade enheter.
 - **Bluetooth-förhandsparkoppling**: Med den här inställningen kan du konfigurera vissa Bluetooth-enheter till att automatiskt parkopplas med en värdenhet.
 - **Bluetooth-annonsering**: Låter enheten ta emot annonser via Bluetooth.
-- **Connected Devices Service**: Låter dig välja om du vill tillåta tjänsten Connected Devices Service. Tjänsten aktiverar identifiering av och anslutning till andra Bluetooth-enheter.
+- **Anslutna enheter-tjänster**: Låter dig välja om du vill tillåta tjänsten anslutna enheter. Tjänsten aktiverar identifiering av och anslutning till andra Bluetooth-enheter.
 - **NFC**: Gör att användaren kan aktivera och konfigurera närfältskommunikation (NFC) på enheten.
 - **Trådlöst nätverk**: Låter användaren aktivera och konfigurera trådlösa funktioner på enheten (endast Windows 10 Mobile).
 - **Anslut automatiskt till trådlösa surfpunkter**: Tillåter att enheten ansluter automatiskt till kostnadsfria trådlösa surfpunkter och att den godkänner eventuella villkor för anslutningen automatiskt.
 - **Manuell trådlös konfiguration**: Styr om användarna kan konfigurera egna trådlösa anslutningar, eller om de endast kan använda anslutningar som konfigurerats med en trådlös profil (endast Windows 10 Mobile).
 - **Sökintervall för trådlöst nätverk**: Ange hur ofta enheterna ska söka efter trådlösa nätverk. Ange ett värde mellan 1 (mest frekvent) till 500 (minst frekvent).
-- **Bluetooth-tillåtna tjänster**: Ange, i form av hexadecimala strängar, en lista över tillåtna Bluetooth-tjänster och Bluetooth-profiler.
+- **Bluetooth-tillåtna tjänster**: Ange en lista över tillåtna Bluetooth-tjänster och -profiler som hexadecimala strängar.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
@@ -116,7 +116,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Skärmdump (endast mobil)**: Låter användaren hämta enhetens skärm som en bild.
 - **Kopiera och klistra in (endast mobil)**: Tillåter att man kan kopiera och klistra in mellan appar på enheten.
 - **Manuell avregistrering**: Låter användaren ta bort sitt arbetsplatskonto från enheten manuellt.
-  - Den här inställningen används inte om datorn är ansluten till Azure AD och automatisk registrering har aktiverats. 
+  - Den här principinställningen gäller inte om datorn är Azure AD-ansluten och automatisk registrering har aktiverats. 
   - Den här principinställningen gäller inte för datorer som kör Windows 10 Home.
 - **Manuell installation av rotcertifikat (endast mobil)**: Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
 
@@ -138,13 +138,12 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Dialogruta om SIM-kortsfel (endast mobil)**: Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
 - **Ink-arbetsytan**: Blockerar användare från att komma åt Ink-arbetsytan. **Inte konfigurerat** aktiverar Ink-arbetsytan och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution**: Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
-- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)**: Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10. När den här funktionen är i förhandsversion krävs Windows Insider-version 1809 eller senare för att använda den här inställningen.
+- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)**: Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10. När den här funktionen är i förhandsversion, Windows Insider-version 1809 eller senare krävs för att använda den här inställningen.
 - **Direct Memory Access**: **Blockera** förhindrar direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med enhetsbyte vid drift tills en användare loggar in i Windows. **Aktiverad** (standard) ger åtkomst till DMA, även när en användare inte har loggat in.
 
   CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
 - **Avsluta processer i Aktivitetshanteraren**: den här inställningen avgör om icke-administratörer kan använda Aktivitetshanteraren för att avsluta aktiviteter. **Blockera** förhindrar standardanvändare (icke-administratörer) att använda Aktivitetshanteraren till att avsluta en process eller uppgift på enheten. **Inte konfigurerad** (standard) låter standardanvändare att avsluta en process eller uppgift med Aktivitetshanteraren.
-
 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
@@ -157,7 +156,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="messaging"></a>Meddelandefunktion
 
-- **Meddelandesynkronisering (endast mobil)**: Inaktivera meddelandefunktioner överallt samt säkerhetskopiering och återställning av textmeddelanden.
+- **Meddelandesynkronisering (endast mobil)** – Inaktivera meddelandefunktioner överallt och säkerhetskopiering och återställning av textmeddelanden.
 - **MMS (endast mobil)**: Inaktivera funktionen för att skicka och ta emot MMS på enheten.
 - **RCS (endast mobil)**: Inaktivera funktionen för att skicka och ta emot Rich Communication Services på enheten.
 
@@ -168,25 +167,25 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 De tillgängliga inställningarna ändras beroende på vad du väljer. Alternativen är:
 
 - **Inte** (standard): Microsoft Edge inte körs i helskärmsläge. Alla Microsoft Edge-inställningar är tillgängliga för dig att ändra och konfigurera.
-- **Digital/interaktiv signering (kiosk för enskilda appar)**: filter Edge-inställningar som gäller för Digital/interaktiv signering Edge helskärmsläge för användning endast på Windows 10 single-appar. Välj den här inställningen för att öppna URL: en helskärm och endast visa innehållet på webbplatsen. [Ställ in digitala loggar](https://docs.microsoft.com/windows/configuration/setup-digital-signage) finns mer information om den här funktionen.
-- **InPrivate-offentliga surfning (kiosk för enskilda appar)**: filter Edge-inställningar som gäller för InPrivate offentliga surfning Edge helskärmsläge för användning på Windows 10 single-appar. Kör en flera fliken version av Microsoft Edge.
-- **Normalt läge (helskärmsläge)**: filter Edge-inställningar som gäller för Normal Edge helskärmsläge. Kör en fullständig version av Microsoft Edge med alla webbläsarens funktioner.
-- **Offentliga surfning (helskärmsläge)**: filter Edge-inställningar som gäller för offentliga surfning på en Windows 10-helskärmsläge.  Kör en flera fliken version av Microsoft Edge InPrivate.
+- **Digital/interaktiv signering (kiosk för enskilda appar)**: filter Microsoft Edge-inställningar som gäller för Digital/interaktiv signering Microsoft Edge helskärmsläge för användning endast på Windows 10 single-appar. Välj den här inställningen för att öppna URL: en helskärm och endast visa innehållet på webbplatsen. [Ställ in digitala loggar](https://docs.microsoft.com/windows/configuration/setup-digital-signage) finns mer information om den här funktionen.
+- **InPrivate-offentliga surfning (kiosk för enskilda appar)**: filter Microsoft Edge-inställningar som gäller för InPrivate offentliga surfning Microsoft Edge helskärmsläge för användning på Windows 10 single-appar. Kör en flera fliken version av Microsoft Edge.
+- **Normalt läge (helskärmsläge)**: filter Microsoft Edge-inställningar som gäller för helskärmsläge för Normal Microsoft Edge. Kör en fullständig version av Microsoft Edge med alla webbläsarens funktioner.
+- **Offentliga surfning (helskärmsläge)**: filter Microsoft Edge-inställningar som gäller för offentliga surfning på en Windows 10-helskärmsläge.  Kör en flera fliken version av Microsoft Edge InPrivate.
 
 > [!TIP]
 > Läs mer om vad dessa alternativ göra [konfigurationerna för Microsoft Edge helskärmsläge läge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
 Den här profilen för enhetsbegränsningar är direkt relaterad till kioskprofilen du skapar med den [Windows-inställningar för helskärmsläge](kiosk-settings-windows.md). Sammanfattningsvis:
 
-1. Skapa den [Windows-inställningar för helskärmsläge](kiosk-settings-windows.md) profil för att köra enheten i helskärmsläge. Välj Microsoft Edge som programmet och ställa in helskärmsläge Edge i profilen för helskärmsläge.
-2. Skapar en enhetsprofil begränsningar som beskrivs i den här artikeln och konfigurera specifika funktioner och inställningar i Microsoft Edge. Se till att välja samma Edge helskärmsläge läge typ som markerats i din kioskprofilen ([Windows-inställningar för helskärmsläge](kiosk-settings-windows.md)). 
+1. Skapa den [Windows-inställningar för helskärmsläge](kiosk-settings-windows.md) profil för att köra enheten i helskärmsläge. Välj Microsoft Edge som programmet och ställa in helskärmsläge för Microsoft Edge i profilen för helskärmsläge.
+2. Skapar en enhetsprofil begränsningar som beskrivs i den här artikeln och konfigurera specifika funktioner och inställningar i Microsoft Edge. Se till att välja av samma typ som väljs i din kioskprofilen läge för helskärmsläge av Microsoft Edge ([Windows-inställningar för helskärmsläge](kiosk-settings-windows.md)). 
 
     [Stöd för inställningar för helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) är en bra resurs.
 
 > [!IMPORTANT] 
 > Se till att tilldela den här Microsoft Edge-profilen till samma enheter som din kioskprofilen ([Windows-inställningar för helskärmsläge](kiosk-settings-windows.md)).
 
-CSP: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
+[ConfigureKioskMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
 ### <a name="start-experience"></a>Startupplevelse
 
@@ -204,7 +203,7 @@ CSP: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/m
   - **Webbadress till anpassad hemknapp**: Det alternativ som du valde för inställningen **Webbadress till hemknapp** öppnas
   - **Dölj hemknapp**: Döljer hemknappen
 - **Användaren kan ändra hemknapp**: **Tillåt** låter användarna ändra hemknappen. Användarens ändringar åsidosätter eventuella administratörsinställningar för hemknappen. **Inte konfigurerad** använder operativsystemets standardbeteende på enheten, vilket kan hindra användare från att ändra hur administratören har konfigurerat hemknappen.
-- **Visa sidan Välkomstprogram**: **Blockera** hindrar introduktionssidan från att visas första gången du kör Microsoft Edge. Med den här funktionen kan företag som t.ex. är anslutna till nollutsläppskonfigurationer blockera den här sidan. **Inte konfigurerad** visar introduktionssidan.
+- **Visa sidan Välkomstprogram**: **Blockera** hindrar introduktionssidan från att visas första gången du kör Microsoft Edge. Den här funktionen låter företag, exempelvis de som registrerat sig för nollutsläppskonfigurationer att blockera den här sidan. **Inte konfigurerad** visar introduktionssidan.
   - **Webbadress till välkomstprogram**: Ange webbadressen som ska visas första gången en användare kör Microsoft Edge (endast Windows 10 Mobile).
 - **Uppdatera webbläsaren efter hur lång tids inaktivitet**: Ange antalet inaktiva minuter tills webbläsaren uppdateras från 0 – 1440 minuter. Standardvärdet är `5` minuter. När värdet `0` (noll), som webbläsaren inte uppdatera efter inaktivitet.
 
@@ -300,7 +299,7 @@ CSP: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/m
 - **Lösenord**: Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
   - **Krav på lösenordstyp**: Anger om lösenordet måste vara enbart numeriskt, eller om det kan vara alfanumeriskt.
   - **Minsta längd på lösenord**: Gäller endast Windows 10 Mobile.
-  - **Antal felaktiga inloggningar innan enheten rensas**: För enheter som kör Windows 10: Om BitLocker är aktiverat på enheten försätts den i återställningsläget för BitLocker när gränsen för antal misslyckade inloggningar som du har angett har uppnåtts. Om BitLocker inte är aktiverat på enheten tillämpas inte den här inställningen. För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst antal gånger (som du har angett) rensas enheten.
+  - **Antal felaktiga inloggningar innan enheten rensas**: För enheter som kör Windows 10: Om BitLocker är aktiverat på enheten försätts den i återställningsläget för BitLocker när gränsen för antal misslyckade inloggningar som du har angett har uppnåtts. Om BitLocker inte är aktiverat på enheten tillämpas inte den här inställningen. Enheter som kör Windows 10 Mobile: När inloggningen misslyckats det antal gånger du anger så rensas enheten.
   - **Maximalt antal minuter av inaktivitet innan skärmen låses**: Anger hur lång tid en enhet måste vara i viloläge innan skärmen låses.
   - **Lösenordets giltighetstid (dagar)**: Anger efter hur lång tid enhetens lösenord måste ändras.
   - **Förhindra återanvändning av tidigare lösenord**: Anger hur många tidigare använda lösenord enheten kommer ihåg.
@@ -331,7 +330,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 - **Telefon**: Definiera om den här appen kan komma åt telefonen.
 - **Radio**: Vissa appar kan använda radiofunktioner (t.ex. Bluetooth) i din enhet till att skicka och ta emot data. De behöver därför kunna sätta igång eller stänga av de här radiofunktionerna. Definiera om den här appen kan styra dessa radiofunktioner.
 - **Uppgifter**: Definiera om den här appen kan komma åt dina uppgifter.
-- **Betrodda enheter**: Välj om den här appen kan använda betrodda enheter, t.ex. maskinvara som du redan har anslutit eller som medföljer enheten. Du kan t.ex. använda tv-apparater, projektorer osv. som betrodda enheter.
+- **Betrodda enheter**: Välj om den här appen kan använda betrodda enheter. Betrodda enheter är maskinvara som du redan har anslutit eller som medföljer enheten. Du kan t.ex. använda tv-apparater, projektorer osv. som betrodda enheter.
 - **Feedback och diagnostik**: Definiera om den här appen kan komma åt diagnostisk information.
 - **Synkronisering med enheter**: Välj om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med enheten.
 
@@ -371,7 +370,7 @@ Du kan konfigurera den information som alla appar på enheten kan komma åt. Du 
 - **Telefon**: Definiera om den här appen kan komma åt telefonen.
 - **Radio**: Vissa appar kan använda radiofunktioner (t.ex. Bluetooth) i din enhet till att skicka och ta emot data. De behöver därför kunna sätta igång eller stänga av de här radiofunktionerna. Definiera om den här appen kan styra dessa radiofunktioner.
 - **Uppgifter**: Definiera om den här appen kan komma åt dina uppgifter.
-- **Betrodda enheter**: Välj om den här appen kan använda betrodda enheter. Betrodda enheter är maskinvara som du redan har anslutit eller som medföljer den här datorn. Du kan t.ex. använda tv-apparater, projektorer osv. som betrodda enheter.
+- **Betrodda enheter**: Välj om den här appen kan använda betrodda enheter. Betrodda enheter är maskinvara som du redan har anslutit eller som medföljer enheten. Du kan t.ex. använda tv-apparater, projektorer osv. som betrodda enheter.
 - **Feedback och diagnostik**: Välj om den här appen ska komma åt diagnostisk information.
 - **Synkronisering med enheter** – Definiera om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med den här datorn, surfplattan eller telefonen.
 
@@ -393,7 +392,7 @@ Du kan konfigurera den information som alla appar på enheten kan komma åt. Du 
   - **Skicka endast data för intranät**: Låter administratören skicka historik för intranät
   - **Skicka endast data för Internet**: Låter administratören skicka historik för Internet
   - **Skicka data för intranät och Internet**: Låter administratören skicka historik för intranät och Internet
-- **Telemetriproxyserver**: Ange det fullständiga domännamnet (FQDN) eller IP-adressen för en proxyserver för att vidarebefordra anslutna användarupplevelser och telemetribegäranden som använder en SSL-anslutning (Secure Sockets Layer). Formatet för den här inställningen är *server*:*port*. Om den namngivna proxyn misslyckas, eller om det inte finns någon proxy angiven när principen aktiveras, överförs inte anslutna användarupplevelser och telemetridata, utan de finns kvar på den lokala enheten.
+- **Telemetriproxyserver**: Ange det fullständiga domännamnet (FQDN) eller IP-adressen för en proxyserver för att vidarebefordra anslutna användarupplevelser och telemetribegäranden som använder en SSL-anslutning (Secure Sockets Layer). Formatet för den här inställningen är *server*:*port*. Om den namngivna proxyn misslyckas, eller om det inte finns någon proxy angiven när den här principen aktiveras, överförs inte de anslutna användarupplevelserna och telemetridata, utan de finns kvar på den lokala enheten.
 
   Exempelformat:
 
@@ -469,22 +468,44 @@ Du kan konfigurera den information som alla appar på enheten kan komma åt. Du 
 - **Användaråtkomst till Defender**: Styr om Windows Defender-användargränssnittet är dolt för slutanvändarna. När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
 - **Intervall för signaturuppdatering (i timmar)**: Ange med vilket intervall Defender söker efter nya signaturfiler.
 - **Övervaka fil- och programaktivitet**: Tillåter att Defender övervakar fil- och programaktivitet på enheter.
-- **Dagar innan skadlig kod i karantän tas bort**: Tillåter att Defender fortsätter spåra åtgärdad skadlig kod det antal dagar som du anger, för att du ska kunna kontrollera tidigare berörda enheter manuellt. Om du ställer in antalet dagar till **0** finns skadlig kod kvar i karantänmappen och tas inte bort automatiskt.
-- **Gräns för processoranvändning under genomsökning**: Tillåter att du begränsar hur mycket processorkraft som genomsökningarna får använda (från **1** till **100**).
+- **Dagar innan du tar bort skadlig kod i karantän**: fortsätta spåra löst skadlig kod för hur många dagar som du anger så att du kan kontrollera tidigare berörda enheter manuellt. Om du anger antalet dagar till **0** finns skadlig kod kvar i karantänmappen och tas inte bort automatiskt.
+- **Gräns för processoranvändning under en genomsökning**: Låter dig begränsa hur mycket processorkraft som genomsökningarna får använda (från **1** till **100**).
 - **Sök igenom arkivfiler**: Tillåter att Defender söker igenom arkiverade filer, till exempel ZIP- eller CAB-filer.
 - **Sök igenom inkommande e-postmeddelanden**: Tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten.
 - **Sök igenom flyttbara enheter vid fullständig genomsökning**: Tillåter att Defender genomsöker flyttbara enheter, som t.ex. USB-minnen.
 - **Sök igenom mappade nätverksenheter vid fullständig genomsökning**: Tillåter att Defender genomsöker filer på mappade nätverksenheter.
   Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
 - **Sök igenom filer öppnade från nätverksmappar**: Tillåter att Defender genomsöker filer på delade nätverksenheter (till exempel filer som nås från en UNC-sökväg). Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
-- **Molnskydd**: Tillåter eller förhindrar att Microsoft Active Protection Service tar emot information om aktiviteter med skadlig kod från enheter som du hanterar. Den här informationen används för att förbättra tjänsten i framtiden.
+- **Molnskydd**: Tillåter eller förhindrar att Microsoft Active Protection Service tar emot information om aktiviteter med skadlig kod från enheter som du hanterar. Den här informationen förbättrar tjänsten i framtiden.
 - **Be användarna att skicka exempel**: Anger om potentiellt skadliga filer som kan kräva ytterligare analys ska skickas automatiskt till Microsoft.
-- **Tidpunkt för daglig snabbsökning**: Tillåter att du schemalägger en snabbgenomsökning som körs varje dag vid den tidpunkt som du väljer.
-- **Typ av systemgenomsökning som ska utföras**: Ange nivå för genomsökningen som ska utföras när du schemalägger en systemgenomsökning.
+- **Tidpunkt för daglig Snabbsökning**: Välj timme att köra en daglig Snabbsökning. **Inte konfigurerad** inte kör en daglig sökning. Om du vill anpassa mer, konfigurera den **typ av systemgenomsökning som ska utföra** inställningen.
+
+  [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
+- **Typ av systemgenomsökning som ska utföra**: Schemalägg en genomsökning av datorn, inklusive nivå för genomsökningen, och dag och tid för att köra genomsökningen. Alternativen är:
+  - **Inte konfigurerad**: inte Schemalägg en systemsökning på enheten. Slutanvändare kan manuellt köra genomsökningar som krävs eller önskade på sina enheter.
+  - **Inaktivera**: inaktiverar alla system genomsökning på enheten. Välj det här alternativet om du använder en partnerlösning ett virusskyddsprogram som söker igenom enheter.
+  - **Snabbsökning**: tittar på vanliga platser där det kan finnas skadlig kod är registrerade, till exempel registernycklar och kända startmappar i Windows.
+    - **Schemalagd dag**: Välj vilken dag vid sökningen.
+    - **Schemalagd tid**: Välj timme att köra genomsökningen.
+  - **Fullständig genomsökning**: tittar på vanliga platser där det kan finnas skadlig programvara registrerad och också söker igenom alla filer och mappar på enheten.
+    - **Schemalagd dag**: Välj vilken dag vid sökningen.
+    - **Schemalagd tid**: Välj timme att köra genomsökningen.
+
+  Den här inställningen orsaka en konflikt med den **tidpunkt för daglig Snabbsökning** inställningen. Några rekommendationer:
+
+  - Kör dagligen en snabbgenomsökning genom att konfigurera den **tidpunkt för daglig Snabbsökning** inställningen.
+  - Du kan köra en daglig Snabbsökning och en fullständig genomsökning varje vecka, konfigurera den **tidpunkt för daglig Snabbsökning**, och Ställ in **typ av systemgenomsökning som ska utföra** i en fullständig sökning med dag och tid.
+  - Konfigurera inte den **tidpunkt för daglig Snabbsökning** ange samtidigt med den **typ av systemgenomsökning som ska utföra** inställd **Snabbsökning**. De här inställningarna orsaka en konflikt och en sökning körs inte.
+  - Om du vill köra en snabbgenomsökning varje tisdag 06: 00, konfigurera den **typ av systemgenomsökning som ska utföra** inställningen.
+
+  [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
+  [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
+  [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
+
 - **Identifiera potentiellt oönskade program**: Välj nivå av skydd när Windows identifierar potentiellt oönskade appar från:
   - **Blockera**
   - **Granska** Mer information om potentiellt oönskade appar finns i [Identifiera och blockera potentiellt oönskade program](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
-- **Åtgärder vid hot om identifierad skadlig kod**: Använd det här alternativet för att välja vilka åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar (låg, måttlig, hög och allvarlig). Alternativen är:
+- **Åtgärder vid hot om identifierad skadlig kod**: Välj de åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Alternativen är:
   - **Rensa**
   - **Karantän**
   - **Ta bort**

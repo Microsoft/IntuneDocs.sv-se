@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cdf7ea715a13809c860e77412914e3fd2b45a28
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5f2a9f2512f4f6fb12a65d0e7c4982fd351f1770
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400491"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358325"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Intune-informationslagersamlingar
 
@@ -116,7 +116,7 @@ I följande tabell sammanfattas tilldelningsstatus för efterlevnadsprinciper f�
 
 |  complianceStatus  |                       Beskrivning                      |
 |:------------------:|:------------------------------------------------------:|
-|    Okänt         |    Okänd.                                                                        |
+|    Okänt         |    Okänt.                                                                        |
 |    Kompatibel       |    Kompatibel.                                                                      |
 |    Ej kompatibel    |       Enheten är icke-kompatibel och blockeras från företagsresurser.             |
 |    Konflikt        |    Konflikt med andra regler.                                                      |
@@ -231,7 +231,7 @@ Entiteten **enhet** innehåller en lista över alla registrerade enheter som han
 | DeviceEnrollmentType       | Nyckeln för den registreringstyp som är kopplad till den här enheten och som visar registreringsmetod.                                                                                             |
 | ComplianceStateKey         | Nyckel för den kompatibilitetsstatus som är kopplad till den här enheten.                                                                                                                             |
 | OSVersion                  | Enhetens operativsystemversion.                                                                                                                                                |
-| EasDeviceId                | Enhetens identifierare för Exchange ActiveSync.                                                                                                                                                  |
+| EasDeviceId                | Exchange ActiveSync-ID för enheten.                                                                                                                                                  |
 | Serienummer               | Serienummer                                                                                                                                                                           |
 | UserId                     | Unik identifierare för användaren som är kopplad till enheten.                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Datum och tid i UTC när den här enheten senast ändrades i informationslagret.                                                                                                       |
@@ -281,7 +281,7 @@ Entiteten **deviceType** representerar den enhetstyp som andra informationslager
 | 12           | ISocConsumer      | iSoc Consumer-enhet                                |
 | 13           | Unix              | UNIX-enhet                                         |
 | 14           | MacMDM            | Mac OS X-enhet som hanteras med den inbyggda MDM-agenten |
-| 15           | HoloLens          | Holo Lens-enhet                                    |
+| 15           | HoloLens          | HoloLens-enheter                                       |
 | 16           | SurfaceHub        | Surface Hub-enhet                                  |
 | 17           | AndroidForWork    | Android-enhet som hanteras med hjälp av Android-profilägare  |
 | 18           | AndroidEnterprise | Android-företagsenhet.                          |
@@ -368,7 +368,7 @@ Entiteten **EnrollmentFailureCategory** visar varför en enhetsregistrering miss
 | BadRequest                      | Klienten skickade en begäran som inte förstås/stöds av tjänsten.                                        |
 | FeatureNotSupported             | Funktioner som används av den här registreringen stöds inte för det här kontot.                                        |
 | EnrollmentRestrictionsEnforced  | Registreringsbegränsningar som konfigurerats av administratören blockerade den här registreringen.                                          |
-| ClientDisconnected              | Klienten uppnådde tidsgränsen eller så avbröts registreringen av slutanvändaren.                                                        |
+| ClientDisconnected              | Tidsgränsen gick ut för klienten eller så avbröts registreringen av slutanvändaren.                                                        |
 | UserAbandonment                 | Registreringen lämnades av slutanvändaren. (Slutanvändaren inledde registrering men slutförde den inte inom rimlig tid)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
@@ -448,7 +448,7 @@ Entiteten **managementAgentType** representerar de agenter som används för att
 | 5                     | EasIntuneClient                   | Enheten hanteras både av Exchange Active Sync och Intune PC-agenten |
 | 8                     | ConfigManagerClient               | Enheten hanteras av System Center Configuration Manager-agenten     |
 | 10                    | ConfigurationManagerClientMdm     | Enheten hanteras av Configuration Manager och MDM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | Enheten hanteras av Configuration Manager, MDM och EAS.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | Enheten hanteras av Configuration Manager MDM- och Exchange Active Sync.               |
 | 16                    | Okänt                           | Okänd typ av hanteringsagent                                              |
 | 32                    | Jamf                              | Enhetens egenskaper hämtas från Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  Enheten hanteras av Googles CloudDPC.                                 |
@@ -617,7 +617,7 @@ Entitetssamlingen **user** innehåller användardata. De här posterna innehåll
 | UserKey                    | Unik identifierare för användaren i informationslagret – surrogatnyckel.                                                                                                                                                         | 123                                  |
 | UserId                     | Unik identifierare för användaren, liknar UserKey men är en naturlig nyckel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Användarens e-postadress.                                                                                                                                                                                                     | John@constoso.com                    |
-| UPN                        | Användarens huvudnamn.                                                                                                                                                                                               | John@constoso.com                    |
+| userPrincipalName                        | Användarens huvudnamn.                                                                                                                                                                                               | John@constoso.com                    |
 | DisplayName                | Användarens visningsnamn.                                                                                                                                                                                                      | John                                 |
 | IntuneLicensed             | Anger om användaren är Intune-licensierad eller inte.                                                                                                                                                                              | Sant/falskt                           |
 | IsDeleted                  | Anger om alla användarens licenser har gått ut och om användaren därför har tagits bort från Intune. Den här flaggan ändras inte för en enskild post. I stället skapas en ny post för ett nytt användartillstånd. | Sant/falskt                           |

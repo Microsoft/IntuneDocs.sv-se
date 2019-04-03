@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/21/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,18 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d7d69c602471e8508744f2a00008294cbd335204
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565646"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358266"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Håll dig uppdaterad om uppdateringar för Intune-informationslagret.
+
+## <a name="1903"></a>1903
+_Utgiven mars 2019_
+
+### <a name="v10-changes-reflecting-back-to-beta"></a>V1.0 ändringar återger tillbaka till beta
+När V1.0 introducerades i 1808, den skilde sig åt i några betydande sätt från beta API. 1903 återspeglas ändringarna tillbaka till beta API-versionen. Om du har viktiga rapporter som använder API betaversionen, rekommenderar vi starkt växlar dessa rapporter till V1.0 att undvika större ändringar. Se [API-versionsinformation](reports-api-url.md) för mer information om informationslager-API-versioner och bakåtkompatibilitet kompatibilitet. 
 
 ## <a name="1902"></a>1902 
 _Publicerat i februari 2019_
@@ -42,7 +48,7 @@ Få åtkomst till ditt Intune-informationslager i Power BI Online med hjälp av 
 > Det finns två ytterligare filter som du kan använda för appen Intune-efterlevnad.
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Lägga till ytterligare filter i appen för Intunes Efterlevnadsprinciper
-1. Öppna den [Intunes Efterlevnadsprinciper (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) appen i ditt webb-browers.
+1. Öppna den [Intunes Efterlevnadsprinciper (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) app i din webbläsare.
 2. Klicka på **icke-kompatibla enheter** och välj **icke-kompatibla** i den **complianceStatus** filter. 
 3. Klicka på **okända enheter** och välj **finns ännu inte** i den **complianceStatus** filter. 
 
@@ -93,7 +99,7 @@ Du kan använda <code>$select</code> som en OData-frågeparameter. Den aktuella 
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nya entiteter i datamodellen för informationslager <!-- 2077804 -->
 
- - Entiteten [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus) har lagts till. **MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
+ - Entiteten [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md) har lagts till. **MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
  - Entiteten [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstate) har lagts till. Entiteten **MobileAppInstallState** visar installationsstatus för ett mobilt program när det har tilldelats till en grupp som innehåller enheter och/eller användare. 
 
 ## <a name="1710"></a>1710

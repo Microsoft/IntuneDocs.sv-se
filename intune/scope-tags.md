@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bca2d52bb47a149c6a36bc1b8cbc4d65e50c0f4c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: fb57ea2ef5c99c58968ee25b3a75b2165ece787a
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756810"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658557"
 ---
-# <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Använd RBAC och omfång taggar för distribuerade IT
+# <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerade IT
 
-Du kan använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för att se till att rätt administratörer har rätt åtkomst och synlighet till rätt Intune-objekt. Roller avgör vilken åtkomst administratörer har vilka objekt. Omfångstaggar avgör vilka objekt som administratörer kan se.
+Rollbaserad åtkomst kontroll och omfång taggar kan användas för att se till att rätt administratörer har rätt åtkomst och synlighet till rätt Intune-objekt. Roller avgör vilken åtkomst administratörer har vilka objekt. Omfångstaggar avgör vilka objekt som administratörer kan se.
 
 Anta exempelvis att en Seattle lokalkontor administratör tilldelas rollen princip- och profilhanterare. Du vill att den här administratören att se och hantera profiler och principer som gäller endast för Seattle-enheter. Om du vill göra detta måste utföra du följande:
 
@@ -83,6 +83,21 @@ Anta exempelvis att en Seattle lokalkontor administratör tilldelas rollen princ
 3. Under **väljer taggar**, Välj de taggar som du vill lägga till profilen.
 4. Välj **Välj** > **OK** > **spara**.
 
+## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Tilldela en omfångstagg till en appkonfigurationsprincip
+För enheter med **enhetsregistreringstyp** inställd **hanterade enheter**:
+1. Välj **klientappar** > **appkonfigurationsprinciper** > Välj en appkonfigurationsprincip.
+2. Välj **egenskaper** > **omfång (taggar)** > Välj de taggar som du vill tilldela till principen.
+
+För enheter med **enhetsregistreringstyp** inställd **hanterade appar**:
+1. Välj **klientappar** > **appkonfigurationsprinciper** > Välj en appkonfigurationsprincip.
+2. Välj **omfång (taggar)** > Välj de taggar som du vill tilldela till principen.
+
+
+## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Tilldela en omfångstagg till en iOS-app etableringsprofil
+1. I Intune väljer **klientappar** > **iOS-appetableringsprofiler** > Välj en profil.
+2. Välj **egenskaper** > **omfång (taggar)** > Välj de taggar som du vill tilldela till profilen.
+3. Välj **Välj** > **OK** > **spara**.
+
 ## <a name="scope-tag-details"></a>Omfång tagginformation
 När du arbetar med omfångstaggar kan du spara dessa uppgifter:
 
@@ -96,20 +111,13 @@ När du arbetar med omfångstaggar kan du spara dessa uppgifter:
     - Konfigurationsprinciper för appar – hanterade enheter
     - PowerShell-skript
     - DEP-token
+    - iOS-appetableringsprofil
 - När en administratör skapar ett objekt i Intune, kommer alla omfångstaggar som tilldelats den administratören tilldelas automatiskt till det nya objektet.
 - Intune RBAC gäller inte för Azure Active Directory-roller. Därför har rollerna Intune Service-administratörer och globala administratörer fullständig administratörsåtkomst till Intune oavsett vilken omfångstaggar som de har.
 - Administratörer i en rolltilldelning med omfångstaggar kan också se Intune-objekt med inga omfångstaggar.
 - Du kan endast tilldela en omfångstagg som du har i din rolltilldelningar.
 - Du kan endast målgrupper som listas i omfång (grupper) för din rolltilldelning.
 - Om du har en omfångstagg din roll kan du ta bort alla omfångstaggar på ett Intune-objekt. Minst en omfångstagg måste anges.
-- Om en användare har flera rolltilldelningar kan utöka behörigheter i de rolltilldelningar till olika objekt på följande sätt:
-    - Tilldela behörigheter gäller endast för objekt (till exempel principer eller appar) i den rollen tilldelning omfång (grupper). Tilldela behörigheter inte gäller för objekt i andra rolltilldelningar om andra tilldelningen uttryckligen beviljar dem.
-    - Andra behörigheter (till exempel skapa och läsa) gäller för alla objekt av samma typ (till exempel alla principer eller alla appar) i någon av användarens tilldelningar.
-    - Behörigheter för objekt av olika typer (till exempel principer eller appar) gäller inte för varandra. En läsbehörighet för en princip, ger till exempel inte en läsbehörighet till appar i användarens tilldelningar.
-
-
-
-
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4610f99d9190ddad01ab604195e086e407e7161a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 493a5be89e747c2de1eca3a63907b79228fcdfa2
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566326"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429762"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -108,7 +108,7 @@ Använd dessa inställningar för att konfigurera en kiosk-style-upplevelse på 
   >   - [Tillagt som en klientapp](apps-add-android-for-work.md) i Intune
   >   - [Tilldelad till den enhetsgrupp](apps-deploy.md) som skapats för dina dedikerade enheter
   > 
-  > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterade startskärmar** läggs till som klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i appen **Hanterad startskärm**. 
+  > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterad startskärm** läggs till som en klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i **Hanterad startskärm**-appen. 
 
   - Välj **Lägg till** och välj appar från listan.
 

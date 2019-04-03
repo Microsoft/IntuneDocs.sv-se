@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2019
+ms.date: 03/19/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ea3e2c87055e4f111c8f12c47c468dff2c4e587
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 524a4f39ba6a319f42ca23c7d85e84ffd86fce0d
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565697"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358224"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referens för MAM-entiteter (hantering av mobilappshantering)
 
@@ -43,9 +43,6 @@ Entiteten **MamApplication** innehåller en lista över verksamhetsspecifika app
 
 | Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
-| ApplicationKey |Unikt id för MAM-appen i informationslagret. |123 |
-| ApplicationName |Namn på MAM-appen. |”Word” |
-| ApplicationId |Program-id för MAM-appen. |b66bc706-ffff-7437-0340-032819502773 |
 | IsDeleted |Visar huruvida posten för MAM-appen har uppdaterats. <br>Sant: MAM-appen innehåller en ny post med uppdaterade fält i den här tabellen. <br>Falskt: den senaste posten för den här MAM-appen. |Sant/falskt |
 | StartDateInclusiveUTC |Datum och tid i UTC när MAM-appen skapades i informationslagret. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Datum och tid i UTC när IsDeleted ändrades till True. |2016-11-23 12:00:00 |
@@ -59,16 +56,13 @@ Entiteten **MamApplicationInstance** innehåller en lista över appar som hanter
 |          Egenskap          |                                                                                                  Beskrivning                                                                                                  |               Exempel                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   ApplicationInstanceKey   |                                                               Unikt id för MAM-appinstansen i informationslagret – surrogatnyckel.                                                                |                 123                  |
-|           UserId           |                                                                              Användar-id för den användare som har installerat den här MAM-appen.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|           UserId           |                                                                              Användar-ID för den användare som har den här MAM-appen installerad.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Unikt id för MAM-appinstansen, liknar ApplicationInstanceKey,men id:t är en naturlig nyckel.                                              | b66bc706-ffff-7437-0340-032819502773 |
-|       ApplicationId        |                                                                                        Program-id för MAM-appen                                                                                         |  com.microsoft.groupies-daily.<IOS>  |
 |     ApplicationVersion     |                                                                                     Programversion för MAM-appen.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Datum då MAM-appinstansposten skapades. Värdet kan vara null.                                                                 |        2016-11-23 12:00:00        |
 |          Plattform          |                                                                          Plattform för den enhet där MAM-appen är installerad.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Plattformsversion för enheten där MAM-appen är installerad.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            SDK-version där MAM-appen är paketerad.                                                                            |                 3.2                  |
-|          DeviceId          |                                                                          Enhets-id för enheten där MAM-appen är installerad.                                                                          | b66bc706-ffff-7437-0340-032819502773 |
-|         DeviceName         |                                                                         Enhetsnamn för enheten där MAM-appen är installerad.                                                                         |              ”MyDevice”              |
 |         IsDeleted          | Visar huruvida posten för MAM-appinstansen har uppdaterats. <br>Sant: MAM-appinstansen innehåller en ny post med uppdaterade fält i den här tabellen. <br>Falskt: den senaste posten för den här MAM-appinstansen. |              Sant/falskt              |
 |   StartDateInclusiveUtc    |                                                              Datum och tid i UTC när MAM-appinstansen skapades i informationslagret.                                                               |        2016-11-23 12:00:00        |
 |       DeletedDateUtc       |                                                                             Datum och tid i UTC när IsDeleted ändrades till True.                                                                              |        2016-11-23 12:00:00        |
@@ -86,7 +80,6 @@ Entiteten **MamCheckin** visar data som samlas in när en hanterad mobilappinsta
 | DateKey |Datumnyckel när incheckningen av MAM-appen registrerades i informationslagret. | 20160703 |
 | ApplicationInstanceKey |Nyckel för appinstansen som är kopplad till incheckningen av den mobilappshanterade appen. | 123 |
 | UserKey |Nyckel för användaren som är kopplad till incheckningen av MAM-appen. | 4323 |
-| ApplicationKey |Nyckeln för den incheckade MAM-appen. |234 |
 | DeviceHealthKey |Nyckel för DeviceHealth som är koppla till den här incheckningen av MAM-appen. | 321 |
 | PlatformKey |Visar plattformen för enheten som är kopplad till den här incheckningen av MAM-appen. |123 |
 | EffectiveAppliedPolicyKey |Visar gällande tillämpad princip som är kopplad till den här incheckade MAM-appen. En gällande tillämpad princip är en sammansättning av alla principer som är relevanta för en viss app och användare. | 322 |
