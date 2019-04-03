@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92d18615f6be7c1e0ce931d443d2ac986db991e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566717"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490734"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -43,7 +43,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
     Den här funktionen gäller för:  
     - iOS 9.3.2 och senare
 
-- **Skärmdump**: Välj **Blockera** för att förhindra skärmbilder eller skärmdumpar på enheten. **Inte konfigurerat** (standard) tillåter användaren att spara skärminnehållet som en bild.
+- **Skärmdump**: Välj **Blockera** för att förhindra skärmbilder eller skärmdumpar på enheten. I iOS 9.0 och senare omfattar detta även blockera skärminspelningar. **Inte konfigurerad** (standard) låter användaren spara skärminnehållet som en bild eller video.
   - **Fjärrskärmsvisning i appen Klassrum (endast övervakat)**: Välj **Blockera** om du vill förhindra appen Klassrum från att visa skärmarna på fjärranslutna enheter. **Inte konfigurerad** (standard) tillåter appen Apple Klassrum att visa skärmen.
 
     Den här funktionen gäller för:  
@@ -158,7 +158,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Köp i appar**: Välj **Blockera** om du vill förhindra att köp från butiken görs i appen. **Inte konfigurerad** tillåter köp i butiken från en app som körs.
 - **Stötande musik, podcaster eller nyhetsinnehåll i iTunes (endast övervakat)**: Välj **Blockera** om du vill stoppa explicit iTunes-musik, podcaster eller nyhetsinnehåll. **Inte konfigurerad** tillåter att enheten får åtkomst till sådant som är klassificerat som vuxet innehåll i butiken.
 - **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”**: Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** tillåter att användare laddar ned böcker i kategorin Erotik.
-- **Visa företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av icke-företagsdokument i ohanterade appar. **Inte konfigurerad** tillåter visning av företagsdokument i vilken app som helst. Exempelvis vill du kanske förhindra användare från att spara filer från OneDrive-appen till Dropbox. Konfigurera den här inställningen som **Blockera**. När enheten har hämtat principen (t.ex. efter en omstart) kommer det inte längre att vara tillåtet att spara.
+- **Visa företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av företagsdokument i ohanterade appar. **Inte konfigurerad** tillåter visning av företagsdokument i vilken app som helst. Exempelvis vill du kanske förhindra användare från att spara filer från OneDrive-appen till Dropbox. Konfigurera den här inställningen som **Blockera**. När enheten har hämtat principen (t.ex. efter en omstart) kommer det inte längre att vara tillåtet att spara.
   - **Tillåt att hanterade appar att skriva kontakter till ohanterade kontakter konton**: när **Tillåt**, användarna kan lägga till och synkronisera en person Outlook kontaktinformation, inklusive företag och företagets kontakter till den inbyggda appen kontakter på enheten. När det är inställt på **Inte konfigurerad** kan användarna inte lägga till Outlook-kontakter i den inbyggda appen Kontakter på enheten.
   
     Om du vill använda inställningen ställer du in **Visa företagsdokument i ohanterade appar** på **Blockera**.
@@ -255,7 +255,7 @@ Om du vill lägga till appar i listorna kan du:
   Den här funktionen gäller för:  
   - iOS 11.0 and later
 
-- **Internetdelning**: **Blockera** förhindrar att enheten används för Internetdelning. Den här inställningen kanske inte är kompatibel med vissa operatörer. **Inte konfigurerad** (standard) kan den här funktionen.
+- **Internetdelning**: **blockera** stängs av internetdelning på användarnas enheter med varje enhetssynkronisering. Den här inställningen kanske inte är kompatibel med vissa operatörer. **Inte konfigurerad** (standard) behåller internetdelning konfigurationen som standard anges av användaren.
 - **Anslut till trådlösa nätverk med endast konfigurationsprofiler (endast övervakat)**: **Kräv** tvingar enheten att endast använda trådlösa nätverk som har konfigurerats med Intunes konfigurationsprofiler. **Inte konfigurerad** (standard) tillåter enheten att använda andra trådlösa nätverk.
 - **Regler för mobilanvändning (endast hanterade appar)**: Definiera de datatyper som hanterade appar kan använda i mobilnät. Alternativen är:
   - **Blockera användning av mobildata**: Blockera användningen av mobildata för **Alla hanterade appar** eller **Välj särskilda appar**.
@@ -443,7 +443,7 @@ I följande lista visas appsamlings-ID:n för några vanliga inbyggda iOS-appar.
 > - Barnförbjudet innehåll
 > - Dokument och data i iCloud
 > - Spel för flera personer
-> - Lägg till spelcentervänner
+> - Lägg till Game Center-vänner
 > - Siri
 
 ## <a name="next-steps"></a>Nästa steg
