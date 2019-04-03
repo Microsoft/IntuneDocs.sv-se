@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – skapa en e-postenhetsprofil för iOS
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Lär dig att använda Microsoft Intune för att skapa en e-postenhetsprofil så att iOS-enheter kan anslutas säkert till företagets e-post.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0c96ffdabca3a29b2e0ac5d0a26d5e23b0dabda
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b252c9d3d719847c8c0911b6cbce06c83bb4bf0e
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390432"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799290"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Snabbstart: Skapa en e-postenhetsprofil för iOS
 
@@ -33,7 +33,7 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. Du hittar Intune i Azure Portal genom att välja **Alla tjänster** > **Intune**.
+Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-an-ios-email-profile"></a>Skapa en e-postprofil för iOS
 1. I Intune väljer du **Enhetskonfiguration** och sedan **Profiler**.
