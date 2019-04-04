@@ -5,7 +5,7 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6dfdf61159d899a81e1ef53a1aaa649c98833b0e
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389985"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871424"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Snabbstart: Registrera din Windows 10-enhet
 
-I den här snabbstarten antar du först rollen som Intune-användare och registrerar din Windows 10-enhet i Microsoft Intune. Sedan går du tillbaka till Intune och bekräftar den registrerade enheten.
+I den här snabbstarten antar du först rollen som Intune-användare och registrerar din Windows 10-enhet i Microsoft Intune. Går därefter tillbaka till Intune och bekräftar den registrerade enheten.
 
 Om du registrerar dina enheter i Microsoft Intune kan dina Windows 10-enheter få åtkomst till organisationens skyddade data, t.ex. e-post, filer och andra resurser. Detta gäller för både Windows 10 Desktop- och Windows 10 Mobile-enheter. Genom att registrera dina enheter kan du skydda både din och organisationens åtkomst och dessutom hålla arbetsdata åtskilda från personliga data.
 
@@ -72,7 +72,7 @@ Innan du registrerar ditt Windows 10 Desktop måste du bekräfta den version av 
 
     ![Välj kontot för arbete eller skola](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Logga in på Intune med ditt arbetskonto eller skolkonto och välj sedan **Nästa**. Om du följde snabbstarten [skapa en användare och tilldela en licens] kan du logga in med det användarkonto som du skapade.
+3. Logga in på Intune med ditt arbetskonto eller skolkonto och välj sedan **Nästa**. Om du följde snabbstarten [skapa en användare och tilldela en licens](quickstart-create-user.md), kan du logga in med det användarkonto som du skapade.
 
     > [!NOTE]
     > Om du konfigurerar ett ”. onmicrosoft.com” får användarkontot **.onmicrosoft.com** som en del av kontoadressen. 

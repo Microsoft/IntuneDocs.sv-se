@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – Skapa och tilldela en appskyddsprincip
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: I den här snabbstarten använder du Microsoft Intune för att skapa och tilldela en appskyddsprincip.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dee5407b39d9299081bf526b117c64b5883a106
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5d7e63542563425606cf1f9a8509a7bf0c09b9a9
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393367"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871369"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Snabbstart: Skapa och tilldela en skyddsprincip för ett program
 
@@ -41,7 +41,7 @@ Logga in i [Intune](https://aka.ms/intuneportal) som [global administratör elle
 
 ## <a name="create-an-app-protection-policy"></a>Skapa en appskyddsprincip
 
-Använd följande steg för att skapa en appskyddsprincip:
+Använd följande steg om du vill skapa en appskyddsprincip:
 
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appskyddsprinciper** > **Skapa princip**. 
 2. Ange följande information: 
@@ -72,7 +72,7 @@ Använd följande steg för att tilldela appskyddsprincipen:
 3.  Välj **Tilldelningar**.
 4.  Klicka på **Välj grupper som ska inkluderas** på fliken **Inkludera**.
 5.  Välj **Contoso-testare** som den grupp som ska inkluderas.
-6.  Klicka på **Välj**. 
+6.  Klicka på **Välj** > **Spara**. 
 
 Du har nu tilldelat appskyddsprincipen.
 

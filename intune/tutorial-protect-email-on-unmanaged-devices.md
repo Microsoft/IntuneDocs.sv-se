@@ -1,12 +1,12 @@
 ---
 title: Självstudie – Skydda e-post i Exchange Online på ohanterade enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Lär dig att skydda Office 365 Exchange Online med Intunes appskyddsprinciper och Azure AD:s villkorsstyrda åtkomst.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 03/26/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4692e19d657e19efe18a91273ce585eb59c6cb65
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e6224a0dae7c0aa3d80d4e64331a668953220f65
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528283"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798792"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Självstudie: Skydda e-post i Exchange Online på ohanterade enheter
 
@@ -91,8 +91,8 @@ Nu ska vi skapa två principer för villkorsstyrd åtkomst som gäller för alla
 5.  Under **Tilldelningar** väljer du **Villkor** > **Enhetsplattformar**.
      
     1. Under **Konfigurera** väljer du **Ja**.
-    2. På fliken **Inkludera** väljer du **Alla plattformar (inklusive de som inte stöds)**. 
-    3. Välj **Klar**.
+    2. På fliken **Inkludera**, väljer du **Alla enheter**.
+    1. Välj **Klar**.
    
 6.  Välj **Klientappar** i fönstret **Villkor**.
      
@@ -136,7 +136,7 @@ Principen för villkorsstyrd åtkomst för moderna autentiseringsklienter skapas
 5.  Under **Tilldelningar** väljer du **Villkor** > **Enhetsplattformar**.
      
     1. Under **Konfigurera** väljer du **Ja**.
-    2. På fliken **Inkludera** väljer du **Alla plattformar (inklusive de som inte stöds)** och sedan **Klar**. 
+    2. På fliken **Inkludera**, väljer du **Alla enheter** och sedan **Klar**. 
     3. Välj **Klar** igen.
 
 6.  Välj **Klientappar** i fönstret **Villkor**.

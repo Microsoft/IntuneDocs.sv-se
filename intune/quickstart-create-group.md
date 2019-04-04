@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – Skapa en grupp för att hantera användare
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: I den här snabbstarten använder du Microsoft Intune för att skapa en grupp baserad på befintliga användare.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 03/25/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e22aecbeddeb03060ebd91f3b1d7109d01b8daad
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7cbfe19e4f7aea28c16cae50c9b79336be81c8fa
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871335"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Snabbstart: Skapa en grupp för att hantera användare
 
@@ -44,17 +44,18 @@ Logga in i [Intune-portalen](https://aka.ms/intuneportal) som [global administra
 
 ## <a name="create-a-group"></a>Skapa en grupp
 
-Du ska skapa en grupp som ska användas senare i den här snabbstarten.
+Du ska skapa en grupp som ska användas senare i den här snabbstarten. Så här skapar du en grupp:
 
 1. När du har öppnat fönstret **Microsoft Intune** väljer du **Grupper** > **Ny grupp**.
 2. Välj **Säkerhet** i listrutan **Grupptyp**.
-3. Ange ”Contoso-testare” som **Namn** och lägg till en **Beskrivning** för gruppen.
-4. Ange **Typ av medlemskap** till **Tilldelad**. 
-5. Klicka på **Medlemmar** och välj en eller flera medlemmar för gruppen från den befintliga listan.
+3. I fältet **Gruppnamn** anger du namnet för den nya gruppen (exempelvis **Contoso-testare**).
+4. Fyll i en **Beskrivning** av gruppen
+5. Ange **Typ av medlemskap** till **Tilldelad**. 
+6. Klicka på **Medlemmar** och välj en eller flera medlemmar för gruppen från listan.
 
     ![Skärmbild som visar hur en grupp skapas i Microsoft Intune](./media/quickstart-use-groups-01.png)
 
-6. Klicka på **Välj** > **Skapa**.
+7. Klicka på **Välj** > **Skapa**.
 
 När du har skapat gruppen visas den i listan **Alla grupper**. 
 

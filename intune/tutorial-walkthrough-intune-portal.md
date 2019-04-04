@@ -6,7 +6,7 @@ keywords: ''
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 01/31/2019
+ms.date: 03/28/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c733dbbf992ae10e14ba711b34e621d3f0fb3da8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c601af8c2b73ac68ec88f45d3684fcfd41f1c87f
+ms.sourcegitcommit: 1144247aa7f042eb1b99d8fd8dd17b909eae38c5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395269"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58567596"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Självstudie: Genomgång av Microsoft Intune i Azure Portal
 
@@ -113,7 +113,7 @@ Följ stegen nedan så får du en bättre förståelse av Intune i Azure Portal.
 
     Du kan lägga till användare direkt i Intune eller synkronisera användare från din lokala Active Directory. När de har lagts till, kan användare registrera enheter och få åtkomst till företagsresurser. Du kan även ge användare ytterligare behörigheter för åtkomst till Intune. Mer information finns i [Lägga till användare och ge administrativ behörighet till Intune](users-add.md).
 
-9. I [Intune](https://aka.ms/intuneportal) väljer du **Grupper** för att visa information om grupper i Azure Active Directory (Azure AD) som inkluderats i Intune. Som Intune-administratör använder du grupper till att hantera enheter och användare. 
+9. I [Intune](https://aka.ms/intuneportal) väljer du **Grupper** för att visa information om grupper i Azure Active Directory (Azure AD) som inkluderats i Intune. Som Intune-administratör använder du grupper för att hantera enheter och användare. 
 
     ![Skärmbild av fönstret Grupper](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 

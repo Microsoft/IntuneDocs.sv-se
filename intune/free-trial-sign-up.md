@@ -1,6 +1,6 @@
 ---
 title: Snabbstart – Prova Microsoft Intune utan kostnad
-titlesuffix: ''
+titleSuffix: ''
 description: I den här snabbstarten får du skapa en kostnadsfri utvärderingsprenumeration, lära dig om konfigurationer som stöds och krav på nätverk och eventuellt konfigurera ditt domännamn.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 63f9ef266c9a5754d5de57232a8f7bc41a6c5777
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756861"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871403"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad 
 
@@ -67,7 +67,7 @@ Du kan prova Intune utan kostnad i 30 dagar. Om du redan har ett arbets- eller s
 
     ![Bild på inloggningssidan i Azure-portalen](./media/azure-portal-signin.png)
 
-3. Välj **Alla tjänster** på sidopanelen till vänster på sidan för att visa Microsoft Intune i Azure-portalen.
+3. Välj **Alla tjänster** på sidopanelen till vänster för att visa Microsoft Intune i Azure-portalen.
 4. Sök efter **Microsoft Intune** i filterrutan och välj den.
 5. Markera **stjärnan** för att lägga till Intune längst ned i listan över dina favorittjänster och öppna Intune-kontrollpanelen.
 
@@ -110,7 +110,7 @@ Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmi
 
    ![Skärmbild av administrationscentret för Microsoft 365 – Lägg till domän](./media/domain-custom-add.png)
 
-4. Kontrollera att du är ägare till domänen som du angav tidigare. 
+4. Kontrollera att du är ägare till domänen som du angav i det föregående steget. 
     
     Om du väljer att **skicka kod via e-post** skickas ett e-postmeddelande till den registrerade kontakten för din domän. När du har fått e-postmeddelandet kopierar du koden och anger den i fältet som är märkt **Ange verifieringskoden här**. Om verifieringskoden matchar läggs domänen till din klient. E-postmeddelandet som visas kanske inte ser bekant ut. Vissa registratorer dölja den verkliga e-postadressen. E-postadressen kan också vara en annan än den som har angetts när domänen registrerades.
 
@@ -123,7 +123,7 @@ Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmi
 
 Det finns två portaler som du kan använda:
 - Intune-instrumentpanel i Azure ([portal.azure.com](https://portal.azure.com)) där du kan utforska [Intune-funktionerna](what-is-intune.md). Vanligtvis utför du ditt arbete i Intune-instrumentpanelen.
-- Administrationscentret för Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) där du kan lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
+- I administrationscentret för Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) kan du lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
 
 ## <a name="next-steps"></a>Nästa steg
 

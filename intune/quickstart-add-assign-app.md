@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – Lägga till och tilldela en klientapp
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: I den här snabbstarten använder du Microsoft Intune för att lägga till och tilldela en klientapp.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/25/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40f321b02565f696554e2380d488c41a3b1f24eb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a1c81b1b2f54b15397e9e1d7451ee7ed911848
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391875"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798751"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
@@ -37,7 +37,7 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in i [Intune](https://aka.ms/intuneportal) som [global administratör eller Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
+Logga in på [Intune](https://aka.ms/intuneportal) som [global administratör eller Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="add-the-client-app-to-intune"></a>Lägga till klientappen i Intune
 
@@ -66,7 +66,7 @@ Använd följande steg för att lägga till en app i Intune:
 När du har lagt till en app till Microsoft Intune kan du tilldela appen till grupper med användare eller enheter.
 
 > [!NOTE]
-> Den här snabbstarten bygger på föregående snabbstarter i den här serien. Information finns i [förutsättningarna](quickstart-add-assign-app.md#prerequisites) i den här snabbstarten.
+> Den här snabbstarten bygger på tidigare snabbstarter i den här serien. Information finns i [förutsättningarna](quickstart-add-assign-app.md#prerequisites) i den här snabbstarten.
 
 Använd följande steg för att tilldela en app till en grupp:
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appar**. 

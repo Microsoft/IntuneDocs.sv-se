@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – Skicka meddelanden till icke-kompatibla enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: I den här snabbstarten använder du Microsoft Intune för att skicka e-postmeddelanden till icke-kompatibla enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 757191515ca88cedf1a5edcdb243b1ecb730ec3c
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57991126"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871441"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Snabbstart: Skicka meddelanden till icke-kompatibla enheter
 
@@ -40,7 +40,7 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in i [Intune-portalen](https://aka.ms/intuneportal) som [global administratör](users-add.md#types-of-administrators) eller Intune-[tjänstadministratör](users-add.md#types-of-administrators). 
+Logga in i [Intune-portalen](https://aka.ms/intuneportal) som [global administratör](users-add.md#types-of-administrators) eller Intune-[tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-a-notification-message-template"></a>Skapa en mall för aviseringsmeddelanden
 
@@ -51,7 +51,7 @@ Om du vill skicka ett e-postmeddelande till användarna skapar du en mall för a
 
    - **Namn**: *Contoso-administratör*
    - **Ämne**: *Efterlevnad för enhet*
-   - **Meddelande**: *Enheten uppfyller för närvarande inte organisationens efterlevnadskrav.*
+   - **Meddelande**: *Din enhet uppfyller för närvarande inte organisationens efterlevnadskrav.*
    - **E-postsidhuvud – Infoga företagets logotyp**: Ange som **Aktiverad** om du vill visa organisationens logotyp.
    - **E-postsidfot – Infoga företagets namn**: Ange som **Aktiverad** om du vill visa organisationens namn.
    - **E-postsidfot – Infoga kontaktinformation**: Ange som **Aktiverad** om du vill visa organisationens kontaktinformation.
@@ -83,14 +83,13 @@ Följande steg skapar en efterlevnadsprincip för Windows 10-enheter.
 5. Ange **Kräv ett lösenord för att låsa upp mobila enheter** till **Kräv**. Den här inställningen anger huruvida användaren måste ange ett lösenord för att komma åt information på sin mobila enhet. 
 6. Ange **Minsta längd på lösenord** till **6**. Den här inställningen anger det minsta antal siffror eller tecken som lösenordet måste innehålla.
 
-    ![Inställningar för systemsäkerhet för en ny efterlevnadsprincip](./media/quickstart-send-notification-02.png) 
+    <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
 7. Klicka på **OK**, **OK** och **Skapa** för att skapa efterlevnadsprincipen.
-8. Välj namn på den nya principen: **Windows 10-efterlevnad**.
-9. Välj **Egenskaper** > **Åtgärd vid icke-kompatibilitet** > **Lägg till**.
-10. I listrutan **Åtgärd** bekräftar du att **Skicka e-post till slutanvändare** har valts.
-11. Välj **Meddelandemall** > **Contoso-administratör** > **Välj** för att välja den meddelandemall som du skapade tidigare i det här avsnittet.
-12. Välj **OK** > **OK** > **Spara** för att spara ändringarna.
+8. Välj **Egenskaper** > **Åtgärd vid icke-kompatibilitet** > **Lägg till**.
+9. I listrutan **Åtgärd** bekräftar du att **Skicka e-post till slutanvändare** har valts.
+10. Välj **Meddelandemall** > **Contoso-administratör** > **Välj** för att välja den meddelandemall som du skapade tidigare i det här avsnittet.
+11. Välj **Lägg till** > **OK** > **Spara** om du vill spara dina ändringar.
 
 ## <a name="assign-the-policy"></a>Tilldela principen
 

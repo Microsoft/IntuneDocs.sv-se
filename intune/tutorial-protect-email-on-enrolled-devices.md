@@ -1,12 +1,12 @@
 ---
 title: Självstudie – Skydda e-post i Exchange Online på Intune-hanterade enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Lär dig att skydda Exchange Online med iOS-principer för Intune-efterlevnad och villkorsstyrd åtkomst i Azure AD, som kräver att hanterade enheter och Outlook-appen används.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 03/26/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c76a22fec1342481a67029147c757347a06447c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a8e873c48ceb59bfb8ac98fec9a29fa51d6cd3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528215"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799776"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Självstudie: Skydda e-post i Exchange Online på hanterade enheter
 Lär dig att använda principer för enhetsefterlevnad med villkorsstyrd åtkomst för att se till att iOS-enheter endast har åtkomst till e-post i Exchange Online om de hanteras med Intune och använder en godkänd e-postapp. 
@@ -43,7 +43,7 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. Du hittar Intune i Azure Portal genom att välja **Alla tjänster** > **Intune**.
+Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-the-ios-device-compliance-policy"></a>Skapa en efterlevnadsprincip för iOS-enheter
 Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel. I den här självstudien skapar vi en enhetsefterlevnadsprincip för iOS-enheter. Efterlevnadsprinciper är plattformsspecifika, så du behöver ha en separat efterlevnadsprincip för varje enhetsplattform som du vill utvärdera.
@@ -93,7 +93,7 @@ Nu ska vi skapa en princip för villkorsstyrd åtkomst som kräver att alla enhe
 5.  Under **Tilldelningar** väljer du **Villkor** > **Enhetsplattformar**.
      
     1. Under **Konfigurera** väljer du **Ja**.
-    2. På fliken **Inkludera** väljer du **Alla plattformar (inklusive de som inte stöds)** och sedan **Klar**. 
+    2. På fliken **Inkludera**, väljer du **Alla enheter** och sedan **Klar**. 
     3. Välj **Klar** igen.
    
     ![Välj Office 365 Exchange Online-appen](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)

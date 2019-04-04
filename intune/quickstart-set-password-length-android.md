@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – Skapa en efterlevnadsprincip för lösenord för Android-enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: I den här snabbstarten använder du Microsoft Intune till att ange den lösenordslängd som krävs för Android-enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ae0c7b9a00c3e07bb49261ca1a20bd5ef5db15
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397292"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799666"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Snabbstart: Skapa en efterlevnadsprincip för lösenord för Android-enheter
 
@@ -49,7 +49,8 @@ För den här snabbstarten använder du Intune för att kräva att Android-anvä
 3. För **Plattform**, välj **Android**. 
 4. Välj **Inställningar** > **Systemsäkerhet** för att visa Android-bladet **Systemsäkerhet**.
 5. Klicka på **Kräv** intill **Kräv ett lösenord för att låsa upp mobila enheter**.
-6. Ange **6** intill **Minsta längd på lösenord**. 
+6. Ange **Minst numeriskt** bredvid **Krav på lösenordstyp**.
+7. Ange **6** intill **Minsta längd på lösenord**. 
 
     ![Skärmbild som visar hur en grupp skapas i Microsoft Intune](media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
