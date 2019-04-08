@@ -1,6 +1,6 @@
 ---
 title: Hantera användarenhetslänkar för Windows-datorer
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Länka en användare till en Intune-hanterad Windows-dator.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0024b246ea4ce39ba2a0bc4dd6237e82f79427f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 9ef14d8ed3b1635fba183134b0d457ddc82ae329
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460486"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799239"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Hantera användarenhetslänkar för Windows-datorer
 

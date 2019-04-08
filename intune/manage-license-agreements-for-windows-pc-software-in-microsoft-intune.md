@@ -1,6 +1,6 @@
 ---
 title: Hantera licensavtal för datorer som kör Intune-klientprogrammet
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Använd Intune för att hantera licensavtal för programvara som köpts via Microsofts volymlicensieringsavtal och för programvara som köpts på annat sätt.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d79cf2e8d61de1737d3a47533fbf25976c32d7a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 92262a9d1f07b8756ced8788feee586ffa30088a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461217"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798809"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 

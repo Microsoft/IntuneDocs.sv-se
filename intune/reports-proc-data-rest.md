@@ -1,12 +1,12 @@
 ---
 title: Hämta data från API för informationslager med en REST-klient
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Det här avsnittet beskriver hur du hämtar data från Microsoft Intune-informationslagret med hjälp av ett RESTful-API.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e57d197cadf2ba6586aa39fdc5dbb9cddba554c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5aa85ee044eae5fba9dcb7c380a29dda727c6492
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566581"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871458"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -98,11 +98,11 @@ Du behöver även slutpunkten. Du behöver URL för det anpassade flödet för a
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Konfigurera Intune Data Warehouse** under **Andra uppgifter**.
-4. Kopiera URL för det anpassade flödet under **Använd rapporteringstjänster från tredje part**. Det bör se ut ungefär så här: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+4. Kopiera URL för det anpassade flödet under **Använd rapporteringstjänster från tredje part**. Det bör se ut ungefär så här: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Slutpunkten följer följande format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
-Entiteten **datum** ser till exempel ut som: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+Entiteten **datum** ser till exempel ut som: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
 Mer information finns i [API-slutpunkt för Intune-informationslager](reports-api-url.md).
 
@@ -116,7 +116,7 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 2.  Öppna Postman. Välj HTTP-åtgärden **GET**.
 3.  Klistra in slutpunktswebbadressen i adressfältet. Det bör se ut ungefär så här:  
 
-    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4.  Välj fliken **Authorization** (Auktorisering) och välj **OAuth 2.0** i listan **Type** (Typ).
 5.  Välj **Get New Access Token** (Hämta ny åtkomsttoken).
 6.  Kontrollera att du har lagt till webbadressen för återanrop i appen i Azure. Webbadressen för återanrop är `https://www.getpostman.com/oauth2/callback`.
@@ -197,7 +197,7 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
    var emailAddress = "intuneadmin@yourcompany.com";
    var password = "password_of(intuneadmin@yourcompany.com)";
    var applicationId = "<Application ID>";
-   var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta";
+   var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0";
    var collectionName = "dates";
 
    var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");

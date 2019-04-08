@@ -1,6 +1,6 @@
 ---
 title: Supportavdelningens felsökningsportal
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Supportavdelningen använder felsökningsportalen till att lösa användarnas tekniska problem.
 keywords: ''
 author: dougeby
@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 135e93bf3cfb93b5299dfd005a3ca70bbba84d77
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: df5b20be667159689aaaee9a790c0a4c5b5864fd
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57787142"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798406"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -260,7 +260,7 @@ Tabellen för registreringsfel visar misslyckade registreringsförsök. En enhet
 
 När du väljer en felrad visas mer information.
 
-| Sektion | Beskrivning |
+| Avsnitt | Beskrivning |
 |-------------|----------|
 | Information om felet | En mer detaljerad förklaring av felet. |
 | Potentiella åtgärder | Föreslagna steg för att lösa problemet. Vissa fel kanske inte har någon rekommenderad åtgärd. |

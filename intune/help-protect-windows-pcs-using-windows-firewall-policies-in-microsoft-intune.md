@@ -1,6 +1,6 @@
 ---
 title: Brandväggsprinciper för Windows-datorer
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Intune hjälper dig att skydda dina hanterade datorer med Intune-klienten på många olika sätt, till exempel att konfigurera inställningar för Windows-brandväggen.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee84ca92d247a162653b398fd1332161fb887599
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b5edcfedcd03492d8634549147b70be14ffb742e
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461095"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798883"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
 
