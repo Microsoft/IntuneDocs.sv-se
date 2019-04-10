@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
-ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.openlocfilehash: 4b5e6ac4683284dc71c9171f4367e72d5ec45c59
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58871441"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899019"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Snabbstart: Skicka meddelanden till icke-kompatibla enheter
 
@@ -85,7 +85,7 @@ Följande steg skapar en efterlevnadsprincip för Windows 10-enheter.
 
     <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
-7. Klicka på **OK**, **OK** och **Skapa** för att skapa efterlevnadsprincipen.
+7. Klicka på **OK** > **OK** > **Skapa** för att skapa din efterlevnadsprincip.
 8. Välj **Egenskaper** > **Åtgärd vid icke-kompatibilitet** > **Lägg till**.
 9. I listrutan **Åtgärd** bekräftar du att **Skicka e-post till slutanvändare** har valts.
 10. Välj **Meddelandemall** > **Contoso-administratör** > **Välj** för att välja den meddelandemall som du skapade tidigare i det här avsnittet.
