@@ -1,15 +1,16 @@
 ---
 title: Vad är apphantering i Microsoft Intune?
-titlesuffix: ''
+titleSuffix: ''
 description: Läs mer om klientappens hanteringsfunktioner per plattform i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f2c5da7772ff137e44fead66f00fe34004bb1f4
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 34807edabf99a107c259fdfae5e43db18084fb67
+ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850920"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59569070"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -44,7 +45,7 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Lägga till och tilldela appar till enheter och användare | Ja | Ja | Ja | Ja | Ja |
 | Tilldela appar till enheter som inte registrerats i Intune | Ja | Ja | Nej | Nej | Nej |
-| Använda principer för appkonfigurering som styr apparnas startfunktion | Nej | Ja | Nej | Nej | Nej |
+| Använda principer för appkonfigurering som styr apparnas startfunktion | Ja | Ja | Nej | Nej | Nej |
 | Använda principer för etablering av mobilappar för att förnya utgångna appar | Nej | Ja | Nej | Nej | Nej |
 | Skydda företagets data i appar med appskyddsprinciper | Ja | Ja | Nej | Nej1 | Nej |
 | Ta bort endast företagsdata från installerade appar (selektiv rensning) | Ja | Ja | Nej | Ja | Ja |

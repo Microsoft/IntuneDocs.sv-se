@@ -3,24 +3,26 @@ title: Ta bort SCEP- eller PKCS-certifikat i Microsoft Intune – Azure | Micros
 titleSuffix: ''
 description: Administratörer kan använda rensnings- eller tillbakadragningsåtgärden för att ta bort certifikat från Microsoft Intune. Det finns vissa scenarier då certifikaten tas bort automatiskt, t.ex. om en enhet avregistreras eller om en efterlevnadsprincip tas bort. Det finns vissa scenarier då certifikaten automatiskt bevaras på enheten, t.ex. om Intune-licensen tappas bort eller tas bort. Se hur du gör på Android-, Android Enterprise-, iOS-, macOS- och Windows-enheter.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 01/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 977e7006d39ae76516d5b06019e463d1018aaa79
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.reviewer: lacranda
+ms.openlocfilehash: 6a1280ca2a78853ae188ad68620f0b82846a365a
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59569265"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Ta bort SCEP- och PKCS-certifikat i Microsoft Intune
 

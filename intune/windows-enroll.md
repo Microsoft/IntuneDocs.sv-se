@@ -1,6 +1,6 @@
 ---
 title: Konfigurera registrering av Windows-enheter med Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Konfigurera registrering av Windows-enheter.
 keywords: ''
 author: ErikjeMS
@@ -10,6 +10,7 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2192b6d653bfb51503b006a5045d454c202618f
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: d7dd4ab5f7cecfa8a765b6dfa038b73015a0c768
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234120"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567302"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -42,8 +43,8 @@ Två saker som innebär att du kan förenkla Windows-enhetsregistreringen:
 
 ||**Azure AD Premium**|**Övriga AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Automatisk registrering](#enable-windows-10-automatic-enrollment) |[Användarregistrering](#enable-windows-enrollment-without-azure-ad-premium)|
-|**Tidigare Windows-versioner**|[Användarregistrering](#enable-windows-enrollment-without-azure-ad-premium)|[Användarregistrering](#enable-windows-enrollment-without-azure-ad-premium)|
+|**Windows 10**|[Automatisk registrering](#enable-windows-10-automatic-enrollment) |Användarregistrering|
+|**Tidigare Windows-versioner**|Användarregistrering|Användarregistrering|
 
 Organisationer som använder automatisk registrering kan också konfigurera [massregistrering av enheter](windows-bulk-enroll.md) med hjälp av Windows Configuration Designer-appen.
 
