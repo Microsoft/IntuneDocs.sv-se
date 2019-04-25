@@ -8,10 +8,12 @@
 
 ## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)
 
-## [Använda din Android-enhet](using-your-android-device-with-intune.md)
-### [Vad händer när jag registrerar en Android-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-### [Registrera din enhet](enroll-your-device-in-Intune-android.md)
-#### [Registrera din enhet med Android för arbetet](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+## Använda Android-enheten
+### [Varför du bör registrera Android-enheten](why-enroll-android-device.md)
+### Registrera enheten
+#### [Registrera Android-enheten](enroll-device-android-company-portal.md)  
+#### [Registrera med Android-arbetsprofilen](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Registrera med Microsoft Intune-appen](enroll-device-android-microsoft-intune-app.md)
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-android.md)
 ### [Kryptera din enhet](encrypt-your-device-android.md)
 ### [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)
@@ -23,16 +25,15 @@
 #### [Avregistrera din enhet](unenroll-your-device-from-intune-android.md)
 #### [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 
-### [Åtgärda vanliga problem med Android](troubleshoot-your-device-android.md)
+### Åtgärda vanliga problem med Android
 #### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
 #### [Åtgärda vanliga problem med Samsung Knox](samsung-knox-errors-android.md)
 #### [Uppdatera din enhet för att installera Outlook](update-device-outlook-android.md)
 
-#### Använda loggar som hjälp för problemlösning
+#### Loggning
 ##### [Aktivera utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Skicka loggar via e-post](send-logs-to-your-it-admin-by-email-android.md)
+##### [Ladda upp och skicka loggar med e-post](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Skicka loggar via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Skicka registreringsfel](send-enrollment-errors-to-your-it-admin-android.md)
 ##### [Skicka fel till Microsoft](send-logs-to-microsoft-android.md)
 
 ### Frågor om operativsystem
