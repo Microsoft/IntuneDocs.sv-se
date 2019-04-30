@@ -5,67 +5,81 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 04/19/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b853d42efc247f6080cc4ed6ad8b4943b85b3215
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: dc82653355ae57830684270fc8f7b9f1f3ae2491
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507054"
 ---
-# <a name="monitor-the-security-baseline-and-profile-in-microsoft-intune"></a>Övervaka säkerhetsbaslinje och profil i Microsoft Intune
+# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Övervaka säkerhetsbaslinje och profil i Microsoft Intune  
 
-Det finns olika alternativ för övervakning när du använder säkerhetsbaslinjer. Du kan övervaka den profil för säkerhetsbaslinjer som gäller för dina användare och enheter. Du kan också övervaka den faktiska baslinjen och alla enheter som matchar (eller inte matchar) de rekommenderade värdena.
+Intune tillhandahåller flera alternativ för att övervaka dina säkerhetsbaslinjer. Du kan övervaka den profil för säkerhetsbaslinjer som gäller för dina användare och enheter. Du kan också övervaka den faktiska baslinjen och alla enheter som matchar (eller inte matchar) de rekommenderade värdena.
 
 Den här artikeln beskriver båda övervakningsalternativen.
 
 [Säkerhetsbaslinjer i Intune](security-baselines.md) innehåller mer information om funktionen säkerhetsbaslinjer i Microsoft Intune.
 
-## <a name="monitor-the-baseline-and-your-devices"></a>Övervaka baslinjen och dina enheter
+## <a name="monitor-the-baseline-and-your-devices"></a>Övervaka baslinjen och dina enheter  
 
-När du övervakar baslinjen kan få du inblick i säkerhetstillståndet för dina enheter baserat på Microsofts rekommendationer.
+När du övervakar en baslinje kan få du inblick i säkerhetstillståndet för dina enheter baserat på Microsofts rekommendationer. Du kan visa de insikterna från översiktsfönstret för säkerhetsbaslinjen i Intune-konsolen.  Det tar upp till 24 timmar innan data visas när du först har tilldelat en baslinje. Senare ändringar tar upp till sex timmar att visas.  
 
-> [!NOTE]
-> När en baslinje har tilldelats första gången kan rapporter ta upp till 24 timmar att uppdatera. Därefter kan de ta upp till 6 timmar att uppdatera.
+Om du vill visa övervakningsdata för baslinjen och enheterna loggar du in på [Intune-portalen](https://aka.ms/intuneportal). Sedan väljer du **Säkerhetsbaslinjer (förhandsversion)**, väljer en baslinje och visar fönstret **Översikt**.
 
-1. I [Azure-portalen](https://portal.azure.com/) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
-2. Välj **Säkerhetsbaslinjer (förhandsversion)** > välj en baslinje.
-3. I **Översikt**, visar diagrammet hur många enheter som påverkas av den baslinje som du har valt, och de olika statuslägena:
+I fönstret **Översikt** finns två metoder för att övervaka status:
+- **Enhetsvy** – en sammanfattning av hur många enheter som finns i varje statuskategori för baslinjen.  
+- **Per kategori** – en vy som visar varje kategori i baslinjen och innehåller procentandelen enheter för varje statusgrupp för varje baslinjekategori. 
 
-    ![Kontrollera enheternas status](./media/security-baselines-monitor/overview.png)
+Varje enhet visas med någon av följande statusar, som används i både *enhetsvyn* och *per kategori-vyerna*:  
+- **Matchar baslinjen** – alla inställningarna i baslinjen överensstämmer med de rekommenderade inställningarna.
+- **Matchar inte baslinjen** – minst en inställning i baslinjen matchar inte de rekommenderade inställningarna.
+- **Felkonfigurerad** – minst en inställning har inte konfigurerats korrekt. Denna status innebär att inställningen är i en konflikt, fel eller i ett väntande tillstånd.
+- **Ej tillämpligt** – minst en inställning är inte tillämplig och används inte.
 
-    Följande statusar är tillgängliga:
 
-    - **Matchar baslinjen**: Alla inställningarna i baslinjen överensstämmer med de rekommenderade inställningarna.
-    - **Matchar inte baslinjen**: Minst en inställning i baslinjen matchar inte de rekommenderade inställningarna.
-    - **Felkonfigurerad**: Minst en inställning har inte konfigurerats korrekt. Denna status innebär att inställningen är i en konflikt, fel eller i ett väntande tillstånd.
-    - **Ej tillämpligt**: Minst en inställning är inte tillämplig och används inte.
+### <a name="device-view"></a>Enhetsvyn
+I översiktsfönstret visas en diagrambaserad sammanfattning av hur många enheter som har en viss status för baslinjen: **Säkerhetsbaslinjeposition för tilldelade Windows 10-enheter**.  
 
-4. Välj en av de statusar som har enheter. Välj till exempel statusen **Felkonfigurerad**.
+![Kontrollera enheternas status](./media/security-baselines-monitor/overview.png)
 
-5. En lista över alla enheter med denna status visas. Välj en specifik enhet för att få mer information. 
+När en enhet har olika status från olika kategorier i baslinjen representeras enheten av en enda status. Den status som representerar enheten hämtas från följande prioritetsordning: **Felkonfigurerad**, **Matchar inte baslinjen**, **Ej tillämpligt**, **Matchar baslinjen**.  
 
-    I följande exempel väljer du **Enhetskonfiguration** > Välj profilen med ett feltillstånd:
+Om en enhet till exempel har en inställning klassificerad som *Felkonfigurerad* och en eller flera inställningar klassificerade som *Matchar inte baslinjen* så klassificeras enheten som *Felkonfigurerad*.  
 
-    ![Kontrollera enheternas status](./media/security-baselines-monitor/device-configuration-profile-list.png)
+Du kan klicka på diagrammet för att visa detaljerad information och en lista över enheter med olika statusar. Sedan kan du välja enskilda enheter från den listan för att visa information om enskilda enheter. Exempel:
+- Välj **Enhetskonfiguration** > Välj profilen med ett feltillstånd:
 
-    Välj felprofilen. En lista över alla inställningar i profilen, samt deras status visas. Du kan nu bläddra för att hitta den inställning som orsakar felet:
+  ![Kontrollera enheternas status](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
-    ![Visa inställningen som orsakar felet](./media/security-baselines-monitor/profile-with-error-status.png)
+- Välj felprofilen. En lista över alla inställningar i profilen, samt deras status visas. Du kan nu bläddra för att hitta den inställning som orsakar felet:
+
+  ![Visa inställningen som orsakar felet](./media/security-baselines-monitor/profile-with-error-status.png)
 
 Använd den här rapporteringen för att se alla inställningar i en profil som orsakar problem. Få även mer information om principer och profiler som distribuerats till enheter.
 
 > [!NOTE]
 > När en egenskap är inställd till **Inte konfigurerad** ignoreras inställningen i baslinjen och inga begränsningar tillämpas. Egenskapen visas inte i någon rapportering.
+
+### <a name="per-category-view"></a>Per kategori-vy
+I översiktsfönstret visas ett per kategori-diagram för baslinjen: **Säkerhetsbaslinjeposition efter kategori**.  Den här vyn visar varje kategori från baslinjen och identifierar procentandelen enheter som faller inom en statusklassificering för var och en av dessa kategorier. 
+ 
+![Per kategori-vy över status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
+
+Status för **Matchar baslinjen** visas inte förrän 100 % av enheterna rapporterar den statusen för kategorin.   
+
+Du kan sortera per kategori-vyn efter varje kolumn genom att välja uppåt-nedåt-pilikonen överst i kolumnen.  
+
 
 ## <a name="monitor-the-profile"></a>Övervaka profilen
 

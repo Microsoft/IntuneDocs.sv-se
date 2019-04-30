@@ -5,37 +5,40 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/01/2018
-ms.topic: article
+ms.date: 4/19/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5bd8bfe0230e4d49ce5ae4372e0f373a014c00ce
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504217"
 ---
-# <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter – Intune
+# <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter i Intune
 
-Funktionen för **åtgärder vid inkompatibilitet** konfigurerar en tidssorterad sekvens med åtgärder. Dessa åtgärder gäller enheter som inte uppfyller din efterlevnadsprincip. 
+För enheter som inte uppfyller dina principer eller regler för efterlevnad kan du lägga till **åtgärder för inkompatibilitet**. Den här funktionen konfigurerar en tidssorterad sekvens med åtgärder, till exempel att skicka e-post till slutanvändaren och mer.
 
 ## <a name="overview"></a>Översikt
-När Intune identifierar en enhet som inte är kompatibel, markerar Intune omedelbart enheten som inkompatibel som standard. Den [villkorliga åtkomsten](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) i Azure Active Directory (AD) blockerar sedan enheten. När en enhet inte är kompatibel kan du med **åtgärder vid inkompatibilitet** få mer flexibilitet när du ska bestämma dig för vad du bör göra. Du kan t.ex. låta bli att blockera enheten omedelbart och ge användaren en respitperiod för att bli kompatibel.
+
+När Intune identifierar en enhet som inte är kompatibel, markerar Intune omedelbart enheten som inkompatibel som standard. Den [villkorliga åtkomsten](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) i Azure Active Directory (AD) blockerar sedan enheten. När en enhet inte är kompatibel kan du med **åtgärder för inkompatibilitet** få mer flexibilitet när du ska bestämma dig för vad du bör göra. Du kan t.ex. låta bli att blockera enheten omedelbart och ge användaren en respitperiod för att bli kompatibel.
 
 Det finns flera typer av åtgärder:
 
-- **Skicka e-post till slutanvändare**: Anpassa ett e-postmeddelande innan det skickas till slutanvändaren. Du kan anpassa mottagare, ämne, brödtext, företagslogotyp och kontaktinformation.
+- **Skicka e-post till slutanvändare**: Anpassa en e-postavisering innan den skickas till slutanvändaren. Du kan anpassa mottagare, ämne, brödtext, företagslogotyp och kontaktinformation.
 
     Dessutom inkluderar Intune information om den inkompatibla enheten i e-postmeddelandet.
 
-- **Fjärrlås en inkompatibel enhet**: För enheter som inte är kompatibla kan du utfärda en fjärrlåsning. Användaren uppmanas i så fall att ange en PIN-kod eller ett lösenord för att låsa upp enheten. Mer om funktionen [Fjärrlåsning](device-remote-lock.md). 
+- **Fjärrlåsa en icke-kompatibel enhet**: För enheter som inte är kompatibla kan du utfärda en fjärrlåsning. Användaren uppmanas i så fall att ange en PIN-kod eller ett lösenord för att låsa upp enheten. Mer om funktionen [Fjärrlåsning](device-remote-lock.md). 
 
-- **Markera enheten som inkompatibel**: Skapa ett schema (med antal dagar) efter att enheten markerats som inkompatibel. Du kan konfigurera åtgärden till att börja gälla omedelbart, eller ge användaren en respitperiod för att bli kompatibel.
+- **Markera enhet som inkompatibel**: Skapa ett schema (med antal dagar) varefter enheten markeras som inkompatibel. Du kan konfigurera åtgärden till att börja gälla omedelbart, eller ge användaren en respitperiod för att bli kompatibel.
 
 Den här artikeln visar hur du:
 
@@ -72,14 +75,14 @@ Om du vill skicka ett e-postmeddelande till användarna skapar du en mall för a
 
    ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/actionsfornoncompliance-1.PNG)
 
-4. När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas. Observera att logotypen som du laddar upp som en del av varumärkesanpassningen av företagsportalen används för e-postmallar. Läs mer om varumärkesanpassning av företagsportalen i [Varumärkesanpassning för företagsidentitet](company-portal-app.md#company-identity-branding-customization).  
+4. När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas. Den logotyp som du laddar upp som en del av varumärkesanpassningen av företagsportalen används för e-postmallar. Läs mer om varumärkesanpassning av företagsportalen i [Varumärkesanpassning för företagsidentitet](company-portal-app.md#company-identity-branding-customization).
 
 > [!NOTE]
-> Du kan också redigera en meddelandemall som du skapat tidigare.
+> Du kan även ändra eller uppdatera en befintlig aviseringsmall som du skapade tidigare.
 
 ## <a name="add-actions-for-noncompliance"></a>Lägga till åtgärder vid inkompatibilitet
 
-När du skapar en princip för enhetsefterlevnad skapar Intune automatiskt en åtgärd för inkompatibilitet. När en enhet inte uppfyller din efterlevnadsprincip, markerar den här åtgärden enheten som inkompatibel. Du kan anpassa hur länge enheten ska markeras som inkompatibel. Det går inte att ta bort åtgärden.
+När du skapar en princip för enhetsefterlevnad skapar Intune automatiskt en åtgärd för inkompatibilitet. Om en enhet inte uppfyller din efterlevnadsprincip markerar den här åtgärden enheten som inkompatibel. Du kan anpassa hur länge enheten ska markeras som inkompatibel. Det går inte att ta bort åtgärden.
 
 Du kan också lägga till en till åtgärd när du skapar en princip för efterlevnad eller uppdatera en befintlig princip. 
 
@@ -99,11 +102,15 @@ Du kan också lägga till en till åtgärd när du skapar en princip för efterl
          - Välj den **meddelandemall** som du skapade tidigare
          - Ange eventuella **ytterligare mottagare** genom att välja grupper
     
-    - **Fjärrlås en inkompatibel enhet**: Lås enheten om den inte är kompatibel. Detta tvingar användaren att ange en PIN-kod eller ett lösenord för att låsa upp enheten. 
-    
-    - **Schema**: Ange hur många dagar (0 till 365) efter en inkompatibilitet som åtgärden ska utlösas på användarnas enheter. Efter den här respittiden kan du tillämpa en princip för villkorlig åtkomst. Om du anger **0** antal dagar tillämpas den villkorliga åtkomsten **omedelbart**. Du kan exempelvis blockera åtkomsten till företagsresurser direkt om en enhet inte är kompatibel.
+    - **Fjärrlåsa en icke-kompatibel enhet**: Lås enheten när den är inkompatibel. Den här åtgärden tvingar användaren att ange en PIN-kod eller ett lösenord för att låsa upp enheten. 
 
-5. När du är klar väljer du **Lägg till** > **OK** för att spara ändringarna.
+    - **Ta den icke-kompatibla enheten ur bruk**: Ta bort alla företagets data från enheten och ta bort enheten från Intune-hanteringen när den är inkompatibel. För att förhindra oavsiktlig rensning av en enhet har den här åtgärden stöd för ett schema på minst **30** dagar.  
+
+    
+5. Konfigurera ett **schema**: Ange hur många dagar (0 till 365) efter en inkompatibilitet som åtgärden ska utlösas på användarnas enheter. Efter den här respittiden kan du tillämpa en princip för villkorlig åtkomst. Om du anger **0** (noll) dagar tillämpas den villkorliga åtkomsten **omedelbart**. Du kan exempelvis blockera åtkomsten till företagsresurser direkt om en enhet inte är kompatibel.
+
+6. När du är klar väljer du **Lägg till** > **OK** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
-[Övervaka aktivitet rörande enhetsefterlevnad](device-compliance-monitor.md).
+
+[Övervaka dina principer](compliance-policy-monitor.md).

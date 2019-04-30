@@ -10,6 +10,7 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e51c13136b5dd79ba9ff395008c6a8cb3e67e9e4
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 1ab718cd087757211ad4e84cbba39808cf9de7d3
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61515572"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot (förhandsversion)
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -36,6 +37,7 @@ Enheter som ska registreras måste också:
 - Ha åtkomst till Internet.
 - Ha åtkomst till din Active Directory (VPN-anslutning stöds inte).
 - Gå igenom välkomstupplevelsen (OOBE, Out-of-Box Experience).
+- Kunna pinga domänkontrollanten på den domän som du försöker ansluta till.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurera automatisk registrering i Windows 10
 
@@ -119,7 +121,7 @@ Intune Connector för Active Directory måste installeras på en dator som kör 
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurera webbproxyinställningar
 
-Om du har en webbproxy i nätverksmiljön kontrollerar du att Intune Connector för Active Directory fungerar korrekt, i [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
+Om du har en webbproxy i nätverksmiljön kontrollerar du att Intune Connector för Active Directory fungerar korrekt, i [Arbeta med befintliga lokala proxyservrar](autopilot-hybrid-connector-proxy.md).
 
 
 ## <a name="create-a-device-group"></a>Skapa en enhetsgrupp
@@ -210,6 +212,9 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
 1. Välj **OK** > **Skapa**.  
     Profilen skapas och visas i listan.
 1. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](device-profile-assign.md#assign-a-device-profile). 
+
+> [!NOTE]
+> Namngivningsfunktionerna för Windows Autopilot för Azure AD-hybridanslutning stöder inte variabler såsom %SERIAL%, och stöder endast prefix för datornamnet.
 
 ## <a name="next-steps"></a>Nästa steg
 

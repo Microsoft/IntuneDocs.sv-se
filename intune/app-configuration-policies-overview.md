@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2019
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,29 +18,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844342d0d21110f46ac9a344edbd7409f7d779cb
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: cc29e7bb56c5a5e21264e275cfecf0ea4b0e9273
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59567224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61501382"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att ge konfigurationsinställningar för en iOS- eller Android-app. Med de här konfigurationsinställningarna kan en app anpassas. Du tilldelar inte de konfigurationsprinciperna direkt till användare och enheter. I stället associerar du konfigurationsprincipen med en app och tilldelar sedan appen. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
+Använd appkonfigurationsprinciper i Microsoft Intune för att ge konfigurationsinställningar för en iOS- eller Android-app. Med de här konfigurationsinställningarna kan en app anpassas. Du tilldelar inte de här konfigurationsprinciperna direkt till användare eller enheter. I stället associerar du konfigurationsprincipen med en app och tilldelar sedan appen. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
 
 Du kan tilldela en appkonfigurationsprincip till en grupp användare och enheter genom att använda en kombination av tilldelningar som inkluderar och exkluderar. När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare + alla enheter**.
 
-Till exempel kan en app kräva att du anger några av de följande uppgifterna:
+Till exempel kan en appkonfigurationsinställning kräva att du anger några av de följande uppgifterna:
 
 - Ett anpassat portnummer
 - Språkinställningar
 - Säkerhetsinställningar
 - Anpassade inställningar, t.ex. en företagslogotyp
 
-Om användarna inte anger dessa inställningar på korrekt sätt kan det öka supportens arbetsbörda och ta längre tid att börja använda nya appar.
+Om användarna skulle ange de här inställningarna i stället skulle de kunna göra det på fel sätt, vilket skulle öka supportens arbetsbörda och göra användandet av nya appar långsammare.
 
-Med appkonfigurationsprinciper slipper du den här typen av problem eftersom du kan tilldela dessa inställningar till användarna i en princip innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
+Appkonfigurationsprinciper kan hjälpa dig att förhindra problem med konfiguration av appar genom att du kan tilldela konfigurationsinställningar till en princip som tilldelas till användare innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
 
 Konfigurationsinställningarna används när appen söker efter dem. Normalt söker en app efter konfigurationsinställningar första gången appen körs av användaren.
 

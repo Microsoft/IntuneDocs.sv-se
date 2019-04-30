@@ -1,27 +1,28 @@
 ---
 title: Testning och validering av Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Så här testar och verifierar du den molnbaserade Intune-lösningen i din miljö.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4974dc3e86b26434cb633bd58e524d290573ecd0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: ba257ad6ebd7c8dbb2ca6ef805c896a4584ed41f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512888"
 ---
 # <a name="intune-testing-and-validation"></a>Testning och validering av Intune
 
@@ -43,7 +44,7 @@ Om en designkomponent inte finns i minst ett testningskriterium som är knutet t
 
 -   **Enheter:** Testenheter som kan rensas eller återställas till fabriksinställningarna.
 
--   **Integrationskomponenter:** Alla integrationskomponenter (Certificate Connector, Intune Service to Service Connector för värdbaserad Exchange och Intune On-Premises Connector för Exchange) bör installeras och konfigureras efter behov.
+-   **Integrationskomponenter:** Alla integrationskomponenter (certifikatanslutningsappar och den lokala Intune Exchange-anslutningsappen) ska installeras och konfigureras om det behövs.
 
 Designändringar kan krävas i händelse av oförutsedda problem. Dessutom bör alla ändringar dokumenteras fullständigt med orsaken för varje ändring. Här visas ett exempel som illustrerar vad en ändring kan vara:
 

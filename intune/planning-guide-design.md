@@ -1,15 +1,16 @@
 ---
 title: Skapa din Microsoft Intune-design
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Den här artikeln hjälper till att skapa en utformning för utformning och implementering av Microsoft Intune i molnet.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22af3d4de296d90a89bb3d812cab0e55983e786b
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 307895935e1cd6fe2489a4ee8ae03333ce97d55b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512727"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -108,7 +109,11 @@ Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.c
 
 ## <a name="choose-an-intune-deployment-option"></a>Välj ett alternativ för Intune-distribution
 
-Intune erbjuder två distributionsalternativ: fristående och hybrid. Fristående avser Intune-tjänsten när den körs i molnet, hybrid avser integrering av Intune med System Center Configuration Manager. Den här guiden är främst avsedd att användas med det fristående alternativet. [Bestäm vilket alternativ som passar dina affärsbehov](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Intune erbjuder två distributionsalternativ: fristående och hybrid. Fristående avser den Intune-tjänst som körs i molnet. Hybrid avser integreringen av Intune med System Center Configuration Manager. Den här guiden är främst avsedd att användas med det fristående alternativet. [Bestäm vilket alternativ som passar dina affärsbehov](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+
+> [!Important]
+>Registrering av nya hybrid-MDM-kunder är nu inaktuell. Mer information finns i blogginlägget [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+
 
 ## <a name="intune-tenant-location"></a>Plats för Intune-klient
 
@@ -133,7 +138,7 @@ Externa beroenden är tjänster och produkter som skiljer sig från Intune men s
 
 -   Public Key Infrastructure (PKI)
 
-Vi ska gå igenom dessa vanliga externa beroenden mer detaljerat nedan
+Nedan utforskar vi de här vanliga externa beroendena närmare.
 
 ### <a name="identity"></a>Identitet
 
@@ -399,11 +404,9 @@ Nedan visas ett exempel på hur du utformar en efterlevnadsprincip:
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för efterlevnadsprincipen.
 #### <a name="conditional-access-policies"></a>Villkorliga åtkomstprinciper
 
-Villkorlig åtkomst används för att endast tillåta att kompatibla enheter får åtkomst till e-post och andra företagsresurser. Intune fungerar med Enterprise Mobility + Security (EMS) för att styra åtkomst till företagets resurser. Du måste avgöra om villkorlig åtkomst är obligatorisk och vad som måste skyddas. Läs mer om [villkorlig åtkomst](conditional-access.md).
+Villkorlig åtkomst används för att endast tillåta att kompatibla enheter får åtkomst till e-post och andra företagsresurser. Intune fungerar med Enterprise Mobility + Security (EMS) för att styra åtkomst till företagets resurser. Avgör om du behöver villkorsstyrd och vad som måste skyddas. Läs mer om [villkorlig åtkomst](conditional-access.md).
 
-Vid onlineåtkomst fastställer du vilka plattformar och användargrupper som du riktar in villkorliga åtkomstprinciper på. Du måste även fastställa om du behöver installera eller konfigurera Intune Service-to-Service Connector för Exchange Online eller Exchange On-premises. Läs mer om att installera och konfigurera Intune Service-to-Service Connector: <!---these links are correct--->
-
--   [Exchange Online](exchange-service-connector-configure.md)
+Vid onlineåtkomst fastställer du vilka plattformar och användargrupper som du anger som mål för principer för villkorsstyrd åtkomst. Du behöver även fastställa huruvida du behöver installera eller konfigurera Intune-anslutningsappen för lokal Exchange: 
 
 -   [Exchange On-premises](exchange-connector-install.md)
 

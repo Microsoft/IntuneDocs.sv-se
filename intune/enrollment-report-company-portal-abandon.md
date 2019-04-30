@@ -1,48 +1,50 @@
 ---
-title: Avbrutna företagsportalsregistreringar i Intune
-titlesuffix: Microsoft Intune
-description: Lär dig mer om avbrutna företagsportalsregistreringar.
+title: Rapport om ofullständiga användarregistreringar i Intune
+titleSuffix: Microsoft Intune
+description: Läs mer om rapporten om ofullständiga användarregistreringar.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/20/2018
+ms.date: 2/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 44a6d89b649514a08193d7144dff7d89dc3d9c55
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 78d55ef2baf0608d22af53bf0803634700e01eb3
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505870"
 ---
-# <a name="company-portal-abandonment-report"></a>Rapport över avbrutna företagsportalsregistreringar
+# <a name="incomplete-user-enrollments-report"></a>Rapport om ofullständiga användarregistreringar
 
-Den här rapporten visar var under företagsportalsregistreringen som användare avbryter registreringsprocessen.
+Den här rapporten visar var under företagsportalsregistreringen som användare inte slutför registreringsprocessen.
 
-Visa rapporten genom att välja **Intune** > **Enhetsregistrering** > **Lämnade företagsportalsessioner**.
+Visa rapporten genom att välja **Intune** > **Enhetsregistrering** > **Ofullständiga användarregistreringar**.
 
-Med hjälp av den här informationen om avbrutna registreringar kan du uppdatera din hjälpdokumentation och underlätta för användarna att slutföra registreringen. Om du till exempel ser att många användare avbryter processen vid steget för användningsvillkoren kan du undersöka det området och göra det enklare för användarna.
+Med hjälp av den här informationen kan du uppdatera din hjälpdokumentation och underlätta för användarna att slutföra registreringen. Om du till exempel ser att många användare avbryter processen vid steget för användningsvillkoren kan du undersöka det området och göra det enklare för användarna.
 
-## <a name="what-is-abandonment"></a>Vad är en avbruten registrering?
+## <a name="what-is-an-incomplete-enrollment"></a>Vad är en ofullständig registrering?
 
-En avbruten registrering innebär att en användare gör något av följande:
+En ofullständig registrering innebär att en användare gör något av följande:
 
 -   Uttryckligen väljer en åtgärd för att avbryta registreringen
 -   Stänger företagsportalen under registreringen
 -   Låter det gå mer än 30 minuter mellan registreringsdelarna
 
-Om en användare väljer att avbryta registreringen och börjar om flera gånger, visas detta som flera försök och flera avbrutna registreringar. Om en användare väntar i 30 minuter mellan olika registreringsskärmar, betraktas det som flera avbrutna registreringar.
+Om en användare väljer att avbryta registreringen och börjar om flera gånger visas detta som flera försök och flera ofullständiga registreringar. Om en användare väntar i 30 minuter mellan olika registreringsskärmar betraktas det som flera ofullständiga registreringar.
 
 ## <a name="what-does-the-report-show"></a>Vad visar rapporten?
 
-Registreringsrapporterna innehåller data för iOS- och Android-enheter.
+Rapporterna innehåller data för iOS- och Android-enheter.
 
 Rapporterna visar data för de senaste två veckorna, men du kan filtrera rapporten och visa valfri period upp till 30 dagar bakåt i tiden.
 
@@ -50,15 +52,15 @@ Du kan filtrera efter datumintervall, operativsystem och registreringsdel genom 
 
 ### <a name="number-and-percentage-tiles"></a>Paneler för antal och procent
 
-Högst upp i rapporten kan du se antalet och procentandelen övergivna registreringar i förhållande till alla registreringar.
+Högst upp i rapporten kan du se antalet och procentandelen ofullständiga registreringar i förhållande till alla registreringar.
 
--   Påbörjade registreringar: Antal registreringsförsök.
--   Lämnade registreringar: Antal registreringsförsök som inte resulterade i en helt registrerad och kompatibel enhet.
--   Lämningsfrekvens: Antal övergivna registreringsförsök i procent (Lämnade registreringar / Påbörjade registreringar).
+-   Initierade registreringar: Antalet registreringsförsök.
+-   Ofullständiga registreringar: Det antal registreringsförsök som inte resulterade i en helt registrerad och kompatibel enhet.
+-   Frekvens ofullständiga: Den procentandel registreringsförsök som övergavs (Övergivna registreringar/Påbörjade registreringar).
 
 ### <a name="line-graph"></a>Linjediagram
 
-Linjediagrammet visar avbrutna registreringar per dag för var och en av de fyra primära registreringsavsnitten:
+Linjediagrammet visar dagliga ofullständiga registreringar för vart och ett av de fyra primära registreringsavsnitten:
 
 -   Checklista för konfiguration
 -   Plattformsskärmar
@@ -67,12 +69,12 @@ Linjediagrammet visar avbrutna registreringar per dag för var och en av de fyra
 
 ### <a name="user-abandonment-actions"></a>Avbrutna användaråtgärder
 
-Följande tabeller innehåller en lista med användaråtgärder som betraktas som avbrutna av användaren. Om du vill se exempel på registreringsskärmar kan du titta på videoinspelningarna om [iOS](https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment)- och [Android](https://channel9.msdn.com/Series/IntuneEnrollment/Android-Enrollment)-registrering. 
+Följande tabeller visar listan över användaråtgärder som betraktas som upphovsgivande till en ofullständig registrering. Om du vill se exempel på registreringsskärmar kan du titta på videoinspelningarna om [iOS](https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment)- och [Android](https://channel9.msdn.com/Series/IntuneEnrollment/Android-Enrollment)-registrering. 
 
 
 #### <a name="setup-checklist-section"></a>Avsnittet med checklistan för konfiguration
 
-| Namn på avbruten åtgärd | Skärm eller flöde | Plattform | Action |
+| Åtgärdsnamn | Skärm eller flöde | Plattform | Action |
 | ---- |---- |---- |---- |
 | EnrollmentWrapUp | Uppmaning om att öppna sidan på företagsportalen | iOS/Android | **Avbryt** |
 | EnrollmentWrapUp | Skärmen Registrerar enhet till slutet av **Läser in företagsresurser** | iOS/Android | Tog mer än 30 minuter |
@@ -82,7 +84,7 @@ Följande tabeller innehåller en lista med användaråtgärder som betraktas so
 
 #### <a name="platform-screens-section"></a>Avsnittet med plattformsskärmar
 
-| Namn på avbruten åtgärd | Skärm eller flöde | Plattform | Action |
+| Åtgärdsnamn | Skärm eller flöde | Plattform | Action |
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | Uppmaning om att visa en konfigurationsprofil | iOS | **Ignorera** |
 | iOSProfileLaunch | Skärmen Installera profil | iOS | **Avbryt** |
@@ -95,14 +97,14 @@ Följande tabeller innehåller en lista med användaråtgärder som betraktas so
 
 #### <a name="terms-of-use-section"></a>Avsnittet med användningsvillkor
 
-| Namn på avbruten åtgärd | Skärm eller flöde | Plattform | Action |
+| Åtgärdsnamn | Skärm eller flöde | Plattform | Action |
 | ---- |---- |---- |---- |
 | TermsofUse | Användningsvillkor (om administratören har konfigurerat det) | iOS/Android | **Avböj alla** |
 | TermsofUse | Användningsvillkor tills **Godkänn allt** | iOS/Android | Tog mer än 30 minuter |
 
 #### <a name="complianceactivation-section"></a>Avsnittet om efterlevnad/aktivering
 
-| Namn på avbruten åtgärd | Skärm eller flöde | Plattform | Action |
+| Åtgärdsnamn | Skärm eller flöde | Plattform | Action |
 | ---- |---- |---- |---- |
 | Efterlevnad | Enhetsefterlevnad (om administratören har konfigurerat det) visas som icke-grön vid åtkomstkonfiguration efter registreringen| iOS/Android | **Senarelägg** |
 | Efterlevnad | Enhetsefterlevnad visas som icke-grön tills den uppdaterats att visas som grön | iOS/Android | Tog mer än 30 minuter |
@@ -111,4 +113,4 @@ Följande tabeller innehåller en lista med användaråtgärder som betraktas so
 
 ## <a name="next-steps"></a>Nästa steg
 
-När du har granskat statistiken för avbrutna registreringar kan du gå igenom [registreringsalternativen](enrollment-options.md) och se om du kan göra några ändringar för att förbättra registreringen.
+När du har granskat statistiken för ofullständiga registreringar kan du gå igenom [registreringsalternativen](enrollment-options.md) och se om du kan göra några ändringar för att förbättra registreringen.

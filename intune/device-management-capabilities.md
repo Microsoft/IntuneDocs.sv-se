@@ -5,10 +5,11 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ROBOTS: NOINDEX,NOFOLLOW
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b5308eb1f9d83bcc9b9cbc29cac9bcf09356e77
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 293fa40b59d0005f60aad45a3fc42d3dd790857d
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57231952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61510154"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funktioner för hantering av registrerade enheter i Microsoft Intune
 
@@ -30,7 +31,7 @@ Med Microsoft Intune kan du hantera ett antal enheter genom att *registrera* dem
 
 Den här artikeln innehåller en fullständig lista över de funktioner du får när du registrerar enheter.
 
-Hantering, inventering, appdistribution, etablering och tillbakadragning hanteras via Intune-portalen.
+Hantering, inventering, appdistribution, etablering och tillbakadragning hanteras via Intune i Azure-portalen.
 
 Användare får tillgång till företagsportalen där de kan installera appar, registrera och avregistrera enheter och kontakta IT-avdelningen eller supportavdelningen.
 
@@ -42,7 +43,7 @@ Användare får tillgång till företagsportalen där de kan installera appar, r
 |--------------|-----------|--------------------|
 |Konfigurationsprinciper<br><br>Anpassade principer| Gör att du kan hantera många inställningar och funktioner på mobila enheter i organisationen. Du kan till exempel kräva ett lösenord, begränsa antalet lösenordsförsök, begränsa tiden tills skärmen låser sig, ställa in ett utgångsdatum för lösenord och förhindra återanvändningen av gamla lösenord. Du kan också styra användningen av maskin- och programvarufunktioner, till exempel kameran på enheten eller webbläsaren.<br><br>Använd anpassade principer när konfigurationsprinciperna saknar den inställning som du behöver. För iOS-enheter kan du importera inställningar som du har exporterat från verktyget Apple Configurator. För andra enheter kan du använda OMA-URI-inställningarna (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera inställningarna och funktioner på enheten.|[Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](device-compliance-get-started.md)|
 |Fjärrensning, fjärrlåsning och återställning av lösenord|Raderar känsliga data när en enhet tappas bort eller blir stulen. Exempel: du kan fjärrlåsa enheten, återställa den till fabriksinställningarna eller endast rensa företagsdata.<br><br>Du kan nollställa lösenord om användare förlorar åtkomst till sina enheter, låsa försvunna eller stulna enheter, eller till och med radera data från försvunna eller stulna enheter.|Skydda dina enheter med [fjärrlåsning](device-remote-lock.md) och [lösenordsåterställning](device-passcode-reset.md)|
-|Helskärmsläge|Gör att du kan låsa vissa funktioner i mobila enheter, till exempel skärmbild och strömbrytarens funktion. Du kan även begränsa enheterna till att kunna köra en enda app som du anger.|[Inställningar för iOS-konfigurationsprinciper i Microsoft Intune](device-restrictions-ios.md)|
+|Helskärmsläge|Gör att du kan låsa vissa funktioner i mobila enheter, till exempel skärmbild och strömbrytarens funktion. Du kan även begränsa enheterna till att kunna köra en enda app som du anger. |[Inställningar för iOS-konfigurationsprinciper i Microsoft Intune](device-restrictions-ios.md)|
 
 ## <a name="app-management"></a>Apphantering
 

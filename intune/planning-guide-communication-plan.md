@@ -1,27 +1,29 @@
 ---
 title: Utveckla en kommunikationsplan för distribution
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Den här artikeln hjälper dig att utveckla en kommunikationsplan för din Microsoft Intune-distribution.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 10/30/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 393ebe75-d001-485a-b81c-6361c8b5e6ee
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 013e2c6c10d5a545343c864b1b564acbede7c675
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6e3584d97bf9f1a223b15c986f398681a20520c1
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513298"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Utveckla en kommunikationsplan för distribution
 
@@ -55,7 +57,7 @@ Den här [registreringsguiden för användare](https://gallery.technet.microsoft
 
 Det finns flera leveransmetoder som kan användas för att förmedla information om Intune-distribution till de organisationsgrupper och användare du riktar in dig på. I följande lista visas några exempel och för vilken våg du kan använda metoden:
 
--   Organisationsomfattande personliga möten eller Skype-möten används för kickoff-vågen
+-   Organisationsomfattande personliga möten eller Microsoft Teams-möten används för kickoff-vågen
 
 -   E-post används för förregistrerings-, registrerings- och efterregistreringsvågorna
 

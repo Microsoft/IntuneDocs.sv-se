@@ -1,12 +1,12 @@
 ---
-title: Snabbstart – Skapa en efterlevnadsprincip för lösenord för Android-enheter
+title: Snabbstart – Efterlevnadsprincip för lösenord för Android-enheter
 titleSuffix: Microsoft Intune
 description: I den här snabbstarten använder du Microsoft Intune till att ange den lösenordslängd som krävs för Android-enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/15/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: e71a9a69cfc474f311bc6acd9e8f24c776a44476
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512784"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Snabbstart: Skapa en efterlevnadsprincip för lösenord för Android-enheter
 
@@ -32,7 +32,7 @@ I den här snabbstarten använder du Microsoft Intune för att ange att Android-
 En Intune-enhetsefterlevnadsprincip anger de regler och inställningar som enheter måste uppfylla för att anses vara kompatibla. Du kan använda efterlevnadsprinciper med villkorsstyrd åtkomst för att tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet.
 
 > [!IMPORTANT]
-> Förutom lösenordsinställningarna kan du också ange andra systemsäkerhetsinställningar som skyddar dina anställda. Mer information finns i [Inställningar för systemsäkerhet](compliance-policy-create-android-for-work.md#system-security-settings).
+> Förutom lösenordsinställningarna kan du också ange andra systemsäkerhetsinställningar som skyddar dina anställda. Mer information finns i [Inställningar för systemsäkerhet](compliance-policy-create-android-for-work.md).
 
 Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 

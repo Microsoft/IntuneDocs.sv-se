@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61510132"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -36,9 +37,9 @@ I den här artikeln beskrivs hur du kan konfigurera din infrastruktur och sedan 
 - **NDES-server**: På en Windows Server 2012 R2 eller senare konfigurerar du serverrollen Registreringstjänst för nätverksenheter (NDES). Intune stöder inte användning av registreringstjänsten för nätverksenheter på en server som även kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för NDES.
 NDES-servern måste vara ansluten till en domän i samma skog som företagscertifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector**: Ladda ned installationsprogrammet för **Certificate Connector** (**NDESConnectorSetup.exe**) från Intune-administrationsportalen. Du kör installationsprogrammet på servern med NDES-rollen.  
+- **Microsoft Intune Certificate Connector**: I Intune-portalen går du till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för SCEP*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet för certifikatanslutningsappen: **NDESConnectorSetup.exe**.  Du kör installationsprogrammet på servern med NDES-rollen.  
 
-  - NDES-certifikatanslutningsappen har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
+Den här NDES-certifikatanslutningsappen har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
 
 - **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som WAP-server (Web Application Proxy). Den här konfigurationen:
   - Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
@@ -298,12 +299,13 @@ I det här steget kommer du att:
 > Microsoft Intune Certificate Connector **måste** installeras på en separat Windows-server. Den kan inte installeras på den utfärdande certifikatutfärdaren (CA). Den **måste** också installeras på samma server som rollen Network Device Enrollment Service (NDES).
 
 1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-2. Välj **Enhetskonfiguration** > **Certifikatutfärdare** > **Lägg till**
-3. Hämta och spara anslutningsfilen. Spara den på en plats som är tillgänglig från servern där du ska installera anslutningsappen.
+2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**.
+3. Ladda ned och spara anslutningsappen för SCEP-filen. Spara den på en plats som är tillgänglig från servern där du ska installera anslutningsappen.
 
-    ![ConnectorDownload](./media/certificates-download-connector.png)
+   ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
-4. När nedladdningen är klar går du till den server som är värd för rollen Network Device Enrollment Service (NDES) (Registreringstjänst för nätverksenheter). Efter det:
+
+4. När nedladdningen är klar går du till den server som är värd för din registreringstjänst för nätverksenheter (NDES). Efter det:
 
     1. Se till att .NET 4.5 Framework är installerat, eftersom det krävs av NDES-certifikatanslutningsappen. .NET 4.5 framework ingår automatiskt i Windows Server 2012 R2 och senare versioner.
     2. Kör installationsprogrammet (**NDESConnectorSetup.exe**). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS.
@@ -323,7 +325,7 @@ I det här steget kommer du att:
     > [!TIP]
     > Om du stängt guiden innan du startade användargränssnittet kan du öppna det genom att skriva följande kommando:
     >
-    > <installationssökväg>\NDESConnectorUI\NDESConnectorUI.exe
+    > <install_Path>\NDESConnectorUI\NDESConnectorUI.exe
 
 7. I användargränssnittet för **certifikat connectorn** :
 
@@ -363,8 +365,8 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 5. Från listrutan **Profil** väljer du **SCEP-certifikat**.
 6. Ange följande inställningar:
 
-   - **Certifikattyp**: Välj **Användare** för användarcertifikat. Välj **Enhet** för användarlösa enheter, till exempel informationsdatorer. **Enhetscertifikat** är tillgängliga för följande plattformar:  
-     - Android enterprise
+   - **Certifikattyp**: Välj **Användare** för användarcertifikat. En certifikattyp av typen **Användare** kan innehålla både användarattribut och enhetsattribut i certifikatets ämne och SAN.  Välj **Enhet** för scenarier såsom användarlösa enheter, till exempel kiosker, eller för Windows-enheter, och placera certifikatet i certifikatarkivet för lokal dator. **Enhetscertifikat** kan endast innehålla enhetsattribut i certifikatets ämne och SAN.  **Enhetscertifikat** är tillgängliga för följande plattformar:  
+     - Android Enterprise – Arbetsprofil
      - iOS
      - macOS
      - Windows 8.1 och senare

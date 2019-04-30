@@ -1,28 +1,30 @@
 ---
 title: Starta en kampanj för Intune-migrering
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Den här artikeln innehåller anvisningar för hur du startar en migreringskampanj i Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f781b029-50f2-46ee-8ff7-03b4a6719e80
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: df26b0c752b14851876fd9ec42f0a2d2bfe76d91
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: db56bbc180a84e8b3972ffc6473126efd366faa8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508207"
 ---
-# <a name="phase-2-migration-campaign"></a>Steg 2: Migreringskampanj
+# <a name="phase-2-migration-campaign"></a>Fas 2: Migreringskampanj
 
 Välj den migreringsmetod som passar din organisations behov bäst och justera implementeringsstrategin baserat på dina specifika krav. Resten av den här guiden beskriver de verktyg som du behöver för att dina användares enheter ska kunna registreras i Intune.
 

@@ -1,32 +1,33 @@
 ---
-title: Installera Office 365-appar på enheter med Microsoft Intune
-titlesuffix: ''
-description: Läs mer om att använda Microsoft Intune för att underlätta installationen av Office 365-appar på Windows 10-enheter.
+title: Tilldela Office 365-appar till Windows 10-enheter med hjälp av Microsoft Intune
+titleSuffix: ''
+description: Lär dig hur du kan använda Microsoft Intune för installera Office 365-appar på Windows 10-enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
-ms.reviewer: aiwang
+ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3db1449ec583678924fadb0db930146c3cd848
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: c640e3e02d7d016785b87d681443b2c49f7a6281
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507145"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
-Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
+Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägga till dem till Intune. En av de tillgängliga [apptyperna](apps-add.md#app-types-in-microsoft-intune) är Office 365-appar för Windows 10-enheter. Genom att välja den här apptypen i Intune kan du tilldela och installera Office 365-appar på enheter som du hanterar och som kör Windows 10. Du kan även tilldela och installera appar för skrivbordsklienten för Microsoft Project Online och Microsoft Visio Online, abonnemang 2 om du har licenser för dessa. De tillgängliga Office 365-apparna visas som en enda post i listan med appar i Intune-konsolen i Azure.
 
 > [!NOTE]
 > Du måste använda Office 365 ProPlus-licenser för att kunna aktivera de Office 365 ProPlus-appar som distribueras via Microsoft Intune. Office 365 Business Edition stöds för närvarande inte av Intune.
@@ -54,18 +55,25 @@ Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som d
 5. Välj **Lägg till**.
 6. I fönstret **Lägg till appar** i listan **Apptyp** under **Office 365-paket** väljer du **Windows 10**.
 
-Nu kan du konfigurera app-paketet.
+## <a name="select-settings-format"></a>Välja inställningsformat
 
-## <a name="configure-the-app-suite"></a>Konfigurera app-paketet
+Du kan välja en metod för att konfigurera appinställningen genom att välja ett **inställningsformat**. Alternativen för inställningsformat omfattar:
+- Configuration Designer
+- Ange XML-data
 
-Välj de Office-appar som du vill tilldela till enheter.
+När du väljer **Configuration Designer** ändras bladet **Lägg till app** till att erbjuda ytterligare två alternativ för inställningar:
+- Konfigurera appsvit
+- Inställningar för appsvit
 
-1. I fönstret **Lägg till app** väljer du **Konfigurera appsvit**.
-2. I fönstret **Konfigurera appsvit** väljer du de standard-Office-appar som du vill tilldela till enheter.  
-    Dessutom kan du också installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa.
-3. Välj **OK**.
+<img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-## <a name="configure-app-information"></a>Konfigurera appinformation
+När du väljer **Ange XML-data** visar bladet **Lägg till app** alternativet **Ange XML-data**. Välj det här om du vill visa bladet **Konfigurationsfil**. 
+
+![Lägga till Office 365 Configuration Designer](./media/apps-add-office365/apps-add-office365-01.png)
+    
+Mer information om alternativet **Ange XML-data** finns i [Ange XML-data](apps-add-office365.md#enter-xml-format) nedan.
+
+## <a name="configure-app-suite-information"></a>Information om att konfigurera appsvit
 
 I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
 
@@ -84,9 +92,18 @@ I det här steget anger du information om appaketet. Den här informationen hjä
     - **Logotyp**: Office 365-logotypen visas med appen när användarna söker på företagsportalen.
 3. Välj **OK**.
 
-## <a name="configure-app-settings"></a>Konfigurera appinställningar
+## <a name="configure-app-suite"></a>Konfigurera appsvit
 
-Konfigurera installationsalternativ för app-paket i det här steget. Inställningarna tillämpas på alla appar som du har lagt till i serien.
+Om du valde alternativet **Configuration Designer** i listrutan **Inställningsformat** visas alternativet **Konfigurera appsvit** på bladet **Lägg till app**. Välj de Office-appar som du vill tilldela till enheter.
+
+1. I fönstret **Lägg till app** väljer du **Konfigurera appsvit**.
+2. I fönstret **Konfigurera appsvit** väljer du de standard-Office-appar som du vill tilldela till enheter.  
+    Dessutom kan du installera appar för skrivbordsklienten för Microsoft Project Online och Microsoft Visio Online, abonnemang 2 om du har licenser för dessa.
+3. Välj **OK**.
+
+## <a name="configure-app-suite-settings"></a>Konfigurera inställningar för appsvit
+
+Om du valde alternativet **Configuration Designer** i listrutan **Inställningsformat** visas alternativet **Inställningar för appsvit** på bladet **Lägg till app**. Konfigurera installationsalternativ för app-paket i det här steget. Inställningarna tillämpas på alla appar som du har lagt till i serien.
 
 1. Välj **Inställningar för appsvit** i fönstret **Lägg till app**.
 2. I fönstret **Inställningar för appsvit** gör du följande:
@@ -110,6 +127,10 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
     - **Använd aktivering av delade datorer**: Välj det här alternativet när flera användare delar en dator. Mer information finns i [översikt över delad aktivering för Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Språk**: Office installeras automatiskt på alla språk som stöds och som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet. <p></p>
     Du kan distribuera ytterligare språk för Office 365 Pro Plus-appar som hanteras via Intune. I listan med tillgängliga språk står även **typen** av språkpaket med (kärnspråk, delspråk och språkverktyg). Gå till Azure Portal och välj **Microsoft Intune** > **Klientappar** > **Appar** > **Lägg till**. I listan **Apptyp** på bladet **Lägg till app** väljer du **Windows 10** under **Office 365 Suite**. Välj **Språk** på bladet **Inställningar för appsviten**. Mer information finns i [översikten över språkdistribution i Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+
+## <a name="enter-xml-format"></a>Ange XML-format
+
+Om du valde alternativet **Ange XML-format** i listrutan **Inställningsformat** visas alternativet **Ange XML-format** på bladet **Lägg till app**. Mer information finns i [Konfigurationsalternativ för distributionsverktyget för Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="finish-up"></a>Slutför
 

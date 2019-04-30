@@ -9,18 +9,20 @@ ms.date: 05/30/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: 675e45a7f49a943cb57135c141a9331ba24fabe7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d43c999cf5dc90d62b9409e3c4565502b773ddf4
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508246"
 ---
 # <a name="microsoft-intune-service-description"></a>Beskrivning av Microsoft Intune-tjänsten
 
@@ -35,7 +37,7 @@ Intune är nära integrerat med Azure Active Directory (Azure AD) för identitet
 Mer information om hur du kan hantera enheter och appar samt skydda företagsdata med Intune finns i [Intune-dokumentationen](https://docs.microsoft.com/intune/).
 
 ## <a name="30-day-free-trial"></a>Kostnadsfri 30-dagars utvärderingsversion
-Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.
+Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.
 
 > [!NOTE]
 > Om din organisation redan har ett arbets- eller skolkonto för Microsoft Online Services och kanske kommer att fortsätta med den här Intune-prenumerationen i produktion efter det att utvärderingsperioden har löpt ut, väljer du alternativet **Logga in** på sidan Logga in och autentiserar med hjälp av din organisations globala administratörskonto. Den här åtgärden säkerställer att din Intune-utvärderingsversion länkar till det befintliga arbets- eller skolkontot.
@@ -57,7 +59,7 @@ Eftersom ekosystemet för hantering av mobila enheter ofta ändras med uppdateri
 
 - [Nyheter i Microsoft Intune](whats-new.md). Det här avsnittet uppdateras med månatliga tjänstuppdateringar och varje vecka när t.ex appar som företagsportalappen släpps.
 
-- Viktiga tjänsteuppdateringar tillkännages också i meddelandecentret för [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Om du installerar tillhörande [Office 365 Admin-mobilapp](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) kan du ta emot meddelanden på din mobila enhet. Läs mer om att arbeta med [Office 365-meddelandecenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Viktiga tjänsteuppdateringar tillkännages även i meddelandecentret för [Microsoft 365-administrationscentret](https://admin.microsoft.com/). Om du installerar tillhörande [Office 365 Admin-mobilapp](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) kan du ta emot meddelanden på din mobila enhet. Läs mer om att arbeta med [Office 365-meddelandecenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
     Några användbara tips:
 
@@ -76,7 +78,7 @@ Eftersom ekosystemet för hantering av mobila enheter ofta ändras med uppdateri
     - [Intunes supportblogg](https://blogs.technet.microsoft.com/intunesupport/)
 
 >[!Note]
->Du kan övervaka hälsotillståndet för Intune-tjänsten i den [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Välj **Tjänstens hälsa** i det vänstra fönstret. Du kan också använda [Office 365 Admin-mobilappen](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) om du vill kontrollera tjänstens hälsa.
+>Du kan övervaka hälsotillståndet för Intune-tjänsten i [Microsoft 365-administrationscentret](https://admin.microsoft.com). Välj **Tjänstens hälsa** i det vänstra fönstret. Du kan också använda [Office 365 Admin-mobilappen](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) om du vill kontrollera tjänstens hälsa.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Typer av meddelanden som Microsoft tillhandahåller om Intune-tjänsten
 
@@ -101,7 +103,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 - **Intune with System Center Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
 
 ## <a name="language-support"></a>Språkstöd
-Intune körs i Azure-portalen som stöder följande språk: kinesiska (förenklad), kinesiska (traditionell), tjeckiska, holländska, engelska, tyska, ungerska, italienska, japanska, portugisiska (Brasilien), portugisiska (Portugal), ryska, spanska, engelska, franska, koreanska, polska, svenska och turkiska.
+Intune körs i Azure-portalen, som stöder följande språk: kinesiska (förenklad), kinesiska (traditionell), tjeckiska, holländska, engelska, tyska, ungerska, italienska, japanska, portugisiska (Brasilien), portugisiska (Portugal), ryska, spanska, engelska, franska, koreanska, polska, svenska och turkiska.
 
 Intune-administrationskonsolen och mobilmiljöerna för användarna stöder danska, grekiska, finska, norska och rumänska, samt alla de språk som stöds av Azure Portal.
 

@@ -1,27 +1,29 @@
 ---
 title: Lägg till inbyggda appar på mobila enheter med Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Så här använder du Intune för att underlätta installation av inbyggda appar på mobila enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e3bb60d3d6bd7321ea3e378c747e87481b659888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5f46cd1295c9ecf593765cf26f4c8685eccbffa0
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61506839"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Lägg till inbyggda appar i Microsoft Intune
 
@@ -54,16 +56,16 @@ Du kan modifiera informationen om den inbyggda appen. Den här informationen hj�
 2. Under **Hantera**, välj alternativet **Egenskaper**.
 3. Välj alternativet **Konfigurera** för att ändra informationen om den inbyggda appen.
 4. I fönstret **Appinformation** kan du ändra följande information:
-    - **Namn**: Ange namnet på den inbyggda appen så som det visas på företagsportalen. Kontrollera att alla namn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
+    - **Namn**: Ange namnet på den inbyggda appen så som det visas i företagsportalen. Kontrollera att alla namn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. 
     - **Utgivare**: Ange namnet på appens utgivare.
-    - **Kategori**: Valfritt, välj en eller fler av de inbyggda appkategorierna. Om du konfigurerar det här alternativet blir det lättare för användarna att hitta appen när de söker på företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen**: Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Sekretess-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
+    - **Kategori**: Valfritt – välj en eller fler av de inbyggda appkategorierna. Om du konfigurerar det här alternativet blir det lättare för användarna att hitta appen när de söker på företagsportalen.
+    - **Visa denna som en aktuell app i företagsportalen**: Visa appen tydligt på huvudsidan för företagsportalen när användare söker efter appar.
+    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
+    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
     - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
-    - **Ägare** – Alternativt kan du ange ett namn på appägaren, (t.ex. *Personalavdelningen*).
-    - **Anteckningar**: Ange eventuella kommentarer som du vill koppla till den här appen.
+    - **Ägare**: Alternativt kan du ange ett namn på appens ägare (till exempel *HR-avdelningen*).
+    - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Ladda upp ikon**: Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
 4. Välj **OK**.
 5. I fönstret **Egenskaper** väljer du **Spara**.

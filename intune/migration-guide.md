@@ -1,26 +1,28 @@
 ---
 title: Migreringsguide för hantering av mobila enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Den här guiden leder dig genom de olika stegen för att migrera från en MDM-leverantör från tredje part till Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dcfc21f9-1bcd-4371-a46d-f2e18154ec50
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: bde445601b6fe3612a1a3d8bcab4f6996a997228
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e293140838cd772dea4cdf810623cfe92fa0fe9e
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512988"
 ---
 # <a name="intune-migration-guide"></a>Migreringsguide för Intune
 
@@ -34,7 +36,7 @@ Den här guiden leder dig genom de olika stegen för att migrera från en MDM-le
 
 Den här guiden delar in migreringen i två faser, som båda innehåller uppgifter, strategier och taktiska riktlinjer som hjälper dig att ta dig igenom alla steg i processen med att migrera till Intune MDM.
 
--   [Fas 1: Förbereda Intune för hantering av mobila enheter](migration-guide-prepare.md)
+-   [Fas 1: Förbered Intune för hantering av mobila enheter](migration-guide-prepare.md)
 
     -   [Utvärdera dina MDM-migreringskrav](migration-guide-prepare.md#assess-mdm-requirements)
 
@@ -46,7 +48,7 @@ Den här guiden delar in migreringen i två faser, som båda innehåller uppgift
 
     -   [Särskilda överväganden vid migrering](migration-guide-considerations.md)
 
--   [Steg 2: Migreringskampanjen](migration-guide-campaign.md)
+-   [Fas 2: Migreringskampanj](migration-guide-campaign.md)
 
     -   [Kommunikationsplan](migration-guide-communication-plan.md)
 
@@ -70,4 +72,4 @@ Det är viktigt att du är medveten om att den nya Intune-distributionen kan ski
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Fas 1: Förbereda Intune för hantering av mobila enheter](migration-guide-prepare.md)
+[Fas 1: Förbered Intune för hantering av mobila enheter](migration-guide-prepare.md)

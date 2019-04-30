@@ -1,27 +1,29 @@
 ---
 title: Lägga till grupper för att organisera användare och enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Lägg till grupper för att organisera användare och enheter efter geografi, avdelning eller maskinvaruegenskaper.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/13/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7a6fffaa0ae35675538d04b91980799d7d8aa80d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9e0e3994addf8722adc8606f20517bcd4aeb7acd
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61514096"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 Intune använder Azure Active Directory-grupper (AD) för att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
@@ -38,7 +40,7 @@ Använd följande anvisningar för att skapa en ny grupp.
 3. Gå till **Intune**-fönstret, välj **Grupper** och sedan **Ny grupp** i fönstret **Alla grupper**.
    ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add-new.png)
 4. Välj något av följande alternativ för **Grupptyp**:
-    - **Säkerhet**: Säkerhetsgrupper är en bra resurs att använda när du ska fylla i användargrupper. Eftersom säkerhetsgrupper definierar vem som har åtkomst till vilka resurser så kan de lätt överföras till Intune-användargrupper. Säkerhetsgrupper som synkroniseras från Active Directory till Azure Active Directory, eller som skapats direkt i Azure Active Directory via administrationscenter för Office 365 eller Azure-portalen, kan användas för att skapa användargrupper i Intune.
+    - **Säkerhet**: Säkerhetsgrupper är en bra resurs att använda när du ska fylla användargrupper. Eftersom säkerhetsgrupper definierar vem som har åtkomst till vilka resurser så kan de lätt överföras till Intune-användargrupper. Säkerhetsgrupper som synkroniseras från Active Directory till Azure Active Directory, eller som skapats direkt i Azure Active Directory via Microsoft 365-administrationscentret eller Azure-portalen, kan användas för att skapa användargrupper i Intune.
     - **Office 365**
 
 5. Skriv ett **Namn** och en **Beskrivning** för den nya gruppen. Egenskaperna visas endast i hanteringsportalen och inte för användarna.

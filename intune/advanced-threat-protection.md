@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afa2ef4cf1199597f61af99d631243e2d3b51e64
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 036f2ca8302f9b3c2d700a04918c4c49a4c6211a
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490576"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -109,12 +110,12 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 2. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
 3. Ange ett **Namn** och en **Beskrivning**.
 4. I **Plattform** väljer du **Windows 10 och senare**.
-5. Ställ in **Kräv att enheten ska hållas vid eller under riskpoängen** på önskad nivå i inställningarna för **Windows Defender ATP**:
+5. I inställningarna för **Windows Defender ATP** anger du **Kräv att enheten ska hållas vid eller under riskpoängen** till önskad nivå. Klassificeringar för hotnivå [bestäms av Windows Defender ATP](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
 
-  - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
-  - **Låg**: Enheten följer standard om det enbart finns hot på låg nivå på enheten. Enheter med medel- eller hög risk är inte kompatibla.
-  - **Medel**: Enheten följer standard om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-  - **Hög**: Den här nivån är den minst säkra och tillåter alla hotnivåer. Så enheter med höga, medel eller låga risknivåer anses uppfylla kraven.
+   - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel. (Windows Defender ATP använder värdet *Säkert*.)
+   - **Låg**: Enheten följer standard om det enbart finns hot på låg nivå på enheten. Enheter med medel- eller hög risk är inte kompatibla.
+   - **Medel**: Enheten följer standard om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
+   - **Hög**: Den här nivån är den minst säkra och tillåter alla hotnivåer. Så enheter med höga, medel eller låga risknivåer anses uppfylla kraven.
 
 6. Välj **OK** och **Skapa** för att spara ändringarna (och skapar profilen).
 
@@ -126,10 +127,13 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 4. Inkludera eller exkludera dina Azure AD-grupper för att tilldela dem till principen.
 5. Om du vill distribuera principen till grupper, välj **Spara**. Användarenheterna som principen är inriktad på kommer att utvärderas för att se om de följer standard.
 
-## <a name="create-an-azure-ad-conditional-access-policy"></a>Skapa en princip för villkorlig åtkomst för Azure AD
-Principen för villkorlig åtkomst blockerar åtkomsten till resurser *om* enheten inte är kompatibel. Om en enhet överstiger hotnivån, kan du blockera åtkomst till företagets resurser, såsom SharePoint eller Exchange Online.
+## <a name="create-a-conditional-access-policy"></a>Skapa en princip för villkorlig åtkomst
+Principen för villkorlig åtkomst blockerar åtkomsten till resurser *om* enheten inte är kompatibel. Om en enhet överstiger hotnivån, kan du blockera åtkomst till företagets resurser, såsom SharePoint eller Exchange Online.  
 
-1. I [Azure Portal](https://portal.azure.com) öppnar du **Azure Active Directory** > **Villkorlig åtkomst** > **Ny princip**.
+> [!TIP]  
+> Villkorsstyrd åtkomst är en Azure Active Directory-teknik (Azure AD). Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
+
+1. I [Azure-portalen](https://portal.azure.com) öppnar du **Intune** > **Villkorsstyrd åtkomst** > **Ny princip**.
 2. Ange ett **Namn** på principen och välj **Användare och grupper**. Använd inkludera eller exkludera alternativ för att lägga till grupper för principen och välj **Klar**.
 3. Välj **Molnappar**, och välj vilka appar som ska skyddas. Välj t.ex. **Välj appar**, och välj **Office 365 SharePoint Online** och **Office 365 Exchange Online**.
 

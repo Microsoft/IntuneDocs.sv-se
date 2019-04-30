@@ -5,26 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2019
-ms.topic: article
+ms.date: 03/18/2019
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4f93ab1cd2c662cb97dafd19684b353268087f6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: fb33a1207e165323de2e82467c7a0dd5239d9713
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507384"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Skicka data till lagring, händelsehubbar eller logganalys i Intune (förhandsversion)
 
-Microsoft Intune innehåller inbyggda loggarna som innehåller information om din miljö. **Granskningsloggar** visar information om olika händelser eller aktiviteter som sker i Intune. **Driftloggar (förhandsversion)** visar information om användare och enheter som har registrerats korrekt (eller misslyckats).
+Microsoft Intune innehåller inbyggda loggarna som innehåller information om din miljö. **Granskningsloggar** visar information om olika händelser eller aktiviteter som sker i Intune. **Arbetsloggar (förhandsversion)** visar information om användare och enheter som har registrerats korrekt (eller misslyckats) samt information om inkompatibla enheter.
 
 Dessa loggar kan också skickas till Azure Monitor-tjänster, inklusive lagringskonton, händelsehubbar och logganalyser. Mer specifikt kan du:
 
@@ -33,7 +34,7 @@ Dessa loggar kan också skickas till Azure Monitor-tjänster, inklusive lagrings
 * Integrera Intune-loggarna med dina egna anpassade logglösningar genom att strömma dem till en händelsehubb.
 * Skicka Intune-loggarna till Log Analytics för att aktivera kraftfulla visualiseringar, övervakning och avisering för anslutna data.
 
-Dessa funktioner är en del av **diagnostikinställningarna** i Intune. 
+Dessa funktioner är en del av **diagnostikinställningarna** i Intune.
 
 Den här artikeln visar hur du använder **diagnostikinställningar** för att skicka data till olika tjänster, ger exempel och uppskattade kostnader och innehåller några vanliga frågor och svar.
 
@@ -82,7 +83,7 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
 
       Om du väljer att använda ett lagringskonto, ange då också hur många dagar som du vill behålla data (kvarhållning). Om du vill behålla data alltid ange **Kvarhållning (dagar)** till `0` (noll).
 
-    - **LOG** > **OperationalLogs**: Driftloggar (förhandsversion) visar framgång eller misslyckande för användare och enheter som registreras i Intune. Välj det här alternativet för att skicka registreringsloggarna till ditt lagringskonto, händelsehubb eller logganalys.
+    - **LOG** > **OperationalLogs**: Arbetsloggar (förhandsversion) visar framgång eller misslyckande för användare och enheter som registreras i Intune samt information om inkompatibla enheter. Välj det här alternativet för att skicka registreringsloggarna till ditt lagringskonto, händelsehubb eller logganalys.
 
       Om du väljer att använda ett lagringskonto, ange då också hur många dagar som du vill behålla data (kvarhållning). Om du vill behålla data alltid ange **Kvarhållning (dagar)** till `0` (noll).
 
@@ -94,6 +95,19 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
     ![Exempelbild som skickar Intune-granskningsloggar till ett Azure storage-konto](media/diagnostics-settings-example.png)
 
 4. **Spara** ändringarna. Inställningarna visas i listan. När den har skapats kan du ändra inställningarna genom att välja **Redigera inställning** > **Spara**.
+
+## <a name="use-audit-logs-throughout-intune"></a>Använda spårningsloggar i Intune
+
+Du kan även exportera spårningsloggar i andra delar av Intune, däribland registrering, efterlevnad, konfiguration, enheter, klientappar och mer.
+
+Så här exporterar du till exempel spårningsloggarna vid användning av enhetsefterlevnad:
+
+1. I [Azure-portalen](https://portal.azure.com/) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+2. Välj **Enhetsefterlevnad** > **Övervaka** > **Spårningsloggar**:
+
+    ![Välj spårningslogg för att dirigera Intune-data till Azure Monitor-lagring, händelsehubbar eller analys](media/audit-logs-under-monitor-in-compliance.png)
+
+3. Välj **Inställningar för exportera data**. Om det inte är aktiverat kan du aktivera **Diagnostikinställningar**. Du kan även välja att skicka loggarna enligt beskrivningen i [skicka loggar till Azure Monitor](#send-logs-to-azure-monitor) (i den här artikeln).
 
 ## <a name="cost-considerations"></a>Kostnadsöverväganden
 

@@ -1,27 +1,29 @@
 ---
 title: Intunes integrationsprocess
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Den här artikeln hjälper dig med alla detaljer som ska övervägas vid registreringen av en Microsoft Intune-molnlösning i din miljö.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d5c1fb2b6b20c9687418e14f8e35543c04833a25
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9cd9f14d48c86119acf862e2d335fe88fb2a9a1c
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513978"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementera din Microsoft Intune-plan
 
@@ -58,13 +60,13 @@ Som vi redan nämnt i avsnittet för Intune-krav ovan behöver du en EMS- eller 
 
 -   Läs mer om att [köpa Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### <a name="task-2-add-office-365-subscription"></a>Åtgärd 2: Lägga till Office 365-prenumeration
+### <a name="task-2-add-office-365-subscription"></a>Uppgift 2: Lägga till Office 365-prenumeration
 
 Det här är valfritt. Du behöver en Office 365-prenumeration om du ska använda Exchange Online och hantera Office-mobilappar med appskyddsprinciper. Om din organisation inte har någon Office 365-prenumeration kontaktar du Microsoft eller ditt Microsoft-kontoteam för information om hur du köper Office 365.
 
 -   Läs mer om att [köpa Office 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
-### <a name="task-3-add-users-groups-in-azure-ad"></a>Åtgärd 3: Lägga till användargrupper i Azure AD
+### <a name="task-3-add-users-groups-in-azure-ad"></a>Uppgift 3: Lägga till användargrupper i Azure AD
 
 Du kan behöva lägga till användare eller säkerhetsgrupper i Active Directory eller Azure Active Directory beroende på dina användningsfallsscenarier och krav för Intune-distributionen. Se över dina aktuella användare och säkerhetsgrupper i Active Directory eller Azure Active Directory och kontrollera om de uppfyller alla behov. När du lägger till nya användare och säkerhetsgrupper rekommenderar vi att du lägger till dem i Active Directory och synkroniserar med Azure Active Directory med hjälp av Azure AD Connect.
 
@@ -74,61 +76,61 @@ Du kan behöva lägga till användare eller säkerhetsgrupper i Active Directory
 
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Åtgärd 4: Tilldela Intune- och Office 365-användarlicenser
+### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Uppgift 4: Tilldela Intune- och Office 365-användarlicenser
 
-Alla användare som EMS/Intune- och Office 365-distributionen ska omfatta måste ha en tilldelad licens. Du kan tilldela EMS/Intune- och Office 365-licenser på portalen för administrationscenter för Office 365.
+Alla användare som EMS/Intune- och Office 365-distributionen ska omfatta måste ha en tilldelad licens. Du kan tilldela EMS/Intune- och Office 365-licenser i Microsoft 365-administrationscentret.
 
 -   Läs mer om att [tilldela Intune-licenser](licenses-assign.md).
 
-### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>Åtgärd 5: Ange Intune som utfärdare för hantering av mobila enheter
+### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>Uppgift 5: Ange auktoritet för hantering av mobilenheter till Intune
 
 Innan du kan börja installera, konfigurera, hantera och registrera enheter med Intune måste du ange Intune som enhetshanteringsutfärdare.
 
 -   Läs mer om [hur du anger utfärdare för hantering av enheter](mdm-authority-set.md).
 
-### <a name="task-6-enable-device-platforms"></a>Åtgärd 6: Aktivera enhetsplattformar
+### <a name="task-6-enable-device-platforms"></a>Uppgift 6: Aktivera enhetsplattformar
 
 De flesta enhetsplattformar är aktiverade som standard, förutom Apple-enheter (iOS och Mac). Innan iOS-enheter kan registreras och hanteras i Intune måste enhetsplattformen vara aktiverad. Om du vill aktivera dessa enheter måste du skapa ett MDM-pushcertifikat och lägga till det i Intune.
 
 -   Läs mer om [hur du aktiverar Apple-enheter för registrering](apple-mdm-push-certificate-get.md).
 
-### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>Åtgärd 7: Lägga till och distribuera principer för villkor
+### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>Uppgift 7: Lägga till och distribuera villkorsprinciper
 
 Intune stöder villkorsprinciper. Lägg till villkorsprinciper efter behov och distribuera dem till målgrupperna baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om att [lägga till och distribuera principer för villkor](terms-and-conditions-create.md).
 
-### <a name="task-8-add-and-deploy-configuration-policies"></a>Åtgärd 8: Lägga till och distribuera konfigurationsprinciper
+### <a name="task-8-add-and-deploy-configuration-policies"></a>Uppgift 8: Lägga till och distribuera konfigurationsprinciper
 
 Intune stöder två typer av konfigurationsprinciper: allmänna och anpassade. Lägg till konfigurationsprinciper efter behov och distribuera dem till målgrupperna baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om att [lägga till och distribuera konfigurationsprinciper](device-profiles.md).
 
-### <a name="task-9-add-and-deploy-resource-profiles"></a>Åtgärd 9: Lägga till och distribuera resursprofiler
+### <a name="task-9-add-and-deploy-resource-profiles"></a>Uppgift 9: Lägga till och distribuera resursprofiler
 
 Intune stöder e-post-, Wi-Fi- och VPN-profiler. Lägg till dessa profiler efter behov och distribuera dem till målgrupperna baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om [hur du ger åtkomst till företagsresurser med Intune](device-profiles.md).
 
-### <a name="task-10-add-and-deploy-apps"></a>Åtgärd 10: Lägga till och distribuera appar
+### <a name="task-10-add-and-deploy-apps"></a>Uppgift 10: Lägg till och distribuera appar
 
 Intune stöder distribution av webbappar, verksamhetsspecifika appar och offentliga Store-appar. Du kan också hantera appar som har integrerat Intune SDK genom att associera dem med appskyddsprinciper. Lägg till appar efter behov och distribuera dem till målgrupperna baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om [hur du lägger till och distribuerar appar](app-management.md).
 
-### <a name="task-11-add-and-deploy-compliance-policies"></a>Åtgärd 11: Lägga till och distribuera efterlevnadsprinciper
+### <a name="task-11-add-and-deploy-compliance-policies"></a>Uppgift 11: Lägga till och distribuera efterlevnadsprinciper
 
 Intune stöder efterlevnadspolicyer. Lägg till efterlevnadsprinciper efter behov och distribuera dem till målgrupperna baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om [efterlevnadsprinciper](device-compliance.md).
 
-### <a name="task-12-enable-conditional-access-policies"></a>Åtgärd 12: Aktivera principer för villkorlig åtkomst
+### <a name="task-12-enable-conditional-access-policies"></a>Uppgift 12: Aktivera principer för villkorsstyrd åtkomst
 
 Intune stöder villkorlig åtkomst för Exchange Online, Exchange On-premises, SharePoint Online, Skype för företag – Online och Dynamics CRM Online. Aktivera och konfigurera villkorlig åtkomst efter behov baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om [villkorlig åtkomst](conditional-access.md).
 
-### <a name="task-13-enroll-devices"></a>Åtgärd 13: Registrera enheter
+### <a name="task-13-enroll-devices"></a>Uppgift 13: Registrera enheter
 
 Intune stöder enhetsplattformarna iOS, Mac OS, Android, Windows och Windows Mobile. Registrera mobila enhetsplattformar efter behov baserat på användningsfall och krav för Intune-distributionen.
 

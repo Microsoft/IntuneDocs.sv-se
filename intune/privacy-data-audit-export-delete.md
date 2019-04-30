@@ -9,6 +9,7 @@ ms.date: 05/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76e0c411afe1fb4e32b26c6ad669cb91b6cd3336
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 5a253894e400e4b63de40d2d8ef56cefef5b2ca0
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512818"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Granska, exportera eller ta bort personliga data i Intune
 
@@ -79,6 +80,9 @@ När du har en hybrid-MDM-miljö (Intune integrerat med Configuration Manager) m
 1. Ta bort användaren från din lokala Azure Active Directory (AD). Detta förhindrar att användaren synkroniseras till Azure AD och identifieras av Configuration Manager-identifiering. 
 2. Ta bort användaren från Configuration Manager-konsolen för att ta bort användaren och associerade data från Configuration Manager. I konsolen går du till **Tillgångar och efterlevnad** > **Användare**, högerklickar på användaren för att ta bort och klickar på **Ta bort**.
 3. [Ta bort användaren från AAD](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad), som tar bort användaren och associerade data från både Azure Active Directory och Intune på samma gång. När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
+
+> [!Important]
+>Registrering av nya hybrid-MDM-kunder är nu inaktuell. Mer information finns i blogginlägget [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
 
 ## <a name="next-steps"></a>Nästa steg
 

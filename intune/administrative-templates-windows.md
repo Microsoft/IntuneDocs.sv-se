@@ -5,37 +5,35 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
-ms.topic: article
+ms.date: 02/27/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36076aab02f16937066cb3d47d573f7c74dd6277
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 704abe5e03410b52d54c7729e1832e527ae4dfb6
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504324"
 ---
-# <a name="windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
+# <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
 
 När du hanterar enheter i organisationen är det bra att skapa en grupp med inställningar som tillämpas på olika enhetsgrupper. Anta att du har flera enhetsgrupper. För grupp A vill du tilldela en viss uppsättning inställningar. För grupp B vill du tilldela en annan uppsättning inställningar. Du vill även ha en enkel vy över de inställningar du kan konfigurera.
 
-Du kan slutföra den här uppgiften med **Administrativa mallar** i Microsoft Intune. De administrativa mallarna innehåller hundratals inställningar som styr funktionerna i Internet Explorer, Microsoft Office-program, fjärrskrivbord, åtkomst till OneDrive, använda ett bildlösenord eller en PIN-kod för att logga in med mera. Mallarna liknar grupprincipinställningar i Active Directory (AD) och är [ADMX-baserade inställningar](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) som använder XML. Men mallarna i Intune är 100 % molnbaserade. De ger ett enklare och rakare sätt att konfigurera inställningarna på, och hittar de inställningar du vill ha.
+Du kan slutföra den här uppgiften med **Administrativa mallar** i Microsoft Intune. De administrativa mallarna innehåller hundratals inställningar som styr funktionerna i Internet Explorer, Microsoft Office-program, fjärrskrivbord, åtkomst till OneDrive, använda ett bildlösenord eller en PIN-kod för att logga in med mera. Mallarna liknar grupprincipinställningar (GPO) i Active Directory (AD) och är [ADMX-baserade inställningar](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (öppnar en annan Docs-webbplats) som använder XML. Men mallarna i Intune är 100 % molnbaserade. De ger ett enklare och rakare sätt att konfigurera inställningarna på, och hittar de inställningar du vill ha.
 
 **Administrativa mallar** är inbyggda i Intune och kräver inga anpassningar, inklusive användning av OMA-URI. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa mallinställningar som en heltäckande funktion för hantering av dina Windows 10-enheter.
 
 Den här artikeln listar stegen för att skapa en mall för Windows 10-enheter och visar hur du filtrerar alla tillgängliga inställningar i Microsoft Intune. När du skapar mallen skapar den en enhetskonfigurationsprofil. Du kan sedan tilldela eller distribuera profilen till Windows 10-enheter i din organisation.
 
-> [!NOTE]
-> Administrativa mallar stöds för fristående enheter. De stöds för närvarande inte för enheter som samhanteras med System Center Configuration Manager (SCCM).
-
-## <a name="create-a-template"></a>Skapar en mall
+## <a name="create-a-template"></a>Skapa en mall
 
 1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
@@ -75,6 +73,8 @@ Det finns hundratals inställningar tillgängliga i dessa mallar. För att göra
   ![Klicka på Sökväg för att sortera alfabetiskt](./media/administrative-templates-windows/search-copy-settings.png)
 
   I ett annat exempel söker du efter `microsoft word`. Du ser alla inställningar du kan ange för Microsoft Word-programmet. Sök efter `explorer` om du vill se alla Internet Explorer-inställningar du kan lägga till i mallen.
+
+Den här funktionen använder [CSP:er för Windows-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (öppnar en annan Docs-webbplats). CSP:er fungerar i olika utgåvor av Windows, till exempel Home, Professional, Enterprise och så vidare. Om du vill se om en CSP fungerar i en viss version går du till [CSP:er för Windows-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (öppnar en annan Docs-webbplats).
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -2,24 +2,26 @@
 title: Fjärradministrera enheter i Microsoft Intune – Azure | Microsoft Docs
 description: Se vilka roller krävs för att använda TeamViewer, hur du installerar TeamViewer-anslutningsprogrammet och stegvisa anvisningar för hur du fjärradministrerar enheter med Microsoft Intune i Azure Portal
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2018
-ms.topic: article
+ms.date: 02/05/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7cb7c23e673c9e0c074f45991333fde9bfc8e930
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dd2d9f0a0caf87eb75ba3a9cdc123e69425ceb8b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509742"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
@@ -32,9 +34,9 @@ Enheter som hanteras av Intune kan fjärradministreras med hjälp av [TeamViewer
 - Intune-administratören i Azure Portal måste ha följande [Intune-roller](role-based-access-control.md):  
 
     - **Uppdatera fjärrhjälp**: Gör att administratörer kan ändra inställningarna för TeamViewer-anslutningsprogrammet
-    - **Begär fjärrhjälp**: Gör att administratörer kan starta en ny fjärrhjälpsession för alla användare. Användare med den här rollen begränsas inte av någon Intune-roll inom ett omfång. Dessutom kan användare eller enhetsgrupper som tilldelats en Intune-roll i ett omfång också begära fjärrhjälp. 
+    - **Begär fjärrhjälp**: Gör att administratörer kan starta en ny fjärrhjälpssession för alla användare. Användare med den här rollen begränsas inte av någon Intune-roll inom ett omfång. Dessutom kan användare eller enhetsgrupper som tilldelats en Intune-roll i ett omfång också begära fjärrhjälp. 
 
-- Ett [TeamViewer](https://www.teamviewer.com)-konto med autentiseringsuppgifter för inloggning
+- Ett [TeamViewer](https://www.teamviewer.com)-konto med autentiseringsuppgifter för inloggning. Endast vissa TeamViewer-licenser kan stödja integrering med Intune. Särskilda krav för TeamViewer beskrivs i [TeamViewer-integreringspartner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 
 Genom att använda TeamViewer tillåter du att TeamViewer för Intune-anslutningsprogrammet kan skapa TeamViewer-sessioner, läsa Active Directory-data och spara TeamViewer-kontots åtkomsttoken.
 

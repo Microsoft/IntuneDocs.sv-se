@@ -1,33 +1,34 @@
 ---
 title: Konfigurera enhetsbaserad villkorsstyrd åtkomst med Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Lär dig att skapa principer för enhetsbaserad villkorsstyrd åtkomst, baserat på Microsoft Intune enhetens efterlevnad och hantering av mobilappar.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03ca9a65d5a62c75c45541b42c9b2aa5c4871a18
-ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
+ms.openlocfilehash: aaf9b82bc810dd3a616eb25f39f4b5830b1c3e6f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508688"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Skapa en princip för enhetsbaserad villkorsstyrd åtkomst
 
-Med Intune kan du förbättra villkorsstyrd åtkomst i Azure Active Directory genom att lägga till efterlevnad för mobila enheter i åtkomstkontrollerna. När du har skapat en efterlevnadsprincip i Intune som definierar att kraven för enheterna ska vara kompatibla, kan du använda en enhetsefterlevnadsstatus som antingen tillåter eller blockerar åtkomst till dina appar och tjänster. Du kan göra detta genom att skapa en princip för villkorsstyrd åtkomst som använder inställningen **Kräv att enheten är markerad som kompatibel**. 
+Med Intune kan du förbättra villkorsstyrd åtkomst i Azure Active Directory genom att lägga till efterlevnad för mobila enheter i åtkomstkontrollerna. När du har skapat en efterlevnadsprincip i Intune som definierar att kraven för enheterna ska vara kompatibla, kan du använda en enhetsefterlevnadsstatus som antingen tillåter eller blockerar åtkomst till dina appar och tjänster. Du kan göra detta genom att skapa en princip för villkorsstyrd åtkomst som använder inställningen **Kräv att enheten är markerad som kompatibel**.  
 
-En villkorsstyrd åtkomstprincip anger de appar eller tjänster som du vill skydda, de villkor under vilka appar eller tjänster kan nås och vilka användare som principen gäller för. Villkorsstyrd åtkomst är en premiumfunktion som kan konfigureras i Azure Active Directory, men du kan också ange samma principer från Intune-portalen. 
+En villkorsstyrd åtkomstprincip anger de appar eller tjänster som du vill skydda, de villkor under vilka appar eller tjänster kan nås och vilka användare som principen gäller för. Villkorsstyrd åtkomst är en premiumfunktion som kan konfigureras i Azure Active Directory, men du kan också ange samma principer från Intune-portalen. Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
 
 > [!IMPORTANT]
 > Innan du konfigurerar villkorsstyrd åtkomst måste du konfigurera Intunes principer för enhetsefterlevnad till att utvärdera enheter baserat på om de uppfyller specifika krav. Se [Komma igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md).

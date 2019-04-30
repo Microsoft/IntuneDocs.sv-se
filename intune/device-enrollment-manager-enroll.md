@@ -1,6 +1,6 @@
 ---
 title: Registrera enheter med ett konto för enhetsregistreringshanteraren
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Använda kontot för enhetsregistreringshanteraren för att registrera flera enheter i Intune.
 keywords: ''
 author: ErikjeMS
@@ -10,6 +10,7 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a12d162b9877bbbc73ecbcc7bb2ed2f1e0095b9e
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 6bb3289bf2136506903d1fefe6c5170580a6fc11
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509841"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrera enheter i Intune med ett konto för enhetsregistreringshanteraren
 
@@ -32,12 +33,14 @@ Du kan registrera upp till 1 000 mobila enheter med ett enda Azure Active Direc
 
 DEM-användarkonton och enheter som har registrerats med ett DEM-användarkonto har följande begränsningar:
 
+  - En DEM-kontoanvändare måste tilldelas en Intune-licens.
   - Rensning kan inte utföras från företagsportalen. Rensning av en enhet som har registrerats med ett DEM-användarkonto kan göras från Intune på Azure-portalen.
   - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
   - DEM-användarkonton kan inte använda apparna för Apples volymköpsprogram (VPP) med Apple VPP-användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
   - Enheter kan installera VPP-appar om de har Apple VPP-enhetslicenser.
   - Enheter har blockerats för villkorlig åtkomst med undantag för Windows 10 1803+
-  - Varje enhet som registrerats med ett DEM-konto måste ha en egen enhetslicens för Intune.
+  - Alla enheter som registreras med DEM-konton måste vara korrekt licensierade för att hanteras av Intune. Licensen kan vara en Intune-användarlicens eller en Intune-enhetslicens.
+
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare

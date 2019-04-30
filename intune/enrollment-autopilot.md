@@ -10,6 +10,7 @@ ms.date: 10/5/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 ms.reviewer: angerobe
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f9b0cb07e6dcf192aa25c13e8637934c46d6799
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513126"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -102,6 +103,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 2. Välj **Tilldelningar** på det specifika profilbladet. 
 3. Välj **Välj grupper**, sedan väljer du de grupper som du vill tilldela appen på bladet **Välj grupper** och slutligen väljer du **Välj**.
 
+
 > [!NOTE]
 > Intune söker regelbundet efter nya enheter i de tilldelade grupperna och påbörjar sedan processen med att tilldela profiler till dessa enheter. Det kan ta flera minuter att slutföra processen. Se till att processen har slutförs innan du distribuerar en enhet.  Du kan kontrollera detta under **Enhetsregistrering** > **Windows-registrering ** > **Enheter**, där du bör se att profilstatusen ändras från ”Ej tilldelad” till ”Tilldelar” och slutligen ”Tilldelad”.
 
@@ -117,7 +119,7 @@ När du har skapat en Autopilot-distributionsprofil kan du redigera vissa delar 
 > [!NOTE]
 > Ändringar i profilen tillämpas på enheter som är tilldelade till profilen. Den uppdaterade profilen tillämpas emellertid inte på enheter som redan har registrerats i Intune förrän enheten har återställts och omregistrerats.
 
-## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Aviseringar för otilldelade Windows Autopilot-enheter <!-- 163236 -->  
+## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Aviseringar för otilldelade Windows Autopilot-enheter  <!-- 163236 -->  
 
 Aviseringar visar hur många Autopilot-programenheter som inte har Autopilot-distributionsprofiler. Använd informationen i aviseringen för att skapa profiler och tilldela dem till de otilldelade enheterna. När du klickar på aviseringen visas en fullständig lista över Windows Autopilot-enheter och detaljerad information om dem.
 

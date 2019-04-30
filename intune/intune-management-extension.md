@@ -1,14 +1,15 @@
 ---
-title: Lägga till PowerShell-skript i Microsoft Intune för Windows 10-enheter – Azure | Microsoft Docs
-description: Lägg till PowerShell-skript, tilldela skriptprincipen till Azure Active Directory-grupper, övervaka skripten med hjälp av rapporter och följ stegvisa anvisningar för att ta bort skript som du lägger till för Windows 10-enheter i Microsoft Intune. Se även vissa vanliga problem och lösningar.
+title: Lägga till PowerShell-skript till Windows 10-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa och kör PowerShell-skript, tilldela skriptprincipen till Azure Active Directory-grupper, övervaka skripten med hjälp av rapporter och följ stegvisa anvisningar för att ta bort skript som du lägger till för Windows 10-enheter i Microsoft Intune. Se även vissa vanliga problem och lösningar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2018
-ms.topic: article
+ms.date: 04/03/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
@@ -16,20 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 573ca3aa10094e61165d297730d556e2ef559767
-ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
+ms.openlocfilehash: 66a23b75913f6465064a988bd8f2ba9c2b4c36d6
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56302191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61514147"
 ---
-# <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
+# <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Använda PowerShell-skript på Windows 10-enheter i Intune
 
-Använd Intunes hanteringstillägg till att ladda upp PowerShell-skript i Intune för att köra på Windows 10-enheter. Hanteringstillägget förbättrar hanteringen av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att övergå till modern hantering.
+Använd Microsoft Intune-hanteringstillägget för att ladda upp PowerShell-skript i Intune till att köras på Windows 10-enheter. Hanteringstillägget förbättrar hanteringen av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att övergå till modern hantering.
 
-## <a name="moving-to-modern-management"></a>Flytta till modern hantering
+Den här funktionen gäller för:
 
-Slutanvändarens databehandling genomgår en digital transformation. Klassisk, traditionell IT fokuserar på en enskild enhetsplattform, företagsägda enheter, användare som arbetar från kontoret och en mängd manuella, reaktiva IT-processer. En modern arbetsplats använder många plattformar som både är användarägda och företagsägda, vilket innebär att användarna kan arbeta från valfri plats och har åtkomst till automatiska och proaktiva IT-processer.
+- Windows 10 och senare
+
+## <a name="move-to-modern-management"></a>Övergå till modern hantering
+
+Slutanvändarens databehandling genomgår en digital transformation. Klassisk, traditionell IT fokuserar på en enskild enhetsplattform, företagsägda enheter, användare som arbetar från kontoret och olika manuella, reaktiva IT-processer. En modern arbetsplats använder många plattformar som både är användarägda och företagsägda, vilket innebär att användarna kan arbeta från valfri plats och har åtkomst till automatiska och proaktiva IT-processer.
 
 MDM-tjänster (exempelvis Microsoft Intune) kan hantera mobila och stationära enheter som kör Windows 10. Den inbyggda Windows 10-hanteringsklienten kommunicerar med Intune när hanteringsuppgifter för företag utförs. Det finns några uppgifter som du kan behöva göra, till exempel avancerad enhetskonfiguration och felsökning. Vid Win32-apphantering kan du använda funktionen [Win32-apphantering](apps-win32-app-management.md) på dina Windows 10-enheter.
 
@@ -39,25 +44,38 @@ Tillägget för Intune-hantering kompletterar de inbyggda funktionerna i Windows
 
 Intune-hanteringstillägget har följande krav:
 
-- Enheter måste anslutas till eller registreras i Azure AD och Azure AD konfigureras för [automatisk registrering i Intune](windows-enroll.md#enable-windows-10-automatic-enrollment). Intune-hanteringstillägget har stöd för Azure AD-anslutna, hybriddomänanslutna och samhanterade registrerade Windows-enheter.
+- Enheter måste anslutas till eller registreras i Azure AD och Azure AD samt Intune konfigureras för [automatisk registrering](quickstart-setup-auto-enrollment.md). Intune-hanteringstillägget har stöd för Azure AD-anslutna, Azure AD-hybriddomänanslutna och samhanterade registrerade Windows-enheter.
 - Enheterna måste köra Windows 10 version 1607 eller senare.
 - Intune-hanteringstilläggsagenten installeras när ett PowerShell-skript eller en Win32-app distribueras till en användare eller en enhetssäkerhetsgrupp.
 
-## <a name="create-a-powershell-script-policy"></a>Skapa en princip för PowerShell-skript 
+## <a name="create-a-script-policy"></a>Skapa en skriptprincip 
 
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Microsoft Intune**.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
 2. Välj **Enhetskonfiguration** > **PowerShell-skript** > **Lägg till**.
-3. Ange ett **namn** och en **beskrivning** för PowerShell-skriptet. Navigera till PowerShell-skriptet för att ange **platsen för skriptet**. Skriptet får inte vara större än 200 KB.
-4. Välj **Konfigurera**. Välj sedan att köra skriptet med användarens autentiseringsuppgifter på enheten (**Ja**), eller i systemkontexten (**Nej**). Som standard körs skriptet i systemkontexten. Välj **Ja** om inte skriptet kräver att det körs i systemkontexten. 
-  ![Fönstret Lägg till PowerShell-skript](./media/mgmt-extension-add-script.png)
-5. Välj om skriptet måste signeras av en betrodd utgivare (**Ja**). Som standard finns inga krav på att skriptet ska signeras. 
-6. Välj **OK** och sedan **Skapa** för att spara skriptet.
+3. Ange följande egenskaper:
+    - **Namn**: Ange ett namn på PowerShell-skriptet. 
+    - **Beskrivning**: Ange en beskrivning för PowerShell-skriptet. Denna inställning är valfri, men rekommenderas. 
+    - **Skriptplats**: Bläddra till PowerShell-skriptet. Skriptet måste vara mindre än 200 KB (ASCII).
+4. Välj **Konfigurera** och ange följande egenskaper:
+    - **Kör det här skriptet med inloggade autentiseringsuppgifter**: Välj **Ja** för att köra skriptet med användarens autentiseringsuppgifter på enheten. Välj **Nej** (standard) om du vill köra skriptet i systemkontexten. Många administratörer väljer **Ja**. Om skriptet måste köras i systemkontexten väljer du **Nej**.
+    - **Framtvinga signaturkontroll av skript**: Välj **Ja** om skriptet måste signeras av en betrodd utgivare. Välj **Nej** (standard) om det inte finns något krav på att skriptet signeras. 
+    - **Köra skript i 64-bitars PowerShell-värd**: Välj **Ja** för att köra skriptet i en 64-bitars PowerShell-värd (PS) på en 64-bitars klientarkitektur. Om du väljer **Nej** (standard) körs skriptet i en 32-bitars PowerShell-värd.
 
-## <a name="assign-a-powershell-script-policy"></a>Tilldela en princip för PowerShell-skript
+      När du anger **Ja** eller **Nej** använder du följande tabell för nytt och befintligt principbeteende:
+
+      | Kör skript i 64-bitars PS-värd | Klientarkitektur | Nytt PS-skript | PS-skript för befintlig princip |
+      | --- | --- | --- | --- | 
+      | Nej | 32-bitars  | 32-bitars PS-värd stöds | Körs bara i 32-bitars PS-värd, vilket fungerar i 32-bitars och 64-bitars arkitekturer. |
+      | Ja | 64-bitars | Kör skript i 64-bitars PS-värd för 64-bitars arkitekturer. Vid körning i 32-bitar körs skriptet i en 32-bitars PS-värd. | Kör skript i 32-bitars PS-värd. Om den här inställningen ändras till 64-bitars öppnas skriptet (det körs inte) i en 64-bitars PS-värd och rapporterar resultatet. Vid körning i 32-bitars körs skriptet i 32-bitars PS-värd. |
+
+    ![Lägga till och använda PowerShell-skript i Microsoft Intune](./media/mgmt-extension-add-script.png)
+5. Välj **OK** > **Skapa** för att spara skriptet.
+
+## <a name="assign-the-policy"></a>Tilldela principen
 
 1. Välj det skript som du vill tilldela i fönstret **PowerShell-skript** och välj sedan **Hantera** > **Tilldelningar**.
 
-    ![Lägg till ett PowerShell-skriptfönster](./media/mgmt-extension-assignments.png)
+    ![Tilldela eller distribuera PowerShell-skript till enhetsgrupper i Microsoft Intune](./media/mgmt-extension-assignments.png)
 
 2. Välj **Välj grupper** för en lista över tillgängliga Azure AD-grupper. 
 3. Välj en eller flera grupper som innehåller de användare vars enheter skriptet ska köras på. **Välj** att tilldela principen till de valda grupperna.
@@ -67,9 +85,9 @@ Intune-hanteringstillägget har följande krav:
 > - PowerShell-skript i Intune kan riktas mot säkerhetsgrupper för Azure AD-enheter.
 > - PowerShell-skript i Intune kan riktas mot säkerhetsgrupper för Azure AD-användare.
 
-Intune-hanteringstilläggsklienten kontrollerar Intune en gång i timmen. När du tilldelar principen till Azure AD-grupper körs PowerShell-skriptet och körningsresultaten rapporteras.
+Klienten för Intune-hanteringstillägg kontrollerar varje timme och efter varje omstart med Intune om det finns nya skript eller ändringar. När du tilldelar principen till Azure AD-grupper körs PowerShell-skriptet och körningsresultaten rapporteras. När skriptet körs så körs det inte igen såvida det inte finns en ändring i skriptet eller principen.
 
-## <a name="monitor-run-status-for-powershell-scripts"></a>Övervaka körningsstatus för PowerShell-skript
+## <a name="monitor-run-status"></a>Övervaka körningsstatus
 
 Du kan övervaka körningsstatusen för PowerShell-skript för användare och enheter i Azure Portal.
 
@@ -78,13 +96,13 @@ Välj det skript som du vill övervaka i fönstret **PowerShell-skript**, välj 
 - **Enhetstillstånd**
 - **Användarstatus**
 
-## <a name="troubleshoot-powershell-scripts"></a>Felsöka PowerShell-skript
+## <a name="troubleshoot-scripts"></a>Felsöka skript
 
 Agentloggar på klientdatorn finns vanligtvis i `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Du kan använda [CMTrace.exe](https://docs.microsoft.com/sccm/core/support/tools) för att visa dessa loggfiler. 
 
-![Skärmbild av agentloggar](./media/apps-win32-app-10.png)  
+![Skärmbild eller exempel på cmtrace-agentloggar i Microsoft Intune](./media/apps-win32-app-10.png)  
 
-## <a name="delete-a-powershell-script"></a>Ta bort ett PowerShell-skript
+## <a name="delete-a-script"></a>Ta bort ett skript
 
 Högerklicka på skriptet i fönstret **PowerShell-skript** och välj **Ta bort**.
 
@@ -106,7 +124,7 @@ PowerShell-skripten körs inte vid varje inloggning. De körs bara efter omstart
 
     Det finns anvisningar i [Aktivera automatisk registrering i Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment).
 
-#### <a name="issue-the-powershell-scripts-do-not-run"></a>Problem: PowerShell-skripten körs inte
+#### <a name="issue-powershell-scripts-do-not-run"></a>Problem: PowerShell-skript körs inte
 
 **Möjliga lösningar**:
 

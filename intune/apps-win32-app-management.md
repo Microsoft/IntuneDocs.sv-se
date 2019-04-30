@@ -1,15 +1,16 @@
 ---
-title: Lägga till Win32-appar i Microsoft Intune
-titlesuffix: ''
-description: Lär dig hur du lägger till, distribuerar och hanterar Win32-appar med Microsoft Intune. Det här avsnittet innehåller en översikt över Intunes leverans- och hanteringsfunktioner för Win32-appar, samt felsökningsinformation för Win32-appar.
+title: Lägga till och tilldela Win32-appar till Microsoft Intune
+titleSuffix: ''
+description: Lär dig hur du lägger till, tilldelar och hanterar Win32-appar med Microsoft Intune. Det här avsnittet innehåller en översikt över Intunes leverans- och hanteringsfunktioner för Win32-appar, samt felsökningsinformation för Win32-appar.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2019
-ms.topic: article
+ms.date: 04/15/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
@@ -17,37 +18,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61a2abee2e926605a4d7d35baa53f6259ef77db3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 8c2cac99ba45ccd91629e6db32d91735d90d706e
+ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62426161"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
-Fristående Intune ger tillgång till bättre hanteringsfunktioner för Win32-appar. Molnanslutna kunder kan använda Configuration Manager för Win32-apphantering, men kunder med fristående Intune har tillgång till bättre hanteringsfunktioner för sina verksamhetsspecifika Win32-appar. Det här avsnittet innehåller en översikt över Intunes hanterings- och felsökningsfunktioner för Win32-appar.
+[Fristående Intune](mdm-authority-set.md) ger nu bättre hanteringsfunktioner för Win32-appar. Molnanslutna kunder kan använda Configuration Manager för Win32-apphantering, men kunder med fristående Intune har tillgång till bättre hanteringsfunktioner för sina verksamhetsspecifika Win32-appar. Det här avsnittet innehåller en översikt över Intunes hanterings- och felsökningsfunktioner för Win32-appar.
+
+> [!NOTE]
+> Den här funktionen för apphantering har stöd för både 32-bitars och 64-bitars operativsystemarkitektur för Windows-program.
 
 ## <a name="prerequisites"></a>Krav
 
+Om du vill använda Win32-apphantering ska du uppfylla följande kriterier:
+
 - Windows 10 version 1607 eller senare (Enterprise- och Pro Education-versionerna)
 - Windows 10-klienten måste vara: 
-    - ansluten till Azure Active Directory (AAD) eller Hybrid Azure Active Directory och
-    - registrerad i Intune (MDM-hanterad)
-- Storleken för Windows-program är högst 8 GB per app
+    - Enheterna måste vara anslutna till Azure AD och automatiskt registrerade. Intune-hanteringstillägget har stöd för Azure AD-anslutna, hybriddomänanslutna, grupprincipregistrerade enheter. 
+    > [!NOTE]
+    > För scenariot med grupprincipregistrering – slutanvändaren använder det lokala användarkontot till att AAD-ansluta sin Windows 10-enhet. Användaren måste logga in på enheten med sitt AAD-användarkonto och registrera till Intune. Intune installerar Intune-hanteringstillägget på enheten om ett PowerShell-skript eller en Win32-app riktas till användaren eller enheten.
+- Storleken för Windows-program är högst 8 GB per app.
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Förbereda Win32-appinnehållet för uppladdning
 
-Använd [förberedelseverktyget för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) för att förbearbeta Win32-appar. Verktyget konverterar programinstallationsfilerna till formatet *.intunewin*. Verktyget identifierar även vissa av de attribut som krävs av Intune för att fastställa programmets installationstillstånd. När du har använt det här verktyget med appinstallationsmappen kan du skapa en Win32-app i Intune-konsolen.
+Använd [Microsofts förberedelseverktyg för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) för att förbearbeta Windows Classic-appar (Win32). Verktyget konverterar programinstallationsfilerna till formatet *.intunewin*. Verktyget identifierar även vissa av de attribut som krävs av Intune för att fastställa programmets installationstillstånd. När du har använt det här verktyget med appinstallationsmappen kan du skapa en Win32-app i Intune-konsolen.
 
-Du kan ladda ned [förberedelseverktyget för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) från GitHub.
+> [!IMPORTANT]
+> [Microsofts förberedelseverktyg för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) zippar ihop alla filer och undermappar när det skapar *.intunewin*-filen. Se till att hålla Microsofts förberedelseverktyg för Win32-innehåll separat från installationsprogrammets filer och mappar, så att du inte inkluderar verktyget eller andra onödiga filer och mappar i *.intunewin*-filen.
+
+Du kan ladda ned [Microsofts förberedelseverktyg för Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730) som en zip-fil från GitHub. Zip-filen innehåller en mapp som heter **Microsoft-Win32-Content-Prep-Tool-master**. Mappen innehåller förberedelseverktyget, licensen, en readme-fil samt viktig information. 
+
+### <a name="process-flow-to-create-intunewin-file"></a>Processflöde för att skapa .intunewin-fil
+
+   ![Processflöde för att skapa en .intunewin-fil](./media/prepare-win32-app.svg)
+
+### <a name="run-the-microsoft-win32-content-prep-tool"></a>Köra Microsofts förberedelseverktyg för Win32-innehåll
+
+Om du kör `IntuneWinAppUtil.exe` från kommandofönstret utan parametrar vägleder verktyget dig att ange de obligatoriska parametrarna steg för steg. Eller så kan du lägga till parametrarna i kommandot baserat på följande tillgängliga kommandoradsparametrar.
 
 ### <a name="available-command-line-parameters"></a>Tillgängliga kommandoradsparametrar 
 
 |    **Kommandoradsparameter**    |    **Beskrivning**    |
 |:------------------------------:|:----------------------------------------------------------:|
 |    `-h`     |    Hjälp    |
-|    `-c <setup_folder>`     |    Installationsmapp för alla installationsfiler.    |
+|    `-c <setup_folder>`     |    Mapp för alla installationsfiler. Alla filer i den här mappen komprimeras till en *.intunewin*-fil.    |
 |   ` -s <setup_file>`     |    Installationsfil (till exempel *setup.exe* eller *setup.msi*).    |
 |    `-o <output_folder>`     |    Utdatamapp för den genererade *.intunewin*-filen.    |
 |    `-q`       |    Tyst läge    |
@@ -57,9 +75,9 @@ Du kan ladda ned [förberedelseverktyget för Win32-innehåll](https://go.micros
 |    **Exempelkommando**    |    **Beskrivning**    |
 |:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |    `IntuneWinAppUtil -h`    |    Det här kommandot visar användningsinformation för verktyget.    |
-|    `IntuneWinAppUtil -c <setup_folder> -s <source_setup_file> -o <output_folder> <-q>`    |    Det här kommandot genererar `.intunewin`-filen från den angivna källmappen och installationsfilen. För MSI-installationsfilen hämtar det här verktyget nödvändig information för Intune. Om `-q` anges körs kommandot i tyst läge och om utdatafilen redan finns skrivs den över. Om utdatamappen inte finns, skapas den automatiskt.    |
+|    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Det här kommandot genererar `.intunewin`-filen från den angivna källmappen och installationsfilen. För MSI-installationsfilen hämtar det här verktyget nödvändig information för Intune. Om `-q` anges körs kommandot i tyst läge och om utdatafilen redan finns skrivs den över. Om utdatamappen inte finns, skapas den automatiskt.    |
 
-När du genererar en *.intunewin*-fil placerar du alla de filer som du måste referera till i en undermapp i installationsmappen. Referera sedan till den specifika fil du behöver med en relativ sökväg. Exempel:
+När du genererar en *.intunewin*-fil placerar du alla de filer som du behöver referera till i en undermapp i installationsmappen. Referera sedan till den specifika fil du behöver med en relativ sökväg. Exempel:
 
 **Installationens källmapp:** *c:\testapp\v1.0*<br>
 **Licensfil:** *c:\testapp\v1.0\licenses\license.txt*
@@ -68,7 +86,15 @@ Referera till filen *license.txt* med hjälp av den relativa sökvägen *license
 
 ## <a name="create-assign-and-monitor-a-win32-app"></a>Skapa, tilldela och övervaka en Win32-app
 
-Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Microsoft Intune. Den här typen av app skrivs vanligtvis internt på företaget eller av en tredje part. Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-app i Intune.
+Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Microsoft Intune. Den här typen av app skrivs vanligtvis internt på företaget eller av en tredje part. 
+
+### <a name="process-flow-to-add-a-win32-app-to-intune"></a>Processflöde för att lägga till en Win32-app till Intune
+
+   ![Processflöde för att lägga till en Win32-app till Intune](./media/add-win32-app.svg)
+
+### <a name="add-a-win32-app-to-intune"></a>Lägga till en Win32-app till Intune
+
+Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-app i Intune.
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 
@@ -113,7 +139,11 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 1.  I **Lägg till app** väljer du **Program** för att konfigurera appinstallationen och borttagningskommandona för appen.
 2.  Lägg till den fullständig kommandoraden för installationen för att installera appen. 
 
-    Om appfilnamnet exempelvis är **MyApp123** lägger du till följande: `msiexec /i “MyApp123.msi”`
+    Om appfilnamnet exempelvis är **MyApp123** lägger du till följande:<br>
+    `msiexec /p “MyApp123.msp”`<p>
+    Och om programmet är `ApplicationName.exe` skulle kommandot vara programmets namn följt av de kommandoargument (växlar) som stöds av paketet. <br>Exempel:<br>
+    `ApplicationName.exe /quite`<br>
+    I kommandot ovan stöder paketet `ApplicaitonName.exe` kommandoargumentet `/quite`.<p> Kontakta leverantören av programmet för de specifika argument som stöds av programpaketet.
 
 3.  Lägg till den fullständiga kommandoraden för avinstallation av appen baserat på appens GUID. 
 
@@ -129,14 +159,32 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 ### <a name="step-5-configure-app-requirements"></a>Steg 5: Konfigurera appkrav
 
 1.  I fönstret **Lägg till app** väljer du **Krav** för att konfigurera de krav som enheter måste uppfylla innan appen installeras.
-2.  I fönstret **Krav** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
+2.  I fönstret **Lägg till en kravregel** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
     - **Operativsystemarkitektur**: Välj de arkitekturer som krävs för att installera appen.
     - **Lägsta operativsystemversion**: Välj det lägsta operativsystem som krävs för att installera appen.
     - **Diskutrymme som krävs (MB)**: Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
     - **Fysiskt minne som krävs (MB)**: Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
     - **Lägsta antal logiska processorer som krävs**: Om du vill kan du lägga till det lägsta antal logiska processorer som krävs för att installera appen.
     - **Lägsta processorhastighet som krävs (MHz)**: Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
-3.  Välj **OK** när du är klar.
+
+3. Klicka på **Lägg till** för att visa bladet **Lägg till en kravregel** och konfigurera ytterligare kravregler. Välj **typen av krav** för att välja vilken typ av regel som du använder för att avgöra hur ett krav ska valideras. Kravregler kan baseras på information om filsystem, registervärden eller PowerShell-skript. 
+    - **Fil**: När du väljer **Fil** som **Typ av krav** måste kravregeln identifiera en fil eller en mapp, ett datum, en version eller en storlek. 
+        - **Sökväg** – Den fullständiga sökvägen till mappen som innehåller filen eller mappen som ska identifieras.
+        - **Fil eller mapp** – Filen eller mappen som ska identifieras.
+        - **Egenskap** – Välj vilken typ av regel som ska användas för att validera förekomsten av appen.
+        - **Kopplat till en 32-bitarsapp på 64-bitarsklienter** – Välj **Ja** om du vill expandera miljövariabler för sökvägar i 32-bitarskontexten på 64-bitarsklienter. Välj **Nej** (standard) om du vill expandera sökvägsvariabler i 64-bitarskontexten på 64-bitarsklienter. 32-bitarsklienter använder alltid 32-bitarskontexten.
+    - **Register**: När du väljer **Register** som **Typ av krav** måste kravregeln identifiera en registerinställning baserat på värde, sträng, heltal eller version.
+        - **Nyckelsökväg** – Den fullständiga sökvägen till registerposten som innehåller värdet som ska identifieras.
+        - **Värdenamn** – Namnet på registervärdet som ska identifieras. Om det här värdet är tomt sker identifieringen mot nyckeln. (Det förvalda) värdet för en nyckel används som identifieringsvärde om identifieringsmetoden är en annan än den som identifierar förekomsten av filen eller mappen.
+        - **Registernyckelkrav** – Välj den typ av registernyckeljämförelse som används för att avgöra hur kravregeln ska valideras.
+        - **Kopplat till en 32-bitarsapp på 64-bitarsklienter** – Välj **Ja** om du vill söka i 32-bitarsregistret på 64-bitarsklienter. Välj **Nej** (standard) om du vill söka i 64-bitarsregistret på 64-bitarsklienter. 32-bitarsklienter söker alltid i 32-bitarsregistret.
+    - **Skript**: Välj **Skript** som **Typ av krav** när du inte kan skapa en kravregel baserat på fil, register eller någon annan metod som är tillgänglig i Intune-konsolen.
+        - **Skriptfil** – För en PowerShell-skriptbaserad kravregel gäller att om slutkoden är 0 så identifierar vi STDOUT med större detaljnivå. Vi kan till exempel identifiera STDOUT som ett heltal som har värdet 1.
+        - **Kör skript som 32-bitarsprocess på 64-bitarsklienter** – Välj **Ja** om du vill köra skriptet i en 32-bitarsprocess på 64-bitarsklienter. Välj **Nej** (standard) för att köra skriptet i en 64-bitarsprocess på 64-bitarsklienter. 32-bitarsklienter kör skriptet i en 32-bitarsprocess.
+        - **Kör det här skriptet med inloggade autentiseringsuppgifter**: Välj **Ja** för att köra skriptet med hjälp av den inloggade enhetens autentiseringsuppgifter**.
+        - **Framtvinga signaturkontroll av skript** – Välj **Ja** om du vill kontrollera att skriptet har signerats av en betrodd utgivare, vilket innebär att skriptet kan köras utan att varningar eller uppmaningar visas. Skriptet körs oblockerat. Välj **Nej** (standard) om du vill köra skriptet med slutanvändarens bekräftelse utan signaturverifiering.
+        - **Välja datatyp för utdata**: Välj den datatyp som används när en kravregelmatchning ska fastställas.
+4.  Välj **OK** när du är klar.
 
 ### <a name="step-6-configure-app-detection-rules"></a>Steg 6: Konfigurera appidentifieringsregler
 
@@ -231,9 +279,39 @@ Precis som med en verksamhetsspecifik app kan du lägga till en Win32-app i Micr
 
 Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Information om tilldelning och övervakning av appar finns i [Tilldela appar till grupper med Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) och [Övervaka appinformation och tilldelningar med Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
 
+## <a name="app-dependencies"></a>Appsamband
+
+Appsamband är program som måste installeras innan du kan installera Win32-appen. Du kan kräva att andra appar installeras som beroenden. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. Det finns upp till 100 beroenden, vilket innefattar beroenden för eventuella inkluderade beroenden samt själva appen. Du kan lägga till Win32-appsamband först efter att Win32-appen har lagts till och laddats upp till Intune. När Win32-appen har lagts till visas alternativet **Beroenden** på bladet för din Win32-app. 
+
+> [!NOTE]
+> Funktionen för appsamband är endast tillgänglig efter att Intune-hanteringsagenten har uppgraderats till version 1904 (senare än 1.18.120.0), vilket kan ta en eller två veckor till efter att vi uppgraderar tjänsten till 1904.
+
+När du lägger till ett appsamband kan du söka baserat på appens namn och utgivare. Dessutom kan du sortera dina tillagda beroenden baserat på appens namn och utgivare. Appsamband som lagts till tidigare kan inte väljas i listan över appsamband. 
+
+Du kan välja huruvida varje oberoende app ska installeras automatiskt. Som standard är alternativet **Installera automatiskt** inställt på **Ja** för varje beroende. Genom att automatiskt installera en beroende app installerar Intune appen på enheten för att uppfylla beroendet innan din Win32-app installeras, även om den beroende appen inte riktas till användaren eller enheten. Observera att ett beroende kan ha rekursiva underordnade beroenden och att varje underordnat beroende installeras innan det huvudsakliga beroendet installeras. Dessutom följer inte installation av beroenden någon installationsordning vid en given beroendenivå.
+
+Om du vill lägga till ett appsamband till Win32-appen använder du följande steg:
+
+1. I Intune väljer du **Klientappar** > **Appar** för att visa listan över tillagda klientappar. 
+2. Välj en tillagd **Windows-app (Win32)**. 
+3. Välj **Beroenden** för att lägga till de beroende appar som måste installeras innan Win32-appen kan installeras. 
+4. Klicka på **Lägg till** för att lägga till ett appsamband.
+5. När du har lagt till beroende appar klickar du på **Välj**.
+6. Välj om du vill installera den beroende appen automatiskt genom att välja **Ja** eller **Nej** under **Installera automatiskt**.
+7. Klicka på **Spara**.
+
+Slutanvändaren ser Windows-popup-meddelanden som indikerar att beroende appar laddas ned och installeras som en del av installationsprocessen för Win32-app. När en beroende app inte är installerad ser slutanvändaren dessutom vanligtvis något av följande meddelanden:
+- Det gick inte att installera 1 eller flera beroende appar
+- Kraven för 1 eller flera beroende appar uppfylldes inte
+- 1 eller flera beroende appar väntar på enhetsomstart
+
+Om du väljer att inte **automatiskt installera** ett beroende görs inget försök att installera Win32-appen. Dessutom visar då apprapportering att beroendet flaggades som `failed` och anger även en orsak till felet. Du kan visa beroendeinstallationsfelet genom att klicka på ett fel (eller en varning) som anges i Win32-appens [installationsinformation](troubleshoot-app-install.md#win32-app-installation-troubleshooting). 
+
+Varje beroende följer Intune-appåterförsökslogiken för Win32-app (installationsförsök 3 gånger efter en väntetid på 5 minuter) samt det globala omprövningsschemat. Dessutom gäller beroenden endast vid tidpunkten för installation av Win32-appen på enheten. Beroenden gäller inte för avinstallation av en Win32-app. Om du vill ta bort ett beroende måste du klicka på ellipsen (tre punkter) till vänster om den beroende app som finns i slutet av raden i beroendelistan. 
+
 ## <a name="delivery-optimization"></a>Leveransoptimering
 
-Windows 10 RS3 och högre klienter hämtar Intune Win32-appinnehåll med en komponent för leveransoptimering på Windows 10-klienten. Leveransoptimering ger Peer-to-Peer-funktioner som är aktiverat som standard. Leveransoptimering kan konfigureras av en grupprincip och i framtiden via Intune MDM. Mer information finns i [leveransoptimering för Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+Windows 10 1709-klienter och senare laddar ned Intune Win32-appinnehåll med en komponent för leveransoptimering på Windows 10-klienten. Leveransoptimering ger Peer-to-Peer-funktioner som är aktiverat som standard. Leveransoptimering kan konfigureras av en grupprincip och via Intune-enhetskonfiguration. Mer information finns i [Leveransoptimering för Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 ## <a name="install-required-and-available-apps-on-devices"></a>Installera nödvändiga och tillgängliga appar på enheter
 
@@ -248,10 +326,25 @@ Följande bild meddelar slutanvändaren att appändringar görs på enheten.
 ## <a name="toast-notifications-for-win32-apps"></a>Popup-meddelanden för Win32-appar 
 Om det behövs kan du förhindra att popup-meddelanden per apptilldelning visas för slutanvändarna. Från Intune, väljer du **Klientappar** > **Appar** > välj appen > **Tilldelningar** > **Inkludera grupper**. 
 
+> [!NOTE]
+> Win32-appar som installerats via Intune-hanteringstillägget avinstalleras inte på oregistrerade enheter. Administratörer kan använda tilldelningsundantag för att inte erbjuda Win32-appar till BYOD-enheter.
+
 ## <a name="troubleshoot-win32-app-issues"></a>Felsöka problem med Win32-appar
-Agentloggar på klientdatorn finns vanligtvis i `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Du kan använda `CMTrace.exe` för att visa dessa loggfiler. *CMTrace.exe* kan laddas ned från [SCCM-klientverktygen](https://docs.microsoft.com/sccm/core/support/tools). 
+Agentloggar på klientdatorn finns vanligtvis i `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Du kan använda `CMTrace.exe` för att visa dessa loggfiler. *CMTrace.exe* kan laddas ned från [Configuration Manager-klientverktygen](https://docs.microsoft.com/sccm/core/support/tools). 
 
 ![Skärmbild av agentloggar på klientdatorn](./media/apps-win32-app-10.png)    
+
+> [!IMPORTANT]
+> För att tillåta korrekt installation och körning av verksamhetsspecifika Win32-appar bör inställningar för program mot skadlig kod undanta följande kataloger från att genomsökas:<p>
+> **På X64-klientdatorer**:<br>
+> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*<br>
+> *C:\windows\IMECache*
+>  
+> **På X86-klientdatorer**:<br>
+> *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
+> *C:\windows\IMECache*
+
+Mer information om felsökning av Win32-appar finns i [Felsökning av Win32-appinstallation](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 
 ### <a name="troubleshooting-areas-to-consider"></a>Felsökningsområden att tänka på
 - Kontrollera målet och att agenten är installerad på enheten – En Win32-app som riktas mot en grupp eller ett PowerShell-skript som riktas mot en grupp skapar agentinstallationsprinciper för säkerhetsgruppen.

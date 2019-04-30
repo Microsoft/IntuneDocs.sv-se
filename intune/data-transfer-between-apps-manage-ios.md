@@ -1,26 +1,29 @@
 ---
-title: Hantera dataöverföring mellan iOS-appar | Microsoft Intune
+title: Hantera dataöverföring mellan iOS-appar
+titleSuffix: Microsoft Intune
 description: Läs om hur du använder principer för hantering av mobilappar i Microsoft Intune för att hantera dataöverföringar mellan appar.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/28/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bb109f8c837fe8848ad8cb19c930de765ed381d1
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509525"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -49,11 +52,15 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 2.  Distribuera de appar och den e-postprofil som ska hanteras via Intune, eller MDM-lösningen från tredje part, genom att följa de allmänna stegen nedan. Se även *Exempel 1*.
 
-3.  Distribuera appen med följande appkonfigurationsinställningar:
+3.  Distribuera appen med följande inställningar för appkonfiguration till den hanterade enheten:
 
       **nyckel** = IntuneMAMUPN, **värde** = <username@company.com>
 
       Exempel: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+      
+       > [!NOTE]
+       > I Intune måste principen för App Configuration vara för registreringstypen ”Hanterade enheter”.
+       > Dessutom behöver appen antingen installeras från Intune-företagsportalen om den har angetts som tillgänglig eller push-överföras till enheten vid behov. 
 
 4.  Distribuera principen **Öppna i hantering** med hjälp av Intune eller MDM-lösningen från tredje part till registrerade enheter.
 

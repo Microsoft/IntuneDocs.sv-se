@@ -1,49 +1,97 @@
 ---
 title: Uppdateringar i användargränssnittet för Intunes slutanvändarappar
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Ta reda på vad som har ändrats i användargränssnittet för appar som används på slutanvändarenheter med Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/13/2018
-ms.topic: article
+ms.date: 04/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0d6a798f9f16f4eaa0e882fb7d90203be912051f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 753c261ea08ce304176f19e1c64389053b055d5f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61518348"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
-Läs mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Att förstå dessa uppdateringar underlättar din användarkommunikation och eventuell uppdaterad anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
+Läs mer om de senaste uppdateringarna för Microsoft Intune-apparna. Vi lägger regelbundet till och förbättrar Intune-företagsportalappen och webbplatsen. Om du är Intune-administratör eller support innehåller den här artikeln information som du behöver för att:
+
+* Meddela studenter och anställda om förändringar i appen och registreringen.
+* Uppdatera organisationens dokumentation eller supportavdelningens procedurer.  
+
+Om du är anställd eller student bör du titta på skärmbilderna och länkarna till hjälpdokumentation om företagsportalen. Mer information om hur du använder företagsportalappen finns i [hjälpdokumentationen för användare av företagsportalen](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-april-15-2019"></a>Den vecka som börjar 15 april 2019  
+
+### <a name="new-end-user-app-microsoft-intune-app---3903244---"></a>Ny app för slutanvändare (Microsoft Intune-appen) <!--3903244 -->  
+Det finns en ny app för slutanvändare för fullständigt hanterade Android-enheter som heter **Microsoft Intune**. Den här nya appen är enkel och modern. Den har funktioner som liknar företagsportalappen men för fullständigt hanterade företagsenheter. Mer information finns i [Microsoft Intune-appen på Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).  
+
+Exempelskärmbild av skärmen Enhetsinformation: 
+
+![Skärmbild av Microsoft Intune-appen som visar enhetsinformation för Janes Android.](./media/1904-intune-app-device-details.png)   
+
+Exempelskärmbild av skärmen **Konfigurera åtkomst**:  
+
+![Skärmbild av Microsoft Intune-appen som visar skärmen Konfigurera åtkomstregistrering.](./media/1904-intune-app-setup-access.png)   
+
+Exempelskärmbild av appmenyn:  
+
+![Skärmbild av Microsoft Intune-appen som visar sidomenyn.](./media/1904-intune-app-navigation-menu.png)   
+
+Exempelskärmbild av skärmen **Hjälp**:  
+
+![Skärmbild av Microsoft Intune-appens hjälpskärm.](./media/1904-intune-app-help.png)   
+
+
+## <a name="week-of-april-1-2019"></a>Den vecka som börjar 1 april 2019  
+
+### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Ändringar i företagsportalregistrering för iOS 12-enhetsanvändare <!--3448635 -->  
+Registreringsskärmarna och stegen för företagsportalen för iOS har uppdaterats så att de överensstämmer med de ändringar av MDM-registrering som lanserades i Apple iOS 12.2. Det uppdaterade arbetsflödet uppmanar användaren att:  
+
+* Tillåta att Safari öppnar webbplatsen för företagsportalen och laddar ned hanteringsprofilen innan den går tillbaka till företagsportalappen.  
+* Öppna inställningsappen för att installera hanteringsprofilen på enheten.  
+* Gå tillbaka till företagsportalappen för att slutföra registreringen.  
+
+Uppdaterade steg och skärmar för registrering finns i avsnittet om att [registrera iOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).  
+
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Uppdatering av användarupplevelsen för företagsportalappen för iOS <!-- 2536024 -->
+Startsidan för företagsportalappen för iOS-enheter har fått en ny design. Med den här ändringen följer startsidan mönstren för iOS-användargränssnitt på ett bättre sätt och gör dessutom appar och e-böcker mer lätthittade.  
+
+## <a name="week-of-february-19-2019"></a>Den vecka som börjar 19 februari 2019  
+### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nya ny skärm för appkategorier i företagsportalappen för Windows 10<!-- 3834780 WNready4Review -->  
+En ny skärm som heter **Appkategorier** har lagts till i syfte att förbättra upplevelsen för bläddring och val av appar i företagsportalen för Windows 10. Användarna ser nu sina appar sorterade i kategorier som **Aktuella**, **Utbildning** och **Produktivitet**. Den här ändringen finns i versioner 10.3.3451.0 och senare av företagsportalen. Mer information om installation av appar i företagsportalen finns i [Installera och dela appar på din enhet](/intune-user-help/install-apps-cpapp-windows).  
+
+![Skärmbild av företagsportalen för Windows 10, skärmen Appkategorier.](./media/1902_CP_app_categories.png)   
+
 
 ## <a name="week-of-november-12-2018"></a>Veckan som börjar den 12 november 2018
 
 ### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Kortkommandon för Windows-företagsportalen <!-- 2771518 -->
-Slutanvändare kan nu utlösa app- och enhetsåtgärder i Windows-företagsportalen med hjälp av kortkommandon (acceleratorer).
+Slutanvändare kan nu utlösa app- och enhetsåtgärder i Windows-företagsportalen [med hjälp av kortkommandon (acceleratorer)](https://docs.microsoft.com/intune/company-portal-app#windows-company-portal-keyboard-shortcuts).
 
 ## <a name="week-of-october-22-2018"></a>Veckan då den 22 oktober 2018 infaller
 
 ### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Lägga till en anpassad varumärkesbild för företagsportalappen <!-- 1916266 -->
-Som Microsoft Intune-administratör kan du ladda upp en anpassad varumärkesbild som visas som bakgrundsbild på användarens profilsida i iOS-företagsportalappen. Mer information om hur du konfigurerar företagsportalappen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
-
-
+Som Microsoft Intune-administratör kan du ladda upp en anpassad varumärkesbild som visas som bakgrundsbild på användarens profilsida i iOS-företagsportalappen. Mer information om hur du konfigurerar företagsportalappen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).  
 
 ## <a name="week-of-august-27-2018"></a>Veckan 27 augusti 2018  
 
-### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Ny uppdatering av användarupplevelse för företagsportalens webbsida <!--2000968 -->  
-Vi har lagt till nya funktioner på företagsportalen baserat på våra kunders synpunkter. Du kommer att se tydliga förbättringar av befintliga funktioner och användbarheten för dina enheter. Delar av webbplatsen, som enhetsinformation, feedback och support samt enhetsöversikten, har fått en ny och modern design. [Dokumentationen till Intune-företagsportalens webbplats](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) har uppdaterats för att återspegla dessa ändringar.   
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Ny uppdatering av användarupplevelse för företagsportalens webbplats <!--2000968 -->  
+Vi har lagt till nya funktioner på företagsportalen baserat på våra kunders synpunkter. Du kommer att se tydliga förbättringar av befintliga funktioner och användbarheten för dina enheter. Specifika områden på webbplatsen, till exempel enhetsinformation, feedback och support samt enhetsöversikten, har nu en ny design som är modern och responsiv. [Dokumentationen till Intune-företagsportalens webbplats](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) har uppdaterats för att återspegla dessa ändringar.   
 
 Uppdateringar som du kan se är bland annat:  
 
@@ -63,13 +111,13 @@ Uppdateringar som du kan se är bland annat:
 ## <a name="week-of-july-16-2018"></a>Veckan som inleds den 16 juli 2018  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Fler möjligheter att synkronisera i företagsportalappen för Windows   
-Med företagsportalappen för Windows kan du nu initiera en synkronisering direkt från Windows-aktivitetsfältet och Start-menyn. Den här funktionen är särskilt användbart om din enda uppgift är att synkronisera enheter och få åtkomst till företagsresurser. För att komma åt den nya funktionen högerklickar du på ikonen för företagsportalen som har fästs till verktygsfältet eller Start-menyn. I menyalternativen (kallas även en snabblista) väljer du **Sync this device** (Synkronisera den här enheten). Företagsportalen öppnas till sidan **inställningar** och initierar synkroniseringen.  
+Med företagsportalappen för Windows kan du nu initiera en synkronisering direkt från Windows-aktivitetsfältet och Start-menyn. Den här funktionen är särskilt användbart om din enda uppgift är att synkronisera enheter och få åtkomst till företagsresurser. Du använder den nya funktionen genom att högerklicka på den ikon för företagsportalen som är fäst på verktygsfältet eller **Start**-menyn. I menyalternativen (kallas även en snabblista) väljer du **Sync this device** (Synkronisera den här enheten). Företagsportalen öppnas till sidan **inställningar** och initierar synkroniseringen.  
 
 ![Skärmbild av Windows-aktivitetsfältet på en enhets skrivbord. Programikonen för företagsportalappen har klickats för att visa en meny med alternativen ”Pin to taskbar” (Fäst i verktygsfältet), ”Close window” (Stäng fönster) och ”Sync this device” (Synkronisera den här enheten).](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nya bläddringsfunktioner i företagsportalappen för Windows  
 
-När du bläddrar eller söker efter appar i företagsportalappen för Windows kan du nu växla mellan den befintliga vyn **Paneler** och den nyligen tillagda vyn **Information**. Den nya vyn visar information om programmet, som namn, utgivare, publiceringsdatum och installationsstatus.  
+När du bläddrar eller söker efter appar i företagsportalappen för Windows kan du nu växla mellan den befintliga vyn **Paneler** och den nya vyn **Information**. Den nya vyn visar information om programmet såsom namn, utgivare, publiceringsdatum och installationsstatus.  
 
 På sidan **Appar** kan du använda vyn **Installerade** för att se information om slutförda och pågående appinstallationer.  
 
@@ -82,7 +130,7 @@ Exempelskärmbild som visar vyn Information:
 ![Skärmbild av Intune-företagsportalappen för Windows som visar de installerade apparna i informationsvyn.](/intune/media/details-installed-view-cpapp-1807.png) 
 
 ## <a name="week-of-april-23-2018"></a>Veckan 23 april 2018
-### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Uppdaterad navigeringsvy i företagsportal-appen för Windows 10 <!-- 1195010 -->
+### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Uppdaterad navigeringsvy i företagsportalappen för Windows 10 <!-- 1195010 -->
 Intunes företagsportalapp för Windows 10 har uppdaterats med [Fluent Design-systemets navigeringsvy](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Längs appen ser du en statisk, lodrät lista över alla sidor på översta nivån. Klicka på en länk för att snabbt visa och växla mellan sidor. Det här är den första av flera uppdateringar som visas som en del av vårt pågående arbete för att skapa en mer anpassningsbar, empatisk och bekant upplevelse i Intune. 
 
 ![Skärmbild av företagsportal-appens instrumentpanel som visar Fluent Designs navigeringsvy](./media/1804_WindowsCP_Fluent_01.png)
@@ -90,7 +138,7 @@ Intunes företagsportalapp för Windows 10 har uppdaterats med [Fluent Design-sy
 
 ## <a name="week-of-april-2-2018"></a>Veckan 2 april 2018
 
-### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Uppdatering av användarupplevelsen för appen Företagsportal för iOS <!-- 1412866 -->
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Uppdatering av användarupplevelsen för företagsportalappen för iOS <!-- 1412866 -->
 Vi har släppt en större uppdatering av användarupplevelsen i företagsportalappen för iOS. Uppdateringen är en fullständig visuell omarbetning som ger appen en modernare design. Vi har bevarat appens funktionalitet men förbättrat användarvänligheten och tillgängligheten.  
 
 Andra nyheter:
@@ -132,7 +180,7 @@ Vi har uppdaterat företagsportalappen för Android så att den följer Androids
 
 ## <a name="week-of-november-27-2017"></a>Veckan som börjar med 27 november 2017
 
-### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nytt steg för "Enhetskategorier" i den guidade konfigurationen för företagsportalappen för Windows 10 <!-- 1335292 -->
+### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nytt steg för ”Enhetskategorier” i den guidade konfigurationen för företagsportalappen för Windows 10 <!-- 1335292 -->
 
 Om du har aktiverat [Mappning av enhetsgrupp](device-group-mapping.md) får användarna nu vägledning i företagsportalappen för Windows 10 i hur de väljer en enhetskategori efter att de har registrerat sin enhet.
 
@@ -160,7 +208,7 @@ Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappe
 
 ## <a name="week-of-november-6-2017"></a>Veckan som börjar med 6 november 2017
 
-### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Uppdateringar i företagsportalappen för Windows 10 <!--1299474-->
+### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Uppdateringar av företagsportalappen för Windows 10 <!--1299474-->
 Inställningssidan i företagsportalappen för Windows 10 har uppdaterats för att inställningar och avsedda användaråtgärder ska vara mer konsekventa över alla inställningar. Den har också uppdaterats så att den matchar layouten för andra Windows-appar.
 
 |Före|Efter|
@@ -168,7 +216,7 @@ Inställningssidan i företagsportalappen för Windows 10 har uppdaterats för a
 |![01](./media/w10-share-logs.png)|![02](./media/w10-share-logs-after-1711.png)|
 
 
-### <a name="search-improvements-to-the-company-portal-apps-and-website----1418189---"></a>Sökförbättringar i företagsportalens appar och webbplats <!-- 1418189 -->
+### <a name="search-improvements-to-the-company-portal-apps-and-website----1418189---"></a>Sökförbättringar i företagsportalapparna och webbplatsen <!-- 1418189 -->
 Företagsportalapparna använder nu sökningar i appkategorier, namn och beskrivningar. Resultaten sorteras i fallande relevansordning. De här uppdateringarna är även tillgängliga på [företagsportalwebbplatsen](https://portal.manage.microsoft.com).
 
 Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur det fungerar via länken "Feedback" längst ned på företagsportalwebbplatsen.
@@ -183,7 +231,7 @@ Vi förbättrar appsökfunktionerna och börjar med [företagsportalwebbplatsen]
 Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur det fungerar via länken "Feedback" längst ned på företagsportalwebbplatsen.
 
 
-### <a name="ios-company-portal-displays-large-icons----1454593---"></a>iOS företagsportal visar stora ikoner <!-- 1454593 -->
+### <a name="ios-company-portal-displays-large-icons----1454593---"></a>iOS-företagsportalen visar stora ikoner <!-- 1454593 -->
 I den här versionen åtgärdas ett känt problem med hur iOS företagsportal visar ikoner i appanelen. Om du överför appikoner på 120 × 120 bildpunkter eller större, visas de nu på [Företagsportalens webbplats](https://portal.manage.microsoft.com) och på appsidorna i Företagsportalen för iOS i full storlek i appanelen.
 
 
@@ -233,7 +281,7 @@ Registreringen av företagsportalappen för Android har förenklats med ny text 
 
 ## <a name="august-2017"></a>Augusti 2017
 
-### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>E-postprogrammet för iOS 11 stöder OAuth<!-- 1196951 -->
+### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>E-postprogrammet för iOS 11 stöder OAuth <!-- 1196951 -->
 
 Villkorlig åtkomst med Intune stöder säkrare autentisering på iOS-enheter med OAuth. Ett annat flöde på företagsportalappen för iOS kommer att användas för att möjliggöra säkrare autentisering. När användare försöker logga in på ett nytt Exchange-konto i e-postprogrammet visas en dialogruta om webbvyn. Vid registreringen i Intune visas en dialogruta som ger det inbyggda e-postprogrammet åtkomst till ett certifikat. De flesta användarna kommer inte att se e-postmeddelanden i karantän längre. För befintliga e-postkonton används även i fortsättningen det grundläggande protokollet för autentisering, så dessa användare kommer fortfarande att få e-postmeddelanden i karantän levererade till sig. Den här inloggningen för slutanvändare liknar den på Office-mobilappar.
 
@@ -280,7 +328,7 @@ Sidan med appinformation i företagsportalappen för Android visar nu de appkate
 
 ![Den nya appinformationssidan](./media/cp_android_appdetails_after_1708.png)
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggningsfunktion i företagsportalappar för alla plattformar <!--User Story 1132123-->
 
 Vi informerar om en förändring som kommer under de kommande månaderna som kommer att förbättra inloggningen för Intune-företagsappar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
 
@@ -366,7 +414,7 @@ Den här uppdateringen visas bara på enheter som kör Windows 10 Anniversary Up
 
 ![En bild av slutförandeskärmen i företagsportalappen i Windows 10, där användaren informeras om att allt är klart samt att enheten har registrerats och ett företagskonto har lagts till det på rätt sätt.](./media/win10_guided_enroll_youre_all_set_after_1706.png)
 
-### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Ny menyåtgärd för att enkelt ta bort Företagsportalen <!--1164569-->
+### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Ny menyåtgärd för att enkelt ta bort företagsportalen <!--1164569-->
 Baserat på användarfeedback har vi lagt till en ny menyåtgärd i företagsportalen för Android för att ta bort den från din enhet. Den här åtgärden tar bort enheten från Intune-hanteringen så att användaren kan ta bort appen från enheten.
 
 ![En bild av företagsportalappen för Android med åtgärdsmenyn öppnad i det övre högra hörnet. Det nya alternativet ”ta bort företagsportal” finns tillgängligt som det tredje alternativet under ”min profil” och ”inställningar” och ovanför ”användarvillkor”, ”hjälp och feedback” och ”om”.](./media/android_remove_cp_menu_action_after_1705.png)
@@ -412,7 +460,7 @@ Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-v
 
 Företagsportalen har också fått uppdaterade ikoner för Android-, iOS- och Windows-versionerna av appen, för att förbättra enhetligheten med andra appar i EM+S. Dessa ikoner släpps gradvis till plattformarna från april till slutet av maj.
 
-### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggningen i Android-företagsportalen <!--953374-->
+### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
 
 En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen.
 
@@ -434,7 +482,7 @@ En uppdatering av Android-företagsportalappen visar en förloppsindikator för 
 </body>
 </html>
 
-### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Appens installationsstatus har förbättrats för Företagsportalappen för Windows 10 <!--676495-->
+### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Förbättrade appinstallationsstatus för företagsportalappen för Windows 10 <!--676495-->
 Företagsportalappen för Windows 10 innehåller nu en förloppsindikator för installation på appinformationssidan. Den stöds för moderna appar på enheter som kör Windows 10 Anniversary Update och senare.
 
 __Före__ ![En avbildning av den tidigare versionen av inläsningsskärmen där status bara angavs som "Installerar".](./media/cp_win10_install_status_before_1704.png)
@@ -454,7 +502,7 @@ Från och med mars följer företagsportalsappen för Android [riktlinjer för m
 
 ![Till vänster finns en avbildning av företagsportalappen för Android före uppdateringen. Till höger finns en avbildning av företagsportalappen för Android efter uppdateringen. Båda bilderna visar fliken Appar som den valda fliken från de tre tillgängliga flikarna Appar, Enheter och Kontakta IT.](./media/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigering__: Alla appar visar en flikvy över __Aktuella__, __Alla__ och __Kategorier__ för att underlätta navigeringen. __Kontakta IT__ har effektiviserats för bättre läsbarhet.
+* __Navigering__: I Alla appar visas en flikvy över __Aktuella__, __Alla__ och __Kategorier__ för att underlätta navigeringen. __Kontakta IT__ har effektiviserats för bättre läsbarhet.
 
 <html>
 <body>
@@ -479,26 +527,7 @@ Från och med februari kommer företagsportalens webbplats att ha stöd för app
 Det här är våra planer för hur vi kan förbättra användarupplevelsen genom att uppdatera användargränssnittet.
 
 > [!Note]
-> Observera att bilderna nedan kan vara förhandsgranskningar och att den presenterade produkten kan skilja sig från presenterade versioner.
-
-### <a name="ui-iwp"></a>Ny uppdatering av användarupplevelsen för företagsportalens webbplats <!--2000968-->
-
-Vi presenterar en ny webbplats för företagsportalen i augusti, med uppdateringar av användargränssnittet, effektiva arbetsflöden och åtkomstförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
-
-Vi har lagt till några nya funktioner, baserat på feedback från kunder som du, som förbättrar befintliga funktioner och användbarhet:
-
--   Förbättringar i användargränssnittet på hela webbplatsen
--   Möjlighet att dela direktlänkar till appar
-- Förbättrad prestanda för stora app-kataloger
-
-Du behöver inte göra några förberedelser inför den här ändringen. Vi meddelar dig när den uppdaterade webbplatsen för företagsportalen blir tillgänglig för dig. Du kan dock behöva uppdatera slutanvändardokument med uppdaterade skärmbilder. Observera att du också kan behöva uppdatera dokumentationen för företagsportalappen för iOS, eftersom webbplatsen startar avsnittet **Appar** i iOS-appen.  
-
-### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen <!--1313244 part 2-->
-
-__Uppdateringar av aktuella appar__ Vi har lagt till en särskild sida på webbplatsen där användarna kan bläddra bland appar som du har valt att presentera, och vi har gjort några gränssnittsförändringar på avsnittet Aktuella på startsidan.
-
-![De färggranna ikonerna visar apparna. Det finns stora rutor med färg under varje app, där färgen hämtas från den huvudsakliga färgen i appens logotyp. Avsnittet ”Aktuella appar” visas längst upp i företagsportalappen.](./media/cp_win10_colorful_tiles_after_1708.png)
-
+> Bilderna nedan kan vara förhandsgranskningar och den tillkännagivna produkten kan skilja sig från presenterade versioner.  
 
 
 ### <a name="see-also"></a>Se även

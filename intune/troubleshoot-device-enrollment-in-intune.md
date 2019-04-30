@@ -1,32 +1,34 @@
 ---
 title: Felsöka enhetsregistrering
-description: Förslag på hur du kan felsöka problem med enhetsregistrering.
+titleSuffix: Microsoft Intune
+description: Förslag på hur du kan felsöka problem med enhetsregistrering i Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/09/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
+ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d345ba84eb963600a921c0f77f7a93ed6aa1b0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 06a8bd8d0a46b7d7eed8efb4cb8b4c2d4e21f77d
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509285"
 ---
-# <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
+# <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
-Den här artikeln innehåller förslag på hur du kan felsöka problem med enhetsregistrering. Om den här informationen inte löser ditt problem, se [Få support för Microsoft Intune](get-support.md) där det står om fler sätt att få hjälp.
+Den här artikeln innehåller förslag på hur du kan felsöka problem med [enhetsregistrering](device-enrollment.md). Om den här informationen inte löser ditt problem, se [Få support för Microsoft Intune](get-support.md) där det står om fler sätt att få hjälp.
 
 
 ## <a name="initial-troubleshooting-steps"></a>Inledande felsökningssteg
@@ -100,7 +102,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
 1.  Kontrollera att utfärdaren för hantering av mobila enheter har [angetts korrekt](mdm-authority-set.md).
     
-2.  Verifiera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory. Du kan verifiera att användarens UPN matchar Active Directory-informationen i Office 365-portalen.
+2.  Verifiera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory. Du kan verifiera att användarens UPN matchar Active Directory-informationen i Microsoft 365-administrationscentret.
     Om UPN inte matchar Active Directory-informationen:
 
     1.  Inaktivera DirSync på den lokala servern.
@@ -131,7 +133,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Det går inte att skapa en princip eller registrera enheter om företagets namn innehåller specialtecken
 **Problem:** Du kan inte skapa en princip eller registrera enheter.
 
-**Lösning:** I [Administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
+**Lösning:** I [Microsoft 365-administrationscentret](https://admin.microsoft.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Det går inte att logga in eller registrera enheter om det finns flera verifierade domäner
 **Problem:** Detta problem kan uppstå när du lägger till ytterligare en verifierad domän i ditt ADFS. Användare med UPN-suffixet (användarens huvudnamn) för den andra domänen kanske inte kan logga in på portalerna eller registrera enheter.
@@ -225,7 +227,7 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 **Lösning 1**:
 
-Användaren kanske kan hämta certifikatet som saknas genom att följa instruktionerna i [Enheten saknar ett obligatoriskt certifikat](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Om problemet kvarstår kan du försöka med lösning 2.
+Användaren kanske kan hämta certifikatet som saknas genom att följa instruktionerna i [Enheten saknar ett obligatoriskt certifikat](/intune-user-help/your-device-is-missing-a-required-certificate-android). Om problemet kvarstår kan du försöka med lösning 2.
 
 **Lösning 2**:
 
@@ -492,7 +494,7 @@ Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 |0x80043008, 0x80CF3008|Det gick inte att starta tjänsten Uppdatering av Microsoft onlinehantering.|Kontakta Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).|
 |0x80043009, 0x80CF3009|Klientdatorn har redan registrerats i tjänsten.|Du måste inaktivera klientdatorn innan du kan registrera den igen i tjänsten.|
 |0x8004300B, 0x80CF300B|Det går inte att köra installationspaketet för klientprogramvaran eftersom den version av Windows som körs på klienten inte stöds.|Intune stöder inte den version av Windows som körs på klientdatorn.|
-|0xAB2|Windows Installer kunde inte komma åt VBScript-runtimen för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL:en kan du behöva använda verktygen som beskrivs i [Microsoft Support-artikeln KB198038: Useful Tools for Package and Deployment Issues](https://support.microsoft.com/kb/198038).|
+|0xAB2|Windows Installer kunde inte komma åt VBScript-runtimen för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL:en kan du behöva använda verktygen som beskrivs i [Microsoft Support-artikeln KB198038: Useful Tools for Package and Deployment Issues](https://support.microsoft.com/kb/198038) (Användbara verktyg för problem med paket och distribution).|
 |0x80cf0440|Anslutningen till tjänstslutpunkten avbröts.|Utvärderings- eller betalkontot har inaktiverats tillfälligt. Skapa ett nytt utvärderings- eller betalkonto och registrera dig igen.|
 
 

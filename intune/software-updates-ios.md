@@ -5,56 +5,87 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/11/2018
-ms.topic: article
+ms.date: 04/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cce77976ea0cb31596ca0a1fd6c4becc9e3cee34
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: de73aa069765ce75068781674ff24d097346cdba
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505938"
 ---
-# <a name="configure-ios-update-policies-in-intune"></a>Konfigurera iOS-uppdateringsprinciper i Intune
+# <a name="add-ios-software-update-policies-in-intune"></a>Lägga till principer för iOS-programuppdatering i Intune
 
-Med programvaruuppdateringsprinciper kan du tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga uppdateringen för operativsystemet. Den här funktionen är endast tillgänglig för övervakade enheter. När du konfigurerar en princip kan du lägga till de dagar och tider då du inte vill att enheter installerar en uppdatering. 
+Med programvaruuppdateringsprinciper kan du tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga uppdateringen för operativsystemet. När du konfigurerar en princip kan du lägga till de dagar och tider då du inte vill att enheter installerar en uppdatering. 
+
+Den här funktionen gäller för:
+
+- iOS 10.3 och senare (övervakade enheter)
 
 Enheten checkar in med Intune ungefär var 8:e timme. Om en uppdatering är tillgänglig och den aktuella tiden inte är en begränsad tid laddar enheten ned och installerar den senaste uppdateringen för operativsystemet. Det krävs inga användaråtgärder för att uppdatera enheten. Principen förhindrar inte att en användare uppdaterar operativsystemet manuellt.
 
-Den här funktionen stöder enheter som kör iOS 10.3 och senare versioner. Fördröjningsinställningen är tillgänglig i iOS 11.3 och senare versioner.
-
 ## <a name="configure-the-policy"></a>Konfigurera principen
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Programuppdateringar** > **Uppdateringsprinciper för iOS** > **Skapa**.
-4. Ange ett namn och en beskrivning för principen.
-5. Välj **Inställningar**. 
 
-    Ange information om när iOS-enheter inte ska tvingas att installera de senaste uppdateringarna. Dessa inställningar skapar en begränsad tidsram. Du kan konfigurera **Dagar** i veckan, **Tidszon**, **Starttid**, **Sluttid** och **Fördröj visning av programuppdateringar (dagar)** för att ange användare. Du kan välja en fördröjningstid för programuppdateringar från 1 till 90 dagar. När fördröjningen upphör får användarna ett meddelande om att uppdatera till den tidigaste versionen av OS som var tillgänglig när fördröjningen utlöstes. Om du inte vill ställa in en fördröjningstid för programuppdatering anger du 0. De här uppdateringsinställningarna gäller endast övervakade iOS-enheter.
-  
-    Exempel: Om iOS 12.a är tillgänglig den **1 januari** och du har **fördröjning av OS-uppdateringar** inställt på **5 dagar** visas inte den versionen som en tillgänglig uppdateringar på några slutanvändarenheter tilldelade till den profilen. På den **sjätte dagen** efter utgivningen visas den uppdateringen som tillgänglig och alla slutanvändare kan starta en uppdatering.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+2. Välj **Programuppdateringar** > **Uppdateringsprinciper för iOS** > **Skapa**.
+3. Ange följande inställningar:
 
+    - **Namn**: Ange ett namn för principen för programuppdatering. Ange till exempel `iOS restricted update times`.
+    - **Beskrivning**: Ange en beskrivning av principen. Denna inställning är valfri, men rekommenderas.
 
-6. Klicka på **OK** för att spara ändringarna. Välj **Skapa** för att skapa principen.
+4. Välj **Inställningar > Konfigurera**. Ange följande inställningar:
 
-Profilen skapas och visas i principlistan. Apple MDM tillåter inte att du tvingar en enhet att installera uppdateringar en viss tid eller ett visst datum. 
+    - **Välj tidpunkter för att förhindra installationer av uppdateringar**: Ange en begränsad tidsram när uppdateringar inte installeras med tvång. 
+      - Blockeringar över natten stöds inte och fungerar kanske inte. Till exempel bör du inte konfigurera en princip med en *Starttid* kl. 20:00 och en *Sluttid* på kl. 06:00.
+      - En princip som börjar vid kl. 12:00 och slutar kl. 12:00 tolkas som 0 timmar, inte 24 timmar, vilket innebär att det inte finns någon begränsning.
+
+      När du konfigurerar den begränsade tidsramen anger du följande uppgifter:
+
+      - **Dagar**: Välj de veckodagar då uppdateringar inte installeras. Markera till exempel måndag, onsdag och fredag om du vill förhindra att uppdateringar installeras på de dagarna.
+      - **Tidzon**: Välj en tidszon.
+      - **Starttid**: Välj starttiden för den begränsade tidsramen. Ange till exempel kl. 05:00 så att uppdateringar inte börjar installeras kl. 05:00.
+      - **Sluttid**: Välj sluttiden för den begränsade tidsramen. Ange till exempel kl. 01:00 så att uppdateringar kan börja installeras från kl. 01:00.
+
+    - **Fördröj synligheten för programuppdateringar för slutanvändare utan ändring av schemalagda uppdateringar (dagar)**: 
+
+      **Den här inställningen har flyttats till [Enhetsbegränsningar](device-restrictions-ios.md#general). Den kommer att tas bort från den här platsen i portalen**. Under en kort period kan befintliga principer ändras här. Efter ungefär en månad tas den här inställningen bort från befintliga principer.
+
+      Vi rekommenderar följande för att begränsa påverkan:
+        - Ta bort den befintliga principen från den här platsen i portalen.
+        - Skapa en ny [princip för enhetsbegränsning](device-restrictions-ios.md#general).
+        - Ha samma användare som mål som den ursprungliga principen hade.
+
+      Om det finns en konflikt gör den här inställningen ingenting *såvida inte* de två värdena är identiska. För att förhindra konflikt bör du ändra eller ta bort den befintliga principen från den här platsen i portalen.
+      > [! Viktigt]  
+      > En princip som har en *Starttid* och en *Sluttid* på 12:00 tolkas som 0 timmar och inte som 24 timmar. Detta resulterar i att det inte blir någon begränsning.  
+
+5. Välj **OK** > **Skapa** för att spara ändringarna och skapa principen.
+
+Profilen skapas och visas i principlistan.
+
+Vägledning från Intune-supportteamet finns i [Fördröj synligheten för programvaruuppdateringar i Intune för övervakade enheter](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
+
+> [!NOTE]
+> Apple MDM tillåter inte att du tvingar en enhet att installera uppdateringar en viss tid eller ett visst datum.
 
 ## <a name="change-the-restricted-times-for-the-policy"></a>Ändra begränsade tider för principen
 
 1. I **Programuppdateringar** väljer du **Uppdateringsprinciper för iOS**.
 2. Välj en befintlig princip > **Egenskaper**.
 3. Uppdatera den begränsade tiden:
-    
+
     1. Välj veckodagar
     2. Välj den tidszon som den här principen tillämpas i
     3. Ange start- och sluttid för svartlistade timmar
 
     > [!NOTE]
-    > Om **starttiden** och **sluttiden** båda anges till 12:00 stängs tidskontrollen för underhåll av.
+    > Om **Starttid** och **Sluttid** båda anges till kl. 12:00 kontrollerar inte Intune om det finns begränsningar för när uppdateringar får installeras. Det innebär att alla konfigurationer som du har för **Välj tidpunkter för att förhindra installationer av uppdateringar** ignoreras och att uppdateringar kan installeras när som helst.  
 
 ## <a name="assign-the-policy-to-users"></a>Tilldela principen till användare
 
@@ -71,3 +102,6 @@ De enheter som används av de användare som den här principen inriktar sig på
 <!-- 1352223 -->
 **Programuppdateringar** > **Installationsfel för iOS-enheter** visar en lista över övervakade iOS-enheter som är mål för en uppdateringsprincip, försökte genomföra en uppdatering och inte kunde uppdateras. För varje enhet kan du se status om varför enheten inte har uppdaterats automatiskt. Felfria, uppdaterade enheter visas inte i listan. ”Uppdaterade” enheter innefattar den senaste uppdateringen som enheten själv har stöd för.
 
+## <a name="next-steps"></a>Nästa steg
+
+[Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).

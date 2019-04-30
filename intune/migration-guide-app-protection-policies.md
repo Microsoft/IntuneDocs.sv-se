@@ -1,5 +1,5 @@
 ---
-title: Konfigurera appskyddsprinciper under en Intune-migrering
+title: Konfigurera appskyddsprinciper under migrering
 titleSuffix: Microsoft Intune
 description: Den här artikeln beskriver de steg du måste utföra när du konfigurerar appskyddsprinciper under en Microsoft Intune-migrering.
 keywords: ''
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 076750334c8faba6e9a99368d7af682b10de8962
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: c516c53c38eb033aa2a9688c40b301bedcc7a034
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59567367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508352"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurera appskyddsprinciper (valfritt)
 

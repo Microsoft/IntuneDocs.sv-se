@@ -5,21 +5,23 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
-ms.topic: article
+ms.date: 03/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 60cfa440-0723-4ea0-bacf-3c5d26f9a1d3
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 4cec5c593fd4191a9d73e77b13fd38df81a7fe8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a9f16c563ff0416092abe3812b3505c2f6d92587
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512907"
 ---
 # <a name="basic-setup"></a>Grundläggande konfiguration
 
@@ -31,11 +33,11 @@ När du har utvärderat din miljö är det dags att konfigurera Microsoft Intune
 
 Intune kräver Azure Active Directory (AAD) som leverantör av identitet och användargruppering. Läs mer om:
 
--  [Identitetskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+-  [Identitetskrav](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   [Katalogsynkroniseringskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+-   [Katalogsynkroniseringskrav](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   [Krav på multifaktorautentisering (MFA)](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
+-   [Multifaktorautentisering (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
 -   [Planera dina användar- och enhetsgrupper](users-add.md)
 
@@ -58,19 +60,19 @@ Om du planerar att använda certifikatbaserad autentisering för VPN-, Wi-Fi- el
 
 Innan du kan migrera till Intune måste du ha en Intune-prenumeration.
 
--   Du kan besöka [den här sidan](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0). Här får du anvisningar om hur du kan:
+-   Du kan besöka [den här sidan](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0). Här får du anvisningar om hur du kan:
 
     -   Skapa en ny Intune-prenumeration som är länkad till en ny AAD-klient.
 
     -   Länka Intune-prenumerationen genom att logga in till en befintlig AAD-klient.
 
-### <a name="task-2-assign-intune-user-licenses"></a>Steg 2: Tilldela Intune-användarlicenser
+### <a name="task-2-assign-intune-user-licenses"></a>Uppgift 2: Tilldela Intune-användarlicenser
 
 -   Lär dig [hur man tilldelar Intune-användarlicenser](licenses-assign.md).
 
 -   Om du har skapat en ny Azure Active Directory-klient kan du läsa om [hur du kan skapa nya användare eller synkronisera användare från din lokala Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
-### <a name="task-3-set-your-mdm-authority-to-intune"></a>Uppgift 3: Konfigurera Intune som utfärdare för hantering av mobilenheter
+### <a name="task-3-set-your-mdm-authority-to-intune"></a>Uppgift 3: Ange din MDM-auktoritet till Intune
 
 Du kan hantera Intune via Azure Portal eller konsolen Configuration Manager Current Branch. Såvida du inte behöver integrera Intune med en Configuration Manager Current Branch-distribution rekommenderar vi att du hanterar Intune från [Azure-portalen](https://portal.azure.com).
 

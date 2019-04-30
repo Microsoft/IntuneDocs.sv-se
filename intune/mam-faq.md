@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69cc0d732c9dc850d55acedf4e6dbae0f43f350a
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 21d773b0ab2227f59f1ee0b2091d39b7c9799721
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61506822"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -65,7 +66,7 @@ Alla appar som har integrerats med [Intune App-SDK](/intune/app-sdk) eller inslu
 - Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](/intune/licenses-assign) för information om hur du tilldelar Intune-licenser till slutanvändare.
 
 - Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål.
- Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Office-portalen](https://portal.office.com).
+ Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Microsoft 365-administrationscentret](https://admin.microsoft.com).
 
 - Slutanvändaren måste logga in på appen med sitt AAD-konto.
 
@@ -80,7 +81,7 @@ Alla appar som har integrerats med [Intune App-SDK](/intune/app-sdk) eller inslu
 
 **Vilka är de ytterligare kraven för att använda [Word-, Excel- och PowerPoint](https://products.office.com/business/office)-apparna?**
 
-- Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](https://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Microsoft 365-administrationscentret](https://admin.microsoft.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddsprincipen Förhindra spara som. Om den hanterade platsen till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen vara konfigurerad i slutanvändarens Word-, Excel- eller PowerPoint-app.
 
@@ -175,6 +176,27 @@ Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på sluta
 
 När du hanterar olika typer av inställningar får ett krav på appversion företräde, följt av kravet på Android-operativsystemets version och kravet på Android-korrigeringsprogrammets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning.
 
+**Intune-appskyddsprinciper ger administratörer möjligheten att kräva att slutanvändarenheter godkänns av Googles SafetyNet-attestering för Android-enheter. Hur ofta skickas ett nytt resultat från SafetyNet-attestering till tjänsten?** <br><br> En ny Google Play-tjänstbestämmelse rapporteras till IT-administratören vid ett intervall som bestäms av Intune-tjänsten. Hur ofta tjänstanropet görs begränsas på grund av belastningen, vilket gör att det här värdet underhålls internt och inte kan konfigureras. Alla av IT-administratören konfigurerade åtgärder för inställningen för Googles SafetyNet-attestering vidtas baserat på det senast rapporterade resultatet till Intune-tjänsten vid tidpunkten för villkorsstyrd start. Om det inte finns några data tillåts åtkomst beroende på om inga andra kontroller för villkorsstyrd start misslyckas, och Google Play-tjänstens ”tur och retur” för att avgöra attesteringsresultat börjar i serverdelen och uppmanar användaren asynkront om enheten har misslyckats. Om det finns inaktuella data blockeras eller tillåts åtkomst beroende det senast rapporterade resultatet, och på ett liknande sätt startar Google Play-tjänstens ”tur och retur” för att avgöra attesteringsresultat och uppmanar användaren asynkront om enheten har misslyckats.
+
+**Intune-appskyddsprinciper ger administratörer möjligheten att kräva att slutanvändarenheter skickar signaler via Googles Verify Apps-API för Android-enheter. Hur kan slutanvändare aktivera appgenomsökningen så att de inte blockeras från åtkomst på grund av detta?**<br><br> Anvisningar om hur du gör detta varierar något beroende på enheten. Den allmänna processen omfattar att gå till Google Play Store, klicka på **Mina appar och spel** och därefter klicka på resultatet av den senaste appgenomsökningen, vilket öppnar Play Protect-menyn. Se till att växlingsknappen för **Genomsök enheten efter säkerhetshot** växlas till på.
+
+**Vad kontrollerar Googles SafetyNet-attesterings-API på Android-enheter? Vad är skillnaden mellan de konfigurerbara värdena för ”Kontrollera grundläggande integritet” och ”Kontrollera grundläggande integritet och certifierade enheter”?** <br><br>
+Intune använder Google Play Protect SafetyNet-API:er som tillägg till våra befintliga rotidentifieringskontroller för oregistrerade enheter. Google har utvecklat och underhållit den här API-uppsättningen för införande i Android-appar om de inte vill att deras appar ska köras på rotade enheter. Det här har införts för till exempel Android Pay-appen. Google delar inte alla rotidentifieringskontroller som körs offentligt, men vi förväntar oss att de här API:erna identifierar användare som har rotat sina enheter. De här användarna kan sedan blockeras från åtkomst, eller så kan deras företagskonton rensas bort från principaktiverade appar. ”Kontrollera grundläggande integritet” ger information om enhetens allmänna integritet. Rotade enheter, emulatorer, virtuella enheter och enheter med tecken på manipulation misslyckas med grundläggande integritet. ”Kontrollera grundläggande integritet och certifierade enheter” ger information om enhetens kompatibilitet med Google-tjänster. Endast oförändrade enheter som har certifierats av Google kan godkännas av den här kontrollen. Enheter som misslyckas inbegriper följande:
+* Enheter som misslyckas med grundläggande integritet
+* Enheter med ett upplåst startprogram
+* Enheter med en anpassad systemavbildning/ROM
+* Enheter för vilka tillverkaren inte ansökte eller godkändes för Google-certifiering 
+* Enheter med en systemavbildning som skapats direkt från Android Open Source Program-källfilerna
+* Enheter med en betaversion/utvecklarförhandsversion av systemavbildningen
+
+Teknisk information finns i [Googles dokumentation om SafetyNet-attestering](https://developer.android.com/training/safetynet/attestation).
+
+**Det finns två liknande kontroller i avsnittet Villkorsstyrd start vid skapande av en Intune-appskyddsprincip för Android-enheter. Bör jag kräva inställningen ”SafetyNet-enhetsattestering” eller inställningen ”jailbrokade/rotade enheter”?** <br><br>
+Google Play Protects SafetyNet-API-kontroller kräver att slutanvändaren är online, åtminstone under den tid då ”tur och retur” för att avgöra attesteringsresultat körs. Om användaren är offline kan IT-administratören fortfarande förvänta sig att ett resultat framtvingas från inställningen ”jailbrokade/rotade enheter”. Om slutanvändaren har varit offline för länge kan dock värdet för ”Offline-respitperioden” börja gälla, och all åtkomst till arbets- eller skoldata blockeras när det timervärdet uppnås tills nätverksåtkomst blir tillgänglig. Om båda inställningarna aktiveras ger det en metod med flera lager för att hålla slutanvändarenheter felfria, vilket är viktigt när slutanvändare kommer åt arbets- eller skoldata via mobilenheter. 
+
+**De inställningar för appskyddsprincip som använder Google Play Protect-API:er kräver Google Play-tjänster för att kunna fungera. Vad händer om Google Play-tjänster är tillåts på den plats där slutanvändaren kanske befinner sig?**<br><br>
+Båda inställningarna ”SafetyNet-enhetsattestering” och ”Hotgenomsökning på appar” kräver en Google-bestämd version av Google Play-tjänster för att fungera korrekt. Eftersom de här är inställningar som rör området säkerhet blockeras slutanvändaren om denne är föremål för de här inställningarna och inte uppfyller den lämpliga versionen av Google Play-tjänster eller inte har åtkomst till Google Play-tjänster. 
+
 ## <a name="app-experience-on-ios"></a>App-upplevelse på iOS
 **Vad händer om jag lägger till eller tar bort ett fingeravtryck eller ansikte till/från min enhet?**
 Intunes appskyddsprinciper kan styra åtkomst till den Intune-licensierade användaren. Ett sätt att styra åtkomst till appen är att kräva antingen Apples Touch-ID eller ansikts-ID på enheter som stöds. Intune implementerar ett beteende där, om det förekommer ändringar till enhetens biometriska databas, Intune uppmanar användaren att ange en PIN-kod när nästa tidsgränsen för inaktivitet uppfylls. Ändringar av biometriska data inkluderar tillägg eller borttagning av ett fingeravtryck eller ansikte. Om Intune-användare inte har en PIN-kod, leds de till att ställa in en PIN-kod i Intune.
@@ -189,20 +211,13 @@ Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på sluta
 
 När du hanterar olika typer av inställningar får ett krav på Intune App SDK-version företräde, följt av kravet på appversion, och därefter kravet på iOS-operativsystemets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning. Vi rekommenderar att du endast konfigurerar Intune App SDK-versionskraven vid vägledning från Intune-produktteamet för väsentliga blockeringsscenarier.
 
-## <a name="app-protection-policies---policy-refresh"></a>Appskyddsprinciper – principuppdatering
-- Appar checkar in till APP-tjänsten var 30:e minut.
-- Tröskelvärdet på 30 minuter baseras på en timer.
-    - Om appen är aktiv i 30 minuter, checkar den in när det har gått 30 minuter.
-    - Om appen är i viloläge när det har gått 30 minuter, checkar den in vid nästa tillfälle.
-- Om ingen princip har tilldelats till en användare sker incheckningen var åttonde timme.
-- Om ingen Intune-licens har tilldelats sker incheckningen var 24:e timme.
-
 
 ## <a name="see-also"></a>Se även
 - [Implementera din Intune plan](planning-guide-onboarding.md)
 - [Intune-testning och validering](planning-guide-test-validation.md)
 - [Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune](app-protection-policy-settings-android.md)
 - [Inställningar för hanteringsprincip för iOS-mobilappar](app-protection-policy-settings-ios.md)
-- [Validera dina appskyddsprinciper](app-protection-policies-validate.md)
+- [Principuppdatering för appskyddsprinciper](app-protection-policy-delivery.md)
+- [Validera dina appskyddsprinciper](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery)
 - [Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering](app-configuration-policies-managed-app.md)
 - [Så kan du få support för Microsoft Intune](get-support.md)
