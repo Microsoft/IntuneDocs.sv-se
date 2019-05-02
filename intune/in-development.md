@@ -1,12 +1,12 @@
 ---
 title: Under utveckling - Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Microsoft Intune-funktioner under utveckling
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e068e2c9834290b705e8e7bc2f895636415f9ba
-ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
+ms.openlocfilehash: aa38a684a32756d4f2c3be3b750f8e79b66e98f6
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675450"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587390"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Under utveckling för Microsoft Intune – April 2019
 
 För att hjälpa din beredskap och planering, den här sidan visar Intune UI-uppdateringar och funktioner som är under utveckling, men ännu inte släppts. Dessutom:
 
-- Om vi tror att du måste vidta åtgärder innan en ändring, publicerar vi ett kostnadsfri meddelandecenter för Office-inlägg.
+- Om vi tror att du måste vidta åtgärder innan en ändring, publicerar vi ett kompletterande meddelandecenter för Office-inlägg.
 - När en funktion har startats i produktion, antingen som en förhandsversion eller allmänt tillgänglig, funktionsbeskrivningen och kommer att flyttas ut den här sidan till den [nyheter](whats-new.md).
 - Den här sidan och [nyheter](whats-new.md) uppdateras regelbundet. Kom tillbaka och se om det finns nya uppdateringar.
 - Referera till den [M365-översikt](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) för strategiska mål och tidslinjer.
@@ -60,18 +60,6 @@ Du kommer snart att kunna använda Intune för att hantera anpassade brandväggs
 
 ### <a name="require-app-protection-conditional-access----1634317---"></a>Kräv App Protection villkorlig åtkomst  <!--1634317 -->
 Du kommer att kunna använda *kräver appskyddsprincip*, vilket bekräftar att principen tillämpas på en användares app innan inloggningen är klar för att hindra användare från att komma åt data som du skyddar med villkorlig åtkomst. När principen assurance kan sakta ned den första användning-upplevelsen, hjälper dig för att skydda mot nätverksproblem, administrativa felkonfigurationer eller avsiktligt arbete med att här principer för programskydd. 
-
-### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660---"></a>Distribution av online-licensierade Microsoft Store för företag-appar <!-- 16726660 -->
-Du kommer att kunna tilldela nödvändiga onlinelicensierade Microsoft Store for Business-appar i enhetskontexten. Genom att distribuera en Microsoft Store för företag-app på detta sätt, kan appen installeras för alla användare på enheten. Detta gäller endast för Windows 10 RS4+ desktop-enheter. Alternativet att installera i kontexten för enheten finns på sidan Tilldelning av klientappar för MSFB Online-licensierade appar.
-
-### <a name="include-and-exclude-mixture-of-user-groups-and-device-groups-when-assigning-policies-and-profiles----1807547---"></a>Inkludera och exkludera blandning av användargrupper och enhetsgrupper när du tilldelar principer och profiler <!-- 1807547 -->
-När du tilldelar policyer för efterlevnad eller profiler för enhetskonfiguration, kan du tilldela dem till säkerhetsgrupper med användare eller enheter. För närvarande kan du inkludera och Exkludera endast användargrupper, *eller* inkludera och Exkludera endast enhetsgrupper. Du kan inte inkludera och exkludera en blandning av grupper, som innehåller användargrupper *och* undanta en grupp av enheter.
-
-Du kommer att kunna inkludera och exkludera en blandning av användargrupper och enhetsgrupper. Du kan inkludera en grupp användare och exkludera en grupp av enheter. Du kan till exempel tilldela eller distribuera en profil för enhetskonfiguration till en grupp av användare, men exkludera personliga enheter.
-
-[Tilldela profiler för enhetskonfiguration](device-profile-assign.md) innehåller mer information om hur du tilldelar profiler till användargrupper och enhetsgrupper.
-
-Gäller för: alla plattformar
 
 ### <a name="retire-noncompliant-devices----1827291---"></a>Ta bort icke-kompatibla enheter <!-- 1827291 -->
 Vi ska lägga till en ny åtgärd för att dra tillbaka en inkompatibel enhet. Ta bort en inkompatibel enhet tar bort alla företagsdata från den och tar också bort enheten från att hanteras av Intune. Den här åtgärden körs när det konfigurerade värdet i dagar har uppnåtts. Minsta värde är 30 dagar. 
@@ -142,7 +130,7 @@ Gäller för: Android Enterprise fullständigt hanterade enheter
 ### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Sök efter en TPM-kretsuppsättning i en efterlevnadsprincip för Windows 10-enheter <!-- 3617671 -->
 Många Windows 10 och senare enheter har kretsuppsättningar Trusted Platform Module (TPM). En ny efterlevnadsinställning kontrollerar om en TPM finns på enheten.
 
-[Windows 10 och senare kompatibilitetsprincipinställningar](compliance-policy-create-windows.md#windows-10-and-later-policy-settings) visar en lista över de aktuella inställningarna.
+[Windows 10 och senare kompatibilitetsprincipinställningar](compliance-policy-create-windows.md) visar en lista över de aktuella inställningarna.
 
 Gäller för: 
 - Windows 10 och senare
@@ -177,15 +165,6 @@ Vi lägger till en ny Windows update ring-inställning som du kan använda för 
 
 ### <a name="windows-update-notifications----3316782---"></a>Meddelanden om uppdateringar för Windows <!-- 3316782 -->
 Vi lägger till stöd för Windows Update ring konfigurationer så att du kan konfigurera Windows Update-meddelanden som användarna ser. Den här inställningen vara inte tillgänglig i portalen, men kan konfigureras med hjälp av Intune Graph API.
-
-### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Ändringar i Företagsportalen registrering för iOS 12 enhetens användare <!--3448635 --> 
-Företagsportalen för iOS kommer att uppdatera appskärmar för registrering och steg för att anpassas till MDM-registrering ändringar som introducerades i Apple iOS 12.2. Uppdaterade arbetsflödet kommer nu att uppmana användarna att:
-
-- Tillåt Safari att öppna webbplatsen för Företagsportalen (via Safari) och ladda ned hanteringsprofilen innan det returneras till appen företagsportal.
-- Öppna inställningsappen för att installera hanteringsprofilen på sin enhet.
-- Gå tillbaka till företagsportalappen att slutföra en registrering.
-
-Mer information om hur du kan förbereda för dessa ändringar finns i den [Microsoft Tech Community-post](https://aka.ms/CP_changes_iOS12). Under tiden för att stödja nya iOS-registreringar i Företagsportalen, vi har uppdaterat stegen i [registrera iOS-enhet i Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Ändringarna dokument är live när Apple släpper iOS version 12.2. 
 
 ### <a name="easier-access-to-diagnostic-settings----3804627---"></a>Enklare åtkomst till diagnostikinställningar <!-- 3804627 -->
 Vi lägger till en ny möjlighet att den **granskningsloggar** -bladet i varje granskningsloggen arbetsbelastning i Intune-konsolen som du kan använda för att öppna direkt i *diagnostikinställningar* sidan.

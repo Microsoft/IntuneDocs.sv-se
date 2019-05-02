@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 04/01/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28f8a589f20cb63ad4f9873942e9ad511d729b37
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 535f66c68b066454ce9706b1dd1d7a4fce5c265c
+ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566462"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788495"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Inställningar för Windows 10 och senare för att hantera delade enheter med Intune
 
@@ -60,6 +60,9 @@ Mer information om den här funktionen i Intune finns i [Styra åtkomst, konton 
 - **Utbildningsprinciper**: Välj **Aktiverat** om du vill använda de rekommenderade inställningarna för enheter som används i skolor, som är mer restriktiva. Välj **Inaktiverad** så att standardinställda och rekommenderade utbildningsprinciper inte används. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
 
   Mer information om vad utbildningsprinciper gör finns i [Rekommendationer för Windows 10-konfiguration för utbildningskunder](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+
+> [!TIP]
+> [Konfigurera en delad eller gäst dator](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (öppnas en annan webbplats för docs) är en bra resurs på den här Windows 10-funktionen, inklusive koncept och grupprinciper som kan ställas in i delat läge.
 
 ## <a name="next-steps"></a>Nästa steg
 

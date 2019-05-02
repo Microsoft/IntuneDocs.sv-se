@@ -1,6 +1,6 @@
 ---
 title: Nyheter de senaste månaderna i Microsoft Intune – Azure | Microsoft Docs
-titlesuffix: ''
+titleSuffix: ''
 description: Granska äldre meddelanden från Intunes sida med nyheter
 keywords: ''
 author: ErikjeMS
@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ceefcfbcdf48cf8d450f5a74274bc1beea951cc5
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 8df4a1d7f929301c11f577a9b7e50ef1647dda11
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423721"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nyheter i Microsoft Intune – föregående månader
 
@@ -316,7 +316,7 @@ Följande nya tillstånd har lagts till i **Enhetskonfiguration** > **Principer*
 - inte tillämpligt En bild med antalet enheter på andra plattformar visas också. Om du till exempel tittar på en iOS-profil visas antalet enheter med andra system än iOS som också har tilldelats till den här profilen. Se [Efterlevnadsprinciper för enheter](compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions----2325484---"></a>Enhetsefterlevnaden stöder antiviruslösningar från tredje part <!-- 2325484 -->
-När du skapar en ny princip för enhetsefterlevnad (**Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Plattform: Windows 10 eller senare** > **Inställningar** > **Systemsäkerhet**) är några nya alternativ för **[Enhetssäkerhet](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)** tillgängliga: 
+När du skapar en ny princip för enhetsefterlevnad (**Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Plattform: Windows 10 eller senare** > **Inställningar** > **Systemsäkerhet**) är några nya alternativ för **[Enhetssäkerhet](compliance-policy-create-windows.md)** tillgängliga: 
 - **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med antivirusprogram som är registrerade i Windows Security Center, t.ex. Symantec och Windows Defender. 
 - **Antispionprogram**: När **Kräv** har valts kan du kontrollera efterlevnaden med antispionprogram som har registrerats med Windows Security Center, t.ex. Symantec och Windows Defender. 
 
@@ -1264,7 +1264,7 @@ I samtliga fall bevaras din avsedda regler. Ingen åtgärd krävs från din sida
 Med versionen Android Oreo introducerar Google en uppsättning säkerhetsfunktioner med namnet Google Play Protect, där användare och organisationer kan köra skyddade appar och Android-bilder. Intune stöder nu Google Play Protect-funktionerna, inklusive SafetyNets fjärrattestering. Administratörer kan ange efterlevnadsprincipkrav som kräver att Google Play Protect är konfigurerat och felfritt.
 Inställningen **SafetyNets enhetsattestering** kräver att enheten ansluter med en Google-tjänst för att kontrollera att enheten är felfri och inte har komprometterats. Administratörer kan också ange en konfigurationsprofilinställning för Android for Work som kräver att installerade program verifieras av Google Play-tjänsterna. Villkorlig åtkomst kan blockera användare från att komma åt företagets resurser om en enhet inte är kompatibel med Google Play Protect-kraven.
 
-- Lär dig [hur du skapar en princip för enhetsefterlevnad om du vill aktivera Google Play-skydd](https://docs.microsoft.com/intune/compliance-policy-create-google-play-protect).
+- Lär dig [hur du skapar en princip för enhetsefterlevnad om du vill aktivera Google Play-skydd](https://docs.microsoft.com/intune/compliance-policy-create-android).
 
 ### <a name="text-protocol-allowed-from-managed-apps----1414050----"></a>Textprotokoll tillåts från hanterade appar <!-- 1414050  -->
 
@@ -1565,7 +1565,7 @@ Företagsprogram som har gjorts tillgängliga med eller utan registreringen i An
 ### <a name="windows-autopilot-deployment-program-support-in-microsoft-intune----747617---"></a>Stöd för Windows AutoPilot-distributionsprogram i Microsoft Intune  <!-- 747617  -->
 Nu kan du använda Microsoft Intune med Windows AutoPilot-distributionsprogrammet och ge dina användare möjlighet att etablera sina företagsenheter utan hjälp från IT-avdelningen. Du kan anpassa OOBE-åtgärderna (Out-of-Box Experience) och vägleda användarna när de ska ansluta sina enheter till Azure AD och registrera sig i Intune. Microsoft Intune och Windows AutoPilot samarbetar för att eliminera behovet av att distribuera, underhålla och hantera operativsystemavbildningar. Läs mer i informationen om att [registrera Windows-enheter med Windows AutoPilot-distributionsprogrammet](https://docs.microsoft.com/intune/enrollment-autopilot).
 
-### <a name="quick-start-for-device-enrollment----1425655---"></a>Snabbstart för enhetsregistrering  <!-- 1425655 --> 
+### <a name="quickstart-for-device-enrollment----1425655---"></a>Snabbstart för enhetsregistrering  <!-- 1425655 --> 
 Nu är snabbstart tillgängligt i **Enhetsregistrering** och innehåller en tabell med referenser för hantering av plattformar och konfigurering av registreringsprocessen. Via en kort beskrivning av varje objekt och länkar till dokumentation med stegvisa instruktioner får du användbar dokumentation för att enklare komma igång.
 
 ### <a name="device-categorization----1427491---"></a>Enhetskategorisering <!-- 1427491 -->

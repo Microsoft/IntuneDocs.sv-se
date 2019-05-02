@@ -1,10 +1,10 @@
 ---
 title: Enhetshantering i Microsoft 365
-description: Microsoft 365 Enterprise innehåller Microsoft Intune. Se hur Intune tillhandahåller hantering av mobilenheter och hantering av mobilprogram för din organisation, inklusive vanliga scenarier, och använder Intune för att distribuera Microsoft 365 i din miljö.
+description: Microsoft 365 Enterprise innehåller Microsoft Intune. Se hur Intune ger hantering av mobila enheter och hantering av mobilprogram för din organisation. Läs vanliga scenarier och använda Intune för att distribuera Microsoft 365 i din miljö.
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 audience: ITPro
 ms.prod: microsoft-365-enterprise
@@ -16,22 +16,22 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea24101600c7a0e485440f50fc043c14bd840968
-ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
+ms.openlocfilehash: 15f908a34f0a9315552acfad56cbf560a23fa26d
+ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646496"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788453"
 ---
 # <a name="what-is-device-management"></a>Vad är enhetshantering? 
 
-En viktig uppgift för alla administratörer är att skydda och säkra en organisations resurser och data. Den här uppgiften är *enhetshantering*. Användare har många enheter från vilka de öppnar och delar personliga filer, besöker webbplatser och installerar appar och spel. Dessa användare är också anställda och studenter och vill använda sina enheter för att få åtkomst till arbets- och skolrelaterade resurser, t.ex. e-post och OneNote. Enhetshantering innebär att organisationer kan skydda och säkra sina resurser och data. 
+En viktig uppgift för alla administratörer är att skydda och säkra en organisations resurser och data. Den här uppgiften är *enhetshantering*. Användare har många enheter från vilka de öppnar och delar personliga filer, besöker webbplatser och installerar appar och spel. Dessa användare är också anställda och studenter. De vill använda sina enheter för att få åtkomst till arbete och skola resurser, till exempel e-post och OneNote. Enhetshantering innebär att organisationer kan skydda och säkra sina resurser och data. 
 
 Med hjälp av en enhetshanteringslprovider kan organisationen se till att endast behöriga personer och enheter får åtkomst till skyddad information. På samma sätt kan enhetsanvändare enkelt få åtkomst till arbetsdata från sina telefoner eftersom de vet att deras enheter uppfyller organisationens säkerhetskrav. Å organisationens vägnar kan du ställa frågan **Vad ska vi använda för att skydda våra resurser?**
 
-Det är här som [Microsoft Intune](https://docs.microsoft.com/intune/introduction-intune) kommer in i bilden. Intune erbjuder hantering av mobilenheter (MDM) och hantering av mobilprogram (MAM). Vissa viktiga uppgifter för alla MDM- och MAM-lösningar är att:
+Svaret är [Microsoft Intune](https://docs.microsoft.com/intune/introduction-intune). Intune erbjuder hantering av mobilenheter (MDM) och hantering av mobilprogram (MAM). Vissa viktiga uppgifter för alla MDM- och MAM-lösningar är att:
 
-- Stödja flera olika mobila miljöer&mdash;hantera iOS, Android, Windows och macOS-enheter på ett säkert sätt
+- Stödja flera olika mobila miljöerhantera iOS, Android, Windows och macOS-enheter på ett säkert sätt
 - Säkerställa att enheter och program är kompatibla med organisationens säkerhetskrav
 - Skapa principer som hjälper organisationen att skydda data på företagsägda och personliga enheter
 - Använda en enda enhetlig mobil lösning för att implementera dessa principer och hjälpa till med att hantera enheter, appar, användare och grupper.
@@ -43,7 +43,7 @@ Många organisationer, t.ex. Microsoft, använder Intune för att skydda egna da
 
 Det är vanligt att personer har flera enheter som använder olika plattformar. En medarbetare kan t.ex. använda Surface Pro i arbetet och en Android-mobilenhet privat. Och det är vanligt att en person har åtkomst till företaget resurser, t.ex. Microsoft Outlook och SharePoint, från dessa olika enheter.
 
-Med Intune kan du hantera flera enheter per person och de olika plattformar som körs på varje enhet, t.ex. iOS, macOS, Android och Windows. Intune skiljer mellan principer och inställningar efter enhetsplattform, så det är enkelt att hantera och visa enheter med en viss plattform.
+Med Intune kan du hantera flera enheter per person och de olika plattformar som körs på varje enhet, t.ex. iOS, macOS, Android och Windows. Intune skiljer mellan principer och inställningar med enhetsplattformen. Så det är enkelt att hantera och visa enheter av en viss plattform.
 
 **[Vanliga scenarier](https://docs.microsoft.com/intune/common-scenarios)** är en fantastisk resurs med vilken du kan se hur Intune ger svar på vanliga frågor när du arbetar med mobila enheter. Du hittar scenarier om:  
 - Skydda e-postmeddelanden i Exchange lokalt
@@ -53,24 +53,26 @@ Med Intune kan du hantera flera enheter per person och de olika plattformar som 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrering med tjänster för att säkra och skydda
 En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhet och skydd. Intune gör ett bra jobb med att genomföra den här uppgiften genom integration med andra tjänster. Exempel:
 
-- **Microsoft 365** är en viktig komponent när det gäller att förenkla vanliga IT-uppgifter. Med Microsoft 365 Administrationscenter kan du skapa användare, hantera grupper och få åtkomst till andra tjänster som Intune och Azure Active Directory. Du kan t.ex. skapa en grupp för iOS-enheter i Microsoft 365. Använd sedan Intune för att push-överföra principer till den iOS-enhetsgrupp som fokuserar på iOS-funktioner, t.ex. åtkomst till App Store, med hjälp av AirDrop, säkerhetskopiering till iCloud, användning av hjälp av Apples webbfilter och mycket mer.
+- **Microsoft 365** är en viktig komponent när det gäller att förenkla vanliga IT-uppgifter. I Microsoft 365 Administrationscenter skapa användare och hantera grupper. Du får även åtkomst till andra tjänster, till exempel Intune, Azure AD, med mera. 
+
+  Du kan t.ex. skapa en grupp för iOS-enheter i Microsoft 365. Använd sedan Intune för att push-överföra principer till den iOS-enhetsgrupp som fokuserar på iOS-funktioner, t.ex. åtkomst till App Store, med hjälp av AirDrop, säkerhetskopiering till iCloud, användning av hjälp av Apples webbfilter och mycket mer.
 
 - **Windows Defender** innehåller många säkerhetsfunktioner som skyddar Windows 10-enheter. Om du t.ex. använder Intune och Windows Defender tillsammans kan du: 
 
     - Aktivera [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) och söka efter misstänkt aktivitet i filer och appar på mobila enheter. 
-    - Använd [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) om du vill förhindra säkerhetsintrång på mobila enheter och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användare från företagets resurser.
+    - Använd [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) för att förhindra säkerhetsintrång på mobila enheter. Och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användare från företagets resurser.
 
 - **Villkorsstyrd åtkomst** är en funktion i Azure Active Directory som integreras smidigt med Intune. Med hjälp av [villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access) kan du kontrollera att endast kompatibla enheter får åtkomst till e-post, SharePoint och andra appar. 
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Välj den enhetshanteringslösning som passar dig
 
-Det finns ett par olika metoder att hantera enheter på. Du kan börja hantera alla aspekter av enheterna genom att använda alla inbyggda Intune-funktioner. Detta kallas **Hantering av mobilenheter (MDM)**. I den här metoden ”registrerar” användarna sina enheter och använder certifikat för att kommunicera med Intune. Som IT-administratör kan du push-överföra appar till enheter, begränsa enheter till ett specifikt operativsystem, blockera personliga enheter och mycket annat. Om du tappar bort en enhet eller om den blir stulen kan du dessutom ta bort alla data från enheten. 
+Det finns ett par olika metoder att hantera enheter på. Du kan börja hantera olika aspekter av enheter med hjälp av de funktioner som är inbyggda i Intune. Detta kallas **Hantering av mobilenheter (MDM)**. I den här metoden ”registrerar” användarna sina enheter och använder certifikat för att kommunicera med Intune. Som IT-administratör kan du push-överföra appar till enheter, begränsa enheter till ett specifikt operativsystem, blockera personliga enheter och mycket annat. Om du tappar bort en enhet eller om den blir stulen kan du dessutom ta bort alla data från enheten. 
 
 I den andra metoden hanterar du appar på enheter. Detta kallas **Hantering av mobilprogram (MAM)**. Med den här metoden kan användare använda sina personliga enheter för att få åtkomst till företagsresurser. När användarna öppnar en app, t.ex. e-post eller SharePoint, uppmanas de att autentisera sig ytterligare. Om du tappar bort en enhet eller om den blir stulen kan du ta bort alla företagsdata från enheten. 
 
 Du kan också använda en kombination av [MDM och MAM](https://docs.microsoft.com/intune/byod-technology-decisions).
 
-När du har konfigurerat Intune kan välja att enbart arbeta i Azure Portal, eller använda Intune och Microsoft 365 tillsammans, när du hanterar enheter. Se hur Microsoft IT valde en modern metod för enhetshantering och ta del av lärdomarna i Microsoft IT-fallstudien [Migrera hantering av mobilenheter till Intune i Azure Portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal). 
+När du har konfigurerat Intune kan välja att enbart arbeta i Azure Portal, eller använda Intune och Microsoft 365 tillsammans, när du hanterar enheter. [Migrera hantering av mobila enheter till Intune i Azure-portalen](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) är en Microsoft IT-Fallstudie. I det här fallet studera, se hur Microsoft IT har valt en metod för hantering av moderna enheter och läsa erfarenheter.
 
 ## <a name="simplify-it-tasks-using-the-device-management-dashboard"></a>Förenkla IT-uppgifter med hjälp av instrumentpanelen för enhetshantering
 
@@ -94,4 +96,4 @@ På instrumentpanelen för enhetshantering kan du:
 - [Felsöka](https://docs.microsoft.com/intune/help-desk-operators)
 
 ## <a name="next-step"></a>Nästa steg
-När du är redo att sätta igång med en MDM- eller MAM-lösning kan du gå igenom de olika stegen för att konfigurera Intune, registrera enheter och börja skapa principer. Mer information finns i [Hantering av mobilenheter för Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure). 
+När du är redo att sätta igång med en MDM- eller MAM-lösning kan du gå igenom de olika stegen för att konfigurera Intune, registrera enheter och börja skapa principer. Mer information finns i Hantering av mobilenheter för Microsoft 365. [Hantering av mobila enheter för Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) är också en bra resurs.

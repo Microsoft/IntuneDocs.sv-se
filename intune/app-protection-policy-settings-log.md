@@ -1,6 +1,6 @@
 ---
-title: Granska loggar för appskyddsprinciper | Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Granska loggar för appskyddsprinciper
+titleSuffix: Microsoft Intune
 description: Det här avsnittet beskriver hur du konfigurerar Intune (APP) loggar för appskyddsprinciper.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42003f53e5d4ff7afa8afe9c242ef2470b5ee3
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: d593ee1389cfa183c5daaefdeae3ea7f6c44a8a8
+ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394801"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671874"
 ---
 # <a name="review-client-app-protection-logs"></a>Granska loggarna för klientappskydd
 
@@ -31,7 +31,7 @@ Läs om vilka inställningar du kan granska i appskyddsloggarna. Få åtkomst ti
 
 Processen för att aktivera och samla in loggar varierar efter plattform:
 - **Android-enheter** – Använd *Företagsportalen*. Se [Skicka loggar till företagets support via e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
-- **iOS-enheter** – Använd en Managed Browser eller *Microsoft Edge* till att samla in loggar. Mer information finns i Intune-supportteamets blogg [New Intune Diagnostic Console for Log Submission in the Intune Managed Browser](https://blogs.technet.microsoft.com/intunesupport/2017/11/10/support-tip-new-intune-diagnostic-console-for-log-submission-in-the-intune-managed-browser). 
+- **iOS-enheter** – Använd en Managed Browser eller *Microsoft Edge* till att samla in loggar. Mer information finns i Intune-supportteamets blogg [New Intune Diagnostic Console for Log Submission in the Intune Managed Browser](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-New-Intune-Diagnostic-Console-for-Log-Submission-in/ba-p/280021). 
 - **Windows 10-enheter** – Använd *MDMDiag* och händelseloggar. Se [Diagnostisera MDM-fel i Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) i Windows-klientens hanteringsinnehåll och bloggen [Felsökning av Windows 10 vid Intune-principfel](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures)
 
 

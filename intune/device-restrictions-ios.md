@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 0d0623e9d12132ac470813d65510bc2c76379109
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490734"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871479"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -195,7 +195,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 #### <a name="safari"></a>Safari
 
-- **Safari**: **Blockera** webbläsaren Safari från att användas på enheten. **Inte konfigurerad** tillåter användarna att använda webbläsaren Safari.
+- **Safari (endast övervakat)**: **Blockera** att webbläsaren Safari används på enheten. **Inte konfigurerad** tillåter användarna att använda webbläsaren Safari.
 - **Autofyll**: **Blockera** inaktiverar funktionen Autofyll i Safari på enheten. **Inte konfigurerad** tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren.
 - **Cookies**: Välj hur cookies ska hanteras på enheten. Alternativen är:
   - Tillåt
@@ -290,7 +290,7 @@ Om du vill lägga till appar i listorna kan du:
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
 - **Säkerhetskopiera till iCloud**: **Inte konfigurerad** tillåter användaren att säkerhetskopiera enheten till iCloud. **Blockera** hindrar användaren från att säkerhetskopiera enheten till iCloud.
-- **Blockera iCloud-dokumentsynkronisering**: **Inte konfigurerad** tillåter synkronisering av dokument och nyckelvärden till ditt lagringsutrymme i iCloud. **Blockera** förhindrar iCloud från att synkronisera dokument och data.
+- **Dokumentsynkronisering till iCloud (endast övervakat)**: **Inte konfigurerad** tillåter synkronisering av dokument och nyckelvärden till ditt lagringsutrymme i iCloud. **Blockera** förhindrar iCloud från att synkronisera dokument och data.
 - **Synkronisering av bildström till iCloud**: **Inte konfigurerad** låter användarna aktivera **My Photo Stream** på sina enheter och synkroniseras med iCloud och låta foton vara tillgängliga på användarens alla enheter. **Blockera** förhindrar bildströmssynkronisering till iCloud.
 - **Krypterad säkerhetskopiering**: **Kräv** att säkerhetskopior av enheter måste vara krypterade.
 - **iCloud-bildbiblioteket**: Ställ in på **Blockera** om du vill inaktivera användning av iCloud-bildbiblioteket för att lagra foton och videoklipp i molnet. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket till enheten tas bort från enheten. **Inte konfigurerad** tillåter att iCloud-bildbiblioteket används.

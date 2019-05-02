@@ -1,12 +1,12 @@
 ---
 title: Enheter – Intune-informationslager
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Referensavsnitt för kategorin Program för entitetssamlingar i API:et för Intune-informationslager.
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29213400b5baf9705c188bb45b3666b65262d577
-ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.openlocfilehash: c361c6054cf52c802155587084eaea76e024f78c
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429190"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -80,6 +80,7 @@ Entiteten **EnrollmentActivity** visar aktiviteten för en enhetsregistrering.
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | Nyckeln för det datum då den här registreringsaktiviteten registrerades.               |
 | deviceEnrollmentTypeKey       | Nyckeln för registreringens typ.                                        |
+| deviceTypeKey                 | Nyckeln för enhetens typ.                                                |
 | enrollmentEventStatusKey      | Nyckeln för den status som visar om registreringen lyckades eller misslyckades.    |
 | enrollmentFailureCategoryKey  | Nyckeln för registreringsfelets kategori (om registreringen misslyckades).        |
 | enrollmentFailureReasonKey    | Nyckeln för registreringsfelets orsak (om registreringen misslyckades).          |
@@ -126,7 +127,7 @@ Entiteten **EnrollmentFailureCategory** visar varför en enhetsregistrering miss
 | BadRequest                      | Klienten skickade en begäran som inte förstås/stöds av tjänsten.                                        |
 | FeatureNotSupported             | Funktioner som används av den här registreringen stöds inte för det här kontot.                                        |
 | EnrollmentRestrictionsEnforced  | Registreringsbegränsningar som konfigurerats av administratören blockerade den här registreringen.                                          |
-| ClientDisconnected              | Klienten uppnådde tidsgränsen eller så avbröts registreringen av slutanvändaren.                                                        |
+| ClientDisconnected              | Tidsgränsen gick ut för klienten eller så avbröts registreringen av slutanvändaren.                                                        |
 | UserAbandonment                 | Registreringen lämnades av slutanvändaren. (Slutanvändaren inledde registrering men slutförde den inte inom rimlig tid)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
@@ -224,46 +225,61 @@ Entiteten **ManagementAgentTypes** visar de agenter som används för att hanter
 
 Entiteten **Enheter** innehåller en lista över registrerade enheter som hanteras och deras respektive egenskaper.
 
-| Egenskap  | Beskrivning |
-|---------|------------|
-| DeviceKey | Unikt id för enheten i informationslagret – surrogatnyckel. |
-| DeviceId | Unikt id för enheten. |
-| DeviceName | Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
-| DeviceTypeKey | Nyckel för enhetstypattributet för den här enheten. |
-| OwnerTypeKey | Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänt. |
-| objectSourceKey | Ignorera den här kolumnen. |
-| ManagementAgentKey | Nyckel för den hanteringsagent som är kopplad till den här enheten. |
-| ManagementStateKey | Nyckel för det hanteringstillstånd som är kopplat till enheten och som visar den senaste statusen för en fjärråtgärd eller om den har jailbrokats/rotats. |
-| OSVersion | OS-version |
-| OSMajorVersion | Operativsystemets högre versionskomponent (major.minor.build.revision). |
-| OSMinorVersion | Operativsystemets lägre versionskomponent (major.minor.build.revision). |
-| OSBuildNumber | Operativsystemets build-versionskomponent (major.minor.build.revision). |
-| OSRevisionNumber | Operativsystemets revisionsversionskomponent (major.minor.build.revision). |
-| Serienummer | Enhetens serienummer, om det är tillgängligt. |
-| RowLastModifiedDateTimeUTC | Senaste ändring av den här posten. |
-| DeviceAction | Senast utfärdade enhetsåtgärd, ignorera för tillfället. |
-| Tillverkare | Enhetstillverkaren. |
-| Modell | Enhetsmodell. |
-| IsDeleted | Ange värdet True om enheten inte hanteras av Intune längre. Bevarar den senast kända statusen. |
-| AndroidSecurityPatchLevel |Datum för enhetens senaste säkerhetskorrigering. |
+|          Egenskap          |                                                                                       Beskrivning                                                                                      |
+|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| DeviceKey                  | Unik identifierare för enheten i informationslagret – surrogatnyckel.                                                                                                               |
+| DeviceId                   | Unik identifierare för enheten.                                                                                                                                                     |
+| DeviceName                 | Namnet på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn utifrån övriga egenskaper. Det här attributet kan inte göras tillgängligt för alla enheter. |
+| DeviceTypeKey              | Nyckeln för attributet enhetstyp för den här enheten.                                                                                                                                    |
+| DeviceRegistrationState    | Nyckeln för attributet klientregistreringstillstånd för den här enheten.                                                                                                                      |
+| OwnerTypeKey               | Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänd.                                                                                                    |
+| EnrolledDateTime           | Datum och tid då enheten registrerades.                                                                                                                                         |
+| LastSyncDateTime           | Senast kända incheckning på Intune.                                                                                                                                              |
+| ManagementAgentKey         | Nyckeln för den hanteringsagent som är kopplad till den här enheten.                                                                                                                             |
+| ManagementStateKey         | Nyckeln för det hanteringstillstånd som är kopplat till enheten och som visar det senaste tillståndet för en fjärråtgärd eller om den har brutits upp/rotats.                                                |
+| AzureADDeviceId            | Azure-deviceID för den här enheten.                                                                                                                                                  |
+| AzureADRegistered          | Om enheten är registrerad i Azure Active Directory.                                                                                                                             |
+| DeviceCategoryKey          | Nyckeln för den kategori som är kopplad till den här enheten.                                                                                                                                     |
+| DeviceEnrollmentType       | Nyckeln för den registreringstyp som är kopplad till den här enheten och som visar registreringsmetod.                                                                                             |
+| ComplianceStateKey         | Nyckel för den kompatibilitetsstatus som är kopplad till den här enheten.                                                                                                                             |
+| OSVersion                  | Enhetens operativsystemversion.                                                                                                                                                |
+| EasDeviceId                | Exchange ActiveSync-ID för enheten.                                                                                                                                                  |
+| Serienummer               | Serienummer                                                                                                                                                                           |
+| UserId                     | Unik identifierare för användaren som är kopplad till enheten.                                                                                                                           |
+| RowLastModifiedDateTimeUTC | Datum och tid i UTC när den här enheten senast ändrades i informationslagret.                                                                                                       |
+| Tillverkare               | Enhetstillverkaren                                                                                                                                                             |
+| Modell                      | Enhetsmodell                                                                                                                                                                    |
+| OperatingSystem            | Enhetens operativsystem. Windows, iOS, osv.                                                                                                                                   |
+| IsDeleted                  | Binärt tal för att visa om enheten har tagits bort eller inte.                                                                                                                                 |
+| AndroidSecurityPatchLevel  | Nivå för Android-säkerhetsuppdatering                                                                                                                                                           |
+| MEID                       | MEID                                                                                                                                                                                   |
+| isSupervised               | Status för övervakad enhet                                                                                                                                                               |
+| FreeStorageSpaceInBytes    | Ledigt lagringsutrymme i byte.                                                                                                                                                                 |
+| TotalStorageSpaceInBytes   | Totalt lagringsutrymme i byte.                                                                                                                                                                |
+| EncryptionState            | Krypteringstillstånd på enheten.                                                                                                                                                      |
+| SubscriberCarrier          | Abonnentens operatör på enheten                                                                                                                                                       |
+| PhoneNumber                | Enhetens telefonnummer                                                                                                                                                             |
+| IMEI                       | IMEI                                                                                                                                                                                   |
+| CellularTechnology         | Enhetens mobilteknik                                                                                                                                                    |
+| WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 
 ## <a name="devicepropertyhistory"></a>DevicePropertyHistory
 
 Entiteten **DevicePropertyHistory** innehåller samma egenskaper som enhetstabellen och dagliga ögonblicksbilder av varje enhetspost per dag under de senaste 90 dagarna. I kolumnen DateKey visas dagen för varje rad.
 
-| Egenskap  | Beskrivning |
-|---------|------------|
-| DateKey |Referens till datumtabellen som visar dag. |
-| DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id. |
-| DeviceName |Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
-| OwnerTypeKey |Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänt. |
-| objectSourceKey |Ignorera den här kolumnen. |
-| ManagementStateKey |Nyckel för det hanteringstillstånd som är kopplat till enheten och som visar den senaste statusen för en fjärråtgärd eller om den har jailbrokats/rotats. |
-| OSVersion |OS-version. |
-| OSMajorVersion |Operativsystemets högre versionskomponent (major.minor.build.revision). |
-| OSMinorVersion |Operativsystemets lägre versionskomponent (major.minor.build.revision). |
-| OSBuildNumber |Operativsystemets build-versionskomponent (major.minor.build.revision). |
-| DeviceAction |Senast utfärdade enhetsåtgärd, ignorera för tillfället. |
+|          Egenskap          |                                                                                      Beskrivning                                                                                     |
+|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| DateKey                    | Referens till datumtabellen som visar dag.                                                                                                                                          |
+| DeviceKey                  | Unik identifierare för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens ID.                               |
+| DeviceName                 | Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet kan inte göras tillgängligt för alla enheter. |
+| DeviceRegistrationStateKey | Nyckeln för attributet enhetsregistreringstillstånd för den här enheten.                                                                                                                    |
+| OwnerTypeKey               | Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänd.                                                                                                  |
+| ManagementStateKey         | Nyckeln för det hanteringstillstånd som är kopplat till enheten och som visar det senaste tillståndet för en fjärråtgärd eller om den har brutits upp/rotats.                                                |
+| AzureADRegistered          | Om enheten är registrerad i Azure Active Directory.                                                                                                                             |
+| ComplianceStateKey         | En nyckel för ComplianceState.                                                                                                                                                            |
+| OSVersion                  | OS-version.                                                                                                                                                                          |
+| JailBroken                 | Om enheten har brutits upp eller rotats.                                                                                                                                         |
+| DeviceCategoryKey          | Nyckeln för attributet enhetskategori för den här enheten. 
 
 ## <a name="applicationinventory"></a>ApplicationInventory
 

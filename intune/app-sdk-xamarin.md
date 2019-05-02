@@ -5,7 +5,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2018
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd162f6af256c104c04374290a695141cdcc26f6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: d42fab929d6fa3e7fbaed8e9557573ebbaa1f3ad
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292358"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -110,6 +110,8 @@ Din app måste definiera ett `Android.App.Application` klass som ärver från `M
     public TaskrApp(IntPtr handle, JniHandleOwnership transfer)
         : base(handle, transfer) { }
 ```
+> [!NOTE]
+> Ett problem med MAM Xamarin-bindningar kan medföra att programmet kraschar när de distribueras i felsökningsläge. Som en lösning kan den `Debuggable=false` attributet måste läggas till i `Application` klass och `android:debuggable="true"` flaggan måste tas bort från manifestet om ange manuellt.
 
 #### <a name="enable-features-that-require-app-participationapp-sdk-androidmdenable-features-that-require-app-participation"></a>[Aktivera funktioner som kräver appmedverkan](app-sdk-android.md#enable-features-that-require-app-participation)
 Exempel: Bestäm om en PIN-kod ska krävas för appen

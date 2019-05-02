@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 04/10/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b19a0100a53cebe66dae9805ac0cc5b5314e8ad
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 1a834b1f35bdefd91abfc1ec9ca8b44d4eb593cd
+ms.sourcegitcommit: af2512a1342d8037a96a61c8cc2c63e107913733
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566785"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533617"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -86,7 +86,7 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
 1. **Alternativ 1 (rekommenderas)**: Länken `IntuneMAM.framework` till projektet. Dra `IntuneMAM.framework` till listan **inbäddade binära** i projektmålet.
 
    > [!NOTE]
-   > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se [Skicka in din app till App Store](#Submit-your-app-to-the-App-Store) för mer information.
+   > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se [Skicka in din app till App Store](#submit-your-app-to-the-app-store) för mer information.
 
    **Alternativ 2**: Länk till biblioteket `libIntuneMAM.a`. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
 
@@ -179,7 +179,7 @@ Följ stegen nedan för att länka din app till ADAL-binärfilerna:
 
 3. Om appen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den första gruppen.
 
-4. Aktivera enkel inloggning (SSO) med ADAL genom att lägga till `com.microsoft.adalcache` och `com.microsoft.workplacejoin` i nyckelringens åtkomstgrupper.
+4. Aktivera enkel inloggning (SSO) med ADAL genom att lägga till `com.microsoft.adalcache` i nyckelringens åtkomstgrupper.
 
 5. Om du uttryckligen ställer in nyckelringsgruppen för ADAL-delad cache ser du till att den är inställd på `<appidprefix>.com.microsoft.adalcache`. ADAL ställer in detta åt dig förutsatt att du inte åsidosätter det. Om du vill ange en anpassad nyckelringsgrupp som ska ersätta `com.microsoft.adalcache` anger du det i Info.plist-filen under IntuneMAMSettings, med hjälp av nyckeln `ADALCacheKeychainGroupOverride`.
 
@@ -267,7 +267,7 @@ Appar som redan använder ADAL ska anropa `registerAndEnrollAccount`-metoden i `
 (void)registerAndEnrollAccount:(NSString *)identity;
 ```
 
-Genom att anropa `registerAndEnrollAccount`-metoden registrerar SDK användarkontot och försöker registrera appen för det här kontot. Om registreringen misslyckas av någon anledning försöker SDK genomföra registreringen igen automatiskt 24 timmar senare. Appen kan i felsökningssyfte ta emot [aviseringar](#Status-result-and-debug-notifications) om resultaten av eventuella registreringsbegäranden via ett ombud.
+Genom att anropa `registerAndEnrollAccount`-metoden registrerar SDK användarkontot och försöker registrera appen för det här kontot. Om registreringen misslyckas av någon anledning försöker SDK genomföra registreringen igen automatiskt 24 timmar senare. Appen kan i felsökningssyfte ta emot [aviseringar](#status-result-and-debug-notifications) om resultaten av eventuella registreringsbegäranden via ett ombud.
 
 När detta API har anropats kan appen fortsätta att fungera som vanligt. Om registreringen lyckas meddelar SDK användaren att appen behöver startas om. Användaren kan då starta om appen omedelbart.
 
@@ -291,7 +291,7 @@ En app som inte loggar in användaren med ADAL kan fortfarande ta emot appskydds
 
 Genom att anropa den här metoden frågar SDK användaren om autentiseringsuppgifter om ingen befintlig token kan hittas. SDK:n försöker därefter registrera appen med Intune MAM-tjänsten för det angivna användarkontot. Metoden kan anropas med "noll" som identitet. I sådant fall registrerar SDK med den befintliga hanterade användaren på enheten (vid MDM) eller frågar användaren om ett användarnamn om det inte går att hitta en befintlig användare.
 
-Om registreringen misslyckas bör appen överväga att anropa detta API igen vid ett senare tillfälle, beroende på detaljerna kring felet. Appen kan ta emot [aviseringar](#Status-result-and-debug-notifications) om resultaten av eventuella registreringsbegäranden via ett ombud.
+Om registreringen misslyckas bör appen överväga att anropa detta API igen vid ett senare tillfälle, beroende på detaljerna kring felet. Appen kan ta emot [aviseringar](#status-result-and-debug-notifications) om resultaten av eventuella registreringsbegäranden via ett ombud.
 
 När detta API har anropats kan appen fortsätta att fungera som vanligt. Om registreringen lyckas meddelar SDK användaren att appen behöver startas om.
 

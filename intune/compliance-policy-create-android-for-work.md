@@ -1,65 +1,44 @@
 ---
-title: Skapa en efterlevnadsprincip för Android Enterprise i Microsoft Intune – Azure | Microsoft Docs
-description: Skapa eller konfigurera en enhetsefterlevnadsprincip i Microsoft Intune för Android Enterprise eller arbetsprofilenheter. Välj att tillåta jailbrokade enheter, ställ in godkänd hotnivå, kontrollera efter Google Play, ange lägsta och högsta operativsystemversion, välj dina lösenordskrav och tillåt program med separat inläsning.
+title: Enhetsinställningar för Android Enterprise i Microsoft Intune – Azure | Microsoft Docs
+description: Se en lista över alla inställningar som du kan använda när du ställer in efterlevnad för Android Enterprise-enheter i Microsoft Intune. Ange regler för lösenord, Välj en lägsta eller högsta operativsystemversion, begränsa specifika appar, förhindra att återanvända lösenord och mycket mer.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 04/04/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
-ms.reviewer: muhosabe
+ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6f1f07c1cb7b5dbe81120fd678f429a996f230e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 16db0acab84a1095c40e9a92648c75c2581187cd
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423568"
 ---
-# <a name="add-a-device-compliance-policy-for-android-enterprise-devices-in-intune"></a>Lägg till en enhetsefterlevnadsprincip för Android Enterprise-enheter i Intune
+# <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Android Enterprise Markera enheter som kompatibla eller inte är kompatibla med Intune
 
-Enhetsefterlevnadsprinciper är en viktig funktion när du använder Intune för att skydda din organisations resurser. I Intune kan du skapa regler och inställningar som enheter måste uppfylla för att anses vara kompatibla, till exempel en lösenordslängd. Om enheten inte är kompatibel kan du blockera åtkomst till data och resurser med hjälp av [villkorlig åtkomst](conditional-access.md). 
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Du kan också få enhetsrapporter och vidta åtgärder vid inkompatibilitet. Du kan till exempel skicka ett e-postmeddelande till användaren. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Den här artikeln visar en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera i Android Enterprise-enheter i Intune. Använd inställningarna som en del av din lösning för hantering av mobila enheter, för att markera rotade (jailbreakade) enheter som inte är kompatibla, ange en tillåtna hotnivån, aktivera Google Play-skydd och mycket mer.
 
-Den här artikeln innehåller de inställningar som du kan använda i en efterlevnadsprincip för enheter som kör Android Enterprise.
+Den här funktionen gäller för:
 
-## <a name="non-compliance-and-conditional-access"></a>Inkompatibilitet och villkorlig åtkomst
+- Android enterprise
 
-Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
+Som Intune-administratör kan använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
---------------------------
+## <a name="before-you-begin"></a>Innan du börjar
 
-|**principinställning**| **Android Enterprise-profil** |
-| --- | --- |
-| **Konfiguration av PIN-kod eller lösenord** |  I karantän |
-| **Enhetskryptering** |  I karantän |
-| **Jailbreakad eller rotad enhet** | I karantän (inte en inställning) |
-| **e-postprofil** | Inte tillämpligt |
-| **Lägsta version av operativsystemet** | I karantän |
-| **Högsta version av operativsystemet** | I karantän |
-| **Attestering av hälsotillstånd i Windows** |Inte tillämpligt |
-
-**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. Till exempel om användaren tvingas att ange en PIN-kod.
-
-**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. Till exempel om Android-enheter inte tvingar användaren att kryptera enheten. När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
-
-  - Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
-  - Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.
-
-## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. I **Plattform** väljer du **Android enterprise**. 
-5. Välj **Konfigurera inställningar**. Ange inställningar för **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet** genom att följa anvisningarna i den här artikeln.
+[Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). I **Plattform** väljer du **Android enterprise**.
 
 ## <a name="device-health"></a>Device health
 
@@ -69,6 +48,9 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
   - **Medel**: Enheten utvärderas som kompatibel om hoten som finns på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
   - **Hög**: Det här alternativet är det minst säkra då det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
+
+### <a name="google-play-protect"></a>Google Play-skydd
+
 - **Google Play-tjänster har konfigurerats**: **Kräv** att appen Google Play-tjänster är installerad och aktiverad. Google Play-tjänster tillåter säkerhetsuppdateringar, vilket är ett beroende på grundnivå för många säkerhetsfunktioner på certifierade Google-enheter. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Uppdaterad säkerhetsprovider**: **Kräv** att en uppdaterad säkerhetsprovider kan skydda en enhet från kända säkerhetsproblem. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Attesteringen av enhetens SafetyNet**: Ange den nivå av [SafetyNet-attestering](https://developer.android.com/training/safetynet/attestation.html) som måste uppfyllas. Alternativen är:
@@ -76,9 +58,8 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
   - **Kontrollera grundläggande integritet**
   - **Kontrollera grundläggande integritet och certifierade enheter**
 
-#### <a name="threat-scan-on-apps"></a>Hotgenomsökning för appar
-
-På Android Enterprise-enheter är inställningen **Hotgenomsökning för appar** en konfigurationsprincip. Mer information finns i avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+> [!NOTE]
+> På Android-företagsenheter **hotgenomsökning för appar** är en princip för enhetskonfiguration. Med hjälp av en princip för konfiguration, kan administratörer aktivera inställningen på en enhet. Mer information finns i avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
 
 ## <a name="device-properties-settings"></a>Inställningar för enhetsegenskaper
 
@@ -136,31 +117,10 @@ På Android Enterprise-enheter är inställningen **Hotgenomsökning för appar*
 
 - **Lägsta säkerhetskorrigeringsnivå**: Välj den äldsta säkerhetskorrigeringsnivå som en enhet kan ha. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste anges i formatet *ÅÅÅÅ-MM-DD*.
 
-När du är klar väljer du **OK** > **OK** för att spara dina ändringar.
-
-## <a name="actions-for-noncompliance"></a>Åtgärder för inkompatibilitet
-
-Välj **Åtgärder för inkompatibilitet**. Standardåtgärden markerar enheten som inkompatibel omedelbart.
-
-Du kan ändra schemat när enheten har markerats som inkompatibel, till exempel efter en dag. Du kan också konfigurera en andra åtgärd som skickar ett e-postmeddelande till användaren när enheten inte är kompatibel.
-
-[Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) innehåller mer information, inklusive anvisningar för hur du skapar ett e-postmeddelande till användarna.
-
-## <a name="scope-tags"></a>Omfångstaggar
-
-Omfångstaggar är ett bra sätt att tilldela principer till specifika grupper, till exempel Försäljning, Teknik, HR och så vidare. Du kan lägga till omfångstaggar till efterlevnadsprinciper. Mer information finns i avsnittet [Använda omfångstaggar för att filtrera principer](scope-tags.md). 
-
-## <a name="assign-user-groups"></a>Tilldela användargrupper
-
-När en princip har skapats gör den inte något förrän du tilldelar principen. Så här tilldelar du principen: 
-
-1. Välj en princip som du har konfigurerat. Befintliga principer finns i **Enhetsefterlevnad** > **Principer**.
-2. Välj principen och välj **Tilldelningar**. Du kan inkludera eller exkludera säkerhetsgrupper i Azure Active Directory (AD).
-3. Välj **Valda grupper** för att se dina Azure AD-säkerhetsgrupper. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj **Spara** för att distribuera principen till användare.
-
-Du har tillämpat principen på användarna. Enheter som används av användare som omfattas av principen utvärderas för att kontrollera att de är kompatibla.
+Välj **OK** > **Skapa** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
-[Automatisera e-post och lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md)  
-[Övervaka efterlevnadsprinciper för Intune-enheter](compliance-policy-monitor.md)  
-[Inställningar för efterlevnadsprinciper för Android](compliance-policy-create-android.md)
+
+- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [använda omfångstaggar om du vill filtrera principer](scope-tags.md).
+- [Övervaka dina efterlevnadspolicyer](compliance-policy-monitor.md).
+- [Inställningar för policy för efterlevnad för Android-enheter](compliance-policy-create-android.md)

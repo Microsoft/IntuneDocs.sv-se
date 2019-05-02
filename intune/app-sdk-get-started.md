@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23c254094281c7591730b2972ec0de41f5243e66
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: c6389bc9790fce45604887bc2d73b3d5d8c35c45
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423602"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -34,7 +34,7 @@ Intune App SDK:n stöder liknande scenarier över iOS och Android och är avsedd
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Om din app är en intern app för din organisation som inte ska publiceras offentlig:
 
-Du _**behöver inte**_ registrera din app. För interna [line-of-business (LOB) appar](apps-add.md#app-types-in-microsoft-intune) som har skrivits av eller för ditt företags IT-administratören distribuerar appen internt. Intune identifierar att appen har skapats med SDK:n och tillåter att IT-administratören tillämpar appskyddsprinciper på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-app för appskyddsprinciper](#enable-your-iOS-or-Android-app-for-app-protection-policy).
+Du _**behöver inte**_ registrera din app. För interna [line-of-business (LOB) appar](apps-add.md#app-types-in-microsoft-intune) som har skrivits av eller för ditt företags IT-administratören distribuerar appen internt. Intune identifierar att appen har skapats med SDK:n och tillåter att IT-administratören tillämpar appskyddsprinciper på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-app för appskyddsprinciper](#enable-your-ios-or-android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Om din app kommer att publiceras på en offentlig appbutik som Apple App Store eller Google Play:
 

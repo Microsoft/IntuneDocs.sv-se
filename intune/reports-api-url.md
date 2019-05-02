@@ -1,6 +1,6 @@
 ---
 title: API-slutpunkt för Intune-informationslager
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Referensavsnittet beskriver API-webbadresstrukturen för Microsoft Intune-informationslagret. Filterexempel finns.
 keywords: Intune-informationslager
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e56c2dd4e26c68a82d5cb9d902e4480e1b98c8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 50be11f9ada92670c201fc2540499effa5a7edef
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396496"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798513"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>API-slutpunkt för Intune-informationslager
 
@@ -53,7 +53,7 @@ Webbadressen innehåller följande element:
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | position | msua06 | Grundwebbadressen hittar du på bladet för informationslager-API på Azure Portal. |
 | entitetssamling | datum | Namnet på OData-entitetssamlingen. Mer information om samlingar och entiteter i datamodellen finns i [Datamodell](reports-ref-data-model.md). |
-| api-version | beta | Version är den API-version som ska kommas åt. Mer information finns i [Version](#API-version-information). |
+| api-version | beta | Version är den API-version som ska kommas åt. Mer information finns i [Version](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Valfritt) Det maximala antalet dagar av historik som ska hämtas. Den här parametern kan anges till valfri samling men börjar bara gälla för samlingar som inkluderar `dateKey` som en del av sin nyckelegenskap. Mer information finns i [DateKey-intervallfilter](reports-api-url.md#datekey-range-filters). |
 
 ## <a name="api-version-information"></a>API-versionsinformation

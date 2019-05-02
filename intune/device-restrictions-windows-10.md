@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ca34826f3a235fe620b5ac0dcb95d57dabf4c71
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
-ms.translationtype: MTE75
+ms.openlocfilehash: 8957c8d8aad2eaa1741b1a625afd4b5a41a8bb51
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58395008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423704"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -138,7 +138,10 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Dialogruta om SIM-kortsfel (endast mobil)**: Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
 - **Ink-arbetsytan**: Blockerar användare från att komma åt Ink-arbetsytan. **Inte konfigurerat** aktiverar Ink-arbetsytan och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution**: Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
-- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)**: Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10. När den här funktionen är i förhandsversion, Windows Insider-version 1809 eller senare krävs för att använda den här inställningen.
+- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)**: Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10.
+
+  Inställningen börjar gälla nästa gång enheten rensas eller återställas. Som alla andra Intune-konfiguration, enheten registreras och hanteras av Intune och ta emot konfigurationsinställningar. Men när den har registrerats och tar emot principer, återställer enheten tillämpar inställningen under nästa Windows-installationen.
+
 - **Direct Memory Access**: **Blockera** förhindrar direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med enhetsbyte vid drift tills en användare loggar in i Windows. **Aktiverad** (standard) ger åtkomst till DMA, även när en användare inte har loggat in.
 
   CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
@@ -305,6 +308,29 @@ Den här profilen för enhetsbegränsningar är direkt relaterad till kioskprofi
   - **Förhindra återanvändning av tidigare lösenord**: Anger hur många tidigare använda lösenord enheten kommer ihåg.
   - **Kräv lösenord när enheten lämnar inaktivt läge (endast mobil)**: Anger att användaren måste ange ett lösenord för att kunna låsa upp enheten (endast Windows 10 Mobile).
   - **Enkla lösenord**: Låter dig använda enkla lösenord som 1111 och 1234. Dessutom tillåter eller blockerar den här inställningen användningen av Windows-bildlösenord.
+- **Automatisk kryptering under AADJ**: **blockera** förhindrar automatisk BitLocker-enhetskryptering när enheten förbereds för första användning när enheten är ansluten till Azure AD. **Inte konfigurerad** (standard) använder operativsystemet standard, vilket kan göra det möjligt för kryptering. Mer på [BitLocker-enhetskryptering](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+
+  [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+
+- **Federala FIPS Information Processing Standard ()-policy**: **Tillåt** använder federala FIPS Information Processing Standard ()-policy, som är en US government standard för kryptering, hashing och signering. **Inte konfigurerad** (standard) använder operativsystemet standard, som inte använder FIPS.
+
+  [Cryptography/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+
+- **Windows Hello-enhetsautentisering**: **Tillåt** användare att använda en Windows Hello tillhörande enhet, till exempel en telefon, lämplighet band eller IoT-enheter för att logga in på en Windows 10-dator. **Inte konfigurerad** (standard) använder operativsystemet, vilket förhindrar att Windows Hello tillhörande enheter autentiseras med Windows.
+
+  [Authentication/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+
+- **Webb-inloggning**: aktiverar Windows logga in stöd för icke-AD FS (Active Directory Federation Services) federerade leverantörer, till exempel Security Assertion Markup Language (SAML). SAML använder säker token som tillhandahåller användarvänlighet webbläsare en enkel inloggning (SSO). Alternativen är:
+
+  - **Inte konfigurerad** (standard): använder operativsystemet på enheten.
+  - **Aktiverad**: Web autentiseringsuppgift providern är aktiverad för inloggning.
+  - **Inaktiverad**: Web autentiseringsuppgift providern är inaktiverad för inloggning.
+
+  [Authentication/EnableWebSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
+
+- **Önskade Azure AD-klientdomänen**: Ange ett befintligt domännamn i Azure AD-organisation. När användare i den här domänen loggar in kan behöver de inte ange domännamnet. Ange till exempel `contoso.com`. Användare i den `contoso.com` domän kan logga in med sina användarnamn, t.ex. ”abby”, i stället för ”abby@contoso.com”.
+
+  [Authentication/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Sekretessundantag per app
 

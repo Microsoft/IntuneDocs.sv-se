@@ -1,6 +1,6 @@
 ---
 title: macOS-enhetsinställningar i Microsoft Intune – Azure | Microsoft Docs
-titlesuffix: ''
+titleSuffix: ''
 description: Lägg till, konfigurera eller skapa inställningar på macOS-enheter när du vill begränsa funktioner, till exempel lösenordskrav, kontrollera låst skärm, använda inbyggda appar, lägga till begränsade eller godkända appar, hantera bluetooth-enheter, ansluta till molnet för säkerhetskopiering och lagring, aktivera helskärmsläge, lägga till domäner och kontrollera hur användarna samverkar med Safari-webbläsaren i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a59c40a5f1095e832f84c4b21d553e3c5f11ed7
-ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.openlocfilehash: 5feec66e791da4038bd069cdad69a7ba573f27f3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330427"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798385"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -46,7 +46,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   Den här funktionen gäller för:  
   - macOS 10.13 och senare
 
-- **Skjuta upp programuppdateringar**: när **inte konfigurerad** (standard), programuppdateringar visas på enheten som Apple släpper dem.. Till exempel om en uppdatering av macOS hämtar släpps av Apple på ett specifikt datum, visas sedan uppdateringen naturligt på enheten runt lanseringsdatumet. Startvärdesklassen build uppdateringar tillåts utan fördröjning.
+- **Skjuta upp programuppdateringar (endast övervakat)**: när **inte konfigurerad** (standard), programuppdateringar visas på enheten som Apple släpper dem. Till exempel om en uppdatering av macOS hämtar släpps av Apple på ett specifikt datum, visas sedan uppdateringen naturligt på enheten runt lanseringsdatumet. Startvärdesklassen build uppdateringar tillåts utan fördröjning.
 
   **Aktivera** gör att du kan fördröja när programuppdateringar visas på enheter, från 0 – 90 dagar. Den här inställningen styr inte när uppdateringar är eller inte är installerade. 
 
