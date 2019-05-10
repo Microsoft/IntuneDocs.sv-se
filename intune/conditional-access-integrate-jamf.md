@@ -71,7 +71,7 @@ Du ansluter Intune till Jamf Pro så här:
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Låt Intune integreras med Jamf Pro
 
-1. På [Azure-portalen](https://portal.azure.com) går du till **Microsoft Intune** > **Enhetsefterlevnad** > **	Enhetshantering för partner**.
+1. På [Azure-portalen](https://portal.azure.com) går du till **Microsoft Intune** > **Enhetsefterlevnad** > **Enhetshantering för partner**.
 2. Aktivera Compliance Connector för Jamf genom att klistra in det program-ID du sparade under föregående procedur i fältet **Jamf Azure Active Directory App-ID**.
 3. Välj **Spara**.
 
