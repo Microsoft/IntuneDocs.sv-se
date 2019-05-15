@@ -1,11 +1,11 @@
 ---
-title: Använda Zebra Mobility tillägg på Android-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Använda Microsoft Intune för att hantera och använda Zebra enheter som kör Android med Zebra Mobility tillägg (MX). Se alla steg, inklusive installera appen företagsportal separat appen, tilldela enhetsadministratörens roll, skapa en profil för StageNow och mycket mer.
+title: Använda Zebra Mobility Extensions på Android-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Använd Microsoft Intune för att hantera och använda Zebra-enheter som kör Android med Zebra Mobility Extensions (MX). Se alla steg, till exempel hur du installerar appen Företagsportal, utför separat inläsning av appen, tilldelar enhetsadministratörsrollen och skapar en StageNow-profil.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,110 +17,110 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa2734247569245794bce7fe1de68c8b20c6091f
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 69814b91978aa3cd74c4dc239b099883ae402af9
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764782"
 ---
-# <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Använda och hantera Zebra enheter med Zebra Mobility tillägg i Microsoft Intune
+# <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Använda och hantera Zebra-enheter med Zebra Mobility Extensions i Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Intune innehåller en omfattande uppsättning funktioner, inklusive hantering av appar och konfigurera inställningar för enheter. Dessa inbyggda funktioner och inställningar används för att hantera Android-enheter tillverkats av Zebra tekniker, även kallat ”Zebra enheter”.
+I Intune finns en omfattande uppsättning funktioner, bland annat för att hantera appar och konfigurera enhetsinställningar. Dessa inbyggda funktioner och inställningar används för att hantera Android-enheter som tillverkats av Zebra Technologies (även kallade ”Zebra-enheter”).
 
-Om du vill anpassa eller lägga till fler Zebra-specifika inställningar du kan också använda Zebra **Mobility tillägg (MX)** på dessa enheter. 
+Med **Mobility Extensions (MX)**-profiler kan du anpassa eller lägga till fler Zebra-specifika inställningar på Android-enheter.
+
+Den här artikeln visar hur du använder Zebra Mobility Extensions (MX) på Zebra-enheter i Microsoft Intune.
 
 Den här funktionen gäller för:
 
 - Android
 
-Företaget kan använda Zebra enheter för detaljhandeln på fabriksgolvet med mera. Exempelvis kan du är en återförsäljare och tusentals Zebra mobila enheter som används av försäljningsställen finns i din miljö. Intune kan hjälpa dig att hantera dessa enheter som en del av din lösning för hantering av mobila enheter.
+Företag kan använda Zebra-enheter till exempel inom detaljhandel och på fabriksgolvet. Anta att ditt företag är återförsäljare och har tusentals Zebra-mobilenheter som säljarna använder. Då kan Intune hjälpa dig att hantera dessa enheter som en del i din MDM-lösning (hantering av mobilenheter).
 
-Med Intune kan registrera du Zebra enheter för att distribuera dina line-of-business-appar till enheter. ”Enhet” konfigurationsprofiler kan du skapa MX-profiler för att hantera dina Zebra-specifika inställningar.
-
-Den här artikeln visar hur du använder Zebra Mobility tillägg (MX) på Zebra enheter i Microsoft Intune.
+Med Intune kan du registrera Zebra-enheter för att distribuera dina verksamhetsspecifika appar till enheterna. Med profiler för enhetskonfiguration kan du skapa MX-profiler för att hantera dina Zebra-specifika inställningar.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-- Måste du ha den senaste versionen av StageNow skrivbordsappen från Zebra tekniker.
-- Bör du kontrollera [Zebras fullständig MX funktionen matrisen](http://techdocs.zebra.com/mx/compatibility) (öppnas Zebras-webbplats) att bekräfta de profiler som skapas är kompatibla med enhetens MX-version, OS-version och modellen.
-- Vissa enheter, till exempel TC20/25 enheter stöder inte alla tillgängliga MX-funktioner i StageNow. Se till att kontrollera [Zebras funktionen matrisen](http://techdocs.zebra.com/mx/tc2x/) (öppnas Zebras-webbplats) för uppdaterade supportinformation.
+- Se till att du har den senaste versionen av skrivbordsappen StageNow från Zebra Technologies.
+- Se [Zebras fullständiga MX-funktionstabell](http://techdocs.zebra.com/mx/compatibility) (öppnar Zebras webbplats) för att kontrollera att de profiler du skapar är kompatibla med enhetens MX-version, operativsystemversion och modell.
+- Vissa enheter, till exempel TC20/25-enheter, stöder inte alla tillgängliga MX-funktioner i StageNow. Gå till [Zebras funktionstabell](http://techdocs.zebra.com/mx/tc2x/) (öppnar Zebras webbplats) om du vill se den senaste supportinformationen.
 
-## <a name="step-1-install-the-latest-company-portal-app"></a>Steg 1: Installera den senaste företagsportalappen
+## <a name="step-1-install-the-latest-company-portal-app"></a>Steg 1: Hämta den senaste versionen av appen Företagsportal
 
-Gå till Google Play store på enheten, och hämta och installera Intunes företagsportalapp från Microsoft. När du har installerat från Google Play, företagsportalappen hämtar uppdateringar och korrigeringar automatiskt.
+Gå till Google Play på enheten och hämta och installera appen Företagsportal från Microsoft. När du har installerat appen Företagsportal från Google Play hämtas uppdateringar och korrigeringar automatiskt.
 
-Om Google Play inte är tillgängligt, ladda ned den [Microsoft Intunes företagsportal för Android](https://www.microsoft.com/download/details.aspx?id=49140) (öppnas en annan Microsoft-webbplats), och [läsa den](#sideload-the-company-portal-app) (i den här artikeln). När du installerat på så sätt kan appen ta emot inte uppdateringar eller åtgärdas automatiskt. Du bör regelbundet uppdaterar och korrigera appen manuellt.
+Om Google Play inte är tillgängligt hämtar du [Microsoft Intune Företagsportal för Android](https://www.microsoft.com/download/details.aspx?id=49140) (öppnar en annan Microsoft-webbplats) och [läs in den separat](#sideload-the-company-portal-app) (i den här artikeln). När appen installeras på det här sättet får appen inte uppdateringar eller korrigeringar automatiskt. Du bör uppdatera och korrigera appen manuellt med jämna mellanrum.
 
-### <a name="sideload-the-company-portal-app"></a>Separat inläsning av företagsportalappen
+### <a name="sideload-the-company-portal-app"></a>Läsa in appen Företagsportal separat
 
-”Separat inläsning” är när du inte använder Google Play för att installera en app. Använd StageNow läsa appen företagsportal. 
+”Separat inläsning” innebär att du inte installerar appen via Google Play. Använd StageNow om du vill läsa in appen Företagsportal separat. 
 
-Följande steg ger en översikt. Specifik information finns i dokumentationen för Zebra's. [Registrera dig i en MDM med StageNow](http://techdocs.zebra.com/stagenow/3-1/Profiles/enrollmdm/) (öppnas Zebras-webbplats) kan vara en bra resurs.
+Följande steg ger en översikt. Specifik information finns i Zebras dokumentation. [Enroll in an MDM using StageNow](http://techdocs.zebra.com/stagenow/3-1/Profiles/enrollmdm/) (Registrera dig i en MDM med StageNow) (öppnar Zebras-webbplats) kan vara en bra resurs.
 
-1. I StageNow, skapar du en profil för **registrera i en MDM**.
-2. I **distribution**, välja att hämta filen MDM-agenten.
-3. Ange den **Support App** och **ladda ned Configuration** steg för att **nr**.
-4. I **hämta MDM**väljer **överföring/kopiera filen**. Lägg till källa och mål för företagets Portal Android-paketet (APK).
-5. I **starta MDM**, lämna standardinställningarna efter-är. Lägg till följande information:
+1. Skapa en profil för **Enroll in an MDM** (Registrera dig i en MDM) i StageNow.
+2. I **Deployment** (Distribution) väljer du att ladda ned MDM-agentfilen.
+3. Ange **No** (Nej) för stegen **Support App** (Supportapp) och **Download Configuration** (Hämta konfiguration).
+4. I **Download MDM** (Ladda ned MDM) väljer du **Transfer/Copy File** (Överför/kopiera fil). Lägg till källa och mål för Android-paketet (APK) för Företagsportal.
+5. Lämna standardvärdena som de är i **Launch MDM** (Starta MDM). Lägg till följande information:
 
     - **Paketnamn**: `com.microsoft.windowsintune.companyportal`
     - **Klassnamn**: `com.microsoft.windowsintune.companyportal.views.SplashActivity`
 
-Fortsätta att publicera profilen och använda den med StageNow appen på enheten. Företagsportalappen är installerad och öppnas på enheten.
+Fortsätt att publicera profilen och använd den med appen StageNow på enheten. Appen Företagsportal installeras och öppnas på enheten.
 
 > [!TIP]
-> Mer information om StageNow, så att den inte finns i [StageNow Android-enhet mellanlagring](https://www.zebra.com/us/en/products/software/mobile-computers/mobile-app-utilities/stagenow.html) (öppnas Zebras-webbplats).
+> Om du vill ha mer information om StageNow och vad den gör, kan du se [StageNow Android device staging](https://www.zebra.com/us/en/products/software/mobile-computers/mobile-app-utilities/stagenow.html) (Förberedelse av Android-enheter med StageNow) (öppnar Zebras webbplats).
 
-## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>Steg 2: Kontrollera att företagsportalappen har enhetsadministratörens roll
+## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>Steg 2: Kontrollera att appen Företagsportal har enhetsadministratörsrollen
 
-Företagsportalappen krävs enhet-administratören hantera Android-enheter. Om du vill aktivera rollen Enhetsadministratör är vissa enheter som Zebra ett användargränssnitt (UI) på enheten. Om enheten innehåller ett användargränssnitt, företagsportalappen uppmanas användaren att bevilja Enhetsadministratör under [registrering](#step-3-enroll-the-device-in-to-intune) (i den här artikeln).
+Appen Företagsportal måste ha enhetsadministratörsrollen för att hantera Android-enheter. I vissa Zebra-enheter finns ett användargränssnitt för att aktivera enhetsadministratörsrollen. Om enheten innehåller användargränssnittet uppmanas slutanvändaren i appen Företagsportal att bevilja enhetsadministratörsrollen under [registreringen](#step-3-enroll-the-device-in-to-intune) (i den här artikeln).
 
-Om ett gränssnitt är inte tillgängligt, använder du den **DevAdmin Manager** i StageNow att skapa en profil som ger manuellt Enhetsadministratör att appen företagsportal.
+Om den inte innehåller användargränssnittet använder du **DevAdmin Manager** i StageNow för att skapa en profil som manuellt beviljar enhetsadministratörsrollen till appen Företagsportal.
 
-Följande steg ger en översikt. Specifik information finns i dokumentationen för Zebra's. 
-[Inställning batteri växlingsutrymme som enhetsadministratör](https://zebratechnologies.force.com/s/article/Set-Battery-Swap-Mode-as-Device-Administrator-using-StageNow-Tool) (öppnas Zebras webbplats) kan vara en bra resurs.
+Följande steg ger en översikt. Specifik information finns i Zebras dokumentation. 
+[Set battery swap mode as device administrator](https://zebratechnologies.force.com/s/article/Set-Battery-Swap-Mode-as-Device-Administrator-using-StageNow-Tool) (Ange batteriväxlingsläge som enhetsadministratör) (öppnar Zebras webbplats) kan vara en bra resurs.
 
-1. Skapa en profil i StageNow, och välj **Xpert läge**.
-2. Lägg till **DevAdmin Manager** till profilen.
-3. Ange **Administration Enhetsåtgärd** till **aktivera som Enhetsadministratör**.
-4. Ange **Admin paket enhetsnamn** till `com.microsoft.windowsintune.companyportal`.
-5. Ange **enheten Admin klassnamn** till `com.microsoft.omadm.client.PolicyManagerReceiver`.
+1. Skapa en profil i StageNow och välj **Xpert Mode**.
+2. Lägg till **DevAdmin Manager** i profilen.
+3. Ange **Turn On as Device Administrator** (Aktivera som enhetsadministratör) för **Device Administration Action** (Åtgärd för enhetsadministration).
+4. Ange `com.microsoft.windowsintune.companyportal` som **Device Admin Package Name** (Administratörspaketnamn för enheten).
+5. Ange `com.microsoft.omadm.client.PolicyManagerReceiver` som **Device Admin Class Name** (Administratörsklassnamn för enheten).
 
-Fortsätta att publicera profilen och använda den med StageNow appen på enheten. Företagsportalappen beviljas rollen Administratör för enheten.
+Fortsätt att publicera profilen och använd den med appen StageNow på enheten. Appen Företagsportal beviljas enhetsadministratörsrollen.
 
 ## <a name="step-3-enroll-the-device-in-to-intune"></a>Steg 3: Registrera enheten i Intune
 
-När du har slutfört de två första stegen, installeras företagsportalappen på enheten. Enheten är redo att vara registrerade i Intune.
+När du har slutfört de två första stegen installeras appen Företagsportal på enheten. Enheten är klar att registreras i Intune.
 
-[Registrera Android-enheter](android-enroll.md) innehåller stegen. Om du har många Zebra enheter kanske du vill använda en [konto för enhetsregistreringshantering](device-enrollment-manager-enroll.md).
+Anvisningar finns i [Enroll Android devices](android-enroll.md) (Registrera Android-enheter). Om du har många Zebra-enheter kanske du vill använda ett [DEM-konto (enhetsregistreringshanterare)](device-enrollment-manager-enroll.md). Om du använder ett DEM-konto tas även alternativet att avregistrera från appen Företagsportal bort så att det blir svårare för användarna att avregistrera enheten.
 
-## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>Steg 4: Skapa en profil för hantering i StageNow
+## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>Steg 4: Skapa en enhetshanteringsprofil i StageNow
 
-Använd StageNow för att skapa en profil som konfigurerar inställningar som du vill hantera på enheten. Specifik information finns i dokumentationen för Zebra's. [Profiler](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (öppnas Zebras webbplats) kan vara en bra resurs.
+Använd StageNow för att skapa en profil som konfigurerar inställningar som du vill hantera på enheten. Specifik information finns i Zebras dokumentation. [Profiles](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (Profiler) (öppnar Zebras webbplats) kan vara en bra resurs.
 
-När du skapar profilen i StageNow, på det sista steget, Välj **exportera till MDM**. Detta genererar en XML-fil. Spara filen. Du behöver det i ett senare steg.
+När du skapar profilen i StageNow i det sista steget väljer du **Export to MDM** (Exportera till MDM). Detta genererar en XML-fil. Spara den här filen. Du behöver den i ett senare steg.
 
 > [!TIP]
-> Vi rekommenderar för att testa profilen innan du distribuerar den till enheter i din organisation. I det sista steget när du skapar profiler med StageNow på datorn testa, att använda den **testa** alternativ. Sedan kan använda StageNow genererade filen med StageNow appen på enheten. 
+> Vi rekommenderar att du testar profilen innan du distribuerar den till enheter i din organisation. I det sista steget när du skapar profiler med StageNow på datorn kan du testa profilen med **testalternativen**. Sedan använder du den StageNow-genererade filen med appen StageNow på enheten. 
 > 
-> StageNow appen på enheten visar loggar som genereras när du testar profilen. [Använd StageNow loggar in på Zebra enheter som kör Android i Intune](android-zebra-mx-logs-troubleshoot.md) innehåller information om hur du använder StageNow loggar för att förstå fel.
+> I appen StageNow på enheten visas loggar som skapades när du testade profilen. I [Use StageNow logs on Zebra devices running Android in Intune](android-zebra-mx-logs-troubleshoot.md) (Använda StageNow-loggar på Zebra-enheter som kör Android i Intune) finns information om hur du använder StageNow-loggar för att få information om varför fel uppstår.
 
 > [!NOTE]
-> Om du refererar till appar, uppdateringspaket eller uppdatera andra filer i din StageNow-profil som du vill att enheten att få dessa uppdateringar. För att få uppdateringar kan ansluta enheten till distributionsservern StageNow när profilen tillämpas. 
+> Om du refererar till appar, uppdaterar paket eller uppdaterar andra filer i din StageNow-profil vill du att enheten ska få dessa uppdateringar. För att kunna få uppdateringarna måste enheten ansluta till StageNow-distributionsservern när profilen används. 
 > 
-> Eller du kan använda de inbyggda funktionerna i Intune för att få dessa ändringar, inklusive: 
-> - Funktioner i apphantering [lägga till](apps-add.md), [distribuera](apps-deploy.md), uppdatera, och [övervakaren](apps-monitor.md) appar.
-> - Hantera [system-och app](device-restrictions-android-for-work.md#device-owner-only) på enheter som kör Android Enterprise
+> Eller så kan du använda de inbyggda funktionerna i Intune för att hämta dessa ändringar, till exempel: 
+> - Apphanteringsfunktioner för att [lägga till](apps-add.md), [distribuera](apps-deploy.md), uppdatera och [övervaka](apps-monitor.md) appar.
+> - Hantera [system- och appuppdateringar](device-restrictions-android-for-work.md#device-owner-only) på enheter som kör Android Enterprise
 
 När du har testat filen är nästa steg att distribuera profilen till enheter med Intune.
 
 > [!NOTE]
-> Distribuera en profil till varje enhet. Om det finns flera StageNow profiler som du vill distribuera på enheter kan exportera StageNow profiler och kombinera inställningarna i en XML-fil innan du lägger till den i Intune. 
+> Distribuera en profil till varje enhet. Om det finns flera StageNow-profiler som du vill distribuera till enheterna exporterar du StageNow-profilerna och kombinerar inställningarna till en enda XML-fil innan du lägger till den i Intune. 
 > 
-> Vill du inte två inställningar som konfigurerar samma egenskap i samma XML-filen. Målet är att undvika konflikter mellan inställningar på enheten.
+> Du vill inte ha två inställningar som konfigurerar samma egenskap i samma XML-fil. Målet är att undvika konflikter mellan inställningar på enheten.
 
 ## <a name="step-5-create-a-profile-in-intune"></a>Steg 5: Skapa en profil i Intune
 
@@ -135,20 +135,19 @@ Skapa en enhetskonfigurationsprofil i Intune:
     - **Plattform**: Välj **Android**.
     - **Profiltyp**: Välj **MX-profilen (endast Zebra)**.
 
-4. I **MX-profil i XML-format**, lägga till XML-profilfil [du har exporterat från StageNow](#step-4-create-a-device-management-profile-in-stagenow) (i den här artikeln).
+4. I **MX-profil i .xml-format**  lägger du till XML-profilfilen [som du exporterade från StageNow](#step-4-create-a-device-management-profile-in-stagenow) (i den här artikeln).
 5. Välj **OK** > **Skapa** för att spara ändringarna. Principen skapas och visas i listan.
 
 Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Nästa gång enheten söker efter konfigurationsuppdateringar, har MX-profil distribuerats till enheten. Enheter som synkroniseras med Intune när enheter registreras och sedan cirka var åttonde timme. Du kan också [kan du framtvinga synkronisering i Intune](device-sync.md). Eller på enheten, öppna den **företagsportalappen** > **inställningar** > **synkronisering**. 
+Nästa gång enheten söker efter konfigurationsuppdateringar distribueras MX-profilen till enheten. Enheterna synkroniseras med Intune när de registreras och därefter ungefär var åttonde timme. Du kan också [framtvinga en synkronisering i Intune](device-sync.md). Eller öppna **appen Företagsportal** > **Inställningar** > **Synkronisera** på enheten. 
 
 > [!TIP]
-> - Av säkerhetsskäl visas inte profilen XML-text när du har sparat. Texten är krypterad och du kan bara se asterisker (`****`). Referens rekommenderar vi för att spara kopior av MX-profiler innan du lägger till dem i Intune.
+> - Av säkerhetsskäl visas inte XML-profilens text när du har sparat den. Texten är krypterad och du ser bara asterisker (`****`). Vi rekommenderar att du sparar kopior av MX-profiler för egen referens innan du lägger till dem i Intune.
 > 
-> - Om du vill uppdatera en profil när den är tilldelad till Zebra enheter kan skapa en uppdaterad StageNow XML-fil, redigera den befintliga Intune-profilen och lägga till den nya StageNow XML-filen. Den nya filen skriver över den föregående StageNow principen i profilen.
+> - Om du vill uppdatera en profil efter att den har tilldelats till Zebra-enheter skapar du en uppdaterad StageNow XML-fil, redigerar den befintliga Intune-profilen och lägger till den nya StageNow XML-filen. Den nya filen skriver över den tidigare StageNow-principen i profilen.
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
-
-[Använda StageNow loggar för felsökning av Zebra enheter](android-zebra-mx-logs-troubleshoot.md).
+- [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+- [Använd StageNow-loggar för att felsöka Zebra-enheter](android-zebra-mx-logs-troubleshoot.md).

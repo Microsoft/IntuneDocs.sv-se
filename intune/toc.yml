@@ -552,6 +552,8 @@
               href: app-configuration-policies-use-ios.md
             - name: Android hanterade enheter
               href: app-configuration-policies-use-android.md
+            - name: Hanterad hemskärmsapp för Android Enterprise
+              href: app-configuration-managed-home-screen-app.md
             - name: Hanterade appar
               href: app-configuration-policies-managed-app.md
             - name: Använd iOS-appetableringsprofiler

@@ -1,11 +1,11 @@
 ---
 title: Enhetsinställningar för Android Enterprise i Microsoft Intune – Azure | Microsoft Docs
-description: Du kan begränsa enhetsinställningarna för Android Enterprise eller Android for Work, inklusive inställningar för att kopiera och klistra in, visa aviseringar, appbehörigheter, dela data, lösenordslängd, inloggningsfel, använda fingeravtryck för upplåsning, återanvändning av lösenord och aktivering av Bluetooth-delning för arbetskontakter. Konfigurera enheter som en kiosk dedikerade enheter för att köra en app eller flera appar.
+description: Du kan begränsa enhetsinställningarna för Android Enterprise eller Android for Work, inklusive inställningar för att kopiera och klistra in, visa aviseringar, appbehörigheter, dela data, lösenordslängd, inloggningsfel, använda fingeravtryck för upplåsning, återanvändning av lösenord och aktivering av Bluetooth-delning för arbetskontakter. Konfigurera enheter som en särskild enhet för att köra en eller flera appar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 04/10/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 493a5be89e747c2de1eca3a63907b79228fcdfa2
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505785"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -65,32 +65,24 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 
   **Inte konfigurerad** förhindrar användare från att aktivera funktionen nätverkshjälp på enheten.
 
-- **Tillåt installation från okända källor**: Välj **Tillåt** så att användare kan aktivera **Okända källor**. Inställningen tillåter att appar installeras från okända källor. **Inte konfigurerad** förhindrar användare från att aktivera **Okända källor**.
 - **Systemuppdatering**: Välj ett alternativ för att definiera hur enheten hanterar over-the-air-uppdateringar:
   - **Standard för enheten**: Använd enhetens standardinställning.
   - **Automatiskt**: Uppdateringar installeras automatiskt utan att användaren behöver göra något. Om du konfigurerar den här principen installeras väntande uppdateringar omedelbart.
   - **Uppskjuten**: Uppdateringar skjuts upp 30 dagar. Mot slutet av 30-dagarsperioden uppmanar Android användaren att installera uppdateringen. Det är möjligt för enhetstillverkare eller operatörer att undanta viktiga säkerhetsuppdateringar från att skjutas upp. En undantagen uppdatering visar användaren ett systemmeddelande på enheten. 
   - **Underhållsperiod**: Installerar uppdateringar automatiskt under en daglig underhållsperiod som du anger i Intune. Installationen gör ett försök dagligen under 30 dagar och kan misslyckas vid otillräckligt diskutrymme eller för låga batterinivåer. Efter 30 dagar uppmanar Android användaren att installera. Det här fönstret används också för att installera uppdateringar för Play-appar. Använd det här alternativet för dedikerade enheter såsom helskärmslägen, eftersom förgrundsappar för dedikerade enheter med enskild app kan uppdateras.
-- **Automatiska appuppdateringar**: Välj när automatiska uppdateringar ska installeras. Alternativen är:
-  - **Inte konfigurerat**
-  - **Användarens val**
-  - **Aldrig**
-  - **Endast Wi-Fi**
-  - **Alltid**
 
 - **Meddelandefönster**: När **Inaktivera** har valts visas inte fönstermeddelanden, bland annat popup-fönster, inkommande samtal, utgående samtal, systemaviseringar och systemfel, på enheten. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa meddelanden.
 - **Hoppa över tips vid första start**: Välj **Aktivera** om du vill dölja eller hoppa över förslag från appar om att gå igenom självstudier eller läsa inledande tips när appen startar. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa de här förslagen när appen startar.
 
-
 ### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
-- **Hotgenomsökning för appar**: **Kräv** ser till att inställningen för **Verifiera appar** är aktiverad för arbetsprofiler och personliga profiler.
+- **Hotgenomsökning för appar**: Om du väljer **Kräv** (standard) kan Google Play Protect genomsöka appar före de installeras och efter de installerats. Om ett hot identifieras kan användaren varnas och uppmanas att ta bort appen från enheten. **Inte konfigurerad** innebär att Google Play Protect inte är aktiverat och inte söker igenom appar.
 
-### <a name="dedicated-device-settings"></a>Dedikerad Enhetsinställningar
+### <a name="dedicated-device-settings"></a>Inställningar för särskilda enheter
 
-Använd dessa inställningar för att konfigurera en kiosk-style-upplevelse på din dedikerade enheter. Du kan konfigurera en enhet för att köra en app eller flera appar. När en enhet är inställd på helskärmsläge är det bara de appar du lägger till som är tillgängliga. Dessa inställningar gäller för Android-företagsenheter dedikerade enheter. De gäller inte för Android-företagsenheter fullständigt hanterade enheter.
+Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsformat i dina särskilda enheter. Du kan konfigurera en enhet för att köra en app eller flera appar. När en enhet är inställd på helskärmsläge är det bara de appar du lägger till som är tillgängliga. Dessa inställningar gäller för särskilda Android Enterprise-enheter. De gäller inte för fullständigt hanterade Android Enterprise-enheter.
 
-**Helskärmsläge**: om enheten kör en app eller kör flera appar.
+**Helskärmsläge**: Välj om enheten ska köra en app eller flera appar.
 
 - **Enskild app**: Användare kan bara komma åt en enda app på enheten. Endast den specifika appen startar när enheten startar. Användarna förhindras att öppna nya appar eller ändra appen som körs.
 
@@ -117,30 +109,63 @@ Använd dessa inställningar för att konfigurera en kiosk-style-upplevelse på 
     Du kan även lägga till andra [Android-appar](apps-add-android-for-work.md) och [webbappar](web-app.md) som skapats av din organisation till enheten. Se till att [tilldela appen till den enhetsgrupp som skapats för dina dedikerade enheter](apps-deploy.md).
 
   - **Virtuell hemknapp**: Välj **Aktivera** för att visa en hemknapp på den dedikerade enheten. När det är valt kan användaren återvända till enhetens hemskärm för att enkelt växla mellan appar. På vissa Android-enheter kan användare behöva svepa upp på skärmen för att visa hemknappen. **Inaktivera** visar inte hemknappen så användarna måste använda bakåtknappen för att växla mellan appar.
-  - **Lämna helskärmsläge**: Välj **Aktivera** för att tillåta administratörer att tillfälligt pausa helskärmsläget för att uppdatera enheten. Använda den här funktionen kan administratören: 
+  - **Lämna helskärmsläge**: Välj **Aktivera** för att tillåta administratörer att tillfälligt pausa helskärmsläget för att uppdatera enheten. Om du vill använda den här funktionen kan administratören: 
   
     1. Fortsätta att välja bakåtknappen tills knappen ”Avsluta helskärmsläge” visas. 
     2. Välj knappen och ange PIN-koden för **Lämna helskärmsläge**.
     3. När de önskade ändringarna är gjorda väljer du appen **Hanterad startskärm**. Det här steget låser enheten i helskärmsläge för flera appar. 
-    
+
     **Inaktivera** ger inte möjligheten att pausa helskärmsläget. Om administratören fortsätter att välja bakåtknappen och väljer knappen ”Avsluta helskärmsläge” visas ett meddelande om att ett lösenord krävs.
-    
+
     - **Kod för att lämna helskärmsläge**: Ange en 4–6-siffrig numerisk PIN-kod. Administratören använder den här PIN-koden för att tillfälligt pausa helskärmsläge.
- 
+
   - **Ange anpassad URL-bakgrund**: Ange en URL för att anpassa bakgrundsskärmen på den dedikerade enheten.
+    
+    > [!NOTE]
+    > I de flesta fall rekommenderar vi att du börjar med bilder med minst följande storlek:
+    >
+    > - Telefon: 1 080 x 1 920 bildpunkter
+    > - Surfplatta: 1 920 x 1 080 bildpunkter
+    >    
+    > För bästa möjliga upplevelse och detaljrikedom föreslår vi att du skapar bildresurser till enheternas respektive bildskärmsspecifikationer.
+    >
+    > Moderna bildskärmar har högre bildpunktsdensitet och kan visa bilder i 2K/4K.
+  - **Trådlös konfiguration**: Välj **Aktivera** om du vill tillåta att slutanvändare ansluter enheten till olika trådlösa nätverk. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerad** (standard) hindrar användare från att ansluta till trådlösa nätverk när de är i Hanterad startskärm (låsläget).
+
+    Mer om [låsläget](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (öppnar Androids webbplats).
+
+  - **Bluetooth-konfiguration**: Välj **Aktivera** om du vill tillåta Bluetooth på enheten, och om du vill tillåta att slutanvändarna kopplar samman enheter via Bluetooth. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerad** (standard) hindrar användare från att konfigurera Bluetooth när de är i Hanterad startskärm (låsläget). 
+
+    Mer om [låsläget](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (öppnar Androids webbplats).
 
 ### <a name="device-password-settings"></a>Inställningar för enhetslösenord
 
-- **Keyguard**: Välj **Inaktivera** för att förhindra att användare använder Keyguard-funktionen för att låsa skärmen på enheten. **Inte konfigurerad** tillåter användaren att använda Keyguard-funktioner.
-- **Inaktiverad keyguard funktioner**: när keyguard har aktiverats på enheten, Välj vilka funktioner som ska inaktiveras. När **Säker kamera** är markerad är till exempel kamerafunktionen inaktiverad på enheten. Funktioner som inte är markerade är aktiverade på enheten.
+- **Inaktivera Lås skärm**: Välj **Inaktivera** om du vill hindra användarna från att använda låsskärmsfunktionen Keyguard på enheten. **Inte konfigurerad** tillåter användaren att använda Keyguard-funktioner.
+- **Inaktiverade låsskärmsfunktioner**: När Keyguard har aktiverats på enheten väljer du vilka funktioner som ska inaktiveras. När **Säker kamera** är markerad är till exempel kamerafunktionen inaktiverad på enheten. Funktioner som inte är markerade är aktiverade på enheten.
+
+  Dessa funktioner är tillgängliga för användarna när enheten är låst. Användarna kommer inte att se eller få åtkomst till de funktioner som är markerade.
+
 - **Krav på lösenordstyp**: Definiera typen av lösenord som krävs för enheten. Alternativen är:
-  - **Minst numeriskt**
-  - **Numeriskt avancerat**: Upprepade eller efterföljande siffror, till exempel ”1111” eller ”1234”, tillåts inte.
-  - **Minst alfabetiskt**
-  - **Minst alfanumeriskt**
-  - **Minst alfanumeriskt med symboler**
-- **Minsta längd på lösenord**: Ange den minsta längd på lösenord som en användare måste ange (mellan 4 och 16 tecken).
-- **Antal felaktiga inloggningar innan enheten rensas**: Ange antalet felaktiga inloggningar som tillåts innan enheten rensas (mellan 1–11).
+  - **Standard för enheten**
+  - **Lösenord krävs, inga begränsningar**
+  - **Svag biometrik**: [Stark eller svag biometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (öppnar Androids webbplats)
+  - **Numeriskt**: Lösenordet får bara innehålla siffror, till exempel `123456789`. Ange en **minsta längd på lösenord** som användaren måste ange (mellan 4 och 16 tecken).
+  - **Numeriskt avancerat**: Upprepade eller efterföljande siffror, till exempel ”1111” eller ”1234”, tillåts inte. Ange en **minsta längd på lösenord** som användaren måste ange (mellan 4 och 16 tecken).
+  - **Alfabetiskt**: Bokstäver i alfabetet krävs. Siffror och symboler krävs inte. Ange en **minsta längd på lösenord** som användaren måste ange (mellan 4 och 16 tecken).
+  - **Alfanumeriskt**: Innehåller versaler, gemener och numeriska tecken. Ange en **minsta längd på lösenord** som användaren måste ange (mellan 4 och 16 tecken).
+  - **Alfanumeriskt med symboler**: Innehåller versaler, gemener, numeriska tecken, skiljetecken och symboler. Ange även:
+
+    - **Minsta längd på lösenord**: Ange den minsta längd som lösenordet måste ha (mellan 4 och 16 tecken).
+    - **Antal tecken som krävs**: Ange hur många tecken som lösenordet måste innehålla (mellan 0 och 16 tecken).
+    - **Antal gemener som krävs**: Ange hur många gemener som lösenordet måste innehålla (mellan 0 och 16 tecken).
+    - **Antal versaler som krävs** : Ange hur många versaler som lösenordet måste innehålla (mellan 0 och 16 tecken).
+    - **Antal icke-bokstavstecken som krävs**: Ange hur många icke-bokstavstecken (bokstäver som inte ingår i alfabetet) som lösenordet måste innehålla (mellan 0 och 16 tecken).
+    - **Antal numeriska tecken som krävs**: Ange hur många numeriska tecken (till exempel `1`, `2` eller `3`) som lösenordet måste innehålla (mellan 0 och 16 tecken).
+    - **Antal symboltecken som krävs**: Ange hur många symboltecken (till exempel `&`, `#` eller `%`) som lösenordet måste innehålla (mellan 0 och 16 tecken).
+
+- **Antal dagar tills lösenordet går ut**: Ange antal dagar innan lösenordet för enheten måste ändras (mellan 1 och 365). Exempel: Om du vill att lösenordet ska ändras om 60 dagar anger du `60`. När lösenordet upphör att gälla uppmanas användarna att skapa ett nytt lösenord.
+- **Antal lösenord som krävs innan användaren kan återanvända ett lösenord**: Ange hur många av de senast använda lösenorden som inte kan återanvändas (mellan 1 och 24). Använd den här inställningen för att förhindra att användaren återanvänder tidigare använda lösenord.
+- **Antal felaktiga inloggningar innan enheten rensas**: Ange antalet felaktiga inloggningar som tillåts innan enheten rensas (mellan 4 och 11).
 
 ### <a name="power-settings"></a>Energiinställningar
 
@@ -152,6 +177,17 @@ Använd dessa inställningar för att konfigurera en kiosk-style-upplevelse på 
 - **Lägg till nya användare**: Välj **Blockera** för att förhindra att användare lägger till nya användare. Varje användare har ett personligt utrymme på enheten för anpassade startskärmar, konton, appar och inställningar. **Inte konfigurerad** tillåter användare att lägga till andra användare på enheten.
 - **Borttagning av användare**: Välj **Blockera** för att förhindra att användare tar bort användare. **Inte konfigurerad** låter användare att ta bort andra användare på enheten.
 - **Kontoändringar**: Välj **Blockera** för att förhindra att användare ändrar konton. **Inte konfigurerad** låter användare att uppdatera användarkonton på enheten.
+
+### <a name="applications"></a>Program
+
+- **Tillåt installation från okända källor**: Välj **Tillåt** så att användare kan aktivera **Okända källor**. Den här inställningen gör att appar kan installeras från okända källor, inklusive andra källor än Google Play. **Inte konfigurerad** förhindrar användare från att aktivera **Okända källor**.
+- **Tillåt åtkomst till alla appar i Google Play-butiken**: När **Tillåt** har valts får användarna åtkomst till alla appar i Google Play. De får inte åtkomst till de appar som har blockerats av administratören i [Klientappar](apps-add-android-for-work.md). **Inte konfigurerad** tvingar användare att endast använda appar som administratören gjort tillgängliga i Google Play, eller appar som krävs i [Klientappar](apps-add-android-for-work.md).
+- **Automatiska appuppdateringar**: Välj när automatiska uppdateringar ska installeras. Alternativen är:
+  - **Inte konfigurerat**
+  - **Användarens val**
+  - **Aldrig**
+  - **Endast Wi-Fi**
+  - **Alltid**
 
 ### <a name="connectivity"></a>Anslutning
 

@@ -19,14 +19,14 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61501246"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Felsöka registreringen av din Windows 10-enhet
-Om du har registrerat enheten, men fortfarande inte komma åt ditt arbete eller skolans e-post och filer, försök med dessa felsökningssteg.  
+Om du har registrerat enheten, men ändå inte kan komma åt e-post och filer för ditt arbete eller din skola kan du prova följande felsökningssteg.  
 
 1.  Ta en titt på de två följande skärmarna och se om någon av dem liknar vad du ser på din enhet. Följ de steg som gäller för den skärm som du ser på din enhet.
 
@@ -48,13 +48,13 @@ Om du har registrerat enheten, men fortfarande inte komma åt ditt arbete eller 
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-   - Om du inte ser den anslutningsinformation som visas ovan, eller du ser det, men den saknar några av alternativen, trycker du på **Connect**. Anslut sedan genom att logga in med dina autentiseringsuppgifter för arbetsplats- eller skolkonto.  
+   - Om anslutningsinformationen ovan inte visas, eller om vissa alternativ saknas, trycker du på **Anslut**. Anslut sedan genom att logga in med dina autentiseringsuppgifter för arbetsplats- eller skolkonto.  
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Felsökningssteg att följa om du ser ”Ditt konto”
 
 Om du följde stegen ovan men ändå inte har åtkomst till din e-post, dina filer eller annan information på arbetet eller i skolan, så gå tillbaka till **Konton** och tryck på **Åtkomst till arbetsplats**.
 
-- Om du ser ditt arbets- eller skolkonto i listan, är du ansluten.  
+- Om du ser ditt arbets- eller skolkonto är du ansluten.  
 
 - Om du inte ser ditt arbets- eller skolkonto trycker du på **Anslut** och loggar in med dina användaruppgifter.
 
