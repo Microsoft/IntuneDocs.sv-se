@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c2cac99ba45ccd91629e6db32d91735d90d706e
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 24e783bc4586709d0cde6a2ebd19c2b5ca30ab6b
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426161"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135125"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -142,8 +142,8 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
     Om appfilnamnet exempelvis är **MyApp123** lägger du till följande:<br>
     `msiexec /p “MyApp123.msp”`<p>
     Och om programmet är `ApplicationName.exe` skulle kommandot vara programmets namn följt av de kommandoargument (växlar) som stöds av paketet. <br>Exempel:<br>
-    `ApplicationName.exe /quite`<br>
-    I kommandot ovan stöder paketet `ApplicaitonName.exe` kommandoargumentet `/quite`.<p> Kontakta leverantören av programmet för de specifika argument som stöds av programpaketet.
+    `ApplicationName.exe /quiet`<br>
+    I kommandot ovan stöder paketet `ApplicationName.exe` kommandoargumentet `/quiet`.<p> Kontakta leverantören av programmet för de specifika argument som stöds av programpaketet.
 
 3.  Lägg till den fullständiga kommandoraden för avinstallation av appen baserat på appens GUID. 
 
@@ -282,9 +282,6 @@ Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Informati
 ## <a name="app-dependencies"></a>Appsamband
 
 Appsamband är program som måste installeras innan du kan installera Win32-appen. Du kan kräva att andra appar installeras som beroenden. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. Det finns upp till 100 beroenden, vilket innefattar beroenden för eventuella inkluderade beroenden samt själva appen. Du kan lägga till Win32-appsamband först efter att Win32-appen har lagts till och laddats upp till Intune. När Win32-appen har lagts till visas alternativet **Beroenden** på bladet för din Win32-app. 
-
-> [!NOTE]
-> Funktionen för appsamband är endast tillgänglig efter att Intune-hanteringsagenten har uppgraderats till version 1904 (senare än 1.18.120.0), vilket kan ta en eller två veckor till efter att vi uppgraderar tjänsten till 1904.
 
 När du lägger till ett appsamband kan du söka baserat på appens namn och utgivare. Dessutom kan du sortera dina tillagda beroenden baserat på appens namn och utgivare. Appsamband som lagts till tidigare kan inte väljas i listan över appsamband. 
 

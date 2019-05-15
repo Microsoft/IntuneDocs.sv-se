@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/19/2019
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 751d89ef023bea07d3c8bdb69904605d88c9e0b6
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135226"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter i Intune
 
@@ -103,9 +103,6 @@ Du kan också lägga till en till åtgärd när du skapar en princip för efterl
          - Ange eventuella **ytterligare mottagare** genom att välja grupper
     
     - **Fjärrlåsa en icke-kompatibel enhet**: Lås enheten när den är inkompatibel. Den här åtgärden tvingar användaren att ange en PIN-kod eller ett lösenord för att låsa upp enheten. 
-
-    - **Ta den icke-kompatibla enheten ur bruk**: Ta bort alla företagets data från enheten och ta bort enheten från Intune-hanteringen när den är inkompatibel. För att förhindra oavsiktlig rensning av en enhet har den här åtgärden stöd för ett schema på minst **30** dagar.  
-
     
 5. Konfigurera ett **schema**: Ange hur många dagar (0 till 365) efter en inkompatibilitet som åtgärden ska utlösas på användarnas enheter. Efter den här respittiden kan du tillämpa en princip för villkorlig åtkomst. Om du anger **0** (noll) dagar tillämpas den villkorliga åtkomsten **omedelbart**. Du kan exempelvis blockera åtkomsten till företagsresurser direkt om en enhet inte är kompatibel.
 
