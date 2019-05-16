@@ -1,15 +1,16 @@
 ---
 title: Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Läs mer om att lägga till en verksamhetsspecifik iOS-app i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7206a29bea5a53bf13b43a9881c629f27e949dbb
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 1bb213230db5a699be913929cc3b68b90a8f019a
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230014"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571764"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
 
@@ -32,6 +33,8 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
 
 >[!NOTE]
 >Användare av iOS-enheter kan ta bort några av de inbyggda iOS-apparna såsom Stocks och Maps. Du kan inte använda Intune för att distribuera om dessa appar. Om användarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
+>
+>iOS LOB-appar har en maximal storleksgräns på 4 GB per app.
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 

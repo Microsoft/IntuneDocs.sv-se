@@ -6,21 +6,23 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 06/25/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dc3a9620532951bd78e545e87b0d43dd6be3efe5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 786cd6e7d0acaeb6e78035d8ec580c30d29d09e7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186604"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57391713"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Övervaka enhetsprofiler i Microsoft Intune
 
@@ -65,10 +67,10 @@ När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. De
 
 5. Välj en profil i listan **Profiler**. Du kan också ändra befintliga egenskaper:
   - **Egenskaper**: Ändra namnet eller uppdatera befintliga inställningar.
-  - **Tilldelningar**: Inkludera eller exkludera enheter som principen ska gälla. Välj **Valda grupper** för att välja särskilda enhetsgrupper.
+  - **Tilldelningar**: Inkludera eller undanta enheter som principen ska gälla för. Välj **Valda grupper** för att välja särskilda enhetsgrupper.
   - **Enhetsstatus**: Enheter som är tilldelade till profilen visas samt om profilen har distribuerats korrekt. Du kan välja en specifik enhet för att få ytterligare information, inklusive installerade appar.
-  - **Användarstatus**: Visar en lista över användarnamn som påverkas av den här profilen och om profilen distribuerats korrekt. Du kan välja en specifik användare för att få ytterligare information.
-  - **Status per inställning**: Filtrerar resultatet genom att visa de enskilda inställningarna i profilen och visar om inställningen har tillämpats korrekt.
+  - **Användarstatus**: Visar en lista med användarnamn som påverkas av den här profilen, samt om profilen har distribuerats. Du kan välja en specifik användare för att få ytterligare information.
+  - **Status per inställning**: Filtrerar resultatet genom att visa de enskilda inställningarna i profilen, samt om inställningen har tillämpats.
 
 ## <a name="view-conflicts"></a>Visa konflikter
 

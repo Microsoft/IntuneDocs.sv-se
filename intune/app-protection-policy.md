@@ -6,23 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
+ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbb6a8f159aebe837fabf671a84dd96223298227
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 45e9f50881ff7da0554a4731712441b5fedb01d8
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569421"
 ---
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
@@ -50,7 +51,7 @@ Appskyddsprinciper kan konfigureras för appar som körs på enheter som är:
 > [!IMPORTANT]
 > Du kan skapa hanteringsprinciper för mobila appar för Office-mobilappar som ansluter till Office 365-tjänster. Du kan även skydda åtkomsten till lokala Exchange-postlådor genom att skapa Intune-appskyddsprinciper för Outlook för iOS och Android där modern hybridautentisering är aktiverad. Innan du använder den här funktionen måste du se till att du uppfyller [kraven för Outlook för iOS och Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Appskyddsprinciper stöds inte för andra appar som ansluter till lokala Exchange- eller SharePoint-tjänster.
 
-**De främsta fördelarna med att använda appskyddsprinciper är:**
+**De främsta fördelarna med att använda appskyddsprinciper är**:
 
 -   Skydda företagets data på appnivå. Eftersom mobilappshantering inte kräver enhetshantering kan du skydda företagets data på både hanterade och ohanterade enheter. Eftersom hanteringen är uppbyggd kring användaridentiteten krävs ingen enhetshantering.
 
@@ -69,8 +70,8 @@ Det finns ytterligare fördelar med att använda MDM med appskyddsprinciper. Fö
 ### <a name="supported-platforms-for-app-protection-policies"></a>Plattformar som stöds för appskyddsprinciper
 Plattformsstödet för Intune-appskyddsprinciper är synkroniserat med plattformsstödet för Office-mobilprogram för Android- och iOS-enheter. Mer information finns i avsnittet **Mobilappar** i [Systemkrav för Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-Windows-enheter stöds inte för tillfället. Du kan dock använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-
+> [!IMPORTANT]
+> Intunes företagsportal krävs på enheten för att kunna ta emot appskyddsprinciper på Android. Mer information finns i [Krav för åtkomst till appar i Intune-företagsportalen](end-user-mam-apps-android.md#access-apps).
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>Hur appskyddsprinciper skyddar appdata
 

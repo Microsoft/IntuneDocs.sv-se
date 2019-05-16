@@ -1,27 +1,28 @@
 ---
 title: Kräv multifaktorautentisering för enhetsregistrering i Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Så här kräver du multifaktorautentisering i Azure AD vid enhetsregistrering i Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2018
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71d551ca64f85c3ba6a807fac70e3b0662e1b89a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cf5611b3b9292222582d66cae39b4f751279dcec
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834100"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568797"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Kräv multifaktorautentisering för enhetsregistreringar i Intune
 
@@ -50,11 +51,10 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 >Konfigurera inte **Enhetsbaserade åtkomstregler** för Microsoft Intune-registrering.
 
 1. Logga in med dina autentiseringsuppgifter på [Microsoft Azure Portal](https://portal.azure.com).
-2. I portalen går du till **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)**.
-3. I **Azure Active Directory** går du till Säkerhet och väljer **[Villkorlig åtkomst](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)**.
+2. I portalen går du till **Intune** och väljer **Villkorsstyrd åtkomst**. Noden för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.
 4. Välj **Ny princip**.
 5. I **Ny** princip anger du ett beskrivande namn för principen.
-6. Välj **Tilldelningar** i avsnittet **Användare och grupper**.
+6. Välj **Tilldelningar** i avsnittet **Användare och grupper**. 
 7. I **Användare och grupper** väljer du **Välj användare eller grupper** och markerar **Användare och grupper**. Välj sedan de användare och/eller grupper som ska få den här principen. Välj sedan **Klart**.
 8. I avsnittet **Tilldelningar** väljer du **Molnappar**.
 9. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**.

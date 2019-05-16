@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c61eb47f29b201997d04fa6b1405ad2f186e4fcc
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 33f24a3d7b30973855bb303bb97bf703cd4dc5fa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237205"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567276"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -33,7 +34,7 @@ Microsofts företagsportal för Intune är den plats där användare kan komma �
 > [!Tip]        
 > När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar. Observera att användarna måste ha tilldelats en Intune-licens för att få åtkomst till webbplatsen Företagsportal.
 
-Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Du gör det genom att välja **Installation** > **Anpassning av företagsportalen** i arbetsbelastningen **Klientappar** och sedan konfigurera de inställningar som krävs.  
+Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Gör detta i Intune-portalen genom att välja **Klientappar** > **Anpassning** och konfigurera sedan inställningarna som krävs. 
 
 > [!Note]       
 > Om du använder Azure Government har slutanvändarna tillgång till apploggar som hjälper dem att avgöra hur de ska dela när de inleder processen för att få hjälp med ett problem. Om du inte använder Azure Government skickar företagsportalen för Windows 10 apploggar direkt till Microsoft när användaren initierar processen för att få hjälp med ett problem. När apploggarna skickas till Microsoft blir det enklare att felsöka och lösa problem. 
@@ -90,7 +91,7 @@ Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har 
 
 |Fältnamn|Mer information|
 |---|---|
-|**Ladda upp din varumärkesbild**| Det här alternativet är tillgängligt så att du kan visa en bakgrundsbild på användarens profilsida i företagsportalappen.<p>*Obs!* Bilden kan visas på olika sätt på olika plattformar.<p><ul><li>Rekommenderad bildbredd: Mindre än 1 125 bildpunkter, men inte mindre än 640 bildpunkter</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp din varumärkesbild**| Med det här alternativet kan du visa en bild på ditt varumärke. I iOS företagsportal visas den som en bakgrundsbild på användarens profilsida.<p><ul><li>Rekommenderad bildbredd: Mindre än 1 125 bildpunkter, men inte mindre än 640 bildpunkter</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på företagsportalen. Här följer några tips på hur du kan hitta, välja ut och optimera bilden för företagsportalen. 
 

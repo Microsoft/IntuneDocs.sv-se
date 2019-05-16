@@ -7,21 +7,23 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b3ca1b95a6dcf7bdc30b61469fa747894d20fe73
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 031db83302dfef8b99fc83ab7975e233c3eeb799
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188100"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57396870"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -56,7 +58,7 @@ Intune kan för närvarande integreras med följande leverantörer för kostnads
 
 Innan du börjar kontrollerar du att du har en Intune-prenumeration och en prenumeration på Datalert-tjänsten för kostnadsuppföljning av telekommunikation.
 
-### <a name="step-1-connect-the-datalert-service-to-microsoft-intune"></a>Steg 1: Ansluta Dataalert till Microsoft Intune
+### <a name="step-1-connect-the-datalert-service-to-microsoft-intune"></a>Steg 1: Ansluta Dataalert-tjänsten till Microsoft Intune
 
 1. Logga in på Datalert-hanteringskonsolen med dina administratörsautentiseringsuppgifter.
 
@@ -152,7 +154,7 @@ Följ dessa steg för att skapa Datalert-appen i Intune för varje plattform. iO
 
    ![Skärmbild av fönstret Lägg till en princip](./media/tem-assign-datalert-app-to-device-group.png)
 
-### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Steg 4: Lägga till företagsägda telefonlinjer i Datalert-konsolen
+### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Steg 4: Lägga till företagets telefonlinjer i Datalert-konsolen
 
 Du har konfigurerat Intune- och Datalert-tjänsterna så att de kommunicerar med varandra. Nu måste du lägga till företagets telefonlinjer i Datalert-konsolen och definiera tröskelvärden och åtgärder för överträdelser av roaming- eller mobiltelefonanvändning. Du kan lägga till företagets betalda telefonlinjer till Datalert-konsolen manuellt, eller låta dem läggas till automatiskt när enheten har registrerats i Intune.
 

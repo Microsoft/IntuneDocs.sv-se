@@ -1,15 +1,16 @@
 ---
 title: Ange registreringsbegränsningar i Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfbfb26569a85d8cd19b840ab86ec58160a1dec4
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 1080ae8a73223ad16445d0d2233434faa818b04b
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839693"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59569122"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -42,10 +43,11 @@ Bland de specifika registreringsbegränsningarna som du kan skapa finns:
   - iOS
   - macOS
   - Windows
+  - Windows Mobile
 - Version av plattformsoperativsystem för iOS, Android, Android-arbetsprofil och Windows. (Endast Windows 10-versioner kan användas. Lämna tomt om Windows 8.1 tillåts.)
   - Lägsta version.
   - Högsta version.
-- Begränsningar gentemot privatägda enheter (endast iOS, Android, Android-arbetsprofil, macOS och Windows).
+- Begränsningar i privatägda enheter (endast iOS, Android, Android-arbetsprofil, macOS, Windows och Windows Mobile).
 
 ## <a name="default-restrictions"></a>Standardbegränsningar
 
@@ -98,12 +100,12 @@ Om du blockerar personligt ägda Windows-enheter från registrering så kontroll
 Följande metoder räknas som auktoriserade som Windows-företagsregistrering:
  - Den registrerande användaren använder ett [konto för enhetsregistreringshanteraren]( device-enrollment-manager-enroll.md).
 - Enheten registreras via [Windows AutoPilot](enrollment-autopilot.md).
-- Enheten registreras med Windows Autopilot men är inte ett enbart MDM-registreringsalternativ från Windows-inställningar.
+- Enheten registreras med Windows Autopilot, men är inte det enda MDM-registreringsalternativet i Windows-inställningarna.
 - Enhetens IMEI-nummer anges i **Enhetsregistrering** > **[ID:n för företagsenheter](corporate-identifiers-add.md)**. (Stöds inte för Windows Phone 8.1.)
 - Enheten registreras via ett [bulketableringspaket](windows-bulk-enroll.md).
 - Enheten registreras via GPO eller [automatisk registrering från SCCM för samhantering](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
-Följande registreringar markeras som företagsregistreringar av Intune, men eftersom de inte innehåller per enhet-kontroll för Intune-administratören kommer de att blockeras:
+Följande registreringar är markerade som företagets av Intune. Men eftersom Intune-administratören inte har någon kontroll per enhet, kommer de att blockeras:
  - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning under Windows-installationen](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
 - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning från Windows-inställningar](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*.
  
@@ -126,9 +128,20 @@ Du kan ändra inställningarna för en begränsning för enhetsgräns genom att 
 6. Välj **Spara**.
 
 
-Vid BYOD-registrering ser användarna information om att de har uppnått gränsen för antalet registrerade enheter. På iOS ser det till exempel ut så här:
+Vid BYOD-registrering ser användarna information om att de har uppnått gränsen för antalet registrerade enheter. Till exempel i iOS:
 
 ![Avisering om enhetsbegränsning på iOS](./media/enrollment-restrictions-ios-set-limit-notification.png)
+
+> [!IMPORTANT]
+> Enhetsbegränsningar gäller inte för följande typer av Windows-registrering:
+> - Samhanterade registreringar
+> - GPO-registreringar
+> - Azure Active Directory-anslutna registreringar
+> - Massanslutna Azure Active Directory-registreringar
+> - Autopilot-registreringar
+>
+> Enhetsbegränsningar tillämpas inte för dessa typer av registreringar eftersom de anses vara scenarier för delade enheter.
+> Du kan ange fasta gränser för dessa typer av registreringar [i Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 ## <a name="change-enrollment-restriction-priority"></a>Ändra prioritet för registreringsbegränsning
 

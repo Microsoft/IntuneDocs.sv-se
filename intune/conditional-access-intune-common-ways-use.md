@@ -1,26 +1,28 @@
 ---
-title: Scenarion för villkorlig åtkomst | Microsoft Intune
+title: Scenarier för villkorlig åtkomst
+titleSuffix: Microsoft Intune
 description: Läs om hur villkorlig åtkomst med Intune ofta används för enhetsbaserad och appbaserad villkorlig åtkomst.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd29f52b4d108173b8f08b68cf8b85ce291a0077
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 666a62e9aa42212bacba0e0222a828d89d780eef
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569382"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -31,7 +33,7 @@ Det finns två typer av villkorlig åtkomst som används med Intune: enhetsbaser
 Nedanstående information visar hur du ska använda Intunes funktioner för mobil *enhets*efterlevnad och hantering av mobil*program* (MAM). 
 
 > [!NOTE]
-> Villkorlig åtkomst är en funktion i Azure Active Directory som ingår i Azure Active Directory Premium-licenser. Intune utökar den här funktionen genom att lägga till efterlevnad för mobila enheter och hantering av mobilappar i lösningen.
+> Villkorlig åtkomst är en funktion i Azure Active Directory som ingår i Azure Active Directory Premium-licenser. Intune utökar den här funktionen genom att lägga till efterlevnad för mobila enheter och hantering av mobilappar i lösningen. Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
 
 ## <a name="device-based-conditional-access"></a>Enhetsbaserad villkorlig åtkomst
 
@@ -71,15 +73,15 @@ När en enhet inte uppfyller de angivna villkoren leds slutanvändaren genom en 
 
 Intune Exchange Connector tar emot alla Exchange Active Sync-poster (EAS) som finns på Exchange-servern, så att Intune kan ta dessa EAS-poster och mappa den till Intune-enhetsposterna. Dessa poster och enheter har registrerats och identifierats av Intune. Den här processen tillåter eller blockerar åtkomst till e-post.
 
-Om Intune EAS-posten är helt ny, och Intune inte känner till detta, så utfärdar ett kommando som blockerar åtkomsten till e-post. Här följer lite mer information om hur den här processen fungerar:
+Om EAS-posten är helt ny och Intune inte känner till detta, utfärdas en cmdlet som blockerar åtkomsten till e-post. Här följer lite mer information om hur den här processen fungerar:
 
 ![Exchange lokalt med CA-flödesschema](./media/ca-intune-common-ways-1.png)
 
 1.  Användaren försöker få åtkomst till företagets e-post som finns på Exchange lokalt, version 2010 SP1 eller senare.
 
-2.  Om enheten inte hanteras av Intune, blockeras åtkomsten till e-post. Intune skickar blockmeddelande till EAS-klienten.
+2.  Om enheten inte hanteras av Intune, blockeras åtkomsten till e-post. Intune skickar ett blockeringsmeddelande till EAS-klienten.
 
-3.  EAS får ett blockmeddelande, sätter enheten i karantän och skickar e-postkarantänmeddelandet med åtgärdsförslag med länkar så att användarna kan registrera sina enheter.
+3.  EAS får blockeringsmeddelandet, försätter enheten i karantän och skickar karantänsmeddelandet med åtgärdsförslag. Meddelandet innehåller länkar som användarna kan använda för att registrera sina enheter.
 
 4.  Den arbetsplatsanslutna processen är det första steget mot att låta enheten hanteras av Intune.
 
@@ -91,7 +93,7 @@ Om Intune EAS-posten är helt ny, och Intune inte känner till detta, så utfär
 
 8.  Under Azure AD:s enhetsregistrering sparas enhetens statusinformation.
 
-9.  Om användaren uppfyller principerna för villkorlig åtkomst, skickar Intune ett kommando genom vilket Intune Exchange-anslutningsappen tillåter att brevlådan synkroniseras.
+9.  Om användaren uppfyller principerna för villkorsstyrd åtkomst, skickar Intune en cmdlet via Intune Exchange Connector som tillåter att postlådan synkroniseras.
 
 10. Exchange-servern skickar meddelandet till EAS-klienten, så att användaren får åtkomst till e-posten.
 
@@ -101,7 +103,7 @@ Intune utvärderar och hanterar enhetens tillstånd.
 
 #### <a name="whats-the-exchange-server-role"></a>Vad är Exchange-serverrollen?
 
-Exchange-servern tillhandahåller det API och den infrastruktur som krävs för att flytta enheter till deras karantän.
+Exchange-servern tillhandahåller det API och den infrastruktur som krävs för att flytta enheter till karantänen.
 
 > [!IMPORTANT]
 > Tänk på att en efterlevnadsprofil måste tilldelas enhetsanvändaren för att enhetens efterlevnad ska kunna utvärderas. Om ingen efterlevnadsprincip har distribuerats till användaren behandlas enheten som kompatibel och inga åtkomstbegränsningar tillämpas.
@@ -136,7 +138,7 @@ Villkorlig åtkomst för datorer har ungefär samma funktioner som för mobila e
 
 -   **Domänansluten Azure AD och Intune-hantering:** Det här scenariot är vanligtvis avsett för CYOD (Choose Your Own Device) och roaming-scenarier för bärbara datorer, där dessa enheter sällan är anslutna till företagets nätverk. Enheten ansluter till Azure AD och registreras i Intune, vilket tar bort alla beroenden på AD lokalt och på domänkontrollanter. Detta kan användas som villkor för villkorlig åtkomst vid anslutning till företagets resurser.
 
--   **Domänansluten AD och System Center Configuration Manager:** Från och med den aktuella grenen tillhandahåller System Center Configuration Manager funktioner för villkorlig åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
+-   **Domänansluten AD och System Center Configuration Manager:** Från och med den aktuella grenen tillhandahåller System Center Configuration Manager funktioner för villkorsstyrd åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
 
     -   Har datorn krypterats?
 

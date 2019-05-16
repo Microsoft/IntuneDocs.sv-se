@@ -1,15 +1,16 @@
 ---
 title: Lägg till konfigurationsprinciper för hanterade Android-enheter
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android-arbetsprofilapp.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/26/2018
-ms.topic: article
+ms.date: 02/21/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 512fc924f71ba9a9fdd46ba8f5f5c087de83c2dd
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: dccbfe597fa4bd461bb71cb86d38ffdfd52d719a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840424"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567432"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -44,13 +45,13 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 6. Välj **Android** för **Plattform**.
 7. Välj **Tillhörande app** för att välja den app som du vill definiera en appkonfigurationsprincip för. Välj i listan med Android-arbetsprofilappar som du har godkänt och synkroniserat med Intune.
 8. Välj **Behörigheter**. Du kan ange konfigurationer med:
-    - [Configuration Designer](#Use-the-configuration-designer)
-    - [JSON-redigerare](#Enter-the-JSON-editor)
+    - [Configuration Designer](#use-the-configuration-designer)
+    - [JSON-redigerare](#enter-the-json-editor)
 9. Välj **OK** och sedan **Lägg till**.
 
 ## <a name="use-the-configuration-designer"></a>Använd Configuration Designer
 
-Du kan använda Configuration Designer för Android-appar som stöder konfiguration. Konfigurationen tillämpas på enheter som är registrerade i Intune. Med designern kan du konfigurera specifika konfigurationsvärden för de inställningar som en app har tillgängliga.
+Du kan använda Configuration Designer för Android-appar när appen har utformats att ge stöd för konfigurationsinställningar. Konfigurationen tillämpas på enheter som är registrerade i Intune. Med designern kan du konfigurera specifika konfigurationsvärden för de inställningar som en app har tillgängliga.
 
 Välj **Lägg till** för att välja listan med konfigurationsinställningar som du vill ange för appen.  
 För varje nyckel och värde i konfigurationen anger du:

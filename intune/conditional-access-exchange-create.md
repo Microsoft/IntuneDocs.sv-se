@@ -1,27 +1,28 @@
 ---
-title: Skapa en Exchange-princip för villkorlig åtkomst | Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Skapa en Exchange-princip för villkorlig åtkomst
+titleSuffix: Microsoft Intune
 description: Konfigurera villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 04/15/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b4f35dba38dd1b69f770a3a10689ce87eaf3a27
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 003e6e5aa78440861e6aff5be138c4a302171c1b
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840407"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571747"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
 
@@ -79,52 +80,54 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 1. Gå till [Azure Portal](https://portal.azure.com/) och logga in med dina Intune-autentiseringsuppgifter.
 
-1. När du har loggat in visas **Azure-instrumentpanelen**.
+2. Gå till **Intune** > **Exchange-åtkomst** och välj sedan **Åtkomst till Exchange lokalt**. 
 
-1. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
+3. I fönstret **Åtkomst till Exchange lokalt** väljer du **Ja** för att *	Aktivera åtkomstkontroll för Exchange lokalt*.
 
-1. Välj **Intune**. **Intune-instrumentpanelen** visas.
+4. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 
-1. Välj **Lokal åtkomst**. Fönstret **Lokal åtkomst** visar status för den villkorliga åtkomstprincipen och de enheter som påverkas av den.
+5. Välj **Intune**. **Intune-instrumentpanelen** visas.
 
-1. Under **Hantera**, väljer du **Åtkomst till Exchange On-Premises**.
+6. Välj **Lokal åtkomst**. Fönstret **Lokal åtkomst** visar status för den villkorliga åtkomstprincipen och de enheter som påverkas av den.
 
-1. I fönstret **Exchange on-premises access** (Åtkomst till Exchange lokalt) väljer du **Ja** för att aktivera åtkomstkontroll för Exchange lokalt.
+7. Under **Hantera**, väljer du **Åtkomst till Exchange On-Premises**.
+
+8. I fönstret **Exchange on-premises access** (Åtkomst till Exchange lokalt) väljer du **Ja** för att aktivera åtkomstkontroll för Exchange lokalt.
 
     > [!NOTE]
     > Det här alternativet inaktiveras om du inte har konfigurerat någon lokal anslutningsapp för Exchange Active Sync.  Du måste först installera och konfigurera minst en sådan här anslutning innan du aktiverar villkorlig åtkomst för Exchange On-Premises. Du hittar mer information i [Installera Intune On-premises Exchange Connector](exchange-connector-install.md)
 
-1. Under **Tilldelning**, väljer du **Inkluderade grupper**.  Använd den säkerhetsgrupp för användare där villkorlig åtkomst ska tillämpas. Den här åtgärden innebär att användarna måste registrera sina enheter i Intune och följa kompatibilitetsprofilerna.
+9. Under **Tilldelning**, väljer du **Inkluderade grupper**.  Använd den säkerhetsgrupp för användare där villkorlig åtkomst ska tillämpas. Den här åtgärden innebär att användarna måste registrera sina enheter i Intune och följa kompatibilitetsprofilerna.
 
-1. Om du vill exkludera en viss grupp av användare kan du göra detta genom att välja **Undantagna grupper** och välja en grupp som du vill ska vara undantagen från registrering av enheter och efterlevnad.
+10. Om du vill exkludera en viss grupp av användare kan du göra detta genom att välja **Undantagna grupper** och välja en grupp som du vill ska vara undantagen från registrering av enheter och efterlevnad.
 
-1. Under **Inställningar**, väljer du **Användarmeddelanden** för att ändra standard-e-postmeddelandet. Det här meddelandet skickas till användarna om deras enhet inte är kompatibel och de vill få åtkomst till Exchange On-Premises. Meddelandemallen använder Markup Language.  Du kan även se en förhandsgranskning av hur meddelandet blir medan du skriver.
+11. Under **Inställningar**, väljer du **Användarmeddelanden** för att ändra standard-e-postmeddelandet. Det här meddelandet skickas till användarna om deras enhet inte är kompatibel och de vill få åtkomst till Exchange On-Premises. Meddelandemallen använder Markup Language.  Du kan även se en förhandsgranskning av hur meddelandet blir medan du skriver.
     > [!TIP]
     > Läs mer om Markup Language i den här [artikeln](https://en.wikipedia.org/wiki/Markup_language) på Wikipedia.
 
-1. I fönstret med **avancerade åtkomstinställningar för Exchange Active Sync** anger du den globala standardregeln för åtkomst från enheter som inte hanteras av Intune, samt för regler på plattformsnivå som beskrivs i de kommande två stegen.
+12. I fönstret med **avancerade åtkomstinställningar för Exchange Active Sync** anger du den globala standardregeln för åtkomst från enheter som inte hanteras av Intune, samt för regler på plattformsnivå som beskrivs i de kommande två stegen. Om du vill gå till fönstret Avancerade inställningar använder du vyn *Exchange-åtkomst – Åtkomst till Exchange lokalt* och väljer *Exchange ActiveSync On-Premises Connector*.
 
-1. För en enhet som inte påverkas av villkorlig åtkomst eller andra regler kan du välja att få åtkomst till Exchange eller blockera den.
+13. För en enhet som inte påverkas av villkorlig åtkomst eller andra regler kan du välja att få åtkomst till Exchange eller blockera den.
 
    - När du ställer in det här alternativet för att tillåta åtkomst kommer alla enheter att få åtkomst till Exchange lokalt omedelbart.  Enheter som tillhör användare i **Inkluderade grupper**, blockeras om de senare utvärderas till att inte vara kompatibla med efterlevnadsprinciperna eller inte har registrerats i Intune.
    - När du ställer in det här alternativet för att blockera åtkomst kommer alla enheter omedelbart att blockeras från att komma åt Exchange lokalt till att börja med.  Enheter som tillhör användare i **Grupper som omfattas** får åtkomst när enheten har registrerats i Intune och utvärderats som kompatibel. Android-enheter som inte kör Samsung Knox Standard blockeras alltid eftersom de inte stöder den här inställningen.
 
-1. Under **Undantag för plattformsenhet**, väljer du **Lägg till** för att ange plattformarna. Om inställningen **Åtkomst för ohanterad enhet** är angiven till **Blockerad** kommer enheter som är registrerade och kompatibla att tillåtas, även om det finns ett plattformsundantag som ska blockeras. Välj **OK** för att spara inställningarna.
+14. Under **Undantag för plattformsenhet**, väljer du **Lägg till** för att ange plattformarna. Om inställningen **Åtkomst för ohanterad enhet** är angiven till **Blockerad** kommer enheter som är registrerade och kompatibla att tillåtas, även om det finns ett plattformsundantag som ska blockeras. Välj **OK** för att spara inställningarna.
 
-1. I fönstret **Lokalt** klickar du på **Spara** för att spara den villkorliga åtkomstprincipen.
+15. I fönstret **Lokalt** klickar du på **Spara** för att spara den villkorliga åtkomstprincipen.
 
 ## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Skapa principer för villkorlig åtkomst för Azure AD i Intune
 
-Från och med version 1704 av Intune kan administratörer skapa villkorliga åtkomstprinciper för Azure AD från Intune Azure-portalen, så du behöver inte växla mellan Azure- och Intune-arbetsbelastningarna.
+Villkorsstyrd åtkomst är en Azure Active Directory-teknik (Azure AD). Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
 
 > [!IMPORTANT]
 > Du måste ha en Azure AD Premium-licens för att kunna skapa Azure AD-principer för villkorlig åtkomst från Intune Azure Portal.
 
-### <a name="to-create-azure-ad-conditional-access-policy"></a>Skapa en princip för villkorlig åtkomst för Azure AD
+### <a name="to-create-a-conditional-access-policy"></a>Skapa en princip för villkorsstyrd åtkomst
 
-1. Välj **villkorlig åtkomst** på **Intune-instrumentpanelen**.
+1. Välj **Villkorsstyrd åtkomst** på **Intune-instrumentpanelen**.
 
-2. I fönstret **Principer** väljer du **Ny princip** om du vill skapa en ny Azure AD-princip för villkorlig åtkomst.
+2. I fönstret **Principer** väljer du **Ny princip** för att skapa en ny Azure AD-princip för villkorsstyrd åtkomst.
 
 ## <a name="see-also"></a>Se även
 

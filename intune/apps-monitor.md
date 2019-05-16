@@ -1,27 +1,29 @@
 ---
 title: Övervaka appinformation och tilldelningar
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: När du har tilldelat en app till användare eller enheter kan du använda den här informationen för att övervaka appens status.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
-ms.topic: article
+ms.date: 03/26/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bff4e2b3afe684fe12243fa0f410728eb16eeaba
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2b3cba546be350f47c1a57f47b8eddf85323dc74
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325185"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567237"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Övervaka appinformation och tilldelningar med Microsoft Intune
 
@@ -49,7 +51,7 @@ Avsnittet **Essentials** innehåller följande information om appen:
 |------------------------|------------------------------------------------------------------|
 | **Utgivare**          | Appens utgivare.                                            |
 | **Operativsystem**   | Appens operativsystem (Windows, iOS, Android, o.s.v.). |
-| **Skapad**             | Datum och tid då versionen skapades.                         |
+| **Skapad**             | Datum och tid då versionen skapades. <b>**Obs**! Datumvärdet uppdateras när en IT-administratör ändrar appens metadata, till exempel appkategori eller appbeskrivning.                        |
 | **Tilldelade**           | Om appen har tilldelats (**Ja** eller **Nej**).                  |
 
 ### <a name="device-and-user-status-graphs"></a>Diagram för enhetens och användarens status
@@ -80,7 +82,7 @@ En statuslista för enheten visas när du väljer **Installationsstatus för enh
 | **Enhetsnamn**      | Namnet på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgänglig för några andra enheter.                                                                       |
 | **Användarnamn**        | Användarens namn.                                                                                                                                                                                                                                      |
 | **Plattform**         | Enhetens operativsystem (Windows, iOS, Android, o.s.v.).                                                                                                                                                                                           |
-| **Version**          | Appens versionsnummer. För verksamhetsspecifika appar visas det fullständiga versionsnumret. Det fullständiga versionsnumret identifierar en specifik version av appen. Numret visas som _Version_(_Build_). Exempelvis 2.2(2.2.17560800). |
+| **Version**          | Appens versionsnummer. För verksamhetsspecifika appar (LOB) visas appens fullständiga versionsnummer. Det fullständiga versionsnumret identifierar en specifik version av appen. Numret visas som _Version_(_Build_). Exempelvis 2.2(2.2.17560800). Inga versioner visas för Store-appar. |
 | **Status**           | Appens status.                                                                                                                                                                                                                                     |
 | **Statusinformation**   | Information om statusen.                                                                                                                                                                                                                                     |
 | **Senaste incheckning**    | Datumet för den senaste enhetssynkroniseringen med Intune.                                                                                                                                                                                                                  |

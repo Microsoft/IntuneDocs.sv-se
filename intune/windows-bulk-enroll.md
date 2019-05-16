@@ -1,6 +1,6 @@
 ---
 title: Massregistrering för Windows 10
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Skapa ett massregistreringspaket för Microsoft Intune
 keywords: ''
 author: ErikjeMS
@@ -10,18 +10,19 @@ ms.date: 5/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7df624f0a3db11b058498c650a9f9c3dd95e8d12
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236814"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568173"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -29,7 +30,7 @@ ms.locfileid: "57236814"
 
 Som administratör kan du ansluta ett stort antal nya Windows-enheter till Azure Active Directory och Intune. Du massregistrerar enheter för Azure AD-klienten genom att skapa ett konfigurationspaket med hjälp av appen Windows Configuration Designer (WCD). När du tillämpar konfigurationspaketet på företagsägda enheter ansluts de till Azure AD-klienten och registreras för Intune-hantering. När paketet har tillämpats kan dina Azure AD-användare logga in.
 
-Azure AD-användare är standardanvändare på enheterna och kan ta emot de tilldelade Intune-principer och appar som krävs. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
+Azure AD-användare är standardanvändare på enheterna och kan ta emot de tilldelade Intune-principer och appar som krävs. Windows-enheter som registreras i Intune med hjälp av massregistrering kan använda företagsportalappen för att installera tillgängliga appar. 
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Krav för massregistrering av Windows-enheter
 

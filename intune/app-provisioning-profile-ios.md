@@ -1,15 +1,16 @@
 ---
 title: Etableringsprofiler för iOS-appar i Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Intune innehåller verktyg som proaktivt tilldelar en ny etableringsprofil till enheter som har appar som snart upphör att gälla.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f02e4416f68fef7531f6d6ffa617273904b752c
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 888c136934deca80877d75879e270807af194a1e
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569564"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofilerna för iOS-appar för att förhindra att dina appar upphör att gälla
 
@@ -51,7 +52,7 @@ Som administratör kan du inkludera och undanta säkerhetsgrupper när du tillde
 3. Ange följande värden i fönstret **Skapa profil**:
     - **Namn** – Ange ett namn för den här etableringsprofilen.
     - **Beskrivning** – Om du vill kan du ange en beskrivning av principen.
-    - **Ladda upp profilfil** – Välj **Importera** och välj sedan en Apple Mobile-konfigurationsprofilfil (med tillägget `.mobileprovision`) som du laddat ned från webbplatsen Apple Developer.
+    - **Ladda upp profilfil** – Välj ikonen **Öppna** och välj sedan en konfigurationsprofilfil för Apple Mobile (med tillägget `.mobileprovision`) som du laddar ned från [webbplatsen för Apple Developer](https://developer.apple.com/).
 4. När du är klar väljer du **Skapa**.
 
 ## <a name="next-steps"></a>Nästa steg

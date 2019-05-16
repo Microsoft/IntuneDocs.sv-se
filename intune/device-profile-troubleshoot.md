@@ -1,14 +1,15 @@
 ---
 title: Felsöka enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs
-description: Vanliga problem med enhetsprofiler i Microsoft Intune i Azure Portal, till exempel angående profiländringar som inte tillämpas för vissa användare eller enheter, hur lång tid det tar för en ny princip att överföras till enheter, vilka inställningar som tillämpas när det finns flera principer och vad som händer när en profil tas bort eller flyttas
+description: Vanliga frågor och svar om enhetsprinciper och profiler, till exempel profiländringar som inte tillämpas på användare eller enheter, hur lång tid det tar för en ny princip att överföras till enheter, vilka inställningar som tillämpas när det finns flera principer och vad som händer när en profil tas bort eller flyttas med Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 1/10/2019
-ms.topic: article
+ms.date: 02/28/2019
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: heenamac
@@ -16,27 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 528e26ddca1b3327fb0afa2f5cff6f2dbdca1660
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 12ac2b93126f271bf4918c6a914dedc7a22c1010
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461013"
 ---
-# <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Vanliga problem och lösningar med enhetsprofiler i Microsoft Intune
+# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Felsök vanliga problem med enhetsprofiler i Intune.
+Få svar på vanliga frågor när du arbetar med enhetsprofiler och principer i Intune. I denna artikel visas också listor med incheckningsintervall, mer information om konflikter och mycket mer.
 
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Varför får inte en användare en ny profil vid ändring av lösenord eller lösenfras i en befintlig Wi-Fi-profil? 
+## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Varför får inte en användare en ny profil vid ändring av lösenord eller lösenfras i en befintlig Wi-Fi-profil?
+
 Anta att du skapar en Wi-Fi-profil för ett företag, distribuerar profilen till en grupp, ändrar lösenordet och sparar profilen. När profilen ändras får vissa användare inte den nya profilen.
 
 Du kan undvika det här problemet genom att ställa in gäst-Wi-Fi. Om inte företagets Wi-Fi fungerar kan användarna ansluta till gäst-Wi-Fi. Se till att du aktiverar inställningarna för automatisk anslutning. Distribuera gäst-Wi-Fi-profilen till alla användare.
 
 Ytterligare rekommendationer:  
 
-- Eftersom Wi-Fi-nätverket du ansluter till använder ett lösenord eller en lösenfras ser du till att du kan ansluta direkt till Wi-Fi-routern. Du kan testa med en iOS-enhet.
+- Om Wi-Fi-nätverket som du ansluter till använder ett lösenord eller en lösenfras, ser du till att du kan ansluta direkt till Wi-Fi-routern. Du kan testa med en iOS-enhet.
 - När du har lyckats ansluta till Wi-Fi-slutpunkten (Wi-Fi-routern) noterar du SSID och autentiseringsuppgifter som används (det här värdet är lösenordet eller lösenfrasen).
 - Ange SSID och autentiseringsuppgifter (lösenord eller lösenfras) i fältet I förväg delad nyckel. 
 - Distribuera till en testgrupp som har ett begränsat antal användare, gärna endast till IT-avdelningen. 
@@ -45,54 +47,67 @@ Ytterligare rekommendationer:
 - Distribuera till större grupper och till slut till alla förväntade användare i organisationen. 
 
 ## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned"></a>Hur lång tid tar det innan principerna eller apparna når mobilenheterna efter att de har tilldelats?
+
 När en princip eller en app tilldelas börjar Intune genast att uppmana enheten att kontakta Intune-tjänsten. Denna avisering brukar ta mindre än fem minuter.
 
-Om enheten inte kontaktar tjänsten för att be om principen när den första aviseringen har skickats, görs ytterligare tre försök. Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjänsten enligt följande:
+Om enheten inte checkar in för att hämta principen efter den första aviseringen, gör Intune ytterligare tre försök. Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen vid nästa schemalagda incheckning på Intune-tjänsten, enligt följande:
 
-- iOS och macOS: var 6:e timme
-- Android: var 8:e timme
-- Windows Phone: var 8:e timme
-- Windows 8.1- och Windows 10-datorer som har registrerats som enheter: var 8:e timme
+| Plattform | Uppdateringscykel|
+| --- | --- |
+| iOS | Var 6:e timme |
+| macOS | Var 6:e timme |
+| Android | Var 8:e timme |
+| Windows 10-datorer som registrerats som enheter | Var 8:e timme |
+| Windows Phone | Var 8:e timme |
+| Windows 8,1 | Var 8:e timme |
 
-Om enheten nyligen har registrerats sker kontrollerna oftare enligt följande:
+Om enheten nyligen har registrerats körs incheckningarna oftare:
 
-- iOS och macOS: var 15:e minut i sex timmar och därefter var 6:e timme
-- Android: var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme
-- Windows Phone: var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme
-- Windows-datorer som registrerats som enheter: var 3:e minut i 30 minuter och sedan var 8:e timme
+| Plattform | Frekvens |
+| --- | --- |
+| iOS | Var 15:e minut i 6 timmar och därefter var 6:e timme |  
+| Mac OS X | Var 15:e minut i 6 timmar och därefter var 6:e timme | 
+| Android | Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme | 
+| Windows Phone | Var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme | 
+| Windows-datorer som registrerats som enheter | Var 3:e minut i 30 minuter och därefter var 8:e timme | 
 
-Användarna kan också söka efter principer när som helst genom att öppna företagsportalappen och synkronisera enheten.
+Användarna kan när de vill öppna företagsportalappen och synkronisera enheten för att söka efter profiluppdateringar.
 
-För enheter utan användartillhörighet kan synkroniseringsfrekvensen omedelbart efter registreringen variera mellan några timmar till en dag eller mer. Intune skickar begäranden med olika intervall för att en enhet ska checka in hos tjänsten. Det är dock fortfarande enheten som måste göra det. Det går inte att förutse hur lång tid det tar för en enhet att slutföra incheckningen efter den första registreringen. Tiden beror på vilken typ av enhetsregistrering och vilka principer och profiler som har tilldelats till en enhet. När enheten väl har registrerats och alla inledande principer tillämpas kontrollerar enheten normalt om det finns nya principer ungefär var sjätte timme.
+För enheter utan användartillhörighet kan synkroniseringsfrekvensen omedelbart efter registreringen variera mellan några timmar till en dag eller mer. Intune skickar begäranden med olika intervall för att en enhet ska kunna checka in på Intune. Det är dock fortfarande enheten som måste checka in. Efter den första registreringen är det svårt att veta hur lång tid det tar att slutföra incheckningen. Det beror också på typen av enhetsregistrering och de principer och profiler som har tilldelats till en enhet. När enheten har registrerats och alla inledande principer har tillämpats, kontrollerar enheten normalt om det finns nya principer ungefär var 6–8:e timme.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Vilka åtgärder gör att Intune genast skickar en avisering till en enhet?
-Enheter kontaktar Intune när de får en avisering eller enligt schemalagda intervall. När du riktar en åtgärd mot en enhet eller användare, t.ex. en rensning, låsning, återställning av lösenord, apptilldelning, profiltilldelning eller principtilldelning, meddelar Intune genast enheten att den ska kontakta Intune-tjänsten för att få dessa uppdateringar.
+
+Enheter checkar in på Intune när de får en avisering eller enligt schemalagda intervall. När du riktar en åtgärd mot en enhet eller användare, t.ex. en låsning, återställning av lösenord, apptilldelning, profil- eller principtilldelning, meddelar Intune genast enheten att den ska checka in för att få dessa uppdateringar.
 
 Andra ändringar, t.ex. en uppdatering av kontaktinformationen på företagsportalen, utlöser inte en omedelbar avisering till enheter.
 
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Hur vet jag vilka inställningar som tillämpas om flera principer tilldelas samma användare eller enhet?
-Om två eller flera principer tilldelas till samma användare eller enhet avgörs vilka inställningar som ska tillämpas på inställningsnivå:
 
-- Inställningar för efterlevnadsprinciper har alltid högre prioritet än inställningar för konfigurationsprinciper.
+När två eller fler principer tilldelas samma användare eller enhet, tillämpas den inställning som angivits på enskild inställningsnivå:
 
-- Om en efterlevnadsprincip utvärderas mot samma inställning i en annan efterlevnadsprincip gäller den mest restriktiva efterlevnadsprincipen.
+- Inställningar för efterlevnadsprinciper har alltid högre prioritet än inställningar för konfigurationsprofiler.
 
-- Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Azure Portal. I så fall löses dessa konflikter manuellt.
+- Om en efterlevnadsprincip utvärderas mot samma inställning i en annan efterlevnadsprincip, tillämpas den mest restriktiva efterlevnadsprincipen.
+
+- Om en inställning av en konfigurationsprincip hamnar i konflikt med en inställning i en annan konfigurationsprincip, visas konflikten i Intune. Lös dessa konflikter manuellt.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Vad händer när appskyddsprinciper står i konflikt med varandra? Vilken används för appen?
-Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en appskyddsprincip, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning). Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.
 
-Konflikter uppstår om två profilinställningar är samma. Anta att du har konfigurerat två MAM-principer som är identiska förutom inställningen för kopiera/klistra in. I detta scenario används det mest restriktiva värdet för kopierings- och inklistringsinställningen, men resten av inställningarna tillämpas så som de konfigurerats.
+Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en appskyddsprincip, *förutom* fälten för nummerinmatning (t.ex. antal PIN-försök före återställning). Nummerinmatningsfälten ställs in på samma sätt som när du skapar en MAM-princip med alternativet för rekommenderade inställningar.
 
-Om en profil tilldelas appen och börjar tillämpas, och en andra profil tilldelas senare, har den första profilen företräde och fortsätter att tillämpas, medan den andra visas som i konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående profil, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
+Konflikter uppstår om två profilinställningar är likadana. Anta att du har konfigurerat två MAM-principer som är identiska förutom inställningen för kopiera/klistra in. I detta scenario används det mest restriktiva värdet för kopierings- och inklistringsinställningen, men resten av inställningarna tillämpas så som de konfigurerats.
+
+En princip distribueras till appen och börjar gälla. En andra princip distribueras. I det här scenariot får den första principen företräde och fortsätter att tillämpas. Den andra principen visar en konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående princip, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
 
 ## <a name="what-happens-when-ios-custom-policies-conflict"></a>Vad händer om anpassade iOS-principer är i konflikt med varandra?
-Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-profiler (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
 
-När du tilldelar en anpassad profil bör du se till att de konfigurerade inställningarna inte är i konflikt med efterlevnadsprinciper, konfigurationsprinciper eller andra anpassade principer. Om en anpassad profil och dess inställningar står i konflikt tillämpas inställningarna slumpmässigt.
+Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-principer (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
+
+När du tilldelar en anpassad princip bör du kontrollera att de konfigurerade inställningarna inte är i konflikt med efterlevnadsprinciper, konfigurationsprinciper eller andra anpassade principer. Om en anpassad princip och dess inställningar står i konflikt, tillämpas inställningarna slumpmässigt.
 
 ## <a name="what-happens-when-a-profile-is-deleted-or-no-longer-applicable"></a>Vad händer när en profil tas bort eller inte längre är tillämplig?
-När du tar bort en profil, eller när du tar bort en enhet från en grupp som har den profilen, tas profilen och inställningarna bort från enheten enligt följande listor:
+
+När du tar bort en profil, eller när du tar bort en enhet från en grupp som har den profilen, tas profilen och inställningarna bort från enheten enligt följande beskrivning:
 
 - Wi-Fi, VPN, certifikat och e-postprofiler: Dessa profiler tas bort från alla registrerade enheter som stöds.
 - Alla andra profiltyper:  
@@ -133,13 +148,15 @@ När du tar bort en profil, eller när du tar bort en enhet från en grupp som h
     - Tillåt automatisk synkronisering vid roaming
 
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Jag ändrade en enhets begränsningsprofil, men ändringarna har inte börjar gälla
-Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva profilen har redan tillämpats för enheten.
 
-Om du vill ändra profilen till ett mindre säkert värde återställer du säkerhetsprinciperna. I Windows 8.1. sveper du till exempel från höger på skrivbordet och väljer **Inställningar** > **Kontrollpanelen**. Välj appleten **Användarkonton** . Längst ned på den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper**. Markera den och välj sedan **Återställ principer**.
+När Windows Phone-enheter är konfigurerade tillåts inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS. Du ställer exempelvis in **Minsta antalet tecken för lösenord** till 8. Därefter försöker du minska det till 4. Den mer restriktiva profilen har redan tillämpats för enheten.
 
-Andra MDM-enheter, som Android, Windows Phone 8.1 och senare, iOS och Windows 10, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande profil.
+Om du vill ändra profilen till ett mindre säkert värde återställer du säkerhetsprinciperna. I Windows 8.1. sveper du till exempel från höger på skrivbordet och väljer **Inställningar** > **Kontrollpanelen**. Välj appleten **Användarkonton** . Längst ned i den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper**. Markera den och välj sedan **Återställ principer**.
+
+Andra MDM-enheter, som Android, Windows Phone 8.1 och senare, iOS och Windows 10, kan behöva dras tillbaka och sedan registreras på nytt i Intune för att du ska kunna tillämpa en mindre begränsande profil.
 
 ## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Vissa inställningar i en Windows 10-profil returnerar ”ej tillämpligt”
+
 Vissa inställningar på Windows 10-enheter kan visas som ”ej tillämpligt”. När det sker stöds inte just den inställningen på den versionen eller utgåvan av Windows som körs på enheten. Meddelandet kan visas av följande orsaker:
 
 - Inställningen är bara tillgänglig för nyare versioner av Windows och inte den aktuella versionen av operativsystem (OS) på enheten.
@@ -148,4 +165,5 @@ Vissa inställningar på Windows 10-enheter kan visas som ”ej tillämpligt”.
 Mer information om versions- och SKU-krav för olika inställningar finns i [referensartikeln för konfigurationsprovider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="next-steps"></a>Nästa steg
+
 Behöver du mer hjälp? Se [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).

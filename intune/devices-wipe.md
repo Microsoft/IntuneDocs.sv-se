@@ -5,28 +5,29 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: ''
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e24043bb1c41d68de04669ff27cc659624dc56c1
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 896008594e17c3773831edede263c8c47cde3c48
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59570552"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter från Intune som inte längre behövs, har omkonfigurerats eller saknas. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
+Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter från Intune som inte längre behövs, har omkonfigurerats eller saknas. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till enheter som har registrerats i Intune.
 
 > [!NOTE]
 > Innan du tar bort en användare från Azure Active Directory (Azure AD) kan du använda åtgärderna **Rensa** eller **Dra tillbaka** för alla enheter som är kopplade till den användaren. Om du tar bort användare som har hanterade enheter från Azure AD kan inte Intune längre rensa eller dra tillbaka dessa enheter.
@@ -82,7 +83,7 @@ Följande tabeller beskriver vilka data som tas bort och hur åtgärden **Dra ti
 
 |Datatyp|iOS|
 |-------------|-------|
-|Företagsappar och associerade data som installerats av Intune|**Appar som installerats med hjälp av Företagsportalen:** För appar som är fästa på hanteringsprofilen tas alla appdata och apparna bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** För appar som inte hanteras med hjälp av Företagsportalen kommer data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring att tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort. Personliga appdata och appar tas inte bort.|
+|Företagsappar och associerade data som installerats av Intune|**Appar som installerats med hjälp av Företagsportalen:** För appar som är fästa på hanteringsprofilen tas alla appdata och appar bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** För appar som inte hanteras med hjälp av Företagsportalen kommer data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring att tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort. Personliga appdata och appar tas inte bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|
@@ -130,7 +131,7 @@ Du kan endast rensa kioskenheter. Du kan inte dra tillbaka Android-kioskenheter.
 
 |Datatyp|Windows 8.1 (MDM) och Windows RT 8.1|Windows RT|Windows Phone 8.1 och Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Företagsappar och associerade data som installerats av Intune|Nycklar återkallas för filer som skyddas av EFS. Användaren kan inte öppna filerna.|Företagsappar tas inte bort.|Appar som ursrpungligen installerats via företagsportalen avinstalleras. Data som hör till företagsappar tas bort.|Apparna avinstalleras. Nycklar för separat inläsning tas bort.<br>För Windows 10 version 1703 (Creator Update) och senare tas inte Office 365 ProPlus-appar bort.|
+|Företagsappar och associerade data som installerats av Intune|Nycklar återkallas för filer som skyddas av EFS. Användaren kan inte öppna filerna.|Företagsappar tas inte bort.|Appar som ursrpungligen installerats via företagsportalen avinstalleras. Data som hör till företagsappar tas bort.|Apparna avinstalleras. Nycklar för separat inläsning tas bort.<br>För Windows 10 version 1703 (Creator Update) och senare tas inte Office 365 ProPlus-appar bort. Win32-appar som installerats via Intune-hanteringstillägget avinstalleras inte på oregistrerade enheter. Administratörer kan använda tilldelningsundantag för att inte erbjuda Win32-appar till BYOD-enheter.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|Tas bort.|Stöds inte.|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|Certifikat tas bort och återkallas.|Stöds inte.|Certifikat tas bort och återkallas.|
@@ -166,7 +167,7 @@ Du kan konfigurera Intune så att enheter som är inaktiva, inaktuella eller som
 
 Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta bort enheter från Azure AD. Du kan använda åtgärden **Ta bort** för att ta bort enhetsposter från Azure-portalen för enheter som du vet inte går att nå och som sannolikt inte kommer att kommunicera med Azure igen. Åtgärden **Ta bort** tar inte bort en enhet från hanteringen.
 
-1.  Logga in på [Azure Active Directory i Azure-portalen](http://aka.ms/accessaad) med dina autentiseringsuppgifter som administratör. Du kan också logga in på [Office 365-portalen](https://portal.office.com). På menyn väljer du **Administrationscenter** > **Azure AD**.
+1.  Logga in på [Azure Active Directory i Azure-portalen](http://aka.ms/accessaad) med dina autentiseringsuppgifter som administratör. Du kan också logga in på [Administrationscenter för Microsoft 365](https://admin.microsoft.com). På menyn väljer du **Administrationscenter** > **Azure AD**.
 2.  Skapa en Azure-prenumeration om du inte redan har en. Detta får inte kräva kreditkort eller betalning om du har ett betalt konto (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory**).
 3.  Välj **Azure Active Directory** och välj sedan din organisation.
 4.  Välj fliken **Användare** .

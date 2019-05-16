@@ -1,35 +1,36 @@
 ---
-title: Hantera appar från Microsoft Store för företag
-titlesuffix: Microsoft Intune
-description: Lär dig hur du kan synkronisera appar i Intune från Microsoft Store för företag och sedan tilldela och spåra dessa appar.
+title: Hantera volymköpta eller kostnadsfria appar från Microsoft Store för företag
+titleSuffix: Microsoft Intune
+description: Lär dig att synkronisera köpta (eller kostnadsfria) appar i Intune från Microsoft Store för företag.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75e6cdd97bbc591a76e541874152455c4fe258c0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 67d99977776657219638980eb6de8a4079384185
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234944"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587509"
 ---
-# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du appar som du har köpt från Microsoft Store för företag med Microsoft Intune
+# <a name="how-to-manage-volume-purchased-or-free-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du volymköpta (eller kostnadsfria) appar från Microsoft Store för företag med Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program från Azure-portalen. Exempel:
-* Du kan synkronisera listan över appar som du har köpt från Windows Store med Intune.
+* Du kan synkronisera listan med appar som du har köpt (eller som är kostnadsfria) från butiken med Intune.
 * Appar som är synkroniserade visas i administrationskonsolen för Intune. Du kan tilldela de här apparna på samma sätt som andra appar.
 * Du kan spåra hur många licenser som är tillgängliga och hur många som används i administrationskonsolen för Intune.
 * Intune blockerar tilldelning och installation av appar om det inte finns tillräckligt många tillgängliga licenser.
@@ -80,7 +81,7 @@ Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 
 ## <a name="assign-apps"></a>Tilldela appar
 
-Du kan tilldela appar från Windows Store på samma sätt som du tilldelar andra Intune-appar. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md). I stället för att tilldela appar från sidan **Alla appar** kan du tilldela dem från sidan **Licensierade appar**.
+Du kan tilldela appar från Windows Store på samma sätt som du tilldelar andra Intune-appar. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md). 
 
 Offlineappar kan riktas till användargrupper, enhetsgrupper eller grupper med användare och enheter.
 Offlineappar kan installeras för en viss användare av en enhet eller för alla användare av en enhet. 

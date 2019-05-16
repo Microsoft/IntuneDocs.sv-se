@@ -7,9 +7,10 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/04/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60364d01f4ba4ca83ff91226f7738ec095e9152e
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 19f0fbf401fee4bad660e946bb135544a29de310
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849258"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566513"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -102,8 +103,13 @@ I Intune på Azure-portalen anger du ditt Apple-ID för framtida bruk.
 
 ![Skärmbild av någon som anger det Apple-ID som användes för att skapa registreringsprogramtoken och bläddrat till denna token.](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Steg 4. Överför din token.
-I rutan **Apple-token**, bläddrar du till certifikatfilen (.pem), väljer **Öppna** och väljer sedan **Skapa**. Med pushcertifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter. Intune synkroniseras automatiskt med Apple och visar ditt registreringsprogramkonto.
+### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Steg 4. Ladda upp din token och välj omfångstaggar.
+
+1. I rutan **Apple-token** bläddrar du till certifikatfilen (.pem) och väljer **Öppna**.
+2. Om du vill tillämpa [omfångstaggar](scope-tags.md) på denna DEP-token, väljer du **Omfång (taggar)** och de omfångstaggar som du vill använda. Omfångstaggar som tillämpas på en token ärvs av profiler och enheter som läggs till i den.
+3. Välj **Skapa**.
+
+Med pushcertifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter. Intune synkroniseras automatiskt med Apple och visar ditt registreringsprogramkonto.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
 
@@ -145,6 +151,8 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
 7. Om du väljer en token för **Installera Företagsportalen med VPP** kan du välja att låsa enheten i enkelt appläge (specifikt företagsportalappen) direkt efter att installationsassistenten har slutförts. Välj **Ja** för **Run Company Portal in Single App Mode until authentication** (Kör företagsportalappen i enkelt appläge till autentisering) för att ange detta alternativ. För att kunna använda enheten måste användaren först autentisera genom att logga in med företagsportalen.
     Den här funktionen fungerar bara för iOS 11.3.1 och senare.
+
+   ![Skärmbild av läget för enskilda appar.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
 8. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
 

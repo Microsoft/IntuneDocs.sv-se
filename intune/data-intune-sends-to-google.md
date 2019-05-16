@@ -7,21 +7,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/18/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a5c3bec4-18ed-11e8-accf-0ed5f89f718b
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bb205472c4407dab6ff990e33737a8bd8b24a010
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2a6d99cc83be1b20ef2839acd77cb83c9d6b247e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188661"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57393575"
 ---
 # <a name="data-intune-sends-to-google"></a>Data som Intune skickar till Google
 
@@ -36,7 +38,7 @@ I följande tabell visas de data som Microsoft Intune skickar till Google när e
 |:---:|:---:|:---:|:---:|
 | EnterpriseId | Har sitt ursprung i Google vid databindning av Gmail-kontot till Intune. | Primär identifierare som används för att kommunicera mellan Intune och Google.  Denna kommunikation innehåller inställningsprinciper, hantering av enheter och användning eller borttagning av databindning i Android för företag med Intune. | Unik identifierare, exempel på format: LC04eik8a6 |
 | Principinnehåll | Har sitt ursprung i Intune när du sparar en ny app- eller konfigurationsprincip. | Tillämpa principer på enheter. | Detta är en samling med alla konfigurerade inställningar för en program- eller konfigurationsprincip. Den kan innehålla kundinformation som anges som en del av en princip, till exempel nätverksnamn, programnamn och appspecifika inställningar. |
-| Enhetsdata | Enheter för arbetsprofilscenarier börjar med registreringen i Intune. Enheter för hanterade enhetsscenarier börjar med registreringen i Google. | Enhetsdatainformation skickas mellan Intune och Google för olika åtgärder, exempelvis att tillämpa principer, hantera enheten och allmän rapportering. | **Unik identifierare som motsvarar enhetsnamnet.** Exempel: enterprises/LC04ebru7b/devices/3592d971168f9ae4<br>**Unik identifierare som motsvarar användarnamnet.** Exempel: Enterprises/LC04ebru7b/users/116838519924207449711<br>**Enhetstillstånd.** Exempel: Aktiv, inaktiverad, etablering.<br>**Kompatibilitetstillstånd.** Exempel: Inställningen stöds inte, obligatoriska appar saknas<br>**Programvaruinformation.** Exempel: programvaruversioner och korrigeringsnivå.<br>**Nätverksinformation.** Exempel: IMEI, MEID, WifiMacAddress<br>**Enhetsinställningar.** Exempel: Information om krypteringsnivåer och om enheten tillåter okända appar.<br> Nedan visas ett exempel på ett JSON-meddelande. |
+| Enhetsdata | Enheter för arbetsprofilscenarier börjar med registreringen i Intune. Enheter för hanterade enhetsscenarier börjar med registreringen i Google. | Enhetsdatainformation skickas mellan Intune och Google för olika åtgärder, exempelvis att tillämpa principer, hantera enheten och allmän rapportering. | **Unik identifierare som motsvarar enhetsnamnet.** Exempel: enterprises/LC04ebru7b/devices/3592d971168f9ae4<br>**Unik identifierare som motsvarar användarnamnet.** Exempel: Enterprises/LC04ebru7b/users/116838519924207449711<br>**Enhetstillstånd.** Exempel: Aktiv, Inaktiverad, Etableras.<br>**Kompatibilitetstillstånd.** Exempel: Inställningen stöds inte, obligatoriska appar saknas<br>**Programvaruinformation.** Exempel: programvaruversioner och korrigeringsnivå.<br>**Nätverksinformation.** Exempel: IMEI, MEID, WifiMacAddress<br>**Enhetsinställningar.** Exempel: Information om krypteringsnivåer och om enheten tillåter okända appar.<br> Nedan visas ett exempel på ett JSON-meddelande. |
 | newPassword | Har sitt ursprung i Intune. | Återställning av enhetens lösenord. | Sträng som motsvarar nytt lösenord. |
 | Google-användare | Google | Hanterar arbetsprofilen för BYOD-scenarier (Arbetsprofil). | Unik identifierare som motsvarar det länkade Gmail-kontot. Exempel: 114223373813435875042 |
 | Programdata | Har sitt ursprung i Intune när programprincipen sparas. |  | Programmets namnsträng. Exempel: app:com.microsoft.windowsintune.companyportal |

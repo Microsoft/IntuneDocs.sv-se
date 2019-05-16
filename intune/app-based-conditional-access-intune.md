@@ -1,27 +1,29 @@
 ---
 title: Appbaserad villkorlig åtkomst med Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Läs om hur appbaserad villkorlig åtkomst fungerar med Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/11/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 30f5b902619c84e6d1d193c252e76475d2e54e82
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b4c39a1d95a10c96b8f34703f99c4d8414efbbf0
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816745"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567380"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
 
@@ -67,7 +69,7 @@ I det här exemplet har administratören tillämpat appskyddsprinciper på Outlo
 
 3. Koordinatorappen installeras på enheten.
 
-4. Koordinatorappen startar Azure AD-registreringen som skapar en enhetspost i Azure AD. Detta är inte samma som registreringen vid hantering av mobilenheter (MDM), men den här posten är nödvändig för att principerna för villkorlig åtkomst ska kunna tillämpas på enheten.
+4. Koordinatorappen startar Azure AD-registreringen, vilken skapar en enhetspost i Azure AD. Detta är inte samma som registreringen vid hantering av mobilenheter (MDM), men den här posten är nödvändig för att principerna för villkorsstyrd åtkomst ska kunna tillämpas på enheten.
 
 5. Koordinatorappen verifierar appens identitet. Det finns ett säkerhetslager för att koordinatorappen ska kunna verifiera om appen är godkänd att användas av användaren.
 

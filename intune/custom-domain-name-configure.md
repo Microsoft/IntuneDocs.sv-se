@@ -1,6 +1,6 @@
 ---
 title: Så här konfigurerar du ett eget domännamn
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Lägga till ett anpassat domännamn för din Microsoft Intune-prenumeration
 keywords: ''
 author: dougeby
@@ -10,18 +10,20 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: a4227399eb5cf1d2cc2e265215eccb2c05d73ac5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d0c3d11eb3a031f34704dcd9ecf16f3312ac818
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181504"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567250"
 ---
 # <a name="configure-a-custom-domain-name"></a>Så här konfigurerar du ett eget domännamn
 
@@ -42,15 +44,15 @@ Du kan inte byta namn på eller ta bort det första onmicrosoft.com-domännamnet
 
 ## <a name="to-add-and-verify-your-custom-domain"></a>Så här lägger du till och verifierar en egen domän
 
-1. Gå till [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx) och logga in på ditt administratörskonto.
+1. Gå till [Administrationscenter för Microsoft 365](https://admin.microsoft.com/) och logga in på ditt administratörskonto.
 
 2. I navigeringsfönstret väljer du **Installation** &gt; **Domäner**.
 
 3. Välj **Lägg till domän** och skriv namnet på din domän. Välj **Nästa**.
-   ![Skärmbild av administrationscenter för Office 365, där Inställningar > Domäner har valts och ett nytt domännamn läggs till](./media/domain-custom-add.png)
+   ![Skärmbild av Administrationscenter för Microsoft 365, där Inställningar > Domäner har valts och ett nytt domännamn läggs till](./media/domain-custom-add.png)
 4. Därmed öppnas dialogrutan **Verifiera domän** som visar värdena för att skapa TXT-posten i din DNS-värdtjänst.
-    - **GoDaddy-användare**: Office 365-hanteringsportalen omdirigerar dig till inloggningssidan för GoDaddy. När du har angett dina autentiseringsuppgifter och accepterat avtalet för domänändringsbehörighet skapas TXT-posten automatiskt. Du kan också [skapa en TXT-post](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a) själv.
-    - **Register.com-användare**: Följ [instruktionerna](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) för att skapa TXT-posten.
+    - **GoDaddy-användare**: Administrationscenter för Microsoft 365 omdirigerar dig till inloggningssidan för GoDaddy. När du har angett dina autentiseringsuppgifter och accepterat avtalet för domänändringsbehörighet skapas TXT-posten automatiskt. Du kan också [skapa en TXT-post](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a) själv.
+    - **Register.com-användare**: Följ [de stegvisa instruktionerna](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) för att skapa TXT-posten.
 
 Stegen för att lägga till och verifiera en anpassad domän kan också [utföras i Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
 

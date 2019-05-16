@@ -1,14 +1,15 @@
 ---
 title: Funktioner och inställningar för enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Översikt över olika Microsoft Intune-enhetsprofiler, bland annat funktioner, begräsningar, e-post, Wi-Fi, VPN, utbildning, certifikat, uppgradering av Windows 10, BitLocker och Windows Defender, Windows Information Protection, administrativa mallar och anpassade inställningar för enhetskonfiguration i Azure-portalen. Använd dessa profiler för att hantera och skydda data och enheter i företaget.
+description: Översikt över de olika enhetsprofilerna i Microsoft Intune. Få information om funktioner, begränsningar, e-post, Wi-Fi, VPN, utbildning, certifikat, uppgradering av Windows 10, BitLocker och Windows Defender, Windows Information Protection, administrativa mallar och anpassade inställningar för enhetskonfiguration i Azure-portalen. Använd dessa profiler för att hantera och skydda data och enheter i företaget.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
@@ -16,90 +17,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b9bd8aaca9aaf6e39c7a120518eeca1cef31511
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4dc68071886b8f2a0852feb69bf78c2c265f046d
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59570357"
 ---
-# <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Tillämpa inställningar för funktioner på dina enheter med enhetsprofiler i Microsoft Intune
+# <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Tillämpa funktioner och inställningar på dina enheter med enhetsprofiler i Microsoft Intune
 
-Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter, olika plattformar, som iOS, Android och Windows, och sedan använda Intune för att tillämpa profilen på enheter i din organisation.
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Några profilexempel:
+Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter och plattformar, till exempel iOS, Android och Windows. Använd sedan Intune för att tillämpa eller ”tilldela” profilen till enheterna.
+
+Använd dessa konfigurationsprofiler som en del av din lösning för hantering av mobilenheter till att utföra olika uppgifter. Några profilexempel:
 
 - På Windows 10-enheter använder du en profilmall som blockerar ActiveX-kontroller i Internet Explorer.
 - Tillåt användare på iOS- och macOS-enheter att använda AirPrint-skrivare i organisationen.
 - Tillåt eller förhindra åtkomst till Bluetooth på enheten.
 - Skapa en WiFi- eller VPN-profil som ger olika enheter åtkomst till företagsnätverket.
 - Hantera programuppdateringar, till exempel när de installeras.
-- Kör en Android-enhet, en dedikerad kioskenhet som kan sköra en app eller kör många appar.
+- Kör en Android-enhet som en dedikerad kioskenhet som kan köra en eller flera appar.
 
-Den här artikeln listar stegen för att skapa en profil och ger en översikt över de olika typerna av profiler du kan skapa. Med de här profilerna kan du tillåta eller förhindra vissa funktioner på enheterna.
-
-## <a name="create-the-profile"></a>Skapa profilen
-
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
-
-2. Välj **Enhetskonfiguration**. Du kan välja mellan följande alternativ:
-
-    - **Översikt**: Visar status för dina profiler och ytterligare information om de profiler som du har tilldelat till användare och enheter.
-    - **Hantera**: Skapa enhetsprofiler, ladda upp anpassade [PowerShell-skript](intune-management-extension.md) att köra i profilen och lägg till dataplaner för enheter med hjälp av [eSIM](esim-device-configuration.md).
-    - **Övervaka**: Kontrollera status för en profil och visa loggar för dina profiler.
-    - **Installation**: Lägg till en SCEP- eller PFX-certifikatutfärdare eller aktivera [Kostnadsuppföljning av telekommunikation](telecom-expenses-monitor.md) i profilen.
-
-3. Välj **Profiler** > **Skapa profil**. Ange följande egenskaper:
-
-   - **Namn**: Ange ett beskrivande namn på profilen.
-   - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-   - **Plattform**: Välj plattform för dina enheter. Alternativen är:  
-
-       - **Android**
-       - **Android enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 och senare**
-       - **Windows 10 och senare**
-
-   - **Profiltyp**: Välj den typ av inställningar du vill skapa. Listans innehåll beror på vilken **plattform** du väljer:
-
-       - [Administrativa mallar](administrative-templates-windows.md)
-       - [Anpassad](custom-settings-configure.md)
-       - [Leveransoptimering](delivery-optimization-windows.md)
-       - [Enhetsfunktioner](device-features-configure.md)
-       - [Enhetsbegränsningar](device-restrictions-configure.md)
-       - [Versionsuppgradering och lägesväxling](edition-upgrade-configure-windows-10.md)
-       - [Utbildning](education-settings-configure.md)
-       - [E-post](email-settings-configure.md)
-       - [Slutpunktsskydd](endpoint-protection-configure.md)
-       - [Identity Protection](identity-protection-configure.md)  
-       - [Helskärmsläge](kiosk-settings.md)
-       - [PKCS-certifikat](certficates-pfx-configure.md)
-       - [SCEP-certifikat](certificates-scep-configure.md)
-       - [Betrott certifikat](certificates-configure.md)
-       - [Uppdateringsprinciper](software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Defender ATP](advanced-threat-protection.md)
-       - [Windows informationsskydd](windows-information-protection-configure.md)
-
-     Om du till exempel väljer **iOS** som plattform ser profiltypen ut ungefär så här:
-
-     ![Skapa iOS-profil i Intune](./media/create-device-profile.png)
-
-4. Välj **Inställningar**. Inställningarna är ordnade efter kategori. Välj en kategori för att visa en lista över alla inställningar du kan konfigurera.
-
-5. Välj **OK** > **Skapa** när du är klar för att spara dina ändringar.
-
-Mer information om de olika profiltyperna finns i nästa avsnitt i den här artikeln.
+I den här artikeln ges en översikt över de olika profiltyper som du kan skapa. Med de här profilerna kan du tillåta eller förhindra vissa funktioner på enheterna.
 
 ## <a name="administrative-templates-preview"></a>Administrativa mallar (förhandsversion)
 
-[Administrativa mallar](administrative-templates-windows.md) innehåller hundratals inställningar du kan konfigurera för Internet Explorer, OneDrive, fjärrskrivbord, Word, Excel och andra Office-program och mycket mer.
+[Administrativa mallar](administrative-templates-windows.md) innehåller hundratals inställningar som du kan konfigurera för Internet Explorer, OneDrive, fjärrskrivbord, Word, Excel och andra Office-program.
 
-Dessa mallar ger administratörer en lätt och förenklad vy över inställningar som liknar grupprinciper, men de är 100 % molnbaserade. 
+Dessa mallar ger administratörer en förenklad vy över inställningar som liknar grupprinciper, men de är helt molnbaserade.
 
 Den här funktionen stöder:
 
@@ -164,7 +110,7 @@ Den här funktionen stöder:
 
 - Windows 10 och senare
 
-Inställningar för helskärmsläge finns också som enhetsbegränsningar för [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#kiosk-settings) och [iOS](device-restrictions-ios.md#kiosk-supervised-only).
+Inställningar för helskärmsläge finns också som enhetsbegränsningar för [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) och [iOS](device-restrictions-ios.md#kiosk-supervised-only).
 
 ## <a name="email"></a>E-post
 
@@ -173,6 +119,7 @@ I [E-postinställningar](email-settings-configure.md) skapas, tilldelas och öve
 Den här funktionen stöder: 
 
 - Android
+- Android enterprise
 - iOS
 - Windows Phone 8.1
 - Windows 10 och senare
@@ -186,6 +133,7 @@ Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säke
 Den här funktionen stöder: 
 
 - Android
+- Android enterprise
 - iOS
 - macOS
 - Windows Phone 8.1
@@ -199,6 +147,7 @@ Med [Wi-Fi-inställningar](wi-fi-settings-configure.md) kan du tilldela trådlö
 Den här funktionen stöder: 
 
 - Android
+- Android enterprise
 - iOS
 - macOS
 - Windows 8.1 (endast import)
@@ -235,12 +184,14 @@ Den här funktionen stöder:
 
 ## <a name="certificates"></a>Certifikat
 
-Med [certifikat](certificates-configure.md) kan du konfigurera betrodda, SCEP- och PKCS-certifikat som tilldelas till enheter och används för att autentisera trådlösa profiler, VPN- och e-postprofiler.
+[Certifikat](certificates-configure.md) konfigurerar betrodda certifikat, SCEP- och PKCS-certifikat som har tilldelats till enheter. De här certifikaten autentiserar Wi-Fi-, VPN- och e-postprofiler.
 
 Den här funktionen stöder: 
 
 - Android
+- Android enterprise
 - iOS
+- macOS
 - Windows Phone 8.1
 - Windows 8,1
 - Windows 10 och senare
@@ -255,7 +206,7 @@ Den här funktionen stöder:
 
 ## <a name="shared-multi-user-device"></a>Delad enhet för flera användare
 
-[Windows 10](shared-user-device-settings-windows.md) och [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) innehåller inställningar för att hantera enheter med flera användare, som också kallas för delade enheter eller delade datorer. När en användare loggar in på enheten väljer du om användaren kan ändra strömsparalternativen eller spara filer på enheten. I ett annat exempel kan du skapa en princip som tar bort inaktiva autentiseringsuppgifter från Windows HoloLens-enheter för att spara utrymme.
+[Windows 10](shared-user-device-settings-windows.md) och [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) innehåller inställningar för att hantera enheter med flera användare, som också kallas för delade enheter eller delade datorer. När en användare loggar in på enheten väljer du om användaren kan ändra strömsparalternativen eller spara filer på enheten. I ett annat exempel kan du för att spara utrymme skapa en princip som tar bort inaktiva autentiseringsuppgifter från Windows HoloLens-enheter.
 
 Med dessa inställningar för delade enheter för flera användare kan en administratör kontrollera några av enhetens funktioner och hantera dessa delade enheter med Intune.
 
@@ -264,21 +215,30 @@ Den här funktionen stöder:
 - Windows 10 och senare
 - Windows 10 Holographic for Business
 
-## <a name="custom-profile"></a>Anpassad profil
+## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)
 
-Med [Anpassade inställningar](custom-settings-configure.md) kan administratörer tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan till exempel ange OMA-URI-värden på Android-enheter. På iOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator. 
+Med [Zebra Mobility Extensions (MX)](android-zebra-mx-overview.md) kan administratörer använda och hantera Zebra-enheter i Intune. Du skapar StageNow-profiler med dina inställningar och använder sedan Intune för att tilldela och distribuera profilerna till dina Zebra-enheter. [StageNow-loggar och vanliga problem](android-zebra-mx-logs-troubleshoot.md) är en bra resurs om du vill felsöka profiler och se vissa potentiella problem som kan uppstå när du använder StageNow.
 
 Den här funktionen stöder:
 
 - Android
+
+## <a name="custom-profile"></a>Anpassad profil
+
+Med [Anpassade inställningar](custom-settings-configure.md) kan administratörer tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan ange OMA-URI-värden på Android-enheter. På iOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator.
+
+Den här funktionen stöder:
+
+- Android
+- Android enterprise
 - iOS
 - macOS
 - Windows Phone 8.1
 
 ## <a name="manage-and-troubleshoot"></a>Hantering och felsökning
 
-[Hantera dina profiler](device-profile-monitor.md) för att kontrollera statusen för enheter och tilldelade profiler. Hjälp även till att lösa konflikter genom att se inställningarna som orsakar en konflikt och de profiler som innehåller dessa inställningar. I [Vanliga problem och lösningar](device-profile-troubleshoot.md) finns frågor och svar som hjälp vid arbetet med profiler, bland annat vad som händer när en profil tas bort, vad som orsakar att meddelanden skickas till enheter etc.
+[Hantera dina profiler](device-profile-monitor.md) för att kontrollera statusen för enheter och tilldelade profiler. Du får även hjälp med att lösa konflikter genom att se inställningarna som orsakar en konflikt och de profiler som innehåller dessa inställningar. I [Vanliga problem och lösningar](device-profile-troubleshoot.md) får administratörer hjälp med att arbeta med profiler. Där beskrivs vad som händer när en profil tas bort, vad som orsakar att meddelanden skickas till enheter och mycket mer.
 
 ## <a name="next-steps"></a>Nästa steg
-Välj din plattform och sätt igång:
 
+Välj din plattform och sätt igång.

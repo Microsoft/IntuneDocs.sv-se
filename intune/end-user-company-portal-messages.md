@@ -1,6 +1,6 @@
 ---
 title: Meddelanden i företagsportalen som användare kan se på enheterna
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Förstå de olika meddelanden som slutanvändarna kan se i företagsportalen.
 keywords: ''
 author: lenewsad
@@ -10,18 +10,19 @@ ms.date: 03/09/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2fd42ece4a0df60ebe6f15b67c91bba46f210ff
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233175"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59569135"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
@@ -110,6 +111,34 @@ Om du inte har lagt till företagsportalappen i listan **Tillåtna appar** eller
 ### <a name="what-it-means"></a>Betydelse
 
 Lägg till appen Företagsportal i listan **Tillåtna appar** eller **Undanta appar** i WIP-appskyddsprincipen (Windows Information Protection). Mer information finns i [Skapa och distribuera en WIP-appskyddsprincip med Intune](windows-information-protection-policy-create.md).
+
+## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Godkänna en iOS-företagsapp (verksamhetsspecifik app) på din iOS-enhet 
+
+### <a name="where-it-appears"></a>Var det visas
+iOS-appar som har utvecklats av din organisation och som inte är tillgängliga i App Store är inte betrodda av din enhet som standard. När du installerar dessa appar med hjälp av företagsportalen och startar appen, visas följande meddelande:
+
+![iOS-appmeddelande – Ej betrodd företagsutvecklare](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+
+### <a name="what-it-means"></a>Betydelse
+Det här meddelandet innebär att du behöver ändra dina iOS-enhetsinställningar för att kunna godkänna och installera en app som har utvecklats av ditt företag på iOS-enheten.
+
+När du installerar sådana appar med hjälp av företagsportalen och startar appen, följer du stegen nedan för att godkänna appen när du har hämtat den:
+
+1. När du startar en installerad företagsapp (verksamhetsspecifik app), visas meddelandet ”Ej betrodd företagsutvecklare”. <br>
+   Tryck på **Avbryt**.
+2. Gå till **Inställningar** > **Allmänt** > **Enhetshantering**.
+
+   ![iOS-enhetens användargränssnitt – Enhetshantering](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+
+3. Välj **Hanteringsprofil** > **Företagsapp**.
+4. Välj utvecklarens namn.
+5. Tryck på **Betrodd_utvecklares namn_**.
+6. Bekräfta appen genom att välja **Förtroende** i appinstallationens popup-meddelande.
+
+   ![iOS-enhetens användargränssnitt – Meddelande om betrodd app](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
+
+    Du ska nu kunna starta och använda företagsappen.
+
 
 ### <a name="see-also"></a>Se även
 [Vad du ska berätta för slutanvändare om att använda Intune](end-user-educate.md)

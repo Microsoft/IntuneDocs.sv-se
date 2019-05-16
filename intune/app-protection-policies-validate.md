@@ -1,14 +1,15 @@
 ---
 title: Verifiera inställningen av din appskyddsprincip
 titleSuffix: Microsoft Intune
-description: Läs hur du testar att din appskyddsprincip har konfigurerats och fungerar som den ska.
+description: Läs om hur du testar att din appskyddsprincip har konfigurerats och fungerar som den ska i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/13/2018
+ms.date: 04/08/2019
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.technology: ''
 ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
@@ -17,48 +18,50 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2156dc466fa1b49c9bb3886af596b8a2cb0ccc2
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 760ff85bc31cf66e66a3bf98f7da22d5ce48eee0
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569447"
 ---
-# <a name="how-to-validate-your-app-protection-policy-setup"></a>Hur du validerar inställningen av din appskyddsprincip
+# <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Så här verifierar du konfigurationen av din appskyddsprincip i Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Verifiera att din appskyddsprincip är rätt konfigurerad och att den fungerar. Den här vägledningen gäller för appskyddsprinciper i Azure-portalen.
 
 ## <a name="checking-for-symptoms"></a>Söka efter problem
-Det är inte troligt att användarna rapporterar dessa fel eftersom appskyddet är ett verktyg för att skydda data. Om det uppstår problem med konfiguren av appskyddet får användaren obegränsad åtkomst, vilket hen även skulle ha utan appskydd. Användaren kan därför inte vara medveten om att något är fel. Därför rekommenderar vi att du verifierar din appskyddskonfiguration genom att testa appskyddsprinciperna hos en liten grupp användare som avsiktligt kan testa appskyddsbegränsningarna.
-
+Det är inte troligt att användarna rapporterar dessa fel eftersom appskyddet är ett verktyg för att skydda data. Om det uppstår problem med konfigurationen av appskyddet får användarna obegränsad åtkomst, vilket de även skulle ha utan appskydd. Användarna märker därmed inte att något är fel. Därför rekommenderar vi att du verifierar din appskyddskonfiguration genom att testa appskyddsprinciperna hos en liten grupp användare som avsiktligt kan testa appskyddsbegränsningarna.
 
 ## <a name="what-to-check"></a>Vad som ska kontrolleras
 
-Om testningen visar att appskyddsprincipen inte fungerar som förväntat bör du kontrollera följande:
+Om testningen visar att appskyddsprincipen inte fungerar som förväntat, bör du kontrollera följande:
 
 - Är användarna licensierade för appskydd?
 - Är användarna licensierade för O365?
-- Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**.
+- Har varje användare rätt status för sina appskyddsappar? Apparna kan ha status **Incheckad** och **Inte incheckad**.
 
 ### <a name="user-app-protection-status"></a>Användarens appskyddstatus
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Klientappar** > **Övervakare** >  **Appskyddsstatus**, och välj sedan panelen **Tilldelade användare**. 
+3. Välj **Klientappar** >  **Appskyddsstatus** och sedan ikonen **Tilldelade användare**. 
 4. Ta fram en lista över användare och grupper genom att välja **Välj användare** på sidan **Apprapportering**. 
 5. Sök efter och välj en användare från listan. Välj sedan **Välj användare**. Högst upp i fönstret **Apprapportering** kan du se om användaren är licensierad för appskydd. Nedanför ser du också om användaren har någon licens för O365 och vilken appstatus användarens alla enheter har.
-
-
 
 ## <a name="what-to-do"></a>Vad bör jag göra
 Åtgärder som kan vidtas baserat på användarens status:
 
-- Om användaren inte är licensierad för appskydd tilldelar du användaren en Intune-licens.
-- Om användaren inte är licensierad för O365 skaffar du en licens för användaren.
-- Om en användares app har status **Inte incheckad** kontrollerar du om appskyddsprincipen för appen är korrekt konfigurerad.
-- Se till att dessa villkor används för alla användare som du vill att appskyddsprinciperna ska gälla för.
+- Om användaren inte är licensierad för appskydd, tilldelar du användaren en [Intune-licens](licenses.md).
+- Om användaren inte är licensierad för O365 skaffar du en [licens](licenses.md) för användaren.
+- Om användarens app har status **Inte incheckad**, kontrollerar du om [appskyddsprincipen](app-protection-policies-validate.md) för appen är korrekt konfigurerad.
+- Kontrollera att dessa villkor tillämpas för alla användare som du vill att [appskyddsprinciperna](app-protection-policies-monitor.md) ska gälla för.
 
 ## <a name="see-also"></a>Se även
 
-[Vad är appskyddsprincip i Intune?](app-protection-policies.md)
+- [Vad är appskyddsprincip i Intune?](app-protection-policies.md)
+- [Licenser där Intune ingår](licenses.md)
+- [Tilldela licenser till användare så att de kan registrera enheter i Intune](licenses-assign.md)
+- [Så här verifierar du konfigurationen av din appskyddsprincip](app-protection-policies-validate.md)
+- [Så här övervakar du appskyddsprinciper](app-protection-policies-monitor.md)
+

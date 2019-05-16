@@ -1,15 +1,16 @@
 ---
 title: Blockera appar utan modern autentisering i Intune
 titleSuffix: Microsoft Intune
-description: Läs om blockering av appar som inte använder modern autentisering (ADAL) med Microsoft Intune.
+description: Läs om appar och modern autentisering (ADAL) med Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: article
+ms.date: 04/03/2019
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
+ms.topic: conceptual
 ms.technology: ''
 ms.assetid: 73db3070-d033-40fb-a8f1-58b9d198021e
 ms.reviewer: chrisgre
@@ -17,29 +18,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a651f926f8e8cc5beab80a70649c82677e0b2487
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 9ca96f36f8813d80c7ebb07bfb3bd65f8aa0b392
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833060"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59569109"
 ---
-# <a name="block-apps-that-do-not-use-modern-authentication-adal"></a>Blockera appar som inte använder modern autentisering (ADAL)
+# <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Blockera appar som inte använder modern autentisering (ADAL)
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Appbaserad villkorlig åtkomst med appskyddsprinciper är beroende av program som använder [modern autentisering](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) som är en implementering av OAuth2. De senaste Office-programmen för mobila och stationära enheter använder modern autentisering. Det finns dock tredjepartsappar och äldre Office-program som använder andra autentiseringsmetoder, som grundläggande autentisering och formulärbaserad autentisering.
 
-## <a name="block-apps"></a>Blockera appar
+## <a name="block-access-to-apps"></a>Blockera åtkomst till appar
 
-Om du vill blockera åtkomst till appar som inte använder modern autentisering, rekommenderar vi följande metoder:
+Använd Intunes appskyddsprinciper till att implementera villkorsstyrd åtkomst som blockerar åtkomst till appar utan modern autentisering. Mer information finns i [Appbaserad villkorsstyrd åtkomst med Intune](app-based-conditional-access-intune.md).
 
-- Konfigurera ADFS-anspråksregler och blockera protokoll som inte stöder modern autentisering. Detaljerade anvisningar finns i scenario tre – [block all access to O365 except browser-based applications](https://technet.microsoft.com/library/dn592182.aspx) (blockera all åtkomst till O365 förutom webbläsarbaserade program).
-- För **Exchange och SharePoint Online** använder du villkorlig åtkomst i Azure Active Directory och PowerShell-cmdleten Set-SPOTenant för SharePoint Online. Detaljerade anvisningar finns i [Konfigurera SharePoint Online och Exchange Online för villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication#legacy-authentication-protocols).
+## <a name="additional-information"></a>Ytterligare information
 
-
->[!IMPORTANT]
->Appbaserad CA kan inte användas med Azure Active Directory (Azure AD)-certifikatbaserad autentisering. Du kan endast ha en av dessa konfigurerade åt gången.
+Mer information om villkorsstyrd åtkomst i Azure AD finns i följande avsnitt:
+- [Vad är villkorsstyrd åtkomst i Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [Så här fungerar appbaserad villkorsstyrd åtkomst](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
+- [Konfigurera SharePoint Online och Exchange Online för villkorsstyrd åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
 
 ## <a name="next-steps"></a>Nästa steg
 

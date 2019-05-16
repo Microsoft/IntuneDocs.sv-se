@@ -1,40 +1,52 @@
 ---
-title: Hantera webbåtkomst med en principskyddad webbläsare
-titlesuffix: Microsoft Intune
-description: Använd en principskyddad webbläsare för att begränsa webbsurfning och överföring av webbdata.
+title: Hantera företagets webbåtkomst med en principskyddad webbläsare
+titleSuffix: Microsoft Intune
+description: Använd en principskyddad webbläsare som är tilldelad av Intune till att hantera företagets webbsurfning och överföring av webbdata.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64cd4aa629e980bf69557d6cd2c40f8bee7bd3c6
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: 8f32cfbb5e05958ec9d8f303809d3ffa28c3a3ec
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569733"
 ---
-# <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
+# <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Med en webbläsare som skyddas med Intune-principer (Microsoft Edge eller Intune Managed Browser) kan du vara säker på att åtkomsten till företagswebbplatser alltid är skyddad.  När de har konfigurerats med Intune kan skyddade webbläsare dra nytta av följande:
 
-- Programskyddsprinciper.
-- Villkorlig åtkomst.
-- Enkel inloggning.
-- Inställningar för programkonfiguration.
-- Integrering av en Azure-programproxy.
+- Programskyddsprinciper
+- Villkorlig åtkomst
+- Enkel inloggning
+- Inställningar för programkonfiguration
+- Integrering av en Azure-programproxy
+
+## <a name="microsoft-edge-support"></a>Microsoft Edge-stöd
+
+Du kan använda Microsoft Edge för företagsscenarier på iOS- och Android-enheter. Microsoft Edge har stöd för samma hanteringsscenarier som Intune Managed Browser, men där finns dessutom förbättringar av användarupplevelsen. Nedanstående Microsoft Edge-företagsfunktioner som aktiveras med Intune-principer är tillgängliga. Dessa företagsfunktioner är:
+
+1. **Dubbel identitet** – Användarna kan lägga till både ett arbetskonto och ett personligt konto för surfning. Det finns en fullständig uppdelning mellan de två identiteterna, vilket liknar arkitektur och funktioner i Office 365 och Outlook. Intune-administratörer kommer att kunna ställa in de önskade principerna för en skyddad surfupplevelse på arbetskontot. 
+2. **Integrering med Intunes appskyddsprincip** – Administratörer kan nu använda appskyddsprinciper i Microsoft Edge, inklusive kontroll av klipp ut, kopiera och klistra in, förhindra skärmdumpar och säkerställa att användarvalda länkar bara öppnas i andra hanterade appar.
+3. **Integrering med Azure Application-proxy** – Administratörer kan styra åtkomsten till SaaS-appar och webbappar, vilket garanterar att webbläsarbaserade appar endast körs i den skyddade Microsoft Edge-webbläsaren, oavsett om användarna ansluter från företagets nätverk eller från Internet. 
+4. **Genvägar till hanterade favoriter och startsida** – För att underlätta åtkomsten kan administratörer ange URL:er som visas i Favoriter när slutanvändarna använder sin företagsmiljö. Administratörer kan ange en genväg till startsidan som visas som primär genväg när företagsanvändaren öppnar en ny sida eller en ny flik i Microsoft Edge.
+
+Microsoft Intunes skyddsprinciper för Microsoft Edge hjälper till att skydda din organisations data och resurser. Intune-skyddade Microsoft Edge säkerställer att företagets resurser skyddas, inte bara i internt installerade appar, utan även när de öppnas via en webbläsare.
 
 ## <a name="getting-started"></a>Komma igång
 
@@ -72,11 +84,15 @@ Eftersom Managed Browser och Microsoft Edge inte hanteras av Intune har de inte 
 
 ## <a name="conditional-access-for-protected-browsers"></a>Villkorlig åtkomst för skyddade webbläsare
 
-Managed Browser är nu en godkänd klientapp för villkorlig åtkomst. Det innebär att du kan begränsa mobil webbläsaråtkomst till Azure AD-anslutna webbappar där användarna bara kan använda Managed Browser, vilket blockerar åtkomsten från andra oskyddade webbläsare som Safari eller Chrome. Det här skyddet kan tillämpas på Azure-resurser som Exchange Online och SharePoint Online, Office-portalen och även lokala platser som du exponerar för externa användare via [Azure AD-programproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+Managed Browser är nu en godkänd klientapp för villkorlig åtkomst. Det innebär att du kan begränsa mobil webbläsaråtkomst till Azure AD-anslutna webbappar där användarna bara kan använda Managed Browser, vilket blockerar åtkomsten från andra oskyddade webbläsare som Safari eller Chrome. Det här skyddet kan tillämpas på Azure-resurser som Exchange Online och SharePoint Online, Administrationscenter för Microsoft 365 och även lokala platser som du exponerar för externa användare via [Azure AD-programproxyn](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
 
-Om du vill begränsa Azure AD-anslutna webbappars användning av Intune Managed Browser på mobila plattformar, kan du skapa en villkorlig Azure AD-åtkomstprincip som kräver godkända klientprogram. 
+Om du vill begränsa Azure AD-anslutna webbappars användning av Intune Managed Browser på mobila plattformar, kan du skapa en villkorsstyrd åtkomstprincip som kräver godkända klientprogram. 
 
-1. I Azure-portalen väljer du **Azure Active Directory** > **Företagsprogram** > **Villkorlig åtkomst** > **Ny princip**. 
+> [!TIP]  
+> Villkorsstyrd åtkomst är en Azure Active Directory-teknik (Azure AD). Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
+
+
+1. I Intune-portalen väljer du **Villkorsstyrd åtkomst** > **Ny princip**. 
 2. Välj därefter **Bevilja** i avsnittet **Åtkomstkontroller** på bladet. 
 3. Klicka på **Kräv godkänd klientapp**. 
 4. Klicka på **Välj** på bladet **Bevilja**. Den här principen måste tilldelas till de molnappar som du vill ska vara tillgängliga enbart för appen Intune Managed Browser.
@@ -267,12 +283,12 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 Både Intune Managed Browser och Microsoft Edge anses nu vara principhanterade webbläsare/skyddade webbläsare. I dag resulterar befintliga appskyddsprinciper att webblänkar från Intune-hanterade appar öppnas i en viss webbläsare beroende på scenario och plattform. 
 
 I Android: 
-* Managed Browser om både MB och Edge finns på enheten, såvida inte appkonfigurationsinställningen ”com.microsoft.intune.useEdge” är inställd på ”true” för alla Intune-hanterade appar där en principhanterad webbläsare krävs.  
-* Microsoft Edge om enbart Microsoft Edge finns på enheten och är mål för principen.
-* Managed Browser om bara Managed Browser finns på enheten och är mål för principen. 
+* Managed Browser öppnas om användaren har både Managed Browser och Microsoft Edge på sin enhet. För att säkerställa att Microsoft Edge öppnas i stället för Managed Browser anges appkonfigurationsinställningen ”com.microsoft.intune.useEdge” som ”true” för alla Intune-hanterade appar där en principhanterad webbläsare krävs.  
+* Microsoft Edge öppnas enbart om det finns på enheten och är mål för principen.
+* Managed Browser öppnas bara om det finns på enheten och är mål för principen. 
 
 I iOS, för appar som har integrerat Intune SDK för iOS med 9.0.9+: 
-* Managed Browser om både MB och Edge finns på enheten, såvida inte appkonfigurationsinställningen ”com.microsoft.intune.useEdge” är inställd på ”true” för alla Intune-hanterade appar där en principhanterad webbläsare krävs **eller** Microsoft Edge om Microsoft Edge är installerad och har tagit emot principen. 
+* Managed Browser om både MB och Edge finns på enheten, såvida inte appkonfigurationsinställningen ”com.microsoft.intune.useEdge” är inställd som ”true” för alla Intune-hanterade appar där en principhanterad webbläsare krävs **eller** Microsoft Edge om det är installerat och har tagit emot principen. 
 * Microsoft Edge om enbart Microsoft Edge finns på enheten, är mål för principen och har tagit emot principen. 
 * Managed Browser om enbart Managed Browser finns på enheten, är mål för principen och har tagit emot principen.
 
