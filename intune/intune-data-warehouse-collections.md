@@ -281,7 +281,7 @@ Entiteten **deviceType** representerar den enhetstyp som andra informationslager
 | 12           | ISocConsumer      | iSoc Consumer-enhet                                |
 | 13           | Unix              | UNIX-enhet                                         |
 | 14           | MacMDM            | Mac OS X-enhet som hanteras med den inbyggda MDM-agenten |
-| 15           | HoloLens          | HoloLens-enheter                                       |
+| 15           | HoloLens          | HoloLens-enhet                                       |
 | 16           | SurfaceHub        | Surface Hub-enhet                                  |
 | 17           | AndroidForWork    | Android-enhet som hanteras med hjälp av Android-profilägare  |
 | 18           | AndroidEnterprise | Android-företagsenhet.                          |
@@ -434,9 +434,9 @@ Entiteten **MamApplication** innehåller en lista över verksamhetsspecifika app
 
 | Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
-| mamApplicationKey |Unikt ID för MAM-programmet. | 432 |
-| mamApplicationName |Namn på MAM-programmet. |MAM exempel programnamn |
-| mamApplicationId |Program-id för MAM-appen. | 123 |
+| mamApplicationKey |Unik identifierare för MAM-programmet. | 432 |
+| mamApplicationName |Namn på MAM-programmet. |Exempelnamn på MAM-program |
+| mamApplicationId |Program-ID för MAM-programmet. | 123 |
 | IsDeleted |Visar huruvida posten för MAM-appen har uppdaterats. <br>Sant: MAM-appen innehåller en ny post med uppdaterade fält i den här tabellen. <br>Falskt: den senaste posten för den här MAM-appen. |Sant/falskt |
 | StartDateInclusiveUTC |Datum och tid i UTC när MAM-appen skapades i informationslagret. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Datum och tid i UTC när IsDeleted ändrades till True. |2016-11-23 12:00:00 |
@@ -453,15 +453,15 @@ Entiteten **MamApplicationInstance** innehåller en lista över appar som hanter
 |   ApplicationInstanceKey   |                                                               Unikt id för MAM-appinstansen i informationslagret – surrogatnyckel.                                                                |                 123                  |
 |           UserId           |                                                                              Användar-ID för den användare som har den här MAM-appen installerad.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Unikt id för MAM-appinstansen, liknar ApplicationInstanceKey,men id:t är en naturlig nyckel.                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | Program-Id för Mam-programmet som den här Mam-programinstans har skapats.   | 2016-11-23 12:00:00   |
+| mamApplicationId | Program-ID för Mam-programmet som Mam-programinstansen skapades för.   | 2016-11-23 12:00:00   |
 |     ApplicationVersion     |                                                                                     Programversion för MAM-appen.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Datum då MAM-appinstansposten skapades. Värdet kan vara null.                                                                 |        2016-11-23 12:00:00        |
 |          Plattform          |                                                                          Plattform för den enhet där MAM-appen är installerad.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Plattformsversion för enheten där MAM-appen är installerad.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            SDK-version där MAM-appen är paketerad.                                                                            |                 3.2                  |
-| mamDeviceId | Enhets-Id för enheten där MAM-programinstans som är associerad med.   | 2016-11-23 12:00:00   |
-| mamDeviceType | Enhetstyp för enheten där MAM-programinstans som är associerad med.   | 2016-11-23 12:00:00   |
-| mamDeviceName | Enhetsnamn för enheten där MAM-programinstans som är associerad med.   | 2016-11-23 12:00:00   |
+| mamDeviceId | Enhets-ID för enheten som MAM-programinstansen är associerad med.   | 2016-11-23 12:00:00   |
+| mamDeviceType | Enhetstyp för enheten som MAM-programinstansen är associerad med.   | 2016-11-23 12:00:00   |
+| mamDeviceName | Enhetsnamn för enheten som MAM-programinstansen är associerad med.   | 2016-11-23 12:00:00   |
 |         IsDeleted          | Visar huruvida posten för MAM-appinstansen har uppdaterats. <br>Sant: MAM-appinstansen innehåller en ny post med uppdaterade fält i den här tabellen. <br>Falskt: den senaste posten för den här MAM-appinstansen. |              Sant/falskt              |
 |   StartDateInclusiveUtc    |                                                              Datum och tid i UTC när MAM-appinstansen skapades i informationslagret.                                                               |        2016-11-23 12:00:00        |
 |       DeletedDateUtc       |                                                                             Datum och tid i UTC när IsDeleted ändrades till True.                                                                              |        2016-11-23 12:00:00        |
@@ -479,7 +479,7 @@ Entiteten **MamCheckin** visar data som samlas in när en hanterad mobilappinsta
 | DateKey |Datumnyckel när incheckningen av MAM-appen registrerades i informationslagret. | 20160703 |
 | ApplicationInstanceKey |Nyckel för appinstansen som är kopplad till incheckningen av den mobilappshanterade appen. | 123 |
 | UserKey |Nyckel för användaren som är kopplad till incheckningen av MAM-appen. | 4323 |
-| mamApplicationKey |Nyckel för program som är associerade med MAM-programmet incheckning. | 432 |
+| mamApplicationKey |Programnyckel för programmet som är associerat med MAM-programincheckningen. | 432 |
 | DeviceHealthKey |Nyckel för DeviceHealth som är koppla till den här incheckningen av MAM-appen. | 321 |
 | PlatformKey |Visar plattformen för enheten som är kopplad till den här incheckningen av MAM-appen. |123 |
 | LastCheckInDate |Datum och tid för den senaste incheckningen av MAM-appen. Värdet kan vara null. |2016-11-23 12:00:00 |
@@ -527,7 +527,7 @@ Entiteten **managementAgentType** representerar de agenter som används för att
 | 5                     | EasIntuneClient                   | Enheten hanteras både av Exchange Active Sync och Intune PC-agenten |
 | 8                     | ConfigManagerClient               | Enheten hanteras av System Center Configuration Manager-agenten     |
 | 10                    | ConfigurationManagerClientMdm     | Enheten hanteras av Configuration Manager och MDM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | Enheten hanteras av Configuration Manager MDM- och Exchange Active Sync.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | Enheten hanteras av Configuration Manager, MDM och Exchange Active Sync.               |
 | 16                    | Okänt                           | Okänd typ av hanteringsagent                                              |
 | 32                    | Jamf                              | Enhetens egenskaper hämtas från Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  Enheten hanteras av Googles CloudDPC.                                 |
@@ -586,10 +586,10 @@ Entiteten **ownerType** visar om en enhet är företagsägd, privat ägd eller o
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikt id för ägartyp.                                                                                                                                               |                            |
 | ownerTypeKey  | Unik identifierare för ägartypen i informationslagret – surrogatnyckel.                                                                                                       |                            |
-| ownerTypeName | Representerar ägartypen för enheterna: Företag – enheten är företagsägd.  Privat – enheten är privatägd (BYOD).   Okänd – det finns ingen information om enheten. | Företag privat okänd |
+| ownerTypeName | Representerar ägartypen för enheterna: Företag – enheten är företagsägd.  Privat – enheten är privatägd (BYOD).   Okänd – det finns ingen information om enheten. | Företag Privat Okänd |
 
 > [!Note]  
-> För den `ownerTypeName` filter i AzureAD när du skapar dynamiska grupper för enheter, måste du ange värdet `deviceOwnership` som `Company`. Mer information finns i [regler för enheters](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> För `ownerTypeName`-filtret i AzureAD måste du ange värdet `deviceOwnership` som `Company` när du skapar dynamiska grupper för enheter. Mer information finns i [Regler för enheters](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>policies
 Entiteten **Princip** innehåller en lista över enhetskonfigurationsprofiler, appkonfigurationsprofiler och efterlevnadsprinciper. Principerna med hantering av mobilenheter (MDM) kan tilldelas en grupp i företaget.

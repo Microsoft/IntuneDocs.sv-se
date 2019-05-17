@@ -1,6 +1,6 @@
 ---
-title: Enhetsinställningar för Android Enterprise i Microsoft Intune – Azure | Microsoft Docs
-description: Se en lista över alla inställningar som du kan använda när du ställer in efterlevnad för Android Enterprise-enheter i Microsoft Intune. Ange regler för lösenord, Välj en lägsta eller högsta operativsystemversion, begränsa specifika appar, förhindra att återanvända lösenord och mycket mer.
+title: Kompatibilitetsinställningar för Android Enterprise i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över alla inställningar som du kan använda när du ställer in kompatibilitet för Android Enterprise-enheter i Microsoft Intune. Ange regler för lösenord, välj en lägsta eller högsta operativsystemversion, begränsa specifika appar, förhindra att lösenord återanvänds och mycket mer.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -24,21 +24,21 @@ ms.contentlocale: sv-SE
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59423568"
 ---
-# <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Android Enterprise Markera enheter som kompatibla eller inte är kompatibla med Intune
+# <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Android Enterprise-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln visar en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera i Android Enterprise-enheter i Intune. Använd inställningarna som en del av din lösning för hantering av mobila enheter, för att markera rotade (jailbreakade) enheter som inte är kompatibla, ange en tillåtna hotnivån, aktivera Google Play-skydd och mycket mer.
+Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Android Enterprise-enheter i Intune. Använd dessa inställningar som en del av din MDM-lösning för hantering av mobilenheter, t.ex. för att markera rotade (jailbreakade) enheter som inkompatibla, ange en tillåten hotnivå eller aktivera Google Play-skydd.
 
 Den här funktionen gäller för:
 
 - Android enterprise
 
-Som Intune-administratör kan använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Som Intune-administratör kan du använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Mer om kompatibilitetsprinciper och vad de gör finns i [Komma igång med kompatibilitet](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-[Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). I **Plattform** väljer du **Android enterprise**.
+[Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). Välj **Android Enterprise** för **Plattform**.
 
 ## <a name="device-health"></a>Device health
 
@@ -59,7 +59,7 @@ Som Intune-administratör kan använda dessa kompatibilitetsinställningar för 
   - **Kontrollera grundläggande integritet och certifierade enheter**
 
 > [!NOTE]
-> På Android-företagsenheter **hotgenomsökning för appar** är en princip för enhetskonfiguration. Med hjälp av en princip för konfiguration, kan administratörer aktivera inställningen på en enhet. Mer information finns i avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
+> På Android Enterprise-enheter är **Hotgenomsökning för appar** en enhetskonfigurationsprincip. Administratörer kan aktivera inställningen på en enhet med hjälp av en konfigurationsprincip. Mer information finns i avsnittet om [begränsningsinställningar för Android Enterprise-enheter](device-restrictions-android-for-work.md).
 
 ## <a name="device-properties-settings"></a>Inställningar för enhetsegenskaper
 
@@ -89,7 +89,7 @@ Som Intune-administratör kan använda dessa kompatibilitetsinställningar för 
 
 - **Kryptering för lagring av data på en enhet**: Välj **Kräv** för att kryptera lagring av data på dina enheter. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen. 
 
-  Du behöver inte konfigurera den här inställningen eftersom Android-arbetsprofilenheter tvingar fram kryptering.
+  Du behöver inte konfigurera den här inställningen eftersom Android Enterprise-enheter tvingar fram kryptering.
 
 ### <a name="device-security"></a>Enhetssäkerhet
 
@@ -100,7 +100,7 @@ Som Intune-administratör kan använda dessa kompatibilitetsinställningar för 
   > [!IMPORTANT]
   > Inställningen **Blockera appar från okända källor** måste vara aktiverad för program med separat inläsning. Du bör endast tillämpa den här efterlevnadsprincipen om du inte läser in Android-appar separat på enheter.
 
-  Du behöver inte konfigurera den här inställningen eftersom Android-arbetsprofilenheter alltid begränsar installationer från okända källor.
+  Du behöver inte konfigurera den här inställningen eftersom Android Enterprise-enheter alltid begränsar installationer från okända källor.
 
 - **Körningsintegritet för appen Företagsportal**: Välj **Kräv** för att bekräfta att företagsportalappen uppfyller följande krav:
 
@@ -113,7 +113,7 @@ Som Intune-administratör kan använda dessa kompatibilitetsinställningar för 
 
 - **Blockera USB-felsökning på enheten**: Välj **Blockera** för att förhindra att enheter använder USB-felsökningsfunktionen. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 
-  Du behöver inte konfigurera den här inställningen eftersom USB-felsökning redan är inaktiverat på Android-arbetsprofilenheter.
+  Du behöver inte konfigurera den här inställningen eftersom USB-felsökning redan är inaktiverat på Android Enterprise-enheter.
 
 - **Lägsta säkerhetskorrigeringsnivå**: Välj den äldsta säkerhetskorrigeringsnivå som en enhet kan ha. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste anges i formatet *ÅÅÅÅ-MM-DD*.
 
@@ -121,6 +121,6 @@ Välj **OK** > **Skapa** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [använda omfångstaggar om du vill filtrera principer](scope-tags.md).
-- [Övervaka dina efterlevnadspolicyer](compliance-policy-monitor.md).
-- [Inställningar för policy för efterlevnad för Android-enheter](compliance-policy-create-android.md)
+- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [Filtrera principer med hjälp av omfångstaggar](scope-tags.md).
+- [Övervaka dina kompatibilitetsprinciper](compliance-policy-monitor.md).
+- Mer information finns i [Inställningar för kompatibilitetsprinciper för Android-enheter](compliance-policy-create-android.md).

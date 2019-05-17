@@ -46,4 +46,4 @@ Som IT-administratör är en av dina högsta prioriteter att [hålla Windows-dat
 
 ## <a name="see-also"></a>Se även
 
-[Vanliga frågor, problem och lösningar med principer för enheter och profiler](device-profile-troubleshoot.md)
+[Vanliga frågor, problem och lösningar med enhetsprinciper och enhetsprofiler](device-profile-troubleshoot.md)

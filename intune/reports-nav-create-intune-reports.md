@@ -43,7 +43,7 @@ Informationslagret ger dig tillgång till mer information om din mobila miljö �
   -  En datamodell som använder OData-standarden
 
 > [!Note]
-> Om du använder samhanterad hantering av mobilenheter (MDM) med System Center Configuration Manager och Microsoft Intune behöver du hämta data från Configuration Manager. Intune-informationslagret innehåller endast Intune-data. Du kan använda en Configuration Manager Power BI-instrumentpanel för anpassade rapporter. Mer information finns i ”[Meddelande om Power BI-lösningsmallen för System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template)” och ”[Power BI-innehåll för Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)”.
+> Om du använder samhanterad hantering av mobilenheter (MDM) med System Center Configuration Manager och Microsoft Intune behöver du hämta data från Configuration Manager. Intune-informationslagret innehåller endast Intune-data. Du kan använda en Power BI-instrumentpanel med Configuration Manager för anpassade rapporter. Mer information finns i ”[Meddelande om Power BI-lösningsmallen för System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template)” och ”[Power BI-innehåll för Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)”.
 
 > [!Important]  
 > Det går nu att använda v1.0-versionen av Intune-informationslagret genom att ange frågeparametern `api-version=v1.0`. Uppdateringar av samlingar i datalagret är additiva och avbryter inte befintliga scenarier.<br><br>

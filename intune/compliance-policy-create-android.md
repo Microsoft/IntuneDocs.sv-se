@@ -1,6 +1,6 @@
 ---
-title: Skapa en efterlevnadsprincip för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se en lista över alla inställningar som du kan använda när du ställer in efterlevnad för Android-enheter i Microsoft Intune. Ange regler för lösenord, Välj en lägsta eller högsta operativsystemversion, begränsa specifika appar, förhindra att återanvända lösenord och mycket mer.
+title: Kompatibilitetsinställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över alla inställningar som du kan använda när du konfigurerar kompatibilitet för Android-enheter i Microsoft Intune. Ange regler för lösenord, välj en lägsta eller högsta operativsystemversion, begränsa specifika appar, förhindra att lösenord återanvänds och mycket mer.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -24,17 +24,17 @@ ms.contentlocale: sv-SE
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59423585"
 ---
-# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Android kunna markera enheter som kompatibla eller inte är kompatibla med Intune
+# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Android-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln visar en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera i Android-enheter i Intune. Använd inställningarna som en del av din lösning för hantering av mobila enheter, för att markera rotade (jailbreakade) enheter som inte är kompatibla, ange en tillåtna hotnivån, aktivera Google Play-skydd och mycket mer.
+Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Android-enheter i Intune. Använd dessa inställningar som en del av din MDM-lösning för hantering av mobilenheter, t.ex. för att markera rotade (jailbreakade) enheter som inkompatibla, ange en tillåten hotnivå eller aktivera Google Play-skydd.
 
 Den här funktionen gäller för:
 
 - Android
 
-Som Intune-administratör kan använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Som Intune-administratör kan du använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Mer om kompatibilitetsprinciper och vad de gör finns i [Komma igång med kompatibilitet](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -64,7 +64,7 @@ Som Intune-administratör kan använda dessa kompatibilitetsinställningar för 
   - **Kontrollera grundläggande integritet och certifierade enheter**
 
 > [!NOTE]
-> För att konfigurera inställningarna för Google Play-skydd med hjälp av appskyddsprinciper, se [inställningar för Intune-appskyddsprinciper](app-protection-policy-settings-android.md#conditional-launch) på Android.
+> Information om hur du konfigurerar inställningar för Google Play-skydd med hjälp av appskyddsprinciper finns i [Inställningar för appskyddsprinciper i Intune](app-protection-policy-settings-android.md#conditional-launch) på Android.
 
 ## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
@@ -118,16 +118,16 @@ Som Intune-administratör kan använda dessa kompatibilitetsinställningar för 
 
 Välj **OK** > **Skapa** för att spara ändringarna.
 
-## <a name="locations"></a>Platser:
+## <a name="locations"></a>Platser
 
-Du kan framtvinga efterlevnad av platsen för enheten i din princip. Välj från befintliga platser. Har du inga platser ännu? Du kan läsa mer i [Använda platser (nätverksstängsel) i Intune](use-network-locations.md).
+I principen kan du framtvinga kompatibilitet baserat på enhetens plats. Välj från befintliga platser. Har du inga platser ännu? Du kan läsa mer i [Använda platser (nätverksstängsel) i Intune](use-network-locations.md).
 
-1. Välj **platser** > **välja platser**.
-2. Kontrollera din plats i listan > **Välj**.
+1. Välj **Platser** > **Välj platser**.
+2. Markera din plats i listan > **Välj**.
 3. **Spara** principen.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [använda omfångstaggar om du vill filtrera principer](scope-tags.md).
-- [Övervaka dina efterlevnadspolicyer](compliance-policy-monitor.md).
-- [Inställningar för efterlevnadsprinciper för Android Enterprise](compliance-policy-create-android-for-work.md)
+- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [Filtrera principer med hjälp av omfångstaggar](scope-tags.md).
+- [Övervaka dina kompatibilitetsprinciper](compliance-policy-monitor.md).
+- Mer information finns i [Inställningar för kompatibilitetsprinciper för Android Enterprise-enheter](compliance-policy-create-android-for-work.md).

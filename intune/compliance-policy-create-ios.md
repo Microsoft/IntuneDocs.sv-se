@@ -1,11 +1,11 @@
 ---
-title: Skapa en efterlevnadsprincip för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Skapa eller konfigurera en efterlevnadsprincip för Microsoft Intune-enheter för iOS-enheter för att ange ett e-postkonto, kontrollera jailbrokade enheter, kontrollera lägsta och högsta operativsystem och ange begränsningar för lösenord, inklusive lösenordslängd och enhetsinaktivitet.
+title: Kompatibilitetsinställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över alla inställningar som du kan använda när du ställer in kompatibilitet för iOS-enheter i Microsoft Intune. Kräv ett e-postmeddelande, kontrollera jailbrokade eller rotade enheter, ange den lägsta och högsta tillåtna operativsystemversionen, ange begränsningar för lösenord, inklusive lösenordslängd och enhetsinaktivitet, begränsa appar och mycket mer.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/04/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,82 +17,57 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42ce05d2f726147caee198c79db185b87854cffb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 6ec071622a2e0d49068864f8bfb47954f54c8ba4
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423619"
 ---
-# <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Lägga till en enhetsefterlevnadsprincip för iOS-enheter i Intune
+# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>iOS-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-En Intune iOS-enhetsefterlevnadsprincip anger de regler och inställningar som iOS-enheter måste uppfylla för att vara kompatibla. När du använder principer för enhetsefterlevnad med villkorlig åtkomst kan du tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du kan skapa efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på iOS-enheter i Intune. Som en del av din MDM-lösning för hantering av mobilenheter kan du använda dessa inställningar för att kräva ett e-postmeddelande, markera rotade (jailbreakade) enheter som inkompatibla, ange tillåten hotnivå, ange när lösenord ska upphöra att gälla och mycket mer.
 
-Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
+Den här funktionen gäller för:
 
----------------------------
+- iOS
 
-| **Principinställning** | **iOS 8.0 och senare** |
-| --- | --- |
-| **Konfiguration av PIN-kod eller lösenord** | Åtgärdad |
-| **Enhetskryptering** | Åtgärdad (genom angiven PIN-kod) |
-| **Jailbreakad eller rotad enhet** | I karantän (inte en inställning)
-| **E-postprofil** | I karantän |
-|**Lägsta version av operativsystemet** | I karantän |
-| **Högsta version av operativsystemet** | I karantän |
-| **Attestering av hälsotillstånd i Windows** | Inte tillämpligt |
+Som Intune-administratör kan du använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Mer om kompatibilitetsprinciper och vad de gör finns i [Komma igång med kompatibilitet](device-compliance-get-started.md).
 
----------------------------
+## <a name="before-you-begin"></a>Innan du börjar
 
-**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. (Till exempel om användaren tvingas att ange en PIN-kod.)
-
-**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
-
-- Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
-- Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.
-
-## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. För **Plattform**, välj **iOS**. 
-5. Välj **Inställningar** för att konfigurera och ange inställningar för **E-post**, **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet** som beskrivs i det här avsnittet. När du är klar väljer du **OK**, och **Skapa**.
-
-<!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
-5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
-7. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
-7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
-8. Choose **Add** to finish creating the action.
-9. You can create multiple actions and the sequence in which they should occur. Choose **Ok** when you are finished creating all the actions.--->
+[Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). För **Plattform**, välj **iOS**.
 
 ## <a name="email"></a>E-post
 
-- **Kräv att mobila enheter har en hanterad e-postprofil**: Om du väljer Kräv, anses enheter som inte har en e-postmeddelandeprofil som hanteras av Intune som icke-kompatibla. En enhet kan inte ha en hanterad e-postprofil när den inte är korrekt riktad, eller om användaren manuellt konfigurerar e-postkontot på enheten.
+- **Kräv att mobila enheter har en hanterad e-postprofil**: När inställningen **Kräv** används betraktas enheter som inte har en e-postmeddelandeprofil som hanteras av Intune som inkompatibla. En enhet kan inte ha en hanterad e-postprofil om den inte är korrekt inriktad, eller om användaren konfigurerar e-postkontot manuellt på enheten. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 
-  Enheten betraktas som icke-kompatibel i följande situationer:
-  - E-postprofilen har distribuerats till en annan användargrupp än användargruppen som är kompatibilitetsprincipens mål.
-  - Användaren har redan konfigurerat ett e-postkonto på enheten som matchar Intune-e-postprofilen som distribuerats till enheten. Intune kan inte skriva över den användartillhandahållna profilen, och kan därför inte hantera den. För att säkerställa efterlevnad måste användaren ta bort de befintliga e-postinställningarna. Sedan kan Intune installera den hantera e-postprofilen.
+  Enheten betraktas som inkompatibel i följande situationer:
 
-- **Välj den e-postprofil som måste hanteras av Intune**: Om inställningen **E-postkontot måste hanteras av Intune** har valts väljer du **Välj** för att ange Intune-e-postprofilen. E-postprofilen måste finnas på enheten.
+  - E-postprofilen är associerad med en annan användargrupp än användargruppen som kompatibilitetsprincipen körs mot.
+  - Användaren har redan konfigurerat ett e-postkonto på enheten som matchar Intune-e-postprofilen som distribuerats till enheten. Intune kan inte skriva över den användarkonfigurerade profilen och Intune kan inte hantera den. För att vara kompatibel måste slutanvändaren ta bort de befintliga e-postinställningarna. Sedan kan Intune installera den hantera e-postprofilen.
 
-Information om e-postprofiler finns i [Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune](email-settings-configure.md).
+- **Välj den e-postprofil som måste hanteras av Intune**: Om inställningen **E-postkontot måste hanteras av Intune** används väljer du **Välj** för att ange Intune-e-postprofilen. E-postprofilen måste finnas på enheten.
+
+Mer information om e-postprofiler finns i [Använda e-postprofiler med Intune för att konfigurera åtkomst till organisationens e-post](email-settings-configure.md).
 
 ## <a name="device-health"></a>Device health
 
-- **Jailbrokade enheter**: Om du aktiverar den här inställningen är jailbrokade enheter inte kompatibla.
-- **Enheten måste ligga på eller under enhetshotnivån** (iOS 8.0 eller nyare): Välj den högsta hotnivån för att markera enheter som inkompatibla. Enheter som överskrider den här hotnivå markeras som inkompatibla:
-  - **Säkrad**: Det här alternativet är det säkraste eftersom enheten inte kan ha några hot. Om hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
+- **Jailbrokade enheter**: Välj **Blockera** om du vill markera rotade (jailbreakade) enheter som inkompatibla. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
+- **Kräv att enheten ska hållas vid eller under hotnivån för enheten** (iOS 8.0 och senare): Använd den här inställningen om du vill använda riskbedömningen som ett kompatibilitetsvillkor. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen. Om du vill använda den här inställningen väljer du den tillåtna hotnivån:
+  - **Skyddad**: Det här alternativet är säkrast och innebär att enheten inte kan ha några hot. Om hot på någon nivå identifieras på enheten betraktas den som inkompatibel.
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
-  - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-  - **Hög**: Det här alternativet är det minst säkra och det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
+  - **Medel**: Enheten utvärderas som kompatibel om hoten som finns på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
+  - **Hög**: Det här alternativet är det minst säkra då det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
 
 ## <a name="device-properties"></a>Egenskaper för enheten
 
-- **Lägsta operativsystemversion som krävs**: När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Användarna kan välja att uppgradera sina enheter. Därefter har de åtkomst till företagsresurser.
-- **Högsta tillåtna version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
-- **Lägsta OS-versionsnumret**: När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av Operativsystemet. Använd denna funktion för att ange ett minsta tillåtna versionsnummer på enheten. Den här kompatibilitetskontrollen stöder enheter som kör iOS 8.0 och senare. 
-- **Högsta OS-versionsnumret**: När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av Operativsystemet. Använd denna funktion för att ange ett högsta tillåtna versionsnummer på enheten. Den här kompatibilitetskontrollen stöder enheter som kör iOS 8.0 och senare.
+- **Lägsta operativsystemversion som krävs** (iOS 8.0 och senare): När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändarna kan välja att uppgradera sina enheter. Därefter kan de komma åt organisationens resurser.
+- **Högsta tillåtna operativsystemversion** (iOS 8.0 och senare): När en enhet använder en senare operativsystemversion än versionen i regeln, blockeras åtkomsten till organisationens resurser. Slutanvändaren uppmanas att kontakta IT-administratören. Enheten kan inte komma åt organisationens resurser förrän en regel ändras så att operativsystemversionen stöds.
+- **Lägsta operativsystembyggversion** (iOS 8.0 och senare): När Apple publicerar säkerhetsuppdateringar uppdateras oftast versionsnumret, inte operativsystemversionen. Använd denna funktion för att ange ett minsta tillåtna versionsnummer på enheten.
+- **Högsta operativsystembyggversion** (iOS 8.0 och senare): När Apple publicerar säkerhetsuppdateringar uppdateras oftast versionsnumret, inte operativsystemversionen. Använd denna funktion för att ange ett högsta tillåtna versionsnummer på enheten.
 
 ## <a name="system-security"></a>Systemsäkerhet
 
@@ -105,27 +80,25 @@ Information om e-postprofiler finns i [Konfigurera åtkomst till företagets e-p
 - **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
 - **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
 - **Krav på lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
-- **Antal icke-alfanumeriska tecken i lösenord**: Ange det lägsta antalet specialtecken lösenordet (&, #, %, ! och så vidare) som måste ingå i lösenordet.
+- **Antal icke-alfanumeriska tecken i lösenord**: Ange det lägsta antalet specialtecken, t.ex. `&`, `#`, `%` och `!`, som lösenordet måste innehålla.
 
     Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
 
 - **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
 - **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
-- **Förhindra återanvändning av tidigare lösenord**: Ange antalet tidigare lösenord som inte får återanvändas.
+- **Antal tidigare lösenord för att förhindra återanvändning**: Ange det antal tidigare lösenord som inte får återanvändas.
 
-### <a name="restricted-applications"></a>Begränsade program 
-Du kan begränsa appar genom att lägga till deras samlings-ID:n i principen. Om en enhet sedan har appen installerad kommer enheten att markeras som ej kompatibel. 
-- **Appnamn**: Ange ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t. 
-- **Appsamlings-ID**: Ange det unika samlings-ID som tilldelats av appleverantören. Information om att hitta samlings-ID finns i [Hitta samlings-ID för en iOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
+### <a name="device-security"></a>Enhetssäkerhet
 
-## <a name="assign-user-groups"></a>Tilldela användargrupper
+- **Begränsade appar**: Du kan begränsa appar genom att lägga till deras paket-ID:n till principen. Om appen är installerad på en enhet markeras enheten som inkompatibel.
 
-1. Välj en princip som du har konfigurerat. Befintliga principer finns i **Enhetsefterlevnad** > **Principer**.
-2. Välj principen och välj **Tilldelningar**. Du kan inkludera eller exkludera säkerhetsgrupper i Azure Active Directory (AD).
-3. Välj **Valda grupper** för att se dina Azure AD-säkerhetsgrupper. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj **Spara** för att distribuera principen till användare.
+  - **Appnamn**: Ange ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t.
+  - **Appsamlings-ID**: Ange det unika samlings-ID som tilldelats av appleverantören. Information om hur du hittar paket-ID:t finns i [Hitta paket-ID:t för en iOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (en annan Microsoft-webbplats öppnas).  
 
-Du har tillämpat principen på användarna. Enheterna som används av de användare som principen är inriktad på kommer att utvärderas för att se om de följer standard.
+Välj **OK** > **Skapa** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
-[Automatisera e-post och lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md)  
-[Övervaka efterlevnadsprinciper för Intune-enheter](compliance-policy-monitor.md)
+
+- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [Filtrera principer med hjälp av omfångstaggar](scope-tags.md).
+- [Övervaka dina kompatibilitetsprinciper](compliance-policy-monitor.md).
+- Mer information finns i [Inställningar för kompatibilitetsprinciper för macOS-enheter](compliance-policy-create-mac-os.md).

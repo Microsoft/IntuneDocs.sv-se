@@ -364,7 +364,7 @@ Nu kan du lägga till ID:n för företagsenheter manuellt. Välj **Enhetsregistr
 Microsoft Edge-webbläsaren för mobila enheter stödjer nu appskyddsprinciper som definieras i Intune.
 
 #### <a name="retrieve-the-associated-app-user-model-id-aumid-for-microsoft-store-for-business-apps-in-kiosk-mode----1560077----"></a>Hämta den kopplade appanvändarens modell-ID (AUMID) för Microsoft Store för företagsappar i helskärmsläge <!-- 1560077 ! -->
-Intune kan nu hämta appanvändarens modell-ID:n (AUMID:er) för Microsoft Store för företagsappar (WSfB) för bättre konfiguration av helskärmslägesprofilen.
+Nu kan Intune hämta appanvändarens modell-ID:n (AUMID:n) för Microsoft Store för företag-appar (WSfB) för enklare konfiguration av profilen för helskärmsläge.
 
 Mer information om Microsoft Store för företagsappar finns i [Hantera appar från Microsoft Store för företag](windows-store-for-business.md).
 
@@ -465,7 +465,7 @@ Om du vill se UDID (Unique Device Identifier) för iOS- och macOS-enheter går d
 På Microsoft Intune MDM-hanterade enheter kan ibland appinstallationer misslyckas. När dessa appinstallationer misslyckas, kan det vara en utmaning att förstå felorsaken eller felsöka problemet. Vi levererar en allmänt tillgänglig förhandsversion av våra appfelsökningsfunktioner. Du ser en ny nod under varje enskild enhet som kallas **Hanterade appar**. Den visar en lista med appar som har levererats via Intune MDM. I noden visas en lista över installeringstillstånd för appar. Om du väljer en enskild app visas vyn felsökning för den specifika appen. I felsökningsvyn visas slutpunkt till slutpunkt-livscykeln för appen, till exempel när appen har skapats, ändrats, riktats och levererats till en enhet. Dessutom, om inte appinstallationen lyckades visas felkoden och ett användbart meddelande om orsaken till felet. 
 
 #### <a name="intune-app-protection-policies-and-microsoft-edge----1818968---"></a>Intune-appskyddsprinciper och Microsoft Edge <!-- 1818968 -->
-Microsoft Edge-webbläsaren för mobila enheter (iOS och Android) har nu stöd för skyddsprinciper i Microsoft Intune-appen. Användare med iOS- och Android-enheter som loggar in med företagets Azure AD-konto i Edge kommer att skyddas av Intune. På iOS-enheter gör principen **Kräver hanterad webbläsare för webbinnehåll** att användarna kan öppna länkar i Microsoft Edge när det hanteras.
+Microsoft Edge-webbläsaren för mobila enheter (iOS och Android) har nu stöd för skyddsprinciper i Microsoft Intune-appen. Användare med iOS- och Android-enheter som loggar in med företagets Azure AD-konto i Microsoft Edge skyddas av Intune. På iOS-enheter gör principen **Kräver hanterad webbläsare för webbinnehåll** att användarna kan öppna länkar i Microsoft Edge när det hanteras.
 
 <!-- ########################## -->
 ## <a name="may-2018"></a>Maj 2018
@@ -703,7 +703,7 @@ Android Enterprise (tidigare Android for Work) stöder inkludering och exkluderi
 ### <a name="export-all-devices-into-csv-files-in-ie-microsoft-edge-or-chrome----2258071---"></a>Exportera alla enheter till CSV-filer i Internet Explorer, Microsoft Edge eller Chrome <!-- 2258071 -->
 I **Enheter** > **Alla enheter** kan du **exportera** enheterna till en CSV-formaterad lista. Internet Explorer-användare med fler än 10 000 enheter kan exportera enheterna till flera filer. Varje fil kan ha upp till 10 000 enheter.
 
-Edge- och Chrome-användare med fler än 30 000 enheter kan exportera enheterna till flera filer. Varje fil kan ha upp till 30 000 enheter.
+Microsoft Edge- och Chrome-användare med fler än 30 000 enheter kan exportera enheterna till flera filer. Varje fil kan ha upp till 30 000 enheter.
 
 I [Hantera enheter](device-management.md) finns mer information om vad du kan göra med de enheter som du hanterar.
 
@@ -1369,7 +1369,7 @@ Microsoft Planner-appen för iOS och Android är nu del av de godkända apparna 
 Administratörer kan nu ta bort per App-VPN-kravet för appar på iOS-enheter. Berörda enheter kommer efter deras nästa Intune-incheckning, vilket vanligtvis sker inom 15 minuter.  
 
 ### <a name="support-for-system-center-operations-manager-management-pack-for-exchange-connector----885457---"></a>Stöd för System Center Operations Manager-hanteringspaket för Exchange-anslutningsapp <!-- 885457 -->
-SCOM-hanteringspaketet (System Center Operations Manager) för Exchange-anslutningsappen finns nu tillgängligt att hjälpa dig parsa Exchange-anslutningsloggarna. Den här funktionen ger dig flera olika sätt att övervaka tjänsten när du behöver felsöka problem.
+Nu är SCOM-hanteringspaketet (System Center Operations Manager) för Exchange-anslutningsappen tillgängligt och hjälper dig att parsa Exchange-anslutningsloggarna. Den här funktionen ger dig flera olika sätt att övervaka tjänsten när du behöver felsöka problem.
 
 ### <a name="co-management-for-windows-10-devices-----1243445---"></a>Samhantering för Windows 10-enheter  <!-- 1243445 -->
 Samhantering är en lösning som erbjuder en brygga från traditionell till modern hantering, och det ger dig en sökväg för att göra övergången stegvis. I grund och botten är samhantering en lösning där Windows 10-enheter samtidigt hanteras av Configuration Manager och Microsoft Intune, som är anslutna till Active Directory (AD) och Azure Active Directory (Azure AD).  Den här konfigurationen ger dig en sökväg för att modernisera med tiden i den takt som passar din organisation om du inte kan flytta allt på samma gång.  
@@ -1426,7 +1426,7 @@ Med Intune kan du konfigurera principer för programkontroll i läget för ”en
 ### <a name="window-defender-exploit-guard-is-a-new-set-of-intrusion-prevention-capabilities-for-windows-10----1063615---"></a>Window Defender Exploit Guard är en ny uppsättning intrångsförebyggande funktioner för Windows 10 <!-- 1063615 -->   
 Window Defender Exploit Guard innehåller anpassade regler för att minska sårbarheter i program, förhindra makro- och skripthot, automatiskt blockera nätverksanslutningar till IP-adresser med dåligt rykte och kan skydda data mot utpressningstrojaner och okända hot. Windows Defender Exploit Guard består av följande komponenter:
 
-- **Attack Surface Reduction (ASR)** tillhandahåller regler som tillåter dig att förhindra hot via makron, skript och e-post.
+- **Attack Surface Reduction (ASR)** tillhandahåller regler som hjälper dig att förhindra hot via makron, skript och e-post.
 - **Reglerad mappåtkomst** blockerar automatiskt åtkomst till innehåll i skyddade mappar.
 - **Nätverksfilter** blockerar utgående anslutning från valfri app för IP/domän med dåligt rykte
 - **Sårbarhetsskydd** erbjuder begränsningar för minne, kontrollflöde och principer som kan användas för att skydda ett program mot sårbarheter.
@@ -1566,7 +1566,7 @@ Företagsprogram som har gjorts tillgängliga med eller utan registreringen i An
 Nu kan du använda Microsoft Intune med Windows AutoPilot-distributionsprogrammet och ge dina användare möjlighet att etablera sina företagsenheter utan hjälp från IT-avdelningen. Du kan anpassa OOBE-åtgärderna (Out-of-Box Experience) och vägleda användarna när de ska ansluta sina enheter till Azure AD och registrera sig i Intune. Microsoft Intune och Windows AutoPilot samarbetar för att eliminera behovet av att distribuera, underhålla och hantera operativsystemavbildningar. Läs mer i informationen om att [registrera Windows-enheter med Windows AutoPilot-distributionsprogrammet](https://docs.microsoft.com/intune/enrollment-autopilot).
 
 ### <a name="quickstart-for-device-enrollment----1425655---"></a>Snabbstart för enhetsregistrering  <!-- 1425655 --> 
-Nu är snabbstart tillgängligt i **Enhetsregistrering** och innehåller en tabell med referenser för hantering av plattformar och konfigurering av registreringsprocessen. Via en kort beskrivning av varje objekt och länkar till dokumentation med stegvisa instruktioner får du användbar dokumentation för att enklare komma igång.
+Nu finns en snabbstart tillgänglig i **Enhetsregistrering** med en tabell med referenser som hjälper dig att hantera plattformar och att konfigurera registreringsprocessen. Via en kort beskrivning av varje objekt och länkar till dokumentation med stegvisa instruktioner får du användbar dokumentation för att enklare komma igång.
 
 ### <a name="device-categorization----1427491---"></a>Enhetskategorisering <!-- 1427491 -->
 De registrerade enheternas plattformsdiagram på bladet **Enheter > Översikt** ordnar enheter efter plattform, inklusive Android, iOS, macOS, Windows och Windows Mobile.  Enheter som kör andra operativsystem är grupperade i ”Övrigt”.  Detta inkluderar enheter som har tillverkats av Blackberry och NOKIA.  
@@ -1883,7 +1883,7 @@ Intune stöder nu uppladdning av iOS-, macOS- och Android-serienummer som identi
 ### <a name="new-remote-actions-for-ios-devices----854689---"></a>Nya fjärråtgärder för iOS-enheter <!-- 854689 -->
 I den här versionen har vi lagt till två nya fjärråtgärder som hanterar Apple Classroom-appen på delade iPad-enheter:
 
--   [Logga ut aktuell användare](device-logout-user.md) – Loggar ut den aktuella användaren av den valda iOS-enheten.
+-   [Logga ut aktuell användare](device-logout-user.md) – Loggar ut den aktuella användaren för den valda iOS-enheten.
 -   [Ta bort användare](device-remove-user.md) – Tar bort en vald användare från den lokala cachen på en iOS-enhet.
 
 
@@ -2142,7 +2142,7 @@ Nu kan du skapa en [uppgraderingsprincip för utgåvor för att uppgradera enhet
 - Windows 10 Professional Education N
 
 ### <a name="bulk-enroll-windows-10-devices----747607---"></a>Massregistrera Windows 10-enheter <!-- 747607 -->
-Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](windows-bulk-enroll.md) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter kommer de anslutas till Azure AD, registreras i Intune och vara redo för att Azure AD-användarna ska logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
+Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](windows-bulk-enroll.md) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter ansluts de till Azure AD, registreras i Intune och är redo för inloggning av Azure AD-användarna.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
 
 ### <a name="new-mam-settings-for-pin-and-managed-storage-locations----581122-736644---"></a>Nya MAM-inställningar för PIN-kod och hanterade lagringsplatser <!-- 581122, 736644 -->
 Det finns nu två nya appinställningar som hjälper dig med scenarier för hantering av mobilprogram (MAM):

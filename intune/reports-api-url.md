@@ -64,7 +64,7 @@ Du kan testa de nya funktionerna i betaversionen av informationslagret. För att
 
 ## <a name="odata-query-options"></a>OData-frågealternativ
 
-Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter`, `$select`, `$skip,` och `$top`. I `$filter`, endast `DateKey` eller `RowLastModifiedDateTimeUTC` kanske stöds när kolumnerna som är tillämpliga och andra egenskaper som ska utlösa en felaktig begäran.
+Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter`, `$select`, `$skip,` och `$top`. I `$filter` kanske endast `DateKey` eller `RowLastModifiedDateTimeUTC` stöds när kolumnerna kan användas, och andra egenskaper skulle utlösa en felaktig begäran.
 
 ## <a name="datekey-range-filters"></a>DateKey-intervallfilter
 

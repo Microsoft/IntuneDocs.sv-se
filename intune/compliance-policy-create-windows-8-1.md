@@ -1,6 +1,6 @@
 ---
-title: Utbildningsinställningar för Windows 8.1 i Microsoft Intune – Azure | Microsoft Docs
-description: Se en lista över alla inställningar som du kan använda när du ställer in kompatibilitet för din Windows 8.1 och Windows Phone 8.1-enheter i Microsoft Intune. Kontrollera efterlevnad på lägsta och högsta operativsystemet, ange begränsningar för lösenord och längd, aktivera kryptering på datalagring och mycket mer.
+title: Kompatibilitetsinställningar för Windows 8.1 i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över alla inställningar som du kan använda när du konfigurerar kompatibilitet för Windows 8.1- och Windows Phone 8.1-enheter i Microsoft Intune. Kontrollera kompatibiliteten med den lägsta och högsta operativsystemversionen, ange begränsningar och längd för lösenord, aktivera kryptering för datalagring och mycket mer.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -22,27 +22,27 @@ ms.contentlocale: sv-SE
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59424960"
 ---
-# <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Windows 8.1 att markera enheter som kompatibla eller inte är kompatibla med Intune
+# <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 8.1-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln visar en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Windows 8.1-enheter i Intune. Använd inställningarna som en del av din lösning för hantering av mobila enheter, vill blockera enkla lösenord kan du ange en lägsta och högsta version av Operativsystemet och mycket mer.
+Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Windows 8.1-enheter i Intune. Använd dessa inställningar som en del av din MDM-lösning för hantering av mobilenheter för att blockera enkla lösenord, ange en lägsta och högsta tillåten operativsystemversion och mycket mer.
 
 Den här funktionen gäller för:
 
 - Windows Phone 8.1
 - Windows 8.1 och senare
 
-Som Intune-administratör kan använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Som Intune-administratör kan du använda dessa kompatibilitetsinställningar för att skydda din organisations resurser. Mer om kompatibilitetsprinciper och vad de gör finns i [Komma igång med kompatibilitet](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-[Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). För **plattform**väljer **Windows Phone 8.1** eller **Windows 8.1 och senare**.
+[Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). För **Plattform** väljer du **Windows Phone 8.1** eller **Windows 8.1 och senare**.
 
 ## <a name="device-properties"></a>Egenskaper för enheten
 
-- **Lägsta Operativsystemversion som krävs**: Ange den lägsta tillåtna versionen. När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
-- **Högsta tillåtna operativsystemversion**: Ange den högsta tillåtna version. När en enhet använder en senare version av operativsystemet än den som angivits i regeln, blockeras åtkomsten till företagets resurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän du ändrar regeln för att tillåta operativsystemets version.
+- **Lägsta version av operativsystemet som krävs**: Ange den lägsta tillåtna versionen. När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
+- **Högsta tillåtna version av operativsystemet**: Ange den högsta tillåtna versionen. När en enhet använder en senare version av operativsystemet än den som angivits i regeln, blockeras åtkomsten till företagets resurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän du ändrar regeln för att tillåta operativsystemets version.
 
 Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsystemsversion är inställd på Windows 8.1 för Windows rapporteras enheten som inkompatibel även om den har Windows 8.1.
 
@@ -83,6 +83,6 @@ Välj **OK** > **Skapa** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [använda omfångstaggar om du vill filtrera principer](scope-tags.md).
-- [Övervaka dina efterlevnadspolicyer](compliance-policy-monitor.md).
-- Se den [inställningar för efterlevnadsprinciper för Windows 10 och senare](compliance-policy-create-windows.md) enheter.
+- [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) och [Filtrera principer med hjälp av omfångstaggar](scope-tags.md).
+- [Övervaka dina kompatibilitetsprinciper](compliance-policy-monitor.md).
+- Mer information finns i [Inställningar för kompatibilitetsprinciper för enheter med Windows 10 och senare](compliance-policy-create-windows.md).

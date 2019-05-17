@@ -29,7 +29,7 @@ Den här artikeln beskriver alla olika inställningar som du kan styra på enhet
 Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som sedan tilldelas eller distribueras till dina Windows 10-enheter.
 
 > [!Note]
-> Alla alternativ finns inte tillgängliga i alla utgåvor av Windows. Om du vill se versionerna som stöds, referera till den [princip CSP: er](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (öppnas ett annat Microsoft-webbplats).
+> Alla alternativ finns inte tillgängliga i alla utgåvor av Windows. Information om vilka versioner som stöds finns i [princip-CSP:er](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (en annan Microsoft-webbplats öppnas).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -138,15 +138,15 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Dialogruta om SIM-kortsfel (endast mobil)**: Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
 - **Ink-arbetsytan**: Blockerar användare från att komma åt Ink-arbetsytan. **Inte konfigurerat** aktiverar Ink-arbetsytan och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution**: Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
-- **Kräv att användarna ansluter till nätverket när enheten installeras (endast Windows Insider)**: Välj **Kräv** så att enheten ansluter till ett nätverk innan den fortsätter förbi sidan Nätverk under konfigurationen av Windows 10.
+- **Användarna måste ansluta till nätverket när enheten ställs in**: Välj **Kräv** så att enheten ansluter till ett nätverk innan användarna går förbi sidan Nätverk under installationen av Windows 10.
 
-  Inställningen börjar gälla nästa gång enheten rensas eller återställas. Som alla andra Intune-konfiguration, enheten registreras och hanteras av Intune och ta emot konfigurationsinställningar. Men när den har registrerats och tar emot principer, återställer enheten tillämpar inställningen under nästa Windows-installationen.
+  Inställningen börjar gälla nästa gång enheten rensas eller återställs. Som alla andra Intune-konfigurationer måste enheten vara registrerad och hanteras av Intune för att ta emot konfigurationsinställningar. När den har registrerats och tar emot principer tillämpas inställningen under nästa Windows-installation om enheten återställs.
 
 - **Direct Memory Access**: **Blockera** förhindrar direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med enhetsbyte vid drift tills en användare loggar in i Windows. **Aktiverad** (standard) ger åtkomst till DMA, även när en användare inte har loggat in.
 
   CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
-- **Avsluta processer i Aktivitetshanteraren**: den här inställningen avgör om icke-administratörer kan använda Aktivitetshanteraren för att avsluta aktiviteter. **Blockera** förhindrar standardanvändare (icke-administratörer) att använda Aktivitetshanteraren till att avsluta en process eller uppgift på enheten. **Inte konfigurerad** (standard) låter standardanvändare att avsluta en process eller uppgift med Aktivitetshanteraren.
+- **Avsluta processer från Aktivitetshanteraren**: Den här inställningen avgör om andra användare än administratörer kan använda Aktivitetshanteraren för att avsluta aktiviteter. **Blockera** förhindrar standardanvändare (icke-administratörer) att använda Aktivitetshanteraren till att avsluta en process eller uppgift på enheten. **Inte konfigurerad** (standard) låter standardanvändare att avsluta en process eller uppgift med Aktivitetshanteraren.
 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
@@ -165,28 +165,28 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge-webbläsaren
 
-### <a name="use-microsoft-edge-kiosk-mode"></a>Använda Microsoft Edge helskärmsläge
+### <a name="use-microsoft-edge-kiosk-mode"></a>Använda helskärmsläget i Microsoft Edge
 
-De tillgängliga inställningarna ändras beroende på vad du väljer. Alternativen är:
+De tillgängliga inställningarna varierar beroende på vad du väljer. Alternativen är:
 
-- **Inte** (standard): Microsoft Edge inte körs i helskärmsläge. Alla Microsoft Edge-inställningar är tillgängliga för dig att ändra och konfigurera.
-- **Digital/interaktiv signering (kiosk för enskilda appar)**: filter Microsoft Edge-inställningar som gäller för Digital/interaktiv signering Microsoft Edge helskärmsläge för användning endast på Windows 10 single-appar. Välj den här inställningen för att öppna URL: en helskärm och endast visa innehållet på webbplatsen. [Ställ in digitala loggar](https://docs.microsoft.com/windows/configuration/setup-digital-signage) finns mer information om den här funktionen.
-- **InPrivate-offentliga surfning (kiosk för enskilda appar)**: filter Microsoft Edge-inställningar som gäller för InPrivate offentliga surfning Microsoft Edge helskärmsläge för användning på Windows 10 single-appar. Kör en flera fliken version av Microsoft Edge.
-- **Normalt läge (helskärmsläge)**: filter Microsoft Edge-inställningar som gäller för helskärmsläge för Normal Microsoft Edge. Kör en fullständig version av Microsoft Edge med alla webbläsarens funktioner.
-- **Offentliga surfning (helskärmsläge)**: filter Microsoft Edge-inställningar som gäller för offentliga surfning på en Windows 10-helskärmsläge.  Kör en flera fliken version av Microsoft Edge InPrivate.
+- **Nej** (standard): Microsoft Edge körs inte i helskärmsläge. Alla Microsoft Edge-inställningar kan ändras och konfigureras.
+- **Digital/interaktiv signering (helskärmsenhet för enstaka app)**: Filtrerar Microsoft Edge-inställningar som gäller för digital/interaktiv signering med Microsoft Edge-helskärmsläge för användning med enskilda appar i Windows 10-helskärmsläge. Välj den här inställningen om du vill öppna URL:en i helskärmsläge och endast visa innehållet på webbplatsen. Mer information om den här funktionen finns i [Konfigurera digital signering](https://docs.microsoft.com/windows/configuration/setup-digital-signage).
+- **Offentlig surfning InPrivate (helskärmsenhet för enstaka app)**: Filtrerar Microsoft Edge-inställningar som kan användas i Microsoft Edge-helskärmsläge med offentlig InPrivate-surfning när Windows 10-helskärmsläge används med enstaka appar. Kör en version av Microsoft Edge med flera flikar.
+- **Normalt läge (helskärmsenhet för flera appar)**: Filtrerar Microsoft Edge-inställningar som kan användas i normalt helskärmsläge med Microsoft Edge. Kör en fullständig version av Microsoft Edge med alla webbläsarens funktioner.
+- **Offentlig surfning (helskärmsenhet för flera appar)**: Filtrerar Microsoft Edge-inställningar som kan användas med offentliga surfning i Windows 10-helskärmsläge för flera appar.  Kör en version av InPrivate i Microsoft Edge med flera flikar.
 
 > [!TIP]
-> Läs mer om vad dessa alternativ göra [konfigurationerna för Microsoft Edge helskärmsläge läge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+> Mer information om vad dessa alternativ gör finns i [Typer av konfigurationer för Microsoft Edge-helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-Den här profilen för enhetsbegränsningar är direkt relaterad till kioskprofilen du skapar med den [Windows-inställningar för helskärmsläge](kiosk-settings-windows.md). Sammanfattningsvis:
+Den här profilen för enhetsbegränsning är direkt kopplad till profilen för helskärmsläge som du skapar med [inställningarna för Windows-helskärmsläge](kiosk-settings-windows.md). Sammanfattningsvis:
 
-1. Skapa den [Windows-inställningar för helskärmsläge](kiosk-settings-windows.md) profil för att köra enheten i helskärmsläge. Välj Microsoft Edge som programmet och ställa in helskärmsläge för Microsoft Edge i profilen för helskärmsläge.
-2. Skapar en enhetsprofil begränsningar som beskrivs i den här artikeln och konfigurera specifika funktioner och inställningar i Microsoft Edge. Se till att välja av samma typ som väljs i din kioskprofilen läge för helskärmsläge av Microsoft Edge ([Windows-inställningar för helskärmsläge](kiosk-settings-windows.md)). 
+1. Skapa profilen med [inställningar för Windows-helskärmsläge](kiosk-settings-windows.md) för att köra enheten i helskärmsläge. Välj Microsoft Edge som programmet och ställ in helskärmsläge för Microsoft Edge i profilen för helskärmsläge.
+2. Skapa profilen för enhetsbegränsning som beskrivs i den här artikeln och konfigurera specifika funktioner och inställningar som tillåts i Microsoft Edge. Var noga med att välja samma typ av Microsoft Edge-helskärmsläge som du valde i profilen för helskärmsläge ([inställningarna för Windows-helskärmsläge](kiosk-settings-windows.md)). 
 
-    [Stöd för inställningar för helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) är en bra resurs.
+    [Inställningar som stöds för helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) är en bra resurs.
 
 > [!IMPORTANT] 
-> Se till att tilldela den här Microsoft Edge-profilen till samma enheter som din kioskprofilen ([Windows-inställningar för helskärmsläge](kiosk-settings-windows.md)).
+> Var noga med att tilldela den här Microsoft Edge-profilen till samma enheter som profilen för helskärmsläge ([inställningarna för Windows-helskärmsläge](kiosk-settings-windows.md)).
 
 [ConfigureKioskMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
@@ -208,9 +208,9 @@ Den här profilen för enhetsbegränsningar är direkt relaterad till kioskprofi
 - **Användaren kan ändra hemknapp**: **Tillåt** låter användarna ändra hemknappen. Användarens ändringar åsidosätter eventuella administratörsinställningar för hemknappen. **Inte konfigurerad** använder operativsystemets standardbeteende på enheten, vilket kan hindra användare från att ändra hur administratören har konfigurerat hemknappen.
 - **Visa sidan Välkomstprogram**: **Blockera** hindrar introduktionssidan från att visas första gången du kör Microsoft Edge. Den här funktionen låter företag, exempelvis de som registrerat sig för nollutsläppskonfigurationer att blockera den här sidan. **Inte konfigurerad** visar introduktionssidan.
   - **Webbadress till välkomstprogram**: Ange webbadressen som ska visas första gången en användare kör Microsoft Edge (endast Windows 10 Mobile).
-- **Uppdatera webbläsaren efter hur lång tids inaktivitet**: Ange antalet inaktiva minuter tills webbläsaren uppdateras från 0 – 1440 minuter. Standardvärdet är `5` minuter. När värdet `0` (noll), som webbläsaren inte uppdatera efter inaktivitet.
+- **Uppdatera webbläsaren efter inaktivitetstid**: Ange efter hur många minuters inaktivitet som webbläsaren ska uppdateras, från 0–1 440 minuter. Standardvärdet är `5` minuter. När värdet är `0` (noll) uppdateras inte webbläsaren efter en viss tids inaktivitet.
 
-  Den här inställningen är endast tillgänglig när du kör i [offentliga InPrivate-surfning (för enskild kiosk)](#use-microsoft-edge-kiosk-mode).
+  Den här inställningen är endast tillgänglig när du kör med [offentlig InPrivate-surfning (helskärmsläge för enstaka app)](#use-microsoft-edge-kiosk-mode).
 
   CSP: [ConfigureKioskResetAfterIdleTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskresetafteridletimeout)
 
@@ -245,9 +245,9 @@ Den här profilen för enhetsbegränsningar är direkt relaterad till kioskprofi
   - Yahoo
   - Anpassat värde
 - **Sökförslag**: **Inte konfigurerat** innebär att din sökmotor föreslår webbplatser när du skriver sökfraser i adressfältet. **Blockera** förhindrar den här funktionen.
-- **Tillåt ändringar av sökmotor**: **Ja** (standard) kan du lägga till nya sökmotorer eller ändra standardsökmotorn i Microsoft Edge. Välj **nr** att hindra användare från att anpassa sökmotorn.
+- **Tillåt ändringar av sökmotorn**: **Ja** (standard) tillåter användare att lägga till nya sökmotorer eller att ändra standardsökmotorn i Microsoft Edge. Välj **Nej** om du vill hindra användarna från att anpassa sökmotorn.
 
-  Den här inställningen är endast tillgänglig när du kör i [normalläge (helskärmsläge)](#use-microsoft-edge-kiosk-mode).
+  Den här inställningen är endast tillgänglig med [normalläge (helskärmsläge för flera appar)](#use-microsoft-edge-kiosk-mode).
 
   CSP: [AllowSearchEngineCustomization](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization)
 
@@ -308,27 +308,27 @@ Den här profilen för enhetsbegränsningar är direkt relaterad till kioskprofi
   - **Förhindra återanvändning av tidigare lösenord**: Anger hur många tidigare använda lösenord enheten kommer ihåg.
   - **Kräv lösenord när enheten lämnar inaktivt läge (endast mobil)**: Anger att användaren måste ange ett lösenord för att kunna låsa upp enheten (endast Windows 10 Mobile).
   - **Enkla lösenord**: Låter dig använda enkla lösenord som 1111 och 1234. Dessutom tillåter eller blockerar den här inställningen användningen av Windows-bildlösenord.
-- **Automatisk kryptering under AADJ**: **blockera** förhindrar automatisk BitLocker-enhetskryptering när enheten förbereds för första användning när enheten är ansluten till Azure AD. **Inte konfigurerad** (standard) använder operativsystemet standard, vilket kan göra det möjligt för kryptering. Mer på [BitLocker-enhetskryptering](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+- **Automatisk kryptering under AADJ**: **Blockera** förhindrar automatisk BitLocker-enhetskryptering när enheten förbereds för första användning, när enheten är ansluten till Azure AD. **Inte konfigurerad** (standard) använder operativsystemets standardinställning, som kan tillåta kryptering. Mer om [BitLocker-enhetskryptering](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Federala FIPS Information Processing Standard ()-policy**: **Tillåt** använder federala FIPS Information Processing Standard ()-policy, som är en US government standard för kryptering, hashing och signering. **Inte konfigurerad** (standard) använder operativsystemet standard, som inte använder FIPS.
+- **Princip för FIPS-standard (Federal Information Processing Standard)**: **Tillåt** använder FIPS-principen (Federal Information Processing Standard), som är standarden för kryptering, hashing och signering för amerikanska myndigheter. **Inte konfigurerad** (standard) använder operativsystemets standardinställning, som inte använder FIPS.
 
   [Cryptography/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Windows Hello-enhetsautentisering**: **Tillåt** användare att använda en Windows Hello tillhörande enhet, till exempel en telefon, lämplighet band eller IoT-enheter för att logga in på en Windows 10-dator. **Inte konfigurerad** (standard) använder operativsystemet, vilket förhindrar att Windows Hello tillhörande enheter autentiseras med Windows.
+- **Windows Hello-enhetsautentisering**: **Tillåt** att användare använder en Windows Hello-tillbehörsenhet, t.ex. en telefon, ett fitnessband eller en IoT-enhet, för att logga in på en Windows 10-dator. **Inte konfigurerad** (standard) använder operativsystemets standardinställning, som kan förhindra att Windows Hello-tillbehörsenheter autentiseras med Windows.
 
   [Authentication/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
-- **Webb-inloggning**: aktiverar Windows logga in stöd för icke-AD FS (Active Directory Federation Services) federerade leverantörer, till exempel Security Assertion Markup Language (SAML). SAML använder säker token som tillhandahåller användarvänlighet webbläsare en enkel inloggning (SSO). Alternativen är:
+- **Webbinloggning**: Aktiverar stöd för Windows-inloggning för providers som inte är ADFS-federerade providers (Active Directory Federation Services), till exempel SAML (Security Assertion Markup Language). SAML använder säkra token som ger möjlighet att använda enkel inloggning med webbläsare. Alternativen är:
 
-  - **Inte konfigurerad** (standard): använder operativsystemet på enheten.
-  - **Aktiverad**: Web autentiseringsuppgift providern är aktiverad för inloggning.
-  - **Inaktiverad**: Web autentiseringsuppgift providern är inaktiverad för inloggning.
+  - **Inte konfigurerad** (standard): Använder operativsystemets standardinställning på enheten.
+  - **Aktiverad**: Providern för webbautentiseringsuppgifter är aktiverad för inloggning.
+  - **Inaktiverad**: Providern för webbautentiseringsuppgifter är inaktiverad för inloggning.
 
   [Authentication/EnableWebSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
 
-- **Önskade Azure AD-klientdomänen**: Ange ett befintligt domännamn i Azure AD-organisation. När användare i den här domänen loggar in kan behöver de inte ange domännamnet. Ange till exempel `contoso.com`. Användare i den `contoso.com` domän kan logga in med sina användarnamn, t.ex. ”abby”, i stället för ”abby@contoso.com”.
+- **Önskad domän för Azure AD-klientorganisation**: Ange ett befintligt domännamn i din Azure AD-organisation. När användare i den här domänen loggar in behöver de inte ange domännamnet. Ange till exempel `contoso.com`. Användare i `contoso.com`-domänen kan logga in med sina användarnamn, t.ex. ”abby”, i stället för ”abby@contoso.com”.
 
   [Authentication/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
@@ -494,7 +494,7 @@ Du kan konfigurera den information som alla appar på enheten kan komma åt. Du 
 - **Användaråtkomst till Defender**: Styr om Windows Defender-användargränssnittet är dolt för slutanvändarna. När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
 - **Intervall för signaturuppdatering (i timmar)**: Ange med vilket intervall Defender söker efter nya signaturfiler.
 - **Övervaka fil- och programaktivitet**: Tillåter att Defender övervakar fil- och programaktivitet på enheter.
-- **Dagar innan du tar bort skadlig kod i karantän**: fortsätta spåra löst skadlig kod för hur många dagar som du anger så att du kan kontrollera tidigare berörda enheter manuellt. Om du anger antalet dagar till **0** finns skadlig kod kvar i karantänmappen och tas inte bort automatiskt.
+- **Dagar innan skadlig kod i karantän tas bort**: Fortsätt att spåra åtgärdad skadlig kod i det antal dagar du anger, så att du manuellt kan kontrollera tidigare berörda enheter. Om du anger antalet dagar till **0** finns skadlig kod kvar i karantänmappen och tas inte bort automatiskt.
 - **Gräns för processoranvändning under en genomsökning**: Låter dig begränsa hur mycket processorkraft som genomsökningarna får använda (från **1** till **100**).
 - **Sök igenom arkivfiler**: Tillåter att Defender söker igenom arkiverade filer, till exempel ZIP- eller CAB-filer.
 - **Sök igenom inkommande e-postmeddelanden**: Tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten.
@@ -504,25 +504,25 @@ Du kan konfigurera den information som alla appar på enheten kan komma åt. Du 
 - **Sök igenom filer öppnade från nätverksmappar**: Tillåter att Defender genomsöker filer på delade nätverksenheter (till exempel filer som nås från en UNC-sökväg). Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
 - **Molnskydd**: Tillåter eller förhindrar att Microsoft Active Protection Service tar emot information om aktiviteter med skadlig kod från enheter som du hanterar. Den här informationen förbättrar tjänsten i framtiden.
 - **Be användarna att skicka exempel**: Anger om potentiellt skadliga filer som kan kräva ytterligare analys ska skickas automatiskt till Microsoft.
-- **Tidpunkt för daglig Snabbsökning**: Välj timme att köra en daglig Snabbsökning. **Inte konfigurerad** inte kör en daglig sökning. Om du vill anpassa mer, konfigurera den **typ av systemgenomsökning som ska utföra** inställningen.
+- **Tidpunkt för daglig snabbsökning**: Välj när den dagliga snabbgenomsökningen ska köras. **Inte konfigurerad** kör ingen daglig genomsökning. Om du vill göra fler anpassningar konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
 
   [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
-- **Typ av systemgenomsökning som ska utföra**: Schemalägg en genomsökning av datorn, inklusive nivå för genomsökningen, och dag och tid för att köra genomsökningen. Alternativen är:
-  - **Inte konfigurerad**: inte Schemalägg en systemsökning på enheten. Slutanvändare kan manuellt köra genomsökningar som krävs eller önskade på sina enheter.
-  - **Inaktivera**: inaktiverar alla system genomsökning på enheten. Välj det här alternativet om du använder en partnerlösning ett virusskyddsprogram som söker igenom enheter.
-  - **Snabbsökning**: tittar på vanliga platser där det kan finnas skadlig kod är registrerade, till exempel registernycklar och kända startmappar i Windows.
-    - **Schemalagd dag**: Välj vilken dag vid sökningen.
-    - **Schemalagd tid**: Välj timme att köra genomsökningen.
-  - **Fullständig genomsökning**: tittar på vanliga platser där det kan finnas skadlig programvara registrerad och också söker igenom alla filer och mappar på enheten.
-    - **Schemalagd dag**: Välj vilken dag vid sökningen.
-    - **Schemalagd tid**: Välj timme att köra genomsökningen.
+- **Typ av systemgenomsökning som ska utföras**: Schemalägg en systemgenomsökning, inklusive genomsökningsnivå och dag och tid då genomsökningen ska köras. Alternativen är:
+  - **Inte konfigurerad**: Schemalägger inte en systemgenomsökning på enheten. Slutanvändarna kan manuellt köra genomsökningar efter behov och önskemål på sina enheter.
+  - **Inaktivera**: Inaktiverar alla systemgenomsökningar på enheten. Välj det här alternativet om du använder en virusskyddslösning från tredje part som söker igenom enheter.
+  - **Snabbsökning**: Söker på vanliga platser där det kan finnas skadlig kod, till exempel registernycklar och kända startmappar i Windows.
+    - **Schemalagd dag**: Välj vilken dag genomsökningen ska köras.
+    - **Schemalagd tid**: Välj vilken timme genomsökningen ska köras.
+  - **Fullständig sökning**: Letar på vanliga platser där det kan finnas skadlig kod och söker också igenom alla filer och mappar på enheten.
+    - **Schemalagd dag**: Välj vilken dag genomsökningen ska köras.
+    - **Schemalagd tid**: Välj vilken timme genomsökningen ska köras.
 
-  Den här inställningen orsaka en konflikt med den **tidpunkt för daglig Snabbsökning** inställningen. Några rekommendationer:
+  Den här inställningen kan orsaka en konflikt med inställningen **Tidpunkt för daglig snabbsökning**. Några rekommendationer:
 
-  - Kör dagligen en snabbgenomsökning genom att konfigurera den **tidpunkt för daglig Snabbsökning** inställningen.
-  - Du kan köra en daglig Snabbsökning och en fullständig genomsökning varje vecka, konfigurera den **tidpunkt för daglig Snabbsökning**, och Ställ in **typ av systemgenomsökning som ska utföra** i en fullständig sökning med dag och tid.
-  - Konfigurera inte den **tidpunkt för daglig Snabbsökning** ange samtidigt med den **typ av systemgenomsökning som ska utföra** inställd **Snabbsökning**. De här inställningarna orsaka en konflikt och en sökning körs inte.
-  - Om du vill köra en snabbgenomsökning varje tisdag 06: 00, konfigurera den **typ av systemgenomsökning som ska utföra** inställningen.
+  - Om du vill köra en daglig snabbsökning konfigurerar du inställningen **Tidpunkt för daglig snabbsökning**.
+  - Om du vill köra en daglig snabbgenomsökning och en fullständig sökning varje vecka konfigurerar du **Tidpunkt för daglig snabbsökning** och ställer in **Typ av systemgenomsökning som ska utföras** till en fullständig sökning med dagen och tidpunkten.
+  - Konfigurera inte inställningen **Tidpunkt för daglig snabbsökning** samtidigt som **Typ av systemgenomsökning som ska utföras** är inställd på **Snabbsökning**. Dessa inställningar kan orsaka en konflikt och genomsökningen kanske inte körs.
+  - Om du vill köra en snabbgenomsökning varje tisdag 06:00 konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
 
   [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  

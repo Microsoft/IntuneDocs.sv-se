@@ -34,7 +34,7 @@ Intune App SDK:n stöder liknande scenarier över iOS och Android och är avsedd
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Om din app är en intern app för din organisation som inte ska publiceras offentlig:
 
-Du _**behöver inte**_ registrera din app. För interna [line-of-business (LOB) appar](apps-add.md#app-types-in-microsoft-intune) som har skrivits av eller för ditt företags IT-administratören distribuerar appen internt. Intune identifierar att appen har skapats med SDK:n och tillåter att IT-administratören tillämpar appskyddsprinciper på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-app för appskyddsprinciper](#enable-your-ios-or-android-app-for-app-protection-policy).
+Du _**behöver inte**_ registrera din app. När det gäller interna [affärsapplikationer](apps-add.md#app-types-in-microsoft-intune) som har skrivits av eller för ditt företag distribuerar IT-administratören appen internt. Intune identifierar att appen har skapats med SDK:n och tillåter att IT-administratören tillämpar appskyddsprinciper på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-app för appskyddsprinciper](#enable-your-ios-or-android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Om din app kommer att publiceras på en offentlig appbutik som Apple App Store eller Google Play:
 

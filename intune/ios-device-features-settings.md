@@ -23,11 +23,11 @@ ms.contentlocale: sv-SE
 ms.lasthandoff: 04/01/2019
 ms.locfileid: "58799273"
 ---
-# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>inställningar för iOS-enhet du använder vanliga iOS-funktioner i Intune
+# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>iOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
 
 Intune innehåller vissa inbyggda inställningar för att tillåta iOS-användare att använda olika Apple-funktioner på sina enheter. Till exempel så kan administratörer styra hur iOS-användare använder AirPrint-skrivare, lägga till appar och mappar till dockan och sidor på startskärmen, visa meddelanden i appen, visa information om tillgångstagg på låsskärmen, använda enkel inloggning och autentisera användare med certifikat.
 
-Du kan använda dessa funktioner för att styra iOS-enheter som en del av din lösning för hantering av mobila enheter.
+Du kan använda dessa funktioner för att styra iOS-enheter som en del av din MDM-lösning för hantering av mobilenheter.
 
 I den här artikeln visas inställningarna, tillsammans med en beskrivning av vad varje inställning gör.
 
@@ -98,7 +98,7 @@ Använd inställningarna **Docka** för att lägga till upp till sex objekt elle
       4. Klicka på **OK** för att spara ändringarna.
 
 > [!NOTE]
-> När du lägger till ikoner användningsinställningar docka ikoner på startsidan och sidor är låsta och kan inte flyttas. Detta kan vara avsiktligt med iOS- och Apple MDM-principer.
+> När du lägger till ikoner med hjälp av dockningsinställningarna låser du ikonerna på startsidan och andra sidor så att de inte kan flyttas. Detta kan vara standardinställningen för MDM-principer med iOS och Apple.
 
 #### <a name="example"></a>Exempel
 
@@ -175,7 +175,7 @@ Välj hur installerade appar på iOS-enheter skickar meddelanden. Inställningar
          - **Ingen**: Inga meddelanden visas.
          - **Banderoll**: En banderoll visas en kort stund med meddelandet.
          - **Modal**: Meddelandet visas och användaren måste manuellt ta bort det innan hen fortsätter att använda enheten.
-       - **Bricka på appikon**: Välj **aktivera** att lägga till en symbol på appikonen. Aktivitetsikonen innebär att appen skickat en avisering.
+       - **Bricka på appikon**: Välj **Aktivera** om du vill lägga till en aktivitetssymbol till appikonen. Aktivitetsikonen innebär att appen skickat en avisering.
        - **Ljud**: Välj **Aktivera** för att spela upp ett ljud när en avisering tas emot.
 
 3. Klicka på **OK** för att spara ändringarna. Fortsätt lägga till de appar du önskar. När du är klar väljer du **OK**.
@@ -269,7 +269,7 @@ Dessa inställningar styr webbläsarens URL-åtkomst på iOS-enheter.
 
     - **Konfigurera URL:er**: Använd Apples inbyggda webbfilter som söker efter innehåll som är olämpligt för barn, inklusive svordomar och sexuellt explicit språk. Den här funktionen utvärderar varje webbsida som den har lästs in, och identifierar och blockerar olämpligt innehåll. Du kan också lägga till URL:er som du inte vill ska kontrolleras av filtret. Eller blockera specifika URL:er, oavsett inställningarna för Apple-filtret.
 
-      - **Tillåtna webbadresser**: **Lägg till** URL: er som du vill tillåta. Dessa URL:er kringgår Apple-webbfiltret.
+      - **Tillåtna webbadresser**: **Lägg till** de URL:er som du vill tillåta. Dessa URL:er kringgår Apple-webbfiltret.
 
         > [!NOTE]
         > URL:er som du anger är de URL:er som du inte vill ska utvärderas av Apple-webbfiltret. Dessa URL:er är inte en lista över tillåtna webbplatser. För att skapa en lista över tillåtna webbplatser ställer du in **Filtertyp** till **Endast vissa webbplatser**.
@@ -283,7 +283,7 @@ Dessa inställningar styr webbläsarens URL-åtkomst på iOS-enheter.
     - **Endast vissa webbplatser** (endast för Safari-webbläsaren): Dessa webbadresser läggs till i Safari-webbläsarens bokmärken. Användaren är **endast** tillåten att besöka dessa webbplatser, inga andra platser kan öppnas. Använd bara det här alternativet om du vet den exakta listan över webbadresser som kan nås av användarna.
 
       - **URL**: Ange URL:en till den webbplats som du vill tillåta. Ange till exempel `https://www.contoso.com`.
-      - **Bokmärkessökväg**: den sökväg som du vill lagra bokmärket. Ange till exempel `/Contoso/Business Apps`. Om du inte lägger till någon sökväg läggs bokmärket till i standardmappen för bokmärken på enheten.
+      - **Bokmärkessökväg**: Ange sökvägen där du vill lagra bokmärket. Ange till exempel `/Contoso/Business Apps`. Om du inte lägger till någon sökväg läggs bokmärket till i standardmappen för bokmärken på enheten.
       - **Rubrik**: Ange en beskrivande rubrik för bokmärket.
 
       Om du inte anger några URL:er kommer användarna inte att komma åt några webbplatser förutom för `microsoft.com`, `microsoft.net` och `apple.com`. Dessa URL:er tillåts automatiskt av Intune.
@@ -296,11 +296,11 @@ Lägg till en anpassad PNG-, JPG- eller JPEG-bild till övervakade iOS-enheter. 
 
 Ett oväntat beteende kan uppstå när en profil utan bild tilldelas till enheter med en befintlig bild. Exempel: Du skapar en profil utan någon bild. Profilen tilldelas till enheter som redan har en bild. I det här scenariot kan bilden ändras till enhetens standardinställda eller så kan den ursprungliga bilden stanna kvar på enheten. Det här beteendet styrs och begränsas av Apples MDM-plattform.
 
-- **Skrivbordsunderlägg Visa plats**: Välj en plats på enheten för att visa bilden. Alternativen är:
-  - **Inte konfigurerad**: en anpassad avbildning inte har lagts till på enheten. Enheten använder standardoperativsystemet.
-  - **Låsskärm**: lägger till avbildningen till låsskärmen.
-  - **Startsidan**: lägger till avbildningen på startsidan.
-  - **Låsskärm och startskärmen**: använder samma avbildning på låsskärmen och startskärmen.
+- **Plats för visning av bakgrundsbild**: Välj var på enheten som bilden ska visas. Alternativen är:
+  - **Inte konfigurerad**: Ingen anpassad bild läggs till på enheten. Enheten använder standardoperativsystemet.
+  - **Låsskärm**: Bilden läggs till på låsskärmen.
+  - **Startsida**: Bilden läggs till på startsidan.
+  - **Låsskärm och hemskärm**: Samma bild används på låsskärmen och startskärmen.
 - **Bakgrundsbild**: Ladda upp en befintlig PNG-, JPG- eller JPEG-bild som du vill använda. Var noga med att filstorleken är mindre än 750 KB. Du kan också **ta bort** en bild som du har lagt till.
 
 > [!TIP]

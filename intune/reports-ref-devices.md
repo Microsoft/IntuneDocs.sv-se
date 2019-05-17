@@ -66,7 +66,7 @@ Entiteten **DeviceTypes** är den enhetstyp som andra informationslagerentiteter
 | 11 |Android |Android-enhet som hanteras via enhetsadministratören |
 | 12 |ISocConsumer |iSoc Consumer-enhet |
 | 14 |MacMDM |Mac OS X-enhet som hanteras med den inbyggda MDM-agenten |
-| 15 |HoloLens |HoloLens-enheter |
+| 15 |HoloLens |HoloLens-enhet |
 | 16 |SurfaceHub |Surface Hub-enhet |
 | 17 |AndroidForWork |Android-enhet som hanteras med hjälp av Android-profilens ägare |
 | 100 |Blackberry |Blackberry-enhet |
@@ -167,10 +167,10 @@ Entiteten **EnrollmentTypes** visar om en enhet är företagsägd, privat ägd e
 |---------|------------|--------|
 | ownerTypeID |Unikt id för ägartyp. | |
 | ownerTypeKey |Unikt id för ägartypen i informationslagret – surrogatnyckel. | |
-| ownerTypeName |Representerar enheternas ägartyp:  <br>Företag – enheten är företagsägd. <br>Privat – enheten är privatägd (BYOD).  <br>Okänd – det finns ingen information om enheten. |Företag privat okänd |
+| ownerTypeName |Representerar enheternas ägartyp:  <br>Företag – enheten är företagsägd. <br>Privat – enheten är privatägd (BYOD).  <br>Okänd – det finns ingen information om enheten. |Företag Privat Okänd |
 
 > [!Note]  
-> För den `ownerTypeName` i AzureAD när du skapar dynamiska grupper för enheter, måste du ange filtervärdet `deviceOwnership` som `Company`. Mer information finns i [regler för enheters](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> För `ownerTypeName` i AzureAD måste du ange filtervärdet `deviceOwnership` som `Company` när du skapar dynamiska grupper för enheter. Mer information finns i [Regler för enheters](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>ManagementStates
 

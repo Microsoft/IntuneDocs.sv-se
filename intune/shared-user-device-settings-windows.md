@@ -40,29 +40,29 @@ Mer information om den här funktionen i Intune finns i [Styra åtkomst, konton 
 
 ## <a name="shared-multi-user-device-settings"></a>Inställningar för delade enheter med flera användare
 
-- **Delad datorläge**: Välj **aktivera** att aktivera delad dator-läge. I det här läget loggar bara en användare i taget in på enheten. En annan användare kan inte logga in förrän den första loggar ut. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
+- **Läget för delad dator**: Välj **Aktivera** för att aktivera läget för delad dator. I det här läget loggar bara en användare i taget in på enheten. En annan användare kan inte logga in förrän den första loggar ut. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
 - **Gästkonto**: Välj alternativet om du vill skapa ett gästalternativ på inloggningssidan. Gästkonton kräver inte några användarautentiseringsuppgifter eller någon autentisering. Den här inställningen skapar ett nytt lokalt konto varje gång den används. Alternativen är:
   - **Gäst**: Skapar ett gästkonto lokalt på enheten.
   - **Domän**: Skapar ett gästkonto i Azure Active Directory (AD).
   - **Gäst och domän**: Skapar ett gästkonto lokalt på enheten och i Azure Active Directory (AD).
 - **Kontohantering**: Ange **Aktivera** för att automatiskt ta bort lokala konton skapade av gäster och konton i AD och Azure AD. När en användare loggar ut enheten, eller när systemunderhåll körs, tas dessa konton bort. När alternativet är aktiverat anger du även följande:
-  - **Borttagning av konto**: Välj när konton tas bort: **med storage utrymme tröskelvärde**, **på tröskelvärdet för utrymme för lagring och inaktiva tröskelvärdet**, eller **omedelbart efter att logga ut** . Ange även:
-    - **Börja ta bort threshold(%)**: Ange ett procenttal (0-100) diskutrymme. När det totala disk-/lagringsutrymmet sjunker under det värde du anger tas cachelagrade konton bort. Konton tas bort kontinuerligt för att frigöra diskutrymme. Konton som har varit inaktiva längst tas bort först.
-    - **Stoppa delete threshold(%)**: Ange ett procenttal (0-100) diskutrymme. När det totala disk-/lagringsutrymmet uppfyller det värde du anger avbryts borttagningen.
+  - **Borttagning av konto**: Välj när konton tas bort: **Vid tröskelvärdet för lagringsutrymme**, **Vid tröskelvärdet för lagringsutrymme och tröskelvärdet för inaktivitet** eller **Omedelbart efter utloggning**. Ange även:
+    - **Starta borttagning (%)**: Ange en procentandel (0–100) av diskutrymmet. När det totala disk-/lagringsutrymmet sjunker under det värde du anger tas cachelagrade konton bort. Konton tas bort kontinuerligt för att frigöra diskutrymme. Konton som har varit inaktiva längst tas bort först.
+    - **Avbryt borttagning (%)**: Ange en procentandel (0–100) av diskutrymmet. När det totala disk-/lagringsutrymmet uppfyller det värde du anger avbryts borttagningen.
 
   Ange **Inaktivera** för att behålla lokala konton, AD-konton och Azure AD-konton som har skapats av gäster.
 
 - **Lokal lagring**: Välj **Aktiverat** för att förhindra användare att spara och visa filer på enheternas hårddisk. Välj **Inaktiverad** för att tillåta användare att se och spara filer lokalt med Utforskaren. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
 - **Energisparprinciper**: När alternativet är inställt på **Aktiverat** kan användarna inte inaktivera viloläge, inte åsidosätta alla vilolägesåtgärder (som att fälla ned locket) och inte ändra energiinställningarna. När alternativet är inställt på **Inaktiverad** kan användarna försätta enheten i viloläge, fälla ned locket till viloläge och ändra energiinställningarna. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
-- **Vila-timeout (i sekunder)**: Ange hur många inaktiva sekunder (0-100) innan enheten försätts i strömsparläge. Om du inte anger en tid försätts enheten i strömsparläge efter 60 minuter.
+- **Vilogräns (sekunder)**: Ange antalet inaktiva sekunder (0–100) innan enheten försätts i strömsparläge. Om du inte anger en tid försätts enheten i strömsparläge efter 60 minuter.
 - **Logga in när datorn väcks**: Ange alternativet till **Aktiverat** för att kräva att användarna loggar in med ett lösenord när enheten aktiveras från strömsparläge. Välj **Inaktiverad** så att användarna inte måste ange användarnamn och lösenord. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
-- **Starttid för underhåll (i minuter från midnatt)**: Ange tiden i minuter (0-1440) när automatisk underhåll, till exempel Windows Update, körs. Standardstarttiden är midnatt, eller noll (`0`) minuter. Ändra starttiden genom att ange en starttid i minuter från midnatt. Om du till exempel vill att underhållet ska börja kl. 02:00 anger du `120`. Om du vill att underhållet ska börja kl. 20:00 anger du `1200`.
+- **Starttid för underhåll (minuter från midnatt)**: Ange tiden i minuter (0–1440) när automatiskt underhåll, till exempel Windows Update, körs. Standardstarttiden är midnatt, eller noll (`0`) minuter. Ändra starttiden genom att ange en starttid i minuter från midnatt. Om du till exempel vill att underhållet ska börja kl. 02:00 anger du `120`. Om du vill att underhållet ska börja kl. 20:00 anger du `1200`.
 - **Utbildningsprinciper**: Välj **Aktiverat** om du vill använda de rekommenderade inställningarna för enheter som används i skolor, som är mer restriktiva. Välj **Inaktiverad** så att standardinställda och rekommenderade utbildningsprinciper inte används. **Inte konfigurerad** (standard) lämnar inställningen ohanterad av Intune och skickar inte någon princip för att styra inställningen på en enhet.
 
   Mer information om vad utbildningsprinciper gör finns i [Rekommendationer för Windows 10-konfiguration för utbildningskunder](https://docs.microsoft.com/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Konfigurera en delad eller gäst dator](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (öppnas en annan webbplats för docs) är en bra resurs på den här Windows 10-funktionen, inklusive koncept och grupprinciper som kan ställas in i delat läge.
+> [Konfigurera en delad dator eller en gästdator](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (en annan dokumentwebbplats öppnas) är en bra resurs om den här Windows 10-funktionen, som beskriver begrepp och grupprinciper som kan ställas in i delat läge.
 
 ## <a name="next-steps"></a>Nästa steg
 

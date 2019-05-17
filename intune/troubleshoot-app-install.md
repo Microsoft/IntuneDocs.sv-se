@@ -28,7 +28,7 @@ ms.locfileid: "58799509"
 
 På Microsoft Intune MDM-hanterade enheter kan ibland appinstallationer misslyckas. När dessa appinstallationer misslyckas, kan det vara en utmaning att förstå felorsaken eller felsöka problemet. Microsoft Intune tillhandahåller information om appinstallationsfel som tillåter supportansvariga och Intune-administratörer att visa information som underlättar användarnas begäran om hjälp. Felsökningsfönstret i Intune ger information om felet, inklusive information om hanterade appar på en användares enhet. Information om en apps livscykel från början till slut ges under varje enskild enhet i fönstret **Hanterade appar**. Du kan visa installationsrelaterad information, t.ex. när appen har skapats, ändrats, inriktats och levereras till en enhet. 
 
-## <a name="app-troubleshooting-details"></a>Information om felsökning av App
+## <a name="app-troubleshooting-details"></a>Information om felsökning av appar
 
 Intune tillhandahåller appfelsökningsinformation baserad på de appar som installerats på en viss användares enhet.
 
@@ -53,46 +53,46 @@ Problemet indikeras i informationen om appinstallationsfel. Du kan använda den 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
-## <a name="win32-app-installation-troubleshooting"></a>Felsökning av Win32 app installation
+## <a name="win32-app-installation-troubleshooting"></a>Felsökning av Win32-appinstallationen
 
-Välj den Win32-app som distribuerats med Intune-hanteringstillägget. Du kan välja den **samla in loggar** när installationen av appen Win32 misslyckas. 
+Välj Win32-appen som distribuerats med Intune-hanteringstillägget. Du kan välja alternativet **Samla in loggar** om installationen av Win32-appen misslyckas. 
 
 > [!IMPORTANT]
-> Den **samla in loggar** alternativet aktiveras inte när Win32-app har installerats på enheten.<p>Innan du kan samla in logginformation för Win32-app, måste Intune-hanteringstillägget installeras på Windows-klienten. Intune-hanteringstillägget installeras när ett PowerShell-skript eller en Win32-app distribueras till en användare eller en enhetssäkerhetsgrupp. Mer information finns i [Intune-hanteringstillägget - krav](intune-management-extension.md#prerequisites).
+> Alternativet **Samla in loggar** är inte aktiverat om Win32-appen har installerats korrekt på enheten.<p>Innan du kan samla in logginformation för Win32-appen måste Intune-hanteringstillägget installeras på Windows-klienten. Intune-hanteringstillägget installeras när ett PowerShell-skript eller en Win32-app distribueras till en användare eller en enhetssäkerhetsgrupp. Mer information finns i avsnittet med [förhandskrav för Intune-hanteringstillägget](intune-management-extension.md#prerequisites).
 
 ### <a name="collect-log-file"></a>Samla in loggfil
 
-Om du vill samla in dina installationsloggarna för Win32-app, Följ stegen i avsnittet [App information om felsökning](troubleshoot-app-install.md#app-troubleshooting-details). Fortsätt sedan med följande steg:
+Om du vill samla in installationsloggarna för Win32-appen följer du stegen i avsnittet med [information om felsökning av appar](troubleshoot-app-install.md#app-troubleshooting-details). Fortsätt sedan med följande steg:
 
-1. Klicka på den **samla in loggar** alternativet på den **installationsinformation** bladet.
+1. Klicka på alternativet **Samla in loggar** på bladet **Installationsinformation**.
 
     <image alt="Win32 app installation details - Collect log option" src="media/troubleshoot-app-install-04.png" width="500" />
 
-2. Ange sökvägar med log filnamn ska börja logginsamlingsprocessen för filen och klicka på **OK**.
+2. Ange sökvägar med loggfilnamn för att börja samla in loggfiler och klicka på **OK**.
     
     > [!NOTE]
-    > Logginsamling tar mindre än två timmar. Filtyper som stöds: *.log, .txt, dmp, CAB-, ZIP, .xml, .evtx och .evtl*. Högst 25 sökvägar är tillåtna.
+    > Logginsamlingen tar mindre än två timmar. Följande filtyper stöds: *.log, .txt, .dmp, .cab, .zip, .xml, .evtx och .evtl*. Högst 25 sökvägar är tillåtna.
 
-3. När filerna har samlats in, kan du välja den **loggar** länken för att hämta filerna.
+3. När loggfilerna har samlats in kan du välja länken **loggar** för att ladda ned loggfilerna.
 
     <image alt="Win32 app log details - Download logs" src="media/troubleshoot-app-install-05.png" width="500" />
 
     > [!NOTE]
-    > Ett meddelande visas om att åtgärden av loggsamlingen app.
+    > Ett meddelande visas som anger att loggarna för apparna har samlats in.
 
-#### <a name="win32-log-collection-requirements"></a>Krav för insamling av Win32-logg
+#### <a name="win32-log-collection-requirements"></a>Krav för Win32-logginsamling
 
-Det finns särskilda krav som måste följas för att samla in loggfiler:
+Det finns särskilda krav som du måste följa för att samla in loggfiler:
 
 - Du måste ange den fullständiga sökvägen. 
-- Du kan ange miljövariabler för Logginsamling, till exempel följande:<br>
-  *% PROGRAMFILES %, % PROGRAMDATA % OFFENTLIGA %, % WINDIR %, % TEMP %, % TMP %*
+- Du kan ange miljövariabler för logginsamling, till exempel följande:<br>
+  *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
 - Endast exakta filnamnstillägg är tillåtna, till exempel:<br>
-  *.log, .txt, dmp, CAB-, ZIP, .xml*
-- Maximal loggfilen att ladda upp är 60 MB eller 25 filer, beroende på vilket som inträffar först. 
-- Win32 appsamling installera log har aktiverats för appar som uppfyller de nödvändiga tillgängliga, och avinstallera tilldelningsavsikt för appen.
-- Lagrade loggar krypteras för att skydda all PII-information som finns i loggarna.
-- Även om stöd för att öppna biljetter för fel vid Win32-app, lägga till relaterade felloggarna med hjälp av stegen som anges ovan.
+  *.log, .txt, .dmp, .cab, .zip, .xml*
+- Du kan ladda upp loggfiler på högst 60 MB eller högst 25 filer, beroende på vilken gräns som nås först. 
+- Du kan samla in Win32-appinstallationsloggar för appar som uppfyller apptilldelningsavsikten Krävs, Tillgänglig eller Avinstallera.
+- Lagrade loggar krypteras för att skydda personligt identifierbar information som finns i loggarna.
+- När du öppnar supportbegäranden om Win32-appfel bifogar du associerade felloggar genom att följa stegen ovan.
 
 ## <a name="app-installation-errors"></a>Appinstallationsfel
 
@@ -114,7 +114,7 @@ Följande felmeddelanden och beskrivningar ger information om både Android- och
 
 ### <a name="ios-errors"></a>iOS-fel
 
-| Felmeddelande/kod | Beskrivning/felsökning tips |
+| Felmeddelande/kod | Beskrivning/felsökningstips |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | (0x87D12906) | Apple MDM-agenten returnerade att installationskommandot misslyckades. |
 | (0x87D1313C) | Nätverksanslutningen bröts medan den uppdaterade webbadressen för nedladdningstjänsten skickades till enheten. Mer specifikt gick det inte att hitta någon server med det angivna värdnamnet. |
@@ -126,23 +126,23 @@ Följande felmeddelanden och beskrivningar ger information om både Android- och
 | Användaren avvisade erbjudandet att installera appen. (0x87D13B62) | Användaren klickade på Avbryt under den inledande appinstallationen. |
 | Användaren avvisade erbjudandet att uppdatera appen. (0x87D13B63) | Slutanvändaren klickade på Avbryt under uppdateringsprocessen. |
 | Okänt fel (0x87D103E8) | Ett okänt fel inträffade under appinstallationen. Det här felet visas om inget annat fel kan identifieras. |
-| Kan bara installera VPP-appar på delad iPad (-2016330861). | Apparna måste hämtas med hjälp av Apples Volymköpsprogram för att installera på en delad iPad. |
-| Det går inte att installera appar när App Store är inaktiverad (-2016330860).  | App Store måste vara aktiverat för att användaren installerar appen. |
-| Det går inte att hitta VPP-licens för app (-2016330859).  | Försök att återkalla och omtilldela applicensen. |
-| Det går inte att installera appar med din MDM-provider (-2016330858). | Installation av appar som är förinstallerade med iOS-operativsystemet är inte ett scenario som stöds. |
-| Det går inte att installera appar när enheten är i Borttappat läge (-2016330857). | All användning av enheten är blockerad i Borttappat läge.   Inaktivera Borttappat läge för att installera appar. |
-| Det går inte att installera appar när enheten är i helskärmsläge (-2016330856). | Försök att lägga till den här enheten till en exkludera grupp för principen för helskärmsläge konfiguration att installera appar. |
-| Det går inte att installera 32-bitars appar på den här enheten (-2016330852). | Enheten stöder inte installation av 32-bitars appar. Försök att distribuera 64-bitars version av appen. |
-| Användaren måste logga in på App Store (-2016330855). | Användaren måste logga in på App Store innan appen kan installeras. |
-| Okända problem. Försök igen (-2016330854). | Appinstallationen misslyckades på grund av en okänd anledning.   Försök igen senare. |
-| Appinstallationen misslyckades. Intune kommer att försöka igen nästa gång enheten synkroniseras (-2016330853). | Appinstallationen påträffade ett fel vid. Synkronisera enheten och försök installera appen igen. |
+| Det går bara att installera VPP-appar på en delad iPad (-2016330861). | Apparna måste hämtas med Apples volymköpsprogram för installation på en delad iPad. |
+| Det går inte att installera appar när App Store är inaktiverad (-2016330860).  | App Store måste vara aktiverad för att användaren ska kunna installera appen. |
+| Det går inte att hitta VPP-licensen för appen (-2016330859).  | Prova att återkalla och omtilldela applicensen. |
+| Det går inte att installera systemappar med din MDM-provider (-2016330858). | Det går inte att installera appar som förinstallerats av iOS-operativsystemet. |
+| Det går inte att installera appar när enheten är i Borttappat läge (-2016330857). | All användning av enheten är blockerad i Borttappat läge.   Inaktivera Borttappat läge om du vill installera appar. |
+| Det går inte att installera appar när enheten är i helskärmsläge (-2016330856). | Prova att lägga till enheten i en exkluderingsgrupp under konfigurationsprincipen för helskärmsläge för att installera appar. |
+| Det går inte att installera 32-bitarsappar på enheten (-2016330852). | Enheten stöder inte installation av 32-bitarsappar. Prova att distribuera 64-bitarsversionen av appen. |
+| Användaren måste logga in i App Store (-2016330855). | Användaren måste logga in i App Store innan appen kan installeras. |
+| Okänt problem. Försök igen (-2016330854). | Appinstallationen misslyckades på grund av ett okänt problem.   Försök igen senare. |
+| Appinstallationen misslyckades. Intune gör ett nytt försök nästa gång enheten synkroniseras (-2016330853). | Ett enhetsfel påträffades under appinstallationen. Synkronisera enheten och prova att installera appen igen. |
 
 ### <a name="other-installation-errors"></a>Andra installationsfel
 
 |    Felmeddelande/kod    |    Beskrivning    |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    0x80073CFF,   0x80CF201C (klientfel)    |    Om du vill installera den här appen måste du ha ett system där separat inläsning tillåts. Kontrollera att app-paketet är signerat med en betrodd signatur och installerat på en domänansluten enhet där principen **AllowAllTrustedApps** är aktiverad, eller en enhet med en Windows-licens för separat inläsning med principen **AllowAllTrustedApps** aktiverad. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).     |
-|    0x80073CF0    |    Paketet kunde inte öppnas. Möjliga orsaker:<ul><li> Paketet är osignerat.</li><li> Utgivarens namn matchar inte signeringscertifikatets ämne.</li></ul> Mer information finns i **AppxPackagingOM**-händelseloggen. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x80073CF0    |    Paketet kunde inte öppnas. Möjliga orsaker:<ul><li> Paketet är inte signerat.</li><li> Utgivarens namn matchar inte signeringscertifikatets ämne.</li></ul> Mer information finns i **AppxPackagingOM**-händelseloggen. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
 |    0x80073CF3    |    Paketet misslyckades med uppdaterings-, beroende- eller konfliktverifiering. Möjliga orsaker:<ul><li> Det inkommande paketet är i konflikt med ett installerat paket.</li><li> Det gick inte att hitta ett angivet paketberoende.</li><li> Paketet stöder inte korrekt processorarkitektur.</li></ul> Mer information finns i **AppXDeployment-Server**-händelseloggen. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
 |    0x80073CFB    |    Det angivna paketet har redan installerats och en ominstallation av paketet är blockerad. Du kan råka ut för det här felet om du installerar ett paket som inte är identiskt med det paket som redan har installerats. Bekräftelse av den digitala signaturen ingår också i paketet. När ett paket har byggts om eller signerats på nytt så är det inte längre binärt identiskt med det tidigare installerade paketet. De två möjliga alternativ för att åtgärda det här felet är:<ul><li> Öka appens versionsnummer och bygg sedan om och signera paketet på nytt.</li><li> Ta bort det gamla paketet för varje användare i systemet innan du installerar det nya paketet.</li></ul> Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
 |    0x87D1041C    |    Programinstallationen lyckades men programmet identifieras inte. Appen har distribuerats av Intune och sedan avinstallerats. Orsaker till att appen avinstalleras är:<ul><li> Slutanvändaren avinstallerade appen.</li><li> Identitetsinformationen i paketet matchar inte vad enheten rapporterar för felaktiga appar.</li><li>Vid automatiskt uppdaterade MSI:er matchar produktversionen inte appinformationen när den har uppdaterats utanför Intune.</li></ul> Be användaren att installera om appen via företagsportalen. Observera att de appar som krävs ominstalleras automatiskt nästa gång enheten checkas in.    |

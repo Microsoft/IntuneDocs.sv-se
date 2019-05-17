@@ -26,7 +26,7 @@ ms.lasthandoff: 04/09/2019
 ms.locfileid: "59292457"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Översikt över Microsoft Intune App SDK
-Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att stödja Intune-[appskyddsprinciper](app-protection-policy.md). När din app har appskyddsprinciper tillämpas, kan hanteras av Intune och känns igen av Intune som en hanterad app. SDK:n arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda SDK:ns API:er för att anpassa din apps beteende till att stödja funktioner som kräver medverkan av din app.
+Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att stödja Intune-[appskyddsprinciper](app-protection-policy.md). När appskyddsprinciper tillämpas på din app kan den hanteras av Intune och identifieras av Intune som en hanterad app. SDK:n arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda SDK:ns API:er för att anpassa din apps beteende till att stödja funktioner som kräver medverkan av din app.
 
 När du har aktiverat din app för att stödja Intune-appskyddsprinciper kan IT-administratörer distribuera dessa principer för att skydda företagsdata i appen.
 

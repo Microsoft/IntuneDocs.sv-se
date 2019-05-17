@@ -604,7 +604,7 @@ Det är appens ansvar att ange identiteterna korrekt, oavsett om användaren han
 
 Alla trådar har alltid en effektiv identitet för gränssnittsåtgärder och filåtgärder. Detta är den identitet som används för att kontrollera vilka principer, om några, som ska användas. Om identiteten är "ingen identitet" eller om användaren inte hanteras tillämpas inga principer. Diagrammen nedan visar hur effektiva identiteter bestäms.
 
-  ![Intune App SDK iOS: processen för bestämning av identitet](./media/ios-thread-identities.png)
+  ![Intune App SDK iOS: Process för identitetsbestämning](./media/ios-thread-identities.png)
 
 ### <a name="thread-queues"></a>Trådköer
 
