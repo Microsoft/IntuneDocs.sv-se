@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dff7e28daff503570350950b60ae974cd048c5c
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 401bc833b2b864983ec301972950ffbd04fe2229
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426238"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135197"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -46,6 +46,25 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande �
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-6-2019"></a>Den vecka som börjar 6 maj 2019 
+
+### <a name="device-configuration"></a>Enhetskonfiguration
+
+#### <a name="network-access-control-nac-support-for-f5-access-for-ios-devices----4500808---"></a>Stöd för Network Access Control (NAC) för F5 Access för iOS-enheter <!-- 4500808 -->
+
+F5 släppte en uppdatering för BIG-IP-13 som tillåter NAC-funktioner för F5 Access på iOS i Intune. Gör så här för att använda funktionen:
+
+- Uppdatera BIG-IP till 13.1.1.5. BIG-IP 14 stöds inte.
+- Integrera BIG-IP med Intune för NAC. Stegen i [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
+- Aktivera inställningen **Aktivera nätverksåtkomstkontroll** i VPN-profilen i Intune.
+
+Om du vill se den tillgängliga inställningen går du till [Konfigurera VPN-inställningar på iOS-enheter](vpn-settings-ios.md).
+
+Gäller för: iOS
+
+#### <a name="updated-pfx-certificate-connector-for-microsoft-intune----doc-vso-1521237----"></a>Uppdaterat PFX-certifikatanslutningsprogram för Microsoft Intune <!-- doc-vso 1521237  -->  
+Vi har släppt en uppdatering till [PFX-certifikatanslutningsappen för Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors) som utelämnar avsökningsintervallet från 5 minuter till 30 sekunder.
 
 ## <a name="week-of-april-22-2019"></a>Den vecka som börjar 22 april 2019
 
@@ -75,7 +94,7 @@ I följande exempel visas en analys av GDPR-kontrollerna. Microsoft hanterar 49 
 Intune-appskyddsprinciper (APP) på Android-enheter använder nu ett OpenSSL-krypteringsbibliotek som är kompatibelt med FIPS 140-2. Mer information finns i avsnittet för [kryptering](app-protection-policy-settings-android.md#encryption) i [Inställningar för Android-appskyddsprinciper i Microsoft Intune](app-protection-policy-settings-android.md).
 
 #### <a name="enable-win32-app-dependencies----2617348----"></a>Aktivera Win32-appsamband <!-- 2617348  -->
-Som administratör kan du kräva du att andra appar installeras som beroenden innan Win32-appen installeras. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. I Intune väljer du **Klientappar** > **Appar** > **Lägg till** för att visa bladet **Lägg till app**. Välj **Windows-app (Win32)** som **Apptyp**. När du har lagt till appen kan du välja **Beroenden** för att lägga till de beroende appar som måste installeras innan Win32-appen kan installeras. Mer information finns i [Fristående Intune – Win32-apphantering](apps-win32-app-management.md). Den här funktionen är endast tillgänglig efter att Intune-hanteringsagenten har uppgraderats till version 1904 (senare än 1.18.120.0), vilket kan ta en eller två veckor till efter att vi uppgraderar tjänsten till 1904.
+Som administratör kan du kräva du att andra appar installeras som beroenden innan Win32-appen installeras. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. I Intune väljer du **Klientappar** > **Appar** > **Lägg till** för att visa bladet **Lägg till app**. Välj **Windows-app (Win32)** som **Apptyp**. När du har lagt till appen kan du välja **Beroenden** för att lägga till de beroende appar som måste installeras innan Win32-appen kan installeras. Mer information finns i [Fristående Intune – Win32-apphantering](apps-win32-app-management.md). 
 
 #### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Installationsinformation om appversion för Microsoft Store för företagsprogram <!-- 3537391   -->
 Rapporter för appinstallation innehåller information om appversion för Microsoft Store för företagsprogram. I Intune väljer du **Klientappar** > **Appar**. Välj en **Microsoft Store för företag-app** och välj sedan **Installationsstatus för enhet** i avsnittet **Övervaka**.
@@ -91,6 +110,9 @@ På sidan för enhetsöversikt visas den primära användaren, som även kallas 
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Ytterligare rapportering för Managed Google Play-app för Android Enterprise-arbetsprofilenheter <!-- 4105925  -->
 För Managed Google Play-appar som distribueras till Android Enterprise-arbetsprofilenheter kan du visa det specifika versionsnumret för den app som är installerad på en enhet. Det här gäller endast för obligatoriska appar. Samma funktion för tillgängliga appar kommer att bli tillgänglig i en framtida version. 
+
+#### <a name="ios-third-party-keyboards----4111843-idready-eeready---"></a>iOS-tangentbord från tredje part <!-- 4111843 idready eeready -->
+Stödet för Intunes appskyddsprincip (APP) för inställningen **Tangentbord från tredje part** för iOS kommer att tas bort på grund av en iOS-plattformsändring. Du kommer inte att kunna konfigurera den här inställningen i Intune-administratörskonsolen och den kommer inte att tillämpas på klienten i Intune App SDK.
 
 ### <a name="device-configuration"></a>Enhetskonfiguration
 
@@ -207,7 +229,7 @@ Du kan nu lägga till omfångstaggar till Apple VPP-token. Endast användare som
 ### <a name="device-configuration"></a>Enhetskonfiguration
 
 #### <a name="updated-certificate-connectors-----icm-113304612---"></a>Uppdaterade certifikatanslutningsappar  <!-- ICM 113304612 -->
-Vi har släppt uppdateringar för både [Intune-certifikatanslutningsappen och PFX-certifikatanslutningsappen](certficates-pfx-configure.md#whats-new-for-connectors). De nya versionerna åtgärdar flera kända problem.  
+Vi har släppt uppdateringar för både [Intune-certifikatanslutningsappen och PFX-certifikatanslutningsappen för Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors). De nya versionerna åtgärdar flera kända problem.  
 
 ### <a name="app-management"></a>Apphantering
 
@@ -376,7 +398,7 @@ I Intune väljer du **Klientappar** > **Appar** > ”appens namn” > **Installa
 En ny skärm som heter **Appkategorier** har lagts till i syfte att förbättra upplevelsen för bläddring och val av appar i företagsportalen för Windows 10. Användarna ser nu sina appar sorterade i kategorier som **Aktuella**, **Utbildning** och **Produktivitet**. Den här ändringen finns i versioner 10.3.3451.0 och senare av företagsportalen. Om du vill se den nya skärmen går du till [Nyheter i användargränssnittet för appen](https://docs.microsoft.com/intune/whats-new-app-ui). Mer information om appar i företagsportalen finns i [Installera och dela appar på din enhet](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Power BI-efterlevnadsapp <!-- 1455231 doc-work-item -->
-Få åtkomst till ditt Intune-informationslager i Power BI Online med hjälp av [Intune-efterlevnadsappen (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance). Med den här Power BI-appen kan du nu komma åt och dela i förväg skapade rapporter utan någon konfiguration och utan att lämna webbläsaren. Mer information finns i [Ändringslogg – Power BI-efterlevnadsapp](reports-changelog.md#power-bi-compliance-app).
+Få åtkomst till ditt Intune-informationslager i Power BI Online med hjälp av [Intune-efterlevnadsappen (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Med den här Power BI-appen kan du nu komma åt och dela i förväg skapade rapporter utan någon konfiguration och utan att lämna webbläsaren. Mer information finns i [Ändringslogg – Power BI-efterlevnadsapp](reports-changelog.md#power-bi-compliance-app).
 
 
 ### <a name="device-configuration"></a>Enhetskonfiguration

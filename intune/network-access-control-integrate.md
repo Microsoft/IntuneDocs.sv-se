@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48228d0baea204fd94175750075c04771116a74d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cbef2059f42a209a63e4ba3f1e83aec410237d02
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513804"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135141"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrering av nätverksåtkomstkontroll (NAC) i Intune
 
@@ -63,27 +63,39 @@ Följande lista är en översikt över hur NAC-integrationen fungerar när du ha
 9. En anslutning upprättas och enheten får tillgång till företagets resurser.
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Använda NAC för VPN på dina iOS-enheter  
-NAC för Cisco Legacy AnyConnect, F5 Access Legacy och Citrix VPN stöds utan att behöva aktivera NAC i VPN-profilen.
 
-NAC för Citrix SSO stöds också. Så här aktiverar du NAC för Citrix SSO för iOS:
-- Använd Citrix Gateway 12.0.59 eller senare.  
-- Användare måste ha Citrix SSO 1.1.6 eller senare installerat.
-- [Integrera NetScaler med Intune för NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) som beskrivs i produktdokumentationen för Citrix.
-- Markera kryssrutan **Jag godkänner** för **Aktivera nätverksåtkomstkontroll (NAC)** i konfigurationsinställningarna för Bas-VPN.
+- NAC finns på följande VPN:er utan att aktivera NAC i VPN-profilen:
 
-När du använder Citrix SSO för iOS kopplas VPN-anslutningen av säkerhetsskäl från en gång per dygn. VPN-anslutningen kan omedelbart återanslutas.
+  - NAC for Cisco Legacy AnyConnect
+  - F5 Access Legacy
+  - Citrix VPN
 
+- NAC är också tillgängligt för Citrix SSO och F5 Access. Så här aktiverar du NAC för Citrix SSO:
 
-**Nätverksåtkomstkontroll stöds inte för följande VPN-klienter på iOS**:
--   Cisco AnyConnect
--   F5 Access
+  - Använd Citrix Gateway 12.0.59 eller senare.  
+  - Användare måste ha Citrix SSO 1.1.6 eller senare installerat.
+  - [Integrera NetScaler med Intune för NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) som beskrivs i produktdokumentationen för Citrix.
+  - I VPN-profilen väljer **Grundinställningar** > **Aktivera nätverksåtkomstkontroll (NAC)** > Välj **Jag godkänner**.
 
-Vi arbetar med våra partners för att släppa en NAC-lösning för dessa nyare klienter. När vi har lösningar redo kommer vi att uppdatera den här artikeln med ytterligare information. 
+  Av säkerhetsskäl kopplas VPN-anslutningen från en gång per dygn. VPN-anslutningen kan omedelbart återanslutas.
 
+- Så här aktiverar du NAC för F5 Access:
+
+  - Använd F5 BIG-IP 13.1.1.5. BIG-IP 14 stöds inte.
+  - Integrera BIG-IP med Intune för NAC. I [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem) listar F5-guiden stegen.
+  - I VPN-profilen väljer **Grundinställningar** > **Aktivera nätverksåtkomstkontroll (NAC)** > Välj **Jag godkänner**.
+
+  Av säkerhetsskäl kopplas VPN-anslutningen från en gång per dygn. VPN-anslutningen kan omedelbart återanslutas.
+
+- Nätverksåtkomstkontroll stöds inte för följande VPN-klient på iOS:
+  - Cisco AnyConnect
+
+Vi arbetar med våra partners för att släppa en NAC-lösning för dessa nyare klienter. När lösningarna är klara uppdateras den här artikeln med ytterligare information.
 
 ## <a name="next-steps"></a>Nästa steg
 
 - [Integrera Cisco ISE med Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integrera Citrix NetScaler med Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integrera F5 BIG-IP Access Policy Manager med Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integrera HP Aruba ClearPass med Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
 - [Integrera Squadra security Removable Media Manager (secRMM) med Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

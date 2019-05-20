@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ab718cd087757211ad4e84cbba39808cf9de7d3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
+ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515572"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619444"
 ---
-# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot (förhandsversion)
+# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
 
 ## <a name="prerequisites"></a>Krav
@@ -35,7 +35,7 @@ Konfigurera [Azure AD-anslutna hybridenheterna](https://docs.microsoft.com/azure
 Enheter som ska registreras måste också:
 - Köra Windows 10 med [uppdateringen för oktober 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).
 - Ha åtkomst till Internet.
-- Ha åtkomst till din Active Directory (VPN-anslutning stöds inte).
+- Ha åtkomst till din Active Directory (VPN-anslutning stöds inte i nuläget).
 - Gå igenom välkomstupplevelsen (OOBE, Out-of-Box Experience).
 - Kunna pinga domänkontrollanten på den domän som du försöker ansluta till.
 
@@ -211,7 +211,14 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
 1. Välj **Inställningar** och ange sedan **Datornamnprefix**, **Domännamn** och (valfritt) **Organisationsenhet** i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Välj **OK** > **Skapa**.  
     Profilen skapas och visas i listan.
-1. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](device-profile-assign.md#assign-a-device-profile). 
+1. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](device-profile-assign.md#assign-a-device-profile) och tilldelar profilen till samma grupp som används i det här steget [Skapa en enhetsgrupp](windows-autopilot-hybrid.md#create-a-device-group)
+   - Distribuera flera profiler för domänanslutning
+   
+     a. Skapa en dynamisk grupp som innehåller alla dina Autopilot-enheter med en specifik Autopilot-distributionsprofil, ange (device.enrollmentProfileName –dvs. ”Autopilot-profilnamn”). 
+     
+     b. Ersätt ”Autopilot-profilnamn” med namnet på den profil som skapats under [Skapa och tilldela en Autopilot-distributionsprofil](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
+     
+     c. Skapa flera Autopilot-distributionsprofiler och tilldela den enheten till den profil som angetts i den här dynamiska gruppen.
 
 > [!NOTE]
 > Namngivningsfunktionerna för Windows Autopilot för Azure AD-hybridanslutning stöder inte variabler såsom %SERIAL%, och stöder endast prefix för datornamnet.

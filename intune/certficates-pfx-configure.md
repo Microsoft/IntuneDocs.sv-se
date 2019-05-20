@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b05b7f2a0b56321023bc8444528578aeface0b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 491610fcefa1b20159ebfe487c9e2d95a6f5e7c6
+ms.sourcegitcommit: 586114e1beee31aa8553f69c0ba4d731afcb45e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508591"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65402071"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -189,7 +189,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 3. Gå till **Inställningar** och ange .cer-filen med rot CA-certifikatet som du exporterade tidigare.
 
    > [!NOTE]
-   > Beroende på vilken plattform du valde i **steg 3** kan du få alternativet att välja **målarkiv** för certifikatet.
+   > Beroende på vilken plattform du valde i **steg 2** kan du få alternativet att välja **målarkiv** för certifikatet.
 
    ![Skapa en profil och ladda upp ett betrott certifikat](media/certificates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
 
@@ -248,16 +248,21 @@ När du har importerat certifikaten till Intune skapar du en profil för **PKCS-
 ## <a name="whats-new-for-connectors"></a>Nyheter för anslutningsappar
 Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. När vi uppdaterar en anslutningsapp kan du läsa om ändringarna här. 
 
-*PFX-certifikatanslutningsappen* [har stöd för automatiska uppdateringar](#requirements), medan Intune-certifikatanslutningsappen uppdateras manuellt.
+*PFX-certifikatanslutningsappen för Microsoft Intune* [har stöd för automatiska uppdateringar](#requirements), medan *Intune-certifikatanslutningsappen* uppdateras manuellt.
+
+### <a name="may-6-2019"></a>Den 6 maj 2019
+- **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1905.0.402**  
+  Ändringar i den här versionen:  
+  - Avsökningsintervallet för anslutningsappen har minskats från 5 minuter till 30 sekunder.
  
 ### <a name="april-2-2019"></a>2 april 2019
-- **NDES-certifikatanslutningsapp – version 6.1904.1.0**  
+- **Intune-certifikatanslutningsapp – version 6.1904.1.0**  
   Ändringar i den här versionen:  
   - Åtgärdade ett problem där anslutningsappen kunde misslyckas med att registrera till Intune efter inloggning till anslutningsappen med ett konto för global administratör.  
   - Innehåller tillförlitlighetsåtgärder för certifikatåterkallande.  
   - Innehåller prestandaåtgärder som ökar hastigheten för bearbetning av PKCS-certifikatbegäranden.  
 
-- **PFX-certifikatanslutningsapp – version 6.1904.0.401**
+- **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1904.0.401**
   > [!NOTE]  
   > Automatisk uppdatering för den här versionen av PFX-anslutningsappen är inte tillgänglig förrän den 11 april 2019.  
 

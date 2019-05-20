@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6545724294eefc83789f56f851549c0b5fee7f22
+ms.sourcegitcommit: 01117021dfaebb5507aa146b7369447c3d5a403d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513126"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626437"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
 
 
 ## <a name="prerequisites"></a>Krav
+- [Intune-prenumeration](licenses.md)
 - [Automatisk registrering i Windows aktiverad](windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium-prenumeration](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
@@ -150,15 +151,17 @@ Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, v
 
 ## <a name="delete-autopilot-devices"></a>Ta bort Autopilot-enheter
 
-Du kan ta bort Windows Autopilot-enheter som inte har registrerats.
+Du kan ta bort Windows Autopilot-enheter som inte har registrerats på Intune:
 
-1. Om enheterna har registrerats i Intune måste du först [ta bort dem från Azure Active Directory-portalen](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+- Ta bort enheterna från Windows Autopilot på **Enhetsregistrering** > **Windows-registrering** > **Enheter**. Välj de enheter som du vill ta bort och välj sedan **Ta bort**. Det kan ta några minuter att ta bort en Windows Autopilot-enhet.
 
-2. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
+Om du vill ta bort en enhet helt från klienten fullständigt måste du ta bort Intune-enheten, Azure Active Directory-enheten och Windows Autopilot-enhetsposterna. Det kan du göra från Intune:
 
-3. Under **Windows Autopilot-enheter** markerar du de enheter som du vill ta bort. Välj sedan **Ta bort**.
+1. Om enheterna har registrerats i Intune måste du först [ta bort dem från Intune-bladet Alla enheter](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-4. Bekräfta borttagningen genom att välja **Ja**. Det kan ta några minuter att ta bort.
+2. Ta bort enheterna på Azure Active Directory-enheter via **Enheter** > **Azure AD-enheter**.
+
+3. Ta bort enheterna från Windows Autopilot på **Enhetsregistrering** > **Windows-registrering** > **Enheter**. Välj de enheter som du vill ta bort och välj sedan **Ta bort**. Det kan ta några minuter att ta bort en Windows Autopilot-enhet.
 
 ## <a name="using-autopilot-in-other-portals"></a>Använda Autopilot på andra portaler
 Om du inte är intresserad av hantering av mobilenheter kan du använda Autopilot på andra portaler. Det går att använda andra portaler, men vi rekommenderar att du enbart hanterar dina Autopilot-distributioner i Intune. När du använder Intune med en annan portal kan inte Intune:  

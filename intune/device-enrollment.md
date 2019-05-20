@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 4/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d089d0e9724a1ce150fa7e8697c80734fb0d7e9c
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 68f5fad9d05787b6e79792d594480547ce10cf81
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568433"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764912"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -67,11 +67,19 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 
 ## <a name="android-enrollment-methods"></a>Metoder för Android-registrering
 
-| **Metod** |  **Återställning krävs** |    **Användartillhörighet**   |   **Låst** | **Information**|
+| **Personligt** | **Registreringsmetoder** | **Återställning krävs** | **Användartillhörighet** | **Låst** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | Nej|   Ja |   Nej | [Mer information](./android-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  |[Mer information](./device-enrollment-manager-enroll.md)|
-|**Android-arbetsprofiler**| Nej | Ja | Nej| [Mer information](./android-work-profile-enroll.md) |
+|**Administratör för Android-enhet**|**Användarinitierat via företagsportalen** | Nej | Ja | Nej | [Mer information](https://docs.microsoft.com/intune-user-help/enroll-device-android-company-portal)|
+|**Android Enterprise-arbetsprofil**|**Användarinitierat via företagsportalen**| Nej | Ja | Nej | [Mer information](./android-work-profile-enroll.md)|
+
+
+| **Företag** | **Registreringsmetoder** | **Återställning krävs** | **Användartillhörighet** | **Låst** | **Information**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Administratör för Android-enhet**|**[DEM](#device-enrollment-manager) initierat via företagsportalen**| Nej | Nej | Nej |[Mer information](./device-enrollment-manager-enroll.md)|
+|**Administratör för Android-enhet**|**(Förhandsdeklarerad IMEI eller SN) Användarinitierat via företagsportalen**| Nej | Ja | Nej | [Mer information](./corporate-identifiers-add.md)|
+|**Administratör för Android-enhet med Zebra Mobility Extensions**|**Användare eller [DEM](#device-enrollment-manager) initierat via företagsportalen**| Nej | Ja vid användarinitierad, nej vid [DEM](#device-enrollment-manager)-initierad | Nej | [Mer information](./android-zebra-mx-overview.md)|
+|**Android Enterprise-dedikerad**|**NFC, QR-kod, Zero Touch-token**| Ja | Nej | Kan konfigureras via princip | [Mer information](./android-kiosk-enroll.md)|
+|**Fullständigt hanterade Android Enterprise (förhandsversion)**|**NFC, QR-kod, Zero Touch-token**| Ja | Ja | Kan konfigureras via princip | [Mer information](./android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device

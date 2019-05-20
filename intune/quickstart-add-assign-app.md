@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a1c81b1b2f54b15397e9e1d7451ee7ed911848
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 024c4eb37d1b9991db6d1ca0b5c528e9dd333422
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798751"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764788"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
@@ -51,7 +51,7 @@ Använd följande steg för att lägga till en app i Intune:
 4. Klicka på **OK** för att godkänna de appar som valts som standard.
 5. Välj **Information om appsvit**.
 6. Ange **Microsoft Office 365-appaket** som **Paketnamn**.
-7. Ange **Microsoft Office 365-appaket.** som **Paketbeskrivning**.
+7. Ange **Microsoft Office 365-appaket** som **Beskrivning av svit**.
 8. Klicka på **Ja** intill **Visa den som aktuell app i företagsportalen**.
 9. Klicka på **OK**.
 

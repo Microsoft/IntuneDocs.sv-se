@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc82653355ae57830684270fc8f7b9f1f3ae2491
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: a013698e56b342953e52296270e7571a257db860
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135082"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Övervaka säkerhetsbaslinje och profil i Microsoft Intune  
 
@@ -35,7 +35,7 @@ Den här artikeln beskriver båda övervakningsalternativen.
 
 När du övervakar en baslinje kan få du inblick i säkerhetstillståndet för dina enheter baserat på Microsofts rekommendationer. Du kan visa de insikterna från översiktsfönstret för säkerhetsbaslinjen i Intune-konsolen.  Det tar upp till 24 timmar innan data visas när du först har tilldelat en baslinje. Senare ändringar tar upp till sex timmar att visas.  
 
-Om du vill visa övervakningsdata för baslinjen och enheterna loggar du in på [Intune-portalen](https://aka.ms/intuneportal). Sedan väljer du **Säkerhetsbaslinjer (förhandsversion)**, väljer en baslinje och visar fönstret **Översikt**.
+Om du vill visa övervakningsdata för baslinjen och enheterna loggar du in på [Intune-portalen](https://go.microsoft.com/fwlink/?linkid=2090973). Sedan väljer du **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)**, väljer en baslinje och visar fönstret **Översikt**.
 
 I fönstret **Översikt** finns två metoder för att övervaka status:
 - **Enhetsvy** – en sammanfattning av hur många enheter som finns i varje statuskategori för baslinjen.  
