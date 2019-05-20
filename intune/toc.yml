@@ -442,11 +442,16 @@
                       items:
                         - name: Sophos Mobile och Intune-integrering
                           href: sophos-mtd-connector-integration.md
-            - name: Windows Defender ATP
-              href: advanced-threat-protection.md
-            - name: Säkerhetsbaslinjer
-              href: security-baselines.md
+            - name: Microsoft Defender
               items:
+                - name: Microsoft Defender ATP
+                  href: advanced-threat-protection.md
+                - name: Säkerhetsuppgifter
+                  href: atp-manage-vulnerabilities.md
+            - name: Säkerhetsbaslinjer
+              items:
+                - name: Säkerhetsbaslinjer
+                  href: security-baselines.md
                 - name: Övervaka dina baslinjer
                   href: security-baselines-monitor.md
             - name: Endpoint Protection
@@ -552,7 +557,7 @@
               href: app-configuration-policies-use-ios.md
             - name: Android hanterade enheter
               href: app-configuration-policies-use-android.md
-            - name: Hanterad hemskärmsapp för Android Enterprise
+            - name: Konfigurera Managed Home Screen
               href: app-configuration-managed-home-screen-app.md
             - name: Hanterade appar
               href: app-configuration-policies-managed-app.md
@@ -770,8 +775,12 @@
                   href: shared-user-device-settings-windows.md
                 - name: Anpassad
                   href: custom-settings-windows-10.md
-            - name: Inställningar för säkerhetsbaslinjer
-              href: security-baseline-settings-windows.md
+            - name: Säkerhetsbaslinjer
+              items:
+                - name: Windows 10-baslinjeinställningar
+                  href: security-baseline-settings-windows.md
+                - name: Microsoft Defender ATP-baslinjeinställningar
+                  href: security-baseline-settings-defender-atp.md
             - name: Windows Update-inställningar
               href: windows-update-settings.md
         - name: Windows 10 Holographic for Business
