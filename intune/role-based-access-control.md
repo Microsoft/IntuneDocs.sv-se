@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98e2229194287ff644e9503fa21c9536cbff4734
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 895b358760775b1021e545b271acb7ced7fa7b1d
+ms.sourcegitcommit: ac3fe7504e58c74495a560a68eae2b784a4f7d46
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507315"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942082"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -42,7 +42,7 @@ Om du vill se en roll väljer du **Intune** > **Roller** > **Alla roller** > vä
 -   **Tilldelningar**: En lista över [rolltilldelningar]( assign-role.md) som definierar vilka användare som har åtkomst till vilka användare/enheter. En roll kan ha flera tilldelningar och en användare kan vara i flera tilldelningar.
 
 ### <a name="built-in-roles"></a>Inbyggda roller
-Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du kan inte ta bort eller redigera namn, beskrivning, typ eller behörigheter för en inbyggd roll. En fullständig lista över behörigheterna för varje inbyggd roll finns i [Intune RBAC-tabellen]((https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du kan inte ta bort eller redigera namn, beskrivning, typ eller behörigheter för en inbyggd roll. En fullständig lista över behörigheterna för varje inbyggd roll finns i [Intune-RBAC-tabellen](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
 - **Supportavdelningen**: Utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter.
 - **Princip- och profilhanterare**: Hanterar principer för efterlevnad, konfigurationsprofiler, Apple-registrering, företagsenhetsidentifierare samt säkerhetsbaslinjer.
