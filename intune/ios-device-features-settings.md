@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2a94be7ebc369005f92809d57c8e55076972df3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: HT
+ms.openlocfilehash: 1bcd3a5d0b9f7abc1aa2e0b4d96c30c956b6b4c7
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799273"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764893"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>iOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
 
@@ -35,22 +35,18 @@ I den här artikeln visas inställningarna, tillsammans med en beskrivning av va
 
 [Skapa en iOS-enhetskonfigurationsprofil](device-features-configure.md#create-a-device-profile).
 
-## <a name="airprint-settings"></a>AirPrint-inställningar
+## <a name="airprint"></a>AirPrint
 
-Den här funktionen tillåter iOS-användare att skriva ut till kända AirPrint-skrivare.
+- **IP-adress**: Ange skrivarens IPv4- eller IPv6-adress. Om du använder värdnamn till att identifiera skrivare, kan du hämta IP-adressen genom att pinga skrivaren i terminalen. Det finns mer information i Hämta IP-adress och sökväg (i den här artikeln).
+- **Sökväg**: Sökvägen är vanligtvis `ipp/print` för skrivare i nätverket. Det finns mer information i Hämta IP-adress och sökväg (i den här artikeln).
+- **Port**: Ange lyssningsporten för AirPrint-målet. Om du lämnar den här egenskapen tom, kommer AirPrint att använda standardporten. Tillgängligt i iOS 11.0 och senare.
+- **TLS**: Välj **Aktivera** för att skydda AirPrint-anslutningar med TLS (Transport Layer Security). Tillgängligt i iOS 11.0 och senare.
 
-1. I **Inställningar** väljer du **AirPrint**. Ange följande egenskaper för AirPrint-servern:
+**Lägg till** lägger till AirPrint-servern i listan. Du kan lägga till flera AirPrint-servrar. Du kan också **Importera** en kommaavgränsad fil (CSV) med den här informationen. När du har skapat listan, kan du också **Exportera** din lista över AirPrint-servrar.
 
-    - **IP-adress**: Ange skrivarens IPv4- eller IPv6-adress. Om du använder värdnamn till att identifiera skrivare, kan du hämta IP-adressen genom att pinga skrivaren i terminalen. Det finns mer information i Hämta IP-adress och sökväg (i den här artikeln).
-    - **Sökväg**: Sökvägen är vanligtvis `ipp/print` för skrivare i nätverket. Det finns mer information i Hämta IP-adress och sökväg (i den här artikeln).
-    - **Port**: Ange lyssningsporten för AirPrint-målet. Om du lämnar den här egenskapen tom, kommer AirPrint att använda standardporten. Tillgängligt i iOS 11.0 och senare.
-    - **TLS**: Välj **Aktivera** för att skydda AirPrint-anslutningar med TLS (Transport Layer Security). Tillgängligt i iOS 11.0 och senare.
+Klicka på **OK** för att spara listan.
 
-2. Välj **Lägg till**. AirPrint-servern läggs till i listan. Du kan lägga till flera AirPrint-servrar.
-
-    Du kan också **Importera** en kommaavgränsad fil (CSV) med den här informationen. När du har skapat listan, kan du också **Exportera** din lista över AirPrint-servrar.
-
-3. När du är klar väljer du **OK** för att spara listan.
+### <a name="get-server-ip-address-resource-path-and-port"></a>Hämta IP-adress för server, resurssökväg och port
 
 Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, resurssökväg och port. Följande steg visar hur du hämtar den här informationen.
 
@@ -73,29 +69,32 @@ Dessa inställningar konfigurerar applayouten och mappar på dockan och startsk�
 
 Använd inställningarna **Docka** för att lägga till upp till sex objekt eller mappar till dockan på iOS-skärmen. Många enheter stöder färre objekt. Till exempel stöder iPhone-enheter upp till fyra objekt. I det här fallet visas endast de första fyra objekt som du har lagt till på enheten.
 
-1. I **Inställningar** väljer du **Hemskärmslayout (endast övervakat)** > **Docka** > **Lägg till**. Du kan lägga till upp till **sex** objekt (appar och mappar som kombineras) för enhetens docka.
-2. I **Typ**, väljer du att lägga till en **App** eller en **Mapp**.
+Du kan lägga till upp till **sex** objekt (appar och mappar som kombineras) för enhetens docka.
 
-    - **Lägg till en app**: Välj det här alternativet för att lägga till appar i dockan på skärmen. Ange:
+- **Lägg till**: Lägger till appar eller mappar till dockan på enheten.
+- **Typ**: Lägger till en **app** eller en **mapp**:
 
+  - **App**: Välj det här alternativet för att lägga till appar i dockan på skärmen. Ange:
+
+    - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
+    - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
+
+    Klicka på **OK** för att spara ändringarna.
+
+  - **Mapp**: Välj det här alternativet för att lägga till en mapp i dockan på skärmen.
+
+    Apparna som du lägger till på en sida i en mapp ordnas från vänster till höger, och i samma ordning som i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en annan sida.
+
+    - **Mappnamn**: Ange namnet på mappen. Namnet visas för användare på deras enhet.
+    - **Lista över sidor**: **Lägg till** en sida och ange följande egenskaper:
+
+      - **Sidnamn**: Ange ett namn för sidan. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
       - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
-      - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](#bundle-ids-for-built-in-ios-apps) (i den här artikeln) för några exempel.
+      - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
-      Klicka på **OK** för att spara ändringarna.
+      Du kan lägga till upp till **20** sidor för enhetsdockan.
 
-    - **Lägg till en mapp**: Välj det här alternativet för att lägga till en mapp i dockan på skärmen. 
-
-      Apparna som du lägger till på en sida i en mapp ordnas från vänster till höger, och i samma ordning som i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en annan sida.
-
-      1. Ange ett **Mappnamn**. Namnet visas för användare på deras enhet.
-      2. Välj **Lägg till** och ange följande egenskaper:
-
-          - **Sidnamn**: Ange ett namn för sidan. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
-          - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
-          - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](#bundle-ids-for-built-in-ios-apps) (i den här artikeln) för några exempel.
-
-      3. Välj **Lägg till**. Du kan lägga till upp till **20** sidor för enhetsdockan.
-      4. Klicka på **OK** för att spara ändringarna.
+    Klicka på **OK** för att spara ändringarna.
 
 > [!NOTE]
 > När du lägger till ikoner med hjälp av dockningsinställningarna låser du ikonerna på startsidan och andra sidor så att de inte kan flyttas. Detta kan vara standardinställningen för MDM-principer med iOS och Apple.
@@ -117,33 +116,37 @@ Lägg till de sidor som du vill ska visas på startskärmen, samt de appar som d
 > [!TIP]
 > För att ändra om objekt på startskärmen och sidlistor kan du dra och släppa dem.
 
-1. I **Inställningar** väljer du **Hemskärmslayout (endast övervakat)** > **Sidor** > **Lägg till**. Du kan lägga till upp till **40** sidor på en enhet.
-2. Ange ett **Sidnamn**. Det här namnet används som din referens i Azure-portalen och visas *inte* på iOS-enheten. 
+Du kan lägga till upp till **40** sidor på en enhet.
 
-    Välj **Lägg till**. Du kan lägga till upp till **60** objekt (appar och mappar kombinerat) på en enhet.
+- **Lista över sidor**: **Lägg till** en sida och ange följande egenskaper:
 
-3. I **Typ**, väljer du att lägga till en **App** eller en **Mapp**.
+  - **Sidnamn**: Ange ett namn för sidan. Det här namnet används som din referens i Azure-portalen och visas *inte* på iOS-enheten.
 
-    - **Lägg till en app**: Välj det här alternativet för att lägga till appar på en sida på skärmen. Ange:
+  Du kan lägga till upp till **60** objekt (appar och mappar kombinerat) på en enhet.
 
-      - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
-      - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](#bundle-ids-for-built-in-ios-apps) (i den här artikeln) för några exempel.
+  - **Lägg till**: Lägger till appar eller mappar till dockan på enheten.
+
+    - **Typ**: Lägger till en **app** eller en **mapp**:
+
+      - **App**: Välj det här alternativet för att lägga till appar på en sida på skärmen. Ange även:
+
+        - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
+        - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
       Klicka på **OK** för att spara ändringarna.
 
-    - **Lägg till en mapp**: Välj det här alternativet för att lägga till en mapp i dockan på skärmen. 
+      - **Mapp**: Välj det här alternativet för att lägga till en mapp i dockan på skärmen.
 
-      Apparna som du lägger till på en sida i en mapp ordnas från vänster till höger, och i samma ordning som i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en annan sida.
+        Apparna som du lägger till på en sida i en mapp ordnas från vänster till höger, och i samma ordning som i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en annan sida.
 
-      1. Ange ett **Mappnamn**. Namnet visas för användare på deras enhet.
-      2. Välj **Lägg till** och ange följande egenskaper:
+        - **Mappnamn**: Ange ett namn på mappen. Namnet visas för användare på enheten.
+        - **Lägg till**: Lägger till sidor i mappen. Ange även följande egenskaper:
 
           - **Sidnamn**: Ange ett namn för sidan. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
           - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
-          - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](#bundle-ids-for-built-in-ios-apps) (i den här artikeln) för några exempel.
+          - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
-      3. Välj **Lägg till**.
-      4. Klicka på **OK** för att spara ändringarna.
+      Klicka på **OK** för att spara ändringarna.
 
 #### <a name="example"></a>Exempel
 
@@ -159,50 +162,43 @@ När du tilldelar principen till en iPhone liknar sidan följande bild:
 
 Välj hur installerade appar på iOS-enheter skickar meddelanden. Inställningarna har stöd för övervakade enheter som kör iOS 9.3 och senare.
 
-1. I **Inställningar** väljer du **Appmeddelanden (endast övervakat)** > **Lägg till**:
+- **Lägg till**: Lägg till meddelanden för appar:
 
     ![Lägg till appmeddelande i en iOS-profil i Intune](./media/ios-macos-app-notifications.png)
 
-2. Ange följande egenskaper:
+  - **Appsamlings-ID** – Ange **Appsamlings-ID** för den app som du vill lägga till. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
+  - **Appnamn**: Ange namnet på den app som du vill lägga till. Det här namnet används som din referens i Azure Portal. Det visas *inte* på enheten.
+  - **Utgivare**: Ange utgivaren av den app som du lägger till. Det här namnet används som din referens i Azure Portal. Det visas *inte* på enheten.
+  - **Meddelanden**: **Aktivera** eller **Inaktivera** att appen kan skicka meddelanden till enheten.
+    - **Visa i Meddelandecenter**: **Aktivera** tillåter att appen visar aviseringar i enhetens meddelandecenter. **Inaktivera** förhindrar att appen visar meddelanden i meddelandecentret.
+    - **Visa på låsskärm**: Välj **Aktivera** för att visa aviseringar från appen på enhetens låsskärm. **Inaktivera** förhindrar att appen visar meddelanden på låsskärmen.
+    - **Aviseringstyp**: När enheten är upplåst kan du välja hur meddelandet visas. Alternativen är:
+      - **Ingen**: Inga meddelanden visas.
+      - **Banderoll**: En banderoll visas en kort stund med meddelandet.
+      - **Modal**: Meddelandet visas och användaren måste manuellt ta bort det innan hen fortsätter att använda enheten.
+    - **Bricka på appikon**: Välj **Aktivera** om du vill lägga till en aktivitetssymbol till appikonen. Aktivitetsikonen innebär att appen skickat en avisering.
+    - **Ljud**: Välj **Aktivera** för att spela upp ett ljud när en avisering tas emot.
 
-    - **Appsamlings-ID** – Ange **Appsamlings-ID** för den app som du vill lägga till. Se [Samlings-ID för inbyggda iOS-appar](#bundle-ids-for-built-in-ios-apps) (i den här artikeln) för några exempel.
-    - **Appnamn**: Ange namnet på den app som du vill lägga till. Det här namnet används som din referens i Azure Portal. Det visas *inte* på enheten.
-    - **Utgivare**: Ange utgivaren av den app som du lägger till. Det här namnet används som din referens i Azure Portal. Det visas *inte* på enheten.
-    - **Meddelanden**: **Aktivera** eller **Inaktivera** att appen kan skicka meddelanden till enheten.
-       - **Visa i Meddelandecenter**: **Aktivera** tillåter att appen visar aviseringar i enhetens meddelandecenter. **Inaktivera** förhindrar att appen visar meddelanden i meddelandecentret.
-       - **Visa på låsskärm**: Välj **Aktivera** för att visa aviseringar från appen på enhetens låsskärm. **Inaktivera** förhindrar att appen visar meddelanden på låsskärmen.
-       - **Aviseringstyp**: När enheten är upplåst kan du välja hur meddelandet visas. Alternativen är:
-         - **Ingen**: Inga meddelanden visas.
-         - **Banderoll**: En banderoll visas en kort stund med meddelandet.
-         - **Modal**: Meddelandet visas och användaren måste manuellt ta bort det innan hen fortsätter att använda enheten.
-       - **Bricka på appikon**: Välj **Aktivera** om du vill lägga till en aktivitetssymbol till appikonen. Aktivitetsikonen innebär att appen skickat en avisering.
-       - **Ljud**: Välj **Aktivera** för att spela upp ett ljud när en avisering tas emot.
-
-3. Klicka på **OK** för att spara ändringarna. Fortsätt lägga till de appar du önskar. När du är klar väljer du **OK**.
+Klicka på **OK** för att spara ändringarna.
 
 ## <a name="lock-screen-message-settings"></a>Inställningar för meddelande på låsskärm
 
 Använd de här inställningarna för att visa ett anpassat meddelande eller text i inloggningsfönstret och på låsskärmen. Du kan till exempel skriva ett meddelande av typen ”Upphittad enhet återlämnas till...” och resurstagginformation. 
 
-Den här funktionen stöder övervakade enheter som kör:
+Den här funktionen har stöd för övervakade enheter som kör iOS 9.3 och senare.
 
-- iOS 9.3 och senare
+- **Resurstagginformation**: Ange information om resurstaggen för enheten. Ange till exempel `Owned by Contoso Corp` eller `Serial Number: {{serialnumber}}`.
 
-1. I **Inställningar** väljer du **Meddelande på låsskärm (endast övervakat)**.
-2. Ange följande inställningar:
+  Den text du anger visas i inloggningsfönstret och på låsskärmen på enheten.
 
-    - **Resurstagginformation**: Ange information om resurstaggen för enheten. Ange till exempel `Owned by Contoso Corp` eller `Serial Number: {{serialnumber}}`. 
+- **Fotnot på låsskärmen**: Ange en kommentar som kan hjälpa dig att få tillbaka enheten om den tappas bort eller blir stulen. Du kan ange valfri text. Ange något i stil med `If found, call Contoso at ...`.
 
-      Den text du anger visas i inloggningsfönstret och på låsskärmen på enheten.
+  Enhetstoken kan också användas för att lägga till enhetsspecifik information i de här fälten. Ange till exempel `Serial Number: {{serialnumber}}` om du vill visa serienumret. På låsskärmen visas texten ungefär som `Serial Number 123456789ABC`. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceName` eller andra enhetsspecifika värden.
 
-    - **Fotnot på låsskärmen**: Ange en kommentar som kan hjälpa dig att få tillbaka enheten om den tappas bort eller blir stulen. Du kan ange valfri text. Ange något i stil med `If found, call Contoso at ...`.
+  > [!NOTE]
+  > Variabler verifieras inte i användargränssnittet. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{Devicename}}` istället för `{{devicename}}` visas litteralsträngen istället för enhetens unika namn.
 
-    Enhetstoken kan också användas för att lägga till enhetsspecifik information i de här fälten. Ange till exempel `Serial Number: {{serialnumber}}` om du vill visa serienumret. På låsskärmen visas texten ungefär som `Serial Number 123456789ABC`. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceName` eller andra enhetsspecifika värden.
-
-    > [!NOTE]
-    > Variabler verifieras inte i användargränssnittet. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{Devicename}}` istället för `{{devicename}}` visas litteralsträngen istället för enhetens unika namn.
-
-3. När du är klar väljer du **OK** för att spara ändringarna.
+Klicka på **OK** för att spara ändringarna.
 
 ## <a name="single-sign-on-settings"></a>Inställningar för enkel inloggning
 
@@ -213,82 +209,77 @@ Om du vill använda enkel inloggning, måste du ha:
 - En app som är kodad för att leta efter användarens autentiseringsuppgifter lagrade i enkel inloggning på enheten.
 - Intune måste ha konfigurerats för enkel inloggning för iOS-enheter.
 
-1. I **Inställningar** väljer du **Enkel inloggning**:
+![Fönstret Enkel inloggning](./media/sso-blade.png)
 
-   ![Fönstret Enkel inloggning](./media/sso-blade.png)
+- **Användarnamnattribut från AAD**: Intune söker efter det här attributet för varje användare i Azure AD. Intune fyller sedan i respektive fält (till exempel UPN) innan XML som installeras på enheten genereras. Alternativen är:
 
-2. Ange följande inställningar:
+  - **User Principal Name**: UPN parsas på följande sätt:
 
-    - **Användarnamnattribut från AAD**: Intune söker efter det här attributet för varje användare i Azure AD. Intune fyller sedan i respektive fält (till exempel UPN) innan XML som installeras på enheten genereras. Alternativen är:
+    ![Användarnamnattribut](media/User-name-attribute.png)
 
-      - **User Principal Name**: UPN parsas på följande sätt:
+    Du kan också skriva över området med texten som du anger i textrutan **Område**.
 
-        ![Användarnamnattribut](media/User-name-attribute.png)
+    Contoso har exempelvis flera regioner, inklusive Europa, Asien och Nordamerika. Contoso vill att Asien-användarna ska använda enkel inloggning och appen kräver UPN i `username@asia.contoso.com`-formatet. När du väljer **UPN**, tas sfären för varje användare från Azure Active Directory, som är `contoso.com`. För användare i Asien, markerar du **UPN** och anger `asia.contoso.com`. Nu blir slutanvändarens UPN `username@asia.contoso.com` i stället för `username@contoso.com`.
 
-        Du kan också skriva över området med texten som du anger i textrutan **Område**.
+  - **ID för Intune-enhet**: Intune väljer automatiskt ID:t för Intune-enheten.
 
-        Contoso har exempelvis flera regioner, inklusive Europa, Asien och Nordamerika. Contoso vill att Asien-användarna ska använda enkel inloggning och appen kräver UPN i `username@asia.contoso.com`-formatet. När du väljer **UPN**, tas sfären för varje användare från Azure Active Directory, som är `contoso.com`. För användare i Asien, markerar du **UPN** och anger `asia.contoso.com`. Nu blir slutanvändarens UPN `username@asia.contoso.com` i stället för `username@contoso.com`.
+    Som standard behöver appar bara använda enhets-ID. Men om din app använder sfären och enhets-ID:t kan du skriva sfären i textrutan Sfär.
 
-      - **ID för Intune-enhet**: Intune väljer automatiskt ID:t för Intune-enheten.
+    > [!NOTE]
+    > Som standard bör du lämna området tomt om du använder enhets-ID.
 
-        Som standard behöver appar bara använda enhets-ID. Men om din app använder sfären och enhets-ID:t kan du skriva sfären i textrutan Sfär.
+  - **Enhets-ID för Azure Active Directory**
 
-        > [!NOTE]
-        > Som standard bör du lämna området tomt om du använder enhets-ID.
+- **Sfär**: Ange domändelen av URL:en. Ange till exempel `contoso.com`.
+- **URL-prefix som används för enkel inloggning**: **Lägg till** alla URL:er i din organisation som kräver användarautentisering via enkel inloggning.
 
-      - **Enhets-ID för Azure Active Directory**
+  När en användare exempelvis ansluter till någon av dessa platser använder iOS-enheten autentiseringsuppgifterna för enkel inloggning. Användaren behöver inte ange ytterligare autentiseringsuppgifter. Om multifaktorautentisering är aktiverat måste användarna ange en autentisering till.
 
-    - **Sfär**: Ange domändelen av URL:en. Ange till exempel `contoso.com`.
-    - **URL-prefix som används för enkel inloggning**: **Lägg till** alla URL:er i din organisation som kräver användarautentisering via enkel inloggning.
+  > [!NOTE]
+  > Dessa URL:er måste vara ett fullständigt domännamn i korrekt format. Apple kräver att dessa ska vara i formatet `http://<yourURL.domain>`.
 
-        När en användare exempelvis ansluter till någon av dessa platser använder iOS-enheten autentiseringsuppgifterna för enkel inloggning. Användaren behöver inte ange ytterligare autentiseringsuppgifter. Om multifaktorautentisering är aktiverat måste användarna ange en autentisering till.
+  Mönster för URL-matchning måste börja med antingen `http://` eller `https://`. En enkel strängmatchning körs, så URL-prefixet `http://www.contoso.com/` matchar inte `http://www.contoso.com:80/`. Om du har iOS 10.0 eller senare kan ett enskilt jokertecken \* användas för att ange alla matchande värden. `http://*.contoso.com/` matchar till exempel både `http://store.contoso.com/` och `http://www.contoso.com`.
 
-        > [!NOTE]
-        > Dessa URL:er måste vara ett fullständigt domännamn i korrekt format. Apple kräver att dessa ska vara i formatet `http://<yourURL.domain>`.
+  Mönstren `http://.com` och `https://.com` matchar alla HTTP- respektive HTTPS-adresser.
 
-        Mönster för URL-matchning måste börja med antingen `http://` eller `https://`. En enkel strängmatchning körs, så URL-prefixet `http://www.contoso.com/` matchar inte `http://www.contoso.com:80/`. Om du har iOS 10.0 eller senare kan ett enskilt jokertecken \* användas för att ange alla matchande värden. `http://*.contoso.com/` matchar till exempel både `http://store.contoso.com/` och `http://www.contoso.com`.
+- **Appar som ska använda enkel inloggning**: **Lägg till** appar på slutanvändarnas enheter som kan använda enkel inloggning.
 
-        Mönstren `http://.com` och `https://.com` matchar alla HTTP- respektive HTTPS-adresser.
+  Matrisen `AppIdentifierMatches` måste innehålla strängar som matchar appsamlings-ID:n. Dessa strängar kan vara exakta matchningar, till exempel `com.contoso.myapp`, eller så anger du en prefixmatchning för paket-ID:t med jokertecknet \*. Jokertecknet måste komma efter en punkt (.), och får bara förekomma en gång, i slutet av strängen såsom `com.contoso.*`. När ett jokertecken används beviljas alla appar vars samlings-ID börjar med prefixet åtkomst till kontot.
 
-    - **Appar som ska använda enkel inloggning**: **Lägg till** appar på slutanvändarnas enheter som kan använda enkel inloggning.
+  Använd **appnamn** för att ange ett användarvänligt namn som hjälper dig att identifiera paket-ID:t.
 
-        Matrisen `AppIdentifierMatches` måste innehålla strängar som matchar appsamlings-ID:n. Dessa strängar kan vara exakta matchningar, till exempel `com.contoso.myapp`, eller så anger du en prefixmatchning för paket-ID:t med jokertecknet \*. Jokertecknet måste komma efter en punkt (.), och får bara förekomma en gång, i slutet av strängen såsom `com.contoso.*`. När ett jokertecken används beviljas alla appar vars samlings-ID börjar med prefixet åtkomst till kontot.
+- **Certifikat för förnyelse av autentiseringsuppgifter**: Om du använder certifikat för autentisering (inte lösenord), väljer du det befintliga SCEP- eller PFX-certifikatet som autentiseringscertifikat. Vanligtvis är det här certifikatet samma certifikat som distribueras till användaren för andra profiler, till exempel VPN, WiFi eller e-post.
 
-        Använd **appnamn** för att ange ett användarvänligt namn som hjälper dig att identifiera paket-ID:t.
-
-    - **Certifikat för förnyelse av autentiseringsuppgifter**: Om du använder certifikat för autentisering (inte lösenord), väljer du det befintliga SCEP- eller PFX-certifikatet som autentiseringscertifikat. Vanligtvis är det här certifikatet samma certifikat som distribueras till användaren för andra profiler, till exempel VPN, WiFi eller e-post.
-
-3. När du är klar väljer du **OK** för att spara ändringarna.
+Klicka på **OK** för att spara ändringarna.
 
 ## <a name="web-content-filter-settings"></a>Inställningar för webbinnehållsfilter
 
 Dessa inställningar styr webbläsarens URL-åtkomst på iOS-enheter.
 
-1. I **Inställningar** väljer du **Webbinnehållsfilter (endast övervakat)**.
-2. Välj **Filtertyp**. Alternativen är:
+- **Filtertyp**: Välj att tillåta vissa webbplatser. Alternativen är:
 
-    - **Konfigurera URL:er**: Använd Apples inbyggda webbfilter som söker efter innehåll som är olämpligt för barn, inklusive svordomar och sexuellt explicit språk. Den här funktionen utvärderar varje webbsida som den har lästs in, och identifierar och blockerar olämpligt innehåll. Du kan också lägga till URL:er som du inte vill ska kontrolleras av filtret. Eller blockera specifika URL:er, oavsett inställningarna för Apple-filtret.
+  - **Konfigurera URL:er**: Använd Apples inbyggda webbfilter som söker efter innehåll som är olämpligt för barn, inklusive svordomar och sexuellt explicit språk. Den här funktionen utvärderar varje webbsida som den har lästs in, och identifierar och blockerar olämpligt innehåll. Du kan också lägga till URL:er som du inte vill ska kontrolleras av filtret. Eller blockera specifika URL:er, oavsett inställningarna för Apple-filtret.
 
-      - **Tillåtna webbadresser**: **Lägg till** de URL:er som du vill tillåta. Dessa URL:er kringgår Apple-webbfiltret.
+    - **Tillåtna webbadresser**: **Lägg till** de URL:er som du vill tillåta. Dessa URL:er kringgår Apple-webbfiltret.
 
-        > [!NOTE]
+      > [!NOTE]
         > URL:er som du anger är de URL:er som du inte vill ska utvärderas av Apple-webbfiltret. Dessa URL:er är inte en lista över tillåtna webbplatser. För att skapa en lista över tillåtna webbplatser ställer du in **Filtertyp** till **Endast vissa webbplatser**.
 
-        Klicka på **OK** för att spara ändringarna.
+      Klicka på **OK** för att spara ändringarna.
 
-      - **Blockerade URL:er**: **Lägg till** URL:er som du vill hindra från att öppnas, oavsett inställningarna i Apple-webbfiltret.
-
-        Klicka på **OK** för att spara ändringarna.
-
-    - **Endast vissa webbplatser** (endast för Safari-webbläsaren): Dessa webbadresser läggs till i Safari-webbläsarens bokmärken. Användaren är **endast** tillåten att besöka dessa webbplatser, inga andra platser kan öppnas. Använd bara det här alternativet om du vet den exakta listan över webbadresser som kan nås av användarna.
-
-      - **URL**: Ange URL:en till den webbplats som du vill tillåta. Ange till exempel `https://www.contoso.com`.
-      - **Bokmärkessökväg**: Ange sökvägen där du vill lagra bokmärket. Ange till exempel `/Contoso/Business Apps`. Om du inte lägger till någon sökväg läggs bokmärket till i standardmappen för bokmärken på enheten.
-      - **Rubrik**: Ange en beskrivande rubrik för bokmärket.
-
-      Om du inte anger några URL:er kommer användarna inte att komma åt några webbplatser förutom för `microsoft.com`, `microsoft.net` och `apple.com`. Dessa URL:er tillåts automatiskt av Intune.
+    - **Blockerade URL:er**: **Lägg till** URL:er som du vill hindra från att öppnas, oavsett inställningarna i Apple-webbfiltret.
 
       Klicka på **OK** för att spara ändringarna.
+
+  - **Endast vissa webbplatser** (endast för Safari-webbläsaren): Dessa webbadresser läggs till i Safari-webbläsarens bokmärken. Användaren är **endast** tillåten att besöka dessa webbplatser, inga andra platser kan öppnas. Använd bara det här alternativet om du vet den exakta listan över webbadresser som kan nås av användarna.
+
+    - **URL**: Ange URL:en till den webbplats som du vill tillåta. Ange till exempel `https://www.contoso.com`.
+    - **Bokmärkessökväg**: Ange sökvägen där du vill lagra bokmärket. Ange till exempel `/Contoso/Business Apps`. Om du inte lägger till någon sökväg läggs bokmärket till i standardmappen för bokmärken på enheten.
+    - **Rubrik**: Ange en beskrivande rubrik för bokmärket.
+
+    Om du inte anger några URL:er kommer användarna inte att komma åt några webbplatser förutom för `microsoft.com`, `microsoft.net` och `apple.com`. Dessa URL:er tillåts automatiskt av Intune.
+
+    Klicka på **OK** för att spara ändringarna.
 
 ## <a name="wallpaper-settings"></a>Inställningar för bakgrundsbild
 
@@ -305,57 +296,6 @@ Ett oväntat beteende kan uppstå när en profil utan bild tilldelas till enhete
 
 > [!TIP]
 > För att visa olika bilder på låsskärmen och startsidan, skapa en profil med bilden för låsskärmen. Skapa en annan profil med bilden för startsidan. Tilldela båda profilerna till din iOS-användare eller dina enhetsgrupper.
-
-## <a name="bundle-ids-for-built-in-ios-apps"></a>Samlings-ID för inbyggda iOS-appar
-
-I följande lista visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar.
-
-| Samlings-ID                   | Appnamn     | Utgivare |
-|-----------------------------|--------------|-----------|
-| com.apple.AppStore          | Appbutik    | Apple     |
-| com.apple.calculator        | Kalkylator   | Apple     |
-| com.apple.mobilecal         | Kalender     | Apple     |
-| com.apple.camera            | Kamera       | Apple     |
-| com.apple.mobiletimer       | Klocka        | Apple     |
-| com.apple.compass           | Kompass      | Apple     |
-| com.apple.MobileAddressBook | Kontakter     | Apple     |
-| com.apple.facetime          | FaceTime     | Apple     |
-| com.apple.DocumentsApp      | Filer        | Apple     |
-| com.apple.mobileme.fmf1     | Hitta vänner | Apple     |
-| com.apple.mobileme.fmip1    | Hitta iPhone  | Apple     |
-| com.apple.gamecenter        | Spelcenter  | Apple     |
-| com.apple.mobilegarageband  | GarageBand   | Apple     |
-| com.apple.Health            | Hälsa       | Apple     |
-| com.apple.Home              | Hem         | Apple     |
-| com.apple.iBooks            | iBooks       | Apple     |
-| com.apple.iMovie            | iMovie       | Apple     |
-| com.apple.itunesconnect.mobile | iTunes Connect | Apple |
-| com.apple.MobileStore       | iTunes Store | Apple     |
-| com.apple.itunesu           | iTunes U     | Apple     |
-| com.apple.Keynote           | Keynote      | Apple     |
-| com.apple.mobilemail        | E-post         | Apple     |
-| com.apple.Maps              | Kartor         | Apple     |
-| com.apple.MobileSMS         | Meddelanden     | Apple     |
-| com.apple.Music             | Musik        | Apple     |
-| com.apple.news              | Nyheter         | Apple     |
-| com.apple.mobilenotes       | Obs!        | Apple     |
-| com.apple.Numbers           | Siffror      | Apple     |
-| com.apple.Pages             | Sidor        | Apple     |
-| com.apple.Photo-Booth       | Photo Booth  | Apple     |
-| com.apple.mobileslideshow   | Foton       | Apple     |
-| com.apple.podcasts          | Poddsändningar     | Apple     |
-| com.apple.reminders         | Påminnelser    | Apple     |
-| com.apple.mobilesafari      | Safari       | Apple     |
-| com.apple.Preferences       | Inställningar     | Apple     |
-| com.apple.SiriViewService   | Siri         | Apple     |
-| com.apple.stocks            | Aktier       | Apple     |
-| com.apple.tips              | Tips         | Apple     |
-| com.apple.TV                | TV           | Apple     |
-| com.apple.videos            | Videor       | Apple     |
-| com.apple.VoiceMemos        | VoiceMemos   | Apple     |
-| com.apple.Passbook          | Plånbok       | Apple     |
-| com.apple.Bridge            | Titta på        | Apple     |
-| com.apple.weather           | Väder      | Apple     |
 
 ## <a name="next-steps"></a>Nästa steg
 
