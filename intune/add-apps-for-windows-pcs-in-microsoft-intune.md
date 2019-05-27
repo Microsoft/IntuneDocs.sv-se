@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 08/29/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4f6a8c3e460e9806aabadd710ec102aa77d44ab
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 86cbea29233d792006bce68fcd2a36fb1a7ec0a6
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050203"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Lägg till program för Windows-datorer som kör Intune-klientprogramvaran
 
@@ -78,7 +77,7 @@ Använd Intune-programvaruutgivaren för att konfigurera egenskaper för appen o
 5. På sidan **Identifieringsregler** kan du konfigurera regler för att identifiera om den app som du konfigurerar redan är installerad på en dator. Eller så kan du använda standardidentifieringsreglerna för att automatiskt skriva över eventuella tidigare installerade versioner av appen. Det här alternativet är för Windows Installer (endast .exe-filer).
 
    Reglerna du kan konfigurera är:
-   - **Filen finns**. Ange sökvägen till filen som du vill identifiera. Du kan söka under **%ProgramFiles%** (som söker i **Program Files**\&lt;sökväg&gt; och **Program Files (x86)**\&lt;sökväg&gt;) på datorn eller **%SystemDrive%** (som söker från datorns rotenhet, normalt enhet C).
+   - **Filen finns**. Ange sökvägen till filen som du vill identifiera. Du kan söka under **%ProgramFiles%** (som söker i **Program Files**\&lt;sökväg&gt; och **Program Files (x86)** \&lt;sökväg&gt;) på datorn eller **%SystemDrive%** (som söker från datorns rotenhet, normalt enhet C).
    - **MSI produktkod finns**. Välj **Bläddra** för att välja den Windows Installer-fil (.msi) som du vill identifiera.
    - <strong>Registernyckeln finns</strong>. Ange en registernyckel som börjar med <strong>HKEY_LOCAL_MACHINE\</strong>. Både 32-bitars och 64-bitars registersökvägar genomsöks. Om den nyckel som du angav finns på någon av platserna uppfylls identifieringsregeln.
 

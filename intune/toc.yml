@@ -473,8 +473,8 @@
               href: certificates-s-mime-encryption-sign.md
             - name: Använd tredje parts certifikatutfärdare med SCEP
               href: certificate-authority-add-scep-overview.md
-            - name: Symantec PKI Manager-webbtjänst
-              href: certificates-symantec-configure.md
+            - name: Använda DigiCert PKI
+              href: certificates-digicert-configure.md
             - name: Ta bort SCEP- eller PKCS-certifikat
               href: remove-certificates.md
         - name: eSIM-mobilprofiler

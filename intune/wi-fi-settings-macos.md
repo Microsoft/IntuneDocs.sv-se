@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 10/18/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 551d77b21e69eca76c4d9804130f253a69ca736b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 50269e63f016c1d4f74b006d7748e5c300faac61
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566139"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050228"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för macOS-enheter i Microsoft Intune
 
@@ -44,7 +43,7 @@ Den här artikeln beskriver dessa inställningar.
 - **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
 - **Säkerhetstyp**: Välj det säkerhetsprotokoll som autentiserar med Wi-Fi-nätverket. Alternativen är:
 
-  - **Öppet (ingen autentisering)**: Använd bara det här alternativet om nätverket är oskyddat.
+  - **Öppet (ingen autentisering)** : Använd bara det här alternativet om nätverket är oskyddat.
   - **WPA/WPA2 – Personlig**: Ange lösenordet i **I förväg delad nyckel**. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet.
   - **WEP**
 
@@ -62,9 +61,9 @@ Den här artikeln beskriver dessa inställningar.
 
 - **EAP-typ**: Välj den EAP-typ (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar. Alternativen är:
 
-  - **EAP-FAST**: Ange **PAC-inställningar (Protected Access Credential)**. Det här alternativet använder autentiseringsuppgifter för skyddad åtkomst till att skapa en autentiserad tunnel mellan klienten och autentiseringsservern. Alternativen är:
+  - **EAP-FAST**: Ange **PAC-inställningar (Protected Access Credential)** . Det här alternativet använder autentiseringsuppgifter för skyddad åtkomst till att skapa en autentiserad tunnel mellan klienten och autentiseringsservern. Alternativen är:
     - **Använd inte (PAC)**
-    - **Använd (PAC)**: Om det finns en befintlig PAC-fil använder du den.
+    - **Använd (PAC)** : Om det finns en befintlig PAC-fil använder du den.
     - **Använd och etablera PAC**: Skapa och lägg till PAC-filen till dina enheter.
     - **Använd och etablera PAC anonymt**: Skapa och lägg till PAC-filen i dina enheter utan att autentisera till servern.
 
@@ -77,7 +76,7 @@ Den här artikeln beskriver dessa inställningar.
 
       Klicka på **OK** för att spara ändringarna.
 
-    - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+    - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)** : Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -91,15 +90,15 @@ Den här artikeln beskriver dessa inställningar.
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
-        - **Annan metod än EAP (inre identitet)**: Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
+        - **Annan metod än EAP (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
 
-          Dina alternativ: **PAP (Password Authentication Protocol)**, **CHAP (Challenge Handshake Authentication Protocol)**, **MS-CHAP (Microsoft CHAP)** eller **MS-CHAP v2 (Microsoft CHAP Version 2)**
+          Dina alternativ: **PAP (Password Authentication Protocol)** , **CHAP (Challenge Handshake Authentication Protocol)** , **MS-CHAP (Microsoft CHAP)** eller **MS-CHAP v2 (Microsoft CHAP Version 2)**
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
         Klicka på **OK** för att spara ändringarna.
 
-      - **Identitetsskydd (yttre identitet)**: Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+      - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
   - **LEAP**
 
@@ -118,7 +117,7 @@ Den här artikeln beskriver dessa inställningar.
 
         Klicka på **OK** för att spara ändringarna.
 
-      - **Identitetsskydd (yttre identitet)**: Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+      - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
 - **Proxyinställningar**: Dina alternativ:
   - **Inga**: Inga proxyinställningar konfigureras.

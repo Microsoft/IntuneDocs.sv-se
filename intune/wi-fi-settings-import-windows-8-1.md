@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 07/18/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3452eb832f31377ddc9c55c5008405cb2235569b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2ce2813702d9b2b3cb91f5531308cbb58b1f9f80
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564847"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050615"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importera Wi-Fi-inställningar för Windows-enheter i Intune
 
@@ -56,7 +55,7 @@ På en Windows-dator som redan har rätt WiFi-profil installerad, gör du följa
     > - Om du exporterar en trådlös nätverksprofil som innehåller en i förväg delad nyckel, måste filen vara skyddad. Nyckeln är i oformaterad text, så det är ditt ansvar att skydda den.
 
 4. I **Plattform** väljer di **Windows 8.1 och senare**.
-5. I **Profiltyp** väljer du **Trådlöst (import)**.
+5. I **Profiltyp** väljer du **Trådlöst (import)** .
 6. Konfigurera följande inställningar:
     - **Anslutningsnamn**: Ange ett namn på den trådlösa nätverksanslutningen. Det här namnet visas för slutanvändarna när de bläddrar bland tillgängliga trådlösa nätverk.
     - **Profil-XML**: Använd bläddringsknappen och välj XML-filen som innehåller de Wi-Fi-profilinställningar som du vill importera.

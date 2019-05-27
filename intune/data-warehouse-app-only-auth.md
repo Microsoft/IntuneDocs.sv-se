@@ -8,7 +8,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30d7b2acb6acf48699df92075349b06e5ad9e742
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042675"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Autentisering för enbart Intune-informationslagerprogram
 
@@ -91,7 +90,7 @@ Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har 
 
 1.  Välj **Fil** > **Nytt** > **Projekt** för att visa dialogrutan **Nytt projekt**.
 2.  Till vänster, väljer du **Visual C#** för att visa alla .NET Framework-projekt.
-3.  Välj **Konsolapp (.NET Framework)**, lägg till ett appnamn och klicka sedan på **OK** för att skapa appen.
+3.  Välj **Konsolapp (.NET Framework)** , lägg till ett appnamn och klicka sedan på **OK** för att skapa appen.
 4.  I **Solution Explorer** väljer du **Program.cs** för att visa koden.
 5.  I popup-menyn, väljer du **Lägg till** > **Nytt objekt**. Dialogrutan **Lägg till nytt objekt** visas.
 6.  Till vänster under **Visual C#** väljer du **Kod**.

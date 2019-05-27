@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 6/14/2018
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7ec762e7e7299e400fefedbf7a8810e1da929f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 000f48f062e9e7300337ade04c8cf872d96eab2a
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461353"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040222"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Felsökning av programuppdateringar i Microsoft Intune
 
@@ -173,7 +172,7 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 |**0x80cf4028**|OM_E_PT_NO_AUTH_COOKIES_CREATED|Agenten kunde inte skapa några giltiga autentiseringscookies.|
 |**0x80cf4029**|OM_E_PT_INVALID_CONFIG_PROP|Konfigurationsegenskapens värde var fel.|
 |**0x80cf402A**|OM_E_PT_CONFIG_PROP_MISSING|Konfigurationsegenskapens värde saknas.|
-|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Det gick inte att slutföra HTTP-begäran och orsaken motsvarade inte någon av **OM_E_PT_HTTP_&#42;**-felkoderna.|
+|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Det gick inte att slutföra HTTP-begäran och orsaken motsvarade inte någon av **OM_E_PT_HTTP_&#42;** -felkoderna.|
 |**0x80cf402C**|OM_E_PT_WINHTTP_NAME_NOT_RESOLVED|Samma som **ERROR_WINHTTP_NAME_NOT_RESOLVED**. Det går inte att matcha proxyserverns eller målserverns namn.|
 |**0x80cf402F**|OM_E_PT_ECP_SUCCEEDED_WITH_ERRORS|Bearbetningen av den externa CAB-filen slutfördes med fel.|
 |**0x80cf4030**|OM_E_PT_ECP_INIT_FAILED|Initieringen av den externa CAB-processorn kunde inte slutföras.|
@@ -182,7 +181,7 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 |**0x80cf4033**|OM_E_PT_ECP_FAILURE_TO_EXTRACT_DIGEST|Det gick inte att extrahera filsammandraget från en extern CAB-fil.|
 |**0x80cf4034**|OM_E_PT_ECP_FAILURE_TO_DECOMPRESS_CAB_FILE|Det gick inte att dekomprimera en extern CAB-fil.|
 |**0x80cf4035**|OM_E_PT_ECP_FILE_LOCATION_ERROR|Den externa CAB-processorn kunde inte hämta filplatserna.|
-|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Det uppstod ett kommunikationsfel som inte motsvarar någon annan **OM_E_PT_&#42;**-felkod.|
+|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Det uppstod ett kommunikationsfel som inte motsvarar någon annan **OM_E_PT_&#42;** -felkod.|
 |**0x80cf6001**|OM_E_DM_URLNOTAVAILABLE|Det gick inte att utföra en åtgärd för hämtningshanteraren eftersom den begärda filen inte har någon URL.|
 |**0x80cf6002**|OM_E_DM_INCORRECTFILEHASH|Det gick inte att utföra åtgärden för hämtningshanteraren eftersom filsammandraget inte kändes igen.|
 |**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Det gick inte att utföra åtgärden för hämtningshanteraren eftersom filens metadata begärde en okänd hashalgoritm.|
@@ -192,7 +191,7 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 |**0x80cf6009**|OM_E_DM_BITSTRANSFERERROR|En åtgärd för hämtningshanteraren misslyckades eftersom det uppstod ett okänt BITS-överföringsfel (Background Intelligent Transfer Service).|
 |**0x80cf600a**|OM_E_DM_DOWNLOADLOCATIONCHANGED|Hämtningen måste startas om eftersom källplatsen för hämtningen har ändrats.|
 |**0x80cf600B**|OM_E_DM_CONTENTCHANGED|Hämtningen måste startas om eftersom uppdateringsinnehållet har ändrats i en ny version.|
-|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Det uppstod ett fel med hämtningshanteraren som inte motsvarar någon annan **OM_E_DM_&#42;**-felkod.|
+|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Det uppstod ett fel med hämtningshanteraren som inte motsvarar någon annan **OM_E_DM_&#42;** -felkod.|
 |**0x80cf7003**|OM_E_INVALID_EVENT_PAYLOAD|En händelsenyttolast angavs som inte är giltig.|
 |**0x80cf7004**|OM_E_INVALID_EVENT_PAYLOADSIZE|Storleken på händelsenyttolasten som skickades är inte giltig.|
 |**0x80cf7005**|OM_E_SERVICE_NOT_REGISTERED|Tjänsten har inte registrerats.|
@@ -224,13 +223,13 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 |**0x80cf801B**|OM_E_DS_SCHEMAMISMATCH|Schemat för det aktuella datalagret och schemat för en tabell i ett säkerhetskopierat XML-dokument stämmer inte överens.|
 |**0x80cf801C**|OM_E_DS_RESETREQUIRED|Datalagret kräver en sessionsåterställning. Frisläpp sessionen och försök igen med en ny session.|
 |**0x80cf801D**|OM_E_DS_IMPERSONATED|En datalageråtgärd kunde inte utföras eftersom den begärdes med en personifierad identitet.|
-|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Det uppstod ett fel med datalagret som inte motsvarar någon annan **OM_E_DS_&#42;**-felkod.|
+|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Det uppstod ett fel med datalagret som inte motsvarar någon annan **OM_E_DS_&#42;** -felkod.|
 |**0x80cfA000**|OM_E_AU_NOSERVICE|Automatiska uppdateringar kunde inte hantera inkommande begäranden.|
 |**0x80cfA004**|OM_E_AU_PAUSED|Automatiska uppdateringar kunde inte bearbeta inkommande begäranden eftersom funktionen har pausats.|
 |**0x80cfA005**|OM_E_AU_NO_REGISTERED_SERVICE|Ingen ohanterad tjänst har registrerats med Automatiska uppdateringar.|
 |**0x80cfA006**|OM_E_AU_DETECT_SVCID_MISMATCH|Standardtjänsten som har registrerats med Automatiska uppdateringar ändrades under sökningen.|
 |**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|Automatiska uppdateringar uppmanar redan användaren att starta om.|
-|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Det uppstod ett fel med funktionen för automatiska uppdateringar som inte motsvarar någon annan **OM_E_AU &#42;**-felkod.|
+|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Det uppstod ett fel med funktionen för automatiska uppdateringar som inte motsvarar någon annan **OM_E_AU &#42;** -felkod.|
 |**0x80cfE001**|OM_E_EE_UNKNOWN_EXPRESSION|Det gick inte att utföra en uttrycksutvärderingsåtgärd eftersom ett uttryck inte kändes igen.|
 |**0x80cfE002**|OM_E_EE_INVALID_EXPRESSION|Det gick inte att utföra en uttrycksutvärderingsåtgärd eftersom ett uttryck inte var giltigt.|
 |**0x80cfE003**|OM_E_EE_MISSING_METADATA|Det gick inte att utföra en uttrycksutvärderingsåtgärd eftersom ett uttryck innehåller fel antal metadatanoder.|
@@ -238,7 +237,7 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 |**0x80cfE005**|OM_E_EE_NOT_INITIALIZED|Det gick inte att initiera uttrycksutvärderaren.|
 |**0x80cfE006**|OM_E_EE_INVALID_ATTRIBUTEDATA|Det gick inte att utföra en uttrycksutvärderingsåtgärd eftersom ett attribut inte är giltigt.|
 |**0x80cfE007**|OM_E_EE_CLUSTER_ERROR|Det gick inte att utföra en uttrycksutvärderingsåtgärd eftersom det inte gick att fastställa datorns klustertillstånd.|
-|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Det uppstod ett fel med uttrycksutvärderaren som inte motsvarar någon annan **OM_E_EE_&#42;**-felkod.|
+|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Det uppstod ett fel med uttrycksutvärderaren som inte motsvarar någon annan **OM_E_EE_&#42;** -felkod.|
 |**0x80cfF001**|OM_E_REPORTER_EVENTCACHECORRUPT|Händelsecachefilen var skadad.|
 |**0x80cfF002**|OM_E_REPORTER_EVENTNAMESPACEPARSEFAILED|Det gick inte att parsa XML-koden i beskrivningen av händelsenamnområdet.|
 |**0x80cfF003**|OM_E_INVALID_EVENT|XML-koden i beskrivningen av händelsenamnområdet är inte giltig.|

@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 11/8/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.reviewer: tycast
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 880a81b49a78e7afd83aca510f85133e91416cf4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 502babf80b4286adb19a09988d16bd56562d4925
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046672"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Lägga till Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
 
@@ -37,7 +36,7 @@ Den här artikeln beskriver dessa inställningar.
 
 - **Wi-Fi-typ**: Välj **Grundläggande**. 
 
-- **Wi-Fi-namn (SSID)**: Förkortning för nätverksnamn. Det här värdet är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **anslutningsnamn** som du konfigurerar när de väljer anslutningen.
+- **Wi-Fi-namn (SSID)** : Förkortning för nätverksnamn. Det här värdet är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **anslutningsnamn** som du konfigurerar när de väljer anslutningen.
 
 - **Anslutningsnamn**: Ange ett användarvänligt för den här Wi-Fi-anslutningen. Den text som du anger är det namn som användarna ser när de bläddrar i tillgängliga anslutningar på sin enhet.
 
@@ -56,7 +55,7 @@ Den här artikeln beskriver dessa inställningar.
   - **Variabel**: Använd det här alternativet om nätverkstrafiken debiteras per byte (kostnad per byte).
 
 - **Trådlös säkerhetstyp**: Ange det säkerhetsprotokoll som används för att autentisera enheter i nätverket. Alternativen är:
-  - **Öppet (ingen autentisering)**: Använd bara det här alternativet om nätverket är oskyddat.
+  - **Öppet (ingen autentisering)** : Använd bara det här alternativet om nätverket är oskyddat.
   - **WPA/WPA2-personligt**: Ett säkrare alternativ, som ofta används för Wi-Fi-anslutning. För ökad säkerhet kan du också ange lösenordet för en i förväg delad nyckel eller en nätverksnyckel. 
 
     - **I förväg delad nyckel** (PSK): Valfritt. Visas när du väljer **WPA/WPA2-personligt** som säkerhetstyp. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet. Ange en sträng på mellan 8 och 64 tecken. Om lösenordet eller nätverksnyckeln är 64 tecken, anger du hexadecimala tecken.
@@ -75,7 +74,7 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
 
 - **Wi-Fi-typ**: Välj **Företag**. 
 
-- **Wi-Fi-namn (SSID)**: Förkortning för nätverksnamn. Det här värdet är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **anslutningsnamn** som du konfigurerar när de väljer anslutningen.
+- **Wi-Fi-namn (SSID)** : Förkortning för nätverksnamn. Det här värdet är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **anslutningsnamn** som du konfigurerar när de väljer anslutningen.
 
 - **Anslutningsnamn**: Ange ett användarvänligt för den här Wi-Fi-anslutningen. Den text som du anger är det namn som användarna ser när de bläddrar i tillgängliga anslutningar på sin enhet.
 
@@ -92,14 +91,14 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
   - **Fast**: Använd det här alternativet om nätverket är konfigurerat med en fast gräns för nätverkstrafik. När den här gränsen har nåtts är nätverksåtkomst förbjuden.
   - **Variabel**: Använd det här alternativet om nätverkstrafiken debiteras per byte.
 
-- **Enkel inloggning (SSO)**: Gör att du kan konfigurera enkel inloggning (SSO), där autentiseringsuppgifter delas för nätverksinloggning med dator och Wi-Fi. Alternativen är:
+- **Enkel inloggning (SSO)** : Gör att du kan konfigurera enkel inloggning (SSO), där autentiseringsuppgifter delas för nätverksinloggning med dator och Wi-Fi. Alternativen är:
   - **Inaktivera**: Inaktiverar SSO-beteende. Användaren måste autentisera till nätverket separat.
   - **Aktivera innan användaren loggar in på enheten**: Använd enkel inloggning för att autentisera till nätverket precis före användarens inloggningsprocess.
   - **Aktivera efter användaren loggar in på enheten**: Använd enkel inloggning för att autentisera till nätverket omedelbart efter användarens inloggningsprocess är klar.
   - **Längsta tid att autentisera före timeout**: Ange det maximala antalet sekunder att vänta före autentisering till nätverket, 1–120 sekunder.
   - **Tillåt Windows att fråga användaren om ytterligare autentiseringsuppgifter**: Om du väljer **Ja** tillåts Windows-systemet att fråga användaren om ytterligare autentiseringsuppgifter om autentiseringsmetoden som kräver det. Välj **Nej** för att dölja dessa frågor.
 
-- **Aktivera cachelagring av Pairwise Master Key (PMK)**: Välj **Ja** för att cachelagra PMK som används vid autentisering. Den här cachelagringen gör vanligtvis att autentisering till nätverket slutförs snabbare. Välj **Nej** för att framtvinga autentiseringshandskakningen vid anslutning till Wi-Fi-nätverket varje gång.
+- **Aktivera cachelagring av Pairwise Master Key (PMK)** : Välj **Ja** för att cachelagra PMK som används vid autentisering. Den här cachelagringen gör vanligtvis att autentisering till nätverket slutförs snabbare. Välj **Nej** för att framtvinga autentiseringshandskakningen vid anslutning till Wi-Fi-nätverket varje gång.
 
   - **Längsta tid som en PMK lagras i cacheminnet**: Ange hur många minuter som en Pairwise Master Key (PMK) lagras i cacheminnet, 5–1440 minuter.
   - **Maximalt antal PMK:er som lagras i cacheminnet**: Ange hur många nycklar som lagras i cacheminnet, 1–255.
@@ -126,11 +125,11 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
 
         **Rotcertifikat för servervalidering**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen.  
 
-        **Identitetssekretess (yttre identitet)**: Använd med EAP-typen **PEAP**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.  
+        **Identitetssekretess (yttre identitet)** : Använd med EAP-typen **PEAP**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.  
 
       - **Klientautentisering**
 
-        **Klientcertifikat för klientautentisering (identitetscertifikat)**: Använd med EAP-typen **EAP-TLS**. Välj den certifikatprofil som ska användas för att autentisera anslutningen.
+        **Klientcertifikat för klientautentisering (identitetscertifikat)** : Använd med EAP-typen **EAP-TLS**. Välj den certifikatprofil som ska användas för att autentisera anslutningen.
 
         **Autentiseringsmetod**: Använd med EAP-typen **EAP-TTLS**. Välj autentiseringsmetod för anslutningen:  
 
@@ -142,14 +141,14 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
             - **Microsoft CHAP (MS-CHAP)**
             - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
-        **Identitetssekretess (yttre identitet)**: Använd med EAP-typen **EAP-TTLS**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+        **Identitetssekretess (yttre identitet)** : Använd med EAP-typen **EAP-TTLS**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
 - **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
   - **Inga**: Inga proxyinställningar konfigureras.
   - **Konfigurera manuellt**: Ange **proxyserverns IP-adress** och dess **portnummer**.
   - **Konfigurera automatiskt**: Ange den URL som pekar till ett PAC-skript (Proxy Auto-Configuration). Ange till exempel `http://proxy.contoso.com/proxy.pac`.
 
-- **Tvinga Wi-Fi-profilen att följa FIPS-standarden (Federal Information Processing Standard)**: Välj **Ja** vid validering mot FIPS 140-2-standarden. Den här standarden krävs för alla amerikanska federala myndigheter som använder kryptografibaserade säkerhetssystem för att skydda känslig men ej klassificerad information som lagras digitalt. Välj **Nej** för att inte vara FIPS-kompatibel.
+- **Tvinga Wi-Fi-profilen att följa FIPS-standarden (Federal Information Processing Standard)** : Välj **Ja** vid validering mot FIPS 140-2-standarden. Den här standarden krävs för alla amerikanska federala myndigheter som använder kryptografibaserade säkerhetssystem för att skydda känslig men ej klassificerad information som lagras digitalt. Välj **Nej** för att inte vara FIPS-kompatibel.
 
 Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
 

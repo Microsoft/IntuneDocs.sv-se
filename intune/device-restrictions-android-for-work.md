@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/10/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2eac8c396e63fa2f3a4e8ef2c2b88b883c87433
-ms.sourcegitcommit: b7f3a6d67f7ae2356bbca1934056d28cdfc6e45e
+ms.openlocfilehash: c44f18d19172498f17f2a3f78ea47bad1d0f3fa7
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836462"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66048111"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -191,7 +190,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 ### <a name="connectivity"></a>Anslutning
 
-- **Always-on VPN (Alltid aktivt VPN)**: Välj **Aktivera** om du vill konfigurera en VPN-klient att automatiskt ansluta och återansluta till VPN. VPN-anslutningar som alltid är aktiva är alltid anslutna eller ansluter direkt när användaren låser sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. 
+- **Always-on VPN (Alltid aktivt VPN)** : Välj **Aktivera** om du vill konfigurera en VPN-klient att automatiskt ansluta och återansluta till VPN. VPN-anslutningar som alltid är aktiva är alltid anslutna eller ansluter direkt när användaren låser sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. 
 
   Välj **Inte konfigurerad** om du inte vill att VPN-anslutningarna alltid ska vara aktiva. Inställningen tillämpas på alla VPN-klienter.
 
@@ -254,7 +253,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 - **Minsta lösenordslängd**: Ange det minsta antal tecken som användarens lösenord måste innehålla (från **4**-**16**).
 - **Maximalt antal minuter av inaktivitet innan arbetsprofilen låses**: Välj efter hur lång tid arbetsprofilen ska låsas. Därefter måste användaren ange sina autentiseringsuppgifter för att få åtkomst igen.
 - **Antal felaktiga inloggningar innan enheten rensas**: Ange hur många gånger ett felaktigt lösenord kan anges innan arbetsprofilen rensas från enheten.
-- **Lösenordets giltighetstid (dagar)**: Ange antal dagar innan användarens lösenord måste ändras (från **1**-**255**).
+- **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan användarens lösenord måste ändras (från **1**-**255**).
 - **Krav på lösenordstyp**: Välj den typ av lösenord som måste anges på enheten. Välj mellan:
   - **Standard för enheten**
   - **Låg säkerhetsbiometri**
@@ -275,7 +274,7 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
 - **Minsta lösenordslängd**: Ange det minsta antal tecken som användarens lösenord måste innehålla (från **4**-**14**).
 - **Maximalt antal minuter av inaktivitet tills skärmen låses**: Välj hur lång tid det tar innan en inaktiv enhet låses automatiskt
 - **Antal felaktiga inloggningar innan enheten rensas**: Ange hur många gånger ett felaktigt lösenord kan anges innan alla data rensas från enheten
-- **Lösenordets giltighetstid (dagar)**: Ange antal dagar innan användarens lösenord måste ändras (från **1**-**255**)
+- **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan användarens lösenord måste ändras (från **1**-**255**)
 - **Krav på lösenordstyp**: Välj den typ av lösenord som måste anges på enheten. Välj mellan:
   - **Standard för enheten**
   - **Låg säkerhetsbiometri**
@@ -298,7 +297,7 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
 
 ### <a name="connectivity"></a>Anslutning
 
-- **Always-on VPN (Alltid aktivt VPN)**: Välj **Aktivera** om du vill konfigurera en VPN-klient att automatiskt ansluta och återansluta till VPN. VPN-anslutningar som alltid är aktiva är alltid anslutna eller ansluter direkt när användaren låser sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. 
+- **Always-on VPN (Alltid aktivt VPN)** : Välj **Aktivera** om du vill konfigurera en VPN-klient att automatiskt ansluta och återansluta till VPN. VPN-anslutningar som alltid är aktiva är alltid anslutna eller ansluter direkt när användaren låser sin enhet, när enheten startas om eller när det trådlösa nätverket ändras. 
 
   Välj **Inte konfigurerad** om du inte vill att VPN-anslutningarna alltid ska vara aktiva. Inställningen tillämpas på alla VPN-klienter.
 

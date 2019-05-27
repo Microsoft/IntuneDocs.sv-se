@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/25/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c40146f37ff6477663dc63468d1081a73ac2544a
-ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
+ms.openlocfilehash: eb7ff33384b86267e007e986737eeea6b8d3203e
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040128"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurera VPN-inställningar på iOS-enheter i Microsoft Intune
 
@@ -36,7 +35,7 @@ Välj VPN-anslutningstypen från följande leverantörslista:
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy**: Gäller för F5 Access-appversion 2.1 och tidigare.
 - **F5 Access**: Gäller för F5 Access-appversion 3.0 och senare.
-- **Palo Alto Networks GlobalProtect (Legacy)**: Gäller för Palo Alto Networks GlobalProtect-appversion 4.1 och tidigare.
+- **Palo Alto Networks GlobalProtect (Legacy)** : Gäller för Palo Alto Networks GlobalProtect-appversion 4.1 och tidigare.
 - **Palo Alto Networks GlobalProtect**: Gäller för Palo Alto Networks GlobalProtect-appversion 5.0 och tidigare.
 - **Pulse Secure**
 - **Cisco (IPSec)**

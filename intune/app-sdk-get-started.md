@@ -7,7 +7,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/29/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f2729918a164989714f88564ef0f42f7f319f16
-ms.sourcegitcommit: d21cf21dee15b11b8206bf92cc602b082e9846a5
+ms.openlocfilehash: 35f4007d03ca66ada5721de1ffe20dd87bfe4527
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709048"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66043798"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -50,7 +49,7 @@ Vi använder e-postadresserna som står i frågeformulärets svar för att konta
 > [!NOTE]
 > All information som samlas in i formuläret ovan och via e-postkommunikation med Microsoft Intune-teamet följer [Microsofts sekretesspolicy](https://www.microsoft.com/privacystatement/default.aspx).
 
-**Hur ser registreringsprocessen ut?**:
+**Hur ser registreringsprocessen ut?** :
 
 1. När du har skickat frågeformuläret kontaktar Microsoft dig på den e-postadress som du uppgav vid registreringen, antingen för att bekräfta att registreringen mottagits eller för att be om ytterligare information som krävs för att slutföra registreringen.
 

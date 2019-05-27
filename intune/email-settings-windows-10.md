@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e2b3708b6b0c75a1384a7cdbdb524dff3f0627d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 87a48c677e122d93bb03508e18b86549b7fe285d
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565442"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66047990"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10---intune"></a>E-postprofilinställningar för enheter som kör Windows 10 – Intune
 
@@ -29,7 +28,7 @@ Använd e-postprofilinställningarna till att konfigurera E-post-appen på dina 
 - **E-postserver**: Ange värdnamnet för din Exchange-server.
 - **Kontonamn**: Ange visningsnamnet för e-postkontot. Namnet visas för användare på deras enheter.
 - **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
-  - **UPN (User Principal Name)**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
+  - **UPN (User Principal Name)** : Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
   - **Primär SMTP-adress**: Hämtar namnet i e-postadressformat, till exempel `user1@contoso.com`
   - **sAM-kontonamn**: Kräver domänen, till exempel `domain\user1`.
 

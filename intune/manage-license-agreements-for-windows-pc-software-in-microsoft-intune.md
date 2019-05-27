@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92262a9d1f07b8756ced8788feee586ffa30088a
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 417d244cbe64af967e61112f67dbf7829ce7feda
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798809"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046956"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 
@@ -68,7 +67,7 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         -   Endast ASCII tecken stöds.
 
-        -   Följande tecken är inte tillåtna i avtalsnamnet: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Mellanslag är tillåtna i namnet.
+        -   Följande tecken är inte tillåtna i avtalsnamnet: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
         -   Filnamnet får inte vara mer än 128 tecken långt.
 
@@ -94,7 +93,7 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         -   **Avtalsnamn** – Ange ett unikt namn för avtalet.
 
-            Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Mellanslag är tillåtna i namnet.
+            Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
         -   **Auktoriserings-/avtalsnummer** – Ange auktoriserings-/avtalsnummer för licensparet.
 
@@ -147,7 +146,7 @@ Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts
 
 4.  I **Lägg till avtalsdetaljer** området, specificera följande:
 
-    -   **Agreement name** (krävs). Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Mellanslag är tillåtna i namnet.
+    -   **Agreement name** (krävs). Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
     -   **Utgivare** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Till exempel, om du skriver "mjuk" kommer alla utgivarnamn som innehåller "mjuka" som en del av namnet, till exempel "Microsoft" och "Microsoft Research" att visas. Utgivarnamnen hämtas från Software Asset Catalog. Du måste välja utgivare innan du kan ange produkttiteln.
 
