@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 654d5b86a8a2df8eaddc8ea626b55390d2d32920
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b5da0e5f14d3b87827d42d48341fa7080d73c567
+ms.sourcegitcommit: ac3fe7504e58c74495a560a68eae2b784a4f7d46
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61509078"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942046"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -75,7 +75,9 @@ Beskrivningar av statusar för enhetsefterlevnadsprinciper:
 
   - Enheter som inte har tilldelats någon efterlevnadsprincip och som saknar en utlösare för att kontrollera efterlevnaden
   - Enheter som inte har checkats in sedan efterlevnadsprincipen senast uppdaterades
-  - Enheter som inte är associerade till en specifik användare
+  - Enheter som inte är associerade till en specifik användare, till exempel:
+    - iOS-enheter som köpts via Apples program för enhetsregistrering (DEP) som inte har någon användartillhörighet
+    - Dedikerade Android kiosk- eller Android Enterprise-enheter
   - Enheter som har registrerats med ett konto för enhetsregistreringshantering (DEM)
 
 - **Inkompatibel:** Enheten kunde inte tillämpa en eller flera principinställningar för enhetsefterlevnad. Eller så har användaren inte efterlevt principerna.

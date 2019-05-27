@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,23 +17,23 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 52b92483ddafadf460911caaa472825a0bc0a20f
-ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
+ms.openlocfilehash: 72121aa48e7b5d46e25aac28ad386832b6b4ea72
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65527224"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733087"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Övervaka BitLocker och enhetskryptering  
 Intune ger en central plats för att identifiera krypteringsstatus för dina Windows 10-enheter och hjälper dig att komma åt viktig information för BitLocker från dina enheter som finns i Azure Active Directory (AD Azure).  
 
-- [Krypteringsrapporten (i allmänt tillgänglig förhandsversion)](#encryption-report) innehåller information om en enhets krypteringsstatus och beredskap. Rapportinformationen kan hjälpa dig att identifiera problem som förhindrar lyckad kryptering av enheter som du vill skydda.  
-- [Visa BitLocker-information (i allmänt tillgänglig förhandsversion)](#bitlocker-recovery-keys) såsom nyckel-ID och återställningsnycklar för dina enheter från Intune-portalen.  
+- [Krypteringsrapporten](#encryption-report) innehåller information om en enhets krypteringsstatus och beredskap. Rapportinformationen kan hjälpa dig att identifiera problem som förhindrar lyckad kryptering av enheter som du vill skydda.  
+- [Visa BitLocker-information](#bitlocker-recovery-keys) såsom nyckel-ID och återställningsnycklar för dina enheter från Intune-portalen.  
 
 ## <a name="encryption-report"></a>Krypteringsrapport
-Du kan använda krypteringsrapporten (i allmänt tillgänglig förhandsversion) till att visa information om krypteringsstatusen för dina Windows 10-enheter.  
+Du kan använda krypteringsrapporten till att visa information om krypteringsstatusen för dina Windows 10-enheter.  
 
-Du hittar rapporten genom att logga in på [Intune](https://aka.ms/intuneportal), gå till **Enhetskonfiguration** följt av *Övervakare*, där du väljer **Krypteringsrapport (förhandsversion)**.  
+Du hittar rapporten genom att logga in på [Intune](https://aka.ms/intuneportal), gå till **Enhetskonfiguration** följt av *Övervakare*, där du väljer **Krypteringsrapport**.  
 
 ### <a name="prerequisites"></a>Krav:
 För att en enhet ska visas i krypteringsrapporten måste den köra Windows-version 1607 eller senare.  
@@ -95,9 +95,9 @@ Det här fönstret innehåller följande information:
    - Nätverket är inte tillgängligt, vilket krävs för säkerhetskopiering av återställningsnyckel.  
 
 ## <a name="bitlocker-recovery-keys"></a>BitLocker-återställningsnycklar
-Som allmänt tillgänglig förhandsversion ger Intune åtkomst till Azure AD-bladet för BitLocker så att du kan visa BitLocker-nyckel-ID:n och återställningsnycklar för dina Windows 10-enheter från Intune-portalen.  För att enheten ska vara nåbar måste dess nycklar vara deponerade till Azure AD. 
+Intune ger åtkomst till Azure AD-bladet för BitLocker så att du kan visa BitLocker-nyckel-ID:n och återställningsnycklar för dina Windows 10-enheter från Intune-portalen.  För att enheten ska vara nåbar måste dess nycklar vara deponerade till Azure AD. 
 1. Logga in på [Intune](https://aka.ms/intuneportal), gå till **Enheter** följt av *Hantera* och välj **Alla enheter**.
-2. Välj en enhet i listan. Under *Övervaka* väljer du sedan **Återställningsnycklar – förhandsversion**.  
+2. Välj en enhet i listan. Under *Övervaka* väljer du sedan **Återställningsnycklar**.  
   
 När nycklar är tillgängliga i Azure AD finns följande information tillgänglig:
 - BitLocker-nyckel-ID

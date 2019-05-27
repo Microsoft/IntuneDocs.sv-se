@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 401bc833b2b864983ec301972950ffbd04fe2229
-ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
+ms.openlocfilehash: cf40c3b8f31e042a501e1502097f147d48fc328d
+ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135197"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975827"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -45,7 +45,114 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande �
 
 -->  
 
+
 <!-- ########################## -->
+
+## <a name="week-of-may-13-2019"></a>Den vecka som börjar 13 maj 2019 
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation-----1927359-idready-wnready--"></a>Uppdatering av Intune-principers autentiseringsmetod och installation av företagsportalappen  <!-- 1927359 idready wnready-->
+På enheter som redan har registrerats via Installationsassistenten med någon av Apples metoder för registrering av företagsenheter, stöder Intune inte längre företagsportalen om den installeras manuellt av slutanvändarna från App Store. Den här ändringen gäller endast när du autentiserar med Apple-installationsassistenten under registreringen. Den här ändringen påverkar också bara iOS-enheter som registrerats via:  
+* Apple configurator
+
+* Apple Business Manager
+
+* Apple School Manager
+
+* Apples program för enhetsregistrering (DEP)
+
+Om användare installerar företagsportalappen från App store och sedan försöker att registrera enheterna genom den, får de ett felmeddelande. Dessa enheter kommer förväntas att bara använda företagsportalen när den har skickats automatiskt av Intune under registreringen. Profiler för registrering i Intune i Azure-portalen kommer att uppdateras så att du kan ange hur enheter ska autentiseras och om de får företagsportalappen. Om du vill att dina DEP-enhetsanvändare ska ha företagsportalen behöver du ange dina preferenser i en registreringsprofil. 
+
+Dessutom håller skärmen **Identifiera din enhet** i iOS-företagsportalen på att tas bort. Administratörer som vill aktivera villkorlig åtkomst eller distribuera företagsappar måste därför uppdatera profilen för DEP-registrering. Det här kravet gäller endast om DEP-registrering har verifierats med Installationsassistenten. I så fall måste du installera företagsportalen på enheten. För att göra det ska du välja **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välja en token > **Profiler** > välja en profil > **Egenskaper** > och ställa in **Installera företagsportal** på **Sant**.
+
+För att installera företagsportalen på redan registrerade DEP-enheter måste du gå till Intune > Klientappar och installera den som en hanterad app med konfigurationsprinciper för appar. 
+
+#### <a name="configure-how-end-users-update-a-line-of-business-lob-app-using-an-app-protection-policy----3568384---"></a>Konfigurera hur användarna uppdaterar en affärsapplikation (LOB)-app med hjälp av en appskyddsprincip <!-- 3568384 -->
+Du kan nu konfigurera var användarna kan få en uppdaterad version av en affärsapplikation (LOB). Slutanvändarna ser den här funktionen i dialogen för villkorlig start **Lägsta appversion**, där slutanvändarna uppmanas att uppdatera till en lägsta version av LOB-appen. Du måste ange denna uppdateringsinformation som en del av din LOB-appskyddsprincip (APP). Den här funktionen är tillgänglig för iOS och Android. På iOS kräver den här funktionen att appen integreras (eller packas in med hjälp av programhanteringsverktyget) med Intune SDK för iOS v. 10.0.7 eller senare. På Android kräver funktionen den senaste företagsportalen. Om du vill konfigurera hur en slutanvändare uppdaterar en LOB-app behöver appen en hanterad appkonfigurationspolicy som skickas till den med nyckeln, `com.microsoft.intune.myappstore`. Det skickade värdet anger vilket lager som slutanvändaren laddar ner appen från. Om appen distribueras via företagsportalen måste värdet vara `CompanyPortal`. Du måste ange en fullständig URL för andra lager.
+
+#### <a name="intune-management-extension-powershell-scripts-----3734186-idready---"></a>PowerShell-skript i Intune-hanteringstillägget  <!-- 3734186 idready -->
+Du kan konfigurera PowerShell-skript så att det körs med användarens administratörsprivilegier på enheten. Mer information finns i [Använda PowerShell-skript på Windows 10-enheter i Intune](intune-management-extension.md) och [Win 32-apphantering](apps-win32-app-management.md).
+
+#### <a name="android-enterprise-app-management----4459905---"></a>Apphantering med Android Enterprise <!-- 4459905 -->
+Intune lägger automatiskt till fyra vanliga Android Enterprise-relaterade appar till Intune-administratörskonsolen för att göra det enklare för IT-administratörer att konfigurera och använda Android Enterprise-hantering. Detta är de fyra Android Enterprise-apparna:
+
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** – Används för fullständigt hanterade Android Enterprise-scenarier.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** – Hjälper dig att logga in på dina konton om du använder tvåfaktorautentisering.
+- **[Intune-företagsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** – Används för appskyddsprinciper och scenarier med Android Enterprise-arbetsprofiler.
+- [Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) – Används för dedikerade/helskärmslägesscenarier i Android Enterprise.
+
+Tidigare var IT-administratörer tvungna att hitta och godkänna de här apparna manuellt i den [hanterade Google Play-butiken](https://play.google.com/store/apps) som en del av konfigurationen. Den här ändringen tar bort de tidigare manuella stegen för att göra det enklare och snabbare för kunder att använda Android Enterprise-hantering.
+
+Administratörer kommer att se att dessa fyra appar läggs till i listan över appar i Intune automatiskt när de ansluter Intune-klienten till hanterade Google Play för första gången. Läs [Anslut ditt Intune-konto till ditt hanterade Google Play-konto](connect-intune-android-enterprise.md) för mer information. Administratörer behöver inte göra något för klienter som redan har anslutit sin klient eller som redan använder Android Enterprise. De fyra apparna visas automatiskt inom sju dagar efter slutförandet av tjänstlanseringen under maj 2019.
+
+### <a name="device-configuration"></a>Enhetskonfiguration
+
+####  <a name="intune-security-tasks-for-defender-atp-in-public-preview--------3208597---"></a>Intune-säkerhetsuppgifter för Defender ATP (i allmänt tillgänglig förhandsversion)     <!-- 3208597 -->
+Du kan använda Intune för att hantera säkerhetsuppgifter för Microsoft Defender Advanced Threat Protection (ATP) i den allmänt tillgängliga förhandsversionen. Det här möjliggör integrering med ATP och lägger till en riskbaserad metod för att identifiera, prioritera och åtgärda säkerhetsrisker och felkonfigurationer på ändpunkter, samtidigt som det minskar tiden mellan identifiering till problemlösning.
+
+#### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---idstaged--"></a>Söka efter en TPM-kretsuppsättning i en efterlevnadsprincip för Windows 10-enheter <!-- 3617671   idstaged-->
+Många Windows 10-enheter och senare enheter har TPM-kretsuppsättningar (Trusted Platform Module). Den här uppdateringen innehåller en ny efterlevnadsinställning som kontrollerar versionen på TPM-chippet i enheten. 
+
+[Inställningar för kompatibilitetsprinciper i Windows 10 och senare](compliance-policy-create-windows.md#device-security) beskriver den här inställningen.
+
+Gäller för: Windows 10 och senare
+
+#### <a name="prevent-end-users-from-modifying-their-personal-hotspot-and-disable-siri-server-logging-on-ios-devices----4097904-----"></a>Förhindra slutanvändare från att ändra sin Internetdelning och inaktivera Siri-serverloggning på iOS-enheter <!-- 4097904   --> 
+Du kan skapa en enhetsbegränsningsprofil på en iOS-enhet (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp). Den här uppdateringen innehåller nya inställningar som du kan konfigurera:
+
+- **Inbyggda appar**: Loggning på serversidan av Siri kommandon
+- **Trådlöst**: Användarmodifiering av internetdelning (endast övervakat)
+
+Om du vill se de här inställningarna går du till [inbyggda app-inställningar för iOS](device-restrictions-ios.md#built-in-apps) och [trådlösa inställningar för iOS](device-restrictions-ios.md#wireless).
+
+Gäller för: iOS 12.2 och senare
+
+#### <a name="new-classroom-app-device-restriction-settings-for-macos-devices----4097905-----"></a>Nya inställningar för enhetsbegränsning i appen Klassrum för macOS-enheter <!-- 4097905   --> 
+Du kan skapa profiler för enhetskonfiguration för macOS-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **macOS** för plattform > **Enhetsbegränsningar** för profiltyp). Den här uppdateringen innehåller nya inställningar för appen Klassrum, alternativet att blockera skärmbilder och inaktivera iCloud-bildbiblioteket.
+
+Gå till [macOS-enhetsinställningar för att tillåta eller begränsa funktioner med Intune](device-restrictions-macos.md) för att se de aktuella inställningarna.
+
+Gäller för: macOS
+
+#### <a name="the-ios-password-to-access-app-store-setting-is-renamed---4557891----"></a>iOS lösenordet för åtkomst till appbutiksinställningen har bytt namn<!-- 4557891  -->
+Inställningen **Lösenord till appbutik** har bytt namn till **Kräv iTunes Store-lösenord för alla köp** (**Enhetskonfiguration**  >  **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **App Store, dokumentvisning, spel**).
+
+Om du vill se de tillgängliga inställningarna går du till [iOS-inställningar för App Store, dokumentvisning, spel](device-restrictions-ios.md#app-store-doc-viewing-gaming).
+
+Gäller för: iOS
+
+####  <a name="microsoft-defender-advanced-threat-protection--baseline--preview------3754134---"></a>Baslinjer för Microsoft Defender Advanced Threat Protection (Förhandsversion)  <!--  3754134 -->
+Vi har lagt till en förhandsversion med säkerhetsbaslinje för [Microsoft Defender Advanced Threat Protection](security-baseline-settings-defender-atp.md)-inställningar.  
+
+### <a name="device-enrollment"></a>Enhetsregistrering
+
+#### <a name="windows-enrollment-status-page-esp-is-now-generally-available----3605348---"></a>Windows registreringsstatussida (ESP) är nu allmänt tillgänglig <!-- 3605348 -->
+Registreringsstatussidan är inte längre en förhandsversion. Mer information finns i [Konfigurera en sida för registreringsstatus](windows-enrollment-status.md).
+
+
+#### <a name="intune-user-interface-update---autopilot-enrollment-profile-creation-----4593669---"></a>Uppdatering av användargränssnittet i Intune – Skapa Autopilot-registreringsprofil  <!-- 4593669 -->
+Användargränssnittet för att skapa en Autopilot-profil för registrering har uppdaterats så att den överensstämmer med Azures användargränssnitt. Mer information finns i [Skapa en Autopilot-registreringsprofil](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). Framöver kommer ytterligare Intune scenarier att uppdateras till det här nya användargränssnittet.
+
+#### <a name="enable-autopilot-reset-for-all-windows-devices----4225665---"></a>Aktivera Autopilot-återställning av alla Windows-enheter <!-- 4225665 -->
+Autopilot-återställning fungerar nu för alla Windows-enheter, även de som inte har konfigurerats för att använda registreringsstatussidan. Om en registreringsstatussida inte har konfigurerats för enheten under den första enhetsregistreringen kommer enheten att gå direkt till skrivbordet efter inloggningen. Det kan ta upp till åtta timmar att synkroniseras och visas som kompatibel i Intune. Mer information finns i [Återställa enheter med fjärransluten Windows Autopilot-återställning](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset-remote).
+
+#### <a name="exact-imei-format-not-required-when-searching-all-devices---30407680---"></a>Exakta IMEI-format krävs inte när du söker igenom alla enheter <!--30407680 -->
+Du behöver inte ta med mellanslag i IMEI-nummer när du söker igenom **Alla enheter**.
+
+#### <a name="deleting-a-device-in-the-apple-portal-will-be-reflected-in-the-intune-portal---2489996---"></a>Om du tar bort en enhet i Apples portal visas ändringen även i Intune-portalen <!--2489996 -->
+Om en enhet tas bort från Apples program för enhetsregistrering eller Apple Business Manager-portalen tas den även automatiskt bort från Intune vid nästa synkronisering.
+
+
+### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
+
+#### <a name="the-encryption-report-is-out-of-public-preview------4587546--------"></a>Krypteringsrapport är inte längre en allmänt tillgänglig förhandsversion   <!-- 4587546      -->
+[Rapporten för kryptering av BitLocker och enheter](encryption-monitor.md) är nu allmänt tillgänglig och inte längre en del av förhandsversionen. 
+
+<!-- ########################## -->
+
+#### <a name="outlook-signature-and-biometric-settings-for--ios-and-android-devices----4050557---"></a>Outlook-signatur och biometriska inställningar för iOS och Android-enheter <!-- 4050557 -->
+Du kan nu ange om standardsignaturen är aktiverad i Outlook för iOS och Android-enheter. Dessutom kan du välja om du vill tillåta användare att ändra den biometriska inställningen i Outlook för iOS.
 
 ## <a name="week-of-may-6-2019"></a>Den vecka som börjar 6 maj 2019 
 
@@ -56,7 +163,7 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande �
 F5 släppte en uppdatering för BIG-IP-13 som tillåter NAC-funktioner för F5 Access på iOS i Intune. Gör så här för att använda funktionen:
 
 - Uppdatera BIG-IP till 13.1.1.5. BIG-IP 14 stöds inte.
-- Integrera BIG-IP med Intune för NAC. Stegen i [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
+- Integrera BIG-IP med Intune för NAC. Stegen i [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
 - Aktivera inställningen **Aktivera nätverksåtkomstkontroll** i VPN-profilen i Intune.
 
 Om du vill se den tillgängliga inställningen går du till [Konfigurera VPN-inställningar på iOS-enheter](vpn-settings-ios.md).
@@ -111,7 +218,7 @@ På sidan för enhetsöversikt visas den primära användaren, som även kallas 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Ytterligare rapportering för Managed Google Play-app för Android Enterprise-arbetsprofilenheter <!-- 4105925  -->
 För Managed Google Play-appar som distribueras till Android Enterprise-arbetsprofilenheter kan du visa det specifika versionsnumret för den app som är installerad på en enhet. Det här gäller endast för obligatoriska appar. Samma funktion för tillgängliga appar kommer att bli tillgänglig i en framtida version. 
 
-#### <a name="ios-third-party-keyboards----4111843-idready-eeready---"></a>iOS-tangentbord från tredje part <!-- 4111843 idready eeready -->
+#### <a name="ios-third-party-keyboards----4111843-----"></a>iOS-tangentbord från tredje part <!-- 4111843   -->
 Stödet för Intunes appskyddsprincip (APP) för inställningen **Tangentbord från tredje part** för iOS kommer att tas bort på grund av en iOS-plattformsändring. Du kommer inte att kunna konfigurera den här inställningen i Intune-administratörskonsolen och den kommer inte att tillämpas på klienten i Intune App SDK.
 
 ### <a name="device-configuration"></a>Enhetskonfiguration
@@ -1131,7 +1238,7 @@ Du kan använda Autopilot-profiler för registrerade Windows 10-enheter som inte
 Nu kan du [skapa](windows-enrollment-status.md) flera profiler för sidan för registreringsstatus och tilldela dem till Azure AD-grupper.
 
 #### <a name="migration-from-device-enrollment-program-to-apple-business-manager-in-intune---2748613--"></a>Migrering från programmet för enhetsregistrering till Apple Business Manager i Intune <!--2748613-->
-Apple Business Manager (ABM) fungerar i Intune och du kan uppgradera ditt konto från program för enhetsregistrering (DEP) till ABM. Processen i Intune är samma. Om du vill uppgradera ditt Apple-konto från DEP till ABM, gå till [ https://support.apple.com/en-us/HT208817]( https://support.apple.com/en-us/HT208817).
+Apple Business Manager (ABM) fungerar i Intune och du kan uppgradera ditt konto från program för enhetsregistrering (DEP) till ABM. Processen i Intune är samma. Om du vill uppgradera ditt Apple-konto från DEP till ABM, gå till [ https://support.apple.com/HT208817]( https://support.apple.com/HT208817).
 
 ### <a name="alert-and-enrollment-status-tabs-on-the-device-enrollment-overview-page---2748656--"></a>Statusflikar för avisering och registrering på översiktssidan för enhetsregistrering <!--2748656-->
 Aviseringar och registreringsfel visas nu på separata flikar på översiktssidan för enhetsregistrering.

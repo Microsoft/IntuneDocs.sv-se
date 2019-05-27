@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/16/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57527d0b1825d0e8d3fefb63d1b960ab3fb5c676
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cac92aeac895201459e692aae164f51dab10dfb0
+ms.sourcegitcommit: ca0f48982e49e90bc14fac5575077445e027f728
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508132"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65712630"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
@@ -49,37 +49,52 @@ Du ansluter Intune till Jamf Pro så här:
 
 ## <a name="create-an-application-in-azure-active-directory"></a>Skapa ett program i Azure Active Directory
 
-1. På [Azure-portalen](https://portal.azure.com) går du till **Azure Active Directory** > **Appregistreringar**.
-2. Välj **+Ny programregistrering**.
-3. Ange ett **visningsnamn**, som **Jamf villkorlig åtkomst**.
-4. Välj **webbapp / API**.
-5. Ange **inloggnings-URL** med URL:en för din Jamf Pro-instans.
-6. Välj **Skapa**. Programmet skapas och programinformationen visas på portalen.
-7. Spara en kopia av **program-ID** för det nya programmet. Du anger detta ID i en senare procedur. Välj sedan **Inställningar** och gå till **API-åtkomst** > **Nycklar**.
-8. I fönstret *Nycklar* anger du en **Beskrivning**, hur lång tid som ska passera innan den **Förfaller** och väljer sedan **Spara** för att skapa programnyckeln (värde).
+1. På [Azure-portalen](https://portal.azure.com) går du till **Azure Active Directory** > **Appregistreringar** och väljer sedan **Ny registrering**. 
 
-   > [!IMPORTANT]
-   > Programnyckeln visas bara en gång under den här processen. Glöm inte att spara den någonstans där du enkelt kan hämta den.
+2. På sidan **Registrera ett program** anger du följande information:
+   - I avsnittet **Namn** anger du ett beskrivande namn, till exempel **Jamf villkorlig åtkomst**.
+   - I avsnittet **Kontotyper som stöds** väljer du **Konton i valfri organisationskatalog**. 
+   - Som **Omdirigerings-URI** lämnar du standardinställningen Web och anger sedan inloggnings-URL: en till din instans av Jamf Pro.  
 
-8. I fönstret *Inställningar* för appen går du till **API-åtkomst** > **Nödvändiga behörigheter**. Markera eventuella befintliga behörigheter och klicka sedan på **Ta bort** och ta bort alla behörigheter. Du måste ta bort befintliga behörigheter när du lägger till en ny behörighet, och programmet fungerar bara om det har den enskilda nödvändiga behörigheten.  
-9. Om du vill tilldela en ny behörighet väljer du **+Lägg till** > **Välj en API** > **Microsoft Intune API** och klickar sedan på **Välj**.
-10. I fönstret *Aktivera åtkomst* väljer du **Skicka enhetsattribut till Microsoft Intune**, klickar på **Välj** och sedan på **Klar**.
-11. I fönstret *Nödvändiga behörigheter* väljer du **Bevilja behörigheter** och sedan **Ja** för att tillämpa nödvändiga behörigheter i programmet.
+3. Välj **Registrera** för att skapa programmet och öppna sidan Översikt för den nya appen.  
+
+4. På appsidan **Översikt** kopierar du värdet **Program-ID (klient)** och sparar det till senare. Du behöver det här värdet senare.  
+
+5. Välj **Certifikat och hemligheter** under **Hantera**. Klicka på knappen **Ny klienthemlighet**. Ange ett värde i **Beskrivning**, välj ett alternativ för **Förfaller** och välj **Lägg till**.
+
+   > [!IMPORTANT]  
+   > Innan du lämnar den här sidan ska du kopiera värdet för klienthemligheten och spara det till senare. Du behöver det här värdet senare. Det här värdet visas inte igen, om man inte återskapar appregistreringen.  
+
+6. Välj **API-behörigheter** under Hantera.  Välj de befintliga behörigheterna och välj sedan **Ta bort behörighet** för att ta bort dessa behörigheter. Du måste ta bort alla befintliga behörigheter när du lägger till en ny behörighet och programmet fungerar bara om det har den enskilda nödvändiga behörigheten.  
+
+7. Om du vill tilldela en ny behörighetsuppsättning väljer du **Lägg till en behörighet**. På sidan **Begär API-behörigheter** väljer du **Intune** och väljer sedan **Programbehörigheter**. Markera enbart kryssrutan för **update_device_attributes**.  
+
+   Välj **Lägg till behörighet** för att spara konfigurationen.  
+
+8. På sidan **API-behörigheter** väljer du **Bevilja administratörens godkännande för Microsoft** och väljer sedan Ja.  
+
+   Registreringsprocessen i Azure AD har slutförts.
+
 
     > [!NOTE]
-    > Om programnyckeln upphör att gälla, måste du skapa en ny programnyckel i Microsoft Azure och uppdatera data för villkorlig åtkomst i Jamf Pro. Azure låter dig ha både den gamla och nya nyckeln aktiv för att förhindra tjänsteavbrott.
+    > Om klienthemligheten upphör att gälla måste du skapa en ny klienthemlighet i Microsoft Azure och uppdatera data för villkorlig åtkomst i Jamf Pro. Azure låter dig ha både den gamla och nya hemligheten aktiv för att förhindra tjänsteavbrott.
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Låt Intune integreras med Jamf Pro
 
-1. På [Azure-portalen](https://portal.azure.com) går du till **Microsoft Intune** > **Enhetsefterlevnad** > **Enhetshantering för partner**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=20909) och gå till **Microsoft Intune** > **Enhetsefterlevnad** > **Enhetshantering för partner**.
+
 2. Aktivera Compliance Connector för Jamf genom att klistra in det program-ID du sparade under föregående procedur i fältet **Jamf Azure Active Directory App-ID**.
+
 3. Välj **Spara**.
 
 ## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurera Microsoft Intune-integrering i Jamf Pro
 
 1. I Jamf Pro, går du till **global hantering** > **villkorlig åtkomst**. Klicka på knappen **Redigera** på fliken **Microsoft Intune-integrering**.
+
 2. Klicka i kryssrutan **Aktivera Microsoft Intune-integrering**.
-3. Ange nödvändig information om din Azure-klient, inklusive **plats**, **domännamn** och den **program-ID** och **programnyckel** du sparade från föregående steg.
+
+3. Ange nödvändig information om din Azure-klient, inklusive **Plats**, **Domännamn**, **Program-ID** och värdet för den *klienthemlighet* som du sparade när du skapade appen i Azure AD.  
+
 4. Välj **Spara**. Jamf Pro testar dina inställningar och verifierar att det fungerar.
 
 ## <a name="set-up-compliance-policies-and-register-devices"></a>Ställ in efterlevnadsprinciper och registrera enheter

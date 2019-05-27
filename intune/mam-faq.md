@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21d773b0ab2227f59f1ee0b2091d39b7c9799721
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
+ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506822"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65992890"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -53,6 +53,13 @@ Appskyddsprinciper är regler som säkerställer att organisationens data förbl
 
 **Vilka exempel finns det på appskyddsprinciper?**<br></br>
 Se [Inställningar för Android-appskyddsprinciper](app-protection-policy-settings-android.md) och [Inställningar för iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) för detaljerad information om respektive inställning av appskyddprincip.
+
+**Är det möjligt att tillämpa både MDM- och MAM-principer på samma användare på samma gång för olika enheter? Till exempel, om en användare kan komma åt sina arbetsresurser från sin egen MAM-aktiverade dator, men kommer kan komma till jobbet och använda en Intune MDM-hanterad enhet. Finns det några förbehåll med den här idén?**<br></br>
+Om du tillämpar en MAM-princip för användaren utan att ange enhetens tillstånd kommer användaren att få MAM-principen på både BYOD-enheten och den Intune-hanterade enheten. Du kan också tillämpa en MAM-princip som baseras på det hanterade tillståndet. Så när du skapar en appskyddsprincip väljer du Nej bredvid Rikta till alla typer av appar. Gör sedan något av följande:
+- Tillämpa en mindre strikt MAM-princip på Intune-hanterade enheter och tillämpa en mer begränsande MAM-princip på enheter som inte är MDM-registrerade.
+- Tillämpa bara en MAM-princip på oregistrerade enheter.
+
+Mer information finns i [Så här övervakar du appskyddsprinciper](app-protection-policies-monitor.md).
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Appar som du kan hantera med appskyddsprinciper
 

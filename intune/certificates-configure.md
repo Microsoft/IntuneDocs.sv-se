@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569ddd9be0c59cf9a4bd7ba1f8b114183ce46d7d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 40d8b3d14411827642661b01929d17e83a5198ad
+ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508290"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65765361"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
@@ -133,3 +133,9 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
 [Tilldela enhetsprofiler](device-profile-assign.md)  
 [Använd S/MIME att signera och kryptera e-postmeddelanden](certificates-s-mime-encryption-sign.md)  
 [Använd tredje parts certifikatutfärdare](certificate-authority-add-scep-overview.md)
+
+## <a name="see-also"></a>Se även
+
+[Felsökning av NDES-konfiguration för användning med Microsoft Intune-certifikatprofiler](https://support.microsoft.com/help/4459540)
+
+[Felsökning av SCEP-certifikatprofildistribution i Microsoft Intune](https://support.microsoft.com/help/4457481)

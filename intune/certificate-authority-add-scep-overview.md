@@ -1,11 +1,11 @@
 ---
-title: Använd tredjeparts certifikatutfärdare med SCEP i Microsoft Intune – Azure | Microsoft Docs
+title: Använd tredjeparts certifikatutfärdare (CA) med SCEP i Microsoft Intune – Azure | Microsoft Docs
 description: I Microsoft Intune kan du lägga till en leverantör eller tredjeparts certifikatutfärdare (CA) för att utfärda certifikat till mobila enheter med hjälp av SCEP-protokollet. I den här översikten ger ett Azure Active Directory-program (Azure AD) Microsoft Intune behörigheter för att verifiera certifikat. Använd sedan program-ID:t, autentiseringsnyckeln och klientorganisations-ID för AAD-programmet i konfigurationen av din SCEP-server för att utfärda certifikat.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d042a160d016343c6e8374dff8f74560b9806014
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5e87b7397d994b089a30fedd9ccedc0107bf0cef
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508492"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732497"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Lägg till certifikatutfärdarpartner i Intune med hjälp av SCEP
 
@@ -69,47 +69,40 @@ Innan du integrerar tredjeparts certifikatutfärdare med Intune bekräftar du at
 
 För att en tredjeparts SCEP-server ska kunna köra anpassad utmaningsverifiering med Intune måste du skapa en app i Azure AD. Den här appen ger delegerade behörigheter till Intune att verifiera SCEP-förfrågningar.
 
-Se till att du har behörighet att registrera en Azure AD-app. [Nödvändiga behörigheter](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) innehåller stegen.
+Se till att du har behörighet att registrera en Azure AD-app. Se [Nödvändiga behörigheter](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) i Azure AD-dokumentationen.
 
-**Steg 1: Skapa ett Azure AD-program**
+#### <a name="create-an-application-in-azure-active-directory"></a>Skapa ett program i Azure Active Directory  
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Azure Active Directory** > **Appregistreringar** > **Ny programregistrering**.
-3. Ange ett namn och inloggnings-URL. Välj **Webbapp/API** för programtypen.
-4. Välj **Skapa**.
+1. På [Azure-portalen](https://portal.azure.com) går du till **Azure Active Directory** > **Appregistreringar** och väljer sedan **Ny registrering**.  
 
-[Integrera program med Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) innehåller viss vägledning om hur du skapar en app, inklusive tips om URL och namn.
+2. På sidan **Registrera ett program** anger du följande information:  
+   - Ange ett beskrivande namn i avsnittet **Namn**.  
+   - I avsnittet **Kontotyper som stöds** väljer du **Konton i valfri organisationskatalog**.  
+   - Som **Omdirigerings-URI** lämnar du standardinställningen Web och anger sedan inloggnings-URL: en till SCEP-servern från tredje part.  
 
-**Steg 2: Ge behörigheter**
+3. Välj **Registrera** för att skapa programmet och öppna sidan Översikt för den nya appen.  
 
-När du har skapat ditt program ger du Microsoft Intune-API de behörigheter som krävs:
+4. På appsidan **Översikt** kopierar du värdet **Program-ID (klient)** och sparar det till senare. Du behöver det här värdet senare.  
 
-1. I din Azure AD-app öppnar du **Inställningar** > **Nödvändiga behörigheter**.  
-2. Välj **Lägg till** > **Välj ett API** > välj **Microsoft Intune API** > **Välj**.
-3. I **Välj behörigheter** väljer du **SCEP-utmaningsverifiering** > **Välj**.
-4. Klicka på **Klar** för att spara ändringarna.
+5. I appens navigeringsfönster går du till **Certifikat och hemligheter** under **Hantera**. Klicka på knappen **Ny klienthemlighet**. Ange ett värde i beskrivningen, välj ett alternativ för **Förfaller** och välj sedan **Lägg till** för att generera ett *värde* för klienthemligheten. 
+   > [!IMPORTANT]  
+   > Innan du lämnar den här sidan ska du kopiera värdet för klienthemligheten och spara det för att användas senare tillsammans med en tredjeparts certifikatutfärdare. Det här värdet visas inte igen. Var noga med att läsa vägledningen från tredjeparts certifikatutfärdare om hur de vill att program-ID, autentiseringsnyckel och klientorganisations-ID ska konfigureras.  
 
-**Steg 3: Hämta program-ID och autentiseringsnyckel**
+6. Skriv upp ditt **Klientorganisations-ID**. Klientorganisations-ID är domäntexten efter @-tecknet i ditt konto. Om ditt konto till exempel är *admin@name.onmicrosoft.com*, är ditt klientorganisations-ID **namn.onmicrosoft.com**.  
 
-Hämta ID- och nyckelvärden för ditt Azure AD-program. Följande värden behövs:
+7. I appens navigeringsfönster går du till **API-behörigheter** under **Hantera** och väljer sedan **Lägg till en behörighet**.  
 
-- Program-ID
-- Autentiseringsnyckel
-- Klientorganisations-ID
+8. På sidan **Begär API-behörigheter** väljer du **Intune** och väljer sedan **Programbehörigheter**. Markera kryssrutan för **scep_challenge_provider** (verifiering av certifikatskontroll SCEP).  
 
-**Så här hämtar du program-ID och autentiseringsnyckel**:
+   Välj **Lägg till behörigheter** för att spara konfigurationen.  
 
-1. I Azure AD väljer du ditt nya program (**Appregistreringar**).
-2. Kopiera **program-ID** och lagra det i din programkod.
-3. Generera sedan en autentiseringsnyckel. I din Azure AD-app öppnar du **Inställningar** > **Nycklar**.
-4. I **Lösenord** anger du en beskrivning och väljer varaktighet för nyckeln. **Spara** ändringarna. Kopiera och spara det värde som visas.
+9. Stanna kvar på sidan **API-behörigheter** och välj **Bevilja administratörens godkännande för Microsoft** och välj sedan **Ja**.  
+   
+   Registreringsprocessen i Azure AD har slutförts.
 
-    > [!IMPORTANT]
-    > Kopiera och spara den här nyckeln omedelbart eftersom den inte visas igen. Det här nyckelvärdet behövs med implementeringen av din tredjeparts certifikatutfärdare. Var noga med att läsa deras vägledning om hur de vill att program-ID, autentiseringsnyckeln och klientorganisations-ID konfigureras.
 
-**Klientorganisations-ID** är domäntexten efter @-tecknet i ditt konto. Om ditt konto till exempel är `admin@name.onmicrosoft.com` är ditt klientorganisations-ID **namn.onmicrosoft.com**.
 
-[Hämta program-ID och autentiseringsnyckel](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key) visar stegen för att hämta dessa värden och innehåller mer information om Azure AD-appar.
+
 
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Konfigurera och distribuera en SCEP-certifikatprofil
 Som administratör skapar du en SCEP-certifikatprofil att rikta mot användare eller enheter. Tilldela sedan profilen.
@@ -128,6 +121,9 @@ Följande tredjeparts certifikatutfärdare har stöd för Intune:
 - [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
 - [EJBCA GitHub version med öppen källkod](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
+- [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
+- [IDnomic](https://www.idnomic.com/)
+- [Sectigo](https://sectigo.com/products)
 
 Om du är tredjeparts certifikatutfärdare som är intresserad av att integrera din produkt med Intune kan du läsa API-vägledningen:
 

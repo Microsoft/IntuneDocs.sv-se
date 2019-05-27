@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
-ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
+ms.openlocfilehash: 7ac370ffe297cb62af6ed55cfd5c4c41cf8452d3
+ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65619444"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65816295"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -119,6 +119,9 @@ Intune Connector för Active Directory måste installeras på en dator som kör 
 > [!NOTE]
 > När du har loggat in på Connector kan det ta några minuter innan det visas i [Intune](https://aka.ms/intuneportal). Det visas bara om den kan kommunicera med Intune-tjänsten.
 
+### <a name="turn-off-ie-enhanced-security-configuration"></a>Aktivera förbättrad säkerhetskonfiguration i IE
+Som standard har Windows Server förbättrad säkerhetskonfiguration i Internet Explorer aktiverat. Om du inte kan logga in på Intune Connector för Active Directory ska du inaktivera Förbättrad säkerhetskonfiguration i IE för administratören. [Så här inaktiverar du Förbättrad säkerhetskonfiguration i Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
+
 ### <a name="configure-web-proxy-settings"></a>Konfigurera webbproxyinställningar
 
 Om du har en webbproxy i nätverksmiljön kontrollerar du att Intune Connector för Active Directory fungerar korrekt, i [Arbeta med befintliga lokala proxyservrar](autopilot-hybrid-connector-proxy.md).
@@ -194,7 +197,7 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Valfritt) Aktivera registreringsstatussidan
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering (förhandsversion)**.
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering**.
 1. I fönstret **Statussidan för registrering** väljer du **Standard** > **Inställningar**.
 1. I rutan **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler) väljer du **Yes** (Ja).
 1. Konfigurera de andra alternativen efter behov.

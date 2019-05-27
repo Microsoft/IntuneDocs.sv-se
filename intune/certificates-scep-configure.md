@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 96a0da69cdb77ae36ce2456186593f5c334c870c
+ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61510132"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65765405"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -567,4 +567,6 @@ Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **
 
 - [Använda PKCS-certifikat](certficates-pfx-configure.md) eller [utfärda PKCS-certifikat från en Symantec PKI-hanterad webbtjänst](certificates-symantec-configure.md)
 - [Lägg till en tredjeparts-CA för att använda SCEP med Intune](certificate-authority-add-scep-overview.md)
-- Mer hjälp finns i guiden [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune) (Felsökning av SCEP-certifikatprofildistribution i Microsoft Intune).
+- Använd följande guider för ytterligare hjälp:
+  - [Felsökning av SCEP-certifikatprofildistribution i Microsoft Intune](https://support.microsoft.com/help/4457481)
+  - [Felsökning av NDES-konfiguration för användning med Microsoft Intune-certifikatprofiler](https://support.microsoft.com/help/4459540)

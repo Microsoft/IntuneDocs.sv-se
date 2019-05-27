@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36aa9ad733e2ae5e0f4a292b073fbebd5f5f5f8f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: c2d137945325d8ec11801aec225fd0e89196ed05
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511547"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732998"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
 Med Windows Autopilot blir det enklare att registrera enheter. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och tillämpa anpassade operativsystemavbildningar. 
@@ -90,23 +90,20 @@ Nu ska du skapa en enhetsgrupp där du placerar de Autopilot-enheter som du nyss
 När du har skapat en enhetsgrupp, måste du skapa en distributionsprofil så att du kan konfigurera Autopilot-enheterna.
 
 1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
-2. I **Namn** anger du *Autopilot-profil*. I **Beskrivning** anger du *Testprofil för Autopilot-enheter*.
+2. På sidan **Grundinställningar** vid **Namn**, anger du *Autopilot-profil*. I **Beskrivning** anger du *Testprofil för Autopilot-enheter*.
 3. Ange **Omvandla alla målenheter till Autopilot** som **Ja**. Den här inställningen ser till att alla enheter i listan blir registrerade med Autopilots distributionstjänst. Det kan ta upp till 48 timmar för registreringen att bearbetas.
-4. I **Distributionsläge** väljer du **Användarstyrd**. Enheter med den här profilen är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs för att registrera enheten.
-5. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
-6. Välj **Välkomstprogram**, konfigurera följande alternativ, låt de andra ha standardinställningarna och välj sedan **Spara**:
+4. Välj **Nästa**.
+5. På sidan **Välkomstupplevelse (OOBE)** för **Distributionsläge** väljer du **Användarbaserat**. Enheter med den här profilen är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs för att registrera enheten.
+6. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
+7. Konfigurera följande alternativ och låt standardvärdet vara kvar för de andra:
     - **Licensavtal för slutanvändare (EULA)**: **Dölj**
     - **Sekretessinställningar**: **Visa**
     - **Användarkontotyp**: **Standard**
-
-6. Välj **Skapa** när du vill skapa profilen. Autopilot-distributionsprofilen kan nu tilldelas till enheterna.
-
-## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Tilldela en Autopilot-distributionsprofil till en enhetsgrupp
-
-Nu när distributionsprofilen har skapats kan du tilldela den till enhetsgruppen.
-1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > välj en profil.
-2. Välj **Tilldelningar** på det specifika profilbladet. 
-3. Välj **Välj grupper**. På bladet **Välj grupper** väljer du **Autopilot-grupp** och sedan **Välj**.
+8. Välj **Nästa**.
+9. På sidan **Tilldelningar** väljer du **Valda grupper** för **Tilldela till**.
+10. Välj **Välj grupper att ta med**, välj **Autopilot-grupp**.
+11. Välj **Nästa**.
+12. På sidan **Granska och skapa** väljer du **Skapa** för att skapa profilen.
 
 ## <a name="distribute-devices-to-users"></a>Distribuera enheter till användare
 
