@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf40c3b8f31e042a501e1502097f147d48fc328d
-ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
+ms.openlocfilehash: 25a3acda374266a0fbd16feabde7787204555ea2
+ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975827"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264176"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -45,8 +44,20 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande �
 
 -->  
 
-
 <!-- ########################## -->
+
+## <a name="week-of-may-20-2019"></a>Den vecka som börjar 20 maj 2019 
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="windows-company-portal-app----3316993---"></a>Windows företagsportalapp <!-- 3316993 -->
+Windows-företagsportalappen har nu en ny sida med etiketten **Enheter**. På sidan **Enheter** ser slutanvändare alla sina registrerade enheter. Användarna ser den här ändringen i företagsportalen när de använder version 10.3.4291.0 och senare. Mer information om hur du konfigurerar företagsportalen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
+
+### <a name="device-enrollment"></a>Enhetsregistrering
+
+#### <a name="autopilot-device-orderid-attribute-name-changed-to-group-tag----4659453---"></a>OrderID-attributet på Autopilot-enheter har bytt namn till Grupptagg <!-- 4659453 -->
+
+För att göra det mer intuitivt har **OrderID**-attributets namn på Autopilot-enheter ändrats till **Grupptagg**. När du använder CSV-filer för att ladda upp Autopilot-enhetsinformation måste du använda Grupptagg som kolumnrubrik, inte OrderID.  
 
 ## <a name="week-of-may-13-2019"></a>Den vecka som börjar 13 maj 2019 
 
@@ -64,7 +75,7 @@ På enheter som redan har registrerats via Installationsassistenten med någon a
 
 Om användare installerar företagsportalappen från App store och sedan försöker att registrera enheterna genom den, får de ett felmeddelande. Dessa enheter kommer förväntas att bara använda företagsportalen när den har skickats automatiskt av Intune under registreringen. Profiler för registrering i Intune i Azure-portalen kommer att uppdateras så att du kan ange hur enheter ska autentiseras och om de får företagsportalappen. Om du vill att dina DEP-enhetsanvändare ska ha företagsportalen behöver du ange dina preferenser i en registreringsprofil. 
 
-Dessutom håller skärmen **Identifiera din enhet** i iOS-företagsportalen på att tas bort. Administratörer som vill aktivera villkorlig åtkomst eller distribuera företagsappar måste därför uppdatera profilen för DEP-registrering. Det här kravet gäller endast om DEP-registrering har verifierats med Installationsassistenten. I så fall måste du installera företagsportalen på enheten. För att göra det ska du välja **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välja en token > **Profiler** > välja en profil > **Egenskaper** > och ställa in **Installera företagsportal** på **Sant**.
+Dessutom håller skärmen **Identifiera din enhet** i iOS-företagsportalen på att tas bort. Administratörer som vill aktivera villkorlig åtkomst eller distribuera företagsappar måste därför uppdatera profilen för DEP-registrering. Det här kravet gäller endast om DEP-registrering har verifierats med Installationsassistenten. I så fall måste du installera företagsportalen på enheten. För att göra det ska du välja **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välja en token > **Profiler** > välja en profil > **Egenskaper** > och ställa in **Installera företagsportal** på **Ja**.
 
 För att installera företagsportalen på redan registrerade DEP-enheter måste du gå till Intune > Klientappar och installera den som en hanterad app med konfigurationsprinciper för appar. 
 
@@ -432,7 +443,7 @@ Intune-konsolen stöder inte längre visning och hantering av enheter med endast
 - Använd Exchange-kontrollerna enligt beskrivningen i [Klienter och mobilt i Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online)
 
 ### <a name="search-the-all-devices-page-for-an-exact-device-by-using-name---4254930---"></a>Söka efter en exakt enhet med [namn] på sidan Alla enheter <!--4254930 -->
-Du kan nu söka efter ett exakt enhetsnamn. Gå till **Intune** > **Enheter** > **Alla enheter** > i sökrutan omger du enhetsnamnet med {} för att söka efter en exakt matchning. Det kan till exempel vara **{Enhet12345}**.
+Du kan nu söka efter ett exakt enhetsnamn. Gå till **Intune** > **Enheter** > **Alla enheter** > i sökrutan omger du enhetsnamnet med {} för att söka efter en exakt matchning. Det kan till exempel vara **{Enhet12345}** .
 
 ### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
 
@@ -581,8 +592,8 @@ Android enterprise
 #### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui----3640850-3803313-----"></a>Safari och iOS-inställningarna för att fördröja visning av programuppdateringar för användaren flyttas i Intune-användargränssnittet <!-- 3640850, 3803313   -->
 För iOS-enheter kan du ange Safari-inställningar och konfigurera programuppdateringar. I den här uppdateringen flyttas dessa till olika delar av Intune-användargränssnittet:
 
-- Safari-inställningarna flyttades från **Safari** (**Enhetskonfiguration** > **Profiler** > **Ny profil** > **iOS** som plattform > **Enhetsbegränsningar** som profiltyp) till **[Inbyggda appar](device-restrictions-ios.md#built-in-apps)**.
-- Inställningen för att **fördröja visning av programuppdateringar för användaren för övervakade iOS-enheter** (**Programuppdateringar** > **Uppdateringsprinciper för iOS**) flyttas till **Enhetsbegränsningar** > **[Allmänt](device-restrictions-ios.md#general)**.  Information om påverkan på befintliga principer finns i [iOS-programuppdateringar](software-updates-ios.md#configure-the-policy). 
+- Safari-inställningarna flyttades från **Safari** (**Enhetskonfiguration** > **Profiler** > **Ny profil** > **iOS** som plattform > **Enhetsbegränsningar** som profiltyp) till **[Inbyggda appar](device-restrictions-ios.md#built-in-apps)** .
+- Inställningen för att **fördröja visning av programuppdateringar för användaren för övervakade iOS-enheter** (**Programuppdateringar** > **Uppdateringsprinciper för iOS**) flyttas till **Enhetsbegränsningar** >  **[Allmänt](device-restrictions-ios.md#general)** .  Information om påverkan på befintliga principer finns i [iOS-programuppdateringar](software-updates-ios.md#configure-the-policy). 
 
 Se följande för en lista över inställningarna:
 
@@ -594,7 +605,7 @@ Den här funktionen gäller för:
 - iOS
 
 #### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices----3699164-----"></a>Aktivering av begränsningar i enhetsinställningarna byter namn till Skärmtid på iOS-enheter <!-- 3699164   -->
-Du kan konfigurera **Aktivera begränsningar i enhetsinställningarna** på övervakade iOS-enheter (**Enhetskonfiguration** > **Profiler** > **Ny profil** > **iOS** som plattform > **Enhetsbegränsningar** som profiltyp > **Allmänt**). I den här uppdateringen har den här inställningen bytt namn till **Skärmtid (endast övervakat)**. 
+Du kan konfigurera **Aktivera begränsningar i enhetsinställningarna** på övervakade iOS-enheter (**Enhetskonfiguration** > **Profiler** > **Ny profil** > **iOS** som plattform > **Enhetsbegränsningar** som profiltyp > **Allmänt**). I den här uppdateringen har den här inställningen bytt namn till **Skärmtid (endast övervakat)** . 
 
 Beteendet är samma. Specifikt: 
 

@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/19/2018
 ms.topic: tutorial
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -19,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d137945325d8ec11801aec225fd0e89196ed05
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
+ms.openlocfilehash: 2ee353e5e6c39c3b402c0b4f039bb02efcfa4532
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65732998"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044529"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
 Med Windows Autopilot blir det enklare att registrera enheter. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och tillämpa anpassade operativsystemavbildningar. 
@@ -53,9 +52,9 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 1. I en textredigerare skapar du en lista med kommaavgränsade värden (CSV) som identifierar Windows-enheterna. Använd följande format:
     
-    *serial-number*, *windows-product-id*, *hardware-hash*, *optional-order-id*
+    *serial-number*, *windows-product-id*, *hardware-hash*, *optional-Group-Tag*
     
-    De första tre objekten krävs, men order-ID är valfritt.
+    De första tre objekten krävs, men grupptaggen (kallades tidigare ”order-ID”) är valfri.
 
 2. Spara CSV-filen.
 

@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 05/28/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57fc51db0f301a23ca4e9686301c866d75dbd96
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
+ms.openlocfilehash: a9f421a54319878c4f985ecc08252d4e03a00919
+ms.sourcegitcommit: 95572ed540e90471963833c0bbf71478477b1813
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65733031"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269994"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
 Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villkorlig start. I den här artikeln används termen *principhanterade appar* för att hänvisa till appar som har konfigurerats med appskyddsprinciper.
+
+> [!IMPORTANT]
+> Intune-företagsportalen krävs på enheten för att kunna ta emot appskyddsprinciper för Android-enheter. Mer information finns i [Krav för åtkomst till appar i Intune-företagsportalen](end-user-mam-apps-android.md).
 
 ##  <a name="data-protection"></a>Dataskydd 
 ### <a name="data-transfer"></a>Dataöverföring
@@ -118,5 +120,5 @@ Som standard finns flera inställningar med förkonfigurerade värden och åtgä
 | **Lägsta appversion** | Ange ett värde för det lägsta operativsystemet. Exempel på *åtgärder* är: <br><ul><li>**Varna** – Användaren får ett meddelande om appversionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas.</li></ul> <ul><li>**Blockera åtkomst** – Användarens åtkomst blockeras om appversionen på enheten inte uppfyller kravet. </li></ul> <ul><li>**Rensa data** – Användarkontot som associeras med programmet rensas från enheten. </li></ul> </li></ul> Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, *Outlook versionsprincip*).<br><br> Den här posten kan visas flera gånger, och de olika instanserna kan ha stöd för olika åtgärder.<br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.<br><br> Du kan konfigurera var användarna kan få en uppdaterad version av en affärsapplikation (LOB). Slutanvändarna ser den här funktionen i dialogen för villkorlig start **Lägsta appversion**, där slutanvändarna uppmanas att uppdatera till en lägsta version av LOB-appen. Du måste ange denna uppdateringsinformation som en del av din LOB-appskyddsprincip (APP). På Android använder funktionen den senaste företagsportalen. Om du vill konfigurera hur en slutanvändare uppdaterar en LOB-app behöver appen en hanterad appkonfigurationspolicy som skickas till den med nyckeln, `com.microsoft.intune.myappstore`. Det skickade värdet anger vilket lager som slutanvändaren laddar ner appen från. Om appen distribueras via företagsportalen måste värdet vara `CompanyPortal`. Du måste ange en fullständig URL för andra lager. |
 | **Lägsta korrigeringsversion** | Kräv att enheter har en lägsta Android-säkerhetskorrigering som har publicerats av Google.  <br><ul><li>**Varna** – Användaren får ett meddelande om Android-versionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas.  </li></ul> <ul><li>**Blockera åtkomst** – Åtkomsten blockeras om Android-versionen på användarens enhet inte uppfyller det här kravet.</li></ul> <ul><li>**Rensa data** – Användarkontot som associeras med programmet rensas från enheten.  </li></ul></li></ul> Den här principinställningen stöder datumformatet *ÅÅÅÅ-MM-DD*. |
 | **Enhetstillverkare** | Ange en enhetstillverkare som krävs för att använda den här appen. Exempel på *åtgärder* är: <br><ul><li>**Tillåt angivna (blockera icke-angivna)** – Endast enheter som matchar den angivna tillverkaren kan använda appen. Alla andra enheter blockeras. </li></ul> <ul><li>**Tillåt angivna (rensa icke-angivna)** – Användarkontot som associeras med programmet rensas från enheten. </li></ul> |
-| **SafetyNet-enhetsattestering** | Appskyddsprinciper har stöd för några av API:erna för Google Play Protect. I synnerhet den här inställningen konfigurerar Googles SafetyNet-attestering på slutanvändarenheter. Ange antingen **Grundläggande integritet** eller **Grundläggande integritet och certifierade enheter**. **Grundläggande integritet** ger information om enhetens allmänna integritet. Rotade enheter, emulatorer, virtuella enheter och enheter med tecken på manipulation misslyckas med grundläggande integritet. **Grundläggande integritet och certifierade enheter** ger information om enhetens kompatibilitet med Google-tjänster. Endast oförändrade enheter som har certifierats av Google kan godkännas av den här kontrollen. Exempel på *åtgärder* är: <br><ul><li>**Varna** – användaren får ett meddelande om enheten inte uppfyller Googles SafetyNet-attesteringsgenomsökning baserat på det konfigurerade värdet. Det här meddelandet kan avvisas. </li></ul><ul><li>**Blockera åtkomst** – användaren blockeras från åtkomst om enheten inte uppfyller Googles SafetyNet-attesteringsgenomsökning baserat på det konfigurerade värdet. </li></ul> <ul><li>**Rensa data** – Användarkontot som associeras med programmet rensas från enheten. </li></ul> </li></ul> Vanliga frågor om den här inställningen finns i [den här sidan med vanliga frågor och svar](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-android). |
+| **SafetyNet-enhetsattestering** | Appskyddsprinciper har stöd för några av API:erna för Google Play Protect. I synnerhet den här inställningen konfigurerar Googles SafetyNet-attestering på slutanvändarenheter. Ange antingen **Grundläggande integritet** eller **Grundläggande integritet och certifierade enheter**. **Grundläggande integritet** ger information om enhetens allmänna integritet. Rotade enheter, emulatorer, virtuella enheter och enheter med tecken på manipulation misslyckas med grundläggande integritet. **Grundläggande integritet och certifierade enheter** ger information om enhetens kompatibilitet med Google-tjänster. Endast oförändrade enheter som har certifierats av Google kan godkännas av den här kontrollen. Exempel på *åtgärder* är: <br><ul><li>**Varna** – användaren får ett meddelande om enheten inte uppfyller Googles SafetyNet-attesteringsgenomsökning baserat på det konfigurerade värdet. Det här meddelandet kan avvisas. </li></ul><ul><li>**Blockera åtkomst** – användaren blockeras från åtkomst om enheten inte uppfyller Googles SafetyNet-attesteringsgenomsökning baserat på det konfigurerade värdet. </li></ul> <ul><li>**Rensa data** – Användarkontot som associeras med programmet rensas från enheten. </li></ul> </li></ul> Vanliga frågor om den här inställningen finns i [Vanliga frågor och svar om MAM och appskydd](mam-faq.md#app-experience-on-android). |
 | **Hotgenomsökning för appar** | Appskyddsprinciper har stöd för några av API:erna för Google Play Protect. I synnerhet den här inställningen garanterar att Googles Verify Apps-genomsökning aktiveras för slutanvändarenheter. Om det här är konfigurerat blockeras slutanvändaren från åtkomst tills användaren aktiverar Googles appgenomsökning på sin Android-enhet. Exempel på *åtgärder* är: <br><ul><li>**Varna** – användaren får ett meddelande om Googles Verify Apps-genomsökning på enheten inte är aktiverad. Det här meddelandet kan avvisas. </li></ul><ul><li>**Blockera åtkomst** – användaren blockeras från åtkomst om Googles Verify Apps-genomsökning på enheten inte är aktiverad. </li></ul></li></ul> Resultat från Googles Verify Apps-genomsökning visas i rapporten **Potentiellt skadliga appar** i konsolen. |

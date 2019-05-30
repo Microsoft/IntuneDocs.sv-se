@@ -8,7 +8,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/10/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ec49b0539711fa50083850ea394a369a3c65b9
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: eb55951390c3fe19651087e16c3185018cfd9dab
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506784"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66049292"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -77,7 +76,7 @@ Tilldela en app till grupper med hjälp av en tilldelning för att inkludera ell
 
 När du gör grupptilldelningar är grupper som redan har tilldelats inte tillgängliga för ändring. Om du vill välja en grupp som för närvarande inte är tillgänglig kan du först ta bort appen från appens tilldelade lista. 
 
-För att redigera tilldelningar i app-listan **Tilldelningar** väljer du den rad som innehåller gruppen som du vill ändra. Du kan också ta bort en tilldelning genom att välja ellipsen (**...** ) i slutet av en rad och sedan välja **Ta bort**. För att ändra vyn för listan **Tilldelningar** grupperar du efter **Tilldelningstyp** eller **Inkluderade/Exkluderade**.
+För att redigera tilldelningar i app-listan **Tilldelningar** väljer du den rad som innehåller gruppen som du vill ändra. Du kan också ta bort en tilldelning genom att välja ellipsen ( **...** ) i slutet av en rad och sedan välja **Ta bort**. För att ändra vyn för listan **Tilldelningar** grupperar du efter **Tilldelningstyp** eller **Inkluderade/Exkluderade**.
 
 ![Apptilldelningar i Intune – Slutförda](./media/apps-inc-exl-05.png)
 
