@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8512f8270e7f219814aa5e3919f72b95de93cbcf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 551294be1d6b90d65104b50413c088e8e15bcd09
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048474"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373590"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Använda anpassade inställningar för Windows Holographic for Business-enheter i Intune
 
@@ -36,7 +36,7 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Windows Hologr
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
