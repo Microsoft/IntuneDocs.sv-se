@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d01b1f745450785209bf289be5b6e36ac65cc2d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 5d39b62762d623c150ac6198bd2d6215b4410663
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046310"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412290"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Använd granskningsloggar för att spåra och övervaka händelser i Microsoft Intune
 
@@ -39,7 +39,7 @@ Användare med följande behörigheter kan gå igenom granskningsloggar:
 
 Du kan gå igenom granskningsloggar i övervakningsgruppen för varje arbetsbelastning i Intune:
 
-1. I [Azure-portalen](https://portal.azure.com/) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj den arbetsbelastning som du vill granska granskningsloggar för. Välj exempelvis **Enheter**.
 3. Under **Övervakning** väljer du **Granskningsloggar**.
 
