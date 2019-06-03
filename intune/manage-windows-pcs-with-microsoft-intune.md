@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 11/13/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbce65fc22bb1d3ecafcd2ffbb3a35dec703ccc4
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: e39766bc8a880c104bd5af9ff530144e2b5d2beb
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069407"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041692"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
@@ -50,7 +49,7 @@ Minsta maskinvarukrav för att installera Intune-klientprogrammet:
 |---------------|--------------------|
 |Nätverk|Klienten kräver att datorn är ansluten till Internet.|
 |Processor och minne|Se RAM- och processorkraven för datorns operativsystem.|
-|Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet har installerats.|
+|Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet installeras.|
 
 **Programvara**:  
 Programvarukrav för att installera klientprogrammet:

@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/10/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c6c6e3e999e44ad6a07b4d8bdc1ddf9c400cf7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7e37d6a2b7371cf20cd36a6f3f75a4dd252c332f
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565459"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66048034"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Enhetsinställningar för Android Enterprise-enheter för att konfigurera e-post, autentisering och synkronisering i Intune
 
@@ -40,18 +39,18 @@ Mer information om e-postprofiler i Intune finns i [Konfigurera e-postinställni
 - **E-postserver**: Värdnamnet för din Exchange-server. Ange till exempel `outlook.office365.com`.
 - **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (Azure AD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
 
-  - **UPN (User Principal Name)**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
+  - **UPN (User Principal Name)** : Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
   - **Användarnamn**: Hämtar bara namnet, till exempel `user1`
 
-- **E-postadressattribut från AAD**: det här namnet är e-attributet som Intune hämtar från Azure AD. Intune genererar den e-postadress som används av den här profilen. Alternativen är:
+- **E-postadressattribut från AAD**: Namnet är det e-postattribut som Intune hämtar från Azure AD. Intune genererar den e-postadress som används av den här profilen. Alternativen är:
   - **User principal name**: använder det fullständiga huvudnamnet, till exempel `user1@contoso.com` eller `user1`, som e-postadress.
-  - **Primär SMTP-adress**: använder den primära SMTP-adressen, till exempel `user1@contoso.com`, för att logga in på Exchange.
+  - **Primär SMTP-adress**: Använder den primära SMTP-adressen, till exempel `user1@contoso.com`, för att logga in på Exchange.
 
 - **Autentiseringsmetod**: Välj **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som ska användas av e-postprofilen.
   - Om du väljer **Certifikat** så väljer du en klients SCEP- eller PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen.
 - **SSL**: Välj **Aktivera** för att använda Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
-- **Mängd e-post ska synkroniseras**: Välj hur lång tid för e-postmeddelande som du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
-- **Innehållstyp att synkronisera** (enbart Nine Work): Välj vilka data som du vill synkronisera på enheterna. Alternativen är:
+- **Mängd e-post att synkroniseras**: Välj den tidslängd för e-post som du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
+- **Innehållstyp som ska synkroniseras:** (endast Nine Work): Välj vilka data som du vill synkronisera på enheterna. Alternativen är:
   - **Kontakter**: Välj **Aktivera** för att tillåta slutanvändare att synkronisera kontakter till sina enheter.
   - **Kalender**: Välj **Aktivera** för att tillåta användare att synkronisera kalendern till sina enheter.
   - **Uppgifter**: Välj **Aktivera** för att tillåta användare att synkronisera uppgifter till sina enheter.

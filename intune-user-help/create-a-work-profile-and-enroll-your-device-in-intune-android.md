@@ -1,11 +1,11 @@
 ---
-title: Registrera din enhet med en arbetsprofil | Microsoft Docs
-description: Göra Android-enheter säkrare med arbetsprofiler.
+title: Registrera enhet med en Android-arbetsprofil | Microsoft Docs
+description: Så skapar du en arbetsprofil och registrerar en enhet
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,20 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eab28cdd4515561ad34a433773e351150a87f626
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6fb5911f8a706f38e3e880c32113d203369ed870
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57334960"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196923"
 ---
-# <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Skapa en arbetsprofil och registrera din enhet i Intune
+# <a name="enroll-device-with-android-work-profile"></a>Registrera enhet med Android-arbetsprofil
 
-När du registrerar din Android-enhet får du åtkomst till företagets e-post, appar och andra arbetsdata. Som en del av registreringen skapar du en arbetsprofil, som avgränsar personliga data på enheten från dina arbetsdata.
+Registrera din personliga Android-enhet för att få åtkomst till företagets e-post, appar och andra arbetsdata. Under registreringen konfigurerar du en Android-arbetsprofil. Den här profilen avgränsar personliga data på enheten från dina arbetsdata. Företagets support hanterar bara arbetsprofilen, som består av arbetsfiler och data. Företagets support kan inte hantera personliga data på enheten. Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).  
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI?rel=0]
 
-Företagets support kan bara hantera arbetsprofilen, som innehåller dina arbetsrelaterade data. Företagets support kan inte hantera personliga data på enheten. Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).
-
-För att skapa en arbetsprofil:
+## <a name="create-work-profile-and-enroll-device"></a>Skapa arbetsprofil och registrera enhet
 
 1.  På Android-företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto. Ladda ned och installera den kostnadsfria appen från [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) om du inte redan har installerat den.
 
@@ -82,5 +82,7 @@ För att skapa en arbetsprofil:
     Nu kan du hämta företagsappar från Play-butiken för arbete.
 
     ![Appsida på Play Store for Work](./media/andr-afw-tap-work-play-store-icon.png)
+
+## <a name="next-steps"></a>Nästa steg  
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

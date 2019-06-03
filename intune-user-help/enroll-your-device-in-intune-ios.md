@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2019
+ms.date: 05/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0c7ac239a67a51ba7165771206883f3c46f5f55
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
-ms.translationtype: HT
+ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292432"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196864"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Konfigurera iOS-enhetsåtkomst till företagsresurser  
 
@@ -31,7 +31,9 @@ Registrera din iOS-enhet i Intune-företagsportalappen för att få säker åtko
 
 När enheten har registrerats blir den *hanterad*. Din organisation kan tilldela principer och appar till enheten via en MDM-provider för hantering av mobilenheter, t.ex. Intune.  
 
-För att kunna komma åt arbets- eller skolinformation från din enhet måste du konfigurera enheten så att den matchar organisationens önskade inställningar. Den här artikeln beskriver hur du använder Företagsportalen för att registrera enheten och underhålla organisationens inställningskrav. 
+För att kunna komma åt arbets- eller skolinformation från din enhet måste du konfigurera enheten så att den matchar organisationens önskade inställningar. Den här artikeln beskriver hur du använder Företagsportalen för att registrera enheten och underhålla organisationens inställningskrav.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
 > Om du försökte komma åt företagets e-post i e-postprogrammet och du fick ett meddelande om att enheten måste vara hanterad, är du på rätt plats. Följ anvisningarna nedan för att få åtkomst till din e-post och andra företagsresurser på iOS-enheten.  
@@ -39,7 +41,7 @@ För att kunna komma åt arbets- eller skolinformation från din enhet måste du
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Vad du kan förvänta dig av företagsportalappen  
 
 ### <a name="security"></a>Säkerhet  
-Under installationen kräver appen att du autentiserar dig själv hos organisationen. Du informeras sedan om eventuella enhetsinställningar som du behöver uppdatera. Organisationer anger exempelvis ofta krav på lägsta eller högsta antal tecken i lösenordet som du måste uppfylla.     
+Under installationen kräver appen att du autentiserar dig själv hos organisationen. Du informeras sedan om eventuella enhetsinställningar som du behöver uppdatera. Organisationer anger exempelvis ofta krav på lägsta eller högsta antal tecken i lösenordet som du måste uppfylla.
 
 ### <a name="protection"></a>Skydd  
 När enheten har registrerats fortsätter företagsportalappen att se till att enheten är skyddad. Om du till exempel installerar en app från en ej betrodd källa kommer appen meddela dig och återkallar ibland åtkomst till företagets data. Den här typen av princip är vanlig i organisationer och kräver ofta att du avinstallerar den icke betrodda appen innan du kan få åtkomst igen.  
@@ -118,6 +120,9 @@ En paus på mer än några minuter under registreringen göra att appen stängs 
 
 > [!Note]
 > Om din organisation övervakar röst- och databegränsningar, eller ger dig en företagsägd enhet, kan du behöva utföra några ytterligare steg. Om du uppmanas att installera appen **Datalert** läser du avsnittet om hur du [registrerar din enhet i kostnadshanteringen för telekommunikation](enroll-your-device-with-telecom-expense-management-ios.md). Om din organisation är en del av Apples program för enhetsregistrering (DEP) tar du reda på [hur du registrerar din företagsägda enhet](enroll-your-device-dep-ios.md).  
+
+## <a name="it-administrator-support"></a>IT-administratörssupport  
+Om du är IT-administratör och stöter på problem när du registrerar enheter kan du läsa [Felsöka problem med registrering av iOS-enhet i Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). Den här artikeln innehåller vanliga fel, deras orsaker och stegen för att lösa dem.  
 
 ## <a name="next-steps"></a>Nästa steg  
 Hitta appar som hjälper dig i arbetet eller skolan. Lär dig [hur appar blir tillgängliga](use-managed-apps-on-your-device-ios.md) för dig via Företagsportalen.  

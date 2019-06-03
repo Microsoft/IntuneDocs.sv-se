@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 12/11/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cf1daf42d1dfcd8dd25304040e868581a056943
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0faf9220b4859c41ef8c4393fe15f385eaac8cc3
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566424"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042104"
 ---
 # <a name="email-profile-settings-for-ios-devices-in-intune"></a>E-postprofilinställningar för iOS-enheter i Intune
 
@@ -37,7 +36,7 @@ Den här artikeln listar och beskriver alla e-postinställningar tillgängliga f
 - **E-postserver**: Ange värdnamnet för din Exchange-server.
 - **Kontonamn**: Ange visningsnamnet för e-postkontot. Namnet visas för användare på deras enheter.
 - **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
-  - **UPN (User Principal Name)**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
+  - **UPN (User Principal Name)** : Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
   - **Primär SMTP-adress**: Hämtar namnet i e-postadressformat, till exempel `user1@contoso.com`
   - **sAM-kontonamn**: Kräver domänen, till exempel `domain\user1`.
 
@@ -76,20 +75,20 @@ Den här artikeln listar och beskriver alla e-postinställningar tillgängliga f
   När du använder S/MIME med ett e-postmeddelande bekräftar du avsändarens äkthet och meddelandets integritet och sekretess.
 
   - **S/MIME-signering aktiverad**: Välj **Aktivera** för att tillåta användare att digitalt signera utgående e-post för det angivna kontot. Med signering kan användare som får meddelanden vara säkra på att meddelandet kommer från den specifika avsändaren och inte från någon som låtsas vara avsändaren. **Inaktivera** tillåter inte användare att digitalt signera meddelandet.
-    - **Tillåt användaren att ändra inställningen**: Välj **aktivera** så att användarna kan ändra S/MIME-signering beteende. **Inaktivera** förhindrar användarna att ändra S/MIME-signeringsinställningen du har konfigurerat. Tillgängligt i iOS 12 och senare.
+    - **Tillåt användare att ändra inställning**: Välj **Aktivera** för att tillåta användare att ändra S/MIME-signeringsbeteendet. **Inaktivera** förhindrar användarna att ändra S/MIME-signeringsinställningen du har konfigurerat. Tillgängligt i iOS 12 och senare.
 
   - **S/MIME-signeringscertifikat**: Välj ett befintligt PKCS- eller SCEP-certifikatprofil som används för signering av e-postmeddelanden.
-    - **Tillåt användaren att ändra inställningen**: Välj **aktivera** så att användarna kan ändra signeringscertifikatet. **Inaktivera** förhindrar användare att ändra signeringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat. Tillgängligt i iOS 12 och senare.
+    - **Tillåt användare att ändra inställning**: Välj **Aktivera** för att tillåta användare att ändra signeringscertifikatet. **Inaktivera** förhindrar användare att ändra signeringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat. Tillgängligt i iOS 12 och senare.
 
-  - **Kryptera som standard**: **aktivera** krypterar alla meddelanden som standardfunktion. **Inaktivera** krypterar inte alla meddelanden som standardbeteende.
-    - **Tillåt användaren att ändra inställningen**: Välj **aktivera** så att användarna kan ändra standardinställningen för kryptering. **Inaktivera** förhindrar användarna att ändra standardbeteendet för kryptering och tvingar dem att använda den inställning du har konfigurerat. Tillgängligt i iOS 12 och senare.
+  - **Kryptera som standard**: **Aktivera** krypterar alla meddelanden som standardbeteende. **Inaktivera** krypterar inte alla meddelanden som standardbeteende.
+    - **Tillåt användare att ändra inställning**: Välj **Aktivera** för att tillåta användare att ändra standardkrypteringsbeteendet. **Inaktivera** förhindrar användarna att ändra standardbeteendet för kryptering och tvingar dem att använda den inställning du har konfigurerat. Tillgängligt i iOS 12 och senare.
 
   - **Framtvinga kryptering per meddelande**: Med kryptering per meddelande kan användarna välja vilka e-postmeddelanden som krypteras innan de skickas. Välj **Aktivera** för att visa alternativet för kryptering per meddelande när du skapar ett nytt e-postmeddelande. Användarna kan sedan välja eller välja bort kryptering per meddelande. **Inaktivera** förhindrar att alternativet för kryptering per meddelande visas.
 
     Om inställningen **Kryptera som standard** är aktiverad och kryptering per meddelande aktiveras kan användarna välja bort kryptering per meddelande. Om inställningen **Kryptera som standard** är inaktiverad och kryptering per meddelande aktiveras kan användarna välja kryptering per meddelande.
 
   - **S/MIME-krypteringscertifikat**: Välj ett befintligt PKCS- eller SCEP-certifikatprofil som används för kryptering av e-postmeddelanden.
-    - **Tillåt användaren att ändra inställningen**: Välj **aktivera** så att användarna kan ändra krypteringscertifikatet. **Inaktivera** förhindrar användare att ändra krypteringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat. Tillgängligt i iOS 12 och senare.
+    - **Tillåt användare att ändra inställning**: Välj **Aktivera** för att tillåta användare att ändra krypteringscertifikatet. **Inaktivera** förhindrar användare att ändra krypteringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat. Tillgängligt i iOS 12 och senare.
 - **Mängd e-post att synkroniseras**: Välj antalet dagars e-post som du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
 - **Tillåt att meddelanden flyttas till andra e-postkonton**: **Aktivera** ger användarna möjlighet att flytta e-postmeddelanden mellan olika konton som användarna har konfigurerat på sina enheter.
 - **Tillåt e-postmeddelande från program från tredje part**: **Aktivera** tillåter användare att välja den här profilen som standardkonto för att skicka e-post. Det tillåter att tredjepartsprogram öppnar e-post i den interna e-postappen, t.ex. bifoga filer till e-post.

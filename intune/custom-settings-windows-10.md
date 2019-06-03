@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 10/24/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44be460ee910818d52179da55151d1bceeb8b306
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e9d07b2d46e5128d96a578e9a000e17c2aca7cec
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565918"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373974"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Använda anpassade inställningar för Windows 10-enheter i Intune
 
@@ -40,7 +39,7 @@ Den här artikeln:
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
@@ -83,7 +82,7 @@ Du hittar en lista med alla konfigurationstjänstleverantörer (CSP) som Windows
 
 Alla inställningar är inte kompatibla med alla versioner av Windows 10. I [referensen till konfigurationstjänstleverantörer](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) står det vilka versioner som stöds för varje CSP.
 
-Observera att Intune inte stöder alla inställningar i [referensen för konfigurationstjänstleverantörer](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Om du vill veta om Intune har stöd för den inställning som du vill använda, kan du öppna artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Add** (Lägg till), **Replace** (Ersätt) och **Get** (Hämta). Om värdet som returneras av den **hämta** åtgärden inte matchar det värde som anges av den **Lägg till** eller **Ersätt** åtgärder och sedan Intune rapporterar ett kompatibilitetsfel.
+Observera att Intune inte stöder alla inställningar i [referensen för konfigurationstjänstleverantörer](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Om du vill veta om Intune har stöd för den inställning som du vill använda, kan du öppna artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Add** (Lägg till), **Replace** (Ersätt) och **Get** (Hämta). Om det värde som returneras av åtgärden **Get** (Hämta) inte matchar det värde som anges av åtgärderna **Add** (Lägg till) eller **Replace** (Ersätt) rapporterar Intune ett efterlevnadsfel.
 
 ## <a name="next-steps"></a>Nästa steg
 

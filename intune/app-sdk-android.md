@@ -7,7 +7,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 965dcfbb711eac1b38977e023d1975f4dc0e8b81
-ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.openlocfilehash: 5808a4b81fcc66d37e78c50cb5bcd2ae7bbe44e2
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58514505"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66049609"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -62,13 +61,13 @@ Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera 
 ## <a name="sdk-integration"></a>SDK-integrering
 
 ### <a name="sample-app"></a>Exempelapp
-Ett exempel på hur du integrerar med Intune App SDK korrekt finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). Det här exemplet används den [Gradle skapa plugin-programmet](#gradle-build-plugin).
+Ett exempel på hur du integrerar korrekt med Intune App SDK finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). I det här exemplet används [plugin-programmet för Gradle-utveckling](#gradle-build-plugin).
 
 ### <a name="referencing-intune-app-libraries"></a>Referera till Intune App-bibliotek
 
 Intune App SDK är ett Android-standardbibliotek utan externa beroenden. **Microsoft.Intune.MAM.SDK.aar** innehåller både de gränssnitt som krävs för att aktivera en appskyddsprincip och den kod som behövs för att interagera med Microsoft Intunes företagsportalappen.
 
-**Microsoft.Intune.MAM.SDK.aar** måste anges som en Android-biblioteksreferens. Gör detta genom att öppna approjektet i Android Studio och gå till **Arkiv > Ny > Ny modul**. Välj **Importera .JAR/.AAR-paket**. Välj sedan Android-arkivpaketet Microsoft.Intune.MAM.SDK.aar för att skapa en modul för vår .AAR. Högerklicka på den modul eller de moduler som innehåller din appkod och gå till **Modulinställningar** > **fliken Beroenden** > **+-ikonen** > **Modulberoende** > Välj den MAM SDK AAR-modul som du precis skapat > **OK**. På så sätt kan du vara säker på att modulen kompileras med MAM SDK när du skapar ditt projekt.
+**Microsoft.Intune.MAM.SDK.aar** måste anges som en Android-biblioteksreferens. Gör detta genom att öppna approjektet i Android Studio och gå till **Arkiv > Ny > Ny modul**. Välj **Importera .JAR/.AAR-paket**. Välj sedan Android-arkivpaketet Microsoft.Intune.MAM.SDK.aar för att skapa en modul för vår .AAR. Högerklicka på den modul eller de moduler som innehåller din appkod och gå till **Modulinställningar** > **fliken Beroenden** >  **+-ikonen** > **Modulberoende** > Välj den MAM SDK AAR-modul som du precis skapat > **OK**. På så sätt kan du vara säker på att modulen kompileras med MAM SDK när du skapar ditt projekt.
 
 Dessutom kan **Microsoft.Intune.MAM.SDK.Support.XXX.jar**-biblioteken innehålla Intune-varianter av motsvarande `android.support.XXX`-bibliotek. De ingår inte i Microsoft.Intune.MAM.SDK.aar eftersom inte alla appar är beroende av stödbiblioteken.
 
@@ -151,11 +150,11 @@ Detta skulle ha följande effekter:
 * `zap.jar` skrivs **inte** om eftersom den inte är ett projekt och inte ingår i `includeExternalLibraries`
 * `com.contoso.foo:zap-artifact:1.0.0` skrivs om eftersom den ingår i `includeExternalLibraries`
 * `com.microsoft.bar:baz:1.0.0` skrivs om eftersom den ingår i `includeExternalLibraries` via ett jokertecken (`com.microsoft.*`).
-* `com.microsoft.qux:foo:2.0` skrivs inte om trots att den matchar jokertecknet samma som föregående objekt eftersom det är uttryckligen exkluderat via ett negation mönster.
+* `com.microsoft.qux:foo:2.0` skrivs inte om trots att den matchar samma jokertecken som föregående objekt eftersom den uttryckligen exkluderas via ett negationsmönster.
 
 #### <a name="usage-of-includeexternallibraries"></a>Användning av includeExternalLibraries
 
-Eftersom plugin-programmet som standard endast fungerar med projektberoenden (som vanligtvis tillhandahålls av funktionen `project()`) måste eventuella beroenden som anges av `fileTree(...)` eller som hämtas från maven eller andra paketkällor (t.ex ”.`com.contoso.bar:baz:1.2.0`”) tillhandahållas till egenskapen `includeExternalLibraries` om MAM-bearbetning av dem krävs enligt de villkor som beskrivs nedan. Jokertecken (”*”) stöds. Ett objekt som börjar med `!` är en negation och kan användas för att undanta bibliotek som annars skulle vara inkluderas med jokertecken.
+Eftersom plugin-programmet som standard endast fungerar med projektberoenden (som vanligtvis tillhandahålls av funktionen `project()`) måste eventuella beroenden som anges av `fileTree(...)` eller som hämtas från maven eller andra paketkällor (t.ex ”.`com.contoso.bar:baz:1.2.0`”) tillhandahållas till egenskapen `includeExternalLibraries` om MAM-bearbetning av dem krävs enligt de villkor som beskrivs nedan. Jokertecken (”*”) stöds. Ett objekt som börjar med `!` är en negation och kan användas för att undanta bibliotek som annars skulle inkluderas av ett jokertecken.
 
 När du anger externa beroenden i artefaktformat rekommenderar vi att du utelämnar versionskomponenten i `includeExternalLibraries`-värdet. Om du tar med versionen måste det vara en exakt version. Det går inte att ange dynamiska versioner (t.ex. `1.+`).
 
@@ -174,7 +173,7 @@ Om du svarar ”Ja” på båda dessa frågor måste du ta med biblioteket i `in
 | Du inkluderar ett bibliotek som innehåller visningsklasser härledda från `TextView` och använder eller härleder dessa klasser ytterligare i din app | Ja |
 
 #### <a name="reporting"></a>Rapportering
-Skapa plugin-programmet kan generera en HTML-rapport över de ändringar som görs. Ange om du vill begära generering av den här rapporten `report = true` i den `intunemam` configuration block. Om genereras, rapporten skrivs till `outputs/logs` i build-katalogen.
+Plugin-programmet för utveckling kan generera en HTML-rapport över de ändringar som det gör. Om du vill begära generering av den här rapporten anger du `report = true` i konfigurationsblocket `intunemam`. Om rapporten genereras skrivs den till `outputs/logs` i utvecklingskatalogen.
 
 ```groovy
 intunemam {
@@ -210,7 +209,7 @@ Verktyget förväntar sig följande parametrar.
 Alla parametrar är obligatoriska förutom för `--excludeClasses` som är valfritt.
 
 > [!NOTE] 
-> På Unix-liknande system är semikolon kommandot avgränsare. För att undvika shell från uppdelningen av kommandon kan du se till att undvika varje semikolonseparerade med '\' eller ange parametern fullständig inom citattecken.
+> På Unix-liknande system är semikolon en kommandoavgränsare. För att undvika att gränssnittet delar kommandon bör du undanta varje semikolon med \' eller omsluta hela parametern med citattecken.
 
 #### <a name="example-command-line-tool-invocation"></a>Exempelanrop med kommandoradsverktyget
 
@@ -343,7 +342,7 @@ För vissa systemtjänstklasser är det nödvändigt att anropa en statisk metod
 | android.view.View | MAMViewManagement |
 | android.view.DragEvent | MAMDragEventManagement |
 
-Vissa klasser har i sina metoder omslutna, t.ex. `ClipboardManager`, `ContentProviderClient`, `ContentResolver`, och `PackageManager` medan andra klasser har bara en eller två metoder som har omslutits kan t.ex. `DownloadManager`, `PrintManager`, `PrintHelper`, `View`, och `DragEvent`. Kontakta API: er som exponeras av de motsvarande MAM-klasserna för exakta-metoden om du inte använder BuildPlugin. 
+I vissa klasser är de flesta metoder omslutna, t.ex. `ClipboardManager`, `ContentProviderClient`, `ContentResolver` och `PackageManager`, medan det i andra klasser bara finns en eller två metoder som är omslutna, t.ex. `DownloadManager`, `PrintManager`, `PrintHelper`, `View` och `DragEvent`. Läs de API:er som görs tillgängliga av de MAM-motsvarande klasserna för att se de exakta metoderna om du inte använder plugin-programmet för utveckling. 
 
 ### <a name="manifest-replacements"></a>Manifestersättningar
 Det kan vara nödvändigt att utföra några av ovanstående klassersättningar i manifestet och i Java-koden. Observera särskilt:
@@ -552,7 +551,7 @@ Parametern `service` måste ha ett av följande `SaveLocation`-värden:
 - `SaveLocation.LOCAL`
 - `SaveLocation.OTHER`
 
-Den `username` bör UPN/användarnamn/e-postmeddelandet associeras med Molntjänsten som sparas på (*inte* nödvändigtvis samma som den användare som äger det dokument som sparas). Använd null om en mappning mellan AAD UPN och cloud service användarnamnet finns inte eller användarnamnet känns inte.
+`username` bör vara det UPN/användarnamn/e-postmeddelande som associeras med den molntjänst som sparas till (*inte* nödvändigtvis samma som den användare som äger det dokument som sparas). Använd null om en mappning mellan AAD UPN och molntjänstens användarnamn inte finns eller om användarnamnet inte är känt.
 
 Den tidigare metoden att bestämma om en användarprincip tillät dem att spara data till olika platser, var `getIsSaveToPersonalAllowed()` inom samma **AppPolicy**-klass. Den här funktionen är nu **inaktuell** och bör inte användas. Följande anrop motsvarar `getIsSaveToPersonalAllowed()`:
 
@@ -623,29 +622,29 @@ Följande meddelanden skickas till appen och några av dem kan kräva appens med
 
 * **WIPE_USER_AUXILIARY_DATA**: Appar kan registreras för det här meddelandet om man vill att Intune App SDK ska utföra standardbeteendet för selektiv rensning, men dessutom vill ta bort vissa ytterligare data när rensningen utförs. Det här meddelandet skickas inte till appar med en enda identitet – det skickas endast till appar med flera identiteter.
 
-* **REFRESH_POLICY**: Det här meddelandet skickas i en `MAMUserNotification`. När det här meddelandet tas emot några beslut för Intune-princip som cachelagras av din app ogiltigförklaras och uppdateras. Om din app inte lagrar några princip antaganden, behöver det inte att registrera för det här meddelandet.
+* **REFRESH_POLICY**: Det här meddelandet skickas i en `MAMUserNotification`. När det här meddelandet tas emot måste eventuella Intune-principbeslut som cachelagras av din app ogiltigförklaras och uppdateras. Om din app inte lagrar några principantaganden behöver den inte registrera för det här meddelandet.
 
-* **REFRESH_APP_CONFIG**: det här meddelandet skickas en `MAMUserNotification`. När det här meddelandet tas emot, alla cachelagrade data för programkonfiguration ogiltigförklaras och uppdateras.
+* **REFRESH_APP_CONFIG**: Det här meddelandet skickas i en `MAMUserNotification`. När det här meddelandet tas emot måste cachelagrade programkonfigurationsdata ogiltigförklaras och uppdateras.
 
 * **MANAGEMENT_REMOVED**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen att den håller på att blir ohanterad. När den är ohanterad kommer den inte längre kunna läsa krypterade filer, läsa data som krypterats med MAMDataProtectionManager, interagera med krypterade urklipp eller på annat sätt delta i ekosystemet för hanterade appar. Se ytterligare information nedan.
 
-* **MAM_ENROLLMENT_RESULT**: det här meddelandet skickas en `MAMEnrollmentNotification` att meddela app som en APP-vi registreringen har slutförts och att ange status för det försöket.
+* **MAM_ENROLLMENT_RESULT**: Det här meddelandet skickas i en `MAMEnrollmentNotification` för att meddela appen att en APP-WE-registrering har slutförts samt för att ange statusen för det försöket.
 
-* **COMPLIANCE_STATUS**: det här meddelandet skickas en `MAMComplianceNotification` att meddela app-på resultatet av ett försök för reparation av efterlevnad.
+* **COMPLIANCE_STATUS**: Det här meddelandet skickas i en `MAMComplianceNotification` för att meddela appen om resultatet av ett försök till efterlevnadsåtgärd.
 
 > [!NOTE]
 > Observera att en app aldrig ska registreras för både `WIPE_USER_DATA`- och `WIPE_USER_AUXILIARY_DATA`-meddelanden.
 
 ### <a name="managementremoved"></a>MANAGEMENT_REMOVED
 
-Den `MANAGEMENT_REMOVED` meddelandet indikerar att en tidigare principhanterade användare kommer inte längre att hanteras av Intunes MAM-princip. Detta kräver inte rensa användardata eller logga ut användaren (om en rensning krävdes en `WIPE_USER_DATA` meddelande skulle skickas). Många appar kanske inte behöver hantera det här meddelandet, men appar som använder `MAMDataProtectionManager` bör [Notera särskilt för det här meddelandet](#data-protection).
+`MANAGEMENT_REMOVED`-meddelandet indikerar att en tidigare principhanterad användare inte längre kommer att hanteras av Intunes MAM-princip. Detta kräver inte att användardata rensas eller att användaren loggas ut (om en rensning skulle krävas så skulle ett `WIPE_USER_DATA`-meddelande skickas). Många appar behöver kanske inte hantera det här meddelandet alls, men appar som använder `MAMDataProtectionManager` bör [särskilt beakta det här meddelandet](#data-protection).
 
-När MAM anropar appens `MANAGEMENT_REMOVED` mottagare, kommer följande vara sant:
-* MAM har redan dekryptera tidigare krypterade filer (men inte skyddade data buffertar) som hör till appen. Filer på offentliga platser på sdcard som inte direkt tillhör appen (t.ex. dokument eller ladda ned mappar) inte dekrypteras.
-* Nya filer eller skyddade databuffertarna som skapats av mottagar-metoden (eller någon annan kod som körs när mottagaren har börjat) krypteras inte.
-* Appen har fortfarande åtkomst till krypteringsnycklar, så att åtgärder som till exempel dekryptering databuffertarna lyckas.
+När MAM anropar appens `MANAGEMENT_REMOVED`-mottagare kommer följande att vara sant:
+* MAM har redan dekrypterat tidigare krypterade filer (men inte skyddat databuffertar) som hör till appen. Filer på offentliga platser på det SD-kort som inte hör direkt till appen (t.ex. mapparna Dokument eller Hämtade filer) dekrypteras inte.
+* Nya filer eller skyddade databuffertar som skapas av mottagarmetoden (eller någon annan kod som körs efter att mottagaren börjar) krypteras inte.
+* Appen har fortfarande åtkomst till krypteringsnycklar, så åtgärder såsom dekryptering av databuffertar lyckas.
 
-När mottagare i din app returnerar den inte längre har åtkomst till krypteringsnycklarna.
+När appens mottagare returneras har den inte längre åtkomst till krypteringsnycklar.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurera Azure Active Directory Authentication Library (ADAL)
 
@@ -676,23 +675,23 @@ Om du vill konfigurera din app och aktivera lämplig autentisering, lägger du t
     > [!NOTE]
     > Ange inte det här fältet om ditt program har koppling till nationella moln.
 
-* **ClientID** är AAD-ClientID (även kallat program-ID) som ska användas. Du bör använda din egen apps ClientID, om det är registrerat i Azure AD. Om detta värde saknas används ett Intune-standardvärde.
+* **ClientID** är det AAD-ClientID (även kallat program-ID) som ska användas. Du bör använda din egen apps ClientID, om det är registrerat i Azure AD. Om detta värde saknas används ett Intune-standardvärde.
 
 * **NonBrokerRedirectURI** är AAD:ns omdirigerings-URI som används när det inte finns någon asynkron meddelandekö. Om inget anges används standardvärdet för `urn:ietf:wg:oauth:2.0:oob`. Standardinställningen är lämplig för de flesta appar.
 
-    * NonBrokerRedirectURI används endast när SkipBroker är ”true”.
+    * NonBrokerRedirectURI används endast när SkipBroker är ”sant”.
 
-* **SkipBroker** används för att åsidosätta standardbeteendet för deltagande i ADAL SSO. SkipBroker ska bara anges för appar som anger en ClientID **och** har inte stöd för asynkron autentisering/enhetsomfattande enkel inloggning. I det här fallet det ska ställas in till ”true”. De flesta appar bör inte ange parametern SkipBroker.
+* **SkipBroker** används för att åsidosätta standardbeteendet för ADAL SSO-deltagande. SkipBroker bör endast anges för appar som specificerar ett ClientID **och** inte har stöd för asynkron autentisering/enhetsomfattande enkel inloggning. I det här fallet bör det ställas in på ”sant”. De flesta appar bör inte ange parametern SkipBroker.
 
-    * En ClientID **måste** anges i manifestet kan ange ett värde för SkipBroker.
+    * Ett ClientID **måste** anges i manifestet för att ange ett SkipBroker-värde.
 
-    * När du anger en ClientID är standardvärdet ”false”.
+    * När ett ClientID anges är standardvärdet ”falskt”.
 
-    * När SkipBroker är ”true”, används NonBrokerRedirectURI. Appar som integrerar inte ADAL (och därför har inga ClientID) också som standard ”true”.
+    * När SkipBroker är ”sant” används NonBrokerRedirectURI. Appar som inte integrerar ADAL (och därför inte har något ClientID) får också ”sant” som standard.
 
 ### <a name="common-adal-configurations"></a>Vanliga ADAL-konfigurationer
 
-Nedan visas några vanliga sätt att konfigurera en app med ADAL. Hitta din appkonfiguration och ange ADAL-metadataparametrarna (förklaras ovan) till de värden som krävs. Om du vill kan du i samtliga fall ange auktoriteten för icke-förvalda miljöer. Om den inte anges används den offentliga produktionen AAD-utfärdare.
+Nedan visas några vanliga sätt att konfigurera en app med ADAL. Hitta din appkonfiguration och ange ADAL-metadataparametrarna (förklaras ovan) till de värden som krävs. Om du vill kan du i samtliga fall ange auktoriteten för icke-förvalda miljöer. Om den inte anges används den offentliga AAD-produktionsauktoriteten.
 
 #### <a name="1-app-does-not-integrate-adal"></a>1. Appen integrerar inte ADAL
 ADAL-metadata **får inte** finnas i manifestet.
@@ -703,9 +702,9 @@ ADAL-metadata **får inte** finnas i manifestet.
 |--|--|
 | ClientID | Appens ClientID (genereras av Azure AD när appen registreras) |
 
-Utfärdaren kan anges om det behövs.
+Auktoriteten kan anges om det behövs.
 
-Du måste registrera din app med Azure AD och ge din appåtkomst till tjänsten app protection policy:
+Du måste registrera din app med Azure AD och ge appen åtkomst till appens tjänst för skyddsprincip:
 * Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 * Se till att stegen som ger din Android appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”. 
 
@@ -830,7 +829,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 2. `acquireToken()`-metoden ska hämta åtkomsttoken för begärd resurs-ID för den angivna användaren. Om det inte går att hämta begärd token returnerar den null.
 
     > [!NOTE]
-    > Se till att din app använder den `resourceId` och `aadId` parametrar skickades till `acquireToken()` så att rätt token hämtas.
+    > Se till att din app använder de `resourceId`- och `aadId`-parametrar som skickas till `acquireToken()` så att rätt token hämtas.
 
     ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
@@ -859,7 +858,7 @@ Result getRegisteredAccountStatus(String upn);
 
 1. Om du vill registrera ett hanteringskonto ska appen anropa `registerAccountForMAM()`. Ett användarkonto identifieras av både sitt UPN och sitt användar-ID för AAD. Klient-ID krävs dessutom för att associera registreringsdata med användarens AAD-klient. Användarens behörighet kan även anges för att tillåta registrering mot specifika nationella moln. Mer information finns i avsnittet [Registrering av nationella moln](#sovereign-cloud-registration).  SDK kan försöka registrera appen för angiven användare i MAM-tjänsten. Om registreringen misslyckas görs nya försök regelbundet tills kontot är avregistrerat. Återförsöksperioden är vanligtvis 12–24 timmar. SDK:n innehåller statusen för registreringsförsöken via meddelanden asynkront.
 
-2. Eftersom AAD-autentisering krävs, är den bästa tiden att registrera användarkontot när användaren har loggat in i appen och har autentiserats med hjälp av ADAL. Användarens AAD-ID och klient-ID returneras från ADAL-autentiseringens anrop som en del av den [ `AuthenticationResult` ](https://github.com/AzureAD/azure-activedirectory-library-for-android) objekt.
+2. Eftersom AAD-autentisering krävs, är den bästa tiden att registrera användarkontot när användaren har loggat in i appen och har autentiserats med hjälp av ADAL. Användarens AAD-ID och klientorganisations-ID returneras från ADAL-autentiseringsanropet som en del av [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android)-objektet.
     * Klientens ID kommer från `AuthenticationResult.getTenantID()`-metoden.
     * Information om användaren finns i ett underobjekt av typen `UserInfo` som kommer från `AuthenticationResult.getUserInfo()`, och AAD-användarens ID hämtas från detta objekt genom att anropa `UserInfo.getUserId()`.
 
@@ -886,7 +885,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 ```
 
 > [!NOTE]
-> Anger inte den `com.microsoft.intune.mam.aad.Authority` metadata-objektet i AndroidManifest.xml.
+> Ange inte metadataobjektet `com.microsoft.intune.mam.aad.Authority` i AndroidManifest.xml.
 
 > [!NOTE]
 > Kontrollera att auktoriteten har angetts korrekt i `MAMServiceAuthenticationCallback::acquireToken()`-metoden.
@@ -901,7 +900,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 * När appen anropar `registerAccountForMAM()` kan den få en motringning till sitt `MAMServiceAuthenticationCallback`-gränssnitt strax därefter i en annan tråd. Vi rekommenderar att appen hämtar sin egen token från ADAL innan kontot registreras för att påskynda hämtningen av den begärda token. Om appen returnerar en giltig token från motringningen fortsätter registreringen, och appen får slutresultatet via ett meddelande.
 
-* Om programmet inte returnerar en giltig AAD-token, blir slutresultatet från registreringsförsöket `AUTHENTICATION_NEEDED`. Om appen tar emot resultatet via ett meddelande, vi rekommenderar starkt att påskynda registreringen genom att skaffa en token för användaren och resursen tidigare begärs från `acquireToken()` och anropa den `updateToken()` metoden för att starta den registreringen igen.
+* Om programmet inte returnerar en giltig AAD-token, blir slutresultatet från registreringsförsöket `AUTHENTICATION_NEEDED`. Om appen tar emot resultatet via ett meddelande rekommenderas det starkt att registreringsprocessen påskyndas genom att token för användaren och den resurs som tidigare begärts från `acquireToken()` hämtas och metoden `updateToken()` anropas så att registreringsprocessen initieras igen.
 
 * Appens registrerade `MAMServiceAuthenticationCallback` anropas också för att hämta en token för uppdateringen av regelbundna incheckningar till appskyddsprincipen. Om appen inte kan erbjuda en token vid begäran, kommer den inte att få något meddelande. Den bör dock försöka att hämta en token och anropa `updateToken()` vid nästa tillfälle för att påskynda incheckningen. Om det inte finns någon token, anropas motringningen fortfarande vid nästa incheckningsförsök.
 
@@ -942,7 +941,7 @@ Om du inte uttryckligen ärver `MAMActivity` (eftersom utvecklingsverktyget änd
 
 ### <a name="notifications"></a>Meddelanden
 
-Om appen registreras för meddelanden av typen **MAM_ENROLLMENT_RESULT**, ett `MAMEnrollmentNotification` skickas för att informera appen om att registreringsbegärandet har slutförts. `MAMEnrollmentNotification` tas emot via `MAMNotificationReceiver`-gränssnittet enligt beskrivningen i avsnittet [Registrera för meddelanden från SDK:n](#register-for-notifications-from-the-sdk).
+Om appen registreras för meddelanden av typen **MAM_ENROLLMENT_RESULT** skickas ett `MAMEnrollmentNotification` för att informera appen om att registreringsbegärandet har slutförts. `MAMEnrollmentNotification` tas emot via `MAMNotificationReceiver`-gränssnittet enligt beskrivningen i avsnittet [Registrera för meddelanden från SDK:n](#register-for-notifications-from-the-sdk).
 
 ```java
 public interface MAMEnrollmentNotification extends MAMUserNotification {
@@ -952,24 +951,24 @@ public interface MAMEnrollmentNotification extends MAMUserNotification {
 
 `getEnrollmentResult()`-metoden returnerar resultatet av registreringsbegäran.  Eftersom `MAMEnrollmentNotification` utökar `MAMUserNotification`, är identiteten för den användare som registreringen gjordes för också tillgänglig. Appen måste implementera `MAMNotificationReceiver`-gränssnittet för att kunna ta emot dessa meddelanden, enligt beskrivningen i [Registrera för meddelanden från SDK:n](#register-for-notifications-from-the-sdk).
 
-Det registrerade användarkontots status kan ändras när ett registreringsmeddelande tas emot, men det är inte alltid som den ändras (t.ex. om meddelandet `AUTHORIZATION_NEEDED` har tagits emot efter ett mer informativt resultat som `WRONG_USER` kommer det mer informativa resultatet att behållas som kontots status).  När kontot har registrerats bör statusen förblir `ENROLLMENT_SUCCEEDED` tills kontot avregistreras eller rensas.
+Det registrerade användarkontots status kan ändras när ett registreringsmeddelande tas emot, men det är inte alltid som den ändras (t.ex. om meddelandet `AUTHORIZATION_NEEDED` har tagits emot efter ett mer informativt resultat som `WRONG_USER` kommer det mer informativa resultatet att behållas som kontots status).  När kontot har registrerats förblir statusen `ENROLLMENT_SUCCEEDED` tills kontot avregistreras eller rensas.
 
-Det registrerade användarkontots status kan ändras när ett registreringsmeddelande tas emot, men det är inte alltid som den ändras (t.ex. om meddelandet `AUTHORIZATION_NEEDED` har tagits emot efter ett mer informativt resultat som `WRONG_USER` kommer det mer informativa resultatet att behållas som kontots status).  När kontot har registrerats bör statusen förblir `ENROLLMENT_SUCCEEDED` tills kontot avregistreras eller rensas.
+Det registrerade användarkontots status kan ändras när ett registreringsmeddelande tas emot, men det är inte alltid som den ändras (t.ex. om meddelandet `AUTHORIZATION_NEEDED` har tagits emot efter ett mer informativt resultat som `WRONG_USER` kommer det mer informativa resultatet att behållas som kontots status).  När kontot har registrerats förblir statusen `ENROLLMENT_SUCCEEDED` tills kontot avregistreras eller rensas.
 
-## <a name="app-ca-with-policy-assurance"></a>APP-CA med principen Assurance
+## <a name="app-ca-with-policy-assurance"></a>APP CA med principbekräftelse
 
 ### <a name="overview"></a>Översikt
-Med APP CA (villkorlig åtkomst) med principen Assurance conditionalized åtkomst till resurser på användning av Intunes Appskyddsprinciper.  AAD framtvingar detta genom att kräva att appen registreras och hanteras av APPEN innan du beviljar en token för att komma åt en APP-CA med principen Assurance skyddade resursen.  Appen krävs för att använda ADAL-hanterarens för tokenförvärv och installationen är densamma som beskrivs ovan i [villkorlig åtkomst](#conditional-access)
+Med APP CA (villkorsstyrd åtkomst) med principbekräftelse villkoras åtkomst till resurser av tillämpningen av Intune-appskyddsprinciper.  AAD framtvingar detta genom att kräva att appen registreras och hanteras av APP innan en token ges för åtkomst till en APP CA med en resurs som skyddas av principbekräftelse.  Appen måste använda ADAL-hanteraren för tokenförvärv, och konfigurationen är densamma som ovanstående beskrivning i [Villkorsstyrd åtkomst](#conditional-access)
 
-### <a name="adal-changes"></a>ADAL ändringar
-ADAL-biblioteket har en ny felkod som informerar den app som det inte gick att hämta en token orsakades av bristande överensstämmelse med apphantering.  Om appen tar emot den här felkoden, måste det anropa SDK om du vill försöka åtgärda efterlevnad genom att registrera appen och tillämpa principen. Ett undantag som tas emot av den `onError()` -metoden för ADAL `AuthenticationCallback`, och har felkoden `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED`.  I det här fallet undantaget kan typkonverteras till en `IntuneAppProtectionPolicyRequiredException`, vilket ytterligare parametrar kan extraheras från för användning i åtgärda efterlevnad (se kodexemplet nedan). När reparationen har genomförts, kan appen igen att försöka tokenförvärv via ADAL.
+### <a name="adal-changes"></a>ADAL-ändringar
+ADAL-biblioteket har en ny felkod som informerar appen om att misslyckandet med att hämta en token orsakades av bristande efterlevnad med APP-hantering.  Om appen får den här felkoden behöver den anropa SDK:n för att försöka åtgärda efterlevnad genom att registrera appen och tillämpa en princip. Ett undantag tas emot av metoden `onError()` i `AuthenticationCallback` för ADAL och har felkoden `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED`.  I det här fallet kan undantaget typkonverteras till ett `IntuneAppProtectionPolicyRequiredException`, varifrån ytterligare parametrar kan extraheras för användning vid åtgärd av efterlevnad (se kodexemplet nedan). När åtgärden har genomförts kan appen på nytt försöka att hämta token via ADAL.
 
 > [!NOTE]
-> Den här nya felkoden och andra stöd för APP-CA med principen Assurance kräver version 1.15.0 (eller högre) av ADAL-biblioteket.
+> Den här nya felkoden och annat stöd för APP CA med principbekräftelse kräver version 1.15.0 (eller senare) av ADAL-biblioteket.
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
-Den `MAMComplianceManager` gränssnittet används när fel som krävs för principen tas emot från ADAL.  Den innehåller den `remediateCompliance()` metod som ska användas för att försöka att placera appen i ett kompatibelt tillstånd. En referens till `MAMComplianceManager` kan hämtas på följande sätt:
+`MAMComplianceManager`-gränssnittet används när det fel som krävs av principen tas emot från ADAL.  Det innehåller den `remediateCompliance()`-metod som bör användas för att försöka placera appen i ett efterlevande tillstånd. En referens till `MAMComplianceManager` kan hämtas på följande sätt:
 
 ```java
 MAMComplianceManager mgr = MAMComponents.get(MAMComplianceManager.class);
@@ -987,14 +986,14 @@ public interface MAMComplianceManager {
 }
 ```
 
-Den `remediateCompliance()` metoden anropas om du vill placera appen under hantering för att uppfylla villkoren för AAD för att bevilja begärd token.  De första fyra parametrarna kan extraheras från undantag som tagits emot av ADAL `AuthenticationCallback.onError()` metod (se kodexemplet nedan).  Den sista parametern är ett booleskt värde som styr om en UX visas under försöket efterlevnad.  Det här är ett enkelt blockerar förlopp format gränssnitt tillhandahålls som standard för appar som inte har ett behov av att visa anpassade UX under den här åtgärden.  Den blockerar endast medan regelefterlevnad reparationen håller på att skapas och visas inte slutresultatet.  Appen bör registrera en meddelande mottagare för att hantera lyckats eller misslyckats i efterlevnad reparation försöket (se nedan).
+Metoden `remediateCompliance()` anropas i ett försök att placera appen under hantering för att uppfylla kraven för att ADD ska bevilja den begärda token.  De första fyra parametrarna kan extraheras från det undantag som tas emot av metoden `AuthenticationCallback.onError()` i ADAL (se kodexemplet nedan).  Den sista parametern är ett booleskt värde som kontrollerar huruvida ett UX visas under efterlevnadsförsöket.  Det här är ett enkelt gränssnitt för förloppsblockering som tillhandahålls som standard för appar som inte behöver visa ett anpassat UX under den här åtgärden.  Det blockerar endast medan efterlevnadsåtgärden pågår och visar inte slutresultatet.  Appen bör registrera en meddelandemottagare för att hantera det lyckade eller misslyckade försöket till efterlevnadsåtgärd (se nedan).
 
-Den `remediateCompliance()` metod kan göra en MAM-registrering som en del av upprätta efterlevnad.  Appen kan ta emot ett registreringsmeddelande om den har registrerat en meddelande mottagare för registrering meddelanden.  Appens registrerade `MAMServiceAuthenticationCallback` har dess `acquireToken()` metoden anropas för att hämta en token för MAM-registrering. `acquireToken()` anropas innan appen har hämtar sin egen token så att alla bokföring eller konto skapande-uppgifter som appen gör efter en lyckad tokenförvärv inte kanske har ännu har gjorts.  Återanropet som måste kunna få en token i det här fallet.  Om du inte returnera en token från `acquireToken()`, regelefterlevnad reparationen försöket misslyckas.  Om du anropar `updateToken()` senare med en giltig token för den begärda resursen regelefterlevnad reparationen kommer att göras direkt med den givna token.
+Metoden `remediateCompliance()` kan utföra en MAM-registrering som en del av att upprätta efterlevnad.  Appen kan få ett registreringsmeddelande om den har registrerat en meddelandemottagare för registreringsmeddelanden.  Appens registrerade `MAMServiceAuthenticationCallback` får sin metod `acquireToken()` anropad för att hämta en token för MAM-registreringen. `acquireToken()` anropas innan appen har hämtat sin egen token. Därför kan det hända att eventuella uppgifter för bokföring eller kontoskapande som appen utför efter ett lyckat tokenförvärv inte är klara ännu.  Återanropet måste kunna hämta en token i det här fallet.  Om du inte kan returnera en token från `acquireToken()` misslyckas försöket till efterlevnadsåtgärd.  Om du anropar `updateToken()` senare med en giltig token för den begärda resursen görs ett nytt försök av efterlevnadsåtgärden omedelbart med den skickade token.
 
 > [!NOTE]
-> Tyst tokenförvärv kan fortfarande möjligt i `acquireToken()` eftersom användaren kommer har redan tagits guidad för att installera den asynkrona meddelandekön och registrera enheten innan `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED` felmeddelandet.  Detta resulterar i den asynkrona meddelandekön att ha en giltig uppdateringstoken i sin cache, vilket gör att tyst acqisition för den begärda token ska lyckas.
+> Tyst tokenförvärv är fortfarande möjligt i `acquireToken()` eftersom användaren redan kommer att ha vägletts att installera hanteraren och registrera enheten innan `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED`-felet tas emot.  Detta resulterar i att hanteraren har en giltig uppdateringstoken i sin cache, vilket möjliggör att tyst förvärv av den begärda token kan lyckas.
 
-Här följer ett exempel på att ta emot felet krävs för principen i den `AuthenticationCallback.onError()` metoden och anropar den `MAMComplianceManager` att hantera felet.
+Här följer ett exempel på mottagande av det fel som krävs av principen i metoden `AuthenticationCallback.onError()` och anrop till `MAMComplianceManager` för att hantera felet.
 
 ```java
 public void onError(@Nullable Exception exc) {
@@ -1015,9 +1014,9 @@ public void onError(@Nullable Exception exc) {
 }
 ```
 
-### <a name="status-notifications"></a>Statusmeddelandena
+### <a name="status-notifications"></a>Statusmeddelanden
 
-Om appen registreras för meddelanden av typen **COMPLIANCE_STATUS**, ett `MAMComplianceNotification` skickas för att informera appen den slutgiltiga statusen för regelefterlevnad reparationen försöket. `MAMComplianceNotification` tas emot via `MAMNotificationReceiver`-gränssnittet enligt beskrivningen i avsnittet [Registrera för meddelanden från SDK:n](#register-for-notifications-from-the-sdk).
+Om appen registreras för meddelanden av typen **COMPLIANCE_STATUS** skickas ett `MAMComplianceNotification` för att informera appen om den slutgiltiga statusen för försöket till efterlevnadsåtgärd. `MAMComplianceNotification` tas emot via `MAMNotificationReceiver`-gränssnittet enligt beskrivningen i avsnittet [Registrera för meddelanden från SDK:n](#register-for-notifications-from-the-sdk).
 
 ```java
 public interface MAMComplianceNotification extends MAMUserNotification {
@@ -1027,24 +1026,24 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 }
 ```
 
-Den `getComplianceStatus()` metoden returnerar resultatet av efterlevnad reparation försöket som ett värde från den `MAMCAComplianceStatus` enum.
+Metoden `getComplianceStatus()` returnerar resultatet av försöket till efterlevnadsåtgärd som ett värde från `MAMCAComplianceStatus`-uppräkningen.
 
 |Statuskod | Förklaring |
 | -- | -- |
-| UNKNOWN | Statusen är okänd. Detta kan tyda på ett oväntat felorsak. Mer information finns i Företagsportalens loggar. |
-| COMPLIANT | Efterlevnad där reparationen lyckades och appen är nu kompatibel med principen. ADAL tokenförvärv ska göras. |
-| NOT_COMPLIANT | Det gick inte att korrigera godkännande.  Appen är inte kompatibel och ADAL tokenförvärv ska inte göras förrän felet har åtgärdats.  Ytterligare felinformation skickas med MAMComplianceNotification. |
-| SERVICE_FAILURE | Ett fel uppstod vid försök att hämta data för kompatibilitetsinställningar från Intune Service. Mer information finns i Företagsportalens loggar. |
-| NETWORK_FAILURE | Det uppstod ett fel vid anslutning till Intune-Service. Appen bör försöka dess tokenförvärv igen när nätverksanslutningen har återställts. |
-| CLIENT_ERROR | Försök att åtgärda efterlevnad misslyckades av någon anledning som är relaterade till klienten.  Till exempel ingen användare med token eller fel. Ytterligare felinformation skickas med MAMComplianceNotification. |
-| PENDING | Försöket att korrigera godkännande misslyckades eftersom Statussvaret hade tagits emot från tjänsten när tidsgränsen har överskridits. Appen bör försöka dess tokenförvärv igen senare. |
-| COMPANY_PORTAL_REQUIRED | Företagsportalen måste installeras på enheten för regelefterlevnad reparationen ska lyckas.  Om Företagsportalen är redan installerad på enheten, måste appen startas.  I det här fallet visas en dialogruta där du uppmanas användaren att starta om appen. |
+| UNKNOWN | Statusen är okänd. Detta kan tyda på en oväntad felorsak. Mer information kan finnas i företagsportalens loggar. |
+| COMPLIANT | Efterlevnadsåtgärden lyckades, och appen efterlever nu principen. ADAL-tokenförvärvet bör försökas igen. |
+| NOT_COMPLIANT | Försöket till efterlevnadsåtgärd misslyckades.  Appen efterlever inte, och ADAL-tokenförvärvet bör inte försökas på nytt förrän feltillståndet har korrigerats.  Ytterligare felinformation skickas med MAMComplianceNotification. |
+| SERVICE_FAILURE | Ett fel uppstod vid försök att hämta efterlevnadsdata från Intune-tjänsten. Mer information kan finnas i företagsportalens loggar. |
+| NETWORK_FAILURE | Det uppstod ett fel vid anslutning till Intune-tjänsten. Appen bör försöka sitt tokenförvärv igen när nätverksanslutningen har återställts. |
+| CLIENT_ERROR | Försöket till efterlevnadsåtgärd misslyckades av någon anledning som är relaterad till klienten.  Det kan till exempel handla om saknad token eller fel användare. Ytterligare felinformation skickas med MAMComplianceNotification. |
+| PENDING | Försöket till efterlevnadsåtgärd misslyckades eftersom statussvaret inte ännu hade tagits emot från tjänsten när tidsgränsen nåddes. Appen bör försöka sitt tokenförvärv igen senare. |
+| COMPANY_PORTAL_REQUIRED | Företagsportalen måste installeras på enheten för att efterlevnadsåtgärden ska lyckas.  Om företagsportalen redan är installerad på enheten behöver appen startas om.  I det här fallet visas en dialogruta där användaren uppmanas att starta om appen. |
 
-Om efterlevnadsstatus är `MAMCAComplianceStatus.COMPLIANT`, appen ska initiera dess ursprungliga tokenförvärv (för en egen resurs). Om efterlevnad reparation försöket misslyckades, den `getComplianceErrorTitle()` och `getComplianceErrorMessage()` metoder returnerar lokaliserade strängar som appen kan visa för användaren om de väljer.  De flesta fall fel inte kan avhjälpas med appen, så för vanliga fall kan det vara bäst att misslyckas har skapats eller logga in och Tillåt användaren att försök igen senare.  Om ett fel är beständiga kan MAM-loggar hjälper ta reda på orsaken.  Användaren kan skicka loggar med hjälp av anvisningarna hitta [här](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android "e-posta loggar till företagets support").
+Om efterlevnadsstatusen är `MAMCAComplianceStatus.COMPLIANT` bör appen återinitiera sitt ursprungliga tokenförvärv (för dess egen resurs). Om försöket till efterlevnadsåtgärd misslyckades returnerar metoderna `getComplianceErrorTitle()` och `getComplianceErrorMessage()` lokaliserade strängar som appen kan visa för slutanvändaren om den väljer att göra det.  De flesta fall av fel kan inte åtgärdas av appen. För det allmänna fallet kan det därför vara bäst att misslyckas med kontoskapandet och låt användaren försöka igen senare.  Om ett fel är beständigt kan MAM-loggarna vara till hjälp för att ta reda på orsaken.  Slutanvändaren kan skicka loggarna med hjälp av de anvisningar som finns [här](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android "Skicka loggar till företagets support via e-post").
 
 Eftersom `MAMComplianceNotification` utökar `MAMUserNotification` är identiteten för den användare som åtgärden försöktes för också tillgänglig.
 
-Här är ett exempel på registrera en mottagare som använder en anonym klass för att implementera MAMNotificationReceiver-gränssnittet:
+Här är ett exempel på registrering av en mottagare med hjälp av en anonym klass för att implementera MAMNotificationReceiver-gränssnittet:
 
 ```java
 final MAMNotificationReceiverRegistry notificationRegistry = MAMComponents.get(MAMNotificationReceiverRegistry.class);
@@ -1067,21 +1066,21 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 ```
 
 > [!NOTE]
-> Meddelande-mottagaren måste registreras innan du anropar `remediateCompliance()` att undvika ett konkurrenstillstånd som kan leda till meddelandet som saknas.
+> Meddelandemottagaren måste registreras innan anrop sker till `remediateCompliance()` för att undvika ett konkurrenstillstånd som kan resultera i att meddelandet förbises.
 
 ### <a name="implementation-notes"></a>Implementeringsanteckningar
 
 > [!NOTE]
-> Appens `MAMServiceAuthenticationCallback.acquireToken()` metoden måste klara *SANT* för den nya `forceRefresh` flaggan till `acquireTokenSilentSync()` du tvingar fram en uppdatering från den asynkrona meddelandekön.  Detta är att undvika ett cachelagring problem med token i ADAL som kan påverka token för MAM-tjänsten. I allmänhet är ser det här ut:
+> Appens `MAMServiceAuthenticationCallback.acquireToken()`-metod måste skicka *sant* för den nya `forceRefresh`-flaggan till `acquireTokenSilentSync()` för att framtvinga en uppdatering från hanteraren.  Detta görs för att undvika ett cachelagringsproblem med token i ADAL som kan påverka MAM-tjänsttoken. I allmänhet ser det ut så här:
 ```java
 AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ true);
 ```
 
 > [!NOTE]
-> Om du vill visa en anpassad blockerar UX under reparationen försöket överför du *FALSKT* för parametern showUX till `remediateCompliance()`. Du måste se till att du visar dina UX och registrera avlyssnaren meddelandet först anropa innan `remediateCompliance()`.  Det förhindrar att ett konkurrenstillstånd där meddelandet kan missas om `remediateCompliance()` misslyckas snabbt.  Till exempel den `onCreate()` eller `onMAMCreate()` -metoden för en underklass för aktiviteten är det bästa stället att registrera meddelande-lyssnare och sedan anropa `remediateCompliance()`.  Parametrarna för `remediateCompliance()` kan skickas till din UX som avsiktlig tillägg.  När efterlevnad status meddelandet tas emot, kan du visa resultatet eller helt enkelt Slutför aktiviteten.
+> Om du vill visa ett UX för anpassad blockering under åtgärdsförsöket skickar du *falskt* för showUX-parametern till `remediateCompliance()`. Du måste se till att du visar ditt UX och registrerar meddelandeavlyssnaren först innan du anropar `remediateCompliance()`.  Detta förhindrar ett konkurrenstillstånd där meddelandet kan förbises om `remediateCompliance()` misslyckas mycket snabbt.  Till exempel är metoden `onCreate()` eller `onMAMCreate()` i en Activity-underklass det perfekta stället att registrera meddelandeavlyssnaren och sedan anropa `remediateCompliance()`.  Parametrarna för `remediateCompliance()` kan skickas till ditt UX som Intent-tillägg (avsikt).  När meddelandet om efterlevnadsstatus har tagits emot kan du visa resultatet eller helt enkelt slutföra aktiviteten.
 
 > [!NOTE]
-> `remediateCompliance()` registrerar konto och försöka registreringen.  När den huvudsakliga token förvärvas anropa `registerAccountForMAM()` är inte nödvändigt, men det finns inget om man då. Å andra sidan, om appen inte kan hämta dess token och vill ta bort användarkontot, den måste anropa `unregisterAccountForMAM()` att ta bort kontot och förhindra registreringsförsök i bakgrunden.
+> `remediateCompliance()` registrerar kontot och försöker registrera.  När den huvudsakliga token förvärvas är det inte nödvändigt att anropa `registerAccountForMAM()`, men det skadar inte att göra det. Om appen å andra sidan misslyckas med att förvärva sin token och vill ta bort användarkontot måste den anropa `unregisterAccountForMAM()` för att ta bort kontot och förhindra återförsök av registreringar i bakgrunden.
 
 ## <a name="protecting-backup-data"></a>Skydda säkerhetskopierade data
 
@@ -1214,25 +1213,25 @@ Som standard betraktas alla appar som appar med en enda identitet. Du kan ange a
 Utvecklare kan ange appens identitet på följande nivåer i fallande ordning:
 
   1. Trådnivå
-  2. `Context` (vanligtvis `Activity`) nivå
+  2. Nivån `Context` (vanligtvis `Activity`)
   3. Processnivå
 
-En identitet som anges på trådnivå åsidosätter en identitet som angetts på `Context`-nivå, som i sin tur åsidosätter en identitet som angetts på processnivå. En identitet som angetts för en `Context` används endast i lämpliga associerade scenarier. Exempelvis har filrelaterade I/O-åtgärder ingen associerad `Context`. Oftast appar kommer att ange den `Context` identitet på en `Activity`. En app *måste* inte visa data för en hanterad identitet såvida inte `Activity`-identiteten är inställd på samma identitet. I allmänhet är processnivåidentiteten bara användbar om appen endast arbetar med en enskild användare åt gången på alla trådar. Många appar behöver kanske inte använda den.
+En identitet som anges på trådnivå åsidosätter en identitet som angetts på `Context`-nivå, som i sin tur åsidosätter en identitet som angetts på processnivå. En identitet som angetts för en `Context` används endast i lämpliga associerade scenarier. Exempelvis har filrelaterade I/O-åtgärder ingen associerad `Context`. Oftast anger appar `Context`-identiteten för en `Activity`. En app *måste* inte visa data för en hanterad identitet såvida inte `Activity`-identiteten är inställd på samma identitet. I allmänhet är processnivåidentiteten bara användbar om appen endast arbetar med en enskild användare åt gången på alla trådar. Många appar behöver kanske inte använda den.
 
-Om din app använder den `Application` kontext för att hämta systemtjänster, se till att tråd- eller identiteten har ställts in, eller att du har angett UI-identiteten på appens `Application` kontext.
+Om din app använder `Application`-kontexten för att hämta systemtjänster bör du se till att tråden eller processidentiteten har angetts eller att du har angett UI-identiteten i din apps `Application`-kontext.
 
-Att hantera särskilda fall när du uppdaterar UI-identiteten med `setUIPolicyIdentity` eller `switchMAMIdentity`, båda metoderna kan skickas en uppsättning `IdentitySwitchOption` värden.
+För hantering av specialfall vid uppdatering av UI-identiteten med `setUIPolicyIdentity` eller `switchMAMIdentity` kan båda metoderna skickas som en uppsättning `IdentitySwitchOption`-värden.
 
-* `IGNORE_INTENT`: Använd om du begär en identitetsväxling som ska ignorera avsikten som är associerade med den aktuella aktiviteten.
+* `IGNORE_INTENT`: Använd om du begär en identitetsväxling som ska ignorera den avsikt som är associerad med den aktuella aktiviteten.
   Exempel:
 
-  1. Appen tar emot ett intent från en hanterad identitet som innehåller ett hanterat dokument och din app visar dokumentet.
-  2. Användaren växlar till sin personliga identitet så att appen begär en identitetsväxling i Användargränssnittet. I det personliga identitet din app är inte längre visa dokumentet, så att du använder `IGNORE_INTENT` när du begär identitetsväxlingen.
+  1. Appen tar emot en avsikt från en hanterad identitet som innehåller ett hanterat dokument, och appen visar dokumentet.
+  2. Användaren växlar till sin personliga identitet, så appen begär en UI-identitetsväxling. I den personliga identiteten visar din app inte längre dokumentet, så du använder `IGNORE_INTENT` när du begär identitetsväxlingen.
 
-  Om inte mängd SDK förutsätter att de senaste avsikten fortfarande används i appen. Detta innebär att ta emot principen för nya identiteten att behandla avsikten som inkommande data och använda sin identitet.
+  Om detta inte anges antar SDK:n att den senaste avsikten fortfarande används i appen. Detta gör att hämtningsprincipen för den nya identiteten behandlar avsikten som inkommande data och använder dess identitet.
 
 >[!NOTE]
-> Eftersom den `CLIPBOARD_SERVICE` används för gränssnittsåtgärder, SDK: N använder UI-identiteten för aktiviteten förgrunden för `ClipboardManager` åtgärder.
+> Eftersom `CLIPBOARD_SERVICE` används för gränssnittsåtgärder använder SDK: förgrundsaktivitetens UI-identitet för `ClipboardManager`-åtgärder.
 > Följande metoder i `MAMPolicyManager` kan användas för att ange identiteten och hämta de identitetsvärden som angavs tidigare.
 
 ```java
@@ -1304,7 +1303,7 @@ Du kan även åsidosätta en metod i `MAMActivity` om du vill att appen ska avis
     public void onSwitchMAMIdentityComplete(final MAMIdentitySwitchResult result);
 ```
 
-Om du inte åsidosätter `onSwitchMAMIdentityComplete` (eller anropa den `super` metod), en misslyckad identitetsväxling på en aktivitet leder till aktiviteten är klar. Om du åsidosätter metoden kan vara du noga med att företagets data inte visas efter en misslyckad identitetsväxling.
+Om du inte åsidosätter `onSwitchMAMIdentityComplete` (eller anropar metoden `super`) resulterar en misslyckad identitetsväxling i en aktivitet i att aktiviteten slutförs. Om du åsidosätter metoden måste du se till att företagsdata inte visas efter en misslyckad identitetsväxling.
 
 >[!NOTE]
 > Identitetsväxlingar kan kräva att aktiviteten återskapas. I detta fall skickas `onSwitchMAMIdentityComplete`-motanropet till den nya instansen av aktiviteten.
@@ -1361,7 +1360,7 @@ Förutom appens möjlighet att ange identiteten kan en tråd eller identiteten f
 
 Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsändringar utom för de som görs via en Binder som returneras från `MAMService.onMAMBind`. Standardimplementeringar av omedelbart anrop för `onMAMIdentitySwitchRequired`:
 
-* `reportIdentitySwitchResult(FAILURE)` När orsaken är `RESUME_CANCELLED`.
+* `reportIdentitySwitchResult(FAILURE)` när orsaken är `RESUME_CANCELLED`.
 
 * `reportIdentitySwitchResult(SUCCESS)` i alla andra fall.
 
@@ -1371,9 +1370,9 @@ Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsänd
 
   * Om en tjänst körs på huvudtråden **måste** `reportIdentitySwitchResult` anropas synkront, annars låser sig UI-tråden.
 
-  * För **`Activity`**-generering anropas `onMAMIdentitySwitchRequired` före `onMAMCreate`. Om appen måste visa ett användargränssnitt för att avgöra om identitetsväxlingen ska tillåtas eller inte, måste användargränssnittet visas med hjälp av en *annan* aktivitet.
+  * För **`Activity`** -generering anropas `onMAMIdentitySwitchRequired` före `onMAMCreate`. Om appen måste visa ett användargränssnitt för att avgöra om identitetsväxlingen ska tillåtas eller inte, måste användargränssnittet visas med hjälp av en *annan* aktivitet.
 
-  * I en **`Activity`**, om en växling till den tomma identiteten begärs med orsaken `RESUME_CANCELLED` måste appen ändra den återupptagna aktiviteten för att visa data som är konsekventa med identitetsväxlingen.  Om detta inte är möjligt bör appen avvisa växlingen och användaren uppmanas på nytt att följa principen för identiteten som ska återupptas (t.ex. genom att en skärm för inmatning av appens PIN-kod visas).
+  * I en **`Activity`** , om en växling till den tomma identiteten begärs med orsaken `RESUME_CANCELLED` måste appen ändra den återupptagna aktiviteten för att visa data som är konsekventa med identitetsväxlingen.  Om detta inte är möjligt bör appen avvisa växlingen och användaren uppmanas på nytt att följa principen för identiteten som ska återupptas (t.ex. genom att en skärm för inmatning av appens PIN-kod visas).
 
     > [!NOTE]
     > En app med flera identiteter tar alltid emot inkommande data från både hanterade och ohanterade appar. Det är appens ansvar att behandla data från hanterade identiteter på ett hanterat sätt.
@@ -1389,7 +1388,7 @@ Om du vill åsidosätta `MAMActivity.onSwitchMAMIdentityComplete` kan du på mot
 
 ### <a name="preserving-identity-in-async-operations"></a>Bevara identitet i asynkrona åtgärder
 Det är vanligt att åtgärder i UI-tråden skickar bakgrundsaktiviteter till en annan tråd. En app med flera identiteter vill se till att de här bakgrundsaktiviteterna fungerar med rätt identitet, vilken ofta är samma identitet som används av aktiviteten som skickade ut dem. MAM SDK:n innehåller `MAMAsyncTask` och `MAMIdentityExecutors` för att göra det enklare att bevara identiteten.
-Dessa måste användas om den asynkrona åtgärden kan skriva företagets data till en fil eller kan kommunicera med andra appar.
+Dessa måste användas om den asynkrona åtgärden skulle kunna företagsdata till en fil eller kommunicera med andra appar.
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
@@ -1504,8 +1503,8 @@ Ett exempelflöde kan se ut ungefär som nedan:
     * Om det rapporterade resultatet är ett fel kommer appen inte att visa dokumentet.
   * Appen öppnar och renderar filen.
   
-#### <a name="single-identity-to-multi-identity-transition"></a>En identitet för flera identiteter övergång
-Om en app som tidigare gavs ut med en identitet Intune-integration senare integrerar flera identiteter, tidigare installerade appar får en övergång (inte synligt för användaren, det finns inga associerade UX). Den här appen är inte *krävs* göra något explicit för att hantera den här övergången. Alla filer som skapades före övergången kommer att fortsätta vara betraktas som hanterad (så att de förblir krypterade om krypteringsprincipen finns på). Om du vill kan du identifiera uppgraderingen och använda `MAMFileProtectionManager.protect` att tagga specifika filer och kataloger med den tomma identiteten (som tar bort kryptering om de krypterades).
+#### <a name="single-identity-to-multi-identity-transition"></a>Övergång från enskild identitet till flera identiteter
+Om en app som tidigare lanserats med Intune-integrering med enskild entitet senare integrerar flera identiteter kommer tidigare installerade appar att genomgå en övergång (detta syns inte för användaren eftersom det inte finns något relaterat UX). Appen måste *inte* uttryckligen göra något för att hantera den här övergången. Alla filer som skapas före övergången fortsätter att betraktas som hanterade (därför förblir de krypterade om krypteringsprincipen är aktiv). Om du vill kan du identifiera uppgraderingen och använda `MAMFileProtectionManager.protect` för att tagga specifika filer eller kataloger med den tomma identiteten (vilket tar bort krypteringen om de var krypterade).
 
 #### <a name="offline-scenarios"></a>Offline-scenarier
 
@@ -1625,7 +1624,7 @@ public final class MAMDataProtectionManager {
 
 Om appen innehåller andra företagsdata än en `ParcelFileDescriptor` via en `ContentProvider` måste appen anropa metoden `isProvideContentAllowed(String)` i `MAMContentProvider` och skicka ägaridentitetens UPN (användarens huvudnamn) för innehållet. Om den här funktionen returnerar false *får inte* innehållet returneras till anroparen. Filbeskrivningar som returneras via en innehållsprovider hanteras automatiskt baserat på filidentiteten.
 
-Om du inte ärver `MAMContentProvider` explicit och i stället kan du skapa verktyg för förändringen, du kan anropa en statisk version av samma metod: `MAMContentProvider.isProvideContentAllowed(provider, contentIdentity)`.
+Om du inte explicit ärver `MAMContentProvider` och i stället låter utvecklingsverktyget göra den ändringen kan du anropa en statisk version av samma metod: `MAMContentProvider.isProvideContentAllowed(provider, contentIdentity)`.
 
 ### <a name="selective-wipe"></a>Selektiv rensning
 
@@ -1633,15 +1632,15 @@ Om en app med flera identiteter registreras för `WIPE_USER_DATA`-meddelandet ä
 
 En appregistrering för `WIPE_USER_DATA` kan inte dra nytta av standardbeteendet för selektiv rensning i SDK:n. För appar som kan hantera flera identiteter kan denna förlust vara mer betydelsefull, eftersom en selektiv standardrensning med MAM endast rensar filer vars identitet ska rensas. Om ett program som kan hantera flera identiteter önskar att MAM:s selektiva standardrensning ska göras _**och**_ vill utföra egna åtgärder för rensningen, måste det registrera sig för `WIPE_USER_AUXILIARY_DATA`-meddelanden. Det här meddelandet skickas omedelbart av SDK:n innan den utför MAM:s selektiva standardrensning. En app bör aldrig registreras för både `WIPE_USER_DATA` och `WIPE_USER_AUXILIARY_DATA`.
 
-Selektiv standardrensning stängs appen korrekt och slutföra aktiviteter och avslutar processen app. Om din app åsidosätter förvalda selektiva rensning, kan du pröva att stänga appen manuellt för att hindra användaren från att komma åt data i minnet när en rensningen utförs.
+Den selektiva standardrensningen stänger appen korrekt, vilket avslutar aktiviteter och stänger av appens process. Om din app åsidosätter den selektiva standardrensningen bör du överväga att stänga appen manuellt för att förhindra att användaren kommer åt data i minnet efter att en rensning sker.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Aktivera MAM-riktad konfiguration för Android-appar (valfritt)
-Programspecifika nyckelvärdepar kan konfigureras i Intune-konsolen för [MAM-vi](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) och [Android work-profil appar](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+Programspecifika nyckel/värde-par kan konfigureras i Intune-konsolen för [MAM-WE](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) och [Android-arbetsprofilappar](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
 Dessa nyckel-/värdepar tolkas inte av Intune utan skickas till appen. Program som ska ta emot sådan konfiguration kan använda klasserna `MAMAppConfigManager` och `MAMAppConfig` för detta. Om flera principer är inriktade på samma app kan det finnas flera motstridiga värden för samma nyckel.
 
 > [!NOTE] 
-> Konfigurationer som har konfigurerats för leverans via MAM-vi kan inte vara delievered i `offline`.  Endast Android Enterprise AppRestrictions levereras en `MAMUserNotification` på en tom identitet i det här fallet.
+> Konfiguration för leverans via MAM-WE kan inte levereras i `offline`.  Endast Android Enterprise AppRestrictions levereras ett `MAMUserNotification` på en tom identitet i det här fallet.
 
 ### <a name="example"></a>Exempel
 ```java
@@ -1716,11 +1715,11 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 > Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
 
 > [!NOTE] 
-> **Standardregistrering** är nationellt moln medveten.
+> **Standardregistrering** är medveten om nationella moln.
 
 Aktivera standardregistrering med följande steg:
 
-1. Om din app integrerar ADAL eller om du behöver att aktivera enkel inloggning, [konfigurera ADAL](#configure-azure-active-directory-authentication-library-adal) följande [vanlig ADAL-konfiguration](#common-adal-configurations) #2. Om inte, du kan hoppa över det här steget.
+1. Om din app integrerar ADAL eller om du behöver aktivera enkel inloggning [konfigurerar du ADAL](#configure-azure-active-directory-authentication-library-adal) enligt [vanlig ADAL-konfiguration](#common-adal-configurations) nummer 2. Annars kan du koppa över det här steget.
    
 2. Aktivera standardregistrering genom att ange följande värde i manifestet:
    ```xml 
@@ -1785,7 +1784,7 @@ Intune SDK använder kontraktet som tillhandahålls av Android-API:et, även om 
 
 ## <a name="telemetry"></a>Telemetri
 
-Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar systemgenererade data som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts Policy vi inte samlar in alla personliga data.
+Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar systemgenererade data som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts policy samlar vi inte in några personliga data.
 
 > [!NOTE]
 > Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 

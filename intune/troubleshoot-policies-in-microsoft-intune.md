@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d1f790aeedff1e13ecc220ed7a6d8f311e12585
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: a0f8e9e7fec0bea759d408f3ca3d94aa46748bf8
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044605"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -56,19 +55,19 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
       - Skyddsprinciper för appar (hantering av mobilprogram) kräver inte att enheter är registrerade. Mer information finns i [Skapa och tilldela skyddsprinciper för appar](app-protection-policies.md).
 
-    - **Azure AD-anslutningstyp**: ska vara inställd på **arbetsplats** eller **AzureAD**.
+    - **Azure AD-anslutningstyp**: Ska vara inställt på **Arbetsplats** eller **AzureAD**.
  
       - Om kolumnen är **Inte registrerad** kan det finnas ett problem med registreringen. Normalt löser du problemet genom att avregistrera och registrera på nytt.
 
-    - **Intune-kompatibel**: bör vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
+    - **Intune-kompatibel**: Ska vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
 
       Mer information finns i [Komma igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md).
 
-    - **Azure AD-kompatibel**: bör vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
+    - **Azure AD-kompatibel**: Ska vara **Ja**. Om **Nej** visas kan det finnas ett problem med efterlevnadsprinciperna, eller så ansluts inte enheten till Intune-tjänsten. Till exempel kan enheten ha stängts av eller sakna nätverksanslutning. Till slut blir enheten icke-kompatibel, möjligen efter 30 dagar.
 
       Mer information finns i [Komma igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md).
 
-    - **Senaste incheckning**: ska vara ett datum och klockslag. Som standard checkar Intune-enheter in var 8:e timme.
+    - **Senaste incheckning**: Ska vara en nylig tid och ett nyligt datum. Som standard checkar Intune-enheter in var 8:e timme.
 
       - Om **Senaste incheckning** är mer än 24 timmar sedan kan det vara problem med enheten. En enhet som inte kan checka in tar inte emot dina principer från Intune.
 
@@ -87,7 +86,7 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
       **Principtillstånd**:
 
-      - **Inte tillämpligt**: den här principen stöds inte på den här plattformen. Till exempel fungerar inte iOS-principer på Android. Samsung KNOX-principer fungerar inte på Windows-enheter.
+      - **Ej tillämpligt**: Principen stöds inte på den här plattformen. Till exempel fungerar inte iOS-principer på Android. Samsung KNOX-principer fungerar inte på Windows-enheter.
       - **Konflikt**: Det finns en befintlig inställning på enheten som Intune inte kan åsidosätta. Eller så har du distribuerat två principer med samma inställning med olika värden.
       - **Väntar**: Enheten har inte checkats in i Intune för att få principen. Eller så har enheten tagit emot principen men har inte rapporterat statusen till Intune.
       - **Fel**: Du hittar fel och möjliga lösningar i [Felsöka åtkomstproblem för företagsresurser](troubleshoot-company-resource-access-problems.md).
@@ -110,7 +109,7 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
     - **Väntar**: Profilen har skickats till enheten men har inte rapporterat statusen till Intune. Till exempel kräver kryptering på Android användaraktivering, vilket kan leda till att krypteringen väntar.
 
-**Användbara länken**: [övervaka konfigurationsprofiler för enheten](device-profile-monitor.md)
+**Användbar länk**: [Övervaka enhetsprofiler för konfiguration](device-profile-monitor.md)
 
 > [!NOTE]
 > Om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, tillämpas den mer restriktiva principen.

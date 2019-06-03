@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 03/11/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55a0cb45cd3e3a8e367b0bff7bd8e856b02af953
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: a80e4cf4e68235ef9e88943a8b62121e0cfb6623
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046979"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -36,40 +35,40 @@ Mer information om Windows helskärmsfunktion i Intune finns i [Konfigurera inst
 
 - [Skapa profilen](kiosk-settings.md#create-the-profile).
 
-- Den här kioskprofilen är direkt relaterad till profilen för enhetsbegränsningar du skapar med den [Microsoft Edge-inställningar för helskärmsläge](device-restrictions-windows-10.md#microsoft-edge-browser). Sammanfattningsvis:
+- Den här helskärmsprofilen är direkt kopplad till den profil för enhetsbegränsningar som du skapar med [Microsoft Edge-helskärmsinställningarna](device-restrictions-windows-10.md#microsoft-edge-browser). Sammanfattningsvis:
 
-  1. Skapa den här kioskprofilen för att köra enheten i helskärmsläge.
-  2. Skapa den [enhetsbegränsningsprofil](device-restrictions-windows-10.md#microsoft-edge-browser), och konfigurera specifika funktioner och inställningar i Microsoft Edge.
+  1. Skapa den här helskärmsprofilen för att köra enheten i helskärmsläge.
+  2. Skapa [profilen för enhetsbegränsningar](device-restrictions-windows-10.md#microsoft-edge-browser) och konfigurera specifika funktioner och inställningar som tillåts i Microsoft Edge.
 
 > [!IMPORTANT] 
-> Se till att tilldela den här kioskprofilen till samma enheter som din [Microsoft Edge-profilen](device-restrictions-windows-10.md#microsoft-edge-browser).
+> Var noga med att tilldela den här helskärmsprofilen till samma enheter som din [Microsoft Edge-profil](device-restrictions-windows-10.md#microsoft-edge-browser).
 
 ## <a name="single-full-screen-app-kiosks"></a>Kiosker med en enda app i helskärmsläge
 
 Kör endast en app på enheten.
 
-- **Välj ett helskärmsläge**: Välj **enskild app, helskärmsläge helskärmsläge**.
+- **Välj ett helskärmsläge**: Välj **en app, helskärmsläge**.
 
 - **Användarens inloggningstyp**: De appar som du lägger till körs som det användarkonto du anger. Alternativen är:
 
-  - **Automatisk inloggning (Windows 10 version 1803 och senare)**: Använd i helskärmslägen i offentliga miljöer som inte kräver att användaren loggar in, vilket liknar ett gästkonto. Den här inställningen använder [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
-  - **Lokalt användarkonto**: Ange det lokala (för enheten) användarkontot. Det konto som du anger loggar in till kiosken.
+  - **Automatisk inloggning (Windows 10 version 1803 och senare)** : Använd i helskärmslägen i offentliga miljöer som inte kräver att användaren loggar in, vilket liknar ett gästkonto. Den här inställningen använder [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Lokalt användarkonto**: Ange det lokala (för enheten) användarkontot. Det konto som du anger loggar in i helskärmsläget.
 
-- **Programtyp**: Välj vilken typ av program. Alternativen är:
+- **Programtyp**: Välj programtypen. Alternativen är:
 
-  - **Lägg till Microsoft Edge-webbläsaren**: Välj **Microsoft Edge-webbläsaren**, och välj den **Edge-helskärmsläge läge typ**:
+  - **Lägg till Microsoft Edge-webbläsare**: Välj **Microsoft Edge-webbläsare** och välj **Edge-helskärmslägetyp**:
 
-    - **Digital/interaktiv signering**: öppnar en fullständig URL-skärmen och visar bara innehållet på webbplatsen. [Ställ in digitala loggar](https://docs.microsoft.com/windows/configuration/setup-digital-signage) finns mer information om den här funktionen.
-    - **Offentliga surfning (InPrivate)**: kör en begränsad flera fliken version av Microsoft Edge. Användare kan bläddra offentligt eller avslutar sin session.
+    - **Digital/interaktiv signering**: Öppnar en URL i helskärmsläge och visar endast innehållet på den webbplatsen. Mer information om den här funktionen finns i [Konfigurera digital signering](https://docs.microsoft.com/windows/configuration/setup-digital-signage).
+    - **Offentlig surfning (InPrivate)** : Kör en begränsad version av Microsoft Edge med flera flikar. Användare kan surfa offentligt eller avsluta sin webbläsarsession.
 
-    Mer information om dessa alternativ finns i [distribuera Microsoft Edge helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+    Mer information om dessa alternativ finns i [Distribuera Microsoft Edge-helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
-    > Den här inställningen gör det möjligt för Microsoft Edge-webbläsaren på enheten. För att konfigurera Microsoft Edge-specifika inställningar, skapa en profil för enhetskonfiguration (**enhetskonfiguration** > **profiler** > **skapa profil**  >  **Windows 10** för plattform > **Enhetsbegränsningar** >  **Microsoft Edge-webbläsaren**). [Microsoft Edge-webbläsaren](device-restrictions-windows-10.md#microsoft-edge-browser) listas och beskrivs de tillgängliga inställningarna.
+    > Den här inställningen aktiverar Microsoft Edge-webbläsaren på enheten. För att konfigurera Microsoft Edge-specifika inställningar skapar du en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** för plattform > **Enhetsbegränsningar** >  **Microsoft Edge-webbläsare**). [Microsoft Edge-webbläsare](device-restrictions-windows-10.md#microsoft-edge-browser) visar och beskriver de tillgängliga inställningarna.
 
     Klicka på **OK** för att spara ändringarna.
 
-  - **Lägg till helskärmsläge webbläsare**: Välj **helskärmsläge webbläsarinställningar**. Dessa inställningar definierar hur en webbläsare visas på kioskenheten. Se till att du får [Kiosk Browser-appen](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) från Store, lägg till den i Intune som en [Klientapp](apps-add.md) och tilldela sedan appen till enheter i helskärmsläge.
+  - **Lägg till webbläsare med helskärmsläge**: Välj **Inställningar för webbläsare med helskärmsläge**. Dessa inställningar definierar hur en webbläsare visas på kioskenheten. Se till att du får [Kiosk Browser-appen](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) från Store, lägg till den i Intune som en [Klientapp](apps-add.md) och tilldela sedan appen till enheter i helskärmsläge.
 
     Ange följande inställningar:
 
@@ -96,7 +95,7 @@ Kör endast en app på enheten.
 
     Klicka på **OK** för att spara ändringarna.
 
-  - **Lägg till Store-app**: Välj **lägga till en store-app**, och välj en app i listan.
+  - **Lägg till Store-app**: Välj **Lägg till en Store-app** och välj en app i listan.
 
     Har du inte några appar i listan? Lägg till några med hjälp av anvisningarna i [Klientappar](apps-add.md).
 
@@ -104,34 +103,34 @@ Kör endast en app på enheten.
 
 ## <a name="multi-app-kiosks"></a>Helskärmsläge för flera appar
 
-Appar i det här läget är tillgängliga på startmenyn. De här apparna är de enda appar som användaren kan öppna. Om en app har ett beroende på en annan app, måste båda vara med i listan över tillåtna appar. Internet Explorer 64-bitars har ett beroende på Internet Explorer 32-bitars, så du måste tillåta både ”C:\Program c:\Program\Internet explorer\iexplore.exe” och ”C:\Program Files (x86) \Internet Explorer\iexplore.exe”. 
+Appar i det här läget är tillgängliga på startmenyn. De här apparna är de enda appar som användaren kan öppna. Om en app har ett beroende på en annan app måste båda inkluderas i listan över tillåtna appar. Till exempel har Internet Explorer 64-bitars ett beroende på Internet Explorer 32-bitars, så du måste tillåta både ”C:\Program Files\internet explorer\iexplore.exe” och ”C:\Program Files (x86)\Internet Explorer\iexplore.exe”. 
 
-- **Välj ett helskärmsläge**: Välj **Flerappsläge för kiosk**.
+- **Välj ett helskärmsläge**: Välj **Helskärmsläge för flera appar**.
 
 - **Rikta in enheter med Windows 10 i S-läge**:
   - **Ja**: Tillåter Store-appar och AUMID-appar (förutom Win32-appar) i kioskprofilen.
-  - **Nej**: Tillåta Store-appar, Win32-appar och AUMID-appar i kioskprofilen. Den här kioskprofilen inte är distribuerat till enheter för S-läge.
+  - **Nej**: Tillåta Store-appar, Win32-appar och AUMID-appar i kioskprofilen. Den här helskärmsprofilen distribueras inte till enheter i S-läge.
 
 - **Användarens inloggningstyp**: De appar som du lägger till körs som det användarkonto du anger. Alternativen är:
 
-  - **Automatisk inloggning (Windows 10 version 1803 och senare)**: Använd i helskärmslägen i offentliga miljöer som inte kräver att användaren loggar in, vilket liknar ett gästkonto. Den här inställningen använder [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
-  - **Lokalt användarkonto**: **Lägg till** det lokala användarkontot (för enheten). Det konto som du anger loggar in till kiosken.
-  - **Azure AD-användare eller grupp (Windows 10 version 1803 och senare)**: Välj **Lägg till** och välj Azure AD-användare eller grupper i listan. Du kan välja flera användare och grupper. Välj **OK** för att spara ändringarna.
+  - **Automatisk inloggning (Windows 10 version 1803 och senare)** : Använd i helskärmslägen i offentliga miljöer som inte kräver att användaren loggar in, vilket liknar ett gästkonto. Den här inställningen använder [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Lokalt användarkonto**: **Lägg till** det lokala användarkontot (för enheten). Det konto som du anger loggar in i helskärmsläget.
+  - **Azure AD-användare eller grupp (Windows 10 version 1803 och senare)** : Välj **Lägg till** och välj Azure AD-användare eller grupper i listan. Du kan välja flera användare och grupper. Välj **OK** för att spara ändringarna.
   - **HoloLens-besökare**: besökarkontot är ett gästkonto som inte kräver autentiseringsuppgifter eller autentisering, enligt beskrivningen i [begrepp om delat PC-läge](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Webbläsare och program**: Lägg till de appar som ska köras på kioskenheten. Kom ihåg att du kan lägga till flera appar.
 
   - **Webbläsare**
 
-    - **Lägg till Microsoft Edge**: Microsoft Edge har lagts till i rutnätet app och alla program kan köras på den här helskärmsläge. Välj den **Microsoft Edge helskärmsläge läge typ**:
+    - **Lägg till Microsoft Edge**: Microsoft Edge läggs till i apprutnätet, och alla program kan köras på den här helskärmsenheten. Välj **Microsoft Edge-helskärmslägestyp**:
 
-      - **Normalt läge (fullständig version av Microsoft Edge)**: kör en fullständig version av Microsoft Edge med alla webbläsarens funktioner. Användardata och tillstånd sparas mellan sessioner.
-      - **Offentliga surfning (InPrivate)**: kör en flera fliken version av Microsoft Edge InPrivate med en anpassad upplevelse för informationsdatorer som kör i helskärmsläge.
+      - **Normalt läge (fullständig version av Microsoft Edge)** : Kör en fullständig version av Microsoft Edge med alla webbläsarfunktioner. Användardata och tillstånd sparas mellan sessioner.
+      - **Offentlig surfning (InPrivate)** : Kör en version av Microsoft Edge InPrivate med flera flikar och en anpassad upplevelse för helskärmsenheter som körs i helskärmsläge.
 
-      Mer information om dessa alternativ finns i [distribuera Microsoft Edge helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Mer information om dessa alternativ finns i [Distribuera Microsoft Edge-helskärmsläge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > Den här inställningen gör det möjligt för Microsoft Edge-webbläsaren på enheten. För att konfigurera Microsoft Edge-specifika inställningar, skapa en profil för enhetskonfiguration (**enhetskonfiguration** > **profiler** > **skapa profil**  >  **Windows 10** för plattform > **Enhetsbegränsningar** >  **Microsoft Edge-webbläsaren**). [Microsoft Edge-webbläsaren](device-restrictions-windows-10.md#microsoft-edge-browser) listas och beskrivs de tillgängliga inställningarna.
+      > Den här inställningen aktiverar Microsoft Edge-webbläsaren på enheten. För att konfigurera Microsoft Edge-specifika inställningar skapar du en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** för plattform > **Enhetsbegränsningar** >  **Microsoft Edge-webbläsare**). [Microsoft Edge-webbläsare](device-restrictions-windows-10.md#microsoft-edge-browser) visar och beskriver de tillgängliga inställningarna.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -165,18 +164,18 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
       - **Programnamn**: Krävs. Ange ett namn på programmet.
       - **Lokal sökväg**: Krävs. Ange sökvägen till den körbara filen, till exempel `C:\Program Files (x86)\Microsoft VS Code\Code.exe` eller `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **ID för programanvändarmodell (AUMID)**: Ange ID:t för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Se [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) för hur du hämtar detta ID.
+      - **ID för programanvändarmodell (AUMID)** : Ange ID:t för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Se [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) för hur du hämtar detta ID.
 
       Klicka på **OK** för att spara ändringarna.
 
     - **Lägg till via AUMID**: Använd det här alternativet för att lägga till inkorgens Windows-appar, till exempel Anteckningar eller Kalkylatorn. Ange följande egenskaper:
 
       - **Programnamn**: Krävs. Ange ett namn på programmet.
-      - **Appens programanvändarmodell ID (AUMID)**: Krävs. Ange appens programanvändarmodell-ID (AUMID) för Windows-appen. Information om hur du hittar detta ID finns i [Hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **Appens programanvändarmodell ID (AUMID)** : Krävs. Ange appens programanvändarmodell-ID (AUMID) för Windows-appen. Information om hur du hittar detta ID finns i [Hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
       Klicka på **OK** för att spara ändringarna.
 
-    - **AutoLaunch**: valfritt. Välj ett program till AutoLaunch när användaren loggar in. Endast en enda app kan vara AutoLaunched.
+    - **AutoLaunch**: Valfritt. Välj ett program som ska autostartas när användaren loggar in. Endast en enskild app kan autostartas.
     - **Panelstorlek**: Krävs. Välj storleken Liten, Medel, Bred eller Stor för appanelen.
 
   > [!TIP]
@@ -186,7 +185,7 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
 - **Aktivitetsfältet**: Välj att **visa** eller **dölja** aktivitetsfältet. Standardinställningen är att aktivitetsfältet inte visas. Ikoner som exempelvis Wi-Fi-ikonen visas, men inställningarna kan inte ändras av slutanvändarna.
 
-- **Tillåt åtkomst till hämtar mappen**: Välj **Ja** så att användarna kan komma åt mappen hämtade filer i Windows Explorer. Åtkomst till mappen hämtade filer är inaktiverad som standard. Den här funktionen används ofta för slutanvändare för att få tillgång till objekt som hämtats från en webbläsare.
+- **Tillåt åtkomst till mappen Hämtade filer**: Välj **Ja** för att tillåta användarna att komma åt mappen Hämtade filer i Utforskaren. Som standard är åtkomst till mappen Hämtade filer inaktiverad. Den här funktionen används vanligtvis för att ge slutanvändare möjligheten att komma åt objekt som laddats ned från en webbläsare.
 
 Klicka på **OK** för att spara ändringarna.
 

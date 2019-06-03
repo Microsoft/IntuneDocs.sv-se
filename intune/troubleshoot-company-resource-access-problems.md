@@ -1,13 +1,12 @@
 ---
-title: Felkoderna och statuskoderna i Microsoft Intune – Azure | Microsoft Docs
-description: Visa en lista över felen, statuskod, beskrivningar och lösningar när du använder MDM-hanterade enheter, få åtkomst till företagets resurser, fel på iOS-enheter och OMA svar fel i Microsoft Intune.
+title: Fel och statuskoder i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över fel, statuskod, beskrivningar och lösningar vid användning av MDM-hanterade enheter, få åtkomst till företagets resurser, fel på iOS-enheter och OMA-svarsfel i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/20/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4d2b940a0079794c5b17e8d1c1900f630d14cd
-ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.openlocfilehash: 36d21c0b80a2737be39bbee2399f6005c43edc43
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330486"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040431"
 ---
 # <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Vanliga felkoder och beskrivningar i Microsoft Intune
 
-Den här artikeln innehåller vanliga fel, statuskoder, beskrivningar och lösningar vid åtkomst till organisationens resurser. Använd den här informationen för att felsöka åtkomstrelaterade problem när du använder Microsoft Intune.
+Den här artikeln innehåller vanliga fel, statuskoder, beskrivningar och möjliga lösningar vid åtkomst till organisationens resurser. Använd den här informationen för att felsöka åtkomstproblem vid användning av Microsoft Intune.
 
-Om du behöver support hjälp, se [få support för Microsoft Intune](get-support.md).
+Om du behöver supporthjälp kan du läsa informationen om att [få support för Microsoft Intune](get-support.md).
 
 ## <a name="status-codes-for-mdm-managed-windows-devices"></a>Statuskoder för MDM-hanterade Windows enheter
 
@@ -387,4 +386,4 @@ Om du behöver support hjälp, se [få support för Microsoft Intune](get-suppor
 
 ## <a name="next-steps"></a>Nästa steg
 
-Kontakta Microsoft Support till [få support för Microsoft Intune](get-support.md).
+Kontakta Microsoft-supporten för att [få support för Microsoft Intune](get-support.md).
