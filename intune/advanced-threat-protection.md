@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a53ae7f43f135f7316b665672dc410812ef14d08
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050141"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374089"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -83,11 +83,11 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
 
 ### <a name="create-the-configuration-profile"></a>Skapa konfigurationsprofilen
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange ett **Namn** och en **Beskrivning**.
 4. För **Plattform** väljer du **Windows 10 och senare**
-5. För **Profiltyp** väljer du **Windows Defender ATP (Windows 10 Desktop)**.
+5. För **Profiltyp** väljer du **Windows Defender ATP (Windows 10 Desktop)** .
 6. Konfigurera inställningarna:
 
   - **Pakettyp för konfiguration av Windows Defender ATP-klient**: Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
@@ -105,11 +105,11 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
 ## <a name="create-the-compliance-policy"></a>Skapa efterlevnadsprincipen
 Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
 3. Ange ett **Namn** och en **Beskrivning**.
 4. I **Plattform** väljer du **Windows 10 och senare**.
-5. I inställningarna för **Windows Defender ATP** anger du **Kräv att enheten ska hållas vid eller under riskpoängen** till önskad nivå. Klassificeringar för hotnivå [bestäms av Windows Defender ATP](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
+5. I inställningarna för **Windows Defender ATP** anger du **Kräv att enheten ska hållas vid eller under riskpoängen** till önskad nivå. Klassificeringar för hotnivå [bestäms av Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection).
 
    - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel. (Windows Defender ATP använder värdet *Säkert*.)
    - **Låg**: Enheten följer standard om det enbart finns hot på låg nivå på enheten. Enheter med medel- eller hög risk är inte kompatibla.
@@ -120,7 +120,7 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 
 ## <a name="assign-the-policy"></a>Tilldela principen
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Principer**> Välj din Windows Defender ATP-princip för efterlevnad.
 3. Välj **Tilldelningar**.
 4. Inkludera eller exkludera dina Azure AD-grupper för att tilldela dem till principen.
@@ -153,7 +153,7 @@ Principen för villkorlig åtkomst blockerar åtkomsten till resurser *om* enhet
 ## <a name="monitor-device-compliance"></a>Övervaka enhetsefterlevnad
 Övervaka därefter status för enheter som har Windows Defender ATP-efterlevnadsprincipen.
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Principefterlevnad**.
 3. Hitta din Windows Defender ATP-princip i listan och se vilka enheter som är kompatibla eller inkompatibla.
 

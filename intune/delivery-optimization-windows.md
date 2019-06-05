@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: d927c886bbb3f82c18d5873a86fc427d00d96337
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4190d84fda46e4be3cdc4c4f7bfe4ac8a1852ebc
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042639"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373950"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Inställningar för leveransoptimering i Microsoft Intune
 
@@ -36,7 +36,7 @@ Information om leveransoptimering i Windows 10 finns i [Uppdateringar av leveran
 > **Programuppdateringar – Windows 10-uppdateringsringar** har ersatts av inställningarna för **leveransoptimering**. Du kan ändra dina befintliga uppdateringsringar så att du kan använda inställningarna för **leveransoptimering**. [Flytta befintliga uppdateringsringar till leveransoptimering](#move-existing-update-rings-to-delivery-optimization) (i den här artikeln) 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 

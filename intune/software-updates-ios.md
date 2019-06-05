@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf07f942feeab0a73c01625f90c04ec3b989c1c2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5a5c9dea847ace51c7d6f06cfa43c44beead18f8
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044843"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373422"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Lägga till principer för iOS-programuppdatering i Intune
 
@@ -31,7 +31,7 @@ Enheten checkar in med Intune ungefär var 8:e timme. Om en uppdatering är till
 
 ## <a name="configure-the-policy"></a>Konfigurera principen
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Programuppdateringar** > **Uppdateringsprinciper för iOS** > **Skapa**.
 3. Ange följande inställningar:
 
@@ -51,7 +51,7 @@ Enheten checkar in med Intune ungefär var 8:e timme. Om en uppdatering är till
       - **Starttid**: Välj starttiden för den begränsade tidsramen. Ange till exempel kl. 05:00 så att uppdateringar inte börjar installeras kl. 05:00.
       - **Sluttid**: Välj sluttiden för den begränsade tidsramen. Ange till exempel kl. 01:00 så att uppdateringar kan börja installeras från kl. 01:00.
 
-    - **Fördröj synligheten för programuppdateringar för slutanvändare utan ändring av schemalagda uppdateringar (dagar)**: 
+    - **Fördröj synligheten för programuppdateringar för slutanvändare utan ändring av schemalagda uppdateringar (dagar)** : 
 
       **Den här inställningen har flyttats till [Enhetsbegränsningar](device-restrictions-ios.md#general). Den kommer att tas bort från den här platsen i portalen**. Under en kort period kan befintliga principer ändras här. Efter ungefär en månad tas den här inställningen bort från befintliga principer.
 

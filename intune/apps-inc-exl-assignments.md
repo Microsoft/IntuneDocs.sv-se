@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb55951390c3fe19651087e16c3185018cfd9dab
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c8353cf2f0c24c3a894fa219df9fc9a8272e17af
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049292"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454065"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -44,9 +44,8 @@ Intune tar inte hänsyn till några kopplingar mellan användare och specifika e
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Inkludera och exkludera grupper när du tilldelar appar 
 Tilldela en app till grupper med hjälp av en tilldelning för att inkludera eller exkludera:
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Klientappar** på **Intune**-menyn.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Välj **Klientappar** i **Intune**-fönstret.
 4. I fönstret **Klientappar** väljer du **Appar**. Listan över tillagda appar visas.
 5. Markera appen som du vill tilldela. En instrumentpanel visar information om appen. 
 6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**. 

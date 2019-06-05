@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803d556150d60d0a3d60ec03c029d65f0f935f67
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045281"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412710"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Skicka data till lagring, händelsehubbar eller logganalys i Intune (förhandsversion)
 
@@ -53,7 +53,7 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
 
 ## <a name="send-logs-to-azure-monitor"></a>Skicka loggar till Azure Monitor
 
-1. I [Azure-portalen](https://portal.azure.com/) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Under **Övervakning** väljer du **Diagnostikinställningar**. Första gången du öppnar den ska du aktivera den:
 
     ![Aktivera diagnostikinställningar i Intune för att skicka loggar till Azure Monitor](media/diagnostics-settings-turn-on.png)
@@ -101,7 +101,7 @@ Du kan även exportera spårningsloggar i andra delar av Intune, däribland regi
 
 Så här exporterar du till exempel spårningsloggarna vid användning av enhetsefterlevnad:
 
-1. I [Azure-portalen](https://portal.azure.com/) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Övervaka** > **Spårningsloggar**:
 
     ![Välj spårningslogg för att dirigera Intune-data till Azure Monitor-lagring, händelsehubbar eller analys](media/audit-logs-under-monitor-in-compliance.png)

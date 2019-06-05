@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02a5a7bd3625b5e95ddb304df7cf64461cca9c10
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049130"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454053"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -136,7 +136,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 > [!IMPORTANT]  
 > Microsoft Intune-certifikatanslutningsappen kan inte installeras på den utfärdande certifikatutfärdaren (CA) och måste i stället installeras på en separat Windows-server.  
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster**, filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**.
 3. Ladda ned och spara anslutningsappfilen på en plats där du kan komma åt den från den server där du kommer att installera anslutningsappen.
 
@@ -160,7 +160,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 ### <a name="pfx-certificate-connector-for-microsoft-intune"></a>PFX-certifikatanslutningsapp för Microsoft Intune
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**
 3. Ladda ned och spara PFX-certifikatanslutningsappen för Microsoft Intune. Spara den på en plats som är tillgänglig från servern där du ska installera anslutningsappen.
 4. När nedladdningen är klar loggar du in på servern. Efter det:
@@ -207,9 +207,9 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 3. Gå till **Inställningar** och ange följande egenskaper:
 
-    - **Tröskelvärde för förnyelse (%)**: 20 % rekommenderas.
+    - **Tröskelvärde för förnyelse (%)** : 20 % rekommenderas.
     - **Certifikatets giltighetsperiod**: Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år.
-    - **Nyckellagringsprovider (KSP)**: För Windows väljer du var du vill lagra nycklarna på enheten.
+    - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.
     - **Certifikatutfärdare**: Visar det interna fullständiga domännamnet (FQDN) för din Enterprise-CA.
     - **Namn på certifikatutfärdare**: Anger namnet på din Enterprise-CA, till exempel ”Contoso Certification Authority”.
     - **Certifikatmallens namn**: Namnet på den mall som du skapade tidigare. Kom ihåg att **mallnamnet** som standard är samma som **mallens visningsnamn** *utan blanksteg*.
@@ -239,7 +239,7 @@ När du har importerat certifikaten till Intune skapar du en profil för **PKCS-
 
     - **Avsett syfte**: Syftet med de certifikat som har importerats för den här profilen. En administratör kan ha importerat certifikat med olika syften (till exempel autentisering, S/MIME-signering eller S/MIME-kryptering). Avsett syfte som valts i certifikatprofilen matchar certifikatprofilen med rätt importerade certifikat.
     - **Certifikatets giltighetsperiod**: Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år.
-    - **Nyckellagringsprovider (KSP)**: För Windows väljer du var du vill lagra nycklarna på enheten.
+    - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.
 
 4. Välj **OK** > **Skapa** för att spara profilen.
 5. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](device-profile-assign.md).

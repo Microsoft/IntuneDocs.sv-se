@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0965d08dc2981fbd35bcb5aa3c2652726a96ccd5
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9309b110d37795f840e10f22b71b06507aea4c62
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050099"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373722"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
 
@@ -34,14 +34,14 @@ Den här artikeln listar stegen för att skapa en mall för Windows 10-enheter o
 
 ## <a name="create-a-template"></a>Skapa en mall
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett namn på profilen.
     - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj **Windows 10 och senare**.
-    - **Profiltyp**: Välj **Administrativa mallar (förhandsversion)**.
+    - **Profiltyp**: Välj **Administrativa mallar (förhandsversion)** .
 
 4. Välj **Skapa**. Välj **Inställningar** i det nya fönstret. Varje inställning är listad och du kan använda föregående- och nästa-pilarna om du vill se fler inställningar:
 

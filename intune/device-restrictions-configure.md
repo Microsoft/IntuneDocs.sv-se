@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8554f0addf7364150c3f225e8cba1a7d751f8a7d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4cae90723c7ff92a8042f068fb49c1709506c7ff
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048087"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412429"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurera inställningar för enhetsbegränsningar i Microsoft Intune
 
@@ -35,7 +35,7 @@ Lär dig grunderna för enhetsbegränsningsprofiler och läs sedan ytterligare a
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
 4. Välj den enhetsplattform på vilken du vill tillämpa anpassade inställningar från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
@@ -48,7 +48,7 @@ Lär dig grunderna för enhetsbegränsningsprofiler och läs sedan ytterligare a
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
 
-5. I listrutan **Profil** väljer du **Enhetsbegränsningar**. För att skapa en enhetsbegränsningsprofil för Windows 10 Team-enheter, som en Surface Hub, väljer du sedan **Enhetsbegränsningar (Windows 10 Team)**.
+5. I listrutan **Profil** väljer du **Enhetsbegränsningar**. För att skapa en enhetsbegränsningsprofil för Windows 10 Team-enheter, som en Surface Hub, väljer du sedan **Enhetsbegränsningar (Windows 10 Team)** .
 6. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Välj din plattform för detaljerade inställningar:
 
     - [Inställningar för Android](device-restrictions-android.md)
