@@ -135,6 +135,10 @@
           items:
             - name: Konfiguration av nätverk
               href: network-bandwidth-use.md
+            - name: Intune-slutpunkter
+              href: intune-endpoints.md
+            - name: Intune-slutpunkter för amerikanska myndigheter
+              href: intune-us-government-endpoints.md
         - name: Logga in i Intune
           href: account-sign-up.md
         - name: Konfigurera domäner
