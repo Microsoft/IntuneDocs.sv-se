@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 05/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0f8e9e7fec0bea759d408f3ca3d94aa46748bf8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044605"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402665"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -32,13 +32,12 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
 ## <a name="use-built-in-troubleshooting"></a>Använda inbyggd felsökning
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
-2. Välj **Felsök**:
+1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du **Felsök**:
 
     ![Gå till Hjälp och support i Intune och välj Felsök](./media/help-and-support-troubleshoot.png)
 
-3. Välj **Välj användare** > välj användaren som har ett problem > **Välj**.
-4. Bekräfta att **Intune-licens** och **Kontostatus** har gröna bockmarkeringar:
+2. Välj **Välj användare** > välj användaren som har ett problem > **Välj**.
+3. Bekräfta att **Intune-licens** och **Kontostatus** har gröna bockmarkeringar:
 
     ![I Intune väljer du användaren och bekräftar att Kontostatus och Intune-licens har gröna bockmarkeringar för statusen](./media/account-status-intune-license-show-green.png)
 
@@ -47,7 +46,7 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
     - [Tilldela licenser så att användare kan registrera enheter](licenses-assign.md)
     - [Lägga till användare i Intune](users-add.md)
 
-5. Under **Enheter** letar du reda på enheten som har problem. Granska de olika kolumnerna:
+4. Under **Enheter** letar du reda på enheten som har problem. Granska de olika kolumnerna:
 
     - **Hanterad**: För att en enhet ska kunna ta emot efterlevnads- eller konfigurationsprinciper måste värdet för egenskapen vara **MDM** eller **EAS/MDM**.
 
@@ -98,7 +97,7 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Du är osäker på om en profil tillämpas korrekt
 
-1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** > och väljer **Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enheter** > **Alla enheter** > välj enheten > **Enhetskonfiguration**. 
 
     Profilerna för varje enhet listas. Varje profil har en **Status**. Statusen gäller när alla tilldelade profiler, inklusive begränsningar och krav på maskinvara och operativsystem, bedöms tillsammans. Möjliga statusar:
@@ -164,4 +163,6 @@ Du kan lösa problemet genom att ange den lokala systemtiden så nära Internett
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du behöver mer hjälp kan du [få support för Microsoft Intune](get-support.md).
+[Vanliga problem och lösningar med e-postprofiler](troubleshoot-email-profiles-in-microsoft-intune.md)
+
+Få [support från Microsoft](get-support.md) eller använd [community-forumen](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ce1fcf270af0169661359c2ab088bb30fab62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 733ac8eee551a3ddba7a5219827c09357659a06e
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041163"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412714"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -94,9 +94,8 @@ Du behöver följande information för att skicka ett REST-anrop via Postman:
 
 Du behöver även slutpunkten. Du behöver URL för det anpassade flödet för att kunna hämta slutpunkten för informationslagret. Du kan hämta OData-slutpunkten från fönstret Informationslager.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Konfigurera Intune Data Warehouse** under **Andra uppgifter**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Öppna fönstret **Intune Data Warehouse** genom att välja Data Warehouse-länken under **Övriga uppgifter** på höger sida om bladet **Microsoft Intune – översikt**.
 4. Kopiera URL för det anpassade flödet under **Använd rapporteringstjänster från tredje part**. Det bör se ut ungefär så här: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Slutpunkten följer följande format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`

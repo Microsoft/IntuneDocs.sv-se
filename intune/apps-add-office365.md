@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87a7657577372a37c7554941886b80277bfee11e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1aa79bbaa6765a0d4b6009468bdfa184222c5f00
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049413"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454095"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
@@ -47,8 +47,7 @@ Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägg
 
 ## <a name="get-started"></a>Kom igång
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Välj **Klientappar** i **Intune**-fönstret.
 4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**.
 5. Välj **Lägg till**.
@@ -126,6 +125,14 @@ Om du valde alternativet **Configuration Designer** i listrutan **Inställningsf
     - **Använd aktivering av delade datorer**: Välj det här alternativet när flera användare delar en dator. Mer information finns i [översikt över delad aktivering för Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Språk**: Office installeras automatiskt på alla språk som stöds och som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet. <p></p>
     Du kan distribuera ytterligare språk för Office 365 Pro Plus-appar som hanteras via Intune. I listan med tillgängliga språk står även **typen** av språkpaket med (kärnspråk, delspråk och språkverktyg). Gå till Azure Portal och välj **Microsoft Intune** > **Klientappar** > **Appar** > **Lägg till**. I listan **Apptyp** på bladet **Lägg till app** väljer du **Windows 10** under **Office 365 Suite**. Välj **Språk** på bladet **Inställningar för appsviten**. Mer information finns i [översikten över språkdistribution i Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+
+## <a name="select-scope-tags-optional"></a>Välj omfångstaggar (valfritt)
+Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](scope-tags.md).
+
+1. Välj **Omfång (taggar)**  > **Lägg till**.
+2. Använd rutan **Välj** för att söka efter omfångstaggar.
+3. Markera kryssrutan bredvid de omfångstaggar som du vill tilldela till den här appen.
+4. Välj **Välj** > **OK**.
 
 ## <a name="enter-xml-format"></a>Ange XML-format
 

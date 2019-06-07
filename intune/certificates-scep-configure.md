@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04c4cb95d9eacd8967ecacedfe1a5d335b729005
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ee0f7ce806b1ed2a17b59add467b1b0af2a40578
+ms.sourcegitcommit: 023b1293b47314b77eb80997bbd8aa679db90880
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043733"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448110"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -34,7 +34,7 @@ I den här artikeln beskrivs hur du kan konfigurera din infrastruktur och sedan 
     Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
 
 - **NDES-server**: På en Windows Server 2012 R2 eller senare konfigurerar du serverrollen Registreringstjänst för nätverksenheter (NDES). Intune stöder inte användning av registreringstjänsten för nätverksenheter på en server som även kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för NDES.
-NDES-servern måste vara ansluten till en domän i samma skog som företagscertifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
+NDES-servern måste vara ansluten till en domän i samma skog som företagscertifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx). Det går inte att använda en NDES-server som redan används med en annan MDM.
 
 - **Microsoft Intune Certificate Connector**: I Intune-portalen går du till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för SCEP*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet för certifikatanslutningsappen: **NDESConnectorSetup.exe**.  Du kör installationsprogrammet på servern med NDES-rollen.  
 
@@ -272,8 +272,8 @@ I det här steget kommer du att:
 
 2. Välj **Redigera funktionsinställningar** och ställ in följande värden:
 
-    - **frågesträng (byte)** = **65534**
-    - **Maximal URL-längd (byte)** = **65534**
+    - **frågesträng (byte)**  = **65534**
+    - **Maximal URL-längd (byte)**  = **65534**
 
 3. Granska följande registernyckel:
 
@@ -297,7 +297,7 @@ I det här steget kommer du att:
 > [!IMPORTANT] 
 > Microsoft Intune Certificate Connector **måste** installeras på en separat Windows-server. Den kan inte installeras på den utfärdande certifikatutfärdaren (CA). Den **måste** också installeras på samma server som rollen Network Device Enrollment Service (NDES).
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**.
 3. Ladda ned och spara anslutningsappen för SCEP-filen. Spara den på en plats som är tillgänglig från servern där du ska installera anslutningsappen.
 
@@ -350,7 +350,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
 ## <a name="create-a-scep-certificate-profile"></a>Skapa en SCEP-certifikatprofil
 
-1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange ett **namn** och en **beskrivning** för SCEP-certifikatprofilen.
 4. Från listrutan **Plattform** väljer du enhetsplattformen för detta SCEP-certifikat. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
@@ -384,17 +384,17 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         - **Eget namn som e-post**
         - **IMEI (International Mobile Equipment Identity)**
         - **Serienummer**
-        - **Anpassad**: När du väljer det här alternativet visas även textrutan **Anpassad**. Använd det här fältet om du vill ange ett anpassat format för ämnesnamnet, inklusive variabler. Anpassat format stöder två variabler: **Eget namn (CN)** och **E-postadress (E)**. **Eget namn (cn)** kan ställas in till någon av följande variabler:
+        - **Anpassad**: När du väljer det här alternativet visas även textrutan **Anpassad**. Använd det här fältet om du vill ange ett anpassat format för ämnesnamnet, inklusive variabler. Anpassat format stöder två variabler: **Eget namn (CN)** och **E-postadress (E)** . **Eget namn (cn)** kan ställas in till någon av följande variabler:
 
-            - **CN={{UserName}}**: Användarens huvudnamn, t.ex. janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}**: Ett ID som tilldelas när du registrerar en enhet i Azure Active Directory (AD). Detta ID används vanligtvis för att autentisera med Azure AD.
-            - **CN={{SERIALNUMBER}}**: Det unika serienumret (SN) som vanligtvis används av tillverkaren för att identifiera en enhet
-            - **CN={{IMEINumber}}**: Det unika IMEI-numret (International Mobile Equipment Identity) som används för att identifiera en mobiltelefon
-            - **CN={{OnPrem_Distinguished_Name}}**: En serie relativa unika namn som är avgränsade med kommatecken, till exempel `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+            - **CN={{UserName}}** : Användarens huvudnamn, t.ex. janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}** : Ett ID som tilldelas när du registrerar en enhet i Azure Active Directory (AD). Detta ID används vanligtvis för att autentisera med Azure AD.
+            - **CN={{SERIALNUMBER}}** : Det unika serienumret (SN) som vanligtvis används av tillverkaren för att identifiera en enhet
+            - **CN={{IMEINumber}}** : Det unika IMEI-numret (International Mobile Equipment Identity) som används för att identifiera en mobiltelefon
+            - **CN={{OnPrem_Distinguished_Name}}** : En serie relativa unika namn som är avgränsade med kommatecken, till exempel `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
 
-            - **CN={{onPremisesSamAccountName}}**: Administratörer kan synkronisera samAccountName-attributet från Active Directory till Azure AD genom att Azure AD kopplas till ett attribut med namnet `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
+            - **CN={{onPremisesSamAccountName}}** : Administratörer kan synkronisera samAccountName-attributet från Active Directory till Azure AD genom att Azure AD kopplas till ett attribut med namnet `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
 
                 Om du vill använda variabeln `{{onPremisesSamAccountName}}` måste du synkronisera användarattributet `onPremisesSamAccountName` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
 
@@ -426,7 +426,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
         > [!IMPORTANT]
         >  - I den statiska texten för ämnet omvandlas hakparenteser **{}** som inte omsluter en variabel till ett fel. 
-        >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}**.
+        >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}** .
         >  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
         >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
         >  - Profilen kan inte installeras på enheten om de angivna enhetsvariablerna inte stöds. Om {{IMEI}} t.ex. används i ämnesnamnet för SCEP-profilen som tilldelats till en enhet som inte har ett IMEI-nummer, misslyckas profilinstallationen. 
@@ -468,8 +468,8 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         Dessa variabler kan läggas till med statisk text i textrutan för anpassat värde. Till exempel DNS-attributet kan läggas till som `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
-        >  - I den statiska texten för SAN fungerar inte klammerparenteser **{}**, pipe-symboler **|** eller semikolon **;**. 
-        >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}**.
+        >  - I den statiska texten för SAN fungerar inte klammerparenteser **{}** , pipe-symboler **|** eller semikolon **;** . 
+        >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}** .
         >  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
         >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
         >  - Profilen kan inte installeras på enheten om de angivna enhetsvariablerna inte stöds. Om {{IMEI}} t.ex. används i alternativt namn för certifikatmottagare för SCEP-profilen som tilldelats till en enhet som inte har ett IMEI-nummer, misslyckas profilinstallationen.  
@@ -484,12 +484,12 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
    - **Nyckelanvändning**: Ange nyckelanvändningsalternativen för certifikatet. Alternativen är:
      - **Nyckelchiffrering**: Tillåt bara nyckelutbyte när nyckeln är krypterad
      - **Digital signatur**: Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
-   - **Nyckelstorlek (bitar)**: Välj antalet bitar i nyckeln
+   - **Nyckelstorlek (bitar)** : Välj antalet bitar i nyckeln
    - **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för.
    - **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren och/eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen. Glöm inte att tilldela den här betrodda rotcertifikatprofilen till samma grupp som tilldelats i SCEP-certifikatprofilen.
    - **Förbättrad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
    - **Registreringsinställningar**
-     - **Tröskelvärde för förnyelse (%)**: Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
+     - **Tröskelvärde för förnyelse (%)** : Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
      - **Webbadresser för SCEP-server**: Ange en eller flera webbadresser för de NDES-servrar som utfärdar certifikat via SCEP. Ange exempelvis något i stil med `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Välj **OK** och **Skapa** sedan din profil.
 

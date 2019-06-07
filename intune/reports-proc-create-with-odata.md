@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45df3e3b217e25c9e61fd51d7f458f33c7c0481d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0d2e52ed64bfee2da8eafbc228abe61f109b3c27
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045530"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412440"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Skapa en rapport från OData-feeden med Power BI
 
@@ -53,14 +53,13 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 > [!Note]  
 > Du måste ha behörighet för **Rapporter** i Intune. Mer information finns i [Auktorisering](reports-api-url.md).
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Öppna fönstret **Intune-informationslager**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Öppna fönstret **Intune Data Warehouse** genom att välja Data Warehouse-länken under **Övriga uppgifter** på höger sida om bladet **Microsoft Intune – översikt**.
 4. Kopiera den anpassade feed-URL:en. Exempelvis: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
-5. Öppna Power BI Desktop.
-6. Välj **Hämta data** > **Odata-feed**.
-7. Klistra in den anpassade feed-URL:en i URL-rutan i fönstret **OData feed** (OData-feed).
-8. Välj **Grundläggande**.
+1. Öppna Power BI Desktop.
+2. Välj **Hämta data** > **Odata-feed**.
+3. Klistra in den anpassade feed-URL:en i URL-rutan i fönstret **OData feed** (OData-feed).
+4. Välj **Grundläggande**.
 
     ![OData-feeden för klientens Intune Data Warehouse](media/reports-create-01-odatafeed.png)
 

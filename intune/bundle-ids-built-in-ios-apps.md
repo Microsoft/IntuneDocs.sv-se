@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: ''
@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f43523589da0d59afb3b667eb4ead8357f7a60
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 7ff5b411f14fef4ad294b0dd8b265680fd67df08
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049026"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402767"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Samlings-ID:n för inbyggda iOS-appar som du kan använda i Intune
 
-När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyggda apparna i iOS-enheter. I den här artikeln visas samlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar.
+När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyggda apparna i iOS-enheter. I den här artikeln visas samlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar. Se Apples lista över [iOS paket-ID:n](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (öppnar Apples webbplats).
 
 ## <a name="bundle-ids"></a>Samlings-ID:n
 
@@ -59,6 +59,7 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.mobilenotes       | Obs!        | Apple     |
 | com.apple.Numbers           | Siffror      | Apple     |
 | com.apple.Pages             | Sidor        | Apple     |
+| com.apple.mobilephone       | Telefon        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Foton       | Apple     |
 | com.apple.podcasts          | Poddsändningar     | Apple     |

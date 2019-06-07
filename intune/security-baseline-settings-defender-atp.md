@@ -5,7 +5,7 @@ description: Inställningar för säkerhetsbaslinjer som stöds av Intune för a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,16 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f96393e0d6071b1b56700e954714324b01ffcf25
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: MTE75
+ms.openlocfilehash: c6feae4d7caeeefbf9638e5018ba7b653a260f5c
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040731"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373502"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
 Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare Windows Defender Avancerat skydd) som stöds av Microsoft Intune. Standardvärdena i den här artikeln representerar konfiguration av standardbaslinje för Intune. Dessa standardinställningar representerar rekommenderad konfiguration för Intune och kanske inte stämmer med Windows-standardinställningarna.
+
+  Baslinjen för Microsoft Defender Advanced Threat Protection finns tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites)).
+
+
+
 
 > [!NOTE]  
 > Inställningarna för WDATP-säkerhetsbaslinjer finns i **förhandsversionen**. I förhandsversionen kanske listan över tillgängliga inställningar, och ordningen som används i det här innehållet för att presentera inställningarna, inte stämmer med det som är tillgängligt i portalen. 

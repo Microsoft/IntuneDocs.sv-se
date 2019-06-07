@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 05/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042675"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454031"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Autentisering för enbart Intune-informationslagerprogram
 
@@ -92,10 +92,11 @@ Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har 
 2.  Till vänster, väljer du **Visual C#** för att visa alla .NET Framework-projekt.
 3.  Välj **Konsolapp (.NET Framework)** , lägg till ett appnamn och klicka sedan på **OK** för att skapa appen.
 4.  I **Solution Explorer** väljer du **Program.cs** för att visa koden.
-5.  I popup-menyn, väljer du **Lägg till** > **Nytt objekt**. Dialogrutan **Lägg till nytt objekt** visas.
-6.  Till vänster under **Visual C#** väljer du **Kod**.
-7.  Välj **Klass**, ändra namnet på klassen till *IntuneDataWarehouseClass.cs* och klicka på **Lägg till**.
-8.  Lägg till följande kod i <code>Main</code>-metoden:
+5.  In Solution Explorer lägger du till en referens till sammansättningen `System.Configuration`.
+6.  I popup-menyn, väljer du **Lägg till** > **Nytt objekt**. Dialogrutan **Lägg till nytt objekt** visas.
+7.  Till vänster under **Visual C#** väljer du **Kod**.
+8.  Välj **Klass**, ändra namnet på klassen till *IntuneDataWarehouseClass.cs* och klicka på **Lägg till**.
+9.  Lägg till följande kod i <code>Main</code>-metoden:
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
@@ -110,7 +111,7 @@ Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har 
                  new SecureClientSecret(applicationSecret))).Result;
     ``` 
 
-9. Lägg till ytterligare namnområden genom att lägga till följande kod högst upp i kodfilen:
+10. Lägg till ytterligare namnområden genom att lägga till följande kod högst upp i kodfilen:
 
     ``` csharp
      using System.Security;
@@ -118,7 +119,7 @@ Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har 
      using System.Configuration;
     ``` 
 
-10. Efter <code>Main</code>-metoden, lägger du till följande privata metod för att bearbeta och konvertera appnyckeln:
+11. Efter <code>Main</code>-metoden, lägger du till följande privata metod för att bearbeta och konvertera appnyckeln:
 
     ``` csharp
     private static SecureString ConvertToSecureStr(string appkey)
@@ -136,10 +137,10 @@ Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har 
     }
     ```
 
-11. I **Solution Explorer**, högerklickar du på **Referenser** och väljer **Hantera NuGet-paket**.
-12. Sök efter *Microsoft.IdentityModel.Clients.ActiveDirectory* och installera det relaterade Microsoft NuGet-paketet.
-13. I **Solution Explorer** väljer du och öppnar filen *App.config*.
-14. Lägg till <code>appSettings</code>-avsnittet så att xml visas enligt följande:
+12. I **Solution Explorer**, högerklickar du på **Referenser** och väljer **Hantera NuGet-paket**.
+13. Sök efter *Microsoft.IdentityModel.Clients.ActiveDirectory* och installera det relaterade Microsoft NuGet-paketet.
+14. I **Solution Explorer** väljer du och öppnar filen *App.config*.
+15. Lägg till <code>appSettings</code>-avsnittet så att xml visas enligt följande:
 
     ``` xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -155,8 +156,8 @@ Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har 
     </configuration>
     ``` 
 
-15. Uppdatera värdena <code>appId</code>, <code>appKey</code> och <code>tenantDomain</code> så att de matchar dina unika apprelaterade värden.
-16. Skapa din app.
+16. Uppdatera värdena <code>appId</code>, <code>appKey</code> och <code>tenantDomain</code> så att de matchar dina unika apprelaterade värden.
+17. Skapa din app.
 
     >[!NOTE] 
     > Ytterligare implementeringskod finns i [Kodexempel för Intune informationslager](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).

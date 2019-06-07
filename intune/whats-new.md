@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25a3acda374266a0fbd16feabde7787204555ea2
-ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
+ms.openlocfilehash: 72b96714e8740fe4077583cfa5d9f148c2ee0908
+ms.sourcegitcommit: f41b22f65286a64a8002e2cbe80debfdd6692278
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264176"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469585"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -45,6 +45,13 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande �
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-27-2019"></a>Den vecka som börjar 27 maj 2019 
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="reporting-for-potentially-harmful-apps-on-android-devices----4223162---"></a>Rapportering för potentiellt skadliga appar på Android-enheter <!-- 4223162 -->
+Intune tillhandahåller nu ytterligare rapporteringsinformation om potentiellt skadliga appar på Android-enheter. 
 
 ## <a name="week-of-may-20-2019"></a>Den vecka som börjar 20 maj 2019 
 
@@ -134,7 +141,7 @@ Om du vill se de tillgängliga inställningarna går du till [iOS-inställningar
 Gäller för: iOS
 
 ####  <a name="microsoft-defender-advanced-threat-protection--baseline--preview------3754134---"></a>Baslinjer för Microsoft Defender Advanced Threat Protection (Förhandsversion)  <!--  3754134 -->
-Vi har lagt till en förhandsversion med säkerhetsbaslinje för [Microsoft Defender Advanced Threat Protection](security-baseline-settings-defender-atp.md)-inställningar.  
+Vi har lagt till en förhandsversion med säkerhetsbaslinje för [Microsoft Defender Advanced Threat Protection](security-baseline-settings-defender-atp.md)-inställningar. Denna baslinje finns tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 ### <a name="device-enrollment"></a>Enhetsregistrering
 
@@ -153,6 +160,14 @@ Du behöver inte ta med mellanslag i IMEI-nummer när du söker igenom **Alla en
 
 #### <a name="deleting-a-device-in-the-apple-portal-will-be-reflected-in-the-intune-portal---2489996---"></a>Om du tar bort en enhet i Apples portal visas ändringen även i Intune-portalen <!--2489996 -->
 Om en enhet tas bort från Apples program för enhetsregistrering eller Apple Business Manager-portalen tas den även automatiskt bort från Intune vid nästa synkronisering.
+
+### <a name="the-enrollment-status-page-now-tracks-win32-apps----2714451---"></a>Registreringsstatussidan spårar nu Win32-appar <!-- 2714451 -->
+Detta gäller endast enheter som kör Windows 10, version 1903 och senare. Mer information finns i [Konfigurera en sida för registreringsstatus](windows-enrollment-status.md).
+
+### <a name="device-management"></a>Enhetshantering
+
+#### <a name="reset-and-wipe-devices-in-bulk-by-using-the-graph-api----3295288---"></a>Återställa och rensa enheter i grupp med hjälp av Graph API <!-- 3295288 -->
+Du kan nu återställa och rensa upp till 100 enheter i grupp med Graph API.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
@@ -227,7 +242,7 @@ Du kan konfigurera Win32-appar att installeras på Intune-registrerade Azure AD-
 På sidan för enhetsöversikt visas den primära användaren, som även kallas användartillhörighetsanvändaren (UDA). Om du vill se den primära användaren för en enhet väljer du **Intune** > **Enheter** > **Alla enheter** > välj en enhet. Den primära användaren visas nästan längst upp på sidan **Översikt**.
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Ytterligare rapportering för Managed Google Play-app för Android Enterprise-arbetsprofilenheter <!-- 4105925  -->
-För Managed Google Play-appar som distribueras till Android Enterprise-arbetsprofilenheter kan du visa det specifika versionsnumret för den app som är installerad på en enhet. Det här gäller endast för obligatoriska appar. Samma funktion för tillgängliga appar kommer att bli tillgänglig i en framtida version. 
+För Managed Google Play-appar som distribueras till Android Enterprise-arbetsprofilenheter kan du visa det specifika versionsnumret för den app som är installerad på en enhet. Det här gäller endast för obligatoriska appar.  
 
 #### <a name="ios-third-party-keyboards----4111843-----"></a>iOS-tangentbord från tredje part <!-- 4111843   -->
 Stödet för Intunes appskyddsprincip (APP) för inställningen **Tangentbord från tredje part** för iOS kommer att tas bort på grund av en iOS-plattformsändring. Du kommer inte att kunna konfigurera den här inställningen i Intune-administratörskonsolen och den kommer inte att tillämpas på klienten i Intune App SDK.
@@ -277,7 +292,7 @@ Gäller för: Fullständigt hanterade Android Enterprise-enheter
 
 #### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Söka efter en TPM-kretsuppsättning i en efterlevnadsprincip för Windows 10-enheter <!-- 3617671 -->
 
-Den här funktionen är försenad och bör komma att ingå i en framtida version.
+Den här funktionen är försenad och planeras att släppas senare.
 
 #### <a name="updated-ui-changes-for-microsoft-edge-browser-on-windows-10-and-later-devices----3775833-----"></a>Uppdaterade ändringar av användargränssnittet för webbläsaren Microsoft Edge på enheter med Windows 10 och senare <!-- 3775833   -->
 När du skapar en profil för enhetskonfiguration kan du tillåta eller begränsa Microsoft Edge-funktioner på enheter med Windows 10 och senare (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform > **Enhetsbegränsningar** för profiltyp >  **Microsoft Edge-webbläsaren**). I den här uppdateringen beskrivs Microsoft Edge-inställningar mer utförligt och är enklare att förstå. 
@@ -878,7 +893,7 @@ Med den nya upplevelsen kan du beskriva problemet med egna ord och ta emot fels�
 ### <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Omfattningstaggar för appar <!-- 1081941 -->
-Du kan skapa omfångstaggar som begränsar åtkomsten för roller och appar. Du kan lägga till en omfångstagg för en app så att endast personer med roller som också tilldelats den omfångstaggen har åtkomst till appen. För närvarande kan appar som har lagts till i Intune från hanterad Google Play eller appar som har köpts med hjälp av Apples volymköpsprogram (VPP) inte tilldelas omfångstaggar (men stöd för detta kommer i framtiden). Mer information finns i [Använda omfångstaggar för att filtrera principer](scope-tags.md).
+Du kan skapa omfångstaggar som begränsar åtkomsten för roller och appar. Du kan lägga till en omfångstagg för en app så att endast personer med roller som också tilldelats den omfångstaggen har åtkomst till appen. För närvarande kan appar som har lagts till i Intune från hanterad Google Play eller appar som har köpts med hjälp av Apples volymköpsprogram (VPP) inte tilldelas omfångstaggar (men framtida stöd för detta planeras). Mer information finns i [Använda omfångstaggar för att filtrera principer](scope-tags.md).
 
 <!-- ########################## -->
 ## <a name="week-of-december-10-2018"></a>Veckan som börjar med 10 december 2018
@@ -908,7 +923,7 @@ Intune kräver nu macOS version 10.12 eller senare. Enheter med tidigare macOS-v
 Du kan ta bort alla appar på företagsägda övervakade iOS-enheter. Du kan ta bort en app genom att rikta antingen användar- eller enhetsgrupper med tilldelningstypen **avinstallera**. För personliga eller ej kontrollerade iOS-enheter kommer du fortsätta kunna ta bort appar som har installerats med hjälp av Intune.
 
 #### <a name="downloading-intune-win32-app-content----2617320---"></a>Ladda ned innehåll för Intune Win32-app <!-- 2617320 -->
-Windows 10 RS3-klienter och högre hämtar Intune Win32-appinnehåll med en komponent för leveransoptimering på Windows 10-klienten. Leveransoptimering ger Peer-to-Peer-funktioner som är aktiverat som standard. Leveransoptimering kan konfigureras av en grupprincip och i framtiden via Intune MDM. Mer information finns i [Leveransoptimering för Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+Windows 10 RS3-klienter och högre hämtar Intune Win32-appinnehåll med en komponent för leveransoptimering på Windows 10-klienten. Leveransoptimering ger Peer-to-Peer-funktioner som är aktiverat som standard. För närvarande kan leveransoptimering konfigureras med en grupprincip. Mer information finns i [Leveransoptimering för Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 #### <a name="end-user-device-and-app-content-menu----2771453---"></a>Slutanvändarenhet och appinnehållsmenyn <!-- 2771453 -->
 Slutanvändare kan nu använda snabbmenyn på enheter och appar för att utlösa vanliga åtgärder som att byta namn på en enhet eller kontrollera efterlevnad.

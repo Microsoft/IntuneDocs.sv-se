@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2019
+ms.date: 05/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18f8e072037d0ca9065201e0d0db2a9a2f6074ce
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
-ms.translationtype: HT
+ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
+ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174188"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354227"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -58,6 +58,24 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 - **Installera appar på systemenhet**: **Blockera** hindrar appar från att installera på enhetens systemenhet. **Inte konfigurerat** (standard) tillåter appar att installera på systemenheten.
 - **Spel-DVR** (endast stationär dator): **blockera** inaktiverar Windows-inspelning och -sändning av spel. **Inte konfigurerat** (standard) tillåter inspelning och sändning av spel.
 - **Endast appar från butik**: **Kräv** tvingar slutanvändare att endast installera appar från Windows App Store. **Inte konfigurerat** tillåter slutanvändare att installera appar från andra platser än Windows App Store.
+- **Framtvinga omstart av appar vid uppdateringsfel**: när en app är i användning så kanske den inte uppdateras. Använd den här inställningen för att tvinga en app att starta om. **Inte konfigurerat** (standard) tvingar inte appar att starta om. **Kräv** låter administratörer tvinga en omstart vid ett specifikt datum och tid eller enligt ett återkommande schema. När det är angett till **Kräv** anger du även:
+
+  - **Startdatum/-tid**: Välj datum och tid när apparna ska startas om.
+  - **Upprepning**: välj omstart dagligen, veckovis eller månadsvis.
+
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+
+- **Användarkontroll över installationer**: när det angetts som **Inte konfigurerad** (standard), förhindrar Windows Installer att användare ändrar installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange den katalog som filerna ska installeras till. **Blockera** låter användare ändra de här installationsalternativen och några av säkerhetsfunktionerna i Windows Installer kringgås.
+
+  [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
+
+- **Installera appar med utökade privilegier**: när det angetts som **Inte konfigurerat** (standard), använder systemet den aktuella användarens behörigheter när det installerar program som en systemadministratör inte distribuerar eller erbjuder. **Blockera** säger till Windows Installer att använda förhöjda behörigheter när alla program installeras på systemet. De här behörigheterna används för alla program.
+
+  [ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
+
+- **Startappar**: ange en lista över appar som ska öppnas när en användare loggar in på enheten. Glöm inte att använda en semikolonavgränsad lista över paketfamiljenamn (PFN) för Windows-program. Manifestet i Windows-apparna måste använda en startåtgärd för att den här principen ska fungera.
+
+  [ApplicationManagement/LaunchAppAfterLogOn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
 Klicka på **OK** för att spara ändringarna.
 
@@ -408,6 +426,10 @@ De här inställningarna använder [CSP för DeviceLock-princip](https://docs.mi
     - **Numeriskt**: Lösenordet får bara innehålla siffror.
     - **Alfanumeriskt**: Lösenordet måste innehålla en blandning av siffror och bokstäver.
   - **Minsta längd på lösenord**: Ange det minsta antal siffror eller tecken som krävs från 4 till 16. Ange till exempel `6` för att kräva minst sex tecken i lösenordet.
+  
+    > [!IMPORTANT]
+    > När lösenordskravet ändras på ett Windows-skrivbord påverkas användarna nästa gång de loggar in, eftersom det är då enheten går från inaktiv till aktiv. Användare med lösenord som uppfyller kravet uppmanas ändå att ändra sina lösenord.
+    
   - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som innan enheten rensas, från 1 till 11. `0` (noll) kan inaktivera funktionen för rensning av enheten.
 
     Den här inställningen har olika effekt beroende på utgåva. Specifik information finns i [CSP för DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
@@ -755,7 +777,7 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
 
   Mer information om potentiellt oönskade appar finns i [Identifiera och blockera potentiellt oönskade program](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Åtgärder vid hot om identifierad skadlig kod**: Välj de åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Alternativen är:
+- **Åtgärder vid hot om identifierad skadlig kod**: Välj de åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Om det inte är möjligt, väljer Windows Defender det bästa alternativet för att oskadliggöra hotet. Alternativen är:
   - **Rensa**
   - **Karantän**
   - **Ta bort**

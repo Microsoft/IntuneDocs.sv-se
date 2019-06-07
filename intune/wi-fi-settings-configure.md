@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d6aab271e6c065dbdaac2359974457d8fae607
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7dc28a614514bf9b1a4987976cb057529b75a5fc
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050562"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412000"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Lägga till och använda Wi-Fi-inställningar på dina enheter i Microsoft Intune
 
@@ -48,7 +48,7 @@ Wi-Fi-profiler stöder följande enhetsplattformar:
 
 ## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
 
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** > filtrerar på **Intune** och väljer **Microsoft Intune**. 
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange **Namn** och **Beskrivning** för Wi-Fi-profilen.
 4. I listrutan **Plattform** väljer du den enhetsplattform där Wi-Fi-inställningarna ska tillämpas. Alternativen är:
