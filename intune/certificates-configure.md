@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37938287cc5ddde6285ec09aa0fffea56f98b3c3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e0e0eda1c60e420adcdab9364ecb0da1f52fe4e6
+ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048947"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713893"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
@@ -90,8 +90,7 @@ Det här certifikatet importeras när du konfigurerar en certifikatprofil för e
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Steg 3: Skapa profiler för betrodda certifikat
 Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikatprofil. En betrodd certifikatprofil och en SCEP- eller PKCS-profil krävs för varje enhetsplattform. Stegen för att skapa betrodda certifikat fungerar ungefär på samma sätt för varje enhetsplattform.
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profil**.
 4. Ange ett **namn** och en **beskrivning** för den betrodda certifikatprofilen.
 5. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat. Alternativen är:

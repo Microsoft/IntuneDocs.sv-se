@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 490c7312f510651cafc6ade516e5f7dca8131b3a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043957"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804678"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune
 
@@ -32,9 +32,7 @@ Du kan uttryckligen välja att rensa ditt företags data från slutanvändarens 
 
 ## <a name="create-an-app-protection-policy-using-access-actions"></a>Skapa en appskyddsprincip med åtkomståtgärder
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**.  
-    Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I **Intune**-fönstret väljer du **Klientappar** > **Principer för appskydd**.
 4. Klicka på **Lägg till en princip** (du kan även redigera en befintlig princip). 
 5. Klicka på **Konfigurera obligatoriska inställningar** för att se listan över inställningar tillgängliga för konfiguration för principen. 

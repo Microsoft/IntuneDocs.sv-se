@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7998eb82b27a7e70d5a77374950e544fd603f6d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1929b811a5a5320bc0ceefcef4f05ed2443ac070
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046284"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819658"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
@@ -33,11 +33,7 @@ Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip f�
 
 ## <a name="to-enable-the-mtd-connector"></a>Så här aktiverar du MTD-anslutningen
 
-1. Gå till [Azure Portal](https://portal.azure.com) och logga in med dina Intune-autentiseringsuppgifter. När du har loggat in visas **Azure-instrumentpanelen**.
-
-2. Välj **Alla tjänster** i den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
-
-3. Välj **Intune**. **Intune-instrumentpanelen** öppnas.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 4. Välj **Enhetskompatibilitet** på **Intune-instrumentpanelen** och välj sedan **Mobile Threat Defense** i avsnittet **Konfiguration**.
 
