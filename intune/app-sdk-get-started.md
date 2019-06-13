@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/29/2019
+ms.date: 06/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35f4007d03ca66ada5721de1ffe20dd87bfe4527
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b5672963c6737d51e720a8b1597dd90318f33a05
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043798"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506860"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -81,11 +81,11 @@ Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda
 
 Du behöver en av följande utvecklarguider för att hjälpa dig att integrera Intune App SDK till din app:
 
-* **[Utvecklarguide för Intune App SDK för iOS](app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
+* **[Utvecklarguide för Intune App SDK för iOS](app-sdk-ios.md)** : Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
 
-* **[Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
+* **[Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md)** : Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
 
-* **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
+* **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)** : Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
 
 
 
@@ -174,15 +174,12 @@ Om din app använder sina egna anpassade AAD-inställningar för autentisering, 
 När du har registrerat din app i en Azure-klientorganisation, och den visas tenant under **Alla program** måste du ge appen åtkomst till Intune-appskyddstjänsten (tidigare känd som MAM-tjänsten). På Azure-portalen:
 
 1.  Gå till bladet **Azure Active Directory**.
-2.  Välj konfigurationen **Appregistrering** för programmet.
-3.  I **Inställningar** och under rubriken **API-åtkomst** väljer du **Required permission** (Nödvändig behörighet). 
-4.  Klicka på **+ Lägg till**.
-5.  Klicka på **Välj ett API**. 
-6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
-7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
-8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
-9.  Klicka på **Klar**.
-10. Klicka på **Bevilja** och klicka sedan på **Ja**. 
+2.  Under **Appregistreringar** går du till den lista som ställts in för programmet.
+3.  Klicka på **+ Lägg till en behörighet**.
+4.  Klicka på **API:er som min organisation använder**. 
+5.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
+6.  Under **Delegerade behörigheter** markerar du kryssrutan **DeviceManagementManagedApps.ReadWrite: Read and Write the User’s App Management Data*** (DeviceManagementManagedApps.ReadWrite: Läs och skriv användarens apphanteringsdata).
+7. Klicka på **Lägg till behörigheter**.
 
 ### <a name="badge-your-app-optional"></a>Ge din app en skylt (valfritt)
 

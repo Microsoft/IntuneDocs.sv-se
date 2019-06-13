@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fc2e17c605af2c9cec021724852bcf1b48012ba8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "58069331"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804422"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Uppförandekod för Microsoft-öppen källkod
 
@@ -20,24 +20,24 @@ Vi **önskar och uppmuntrar till bidrag** från vår community (användare, kund
 
 * **Skapa ett GitHub-konto**: Det är gratis att registrera sig på [GitHub.com](https://www.github.com).
 
-* **Din webbläsare**: det finns två alternativ: 
+* **Använd din webbläsare**: Det finns två alternativ: 
 
     **Alternativ 1: Redigera direkt från docs.microsoft.com**  
-    1. Gå till avsnittet t.ex [ https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune ](https://docs.microsoft.com/ntune/troubleshoot-policies-in-microsoft-intune). 
-    2. Välj **redigera** (överst till höger). Detta visar den markdown-fil i GitHub-lagringsplatsen.
-    3. Välj pennikonen. När du hovrar över pennikonen ser du den **redigera filen** knappbeskrivning. 
-    4. Gör dina ändringar och sedan **commit** dina ändringar. 
+    1. Gå till ämnet, t.ex [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune). 
+    2. Välj **Redigera** (överst till höger). Detta visar markdown-filen på GitHub-lagringsplatsen.
+    3. Välj pennikonen. När du hovrar över pennikonen ser du knappbeskrivningen **Redigera den här filen**. 
+    4. Gör dina ändringar och **skicka** dem. 
     5. Skapa pull-begäran.
     
     **Alternativ 2: Hitta artikeln i den här databasen och uppdatera**  
-    1.  De flesta avsnitt som finns i `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. I den här mappen, Sök efter namnet på ämnet som `troubleshoot-policies-in-microsoft-intune`. 
-    2. Klicka på länken och klicka på pennikonen. När du hovrar över pennikonen ser du den **redigera filen** knappbeskrivning. 
-    3. Gör dina ändringar och sedan **commit** dina ändringar. 
+    1.  De flesta avsnitt finns i `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. I den här mappen söker du efter namnet på ämnet, som `troubleshoot-policies-in-microsoft-intune`. 
+    2. Klicka på länken och sedan på pennikonen. När du hovrar över pennikonen ser du knappbeskrivningen **Redigera den här filen**. 
+    3. Gör dina ändringar och **skicka** dem. 
     4. Skapa pull-begäran. 
 
   När du gör en uppdatering kanske du uppmanas att signera ett licensavtal. Det behöver du bara göra en gång. Så vid eventuella framtida uppdateringar som du gör med ditt GitHub-användarnamn behöver du inte signera det igen. 
   
-  Värdet i den `author` metadata (högst upp på alla ämnen) visar en lista över GitHub-upphovsman. I den `troubleshoot-policies-in-microsoft-intune` exemplet ser du `MandiOhlinger`. I pull-begäran, kan du också nämner (@*authorValue*) författaren om du vill.
+  Värdet i `author` metadata (högst upp i alla ämnen) visar en lista över GitHub-författaren. I exemplet `troubleshoot-policies-in-microsoft-intune` ser du `MandiOhlinger`. I pull-begäran kan du också nämna (@*authorValue*) författaren om du vill.
   
 * **MSFT-anställda**: Skapa ett GitHub-konto och länka det sedan till din Microsoft-e-postadress. När ditt konto har länkats behöver du inte signera ett licensavtal för att göra en uppdatering. Steg:
 

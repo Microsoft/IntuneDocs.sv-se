@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6feae4d7caeeefbf9638e5018ba7b653a260f5c
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
-ms.translationtype: HT
+ms.openlocfilehash: a58095612d6e76d4a1cb633e69260267dcfd9999
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373502"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749918"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
-Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare Windows Defender Avancerat skydd) som stöds av Microsoft Intune. Standardvärdena i den här artikeln representerar konfiguration av standardbaslinje för Intune. Dessa standardinställningar representerar rekommenderad konfiguration för Intune och kanske inte stämmer med Windows-standardinställningarna.
+Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare Windows Defender Avancerat skydd) som stöds av Microsoft Intune. Standardinställningarna för ATP-baslinjen (Advanced Threat Protection) representerar den rekommenderade konfigurationen för ATP och kanske inte överensstämmer med baslinjens standardvärden för andra säkerhetsbaslinjer.  
 
   Baslinjen för Microsoft Defender Advanced Threat Protection finns tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites)).
 
@@ -33,7 +33,7 @@ Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare 
 
 
 > [!NOTE]  
-> Inställningarna för WDATP-säkerhetsbaslinjer finns i **förhandsversionen**. I förhandsversionen kanske listan över tillgängliga inställningar, och ordningen som används i det här innehållet för att presentera inställningarna, inte stämmer med det som är tillgängligt i portalen. 
+> Inställningarna för ATP-säkerhetsbaslinjer finns i **förhandsversionen**. I förhandsversionen kanske listan över tillgängliga inställningar, och ordningen som används i det här innehållet för att presentera inställningarna, inte stämmer med det som är tillgängligt i portalen.  
 >
 > När baslinjeinställningarna inte är i förhandsversion längre uppdateras det här innehållet för att spegla en aktuell lista över säkerhetsbaslinjeinställningar som stöds av Intune.
 

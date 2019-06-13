@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa438e436c4612ede29564f61c3fc529f789c0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 82fa4fc7f9e60dff3c08adf3281351cbfa8eb743
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045057"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749936"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Inställningar för Windows-säkerhetsbaslinjer för Intune  
 
-Visa [inställningarna för Windows-säkerhetsbaslinjer](security-baselines.md) som stöds av Microsoft Intune.  
+Visa [inställningarna för Windows-säkerhetsbaslinjer](security-baselines.md) som stöds av Microsoft Intune. Standardinställningarna för Windows-baslinjen representerar den rekommenderade konfigurationen för Windows och kanske inte överensstämmer med baslinjens standardvärden från andra säkerhetsbaslinjer.  
 
 > [!NOTE]  
-> Inställningarna för Windows-säkerhetsbaslinjer finns i förhandsversionen. I förhandsversionen varierar listan över tillgängliga inställningar, och ordningen som används i det här innehållet för att presentera inställningarna, jämfört med det som är tillgängligt på portalen.  
+> Inställningarna för Windows-säkerhetsbaslinjer finns i **förhandsversionen**. I förhandsversionen varierar listan över tillgängliga inställningar, och ordningen som används i det här innehållet för att presentera inställningarna, jämfört med det som är tillgängligt på portalen.  
 >  
 > När baslinjeinställningarna inte är i förhandsversion längre uppdateras det här innehållet med en ny lista över säkerhetsbaslinjeinställningar som stöds av Intune.  
 
