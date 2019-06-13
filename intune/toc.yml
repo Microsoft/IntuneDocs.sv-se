@@ -270,7 +270,7 @@
         - name: Ta bort macOS-enhet
           href: device-erase.md
         - name: Fjärrstyr mobila enheter
-          href: device-profile-android-teamviewer.md
+          href: teamviewer-support.md
         - name: PIN-återställning i Windows 10
           href: device-windows-pin-reset.md
         - name: Synkronisera enhet
