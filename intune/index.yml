@@ -112,7 +112,7 @@ sections:
           - html: <a href="/intune/app-management">Hantera appar</a>
           - html: <a href="/intune/device-profiles">Konfigurera enheter</a>
           - html: <a href="/intune/device-compliance-get-started">Ange enhetsefterlevnad</a>
-          - html: <a href="/intune/conditional-access">Ställ in villkorlig åtkomst</a>
+          - html: <a href="/intune/conditional-access">Konfigurera villkorlig åtkomst</a>
           - html: <a href="/intune/app-protection-policy">Skydda program</a>
           - html: <a href="/intune/mobile-threat-defense">Konfigurera skydd mot mobila hot</a>
           - html: <a href="/intune/network-access-control-integrate">Integrera åtkomstkontrollen för nätverk</a>

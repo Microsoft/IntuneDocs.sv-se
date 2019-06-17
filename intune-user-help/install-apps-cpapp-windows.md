@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 05/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
+ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56742541"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66828948"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 Installera appar på enheten från företagsportalappen för Windows.
@@ -70,6 +70,10 @@ När du delar får mottagaren en länk och ett meddelande för att visa appens i
 Din organisation väljer appar som är lämpliga och användbara för dig på jobbet eller i skolan. Dessa appar är de enda du hittar i Företagsportal.  
 
 Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för Windows har du åtkomst till Windows-appar men inte iOS-appar.  
+
+## <a name="required-apps"></a>Required apps  
+
+Din organisation kan distribuera vissa appar direkt på din enhet och markera dem som **krävs**. Apparna installeras automatiskt åt dig utan åtgärd.
 
 ## <a name="request-an-app-for-work-or-school"></a>Begär en app för arbete eller skola  
 Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Kontaktuppgifter för **supportavdelningen** finns på sidan Hjälp och support i appen Företagsportal. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).    

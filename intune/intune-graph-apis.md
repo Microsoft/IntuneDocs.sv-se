@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6276f38eed4d20e7e81437c2ba3e2c9bc58ae1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047753"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819735"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
@@ -61,7 +61,7 @@ Mer information finns i:
 
 Registrera en app för att använda Microsoft Graph API:
 
-1.  Logga in på [Azure-portalen](https://portal.azure.com) med administratörsautentisering.
+1.  Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administrativa autentiseringsuppgifter.
 
     Om det behövs kan du använda:
     - Klientorganisationens administratörskonto.

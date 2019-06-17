@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d258fcb7f338e4177c31a5c77b92b5941b7db212
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0a10fc54fa3aa535e6dcfd2c06124fdc5b87c6a4
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56426934"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041285"
 ---
 # <a name="enable-code-integrity"></a>Aktivera kodintegritet
 
@@ -34,7 +34,7 @@ Om datorn inte är kompatibel eftersom kodintegritet är inaktiverad, bör du ko
 Om du identifiera dig som en avancerade användare och vill prova steg på egen hand, se [återaktivera säker Start](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
 ## <a name="additional-resources-for-it-administrators"></a>Ytterligare resurser för IT-administratörer  
-Om du är en Intune-administratör och vill ha mer information om inställningar för efterlevnad av Intunes enhetens hälsotillstånd, se [lägga till en enhetsefterlevnadsprincip för Windows 10-enheter i Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows#windows-10-and-later-policy-settings). Mer detaljerad information om efterlevnadsåtgärder som du kan vidta i Intune, finns i den [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#a-href-idtake-policy-actionastep-8-take-appropriate-policy-action-based-on-evaluation-results).  
+Om du är en Intune-administratör och vill ha mer information om inställningar för efterlevnad av Intunes enhetens hälsotillstånd, se [lägga till en enhetsefterlevnadsprincip för Windows 10-enheter i Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows). Mer detaljerad information om efterlevnadsåtgärder som du kan vidta i Intune, finns i den [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#a-href-idtake-policy-actionastep-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## <a name="next-steps"></a>Nästa steg  
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

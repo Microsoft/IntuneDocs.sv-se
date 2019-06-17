@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc5ea7076e77e5071724168fab58fa78f59601c4
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
-ms.translationtype: HT
+ms.openlocfilehash: 1c8a7be6646c0035eaefed6d61d749c8469c8a4e
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744314"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031648"
 ---
 # <a name="in-development-for-microsoft-intune---june-2019"></a>Under utveckling för Microsoft Intune – juni 2019
 
@@ -51,14 +51,11 @@ För att hjälpa dig med förberedelser och planering innehåller den här sidan
 #### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Enhetsanvändare kan visa alla hanterade appar som de har installerat eller försökt att installera <!-- 2352913 -->
 Företagsportalen för Windows visar alla hanterade appar, både nödvändiga och tillgängliga, som är installerade på en användares enhet. Användare kommer att kunna visa installationsförsök och väntande installationer, och deras aktuella status. Om din organisation inte gör appar obligatoriska eller tillgängliga ser användarna ett meddelande som förklarar att inga företagsappar har installerats. Användarna kommer också att kunna sortera eller filtrera appar baserat på installationsstatus.
 
-#### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956---"></a>Tillgänglig Google Play-apprapportering för Android-arbetsprofiler <!-- 3041956 -->
-För tillgängliga appinstallationer på Androids arbetsprofilenheter kan du visa appens installationsstatus samt den installerade versionen av hanterade Google Play-appar. Mer information finns i [Så här övervakar du appskyddsprinciper](app-protection-policies-monitor.md), [Hantera Android-arbetsprofilenheter med Intune](android-enterprise-overview.md) och [Hanterade Google Play-apptyper](apps-add-android-for-work.md#managed-google-play-app-type).
-
 #### <a name="configure-which-browser-is-allowed-to-link-to-organization-data----3145939---"></a>Konfigurera vilken webbläsare som ska ha tillåtelse att länka till organisationsdata <!-- 3145939 -->
 Principer för Intune-appskydd (APP) på enheter med Android och iOS gör att du kan överföra organisationswebblänkar till en viss webbläsare utöver Intune Managed Browser eller Microsoft Edge.  Mer information om APP finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
 
 #### <a name="installed-apps-page-on-the-company-portal-website-----4224326---"></a>Sidan Installerade appar på företagsportalens webbplats  <!-- 4224326 -->
-[Företagsportalwebbplatsen](https://portal.manage.microsoft.com/) innehåller en ny sida för att visa användare alla appar som har installerats på enheten. Den här listan innehåller både tillgängliga appar och de appar som krävs av deras organisation. Användare kommer att kunna se status för installationen och krav för appar på sina enheter från den här sidan. Mer information om företagsportens webbplats finns i [Använda Intune-företagsportalens webbplats](/intune-user-help/using-the-intune-company-portal-website.md) och [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
+[Företagsportalwebbplatsen](https://portal.manage.microsoft.com/) innehåller en ny sida för att visa användare alla appar som har installerats på enheten. Den här listan innehåller både tillgängliga appar och de appar som krävs av deras organisation. Användare kommer att kunna se status för installationen och krav för appar på sina enheter från den här sidan. Mer information om företagsportens webbplats finns i [Använda Intune-företagsportalens webbplats](/intune-user-help/using-the-intune-company-portal-website) och [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
 
 #### <a name="call-graph-api-read-operations-from-an-application-without-user-credentials----4655885---"></a>Anropa Graph API-läsåtgärder från ett program utan användarens autentiseringsuppgifter <!-- 4655885 -->
 Program kan anropa Intune Graph API-läsåtgärder med appidentitet utan användarens autentiseringsuppgifter. Mer information finns i [Get access without a user](https://docs.microsoft.com/graph/auth-v2-service) (Få åtkomst utan användare).

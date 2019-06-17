@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 417d244cbe64af967e61112f67dbf7829ce7feda
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7068bb96b72861c0647c44261edef0c3e83a120c
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046956"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031670"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 
@@ -53,7 +53,7 @@ Du kan även generera rapporter som visar installations- och licensantal för pr
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Lägga till Microsofts volymlicensavtal
 Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
-1.  Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://account.manage.microsoft.com/admin/default.aspx).
+1.  Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
 
 2.  På sidan **Lägg till avtal** under **Välj avtalstyp**väljer du **Volymlicensieringsavtal**.
 
@@ -138,7 +138,7 @@ Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts
 
 ### <a name="to-add-other-software-agreements"></a>För att lägga till mjukvaruprogramavtal
 
-1.  Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://account.manage.microsoft.com/admin/default.aspx).
+1.  Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
 
 2.  Välj **Lägg till avtal** i avsnittet **Övriga mjukvaruprogramlicensavtal**.
 
