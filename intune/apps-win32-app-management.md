@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b3a566fd5c040e1c0007c10b1b57a64788a2323
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804700"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -97,8 +97,7 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 
-1.  Logga in på [Azure Portal](https://portal.azure.com/).
-2.  Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3.  I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
 4.  I appfönstret **Lägg till** väljer du **Windows-app (Win32)** från den nedrullningsbara listan.
 
@@ -163,10 +162,10 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 2.  I fönstret **Lägg till en kravregel** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
     - **Operativsystemarkitektur**: Välj de arkitekturer som krävs för att installera appen.
     - **Lägsta operativsystemversion**: Välj det lägsta operativsystem som krävs för att installera appen.
-    - **Diskutrymme som krävs (MB)**: Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
-    - **Fysiskt minne som krävs (MB)**: Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
+    - **Diskutrymme som krävs (MB)** : Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
+    - **Fysiskt minne som krävs (MB)** : Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
     - **Lägsta antal logiska processorer som krävs**: Om du vill kan du lägga till det lägsta antal logiska processorer som krävs för att installera appen.
-    - **Lägsta processorhastighet som krävs (MHz)**: Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
+    - **Lägsta processorhastighet som krävs (MHz)** : Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
 
 3. Klicka på **Lägg till** för att visa bladet **Lägg till en kravregel** och konfigurera ytterligare kravregler. Välj **typen av krav** för att välja vilken typ av regel som du använder för att avgöra hur ett krav ska valideras. Kravregler kan baseras på information om filsystem, registervärden eller PowerShell-skript. 
     - **Fil**: När du väljer **Fil** som **Typ av krav** måste kravregeln identifiera en fil eller en mapp, ett datum, en version eller en storlek. 
@@ -291,7 +290,7 @@ Du kan välja huruvida varje oberoende app ska installeras automatiskt. Som stan
 Om du vill lägga till ett appsamband till Win32-appen använder du följande steg:
 
 1. I Intune väljer du **Klientappar** > **Appar** för att visa listan över tillagda klientappar. 
-2. Välj en tillagd **Windows-app (Win32)**. 
+2. Välj en tillagd **Windows-app (Win32)** . 
 3. Välj **Beroenden** för att lägga till de beroende appar som måste installeras innan Win32-appen kan installeras. 
 4. Klicka på **Lägg till** för att lägga till ett appsamband.
 5. När du har lagt till beroende appar klickar du på **Välj**.
@@ -342,12 +341,50 @@ Agentloggar på klientdatorn finns vanligtvis i `C:\ProgramData\Microsoft\Intune
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
 
-Mer information om felsökning av Win32-appar finns i [Felsökning av Win32-appinstallation](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Identifiera versionen för Win32-appfilen med hjälp av PowerShell
 
-### <a name="troubleshooting-areas-to-consider"></a>Felsökningsområden att tänka på
+Om du har svårt att identifiera versionen för Win32-appfilen kan du använda eller ändra följande PowerShell-kommando:
+
+``` PowerShell
+
+$FileVersion = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+#The below line trims the spaces before and after the version name
+$FileVersion = $FileVersion.Trim();
+if ("<file version of successfully detected file>" -eq $FileVersion)
+{
+#Write the version to STDOUT by default
+$FileVersion
+exit 0
+}
+else
+{
+#Exit with non-zero failure code
+exit 1
+}
+
+```
+I kommandot ovan ersätter PowerShell strängen `<path to binary file>` med sökvägen till Win32-appfilen. Ett exempel på en sökväg skulle se ut ungefär så här:<br>
+`C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
+
+Dessutom måste du ersätta strängen `<file version of successfully detected file>` med filversionen som du vill identifiera. Ett exempel på en filversionssträng skulle se ut ungefär så här:<br>
+`2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
+
+Om du vill hämta versionsinformation om Win32-appen kan du använda följande PowerShell-kommando:
+
+``` PowerShell
+
+[System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+
+```
+
+I PowerShell-kommandot ovan ska du ersätta `<path to binary file>` med din sökväg till filen.
+
+### <a name="additional-troubleshooting-areas-to-consider"></a>Ytterligare felsökningsområden att tänka på
 - Kontrollera målet och att agenten är installerad på enheten – En Win32-app som riktas mot en grupp eller ett PowerShell-skript som riktas mot en grupp skapar agentinstallationsprinciper för säkerhetsgruppen.
 - Kontrollera operativsystemversionen – Windows 10 1607 och senare.  
 - Kontrollera Windows 10 SKU – Windows 10 S eller Windows-versioner som körs med S-läge aktiverat har inte stöd för MSI-installation.
+
+Mer information om felsökning av Win32-appar finns i [Felsökning av Win32-appinstallation](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 
 ## <a name="next-steps"></a>Nästa steg
 

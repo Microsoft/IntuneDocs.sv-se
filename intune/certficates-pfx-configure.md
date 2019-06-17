@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/08/2019
+ms.date: 06/05/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: c1119a5681033574ec0a114442b122990da872bf
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454053"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749819"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -249,12 +249,17 @@ Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. Nä
 
 *PFX-certifikatanslutningsappen för Microsoft Intune* [har stöd för automatiska uppdateringar](#requirements), medan *Intune-certifikatanslutningsappen* uppdateras manuellt.
 
-### <a name="may-6-2019"></a>Den 6 maj 2019
+### <a name="may-17-2019"></a>17 maj 2019  
+- **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1905.0.404**  
+  Ändringar i den här versionen:  
+  - Åtgärdade ett problem där befintliga PFX-certifikat fortsätter att bearbetas, vilket gör att anslutningsappen slutar att bearbeta nya begäranden. 
+
+### <a name="may-6-2019"></a>Den 6 maj 2019  
 - **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1905.0.402**  
   Ändringar i den här versionen:  
   - Avsökningsintervallet för anslutningsappen har minskats från 5 minuter till 30 sekunder.
  
-### <a name="april-2-2019"></a>2 april 2019
+### <a name="april-2-2019"></a>2 april 2019  
 - **Intune-certifikatanslutningsapp – version 6.1904.1.0**  
   Ändringar i den här versionen:  
   - Åtgärdade ett problem där anslutningsappen kunde misslyckas med att registrera till Intune efter inloggning till anslutningsappen med ett konto för global administratör.  

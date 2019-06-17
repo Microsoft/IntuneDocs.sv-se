@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/05/2019
+ms.date: 06/06/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0f7ce806b1ed2a17b59add467b1b0af2a40578
-ms.sourcegitcommit: 023b1293b47314b77eb80997bbd8aa679db90880
+ms.openlocfilehash: e170fe0c1b461bad140b89ac01a2ad817e2082e5
+ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66448110"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744328"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -115,7 +115,8 @@ I det här steget kommer du att:
    - Under **Säkerhet** lägger du till NDES-tjänstekontot och ger det **Registreringsrättigheter** för mallen. Intune-administratörer som skapar SCEP-profiler behöver **läsrättigheter** så att de kan bläddra till mallen när de skapar SCEP-profiler.
 
      > [!NOTE]
-     > Om du vill återkalla certifikat behöver NDES-tjänstkontot rättigheter för att *Utfärda och hantera certifikat* för varje certifikatmall som används av en certifikatprofil.
+     > Om du vill återkalla certifikat behöver NDES-tjänstkontot rättigheter för att *utfärda och hantera certifikat* från certifikatutfärdaren. Öppna hanteringskonsolen för certifikatutfärdare och högerklicka på certifikatutfärdarens namn om du vill delegera den här behörigheten. På fliken Säkerhet lägger du till eller väljer kontot och markerar sedan kryssrutan för att **utfärda och hantera certifikat**.
+
 
 3. Granska **Giltighetsperioden** på mallens flik **Allmänt** . Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock konfigurera certifikatutfärdaren så att den tillåter att beställaren anger ett annat värde som du sedan kan ställa in i Intune-administratörskonsolen. Om du alltid vill använda värdet i mallen kan du hoppa över resten av det här steget.
 
@@ -299,15 +300,15 @@ I det här steget kommer du att:
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**.
-3. Ladda ned och spara anslutningsappen för SCEP-filen. Spara den på en plats som är tillgänglig från servern där du ska installera anslutningsappen.
+3. Ladda ned och spara anslutningsappen för SCEP-filen. Spara den på en plats som är tillgänglig från NDES-servern där du ska installera anslutningsappen.
 
    ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
 
-4. När nedladdningen är klar går du till den server som är värd för din registreringstjänst för nätverksenheter (NDES). Efter det:
+4. När nedladdningen är klar går du till den NDES-server som är värd för din registreringstjänst för nätverksenheter (NDES). Efter det:
 
     1. Se till att .NET 4.5 Framework är installerat, eftersom det krävs av NDES-certifikatanslutningsappen. .NET 4.5 framework ingår automatiskt i Windows Server 2012 R2 och senare versioner.
-    2. Kör installationsprogrammet (**NDESConnectorSetup.exe**). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS.
+    2. Använd ett konto med administratörsbehörighet till servern för att köra installationsprogrammet (**NDESConnectorSetup.exe**). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS.
 
     > [!NOTE]
     > När du installerar NDES för fristående Intune installeras CRP-tjänsten automatiskt med certifikatanslutningsappen. När du använder Intune med Configuration Manager installerar du certifikatregistreringsplatsen som en separat platssystemroll.
@@ -335,7 +336,7 @@ I det här steget kommer du att:
 
     Om din organisation använder en proxyserver och proxyn krävs för att NDES-servern ska få åtkomst till Internet, välj **Använd proxyserver**. Ange sedan proxyservernamn, port och autentiseringsuppgifter för att ansluta.
 
-    Välj fliken **Avancerat** och ange autentiseringsuppgifter för ett konto som har behörigheten **Utfärda och hantera certifikat** på den utfärdande certifikatutfärdaren. **Spara** ändringarna.
+    Välj fliken **Avancerat** och ange autentiseringsuppgifter för ett konto som har behörigheten **Utfärda och hantera certifikat** på den utfärdande certifikatutfärdaren. **Spara** ändringarna. Om du delegerat den här behörigheten till NDES-tjänstkontot när [du konfigurerade certifikatutfärdaren](#configure-the-certification-authority) ska du ange det här kontot. 
 
     Nu kan du stänga användargränssnittet för Certifikat Connectorn.
 

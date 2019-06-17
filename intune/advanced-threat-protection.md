@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 78c34345804f600aa62ff5e25ef27a23591e0f5c
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374089"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819866"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -52,8 +52,7 @@ Om du vill använda ATP med Intune måste du ha följande konfigurerat och klart
 
 ## <a name="enable-windows-defender-atp-in-intune"></a>Aktivera Windows Defender ATP i Intune
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Välj **Enhetsefterlevnad** > **Windows Defender ATP** > **Öppna Windows Defender Säkerhetscenter**.
 
     ![Välj att öppna Windows Defender Säkerhetscenter](./media/atp-device-compliance-open-windows-defender.png)
@@ -132,7 +131,7 @@ Principen för villkorlig åtkomst blockerar åtkomsten till resurser *om* enhet
 > [!TIP]  
 > Villkorsstyrd åtkomst är en Azure Active Directory-teknik (Azure AD). Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
 
-1. I [Azure-portalen](https://portal.azure.com) öppnar du **Intune** > **Villkorsstyrd åtkomst** > **Ny princip**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Villkorsstyrd åtkomst** > **Ny princip**.
 2. Ange ett **Namn** på principen och välj **Användare och grupper**. Använd inkludera eller exkludera alternativ för att lägga till grupper för principen och välj **Klar**.
 3. Välj **Molnappar**, och välj vilka appar som ska skyddas. Välj t.ex. **Välj appar**, och välj **Office 365 SharePoint Online** och **Office 365 Exchange Online**.
 

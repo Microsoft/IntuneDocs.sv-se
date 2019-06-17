@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72a9156ce9b7b1b43acf9b39d9186a52dd6c3e8d
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: b799fd65a08646b46bf7fcce67bf4a09dc0413a6
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373714"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819905"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter i Intune
 
@@ -85,7 +85,7 @@ När du skapar en princip för enhetsefterlevnad skapar Intune automatiskt en å
 
 Du kan också lägga till en till åtgärd när du skapar en princip för efterlevnad eller uppdatera en befintlig princip. 
 
-1. På [Azure-portalen](https://portal.azure.com) öppnar du **Microsoft Intune** > **Enhetsefterlevnad**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Efterlevnad för enhet**.
 2. Välj **Principer**, välj en av dina principer och sedan **Egenskaper**. 
 
     Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.

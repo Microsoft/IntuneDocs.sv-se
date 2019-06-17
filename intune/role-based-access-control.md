@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7419a316018ed5c883f89a51090a852680cd9e38
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4c4b9f1d1dd0072555d8438940969b7abd0a9fff
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040670"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804479"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -30,6 +30,8 @@ Med rollbaserad åtkomstkontroll (RBAC) kan du hantera vem som har åtkomst till
 För att kunna skapa, redigera eller tilldela roller måste ditt konto ha en av följande behörigheter i Azure AD:
 - **Global administratör**
 - **Intune-tjänstadministratör** (även kallat **Intune-administratör**)
+
+Du kan titta på den här serien med fem videor med exempel och demonstrationer för råd och förslag om Intune RBAC: [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=6vqg9cAkMbY), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
 
 ## <a name="roles"></a>Roller
 En roll definierar en den uppsättning behörigheter som beviljas till användare som tilldelas den rollen.
@@ -84,8 +86,8 @@ Om du vill se en rolltilldelning väljer du **Intune** > **Roller** > **Alla rol
 
 -   **Egenskaper**: Namn, beskrivning, roll, medlemmar, omfång och taggar för tilldelningen.
 -   **Medlemmar**: Alla användare i de angivna grupperna har behörighet att hantera de användare/enheter som anges i Omfång (grupper).
--   **Omfång (grupper)**: Alla användare/enheter i de här grupperna kan hanteras av användarna i Medlemmar.
--   **[Omfång (taggar)](scope-tags.md)**: Användare i Medlemmar kan se de resurser som har samma omfångstaggar.
+-   **Omfång (grupper)** : Alla användare/enheter i de här grupperna kan hanteras av användarna i Medlemmar.
+-   **[Omfång (taggar)](scope-tags.md)** : Användare i Medlemmar kan se de resurser som har samma omfångstaggar.
 
 ### <a name="multiple-role-assignments"></a>Flera rolltilldelningar
 Om en användare har flera rolltilldelningar omfattar behörigheter i de rolltilldelningarna olika objekt på följande sätt:

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: c3f5f3b39efd33e8dbd3dd84f9a5f2abaf347216
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 55e758c8a7eddc1a5500464754448d26680ec772
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046692"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819591"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-registreringsmetoder för Windows-enheter
 
@@ -49,8 +49,8 @@ Administratörer kan konfigurera följande metoder för registrering som inte kr
 
 - [Azure AD-hybridanslutning](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) gör att administratörer kan konfigurera Active Directory-grupprincip till att automatiskt registrera enheter som är Azure AD-hybridanslutna. 
 - [Configuration Manager-samhantering](https://docs.microsoft.com/sccm/comanage/overview) gör att administratörer kan registrera sina befintliga hanterade Configuration Manager-enheter till Intune för att få de dubbla fördelarna med Intune och Configuration Manager. 
-- [Hanterare av enhetsregistrering](device-enrollment-manager-enroll.md) (DEM) är ett särskilt tjänstkonto. DEM-konton behörigheter som gör att behöriga användare kan registrera och hantera flera företagsägda enheter. Dessa typer av enheter är till exempel bra för verktygs- eller kassaappar (Point-of-Sale), men inte för användare som behöver åtkomst till e-post eller företagsresurser. Den här metoden låter heller inte användning av funktioner såsom villkorsstyrd åtkomst. 
-- [Massregistrering](windows-bulk-enroll.md) gör att en behörig användare kan ansluta ett stort antal nya företagsägda enheter till Azure Active Directory och Intune. Du skapar ett etableringspaket med hjälp av appen Windows Configuration Designer (WCD). Sedan använder du en USB-enhet under det inledande Windows-välkomstprogrammet (OOBE) eller från en befintlig Windows-dator för att installera etableringspaketet till att automatiskt registrera enheterna till Intune. 
+- [Hanterare av enhetsregistrering](device-enrollment-manager-enroll.md) (DEM) är ett särskilt tjänstkonto. DEM-konton behörigheter som gör att behöriga användare kan registrera och hantera flera företagsägda enheter. Dessa typer av enheter är till exempel bra för verktygs- eller kassaappar (Point-of-Sale), men inte för användare som behöver åtkomst till e-post eller företagsresurser. Med den här metoden kan du inte använda funktioner som villkorsstyrd åtkomst. 
+- [Massregistrering](windows-bulk-enroll.md) gör att en behörig användare kan ansluta ett stort antal nya företagsägda enheter till Azure Active Directory och Intune. Du skapar ett etableringspaket med hjälp av appen Windows Configuration Designer (WCD). Sedan använder du en USB-enhet under det inledande Windows-välkomstprogrammet (OOBE) eller från en befintlig Windows-dator för att installera etableringspaketet till att automatiskt registrera enheterna till Intune. Med den här metoden kan du inte använda villkorsstyrd åtkomst. 
 
 ## <a name="next-steps"></a>Nästa steg
 
