@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9a18bceb6b42f06464baf31a4cdd4dea21d19675
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 984b78b271d130618ec0994f76e966f1dc338706
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461302"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044706"
 ---
 ## <a name="april-2017"></a>April 2017
 
@@ -26,7 +26,7 @@ En uppdatering av Android-företagsportalappen visar en förloppsindikator för 
 
 #### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blockera appar från åtkomst till SharePoint Online <!-- 679339 -->
 
-Nu kan du skapa en appbaserad princip för villkorlig åtkomst för att blockera appar som inte har fått appprinciperna tillämpade från åtkomst till [SharePoint Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online). Du kan ange de appar som du vill ska ha åtkomst till SharePoint Online med Azure-portalen i det appbaserade scenariot för villkorlig åtkomst.
+Nu kan du skapa en appbaserad princip för Villkorsstyrd åtkomst för att blockera appar som inte har fått appprinciperna tillämpade från åtkomst till [SharePoint Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online). Du kan ange de appar som du vill ska ha åtkomst till SharePoint Online med Azure-portalen i det appbaserade scenariot för Villkorsstyrd åtkomst.
 
 #### <a name="single-sign-in-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Stöd för enkel inloggning från företagsportalen för iOS till Outlook för iOS <!--834012-->
 Användarna behöver inte längre logga in i Outlook-appen om de är inloggade på företagsportalappen för iOS på samma enhet med samma konto. När användarna startar Outlook-appen kan de välja sitt konto och logga in automatiskt. Vi arbetar också med att lägga till den här funktionen för andra Microsoft-appar.
@@ -112,14 +112,14 @@ Vi har gjort en version av företagsportalens app tillgänglig för iOS genom Ap
 
 #### <a name="support-for-skycure"></a>Stöd för Skycure
 
-Du kan nu styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst. Den baseras på riskbedömning som utförs av Skycure, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Skycure och inkluderar:
+Du kan nu styra åtkomsten från mobila enheter till företagsresurser med Villkorsstyrd åtkomst. Den baseras på riskbedömning som utförs av Skycure, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Skycure och inkluderar:
 
 - Fysiskt skydd
 - Nätverksskydd
 - Programskydd
 - Skydd mot säkerhetsrisker
 
-Du kan konfigurera EMS-principer för villkorlig åtkomst baserat på Skycures riskbedömning som aktiveras via Intunes principer för enhetsefterlevnad. Du kan använda dessa principer för att tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot. Mer information finns i [Skycure Mobile Threat Defense-anslutningsprogram](/intune-classic/deploy-use/skycure-mobile-threat-defense-connector).
+Du kan konfigurera EMS-principer för Villkorsstyrd åtkomst baserat på Skycures riskbedömning som aktiveras via Intunes principer för enhetsefterlevnad. Du kan använda dessa principer för att tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot. Mer information finns i [Skycure Mobile Threat Defense-anslutningsprogram](/intune-classic/deploy-use/skycure-mobile-threat-defense-connector).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Ny användarupplevelse för företagsportalappen för Android <!--621622-->
 

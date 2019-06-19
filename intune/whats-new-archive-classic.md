@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f2a88e6e807ea78e4a26abe71eb1b5997ea7256
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c554f2ab9fabf83695489ab5e6acd65e8d28f34c
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044406"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046244"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nyheter i den klassiska Intune-portalen – föregående månader
 
@@ -49,7 +49,7 @@ En uppdatering av Android-företagsportalappen visar en förloppsindikator för 
 
 #### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blockera appar från åtkomst till SharePoint Online <!-- 679339 -->
 
-Nu kan du skapa en appbaserad princip för villkorlig åtkomst för att blockera appar som inte har fått appprinciperna tillämpade från åtkomst till [SharePoint Online](app-based-conditional-access-intune-create.md). Du kan ange de appar som du vill ska ha åtkomst till SharePoint Online med Azure-portalen i det appbaserade scenariot för villkorlig åtkomst.
+Nu kan du skapa en appbaserad princip för Villkorsstyrd åtkomst för att blockera appar som inte har fått appprinciperna tillämpade från åtkomst till [SharePoint Online](app-based-conditional-access-intune-create.md). Du kan ange de appar som du vill ska ha åtkomst till SharePoint Online med Azure-portalen i det appbaserade scenariot för Villkorsstyrd åtkomst.
 
 #### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Stöd för enkel inloggning från företagsportalen för iOS till Outlook för iOS <!--834012-->
 Användarna behöver inte längre logga in i Outlook-appen om de är inloggade på företagsportalappen för iOS på samma enhet med samma konto. När användarna startar Outlook-appen kan de välja sitt konto och logga in automatiskt. Vi arbetar också med att lägga till den här funktionen för andra Microsoft-appar.
@@ -135,14 +135,14 @@ Vi har gjort en version av företagsportalens app tillgänglig för iOS genom Ap
 
 #### <a name="support-for-skycure"></a>Stöd för Skycure
 
-Du kan nu styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst. Den baseras på riskbedömning som utförs av Skycure, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Skycure och inkluderar:
+Du kan nu styra åtkomsten från mobila enheter till företagsresurser med Villkorsstyrd åtkomst. Den baseras på riskbedömning som utförs av Skycure, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Skycure och inkluderar:
 
 - Fysiskt skydd
 - Nätverksskydd
 - Programskydd
 - Skydd mot säkerhetsrisker
 
-Du kan konfigurera EMS-principer för villkorlig åtkomst baserat på riskbedömningen i Symantec Endpoint Protection Mobile (Skycure), som aktiveras via Intunes principer för enhetsefterlevnad. Du kan använda dessa principer för att tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot. Mer information finns i [Symantec Endpoint Protection Mobile-anslutningsprogram](skycure-mobile-threat-defense-connector.md).
+Du kan konfigurera EMS-principer för Villkorsstyrd åtkomst baserat på riskbedömningen i Symantec Endpoint Protection Mobile (Skycure), som aktiveras via Intunes principer för enhetsefterlevnad. Du kan använda dessa principer för att tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot. Mer information finns i [Symantec Endpoint Protection Mobile-anslutningsprogram](skycure-mobile-threat-defense-connector.md).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Ny användarupplevelse för företagsportalappen för Android <!--621622-->
 

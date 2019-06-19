@@ -4,10 +4,10 @@ description: Microsoft 365 Enterprise innehåller Microsoft Intune. Se hur Intun
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 audience: ITPro
-ms.service: ''
+ms.service: microsoft-intune
 ms.technology: ''
 ms.custom: intune
 ms.assetid: 0649d310-43a7-4b01-85d2-da255d03e1da
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 452cb8e4163b82d699347a33fd8dfda9c792b6fc
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5614f0657175658c1a8442d650e16c8550c1ac1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050262"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043840"
 ---
 # <a name="what-is-device-management"></a>Vad är enhetshantering? 
 
@@ -61,7 +61,7 @@ En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhe
     - Aktivera [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) och söka efter misstänkt aktivitet i filer och appar på mobila enheter. 
     - Använd [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) för att förhindra säkerhetsintrång på mobila enheter. Och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användares åtkomst till företagets resurser.
 
-- **Villkorsstyrd åtkomst** är en funktion i Azure Active Directory som integreras smidigt med Intune. Med hjälp av [villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access) kan du se till att endast kompatibla enheter får åtkomst till e-post, SharePoint och andra appar. 
+- **Villkorsstyrd åtkomst** är en funktion i Azure Active Directory som integreras smidigt med Intune. Med hjälp av [Villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access) kan du se till att endast kompatibla enheter får åtkomst till e-post, SharePoint och andra appar. 
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Välj den enhetshanteringslösning som passar dig
 

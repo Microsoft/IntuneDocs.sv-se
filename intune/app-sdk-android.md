@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5808a4b81fcc66d37e78c50cb5bcd2ae7bbe44e2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c929965b79d9ee35fcc1094b4ad18cff6d73d80d
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049609"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045524"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -732,7 +732,7 @@ Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/acti
 4. Testa att allt är korrekt konfigurerat genom att aktivera [enhetsbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) på [Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) och bekräfta
     - att inloggningen i din app begär installation och registrering av Intune-företagsportalen
     - att inloggningen till appen fungerar korrekt efter registreringen.
-5. När din app har skickat Intune APP SDK-integrering till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
+5. När din app har skickat Intune APP SDK-integrering till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad Villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
 6. När din app har lagts till i listan med godkända appar bekräftar du detta genom att [konfigurera appbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) och kontrollera att inloggningen till din app fungerar korrekt.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Appskyddsprincip utan enhetsregistrering

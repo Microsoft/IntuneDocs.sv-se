@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30c0e5af6d7ff0467383294c071d0ffdb96c5dc1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9d3e74244315b7345a632a9ecd2bf631a134e5ab
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041841"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045035"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Skydda Office 365 Exchange Online utan krav på enhetshantering
 
@@ -32,11 +32,11 @@ Du kan om du vill konfigurera ett system för enhetshantering. Den här typen av
 
 ## <a name="action-plan"></a>Åtgärdsplan
 
-1. [Läs om villkorlig åtkomst](conditional-access.md). 
-2. [Läs om appbaserad villkorlig åtkomst](app-based-conditional-access-intune.md).
-3. [Konfigurera appbaserade principer för villkorlig åtkomst för Exchange Online](app-based-conditional-access-intune-create.md).
+1. [Läs om Villkorsstyrd åtkomst](conditional-access.md). 
+2. [Läs om appbaserad Villkorsstyrd åtkomst](app-based-conditional-access-intune.md).
+3. [Konfigurera appbaserade principer för Villkorsstyrd åtkomst för Exchange Online](app-based-conditional-access-intune-create.md).
 4. [Blockera appar som inte kan hanteras](app-modern-authentication-block.md), särskilt appar som inte använder Azure Active Directory Authentication Library (ADAL).
-5. (Valfritt) [Konfigurera appbaserade principer för villkorlig åtkomst för SharePoint Online](app-based-conditional-access-intune-create.md). Dessa principer blockerar åtkomst till företagsdata från appar som inte kan hanteras och skyddas. Principerna kan även begränsa åtkomst via SharePoint Mobile. 
+5. (Valfritt) [Konfigurera appbaserade principer för Villkorsstyrd åtkomst för SharePoint Online](app-based-conditional-access-intune-create.md). Dessa principer blockerar åtkomst till företagsdata från appar som inte kan hanteras och skyddas. Principerna kan även begränsa åtkomst via SharePoint Mobile. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Information till anställda och studenter
 
@@ -45,9 +45,9 @@ Du kan om du vill konfigurera ett system för enhetshantering. Den här typen av
 
 ## <a name="next-steps"></a>Nästa steg
 
-Du har använt appbaserad villkorlig åtkomst för att öka säkerheten för företagets data. Som en del av nästa steg kan du lära dig mer om andra sätt att öka skyddet av företagets data, inklusive: 
+Du har använt appbaserad Villkorsstyrd åtkomst för att öka säkerheten för företagets data. Som en del av nästa steg kan du lära dig mer om andra sätt att öka skyddet av företagets data, inklusive: 
 
-* Ställ in [villkorlig tillgång baserad på enhetsefterlevnad, enhetsrisk, plats och användarattribut i Active Directory och Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
+* Ställ in [Villkorsstyrd åtkomst baserad på enhetsefterlevnad, enhetsrisk, plats och användarattribut i Active Directory och Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Konfigurera appskyddsprinciper som hjälper dig att skydda företagets data mot avsiktligt och oavsiktligt dataläckage. 
 * Använd Azure Information Protection för att skydda företagets data utanför nätverket. 
 

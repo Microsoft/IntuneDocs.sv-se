@@ -1,7 +1,7 @@
 ---
 title: Felsöka villkorlig åtkomst
 titleSuffix: Microsoft Intune
-description: Vad du kan göra om användarna inte lyckas komma åt resurser via villkorlig åtkomst i Intune.
+description: Vad du kan göra om dina användare inte lyckas komma åt resurser via Villkorsstyrd åtkomst i Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5aeae0d4256232d01c7e6171b10159a130b513
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044677"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043910"
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
-Du kan skydda åtkomsten till Office 365-tjänster som Exchange Online, SharePoint Online, Skype för Business Online och Exchange On-Premises och andra tjänster med hjälp av Intune och villkorlig åtkomst. Med den här funktionen kan du se till att åtkomsten till företagsresurser är begränsad till enheter som har registrerats med Intune och som är kompatibla med reglerna för villkorlig åtkomst som du anger i Intune-administratörskonsolen eller i Azure Active Directory. Den här artikeln beskriver vad du gör om dina användare inte kan komma åt resurser som skyddas med villkorlig åtkomst, eller om användare kan komma åt skyddade resurser men ska blockeras.
+Du kan skydda åtkomsten till Office 365-tjänster som Exchange Online, SharePoint Online, Skype för Business Online och Exchange On-Premises och andra tjänster med hjälp av Intune och Villkorsstyrd åtkomst. Med den här funktionen kan du se till att åtkomsten till företagsresurser är begränsad till enheter som har registrerats med Intune och som är kompatibla med reglerna för Villkorsstyrd åtkomst som du anger i Intune-administratörskonsolen eller i Azure Active Directory. Den här artikeln beskriver vad du gör om dina användare inte kan komma åt resurser som skyddas med Villkorsstyd åtkomst, eller om användare kan komma åt skyddade resurser men ska blockeras.
 
-## <a name="requirements-for-conditional-access"></a>Krav för villkorlig åtkomst
+## <a name="requirements-for-conditional-access"></a>Krav för Villkorsstyrd åtkomst
 
-Följande krav måste uppfyllas för att villkorlig åtkomst ska fungera:
+Följande krav måste uppfyllas för att Villkorsstyrd åtkomst ska fungera:
 
 - Enheten måste vara registrerad i och hanteras av Intune.
 - Både användaren och enheten måste vara kompatibla med de tilldelade efterlevnadsprinciperna för Intune.
@@ -54,7 +54,7 @@ Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapp
 - Vissa Android-enheter kan se ut att vara krypterade, men företagsportalappen identifierar dessa enheter som okrypterade, och markerar dem därför som inkompatibla. I det här scenariot ser användarna ett meddelande i företagsportalappen som ber dem att ange ett startlösenord för enheten. När du har tryckt på meddelandet och bekräftat den befintliga PIN-koden eller det befintliga lösenordet väljer du alternativet **Kräv PIN-kod för att starta enheten** på skärmen **Säker start** och trycker sedan på knappen **Kontrollera efterlevnad** för enheten från företagsportalappen. Enheten bör nu identifieras som krypterad. 
   > [!NOTE]
   > Vissa enhetstillverkare krypterar sina enheter med en standard-PIN-kod i stället för en PIN-kod som användaren anger. Intune betraktar kryptering med standard-PIN-koden som osäker och markerar dessa enheter som inkompatibla tills användaren ställer in en annan PIN-kod.
-- En Android-enhet som är registrerad och kompatibel kanske fortfarande blockeras och får ett karantänmeddelande första gången den försöker komma åt företagsresurser. Om detta inträffar kontrollerar du att företagsportalappen inte körs och klickar sedan på länken **Kom igång nu** i karantänmeddelandet för att starta en utvärdering. Detta är endast nödvändigt första gången villkorlig åtkomst aktiveras.
+- En Android-enhet som är registrerad och kompatibel kanske fortfarande blockeras och får ett karantänmeddelande första gången den försöker komma åt företagsresurser. Om detta inträffar kontrollerar du att företagsportalappen inte körs och klickar sedan på länken **Kom igång nu** i karantänmeddelandet för att starta en utvärdering. Detta är endast nödvändigt första gången Villkorsstyrd åtkomst aktiveras.
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Enheter blockeras och inget karantänmeddelande tas emot via e-post
 
@@ -64,10 +64,10 @@ Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapp
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Enheter är inkompatibla men användarna blockeras inte
 
-- För Windows-datorer blockerar villkorlig åtkomst endast den inbyggda e-postappen, Office 2013 med modern autentisering, eller Office 2016. För att blockera tidigare versioner av Outlook eller alla e-postappar på Windows-datorer krävs konfiguration av Enhetsregistrering i AAD och Active Directory Federation Services (AD FS), som beskrivs i [Konfigurera SharePoint Online och Exchange Online för villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
+- För Windows-datorer blockerar Villkorsstyrd åtkomst endast den inbyggda e-postappen, Office 2013 med modern autentisering, eller Office 2016. För att blockera tidigare versioner av Outlook eller alla e-postappar på Windows-datorer krävs konfiguration av Enhetsregistrering i AAD och Active Directory Federation Services (AD FS), som beskrivs i [Konfigurera SharePoint Online och Exchange Online för Villkorsstyrd åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
 - Om enheten rensas selektivt eller dras tillbaka från Intune kan den fortfarande ha åtkomst flera timmar efter att den dragits tillbaka. Det beror på att Exchange cachelagrar åtkomsträttigheter i 6 timmar. Överväg andra sätt att skydda data på pensionerade enheter i det här scenariot.
-- Surface Hub-enheter stöder villkorlig åtkomst. Dock måste du distribuera efterlevnadsprincipen till enhetsgrupper (inte användargrupper) för korrekt utvärdering.
-- Kontrollera tilldelningarna för dina efterlevnadsprinciper och principer för villkorlig åtkomst. Om en användare inte finns i gruppen som tilldelats principerna, eller i en grupp som undantas, kommer användaren inte att blockeras. Kompatibiliteten kontrolleras endast för enheter som hör till användare i en tilldelad grupp.
+- Surface Hub-enheter stöder Villkorsstyrd åtkomst. Dock måste du distribuera efterlevnadsprincipen till enhetsgrupper (inte användargrupper) för korrekt utvärdering.
+- Kontrollera tilldelningarna för dina efterlevnadsprinciper och principer för Villkorsstyrd åtkomst. Om en användare inte finns i gruppen som tilldelats principerna, eller i en grupp som undantas, kommer användaren inte att blockeras. Kompatibiliteten kontrolleras endast för enheter som hör till användare i en tilldelad grupp.
 
 ## <a name="noncompliant-device-is-not-blocked"></a>Inkompatibel enhet blockeras inte
 

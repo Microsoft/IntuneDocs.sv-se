@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeb70727a187a769e56a9cfd517ecd7b583ba1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f13b78e05b9f0b94d98677004c7059f1acaa80f9
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042474"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045718"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Intune
 
@@ -49,7 +49,7 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerad** låter användare komma åt enheten utan att ange ett lösenord.
 
     > [!NOTE]
-    > Samsung Knox-enheter kräver automatiskt en fyrsiffrig PIN-kod under MDM-registreringen. Android-enheter kan automatiskt kräva att en PIN-kod är kompatibel med villkorlig åtkomst.
+    > Samsung Knox-enheter kräver automatiskt en fyrsiffrig PIN-kod under MDM-registreringen. Android-enheter kan automatiskt kräva att en PIN-kod är kompatibel med villkorsstyrd åtkomst.
 
 - **Minsta längd på lösenord**: Ange den minsta längd på lösenord som en användare måste ange (mellan 4 och 16 tecken).
 - **Maximalt antal minuter av inaktivitet innan skärmen låses**: Ange det maximala antal minuter av inaktivitet som ska tillåtas på enheten innan skärmen låses. En slutanvändare kan inte ange ett tidsvärde på en enhet som är större än den konfigurerade tiden i profilen. En slutanvändare kan dock ange ett lägre värde. Om profilen t.ex. är inställd på 15 minuter, kan en slutanvändare ange värdet till 5 minuter. En slutanvändare kan inte ange värdet till 30 minuter. 

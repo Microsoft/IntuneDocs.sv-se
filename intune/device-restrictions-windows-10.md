@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
-ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
-ms.translationtype: MTE75
+ms.openlocfilehash: 357d1619fdf051d07ea47c84a79b2aebd1523460
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354227"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041122"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -430,9 +430,9 @@ De här inställningarna använder [CSP för DeviceLock-princip](https://docs.mi
     > [!IMPORTANT]
     > När lösenordskravet ändras på ett Windows-skrivbord påverkas användarna nästa gång de loggar in, eftersom det är då enheten går från inaktiv till aktiv. Användare med lösenord som uppfyller kravet uppmanas ändå att ändra sina lösenord.
     
-  - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som innan enheten rensas, från 1 till 11. `0` (noll) kan inaktivera funktionen för rensning av enheten.
+  - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som tillåts innan enheten kan rensas, upp till 11. Giltigt tal som du anger beror på versionen. [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) visar en lista över värdena som stöds. `0` (noll) kan inaktivera funktionen för rensning av enheten.
 
-    Den här inställningen har olika effekt beroende på utgåva. Specifik information finns i [CSP för DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
+    Den här inställningen har även olika effekt beroende på version. Specifik information om den här inställningen finns i [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Maximalt antal minuter av inaktivitet innan skärmen låses**: Ange hur lång tid en enhet måste vara i viloläge innan skärmen låses.
   - **Lösenordets giltighetstid (dagar)** : Ange det antal dagar efter vilket enhetens lösenord måste ändras, 1 till 365. Ange till exempel `90` om lösenordet ska upphöra efter 90 dagar.

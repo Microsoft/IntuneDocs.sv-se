@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5672963c6737d51e720a8b1597dd90318f33a05
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: e3b0aff29db5402de7e91282e74cd6d69a103545
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506860"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045820"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -89,9 +89,9 @@ Du behöver en av följande utvecklarguider för att hjälpa dig att integrera I
 
 
 
-## <a name="enable-your-ios-or-android-app-for-app-based-conditional-access"></a>Aktivera din iOS- eller Android-app för app-baserad villkorlig åtkomst
+## <a name="enable-your-ios-or-android-app-for-app-based-conditional-access"></a>Aktivera din iOS- eller Android-app för appbaserad Villkorsstyrd åtkomst
  
- Förutom att aktivera din app för app-skyddsprincip krävs följande för att din app ska fungera korrekt med Azure ActiveDirectory (AAD) app-baserad villkorlig åtkomst:
+ Förutom att aktivera din app för appskyddsprincip, krävs följande för att din app ska fungera korrekt med Azure Active Directory (AAD) appbaserad Villkorsstyrd åtkomst:
  
  * Appen har byggts med [Autentiseringsbibliotek för Azure ActiveDirectory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) och aktiverats för AAD broker-autentisering.
  
