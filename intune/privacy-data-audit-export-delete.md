@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87bd539199ec4f8b43f0679b251bd550cd837651
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 659fdb9b67b941a27cef5a3680537f3eeb3bbbeb
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041311"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031681"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Granska, exportera eller ta bort personliga data i Intune
 
@@ -58,13 +58,13 @@ Det finns tre sätt att ta bort personliga data från Intune-hantering:
 
 ### <a name="delete-a-user-from-intune"></a>Ta bort en användare från Intune
 
-För att en användares personliga data ska kunna tas bort från Intune måste en administratör [ta bort användaren från Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
+För att en användares personliga data ska kunna tas bort från Intune måste en administratör [ta bort användaren från Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
 
 ### <a name="reset-device-to-factory-settings"></a>Återställa enhet till fabriksinställningarna
 Återställning till fabriksinställningarna återställer alla företagsdata, personliga data och inställningar till de ursprungliga fabriksinställningarna. Det är användbart för att ge en enhet till en ny medarbetare. Användarfiler, användarinstallerade program och andra inställningar än standardinställningarna tas bort, och dessa data tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
 
 ### <a name="user-self-removal-from-intune-management"></a>Självborttagning av användare från Intune-hantering
-Användare kan ta bort sin personliga [Android-, Apple- eller Windows-enhet](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android.md) från Intune-hantering utan hjälp från administratör.   
+Användare kan ta bort sin personliga [Android-, Apple- eller Windows-enhet](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android) från Intune-hantering utan hjälp från administratör.   
 
 ### <a name="retire"></a>Pensionera
 Åtgärden **Dra tillbaka** tar bort Intune-etablerade data, till exempel företagsprogram, data om appar som Intune hanterar, principinställningar och e-postprofiler som etablerats via Intune. Med den här åtgärden lämnas användarens personliga data kvar på enheten.
@@ -78,7 +78,7 @@ När du har en hybrid-MDM-miljö (Intune integrerat med Configuration Manager) m
 
 1. Ta bort användaren från din lokala Azure Active Directory (AD). Detta förhindrar att användaren synkroniseras till Azure AD och identifieras av Configuration Manager-identifiering. 
 2. Ta bort användaren från Configuration Manager-konsolen för att ta bort användaren och associerade data från Configuration Manager. I konsolen går du till **Tillgångar och efterlevnad** > **Användare**, högerklickar på användaren för att ta bort och klickar på **Ta bort**.
-3. [Ta bort användaren från AAD](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad), som tar bort användaren och associerade data från både Azure Active Directory och Intune på samma gång. När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
+3. [Ta bort användaren från AAD](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), som tar bort användaren och associerade data från både Azure Active Directory och Intune på samma gång. När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
 
 > [!Important]
 >Registrering av nya hybrid-MDM-kunder är nu inaktuell. Mer information finns i blogginlägget [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).

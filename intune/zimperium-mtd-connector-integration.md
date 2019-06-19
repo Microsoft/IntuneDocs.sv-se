@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ddd08baa99ebf7d6e7701d8345e42a72f0dbd57
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: db7f008e67c0523a373da24dd0a04f3556d9dd4c
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046558"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031387"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrera Zimperium med Intune
 
@@ -31,7 +31,7 @@ Slutför följande steg för att integrera Zimperium Mobile Threat Defense-lösn
 ## <a name="before-you-begin"></a>Innan du börjar
 
 > [!NOTE]
-> Följande steg ska utföras i  [Zimperiums MTD-konsol](https://sso.zimperium.com/signon/aad/).
+> Följande steg ska utföras i  [Zimperiums MTD-konsol](https://www.zimperium.com/platform).
 
 Kontrollera att du har följande prenumeration och autentiseringsuppgifter innan du börjar integrera Zimperium med Intune:
 
@@ -66,7 +66,7 @@ Mer information om medgivande och Azure Active Directory-program finns i [Begär
 
 ## <a name="to-set-up-zimperium-integration"></a>Konfigurera Zimperium-integration
 
-1.  Gå till [Zimperium MTD-konsolen](https://sso.zimperium.com/signon/aad/) och logga in med dina autentiseringsuppgifter. Om du vill konfigurera Zimperium-integration, måste du logga in som en Azure Active Directory-användare med en global administratörsroll. Denna engångsåtgärd använder den globala administratörsbehörigheten till att bevilja behörighet i din organisation för Zimperium-appar som ska kommunicera med Intune. 
+1.  Gå till [Zimperium MTD-konsolen](https://www.zimperium.com/platform) och logga in med dina autentiseringsuppgifter. Om du vill konfigurera Zimperium-integration, måste du logga in som en Azure Active Directory-användare med en global administratörsroll. Denna engångsåtgärd använder den globala administratörsbehörigheten till att bevilja behörighet i din organisation för Zimperium-appar som ska kommunicera med Intune. 
 
 2.  Välj **Hantering** på den vänstra menyn.
 
