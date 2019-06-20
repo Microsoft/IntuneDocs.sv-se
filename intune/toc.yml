@@ -50,6 +50,8 @@
       href: tutorial-use-autopilot-enroll-devices.md
     - name: Registrera iOS-enheter med DEP
       href: tutorial-use-device-enrollment-program-enroll-ios.md
+    - name: Konfigurera Slack för att använda Intune
+      href: tutorial-configure-slack-enterprise-grid.md
 - name: Begrepp
   items:
     - name: Vad är enhetshantering?
@@ -662,10 +664,6 @@
               href: troubleshoot-policies-in-microsoft-intune.md
             - name: 'E-postprofil: problem och lösningar'
               href: troubleshoot-email-profiles-in-microsoft-intune.md
-            - name: Felsöka programuppdateringar
-              href: troubleshoot-software-updates-in-microsoft-intune.md
-            - name: Vanliga fel med Endpoint Protection
-              href: troubleshoot-endpoint-protection-in-microsoft-intune.md
             - name: Felsöka villkorlig åtkomst
               href: troubleshoot-conditional-access.md
             - name: Felsöka Exchange Connector
@@ -968,6 +966,10 @@
               href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
             - name: Lösa principkonflikter
               href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
+            - name: Felsöka programuppdateringar
+              href: troubleshoot-software-updates-in-microsoft-intune.md
+            - name: Vanliga fel med Endpoint Protection
+              href: troubleshoot-endpoint-protection-in-microsoft-intune.md
     - name: Guider för implementeringsscenarier
       items:
         - name: Skydda Exchange Online
