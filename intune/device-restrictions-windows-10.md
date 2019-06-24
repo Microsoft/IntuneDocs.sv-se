@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 06/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 357d1619fdf051d07ea47c84a79b2aebd1523460
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
-ms.translationtype: HT
+ms.openlocfilehash: 9af61c89b90a7f31654cd43a3cfc457b27e9700f
+ms.sourcegitcommit: 86aa5fefcba1e71841696b1a5e3ca5bffb1a9528
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041122"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67234985"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -420,7 +420,8 @@ Klicka på **OK** för att spara ändringarna.
 
 De här inställningarna använder [CSP för DeviceLock-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), som även visar de Windows-versioner som stöds.
 
-- **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) tillåter åtkomst till enheten utan lösenord.
+- **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) tillåter åtkomst till enheten utan lösenord. Gäller för lokala konton. Lösenord för domänen vara konfigurerade med Active Directory (AD) och Azure AD.
+
   - **Krav på lösenordstyp**: Välj typ av lösenord. Alternativen är:
     - **Inte konfigurerat**: Lösenordet kan innehålla siffror och bokstäver.
     - **Numeriskt**: Lösenordet får bara innehålla siffror.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58095612d6e76d4a1cb633e69260267dcfd9999
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 837442f93bbac2c5eb19b3c433c91f91aa38a17e
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749918"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197536"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -83,7 +83,7 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
 
   **Standard**: Ja
 
-## <a name="attach-surface-reduction"></a>Minska attackytan  
+## <a name="attack-surface-reduction"></a>Minska attackytan  
 
 - **Office apps launch child process type** (Office-appar startar underordnad processtyp)  
   [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera*, kommer Office-appar inte att kunna skapa underordnade processer. Office-appar inkluderar Word, Excel, PowerPoint, OneNote och Access. Att skapa en underordnad process är ett typiskt beteende i skadlig kod, särskilt vid makrobaserade attacker som försöker använda Office-appar för att starta eller hämta skadliga körbara filer.  

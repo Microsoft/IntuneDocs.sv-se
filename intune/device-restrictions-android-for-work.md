@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 06/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c44f18d19172498f17f2a3f78ea47bad1d0f3fa7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fc91fc685c28beff38dc395dd83b60e99343af57
+ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048111"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263680"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -56,7 +56,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 - **Överför data via NFC**: Välj **Blockera** för att förhindra användningen av NFC-teknik (Near Field Communication) vid överföring av data från appar. **Inte konfigurerad** tillåter NFC för att dela data mellan enheter.
 - **Felsökningsfunktioner**: Välj **Tillåt** för att tillåta användare att använda felsökningsfunktioner på enheten. **Inte konfigurerad** förhindrar användare från att använda felsökningsfunktioner på enheten.
 - **Mikrofonjustering**: Välj **Blockera** för att förhindra användare att slå på ljudet på mikrofonen och justera dess volym. **Inte konfigurerad** tillåter användaren att använda och justera mikrofonvolymen på enheten.
-- **E-post för skydd mot fabriksåterställning**: Välj**e-postadresser för Google-konton**. Ange e-postadresserna för enhetsadministratörer som kan låsa upp enheten när den har rensats. Se till att avgränsa e-postadresser med semikolon, till exempel `admin1@gmail.com;admin2@gmail.com`. Om en e-postadress inte anges kan vem som helst låsa upp enheten efter den har återställts till fabriksinställningarna.
+- **E-post för skydd mot fabriksåterställning**: Välj**e-postadresser för Google-konton**. Ange e-postadresserna för enhetsadministratörer som kan låsa upp enheten när den har rensats. Se till att avgränsa e-postadresser med semikolon, till exempel `admin1@gmail.com;admin2@gmail.com`. Om en e-postadress inte anges kan vem som helst låsa upp enheten efter den har återställts till fabriksinställningarna. Dessa e-postmeddelanden gäller endast när en icke-användare fabriksåterställning kördes, till exempel körs som en fabriksåterställning med hjälp av menyn recovery.
 - **Nätverkshjälp**: Välj **Aktivera** för att tillåta användare att aktivera funktionen nätverkshjälp. Om en nätverksanslutning inte skapats när enheten startas kommer nätverkshjälpen tillfälligt be om att ansluta till ett nätverk och uppdatera enhetsprincipen. När principen har tillämpats glöms det tillfälliga nätverket och starten av enheten fortsätter. Funktionen ansluter enheten till ett nätverk om:
   - Den förra principen saknar ett lämpligt nätverk.
   - Enheten startar i en app i låsläget.
@@ -100,6 +100,8 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   >   - [Tilldelad till den enhetsgrupp](apps-deploy.md) som skapats för dina dedikerade enheter
   > 
   > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterad startskärm** läggs till som en klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i **Hanterad startskärm**-appen. 
+  >
+  > När du använder helskärmsläge för flera appar hanteras Start skärm, fungerar Nummersändaren/phone-appar inte korrekt. 
 
   - Välj **Lägg till** och välj appar från listan.
 

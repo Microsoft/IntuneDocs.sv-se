@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 06/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef2db158e0572c1eec056a1d6e33b4b97aea77a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9d6366034af09acdbecdc0cb0e670f6d57766b35
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047024"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197517"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Enhetsinställningar i Windows Holographic for Business för att köra helskärmsläge i Intune
 
@@ -64,7 +64,7 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
 - **Program**: Lägg till appar som ska köras på kioskenheten. Kom ihåg att du kan lägga till flera appar.
 
-  - **Lägg till Store-appar**: Välj en befintlig app som du har lagt till via [Klientappar](apps-add.md). Om du inte har några appar i listan kan du hämta appar och [lägga till dem i Intune](store-apps-windows.md).
+  - **Lägg till Store-appar**: Välj en befintlig app som du lagt till eller distribueras till Intune som [Klientappar](apps-add.md), inklusive LOB-appar. Om du inte har några appar som visas kan Intune stöder många [apptyper](apps-add.md) som du [lägga till i Intune](store-apps-windows.md).
   - **Lägg till Win32-app**: Stöds inte i Windows Holographic for Business.
   - **Lägg till via AUMID**: Använd det här alternativet för att lägga till inkorgens Windows-appar. Ange följande egenskaper: 
 
