@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e4d5c23d598641256c196cd7217797f87f99d1c
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: bb1ddcadcac1ec9b4730a5dcd66abca111d80196
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374136"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251202"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Skapa en säkerhetsbaslinje för Windows 10 i Intune
 
@@ -70,7 +70,7 @@ När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=20909) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)** . Det finns en lista med tillgängliga baslinjer. 
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)** . Det finns en lista med tillgängliga baslinjer. 
 
     ![Välj en säkerhetsbaslinje att konfigurera](./media/security-baselines/available-baselines.png)
 
