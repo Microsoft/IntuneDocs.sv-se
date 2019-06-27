@@ -157,6 +157,7 @@
 ### [Återställa en enhet](reset-device-cp-app.md)
 
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
+### [Hantera appar](manage-apps-cpweb.md)  
 ### [Fjärrlåsa en enhet](remote-lock-your-device-cpwebsite.md)  
 ### [Byta namn på en enhet](rename-your-device-cpwebsite.md)  
 ### [Ta bort en enhet](remove-your-device-cpwebsite.md)  
