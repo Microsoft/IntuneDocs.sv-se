@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9af61c89b90a7f31654cd43a3cfc457b27e9700f
-ms.sourcegitcommit: 86aa5fefcba1e71841696b1a5e3ca5bffb1a9528
+ms.openlocfilehash: 30e869cbb0311e1855dd4dc09978505ad539970e
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67234985"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403079"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -57,7 +57,16 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 - **Installera appdata på systemvolym**: **Blockera** hindrar appar från att lagra data på enhetens systemvolym. **Inte konfigurerat** (standard) tillåter appar att lagra data på systemdiskvolymen.
 - **Installera appar på systemenhet**: **Blockera** hindrar appar från att installera på enhetens systemenhet. **Inte konfigurerat** (standard) tillåter appar att installera på systemenheten.
 - **Spel-DVR** (endast stationär dator): **blockera** inaktiverar Windows-inspelning och -sändning av spel. **Inte konfigurerat** (standard) tillåter inspelning och sändning av spel.
-- **Endast appar från butik**: **Kräv** tvingar slutanvändare att endast installera appar från Windows App Store. **Inte konfigurerat** tillåter slutanvändare att installera appar från andra platser än Windows App Store.
+- **Appar från store endast**: den här inställningen avgör användarens upplevelse när användare installerar appar från andra platser än Microsoft Store. Alternativen är:
+
+  - **Inte konfigurerad** (standard): innebär att slutanvändarna att installera appar från andra platser än Microsoft Store, inklusive appar som definierats i andra inställningar.  
+  - **Var som helst**: inaktiverar apprekommendationer, så att användare kan installera appar från valfri plats.  
+  - **Store endast**: tvingar slutanvändare installera endast appar från Microsoft Store.
+  - **Rekommendationer**: när du installerar en app från webben som är tillgänglig i Microsoft Store-användare ser ett meddelande som rekommenderar de ladda ned det från store.  
+  - **Föredrar Store**: varnar användare när de installerar appar från andra platser än Microsoft Store.
+
+  [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+
 - **Framtvinga omstart av appar vid uppdateringsfel**: när en app är i användning så kanske den inte uppdateras. Använd den här inställningen för att tvinga en app att starta om. **Inte konfigurerat** (standard) tvingar inte appar att starta om. **Kräv** låter administratörer tvinga en omstart vid ett specifikt datum och tid eller enligt ett återkommande schema. När det är angett till **Kräv** anger du även:
 
   - **Startdatum/-tid**: Välj datum och tid när apparna ska startas om.

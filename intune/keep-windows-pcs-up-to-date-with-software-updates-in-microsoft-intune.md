@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56bbe6d8af43693814a90351acb2f400cff92025
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3cc84d8215a841b9ff8a70a6b6307d3452696cb0
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047000"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403008"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
+
+> [!NOTE]
+> Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran. Om du vill hantera uppdateringar för Windows-datorer som registrerats som mobila enheter, se [hantera programuppdateringar i Intune](windows-update-for-business-configure.md).
 
 Microsoft Intune hjälper dig att skydda dina hanterade datorer på flera sätt, t.ex. med hantering av programvaruuppdateringar som håller datorerna uppdaterade genom att se till att de senaste korrigeringarna och programvaruuppdateringarna snabbt installeras.
 

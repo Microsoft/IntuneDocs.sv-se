@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6c7de15c3839548e8edf5056579eab1c0c0751a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 59432baf0e8120cc7280b3486c4c25388a4248b4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045262"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403766"
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Lösa konflikter mellan grupprincipobjekt och Microsoft Intune-principer
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
+
+> [!NOTE]
+> Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran.
 
 Intune använder principer som hjälper dig att hantera inställningarna på Windows PC-datorer. Du använder t.ex. en princip för att kontrollera PC-datorernas inställningar för Windows-brandväggen. Många Intune-inställningar påminner om de inställningar som du kan konfigurera med Grupprincip i Windows. Emellanåt kan det dock hända att de två metoderna hamnar i konflikt med varandra.
 

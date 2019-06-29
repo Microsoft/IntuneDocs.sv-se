@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57a14e1e3c4caea570667096fec71cecf2d88ddf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045180"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403807"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT
 
@@ -42,8 +42,10 @@ Anta exempelvis att en regional kontorsadministratör i Seattle tilldelas rollen
 
     ![Skärmbild av skapande av en omfångstagg.](./media/scope-tags/create-scope-tag.png)
 
-2. Ange ett **namn** och en **beskrivning**.
-3. Välj **Skapa**.
+3. Om du vill att alla enheter i specifika grupper, Välj **tilldelas alla enheter i valda grupper omfångstaggen**.
+    1. I den **Välj grupper att ta** väljer du de grupper som innehåller de enheter som du vill tilldela den här omfångstaggen till.
+    2. Välj **Välj**.
+4. Välj **Skapa**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Tilldela en omfångstagg till en roll
 
