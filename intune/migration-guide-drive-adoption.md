@@ -1,7 +1,7 @@
 ---
 title: Genomför slutanvändarinförande med villkorlig åtkomst
 titleSuffix: Microsoft Intune
-description: Läs om att använda villkorlig åtkomst till enhetsregistreringen i Microsoft Intune.
+description: Lär dig mer om att använda villkorlig åtkomst för att genomföra registrering i Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -16,16 +16,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a37d6dac24049a10b5abaed41a44c0c391b095e6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2bedaf279d65ee1ed7f8dda4e8d866fb848bade7
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050482"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044583"
 ---
-# <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Genomför slutanvändarinförandet med villkorlig åtkomst i Microsoft Intune
+# <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Genomföra slutanvändarinförande med villkorlig åtkomst i Microsoft Intune
 
-Att aktivera funktioner för villkorlig åtkomst med Intune, t.ex. blockering av e-post för oregistrerade enheter, kan vara positivt i registrerings- och efterlevnadshänseende, men det krävs inte för att migreringen ska lyckas. Dina migreringsmål och säkerhetskrav ska ge önskat resultat.
+Aktivering av funktioner för villkorlig åtkomst med Intune, t.ex. blockering av e-post för oregistrerade enheter, kan vara positivt i registrerings- och efterlevnadshänseende, men krävs inte för att migreringen ska lyckas. Dina migreringsmål och säkerhetskrav ska ge önskat resultat.
 
 ## <a name="migration-campaign-with-conditional-access"></a>Migreringskampanj med villkorlig åtkomst
 
@@ -35,7 +35,7 @@ Detta är en vanlig metod när man vill förbättra en migreringskampanj med vil
 
 2.  När användarna migrerar kan du ta bort dem från gruppen med användare som undantagits från villkorlig åtkomst.
 
-3.  När migreringen är klar kan du konfigurera alla principer för villkorlig åtkomst så att de blockerar som standard såvida inte Intune tillåter åtkomst.
+3.  När migreringen är klar, kan du konfigurera alla principer för villkorlig åtkomst så att de blockerar som standard, såvida inte Intune tillåter åtkomst.
 
 ### <a name="advantages"></a>Fördelar
 
@@ -56,11 +56,11 @@ Det här är ett sätt av flera. Du kan välja en enklare process som skjuter up
 
 ## <a name="task-list-for-conditional-access"></a>Uppgiftslista för villkorlig åtkomst
 
-### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Uppgift 1: Bestäm hur du tänker implementera villkorsstyrd åtkomst
+### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Uppgift 1: Bestäm hur du tänker implementera villkorlig åtkomst
 
-[Vanliga sätt att använda villkorlig åtkomst på](conditional-access-intune-common-ways-use.md).
+[Vanliga sätt för att använda villkorlig åtkomst](conditional-access-intune-common-ways-use.md).
 
-### <a name="task-2-set-up-intune-conditional-access"></a>Uppgift 2: Konfigurera villkorsstyrd åtkomst för Intune
+### <a name="task-2-set-up-intune-conditional-access"></a>Uppgift 2: Konfigurera villkorlig åtkomst för Intune
 
 Välj något av följande alternativ:
 

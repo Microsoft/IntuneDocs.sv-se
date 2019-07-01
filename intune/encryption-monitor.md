@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d90bc17d01a76c9c566210edc3bdc265511fa16d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
+ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047815"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316933"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Övervaka BitLocker och enhetskryptering  
 Intune ger en central plats för att identifiera krypteringsstatus för dina Windows 10-enheter och hjälper dig att komma åt viktig information för BitLocker från dina enheter som finns i Azure Active Directory (AD Azure).  
@@ -51,7 +51,7 @@ Rapporten visar **enhetsnamnet** för dina Windows 10-enheter och övergripande 
   - **Ej redo**: Enheten har inte fullständiga krypteringsfunktioner, men har fortfarande stöd för kryptering. Exempelvis kan vara enheten vara manuellt krypterad av en användare eller via en grupprincip som kan anges till att tillåta kryptering utan en TMP.
   - **Ej tillämpligt**: Det finns inte tillräckligt med information för att klassificera den här enheten.  
 
-- **Krypteringsstatus** – avser huruvida OS-enheten är krypterad.  
+- **Krypteringsstatus** – avser huruvida OS-enheten är krypterad. 
 
 
 ### <a name="device-encryption-status"></a>Enhetskrypteringsstatus
@@ -60,7 +60,7 @@ När du väljer en enhet visar Intune fönstret **Enhetskrypteringsstatus**.
 Det här fönstret innehåller följande information:  
 - **Enhetsnamn** – namnet på den enhet som du visar.  
 - **Krypteringsberedskap** – en utvärdering av enhetens beredskap att stödja BitLocker-kryptering. En enhet kan ha krypteringsstatusen *Krypterad* även om dess krypteringsberedskap är *Ej redo* eftersom den saknar en TPM. (Mer information finns i Krypteringsberedskap i föregående avsnitt.)
-- **Krypteringsstatus** – avser huruvida OS-enheten är krypterad.  
+- **Krypteringsstatus** – avser huruvida OS-enheten är krypterad. Det kan ta upp till 24 timmar innan Intune börjar rapportera en enhets krypteringsstatus eller en ändring av denna status.  
 - **Profiler** – en lista över de profiler för *enhetskonfiguration* som gäller för den här enheten, däribland följande profiltyp och inställningar:  
   - Profiltyp = *Slutpunktsskydd*  
   - Inställningar > Windows-kryptering > Kryptera enheter = *Krävs*  
@@ -95,7 +95,7 @@ Det här fönstret innehåller följande information:
 
 ## <a name="bitlocker-recovery-keys"></a>BitLocker-återställningsnycklar
 Intune ger åtkomst till Azure AD-bladet för BitLocker så att du kan visa BitLocker-nyckel-ID:n och återställningsnycklar för dina Windows 10-enheter från Intune-portalen.  För att enheten ska vara nåbar måste dess nycklar vara deponerade till Azure AD. 
-1. Logga in på [Intune](https://aka.ms/intuneportal), gå till **Enheter** följt av *Hantera* och välj **Alla enheter**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), gå till **Enheter** följt av *Hantera* och välj **Alla enheter**.
 2. Välj en enhet i listan. Under *Övervaka* väljer du sedan **Återställningsnycklar**.  
   
 När nycklar är tillgängliga i Azure AD finns följande information tillgänglig:

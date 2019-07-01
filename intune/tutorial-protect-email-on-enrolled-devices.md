@@ -1,7 +1,7 @@
 ---
 title: Självstudie – Skydda e-post i Exchange Online på Intune-hanterade enheter
 titleSuffix: Microsoft Intune
-description: Lär dig att skydda Exchange Online med iOS-principer för Intune-efterlevnad och villkorsstyrd åtkomst i Azure AD, som kräver att hanterade enheter och Outlook-appen används.
+description: Lär dig att skydda Exchange Online med iOS-principer för Intune-efterlevnad och villkorlig åtkomst i Azure AD, som kräver att hanterade enheter och Outlook-appen används.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80f9d3d2799732f2d019189913c5c47cc6973809
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3f3d51cfbacfa8ef380531f91e058717cf51d089
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044599"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044141"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Självstudie: Skydda e-post i Exchange Online på hanterade enheter
-Lär dig att använda principer för enhetsefterlevnad med villkorsstyrd åtkomst för att se till att iOS-enheter endast har åtkomst till e-post i Exchange Online om de hanteras med Intune och använder en godkänd e-postapp. 
+Lär dig att använda principer för enhetsefterlevnad med villkorlig åtkomst för att se till att iOS-enheter endast har åtkomst till e-post i Exchange Online om de hanteras med Intune och använder en godkänd e-postapp. 
 
 I den här självstudien får du lära dig att: 
 > [!div class="checklist"]
 > * Skapa en efterlevnadsprincip för iOS-enheter i Intune som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel.
-> * Skapa en villkorlig åtkomstprincip för Azure Active Directory (Azure AD) som kräver att iOS-enheter registreras i Intune, att de är kompatibla med Intune-principer och att de använder den godkända Outlook-mobilappen för att komma åt e-post i Exchange Online.
+> * Skapa en villkorlig åtkomstprincip för Azure Active Directory (Azure AD) som kräver att iOS-enheter registreras i Intune, att de är kompatibla med Intune-principer och att de använder den godkända Outlook-mobilappen för att få åtkomst till e-post i Exchange Online.
 
 Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
@@ -74,9 +74,9 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 8.  Välj **OK** och sedan **OK** igen.
 9.  Välj **Skapa**.
 
-## <a name="create-the-conditional-access-policy"></a>Skapa principen för villkorsstyrd åtkomst
-Nu ska vi skapa en princip för villkorsstyrd åtkomst som kräver att alla enhetsplattformar registreras i Intune och uppfyller vår efterlevnadsprincip för Intune innan de kan komma åt Exchange Online. Vi kommer även kräva Outlook-appen för e-poståtkomst. Principer för villkorsstyrd åtkomst kan konfigureras i Azure AD-portalen eller i Intune-portalen. Eftersom vi redan är i Intune-portalen, skapar vi principen här.
-1.  I Intune väljer du **Villkorsstyrd åtkomst** > **Principer** > **Ny princip**.
+## <a name="create-the-conditional-access-policy"></a>Skapa en princip för villkorlig åtkomst
+Nu ska vi skapa en princip för villkorlig åtkomst som kräver att alla enhetsplattformar registreras i Intune och uppfyller vår efterlevnadsprincip för Intune innan de kan få åtkomst till Exchange Online. Vi kommer även kräva Outlook-appen för e-poståtkomst. Principer för villkorlig åtkomst kan konfigureras i Azure AD-portalen eller i Intune-portalen. Eftersom vi redan är i Intune-portalen, skapar vi principen här.
+1.  I Intune väljer du **Villkorlig åtkomst** > **Principer** > **Ny princip**.
 1.  I **Namn** anger du **Testprincip för e-post i Office 365**. 
 3.  Under **Tilldelningar** väljer du **Användare och grupper**. På fliken **Inkludera** väljer du **Alla användare** och sedan **Klar**.
 
@@ -133,9 +133,9 @@ Enligt de principer som du har skapat kommer en iOS-enhet som försöker logga i
 När testprinciperna inte längre behövs kan du ta bort dem.
 1. Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör.
 2. Välj **Enhetsefterlevnad** > **Principer**.
-3. I listan **Principnamn** väljer du snabbmenyn (**...**) för testprincipen och sedan **Ta bort**. Välj **Ja** för att bekräfta.
+3. I listan **Principnamn** väljer du snabbmenyn ( **...** ) för testprincipen och sedan **Ta bort**. Välj **Ja** för att bekräfta.
 4. I Intune väljer du **Villkorsstyrd åtkomst** > **Principer**.
-5. I listan **Principnamn** väljer du snabbmenyn (**...**) för testprincipen och sedan **Ta bort**. Välj **Ja** för att bekräfta.
+5. I listan **Principnamn** väljer du snabbmenyn ( **...** ) för testprincipen och sedan **Ta bort**. Välj **Ja** för att bekräfta.
 
  ## <a name="next-steps"></a>Nästa steg 
-I den här självstudien skapade du principer som kräver att iOS-enheter registreras i Intune och använder Outlook-appen för att få åtkomst till e-post i Exchange Online. Läs om hur du använder Intune med villkorsstyrd åtkomst för att skydda andra appar och tjänster, inklusive Exchange ActiveSync-klienter för Office 365 Exchange Online i [Konfigurera villkorlig åtkomst](conditional-access.md).
+I den här självstudien skapade du principer som kräver att iOS-enheter registreras i Intune och använder Outlook-appen för att få åtkomst till e-post i Exchange Online. Mer information om att använda Intune med villkorlig åtkomst för att skydda andra appar och tjänster, inklusive Exchange ActiveSync-klienter för Office 365 Exchange Online, finns i [Konfigurera villkorlig åtkomst](conditional-access.md).

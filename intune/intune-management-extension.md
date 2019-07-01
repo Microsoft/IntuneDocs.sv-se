@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f17bdf21db61616f88cef4d257fbcd28d941dae8
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 90b3e858a06a6f3a34de6ec8102e1a6c458369a2
+ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373478"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298408"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Använda PowerShell-skript på Windows 10-enheter i Intune
 
@@ -45,7 +45,7 @@ Intune-hanteringstillägget har följande krav. När de är uppfyllda installera
 
 - Enheter som kör Windows 10 version 1607 eller senare. Om enheten registrerats med hjälp av [automatisk massregistrering](windows-bulk-enroll.md) måste enheter köra Windows 10 version 1703 eller senare. Intune-hanteringstillägget stöds inte på Windows 10 i S-läge, eftersom S-läge inte tillåter körning av andra appar än Store-appar. 
   
-- Enheter som anslutits till Azure Active Directory (AD), inklusive:
+- Enheter som anslutits till Azure Active Directory (AD), inklusive:  
   
   - Azure AD-anslutna hybridenheter: Enheter som anslutits till Azure Active Directory (AD), och även anslutits till lokal Active Directory (AD). Mer information finns i [Planera implementeringen av din Azure Active Directory-hybridanslutning](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 
@@ -55,13 +55,20 @@ Intune-hanteringstillägget har följande krav. När de är uppfyllda installera
   
   - Enheter som registrerats manuellt i Intune, enligt följande:
   
-    - Användaren loggar in på enheten med ett lokalt användarkonto, och ansluter sedan manuellt enheten till Azure AD (och automatisk registrering i Intune har aktiverats i Azure AD).
+    - [Automatisk registrering i Intune](quickstart-setup-auto-enrollment.md) aktiveras i Microsoft Azure AD. Slutanvändaren loggar in på enheten med ett lokalt användarkonto, ansluter enheten till Microsoft Azure AD manuellt och loggar sedan in på enheten med sitt Microsoft Azure AD-konto.
     
-    Eller
+    ELLER  
     
     - Användaren loggar in på enheten med sitt Azure AD-konto, och registrerar sedan i Intune.
 
-  - Samhanterade enheter som använder Configuration Manager och Intune. Mer information finns i [Vad är samhantering?](https://docs.microsoft.com/sccm/comanage/overview).
+  - Samhanterade enheter som använder Configuration Manager och Intune. Kontrollera att arbetsbelastningen för **Klientappar** är inställd på **Pilot Intune** eller **Intune**. Läs följande för vägledning: 
+  
+    - [Vad är samhantering?](https://docs.microsoft.com/sccm/comanage/overview) 
+    - [Arbetsbelastning för klientappar](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
+    - [Växla Configuration Manager-arbetsbelastningar till Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
+  
+> [!TIP]
+> Se till att enheterna är [anslutna](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) till Microsoft Azure AD. Enheter som endast är [registrerade](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) i Microsoft Azure AD kommer inte att ta emot skripten.
 
 ## <a name="create-a-script-policy"></a>Skapa en skriptprincip 
 
@@ -87,7 +94,7 @@ Intune-hanteringstillägget har följande krav. När de är uppfyllda installera
 5. Välj **OK** > **Skapa** för att spara skriptet.
 
 > [!NOTE]
-> PowerShell-skriptet körs under administratörsbehörighet (som standard) när skriptet har ställts in på användarkontext och slutanvändaren på enheten har administratörsbehörighet.
+> När skript är inställda på användarkontext och slutanvändaren har administratörsbehörighet, körs PowerShell-skriptet som standard under administratörsbehörigheten.
 
 ## <a name="assign-the-policy"></a>Tilldela principen
 
@@ -156,6 +163,7 @@ Om du vill se om enheten är automatiskt registrerad kan du:
     > [!TIP]
     > **Microsoft Intune-hanteringstillägget** är en tjänst som körs på enheten, precis som andra tjänster som visas i appen Tjänster (services.msc). När en enhet startas om kan den här tjänsten också startas om och söka efter tilldelade PowerShell-skript med Intune-tjänsten. Om tjänsten för **Microsoft Intune-hanteringstillägget** är inställd på Manuellt kanske inte tjänsten startas om när enheten startas om.
 
+- Se till att enheterna är [anslutna](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) till Microsoft Azure AD. Enheter som endast är anslutna till din arbetsplats eller organisation ([registrerade](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) i Microsoft Azure AD) tar inte emot skripten.
 - Intune-hanteringstilläggsklienten kontrollerar en gång i timmen om det finns några ändringar i skriptet eller principen i Intune.
 - Kontrollera att Intune-hanteringstillägget har laddats ned till `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Skript körs inte på Surface Hub-enheter eller Windows 10 i S-läge.

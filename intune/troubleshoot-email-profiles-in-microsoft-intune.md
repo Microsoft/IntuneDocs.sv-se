@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/17/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,20 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0fe37deb63457fef869df0f7263970a4e53cb29
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 2246e3f6faa853f620327558a7faf4dc9d6a6e85
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402711"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197512"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Vanliga problem och lösningar med e-postprofiler i Microsoft Intune
 
 Se några vanliga problem med e-postprofiler samt hur du felsöker och löser dem.
 
+## <a name="what-you-need-to-know"></a>Vad du behöver veta
+
+- E-postprofiler distribueras för den användare som registrerat enheten. Om du vill konfigurera e-postprofilen använder Intune i Azure Active Directory (AD)-egenskaper i e-postprofil för användaren under registreringen. [Lägg till e-postinställningar på enheter](email-settings-configure.md) kan vara en bra resurs.
+- När du har migrerat från Configuration Manager-hybrid till fristående Intune kvar e-postprofilen från Configuration Manager-hybrid på enheten under 7 dagar. Det här beteendet är förväntat. Om du behöver en e-postprofil som har tagits bort tidigare kan du kontakta [Intunes support](get-support.md).
+- För Android-företag, distribuera Gmail- eller nio för arbete med hjälp av den hanterade Google Play Store. [Lägg till hanterad Google Play appar](apps-add-android-for-work.md) innehåller stegen.
+- Microsoft Outlook för iOS och Android stöder inte e-postprofiler. I stället distribuera en princip för appkonfiguration. Mer information finns i [Outlook konfigurationsinställning](app-configuration-policies-outlook.md).
+- E-postprofiler som är riktade till enhetsgrupper (inte användargrupper) kan inte levereras till enheten. När enheten har en primär användare kan ska sedan riktar in sig på enheten fungera. Om e-postprofilen innehåller certifikat, måste du målgrupper.
+- Användare kan uppmanas att ange sitt lösenord för e-postprofilen upprepade gånger. Kontrollera alla certifikat som refereras till i e-postprofilen i det här scenariot. Om något av certifikaten inte är riktat mot en användare försöker Intune om du vill distribuera e-postprofilen.
+
 ## <a name="device-already-has-an-email-profile-installed"></a>Enheten har redan en e-postprofil installerad
 
-Om användare skapar en e-postprofil innan de registrerats i Intune, kanske Intune e-postprofilen inte fungerar som förväntat:
+Om användare skapar en e-postprofil innan de registrerats i Intune eller Office 365 MDM, kan inte e-postprofilen som distribuerats av Intune fungerar som förväntat:
 
 - **iOS**: Intune identifierar en befintlig, duplicerad e-postprofil baserat på värdnamn och e-postadress. Den användarskapade e-postprofilen blockerar distributionen av den Intune-skapade profilen. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil först och sedan registrerar sig. Företagsportalappen visar att användaren inte är kompatibel och kan uppmana användaren att ta bort e-postprofilen.
 
@@ -50,19 +59,16 @@ Granska konfigurationen av din EAS-profil för Samsung KNOX och källprincipen. 
 
 ## <a name="unable-to-send-images-from--email-account"></a>Det går inte att skicka bilder från e-postkontot
 
-Gäller för Intune i den klassiska Azure-portalen.
-
 Användare med automatiskt konfigurerade e-postkonton kan inte skicka foton eller bilder från sina enheter. Detta kan hända om **Tillåt att e-post skickas från tredjepartsprogram** inte är aktiverat.
 
 ### <a name="intune-solution"></a>Intune-lösning
 
-1. Öppna Microsoft Intune-administrationskonsolen och välj arbetsbelastningen **Princip** > **Konfigurationsprincip**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Välj **Enhetskonfiguration** > **Profiler**.
+3. Välj din e-postprofil > **egenskaper** > **inställningar**.
+4. Ange den **Tillåt e-post skickas från tredjepartsprogram** att ställa in **aktivera**.
 
-2. Välj e-postprofilen och klicka på **Redigera**.
-
-3. Välj **Tillåt att e-post skickas från tredjepartsprogram.**
-
-### <a name="configuration-manager-integrated-with-intune-solution"></a>Configuration Manager integrerat med Intune
+### <a name="configuration-manager-hybrid"></a>Configuration Manager-hybrid
 
 1. Öppna Configuration Manager-konsolen > **Tillgångar och efterlevnad**.
 

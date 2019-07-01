@@ -1,7 +1,7 @@
 ---
 title: Självstudie – Skydda e-post i Exchange Online på ohanterade enheter
 titleSuffix: Microsoft Intune
-description: Lär dig att skydda Office 365 Exchange Online med Intunes appskyddsprinciper och Azure AD:s villkorsstyrda åtkomst.
+description: Lär dig att skydda Office 365 Exchange Online med Intunes appskyddsprinciper och Azure AD:s villkorliga åtkomst.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,20 +16,20 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc1f877f9b457c6abafef7f1e66e8b04bba2c8e0
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829109"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046282"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Självstudie: Skydda e-post i Exchange Online på ohanterade enheter
 
-Lär dig att använda appskyddsprinciper med villkorsstyrd åtkomst för att skydda Exchange Online, även om enheterna inte är registrerade i en enhetshanteringslösning som exempelvis Intune. I den här självstudien får du lära dig att: 
+Lär dig att använda appskyddsprinciper med villkorlig åtkomst för att skydda Exchange Online, även om enheterna inte är registrerade i en enhetshanteringslösning som exempelvis Intune. I den här självstudien får du lära dig att: 
 
 > [!div class="checklist"]
 > * Skapa en Intune-appskyddsprincip för Outlook-appen. Du kan begränsa hur användaren kan använda appdata genom att förhindra ”Spara som” och begränsa åtgärder för att klippa ut, kopiera och klistra in. 
-> * Skapa principer för villkorsstyrd åtkomst i Azure Active Directory (Azure AD) som endast tillåter att Outlook-appen får åtkomst till företagets e-post i Exchange Online. Du kan också kräva multifaktorautentisering (MFA) för moderna autentiseringsklienter, till exempel Outlook för iOS och Android.
+> * Skapa principer för villkorlig åtkomst i Azure Active Directory (Azure AD) som endast tillåter att Outlook-appen får åtkomst till företagets e-post i Exchange Online. Du kan också kräva multifaktorautentisering (MFA) för moderna autentiseringsklienter, till exempel Outlook för iOS och Android.
 
 ## <a name="prerequisites"></a>Krav
   - Du behöver en testklient med följande prenumerationer för den här självstudien:
@@ -76,18 +76,18 @@ I den här självstudien ska vi konfigurera en Intune-appskyddsprincip för Outl
 
 7.  I fönstret Inställningar väljer du **OK**, och i fönstret Skapa princip väljer du **Skapa**.
 
-Appskyddsprincipen för Outlook skapas. Därefter konfigurerar du villkorsstyrd åtkomst som kräver att enheterna ska använda Outlook-appen.
+Appskyddsprincipen för Outlook skapas. Härnäst kommer du att konfigurera villkorlig åtkomst som kräver att enheterna ska använda Outlook-appen.
 
-## <a name="create-conditional-access-policies"></a>Skapa principer för villkorsstyrd åtkomst
-Nu ska vi skapa två principer för villkorsstyrd åtkomst som gäller för alla enhetsplattformar.  
+## <a name="create-conditional-access-policies"></a>Skapa principer för villkorlig åtkomst
+Nu ska vi skapa två principer för villkorlig åtkomst som gäller för alla enhetsplattformar.  
 
 - Den första principen kräver att moderna autentiseringsklienter använder den godkända Outlook-appen och Multi-Factor authentication (MFA). Moderna autentiseringsklienter är Outlook för iOS och Outlook för Android.  
 
-- Den andra principen kräver Exchange ActiveSync-klienter som använder den godkända Outlook-appen. (För närvarande stöder Exchange Active Sync inte andra villkor än enhetsplattform). Du kan konfigurera principer för villkorsstyrd åtkomst i Azure AD-portalen eller i Intune-portalen. Eftersom vi redan är i Intune-portalen, skapar vi principen här.  
+- Den andra principen kräver Exchange ActiveSync-klienter som använder den godkända Outlook-appen. (För närvarande stöder Exchange Active Sync inte andra villkor än enhetsplattform). Du kan konfigurera principer för villkorlig åtkomst i Azure AD-portalen eller i Intune-portalen. Eftersom vi redan är i Intune-portalen, skapar vi principen här.  
 
 ### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Skapa en MFA-princip för moderna autentiseringsklienter  
 
-1. I Intune väljer du **Villkorsstyrd åtkomst** > **Principer** > **Ny princip**.  
+1. I Intune väljer du **Villkorlig åtkomst** > **Principer** > **Ny princip**.  
 
 2. I **Namn** anger du **Testprincip för moderna autentiseringsklienter**.  
 
@@ -129,10 +129,10 @@ Nu ska vi skapa två principer för villkorsstyrd åtkomst som gäller för alla
      
     ![Välj Office 365 Exchange Online-appen](media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
-Principen för villkorsstyrd åtkomst för moderna autentiseringsklienter skapas. Nu kan du skapa en princip för Exchange Active Sync-klienter.
+Principen för villkorlig åtkomst för moderna autentiseringsklienter skapas. Nu kan du skapa en princip för Exchange Active Sync-klienter.
 
 ### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Skapa en princip för Exchange Active Sync-klienter  
-1. I Intune väljer du **Villkorsstyrd åtkomst** > **Principer** > **Ny princip**.  
+1. I Intune väljer du **Villkorlig åtkomst** > **Principer** > **Ny princip**.  
 2. I **Namn** anger du **Testprincip för EAS-klienter**.  
 3. Under **Tilldelningar** väljer du **Användare och grupper**.  
 4. På fliken *Inkludera* väljer du **Alla användare** och sedan **Klar**.  
@@ -166,7 +166,7 @@ Principen för villkorsstyrd åtkomst för moderna autentiseringsklienter skapas
 
 9. Välj **Skapa**.  
 
-Dina appskyddsprinciper och din villkorsstyrda åtkomst är nu på plats och är redo för att testas.  
+Dina appskyddsprinciper och din villkorlig åtkomst är nu på plats och är redo för att testas.  
 
 ## <a name="try-it-out"></a>Prova nu  
 Med de principer som du har skapat måste enheter registreras i Intune och använda Outlook-mobilappen för att få åtkomst till e-post i Office 365. Försök logga in på Exchange Online med autentiseringsuppgifter för en användare i testklienten för att testa det här scenariot på en iOS-enhet.  
@@ -189,4 +189,4 @@ När testprinciperna inte längre behövs kan du ta bort dem.
 5. I listan **Principnamn** väljer du snabbmenyn ( **...** ) för varje testprincip och sedan **Ta bort**. Välj **Ja** för att bekräfta.  
 
  ## <a name="next-steps"></a>Nästa steg  
-I den här självstudien har du skapat appskyddsprinciper som begränsar vad användaren kan göra med Outlook-appen. Du har även skapat principer för villkorsstyrd åtkomst som kräver att Outlook-appen och MFA för moderna autentiseringsklienter används. Läs om hur du använder Intune med villkorsstyrd åtkomst för att skydda andra appar och tjänster i [Konfigurera villkorsstyrd åtkomst](conditional-access.md).
+I de här självstudierna har du skapat appskyddsprinciper som begränsar vad användaren kan göra med Outlook-appen. Du har även skapat principer för villkorlig åtkomst som kräver att Outlook-appen och MFA för moderna autentiseringsklienter används. Läs om hur du använder Intune med villkorlig åtkomst för att skydda andra appar och tjänster i [Konfigurera villkorlig åtkomst](conditional-access.md).

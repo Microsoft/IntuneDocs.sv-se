@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c14568a0581220cf5941984645bd0b9044e00c1
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 756fafc02a6d64b1495a838ab8eee4130ee77361
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749942"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389341"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
-Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande ändringar](in-development.md), [viktiga meddelanden](#notices) och information om [tidigare versioner](whats-new-archive.md). 
+Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktiga meddelanden](#notices), [tidigare versioner](whats-new-archive.md) och information om [hur uppdateringar av Intune-tjänsten släpps](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
+> Varje [månadsuppdatering](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) kan ta upp till tre dagar att distribuera och sker i följande ordning:
+> - Dag 1: Asien och stillahavsområdet
+> - Dag 2: Europa, Mellanöstern och Afrika
+> - Dag 3: Nordamerika
+> 
 > Vissa funktioner kan distribueras över flera veckor och kanske inte är tillgängliga för alla kunder den första veckan.
+>
+> Titta närmare på sidan [Under utveckling ](in-development.md) för en lista över kommande funktioner i en version.
 
 **RSS-feed**: Håll dig informerad när den här sidan uppdateras genom att kopiera och klistra in följande webbadress i feed-läsaren: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
@@ -45,6 +52,29 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du hittar även [kommande �
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-june-17-2019"></a>Veckan som inleds med 17 juni 2019   
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="new-features-in-microsoft-intune-app"></a>Nya funktioner i Microsofts Intune-app
+Vi har lagt till nya funktioner i Microsoft Intune-appen (förhandsversion) för Android. Användare på fullständigt hanterade Android-enheter kan nu  
+
+* visa och hantera enheterna som de har registrerat genom Intune-företagsportalen eller Microsoft Intune-appen    
+* kontakta sin organisation för support    
+* skicka feedback till Microsoft    
+* visa villkor och bestämmelser, om sådana har angetts av deras organisation.  
+
+## <a name="week-of-june-10-2019"></a>Veckan som inleds med 10 juni 2019 
+
+### <a name="app-management"></a>Apphantering  
+
+#### <a name="new-sample-apps-showing-intune-sdk-integration-available-on-github----2653471---"></a>Nya exempelappar som visar Intune SDK-integrering tillgänglig på GitHub <!-- 2653471 -->
+GitHub-kontot msintuneappsdk har lagt till nya exempelprogram för iOS (Swift), Android, Xamarin.iOS, Xamarin Forms och Xamarin.Android. De här apparna är avsedda som komplement till vår befintliga dokumentation och visar hur du integrerar Intune APP SDK i dina egna mobilappar. Om du är apputvecklare och behöver ytterligare hjälp med Intune SDK hittar du fler exempel i de här länkarna:
+- [Chatr](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App) – en snabbmeddelandeapp för ursprungligt iOS-system (Swift) som använder Azure Active Directory Authentication Library (ADAL) för asynkron autentisering.
+- [Taskr](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App) – en att-göra-lista-app för ursprungligt Android-system som använder ADAL för asynkron autentisering.
+- [Taskr](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps) – en att-göra-lista-app för Xamarin.Android som använder ADAL för asynkron autentisering, den här lagringsplatsen har också Xamarin.Forms-appen.
+- [Xamarin.iOS-exempelapp](https://github.com/msintuneappsdk/sample-intune-xamarin-ios) – en Xamarin.iOS-exempelapp för barebonedatorer.
 
 ## <a name="week-of-may-27-2019"></a>Den vecka som börjar 27 maj 2019 
 
@@ -192,7 +222,7 @@ Du kan nu ange om standardsignaturen är aktiverad i Outlook för iOS och Androi
 F5 släppte en uppdatering för BIG-IP-13 som tillåter NAC-funktioner för F5 Access på iOS i Intune. Gör så här för att använda funktionen:
 
 - Uppdatera BIG-IP till 13.1.1.5. BIG-IP 14 stöds inte.
-- Integrera BIG-IP med Intune för NAC. Stegen i [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
+- Integrera BIG-IP med Intune för NAC. Stegen i [Overview: Configuring APM for device posture checks with endpoint management systems](https://techdocs.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
 - Aktivera inställningen **Aktivera nätverksåtkomstkontroll** i VPN-profilen i Intune.
 
 Om du vill se den tillgängliga inställningen går du till [Konfigurera VPN-inställningar på iOS-enheter](vpn-settings-ios.md).
@@ -309,9 +339,9 @@ Fullständigt hanterade Android Enterprise-enheter ([som först tillkännagavs i
 
 - På fullständigt hanterade och dedikerade enheter kan du skapa [efterlevnadsprinciper](compliance-policy-create-android-for-work.md) till att omfatta lösenordsregler och operativsystemkrav (**Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Android Enterprise** för plattform > **Enhetsägare** för profiltyp). 
 
-  På dedikerade enheter kan enheten visas som **Inte kompatibel**. Villkorsstyrd åtkomst är inte tillgänglig på dedikerade enheter. Se till att slutföra alla uppgifter eller åtgärder för att göra så att dedikerade enheter uppfyller dina tilldelade principer.
+  På dedikerade enheter kan enheten visas som **Inte kompatibel**. Villkorlig åtkomst är inte tillgängligt på dedikerade enheter. Se till att slutföra alla uppgifter eller åtgärder för att göra så att dedikerade enheter uppfyller dina tilldelade principer.
 
-- [Villkorsstyrd åtkomst](conditional-access.md) – principer för villkorsstyrd åtkomst som gäller för Android gäller även fullständigt hanterade Android Enterprise-enheter. Användare kan nu registrera sina fullständigt hanterade enheter i Azure Active Directory med hjälp av **Microsoft Intune-appen**. Sedan undersöker och åtgärdar du eventuella efterlevnadsproblem för att få åtkomst till organisationens resurser.
+- [Villkorlig åtkomst](conditional-access.md) – principer för villkorlig åtkomst som gäller för Android gäller även för fullständigt hanterade Android Enterprise-enheter. Användare kan nu registrera sina fullständigt hanterade enheter i Azure Active Directory med hjälp av **Microsoft Intune-appen**. Sedan undersöker och åtgärdar du eventuella efterlevnadsproblem för att få åtkomst till organisationens resurser.
 
 - Ny app för slutanvändare (Microsoft Intune-appen) – det finns en ny app för slutanvändare för fullständigt hanterade Android-enheter som heter **Microsoft Intune**. Den här nya appen är enkel och modern. Den har funktioner som liknar företagsportalappen men för fullständigt hanterade enheter. Mer information finns i [Microsoft Intune-appen på Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).
 
@@ -560,9 +590,9 @@ Du kan tilldela SCEP-certifikat (Simple Certificate Enrollment Protocol ) med hj
 Gäller för: 
 - macOS
 
-#### <a name="intune-conditional-access-ui-update------2432313-----"></a>Uppdatering av användargränssnittet i Intune för villkorsstyrd åtkomst   <!-- 2432313   -->
-Vi har gjort förbättringar av användargränssnittet för villkorsstyrd åtkomst i Intune-konsolen. Dessa omfattar:
--  Intune-bladet *Villkorsstyrd åtkomst* har ersatts med bladet från Azure Active Directory. På så sätt har du åtkomst till alla inställningar och konfigurationer för [villkorsstyrd åtkomst](conditional-access.md) (som fortfarande är en Azure AD-teknik) från Intune-konsolen. 
+#### <a name="intune-conditional-access-ui-update------2432313-----"></a>Uppdatering av användargränssnittet i Intune för villkorlig åtkomst   <!-- 2432313   -->
+Vi har gjort förbättringar av användargränssnittet för villkorlig åtkomst i Intune-konsolen. Dessa omfattar:
+-  Intune-bladet *Villkorlig åtkomst* har ersatts med bladet från Azure Active Directory. På så sätt har du åtkomst till alla inställningar och konfigurationer för [villkorlig åtkomst](conditional-access.md) (som fortfarande är en Microsoft Azure AD-teknik) från Intune-konsolen. 
 - Vi har bytt namn bladet *Lokal åtkomst* till *Exchange-åtkomst* och flyttat konfigurationen av *Exchange-tjänstens anslutningsapp* till det här bladet med nytt namn.  Ändringen konsoliderar det ställe där du [konfigurerar och övervakar information relaterad till onlinebaserad och lokal Exchange](exchange-connector-install.md).  
 
 #### <a name="kiosk-browser-and-microsoft-edge-browser-apps-can-run-on-windows-10-devices-in-kiosk-mode----2935135-----"></a>Apparna Kiosk Browser och Microsoft Edge-webbläsaren kan köras på Windows 10-enheter i helskärmsläge <!-- 2935135   -->
@@ -1109,7 +1139,7 @@ För registrering av Samsung Knox-registrering, stöder nu Intune registrering a
 - Du kan nu konfigurera en omstartsvarning vid omstarter som sker utanför arbetstid, vilket har stöd för BYOD-scenarier.
 
 #### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Gruppera Windows Autopilot-registrerade enheter efter korrelator-ID <!-- 2075110 -->
-Intune stöder nu gruppering av Windows-enheter med ett korrelator-ID när de har registrerats med hjälp av [Autopilot för befintliga enheter](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. Korrelator-ID:t är en parameter i Autopilot-konfigurationsfilen. Intune matchar automatiskt [Azure AD-enhetsattributet enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) med ”OfflineAutopilotprofile-<correlator ID>”. På så sätt kan godtyckligt dynamiska grupper i Azure AD skapas baserat på korrelator-ID via attributet enrollmentprofileName för Autopilot-offlineregistreringar. Mer information finns i [Windows Autopilot för befintliga enheter](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+Intune stöder nu gruppering av Windows-enheter med ett korrelator-ID när de har registrerats med hjälp av [Autopilot för befintliga enheter](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. Korrelator-ID:t är en parameter i Autopilot-konfigurationsfilen. Intune matchar automatiskt [Azure AD-enhetsattributet enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) med ”OfflineAutopilotprofile-<correlator ID>”. På så sätt kan godtyckligt dynamiska grupper i Azure AD skapas baserat på korrelator-ID via attributet enrollmentprofileName för Autopilot-offlineregistreringar. Mer information finns i [Windows Autopilot för befintliga enheter](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
 
 #### <a name="intune-app-protection-policies----2984657---"></a>Appskyddsprinciper i Intune <!-- 2984657 -->
 Med Intune-appskyddsprinciper kan du konfigurera olika dataskyddsinställningar för Intune-skyddade appar, till exempel Microsoft Outlook och Microsoft Word. Vi har ändrat utseendet och känslan för de här inställningarna för både [iOS](app-protection-policy-settings-ios.md) och [Android](app-protection-policy-settings-android.md) för att göra det enklare att hitta individuella inställningar. Det finns tre typer av principinställningar:

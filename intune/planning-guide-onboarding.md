@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e21eb6169acf8ae69ace94fd54007eaa4f7f90f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5ed13994576f67c7b740a2ea895db9d1a0f42289
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046742"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044350"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementera din Microsoft Intune-plan
 
@@ -42,7 +42,7 @@ De huvudsakliga kraven för ett fristående Intune är:
 
 -   Azure AD Connect (för katalogsynkronisering)
 
--   Intune On-Premises Connector för Exchange (för villkorlig åtkomst till Exchange On-Premises, om det behövs)
+-   Intune On-Premises Connector för Exchange (för villkorlig åtkomst till Exchange On-Premises, om så behövs)
 
 -   Intune Certificate Connector (för distribution av SCEP-certifikat, vid behov)
 
@@ -123,9 +123,9 @@ Intune stöder efterlevnadspolicyer. Lägg till efterlevnadsprinciper efter beho
 
 -   Läs mer om [efterlevnadsprinciper](device-compliance.md).
 
-### <a name="task-12-enable-conditional-access-policies"></a>Uppgift 12: Aktivera principer för villkorsstyrd åtkomst
+### <a name="task-12-enable-conditional-access-policies"></a>Uppgift 12: Aktivera principer för villkorlig åtkomst
 
-Intune stöder villkorlig åtkomst för Exchange Online, Exchange On-premises, SharePoint Online, Skype för företag – Online och Dynamics CRM Online. Aktivera och konfigurera villkorlig åtkomst efter behov baserat på användningsfall och krav för Intune-distributionen.
+Intune stöder villkorlig åtkomst för Exchange Online, Exchange On-Premises, SharePoint Online, Skype för företag – Online och Dynamics CRM Online. Aktivera och konfigurera villkorlig åtkomst efter behov, baserat på användningsfall och krav för Intune-distributionen.
 
 -   Läs mer om [villkorlig åtkomst](conditional-access.md).
 

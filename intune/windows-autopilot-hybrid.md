@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 030467009e0fed8716a1aa622474188352c0e0b0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cb9d1f52ccb147dc9a412f3cb7b601e3b18f214a
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050360"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389325"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -32,7 +32,7 @@ Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active D
 Konfigurera [Azure AD-anslutna hybridenheterna](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). [Verifiera enhetsregistreringen]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) med hjälp av cmdleten Get-MsolDevice.
 
 Enheter som ska registreras måste också:
-- Köra Windows 10 med [uppdateringen för oktober 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).
+- Köra Windows 10, v1809 eller senare.
 - Ha åtkomst till Internet.
 - Ha åtkomst till din Active Directory (VPN-anslutning stöds inte i nuläget).
 - Gå igenom välkomstupplevelsen (OOBE, Out-of-Box Experience).
@@ -44,7 +44,7 @@ Enheter som ska registreras måste också:
 
    ![Azure Portal](./media/auto-enroll-azure-main.png)
 
-1. Välj **Mobility (MDM och MAM)**.
+1. Välj **Mobility (MDM och MAM)** .
 
    ![Azure Active Directory-fönstret](./media/auto-enroll-mdm.png)
 
@@ -68,7 +68,7 @@ Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
 - Organisationsenheten som anges i domänanslutningsprofilen.
 - Om ingen profil valts, datorns domännamn för din domän.
 
-1. Öppna **Active Directory – användare och datorer (DSA.msc)**.
+1. Öppna **Active Directory – användare och datorer (DSA.msc)** .
 
 1. Högerklicka på den organisationsenhet som du ska använda för att skapa Azure AD-anslutna hybriddatorer och välj sedan **Delegera kontroll**.
 
@@ -106,7 +106,7 @@ Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
 Intune Connector för Active Directory måste installeras på en dator som kör Windows Server 2016 eller senare. Datorn måste också ha åtkomst till internet och din Active Directory. Om du vill öka skalningen och tillgängligheten eller om du vill ha stöd för flera Active Directory-domäner kan du installera flera anslutningsprogram i din miljö. Vi rekommenderar att du installerar anslutningsappen på en server som inte kör några andra Intune-anslutningsappar.
 
 1. Se till att du har ett språkpaket installerat och konfigurerat enligt beskrivningen i [Språkkrav för Intune Connector (förhandsversion)](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector).
-2. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** > **Lägg till anslutningsapp**. 
+2. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)**  > **Lägg till anslutningsapp**. 
 3. Följ anvisningarna för att ladda ned Connector.
 4. Öppna den nedladdade konfigurationsfilen för anslutningsappen, *ODJConnectorBootstrapper.exe*, för att installera Connector.
 5. Välj **Konfigurera** i slutet av konfigurationen.
@@ -176,7 +176,7 @@ När Autopilot-enheterna har *registrerats* visas de på fyra platser:
 - Fönstret **Alla enheter i Azure Active Directory** i Azure Portal. Välj **Enheter** > **Alla enheter**.
 - Fönstret **Alla enheter** i Intune i Azure Portal. Välj **Enheter** > **Alla enheter**.
 
-När Autopilot-enheterna har registrerats ändras deras enhetsnamn till värdnamnet för enheten. Som standard börjar värdnamnet med *DESKTOP-*.
+När Autopilot-enheterna har registrerats ändras deras enhetsnamn till värdnamnet för enheten. Som standard börjar värdnamnet med *DESKTOP-* .
 
 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Skapa och tilldela en Autopilot-distributionsprofil
@@ -185,8 +185,8 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
 1. Skriv ett **namn** och (frivilligt) en **beskrivning**.
 1. I **Distributionsläge** väljer du **Användarstyrd**.
-1. I rutan **Anslut till Azure AD som** väljer du **Hybrid Azure AD-ansluten (förhandsversion)**.
-1. Välj **Välkomstupplevelse (OOBE)**, konfigurera alternativen efter behov och välj sedan **Spara**.
+1. I rutan **Anslut till Azure AD som** väljer du **Hybrid Azure AD-ansluten (förhandsversion)** .
+1. Välj **Välkomstupplevelse (OOBE)** , konfigurera alternativen efter behov och välj sedan **Spara**.
 1. Välj **Skapa** för att skapa profilen. 
 1. I profilfönstret väljer du **Tilldelningar**.
 1. Välj **Välj grupper**.
@@ -209,7 +209,7 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
    - **Beskrivning**: Ange en beskrivning av profilen.
    - **Plattform**: Välj **Windows 10 och senare**.
-   - **Profiltyp**: Välj **Domänanslutning (förhandsversion)**.
+   - **Profiltyp**: Välj **Domänanslutning (förhandsversion)** .
 1. Välj **Inställningar** och ange sedan **Datornamnprefix**, **Domännamn** och (valfritt) **Organisationsenhet** i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Välj **OK** > **Skapa**.  
     Profilen skapas och visas i listan.

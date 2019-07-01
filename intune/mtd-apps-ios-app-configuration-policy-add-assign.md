@@ -6,179 +6,152 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/09/2019
+ms.date: 06/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
-ms.reviewer: heenamac
+ms.reviewer: davera
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fccf991f93a1b2804d31418bdb0f84edf681c92
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 78d6b8faf5c5c3ef41f3eb5007d550c869491f60
+ms.sourcegitcommit: 268f495de486718b99d9c1b60d4576030cafd17b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041581"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141809"
 ---
-# <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune
+# <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune  
 
 > [!NOTE] 
-> Detta avsnitt gäller alla Mobile Threat Defense-partner.
+> Den här artikeln gäller alla Mobile Threat Defense-partner.
 
 Du kan använda Intune för att lägga till och distribuera MTD-apparna (Mobile Threat Defense) så att slutanvändarna får ett meddelande när ett hot har identifierats i deras mobila enheter och anvisningar för att åtgärda hoten.
 
-
-## <a name="before-you-begin"></a>Innan du börjar
-
+## <a name="before-you-begin"></a>Innan du börjar    
 Följande steg måste utföras i [Azure-portalen](https://portal.azure.com/). Kontrollera att du vet hur man gör för att:
 
-  -   [Lägga till en app i Intune](apps-add.md).
-  -   [Lägga till en konfigurationsprincip för iOS-appar i Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
-  -   [Tilldela en app med Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune).
+-   [Lägga till en app i Intune](apps-add.md).
+-   [Lägga till en konfigurationsprincip för iOS-appar i Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+-   [Tilldela en app med Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune).
 
 > [!TIP]
 > Intune-företagsportalen fungerar som broker på Android-enheter så att användare kan få sina identiteter kontrollerade av Azure AD.
 
-## <a name="configure-microsoft-authenticator-for-ios"></a>Konfigurera Microsoft Authenticator för iOS
+## <a name="configure-microsoft-authenticator-for-ios"></a>Konfigurera Microsoft Authenticator för iOS  
 För iOS-enheter krävs [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) så att användarnas identiteter kan kontrolleras av Azure AD. Dessutom behövs en konfigurationsprincip för iOS-appar som konfigurerar MTD iOS-appen för användning med Intune.
 
 Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Microsoft Authenticator-appbutiken](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) i **steg 12** under avsnittet **Konfigurera appinformation**.
 
-## <a name="configure-mtd-applications"></a>Konfigurera MTD-program
-
+## <a name="configure-mtd-applications"></a>Konfigurera MTD-program  
 Välj det avsnitt som motsvarar din MTD-provider:
 
-  - [Lookout for Work](#configure-lookout-for-work-apps)
-  - [Symantec Endpoint Protection Mobile (SEP Mobile)](#configure-symantec-endpoint-protection-mobile-apps)
-  - [Check Point SandBlast Mobile](#configure-check-point-sandblast-mobile-apps)
-  - [Zimperium](#configure-zimperium-apps)
-  - [Pradeo](#configure-pradeo-apps)
-  - [Better Mobile](#configure-better-mobile-apps)
-  - [Sophos Mobile](#configure-sophos-apps)
+- [Lookout for Work](#configure-lookout-for-work-apps)
+- [Symantec Endpoint Protection Mobile (SEP Mobile)](#configure-symantec-endpoint-protection-mobile-apps)
+- [Check Point SandBlast Mobile](#configure-check-point-sandblast-mobile-apps)
+- [Zimperium](#configure-zimperium-apps)
+- [Pradeo](#configure-pradeo-apps)
+- [Better Mobile](#configure-better-mobile-apps)
+- [Sophos Mobile](#configure-sophos-apps)
 
-### <a name="configure-lookout-for-work-apps"></a>Konfigurera Lookout for Work-appar
-
-- **Android**
+### <a name="configure-lookout-for-work-apps"></a>Konfigurera Lookout for Work-appar  
+- **Android**  
   - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [Lookout for work-webbadress till Googles appbutik](https://play.google.com/store/apps/details?id=com.lookout.enterprise) i **steg 7**.
 
 - **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [Lookout for Work-webbadressen för iOS-appbutiken](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) i **steg 11** som **appbutiksadress**.
 
-  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [Lookout for Work-webbadress till iOS-appbutiken](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) i **steg 12** under avsnittet **Konfigurera appinformation**.
+- **Lookout for Work-app utanför Apple Store**  
+  - Du måste signera iOS-appen Lookout for Work på nytt. Lookout distribuerar iOS-appen Lookout for Work utanför iOS App Store. Innan du distribuerar appen måste du signera den på nytt med ditt iOS Enterprise Developer-certifikat.  
+  - Detaljerade anvisningar om hur du omsignerar iOS-apparna Lookout for Work finns i [Omsigneringsprocessen för iOS-appen Lookout for Work](https://personal.support.lookout.com/hc/articles/114094038714) på Lookout-webbplatsen.
 
--   **Lookout for Work-app utanför Apple Store**
-    - Du måste signera iOS-appen Lookout for Work på nytt. Lookout distribuerar iOS-appen Lookout for Work utanför iOS App Store. Innan du distribuerar appen måste du signera den på nytt med ditt iOS Enterprise Developer-certifikat.
-    - Detaljerade anvisningar om hur du omsignerar iOS-apparna Lookout for Work finns i [Omsigneringsprocessen för iOS-appen Lookout for Work](https://personal.support.lookout.com/hc/articles/114094038714) på Lookout-webbplatsen.
+  - **Aktivera Azure AD-autentisering för användare av Lookout for Work iOS-appen.**
 
-    - **Aktivera Azure AD-autentisering för användare av Lookout for Work iOS-appen.**
+    1. Gå till [Azure-portalen](https://portal.azure.com), logga in med dina autentiseringsuppgifter och gå sedan till appsidan.
 
-        1. Gå till [Azure-portalen](https://portal.azure.com), logga in med dina autentiseringsuppgifter och gå sedan till appsidan.
+    2. Lägg till **Lookout for Work iOS app** (iOS-appen Lookout for Work) som ett **internt klientprogram**.
 
-        2. Lägg till **Lookout for Work iOS app** (iOS-appen Lookout for Work) som ett **internt klientprogram**.
+    3. Ersätt **com.lookout.enterprise.yourcompanyname** med ID:t för kundprogrampaketet som du valde när du registrerade IPA.
 
-        3. Ersätt **com.lookout.enterprise.yourcompanyname** med ID:t för kundprogrampaketet som du valde när du registrerade IPA.
+    4. Lägg till ytterligare omdirigerings-URI: **&lt;companyportal://code/>** följt av en URL-kodad version av din ursprungliga omdirigerings-URI.
 
-        4.  Lägg till ytterligare omdirigerings-URI: **&lt;companyportal://code/>** följt av en URL-kodad version av din ursprungliga omdirigerings-URI.
+    5. Lägg till **Delegerad behörighet** till din app.
 
-        5.  Lägg till **Delegerad behörighet** till din app.
+    > [!NOTE] 
+    > Mer information finns i [configure a native client application with Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application) (konfigurera ett Native Client-program med Azure AD).
 
-        > [!NOTE] 
-        > Mer information finns i [configure a native client application with Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application) (konfigurera ett Native Client-program med Azure AD).
+  - **Lägg till IPA-filen för Lookout for Work.**
 
-     - **Lägg till IPA-filen för Lookout for Work.**
+    - Ladda upp den omsignerade IPA-filen enligt beskrivningen i artikeln [Add iOS LOB apps with Intune](lob-apps-ios.md) (Lägg till iOS LOB-appar med Intune). Du måste också ange den lägsta versionen av operativsystemet till iOS 8.0 eller senare.
 
-        - Ladda upp den omsignerade IPA-filen enligt beskrivningen i avsnittet [Add iOS LOB apps with Intune](lob-apps-ios.md) (lägg till iOS LOB-appar med Intune). Du måste också ange den lägsta versionen av operativsystemet till iOS 8.0 eller senare.
+### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Konfigurera Symantec Endpoint Protection Mobile-appar  
+- **Android**
+   - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). I **steg 7**, använd den här [webbadressen för SEP Mobile-appbutik](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Som **Lägsta operativsystem** väljer du **Android 4.0 (Ice Cream Sandwich)** .
 
-### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Konfigurera Symantec Endpoint Protection Mobile-appar
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [SEP-webbadressen för mobilappbutiken](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) i **steg 11** som **appbutiksadress**.
 
- - **Android**
+### <a name="configure-check-point-sandblast-mobile-apps"></a>Konfigurera Check Point SandBlast Mobile-appar  
+- **Android**  
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Check Point SandBlast Mobile-appbutiken](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) i **steg 7**.
 
-    - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). I **steg 7**, använd den här [webbadressen för SEP Mobile-appbutik](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Som **Lägsta operativsystem** väljer du **Android 4.0 (Ice Cream Sandwich)**.
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [Check Point SandBlast-webbadressen för mobilappbutiken](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) i **steg 11** som **appbutiksadress**.  
 
- - **iOS**
+### <a name="configure-zimperium-apps"></a>Konfigurera Zimperium-appar  
+- **Android**
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Zimperium-appbutiken](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) i **steg 7**.
 
-    - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). I **steg 12** använd denna [webbadress för SEP Mobile-appbutik](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) under avsnittet **Konfigurera appinformation**.
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [Zimperium-webbadressen för appbutiken](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) i **steg 11** som **appbutiksadress**.  
+ 
+### <a name="configure-pradeo-apps"></a>Konfigurera Pradeo-appar  
+- **Android**
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Pradeo-appbutiken](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) i **steg 7**.
 
-### <a name="configure-check-point-sandblast-mobile-apps"></a>Konfigurera Check Point SandBlast Mobile-appar
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [Pradeo-webbadressen för appbutiken](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) i **steg 11** som **appbutiksadress**.
 
- - **Android**
+### <a name="configure-better-mobile-apps"></a>Konfigurera Better Mobile-appar  
+- **Android**
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till App Store för Active Shield](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) i **steg 7**.
 
-    - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Check Point SandBlast Mobile-appbutiken](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) i **steg 7**.
-
- - **iOS**
-
-    - Kontakta [Check Point SandBlast Mobile](https://www.checkpoint.com/products/sandblast-mobile/) för att hämta iOS-appen. Läs anvisningarna om [hur man lägger till appar från iOS-butiken i Microsoft Intune](store-apps-ios.md) och använd sedan webbadressen till Apple-butiken i **steg 12** i avsnittet **Konfigurera appinformation**.
-
-### <a name="configure-zimperium-apps"></a>Konfigurera Zimperium-appar
-
- - **Android**
-
-    - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Zimperium-appbutiken](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) i **steg 7**.
-
- - **iOS**
-
-    - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Zimperium-appbutiken](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) i **steg 12** under avsnittet **Konfigurera appinformation**.
-
-### <a name="configure-pradeo-apps"></a>Konfigurera Pradeo-appar
-
- - **Android**
-
-    - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Pradeo-appbutiken](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) i **steg 7**.
-
- - **iOS**
-
-    - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Pradeo-appbutiken](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) i **steg 12** under avsnittet **Konfigurera appinformation**.
-
-### <a name="configure-better-mobile-apps"></a>Konfigurera Better Mobile-appar
-
- - **Android**
-
-    - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till App Store för Active Shield](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) i **steg 7**.
-
- - **iOS**
-
-    - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till App Store för ActiveShield](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) i **steg 12** under avsnittet **Konfigurera appinformation**.
-
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [ActiveShield-webbadressen för appbutiken](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) i **steg 11** som **appbutiksadress**.
 
 ### <a name="configure-sophos-apps"></a>Konfigurera Sophos-appar  
 - **Android**
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Sophos-appbutiken](https://play.google.com/store/apps/details?id=com.sophos.smsec) i **steg 7**.
 
-    - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Sophos-appbutiken](https://play.google.com/store/apps/details?id=com.sophos.smsec) i **steg 7**.
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här för [ActiveShield-webbadressen för appbutiken](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) i **steg 11** som **appbutiksadress**.
 
- - **iOS**
+## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurera dina MTD-appar med en konfigurationsprincip för iOS-appar  
 
-    - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till App Store för ActiveShield](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) i **steg 12** under avsnittet **Konfigurera appinformation**.
-
-## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurera dina MTD-appar med en konfigurationsprincip för iOS-appar
-
-
-### <a name="lookout-for-work-app-configuration-policy"></a>Konfigurationsprincip för Lookout for Work-app
-
+### <a name="lookout-for-work-app-configuration-policy"></a>Konfigurationsprincip för Lookout for Work-app  
 - Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i artikeln om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
 
-### <a name="sep-mobile-app-configuration-policy"></a>Konfigurationsprincip för SEP Mobile-app
+### <a name="sep-mobile-app-configuration-policy"></a>Konfigurationsprincip för SEP Mobile-app  
+- Använd samma Azure AD-konto som tidigare konfigurerades i [Symantec Endpoint Protection-hanteringskonsolen](https://aad.skycure.com), vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
 
--   Använd samma Azure AD-konto som tidigare konfigurerades i [Symantec Endpoint Protection-hanteringskonsolen](https://aad.skycure.com), vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
+- **Ladda ned** konfigurationsprincipsfilen för iOS-appen: 
+  - Gå till [Symantec Endpoint Protection-hanteringskonsol](https://aad.skycure.com) och logga in med dina administratörsautentiseringsuppgifter.
 
--   Så här **laddar du ned** konfigurationsprincipen för iOS-appen: 
-    -   Gå till [Symantec Endpoint Protection-hanteringskonsol](https://aad.skycure.com) och logga in med dina administratörsautentiseringsuppgifter.
+  - Gå till **Inställningar** och under **Integreringar** väljer du **Intune**. Välj **Val av EMM-integrering**. Välj **Microsoft** och spara sedan ditt val.
 
-    -   Gå till **Inställningar** och under **Integreringar** väljer du **Intune**. Välj **Val av EMM-integrering**. Välj **Microsoft** och spara sedan ditt val.
+  - Klicka på länken **Integrering av installationsfiler** och spara den genererade \*-ZIP-filen. ZIP-filen innehåller filen * **.plist** som används för att skapa iOS-appens konfigurationsprincip i Intune.
 
-    -   Klicka på länken **Integrering av installationsfiler** och spara den genererade \*-ZIP-filen. ZIP-filen innehåller filen ***.plist** som används för att skapa iOS-appens konfigurationsprincip i Intune.
+  - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till SEP Mobile-konfigurationsprincipen för iOS-appar.
 
-    -   Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till SEP Mobile-konfigurationsprincipen för iOS-appar.
-
-    - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet från filen ***.plist** och klistrar in det i konfigurationsprincipen.
+  - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet från filen * **.plist** och klistrar in det i konfigurationsprincipen.
 
 > [!NOTE]  
 > Om det inte går att hämta filerna, kontakta [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
 
-### <a name="check-point-sandblast-mobile-app-configuration-policy"></a>Konfigurationsprincip för Check Point SandBlast Mobile-app
-
+### <a name="check-point-sandblast-mobile-app-configuration-policy"></a>Konfigurationsprincip för Check Point SandBlast Mobile-app  
 - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Check Point SandBlast Mobile-konfigurationsprincipen för iOS-appar.
     - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
 
@@ -186,10 +159,9 @@ Välj det avsnitt som motsvarar din MTD-provider:
 <dict><key>MDM</key><string>INTUNE</string></dict>
 ```
 
-### <a name="zimperium-app-configuration-policy"></a>Konfigurationsprincip för Zimperium-app
-
+### <a name="zimperium-app-configuration-policy"></a>Konfigurationsprincip för Zimperium-app  
 - Se anvisningarna för att [använda Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Zimperium-konfigurationsprincipen för iOS-appar.
-    - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
+  - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
 
 ```
 <dict>
@@ -203,14 +175,13 @@ Välj det avsnitt som motsvarar din MTD-provider:
 <string>{{udidlast4digits}}</string>
 </dict>
 ```
-### <a name="pradeo-app-configuration-policy"></a>Konfigurationsprincip för Pradeo-appar
+
+### <a name="pradeo-app-configuration-policy"></a>Konfigurationsprincip för Pradeo-appar  
 Pradeo stöder inte programkonfigurationsprincipen på iOS.  För att istället få en konfigurerad app kan du arbeta med Pradeo för att implementera anpassade IPA- eller APK-filer som är förkonfigurerade med de inställningar som du önskar.
 
-
-### <a name="better-mobile-app-configuration-policy"></a>Konfigurationsprincip för Better Mobile-appen
-
+### <a name="better-mobile-app-configuration-policy"></a>Konfigurationsprincip för Better Mobile-appen  
 - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) när du ska lägga till en konfigurationsprincip för Better Mobile iOS-appen.
-    - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen. Ersätt webbadressen `https://client.bmobi.net` med rätt konsoladress.
+  - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen. Ersätt webbadressen `https://client.bmobi.net` med rätt konsoladress.
 
 ```
 <dict>
@@ -223,13 +194,11 @@ Pradeo stöder inte programkonfigurationsprincipen på iOS.  För att istället 
 </dict>
 ```
 
-### <a name="sophos-mobile-app-configuration-policy"></a>Konfigurationsprincip för Sophos Mobile-appen
+### <a name="sophos-mobile-app-configuration-policy"></a>Konfigurationsprincip för Sophos Mobile-appen  
 Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i artikeln om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
 
-## <a name="assign-apps-to-groups"></a>Tilldela appar till grupper
-
+## <a name="assign-apps-to-groups"></a>Tilldela appar till grupper  
 - Det här steget gäller för alla MTD-partner. Se anvisningarna för [tilldelning av appar till grupper med Intune](apps-deploy.md).
 
-## <a name="next-steps"></a>Nästa steg
-
+## <a name="next-steps"></a>Nästa steg  
 - [Konfigurera enhetsefterlevnadsprincipen för MTD](mtd-device-compliance-policy-create.md)

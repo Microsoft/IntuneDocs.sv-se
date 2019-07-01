@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dec78e0b1e323e99b6e70f71db982256aa98d18
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cdedbfc611d44b4d6acb01e5e05bf3e73ed7fbda
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041232"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044191"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Snabbstart: Skapa en efterlevnadsprincip för lösenord för Android-enheter
 
 I den här snabbstarten använder du Microsoft Intune för att ange att Android-användare på företaget måste ange ett lösenord med en viss längd innan åtkomst beviljas till information i deras Android-enheter. 
 
-En Intune-enhetsefterlevnadsprincip anger de regler och inställningar som enheter måste uppfylla för att anses vara kompatibla. Du kan använda efterlevnadsprinciper med villkorsstyrd åtkomst för att tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet.
+En Intune-enhetsefterlevnadsprincip anger de regler och inställningar som enheter måste uppfylla för att anses vara kompatibla. Du kan använda efterlevnadsprinciper med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet.
 
 > [!IMPORTANT]
 > Förutom lösenordsinställningarna kan du också ange andra systemsäkerhetsinställningar som skyddar dina anställda. Mer information finns i [Inställningar för systemsäkerhet](compliance-policy-create-android-for-work.md).

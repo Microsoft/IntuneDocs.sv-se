@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1a255391a2cf27a764da6122031fd0c9cbb64cf
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 1ad8a3298a801b07e021b84bd5eea9c91f01f1a2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66751365"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044874"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -61,7 +61,7 @@ Du kan använda villkorlig åtkomst för Azure AD för att omdirigera användare
 
 Om du vill begränsa Azure AD-anslutna webbappar för att använda Microsoft Edge i iOS och Android följer du stegen nedan:
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Under Intune-noden väljer du **Villkorsstyrd åtkomst** > **Ny princip**.
+2. Under Intune-noden väljer du **Villkorlig åtkomst** > **Ny princip**.
 3. Välj därefter **Bevilja** i avsnittet **Åtkomstkontroller** på bladet.
 4. Klicka på **Kräv godkänd klientapp**.
 5. Klicka på **Välj** på bladet **Bevilja**. Den här principen måste tilldelas till de molnappar som du vill ska vara tillgängliga enbart för appen Intune Managed Browser.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 812a2e91b28908dcd3893ec77e9923362c8a9173
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046133"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044400"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -401,22 +401,22 @@ Nedan visas ett exempel på hur du utformar en efterlevnadsprincip:
 
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för efterlevnadsprincipen.
-#### <a name="conditional-access-policies"></a>Villkorliga åtkomstprinciper
+#### <a name="conditional-access-policies"></a>Principer för villkorlig åtkomst
 
-Villkorlig åtkomst används för att endast tillåta att kompatibla enheter får åtkomst till e-post och andra företagsresurser. Intune fungerar med Enterprise Mobility + Security (EMS) för att styra åtkomst till företagets resurser. Avgör om du behöver villkorsstyrd och vad som måste skyddas. Läs mer om [villkorlig åtkomst](conditional-access.md).
+Villkorlig åtkomst används för att endast tillåta att kompatibla enheter får åtkomst till e-post och andra företagsresurser. Intune fungerar med Enterprise Mobility + Security (EMS) för att styra åtkomst till företagets resurser. Fundera över behovet av villkorlig åtkomst och vad som kan behöva skyddas. Läs mer om [villkorlig åtkomst](conditional-access.md).
 
-Vid onlineåtkomst fastställer du vilka plattformar och användargrupper som du anger som mål för principer för villkorsstyrd åtkomst. Du behöver även fastställa huruvida du behöver installera eller konfigurera Intune-anslutningsappen för lokal Exchange: 
+Bestäm vilka plattformar och användargrupper med onlineåtkomst som du behöver ställa in villkorlig åtkomst för. Du behöver även fastställa huruvida du behöver installera eller konfigurera Intune-anslutningsappen för lokal Exchange: 
 
 -   [Exchange On-premises](exchange-connector-install.md)
 
-Här visas ett exempel på hur du kan dokumentera villkorliga åtkomstprinciper:
+Här visas ett exempel på hur du kan dokumentera principer för villkorlig åtkomst:
 
 | **Tjänst** | **Plattformar för modern autentisering** | **Grundläggande autentisering** | **Användningsfall** |   
 |:---:|:---:|:---:|:---:|
 | Exchange online | iOS, Android | Blockera icke-kompatibla enheter på plattformar som stöds av Intune | Företag, BYOD |
 | SharePoint Online | iOS, Android |  | Företag, BYOD |
 
-Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för principen för villkorlig åtkomst.
+Du kan [ladda ned en mall för tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera dina behov av principer för villkorlig åtkomst.
 
 ## <a name="next-steps"></a>Nästa steg
 

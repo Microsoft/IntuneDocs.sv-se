@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 940ef3e6df95629dad03d6c1d4e60343e4273473
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d25012790322491a9038f0bcf9349434d5a45b8d
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048844"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251079"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
@@ -80,7 +80,7 @@ Du ansluter Intune till Jamf Pro så här:
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Låt Intune integreras med Jamf Pro
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=20909) och gå till **Microsoft Intune** > **Enhetsefterlevnad** > **Enhetshantering för partner**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Microsoft Intune** > **Enhetsefterlevnad** > **Enhetshantering för partner**.
 
 2. Aktivera Compliance Connector för Jamf genom att klistra in det program-ID du sparade under föregående procedur i fältet **Jamf Azure Active Directory App-ID**.
 

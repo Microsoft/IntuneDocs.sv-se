@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a10fa6983b8e8c34a1844c647d952ca8cbf0730c
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1c1400b3786965ab962de01207f24b53aa3a47b1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050159"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045989"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda olika enhetshanteringsfunktioner på Windows Holographic- och HoloLens-enheter med Intune
 
@@ -33,11 +33,11 @@ Om du vill använda Windows Holographic-enheter med Intune måste du skapa en pr
 
 Azure Active Directory (AD) är en utmärkt resurs för att hantera och kontrollera dina enheter som kör Windows Holographic for Business. Med Intune och Azure AD kan du göra följande: 
 
-- **[Anslut enheter till Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: I Azure Active Directory (AD) kan du lägga till organisationens Windows 10-enheter, inklusive enheter som kör Windows Holographic for Business. Den här funktionen gör att Azure AD kan styra enheten. Det hjälper till att bekräfta att användarna kommer åt företagets resurser från enheter som uppfyller dina säkerhets- och efterlevnadskrav.
+- **[Anslut enheter till Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** : I Azure Active Directory (AD) kan du lägga till organisationens Windows 10-enheter, inklusive enheter som kör Windows Holographic for Business. Den här funktionen gör att Azure AD kan styra enheten. Det hjälper till att bekräfta att användarna kommer åt företagets resurser från enheter som uppfyller dina säkerhets- och efterlevnadskrav.
 
   I [Enhetshantering i Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) finns mer information.
 
-- **[Massregistrering för Windows-enheter](windows-bulk-enroll.md)**: Du kan ansluta ett stort antal nya Windows-enheter till Azure Active Directory (AD) och Intune. Den här funktionen kallas massregistrering och använder konfigurationspaket. Med dessa paket ansluts enheter som kör Windows Holographic for Business till Azure AD-klienten och registrerar dem i Intune.
+- **[Massregistrering för Windows-enheter](windows-bulk-enroll.md)** : Du kan ansluta ett stort antal nya Windows-enheter till Azure Active Directory (AD) och Intune. Den här funktionen kallas massregistrering och använder konfigurationspaket. Med dessa paket ansluts enheter som kör Windows Holographic for Business till Azure AD-klienten och registrerar dem i Intune.
 
 ## <a name="company-portal"></a>Företagsportal
 **[Konfigurera företagsportalappen](company-portal-app.md)**
@@ -56,7 +56,7 @@ Med företagsportalappen kan du också köra följande åtgärder:
 
 Efterlevnadsprinciper är regler och inställningar som enheter måste uppfylla för att vara kompatibla. Använd dessa principer med villkorlig åtkomst för att blockera åtkomst till företagsresurser för enheter som är inte kompatibla. I Intune skapar du efterlevnadsprinciper för att tillåta eller blockera åtkomst för enheter som kör Windows Holographic for Business. Du kan till exempel skapa en princip som kräver att BitLocker är aktiverat.
 
-Se också **[Komma igång med efterlevnadsprinciper](device-compliance-get-started.md)**.
+Se också **[Komma igång med efterlevnadsprinciper](device-compliance-get-started.md)** .
 
 ## <a name="deploy-and-manage-apps"></a>Distribuera och hantera appar
 **[Lägga till appar i Intune](apps-add.md)**
@@ -85,11 +85,11 @@ Intune har vissa inbyggda åtgärder som gör att IT-administratörer kan utför
 
 Följande inställningar kan användas för enheter som kör Windows Holographic for Business: 
 
-- **[Rensning](devices-wipe.md#wipe)**: Åtgärden **Rensa** tar bort enheten från Intune och återställer enheten till fabriksinställningarna. Använd den här åtgärden innan du ger enheten till en ny användare eller om enheten tappas bort eller blir stulen.
+- **[Rensning](devices-wipe.md#wipe)** : Åtgärden **Rensa** tar bort enheten från Intune och återställer enheten till fabriksinställningarna. Använd den här åtgärden innan du ger enheten till en ny användare eller om enheten tappas bort eller blir stulen.
 
-- **[Dra tillbaka](devices-wipe.md#retire)**: Åtgärden **Dra tillbaka** tar bort enheten från Intune. Den tar även bort hanterade appdata, inställningar och e-postprofiler som har tilldelats av Intune. Användarens personliga data finns kvar på enheten.
+- **[Dra tillbaka](devices-wipe.md#retire)** : Åtgärden **Dra tillbaka** tar bort enheten från Intune. Den tar även bort hanterade appdata, inställningar och e-postprofiler som har tilldelats av Intune. Användarens personliga data finns kvar på enheten.
 
-- **[Synkronisera enheter för att få de senaste principerna och åtgärderna](device-sync.md)**: Åtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen hjälper dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
+- **[Synkronisera enheter för att få de senaste principerna och åtgärderna](device-sync.md)** : Åtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen hjälper dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
 
 **[Vad är enhetshantering i Microsoft Intune?](device-management.md)** är en bra resurs för att lära dig hantera enheter med hjälp av Azure-portalen. 
 

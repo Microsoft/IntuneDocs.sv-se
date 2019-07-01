@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/20/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,18 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
+ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402665"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298402"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
 Microsoft Intune har några inbyggda felsökningsprinciper. Med hjälp av dessa funktioner kan du felsöka efterlevnadsprinciper och konfigurationsprofiler i din miljö.
 
 I den här artikeln beskrivs några vanliga felsökningsmetoder och några problem du kan stöta på.
+
+## <a name="check-tenant-status"></a>Kontrollera status för klient
+Kontrollera den [Status för klient](tenant-status.md) och bekräfta prenumerationen är aktiv. Du kan också visa information om aktiva incidenter och rekommendationerna som kan påverka distributionen av principer eller profil.
 
 ## <a name="use-built-in-troubleshooting"></a>Använda inbyggd felsökning
 
@@ -113,6 +116,13 @@ I den här artikeln beskrivs några vanliga felsökningsmetoder och några probl
 > [!NOTE]
 > Om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, tillämpas den mer restriktiva principen.
 
+## <a name="policy-troubleshooting-resources"></a>Felsökningsresurser för principer
+
+- [Felsöka iOS- eller Android-principerna inte tillämpas på enheter](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öppnas ett annat Microsoft-webbplats)
+- [Felsökning av Windows 10 Intune principen fel](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öppnar en blogg)
+- [Felsöka CSP anpassade inställningar för Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öppnas ett annat Microsoft-webbplats)
+- [Grupprincip i Windows 10 vs Intune MDM princip](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öppnas ett annat Microsoft-webbplats)
+
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Avisering: Det gick inte att spara åtkomstregler i Exchange
 
 **Problem**: Du får aviseringen **Det gick inte att spara åtkomstregler i Exchange**  i administrationskonsolen.
@@ -125,11 +135,13 @@ Om du har skapat principer på arbetsytan Exchange On-premises-princip (administ
 
 Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva principen tillämpas för enheten.
 
+Windows 10-enheter kan inte ta bort principer för säkerhet när du tar bort principer (stoppa distribution). Du kan behöva lämna tilldelad princip och ändra säkerhetsinställningarna tillbaka till standardvärdena.
+
 Du kan, beroende på enhetsplattform, vara tvungen att återställa säkerhetsprinciperna om du vill ändra principen till ett mindre säkert värde.
 
-I Windows sveper du till exempel från höger på skrivbordet för att öppna menyraden för **Snabbknappar**. Choose **Inställningar** > **Kontrollpanelen** > **Användarkonton**. Till vänster väljer du länken **Återställ säkerhetsprinciper** och sedan **Återställ principer**.
+I Windows 8.1 sveper du till exempel från höger på skrivbordet för att öppna menyraden för **Snabbknappar**. Choose **Inställningar** > **Kontrollpanelen** > **Användarkonton**. Till vänster väljer du länken **Återställ säkerhetsprinciper** och sedan **Återställ principer**.
 
-Andra MDM-enheter, som Android, iOS och Windows Phone 8.1, kan behöva tas ur bruk och sedan registreras på nytt för att en mindre begränsande profil ska kunna tillämpas.
+Andra plattformar, som Android, iOS och Windows Phone 8.1, kan behöva tas ur bruk och sedan registreras på nytt för att en mindre begränsande profil ska kunna tillämpas.
 
 [Felsöka enhetsregistrering](troubleshoot-device-enrollment-in-intune.md) kan vara en bra resurs.
 
@@ -160,6 +172,7 @@ För Windows-datorer som hanteras med Intune-programklienten kan principfel i fi
 Inträffar om tiden på det lokala systemet är felsynkroniserat med fem minuter eller mer. Om tiden på den lokala datorn inte är rätt synkroniserad misslyckas säkra transaktioner eftersom tidsstämplarna blir ogiltiga.
 
 Du kan lösa problemet genom att ange den lokala systemtiden så nära Internettiden som möjligt. Eller ange samma tid som för domänkontrollanterna på nätverket.
+
 
 ## <a name="next-steps"></a>Nästa steg
 

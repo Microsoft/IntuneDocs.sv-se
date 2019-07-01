@@ -1,6 +1,6 @@
 ---
 title: Använda Windows Defender ATP i Microsoft Intune – Azure | Microsoft Docs
-description: Se hur du aktiverar Windows Defender Advanced Threat Protection (ATP) i ett scenario för slutpunkt till slutpunkt, inklusive aktivera ATP i Intune och Windows Defender Security Center (ATP-portal), publicera enheter med hjälp av en ATP-konfigurationsprofil, skapa en efterlevnadsprincip för en Intune-enhet, skapa en villkorlig åtkomstprincip för Azure AD och övervaka enheternas kompatibilitet.
+description: Se hur du aktiverar Windows Defender Advanced Threat Protection (ATP) i ett scenario för slutpunkt till slutpunkt, inklusive aktiverar ATP i Intune och Windows Defender Security Center (ATP-portal), publicerar enheter med hjälp av en ATP-konfigurationsprofil, skapar en efterlevnadsprincip för en Intune-enhet, skapar en villkorlig åtkomstprincip för Azure AD och övervakar enheternas kompatibilitet.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78c34345804f600aa62ff5e25ef27a23591e0f5c
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: 186ba1a8813e84b89a23c8aabb3a4ef0bd392da4
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819866"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045922"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -131,7 +131,7 @@ Principen för villkorlig åtkomst blockerar åtkomsten till resurser *om* enhet
 > [!TIP]  
 > Villkorsstyrd åtkomst är en Azure Active Directory-teknik (Azure AD). Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Villkorsstyrd åtkomst** > **Ny princip**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Villkorlig åtkomst** > **Ny princip**.
 2. Ange ett **Namn** på principen och välj **Användare och grupper**. Använd inkludera eller exkludera alternativ för att lägga till grupper för principen och välj **Klar**.
 3. Välj **Molnappar**, och välj vilka appar som ska skyddas. Välj t.ex. **Välj appar**, och välj **Office 365 SharePoint Online** och **Office 365 Exchange Online**.
 

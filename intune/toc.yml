@@ -269,6 +269,8 @@
           href: device-logout-user.md
         - name: Ta bort användare
           href: device-remove-user.md
+        - name: Hitta primär användare
+          href: find-primary-user.md
         - name: Ta bort macOS-enhet
           href: device-erase.md
         - name: Fjärrstyr mobila enheter

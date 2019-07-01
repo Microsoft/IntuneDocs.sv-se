@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c84cd0ec61ea08956bbebd040167991c6285d073
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044986"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044342"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Självstudie: Genomgång av Microsoft Intune i Azure Portal
 
@@ -104,7 +104,7 @@ Följ stegen nedan så får du en bättre förståelse av Intune i Azure Portal.
 
     ![Skärmbild av fönstret för villkorlig åtkomst](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
-    Villkorlig åtkomst syftar på olika sätt du kan styra enheterna och apparna som tillåts ansluta till dina e-post- och företagsresurser. Mer information om enhetsbaserad och appbaserad villkorlig åtkomst och vanliga scenerier för användning av villkorlig åtkomst med Intune finns i [Vad är villkorlig åtkomst?](conditional-access.md)
+    Villkorlig åtkomst syftar på de olika sätt på vilka du kan styra de enheter och appar som tillåts ansluta till dina e-post- och företagsresurser. Mer information om enhetsbaserad och appbaserad villkorlig åtkomst och vanliga scenerier för användning av villkorlig åtkomst med Intune finns i [Vad är villkorlig åtkomst?](conditional-access.md)
 
 8. I [Intune](https://aka.ms/intuneportal) väljer du **Användare** för att visa information om de användare du har inkluderat i Intune. Dessa användare är företagets personal. 
  

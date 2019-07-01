@@ -17,17 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e236548002f2779377e7ac57443077d48869e1f9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 57684a1f5ef94b12c8f0e52a36d8432583391b8a
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047704"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045677"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune
-Informationen i den här artikeln hjälper dig att installera och sedan övervaka den lokala Exchange Active Sync-anslutningsappen för Intune.  Du använder den lokala Exchange-anslutningsappen för Intune med dina [principer för villkorsstyrd åtkomst för att tillåta eller blockera åtkomst till dina lokala Exchange-postlådor](conditional-access-exchange-create.md). 
+Informationen i den här artikeln hjälper dig att installera och sedan övervaka den lokala Exchange Active Sync-anslutningsappen för Intune.  Du använder den lokala Exchange-anslutningsappen för Intune med dina [principer för villkorlig åtkomst för att tillåta eller blockera åtkomst till Exchange On-Premises-postlådor](conditional-access-exchange-create.md). 
 
-När en enhet försöker ansluta till ditt lokala Exchange mappar Exchange-anslutningsappen EAS-poster (Exchange Active Sync) i Exchange Server till Intune-poster för att söka efter enhetsregistrering med Intune och efterlevnad med dina principer för enhetsefterlevnad. Beroende på dina principer för villkorsstyrd åtkomst kan enheten tillåtas åtkomst eller blockeras. Mer information finns i [Hur används villkorsstyrd åtkomst vanligtvis med Intune?](conditional-access-intune-common-ways-use.md)
+När en enhet försöker ansluta till ditt lokala Exchange mappar Exchange-anslutningsappen EAS-poster (Exchange Active Sync) i Exchange Server till Intune-poster för att söka efter enhetsregistrering med Intune och efterlevnad med dina principer för enhetsefterlevnad. Beroende på dina principer för villkorlig åtkomst, kan enheten tillåtas åtkomst eller blockeras. Mer information finns i [Hur används villkorlig åtkomst vanligtvis med Intune?](conditional-access-intune-common-ways-use.md)
 
 Intune har stöd för installation av flera lokala Exchange-anslutningsappar per prenumeration. Om du har fler än en lokal Exchange-organisation kan du konfigurera en separat anslutningsapp för varje sådan. Dock kan bara en anslutning installeras för varje enskild Exchange-organisation. 
 
@@ -119,7 +119,7 @@ Utför följande steg för att installera den lokala Exchange-anslutningsappen f
 
 4. I fälten **Användare (domän\användare)** och **Lösenord** anger du autentiseringsuppgifterna som krävs för att ansluta till Exchange-servern. Det konto som du anger måste ha en licens för att använda Intune. 
 
-5. Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med villkorliga åtkomstprinciper i Intune.  
+5. Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med principer för villkorlig åtkomst i Intune.  
 
        Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
 
@@ -184,9 +184,9 @@ Från och med versionen Intune 1710 kan du använda [Operations Manager-hanterin
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Tvinga en snabbsynkronisering eller en fullständig synkronisering manuellt
 En lokal Exchange Connector synkroniserar automatiskt och regelbundet EAS- och Intune-enhetsposterna. Om efterlevnadsstatusen för en enhet ändras uppdaterar den automatiska synkroniseringsprocessen posterna regelbundet så att enhetsåtkomst kan blockeras eller tillåtas.
 
-   - **Snabbsynkroniseringar** görs regelbundet flera gånger om dagen. Vid en snabbsynkronisering hämtas enhetsinformation för Intune-licensierade och lokala, villkorsstyrda Exchange-användare som har ändrats sedan den senaste synkroniseringen.
+   - **Snabbsynkroniseringar** görs regelbundet flera gånger om dagen. Vid en snabbsynkronisering hämtas enhetsinformation för Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst.
 
-   - En **fullständig synkronisering** görs en gång per dygn som standard. Vid en fullständig synkronisering hämtas enhetsinformation för alla Intune-licensierade och lokala, villkorsstyrda Exchange-användare. Vid en fullständig synkronisering hämtas även information om Exchange-servern, och dessutom garanteras att bara den konfiguration som angetts av Intune på Azure Portal uppdateras på Exchange-servern. 
+   - En **fullständig synkronisering** görs en gång per dygn som standard. Vid en fullständig synkronisering hämtas enhetsinformation för alla Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst. Vid en fullständig synkronisering hämtas även information om Exchange-servern, och dessutom garanteras att bara den konfiguration som angetts av Intune på Azure Portal uppdateras på Exchange-servern. 
 
 
 Du kan tvinga en synkronisering för en anslutningsapp med alternativen **Snabbsynkronisering** eller **Fullständig synkronisering** Intune-instrumentpanel så här:
@@ -196,4 +196,4 @@ Du kan tvinga en synkronisering för en anslutningsapp med alternativen **Snabbs
    3. Välj den anslutningsapp du vill synkronisera och välj sedan **Snabbsynkronisering** eller **Fullständig synkronisering**.
 
 ## <a name="next-steps"></a>Nästa steg
-[Skapa en princip för villkorlig åtkomst för lokal Exchange](conditional-access-exchange-create.md)
+[Skapa en princip för villkorlig åtkomst för Exchange On-Premises](conditional-access-exchange-create.md)

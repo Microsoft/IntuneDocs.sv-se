@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2019
+ms.date: 06/24/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e170fe0c1b461bad140b89ac01a2ad817e2082e5
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
+ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744328"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344093"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -68,7 +68,7 @@ Vi rekommenderar starkt att du publicerar NDES-servern via en omvänd proxy, til
 |**Certifikatmall**|Konfigurera den här mallen hos den utfärdande certifikatutfärdaren.|
 |**Certifikat för klientautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från en offentlig certifikatutfärdare. Du installerar certifikatet på NDES-servern.|
 |**Certifikat för serverautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från en offentlig certifikatutfärdare. Du installerar och binder SSL-certifikatet i IIS på NDES-servern. Om certifikatet har användningarna av klientens och serverns autentiseringsnycklar inställt på (**Förbättrad nyckelanvändning**) kan du använda samma certifikat.|
-|**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta certifikat som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren. Sedan tilldelar du den till användare, enheter eller båda med hjälp av certifikatprofilen för betrodd certifikatutfärdare.<br /><b>Obs!<b /> När en profil för SCEP-certifikatet har tilldelats så måste du tilldela den betrodda rotcertifikatsprofil som refereras i SCEP-certifikatprofilen till samma användare eller enhetsgrupp.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
+|**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta certifikat som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren. Sedan tilldelar du den till användare, enheter eller båda med hjälp av certifikatprofilen för betrodd certifikatutfärdare.<br /> **OBS!<br /> När en profil för SCEP-certifikatet har tilldelats så måste du tilldela den *betrodda rotcertifikatsprofil* som refereras i SCEP-certifikatprofilen till samma användare eller enhetsgrupp.  För att skapa den här profilen, läs vidare under [Skapa en betrodd certifikatprofil](certficates-pfx-configure.md#create-a-trusted-certificate-profile) i artikeln om PKCS-certifikatprofiler.** <br/><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar. <br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
 
 ### <a name="accounts"></a>Konton
 
@@ -487,7 +487,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
      - **Digital signatur**: Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln
    - **Nyckelstorlek (bitar)** : Välj antalet bitar i nyckeln
    - **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för.
-   - **Rotcertifikat**: Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren och/eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen. Glöm inte att tilldela den här betrodda rotcertifikatprofilen till samma grupp som tilldelats i SCEP-certifikatprofilen.
+   - **Rotcertifikat**: Välj en [betrodd rotcertifikatprofil](certficates-pfx-configure.md#create-a-trusted-certificate-profile) som du tidigare har skapat och tilldelat till användaren och/eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som utfärdar det certifikat som du konfigurerar i den här certifikatprofilen. Glöm inte att tilldela den här betrodda rotcertifikatprofilen till samma grupp som tilldelats i SCEP-certifikatprofilen.
    - **Förbättrad nyckelanvändning**: **Lägg till** värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov.
    - **Registreringsinställningar**
      - **Tröskelvärde för förnyelse (%)** : Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
@@ -508,6 +508,7 @@ Tänk på följande innan du tilldelar certifikatprofiler till grupper:
 
     > [!NOTE]
     > Du bör förvänta dig att se flera kopior av certifikaten i hanteringsprofilen för iOS om du distribuerar flera resursprofiler som använder samma certifikatprofil.
+- Om du använder samhantering för Intune och Configuration Manager i Configuration Manager, ska du [ställa in arbetsbelastningsreglaget](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) för *resursåtkomstprincipen* till **Intune** eller **Pilot Intune**. Den här inställningen gör att Windows 10-klienter kan starta processen för att begära certifikatet.  
 
 Du hittar allmän information om hur du tilldelar profiler i [tilldela enhetsprofiler](device-profile-assign.md).
 
@@ -552,7 +553,7 @@ Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Klart  | Klart |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Certifikatutfärdaren är inte giltig eller kan inte nås. Kontrollera att certifikatutfärdaren är tillgänglig och att servern kan kommunicera med den. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Symantec Client Auth-certifikatet gick inte att hitta i det lokala certifikatarkivet. Läs mer i artikeln [Installera Symantecs certifikat för registreringsauktorisering](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Symantec Client Auth-certifikatet gick inte att hitta i det lokala certifikatarkivet. Mer information finns i artikeln [Konfigurera Intune Certificate Connector för DigiCert PKI-plattformen](https://docs.microsoft.com/intune/certificates-digicert-configure#troubleshooting).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Det angivna kontot har inte behörighet att återkalla ett certifikat från certifikatutfärdaren. Du ser utfärdande certifikatmyndighet i motsvarande fält i händelsemeddelandet.  |
 | 0x00000403 | CertThumbprint_NotFound  | Det gick inte att hitta något certifikat som matchar dina indata. Registrera certifikatanslutningen och försök igen. |
 | 0x00000404 | Certificate_NotFound  | Det gick inte att hitta något certifikat som matchar angivna indata. Registrera om certifikatanslutningen och försök igen. |

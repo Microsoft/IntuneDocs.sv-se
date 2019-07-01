@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 415005ee58367a189986e9d7bd0ef693f14bc5c9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2c2c50909b701ee5418ea69d73e67518de1c5bce
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048358"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045735"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funktioner för hantering av registrerade enheter i Microsoft Intune
 
@@ -65,7 +65,7 @@ Användare får tillgång till företagsportalen där de kan installera appar, r
 |Wi-Fi-profiler|Distribuerar trådlösa nätverksinställningar till användarna. Genom att distribuera de här inställningarna gör du det enklare för användaren att ansluta till företagets nätverk.|[Wi-Fi-anslutningar i Microsoft Intune](wi-fi-settings-configure.md)|
 |E-postprofiler|Skapar och distribuerar e-postinställningar till enheter så att användarna kan komma åt företagets e-post på sina personliga enheter utan att behöva göra några särskilda inställningar.|[Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune](email-settings-configure.md)|
 |VPN-profiler|Distribuerar VPN-inställningar till användare och enheter i din organisation. Genom att distribuera inställningarna gör du det enklare för användarna att ansluta till resurser i företagets nätverk.|[VPN-anslutningar i Microsoft Intune](device-profiles.md#vpn)|
-|Villkorliga åtkomstprinciper|Hanterar åtkomst till Microsoft Exchange-e-post och SharePoint Online från enheter som inte hanteras av Intune.|[Begränsa åtkomst till e-post och SharePoint med Microsoft Intune](app-based-conditional-access-intune.md)|
+|Principer för villkorlig åtkomst|Hanterar åtkomst till Microsoft Exchange-e-post och SharePoint Online från enheter som inte hanteras av Intune.|[Begränsa åtkomst till e-post och SharePoint med Microsoft Intune](app-based-conditional-access-intune.md)|
 
 ## <a name="next-steps"></a>Nästa steg
 
