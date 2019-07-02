@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/03/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c8a7be6646c0035eaefed6d61d749c8469c8a4e
-ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
-ms.translationtype: MTE75
+ms.openlocfilehash: 633bf52084ad261f768cb4e59aaf4ce0ab5cd5bc
+ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031648"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468717"
 ---
-# <a name="in-development-for-microsoft-intune---june-2019"></a>Under utveckling för Microsoft Intune – juni 2019
+# <a name="in-development-for-microsoft-intune---july-2019"></a>Under utveckling för Microsoft Intune – juli 2019
 
 För att hjälpa dig med förberedelser och planering innehåller den här sidan information om uppdateringar av och funktioner i användargränssnittet i Intune som är under utveckling, men som inte släppts än. Dessutom:
 
@@ -42,29 +42,39 @@ För att hjälpa dig med förberedelser och planering innehåller den här sidan
 ## What's coming to Intune apps
 ## Notices
 -->
+
+<!-- Common categories:  
+#### App management
+#### Device configuration
+#### Device enrollment
+#### Device management
+#### Intune apps
+#### Monitor and troubleshoot
+#### Role-based access control
+#### Security
+
+-->
  
-## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
-
 <!-- ***********************************************-->
-### <a name="app-management"></a>Apphantering
+## <a name="app-management"></a>Apphantering
 
-#### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Enhetsanvändare kan visa alla hanterade appar som de har installerat eller försökt att installera <!-- 2352913 -->
+### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Enhetsanvändare kan visa alla hanterade appar som de har installerat eller försökt att installera <!-- 2352913 -->
 Företagsportalen för Windows visar alla hanterade appar, både nödvändiga och tillgängliga, som är installerade på en användares enhet. Användare kommer att kunna visa installationsförsök och väntande installationer, och deras aktuella status. Om din organisation inte gör appar obligatoriska eller tillgängliga ser användarna ett meddelande som förklarar att inga företagsappar har installerats. Användarna kommer också att kunna sortera eller filtrera appar baserat på installationsstatus.
 
-#### <a name="configure-which-browser-is-allowed-to-link-to-organization-data----3145939---"></a>Konfigurera vilken webbläsare som ska ha tillåtelse att länka till organisationsdata <!-- 3145939 -->
-Principer för Intune-appskydd (APP) på enheter med Android och iOS gör att du kan överföra organisationswebblänkar till en viss webbläsare utöver Intune Managed Browser eller Microsoft Edge.  Mer information om APP finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
+### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Anpassade meddelanden för användare och grupper    <!-- 16766574   -->
+Du kommer snart att kunna skicka anpassade adhoc-push-meddelanden från Företagsportalen-program till användare på iOS och Android-enheter du hanterar med Intune. Dessa anpassade meddelanden som inte är knutna till specifika Intune-funktioner och kan användas i något syfte som du behöver, inklusive allmänna meddelanden som du vill skicka till vissa eller alla dina anställda.  
 
-#### <a name="installed-apps-page-on-the-company-portal-website-----4224326---"></a>Sidan Installerade appar på företagsportalens webbplats  <!-- 4224326 -->
-[Företagsportalwebbplatsen](https://portal.manage.microsoft.com/) innehåller en ny sida för att visa användare alla appar som har installerats på enheten. Den här listan innehåller både tillgängliga appar och de appar som krävs av deras organisation. Användare kommer att kunna se status för installationen och krav för appar på sina enheter från den här sidan. Mer information om företagsportens webbplats finns i [Använda Intune-företagsportalens webbplats](/intune-user-help/using-the-intune-company-portal-website) och [Så här konfigurerar du Microsoft Intune-företagsportalappen](company-portal-app.md).
+### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Konfigurera appen meddelandeinnehåll för organisationskonton <!-- 2576686 -->
+Intunes appskyddsprinciper (APP) på Android och iOS-enheter gör att du kan kontroll appinnehåll meddelande för Org konton. Den här funktionen kräver support från program och kanske inte tillgänglig för alla APP aktiverade program. Mer information om APP finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
 
-#### <a name="call-graph-api-read-operations-from-an-application-without-user-credentials----4655885---"></a>Anropa Graph API-läsåtgärder från ett program utan användarens autentiseringsuppgifter <!-- 4655885 -->
-Program kan anropa Intune Graph API-läsåtgärder med appidentitet utan användarens autentiseringsuppgifter. Mer information finns i [Get access without a user](https://docs.microsoft.com/graph/auth-v2-service) (Få åtkomst utan användare).
+### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956----"></a>Tillgänglig Google Play-apprapportering för Android-arbetsprofiler <!-- 3041956  -->
+För tillgängliga appinstallationer på Androids arbetsprofilenheter kan du visa appens installationsstatus samt den installerade versionen av hanterade Google Play-appar. Mer information finns i [Så här övervakar du appskyddsprinciper](app-protection-policies-monitor.md), [Hantera Android-arbetsprofilenheter med Intune](android-enterprise-overview.md) och [Hanterade Google Play-apptyper](apps-add-android-for-work.md#managed-google-play-app-type).
 
 <!-- ***********************************************-->
-### <a name="device-configuration"></a>Enhetskonfiguration
+## <a name="device-configuration"></a>Enhetskonfiguration
 
 
-#### <a name="support-for-ikev2-vpn-profiles-for-ios----1943438---"></a>Stöd för IKEv2 VPN-profiler för iOS <!-- 1943438 -->
+### <a name="support-for-ikev2-vpn-profiles-for-ios----1943438---"></a>Stöd för IKEv2 VPN-profiler för iOS <!-- 1943438 -->
 Du kommer att kunna skapa VPN-profiler för den iOS-inbyggda VPN-klienten med hjälp av IKEv2-protokoll. IKEv2 är en ny anslutningstyp i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **VPN** för profiltyp > **Inställningar**.
 
 De här VPN-profilerna konfigurerar den inbyggda VPN-klienten. Därför installeras eller skickas inga VPN-klientappar till hanterade enheter. Den här funktionen kräver att enheter registreras i Intune (MDM-registrering).
@@ -73,85 +83,45 @@ Om du vill se de aktuella VPN-inställningarna som du kan konfigurera går du ti
 
 Gäller för: iOS
 
-#### <a name="configure-settings-for-kernel-extensions-on-macos-devices----20430240---"></a>Konfigurera inställningar för kerneltillägg på macOS-enheter <!-- 20430240 -->
-På macOS-enheter kan du skapa en enhetskonfigurationsprofil (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **macOS** som plattform). I en kommande uppdatering ingår en ny grupp med inställningar som gör att du kan konfigurera och använda kerneltillägg på dina enheter.
-
-Gäller för: macOS 10.13.2 och senare
-
-#### <a name="baseline-support-for-keyword-search-----3082036-----------"></a>Baslinjestöd för nyckelordssökning  <!-- 3082036         -->
-När du skapar eller redigerar en profil för säkerhetsbaslinjen kommer du snart att kunna använda *sökfunktionen* för att filtrera inställningarna som visas i konsolen.   
-
-#### <a name="use-applicability-rules-when-creating-windows-10-device-configuration-profiles----2549910---"></a>Använd ”tillämplighetsregler” när du skapar konfigurationsprofiler för Windows 10-enheter <!-- 2549910 -->
+### <a name="use-applicability-rules-when-creating-windows-10-device-configuration-profiles----2549910---"></a>Använd ”tillämplighetsregler” när du skapar konfigurationsprofiler för Windows 10-enheter <!-- 2549910 -->
 Du skapar konfigurationsprofiler för Windows 10-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** som plattform). Du kommer att kunna skapa en **tillämpningsregel** så att profilen endast gäller för en viss utgåva eller en specifik version. Exempelvis kan du skapa en profil som aktiverar vissa BitLocker-inställningar. När du lägger till profilen använder du en tillämpningsregel så att profilen endast gäller för enheter som kör Windows 10 Enterprise.
 
 Gäller för: 
 - Windows 10 och senare
 
-#### <a name="apps-from-the-store-only-setting-for-windows-10-devices-includes-more-configuration-options----2697002----"></a>Appar från inställningen Endast Store för Windows 10-enheter innehåller fler konfigurationsalternativ <!-- 2697002  -->
-
-När du skapar en enhetsbegränsningsprofil för Windows-enheter kan du använda inställningen **Appar endast från Store**. Det gör att användare endast installerar appar från Windows App Store (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform > **Enhetsbegränsningar** för profiltyp). Den här inställningen kommer att expanderas för att stödja fler alternativ i en kommande uppdatering. 
-
-Gå till [Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune](device-restrictions-windows-10.md#app-store) för att se de aktuella inställningarna.
-
-Gäller: Windows 10 och senare
-
-#### <a name="deploy-multiple-zebra-mobility-extensions-device-profiles-to-a-device-same-user-group-or-same-devices-group----4089955---"></a>Distribuera flera Zebra Mobility Extensions-enhetsprofiler till en enhet, samma användargrupp eller samma grupp av enheter <!-- 4089955 -->
-I Intune kan du använda Zebra Mobility Extensions (MX) i en profil för enhetskonfiguration för att anpassa inställningar eller lägga till inställningar som inte är fördefinierade i Intune. För närvarande kan du distribuera en profil till en enskild enhet. I en kommande uppdatering kommer du att kunna distribuera flera profiler till:
-
-- Samma användargrupp
-- Samma enhetsgrupp
-- En enskild enhet
-
-[Använda och hantera Zebra-enheter med Zebra Mobility Extensions i Microsoft Intune](android-zebra-mx-overview.md) visar hur du använder MX i Intune.
-
-Gäller: Android
-
-#### <a name="some-kiosk-settings-on-ios-devices-are-set-using-block-replacing-allow----4404075----"></a>Vissa inställningar för helskärmsläge på iOS-enheter är angivna till ”Blockera”, vilket ersätter ”Tillåt” <!-- 4404075  -->
-När du skapar en enhetsbegränsningsprofil på iOS-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **Helskärmsläge**) ställer du in **Autolås**, **Ringsignalsknapp**, **Skärmrotation**, **Viloläge för skärm-knapp** och **Volymknappar**. 
-
-För närvarande kan dessa inställningar konfigureras med hjälp av **Blockera** (blockerar funktionen) eller **Inte konfigurerat** (tillåter funktionen). I en kommande uppdatering blir värdena **Blockera** (blockerar funktionen) eller **Inte konfigurerat** (tillåter funktionen).
-
-Om du vill se de aktuella inställningarna går du till [iOS-enhetsinställningar för att tillåta eller begränsa funktioner](device-restrictions-ios.md). 
-
-Gäller för: iOS
-
-#### <a name="use-face-id-for-password-authentication-on-ios-devices----4490704----"></a>Använd Face ID för lösenordsautentisering på iOS-enheter <!-- 4490704  -->
-När du skapar en enhetsbegränsningsprofil för iOS-enheter kan du använda ett fingeravtryck som lösenord. Inställningarna för lösenord med fingeravtryck kommer även att tillåta ansiktsigenkänning i en kommande uppdatering (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **Lösenord**). Därför ändrar du följande inställningar:
-
-- **Upplåsning med fingeravtryck** är nu **Upplåsning av Touch ID och Face ID**.
-- **Ändring av fingeravtryck (endast övervakat)** är nu **Ändring av Touch ID och Face ID (endast övervakat)** .
-
-Face ID är tillgängligt i iOS 11.0 och senare. Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](device-restrictions-ios.md#password) för att se de aktuella inställningarna.
-
-Gäller för: iOS
-
-#### <a name="apps-feature-is-dependent-on-ratings-region-when-restricting-gaming-and-app-store-features-on-ios-devices----4593948----"></a>Funktionen Appar är beroende av klassificeringsregion för begränsning av spel och App Store-funktioner på iOS-enheter <!-- 4593948  -->
-På iOS-enheter kan du tillåta eller begränsa funktioner för spel, App Store och dokumentvisning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **App Store, dokumentvisning, spel**). Du kan också välja klassificeringsregion, till exempel USA. I en kommande uppdatering blir funktionen **Appar** en underordnad **klassificeringsregion** och blir beroende av **klassificeringsregion**.
-
-Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](device-restrictions-ios.md#app-store-doc-viewing-gaming) för att se de aktuella inställningarna.
-
-Gäller för: iOS
-
-#### <a name="administrative-templates-for-group-policy---------3510695---"></a>Administrativa mallar för grupprincip     <!--  3510695 -->
+### <a name="administrative-templates-for-group-policy---------3510695---"></a>Administrativa mallar för grupprincip     <!--  3510695 -->
 För att förbättra säkerheten för enheter i molnet släpper vi administrativa mallar. Med dem kan du använda Intune för att konfigurera val av grupprincipinställningar för Windows-datorer.  Mallarna använder Policy Configuration Service Provider (CSP) för att erbjuda upp till 2 500 ytterligare inställningar från Office, Windows och OneDrive.
 
-####  <a name="new-settings-for-the-windows-security-baseline-----3534649-4217151------------"></a>Nya inställningar för Windows-säkerhetsbaslinjer  <!-- 3534649, 4217151          -->
-Vi lägger till nya inställningar för Windows-säkerhetsbaslinjen. Den första inställningen avser virtualiseringsbaserad säkerhet, som kräver säker start. Med den andra inställningen kan du hantera röstaktivering av Windows-appar när skärmen låses.
+### <a name="manage-filevault-for-macos-------3858502--1210104-----"></a>Hantera FileVault för macOS   <!--  3858502 + 1210104   -->
+Du kommer att kunna använda en Intune endpoint protection enhetskonfigurationsprofil för att hantera FileVault krypteringsnyckel för macOS-enheter. Detta inkluderar escrow för visning av och rotera krypteringsnycklar av företagets enheter. Användarna kommer att kunna hämta dessa nycklar via Företagsportalens webbplats.
 
-#### <a name="security-baselines-will-be-generally-available------3785395---------"></a>Funktionen Säkerhetsbaslinjer blir nu allmänt tillgänglig  <!--  3785395       -->
-Funktionen Säkerhetsbaslinjer lämnar snart förhandsversionen och blir allmänt tillgänglig. 
+### <a name="advanced-settings-for-windows-defender-firewall-------1311949-------"></a>Avancerade inställningar för Windows Defender-brandväggen   <!--  1311949     -->
+Snart kommer du att kunna använda Intune som offentlig förhandsversion för att hantera anpassade brandväggsregler på klienter för Windows Defender.  
 
-#### <a name="the-windows-security-baseline-template-will-be-generally-available-------3794072---------"></a>Mallen för Windows-säkerhetsbaslinjer blir allmänt tillgänglig   <!--  3794072       -->
-Mallen för Windows-säkerhetsbaslinjer lämnar snart förhandsversionen och blir allmänt tillgänglig. Förhandsversionen av mallen kommer att dras tillbaka och en ny mall blir tillgänglig.
+### <a name="new-configuration-designer-when-creating-an-oemconfig-profile-for-android-enterprise----3712769----"></a>Nya configuration designer när du skapar en OEMConfig-profil för Android-företag <!-- 3712769  -->
+I Intune kan du skapa en profil för enhetskonfiguration som använder en app som OEMConfig (enhetskonfiguration > profiler > Skapa profil > Android enterprise för plattform > OEMConfig för Profiltyp). När du gör det öppnas en JSON-redigerare med en mall och värden som du kan ändra. Den här uppdateringen innehåller en Konfigurationsdesigner med ett förbättrat användargränssnitt som visar information som är inbäddad i appen, inklusive titlar och beskrivningar. JSON-redigerare finns kvar och visar alla ändringar du gör i Configuration Designer.
+
+Om du vill visa de aktuella inställningarna går du till [Använd och hantera Android-företagsenheter med OEMConfig](android-oem-configuration-overview.md).
+
+Gäller: Android Enterprise
+
 
 <!-- ***********************************************-->
-### <a name="device-management"></a>Enhetshantering
+## <a name="device-management"></a>Enhetshantering
 
-#### <a name="assign-scope-tags-to-all-managed-devices-in-a-security-group----3173810---"></a>Tilldela omfångstaggar till alla hanterade enheter i en säkerhetsgrupp <!-- 3173810 -->
-För närvarande kan du kan tilldela en omfångstagg till en enhet genom att gå till varje enskild enhets **egenskapssida** och välja omfångstaggar. Du kommer att kunna tilldela omfångstaggar till en säkerhetsgrupp, och alla enheter i säkerhetsgruppen kommer också att associeras med omfångstaggarna i en kommande uppdatering. Gör det här genom att välja **Intune** > **Roller** > **Omfång (taggar)**  > **Skapa**  >  **Omfång (taggar)** > välj de grupper som du vill tilldela omfångstaggen till. Alla enheter i grupperna kommer också att tilldelas omfångstaggen. Omfångstaggar med den här funktionen skriver över omfångstaggar med det aktuella flödet för enhetens omfångstaggar. (Det aktuella flödet för att tilldela omfångstaggar till enheter blir skrivskyddat i en kommande uppdatering.)
+### <a name="improve-device-location---3855417---"></a>Förbättra enhetsplats<!-- 3855417 -->
+Du kommer att kunna Zooma in på de exakta koordinaterna för en enhet med den **hitta enhet** åtgärd. Mer information om att hitta försvunna iOS-enheter finns i [hitta borttappade iOS-enheter](device-locate.md).
 
-#### <a name="see-the-security-patch-level-for-android-devices----4461911----"></a>Se säkerhetskorrigeringsnivå för Android-enheter <!-- 4461911  -->
-Du kommer att kunna se säkerhetskorrigeringsnivå för Android-enheter. Det gör du genom att välja **Intune** > **Enheter** > **Alla enheter** > välj en enhet > **Övervaka** > **Maskinvara**.
+### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Konfigurera automatisk Rensa tidsgränsen till 30 dagar <!--4231059  -->
+Du kommer att kunna ställa in automatisk Rensa tidsgränsen så kort som 30 dagar (i stället för aktuella högst 90 dagar) efter den senaste inloggningen. Du gör detta genom att gå till **Intune** > **enheter** > **installationsprogrammet** > **Rensa upp Enhetsregler**.
+
+
+<!-- ***********************************************-->
+## <a name="security"></a>Säkerhet
+
+### <a name="import-and-export-security-baselines------3408610------------"></a>Importera och exportera baslinjer för säkerhet    <!--3408610          -->  
+Vi lägger till möjligheten att exportera och importera säkerheten så att du kan ta dina anpassningar med dig och dela filer mellan Intune-miljöer.
+
 
 
 <!-- ***********************************************-->
@@ -159,7 +129,7 @@ Du kommer att kunna se säkerhetskorrigeringsnivå för Android-enheter. Det gö
 
 [!INCLUDE [Intune notices](./includes/intune-notices.md)]
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune](whats-new.md).
 
 

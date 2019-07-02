@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 06/27/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b31c7778ea167b98468a0a9ad9e37047c30ce201
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 43b87a90f90130a014817819b87ed5946b1ba15b
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047170"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413814"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>iOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
 
@@ -195,7 +195,7 @@ Den här funktionen har stöd för övervakade enheter som kör iOS 9.3 och sena
   Enhetstoken kan också användas för att lägga till enhetsspecifik information i de här fälten. Ange till exempel `Serial Number: {{serialnumber}}` om du vill visa serienumret. På låsskärmen visas texten ungefär som `Serial Number 123456789ABC`. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceName` eller andra enhetsspecifika värden.
 
   > [!NOTE]
-  > Variabler verifieras inte i användargränssnittet. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{Devicename}}` istället för `{{devicename}}` visas litteralsträngen istället för enhetens unika namn.
+  > Variabler är inte verifieras i Användargränssnittet och är skiftlägeskänsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Glöm inte att ange rätt information.
 
 Klicka på **OK** för att spara ändringarna.
 

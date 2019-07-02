@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 06/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5918dc0574033020689b267418fb6283cd686db
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 97d656db3e828ef3377b927395a283fe995bb8a4
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373903"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389283"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Använda anpassade inställningar för Windows Phone 8.1-enheter i Intune
 
 Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Windows Phone 8.1-enheter med hjälp av ”anpassade profiler”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
-Anpassade profiler i Windows Phone 8.1 använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera olika funktioner. De här inställningarna används vanligtvis av tillverkare av mobila enheter till att styra funktioner på enheten.
+Anpassade profiler i Windows Phone 8.1 använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera olika funktioner. De här inställningarna används vanligtvis av tillverkare av mobila enheter till att styra funktioner på enheten. [Windows Phone 8.1 MDM dokumenterad protokoll](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-phone/dn499787(v=technet.10)) visas inställningarna.
 
 Den här artikeln visar hur du skapar en anpassad profil för Windows Phone 8.1-enheter. 
 
@@ -62,6 +62,16 @@ Den här artikeln visar hur du skapar en anpassad profil för Windows Phone 8.1-
 
 5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
 6. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
+
+## <a name="example"></a>Exempel
+
+I följande exempel hindras Windows 8.1 phone-enheter från att ändra mobila nätverk utanför täckning operatör.
+
+- **Namn på**: Tillåt mobildata Roaming
+- **Beskrivning av**: Tillåt eller Tillåt inte roaming av mobildata
+- **OMA-URI** (skiftlägeskänsligt): ./Vendor/MSFT/PolicyManager/My/Connectivity/AllowCellularDataRoaming
+- **Datatyp**: heltal
+- **Värde**: 0
 
 ## <a name="next-steps"></a>Nästa steg
 

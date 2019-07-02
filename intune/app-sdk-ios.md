@@ -16,23 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d229972c238756598694d2e3463f22290924ccc
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 4877920821b2471f752f9fdb8941e87576d937ba
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045487"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413866"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
 > [!NOTE]
 > Börja gärna med att läsa artikeln [Kom igång med Intune App SDK Guide](app-sdk-get-started.md). Den här guiden beskriver hur du förbereder dig för integreringen på de plattformar som stöds.
 
-Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade **APP**- eller **MAM**-principer) i din iOS-app. Ett MAM-aktiverat program är ett program som är integrerat med Intune App SDK. Det kan användas av IT-administratörer för att distribuera appskyddsprinciper till din mobilapp om Intune aktivt hanterar appen.
+Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade APP- eller MAM-principer) i din ursprungliga iOS-app. Ett MAM-aktiverat program är ett program som är integrerat med Intune App SDK. Det kan användas av IT-administratörer för att distribuera appskyddsprinciper till din mobilapp om Intune aktivt hanterar appen.
 
 ## <a name="prerequisites"></a>Krav
 
-* Du behöver en Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-version 9 eller senare installerad.
+* Du behöver en Mac OS-dator som kör OS X 10.8.5 eller senare och som också har Xcode-version 9 eller senare installerad.
 
 * Appen måste vara anpassad för iOS 10 eller senare.
 
@@ -40,19 +40,30 @@ Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprincip
 
 * Hämta filerna för Intune App SDK för iOS på [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
-## <a name="whats-in-the-sdk"></a>Vad innehåller SDK?
+## <a name="whats-in-the-sdk-repository"></a>Vad ingår i SDK-databasen
 
-Intune App SDK för iOS innehåller ett statiskt bibliotek, resursfiler, API-rubriker, en plist-fil med inställningar för felsökning samt ett konfigurationsverktyg. Klientappar kan ibland endast innehålla resursfiler och statiskt länka till biblioteken för att tillämpa principer. Avancerade Intune APP-funktioner aktiveras via API:er.
+Följande filer är relevanta för appar/tillägg som innehåller inga Swift-kod eller kompileras med en Xcode-version äldre 10.2:
 
-Den här guiden beskriver hur du använder följande komponenter i Intune App SDK för iOS:
+* **IntuneMAM.framework**: Intune App SDK-ramverket. Vi rekommenderar att du länka detta ramverk till din app/tillägg för att aktivera hantering av Intune-klienten. Vissa utvecklare kan dock föredra prestandafördelarna med det statiska biblioteket. I följande avsnitt.
 
-* **libIntuneMAM.a**: Det statiska Intune App SDK-biblioteket. Om appen inte använder tillägg kan du länka detta bibliotek till projektet för att möjliggöra hantering av klientprogram i Intune med appen.
+* **libIntuneMAM.a**: Det statiska Intune App SDK-biblioteket. Utvecklare kan välja att länka det statiska biblioteket i stället för ramen. Eftersom statiska bibliotek är inbäddade direkt i appen/tillägget binära under utvecklingen, finns det prestandafördelar Start-tid för att använda det statiska biblioteket. Integrera dem i din app är dock en mer komplicerad process. Om din app innehåller några tillägg, länkar det statiska biblioteket till appen och tillägg resulterar i en större storlek för app-paket, som det statiska biblioteket ska bäddas in i varje app/tillägg binär. När du använder ramverket, kan appar och tillägg dela samma Intune SDK binary, vilket resulterar i en mindre storlek på appen.
 
-* **IntuneMAM.framework**: Intune App SDK-ramverket. Länka detta ramverk till projektet för att möjliggöra hantering av klientprogram i Intune med appen. Använd ramverket i stället för det statiska biblioteket om appen använder tillägg, så att projektet inte skapar flera kopior av det statiska biblioteket.
+* **IntuneMAMResources.Bundle**: ett resurspaket som innehåller resurser som SDK är beroende av. Resurser-paket krävs endast för appar som integrerar det statiska biblioteket (libIntuneMAM.a).
 
-* **IntuneMAMResources.Bundle**: Ett resurspaket som har resurser som SDK är beroende av.
+Följande filer är relevanta för appar /-tillägg som innehåller Swift-kod och kompileras med Xcode 10.2 +:
 
-* **Rubriker**: visar API:er för Intune App SDK. Om du använder ett API måste du inkludera huvudfilen som innehåller API:et. Följande huvudfiler innehåller API:er, datatyper och protokoll som Intune App SDK tillgängliggör för utvecklare:
+* **IntuneMAMSwift.framework**: The Intune App SDK Swift framework. Det här ramverket innehåller alla rubriker för API: er som anropar din app. Länka detta ramverk till din app/tillägg för att aktivera hantering av Intune-klienten.
+
+* **IntuneMAMSwiftStub.framework**: Intune App SDK Swift Stub-ramverket. Det här är ett nödvändigt beroende av IntuneMAMSwift.framework som appar /-tillägg måste länkar.
+
+
+Följande filer är relevanta för alla appar/tillägg:
+
+* **IntuneMAMConfigurator**: ett verktyg som används för att konfigurera appen eller tillägget Info.plist med minsta nödvändiga ändringar för Intune-hantering. Beroende på funktionerna i din app eller tillägg, kan du behöva göra ytterligare manuella ändringar Info.plist.
+
+* **Rubriker**: visar offentliga API:er för Intune App SDK. Dessa rubriker ingår i IntuneMAM/IntuneMAMSwift-ramverk, så att utvecklare som använder antingen av ramverk inte behöver lägga till sidhuvuden manuellt till projektet. Utvecklare som vill länka mot det statiska biblioteket (libIntuneMAM.a) måste du manuellt ta med dessa huvuden i projektet.
+
+Följande huvudfiler innehåller API:er, datatyper och protokoll som Intune App SDK tillgängliggör för utvecklare:
 
     * IntuneMAMAppConfig.h
     * IntuneMAMAppConfigManager.h
@@ -70,7 +81,7 @@ Den här guiden beskriver hur du använder följande komponenter i Intune App SD
     * IntuneMAMPolicyManager.h
     * IntuneMAMVersionInfo.h
 
-Utvecklare kan tillgängliggöra innehållet i alla ovanstående huvudfiler genom att helt enkelt importera IntuneMAM.h
+Utvecklare kan tillgängliggöra innehållet i alla föregående huvudfiler genom att helt enkelt importera IntuneMAM.h
 
 
 ## <a name="how-the-intune-app-sdk-works"></a>Hur Intune App SDK fungerar
@@ -80,20 +91,22 @@ Målet med Intune App SDK för iOS är att lägga till hanteringsfunktioner i iO
 
 ## <a name="build-the-sdk-into-your-mobile-app"></a>Skapa SDK i din mobilapp
 
-Följ anvisningarna nedan om du vill aktivera Intune App SDK:
+Följ dessa steg för att aktivera Intune App SDK:
 
-1. **Alternativ 1 (rekommenderas)** : Länken `IntuneMAM.framework` till projektet. Dra `IntuneMAM.framework` till listan **inbäddade binära** i projektmålet.
+1. **Alternativ 1 - ramverket (rekommenderas)** : Om du använder Xcode 10.2 + och din app/tillägget innehåller Swift-kod, länka `IntuneMAMSwift.framework` och `IntuneMAMSwiftStub.framework` till målet: dra `IntuneMAMSwift.framework` och `IntuneMAMSwiftStub.framework` till den **inbäddade Binärfiler** projektets målkatalog.
+
+    I annat fall länka `IntuneMAM.framework` till målet: dra `IntuneMAM.framework` till den **inbäddade binära** projektets målkatalog.
 
    > [!NOTE]
    > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se [Skicka in din app till App Store](#submit-your-app-to-the-app-store) för mer information.
 
-   **Alternativ 2**: Länk till biblioteket `libIntuneMAM.a`. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
+   **Alternativ 2 – statiska biblioteket**: det här alternativet är bara tillgängligt för appar/tillägg som innehåller inga Swift-kod eller har skapats med Xcode < 10.2. Länk till `libIntuneMAM.a`-biblioteket. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
 
     ![Intune App SDK iOS: länkade ramverk och bibliotek](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
     Lägg till `-force_load {PATH_TO_LIB}/libIntuneMAM.a` i någon av följande och ersätt `{PATH_TO_LIB}` med platsen för Intune App SDK:
-   * Projektets konfigurationsinställning för `OTHER_LDFLAGS`
-   * Xcode-användargränssnittets **Andra länkarflaggor**
+   * Projektets `OTHER_LDFLAGS` konfigurationsinställning för kompilering.
+   * Xcode-användargränssnittets **Andra länkarflaggor**.
 
      > [!NOTE]
      > Leta reda på `PATH_TO_LIB` genom att välja filen `libIntuneMAM.a` och välja **Get Info** (Hämta information) från menyn **Arkiv**. Kopiera och klistra in informationen om **Var** (sökvägen) från avsnittet **Allmänt** i fönstret **Information**.
@@ -101,8 +114,21 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
      Lägg till `IntuneMAMResources.bundle`-resurspaketet i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
 
      ![Intune App SDK iOS: kopiera paketresurser](./media/intune-app-sdk-ios-copy-bundle-resources.png)
+     
+2. Om du vill anropa någon av Intune APIs från Swift måste ditt app/tillägg importera de nödvändiga Intune SDK-rubrikerna via ett datacenterbryggning Objective-C-huvud. Om din app/tillägget inte redan innehåller ett datacenterbryggning Objective-C-huvud, du kan ange en via den `SWIFT_OBJC_BRIDGING_HEADER` eller den Xcode UI **Interimshuvudfilen med Objective-C** fält. Din datacenterbryggning rubrik bör se ut ungefär så här:
 
-2. Lägg till dessa iOS-ramverk i projektet:  
+   ```objc
+      #import <IntuneMAMSwift/IntuneMAM.h>
+   ```
+   
+   Det gör alla Intune SDK-API: er tillgängliga i alla Swift källfiler ditt app/tillägg. 
+   
+    > [!NOTE]
+    > * Du kan välja att endast brygga specifika Intune SDK-huvuden till Swift i stället för den omfattande IntuneMAM.h
+    > * Sökvägen till filen huvudet kan variera beroende på vilka du har integrerat framework/statiska-biblioteket.
+    > * Gör Intune SDK-API: er som är tillgängliga i Swift via en instruktion för import av modulen (ex: importera IntuneMAMSwift) stöds inte för närvarande. Den rekommenderade metoden är att använda ett datacenterbryggning Objective-C-huvud.
+    
+3. Lägg till dessa iOS-ramverk i projektet:  
     * MessageUI.framework  
     * Security.framework  
     * MobileCoreServices.framework  
@@ -115,7 +141,7 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
     * QuartzCore.framework  
     * WebKit.framework
 
-3. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
+4. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
 
    > [!NOTE]
    > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
@@ -126,29 +152,29 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
    >  </array>
    >  ```
 
-4. När du har aktiverat delning av nyckelringar följer du dessa steg för att skapa en separat åtkomstgrupp där data i Intune App SDK kommer att sparas. Du kan skapa en åtkomstgrupp för nyckelringar med hjälp av användargränssnittet eller med behörighetsfilen. Om du använder användargränssnittet för att skapa gruppen med nyckelhanterare, följer du stegen nedan:
+5. När du har aktiverat delning av nyckelringar följer du dessa steg för att skapa en separat åtkomstgrupp där data i Intune App SDK kommer att sparas. Du kan skapa en åtkomstgrupp för nyckelringar med hjälp av användargränssnittet eller med behörighetsfilen. Om du använder användargränssnittet för att skapa gruppen med nyckelhanterare, följer du dessa steg:
 
-    1. Om mobilappen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den **första** gruppen.
+     a. Om mobilappen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den **första** gruppen.
     
-    2. Lägg till den delade gruppen med nyckelhanterare `com.microsoft.intune.mam` till dina befintliga åtkomstgrupper. Intune App SDK använder den här åtkomstgruppen för att lagra data.
+    b. Lägg till den delade gruppen med nyckelhanterare `com.microsoft.intune.mam` till dina befintliga åtkomstgrupper. Intune App SDK använder den här åtkomstgruppen för att lagra data.
     
-    3. Lägg till `com.microsoft.adalcache` i dina befintliga åtkomstgrupper.
+    c. Lägg till `com.microsoft.adalcache` i dina befintliga åtkomstgrupper.
     
-        ![Intune App SDK iOS: delning av nyckelringar](./media/intune-app-sdk-ios-keychain-sharing.png)
+        ![Intune App SDK iOS: keychain sharing](./media/intune-app-sdk-ios-keychain-sharing.png)
     
-    4. Om du redigerar behörighetsfilen direkt, i stället för att använda det Xcode-användargränssnitt som visas ovan för att skapa åtkomstgrupperna för nyckelringen, ska du lägga till åtkomstgrupperna för nyckelringen med `$(AppIdentifierPrefix)` (Xcode hanterar detta automatiskt). Exempel:
+    d. Om du redigerar behörighetsfilen direkt, i stället för att använda det Xcode-användargränssnitt som visas ovan för att skapa åtkomstgrupperna för nyckelringen, ska du lägga till åtkomstgrupperna för nyckelringen med `$(AppIdentifierPrefix)` (Xcode hanterar detta automatiskt). Exempel:
     
         - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
         - `$(AppIdentifierPrefix)com.microsoft.adalcache`
     
         > [!NOTE]
-        > En rättighetsfil är en XML-fil som är unik för ditt mobila program. Den används för att ange särskilda behörigheter och funktioner i din iOS-app. Om din app inte tidigare har en behörighetsfil bör aktiveringen av nyckelringsdelning (steg 3) ha fått Xcode att generera en för din app. Kontrollera att appens paket-ID är den första posten i listan.
+        > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
 
-5. Inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Glöm inte att spara ändringarna innan du fortsätter till nästa steg.
+6. Inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Glöm inte att spara ändringarna innan du fortsätter till nästa steg.
 
-6. Om din app inte redan använder FaceID redan bör du se till att [NSFaceIDUsageDescription Info.plist-nyckeln](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) har konfigurerats med ett standardmeddelande. Detta krävs så att iOS meddelar användaren om hur appen har för avsikt att använda FaceID. En inställning för Intune-appskyddsprincip gör att FaceID kan användas som en åtkomstmetod till appen när den konfigurerats av IT-administratören.
+7. Om din app inte redan använder FaceID redan bör du se till att [NSFaceIDUsageDescription Info.plist-nyckeln](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) har konfigurerats med ett standardmeddelande. Detta krävs så att iOS meddelar användaren om hur appen har för avsikt att använda FaceID. En inställning för Intune-appskyddsprincip gör att FaceID kan användas som en åtkomstmetod till appen när den konfigurerats av IT-administratören.
 
-7. Använd verktyget IntuneMAMConfigurator som ingår i [SDK-lagringsplatsen](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) för att slutföra konfigurationen av din apps Info.plist. Verktyget har tre parametrar:
+8. Använd verktyget IntuneMAMConfigurator som ingår i [SDK-lagringsplatsen](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) för att slutföra konfigurationen av din apps Info.plist. Verktyget har tre parametrar:
 
    |Egenskap|Använd så här|
    |---------------|--------------------------------|
@@ -238,7 +264,7 @@ MultiIdentity | Boolesk| Anger om appen är multiidentitetsmedveten. | Valfritt.
 SplashIconFile <br> SplashIconFile~ipad | Sträng  | Anger filen för Intunes ikon för välkomstskärmen (startskärm). | Valfritt. |
 SplashDuration | Antal | Kortaste tid i sekunder som startskärmen för Intune visas när programmet startas. Standardvärdet är 1,5. | Valfritt. |
 BackgroundColor| Sträng| Anger bakgrundsfärgen för start- och PIN-kodsskärmarna. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.   | Valfritt. Standardinställningen är ljusgrått. |
-ForegroundColor| Sträng| Anger förgrundsfärgen för start- och PIN-kodsskärmarna, till exempel textfärg. Godkänner en hexadecimal RGB-sträng i formatet #XXXXXX, där X kan vara ett värde mellan 0–9 eller A–F. Pundtecknet kan utelämnas.  | Valfritt. Standardinställningen är svart. |
+ForegroundColor| Sträng| Anger förgrundsfärgen för start- och PIN-kodsskärmarna, till exempel textfärg. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.  | Valfritt. Standardinställningen är svart. |
 AccentColor | Sträng| Anger accentfärgen för PIN-kodsskärmen, till exempel textfärg på knappar och markeringsfärg för rutor. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.| Valfritt. Standardinställningen är systemblått. |
 MAMTelemetryDisabled| Boolesk| Anger om SDK inte ska skicka några telemetridata till serverdelen.| Valfritt. Standardvärdet är no (nej). |
 MAMTelemetryUsePPE | Boolesk | Anger om MAM SDK ska skicka data till PPE-telemetriserverdelen. Använd det här när du testar dina appar med Intune-principen så att testets telemetridata inte blandas med kunddata. | Valfritt. Standardvärdet är no (nej). |

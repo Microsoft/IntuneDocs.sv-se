@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f065849bd15a23558aa9bb7f82730dca9d4b3fa
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 506bdc73717ed9af11ab8db0e5f459145ab27f83
+ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043644"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67407095"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -74,7 +74,7 @@ Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har
       ```
       Appar kan skicka null om användarens UPN är okänt vid tidpunkten för anropet. I det här fallet uppmanas användare att ange sin e-postadress och sitt lösenord.
       
-      Om appen redan använder ADAL eller MSAL för att autentisera användare kan du konfigurera en upplevelse med enkel inloggning (SSO) mellan din app och Intune SDK. Du måste först konfigurera ADAL/MSAL att lagra token i samma åtkomstgrupp för nyckelringar som används av Intune Xamarin-bindningar för iOS (com.microsoft.adalcache). För ADAL kan du göra detta genom att [konfigurera egenskapen KeychainSecurityGroup för AuthenticationContext](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Token-cache-serialization#enable-token-cache-sharing-across-ios-applications). För MSAL måste du [ange egenskapen KeychainSecurityGroup för PublicClientApplication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/msal-net-2-released#you-can-now-enable-sso-between-adal-and-msal-apps-on-xamarinios). Därefter behöver du åsidosätta de AAD-standardinställningar som används av Intune SDK med inställningarna för din app. Du kan göra detta via i ordlistan IntuneMAMSettings i appens Info.plist, såsom anges i [Intune App SDK för iOS Developer Guide](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), eller så kan du använda AAD-åsidosättningsegenskaper för IntuneMAMPolicyManager-instansen. Metoden Info.plist rekommenderas för program vars ADAL-inställningar är statiska medan egenskaper för åsidosättning rekommenderas för program som fastställer dessa värden vid körning. När alla inställningar för enkel inloggning har konfigurerats bör din app tillhandahålla användarens UPN för IntuneMAMEnrollmentManagers RegisterAndEnrollAccount-metod när den har autentiserats:
+      Om appen redan använder ADAL eller MSAL för att autentisera användare kan du konfigurera en upplevelse med enkel inloggning (SSO) mellan din app och Intune SDK. Du måste först konfigurera ADAL/MSAL att lagra token i samma åtkomstgrupp för nyckelringar som används av Intune Xamarin-bindningar för iOS (com.microsoft.adalcache). För ADAL kan du göra detta genom att [konfigurera egenskapen iOSKeychainSecurityGroup för AuthenticationContext](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/iOS-Keychain-Access). För MSAL måste du [ange egenskapen iOSKeychainSecurityGroup för PublicClientApplication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Xamarin-iOS-specifics#enable-keychain-access). Därefter behöver du åsidosätta de AAD-standardinställningar som används av Intune SDK med inställningarna för din app. Du kan göra detta via i ordlistan IntuneMAMSettings i appens Info.plist, såsom anges i [Intune App SDK för iOS Developer Guide](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), eller så kan du använda AAD-åsidosättningsegenskaper för IntuneMAMPolicyManager-instansen. Metoden Info.plist rekommenderas för program vars ADAL-inställningar är statiska medan egenskaper för åsidosättning rekommenderas för program som fastställer dessa värden vid körning. När alla inställningar för enkel inloggning har konfigurerats bör din app tillhandahålla användarens UPN för IntuneMAMEnrollmentManagers RegisterAndEnrollAccount-metod när den har autentiserats:
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
       ```

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: f9cb8168075badda65b3cd02f8ae059119769c7c
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828948"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413870"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 Installera appar på enheten från företagsportalappen för Windows.
@@ -37,10 +37,9 @@ Installera appar på enheten från företagsportalappen för Windows.
 
     * **Start**: välj från en lista över din organisations aktuella appar.  
     * **Visa alla**: från avsnittet **Startsida** > **Appar**, klickar du på **Visa alla** för att visa alla tillgängliga appar.  
-    * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella.  
+    * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella. Visa, sortera och filtrera appar. Sökresultat sorteras automatiskt efter relevans.  
     * **Appkategorier**: Välj den här sidan i navigeringsfönstret för att välja appar baserat på typ eller funktion. Appar sorteras under kategorier som **aktuell**, **Education**, och **produktivitet**.  
     * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
-    * **Alla appar**: Visa, sortera och filtrera alla tillgängliga appar. Sökresultat sorteras automatiskt efter relevans.  
 
 3. Välj en app.   
 4. På sidan appinformation, klickar du på **Installera**. När installationen är klar visas statusen **Installerad**.  
@@ -49,9 +48,12 @@ Installera appar på enheten från företagsportalappen för Windows.
     
     ![Företagsportalappen för Windows 10, appinformationssidan, statusen ”Installerad” visas när appen har installerats. Knappen Installera ändras till Installera om.](./media/RS1_AppDetailsPage_Installed_01.png)    
 
- Beroende på hur stort ditt företag är kan det finnas flera versioner av Office tillgängliga för hämtning från företagsportalen. Mer information om Office-paketet för Windows-enheter finns i [Installera Office 365 på din Windows-enhet](./install-office-windows.md).
+> [!IMPORTANT]
+> Om det inte går att installera en obligatorisk app och din organisation gör den tillgänglig för dig att manuellt installera, Välj **försök**. Det kan ta upp till tio minuter att se den uppdaterade statusen. Om du väljer **försök** igen under denna tid och får ett felmeddelande som kan användas. Fortsätta att vänta i tio minuter innan den uppdaterade statusen.   
 
-## <a name="share-apps-with-others"></a>Dela appar med andra  
+Beroende på hur stort ditt företag är kan det finnas flera versioner av Office tillgängliga för hämtning från företagsportalen. Mer information om Office-paketet för Windows-enheter finns i [Installera Office 365 på din Windows-enhet](./install-office-windows.md).
+
+## <a name="share-apps"></a>Dela appar  
 Dela och rekommendera appar till dina arbets- och skolkontakter. Följande steg beskriver hur du delar en länk direkt från Företagsportalen.
 
 1. I Företagsportalen, högerklickar du eller trycker och håller ner på valfri app för att öppna dess [snabbmeny](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
@@ -65,20 +67,34 @@ Dela och rekommendera appar till dina arbets- och skolkontakter. Följande steg 
 
 När du delar får mottagaren en länk och ett meddelande för att visa appens information. Länken öppnar företagsportalens **appinformationssida**. 
 
-## <a name="available-apps"></a>Tillgängliga appar  
+## <a name="available-and-required-apps"></a>Tillgängliga och nödvändiga appar
+Appar är tilldelade till dig av din organisation och märkta Företagsportalen som antingen **tillgänglig** eller **krävs**. 
 
-Din organisation väljer appar som är lämpliga och användbara för dig på jobbet eller i skolan. Dessa appar är de enda du hittar i Företagsportal.  
+* Tillgängliga appar: de här apparna är markerade som din organisation och är lämplig och användbar på arbetet eller skolan. De är valfritt att installera och är de enda appar som du hittar i Företagsportalen för att installera. 
 
-Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för Windows har du åtkomst till Windows-appar men inte iOS-appar.  
+* Obligatoriska appar: de här apparna är nödvändiga för arbete och skola och har distribuerats direkt på din enhet. Apparna installeras automatiskt åt dig utan åtgärd. 
 
-## <a name="required-apps"></a>Required apps  
-
-Din organisation kan distribuera vissa appar direkt på din enhet och markera dem som **krävs**. Apparna installeras automatiskt åt dig utan åtgärd.
+Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för Windows har du åtkomst till Windows-appar men inte iOS-appar.
 
 ## <a name="request-an-app-for-work-or-school"></a>Begär en app för arbete eller skola  
 Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Kontaktuppgifter för **supportavdelningen** finns på sidan Hjälp och support i appen Företagsportal. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).    
 
   ![Appen Företagsportal för Windows 10, sidan Hjälp och support, med information om supportavdelningen markerad. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 
+## <a name="view-installed-apps"></a>Visa installerade appar  
+Visa en lista över alla appar som är installerade på din enhet. Den **installerade appar** sidan visas följande information om varje app:
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Namn: Namnet på appen. Tillgängliga appar innehåller en länk till den **appinformation** sidan.
+* Tilldelningstyp: hur appen tilldelas och tillgång till. 
+* Utgivare: Namnet på den utvecklare eller det företag som distribuerade appen. En utgivare är vanligtvis en programvaruleverantör eller din organisation.  
+* Datum publicerad: Det datum då appen var tillgänglig för nedladdning. Publicera datum kan visa första versionen av en app eller en Apps senaste uppdatering.
+* Status: Aktuella installationsstatus för appen på din enhet. Appar kan visa som installerar, installerat installera misslyckades. Obligatoriska appar kan ta upp till 10 minuter att visa den uppdatera statusen. Se kommentaren under [installera appar](#install-apps) viktig information om hur du installerar en obligatorisk app. 
+
+Gå till den här sidan genom att gå till navigeringsmenyn och välj **installerade appar**. 
+
+  ![Exemplet på skärmbilden av företagsportalappen för Windows 10, sidan för installerade appar. ](./media/installed-apps-cp-1906.png)  
+
+
+Använd **sortera efter** att ordna om Tilldelningstyp för appar, utgivare, alfabetiskt efter namn eller kronologiskt genom att publicera datum. Använd **filtrera efter** att begränsa de appar som visas efter installationsstatus.  Om inga appar är tillgängliga, visas ett meddelande om att inga appar har installerats.  
+
+Behöver du mer hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
