@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3400169aab9598624216fcbc9ef7694e1d5441cc
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: c2e8c475cd52e199519db7a3d7ea83e6dbfef1a3
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045777"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530662"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Teknikval för att kunna tillämpa BYOD med Microsoft Enterprise Mobility + Security (EMS)
 
@@ -56,7 +56,7 @@ Som redan nämnts kan du med hjälp av villkorlig åtkomst få en användare att
 
 * Vilken användare som försöker få åtkomst
 * Om platsen är betrodd eller inte
-*   Risknivån för inloggning
+* Risknivån för inloggning
 * Enhetsplattform
 
 Ändå har många organisationer ofta specifika risker de är oroliga för.  I tabellen nedan visas de vanligaste säkerhetsproblemen och hur MDM respektive MAM hanterar dem.

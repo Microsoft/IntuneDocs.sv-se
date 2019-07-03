@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ed6259c996772817ceaa8ec827c8ac506adfd399
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045113"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530464"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Skapa en princip för enhetsbaserad villkorlig åtkomst
 
@@ -34,12 +34,12 @@ En princip för villkorlig åtkomst anger de appar eller tjänster som du vill s
 
 ## <a name="create-conditional-access-policy"></a>Skapa princip för villkorlig åtkomst
 
-1.  I Intune-portalen väljer du **Villkorlig åtkomst** > **Principer** > **Ny princip**.
+1. I Intune-portalen väljer du **Villkorlig åtkomst** > **Principer** > **Ny princip**.
    
     ![Skapa en ny princip för villkorlig åtkomst](media/create-conditional-access-intune/create-ca.png)
  
-2.  Under **Tilldelningar** väljer du **Användare och grupper**. 
-3.  På fliken **Inkludera** identifierar du de användare eller grupper som principen för villkorlig åtkomst ska tillämpas för. När du har valt vilka du vill inkludera kan du använda fliken **Undanta**, om det finns några användare, roller eller grupper som du vill undanta från principen.  
+2. Under **Tilldelningar** väljer du **Användare och grupper**. 
+3. På fliken **Inkludera** identifierar du de användare eller grupper som principen för villkorlig åtkomst ska tillämpas för. När du har valt vilka du vill inkludera kan du använda fliken **Undanta**, om det finns några användare, roller eller grupper som du vill undanta från principen.  
     - **Alla användare**: Välj detta alternativ för att tillämpa principen på alla användare och grupper, inklusive interna användare och gästanvändare.
   
     - **Välj användare och grupper**: Välj det här alternativet och ange ett eller flera av följande alternativ:
@@ -52,9 +52,9 @@ En princip för villkorlig åtkomst anger de appar eller tjänster som du vill s
      
        > [!TIP]  
        > Testa principen på en mindre grupp användare för att se att den fungerar som förväntat.
-4.  Välj **Klar**.
-5.  Under **Tilldelningar** väljer du **Molnappar**. 
-6.  På **fliken Inkludera** identifierar du de appar och tjänster som du vill skydda med principen för villkorlig åtkomst. Du kan sedan använda fliken **Undanta** om det finns några appar eller tjänster som du vill undanta från principen.
+4. Välj **Klar**.
+5. Under **Tilldelningar** väljer du **Molnappar**. 
+6. På **fliken Inkludera** identifierar du de appar och tjänster som du vill skydda med principen för villkorlig åtkomst. Du kan sedan använda fliken **Undanta** om det finns några appar eller tjänster som du vill undanta från principen.
     - **Alla molnappar**: Välj det här alternativet om du vill tillämpa principen på alla appar.
       > [!IMPORTANT]  
       > Microsoft Azure Management-appen för åtkomst till Azure-portalen ingår i den här listan. Använd fliken **Undanta** antingen här eller i alternativen för **Användare och grupper** för att se till att du (eller de användare eller grupper som du anger) kommer att kunna logga in på Azure-portalen. 
@@ -63,8 +63,8 @@ En princip för villkorlig åtkomst anger de appar eller tjänster som du vill s
     
       ![Skapa en ny princip för villkorlig åtkomst](media/create-conditional-access-intune/create-ca-select-apps.png)
 
-7.  Välj **Klar**.
-8.  Under **Tilldelningar** väljer du **Villkor**.
+7. Välj **Klar**.
+8. Under **Tilldelningar** väljer du **Villkor**.
     - **Inloggningsrisk**: Välj Ja om du vill använda Azure AD Identity Protections inloggningsriskidentifiering med den här principen och välj sedan de inloggningsrisknivåer som principen ska gälla för.
     - **Enhetsplattformar**: På fliken **Inkludera** identifierar du de enhetsplattformar som du vill att principen för villkorlig åtkomst ska tillämpas på. Använd fliken **Undanta** för att undanta plattformar från den här principen.
     - **Platser**: På fliken **Inkludera** anger du om principen gäller för alla platser, betrodda nätverksplatser som kontrolleras av IT-avdelningen eller specifika nätverksplatser. Använd fliken **Undanta** för att undanta nätverksplatser från principen. 
@@ -76,7 +76,7 @@ En princip för villkorlig åtkomst anger de appar eller tjänster som du vill s
       > [!TIP]  
       > Om du vill skydda både **Modern autentisering**-klienter och **Exchange ActiveSync-klienter**, skapar du två separata principer för villkorlig åtkomst, en för varje klienttyp. Även om Exchange ActiveSync stöder modern autentisering, är det bara plattformar som stöds av Exchange ActiveSync. Andra villkor, inklusive multifaktorautentisering, stöds inte. Om du effektivt vill skydda åtkomsten till Exchange Online från Exchange ActiveSync, skapar du en princip för villkorlig åtkomst som anger molnappen Office 365 Exchange Online och klientappen Exchange ActiveSync där Tillämpa bara principen på plattformar som stöds är valt.
 
-9.  Välj **Klar**.
+9. Välj **Klar**.
 10. Under **Åtkomstkontroller** väljer du **Bevilja**. Konfigurera vad som händer baserat på de villkor som du har konfigurerat.  Du kan välja bland följande alternativ:
     - **Blockera åtkomst**: De användare som anges i den här principen kommer att nekas åtkomst till appar enligt de villkor som du har angett.
     - **Bevilja åtkomst**: De användare som anges i den här principen kommer att beviljas åtkomst, men du kan kräva någon av följande ytterligare åtgärder:

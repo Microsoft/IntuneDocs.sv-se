@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57684a1f5ef94b12c8f0e52a36d8432583391b8a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ffaf29d34c7f6a08d48717f7560926d53cfa8ba2
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045677"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529780"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune
 Informationen i den här artikeln hjälper dig att installera och sedan övervaka den lokala Exchange Active Sync-anslutningsappen för Intune.  Du använder den lokala Exchange-anslutningsappen för Intune med dina [principer för villkorlig åtkomst för att tillåta eller blockera åtkomst till Exchange On-Premises-postlådor](conditional-access-exchange-create.md). 

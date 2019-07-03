@@ -16,17 +16,17 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73cdd0f802ce3b52a566bbdddd7cf5cca2e2bef2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d207d1ac51da5b34f48aeffd83791bdbb40bf971
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044600"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494554"
 ---
 # <a name="plan-communications"></a>Planera kommunikation 
 Kommunikationsplanen är en nyckelfaktor i en Intune-migrering. Följande verktyg och mallar tillhandahålls som hjälper dig att utbilda slutanvändarna. Intune Adoption Kit innehåller e-postmallar, en guide för Intune-registrering och länkar till instruktionsvideor för registrering av slutanvändare.  
 
-Ladda ned:  [Intune Adoption Kit](http://aka.ms/IntuneAdoptionKit)
+Ladda ned:  [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit)
 
 ## <a name="email-templates"></a>E-postmallar 
 Vi rekommenderar följande kommunikationsplan för e-post. Vi har samlat mallar som du kan anpassa för din kommunikationsplan:

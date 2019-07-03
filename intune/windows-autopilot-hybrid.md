@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb9d1f52ccb147dc9a412f3cb7b601e3b18f214a
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389325"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494538"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -163,7 +163,7 @@ Om dina enheter inte har registrerats än kan du registrera dem själv. Mer info
 
 ### <a name="register-devices-from-an-oem"></a>Registrera enheter från en OEM-tillverkare
 
-Om du köper nya enheter kan vissa OEM-tillverkare registrera enheterna åt dig. Mer information finns på [Windows Autopilot-sidan](http://aka.ms/WindowsAutopilot).
+Om du köper nya enheter kan vissa OEM-tillverkare registrera enheterna åt dig. Mer information finns på [Windows Autopilot-sidan](https://aka.ms/WindowsAutopilot).
 
 När Autopilot-enheter har *registrerats* (och innan de har registrerats i Intune) visas de på tre platser (med namn som motsvarar deras serienummer):
 - Fönstret **Autopilot-enheter** i Intune i Azure Portal. Välj **Enhetsregistrering** > **Windows-registrering** > **Enheter**.

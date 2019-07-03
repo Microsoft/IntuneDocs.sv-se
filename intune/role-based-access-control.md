@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0e6ad7e46abe8da4c1b03e836eb9ba2f5991d0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044161"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528236"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -38,9 +38,9 @@ En roll definierar en den uppsättning behörigheter som beviljas till användar
 Du kan använda både de inbyggda och de anpassade rollerna. Inbyggda roller omfattar några vanliga Intune-scenarier. Du kan [skapa dina egna anpassade roller](create-custom-role.md) med den exakt uppsättning behörigheter som du behöver. Flera Azure Active Directory-roller har behörigheter till Intune.
 Om du vill se en roll väljer du **Intune** > **Roller** > **Alla roller** > välj en roll. Följande sidor visas:
 
--   **Egenskaper**: Namn, beskrivning, typ, tilldelningar och omfångstaggar för rollen. 
--   **Behörigheter**: Visar en lång uppsättning växlar som definierar vilka behörigheter rollen har.
--   **Tilldelningar**: En lista över [rolltilldelningar]( assign-role.md) som definierar vilka användare som har åtkomst till vilka användare/enheter. En roll kan ha flera tilldelningar och en användare kan vara i flera tilldelningar.
+- **Egenskaper**: Namn, beskrivning, typ, tilldelningar och omfångstaggar för rollen. 
+- **Behörigheter**: Visar en lång uppsättning växlar som definierar vilka behörigheter rollen har.
+- **Tilldelningar**: En lista över [rolltilldelningar]( assign-role.md) som definierar vilka användare som har åtkomst till vilka användare/enheter. En roll kan ha flera tilldelningar och en användare kan vara i flera tilldelningar.
 
 ### <a name="built-in-roles"></a>Inbyggda roller
 Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du kan inte ta bort eller redigera namn, beskrivning, typ eller behörigheter för en inbyggd roll. En fullständig lista över behörigheterna för varje inbyggd roll finns i [Intune-RBAC-tabellen](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
@@ -84,10 +84,10 @@ En rolltilldelning definierar:
 Du kan tilldela användarna både anpassade och inbyggda roller. För att bli tilldelad en Intune-roll, måste användaren ha en Intune-licens.
 Om du vill se en rolltilldelning väljer du **Intune** > **Roller** > **Alla roller** > välj en roll > välj en tilldelning. Följande sidor visas:
 
--   **Egenskaper**: Namn, beskrivning, roll, medlemmar, omfång och taggar för tilldelningen.
--   **Medlemmar**: Alla användare i de angivna grupperna har behörighet att hantera de användare/enheter som anges i Omfång (grupper).
--   **Omfång (grupper)** : Alla användare/enheter i de här grupperna kan hanteras av användarna i Medlemmar.
--   **[Omfång (taggar)](scope-tags.md)** : Användare i Medlemmar kan se de resurser som har samma omfångstaggar.
+- **Egenskaper**: Namn, beskrivning, roll, medlemmar, omfång och taggar för tilldelningen.
+- **Medlemmar**: Alla användare i de angivna grupperna har behörighet att hantera de användare/enheter som anges i Omfång (grupper).
+- **Omfång (grupper)** : Alla användare/enheter i de här grupperna kan hanteras av användarna i Medlemmar.
+- **[Omfång (taggar)](scope-tags.md)** : Användare i Medlemmar kan se de resurser som har samma omfångstaggar.
 
 ### <a name="multiple-role-assignments"></a>Flera rolltilldelningar
 Om en användare har flera rolltilldelningar omfattar behörigheter i de rolltilldelningarna olika objekt på följande sätt:

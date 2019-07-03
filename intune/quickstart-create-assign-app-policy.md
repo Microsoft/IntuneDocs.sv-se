@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bad416e738f1a0481c67480d9a83157a4781c71b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6ec42d122bf3da3fbacef513d6af2dbe124b196c
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050343"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530771"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Snabbstart: Skapa och tilldela en skyddsprincip för ett program
 
@@ -66,12 +66,12 @@ När du har skapat en appskyddsprincip i Intune kan du tilldela till grupper.
 
 Använd följande steg för att tilldela appskyddsprincipen:
 
-1.  I [Intune](https://aka.ms/intuneportal) väljer du **Intune** > **Klientappar** > **Appskyddsprinciper**. 
-2.  Välj den appskyddsprincip som du skapade tidigare. I den här snabbstarten är principen **Windows 10-innehållsskydd**.
-3.  Välj **Tilldelningar**.
-4.  Klicka på **Välj grupper som ska inkluderas** på fliken **Inkludera**.
-5.  Välj **Contoso-testare** som den grupp som ska inkluderas.
-6.  Klicka på **Välj** > **Spara**. 
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Intune** > **Klientappar** > **Appskyddsprinciper**. 
+2. Välj den appskyddsprincip som du skapade tidigare. I den här snabbstarten är principen **Windows 10-innehållsskydd**.
+3. Välj **Tilldelningar**.
+4. Klicka på **Välj grupper som ska inkluderas** på fliken **Inkludera**.
+5. Välj **Contoso-testare** som den grupp som ska inkluderas.
+6. Klicka på **Välj** > **Spara**. 
 
 Du har nu tilldelat appskyddsprincipen.
 

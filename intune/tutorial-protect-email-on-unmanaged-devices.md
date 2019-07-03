@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046282"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528681"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Självstudie: Skydda e-post i Exchange Online på ohanterade enheter
 
@@ -74,7 +74,7 @@ I den här självstudien ska vi konfigurera en Intune-appskyddsprincip för Outl
 
     Välj **OK** om du vill återgå till fönstret Inställningar.  
 
-7.  I fönstret Inställningar väljer du **OK**, och i fönstret Skapa princip väljer du **Skapa**.
+7. I fönstret Inställningar väljer du **OK**, och i fönstret Skapa princip väljer du **Skapa**.
 
 Appskyddsprincipen för Outlook skapas. Härnäst kommer du att konfigurera villkorlig åtkomst som kräver att enheterna ska använda Outlook-appen.
 
@@ -188,5 +188,5 @@ När testprinciperna inte längre behövs kan du ta bort dem.
 4. I Intune väljer du **Villkorsstyrd åtkomst** > **Principer**.  
 5. I listan **Principnamn** väljer du snabbmenyn ( **...** ) för varje testprincip och sedan **Ta bort**. Välj **Ja** för att bekräfta.  
 
- ## <a name="next-steps"></a>Nästa steg  
+## <a name="next-steps"></a>Nästa steg  
 I de här självstudierna har du skapat appskyddsprinciper som begränsar vad användaren kan göra med Outlook-appen. Du har även skapat principer för villkorlig åtkomst som kräver att Outlook-appen och MFA för moderna autentiseringsklienter används. Läs om hur du använder Intune med villkorlig åtkomst för att skydda andra appar och tjänster i [Konfigurera villkorlig åtkomst](conditional-access.md).

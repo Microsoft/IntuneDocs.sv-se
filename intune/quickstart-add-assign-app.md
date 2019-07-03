@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17db2227303fe3937156ad6afa610dce48bd1992
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041356"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528306"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
@@ -69,7 +69,7 @@ När du har lagt till en app till Microsoft Intune kan du tilldela appen till gr
 
 Använd följande steg för att tilldela en app till en grupp:
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appar**. 
-2. Välj den app som du vill tilldela till en grupp.   
+2. Välj den app som du vill tilldela till en grupp.
 3. Klicka på **Tilldelningar** > **Lägg till grupp** för att visa bladet **Lägg till grupp**.
 4. Välj **Tillgänglig för registrerade enheter** i listrutan **Tilldelningstyp**. 
 5. Klicka på **Inkluderade grupper** > **Välj grupper som ska inkluderas** > **Contoso-testare**.

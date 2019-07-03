@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d3e36dbeb1fb7c90dfc5cc4c18fb30140c761db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046503"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512264"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurera principer för enhetsefterlevnad och apphantering vid migrering till Microsoft Intune
 
@@ -59,7 +59,7 @@ Resursåtkomstprofiler tillhandahåller registrerade enheter med certifikat och 
 
 Du måste skapa en enhetskonfigurationsprofil om du vill framtvinga inställningar på enhetsnivå, som t.ex. avser inaktivering av kamera, App Store, konfiguration av enappsläge, startsidan och annat. Lär dig mer om [enhetsprofiler](device-profiles.md).
 
-####  <a name="directly-import-ios-configuration-profiles-optional"></a>Direktimport av iOS-konfigurationsprofiler (valfritt)
+#### <a name="directly-import-ios-configuration-profiles-optional"></a>Direktimport av iOS-konfigurationsprofiler (valfritt)
 
 -   **Apple Configurator-profiler för iOS (iOS 7.1 och senare):** Om den befintliga MDM-lösningen använder Apple Configurator-profiler (.mobileconfig-filer), kan Intune importera dem direkt som anpassade konfigurationsprinciper.
 

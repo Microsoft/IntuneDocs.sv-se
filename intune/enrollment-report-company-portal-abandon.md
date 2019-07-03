@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546694409e6f87d85c5ef934b5d084b0955e0bf7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c15bd301b60481f4d8b15617512851e2cc29034a
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041850"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529752"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Rapport om ofullständiga användarregistreringar
 
@@ -35,9 +35,9 @@ Med hjälp av den här informationen kan du uppdatera din hjälpdokumentation oc
 
 En ofullständig registrering innebär att en användare gör något av följande:
 
--   Uttryckligen väljer en åtgärd för att avbryta registreringen
--   Stänger företagsportalen under registreringen
--   Låter det gå mer än 30 minuter mellan registreringsdelarna
+- Uttryckligen väljer en åtgärd för att avbryta registreringen
+- Stänger företagsportalen under registreringen
+- Låter det gå mer än 30 minuter mellan registreringsdelarna
 
 Om en användare väljer att avbryta registreringen och börjar om flera gånger visas detta som flera försök och flera ofullständiga registreringar. Om en användare väntar i 30 minuter mellan olika registreringsskärmar betraktas det som flera ofullständiga registreringar.
 
@@ -53,18 +53,18 @@ Du kan filtrera efter datumintervall, operativsystem och registreringsdel genom 
 
 Högst upp i rapporten kan du se antalet och procentandelen ofullständiga registreringar i förhållande till alla registreringar.
 
--   Initierade registreringar: Antalet registreringsförsök.
--   Ofullständiga registreringar: Det antal registreringsförsök som inte resulterade i en helt registrerad och kompatibel enhet.
--   Frekvens ofullständiga: Den procentandel registreringsförsök som övergavs (Övergivna registreringar/Påbörjade registreringar).
+- Initierade registreringar: Antalet registreringsförsök.
+- Ofullständiga registreringar: Det antal registreringsförsök som inte resulterade i en helt registrerad och kompatibel enhet.
+- Frekvens ofullständiga: Den procentandel registreringsförsök som övergavs (Övergivna registreringar/Påbörjade registreringar).
 
 ### <a name="line-graph"></a>Linjediagram
 
 Linjediagrammet visar dagliga ofullständiga registreringar för vart och ett av de fyra primära registreringsavsnitten:
 
--   Checklista för konfiguration
--   Plattformsskärmar
--   Villkor för användning
--   Efterlevnad/aktivering
+- Checklista för konfiguration
+- Plattformsskärmar
+- Villkor för användning
+- Efterlevnad/aktivering
 
 ### <a name="user-abandonment-actions"></a>Avbrutna användaråtgärder
 

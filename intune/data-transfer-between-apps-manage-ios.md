@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9be961908920420dbb4111c2c3ba108b7e11c09f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042792"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512151"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -34,7 +34,7 @@ För att skydda företagets data bör du begränsa överförandet av filer till 
 
 Med funktionen **Öppna i hantering** för iOS-enheter kan du begränsa överförandet av filer mellan appar som är distribuerade via **MDM-kanalen**. Ange begränsningar för funktionen *Öppna i hantering* i konfigurationsinställningarna och distribuera dem sedan via din MDM-lösning.  Begränsningarna du angett tillämpas när användaren installerar den distribuerade appen.
 
-##  <a name="use-app-protection-with-ios-apps"></a>Använda appskydd med iOS-appar
+## <a name="use-app-protection-with-ios-apps"></a>Använda appskydd med iOS-appar
 Använd appskyddsprinciper med iOS-funktionen **Öppna i hantering** för att skydda företagets data på följande sätt:
 
 -   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningarna för appskyddsprincipen med **Tillåt endast att appen överför data till principhanterade appar**. Beteendet *Öppna-i* för en principhanterad app visar enbart andra principhanterade appar som alternativ för delning. Om en användare försöker skicka en principskyddad fil som en bilaga från OneDrive i den inbyggda e-postappen kommer det inte gå att läsa filen.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046293"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528745"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -34,10 +34,10 @@ Den här artikeln innehåller förslag på hur du kan felsöka problem med [enhe
 
 Kontrollerar att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Du kan läsa om konfigurationskraven i:
 
--   [Dags att registrera enheter i Microsoft Intune](setup-steps.md)
--   [Konfigurera iOS- och Mac-enhetshantering](ios-enroll.md)
--   [Konfigurera Windows-enhetshantering](windows-enroll.md)
--   [Konfigurera hantering av Android-enhet](android-enroll.md) – Inga ytterligare åtgärder krävs
+- [Dags att registrera enheter i Microsoft Intune](setup-steps.md)
+- [Konfigurera iOS- och Mac-enhetshantering](ios-enroll.md)
+- [Konfigurera Windows-enhetshantering](windows-enroll.md)
+- [Konfigurera hantering av Android-enhet](android-enroll.md) – Inga ytterligare åtgärder krävs
 
 Du kan också kontrollera att tid och datum på användarens enhet är inställt på rätt sätt:
 
@@ -236,15 +236,15 @@ Certifikatfel uppstår eftersom Android-enheter kräver att mellanliggande certi
 
 Om du vill åtgärda problemet importerar du certifikaten till datorns personliga certifikat på AD FS-servern eller proxyservrar enligt följande:
 
-1.  På ADFS- och proxy-servrarna högerklickar du på **Start** > **Kör** > **certlm.msc** för att starta Local Machine Certificate Management Console.
-2.  Expandera **Personligt** och välj **Certifikat**.
-3.  Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
-4.  Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
-5.  På varje överordnat certifikat väljer du **Visa certifikat**.
-6.  Välj **Information** > **Kopiera till fil...** .
-7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för det överordnade certifikatet på önskad plats.
-8.  Högerklicka på **Certifikat** > **Alla aktiviteter** > **Importera**.
-9.  Följ guidens uppmaningar att importera överordnade certifikat till **Lokal dator\Personliga\Certifikat**.
+1. På ADFS- och proxy-servrarna högerklickar du på **Start** > **Kör** > **certlm.msc** för att starta Local Machine Certificate Management Console.
+2. Expandera **Personligt** och välj **Certifikat**.
+3. Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
+4. Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
+5. På varje överordnat certifikat väljer du **Visa certifikat**.
+6. Välj **Information** > **Kopiera till fil...** .
+7. Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för det överordnade certifikatet på önskad plats.
+8. Högerklicka på **Certifikat** > **Alla aktiviteter** > **Importera**.
+9. Följ guidens uppmaningar att importera överordnade certifikat till **Lokal dator\Personliga\Certifikat**.
 10. Starta om AD FS-servrarna.
 11. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
 
