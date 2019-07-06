@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 122a7eef56f2850fced164a37b518f650ed2ecdf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 38e24bff110cea7d7a565ca00fc0e3e13e37744f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045863"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530756"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>API-slutpunkt för Intune-informationslager
 
@@ -69,8 +69,8 @@ Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter
 
 `DateKey`-intervallfilter kan användas för att begränsa den mängd data som laddas ned för några av samlingarna med `dateKey` som en nyckelegenskap. `DateKey`-filtret kan användas för att optimera tjänstprestanda genom att tillhandahålla följande `$filter`-frågeparameter:
 
-1.  Enbart `DateKey` i `$filter`, som stöder operatorerna `lt/le/eq/ge/gt` och sammankopplas med logikoperatorn `and`, där de kan mappas till ett startdatum och/eller slutdatum.
-2.  `maxhistorydays` anges som ett anpassat frågealternativ.<br>
+1. Enbart `DateKey` i `$filter`, som stöder operatorerna `lt/le/eq/ge/gt` och sammankopplas med logikoperatorn `and`, där de kan mappas till ett startdatum och/eller slutdatum.
+2. `maxhistorydays` anges som ett anpassat frågealternativ.<br>
 
 ## <a name="filter-examples"></a>Filterexempel
 

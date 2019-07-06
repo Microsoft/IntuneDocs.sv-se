@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cc84d8215a841b9ff8a70a6b6307d3452696cb0
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 70818e038be915a1b756eb391129e6cdb74fb069
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403008"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548659"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune
 
@@ -49,9 +49,9 @@ Innan du börjar skapa och godkänna programuppdateringar kan du konfigurera och
 
 ### <a name="to-configure-update-policy-settings"></a>Så här konfigurerar du principinställningar för uppdateringar
 
-1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
+1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
 
-2.  Konfigurera och distribuera en inställningsprincip för **Microsoft Intune-agenten** för inställningar för uppdateringar. Du kan använda rekommenderade inställningar eller anpassa inställningarna. Om du behöver mer information om hur du skapar och distribuerar principer läser du [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Konfigurera och distribuera en inställningsprincip för **Microsoft Intune-agenten** för inställningar för uppdateringar. Du kan använda rekommenderade inställningar eller anpassa inställningarna. Om du behöver mer information om hur du skapar och distribuerar principer läser du [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
 I följande tabell visar värdena som du kan konfigurera i principen och rekommenderade värden som ska användas om du inte anpassar principen. Du hittar de här inställningarna i avsnittet **Uppdateringar** .
 
@@ -70,49 +70,49 @@ I följande tabell visar värdena som du kan konfigurera i principen och rekomme
 ## <a name="update-software-made-by-microsoft"></a>Uppdatera programvara som tillverkats av Microsoft
 Uppdatering av programvara från Microsoft kräver mycket lite av dig. Men innan du börjar finns det två saker du ska konfigurera:
 
--   **Produktkategorier och klassificeringar för uppdatering** – definierar kategorier och klassificeringar av uppdateringar som du vill göra tillgängliga för datorer. Du kan till exempel bestämma att du bara vill att kritiska uppdateringar för Microsoft Office ska installeras.
+- **Produktkategorier och klassificeringar för uppdatering** – definierar kategorier och klassificeringar av uppdateringar som du vill göra tillgängliga för datorer. Du kan till exempel bestämma att du bara vill att kritiska uppdateringar för Microsoft Office ska installeras.
 
--   **Regler för automatiskt godkännande** – dessa regler godkänner automatiskt angivna typer av uppdateringar och minskar de administrativa omkostnaderna. Till exempel kanske du vill godkänna alla viktiga uppdateringar automatiskt.
+- **Regler för automatiskt godkännande** – dessa regler godkänner automatiskt angivna typer av uppdateringar och minskar de administrativa omkostnaderna. Till exempel kanske du vill godkänna alla viktiga uppdateringar automatiskt.
 
 Använd följande två procedurer för att bli redo att använda programvaruuppdateringar:
 
 ### <a name="configure-the-product-categories-and-update-classifications-you-want-to-make-available-to-managed-computers"></a>Konfigurera produktkategorierna och uppdatera klassificeringarna som du vill göra tillgängliga för hanterade datorer
 
-1.  Klicka på **Admin** &gt; **Uppdateringar** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
+1. Klicka på **Admin** &gt; **Uppdateringar** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
 
-2.  På sidan **Tjänstinställningar: Uppdateringar** väljer du de uppdateringskategorier som du vill göra tillgängliga för datorer i listan **Produktkategori** . Observera att de vanligaste uppdateringarna är markerade som standard.
+2. På sidan **Tjänstinställningar: Uppdateringar** väljer du de uppdateringskategorier som du vill göra tillgängliga för datorer i listan **Produktkategori** . Observera att de vanligaste uppdateringarna är markerade som standard.
 
     > [!IMPORTANT]
     > Om du vill säkerställa att datorer får de uppdateringar som har godkänts av administratören ska inte WSUS-grupprincipinställningen (WSUS = Windows Server Update Services) **Ange sökväg till tjänsten Microsoft Update på intranätet** tillämpas på datorer som har registrerats med Intune.
 
-3.  I listan **Uppdatera klassificering** väljer du de uppdateringsklasser som du vill göra tillgängliga för hanterade datorer. De vanligaste alternativen är markerade som standard.
+3. I listan **Uppdatera klassificering** väljer du de uppdateringsklasser som du vill göra tillgängliga för hanterade datorer. De vanligaste alternativen är markerade som standard.
 
-4.  Välj **Spara** för att spara dina val.
+4. Välj **Spara** för att spara dina val.
 
 ### <a name="to-configure-automatic-approval-rules-for-software-updates"></a>Så här konfigurerar du automatiska godkännanderegler för programvaruuppdateringar
 
-1.  Klicka på **Admin** &gt; **Uppdateringar** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
+1. Klicka på **Admin** &gt; **Uppdateringar** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
 
-2.  I ämnet **Regler för automatiska godkännanden** på sidan **Serverinställningar: Uppdateringar** väljer du **Ny**.
+2. I ämnet **Regler för automatiska godkännanden** på sidan **Serverinställningar: Uppdateringar** väljer du **Ny**.
 
-3.  På sidan **Allmänt** i guiden Skapa regler för automatiskt godkännande anger du ett namn för och en valfri beskrivning av regeln.
+3. På sidan **Allmänt** i guiden Skapa regler för automatiskt godkännande anger du ett namn för och en valfri beskrivning av regeln.
 
-4.  På sidan **Produktkategorier** markerar du alla produkter som du vill godkänna uppdateringar automatiskt för.
+4. På sidan **Produktkategorier** markerar du alla produkter som du vill godkänna uppdateringar automatiskt för.
 
-5.  På sidan **Uppdatera klassificeringar** anger du de uppdateringsklassificeringar som du vill ska godkännas automatiskt.
+5. På sidan **Uppdatera klassificeringar** anger du de uppdateringsklassificeringar som du vill ska godkännas automatiskt.
 
-6.  På sidan **Distribution** gör du följande:
+6. På sidan **Distribution** gör du följande:
 
-    -   Markera de datorgrupper som du vill distribuera den nya regeln till, och välj sedan **Lägg till**.
+    - Markera de datorgrupper som du vill distribuera den nya regeln till, och välj sedan **Lägg till**.
 
-    -   Om du vill ange en tidsgräns för installation för uppdateringarna markerar du kryssrutan **Framtvinga en tidsgräns för installation för dessa uppdateringar** och väljer sedan tidsgräns för installation i listan **Tidsgräns för installation** .
+    - Om du vill ange en tidsgräns för installation för uppdateringarna markerar du kryssrutan **Framtvinga en tidsgräns för installation för dessa uppdateringar** och väljer sedan tidsgräns för installation i listan **Tidsgräns för installation** .
 
         > [!NOTE]
         > Om du anger en tidsgräns för installation kan den hanterade datorn behöva startas om en eller flera gånger när tidsgränsen har överskridits.
 
-    -   Välj **Nästa**när du är klar.
+    - Välj **Nästa**när du är klar.
 
-7.  På sidan **Sammanfattning** granskar du inställningarna för den nya regeln och väljer sedan **Slutför**.
+7. På sidan **Sammanfattning** granskar du inställningarna för den nya regeln och väljer sedan **Slutför**.
 
 Den nya regeln visas i ämnet **Regler för automatiska godkännanden** på sidan **Tjänstinställningar: Uppdateringar** .
 
@@ -122,15 +122,15 @@ Den nya regeln visas i ämnet **Regler för automatiska godkännanden** på sida
 
 ### <a name="to-edit-run-or-delete-an-automatically-approved-update-rule"></a>Så här redigerar du, kör eller tar bort en automatiskt godkänd uppdateringsregel
 
-1.  Klicka på **Admin** &gt; **Uppdateringar** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
+1. Klicka på **Admin** &gt; **Uppdateringar** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
 
-2.  I avsnittet **Regler för automatiskt godkännande** markerar du en regel och gör sedan något av följande:
+2. I avsnittet **Regler för automatiskt godkännande** markerar du en regel och gör sedan något av följande:
 
-    -   Om du vill redigera regeln väljer du **Redigera** och ändrar sedan regelns parametrar i **guiden Uppdatera regler för automatiskt godkännande**.
+    - Om du vill redigera regeln väljer du **Redigera** och ändrar sedan regelns parametrar i **guiden Uppdatera regler för automatiskt godkännande**.
 
-    -   Om du vill köra regeln väljer du **Kör valda**.
+    - Om du vill köra regeln väljer du **Kör valda**.
 
-    -   Om du vill ta bort regeln väljer du **Ta bort**.
+    - Om du vill ta bort regeln väljer du **Ta bort**.
 
         > [!NOTE]
         > Om du tar bort en regel påverkas inte tidigare uppdateringar som har godkänts av den borttagna regeln.
@@ -140,40 +140,40 @@ Du kan distribuera uppdateringar för programvara som inte tillverkas av Microso
 
 ### <a name="to-upload-and-configure-a-third-party-update"></a>Så här överför och konfigurerar du en uppdatering från tredje part
 
-1.  Klicka på**Uppdateringar** &gt; **Översikt** &gt; **Överför** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
+1. Klicka på**Uppdateringar** &gt; **Översikt** &gt; **Överför** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
 
-2.  På sidan **Uppdatera filer** väljer du **Bläddra** för att välja de installationsfiler som krävs för att installera uppdateringspaketet. Filen kan vara en Windows Installer-fil (.msi), en Windows Installer-korrigeringsfil (.msp) eller en .exe-fil. Du kan även inkludera eventuella ytterligare filer och mappar som finns i samma mapp som installationsfilen.
+2. På sidan **Uppdatera filer** väljer du **Bläddra** för att välja de installationsfiler som krävs för att installera uppdateringspaketet. Filen kan vara en Windows Installer-fil (.msi), en Windows Installer-korrigeringsfil (.msp) eller en .exe-fil. Du kan även inkludera eventuella ytterligare filer och mappar som finns i samma mapp som installationsfilen.
 
     Den totala storleken på de markerade filerna som ska överföras visas. Observera att den här storleken inte inkluderar okomprimerade eller expanderade storlekar på installationsfiler.
 
-3.  När du har angett installationsfilerna visar sidan **Uppdatera beskrivning** namn, beskrivning och klassificering för information om programvara som Intune extraherat från installationsfilerna för programvara. Du kan välja en klassificering som anger vilken typ av uppdatering som du distribuerar (uppdateringar, viktiga uppdateringar, säkerhetsuppdateringar, samlade uppdateringar eller Service Packs). Välj **Nästa** när du är klar.
+3. När du har angett installationsfilerna visar sidan **Uppdatera beskrivning** namn, beskrivning och klassificering för information om programvara som Intune extraherat från installationsfilerna för programvara. Du kan välja en klassificering som anger vilken typ av uppdatering som du distribuerar (uppdateringar, viktiga uppdateringar, säkerhetsuppdateringar, samlade uppdateringar eller Service Packs). Välj **Nästa** när du är klar.
 
-4.  På sidan **Krav** i guiden väljer du arkitektur (32-bitars, 64-bitars eller båda) och operativsystem för de hanterade datorer som uppdateringen ska användas för.
+4. På sidan **Krav** i guiden väljer du arkitektur (32-bitars, 64-bitars eller båda) och operativsystem för de hanterade datorer som uppdateringen ska användas för.
 
-5.  På sidan **Regler för identifiering** anger du hur Intune avgör om uppdateringen redan finns på hanterade datorer. Om du använder standardalternativet **Använd standardregler för identifiering** installerar Intune alltid uppdateringspaketet på varje måldator en gång.
+5. På sidan **Regler för identifiering** anger du hur Intune avgör om uppdateringen redan finns på hanterade datorer. Om du använder standardalternativet **Använd standardregler för identifiering** installerar Intune alltid uppdateringspaketet på varje måldator en gång.
 
     > [!NOTE]
     > Om installationsfilen för uppdateringen som du angav är en Windows Installer-fil eller en MSP-fil visas inte sidan **Regler för identifiering** i guiden. Det beror på att Windows Installer och MSP-filer innehåller egna instruktioner för att upptäcka tidigare uppdateringsinstallationer.
 
     Välj en eller flera av följande regler för att fastställa om uppdateringen redan är installerad på hanterade datorer:
 
-    -   **Filen finns**
+    - **Filen finns**
 
-    -   **MSI-produktkod finns**
+    - **MSI-produktkod finns**
 
-    -   **Registernyckeln finns**
+    - **Registernyckeln finns**
 
-6.  Ange ytterligare information som krävs för att konfigurera identifieringsregeln, till exempel en sökväg och ett namn, produktkod för Windows Installer eller en registernyckel, och välj sedan **Nästa**.
+6. Ange ytterligare information som krävs för att konfigurera identifieringsregeln, till exempel en sökväg och ett namn, produktkod för Windows Installer eller en registernyckel, och välj sedan **Nästa**.
 
-7.  På sidan **Krav** i guiden anger du all programvara som måste vara installerad innan den här uppdateringen kan installeras. Du kan ange **Ingen**, välja ett programpaket som redan har lagts till och hanteras av Intune eller ange en av följande regler som beskriver programvaran:
+7. På sidan **Krav** i guiden anger du all programvara som måste vara installerad innan den här uppdateringen kan installeras. Du kan ange **Ingen**, välja ett programpaket som redan har lagts till och hanteras av Intune eller ange en av följande regler som beskriver programvaran:
 
-    -   **Filen finns**
+    - **Filen finns**
 
-    -   **MSI-produktkod finns**
+    - **MSI-produktkod finns**
 
-    -   **Registernyckeln finns**
+    - **Registernyckeln finns**
 
-8.  Ange ytterligare information som krävs för att konfigurera identifieringsregeln, till exempel en sökväg och ett namn, produktkod för Windows Installer eller en registernyckel, och välj sedan **Nästa**.
+8. Ange ytterligare information som krävs för att konfigurera identifieringsregeln, till exempel en sökväg och ett namn, produktkod för Windows Installer eller en registernyckel, och välj sedan **Nästa**.
 
 9. På sidan **Kommandoradsargument** i guiden kan du lägga till alla installationsegenskaper som krävs på kommandoraden för att ändra funktionen för installationsfilen. Till exempel stöder vissa program egenskapen **/q** för att möjliggöra tyst installation. I dokumentationen för programpaketet kan du lära dig mer om alla kommandoradsargument som stöds. Ange de kommandoradsargument du behöver och välj sedan **Nästa**.
 
@@ -216,48 +216,48 @@ När du väljer en uppdatering från listan blir ytterligare kommandon tillgäng
 
 ### <a name="to-approve-updates"></a>Så här godkänner du uppdateringar
 
-1.  Klicka på **Uppdateringar** &gt; **Översikt** &gt; **Nya uppdateringar att godkänna** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
+1. Klicka på **Uppdateringar** &gt; **Översikt** &gt; **Nya uppdateringar att godkänna** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/).
 
     Välj **Översikt** &gt; **Nya uppdateringar att godkänna** på arbetsytan **Uppdateringar**.
 
     > [!NOTE]
     > Länken **Nya uppdateringar att godkänna** visas bara i området **Uppdateringsstatus** när det finns minst en hanterad dator där en uppdatering behöver godkännas.
 
-2.  Välj en uppdatering, granska uppdateringsegenskaperna längst ned på sidan för att säkerställa att du vill godkänna uppdateringen, och välj **Godkänn**. Du kan välja flera uppdateringar genom att hålla ned tangenten **CTRL** när du markerar varje objekt.
+2. Välj en uppdatering, granska uppdateringsegenskaperna längst ned på sidan för att säkerställa att du vill godkänna uppdateringen, och välj **Godkänn**. Du kan välja flera uppdateringar genom att hålla ned tangenten **CTRL** när du markerar varje objekt.
 
-3.  På sidan **Välj grupper** markerar du en grupp som du vill distribuera uppdateringar till och väljer sedan **Lägg till**. När du är klar väljer du **Nästa**.
+3. På sidan **Välj grupper** markerar du en grupp som du vill distribuera uppdateringar till och väljer sedan **Lägg till**. När du är klar väljer du **Nästa**.
 
-4.  På sidan **Distributionsåtgärd** gör du följande för varje grupp i listan:
+4. På sidan **Distributionsåtgärd** gör du följande för varje grupp i listan:
 
-    -   I listan **Godkännande** väljer du något av följande:
+    - I listan **Godkännande** väljer du något av följande:
 
-        -   **Installation krävs** – installerar uppdateringen på datorer i den angivna gruppen.
+        - **Installation krävs** – installerar uppdateringen på datorer i den angivna gruppen.
 
-        -   **Installera inte** – rapporterar bara tillämpbarhet och installerar inte uppdateringen.
+        - **Installera inte** – rapporterar bara tillämpbarhet och installerar inte uppdateringen.
 
-        -   **Tillgänglig installation** – användaren kan installera programmet på begäran från företagsportalen.
+        - **Tillgänglig installation** – användaren kan installera programmet på begäran från företagsportalen.
 
-        -   **Avinstallera** – tar bort uppdateringar från datorer i målgruppen.
+        - **Avinstallera** – tar bort uppdateringar från datorer i målgruppen.
 
             > [!IMPORTANT]
             > Uppdateringen tas bort även om den inte har installerats av Intune.
 
-    -   I listan **Tidsgräns** väljer du något av följande:
+    - I listan **Tidsgräns** väljer du något av följande:
 
-        -   **Ingen** – anger att ingen tidsgräns framtvingas för installationen av uppdateringen och användare kan neka uppdateringen kontinuerligt.
+        - **Ingen** – anger att ingen tidsgräns framtvingas för installationen av uppdateringen och användare kan neka uppdateringen kontinuerligt.
 
-        -   **Så snart som möjligt** – installerar uppdateringen vid nästa tillfälle på måldatorerna.
+        - **Så snart som möjligt** – installerar uppdateringen vid nästa tillfälle på måldatorerna.
 
-        -   **Anpassad** – anger datum och tid då godkända uppdateringar installeras.
+        - **Anpassad** – anger datum och tid då godkända uppdateringar installeras.
 
-        -   **En vecka**, **två veckor**, **en månad** – installerar uppdateringen inom den angivna tidsperioden.
+        - **En vecka**, **två veckor**, **en månad** – installerar uppdateringen inom den angivna tidsperioden.
 
-5.  Välj **Slutför** för att spara inställningarna eller välj **Avbryt** för att ignorera inställningen och återgå till listan med uppdateringar.
+5. Välj **Slutför** för att spara inställningarna eller välj **Avbryt** för att ignorera inställningen och återgå till listan med uppdateringar.
 
     > [!IMPORTANT]
     > Om inte åtgärden **Installera inte**, **Installation krävs**eller **Avinstallera** uttryckligen har konfigurerats för en underordnad grupp ärvs en åtgärd som konfigurerats för en överordnad grupp av alla underordnade.
 
-6.  Du kan kontrollera informationsfönstret längst ned på sidan **Alla uppdateringar** för påminnelsemeddelanden om uppdateringen.
+6. Du kan kontrollera informationsfönstret längst ned på sidan **Alla uppdateringar** för påminnelsemeddelanden om uppdateringen.
 
 
 ### <a name="see-also"></a>Se även

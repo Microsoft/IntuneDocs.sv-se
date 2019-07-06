@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23476383abfddabffc411afa286c97b30ef04439
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: dc7b7cdc4388051761eafac322171e4c30075923
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040966"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549186"
 ---
 # <a name="reference-for-policy-entities"></a>Referens för principentiteter
 
 Kategorin **Princip** innehåller entiteter för mobilenheter som spårar information, till exempel:
 
-  -  Inventering av enhetskonfigurationsprofiler, appkonfigurationsprofiler och efterlevnadsprinciper  
-  -  Antal enheter med tillståndet lyckades, väntar, misslyckades eller fel per dag  
-  -  Antal användare med status lyckat väntande, misslyckat eller fel per dag  
-  -  Sammanlagt antal enheter med status lyckat, väntande, misslyckat eller fel per dag  
+  - Inventering av enhetskonfigurationsprofiler, appkonfigurationsprofiler och efterlevnadsprinciper  
+  - Antal enheter med tillståndet lyckades, väntar, misslyckades eller fel per dag  
+  - Antal användare med status lyckat väntande, misslyckat eller fel per dag  
+  - Sammanlagt antal enheter med status lyckat, väntande, misslyckat eller fel per dag  
 
 ## <a name="policy"></a>Princip
 

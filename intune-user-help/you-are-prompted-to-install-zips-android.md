@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ee68b4f330077ce0892baa5e8d82f6c9c4e8ffe
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 4f83504e5d651d7f981fa605fc9157287bdb09a4
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069394"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529286"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Installera Zimperium zIPS på Android-enheten
 
@@ -31,7 +31,7 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 ## <a name="what-you-need-to-do"></a>Vad du behöver göra
 
-1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Skycure från Play Store)**. Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
+1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Skycure från Play Store)** . Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
 
 2. Installationssidan för Zimperium zIPS i Play Store visas. Installera Zimperium zIPS och tryck sedan på **ACCEPTERA** för att tillåta att Zimperium zIPS får åtkomst till enheten.
 

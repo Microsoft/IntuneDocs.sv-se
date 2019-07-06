@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa48aae8f35ad55e3e836016262056268fd9cd89
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7a6b2e04e40aa12e791e34f3899686d5f5661df2
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836294"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546698"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Skicka fel till företagets support vid problem med din iOS-enhet
 Ibland kan det uppstå ett fel när du använder företagsportalappen på din iOS-enhet. När detta inträffar kan du skicka information om felet till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.
@@ -32,10 +32,10 @@ När du laddar upp loggarna till företagsportalappen, skickas de först till de
 
 Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan du skicka information som hjälper företagets support att felsöka problemet. Du kan skicka information om fel på olika sätt:
 
--   Tryck på **Rapportera** i felmeddelanden.
+- Tryck på **Rapportera** i felmeddelanden.
 
--   Tryck på **Få hjälp** på fliken **Mer** i företagsportalappen.
+- Tryck på **Få hjälp** på fliken **Mer** i företagsportalappen.
 
--   Skaka enheten när du använder företagsportalappen och tryck på **Skicka diagnostikrapport** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
+- Skaka enheten när du använder företagsportalappen och tryck på **Skicka diagnostikrapport** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

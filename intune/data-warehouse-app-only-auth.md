@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: f87256580ce3a0e31ef86f15244f49046d9dd35e
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454031"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530254"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Autentisering för enbart Intune-informationslagerprogram
 
@@ -41,18 +41,18 @@ Följande process använder en privat metod för att bearbeta och konvertera en 
 
 I det här avsnittet anger du information om det webbprogram som du vill peka på Intune. En webbapp är ett klientserverprogram. Servern tillhandahåller webbappen, som inkluderar användargränssnitt, innehåll och funktioner. Den här typen av app underhålls separat på webben. Du använder Intune för att ge ett webbprogram åtkomst till Intune. Dataflödet initieras av webbprogrammet. 
 
-1.  Logga in på [Azure Portal](https://portal.azure.com).
-2.  Med hjälp av fältet **Sök resurser, tjänster och dokument** längst upp i Azure-portalen, söker du efter **Azure Active Directory**.
-3.  I listmenyn, väljer du **Azure Active Directory** under **Tjänster**.
-4.  Välj **Appregistreringar**.
-5.  Klicka **Ny appregistrering** för att visa **Skapa**-bladet.
-6.  I **Skapa**-bladet lägger du till din appinformation:
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Med hjälp av fältet **Sök resurser, tjänster och dokument** längst upp i Azure-portalen, söker du efter **Azure Active Directory**.
+3. I listmenyn, väljer du **Azure Active Directory** under **Tjänster**.
+4. Välj **Appregistreringar**.
+5. Klicka **Ny appregistrering** för att visa **Skapa**-bladet.
+6. I **Skapa**-bladet lägger du till din appinformation:
 
     - Ett appnamn som *Intune App-enbart auktorisering*.
     - **Programtypen**. Välj **Webbprogram / API** för att lägga till en app som representerar ett webbprogram, en web-API eller båda.
     - **Inloggnings-URL** för programmet. Detta är den plats som användarna automatiskt går till vid autentiseringsprocessen. De måste bevisa att de är den de säger att de är. Mer information finns i [Vad är programåtkomst och enkel inloggning med Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
 
-7.  Klicka på **Skapa** längst ned i **Skapa**-bladet.
+7. Klicka på **Skapa** längst ned i **Skapa**-bladet.
 
     >[!NOTE] 
     > Kopiera **Program-ID** från **Registrerad app**-bladet för senare användning.
@@ -61,12 +61,12 @@ I det här avsnittet anger du information om det webbprogram som du vill peka p�
 
 I det här avsnittet genererar Azure AD ett nyckelvärde för din app.
 
-1.  På **Appregistreringar**-bladet väljer du din nyligen skapade app för att visa appbladet.
-2.  Välj **inställningar** överst på bladet för att visa **Inställningar**-bladet.
-3.  Välj **Nycklar** på **Inställningar**-bladet.
-4.  Lägg till nyckeln **Beskrivning**, en **Förfaller**-varaktighet och **Värde** för nyckeln.
-5.  Klicka på **spara** för att spara och uppdatera programmets nycklar.
-6.  Du måste kopiera det genererade nyckelvärdet (base64-kodat).
+1. På **Appregistreringar**-bladet väljer du din nyligen skapade app för att visa appbladet.
+2. Välj **inställningar** överst på bladet för att visa **Inställningar**-bladet.
+3. Välj **Nycklar** på **Inställningar**-bladet.
+4. Lägg till nyckeln **Beskrivning**, en **Förfaller**-varaktighet och **Värde** för nyckeln.
+5. Klicka på **spara** för att spara och uppdatera programmets nycklar.
+6. Du måste kopiera det genererade nyckelvärdet (base64-kodat).
 
     >[!NOTE] 
     > Nyckelvärdet försvinner när du lämnar **Nycklar**-bladet. Det går inte att hämta nyckeln från det här bladet senare. Kopiera det för att använda senare.
@@ -75,28 +75,28 @@ I det här avsnittet genererar Azure AD ett nyckelvärde för din app.
 
 I det här avsnittet, beviljar du behörigheter till program.
 
-1.  Välj **Nödvändiga behörigheter** på **Inställningar**-bladet.
-2.  Klicka på **Lägg till**.
-3.  Välj **Lägg till en API** för att visa **Välj en API**-bladet.
-4.  Välj **Microsoft Intune API (MicrosoftIntuneAPI)** och klicka sedan på **Välj** från **Välj en API**-bladet. Steget **Välj behörigheter** väljs och **Aktivera åtkomst**-bladet visas.
-5.  Välj alternativet **Hämta informationslagerinformation från Microsoft Intune** från avsnittet **Programbehörigheter**.
-6.  Klicka på **Välj** från **Aktivera åtkomst**-bladet.
-7.  Klicka **Klar** från **Lägg till API-åtkomst**-bladet.
-8.  Klicka på **Bevilja behörighet** från **Nödvändiga behörigheter**-bladet och klicka på **Ja** när du tillfrågas för att uppdatera befintliga behörigheter som programmet redan har.
+1. Välj **Nödvändiga behörigheter** på **Inställningar**-bladet.
+2. Klicka på **Lägg till**.
+3. Välj **Lägg till en API** för att visa **Välj en API**-bladet.
+4. Välj **Microsoft Intune API (MicrosoftIntuneAPI)** och klicka sedan på **Välj** från **Välj en API**-bladet. Steget **Välj behörigheter** väljs och **Aktivera åtkomst**-bladet visas.
+5. Välj alternativet **Hämta informationslagerinformation från Microsoft Intune** från avsnittet **Programbehörigheter**.
+6. Klicka på **Välj** från **Aktivera åtkomst**-bladet.
+7. Klicka **Klar** från **Lägg till API-åtkomst**-bladet.
+8. Klicka på **Bevilja behörighet** från **Nödvändiga behörigheter**-bladet och klicka på **Ja** när du tillfrågas för att uppdatera befintliga behörigheter som programmet redan har.
 
 ## <a name="generate-token"></a>Generera token
 
 Med Visual Studio, skapar du ett konsolprogram (.NET Framework)-projekt som har stöd för .NET Framework och använder C# som kodningsspråk.
 
-1.  Välj **Fil** > **Nytt** > **Projekt** för att visa dialogrutan **Nytt projekt**.
-2.  Till vänster, väljer du **Visual C#** för att visa alla .NET Framework-projekt.
-3.  Välj **Konsolapp (.NET Framework)** , lägg till ett appnamn och klicka sedan på **OK** för att skapa appen.
-4.  I **Solution Explorer** väljer du **Program.cs** för att visa koden.
-5.  In Solution Explorer lägger du till en referens till sammansättningen `System.Configuration`.
-6.  I popup-menyn, väljer du **Lägg till** > **Nytt objekt**. Dialogrutan **Lägg till nytt objekt** visas.
-7.  Till vänster under **Visual C#** väljer du **Kod**.
-8.  Välj **Klass**, ändra namnet på klassen till *IntuneDataWarehouseClass.cs* och klicka på **Lägg till**.
-9.  Lägg till följande kod i <code>Main</code>-metoden:
+1. Välj **Fil** > **Nytt** > **Projekt** för att visa dialogrutan **Nytt projekt**.
+2. Till vänster, väljer du **Visual C#** för att visa alla .NET Framework-projekt.
+3. Välj **Konsolapp (.NET Framework)** , lägg till ett appnamn och klicka sedan på **OK** för att skapa appen.
+4. I **Solution Explorer** väljer du **Program.cs** för att visa koden.
+5. In Solution Explorer lägger du till en referens till sammansättningen `System.Configuration`.
+6. I popup-menyn, väljer du **Lägg till** > **Nytt objekt**. Dialogrutan **Lägg till nytt objekt** visas.
+7. Till vänster under **Visual C#** väljer du **Kod**.
+8. Välj **Klass**, ändra namnet på klassen till *IntuneDataWarehouseClass.cs* och klicka på **Lägg till**.
+9. Lägg till följande kod i <code>Main</code>-metoden:
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();

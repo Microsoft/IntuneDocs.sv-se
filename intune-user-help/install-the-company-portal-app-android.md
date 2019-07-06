@@ -18,30 +18,30 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bcae8e48fd9c6558d77aced73d12b15e54b2f7
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: fe6cd46f6a85204d5859993a69ac5bf5b253e048
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040936"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546349"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Installera företagsportalappen för Android
 
 Företagsportalen är en app som ger dig åtkomst till företags- eller skolappar, e-post och internetanslutningar. Den här appen hjälper dig att skydda både din organisations information genom att din enhet skyddas – till exempel genom att hålla företagets appar uppdaterade – eller genom att se till att din enhet låser sig själv efter en viss tid. Läs mer om funktionerna i Företagsportalen och sin del i hantering av enheter i [Varför ska jag registrera din Android-enhet](why-enroll-android-device.md).  
 
-1.  Tryck på **Start** > **Play Store**.
+1. Tryck på **Start** > **Play Store**.
 
-2.  I **Sök**-rutan skriver du in **Intune-företagsportalen**.  
+2. I **Sök**-rutan skriver du in **Intune-företagsportalen**.  
 
-3.  Tryck på **Intune-företagsportal**.
+3. Tryck på **Intune-företagsportal**.
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
-4.  Tryck på **INSTALLERA**.
+4. Tryck på **INSTALLERA**.
 
     ![android-install-company-portal](./media/and-cpinstall-2-install.png)
 
-5.  Tryck på **GODKÄNN**.
+5. Tryck på **GODKÄNN**.
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 

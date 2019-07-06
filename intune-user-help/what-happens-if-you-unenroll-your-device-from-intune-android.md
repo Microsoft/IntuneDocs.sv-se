@@ -18,26 +18,26 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32dfb275e96ecf1d8c60f115881d7ceb0593a3b2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 73e9c42f69517d145c797b13ae9fa5aa779ebc5d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837453"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546514"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Vad händer om Android-enheten avregistreras från Intune?
 
 När du avregistrera en Android-enhet från Intune:
 
--   Företagets support hanterar inte enheten längre.
+- Företagets support hanterar inte enheten längre.
 
--   Du kan inte längre komma åt företagets data och resurser.
+- Du kan inte längre komma åt företagets data och resurser.
 
--   Din enhet visas inte längre på företagsportalen.
+- Din enhet visas inte längre på företagsportalen.
 
--   Det går inte att installera appar från företagsportalen längre.
+- Det går inte att installera appar från företagsportalen längre.
 
--   Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
+- Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
 
 Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post och du avregistrerar enheten kommer den inte längre att visas i företagsportalen.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633bf52084ad261f768cb4e59aaf4ce0ab5cd5bc
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
-ms.translationtype: HT
+ms.openlocfilehash: f7dd6f62cb53dd0cc373fb3f2ffa7d9434b135cd
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468717"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494248"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>Under utveckling för Microsoft Intune – juli 2019
 
@@ -58,8 +58,6 @@ För att hjälpa dig med förberedelser och planering innehåller den här sidan
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Apphantering
 
-### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Enhetsanvändare kan visa alla hanterade appar som de har installerat eller försökt att installera <!-- 2352913 -->
-Företagsportalen för Windows visar alla hanterade appar, både nödvändiga och tillgängliga, som är installerade på en användares enhet. Användare kommer att kunna visa installationsförsök och väntande installationer, och deras aktuella status. Om din organisation inte gör appar obligatoriska eller tillgängliga ser användarna ett meddelande som förklarar att inga företagsappar har installerats. Användarna kommer också att kunna sortera eller filtrera appar baserat på installationsstatus.
 
 ### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Anpassade meddelanden för användare och grupper    <!-- 16766574   -->
 Du kommer snart att kunna skicka anpassade adhoc-push-meddelanden från Företagsportalen-program till användare på iOS och Android-enheter du hanterar med Intune. Dessa anpassade meddelanden som inte är knutna till specifika Intune-funktioner och kan användas i något syfte som du behöver, inklusive allmänna meddelanden som du vill skicka till vissa eller alla dina anställda.  

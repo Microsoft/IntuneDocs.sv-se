@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c1717be830d88ed0a7d1b660b7910c8192c93c5
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 0ba447153996383b3f057c4776b643a7a4ccd48b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403552"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547974"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Visa maskin- och programvaruinventering för Windows-datorer
 
@@ -33,41 +33,41 @@ ms.locfileid: "67403552"
 
 Intune samlar in detaljerad information om maskinvara och programvara för stationära datorer som hanteras som datorer med hjälp av Intune programvaruklienten. Använd informationen i följande procedurer för att lära dig skapa:
 
--   En rapport som visar information om maskinvarukapaciteten hos de datorer som du hanterar.
+- En rapport som visar information om maskinvarukapaciteten hos de datorer som du hanterar.
 
--   En rapport som visar en lista över vilka program som finns installerade på varje dator.
+- En rapport som visar en lista över vilka program som finns installerade på varje dator.
 
--   Så här uppdaterar du en datorinventering för att säkerställa att data i rapporten är aktuella.
+- Så här uppdaterar du en datorinventering för att säkerställa att data i rapporten är aktuella.
 
 ## <a name="to-display-information-about-pcs-you-manage"></a>Så här visar du information om de datorer du hanterar
 
-1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Datorinventeringsrapporter**.
+1. Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Datorinventeringsrapporter**.
 
-2.  På sidan **Skapa ny rapport** accepterar du standardvärdena eller anpassar dem om du vill filtrera resultatet som rapporten skickar tillbaka. Du kan till exempel välja att endast de datorer som kör Windows 8.1 ska visas i rapporten.
+2. På sidan **Skapa ny rapport** accepterar du standardvärdena eller anpassar dem om du vill filtrera resultatet som rapporten skickar tillbaka. Du kan till exempel välja att endast de datorer som kör Windows 8.1 ska visas i rapporten.
 
-3.  Välj **Visa rapport** för att öppna **Datorinventeringsrapporter** i ett nytt fönster.
+3. Välj **Visa rapport** för att öppna **Datorinventeringsrapporter** i ett nytt fönster.
 
     Du kan sortera rapporten på valfri kolumn, t.ex. **Namn**, **Chassityp** eller **Tillverkare** genom att välja kolumnens rubrik.
 
 ## <a name="to-display-software-installed-on-pcs-you-manage"></a>Så här visar du vilka program som har installerats på de datorer du hanterar
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Rapporter om identifierad programvara**.
+1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Rapporter om identifierad programvara**.
 
-2.  På sidan **Skapa ny rapport** accepterar du standardvärdena eller anpassar dem om du vill filtrera resultatet som rapporten skickar tillbaka. Du kan till exempel välja att endast program som är utgivna av Microsoft ska visas i rapporten.
+2. På sidan **Skapa ny rapport** accepterar du standardvärdena eller anpassar dem om du vill filtrera resultatet som rapporten skickar tillbaka. Du kan till exempel välja att endast program som är utgivna av Microsoft ska visas i rapporten.
 
-3.  Välj **Visa rapport** för att öppna **Upptäckta programvarurapporter** i ett nytt fönster.
+3. Välj **Visa rapport** för att öppna **Upptäckta programvarurapporter** i ett nytt fönster.
 
     Du kan sortera rapporten på valfri kolumn, t.ex. **Namn**, **Utgivare** eller **Kategori** genom att välja kolumnens rubrik. Du kan expandera uppdateringarna i listan om du vill visa mer information (t.ex. vilka datorer som programmet har installerats på) genom att klicka på riktningspilen bredvid listposten.
 
 ## <a name="to-refresh-computer-inventory-to-ensure-it-is-current"></a>Så här uppdaterar du datorinventeringen för att säkerställa att den är aktuell
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill uppdatera inventeringen för).
+1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill uppdatera inventeringen för).
 
-2.  Välj en dator eller tryck och håll ned **Ctrl** för att välja flera datorer.
+2. Välj en dator eller tryck och håll ned **Ctrl** för att välja flera datorer.
 
-3.  Klicka på **Fjärruppgifter** &gt; **Uppdatera inventering** i aktivitetsfältet.
+3. Klicka på **Fjärruppgifter** &gt; **Uppdatera inventering** i aktivitetsfältet.
 
-4.  Om du vill visa aktivitetens status väljer du **Fjärruppgifter** längst ner till höger på sidan.
+4. Om du vill visa aktivitetens status väljer du **Fjärruppgifter** längst ner till höger på sidan.
 
     Dialogrutan **Aktivitetsstatus** visar aktuella fjärrhanteringsaktiviteter, aktivitetsstatus, enhetsnamn och eventuella rapporterade fel och innehåller en länk till felsökningsinformation.
 

@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbf35b77c843b4dc084916b2c283b6c66d5f066d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: fb4ac87bef7c822111e95c18f149fa8d0598c36e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55849241"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546624"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Ta bort enheten från hanteringen om du inte godkände ”Användningsvillkor”
 
@@ -37,11 +37,11 @@ Innan du kan avinstallera företagsportalappen måste du välja inställningen *
 
 Så här tar du bort enheten från Intune och avinstallerar företagsportalappen:
 
-1.  Gå till **Inställningar** &gt; **Säkerhet &amp; Skärmlås** &gt; **Enhetsadministratörer**.
+1. Gå till **Inställningar** &gt; **Säkerhet &amp; Skärmlås** &gt; **Enhetsadministratörer**.
 
     Om du slutför det här steget avregistreras enheten helt.
 
-2.  Avmarkera kryssrutan bredvid, eller inaktivera, **Företagsportal**.
+2. Avmarkera kryssrutan bredvid, eller inaktivera, **Företagsportal**.
 
     Nu kan du installera företagsportalappen.
 

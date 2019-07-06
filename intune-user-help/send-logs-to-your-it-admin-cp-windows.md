@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9ecf976ea973fdb1a9b8025fec0bf49d7f87d0c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5df4fce5c07f416d5fa53ef653d62d9166fb1a11
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836480"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528768"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Skicka e-post till företagets support om problem från Företagsportal för Windows
 
@@ -32,7 +32,7 @@ Felsök approblem i företagsportalappen för Windows 10. Om du stöter på prob
 När du ber om hjälp öppnas ett förifyllt e-postmeddelande där du kan beskriva problemet i detalj. Det innehåller också ett diagnostiklogg-ID. Om ditt supportteam inte kan lösa problemet utifrån din beskrivning kontaktar de Microsoft om hjälp. Microsoft behöver diagnostik-ID:t för att referera till appens loggar.   
 
 
-> [!Note]       
+> [!Note]
 > När du har klickat på **Få hjälp**, skickar företagsportalen automatiskt dina loggar till Microsofts supportteam. Det här steget är proaktivt och gör det enklare att felsöka och lösa problem som eskaleras till Microsoft support. Som nämndes ovan kan Microsofts supportteam hämta in loggar med hjälp av diagnostik-ID:t i ditt e-postmeddelande.  
 
 ## <a name="what-is-a-diagnostic-log"></a>Vad är en diagnostiklogg?

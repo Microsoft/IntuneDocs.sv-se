@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b39cc879c9e1232335c38e8d95c0861a12662c6a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4784bcb706dd8eef395763729e04503682197f78
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564473"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545270"
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Skydda en Windows-enhet med kryptering
 
@@ -37,8 +37,8 @@ Om du har en Windows Phone som du har registrerat krypteras enheten automatiskt 
 
 Om du har en stationär enhet beskriver de följande anvisningarna nedan hur du krypterar den.
 
-1.  Sök efter och starta sedan appen **Hantera BitLocker**.
+1. Sök efter och starta sedan appen **Hantera BitLocker**.
 
-2.  Välj **Aktivera BitLocker** och följ anvisningarna för att kryptera var och en av dina enheter.
+2. Välj **Aktivera BitLocker** och följ anvisningarna för att kryptera var och en av dina enheter.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Du hittar kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

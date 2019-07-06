@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e9042b6c7c1890cd1829f803c05fbab7ae9b44
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040215"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548827"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Använd principer för att förenkla hanteringen av Windows-datorer
 
@@ -35,13 +35,13 @@ Om du vill hantera stationära Windows-datorer som datorer genom att köra Intun
 ### <a name="manage-the-microsoft-intune-center"></a>Hantera Microsoft Intune Center
 Användarna ser Intune-klientprogrammet som **Microsoft Intune Center**. Med Microsoft Intune Center kan användarna:
 
--   Hämta program från företagsportalen.
+- Hämta program från företagsportalen.
 
--   Söka efter uppdateringar.
+- Söka efter uppdateringar.
 
--   Hantera Microsoft Intune Endpoint Protection.
+- Hantera Microsoft Intune Endpoint Protection.
 
--  Begära fjärrhjälp.
+- Begära fjärrhjälp.
 
 Microsoft Intune Center är installerat på alla hanterade datorer. Du kan konfigurera följande inställningar i en Intune-princip och dessa visas för användaren i Microsoft Intune Center:
 

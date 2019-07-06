@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52f6caf8e48cd9781648acf1de0152ec107d5246
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 20bdfcce6574d31c37442a7bad58582aa7ea2fb6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55850919"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546135"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Skicka loggar till företagsportalens utvecklare för Android-enheter
 
@@ -34,16 +34,16 @@ Företagsportalappen kan ibland avslutas oväntat. Apputvecklarna vill veta när
 
 Så här skickar du loggar till Microsoft:
 
-1.  Öppna företagsportalappen.
+1. Öppna företagsportalappen.
 
-2.  Tryck på **Meny** > **Hjälp** > **E-postsupport**.
+2. Tryck på **Meny** > **Hjälp** > **E-postsupport**.
 
     > [!NOTE]
     > **Meny** kan vara en program- eller maskinvaruknapp, beroende på vilken Android-enhet du har.
 
-3.  Tryck på alternativet för att **endast ladda upp loggar**.
+3. Tryck på alternativet för att **endast ladda upp loggar**.
 
-4.  När överföringen är klar får du ett incident-ID. Spara ID:t för posterna.
+4. När överföringen är klar får du ett incident-ID. Spara ID:t för posterna.
 
 Du kan även kontakta företagsportalteamet för Android direkt via e-post <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>. 
 

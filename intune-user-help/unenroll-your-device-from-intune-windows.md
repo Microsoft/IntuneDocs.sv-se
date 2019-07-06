@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46f2193a3a13183d41b10f03b6efe7100f0d9f9d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 50833b33583dcc1b49eb9009995b8ccd6c79e1f0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840373"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546651"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Ta bort din Windows-enhet från hanteringen
 
@@ -76,24 +76,24 @@ Utför följande steg om du vill ta bort en Windows 10-enhet från hanteringen.
 ## <a name="remove-your-windows-81-computer"></a>Ta bort din Windows 8.1-dator
 Utför följande steg om du vill ta bort en Windows 8.1-dator från Intune.
 
-1.  Gå till **Datorinställningar** > **Nätverk** > **Arbetsplats**.
-2.  Under **Anslut till arbetsplats** väljer du **Lämna**.
-3.  Under **Turn on device management** (Aktivera enhetshantering) väljer du **Inaktivera**.
-4.  I popup-fönstret som öppnas väljer du **Inaktivera**.
+1. Gå till **Datorinställningar** > **Nätverk** > **Arbetsplats**.
+2. Under **Anslut till arbetsplats** väljer du **Lämna**.
+3. Under **Turn on device management** (Aktivera enhetshantering) väljer du **Inaktivera**.
+4. I popup-fönstret som öppnas väljer du **Inaktivera**.
 
 ## <a name="remove-your-windows-81-phone"></a>Ta bort din Windows 8.1-telefon
 Utför följande steg om du vill ta bort en Windows 8.1-telefon från Intune.
 
-1.  Gå till **Inställningar** > **Arbetsplats**.
-2.  Tryck på arbetsplatskontot som du vill avregistrera.
-3.  Tryck på **Ta bort** längst ned på skärmen.
-4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**.  
+1. Gå till **Inställningar** > **Arbetsplats**.
+2. Tryck på arbetsplatskontot som du vill avregistrera.
+3. Tryck på **Ta bort** längst ned på skärmen.
+4. Tryck på **Ta bort** i dialogrutan **Ta bort konto**.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Ta bort din personliga information när du tagit bort företagsportalen  
 
 Det finns två typer av data som företagsportalen lagrar på din Windows-enhet:
 
--   **Diagnostikloggar**: Standarddata om appaktivitet som Microsoft samlar in. Dessa data raderas automatiskt när du avinstallerar företagsportalappen. Aktivitetsdata för appen är till exempel data om hur länge appen var öppen eller om appen har kraschat.
--   **Cacheminne**: Stödfiler som krävs för att appen ska fungerar, till exempel ikoner och inställningar.
+- **Diagnostikloggar**: Standarddata om appaktivitet som Microsoft samlar in. Dessa data raderas automatiskt när du avinstallerar företagsportalappen. Aktivitetsdata för appen är till exempel data om hur länge appen var öppen eller om appen har kraschat.
+- **Cacheminne**: Stödfiler som krävs för att appen ska fungerar, till exempel ikoner och inställningar.
 
 Om du vill ta bort lagrade loggar och cacheminnet utför du något av följande steg:
 

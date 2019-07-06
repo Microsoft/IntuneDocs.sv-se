@@ -18,17 +18,17 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: bbd4f8f0925aac5aada44277c4d21a71b412e0e7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501246"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546682"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Felsöka registreringen av din Windows 10-enhet
 Om du har registrerat enheten, men ändå inte kan komma åt e-post och filer för ditt arbete eller din skola kan du prova följande felsökningssteg.  
 
-1.  Ta en titt på de två följande skärmarna och se om någon av dem liknar vad du ser på din enhet. Följ de steg som gäller för den skärm som du ser på din enhet.
+1. Ta en titt på de två följande skärmarna och se om någon av dem liknar vad du ser på din enhet. Följ de steg som gäller för den skärm som du ser på din enhet.
 
     Om denna skärm visas följer du stegen i [Felsökningssteg att följa om du ser Åtkomst för arbete eller skola](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 

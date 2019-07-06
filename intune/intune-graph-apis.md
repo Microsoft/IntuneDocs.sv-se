@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819735"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548911"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
@@ -61,23 +61,23 @@ Mer information finns i:
 
 Registrera en app för att använda Microsoft Graph API:
 
-1.  Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administrativa autentiseringsuppgifter.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administrativa autentiseringsuppgifter.
 
     Om det behövs kan du använda:
     - Klientorganisationens administratörskonto.
     - Ett användarkonto för klientorganisationen med inställningen **Användare kan registrera program** aktiverad.
 
-2.  I menyn väljer du **Azure Active Directory** &gt; **Appregistreringar**.
+2. I menyn väljer du **Azure Active Directory** &gt; **Appregistreringar**.
 
     <img src="./media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
-3.  Välj antingen **Ny programregistrering** för att skapa ett nytt program eller välj ett befintligt program.  (Om du väljer ett befintligt program hoppar du över nästa steg.)
+3. Välj antingen **Ny programregistrering** för att skapa ett nytt program eller välj ett befintligt program.  (Om du väljer ett befintligt program hoppar du över nästa steg.)
 
-4.  Ange följande på bladet **Skapa**:
+4. Ange följande på bladet **Skapa**:
 
-    1.  Ett **Namn** på programmet (visas när användarna loggar in).
+    1. Ett **Namn** på programmet (visas när användarna loggar in).
 
-    2.  Värden för **Programtyp** och **Omdirigerings-URI**.
+    2. Värden för **Programtyp** och **Omdirigerings-URI**.
 
         Dessa varierar beroende på dina krav. Om du till exempel använder ett Azure AD-[autentiseringsbibliotek](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), anger du **Programtyp** till `Native` och **Omdirigerings-URI** till `urn:ietf:wg:oauth:2.0:oob`.
 
@@ -85,19 +85,19 @@ Registrera en app för att använda Microsoft Graph API:
 
         Läs mer i [Autentiseringsscenarier för Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-5.  I programbladet:
+5. I programbladet:
 
-    1.  Observera värdet för **Program-ID**.
+    1. Observera värdet för **Program-ID**.
 
-    2.  Välj **Inställningar** &gt; **API-åtkomst** &gt; **Nödvändiga behörigheter**.
+    2. Välj **Inställningar** &gt; **API-åtkomst** &gt; **Nödvändiga behörigheter**.
 
     <img src="media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6.  På bladet **Nödvändiga behörigheter** väljer du **Lägg till** &gt; **Lägg till API-åtkomst** &gt; **Välj en API**.
+6. På bladet **Nödvändiga behörigheter** väljer du **Lägg till** &gt; **Lägg till API-åtkomst** &gt; **Välj en API**.
 
     <img src="media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7.  På bladet **Välj en API** väljer du **Microsoft Graph** &gt; **Välj**.  Bladet **Aktivera åtkomst** öppnas och visar en lista över de behörighetsomfattningar som är tillgängliga för ditt program.
+7. På bladet **Välj en API** väljer du **Microsoft Graph** &gt; **Välj**.  Bladet **Aktivera åtkomst** öppnas och visar en lista över de behörighetsomfattningar som är tillgängliga för ditt program.
 
     <img src="media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -334,28 +334,28 @@ Om det händer kontrollerar du att:
 
 I det här exemplet visas hur du använder C# för att hämta en lista med enheter som är kopplade till ditt Intune-konto.
 
-1.  Starta Visual Studio och skapa sedan ett nytt projekt i Visual C#-konsolens app (.NET Framework).
+1. Starta Visual Studio och skapa sedan ett nytt projekt i Visual C#-konsolens app (.NET Framework).
 
-2.  Ange ett namn på ditt projekt och även annan information om du vill.
+2. Ange ett namn på ditt projekt och även annan information om du vill.
 
     <img src="media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3.  Använd Solution Explorer för att lägga till Microsoft ADAL NuGet-paketet i projektet.
+3. Använd Solution Explorer för att lägga till Microsoft ADAL NuGet-paketet i projektet.
 
-    1.  Högerklicka på Solution Explorer.
-    2.  Välj **Hantera NuGet-paket...** &gt; **Bläddra**.
-    3.  Välj `Microsoft.IdentityModel.Clients.ActiveDirectory` och sedan **Installera**.
+    1. Högerklicka på Solution Explorer.
+    2. Välj **Hantera NuGet-paket...** &gt; **Bläddra**.
+    3. Välj `Microsoft.IdentityModel.Clients.ActiveDirectory` och sedan **Installera**.
 
     <img src="media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
-4.  Lägg till följande uttryck överst i **Program.cs**:
+4. Lägg till följande uttryck överst i **Program.cs**:
 
     ``` csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
     using System.Net.Http;
     ```
 
-5.  Lägg till en metod för att skapa auktoriseringsrubriken:
+5. Lägg till en metod för att skapa auktoriseringsrubriken:
 
     ``` csharp
     private static async Task<string> GetAuthorizationHeader()
@@ -386,14 +386,14 @@ I det här exemplet visas hur du använder C# för att hämta en lista med enhet
     }
     ```
 
-7.  Uppdatera **Main** att anropa **GetMyManagedDevices**:
+7. Uppdatera **Main** att anropa **GetMyManagedDevices**:
 
     ``` csharp
     string devices = GetMyManagedDevices().GetAwaiter().GetResult();
     Console.WriteLine(devices);
     ```
 
-8.  Kompilera och kör programmet.  
+8. Kompilera och kör programmet.  
 
 Du bör få två frågor när du kör programmet första gången.  Först begär den dina autentiseringsuppgifter och sedan ger den behörighet för `managedDevices`-begäran.  
 
@@ -553,11 +553,11 @@ Om din organisation har stöd för organisationer med egna Azure AD-klienter, ka
 
 Så här gör du:
 
-1.  Kontrollera att klientens konto finns i målets Azure AD-klient.
+1. Kontrollera att klientens konto finns i målets Azure AD-klient.
 
-2.  Kontrollera att ditt klientkonto tillåter att användare registrerar program (se **Användarinställningar**).
+2. Kontrollera att ditt klientkonto tillåter att användare registrerar program (se **Användarinställningar**).
 
-3.  Upprätta en relation mellan varje klient.  
+3. Upprätta en relation mellan varje klient.  
 
     Gör detta genom att antingen:
 
@@ -567,15 +567,15 @@ Så här gör du:
 
 Så här bjuder du in användaren att bli gäst i din klient:
 
-1.  Välj **Lägg till en gästanvändare** i panelen **Snabbuppgifter**.
+1. Välj **Lägg till en gästanvändare** i panelen **Snabbuppgifter**.
 
     <img src="media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
 
-2.  Ange klientens e-postadress och lägg till ett personligt meddelande i inbjudan (valfritt).
+2. Ange klientens e-postadress och lägg till ett personligt meddelande i inbjudan (valfritt).
 
     <img src="media/azure-ad-guest-invite.png" width="203" height="106" alt="Inviting an external user as a guest" />
 
-3.  Välj **Bjud in**.
+3. Välj **Bjud in**.
 
 En inbjudan skickas till användaren.
 

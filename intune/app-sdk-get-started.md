@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3b0aff29db5402de7e91282e74cd6d69a103545
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9e9a50855a26b72b2f6589d9f44ce6deea0588fa
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045820"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529174"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -160,8 +160,8 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
     * Om du är en ISV som aktiverar dina iOS eller Android store-appar för Intunes appskyddsprincip så får du en kampanjkod när du har slutfört registreringen med Microsoft Intune, enligt beskrivningen i registreringssteget. Kampanjkoden låter dig registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning.
 
     * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
-    
-    * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/en-ca/intune/licenses-assign).
+
+    * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/intune/licenses-assign).
 
 * **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md). Om din app har integrerat Intune SDK, men ännu inte visas i Azure-portalen som en riktad app, kan du rikta den med en princip genom att välja alternativet ”+ fler appar” och ange paket-ID (iOS) eller paketnamn (Android) i textrutan.
 
@@ -173,12 +173,12 @@ Om din app använder sina egna anpassade AAD-inställningar för autentisering, 
 
 När du har registrerat din app i en Azure-klientorganisation, och den visas tenant under **Alla program** måste du ge appen åtkomst till Intune-appskyddstjänsten (tidigare känd som MAM-tjänsten). På Azure-portalen:
 
-1.  Gå till bladet **Azure Active Directory**.
-2.  Under **Appregistreringar** går du till den lista som ställts in för programmet.
-3.  Klicka på **+ Lägg till en behörighet**.
-4.  Klicka på **API:er som min organisation använder**. 
-5.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
-6.  Under **Delegerade behörigheter** markerar du kryssrutan **DeviceManagementManagedApps.ReadWrite: Read and Write the User’s App Management Data*** (DeviceManagementManagedApps.ReadWrite: Läs och skriv användarens apphanteringsdata).
+1. Gå till bladet **Azure Active Directory**.
+2. Under **Appregistreringar** går du till den lista som ställts in för programmet.
+3. Klicka på **+ Lägg till en behörighet**.
+4. Klicka på **API:er som min organisation använder**. 
+5. I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
+6. Under **Delegerade behörigheter** markerar du kryssrutan **DeviceManagementManagedApps.ReadWrite: Read and Write the User’s App Management Data*** (DeviceManagementManagedApps.ReadWrite: Läs och skriv användarens apphanteringsdata).
 7. Klicka på **Lägg till behörigheter**.
 
 ### <a name="badge-your-app-optional"></a>Ge din app en skylt (valfritt)

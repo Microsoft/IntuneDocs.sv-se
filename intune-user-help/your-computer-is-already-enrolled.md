@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7265eb7b4679d72fa6ab348c17f9f4f7508482e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f6e73b784f0e938058dcb9d6001082f86ac800ff
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836440"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545664"
 ---
 # <a name="your-computer-is-already-enrolled"></a>Din dator är redan registrerad.
 
@@ -31,11 +31,11 @@ Om ett felmeddelande om att datorn redan har registrerats visas har datorn redan
 
 Så här länkar du datorn:
 
-1.  Välj **Start** på den dator som du vill länka till ditt konto och välj sedan **Microsoft Intune Center**.
+1. Välj **Start** på den dator som du vill länka till ditt konto och välj sedan **Microsoft Intune Center**.
 
-2.  Öppna företagsportalen.
+2. Öppna företagsportalen.
 
-3.  Följ anvisningarna om hur du länkar datorn till ditt användarkonto.
+3. Följ anvisningarna om hur du länkar datorn till ditt användarkonto.
 
 Om du vill avregistrera enheten följer du instruktionerna för den typ av enhet som du har: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) eller [Windows](unenroll-your-device-from-intune-windows.md).
 

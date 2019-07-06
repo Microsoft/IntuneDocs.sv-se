@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3b9f69e745baffd21b55274e173bb75e8581525
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
-ms.translationtype: HT
+ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67418952"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549069"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Inställningar för MDM-säkerhetsbaslinjer för Intune  
 
@@ -32,7 +32,7 @@ Senaste baslinjeversionen är **MDM Säkerhetsbaslinje för Spring 2019 uppdater
 Läs om vad som ändrats i den senaste versionen av den här baslinjen från den tidigare versionen i [vad som ändrats i den nya mallen](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> I juni 2019 säkerhetsbaslinje för förhandsversion MDM ersattes med lanseringen av den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19H 1)* mall som är generaly tillgängliga (inte i förhandsversion). Profiler som skapades före tillgängligheten för den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19 H 1)* baslinje inte uppdateras för att återspegla de inställningar och värden som finns i MDM-Säkerhetsbaslinje för Spring 2019 Update () 19 H 1) version.  Men du inte kan skapa nya profiler baserat på mallen som förhandsversion, kan du redigera och fortsätta att använda profiler som du skapade tidigare och som är baserade på mallen som förhandsversion.   
+> I juni 2019 säkerhetsbaslinje för förhandsversion MDM ersattes med lanseringen av den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19H 1)* mall som är generaly tillgängliga (inte i förhandsversion). Profiler som skapades före tillgängligheten för den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19 H 1)* baslinje inte uppdateras för att återspegla de inställningar och värden som finns i MDM-Säkerhetsbaslinje för Spring 2019 uppdatering (19 H 1 ) version.  Men du inte kan skapa nya profiler baserat på mallen som förhandsversion, kan du redigera och fortsätta att använda profiler som du skapade tidigare och som är baserade på mallen som förhandsversion.   
   
 Läs om hur du använder säkerheten med Intune i [använder säkerhetsbaslinjer](security-baselines.md).  
 
@@ -57,7 +57,7 @@ Mer information finns i [CSP – AppRuntime](https://docs.microsoft.com/windows/
 
 - **Microsoft accounts optional for Windows Store apps** (Microsoft-konton är valfria för Windows Store-appar)  
   Med den här principinställningen kan du ange om Microsoft-konton är valfria för Windows Store-appar som kräver ett konto för inloggning. Den här principen påverkar bara Windows Store-appar som stöder den. Om du aktiverar den här principinställningen tillåter Windows Store-appar som vanligtvis kräver ett Microsoft-konto för inloggning att användarna loggar in med ett företagskonto i stället. Om du inaktiverar eller inte konfigurerar den här principinställningen måste användarna logga in med ett Microsoft-konto.  
-    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067104)  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067104)  
   
   **Standard**: Aktiverat  
 
@@ -68,7 +68,7 @@ Mer information finns i [CSP – ApplicationManagement](https://docs.microsoft.c
   Den här inställningen tillåter användare att ändra några installationsalternativ som vanligtvis är endast tillgängliga för administratörer. Om du aktiverar den här inställningen är några av säkerhetsfunktionerna i Windows Installer kringgås. Det gör det möjligt för installationer som annars skulle stoppas på grund av en säkerhetsöverträdelse. Om du inaktiverar eller inte konfigurerar den här inställningen hindra användare från att ändra installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange katalogen som filerna med hjälp av säkerhetsfunktionerna i Windows Installer. Om Windows Installer upptäcker att ett installationspaket tillåter att användaren ändrar ett skyddat alternativ, stoppar installationen och visar ett meddelande. Säkerhetsfunktionerna fungerar bara när installationsprogrammet körs i en säkerhetskontext som den har åtkomst till kataloger som användaren. Den här inställningen är utformat för mindre restriktivt miljöer. Det kan användas för att kringgå fel i ett installationsprogram som förhindrar att programvara installeras.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
-    **Standard**: Ja
+  **Standard**: Ja
 
 - **Blockera MSI appinstallationer med förhöjd behörighet**  
   Den här policyinställningen säger till Windows Installer att använda förhöjda behörigheter när alla program installeras på systemet.  
@@ -828,7 +828,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   
 - **Internet Explorer: Java-behörigheter i zonen Betrodda platser**   
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen ställs behörigheten in på Låg säkerhet.  
-    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067200)  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
   **Standard**: Hög säkerhet  
   
@@ -1829,7 +1829,7 @@ Följande inställningar är antingen:
 - *Ändrat* på något sätt från hur inställningarna visas i den tidigare versionen. 
 
 *[Ny]*  [ **Låst**](#above-lock):
--  **Röst aktivera appar från låst skärm**    
+- **Röst aktivera appar från låst skärm**    
 
 *[Nytt]* [**Programhantering**](#application-management): 
 - **Blockera användarkontroll över installationer**  
@@ -2602,7 +2602,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: Disable  
   
 - **Internet Explorer internet zone logon options**  
-  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
+  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
   
   **Default**: Prompt  
   

@@ -18,21 +18,21 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d9ea064da17e5447c08c3a8370017dec34e30af
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 416c109ae9d27ac48896c1601bd8448fa89d0af7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55844411"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545605"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Du får ett felmeddelande när du använder företagsportalappen
 
 Om du får ett felmeddelande när du använder företagsportalappen på en iOS-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information. Du kan skicka information om fel på olika sätt:
 
--   Tryck på **Rapportera** i felmeddelanden.
+- Tryck på **Rapportera** i felmeddelanden.
 
--   Tryck på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
+- Tryck på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
 
--   Skaka enheten när du använder företagsportalappen och tryck på **E-post** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
+- Skaka enheten när du använder företagsportalappen och tryck på **E-post** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

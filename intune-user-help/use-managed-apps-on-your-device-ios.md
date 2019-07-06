@@ -18,12 +18,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35d77c9aa739096f36f4dbf4b75a4186e55a3381
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5ae4e454a0ca41858cb670790fd5acd4d6bf998a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835071"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546606"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Använda hanterade appar på iOS-enheten
 
@@ -38,9 +38,9 @@ När du använder företagsdata i en hanterad app visas ett meddelande (se nedan
 ## <a name="how-do-i-get-managed-apps"></a>Hur skaffar jag hanterade appar?  
 Du kan hämta hanterade appar på ett par olika sätt:
 
--   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan företagets support installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
+- När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan företagets support installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
 
--   Du installerar en app från App Store och loggar sedan in med ditt företagskonto som hanteras av Intune.
+- Du installerar en app från App Store och loggar sedan in med ditt företagskonto som hanteras av Intune.
 
 Företagets support kan ibland köpa flera licenser för en app som du installerar. Om du ser ett meddelande som ber dig godkänna Apples Volymköpsprogram är det normalt och du kan godkänna det. Om du inte godkänner det kan du inte installera appen.
 
@@ -56,22 +56,22 @@ Företagets support kan ibland köpa flera licenser för en app som du installer
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?  
 Följande är några exempel på vad företagets support kan hantera i en app och hur det kan påverka din användning av företagsdata på enheten:
 
--   Åtkomst till vissa webbplatser
+- Åtkomst till vissa webbplatser
 
--   Överföring av data mellan appar
+- Överföring av data mellan appar
 
--   Spara filer
+- Spara filer
 
--   Kopiera och klistra in
+- Kopiera och klistra in
 
--   Krav på åtkomst via PIN-kod
+- Krav på åtkomst via PIN-kod
 
--   Din inloggning, med företagets autentiseringsuppgifter
+- Din inloggning, med företagets autentiseringsuppgifter
 
--   Möjligheten att säkerhetskopiera till molnet
+- Möjligheten att säkerhetskopiera till molnet
 
--   Möjligheten att ta skärmdumpar
+- Möjligheten att ta skärmdumpar
 
--   Krav på datakryptering
+- Krav på datakryptering
 
 Kontakta företagets support om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ddecf202160decb6ab219cfe0ef490092132059
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 9ca937fc5d129dc98c288fa0dde59aa861709f93
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840747"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527884"
 ---
 # <a name="install-lookout-for-work"></a>Installera Lookout for Work
 
@@ -31,7 +31,7 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 ## <a name="what-you-need-to-do"></a>Vad du behöver göra
 
-1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
+1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)** .
 
    ![du uppmanas att installera Lookout for Work](./media/lookout-required-app-install-android.png)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c929965b79d9ee35fcc1094b4ad18cff6d73d80d
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 4530c1ec573560924b54aa8fd21d39a86cefe97e
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045524"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558422"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -111,10 +111,10 @@ apply plugin: 'com.microsoft.intune.mam'
 
 Som standard fungerar plugin-programmet **endast** på `project`-beroenden.
 Testa att kompileringen inte påverkas. Konfiguration kan anges för att visa
-*  Projekt som ska undantas
-*  [Externa beroenden som ska tas med](#usage-of-includeexternallibraries) 
-*  Särskilda klasser som ska undantas från bearbetning
-*  Varianter som ska undantas från bearbetning. Dessa kan referera till ett fullständigt variantnamn eller till en enda variant. Till exempel
+* Projekt som ska undantas
+* [Externa beroenden som ska tas med](#usage-of-includeexternallibraries) 
+* Särskilda klasser som ska undantas från bearbetning
+* Varianter som ska undantas från bearbetning. Dessa kan referera till ett fullständigt variantnamn eller till en enda variant. Till exempel
      * Om din app har versionstyperna `debug` och `release` med varianterna {`savory`, `sweet`} och {`vanilla`, `chocolate`} kan du ange
      * `savory` för att undanta alla varianter med smaken Savory eller `savoryVanillaRelease` för att undanta endast den exakta varianten.
 
@@ -834,7 +834,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
         public String acquireToken(String upn, String aadId, String resourceId) {
-        return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
+            return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
         }
     }
     ```
@@ -1187,7 +1187,7 @@ Guiden Säkerhetskopiering av data anger en allmän algoritm för att återstäl
 Som standard tillämpar Intune App SDK principer på appen i sin helhet. Flera identiteter är en valfri Intune-funktion för appskydd som kan aktiveras för att tillåta att principer tillämpas per identitet. Detta kräver mycket större appmedverkan än andra appskyddsfunktioner.
 
 > [!NOTE]
->  Om appen inte deltar på rätt sätt kan det resultera i dataläckage och andra säkerhetsproblem.
+> Om appen inte deltar på rätt sätt kan det resultera i dataläckage och andra säkerhetsproblem.
 
 När användaren registrerar enheten eller appen, registrerar SDK:n den identiteten och ser den som den primära Intune-hanterade identiteten. Andra användare i appen behandlas som ohanterade med obegränsade principinställningar.
 
@@ -1317,7 +1317,7 @@ Förutom appens möjlighet att ange identiteten kan en tråd eller identiteten f
 
   1. Om en aktivitet startas via en `Intent` som skickas av en annan MAM-app, anges aktivitetens identitet baserat på den effektiva identiteten i den andra appen vid tidpunkten då denna `Intent` skickades.
 
-  2.  För tjänster anges trådens identitet på liknande sätt för varaktigheten i ett `onStart`- eller `onBind`-anrop. Anrop till `Binder` som returneras från `onBind` anger också tillfälligt trådens identitet.
+  2. För tjänster anges trådens identitet på liknande sätt för varaktigheten i ett `onStart`- eller `onBind`-anrop. Anrop till `Binder` som returneras från `onBind` anger också tillfälligt trådens identitet.
 
   3. Anrop till en `ContentProvider` anger på liknande sätt trådens identitet för deras varaktighet.
 
@@ -1429,12 +1429,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *        Identity to set.
     * @param file
-    *       File to protect.
+    *        File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1742,8 +1742,8 @@ Aktivera standardregistrering med följande steg:
 
 För stora kodbaser som körs utan [ProGuard](http://proguard.sourceforge.net/), kan begränsningarna i formatet Dalvik för körbara filer bli ett problem. Mer specifikt kan följande begränsningar förekomma:
 
-1.  Gräns på 65 000 för fält.
-2.  Gräns på 65 000 för metoder.
+1. Gräns på 65 000 för fält.
+2. Gräns på 65 000 för metoder.
 
 ### <a name="policy-enforcement-limitations"></a>Principtillämpningsgränser
 

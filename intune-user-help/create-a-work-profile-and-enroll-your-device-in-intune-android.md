@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb5911f8a706f38e3e880c32113d203369ed870
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: f0a8b0b633f64a2ed6e3e14d5d884df80342067a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196923"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545474"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrera enhet med Android-arbetsprofil
 
@@ -33,7 +33,7 @@ Registrera din personliga Android-enhet för att få åtkomst till företagets e
 
 ## <a name="create-work-profile-and-enroll-device"></a>Skapa arbetsprofil och registrera enhet
 
-1.  På Android-företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto. Ladda ned och installera den kostnadsfria appen från [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) om du inte redan har installerat den.
+1. På Android-företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto. Ladda ned och installera den kostnadsfria appen från [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) om du inte redan har installerat den.
 
     ![Android-företagsportalsappens skärm Välkommen](./media/and-enroll-0-welcome-screen.png)
 
@@ -41,15 +41,15 @@ Registrera din personliga Android-enhet för att få åtkomst till företagets e
 
     ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_01_1709_new.png)
 
-3.  På skärmen **Why create a work profile?** (Varför skapa en arbetsprofil?) kan du läsa vad du kommer att kunna göra. Tryck sedan på **FORTSÄTT**.
+3. På skärmen **Why create a work profile?** (Varför skapa en arbetsprofil?) kan du läsa vad du kommer att kunna göra. Tryck sedan på **FORTSÄTT**.
 
     ![Varför skapa en arbetsprofil](./media/andr-afw-why-create-a-work-profile.png)
 
-4.  Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
+4. Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
 
     ![Vad företagets support kan se och inte kan se på enheten](/intune/media/android_cp_enroll_02_after_1710.png)
 
-5.  På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
+5. På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
 
     ![Skärmen Vad händer nu](/intune/media/android_work_cp_enroll_03_after_1710.png)
 

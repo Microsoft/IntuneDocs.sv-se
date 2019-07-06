@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8756ad134853bdd19155c3d8f50d1f07960e80f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045374"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547896"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Datamodell för Microsoft Intune-informationslager
 
@@ -32,22 +32,22 @@ Intune-informationslagret samplar dagligen data för att ge en historik över de
 
 Informationslagret visas data i följande övergripande områden:
 
-  -  Appskyddsaktiverade appar och användning
-  -  Registrerade enheter, egenskaper och inventering
-  -  Inventering av appar och programvara
-  -  Efterlevnadsprinciper och enhetskonfigurering
+  - Appskyddsaktiverade appar och användning
+  - Registrerade enheter, egenskaper och inventering
+  - Inventering av appar och programvara
+  - Efterlevnadsprinciper och enhetskonfigurering
 
 Dessa områden innehåller entiteterna som är viktiga för din Intune-miljö. Du hittar information entitetsuppsättningarna i följande avsnitt:
 
-  -  [Program](reports-ref-application.md)
-  -  [Datum](reports-ref-date.md)
-  -  [Enheter](reports-ref-devices.md)
-  -  [Tillägg för Intune-hantering](reports-ref-intunemanagementextension.md)
-  -  [Princip](reports-ref-policy.md)
-  -  [Mobilapphantering (MAM)](reports-ref-mobile-app-management.md)
-  -  [Användare](reports-ref-user.md)
-  -  [Aktuell användare](reports-ref-current-user.md)
-  -  [Användarenhetsassociation](reports-ref-user-device.md)
+  - [Program](reports-ref-application.md)
+  - [Datum](reports-ref-date.md)
+  - [Enheter](reports-ref-devices.md)
+  - [Tillägg för Intune-hantering](reports-ref-intunemanagementextension.md)
+  - [Princip](reports-ref-policy.md)
+  - [Mobilapphantering (MAM)](reports-ref-mobile-app-management.md)
+  - [Användare](reports-ref-user.md)
+  - [Aktuell användare](reports-ref-current-user.md)
+  - [Användarenhetsassociation](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relationer: Star-schemamodellen
 

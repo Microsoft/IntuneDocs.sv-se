@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe7ffa6ff024c719fc24209947b87b07ea2b6791
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: f7a4be4deddae2f2983996a6880232463924c948
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412687"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558512"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
@@ -50,6 +50,18 @@ Problemet indikeras i informationen om appinstallationsfel. Du kan använda den 
 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
+
+## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Installation av riktar sig mot når inte enheten
+Följande bör övervägas när du har problem med att installera appar:
+- Om appen inte visas i Företagsportalen, se till att appen har distribuerats med **tillgänglig** avsikt och att användaren har åtkomst till Företagsportalen med den typ av enhet som stöds av appen.
+- Användaren behöver lägga till ett arbetskonto till enheten för Windows BYOD-enheter.
+- Kontrollera om användaren är över gränsen för AAD-enhet:
+  1. Gå till [Enhetsinställningar för Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  2. Anteckna värdet för **maximalt enheter per användare**.
+  3. Gå till [Azure Active Directory-användare](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  4. Välj den berörda användaren och klicka på **enheter**.
+  5. Om användaren är över den angivna gränsen och ta sedan bort alla inaktuella poster som inte längre behövs.
+- För iOS DEP-enheter kan du se till att användaren visas som **registrerats av användare** Enhetsöversikt för Intune-bladet. Om det visar NA sedan distribuera en Konfigurationsprincip för Intune-Företagsportalen. Mer information finns i [konfigurera företagsportalappen](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Felsökning av Win32-appinstallationen
 

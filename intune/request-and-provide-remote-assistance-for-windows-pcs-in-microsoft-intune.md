@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1a725ff5ba5a677a41fe2a89b999f1ae41b3b6f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a58339f8a956e4250064bc81e2f291a72c27c27f
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040912"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549138"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Begära och tillhandahålla hjälp för Windows-datorer
 
@@ -79,13 +79,13 @@ Från menyn **Åtgärder** i fönstret **TeamViewer** väljer du **Avsluta sessi
 ## <a name="remotely-restart-a-windows-pc"></a>Starta om en Windows-dator via en fjärranslutning
 När du hjälper dina användare med deras problem kan du emellanåt behöva fjärrstarta om deras datorer. Fjärrstarta om en Windows-dator enligt följande steg.
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill starta om).
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill starta om).
 
-2.  Markera en eller flera datorer, och välj sedan **Fjärruppgifter** &gt; **Starta om datorn**.
+2. Markera en eller flera datorer, och välj sedan **Fjärruppgifter** &gt; **Starta om datorn**.
 
-3.  Om du vill visa aktivitetens status väljer du **Fjärruppgifter** längst ner till höger på sidan.
+3. Om du vill visa aktivitetens status väljer du **Fjärruppgifter** längst ner till höger på sidan.
 
-4.  I dialogrutan **Aktivitetsstatus** kan du granska aktuella fjärrhanteringsaktiviteter, aktivitetsstatus, enhetsnamn och eventuella rapporterade fel.
+4. I dialogrutan **Aktivitetsstatus** kan du granska aktuella fjärrhanteringsaktiviteter, aktivitetsstatus, enhetsnamn och eventuella rapporterade fel.
 
 ### <a name="see-also"></a>Se även
 

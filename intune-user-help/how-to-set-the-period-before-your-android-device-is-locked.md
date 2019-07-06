@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 913e157e8b2f16376eccf8fc93af137792015eb9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ef8dbcda214e2c7cd260fe237e4b9cfd0b7ff326
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55848006"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546272"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Så här ställer du in hur lång tid det tar innan Android-enhetens skärmlås aktiveras
 
@@ -31,18 +31,18 @@ För att återansluta till ditt arbete måste du ange tidsgränsen för lösenor
 
 ## <a name="native-non-samsung-knox-device"></a>Ursprunglig enhet (inte Samsung Knox)
 
-1.  I **Inställningar** på enheten trycker du på **Säkerhet** &gt; **Lås automatiskt** (på vissa enheter står det i stället **Lås telefon efter**).
+1. I **Inställningar** på enheten trycker du på **Säkerhet** &gt; **Lås automatiskt** (på vissa enheter står det i stället **Lås telefon efter**).
 
     Om **Lås automatiskt** (**Lås telefonen efter** på vissa enheter) inte visas kontrollerar du att du har angett ett giltigt lösenord under **Inställningar** &gt; **Skärmlås** &gt; **Lösenord**.
 
-2.  Ange tidsgränsen för lösenord.
+2. Ange tidsgränsen för lösenord.
 
 ## <a name="samsung-knox-device"></a>Samsung Knox-enhet
 
-1.  I **Inställningar** på enheten trycker du på **Låsskärm och säkerhet** &gt; **Lås automatiskt**.
+1. I **Inställningar** på enheten trycker du på **Låsskärm och säkerhet** &gt; **Lås automatiskt**.
 
     Om **Lås automatiskt** (**Lås telefonen efter** på vissa enheter) inte visas kontrollerar du att du har angett ett giltigt lösenord under **Inställningar** &gt; **Skärmlås** &gt; **Lösenord**.
 
-2.  Välj en tidsgräns för lösenord.
+2. Välj en tidsgräns för lösenord.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

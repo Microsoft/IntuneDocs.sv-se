@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85ccfb526ada4d6851fb32b077d07d3538f90361
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: efed9522f64cd7b34d702cd959f6b1aa4524f855
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61491027"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545881"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune?
 
@@ -32,48 +32,48 @@ När du installerar företagsportalappen och sedan använder den för att regist
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Vad händer med alla Windows-enheter efter registreringen?
 Om du registrerar en Windows- eller Windows Phone-enhet i Intune kan du:
 
--   Komma åt företagets nätverk, samt dina e-post- och arbetsfiler.
+- Komma åt företagets nätverk, samt dina e-post- och arbetsfiler.
 
--   Hämta företagsappar från webbplatsen för företagsportalen. (__Obs!__ För Windows 7 och Windows Vista kan du bara hämta företagsappar från webbplatsen för företagsportalen.)
+- Hämta företagsappar från webbplatsen för företagsportalen. (__Obs!__ För Windows 7 och Windows Vista kan du bara hämta företagsappar från webbplatsen för företagsportalen.)
 
--   Konfigurera ditt företags eller din skolas e-postkonto automatiskt.
+- Konfigurera ditt företags eller din skolas e-postkonto automatiskt.
 
--   Återställa din telefon till fabriksinställningarna om den tappas bort eller blir stulen.
+- Återställa din telefon till fabriksinställningarna om den tappas bort eller blir stulen.
 
 När du registrerar en enhet ger du företagets support tillstånd att till exempel:
 
--   Återställa enheten till tillverkarens standardinställningar. Det är bra om enheten tappas bort eller blir stulen.
+- Återställa enheten till tillverkarens standardinställningar. Det är bra om enheten tappas bort eller blir stulen.
 
--   Ta bara bort företagsrelaterade filer och företagsappar. *Dina personliga data och inställningar tas inte bort.*
+- Ta bara bort företagsrelaterade filer och företagsappar. *Dina personliga data och inställningar tas inte bort.*
 
--   Företagets support kan se vilka program som är installerade på enheten, inklusive programvara som du har installerat själv.
+- Företagets support kan se vilka program som är installerade på enheten, inklusive programvara som du har installerat själv.
 
--   Ange krav för enheten, till exempel för att kräva ett lösenord eller en PIN-kod för enheten för att skydda företagsdata. Företagets support kan också begränsa hur många gånger du kan ange ett felaktigt lösenord, och kan låsa dig ute från enheten om du försöker för många gånger.
+- Ange krav för enheten, till exempel för att kräva ett lösenord eller en PIN-kod för enheten för att skydda företagsdata. Företagets support kan också begränsa hur många gånger du kan ange ett felaktigt lösenord, och kan låsa dig ute från enheten om du försöker för många gånger.
 
--   Kräva att du krypterar data på din enhet för att skydda företagsdata, om enheten förloras eller blir stulen.
+- Kräva att du krypterar data på din enhet för att skydda företagsdata, om enheten förloras eller blir stulen.
 
--   Kräva att du accepterar villkoren.
+- Kräva att du accepterar villkoren.
 
--   Förhindra dig att ta bilder av företagsrelaterade data.
+- Förhindra dig att ta bilder av företagsrelaterade data.
 
 ## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Vad händer med alla Windows-datorer efter registreringen?
 
--  Programvara installeras på datorn så att företagets support kan hantera datorn och så att du kan komma åt företagsresurser som appar och supportinformation. Företagets support kan uppdatera den här programvaran automatiskt.
+- Programvara installeras på datorn så att företagets support kan hantera datorn och så att du kan komma åt företagsresurser som appar och supportinformation. Företagets support kan uppdatera den här programvaran automatiskt.
 
--  Intune Endpoint Protection kanske är installerat på datorn. Det här programmet söker efter virus och skadlig kod.
+- Intune Endpoint Protection kanske är installerat på datorn. Det här programmet söker efter virus och skadlig kod.
 
--  Företagets support kan samla in eller radera data från datorns hårddisk.
+- Företagets support kan samla in eller radera data från datorns hårddisk.
 
--  Företagets support kan installera appar och uppdateringar på datorn.
+- Företagets support kan installera appar och uppdateringar på datorn.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Vad händer var åttonde timme efter enhetsregistreringen?
 
 Ungefär var åttonde timme kommer registrerade enheter att:
 
--   Hämta eventuella uppdateringar av principer eller appar som företagets support har gjort tillgängliga.
+- Hämta eventuella uppdateringar av principer eller appar som företagets support har gjort tillgängliga.
 
--   Skicka eventuella uppdateringar av hårdvaruförteckningen.
+- Skicka eventuella uppdateringar av hårdvaruförteckningen.
 
--   Skicka eventuella uppdateringar av förteckningar över företagsappar.
+- Skicka eventuella uppdateringar av förteckningar över företagsappar.
 
 Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

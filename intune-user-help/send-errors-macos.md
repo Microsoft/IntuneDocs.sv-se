@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b90edf1f2e380790e2c725ee00c03d525c9fa1e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e5e00e1f7d4f84f9bdc1d1a52b83095135479327
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55833981"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546153"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Skicka fel till rätt personer för din hanterade macOS-enhet
 
@@ -33,11 +33,11 @@ Ibland uppstår oförklarade fel i företagsportal-appen. När ett fel inträffa
 
 Skicka information om ett felmeddelande i företagsportalappen:
 
--   I felmeddelandet du får, klicka på **Rapportera**.
+- I felmeddelandet du får, klicka på **Rapportera**.
 
--   Klicka på menyn **Hjälp** > **Spara diagnostikrapport**. Välj en plats där du vill spara filen. Skicka sedan filen via e-post eller ladda upp den till supporten för ditt företag.
+- Klicka på menyn **Hjälp** > **Spara diagnostikrapport**. Välj en plats där du vill spara filen. Skicka sedan filen via e-post eller ladda upp den till supporten för ditt företag.
 
--   Om e-postappen har konfigurerats kan du skicka diagnostikrapporten genom att välja **Hjälp** > **Skicka diagnostikrapport**. När loggarna har laddats upp klickar du på **E-postinformation**.
+- Om e-postappen har konfigurerats kan du skicka diagnostikrapporten genom att välja **Hjälp** > **Skicka diagnostikrapport**. När loggarna har laddats upp klickar du på **E-postinformation**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Skicka fel till företagsportalens utvecklare för macOS-enheter
 
@@ -45,8 +45,8 @@ Företagsportalappen kan ibland avslutas oväntat. Apptillverkare vill gärna at
 
 Så här skickar du loggar till Microsoft:
 
-1.  Öppna företagsportalappen.
-2.  Klicka på menyn **Hjälp** > **Skicka diagnostikrapport**.  När loggarna har laddats upp, får du ett incident-ID. Kopiera och spara detta ID.
-3.  Skicka e-post till Microsoft via <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">den här mallen</a>.
+1. Öppna företagsportalappen.
+2. Klicka på menyn **Hjälp** > **Skicka diagnostikrapport**.  När loggarna har laddats upp, får du ett incident-ID. Kopiera och spara detta ID.
+3. Skicka e-post till Microsoft via <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">den här mallen</a>.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

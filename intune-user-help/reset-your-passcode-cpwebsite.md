@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
-ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58163436"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546806"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Så återställer du enhetens lösenord från företagsportalens webbplats
 
@@ -36,13 +36,13 @@ Om du använder en företagsregistrerad enhet kan det hända att du inte ser alt
 
 ## <a name="reset-your-passcode"></a>Återställa lösenordet
 
-1.  Öppna [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) och välj knappen __Meny__ > __Enheter__.  
+1. Öppna [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) och välj knappen __Meny__ > __Enheter__.  
 
 2. Välj den enhet vars lösenord behöver återställas.  
 
     ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/rename-reset-device-step2-1808.png) 
 
-3. Välj **Återställ lösenord**. Om lösenordsalternativet inte visas längst upp på sidan väljer du **Mer (…)** > **Återställ lösenord**.   
+3. Välj **Återställ lösenord**. Om lösenordsalternativet inte visas längst upp på sidan väljer du **Mer (…)**  > **Återställ lösenord**.   
 
    ![Sidan med enhetsinformation för en vald enhet på webbplatsen för företagsportalen, med en lista över länkar längst upp som visar Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/rename-reset-device-1808.png)   
 
@@ -79,7 +79,7 @@ Det här avsnittet beskriver återställning av lösenord och funktionen med til
 **iOS**: Tar bort det befintliga lösenordet, men skapar inte något tillfälligt lösenord. Om du använder fingeravtrycksläsning med Touch ID för att öppna enheten eller göra köp måste du konfigurera detta igen.  
 
 **Windows 10 Mobile**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller bokstäver och siffror. Om ansiktsigenkänning med Windows Hello har konfigurerats fungerar det fortfarande med enheten.
-    
+
 **Windows Phone 8.1**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller siffror.  
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

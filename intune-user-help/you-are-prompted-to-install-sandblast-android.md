@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b55d41939b9772227cee0f12da65040edbca0d0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: a012cb7fe25b70ee260f2b3a2d49a47c3bae06a3
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55843773"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558455"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Du måste installera SandBlast Mobile Protect på Android-enheten
 
@@ -31,7 +31,7 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 **Vad du behöver göra:**
 
-1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install SandBlast Mobile Protect from Play Store (Nödvändigt program – Installera SandBlast Mobile Protect från Play Store)**. Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
+1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install SandBlast Mobile Protect from Play Store (Nödvändigt program – Installera SandBlast Mobile Protect från Play Store)** . Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
 
 2. Installationssidan för SandBlast Mobile Protect i Play Store visas. Installera SandBlast Mobile Protect och tryck sedan på **ACCEPTERA** för att tillåta att SandBlast Mobile Protect får åtkomst till enheten.
 
@@ -47,9 +47,9 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 8. SandBlast Mobile Protect börjar direkt leta efter säkerhetshot på enheten.
 
-9.  Om SandBlast Mobile Protect hittar ett säkerhetshot på enheten visas instruktioner om hur du löser problemet.
+9. Om SandBlast Mobile Protect hittar ett säkerhetshot på enheten visas instruktioner om hur du löser problemet.
 
-10.  Om inga hot påträffas lyser det grönt för alla hottyper.
+10. Om inga hot påträffas lyser det grönt för alla hottyper.
 
 11. Skärmen **Enhetsinformation** på företagsportalen visar att du nu uppfyller företagets säkerhetskrav.
 

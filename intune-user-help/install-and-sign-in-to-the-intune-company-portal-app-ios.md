@@ -18,24 +18,24 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc2173e2972e422ac629331110d3b86b787765da
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 494269b82840331041ac2607ea853dbfb1d979de
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040963"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546318"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installera och logga in i företagsportalappen
 
 Installera företagsportalappen på din iOS-enhet för att få åtkomst till dina appar, e-post och nätverk för arbete och skola. Använd appen för att registrera din enhet i Microsoft Intune och skydda åtkomsten till dina resurser på arbetet eller skolan. Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-1.  Öppna **App Store** och sök efter **Intune-företagsportalen**.
+1. Öppna **App Store** och sök efter **Intune-företagsportalen**.
 
-2.  Ladda ner appen för **Intune-företagsportalen**.
+2. Ladda ner appen för **Intune-företagsportalen**.
 
     ![Skärmbild som visar hur appen för Intune-företagsportalen ser ut i App Store.](./media/CP_iosRedesign_after_1803_04.PNG)
 
-3.  Öppna företagsportalappen, ange din e-postadress och ditt lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
+3. Öppna företagsportalappen, ange din e-postadress och ditt lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
 
     När du loggar in i företagsportalappen för första gången, och ditt företag eller skola använder Intune, uppmanas du att registrera din enhet i Intune. För att registrera följer du stegen i [registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md). Du kan även [sign in using another device](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#sign-in-from-another-device) (logga in med en annan enhet).
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ace484d0c4e832470ae9a6e4ffc69290c7d657
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 733cb20c43b34393003f2e9f4f4466922f3f581e
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044946"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572554"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
@@ -49,7 +49,7 @@ Minsta maskinvarukrav för att installera Intune-klientprogrammet:
 |---------------|--------------------|
 |Nätverk|Klienten kräver att datorn är ansluten till Internet.|
 |Processor och minne|Se RAM- och processorkraven för datorns operativsystem.|
-|Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet installeras.|
+|Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet har installerats.|
 
 **Programvara**:  
 Programvarukrav för att installera klientprogrammet:
@@ -70,16 +70,16 @@ Som Intune-administratör kan du göra Intune programklienten tillgänglig för 
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Datorhanteringsfunktioner med Intune-klientprogrammet
 I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner. Men du kan också hantera datorer med hjälp av Intune-klientprogrammet, vilket innehåller följande funktioner:
 
--   **[Hantering av programvaruuppdateringar](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
+- **[Hantering av programvaruuppdateringar](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
 
--   **[Princip för Windows-brandväggen](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** – Den här typen av princip säkerställer att Windows-brandväggen är aktiverad och korrekt konfigurerad på alla datorer som används på företaget.
+- **[Princip för Windows-brandväggen](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** – Den här typen av princip säkerställer att Windows-brandväggen är aktiverad och korrekt konfigurerad på alla datorer som används på företaget.
 
--   **[Skydd mot skadlig programvara](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
+- **[Skydd mot skadlig programvara](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
 
--   **[Fjärrhjälp](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
+- **[Fjärrhjälp](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
 
--   **[Hantera programvarulicenser](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** – Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
--   **[Appdistribution](add-apps-for-windows-pcs-in-microsoft-intune.md)** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogrammet.
+- **[Hantera programvarulicenser](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** – Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
+- **[Appdistribution](add-apps-for-windows-pcs-in-microsoft-intune.md)** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogrammet.
 
 <!-- - **Compliance settings reporting** -->
 
@@ -113,8 +113,8 @@ Mer information om ovanstående aktiviteter finns i [vanliga datorhanteringsakti
 
 Vissa hanteringsalternativ som kan användas för att hantera datorer som mobila enheter kan inte användas för datorer som hanteras med Intune-klientprogrammet:
 
--   Fullständig rensning (selektiv rensning är tillgänglig)
--   Villkorlig åtkomst
+- Fullständig rensning (selektiv rensning är tillgänglig)
+- Villkorlig åtkomst
 
 Observera också att vissa avsnitt, t.ex. **Uppdateringar**, **Skydd** och **Licenser**bara visas i Intune-administrationskonsolen om du har registrerat enheter i Intune-klientprogrammet.
 

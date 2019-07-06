@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 582b4615941dae8c2fc696ce5dfc87e2bbe4b98b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0c72fb6e7ace6c603410ff0ffc9a96e4a0ff528d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55846255"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527629"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Installera Mobile Threat Defense på iOS-enheten
 
@@ -38,12 +38,12 @@ Innan du kan komma åt ditt arbete måste företagets support be dig att install
 
 Mobile Threat Defense är ett sätt för företag att se till att dina enheter är skyddade mot appar som kan försöka stjäla företagsinformation. När det här skyddet läggs till krävs att extra information rapporteras om apparna på dina enheter till Mobile Threat Defense-tjänsten som företaget använder. Företaget kan inte se data i dina personliga appar. Alla appar på din enhet läggs till i [det företaget kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) när de använder en Mobile Threat Defense-tjänst. Här följer de delar av appen ditt företag kan se:
 
-*   Appnamn
+* Appnamn
 * App-ID: det unika namn som identifierar appen i App Store
-*   Appversion och kort versionsnummer: de specifika versionsnumren för en app
+* Appversion och kort versionsnummer: de specifika versionsnumren för en app
 * Appsamling (bundle) och dynamisk storlek: mängden utrymme en app använder på din enhet
 * Appens giltighet: om en app är godkänd för användning
-*   Appens hanteringstillstånd: huruvida en app hanteras av ditt företag eller om det är en privat app
+* Appens hanteringstillstånd: huruvida en app hanteras av ditt företag eller om det är en privat app
 
 ## <a name="if-the-installation-doesnt-work"></a>Om installationen inte fungerar
 

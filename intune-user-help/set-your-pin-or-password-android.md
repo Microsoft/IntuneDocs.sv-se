@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95862c006baef40bfb219e5cff50d5622c8c00b4
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 767788d702db45686d686e21018cbf0c5b038412
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069343"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546661"
 ---
 # <a name="set-your-pin-or-password"></a>Ange din PIN-kod eller ditt lösenord
 
@@ -31,9 +31,9 @@ Företagets support kan kräva att du anger en PIN-kod eller ett lösenord på e
 
 Följ stegen nedan för att ange en PIN-kod eller ett lösenord.
 
-1.  Tryck på **Inställningar** > **Säkerhet** > **Skärmlås** > **Lösenord**.
+1. Tryck på **Inställningar** > **Säkerhet** > **Skärmlås** > **Lösenord**.
 
-2.  Välj och bekräfta det nya lösenordet.
+2. Välj och bekräfta det nya lösenordet.
 
 För vissa enheter, kan du behöva ställa in en PIN-kod för start förutom skärmlösenordet. Du kan försöka att åtgärda problemet genom att hitta en plats i inställningsappen där det här alternativet kan aktiveras. Till exempel i Samsung Galaxy S7 aktiverar du säker start genom att gå till **Inställningar** > **Låsskärm och säkerhet** > **Säker start**. Läs mer [här](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
 

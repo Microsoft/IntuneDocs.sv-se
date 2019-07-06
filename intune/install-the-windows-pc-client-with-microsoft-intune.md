@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ebca73344b88778a4d734e0690615d0aa3a20b5
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4dd9fc00475c8a8eea28bef2150f25639ac38e15
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041771"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572605"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
 
@@ -68,34 +68,34 @@ Gå till den mapp där installationsfilerna för klientprogrammet finns på de d
 
 ## <a name="deploy-the-client-software-by-using-group-policy"></a>Distribuera klientprogramvaran automatiskt med hjälp av en grupprincip
 
-1.  I mappen som innehåller filerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** kör du följande kommando för att extrahera Windows Installer-baserade installationsprogram för 32-bitars och 64-bitars datorer:
+1. I mappen som innehåller filerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** kör du följande kommando för att extrahera Windows Installer-baserade installationsprogram för 32-bitars och 64-bitars datorer:
 
     ```
     Microsoft_Intune_Setup.exe/Extract <destination folder>
     ```
 
-2.  Kopiera filerna **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** och **MicrosoftIntune.accountcert** till en nätverksplats som kan användas av alla datorer som klientprogramvaran ska installeras på.
+2. Kopiera filerna **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** och **MicrosoftIntune.accountcert** till en nätverksplats som kan användas av alla datorer som klientprogramvaran ska installeras på.
 
     > [!IMPORTANT]
     > Dela inte upp och byt inte namn på filerna. Om du gör det, kommer installationen av klientprogramvaran att misslyckas.
 
-3.  Använd grupprinciper för att distribuera programvaran till datorer i nätverket.
+3. Använd grupprinciper för att distribuera programvaran till datorer i nätverket.
 
     Mer information om hur du använder grupprinciper för automatisk distribution av programvara finns i [Grupprincip för nybörjare](https://technet.microsoft.com/library/hh147307.aspx).
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Distribuera klientprogramvaran som en del av en avbildning
 Du kan distribuera Intune-klientprogramvaran till datorer som en del av en operativsystemsavbildning med hjälp av följande procedur som vägledning:
 
-1.  Kopiera klientinstallationsfilerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** till mappen **%Systemdrive%\Temp\Microsoft_Intune_Setup** på referensdatorn.
+1. Kopiera klientinstallationsfilerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** till mappen **%Systemdrive%\Temp\Microsoft_Intune_Setup** på referensdatorn.
 
-2.  Skapa registerposten **WindowsIntuneEnrollPending** genom att lägga till följande kommando i skriptet **SetupComplete.cmd** :
+2. Skapa registerposten **WindowsIntuneEnrollPending** genom att lägga till följande kommando i skriptet **SetupComplete.cmd** :
 
     ```
     %windir%\system32\reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Onlinemanagement\Deployment /v
     WindowsIntuneEnrollPending /t REG_DWORD /d 1
     ```
 
-3.  Lägg till följande kommando i **setupcomplete.cmd** för att köra registreringspaketet med kommandoradsargumentet /PrepareEnroll:
+3. Lägg till följande kommando i **setupcomplete.cmd** för att köra registreringspaketet med kommandoradsargumentet /PrepareEnroll:
 
     ```
     %systemdrive%\temp\Microsoft_Intune_Setup\Microsoft_Intune_Setup.exe /PrepareEnroll
@@ -103,9 +103,9 @@ Du kan distribuera Intune-klientprogramvaran till datorer som en del av en opera
     > [!TIP]
     > Skriptet **SetupComplete.cmd** gör det möjligt för installationsprogrammet för Windows att göra ändringar i systemet innan en användare loggar in. Kommandoradsargumentet **/PrepareEnroll** förbereder en måldator för att registreras automatiskt i Intune efter att installationsprogrammet för Windows slutförts.
 
-4.  Lägg **SetupComplete.cmd** i mappen **%Windir%\Setup\Scripts** på referensdatorn.
+4. Lägg **SetupComplete.cmd** i mappen **%Windir%\Setup\Scripts** på referensdatorn.
 
-5.  Avbilda referensdatorn och distribuera avbildningen till måldatorerna.
+5. Avbilda referensdatorn och distribuera avbildningen till måldatorerna.
 
     När måldatorn startar efter att installationsprogrammet för Windows slutförts, skapas registernyckeln **WindowsIntuneEnrollPending** . Registreringspaketet kontrollerar om datorn har registrerats. Om datorn har registrerats, vidtas inga ytterligare åtgärder. Om datorn inte har registrerats, skapar registreringspaketet en automatisk registreringsuppgift för Microsoft Intune.
 
@@ -119,13 +119,13 @@ Användare installerar Intune-klientprogrammet genom att gå till [företagsport
 
 Om användarna inte har tilldelats en licens för Intune eller om organisationens MDM-auktoritet inte har konfigurerats för Intune kan användarna inte se några alternativ för att registrera sig.
 
-Om användarna inte har tilldelats någon licens för Intune och organisationens MDM-utfärdare har konfigurerats för Intune:
+Om användarna inte har tilldelats en licens för Intune och organisationens MDM-auktoritet har konfigurerats för Intune:
 
-- Användare med Windows 7 eller Windows 8-datorer kan ENDAST se alternativet att registrera på Intune, genom att hämta och installera den klientprogramvara som är unik för deras organisation.
+- Användare med Windows 7 eller Windows 8-datorer kan ENDAST se alternativet att registrera på Intune genom att hämta och installera klientprogrammet för datorer som är unik för deras organisation.
 
 - Användare av Windows 10- eller Windows 8.1-datorer visas två registreringsalternativ:
 
-  -  **Registrera Windows-datorer som mobila enheter**: Användare trycker på knappen **Läs mer om att registrera** och tas till anvisningar om hur du registrerar datorn som en mobil enhet. Den här knappen visas tydligt eftersom MDM-registreringen anses vara det registreringsalternativ som är standard och föredras. Dock gäller inte MDM-alternativet för det här avsnittet, som endast omfattar installationen av klientprogrammet.
+  - **Registrera Windows-datorer som mobila enheter**: Användare trycker på knappen **Läs mer om att registrera** och tas till anvisningar om hur du registrerar datorn som en mobil enhet. Den här knappen visas tydligt eftersom MDM-registreringen anses vara det registreringsalternativ som är standard och föredras. Dock gäller inte MDM-alternativet för det här avsnittet, som endast omfattar installationen av klientprogrammet.
   - **Registrera datorn med Intune-klientprogrammet**: Du måste berätta för användarna att de ska välja länken **Klicka här om du vill ladda ned** som tar dem genom installationen av klientprogrammet.
 
 Följande tabell innehåller en sammanfattning av alternativen.
@@ -171,19 +171,19 @@ Använd en av följande procedurer som hjälper dig att övervaka och kontroller
 
 ### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Så här kontrollerar du installationen av klientprogrammet från Microsoft Intune-administrationskonsolen
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) klickar du på **Grupper** &gt; **Alla enheter** &gt; **Alla datorer**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) klickar du på **Grupper** &gt; **Alla enheter** &gt; **Alla datorer**.
 
-2.  I listan letar du reda på de hanterade datorer som kommunicerar med Intune, eller söker efter en viss hanterad dator genom att skriva namnet på datorn (eller någon del av namnet) i rutan **Sök enheter**.
+2. I listan letar du reda på de hanterade datorer som kommunicerar med Intune, eller söker efter en viss hanterad dator genom att skriva namnet på datorn (eller någon del av namnet) i rutan **Sök enheter**.
 
-3.  Kontrollera status för datorn längst ned i fönstret i konsolen. Åtgärda eventuella fel.
+3. Kontrollera status för datorn längst ned i fönstret i konsolen. Åtgärda eventuella fel.
 
 ### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Så här skapar du en datorinventeringsrapport för att visa alla datorer som har registrerats
 
-1.  I [Microsoft Intune administrationskonsol](https://manage.microsoft.com/) klickar du på **Rapporter** &gt; **Datorinventeringsrapport**.
+1. I [Microsoft Intune administrationskonsol](https://manage.microsoft.com/) klickar du på **Rapporter** &gt; **Datorinventeringsrapport**.
 
-2.  På sidan **Skapa ny rapport** lämnar du alla fält som standardvärden (om du inte vill använda filter) och klickar sedan på **Visa rapport**.
+2. På sidan **Skapa ny rapport** lämnar du alla fält som standardvärden (om du inte vill använda filter) och klickar sedan på **Visa rapport**.
 
-3.  Sidan **Datorinventeringsrapport** öppnas i ett nytt fönster och visar alla datorer som registrerats i Intune.
+3. Sidan **Datorinventeringsrapport** öppnas i ett nytt fönster och visar alla datorer som registrerats i Intune.
 
     > [!TIP]
     > Klicka på valfri kolumnrubrik i rapporten för att sortera listan efter innehållet i den kolumnen.
@@ -258,7 +258,7 @@ Kontrollera "%ProgramFiles%\Microsoft\OnlineManagement" och se till att följand
 
 Avregistreringsprocessen tar inte bort mappen OnlineManagement. Vänta i 30 minuter efter avinstallationen och kör sedan det här kommandot. Om du kör det för tidigt kan avinstallationen lämnas i ett okänt tillstånd. Starta en kommandotolk med förhöjd behörighet och kör följande för att ta bort mappen:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Nästa steg
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

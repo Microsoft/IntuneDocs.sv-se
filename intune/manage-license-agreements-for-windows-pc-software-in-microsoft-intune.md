@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7068bb96b72861c0647c44261edef0c3e83a120c
-ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
+ms.openlocfilehash: 082bd6cb680c413d13e5ed6804011daa6c929b57
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031670"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548644"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 
@@ -37,13 +37,13 @@ Med Microsoft Intune kan du lägga till och hantera licensinformation för progr
 
 I arbetsytan **Licenser** i administrationskonsolen för Intune kan du:
 
--   Lägga till och redigera Microsofts volymlicensavtal.
+- Lägga till och redigera Microsofts volymlicensavtal.
 
--   Lägga till och redigera andra licensavtal.
+- Lägga till och redigera andra licensavtal.
 
--   Hantera licenser och grupper.
+- Hantera licenser och grupper.
 
--   Jämföra berättigandeinformationen som Intune hämtar från Volume Licensing Service Center (VLSC) med lagret för Microsoft-programvara som Intune identifierar på dina hanterade Windows-datorer.
+- Jämföra berättigandeinformationen som Intune hämtar från Volume Licensing Service Center (VLSC) med lagret för Microsoft-programvara som Intune identifierar på dina hanterade Windows-datorer.
 
 Du kan även generera rapporter som visar installations- och licensantal för programvarutitlar. Licensrapporter kan hjälpa dig att bedöma ditt fullständiga licensläge för Microsofts mjukvaruprogram och mjukvaruprogramtitlar som inte kommer från Microsoft.
 
@@ -53,35 +53,35 @@ Du kan även generera rapporter som visar installations- och licensantal för pr
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Lägga till Microsofts volymlicensavtal
 Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
-1.  Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
+1. Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
 
-2.  På sidan **Lägg till avtal** under **Välj avtalstyp**väljer du **Volymlicensieringsavtal**.
+2. På sidan **Lägg till avtal** under **Välj avtalstyp**väljer du **Volymlicensieringsavtal**.
 
-3.  I avsnittet **Lägg till avtalsuppgifter** väljer du om du vill överföra en fil eller lägga till uppgifterna manuellt.
+3. I avsnittet **Lägg till avtalsuppgifter** väljer du om du vill överföra en fil eller lägga till uppgifterna manuellt.
 
-    -   **Överför en CSV-fil som innehåller avtalsuppgifter**. Välj **Bläddra** och välj den CSV-fil som du vill överföra.
+    - **Överför en CSV-fil som innehåller avtalsuppgifter**. Välj **Bläddra** och välj den CSV-fil som du vill överföra.
 
-        -   Filen kan innehålla antingen två eller tre kolumner; två för enbart avtalspar eller tre om du vill lägga till ett eget namn för varje avtalspar.
+        - Filen kan innehålla antingen två eller tre kolumner; två för enbart avtalspar eller tre om du vill lägga till ett eget namn för varje avtalspar.
 
-        -   Det totala antalet tecken i ett avtalsnummerpar får inte överstiga 16 ASCII tecken.
+        - Det totala antalet tecken i ett avtalsnummerpar får inte överstiga 16 ASCII tecken.
 
-        -   Endast ASCII tecken stöds.
+        - Endast ASCII tecken stöds.
 
-        -   Följande tecken är inte tillåtna i avtalsnamnet: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
+        - Följande tecken är inte tillåtna i avtalsnamnet: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
-        -   Filnamnet får inte vara mer än 128 tecken långt.
+        - Filnamnet får inte vara mer än 128 tecken långt.
 
-        -   Filen måste innehålla minst ett avtalspar och får inte innehålla mer än 5 000 avtalspar.
+        - Filen måste innehålla minst ett avtalspar och får inte innehålla mer än 5 000 avtalspar.
 
         **Format för filen**
 
         Du kan skapa den här filen genom att lägga till avtalspar till ett vanligt textdokument med något av följande format, beroende på organisationstypen som du har registrerat hos VLSC. Ange ett avtalsnummerpar per rad.
 
-        -   **Open Value-kunder:** *Avtalsnummer*, *upprepa avtalsnummer*, *avtalsnamn*
+        - **Open Value-kunder:** *Avtalsnummer*, *upprepa avtalsnummer*, *avtalsnamn*
 
-        -   **Open-kunder:** *Auktoriseringsnummer*, *relaterat licensnummer*, *avtalsnamn*
+        - **Open-kunder:** *Auktoriseringsnummer*, *relaterat licensnummer*, *avtalsnamn*
 
-        -   **Select- och Enterprise-kunder:** *Avtalsnummer*, *relaterat registreringsnummer*, *avtalsnamn*
+        - **Select- och Enterprise-kunder:** *Avtalsnummer*, *relaterat registreringsnummer*, *avtalsnamn*
 
         **Lägg till avtal** formlen uppmanar dig att leta efter den här filen när du lägger till ett nytt avtal.
 
@@ -89,30 +89,30 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         `01-07001, 01-07001, Office agreements`
 
-    -   **Lägg till avtalsuppgifter manuellt**. Ange följande information och ange sedan avtalsnummerparen i rutorna **Auktoriserings-/avtalsnummer** och **Licens-/registrerings-/kundnummer**. Efter att du fyllt i båda numren väljer du **Lägg till par** ikonen för att spara dina nummer. Sedan kan du lägga till ett nytt par om du vill.
+    - **Lägg till avtalsuppgifter manuellt**. Ange följande information och ange sedan avtalsnummerparen i rutorna **Auktoriserings-/avtalsnummer** och **Licens-/registrerings-/kundnummer**. Efter att du fyllt i båda numren väljer du **Lägg till par** ikonen för att spara dina nummer. Sedan kan du lägga till ett nytt par om du vill.
 
-        -   **Avtalsnamn** – Ange ett unikt namn för avtalet.
+        - **Avtalsnamn** – Ange ett unikt namn för avtalet.
 
             Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
-        -   **Auktoriserings-/avtalsnummer** – Ange auktoriserings-/avtalsnummer för licensparet.
+        - **Auktoriserings-/avtalsnummer** – Ange auktoriserings-/avtalsnummer för licensparet.
 
-        -   **Licens-/registrerings-/kundnummer** – Ange licens-/registrerings-/kundnummer för licensparet.
+        - **Licens-/registrerings-/kundnummer** – Ange licens-/registrerings-/kundnummer för licensparet.
 
         > [!NOTE]
         > Om du lägger till flera avtalsnummerpar skapar Intune ett avtal med det namn som du anger, och alla par som du har lagt till blir en del av detta avtal.
 
     Du kan välja **+** om du vill lägga till ett till avtalsnummerpar eller **-** om du vill ta bort ett avtalsnummerpar som du har angett.
 
-4.  I **Välj licensgrupp** området, välj en av följande:
+4. I **Välj licensgrupp** området, välj en av följande:
 
-    -   **Lägg till avtalen i gruppen Otilldelade avtal**. Välj det här om du inte vill lägga till de nya avtalen i en licensgrupp.
+    - **Lägg till avtalen i gruppen Otilldelade avtal**. Välj det här om du inte vill lägga till de nya avtalen i en licensgrupp.
 
-    -   **Lägg till avtalen i en ny licensgrupp**. Ange ett namn för den nya licensgruppen.
+    - **Lägg till avtalen i en ny licensgrupp**. Ange ett namn för den nya licensgruppen.
 
-    -   **Lägg till avtalen i en befintlig licensgrupp**. I **Gruppnamn** listan, välj den licensgrupp till vilken du vill lägga till avtalen.
+    - **Lägg till avtalen i en befintlig licensgrupp**. I **Gruppnamn** listan, välj den licensgrupp till vilken du vill lägga till avtalen.
 
-5.  Välj **OK**.
+5. Välj **OK**.
 
 Vyn **Alla avtal** visas och Intune ansluter till Microsoft VLSC för att bekräfta de avtalsnummerpar som du har angett.
 
@@ -123,9 +123,9 @@ Om du vill uppdatera volymlicensinformationen efter att du har lagt till licensa
 
 När du har uppdaterat volymlicensinformationen kan du jämföra licensinformationen med din upptäckta Microsoft-programvara i arbetsytan **Appar** arbetsområdet. Du kan också köra följande licensrapporter:
 
--   **Rapporter om licensköp** – Gör det möjligt att visa den licensierade programvaran i licensgrupper som du väljer så att du kan hitta luckor i täckningen.
+- **Rapporter om licensköp** – Gör det möjligt att visa den licensierade programvaran i licensgrupper som du väljer så att du kan hitta luckor i täckningen.
 
--   **Licensinstallationsrapport** – Hjälper dig att avgöra om du har tillräcklig licensavtalstäckning.
+- **Licensinstallationsrapport** – Hjälper dig att avgöra om du har tillräcklig licensavtalstäckning.
 
 > [!NOTE]
 > **Produkttiteln** som visas för alla Microsofts volymlicensavtal är **Ej tillgänglig**.
@@ -138,40 +138,40 @@ Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts
 
 ### <a name="to-add-other-software-agreements"></a>För att lägga till mjukvaruprogramavtal
 
-1.  Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
+1. Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
 
-2.  Välj **Lägg till avtal** i avsnittet **Övriga mjukvaruprogramlicensavtal**.
+2. Välj **Lägg till avtal** i avsnittet **Övriga mjukvaruprogramlicensavtal**.
 
-3.  Välj **Övriga mjukprogramvarulicensavtal** i **Välj avtalstyp** sektionen på **Lägg till avtal** sidan.
+3. Välj **Övriga mjukprogramvarulicensavtal** i **Välj avtalstyp** sektionen på **Lägg till avtal** sidan.
 
-4.  I **Lägg till avtalsdetaljer** området, specificera följande:
+4. I **Lägg till avtalsdetaljer** området, specificera följande:
 
-    -   **Agreement name** (krävs). Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
+    - **Agreement name** (krävs). Avtalsnamnet får innehålla högst 256 tecken och får inte innehålla följande tecken: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
-    -   **Utgivare** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Till exempel, om du skriver "mjuk" kommer alla utgivarnamn som innehåller "mjuka" som en del av namnet, till exempel "Microsoft" och "Microsoft Research" att visas. Utgivarnamnen hämtas från Software Asset Catalog. Du måste välja utgivare innan du kan ange produkttiteln.
+    - **Utgivare** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Till exempel, om du skriver "mjuk" kommer alla utgivarnamn som innehåller "mjuka" som en del av namnet, till exempel "Microsoft" och "Microsoft Research" att visas. Utgivarnamnen hämtas från Software Asset Catalog. Du måste välja utgivare innan du kan ange produkttiteln.
 
         > [!IMPORTANT]
         > Det företag som du vill lägga till kanske inte visas i listan. Du kan bara lägga till programvaruavtal för företag som redan finns i Software Asset Catalog. Microsoft lägger dock kontinuerligt till de mest populära programvarutitlarna. Om du vill skicka en begäran för att få ett företag tillagt på listan kan du göra detta på [UserVoice-webbplatsen för Intune](https://microsoftintune.uservoice.com/).
 
-    -   **Produkttitel** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Du måste specificera en **Utgivare** innan du kan specificera en **Produkttitel**.
+    - **Produkttitel** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Du måste specificera en **Utgivare** innan du kan specificera en **Produkttitel**.
 
-    -   **Licensräknare** (krävs). Ange antal köpta licenser.
+    - **Licensräknare** (krävs). Ange antal köpta licenser.
 
-    -   **Licensstartdatum**. Ange startdatum för licenstäckning.
+    - **Licensstartdatum**. Ange startdatum för licenstäckning.
 
-    -   **Licensslutdatum**. Ange slutdatum för licenstäckning.
+    - **Licensslutdatum**. Ange slutdatum för licenstäckning.
 
-    -   **Avtalsdetaljer**. Du kan välja om du vill ange kontaktinformation, registreringsnycklar och annan information.
+    - **Avtalsdetaljer**. Du kan välja om du vill ange kontaktinformation, registreringsnycklar och annan information.
 
-5.  I **Välj licensgrupp** området, välj en av följande:
+5. I **Välj licensgrupp** området, välj en av följande:
 
-    -   Välj **Lägg till avtalen till avtalsgruppen som ännu inte tilldelats** om du inte vill lägga till de nya avtalen i en ny eller befintlig licensgrupp. Du kan lägga till avtalen till användardefinierade licensgrupper när som helst.
+    - Välj **Lägg till avtalen till avtalsgruppen som ännu inte tilldelats** om du inte vill lägga till de nya avtalen i en ny eller befintlig licensgrupp. Du kan lägga till avtalen till användardefinierade licensgrupper när som helst.
 
-    -   Välj **Lägg till avtalen till en ny avtalsgrupp** för att lägga till de nya avtalen i en ny licensgrupp. Du uppmanas att ange ett namn för den nya licensgruppen.
+    - Välj **Lägg till avtalen till en ny avtalsgrupp** för att lägga till de nya avtalen i en ny licensgrupp. Du uppmanas att ange ett namn för den nya licensgruppen.
 
-    -   Välj **Lägg till avtalen till en existerande licensgrupp** för att lägga till de nya avtalen i en ny licensgrupp. I **Gruppnamn** listan, välj den licensgrupp till vilken du vill lägga till avtalen.
+    - Välj **Lägg till avtalen till en existerande licensgrupp** för att lägga till de nya avtalen i en ny licensgrupp. I **Gruppnamn** listan, välj den licensgrupp till vilken du vill lägga till avtalen.
 
-6.  Välj **OK**.
+6. Välj **OK**.
 
 **Alla avtal** listan visas.
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 984b78b271d130618ec0994f76e966f1dc338706
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 448ec3aaa9bc9ad09e54d7dd78d4f08a4adae010
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044706"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67571984"
 ---
 ## <a name="april-2017"></a>April 2017
 
@@ -37,15 +37,15 @@ Nya och mer specifika felmeddelanden visas nu i Företagsportalappen för iOS f�
 #### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Förbättrade appinstallationsstatus för företagsportalappen för Windows 10 <!--676495-->
 
 Nya förbättringar för appinstallationer i företagsportalappen för Windows 10 är:
--   Snabbare rapportering av installationsförlopp för MSI-paket
--   Snabbare rapportering av installationsförlopp för moderna appar på enheter som kör Windows 10 Anniversary Update och nyare
--   Ny förloppsindikator vid installation av moderna appar på enheter som kör Windows 10 Anniversary Update och nyare
+- Snabbare rapportering av installationsförlopp för MSI-paket
+- Snabbare rapportering av installationsförlopp för moderna appar på enheter som kör Windows 10 Anniversary Update och nyare
+- Ny förloppsindikator vid installation av moderna appar på enheter som kör Windows 10 Anniversary Update och nyare
 
 Du kan se den nya förloppsindikatorn på sidan [nyheter i användargränssnittet i Intune-appen](/intune/whats-new-app-ui).
 
 #### <a name="bulk-enroll-windows-10-devices----747607---"></a>Massregistrera Windows 10-enheter <!-- 747607 -->
 
-Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](/intune-classic/deploy-use/bulk-enroll-windows) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter kommer Azure AD att anslutas, registreras i Intune och vara redo för att Azure AD-användarna ska logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
+Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](/intune-classic/deploy-use/bulk-enroll-windows) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter kommer Azure AD att anslutas, registreras i Intune och vara redo för att Azure AD-användarna ska logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
 
 ### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Nyheter i den offentliga förhandsversion av Intunes adminstratörsupplevelse på Azure <!--736542-->
 
@@ -81,7 +81,7 @@ Efter migreringen behöver du överföra appx igen som en PC-appx om du vill gö
 
 #### <a name="administration-roles-being-replaced-in-azure-portal"></a>Administratörsroller ersätts i Azure Portal
 
-De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) som används i den klassiska Intune-portalen (Silverlight) ersätts med en helt ny uppsättning rollbaserade administratörskontroller (RBAC) i Intune Azure-portalen. När du har migrerat till Azure Portal måste du tilldela dina administratörer dessa nya administratörsroller. Mer information om RBAC och nya de nya rollerna finns i [Rollbaserad åtkomstkontroll för Microsoft Intune](/intune/role-based-access-control).
+De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) som används i den klassiska Intune-portalen (Silverlight) ersätts med en helt ny uppsättning rollbaserade administratörskontroller (RBAC) i Intune Azure Portal. När du har migrerat till Azure Portal måste du tilldela dina administratörer dessa nya administratörsroller. Mer information om RBAC och nya de nya rollerna finns i [Rollbaserad åtkomstkontroll för Microsoft Intune](/intune/role-based-access-control).
 
 ### <a name="whats-coming"></a>Kommande nyheter
 
@@ -334,7 +334,7 @@ Från mitten av december 2016 och framåt kommer användarna inte längre att ku
 
 __Nya Microsoft Intune-företagsportalen för Windows 10-enheter__ Microsoft har lanserat en ny [Microsoft Intune-företagsportalsapp för Windows 10-enheter](https://www.microsoft.com/store/apps/9wzdncrfj3pz). Den här appen, som använder det nya Windows 10 Universal-formatet, ger en uppdaterad användarupplevelse i appen och identiska miljöer på alla Windows 10-enheter, både på datorer och mobila enheter, med samma funktioner som användarna redan använder.
 
-Med den nya appen kan användarna dessutom dra nytta av ytterligare plattformsfunktioner som enkel inloggning (SSO) och certifikatbaserad autentisering på Windows 10-enheter. Appen kommer att vara tillgänglig som en uppgradering till de befintliga installationerna av Windows 8.1-företagsportalen och Windows Phone 8.1-företagsportalen från Microsoft Store. Mer information finns på [aka.ms/intunecp_universalapp](http://aka.ms/intunecp_universalapp).
+Med den nya appen kan användarna dessutom dra nytta av ytterligare plattformsfunktioner som enkel inloggning (SSO) och certifikatbaserad autentisering på Windows 10-enheter. Appen kommer att vara tillgänglig som en uppgradering till de befintliga installationerna av Windows 8.1-företagsportalen och Windows Phone 8.1-företagsportalen från Microsoft Store. Mer information finns på [aka.ms/intunecp_universalapp](https://aka.ms/intunecp_universalapp).
 
 > [!IMPORTANT]
 > __En uppdatering om Intune och Android for Work__ Även om du kan distribuera Android for Work-appar med åtgärden __Krävs__ kan du bara distribuera appar som __Tillgängliga__ om dina Intune-grupper har migrerats till den nya Azure AD-gruppmiljön.

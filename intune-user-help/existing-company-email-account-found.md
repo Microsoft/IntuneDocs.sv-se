@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02a7b69245b9b6e7b8f62fdb9be8acb83d42981
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8326693717ac96a0e9d32617e7d7080d50206ac6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55834763"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545423"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Ett befintligt e-postkonto för företag hittades
 
@@ -34,7 +34,7 @@ Du kan ha haft mobil enhetsåtkomst till ditt arbetes eller din skolas e-postkon
 
 De här stegen garanterar att enheten uppfyller företagets säkerhetskrav och att dina e-postmeddelanden förblir säkra.
 
-1.  På din enhet går du till **Inställningar** och letar reda på dina anslutna konton. På en iOS 11+-enhet kan du till exempel välja **Lösenord och konton**.
+1. På din enhet går du till **Inställningar** och letar reda på dina anslutna konton. På en iOS 11+-enhet kan du till exempel välja **Lösenord och konton**.
  
 2. Markera och ta bort ditt e-postkonto för arbetet.
 

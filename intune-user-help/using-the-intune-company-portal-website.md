@@ -18,32 +18,32 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1119c9602d2577f8041ad528d012adf9652dc641
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5ebf8d43bd18629d38be24929b3df5c12a7e244b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837381"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546534"
 ---
 # <a name="using-the-intune-company-portal-website"></a>Använda Intune-företagsportalens webbplats
 Använd [företagsportalens webbplats](https://portal.manage.microsoft.com) för att visa, redigera, lägga till och ta bort hanterade enheter.
 
 Från företagsportalens webbplats kan du göra följande:
 
--   [Byta namn på enheten](rename-your-device-cpwebsite.md)
+- [Byta namn på enheten](rename-your-device-cpwebsite.md)
 
--   [Ta bort sin enhet](remove-your-device-cpwebsite.md)
+- [Ta bort sin enhet](remove-your-device-cpwebsite.md)
 
--   [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
+- [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
 
--   [Återställa enhetens lösenord](reset-your-passcode-cpwebsite.md)
+- [Återställa enhetens lösenord](reset-your-passcode-cpwebsite.md)
 
--   [Fjärrlåsa en enhet](remote-lock-your-device-cpwebsite.md)
+- [Fjärrlåsa en enhet](remote-lock-your-device-cpwebsite.md)
 
--   Hitta kontaktinformation till företagets support om du har konfigurerat den
+- Hitta kontaktinformation till företagets support om du har konfigurerat den
 
--   Kontrollera efterlevnadsstatus
+- Kontrollera efterlevnadsstatus
 
--   Fjärrhantera en dator
+- Fjärrhantera en dator
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

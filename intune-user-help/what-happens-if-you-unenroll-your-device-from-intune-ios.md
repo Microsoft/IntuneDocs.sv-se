@@ -18,30 +18,30 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85f6ae657361bea0ab89b8afa73976273fa000f4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4ba5705fa04d9eb28e74128228ca8a862f1cb772
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55844256"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545679"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>Vad händer om du avregistrerar din iOS- eller macOS-enhet från Intune?
 
 När du avregistrerar din iOS- eller macOS-enhet från Intune:
 
--   Din enhet visas inte längre på företagsportalen.
+- Din enhet visas inte längre på företagsportalen.
 
--   Det går inte att installera appar från företagsportalen längre.
+- Det går inte att installera appar från företagsportalen längre.
 
--   Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
+- Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
 
--   Du kanske inte längre har åtkomst till vissa företagsresurser från din enhet, t.ex. filresurser eller interna webbplatser.
+- Du kanske inte längre har åtkomst till vissa företagsresurser från din enhet, t.ex. filresurser eller interna webbplatser.
 
--   Det går inte att använda företagsappar eller företagsdata på enheten längre.
+- Det går inte att använda företagsappar eller företagsdata på enheten längre.
 
--   Du kanske inte längre kan ansluta till företagets nätverk via Wi-Fi eller VPN.
+- Du kanske inte längre kan ansluta till företagets nätverk via Wi-Fi eller VPN.
 
--   Företagets e-profiler tas bort från enheten.
+- Företagets e-profiler tas bort från enheten.
 
 Anvisningar för hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune](unenroll-your-device-from-intune-ios.md).
 

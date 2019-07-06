@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e8ebc708f76ed1f55f512edda75206d3ed5890a0
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043910"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530731"
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
@@ -35,8 +35,8 @@ Följande krav måste uppfyllas för att Villkorsstyrd åtkomst ska fungera:
 - Enheten måste vara registrerad i och hanteras av Intune.
 - Både användaren och enheten måste vara kompatibla med de tilldelade efterlevnadsprinciperna för Intune.
 - Användaren måste som standard tilldelas en enhetsefterlevnadsprincip. Detta kan bero på hur inställningen **Markera enheter som saknar efterlevnadsprincip som** har konfigurerats under **Enhetsefterlevnad** > **Kompatibilitetsprincipinställningar** på Intune-administrationsportalen.
--   Exchange ActiveSync måste vara aktiverat på enheten om användaren använder enhetens inbyggda e-postklient i stället för Outlook. Detta sker automatiskt för iOS-, Windows Phone- och Android-enheter.
--   Intune Exchange Connector måste vara korrekt konfigurerad. Mer information finns i [Felsöka Exchange Connector i Microsoft Intune](troubleshoot-exchange-connector.md).
+- Exchange ActiveSync måste vara aktiverat på enheten om användaren använder enhetens inbyggda e-postklient i stället för Outlook. Detta sker automatiskt för iOS-, Windows Phone- och Android-enheter.
+- Intune Exchange Connector måste vara korrekt konfigurerad. Mer information finns i [Felsöka Exchange Connector i Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapporten för enheten.
 

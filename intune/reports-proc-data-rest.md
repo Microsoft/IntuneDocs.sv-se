@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 733ac8eee551a3ddba7a5219827c09357659a06e
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: 9fd99c0b42316a4425828cfa875f12d75dd86489
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412714"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558541"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -43,10 +43,10 @@ Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten 
 1. Logga in på Azure Portal för din klientorganisation. Välj **Azure Active Directory** > **Appregistreringar** så att fönstret **Appregistreringar** öppnas.
 2. Välj **Ny appregistrering**.
 3. Ange information om appen.
-    1.  Skriv ett eget namn, till exempel Intune Data Warehouse Client som **namn**.
-    2.  Välj**Intern** som **Programtyp**.
-    3.  Skriv en webbadress för **Inloggningswebbadress**. Inloggningswebbadressen beror på den särskilda situationen men om du tänkt använda Postman skriver du `https://www.getpostman.com/oauth2/callback`. Du kommer sedan använda callback (återanrop) för klientautentiseringen när du autentiserar till Azure AD.
-4.  Välj **Skapa**.
+    1. Skriv ett eget namn, till exempel Intune Data Warehouse Client som **namn**.
+    2. Välj**Intern** som **Programtyp**.
+    3. Skriv en webbadress för **Inloggningswebbadress**. Inloggningswebbadressen beror på den särskilda situationen men om du tänkt använda Postman skriver du `https://www.getpostman.com/oauth2/callback`. Du kommer sedan använda callback (återanrop) för klientautentiseringen när du autentiserar till Azure AD.
+4. Välj **Skapa**.
 
      ![Intune Data Warehouse-klientapp](./media/reports-get_rest_data_client_overview.png)
 
@@ -56,21 +56,21 @@ Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten 
 
 Nu har du definierat en app i Azure. Bevilja åtkomst från inbyggda klientappen till Microsoft Intune-API.
 
-1.  Välj den inbyggda appen. Du gav appen ett namn i stil med **Intune Data Warehouse Client**.
-2.  Välj **Nödvändiga behörigheter** i fönstret **Inställningar**
-3.  Välj **Lägg till** i fönstret **Nödvändiga behörigheter**.
-4.  Välj **Välj en API**.
-5.  Sök efter namnet på webbappen. Namnet är **Microsoft Intune API**.
-6.  Välj appen i listan.
-7.  Välj **Välj**.
-8.  Markera rutan **Delegerade behörigheter** för att lägga till **Hämta informationslagerdata från Microsoft Intune**.
+1. Välj den inbyggda appen. Du gav appen ett namn i stil med **Intune Data Warehouse Client**.
+2. Välj **Nödvändiga behörigheter** i fönstret **Inställningar**
+3. Välj **Lägg till** i fönstret **Nödvändiga behörigheter**.
+4. Välj **Välj en API**.
+5. Sök efter namnet på webbappen. Namnet är **Microsoft Intune API**.
+6. Välj appen i listan.
+7. Välj **Välj**.
+8. Markera rutan **Delegerade behörigheter** för att lägga till **Hämta informationslagerdata från Microsoft Intune**.
 
     ![Aktivera åtkomst – Microsoft Intune API](./media/reports-get_rest_data_client_access.png)
 
-9.  Välj **Välj**.
-10.  Välj **Klar**.
-11.  Du kan också välja **Bevilja behörigheter** i fönstret Nödvändiga behörigheter. Då får alla konton i den aktuella katalogen åtkomst. Dialogrutan för medgivande visas inte för användarna i klientorganisationen. Mer information finns i [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) (Integrera program med Azure Active Directory).
-12.  Välj **Ja**.
+9. Välj **Välj**.
+10. Välj **Klar**.
+11. Du kan också välja **Bevilja behörigheter** i fönstret Nödvändiga behörigheter. Då får alla konton i den aktuella katalogen åtkomst. Dialogrutan för medgivande visas inte för användarna i klientorganisationen. Mer information finns i [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) (Integrera program med Azure Active Directory).
+12. Välj **Ja**.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Hämta data från Microsoft Intune-API med Postman
 
@@ -110,19 +110,19 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 
 #### <a name="add-the-information-used-to-request-the-token"></a>Lägg till informationen som används för att begära token
 
-1.  Ladda ned Postman om det inte redan är installerat. Information om hur du laddar ned Postman finns i [www.getpostman](https://www.getpostman.com).
-2.  Öppna Postman. Välj HTTP-åtgärden **GET**.
-3.  Klistra in slutpunktswebbadressen i adressfältet. Det bör se ut ungefär så här:  
+1. Ladda ned Postman om det inte redan är installerat. Information om hur du laddar ned Postman finns i [www.getpostman](https://www.getpostman.com).
+2. Öppna Postman. Välj HTTP-åtgärden **GET**.
+3. Klistra in slutpunktswebbadressen i adressfältet. Det bör se ut ungefär så här:  
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4.  Välj fliken **Authorization** (Auktorisering) och välj **OAuth 2.0** i listan **Type** (Typ).
-5.  Välj **Get New Access Token** (Hämta ny åtkomsttoken).
-6.  Kontrollera att du har lagt till webbadressen för återanrop i appen i Azure. Webbadressen för återanrop är `https://www.getpostman.com/oauth2/callback`.
-7.  Skriv Bearer som **Token Name** (Namn på token).
-8.  Lägg till **Auth URL** (autentiseringswebbadressen). Det bör se ut ungefär så här:  
+4. Välj fliken **Authorization** (Auktorisering) och välj **OAuth 2.0** i listan **Type** (Typ).
+5. Välj **Get New Access Token** (Hämta ny åtkomsttoken).
+6. Kontrollera att du har lagt till webbadressen för återanrop i appen i Azure. Webbadressen för återanrop är `https://www.getpostman.com/oauth2/callback`.
+7. Skriv Bearer som **Token Name** (Namn på token).
+8. Lägg till **Auth URL** (autentiseringswebbadressen). Det bör se ut ungefär så här:  
 
     `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/`
-9.  Lägg till **Access Token URL**(webbadress för token). Det bör se ut ungefär så här:  
+9. Lägg till **Access Token URL**(webbadress för token). Det bör se ut ungefär så här:  
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
@@ -141,8 +141,8 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Skicka anropet till slutpunkten via Postman
 
-1.  Välj **Skicka**.
-2.  Returnerade data visas i svarstexten i Postman.
+1. Välj **Skicka**.
+2. Returnerade data visas i svarstexten i Postman.
 
     ![Postman-klientstatusen är lika med 200 OK](./media/reports-postman_200OK.png)
 
@@ -155,7 +155,7 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 
 1. Öppna **Microsoft Visual Studio**.
 2. Välj **File**(Arkiv) > **New project** (Nytt projekt). Expandera **Visual C#** och välj **Console App (.Net Framework)** (Konsolapp (.Net Framework)).
-3. Ge projektet namnet ` IntuneDataWarehouseSamples`, bläddra dit där du vill spara projektet och välj sedan **OK**.
+3. Ge projektet namnet `IntuneDataWarehouseSamples`, bläddra dit där du vill spara projektet och välj sedan **OK**.
 4. Högerklicka på namnet på lösningen i Solution Explorer och välj sedan **Manage NuGet Packages for Solution** (Hantera NuGet-paket för lösning). Välj **Bläddra** och skriv sedan `Microsoft.IdentityModel.Clients.ActiveDirectory` i sökrutan.
 5. Välj paketet och markera projektet **IntuneDataWarehouseSamples** under Manage Packages for Your Solution (Hantera paket för lösningen) och välj sedan **Install** (Installera).
 6. Välj **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.

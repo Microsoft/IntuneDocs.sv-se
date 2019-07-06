@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd8934d3318459ecc7587a9c51bba9b6f744dbc7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8d4f957af4c05a66de4ce4ae7c233eda297153f8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55841699"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527615"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-ios-device"></a>Du måste installera SandBlast Mobile Protect på iOS-enheten
 
@@ -29,7 +29,7 @@ Innan du kan komma åt ditt arbete måste företagets support be dig att install
 
 **Vad du behöver göra:**
 
-1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att SandBlast Mobile Protect installeras på enheten.
+1. Om följande meddelande visas trycker du på **Installera** för att tillåta att SandBlast Mobile Protect installeras på enheten.
 
 2. När följande meddelande visas trycker du på **Inställningar**, sätter på **Platstjänster** och trycker sedan på **Fortsätt**.
 

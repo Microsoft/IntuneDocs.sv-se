@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 328ec3111aae5f8363f2743d423a56eafc47d765
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57335079"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546258"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
 
@@ -41,9 +41,9 @@ Alla Windows-enheter kan synkroniseras från enhetens inställningsapp, inklusiv
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Synkronisera direkt från företagsportalappen för Windows
 Följ stegen för att manuellt synkronisera alla Windows 10-enheter som kör Creators uppdatering (version 1703) eller senare.
 
-1.  Öppna företagsportalappen på din enhet.
+1. Öppna företagsportalappen på din enhet.
 
-2.  Välj **Inställningar** > **Synkronisering**.
+2. Välj **Inställningar** > **Synkronisering**.
 
     ![Skärmbild av startsidan i företagsportalappen, Inställningar markerat](./media/RS1_homePage_settings_04.png)  
     
@@ -96,7 +96,7 @@ Följ stegen för att synkronisera dina Microsoft HoloLens-, Windows 10 desktop-
 
 #### <a name="work-access-steps"></a>Steg för Åtkomst till arbetsplats
 
-1.  Klicka på **Åtkomst till arbetsplats**.
+1. Klicka på **Åtkomst till arbetsplats**.
 
     ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png)
 
@@ -128,12 +128,12 @@ Följ stegen för att synkronisera dina Microsoft HoloLens-, Windows 10 desktop-
        ![Tryck på ikonen Synkronisera](./media/win10m-sync-4-tap-sync.png)  
 ### <a name="microsoft-hololens"></a>Microsoft HoloLens  
 Dessa anvisningar gäller HoloLens-enheter som kör Windows 10 Anniversary-uppdateringen (även kallad RS1). 
-1.  Öppna inställningsappen på enheten.  
+1. Öppna inställningsappen på enheten.  
 
-2.  Välj **Konton** > **Åtkomst till arbetsplats**.  
+2. Välj **Konton** > **Åtkomst till arbetsplats**.  
     ![Skärmbild på HoloLens-inställningsappen, kontolänken markerad](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3.  Välj ditt anslutna konto > **Synkronisera**. ![Skärmbild på HoloLens-inställningsapp, synkroniseringsknappen markerad](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. Välj ditt anslutna konto > **Synkronisera**.  ![Skärmbild på HoloLens-inställningsapp, synkroniseringsknappen markerad](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 
