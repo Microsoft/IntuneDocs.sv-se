@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,16 +16,14 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568173"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403488"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Som administratör kan du ansluta ett stort antal nya Windows-enheter till Azure Active Directory och Intune. Du massregistrerar enheter för Azure AD-klienten genom att skapa ett konfigurationspaket med hjälp av appen Windows Configuration Designer (WCD). När du tillämpar konfigurationspaketet på företagsägda enheter ansluts de till Azure AD-klienten och registreras för Intune-hantering. När paketet har tillämpats kan dina Azure AD-användare logga in.
 
@@ -51,6 +48,7 @@ Azure AD-användare är standardanvändare på enheterna och kan ta emot de till
    - **Beskrivning** – En valfri beskrivning av projektet ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-name.png)
 
 4. Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%SERIAL%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.
+   
    ![Skärmbild över att ange namn och produktnyckel i Windows Configuration Designer-appen](media/bulk-enroll-device.png)
 
 5. Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om nätverksenheterna inte är konfigurerade, krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.
@@ -91,9 +89,6 @@ Konfigurationen är avsedd att användas på nya Windows-enheter. Konfigurations
 
 - Ett konfigurationspaket som försöker ansluta till en Active Directory-domän eller Azure Active Directory-klient som inte skapar ett lokalt konto, kan innebära att enheten inte kan nås om domänanslutningen misslyckas på grund av bristande nätverksanslutning.
 - Skript som körs av etableringspaketet körs i systemets kontext. Skripten kan göra godtyckliga ändringar till enhetens filsystem och konfigurationer. Ett skadligt eller felaktigt skript kan placera enheten i ett tillstånd som bara kan återställas av en återställning av avbildningen eller en rensning av enheten.
-
-### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problem med massregistrering och företagsportalen
-Om en användare försöker registrera en tidigare massregistrerad enhet med hjälp av företagsportalen, visas en varning om att deras enheter behöver ytterligare åtgärder, antingen installation eller registrering. Enheten är registrerad, men registreringen kan inte identifieras av företagsportalappen eller webbplatsen.
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Massregistrering med Wi-Fi 
 

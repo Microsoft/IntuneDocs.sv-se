@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28c3da6d2e3390d20aecc3673cac38e8424ef57a
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: cbd73d22c2e42f0a379ec2a97179f9e3c4dec224
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389315"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512120"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -35,7 +35,7 @@ Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Hämta CSV-filen för import i Intune
 
-Se avsnittet om PowerShell-cmdleten för information om hur du använder den.
+Se avsnittet om PowerShell-cmdleten för information.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3/Content/Get-WindowsAutoPilotInfo.ps1)
 
@@ -47,8 +47,9 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
 
     ![Skärmbild av Windows Autopilot-enheter](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. Under **Lägg till Windows Autopilot-enheter** bläddrar du till en CSV-fil som innehåller en lista med de enheter som du vill lägga till. CSV-filen bör innehålla serienummer, valfria Windows-produkt-ID:n, maskinvaru-hasher och valfria grupptaggar för enheterna. Du kan ha upp till 500 rader i listan. Använd rubrik- och radformatet som visas nedan: `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag`
-    `<serialNumber>,<optionalProductID>,<hardwareHash>,<optionalGroupTag>`
+2. Under **Lägg till Windows Autopilot-enheter** bläddrar du till en CSV-fil som innehåller en lista med de enheter som du vill lägga till. CSV-filen bör innehålla serienummer, valfria Windows-produkt-ID:n, maskinvaruhashar och valfria grupptaggar, tilldelade användare och beställningsnummer för enheterna. Du kan ha upp till 500 rader i listan. Använd rubrik- och radformatet som visas nedan:
+
+    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User, Order ID` `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>,<optionalOrderID>`
 
     ![Skärmbild av Lägg till Windows Autopilot-enheter](media/enrollment-autopilot/autopilot-import-device2.png)
 
@@ -69,7 +70,7 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
     Autopilot-enheter som ännu inte har registrerats är enheter där namnet är samma som enhetens serienummer.
 4. Om du väljer **Dynamiska enheter** för **Medlemstyp** ovan väljer du sedan **Dynamiska enhetsmedlemmar** på bladet **Grupp** och anger någon av följande koder i rutan **Avancerad regel**.
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter anger du: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (OrderID) måste du ange: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881") `
+    - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (OrderID) måste du ange: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst inköpsorder-ID anger du `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     När du har lagt till koden för **Avancerad regel** väljer du **Spara**.
@@ -95,7 +96,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     - **Licensavtal för slutanvändare (EULA)** : (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
     - **Sekretessinställningar**: Välj om du vill visa sekretessinställningar för användarna.
     >[!IMPORTANT]
-    >För Autopilot-distributioner på enheter med Windows 10 version 1903 och senare är standardvärdet för Diagnostikdata automatiskt inställt på Fullständig. Mer information finns i [Windows-diagnostikdata](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data). <br>
+    >För Autopilot-distributioner på enheter med Windows 10 version 1903 och senare är standardvärdet för Diagnostikdata automatiskt inställt på Fullständig. Mer information finns i [Windows-diagnostikdata](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data). <br>
     
     - **Dölj alternativ för att ändra konto (kräver Windows 10, version 1809 eller senare)** : Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Användarkontotyp**: Välj användarens kontotyp (**Administratör** eller **Standardanvändare**).
@@ -118,7 +119,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     ![Skärmbild av granskningssidan](media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune söker regelbundet efter nya enheter i de tilldelade grupperna och påbörjar sedan processen med att tilldela profiler till dessa enheter. Det kan ta flera minuter att slutföra processen. Se till att processen har slutförs innan du distribuerar en enhet.  Du kan kontrollera detta under **Enhetsregistrering** > **Windows-registrering ** > **Enheter**, där du bör se att profilstatusen ändras från ”Ej tilldelad” till ”Tilldelar” och slutligen ”Tilldelad”.
+> Intune söker regelbundet efter nya enheter i de tilldelade grupperna och påbörjar sedan processen med att tilldela profiler till dessa enheter. Det kan ta flera minuter att slutföra processen. Se till att processen har slutförs innan du distribuerar en enhet.  Du kan kontrollera detta under **Enhetsregistrering** > **Windows-registrering** > **Enheter**, där du bör se att profilstatusen ändras från ”Ej tilldelad” till ”Tilldelar” och slutligen ”Tilldelad”.
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Redigera en Autopilot-distributionsprofil
 När du har skapat en Autopilot-distributionsprofil kan du redigera vissa delar av den.   

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78d6b8faf5c5c3ef41f3eb5007d550c869491f60
-ms.sourcegitcommit: 268f495de486718b99d9c1b60d4576030cafd17b
+ms.openlocfilehash: c6065fda71688909dd7fcbc6ef1909e3d3ab36b8
+ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141809"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67407119"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune  
 
@@ -56,6 +56,7 @@ Välj det avsnitt som motsvarar din MTD-provider:
 - [Pradeo](#configure-pradeo-apps)
 - [Better Mobile](#configure-better-mobile-apps)
 - [Sophos Mobile](#configure-sophos-apps)
+- [Wandera](#configure-wandera-apps)
 
 ### <a name="configure-lookout-for-work-apps"></a>Konfigurera Lookout for Work-appar  
 - **Android**  
@@ -129,6 +130,14 @@ Välj det avsnitt som motsvarar din MTD-provider:
 - **iOS**
   - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här för [ActiveShield-webbadressen för appbutiken](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) i **steg 11** som **appbutiksadress**.
 
+### <a name="configure-wandera-apps"></a>Konfigurera Wandera-appar  
+ 
+- **Android**
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd den här [webbadressen för Wandera mobilappbutiken](https://play.google.com/store/apps/details?id=com.wandera.android) i **steg 7**. Som **Lägsta operativsystem** väljer du **Android 5.0**.
+
+- **iOS**
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](https://docs.microsoft.com/intune/store-apps-ios). Använd den här [webbadressen för Wandera-mobilappbutiken](https://itunes.apple.com/app/wandera/id605469330) i **steg 11** som **appbutiksadress**.
+
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurera dina MTD-appar med en konfigurationsprincip för iOS-appar  
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Konfigurationsprincip för Lookout for Work-app  
@@ -196,6 +205,27 @@ Pradeo stöder inte programkonfigurationsprincipen på iOS.  För att istället 
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Konfigurationsprincip för Sophos Mobile-appen  
 Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i artikeln om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
+
+### <a name="wandera-app-configuration-policy"></a>Konfigurationsprincip för Wandera-appar  
+Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Wandera-konfigurationsprincipen för iOS-appar.
+- På **steg 8** använder du alternativet **Ange XML-data**. Logga in på din RADAR Wandera-portal och bläddra till **Inställningar** > **EMM-integrering** > **App Push**. Välj **Intune** och kopiera innehållet nedan och klistra in det i konfigurationsprincipen.  
+
+  ```
+  <dict><key>secretKey</key>
+  <string>SeeRADAR</string>
+  <key>apiKey</key>
+  <string> SeeRADAR </string>
+  <key>customerId</key>
+  <string> SeeRADAR </string>
+  <key>email</key>
+  <string>{{mail}}</string>
+  <key>firstName</key>
+  <string>{{username}}</string>
+  <key>lastName</key>
+  <string></string>
+  <key>activationType</key>
+  <string>PROVISION_THEN_AWP</string></dict>  
+  ```
 
 ## <a name="assign-apps-to-groups"></a>Tilldela appar till grupper  
 - Det här steget gäller för alla MTD-partner. Se anvisningarna för [tilldelning av appar till grupper med Intune](apps-deploy.md).

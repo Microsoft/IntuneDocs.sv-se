@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/30/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74050f51347f234029a83ce0e3463fe6b11aee1b
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 0452229d6c1ea2d9e87a302675167d200bd348eb
+ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044575"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67407176"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Vad är Mobile Threat Defense-integrering med Intune?
 Intune kan integrera data från en Mobile Threat Defense-leverantör som informationskälla för efterlevnadsprinciper och regler för villkorlig åtkomst. Du kan använda den här informationen för att skydda företagsresurser som Exchange och SharePoint genom att blockera åtkomst från komprometterade mobila enheter.  
@@ -80,4 +80,4 @@ Lär dig hur du skyddar åtkomsten till företagets resurser baserat på enhet, 
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
-- Wandera (information kommer snart)
+- [Wandera skydd mot mobila hot](wandera-mtd-connector.md)

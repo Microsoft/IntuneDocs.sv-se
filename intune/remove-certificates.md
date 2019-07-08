@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,24 +16,31 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: 99f51662894cac04e6ebcd821806b433dbf3117e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: de2f201e6a7d0181847db5d212625c9eed9ea698
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041247"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413775"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Ta bort SCEP- och PKCS-certifikat i Microsoft Intune
 
-I Microsoft Intune kan du lägga till SCEP-certifikat (Simple Certificate Enrollment Protocol) och PKCS-certifikat (Public Key Cryptography Standards) i enheter. Dessa certifikat kan också tas bort när du [rensar](devices-wipe.md#wipe) eller [drar tillbaka](devices-wipe.md#retire) enheten. 
+I Microsoft Intune kan du använda SCEP-certifikat (Simple Certificate Enrollment Protocol) och PKCS-certifikatprofiler (Public Key Cryptography Standards) i enheter. 
 
-Det finns några andra scenarier då certifikaten tas bort automatiskt och vissa scenarier då certifikaten bevaras på enheten. Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- och SCEP-certifikat.
+Dessa certifikat kan tas bort när du [rensar](devices-wipe.md#wipe) eller [drar tillbaka](devices-wipe.md#retire) enheten. Det finns några andra scenarier då certifikaten tas bort automatiskt och scenarier då certifikaten bevaras på enheten. Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- och SCEP-certifikat.
 
 > [!NOTE]
 > Om du vill ta bort och återkalla certifikat för en användare som tas bort från lokal Active Directory eller Azure Active Directory (Azure AD) följer du dessa steg i ordning:
 >
 > 1. Rensa eller dra tillbaka användarens enhet.
 > 2. Ta bort användaren från lokal Active Directory eller Azure AD.
+
+## <a name="manually-deleted-certificates"></a>Manuellt borttagna certifikat  
+
+Manuell borttagningen av ett certifikat är ett scenario som gäller för olika plattformar och certifikat som etablerats av SCEP- eller PKCS-certifikatprofiler. Till exempel kan en användare ta bort ett certifikat från en enhet när enheten förblir ett mål för en certifikatprincip.  
+
+När certifikatet har tagits bort i det här scenariot kommer enheten att betecknas som inkompatibel nästa gång den checkar in med Intune, eftersom det förväntade certifikatet saknas. Intune skickar sedan ett nytt certifikat för att återställa enhetens efterlevnad. Ingen ytterligare åtgärd krävs för att återställa certifikatet.  
+
 
 ## <a name="windows-devices"></a>Windows-enheter
 

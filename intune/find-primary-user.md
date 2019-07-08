@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a20ccec2ef0cbaba87637b3c44c2cc2be094ab
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: 21f62ad44d992d1f4adbb1945bdba02e526d9138
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67325535"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500643"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Hitta den primära användaren av en Intune-enhet
 
@@ -60,8 +60,8 @@ Intune lägger automatiskt till en primär användare till enheter under eller s
 | Windows | Microsoft Azure AD-anslutning (utan konfiguration) | Användaren som registrerar sig | Under registrering | 
 | Windows | Microsoft Azure AD-anslutning (Autopilot utan konfiguration) | Användaren som registrerar sig | Under registrering | 
 | Windows | Registrera endast i MDM | Användaren som registrerar sig | Under registrering | 
-| Windows | Hybrid AADJ + automatisk registrering, grupprincip | Första användaren som loggar in | När första användaren loggar in | 
-| Windows | Samhantering | Första användaren som loggar in | När första användaren loggar in | 
+| Windows | Hybrid AADJ + automatisk registrering, grupprincip | Första användaren som loggar in på Windows | När den första användaren loggar in på Windows| 
+| Windows | Samhantering | Första användaren som loggar in på Windows | När den första användaren loggar in på Windows | 
 | Windows | Microsoft Azure AD-anslutning (token för massregistrering) | Inga | Inte tillämpligt | 
 | Windows | Microsoft Azure AD-anslutning (Autopilot, självdistributionsläge) | Inga | Inte tillämpligt | 
 | Plattformsoberoende | Användarstyrd registrering med företagsportalappen | Användaren som registrerar sig | Under registrering |

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: eda0d77fc5cdb11fa4bc5b21f48ceb7616ecfb15
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: b8b1c47e4a2eb46bb8f7190ede351ed77a1bfef4
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389251"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494504"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-registreringsmetoder för Windows-enheter
 
@@ -41,7 +41,7 @@ Användare kan själva registrera sina Windows-enheter med hjälp av någon av d
 Om en administratör har konfigurerat automatisk registrering (tillgängligt med Azure AD Premium-prenumerationer) behöver användaren bara ange sina autentiseringsuppgifter en gång. Annars behöver användaren registrera separat via registrering med endast MDM och ange autentiseringsuppgifterna på nytt.  
 - **Registrering med endast MDM** gör att användarna kan registrera en befintlig arbetsgrupp, Active Directory eller Azure Active Directory-ansluten dator till Intune. Användare registrerar från inställningarna på den befintliga Windows-datorn. Den här metoden rekommenderas inte eftersom den inte registrerar enheten till Azure Active Directory. Den förhindrar även användningen av funktioner som villkorsstyrd åtkomst.
 - [Azure Active Directory-anslutning (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) – ansluter enheten till Azure Active Directory och gör att användarna kan logga in på Windows med sina Azure AD-autentiseringsuppgifter. Om automatisk registrering har aktiverats registreras enheten automatiskt i Intune. Fördelen med automatisk registrering är att användarna får en enstegsprocess. Annars behöver användaren registrera separat via registrering med endast MDM och ange autentiseringsuppgifterna på nytt. Användarna registrerar på det här sättet antingen under det inledande Windows-välkomstprogrammet (OOBE) eller från Inställningar. Enheten har markerats som en företagsägd enhet i Intune.
-- [Autopilot](enrollment-autopilot.md) – automatiserar Azure AD-anslutning och registrerar nya företagsägda enheter till Intune. Den här metoden förenklar välkomstprogrammet och eliminerar behovet av att tillämpa anpassade operativsystemavbildningar på enheterna. När administratörer använder Intune för att hantera Autopilot-enheter kan de hantera principer, profiler, appar med mera när de har registrerats.  Det finns två typer av Autopilot-distributioner: [Självdistribuerande läge ](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (för kiosker, digital signering eller en delad enhet) och [Användarläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (för traditionella användare). 
+- [Autopilot](enrollment-autopilot.md) – automatiserar Azure AD-anslutning och registrerar nya företagsägda enheter till Intune. Den här metoden förenklar välkomstprogrammet och eliminerar behovet av att tillämpa anpassade operativsystemavbildningar på enheterna. När administratörer använder Intune för att hantera Autopilot-enheter kan de hantera principer, profiler, appar med mera när de har registrerats.  Det finns fyra typer av Autopilot-distributioner: [Självdistributionsläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (för kiosker, digital signering eller en delad enhet) [Användardrivet läge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (för traditionella användare), [White Glove] (https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) gör det möjligt för partner eller IT-personal att etablera en Windows 10-dator så att den är fullständigt konfigurerad och klar för verksamheten och [Autopilot för befintliga enheter] (https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) låter dig enkelt distribuera den senaste versionen av Windows 10 till dina befintliga enheter.
 
 ## <a name="administrator-based-enrollment-in-intune"></a>Administratörbaserad registrering i Intune
 
@@ -51,7 +51,7 @@ Administratörer kan konfigurera följande metoder för registrering som inte kr
 - [Configuration Manager-samhantering](https://docs.microsoft.com/sccm/comanage/overview) gör att administratörer kan registrera sina befintliga hanterade Configuration Manager-enheter till Intune för att få de dubbla fördelarna med Intune och Configuration Manager. 
 - [Hanterare av enhetsregistrering](device-enrollment-manager-enroll.md) (DEM) är ett särskilt tjänstkonto. DEM-konton behörigheter som gör att behöriga användare kan registrera och hantera flera företagsägda enheter. Dessa typer av enheter är till exempel bra för verktygs- eller kassaappar (Point-of-Sale), men inte för användare som behöver åtkomst till e-post eller företagsresurser. Med den här metoden kan du inte använda funktioner som villkorsstyrd åtkomst. 
 - [Massregistrering](windows-bulk-enroll.md) gör att en behörig användare kan ansluta ett stort antal nya företagsägda enheter till Azure Active Directory och Intune. Du skapar ett etableringspaket med hjälp av appen Windows Configuration Designer (WCD). Sedan använder du en USB-enhet under det inledande Windows-välkomstprogrammet (OOBE) eller från en befintlig Windows-dator för att installera etableringspaketet till att automatiskt registrera enheterna till Intune. Med den här metoden kan du inte använda villkorsstyrd åtkomst. 
-- [Du registrerar Windows IoT Core-enheter](https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/intunedeviceenrollment) genom att använda Windows IoT Core-instrumentpanelen för att förbereda enheten och sedan Windows Configuration Designer för att skapa ett konfigurationspaket. Därefter installeras konfigurationspaketet med hjälp av SD-kortmedia under den första starten för att automatiskt registrera enheterna i Intune.
+- [Du registrerar Windows IoT Core-enheter](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment) genom att använda Windows IoT Core-instrumentpanelen för att förbereda enheten och sedan Windows Configuration Designer för att skapa ett konfigurationspaket. Därefter installeras konfigurationspaketet med hjälp av SD-kortmedia under den första starten för att automatiskt registrera enheterna i Intune.
 
 ## <a name="next-steps"></a>Nästa steg
 

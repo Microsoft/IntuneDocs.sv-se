@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2019
+ms.date: 06/28/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
-ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
+ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344093"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494295"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -30,10 +30,10 @@ I den här artikeln beskrivs hur du kan konfigurera din infrastruktur och sedan 
 
 - **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
 
-- **Certifikatutfärdare**: Måste vara en Microsoft-utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdare](http://technet.microsoft.com/library/jj125375.aspx).
+- **Certifikatutfärdare**: Måste vara en Microsoft-utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdare](https://technet.microsoft.com/library/jj125375.aspx).
     Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
 
-- **NDES-server**: På en Windows Server 2012 R2 eller senare konfigurerar du serverrollen Registreringstjänst för nätverksenheter (NDES). Intune stöder inte användning av registreringstjänsten för nätverksenheter på en server som även kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för NDES.
+- **NDES-server**: På en Windows Server 2012 R2 eller senare konfigurerar du serverrollen Registreringstjänst för nätverksenheter (NDES). Intune stöder inte användning av registreringstjänsten för nätverksenheter på en server som även kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för NDES.
 NDES-servern måste vara ansluten till en domän i samma skog som företagscertifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx). Det går inte att använda en NDES-server som redan används med en annan MDM.
 
 - **Microsoft Intune Certificate Connector**: I Intune-portalen går du till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för SCEP*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet för certifikatanslutningsappen: **NDESConnectorSetup.exe**.  Du kör installationsprogrammet på servern med NDES-rollen.  
@@ -507,7 +507,8 @@ Tänk på följande innan du tilldelar certifikatprofiler till grupper:
 - Även om du tilldelar varje profil separat, måste du också tilldela den betrodda rotcertifikatutfärdaren och SCEP- eller PKCS-profilen. Annars misslyckas SCEP- eller PKCS-certifikatprincipen.
 
     > [!NOTE]
-    > Du bör förvänta dig att se flera kopior av certifikaten i hanteringsprofilen för iOS om du distribuerar flera resursprofiler som använder samma certifikatprofil.
+    > När en SCEP-profil är associerad med en profil på enheter med iOS, t.ex. en Wi-Fi eller VPN-profil, tar enheten emot ett certifikat för var och en av de ytterligare profilerna. Detta resulterar i att iOS-enheten har flera certifikat som levereras av SCEP-certifikatbegäran.  
+
 - Om du använder samhantering för Intune och Configuration Manager i Configuration Manager, ska du [ställa in arbetsbelastningsreglaget](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) för *resursåtkomstprincipen* till **Intune** eller **Pilot Intune**. Den här inställningen gör att Windows 10-klienter kan starta processen för att begära certifikatet.  
 
 Du hittar allmän information om hur du tilldelar profiler i [tilldela enhetsprofiler](device-profile-assign.md).

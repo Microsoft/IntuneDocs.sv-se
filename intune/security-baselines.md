@@ -1,11 +1,11 @@
 ---
 title: Använda säkerhetsbaslinjer i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller konfigurera rekommenderade gruppsäkerhetsinställningar för att skydda användare och data på enheter som använder Microsoft Intune till att hantera mobilenheter. Aktivera BitLocker, konfigurera Microsoft Defender Advanced Threat Protection, styr Internet Explorer, använd SmartScreen, ange lokala säkerhetsprinciper, kräv ett lösenord, blockera hämtningar från Internet och mycket mer.
+description: Lägg till eller konfigurera rekommenderade säkerhetsinställningar för Windows för att skydda användare och data på enheter som använder Microsoft Intune till att hantera mobilenheter. Aktivera BitLocker, konfigurera Microsoft Defender Advanced Threat Protection, styr Internet Explorer, använd SmartScreen, ange lokala säkerhetsprinciper, kräv ett lösenord, blockera hämtningar från Internet och mycket mer.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,23 +15,27 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb1ddcadcac1ec9b4730a5dcd66abca111d80196
-ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
+ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
+ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251202"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67416837"
 ---
-# <a name="create-a-windows-10-security-baseline-in-intune"></a>Skapa en säkerhetsbaslinje för Windows 10 i Intune
+# <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
-Säkerhetsbaslinjer är en funktion som är tillgänglig i en förhandsversion för enheter som kör Windows 10 och senare. Den här funktionen innehåller många inställningar som stöds av Intune som skyddar dina användare och enheter. Inställningarna anges också automatiskt till värden som rekommenderas av säkerhetsteamen. Till exempel aktiverar baslinjen automatiskt BitLocker, kräver automatiskt ett lösenord för att låsa upp en enhet, inaktiverar automatiskt grundläggande autentisering och mycket mer.
+Använd säkerhetsbaslinjer i Intune för att säkra och skydda dina användare och enheter. Säkerhetsbaslinjer är förkonfigurerad grupper av Windows-inställningar som hjälper dig att tillämpa en känd grupp av inställningar och standardvärden som rekommenderas av relevanta säkerhetsteam. När du skapar en säkerhetsprofil med baslinjer i Intune skapar du en *enhetskonfigurationsprofil*.
 
 Den här funktionen gäller för:
 
 - Windows 10 version 1809 och senare
 
+Du distribuerar säkerhetsbaslinjer till grupper av användare eller enheter i Intune. Inställningarna tillämpas på enheter som kör Windows 10 eller senare. Till exempel aktiverar *MDM-säkerhetsbaslinjen* automatiskt BitLocker för flyttbara enheter, kräver automatiskt ett lösenord för att låsa upp en enhet, inaktiverar automatiskt grundläggande autentisering och mycket mer. När ett standardvärde inte fungerar för din miljö kan du anpassa baslinjen för att tillämpa dina önskade inställningar.  
+
+Separata typer av baslinje kan innehålla samma inställningar men använder olika standardvärden för dessa inställningar. Det är viktigt att förstå standardinställningarna för dina valda baslinjer och sedan ändra varje baslinje så att de passar din organisations behov.  
+
 > [!NOTE]
-> När säkerhetsbaslinjer används i en förhandsversion rekommenderar Microsoft att man inte använder profiler i en produktionsmiljö, eftersom baslinjerna kan komma att ändras i förhandsversionen. När säkerhetsbaslinjer är allmänt tillgängliga konverteras inte befintliga profiler till de senaste profilerna som stöds.
+> Microsoft rekommenderar inte att du använder förhandsversioner av säkerhetsbaslinjer i en produktionsmiljö. Inställningarna för en förhandsversion av en baslinje kan förändras medan förhandsversionen används. 
 
 Målet med att använda säkerhetsbaslinjer är att få ett säkert arbetsflöde från slutpunkt till slutpunkt när du arbetar med Microsoft 365. Några av fördelarna är:
 
@@ -39,28 +43,43 @@ Målet med att använda säkerhetsbaslinjer är att få ett säkert arbetsflöde
 - Om Intune är nytt för dig och du inte är säker på var du ska börja, kan säkerhetsbaslinjerna vara till hjälp. Du kan snabbt skapa och distribuera en säker profil, där du vet att du hjälper till att skydda din organisations data och resurser.
 - Om du använder en grupprincip är det mycket enklare att migrera till Intune för hantering med dessa baslinjer. Baslinjerna är inbyggda i Intune och innehåller moderna hanteringsfunktioner.
 
-Säkerhetsbaslinjerna skapar en ”konfigurationsprofil” i Intune. Profilen innehåller alla inställningar som finns i baslinjen. Du kan sedan tillämpa eller tilldela profilen till dina användare, grupper och enheter.
 
-När profilen har tilldelats kan du övervaka profilen och baslinjen. Du kan till exempel se vilka enheter som matchar baslinjen, eller vilka som inte matchar baslinjen.
-
-Den här artikeln kan hjälpa dig att använda säkerhetsbaslinjer till att skapa en profil, tilldela profilen och övervaka profilen.
 
 [Windows säkerhetsbaslinjer](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) är en bra resurs om man vill lära sig mer om den här funktionen. [Hantering av mobilenheter](https://docs.microsoft.com/windows/client-management/mdm/) är en bra resurs om du vill lära dig mer om MDM och vad du kan göra på Windows-enheter.
 
-## <a name="available-security-baselines"></a>Tillgängliga säkerhetsbaslinjer  
+## <a name="security-baseline-versions-and-instances"></a>Baslinjeversioner för säkerhet och instanser
+Då och då blir nya uppdateringar för en baslinje tillgängliga. Varje ny versioninstans av en baslinje kan lägga till eller ta bort inställningar eller göra andra ändringar. När nya inställningar för Windows 10 blir tillgängliga tillsammans med nya versioner av Windows 10 kan MDM-säkerhetsbaslinjen få en ny versioninstans som innehåller de senaste inställningarna.  
 
-Följande säkerhetsbaslinjer är tillgängliga för användning med Intune.
-- **Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018**  
-  [Visa inställningarna](security-baseline-settings-windows.md)
+I Intune-konsolen kan du visa vilka säkerhetsbaslinjer som är tillgängliga och information om dessa. Tillgänglig information inkluderar hur många profiler du har som använder den typen av baslinje, hur många separata instanser av typen av baslinje som finns tillgängliga och när den senaste instansen blev tillgänglig eller publicerades.  Följande exempel visar en panel för en välanvänd MDM-säkerhetsbaslinje:  
 
-- **FÖRHANDSVERSION: Windows Defender ATP-baslinje**  
-  [Visa inställningarna](security-baseline-settings-defender-atp.md)  
-  *(Denna baslinje finns tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
+![Baslinjepanel](./media/security-baselines/baseline-tile.png)
 
+För att information om de baslinjeversioner du använder, markera en baslinje och välj sedan **Versioner**. Intune visar information om de versioner som används av dina profiler. I fönstret versioner kan du välja en version för att visa mer information om de profiler som använder den här versionen. Du kan också välja två olika versioner och sedan välja **Jämför baslinjer** för att hämta en CSV-fil som beskriver dessa skillnader.  
+
+![Jämför baslinjer](./media/security-baselines/compare-baselines.png)
+
+När du skapar en *profil* för säkerhetsbaslinjen använder profilen automatiskt den nyligen utgivna instansen av säkerhetsbaslinjen.  Du kan fortsätta att använda och redigera profiler som du har skapat tidigare som anvämnder en tidigare version av baslinjen, inklusive baslinjer som har skapats i en förhandsversion. 
+
+Säkerhetsprofiler med baslinjer stöder [ändringar av versionen](#change-the-baseline-instance-for-a-profile) för den baslinje som används. Det här innebär att när en ny version kommer behöver du inte skapa en ny baslinjeprofil för att använda den. När du är klar kan du istället välja en baslinjeprofil och sedan använda det inbyggda alternativet för att ändra instansversionen för profilen.  
+
+## <a name="available-security-baselines"></a>Tillgängliga säkerhetsbaslinjer 
+
+Följande instanser av säkerhetsbaslinjer är tillgängliga för användning med Intune. Använd länkarna om du vill visa inställningarna för den senaste instansen av varje baslinje. 
+
+- **MDM-säkerhetsbaslinje**
+  - [MDM-säkerhetsbaslinje för oktober 2019 (19H1)](security-baseline-settings-mdm.md)
+  - [Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018](security-baseline-settings-mdm-archive.md)
+
+- **Windows Defender ATP-baslinje**  
+  *(Denna baslinje kan användas när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
+  - [Förhandsversion: Windows Defender ATP-baslinje](security-baseline-settings-defender-atp.md)  
+
+Du kan fortsätta att använda och redigera profiler som du har skapat tidigare baserat på en förhandsvisningsmall, till och med när förhandsversionerna inte längre är tillgängliga för att skapa nya profiler. 
 
 ## <a name="prerequisites"></a>Krav
-För att hantera baslinjer i Intune måste ditt konto ha den inbyggda rollen [Princip- och profilhanterare](role-based-access-control.md#built-in-roles).
+- För att hantera baslinjer i Intune måste ditt konto ha den inbyggda rollen [Princip- och profilhanterare](role-based-access-control.md#built-in-roles).
 
+- Användningen av vissa baslinjer kräver att du har en aktiv prenumeration för ytterligare tjänster, till exempel Microsoft Defender ATP.  
 
 ## <a name="co-managed-devices"></a>Samhanterade enheter
 
@@ -70,37 +89,91 @@ När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)** . Det finns en lista med tillgängliga baslinjer. 
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)** för att visa listan med tillgängliga baslinjer.
+
 
     ![Välj en säkerhetsbaslinje att konfigurera](./media/security-baselines/available-baselines.png)
 
-   >[!TIP]  
-   > Windows Defender ATP-baslinjen finns tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 2. Välj den baslinje som du vill använda och välj sedan **Skapa profil**.  
 
 3. På fliken **Grundinställningar** anger du följande egenskaper:
 
-    - **Namn**: Ange ett namn på säkerhetsbaslinjernas profil. Ange till exempel *Standardprofil för Defender ATP*
-    - **Beskrivning**: Ange text som beskriver vad baslinjen gör. Du kan ange vilken text du vill i beskrivningen. Det är valfritt, men rekommenderas definitivt.
+    - **Namn**: Ange ett namn på säkerhetsbaslinjernas profil. Ange till exempel *Standardprofil för Defender ATP*.
 
-4. Välj fliken **Konfiguration** för att visa tillgängliga grupper med **Inställningar** i den här baslinjen. Välj en grupp för att expandera den och visa de enskilda inställningarna som den innehåller. Inställningarna har standardkonfigurationer för säkerhetsbaslinjen. Konfigurera om standardinställningarna för att uppfylla dina affärsbehov.  
+    - **Beskrivning**: Ange text som beskriver vad baslinjen gör. Du kan ange vilken text du vill i beskrivningen. Det är valfritt men rekommenderat.  
+
+   Välj **nästa** för att gå till nästa flik. När du har fortsatt till en ny flik kan du välja fliknamnet för att återgå till en tidigare flik.  
+
+4. På inställningsfliken Konfiguration visas grupperna av **Inställningar** som är tillgängliga i den baslinje som du har valt. Du kan expandera en grupp om du vill visa inställningarna i gruppen och standardvärdena för dessa inställningar i baslinjen. Så här hittar du specifika inställningar:
+   - Välj en grupp att expandera och granska de tillgängliga inställningarna.  
+   - Använd *Sökfältet* och ange nyckelord som filtrera för att visa endast de grupper som innehåller dina sökkriterier.  
+ 
+   Varje inställning i en baslinje har en standardkonfiguration för denna baslinjeversion. Konfigurera om standardinställningarna för att uppfylla dina affärsbehov. Olika baslinjer kan innehålla samma inställning och använda olika standardvärden för inställningarna, beroende på baslinjens avsikt. 
 
     ![Expandera en grupp om du vill visa inställningarna för den gruppen](./media/security-baselines/sample-list-of-settings.png)
 
-5. Välj fliken **Tilldelningar** för att tilldela baslinjen till grupper. Tilldela baslinjen till en befintlig grupp eller skapa en ny grupp med hjälp av standardprocessen i Intune-konsolen för att slutföra konfigurationen.  
+5. På fliken **Omfångstaggar** väljer du **Välj omfångstaggar** för att öppna fönstret *Välj taggar* för att tilldela omfångstaggar till profilen. 
+
+6. På fliken **Tilldelningar** väljer du **Välj grupper som ska ingå** och tilldela sedan baslinjen till en eller flera grupper. Använd **Välj grupper att utesluta** för att finjustera tilldelningen.  
 
    ![Tilldela en profil](./media/security-baselines/assignments.png)
   
-6. När du är redo att distribuera baslinjen väljer du fliken **Granska och skapa** för att granska informationen för baslinjen. Välj sedan **Spara profil** för att spara och distribuera profilen. 
+7. När du är redo att distribuera baslinjen fortsätter du till fliken **Granska och skapa** för att granska informationen för baslinjen. Spara och distribuera profilen genom att välja **Skapa**.  
+
+   När du skapar profilen skickas den till den tilldelade gruppen och kan tillämpas direkt.
+
+   > [!TIP]  
+   > Om du skapar en profil utan att först tilldela den till grupper kan du redigera profilen senare för att göra detta.  
 
    ![Granska baslinjen](./media/security-baselines/review.png) 
 
-   När du har sparat skickas profilen till enheterna när de checkar in med Intune. Därför kan detta inträffa omedelbart.
+  
+8. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**.  Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.  
 
-   > [!TIP]  
-   > Du kan spara en profil utan att första tilldela den till grupper. Du kan redigera profilen vid ett senare tillfälle för att lägga till grupper. 
+## <a name="change-the-baseline-instance-for-a-profile"></a>Ändra baslinjeinstansen för en profil
+Baslinjeprofiler har stöd för ändringar av den instans av baslinjen som används av profilen. Du kan välja en äldre, eller vanligtvis en nyare, instans av samma baslinje.  Det går inte att växla mellan två olika baslinjer, till exempel att ändra en profil så att den inte längre använder en baslinje för Defender ATP utan istället använder MDM-säkerhetsbaslinjen. 
 
-7. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinje du konfigurerat och sedan välja **Profiler**.  Välj profilen och välj sedan **Egenskaper** för att redigera inställningar och välj **Tilldelningar** för att redigera de grupper som tar emot denna baslinje. 
+När du konfigurerar en ändring av baslinjeversionen har du valet att hämta en CSV-fil som skapar en lista över ändringarna mellan de två aktuella baslinjeversionerna. Du kan också välja att behålla alla dina ändringar i den ursprungliga versionen av baslinjen och tillämpa dem i den nya versionen, eller implementera alla standardvärden som finns in den nya valda baslinjeversionen. 
+
+När du sparar efter en slutförd konvertering kommer baslinjen att distribueras på nytt omedelbart till tilldelade grupper.  
+
+**Under konverteringen**:
+- Nya inställningar som inte fanns i ursprungsversionen läggs till och använder standardvärdena.  
+
+- Inställningar som inte finns i den nya versionen av baslinjen som du väljer tas bort och kommer inte längre att tillämpas av den här säkerhetsprofilen.  
+
+  När en inställning inte längre hanteras av en baslinjeprofil återställs inte inställningen på enheten. Istället bibehåller enheten sin senaste inställning tills någon annan process hanterar inställningen så att den ändras. Exempel på processer som kan ändra en inställning när du inte längre hanterar den inkluderar en annan baslinjeprofil, en grupprincipinställning eller en manuell konfiguration på enheten. 
+
+### <a name="to-change-the-instance-for-a-baseline"></a>Så här ändrar du instansen för en baslinje  
+
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer**. Välj sedan panelen för den baslinjetyp som har den profil du vill använda.  
+
+2. Välj sedan **Profiler**, och markera kryssrutan för den profil du vill redigera. Välj sedan **Ändra version**.  
+
+   ![välj en baslinje](./media/security-baselines/select-baseline.png)  
+
+3. I fönstret **Ändra version** använder du listrutan **Välj en säkerhetsbaslinje att uppdatera till** och välj den versioninstans som du vill använda.  
+
+   ![välj en version](./media/security-baselines/select-instance.png)  
+ 
+4. Välj **Granska uppdateringen** för att hämta en CSV-fil som visar skillnaden mellan profilens aktuella instansversion och den nyvalda versionen. Granska den här filen så att du förstår vilka inställningar som har lagts till, tagits bort och vilka standardvärdena för dessa inställningar som gäller för den uppdaterade profilen.  
+
+   När du är klar kan du fortsätta till nästa steg.  
+
+5. Välj något av de två alternativen för **Välj en motod för att uppdatera profilen**: 
+   - **Acceptera baslinje ändringar men behåll mina befintliga anpassade inställningar** – det här alternativet behåller dina ändringar i baslinjeprofilen och tillämpar dem på den nya versionen som du har valt att använda.
+   - **Acceptera ändringar av baslinjen och ta bort befintliga anpassade inställningar** – det här alternativet skriver över din ursprungliga profil. Den uppdaterade profilen använder standardvärden för alla inställningar.  
+
+6. Välj **Skicka**. Profilen uppdaterar till den valda versionen av baslinjen. När konverteringen har slutförts distribueras baslinjen omedelbart till tilldelade grupper.
+
+## <a name="remove-a-security-baseline-assignment"></a>Ta bort en tilldelning av en säkerhetsbaslinje
+När en inställning för en säkerhetsbaslinje inte längre gäller för en enhet eller inställningar i baslinjen är inställda på *Konfigureras ej* kommer dessa inställningar inte att återgå till en förhanterad konfiguration. Istället behåller de tidigare hanterade inställningarna på enheten sina senaste konfigurationer som har tagits emot från baslinjen fram tills dess att någon annan process uppdaterade dessa inställningar på enheten.  
+
+Andra processer som kan ändra inställningarna på enheten senare inkluderar en annan eller ny säkerhetsbaslinje, enhetskonfigurationsprofil, grupprincipkonfigurationer eller manuella ändringar av enhetens inställningar.  
+
+
+
+
 
 ## <a name="q--a"></a>Frågor och svar
 
@@ -122,8 +195,11 @@ Egentligen inte. Microsofts säkerhetsteam har kontakt med organisationer, som e
 
 - Många kunder använder Intunes baslinjerekommendationer som utgångspunkt, och anpassar dem sedan för att uppfylla sina IT- och säkerhetskrav. Microsofts Windows 10 RS5 **MDM-säkerhetsbaslinje** är den första baslinjen som lanseras. Den här baslinjen har utformats som en allmän infrastruktur där kunderna kommer att kunna importera andra säkerhetsbaslinjer som baseras på CIS, NIST och andra standarder. För närvarande är den tillgänglig för Windows och kommer även att finnas för iOS och Android så småningom.
 
-- Att migrera från lokala Active Directory-grupprinciper till en ren molnlösning med hjälp av Azure Active Directory (AD) och Microsoft Intune kan kännas övermäktigt. Som hjälp finns det dock tillhörande grupprincipobjekt som har publicerats för hybrid AD- och Azure AD-anslutna enheter. Dessa enheter kan hämta MDM-inställningar från molnet (Intune) och grupprincipinställningar från lokala domänkontrollanter när det behövs.
+- Att migrera från lokala Active Directory-grupprinciper till en ren molnlösning med hjälp av Azure Active Directory (AD) och Microsoft Intune kan kännas övermäktigt. Som hjälp finns en grupp principmallar som ingår i [Verktyg för säkerhetsefterlevnad](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) som kan hantera hybrid AD- och Azure AD-anslutna enheter. Dessa enheter kan hämta MDM-inställningar från molnet (Intune) och grupprincipinställningar från lokala domänkontrollanter när det behövs.
 
 ## <a name="next-steps"></a>Nästa steg
-- Visa [inställningarna för Windows-säkerhetsbaslinjer](security-baseline-settings-windows.md) som stöds av Intune.  
+- Visa inställningarna i de senaste versionerna av de tillgängliga baslinjerna:  
+  - [MDM-säkerhetsbaslinje](security-baseline-settings-mdm.md)  
+  - [Windows Defender ATP-baslinje](security-baseline-settings-defender-atp.md)  
+
 - Kontrollera statusen och övervaka [baslinje och profil](security-baselines-monitor.md).

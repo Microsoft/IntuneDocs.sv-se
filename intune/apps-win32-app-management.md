@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 3cfe2aef93fb8b7c420ee6513945f11bee5bd0be
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804700"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529720"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -65,7 +65,7 @@ Om du kör `IntuneWinAppUtil.exe` från kommandofönstret utan parametrar vägle
 |:------------------------------:|:----------------------------------------------------------:|
 |    `-h`     |    Hjälp    |
 |    `-c <setup_folder>`     |    Mapp för alla installationsfiler. Alla filer i den här mappen komprimeras till en *.intunewin*-fil.    |
-|   ` -s <setup_file>`     |    Installationsfil (till exempel *setup.exe* eller *setup.msi*).    |
+|    `-s <setup_file>`     |    Installationsfil (till exempel *setup.exe* eller *setup.msi*).    |
 |    `-o <output_folder>`     |    Utdatamapp för den genererade *.intunewin*-filen.    |
 |    `-q`       |    Tyst läge    |
 
@@ -98,28 +98,28 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 ### <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3.  I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
-4.  I appfönstret **Lägg till** väljer du **Windows-app (Win32)** från den nedrullningsbara listan.
+3. I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
+4. I appfönstret **Lägg till** väljer du **Windows-app (Win32)** från den nedrullningsbara listan.
 
     ![Skärmbild av bladet Lägg till app – Listrutan Lägg till typ](./media/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Steg 2: Ladda upp appaketfilen
 
-1.  I fönstret **Lägg till app** väljer du **Appaketfil** för att välja en fil. Fönstret Appaketfil visas.
+1. I fönstret **Lägg till app** väljer du **Appaketfil** för att välja en fil. Fönstret Appaketfil visas.
 
     ![Skärmbild av bladet Appaketfil](./media/apps-win32-app-02.png)
 
-2.  I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en Windows-installationsfil med tillägget *.intunewin*.
+2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en Windows-installationsfil med tillägget *.intunewin*.
 
     > [!IMPORTANT]
     > Se till att ha den senaste versionen av förberedelseverktyget för Microsoft Win32-innehåll. Om du inte använder den senaste versionen visas en varning om att appen har paketerats med en äldre version av förberedelseverktyget för Microsoft Win32-innehåll. 
 
-3.  Välj **OK** när du är klar.
+3. Välj **OK** när du är klar.
 
 ### <a name="step-3-configure-app-information"></a>Steg 3: Konfigurera appinformation
 
-1.  I fönstret **Lägg till app** väljer du **Appinformation** för att konfigurera appen.
-2.  Konfigurera följande information i fönstret **Appinformation**. Vissa värden i det här fönstret kan fyllas i automatiskt.
+1. I fönstret **Lägg till app** väljer du **Appinformation** för att konfigurera appen.
+2. Konfigurera följande information i fönstret **Appinformation**. Vissa värden i det här fönstret kan fyllas i automatiskt.
     - **Namn**: Ange namnet på appen så som det visas i företagsportalen. Om samma appnamn förekommer två gånger visas varje app på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
     - **Utgivar**e: Ange namnet på appens utgivare.
@@ -131,21 +131,22 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
     - **Ägare**: Alternativt kan du ange ett namn på appägaren. Ett exempel är **Personalavdelningen**.
     - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Logotyp**: Ladda upp en ikon som är associerad med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-3.  Välj **OK** när du är klar.
+3. Välj **OK** när du är klar.
 
 ### <a name="step-4-configure-app-installation-details"></a>Steg 4: Konfigurera information om appinstallationen
-1.  I **Lägg till app** väljer du **Program** för att konfigurera appinstallationen och borttagningskommandona för appen.
-2.  Lägg till den fullständig kommandoraden för installationen för att installera appen. 
+1. I **Lägg till app** väljer du **Program** för att konfigurera appinstallationen och borttagningskommandona för appen.
+2. Lägg till den fullständig kommandoraden för installationen för att installera appen. 
 
     Om appfilnamnet exempelvis är **MyApp123** lägger du till följande:<br>
     `msiexec /p “MyApp123.msp”`<p>
     Och om programmet är `ApplicationName.exe` skulle kommandot vara programmets namn följt av de kommandoargument (växlar) som stöds av paketet. <br>Exempel:<br>
     `ApplicationName.exe /quiet`<br>
-    I kommandot ovan stöder paketet `ApplicationName.exe` kommandoargumentet `/quiet`.<p> Kontakta leverantören av programmet för de specifika argument som stöds av programpaketet.
+    I kommandot ovan stöder paketet `ApplicationName.exe` kommandoargumentet `/quiet`.<p> 
+    Kontakta leverantören av programmet för de specifika argument som stöds av programpaketet.
 
-3.  Lägg till den fullständiga kommandoraden för avinstallation av appen baserat på appens GUID. 
+3. Lägg till den fullständiga kommandoraden för avinstallation av appen baserat på appens GUID. 
 
-    Exempelvis: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+    Exempelvis:  `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
 
     > [!NOTE]
     > Du kan konfigurera att en Win32-app installeras i kontexten **Användare** eller **System**. Kontexten **Användare** avser bara en viss användare. Kontexten **System** avser alla användare av en Windows 10-enhet.
@@ -154,12 +155,12 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
     > 
     > Installationen och avinstallationen av Win32-appen körs med administratörsbehörighet (som standard) när appen är inställd på att installeras i användarkontext och slutanvändaren på enheten har administratörsbehörighet.
 
-4.  Välj **OK** när du är klar.
+4. Välj **OK** när du är klar.
 
 ### <a name="step-5-configure-app-requirements"></a>Steg 5: Konfigurera appkrav
 
-1.  I fönstret **Lägg till app** väljer du **Krav** för att konfigurera de krav som enheter måste uppfylla innan appen installeras.
-2.  I fönstret **Lägg till en kravregel** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
+1. I fönstret **Lägg till app** väljer du **Krav** för att konfigurera de krav som enheter måste uppfylla innan appen installeras.
+2. I fönstret **Lägg till en kravregel** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
     - **Operativsystemarkitektur**: Välj de arkitekturer som krävs för att installera appen.
     - **Lägsta operativsystemversion**: Välj det lägsta operativsystem som krävs för att installera appen.
     - **Diskutrymme som krävs (MB)** : Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
@@ -184,32 +185,32 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
         - **Kör det här skriptet med inloggade autentiseringsuppgifter**: Välj **Ja** för att köra skriptet med hjälp av den inloggade enhetens autentiseringsuppgifter**.
         - **Framtvinga signaturkontroll av skript** – Välj **Ja** om du vill kontrollera att skriptet har signerats av en betrodd utgivare, vilket innebär att skriptet kan köras utan att varningar eller uppmaningar visas. Skriptet körs oblockerat. Välj **Nej** (standard) om du vill köra skriptet med slutanvändarens bekräftelse utan signaturverifiering.
         - **Välja datatyp för utdata**: Välj den datatyp som används när en kravregelmatchning ska fastställas.
-4.  Välj **OK** när du är klar.
+4. Välj **OK** när du är klar.
 
 ### <a name="step-6-configure-app-detection-rules"></a>Steg 6: Konfigurera appidentifieringsregler
 
-1.  I fönstret **Lägg till app** väljer du **Identifieringsregler** för att konfigurera regler som identifierar förekomsten av appen.
-2.  I **Regelformat** väljer du hur förekomsten av appen ska identifieras. Du kan välja att antingen konfigurera identifieringsreglerna manuellt eller använda ett anpassat skript för att identifiera förekomsten av appen. Du måste välja minst en identifieringsregel. 
+1. I fönstret **Lägg till app** väljer du **Identifieringsregler** för att konfigurera regler som identifierar förekomsten av appen.
+2. I **Regelformat** väljer du hur förekomsten av appen ska identifieras. Du kan välja att antingen konfigurera identifieringsreglerna manuellt eller använda ett anpassat skript för att identifiera förekomsten av appen. Du måste välja minst en identifieringsregel. 
 
     > [!NOTE]
     > I fönstret **Identifieringsregler** kan du välja att lägga till flera regler. Villkoren för **alla** regler måste vara uppfyllda för att appen ska identifieras.
 
     - **Ställ in identifieringsregler manuellt** – Du kan välja någon av följande regeltyper:
-        1.  **MSI** – Verifiera baserat på MSI-versionskontroll. Det här alternativet kan endast läggas till en gång. När du väljer den här regeltypen visas två inställningar:
+        1. **MSI** – Verifiera baserat på MSI-versionskontroll. Det här alternativet kan endast läggas till en gång. När du väljer den här regeltypen visas två inställningar:
             - **MSI-produktkod** – Lägg till en giltig MSI-produktkod för appen.
             - **Kontroll av MSI-produktversion** – Välj **Ja** om du vill kontrollera MSI-produktversionen förutom MSI-produktkoden.
-        2.  **Fil** – Verifiera baserat på fil- eller mappidentifiering, datum, version eller storlek.
+        2. **Fil** – Verifiera baserat på fil- eller mappidentifiering, datum, version eller storlek.
             - **Sökväg** – Den fullständiga sökvägen till mappen som innehåller filen eller mappen som ska identifieras.
             - **Fil eller mapp** – Filen eller mappen som ska identifieras.
             - **Identifieringsmetod** – Välj vilken typ av identifieringsmetod som ska användas för att verifiera förekomsten av appen.
             - **Kopplat till en 32-bitarsapp på 64-bitarsklienter** – Välj **Ja** om du vill expandera miljövariabler för sökvägar i 32-bitarskontexten på 64-bitarsklienter. Välj **Nej** (standard) om du vill expandera sökvägsvariabler i 64-bitarskontexten på 64-bitarsklienter. 32-bitarsklienter använder alltid 32-bitarskontexten.
             
             **Exempel på filbaserad identifiering**
-            1.  Kontrollera om filen finns.
+            1. Kontrollera om filen finns.
          
                 ![Skärmbild av fönstret för identifieringsregel – filen finns](./media/apps-win32-app-03.png)
         
-            2.  Kontrollera om mappen finns.
+            2. Kontrollera om mappen finns.
          
                 ![Skärmbild av fönstret för identifieringsregel – mappen finns](./media/apps-win32-app-04.png)
         
@@ -220,62 +221,62 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
             - **Kopplat till en 32-bitarsapp på 64-bitarsklienter** – Välj **Ja** om du vill söka i 32-bitarsregistret på 64-bitarsklienter. Välj **Nej** (standard) om du vill söka i 64-bitarsregistret på 64-bitarsklienter. 32-bitarsklienter söker alltid i 32-bitarsregistret.
             
             **Exempel för registerbaserad identifiering**
-            1.  Sök baserat på om registernyckeln finns.
+            1. Sök baserat på om registernyckeln finns.
             
                 ![Skärmbild av fönstret för identifieringsregel – registernyckeln finns](./media/apps-win32-app-05.png)    
             
-            2.  Kontrollera om det finns något registervärde.
+            2. Kontrollera om det finns något registervärde.
         
                 ![Skärmbild av fönstret för identifieringsregel – registervärdet finns](./media/apps-win32-app-06.png)    
         
-            3.  Sök baserat på registervärdesträng.
+            3. Sök baserat på registervärdesträng.
         
                 ![Skärmbild av fönstret för identifieringsregel – registervärdesträng är lika med](./media/apps-win32-app-07.png)    
      
     - **Använd ett anpassat identifieringsskript** – Ange PowerShell-skriptet som ska användas för att identifiera den här appen. 
     
-        1.  **Skriptfil** – Välj ett PowerShell-skript som ska identifiera förekomsten av appen på klienten. Appen kommer att identifieras när skriptet både returnerar en slutkod med värdet 0 och skriver ett strängvärde till STDOUT.
+        1. **Skriptfil** – Välj ett PowerShell-skript som ska identifiera förekomsten av appen på klienten. Appen kommer att identifieras när skriptet både returnerar en slutkod med värdet 0 och skriver ett strängvärde till STDOUT.
 
-        2.  **Kör skript som 32-bitarsprocess på 64-bitarsklienter** – Välj **Ja** om du vill köra skriptet i en 32-bitarsprocess på 64-bitarsklienter. Välj **Nej** (standard) för att köra skriptet i en 64-bitarsprocess på 64-bitarsklienter. 32-bitarsklienter kör skriptet i en 32-bitarsprocess.
+        2. **Kör skript som 32-bitarsprocess på 64-bitarsklienter** – Välj **Ja** om du vill köra skriptet i en 32-bitarsprocess på 64-bitarsklienter. Välj **Nej** (standard) för att köra skriptet i en 64-bitarsprocess på 64-bitarsklienter. 32-bitarsklienter kör skriptet i en 32-bitarsprocess.
 
-        3.  **Framtvinga signaturkontroll av skript** – Välj **Ja** om du vill kontrollera att skriptet har signerats av en betrodd utgivare, vilket innebär att skriptet kan köras utan att varningar eller uppmaningar visas. Skriptet körs oblockerat. Välj **Nej** (standard) om du vill köra skriptet med slutanvändarens bekräftelse utan signaturverifiering.
+        3. **Framtvinga signaturkontroll av skript** – Välj **Ja** om du vill kontrollera att skriptet har signerats av en betrodd utgivare, vilket innebär att skriptet kan köras utan att varningar eller uppmaningar visas. Skriptet körs oblockerat. Välj **Nej** (standard) om du vill köra skriptet med slutanvändarens bekräftelse utan signaturverifiering.
     
             Intune-agenten kontrollerar resultaten från skriptet. och läser de värden som skrivits av skriptet till standardutdataströmmen (STDOUT), standardfelströmmen (STDERR) och slutkoden. Om skriptet avslutas med ett annat värde än noll misslyckas skriptet och programidentifieringsstatusen är Inte installerad. Om slutkoden är noll och STDOUT innehåller data är programidentifieringsstatus Installerad. 
 
             > [!NOTE]
             > Microsoft rekommenderar att du kodar skriptet som UTF-8. När skriptet avslutas med värdet 0 betyder det att skriptkörningen lyckades. Den andra utdatakanalen anger att appen identifierades – STDOUT-data anger att appen hittades på klienten. Vi letar inte efter en viss sträng från STDOUT.
 
-        4.  När du har lagt till dina regler väljer du **Lägg till** > **OK**.
+        4. När du har lagt till dina regler väljer du **Lägg till** > **OK**.
 
 ### <a name="step-7-configure-app-return-codes"></a>Steg 7: Konfigurera appreturkoder
 
-1.  I fönstret **Lägg till app** väljer du **Returkoder** för att lägga till returkoderna som används för att ange antingen hur appinstallationen hanterar återförsök eller beteendet efter installationen. Poster för returkoder läggs till som standard när appen skapas. Du kan dock lägga till ytterligare returkoder eller ändra befintliga returkoder. 
-2.  I fönstret **Returkoder** lägger du till ytterligare returkoder eller ändrar befintliga returkoder.
+1. I fönstret **Lägg till app** väljer du **Returkoder** för att lägga till returkoderna som används för att ange antingen hur appinstallationen hanterar återförsök eller beteendet efter installationen. Poster för returkoder läggs till som standard när appen skapas. Du kan dock lägga till ytterligare returkoder eller ändra befintliga returkoder. 
+2. I fönstret **Returkoder** lägger du till ytterligare returkoder eller ändrar befintliga returkoder.
     - **Misslyckades** – Returvärdet som anger ett appinstallationsfel.
     - **Hård omstart** – Returkoden för hård omstart tillåter inte att nästa Win32-app installeras på klienten utan omstart. 
     - **Mjuk omstart** – Returkoden för mjuk omstart tillåter att nästa Win32-app installeras utan att klienten måste startas om. Omstart krävs för att slutföra installationen av det aktuella programmet.
     - **Försök igen** – Agenten för returkoden för återförsök försöker installera appen tre gånger. Den väntar fem minuter mellan varje försök. 
     - **Lyckades** – Returvärdet som anger att appen installerades.
-3.  Välj **OK** när du har lagt till eller ändrat listan över returkoder.
+3. Välj **OK** när du har lagt till eller ändrat listan över returkoder.
 
 ### <a name="step-8-add-the-app"></a>Steg 8: Lägg till appen
 
-1.  I fönstret **Lägg till app** kontrollerar du att appinformationen är rätt konfigurerad.
-2.  Välj **Lägg till** för att ladda upp appen till Intune.
+1. I fönstret **Lägg till app** kontrollerar du att appinformationen är rätt konfigurerad.
+2. Välj **Lägg till** för att ladda upp appen till Intune.
 
 ### <a name="step-9-assign-the-app"></a>Steg 9: Tilldela appen
 
-1.  I appfönstret väljer du **Tilldelningar**.
-2.  Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
-3.  Välj en **Tilldelningstyp** för den specifika appen:
+1. I appfönstret väljer du **Tilldelningar**.
+2. Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
+3. Välj en **Tilldelningstyp** för den specifika appen:
     - **Tillgänglig för registrerade enheter**: Användarna installerar appen från företagsportalappen eller företagsportalens webbplats.
     - **Obligatoriskt**: Appen installeras på enheter i de valda grupperna.
     - **Avinstallera**: Appen avinstalleras från enheter i de valda grupperna.
-4.  Välj **Grupper som omfattas** och tilldela de grupper som ska använda den här appen.
-5.  Klicka på **OK** i fönstret **Tilldela** för att slutföra valet av inkluderade grupper.
-6.  Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
-7.  I fönstret **Lägg till grupp** väljer du **OK**.
-8.  I appfönstret **Tilldelningar** väljer du **Spara**.
+4. Välj **Grupper som omfattas** och tilldela de grupper som ska använda den här appen.
+5. Klicka på **OK** i fönstret **Tilldela** för att slutföra valet av inkluderade grupper.
+6. Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
+7. I fönstret **Lägg till grupp** väljer du **OK**.
+8. I appfönstret **Tilldelningar** väljer du **Spara**.
 
 Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Information om tilldelning och övervakning av appar finns i [Tilldela appar till grupper med Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) och [Övervaka appinformation och tilldelningar med Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
 

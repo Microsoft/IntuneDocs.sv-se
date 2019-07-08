@@ -17,21 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad8a3298a801b07e021b84bd5eea9c91f01f1a2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 50574a2d3dc4ba5731b1a90f563ddd1a08e7f833
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044874"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529636"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
 Om du använder Intunes appskyddsprinciper med Microsoft Edge kan du se till att åtkomsten till företagswebbplatser alltid är skyddad. Nedanstående Microsoft Edge-företagsfunktioner som aktiveras med Intune-principer är tillgängliga. Dessa företagsfunktioner är:
 
-1.  **Dubbel identitet** – Användarna kan lägga till både ett arbetskonto och ett personligt konto för surfning. Det finns en fullständig uppdelning mellan de två identiteterna, vilket liknar arkitektur och funktioner i Office 365 och Outlook. Intune-administratörer kommer att kunna ställa in de önskade principerna för en skyddad surfupplevelse på arbetskontot.
-2.  **Integrering med appskyddsprincip i Intune** – eftersom Microsoft Edge är integrerat med Intune SDK kan du rikta appskyddsprinciper för att garanterat få skydd mot dataförlust. De här funktionerna omfattar kontroll av klipp ut, kopiera och klistra in, hindrande av skärmdumpar och säkerställer att länkar som användare väljer endast öppnas i andra hanterade appar.
-3.  **Integrering med Azure Application-proxy** – Du kan styra åtkomsten till SaaS-appar och webbappar, vilket garanterar att webbläsarbaserade appar endast körs i den skyddade Microsoft Edge-webbläsaren, oavsett om användarna ansluter från företagets nätverk eller från Internet.
-4.  **Programkonfiguration** – Du kan använda inställningar för programkonfiguration för att förbättra organisationens säkerhetsposition och konfigurera lättanvända funktioner för dina slutanvändare. Du kan till exempel definiera bokmärken, en genväg för startsidan, tillåtna/blockerade webbplatser, Azure-programproxy med mera.
+1. **Dubbel identitet** – Användarna kan lägga till både ett arbetskonto och ett personligt konto för surfning. Det finns en fullständig uppdelning mellan de två identiteterna, vilket liknar arkitektur och funktioner i Office 365 och Outlook. Intune-administratörer kommer att kunna ställa in de önskade principerna för en skyddad surfupplevelse på arbetskontot.
+2. **Integrering med appskyddsprincip i Intune** – eftersom Microsoft Edge är integrerat med Intune SDK kan du rikta appskyddsprinciper för att garanterat få skydd mot dataförlust. De här funktionerna omfattar kontroll av klipp ut, kopiera och klistra in, hindrande av skärmdumpar och säkerställer att länkar som användare väljer endast öppnas i andra hanterade appar.
+3. **Integrering med Azure Application-proxy** – Du kan styra åtkomsten till SaaS-appar och webbappar, vilket garanterar att webbläsarbaserade appar endast körs i den skyddade Microsoft Edge-webbläsaren, oavsett om användarna ansluter från företagets nätverk eller från Internet.
+4. **Programkonfiguration** – Du kan använda inställningar för programkonfiguration för att förbättra organisationens säkerhetsposition och konfigurera lättanvända funktioner för dina slutanvändare. Du kan till exempel definiera bokmärken, en genväg för startsidan, tillåtna/blockerade webbplatser, Azure-programproxy med mera.
 Microsoft Intunes skyddsprinciper för Microsoft Edge hjälper till att skydda din organisations data och resurser. Om du använder de här principerna med Microsoft Edge säkerställer det att företagets resurser skyddas, inte bara i internt installerade appar, utan även när de öppnas via en webbläsare.
 
 ## <a name="getting-started"></a>Komma igång
@@ -115,8 +115,8 @@ Följande steg används för att skapa en konfiguration av skyddade webbläsare:
     > [!NOTE]
     > Microsoft Edge använder samma nyckel/värde-par som Managed Browser. 
 
-8.  När du är klar klickar du på **OK**.
-9.  På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.<br>
+8. När du är klar klickar du på **OK**.
+9. På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.<br>
     Den nya konfigurationen skapas och visas på bladet **Appkonfiguration**.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Tilldela de konfigurationsinställningar som du har skapat 
@@ -184,7 +184,7 @@ Använd följande nyckel/värde-par för att konfigurera hanterade bokmärken:
 
 |    Tangent    |    Värde    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Värdet för den här konfigurationen är en lista över bokmärken. Varje bokmärke består av bokmärkets rubrik och bokmärkets URL. Avgränsa rubriken och URL:en med tecknet `|`.      **Exempel:**<br>`Microsoft Bing|https://www.bing.com`<p>Om du vill konfigurera fler bokmärken avgränsar du varje par med två tecken `||`.<p>**Exempel:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Värdet för den här konfigurationen är en lista över bokmärken. Varje bokmärke består av bokmärkets rubrik och bokmärkets URL. Avgränsa rubriken och URL:en med tecknet `|`.      **Exempel:**<br>`Microsoft Bing|https://www.bing.com`<br>Om du vill konfigurera fler bokmärken avgränsar du varje par med två tecken `||`.<p>**Exempel:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="how-to-display-myapps-within-microsoft-edge-bookmarks"></a>Så här visar du MyApps i Microsoft Edge-bokmärken
 
@@ -201,16 +201,17 @@ Du kan använda nyckel/värde-paren nedan för att konfigurera en lista över ti
 
 |    Tangent    |    Värde    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Välj mellan:<p>1. Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Ange blockerade URL: er (alla andra platser kan nås):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck `|`.<p>**Exempel:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|    Välj mellan:<p>1. Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Ange blockerade URL: er (alla andra platser kan nås):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck `|`.<br>**Exempel:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>URL-format för listan över tillåtna och blockerade webbplatser 
 Du kan använda olika URL-format för att skapa dina webbplatslistor med tillåtna/blockerade. De här tillåtna mönstren beskrivs i tabellen nedan. Lite information innan du sätter igång: 
 - Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
-- Du kan använda jokertecknet (*) enligt reglerna i följande lista med tillåtna mönster.
+- Du kan använda jokertecknet (\*) enligt reglerna i följande lista med tillåtna mönster.
+- Ett jokertecken kan endast motsvara hela värdnamnet (avgränsat med punkter) eller hela delar av sökvägen (avgränsade med snedstreck). `http://*contoso.com` och  **stöds till exempel inte**.
 - Du kan ange portnummer i adressen. Om du inte anger ett portnummer, används följande värden:
     - Port 80 för http
     - Port 443 för http
-- Jokertecken i portnummer stöds **inte**. `http://www.contoso.com:*` och `http://www.contoso.com:*/` stöds inte.
+- Jokertecken i portnummer stöds **inte**. `http://www.contoso.com:*` och `http://www.contoso.com:*/` stöds inte. 
 
     |    URL    |    Information    |    Matchar    |    Matchar inte    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -232,6 +233,7 @@ Du kan använda olika URL-format för att skapa dina webbplatslistor med tillåt
     - IP-adresser
     - `https://*`
     - `http://*`
+    - `https://*contoso.com`
     - `http://www.contoso.com:*`
     - `http://www.contoso.com: /*`
   
@@ -247,13 +249,13 @@ Använd nyckel/värde-paret nedan för att konfigurera om dessa mjuka övergång
 
 ## <a name="directing-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Dirigera användarna till Microsoft Edge i stället för Intune Managed Browser 
 
-Både Intune Managed Browser och Microsoft Edge kan nu användas av principskyddade webbläsare. För att säkerställa att dina användare använder rätt webbläsarapp ska du rikta alla Intune-hanterade appar (t.ex. Outlook och OneDrive) med följande konfigurationsinställning:
+Både Intune Managed Browser och Microsoft Edge kan nu användas av principskyddade webbläsare. För att säkerställa att dina användare använder rätt webbläsarapp ska du rikta alla Intune-hanterade appar (t.ex. Outlook, OneDrive och SharePoint) med följande konfigurationsinställning:
 
 |    Tangent    |    Värde    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    Värdet `true` uppmanar användarna att använda Microsoft Edge.<p>Värdet `false` uppmanar användarna att använda Intune Managed Browser.    |
+|    `com.microsoft.intune.useEdge`    |    Värdet `true` uppmanar användarna att hämta och använda Microsoft Edge.<br>Värdet `false` låter användarna att använda Intune Managed Browser.    |
 
-Om den här appens konfigurationsvärde inte har angetts definierar följande logik vilken webbläsare som kommer att användas för att öppna företagets länkar.
+Om den här appens konfigurationsvärde **inte** har angetts definierar följande logik vilken webbläsare som kommer att användas för att öppna företagets länkar.
 
 I Android:
 - Intune Managed Browser startas om användaren har både Intune Managed Browser och Microsoft Edge på sin enhet. 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/30/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79edbf77f4f6b188d9fa4bf75ce8cacbad9dcf9c
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 524c4aebe6cdde0b0bc45f76a4675bbed8172d67
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402779"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67511707"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -31,18 +31,18 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
 > [!IMPORTANT]
 > Intune-företagsportalen krävs på enheten för att kunna ta emot appskyddsprinciper för Android-enheter. Mer information finns i [Krav för åtkomst till appar i Intune-företagsportalen](end-user-mam-apps-android.md).
 
-##  <a name="data-protection"></a>Dataskydd 
+## <a name="data-protection"></a>Dataskydd 
 ### <a name="data-transfer"></a>Dataöverföring
 | Inställningen | Använd så här | Standardvärde |
 |------|------|------|
 | **Säkerhetskopiera organisationsdata till Android-säkerhetskopieringstjänster** | Välj **Blockera** om du vill förhindra att den här appen säkerhetskopierar arbets- eller skoldata till [Android-säkerhetskopieringstjänsten](https://developer.android.com/google/backup/index.html).<br><br> Välj **Tillåt** om du vill att den här appen ska kunna säkerhetskopiera arbets- eller skoldata.| **Tillåt** |
 | **Skicka organisationsdata till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> <p>Som standard finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. Du kan också skapa egna undantag om du vill tillåta att data överförs till en app som inte stöder Intune APP. Mer information finns i [Undantag vid dataöverföring](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Den här principen kan även gälla för Android App-länkar.  Allmänna webblänkar hanteras av principinställningen **Öppna applänkar i Intune Managed Browser**.<p><div class="NOTE"><p>Obs!</p><p>Intune saknar för närvarande stöd för funktionen Android Instant Apps. Intune blockerar alla dataanslutningar till och från appen. I dokumentationen för Android Developer finns mer information om [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p><p>Om **Skicka organisationsdata till andra appar** är inställd på **Alla appar**, kan textdata fortfarande överföras via OS-delning till Urklipp.</p></div> | **Alla appar** | 
-|<ul><ui> **Välj vilka appar som ska undantas** | Det här alternativet är tillgängligt när du väljer *Principhanterade appar* för det föregående alternativet. | |
+|<ul><ui>**Välj vilka appar som ska undantas** | Det här alternativet är tillgängligt när du väljer *Principhanterade appar* för det föregående alternativet. | |
 | **Ta emot data från andra appar** | Ange vilka appar som kan överföra data till den här appen: <ul><li>**Principhanterade appar**: Tillåt endast överföring från andra principhanterade appar.</li><li>**Alla appar**: Tillåt dataöverföring från alla appar.</li><li>**Inga**: Tillåt inte dataöverföring från någon app, inklusive andra principhanterade appar. </li></ul> <p>Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring från. En fullständig lista över appar och tjänster finns i avsnittet [Undantag vid dataöverföring](app-protection-policy-settings-android.md#data-transfer-exemptions). | **Alla appar** |
 | **Spara kopior av organisationsdata** | Välj **Blockera** om du vill inaktivera alternativet Spara som i den här appen. Välj **Tillåt** om du vill tillåta att Spara som används. **Obs:** *Den här inställningen stöds i Microsoft Excel, OneNote, PowerPoint och Word. Verksamhetsspecifika appar och appar från tredje part kanske också stöder den.*| **Tillåt** |  
-|<ul><ui> **Tillåt användaren att spara kopior i valda tjänster** |Användare kan spara till de valda tjänsterna (OneDrive för företag, SharePoint och lokal lagring). Alla andra tjänster kommer att blockeras.  | **0 valda** |
+|<ul><ui>**Tillåt användaren att spara kopior i valda tjänster** |Användare kan spara till de valda tjänsterna (OneDrive för företag, SharePoint och lokal lagring). Alla andra tjänster kommer att blockeras.  | **0 valda** |
 | **Begränsa klipp ut, kopiera och klistra in mellan andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj mellan: <ul><li>**Blockerad**:  Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt åtgärderna klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen. | **Alla appar** |
-| **Gräns för att klippa ut och kopiera tecken för alla appar** | Ange det antal tecken som kan klippas ut eller kopieras från organisationens data och konton.  Det här tillåter delning av det angivna antalet tecken till valfritt program oavsett inställningen ”Begränsa klipp ut, kopiera och klistra in med andra appar”.<p>Standardvärde = 0<p>**Obs!** Kräver Intune-företagsportalen version 5.0.4364.0 eller senare.  | **0** |
+| <ul><ui>**Gräns för att klippa ut och kopiera tecken för alla appar** | Ange det antal tecken som kan klippas ut eller kopieras från organisationens data och konton.  Det här tillåter delning av det angivna antalet tecken till valfritt program oavsett inställningen ”Begränsa klipp ut, kopiera och klistra in med andra appar”.<p>Standardvärde = 0<p>**Obs!** Kräver Intune-företagsportalen version 5.0.4364.0 eller senare.  | **0** |
 | **Skärmdump och Google Assistant** | Välj **Inaktivera** om du vill blockera funktionerna för skärmdumpar och **Google-assistenten** på enheten när den här appen används. Om du väljer **Inaktivera** blir även förhandsgranskningsbilden i appväxlaren suddig när den här appen används med ett arbets- eller skolkonto.| **Aktivera** |
 
   
@@ -50,7 +50,7 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
 | Inställningen | Använd så här | Standardvärde |
 |------|------|------|
 | **Kryptera organisationsdata** | Välj **Kräv** om du vill aktivera kryptering av arbets- eller skoldata i den här appen. Intune använder ett OpenSSL-baserat 256-bitars krypteringsschema tillsammans med Android Keystore-systemet för att kryptera appdata på ett säkert sätt. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid. SDK fortsätter att stödja 128-bitars nycklar för kompatibilitet med innehåll och appar som använder äldre versioner av SDK. <br><br> Krypteringsmetoden är kompatibel med FIPS 140-2.     |  **Kräv**|  
-
+| <ul><ui>**Kryptera organisationsdata på registrerade enheter** | Välj **Krävs** för att framtvinga kryptering av organisationsdata med Intune app-lagerkryptering på alla enheter. Välj **Krävs inte** för att inte framtvinga kryptering av organisationsdata med Intune app-lagerkryptering på alla enheter.| **Kräv** |
 
 
 ### <a name="functionality"></a>Funktioner
@@ -58,13 +58,16 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
 |------|------|------|
 | **Synkronisera app med inbyggd kontaktapp** | Välj **Inaktivera** om du vill förhindra att appen sparar data i den interna appen Kontakter på enheten. Om du väljer **Aktiver** kan appen spara data i den interna appen Kontakter på enheten. <br><br>När du utför en selektiv rensning för att ta bort arbets- eller skoldata från appen kommer kontakter som har synkats direkt från appen till den inbyggda appen Kontakter att tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen. | **Aktivera** |
 | **Utskrift av organisationsdata** | Välj **Inaktivera** om du vill förhindra att appen skriver ut arbets- eller skoldata. | **Aktivera** |
-|**Dela webbinnehåll med principhanterade webbläsare** | Ange hur webbinnehåll (http-/https-länkar) öppnas från principhanterade program. Välj mellan:<ul><li>**Kräv**: Tillåt att webbinnehåll endast öppnas i principhanterade webbläsare.</li><li>**Inte konfigurerad**: Tillåt webblänkar i alla appar </li></ul><br><br> Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](app-configuration-managed-browser.md).<br><br>**Principhanterade webbläsare**<br>Om du distribuerar flera principhanterade webbläsare kommer endast en att startas.  Startordern blir Intune Managed Browser och sedan Microsoft Edge.  På Android kan slutanvändarna välja från andra principhanterade appar som stöder http-/https-länkar om varken Intune Managed Browser eller Microsoft Edge är installerat.<p>Om en principhanterad webbläsare krävs men inte har installerats uppmanas slutanvändarna att installera Intune Managed Browser.<p>Om en principhanterad webbläsare krävs hanteras Android App-länkar av principinställningen **Tillåt att appen överför information till andra appar**.<p>**Intune-enhetsregistrering**<br>Om du använder Intune för att hantera dina enheter läser du Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune. <p>**Principhanterat Microsoft Edge**<br>Microsoft Edge-webbläsaren för mobila enheter (iOS och Android) har nu stöd för Intune-appskyddsprinciper. Användare som loggar in med sina företags Azure AD-konton i Microsoft Edge-webbläsarprogrammet kommer att skyddas av Intune. Microsoft Edge-webbläsaren integrerar MAM SDK och stöder alla dess dataskyddsprinciper, med undantag för att den förhindrar följande:<br><ul><li>**Spara-som**: Microsoft Edge-webbläsaren tillåter inte att användare lägger till direkta appanslutningar till molnlagringsleverantörer (till exempel OneDrive).</li><li>**Kontaktsynkronisering**: Microsoft Edge-webbläsaren sparar inte till interna kontaktlistor.</li></ul><br>**Obs:** *APP SDK kan inte avgöra huruvida en målapp är en webbläsare. På Android-enheter tillåts andra hanterade webbläsarappar som stöder http/https-avsikten.* | **Inte konfigurerat** |
+|**Dela webbinnehåll med principhanterade webbläsare** | Ange hur webbinnehåll (http-/https-länkar) öppnas från principhanterade program. Välj mellan:<ul><li>**Kräv**: Tillåt att webbinnehåll endast öppnas i principhanterade webbläsare.</li><li>**Ohanterad webbläsare**: Tillåt endast att webbinnehåll öppnas i den ej hanterade webbläsaren som definieras av inställningen **Ej hanterat webbläsar-ID**. Webbinnehållet hanteras i målwebbläsaren.<br>**Obs!** Kräver Intune-företagsportalen version 5.0.4415.0 eller senare.</li><li>**Inte konfigurerad**: Tillåt webblänkar i alla appar </li></ul><br><br> Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](app-configuration-managed-browser.md).<br><br>**Principhanterade webbläsare**<br>Om du distribuerar flera principhanterade webbläsare kommer endast en att startas.  Startordern blir Intune Managed Browser och sedan Microsoft Edge.  På Android kan slutanvändarna välja från andra principhanterade appar som stöder http-/https-länkar om varken Intune Managed Browser eller Microsoft Edge är installerat.<p>Om en principhanterad webbläsare krävs men inte har installerats uppmanas slutanvändarna att installera Intune Managed Browser.<p>Om en principhanterad webbläsare krävs hanteras Android App-länkar av principinställningen **Tillåt att appen överför information till andra appar**.<p>**Intune-enhetsregistrering**<br>Om du använder Intune för att hantera dina enheter läser du Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune. <p>**Principhanterat Microsoft Edge**<br>Microsoft Edge-webbläsaren för mobila enheter (iOS och Android) har nu stöd för Intune-appskyddsprinciper. Användare som loggar in med sina företags Azure AD-konton i Microsoft Edge-webbläsarprogrammet kommer att skyddas av Intune. Microsoft Edge-webbläsaren integrerar MAM SDK och stöder alla dess dataskyddsprinciper, med undantag för att den förhindrar följande:<br><ul><li>**Spara-som**: Microsoft Edge-webbläsaren tillåter inte att användare lägger till direkta appanslutningar till molnlagringsleverantörer (till exempel OneDrive).</li><li>**Kontaktsynkronisering**: Microsoft Edge-webbläsaren sparar inte till interna kontaktlistor.</li></ul><br>**Obs:** *APP SDK kan inte avgöra huruvida en målapp är en webbläsare. På Android-enheter tillåts andra hanterade webbläsarappar som stöder http/https-avsikten.* | **Inte konfigurerat** |
+|<ul><ui>**Ej hanterad webbläsar-ID** | Ange program-ID för en enda webbläsare. Webbinnehåll (http/https-länkar) från principhanterade program öppnas i den angivna webbläsaren.  Webbinnehållet hanteras i målwebbläsaren. | **Tom** |
+|<ul><ui>**Ej hanterat webbläsar-ID** | Ange programnamnet för webbläsare som är associerade med ett **ej hanterat webbläsar-ID**. Det här namnet kommer att visas för användarna om den angivna webbläsaren inte har installerats.  | **Tom** |
 
-  ## <a name="data-transfer-exemptions"></a>Undantag vid dataöverföring
+
+## <a name="data-transfer-exemptions"></a>Undantag vid dataöverföring
 
   Det finns vissa undantag för appar och plattformstjänster som Intune-appskyddsprinciper kan tillåta dataöverföring till och från. Till exempel måste alla Intune-hanterade appar för Android kunna överföra data till och från Googles ”text till tal”-funktion, så att text från mobilenhetens skärm kan läsa upp. Den här listan kan ändras och innehåller de tjänster och program som anses vara användbara för säker produktivitet.
 
-  ### <a name="full-exemptions"></a>Fullständiga undantag
+### <a name="full-exemptions"></a>Fullständiga undantag
 
   Dessa appar och tjänster har full tillåtelse att överföra data till och från Intune-hanterade appar.
 
@@ -81,7 +84,7 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
   | com.azure.authenticator | Azure Authenticator-appen, som krävs för autentisering i många scenarier. |
   | com.microsoft.windowsintune.companyportal | Intune Företagsportal|
 
-  ### <a name="conditional-exemptions"></a>Villkorliga undantag
+### <a name="conditional-exemptions"></a>Villkorliga undantag
   Dessa appar och tjänster kan överföra data till och från Intune-appar under vissa omständigheter.
 
   |App-/tjänstnamn | Beskrivning | Villkor för undantag|
@@ -93,7 +96,7 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
 
 Mer information finns i [Undantag för dataöverföringsprinciper i appar](app-protection-policies-exception.md).
 
-##  <a name="access-requirements"></a>Åtkomstkrav
+## <a name="access-requirements"></a>Åtkomstkrav
 
 | Inställningen | Använd så här |  
 |------|------| 
