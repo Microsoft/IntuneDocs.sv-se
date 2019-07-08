@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196769"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545736"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
@@ -63,7 +63,7 @@ Använd följande steg för att registrera macOS-enheter som kör OS X El Capita
     * Om du inte har några enheter visas meddelandet: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
 
      ![En skärmbild av sidan Enheter med en röd ruta runt meddelandealternativet för att markera var du ska klicka.](./media/CP-enroll-MACOS-1808.png)  
-5.  Slutför det steg nedan som överensstämmer med det meddelande som visas i företagsportalen.  
+5. Slutför det steg nedan som överensstämmer med det meddelande som visas i företagsportalen.  
     * Om du lägger till en enhet för första gången uppmanas du att ladda ned företagsportalappen på enheten. Klicka på **Hämta** att fortsätta.  
 
          ![Exempel på skärmbild för meddelandeskärmen för att hämta macOS-företagsportalappen. Användaren kan välja att klicka på den blå knappen Hämta längst ned till vänster i meddelandet, eller den grå knappen Avbryt längst ned till höger.](./media/CP-enroll-download-macOS-1808.png)  

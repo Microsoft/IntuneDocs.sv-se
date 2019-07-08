@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafd9c92a51c8ef258d151a3c19c271fdc45f4c2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b68ea31a6c5d902e66c0eda8127e0f68383910f8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835868"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529125"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Avregistrera din Android-enhet från hanteringen  
 
@@ -33,6 +33,9 @@ Ta bort en registrerad Android-enhet så att den inte längre hanteras av din or
 * Enheten visas inte längre på Företagsportalen.
 * Du kan inte installera appar från Företagsportalen.
 * Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.  
+
+> [!NOTE]
+> Du kan inte avregistrera eller ta bort dina företagsägda enheter från Microsoft Intune app. Enheten har registrerats under den inledande enhetsinställningen och måste registreras för att komma åt din organisations resurser.  
 
 1. Tryck på de tre lodräta punkterna i det övre högra hörnet på Företagsportalen. Åtgärdsmenyn öppnas.
 
@@ -48,8 +51,8 @@ Ta bort en registrerad Android-enhet så att den inte längre hanteras av din or
 
 Så här tar du bort alla data som företagsportalappen för Android lagrar på din enhet:
 
--   Rensa appdata genom att trycka på **Program** > **[*appens namn*]** > **Rensa data**.
--   Ta bort följande mapp: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
+- Rensa appdata genom att trycka på **Program** > **[*appens namn*]**  > **Rensa data**.
+- Ta bort följande mapp: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
 ## <a name="uninstall-the-company-portal-app"></a>Avinstallera företagsportalappen  
 Företagsportalen är en app för enhetshantering. Den kan inte avinstalleras förrän du avregistrerat din enhet från dess hantering. När du har gjort det trycker du på och håller ned ikonen för företagsportalappen tills du ser **Avinstallera**. Tryck på **Avinstallera** för att ta bort appen från enheten.  
