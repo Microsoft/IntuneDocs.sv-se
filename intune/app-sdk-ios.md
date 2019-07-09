@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4877920821b2471f752f9fdb8941e87576d937ba
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: 9ec0ab28f2b32cf3c60d6d674cfac5a5b21d094d
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413866"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558404"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -70,6 +70,7 @@ Följande huvudfiler innehåller API:er, datatyper och protokoll som Intune App 
     * IntuneMAMDataProtectionInfo.h
     * IntuneMAMDataProtectionManager.h
     * IntuneMAMDefs.h
+    * IntuneMAMDiagnosticConsole.h
     * IntuneMAMEnrollmentDelegate.h
     * IntuneMAMEnrollmentManager.h
     * IntuneMAMEnrollmentStatus.h
@@ -735,6 +736,10 @@ Ja, IT-administratören kan skicka ett kommando för selektiv rensning till prog
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Finns det en exempelapp som visar hur man integrerar SDK?
 
 Ja! Vi har nyligen gjort om vår exempelapp med öppen källkod: [Wagr för iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Wagr har nu aktiverats för appskyddsprincip med hjälp av Intune App SDK.
+
+### <a name="how-can-i-troubleshoot-my-app"></a>Hur felsöker jag min app?
+
+Intune SDK för iOS 9.0.3+ stöder möjligheten att lägga till en diagnostics-konsolen i mobilappen för att testa principer och logga fel. `IntuneMAMDiagnosticConsole.h` definierar den `IntuneMAMDiagnosticConsole` gränssnittet för klass, vilken utvecklare kan använda för att visa diagnostisk Intune-konsolen. Detta kan slutanvändare eller utvecklare under testet om du vill samla in och dela Intune-loggarna för att diagnostisera eventuella problem som de kan ha. Detta API är valfritt för integrerare.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Skicka in din app till App Store
 

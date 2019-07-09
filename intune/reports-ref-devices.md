@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f93416a8fd6190549a958f1b1a7e5f3bdf6df1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045306"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547925"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
 Kategorin **Enheter** innehåller entiteter för mobilenheter som spårar information, till exempel:
 
-  -  Enhetstyp
-  -  Enhetsregistrering och registreringsstatus
-  -  Äganderätt till enhet
-  -  Status för enhetshantering
-  -  Enhetsmedlemskap i Azure AD-status
-  -  Registreringsstatus
-  -  Tidigare information om enheten
-  -  Inventering av appar på enheten
+  - Enhetstyp
+  - Enhetsregistrering och registreringsstatus
+  - Äganderätt till enhet
+  - Status för enhetshantering
+  - Enhetsmedlemskap i Azure AD-status
+  - Registreringsstatus
+  - Tidigare information om enheten
+  - Inventering av appar på enheten
 
 ## <a name="devicetypes"></a>DeviceTypes
 

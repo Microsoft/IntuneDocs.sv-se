@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 07/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,20 +16,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5f1b4c0fd0c9d8cfdc443b2af3c6f90a6f32756
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: aea4a3d6f8d28e4277435b1d9fc092e68adb9e55
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373644"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530313"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Använda anpassade inställningar för Android Enterprise-enheter i Microsoft Intune
 
-Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Android Enterprise-enheter med hjälp av en ”anpassad profil”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
+Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar för dina Android Enterprise Work Profile-enheter med hjälp av en ”anpassad profil”. Anpassade profiler är en funktion i Intune. De gör att du kan lägga till enhetsinställningar och funktioner som inte är inbyggda i Intune.
 
 Anpassade profiler för Android Enterprise använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att styra funktioner på Android Enterprise-enheter. De här inställningarna används vanligtvis av tillverkare av mobila enheter för att styra dessa funktioner.
 
-Intune stöder ett begränsat antal anpassade Android-profiler.
+Intune stöder ett begränsat antal Android Enterprise anpassade profiler, inklusive:
+
+- ./Vendor/MSFT/WiFi/Profile/SSID/inställningar: [skapa en Wi-Fi-profil med en i förväg delad nyckel](wi-fi-profile-shared-key.md) har några exempel.
+- ./Vendor/MSFT/VPN/Profile/Name/PackageList: [skapa en VPN-profil per app](android-pulse-secure-per-app-vpn.md) har några exempel.
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: finns i den [exempel](#example) (i den här artikeln).
+
+Om du behöver ytterligare inställningar, se [OEMConfig för Android Enterprise](android-oem-configuration-overview.md).
 
 Den här artikeln beskriver hur du skapar en anpassad profil för Android Enterprise-enheter. Den innehåller också ett exempel på en anpassad profil som blockerar kopierings- och inklistringsfunktionerna.
 

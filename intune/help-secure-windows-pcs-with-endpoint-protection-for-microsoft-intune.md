@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19c02c8d4c9ece66d03b3510071bb90e7f35ad3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047522"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548766"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Skydda Windows-datorer med Endpoint Protection för Microsoft Intune
 
@@ -46,15 +46,15 @@ Som IT-administratör är en av dina högsta prioriteter att hålla datorer som 
 
 Om du vill växla från ditt aktuella slutpunktsskydd till Microsoft Intune Endpoint Protection, gör du följande:
 
-1.  Låt ditt aktuella slutpunktsskyddprogram köra medan du distribuerar Intune-klientprogramvaran på dessa datorer.
+1. Låt ditt aktuella slutpunktsskyddprogram köra medan du distribuerar Intune-klientprogramvaran på dessa datorer.
 
-2.  Bekräfta att Microsoft Intune Endpoint Protection har installerats och skyddar klientdatorerna.
+2. Bekräfta att Microsoft Intune Endpoint Protection har installerats och skyddar klientdatorerna.
 
-3.  Ta bort från slutpunktsskyddprogram från tredje part så här:
+3. Ta bort från slutpunktsskyddprogram från tredje part så här:
 
-    -   Installera ett avinstallationsverktyg med hjälp av programvarudistribution för Intune som tillhandahålls av tillverkaren av slutpunktsskyddprogrammet. Mer information finns i [Distribuera appar med Microsoft Intune](apps-deploy.md).
+    - Installera ett avinstallationsverktyg med hjälp av programvarudistribution för Intune som tillhandahålls av tillverkaren av slutpunktsskyddprogrammet. Mer information finns i [Distribuera appar med Microsoft Intune](apps-deploy.md).
 
-    -   Ta bort från slutpunktsskyddprogram från tredje part manuellt så här:
+    - Ta bort från slutpunktsskyddprogram från tredje part manuellt så här:
 
 > [!NOTE]
 > Intune kommer inte att avinstallera slutpunktsskyddprogram från tredje part automatiskt.
@@ -62,9 +62,9 @@ Om du vill växla från ditt aktuella slutpunktsskydd till Microsoft Intune Endp
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>Konfigurera Microsoft Intune Endpoint Protection
 Använd följande steg när du konfigurerar Endpoint Protection för Microsoft Intune.
 
-1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Princip** > **Lägg till princip**.
+1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Princip** > **Lägg till princip**.
 
-2.  Expandera **Datorhantering** och välj sedan **Inställningar för Microsoft Intune Agent**. Välj **Skapa och distribuera en anpassad princip** för att ange en princip för Endpoint Protection-inställningar. Tryck sedan på knappen **Skapa princip**.
+2. Expandera **Datorhantering** och välj sedan **Inställningar för Microsoft Intune Agent**. Välj **Skapa och distribuera en anpassad princip** för att ange en princip för Endpoint Protection-inställningar. Tryck sedan på knappen **Skapa princip**.
 
 Du kan använda de rekommenderade inställningarna eller anpassa inställningarna. Om du behöver mer information om hur du skapar och distribuerar principer läser du artikeln [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 506bdc73717ed9af11ab8db0e5f459145ab27f83
-ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
-ms.translationtype: MTE75
+ms.openlocfilehash: 7081bc04cc0a6de0a0a6e8214ac0a6edea459378
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67407095"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558391"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -61,9 +61,9 @@ Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Aktivera Intune-appskyddsprinciper i din iOS-mobilapp
 1. Lägg till [Microsoft.Intune.MAM.Xamarin.iOS NuGet-paketet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.iOS) i ditt Xamarin.iOS-projekt.
-2.  Följ de allmänna steg som krävs för att integrera Intune App SDK i en mobila iOS-app. Du kan börja med steg 3 av integrationsinstruktionerna från [Utvecklingsguide för Intune App SDK för iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). Du kan hoppa över det sista steget i avsnittet om att köra IntuneMAMConfigurator, eftersom detta verktyg ingår i paketet Microsoft.Intune.MAM.Xamarin.iOS och körs automatiskt under byggtiden.
+2. Följ de allmänna steg som krävs för att integrera Intune App SDK i en mobila iOS-app. Du kan börja med steg 3 av integrationsinstruktionerna från [Utvecklingsguide för Intune App SDK för iOS](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). Du kan hoppa över det sista steget i avsnittet om att köra IntuneMAMConfigurator, eftersom detta verktyg ingår i paketet Microsoft.Intune.MAM.Xamarin.iOS och körs automatiskt under byggtiden.
     **Viktigt**: Aktivering av nyckelringsdelning för en app skiljer sig något åt mellan Visual Studio och Xcode. Öppna appens .plist för rättigheter och kontrollera att alternativet ”Aktivera nyckelringar” är aktiverat och att lämpliga delningsgrupper för nyckelringar har lagts till i avsnittet. Kontrollera sedan att .plist för rättigheter har angetts i fältet ”anpassade rättigheter” i projektets alternativ ”iOS-paketsignering” för alla lämpliga kombinationer av konfiguration/plattform.
-3.  När bindningarna har lagts till och appen är korrekt konfigurerad, kan din app börja använda Intune SDK:s API:er. Om du vill göra detta, måste du inkludera följande namnrymd:
+3. När bindningarna har lagts till och appen är korrekt konfigurerad, kan din app börja använda Intune SDK:s API:er. Om du vill göra detta, måste du inkludera följande namnrymd:
 
       ```csharp
       using Microsoft.Intune.MAM;
@@ -88,7 +88,6 @@ Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har
 > Det finns ingen ommappning för iOS. Integrering i en Xamarin.Forms-app bör vara samma som för ett vanligt Xamarin.iOS-projekt. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Aktivera skyddsprinciper för Intune-appar i din Android-mobilapp
-
 1. Lägg till [Microsoft.Intune.MAM.Xamarin.Android NuGet-paketet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android) i ditt Xamarin.Android-projekt.
     1. För en Xamarin.Forms-app lägger du även till [Microsoft.Intune.MAM.Remapper.Tasks NuGet-paketet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) i Xamarin.Android-projektet. 
 2. Följ de allmänna stegen som krävs för att [integrera Intune App SDK](app-sdk-android.md) med en Android-mobilapp och läs det här dokumentet för ytterligare information.
@@ -136,7 +135,7 @@ public override void OnMAMCreate()
     IMAMNotificationReceiverRegistry registry = MAMComponents.Get<IMAMNotificationReceiverRegistry>();
     foreach (MAMNotificationType notification in MAMNotificationType.Values())
     {
-    registry.RegisterReceiver(new ToastNotificationReceiver(this), notification);
+        registry.RegisterReceiver(new ToastNotificationReceiver(this), notification);
     }
     ...
 ```
@@ -172,6 +171,14 @@ Det här förväntas, eftersom när ommappningen ändrar arvet för Xamarin-klas
 
 > [!NOTE]
 > Ommappningen skriver om ett beroende som Visual Studio använder för automatisk komplettering med IntelliSense. Därför kan du behöva återskapa och läsa in projektet igen när ommappningen läggs till för att IntelliSense ska identifiera ändringarna korrekt.
+
+### <a name="company-portal-app"></a>Företagsportalappen
+Intune SDK Xamarin-bindningar som förlitar sig på förekomsten av den [Företagsportalen](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android-app på enheten för att aktivera appskyddsprinciper. Företagsportalen hämtar appskyddsprinciper från Intune-tjänsten. När appen initieras läser den in principen och koden för att kunna aktivera principen från företagsportalen. Användaren behöver inte ha loggat in.
+
+> [!NOTE]
+> Om Företagsportalsappen inte finns på **Android**-enheten fungerar en Intune-hanterad app som en normal app som saknar stöd för Intunes appskyddsprinciper.
+
+Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera enheten med företagsportalappen.
 
 ## <a name="support"></a>Stöd
 Om din organisation är en befintlig Intune-kund kan du kontakta din representant på Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) så hjälper vi dig så snart vi kan. 

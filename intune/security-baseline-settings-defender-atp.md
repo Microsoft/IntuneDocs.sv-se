@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 837442f93bbac2c5eb19b3c433c91f91aa38a17e
-ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
+ms.openlocfilehash: 5bdd2171853a8db944c910ef4d912f7681d17077
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67197536"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549129"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -192,7 +192,7 @@ Mer information finns i [BitLocker-grupprincipinställningar](https://docs.micro
 ## <a name="device-control"></a>Enhetskontroll  
 
 - **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**  
-  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) – Då inställt till *Ja*, söker Defender efter skadlig och oönskad programvara i flyttbara enheter, som flash-enheter, under en fullständig genomsökning. Defender Antivirus söker igenom alla filer på USB-enheter innan filerna på USB-enheten kan köras.
+  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) – Om det är inställt på *Ja* söker Defender efter skadlig och oönskad programvara i flyttbara enheter, som flash-enheter, under en fullständig genomsökning. Defender Antivirus söker igenom alla filer på USB-enheter innan filerna på USB-enheten kan köras.
 
   Relaterade inställning i den här listan: *Defender/AllowFullScanOnMappedNetworkDrives*  
 
