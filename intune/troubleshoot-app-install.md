@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7a4be4deddae2f2983996a6880232463924c948
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: ebd8f15a8f8633043f64cb4e004aafbb3c399042
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558512"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648884"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
@@ -51,17 +51,17 @@ Problemet indikeras i informationen om appinstallationsfel. Du kan använda den 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
-## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Installation av riktar sig mot når inte enheten
-Följande bör övervägas när du har problem med att installera appar:
-- Om appen inte visas i Företagsportalen, se till att appen har distribuerats med **tillgänglig** avsikt och att användaren har åtkomst till Företagsportalen med den typ av enhet som stöds av appen.
-- Användaren behöver lägga till ett arbetskonto till enheten för Windows BYOD-enheter.
-- Kontrollera om användaren är över gränsen för AAD-enhet:
-  1. Gå till [Enhetsinställningar för Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
-  2. Anteckna värdet för **maximalt enheter per användare**.
-  3. Gå till [Azure Active Directory-användare](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Installation av riktad app för användar grupp når inte enhet
+Följande åtgärder bör beaktas när du har problem med att installera appar:
+- Om appen inte visas i Företagsportal, se till att appen distribueras med **tillgänglig** avsikt och att användaren får åtkomst till företagsportal med den enhets typ som stöds av appen.
+- För Windows BYOD-enheter måste användaren lägga till ett arbets konto till enheten.
+- Kontrol lera om användaren är över enhets gränsen för AAD:
+  1. Navigera till [Azure Active Directory enhets inställningar](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  2. Anteckna det värde som har angetts för **maximalt antal enheter per användare**.
+  3. Navigera till [Azure Active Directory användare](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
   4. Välj den berörda användaren och klicka på **enheter**.
-  5. Om användaren är över den angivna gränsen och ta sedan bort alla inaktuella poster som inte längre behövs.
-- För iOS DEP-enheter kan du se till att användaren visas som **registrerats av användare** Enhetsöversikt för Intune-bladet. Om det visar NA sedan distribuera en Konfigurationsprincip för Intune-Företagsportalen. Mer information finns i [konfigurera företagsportalappen](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
+  5. Om användaren är över angiven gräns tar du bort eventuella inaktuella poster som inte längre behövs.
+- För iOS DEP-enheter kontrollerar du att användaren är listad som **registrerad av användaren** i Intune-bladet översikt. Om det visar NA, distribuerar du en konfigurations princip för Intune-företagsportal. Mer information finns i [Konfigurera appen Företagsportal](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Felsökning av Win32-appinstallationen
 
@@ -161,8 +161,14 @@ Följande felmeddelanden och beskrivningar ger information om både Android- och
 
 Informationen i avsnittet [Troubleshooting packaging, deployment, and query of Windows Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Felsöka paketering, distribution och frågor för Windows Store-appar) hjälper dig att felsöka vanliga problem som kan uppstå när du installerar appar från Microsoft Store, oavsett om du gör det med Intune eller på annat sätt.
 
+## <a name="app-troubleshoooting-resources"></a>App troubleshoooting-resurser
+- [Distribuera Visio och Project som en del av din Office Pro plus-distribution](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
+- [Vidta åtgärder för att säkerställa att MSfB-appar distribueras via Intune-installation på Windows 10 1903](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
+- [Felsöka distributioner av MSI-appar i Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
+- [Metod tips för program distribution till den klassiska Windows PC-agenten i Intune](https://support.microsoft.com/en-us/help/2583929/best-practices-for-intune-software-distribution-to-windows-pc)
+
 ## <a name="next-steps"></a>Nästa steg
 
 - Ytterligare information om felsökning av Intune information finns i [Använd felsökningsportalen för att hjälpa företagets användare](help-desk-operators.md). 
-- Lär dig om kända problem i Microsoft Intune. Mer information finns i [Kända problem i Microsoft Intune](known-issues.md).
+- Lär dig om kända problem i Microsoft Intune. Mer information finns i [Intune kund framgångar](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 - Behöver du mer hjälp? Se [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).
