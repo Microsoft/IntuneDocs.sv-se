@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530742"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548049"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Självstudie: Skydda e-post i Exchange Online på hanterade enheter
 Lär dig att använda principer för enhetsefterlevnad med villkorlig åtkomst för att se till att iOS-enheter endast har åtkomst till e-post i Exchange Online om de hanteras med Intune och använder en godkänd e-postapp. 
@@ -53,7 +53,7 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 4. I **Plattform** väljer du **iOS**. 
 5. Välj **Inställningar** > **E-post**. 
      
-    1.  Bredvid **Kräv att mobila enheter har en hanterad e-postprofil** väljer du **Kräv**.
+    1. Bredvid **Kräv att mobila enheter har en hanterad e-postprofil** väljer du **Kräv**.
     2. Välj **OK**.
 
     ![Ange att efterlevnadsprincipen för e-post ska kräva en hanterad e-postprofil](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
@@ -77,7 +77,7 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 ## <a name="create-the-conditional-access-policy"></a>Skapa en princip för villkorlig åtkomst
 Nu ska vi skapa en princip för villkorlig åtkomst som kräver att alla enhetsplattformar registreras i Intune och uppfyller vår efterlevnadsprincip för Intune innan de kan få åtkomst till Exchange Online. Vi kommer även kräva Outlook-appen för e-poståtkomst. Principer för villkorlig åtkomst kan konfigureras i Azure AD-portalen eller i Intune-portalen. Eftersom vi redan är i Intune-portalen, skapar vi principen här.
 1. I Intune väljer du **Villkorlig åtkomst** > **Principer** > **Ny princip**.
-1.  I **Namn** anger du **Testprincip för e-post i Office 365**. 
+1. I **Namn** anger du **Testprincip för e-post i Office 365**. 
 3. Under **Tilldelningar** väljer du **Användare och grupper**. På fliken **Inkludera** väljer du **Alla användare** och sedan **Klar**.
 
 4. Under **Tilldelningar** väljer du **Molnappar**. Eftersom vi vill skydda e-posten i Office 365 Exchange Online, väljer vi det genom att följa dessa steg:

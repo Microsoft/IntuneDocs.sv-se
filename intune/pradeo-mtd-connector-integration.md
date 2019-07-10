@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1907ebf3d9233ca2324a4759b4f22a4c62e143c2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045790"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549251"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integrera Pradeo med Intune
 
@@ -32,47 +32,47 @@ Slutför följande steg för att integrera Pradeo Mobile Threat Defense-lösning
 
 Kontrollera att du har följande innan du börjar integrera Pradeo med Intune:
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Azure Active Directory-administratörsautentiseringsuppgifter som beviljar följande behörigheter:
+- Azure Active Directory-administratörsautentiseringsuppgifter som beviljar följande behörigheter:
 
-    -   Logga in och läsa användarprofil
+    - Logga in och läsa användarprofil
 
-    -   Gå till katalogen som den inloggade användaren
+    - Gå till katalogen som den inloggade användaren
 
-    -   Läs katalogdata
+    - Läs katalogdata
 
-    -   Skicka enhetsinformation till Intune
+    - Skicka enhetsinformation till Intune
 
--   Autentiseringsuppgifter som administratör för att få åtkomst till Pradeo Security-konsolen.
+- Autentiseringsuppgifter som administratör för att få åtkomst till Pradeo Security-konsolen.
 
 ### <a name="pradeo-app-authorization"></a>Pradeo-appauktorisering
 
 Processen för Pradeo-appauktorisering består av följande:
 
--   Tillåt att Pradeo-tjänsten förmedlar information om enhetens hälsostatus till Intune.
+- Tillåt att Pradeo-tjänsten förmedlar information om enhetens hälsostatus till Intune.
 
--   Pradeo synkroniserar med Azure AD-registreringsgruppmedlemskap för att fylla enhetens databas.
+- Pradeo synkroniserar med Azure AD-registreringsgruppmedlemskap för att fylla enhetens databas.
 
--   Tillåt att Pradeo-administratörskonsolen använder enkel inloggning för Azure AD.
+- Tillåt att Pradeo-administratörskonsolen använder enkel inloggning för Azure AD.
 
--   Tillåt att Pradeo-appen loggar in med enkel inloggning för Azure AD.
+- Tillåt att Pradeo-appen loggar in med enkel inloggning för Azure AD.
 
 ## <a name="to-set-up-pradeo-integration"></a>Så konfigurerar du Pradeo-integrering
 
-1.  Gå till [Pradeo Security-konsolen](https://www.apps-security.com) och logga in med dina autentiseringsuppgifter.
+1. Gå till [Pradeo Security-konsolen](https://www.apps-security.com) och logga in med dina autentiseringsuppgifter.
 
-2.  Välj **Administration - Enterprise Mobility Management** (Administration – mobilitetshantering i företaget) på menyn.
+2. Välj **Administration - Enterprise Mobility Management** (Administration – mobilitetshantering i företaget) på menyn.
 
-3.  Välj **Intune-logotypen**.
+3. Välj **Intune-logotypen**.
 
-4.  I fönstret **EMM (Enterprise mobility management) - Intune** (Mobilitetshantering i företaget) väljer du under **Step 1** (Steg 1) knappen **Pradeo Connector** (Pradeo-anslutningsapp). 
+4. I fönstret **EMM (Enterprise mobility management) - Intune** (Mobilitetshantering i företaget) väljer du under **Step 1** (Steg 1) knappen **Pradeo Connector** (Pradeo-anslutningsapp). 
 
     ![Skärmbild av fönstret Pradeo EMM Intune](./media/pradeo_setup.png)
 
 5. I Microsoft Intune-anslutningsfönstret anger du dina autentiseringsuppgifter för Intune.
 
-5.  Pradeo-webbplatsen öppnas igen. Under **Step 2** (Steg 2) väljer du knappen **Pradeo Device Health** (Hälsotillstånd för Pradeo-enhet).
+5. Pradeo-webbplatsen öppnas igen. Under **Step 2** (Steg 2) väljer du knappen **Pradeo Device Health** (Hälsotillstånd för Pradeo-enhet).
 
 7. I fönstret Pradeo Intune Connector (Pradeo Intune-anslutningsapp) väljer du **Accept** (Acceptera). 
 
@@ -86,4 +86,4 @@ Processen för Pradeo-appauktorisering består av följande:
 
 ## <a name="next-steps"></a>Nästa steg
 
--   [Konfigurera Pradeo-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Pradeo-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)

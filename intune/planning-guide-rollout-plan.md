@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09e2f88168acd1bc77051df924f756a326a02b21
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7a369b3bde7967db04a76ae1794d7b8fb86c21e4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041494"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548423"
 ---
 # <a name="develop-a-rollout-plan"></a>Utveckla en distributionsplan
 
@@ -53,11 +53,11 @@ Utnyttja din [kommunikationsplan](planning-guide-communication-plan.md), [suppor
 ### <a name="production-rollout"></a>Produktionsdistribution
 Efter en lyckad pilotdistribution är du redo att påbörja en fullständig driftssättning för resterande grupper i organisationen. Några exempel på distributionsgrupper och faser:
 
--   **Avdelningar** <br/>Varje avdelning kan vara en distributionsfas. Du har en hel avdelning i taget som mål. I den här typen av distribution tenderar alla användare på de olika avdelningarna att använda den mobila enheten på samma sätt och har åtkomst till samma program. Användarna har förmodligen samma typer av principer.
+- **Avdelningar** <br/>Varje avdelning kan vara en distributionsfas. Du har en hel avdelning i taget som mål. I den här typen av distribution tenderar alla användare på de olika avdelningarna att använda den mobila enheten på samma sätt och har åtkomst till samma program. Användarna har förmodligen samma typer av principer.
 
--   **Geografi** <br/>I den här alternativet sker distributionen till alla användare inom ett visst geografiskt område, t.ex. samma kontinent, land, region eller företagsbyggnad. Med den här typen av stegvis distribution kan du fokusera på den specifika användarplatsen. På så vis kan du använda en mer [assisterad](#user-assisted-enrollment) metod, eftersom antalet platser som distribuerar Intune samtidigt minskas. Eftersom det är möjligt att olika avdelningar eller användarfall befinner sig på samma plats kan olika användarfall distribueras samtidigt.
+- **Geografi** <br/>I den här alternativet sker distributionen till alla användare inom ett visst geografiskt område, t.ex. samma kontinent, land, region eller företagsbyggnad. Med den här typen av stegvis distribution kan du fokusera på den specifika användarplatsen. På så vis kan du använda en mer [assisterad](#user-assisted-enrollment) metod, eftersom antalet platser som distribuerar Intune samtidigt minskas. Eftersom det är möjligt att olika avdelningar eller användarfall befinner sig på samma plats kan olika användarfall distribueras samtidigt.
 
--   **Plattform** <br/>Den här distributionstypen innebär att distribuera liknande plattformar samtidigt. Ett exempel kan vara alla iOS-enheter den första månaden, följt av Android, följt av Windows. Den här typen av stegvis distribution förenklar supporten eftersom supportavdelningen bara behöver stödja en plattform i taget.
+- **Plattform** <br/>Den här distributionstypen innebär att distribuera liknande plattformar samtidigt. Ett exempel kan vara alla iOS-enheter den första månaden, följt av Android, följt av Windows. Den här typen av stegvis distribution förenklar supporten eftersom supportavdelningen bara behöver stödja en plattform i taget.
 
 Följande är ett exempel på en Intune-distributionsplan som innehåller målgrupper och tidslinjer:
 

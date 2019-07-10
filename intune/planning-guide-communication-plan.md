@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ec922d76ca08639139a7d130fb14c5e8bfa413
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046217"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548352"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Utveckla en kommunikationsplan för distribution
 
 Bra ändringshantering förlitar sig på tydlig och hjälpsam kommunikation om kommande ändringar. Om du vill göra Intune-distributionen smidigare bör din kommunikationsplan för distributionen täcka fyra områden:
 
--   Vilken information som ska förmedlas
+- Vilken information som ska förmedlas
 
--   Leveransmetod som används för kommunikationen
+- Leveransmetod som används för kommunikationen
 
--   Mottagaren av kommunikationen
+- Mottagaren av kommunikationen
 
--   Tidslinje för kommunikation
+- Tidslinje för kommunikation
 
 Vi ska gå igenom varje område mer detaljerat.
 
@@ -56,13 +56,13 @@ Den här [registreringsguiden för användare](https://gallery.technet.microsoft
 
 Det finns flera leveransmetoder som kan användas för att förmedla information om Intune-distribution till de organisationsgrupper och användare du riktar in dig på. I följande lista visas några exempel och för vilken våg du kan använda metoden:
 
--   Organisationsomfattande personliga möten eller Microsoft Teams-möten används för kickoff-vågen
+- Organisationsomfattande personliga möten eller Microsoft Teams-möten används för kickoff-vågen
 
--   E-post används för förregistrerings-, registrerings- och efterregistreringsvågorna
+- E-post används för förregistrerings-, registrerings- och efterregistreringsvågorna
 
--   Organisationens webbplatser används för alla vågor
+- Organisationens webbplatser används för alla vågor
 
--   Yammer, affischer och informationsblad används för förregistrerings- och kickoff-vågorna
+- Yammer, affischer och informationsblad används för förregistrerings- och kickoff-vågorna
 
 ## <a name="communications-timeline"></a>Tidsplan för kommunikation
 

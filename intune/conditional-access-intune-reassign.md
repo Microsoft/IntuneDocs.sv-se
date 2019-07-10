@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530673"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546886"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Tilldela om principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
@@ -51,13 +51,13 @@ Om du är redo att gå över till Azure-portalen, följer du stegen i det här �
 
 ### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Så här gör du för att verifiera principer för enhetsbaserad villkorlig åtkomst i den klassiska Intune-portalen
 
-1.  Gå till den [klassiska Intune-portalen](https://manage.microsoft.com) och logga in med dina autentiseringsuppgifter.
+1. Gå till den [klassiska Intune-portalen](https://manage.microsoft.com) och logga in med dina autentiseringsuppgifter.
 
-2.  Välj **Princip** i den vänstra menyn.
+2. Välj **Princip** i den vänstra menyn.
 
-3.  Välj **Villkorlig åtkomst** och sedan den molntjänst från Microsoft (t.ex. Exchange Online eller SharePoint Online) som du har skapat en princip för villkorlig åtkomst för.
+3. Välj **Villkorlig åtkomst** och sedan den molntjänst från Microsoft (t.ex. Exchange Online eller SharePoint Online) som du har skapat en princip för villkorlig åtkomst för.
 
-4.  Anteckna inställningarna för villkorlig åtkomst och använd dessa som referens när du ska återskapa samma principer för villkorlig åtkomst i Azure-portalen.
+4. Anteckna inställningarna för villkorlig åtkomst och använd dessa som referens när du ska återskapa samma principer för villkorlig åtkomst i Azure-portalen.
 
 ### <a name="app-and-device-based-conditional-access-policies-working-together"></a>App- och enhetsbaserade principer för villkorlig åtkomst i samverkan
 
@@ -194,13 +194,13 @@ När du har tilldelat om dina principer för villkorlig åtkomst i Azure-portale
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Så här inaktiverar du principerna för villkorlig åtkomst
 
-1.  Gå till den [klassiska Intune-portalen](https://manage.microsoft.com) och logga in med dina autentiseringsuppgifter.
+1. Gå till den [klassiska Intune-portalen](https://manage.microsoft.com) och logga in med dina autentiseringsuppgifter.
 
-2.  Välj **Princip** i den vänstra menyn.
+2. Välj **Princip** i den vänstra menyn.
 
-3.  Välj **Villkorlig åtkomst** och sedan den molntjänst från Microsoft (t.ex. Exchange Online eller SharePoint Online) som du har skapat en princip för villkorlig åtkomst för.
+3. Välj **Villkorlig åtkomst** och sedan den molntjänst från Microsoft (t.ex. Exchange Online eller SharePoint Online) som du har skapat en princip för villkorlig åtkomst för.
 
-4.  Avmarkera alternativet **Aktivera princip för villkorlig åtkomst** och klicka på **Spara**.
+4. Avmarkera alternativet **Aktivera princip för villkorlig åtkomst** och klicka på **Spara**.
 
     ![Bild av Inaktivera principer för villkorlig åtkomst i den klassiska Intune-portalen](./media/reassign-ca-18.png)
 

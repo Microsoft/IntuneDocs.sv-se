@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e803eb3d47d44c8c8f3cd1b699b5ca220aeb91f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049117"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546978"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrera Better Mobile med Intune
 
@@ -32,31 +32,31 @@ Utför följande steg när du ska integrera Better Mobile Threat Defense-lösnin
 
 Se till att du har följande innan du börjar integrera Better Mobile med Intune:
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Azure Active Directory-administratörsautentiseringsuppgifter som beviljar följande behörigheter:
+- Azure Active Directory-administratörsautentiseringsuppgifter som beviljar följande behörigheter:
 
-    -   Logga in och läsa användarprofil
+    - Logga in och läsa användarprofil
 
-    -   Gå till katalogen som den inloggade användaren
+    - Gå till katalogen som den inloggade användaren
 
-    -   Läs katalogdata
+    - Läs katalogdata
 
-    -   Skicka enhetsinformation till Intune
+    - Skicka enhetsinformation till Intune
 
--   Administratörsinloggning för åtkomst till administratörskonsolen för Better Mobile.
+- Administratörsinloggning för åtkomst till administratörskonsolen för Better Mobile.
 
 ### <a name="better-mobile-app-authorization"></a>Behörighetskontroll av Better Mobile-appen
 
 Det här är processen för behörighetskontroll av Better Mobile-appen:
 
--   Tillåt att Better Mobile-tjänsten förmedlar information om enhetens hälsostatus till Intune.
+- Tillåt att Better Mobile-tjänsten förmedlar information om enhetens hälsostatus till Intune.
 
--   Better Mobile fyller enhetens databas genom att synkronisera med registreringsgruppmedlemskapet i Azure AD.
+- Better Mobile fyller enhetens databas genom att synkronisera med registreringsgruppmedlemskapet i Azure AD.
 
--   Tillåt att Better Mobile-administratörskonsolen använder enkel inloggning för Azure AD.
+- Tillåt att Better Mobile-administratörskonsolen använder enkel inloggning för Azure AD.
 
--   Tillåt att Better Mobile-appen loggar in med enkel inloggning för Azure AD.
+- Tillåt att Better Mobile-appen loggar in med enkel inloggning för Azure AD.
 
 ## <a name="to-set-up-better-mobile-integration"></a>Konfigurera Better Mobile-integreringen
 
@@ -75,4 +75,4 @@ Det här är processen för behörighetskontroll av Better Mobile-appen:
 
 ## <a name="next-steps"></a>Nästa steg
 
--   [Konfigurera bättre klientappar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera bättre klientappar](mtd-apps-ios-app-configuration-policy-add-assign.md)

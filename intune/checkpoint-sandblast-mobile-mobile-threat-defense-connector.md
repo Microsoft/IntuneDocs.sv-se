@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0c4f5fd3f8c92d1d78ed37946663a127df440f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f9438c3c566dc62acfa7567428ebe3a6a6be4777
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530688"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572570"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense-anslutningsapp för Intune
 
@@ -45,11 +45,11 @@ Nedan visas några vanliga scenarier:
 
 När skadliga program som till exempel skadlig kod upptäckts på enheter kan du blockera enheterna till dess att hotet har åtgärdats:
 
--   Ansluta till företagets e-post
+- Ansluta till företagets e-post
 
--   Synkronisera företagets filer med appen OneDrive för arbetet
+- Synkronisera företagets filer med appen OneDrive för arbetet
 
--   Åtkomst till företagsappar
+- Åtkomst till företagsappar
 
 **Blockera när skadliga appar identifieras:**
 
@@ -61,7 +61,7 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 
-Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket, samt skydda åtkomsten till WiFi-nätverk baserat på enhetsrisken.
+Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket, samt skydda åtkomsten till WiFi-nätverk baserat på enhetsrisken.
 
 **Blockera nätverksåtkomst via Wi-Fi:**
 
@@ -73,7 +73,7 @@ Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket, sa
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 
-Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket och förhindra synkronisering av företagsfiler baserat på enhetsrisken.
+Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och förhindra synkronisering av företagsfiler baserat på enhetsrisken.
 
 **Blockera SharePoint Online när hot identifieras på nätverket:**
 
@@ -85,18 +85,18 @@ Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket och
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
--   **Android 4.1 och senare**
+- **Android 4.1 och senare**
 
--   **iOS 8 och senare**
+- **iOS 8 och senare**
 
 ## <a name="pre-requisites"></a>Förutsättningar
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Check Point SandBlast Mobile Threat Defense-prenumeration
-    -   Se [Check Point SandBlasts webbplats](https://www.checkpoint.com/) för mer information.
+- Check Point SandBlast Mobile Threat Defense-prenumeration
+    - Se [Check Point SandBlasts webbplats](https://www.checkpoint.com/) för mer information.
 
 ## <a name="next-steps"></a>Nästa steg
 

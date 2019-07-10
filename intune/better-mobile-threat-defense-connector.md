@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8134b9db0e478efa69391edeb570b39c91a41c9
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511772"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547297"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Better Mobile Threat Defense-anslutning i Intune
 
@@ -41,11 +41,11 @@ Nedan visas några vanliga scenarier.
 
 När skadliga program som till exempel skadlig kod upptäckts på enheter kan du blockera enheterna från följande åtgärder tills hotet har åtgärdats:
 
--   Ansluta till företagets e-post
+- Ansluta till företagets e-post
 
--   Synkronisera företagets filer med appen OneDrive för arbetet
+- Synkronisera företagets filer med appen OneDrive för arbetet
 
--   Åtkomst till företagsappar
+- Åtkomst till företagsappar
 
 **Blockera när skadliga appar identifieras:**
 
@@ -81,19 +81,19 @@ Identifiera hot mot ditt nätverk såsom **man-in-the-middle**-angrepp, och för
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
--   **Android 4.1 och senare**
+- **Android 4.1 och senare**
 
--   **iOS 8.0 och senare**
+- **iOS 8.0 och senare**
 
 ## <a name="prerequisites"></a>Krav
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Prenumeration på Better Mobile Threat Defense
+- Prenumeration på Better Mobile Threat Defense
 
-    -   Mer information finns på [Better Mobiles webbplats](https://www.better.mobi/).
+    - Mer information finns på [Better Mobiles webbplats](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>Nästa steg
 

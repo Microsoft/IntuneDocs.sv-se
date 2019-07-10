@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2820007f167b2f79b8dd98ca31d7e50968ac1969
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7aaeb94aad7e31c3346b088239024c14f9e190da
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046057"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549354"
 ---
 # <a name="intune-testing-and-validation"></a>Testning och validering av Intune
 
@@ -33,17 +33,17 @@ Vi rekommenderar att du involverar IT-supporten och annan supportpersonal i test
 
 Vi rekommenderar att du dokumenterar följande:
 
--   **Testkriterier:** Identifiera de referensvärden som testningen ska mätas mot.
+- **Testkriterier:** Identifiera de referensvärden som testningen ska mätas mot.
 
--   **Designkomponenter:** Måste finnas i minst ett testningskriterium.
+- **Designkomponenter:** Måste finnas i minst ett testningskriterium.
 
 Om en designkomponent inte finns i minst ett testningskriterium som är knutet till ett krav eller scenario bör du överväga om designkomponenten är nödvändig eller inte. Se även till att ha följande poster:
 
--   **Konton:** Testkonton som licensierats för EMS och Office 365 för att kunna testa alla användningsfallsscenarier.
+- **Konton:** Testkonton som licensierats för EMS och Office 365 för att kunna testa alla användningsfallsscenarier.
 
--   **Enheter:** Testenheter som kan rensas eller återställas till fabriksinställningarna.
+- **Enheter:** Testenheter som kan rensas eller återställas till fabriksinställningarna.
 
--   **Integrationskomponenter:** Alla integrationskomponenter (certifikatanslutningsappar och den lokala Intune Exchange-anslutningsappen) ska installeras och konfigureras om det behövs.
+- **Integrationskomponenter:** Alla integrationskomponenter (certifikatanslutningsappar och den lokala Intune Exchange-anslutningsappen) ska installeras och konfigureras om det behövs.
 
 Designändringar kan krävas i händelse av oförutsedda problem. Dessutom bör alla ändringar dokumenteras fullständigt med orsaken för varje ändring. Här visas ett exempel som illustrerar vad en ändring kan vara:
 
@@ -51,9 +51,9 @@ Designändringar kan krävas i händelse av oförutsedda problem. Dessutom bör 
 
 Du kanske ställs inför utmaningar eller problem som kräver teknisk hjälp eller särskild felsökning under testnings- och valideringsprocessen. Vi rekommenderar att du ber om hjälp via Microsofts supportkanaler.
 
--   [Så här får du support för Intune](get-support.md)
+- [Så här får du support för Intune](get-support.md)
 
--   [Kontakta telefonsupporten för Microsoft Intune](get-support.md)
+- [Kontakta telefonsupporten för Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Funktionell valideringstestning
 

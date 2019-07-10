@@ -17,79 +17,79 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044400"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572289"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
 Intune-designen baseras på den information du samlar in och de beslut du fattar när du går igenom övriga [avsnitt i den här guiden](planning-guide.md). Det hjälper dig att sammanföra:
 
--   Den aktuella miljön
+- Den aktuella miljön
 
--   Intune-distributionsalternativ
+- Intune-distributionsalternativ
 
--   Identitetskrav för externa beroenden
+- Identitetskrav för externa beroenden
 
--   Överväganden för enhetsplattform
+- Överväganden för enhetsplattform
 
--   Krav som ska levereras  
+- Krav som ska levereras  
 
 Även om kraven på lokal infrastruktur är minimala kan en utformningsplan hjälpa dig att se till att du har rätt lösning för mobil enhetshantering som uppfyller dina mål, delmål och krav.
 
-Vi ska gå igenom dessa områden mer detaljerat. 
+Vi ska gå igenom dessa områden mer detaljerat. 
 
 ## <a name="record-your-current-environment"></a>Registrera din aktuella miljö
 Det är dessutom vanligt att det sker utformningsändringar under implementerings- och testfaserna. Använd utformningsplanen för att dokumentera dessa ändringar och tanken bakom dem när de sker.
 
 Den aktuella miljön kan påverka utformningsbeslut och bör dokumenteras och användas som referens när du fattar andra beslut om Intune-utformning. Här visas några exempel på hur du registrerar den aktuella miljön:
 
--   **Identitet i molnet**
+- **Identitet i molnet**
 
-    -   Använder du DirSync eller Azure Active Directory (Azure AAD) Connect?
+    - Använder du DirSync eller Azure Active Directory (Azure AAD) Connect?
 
-    -   Är miljön federerad?
+    - Är miljön federerad?
 
-    -   Är multifaktorautentisering (MFA) aktiverad?
+    - Är multifaktorautentisering (MFA) aktiverad?
 
--   **E-postmiljö**
+- **E-postmiljö**
 
-    -   Använder du Exchange? Är det lokalt eller i molnet?
+    - Använder du Exchange? Är det lokalt eller i molnet?
 
-    -   Befinner du dig mitt i ett projekt med att migrera Exchange till molnet?
+    - Befinner du dig mitt i ett projekt med att migrera Exchange till molnet?
 
--   **Aktuell lösning för hantering av mobilenheter (MDM)**
+- **Aktuell lösning för hantering av mobilenheter (MDM)**
 
-    -   Använder du andra MDM-lösningar för närvarande?
+    - Använder du andra MDM-lösningar för närvarande?
 
-    -   Vilka MDM-lösningar använder du för företags- och BYOD-användningsfall?
+    - Vilka MDM-lösningar använder du för företags- och BYOD-användningsfall?
 
-    -   Vilka funktioner använder du (t.ex. appenhetsinställningar, Wi-Fi-konfigurationer)?
+    - Vilka funktioner använder du (t.ex. appenhetsinställningar, Wi-Fi-konfigurationer)?
 
-    -   Vilka enhetsplattformar stöds?
+    - Vilka enhetsplattformar stöds?
 
-    -   Vilka grupper och hur många användare använder MDM-lösningen?
+    - Vilka grupper och hur många användare använder MDM-lösningen?
 
--   **Certifikatlösning**
+- **Certifikatlösning**
 
-    -   Har du har implementerat en certifikatlösning?
+    - Har du har implementerat en certifikatlösning?
 
-    -   Vilken typ av certifikat använder du?
+    - Vilken typ av certifikat använder du?
 
--   **Systemhantering**
+- **Systemhantering**
 
-    -   Hur hanterar du dator- och servermiljön?
+    - Hur hanterar du dator- och servermiljön?
 
-    -   Använder du System Center Configuration Manager? Använder du en systemhanteringsplattform från tredje part?
+    - Använder du System Center Configuration Manager? Använder du en systemhanteringsplattform från tredje part?
 
--   **VPN-lösning**
+- **VPN-lösning**
 
-    -   Vad har du för VPN-lösning?
+    - Vad har du för VPN-lösning?
 
-    -   Använder du den för både företags- och BYOD-användningsfall?
+    - Använder du den för både företags- och BYOD-användningsfall?
 
 Tänk på att notera eventuella projekt eller andra planer som finns som kan påverka miljön när du registrerar den befintliga MDM-miljön. Nedan visas ett exempel på ett sätt att registrera den aktuella miljön när du skapar Intune-utformningen:
 
@@ -118,11 +118,11 @@ Intune erbjuder två distributionsalternativ: fristående och hybrid. Friståend
 
 Om organisationen har global närvaro måste du se till att planera var klienten ska finnas när du prenumererar på tjänsten. Landet definieras när du registrerar dig för en Intune-prenumeration första gången och mappas till områden världen över som anges nedan:
 
--   Nordamerika
+- Nordamerika
 
--   Europa, Mellanöstern och Afrika
+- Europa, Mellanöstern och Afrika
 
--   Asien och Stillahavsområdet
+- Asien och Stillahavsområdet
 
 >[!IMPORTANT]
 > Det går inte att ändra land eller klientplats senare.
@@ -131,11 +131,11 @@ Om organisationen har global närvaro måste du se till att planera var klienten
 
 Externa beroenden är tjänster och produkter som skiljer sig från Intune men som antingen är ett krav i Intune eller kan integreras med Intune. Det är viktigt att identifiera krav för eventuella externa beroenden och hur de ska konfigureras. Några exempel på vanliga externa beroenden är:
 
--   Identitet
+- Identitet
 
--   Användar- och enhetsgrupper
+- Användar- och enhetsgrupper
 
--   Public Key Infrastructure (PKI)
+- Public Key Infrastructure (PKI)
 
 Nedan utforskar vi de här vanliga externa beroendena närmare.
 
@@ -157,9 +157,9 @@ Användar- och enhetsgrupper fastställer målet för en distribution, inklusive
 
 Vi rekommenderar att du skapar alla grupper i Active Directory lokalt och sedan synkroniserar till Azure AD. Läs mer om att planera och skapa användar- och enhetsgrupper:
 
--   [Planera dina användar- och enhetsgrupper](users-add.md).
+- [Planera dina användar- och enhetsgrupper](users-add.md).
 
--   [Skapa användar- och enhetsgrupper](groups-add.md).
+- [Skapa användar- och enhetsgrupper](groups-add.md).
 
 ### <a name="public-key-infrastructure-pki"></a>Public Key Infrastructure (PKI)
 Public Key Infrastructure tillhandahåller certifikat till enheter eller användare så att de på ett säkert sätt kan autentisera till en tjänst. Intune stöder en Microsoft PKI-infrastruktur. Enhets- och användarcertifikat kan utfärdas till en mobil enhet för att uppfylla kraven på certifikatbaserad autentisering. Innan du använder certifikat måste du fastställa om de behövs, om nätverksinfrastrukturen har stöd för certifikatbaserad autentisering och om certifikat används för närvarande i den befintliga miljön.
@@ -170,11 +170,11 @@ Dessutom måste du fastställa vilken server som ska vara värd för registrerin
 
 Läs mer om:
 
--   [Konfigurera certifikatprofiler för Intune](certificates-configure.md)
+- [Konfigurera certifikatprofiler för Intune](certificates-configure.md)
 
--   [Konfigurera certifikatinfrastrukturen för SCEP](certificates-scep-configure.md)
+- [Konfigurera certifikatinfrastrukturen för SCEP](certificates-scep-configure.md)
 
--   [Konfigurera certifikatinfrastruktur för PFX](certficates-pfx-configure.md)
+- [Konfigurera certifikatinfrastruktur för PFX](certficates-pfx-configure.md)
 
 
 
@@ -183,13 +183,13 @@ Läs mer om:
 
 Ta en närmare titt på följande aspekter av enheterna att förstå hur de ska hanteras korrekt.
 
--   Enhetsplattformar som stöds
+- Enhetsplattformar som stöds
 
--   Egenskaper
+- Egenskaper
 
--   Äganderätt till enhet
+- Äganderätt till enhet
 
--   Massregistrering
+- Massregistrering
 
 Vi ska gå igenom dessa områden mer detaljerat.
 
@@ -226,17 +226,17 @@ Se [Avsnitt 3: Fastställa krav för användningsfall](planning-guide-requiremen
 
 I de här avsnitten ska vi granska följande funktioner och egenskaper som är anpassade till dina krav för användningsfall:
 
--   Principer för allmänna villkor
+- Principer för allmänna villkor
 
--   Konfigurationsprinciper
+- Konfigurationsprinciper
 
--   Resursprofiler
+- Resursprofiler
 
--   Appar
+- Appar
 
--   Policy för efterlevnad
+- Policy för efterlevnad
 
--   Villkorlig åtkomst
+- Villkorlig åtkomst
 
 Vi ska gå igenom dessa områden mer detaljerat.
 
@@ -274,13 +274,13 @@ Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.c
 
 Använd profiler för att hjälpa slutanvändaren att ansluta till företagsdata. Intune stöder många typer av profiler. Se användningsfallen och kraven för att fastställa när profilerna ska konfigureras. Alla enhetsprofiler kategoriseras efter plattformstyp och ska tas med i den tekniska dokumentationen.
 
--   Certifikatprofiler
+- Certifikatprofiler
 
--   Wi-Fi-profil
+- Wi-Fi-profil
 
--   VPN-profil
+- VPN-profil
 
--   E-postprofil
+- E-postprofil
 
 Vi ska gå igenom varje profiltyp mer detaljerat.
 
@@ -288,11 +288,11 @@ Vi ska gå igenom varje profiltyp mer detaljerat.
 
 Certifikatprofiler gör det möjligt för Intune för att utfärda certifikat till en användare eller enhet. Intune har stöd för följande:
 
--   Simple Certificate Enrollment Protocol (SCEP)
+- Simple Certificate Enrollment Protocol (SCEP)
 
--   Betrott rotcertifikat
+- Betrott rotcertifikat
 
--   PFX-certifikat.
+- PFX-certifikat.
 
 Vi rekommenderar att du dokumenterar vilken användargrupp som behöver ett certifikat, hur många certifikatprofiler som krävs och vilka användargrupper de ska distribueras till.
 
@@ -353,27 +353,27 @@ Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.c
 
 Du kan använda Intune för att leverera appar till användare eller enheter på flera sätt. Programtypen kan vara appar för programinstallation, appar från en offentlig appbutik, externa länkar eller hanterade iOS-appar. Förutom distribution av enskilda appar kan du hantera och distribuera volyminköpta appar som har köpts via volyminköpsprogrammen för iOS och Windows. Läs mer om:
 
--   [Apptyperna som du kan leverera](app-management.md)
+- [Apptyperna som du kan leverera](app-management.md)
 
--   [iOS volyminköpsprogram för företag (VPP)](vpp-apps-ios.md)
+- [iOS volyminköpsprogram för företag (VPP)](vpp-apps-ios.md)
 
--   [Microsoft Store för företag-appar](windows-store-for-business.md)
+- [Microsoft Store för företag-appar](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Krav på apptyper
 
 Eftersom appar kan distribueras till användare och enheter rekommenderar vi att du bestämmer vilka program som ska hanteras av Intune. Försök att besvara följande frågor när du skapar listan:
 
--   Behöver apparna integrera med molntjänster?
+- Behöver apparna integrera med molntjänster?
 
--   Kommer alla program vara tillgängliga för BYOD-användare?
+- Kommer alla program vara tillgängliga för BYOD-användare?
 
--   Vilka är de tillgängliga distributionsalternativen för dessa appar?
+- Vilka är de tillgängliga distributionsalternativen för dessa appar?
 
--   Behöver företaget ge sina partner åtkomst till data för SaaS-appar (Software as a service)?
+- Behöver företaget ge sina partner åtkomst till data för SaaS-appar (Software as a service)?
 
--   Behöver apparna Internetåtkomst från användarnas enheter?
+- Behöver apparna Internetåtkomst från användarnas enheter?
 
--   Är apparna allmänt tillgängliga i en appbutik eller är de anpassade verksamhetsspecifika appar (LOB)?
+- Är apparna allmänt tillgängliga i en appbutik eller är de anpassade verksamhetsspecifika appar (LOB)?
 
 
 #### <a name="app-protection-policies"></a>Appskyddsprinciper
@@ -407,7 +407,7 @@ Villkorlig åtkomst används för att endast tillåta att kompatibla enheter få
 
 Bestäm vilka plattformar och användargrupper med onlineåtkomst som du behöver ställa in villkorlig åtkomst för. Du behöver även fastställa huruvida du behöver installera eller konfigurera Intune-anslutningsappen för lokal Exchange: 
 
--   [Exchange On-premises](exchange-connector-install.md)
+- [Exchange On-premises](exchange-connector-install.md)
 
 Här visas ett exempel på hur du kan dokumentera principer för villkorlig åtkomst:
 

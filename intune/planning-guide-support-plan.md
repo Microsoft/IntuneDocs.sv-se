@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64349d2e4c681bf0fac8cf231085cc63e42ffc62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041467"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548335"
 ---
 # <a name="develop-a-support-plan"></a>Utveckla en supportplan
 
 En supportplan för Intune kan hjälpa dig att identifiera och lösa Intune-relaterade problem på ett mer effektivt sätt. Det, i sin tur, förbättrar användarnas övergripande upplevelse av Intune. Följande är några frågor att tänka på när du utvecklar en supportplan för Intune:
 
--   Vilka team kommer att ha ansvaret för att tillhandahålla Intune-support?
+- Vilka team kommer att ha ansvaret för att tillhandahålla Intune-support?
 
--   Vilken process ska användas för att tillhandahålla support för Intune?
+- Vilken process ska användas för att tillhandahålla support för Intune?
 
--   Hur planerar du att tillhandahålla supportutbildning för Intune?
+- Hur planerar du att tillhandahålla supportutbildning för Intune?
 
--   Vilka möjligheter finns det att få med supportteamet tidigt i processen för Intune-distribution?
+- Vilka möjligheter finns det att få med supportteamet tidigt i processen för Intune-distribution?
 
 Vi ska gå igenom varje område mer detaljerat.
 
@@ -50,23 +50,23 @@ Läs mer om [Intune-support](/intune/get-support).
 
 I de första faserna för produktionsdistribution kan du låta alla tre nivåerna delta i ett möte eller Skype-samtal. Följande är ett exempel på hur en organisation kan implementera sina arbetsflöden för IT-supporten eller supportavdelningen:
 
-1.  Slutanvändaren kontaktar IT-supporten eller supportavdelningen nivå 1 med ett registreringsproblem.
+1. Slutanvändaren kontaktar IT-supporten eller supportavdelningen nivå 1 med ett registreringsproblem.
 
-2.  IT-supporten eller supportavdelningen nivå 1 kan inte fastställa rotorsaken och eskalerar till nivå 2.
+2. IT-supporten eller supportavdelningen nivå 1 kan inte fastställa rotorsaken och eskalerar till nivå 2.
 
-3.  IT-supporten eller supportavdelningen nivå 2 undersöker, men kan inte lösa problemet och eskalerar till nivå 3, med ytterligare information för att hjälpa till med undersökningen.
+3. IT-supporten eller supportavdelningen nivå 2 undersöker, men kan inte lösa problemet och eskalerar till nivå 3, med ytterligare information för att hjälpa till med undersökningen.
 
-4.  IT-supporten eller supportavdelningen nivå 3 fortsätter undersökningen, fastställer rotorsaken och förmedlar lösningen till nivå 2 och 1.
+4. IT-supporten eller supportavdelningen nivå 3 fortsätter undersökningen, fastställer rotorsaken och förmedlar lösningen till nivå 2 och 1.
 
-5.  IT-support/supportavdelningen nivå 1 kontaktar sedan kunden och löser problemet.
+5. IT-support/supportavdelningen nivå 1 kontaktar sedan kunden och löser problemet.
 
 Den här metoden, särskilt i början av Intune-distributionen, innebär många fördelar, inklusive:
 
--   Hjälp med teknikinlärning och starttid.
+- Hjälp med teknikinlärning och starttid.
 
--   Snabb identifiering av problem och lösningar.
+- Snabb identifiering av problem och lösningar.
 
--   Förbättring av användarupplevelsen.
+- Förbättring av användarupplevelsen.
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>Hur planerar du att tillhandahålla supportutbildning för Intune?
 
@@ -74,15 +74,15 @@ Det är viktigt att tillhandahålla teknisk utbildning för Intune för IT-suppo
 
 Ett exempel på en agenda för Intune-supportutbildning visas nedan.
 
--   Genomgång av supportplanen för Intune
+- Genomgång av supportplanen för Intune
 
--   Intune-översikt
+- Intune-översikt
 
--   Felsöka vanliga problem
+- Felsöka vanliga problem
 
--   Verktyg och resurser
+- Verktyg och resurser
 
--   Frågor och svar
+- Frågor och svar
 
 [Intune-dokumentationen](https://docs.microsoft.com/intune/) ger en översikt över Intune, detaljerad funktionsbeskrivning och viss felsökningsinformation. [Intune-forumet](https://social.technet.microsoft.com/Forums/home) är en communitybaserad resurs för frågor och ämnen som inte täcks av Intune-dokumentationen.
 

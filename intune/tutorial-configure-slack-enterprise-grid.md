@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da6c9b544d86c9c4b09c061c0f1500ed8612a047
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: e7ff4e1fd9f055268a461d1a81b8a2e31fe3d32b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530702"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548999"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Självstudie: Konfigurera Slack till att använda Intune för EMM och appkonfiguration
 
@@ -62,8 +62,8 @@ Lägg till Slack för EMM som en hanterad iOS-app i Intune och tilldela dina Sla
 6. Ange ”Slack för EMM” i sökfältet och välj den app som du just lade till.
 7. Välj **Tilldelningar** under Hantera.
 8. Välj **Lägg till grupp**. Beroende på vilka som du har valt ska påverkas när du aktiverade EMM för Slack, kan du under **Tilldelningstyp** välja:
-    -  **Tillgänglig för registrerade enheter** om du väljer ”Alla medlemmar (inklusive gäster)” ELLER
-    -  **Tillgänglig med eller utan registrering** om du väljer ”Alla medlemmar (exklusive gäster)” eller ”Valfritt”.
+    - **Tillgänglig för registrerade enheter** om du väljer ”Alla medlemmar (inklusive gäster)” ELLER
+    - **Tillgänglig med eller utan registrering** om du väljer ”Alla medlemmar (exklusive gäster)” eller ”Valfritt”.
 9. Välj **Inkluderade grupper**. Under Gör den här appen tillgänglig för alla användare väljer du **Ja**.
 10. Klicka på **OK** och sedan på **OK** igen.
 11. Klicka på **Spara**.
@@ -77,7 +77,7 @@ Lägg till en appkonfigurationsprincip till Slack för EMM iOS. Appkonfiguration
 5. Välj **Tillhörande app**.
 6. Ange ”Slack för EMM” i sökfältet och välj appen.
 7. Klicka på **OK** och välj sedan **Konfigurationsinställningar**. 
-    -   Mer information om konfigurationsnycklar och deras värden finns i dokumentationen på fliken ”Tekniskt” på [Slacks AppConfig-webbsida](https://www.appconfig.org/company/slack/).
+    - Mer information om konfigurationsnycklar och deras värden finns i dokumentationen på fliken ”Tekniskt” på [Slacks AppConfig-webbsida](https://www.appconfig.org/company/slack/).
 8. Välj **OK** och välj sedan **Lägg till**.
 9. Ange ”Test av appkonfigurationsprincip för Slack” i sökfältet och välj den princip som du just lade till.
 10. Välj **Tilldelningar** under Hantera.
@@ -92,13 +92,13 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 4. Under Plattform väljer du **iOS**.
 5. Välj **Enhetens hälsotillstånd**. Bredvid Jailbrokade enheter väljer du **Blockera** och sedan **OK**.
 6. Välj **Systemsäkerhet** och ange inställningar för Lösenord. Välj följande rekommenderade inställningar för den här självstudien:
-    -   Vid Kräv ett lösenord för att låsa upp mobila enheter, väljer du **Kräv**.
-    -   För Enkla lösenord, väljer du **Blockera**.
-    -   För Minsta längd på lösenord, anger du 4.
-    -   För Krav på lösenordstyp, väljer du **Alfanumeriskt**.
-    -   För Maximalt antal minuter efter skärmlås innan ett lösenord krävs, väljer du **Omedelbart**.
-    -   För Lösenordets giltighetstid (dagar), anger du 41.
-    -   För Antal tidigare lösenord för att förhindra återanvändning, anger du 5.
+    - Vid Kräv ett lösenord för att låsa upp mobila enheter, väljer du **Kräv**.
+    - För Enkla lösenord, väljer du **Blockera**.
+    - För Minsta längd på lösenord, anger du 4.
+    - För Krav på lösenordstyp, väljer du **Alfanumeriskt**.
+    - För Maximalt antal minuter efter skärmlås innan ett lösenord krävs, väljer du **Omedelbart**.
+    - För Lösenordets giltighetstid (dagar), anger du 41.
+    - För Antal tidigare lösenord för att förhindra återanvändning, anger du 5.
 7. Klicka på **OK** och välj sedan **OK** igen.
 8. Klicka på **Skapa**.
 
@@ -114,8 +114,8 @@ Lägg till Slack som en hanterad Google Play-app i Intune och tilldela dina Slac
 5. Ange ”Slack” i sökfältet och välj den app som du just lade till.
 6. Välj **Tilldelningar** under Hantera.
 7. Välj **Lägg till grupp**. Beroende på vilka som du har valt ska påverkas när du aktiverade EMM för Slack, kan du under **Tilldelningstyp** välja:
-    -   **Tillgänglig för registrerade enheter** om du väljer ”Alla medlemmar (inklusive gäster)” ELLER
-    -   **Tillgänglig med eller utan registrering** om du väljer ”Alla medlemmar (exklusive gäster)” eller ”Valfritt”.
+    - **Tillgänglig för registrerade enheter** om du väljer ”Alla medlemmar (inklusive gäster)” ELLER
+    - **Tillgänglig med eller utan registrering** om du väljer ”Alla medlemmar (exklusive gäster)” eller ”Valfritt”.
 8. Välj Inkluderade grupper. Under Gör den här appen tillgänglig för alla användare väljer du **Ja**.
 9. Klicka på **OK** och sedan på **OK** igen.
 10. Klicka på **Spara**.
@@ -129,7 +129,7 @@ Lägg till en appkonfigurationsprincip för Slack. Appkonfigurationsprinciper f�
 5. Välj **Tillhörande app**.
 6. Ange ”Slack” i sökfältet och välj appen.
 7. Välj **OK** och sedan **Konfigurationsinställningar**.
-    -   Mer information om konfigurationsnycklar och deras värden finns i dokumentationen på fliken ”Tekniskt” på [Slacks AppConfig-webbsida](https://www.appconfig.org/company/slack/).
+    - Mer information om konfigurationsnycklar och deras värden finns i dokumentationen på fliken ”Tekniskt” på [Slacks AppConfig-webbsida](https://www.appconfig.org/company/slack/).
 8. Klicka på **OK** och välj sedan **Lägg till**.
 9. Ange ”Test av appkonfigurationsprincip för Slack” i sökfältet och välj den princip som du just lade till.
 10. Välj **Tilldelningar** under Hantera.
@@ -145,12 +145,12 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 5. Välj **Arbetsprofil** under profiltyp.
 6. Välj **Enhetens hälsotillstånd**. Bredvid Rotade enheter väljer du **Blockera** och sedan **OK**.
 7. Välj **Systemsäkerhet** och ange inställningar för **Lösenord**. Välj följande rekommenderade inställningar för den här självstudien:
-    -   Vid Kräv ett lösenord för att låsa upp mobila enheter, väljer du **Kräv**.
-    -   Välj **Minst alfanumeriskt** för Krav på lösenordstyp.
-    -   För Minsta längd på lösenord, anger du 4.
-    -   För Maximalt antal minuter efter skärmlås innan ett lösenord krävs, väljer du **15 minuter**.
-    -   För Lösenordets giltighetstid (dagar), anger du 41.
-    -   För Antal tidigare lösenord för att förhindra återanvändning, anger du 5.
+    - Vid Kräv ett lösenord för att låsa upp mobila enheter, väljer du **Kräv**.
+    - Välj **Minst alfanumeriskt** för Krav på lösenordstyp.
+    - För Minsta längd på lösenord, anger du 4.
+    - För Maximalt antal minuter efter skärmlås innan ett lösenord krävs, väljer du **15 minuter**.
+    - För Lösenordets giltighetstid (dagar), anger du 41.
+    - För Antal tidigare lösenord för att förhindra återanvändning, anger du 5.
 8. Klicka på **OK** och sedan på **OK** igen.
 9. Klicka på **Skapa**.
 

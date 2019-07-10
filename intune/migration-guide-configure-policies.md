@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 86aefbfc37db7929f9748d4783db319cf97d4545
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512264"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548468"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurera principer för enhetsefterlevnad och apphantering vid migrering till Microsoft Intune
 
@@ -30,13 +30,13 @@ Det huvudsakliga målet vid migrering till Intune är att alla enheter ska regis
 
 Varje enhetsplattform kan erbjuda olika inställningar, men Intune-enhetsprinciperna fungerar med varje enhetsplattform genom att tillhandahålla följande funktioner för hantering av mobilenheter:
 
--   Reglera det antal enheter som varje användare kan registrera.
+- Reglera det antal enheter som varje användare kan registrera.
 
--   Hantera enhetsinställningar (t.ex. kryptering på enhetsnivå, lösenordslängd, kameraanvändning).
+- Hantera enhetsinställningar (t.ex. kryptering på enhetsnivå, lösenordslängd, kameraanvändning).
 
--   Leverera appar, e-postprofiler, VPN-profiler osv.
+- Leverera appar, e-postprofiler, VPN-profiler osv.
 
--   Utvärdera villkor på enhetsnivå för principer för säkerhetsefterlevnad.
+- Utvärdera villkor på enhetsnivå för principer för säkerhetsefterlevnad.
 
 > [!IMPORTANT]
 > Principer för enhetshantering tilldelas inte direkt till enskilda enheter eller användare, men tilldelas istället till användargrupper. Principerna kan tillämpas direkt på en användargrupp, och därmed på användarenheten, eller så kan principerna tillämpas på en enhetsgrupp, och därmed på gruppmedlemmar.
@@ -61,9 +61,9 @@ Du måste skapa en enhetskonfigurationsprofil om du vill framtvinga inställning
 
 #### <a name="directly-import-ios-configuration-profiles-optional"></a>Direktimport av iOS-konfigurationsprofiler (valfritt)
 
--   **Apple Configurator-profiler för iOS (iOS 7.1 och senare):** Om den befintliga MDM-lösningen använder Apple Configurator-profiler (.mobileconfig-filer), kan Intune importera dem direkt som anpassade konfigurationsprinciper.
+- **Apple Configurator-profiler för iOS (iOS 7.1 och senare):** Om den befintliga MDM-lösningen använder Apple Configurator-profiler (.mobileconfig-filer), kan Intune importera dem direkt som anpassade konfigurationsprinciper.
 
--   **iOS-konfigurationsprinciper för mobilappar:** Om din befintliga MDM-lösning använder iOS-konfigurationsprinciper för mobila program, kan Intune importera dem direkt förutsatt att de uppfyller det XML-format för egenskapslistor som anges av Apple.
+- **iOS-konfigurationsprinciper för mobilappar:** Om din befintliga MDM-lösning använder iOS-konfigurationsprinciper för mobila program, kan Intune importera dem direkt förutsatt att de uppfyller det XML-format för egenskapslistor som anges av Apple.
 
 - Lär dig hur du lägger till en anpassad princip för [iOS](custom-settings-ios.md).
 
@@ -71,25 +71,25 @@ Du måste skapa en enhetskonfigurationsprofil om du vill framtvinga inställning
 
 Principerna för enhetsefterlevnad utvärderar säkerhetsinriktade inställningar och tillhandahåller rapporter som visar huruvida enheterna är kompatibla med företagets standarder eller inte. Sådana inställningar omfattar:
 
--   PIN-kodslängd
+- PIN-kodslängd
 
--   Jailbrokad status
+- Jailbrokad status
 
--   OS-version
+- OS-version
 
 Se ytterligare resurser för enhetsefterlevnadsinställningar:
 
--   Lär dig mer om [principer för enhetsefterlevnad](device-compliance.md).
+- Lär dig mer om [principer för enhetsefterlevnad](device-compliance.md).
 
--   Läs om [hur du skapar en princip för enhetsefterlevnad](device-compliance-get-started.md).
+- Läs om [hur du skapar en princip för enhetsefterlevnad](device-compliance-get-started.md).
 
 ### <a name="task-5-publish-and-deploy-apps"></a>Uppgift 5: Publicera och distribuera appar
 
 När du använder Intune MDM kan du tillhandahålla appar genom att kräva att de installeras automatiskt eller genom att göra dem tillgängliga i företagsportalen.
 
--   [Lägga till appar](apps-add.md).
+- [Lägga till appar](apps-add.md).
 
--   [Distribuera appar](apps-deploy.md).
+- [Distribuera appar](apps-deploy.md).
 
 ### <a name="task-6-enable-device-enrollment"></a>Uppgift 6: Aktivera registrering av enheter
 

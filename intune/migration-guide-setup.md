@@ -15,12 +15,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233b093ba9c062618740fd8f14c5ea306647acdd
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 76f5188a866e744c034fd592f9b1dfcbc9061ffa
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050502"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549390"
 ---
 # <a name="basic-setup"></a>Grundläggande konfiguration
 
@@ -32,15 +32,15 @@ När du har utvärderat din miljö är det dags att konfigurera Microsoft Intune
 
 Intune kräver Azure Active Directory (AAD) som leverantör av identitet och användargruppering. Läs mer om:
 
--  [Identitetskrav](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Identitetskrav](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   [Katalogsynkroniseringskrav](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Katalogsynkroniseringskrav](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   [Multifaktorautentisering (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Multifaktorautentisering (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
--   [Planera dina användar- och enhetsgrupper](users-add.md)
+- [Planera dina användar- och enhetsgrupper](users-add.md)
 
--   [Skapa användar- och enhetsgrupper](groups-get-started.md)
+- [Skapa användar- och enhetsgrupper](groups-get-started.md)
 
 Om din organisation redan använder Office 365 måste Intune använda samma Azure Active Directory-miljö.
 
@@ -48,9 +48,9 @@ Om din organisation redan använder Office 365 måste Intune använda samma Azur
 
 Om du planerar att använda certifikatbaserad autentisering för VPN-, Wi-Fi- eller e-postprofiler med Intune måste du kontrollera att du har en [PKI-infrastruktur på plats](certificates-configure.md) som stöds och är redo att skapa och distribuera certifikatprofiler. Lär dig mer om hur du konfigurerar certifikat i Intune:
 
--   [Konfigurera certifikatinfrastrukturen för SCEP](/intune/certificates-scep-configure)
+- [Konfigurera certifikatinfrastrukturen för SCEP](/intune/certificates-scep-configure)
 
--   [Konfigurera certifikatinfrastruktur för PFX](/intune/certficates-pfx-configure).
+- [Konfigurera certifikatinfrastruktur för PFX](/intune/certficates-pfx-configure).
 
 
 ## <a name="task-list-for-an-intune-setup"></a>Uppgiftslista för en Intune-konfiguration
@@ -59,17 +59,17 @@ Om du planerar att använda certifikatbaserad autentisering för VPN-, Wi-Fi- el
 
 Innan du kan migrera till Intune måste du ha en Intune-prenumeration.
 
--   Du kan besöka [den här sidan](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0). Här får du anvisningar om hur du kan:
+- Du kan besöka [den här sidan](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0). Här får du anvisningar om hur du kan:
 
-    -   Skapa en ny Intune-prenumeration som är länkad till en ny AAD-klient.
+    - Skapa en ny Intune-prenumeration som är länkad till en ny AAD-klient.
 
-    -   Länka Intune-prenumerationen genom att logga in till en befintlig AAD-klient.
+    - Länka Intune-prenumerationen genom att logga in till en befintlig AAD-klient.
 
 ### <a name="task-2-assign-intune-user-licenses"></a>Uppgift 2: Tilldela Intune-användarlicenser
 
--   Lär dig [hur man tilldelar Intune-användarlicenser](licenses-assign.md).
+- Lär dig [hur man tilldelar Intune-användarlicenser](licenses-assign.md).
 
--   Om du har skapat en ny Azure Active Directory-klient kan du läsa om [hur du kan skapa nya användare eller synkronisera användare från din lokala Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- Om du har skapat en ny Azure Active Directory-klient kan du läsa om [hur du kan skapa nya användare eller synkronisera användare från din lokala Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Uppgift 3: Ange din MDM-auktoritet till Intune
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58ee82e44e8aa8d68c0fb00c4497cc0455ed21d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2315136fe277f06f6dbb11c13139a9dc193ce6f7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528637"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549374"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Skapa en princip för Mobile Threat Defense-enhetsefterlevnad med Intune
 
@@ -37,23 +37,23 @@ Som en del av MTD-installationen skapade du i MTD-partnerkonsolen en princip som
 
 Förutsättningar för principen för enhetsefterlevnad med MTD:
 
--   Ställ in MTD-integrering med Intune
+- Ställ in MTD-integrering med Intune
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Skapa en MTD-enhetsefterlevnadsprincip
 
-1.  Gå till [Azure Portal](https://portal.azure.com/) och logga in med dina Intune-autentiseringsuppgifter.
+1. Gå till [Azure Portal](https://portal.azure.com/) och logga in med dina Intune-autentiseringsuppgifter.
 
-2.  Välj **Alla tjänster** i den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
+2. Välj **Alla tjänster** i den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
 
-3.  Välj **Intune**. **Intune-instrumentpanelen** öppnas.
+3. Välj **Intune**. **Intune-instrumentpanelen** öppnas.
 
 4. Välj **Enhetsefterlevnad** på **Intunes instrumentpanel** och välj sedan **Principer** under avsnittet **Hantera**.
 
-5.  Välj **Skapa princip**, ange ett **namn** på och en **beskrivning** av principen för enhetsefterlevnad, välj **plattform** och välj sedan **Konfigurera** under avsnittet **Inställningar**.
+5. Välj **Skapa princip**, ange ett **namn** på och en **beskrivning** av principen för enhetsefterlevnad, välj **plattform** och välj sedan **Konfigurera** under avsnittet **Inställningar**.
 
-6.  Välj **Enhetens hälsotillstånd** i fönstret för **efterlevnadsprincip**.
+6. Välj **Enhetens hälsotillstånd** i fönstret för **efterlevnadsprincip**.
 
-7.  I fönstret **Enhetens hälsotillstånd** väljer du mobilhotnivå i listrutan under **Kräv att enheten ska hållas vid eller under hotnivån för enheten**.
+7. I fönstret **Enhetens hälsotillstånd** väljer du mobilhotnivå i listrutan under **Kräv att enheten ska hållas vid eller under hotnivån för enheten**.
 
     a.  **Skyddad**: Den här nivån är säkrast. Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
 
@@ -63,7 +63,7 @@ Förutsättningar för principen för enhetsefterlevnad med MTD:
 
     d.  **Hög**: Det här är den minst säkra nivån. Detta tillåter alla hotnivåer och använder endast Mobile Threat Defense i rapporteringssyfte. Enheterna måste ha MTD-appen aktiverad med den här inställningen.
 
-8.  Klicka på **OK** två gånger och välj sedan **Skapa**.
+8. Klicka på **OK** två gånger och välj sedan **Skapa**.
 
 > [!IMPORTANT]
 > Om du skapar principer för villkorlig åtkomst till Office 365 eller andra tjänster kommer utvärderingen av efterlevnad att bedömas och icke-kompatibla enheter kommer inte att få åtkomst till företagsresurser förrän hotet har lösts i enheten.

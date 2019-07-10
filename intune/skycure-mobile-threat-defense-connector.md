@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f04879e88cb85eaacdb75f5645a486e3539cb13a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 6480c6fb412c12e228b8bc3647045cf15da531e1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044085"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548024"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-anslutningsprogram
 
 Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst baserat på riskbedömning som utförs av Symantec Endpoint Protection Mobile (SEP Mobile), en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör SEP Mobile och inkluderar:
 
--   Fysiskt skydd
+- Fysiskt skydd
 
--   Nätverksskydd
+- Nätverksskydd
 
--   Programskydd
+- Programskydd
 
--   Skydd mot säkerhetsrisker
+- Skydd mot säkerhetsrisker
 
 Du kan aktivera SEP Mobile-riskbedömning via Intunes efterlevnadsprinciper för enheter och använda principer för villkorlig åtkomst för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats.
 
@@ -48,9 +48,9 @@ Om enheten utvärderats som inkompatibel blockeras åtkomst till resurser som Ex
 
 Intune stöder två lägen för integrering med SEP Mobile:
 
--   **Grundinställning** är ett skrivskyddat läge som gör SEP Mobile synligt för enheter i Intune.
+- **Grundinställning** är ett skrivskyddat läge som gör SEP Mobile synligt för enheter i Intune.
 
--   **Fullständig integrering** tillåter att SEP Mobile rapporterar information om enhetsrisker och säkerhetsincidenter till Intune.
+- **Fullständig integrering** tillåter att SEP Mobile rapporterar information om enhetsrisker och säkerhetsincidenter till Intune.
 
 ## <a name="sample-scenarios"></a>Exempelscenarier
 
@@ -60,11 +60,11 @@ Nedan visas några vanliga scenarier:
 
 När skadliga program som till exempel skadlig kod upptäckts på enheter kan du blockera enheterna till dess att hotet har åtgärdats:
 
--   Ansluta till företagets e-post
+- Ansluta till företagets e-post
 
--   Synkronisera företagets filer med appen OneDrive för arbetet
+- Synkronisera företagets filer med appen OneDrive för arbetet
 
--   Åtkomst till företagsappar
+- Åtkomst till företagsappar
 
 **Blockera när skadliga appar identifieras:**
 
@@ -100,17 +100,17 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och fö
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
--   **Android 4.1 och senare**
+- **Android 4.1 och senare**
 
--   **iOS 8 och senare**
+- **iOS 8 och senare**
 
 ## <a name="pre-requisites"></a>Förutsättningar
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Symantec Endpoint Protection Mobile-prenumeration
+- Symantec Endpoint Protection Mobile-prenumeration
 
 Mer information hittar du på [Symantecs webbplats](https://www.skycure.com/skycure-microsoft-integration/).
 

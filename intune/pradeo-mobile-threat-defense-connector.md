@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 980138015cdbe063d6d4b05eb6dd8ab70be4b601
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 2f0a4b9a957948c9bda0b0ad2d9829ff9560f217
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512248"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548490"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Pradeo Mobile Threat Defense-anslutningsapp med Intune
 
@@ -41,11 +41,11 @@ Nedan visas några vanliga scenarier.
 
 När skadliga program som till exempel skadlig kod upptäckts på enheter kan du blockera enheterna från följande åtgärder tills hotet har åtgärdats:
 
--   Ansluta till företagets e-post
+- Ansluta till företagets e-post
 
--   Synkronisera företagets filer med appen OneDrive för arbetet
+- Synkronisera företagets filer med appen OneDrive för arbetet
 
--   Åtkomst till företagsappar
+- Åtkomst till företagsappar
 
 **Blockera när skadliga appar identifieras:**
 
@@ -81,19 +81,19 @@ Identifiera hot mot ditt nätverk såsom **man-in-the-middle**-angrepp, och för
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
--   **Android 4.0.3 och senare**
+- **Android 4.0.3 och senare**
 
--   **iOS 7 och senare**
+- **iOS 7 och senare**
 
 ## <a name="prerequisites"></a>Krav
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Prenumeration på Pradeo Security for Mobile Threat Defense
+- Prenumeration på Pradeo Security for Mobile Threat Defense
 
-    -   Mer information finns på [Pradeos webbplats](https://www.pradeo.com/en-US/mobile-threat-protection).
+    - Mer information finns på [Pradeos webbplats](https://www.pradeo.com/en-US/mobile-threat-protection).
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 400de55e26076a8d612ac31388d5c5daec68d4a0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 926d31e226bd25890afe5214b9e8c9247f7316a2
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044532"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572187"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrering av nätverksåtkomstkontroll (NAC) i Intune
 
@@ -39,7 +39,7 @@ Om enheten är registrerad och kompatibel med Intune bör NAC-lösningen ge enhe
 
 Enheter som aktivt synkroniseras med Intune kan inte flyttas från **Kompatibel** / **Inte kompatibel** till **Inte synkroniserad** (eller **Okänd**). Tillståndet **Okänd** är reserverat för nyregistrerade enheter som ännu inte har utvärderats för kompatibilitet.
 
-För enheter som har blockerats från åtkomst till resurser, ska blockeringstjänsten omdirigera alla användare till [hanteringsportalen](https://portal.manage.microsoft.com) för att avgöra varför enheten blockerats.  Om användarna besöker den här sidan kommer deras enheter synkront att omvärderas för kompatibilitet.
+För enheter som har blockerats från åtkomst till resurser, ska blockeringstjänsten omdirigera alla användare till [hanteringsportalen](https://portal.manage.microsoft.com) för att avgöra varför enheten blockerats.  Om användarna besöker den här sidan kommer deras enheter synkront att omvärderas för kompatibilitet.
 
 ## <a name="nac-and-conditional-access"></a>NAC och villkorlig åtkomst
 

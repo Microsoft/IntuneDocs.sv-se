@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: 3e4e1040913daef5418f0b4fa1e56f6ef827dd67
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416837"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713281"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -155,7 +155,7 @@ När du sparar efter en slutförd konvertering kommer baslinjen att distribueras
 3. I fönstret **Ändra version** använder du listrutan **Välj en säkerhetsbaslinje att uppdatera till** och välj den versioninstans som du vill använda.  
 
    ![välj en version](./media/security-baselines/select-instance.png)  
- 
+   
 4. Välj **Granska uppdateringen** för att hämta en CSV-fil som visar skillnaden mellan profilens aktuella instansversion och den nyvalda versionen. Granska den här filen så att du förstår vilka inställningar som har lagts till, tagits bort och vilka standardvärdena för dessa inställningar som gäller för den uppdaterade profilen.  
 
    När du är klar kan du fortsätta till nästa steg.  

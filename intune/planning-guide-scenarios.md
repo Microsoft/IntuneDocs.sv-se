@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce8d87a653e87a2b9ba91552f6857fdab6bee12
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 28e48d64ba220f75f412ef117a08b07dfd477d06
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045981"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549277"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifiera hantering av mobila enheter för användningsscenarier
 
@@ -33,9 +33,9 @@ Vi ska nu ta upp några exempel som hjälper din organisation att identifiera an
 ## <a name="device-ownership"></a>Äganderätt till enhet
 Du kan börja med att titta på organisationens mål och delmål för Intune-distributionen för att få hjälp att identifiera de främsta användningsfallen för distributionen. Inom omfattningen för Intune-distributionsplanen måste du besvara följande frågor:
 
--   Planerar du att ha stöd för företagsägda enheter?
+- Planerar du att ha stöd för företagsägda enheter?
 
--   Planerar du att ha stöd för personligt ägda enheter (BYOD)?
+- Planerar du att ha stöd för personligt ägda enheter (BYOD)?
 
 Dessa är inte antingen/eller-alternativ. Du kanske inser att du behöver stödja båda typerna av ägarskap för att organisationens mål ska kunna uppfyllas. Med underanvändningsfall kan du tydliggöra var de olika principerna för enhetshantering ska tillämpas.
 
@@ -43,11 +43,11 @@ Dessa är inte antingen/eller-alternativ. Du kanske inser att du behöver stödj
 
 Fastställ om varje användningsfallsscenario omfattar underanvändningsfall. En organisation kan t.ex. ha identifierat krav för att stödja ett företagsanvändningsfall som också omfattar ytterligare underanvändningsfall baserade på användartyp eller enhetsroll, t.ex.:
 
--   Informationsarbetare
+- Informationsarbetare
 
--   Chef
+- Chef
 
--   Helskärmsläge
+- Helskärmsläge
 
 Här följer några exempel på användningsfall och underanvändningsfall:
 

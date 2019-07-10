@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bd03075e6088b4cf06237429a723e93e87029fd
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494580"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548367"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fas 1: Förbered Microsoft Intune för hantering av mobilenheter (MDM)
 
@@ -31,30 +31,30 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Vilka typer av enheter behöver hanteras?
 
--   Vilka [plattformar](supported-devices-browsers.md) krävs det stöd för?
+- Vilka [plattformar](supported-devices-browsers.md) krävs det stöd för?
 
--   Är de enheter som du behöver hantera företagsägda eller personliga enheter?
+- Är de enheter som du behöver hantera företagsägda eller personliga enheter?
 
--   Vilken typ av anslutning använder du? Wi-Fi, mobiltelefon, VPN?
+- Vilken typ av anslutning använder du? Wi-Fi, mobiltelefon, VPN?
 
 ### <a name="what-do-your-users-need-to-do-on-managed-devices"></a>Vad måste användarna göra på hanterade enheter?
 
--   Behöver du tillhandahålla appar för slutanvändarna?
+- Behöver du tillhandahålla appar för slutanvändarna?
 
--   Använder du anpassade av verksamhetsspecifika appar? Eller bara behöver du bara offentliga Store-appar?
+- Använder du anpassade av verksamhetsspecifika appar? Eller bara behöver du bara offentliga Store-appar?
 
--   Måste du tillhandahålla e-postkonton?
+- Måste du tillhandahålla e-postkonton?
 
 ### <a name="what-kinds-of-users"></a>Vilka typer av användare handlar det om?
 
--   Hur många användare kommer att använda samma enhet?
+- Hur många användare kommer att använda samma enhet?
 
--   Vilka användningsvillkor behöver du?
+- Vilka användningsvillkor behöver du?
 
-    -   Var noga med att involvera företagets juridiska avdelning redan från början.
-    -   Vilken typ av lokalisering krävs?
+    - Var noga med att involvera företagets juridiska avdelning redan från början.
+    - Vilken typ av lokalisering krävs?
 
--   Är användarnas allmänna kunskaper om teknik och IT goda?
+- Är användarnas allmänna kunskaper om teknik och IT goda?
 
 ### <a name="what-is-your-device-security-policy"></a>Vilken är din säkerhetsprincip för enheter?
 
@@ -68,11 +68,11 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 
 - Vilka typer av autentisering måste du stödja? Om du behöver certifikatbaserad autentisering, vilka typer av certifikat krävs i så fall?
   - Intune kan tillhandahålla certifikat med resursåtkomstprofiler för registrerade enheter.
-  -   Vilken typ av Public Key Infrastructure (PKI) behöver du stöd för?
+  - Vilken typ av Public Key Infrastructure (PKI) behöver du stöd för?
   <br></br>
 - Behöver du stöd för virtuella privata nätverk på enhets- eller appnivå?
 
-  -   Intune kan tillhandahålla VPN-konfigurationer för VPN-tredjepartsleverantörer.
+  - Intune kan tillhandahålla VPN-konfigurationer för VPN-tredjepartsleverantörer.
   <br/><br/>
 - Går det att göra tillfälliga undantag för vissa krav om det skulle bidra till att undvika driftavbrott? Eller måste enheter med åtkomst alltid uppfylla alla säkerhetskrav?
 

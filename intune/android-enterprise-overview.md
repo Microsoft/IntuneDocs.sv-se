@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f59ff42f7707ace92442bf37ddac9679e36448f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1649c6256e4df61b538e2adee87512617b677bb4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045880"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547499"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Hantera Android-arbetsprofilenheter med Intune
 
@@ -68,9 +68,9 @@ Skyddsprinciperna för appar som tillämpas stöds helt och hållet i arbetsprof
 
 VPN-stöd påminner om Android VPN-profiler. Samma VPN-providrar och grundläggande konfigurationsalternativ är tillgängliga för Android Enterprise-hantering, med två skillnader:
 
--  **VPN begränsat till arbetsprofiler** – VPN-anslutningarna är begränsade till appar som distribuerats till arbetsprofilen. Endast Android Enterprise-hanterade appar kan använda VPN-anslutningen. Personliga appar på enheten kan inte använda en hanterad VPN-anslutning. Mer information finns i [VPN-inställningar för Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **VPN begränsat till arbetsprofiler** – VPN-anslutningarna är begränsade till appar som distribuerats till arbetsprofilen. Endast Android Enterprise-hanterade appar kan använda VPN-anslutningen. Personliga appar på enheten kan inte använda en hanterad VPN-anslutning. Mer information finns i [VPN-inställningar för Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
--  **Appspecifik VPN** – Appspecifik VPN kan konfigureras i Intune om VPN-providern stöder:
+- **Appspecifik VPN** – Appspecifik VPN kan konfigureras i Intune om VPN-providern stöder:
     - konfiguration av appspecifik VPN
     - funktionen att konfigurera per app-VPN via Android Enterprise-appkonfigurationsprofilen.
     Mer information finns i [Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter](android-pulse-secure-per-app-vpn.md).
@@ -79,9 +79,9 @@ VPN-stöd påminner om Android VPN-profiler. Samma VPN-providrar och grundlägga
 
 Samma konfigurationsalternativ för certifikatprofiler som är tillgängliga för Android-hantering är tillgängliga på Android Enterprise-arbetsprofilenheter. Android Enterprise tillhandahåller förbättrade API:er för certifikathantering. Denna förbättrade certifikathantering tillhandahåller följande funktioner:
 
--  Säkerställer en tyst och sömlös certifikatdistribution för användaren.
--  Säkerställer att distribuerade certifikat tas bort när en enhet dras tillbaka från Intune och arbetsprofilen tas bort.
--  Tillhandahåller förbättrade meddelandefunktioner som meddelar användarna att certifikatet har distribuerats och konfigurerats av deras IT-avdelning via hanteringstjänsten.
+- Säkerställer en tyst och sömlös certifikatdistribution för användaren.
+- Säkerställer att distribuerade certifikat tas bort när en enhet dras tillbaka från Intune och arbetsprofilen tas bort.
+- Tillhandahåller förbättrade meddelandefunktioner som meddelar användarna att certifikatet har distribuerats och konfigurerats av deras IT-avdelning via hanteringstjänsten.
 
 Mer information finns i [Konfigurera en certifikatprofil för dina enheter i Microsoft Intune](certificates-configure.md).
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bedaf279d65ee1ed7f8dda4e8d866fb848bade7
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 40e78d85c215bbb5cc126705f26041ce4f7786f4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044583"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549458"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Genomföra slutanvändarinförande med villkorlig åtkomst i Microsoft Intune
 
@@ -31,28 +31,28 @@ Aktivering av funktioner för villkorlig åtkomst med Intune, t.ex. blockering a
 
 Detta är en vanlig metod när man vill förbättra en migreringskampanj med villkorlig åtkomst:
 
-1.  Ange att regler för villkorlig åtkomst ska tillämpas för alla användare, men exkludera uttryckligen de användare som måste migrera från den gamla MDM-providern. Du kan skapa en Azure AD-användargrupp med alla de användare som undantagits från villkorlig åtkomst.
+1. Ange att regler för villkorlig åtkomst ska tillämpas för alla användare, men exkludera uttryckligen de användare som måste migrera från den gamla MDM-providern. Du kan skapa en Azure AD-användargrupp med alla de användare som undantagits från villkorlig åtkomst.
 
-2.  När användarna migrerar kan du ta bort dem från gruppen med användare som undantagits från villkorlig åtkomst.
+2. När användarna migrerar kan du ta bort dem från gruppen med användare som undantagits från villkorlig åtkomst.
 
-3.  När migreringen är klar, kan du konfigurera alla principer för villkorlig åtkomst så att de blockerar som standard, såvida inte Intune tillåter åtkomst.
+3. När migreringen är klar, kan du konfigurera alla principer för villkorlig åtkomst så att de blockerar som standard, såvida inte Intune tillåter åtkomst.
 
 ### <a name="advantages"></a>Fördelar
 
--   Tillhandahåller åtkomstkontroll för nya användarkonton eller användarkonton som inte hanterades av den tidigare lösningen.
+- Tillhandahåller åtkomstkontroll för nya användarkonton eller användarkonton som inte hanterades av den tidigare lösningen.
 
--   Tillhandahåller en respitperiod för migreringen för användare av den tidigare lösningen.
+- Tillhandahåller en respitperiod för migreringen för användare av den tidigare lösningen.
 
--   Minimerar produktivitetsförlust
+- Minimerar produktivitetsförlust
 
 ### <a name="disadvantages"></a>Nackdelar
 
--   Potentiellt kan användare av en tidigare lösning få åtkomst till resurser med hjälp av ohanterade enheter innan den villkorliga åtkomsten aktiveras för dessa användare.
+- Potentiellt kan användare av en tidigare lösning få åtkomst till resurser med hjälp av ohanterade enheter innan den villkorliga åtkomsten aktiveras för dessa användare.
 
 
 Det här är ett sätt av flera. Du kan välja en enklare process som skjuter upp all villkorlig åtkomst till efter det att varje fas har instruerats om registrering, eller så kan du välja en striktare process som tillämpar villkorlig åtkomst direkt från start och som kräver fullständig efterlevnad för all åtkomst.
 
--   Läs mer om [villkorlig åtkomst](conditional-access.md).
+- Läs mer om [villkorlig åtkomst](conditional-access.md).
 
 ## <a name="task-list-for-conditional-access"></a>Uppgiftslista för villkorlig åtkomst
 
@@ -64,15 +64,15 @@ Det här är ett sätt av flera. Du kan välja en enklare process som skjuter up
 
 Välj något av följande alternativ:
 
--   [Konfigurera villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Konfigurera villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
--   [Install Exchange Connector lokalt med Intune](exchange-connector-install.md)
+- [Install Exchange Connector lokalt med Intune](exchange-connector-install.md)
 
--   [Konfigurera appbaserade principer för villkorlig åtkomst för Exchange Online](app-based-conditional-access-intune-create.md)
+- [Konfigurera appbaserade principer för villkorlig åtkomst för Exchange Online](app-based-conditional-access-intune-create.md)
 
--   [Konfigurera appbaserade principer för villkorlig åtkomst för SharePoint Online](app-based-conditional-access-intune-create.md)
+- [Konfigurera appbaserade principer för villkorlig åtkomst för SharePoint Online](app-based-conditional-access-intune-create.md)
 
--   [Blockera appar som inte använder modern autentisering (ADAL)](app-modern-authentication-block.md)
+- [Blockera appar som inte använder modern autentisering (ADAL)](app-modern-authentication-block.md)
 
 ## <a name="next-steps"></a>Nästa steg
 

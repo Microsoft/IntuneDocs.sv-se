@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 22ce9ace7848ea1535b04ab6f0c0249c970e8c34
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494295"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547358"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -429,7 +429,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         >  - I den statiska texten för ämnet omvandlas hakparenteser **{}** som inte omsluter en variabel till ett fel. 
         >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}** .
         >  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
-        >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
+        >  - När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
         >  - Profilen kan inte installeras på enheten om de angivna enhetsvariablerna inte stöds. Om {{IMEI}} t.ex. används i ämnesnamnet för SCEP-profilen som tilldelats till en enhet som inte har ett IMEI-nummer, misslyckas profilinstallationen. 
 
 
@@ -472,7 +472,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         >  - I den statiska texten för SAN fungerar inte klammerparenteser **{}** , pipe-symboler **|** eller semikolon **;** . 
         >  - När du använder en variabel för enhetscertifikat omger du variabeln med klammerparenteser **{}** .
         >  - `{{FullyQualifiedDomainName}}` fungerar endast för Windows-enheter och domänanslutna enheter. 
-        >  -  När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
+        >  - När du använder enhetsegenskaper som IMEI, serienummer och fullständigt domännamn i ämnet eller SAN för ett certifikat, måste du tänka på att de här egenskaperna kan förfalskas av en person med åtkomst till enheten.
         >  - Profilen kan inte installeras på enheten om de angivna enhetsvariablerna inte stöds. Om {{IMEI}} t.ex. används i alternativt namn för certifikatmottagare för SCEP-profilen som tilldelats till en enhet som inte har ett IMEI-nummer, misslyckas profilinstallationen.  
 
    - **Certifikatets giltighetsperiod**: Om du körde kommandot `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` på certifikatutfärdaren, vilket gör att en anpassad giltighetsperiod kan användas, kan du ange hur lång tid som återstår innan certifikatet går ut.<br>Du kan ange ett värde som är lägre men inte högre än giltighetsperioden i certifikatmallen. Om giltighetsperioden i certifikatmallen till exempel är två år kan du ange ett värde på ett år, men inte fem år. Värdet måste också vara lägre än den återstående giltighetsperioden för certifikatutfärdaren. 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b29e59924ec4bf08336cbd1ea9aa588fd8612233
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 714a595263475da98a48c982e0ed24d691440097
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044415"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572267"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Fastställa distributionsmål, delmål och utmaningar
 
@@ -32,65 +32,65 @@ När man vill skapa en bra distributionsplan måste man börja med att identifie
 
 Distributionsmål är långsiktiga prestationer som du vill uppnå genom att distribuera Intune i din organisation. Nedan följer några exempel på sådana mål tillsammans med beskrivningar och affärsvärde för respektive mål.
 
--   **Integrera med Office 365 och stöd användning av mobila Office-appar**
+- **Integrera med Office 365 och stöd användning av mobila Office-appar**
 
-    -   **Beskrivning:** Ger nära integrering med Office 365 och användningen av Office-mobilappar med appskydd.
+    - **Beskrivning:** Ger nära integrering med Office 365 och användningen av Office-mobilappar med appskydd.
 
-    -   **Affärsvärde:** Säker och förbättrad användarupplevelse genom att tillåta användarna att använda appar som de känner till och föredrar.
+    - **Affärsvärde:** Säker och förbättrad användarupplevelse genom att tillåta användarna att använda appar som de känner till och föredrar.
 
--   **Aktivera åtkomst till interna företagstjänster på mobila enheter**
+- **Aktivera åtkomst till interna företagstjänster på mobila enheter**
 
-    -   **Beskrivning:** Gör det möjligt för de anställda att vara produktiva oavsett var de behöver arbeta och med den enhet som passar dem bäst. Det här projektet bör sträva efter att möjliggöra mobil produktivitet och åtkomst till företagsdata på ett säkert sätt.
+    - **Beskrivning:** Gör det möjligt för de anställda att vara produktiva oavsett var de behöver arbeta och med den enhet som passar dem bäst. Det här projektet bör sträva efter att möjliggöra mobil produktivitet och åtkomst till företagsdata på ett säkert sätt.
 
-    -   **Affärsvärde:** Gör det möjligt för medarbetarna att vara rörliga och arbeta där de behöver, vilket ger företaget större möjligheter att vara konkurrenskraftiga och tillhandahålla en mer tillfredsställande arbetsmiljö.
+    - **Affärsvärde:** Gör det möjligt för medarbetarna att vara rörliga och arbeta där de behöver, vilket ger företaget större möjligheter att vara konkurrenskraftiga och tillhandahålla en mer tillfredsställande arbetsmiljö.
 
--   **Tillhandahålla dataskydd på mobila enheter**
+- **Tillhandahålla dataskydd på mobila enheter**
 
-    -   **Beskrivning:** Om data lagras på en mobil enhet bör de skyddas från skadlig och oavsiktlig förlust eller delning.
+    - **Beskrivning:** Om data lagras på en mobil enhet bör de skyddas från skadlig och oavsiktlig förlust eller delning.
 
-    -   **Affärsvärde:** Dataskydd är viktigt för att säkerställa att vi fortsätter vara konkurrenskraftiga samt att vi behandlar våra kunder och deras data med största noggrannhet.
+    - **Affärsvärde:** Dataskydd är viktigt för att säkerställa att vi fortsätter vara konkurrenskraftiga samt att vi behandlar våra kunder och deras data med största noggrannhet.
 
--   **Minska kostnaderna**
+- **Minska kostnaderna**
 
-    -   **Beskrivning:** När så är möjligt sänker projektet kostnaderna för distribution och drift.
+    - **Beskrivning:** När så är möjligt sänker projektet kostnaderna för distribution och drift.
 
-    -    **Affärsvärde:** Effektiv användning av resurser gör det möjligt för företag att investera inom andra områden, konkurrera mer effektivt och ge kunderna bättre service.
+    - **Affärsvärde:** Effektiv användning av resurser gör det möjligt för företag att investera inom andra områden, konkurrera mer effektivt och ge kunderna bättre service.
 
 ## <a name="deployment-objectives"></a>Distributionsdelmål
 
 Distributionsdelmål är de åtgärder din organisation kan vidta för att uppnå sina distributionsmål för Intune. Nedan visas några exempel på distributionsdelmål och hur de kan uppnås.
 
--   **Minska antalet enhetshanteringslösningar**
+- **Minska antalet enhetshanteringslösningar**
 
-    -   **Implementering:** Konsolidera till en enda lösning för hantering av mobilenheter: Microsoft Intune för företagsdataskydd för appar och enheter.
+    - **Implementering:** Konsolidera till en enda lösning för hantering av mobilenheter: Microsoft Intune för företagsdataskydd för appar och enheter.
 
--   **Tillhandahålla säker åtkomst till Exchange och SharePoint Online**
+- **Tillhandahålla säker åtkomst till Exchange och SharePoint Online**
 
-    -   **Implementering:** Tillämpa villkorlig åtkomst för Exchange och SharePoint Online.
+    - **Implementering:** Tillämpa villkorlig åtkomst för Exchange och SharePoint Online.
 
--   **Förhindra att företagsdata lagras eller vidarebefordras till tjänster på den mobila enheten som inte tillhör företaget**
+- **Förhindra att företagsdata lagras eller vidarebefordras till tjänster på den mobila enheten som inte tillhör företaget**
 
-    -   **Implementering:** Tillämpa Intune-appskyddsprinciper för Microsoft Office-appar och verksamhetsspecifika appar.
+    - **Implementering:** Tillämpa Intune-appskyddsprinciper för Microsoft Office-appar och verksamhetsspecifika appar.
 
--   **Tillhandahålla möjlighet att rensa företagsdata från enheten**
+- **Tillhandahålla möjlighet att rensa företagsdata från enheten**
 
-    -   **Implementering:** Registrera enheter till Intune. Detta ger dig möjlighet att utföra en fjärrensning av företagets data och resurser när så är lämpligt.
+    - **Implementering:** Registrera enheter till Intune. Detta ger dig möjlighet att utföra en fjärrensning av företagets data och resurser när så är lämpligt.
 
 ## <a name="deployment-challenges"></a>Distributionsutmaningar
 
 Distributionsutmaningar är problem som är viktigast för en organisation och som kan ha en negativ inverkan på distributionen. De är ibland relaterade till äldre problem som man har upplevt med tidigare projekt och som du kanske vill undvika, eller nya problem som är relaterade till det aktuella distributionsarbetet. Nedan visas några exempel på en Intune-distributionsutmaningar tillsammans med möjliga lösningar.
 
--   Supportberedskap och användarupplevelse ingår inte i den inledande projektomfattningen. Detta leder till dåligt anammande hos slutanvändarna, och till stora utmaningar för supportavdelningen.
+- Supportberedskap och användarupplevelse ingår inte i den inledande projektomfattningen. Detta leder till dåligt anammande hos slutanvändarna, och till stora utmaningar för supportavdelningen.
 
-    -   **Lösning:** Lägg till supportutbildning. Verifiera slutanvändarnas erfarenhet av framgångsmått i din distributionsplan.
+    - **Lösning:** Lägg till supportutbildning. Verifiera slutanvändarnas erfarenhet av framgångsmått i din distributionsplan.
 
--   Brist på tydligt definierade mål och framgångsmått leder till abstrakta resultat. Det kan också medföra att din organisation hamnar i reaktivt läge när problem uppstår.
+- Brist på tydligt definierade mål och framgångsmått leder till abstrakta resultat. Det kan också medföra att din organisation hamnar i reaktivt läge när problem uppstår.
 
-    -   **Lösning:** Definiera målen och framgångsmåtten tidigt i projektomfattningen, och använd dessa datapunkter för att bygga ut de andra distributionsfaserna. Kontrollera att målen är specifika, mätbara, uppnåeliga, realistiska och görs i rätt tid. Jämför med dina mål i varje enskild fas så att du kan säkerställa att distributionsprojektet ligger i fas.
+    - **Lösning:** Definiera målen och framgångsmåtten tidigt i projektomfattningen, och använd dessa datapunkter för att bygga ut de andra distributionsfaserna. Kontrollera att målen är specifika, mätbara, uppnåeliga, realistiska och görs i rätt tid. Jämför med dina mål i varje enskild fas så att du kan säkerställa att distributionsprojektet ligger i fas.
 
--   Anta att du inte skapar, verifierar eller offensivt delar ett tydligt värdeförslag som får respons i organisationen. Detta leder ofta till begränsat införande och utebliven avkastning.
+- Anta att du inte skapar, verifierar eller offensivt delar ett tydligt värdeförslag som får respons i organisationen. Detta leder ofta till begränsat införande och utebliven avkastning.
 
-    -   **Lösning:** Du vill kanske sätta igång med projektet direkt, men se först till att det finns tydligt definierade mål och delmål. Ta med dessa i alla medvetenhets- och utbildningsaktiviteter för att säkerställa att användarna förstår varför organisationen har valt Intune.
+    - **Lösning:** Du vill kanske sätta igång med projektet direkt, men se först till att det finns tydligt definierade mål och delmål. Ta med dessa i alla medvetenhets- och utbildningsaktiviteter för att säkerställa att användarna förstår varför organisationen har valt Intune.
 
 ## <a name="next-steps"></a>Nästa steg
 
