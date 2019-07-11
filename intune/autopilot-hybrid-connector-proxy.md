@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c47a7413d98467fffc26dee098a64cfeac770e4
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f91ec3124d8fab067ec32194a68508762c6cef33
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043550"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735254"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Arbeta med befintliga lokala proxyservrar
 
@@ -64,6 +64,7 @@ Om du vill inaktivera utgående proxyanvändning för anslutningsappen redigerar
     </appSettings>
 </configuration>
 ```
+
 För att säkerställa att Connector Updater-tjänsten kringgår proxyn gör du en liknande ändring i C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
 
 ```xml
