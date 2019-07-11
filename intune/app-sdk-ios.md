@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ec0ab28f2b32cf3c60d6d674cfac5a5b21d094d
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 961470b9f5671dc39864dac45fdcb49862de4da9
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735571"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -40,28 +40,28 @@ Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprincip
 
 * Hämta filerna för Intune App SDK för iOS på [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
-## <a name="whats-in-the-sdk-repository"></a>Vad ingår i SDK-databasen
+## <a name="whats-in-the-sdk-repository"></a>Vad finns i SDK-lagringsplatsen
 
-Följande filer är relevanta för appar/tillägg som innehåller inga Swift-kod eller kompileras med en Xcode-version äldre 10.2:
+Följande filer är relevanta för appar/tillägg som inte innehåller någon SWIFT-kod eller som kompileras med en version av Xcode före 10,2:
 
-* **IntuneMAM.framework**: Intune App SDK-ramverket. Vi rekommenderar att du länka detta ramverk till din app/tillägg för att aktivera hantering av Intune-klienten. Vissa utvecklare kan dock föredra prestandafördelarna med det statiska biblioteket. I följande avsnitt.
+* **IntuneMAM.framework**: Intune App SDK-ramverket. Vi rekommenderar att du länkar det här ramverket till appen/tilläggen för att aktivera hantering av klient program i Intune. Vissa utvecklare kan dock föredra prestanda fördelarna i det statiska biblioteket. Se följande.
 
-* **libIntuneMAM.a**: Det statiska Intune App SDK-biblioteket. Utvecklare kan välja att länka det statiska biblioteket i stället för ramen. Eftersom statiska bibliotek är inbäddade direkt i appen/tillägget binära under utvecklingen, finns det prestandafördelar Start-tid för att använda det statiska biblioteket. Integrera dem i din app är dock en mer komplicerad process. Om din app innehåller några tillägg, länkar det statiska biblioteket till appen och tillägg resulterar i en större storlek för app-paket, som det statiska biblioteket ska bäddas in i varje app/tillägg binär. När du använder ramverket, kan appar och tillägg dela samma Intune SDK binary, vilket resulterar i en mindre storlek på appen.
+* **libIntuneMAM.a**: Det statiska Intune App SDK-biblioteket. Utvecklare kan välja att länka det statiska biblioteket i stället för ramverket. Eftersom statiska bibliotek bäddas in direkt i appens/tilläggets binärfil vid Bygg tiden, finns det några fördelar med att starta tid för att använda det statiska biblioteket. Att integrera den i din app är dock en mer komplicerad process. Om din app innehåller tillägg och länkar det statiska biblioteket till appen och tilläggen resulterar i en större samlings paket storlek, eftersom det statiska biblioteket bäddas in i varje app/tillägg-binärfil. När du använder ramverket kan appar och tillägg dela samma Intune SDK-binärfil, vilket resulterar i en mindre app-storlek.
 
-* **IntuneMAMResources.Bundle**: ett resurspaket som innehåller resurser som SDK är beroende av. Resurser-paket krävs endast för appar som integrerar det statiska biblioteket (libIntuneMAM.a).
+* **IntuneMAMResources.Bundle**: ett resurspaket som innehåller resurser som SDK är beroende av. Resurs samlingen krävs endast för appar som integrerar det statiska biblioteket (libIntuneMAM. a).
 
-Följande filer är relevanta för appar /-tillägg som innehåller Swift-kod och kompileras med Xcode 10.2 +:
+Följande filer är relevanta för appar/tillägg som innehåller SWIFT-kod och kompileras med Xcode 10.2 +:
 
-* **IntuneMAMSwift.framework**: The Intune App SDK Swift framework. Det här ramverket innehåller alla rubriker för API: er som anropar din app. Länka detta ramverk till din app/tillägg för att aktivera hantering av Intune-klienten.
+* **IntuneMAMSwift. Framework**: INTUNE app SDK Swift-ramverket. Det här ramverket innehåller alla sidhuvuden för API: er som din app kommer att anropa. Länka det här ramverket till appen/tilläggen för att aktivera hantering av klient program i Intune.
 
-* **IntuneMAMSwiftStub.framework**: Intune App SDK Swift Stub-ramverket. Det här är ett nödvändigt beroende av IntuneMAMSwift.framework som appar /-tillägg måste länkar.
+* **IntuneMAMSwiftStub. Framework**: INTUNE app SDK Swift stub-ramverket. Detta är ett obligatoriskt beroende av IntuneMAMSwift. Framework som Apps/extensions måste länka till.
 
 
-Följande filer är relevanta för alla appar/tillägg:
+Följande filer är relevanta för alla appar/omfattningar:
 
-* **IntuneMAMConfigurator**: ett verktyg som används för att konfigurera appen eller tillägget Info.plist med minsta nödvändiga ändringar för Intune-hantering. Beroende på funktionerna i din app eller tillägg, kan du behöva göra ytterligare manuella ändringar Info.plist.
+* **IntuneMAMConfigurator**: ett verktyg som används för att konfigurera appen eller tilläggets info. plist med minsta antal ändringar som krävs för Intune-hantering. Beroende på funktionerna i appen eller tillägget kan du behöva göra ytterligare manuella ändringar i filen info. plist.
 
-* **Rubriker**: visar offentliga API:er för Intune App SDK. Dessa rubriker ingår i IntuneMAM/IntuneMAMSwift-ramverk, så att utvecklare som använder antingen av ramverk inte behöver lägga till sidhuvuden manuellt till projektet. Utvecklare som vill länka mot det statiska biblioteket (libIntuneMAM.a) måste du manuellt ta med dessa huvuden i projektet.
+* **Rubriker**: visar offentliga API:er för Intune App SDK. De här rubrikerna ingår i ramverken för IntuneMAM/IntuneMAMSwift, så utvecklare som använder något av ramverken behöver inte lägga till huvuden till sitt projekt manuellt. Utvecklare som väljer att länka till det statiska biblioteket (libIntuneMAM. a) måste ta med dessa huvuden manuellt i projektet.
 
 Följande huvudfiler innehåller API:er, datatyper och protokoll som Intune App SDK tillgängliggör för utvecklare:
 
@@ -94,14 +94,14 @@ Målet med Intune App SDK för iOS är att lägga till hanteringsfunktioner i iO
 
 Följ dessa steg för att aktivera Intune App SDK:
 
-1. **Alternativ 1 - ramverket (rekommenderas)** : Om du använder Xcode 10.2 + och din app/tillägget innehåller Swift-kod, länka `IntuneMAMSwift.framework` och `IntuneMAMSwiftStub.framework` till målet: dra `IntuneMAMSwift.framework` och `IntuneMAMSwiftStub.framework` till den **inbäddade Binärfiler** projektets målkatalog.
+1. **Alternativ 1 – Framework (rekommenderas)** : om du använder Xcode 10.2 + och din app/Extension innehåller SWIFT-kod, länkar `IntuneMAMSwift.framework` och `IntuneMAMSwiftStub.framework` till målet: dra `IntuneMAMSwift.framework` och `IntuneMAMSwiftStub.framework` till listan med **inbäddade binärfiler** för Projektets mål.
 
-    I annat fall länka `IntuneMAM.framework` till målet: dra `IntuneMAM.framework` till den **inbäddade binära** projektets målkatalog.
+    Annars länkar `IntuneMAM.framework` du till målet: dra `IntuneMAM.framework` till listan **inbäddade binärfiler** för projekt målet.
 
    > [!NOTE]
    > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se [Skicka in din app till App Store](#submit-your-app-to-the-app-store) för mer information.
 
-   **Alternativ 2 – statiska biblioteket**: det här alternativet är bara tillgängligt för appar/tillägg som innehåller inga Swift-kod eller har skapats med Xcode < 10.2. Länk till `libIntuneMAM.a`-biblioteket. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
+   **Alternativ 2 – statiskt bibliotek**: det här alternativet är endast tillgängligt för appar/tillägg som innehåller ingen SWIFT-kod eller som har skapats med Xcode < 10,2. Länk till `libIntuneMAM.a`-biblioteket. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
 
     ![Intune App SDK iOS: länkade ramverk och bibliotek](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -116,18 +116,18 @@ Följ dessa steg för att aktivera Intune App SDK:
 
      ![Intune App SDK iOS: kopiera paketresurser](./media/intune-app-sdk-ios-copy-bundle-resources.png)
      
-2. Om du vill anropa någon av Intune APIs från Swift måste ditt app/tillägg importera de nödvändiga Intune SDK-rubrikerna via ett datacenterbryggning Objective-C-huvud. Om din app/tillägget inte redan innehåller ett datacenterbryggning Objective-C-huvud, du kan ange en via den `SWIFT_OBJC_BRIDGING_HEADER` eller den Xcode UI **Interimshuvudfilen med Objective-C** fält. Din datacenterbryggning rubrik bör se ut ungefär så här:
+2. Om du behöver anropa någon av Intune-API: erna från Swift måste appen/tillägget importera de nödvändiga Intune SDK-huvudena via ett mål-C-bryggnings huvud. Om din app/tillägg inte redan innehåller en mål-c-bryggnings rubrik, kan du ange en via `SWIFT_OBJC_BRIDGING_HEADER` build-konfigurationsfilen eller Xcode-gränssnittets **mål-c-bryggnings huvud** fält. Ditt bro huvud bör se ut ungefär så här:
 
    ```objc
       #import <IntuneMAMSwift/IntuneMAM.h>
    ```
    
-   Det gör alla Intune SDK-API: er tillgängliga i alla Swift källfiler ditt app/tillägg. 
+   Detta gör alla Intune SDK: s API: er tillgängliga i alla Swift-källfiler för appen/tillägget. 
    
     > [!NOTE]
-    > * Du kan välja att endast brygga specifika Intune SDK-huvuden till Swift i stället för den omfattande IntuneMAM.h
-    > * Sökvägen till filen huvudet kan variera beroende på vilka du har integrerat framework/statiska-biblioteket.
-    > * Gör Intune SDK-API: er som är tillgängliga i Swift via en instruktion för import av modulen (ex: importera IntuneMAMSwift) stöds inte för närvarande. Den rekommenderade metoden är att använda ett datacenterbryggning Objective-C-huvud.
+    > * Du kan välja att bara överbrygga vissa Intune SDK-huvuden till Swift, i stället för alla-IntuneMAM. h
+    > * Beroende på vilket ramverk/statiska bibliotek som du har integrerat kan sökvägen till huvud fil (er) vara annorlunda.
+    > * Att göra Intune SDK-API: er tillgängliga i Swift via en modul import-instruktion (t. ex.: import IntuneMAMSwift) stöds inte för närvarande. Den rekommenderade metoden är att använda ett mål-C-bryggnings huvud.
     
 3. Lägg till dessa iOS-ramverk i projektet:  
     * MessageUI.framework  
@@ -146,6 +146,7 @@ Följ dessa steg för att aktivera Intune App SDK:
 
    > [!NOTE]
    > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
+   >
    >  ```xml
    >  <key>keychain-access-groups</key>
    >  <array>
@@ -322,6 +323,7 @@ Om registreringen misslyckas bör appen överväga att anropa detta API igen vid
 När detta API har anropats kan appen fortsätta att fungera som vanligt. Om registreringen lyckas meddelar SDK användaren att appen behöver startas om.
 
 Exempel:
+
 ```objc
 [[IntuneMAMEnrollmentManager instance] loginAndEnrollAccount:@”user@foo.com”];
 ```
@@ -369,6 +371,7 @@ Den här metoden måste anropas innan användarkontots Azure AD-token tas bort. 
 Om appen ska ta bort användarens företagsdata på egen hand ska `doWipe`-flaggan anges till falskt. Annars kan appen se till att SDK initierar en selektiv rensning. Detta resulterar i ett anrop till appens ombud för selektiv rensning.
 
 Exempel:
+
 ```objc
 [[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccount:@”user@foo.com” withWipe:YES];
 ```
@@ -737,9 +740,9 @@ Ja, IT-administratören kan skicka ett kommando för selektiv rensning till prog
 
 Ja! Vi har nyligen gjort om vår exempelapp med öppen källkod: [Wagr för iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Wagr har nu aktiverats för appskyddsprincip med hjälp av Intune App SDK.
 
-### <a name="how-can-i-troubleshoot-my-app"></a>Hur felsöker jag min app?
+### <a name="how-can-i-troubleshoot-my-app"></a>Hur kan jag felsöka min app?
 
-Intune SDK för iOS 9.0.3+ stöder möjligheten att lägga till en diagnostics-konsolen i mobilappen för att testa principer och logga fel. `IntuneMAMDiagnosticConsole.h` definierar den `IntuneMAMDiagnosticConsole` gränssnittet för klass, vilken utvecklare kan använda för att visa diagnostisk Intune-konsolen. Detta kan slutanvändare eller utvecklare under testet om du vill samla in och dela Intune-loggarna för att diagnostisera eventuella problem som de kan ha. Detta API är valfritt för integrerare.
+Intune SDK för iOS 9.0.3 + har stöd för möjligheten att lägga till en diagnostisk konsol i mobilappen för att testa principer och loggnings fel. `IntuneMAMDiagnosticConsole.h``IntuneMAMDiagnosticConsole` definierar klass gränssnittet, som utvecklare kan använda för att Visa Intune-diagnostiken. På så sätt kan slutanvändare eller utvecklare under testningen samla in och dela Intune-loggar för att hjälpa till att diagnostisera eventuella problem som de kan ha. Detta API är valfritt för integrerare.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Skicka in din app till App Store
 
@@ -756,4 +759,5 @@ Både det statiska biblioteket och ramverksversionerna av Intune App SDK är uni
     ```bash
     cp ~/Desktop/IntuneMAM.device_only ~/Desktop/IntuneMAM.framework/IntuneMAM
     ```
+
     Det första kommandot rensar simuleringsarkitektur från ramverkets DYLIB-fil. Det andra kommandot kopierar DYLIB-filen som endast är för enheten tillbaka till ramverkskatalogen.
