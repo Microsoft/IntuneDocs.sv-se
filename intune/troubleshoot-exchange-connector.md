@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd6d24b5a897c5a6bcd075da111fa579d8d74154
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5bdb727b542cd66e0b8fcf4a0822eaf0107600ad
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044556"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735729"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Felsöka lokal Intune Exchange-anslutning
 
@@ -32,17 +32,17 @@ I den här artikeln beskrivs hur du felsöker problem med lokal Intune Exchange-
 
 Kontrollera [konfigurationen av lokal Intune Exchange-anslutning](exchange-connector-install.md) och se till att anslutningen har konfigurerats korrekt. Nedan visas några vanliga problem. Se om problemet är löst när du har gjort korrigeringar.
 
- - I dialogrutan för Microsoft Intune Exchange Connector ser du till att du har angett ett användarkonto som har nödvändiga behörigheter för att köra [Windows PowerShell Exchange-cmdlets](exchange-connector-install.md#exchange-cmdlet-requirements).
+- I dialogrutan för Microsoft Intune Exchange Connector ser du till att du har angett ett användarkonto som har nödvändiga behörigheter för att köra [Windows PowerShell Exchange-cmdlets](exchange-connector-install.md#exchange-cmdlet-requirements).
 - Aktivera meddelanden och ange ett meddelandekonto.
- - När du konfigurerar Exchange Connector anger du en klientåtkomstserver (CAS) som är så nära som möjligt den server som är värd för Exchange-anslutningen. Svarstiden för kommunikationen mellan klientåtkomstservern och Exchange-anslutningen kan orsaka fördröjningar i enhetsidentifieringen, särskilt om Dedikerad Exchange Online används.
- - Åtkomst för en användare med en nyligen registrerad enhet kan fördröjas tills Exchange-anslutningen synkroniserar med Exchange-CAS. En fullständig synkronisering görs en gång per dag, och en deltasynkronisering (snabbsynkronisering) görs flera gånger per dag.  Du kan [manuellt framtvinga en snabbsynkronisering eller en fullständig synkronisering](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) för att minimera fördröjningar.
+- När du konfigurerar Exchange Connector anger du en klientåtkomstserver (CAS) som är så nära som möjligt den server som är värd för Exchange-anslutningen. Svarstiden för kommunikationen mellan klientåtkomstservern och Exchange-anslutningen kan orsaka fördröjningar i enhetsidentifieringen, särskilt om Dedikerad Exchange Online används.
+- Åtkomst för en användare med en nyligen registrerad enhet kan fördröjas tills Exchange-anslutningen synkroniserar med Exchange-CAS. En fullständig synkronisering görs en gång per dag, och en deltasynkronisering (snabbsynkronisering) görs flera gånger per dag.  Du kan [manuellt framtvinga en snabbsynkronisering eller en fullständig synkronisering](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) för att minimera fördröjningar.
  
 ## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Exchange ActiveSync-enheten identifieras inte från Exchange
 [Övervaka Exchange-anslutningens aktivitet](exchange-connector-install.md#on-premises-exchange-connector-high-availability-support) för att se om Exchange-anslutningen synkroniserar med Exchange-servern. Om en fullständig synkronisering eller en snabbsynkronisering har slutförts efter att enheten anslöts kan du söka efter andra möjliga problem som anges nedan. Om ingen synkronisering har gjorts samlar du in synkroniseringsloggarna och bifogar dem i en supportbegäran.
 
- - Se till att användarna har en Intune-licens; annars kan Exchange-anslutningen inte identifiera deras enheter.
- - Om en användares primära SMTP-adress skiljer sig från användarens UPN i Azure Active Directory (Azure AD) kan Exchange-anslutningen inte identifiera någon enhet för den användaren. Åtgärda den primära SMTP-adressen för att lösa problemet.
- - Om du har både Exchange 2010- och Exchange 2013-postlådeservrar i din miljö rekommenderar vi att du pekar Exchange-anslutningen på en Exchange 2013-CAS. Annars kommer Exchange-anslutningen inte att identifiera några 2013-användares enheter om Exchange-anslutningen har konfigurerats för att kommunicera med en Exchange 2010-CAS. 
+- Se till att användarna har en Intune-licens; annars kan Exchange-anslutningen inte identifiera deras enheter.
+- Om en användares primära SMTP-adress skiljer sig från användarens UPN i Azure Active Directory (Azure AD) kan Exchange-anslutningen inte identifiera någon enhet för den användaren. Åtgärda den primära SMTP-adressen för att lösa problemet.
+- Om du har både Exchange 2010- och Exchange 2013-postlådeservrar i din miljö rekommenderar vi att du pekar Exchange-anslutningen på en Exchange 2013-CAS. Annars kommer Exchange-anslutningen inte att identifiera några 2013-användares enheter om Exchange-anslutningen har konfigurerats för att kommunicera med en Exchange 2010-CAS. 
 - I Dedikerad Exchange Online-miljöer måste du peka Exchange-anslutningen på en Exchange 2013-CAS (inte en Exchange 2010-CAS) i den dedikerade miljön under den inledande konfigurationen eftersom anslutningen endast kommer att kommunicera med den här CAS:en vid körning av Powershell-cmdlets.
 
 

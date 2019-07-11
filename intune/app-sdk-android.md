@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4530c1ec573560924b54aa8fd21d39a86cefe97e
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 2cad30b0cf446d6591cba2997261f049ad6ae983
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735626"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -105,6 +105,7 @@ buildscript {
 ```
 
 Sedan tillämpar du bara plugin-programmet i `build.gradle`-filen för ditt APK-projekt som
+
 ```groovy
 apply plugin: 'com.microsoft.intune.mam'
 ```
@@ -141,8 +142,8 @@ intunemam {
     excludeClasses = ['com.contoso.SplashActivity']
     excludeVariants=['savory']
 }
-
 ```
+
 Detta skulle ha följande effekter:
 * `:product:FooLib` skrivs inte om eftersom den ingår i `excludeProjects`
 * `:product:foo-project` skrivs om, förutom för `com.contoso.SplashActivity` som ignoreras eftersom den finns i `excludeClasses`
@@ -1072,9 +1073,10 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 
 > [!NOTE]
 > Appens `MAMServiceAuthenticationCallback.acquireToken()`-metod måste skicka *sant* för den nya `forceRefresh`-flaggan till `acquireTokenSilentSync()` för att framtvinga en uppdatering från hanteraren.  Detta görs för att undvika ett cachelagringsproblem med token i ADAL som kan påverka MAM-tjänsttoken. I allmänhet ser det ut så här:
-```java
-AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ true);
-```
+>
+> ```java
+> AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ true);
+> ```
 
 > [!NOTE]
 > Om du vill visa ett UX för anpassad blockering under åtgärdsförsöket skickar du *falskt* för showUX-parametern till `remediateCompliance()`. Du måste se till att du visar ditt UX och registrerar meddelandeavlyssnaren först innan du anropar `remediateCompliance()`.  Detta förhindrar ett konkurrenstillstånd där meddelandet kan förbises om `remediateCompliance()` misslyckas mycket snabbt.  Till exempel är metoden `onCreate()` eller `onMAMCreate()` i en Activity-underklass det perfekta stället att registrera meddelandeavlyssnaren och sedan anropa `remediateCompliance()`.  Parametrarna för `remediateCompliance()` kan skickas till ditt UX som Intent-tillägg (avsikt).  När meddelandet om efterlevnadsstatus har tagits emot kan du visa resultatet eller helt enkelt slutföra aktiviteten.
@@ -1415,6 +1417,7 @@ Med `MAMIdentityExecutors` kan du omsluta en befintlig instans av `Executor` ell
   Executor wrappedExecutor = MAMIdentityExecutors.wrapExecutor(originalExecutor, activity);
   ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(originalExecutorService, activity);
 ```
+
 ### <a name="file-protection"></a>Filskydd
 
 Alla filer har en associerad identitet när de skapas, baserat på tråd- och processidentiteten. Den här identiteten används för både filkryptering och selektiv rensning. Endast filer vars identitet är hanterad och som har en princip som kräver kryptering krypteras. Med SDK:s förvalda selektiva funktionsrensning rensas endast filer som är associerade med den hanterade identitet som en rensning har begärts för. Appen kan fråga efter eller ändra en fils identitet med hjälp av `MAMFileProtectionManager`-klassen.
@@ -1643,6 +1646,7 @@ Dessa nyckel-/värdepar tolkas inte av Intune utan skickas till appen. Program s
 > Konfiguration för leverans via MAM-WE kan inte levereras i `offline`.  Endast Android Enterprise AppRestrictions levereras ett `MAMUserNotification` på en tom identitet i det här fallet.
 
 ### <a name="example"></a>Exempel
+
 ```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
 String identity = "user@contoso.com"
@@ -1678,6 +1682,7 @@ Vyer som genererats av MAM SDK kan anpassas visuellt för att bättre matcha app
 
 ### <a name="how-to-customize"></a>Så här anpassar du
 För att kunna tillämpa formatändringarna på Intunes MAM-vyer måste du först skapa en XML-fil som åsidosätter formatet. Den här filen placeras i katalogen ”/res/xml” i din app och du kan döpa den till vad du vill. Nedan visas ett exempel på det format som den här filen måste följa.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <styleOverrides>
@@ -1722,16 +1727,20 @@ Aktivera standardregistrering med följande steg:
 1. Om din app integrerar ADAL eller om du behöver aktivera enkel inloggning [konfigurerar du ADAL](#configure-azure-active-directory-authentication-library-adal) enligt [vanlig ADAL-konfiguration](#common-adal-configurations) nummer 2. Annars kan du koppa över det här steget.
    
 2. Aktivera standardregistrering genom att ange följande värde i manifestet:
+
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
    ```
+
    > [!NOTE] 
    > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det görs andra försök att anropa MAMEnrollmentManager-API:er.
 
 3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet:
+
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
    ```
+
    > [!NOTE] 
    > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
 
@@ -1748,9 +1757,11 @@ För stora kodbaser som körs utan [ProGuard](http://proguard.sourceforge.net/),
 ### <a name="policy-enforcement-limitations"></a>Principtillämpningsgränser
 
 * **Med hjälp av innehållsmatchare**: Överförings- eller mottagningsprincipen i Intune kan blockera eller delvis blockera användningen av en innehållsmatchare för att få åtkomst till innehållsleverantören i en annan app. Detta innebär att `ContentResolver`-metoder returnerar null eller genererar ett felvärde (t.ex. genererar `openOutputStream` felet `FileNotFoundException` om den blockeras). Appen kan avgöra om en misslyckad dataskrivning till en innehållsmatchare orsakades av en princip (eller kan orsakas av en princip) genom att göra anropet:
+
     ```java
     MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(contentURI);
     ```
+
     eller om det inte finns någon tillhörande aktivitet
 
     ```java

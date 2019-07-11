@@ -1,7 +1,7 @@
 ---
-title: Arkivera - av Intune MDM baslinjer säkerhetsinställningar för Windows 10
+title: Arkiv av Intune MDM-inställningar för säkerhets bas linje för Windows 10
 titleSuffix: Microsoft Intune
-description: Arkiv med tidigare versioner av MDM baslinje säkerhetsinställningarna för att hantera Windows 10 med Microsoft Intune
+description: Arkiv av tidigare versioner av inställningarna för säkerhets bas linjen för MDM för hantering av Windows 10 med Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8e83aa6b13f192da87a78690b0040e545d8943e
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: bb6cd7b1d717cd289b65e1e05566bd07471ad84f
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67418965"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735787"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
-# <a name="archive-of-mdm-security-baseline-settings"></a>Arkivering av MDM säkerhetsinställningar för baslinje  
+# <a name="archive-of-mdm-security-baseline-settings"></a>Arkiv av säkerhets bas linje inställningar för MDM  
 
-Visa information om arkiverade versioner av MDM-säkerhetsbaslinje för Intune.  
+Visa information om arkiverade versioner av säkerhets bas linjen för MDM för Intune.  
 
-När en ny MDM-säkerhetsbaslinje släpper Flytta föregående listan över inställningar från security baslinje inställningar artikel till det här arkivet. Dessa versioner stöds fortfarande för användning och det här arkivet är för att hjälpa förstå standardinställningarna för äldre versioner av baslinjen.
+När en ny säkerhets bas linje för MDM lanseras flyttas den tidigare listan över inställningar från artikeln säkerhets bas linje inställningar till det här arkivet. Dessa versioner stöds fortfarande för användning och det här arkivet tillhandahålls för att förstå standardinställningarna för äldre bas linje versioner.
 
-När en baslinjeversion finns inte längre stöd för användning, kommer det sedan tas bort från den här artikeln.
+När en bas linje version inte längre stöds för användning kommer den att tas bort från den här artikeln.
 
-- Granska de inställningar som är tillgängliga i [den aktuella baslinjen för MDM-säkerhet](security-baseline-settings-mdm.md) 
-- Lär dig mer om [säkerhetsbaslinjer](security-baselines.md), och hur du uppgraderar baslinjeversionen i din baslinje Säkerhetsprofiler.
+- Visa de inställningar som är tillgängliga i [den aktuella säkerhets bas linjen för MDM](security-baseline-settings-mdm.md) 
+- Lär dig [mer om säkerhets](security-baselines.md)bas linjer och hur du uppgraderar bas linje versionen i dina profiler för säkerhets bas linjen.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018  
 
-*Den här baslinjen har ersatts av [MDM Säkerhetsbaslinje för Spring 2019 (19 H 1)](security-baseline-settings-mdm.md)*
+*Den här bas linjen ersätts [av säkerhets bas linjen för MDM för våren 2019 (19H1)](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>På låsskärmen  
 
@@ -261,38 +261,38 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
   
   **Standard**: Ja  
   
-    När *Kräv lösenord* är inställt på *Ja*, är följande inställningar tillgängliga.
+  När *Kräv lösenord* är inställt på *Ja*, är följande inställningar tillgängliga.
 
-    - **Password minimum character set count** (Minsta antal tecken för lösenord)  
-      Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. PIN-kod tillämpar följande beteende för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1. 
-      
-      **Standard**: 3  
+  - **Password minimum character set count** (Minsta antal tecken för lösenord)  
+    Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. PIN-kod tillämpar följande beteende för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1. 
+    
+    **Standard**: 3  
   
-    - **Antal felaktiga inloggningar innan enheten rensas**  
-      Antal misslyckade autentiseringsförsök som tillåts innan enheten rensas. Värdet 0 inaktiverar enhetsrensningsfunktionen.
-        
-      **Standard**: 10  
+  - **Antal felaktiga inloggningar innan enheten rensas**  
+    Antal misslyckade autentiseringsförsök som tillåts innan enheten rensas. Värdet 0 inaktiverar enhetsrensningsfunktionen.
+    
+    **Standard**: 10  
   
-    - **Lösenordets giltighetstid (i dagar)**  
-      Principinställningen Högsta ålder för lösenord anger hur länge (i dagar) som ett lösenord kan användas innan systemet kräver att användaren ändrar det. Du kan ange att lösenord upphör att gälla efter ett visst antal dagar mellan 1 och 999, eller ange att lösenorden aldrig upphör att gälla genom att ange antalet dagar till 0. Om den högsta lösenordsåldern är mellan 1 och 999 dagar, måste den minsta lösenordsåldern vara mindre än den högsta lösenordsåldern. Om den högsta lösenordsåldern anges till 0, kan den minsta lösenordsåldern vara ett värde mellan 0 och 998 dagar.
-      
-      **Standard**: 60  
+  - **Lösenordets giltighetstid (i dagar)**  
+    Principinställningen Högsta ålder för lösenord anger hur länge (i dagar) som ett lösenord kan användas innan systemet kräver att användaren ändrar det. Du kan ange att lösenord upphör att gälla efter ett visst antal dagar mellan 1 och 999, eller ange att lösenorden aldrig upphör att gälla genom att ange antalet dagar till 0. Om den högsta lösenordsåldern är mellan 1 och 999 dagar, måste den minsta lösenordsåldern vara mindre än den högsta lösenordsåldern. Om den högsta lösenordsåldern anges till 0, kan den minsta lösenordsåldern vara ett värde mellan 0 och 998 dagar.
+    
+    **Standard**: 60  
   
-    - **Lösenordstyp krävs**  
-      Avgör vilken typ av PIN-kod eller lösenord som krävs.
-      
-      **Standard**: Alfanumeriskt  
+  - **Lösenordstyp krävs**  
+    Avgör vilken typ av PIN-kod eller lösenord som krävs.
+    
+    **Standard**: Alfanumeriskt  
   
-    - **Minsta längd på lösenord**  
-      Inställningen Minsta längd för lösenord avgör det minsta antal tecken som ett lösenord för ett användarkonto måste innehålla. Du kan ange ett värde mellan 1 och 14 tecken, eller ange att inga lösenord krävs genom att ange antalet tecken till 0.
-      
-      **Standard**: 8  
-  
-    - **Blockera enkla lösenord**  
-      Anger om PIN-koder eller lösenord, till exempel ”1111” eller ”1234” tillåts. För en stationär dator styr inställningen även användningen av bildlösenord.
-      
-      **Standard**: Ja  
-        *Inställningen Ja förhindrar användningen av enkla lösenord.* 
+  - **Minsta längd på lösenord**  
+    Inställningen Minsta längd för lösenord avgör det minsta antal tecken som ett lösenord för ett användarkonto måste innehålla. Du kan ange ett värde mellan 1 och 14 tecken, eller ange att inga lösenord krävs genom att ange antalet tecken till 0.
+    
+    **Standard**: 8  
+
+  - **Blockera enkla lösenord**  
+    Anger om PIN-koder eller lösenord, till exempel ”1111” eller ”1234” tillåts. För en stationär dator styr inställningen även användningen av bildlösenord.
+    
+    **Standard**: Ja  
+      *Inställningen Ja förhindrar användningen av enkla lösenord.* 
 
   - **Förhindra återanvändning av tidigare lösenord**  
     Anger hur många lösenord som kan sparas i historiken och som inte får återanvändas. Värdet inkluderar användarens aktuella lösenord. Till exempel med en inställning på *1* kan användaren inte återanvända deras aktuella lösenord när du väljer ett nytt lösenord. En inställning på *5* innebär att en användare inte kan ange sitt nya lösenord till sitt aktuella lösenord eller något av de fyra tidigare lösenorden.
@@ -344,10 +344,10 @@ Mer information finns i [CSP-princip – Experience](https://docs.microsoft.com/
     Anger om app- och innehållsförslag från utgivare av tredjepartsprogramvara ska tillåtas i Windows Spotlight-funktioner, till exempel låsskärmen, föreslagna appar på Start-menyn och Windows-tips. Användare kan fortfarande se förslag för Microsoft-funktioner, -appar och -tjänster.
       
     **Standard**: Ja  
-   - **Block consumer specific features** (Blockera konsumentspecifika funktioner)  
-      Gör det möjligt för IT-administratörer att aktivera rena konsumentupplevelser, till exempel startförslag, medlemskapsaviseringar, appinstallation efter välkomstprogram (OOBE) och omdirigeringspaneler.
-      
-     **Standard**: Ja  
+  - **Block consumer specific features** (Blockera konsumentspecifika funktioner)  
+    Gör det möjligt för IT-administratörer att aktivera rena konsumentupplevelser, till exempel startförslag, medlemskapsaviseringar, appinstallation efter välkomstprogram (OOBE) och omdirigeringspaneler.
+    
+    **Standard**: Ja  
 
 
 ### <a name="exploit-guard"></a>Sårbarhetsskydd  
@@ -1440,5 +1440,5 @@ Mer information finns i [CSP-princip – WindowsPowerShell](https://docs.microso
  
 ## <a name="next-steps"></a>Nästa steg  
 
-[Visa den aktuella baslinjeversionen](security-baseline-settings-mdm.md)  
-[Uppgradera profiler för att använda en ny baslinjeversion](security-baselines.md#change-the-baseline-instance-for-a-profile)
+[Visa den aktuella bas linje versionen](security-baseline-settings-mdm.md)  
+[Uppgradera profiler för att använda en ny bas linje version](security-baselines.md#change-the-baseline-instance-for-a-profile)

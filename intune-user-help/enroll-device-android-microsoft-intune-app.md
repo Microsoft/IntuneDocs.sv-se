@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e68e404a91927192f1006626d1b865acd5eb589
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: b23323766e91e31c48aec6a51dfae971c3a333e8
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197054"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735760"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrera din företagsenhet med Microsoft Intune-appen
 
@@ -46,9 +46,9 @@ Slutför dessa steg för att konfigurera och registrera din enhet.
 2. Välj språk på **välkomstskärmen**.   Om du har fått instruktioner om att registrera med en QR-kod eller NFC följer du de nedanstående steg som matchar metoden.  
      * NFC: Vidrör en programmeringsenhet med din NFC-stödda enhet för att ansluta till organisationens nätverk. Följ uppmaningarna på skärmen. När du når skärmen för användningsvillkoren för Chrome fortsätter du till steg 5.  
 
-      * QR-kod: Slutför stegen i [QR-kodsregistrering](#qr-code-enrollment).  
+     * QR-kod: Slutför stegen i [QR-kodsregistrering](#qr-code-enrollment).  
 
-      Om du har fått instruktioner om att använda en annan metod fortsätter du till steg 3.    
+     Om du har fått instruktioner om att använda en annan metod fortsätter du till steg 3.    
 
 1. Anslut till Wi-Fi och tryck på **NÄSTA**. Följ de steg som matchar din registreringsmetod. 
 

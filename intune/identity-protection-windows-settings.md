@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 1cbf45fc337cbe7d7a45081a3b9e05002ca126d8
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 5a8111d2542269441c7305aad0aad0b7c2162037
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402928"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735613"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Inställningar i enheter som kör Windows 10 för att aktivera Windows Hello för företag i Intune
 
@@ -44,57 +44,57 @@ Mer information om Windows Hello för företag-profiler i Intune finns i [Konfig
   
   **Standard**: Inte konfigurerat
 
-  När värdet *aktiverad*, följande inställningar är tillgängliga:
+  När inställningen *är aktive rad*är följande inställningar tillgängliga:
 
-    - **Minimilängd för PIN-kod**  
-     Ange en minsta kodslängd för PIN-för enheter för att säker inloggning. Standardvärdena för Windows-enhet är sex tecken, men den här inställningen kan ange minst fyra till 127 tecken. 
-  
-      **Standard**: *Inte konfigurerat*
+  - **Minimilängd för PIN-kod**  
+    Ange en minimilängd för PIN-kod för enheter för att skydda inloggningen. Standardvärden för Windows-enheter är sex tecken, men den här inställningen kan använda minst fyra till 127 tecken. 
 
-    - **Maximal längd för PIN-kod**  
-    Ange en maximal kodslängd för PIN-för enheter för att säker inloggning. Standardvärdena för Windows-enhet är sex tecken, men den här inställningen kan ange minst fyra till 127 tecken.  
+    **Standard**: *Inte konfigurerat*
 
-      **Standard**: *Inte konfigurerat*  
+  - **Maximal längd för PIN-kod**  
+  Ange en maximal PIN-kodslängd för enheter för att skydda inloggningen. Standardvärden för Windows-enheter är sex tecken, men den här inställningen kan använda minst fyra till 127 tecken.  
 
-    - **Gemener i PIN-kod**  
-      Du kan tillämpa en starkare PIN-kod genom att kräva att slutanvändarna även använder små bokstäver. Alternativen är:
+    **Standard**: *Inte konfigurerat*  
 
-      - **Inte tillåtet** – Användarna får inte använda gemener i PIN-koden. Denna inställning tillämpas även när inställningen inte har konfigurerats.
-      - **Tillåtet** – Användarna får använda gemener i PIN-koden, men det krävs inte.
-      - **Krävs** – Användarna måste inkludera minst en gemen i PIN-koden. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
+  - **Gemener i PIN-kod**  
+    Du kan tillämpa en starkare PIN-kod genom att kräva att slutanvändarna även använder små bokstäver. Alternativen är:
 
-    - **Versaler i PIN-kod**  
+    - **Inte tillåtet** – Användarna får inte använda gemener i PIN-koden. Denna inställning tillämpas även när inställningen inte har konfigurerats.
+    - **Tillåtet** – Användarna får använda gemener i PIN-koden, men det krävs inte.
+    - **Krävs** – Användarna måste inkludera minst en gemen i PIN-koden. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
+
+  - **Versaler i PIN-kod**  
     Du kan tillämpa en starkare PIN-kod genom att kräva att slutanvändarna använder stora bokstäver. Alternativen är:
 
-      - **Inte tillåtet** – Användarna får inte använda versaler i PIN-koden. Denna inställning tillämpas även när inställningen inte har konfigurerats.
-      - **Tillåtet** – Användarna får använda versaler i PIN-koden, men det krävs inte.
-      - **Krävs** – Användarna måste inkludera minst en versal i PIN-koden. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
+    - **Inte tillåtet** – Användarna får inte använda versaler i PIN-koden. Denna inställning tillämpas även när inställningen inte har konfigurerats.
+    - **Tillåtet** – Användarna får använda versaler i PIN-koden, men det krävs inte.
+    - **Krävs** – Användarna måste inkludera minst en versal i PIN-koden. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
 
-    - **Specialtecken i PIN-kod**  
+  - **Specialtecken i PIN-kod**  
     Du kan tillämpa en starkare PIN-kod genom att kräva att slutanvändarna använder specialtecken. Exempel på specialtecken är: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
- 
-      Alternativen är:
-      - **Inte tillåtet** – Användarna får inte använda specialtecken i PIN-koden. Denna inställning tillämpas även när inställningen inte har konfigurerats.
-      - **Tillåtet** – Användarna får använda versaler i PIN-koden, men det krävs inte.
-      - **Krävs** – Användarna måste inkludera minst en versal i PIN-koden. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
 
-      **Standard**: inte tillåtet
+    Alternativen är:
+    - **Inte tillåtet** – Användarna får inte använda specialtecken i PIN-koden. Denna inställning tillämpas även när inställningen inte har konfigurerats.
+    - **Tillåtet** – Användarna får använda versaler i PIN-koden, men det krävs inte.
+    - **Krävs** – Användarna måste inkludera minst en versal i PIN-koden. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
+
+    **Standard**: tillåts inte
 
   - **PIN-kodens giltighetstid (dagar)**  
-      Det tillhör god praxis att ange en giltighetstid för en PIN-kod och efter denna tid måste användaren ändra den. Standardvärdena för Windows-enhet är 41 dagar.
+    Det tillhör god praxis att ange en giltighetstid för en PIN-kod och efter denna tid måste användaren ändra den. Standardvärden för Windows-enheter är 41 dagar.
 
     **Standard**: Inte konfigurerat
 
   - **Spara PIN-kodshistorik**  
-    Begränsar återanvändning av PIN-koder som har använts tidigare. Windows-enheter som standard förhindrar återanvändning av de sista fem PIN-koderna.  
+    Begränsar återanvändning av PIN-koder som har använts tidigare. Windows-enheter är standard för att förhindra åter användning av de senaste fem stiften.  
 
     **Standard**: Inte konfigurerat  
 
   - **Aktivera återställning av PIN-kod**   
-    Tillåter användare att använda Windows Hello för företag PIN-kod recovery-tjänsten. 
+    Tillåter användare att använda Windows Hello för företag PIN Recovery-tjänsten. 
     
-    - **Aktiverad** - hemlighet för PIN-koden recovery lagras på enheten och användaren kan ändra sin PIN-kod om det behövs.  
-    - **Inaktiverad** -recovery hemligheten inte skapas eller lagras.
+    - **Aktive rad** – PIN-återställnings hemligheten lagras på enheten och användaren kan ändra sin PIN-kod om det behövs.  
+    - **Inaktive rad** – återställnings hemligheten skapas eller lagras inte.
 
     **Standard**: Inte konfigurerat
 
@@ -128,11 +128,11 @@ Mer information om Windows Hello för företag-profiler i Intune finns i [Konfig
 
   **Standard**: Inte konfigurerat
 
-- **Använda säkerhetsnycklar för att logga in**  
-  Den här inställningen är tillgänglig för enheter som kör Windows 10 version 1903 eller senare. Du kan använda den för att hantera stöd för att använda Windows Hello säkerhetsnycklar för att logga in.  
+- **Använda säkerhets nycklar för inloggning**  
+  Den här inställningen är tillgänglig för enheter som kör Windows 10 version 1903 eller senare. Använd den för att hantera stöd för användning av Windows Hello-säkerhetsnycklar för inloggning.  
 
-  - **Aktiverad** -användare kan använda en Windows Hello säkerhetsnyckel som en inloggning med autentiseringsuppgifter för datorer som är mål för den här principen. 
-  - **Inaktiverad** – säkerhetsnycklar inaktiveras och användarna kan inte använda dem för att logga in på datorer.   
+  - **Aktive rad** – användare kan använda en Windows Hello-säkerhetsnyckel som inloggnings uppgifter för datorer som är riktade till den här principen. 
+  - **Inaktiverade** – säkerhets nycklar är inaktiverade och användarna kan inte använda dem för att logga in på datorer.   
 
   **Standard**: Inte konfigurerat
 
