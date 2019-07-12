@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fd99c0b42316a4425828cfa875f12d75dd86489
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 8090e9906cc8e3b3da25b21343093dd2f656afa6
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558541"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735802"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -161,9 +161,10 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 6. Välj **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.
 7. Öppna `Program.cs` från Solution Explorer.
 
-    ![Progam.cs och Solution Explorer i Visual Studio](./media/reports-get_rest_data_in.png)
+    ![Program.cs och Solution Explorer i Visual Studio](./media/reports-get_rest_data_in.png)
 
 8. Ersätt koden i *Program.cs* med följande kod:  
+
    ```csharp
    namespace IntuneDataWarehouseSamples
    {
