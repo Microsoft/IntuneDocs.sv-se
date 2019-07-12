@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0dc8d7cca42898db92412e2cec41252a9a9a4d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 39c3b606033ca8575e079bef9a627b087a3d3318
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046113"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572470"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-anslutning med Intune
 
@@ -44,11 +44,11 @@ Nedan följer några scenarier vid integrering av Zimperium med Intune:
 
 När skadliga program som till exempel skadlig kod upptäckts på enheter kan du blockera enheterna till dess att hotet har åtgärdats:
 
--   Ansluta till företagets e-post
+- Ansluta till företagets e-post
 
--   Synkronisera företagets filer med appen OneDrive för arbetet
+- Synkronisera företagets filer med appen OneDrive för arbetet
 
--   Åtkomst till företagsappar
+- Åtkomst till företagsappar
 
 **Blockera när skadliga appar identifieras:**
 
@@ -60,7 +60,7 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 
-Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket, samt skydda åtkomsten till WiFi-nätverk baserat på enhetsrisken.
+Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket, samt skydda åtkomsten till WiFi-nätverk baserat på enhetsrisken.
 
 **Blockera nätverksåtkomst via Wi-Fi:**
 
@@ -72,7 +72,7 @@ Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket, sa
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 
-Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket och förhindra synkronisering av företagsfiler baserat på enhetsrisken.
+Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och förhindra synkronisering av företagsfiler baserat på enhetsrisken.
 
 **Blockera SharePoint Online när hot identifieras på nätverket:**
 
@@ -84,19 +84,19 @@ Identifiera hot, till exempel  **Man-in-the-middle** -angrepp i nätverket och
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
--   **Android 4.1 och senare**
+- **Android 4.1 och senare**
 
--   **iOS 8 och senare**
+- **iOS 8 och senare**
 
 ## <a name="prerequisites"></a>Krav
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Microsoft Intune-prenumeration
+- Microsoft Intune-prenumeration
 
--   Prenumeration på Zimperium Mobile Threat Defense
+- Prenumeration på Zimperium Mobile Threat Defense
 
-    -   Mer information finns på  [Zimperiums webbplats](https://www.zimperium.com/zips-mobile-ips).
+    - Mer information finns på [Zimperiums webbplats](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Nästa steg
 

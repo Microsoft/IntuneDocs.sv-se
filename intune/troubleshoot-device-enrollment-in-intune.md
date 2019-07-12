@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528745"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548094"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -84,47 +84,47 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
 **Lösning:**
 
-1.  Ta bort företagsportalappen för Intune från enheten.
+1. Ta bort företagsportalappen för Intune från enheten.
 
-2.  Öppna webbläsaren i enheten, bläddra till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och prova med en användarinloggning.
+2. Öppna webbläsaren i enheten, bläddra till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och prova med en användarinloggning.
 
-3.  Användaren kan prova ett annat nätverk om de inte kan logga in.
+3. Användaren kan prova ett annat nätverk om de inte kan logga in.
 
-4.  Om det inte går ska du validera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory.
+4. Om det inte går ska du validera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory.
 
-5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera Intune-företagsportalappen och därefter kan du prova att registrera dig igen.
+5. Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera Intune-företagsportalappen och därefter kan du prova att registrera dig igen.
 
 ### <a name="mdm-authority-not-defined"></a>MDM-auktoritet har inte definierats
 **Problem:** En användare får felet **MDM-utfärdare har inte definierats**.
 
 **Lösning:**
 
-1.  Kontrollera att utfärdaren för hantering av mobila enheter har [angetts korrekt](mdm-authority-set.md).
+1. Kontrollera att utfärdaren för hantering av mobila enheter har [angetts korrekt](mdm-authority-set.md).
     
-2.  Verifiera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory. Du kan verifiera att användarens UPN matchar Active Directory-informationen i Microsoft 365-administrationscentret.
+2. Verifiera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory. Du kan verifiera att användarens UPN matchar Active Directory-informationen i Microsoft 365-administrationscentret.
     Om UPN inte matchar Active Directory-informationen:
 
-    1.  Inaktivera DirSync på den lokala servern.
+    1. Inaktivera DirSync på den lokala servern.
 
-    2.  Ta bort den felmatchade användaren från användarlistan **Intune kontoportal** .
+    2. Ta bort den felmatchade användaren från användarlistan **Intune kontoportal** .
 
-    3.  Vänta ungefär en timme så att Azure-tjänsten kan ta bort felaktiga data.
+    3. Vänta ungefär en timme så att Azure-tjänsten kan ta bort felaktiga data.
 
-    4.  Aktivera DirSync igen och kontrollera om användaren nu är korrekt synkroniserad.
+    4. Aktivera DirSync igen och kontrollera om användaren nu är korrekt synkroniserad.
 
-3.  I ett scenario där du använder System Center Configuration Manager med Intune ska du kontrollera att användaren har ett giltigt molnanvändar-ID:
+3. I ett scenario där du använder System Center Configuration Manager med Intune ska du kontrollera att användaren har ett giltigt molnanvändar-ID:
 
-    1.  Öppna SQL Management Studio.
+    1. Öppna SQL Management Studio.
 
-    2.  Anslut till rätt DB.
+    2. Anslut till rätt DB.
 
-    3.  Öppna databasmappen och leta upp och öppna mappen **CM_DBName** där DBName är namnet på kunddatabasen.
+    3. Öppna databasmappen och leta upp och öppna mappen **CM_DBName** där DBName är namnet på kunddatabasen.
 
-    4.  Klicka på **Ny fråga** överst och kör följande frågor:
+    4. Klicka på **Ny fråga** överst och kör följande frågor:
 
-        -   Om du vill visa alla användare: `select * from [CM_ DBName].[dbo].[User_DISC]`
+        - Om du vill visa alla användare: `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Om du vill se specifika användare använder du följande fråga där %testuser1% är en platshållare för username@domain.com för den användare som du vill söka efter: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        - Om du vill se specifika användare använder du följande fråga där %testuser1% är en platshållare för username@domain.com för den användare som du vill söka efter:   `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         När du har skrivit frågan väljer du **!Execute**.
         När resultatet har returnerats, leta efter molnanvändar-ID:et.  Om det finns något ID är inte användaren licensierad för att använda Intune.
@@ -212,13 +212,13 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 **Lösning:**
 
-1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
+1. Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
 
-2.  Kontrollera att enheten inte redan registrerats i en annan MDM-provider.
+2. Kontrollera att enheten inte redan registrerats i en annan MDM-provider.
 
 3. Kontrollera att enheten inte redan har en hanteringsprofil installerad.
 
-4.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
+4. Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
 
 ### <a name="android-certificate-issues"></a>Certifikatfel (Android)
 
@@ -321,15 +321,15 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Felsökningssteg för misslyckad profilinstallation
 
-1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
+1. Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
 
-2.  Kontrollera att enheten inte redan registrerats i en annan MDM-provider.
+2. Kontrollera att enheten inte redan registrerats i en annan MDM-provider.
 
 3. Bekräfta att enheten inte redan har en hanteringsprofil installerad.
 
-4.  Gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
+4. Gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
 
-5.  Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
+5. Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
 
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
 **Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen för Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
@@ -428,17 +428,17 @@ Följ stegen nedan om du vill kontrollera vilken process eller vilket användark
 
 #### <a name="check-how-device-was-removed"></a>Kontrollera hur enheten har tagits bort
 
-1.  I administrationskonsolen i Configuration Manager väljer du **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor**.
+1. I administrationskonsolen i Configuration Manager väljer du **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor**.
 
-2.  Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**.
+2. Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**.
 
-3.  Välj lämplig tid/datum eller de senaste 12 timmarna.
+3. Välj lämplig tid/datum eller de senaste 12 timmarna.
 
-4.  Hitta enheten i fråga och granska hur enheten har tagits bort. Exemplet nedan visar att kontot SCCMInstall tog bort enheten via ett okänt program.
+4. Hitta enheten i fråga och granska hur enheten har tagits bort. Exemplet nedan visar att kontot SCCMInstall tog bort enheten via ett okänt program.
 
     ![Skärmbild av enhetsborttagningsdiagnostik](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-5.  Kontrollera att Configuration Manager inte har någon schemalagd uppgift, något skript eller någon annan process som automatiskt kan rensa icke-domän, mobila, eller relaterade enheter.
+5. Kontrollera att Configuration Manager inte har någon schemalagd uppgift, något skript eller någon annan process som automatiskt kan rensa icke-domän, mobila, eller relaterade enheter.
 
 ### <a name="other-ios-enrollment-errors"></a>Övriga iOS-registreringsfel
 En lista med iOS-registreringsfel finns i vår dokumentation i [Felsökning av iOS-enhet med registreringsproblem i Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).

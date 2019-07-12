@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9a61b89f07bfacf1dc41be1412f79509e1e147d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c3955710dfbe57023533f737f0ae69df80f863e6
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049942"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735698"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurera Microsofts hanterade hemskärmsapp för Android Enterprise
 
@@ -74,12 +74,12 @@ I följande tabell visas tillgängliga konfigurationsnycklar, värdetyper, stand
 | Aktivera startskärmens flöde | bool | FALSE | Aktiverar flödet för startskärmen, som visas om du sveper åt vänster på startskärmen. Det här flödet visar annan typ av innehåll, till exempel nyheter, kalender, ofta använda appar och Cortana-röstassistentkortet osv. Om du aktiverar det här kan användaren navigera i flödet genom att svepa åt vänster på startskärmen. |
 | Aktivera översiktsläge | bool | FALSE | Gör det möjligt för slutanvändarna att lägga till eller ta bort olika sidor på startskärmen som kan nås genom att användaren sveper åt höger från standardskärmen. Om du aktiverar det här kan slutanvändaren lägga till sidor till höger om standardsidan på startskärmen, ändra standardsidan och även komma åt inställningarna på den hanterade startskärmen. |
 | Aktivera enhetstelemetri | bool | FALSE | Aktiverar all telemetri som samlas in för den hanterade startskärmen. Om du aktiverar det här kan Microsoft hantera enhetstelemetri, som hur många gånger en viss app startas på enheten. |
-| Ange tillåtna program | bundleArray | FALSE | Gör att du kan definiera en uppsättning appar som ska visas på startskärmen bland apparna som är installerade på enheten. Du kan definiera appar genom att ange paketnamnet för de appar som du vill göra synliga. Till exempel skulle com.android.settings göra inställningar tillgängliga på startskärmen. Apparna som du godkänner i det här avsnittet bör vara installerade på enheten för att kunna visas på startskärmen. |
+| Ange tillåtna program | bundleArray | FALSE | Gör att du kan definiera en uppsättning appar som ska visas på startskärmen bland apparna som är installerade på enheten. Du kan definiera appar genom att ange paketnamnet för de appar som du vill göra synliga. Till exempel skulle com.microsoft.emmx göra inställningar tillgängliga på startskärmen. Apparna som du godkänner i det här avsnittet bör vara installerade på enheten för att kunna visas på startskärmen. |
 | Ställa in fästa webblänkar | bundleArray | FALSE | Du kan fästa webbplatser som snabbstartsikoner på startskärmen. Med den här konfigurationen kan du definiera webbadressen och lägga till den på startskärmen så att användaren kan starta webbläsaren med en tryckning. |
 | Aktivera sökfält | bool | FALSE | Aktiverar sökfältet på startskärmen. Om du aktiverar det här ser enhetens användare sökfältet på startskärmen, där de kan ange vad de vill söka efter på webben. |
 | Inaktivera inställningsappen | bool | FALSE | Inaktiverar inställningssidan för den hanterade startskärmen. Om du inaktiverar det här kan enhetens användare inte komma åt inställningar på den hanterade startskärmen. |
 | Aktivera skärmsläckare | bool | FALSE | Aktivera eller inaktivera skärmsläckarläget. Om det är inställt på true (sant) kan du konfigurera **screen_saver_image**, **screen_saver_show_time**,   **inactive_time_to_show_screen_saver** och   **media_detect_screen_saver**. |
-| Skärmsläckarbild | sträng |   | Ange webbadressen till skärmsläckarbilden. Om ingen webbadress anges visar enheterna standardskärmen när skärmsläckaren aktiveras.  |
+| Skärmsläckarbild | sträng |   | Ange webbadressen till skärmsläckarbilden. Om ingen webbadress anges visas standardskärmsläckaren på skärmen när skärmsläckaren aktiveras. Standardbilden visar appikonen för den hanterade hemskärmen.  |
 | Skärmsläckaren Visa tid | heltal | 0 | Ger möjlighet att ange hur lång tid i sekunder enheten ska visa skärmsläckaren under skärmsläckarläget. Om värdet är 0 visas skärmsläckaren på obestämd tid tills enheten blir aktiv.  |
 | Inaktiv tid för aktivering av skärmsläckare | heltal | 30 | Antalet sekunder som enheten är inaktiv innan skärmsläckaren utlöses. Om värdet är 0 aktiveras aldrig skärmsläckarläget. |
 | Medieidentifiering innan skärmsläckare visas | bool | TRUE | Välj om enhetens skärm ska visa skärmsläckaren om ljud/video spelas på enheten. Om det är inställt på true (sant) spelar inte enheten upp ljud/video, oavsett värdet i **inactive_time_to_show_scree_saver**. Om det är inställt på false (falskt) visar skärmen skärmsläckaren enligt värdet i **inactive_time_to_show_screen_saver**.   |
@@ -89,6 +89,9 @@ I följande tabell visas tillgängliga konfigurationsnycklar, värdetyper, stand
 | Lösenord för att avsluta låst läge för uppgift | sträng |   | Ange en kod som består av 4–6 siffror som ska användas för att tillfälligt ta bort läget för låst uppgift för felsökning. |
 | Visa inställningar för trådlöst nätverk | bool | FALSE | Om du ställer in den här inställningen på `True` kan användaren aktivera eller inaktivera Wi-Fi eller ansluta till olika Wi-Fi-nätverk.  |
 | Visa Bluetooth-inställning | bool | FALSE | Om du ställer in den här inställningen på `True` kan användaren aktivera eller inaktivera Bluetooth och ansluta till olika Bluetooth-aktiverade enheter.   |
+| Programmen i mappen sorteras efter namn | bool | TRUE | När den inställningen är `False` visas objekt i en mapp i den angivna ordningen. Annars visas de i bokstavsordning i mappen.   |
+| Programordning har aktiverats | bool | FALSE | När den här inställningen är `True` kan program, webblänkar och mappar visas i en vald ordning på den hanterade startskärmen. När den är aktiv kan du ställa in ordningen med **app_order**. Användaren kan aktivera eller inaktivera Bluetooth och ansluta till olika Bluetooth-aktiverade enheter.   |
+| Programordning | bundleArray | FALSE | Du kan ange i vilken ordning program, webblänkar och mappar visas på den hanterade hemskärmen. För att använda inställningen måste **Lås hemskärmen** vara aktivt, **Ställ in rutnätsstorlek** måste ha definierats och **Aktivera programordning** måste vara inställd på `True`.   |
 
 ## <a name="enter-json-data"></a>Ange JSON-data
 
@@ -111,10 +114,6 @@ Här följer ett exempel på ett JSON-skript med alla tillgängliga konfiguratio
     "kind": "androidenterprise#managedConfiguration",
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
-        {
-            "key": "grid_size",
-            "valueString": "Auto"
-        },
         {
             "key": "keep_page_header",
             "valueBool": true
@@ -238,6 +237,87 @@ Här följer ett exempel på ett JSON-skript med alla tillgängliga konfiguratio
             "valueBool": false
         },
         {
+            "key": "grid_size",
+            "valueString": "4;5"
+        },
+        {
+            "key": "app_order_enabled",
+            "valueBool": true
+        },
+        {
+            "key": "apps_in_folder_ordered_by_name",
+            "valueBool": true
+        },
+        {
+            "key": "app_orders",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.Microsoft.emmx"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 1
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "folder_name",
+                            "valueString": "Work"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "managed_folder"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 2
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.launcher.enterprise"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": "com.microsoft.launcher.launcher"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "managed_folders",
             "valueBundleArray": [
                 {
@@ -302,8 +382,8 @@ Här följer ett exempel på ett JSON-skript med alla tillgängliga konfiguratio
         }
     ]
 }
-
 ```
+
 ## <a name="next-steps"></a>Nästa steg
 
 - Mer information om Android Enterprise-dedikerade enheter finns i [Konfigurera Intune-registrering av dedikerade Android Enterprise-enheter](android-kiosk-enroll.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494056"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649028"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att ge konfigurationsinställningar för en iOS- eller Android-app. Med de här konfigurationsinställningarna kan en app anpassas. Du tilldelar inte de här konfigurationsprinciperna direkt till användare eller enheter. I stället associerar du konfigurationsprincipen med en app och tilldelar sedan appen. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
+Använd appkonfigurationsprinciper i Microsoft Intune för att ge konfigurationsinställningar för en iOS- eller Android-app. Med dessa konfigurationsinställningar kan en app anpassas enligt bästa praxis för appkonfiguration och -hantering. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
 
 Du kan tilldela en appkonfigurationsprincip till en grupp användare och enheter genom att använda en kombination av tilldelningar som inkluderar och exkluderar. När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare + alla enheter**.
 
@@ -52,9 +52,11 @@ Du har två alternativ för hur du använder appkonfigurationer med Intune:
 
 ## <a name="apps-that-support-app-configuration"></a>Appar som stöder appkonfiguration
 
-Du kan använda principer för appkonfiguration för appar som stöder det. Appar måste ha skrivits för att stödja användning av appkonfigurationer för att ha stöd för appkonfiguration i Intune. Kontakta appleverantören om du vill ha mer information.
+### <a name="managed-devices"></a>Hanterade enheter
+Du kan använda principer för appkonfiguration för appar som stöder det. Appar måste ha skrivits för att stödja användning av appkonfigurationer för att ha stöd för appkonfiguration i Intune enligt definitionen som utformats av [Appconfig Community](https://www.appconfig.org/members). Kontakta appleverantören om du vill ha mer information.
 
-Du kan förbereda dina verksamhetsspecifika appar genom att antingen integrera Intune App SDK i appen eller genom att omsluta appen när den har utvecklats. Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appkonfigurationsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Mer information finns i [Översikt över Intune App SDK](app-sdk.md).
+### <a name="managed-apps"></a>Hanterade appar
+Du kan förbereda dina verksamhetsspecifika appar genom att antingen integrera Intune App SDK i appen eller genom att omsluta appen när den har utvecklats. Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appskyddskonfigurationsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Mer information finns i [Översikt över Intune App SDK](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API har stöd för appkonfiguration
 

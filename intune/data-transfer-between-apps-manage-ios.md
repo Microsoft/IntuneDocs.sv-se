@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,51 +17,48 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 91633aee190b5fb5bda9495f66d4503042aa6a80
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713328"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
 För att skydda företagets data bör du begränsa överförandet av filer till de appar som du hanterar. Du kan hantera iOS-appar på följande sätt:
 
--   Förhindra förlust av företagets data genom att konfigurera en appskyddsprincip, något som vi kallar **principhanterade** appar. Se [alla Intune-hanterade appar som du kan hantera med appskyddsprinciper](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
+- Förhindra förlust av företagets data genom att konfigurera en appskyddsprincip, något som vi kallar **principhanterade** appar. Se [alla Intune-hanterade appar som du kan hantera med appskyddsprinciper](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
 
--   Distribuera och hantera appar med hjälp av **MDM-kanalen**, vilket kräver att enheterna registreras i en MDM-lösning (Mobile Device Management). De appar som du distribuerar kan vara **principhanterade** appar eller andra hanterade appar.
+- Distribuera och hantera appar med hjälp av **MDM-kanalen**, vilket kräver att enheterna registreras i en MDM-lösning (Mobile Device Management). De appar som du distribuerar kan vara **principhanterade** appar eller andra hanterade appar.
 
 Med funktionen **Öppna i hantering** för iOS-enheter kan du begränsa överförandet av filer mellan appar som är distribuerade via **MDM-kanalen**. Ange begränsningar för funktionen *Öppna i hantering* i konfigurationsinställningarna och distribuera dem sedan via din MDM-lösning.  Begränsningarna du angett tillämpas när användaren installerar den distribuerade appen.
 
 ## <a name="use-app-protection-with-ios-apps"></a>Använda appskydd med iOS-appar
 Använd appskyddsprinciper med iOS-funktionen **Öppna i hantering** för att skydda företagets data på följande sätt:
 
--   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningarna för appskyddsprincipen med **Tillåt endast att appen överför data till principhanterade appar**. Beteendet *Öppna-i* för en principhanterad app visar enbart andra principhanterade appar som alternativ för delning. Om en användare försöker skicka en principskyddad fil som en bilaga från OneDrive i den inbyggda e-postappen kommer det inte gå att läsa filen.
+- **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningarna för appskyddsprincipen med **Tillåt endast att appen överför data till principhanterade appar**. Beteendet *Öppna-i* för en principhanterad app visar enbart andra principhanterade appar som alternativ för delning. Om en användare försöker skicka en principskyddad fil som en bilaga från OneDrive i den inbyggda e-postappen kommer det inte gå att läsa filen.
 
--   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Tillåt att appen överför data till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Tillåt att appen tar emot data från andra appar** och väljer önskad nivå för datamottagning. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-protection).   
-
--   **Enheter som hanteras av en MDM-lösning från tredje part:** Du kan begränsa dataöverföringen till endast hanterade appar med hjälp av funktionen **Öppna i hantering** i iOS.
-För att säkerställa att appar som du distribuerar med en MDM-lösning från tredje part också är associerade med dina Intune-appskyddsprinciper måste du konfigurera användarinställningen för UPN enligt beskrivningen i följande avsnitt: [Konfigurera användarinställningar för UPN](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). När appar distribueras med användarinställningen för UPN så tillämpas appskyddsprinciperna på appen när användaren loggar in med sitt arbetskonto.
+- **Enheter som hanteras av en MDM-lösning**: För enheter som registrerats i Intune eller tredje parts MDM-lösningar styrs datadelning mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribuerats via MDM av principer för Intune APP och iOS-funktionen **Open in management**. För att säkerställa att appar som du distribuerar med en MDM-lösningockså är associerade med dina Intune-appskyddsprinciper måste du konfigurera användarinställningen för UPN enligt beskrivningen i följande avsnitt: [Konfigurera användarinställningar för UPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Om du vill ange hur dataöverföring till andra appar ska tillåtas så aktiverar du inställningen **Skicka organisationsdata till andra appar** och väljer önskad nivå för delningen. Om du vill ange hur en app ska ta emot data från andra appar så aktiverar du inställningen **Ta emot data från andra appar** och väljer önskad nivå för datamottagning. Mer information om hur du tar emot och delar appdata finns i [Inställningar för dataflytt](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurera inställningen för användar-UPN för Microsoft Intune eller en EMM-lösning från tredje part
 Inställningen för användar-UPN **måste** konfigureras för enheter som hanteras av Intune eller en EMM-lösning från tredje part. UPN-konfigurationen används med de appskyddsprinciper som du distribuerar från Intune. Proceduren nedan beskriver det allmänna flödet för att konfigurera UPN-inställningen, samt den resulterande användarupplevelsen:
 
-1.  [Skapa och tilldela en appskyddsprincip](app-protection-policies.md) för iOS på [Azure Portal](https://portal.azure.com). Konfigurera principinställningar enligt företagets krav och välj de iOS-appar som ska ha principen.
+1. [Skapa och tilldela en appskyddsprincip](app-protection-policies.md) för iOS på [Azure Portal](https://portal.azure.com). Konfigurera principinställningar enligt företagets krav och välj de iOS-appar som ska ha principen.
 
-2.  Distribuera de appar och den e-postprofil som ska hanteras via Intune, eller MDM-lösningen från tredje part, genom att följa de allmänna stegen nedan. Se även *Exempel 1*.
+2. Distribuera de appar och den e-postprofil som ska hanteras via Intune, eller MDM-lösningen från tredje part, genom att följa de allmänna stegen nedan. Se även *Exempel 1*.
 
-3.  Distribuera appen med följande inställningar för appkonfiguration till den hanterade enheten:
+3. Distribuera appen med följande inställningar för appkonfiguration till den hanterade enheten:
 
       **nyckel** = IntuneMAMUPN, **värde** = <username@company.com>
 
-      Exempel: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+      Exempel: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
       
-       > [!NOTE]
-       > I Intune måste principen för App Configuration vara för registreringstypen ”Hanterade enheter”.
-       > Dessutom behöver appen antingen installeras från Intune-företagsportalen om den har angetts som tillgänglig eller push-överföras till enheten vid behov. 
+     > [!NOTE]
+     > I Intune måste principen för App Configuration vara för registreringstypen **Hanterade enheter**.
+     > Dessutom behöver appen antingen installeras från Intune-företagsportalen om den har angetts som tillgänglig eller push-överföras till enheten vid behov. 
 
-4.  Distribuera principen **Öppna i hantering** med hjälp av Intune eller MDM-lösningen från tredje part till registrerade enheter.
+4. Distribuera principen **Öppna i hantering** med hjälp av Intune eller MDM-lösningen från tredje part till registrerade enheter.
 
 
 ### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Exempel 1: Administratörsmiljön i Intune eller MDM-konsolen från tredje part
@@ -82,23 +79,26 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
    |Hantering av Citrix-slutpunkt | IntuneMAMUPN | Sträng | ${user.userprincipalname} |
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Sträng | %upn% |
 
+> [!NOTE]  
+> Om du distribuerar en Appkonfigurationsprincip i Outlook-appen med alternativet ”Använda konfigurationsdesigner” konfigureras konfigurationsnyckeln IntuneMAMUPN automatiskt i bakgrunden för principen. Mer information om detta finns i vanliga frågor och svar för [Nya appkonfigurationsprincip för Outlook för iOS och Android – allmän appkonfiguration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+
 
 ### <a name="example-2-end-user-experience"></a>Exempel 2: Upplevelse för slutanvändaren
 
-1.  En användare installerar Microsoft Word-appen på en enhet.
+1. En användare installerar Microsoft Word-appen på en enhet.
 
-2.  Användaren startar den hanterade interna e-postappen för att komma åt sin e-post.
+2. Användaren startar den hanterade interna e-postappen för att komma åt sin e-post.
 
-3.  Användaren försöker öppna ett dokument från den interna e-postappen i Microsoft Word.
+3. Användaren försöker öppna ett dokument från den interna e-postappen i Microsoft Word.
 
-4.  När Word-appen startas ombeds användaren logga in med sitt arbetskonto. Det konto som användaren anger måste matcha kontot som du angav i appkonfigurationsinställningarna för Microsoft Word-appen.
+4. När Word-appen startas ombeds användaren logga in med sitt arbetskonto. Det konto som användaren anger måste matcha kontot som du angav i appkonfigurationsinställningarna för Microsoft Word-appen.
 
     > [!NOTE]
     > Användaren kan lägga till och använda sina personliga konton med Word. Appskyddsprinciperna tillämpas inte när användaren använder Word utanför arbetet. 
 
-5.  Efter inloggningen gäller inställningarna av appskyddsprinciperna för Word-appen.
+5. Efter inloggningen gäller inställningarna av appskyddsprinciperna för Word-appen.
 
-6.  Nu fungerar dataöverföringen och dokumentet märks med ett företags-ID i appen.  Dina data behandlas i ett arbetssammanhang och principinställningarna tillämpas. 
+6. Nu fungerar dataöverföringen och dokumentet märks med ett företags-ID i appen.  Dina data behandlas i ett arbetssammanhang och principinställningarna tillämpas. 
 
 ### <a name="validate-user-upn-setting-for-third-party-emm"></a>Verifiera inställningen för användar-UPN för en EMM-lösning från tredje part
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,28 +15,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5124796166f27823b7a13b0f3dd239446f778850
-ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
+ms.openlocfilehash: 0c5ddb32502aa15f6eaf8f5866772ecd32e970d4
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66713859"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648444"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Lägg till certifikatutfärdarpartner i Intune med hjälp av SCEP
 
-I Microsoft Intune går det att lägga till tredjeparts certifikatutfärdare (CA). Dessa certifikatutfärdare kan leverera certifikat till mobila enheter med hjälp av Simple Certificate Enrollment Protocol (SCEP). Den här funktionen kan utfärda nya certifikat och förnya certifikat på Windows-, iOS-, Android- och macOS-enheter.
+Använd tredjeparts certifikatutfärdare (CA) med Intune. Tredjeparts certifikatutfärdare kan etablera mobila enheter med nya eller förnyade certifikat med hjälp av Simple Certificate Enrollment Protocol (SCEP) och har stöd för enheter med Windows, iOS, Android och macOS.
 
 Det finns två delar i att använda den här funktionen: API med öppen källkod och Intune-administratörsuppgifterna.
 
 **Del 1 – Använda ett API med öppen källkod**  
-Microsoft har skapat ett API som kan integreras med Intune för att verifiera certifikat, skicka meddelanden om lyckat eller misslyckat samt använda SSL, särskilt SSL socket factory, för att kommunicera med Intune.
+Microsoft har skapat ett API för att integrera med Intune. Med API:et kan du verifiera certifikat, skicka meddelanden om lyckat eller misslyckat samt använda SSL, särskilt SSL socket factory, för att kommunicera med Intune.
 
-API:et är tillgängligt på [den offentliga GitHub-lagringsplatsen för Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) så att du kan ladda ned och använda det i dina lösningar. Använd detta API med SCEP-servrar från tredje part för att köra anpassad utmaningsverifiering mot Intune innan du levererar ett certifikat till en enhet.
+API:et är tillgängligt på [den offentliga GitHub-lagringsplatsen för Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) så att du kan ladda ned och använda det i dina lösningar. Använd detta API med SCEP-servrar från tredje part för att köra anpassad utmaningsverifiering mot Intune innan SCEP tillhandahåller ett certifikat till en enhet.
 
 [Integrera med Intune SCEP-hanteringslösning](scep-libraries-apis.md) innehåller mer information om API:et, dess metoder och testning av den lösning som du skapar.
 
 **Del 2 – Skapa programmet och profilen**  
-Med hjälp av ett Azure Active Directory-program (Azure AD) kan du delegera behörigheter till Intune för att hantera SCEP-begäranden som kommer från enheter. Azure AD-programmet innehåller värden för program-ID och autentiseringsnyckel som används i den API-lösning som utvecklaren skapar. Administratörer kan sedan skapa och distribuera SCEP-certifikatprofiler med hjälp av Intune. Du kan även visa rapporter om distributionsstatus på enheterna.
+Med hjälp av ett Azure Active Directory-program (Azure AD) kan du delegera behörigheter till Intune för att hantera SCEP-begäranden som kommer från enheter. Azure AD-programmet innehåller värden för program-ID och autentiseringsnyckel som används i den API-lösning som utvecklaren skapar. Administratörer skapar och distribuerar sedan SCEP-certifikatprofiler med hjälp av Intune och kan visa rapporter om distributionens status på enheterna.
 
 Den här artikeln innehåller en översikt över den här funktionen från ett administratörsperspektiv, bland annat om att skapa Azure AD-programmet.
 
@@ -117,13 +117,14 @@ När du avregistrerar eller rensar enheten tas certifikaten bort. Certifikaten �
 ## <a name="third-party-certification-authority-partners"></a>Tredjeparts certifikatutfärdarpartner
 Följande tredjeparts certifikatutfärdare har stöd för Intune:
 
-- [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
+- [Entrust Datacard](https://info.entrustdatacard.com/pki-eval-tool)
 - [EJBCA GitHub version med öppen källkod](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 
 Om du är tredjeparts certifikatutfärdare som är intresserad av att integrera din produkt med Intune kan du läsa API-vägledningen:
 

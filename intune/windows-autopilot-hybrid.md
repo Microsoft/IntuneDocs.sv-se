@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 81e50c3f79ffe9a3b9bc8068d49ba966c35dbbfd
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494538"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649095"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
 
 ## <a name="prerequisites"></a>Krav
 
-Konfigurera [Azure AD-anslutna hybridenheterna](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). [Verifiera enhetsregistreringen]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) med hjälp av cmdleten Get-MsolDevice.
+Konfigurera [Azure AD-anslutna hybridenheterna](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). [Verifiera enhetsregistreringen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) med hjälp av cmdleten Get-MsolDevice.
 
 Enheter som ska registreras måste också:
 - Köra Windows 10, v1809 eller senare.
-- Ha åtkomst till Internet.
-- Ha åtkomst till din Active Directory (VPN-anslutning stöds inte i nuläget).
-- Gå igenom välkomstupplevelsen (OOBE, Out-of-Box Experience).
+- Ha åtkomst till internet [genom att följa de dokumenterade kraven för Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Ha åtkomst till en Active Directory-domänkontrollant. Den måste vara ansluten till organisationens nätverk (Där den kan omvandla DNS-posterna för AD-domänen och AD-domänkontrollanten samt kommunicera med domänkontrollanten för att autentisera användaren. VPN-anslutning stöds inte för tillfället).
 - Kunna pinga domänkontrollanten på den domän som du försöker ansluta till.
+- Om du använder en proxy måste inställningsalternativet WPAD Proxy vara aktiverat och konfigurerat.
+- Gå igenom välkomstupplevelsen (OOBE, Out-of-Box Experience).
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurera automatisk registrering i Windows 10
 
@@ -139,7 +140,7 @@ Om du har en webbproxy i nätverksmiljön kontrollerar du att Intune Connector f
 
 1. Om du har valt **Dynamiska enheter** som medlemskapstyp väljer du **Dynamiska enhetsmedlemmar** i fönstret **Grupp** och gör sedan något av följande i **Avancerad regel**:
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter anger du `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (OrderID) måste du ange:  `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (OrderID) måste du ange: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst beställnings-ID anger du `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Välj **Spara**.

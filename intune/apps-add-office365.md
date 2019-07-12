@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 095c2ee0aba0680de0c5fc55c1406dba41111b92
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 00712b891790fbf437e9fed024f7610f37fee129
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527439"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648698"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
@@ -42,6 +42,7 @@ Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägg
 - Den här installationsmetoden stöds inte på Windows 10S-, Windows Home-, Windows Team-, Windows Holographic- eller Windows Holographic for Business-enheter.
 - Intune stöder inte installation av Office 365-skrivbordsappar från Microsoft Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
 - Många obligatoriska eller tillgängliga apptilldelningar är inte additiva. En senare tilldelning av en app överskriver de befintliga installerade apptilldelningarna. Om den första uppsättningen Office-program innehåller Word och den senare inte gör det så kommer exempelvis Word att avinstalleras. Detta tillstånd gäller inte för Visio- eller Project-program.
+- Flera Office 365-distributioner stöds inte för närvarande. Endast en distribution kommer att levereras till enheten
 - **Office-version** – Välj om du vill tilldela 32-bitars- eller 64-bitarsversionen av Office. Du kan installera 32-bitarsversionen på enheter med 32-bitar och 64-bitar, men du kan bara installera 64-bitarsversionen på 64-bitarsenheter.
 - **Ta bort MSI från slutanvändarenheter** – Välj om du vill ta bort befintliga Office .MSI-appar från slutanvändarenheter. Installationen kommer inte lyckas om det finns redan befintliga .MSI-appar på slutanvändarenheter. Apparna som ska avinstalleras är inte begränsade till de appar som valts för installation i **Konfigurera appsviten**, utan alla Office-appar (MSI) tas bort från slutanvändarens enhet. Mer information finns i [Ta bort befintliga MSI-versioner av Office vid uppgradering till Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). När Intune installerar om Office på slutanvändarnas datorer får användarna automatiskt samma språkpaket som de hade med tidigare .MSI Office-installationer.
 
@@ -142,7 +143,14 @@ Om du valde alternativet **Ange XML-format** i listrutan **Inställningsformat**
 
 I fönstret **Lägg till app** väljer du **Lägg till** när du är klar. Appen som du har skapat visas i applistan.
 
+## <a name="troubleshooting"></a>Felsökning
+Intune använder [distributionsverktyget för Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) för att hämta och distribuera Office 365 ProPlus till dina klientdatorer med [Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Hänvisa till bästa praxis i [hantera slutpunkter för Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) för att kontrollera att din nätverkskonfiguration tillåter att klienter får åtkomst till CDN direkt snarare än via routning av CDN-trafik genom centrala proxyservrar, så undviker du onödigt långa svarstider.
+
+Kör [Microsoft Support and Recovery Assistant for Office 365](https://diagnostics.office.com) på målenheter om du stöter på problem med installation eller körning.
+
 ## <a name="errors-during-installation-of-the-app-suite"></a>Fel under installationen av appsviten
+
+Se [Så här aktiverar du loggning för Office 365 ProPlus ULS](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) för information om hur du visar utförliga installationsloggar.
 
 I följande tabeller visas vanliga felkoder som kan uppstå och deras innebörd.
 

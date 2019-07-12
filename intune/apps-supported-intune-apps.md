@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a50eb6e58c7b866af32387a85026eb87f825b15
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 89babf2eb60b7959c5c25a02b29135668efc32eb
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045907"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649073"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Skyddade appar i Microsoft Intune  
 
@@ -46,6 +46,7 @@ Följande tabeller innehåller information om partners som stöds och Microsoft-
 | **Visningsprogram för Microsoft Azure Information Protection**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Samarbeta säkert tillsammans med andra med visningsprogrammet AIP. Visa skyddade filer (rättighetsskyddade meddelanden, PDF-filer, bilder, textfiler) som någon har delat med dig. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.egress.switchdroid.intune), [iOS Store-länk](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) | 
 | **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings är ett mötes- och schemaläggningsprogram som hjälper dig att hålla koll på dina bokningar, din personal och dina kunder. Du kommer aldrig att missa en avtalad tid och får färre missade möten.<p>Med Bookings-programmet kan du:<br><ul><li>Visa och hantera din kalender</li><li>Skapa bokningar eller göra ändringar i befintliga i farten</li><li>Se tillgängligheten för din personal i realtid</li><li>Snabbt och enkelt svara kunder</li><li>Snabbt få en vägbeskrivning till dit din nästa avtalade tid är</li><li>Hantera din kundlista</li></ul> | [Google Play-länk](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[iOS Store-länk](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
 | **Microsoft Connections**<p><img alt="Microsoft app - Microsoft Connections icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-connections.png" width="100"> | Microsoft Connections hjälper småföretag att attrahera och behålla kunder med e-postmarknadsföringsverktyg som är enkla att använda. Skapa enkelt professionella marknadsföringskampanjer via e-post med fördesignade mallar för meddelanden, nyhetsbrev och referenser. | [iOS Store-länk](https://itunes.apple.com/us/app/microsoft-connections/id1172261641?mt=8) |  
+| **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Det är snabbt, enkelt och roligt att hålla koll på jobbet och livet med din personliga assistent Cortana. Hämta dina smarta digitala assistent till din telefon för att hålla reda på viktiga saker var du än är och på alla dina enheter. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[iOS Store-länk](https://apps.apple.com/us/app/cortana/id1054501703) 
 | **Microsoft Dynamics CRM**<p><img alt="Microsoft app - Microsoft Dynamics CRM icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-dynamics-crm.png" width="100"> | Engagera dina kunder utan att förlora produktiviteten på jobbet och i farten med Microsoft Dynamics CRM. Kom förberedd till varje avtalad tid och uppdatera anteckningar, uppgifter, kontakter, konton, fall och leads medan informationen fortfarande är färsk. Säljare kan hantera sina försäljningsdata som leds av en sammanhangsbaserad affärsprocess i farten. Ger agenter och chefer rörlighetsfrihet med en fullständig omfattning av ärendehantering. Få en fulländad användarupplevelse av modellen ”konfigurera en gång och distribuera överallt”. Tillgänglig för iOS och Android. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone),<br>[iOS Store-länk](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8) |  
 | **Microsoft Edge**<p><img alt="Microsoft app - Microsoft Edge icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-edge.png" width="100"> | Microsoft Edge skapar en kontinuerlig webbläsarupplevelsen över enheter för Windows 10-användare. Innehåll och data synkroniserar sömlöst i bakgrunden så att användare kan surfa över flera enheter utan att missa något. Välbekanta Microsoft Edge-funktioner som hubben låter användare organisera webben på ett sätt som rensar upp röran och gör det enklare att hitta, visa och hantera sitt innehåll i farten. Microsoft Edge är utformat så att Windows 10-användare kan surfa på nätet som de vill, var de än är, utan att störa flödet. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US),<br>[iOS Store-länk](https://itunes.apple.com/us/app/microsoft-edge/id1288723196?mt=8) |  
 | **Microsoft Excel**<p><img alt="Microsoft app - Microsoft Excel icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-excel.png" width="100"> | Excel-kalkylblad ser bättre ut än någonsin på din surfplatta och telefon. Känn dig säker att när du redigerar eller skapar kalkylblad kommer de se ut exakt så som du vill på datorer, Mac-datorer, surfplattor och telefoner. Var igång på nolltid med det välbekanta utseendet och känslan hos Office tillsammans med en intuitiv pekupplevelse.<p><p>Den här appen kan användas som en app med flera identiteter för Android och iOS. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.microsoft.office.excel),<br>[iOS Store-länk](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) |  
