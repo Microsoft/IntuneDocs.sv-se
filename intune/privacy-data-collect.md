@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6082f4de6a881f211f2c7569fcd052ba1f37ad7b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d96167eb37ac7c3c90bad82783e9ce06814f8c88
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884785"
 ---
 # <a name="data-collection-in-intune"></a>Datainsamling i Intune
 
@@ -41,48 +41,48 @@ De flesta personliga data som samlas in av Intune är identifierade data. Dessa 
 Identifierade data som samlas in av Intune kan inkludera, men är inte begränsade till: 
 
 - Användarinformation
-    - Ägarens namn/användarens visningsnamn (det Azure-registrerade namnet för användaren som identifieras av AzureUserID)
-    - Användarens huvudnamn eller e-postadress
-    - Användaridentifierare från tredje part (till exempel AppleID)
+  - Ägarens namn/användarens visningsnamn (det Azure-registrerade namnet för användaren som identifieras av AzureUserID)
+  - Användarens huvudnamn eller e-postadress
+  - Användaridentifierare från tredje part (till exempel AppleID)
 - Information om maskinvaruinventering
-    - Enhetsnamn
-    - Tillverkare
-    - Operativsystem
-    - Serienummer
-    - IMEI-numret
-    - IP-adress
-    - Wi-Fi-Mac-adress
-    - ICCID
-    - Telefonnummer
+  - Enhetsnamn
+  - Tillverkare
+  - Operativsystem
+  - Serienummer
+  - IMEI-numret
+  - IP-adress
+  - Wi-Fi-Mac-adress
+  - ICCID
+  - Telefonnummer
 - Information om spårningslogg, inklusive data om följande aktiviteter
-    - Hantera
-    - Skapa
-    - Uppdatera (redigera)
-    - Ta bort
-    - Tilldela
-    - Fjärråtgärder
+  - Hantera
+  - Skapa
+  - Uppdatera (redigera)
+  - Ta bort
+  - Tilldela
+  - Fjärråtgärder
 - Supportinformation
-    - Kontaktinformation (namn, telefonnummer, e-postadress)
-    - E-postdiskussioner med Microsofts teammedlemmar om support, produkter och/eller kundupplevelser
+  - Kontaktinformation (namn, telefonnummer, e-postadress)
+  - E-postdiskussioner med Microsofts teammedlemmar om support, produkter och/eller kundupplevelser
 - Information om åtkomstkontroll (Intune använder dessa data för att hantera åtkomst till administrativa roller och funktioner via funktioner som [rollbaserad åtkomstkontroll](role-based-access-control.md).
-    - Statiska autentiserare (kundens lösenord)
-    - Sekretessnycklar för certifikat 
+  - Statiska autentiserare (kundens lösenord)
+  - Sekretessnycklar för certifikat 
 - Administratörs- och kontoinformation
-    - Administratörsanvändares för- och efternamn
-    - Administratörs användarnamn
-    - UPN (e-post)
-    - Telefonnummer
-    - Kontoägarens e-postadress
-    - Active Directory-ID för varje kunds IT-administratör
-    - Betalningsdata för kundfakturering
-    - Prenumerationsnyckel
+  - Administratörsanvändares för- och efternamn
+  - Administratörs användarnamn
+  - UPN (e-post)
+  - Telefonnummer
+  - Kontoägarens e-postadress
+  - Active Directory-ID för varje kunds IT-administratör
+  - Betalningsdata för kundfakturering
+  - Prenumerationsnyckel
 - Programinventering såsom
-    - appnamn
-    - version
-    - app-ID
-    - ikoner
-    - installationsplats
-    - Programinventeringsdata samlas endast in om enheten har markerats av administratören som en företagsägd enhet eller om funktionen för kompatibel app har aktiverats.  
+  - appnamn
+  - version
+  - app-ID
+  - ikoner
+  - installationsplats
+  - Programinventeringsdata samlas endast in om enheten har markerats av administratören som en företagsägd enhet eller om funktionen för kompatibel app har aktiverats.  
 - Tredjeparts-ID: för kunden såsom Apple-ID. 
 
 ## <a name="pseudonymized-data"></a>Pseudonymiserade data
@@ -92,30 +92,30 @@ Pseudonymiserade data är associerade med en unik identifierare, vanligtvis ett 
 Pseudonymiserade data som samlas in av Intune kan inkludera, men är inte begränsade till: 
 
 - Diagnostik-, prestanda- och användningsdata som är kopplade till en användare och/eller en enhet
-    - Det antal gånger som en funktion används
-    - De kommandon som finns för funktionen
-    - Svarstiden för en tjänst
-    - Slutförandefrekvenser för installationer och andra processer
-    - Programfel i Intune-företagsportalen
-    - Användar- och enhetsidentifierare
-    - Identifierare för referens-, korrelations- och hanteringsändamål 
+  - Det antal gånger som en funktion används
+  - De kommandon som finns för funktionen
+  - Svarstiden för en tjänst
+  - Slutförandefrekvenser för installationer och andra processer
+  - Programfel i Intune-företagsportalen
+  - Användar- och enhetsidentifierare
+  - Identifierare för referens-, korrelations- och hanteringsändamål 
 - Enhetsdata som inte är kopplade till en enhet eller en användare (om dessa data är kopplade till en enhet eller en användare behandlar Intune dem som identifierade data)
-    - Id för Intune-enhet
-    - Azure Active Directory-enhets-ID
-    - Intune-enhetshantering-ID
-    - Klientorganisations-ID
-    - Konto-ID
-    - EAS-enhets-ID
-    - Plattformsspecifika ID:n
-    - AppleID för iOS-enheter
-    - Mac-adress för Mac-enheter
-    - Windows-ID för Windows-enheter
+  - Id för Intune-enhet
+  - Azure Active Directory-enhets-ID
+  - Intune-enhetshantering-ID
+  - Klientorganisations-ID
+  - Konto-ID
+  - EAS-enhets-ID
+  - Plattformsspecifika ID:n
+  - AppleID för iOS-enheter
+  - Mac-adress för Mac-enheter
+  - Windows-ID för Windows-enheter
 - Information om hanterat program
-    - ID för hanterat program
-    - Enhetstagg för hanterat program
-    - Intune-enhetshantering-ID
-    - Azure Active Directory-enhets-ID
-    - Krypteringsnycklar
+  - ID för hanterat program
+  - Enhetstagg för hanterat program
+  - Intune-enhetshantering-ID
+  - Azure Active Directory-enhets-ID
+  - Krypteringsnycklar
 
 ## <a name="aggregated-data"></a>Aggregerade data
 
@@ -125,14 +125,14 @@ Aggregerade data som samlas in av Intune kan inkludera, men är inte begränsade
 
 - Administratörsanvändningsdata från alla Intune-klientorganisationer (till exempel administratörskontroller som väljs vid interaktion med administratörskonsolen)
 - Information om klientorganisationskonto (dessa data är tillgängliga från Intune-bladet)
-    - Antalet enheter eller användare som är registrerade
-    - Antalet identifierade enhetsplattformar  
-    - Antalet installerade enheter
-    - installedDeviceCount: det antal enheter som programmet har installerats på.
-    - notApplicableDeviceCount: det antal enheter som programmet inte är tillämpligt för.
-    - notInstalledDeviceCount: det antal enheter som programmet är tillämpligt för men inte installerat på.
-    - pendingInstallDeviceCount: det antal enheter som programmet är tillämpligt för och för vilka installation väntar.
-    
+  - Antalet enheter eller användare som är registrerade
+  - Antalet identifierade enhetsplattformar  
+  - Antalet installerade enheter
+  - installedDeviceCount: det antal enheter som programmet har installerats på.
+  - notApplicableDeviceCount: det antal enheter som programmet inte är tillämpligt för.
+  - notInstalledDeviceCount: det antal enheter som programmet är tillämpligt för men inte installerat på.
+  - pendingInstallDeviceCount: det antal enheter som programmet är tillämpligt för och för vilka installation väntar.
+
 ## <a name="next-steps"></a>Nästa steg
 
 Lär dig mer om hur Intune [lagrar och bearbetar](privacy-data-store-process.md) samt [delar](privacy-data-secure-share.md) personliga data. 

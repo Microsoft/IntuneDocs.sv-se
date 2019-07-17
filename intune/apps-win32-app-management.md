@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39b5581ae7dd2a93554c0371da3858f59d6e62b4
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 19b8693a5d2c2df042bd9339cb74bbcde0da626d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884040"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -37,9 +37,9 @@ Om du vill använda Win32-apphantering ska du uppfylla följande kriterier:
 
 - Windows 10 version 1607 eller senare (Enterprise- och Pro Education-versionerna)
 - Windows 10-klienten måste vara: 
-    - Enheterna måste vara anslutna till Azure AD och automatiskt registrerade. Intune-hanteringstillägget har stöd för Azure AD-anslutna, hybriddomänanslutna, grupprincipregistrerade enheter. 
-    > [!NOTE]
-    > För scenariot med grupprincipregistrering – slutanvändaren använder det lokala användarkontot till att AAD-ansluta sin Windows 10-enhet. Användaren måste logga in på enheten med sitt AAD-användarkonto och registrera till Intune. Intune installerar Intune-hanteringstillägget på enheten om ett PowerShell-skript eller en Win32-app riktas till användaren eller enheten.
+  - Enheterna måste vara anslutna till Azure AD och automatiskt registrerade. Intune-hanteringstillägget har stöd för Azure AD-anslutna, hybriddomänanslutna, grupprincipregistrerade enheter. 
+  > [!NOTE]
+  > För scenariot med grupprincipregistrering – slutanvändaren använder det lokala användarkontot till att AAD-ansluta sin Windows 10-enhet. Användaren måste logga in på enheten med sitt AAD-användarkonto och registrera till Intune. Intune installerar Intune-hanteringstillägget på enheten om ett PowerShell-skript eller en Win32-app riktas till användaren eller enheten.
 - Storleken för Windows-program är högst 8 GB per app.
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Förbereda Win32-appinnehållet för uppladdning

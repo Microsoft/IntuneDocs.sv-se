@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9438c3c566dc62acfa7567428ebe3a6a6be4777
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 9552253469fb6644636d492c9c0f1477891a402d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883761"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense-anslutningsapp för Intune
 
@@ -96,7 +96,7 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och fö
 - Microsoft Intune-prenumeration
 
 - Check Point SandBlast Mobile Threat Defense-prenumeration
-    - Se [Check Point SandBlasts webbplats](https://www.checkpoint.com/) för mer information.
+  - Se [Check Point SandBlasts webbplats](https://www.checkpoint.com/) för mer information.
 
 ## <a name="next-steps"></a>Nästa steg
 

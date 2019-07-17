@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34143e17245de61026a536cc0b8c5e8a7f80107
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 97a0d9074b8617dec2fb28ed59168e08ada57fba
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882771"
 ---
 # <a name="intune-migration-guide"></a>Migreringsguide för Intune
 
@@ -37,25 +37,25 @@ Den här guiden delar in migreringen i två faser, som båda innehåller uppgift
 
 - [Fas 1: Förbered Intune för hantering av mobila enheter](migration-guide-prepare.md)
 
-    - [Utvärdera dina MDM-migreringskrav](migration-guide-prepare.md#assess-mdm-requirements)
+  - [Utvärdera dina MDM-migreringskrav](migration-guide-prepare.md#assess-mdm-requirements)
 
-    - [Grundläggande konfiguration](migration-guide-setup.md)
+  - [Grundläggande konfiguration](migration-guide-setup.md)
 
-    - [Konfigurera principer för enhets- och apphantering](migration-guide-configure-policies.md)
+  - [Konfigurera principer för enhets- och apphantering](migration-guide-configure-policies.md)
 
-    - [Konfigurera appskyddsprinciper](migration-guide-app-protection-policies.md)
+  - [Konfigurera appskyddsprinciper](migration-guide-app-protection-policies.md)
 
-    - [Särskilda överväganden vid migrering](migration-guide-considerations.md)
+  - [Särskilda överväganden vid migrering](migration-guide-considerations.md)
 
 - [Fas 2: Migreringskampanj](migration-guide-campaign.md)
 
-    - [Kommunikationsplan](migration-guide-communication-plan.md)
+  - [Kommunikationsplan](migration-guide-communication-plan.md)
 
-    - [Genomföra slutanvändarinförande med villkorlig åtkomst](migration-guide-drive-adoption.md)
+  - [Genomföra slutanvändarinförande med villkorlig åtkomst](migration-guide-drive-adoption.md)
 
-    - [Typisk migreringscykel](migration-guide-cycle.md)
-        - [Övervaka migrering](migration-guide-cycle.md#monitoring-migration)
-        - [Efter migreringen](migration-guide-cycle.md#post-migration)
+  - [Typisk migreringscykel](migration-guide-cycle.md)
+    - [Övervaka migrering](migration-guide-cycle.md#monitoring-migration)
+    - [Efter migreringen](migration-guide-cycle.md#post-migration)
 
 ## <a name="assumptions"></a>Antaganden
 

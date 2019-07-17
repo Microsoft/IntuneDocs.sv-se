@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96c05543884e0d9a00b570fb9ed4be1cdef65ca0
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: 397ca3c03c96adc9bd6b0ca691f835e3e579fba0
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66841134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882252"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
@@ -32,8 +32,8 @@ Enheter som hanteras av Intune kan fjärradministreras med hjälp av [TeamViewer
 
 - Intune-administratören i Azure Portal måste ha följande [Intune-roller](role-based-access-control.md):  
 
-    - **Uppdatera fjärrhjälp**: Gör att administratörer kan ändra inställningarna för TeamViewer-anslutningsprogrammet
-    - **Begär fjärrhjälp**: Gör att administratörer kan starta en ny fjärrhjälpssession för alla användare. Användare med den här rollen begränsas inte av någon Intune-roll inom ett omfång. Dessutom kan användare eller enhetsgrupper som tilldelats en Intune-roll i ett omfång också begära fjärrhjälp. 
+  - **Uppdatera fjärrhjälp**: Gör att administratörer kan ändra inställningarna för TeamViewer-anslutningsprogrammet
+  - **Begär fjärrhjälp**: Gör att administratörer kan starta en ny fjärrhjälpssession för alla användare. Användare med den här rollen begränsas inte av någon Intune-roll inom ett omfång. Dessutom kan användare eller enhetsgrupper som tilldelats en Intune-roll i ett omfång också begära fjärrhjälp. 
 
 - Ett [TeamViewer](https://www.teamviewer.com)-konto med autentiseringsuppgifter för inloggning. Endast vissa TeamViewer-licenser kan stödja integrering med Intune. Särskilda krav för TeamViewer beskrivs i [TeamViewer-integreringspartner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 

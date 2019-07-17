@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3b6aeb7efc60d32891f4b1c69b387a61a2bc25
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882230"
 ---
 # <a name="intune-tenant-status-page"></a>Sidan Klientorganisationsstatus i Intune
 Sidan Status för klientorganisation är en centraliserad hubb här du kan visa aktuell och viktig information om din klientorganisation. Informationen omfattar tillgänglighet för och användning av licenser, anslutningsstatus och viktiga meddelanden om Intune-tjänsten.  
@@ -48,14 +48,14 @@ När det finns fler än ett enda anslutningsprogram av någon typ är statusen e
 
 **Status för anslutningsprogrammet:**
 - **Ej felfri:**
-    - Certifikatet eller autentiseringsuppgiften har upphört att gälla
-    - Den senaste synkroniseringen genomfördes för minst tre dagar sedan
+  - Certifikatet eller autentiseringsuppgiften har upphört att gälla
+  - Den senaste synkroniseringen genomfördes för minst tre dagar sedan
 - **Varning:**
-    - Certifikatet eller autentiseringsuppgiften upphör att gälla inom sju dagar
-    - Den senaste synkroniseringen genomfördes för mer än en dag sedan
+  - Certifikatet eller autentiseringsuppgiften upphör att gälla inom sju dagar
+  - Den senaste synkroniseringen genomfördes för mer än en dag sedan
 - **Felfri:**
-    - Certifikatet eller autentiseringsuppgiften upphör inte att gälla inom sju dagar
-    - Den senaste synkroniseringen genomfördes för mindre än en dag sedan  
+  - Certifikatet eller autentiseringsuppgiften upphör inte att gälla inom sju dagar
+  - Den senaste synkroniseringen genomfördes för mindre än en dag sedan  
 
 När du väljer ett anslutningsprogram i listan visas den portalsida som är relevant för att skapa eller konfigurera det anslutningsprogrammet på portalen.  När du väljer anslutningsprogrammet **Förfallodatum för VPP** öppnas till exempel sidan **Volyminköpsprogramtoken för iOS** där du kan visa mer information om det anslutningsprogrammet. Sedan kan du skapa en ny konfiguration eller redigera och åtgärda problem med en befintlig.  
 

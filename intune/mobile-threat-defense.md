@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0452229d6c1ea2d9e87a302675167d200bd348eb
-ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
+ms.openlocfilehash: 73c8167c91129d79a98674a92e7ccc5487a6b283
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67407176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885086"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Vad är Mobile Threat Defense-integrering med Intune?
 Intune kan integrera data från en Mobile Threat Defense-leverantör som informationskälla för efterlevnadsprinciper och regler för villkorlig åtkomst. Du kan använda den här informationen för att skydda företagsresurser som Exchange och SharePoint genom att blockera åtkomst från komprometterade mobila enheter.  
@@ -47,14 +47,14 @@ Den här tjänsten kräver anmälan; som standard delas ingen information om app
 **Appinventering**  
 Om du aktiverar appsynkronisering för iOS-enheter skickas inventeringar från både företagsägda och personligt ägda iOS-enheter till din MTD-tjänstleverantör. Data i appinventeringen omfattar:
 
- - App-ID
- - Appversion
- - Kort appversion
- - Appnamn
- - Storlek på appsamling
- - Dynamisk appstorlek
- - Oavsett om appen har verifierats eller inte
- - Oavsett om appen hanteras eller inte
+- App-ID
+- Appversion
+- Kort appversion
+- Appnamn
+- Storlek på appsamling
+- Dynamisk appstorlek
+- Oavsett om appen har verifierats eller inte
+- Oavsett om appen hanteras eller inte
 
 ## <a name="sample-scenarios"></a>Exempelscenarier
 

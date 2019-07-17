@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: a0fbddf54939a494087a7da1220f51ec77b45e7b
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882469"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Självstudie: Genomgång av Microsoft Intune i Azure Portal
 
@@ -38,8 +38,8 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 ## <a name="prerequisites"></a>Krav
 Innan du konfigurerar Microsoft Intune, bör du granska följande krav:
 
-   - [Operativsystem och webbläsare som stöds](supported-devices-browsers.md) 
-   - [Krav för nätverkskonfiguration och bandbredd](network-bandwidth-use.md)
+- [Operativsystem och webbläsare som stöds](supported-devices-browsers.md) 
+- [Krav för nätverkskonfiguration och bandbredd](network-bandwidth-use.md)
 
 ## <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrera dig för en kostnadsfri utvärderingsversion av Microsoft Intune
 

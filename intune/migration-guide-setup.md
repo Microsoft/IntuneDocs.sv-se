@@ -15,12 +15,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f5188a866e744c034fd592f9b1dfcbc9061ffa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 78cf3c2ff5babbfb45dfa6a41add09ef91549e8d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885037"
 ---
 # <a name="basic-setup"></a>Grundläggande konfiguration
 
@@ -61,9 +61,9 @@ Innan du kan migrera till Intune måste du ha en Intune-prenumeration.
 
 - Du kan besöka [den här sidan](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0). Här får du anvisningar om hur du kan:
 
-    - Skapa en ny Intune-prenumeration som är länkad till en ny AAD-klient.
+  - Skapa en ny Intune-prenumeration som är länkad till en ny AAD-klient.
 
-    - Länka Intune-prenumerationen genom att logga in till en befintlig AAD-klient.
+  - Länka Intune-prenumerationen genom att logga in till en befintlig AAD-klient.
 
 ### <a name="task-2-assign-intune-user-licenses"></a>Uppgift 2: Tilldela Intune-användarlicenser
 

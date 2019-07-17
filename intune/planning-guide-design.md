@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884885"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -49,47 +49,47 @@ Den aktuella miljön kan påverka utformningsbeslut och bör dokumenteras och an
 
 - **Identitet i molnet**
 
-    - Använder du DirSync eller Azure Active Directory (Azure AAD) Connect?
+  - Använder du DirSync eller Azure Active Directory (Azure AAD) Connect?
 
-    - Är miljön federerad?
+  - Är miljön federerad?
 
-    - Är multifaktorautentisering (MFA) aktiverad?
+  - Är multifaktorautentisering (MFA) aktiverad?
 
 - **E-postmiljö**
 
-    - Använder du Exchange? Är det lokalt eller i molnet?
+  - Använder du Exchange? Är det lokalt eller i molnet?
 
-    - Befinner du dig mitt i ett projekt med att migrera Exchange till molnet?
+  - Befinner du dig mitt i ett projekt med att migrera Exchange till molnet?
 
 - **Aktuell lösning för hantering av mobilenheter (MDM)**
 
-    - Använder du andra MDM-lösningar för närvarande?
+  - Använder du andra MDM-lösningar för närvarande?
 
-    - Vilka MDM-lösningar använder du för företags- och BYOD-användningsfall?
+  - Vilka MDM-lösningar använder du för företags- och BYOD-användningsfall?
 
-    - Vilka funktioner använder du (t.ex. appenhetsinställningar, Wi-Fi-konfigurationer)?
+  - Vilka funktioner använder du (t.ex. appenhetsinställningar, Wi-Fi-konfigurationer)?
 
-    - Vilka enhetsplattformar stöds?
+  - Vilka enhetsplattformar stöds?
 
-    - Vilka grupper och hur många användare använder MDM-lösningen?
+  - Vilka grupper och hur många användare använder MDM-lösningen?
 
 - **Certifikatlösning**
 
-    - Har du har implementerat en certifikatlösning?
+  - Har du har implementerat en certifikatlösning?
 
-    - Vilken typ av certifikat använder du?
+  - Vilken typ av certifikat använder du?
 
 - **Systemhantering**
 
-    - Hur hanterar du dator- och servermiljön?
+  - Hur hanterar du dator- och servermiljön?
 
-    - Använder du System Center Configuration Manager? Använder du en systemhanteringsplattform från tredje part?
+  - Använder du System Center Configuration Manager? Använder du en systemhanteringsplattform från tredje part?
 
 - **VPN-lösning**
 
-    - Vad har du för VPN-lösning?
+  - Vad har du för VPN-lösning?
 
-    - Använder du den för både företags- och BYOD-användningsfall?
+  - Använder du den för både företags- och BYOD-användningsfall?
 
 Tänk på att notera eventuella projekt eller andra planer som finns som kan påverka miljön när du registrerar den befintliga MDM-miljön. Nedan visas ett exempel på ett sätt att registrera den aktuella miljön när du skapar Intune-utformningen:
 

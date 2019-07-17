@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8168cdaec4d6616b12fa4da225c84fa2d239994d
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883844"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -47,22 +47,22 @@ Microsoft Store för företag-appar är moderna appar som har köpts från Micro
 Beroende på apptypen kan appen installeras på en Windows 10-enhet på ett av två sätt:
 
 - **Användarkontext**: När en app distribueras i användarkontext installeras den hanterade appen för den användaren på enheten när användaren loggar in på enheten. Observera att installationen av appen inte lyckas förrän användaren loggar in på enheten. 
-    - Moderna verksamhetsspecifika appar och Microsoft Store för företag-appar (både online och offline) kan distribueras i användarkontext och stöder både avsikten Krävs och Tillgänglig.
-    - Win32-appar som skapats som **användarläge** eller **dubbelläge** kan distribueras i användarkontext och stöder både **krävd** och **tillgänglig** avsikt. 
+  - Moderna verksamhetsspecifika appar och Microsoft Store för företag-appar (både online och offline) kan distribueras i användarkontext och stöder både avsikten Krävs och Tillgänglig.
+  - Win32-appar som skapats som **användarläge** eller **dubbelläge** kan distribueras i användarkontext och stöder både **krävd** och **tillgänglig** avsikt. 
 - **Enhetskontext**: När en app distribueras i enhetskontext installeras den hanterade appen direkt på enheten av Intune.
-    - Endast moderna verksamhetsspecifika appar och offlinelicensierade appar i Microsoft Store för företag kan distribueras i enhetskontext och stöder endast avsikten Krävs.
-    - Win32-appar som skapats som **datorläge** eller **dubbelläge** kan distribueras i användarkontext och stöder endast **krävd** avsikt.
+  - Endast moderna verksamhetsspecifika appar och offlinelicensierade appar i Microsoft Store för företag kan distribueras i enhetskontext och stöder endast avsikten Krävs.
+  - Win32-appar som skapats som **datorläge** eller **dubbelläge** kan distribueras i användarkontext och stöder endast **krävd** avsikt.
 
 > [!NOTE]
 > För Win32-appar som skapats som **dubbelläge**-appar (admin) måste du välja om appen ska fungera som **användarläge** eller **datorläge** för alla tilldelningar som är associerade med denna instans. Distributionskontexten kan inte ändras per tilldelning.  
 
 När en app distribueras i enhetskontext lyckas endast installationen när den riktas till en enhet som stöder enhetskontext. Dessutom stöder distribuering i enhetskontext dessutom följande villkor:
 - Om en app distribueras i enhetskontext och riktas mot en användare kommer installationen att misslyckas med följande status och fel som visas i administratörskonsolen:
-    - Status: Misslyckades.
-    - Fel: Det går inte att rikta sig mot en användare med en kontextinstallation för enheter.
+  - Status: Misslyckades.
+  - Fel: Det går inte att rikta sig mot en användare med en kontextinstallation för enheter.
 - Om en app distribueras i enhetskontext men riktas mot en enhet som inte stöder enhetskontext kommer installationen att misslyckas med följande status och fel i administratörskonsolen:
-    - Status: Misslyckades.
-    - Fel: Den här plattformen stöder inte kontextinstallationer för enheter. 
+  - Status: Misslyckades.
+  - Fel: Den här plattformen stöder inte kontextinstallationer för enheter. 
 
 > [!Note]
 > När en apptilldelning sparas med en specifik distribution går det inte att ändra kontexten för den tilldelningen förutom för moderna appar. I fallet med moderna appar går det att ändra kontexten från användarkontext till enhetskontext. 

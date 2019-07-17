@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: cbe533e6a219adf1984c656506ceb7a3b95556ec
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 4a0df4f32513eb37bd7396d8e6249f9c6e71a4e4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884188"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-registreringsmetoder för Windows-enheter
 
@@ -36,8 +36,8 @@ Det finns två sätt att hämta enheter som registrerats i Intune:
 Användare kan själva registrera sina Windows-enheter med hjälp av någon av dessa metoder:
 
 - [BYOD (Bring Your Own Device)](https://docs.microsoft.com/intune-user-help/enroll-windows-10-device): Användarna registrerar sina personligt ägda enheter genom att välja att ansluta ett **arbets- och skolkonto** från enhetens **inställningar**. Den här processen:
-    - Registrerar enheten med Azure Active Directory för att få åtkomst till företagsresurser såsom e-post.
-    - Registrerar enheten i Intune som en personligt ägd enhet (BYOD).
+  - Registrerar enheten med Azure Active Directory för att få åtkomst till företagsresurser såsom e-post.
+  - Registrerar enheten i Intune som en personligt ägd enhet (BYOD).
 Om en administratör har konfigurerat automatisk registrering (tillgängligt med Azure AD Premium-prenumerationer) behöver användaren bara ange sina autentiseringsuppgifter en gång. Annars behöver användaren registrera separat via registrering med endast MDM och ange autentiseringsuppgifterna på nytt.  
 - **Registrering med endast MDM** gör att användarna kan registrera en befintlig arbetsgrupp, Active Directory eller Azure Active Directory-ansluten dator till Intune. Användare registrerar från inställningarna på den befintliga Windows-datorn. Den här metoden rekommenderas inte eftersom den inte registrerar enheten till Azure Active Directory. Den förhindrar även användningen av funktioner som villkorsstyrd åtkomst.
 - [Azure Active Directory-anslutning (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) – ansluter enheten till Azure Active Directory och gör att användarna kan logga in på Windows med sina Azure AD-autentiseringsuppgifter. Om automatisk registrering har aktiverats registreras enheten automatiskt i Intune. Fördelen med automatisk registrering är att användarna får en enstegsprocess. Annars behöver användaren registrera separat via registrering med endast MDM och ange autentiseringsuppgifterna på nytt. Användarna registrerar på det här sättet antingen under det inledande Windows-välkomstprogrammet (OOBE) eller från Inställningar. Enheten har markerats som en företagsägd enhet i Intune.

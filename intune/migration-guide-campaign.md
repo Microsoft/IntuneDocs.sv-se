@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 35c0c6e6b65350d3b27c9dc1d9ab55d375dac070
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882851"
 ---
 # <a name="phase-2-migration-campaign"></a>Fas 2: Migreringskampanj
 
@@ -43,19 +43,19 @@ Punkterna nedan hjälper dig att säkerställa en lyckad migrering från en tred
 
 - Övervaka supportavdelningens belastning och hur registreringen fortskrider för varje cykel. Reservera tid i schemat så att du får tid att utvärdera framgångskriterierna för respektive grupp innan nästa migreras. Pilotdistributionen bör verifiera följande:
 
-    - Graden av lyckade och misslyckade registreringar ligger inom det förväntade.
+  - Graden av lyckade och misslyckade registreringar ligger inom det förväntade.
 
-    - Användarproduktivitet:
+  - Användarproduktivitet:
 
-        - Företagsresurser, som VPN, Wi-Fi, e-post och certifikat, fungerar.
+    - Företagsresurser, som VPN, Wi-Fi, e-post och certifikat, fungerar.
 
-        - Etablerade appar är tillgängliga.
+    - Etablerade appar är tillgängliga.
 
-    - Datasäkerhet:
+  - Datasäkerhet:
 
-        - Efterlevnadsrapporter genereras.
+    - Efterlevnadsrapporter genereras.
 
-        - Mobilappsskydd tillämpas.
+    - Mobilappsskydd tillämpas.
 
 När du är nöjd med den första migreringsfasen upprepar du [migreringscykeln](migration-guide-cycle.md) för nästa fas.
 

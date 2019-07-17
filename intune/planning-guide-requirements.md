@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb08757732aa5cad08ed0a4b535fb20c0aa1df0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 703509c316a22995d26223f6c386de0a2ec66c31
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882726"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Fastställa scenariokrav för användningsfall
 
@@ -50,21 +50,21 @@ Du kan [ladda ned en mall för ovanstående tabell](https://gallery.technet.micr
 Här är några fler exempel som kan användas i kolumnen ”Krav”:
 
 - **Säker e-post**
-    - Villkorlig åtkomst för Exchange Online/lokalt
-    - Appskyddsprinciper för Outlook
+  - Villkorlig åtkomst för Exchange Online/lokalt
+  - Appskyddsprinciper för Outlook
 
 - **Enhetsinställningar**
-    - PIN-inställning med fyra eller sex tecken
-    - Begränsa molnsäkerhetskopiering
+  - PIN-inställning med fyra eller sex tecken
+  - Begränsa molnsäkerhetskopiering
 
 - **Profiler**
-    - Wi-Fi
-    - VPN
-    - E-post (Windows 10 mobil)
+  - Wi-Fi
+  - VPN
+  - E-post (Windows 10 mobil)
 
 - **Appar**
-    - Office 365 med appskyddsprinciper
-    - Branschspecifikt (LOB) med appskyddsprinciper
+  - Office 365 med appskyddsprinciper
+  - Branschspecifikt (LOB) med appskyddsprinciper
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 29ae889e99a843a8569782bad2b1303c7bb4304c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882832"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fas 1: Förbered Microsoft Intune för hantering av mobilenheter (MDM)
 
@@ -51,8 +51,8 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 
 - Vilka användningsvillkor behöver du?
 
-    - Var noga med att involvera företagets juridiska avdelning redan från början.
-    - Vilken typ av lokalisering krävs?
+  - Var noga med att involvera företagets juridiska avdelning redan från början.
+  - Vilken typ av lokalisering krävs?
 
 - Är användarnas allmänna kunskaper om teknik och IT goda?
 
@@ -63,8 +63,8 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 - Hur långa enhetslösenord/PIN-koder använder du nu?
 
 - Måste du inaktivera enhetsfunktioner eller begränsa vissa enhetsbeteenden? Du kan styra olika plattformsspecifika inställningar med enhetskonfigurationsprofiler, till exempel:
-    - Inaktivera kamera
-    - Lås till enkelt appläge<br/>
+  - Inaktivera kamera
+  - Lås till enkelt appläge<br/>
 
 - Vilka typer av autentisering måste du stödja? Om du behöver certifikatbaserad autentisering, vilka typer av certifikat krävs i så fall?
   - Intune kan tillhandahålla certifikat med resursåtkomstprofiler för registrerade enheter.

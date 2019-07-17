@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da828b162e008541cb5cb2b5d15092d0fce417c5
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 7663009c7d45171ab6469f7f6e96b4c8f979b744
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883286"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune
 Informationen i den här artikeln hjälper dig att installera och sedan övervaka den lokala Exchange Active Sync-anslutningsappen för Intune.  Du använder den lokala Exchange-anslutningsappen för Intune med dina [principer för villkorlig åtkomst för att tillåta eller blockera åtkomst till Exchange On-Premises-postlådor](conditional-access-exchange-create.md). 
@@ -58,18 +58,18 @@ Följande tabell innehåller kraven för datorn där du installerar den lokala E
 Skapa ett Active Directory-användarkonto som ska användas av den lokala Exchange-anslutningsappen. Kontot måste ha behörighet att köra följande obligatoriska Exchange för Windows PowerShell-cmdlets:
 
 
- - Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
- - Get-CasMailbox, Set-CasMailbox
- - Get-ActiveSyncMailboxPolicy, Set-ActiveSyncMailboxPolicy, New-ActiveSyncMailboxPolicy, Remove-ActiveSyncMailboxPolicy
- - Get-ActiveSyncDeviceAccessRule, Set-ActiveSyncDeviceAccessRule, New-ActiveSyncDeviceAccessRule, Remove-ActiveSyncDeviceAccessRule
- - Get-ActiveSyncDeviceStatistics
- - Get-ActiveSyncDevice
- - Get-ExchangeServer
- - Get-ActiveSyncDeviceClass
- - Get-Recipient
- - Clear-ActiveSyncDevice, Remove-ActiveSyncDevice
- - Set-ADServerSettings
- - Get-Command
+- Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
+- Get-CasMailbox, Set-CasMailbox
+- Get-ActiveSyncMailboxPolicy, Set-ActiveSyncMailboxPolicy, New-ActiveSyncMailboxPolicy, Remove-ActiveSyncMailboxPolicy
+- Get-ActiveSyncDeviceAccessRule, Set-ActiveSyncDeviceAccessRule, New-ActiveSyncDeviceAccessRule, Remove-ActiveSyncDeviceAccessRule
+- Get-ActiveSyncDeviceStatistics
+- Get-ActiveSyncDevice
+- Get-ExchangeServer
+- Get-ActiveSyncDeviceClass
+- Get-Recipient
+- Clear-ActiveSyncDevice, Remove-ActiveSyncDevice
+- Set-ADServerSettings
+- Get-Command
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Ladda ner installationspaketet för den lokala Exchange-anslutningsappen
 
@@ -184,9 +184,9 @@ Från och med versionen Intune 1710 kan du använda [Operations Manager-hanterin
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Tvinga en snabbsynkronisering eller en fullständig synkronisering manuellt
 En lokal Exchange Connector synkroniserar automatiskt och regelbundet EAS- och Intune-enhetsposterna. Om efterlevnadsstatusen för en enhet ändras uppdaterar den automatiska synkroniseringsprocessen posterna regelbundet så att enhetsåtkomst kan blockeras eller tillåtas.
 
-   - **Snabbsynkroniseringar** görs regelbundet flera gånger om dagen. Vid en snabbsynkronisering hämtas enhetsinformation för Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst.
+- **Snabbsynkroniseringar** görs regelbundet flera gånger om dagen. Vid en snabbsynkronisering hämtas enhetsinformation för Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst.
 
-   - En **fullständig synkronisering** görs en gång per dygn som standard. Vid en fullständig synkronisering hämtas enhetsinformation för alla Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst. Vid en fullständig synkronisering hämtas även information om Exchange-servern, och dessutom garanteras att bara den konfiguration som angetts av Intune på Azure Portal uppdateras på Exchange-servern. 
+- En **fullständig synkronisering** görs en gång per dygn som standard. Vid en fullständig synkronisering hämtas enhetsinformation för alla Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst. Vid en fullständig synkronisering hämtas även information om Exchange-servern, och dessutom garanteras att bara den konfiguration som angetts av Intune på Azure Portal uppdateras på Exchange-servern. 
 
 
 Du kan tvinga en synkronisering för en anslutningsapp med alternativen **Snabbsynkronisering** eller **Fullständig synkronisering** Intune-instrumentpanel så här:

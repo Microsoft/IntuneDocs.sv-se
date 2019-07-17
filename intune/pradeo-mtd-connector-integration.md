@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b51f310d370876058b8f1a1f872dd0b0e41bd42c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884847"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integrera Pradeo med Intune
 
@@ -36,13 +36,13 @@ Kontrollera att du har följande innan du börjar integrera Pradeo med Intune:
 
 - Azure Active Directory-administratörsautentiseringsuppgifter som beviljar följande behörigheter:
 
-    - Logga in och läsa användarprofil
+  - Logga in och läsa användarprofil
 
-    - Gå till katalogen som den inloggade användaren
+  - Gå till katalogen som den inloggade användaren
 
-    - Läs katalogdata
+  - Läs katalogdata
 
-    - Skicka enhetsinformation till Intune
+  - Skicka enhetsinformation till Intune
 
 - Autentiseringsuppgifter som administratör för att få åtkomst till Pradeo Security-konsolen.
 

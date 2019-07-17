@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94f2bd9237e92b22b9d73e4f7777dc0faf3f0fe
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883020"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
@@ -67,9 +67,9 @@ Läs mer om [registrering med Apple Configurator](apple-configurator-setup-assis
 Enheter som har konfigurerats med användartillhörighet kan installera och köra företagsportalappen för att ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ett antal ytterligare steg för att slutföra installationen och installera företagsportalsappen.
 
 Användartillhörighet krävs för att ge stöd åt följande:
-  - Hantering av mobilprogramsappar (MAM, Mobile Application Management)
-  - Villkorlig åtkomst till e-post och företagsdata
-  - Företagsportalappen
+- Hantering av mobilprogramsappar (MAM, Mobile Application Management)
+- Villkorlig åtkomst till e-post och företagsdata
+- Företagsportalappen
 
 **Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet**
 1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. 

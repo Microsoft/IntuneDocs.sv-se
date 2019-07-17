@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: a7907889a1419ad6ff37b3975fa65adb02389ab6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884502"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Självstudie: Skydda e-post i Exchange Online på ohanterade enheter
 
@@ -32,10 +32,10 @@ Lär dig att använda appskyddsprinciper med villkorlig åtkomst för att skydda
 > * Skapa principer för villkorlig åtkomst i Azure Active Directory (Azure AD) som endast tillåter att Outlook-appen får åtkomst till företagets e-post i Exchange Online. Du kan också kräva multifaktorautentisering (MFA) för moderna autentiseringsklienter, till exempel Outlook för iOS och Android.
 
 ## <a name="prerequisites"></a>Krav
-  - Du behöver en testklient med följande prenumerationer för den här självstudien:
-    - Azure Active Directory Premium ([kostnadsfri utvärderingsversion](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - Intune-prenumeration ([kostnadsfri utvärderingsversion](free-trial-sign-up.md))
-    - En Office 365 Business-prenumeration med Exchange ([kostnadsfri utvärderingsversion](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Du behöver en testklient med följande prenumerationer för den här självstudien:
+  - Azure Active Directory Premium ([kostnadsfri utvärderingsversion](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - Intune-prenumeration ([kostnadsfri utvärderingsversion](free-trial-sign-up.md))
+  - En Office 365 Business-prenumeration med Exchange ([kostnadsfri utvärderingsversion](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 

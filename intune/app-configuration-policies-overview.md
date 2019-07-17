@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 1e5ddf39a201f1a70f997e03f0b65706853adefa
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885122"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
@@ -44,8 +44,8 @@ Appkonfigurationsprinciper kan hjälpa dig att förhindra problem med konfigurat
 Konfigurationsinställningarna används när appen söker efter dem. Normalt söker en app efter konfigurationsinställningar första gången appen körs av användaren.
 
 Du har två alternativ för hur du använder appkonfigurationer med Intune:
- - **Hanterade enheter** – enheten hanteras av Intune som MDM-leverantör (hantering av mobila enheter).
- - **Hanterade appar** – en app hanteras utan enhetsregistrering.
+- **Hanterade enheter** – enheten hanteras av Intune som MDM-leverantör (hantering av mobila enheter).
+- **Hanterade appar** – en app hanteras utan enhetsregistrering.
 
 > [!NOTE]
 > Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.
@@ -66,9 +66,9 @@ Du kan även använda Graph API för att utföra de här uppgifterna för appkon
 
 ### <a name="managed-devices"></a>Hanterade enheter
 
- - Lär dig hur du använder appkonfiguration med iOS-enheter.  Se [Lägg till konfigurationsprinciper för hanterade iOS-mobilappar](app-configuration-policies-use-ios.md).
- - Lär dig hur du använder appkonfiguration med Android-enheter.  Se [Lägg till konfigurationsprinciper för hanterade Android-enheter](app-configuration-policies-use-android.md).
+- Lär dig hur du använder appkonfiguration med iOS-enheter.  Se [Lägg till konfigurationsprinciper för hanterade iOS-mobilappar](app-configuration-policies-use-ios.md).
+- Lär dig hur du använder appkonfiguration med Android-enheter.  Se [Lägg till konfigurationsprinciper för hanterade Android-enheter](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Hanterade appar
 
- - Lär dig hur du använder appkonfiguration med hanterade appar. Se [Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering](app-configuration-policies-managed-app.md).
+- Lär dig hur du använder appkonfiguration med hanterade appar. Se [Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering](app-configuration-policies-managed-app.md).

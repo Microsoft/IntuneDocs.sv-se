@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e78c9034058a5f60f01056711465b28deca77d83
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3eb18c45f81e427f1d14ce77086e0d7684994e82
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884167"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrera Zimperium med Intune
 
@@ -39,13 +39,13 @@ Kontrollera att du har följande prenumeration och autentiseringsuppgifter innan
 
 - Azure Active Directory-autentiseringsuppgifter för global administratör beviljar följande behörigheter:
 
-    - Logga in och läsa användarprofil
+  - Logga in och läsa användarprofil
 
-    - Gå till katalogen som den inloggade användaren
+  - Gå till katalogen som den inloggade användaren
 
-    - Läs katalogdata
+  - Läs katalogdata
 
-    - Skicka enhetsinformation till Intune
+  - Skicka enhetsinformation till Intune
 
 - Autentiseringsuppgifter som administratör för att få åtkomst till Zimperium MTD-konsolen.
 

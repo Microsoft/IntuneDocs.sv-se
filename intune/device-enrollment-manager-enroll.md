@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea1ca5f2661d51088efae79d97da40ce8737b7e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: f2548e0ff3d4406f64d2091001c38056fe585896
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883535"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrera enheter i Intune med ett konto för enhetsregistreringshanteraren
 
@@ -32,13 +32,13 @@ Du kan registrera upp till 1 000 mobila enheter med ett enda Azure Active Direc
 
 DEM-användarkonton och enheter som har registrerats med ett DEM-användarkonto har följande begränsningar:
 
-  - En DEM-kontoanvändare måste tilldelas en Intune-licens.
-  - Rensning kan inte utföras från företagsportalen. Rensning av en enhet som har registrerats med ett DEM-användarkonto kan göras från Intune på Azure-portalen.
-  - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
-  - DEM-användarkonton kan inte använda apparna för Apples volymköpsprogram (VPP) med Apple VPP-användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
-  - Enheter kan installera VPP-appar om de har Apple VPP-enhetslicenser.
-  - Enheter har blockerats för villkorlig åtkomst med undantag för Windows 10 1803+
-  - Alla enheter som registreras med DEM-konton måste vara korrekt licensierade för att hanteras av Intune. Licensen kan vara en Intune-användarlicens eller en Intune-enhetslicens.
+- En DEM-kontoanvändare måste tilldelas en Intune-licens.
+- Rensning kan inte utföras från företagsportalen. Rensning av en enhet som har registrerats med ett DEM-användarkonto kan göras från Intune på Azure-portalen.
+- Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
+- DEM-användarkonton kan inte använda apparna för Apples volymköpsprogram (VPP) med Apple VPP-användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
+- Enheter kan installera VPP-appar om de har Apple VPP-enhetslicenser.
+- Enheter har blockerats för villkorlig åtkomst med undantag för Windows 10 1803+
+- Alla enheter som registreras med DEM-konton måste vara korrekt licensierade för att hanteras av Intune. Licensen kan vara en Intune-användarlicens eller en Intune-enhetslicens.
 
 
 

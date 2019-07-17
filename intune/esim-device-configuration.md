@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a0372180cf516f5a0111cd8fdb7cbd9535f075
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883262"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 
@@ -160,12 +160,12 @@ Du kan övervaka och visa en detaljerad lista över enheter i Enhetsstatus.**
 1. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler** > Välj ett befintligt abonnemang.
 2. Välj **Enhetsstatus**. Intune visar ytterligare information om enheten:
 
-  - **Enhetsnamn**: Namnet på den enhet som avses
-  - **Användare**: Användare av den registrerade enheten
-  - **ICCID**: Unik kod som tillhandahålls av mobiloperatören inom den aktiveringskod som är installerad på enheten
-  - **Aktiveringsstatus**: Status för Intune-leverans -installation för aktiveringskoden på enheten
-  - **Mobilstatus**: Tillstånd som tillhandahålls av mobiloperatören. Kontakta mobiloperatören för att felsöka.
-  - **Senaste incheckning**: Datum då enheten senast kommunicerade med Intune
+    - **Enhetsnamn**: Namnet på den enhet som avses
+    - **Användare**: Användare av den registrerade enheten
+    - **ICCID**: Unik kod som tillhandahålls av mobiloperatören inom den aktiveringskod som är installerad på enheten
+    - **Aktiveringsstatus**: Status för Intune-leverans -installation för aktiveringskoden på enheten
+    - **Mobilstatus**: Tillstånd som tillhandahålls av mobiloperatören. Kontakta mobiloperatören för att felsöka.
+    - **Senaste incheckning**: Datum då enheten senast kommunicerade med Intune
 
 #### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Övervaka eSIM-profilinformation på den faktiska enheten
 

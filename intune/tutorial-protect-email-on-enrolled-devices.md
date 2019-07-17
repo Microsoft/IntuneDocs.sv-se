@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a5a355c82455e135319b7683756eb0ef5c032876
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882369"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Självstudie: Skydda e-post i Exchange Online på hanterade enheter
 Lär dig att använda principer för enhetsefterlevnad med villkorlig åtkomst för att se till att iOS-enheter endast har åtkomst till e-post i Exchange Online om de hanteras med Intune och använder en godkänd e-postapp. 
@@ -35,10 +35,10 @@ I den här självstudien får du lära dig att:
 Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Krav
-  - Du behöver en testklient med följande prenumerationer för den här självstudien:
-    - Azure Active Directory Premium ([kostnadsfri utvärderingsversion](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - En Office 365 Business-prenumeration med Exchange ([kostnadsfri utvärderingsversion](https://go.microsoft.com/fwlink/p/?LinkID=510938))
-  - Innan du börjar måste du skapa en testenhetsprofil för iOS-enheter genom att följa stegen i [Snabbstart: Skapa en e-postenhetsprofil för iOS](quickstart-email-profile.md).
+- Du behöver en testklient med följande prenumerationer för den här självstudien:
+  - Azure Active Directory Premium ([kostnadsfri utvärderingsversion](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - En Office 365 Business-prenumeration med Exchange ([kostnadsfri utvärderingsversion](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Innan du börjar måste du skapa en testenhetsprofil för iOS-enheter genom att följa stegen i [Snabbstart: Skapa en e-postenhetsprofil för iOS](quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 

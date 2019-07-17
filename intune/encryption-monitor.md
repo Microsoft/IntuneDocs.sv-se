@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: b4c7e4b2d35eb2662ca74660e2133dcd2c89f0a1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883359"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Övervaka BitLocker och enhetskryptering  
 Intune ger en central plats för att identifiera krypteringsstatus för dina Windows 10-enheter och hjälper dig att komma åt viktig information för BitLocker från dina enheter som finns i Azure Active Directory (AD Azure).  
@@ -76,22 +76,22 @@ Det här fönstret innehåller följande information:
 
   Följande är några exempel på den statusinformation som Intune kan rapportera:  
 
-   - BitLocker-principen kräver användarens medgivande för att starta guiden för BitLocker-diskkryptering för att starta kryptering av OS-volymen, men användare gav inte sitt medgivande.  
-   - OS-volymens krypteringsmetod matchar inte BitLocker-principen.  
-   - BitLocker-principen kräver ett TPM-skydd för att skydda OS-volymen, men TPM används inte.  
-   - BitLocker-principen kräver ett skydd som endast använder TPM för OS-volymen, men TPM-skydd används inte.  
-   - BitLocker-principen kräver skydd med TPM och PIN-kod för OS-volymen, men skydd med TPM och PIN-kod används inte.  
-   - BitLocker-principen kräver skydd med TPM och startnyckel för OS-volymen, men skydd med TPM och startnyckel används inte.  
-   - BitLocker-principen kräver skydd med TPM, PIN-kod och startnyckel för OS-volymen, men skydd med TPM, PIN-kod och startnyckel används inte.  
-   - OS-volymen är inte skyddad.  
-   - Säkerhetskopiering av återställningsnyckel misslyckades.  
-   - En fast enhet är oskyddad.  
-   - Den fasta enhetens krypteringsmetod matchar inte BitLocker-principen.  
-   - För att kryptera enheter kräver BitLocker-principen antingen att användaren loggar in som administratör eller, om enheterna är ansluten till Azure AD, att principen AllowStandardUserEncryption anges till 1.  
-   - Windows Recovery Environment (WinRE) är inte konfigurerat.  
-   - Det finns ingen TPM tillgängligt för BitLocker, antingen eftersom den inte finns eller har gjorts otillgänglig i registret eller att operativsystemet är på en löstagbar enhet.  
-   - TPM:en är inte redo för BitLocker.  
-   - Nätverket är inte tillgängligt, vilket krävs för säkerhetskopiering av återställningsnyckel.  
+  - BitLocker-principen kräver användarens medgivande för att starta guiden för BitLocker-diskkryptering för att starta kryptering av OS-volymen, men användare gav inte sitt medgivande.  
+  - OS-volymens krypteringsmetod matchar inte BitLocker-principen.  
+  - BitLocker-principen kräver ett TPM-skydd för att skydda OS-volymen, men TPM används inte.  
+  - BitLocker-principen kräver ett skydd som endast använder TPM för OS-volymen, men TPM-skydd används inte.  
+  - BitLocker-principen kräver skydd med TPM och PIN-kod för OS-volymen, men skydd med TPM och PIN-kod används inte.  
+  - BitLocker-principen kräver skydd med TPM och startnyckel för OS-volymen, men skydd med TPM och startnyckel används inte.  
+  - BitLocker-principen kräver skydd med TPM, PIN-kod och startnyckel för OS-volymen, men skydd med TPM, PIN-kod och startnyckel används inte.  
+  - OS-volymen är inte skyddad.  
+  - Säkerhetskopiering av återställningsnyckel misslyckades.  
+  - En fast enhet är oskyddad.  
+  - Den fasta enhetens krypteringsmetod matchar inte BitLocker-principen.  
+  - För att kryptera enheter kräver BitLocker-principen antingen att användaren loggar in som administratör eller, om enheterna är ansluten till Azure AD, att principen AllowStandardUserEncryption anges till 1.  
+  - Windows Recovery Environment (WinRE) är inte konfigurerat.  
+  - Det finns ingen TPM tillgängligt för BitLocker, antingen eftersom den inte finns eller har gjorts otillgänglig i registret eller att operativsystemet är på en löstagbar enhet.  
+  - TPM:en är inte redo för BitLocker.  
+  - Nätverket är inte tillgängligt, vilket krävs för säkerhetskopiering av återställningsnyckel.  
 
 ## <a name="bitlocker-recovery-keys"></a>BitLocker-återställningsnycklar
 Intune ger åtkomst till Azure AD-bladet för BitLocker så att du kan visa BitLocker-nyckel-ID:n och återställningsnycklar för dina Windows 10-enheter från Intune-portalen.  För att enheten ska vara nåbar måste dess nycklar vara deponerade till Azure AD. 

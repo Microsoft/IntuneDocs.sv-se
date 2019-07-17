@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce08545931d3580ce5ae524b1023d2b734b88f7b
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 1dc78f8126e0fa9c65fdbe70cfd909da70391e3e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884526"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS-enheter i Intune
 
@@ -150,16 +150,16 @@ När VPN per app har konfigurerats och associerats med appen kontrollerar du att
 
 ### <a name="before-you-attempt-to-connect"></a>Innan du försöker ansluta
 
- - Se till att du distribuerar alla ovan nämnda principer till samma grupp. Annars fungerar inte per app-VPN-gränssnittet.
- - Om du använder Pulse Secure VPN-appen eller en anpassad VPN-klientapp kan välja du att använda händelsedirigering nedåt på appnivå eller på paketnivå. Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå. Kontrollera VPN-leverantörens dokumentation för att se till att du använder rätt värde.
+- Se till att du distribuerar alla ovan nämnda principer till samma grupp. Annars fungerar inte per app-VPN-gränssnittet.
+- Om du använder Pulse Secure VPN-appen eller en anpassad VPN-klientapp kan välja du att använda händelsedirigering nedåt på appnivå eller på paketnivå. Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå. Kontrollera VPN-leverantörens dokumentation för att se till att du använder rätt värde.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Ansluta via VPN per app
 
 Kontrollera att zero touch-upplevelsen fungerar genom att ansluta utan att behöva välja det virtuella privata nätverket eller ange dina autentiseringsuppgifter. Zero touch-upplevelse innebär:
 
- - Enheten ber dig inte att ha förtroende för VPN-servern. Med andra ord visas dialogrutan **Dynamiskt förtroende** för användaren.
- - Användaren behöver inte ange autentiseringsuppgifterna.
- - Användarens enhet är ansluten till VPN när användaren öppnar någon av de associerade apparna.
+- Enheten ber dig inte att ha förtroende för VPN-servern. Med andra ord visas dialogrutan **Dynamiskt förtroende** för användaren.
+- Användaren behöver inte ange autentiseringsuppgifterna.
+- Användarens enhet är ansluten till VPN när användaren öppnar någon av de associerade apparna.
 
 <!-- ## Troubleshooting the per-app VPN
 

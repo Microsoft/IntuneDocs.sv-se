@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd185a42d36de6aaf1e6d0ff0b8e34619b02c093
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 513001993d890afba848138e01ff823796ea773d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884444"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Konfigurera Symantec Endpoint Protection Mobile-integrering med Intune
 
@@ -44,7 +44,7 @@ SEP Mobile har stöd för två integreringslägen med Intune:
 
 - **Skrivskyddad integrering (grundinställning):** Inventerar endast enheter från Azure Active Directory och fyller i dem i Symantec Endpoint Protection Mobile-hanteringskonsolen.
 <br>
-    - Om rutorna **Rapportera hälsotillstånd och enhetsrisker till Intune** och **Rapportera även säkerhetsincidenter till Intune** inte är markerade i Symantec Endpoint Protection Mobile-hanteringskonsolen, är integreringen skrivskyddad och ändrar därför aldrig tillståndet för en enhet (kompatibel eller icke-kompatibel) i Intune.
+  - Om rutorna **Rapportera hälsotillstånd och enhetsrisker till Intune** och **Rapportera även säkerhetsincidenter till Intune** inte är markerade i Symantec Endpoint Protection Mobile-hanteringskonsolen, är integreringen skrivskyddad och ändrar därför aldrig tillståndet för en enhet (kompatibel eller icke-kompatibel) i Intune.
 <br></br>
 - **Fullständig integrering:** Tillåter att SEP Mobile rapporterar information om enheternas risker och säkerhetsincidenter till Intune, vilket skapar en dubbelriktad kommunikation mellan båda molntjänsterna.
 

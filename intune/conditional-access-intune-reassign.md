@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883795"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Tilldela om principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
@@ -38,14 +38,14 @@ Om du är redo att gå över till Azure-portalen, följer du stegen i det här �
 
 - Kontrollera att de nya principerna fungerar som förväntat i Azure-portalen innan du inaktiverar villkorsprinciperna i den klassiska Intune-portalen.
 <br /><br />
-    - **Innan du inaktiverar** principerna för villkorlig åtkomst i den klassiska Intune-portalen måste du göra upp en plan för hur användarna ska flyttas över till den nya principen. Det finns två sätt:
+  - **Innan du inaktiverar** principerna för villkorlig åtkomst i den klassiska Intune-portalen måste du göra upp en plan för hur användarna ska flyttas över till den nya principen. Det finns två sätt:
 <br /><br />
-        - **Använda samma inkluderingsgrupp för att tillämpa principer som skapats i Azure-portalen och skapa en ny exkluderingsgrupp för att tillämpa principer som skapats i den klassiska Intune-portalen**.
-            - Flytta några användare i taget till exkluderingsgruppen som angetts i den klassiska portalen. På så sätt hindrar du principer från den klassiska Intune-portalen att tillämpas. Principerna som har skapats och riktats mot samma användargrupp i Azure-portalen tillämpas, utöver de som tillämpas utifrån den klassiska Intune-portalen. 
+    - **Använda samma inkluderingsgrupp för att tillämpa principer som skapats i Azure-portalen och skapa en ny exkluderingsgrupp för att tillämpa principer som skapats i den klassiska Intune-portalen**.
+      - Flytta några användare i taget till exkluderingsgruppen som angetts i den klassiska portalen. På så sätt hindrar du principer från den klassiska Intune-portalen att tillämpas. Principerna som har skapats och riktats mot samma användargrupp i Azure-portalen tillämpas, utöver de som tillämpas utifrån den klassiska Intune-portalen. 
 <br /><br />
-        - **Skapa en ny grupp som riktar in sig på principerna för villkorlig åtkomst i Azure-portalen**. Om du väljer den här metoden kan du behöva göra följande:
-            - Ta bort några användare i taget från de säkerhetsgrupper som har principer för villkorlig åtkoms från den klassiska Intune-portalen.
-            - Kontrollera att den nya principen fungerar för de här användarna innan du inaktiverar principen i den klassiska Intune-portalen. 
+    - **Skapa en ny grupp som riktar in sig på principerna för villkorlig åtkomst i Azure-portalen**. Om du väljer den här metoden kan du behöva göra följande:
+      - Ta bort några användare i taget från de säkerhetsgrupper som har principer för villkorlig åtkoms från den klassiska Intune-portalen.
+      - Kontrollera att den nya principen fungerar för de här användarna innan du inaktiverar principen i den klassiska Intune-portalen. 
 <br /><br />
 - Om principen för villkorlig åtkomst är inställd på att använda Exchange Active Sync (EAS) i den klassiska Intune-portalen, kan du läsa [anvisningarna i det här ämnet](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) för att ta reda på **hur man tilldelar om principer för villkorlig åtkomst med EAS i Azure-portalen**.
 
@@ -64,10 +64,10 @@ Om du är redo att gå över till Azure-portalen, följer du stegen i det här �
 På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbaserade villkorsregler så att endast appar som stöder Intunes principer för appskydd ges tillgång till företagets resurser. Du kan välja att överlappa de här appbaserade principerna för villkorlig åtkomst med hjälp av enhetsbaserade principer för villkorlig åtkomst. Du kan kombinera de enhetsbaserade och de appbaserade villkorsprinciperna (logiskt AND) eller ange ett alternativ (logiskt OR). Om dina principkrav för villkorlig åtkomst är följande:
 
 - Kräver en kompatibel enhet **OCH** användning av godkänd app.
-    - Konfigurera din princip för villkorlig åtkomst med hjälp av [bladet för villkorlig åtkomst via Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) och [bladet för Intune-appskydd](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Konfigurera din princip för villkorlig åtkomst med hjälp av [bladet för villkorlig åtkomst via Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) och [bladet för Intune-appskydd](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 <br /><br />
 - Kräver en kompatibel enhet **ELLER** användning av godkänd app.
-    - Konfigurera din princip för villkorlig åtkomst med hjälp av [den klassiska Intune-portalen](https://manage.microsoft.com) och [bladet för Intune-appskydd](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Konfigurera din princip för villkorlig åtkomst med hjälp av [den klassiska Intune-portalen](https://manage.microsoft.com) och [bladet för Intune-appskydd](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 
 > [!TIP] 
 > Det här avsnittet innehåller skärmbilder som du kan använda för att jämföra användarupplevelsen i den klassiska Intune-portalen med Azure-portalen.

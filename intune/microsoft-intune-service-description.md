@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88ca608027e6509eb56fad74a8edae405fa915fa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882883"
 ---
 # <a name="microsoft-intune-service-description"></a>Beskrivning av Microsoft Intune-tjänsten
 
@@ -60,24 +60,24 @@ Eftersom ekosystemet för hantering av mobila enheter ofta ändras med uppdateri
 
 - Viktiga tjänsteuppdateringar tillkännages även i meddelandecentret för [Microsoft 365-administrationscentret](https://admin.microsoft.com/). Om du installerar tillhörande [Office 365 Admin-mobilapp](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) kan du ta emot meddelanden på din mobila enhet. Läs mer om att arbeta med [Office 365-meddelandecenter](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
-    Några användbara tips:
+  Några användbara tips:
 
-    - Meddelandena i Office 365-meddelandecentret är målindelade. Det innebär att om ditt företag inte har något erbjudande om Intune för EDU, så meddelar vi dig inte om Intune för EDU.
+  - Meddelandena i Office 365-meddelandecentret är målindelade. Det innebär att om ditt företag inte har något erbjudande om Intune för EDU, så meddelar vi dig inte om Intune för EDU.
 
-    - Meddelanden förfaller. Meddelandet att din tjänst har uppdaterats, och som försetts med en länk till sidan Nyheter, förfaller t.ex. sannolikt innan nästa tjänstuppdateringsmeddelande publiceras. Om så inte vore fallet skulle du ha en massa eftersläpande inlägg som inte längre var relevanta.
+  - Meddelanden förfaller. Meddelandet att din tjänst har uppdaterats, och som försetts med en länk till sidan Nyheter, förfaller t.ex. sannolikt innan nästa tjänstuppdateringsmeddelande publiceras. Om så inte vore fallet skulle du ha en massa eftersläpande inlägg som inte längre var relevanta.
 
-    - Med administratörsmobilappen för Office 365 kan du söka igenom alla meddelanden och vidarebefordra meddelanden som du vill dela med kollegor i din organisation.
+  - Med administratörsmobilappen för Office 365 kan du söka igenom alla meddelanden och vidarebefordra meddelanden som du vill dela med kollegor i din organisation.
 
-    - Under Redigera meddelandecenterinställningar kommer vi att ha ett växlingsalternativ för **Intune**, så att du kan läsa de meddelanden som skickats till en Intune-prenumeration. Om du ser hantering av mobila enheter för Office 365, så är det en annan tjänst – inte Intune.
+  - Under Redigera meddelandecenterinställningar kommer vi att ha ett växlingsalternativ för **Intune**, så att du kan läsa de meddelanden som skickats till en Intune-prenumeration. Om du ser hantering av mobila enheter för Office 365, så är det en annan tjänst – inte Intune.
 
 - Vi använder också två bloggar för att dela EMS-meddelanden och metodtips från Intune-support:
 
-    - [Enterprise Mobility + Security-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/)
+  - [Enterprise Mobility + Security-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/)
 
-    - [Intunes supportblogg](https://blogs.technet.microsoft.com/intunesupport/)
+  - [Intunes supportblogg](https://blogs.technet.microsoft.com/intunesupport/)
 
->[!Note]
->Du kan övervaka hälsotillståndet för Intune-tjänsten i [Microsoft 365-administrationscentret](https://admin.microsoft.com). Välj **Tjänstens hälsa** i det vänstra fönstret. Du kan också använda [Office 365 Admin-mobilappen](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) om du vill kontrollera tjänstens hälsa.
+> [!Note]
+> Du kan övervaka hälsotillståndet för Intune-tjänsten i [Microsoft 365-administrationscentret](https://admin.microsoft.com). Välj **Tjänstens hälsa** i det vänstra fönstret. Du kan också använda [Office 365 Admin-mobilappen](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) om du vill kontrollera tjänstens hälsa.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Typer av meddelanden som Microsoft tillhandahåller om Intune-tjänsten
 

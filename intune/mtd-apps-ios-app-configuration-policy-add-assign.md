@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdc7434616db6c06f56438fb6d8774ae3f2deca9
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d27cd977909bb7aa237441102110a7abc27ad301
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884998"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune  
 
@@ -90,7 +90,7 @@ Välj det avsnitt som motsvarar din MTD-provider:
 
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Konfigurera Symantec Endpoint Protection Mobile-appar  
 - **Android**
-   - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). I **steg 7**, använd den här [webbadressen för SEP Mobile-appbutik](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Som **Lägsta operativsystem** väljer du **Android 4.0 (Ice Cream Sandwich)** .
+  - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). I **steg 7**, använd den här [webbadressen för SEP Mobile-appbutik](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Som **Lägsta operativsystem** väljer du **Android 4.0 (Ice Cream Sandwich)** .
 
 - **iOS**
   - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [SEP-webbadressen för mobilappbutiken](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) i **steg 11** som **appbutiksadress**.
@@ -162,7 +162,7 @@ Välj det avsnitt som motsvarar din MTD-provider:
 
 ### <a name="check-point-sandblast-mobile-app-configuration-policy"></a>Konfigurationsprincip för Check Point SandBlast Mobile-app  
 - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Check Point SandBlast Mobile-konfigurationsprincipen för iOS-appar.
-    - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
+  - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
 
 ```
 <dict><key>MDM</key><string>INTUNE</string></dict>
