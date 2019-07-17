@@ -16,16 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54511e29bd44b862a5ad06bdfda2067ed7248677
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 2d4cf000d395bb278b3207fc7a4327d3307abbe4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883012"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
 Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Application Management) och appskyddet i Intune.
+
 
 ## <a name="mam-basics"></a>Grundläggande om MAM
 
@@ -33,7 +34,8 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 Med [Intune mobile application management](/intune/app-lifecycle) avses den svit av Intune-hanteringsfunktioner som låter dig publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
 
 **Vilka är fördelarna med appskyddet i MAM?**<br></br>
-MAM skyddar företagets data inom ett program. Med MAM utan registrering (MAM-WE), kan en arbets- eller skolrelaterad app som innehåller känsliga data hanteras på nästan alla enheter, inklusive personliga enheter i BYOD-scenarier (Bring Your Own Device). Många produktivitetsappar, till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-hanterade appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
+MAM skyddar företagets data inom ett program. Med MAM utan registrering (MAM-WE), kan en arbets- eller skolrelaterad app som innehåller känsliga data hanteras på nästan alla enheter, inklusive personliga enheter i BYOD-scenarier (Bring Your Own Device).
+ Många produktivitetsappar, till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-hanterade appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka enhetskonfigurationer har MAM stöd för?**<br></br>
 Intune MAM stöder två konfigurationer:
@@ -68,7 +70,8 @@ Alla appar som har integrerats med [Intune App-SDK](/intune/app-sdk) eller inslu
 
 - Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](/intune/licenses-assign) för information om hur du tilldelar Intune-licenser till slutanvändare.
 
-- Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål. Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Microsoft 365-administrationscentret](https://admin.microsoft.com).
+- Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål.
+ Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Microsoft 365-administrationscentret](https://admin.microsoft.com).
 
 - Slutanvändaren måste logga in på appen med sitt AAD-konto.
 
@@ -110,6 +113,7 @@ Se licenskraven för [Skype för företag](https://products.office.com/skype-for
 **Vad är stöd för flera identiteter?**<br></br>
 Stöd för flera identiteter är möjligheten för Intune App SDK att bara tillämpa appskyddsprinciper på arbets- eller skolkontot som använts för inloggning i appen. Om ett personligt konto är inloggat i appen ändras inga data.
 
+
 **Vad är syftet med stöd för flera identiteter?**<br></br>
 Stöd för flera identiteter gör att appar med både företags- och konsumentanvändare (t.ex. Office-appar) kan släppas offentligt med Intunes appskyddsfunktioner för företagets konton.
 
@@ -123,9 +127,9 @@ PIN-kod (Personal Identification Number) är ett lösenord som används för att
 
 - **Hur ofta kommer användaren uppmanas att ange PIN-koden för Intune?**<br></br> IT-administratören kan definiera Intune-appskyddsprincipen ”Kontrollera åtkomskraven igen efter (minuter)” i Intune-administratörskonsolen. Den här inställningen anger hur lång tid som ska passera innan åtkomstkraven kontrolleras på enheten och appens PIN-skärm visas igen. Detta är dock viktig information om PIN-koden som påverkar hur ofta användaren uppmanas: 
 
-    - **PIN-koden delas mellan appar från samma utgivare för att förbättra användarvänligheten:** I iOS delas en apps PIN-kod mellan alla appar **från samma apputgivare**. På Android delas en app-PIN mellan alla appar.
-    - **Beteendet ”Kontrollera åtkomstkraven igen efter (minuter)” efter en omstart av enheten:** En ”PIN-timer” spårar antalet minuter av inaktivitet som bestämmer när du ska visa Intune-appens PIN-kod nästa gång. På iOS påverkas inte PIN-timern av enhetsomstart. Därför påverkar inte enhetsomstart det antal minuter som användaren har varit inaktiv från en iOS-app med en Intune PIN-princip. På Android återställs PIN-timern när enheten startas om. Därför är det troligt att Android-appar med en Intune PIN-princip frågar efter en app-PIN-kod oavsett värdet på inställningen ”Kontrollera åtkomstkraven igen efter (minuter)” **efter en omstart av enheten**.  
-    - **Den löpande funktionen för timern som är kopplad till PIN-koden:** När en PIN-kod anges för att få åtkomst till en app (app A) och appen lämnar enhetens förgrund (huvudfokus) kommer PIN-timern att återställas för den PIN-koden. De appar (t.ex. app B) som delar denna PIN-kod kommer inte uppmana användaren att ange PIN-kod eftersom timern har återställts. Uppmaningen visas igen när värdet ”Kontrollera åtkomstkraven igen efter (minuter)” uppfylls igen.
+  - **PIN-koden delas mellan appar från samma utgivare för att förbättra användarvänligheten:** I iOS delas en apps PIN-kod mellan alla appar **från samma apputgivare**. På Android delas en app-PIN mellan alla appar.
+  - **Beteendet ”Kontrollera åtkomstkraven igen efter (minuter)” efter en omstart av enheten:** En ”PIN-timer” spårar antalet minuter av inaktivitet som bestämmer när du ska visa Intune-appens PIN-kod nästa gång. På iOS påverkas inte PIN-timern av enhetsomstart. Därför påverkar inte enhetsomstart det antal minuter som användaren har varit inaktiv från en iOS-app med en Intune PIN-princip. På Android återställs PIN-timern när enheten startas om. Därför är det troligt att Android-appar med en Intune PIN-princip frågar efter en app-PIN-kod oavsett värdet på inställningen ”Kontrollera åtkomstkraven igen efter (minuter)” **efter en omstart av enheten**.  
+  - **Den löpande funktionen för timern som är kopplad till PIN-koden:** När en PIN-kod anges för att få åtkomst till en app (app A) och appen lämnar enhetens förgrund (huvudfokus) kommer PIN-timern att återställas för den PIN-koden. De appar (t.ex. app B) som delar denna PIN-kod kommer inte uppmana användaren att ange PIN-kod eftersom timern har återställts. Uppmaningen visas igen när värdet ”Kontrollera åtkomstkraven igen efter (minuter)” uppfylls igen.
 
 För iOS-enheter visas meddelandet igen när värdet **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** uppfylls igen för den app som inte är huvudfokus, även om PIN-koden delas mellan appar från olika utgivare. En användare har till exempel appen _A_ från utgivare _X_ och appen _B_ från utgivare _Y_, och dessa två appar delar samma PIN-kod. Användaren fokuserar på app _A_ (förgrund) och app _B_ minimeras. När värdet **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** uppfylls och användaren växlar till app _B_ krävs PIN-koden.
 
@@ -175,7 +179,8 @@ Ja! IT-administratören kan distribuera och ange appskyddsprincip för [Intune M
 ## <a name="app-experience-on-android"></a>App-upplevelse på Android
 
 **Varför behövs företagsportalappen för att Intunes appskydd ska fungera på Android-enheter?**<br></br>
-Många av appskyddets funktioner är inbyggda i företagsportalappen. Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För MAM-WE behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
+Många av appskyddets funktioner är inbyggda i företagsportalappen.
+ Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För MAM-WE behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
 
 **Hur fungerar åtkomstinställningar till flera Intune-appar som är konfigurerade för samma uppsättning appar och användare med Android?**<br></br>
 Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får en blockering företräde, och därefter en varning som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta inställning för Android-korrigeringsprogramversionen. Den varnar en användare för att göra en uppdatering efter den lägsta inställningen för Android-korrigeringsprogramversionen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar den äldsta Android-korrigeringsprogramversionen till 2018-03-01 och den äldsta Android-korrigeringsprogramversionen (endast varning) till 2018-02-01, medan enheten som försöker få åtkomst till appen hade korrigeringsprogramversionen 2018-01-01, blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta Android-korrigeringsprogramversionen. Det leder till blockerad åtkomst. 
@@ -210,7 +215,7 @@ Intunes appskyddsprinciper kan styra åtkomst till den Intune-licensierade anvä
 Syftet med detta är att fortsätta att hålla din organisations data i appen säkra och skyddade på appnivå. Den här funktionen är endast tillgänglig för iOS och kräver medverkan av program som integrerar Intune APP SDK för iOS, version 9.0.1 eller senare. Integrering av SDK krävs så att beteendet kan tillämpas på de berörda programmen. Den här integreringen händer på löpande bas, och är beroende av specifika programteam. Vissa appar som deltar omfattar WXP, Outlook, Managed Browser och Yammer. 
   
 **Jag kan använda delningtillägg i iOS för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?**<br></br>
-Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _ **"företagets" data innan den delas utanför appen**_ . Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
+Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
 
 **Hur fungerar åtkomstinställningar till flera Intune-appar som är konfigurerade för samma uppsättning appar och användare med iOS?**<br></br>
 Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får rensningar företräde, följt av blockeringar och därefter varningar som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta iOS-operativsysteminställning som varnar en användare för att göra en uppdatering av sin iOS-version efter den lägsta iOS-operativsysteminställningen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar det äldsta iOS-operativsystemet till 11.0.0.0 och det äldsta iOS-operativsystemet (endast varning) till 11.1.0.0, medan enheten som försöker få åtkomst till appen hade iOS-version 10 blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta iOS-operativsystemversionen. Det leder till blockerad åtkomst.
