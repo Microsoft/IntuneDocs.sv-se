@@ -1,11 +1,11 @@
 ---
-title: Använda Windows Defender ATP i Microsoft Intune – Azure | Microsoft Docs
-description: Se hur du aktiverar Windows Defender Advanced Threat Protection (ATP) i ett scenario för slutpunkt till slutpunkt, inklusive aktiverar ATP i Intune och Windows Defender Security Center (ATP-portal), publicerar enheter med hjälp av en ATP-konfigurationsprofil, skapar en efterlevnadsprincip för en Intune-enhet, skapar en villkorlig åtkomstprincip för Azure AD och övervakar enheternas kompatibilitet.
+title: Använda Microsoft Defender ATP i Microsoft Intune – Azure | Microsoft Docs
+description: Se hur du aktiverar Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) i ett scenario för slutpunkt till slutpunkt, inklusive aktiverar Microsoft Defender ATP i Intune och Microsoft Defender Security Center, publicerar enheter med hjälp av en Microsoft Defender ATP-konfigurationsprofil, skapar en efterlevnadsprincip för en Intune-enhet, skapar en villkorlig åtkomstprincip för Azure AD och övervakar enheternas kompatibilitet.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 186ba1a8813e84b89a23c8aabb3a4ef0bd392da4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 069658bdd231be96d7f9fbe23de1b4e38fdc5a9e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885152"
 ---
-# <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Windows Defender ATP med villkorlig åtkomst i Intune
+# <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune  
 
-Windows Defender Advanced Threat Protection (ATP) och Microsoft Intune arbetar tillsammans för att förhindra säkerhetsintrång och begränsa effekten av överträdelser inom en organisation.
+Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) och Microsoft Intune arbetar tillsammans för att förhindra säkerhetsintrång och begränsa effekten av överträdelser inom en organisation.
 
 Den här funktionen gäller för: Windows 10-enheter
 
@@ -32,53 +32,53 @@ Någon skickar till exempel en Word-fil med inbäddad skadlig kod till en använ
 
 Det här säkerhetsintrånget kan påverka hela organisationen.
 
-Windows Defender ATP kan lösa säkerhetshändelser som det här scenariot. Windows Defender Security Center (ATP-konsol) rapporterar enheterna som ”hög risk” och innehåller en detaljerad rapport om misstänkt aktivitet. I vårt exempel identifierar Windows Defender ATP att enheten körde onormal kod, upplevde en processeskalering, infogade skadlig kod och utfärdade ett misstänkt fjärrgränssnitt. Windows Defender ATP ger dig sedan alternativ för att minska risken.
+Microsoft Defender ATP kan lösa säkerhetshändelser som det här scenariot. Microsoft Defender Security Center rapporterar enheterna som ”hög risk” och innehåller en detaljerad rapport om misstänkt aktivitet. I vårt exempel identifierar Microsoft Defender ATP att enheten körde onormal kod, upplevde en processeskalering, infogade skadlig kod och utfärdade ett misstänkt fjärrgränssnitt. Microsoft Defender ATP ger dig sedan alternativ för att minska risken.
 
 Med Intune kan du skapa en efterlevnadsprincip som anger en godtagbar riksnivå. Om en enhet överstiger den här risken, blir enheten icke-kompatibel. I kombination med villkorlig åtkomst i Azure Active Directory (AD), blockeras användaren åtkomst till företagets resurser.
 
 Den här artikeln visar hur du:
 
-- Aktiverar Intune i ATP och aktivera ATP i Intune. Dessa uppgifter skapar en tjänst-till-tjänst-anslutning mellan Intune och Windows Defender ATP. Den här anslutningen låter Windows Defender ATP skriva risken för dina Intune-enheter.
+- Aktivera Intune i Microsoft Defender Security Center och aktivera Microsoft Defender ATP i Intune. Dessa uppgifter skapar en tjänst-till-tjänst-anslutning mellan Intune och Microsoft Defender ATP. Den här anslutningen låter Microsoft Defender ATP skriva risken för dina Intune-enheter.
 - Skapa efterlevnadsprincipen i Intune.
 - Aktivera villkorlig åtkomst i Azure Active Directory (AD) på enheter baserat på deras hotnivå.
 
 ## <a name="prerequisites"></a>Krav
 
-Om du vill använda ATP med Intune måste du ha följande konfigurerat och klart att använda:
+Om du vill använda Microsoft Defender ATP med Intune måste du ha följande konfigurerat och klart att använda:
 
 - Licensierad klientorganisation för Enterprise Mobility + Security E3 och Windows E5 (eller Microsoft 365 Enterprise E5)
 - Microsoft Intune-miljö med [Intune-hanterade](windows-enroll.md) Windows 10-enheter som även är Azure AD-anslutna
-- [Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) och åtkomst till Windows Defender Security Center (ATP-portal)
+- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) och åtkomst till Microsoft Defender Security Center (ATP-portal)
 
-## <a name="enable-windows-defender-atp-in-intune"></a>Aktivera Windows Defender ATP i Intune
+## <a name="enable-microsoft-defender-atp-in-intune"></a>Aktivera Microsoft Defender ATP i Intune
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Enhetsefterlevnad** > **Windows Defender ATP** > **Öppna Windows Defender Säkerhetscenter**.
+2. Välj **Enhetsefterlevnad** > **Microsoft Defender ATP** och under *inställningar för anslutningsprogram* väljer du därefter **Öppna Microsoft Defender Security Center**.
 
-    ![Välj att öppna Windows Defender Säkerhetscenter](./media/atp-device-compliance-open-windows-defender.png)
+    ![Välj att öppna Microsoft Defender Security Center](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
-4. I **Windows Defender Säkerhetscenter**:
+4. I **Microsoft Defender Security Center**:
     1. Välj **Inställningar** > **Avancerade funktioner**.
     2. För **Microsoft Intune-anslutningen**, välj **På**:
 
-        ![Aktivera anslutningen till Intune](./media/atp-security-center-intune-toggle.png)
+        ![Aktivera anslutningen till Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
 
     3. Välj **Spara inställningar**.
 
-5. Gå tillbaka till Intune, **Enhetsefterlevnad** > **Windows Defender ATP**. Ändra **Anslut Windows-enheter version 10.0.15063 och senare till Windows Defender ATP9** till **På**.
-6. Välj **Spara**.
+4. Gå tillbaka till Intune, **Enhetsefterlevnad** > **Microsoft Defender ATP**. Ställ in **Anslut Windows-enheter version 10.0.15063 och senare till Microsoft Defender ATP** till **På**.
+5. Välj **Spara**.
 
-Du gör normalt den här aktiviteten en gång. Så om ATP redan är aktiverat i din Intune-resurs, behöver du inte göra det igen.
+Du gör normalt den här aktiviteten en gång. Så om Microsoft Defender ATP redan är aktiverat i din Intune-resurs, behöver du inte göra det igen.
 
 ## <a name="onboard-devices-using-a-configuration-profile"></a>Publicera enheter med en konfigurerad profil
 
-När en slutanvändare registreras i Intune kan du skicka olika inställningar till enheten med en konfigurationsprofil. Detta gäller även för Windows Defender ATP.
+När en slutanvändare registreras i Intune kan du skicka olika inställningar till enheten med en konfigurationsprofil. Detta gäller även för Microsoft Defender ATP.
 
-Windows Defender omfattar ett konfigurationspaket för registrering som kommunicerar med [Windows Defender ATP-tjänster](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) för att söka igenom filer, identifiera hot och rapportera risken till Windows Defender ATP.
+Microsoft Defender ATP omfattar ett konfigurationspaket för registrering som kommunicerar med [Microsoft Defender ATP-tjänster](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) för att söka igenom filer, identifiera hot och rapportera risken till Microsoft Defender ATP.
 
-När du registrerar får Intune ett automatiskt genererat konfigurationspaket från Windows Defender ATP. När profilen är skickas eller distribueras till enheten skickas även det här konfigurationspaketet till enheten. På så sätt kan Windows Defender ATP övervaka enheten för att hitta hot.
+När du registrerar får Intune ett automatiskt genererat konfigurationspaket från Microsoft Defender ATP. Intune push-överför konfigurationspaketet till enheten när den skickar konfigurationsprofilen till enheten, vilket gör att Microsoft Defender ATP kan hotövervaka enheten.
 
-När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Du kan också publicera enheter med hjälp av en [Grupprincip eller System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
+När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Du kan också publicera enheter med hjälp av en [Grupprincip eller System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-configuration-profile"></a>Skapa konfigurationsprofilen
 
@@ -86,18 +86,18 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange ett **Namn** och en **Beskrivning**.
 4. För **Plattform** väljer du **Windows 10 och senare**
-5. För **Profiltyp** väljer du **Windows Defender ATP (Windows 10 Desktop)** .
+5. För **Profiltyp** väljer du **Microsoft Defender ATP (Windows 10 Desktop)** .
 6. Konfigurera inställningarna:
 
-  - **Pakettyp för konfiguration av Windows Defender ATP-klient**: Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
+    - **Pakettyp för konfiguration av Microsoft Defender ATP-klient**: Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
   
-    > [!NOTE] 
-    > Om du har upprättat en anslutning på rätt sätt med Windows Defender ATP, kommer Intune automatiskt **publicera** konfigurationsprofilen åt dig, och inställningen **Pakettyp för konfiguration av Windows Defender ATP-klient** kommer inte vara tillgänglig.
+    > [!NOTE]  
+    > Om du har upprättat en anslutning på rätt sätt med Microsoft Defender ATP, kommer Intune automatiskt **publicera** konfigurationsprofilen åt dig, och inställningen **Pakettyp för konfiguration av Microsoft Defender ATP-klient** kommer inte vara tillgänglig.
   
-  - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel samlas in och delas med Windows Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Windows Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Windows Defender ATP.
-  - **Skicka frekvensvärde för telemetrirapportering**: För enheter med hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Windows Defender ATP oftare.
+    - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel samlas in och delas med Microsoft Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Microsoft Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Microsoft Defender ATP.
+    - **Skicka frekvensvärde för telemetrirapportering**: För enheter med hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Microsoft Defender ATP oftare.
 
-    [Publicera Windows 10-datorer med hjälp av System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection) innehåller mer information om dessa Windows Defender ATP-inställningar.
+    [Registrera Windows 10-datorer med hjälp av System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) innehåller mer information om dessa Microsoft Defender ATP-inställningar.
 
 7. Välj **OK** och **Skapa** för att spara ändringarna, vilket skapar profilen.
 
@@ -108,9 +108,9 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 2. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
 3. Ange ett **Namn** och en **Beskrivning**.
 4. I **Plattform** väljer du **Windows 10 och senare**.
-5. I inställningarna för **Windows Defender ATP** anger du **Kräv att enheten ska hållas vid eller under riskpoängen** till önskad nivå. Klassificeringar för hotnivå [bestäms av Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection).
+5. I inställningarna för **Microsoft Defender ATP** anger du **Kräv att enheten ska hållas vid eller under riskpoängen** till önskad nivå. Klassificeringar för hotnivå [bestäms av Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel. (Windows Defender ATP använder värdet *Säkert*.)
+   - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel. (Microsoft Defender ATP använder värdet *Säkert*.)
    - **Låg**: Enheten följer standard om det enbart finns hot på låg nivå på enheten. Enheter med medel- eller hög risk är inte kompatibla.
    - **Medel**: Enheten följer standard om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
    - **Hög**: Den här nivån är den minst säkra och tillåter alla hotnivåer. Så enheter med höga, medel eller låga risknivåer anses uppfylla kraven.
@@ -120,7 +120,7 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 ## <a name="assign-the-policy"></a>Tilldela principen
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetsefterlevnad** > **Principer**> Välj din Windows Defender ATP-princip för efterlevnad.
+2. Välj **Enhetsefterlevnad** > **Principer**> Välj din Microsoft Defender ATP-princip för efterlevnad.
 3. Välj **Tilldelningar**.
 4. Inkludera eller exkludera dina Azure AD-grupper för att tilldela dem till principen.
 5. Om du vill distribuera principen till grupper, välj **Spara**. Användarenheterna som principen är inriktad på kommer att utvärderas för att se om de följer standard.
@@ -150,14 +150,15 @@ Principen för villkorlig åtkomst blockerar åtkomsten till resurser *om* enhet
 [Vad är villkorlig åtkomst?](conditional-access.md) är en bra resurs.
 
 ## <a name="monitor-device-compliance"></a>Övervaka enhetsefterlevnad
-Övervaka därefter status för enheter som har Windows Defender ATP-efterlevnadsprincipen.
+Övervaka därefter status för enheter som har Microsoft Defender ATP-efterlevnadsprincipen.
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Principefterlevnad**.
-3. Hitta din Windows Defender ATP-princip i listan och se vilka enheter som är kompatibla eller inkompatibla.
+3. Hitta din Microsoft Defender ATP-princip i listan och se vilka enheter som är kompatibla eller inkompatibla.
 
 ## <a name="more-good-stuff"></a>Mer bra innehåll
-[Villkorlig åtkomst för Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/conditional-access-windows-defender-advanced-threat-protection)  
-[Instrumentpanel för Windows Defender ATP-risk](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection)  
+[Villkorlig åtkomst för Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)  
+[Instrumentpanel för Microsoft Defender ATP-risk](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)  
+
 [Komma igång med principer för enhetsefterlevnad](device-compliance-get-started.md)  
 [Villkorlig åtkomst för Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)

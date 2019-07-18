@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fab8f2be48a30f6ad058b3eeb6874a44ff04e6ac
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744295"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67812450"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune. 
 
@@ -72,3 +72,19 @@ Du bör också uppdatera din dokumentation eller vägledning för utvecklare om 
 
 #### <a name="additional-information"></a>Ytterligare information
 https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+
+### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Ändringsplan: Nya inställningar för Windows-uppdateringar i Intune <!-- 4464404 -->
+Från och med augustiversionen till Intune-tjänsten eller 1908 lägger vi till nya ”Inställningar för tidsgräns” som du kan konfigurera i stället för inställningarna ”Tillåt att användaren startar om (interaktiv omstart)”. Vi planerar att inaktivera inställningarna för interaktiv omstart i användargränssnittet i 1909 eller septemberuppdateringen och sedan ta bort dem från konsolen i slutet av oktober. 
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Om du hanterar Windows 10-enheter i din miljö: 
+- Med Intune-uppdateringen i augusti eller 1908 visas nya inställningar för tidsgränser i konsolen utöver de gamla inställningarna för att starta om datorn.
+- När båda dessa gamla och nya inställningar har konfigurerats åsidosätter inställningarna för tidsgräns inställningen för att starta om datorn.
+- Inställningarna för tidsgräns kommer att ersätta alternativet ”Tillåt att användaren startar om (interaktiv omstart)” på konsolen i 1910-uppdateringen.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Börja använda inställningarna för tidsgräns i 1908 genom att konfigurera dem med önskade värden. När du har det på plats kan du ställa in inställningen för interaktiv omstart till ”Inte konfigurerad” för att förbereda inför att dessa tas bort från konsolen i oktober.
+
+Uppdatera din dokumentation och eventuella automatiserade skript om det behövs. 
+
+Vi håller dig uppdaterad och publicerar en påminnelse i meddelandecentret innan vi tar bort inställningarna för den interaktiva omstarten.

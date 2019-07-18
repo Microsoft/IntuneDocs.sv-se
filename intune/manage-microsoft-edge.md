@@ -1,5 +1,5 @@
 ---
-title: Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
+title: Hantera Microsoft Edge för iOS och Android med Intune
 titleSuffix: ''
 description: Använd Intunes appskyddsprinciper med Microsoft Edge för att se till att åtkomsten till företagswebbplatser alltid är skyddad.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 147547577615c6e74a9c5b3dd8b200ba387bad79
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
+ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648470"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68287222"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -157,7 +157,7 @@ Här är några exempel på scenarier som Azure AD-programproxyn aktiverar:
 ### <a name="before-you-start"></a>Innan du börjar
 
 - Konfigurera dina interna program via Azure AD-programproxyn.
-    - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) för att konfigurera programproxy och publicera program.
+  - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) för att konfigurera programproxy och publicera program.
 - Microsoft Edge-appen måste ha [Intunes appskyddsprincip](app-protection-policy.md) tilldelad.
 
 > [!NOTE]
@@ -228,34 +228,34 @@ Du kan använda olika URL-format för att skapa dina webbplatslistor med tillåt
 - Du kan använda jokertecknet (\*) enligt reglerna i följande lista med tillåtna mönster.
 - Ett jokertecken kan endast motsvara hela värdnamnet (avgränsat med punkter) eller hela delar av sökvägen (avgränsade med snedstreck). `http://*contoso.com` och  **stöds till exempel inte**.
 - Du kan ange portnummer i adressen. Om du inte anger ett portnummer, används följande värden:
-    - Port 80 för http
-    - Port 443 för http
+  - Port 80 för http
+  - Port 443 för http
 - Jokertecken i portnummer stöds **inte**. `http://www.contoso.com:*` och `http://www.contoso.com:*/` stöds inte. 
 
     |    URL    |    Information    |    Matchar    |    Matchar inte    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Matchar en enstaka sida    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Matchar en enstaka sida    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/&#42;`   |    Matchar alla URL:er som börjar med `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Matchar alla underordnade domäner under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |
-    |    `http://www.contoso.com/images`    |    Matchar en enstaka mapp    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
+    |    `http://www.contoso.com/*;`   |    Matchar alla URL:er som börjar med `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://*.contoso.com/*`    |    Matchar alla underordnade domäner under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    Matchar alla underordnade som slutar med `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    `http://www.contoso.com/images`    |    Matchar en enstaka mapp    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Matchar en enstaka sida, med ett portnummer    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Matchar en enstaka, säker sida    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Matchar en enstaka mapp och alla undermappar    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Följande är några exempel på indata som du inte kan ange:
-    - `*.com`
-    - `*.contoso/*`
-    - `www.contoso.com/*images`
-    - `www.contoso.com/*images*pigs`
-    - `www.contoso.com/page*`
-    - IP-adresser
-    - `https://*`
-    - `http://*`
-    - `https://*contoso.com`
-    - `http://www.contoso.com:*`
-    - `http://www.contoso.com: /*`
-  
+  - `*.com`
+  - `*.contoso/*`
+  - `www.contoso.com/*images`
+  - `www.contoso.com/*images*pigs`
+  - `www.contoso.com/page*`
+  - IP-adresser
+  - `https://*`
+  - `http://*`
+  - `https://*contoso.com`
+  - `http://www.contoso.com:*`
+  - `http://www.contoso.com: /*`
+
 ## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Definiera beteendet när användare försöker komma åt en blockerad webbplats
 
 Du kan skapa en mer flexibel upplevelse för slutanvändarna som inte var möjligt med Intune Managed Browser med modellen med dubbla identiteter som är inbyggda i Microsoft Edge. När användare trycker på en plats som är blockerad i Microsoft Edge kan du uppmana dem att öppna länken i den personliga kontexten i stället för arbetskontexten. Därmed skyddas de och företagets resurser samtidigt. Till exempel om en användare får en länk till en nyhetsartikel via Outlook kan de öppna länken i sin personliga kontext eller i en InPrivate-flik. Arbetskontexten tillåter inte nyhetswebbplatser. Dessa övergångar tillåts som standard.

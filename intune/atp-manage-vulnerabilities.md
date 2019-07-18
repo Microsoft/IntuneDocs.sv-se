@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6dfef745157ae96736f8405fd5cafc33d4335f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: b58b27264e2f6955ae4f16843bb3493e5fdc993e
+ms.sourcegitcommit: fe67741c62749fc9114e9191092ed8b786dd4ffa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045284"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270283"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Använda Intune för att åtgärda sårbarheter som upptäckts av Microsoft Defender ATP  
 
@@ -32,7 +32,7 @@ När du integrerar Intune med Microsoft Defender Advanced Threat Protection (ATP
 
 När du ansluter Intune till Microsoft Defender Advanced Threat Protection får ATP information om hot och säkerhetsrisker från hanterade enheter.  
 
-På Windows Defender Security Center-konsolen får ATP-säkerhetsadministratörer granska data om sårbarheter i slutpunkter. Administratörerna kan sedan med ett enda musklick skapa säkerhetsuppgifter som flaggar sårbara enheter för reparation. Säkerhetsuppgifterna skickas direkt till Intune-konsolen där Intune-administratörer kan se dem. Säkerhetsuppgiften anger typen av säkerhetsrisk, prioritet, status och vilka åtgärder som måste vidtas för att åtgärda säkerhetsrisken. Intune-administratören väljer att godkänna eller avvisa uppgiften.  
+På Microsoft Defender Security Center-konsolen får ATP-säkerhetsadministratörer granska data om sårbarheter i slutpunkter. Administratörerna kan sedan med ett enda musklick skapa säkerhetsuppgifter som flaggar sårbara enheter för reparation. Säkerhetsuppgifterna skickas direkt till Intune-konsolen där Intune-administratörer kan se dem. Säkerhetsuppgiften anger typen av säkerhetsrisk, prioritet, status och vilka åtgärder som måste vidtas för att åtgärda säkerhetsrisken. Intune-administratören väljer att godkänna eller avvisa uppgiften.  
 
 När en uppgift accepteras arbetar sedan Intune-administratören för att åtgärda säkerhetsrisken genom Intune med hjälp av riktlinjer som tillhandahålls som en del av säkerhetsuppgiften.  
 
@@ -67,7 +67,7 @@ Ett exempel på ett arbetsflöde:
 **Intune-konfigurationer för ATP**:  
 - Konfigurera en tjänst-till-tjänst-anslutning med Microsoft Defender ATP.  
 - Distribuera en princip för enhetsefterlevnad med profiltypen **Microsoft Defender ATP (Windows 10 Desktop)** till enheter med risk som utvärderas av ATP.
-  Information om hur du ställer in Intune för att arbeta med ATP finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-windows-defender-atp-in-intune).  
+  Information om hur du ställer in Intune för att arbeta med ATP finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-microsoft-defender-atp-in-intune).  
 
 ## <a name="work-with-security-tasks"></a>Arbeta med säkerhetsuppgifter  
 
