@@ -12,7 +12,7 @@
 ### [Varför du bör registrera Android-enheten](why-enroll-android-device.md)
 ### Registrera enheten
 #### [Registrera Android-enheten](enroll-device-android-company-portal.md)  
-#### [Registrera med Android-arbetsprofilen](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Registrera med Android-arbetsprofilen](enroll-device-android-work-profile.md)
 #### [Registrera med Microsoft Intune-appen](enroll-device-android-microsoft-intune-app.md)
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-android.md)
 ### [Kryptera din enhet](encrypt-your-device-android.md)
