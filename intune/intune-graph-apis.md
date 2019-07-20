@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b655dc64958350623ea62caf848043f6baf3787c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883299"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
@@ -30,13 +30,13 @@ För åtkomst till Intune API:er i Microsoft Graph krävs:
 
 - Ett program-ID med:
 
-    - Behörighet att anropa Azure AD och Microsoft Graph API:er.
-    - Behörighetsomfattning som avser aktiviteter för specifika program.
+  - Behörighet att anropa Azure AD och Microsoft Graph API:er.
+  - Behörighetsomfattning som avser aktiviteter för specifika program.
 
 - Användarautentiseringsuppgifter med:
 
-    - Behörighet att få åtkomst till Azure AD-klienten som är associerad med programmet.
-    - Rollbehörigheter krävs för att stödja behörighetsomfattningen för programmet.
+  - Behörighet att få åtkomst till Azure AD-klienten som är associerad med programmet.
+  - Rollbehörigheter krävs för att stödja behörighetsomfattningen för programmet.
 
 - Slutanvändaren kan bevilja behörighet så att appen kan utföra uppgifter för program i sin Azure-klient.
 
@@ -61,7 +61,7 @@ Mer information finns i:
 
 Registrera en app för att använda Microsoft Graph API:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administrativa autentiseringsuppgifter.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administratörs behörighet.
 
     Om det behövs kan du använda:
     - Klientorganisationens administratörskonto.
@@ -164,10 +164,10 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 - Inställningen **Aktivera åtkomst**: __Läsa Microsoft Intune-appar__
 
 - Tillåter läsbehörighet till följande entitetsegenskaper och status:
-    - Klientappar
-    - Kategorier för mobilappar
-    - Appskyddsprinciper
-    - Appkonfigurationer
+  - Klientappar
+  - Kategorier för mobilappar
+  - Appskyddsprinciper
+  - Appkonfigurationer
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
@@ -177,19 +177,19 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 
 - Tillåter också ändringar i följande entiteter:
 
-    - Klientappar
-    - Kategorier för mobilappar
-    - Appskyddsprinciper
-    - Appkonfigurationer
+  - Klientappar
+  - Kategorier för mobilappar
+  - Appskyddsprinciper
+  - Appkonfigurationer
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - Inställningen **Aktivera åtkomst**: __Läsa enhetskonfiguration och principer för Microsoft Intune__
 
 - Tillåter läsbehörighet till följande entitetsegenskaper och status:
-    - Enhetskonfiguration
-    - Efterlevnadsprincip för enhet
-    - Meddelanden
+  - Enhetskonfiguration
+  - Efterlevnadsprincip för enhet
+  - Meddelanden
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
@@ -198,34 +198,34 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 - Tillåter samma åtgärder som __DeviceManagementConfiguration.Read.All__
 
 - Appar kan också skapa, tilldela, ta bort och ändra följande entiteter:
-    - Enhetskonfiguration
-    - Efterlevnadsprincip för enhet
-    - Meddelanden
+  - Enhetskonfiguration
+  - Efterlevnadsprincip för enhet
+  - Meddelanden
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - Inställningen **Aktivera åtkomst**: __Utföra användarpåverkande fjärråtgärder på Microsoft Intune-enheter__
 
 - Tillåter följande fjärråtgärder på en hanterad enhet:
-    - Pensionera
-    - Rensning
-    - Återställa lösenord
-    - Fjärrlåsning
-    - Aktivera/inaktivera borttappat läge
-    - Rensa datorn
-    - Starta om datorn
-    - Ta bort användare från en delad enhet
+  - Pensionera
+  - Rensning
+  - Återställa lösenord
+  - Fjärrlåsning
+  - Aktivera/inaktivera borttappat läge
+  - Rensa datorn
+  - Starta om datorn
+  - Ta bort användare från en delad enhet
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - Inställningen **Aktivera åtkomst**: __Läsa Microsoft Intune-enheter__
 
 - Tillåter läsbehörighet till följande entitetsegenskaper och status:
-    - Hanterad enhet
-    - Enhetskategori
-    - Identifierad app
-    - Fjärråtgärder
-    - Information om skadlig kod
+  - Hanterad enhet
+  - Enhetskategori
+  - Identifierad app
+  - Fjärråtgärder
+  - Information om skadlig kod
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
@@ -234,22 +234,22 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 - Tillåter samma åtgärder som __DeviceManagementManagedDevices.Read.All__
 
 - Appar kan också skapa, ta bort och ändra följande entiteter:
-    - Hanterad enhet
-    - Enhetskategori
+  - Hanterad enhet
+  - Enhetskategori
 
 - Följande fjärråtgärder är också tillåtna:
-    - Hitta enheter
-    - Kringgå aktiveringslås
-    - Begära fjärrhjälp
+  - Hitta enheter
+  - Kringgå aktiveringslås
+  - Begära fjärrhjälp
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - Inställningen **Aktivera åtkomst**: __Läsa RBAC-inställningar för Microsoft Intune__
 
 - Tillåter läsbehörighet till följande entitetsegenskaper och status:
-    - Rolltilldelningar
-    - Rolldefinitioner
-    - Resursåtgärder
+  - Rolltilldelningar
+  - Rolldefinitioner
+  - Resursåtgärder
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
@@ -258,24 +258,24 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 - Tillåter samma åtgärder som __DeviceManagementRBAC.Read.All__
 
 - Appar kan också skapa, tilldela, ta bort och ändra följande entiteter:
-    - Rolltilldelningar
-    - Rolldefinitioner
+  - Rolltilldelningar
+  - Rolldefinitioner
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - Inställningen **Aktivera åtkomst**: __Läsa Microsoft Intune-konfiguration__
 
 - Tillåter läsbehörighet till följande entitetsegenskaper och status:
-    - Enhetsregistrering
-    - Apple Push Notification-certifikat
-    - Apples DEP (Device Enrollment Program)
-    - Apples volymköpsprogram
-    - Exchange Connector
-    - Villkor
-    - Kostnadsuppföljning av telekommunikation
-    - Moln-PKI
-    - Anpassning
-    - Mobile Threat Defense
+  - Enhetsregistrering
+  - Apple Push Notification-certifikat
+  - Apples DEP (Device Enrollment Program)
+  - Apples volymköpsprogram
+  - Exchange Connector
+  - Villkor
+  - Kostnadsuppföljning av telekommunikation
+  - Moln-PKI
+  - Anpassning
+  - Mobile Threat Defense
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
@@ -284,16 +284,16 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 - Tillåter samma åtgärder som DeviceManagementServiceConfig.Read.All_
 
 - Appar kan också konfigurera följande Intune-funktioner:
-    - Enhetsregistrering
-    - Apple Push Notification-certifikat
-    - Apples DEP (Device Enrollment Program)
-    - Apples volymköpsprogram
-    - Exchange Connector
-    - Villkor
-    - Kostnadsuppföljning av telekommunikation
-    - Moln-PKI
-    - Anpassning
-    - Mobile Threat Defense
+  - Enhetsregistrering
+  - Apple Push Notification-certifikat
+  - Apples DEP (Device Enrollment Program)
+  - Apples volymköpsprogram
+  - Exchange Connector
+  - Villkor
+  - Kostnadsuppföljning av telekommunikation
+  - Moln-PKI
+  - Anpassning
+  - Mobile Threat Defense
 
 ## <a name="azure-ad-authentication-examples"></a>Azure AD-autentiseringsexempel
 

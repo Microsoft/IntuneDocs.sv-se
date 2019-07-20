@@ -14,12 +14,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5a0ee88a24804294346888facef523f89fee816
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9e9baf3593883cf2fa2402a0b4daec638a336366
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884202"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-inställningar för Intune  
 
@@ -179,8 +179,8 @@ Den här inställningen ger olika resultat beroende på enhetens Windows-version
 Tillåt eller blockera en enhetsanvändare från att pausa installationen av en uppdatering. 
 
 ### <a name="block-user-from-scanning-for-windows-updates"></a>Hindra användare från att söka efter Windows-uppdateringar  
- - **Standard**: Tillåt
- - **Windows-referensdokumentation**: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+- **Standard**: Tillåt
+- **Windows-referensdokumentation**: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
 Anger om en användares åtkomst till Windows Update-genomsökningen ska tillåtas eller blockeras. Om du till exempel konfigurerar en *blockering* kan användare inte komma åt Windows Update-genomsökning, ladda ned eller installera funktioner.  
 

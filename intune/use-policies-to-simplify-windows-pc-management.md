@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: eb9f7eef1f7f0e4a712bdf3e8a3706374ac002a8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548827"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353310"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Använd principer för att förenkla hanteringen av Windows-datorer
 
@@ -32,7 +32,7 @@ Om du vill hantera stationära Windows-datorer som datorer genom att köra Intun
 
 ![Principmall för Windows-datorer](media/pc_policy_template.png)
 
-### <a name="manage-the-microsoft-intune-center"></a>Hantera Microsoft Intune Center
+## <a name="manage-the-microsoft-intune-center"></a>Hantera Microsoft Intune Center
 Användarna ser Intune-klientprogrammet som **Microsoft Intune Center**. Med Microsoft Intune Center kan användarna:
 
 - Hämta program från företagsportalen.
@@ -63,6 +63,6 @@ Information om principer och inställningar som du kan konfigurera för Windows-
 - [Skydda Windows-datorer med Windows-brandväggsprinciper i Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) – Dessa principer förenklar administrationen av inställningar för Windows-brandväggen på hanterade datorer.
 
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

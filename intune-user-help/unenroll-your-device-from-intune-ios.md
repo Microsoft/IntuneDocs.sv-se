@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2eb47240516737f03c10d1280887fea275c5ed99
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883945"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Ta bort din iOS-enhet från Intune
 
@@ -44,25 +44,25 @@ Gör enligt följande om du vill ta bort enheten från Intune, eller titta på d
     |![Skärmbild av företagsportalappens enhetsskärm som visar alternativ när användaren har klickat på knappen Ta bort enhet. Visar en röd ”Ta bort”-knapp, en blå ”Mer information”-knapp och en ”Avbryt”-knapp.](/intune-user-help/media/cp_ios_unenroll_after_1804_002.png)|
 
 
-  När du avregistrerar en enhet från Intune händer följande:
+    När du avregistrerar en enhet från Intune händer följande:
 
-  - Enheten visas inte på företagsportalen längre.
+    - Enheten visas inte på företagsportalen längre.
 
-  - Det går inte att installera appar från företagsportalen längre.
+    - Det går inte att installera appar från företagsportalen längre.
 
-  - Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran eller att en viss längd på lösenorden krävdes, gäller inte längre.
+    - Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran eller att en viss längd på lösenorden krävdes, gäller inte längre.
 
-  - Eventuellt har du inte åtkomst till vissa företagsresurser från din enhet längre, exempelvis fildelningar eller interna webbplatser.
+    - Eventuellt har du inte åtkomst till vissa företagsresurser från din enhet längre, exempelvis fildelningar eller interna webbplatser.
 
-  - Det går inte att använda företagsappar eller företagsdata på enheten längre.
+    - Det går inte att använda företagsappar eller företagsdata på enheten längre.
 
-  - Eventuellt går det inte längre att ansluta till företagets nätverk via Wi-Fi eller VPN.
+    - Eventuellt går det inte längre att ansluta till företagets nätverk via Wi-Fi eller VPN.
 
-  - Företagets e-profiler tas bort från enheten.
+    - Företagets e-profiler tas bort från enheten.
 
-  - Enheter som bara är konfigurerade för e-post visas inte längre i företagsportalappen eller på webbplatsen.
-  
-  - Apparna avinstalleras. Data som hör till företagsappar tas bort.
+    - Enheter som bara är konfigurerade för e-post visas inte längre i företagsportalappen eller på webbplatsen.
+
+    - Apparna avinstalleras. Data som hör till företagsappar tas bort.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Ta bort data som samlas in av företagsportalappen
 

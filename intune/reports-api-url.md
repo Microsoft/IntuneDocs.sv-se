@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d2e6c99d9493d935f4a8f87c6525af19796b5f6
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 59e2a681c542da46a2e938c7bf07e7185925aab2
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648788"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313747"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>API-slutpunkt för Intune-informationslager
 
@@ -51,7 +51,7 @@ Webbadressen innehåller följande element:
 | Element | Exempel | Beskrivning |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | position | msua06 | Grundwebbadressen hittar du på bladet för informationslager-API på Azure Portal. |
-| entitetssamling | datum | Namnet på OData-entitetssamlingen. Mer information om samlingar och entiteter i datamodellen finns i [Datamodell](reports-ref-data-model.md). |
+| entitetssamling | devicePropertyHistories | Namnet på OData-entitetssamlingen. Mer information om samlingar och entiteter i datamodellen finns i [Datamodell](reports-ref-data-model.md). |
 | api-version | beta | Version är den API-version som ska kommas åt. Mer information finns i [Version](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Valfritt) Det maximala antalet dagar av historik som ska hämtas. Den här parametern kan anges till valfri samling men börjar bara gälla för samlingar som inkluderar `dateKey` som en del av sin nyckelegenskap. Mer information finns i [DateKey-intervallfilter](reports-api-url.md#datekey-range-filters). |
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 502babf80b4286adb19a09988d16bd56562d4925
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884248"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Lägga till Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
 
@@ -119,29 +119,29 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
     > [!NOTE]
     > För närvarande stöds endast SCEP-certifikatprofiler när du använder en EAP-typ. PKCS-certifikatprofiler stöds inte. Varje gång en användare uppmanas att ange ett certifikat ska ett SCEP-certifikat väljas.
 
-      - **Serverförtroende**  
+    - **Serverförtroende**  
 
-        **Certifikatservernamn**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.  
+      **Certifikatservernamn**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.  
 
-        **Rotcertifikat för servervalidering**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen.  
+      **Rotcertifikat för servervalidering**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen.  
 
-        **Identitetssekretess (yttre identitet)** : Använd med EAP-typen **PEAP**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.  
+      **Identitetssekretess (yttre identitet)** : Använd med EAP-typen **PEAP**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.  
 
-      - **Klientautentisering**
+    - **Klientautentisering**
 
-        **Klientcertifikat för klientautentisering (identitetscertifikat)** : Använd med EAP-typen **EAP-TLS**. Välj den certifikatprofil som ska användas för att autentisera anslutningen.
+      **Klientcertifikat för klientautentisering (identitetscertifikat)** : Använd med EAP-typen **EAP-TLS**. Välj den certifikatprofil som ska användas för att autentisera anslutningen.
 
-        **Autentiseringsmetod**: Använd med EAP-typen **EAP-TTLS**. Välj autentiseringsmetod för anslutningen:  
+      **Autentiseringsmetod**: Använd med EAP-typen **EAP-TTLS**. Välj autentiseringsmetod för anslutningen:  
 
-          - **Certifikat**: Välj det klientcertifikat som är det identitetscertifikat som presenteras för servern.
-          - **Användarnamn och lösenord**: Ange en **Annan metod än EAP (inre identitet)** för autentisering. Alternativen är:
+      - **Certifikat**: Välj det klientcertifikat som är det identitetscertifikat som presenteras för servern.
+      - **Användarnamn och lösenord**: Ange en **Annan metod än EAP (inre identitet)** för autentisering. Alternativen är:
 
-            - **Okrypterat lösenord (PAP)**
-            - **Utmaningshandskakning (CHAP)**
-            - **Microsoft CHAP (MS-CHAP)**
-            - **Microsoft CHAP Version 2 (MS-CHAP v2)**
+        - **Okrypterat lösenord (PAP)**
+        - **Utmaningshandskakning (CHAP)**
+        - **Microsoft CHAP (MS-CHAP)**
+        - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
-        **Identitetssekretess (yttre identitet)** : Använd med EAP-typen **EAP-TTLS**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+      **Identitetssekretess (yttre identitet)** : Använd med EAP-typen **EAP-TTLS**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
 - **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
   - **Inga**: Inga proxyinställningar konfigureras.

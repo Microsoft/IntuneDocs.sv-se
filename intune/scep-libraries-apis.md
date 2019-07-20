@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc2b324c8c6e1687b8ce5563aa85c155e21fc197
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a7baa95d6719dfa3161ae6644bbc9351d3f3d9f0
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882387"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Använda API:er för att lägga till tredjeparts certifikatutfärdare för SCEP i Intune
 
@@ -176,8 +176,8 @@ Returnerar:
 
 **Säkerhetskommentarer**  
 
-  - Om den här metoden returnerar ett undantag **får SCEP-servern inte** utfärda ett certifikat till klienten.
-  - Fel med verifiering av SCEP-certifikatbegäran kan tyda på ett problem i Intune-infrastrukturen. Eller så det kan tyda på att en angripare försöker hämta ett certifikat.
+- Om den här metoden returnerar ett undantag **får SCEP-servern inte** utfärda ett certifikat till klienten.
+- Fel med verifiering av SCEP-certifikatbegäran kan tyda på ett problem i Intune-infrastrukturen. Eller så det kan tyda på att en angripare försöker hämta ett certifikat.
 
 ##### <a name="sendsuccessnotification-method"></a>Metoden SendSuccessNotification
 
@@ -217,8 +217,8 @@ Returnerar:
 
 **Säkerhetskommentarer**
 
-  - Om den här metoden returnerar ett undantag **får SCEP-servern inte** utfärda ett certifikat till klienten.
-  - Fel med verifiering av SCEP-certifikatbegäran kan tyda på ett problem i Intune-infrastrukturen. Eller så det kan tyda på att en angripare försöker hämta ett certifikat.
+- Om den här metoden returnerar ett undantag **får SCEP-servern inte** utfärda ett certifikat till klienten.
+- Fel med verifiering av SCEP-certifikatbegäran kan tyda på ett problem i Intune-infrastrukturen. Eller så det kan tyda på att en angripare försöker hämta ett certifikat.
 
 ##### <a name="sendfailurenotification-method"></a>Metoden SendFailureNotification
 
@@ -254,8 +254,8 @@ Returnerar:
 
 **Säkerhetskommentarer**
 
-  - Om den här metoden returnerar ett undantag **får SCEP-servern inte** utfärda ett certifikat till klienten.
-  - Fel med verifiering av SCEP-certifikatbegäran kan tyda på ett problem i Intune-infrastrukturen. Eller så det kan tyda på att en angripare försöker hämta ett certifikat.
+- Om den här metoden returnerar ett undantag **får SCEP-servern inte** utfärda ett certifikat till klienten.
+- Fel med verifiering av SCEP-certifikatbegäran kan tyda på ett problem i Intune-infrastrukturen. Eller så det kan tyda på att en angripare försöker hämta ett certifikat.
 
 ##### <a name="setsslsocketfactory-method"></a>Metoden SetSslSocketFactory
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61d8f5f66d424c434edf119ad7fe221c35ee35ae
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5c78f72e7ffc580cce6cfec7237a3efe3ceb3e5
+ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042214"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68230106"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurera appen Gör ett prov på Windows 10-enheter med Intune
 
@@ -35,7 +35,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration som sedan ti
 
 [Skapa en enhetskonfigurationsprofil](education-settings-configure.md#create-a-device-profile).
 
-## <a name="take-a-test-settings"></a>Inställningar för Gör ett prov
+## <a name="take-a-test-settings"></a>Inställningar för Gör ett prov  
 
 - **Kontotyp**: Välj hur användare loggar in på provet. Alternativen är:
   - Azure AD-konto

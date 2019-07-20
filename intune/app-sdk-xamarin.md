@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b062dd12f7a9b77f30d4d831a829f3d0316cacf6
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
-ms.translationtype: HT
+ms.openlocfilehash: 7525971f9ab48b92c3274f56cb1046a6fde948a5
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735466"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794358"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -107,6 +107,7 @@ En fullständig översikt över integreringen av Intune App SDK finns i [utveckl
 Från och med 1.4428.1- `Microsoft.Intune.MAM.Remapper` versionen kan paketet läggas till i en Xamarin. Android-app som [build-verktyg](app-sdk-android.md#build-tooling) för att utföra Mam klass-, metod-och system tjänster. Om remapper ingår, utförs MAM motsvarande ersättnings delar av de metoder som har bytt namn och MAM program automatiskt när programmet har skapats.
 
 Om du vill undanta en klass från Mam-ppdateringar av Remapping kan du lägga till följande egenskap i `.csproj` projekt filen.
+
 ```xml
   <PropertyGroup>
     <ExcludeClasses>Semicolon separated list of relative class paths to exclude from MAM-ification</ExcludeClasses>
@@ -208,7 +209,7 @@ Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://pla
 Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera enheten med företagsportalappen.
 
 ### <a name="sample-applications"></a>Exempel program
-Exempel program som markerar Mam-funktioner i Xamarin. Android-och Xamarin-formulär appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
+Exempel program som markerar MAM-funktioner i Xamarin. Android-och Xamarin-formulär appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Stöd
 Om din organisation är en befintlig Intune-kund kan du kontakta din representant på Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) så hjälper vi dig så snart vi kan. 

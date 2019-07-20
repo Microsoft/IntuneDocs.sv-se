@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8d8e1d1bb20f222b202e8c854fc4d1a8ba694fa
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 519ac8529737a870eb4f8ce9a3e06af5b1dcac79
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648901"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353659"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Skapa en rapport från OData-feeden med Power BI
 
 I artikeln beskrivs hur man skapar en trädkartevisualisering med Power BI Desktop och ett interaktivt filter. Din ekonomichef kanske exempelvis vill veta den övergripande distributionen av enheter ser ut – företagsägda jämfört med privata enheter. Trädkartan ger insikt i det totala antalet enhetstyper. Du kan granska antalet iOS-, Android- och Windows-enheter som är företagsägda eller privatägda.
 
-### <a name="overview-of-creating-the-chart"></a>Översikt över att skapa diagrammet
+## <a name="overview-of-creating-the-chart"></a>Översikt över att skapa diagrammet
 
 För att kunna skapa det här diagrammet måste du:
 1. Installera Power BI Desktop om det inte redan har det.
@@ -120,5 +120,5 @@ Nu har du ett interaktivt filter som du kan använda för att växla mellan för
 
 ## <a name="next-steps"></a>Nästa steg
 
- - Läs mer om att [skapa och hantera relationer](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) i Power BI Desktop i Power BI-dokumentationen.
- - Läs informationen om [Intune-informationslagermodellen](https://docs.microsoft.com/intune/reports-ref-data-model).
+- Läs mer om att [skapa och hantera relationer](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) i Power BI Desktop i Power BI-dokumentationen.
+- Läs informationen om [Intune-informationslagermodellen](https://docs.microsoft.com/intune/reports-ref-data-model).

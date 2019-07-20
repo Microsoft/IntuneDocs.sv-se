@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70818e038be915a1b756eb391129e6cdb74fb069
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a94c327c8595e83ec9808ed41e788c5756d5510a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548659"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353871"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran. Om du vill hantera uppdateringar för Windows-datorer som registrerats som mobila enheter, se [hantera programuppdateringar i Intune](windows-update-for-business-configure.md).
+> Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran. Om du vill hantera uppdateringar för Windows-datorer som registrerats som mobila enheter, se [hantera program uppdateringar i Intune](windows-update-for-business-configure.md).
 
 Microsoft Intune hjälper dig att skydda dina hanterade datorer på flera sätt, t.ex. med hantering av programvaruuppdateringar som håller datorerna uppdaterade genom att se till att de senaste korrigeringarna och programvaruuppdateringarna snabbt installeras.
 
@@ -260,5 +260,5 @@ När du väljer en uppdatering från listan blir ytterligare kommandon tillgäng
 6. Du kan kontrollera informationsfönstret längst ned på sidan **Alla uppdateringar** för påminnelsemeddelanden om uppdateringen.
 
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)

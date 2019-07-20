@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 21f4f55c028c6ff06730e50d9f9862e85d0a9ef1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884749"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Datamodell för Microsoft Intune-informationslager
 
@@ -32,22 +32,22 @@ Intune-informationslagret samplar dagligen data för att ge en historik över de
 
 Informationslagret visas data i följande övergripande områden:
 
-  - Appskyddsaktiverade appar och användning
-  - Registrerade enheter, egenskaper och inventering
-  - Inventering av appar och programvara
-  - Efterlevnadsprinciper och enhetskonfigurering
+- Appskyddsaktiverade appar och användning
+- Registrerade enheter, egenskaper och inventering
+- Inventering av appar och programvara
+- Efterlevnadsprinciper och enhetskonfigurering
 
 Dessa områden innehåller entiteterna som är viktiga för din Intune-miljö. Du hittar information entitetsuppsättningarna i följande avsnitt:
 
-  - [Program](reports-ref-application.md)
-  - [Datum](reports-ref-date.md)
-  - [Enheter](reports-ref-devices.md)
-  - [Tillägg för Intune-hantering](reports-ref-intunemanagementextension.md)
-  - [Princip](reports-ref-policy.md)
-  - [Mobilapphantering (MAM)](reports-ref-mobile-app-management.md)
-  - [Användare](reports-ref-user.md)
-  - [Aktuell användare](reports-ref-current-user.md)
-  - [Användarenhetsassociation](reports-ref-user-device.md)
+- [Program](reports-ref-application.md)
+- [Datum](reports-ref-date.md)
+- [Enheter](reports-ref-devices.md)
+- [Tillägg för Intune-hantering](reports-ref-intunemanagementextension.md)
+- [Princip](reports-ref-policy.md)
+- [Mobilapphantering (MAM)](reports-ref-mobile-app-management.md)
+- [Användare](reports-ref-user.md)
+- [Aktuell användare](reports-ref-current-user.md)
+- [Användarenhetsassociation](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relationer: Star-schemamodellen
 
@@ -63,6 +63,6 @@ Lagret är nedströms från dina Intune-data. Intune tar en daglig ögonblicksbi
 
 ## <a name="next-steps"></a>Nästa steg
 
- - Mer information om hur informationslagret spårar en användares livstid i Intune finns i [Representation av användarens livstid i Intunes informationslager](reports-ref-user-timeline.md).
- - Mer information om hur du arbetar med informationslager finns i [Skapa första informationslagret](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
- - Mer information om hur du arbetar med Power BI och ett informationslager finns i [skapa en ny Power BI-rapport genom att importera en datauppsättning](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 
+- Mer information om hur informationslagret spårar en användares livstid i Intune finns i [Representation av användarens livstid i Intunes informationslager](reports-ref-user-timeline.md).
+- Mer information om hur du arbetar med informationslager finns i [Skapa första informationslagret](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
+- Mer information om hur du arbetar med Power BI och ett informationslager finns i [skapa en ny Power BI-rapport genom att importera en datauppsättning](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 

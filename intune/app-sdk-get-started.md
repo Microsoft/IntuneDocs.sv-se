@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e9a50855a26b72b2f6589d9f44ce6deea0588fa
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 428d9c333bb45d1f8456154104209690a95fb508
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885094"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -90,24 +90,24 @@ Du behöver en av följande utvecklarguider för att hjälpa dig att integrera I
 
 
 ## <a name="enable-your-ios-or-android-app-for-app-based-conditional-access"></a>Aktivera din iOS- eller Android-app för appbaserad Villkorsstyrd åtkomst
- 
- Förutom att aktivera din app för appskyddsprincip, krävs följande för att din app ska fungera korrekt med Azure Active Directory (AAD) appbaserad Villkorsstyrd åtkomst:
- 
- * Appen har byggts med [Autentiseringsbibliotek för Azure ActiveDirectory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) och aktiverats för AAD broker-autentisering.
- 
- * [Klient-ID för AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) för din app måste vara unikt i iOS- och Android-plattformar.
- 
+
+Förutom att aktivera din app för appskyddsprincip, krävs följande för att din app ska fungera korrekt med Azure Active Directory (AAD) appbaserad Villkorsstyrd åtkomst:
+
+* Appen har byggts med [Autentiseringsbibliotek för Azure ActiveDirectory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) och aktiverats för AAD broker-autentisering.
+
+* [Klient-ID för AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) för din app måste vara unikt i iOS- och Android-plattformar.
+
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurera telemetri för din app
 
 Microsoft Intune samlar in data för användningsstatistik för din app.
 
 * **Intune App SDK för iOS**: SDK loggar SDK-telemetridata om användningshändelser som standard. Dessa data skickas till Microsoft Intune.
 
-    * Om du väljer att inte skicka SDK-telemetridata till Microsoft Intune från din app måste du inaktivera telemetriöverföring genom att tilldela egenskapen `MAMTelemetryDisabled` värdet ”YES” i IntuneMAMSettings-ordlistan.
+  * Om du väljer att inte skicka SDK-telemetridata till Microsoft Intune från din app måste du inaktivera telemetriöverföring genom att tilldela egenskapen `MAMTelemetryDisabled` värdet ”YES” i IntuneMAMSettings-ordlistan.
 
 * **Intune App SDK för Android**: Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar telemetridata som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts policy samlar vi inte in någon personligt identifierbar information (PII). 
 
-    * Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
+  * Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="line-of-business-app-version-numbers"></a>Versionsnummer för verksamhetsspecifika appar
 
@@ -119,11 +119,11 @@ Det fullständiga versionsnumret identifierar en specifik version av appen. Numr
 
 Det fullständiga versionsnumret har två komponenter:
 
- - **Version**  
-   Versionsnumret är det läsbara versionsnumret för appen. Det här numret används av slutanvändare för att identifiera olika versioner av appen.
+- **Version**  
+  Versionsnumret är det läsbara versionsnumret för appen. Det här numret används av slutanvändare för att identifiera olika versioner av appen.
 
- - **Build-nummer**  
-    Build-numret är ett internt nummer som kan användas i appidentifiering och för att programmässigt hantera appen. Build-nummer refererar till en iteration av appen som refererar till ändringar i koden.
+- **Build-nummer**  
+  Build-numret är ett internt nummer som kan användas i appidentifiering och för att programmässigt hantera appen. Build-nummer refererar till en iteration av appen som refererar till ändringar i koden.
 
 ### <a name="version-and-build-number-in-android-and-ios"></a>Version- och build-nummer i Android och iOS
 
@@ -139,16 +139,16 @@ Versionsnummer|CFBundleVersion|PackageVersionCode |Numret används för att indi
 #### <a name="ios"></a>iOS
 
 - **CFBundleShortVersionString**  
-    Anger versionsnumret vid lansering för paketet. Numret identifierar en lanserad version av appen. Numret används av slutanvändare för att referera till appen.
+  Anger versionsnumret vid lansering för paketet. Numret identifierar en lanserad version av appen. Numret används av slutanvändare för att referera till appen.
 - **CFBundleVersion**  
-    Build-versionen av paketet som identifierar en iteration av paketet. Numret kan identifiera en lanserad version eller ett outgivet paket. Numret används för appidentifiering.
+  Build-versionen av paketet som identifierar en iteration av paketet. Numret kan identifiera en lanserad version eller ett outgivet paket. Numret används för appidentifiering.
 
 #### <a name="android"></a>Android
 
- - **PackageVersionName**  
-    Versionsnumret som visas för användare. Det här attributet kan anges som en rå sträng eller som en referens till en strängresurs. Strängen har inget annat syfte än att visas för användarna.
- - **PackageVersionCode**  
-    Ett internt versionsnummer. Numret används endast för att avgöra om en version är nyare än en annan. Högre nummer indikerar senare versioner. Det här är inte versionen 
+- **PackageVersionName**  
+  Versionsnumret som visas för användare. Det här attributet kan anges som en rå sträng eller som en referens till en strängresurs. Strängen har inget annat syfte än att visas för användarna.
+- **PackageVersionCode**  
+  Ett internt versionsnummer. Numret används endast för att avgöra om en version är nyare än en annan. Högre nummer indikerar senare versioner. Det här är inte versionen 
 
 ## <a name="next-steps-after-integration"></a>Nästa steg efter integrering
 
@@ -157,11 +157,11 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
 * **Microsoft Intune-testkonto**: Du behöver ett Microsoft Intune-konto för att kunna testa dina Intune-hanterade appar mot Intunes appskyddsfunktioner.
 
-    * Om du är en ISV som aktiverar dina iOS eller Android store-appar för Intunes appskyddsprincip så får du en kampanjkod när du har slutfört registreringen med Microsoft Intune, enligt beskrivningen i registreringssteget. Kampanjkoden låter dig registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning.
+  * Om du är en ISV som aktiverar dina iOS eller Android store-appar för Intunes appskyddsprincip så får du en kampanjkod när du har slutfört registreringen med Microsoft Intune, enligt beskrivningen i registreringssteget. Kampanjkoden låter dig registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning.
 
-    * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
+  * Om du utvecklar en affärsspecifik app som inte ska publiceras i butiken, förväntas du ha åtkomst till Microsoft Intune genom din organisation. Du kan också registrera dig för en månads kostnadsfri utvärdering av [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
 
-    * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/intune/licenses-assign).
+  * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](https://docs.microsoft.com/intune/licenses-assign).
 
 * **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](app-protection-policy-settings-android.md). Om din app har integrerat Intune SDK, men ännu inte visas i Azure-portalen som en riktad app, kan du rikta den med en princip genom att välja alternativet ”+ fler appar” och ange paket-ID (iOS) eller paketnamn (Android) i textrutan.
 

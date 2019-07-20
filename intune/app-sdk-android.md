@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cad30b0cf446d6591cba2997261f049ad6ae983
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: b033052ebd5d3d26976482ea2435c8a0d7314c8e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885052"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -116,8 +116,8 @@ Testa att kompileringen inte påverkas. Konfiguration kan anges för att visa
 * [Externa beroenden som ska tas med](#usage-of-includeexternallibraries) 
 * Särskilda klasser som ska undantas från bearbetning
 * Varianter som ska undantas från bearbetning. Dessa kan referera till ett fullständigt variantnamn eller till en enda variant. Till exempel
-     * Om din app har versionstyperna `debug` och `release` med varianterna {`savory`, `sweet`} och {`vanilla`, `chocolate`} kan du ange
-     * `savory` för att undanta alla varianter med smaken Savory eller `savoryVanillaRelease` för att undanta endast den exakta varianten.
+  * Om din app har versionstyperna `debug` och `release` med varianterna {`savory`, `sweet`} och {`vanilla`, `chocolate`} kan du ange
+  * `savory` för att undanta alla varianter med smaken Savory eller `savoryVanillaRelease` för att undanta endast den exakta varianten.
 
 #### <a name="example-partial-buildgradle"></a>Exempel på partiell build.gradle
 
@@ -680,15 +680,15 @@ Om du vill konfigurera din app och aktivera lämplig autentisering, lägger du t
 
 * **NonBrokerRedirectURI** är AAD:ns omdirigerings-URI som används när det inte finns någon asynkron meddelandekö. Om inget anges används standardvärdet för `urn:ietf:wg:oauth:2.0:oob`. Standardinställningen är lämplig för de flesta appar.
 
-    * NonBrokerRedirectURI används endast när SkipBroker är ”sant”.
+  * NonBrokerRedirectURI används endast när SkipBroker är ”sant”.
 
 * **SkipBroker** används för att åsidosätta standardbeteendet för ADAL SSO-deltagande. SkipBroker bör endast anges för appar som specificerar ett ClientID **och** inte har stöd för asynkron autentisering/enhetsomfattande enkel inloggning. I det här fallet bör det ställas in på ”sant”. De flesta appar bör inte ange parametern SkipBroker.
 
-    * Ett ClientID **måste** anges i manifestet för att ange ett SkipBroker-värde.
+  * Ett ClientID **måste** anges i manifestet för att ange ett SkipBroker-värde.
 
-    * När ett ClientID anges är standardvärdet ”falskt”.
+  * När ett ClientID anges är standardvärdet ”falskt”.
 
-    * När SkipBroker är ”sant” används NonBrokerRedirectURI. Appar som inte integrerar ADAL (och därför inte har något ClientID) får också ”sant” som standard.
+  * När SkipBroker är ”sant” används NonBrokerRedirectURI. Appar som inte integrerar ADAL (och därför inte har något ClientID) får också ”sant” som standard.
 
 ### <a name="common-adal-configurations"></a>Vanliga ADAL-konfigurationer
 
@@ -1317,48 +1317,48 @@ Förutom appens möjlighet att ange identiteten kan en tråd eller identiteten f
 
 #### <a name="examples"></a>Exempel
 
-  1. Om en aktivitet startas via en `Intent` som skickas av en annan MAM-app, anges aktivitetens identitet baserat på den effektiva identiteten i den andra appen vid tidpunkten då denna `Intent` skickades.
+1. Om en aktivitet startas via en `Intent` som skickas av en annan MAM-app, anges aktivitetens identitet baserat på den effektiva identiteten i den andra appen vid tidpunkten då denna `Intent` skickades.
 
-  2. För tjänster anges trådens identitet på liknande sätt för varaktigheten i ett `onStart`- eller `onBind`-anrop. Anrop till `Binder` som returneras från `onBind` anger också tillfälligt trådens identitet.
+2. För tjänster anges trådens identitet på liknande sätt för varaktigheten i ett `onStart`- eller `onBind`-anrop. Anrop till `Binder` som returneras från `onBind` anger också tillfälligt trådens identitet.
 
-  3. Anrop till en `ContentProvider` anger på liknande sätt trådens identitet för deras varaktighet.
-
-
-  Dessutom kan användarinteraktion med en aktivitet orsaka en implicit identitetsväxling.
-
-  **Exempel:** Om en användare avbryter en auktoriseringsuppmaning under `Resume`, resulterar det i en implicit växling till en tom identitet.
-
-  Appen kan välja att bli meddelad om dessa ändringar, och kan förbjuda dem om det behövs. `MAMService` och `MAMContentProvider` exponerar följande metod som kan åsidosättas av underklasser:
-
-  ```java
-  public void onMAMIdentitySwitchRequired(final String identity,
-    final AppIdentitySwitchResultCallback callback);
-  ```
-
-  `MAMActivity`-klassen omfattar en extra parameter i metoden:
-
-  ```java
-  public void onMAMIdentitySwitchRequired(final String identity,
-    final AppIdentitySwitchReason reason,
-    final AppIdentitySwitchResultCallback callback);
-  ```
-
-  * `AppIdentitySwitchReason` registrerar källan för den implicita växlingen och kan acceptera värdena `CREATE`, `RESUME_CANCELLED` och `NEW_INTENT`.  `RESUME_CANCELLED`-orsaken används när en aktivitetsåterställning resulterar i att användargränssnittet för PIN-koder, autentiseringsuppgifter eller andra efterlevnadsprinciper visas och användaren försöker avbryta användargränssnittet, vanligtvis genom att använda Bakåt-knappen.
+3. Anrop till en `ContentProvider` anger på liknande sätt trådens identitet för deras varaktighet.
 
 
-  * `AppIdentitySwitchResultCallback` är följande:
+    Dessutom kan användarinteraktion med en aktivitet orsaka en implicit identitetsväxling.
+
+    **Exempel:** Om en användare avbryter en auktoriseringsuppmaning under `Resume`, resulterar det i en implicit växling till en tom identitet.
+
+    Appen kan välja att bli meddelad om dessa ändringar, och kan förbjuda dem om det behövs. `MAMService` och `MAMContentProvider` exponerar följande metod som kan åsidosättas av underklasser:
 
     ```java
-    public interface AppIdentitySwitchResultCallback {
-        /**
-         * @param result
-         *            whether the identity switch can proceed.
-         */
-        void reportIdentitySwitchResult(AppIdentitySwitchResult result);
-    }
+    public void onMAMIdentitySwitchRequired(final String identity,
+      final AppIdentitySwitchResultCallback callback);
     ```
 
-    Där ```AppIdentitySwitchResult``` är antingen `SUCCESS` eller `FAILURE`.
+    `MAMActivity`-klassen omfattar en extra parameter i metoden:
+
+    ```java
+    public void onMAMIdentitySwitchRequired(final String identity,
+      final AppIdentitySwitchReason reason,
+      final AppIdentitySwitchResultCallback callback);
+    ```
+
+    * `AppIdentitySwitchReason` registrerar källan för den implicita växlingen och kan acceptera värdena `CREATE`, `RESUME_CANCELLED` och `NEW_INTENT`.  `RESUME_CANCELLED`-orsaken används när en aktivitetsåterställning resulterar i att användargränssnittet för PIN-koder, autentiseringsuppgifter eller andra efterlevnadsprinciper visas och användaren försöker avbryta användargränssnittet, vanligtvis genom att använda Bakåt-knappen.
+
+
+    * `AppIdentitySwitchResultCallback` är följande:
+
+      ```java
+      public interface AppIdentitySwitchResultCallback {
+          /**
+            * @param result
+            *            whether the identity switch can proceed.
+            */
+          void reportIdentitySwitchResult(AppIdentitySwitchResult result);
+        }
+        ```
+
+      Där ```AppIdentitySwitchResult``` är antingen `SUCCESS` eller `FAILURE`.
 
 Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsändringar utom för de som görs via en Binder som returneras från `MAMService.onMAMBind`. Standardimplementeringar av omedelbart anrop för `onMAMIdentitySwitchRequired`:
 
@@ -1498,13 +1498,13 @@ public interface MAMFileProtectionInfo {
 MAM kan inte automatiskt härleda en relation mellan lästa filer och data som visas i en `Activity`. Appar *måste* ange en korrekt gränssnittsidentitet innan de visar företagsdata. Detta inkluderar data från filer. Om en fil som kommer från utanför appen (antingen från en `ContentProvider` eller från en offentligt skrivbar plats) *måste* appen försöka fastställa identiteten för filen (med `MAMFileProtectionManager.getProtectionInfo`) innan informationen från filen visas. Om `getProtectionInfo` rapporterar en icke-null, icke-tom identitet, *måste* gränssnittsidentiteten anges så att den matchar den här identiteten (med hjälp av `MAMActivity.switchMAMIdentity` eller `MAMPolicyManager.setUIPolicyIdentity`). Om identitetväxlingen misslyckas får data från filen *inte* visas.
 
 Ett exempelflöde kan se ut ungefär som nedan:
-  * Användaren väljer ett dokument att öppna i appen.
-  * Under öppningsflödet innan läsning av data från disken, bekräftar appen identiteten som ska användas för att visa innehållet
-    * MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
-    * if(info)   MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback)
-    * Appen väntar tills resultatet rapporteras till återanrop
-    * Om det rapporterade resultatet är ett fel kommer appen inte att visa dokumentet.
-  * Appen öppnar och renderar filen.
+* Användaren väljer ett dokument att öppna i appen.
+* Under öppningsflödet innan läsning av data från disken, bekräftar appen identiteten som ska användas för att visa innehållet
+  * MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
+  * if(info)   MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback)
+  * Appen väntar tills resultatet rapporteras till återanrop
+  * Om det rapporterade resultatet är ett fel kommer appen inte att visa dokumentet.
+* Appen öppnar och renderar filen.
   
 #### <a name="single-identity-to-multi-identity-transition"></a>Övergång från enskild identitet till flera identiteter
 Om en app som tidigare lanserats med Intune-integrering med enskild entitet senare integrerar flera identiteter kommer tidigare installerade appar att genomgå en övergång (detta syns inte för användaren eftersom det inte finns något relaterat UX). Appen måste *inte* uttryckligen göra något för att hantera den här övergången. Alla filer som skapas före övergången fortsätter att betraktas som hanterade (därför förblir de krypterade om krypteringsprincipen är aktiv). Om du vill kan du identifiera uppgraderingen och använda `MAMFileProtectionManager.protect` för att tagga specifika filer eller kataloger med den tomma identiteten (vilket tar bort krypteringen om de var krypterade).
@@ -1513,11 +1513,11 @@ Om en app som tidigare lanserats med Intune-integrering med enskild entitet sena
 
 Filidentitetstaggningen känner av offlineläget. Ha följande i åtanke:
 
-  * Om företagsportalen inte är installerad kan du inte tagga filer med identiteter.
+* Om företagsportalen inte är installerad kan du inte tagga filer med identiteter.
 
-  * Om företagsportalen är installerad, men appen saknar Intune MAM-principen, kan principerna inte taggas med identiteten på ett tillförlitligt sätt.
+* Om företagsportalen är installerad, men appen saknar Intune MAM-principen, kan principerna inte taggas med identiteten på ett tillförlitligt sätt.
 
-  * När filidentitetstaggning blir tillgängligt behandlas alla tidigare skapade filer som personliga/ohanterade (tillhör identiteten med en tom sträng), om inte appen redan har installerats som en hanterad app med en enda identitet. Då anses den tillhöra den registrerade användaren.
+* När filidentitetstaggning blir tillgängligt behandlas alla tidigare skapade filer som personliga/ohanterade (tillhör identiteten med en tom sträng), om inte appen redan har installerats som en hanterad app med en enda identitet. Då anses den tillhöra den registrerade användaren.
 
 ### <a name="directory-protection"></a>Katalogskydd
 

@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: b79f488fcaa221523b5833aa1cebcf872d5f9b3d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572519"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354019"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran. Om du vill hantera brandväggsinställningar för Windows-datorer som registrerats som mobila enheter, se [Lägg till endpoint protection-inställningar i Intune](endpoint-protection-configure.md).
+> Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran. Om du vill hantera brand Väggs inställningar för Windows-datorer som registrerats som mobila enheter, se [Lägg till Endpoint Protection-inställningar i Intune](endpoint-protection-configure.md).
 
 Microsoft Intune hjälper dig att skydda dina hanterade Windows-datorer med Intune-klienten på många olika sätt. Ett sätt är att tillhandahålla principer som gör att du kan konfigurera inställningar för Windows-brandväggen på datorer.
 
@@ -140,5 +140,5 @@ Du kan konfigurera undantag som tillåter specifika typer av nätverkstrafik att
 |**Windows Virtual PC**<br>(Windows 7 eller senare)|Låter virtuella datorer kommunicera med andra datorer.|
 |**Trådlösa bärbara enheter**|Tillåter överföring av medier från en nätverksaktiverad kamera eller medieenhet till hanterade datorer med MTP (Media Transfer Protocol). Inställningen använder SSDP- och UPnP-nätverksprotokoll.|
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)

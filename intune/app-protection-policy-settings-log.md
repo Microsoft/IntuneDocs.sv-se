@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acad6b0fa343bdbcc722929886a8e68a4fa4d8bc
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 7f9ee4d978bcb44f3b13ddcf9aafa4a3210f0f7e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885073"
 ---
 # <a name="review-client-app-protection-logs"></a>Granska loggarna för klientappskydd
 
@@ -72,5 +72,5 @@ Följande tabell visar namn och en förklaring av de inställningar som har regi
 
 ## <a name="next-steps"></a>Nästa steg
 
- - Mer information om appskyddsprinciper finns i [vad är appskyddsprinciper?](app-protection-policy.md)
- - Intune erbjuder ett antal verktyg för att hjälpa dig att felsöka problem i din miljö. Mer information finns i [använd felsökningsportalen för att hjälpa användare](help-desk-operators.md).
+- Mer information om appskyddsprinciper finns i [vad är appskyddsprinciper?](app-protection-policy.md)
+- Intune erbjuder ett antal verktyg för att hjälpa dig att felsöka problem i din miljö. Mer information finns i [använd felsökningsportalen för att hjälpa användare](help-desk-operators.md).

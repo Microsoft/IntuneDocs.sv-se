@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7dd6f62cb53dd0cc373fb3f2ffa7d9434b135cd
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 6ee62213c9ef23302de7fa7342569e1903514699
+ms.sourcegitcommit: 11a31cd39b727f2254e2705b07d18924e103bd2e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494248"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341343"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>Under utveckling för Microsoft Intune – juli 2019
 
@@ -60,10 +60,10 @@ För att hjälpa dig med förberedelser och planering innehåller den här sidan
 
 
 ### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Anpassade meddelanden för användare och grupper    <!-- 16766574   -->
-Du kommer snart att kunna skicka anpassade adhoc-push-meddelanden från Företagsportalen-program till användare på iOS och Android-enheter du hanterar med Intune. Dessa anpassade meddelanden som inte är knutna till specifika Intune-funktioner och kan användas i något syfte som du behöver, inklusive allmänna meddelanden som du vill skicka till vissa eller alla dina anställda.  
+Du kommer snart att kunna skicka anpassade ad hoc-push-meddelanden från Företagsportal programmet till användare på iOS-och Android-enheter som du hanterar med Intune. Dessa anpassade meddelanden är inte kopplade till vissa Intune-funktioner och kan användas för alla ändamål du behöver, inklusive allmänna aviseringar som du vill skicka till några eller alla dina anställda.  
 
-### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Konfigurera appen meddelandeinnehåll för organisationskonton <!-- 2576686 -->
-Intunes appskyddsprinciper (APP) på Android och iOS-enheter gör att du kan kontroll appinnehåll meddelande för Org konton. Den här funktionen kräver support från program och kanske inte tillgänglig för alla APP aktiverade program. Mer information om APP finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
+### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Konfigurera program meddelande innehåll för organisations konton <!-- 2576686 -->
+Med Intune App Protection-principer (APP) på Android-och iOS-enheter kan du styra appens meddelande innehåll för org-konton. Den här funktionen kommer att kräva stöd från program och är kanske inte tillgänglig för alla APP-aktiverade program. Mer information om APP finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
 
 ### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956----"></a>Tillgänglig Google Play-apprapportering för Android-arbetsprofiler <!-- 3041956  -->
 För tillgängliga appinstallationer på Androids arbetsprofilenheter kan du visa appens installationsstatus samt den installerade versionen av hanterade Google Play-appar. Mer information finns i [Så här övervakar du appskyddsprinciper](app-protection-policies-monitor.md), [Hantera Android-arbetsprofilenheter med Intune](android-enterprise-overview.md) och [Hanterade Google Play-apptyper](apps-add-android-for-work.md#managed-google-play-app-type).
@@ -87,19 +87,13 @@ Du skapar konfigurationsprofiler för Windows 10-enheter (**Enhetskonfiguration*
 Gäller för: 
 - Windows 10 och senare
 
-### <a name="administrative-templates-for-group-policy---------3510695---"></a>Administrativa mallar för grupprincip     <!--  3510695 -->
-För att förbättra säkerheten för enheter i molnet släpper vi administrativa mallar. Med dem kan du använda Intune för att konfigurera val av grupprincipinställningar för Windows-datorer.  Mallarna använder Policy Configuration Service Provider (CSP) för att erbjuda upp till 2 500 ytterligare inställningar från Office, Windows och OneDrive.
-
-### <a name="manage-filevault-for-macos-------3858502--1210104-----"></a>Hantera FileVault för macOS   <!--  3858502 + 1210104   -->
-Du kommer att kunna använda en Intune endpoint protection enhetskonfigurationsprofil för att hantera FileVault krypteringsnyckel för macOS-enheter. Detta inkluderar escrow för visning av och rotera krypteringsnycklar av företagets enheter. Användarna kommer att kunna hämta dessa nycklar via Företagsportalens webbplats.
-
 ### <a name="advanced-settings-for-windows-defender-firewall-------1311949-------"></a>Avancerade inställningar för Windows Defender-brandväggen   <!--  1311949     -->
 Snart kommer du att kunna använda Intune som offentlig förhandsversion för att hantera anpassade brandväggsregler på klienter för Windows Defender.  
 
-### <a name="new-configuration-designer-when-creating-an-oemconfig-profile-for-android-enterprise----3712769----"></a>Nya configuration designer när du skapar en OEMConfig-profil för Android-företag <!-- 3712769  -->
-I Intune kan du skapa en profil för enhetskonfiguration som använder en app som OEMConfig (enhetskonfiguration > profiler > Skapa profil > Android enterprise för plattform > OEMConfig för Profiltyp). När du gör det öppnas en JSON-redigerare med en mall och värden som du kan ändra. Den här uppdateringen innehåller en Konfigurationsdesigner med ett förbättrat användargränssnitt som visar information som är inbäddad i appen, inklusive titlar och beskrivningar. JSON-redigerare finns kvar och visar alla ändringar du gör i Configuration Designer.
+### <a name="new-configuration-designer-when-creating-an-oemconfig-profile-for-android-enterprise----3712769----"></a>Ny konfigurations design när du skapar en OEMConfig-profil för Android Enterprise <!-- 3712769  -->
+I Intune kan du skapa en enhets konfigurations profil som använder en OEMConfig-app (enhets konfiguration > Profiler > Skapa profil > Android Enterprise for Platform > OEMConfig för profil typ). När du gör det öppnas en JSON-redigerare med en mall och de värden som du kan ändra. Den här uppdateringen innehåller en konfigurations design med en förbättrad användar upplevelse som visar information som är inbäddad i appen, inklusive titlar, beskrivningar och mer. JSON-redigeraren är fortfarande tillgänglig och visar eventuella ändringar som du gör i Configuration designer.
 
-Om du vill visa de aktuella inställningarna går du till [Använd och hantera Android-företagsenheter med OEMConfig](android-oem-configuration-overview.md).
+Om du vill se de aktuella inställningarna går du till [använda och hantera Android Enterprise-enheter med OEMConfig](android-oem-configuration-overview.md).
 
 Gäller: Android Enterprise
 
@@ -107,18 +101,18 @@ Gäller: Android Enterprise
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Enhetshantering
 
-### <a name="improve-device-location---3855417---"></a>Förbättra enhetsplats<!-- 3855417 -->
-Du kommer att kunna Zooma in på de exakta koordinaterna för en enhet med den **hitta enhet** åtgärd. Mer information om att hitta försvunna iOS-enheter finns i [hitta borttappade iOS-enheter](device-locate.md).
+### <a name="improve-device-location---3855417---"></a>Förbättra enhets platsen<!-- 3855417 -->
+Du kan zooma in till de exakta koordinaterna för en enhet med åtgärden **hitta enhet** . Mer information om hur du hittar borttappade iOS-enheter finns i [hitta borttappade iOS-enheter](device-locate.md).
 
-### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Konfigurera automatisk Rensa tidsgränsen till 30 dagar <!--4231059  -->
-Du kommer att kunna ställa in automatisk Rensa tidsgränsen så kort som 30 dagar (i stället för aktuella högst 90 dagar) efter den senaste inloggningen. Du gör detta genom att gå till **Intune** > **enheter** > **installationsprogrammet** > **Rensa upp Enhetsregler**.
+### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Konfigurera automatisk rensning av enhetens tids gräns till 30 dagar <!--4231059  -->
+Du kan ställa in den automatiska tids gränsen för enhets rensning så kort som 30 dagar (i stället för den aktuella gränsen på 90 dagar) efter den senaste inloggningen. Det gör du genom att gå till **Intune** > -**enheter** > **Konfigurera** > **enhet rensa regler**.
 
 
 <!-- ***********************************************-->
 ## <a name="security"></a>Säkerhet
 
-### <a name="import-and-export-security-baselines------3408610------------"></a>Importera och exportera baslinjer för säkerhet    <!--3408610          -->  
-Vi lägger till möjligheten att exportera och importera säkerheten så att du kan ta dina anpassningar med dig och dela filer mellan Intune-miljöer.
+### <a name="import-and-export-security-baselines------3408610------------"></a>Importera och exportera säkerhets bas linjer    <!--3408610          -->  
+Vi lägger till möjligheten att exportera och importera säkerhets bas linjer så att du kan ta dina anpassningar med dig och dela dem mellan Intune-miljöer.
 
 
 

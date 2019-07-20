@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b903cfa9a6700b8931ccedea0f44a9de0d8011
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 7c832fd423a2486fa7c2252513202d82dc432859
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882585"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>API för Microsoft Intune-informationslager
 
 Med API:t för Intune-informationslagret får du tillgång till Intune-data i ett maskinläsligt format som kan användas i valfritt analysverktyg. Du kan använda API:et för att skapa rapporter som ger information om företagets mobilmiljö. API:t använder OData-protokollet som följer standardmönstret för:
 
-  - Sidhuvuden för begäran och svar
-  - Statuskoder
-  - HTTP-metoder
-  - Webbadresskonventioner
-  - Medietyper
-  - Nyttolastformat
-  - Frågealternativ
+- Sidhuvuden för begäran och svar
+- Statuskoder
+- HTTP-metoder
+- Webbadresskonventioner
+- Medietyper
+- Nyttolastformat
+- Frågealternativ
 
 OData (Open Data Protocol) är en OASIS-standard (Organization for the Advancement of Structured Information Standards) som definierar bästa metod för att bygga och använda RESTful-API:er. I Intune-informationslagret används OData version 4.0.
 
@@ -56,8 +56,8 @@ Mer information finns i [Hämta data från API för informationslager med en RES
 
 API:et måste auktoriserad med Azure AD. Azure AD använder OAuth 2.0. När det har auktoriserats kan du hämta data från API:et med ett HTTP GET-verb och genom att kontakta de visade entitetssamlingarna. Mer information finns i:
 
- - [Auktorisering](reports-api-url.md)
- - [API-webbadresstruktur](reports-api-url.md)
+- [Auktorisering](reports-api-url.md)
+- [API-webbadresstruktur](reports-api-url.md)
 
 ## <a name="intune-data-warehouse-data-model"></a>Datamodellen Intune-informationslager
 

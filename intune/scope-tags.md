@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 627899eafb2175b2d3034045bd765a10f4a203d6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882495"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT
 
@@ -42,8 +42,8 @@ Anta exempelvis att en regional kontorsadministratör i Seattle tilldelas rollen
 
     ![Skärmbild av skapande av en omfångstagg.](./media/scope-tags/create-scope-tag.png)
 
-3. Om du vill att alla enheter i specifika grupper, Välj **tilldelas alla enheter i valda grupper omfångstaggen**.
-    1. I den **Välj grupper att ta** väljer du de grupper som innehåller de enheter som du vill tilldela den här omfångstaggen till.
+3. Om du vill använda alla enheter i vissa grupper väljer du **tilldela scope-tagg till alla enheter i valda grupper**.
+    1. På sidan **Välj grupper att inkludera** väljer du de grupper som innehåller de enheter som du vill tilldela den här omfångs tag gen till.
     2. Välj **Välj**.
 4. Välj **Skapa**.
 
@@ -108,17 +108,17 @@ För enheter med **Enhetsregistreringstyp** inställd på **Hanterade appar**:
 När du arbetar med omfångstaggar bör du beakta följande:
 
 - För närvarande kan du tilldela omfångstaggar till:
-    - Rolltilldelningar
-    - Efterlevnadsprinciper för enheter
-    - Enhetens konfigurationsprofiler
-    - Windows 10-uppdateringsringar
-    - Hanterade enheter
-    - Appar
-    - Appkonfigurationsprinciper – hanterade enheter
-    - PowerShell-skript
-    - DEP-token
-    - iOS-appetableringsprofil
-    - VPP-token (volyminköpsprogram)
+  - Rolltilldelningar
+  - Efterlevnadsprinciper för enheter
+  - Enhetens konfigurationsprofiler
+  - Windows 10-uppdateringsringar
+  - Hanterade enheter
+  - Appar
+  - Appkonfigurationsprinciper – hanterade enheter
+  - PowerShell-skript
+  - DEP-token
+  - iOS-appetableringsprofil
+  - VPP-token (volyminköpsprogram)
 - När en administratör skapar ett objekt i Intune tilldelas alla omfångstaggar som tilldelats till den administratören automatiskt till det nya objektet.
 - Intune RBAC gäller inte för Azure Active Directory-roller. Därför har rollerna Intune-tjänstadministratörer och Globala administratörer fullständig administratörsåtkomst till Intune oavsett vilka omfångstaggar de har.
 - Administratörer i en rolltilldelning med omfångstaggar kan även se Intune-objekt utan omfångstaggar.

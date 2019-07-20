@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5614f0657175658c1a8442d650e16c8550c1ac1
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884271"
 ---
 # <a name="what-is-device-management"></a>Vad är enhetshantering? 
 
@@ -58,8 +58,8 @@ En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhe
 
 - **Windows Defender** innehåller många säkerhetsfunktioner som skyddar Windows 10-enheter. Om du t.ex. använder Intune och Windows Defender tillsammans kan du: 
 
-    - Aktivera [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) och söka efter misstänkt aktivitet i filer och appar på mobila enheter. 
-    - Använd [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) för att förhindra säkerhetsintrång på mobila enheter. Och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användares åtkomst till företagets resurser.
+  - Aktivera [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) och söka efter misstänkt aktivitet i filer och appar på mobila enheter. 
+  - Använd [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) för att förhindra säkerhetsintrång på mobila enheter. Och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användares åtkomst till företagets resurser.
 
 - **Villkorsstyrd åtkomst** är en funktion i Azure Active Directory som integreras smidigt med Intune. Med hjälp av [Villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access) kan du se till att endast kompatibla enheter får åtkomst till e-post, SharePoint och andra appar. 
 

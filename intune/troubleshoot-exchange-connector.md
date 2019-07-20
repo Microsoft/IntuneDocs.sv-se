@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bdb727b542cd66e0b8fcf4a0822eaf0107600ad
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735729"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354464"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Felsöka lokal Intune Exchange-anslutning
 
@@ -51,5 +51,5 @@ Kontrollera [konfigurationen av lokal Intune Exchange-anslutning](exchange-conne
 - Om du vill hämta en lista över SMTP-adresser för en postlåda använder du Get-Mailbox -Identity user | select emailaddresses | fl
 - Om du vill hämta detaljerad information om en enhets åtkomststatus använder du Get-CASMailbox <upn> | fl
 
-### <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Nästa steg
 Om den här informationen inte är till hjälp kan du även [få support för Microsoft Intune](get-support.md).

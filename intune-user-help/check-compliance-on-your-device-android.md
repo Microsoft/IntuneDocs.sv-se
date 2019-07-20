@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f012b1cec67de762bbc245f249125f29d37c6930
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: c3287238900725acebefc23eb00246cd04c7a5bb
+ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506853"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68230075"
 ---
 # <a name="check-compliance-on-your-android-device"></a>Kontrollera efterlevnad på din Android-enhet
 
@@ -31,6 +31,6 @@ Du kanske inte kan komma åt resurser i ditt företag eller din skola om din enh
 
 1. Öppna företagsportalappen för Android på din enhet.  
 
-2. Tryck på **Kontrollera enhetsinställningar**.  
+2. Tryck på **Kontrollera enhetsinställningar**.   
 
 Om du inte kan återställa den förlorade eller stulna enheten ber du företagets support att återställa den åt dig. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

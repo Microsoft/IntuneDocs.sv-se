@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dad2d22b742b62ca35bd7fb98c7f7e8241cbb4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 0eca9dfddbf9ea2c68cf58b1da64d9b046df7e77
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402907"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353638"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Hantera användarenhetslänkar för Windows-datorer
 
@@ -32,7 +32,7 @@ Informationen i det här avsnittet gäller endast för stationära Windows-dator
 
 Innan du kan distribuera programvara till en användare måste du koppla användaren till en dator. Du kan koppla en användare till flera datorer, men varje dator kan bara kopplas till en enda användare. Användarna länkas automatiskt till alla datorer som de registrerar i Intune med hjälp av företagsportalen.
 
-Mer information om primär användare för en enhet finns i [hitta primär användare](find-primary-user.md).
+Mer information om en enhets primära användare finns i [hitta primär användare](find-primary-user.md).
 
 Länka en användare till en dator:
 
@@ -53,6 +53,6 @@ Länka en användare till en dator:
 > [!TIP]
 > Om du vill begränsa slutanvändarnas möjlighet att länka sig själva till datorer aktiverar du alternativet **Begränsa användarnas möjlighet att länka sig själva till datorer** i principen **Agentinställningar för Microsoft Intune**.
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

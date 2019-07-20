@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85435acffbad3117f6adbbafe60e1993b2d18bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b55368f5c512ff3efd4059d420717321729450ee
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884068"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Fjärrlås din enhet från företagsportalens webbplats
 
@@ -44,7 +44,7 @@ Inställningen Fjärrlås fungerar med:
 
     ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/rename-reset-device-step2-1808.png) 
 
-3. Tryck på **Fjärrlås**. Om låsalternativet inte visas längst upp på sidan väljer du **Mer (…)** > **Fjärrlås**.  
+3. Tryck på **Fjärrlås**. Om låsalternativet inte visas längst upp på sidan väljer du **Mer (…)**  > **Fjärrlås**.  
 
    ![Sidan med enhetsinformation för en vald enhet på webbplatsen för företagsportalen, med en lista över länkar längst upp som visar Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/rename-reset-device-1808.png) 
 
@@ -56,9 +56,9 @@ Efter bekräftelsen försöker företagsportalen låsa enheten. Meddelandet ”F
 
 Fjärrlåsningens status visas på tre platser:
 
-   * Meddelandefältet på webbplatsen.
-   * Sidan **Information** för enheten.
-   * Panelen som visar namnet på enheten i avsnittet **Enheter** på sidan.  
+* Meddelandefältet på webbplatsen.
+* Sidan **Information** för enheten.
+* Panelen som visar namnet på enheten i avsnittet **Enheter** på sidan.  
 
 > [!Note]
 > Om du ser ett meddelande om att fjärrlåsningen misslyckades kan du vänta några minuter. Försök sedan att låsa enheten igen. Statusen ändras till ”Fjärrlås väntar” igen. Om det inte fungerar att försöka igen kontaktar du företagets support för att få hjälp.

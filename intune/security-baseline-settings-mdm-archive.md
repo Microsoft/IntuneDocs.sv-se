@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb6cd7b1d717cd289b65e1e05566bd07471ad84f
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 220327c48712881e57efa1a91b9d00a64ba3e0be
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884692"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -34,11 +34,11 @@ När en ny säkerhets bas linje för MDM lanseras flyttas den tidigare listan ö
 När en bas linje version inte längre stöds för användning kommer den att tas bort från den här artikeln.
 
 - Visa de inställningar som är tillgängliga i [den aktuella säkerhets bas linjen för MDM](security-baseline-settings-mdm.md) 
-- Lär dig [mer om säkerhets](security-baselines.md)bas linjer och hur du uppgraderar bas linje versionen i dina profiler för säkerhets bas linjen.
+- Lär dig mer om [säkerhets bas linjer](security-baselines.md)och hur du uppgraderar bas linje versionen i dina profiler för säkerhets bas linjen.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018  
 
-*Den här bas linjen ersätts [av säkerhets bas linjen för MDM för våren 2019 (19H1)](security-baseline-settings-mdm.md)*
+*Den här bas linjen ersätts av [säkerhets bas linjen för MDM för våren 2019 (19H1)](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>På låsskärmen  
 
@@ -97,23 +97,23 @@ Mer information finns i [CSP-princip – Bitlocker](https://docs.microsoft.com/w
 
   Konfigurera följande inställningar för BitLockers princip för flyttbar enhet:
 
-    - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
-      **Standard**: Ja  
-  
-    - **Krypteringsmetod**  
-      **Standard**: AES 256-bitars CBC  
+  - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
+    **Standard**: Ja  
+
+  - **Krypteringsmetod**  
+    **Standard**: AES 256-bitars CBC  
 
 - **Bit locker fixed drive policy** (Princip för BitLocker på fasta enheter)  
   Den här inställningen används för att styra krypteringsmetoden och krypteringsstyrkan. Värdena för den här principen avgör krypteringsstyrkan som BitLocker använder för kryptering. Företag kanske vill styra krypteringsnivån för ökad säkerhet (AES-256 är starkare än AES-128). Om du aktiverar den här inställningen kan du konfigurera en krypteringsalgoritm och krypteringsstyrkan för nycklar för fasta dataenheter, operativsystemenheter och flyttbara dataenheter separat. För fasta enheter och operativsystemenheter rekommenderar vi att du använder XTS-AES-algoritmen. För flyttbara dataenheter bör du använda AES-CBC 128-bitars eller AES-CBC 256-bitars om dataenheten används i andra enheter som inte kör Windows 10 version 1511 eller senare. Ändringar av krypteringsmetoden har ingen effekt om enheten redan har krypterats eller om kryptering pågår. I dessa fall ignoreras den här principinställningen.  
  
-   Konfigurera följande inställningar för BitLockers princip för fasta enhet: 
-   - **Krypteringsmetod**
-     **Standard**: AES 256-bitars XTS  
+  Konfigurera följande inställningar för BitLockers princip för fasta enhet: 
+  - **Krypteringsmetod**  
+    **Standard**: AES 256-bitars XTS  
 
 - **Bit locker system drive policy** (Princip för BitLocker på systemenheter)  
   Den här inställningen används för att styra krypteringsmetoden och krypteringsstyrkan. Värdena för den här principen avgör krypteringsstyrkan som BitLocker använder för kryptering. Företag kanske vill styra krypteringsnivån för ökad säkerhet (AES-256 är starkare än AES-128). Om du aktiverar den här inställningen kan du konfigurera en krypteringsalgoritm och krypteringsstyrkan för nycklar för fasta dataenheter, operativsystemenheter och flyttbara dataenheter separat. För fasta enheter och operativsystemenheter rekommenderar vi att du använder XTS-AES-algoritmen. För flyttbara dataenheter bör du använda AES-CBC 128-bitars eller AES-CBC 256-bitars om dataenheten används i andra enheter som inte kör Windows 10 version 1511 eller senare. Ändringar av krypteringsmetoden har ingen effekt om enheten redan har krypterats eller om kryptering pågår. I dessa fall ignoreras den här principinställningen.  
 
-   Konfigurera följande inställningar för BitLockers princip för systemenhet:
+  Konfigurera följande inställningar för BitLockers princip för systemenhet:
   - **Krypteringsmetod**  
     **Standard**: AES 256-bitars XTS  
 
@@ -219,33 +219,33 @@ Mer information finns i [CSP-princip – DeviceInstallation](https://docs.micros
   
   **Standard**: Blockera installation av maskinvaruenheter  
 
-    När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
-  
-    - **Remove matching hardware devices**  (Ta bort matchande maskinvaruenheter)  
-    Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
-      
-      **Standard**: Ja
-  
-    - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
-       Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
-      
-      **Standard**: Ja  
+  När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
+
+  - **Remove matching hardware devices**  (Ta bort matchande maskinvaruenheter)  
+  Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
+    
+    **Standard**: Ja
+
+  - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
+      Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
+    
+    **Standard**: Ja  
   
 - **Hardware device installation by setup classes** (Installation av maskinvaruenheter efter installationsklass)  
   Med den här principinställningen kan du ange en lista med klass-GUID för enhetsinstallation för enhetsdrivrutiner som Windows hindrar från att installeras. Den här inställningen har företräde framför alla andra principinställningar som tillåter att Windows installerar en enhet. Om du aktiverar den här principinställningen kan inte Windows installera eller uppdatera enhetsdrivrutiner vars klass-GUID för enhetsinstallation visas i listan du skapar. Om du aktiverar den här principinställningen på en fjärrskrivbordsserver påverkar principinställningen omdirigeringen av de angivna enheterna från en fjärrskrivbordsklient till fjärrskrivbordsservern. Om du inaktiverar eller inte konfigurerar den här principinställningen kan Windows installera och uppdatera enheter beroende på om de tillåts eller förhindras av andra principinställningar.
   
   **Standard**: Blockera installation av maskinvaruenheter  
 
-    När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
-    - **Remove matching hardware devices**   (Ta bort matchande maskinvaruenheter)  
-    Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).  
+  När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
+  - **Remove matching hardware devices**   (Ta bort matchande maskinvaruenheter)  
+  Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).  
 
-      **Standard**: *Ingen standardkonfiguration*  
-  
-    - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
-      Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
-      
-      **Standard**: *Ingen standardkonfiguration*  
+    **Standard**: *Ingen standardkonfiguration*  
+
+  - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
+    Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
+    
+    **Standard**: *Ingen standardkonfiguration*  
 
 ### <a name="device-lock"></a>Enhetslås  
 
@@ -992,12 +992,12 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
   
 - **Administrator elevation prompt behavior** (Fråga om beteende för utökade administratörsprivilegier)  
   Den här principinställningen styr beteendet för frågan om utökade privilegier för administratörer. Alternativen är: 
-    - *Utöka privilegier utan att fråga*: Tillåter att behöriga konton utför en åtgärd som kräver utökade privilegier utan att kräva godkännande eller autentiseringsuppgifter. Obs! Använd endast det här alternativet i de mest begränsade miljöerna. 
-    - *Fråga efter autentiseringsuppgifter på skyddat skrivbord*: När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett privilegierat användarnamn och lösenord på det skyddade skrivbordet. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med användarens högsta behörigheter. 
-    - *Fråga efter medgivande på skyddat skrivbord*: När en åtgärd kräver utökade privilegier uppmanas användaren att välja antingen Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter. 
-    - *Fråga efter autentiseringsuppgifter*: När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett användarnamn och lösenord för administratörer. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med tillämplig behörighet. 
-    - *Fråga efter medgivande*: När en åtgärd kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter.  
-    - *Fråga efter medgivande för binära filer som inte tillhör Windows*: När en åtgärd för ett program från tredje part kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter.   
+  - *Utöka privilegier utan att fråga*: Tillåter att behöriga konton utför en åtgärd som kräver utökade privilegier utan att kräva godkännande eller autentiseringsuppgifter. Obs! Använd endast det här alternativet i de mest begränsade miljöerna. 
+  - *Fråga efter autentiseringsuppgifter på skyddat skrivbord*: När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett privilegierat användarnamn och lösenord på det skyddade skrivbordet. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med användarens högsta behörigheter. 
+  - *Fråga efter medgivande på skyddat skrivbord*: När en åtgärd kräver utökade privilegier uppmanas användaren att välja antingen Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter. 
+  - *Fråga efter autentiseringsuppgifter*: När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett användarnamn och lösenord för administratörer. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med tillämplig behörighet. 
+  - *Fråga efter medgivande*: När en åtgärd kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter.  
+  - *Fråga efter medgivande för binära filer som inte tillhör Windows*: När en åtgärd för ett program från tredje part kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter.   
   
   **Standard**: Fråga efter medgivande på det skyddade skrivbordet
   
@@ -1010,12 +1010,12 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
   **Standard**: Kräv NTLM V2 128-kryptering
   
 - **Beteende vid borttagning av smartkort**  
-    Den här säkerhetsinställningen avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren. Alternativen är:
-     - *Ingen åtgärd*. 
-     - *Lås arbetsstation* – Arbetsstationen låses när smartkortet tas bort, vilket gör att användare kan lämna området, ta sina smartkort med sig och behålla en skyddad session.
-     - *Framtvinga utloggning* – användaren loggas ut automatiskt när smartkortet tas bort.
-     - *Koppla från Remote Desktop Services-session* – om smartkortet tas bort så kopplas sessionen från utan att användaren loggas ut. Med det här alternativet kan användaren sätta i smartkortet och fortsätta sessionen senare, eller vid en annan dator med smartkortsläsare, utan att behöva logga in igen. Om sessionen är lokal fungerar den här principen precis som Lås arbetsstationen.  <br><br>
-    
+  Den här säkerhetsinställningen avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren. Alternativen är:
+  - *Ingen åtgärd*. 
+  - *Lås arbetsstation* – Arbetsstationen låses när smartkortet tas bort, vilket gör att användare kan lämna området, ta sina smartkort med sig och behålla en skyddad session.
+  - *Framtvinga utloggning* – användaren loggas ut automatiskt när smartkortet tas bort.
+  - *Koppla från Remote Desktop Services-session* – om smartkortet tas bort så kopplas sessionen från utan att användaren loggas ut. Med det här alternativet kan användaren sätta i smartkortet och fortsätta sessionen senare, eller vid en annan dator med smartkortsläsare, utan att behöva logga in igen. Om sessionen är lokal fungerar den här principen precis som Lås arbetsstationen.  <br><br>
+
   **Standard**: Lås arbetsstation
   
 - **Block anonymous enumeration of SAM accounts and shares** (Blockera anonym uppräkning av SAM-konton och resurser)  

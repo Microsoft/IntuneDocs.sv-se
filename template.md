@@ -14,12 +14,12 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: d05559a46cfd2bf9e092378e7cff779022e21792
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0a5e90c6bc6b352f4d7a0fc0ae22c65110563461
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61509656"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354403"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadata- och markdownmall
 
@@ -124,13 +124,13 @@ När en webbadress finns i en markdownfil omvandlas den till en klickbar länk.
 - lista
 
 
-##### <a name="unordered-list-with-an-embedded-lists"></a>Osorterad lista med en inbäddad lista
+#### <a name="unordered-list-with-an-embedded-lists"></a>Osorterad lista med en inbäddad lista
 
 - Denna 
 - punkt- 
 - lista
-    - Fru Hansson
-    - Herr Berggren
+  - Fru Hansson
+  - Herr Berggren
 - innehåller  
 - andra
     1. Överste Karlsson

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29aa32b02f5ab97707ce76eb10a84a8913a9f702
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: d09a996e3e1a47cae33e8a4189b4406a940acfe3
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572296"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353268"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nyheter i den klassiska Intune-portalen – föregående månader
 
@@ -375,5 +375,5 @@ __Symantec signeringscertifikat kräver inte längre signerad Windows Phone 8-f�
 __Stöd för Windows Phone 8-företagsportalen__ Stöd för Windows Phone 8-företagsportalen kommer att upphöra. Stöd för Windows Phone 8- och WinRT-plattformarna upphörde oktober 2016. Stöd för Windows Phone 8-företagsportalen upphörde också det oktober 2016.
 
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune](whats-new.md).

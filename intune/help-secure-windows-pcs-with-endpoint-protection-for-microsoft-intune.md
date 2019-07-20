@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 61e0a7fa4fa63e17a1fa4165042d9e82a2ffacc2
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548766"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354097"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Skydda Windows-datorer med Endpoint Protection för Microsoft Intune
 
@@ -145,8 +145,8 @@ Inställningen **Filnamnstillägg att undanta när en sökning körs eller när 
 
 ### <a name="specify-microsoft-active-protection-service-settings"></a>Ange Microsoft Active Protection Service-inställningar
 Microsoft Active Protection Service är en online-community som hjälper dig att bestämma hur du ska svara på potentiella hot. Gruppen kan även stoppa spridning av nya infektioner av skadlig kod. Du kan **Delta i Microsoft Active Protection Service** genom att välja **Ja** och sedan ange din **medlemskapsnivå**:
-  - **Grundläggande** – skickar grundläggande information till Microsoft om skadlig kod som upptäckts. Här ingår varifrån programmet kommer, vilka åtgärder som du har utfört eller som Endpoint Protection vidtar automatiskt samt om åtgärderna hade önskat resultat.
-  - **Avancerad** – skickar information till Microsoft om skadlig programvara, spionprogram och oönskad programvara. Här ingår information om programvarans plats, filnamn, hur programvaran fungerar och hur den påverkar din dator.
+- **Grundläggande** – skickar grundläggande information till Microsoft om skadlig kod som upptäckts. Här ingår varifrån programmet kommer, vilka åtgärder som du har utfört eller som Endpoint Protection vidtar automatiskt samt om åtgärderna hade önskat resultat.
+- **Avancerad** – skickar information till Microsoft om skadlig programvara, spionprogram och oönskad programvara. Här ingår information om programvarans plats, filnamn, hur programvaran fungerar och hur den påverkar din dator.
 
 Du kan också **Ta emot dynamiska definitioner baserat på Microsoft Active Protection Service-rapporter**.
 
@@ -197,5 +197,5 @@ Intune kan antingen köra en fullständig sökning eller snabbsökning efter ska
 ## <a name="need-more-help"></a>Behöver du mer hjälp?
 Mer hjälp och support finns i [Felsöka slutpunktsskydd i Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md).
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)
