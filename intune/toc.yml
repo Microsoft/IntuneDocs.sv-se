@@ -382,6 +382,8 @@
               href: privacy-data-view-correct.md
             - name: 'Granska, exportera, ta bort'
               href: privacy-data-audit-export-delete.md
+        - name: Kryptera enheter
+          href: encrypt-devices.md
         - name: Villkorlig åtkomst
           href: conditional-access.md
           items:
