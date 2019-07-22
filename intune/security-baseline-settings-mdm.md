@@ -16,25 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
-ms.translationtype: MTE75
+ms.openlocfilehash: 30cdb6903caa7e1071a6781db13c761e64f8bd7a
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549069"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735763"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Inställningar för MDM-säkerhetsbaslinjer för Intune  
 
-Visa MDM baslinje säkerhetsinställningarna som stöds av Microsoft Intune för enheter som kör Windows 10 eller senare. Standardvärden för inställningarna i den här baslinjen är den rekommenderade konfigurationen för tillämpliga enheter och kanske inte överensstämmer med baslinjen standardvärden från andra säkerheten.  
+Visa inställningarna för säkerhets bas linje för MDM som stöds av Microsoft Intune för enheter som kör Windows 10 eller senare. Standardvärdena för inställningarna i den här bas linjen representerar den rekommenderade konfigurationen för tillämpliga enheter och kanske inte matchar bas linje standardvärden från andra säkerhets bas linjer.  
 
-Senaste baslinjeversionen är **MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19 H 1)**  
+Den senaste bas linje versionen är **säkerhets bas linje för MDM för våren 2019 Update (19H1)**  
 
-Läs om vad som ändrats i den senaste versionen av den här baslinjen från den tidigare versionen i [vad som ändrats i den nya mallen](#whats-changed-in-the-new-template).  
+Om du vill veta mer om vad som har ändrats i den senaste versionen av den här bas linjen från den tidigare versionen, se [vad som har ändrats i den nya mallen](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> I juni 2019 säkerhetsbaslinje för förhandsversion MDM ersattes med lanseringen av den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19H 1)* mall som är generaly tillgängliga (inte i förhandsversion). Profiler som skapades före tillgängligheten för den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19 H 1)* baslinje inte uppdateras för att återspegla de inställningar och värden som finns i MDM-Säkerhetsbaslinje för Spring 2019 uppdatering (19 H 1 ) version.  Men du inte kan skapa nya profiler baserat på mallen som förhandsversion, kan du redigera och fortsätta att använda profiler som du skapade tidigare och som är baserade på mallen som förhandsversion.   
+> I juni 2019 ersattes för hands versionen av säkerhets bas linjen för för hands versionen av säkerhets *bas linjen för MDM för våren 2019 Update (19H1)* , som är allmänt tillgänglig (inte för hands version). Profiler som har skapats före tillgängligheten för MDM- *Säkerhetsbas linjen för våren 2019 Update (19H1)* kan inte uppdateras för att avspegla de inställningar och värden som finns i säkerhets bas linjen för MDM för våren 2019 Update (19H1).  Även om du inte kan skapa nya profiler baserade på för hands versions mal len kan du redigera och fortsätta att använda profiler som du skapade tidigare och som baseras på för hands versions mal len.   
   
-Läs om hur du använder säkerheten med Intune i [använder säkerhetsbaslinjer](security-baselines.md).  
+Information om hur du använder säkerhets bas linjer med Intune finns i [använda säkerhets bas linjer](security-baselines.md).  
 
 
    
@@ -64,16 +64,16 @@ Mer information finns i [CSP – AppRuntime](https://docs.microsoft.com/windows/
 ## <a name="application-management"></a>Programhantering   
 Mer information finns i [CSP – ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) i Windows-dokumentationen.  
 
-- **Blockera användarkontroll över installationer**  
-  Den här inställningen tillåter användare att ändra några installationsalternativ som vanligtvis är endast tillgängliga för administratörer. Om du aktiverar den här inställningen är några av säkerhetsfunktionerna i Windows Installer kringgås. Det gör det möjligt för installationer som annars skulle stoppas på grund av en säkerhetsöverträdelse. Om du inaktiverar eller inte konfigurerar den här inställningen hindra användare från att ändra installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange katalogen som filerna med hjälp av säkerhetsfunktionerna i Windows Installer. Om Windows Installer upptäcker att ett installationspaket tillåter att användaren ändrar ett skyddat alternativ, stoppar installationen och visar ett meddelande. Säkerhetsfunktionerna fungerar bara när installationsprogrammet körs i en säkerhetskontext som den har åtkomst till kataloger som användaren. Den här inställningen är utformat för mindre restriktivt miljöer. Det kan användas för att kringgå fel i ett installationsprogram som förhindrar att programvara installeras.  
+- **Blockera användar kontroll över installationer**  
+  Med den här princip inställningen kan användarna ändra installations alternativ som vanligt vis bara är tillgängliga för system administratörer. Om du aktiverar den här princip inställningen kringgås några av säkerhetsfunktionerna i Windows Installer. Det gör att installationer kan slutföras på grund av en säkerhets överträdelse. Om du inaktiverar eller inte konfigurerar den här princip inställningen kan säkerhetsfunktionerna i Windows Installer hindra användare från att ändra installations alternativ som vanligt vis är reserverade för system administratörer, till exempel att ange katalogen där filerna installeras. Om Windows Installer upptäcker att ett installations paket har tillåtit att användaren ändrar ett skyddat alternativ, stoppar installationen och visar ett meddelande. Dessa säkerhetsfunktioner fungerar bara när installations programmet körs i en privilegie rad säkerhets kontext där det har åtkomst till kataloger som nekas till användaren. Den här inställningen är utformad för mindre restriktiva miljöer. Det kan användas för att kringgå fel i ett installations program som förhindrar att program vara installeras.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
   **Standard**: Ja
 
-- **Blockera MSI appinstallationer med förhöjd behörighet**  
+- **Blockera installationer av MSI-appar med utökade privilegier**  
   Den här policyinställningen säger till Windows Installer att använda förhöjda behörigheter när alla program installeras på systemet.  
-  - *Om du aktiverar den här inställningen*, behörighet har utökats till alla program. Dessa privilegier är vanligtvis reserverade för program som har tilldelats användaren (erbjuds på skrivbordet), tilldelats datorn (installeras automatiskt)-f eller som har gjorts tillgängliga i Lägg till eller ta bort program på Kontrollpanelen. Den här profilinställningen låter användare installera program som kräver åtkomst till kataloger som användaren kanske inte behörighet att visa eller ändra, inklusive kataloger på mycket restriktiva datorer.
-  - *Om du inaktiverar eller inte konfigurerar den här inställningen*, den aktuella användarens behörigheter tillämpas när program som en systemadministratör inte distribuera eller erbjuda installeras. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. Om du vill göra den här inställningen ska vara effektiva måste du aktivera det i båda mapparna. Varning: Skickliga användare kan dra nytta av behörigheterna som den här inställningen ger att ändra sina privilegier och få permanent åtkomst till begränsade filer och mappar. Observera att Användarkonfiguration-versionen av den här inställningen inte är garanterat säker.  
+  - *Om du aktiverar den här inställningen*utökas behörigheter till alla program. Dessa privilegier reserveras vanligt vis för program som har tilldelats användaren (erbjuds på Skriv bordet), tilldelad till datorn (installeras automatiskt) f eller gjorts tillgänglig i Lägg till eller ta bort program på kontroll panelen. Med den här profil inställningen kan användarna installera program som behöver åtkomst till kataloger som användaren kanske inte har behörighet att visa eller ändra, inklusive kataloger på datorer med hög begränsning.
+  - *Om du inaktiverar eller inte konfigurerar den här policy inställningen*tillämpar systemet den aktuella användarens behörigheter när program som en system administratör har installerat inte distribuerar eller erbjuder. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. För att den här inställningen ska vara effektiv måste du aktivera den i båda mapparna. Varning! erfarna användare kan dra nytta av de behörigheter som den här princip inställningen ger för att ändra sina privilegier och få permanent åtkomst till begränsade filer och mappar. Observera att användar konfigurations versionen av denna princip inställning inte garanterat är säker.  
   
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067134)    
 
@@ -270,44 +270,44 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
   
   **Standard**: Ja  
   
-    När *Kräv lösenord* är inställt på *Ja*, är följande inställningar tillgängliga.
+  När *Kräv lösenord* är inställt på *Ja*, är följande inställningar tillgängliga.
 
-    - **Password minimum character set count** (Minsta antal tecken för lösenord)  
-      Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. PIN-kod tillämpar följande beteende för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1.  
-      [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067055)  
+  - **Password minimum character set count** (Minsta antal tecken för lösenord)  
+    Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. PIN-kod tillämpar följande beteende för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1.  
+    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067055)  
+    
+    **Standard**: 3  
+
+  - **Antal felaktiga inloggningar innan enheten rensas**  
+    Antal misslyckade autentiseringsförsök som tillåts innan enheten rensas. Värdet 0 inaktiverar enhetsrensningsfunktionen.  
+    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067030)  
       
-      **Standard**: 3  
-  
-    - **Antal felaktiga inloggningar innan enheten rensas**  
-      Antal misslyckade autentiseringsförsök som tillåts innan enheten rensas. Värdet 0 inaktiverar enhetsrensningsfunktionen.  
-      [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067030)  
-        
-      **Standard**: 10  
-  
-    - **Lösenordets giltighetstid (i dagar)**  
-      Principinställningen Högsta ålder för lösenord anger hur länge (i dagar) som ett lösenord kan användas innan systemet kräver att användaren ändrar det. Du kan ange att lösenord upphör att gälla efter ett visst antal dagar mellan 1 och 999, eller ange att lösenorden aldrig upphör att gälla genom att ange antalet dagar till 0. Om den högsta lösenordsåldern är mellan 1 och 999 dagar, måste den minsta lösenordsåldern vara mindre än den högsta lösenordsåldern. Om den högsta lösenordsåldern anges till 0, kan den minsta lösenordsåldern vara ett värde mellan 0 och 998 dagar.  
-      [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067028)  
-      
-      **Standard**: 60  
-  
-    - **Lösenordstyp krävs**  
-      Avgör vilken typ av PIN-kod eller lösenord som krävs.  
-      [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067027)  
-      
-      **Standard**: Alfanumeriskt  
-  
-    - **Minsta längd på lösenord**  
-      Inställningen Minsta längd för lösenord avgör det minsta antal tecken som ett lösenord för ett användarkonto måste innehålla. Du kan ange ett värde mellan 1 och 14 tecken, eller ange att inga lösenord krävs genom att ange antalet tecken till 0.  
-      [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067024)  
-      
-      **Standard**: 8  
-  
-    - **Blockera enkla lösenord**  
-      Anger om PIN-koder eller lösenord, till exempel ”1111” eller ”1234” tillåts. För en stationär dator styr inställningen även användningen av bildlösenord.  
-      [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067127) 
-      
-      **Standard**: Ja  
-        *Inställningen Ja förhindrar användningen av enkla lösenord.* 
+    **Standard**: 10  
+
+  - **Lösenordets giltighetstid (i dagar)**  
+    Principinställningen Högsta ålder för lösenord anger hur länge (i dagar) som ett lösenord kan användas innan systemet kräver att användaren ändrar det. Du kan ange att lösenord upphör att gälla efter ett visst antal dagar mellan 1 och 999, eller ange att lösenorden aldrig upphör att gälla genom att ange antalet dagar till 0. Om den högsta lösenordsåldern är mellan 1 och 999 dagar, måste den minsta lösenordsåldern vara mindre än den högsta lösenordsåldern. Om den högsta lösenordsåldern anges till 0, kan den minsta lösenordsåldern vara ett värde mellan 0 och 998 dagar.  
+    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067028)  
+    
+    **Standard**: 60  
+
+  - **Lösenordstyp krävs**  
+    Avgör vilken typ av PIN-kod eller lösenord som krävs.  
+    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067027)  
+    
+    **Standard**: Alfanumeriskt  
+
+  - **Minsta längd på lösenord**  
+    Inställningen Minsta längd för lösenord avgör det minsta antal tecken som ett lösenord för ett användarkonto måste innehålla. Du kan ange ett värde mellan 1 och 14 tecken, eller ange att inga lösenord krävs genom att ange antalet tecken till 0.  
+    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067024)  
+    
+    **Standard**: 8  
+
+  - **Blockera enkla lösenord**  
+    Anger om PIN-koder eller lösenord, till exempel ”1111” eller ”1234” tillåts. För en stationär dator styr inställningen även användningen av bildlösenord.  
+    [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067127) 
+    
+    **Standard**: Ja  
+      *Inställningen Ja förhindrar användningen av enkla lösenord.* 
 
   - **Förhindra återanvändning av tidigare lösenord**  
     Anger hur många lösenord som kan sparas i historiken och som inte får återanvändas. Värdet inkluderar användarens aktuella lösenord. Till exempel med en inställning på *1* kan användaren inte återanvända deras aktuella lösenord när du väljer ett nytt lösenord. En inställning på *5* innebär att en användare inte kan ange sitt nya lösenord till sitt aktuella lösenord eller något av de fyra tidigare lösenorden.  
@@ -331,7 +331,7 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
 ## <a name="dma-guard"></a>DMA-skydd  
 Mer information finns i [CSP-princip – DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) i Windows-dokumentationen.
 - **Uppräkning av externa enheter som är inkompatibla med Kernel DMA-skydd**  
-  Den här principen är avsedd att ge extra säkerhet mot externa DMA kompatibla enheter. Det möjliggör större kontroll över uppräkning av externa DMA-kompatibla enheter som inte är kompatibla med minnesisolering och sandbox-miljö för DMA-mappning/-enhet. Den här principen börjar bara gälla när Kernel DMA-skydd stöds och aktiveras av datorns inbyggda programvara. Kernel DMA-skydd är en plattform-funktion som inte kan styras via princip eller av slutanvändaren. Den måste stödjas av systemet vid tidpunkten för tillverkning. Om du vill kontrollera om systemet har stöd för Kernel DMA-skydd, Kontrollera fältet Kernel DMA-skydd på sidan Sammanfattning i MSINFO32.exe.  
+  Den här principen är avsedd att ge ytterligare säkerhet mot externa DMA-kompatibla enheter. Det möjliggör större kontroll över uppräkning av externa DMA-kompatibla enheter som inte är kompatibla med minnesisolering och sandbox-miljö för DMA-mappning/-enhet. Den här principen börjar bara gälla när Kernel DMA-skydd stöds och aktiveras av datorns inbyggda programvara. Kernel DMA-skydd är en plattforms funktion som inte kan styras via en princip eller av slutanvändaren. Den måste stödjas av systemet vid tidpunkten för tillverkning. Om du vill kontrol lera om systemet har stöd för kernel DMA-skydd kontrollerar du fältet kernel DMA-skydd på sidan Sammanfattning i MSINFO32. exe.  
   [Läs mer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Standard**: Blockera alla   
@@ -531,11 +531,11 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   
   **Standard**: Inga platser  
 
-- **Stöd för kryptering av Internet Explorer**  
-  Den här principinställningen kan du inaktivera stöd för Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 eller SSL 3.0 i webbläsaren. TLS och SSL är protokoll som hjälper att skydda kommunikationen mellan webbläsaren och målservern. När webbläsaren försöker ställa in en skyddad kommunikation med målservern, förhandla webbläsaren och servern vilka protokoll och version som ska användas. Webbläsaren och servern försöker matcha varandras lista över protokoll som stöds och versioner och de väljer den mest föredragna matchningen. Om du aktiverar den här inställningen förhandlar webbläsaren eller förhandlar inte en tunnel för kryptering med hjälp av de krypteringsmetoder som du väljer den nedrullningsbara listan. Om du inaktiverar eller inte konfigurerar den här inställningen kan användaren kan välja vilken kryptering har stöd för metoden webbläsaren.  
+- **Stöd för Internet Explorer-kryptering**  
+  Med den här princip inställningen kan du inaktivera stöd för Transport Layer Security (TLS) 1,0, TLS 1,1, TLS 1,2, Secure Sockets Layer (SSL) 2,0 eller SSL-3,0 i webbläsaren. TLS och SSL är protokoll som hjälper till att skydda kommunikationen mellan webbläsaren och mål servern. När webbläsaren försöker konfigurera en skyddad kommunikation med mål servern, förhandlar webbläsaren och servern vilket protokoll och vilken version som ska användas. Webbläsaren och servern försöker matcha varje annans lista över protokoll och versioner som stöds, och de väljer den mest önskade matchningen. Om du aktiverar den här policy inställningen förhandlar webbläsaren eller förhandlar inte om en krypterings tunnel med hjälp av de krypterings metoder som du väljer i list rutan. Om du inaktiverar eller inte konfigurerar den här policy inställningen kan användaren välja vilken krypterings metod som webbläsaren stöder.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Standard**: 2 objekt: TLS version 1.1 och TLS version 1.2  
+  **Standard**: 2 objekt: TLS v 1.1 och TLS v 1.2  
   *Välj nedpilen för att visa alternativ som du kan välja för den här inställningen.*
   
 - **Internet Explorer locked down internet zone smart screen** (Internet Explorer: låst SmartScreen i zonen Internet)  
@@ -940,7 +940,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   
   **Standard**: Aktiverat  
   
-- **Internet Explorer internet zon skriptlet**  
+- **Internet Explorer Internet Zone skriptlet**  
   Med den här principinställningen kan du ange om användaren kan köra skriptlet. Om du aktiverar den här principinställningen kan användaren köra skriptlet. Om du inaktiverar den här principinställningen kan användaren inte köra skriptlet. Om du inte konfigurerar den här principinställningen kan användaren aktivera eller inaktivera skriptlet.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067176)  
   
@@ -1386,29 +1386,29 @@ Mer information finns i [CSP-princip – Power](https://docs.microsoft.com/windo
   **Standard**: Aktiverat
 
 ## <a name="remote-assistance"></a>Fjärrhjälp
-- **Fjärrhjälp begärd**  
-  Den här principinställningen kan du aktivera eller inaktivera Solicited (Ask för) Fjärrhjälp på den här datorn. 
-  - *Om du aktiverar den här inställningen*, användare på den här datorn kan använda e-post och Filöverföring för att be någon om hjälp. Dessutom användare kan använda program för snabbmeddelanden för att tillåta anslutningar till den här datorn och du kan konfigurera ytterligare inställningar för Fjärrhjälp. 
-  - *Om du inaktiverar den här inställningen*, användare på den här datorn kan inte använda e-post och Filöverföring för att be någon om hjälp. Användare kan också använda program för snabbmeddelanden för att tillåta anslutningar till den här datorn. 
-  - *Om du inte konfigurerar den här inställningen*, användare kan aktivera eller inaktivera Solicited (Ask för) Fjärrhjälp sig själva i Systemegenskaper i Kontrollpanelen. Användare kan också konfigurera inställningar för Fjärrhjälp. 
+- **Begärd Fjärrhjälp**  
+  Med den här princip inställningen kan du aktivera eller inaktivera begärd Fjärrhjälp (fråga efter) på den här datorn. 
+  - *Om du aktiverar den här inställningen*kan användare på den här datorn använda e-post eller fil överföring för att be någon om hjälp. Dessutom kan användare använda snabb meddelande program för att tillåta anslutningar till den här datorn och du kan konfigurera ytterligare inställningar för Fjärrhjälp. 
+  - *Om du inaktiverar den här inställningen*kan användare på den här datorn inte använda e-post eller fil överföring för att be någon om hjälp. Användare kan inte heller använda snabb meddelande program för att tillåta anslutningar till den här datorn. 
+  - *Om du inte konfigurerar den här inställningen*kan användare aktivera eller inaktivera begärd Fjärrhjälp i system egenskaper på kontroll panelen. Användare kan även konfigurera inställningar för Fjärrhjälp. 
 
-  Om du aktiverar den här inställningen har du två sätt att tillåta inlärningsverktyg kan ge fjärrhjälp: ”Tillåt handledare endast visa datorn” eller ”Låt handledare fjärrstyra datorn”. ”Maximalt biljett tiden” principinställning anger en gräns för hur lång tid som en inbjudan till Fjärrhjälp som skapats med hjälp av e-post och Filöverföring kan förbli öppen. ”Välj metod för att skicka e-postinbjudningar” inställningen anger vilka e-standard om du vill använda för att skicka inbjudningar för Fjärrhjälp. Du kan använda antingen standard Mailto (inbjudan mottagaren ansluter via en internetlänk) eller den SMAPI (enkel MAPI) standard (inbjudan är ansluten till din e-postmeddelande) beroende på ditt e-postprogram. Den här inställningen är inte tillgängliga i Windows Vista eftersom SMAPI är den enda metoden som stöds. Om du aktiverar den här inställningen bör du även aktivera lämpliga brandväggsundantag till att tillåta kommunikation för Fjärrhjälp.  
+  Om du aktiverar den här princip inställningen har du två sätt att låta hjälpare tillhandahålla Fjärrhjälp: "Tillåt handledare att endast Visa datorn" eller "Tillåt handledare att fjärrstyra datorn". Princip inställningen "längsta biljett tid" anger en gräns för hur lång tid en inbjudan om Fjärrhjälp som skapats med e-post eller fil överföring kan vara öppen. Inställningen Välj metod för att skicka e-postinbjudningar anger vilken e-poststandard som ska användas för att skicka inbjudningar till Fjärrhjälp. Beroende på ditt e-postprogram, kan du använda antingen mailto-standarden (mottagaren av inbjudan ansluter via en Internet länk) eller SMAPI (Simple MAPI) standard (inbjudan är kopplad till e-postmeddelandet). Den här princip inställningen är inte tillgänglig i Windows Vista eftersom SMAPI är den enda metoden som stöds. Om du aktiverar den här inställningen bör du även aktivera lämpliga brand Väggs undantag för att tillåta kommunikation mellan Fjärrhjälp.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067198)
 
   **Standard**: inaktivera Fjärrhjälp
 
-  När värdet *Aktivera Fjärrhjälp*, konfigurera följande inställningar:  
-  - **Fjärrhjälp begärd behörighet**  
+  Konfigurera följande ytterligare inställningar när du har angett att *Fjärrhjälp ska aktive ras*:  
+  - **Begärd Fjärrhjälp-behörighet**  
     **Standard**: Vy  
 
-  - **Maximal biljett tid-värden**  
+  - **Maximalt biljett tids värde**  
     **Standard**: *Inte konfigurerat*  
 
-  - **Maximal biljett tidsperiod**  
+  - **Maximal biljett tids period**  
     **Standard**: minuter    
 
-  - **E-postinbjudan metod**  
-    **Standard**: enkel MAPI
+  - **Inbjudnings metod för e-post**  
+    **Standard**: Enkel MAPI
 
   
 ## <a name="remote-desktop-services"></a>Fjärrskrivbordstjänster  
@@ -1660,7 +1660,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Ja
   
 - **Beteendeövervakning**  
-  Tillåter eller nekar Beteendeövervakning för Windows Defender-funktioner. Dessa sensorer är inbäddade i Windows 10 och samlar in och bearbetar beteendesignaler från operativsystemet samt skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
+  Tillåter eller underlåter Windows Defender beteende övervaknings funktioner. Dessa sensorer är inbäddade i Windows 10 och samlar in och bearbetar beteendesignaler från operativsystemet samt skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Standard**: Ja
@@ -1709,9 +1709,9 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Blockera
 
 ## <a name="windows-defender-firewall"></a>Windows Defender-brandvägg  
-Mer information finns i [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) i Windows-protokollsdokumentationen.  
+Mer information finns i [2.2.2-FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) i dokumentationen för Windows-protokoll.  
 
-- **Brandvägg för profilen domän**  
+- **Domän för brand Väggs profil**  
   Anger de profiler som regeln tillhör: domän, privat, offentlig. Det här värdet representerar profilen för nätverk som är anslutna till domäner.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2066796)  
 
@@ -1727,7 +1727,7 @@ Mer information finns i [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/ope
   - **Brandväggen är aktiverad**  
     **Standard**: Tillåten
 
-- **Offentlig profil för brandvägg**  
+- **Brand Väggs profil offentlig**  
   Anger de profiler som regeln tillhör: domän, privat, offentlig. Det här värdet representerar profilen för offentliga nätverk. Dessa nätverk klassificeras som offentliga av administratörer i server-värden. Klassificeringen sker första gången värden ansluter till nätverket. Dessa nätverk är vanligtvis på flygplatser eller kaféer och andra offentliga platser där peer-datorer i nätverket eller nätverksadministratörer inte är betrodda.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067143)  
 
@@ -1749,11 +1749,11 @@ Mer information finns i [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/ope
   - **Principregler från inte sammanfogad grupprincip**  
     **Standard**: Ja
 
-- **Privat-brandväggsprofilen**  
+- **Brand Väggs profil privat**  
   Anger de profiler som regeln tillhör: domän, privat, offentlig. Det här värdet representerar profilen för privata nätverk.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067041)  
 
-   - **Inkommande anslutningar blockerade**  
+  - **Inkommande anslutningar blockerade**  
     **Standard**: Ja
 
   - **Utgående anslutningar krävs**  
@@ -1767,7 +1767,7 @@ Mer information finns i [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/ope
 
 ## <a name="windows-hello-for-business"></a>Windows Hello för företag  
 - **Kräv utökat skydd mot förfalskning när det är tillgängligt**  
-  Om Ja, kommer enheter använda utökat skydd mot förfalskning när det är tillgängligt. Om Nej, blockeras skydd mot förfalskning. Inte är konfigurerat gäller inställningar som gjorts på klienten.  
+  Om ja, kommer enheterna att använda utökat skydd mot förfalskning när det är tillgängligt. Om nej, kommer skydd mot förfalskning att blockeras. Inte konfigurerad följer konfigurationer som utförs på klienten.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067192)
 
   **Standard**: Ja
@@ -1778,22 +1778,22 @@ Mer information finns i [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/ope
   **Standard**: Ja
 
 - **Kräv gemener i PIN-koden**  
-  Om det behövs, måste användarens PIN-kod innehålla minst en gemen bokstav.
+  Om det behövs måste användarens PIN-kod innehålla minst en gemen bokstav.
 
   **Standard**: Tillåten
 
 - **Kräv specialtecken i PIN-koden**  
-  Om det behövs, måste användarens PIN-kod innehålla minst ett specialtecken.
+  Vid behov måste användarens PIN-kod innehålla minst ett specialtecken.
 
   **Standard**: Tillåten
 
 - **Minimilängd för PIN-kod**  
-  Minimilängd för PIN-kod måste vara mellan 4 och 127.
+  Minsta PIN-kodslängd måste vara mellan 4 och 127.
 
   **Standard**: 6
 
 - **Kräv versaler i PIN-koden**  
-  Om det behövs, måste användarens PIN-kod innehålla minst en versal.
+  Vid behov måste användarens PIN-kod innehålla minst en versal bokstav.
 
   **Standard**: Tillåten
 
@@ -1819,26 +1819,26 @@ Mer information finns i [CSP-princip – WindowsPowerShell](https://docs.microso
 
   **Standard**: Aktiverat
 
-## <a name="whats-changed-in-the-new-template"></a>Nyheter i den nya mallen
-Den *MDM Säkerhetsbaslinje för Spring 2019 uppdatering (19H 1)* mallen har följande ändringar från den *förhandsversion* mall.
+## <a name="whats-changed-in-the-new-template"></a>Vad som har ändrats i den nya mallen
+*Säkerhets bas linjen för MDM för våren 2019 Update (19H1)* har följande ändringar från för *hands versions* mal len.
 
-### <a name="changes-to-the-baseline-settings"></a>Ändringar i de grundläggande inställningarna
+### <a name="changes-to-the-baseline-settings"></a>Ändringar i bas linje inställningarna
 Följande inställningar är antingen:
-- *Ny* i den senaste versionen av baslinjen.
-- *Ta bort* från den här senaste baslinjeversionen men fanns i den tidigare versionen.
-- *Ändrat* på något sätt från hur inställningarna visas i den tidigare versionen. 
+- *Nytt* i den här senaste versionen av bas linjen.
+- Har *tagits bort* från den senaste bas linje versionen, men fanns i den tidigare versionen.
+- *Ändrade* på något sätt från hur inställningarna visades i den tidigare versionen. 
 
-*[Ny]*  [ **Låst**](#above-lock):
+*[Ny]* [**Lås över**](#above-lock):
 - **Röst aktivera appar från låst skärm**    
 
 *[Nytt]* [**Programhantering**](#application-management): 
-- **Blockera användarkontroll över installationer**  
-- **Blockera MSI appinstallationer med förhöjd behörighet**  
+- **Blockera användar kontroll över installationer**  
+- **Blockera installationer av MSI-appar med utökade privilegier**  
 
-*[Bort]*  [ **Bitlocker**](#bitlocker):  
-- Bit Locker flyttbar enhet princip > **krypteringsmetod**
-- **BitLocker fast enhet princip** *(alla inställningar)*
-- **Bit locker systemprincipen enhet** *(alla inställningar)*
+*[Borttaget]* [**BitLocker**](#bitlocker):  
+- Bit Locker-princip för flyttbara enheter > **krypterings metod**
+- **Princip för fast enhet för bit Locker** *(alla inställningar)*
+- **System enhets princip för bit Locker** *(alla inställningar)*
 
 *[Nytt]* [**Anslutningar**](#connectivity):
 - **Konfigurera säker åtkomst till UNC-sökvägar**
@@ -1847,7 +1847,7 @@ Följande inställningar är antingen:
 - **Virtualiseringsbaserad säkerhet**
 
 
-*[Ny]*  [ **DMA Guard**](#dma-guard):
+*[Ny]* [**DMA-skydd**](#dma-guard):
 - **Uppräkning av externa enheter som är inkompatibla med Kernel DMA-skydd**  
 
 *[Nytt]* [**Internet Explorer**](#internet-explorer):
@@ -1855,17 +1855,17 @@ Följande inställningar är antingen:
 - **Internet Explorer: dra eller kopiera och klistra in filer i zonen Internet**  
 - **Internet Explorer: .NET Framework-beroende komponenter i zonen Begränsad**  
 - **Internet Explorer: kör inte program mot skadlig kod mot Active X-kontroller i zonen Lokal dator**
-- **Stöd för kryptering av Internet Explorer**  
+- **Stöd för Internet Explorer-kryptering**  
 
-*[Ändrat]*  [ **Internet Explorer**](#internet-explorer):
-- **Internet Explorer internet zon automatisk fråga efter filhämtningar** > standardvärdet är nu **inaktiverad**. I förhandsversionen är detta ställdes aktiverad.
+*[Ändrad]* [**Internet Explorer**](#internet-explorer):
+- **Automatisk prompt i Internet Explorer Internet Zone vid hämtning av filer** > standardvärdet **** har inaktiverats. I för hands versionen har inställningen Aktiver ATS.
 
 *[Nytt]* [**Fjärrhjälp**](#remote-assistance):  
-- **Fjärrhjälp begärd** 
-  - **Fjärrhjälp begärd behörighet**
-  - **Maximal biljett tid-värden**  
-  - **Maximal biljett tidsperiod**  
-  - **E-postinbjudan metod**
+- **Begärd Fjärrhjälp** 
+  - **Begärd Fjärrhjälp-behörighet**
+  - **Maximalt biljett tids värde**  
+  - **Maximal biljett tids period**  
+  - **Inbjudnings metod för e-post**
 
 
 *[Nytt]* [**Windows Defender**](#windows-defender):
@@ -1873,19 +1873,19 @@ Följande inställningar är antingen:
 - **Office-kommunikationsappar startar i en underordnad process** 
 
 *[Nytt]* [**Windows Defender-brandvägg**](#windows-defender-firewall)
-- **Brandvägg för profilen domän**  
+- **Domän för brand Väggs profil**  
   - **Inkommande anslutningar blockerade**  
   - **Utgående anslutningar krävs**  
   - **Inkommande meddelanden blockerade**  
   - **Brandväggen är aktiverad**  
-- **Offentlig profil för brandvägg**  
+- **Brand Väggs profil offentlig**  
   - **Inkommande anslutningar blockerade**  
   - **Utgående anslutningar krävs**  
   - **Inkommande meddelanden blockerade**  
   - **Brandväggen är aktiverad** 
   - **Regler för anslutningssäkerhet från inte sammanfogad grupprincip**   
   - **Principregler från inte sammanfogad grupprincip**  
-- **Privat-brandväggsprofilen**  
+- **Brand Väggs profil privat**  
   - **Inkommande anslutningar blockerade**  
   - **Utgående anslutningar krävs**  
   - **Inkommande meddelanden blockerade**  
