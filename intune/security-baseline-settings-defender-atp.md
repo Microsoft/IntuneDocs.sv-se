@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bdd2171853a8db944c910ef4d912f7681d17077
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 40d2b1f58c2892eea6d3f454a3f993b30b9a5c4a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549129"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354444"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
 Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare Windows Defender Avancerat skydd) som stöds av Microsoft Intune. Standardinställningarna för ATP-baslinjen (Advanced Threat Protection) representerar den rekommenderade konfigurationen för ATP och kanske inte överensstämmer med baslinjens standardvärden för andra säkerhetsbaslinjer.  
 
-  Baslinjen för Microsoft Defender Advanced Threat Protection finns tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites)).
+Baslinjen för Microsoft Defender Advanced Threat Protection är tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
 
-
+Den här bas linjen är optimerad för fysiska enheter och rekommenderas inte för användning på virtuella datorer (VM) eller VDI-slutpunkter. Vissa bas linje inställningar kan påverka fjärranslutna interaktiva sessioner i virtualiserade miljöer. Mer information finns i [öka efterlevnaden till säkerhets bas linjen för Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) i Windows-dokumentationen.
 
 
 > [!NOTE]  
@@ -164,22 +164,22 @@ Mer information finns i [BitLocker-grupprincipinställningar](https://docs.micro
 
   Konfigurera följande inställningar för BitLockers princip för flyttbar enhet:
 
-    - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
-      **Standard**: Ja
+  - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
+    **Standard**: Ja
 
-    - **Krypteringsmetod**  
-      **Standard**: AES 128-bitars CBC
+  - **Krypteringsmetod**  
+    **Standard**: AES 128-bitars CBC
 
 - **Bit locker fixed drive policy** (Princip för BitLocker på fasta enheter)  
   Värdena för den här principen avgör krypteringsstyrkan som BitLocker använder för kryptering av fasta enheter. Företag kan styra krypteringsnivån för ökad säkerhet (AES-256 är starkare än AES-128). Om du aktiverar den här inställningen kan du konfigurera en krypteringsalgoritm och krypteringsstyrkan för nycklar för fasta dataenheter, operativsystemenheter och flyttbara dataenheter separat. För fasta enheter och operativsystemenheter rekommenderar vi att du använder XTS-AES-algoritmen. För flyttbara dataenheter bör du använda AES-CBC 128-bitars eller AES-CBC 256-bitars om dataenheten används i andra enheter som inte kör Windows 10 version 1511 eller senare. Ändringar av krypteringsmetoden har ingen effekt om enheten redan har krypterats eller om kryptering pågår. I dessa fall ignoreras den här principinställningen.
 
   Konfigurera följande inställningar för BitLockers princip för fasta enhet:
 
-    - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
-      **Standard**: Ja
+  - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
+    **Standard**: Ja
 
-    - **Krypteringsmetod**  
-      **Standard**: AES 128-bitars XTS
+  - **Krypteringsmetod**  
+    **Standard**: AES 128-bitars XTS
 
 - **Bit locker system drive policy** (Princip för BitLocker på systemenheter)  
   Värdena för den här principen avgör krypteringsstyrkan som BitLocker använder för kryptering av systemenheten. Företag kanske vill styra krypteringsnivån för ökad säkerhet (AES-256 är starkare än AES-128). Om du aktiverar den här inställningen kan du konfigurera en krypteringsalgoritm och krypteringsstyrkan för nycklar för fasta dataenheter, operativsystemenheter och flyttbara dataenheter separat. För fasta enheter och operativsystemenheter rekommenderar vi att du använder XTS-AES-algoritmen. För flyttbara dataenheter bör du använda AES-CBC 128-bitars eller AES-CBC 256-bitars om dataenheten används i andra enheter som inte kör Windows 10 version 1511 eller senare. Ändringar av krypteringsmetoden har ingen effekt om enheten redan har krypterats eller om kryptering pågår. I dessa fall ignoreras den här principinställningen.  

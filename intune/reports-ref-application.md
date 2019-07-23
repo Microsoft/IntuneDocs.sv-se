@@ -17,54 +17,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e90d422afb8ebbd356031d4815708b5b0768f0
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: a5436de6b972e5cbe8b2b17d42f0974cb38df47e
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713131"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313816"
 ---
 # <a name="reference-for-application-entities"></a>Referens för programenheter
 
 Kategorin **Program** innehåller entiteter för mobilenheter som spårar information, till exempel:
 
-  - Versioner av en app
-  - Installationskälla för en app
-  - Typ av utvecklare som har skapat en app
-  - Hanterade typer av programvara för en app, till exempel **sidecar** eller **desktop**
-  - VPP-status (volymköpsprogram) för en app
+- Versioner av en app
+- Installationskälla för en app
+- Typ av utvecklare som har skapat en app
+- Hanterade typer av programvara för en app, till exempel **sidecar** eller **desktop**
+- VPP-status (volymköpsprogram) för en app
 
-## <a name="apprevision"></a>AppRevision
+## <a name="apprevisions"></a>appRevisions
 
-I entiteten **AppRevision** visas en lista över alla versioner av appen.
+I entiteten **AppRevision** visas en lista över alla appversioner.
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| AppKey |Appens unika id. |123 |
-| ApplicationId |Unikt id för appen, liknar AppKey men den här nyckeln är naturlig. |b66bc706-ffff-7437-0340-032819502773 |
-| Revision |Versionen som anges av administratören under uppladdningen av binärfilen. |2 |
-| Titel |Appens titel. |Excel |
-| Utgivare |Appens utgivare. |Microsoft |
-| UploadState |Appens uppladdningsstatus. |1 |
-| AppTypeKey |Referens till AppType som beskrivs i följande avsnitt. | |
-| VppProgramTypeKey |Referens till VppProgramType som beskrivs nedan. | |
-| SkapadTid |Tidpunkt då versionen skapades. |2016-11-23 12:00:00 |
-| ModifiedTime |Senaste ändring av något relaterat till den här versionen. |2016-11-23 12:00:00 |
-| Storlek |Storlek på binärfilen. | |
-| StartDateInclusiveUTC |Datum och tid i UTC när appversionen skapades i informationslagret. |2016-11-23 12:00:00 |
-| EndDateExclusiveUTC |Datum och tid i UTC när appversionen blev inaktuell. |2016-11-23 12:00:00 |
-| IsCurrent |Visar om appversionen i informationslagret är aktuell eller inte. |Sant/falskt |
-| RowLastModifiedDateTimeUTC |Datum och tid i UTC för senaste ändring av appversionen i informationslagret. |2016-11-23 12:00:00 |
+| appKey |Appens unika id. |123 |
+| applicationId |Unikt id för appen, liknar AppKey men den här nyckeln är naturlig. |b66bc706-ffff-7437-0340-032819502773 |
+| revision |Versionen som anges av administratören under uppladdningen av binärfilen. |2 |
+| title |Appens titel. |Excel |
+| utgivare |Appens utgivare. |Microsoft |
+| uploadState |Appens uppladdningsstatus. |1 |
+| appTypeKey |Referens till AppType som beskrivs i följande avsnitt. | |
+| vppProgramTypeKey |Referens till VppProgramType som beskrivs nedan. | |
+| creationTime |Tidpunkt då versionen skapades. |2016-11-23 12:00:00 |
+| modifiedTime |Senaste ändring av något relaterat till den här versionen. |2016-11-23 12:00:00 |
+| ikoner |Storlek på binärfilen. | |
+| startDateInclusiveUTC |Datum och tid i UTC när appversionen skapades i informationslagret. |2016-11-23 12:00:00 |
+| endDateExclusiveUTC |Datum och tid i UTC när appversionen blev inaktuell. |2016-11-23 12:00:00 |
+| isCurrent |Visar om appversionen i informationslagret är aktuell eller inte. |Sant/falskt |
+| rowLastModifiedDateTimeUTC |Datum och tid i UTC för senaste ändring av appversionen i informationslagret. |2016-11-23 12:00:00 |
 
-## <a name="apptypes"></a>AppTypes
+## <a name="apptypes"></a>appTypes
 
-Entiteten **AppTypes** visar en lista över installationskällan för en app.
+Entiteten **AppType** visar en lista över installationskällan för en app.
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| AppTypeID |Id för typen |
-| AppTypeKey |Surrogatnyckel för nyckeln |
-| AppTypeName |Typ av app |
+| appTypeID |Id för typen |
+| appTypeKey |Surrogatnyckel för nyckeln |
+| appTypeName |Typ av app |
 
 ### <a name="example"></a>Exempel
 
@@ -85,15 +85,15 @@ Entiteten **AppTypes** visar en lista över installationskällan för en app.
 | 12 |Verksamhetsspecifik Windows Phone-app | Verksamhetsspecifik app för Windows Phone. |
 
 
-## <a name="vppprogramtypes"></a>VppProgramTypes
+## <a name="vppprogramtypes"></a>vppProgramTypes
 
-Entiteten **VppProgramTypes** innehåller en lista över möjliga typer av volymköpsprogram för en app.
+Entiteten **vppProgramType** innehåller en lista över möjliga typer av volymköpsprogram för en app.
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| VppProgramTypeID | Id för typen. |
-| VppProgramTypeKey | Surrogatnyckel för nyckeln. |
-| VppProgramTypeName | Typ av volymköpsprogram. |
+| vppProgramTypeID | Id för typen. |
+| vppProgramTypeKey | Surrogatnyckel för nyckeln. |
+| vppProgramTypeName | Typ av volymköpsprogram. |
 
 ### <a name="example"></a>Exempel
 
@@ -105,27 +105,27 @@ Entiteten **VppProgramTypes** innehåller en lista över möjliga typer av volym
 
 
 
-## <a name="applicationinventory"></a>ApplicationInventory
+## <a name="applicationinventories"></a>applicationInventories
 
-Entiteten **ApplicationInventory** innehåller en lista över program som hittats på enheten under inventeringen.
+Entiteten **applicationInventory** innehåller en lista över program som hittats på enheten under inventeringen.
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| DeviceKey | Det här är en referens till enhetstabellen som innehåller Intune-enhetens ID. |
-| DateKey | Referens till datumtabellen som visar dagen för inventeringen. |
-| ApplicationName | Programnamnet. |
-| ApplicationVersion | Programmets version. |
-| BundleSize | Appens storlek i byte. |
+| deviceKey | Det här är en referens till enhetstabellen som innehåller Intune-enhetens ID. |
+| dateKey | Referens till datumtabellen som visar dagen för inventeringen. |
+| applicationName | Programnamnet. |
+| applicationVersion | Programmets version. |
+| bundleSize | Appens storlek i byte. |
 
-## <a name="mobileappinstallstate"></a>MobileAppInstallState
+## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 
-Entiteten **MobileAppInstallState** representerar installationstillståndet för mobila program när den har tilldelats till en grupp som innehåller enheter, användare eller båda.
+Entiteten **mobileAppInstallState** representerar installationstillståndet för ett mobilprogram efter det att det har tilldelats till en grupp som innehåller enheter och/eller användare.
 
 | Egenskap | Beskrivning |
 |---|---|
-| AppInstallStateKey | Unikt ID för appens installationstillstånd för ditt konto. |
-| AppInstallState | Uppräkningsvärde för appens installationstillstånd. |
-| AppInstallStateName | Namn på appens installationstillstånd. |
+| appInstallStateKey | Unikt ID för appens installationstillstånd för ditt konto. |
+| appInstallState | Uppräkningsvärde för appens installationstillstånd. |
+| appInstallStateName | Namn på appens installationstillstånd. |
 
 
 

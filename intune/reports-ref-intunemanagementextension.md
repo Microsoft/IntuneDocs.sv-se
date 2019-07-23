@@ -17,49 +17,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 934742108effda0a88f4bcc42e06daa12c55288c
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 70802626c79f11748e81c39afdd8bc8c5d0622b3
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648844"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313779"
 ---
-# <a name="reference-for-intune-management-extension"></a>Referens för tillägg för Intune-hantering
+# <a name="reference-for-intune-management-extensions"></a>Referens för tillägg för Intune-hantering
 
-Kategorin **IntuneManagementExtension** innehåller entiteter för mobila enheter som spårar information, till exempel:
+Kategorin **intuneManagementExtensions** innehåller entiteter för mobila enheter som spårar information, till exempel:
 
-  - Versioner av IntuneManagementExtension
-  - Installationsstatus för IntuneManagementExtension
+- Versioner av IntuneManagementExtension
+- Installationsstatus för IntuneManagementExtension
 
-## <a name="intunemanagementextensionversion"></a>IntuneManagementExtensionVersion
+## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 
-Entiteten **IntuneManagementExtensionVersion** visar alla versioner som används av IntuneManagementExtension.
-
-| Egenskap  | Beskrivning | Exempel |
-|---------|------------|--------|
-| ExtensionVersionKey |Unik identifierare för IntuneManagementExtension-versionen. | 1 |
-| ExtensionVersion |Det fyrsiffriga versionsnumret. |1.0.2.0 |
-
-## <a name="intunemanagementextensionhealthstate"></a>IntuneManagementExtensionHealthState
-
-**IntuneManagementExtensionHealthState** visar en lista över alla möjliga hälsotillstånd för IntuneManagementExtension.
+Entiteten **intuneManagementExtensionVersion** visar en lista över alla versioner som används av intuneManagementExtensions.
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| ExtensionStateKey |Unikt id för hälsotillstånd. | 2 |
-| ExtensionState |Hälsotillståndet för en IntuneManagementExtension. | Felfri |
+| extensionVersionKey |Unik identifierare för intuneManagementExtensions-versionen. | 1 |
+| extensionVersion |Det fyrsiffriga versionsnumret. |1.0.2.0 |
 
-## <a name="intunemanagementextension"></a>IntuneManagementExtension
+## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 
-**IntuneManagementExtension** visar en lista över hälsa för IntuneManagementExtension för varje Windows 10-enhet per dag.
+**intuneManagementExtensionHealthState** visar en lista över alla möjliga hälsotillstånd för intuneManagementExtensions.
+
+| Egenskap  | Beskrivning | Exempel |
+|---------|------------|--------|
+| extensionStateKey |Unikt id för hälsotillstånd. | 2 |
+| extensionState |Hälsotillståndet för en IntuneManagementExtension. | Felfri |
+
+## <a name="intunemanagementextensions"></a>intuneManagementExtensions
+
+**intuneManagementExtension** visar en lista över intuneManagementExtensions-hälsan på varje Windows 10-enhet per dag.
 Data bevaras under de senaste 60 dagarna. 
 
 
 |      Egenskap       |                         Beskrivning                         | Exempel |
 |---------------------|-------------------------------------------------------------|---------|
-|       DateKey       |               Datumets unika id.                |   123   |
-|      TenantKey      |              Klientens unika id.               |   456   |
-|      DeviceKey      |              Unikt id för enheten.               |   789   |
-| ExtensionVersionKey | Unik identifierare för IntuneManagementExtension-versionen. |    1    |
-|  ExtensionStateKey  |             Unikt id för hälsotillstånd.              |    2    |
+|       dateKey       |               Datumets unika id.                |   123   |
+|      tenantKey      |              Klientens unika id.               |   456   |
+|      deviceKey      |              Unikt id för enheten.               |   789   |
+| extensionVersionKey | Unik identifierare för intuneManagementExtension-versionen. |    1    |
+|  extensionStateKey  |             Unikt id för hälsotillstånd.              |    2    |
 
