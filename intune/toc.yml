@@ -171,6 +171,7 @@
       items:
         - name: Vad är enhetsregistrering?
           href: device-enrollment.md
+          displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
         - name: Funktioner för enhetshantering
           href: device-management-capabilities.md
         - name: Registreringsalternativ
@@ -184,6 +185,7 @@
               href: apple-mdm-push-certificate-get.md
             - name: Företagsidentifierare
               href: corporate-identifiers-add.md
+              displayName: COD
             - name: Multi-Factor Authentication
               href: multi-factor-authentication.md
             - name: Hanterare av enhetsregistrering
@@ -273,6 +275,8 @@
           href: device-remove-user.md
         - name: Hitta primär användare
           href: find-primary-user.md
+        - name: Skicka meddelanden
+          href: custom-notifications.md
         - name: Ta bort macOS-enhet
           href: device-erase.md
         - name: Fjärrstyr mobila enheter
@@ -559,20 +563,27 @@
               href: apps-add-built-in.md
             - name: PowerShell-skript
               href: intune-management-extension.md
-        - name: Distribuera appar
-          href: apps-deploy.md
+        - name: Tilldela appar
           items:
+            - name: Tilldela appar till grupper
+              href: apps-deploy.md
+              displayName: app assignment; assignment
             - name: Inkludera och exkludera appar
               href: apps-inc-exl-assignments.md
+              displayName: app assignment
             - name: Distribuera följande gäller för Windows 10-appar
               href: apps-windows-10-app-deploy.md
             - name: Distribuera appar till myndighetsmiljöer
               href: apps-deploy-gcc-dod.md
         - name: Övervakning av appar
           href: apps-monitor.md
+        - name: Identifierade appar
+          href: app-discovered-apps.md
         - name: Konfigurera appar
-          href: app-configuration-policies-overview.md
           items:
+            - name: Konfigurationsprinciper för appar
+              href: app-configuration-policies-overview.md
+              displayName: App configuration policy; configuration policy
             - name: iOS hanterade enheter
               href: app-configuration-policies-use-ios.md
             - name: Android hanterade enheter
