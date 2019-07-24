@@ -1,7 +1,7 @@
 ---
 title: 'Graph API: er för att konfigurera enheter i Microsoft Intune-Azure | Microsoft Docs'
 titleSuffix: ''
-description: Se en lista över alla Graph API entiteter med matchande Windows CSP och offset-URI på Windows 10-enheter och senare som används när du konfigurerar enheter i Microsoft Intune. Se matchande API och CSP för delade datorer, Endpoint Protection, Windows Defender Avancerat skydd, Identity Protection, Windows 10 Teams, kiosk och Windows Update for Business.
+description: Se en lista över alla Graph API entiteter med matchande Windows CSP och offset-URI på Windows 10-enheter och senare som används när du konfigurerar enheter i Microsoft Intune. Se matchande API och CSP för delade datorer, Endpoint Protection, Microsoft Defender Avancerat skydd, Identity Protection, Windows 10 Teams, kiosk och Windows Update for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3732a4539c13ad05ae8c95621246429b7f38987e
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 9db6be9c61455056f7ad32a9dba3fa6be9f6f5c3
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354416"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427274"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Graph API: er och matchande Windows 10-CSP: er som används i Intune
 
