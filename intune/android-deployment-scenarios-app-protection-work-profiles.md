@@ -14,12 +14,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce7ad6b0254b1c3a8e2843cfcbe70a6b718ce88
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5814a4aac064394dbd0c7f5902dc3f62459ad1d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049906"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353804"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Appskyddsprinciper och arbetsprofiler på Android Enterprise-enheter i Intune
 
@@ -58,7 +58,7 @@ En lista med appar som är aktiverade med appskyddsprinciper finns i [Hanterade 
 
 I det här avsnittet beskrivs viktiga kännetecken för distributionsscenarier med APP-WE och Android Enterprise-arbetsprofiler.
 
-#### <a name="app-we"></a>APP-WE
+### <a name="app-we"></a>APP-WE
 
 En distribution med APP-WE (appskyddsprinciper utan registrering) definierar principer på appar, inte enheter. I det här scenariot är enheter vanligtvis inte registrerade eller hanterade av en MDM-utfärdare, t.ex Intune. För att skydda appar och åtkomst till organisationens data använder administratörer appar som det går att tillämpa dataskyddsprinciper på.
 
@@ -71,7 +71,7 @@ Den här funktionen gäller för:
 
 APP-WE-scenarier används av slutanvändare som vill ha en liten organisations fotavtryck på sina enheter och som inte vill registrera i MDM. Som administratör måste du fortfarande skydda dina data. Dessa enheter hanteras inte. Det innebär att vanliga MDM-uppgifter och funktioner, t.ex Wi-Fi, enhets-VPN och certifikathantering inte ingår i det här distributionsscenariot.
 
-#### <a name="android-enterprise-work-profiles"></a>Android Enterprise-arbetsprofiler
+### <a name="android-enterprise-work-profiles"></a>Android Enterprise-arbetsprofiler
 
 Arbetsprofiler är kärnan i distributionsscenariot för Android Enterprise och det enda scenario som är riktat mot BYOD-användning. Arbetsprofilen är en separat partition som skapas på operativsystemnivå i Android och som kan hanteras av Intune.
 
@@ -95,7 +95,7 @@ Arbetsprofiler och appskyddsprinciper kompletterar varandras inställningar geno
 
 ### <a name="suppress-app-policy-for-work-profiles"></a>Ignorera appskyddsprinciper för arbetsprofiler
 
-Du kan behöva stöd för enskilda användare som har flera enheter – ohanterade enheter i ett APP-WE-scenario och hanterade enheter med arbetsprofiler. 
+Du kan behöva stöd för enskilda användare som har flera enheter – ohanterade enheter i ett APP-WE-scenario och hanterade enheter med arbetsprofiler.
 
 Exempelvis kan du kräva att slutanvändarna anger en PIN-kod när de öppnar en arbetsapp. Beroende på enhet hanteras funktionerna för PIN-koder av appskyddsprincipen eller av arbetsprofilen. För APP-WE-enheter tillämpas PIN-koden vid start av appskyddsprincipen. För arbetsprofilenheter kan du använda den PIN-kod för enheten eller arbetsprofilen som tillämpas av operativsystemet. Konfigurera inställningarna för appskyddsprinciper för det här scenariot, så att de inte tillämpas *när* en app distribueras till en arbetsprofil. Om du inte konfigurerar på det här sättet kommer slutanvändaren uppmanas ange en PIN-kod för enheten och sedan en gång till för appskyddsprincipen.
 
@@ -111,13 +111,13 @@ Mer information finns i [appkonfigurationsinställningar för att distribuera Ou
 
 Det finns flera Enterprise Mobility-scenarier där användningen av Intunes appskyddsprinciper är det bästa alternativet.
 
-#### <a name="older-devices-running-android-44-51-are-being-used"></a>Äldre enheter som kör Android 4.4–5.1 används
+### <a name="older-devices-running-android-44-51-are-being-used"></a>Äldre enheter som kör Android 4.4–5.1 används
 
 Officiellt innehåller alla enheter med Android 5.0 eller senare Googles mobiltjänster med stöd för arbetsprofiler. Vissa Android 5.0- och 5.1-enheter från vissa OEM-tillverkare stöder dock inte arbetsprofiler.
 
 Om du använder versioner som saknar stöd för arbetsprofiler och om du vill ha ett dataförlustskydd (DLP) för organisationens data på enheterna, måste du använda Intunes appskyddsprinciper.
 
-#### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Ingen MDM, ingen registrering, Google-tjänster är inte tillgängliga
+### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Ingen MDM, ingen registrering, Google-tjänster är inte tillgängliga
 
 Vissa kunder vill inte ha någon form av enhetshantering, inklusive arbetsprofiler, av olika skäl:
 

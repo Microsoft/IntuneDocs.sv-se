@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548094"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375232"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -69,7 +69,7 @@ Kontrollera att användaren inte är tilldelad mer än det maximala antalet enhe
 
 3. Om användarens antal registrerade enheter redan är lika med enhetsgränsen kan de inte registrera fler innan:
     - [Befintliga enheter tas bort](devices-wipe.md), eller
-    - Du ökar enhetsgränsen genom att [ställa in enhetsbegränsningar](enrollment-restrictions-set.md#set-device-limit-restrictions).
+    - Du ökar enhetsgränsen genom att [ställa in enhetsbegränsningar](enrollment-restrictions-set.md).
 
 För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktuella enhetsposter.
 
@@ -499,5 +499,5 @@ Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 
 
 
-### <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).

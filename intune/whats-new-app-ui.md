@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8e87f8df43468428877d93be03e6f2d7316de9a
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: ecfd482df452c52d81621cdc49c6ca78c4d4c1f6
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572626"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354532"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 Läs mer om de senaste uppdateringarna för Microsoft Intune-apparna. Vi lägger regelbundet till och förbättrar Intune-företagsportalappen och webbplatsen. Om du är Intune-administratör eller support innehåller den här artikeln information som du behöver för att:
@@ -49,7 +49,7 @@ Företagsportalappen för Windows visar alla hanterade appar, både nödvändiga
 
 ## <a name="week-of-june-17-2019"></a>Veckan som inleds med 17 juni 2019  
 
-#### <a name="new-features-in-microsoft-intune-app"></a>Nya funktioner i Microsofts Intune-app
+### <a name="new-features-in-microsoft-intune-app"></a>Nya funktioner i Microsofts Intune-app
 Vi har lagt till nya funktioner i Microsoft Intune-appen (förhandsversion) för Android. Användare på fullständigt hanterade Android-enheter kan nu  
 
 * visa och hantera enheterna som de har registrerat genom Intune-företagsportalen eller Microsoft Intune-appen    
@@ -552,7 +552,7 @@ Det här är våra planer för hur vi kan förbättra användarupplevelsen genom
 > Bilderna nedan kan vara förhandsgranskningar och den tillkännagivna produkten kan skilja sig från presenterade versioner.  
 
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 * [Microsoft Intune-blogg](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Översikt över molnplattformen](https://www.microsoft.com/cloud-platform/roadmap)
 * [Nyheter i Intune](https://docs.microsoft.com/intune/whats-new)

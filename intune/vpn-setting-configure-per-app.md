@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dc78f8126e0fa9c65fdbe70cfd909da70391e3e
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: b3c2b5bc0091544136848bf92fc6cef7524ffa54
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884526"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354505"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS-enheter i Intune
 
@@ -48,7 +48,7 @@ Zscaler Private Access (ZPA) integreras med Azure Active Directory (Azure AD) f�
 
 För att bevisa sin identitet visar VPN-servern det certifikat som måste godkännas av enheten utan att tillfråga att användaren. Skapa en profil för betrott certifikat som innehåller VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren (CA) för att bekräfta automatiskt godkännande av certifikatet. 
 
-#### <a name="export-the-certificate-and-add-the-ca"></a>Exportera certifikatet och lägg till certifikatutfärdaren (CA)
+### <a name="export-the-certificate-and-add-the-ca"></a>Exportera certifikatet och lägg till certifikatutfärdaren (CA)
 
 1. Öppna administrationskonsolen på VPN-servern.
 2. Bekräfta att VPN-servern använder certifikatbaserad autentisering. 

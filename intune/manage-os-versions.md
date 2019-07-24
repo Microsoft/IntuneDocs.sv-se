@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a6425c1346255caf70e73feef2aec1097625f921
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548760"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427105"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Hantera versioner av operativsystem med Intune
 På moderna bärbara och stationära plattformar, viktiga uppdateringar, korrigeringar och nya versioner snabbt. Du har kontroller för att fullständigt hantera uppdateringar och korrigeringar i Windows, men för andra plattformar som iOS och Android krävs att slutanvändarna deltar i processen.  Microsoft Intune har funktioner som hjälper dig att strukturera versionshanteringen av operativsystem på olika plattformar.
@@ -40,7 +40,7 @@ Organisationer använder begränsningar för enhetstyp för att kontrollera åtk
 1. Använd den lägsta operativsystemversionen så att slutanvändarna använder aktuella plattformar och plattformar som stöds i din organisation. 
 2. Lämna högsta operativsystemversion ospecificerat (ingen gräns) eller ställ in det på den senaste validerade versionen i din organisation för att låta intern testning av nya operativsystemversioner ske.
 
-Mer information finns i [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions).
+Mer information finns i [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction).
  
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Rapportering av operativsystemversion och efterlevnad av Intunes MDM-efterlevnadsprinciper för enheter
 Efterlevnadsprinciper för Intune MDM-enheter innehåller följande verktyg: 
@@ -86,6 +86,6 @@ Du kan använda Intune-funktionerna som beskrivs i den här artikeln för att fl
 ## <a name="next-steps"></a>Nästa steg
 Använd följande resurser för att hantera versioner av operativsystemet i din organisation: 
 
-- [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions)
+- [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction)
 - [Kom igång med enhetsefterlevnad](https://docs.microsoft.com/intune/device-compliance-get-started)
 - [Hur du skapar och tilldelar skyddsprinciper för appar](https://docs.microsoft.com/intune/app-protection-policies)

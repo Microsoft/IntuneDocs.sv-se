@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22ce9ace7848ea1535b04ab6f0c0249c970e8c34
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b073047455cd21dc3ffe5efcb52f51584db5ff30
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547358"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353776"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -46,7 +46,7 @@ Den här NDES-certifikatanslutningsappen har även stöd för FIPS-läge (Federa
   
 - **Azure AD-programproxy** (valfritt): Azure AD-programproxyn kan användas i stället för en dedikerad WAP-server när NDES-servern ska publiceras på Internet. Mer information finns i [Så här tillhandahåller du säker fjärråtkomst till lokala program](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
-#### <a name="additional"></a>Mer information
+### <a name="additional"></a>Mer information
 
 - Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
 - WAP-servern måste ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter och ha förtroende för de SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
@@ -79,17 +79,17 @@ Vi rekommenderar starkt att du publicerar NDES-servern via en omvänd proxy, til
 ## <a name="configure-your-infrastructure"></a>Konfigurera infrastrukturen
 Du måste slutföra följande steg innan du kan konfigurera certifikatprofiler. Dessa steg kräver kunskaper om Windows Server 2012 R2 eller senare om Active Directory Certificate Services (ADCS):
 
-#### <a name="step-1---create-an-ndes-service-account"></a>Steg 1 – Skapa ett NDES-tjänstkonto
+### <a name="step-1---create-an-ndes-service-account"></a>Steg 1 – Skapa ett NDES-tjänstkonto
 
 Skapa domänanvändarkonto som används som NDES-tjänstkontot Du anger det här kontot när du konfigurerar mallar på den utfärdande certifikatutfärdaren innan du installerar och konfigurerar NDES. Kontrollera att användaren har standardrättigheterna, **logga in lokalt**, **logga in som en tjänst** och **logga in som ett batchjobb**. En del organisationer har härdningsprinciper som inaktiverar dessa rättigheter.
 
-#### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Steg 2 – Konfigurera certifikatmallar hos certifikatutfärdaren
+### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Steg 2 – Konfigurera certifikatmallar hos certifikatutfärdaren
 I det här steget kommer du att:
 
 - Konfigurera en certifikatmall för NDES
 - Publicera certifikatmallen för NDES
 
-##### <a name="configure-the-certification-authority"></a>Konfigurera certifikatutfärdaren
+#### <a name="configure-the-certification-authority"></a>Konfigurera certifikatutfärdaren
 
 1. Logga in som företagsadministratör.
 
@@ -150,7 +150,7 @@ Konfigurera så att certifikatutfärdaren tillåter att beställaren anger gilti
 
 3. Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
 
-#### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Steg 3 – Konfigurera krav på NDES-servern
+### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Steg 3 – Konfigurera krav på NDES-servern
 I det här steget kommer du att:
 
 - Lägga till NDES till en Windows Server och konfigurera IIS för att stöda NDES
@@ -190,7 +190,7 @@ I det här steget kommer du att:
 
     `setspn –s http/Server01.contoso.com contoso\NDESService`
 
-#### <a name="step-4---configure-ndes-for-use-with-intune"></a>Steg 4 – Konfigurera NDES för användning med Intune
+### <a name="step-4---configure-ndes-for-use-with-intune"></a>Steg 4 – Konfigurera NDES för användning med Intune
 I det här steget kommer du att:
 
 - Konfigurera NDES för användning med den utfärdande certifikatutfärdaren
@@ -241,7 +241,7 @@ I det här steget kommer du att:
 
     Om du får ett **503 tjänsten ej tillgänglig**, kontrollerar du loggboken. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i steg 1.
 
-##### <a name="install-and-bind-certificates-on-the-ndes-server"></a>Installera och bind certifikat på NDES-servern
+#### <a name="install-and-bind-certificates-on-the-ndes-server"></a>Installera och bind certifikat på NDES-servern
 
 1. På NDES-servern: begär och installera ett certifikat för **serverautentisering** från den interna certifikatutfärdaren eller en offentlig certifikatutfärdare. Bind sedan SSL-certifikatet i IIS.
 
@@ -267,7 +267,7 @@ I det här steget kommer du att:
 
     - **Ämnesnamn**: Värdet måste vara samma som DNS-namnet på servern där du installerar certifikatet (NDES-servern)
 
-##### <a name="configure-iis-request-filtering"></a>Konfigurera IIS-begäransfiltrering
+#### <a name="configure-iis-request-filtering"></a>Konfigurera IIS-begäransfiltrering
 
 1. På NDES-servern öppnar du **IIS-hanteraren**, väljer **Standardwebbplats** i rutan **Anslutningar** och öppnar **Begäransfiltrering**.
 
@@ -287,13 +287,13 @@ I det här steget kommer du att:
 
 4. Starta om NDES-servern. Servern är nu klar att stödja Certifikat Connectorn.
 
-#### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Steg 5 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
+### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Steg 5 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
 I det här steget kommer du att:
 
 - Aktivera stöd för NDES i Intune.
 - Ladda ned, installera och konfigurera en Certificate Connector på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) på en server i din miljö. Du kan installera flera NDES-servrar med en Microsoft Intune Certificate Connector-komponent på varje NDES-server för att öka skalan för NDES-implementering i din organisation.
 
-##### <a name="download-install-and-configure-the-certificate-connector"></a>Ladda ned, installera och konfigurera certifikatanslutningsappen
+#### <a name="download-install-and-configure-the-certificate-connector"></a>Ladda ned, installera och konfigurera certifikatanslutningsappen
 
 > [!IMPORTANT] 
 > Microsoft Intune Certificate Connector **måste** installeras på en separat Windows-server. Den kan inte installeras på den utfärdande certifikatutfärdaren (CA). Den **måste** också installeras på samma server som rollen Network Device Enrollment Service (NDES).

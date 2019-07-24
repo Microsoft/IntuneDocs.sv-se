@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883262"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354380"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 
@@ -79,7 +79,7 @@ Mobilaktiveringskoder tillhandahålls av mobiloperatören i en kommaavgränsad f
 4. Välj den CSV-fil som har dina aktiveringskoder.
 5. Klicka på **OK** för att spara ändringarna.
 
-#### <a name="csv-file-requirements"></a>Krav för CSV-fil
+### <a name="csv-file-requirements"></a>Krav för CSV-fil
 
 När du arbetar med csv-filen med aktiveringskoderna ser du till att du eller din mobiloperatör följer kraven:
 
@@ -89,7 +89,7 @@ När du arbetar med csv-filen med aktiveringskoderna ser du till att du eller di
 - Varje fil ska vara specifik för en enskild mobiloperatör, och alla aktiveringskoder ska vara specifika för samma prenumerationsavtal. Intune distribuerar slumpmässigt aktiveringskoder till målenheter. Det finns inte någon garanti gällande vilken enhet som får en specifik aktiveringskod.
 - Högst 1000 aktiveringskoder kan importeras i en csv-filen.
 
-#### <a name="csv-file-example"></a>Exempel på en CSV-fil
+### <a name="csv-file-example"></a>Exempel på en CSV-fil
 
 1. Den första raden och den första cellen i CSV-filen är URL:en till mobiloperatörens eSIM-aktiveringstjänst, som kallas SM-DP + (Subscription Manager Data Preparation-servern). URL:en ska vara ett fullständigt kvalificerat domännamn (FQDN) utan kommatecken.
 2. Den andra raden och alla följande rader är unika engångskoder för aktivering som innehåller två värden:
@@ -129,7 +129,7 @@ eSIM-Aktiveringskoder används en gång. När Intune har installerat en aktiveri
 
 ## <a name="step-4-monitor-deployment"></a>Steg 4: Övervaka distributionen
 
-#### <a name="review-the-deployment-status"></a>Granska distributionsstatusen
+### <a name="review-the-deployment-status"></a>Granska distributionsstatusen
 
 När du har tilldelat profilen kan du övervaka distributionsstatus för en abonnemangspool.
 
@@ -138,7 +138,7 @@ När du har tilldelat profilen kan du övervaka distributionsstatus för en abon
 3. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler**. Alla dina befintliga eSIM-mobilabonnemangspooler visas.
 4. Välj ett abonnemang och granska **Distributionsstatus**.
 
-#### <a name="check-the-profile-status"></a>Kontrollera profilstatus
+### <a name="check-the-profile-status"></a>Kontrollera profilstatus
 När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. Dessa diagram visar status för en profil, som t.ex. om den har tilldelats till enheter korrekt eller om profilen visar en konflikt.
 
 1. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler** > Välj ett befintligt abonnemang.
@@ -167,7 +167,7 @@ Du kan övervaka och visa en detaljerad lista över enheter i Enhetsstatus.**
     - **Mobilstatus**: Tillstånd som tillhandahålls av mobiloperatören. Kontakta mobiloperatören för att felsöka.
     - **Senaste incheckning**: Datum då enheten senast kommunicerade med Intune
 
-#### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Övervaka eSIM-profilinformation på den faktiska enheten
+### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Övervaka eSIM-profilinformation på den faktiska enheten
 
 1. På enheten öppnar du **Inställningar** > gå till **Nätverk och Internet**.
 2. Välj **Mobilt** > **Hantera eSIM-profiler**

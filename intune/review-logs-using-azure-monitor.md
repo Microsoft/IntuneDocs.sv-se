@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412710"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354515"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Skicka data till lagring, händelsehubbar eller logganalys i Intune (förhandsversion)
 
@@ -174,43 +174,43 @@ Du kan granska kostnaderna för att hantera Log Analytics-arbetsytan i [Hantera 
 
 Få svar på vanliga frågor och svar och läs om kända problem med Intune-loggarna i Azure Monitor.
 
-#### <a name="which-logs-are-included"></a>Vilka loggar ingår?
+### <a name="which-logs-are-included"></a>Vilka loggar ingår?
 
 Granskningsloggar och operativa (förhandsversion) loggar är båda tillgängliga för dirigering med hjälp av den här funktionen.
 
-#### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>När visas motsvarande loggarna i händelsehubben efter en åtgärd?
+### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>När visas motsvarande loggarna i händelsehubben efter en åtgärd?
 
 Loggarna visas vanligtvis i din händelsehubb inom några minuter efter att åtgärden utförts. I [Vad är Azure Event Hubs? ](https://docs.microsoft.com/azure/event-hubs/) hittar du mer information.
 
-#### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>När visas motsvarande loggarna i lagringskontot efter en åtgärd ?
+### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>När visas motsvarande loggarna i lagringskontot efter en åtgärd ?
 
 För Azure storage-konton är svarstiden någonstans mellan 5 till 15 minuter efter att åtgärden har körts.
 
-#### <a name="what-happens-if-an-administrator-changes-the-retention-period-of-a-diagnostic-setting"></a>Vad händer om en administratör ändrar kvarhållningsperioden för en diagnostikinställning?
+### <a name="what-happens-if-an-administrator-changes-the-retention-period-of-a-diagnostic-setting"></a>Vad händer om en administratör ändrar kvarhållningsperioden för en diagnostikinställning?
 
 Den nya kvarhållningsprincipen tillämpas på loggar som samlats in efter ändringen. Insamlade loggar innan principändringen påverkas inte.
 
-#### <a name="how-much-does-it-cost-to-store-my-data"></a>Hur mycket kostar det för att lagra mina data?
+### <a name="how-much-does-it-cost-to-store-my-data"></a>Hur mycket kostar det för att lagra mina data?
 
 Kostnader för lagring beror på storleken på dina loggar och kvarhållningsperioden som du väljer. Du hittar en lista över de uppskattade kostnaderna för klienter som är beroende av loggvolymen som genererats i [Lagringsstorlek på aktivitetsloggar](#storage-size-for-activity-logs) (i den här artikeln).
 
-#### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Hur mycket kostar det för att strömma data till en händelsehubb?
+### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Hur mycket kostar det för att strömma data till en händelsehubb?
 
 Strömningskostnaderna beror på hur många meddelanden du får per minut. Mer information om hur kostnader beräknas och kostnadsuppskattningar baserat på antal meddelanden finns i [Meddelanden från händelsehubbar för aktivitetsloggar](#event-hub-messages-for-activity-logs) (i den här artikeln).
 
-#### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Hur gör jag för att integrera granskningsloggar för Intune med mitt SIEM-system?
+### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Hur gör jag för att integrera granskningsloggar för Intune med mitt SIEM-system?
 
 Använd Azure Monitor med Event Hubs för att strömma loggar till ditt SIEM-system. Först [strömma loggarna till en händelsehubb](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Sedan [konfigurera SIEM-verktyget](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) med den konfigurerade händelsehubben. 
 
-#### <a name="what-siem-tools-are-currently-supported"></a>Vilka SIEM-verktyg stöds för närvarande?
+### <a name="what-siem-tools-are-currently-supported"></a>Vilka SIEM-verktyg stöds för närvarande?
 
 Azure Monitor stöds för närvarande av [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar och [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (öppnar en ny webbplats). Mer information om hur anslutningsapparna fungerar finns i [Strömma Azure-övervakningsdata till en händelsehubb med ett externt verktyg](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
-#### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Kan jag komma åt data från en händelsehubb utan att använda något externt SIEM-verktyg?
+### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Kan jag komma åt data från en händelsehubb utan att använda något externt SIEM-verktyg?
 
 Ja. Om du vill komma åt loggarna från ditt anpassade program måste du använda [Event Hubs API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
-#### <a name="what-data-is-stored"></a>Vilka data lagras?
+### <a name="what-data-is-stored"></a>Vilka data lagras?
 
 Intune lagrar inte alla data som skickas via pipelinen. Intune dirigerar data till Azure Monitor-pipelinen vid klientens medgivande. Mer information finns i [Översikt av Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview).
 
