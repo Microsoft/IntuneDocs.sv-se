@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30cdb6903caa7e1071a6781db13c761e64f8bd7a
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882299"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Inställningar för MDM-säkerhetsbaslinjer för Intune  
 
@@ -116,8 +116,8 @@ Mer information finns i [CSP-princip – Bitlocker](https://docs.microsoft.com/w
 
   Konfigurera följande inställningar för BitLockers princip för flyttbar enhet:
 
-    - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
-      **Standard**: Ja  
+  - **Require encryption for write access** (Kräv kryptering för skrivåtkomst)  
+    **Standard**: Ja  
   
 
 ## <a name="browser"></a>Webbläsare  
@@ -226,17 +226,17 @@ Mer information finns i [CSP-princip – DeviceInstallation](https://docs.micros
   
   **Standard**: Blockera installation av maskinvaruenheter  
 
-    När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
-  
-    - **Remove matching hardware devices**  (Ta bort matchande maskinvaruenheter)  
+  När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
+
+  - **Remove matching hardware devices**  (Ta bort matchande maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
-      
-      **Standard**: Ja
-  
-    - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
-       Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
-      
-      **Standard**: Ja  
+    
+    **Standard**: Ja
+
+  - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
+    Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
+    
+    **Standard**: Ja  
   
 - **Hardware device installation by setup classes** (Installation av maskinvaruenheter efter installationsklass)  
   Med den här principinställningen kan du ange en lista med klass-GUID för enhetsinstallation för enhetsdrivrutiner som Windows hindrar från att installeras. Den här inställningen har företräde framför alla andra principinställningar som tillåter att Windows installerar en enhet. Om du aktiverar den här principinställningen kan inte Windows installera eller uppdatera enhetsdrivrutiner vars klass-GUID för enhetsinstallation visas i listan du skapar. Om du aktiverar den här principinställningen på en fjärrskrivbordsserver påverkar principinställningen omdirigeringen av de angivna enheterna från en fjärrskrivbordsklient till fjärrskrivbordsservern. Om du inaktiverar eller inte konfigurerar den här principinställningen kan Windows installera och uppdatera enheter beroende på om de tillåts eller förhindras av andra principinställningar.  
@@ -244,16 +244,16 @@ Mer information finns i [CSP-princip – DeviceInstallation](https://docs.micros
   
   **Standard**: Blockera installation av maskinvaruenheter  
 
-    När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
-    - **Remove matching hardware devices**   (Ta bort matchande maskinvaruenheter)  
+  När *Blockera installation av maskinvaruenheter* är valt, är följande inställningar tillgängliga.
+  - **Remove matching hardware devices**   (Ta bort matchande maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).  
 
-      **Standard**: *Ingen standardkonfiguration*  
-  
-    - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
-      Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
-      
-      **Standard**: *Ingen standardkonfiguration*  
+    **Standard**: *Ingen standardkonfiguration*  
+
+  - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
+    Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).
+    
+    **Standard**: *Ingen standardkonfiguration*  
 
 ## <a name="device-lock"></a>Enhetslås  
 Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) i Windows-dokumentationen.  
@@ -1186,12 +1186,12 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
   
 - **Administrator elevation prompt behavior** (Fråga om beteende för utökade administratörsprivilegier)  
   Den här principinställningen styr beteendet för frågan om utökade privilegier för administratörer. Alternativen är: 
-    - *Utöka privilegier utan att fråga* – Tillåter att behöriga konton utför en åtgärd som kräver utökade privilegier utan att kräva godkännande eller autentiseringsuppgifter. Obs! Använd endast det här alternativet i de mest begränsade miljöerna. 
-    - *Fråga efter autentiseringsuppgifter på skyddat skrivbord* – När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett privilegierat användarnamn och lösenord på det skyddade skrivbordet. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med användarens högsta behörigheter. 
-    - *Fråga efter medgivande på skyddat skrivbord* – När en åtgärd kräver utökade privilegier uppmanas användaren att välja antingen Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter. 
-    - *Fråga efter autentiseringsuppgifter* – När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett användarnamn och lösenord för administratörer. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med tillämplig behörighet. 
-    - *Fråga efter medgivande* – När en åtgärd kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter.  
-    - *Fråga efter medgivande för binära filer som inte tillhör Windows* – När en åtgärd för ett program från tredje part kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter. 
+  - *Utöka privilegier utan att fråga* – Tillåter att behöriga konton utför en åtgärd som kräver utökade privilegier utan att kräva godkännande eller autentiseringsuppgifter. Obs! Använd endast det här alternativet i de mest begränsade miljöerna. 
+  - *Fråga efter autentiseringsuppgifter på skyddat skrivbord* – När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett privilegierat användarnamn och lösenord på det skyddade skrivbordet. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med användarens högsta behörigheter. 
+  - *Fråga efter medgivande på skyddat skrivbord* – När en åtgärd kräver utökade privilegier uppmanas användaren att välja antingen Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter. 
+  - *Fråga efter autentiseringsuppgifter* – När en åtgärd kräver utökade privilegier uppmanas användaren att ange ett användarnamn och lösenord för administratörer. Om användaren anger giltiga autentiseringsuppgifter fortsätter åtgärden med tillämplig behörighet. 
+  - *Fråga efter medgivande* – När en åtgärd kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter.  
+  - *Fråga efter medgivande för binära filer som inte tillhör Windows* – När en åtgärd för ett program från tredje part kräver utökade privilegier uppmanas användaren att välja Tillåt eller Neka på det skyddade skrivbordet. Om användaren väljer Tillåt fortsätter åtgärden med användarens högsta behörigheter. 
   
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067215)   
   
@@ -1208,11 +1208,11 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
   **Standard**: Kräv NTLM V2 128-kryptering
   
 - **Beteende vid borttagning av smartkort**  
-    Den här säkerhetsinställningen avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren. Alternativen är:
-     - *Ingen åtgärd*. 
-     - *Lås arbetsstation* – Arbetsstationen låses när smartkortet tas bort, vilket gör att användare kan lämna området, ta sina smartkort med sig och behålla en skyddad session.
-     - *Framtvinga utloggning* – användaren loggas ut automatiskt när smartkortet tas bort.
-     - *Koppla från Remote Desktop Services-session* – om smartkortet tas bort så kopplas sessionen från utan att användaren loggas ut. Med det här alternativet kan användaren sätta i smartkortet och fortsätta sessionen senare, eller vid en annan dator med smartkortsläsare, utan att behöva logga in igen. Om sessionen är lokal fungerar den här principen precis som Lås arbetsstationen.
+  Den här säkerhetsinställningen avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren. Alternativen är:
+  - *Ingen åtgärd*. 
+  - *Lås arbetsstation* – Arbetsstationen låses när smartkortet tas bort, vilket gör att användare kan lämna området, ta sina smartkort med sig och behålla en skyddad session.
+  - *Framtvinga utloggning* – användaren loggas ut automatiskt när smartkortet tas bort.
+  - *Koppla från Remote Desktop Services-session* – om smartkortet tas bort så kopplas sessionen från utan att användaren loggas ut. Med det här alternativet kan användaren sätta i smartkortet och fortsätta sessionen senare, eller vid en annan dator med smartkortsläsare, utan att behöva logga in igen. Om sessionen är lokal fungerar den här principen precis som Lås arbetsstationen.
   
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067331) 
     
@@ -1572,7 +1572,7 @@ Mer information finns i [CSP-princip – WindowsConnectionManager](https://docs.
 
   **Standard**: Aktiverat
   
-## <a name="windows-defender"></a>Windows försvarare  
+## <a name="windows-defender"></a>Windows Defender  
 Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.  
 
 - **Scan incoming mail messages** (Sök igenom inkommande e-postmeddelanden)  
@@ -1858,7 +1858,7 @@ Följande inställningar är antingen:
 - **Stöd för Internet Explorer-kryptering**  
 
 *[Ändrad]* [**Internet Explorer**](#internet-explorer):
-- **Automatisk prompt i Internet Explorer Internet Zone vid hämtning av filer** > standardvärdet **** har inaktiverats. I för hands versionen har inställningen Aktiver ATS.
+- **Automatisk prompt i Internet Explorer Internet Zone vid hämtning** av filer > standardvärdet **har**inaktiverats. I för hands versionen har inställningen Aktiver ATS.
 
 *[Nytt]* [**Fjärrhjälp**](#remote-assistance):  
 - **Begärd Fjärrhjälp** 
