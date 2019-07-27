@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ee62213c9ef23302de7fa7342569e1903514699
-ms.sourcegitcommit: 11a31cd39b727f2254e2705b07d18924e103bd2e
+ms.openlocfilehash: f9b02deb529bd6a9bca882fecb3d55d9db513191
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341343"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427175"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>Under utveckling för Microsoft Intune – juli 2019
 
@@ -58,10 +58,6 @@ För att hjälpa dig med förberedelser och planering innehåller den här sidan
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Apphantering
 
-
-### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Anpassade meddelanden för användare och grupper    <!-- 16766574   -->
-Du kommer snart att kunna skicka anpassade ad hoc-push-meddelanden från Företagsportal programmet till användare på iOS-och Android-enheter som du hanterar med Intune. Dessa anpassade meddelanden är inte kopplade till vissa Intune-funktioner och kan användas för alla ändamål du behöver, inklusive allmänna aviseringar som du vill skicka till några eller alla dina anställda.  
-
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Konfigurera program meddelande innehåll för organisations konton <!-- 2576686 -->
 Med Intune App Protection-principer (APP) på Android-och iOS-enheter kan du styra appens meddelande innehåll för org-konton. Den här funktionen kommer att kräva stöd från program och är kanske inte tillgänglig för alla APP-aktiverade program. Mer information om APP finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
 
@@ -70,7 +66,6 @@ För tillgängliga appinstallationer på Androids arbetsprofilenheter kan du vis
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Enhetskonfiguration
-
 
 ### <a name="support-for-ikev2-vpn-profiles-for-ios----1943438---"></a>Stöd för IKEv2 VPN-profiler för iOS <!-- 1943438 -->
 Du kommer att kunna skapa VPN-profiler för den iOS-inbyggda VPN-klienten med hjälp av IKEv2-protokoll. IKEv2 är en ny anslutningstyp i **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **VPN** för profiltyp > **Inställningar**.
@@ -81,39 +76,18 @@ Om du vill se de aktuella VPN-inställningarna som du kan konfigurera går du ti
 
 Gäller för: iOS
 
-### <a name="use-applicability-rules-when-creating-windows-10-device-configuration-profiles----2549910---"></a>Använd ”tillämplighetsregler” när du skapar konfigurationsprofiler för Windows 10-enheter <!-- 2549910 -->
-Du skapar konfigurationsprofiler för Windows 10-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** som plattform). Du kommer att kunna skapa en **tillämpningsregel** så att profilen endast gäller för en viss utgåva eller en specifik version. Exempelvis kan du skapa en profil som aktiverar vissa BitLocker-inställningar. När du lägger till profilen använder du en tillämpningsregel så att profilen endast gäller för enheter som kör Windows 10 Enterprise.
-
-Gäller för: 
-- Windows 10 och senare
-
-### <a name="advanced-settings-for-windows-defender-firewall-------1311949-------"></a>Avancerade inställningar för Windows Defender-brandväggen   <!--  1311949     -->
-Snart kommer du att kunna använda Intune som offentlig förhandsversion för att hantera anpassade brandväggsregler på klienter för Windows Defender.  
-
-### <a name="new-configuration-designer-when-creating-an-oemconfig-profile-for-android-enterprise----3712769----"></a>Ny konfigurations design när du skapar en OEMConfig-profil för Android Enterprise <!-- 3712769  -->
-I Intune kan du skapa en enhets konfigurations profil som använder en OEMConfig-app (enhets konfiguration > Profiler > Skapa profil > Android Enterprise for Platform > OEMConfig för profil typ). När du gör det öppnas en JSON-redigerare med en mall och de värden som du kan ändra. Den här uppdateringen innehåller en konfigurations design med en förbättrad användar upplevelse som visar information som är inbäddad i appen, inklusive titlar, beskrivningar och mer. JSON-redigeraren är fortfarande tillgänglig och visar eventuella ändringar som du gör i Configuration designer.
-
-Om du vill se de aktuella inställningarna går du till [använda och hantera Android Enterprise-enheter med OEMConfig](android-oem-configuration-overview.md).
-
-Gäller: Android Enterprise
-
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Enhetshantering
 
-### <a name="improve-device-location---3855417---"></a>Förbättra enhets platsen<!-- 3855417 -->
-Du kan zooma in till de exakta koordinaterna för en enhet med åtgärden **hitta enhet** . Mer information om hur du hittar borttappade iOS-enheter finns i [hitta borttappade iOS-enheter](device-locate.md).
-
 ### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Konfigurera automatisk rensning av enhetens tids gräns till 30 dagar <!--4231059  -->
 Du kan ställa in den automatiska tids gränsen för enhets rensning så kort som 30 dagar (i stället för den aktuella gränsen på 90 dagar) efter den senaste inloggningen. Det gör du genom att gå till **Intune** > -**enheter** > **Konfigurera** > **enhet rensa regler**.
-
 
 <!-- ***********************************************-->
 ## <a name="security"></a>Säkerhet
 
 ### <a name="import-and-export-security-baselines------3408610------------"></a>Importera och exportera säkerhets bas linjer    <!--3408610          -->  
 Vi lägger till möjligheten att exportera och importera säkerhets bas linjer så att du kan ta dina anpassningar med dig och dela dem mellan Intune-miljöer.
-
 
 
 <!-- ***********************************************-->

@@ -18,16 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e43fccabd142527d9e17317d56fa029844fa270d
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: bff8f2d74b06d1cd4ee7dffe594917b4d0946d5c
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329471"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467314"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrera enhet med Android-arbetsprofil
 
-Registrera din personliga Android-enhet för att få åtkomst till företagets e-post, appar och andra arbetsdata. Under registreringen konfigurerar du en Android-arbetsprofil. Den här profilen avgränsar personliga data på enheten från dina arbetsdata. Företagets support hanterar bara arbetsprofilen, som består av arbetsfiler och data. Företagets support kan inte hantera personliga data på enheten. Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).  
+Registrera din personliga Android-enhet för att få åtkomst till företagets e-post, appar och andra arbetsdata. Under registreringen konfigurerar du en Android-arbetsprofil. Den här profilen avgränsar personliga data på enheten från dina arbetsdata. Företagets support hanterar bara arbetsprofilen, som består av arbetsfiler och data. Företagets support kan inte hantera personliga data på enheten.
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
+
+Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).
 
 ## <a name="create-work-profile-and-enroll-device"></a>Skapa arbetsprofil och registrera enhet
 

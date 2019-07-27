@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d110013c10f0330c0edbbf230c508009fb47b2a6
-ms.sourcegitcommit: 11a31cd39b727f2254e2705b07d18924e103bd2e
-ms.translationtype: HT
+ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341310"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467421"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Inställningar av slutpunktsskydd för macOS i Intune  
 
@@ -92,36 +92,24 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
   - **Typ av återställnings nyckel**  
     *Personliga nyckel* återställnings nycklar skapas för enheter. Konfigurera följande inställningar för den personliga nyckeln.  
 
-     - **Plats för personlig återställnings nyckel** – ange ett kort meddelande till användaren som förklarar hur de kan hämta sin personliga återställnings nyckel. Den här texten infogas i meddelandet som användaren ser när du aktiverar FileVault.  
+    - **Plats för personlig återställnings nyckel** – ange ett kort meddelande till användaren som förklarar hur och var de kan hämta sin personliga återställnings nyckel. Den här texten infogas i meddelandet användaren ser på deras inloggnings skärm när du uppmanas att ange deras personliga återställnings nyckel om ett lösen ord är bortglömt.  
       
-     - **Rotation av personlig återställnings nyckel** – ange hur ofta den personliga återställnings nyckeln för en enhet ska roteras. Du kan välja standardvärdet **inte konfigurerad**eller värdet **1** till **12** månader.  
+    - **Rotation av personlig återställnings nyckel** – ange hur ofta den personliga återställnings nyckeln för en enhet ska roteras. Du kan välja standardvärdet **inte konfigurerad**eller värdet **1** till **12** månader.  
 
-  - **Skjut upp FileVault tills logga ut** 
-    > [!NOTE]
-    > Support för FileVault är begränsad till dess att lanseringen av juli slutförs under några dagar. Om du konfigurerar FileVault måste du ange *Skjut upp FileVault tills du loggar ut* för att **Aktivera**innan distributionen är klar.   
-
-    FileVault aktive ras inte förrän användaren loggar ut. En användare av en lokal användare eller ett mobil konto uppmanas att aktivera FileVault vid utloggning eller nästa inloggning.  
+  - **Inaktivera prompt vid utloggning**  
+    Förhindra att användaren uppmanas att aktivera FileVault när de loggar ut.  När inställningen är inaktive rad är uppmaningen vid utloggning inaktive rad och användaren tillfrågas när de loggar in.  
     - **Inte konfigurerat**  
-    - **Aktivera**  
-    
+    - **Inaktivera**  
+
     **Standard**: Inte konfigurerat  
 
+  - **Antal gånger som tillåts kringgås**  
+  Ange antalet gånger som en användare kan ignorera prompter för att aktivera FileVault innan FileVault krävs för att användaren ska kunna logga in.  
 
-
-    - **Inaktivera prompt vid utloggning**  
-      Förhindra att användaren uppmanas att aktivera FileVault när de loggar ut.  
-      - **Inte konfigurerat**  
-      - **Aktivera**  
-
-      **Standard**: Inte konfigurerat  
-
-    - **Antal gånger som tillåts kringgås**  
-      Ange antalet gånger som en användare kan ignorera prompter för att aktivera FileVault innan FileVault krävs för att användaren ska kunna logga in.  
-
-      - **Inte konfigurerad** – kryptering på enheten krävs innan nästa inloggning tillåts.  
-      -  **1** till **10** – Tillåt att en användare ignorerar uppvarningen från 1 till 10 gånger innan den kräver kryptering på enheten.  
-      - **Ingen gräns, fråga alltid** – användaren uppmanas att aktivera FileVault men kryptering krävs aldrig.  
+    - **Inte konfigurerad** – kryptering på enheten krävs innan nästa inloggning tillåts.  
+    - **1** till **10** – Tillåt att en användare ignorerar uppvarningen från 1 till 10 gånger innan den kräver kryptering på enheten.  
+    - **Ingen gräns, fråga alltid** – användaren uppmanas att aktivera FileVault men kryptering krävs aldrig.  
  
-      **Standard**: Inte konfigurerat  
+    **Standard**: Inte konfigurerat  
 
 
