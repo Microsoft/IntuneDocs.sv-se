@@ -5,7 +5,7 @@ description: Inställningar för säkerhetsbaslinjer som stöds av Intune för a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40d2b1f58c2892eea6d3f454a3f993b30b9a5c4a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354444"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491922"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -29,7 +29,7 @@ Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare 
 
 Baslinjen för Microsoft Defender Advanced Threat Protection är tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
 
-Den här bas linjen är optimerad för fysiska enheter och rekommenderas inte för användning på virtuella datorer (VM) eller VDI-slutpunkter. Vissa bas linje inställningar kan påverka fjärranslutna interaktiva sessioner i virtualiserade miljöer. Mer information finns i [öka efterlevnaden till säkerhets bas linjen för Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) i Windows-dokumentationen.
+Den här bas linjen är optimerad för fysiska enheter och rekommenderas inte för användning på virtuella datorer (VM) eller VDI-slutpunkter. Vissa baslinjeinställningar kan påverka fjärranslutna interaktiva sessioner i virtualiserade miljöer. Mer information finns i [Öka efterlevnaden med säkerhetsbaslinjen i Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) i Windows-dokumentationen.
 
 
 > [!NOTE]  
@@ -292,7 +292,7 @@ Mer information finns i [WindowsAdvancedThreatProtection CSP](https://docs.micro
 
   **Standard**: Granskningsläge
 
-## <a name="web-network-protection"></a>Webb- och nätverksskydd  
+## <a name="web--network-protection"></a>Webb- och nätverksskydd  
 
 - **Network protection type** (Typ av nätverksskydd)  
   [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  – Med den här principen kan du aktivera eller inaktivera nätverksskydd i Windows Defender Exploit Guard. Nätverksskydd är en funktion i Windows Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser.  
@@ -600,6 +600,13 @@ Mer information finns i [PassportForWork CSP](https://docs.microsoft.com/windows
 
 - **Konfigurera Windows Hello för företag** - *TenantId/principer/UsePassportForWork*    
   Windows Hello för företag är en alternativ metod för att logga in till Windows genom att ersätta lösenord, smartkort och virtuella smartkort.  
+
+  - När det är inställt på *Ja*aktiverar du den här principen och enheten etablerar Windows Hello för företag.  
+  - Om inställningen *inte är konfigurerad*, påverkar inte bas linjen enhetens princip inställning. Det innebär att om Windows Hello för företag är inaktiverat på en enhet förblir det inaktiverat. Om den är aktive rad förblir den aktive rad. 
+
+  Du kan inte inaktivera Windows Hello för företag via den här bas linjen. Du kan inaktivera Windows Hello för företag när du konfigurerar [Windows-registrering](windows-hello.md)eller som en del av en enhets konfigurations profil för [identitets skydd](identity-protection-configure.md).  
+
+Windows Hello för företag är en alternativ metod för att logga in till Windows genom att ersätta lösenord, smartkort och virtuella smartkort.  
 
   Om du aktiverar eller inte konfigurerar den här principinställningen etablerar enheten Windows Hello för företag. Om du inaktiverar den här principinställningen kan enheten inte etablera Windows Hello för företag för alla användare.
 

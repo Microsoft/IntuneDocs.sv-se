@@ -1,6 +1,6 @@
 ---
 title: Funktionsinställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se alla inställningar för att konfigurera iOS-enheter för AirPrint, layout för startsidan, appmeddelanden, delad enhet, enkel inloggning och webbinnehållsfilter i Microsoft Intune. Använd dessa inställningar i en enhetskonfigurationsprofil när du konfigurerar iOS-enheter för att använda de olika Apple-funktionerna i din organisation.
+description: Se alla inställningar för att konfigurera iOS-enheter för AirPrint, layout för startsidan, appmeddelanden, delad enhet, enkel inloggning och webbinnehållsfilter i Microsoft Intune. Använd dessa inställningar i en enhetskonfigurationsprofil när du konfigurerar iOS-enheter för att använda Apple-funktionerna i din organisation.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43b87a90f90130a014817819b87ed5946b1ba15b
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: bac591a625fd915056234a75b26bc2f90f50cae7
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413814"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387101"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>iOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
 
@@ -41,7 +41,7 @@ I den här artikeln visas inställningarna, tillsammans med en beskrivning av va
 - **Port**: Ange lyssningsporten för AirPrint-målet. Om du lämnar den här egenskapen tom, kommer AirPrint att använda standardporten. Tillgängligt i iOS 11.0 och senare.
 - **TLS**: Välj **Aktivera** för att skydda AirPrint-anslutningar med TLS (Transport Layer Security). Tillgängligt i iOS 11.0 och senare.
 
-**Lägg till** lägger till AirPrint-servern i listan. Du kan lägga till flera AirPrint-servrar. Du kan också **Importera** en kommaavgränsad fil (CSV) med den här informationen. När du har skapat listan, kan du också **Exportera** din lista över AirPrint-servrar.
+**Lägg till** lägger till AirPrint-servern i listan. Det går att lägga till många olika luftutskrifts servrar. Du kan också **Importera** en kommaavgränsad fil (CSV) med den här informationen. **Export** skapar en lista med de de skrivar servrar som du har lagt till.
 
 Klicka på **OK** för att spara listan.
 
@@ -195,7 +195,7 @@ Den här funktionen har stöd för övervakade enheter som kör iOS 9.3 och sena
   Enhetstoken kan också användas för att lägga till enhetsspecifik information i de här fälten. Ange till exempel `Serial Number: {{serialnumber}}` om du vill visa serienumret. På låsskärmen visas texten ungefär som `Serial Number 123456789ABC`. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceName` eller andra enhetsspecifika värden.
 
   > [!NOTE]
-  > Variabler är inte verifieras i Användargränssnittet och är skiftlägeskänsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Glöm inte att ange rätt information.
+  > Variablerna är inte validerade i användar gränssnittet och är Skift läges känsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Se till att ange rätt information.
 
 Klicka på **OK** för att spara ändringarna.
 
@@ -253,7 +253,7 @@ Klicka på **OK** för att spara ändringarna.
 
 ## <a name="web-content-filter-settings"></a>Inställningar för webbinnehållsfilter
 
-Dessa inställningar styr webbläsarens URL-åtkomst på iOS-enheter.
+Dessa inställningar styr webbläsarens URL-åtkomst på övervakade iOS-enheter.
 
 - **Filtertyp**: Välj att tillåta vissa webbplatser. Alternativen är:
 

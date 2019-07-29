@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise innehåller Microsoft Intune. Se hur Intun
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884271"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427302"
 ---
 # <a name="what-is-device-management"></a>Vad är enhetshantering? 
 
@@ -59,7 +59,7 @@ En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhe
 - **Windows Defender** innehåller många säkerhetsfunktioner som skyddar Windows 10-enheter. Om du t.ex. använder Intune och Windows Defender tillsammans kan du: 
 
   - Aktivera [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) och söka efter misstänkt aktivitet i filer och appar på mobila enheter. 
-  - Använd [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) för att förhindra säkerhetsintrång på mobila enheter. Och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användares åtkomst till företagets resurser.
+  - Använd [Microsoft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) för att förhindra säkerhetsintrång på mobila enheter. Och begränsa effekten av en säkerhetsöverträdelse genom att blockera en användares åtkomst till företagets resurser.
 
 - **Villkorsstyrd åtkomst** är en funktion i Azure Active Directory som integreras smidigt med Intune. Med hjälp av [Villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access) kan du se till att endast kompatibla enheter får åtkomst till e-post, SharePoint och andra appar. 
 
@@ -73,11 +73,11 @@ Du kan också använda en kombination av [MDM och MAM](https://docs.microsoft.co
 
 När du har konfigurerat Intune kan välja att enbart arbeta i Azure Portal, eller använda Intune och Microsoft 365 tillsammans, när du hanterar enheter. [Migrera hantering av mobilenheter till Intune på Azure-portalen](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) är en Microsoft IT-fallstudie. I den här fallstudien ser du hur Microsoft IT valde en modern metod för hantering av mobilenheter. Du får också ta del av viktiga lärdomar.
 
-## <a name="simplify-it-tasks-using-the-device-management-dashboard"></a>Förenkla IT-uppgifter med hjälp av instrumentpanelen för enhetshantering
+## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Förenkla IT-uppgifter med hjälp av vårt administrationscenter för enhetshantering
 
-På instrumentpanelen för [enhetshantering](https://devicemanagement.portal.azure.com/) kan du hantera och utföra alla åtgärder för dina mobilenheter. Den här instrumentpanelen innehåller de tjänster som används för hantering av enheter, t.ex. Intune och Azure Active Directory, och även för hantering av klientappar. 
+I vårt administrationscenter för [enhetshantering](https://devicemanagement.portal.azure.com/) kan du hantera och utföra alla åtgärder för dina mobilenheter. Arbetsytan innehåller de tjänster som används för hantering av enheter, t.ex. Intune och Azure Active Directory, och även för hantering av klientappar. 
 
-På instrumentpanelen för enhetshantering kan du:
+I administrations centret för enhets hantering kan du:
 
 - [Registrera enheter](https://docs.microsoft.com/intune/device-enrollment)
 - [Ange enhetsefterlevnad](https://docs.microsoft.com/intune/device-compliance-get-started)

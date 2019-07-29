@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/25/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebd8f15a8f8633043f64cb4e004aafbb3c399042
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: b93fc8bc1bddbae8b1b0bde4f8b8815e8052fb51
+ms.sourcegitcommit: 2fa20338bd0236884e1f3fde624cf70da89fd254
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648884"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507698"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
@@ -156,6 +156,7 @@ Följande felmeddelanden och beskrivningar ger information om både Android- och
 |    0x80073CF3    |    Paketet misslyckades med uppdaterings-, beroende- eller konfliktverifiering. Möjliga orsaker:<ul><li> Det inkommande paketet är i konflikt med ett installerat paket.</li><li> Det gick inte att hitta ett angivet paketberoende.</li><li> Paketet stöder inte korrekt processorarkitektur.</li></ul> Mer information finns i **AppXDeployment-Server**-händelseloggen. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
 |    0x80073CFB    |    Det angivna paketet har redan installerats och en ominstallation av paketet är blockerad. Du kan råka ut för det här felet om du installerar ett paket som inte är identiskt med det paket som redan har installerats. Bekräftelse av den digitala signaturen ingår också i paketet. När ett paket har byggts om eller signerats på nytt så är det inte längre binärt identiskt med det tidigare installerade paketet. De två möjliga alternativ för att åtgärda det här felet är:<ul><li> Öka appens versionsnummer och bygg sedan om och signera paketet på nytt.</li><li> Ta bort det gamla paketet för varje användare i systemet innan du installerar det nya paketet.</li></ul> Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
 |    0x87D1041C    |    Programinstallationen lyckades men programmet identifieras inte. Appen har distribuerats av Intune och sedan avinstallerats. Orsaker till att appen avinstalleras är:<ul><li> Slutanvändaren avinstallerade appen.</li><li> Identitetsinformationen i paketet matchar inte vad enheten rapporterar för felaktiga appar.</li><li>Vid automatiskt uppdaterade MSI:er matchar produktversionen inte appinformationen när den har uppdaterats utanför Intune.</li></ul> Be användaren att installera om appen via företagsportalen. Observera att de appar som krävs ominstalleras automatiskt nästa gång enheten checkas in.    |
+|    0x8000FFFF    |    Ett oväntat fel inträffade under installationen. Mer information hittar du i installations loggarna.    |
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Felsöka appar från Microsoft Store
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ea3ae66a32353b4aa6c782b13e6a587ee1f4464e
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354464"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491823"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Felsöka lokal Intune Exchange-anslutning
 
@@ -47,9 +47,9 @@ Kontrollera [konfigurationen av lokal Intune Exchange-anslutning](exchange-conne
 
 
 ## <a name="using-powershell-to-get-more-data-on-exchange-connector-issues"></a>Använda Powershell för att få mer information om problem med Exchange Connector
-- Om du vill hämta en lista över alla mobila enheter för en postlåda använder du Get-ActiveSyncDeviceStatistics -mailbox mbx
-- Om du vill hämta en lista över SMTP-adresser för en postlåda använder du Get-Mailbox -Identity user | select emailaddresses | fl
-- Om du vill hämta detaljerad information om en enhets åtkomststatus använder du Get-CASMailbox <upn> | fl
+- Om du vill hämta en lista över alla mobila enheter för en post låda använder du`Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Om du vill hämta en lista över SMTP-adresser för en post låda använder du`Get-Mailbox -Identity user | select emailaddresses | fl`
+- Om du vill hämta detaljerad information om en enhets åtkomststatus använder du `Get-CASMailbox <upn> | fl`
 
 ## <a name="next-steps"></a>Nästa steg
 Om den här informationen inte är till hjälp kan du även [få support för Microsoft Intune](get-support.md).

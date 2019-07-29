@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 06/26/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04671df820fee96d4090b13f6fa8f6c4f983a1ac
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: e0309c5aa73dc8c03cabd69878d55ac51aa6d4f3
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530224"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375129"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Använda anpassade inställningar för macOS-enheter i Microsoft Intune
 
@@ -31,13 +31,17 @@ När du använder macOS-enheter kan du hämta anpassade inställningar till Intu
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Apple Profile Manager](https://support.apple.com/profile-manager)
 
-Du kan använda dessa verktyg för att exportera inställningar till en konfigurationsprofil. I Intune importerar du den här filen och tilldelar sedan profilen till dina macOS-användare och macOS-enheter. När de har tilldelats distribueras inställningarna och en baslinje eller standard skapas för macOS i din organisation.
+Du kan använda dessa verktyg för att exportera inställningar till en konfigurationsprofil. I Intune importerar du den här filen och tilldelar sedan profilen till dina macOS-användare och macOS-enheter. Inställningarna distribueras när de har tilldelats. De skapar också en bas linje eller standard för macOS i din organisation.
 
-Den här artikeln beskriver hur du skapar en anpassad profil för macOS-enheter. Den innehåller även viss vägledning om hur du använder Apple Configurator och Apple Profile Manager.
+Den här artikeln innehåller rikt linjer om hur du använder Apple Configurator och Apple Profile Manager och beskriver de egenskaper som du kan konfigurera.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-- När du använder **Apple Configurator** för att skapa konfigurationsprofilen måste du kontrollera att de inställningar som du exporterar är kompatibla med macOS-versionen på de enheter som du använder. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
+[Skapa profilen](device-profile-create.md).
+
+## <a name="what-you-need-to-know"></a>Vad du behöver veta
+
+- När du använder **Apple Configurator** för att skapa konfigurationsprofilen måste du kontrollera att de inställningar som du exporterar är kompatibla med macOS-versionen på enheterna. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
 
 - Om du använder **Apple Profile Manager** måste du göra följande:
 
@@ -47,25 +51,19 @@ Den här artikeln beskriver hur du skapar en anpassad profil för macOS-enheter.
 
     Hämta och spara den här filen. Du ska lägga till den här filen i Intune-profilen. 
 
-  - Kontrollera att de inställningar som du exporterar från Apple Profile Manager är kompatibla med macOS-versionen på de enheter som du använder. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
+  - Kontrollera att de inställningar som du exporterar från Apple Profile Manager är kompatibla med macOS-versionen på enheterna. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
 
-## <a name="create-the-profile"></a>Skapa profilen
+## <a name="custom-configuration-profile-settings"></a>Anpassade inställningar för konfigurationsprofil
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-3. Ange följande inställningar:
+- **Anpassat namn på konfigurationsprofil**: Ange ett namn för principen. Det här namnet visas på enheten och i Intune-statusen.
+- **Konfigurationsprofilfil**: Bläddra till konfigurationsprofilen som du skapade med Apple Configurator eller Apple Profile Manager. Filen som du importerade visas i området **Filinnehåll**.
 
-    - **Namn**: Ange ett namn för profilen, till exempel `macos custom profile`.
-    - **Beskrivning:** Ange en beskrivning för profilen.
-    - **Plattform**: Välj **macOS**.
-    - **Profiltyp**: Välj **Anpassad**.
+  Du kan också lägga till token för enheter `.mobileconfig` i dina filer. Enhets-token används för att lägga till enhetsspecifika information. Ange till exempel `{{serialnumber}}` om du vill visa serienumret. På enheten ser texten likadan `123456789ABC`som, som är unik för varje enhet. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceid` eller andra enhetsspecifika värden.
 
-4. I **Anpassad konfiguration** anger du följande inställningar:
+  > [!NOTE]
+  > Variablerna är inte validerade i användar gränssnittet och är Skift läges känsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Se till att ange rätt information.
 
-    - **Anpassat namn på konfigurationsprofil**: Ange ett namn för principen. Det här namnet visas på enheten och i Intune-statusen.
-    - **Konfigurationsprofilfil**: Bläddra till konfigurationsprofilen som du skapade med Apple Configurator eller Apple Profile Manager. Filen som du importerade visas i området **Filinnehåll**.
-
-5. Välj **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
+Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
 
 ## <a name="next-steps"></a>Nästa steg
 
