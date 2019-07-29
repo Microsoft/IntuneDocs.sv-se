@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7663009c7d45171ab6469f7f6e96b4c8f979b744
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883286"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427318"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune
 Informationen i den här artikeln hjälper dig att installera och sedan övervaka den lokala Exchange Active Sync-anslutningsappen för Intune.  Du använder den lokala Exchange-anslutningsappen för Intune med dina [principer för villkorlig åtkomst för att tillåta eller blockera åtkomst till Exchange On-Premises-postlådor](conditional-access-exchange-create.md). 
@@ -152,8 +152,22 @@ Hög tillgänglighet för den lokala Exchange-anslutningsappen innebär att om d
 För att utföra redundans upptäcker anslutningsappen ytterligare CAS för den Exchange-organisationen efter att anslutningsappen har skapat en lyckad anslutning till Exchange via angiven CAS. Vetskap om ytterligare CAS gör att anslutningsappen kan redundansväxla till en annan CAS om en sådan finns tills den primära CAS blir tillgänglig. Som standard är identifiering av ytterligare CAS aktiverad. Du kan inaktivera redundans med hjälp av följande procedur:  
 1. På den server där Exchange-anslutningsappen är installerad går du till %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
 2. Med en textredigerare öppnar du **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Ändra &lt;IsCasFailoverEnabled&gt;**SANT**&lt;/IsCasFailoverEnabled&gt; till &lt;IsCasFailoverEnabled&gt;**false** &lt;/IsCasFailoverEnabled&gt; för att inaktivera funktionen.    
+3. Ändra &lt;IsCasFailoverEnabled&gt;**SANT**&lt;/IsCasFailoverEnabled&gt; till &lt;IsCasFailoverEnabled&gt;**false** &lt;/IsCasFailoverEnabled&gt; för att inaktivera funktionen.  
  
+## <a name="optional-performance-tuning-for-the-exchange-connector"></a>Valfri prestandajustering för Exchange Connector  
+
+När du hanterar 5 000 eller flera enheter med Exchange ActiveSync kan du konfigurera en valfri inställning för att förbättra anslutningsprogrammets prestanda. Bättre prestanda uppnås genom att låta Exchange använda flera instanser av ett körningsutrymme för PowerShell-kommandon. 
+
+Innan du gör den här ändringen kontrollerar du att det konto som du använder för att köra Exchange Connector inte används för andra Exchange-hanteringsbehov. Detta beror på att Exchange har en gräns på 18 körningsutrymmen per konto, varav de flesta kommer att användas av anslutningsprogrammet. 
+
+Den här prestandaändringen är inte lämplig för anslutningsprogram som körs på äldre eller långsammare maskinvara.  
+
+1. Öppna installationskatalogen för anslutningsprogrammet på den server där anslutningsprogrammet är installerat.  Standardplatsen är *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*. 
+2. Redigera filen *OnPremisesExchangeConnectorServiceConfiguration.xml*.
+3. Leta upp **EnableParallelCommandSupport** och ange värdet till **true**:  
+     
+   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+4. Spara filen och starta om Microsoft Intune Exchange Connector-tjänsten.
 
 ## <a name="reinstall-the-on-premises-exchange-connector"></a>Installera om den lokala Exchange-anslutningsappen
 Du kan behöva installera om en Exchange-anslutningsapp. Eftersom en enda anslutningsapp stöds för anslutning till varje Exchange-organisation gäller att om du installerar en andra anslutningsapp för en organisation så ersätter den nya anslutningsapp som du installerar den ursprungliga anslutningsappen.

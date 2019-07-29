@@ -5,6 +5,7 @@
   items:
     - name: Vad är Intune?
       href: what-is-intune.md
+      displayName: ems; emm; azure ad; active directory; ad
     - name: Vad kan Intune göra för mitt företag?
       href: get-started-evaluation.md
     - name: Nyheter
@@ -18,6 +19,7 @@
   items:
     - name: Prova Intune utan kostnad
       href: free-trial-sign-up.md
+      displayName: 'tenant; trial; get started, start; help'
     - name: Skapa en användare
       href: quickstart-create-user.md
     - name: Skapa en grupp
@@ -56,6 +58,7 @@
   items:
     - name: Vad är enhetshantering?
       href: what-is-device-management.md
+      displayName: teamviewer
     - name: Vad är Intune for Education?
       href: introduction-intune-education.md
     - name: Övergripande arkitektur
@@ -70,6 +73,7 @@
       href: byod-technology-decisions.md
     - name: Appskyddsprinciper och arbetsprofiler (Android)
       href: android-deployment-scenarios-app-protection-work-profiles.md
+      displayName: app-we; without; without enrollment
     - name: Hantera versioner av operativsystem
       href: manage-os-versions.md
     - name: Hantera Windows Holographic
@@ -134,6 +138,7 @@
       items:
         - name: Steg för att konfigurera Intune
           href: setup-steps.md
+          displayName: fasttrack
         - name: Konfigurationer som stöds
           href: supported-devices-browsers.md
           items:
@@ -188,6 +193,7 @@
               displayName: COD
             - name: Multi-Factor Authentication
               href: multi-factor-authentication.md
+              displayName: mfa; multifactor
             - name: Hanterare av enhetsregistrering
               href: device-enrollment-manager-enroll.md
             - name: Mappa enheter till grupper
@@ -214,20 +220,24 @@
           items:
             - name: Konfigurera Android-registrering
               href: android-enroll.md
+              displayName: wpj
             - name: Ansluta Intune till Android Enterprise
               href: connect-intune-android-enterprise.md
             - name: Android Enterprise-arbetsprofilregistrering
               href: android-work-profile-enroll.md
             - name: Registrering av dedikerad Android Enterprise-enhet
               href: android-kiosk-enroll.md
+              displayName: gms
             - name: Fullständigt hanterad Android Enterprise-registrering
               href: android-fully-managed-enroll.md
+              displayName: gms
             - name: Registrera dedikerade Android Enterprise-enheter eller fullständigt hanterade enheter
               href: android-dedicated-devices-fully-managed-enroll.md
             - name: Hantera Android Enterprise-arbetsprofilenheter
               href: android-enterprise-overview.md
             - name: Samsung Knox Mobile Enrollment
               href: android-samsung-knox-mobile-enroll.md
+              displayName: kda; kme
         - name: Ställ in iOS-registrering
           href: ios-enroll.md
           items:
@@ -246,9 +256,11 @@
           href: enrollment-report-company-portal-abandon.md
         - name: Felsöka enhetsregistrering
           href: troubleshoot-device-enrollment-in-intune.md
+          displayName: sso
     - name: Hantera enheter
-      href: device-management.md
       items:
+        - name: Översikt över enhetshantering
+          href: device-management.md
         - name: Funktioner för enhetshantering
           href: device-management-capabilities.md
         - name: Kringgå aktiveringslås
@@ -332,6 +344,7 @@
               href: vpn-setting-configure-per-app.md
         - name: Lägga till ett trådlöst Wi-Fi-nätverk
           href: wi-fi-settings-configure.md
+          displayName: wifi
           items:
             - name: Wi-Fi med en i förväg delad nyckel
               href: wi-fi-profile-shared-key.md
@@ -343,6 +356,7 @@
           href: shared-user-device-settings.md
         - name: Mobility Extensions på Zebra-enheter
           href: android-zebra-mx-overview.md
+          displayName: mx
           items:
             - name: StageNow-loggar och vanliga problem
               href: android-zebra-mx-logs-troubleshoot.md
@@ -362,6 +376,7 @@
       items:
         - name: Översikt över enhetsskydd
           href: device-protect.md
+          displayName: compliant; noncompliant; mfa
         - name: Sekretess och personliga data
           href: privacy-personal-data.md
           items:
@@ -389,8 +404,10 @@
         - name: Kryptera enheter
           href: encrypt-devices.md
         - name: Villkorlig åtkomst
-          href: conditional-access.md
           items:
+            - name: Översikt över villkorsstyrd åtkomst
+              href: conditional-access.md
+              displayName: ca
             - name: Vanliga sätt att använda villkorlig åtkomst
               href: conditional-access-intune-common-ways-use.md
             - name: Installera Exchange On-Premises Connector
@@ -431,6 +448,7 @@
                       items:
                         - name: Integrering av Better Mobile och Intune
                           href: better-mobile-mtd-connector-integration.md
+                          displayName: sso
                     - name: Konfigurera Check Point
                       href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
                       items:
@@ -491,14 +509,18 @@
           items:
             - name: SCEP
               href: certificates-scep-configure.md
+              displayName: ksp
             - name: PKCS
               href: certficates-pfx-configure.md
+              displayName: ksp
             - name: Använd S/MIME för att kryptera e-post
               href: certificates-s-mime-encryption-sign.md
             - name: Använd tredje parts certifikatutfärdare med SCEP
               href: certificate-authority-add-scep-overview.md
+              displayName: csr
             - name: Använda DigiCert PKI
               href: certificates-digicert-configure.md
+              displayName: ca; pkcs; pki; ra; registration authority
             - name: Ta bort SCEP- eller PKCS-certifikat
               href: remove-certificates.md
         - name: eSIM-mobilprofiler
@@ -519,6 +541,7 @@
           href: app-management.md
         - name: Lägga till appar
           href: apps-add.md
+          displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
           items:
             - name: Skyddade appar i Intune
               href: apps-supported-intune-apps.md
@@ -559,6 +582,7 @@
                   href: lob-apps-macos.md
             - name: Webbappar
               href: web-app.md
+              displayName: web; web link; weblink; web-link
             - name: Inbyggda appar
               href: apps-add-built-in.md
             - name: PowerShell-skript
@@ -594,9 +618,11 @@
               href: app-configuration-policies-managed-app.md
             - name: Använd iOS-appetableringsprofiler
               href: app-provisioning-profile-ios.md
-            - name: Arbeta med volyminköpta program och böcker
-              href: vpp-apps.md
+            - name: Volyminköpta appar och böcker
               items:
+                - name: Hantera VPP-appar och-böcker
+                  href: vpp-apps.md
+                  displayName: vpp; volume purchased
                 - name: iOS VPP-appar
                   href: vpp-apps-ios.md
                 - name: Microsoft Store för företag-appar
@@ -616,11 +642,15 @@
             - name: Rensa program selektivt
               href: apps-selective-wipe.md
             - name: Använd programskyddsprinciper
-              href: app-protection-policy.md
               items:
+                - name: Förstå appskyddsprinciper
+                  href: app-protection-policy.md
+                  displayName: app; protection; policy
                 - name: Skapa programskyddsprinciper
-                  href: app-protection-policies.md
                   items:
+                    - name: Allmänna inställningar
+                      href: app-protection-policies.md
+                      displayName: dlp; data loss prevention
                     - name: Inställningar för Android
                       href: app-protection-policy-settings-android.md
                     - name: Inställningar för iOS
@@ -671,6 +701,10 @@
           href: tenant-status.md
         - name: Felsöka
           items:
+            - name: Felsöka registrering
+              items:
+                - name: Felsöka iOS-enhetsregistrering
+                  href: troubleshoot-ios-enrollment-errors.md
             - name: Hjälpa användare att felsöka problem
               href: help-desk-operators.md
             - name: Felsökning av problem med åtkomst till företagsresurser
@@ -877,6 +911,7 @@
               href: app-sdk-ios.md
             - name: Appomslutningsverktyg för Android
               href: app-wrapper-prepare-android.md
+              displayName: dex
             - name: Intune App SDK för Android
               href: app-sdk-android.md
               items:

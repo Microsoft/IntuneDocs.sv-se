@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16586ece687b5d50ea89b28bfd524f50e65ceb46
-ms.sourcegitcommit: 5ce8726278004bbf072149a9c924091bb0654b7c
+ms.openlocfilehash: bbab505d668f0e348b3b4d34fb2c39ac683f340b
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67851486"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353588"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -73,6 +73,9 @@ Följande instanser av säkerhetsbaslinjer är tillgängliga för användning me
 - **Microsoft Defender ATP-baslinje**  
   *(Denna baslinje kan användas när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
   - [Förhandsversion: Microsoft Defender ATP-baslinje](security-baseline-settings-defender-atp.md)  
+
+  > [!NOTE]
+  > Säkerhetsbaslinjen för Microsoft Defender ATP är optimerad för fysiska enheter och rekommenderas inte för användning på virtuella datorer (VM) eller VDI-slutpunkter. Vissa baslinjeinställningar kan påverka fjärranslutna interaktiva sessioner i virtualiserade miljöer.  Mer information finns i [Öka efterlevnaden med säkerhetsbaslinjen i Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) i Windows-dokumentationen.
 
 Du kan fortsätta att använda och redigera profiler som du har skapat tidigare baserat på en förhandsvisningsmall, till och med när förhandsversionerna inte längre är tillgängliga för att skapa nya profiler. 
 
@@ -177,19 +180,19 @@ Andra processer som kan ändra inställningarna på enheten senare inkluderar en
 
 ## <a name="q--a"></a>Frågor och svar
 
-#### <a name="why-these-settings"></a>Varför ska man använda de här inställningarna?
+### <a name="why-these-settings"></a>Varför ska man använda de här inställningarna?
 
 Microsofts säkerhetsteam har många års erfarenhet av att arbeta direkt med Windows-utvecklare och säkerhets-communityn för att skapa de här rekommendationerna. Inställningarna i baslinjen anses vara de mest relevanta säkerhetsrelaterade konfigurationsalternativen. Teamet justerar sina rekommendationer baserat på nyligen utgivna funktioner i varje ny Windows-version.
 
-#### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Finns det någon skillnad i rekommendationerna för Windows säkerhetsbaslinjer för grupprinciper och Intune?
+### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Finns det någon skillnad i rekommendationerna för Windows säkerhetsbaslinjer för grupprinciper och Intune?
 
 Det är samma Microsoft-säkerhetsteam som har valt och organiserat inställningarna för varje baslinje. Intune innehåller alla relevanta inställningar i Intunes säkerhetsbaslinje. Det finns vissa inställningar i grupprincipens baslinje som är specifika för en lokal domänkontrollant. De här inställningarna är undantagna från Intunes rekommendationer. De andra inställningarna är likadana.
 
-#### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Är Intune-säkerhetsbaslinjerna CIS- och NIST-kompatibla?
+### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Är Intune-säkerhetsbaslinjerna CIS- och NIST-kompatibla?
 
 Egentligen inte. Microsofts säkerhetsteam har kontakt med organisationer, som exempelvis CIS, när man sammanställer sina rekommendationer. Men det finns inte någon en-till-en-mappning mellan ”CIS-kompatibel” och Microsofts baslinjer.
 
-#### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Vilka certifieringar har Microsofts säkerhetsbaslinjer? 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Vilka certifieringar har Microsofts säkerhetsbaslinjer? 
 
 - Microsoft fortsätter att publicera säkerhetsbaslinjer för grupprinciper (GPO:er) och [verktyg för säkerhetsefterlevnad](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) på samma sätt som vi har gjort under många år. Dessa baslinjer används av många organisationer. Rekommendationerna i dessa baslinjer kommer från Microsoft-säkerhetsteamets samverkan med företagskunder och externa myndigheter, bland annat DoD (Department of Defense) och NIST (National Institute of Standards and Technology). Vi delar våra rekommendationer och baslinjer med dessa organisationer. Organisationerna har också egna rekommendationer som avspeglar Microsofts rekommendationer. Eftersom hantering av mobilenheter (MDM) fortsätter att växa i molnet, har Microsoft skapat motsvarande MDM-rekommendationer för dessa grupprincipbaslinjer. Dessa ytterligare baslinjer är inbyggda i Microsoft Intune och innehåller efterlevnadsrapporter för användare, grupper och enheter som följer (eller inte följer) baslinjen.
 
@@ -202,4 +205,5 @@ Egentligen inte. Microsofts säkerhetsteam har kontakt med organisationer, som e
   - [MDM-säkerhetsbaslinje](security-baseline-settings-mdm.md)  
   - [Microsoft Defender ATP-baslinje](security-baseline-settings-defender-atp.md)  
 
-- Kontrollera statusen och övervaka [baslinje och profil](security-baselines-monitor.md).
+- Kontrollera statusen och övervaka [baslinje och profil](security-baselines-monitor.md)
+

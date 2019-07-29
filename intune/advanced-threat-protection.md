@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 069658bdd231be96d7f9fbe23de1b4e38fdc5a9e
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: af27a9b07434346a5425d0539759cb90ebf1ee6f
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885152"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427094"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune  
 
@@ -52,6 +52,17 @@ Om du vill använda Microsoft Defender ATP med Intune måste du ha följande kon
 
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Aktivera Microsoft Defender ATP i Intune
 
+När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, till exempel [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst.  Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
+
+Klassiska principer för villkorlig åtkomst för MTD-appar: 
+
+- Används av Intune MTD för att kräva att enheter registreras i Azure AD så att de har ett enhets-ID. ID:t krävs så att enheterna kan rapportera deras status till Intune.  
+- Är skilda från principer för villkorlig åtkomst som du kan skapa för att hantera MTD.
+- Samverkar inte som standard med andra principer för villkorlig åtkomst som du använder för utvärdering.  
+
+Du kan visa klassiska principer för villkorlig åtkomst genom att gå till **Azure Active Directory** > **Villkorlig åtkomst** > **Klassiska principer** i [Azure](https://portal.azure.com/#home).
+
+### <a name="to-enable-defender-atp"></a>Så här aktiverar du Defender ATP
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Microsoft Defender ATP** och under *inställningar för anslutningsprogram* väljer du därefter **Öppna Microsoft Defender Security Center**.
 

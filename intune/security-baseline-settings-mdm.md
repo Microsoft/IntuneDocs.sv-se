@@ -5,7 +5,7 @@ description: Inställningar för Intune-säkerhetsbaslinjer för att hantera Win
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
-ms.translationtype: HT
+ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882299"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491912"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Inställningar för MDM-säkerhetsbaslinjer för Intune  
 
@@ -1572,7 +1572,7 @@ Mer information finns i [CSP-princip – WindowsConnectionManager](https://docs.
 
   **Standard**: Aktiverat
   
-## <a name="windows-defender"></a>Windows Defender  
+## <a name="windows-defender"></a>Windows försvarare  
 Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.  
 
 - **Scan incoming mail messages** (Sök igenom inkommande e-postmeddelanden)  
@@ -1773,7 +1773,12 @@ Mer information finns i [2.2.2-FW_PROFILE_TYPOE]( https://docs.microsoft.com/ope
   **Standard**: Ja
 
 - **Konfigurera Windows Hello för företag**   
-  Windows Hello för företag är en alternativ metod för att logga in till Windows genom att ersätta lösenord, smartkort och virtuella smartkort. Om du aktiverar eller inte konfigurerar den här principinställningen etablerar enheten Windows Hello för företag. Om du inaktiverar den här principinställningen kan enheten inte etablera Windows Hello för företag för alla användare.
+    Windows Hello för företag är en alternativ metod för att logga in till Windows genom att ersätta lösenord, smartkort och virtuella smartkort.  
+
+  - När det är inställt på *Ja*aktiverar du den här principen och enheten etablerar Windows Hello för företag.  
+  - Om inställningen *inte är konfigurerad*, påverkar inte bas linjen enhetens princip inställning. Det innebär att om Windows Hello för företag är inaktiverat på en enhet förblir det inaktiverat. Om den är aktive rad förblir den aktive rad. 
+
+  Du kan inte inaktivera Windows Hello för företag via den här bas linjen. Du kan inaktivera Windows Hello för företag när du konfigurerar [Windows-registrering](windows-hello.md)eller som en del av en enhets konfigurations profil för [identitets skydd](identity-protection-configure.md).  
 
   **Standard**: Ja
 
@@ -1858,7 +1863,7 @@ Följande inställningar är antingen:
 - **Stöd för Internet Explorer-kryptering**  
 
 *[Ändrad]* [**Internet Explorer**](#internet-explorer):
-- **Automatisk prompt i Internet Explorer Internet Zone vid hämtning** av filer > standardvärdet **har**inaktiverats. I för hands versionen har inställningen Aktiver ATS.
+- **Automatisk prompt i Internet Explorer Internet Zone vid hämtning av filer** > standardvärdet har **inaktiverats**. I för hands versionen har inställningen Aktiver ATS.
 
 *[Nytt]* [**Fjärrhjälp**](#remote-assistance):  
 - **Begärd Fjärrhjälp** 

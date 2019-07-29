@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: de2f201e6a7d0181847db5d212625c9eed9ea698
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: e5d6bf546a67ef36107aa566de299397959190e3
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413775"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374676"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Ta bort SCEP- och PKCS-certifikat i Microsoft Intune
 
-I Microsoft Intune kan du använda SCEP-certifikat (Simple Certificate Enrollment Protocol) och PKCS-certifikatprofiler (Public Key Cryptography Standards) i enheter. 
+I Microsoft Intune kan du använda SCEP-certifikat (Simple Certificate Enrollment Protocol) och PKCS-certifikatprofiler (Public Key Cryptography Standards) i enheter.
 
 Dessa certifikat kan tas bort när du [rensar](devices-wipe.md#wipe) eller [drar tillbaka](devices-wipe.md#retire) enheten. Det finns några andra scenarier då certifikaten tas bort automatiskt och scenarier då certifikaten bevaras på enheten. Den här artikeln beskriver några vanliga scenarier och hur de påverkar PKCS- och SCEP-certifikat.
 
@@ -35,16 +35,15 @@ Dessa certifikat kan tas bort när du [rensar](devices-wipe.md#wipe) eller [drar
 > 1. Rensa eller dra tillbaka användarens enhet.
 > 2. Ta bort användaren från lokal Active Directory eller Azure AD.
 
-## <a name="manually-deleted-certificates"></a>Manuellt borttagna certifikat  
+## <a name="manually-deleted-certificates"></a>Manuellt borttagna certifikat
 
-Manuell borttagningen av ett certifikat är ett scenario som gäller för olika plattformar och certifikat som etablerats av SCEP- eller PKCS-certifikatprofiler. Till exempel kan en användare ta bort ett certifikat från en enhet när enheten förblir ett mål för en certifikatprincip.  
+Manuell borttagningen av ett certifikat är ett scenario som gäller för olika plattformar och certifikat som etablerats av SCEP- eller PKCS-certifikatprofiler. Till exempel kan en användare ta bort ett certifikat från en enhet när enheten förblir ett mål för en certifikatprincip.
 
-När certifikatet har tagits bort i det här scenariot kommer enheten att betecknas som inkompatibel nästa gång den checkar in med Intune, eftersom det förväntade certifikatet saknas. Intune skickar sedan ett nytt certifikat för att återställa enhetens efterlevnad. Ingen ytterligare åtgärd krävs för att återställa certifikatet.  
-
+När certifikatet har tagits bort i det här scenariot kommer enheten att betecknas som inkompatibel nästa gång den checkar in med Intune, eftersom det förväntade certifikatet saknas. Intune skickar sedan ett nytt certifikat för att återställa enhetens efterlevnad. Ingen ytterligare åtgärd krävs för att återställa certifikatet.
 
 ## <a name="windows-devices"></a>Windows-enheter
 
-#### <a name="scep-certificates"></a>SCEP-certifikat
+### <a name="scep-certificates"></a>SCEP-certifikat
 
 Ett SCEP-certifikat återkallas *och* tas bort när:
 
@@ -67,7 +66,7 @@ SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 - En administratör drar tillbaka Intune-licensen.
 - En administratör tar bort användaren eller gruppen från Azure AD.
 
-#### <a name="pkcs-certificates"></a>PKCS-certifikat
+### <a name="pkcs-certificates"></a>PKCS-certifikat
 
 Ett PKCS-certifikat återkallas *och* tas bort när:
 
@@ -90,7 +89,7 @@ PKCS-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 
 ## <a name="ios-devices"></a>iOS-enheter
 
-#### <a name="scep-certificates"></a>SCEP-certifikat
+### <a name="scep-certificates"></a>SCEP-certifikat
 
 Ett SCEP-certifikat återkallas *och* tas bort när:
 
@@ -113,7 +112,7 @@ SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 - En administratör drar tillbaka Intune-licensen.
 - En administratör tar bort användaren eller gruppen från Azure AD.
 
-#### <a name="pkcs-certificates"></a>PKCS-certifikat
+### <a name="pkcs-certificates"></a>PKCS-certifikat
 
 Ett PKCS-certifikat återkallas *och* tas bort när:
 
@@ -123,7 +122,7 @@ Ett PKCS-certifikat återkallas *och* tas bort när:
 
 Ett PKCS-certifikat tas bort när:
 - En certifikatprofil tas bort från grupptilldelningen.
-  
+
 Ett rotcertifikat tas bort när:
 - En användare avregistrerar sig.
 - En administratör kör [rensningsåtgärden](devices-wipe.md#wipe).
@@ -137,7 +136,7 @@ PKCS-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 
 ## <a name="android-knox-devices"></a>Android KNOX-enheter
 
-#### <a name="scep-certificates"></a>SCEP-certifikat
+### <a name="scep-certificates"></a>SCEP-certifikat
 
 Ett SCEP-certifikat återkallas *och* tas bort när:
 - En användare avregistrerar sig.
@@ -160,7 +159,7 @@ SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 - En administratör drar tillbaka Intune-licensen.
 - En administratör tar bort användaren eller gruppen från Azure AD.
 
-#### <a name="pkcs-certificates"></a>PKCS-certifikat
+### <a name="pkcs-certificates"></a>PKCS-certifikat
 
 Ett PKCS-certifikat återkallas *och* tas bort när:
 
@@ -179,14 +178,15 @@ PKCS-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 - En administratör tar bort användaren eller gruppen från Azure AD.
 - En administratör ändrar eller uppdaterar PKCS-profilen.
 - En certifikatprofil tas bort från grupptilldelningen.
-  
-  
+
+
 > [!NOTE]
-> Android for Work-enheter har inte verifierats för scenarierna ovan. Äldre Android-enheter (alla enheter som inte kommer från Samsung och inte har arbetsprofiler) har inte aktiverats för borttagning av certifikat. 
+> Android for Work-enheter har inte verifierats för scenarierna ovan.
+> Äldre Android-enheter (alla enheter som inte kommer från Samsung och inte har arbetsprofiler) har inte aktiverats för borttagning av certifikat.
 
 ## <a name="macos-certificates"></a>macOS-certifikat
 
-#### <a name="scep-certificates"></a>SCEP-certifikat
+### <a name="scep-certificates"></a>SCEP-certifikat
 
 Ett SCEP-certifikat återkallas *och* tas bort när:
 - En användare avregistrerar sig.
@@ -205,7 +205,7 @@ SCEP-certifikat *bevaras* på enheten (certifikaten återkallas inte och tas int
 > [!NOTE]
 > Det går inte att använda [rensningsåtgärden](devices-wipe.md#wipe) för att fabriksåterställa macOS-enheter.
 
-#### <a name="pkcs-certificates"></a>PKCS-certifikat
+### <a name="pkcs-certificates"></a>PKCS-certifikat
 
-PKCS-certifikat stöds inte i macOS.
+PKCS-certifikat stöds inte på macOS.
 

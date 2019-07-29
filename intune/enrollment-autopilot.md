@@ -17,15 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8760bde5f6c53f6e73d8c8dd0f795809726b2
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: aa4a0ff4c651e20a9f772551f1664bd8bf2d879f
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649105"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387325"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
+
+Det finns fyra typer av Autopilot-distributioner: [Självdistributionsläge](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/self-deploying) kan användas med kiosker, digital signering eller delade enheter, [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) gör det möjligt för partner eller IT-personal att etablera en Windows 10-dator i förväg, så att den är helt konfigurerad och klar för verksamheten, [Autopilot för befintliga enheter](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) gör att du enkelt kan distribuera den senaste versionen av Windows 10 till dina befintliga enheter och [Användardrivet läge](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/user-driven) för traditionella användare. 
 
 
 ## <a name="prerequisites"></a>Krav
