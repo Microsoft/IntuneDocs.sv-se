@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: cd310cea29a3dac7a178d88c0f29d1a4e36ad37d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528306"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482801"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
@@ -43,7 +43,6 @@ Logga in på [Intune](https://aka.ms/intuneportal) som [global administratör el
 En app kan inkluderas så att Intune kan hantera aspekter av appen. 
 
 Använd följande steg för att lägga till en app i Intune:
-
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appar** > **Lägg till**. 
 2. Välj **Windows 10** i avsnittet **Office 365-paket** i listrutan **Apptyp**.
 3. Välj **Konfigurera appaket** och välj de Office-appar som ska tilldelas till Intune-användaren.
@@ -56,9 +55,9 @@ Använd följande steg för att lägga till en app i Intune:
 
     ![Skärmbild av tillägg av appinformation](media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
 
-8. Välj **Inställningar för appaket**.
-9. I listrutan **Uppdateringskanal** väljer du **Varje månad**.
-10. Klicka på **OK** > **Lägg till**.
+10. Välj **Inställningar för appaket**.
+11. I listrutan **Uppdateringskanal** väljer du **Varje månad**.
+12. Klicka på **OK** > **Lägg till**.
 
 ## <a name="assign-the-app-to-a-group"></a>Tilldela appen till en grupp
 

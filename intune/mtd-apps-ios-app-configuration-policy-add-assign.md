@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d27cd977909bb7aa237441102110a7abc27ad301
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: fef4b6969680101e2e4f045bc83a8974536eaf2a
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884998"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660956"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune  
 
@@ -164,26 +164,23 @@ Välj det avsnitt som motsvarar din MTD-provider:
 - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Check Point SandBlast Mobile-konfigurationsprincipen för iOS-appar.
   - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
 
-```
-<dict><key>MDM</key><string>INTUNE</string></dict>
-```
+        <dict><key>MDM</key><string>INTUNE</string></dict>
+
 
 ### <a name="zimperium-app-configuration-policy"></a>Konfigurationsprincip för Zimperium-app  
 - Se anvisningarna för att [använda Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Zimperium-konfigurationsprincipen för iOS-appar.
   - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
-
-```
-<dict>
-<key>provider</key><string>Intune</string>
-<key>userprincipalname</key><string>{{userprincipalname}}</string>
-<key>deviceid</key>
-<string>{{deviceid}}</string>
-<key>serialnumber</key>
-<string>{{serialnumber}}</string>
-<key>udidlast4digits</key>
-<string>{{udidlast4digits}}</string>
-</dict>
-```
+ 
+        <dict>
+        <key>provider</key><string>Intune</string>
+        <key>userprincipalname</key><string>{{userprincipalname}}</string>
+        <key>deviceid</key>
+        <string>{{deviceid}}</string>
+        <key>serialnumber</key>
+        <string>{{serialnumber}}</string>
+        <key>udidlast4digits</key>
+        <string>{{udidlast4digits}}</string>
+        </dict>
 
 ### <a name="pradeo-app-configuration-policy"></a>Konfigurationsprincip för Pradeo-appar  
 Pradeo stöder inte programkonfigurationsprincipen på iOS.  För att istället få en konfigurerad app kan du arbeta med Pradeo för att implementera anpassade IPA- eller APK-filer som är förkonfigurerade med de inställningar som du önskar.
@@ -192,16 +189,15 @@ Pradeo stöder inte programkonfigurationsprincipen på iOS.  För att istället 
 - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) när du ska lägga till en konfigurationsprincip för Better Mobile iOS-appen.
   - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen. Ersätt webbadressen `https://client.bmobi.net` med rätt konsoladress.
 
-```
-<dict>
-<key>better_server_url</key>
-<string>https://client.bmobi.net</string>
-<key>better_udid</key>
-<string>{{aaddeviceid}}</string>
-<key>better_user</key>
-<string>{{userprincipalname}}</string>
-</dict>
-```
+        <dict>
+        <key>better_server_url</key>
+        <string>https://client.bmobi.net</string>
+        <key>better_udid</key>
+        <string>{{aaddeviceid}}</string>
+        <key>better_user</key>
+        <string>{{userprincipalname}}</string>
+        </dict>
+
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Konfigurationsprincip för Sophos Mobile-appen  
 Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i artikeln om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
@@ -210,22 +206,20 @@ Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i artikeln om 
 Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Wandera-konfigurationsprincipen för iOS-appar.
 - På **steg 8** använder du alternativet **Ange XML-data**. Logga in på din RADAR Wandera-portal och bläddra till **Inställningar** > **EMM-integrering** > **App Push**. Välj **Intune** och kopiera innehållet nedan och klistra in det i konfigurationsprincipen.  
 
-  ```
-  <dict><key>secretKey</key>
-  <string>SeeRADAR</string>
-  <key>apiKey</key>
-  <string> SeeRADAR </string>
-  <key>customerId</key>
-  <string> SeeRADAR </string>
-  <key>email</key>
-  <string>{{mail}}</string>
-  <key>firstName</key>
-  <string>{{username}}</string>
-  <key>lastName</key>
-  <string></string>
-  <key>activationType</key>
-  <string>PROVISION_THEN_AWP</string></dict>  
-  ```
+      <dict><key>secretKey</key>
+       <string>SeeRADAR</string>
+       <key>apiKey</key>
+       <string> SeeRADAR </string>
+       <key>customerId</key>
+       <string> SeeRADAR </string>
+       <key>email</key>
+       <string>{{mail}}</string>
+       <key>firstName</key>
+       <string>{{username}}</string>
+       <key>lastName</key>
+       <string></string>
+       <key>activationType</key>
+       <string>PROVISION_THEN_AWP</string></dict>  
 
 ## <a name="assign-apps-to-groups"></a>Tilldela appar till grupper  
 - Det här steget gäller för alla MTD-partner. Se anvisningarna för [tilldelning av appar till grupper med Intune](apps-deploy.md).

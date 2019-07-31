@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e595ee2353a1554d97e49af666d20642a631596
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d05d9dd896321e48c3d1d9dec22cd0d1192dc0b6
+ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549305"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533183"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementera din Microsoft Intune-plan
 
@@ -137,8 +137,4 @@ Intune stöder enhetsplattformarna iOS, Mac OS, Android, Windows och Windows Mob
 
 
 ## <a name="next-steps"></a>Nästa steg
-
-Titta på denna [Intune-sessionsmodul för Microsoft Virtual Academy](https://mva.microsoft.com/en-US/training-courses/deploying-microsoft-enterprise-mobility-suite-16408) om du vill ha mer information om processen för Intune-implementering.
-
-
 Läs mer om [hur du testar och validerar din Intune-distribution](planning-guide-test-validation.md).

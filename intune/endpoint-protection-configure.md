@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: d0e3e67cd227c5ce8ac2cb42f79bdea1da8e2d75
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 13e8c7fd0c822a2bdfbf7c183ea6752f99cf7991
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375121"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482771"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Lägga till inställningar för slutpunktsskydd i Intune  
 
@@ -63,7 +63,7 @@ När du planerar profiler med anpassade brandväggsregler bör du tänka på fö
 - För varje profil gäller att om en enskild regel inte kan tillämpas, så misslyckas alla regler i profilen och ingen av reglerna tillämpas på enheten.  
 - När en regel inte kan tillämpas rapporteras alla regler i profilen som misslyckade. Intune kan inte identifiera vilken enskild regel som misslyckades.  
 
-De brandväggsregler som Intune kan hantera beskrivs i avsnittet om [konfigurationstjänstprovidern (CSP) för Windows-brandväggen]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp). Om du vill granska listan med anpassade brandväggsinställningar för Windows 10-enheter som stöds av Intune läser du avsnittet om [anpassade brandväggsregler](endpoint-protection-windows-10.md#custom-firewall-rules).  
+De brandväggsregler som Intune kan hantera beskrivs i avsnittet om [konfigurationstjänstprovidern (CSP) för Windows-brandväggen]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp). Om du vill granska listan med anpassade brandväggsinställningar för Windows 10-enheter som stöds av Intune läser du avsnittet om [anpassade brandväggsregler](endpoint-protection-windows-10.md#firewall-rules).  
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Så här lägger du till anpassade brandväggsregler i en profil för slutpunktsskydd  
 
@@ -73,7 +73,7 @@ De brandväggsregler som Intune kan hantera beskrivs i avsnittet om [konfigurati
 
 3. Välj **Windows Defender-brandväggen** för att öppna konfigurationssidan och välj sedan **Lägg till** för *Brandväggsregler* för att öppna sidan **Skapa regel**.  
 
-4. Ange inställningar för brandväggsregeln och välj sedan **OK** för att spara den. Information om vilka alternativ som finns tillgängliga för anpassade brandväggsregler finns i avsnittet om [anpassade brandväggsregler](endpoint-protection-windows-10.md#custom-firewall-rules).  
+4. Ange inställningar för brandväggsregeln och välj sedan **OK** för att spara den. Information om vilka alternativ som finns tillgängliga för anpassade brandväggsregler finns i avsnittet om [anpassade brandväggsregler](endpoint-protection-windows-10.md#firewall-rules).  
 
 5. När du har sparat regeln visas den på sidan för *Windows Defender-brandväggen* i listan över regler.  
 
