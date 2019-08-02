@@ -1,5 +1,6 @@
 ---
-title: Använda rapporter för Uppdateringsefterlevnad för Windows-uppdateringar i Microsoft Intune | Microsoft Docs
+title: Använda rapporter för Uppdateringsefterlevnad för Windows-uppdateringar i Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Använd OMS Uppdateringsefterlevnad för att visa rapportdata för Windows-uppdateringar som du distribuerar med Intune.
 keywords: ''
 author: brenduns
@@ -14,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2b236d01cb5ffcf5a26e71ac0a9b65bb586dcb1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 09f3cafc16d8a08885731aa244a089367c6c0933
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039670"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660400"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune-efterlevnadsrapporter för uppdateringar
 När du använder Intune för att distribuera Windows-uppdateringar till Windows 10-enheter visar du information om uppdateringsefterlevnad med hjälp av Intune eller en kostnadsfri lösning som heter *Uppdateringsefterlevnad*, som ingår i Microsoft Operations Management Suite (OMS).

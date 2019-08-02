@@ -16,14 +16,14 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a04a8b9f1973479fd0695ad0e782488fdef43d10
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375143"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671047"
 ---
-# <a name="monitor-device-encryption"></a>Övervaka enhetskryptering  
+# <a name="monitor-device-encryption-with-intune"></a>Övervaka enhetskryptering med Intune   
 
 Krypteringsrapporten i Microsoft Intune är en central plats där du kan visa information om krypteringsstatusen för dina hanterade enheter. Visa information om en enhets krypteringsstatus och se hur du kan hantera återställningsnycklar för enheter. Vilka alternativ för återställningsnycklar som är tillgängliga beror på vilken typ av enhet du visar.  
 
@@ -59,7 +59,7 @@ Fönstret Krypteringsrapport innehåller en lista över de enheter som du hanter
     
     Mer information finns i [BitLocker-CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) i Windows-dokumentationen.  
 
-  - **Ej redo**: Enheten har inte fullständiga krypteringsfunktioner, men har fortfarande stöd för kryptering. Exempelvis kan en Windows-enhet krypteras manuellt av en användare, eller via en grupprincip som kan konfigureras att tillåta kryptering utan en TMP.
+  - **Ej redo**: Enheten har inte fullständiga krypteringsfunktioner, men har fortfarande stöd för kryptering. Exempelvis kan en Windows-enhet krypteras manuellt av en användare, eller via en grupprincip som kan konfigureras att tillåta kryptering utan en TPM.
   - **Ej tillämpligt**: Det finns inte tillräckligt med information för att klassificera den här enheten.  
 
 - **Krypteringsstatus** – avser huruvida OS-enheten är krypterad.  
@@ -93,8 +93,6 @@ När du väljer en enhet från krypteringsrapporten visas fönstret **Enhetens k
 - **Sammanfattning av profiltillstånd** – en sammanfattning av de profiler som gäller för den här enheten. Sammanfattningen representerar det minst fördelaktiga tillståndet bland de tillämpliga profilerna. Om till exempel bara en av flera tillämpliga profiler resulterar i ett fel visar *Sammanfattning av profilstatus* *Fel*.  
 
 - **Statusinformation** – avancerad information om enhetens krypteringstillstånd.  
-  > [!NOTE]
-  > Stödet för FileVault är begränsat tills juliutgåvan har distribuerats klart om några dagar. Fram tills dess kanske informationen om enhetsstatus och enhetskryptering för macOS inte visas korrekt i krypteringsrapporten.
 
   > [!IMPORTANT]  
   > För Windows 10-enheter visar Intune endast *statusinformation* för enheter som kör *Windows-uppdateringen från 10 april 2019* eller senare.  

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 57b459efa5b423f1c73a0d6b7b9172f71f4c86d3
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375176"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467443"
 ---
 # <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune  
 
@@ -66,10 +66,7 @@ Mer information om FileVault-inställningen som du kan hantera med Intune finns 
 
    Exempel: Om du vill hämta en förlorad eller nyligen roterad återställningsnyckel loggar du in på webbplatsen för Intune-företagsportalen från valfri enhet. På portalen går du till *Enheter* och väljer den enhet där FileVault är aktiverat och väljer sedan *Hämta återställningsnyckel*. Den aktuella återställningsnyckeln visas.  
 
-6. Konfigurera de återstående inställningarna efter dina affärsbehov och välj **OK**.  
-
-   > [!NOTE]
-   > Stödet för FileVault är begränsat tills juliutgåvan har distribuerats klart om några dagar. Om du konfigurerar FileVault måste du välja **Aktivera** för *Defer FileVault until sign out* (Skjut upp FileVault tills utloggning) tills distributionen är klar.  
+6. Konfigurera de återstående [FileVault](endpoint-protection-macos.md#filevault)inställningarna efter dina affärsbehov och välj **OK**.  
 
 7. Slutför konfigurationen av ytterligare inställningar och spara sedan profilen.  
 

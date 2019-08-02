@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427318"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660950"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurera den lokala Exchange-anslutningsappen för Intune i Microsoft Intune
 Informationen i den här artikeln hjälper dig att installera och sedan övervaka den lokala Exchange Active Sync-anslutningsappen för Intune.  Du använder den lokala Exchange-anslutningsappen för Intune med dina [principer för villkorlig åtkomst för att tillåta eller blockera åtkomst till Exchange On-Premises-postlådor](conditional-access-exchange-create.md). 
@@ -121,7 +121,7 @@ Utför följande steg för att installera den lokala Exchange-anslutningsappen f
 
 5. Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med principer för villkorlig åtkomst i Intune.  
 
-       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
+   Kontrollera att tjänsten för automatisk upptäckt och Exchange Web Services har konfigurerats på Exchange-klientåtkomstservern. Mer information finns i avsnittet om [klientåtkomstservern](https://technet.microsoft.com/library/dd298114.aspx).
 
 6. I fältet **Lösenord** anger du lösenordet för detta konto för att möjliggöra för Intune att ansluta till Exchange-servern.
 
@@ -158,7 +158,7 @@ För att utföra redundans upptäcker anslutningsappen ytterligare CAS för den 
 
 När du hanterar 5 000 eller flera enheter med Exchange ActiveSync kan du konfigurera en valfri inställning för att förbättra anslutningsprogrammets prestanda. Bättre prestanda uppnås genom att låta Exchange använda flera instanser av ett körningsutrymme för PowerShell-kommandon. 
 
-Innan du gör den här ändringen kontrollerar du att det konto som du använder för att köra Exchange Connector inte används för andra Exchange-hanteringsbehov. Detta beror på att Exchange har en gräns på 18 körningsutrymmen per konto, varav de flesta kommer att användas av anslutningsprogrammet. 
+Innan du gör den här ändringen kontrollerar du att det konto som du använder för att köra Exchange Connector inte används för andra Exchange-hanteringsbehov. Detta beror på att Exchange har ett begränsat antal körningsutrymmen per konto, varav de flesta kommer att användas av anslutningsprogrammet. 
 
 Den här prestandaändringen är inte lämplig för anslutningsprogram som körs på äldre eller långsammare maskinvara.  
 

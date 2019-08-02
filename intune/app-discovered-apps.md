@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1827375dc1905b5c881f743777a73340f0215e0c
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388519"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590908"
 ---
 # <a name="intune-discovered-apps"></a>Intune-identifierade appar
 
@@ -30,13 +30,22 @@ ms.locfileid: "68388519"
 
 ## <a name="monitor-discovered-apps-with-intune"></a>Övervaka identifierade appar med Intune
 
-Intune innehåller en lista över identifierade appar på Intune-registrerade enheter i din klientorganisation.
+Intune tillhandahåller en sammanställd lista över detekterade appar på Intune-registrerade enheter på din klient.
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. I fönstret **Intune** väljer du **Klientappar** > **Identifierade appar**.
 
 >[!NOTE]
 >Du kan exportera listan över identifierade appar till en CSV-fil genom välja **Exportera** från bladet **Identifierade appar** .
+>
+>För upptäckta Win32-appar finns det för tillfället inget sammanlagt antal. Den här typen av data kan endast visas på specifika enheter.
+
+Intune tillhandahåller dessutom en lista över upptäckta appar för den individuella enheten på din klient. 
+
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Välj **Enheter** > **Alla Enheter** i fönstret Intune.
+3. Välj en enhet.
+4. Om du vill visa identifierade appar för den här enheten väljer du **Identifierade appar** från området **Övervaka**. 
 
 ## <a name="details-of-discovered-apps"></a>Information om identifierade appar
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836e754b8c08397fccb0c74b40ba9fe0675076e
-ms.sourcegitcommit: 97a46f0f6a27eda0592ff6518fac46bc2447b622
+ms.openlocfilehash: 1dd836d8bbc4d6f32081c74fb6f9edc42aff2cac
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411595"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482964"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Nätverksslutpunkter för Microsoft Intune  
 
@@ -146,7 +146,7 @@ Mer information finns i Apples [TCP- och UDP-portar som används av Apples progr
 
 ## <a name="microsoft-intune-certificate-connector"></a>Microsoft Intune certifikat Connector  
 
-Servern som är värd för Microsoft Intune Certificate Connector måste ha åtkomst via **TCP**-port **443** till de offentliga IP-platser som anges i följande tabell.  
+Servern som är värd för Microsoft Intune Certificate Connector måste ha åtkomst via **TCP**-port **443** till de offentliga IP-platser som anges i följande tabell. Mer information om certifikat finns på sidorna om att [konfigurera och använda PKCS-certifikat med Intune](certficates-pfx-configure.md) och [konfigurera och använda SCEP-certifikat med Intune](certificates-scep-configure.md).
 
 |Domains                             |IP-adress       |
 |---------------|--------------------------------------|

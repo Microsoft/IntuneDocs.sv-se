@@ -14,14 +14,14 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: c744878c49dfa5adb1b4f64587abfe06151a69a0
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882230"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670977"
 ---
-# <a name="intune-tenant-status-page"></a>Sidan Klientorganisationsstatus i Intune
+# <a name="use-the-intune-tenant-status-page"></a>Använd sidan Klientorganisationsstatus i Intune
 Sidan Status för klientorganisation är en centraliserad hubb här du kan visa aktuell och viktig information om din klientorganisation. Informationen omfattar tillgänglighet för och användning av licenser, anslutningsstatus och viktiga meddelanden om Intune-tjänsten.  
 
 Visa instrumentpanelen genom att gå till **Intune > Klientorganisationsstatus** i Azure-portalen.  Klientorganisationsstatus visas under **gruppen Hjälp och support**.  

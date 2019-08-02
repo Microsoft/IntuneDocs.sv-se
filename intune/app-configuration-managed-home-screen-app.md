@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/16/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b1f8308463e76b09a041bb952ad09515435c54c
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 758230d3d2f1dd1cb42532cce9fe1ff530000a16
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374840"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482864"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurera Microsofts hanterade hemskärmsapp för Android Enterprise
 
@@ -386,6 +386,9 @@ Här följer ett exempel på ett JSON-skript med alla tillgängliga konfiguratio
 
 ## <a name="googles-android-device-policy-app"></a>Googles Android Device Policy-app
 Nu ger Managed Home Screen-appen tillgång till Googles Android Device Policy-app. Managed Home Screen-appen är en anpassad startfunktion som används med enheter som har registrerats i Intune som AE-dedikerade (Android Enterprise) enheter som använder helskärmsläge för flera appar. Du kan komma åt Android Device Policy-appen, eller vägleda användare till Android Device Policy-appen, för support och felsökning. Den här startfunktionen är tillgänglig när enheten registreras och låses på startskärmen i Managed Home Screen. Inga ytterligare installationer behövs för att använda den här funktionen.
+
+## <a name="managed-home-screen-debug-screen"></a>Felsökningsskärm för hanterad startsida
+Du kan komma åt den hanterade startskärmens felsökningsskärm genom att klicka på knappen **Tillbaka** tills felsökningsskärmen visas (klicka på knappen **Tillbaka** 15 gånger eller mer). Från felsökningsskärmen kan du starta programmet Android Device Policy, visa och överföra loggar eller tillfälligt pausa helskärmsläget för att uppdatera enheten. Mer information om hur du pausar helskärmsläget finns i objektet **Lämna helskärmsläget** i [inställningarna för dedikerad enhet](device-restrictions-android-for-work.md#dedicated-device-settings) för Android Enterprise.
 
 ## <a name="next-steps"></a>Nästa steg
 

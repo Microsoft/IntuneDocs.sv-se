@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b073047455cd21dc3ffe5efcb52f51584db5ff30
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: b6db255cc4c4bb8466d36e25deaf36e5c3480106
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353776"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467503"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -373,7 +373,14 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
      - Windows 10 och senare
 
 
-   - **Ämnesnamnets format**: Välj hur ämnesnamnet i certifikatbegäran ska skapas automatiskt av Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**. 
+   - **Ämnesnamnets format**: Välj hur ämnesnamnet i certifikatbegäran ska skapas automatiskt av Intune. Alternativen ändras beroende på om du väljer certifikattypen **Användare** eller certifikattypen **Enhet**.  
+
+     > [!NOTE]  
+     > Det finns ett [känt problem](#avoid-certificate-signing-requests-with-escaped-special-characters) med att använda SCEP för att hämta certifikat när ämnesnamnet i den resulterande certifikatsigneringsförfrågan (CSR) innehåller något av följande tecken som undantaget tecken (med ett omvänt snedstreck \\):
+     > - \+
+     > - ;
+     > - ,
+     > - =
 
         **Certifikattypen Användare**  
 
@@ -495,6 +502,42 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
      - Välj **OK** och **Skapa** sedan din profil.
 
 Profilen skapas och visas i fönstret med profillistan.
+
+### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Undvik förfrågningar om certifikatsignering med undantagna specialtecken
+Det finns ett känt problem för SCEP-certifikatbegäran som innehåller ett ämnesnamn med ett eller flera av följande specialtecken som undantaget tecken. Ämnesnamn där ett av specialteckningen är ett undantaget tecken leder till ett CSR med ett felaktigt ämnesnamn, vilket i sin tur leder till att valideringen av Intune SCEP-verifieringen misslyckas och certifikatet inte utfärdas.  
+
+Specialtecknen är:
+- \+
+- ,
+- ;
+- =
+
+Använd något av följande alternativ för att undvika den här begränsningen när ditt ämnesnamn innehåller specialtecken:  
+- Kapsla in värdet i ämnesnamnet som innehåller det specialtecken med citattecken.  
+- Ta bort specialtecknet från ämnesnamnsvärdet.  
+
+Du kan **till exempel** ha ett ämnesnamn som visas som *testanvändare (TestCompany, LLC)* .  En CSR som innehåller ett ämnesnamn som har kommatecken mellan *TestCompany* och *LLC* ger upphov till problem.  Du kan undvika problemet genom att placera citattecken runt hela ämnesnamnet eller genom att ta bort kommatecken från mellan *TestCompany* och *LLC*:
+- **Lägg till citattecken:** *CN=* ”Test User (TestCompany, LLC)”,OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Ta bort kommatecknet**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+
+ Om du försöker undanta kommatecknet med ett omvänt snedstreck kommer detta dock att misslyckas med ett fel i CRP-loggen:  
+- **Undantaget kommatecken**: *CN=Test User (TestCompany\\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+
+Felet liknar följande fel: 
+
+```
+Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match  
+
+  Exception: System.ArgumentException: Subject Name in CSR and challenge do not match
+
+   at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+   at Microsoft.ConfigurationManager.CertRegPoint.Controllers.CertificateController.VerifyRequest(VerifyChallengeParams value
+```
+
+
 
 ## <a name="assign-the-certificate-profile"></a>Tilldela certifikatprofilen
 

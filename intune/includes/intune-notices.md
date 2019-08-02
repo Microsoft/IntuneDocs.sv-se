@@ -7,14 +7,35 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: 4423e731bc1538cd2454de32f0d50f2d08eedc69
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67812450"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670929"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune. 
+
+
+### <a name="decreasing-support-for-android-device-administrator"></a>Minskat stöd för Android-enhetsadministratör 
+Enhetsadministratören för Android (kallas ibland för "äldre" Android-hantering och lanseras med Android 2.2) är ett sätt att hantera Android-enheter. Det finns dock en bättre hanteringsfunktion med [Android Enterprise]( https://docs.microsoft.com/intune/connect-intune-android-enterprise) (lanseras med Android 5.0). För att kunna flytta till en modern, mer omfattande och säkrare enhetshantering,minskar Google stödet för enhetsadministration i nya versioner av Android.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+På grund av dessa ändringar av Google kommer Intune-användare att påverkas på följande sätt: 
+- Intune kommer bara att kunna tillhandahålla stöd för enhetsadministratörshanterade Android-enheter som kör Android 10 och senare (även kallat Android Q) till och med sommaren 2020. Det här datumet är när nästa högre version av Android förväntas släppas.  
+- Enheter som hanteras av en enhetsadministratör som använder Android 10 eller senare efter sommaren 2020 kommer inte längre att kunna hanteras helt.    
+- Android-enheter som hanteras av en enhetsadministratör som blir kvar på tidigare versioner av Android än Android 10 påverkas inte och kan fortfarande hanteras av en enhetsadministratör.  
+- För alla enheter med Android 10 och senare har Google begränsat möjligheten för hanteringsagenter för enhetsadministratörer som företagsportalen att komma åt information om enhetsidentifieraren. Detta påverkar följande Intune-funktioner efter att enheten har uppdaterats till Android 10 eller senare: 
+    - Nätverksåtkomstkontroll för VPN fungerar inte längre.  
+    - Om enheter identifieras som företagsägda med IMEI eller serienummer markeras de inte automatiskt som företagsägda. 
+    - IMEI och serienumret kommer inte längre att vara synligt för IT-administratörer i Intune. 
+        > [!Note]
+        > Detta påverkar endast enheter som hanteras av enhetsadministratörer på Android 10 och senare och påverkar inte enheter som hanteras som Android Enterprise. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+För att undvika den minskade funktionalitet som sker under sommaren 2020 rekommenderar vi följande:
+- Publicera inte nya enheter i hanteringen av enhetsadministratörer.
+- Om en enhet förväntas ta emot en uppdatering av Android 10 kan du migrera den från enhetsadministratörshantering för Android Enterprise och/eller appskyddsprinciper.
 
 ### <a name="update-your-android-company-portal-app-to-the-latest-version---4536963--"></a>Uppdatera företagsportalappen för Android till den senaste versionen <!--4536963-->
 Intune släpper regelbundet uppdateringar till företagsportalsappen för Android. I November 2018 släppte vi en uppdatering av företagsportalen som innehåller en serverdeländring. Detta är en förberedelse inför Googles övergång från deras befintliga meddelandeplattform till Googles Firebase Cloud Messaging (FCM). När Google drar tillbaka sin nuvarande plattform och flyttar till FCM måste användarna ha uppdaterat företagsportalsappen till versionen från november 2018 eller senare för att fortsätta kommunicera med Google Play-butiken.
@@ -63,7 +84,7 @@ Från och med september 2019 börjar Intune stödja iOS-appar med Intune App SDK
 Du kan skydda företagets data från icke-godkända applikationer och användare via datakryptering med Intune App SDK eller genom att integrera programhantering. Intune App SDK för iOS använder 256-bitars krypteringsnycklar som standard när kryptering har aktiverats av Intune-appskyddsprinciper (APP). Efter den här ändringen kommer alla iOS-appar i SDK-versioner före 8.1.1, som använder 128-bitars krypteringsnycklar, inte längre att kunna dela data med program som är integrerade med SDK 8.1.1 eller med 256-bitars nycklar. Alla iOS-appar måste vara i SDK-version 8.1.1 eller senare för att delning av skyddade data ska vara möjlig.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Kontrollera dina appar från Microsoft och tredje part samt dina verksamhetsspecifika appar (LOB). Du bör se till att alla dina program som skyddas med Intune-appen använder SDK-version 8.1.1 eller senare.
+Kontrollera dina appar från Microsoft och tredje part samt dina verksamhetsspecifika appar (LOB). Se till att alla dina program som skyddas med Intune-appen använder SDK-version 8.1.1 eller senare.
 
 - För LOB-appar: Du kan behöva publicera dina appar som är inbyggda i SDK-version 8.1.1 eller senare på nytt. Vi rekommenderar den senaste SDK-versionen. Mer information om hur du förbereder dina LOB-appar för appskyddsprinciper finns i [Förbereda branschspecifika appar för appskyddsprinciper](../apps-prepare-mobile-application-management.md).
 - För appar från Microsoft/tredje part: Se till att du distribuerar den senaste versionen av de här apparna till användarna.
@@ -88,3 +109,22 @@ Börja använda inställningarna för tidsgräns i 1908 genom att konfigurera de
 Uppdatera din dokumentation och eventuella automatiserade skript om det behövs. 
 
 Vi håller dig uppdaterad och publicerar en påminnelse i meddelandecentret innan vi tar bort inställningarna för den interaktiva omstarten.
+
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Ändringsplan: Intune App SDK och appskyddsprinciper för Android kommer att stödja Android 5.0 och senare i oktober <!--4911065 -->
+Intune kommer att stödja Android 5.x (Lollipop) och högre i oktober. Uppdatera alla omslutna appar med den senaste Intune App SDK:n och uppdatera dina enheter.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Om du inte använder eller planerar att använda antingen SDK eller appen för Android påverkar den här ändringen inte dig. Om du använder Intune App SDK måste du uppdatera till den senaste versionen och även uppdatera dina enheter till Android 5.x och högre. Om du inte uppdaterar kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid. 
+
+Nedan hittar du en lista över vanliga enheter som har registrerats i Intune och som kör Android version 4.x. Om du har någon av dessa enheter bör du vidta lämpliga åtgärder för att se till att enheten stöder Android version 5.0 eller högre eller att den ersätts med en enhet som stöder Android version 5.0 eller högre. Den här listan är inte uttömmande för alla enheter som kan behöva utvärderas:
+- Samsung SM-T561  
+- Samsung SM-T365 
+- Samsung GT-I9195 
+- Samsung SM-G800F
+- Samsung SM-G357FZ
+- Motorola XT1080
+- Samsung GT-I9305
+- Samsung SM-T231
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Omslut dina appar med den senaste Intune App SDK:n. Du kan också ställa in inställningen för villkorsstyrd start ”Kräv lägsta operativsystemversion (Endast varning)” för att meddela slutanvändare med personliga enheter om att uppgradera dem.
