@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 921934eead9ff3a1074203dad55ee60f3fe77947
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c626bb50868e6b966eb7c8867f4c4ff7178eadcf
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047278"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756532"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune i Azure-konsolen och äldre Intune PC-klient
 
@@ -45,7 +45,7 @@ På grund av övergången till Azure AD-grupper, har gruppbaserad filtrering i i
 1. Välj en vy.
 2. I rutan **filter**, anger du namn på den grupp som du vill filtrera efter och trycker på retur. Då filtreras listvyn till enheterna i den specifika gruppen.
 
-   ![](media/intune-legacy-pc-client/image01.png)
+   ![Filtrerar List Rute inmatade med ingen vald](media/intune-legacy-pc-client/image01.png)
 
 
 ## <a name="continue-to-manage-windows-7-by-using-intune-pc-client"></a>Fortsätt att hantera Windows 7 med hjälp av Intune PC-klienten
@@ -61,7 +61,7 @@ En detaljerad jämförelse mellan funktionerna i PC-klienten och MDM finns i [j�
 Följ dessa steg om du vill växla från att hantera Windows 10-enheter med Intune PC-klienten till att hantera med MDM:
 
 1. I Silverlight-konsolen, utför du en **selektiv rensning** för att avregistrera enheten från PC-klienten.
-  ![](media/intune-legacy-pc-client/image02.png)
+  ![Varnings fönster med alternativ knappen selektivt Rensa enhet vald](media/intune-legacy-pc-client/image02.png)
 2. Omregistrera enheten med hjälp av [MDM (och/eller Azure AD-anslut)](https://docs.microsoft.com/intune/windows-enroll). 
 
 ## <a name="next-steps"></a>Nästa steg

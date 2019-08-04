@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7525971f9ab48b92c3274f56cb1046a6fde948a5
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: a8d1ad3648348783306fb0bc1e61defc4197a9d9
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794358"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680053"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -114,6 +114,9 @@ Om du vill undanta en klass från Mam-ppdateringar av Remapping kan du lägga ti
   </PropertyGroup>
 ```
 
+> [!NOTE]
+> För närvarande förhindrar ett problem med remapper fel sökning i Xamarin. Android-appar. Manuell integrering rekommenderas för att felsöka programmet tills problemet har lösts.
+
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Metoder som fått nya namn](app-sdk-android.md#renamed-methods)
 I många fall har en metod som är tillgänglig i Android-klassen markerats som slutgiltig i MAM-ersättningsklassen. I detta fall tillhandahåller MAM-ersättningsklassen en metod med liknande namn (med suffixet `MAM`) som ska åsidosättas i stället. Om du härleder från `MAMActivity`, i stället för att åsidosätta `OnCreate()` och anropa `base.OnCreate()`, måste `Activity` åsidosätta `OnMAMCreate()` och anropa `base.OnMAMCreate()`.
 
@@ -177,7 +180,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 För `Xamarin.Forms`-program utför `Microsoft.Intune.MAM.Remapper`-paketet MAM-klassersättning automatiskt genom att injicera `MAM`-klasser i klasshierarkin för vanliga `Xamarin.Forms`-klasser. 
 
 > [!NOTE]
-> Xamarin.Forms-integrationen ska göras utöver Xamarin.Android-integreringen som beskrivs ovan.
+> Xamarin.Forms-integrationen ska göras utöver Xamarin.Android-integreringen som beskrivs ovan. Remappingen fungerar annorlunda för Xamarin. Forms-appar så att de manuella MAM-ersättningarna fortfarande måste göras.
 
 När ommappningen har lagts till i ditt projekt måste du utföra motsvarande MAM-ersättningar. Exempelvis kan `FormsAppCompatActivity` och `FormsApplicationActivity` fortsätta att användas i dina program förutsatt att `OnCreate`- och `OnResume`-åsidosättningar ersätts med MAM-motsvarigheterna `OnMAMCreate` respektive `OnMAMResume`.
 
@@ -199,6 +202,9 @@ Det här förväntas, eftersom när ommappningen ändrar arvet för Xamarin-klas
 
 > [!NOTE]
 > Ommappningen skriver om ett beroende som Visual Studio använder för automatisk komplettering med IntelliSense. Därför kan du behöva återskapa och läsa in projektet igen när ommappningen läggs till för att IntelliSense ska identifiera ändringarna korrekt.
+
+#### <a name="troubleshooting"></a>Felsökning
+* Om du påträffar en tom, vit skärm i programmet vid lanseringen kan du behöva tvinga navigerings anropen att köras på huvud tråden.
 
 ### <a name="company-portal-app"></a>Företagsportalappen
 Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android-appen på enheten för att aktivera skydds principer för appar. Företagsportalen hämtar appskyddsprinciper från Intune-tjänsten. När appen initieras läser den in principen och koden för att kunna aktivera principen från företagsportalen. Användaren behöver inte vara inloggad.
