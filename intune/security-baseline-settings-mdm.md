@@ -1,7 +1,7 @@
 ---
 title: Inställningar för Intune-säkerhetsbaslinjer för Windows 10
 titleSuffix: Microsoft Intune
-description: Inställningar för Intune-säkerhetsbaslinjer för att hantera Windows 10
+description: Granska standardinställningarna och de tillgängliga inställningarna i Windows MDM säkerhets bas linje för Windows 10-enheter som du hanterar med Intune.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,23 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
-ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.openlocfilehash: 5565ce7a355136a749d79b52e4830af91684440a
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491912"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680043"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Inställningar för MDM-säkerhetsbaslinjer för Intune  
 
 Visa inställningarna för säkerhets bas linje för MDM som stöds av Microsoft Intune för enheter som kör Windows 10 eller senare. Standardvärdena för inställningarna i den här bas linjen representerar den rekommenderade konfigurationen för tillämpliga enheter och kanske inte matchar bas linje standardvärden från andra säkerhets bas linjer.  
 
-Den senaste bas linje versionen är **säkerhets bas linje för MDM för våren 2019 Update (19H1)**  
+Den senaste bas linje versionen är **säkerhets bas linje för MDM för maj 2019**  
 
 Om du vill veta mer om vad som har ändrats i den senaste versionen av den här bas linjen från den tidigare versionen, se [vad som har ändrats i den nya mallen](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> I juni 2019 ersattes för hands versionen av säkerhets bas linjen för för hands versionen av säkerhets *bas linjen för MDM för våren 2019 Update (19H1)* , som är allmänt tillgänglig (inte för hands version). Profiler som har skapats före tillgängligheten för MDM- *Säkerhetsbas linjen för våren 2019 Update (19H1)* kan inte uppdateras för att avspegla de inställningar och värden som finns i säkerhets bas linjen för MDM för våren 2019 Update (19H1).  Även om du inte kan skapa nya profiler baserade på för hands versions mal len kan du redigera och fortsätta att använda profiler som du skapade tidigare och som baseras på för hands versions mal len.   
+> I juni 2019 ersattes för hands versionen av säkerhets bas linjen för för hands versionen av säkerhets *bas linjen 2019 för MDM* , som är allmänt tillgänglig (inte i för hands version). Profiler som har skapats före tillgängligheten för *säkerhets bas linjen för MDM för maj 2019* kommer inte att uppdateras för att avspegla de inställningar och värden som finns i säkerhets bas linjen för MDM för maj 2019-version.  Även om du inte kan skapa nya profiler baserade på för hands versions mal len kan du redigera och fortsätta att använda profiler som du skapade tidigare och som baseras på för hands versions mal len.   
   
 Information om hur du använder säkerhets bas linjer med Intune finns i [använda säkerhets bas linjer](security-baselines.md).  
 
@@ -1825,7 +1825,7 @@ Mer information finns i [CSP-princip – WindowsPowerShell](https://docs.microso
   **Standard**: Aktiverat
 
 ## <a name="whats-changed-in-the-new-template"></a>Vad som har ändrats i den nya mallen
-*Säkerhets bas linjen för MDM för våren 2019 Update (19H1)* har följande ändringar från för *hands versions* mal len.
+*Säkerhets bas linjen för MDM för maj 2019* -mallen har följande ändringar från för *hands versions* mal len.
 
 ### <a name="changes-to-the-baseline-settings"></a>Ändringar i bas linje inställningarna
 Följande inställningar är antingen:
