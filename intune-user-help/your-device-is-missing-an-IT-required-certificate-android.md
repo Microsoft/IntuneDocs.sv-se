@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2017
+ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,25 +18,36 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bdf97e6a36a49bc6df5a182af7676c357440f3e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529338"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625114"
 ---
-# <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Android-enheten saknar ett certifikat som företagets support kräver
+# <a name="install-missing-certificate-required-by-your-organization"></a>Installera certifikatet som saknas som krävs av din organisation  
 
 Om enheten inte har registrerats i Intune och den saknar ett certifikat som krävs av företagets support kan du inte logga in på företagsportalappen. Följande meddelande visas när du försöker logga in:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
-Det finns två steg som du behöver utföra för att lösa problemet och hämta certifikatet som krävs:
+Det finns två alternativ du kan försöka hämta det certifikat som krävs och få enheten registrerat. 
 
-- Identifiera det saknade certifikatet i företags- eller skoldatorn.
-- Hämta det saknade certifikatet via Internet på enheten.
+- Aktivera webb läsar åtkomst i Företagsportal app.
+- Identifiera det saknade certifikatet på en företags- eller skoldator. Sök sedan på Internet för att hämta certifikatet som saknas. 
 
-## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Identifiera det saknade certifikatet i företags- eller skoldatorn
+Slutför stegen för att aktivera webb läsar åtkomst först. Om du fortfarande inte kan registrera enheten följer du anvisningarna för att leta upp certifikatet på Internet. 
+
+## <a name="enable-browser-access"></a>Aktivera webb läsar åtkomst
+Slutför de här stegen för att aktivera webb läsar åtkomst. När du har aktiverat åtkomst kommer Företagsportal att installera lämpligt certifikat och fortsätta registreringen.    
+
+1. I Företagsportal-appen går du till det högra hörnet och väljer menyn.  
+2. Välj **Inställningar**.  
+3. Bredvid **aktivera webb läsar åtkomst** väljer du **Aktivera**.  
+4. På skärmen enhets administratör väljer du **Aktivera**. 
+
+## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identifiera och hämta certifikatet som saknas via Webbs ökning
+Slutför de här stegen för att identifiera och installera certifikatet på enheten manuellt.  
 
 1. Öppna Internet Explorer på en dator. Kontakta företagets support om du inte har en dator som kan användas för detta ändamål. Kontaktuppgifter till företagets support finns på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).
 
@@ -52,15 +63,13 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 
     ![screenshot-internet-explorer-view-certificates-button-on-website-identification-dialog](./media/andr-missg-cert-ie-view-cert-button.png)
 
-5. Välj fliken **Certifieringssökväg** i dialogrutan **Certifikat** och leta sedan reda på certifikatet du behöver hämta via Internet. Namnet på certifikatet du behöver finns på samma plats som certifikatet som är markerat på den föregående skärmbilden.
+5. Välj fliken **Certifieringssökväg** och leta sedan reda på certifikatet du behöver hämta via Internet. Namnet på certifikatet du behöver finns på samma plats som certifikatet som är markerat på den föregående skärmbilden.
 
-## <a name="download-and-install-the-missing-certificate-on-your-android-mobile-device"></a>Hämta och installera det saknade certifikatet på din Android-enhet
+6. Använd en sökmotor, till exempel Bing eller Google, och sök efter namnet på det saknade certifikatet som du identifierade i föregående avsnitt. Certifikatet kan ha olika tillägg, till exempel .crt eller .pem.
 
-1. Använd en sökmotor, till exempel Bing eller Google, och sök efter namnet på det saknade certifikatet som du identifierade i föregående avsnitt. Certifikatet kan ha olika tillägg, till exempel .crt eller .pem.
+7. Hämta rotcertifikatet från webbplatsen.
 
-2. Hämta rotcertifikatet från webbplatsen.
-
-3. När certifikatet har hämtats drar du ned från enhetens övre kant för att öppna meddelandena. Tryck sedan på namnet på certifikatet i meddelandelistan.
+8. När certifikatet har hämtats drar du ned från enhetens övre kant för att öppna meddelandena. Tryck sedan på namnet på certifikatet i meddelandelistan.
 
 4. I dialogrutan **Namnge certifikatet** som visas i följande skärmbild godkänner du standardcertifikatnamnet.
 

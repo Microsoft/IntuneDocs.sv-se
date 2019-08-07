@@ -1,11 +1,12 @@
 ---
-title: Inställningar för Windows 10-leveransoptimering för Intune | Microsoft Docs
+title: Inställningar i Windows 10 av leveransoptimering för Intune
+titleSuffix: Microsoft Intune
 description: Inställningar för leveransoptimering för Windows 10-enheter som du kan distribuera med hjälp av Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2019
+ms.date: 08/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +15,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab4871da52f5df0aec0a698f31daa5608a57c1c3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 11361b65735a7ed7e724a77349e3624e0e35ecaf
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493911"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756553"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Inställningar för leveransoptimering för Intune
 
@@ -66,6 +67,15 @@ För att konfigurera Intune att använda de här inställningarna kan du läsa [
 | [Maximal cacheålder (i dagar)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | Ange hur länge efter varje fil har laddats ned som filen förvaras i cachelagringen för leveransoptimering på en enhet.   <br><br>Med Intune kan du konfigurera cacheåldern i dagar. Det antal dagar som du anger konverteras till det tillämpliga antalet sekunder. Det är så Windows definierar den här inställningen. Till exempel konverteras en Intune-konfiguration på 3 dagar på enheten till 259 200 sekunder (3 dagar).  <br><br>**Standard**:   *Inget värde har konfigurerats*     <br><br>**Rekommenderat**: 7   <br><br>Princip-CSP: [DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |
 | Typ av maximal cachestorlek  | *Visa information*    | Välj hur du hanterar mängden ledigt diskutrymme på en enhet som används av leveransoptimering. När det här inte har konfigurerats får cachestorleken standardvärdet 20 % av det tillgängliga lediga diskutrymmet.  <br><ul><li>**Inte konfigurerat** (standard)</li><br><li>**Absolut** – ange [Absolut maximal cachestorlek (i GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#absolute-max-cache-size) för att konfigurera den maximala mängden diskutrymme som en enhet kan använda för leveransoptimering. Om värdet anges till 0 (noll) är cachestorleken obegränsad. Leveransoptimering rensar dock cachen när enheten har för lite ledigt diskutrymme. <br><br>Kräver Windows 1607<br><br> Princip-CSP: [DOAbsoluteMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize) </li><br><li>**Procent** – ange [Maximal cachestorlek (i %)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-size) för att konfigurera den maximala mängden diskutrymme som en enhet kan använda för leveransoptimering. Procentandelen är av det tillgängliga diskutrymmet, och leveransoptimering utvärderar konstant det tillgängliga diskutrymme och rensar cachen så att den maximala cachestorleken hålls under den angivna procentandelen. <br><br>Kräver Windows 1511<br><br>Princip-CSP: [DOMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)  |
 | [VPN-peer-cachelagring](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#enable-peer-caching-while-the-device-connects-via-vpn)  | 1709  | Välj **Aktiverat** för att konfigurera en enhet att delta i peer-cachelagring när den är ansluten via VPN till domännätverket. Enheter som har aktiverats kan ladda ned från eller ladda upp till andra domännätverksenheter via antingen VPN-anslutning eller företagets domännätverk.  <br><br>**Standard**: Inte konfigurerat  <br><br>Princip-CSP: [DOAllowVPNPeerCaching](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)    |
+
+## <a name="local-server-caching"></a>Cachelagring av lokal server  
+
+|Inställningen  |Windows-version  |Information  |
+|---------|-----------------|---------|
+|Värddator namn för cache server | 1809  |Ange IP-adressen eller FQDN för de fjärrinstallationsservrar som ska användas av dina enheter för leverans optimering och välj sedan **Lägg** till för att lägga till posten i listan.  <br><br>**Standard**: Inte konfigurerat  <br><br>Princip CSP: [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
+|[Fördröj förgrunds nedladdning för cache server (i sekunder)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Ange en tid i sekunder (0-2592000) för att försena reserven från en cache-server till HTTP-källan för en för nedladdning av förgrunds innehåll. När principen för att fördröja nedladdning av förgrunden från http används först (för att tillåta hämtning från peer-datorer först). (0–2592000)    <br><br>**Standard**: 0  <br><br>Princip-CSP- [DODelayCacheServerFallbackForeground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)  |
+|[Fördröjning för hämtning av cache-server i bakgrunden (i sekunder)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Ange en tid i sekunder (0-2592000) för att fördröja återställningen från en cache-server till HTTP-källan för nedladdning av bakgrunds innehåll. När *fördröjnings-HTTP-nedladdning (i sekunder)* har kon figurer ATS tillämpas inställningen först för att tillåta hämtning från peer-datorer. (0–2592000)   <br><br>**Standard**: 0 <br><br>Princip CSP: [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
+
 
 ## <a name="next-steps"></a>Nästa steg
 

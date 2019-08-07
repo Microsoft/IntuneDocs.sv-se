@@ -703,18 +703,20 @@
           href: tenant-status.md
         - name: Felsöka
           items:
+            - name: Hjälpa användare att felsöka problem
+              href: help-desk-operators.md
             - name: Felsöka registrering
               items:
                 - name: Felsöka iOS-enhetsregistrering
                   href: troubleshoot-ios-enrollment-errors.md
                 - name: Felsöka Windows-enhetsregistrering
                   href: troubleshoot-windows-enrollment-errors.md
-            - name: Hjälpa användare att felsöka problem
-              href: help-desk-operators.md
             - name: Felsökning av problem med åtkomst till företagsresurser
               href: troubleshoot-company-resource-access-problems.md
             - name: Felsöka problem med att installera appen
               href: troubleshoot-app-install.md
+            - name: Felsöka enhetsåtgärder
+              href: troubleshoot-device-actions.md
             - name: Felsök hantering av mobilprogram
               href: troubleshoot-mam.md
             - name: Granskningsloggar för Intune-aktiviteter

@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86f2f47322e668815d1ff37ce6c2de1e4d6cdc16
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: ce9a92a9fffad13c6723504735b1b1cb9442f61f
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670903"
+ms.locfileid: "68680021"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>Data Jamf Pro skickar till Intune
 
-När du använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanvändares Mac-datorer med Intune, samlar Jamf Pro in inventeringsuppgifter om hanterade macOS-enheter. Jamf Pro rapporterar följande information till Intune:
+När du använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanvändares Mac-datorer med Intune, samlar Jamf Pro in inventeringsuppgifter om hanterade macOS-enheter. 
+
+## <a name="data"></a>Data  
+Jamf Pro rapporterar följande information till Intune:  
 
 * Enhetens Azure AD-ID
 * JAMF-inventeringstillstånd (inventeringstillstånd på en dator som checkats in med Jamf Pro under de senaste 24 timmarna)
@@ -69,8 +72,8 @@ När du använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanv
 * UDID
 * Användarens e-post
 
-
 Du kan ta bort en Jamf-hanterad enhet från Intune-konsolen genom att välja **Ta bort** i vyn **Alla enheter**. Du kan aktivera massborttagning av enheter genom att välja flera enheter och klicka på **Ta bort**.
 
+## <a name="next-steps"></a>Nästa steg
 Få information om hur du [tar bort en Jamf-hanterad enhet i Jamf Pro-dokumenten](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Du kan även skicka in ett supportärende med [Jamf-support](https://www.jamf.com/support/) för ytterligare hjälp. 
 

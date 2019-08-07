@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467421"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756514"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Inställningar av slutpunktsskydd för macOS i Intune  
 
@@ -97,11 +97,18 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
     - **Rotation av personlig återställnings nyckel** – ange hur ofta den personliga återställnings nyckeln för en enhet ska roteras. Du kan välja standardvärdet **inte konfigurerad**eller värdet **1** till **12** månader.  
 
   - **Inaktivera prompt vid utloggning**  
-    Förhindra att användaren uppmanas att aktivera FileVault när de loggar ut.  När inställningen är inaktive rad är uppmaningen vid utloggning inaktive rad och användaren tillfrågas när de loggar in.  
+    Förhindra att användaren uppmanas att aktivera FileVault när de loggar ut.  När inställningen är aktive rad är uppmaningen vid utloggning inaktive rad och användaren tillfrågas när de loggar in.  
     - **Inte konfigurerat**  
-    - **Inaktivera**  
+    - **Aktivera** – inaktivera prompten vid utloggning.
 
     **Standard**: Inte konfigurerat  
+
+     > [!IMPORTANT]  
+     > Det finns ett känt problem när inställningen **inaktivera fråga vid utloggning** är inställd på *Aktivera*. När inställningen är *aktive*rad måste inställningen för **antal gånger som ska kringgås** anges till ett värde och får inte anges som *ej konfigurerad*. Om inställningen är *inte konfigurerad*, Miss lyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **Sammanfattning av profil tillstånd** som **fel** utan ytterligare information.
+     > 
+     > När **inaktivera prompt vid utloggning** är inställt på *inte konfigurerad*, kan **antalet tillåtna gånger att kringgå** *inte konfigureras* eller ha ett värde.  
+     > 
+     > Problemet kommer att åtgärdas i en kommande uppdatering. 
 
   - **Antal gånger som tillåts kringgås**  
   Ange antalet gånger som en användare kan ignorera prompter för att aktivera FileVault innan FileVault krävs för att användaren ska kunna logga in.  
