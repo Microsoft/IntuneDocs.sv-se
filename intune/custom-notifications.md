@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f938afb738e75789194db0c74fee56deb1476dbc
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660387"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680107"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
@@ -38,8 +38,9 @@ Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högs
 ## <a name="considerations-for-using-custom-notifications"></a>Att tänka på när du använder anpassade meddelanden  
 
 **Enhetskonfiguration**:  
-- Appen Företagsportal måste vara installerad på enheten innan användarna kan ta emot anpassade meddelanden. De måste också ha konfigurerade behörigheter som tillåter att appen Företagsportal kan skicka push-meddelanden. Appen Företagsportal uppmanar användarna att tillåta aviseringar.  
+- Appen Företagsportal måste vara installerad på enheten innan användarna kan ta emot anpassade meddelanden. De måste också ha konfigurerade behörigheter som tillåter att appen Företagsportal kan skicka push-meddelanden. Appen Företagsportal uppmanar användarna att tillåta aviseringar varje gång den installeras eller uppdateras.  
 - Google Play Services är ett obligatoriskt beroende i Android.  
+- Enheten måste vara MDM-registrerad.
 
 **Skapa meddelanden**:  
 - Om du vill skapa ett meddelande använder du ett konto som har tilldelats en Intune-roll som har behörigheten **Uppdatera** för **Organisation**. Information om hur du tilldelar behörigheter till en användare finns i [Rolltilldelningar](role-based-access-control.md#role-assignments)  

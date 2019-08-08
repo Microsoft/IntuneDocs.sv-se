@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252a42b9c8ef6612301bc913e187295be47d27bb
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671019"
+ms.locfileid: "68679979"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -67,7 +67,7 @@ Säkerhetsprofiler med baslinjer stöder [ändringar av versionen](#change-the-b
 Följande instanser av säkerhetsbaslinjer är tillgängliga för användning med Intune. Använd länkarna om du vill visa inställningarna för den senaste instansen av varje baslinje. 
 
 - **MDM-säkerhetsbaslinje**
-  - [MDM-säkerhetsbaslinje för oktober 2019 (19H1)](security-baseline-settings-mdm.md)
+  - [MDM-säkerhetsbaslinje för maj 2019](security-baseline-settings-mdm.md)
   - [Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018](security-baseline-settings-mdm-archive.md)
 
 - **Microsoft Defender ATP-baslinje**  

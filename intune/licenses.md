@@ -5,9 +5,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 08/05/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,35 +16,40 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ec97819e49bdb1564b8dd75b23302608492e183
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 38b381fca17dec66303958ee04c018967ae0d999
+ms.sourcegitcommit: a6775522df49d17a4125ccb31be395f2343bdae8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397353"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833528"
 ---
-# <a name="licenses-that-include-intune"></a>Licenser där Intune ingår
+# <a name="microsoft-intune-licensing"></a>Microsoft Intune-licensiering
+Microsoft Intune är tillgängligt för olika kundbehov och organisationsstorlekar, från en lättanvänd hanteringsupplevelse för skolor och små företag, till mer avancerade funktioner som krävs av företagskunder. De flesta licenser som omfattar Microsoft Intune ger även rättigheter att använda System Center Configuration Manager, så länge prenumerationen är aktiv. 
 
-[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
+## <a name="microsoft-intune"></a>Microsoft Intune
+Intune ingår i följande licenser:
 
-Följande tabell visar vilka versioner av Intune som är tillgängliga i respektive licens:
+- Microsoft 365 E5
+- Microsoft 365 E3
+- Enterprise Mobility + Security E5
+- Enterprise Mobility + Security E3
+- Microsoft 365 Business
+- Microsoft 365 F1
 
-| Licens | Intune-version som ingår | Jämförelse av priser och funktioner |
-|-----------------------------------------------------------------------|-------------------------------------------------------------|---|
-| Intune | Intune | [Läs mer](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing) |
-| Enterprise Mobility + Security E3 | Intune | [Läs mer](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing) |
-| Enterprise Mobility + Security E5 | Intune | [Läs mer](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing) |
-| Microsoft 365 Education A1 | Intune för utbildning | [Läs mer](https://www.microsoft.com/en-us/education/buy-license/microsoft365/default.aspx#) |
-| Microsoft 365 Education A3 | Intune för utbildning | [Läs mer](https://www.microsoft.com/en-us/education/buy-license/microsoft365/default.aspx#) |
-| Microsoft 365 Education A5 | Intune för utbildning | [Läs mer](https://www.microsoft.com/en-us/education/buy-license/microsoft365/default.aspx#) |
-| Microsoft 365 E3 | Intune | [Läs mer](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
-| Microsoft 365 E5 | Intune | [Läs mer](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
-| Microsoft 365 F1 | Intune | [Läs mer](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
-| Microsoft 365 Business | Intune | [Läs mer](https://www.microsoft.com/en-us/microsoft-365/business) |
 
-Intune ingår inte i licenser som inte finns i den här listan.
 
-En riktig licens krävs om en användare direkt eller indirekt utnyttjar en funktion som omfattas av licensen.
+## <a name="microsoft-intune-for-education"></a>Microsoft Intune for Education
+Intune for Education ingår i följande licenser:
 
-Läs artikeln [Tilldela Intune-licenser till dina användarkonton](licenses-assign.md) för att tilldela en licens till en användare.
+- Microsoft 365 Education A5
+- Microsoft 365 Education A3
 
+## <a name="additional-information"></a>Ytterligare information
+- En Microsoft Intune-prenumeration för användare och enheter är tillgänglig som fristående, utöver de paket som anges ovan.
+- En Microsoft Intune-prenumeration endast för användare är tillgänglig för scenarier med helskärmstyp där inga funktioner för användartillhörighet används.
+- Lämplig Microsoft Intune-licens krävs om en användare eller enhet får direkta eller indirekta fördelar från Microsoft Intune-tjänsten, inklusive åtkomst till Microsoft Intune-tjänsten via ett [Microsoft-API.](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use)
+- Intune ingår inte i licenser som inte finns i föregående tabeller.
+
+Besök sidan [Microsoft-licensiering](https://www.microsoft.com/licensing/default) för att få den senaste informationen om produktutgåvor, uppdateringar av produktlicenser, volymlicensieringsplaner och annan information som rör dina specifika användning.  
+
+Information om hur användar- och enhetslicenser påverkar åtkomst till tjänster, samt hur du tilldelar en licens till en användare, finns i artikeln [Tilldela Intune-licenser till användarkonton](licenses-assign.md).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f576edb5dd0bd4baa960adb3519fa379397fb94c
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: 128856cf4e81f1ac9fbc93cef1160662e2b5cef0
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329022"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68700970"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -93,6 +93,7 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
   | com.skype.raider | Skype | Skype-appen tillåts endast för vissa åtgärder som resulterar i ett telefonsamtal. |
   | com.android.providers.media | Androids medieinnehållsprovider | Medieinnehållsprovidern tillåts endast för val av ringsignal. |
   | com.google.android.gms; com.google.android.gsf | Google Play Services-paket | Dessa paket tillåts för Google Cloud Messaging-åtgärder, till exempel push-meddelanden. |
+  | com.google.android.apps.maps | Google Maps | Adresser tillåts för navigering |
 
 Mer information finns i [Undantag för dataöverföringsprinciper i appar](app-protection-policies-exception.md).
 

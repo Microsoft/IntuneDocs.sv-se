@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9ac1830bcc407431cf0a5df8e8c11baa0c27c9c
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 7e0be106b47d933c4407a02369edff3645682b1c
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625100"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68700989"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -99,7 +99,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     - **Licensavtal för slutanvändare (EULA)** : (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
     - **Sekretessinställningar**: Välj om du vill visa sekretessinställningar för användarna.
     >[!IMPORTANT]
-    >För Autopilot-distributioner på enheter med Windows 10 version 1903 och senare är standardvärdet för Diagnostikdata automatiskt inställt på Fullständig. Mer information finns i [Windows-diagnostikdata](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data). <br>
+    >Standardvärdet för inställningen av diagnostikdata varierar mellan olika versioner av Windows. För enheter som kör Windows 10, version 1903, är standardvärdet inställt på fullständig under välkomstupplevelsen. Mer information finns i [Windows-diagnostikdata](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data). <br>
     
     - **Dölj alternativ för att ändra konto (kräver Windows 10, version 1809 eller senare)** : Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Användarkontotyp**: Välj användarens kontotyp (**Administratör** eller **Standardanvändare**).

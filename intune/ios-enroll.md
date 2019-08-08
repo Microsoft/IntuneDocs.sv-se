@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 2254c1e83764e9b29ab6fb99c016edef75aad43e
+ms.sourcegitcommit: bc3450fc7f19006b500edf5b395c01559b483ea4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883020"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738281"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
@@ -32,8 +32,10 @@ Som en Intune-administratör kan du aktivera registrering för iOS-enheter. Du k
 
 ## <a name="prerequisites-for-ios-enrollment"></a>Krav för iOS-registrering
 Innan du kan aktivera iOS-enheter måste du göra följande:
+- [Kontrollera att enheten är kvalificerad för registrering av Apple-enheter](https://support.apple.com/en-us/HT204142#eligibility).
 - [Konfigurera Intune](setup-steps.md) - följande steg konfigurerar din Intune-infrastruktur. I synnerhet kräver registrering av enheter att du [anger en MDM-utfärdare](mdm-authority-set.md).
 - [Hämta ett certifikat för Apple MDM Push](apple-mdm-push-certificate-get.md) -Apple kräver ett certifikat för att aktivera hantering av iOS- och macOS-enheter.
+
 
 ## <a name="user-owned-ios-devices-byod"></a>Användarägda iOS-enheter (BYOD)
 

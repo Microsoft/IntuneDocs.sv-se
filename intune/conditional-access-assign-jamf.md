@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc4fdaea99a0e8fb247ac6a70b853497927cdc04
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d23e725db965a249522f7f8fa89f8bb27bc24fd8
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045211"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68679996"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
@@ -33,7 +33,10 @@ Du kan använda Azure Active Directory och Microsoft Intunes principer för vill
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Ställ in efterlevnadsprinciper för enheter i Intune
 
 1. Öppna Microsoft Azure och gå till **Intune** > **enhetsefterlevnad** > **principer**. Du kan skapa principer för macOS, inklusive att välja en serie åtgärder (t.ex. skicka varnings-e-post) till icke-kompatibla användare och grupper.
-2. Sök efter önskade grupper och tillämpa principer för dem.
+2. Välj princip > Tilldelningar. Du kan inkludera eller exkludera säkerhetsgrupper i Azure Active Directory (AD).
+3. Välj Valda grupper för att se dina Azure AD-säkerhetsgrupper. Välj de användargrupper som du vill att principen ska tillämpas på > Välj Spara för att distribuera principen till användarna.
+
+Du har tillämpat principen på användarna. De enheter som används av de användare som principen gäller för utvärderas för efterlevnad och markeras som kompatibla för inställningen ”Kräv att enheten markeras som kompatibel” i Azure Active Directory.
 
 > [!Note]
 > Intune kräver fullständig diskkryptering för att vara kompatibelt.

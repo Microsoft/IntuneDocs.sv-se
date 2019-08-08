@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884885"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783247"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -116,7 +116,7 @@ Intune erbjuder två distributionsalternativ: fristående och hybrid. Friståend
 
 ## <a name="intune-tenant-location"></a>Plats för Intune-klient
 
-Om organisationen har global närvaro måste du se till att planera var klienten ska finnas när du prenumererar på tjänsten. Landet definieras när du registrerar dig för en Intune-prenumeration första gången och mappas till områden världen över som anges nedan:
+Om organisationen har global närvaro måste du se till att planera var klienten ska finnas när du prenumererar på tjänsten. Landet/regionen definieras när du registrerar dig för en Intune-prenumeration första gången och mappas till länder/regioner världen över som anges nedan:
 
 - Nordamerika
 
@@ -125,7 +125,7 @@ Om organisationen har global närvaro måste du se till att planera var klienten
 - Asien och Stillahavsområdet
 
 >[!IMPORTANT]
-> Det går inte att ändra land eller klientplats senare.
+> Det går inte att ändra land/region eller klientplats senare.
 
 ## <a name="external-dependencies"></a>Externa beroenden
 

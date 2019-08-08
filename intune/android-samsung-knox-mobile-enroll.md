@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c962085ce61f01613bfc04ef0c80699e6f5a3e8
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 94c92f70844594fd8524f2e49c537f1afaadaf96
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547437"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783187"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -44,7 +44,7 @@ En lista över enhetsidentifierare (serienummer och IMEI:er) läggs automatiskt 
 ## <a name="prerequisites"></a>Krav
 
 För att registrera dig till Intune med KME måste du först registrera ditt företag på Samsung Knox-portalen genom att följa dessa steg:
-1. [Kontrollera att KME är tillgängligt i din region](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME är tillgängligt i över 55 länder. Kontrollera att ditt land för distribution stöds.
+1. [Kontrollera att KME är tillgängligt i ditt land/din region](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME är tillgängligt i över 55 länder/regioner. Kontrollera att ditt land/din region för distribution stöds.
 
 2. [Enheter som stöds](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): KME är tillgängligt på alla Samsung-enheter med minst Knox 2.4 för Android-registrering och minst Knox 2.8 för Android Enterprise-registrering.
 

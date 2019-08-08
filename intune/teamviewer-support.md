@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 397ca3c03c96adc9bd6b0ca691f835e3e579fba0
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8b39c9f4f875ca458817940819716e1188d36eef
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882252"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783259"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
@@ -28,7 +28,10 @@ Enheter som hanteras av Intune kan fjärradministreras med hjälp av [TeamViewer
 
 ## <a name="prerequisites"></a>Krav
 
-- Använd en enhet som stöds. Intune-hanterade Android-, Windows-, iOS- och macOS-enheter stöder fjärradministration. TeamViewer kanske inte stöder Windows Holographic (HoloLens), Windows Team (Surface Hub) eller Windows 10 S. Information om support finns i [TeamViewer](https://www.teamviewer.com).
+- Använd en enhet som stöds. Intune-hanterad Android-enhetsadministratör, arbetsprofil för Android-, Windows-, iOS- och macOS-enheter stöder fjärradministration. TeamViewer kanske inte stöder Windows Holographic (HoloLens), Windows Team (Surface Hub) eller Windows 10 S. Information om support finns i [TeamViewer](https://www.teamviewer.com).
+
+> [!NOTE]
+> Android-dedikerad och fullständigt hanterad stöds inte.
 
 - Intune-administratören i Azure Portal måste ha följande [Intune-roller](role-based-access-control.md):  
 
