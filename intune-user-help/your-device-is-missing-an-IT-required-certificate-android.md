@@ -18,16 +18,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625114"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862141"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Installera certifikatet som saknas som krävs av din organisation  
 
-Om enheten inte har registrerats i Intune och den saknar ett certifikat som krävs av företagets support kan du inte logga in på företagsportalappen. Följande meddelande visas när du försöker logga in:
+Om enheten inte är registrerad i Intune och saknar ett nödvändigt certifikat, kan du inte logga in på Företagsportal-appen. Följande meddelande visas när du försöker logga in:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -43,8 +43,8 @@ Slutför de här stegen för att aktivera webb läsar åtkomst. När du har akti
 
 1. I Företagsportal-appen går du till det högra hörnet och väljer menyn.  
 2. Välj **Inställningar**.  
-3. Bredvid **aktivera webb läsar åtkomst** väljer du **Aktivera**.  
-4. På skärmen enhets administratör väljer du **Aktivera**. 
+3. Bredvid Aktivera **webb läsar** åtkomst **väljer**du aktivera.  
+4. På skärmen enhets administratör väljer **du aktivera.** 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identifiera och hämta certifikatet som saknas via Webbs ökning
 Slutför de här stegen för att identifiera och installera certifikatet på enheten manuellt.  
@@ -82,3 +82,7 @@ Slutför de här stegen för att identifiera och installera certifikatet på enh
 7. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Kontakta företagets support om du behöver hjälp.
 
 Om du ser samma meddelande om att ett certifikat saknas som visades tidigare, och du har följt metoden, finns det troligtvis fortfarande ett annat certifikat som företagets support måste hjälpa dig att installera. Kontakta företagets support för att få hjälp med den kontaktinformation som finns på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Nästa steg  
+
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
