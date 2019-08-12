@@ -39,8 +39,8 @@
 ### Frågor om operativsystem
 #### [Uppdatera enheten](you-need-to-update-your-android-device.md)
 #### [Versionen stöds inte](your-android-version-isnt-yet-supported.md)
-#### [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
-#### [Saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-landing-android.md)
+#### [Enheten är rotad och kan inte ansluta](your-device-is-rooted-and-you-cant-connect-android.md)
+#### [Saknar ett certifikat som krävs](your-device-is-missing-an-IT-required-certificate-android.md)
 #### [Inaktivera okända källor](you-need-to-turn-off-unknown-sources-android.md)
 #### [Stänga av USB-felsökning](you-need-to-turn-off-usb-debugging-android.md)
 #### [Slå på sökning efter säkerhetshot](you-need-to-turn-on-scanning-for-security-threats-android.md)
