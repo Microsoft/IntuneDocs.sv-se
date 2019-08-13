@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3941c41b24d458d14acb1361bc463af657a0ca67
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511925"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783021"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrera din macOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -40,10 +40,10 @@ Organisationen kanske har köpt sina enheter via något som kallas *Apples progr
 Utför följande steg när du ska registrera din macOS-enhet för hantering. Om du använder en egen enhet i stället för en enhet som tillhandahålls av organisationen följer du de här stegen för [egna enheter](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Starta din macOS-enhet. 
-2. Välj land och klicka på **Fortsätt**.  
+2. Välj land/region och klicka på **Fortsätt**.  
 
    ![Skärmbild av startskärmen i installationsassistenten för macOS-enheter och en lista med språk att välja mellan.](./media/macos-dep-welcome-1808.png)   
-3. Välj en tangentbordslayout. I listan visas ett eller flera alternativ som baseras på det valda landet. Om du vill se alla layoutalternativ, oavsett vilket land du har valt, klickar du på **Visa alla**. När du är färdig klickar du på **Fortsätt**.  
+3. Välj en tangentbordslayout. I listan visas ett eller flera alternativ som baseras på det valda landet/den valda regionen. Om du vill se alla layoutalternativ, oavsett vilket land/vilken region du har valt, klickar du på **Visa alla**. När du är färdig klickar du på **Fortsätt**.  
 
    ![Skärmbild av skärmen för tangentbordslayout i installationsassistenten för macOS-enheter och en lista med tangentbordsspråk att välja från, ett avmarkerat Visa alla-alternativ samt knapparna Tillbaka och Fortsätt.](./media/macos-dep-keyboard-1808.png)  
 4. Välj ditt Wi-Fi-nätverk. Du måste ha en internetanslutning för att fortsätta med installationen. Om du inte ser ditt nätverket, eller om du behöver ansluta via ett kabelanslutet nätverk, klickar du på **Andra nätverksalternativ**. När du är färdig klickar du på **Fortsätt**.  

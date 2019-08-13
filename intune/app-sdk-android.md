@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f2015bb6997861d8856c7fe89662c21be105f5b
-ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
-ms.translationtype: MTE75
+ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68482936"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783216"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -636,7 +636,7 @@ Följande meddelanden skickas till appen och några av dem kan kräva appens med
 > [!NOTE]
 > Observera att en app aldrig ska registreras för både `WIPE_USER_DATA`- och `WIPE_USER_AUXILIARY_DATA`-meddelanden.
 
-### <a name="managementremoved"></a>MANAGEMENT_REMOVED
+### <a name="management_removed"></a>MANAGEMENT_REMOVED
 
 `MANAGEMENT_REMOVED`-meddelandet indikerar att en tidigare principhanterad användare inte längre kommer att hanteras av Intunes MAM-princip. Detta kräver inte att användardata rensas eller att användaren loggas ut (om en rensning skulle krävas så skulle ett `WIPE_USER_DATA`-meddelande skickas). Många appar behöver kanske inte hantera det här meddelandet alls, men appar som använder `MAMDataProtectionManager` bör [särskilt beakta det här meddelandet](#data-protection).
 
@@ -1370,7 +1370,7 @@ Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsänd
 
   * Om en identitetsväxling blockeras är resultatet är samma som om delningsinställningar i `Receive` hade förbjudit inkommande data.
 
-  * Om en tjänst körs på huvudtråden **måste** `reportIdentitySwitchResult` anropas synkront, annars låser sig UI-tråden.
+  * Om en tjänst körs på huvudtråden **måste** `reportIdentitySwitchResult` anropas synkront, annars slutar UI-tråden att svara.
 
   * För **`Activity`** -generering anropas `onMAMIdentitySwitchRequired` före `onMAMCreate`. Om appen måste visa ett användargränssnitt för att avgöra om identitetsväxlingen ska tillåtas eller inte, måste användargränssnittet visas med hjälp av en *annan* aktivitet.
 

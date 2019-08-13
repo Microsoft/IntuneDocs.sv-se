@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 08/07/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b23323766e91e31c48aec6a51dfae971c3a333e8
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: ef7ec650c65206eeab69d8f666dc4fb39052bbdb
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735760"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862237"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrera din företagsenhet med Microsoft Intune-appen
 
@@ -50,9 +50,9 @@ Slutför dessa steg för att konfigurera och registrera din enhet.
 
      Om du har fått instruktioner om att använda en annan metod fortsätter du till steg 3.    
 
-1. Anslut till Wi-Fi och tryck på **NÄSTA**. Följ de steg som matchar din registreringsmetod. 
+3. Anslut till Wi-Fi och tryck på **NÄSTA**. Följ de steg som matchar din registreringsmetod. 
 
-    * Token: När du kommer till inloggningssidan för Google slutför du stegen i [Tokenregistrering](#token-enrollment).    
+    * Token: När du kommer till inloggningssidan för Google slutför du stegen i [Tokenregistrering](#token-enrollment).  
     * Google Zero Touch: När du har anslutit till Wi-Fi identifieras enheten av din organisation. Fortsätt till steg 4 och följ anvisningarna på skärmen tills installationen är klar.    
  
        ![Exempelbild på skärmen med villkor för Google som visas om du använder Google Zero Touch, med knappen Godkänn och fortsätt markerad.](./media/google-zero-touch-intune-app-01.png)   
@@ -78,21 +78,19 @@ Slutför dessa steg för att konfigurera och registrera din enhet.
 
    ![Exempelbild på Konfigurera på arbetstelefonskärmen med knappen Installera markerad.](./media/fully-managed-intune-app-11.png)   
 
-10. När du får meddelandet att din enhet är klar trycker du på **KLAR**. 
+10. Tryck **på** start för att öppna appen Microsoft Intune och registrera din enhet. 
 
-11. Gå till dina appar och öppna Microsoft Intune-appen. Välj **LOGGA IN**. 
+    ![Exempelbild på Konfigurera på arbetstelefonskärmen med knappen Start markerad.](./media/fully-managed-intune-app-17.png)   
 
-12. På skärmen **Konfigurera åtkomst** visas en lista över väntande uppgifter. Tryck på **FORTSÄTT**.  
+11. Tryck **på **logga in** och tryck sedan på Nästa för att börja registrera.** När du ser meddelandet att registreringen är klar trycker du på **klar**.  
 
-       ![Exempelbild på Microsoft Intune-appen med skärmen Konfigurera åtkomst, som visar väntande uppgifter.](./media/fully-managed-intune-app-14.png)   
+    ![Exempel bild av konfigurera åtkomst, registrera din enhets skärm och markera klart knapp.](./media/fully-managed-intune-app-19.png)   
 
-13. När enhetsregistreringen är klar trycker du på **FORTSÄTT**. Microsoft Intune uppmanar dig kanske att uppdatera ytterligare enhetsinställningar.   
+10. När du ser meddelandet att din enhet är klar trycker du på **KLAR**.  
 
-       ![Exempelbild på Microsoft Intune appen med skärmen Uppdatera enhetsinställningar.](./media/fully-managed-intune-app-15-2.png)   
+    ![Exempelbild på Konfigurera på arbetstelefonskärmen med knappen Klar markerad.](./media/fully-managed-intune-app-18.png)   
 
-14. Installationen är klar när alla objekt i listan visas med en grön cirkel. Nu kan du komma åt företagsresurser.  
-
-       ![Exempelbild på Microsoft Intune-appen med skärmen Konfigurera åtkomst, som visar slutförda uppgifter.](./media/fully-managed-intune-app-16.png)   
+Om du har problem med att komma åt din organisations resurser kan du behöva uppdatera ytterligare inställningar på enheten. Logga in på Microsoft Intune-appen för att söka efter nödvändiga uppdateringar.   
 
 
 ## <a name="qr-code-enrollment"></a>QR-kodsregistrering  
@@ -118,11 +116,7 @@ I det här avsnittet anger du den token som du fått av företaget. När du är 
 
 3. På skärmen **Registrera den här enheten** väljer du **Nästa**.  
 
-   ![Exempelbild på skärmen Registrera den här enheten. Visar en bild på en QR-kod med knappen Nästa markerad.](./media/token-intune-app-02.png)  
-
-4. Välj **Ange kod**.
-
-   ![Exempelskärmbild på en aktiv QD-kodsläsare. Markerar knappen Ange kod.](./media/token-intune-app-03.png)  
+4. Välj **Ange kod**.  
 
 5. På skärmen **Skanna eller ange kod** skriver du in den kod som du har fått av din organisation.  Klicka sedan på **Nästa**.  
 
