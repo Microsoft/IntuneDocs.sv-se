@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a80e4cf4e68235ef9e88943a8b62121e0cfb6623
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
+ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046979"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69487757"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -66,9 +66,7 @@ Kör endast en app på enheten.
     > [!NOTE]
     > Den här inställningen aktiverar Microsoft Edge-webbläsaren på enheten. För att konfigurera Microsoft Edge-specifika inställningar skapar du en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** för plattform > **Enhetsbegränsningar** >  **Microsoft Edge-webbläsare**). [Microsoft Edge-webbläsare](device-restrictions-windows-10.md#microsoft-edge-browser) visar och beskriver de tillgängliga inställningarna.
 
-    Klicka på **OK** för att spara ändringarna.
-
-  - **Lägg till webbläsare med helskärmsläge**: Välj **Inställningar för webbläsare med helskärmsläge**. Dessa inställningar definierar hur en webbläsare visas på kioskenheten. Se till att du får [Kiosk Browser-appen](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) från Store, lägg till den i Intune som en [Klientapp](apps-add.md) och tilldela sedan appen till enheter i helskärmsläge.
+  - **Lägg till webbläsare med helskärmsläge**: Välj **Inställningar för webbläsare med helskärmsläge**. Dessa inställningar definierar hur en webbläsare visas på kioskenheten. Se till att du hämtar [webb läsar appen](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) från Store, Lägg till den i Intune som en [klient app](apps-add.md). Tilldela sedan appen till kiosk enheterna.
 
     Ange följande inställningar:
 
@@ -91,15 +89,14 @@ Kör endast en app på enheten.
       `http://bing.com`  
       `https://bing.com`  
       `http://contoso.com/*`  
-      `https://contoso.com/*`  
+      `https://contoso.com/*`
 
-    Klicka på **OK** för att spara ändringarna.
+    > [!NOTE]
+    > Windows 10-kiosker med automatisk logo typ aktive rad med Microsoft kiosk webbläsare måste använda en offline-licens från Microsoft Store för företag. Detta krav beror på att den automatiska logo typen använder ett lokalt användar konto utan autentiseringsuppgifter för Azure Active Directory (AD). Det går därför inte att utvärdera Online licenser. Mer information finns i [distribuera offline-appar](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Lägg till Store-app**: Välj **Lägg till en Store-app** och välj en app i listan.
 
     Har du inte några appar i listan? Lägg till några med hjälp av anvisningarna i [Klientappar](apps-add.md).
-
-  Klicka på **OK** för att spara ändringarna.
 
 ## <a name="multi-app-kiosks"></a>Helskärmsläge för flera appar
 
@@ -132,8 +129,6 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
       > [!NOTE]
       > Den här inställningen aktiverar Microsoft Edge-webbläsaren på enheten. För att konfigurera Microsoft Edge-specifika inställningar skapar du en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** för plattform > **Enhetsbegränsningar** >  **Microsoft Edge-webbläsare**). [Microsoft Edge-webbläsare](device-restrictions-windows-10.md#microsoft-edge-browser) visar och beskriver de tillgängliga inställningarna.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Lägg till Kiosk-webbläsare**: Dessa inställningar styr en webbläsarapp i helskärmsläget. Kontrollera att du har distribuerat en webbläsarapp till kioskenheterna via [Klientappar](apps-add.md).
 
       Ange följande inställningar:
@@ -152,13 +147,12 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 
         Ladda upp en .csv-fil som innehåller en lista med tillåtna webbplatser om du vill tillåta specifika webbplatser. Om du inte lägger till någon .csv-fil tillåts alla webbplatser.
 
-      Klicka på **OK** för att spara ändringarna.
+      > [!NOTE]
+      > Windows 10-kiosker med automatisk logo typ aktive rad med Microsoft kiosk webbläsare måste använda en offline-licens från Microsoft Store för företag. Detta krav beror på att den automatiska logo typen använder ett lokalt användar konto utan autentiseringsuppgifter för Azure Active Directory (AD). Det går därför inte att utvärdera Online licenser. Mer information finns i [distribuera offline-appar](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Program**
 
     - **Lägg till Store-app**: Lägg till en app från Microsoft Store för företag. Om du inte har några appar i listan kan du hämta appar och [lägga till dem i Intune](store-apps-windows.md). Du kan till exempel lägga till Kiosk Browser, Excel, OneNote etc.
-
-      Klicka på **OK** för att spara ändringarna.
 
     - **Lägg till Win32-App**: En Win32-app är en traditionell skrivbordsapp, till exempel Visual Studio Code eller Google Chrome. Ange följande egenskaper:
 
@@ -166,14 +160,10 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
       - **Lokal sökväg**: Krävs. Ange sökvägen till den körbara filen, till exempel `C:\Program Files (x86)\Microsoft VS Code\Code.exe` eller `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
       - **ID för programanvändarmodell (AUMID)** : Ange ID:t för programanvändarmodellen (AUMID) för Win32-appen. Den här inställningen avgör panelens startlayout på skrivbordet. Se [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) för hur du hämtar detta ID.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Lägg till via AUMID**: Använd det här alternativet för att lägga till inkorgens Windows-appar, till exempel Anteckningar eller Kalkylatorn. Ange följande egenskaper:
 
       - **Programnamn**: Krävs. Ange ett namn på programmet.
       - **Appens programanvändarmodell ID (AUMID)** : Krävs. Ange appens programanvändarmodell-ID (AUMID) för Windows-appen. Information om hur du hittar detta ID finns i [Hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-
-      Klicka på **OK** för att spara ändringarna.
 
     - **AutoLaunch**: Valfritt. Välj ett program som ska autostartas när användaren loggar in. Endast en enskild app kan autostartas.
     - **Panelstorlek**: Krävs. Välj storleken Liten, Medel, Bred eller Stor för appanelen.
@@ -186,8 +176,6 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 - **Aktivitetsfältet**: Välj att **visa** eller **dölja** aktivitetsfältet. Standardinställningen är att aktivitetsfältet inte visas. Ikoner som exempelvis Wi-Fi-ikonen visas, men inställningarna kan inte ändras av slutanvändarna.
 
 - **Tillåt åtkomst till mappen Hämtade filer**: Välj **Ja** för att tillåta användarna att komma åt mappen Hämtade filer i Utforskaren. Som standard är åtkomst till mappen Hämtade filer inaktiverad. Den här funktionen används vanligtvis för att ge slutanvändare möjligheten att komma åt objekt som laddats ned från en webbläsare.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 919fef62cf1d979d6a4f67c3653d90af1442fa55
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756514"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960417"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Inställningar av slutpunktsskydd för macOS i Intune  
 
@@ -82,6 +82,9 @@ Använd brandväggen för att styra anslutningar per program i stället för per
 ## <a name="filevault"></a>FileVault  
 Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) i Apple Developer-innehåll. 
 
+> [!IMPORTANT]  
+> Från och med macOS 10,15 kräver FileVault-konfigurationen att användaren har godkänt MDM-registrering. 
+
 - **FileVault**  
   Du kan *Aktivera* fullständig disk kryptering med XTS-AES 128 med FileVault på enheter som kör MacOS 10,13 och senare.  
   - **Inte konfigurerat**  
@@ -104,9 +107,9 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
     **Standard**: Inte konfigurerat  
 
      > [!IMPORTANT]  
-     > Det finns ett känt problem när inställningen **inaktivera fråga vid utloggning** är inställd på *Aktivera*. När inställningen är *aktive*rad måste inställningen för **antal gånger som ska kringgås** anges till ett värde och får inte anges som *ej konfigurerad*. Om inställningen är *inte konfigurerad*, Miss lyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **Sammanfattning av profil tillstånd** som **fel** utan ytterligare information.
+     > Det finns ett känt problem när inställningen **Inaktivera fråga vid utloggning** är inställd på *Aktivera*. När inställningen är inställd till *Aktivera* måste inställningen för **Antal gånger som ignorering tillåts** anges till ett värde och får inte anges som *Ej konfigurerad*. Om inställningen är inställd till *Inte konfigurerad*, misslyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **sammanfattning av profiltillstånd** som **fel** utan ytterligare information.
      > 
-     > När **inaktivera prompt vid utloggning** är inställt på *inte konfigurerad*, kan **antalet tillåtna gånger att kringgå** *inte konfigureras* eller ha ett värde.  
+     > När **Inaktivera prompt vid utloggning** är inställt på *Inte konfigurerad*, kan **Antal gånger som ignorering tillåts** vara *Inte konfigurerad* eller ha ett värde.  
      > 
      > Problemet kommer att åtgärdas i en kommande uppdatering. 
 

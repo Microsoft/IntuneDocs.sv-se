@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 08/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe155c5b2a18b1931894b05694b53bbc2c497e0b
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494487"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550172"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -57,13 +57,13 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 - **Installera appdata på systemvolym**: **Blockera** hindrar appar från att lagra data på enhetens systemvolym. **Inte konfigurerat** (standard) tillåter appar att lagra data på systemdiskvolymen.
 - **Installera appar på systemenhet**: **Blockera** hindrar appar från att installera på enhetens systemenhet. **Inte konfigurerat** (standard) tillåter appar att installera på systemenheten.
 - **Spel-DVR** (endast stationär dator): **blockera** inaktiverar Windows-inspelning och -sändning av spel. **Inte konfigurerat** (standard) tillåter inspelning och sändning av spel.
-- **Appar från store endast**: den här inställningen avgör användarens upplevelse när användare installerar appar från andra platser än Microsoft Store. Alternativen är:
+- **Endast appar från Store**: den här inställningen avgör användar upplevelsen när användare installerar appar från andra platser än den Microsoft Store. Alternativen är:
 
-  - **Inte konfigurerad** (standard): innebär att slutanvändarna att installera appar från andra platser än Microsoft Store, inklusive appar som definierats i andra inställningar.  
-  - **Var som helst**: inaktiverar apprekommendationer, så att användare kan installera appar från valfri plats.  
-  - **Store endast**: tvingar slutanvändare installera endast appar från Microsoft Store.
-  - **Rekommendationer**: när du installerar en app från webben som är tillgänglig i Microsoft Store-användare ser ett meddelande som rekommenderar de ladda ned det från store.  
-  - **Föredrar Store**: varnar användare när de installerar appar från andra platser än Microsoft Store.
+  - **Inte konfigurerat** (standard): gör att slutanvändare kan installera appar från andra platser än Microsoft Store, inklusive appar som definierats i andra princip inställningar.  
+  - **Överallt**: stänger av appens rekommendationer och låter användarna installera appar från vilken plats som helst.  
+  - **Endast Store**: tvingar slutanvändare att bara installera appar från Microsoft Store.
+  - **Rekommendationer**: när du installerar en app från webben som är tillgänglig i Microsoft Store visas ett meddelande som rekommenderar att de hämtas från Store.  
+  - **Föredra butik**: varnar användare när de installerar appar från andra platser än Microsoft Store.
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
@@ -429,7 +429,7 @@ Klicka på **OK** för att spara ändringarna.
 
 De här inställningarna använder [CSP för DeviceLock-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), som även visar de Windows-versioner som stöds.
 
-- **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) tillåter åtkomst till enheten utan lösenord. Gäller för lokala konton. Lösenord för domänen vara konfigurerade med Active Directory (AD) och Azure AD.
+- **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) tillåter åtkomst till enheten utan lösenord. Gäller endast för lokala konton. Domän kontots lösen ord förblir konfigurerade av Active Directory (AD) och Azure AD.
 
   - **Krav på lösenordstyp**: Välj typ av lösenord. Alternativen är:
     - **Inte konfigurerat**: Lösenordet kan innehålla siffror och bokstäver.
@@ -440,7 +440,7 @@ De här inställningarna använder [CSP för DeviceLock-princip](https://docs.mi
     > [!IMPORTANT]
     > När lösenordskravet ändras på ett Windows-skrivbord påverkas användarna nästa gång de loggar in, eftersom det är då enheten går från inaktiv till aktiv. Användare med lösenord som uppfyller kravet uppmanas ändå att ändra sina lösenord.
     
-  - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som tillåts innan enheten kan rensas, upp till 11. Giltigt tal som du anger beror på versionen. [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) visar en lista över värdena som stöds. `0` (noll) kan inaktivera funktionen för rensning av enheten.
+  - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som tillåts innan enheten kan rensas, upp till 11. Det giltiga tal du anger beror på utgåvan. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) visar de värden som stöds. `0` (noll) kan inaktivera funktionen för rensning av enheten.
 
     Den här inställningen har även olika effekt beroende på version. Specifik information om den här inställningen finns i [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
@@ -753,9 +753,6 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
 
   [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
-  > [!WARNING]
-  > Den här inställningen i Intune i Azure-portalen kan visa statusen Misslyckades. Detta är en bugg i rapporteringsfunktionen. Efter återskapande av beteendet och felsökning bekräftade Intune-produktgruppen att statusen faktiskt är Lyckades. Rapporteringsbuggen åtgärdas i en kommande version. Just nu finns ingen beräknad lanseringstid eftersom schemat är föränderligt. Uppdateringar av den här funktionen tillkännages i [Under utveckling för Microsoft Intune](in-development.md).
-
 - **Typ av systemgenomsökning som ska utföras**: Schemalägg en systemgenomsökning, inklusive genomsökningsnivå och dag och tid då genomsökningen ska köras. Alternativen är:
   - **Inte konfigurerad**: Schemalägger inte en systemgenomsökning på enheten. Slutanvändarna kan manuellt köra genomsökningar efter behov och önskemål på sina enheter.
   - **Inaktivera**: Inaktiverar alla systemgenomsökningar på enheten. Välj det här alternativet om du använder en virusskyddslösning från tredje part som söker igenom enheter.
@@ -776,9 +773,6 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
   [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
-
-  > [!WARNING]
-  > Den här inställningen i Intune i Azure-portalen kan visa statusen Misslyckades. Detta är en bugg i rapporteringsfunktionen. Efter återskapande av beteendet och felsökning bekräftade Intune-produktgruppen att statusen faktiskt är Lyckades. Rapporteringsbuggen åtgärdas i en kommande version. Just nu finns ingen beräknad lanseringstid eftersom schemat är föränderligt. Uppdateringar av den här funktionen tillkännages i [Under utveckling för Microsoft Intune](in-development.md).
 
 - **Identifiera potentiellt oönskade program**: Välj nivå av skydd när Windows identifierar potentiellt oönskade program. Alternativen är:
   - **Inte konfigurerat** (standard): Skydd mot potentiellt oönskade program för Windows Defender inaktiveras.
