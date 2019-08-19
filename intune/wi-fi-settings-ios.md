@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 08/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f51f2eafed0d54fb58eff643785451e2f49c853
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 04b864689bce1814eba78dc2435905d4df82e8c0
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046681"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022686"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
 
@@ -71,8 +71,8 @@ Den här artikeln beskriver dessa inställningar.
 
   - **EAP-TLS**: Ange också:
 
-    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
-    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
+    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -82,8 +82,8 @@ Den här artikeln beskriver dessa inställningar.
 
   - **EAP-TTLS**: Ange också:
 
-    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
-    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
+    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
       Klicka på **OK** för att spara ändringarna.
 
@@ -104,8 +104,8 @@ Den här artikeln beskriver dessa inställningar.
 
   - **PEAP**: Ange också:
 
-    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
-    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
+    - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
+    - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
       Klicka på **OK** för att spara ändringarna.
 

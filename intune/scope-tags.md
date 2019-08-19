@@ -1,11 +1,11 @@
 ---
-title: Filtrera principer med omfångstaggar i Microsoft Intune – Azure | Microsoft Docs
+title: Använd rollbaserad åtkomst kontroll (RBAC) och omfångs etiketter för distribuerat den i Intune | Microsoft Docs
 description: Använd omfångstaggar för att filtrera konfigurationsprofiler för specifika roller.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/08/2019
+ms.date: 08/06/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.technology: ''
@@ -14,27 +14,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 627899eafb2175b2d3034045bd765a10f4a203d6
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 90865b8a8881ab85089fb379a8398e276574b771
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882495"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550039"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT
 
 Du kan använda rollbaserad åtkomstkontroll och omfångstaggar för att se till att rätt administratörer har rätt åtkomst och synlighet för rätt Intune-objekt. Roller avgör vilken åtkomst administratörer har till vilka objekt. Omfångstaggar avgör vilka objekt administratörer kan se.
 
-Anta exempelvis att en regional kontorsadministratör i Seattle tilldelas rollen Princip- och profilhanterare. Du vill att den här administratören endast ska se och hantera profiler och principer som gäller för Seattle-enheter. För att göra det här skulle du:
+Anta exempelvis att administratören på regionkontoret i Seattle har rollen som princip- och profilhanterare. Du vill att den här administratören endast ska se och hantera profiler och principer som gäller för Seattle-enheter. Om du vill konfigurera den här åtkomsten gör du följande:
 
 1. Skapa en omfångstagg som heter Seattle.
 2. Skapa en rolltilldelning för rollen Princip- och profilhanterare med: 
     - Medlemmar (Grupper) = en säkerhetsgrupp som heter IT-administratörer i Seattle. Alla administratörer i den här gruppen får behörighet att hantera principer och profiler för användare/enheter i Omfånget (Grupper).
     - Omfång (Grupper) = en säkerhetsgrupp som heter Användare i Seattle. Profiler och principer för alla användare/enheter i den här gruppen kan hanteras av administratörerna i Medlemmar (Grupper). 
-    - Omfång (Taggar) = Seattle. Administratörer i Medlemmar (Grupper) kan se de enheter som har också omfångstaggen Seattle.
+    - Omfång (Taggar) = Seattle. Administratörer i Medlemmar (Grupper) kan se Intune-objekt som även har omfångstaggen Seattle.
 3. Lägg till omfångstaggen Seattle i principer och profiler som du vill att administratörer i Medlemmar (Grupper) ska kunna komma åt.
 4. Lägga till omfångstaggen Seattle till enheter som ska vara synliga för administratörer i Medlemmar (Grupper). 
 
+## <a name="default-scope-tag"></a>Standard omfattnings tag gen
+Standard omfångs tag gen läggs automatiskt till i alla otaggade objekt som stöder omfångs taggar.
+
+Standardvärdet för scope-taggen liknar funktionen säkerhets omfattningar i System Center Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Skapa en omfångstagg
 
@@ -54,11 +58,11 @@ Anta exempelvis att en regional kontorsadministratör i Seattle tilldelas rollen
     ![Skärmbild av tilldelning av omfång till en roll.](./media/scope-tags/assign-scope-to-role.png)
 
 2. Ange ett **Tilldelningsnamn** och en **Beskrivning**.
-3. Välj **Medlemmar (Grupper)**  > **Lägg till** > välj de grupper som du vill ha som en del av tilldelningen > **Välj** > **OK**. Användare i den här gruppen får behörighet att hantera principer och profiler för användare/enheter i Omfånget (Grupper).
+3. Välj **Medlemmar (Grupper)**  > **Lägg till** > välj de grupper som du vill ha som en del av tilldelningen > **Välj** > **OK**. Användare i den här gruppen har behörighet att hantera användare/enheter i omfånget (grupper).
 
     ![Skärmbild av val av medlemsgrupper.](./media/scope-tags/select-member-groups.png)
 
-4. Om du vill hantera användare/enheter i en specifik uppsättning grupper väljer du **Omfång (Grupper)**  > **Valda grupper** > **Välj grupper som ska inkluderas**> välj grupperna > **Välj** > **OK**. Profiler och principer för alla användare/enheter i den här gruppen kan hanteras av administratörerna i Medlemmar (Grupp).
+4. Om du vill hantera användare/enheter i en specifik uppsättning grupper väljer du **Omfång (Grupper)**  > **Valda grupper** > **Välj grupper som ska inkluderas**> välj grupperna > **Välj** > **OK**. Alla användare/enheter i den här gruppen hanteras av administratörerna i medlemmarna (gruppen).
 
     ![Skärmbild av val av omfångsgrupper.](./media/scope-tags/select-scope-groups.png)
 
@@ -66,13 +70,16 @@ Anta exempelvis att en regional kontorsadministratör i Seattle tilldelas rollen
 
     ![Skärmbild av andra alternativ för val av omfångsgrupper.](./media/scope-tags/scope-group-other-options.png)
     
-5. Välj **Omfång (Taggar)**  > **Lägg till** > välj de taggar som du vill lägga i den här rollen > **Välj** > **OK**. Användare i Medlemmar (Grupper) får åtkomst till de principer och profiler som också har samma omfångstagg.
+5. Välj **Omfång (Taggar)**  > **Lägg till** > välj de taggar som du vill lägga i den här rollen > **Välj** > **OK**. Användare i medlemmar (grupper) har åtkomst till Intune-objekt som också har samma scope-tagg.
 
     ![Skärmbild av val av omfångstaggar.](./media/scope-tags/select-scope-tags.png)
 
 6. Välj **OK**. 
 
-## <a name="to-add-a-scope-tag-to-a-configuration-profile"></a>Lägga till en omfångstagg i en konfigurationsprofil
+## <a name="assign-scope-tags-to-other-objects"></a>Tilldela omfångs etiketter till andra objekt
+
+För objekt som stöder omfångs taggar visas omfångs Taggar vanligt vis under **Egenskaper**. Om du till exempel vill tilldela en scope-tagg till en konfigurations profil följer du dessa steg:
+
 1. I Intune väljer du **Enhetskonfiguration** > **Profiler** > välj en profil.
 
     ![Skärmbild av val av profil.](./media/scope-tags/choose-profile.png)
@@ -84,48 +91,30 @@ Anta exempelvis att en regional kontorsadministratör i Seattle tilldelas rollen
 3. Under **Välj taggar** väljer du de taggar som du vill lägga till i profilen.
 4. Välj **Välj** > **OK** > **Spara**.
 
-## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Tilldela en omfångstagg till en appkonfigurationsprincip
-För enheter med **Enhetsregistreringstyp** inställd på **Hanterade enheter**:
-1. Välj **Klientappar** > **Appkonfigurationsprinciper** > välj en appkonfigurationsprincip.
-2. Välj **Egenskaper** > **Omfång (Taggar)** > välj de taggar som du vill tilldela till principen.
-
-För enheter med **Enhetsregistreringstyp** inställd på **Hanterade appar**:
-1. Välj **Klientappar** > **Appkonfigurationsprinciper** > välj en appkonfigurationsprincip.
-2. Välj **Omfång (Taggar)** > välj de taggar som du vill tilldela till principen.
-
-
-## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Tilldela en omfångstagg till en etableringsprofil för iOS-app
-1. I Intune väljer du **Klientappar** > **iOS-appetableringsprofiler** > välj en profil.
-2. Välj **Egenskaper** > **Omfång (Taggar)** > välj de taggar som du vill tilldela till profilen.
-3. Välj **Välj** > **OK** > **Spara**.
-
-## <a name="to-assign-a-scope-tag-to-an-apple-volume-purchase-program-vpp-token"></a>Tilldela en omfångstagg till en VPP-token (Apples volymköpsprogram)
-1. I Intune väljer du **Klientappar** > **Apple VPP-token** > välj en VPP-token.
-2. Välj **Omfång (Taggar)** > välj de taggar som du vill tilldela till profilen. De VPP-appar och e-böcker som är associerade med VPP-token ärver de tilldelade taggarna.
-3. Välj **Välj** > **OK** > **Spara**.
 
 ## <a name="scope-tag-details"></a>Information om omfångstaggar
-När du arbetar med omfångstaggar bör du beakta följande:
+När du arbetar med omfångstaggar bör du beakta följande: 
 
-- För närvarande kan du tilldela omfångstaggar till:
-  - Rolltilldelningar
-  - Efterlevnadsprinciper för enheter
-  - Enhetens konfigurationsprofiler
-  - Windows 10-uppdateringsringar
-  - Hanterade enheter
-  - Appar
-  - Appkonfigurationsprinciper – hanterade enheter
-  - PowerShell-skript
-  - DEP-token
-  - iOS-appetableringsprofil
-  - VPP-token (volyminköpsprogram)
+- Du kan tilldela omfångs koder till en Intune-objekttyp om klienten kan ha flera versioner av objektet (till exempel roll tilldelningar eller appar).
+  Följande Intune-objekt är undantag till den här regeln och stöder för närvarande inte omfångs Taggar:
+    - Windows ESP-profiler
+    - Enhetskategorier
+    - Registreringsbegränsningar
+    - Företags enhets identifierare
+    - Villkor
+    - Autopilot-enheter
+    - Platser för enhetskompatibilitet
+    - JAMF-enheter
+- VPP-appar och e-böcker som är kopplade till VPP-token ärver de omfångs koder som tilldelats den associerade VPP-token
+- Programmet för enhetsregistrering (DEP) enheter och DEP-profiler som är associerade med DEP-token ärver omfångs koderna som tilldelats till den associerade DEP-token.
 - När en administratör skapar ett objekt i Intune tilldelas alla omfångstaggar som tilldelats till den administratören automatiskt till det nya objektet.
 - Intune RBAC gäller inte för Azure Active Directory-roller. Därför har rollerna Intune-tjänstadministratörer och Globala administratörer fullständig administratörsåtkomst till Intune oavsett vilka omfångstaggar de har.
-- Administratörer i en rolltilldelning med omfångstaggar kan även se Intune-objekt utan omfångstaggar.
+- Om en roll tilldelning saknar omfångs tagg kan IT-administratören se alla objekt baserat på IT-administratörernas behörigheter. Administratörer som inte har några omfångs etiketter har huvudsakligen alla omfångs koder.
 - Du kan endast tilldela en omfångstagg som du har i dina rolltilldelningar.
 - Du kan endast ange grupper som visas i Omfång (Grupper) för din rolltilldelning som mål.
 - Om du har en omfångstagg tilldelad till din roll kan du inte ta bort alla omfångstaggar på ett Intune-objekt. Det krävs minst en omfångstagg.
 
 ## <a name="next-steps"></a>Nästa steg
 
+Lär dig hur omfångs Taggar fungerar när det finns [flera roll tilldelningar](role-based-access-control.md#multiple-role-assignments).
 Hantera dina [roller](role-based-access-control.md) och [profiler](device-profile-assign.md).

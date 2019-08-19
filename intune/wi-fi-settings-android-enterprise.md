@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2019
+ms.date: 08/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1589189147fd034a034791c2090c2a78134d866e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 51096b4ff42902b5feb8cecdebf9d839821e1bb2
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050589"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545933"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för enheter som kör Android Enterprise och Android Kiosk i Microsoft Intune
 
-Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina Android Enterprise- och Android Kiosk-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk med en i förväg delad nyckel och mycket mer.
+Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina Android Enterprise- och Android-dedikerade enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk med en i förväg delad nyckel och mycket mer.
 
 Den här artikeln beskriver dessa inställningar. I [Använda Wi-Fi på dina enheter](wi-fi-settings-configure.md) finns mer information om Wi-Fi-funktionen i Microsoft Intune.
 
@@ -31,12 +31,15 @@ Den här artikeln beskriver dessa inställningar. I [Använda Wi-Fi på dina enh
 
 [Skapa en enhetsprofil](wi-fi-settings-configure.md#create-a-device-profile).
 
-## <a name="device-owner-only---kiosk"></a>Endast enhetens ägare – helskärmsläge
+## <a name="device-owner-only"></a>Endast enhetens ägare
 
-Välj det här alternativet om du använder en Android Enterprise-enhet i helskärmsläge.
+Välj det här alternativet om du använder en Android Enterprise-dedikerad enhet i helskärmsläge.
 
-- **Nätverksnamn**: Ange ett namn på Wi-Fi-anslutningen. Detta värde är det namn som användarna ser när de bläddrar i listan med tillgängliga anslutningar på sin enhet.
-- **SSID**: Förkortning för **Service Set Identifier**. Den här inställningen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **nätverksnamn** som du konfigurerade när de väljer anslutningen.
+### <a name="basic"></a>Grundläggande
+
+- **Wi-Fi-typ**: Välj **Grundläggande**.
+- **Nätverksnamn**: Ange ett namn på Wi-Fi-anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga Wi-FI-anslutningar. Ange till exempel **Contoso WiFi**.
+- **SSID**: ange **tjänst uppsättnings identifieraren**, som är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **nätverksnamn** som du konfigurerade när de väljer anslutningen.
 - **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
 - **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
 - **Wi-Fi-typ**: Välj det säkerhetsprotokoll som ska autentiseras med Wi-Fi-nätverket. Alternativen är:
@@ -45,51 +48,36 @@ Välj det här alternativet om du använder en Android Enterprise-enhet i helsk�
   - **I förväg delad WEP-nyckel**: Ange lösenordet i **I förväg delad nyckel**. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet.
   - **I förväg delad WPA-nyckel**: Ange lösenordet i **I förväg delad nyckel**. När nätverket är konfigurerat, konfigureras också ett lösenord eller en nätverksnyckel. Ange lösenordet eller nätverksnyckeln för PSK-värdet.
 
-Klicka på **OK** för att spara ändringarna.
-
-## <a name="work-profile-only"></a>Endast arbetsprofil
-
-### <a name="basic-settings"></a>Grundläggande inställningar
-
-- **Wi-Fi-typ**: Välj **Grundläggande**.
-- **SSID**: Förkortning för **Service Set Identifier**. Den här inställningen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till.
-- **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
-- **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
-
-## <a name="enterprise-profile"></a>Företagsprofil
+### <a name="enterprise"></a>Företag
 
 - **Wi-Fi-typ**: Välj **Företag**.
-- **SSID**: Förkortning för **Service Set Identifier**. Den här inställningen är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till.
+- **SSID**: ange **tjänst uppsättnings identifieraren**, som är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **nätverksnamn** som du konfigurerade när de väljer anslutningen.
 - **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
 - **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
-- **EAP-typ**: Välj den EAP-typ (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar. Alternativen är: 
+- **EAP-typ**: Välj den EAP-typ (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar. Alternativen är:
 
   - **EAP-TLS**: Ange också:
 
     - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)** : Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
-      Klicka på **OK** för att spara ändringarna.
+    - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
   - **EAP-TTLS**: Ange också:
 
     - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
 
-      Klicka på **OK** för att spara ändringarna.
-
-    - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
+    - **Klientautentisering**: Välj en **Autentiseringsmetod**. Alternativen är:
 
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
-        - **Annan metod än EAP (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
+        - **Annan metod än EAP (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk. Alternativen är:
 
-          Dina alternativ: **PAP (Password Authentication Protocol)** , **CHAP (Challenge Handshake Authentication Protocol)** , **MS-CHAP (Microsoft CHAP)** eller **MS-CHAP v2 (Microsoft CHAP Version 2)**
+          - **Okrypterat lösenord (PAP)**
+          - **Microsoft CHAP (MS-CHAP)**
+          - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
-
-        Klicka på **OK** för att spara ändringarna.
 
       - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
@@ -97,22 +85,75 @@ Klicka på **OK** för att spara ändringarna.
 
     - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
 
-      Klicka på **OK** för att spara ändringarna.
-
-    - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
+    - **Klientautentisering**: Välj en **Autentiseringsmetod**. Alternativen är:
 
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
-        - **Annan metod än EAP för autentisering (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
+        - **Annan metod än EAP för autentisering (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk. Alternativen är:
 
-          Dina alternativ: **Ingen** eller **Microsoft CHAP Version 2 (MS-CHAP v2)**
+          - **Inga**
+          - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
-        Klicka på **OK** för att spara ändringarna.
+      - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+
+## <a name="work-profile-only"></a>Endast arbetsprofil
+
+### <a name="basic"></a>Grundläggande
+
+- **Wi-Fi-typ**: Välj **Grundläggande**.
+- **SSID**: ange **tjänst uppsättnings identifieraren**, som är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **nätverksnamn** som du konfigurerade när de väljer anslutningen.
+- **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
+- **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
+
+### <a name="enterprise"></a>Företag
+
+- **Wi-Fi-typ**: Välj **Företag**.
+- **SSID**: ange **tjänst uppsättnings identifieraren**, som är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det **nätverksnamn** som du konfigurerade när de väljer anslutningen.
+- **Anslut automatiskt**: Välj **Aktivera** för att ansluta till nätverket automatiskt när enheten är i närheten. Välj **Inaktivera** för att förhindra att enheter ansluts automatiskt.
+- **Dolt nätverk**: Välj **Aktivera** för att dölja nätverket i listan med tillgängliga nätverk på enheten. SSID skickas inte. Välj **Inaktivera** för att visa nätverket i listan med tillgängliga nätverk på enheten.
+- **EAP-typ**: Välj den EAP-typ (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar. Alternativen är:
+
+  - **EAP-TLS**: Ange också:
+
+    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
+
+    - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)** : Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+
+    - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+
+  - **EAP-TTLS**: Ange också:
+
+    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
+
+    - **Klientautentisering**: Välj en **Autentiseringsmetod**. Alternativen är:
+
+      - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
+        - **Annan metod än EAP (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk. Alternativen är:
+
+          - **Okrypterat lösenord (PAP)**
+          - **Microsoft CHAP (MS-CHAP)**
+          - **Microsoft CHAP Version 2 (MS-CHAP v2)**
+
+      - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
       - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
-Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
+  - **PEAP**: Ange också:
+
+    - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. När klienten ansluter till nätverket presenteras certifikatet för servern och används för att autentisera anslutningen.
+
+    - **Klientautentisering**: Välj en **Autentiseringsmetod**. Alternativen är:
+
+      - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
+        - **Annan metod än EAP för autentisering (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk. Alternativen är:
+
+          - **Inga**
+          - **Microsoft CHAP Version 2 (MS-CHAP v2)**
+
+      - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+
+      - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
 ## <a name="next-steps"></a>Nästa steg
 

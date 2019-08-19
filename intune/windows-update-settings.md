@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e9baf3593883cf2fa2402a0b4daec638a336366
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: e44f9d0848d449ef9131c76784ca8c7244b7c223
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884202"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550101"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-inställningar för Intune  
 
@@ -31,215 +31,263 @@ När du konfigurerar inställningar för Windows 10-uppdateringsringar i Intune,
 
 Uppdateringsinställningarna styr vilka bitar som en enhet laddar ner och när detta görs. Mer information om beteendet för varje inställning finns i referensdokumentationen för Windows.  
 
-### <a name="servicing-channel"></a>Underhållskanal  
+- **Underhållskanal**  
+  **Standard**: Halvårskanal  
+  Windows Update CSP: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
-- **Standard**: Halvårskanal (riktad)  
-- **Windows-referensdokumentation**: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
-Ange den kanal (förgrening) som enheten tar emot Windows-uppdateringar från. Olika kanaler kan använda olika uppskjutningsperioder innan uppdateringarna levereras.  
+  Ange den kanal (förgrening) som enheten tar emot Windows-uppdateringar från. Olika kanaler kan använda olika uppskjutningsperioder innan uppdateringarna levereras.  
 
-Till exempel har *Halvårskanal* en uppskjutningsperiod på sex månader. Om du använder den här kanalen utan ytterligare uppskjutningar i inställningarna installerar enheten uppdateringen sex månader efter att den har släppts.  
+  Till exempel har *Halvårskanal* en uppskjutningsperiod på sex månader. Om du använder den här kanalen utan ytterligare uppskjutningar i inställningarna installerar enheten uppdateringen sex månader efter att den har släppts.  
 
-Uppdateringskanaler som stöds:  
+  Uppdateringskanaler som stöds:  
 
-- Halvårskanal  
-- Halvårskanal (riktad)  
-- Windows Insider – snabb  
-- Windows Insider – långsam  
-- Windows Insider-version  
+  - Halvårskanal  
+  - Halvårskanal (riktad)  
+  - Windows Insider – snabb  
+  - Windows Insider – långsam  
+  - Windows Insider-version  
 
-Om du väljer en Insider-kanal konfigurerar Intune automatiskt Windows uppdateringsinställning [Update/ManagePreviewBuilds](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) så att Insider-versionen kommer att fungera.  
+  Om du väljer en Insider-kanal konfigurerar Intune automatiskt Windows uppdateringsinställning [Update/ManagePreviewBuilds](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) så att Insider-versionen kommer att fungera.  
 
 
-> [!IMPORTANT]  
-> Från och med Windows version 1903 har användningen av *Halvårskanal (riktad)* (SAC-T) dragits tillbaka. Den här ändringen innebär att SAC-T slås samman med *Halvårskanal*. Mer information om den här förändringen och hur den påverkar Windows Update för företag finns i blogginlägget från Windows IT Pro om [Windows Update för företag och tillbakadragning av SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).
+  > [!IMPORTANT]  
+  > Från och med Windows version 1903 har användningen av *Halvårskanal (riktad)* (SAC-T) dragits tillbaka. Den här ändringen innebär att SAC-T slås samman med *Halvårskanal*. Mer information om den här förändringen och hur den påverkar Windows Update för företag finns i blogginlägget från Windows IT Pro om [Windows Update för företag och tillbakadragning av SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).  
  
+- **Uppdateringar för Microsoft-produkter**  
+  **Standard**: Tillåt  
+  Windows Update CSP: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
+  - **Tillåt** – Välj *Tillåt* för att söka efter uppdateringar av appen från Microsoft Update.  
+  - **Blockera** – Välj block för att förhindra sökning efter uppdateringar av appar.  
 
-### <a name="microsoft-product-updates"></a>Uppdateringar av Microsoft-produkter  
+- **Windows-drivrutiner**  
+  **Standard**: Tillåt  
+  Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
-- **Standard**: Tillåt
-- **Windows-referensdokumentation**: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+  - **Tillåt** – Välj *tillåt att* inkludera Windows Update driv rutiner under uppdateringar.  
+  - **Blockera** – Välj block för att förhindra genomsökning av driv rutiner.  
 
-Välj *Tillåt* om du vill söka efter appuppdateringar i Microsoft Update.    
+- **Uppskjutningsperiod för kvalitetsuppdatering (dagar)**  
+  **Standard**: 0  
+  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
-### <a name="windows-drivers"></a>Windows-drivrutiner  
+  Ange i hur många dagar från 0 till 30 som kvalitetsuppdateringar ska skjutas upp. Den här perioden är utöver den eventuella uppskjutningsperiod som är en del av underhållskanalen som du valt. Uppskjutningsperioden påbörjas när principen tas emot av enheten.  
 
-- **Standard**: Tillåt
-- **Windows-referensdokumentation**: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
+  Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner.  
 
-Välj *Tillåt* om du vill inkludera Windows Update-drivrutiner vid uppdateringarna
+- **Uppskjutningsperiod för funktionsuppdatering (dagar)**  
+  **Standard**: 0  
+  Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
-### <a name="quality-update-deferral-period-days"></a>Uppskjutningsperiod för kvalitetsuppdatering (dagar)  
+  Ange i hur många dagar funktionsuppdateringar ska skjutas upp. Den här perioden är utöver den eventuella uppskjutningsperiod som är en del av underhållskanalen som du valt. Uppskjutningsperioden påbörjas när principen tas emot av enheten.  
 
-- **Standard**: 0  
-- **Windows-referensdokumentation**: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+  Uppskjutningsperiod som stöds:  
 
-Ange i hur många dagar från 0 till 30 som kvalitetsuppdateringar ska skjutas upp. Den här perioden är utöver den eventuella uppskjutningsperiod som är en del av underhållskanalen som du valt. Uppskjutningsperioden påbörjas när principen tas emot av enheten.  
+  - *Windows version 1709 och senare* – 0 till 365 dagar  
+  - *Windows version 1703* – 0 till 180 dagar  
 
-Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner.  
+  Funktionsuppdateringarna är för det mesta nya funktioner i Windows.  
 
-### <a name="feature-update-deferral-period-days"></a>Uppskjutningsperiod för funktionsuppdatering (dagar)  
+- **Konfigurera avinstallationsperiod för funktionsuppdatering (2–60 dagar)**  
+  **Standard**: 10  
+  Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
-- **Standard**: 0  
-- **Windows-referensdokumentation**: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+  Konfigurera en tid efter vilken funktionsuppdateringar inte längre kan avinstalleras.  
 
-Ange i hur många dagar funktionsuppdateringar ska skjutas upp. Den här perioden är utöver den eventuella uppskjutningsperiod som är en del av underhållskanalen som du valt. Uppskjutningsperioden påbörjas när principen tas emot av enheten.  
-Uppskjutningsperiod som stöds:  
+  När perioden har löpt ut tas den tidigare uppdateringens bitar bort från enheten och det går inte längre att avinstallera till en tidigare uppdateringsversion.  
 
-- *Windows version 1709 eller senare*: 0 till 365 dagar  
-- *Windows version 1703*: 0 till 180 dagar  
-
-Funktionsuppdateringarna är för det mesta nya funktioner i Windows.  
-
-### <a name="set-feature-update-uninstall-period-2--60-days"></a>Konfigurera avinstallationsperiod för funktionsuppdatering (2–60 dagar)  
-
-- **Standard**: 10  
-- **Windows-referensdokumentation**:  [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
-
-Konfigurera en tid efter vilken funktionsuppdateringar inte längre kan avinstalleras.  
-
-När perioden har löpt ut tas den tidigare uppdateringens bitar bort från enheten och det går inte längre att avinstallera till en tidigare uppdateringsversion.  
-
-Anta exempelvis att en uppdateringsring har en funktionsuppdatering med en avinstallationsperiod på 20 dagar. Efter 25 dagar vill du återställa till den senaste funktionsuppdateringen och du använder alternativet Avinstallera.  Enheter som installerade funktionsuppdateringen för mer än 20 dagar sedan kan inte avinstallera den, eftersom de bitar som krävs har tagits bort vid underhållet. Men enheter som installerade funktionsuppdateringen för upp till 19 dagar sedan kan avinstallera uppdateringen, om de checkar in för att få avinstallationskommandot innan avinstallationsperioden på 20 dagar har löpt ut.  
-
+  Anta exempelvis att en uppdateringsring har en funktionsuppdatering med en avinstallationsperiod på 20 dagar. Efter 25 dagar vill du återställa till den senaste funktionsuppdateringen och du använder alternativet Avinstallera.  Enheter som installerade funktionsuppdateringen för mer än 20 dagar sedan kan inte avinstallera den, eftersom de bitar som krävs har tagits bort vid underhållet. Men enheter som installerade funktionsuppdateringen för upp till 19 dagar sedan kan avinstallera uppdateringen, om de checkar in för att få avinstallationskommandot innan avinstallationsperioden på 20 dagar har löpt ut.  
 
 ## <a name="user-experience-settings"></a>Inställningar för användargränssnitt  
 
-Inställningarna för användargränssnittet styr slutanvändarens upplevelse vid omstart av enheten och påminnelser. Mer information om beteendet för varje inställning finns i referensdokumentationen för Windows.  
+Inställningarna för användargränssnittet styr slutanvändarens upplevelse vid omstart av enheten och påminnelser. Mer information om beteendet för varje inställning finns i dokumentationen för Windows Update CSP.  
 
-### <a name="automatic-update-behavior"></a>Funktionssätt för automatisk uppdatering  
+- **Beteende för automatisk uppdatering**  
+  **Standard**: Automatisk installation vid underhållstidpunkt  
+  Windows Update CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
-- **Standard**: Automatisk installation och omstart vid en schemalagd tidpunkt  
-- **Windows-referensdokumentation**: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Välj hur automatiska uppdateringar ska installeras, samt om datorn ska startas om.  
 
-Välj hur automatiska uppdateringar ska installeras, samt om datorn ska startas om.  
+  Alternativ som stöds:  
 
-Se referensdokumentationen för Windows om du vill ha en fullständig beskrivning av följande alternativ som stöds:  
+  - **Meddela om nedladdning** – Meddela användaren innan uppdateringen laddas ned. Användaren väljer att ladda ned och installera uppdateringarna.  
 
-- **Meddela om nedladdning** – Meddela användaren innan uppdateringen laddas ned. Användaren väljer att ladda ned och installera uppdateringarna.  
+  - **Automatisk installation vid underhållstidpunkt** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. Om omstart krävs uppmanas användarna att starta om i upp till sju dagar, därefter sker en tvingande omstart.  
 
-- **Automatisk installation vid underhållstidpunkt** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. Om omstart krävs uppmanas användarna att starta om i upp till sju dagar, därefter sker en tvingande omstart.  
+    Det här alternativet kan starta om en enhet automatiskt när uppdateringen har installerats. Använd inställningarna för **Aktiva timmar** för att definiera en tidsperiod under vilken de automatiska omstarterna blockeras:  
 
-  Det här alternativet kan starta om en enhet automatiskt när uppdateringen har installerats. Använd inställningarna för **Aktiva timmar** för att definiera en tidsperiod under vilken de automatiska omstarterna blockeras:  
-
-  - **Aktiva timmar startar**: Ange en starttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-    **Windows-referensdokumentation**:  [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
-    **Standard**: kl. 08:00  
+    - **Aktiva timmar startar**: Ange en starttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
+      **Standard**: kl. 08:00  
+      Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
-  - **Aktiva timmar slutar**: Ange en sluttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-    **Windows-referensdokumentation**:  [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
-    **Standard**: kl. 17:00  
+    - **Aktiva timmar slutar**: Ange en sluttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
+      **Standard**: kl. 17:00  
+      Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
-- **Installera automatiskt och starta om vid underhåll** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. När omstart krävs startas enheten om när den inte används. (Detta är standard för ohanterade enheter.)  
+  - **Installera automatiskt och starta om vid underhåll** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. När omstart krävs startas enheten om när den inte används. (Detta är standard för ohanterade enheter.)  
 
-  Det här alternativet kan starta om en enhet automatiskt när uppdateringen har installerats. Användningen av inställningar för **Aktiva timmar** beskrivs inte i Windows Update-inställningarna, men används av Intune för att definiera en tidsperiod när de automatiska omstarterna blockeras:  
+    Det här alternativet kan starta om en enhet automatiskt när uppdateringen har installerats. Användningen av inställningar för **Aktiva timmar** beskrivs inte i Windows Update-inställningarna, men används av Intune för att definiera en tidsperiod när de automatiska omstarterna blockeras:  
 
-  - **Aktiva timmar startar**: Ange en starttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-    **Windows-referensdokumentation**:  [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
-    **Standard**: kl. 08:00  
-
-  - **Aktiva timmar slutar**: Ange en sluttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-    **Windows-referensdokumentation**:  [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
-    **Standard**: kl. 17:00  
-
-- **Automatisk installation och omstart vid schemalagd tid** – Ange dag och tidpunkt för installationen. Om inget anges körs installationen kl. 3.00 varje dag, följt av en 15 minuters nedräkning till en omstart. Inloggade användare kan fördröja nedräkningen och omstarten.  
+    - **Aktiva timmar startar**: Ange en starttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
+      **Standard**: kl. 08:00  
+      Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
-  Det här alternativet stöder ytterligare inställningar.  
-  **Windows-referensdokumentation**:  [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+    - **Aktiva timmar slutar**: Ange en sluttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
+      **Standard**: kl. 17:00  
+      Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
-  - **Frekvens för automatiska funktioner**: Använd den här inställningen om du vill schemalägga när uppdateringarna ska installeras, inklusive vecka, dag och tid.  
-    **Standard**: Varje vecka
+  - **Automatisk installation och omstart vid schemalagd tid** – Ange dag och tidpunkt för installationen. Om inget anges körs installationen kl. 3.00 varje dag, följt av en 15 minuters nedräkning till en omstart. Inloggade användare kan fördröja nedräkningen och omstarten.   
+  Windows Update CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
-  - **Schemalagd installationsdag**:  Ange den dag i veckan då du vill att uppdateringar ska installeras.  
-    **Standard**: Vilken dag som helst  
+    Det här alternativet stöder ytterligare inställningar.  
 
-  - **Schemalagd installationstid**:  Ange den tid på dagen då du vill att uppdateringar ska installeras.  
-    **Standard**: kl. 03:00  
+    - **Frekvens för automatiska funktioner** – Använd den här inställningen om du vill schemalägga när uppdateringarna ska installeras, inklusive vecka, dag och tid.  
+      **Standard**: Varje vecka
 
-- **Installera automatiskt och starta om utan slutanvändarkontroll** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. När omstart krävs startas enheten om när den inte används. Det här alternativet innebär att slutanvändarnas kontrollpanel är skrivskyddad.  
+    - **Schemalagd installationsdag** – Ange den dag i veckan då du vill att uppdateringar ska installeras.  
+      **Standard**: Vilken dag som helst  
 
-- **Återställ till standard** – Återställer de ursprungliga inställningarna för automatisk uppdatering på Windows 10-datorer som kör uppdateringen från oktober 2018 eller senare.  
+    - **Schemalagd installationstid** – Ange den tid på dagen då du vill att uppdateringar ska installeras.  
+      **Standard**: kl. 03:00  
+
+  - **Installera automatiskt och starta om utan slutanvändarkontroll** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. När omstart krävs startas enheten om när den inte används. Det här alternativet innebär att slutanvändarnas kontrollpanel är skrivskyddad.  
+
+  - **Återställ till standard** – Återställer de ursprungliga inställningarna för automatisk uppdatering på Windows 10-datorer som kör uppdateringen från oktober 2018 eller senare.  
 
 
-### <a name="restart-checks"></a>Omstartskontroller  
+- **Omstartskontroller**  
+  **Standard**: Tillåt  
+  Windows Update CSP: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
-- **Standard**: Tillåt  
-- **Windows-referensdokumentation**: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
-
-Den här inställningen ger olika resultat beroende på enhetens Windows-version:  
-
-- Windows version 1703 och tidigare: När du startar om en enhet utförs vissa kontroller, exempelvis kontroll av aktiva användare, batterinivå, spel som körs och mycket mer. Om du vill hoppa över de här kontrollerna när du startar om en enhet väljer du **Hoppa över**.  
-- Från och med Windows version 1709: Under aktiva timmar körs inte följande processer för uppdateringar: genomsöka, ladda ned, installera och starta om. Efter aktiva timmar körs uppdateringens processer och kan väcka enheten från strömsparläge, genomsöka, ladda ned, installera och starta om enheten så länge enheten har ström eller batteri. Mer information finns i [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart).  
-
-### <a name="block-user-from-pausing-windows-updates"></a>Blockera användare från att pausa Windows-uppdateringar  
-
-- **Standard**: Tillåt  
-- **Windows-referensdokumentation**: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
-
-Tillåt eller blockera en enhetsanvändare från att pausa installationen av en uppdatering. 
-
-### <a name="block-user-from-scanning-for-windows-updates"></a>Hindra användare från att söka efter Windows-uppdateringar  
-- **Standard**: Tillåt
-- **Windows-referensdokumentation**: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
-
-Anger om en användares åtkomst till Windows Update-genomsökningen ska tillåtas eller blockeras. Om du till exempel konfigurerar en *blockering* kan användare inte komma åt Windows Update-genomsökning, ladda ned eller installera funktioner.  
-
-### <a name="require-users-approval-to-restart-outside-of-work-hours"></a>Kräv användarens godkännande för att starta om utanför arbetstid  
-
-- **Standard**: Inte konfigurerat  
-- **Windows-referensdokumentation**: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+  Om du vill hoppa över de här kontrollerna när du startar om en enhet väljer du **Hoppa över**. 
   
-Välj *Obligatoriskt* för att kräva att användaren godkänner en omstart av enheten utanför arbetstid.  
+  Den här inställningen ger olika resultat beroende på enhetens Windows-version:  
+ 
+  - *Windows version 1703 och tidigare* – När du startar om en enhet utförs vissa kontroller, exempelvis kontroll av aktiva användare, batterinivå, spel som körs och mycket mer.  
+  
+  - *Windows version 1709 och senare* – Under aktiva timmar körs inte följande processer för uppdateringar: genomsöka, ladda ned, installera och starta om. Efter aktiva timmar körs uppdateringens processer och kan väcka enheten från strömsparläge, genomsöka, ladda ned, installera och starta om enheten så länge enheten har ström eller batteri. 
+
+- **Blockera användare från att pausa Windows-uppdateringar**  
+  **Standard**: Tillåt  
+  Windows Update CSP: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+
+  - **Tillåt** – Tillåt att enhets användare pausar installationen av en uppdatering.  
+  - **Blockera** – förhindra att enhets användare pausar installationen av en uppdatering.  
+
+- **Hindra användare från att söka efter Windows-uppdateringar**  
+  **Standard**: Tillåt  
+  Windows Update CSP: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+
+  - **Tillåt** – Tillåt att enhets användare använder Windows Update sökning för att hitta och hämta uppdateringar och installera funktioner.
+  - **Blockera** – förhindra att enhets användare får åtkomst till Windows Update genomsökning, hämta uppdateringar och installera funktioner.  
+
+- **Kräv användarens godkännande för att starta om utanför arbetstid**  
+  **Standard**: Inte konfigurerat  
+  Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+  
+  - **Inte konfigurerat**  
+  - **Obligatoriskt** – Kräv att användaren godkänner en omstart av enheten utanför arbetstid.  
    
-### <a name="remind-user-prior-to-required-auto-restart-with-dismissible-reminder-hours"></a>Påminn användaren innan automatisk omstart krävs med ignorerbar påminnelse (timmar)  
+- **Påminn användaren innan automatisk omstart krävs med ignorerbar påminnelse (timmar)**  
+  **Standard**: 4  
+  Windows Update CSP: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
-- **Standard**: *Den här inställningen är inte konfigurerad som standard, och ingen påminnelse visas för användarna*.  
-- **Windows-referensdokumentation**: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
+  Ange lång tid före en automatisk omstart ett ignorerbart meddelande ska visas för enhetsanvändaren om omstarten. Värdena **2**, **4**, **8**, **12** eller **24** timmar stöds.  
+  
+  När du rensar standardvärdet är den här inställningen *inte konfigurerad*.  
 
-Ange lång tid före en automatisk omstart ett ignorerbart meddelande ska visas för enhetsanvändaren om omstarten. Värdena **2**, **4**, **8**, **12** eller **24** timmar stöds.  
+- **Påminn användaren innan automatisk omstart krävs med permanent påminnelse (minuter)**  
+  **Standard**: 15  
+  Windows Update CSP: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
 
-### <a name="remind-user-prior-to-required-auto-restart-with-permanent-reminder-minutes"></a>Påminn användaren innan automatisk omstart krävs med permanent påminnelse (minuter)  
+  Ange hur lång tid före en automatisk omstart en icke-ignorerbar varning ska visas för enhetsanvändaren om omstarten. Värdena **15**, **30** eller **60** minuter stöds.  
 
-- **Standard**: *Den här inställningen är inte konfigurerad som standard, och ingen påminnelse visas för användarna*.  
-- **Windows-referensdokumentation**: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning) 
+  När du rensar standardvärdet är den här inställningen *inte konfigurerad*.  
 
-Ange hur lång tid före en automatisk omstart en icke-ignorerbar varning ska visas för enhetsanvändaren om omstarten. Värdena **15**, **30** eller **60** minuter stöds.  
+- **Ändra meddelandenivå för uppdatering**  
+  **Standard**: Använd standardmässiga Windows Update-meddelanden  
+  Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+  
+  Ange vilken nivå av Windows Update-meddelanden som användare ser. Den här inställningen styr inte hur och när uppdateringarna laddas ned och installeras.  
 
-### <a name="windows-update-notification-level"></a>Windows Update-meddelandenivå  
-- **Standard**: Använd standardmässiga Windows Update-meddelanden 
-- **Windows-referensdokumentation**: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+  Alternativ som stöds:
+  - **Inte konfigurerat**
+  - **Använd Windows Update-standardmeddelanden**
+  - **Stäng av alla meddelanden, förutom omstarts varningar**
+  - **Stäng av alla meddelanden, inklusive omstarts varningar**  
 
-Ange vilken nivå av Windows Update-meddelanden som användare ser. Den här inställningen styr inte hur och när uppdateringarna laddas ned och installeras.
+- **Tillåt användaren att starta om (interaktiv omstart)**  
+  **Standard**: Inte konfigurerat  
+  > [!IMPORTANT]  
+  > Inställningarna för *interaktiv omstart* rekommenderas inte längre att använda. Använd i stället de nya inställningarna för *tids gräns* som ersätter inställningarna för *interaktiv omstart* . Intune kommer att [ha stöd för inställningar för *interaktiv omstart* ](whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) i en framtida uppdatering.
 
-### <a name="allow-user-to-restart-engaged-restart"></a>Tillåt användaren att starta om (interaktiv omstart)  
-
-- **Standard**: Inte konfigurerat  
-- **Windows-referensdokumentation**: *Inte tillämpligt*  
-- **Windows-version**: Stöds för Windows 10 version 1803 och senare  
+  Interaktiv omstart stöds för Windows 10 version 1803 och senare. 
 
   > [!NOTE]  
   > I Windows 10 version 1809 har ytterligare interaktiva omstartsinställningar införts, vilket gör att olika inställningar kan tillämpas på funktions- och kvalitetsuppdateringar. Dock tillämpas de inställningar som hanteras av Intune inte separat på de olika uppdateringstyperna. I stället använder Intune samma värden för både funktions- och kvalitetsuppdateringar.  
+  
+  - **Inte konfigurerat**  
+  - **Obligatoriskt** – Välj *Krävs* om du vill aktivera användningen av interaktiva omstartsalternativ för Windows 10-uppdateringar. Dessa alternativ hjälper enhetsanvändaren med hanteringen när en enhet ska startas om efter att en uppdatering har installerats som kräver en omstart.  
 
-När värdet är **Obligatoriskt** kan du aktivera användningen av interaktiva omstartsalternativ för Windows 10-uppdateringar. Dessa alternativ hjälper enhetsanvändaren med hanteringen när en enhet ska startas om efter att en uppdatering har installerats som kräver en omstart.  
+  Mer information om det här alternativet finns i [Interaktiv omstart](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) i Windows 10-dokumentationen om att distribuera uppdateringar.  
 
-Mer information om det här alternativet finns i [Interaktiv omstart](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) i Windows 10-dokumentationen om att distribuera uppdateringar.  
+  Följande inställningar används för att styra när interaktiv omstart ska utföras.  
 
-Följande inställningar används för att styra när interaktiv omstart ska utföras.  
+  - **Övergång av användare till interaktiv omstart efter en automatisk omstart (dagar)**  
+    **Standard**: inte KONFIGURERAT Windows Update CSP: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
+    
+    Ange ett värde mellan **2** och **30** dagar som anger hur lång tid efter installationen av en uppdatering som beteendet för interaktiv omstart ska aktiveras för enheten. Användarna får en uppmaning om att starta om enheten efter det konfigurerade antalet dagar.  
 
-- **Övergång av användare till interaktiv omstart efter en automatisk omstart (dagar)**  
-  - **Standard**:  Som standard är detta inte konfigurerat, men det stöder ett värde från **2** till **30**.  
-  - **Windows-referensdokumentation**: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-  Ange hur lång tid det tar efter att uppdateringen har installerats tills enheten försätts i ett interaktivt omstartsbeteende. Användarna får en uppmaning om att starta om enheten efter det konfigurerade antalet dagar.  
+  - **Snooza påminnelse om interaktiv omstart (dagar)**  
+    **Standard**: Inte konfigurerat    
+    Windows Update CSP: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
+    
+    Ange ett värde från **1** till **3** för hur länge en uppstarts varning kan vara i vilo läge.  Efter snooze-perioden visas omstartsfrågan igen. Användaren kan fortsätta att snooza påminnelsen tills tidsgränsen har uppnåtts.  
 
-- **Snooza påminnelse om interaktiv omstart (dagar)**  
-  - **Standard**:  Som standard är den här inställningen inte konfigurerad, men den stöder ett värde från **1** till **3**.  
-  - **Windows-referensdokumentation**: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-  Ange hur länge en omstartsfråga kan snoozas.  Efter snooze-perioden visas omstartsfrågan igen. Användaren kan fortsätta att snooza påminnelsen tills tidsgränsen har uppnåtts.  
+  - **Ställ in tidsgräns för väntande omstarter (dagar)**  
+    **Standard**: Inte konfigurerat  
+    Windows Update CSP: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
+  
+    Ange ett värde mellan **2** och **30** som anger det högsta antal dagar som du vill vänta efter att beteendet för interaktiv omstart aktiverades innan en enhet framtvingar en obligatorisk omstart. Omstarten uppmanar användarna att spara arbetet.
 
-- **Ställ in tidsgräns för väntande omstarter (dagar)**  
-  - **Standard**:  Som standard är den här inställningen inte konfigurerad, men den stöder ett värde från **2** till **30**.  
-  - **Windows-referensdokumentation**: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  Ange maximalt antal dagar man kan vänta efter att ett interaktivt omstartsbeteende har påbörjats innan en enhet tvingas till en obligatorisk omstart. Omstarten uppmanar användarna att spara arbetet.
+- **Använd inställningar för tids gräns**  
+  **Standard**: Inte konfigurerat  
+  > [!IMPORTANT]  
+  > Från och med augusti-uppdateringen för Intune rekommenderar vi att du använder följande tids gräns inställningar som ersätter inställningarna för interaktiv omstart. Intune kommer att [ha stöd för *interaktiv omstart* ](whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) av inställningarna i en framtida uppdatering av Intune.  
+
+  Tillåter att användare använder tids gräns inställningar.  
+
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+  När inställningen *tillåts*kan du konfigurera följande inställningar för tids gränser:
+
+  - **Tids gräns för funktions uppdateringar**  
+    **Standard**: 7  
+    Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
+
+    Anger antalet dagar som en användare har innan funktions uppdateringar installeras på deras enheter automatiskt (2-30).
+
+  - **Tids gräns för kvalitets uppdateringar**  
+    **Standard**: 7  
+    Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+
+    Anger antalet dagar som en användare har innan kvalitets uppdateringar installeras på deras enheter automatiskt (2-30).
+
+  - **Respitperiod**  
+    **Standard**: 2 Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+
+    Anger ett minsta antal dagar efter deadline tills omstarter sker automatiskt (0-7).
+
+  - **Automatisk omstart före deadline**  
+    **Standard**: Ja Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+
+    Anger om enheten ska starta om automatiskt före tids gränsen.
+    - **Ja**
+    - **Nej**
+
+
+
 
 ### <a name="delivery-optimization-download-mode"></a>Leveransoptimering av nedladdningsläge  
 
