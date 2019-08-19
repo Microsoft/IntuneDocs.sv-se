@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 08/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883420"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550184"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -85,13 +85,13 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 - **Enskild app**: Användare kan bara komma åt en enda app på enheten. Endast den specifika appen startar när enheten startar. Användarna förhindras att öppna nya appar eller ändra appen som körs.
 
-  **Steg**
-  1. Välj **Välj en hanterad app** och sedan den hanterade Google Play-appen i listan. 
+  - **Välj en hanterad app**: Välj den hanterade Google Play-appen i listan.
 
-      Om du inte har några appar som visas kan du [lägga till Android-appar](apps-add-android-for-work.md) till enheten. Se till att [tilldela appen till den enhetsgrupp som skapats för dina dedikerade enheter](apps-deploy.md).
+    Om du inte har några appar som visas kan du [lägga till Android-appar](apps-add-android-for-work.md) till enheten. Se till att [tilldela appen till den enhetsgrupp som skapats för dina dedikerade enheter](apps-deploy.md).
 
-  2. Välj **OK** > **OK** för att lägga till appen.
-
+  > [!IMPORTANT]
+  > När du använder hel skärms läge för en enda app fungerar inte uppringnings-/telefon program korrekt. 
+  
 - **Flera appar**: Användare kan komma åt en begränsad uppsättning appar på enheten. Endast de appar du lägger till startar när enheten startar. Du kan också lägga till webblänkar som användare kan öppna. När principen används ser användarna ikoner för tillåtna appar på startskärmen.
 
   > [!IMPORTANT]
@@ -101,43 +101,65 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   > 
   > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterad startskärm** läggs till som en klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i **Hanterad startskärm**-appen. 
   >
-  > När du använder hel skärms läge för flera appar med hanterad start sida kanske inte uppringnings-/telefon program fungerar korrekt. 
+  > När du använder hel skärms läge för flera appar kanske inte uppringnings-/telefon program fungerar korrekt. 
 
-  - Välj **Lägg till** och välj appar från listan.
+  - **Lägg till**: Välj dina appar i listan.
 
     Om appen **Hanterad startskärm** inte visas kan du [lägga till den från Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Se till att [tilldela appen](apps-deploy.md) till den enhetsgrupp som skapats för dina dedikerade enheter.
 
     Du kan även lägga till andra [Android-appar](apps-add-android-for-work.md) och [webbappar](web-app.md) som skapats av din organisation till enheten. Se till att [tilldela appen till den enhetsgrupp som skapats för dina dedikerade enheter](apps-deploy.md).
 
-  - **Virtuell hemknapp**: Välj **Aktivera** för att visa en hemknapp på den dedikerade enheten. När det är valt kan användaren återvända till enhetens hemskärm för att enkelt växla mellan appar. På vissa Android-enheter kan användare behöva svepa upp på skärmen för att visa hemknappen. **Inaktivera** visar inte hemknappen så användarna måste använda bakåtknappen för att växla mellan appar.
-  - **Lämna helskärmsläge**: Välj **Aktivera** för att tillåta administratörer att tillfälligt pausa helskärmsläget för att uppdatera enheten. Om du vill använda den här funktionen kan administratören: 
-  
-    1. Fortsätta att välja bakåtknappen tills knappen ”Avsluta helskärmsläge” visas. 
-    2. Välj knappen och ange PIN-koden för **Lämna helskärmsläge**.
-    3. När de önskade ändringarna är gjorda väljer du appen **Hanterad startskärm**. Det här steget låser enheten i helskärmsläge för flera appar. 
+  - **Virtuell Start knapp**: en knapp med mjuka nycklar som returnerar användare till den hanterade start skärmen så att användarna kan växla mellan appar. Alternativen är:
 
-    **Inaktivera** ger inte möjligheten att pausa helskärmsläget. Om administratören fortsätter att välja bakåtknappen och väljer knappen ”Avsluta helskärmsläge” visas ett meddelande om att ett lösenord krävs.
+    - **Inte konfigurerat** (standard): en Start knapp visas inte. Användarna måste använda knappen bakåt för att växla mellan appar.
+    - **Svep uppåt**: en Start knapp visar när en användare sveper upp på enheten.
+    - **Flytande**: visar en beständigt, flytande Start knapp på enheten.
+
+  - **Lämna helskärmsläge**: Välj **Aktivera** för att tillåta administratörer att tillfälligt pausa helskärmsläget för att uppdatera enheten. Om du vill använda den här funktionen kan administratören:
+  
+    1. Fortsätta att välja bakåtknappen tills knappen **Avsluta helskärmsläge** visas. 
+    2. Väljer knappen **Avsluta helskärmsläge** och anger PIN-koden för **Kod för att lämna helskärmsläge**.
+    3. När du är färdig väljer du appen **hanterad start** sida. Det här steget låser enheten i helskärmsläge för flera appar.
+
+      När inställningen **inte är konfigurerad**kan administratörer inte pausa hel skärms läge. Om administratören fortsätter att välja bakåtknappen och väljer knappen **Avsluta helskärmsläge** visas ett meddelande om att ett lösenord krävs.
 
     - **Kod för att lämna helskärmsläge**: Ange en 4–6-siffrig numerisk PIN-kod. Administratören använder den här PIN-koden för att tillfälligt pausa helskärmsläge.
 
   - **Ange anpassad URL-bakgrund**: Ange en URL för att anpassa bakgrundsskärmen på den dedikerade enheten.
-    
+
     > [!NOTE]
     > I de flesta fall rekommenderar vi att du börjar med bilder med minst följande storlek:
     >
     > - Telefon: 1 080 x 1 920 bildpunkter
     > - Surfplatta: 1 920 x 1 080 bildpunkter
-    >    
+    >
     > För bästa möjliga upplevelse och detaljrikedom föreslår vi att du skapar bildresurser till enheternas respektive bildskärmsspecifikationer.
     >
     > Moderna bildskärmar har högre bildpunktsdensitet och kan visa bilder i 2K/4K.
-  - **Trådlös konfiguration**: Välj **Aktivera** om du vill tillåta att slutanvändare ansluter enheten till olika trådlösa nätverk. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerad** (standard) hindrar användare från att ansluta till trådlösa nätverk när de är i Hanterad startskärm (låsläget).
 
-    Mer om [låsläget](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (öppnar Androids webbplats).
+  - **Wi-Fi-konfiguration**: **Aktivera** visar Wi-Fi-kontrollen på den hanterade start skärmen och gör att slutanvändarna kan ansluta enheten till olika WiFi-nätverk. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerat** (standard) visar inte Wi-Fi-kontrollen på den hanterade start skärmen. Den förhindrar användare från att ansluta till Wi-Fi-nätverk när den hanterade start skärmen används.
 
-  - **Bluetooth-konfiguration**: Välj **Aktivera** om du vill tillåta Bluetooth på enheten, och om du vill tillåta att slutanvändarna kopplar samman enheter via Bluetooth. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerad** (standard) hindrar användare från att konfigurera Bluetooth när de är i Hanterad startskärm (låsläget). 
+  - **Bluetooth-konfiguration**: **Aktivera** visar Bluetooth-kontrollen på den hanterade start skärmen och gör att slutanvändarna kan koppla enheter över Bluetooth. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerat** (standard) visar inte Bluetooth-kontrollen på den hanterade start skärmen. Den förhindrar användare från att konfigurera Bluetooth och para ihop enheter när den hanterade start skärmen används.
 
-    Mer om [låsläget](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (öppnar Androids webbplats).
+  - **Strålkastare Access**: **Enable** visar strålkastare-kontrollen på den hanterade start skärmen och gör att slutanvändarna kan aktivera eller inaktivera strålkastare. **Inte konfigurerat** (standard) visar inte kontrollen strålkastare på den hanterade start skärmen. Den förhindrar användare från att använda strålkastare när den hanterade start skärmen används.
+
+  - **Medie volym kontroll**: **Aktivera** visar medie volym kontrollen på den hanterade start skärmen och gör att användarna kan justera enhetens medie volym med hjälp av ett skjutreglage. **Inte konfigurerat** (standard) visar inte medie volym kontrollen på den hanterade start skärmen. Det förhindrar att användare justerar enhetens medie volym på den hanterade start skärmen, om inte deras maskin varu knappar stöder det. 
+
+  - **Skärmsläckare**: **Aktivera** visar en skärmsläckare på den hanterade start skärmen när enheten är låst eller tids gräns. **Inte konfigurerat** (standard) visar inte en skärmsläckare på den hanterade start skärmen.
+
+    Konfigurera även när det är aktiverat:
+
+    - **Ange anpassad skärmsläckare-bild**: Ange webb adressen till en anpassad bild. Ange till exempel:
+
+      - `http://www.contoso.com/image.jpg`
+      - `www.contoso.com/image.bmp`
+      - `https://www.contoso.com/image.html`
+
+      Om du inte anger en URL används enhetens Standard avbildning, om det finns en standard avbildning.
+
+    - **Antal sekunder som enheten visar skärmsläckaren innan skärmen**stängs av: Välj hur länge enheten ska Visa skärmsläckaren. Ange ett värde mellan 0-9999999 sekunder. Standardvärdet är `0` sekunder. Om värdet är tomt eller är inställt`0`på noll () är skärmsläckaren aktiv tills en användare interagerar med enheten.
+    - **Antal sekunder som enheten är inaktiv innan skärmsläckaren visas**: Välj hur länge enheten ska vara inaktiv innan skärmsläckaren visas. Ange ett värde mellan 1-9999999 sekunder. Standardvärdet är `30` sekunder. Du måste ange ett tal som är större än`0`noll ().
+    - **Identifiera media innan**skärmsläckaren startas: **Aktivera** (standard) visar inte skärmsläckaren om ljud eller video spelas upp på enheten. **Inte konfigurerad** visar skärmsläckaren, även om ljud eller video spelas upp.
 
 ### <a name="device-password-settings"></a>Inställningar för enhetslösenord
 

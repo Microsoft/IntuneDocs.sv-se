@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 08/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1826498b3bfa2191900d7574f79051af8f758558
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 63f2832dd321425efe8092f1bb12dd0d479ef71b
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041706"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549929"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Funktionsinställningar för macOS-enheter i Intune
 
@@ -65,6 +65,19 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
    Observera IP-adressen. Den visar något i stil med `PING myprinter.local (10.50.25.21)`.
 
 4. Använd värdena för IP-adressen och resurssökvägen. I det här exemplet är IP-adressen `10.50.25.21` och resurssökvägen är `/ipp/port1`.
+
+## <a name="login-items"></a>Inloggnings objekt
+
+- **Filer, mappar och anpassade appar**: **Lägg till** sökvägen till en fil, mapp, anpassad app eller systemappen som du vill öppna när en användare loggar in på enheten. Systemappar eller appar som har skapats eller anpassats för din organisation är vanligt `Applications` vis i mappen, med en sökväg `/Applications/AppName.app`som liknar. 
+
+  Du kan lägga till många filer, mappar och appar. Ange till exempel:  
+  
+  - `/Applications/Calculator.app`
+  - `/Applications`
+  - `/Applications/Microsoft Office/root/Office16/winword.exe`
+  - `/Users/UserName/music/itunes.app`
+  
+  När du lägger till en app, mapp eller fil måste du ange rätt sökväg. Alla objekt finns inte i `Applications` mappen. Om en användare flyttar ett objekt från en plats till en annan ändras sökvägen. Det här flyttade objektet öppnas inte när användaren loggar in.
 
 ## <a name="login-window"></a>Inloggningsfönstret
 

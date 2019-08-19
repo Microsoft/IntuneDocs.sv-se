@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c4b1541de3500089bafc388779a3cfe97fbd29
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 6313741af237478bc5eea0cc5b5524250b5d46ac
+ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756571"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68993703"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av Windows-enheter i Microsoft Intune
 
@@ -60,31 +60,31 @@ Det finns flera möjliga lösningar på det här problemet:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Ta bort enheter som har registrerats
 1. Logga in på [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).    
-2. Gå till **användare** > **alla användare**.    
+2. Gå till **användare** > **alla användare**.    
 3. Välj det berörda användar kontot och klicka sedan på **enheter**.    
 4. Välj eventuella oanvända eller oönskade enheter och klicka sedan på **ta bort**. 
 
-##### <a name="increase-thedevice-enrollment-limit"></a>Öka enhetens registreringsgräns
+##### <a name="increase-the-device-enrollment-limit"></a>Öka enhetens registreringsgräns
 
 > [!NOTE]
 > Den här metoden ökar enhets registrerings gränsen för alla användare, inte bara den berörda användaren.
 
 1. Logga in på [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
-2. Gå till **registrerings begränsningar**för **enhets registrering** >och välj sedan **begränsningar för enhets gräns**.    
+2. Gå till**registrerings begränsningar**för **enhets registrering** > och välj sedan **begränsningar för enhets gräns**.    
 3. Öka värdet för **enhets gräns**. 
 
-##### <a name="checkdevice-type-restrictions"></a>Kontrollera begränsningar för enhetstypen
-1. Logga in på [Intune-portalen](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) med ett konto som global administratör.
-2. Gå till**registrerings begränsningar**för **enhets registrering** > och välj sedan **standard** begränsning under begränsningar av enhets **typ**.    
-3. Välj **plattformar**och välj sedan **Tillåt** för **Windows (MDM)** .
+##### <a name="check-device-type-restrictions"></a>Kontrollera begränsningar för enhetstypen
+1. Logga in på [Intune-portalen](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) med ett konto som global administratör.
+2. Gå till**registrerings begränsningar**för **enhets registrering** > och välj sedan **standard** begränsning under begränsningar av enhets **typ**.    
+3. Välj **plattformar**och välj sedan **Tillåt** för **Windows (MDM)** .
 
     > [!IMPORTANT]
-    > Om den aktuella inställningen redan **tillåter**, ändra den till **blockera**, spara inställningen och ändra sedan tillbaka till **Tillåt** och spara inställningen igen. Detta återställer inställningen för registrering.
+    > Om den aktuella inställningen redan **tillåter**, ändra den till **blockera**, spara inställningen och ändra sedan tillbaka till **Tillåt** och spara inställningen igen. Detta återställer inställningen för registrering.
 
 4. Vänta i cirka 15 minuter och registrera sedan den berörda enheten igen.    
 
 ##### <a name="upgrade-windows-10-home"></a>Uppgradera Windows 10 Home
-[Uppgradera Windows 10 Home till Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) eller en högre utgåva. 
+[Uppgradera Windows 10 Home till Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) eller en högre utgåva. 
 
 
 
@@ -92,17 +92,17 @@ Det finns flera möjliga lösningar på det här problemet:
 
 Fel 0x801c0003: "den här användaren får inte registreras. Du kan försöka igen eller kontakta system administratören och returnera felkoden 801c0003. "
 
-**Orsak:** **Användare kan ansluta enheter till Azure AD** -inställningen är inställd på **ingen**. Detta förhindrar att nya användare ansluter sina enheter till Azure AD. Det går därför inte att registrera Intune.
+**Orsak:** **Användare kan ansluta enheter till Azure AD** -inställningen är inställd på **ingen**. Detta förhindrar att nya användare ansluter sina enheter till Azure AD. Det går därför inte att registrera Intune.
 
 #### <a name="resolution"></a>Lösning
-1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
-2. Gå till**enhets inställningarna**för **Azure Active Directory** > **enheter** .>     
-3. Ange **Användare kan ansluta enheter till Azure AD** till **Alla**.    
+1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
+2. Gå till**enhets inställningarna**för **Azure Active Directory** > **enheter** > .    
+3. Ange **Användare kan ansluta enheter till Azure AD** till **Alla**.    
 4. Registrera enheten igen.   
 
 ### <a name="the-device-is-already-enrolled"></a>Enheten har redan registrerats.
 
-Fel 8018000a: "något gick fel. Enheten har redan registrerats.  Du kan kontakta system administratören och få felkod 8018000a. "
+Fel 8018000a: "något gick fel. Enheten har redan registrerats.  Du kan kontakta system administratören och få felkod 8018000a. "
 
 **Orsak:** Ett av följande villkor är uppfyllt:
 - En annan användare har redan registrerat enheten i Intune eller anslutit enheten till Azure AD. Du kan ta reda på om detta är fallet genom att gå till **Inställningar** > **konton** > **åtkomst till arbets**plats. Sök efter ett meddelande som liknar följande: "en annan användare på systemet är redan ansluten till ett jobb eller en skola. Ta bort den här arbets-eller skol anslutningen och försök igen. "    
@@ -136,7 +136,7 @@ Tilldela användaren en giltig Intune-licens och registrera sedan enheten.
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>Det verkar som om MDM-villkor för användnings villkoren inte har kon figurer ATS korrekt.
 
 **Orsak:** Ett av följande villkor är uppfyllt: 
- - Du använder både hantering av mobila enheter (MDM) för Office 365 och Intune på klienten, och den användare som försöker registrera enheten har ingen giltig Intune-licens eller en licens för Office 365.     
+ - Du använder både hantering av mobila enheter (MDM) för Office 365 och Intune på klienten, och den användare som försöker registrera enheten har ingen giltig Intune-licens eller en licens för Office 365.     
 - MDM-villkoren i Azure AD är tomma eller innehåller inte rätt URL.    
 
 #### <a name="resolution"></a>Lösning
@@ -144,12 +144,12 @@ Tilldela användaren en giltig Intune-licens och registrera sedan enheten.
 Använd någon av följande metoder för att åtgärda problemet: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Tilldela användaren en giltig licens
-Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home)och tilldela sedan antingen en Intune-eller Office 365-licens till användaren.
+Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home)och tilldela sedan antingen en Intune-eller Office 365-licens till användaren.
 
-##### <a name="correct-themdm-terms-of-use-url"></a>Korrigera MDM-villkor för användning för MDM
-  1. Logga in på [Azure Portal](https://portal.azure.com/)och välj sedan **Azure Active Directory**.    
-  2. Välj **mobilitet (MDM och MAM)** och klicka sedan på **Microsoft Intune**.    
-  3. Välj **Återställ standard MDM-URL: er**, kontrol lera att **URL: en för MDM-användning** har angetts till. **https://portal.manage.microsoft.com/TermsofUse.aspx**    
+##### <a name="correct-the-mdm-terms-of-use-url"></a>Korrigera MDM-villkor för användning för MDM
+  1. Logga in på [Azure-portalen](https://portal.azure.com/) och välj sedan **Azure Active Directory**.    
+  2. Välj **mobilitet (MDM och MAM)** och klicka sedan på **Microsoft Intune**.    
+  3. Välj **Återställ standard MDM-URL: er**, kontrol lera att **URL: en för MDM-användning** har angetts till. **https://portal.manage.microsoft.com/TermsofUse.aspx**    
   4. Välj **Spara**.    
 
 
@@ -164,10 +164,10 @@ Fel 80180026: ”Något gick fel. Bekräfta att du använder rätt inloggnings i
 #### <a name="resolution"></a>Lösning
 Använd någon av följande metoder för att åtgärda problemet:
 
-##### <a name="disablemdm-automatic-enrollment-in-azure"></a>Inaktivera automatisk registrering i MDM i Azure.
-1. Logga in på [Azure Portal](https://portal.azure.com/).    
-2. Gå till **Azure Active Directory** > **Mobility (MDM och MAM)**  > **Microsoft Intune**.    
-3. Ange **användar omfång för MDM** till **ingen**och klicka sedan på **Spara**.    
+##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Inaktivera automatisk registrering i MDM i Azure.
+1. Logga in på [Azure Portal](https://portal.azure.com/).    
+2. Gå till **Azure Active Directory** > **Mobility (MDM och MAM)**  > **Microsoft Intune**.    
+3. Ange **användar omfång för MDM** till **ingen**och klicka sedan på **Spara**.    
      
 ##### <a name="uninstall"></a>Avinstallera
 Avinstallera Intune PC-klienten eller Configuration Manager klient agenten från datorn.    
@@ -179,34 +179,34 @@ Fel: "det går inte att installera program vara, 0x80cf4017."
 **Orsak:** Klient program varan är inaktuell.
 
 #### <a name="resolution"></a>Lösning
-1. Logga in på [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Gå till **Administratörs** > **program vara Ladda ned**och klicka på **Hämta klient program vara**.    
+1. Logga in på [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
+2. Gå till **Administratörs** > **program vara Ladda ned**och klicka på **Hämta klient program vara**.    
 3. Spara installations paketet och installera sedan klient program varan. 
 
 
 ### <a name="the-account-certificate-is-not-valid-and-may-be-expired"></a>Kontocertifikatet är inte giltigt och kan ha upphört att gälla.
 
-Fel: "konto certifikatet är inte giltigt och kan ha upphört att gälla, 0x80cf4017".
+Fel: ”Kontocertifikatet är inte giltigt och kan ha upphört att gälla, 0x80cf4017”.
 
 **Orsak:** Klient program varan är inaktuell.
 
 #### <a name="resolution"></a>Lösning
-1. Logga in på [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Gå till **Administratörs** > **program vara Ladda ned**och klicka på **Hämta klient program vara**.    
+1. Logga in på [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
+2. Gå till **Administratörs** > **program vara Ladda ned**och klicka på **Hämta klient program vara**.    
 3. Spara installations paketet och installera sedan klient program varan.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Din organisation har inte stöd för den här versionen av Windows. 
 
-Fel: "det uppstod ett problem. Din organisation har inte stöd för den här versionen av Windows.  (0x80180014) "
+Fel: "det uppstod ett problem. Din organisation har inte stöd för den här versionen av Windows.  (0x80180014) "
 
 **Orsak:** Windows MDM-registrering har inaktiverats i din Intune-klient.
 
 #### <a name="resolution"></a>Lösning
 Följ dessa steg om du vill åtgärda det här problemet i en fristående Intune-miljö: 
  
-1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
-2. Välj **Intune** till vänster och gå sedan till enhets ****  > registrering**registrerings begränsningar**.    
-3. I **begränsningar för enhets typ**klickar du på **plattformar**och väljer **Tillåt** för **Windows (MDM)** .    
+1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
+2. Välj **Intune** till vänster och gå sedan till enhets **registrering** > **registrerings begränsningar**.    
+3. I **begränsningar för enhets typ**klickar du på **plattformar**och väljer **Tillåt** för **Windows (MDM)** .    
 4. Klicka på **Spara**.    
  
 Följ dessa steg för att åtgärda problemet i hybrid MDM med Intune och Configuration Manager: 
@@ -221,11 +221,11 @@ Följ dessa steg för att åtgärda problemet i hybrid MDM med Intune och Config
 **Orsak:** Azure AD-användarkontonna i konto paketet (Package_GUID) för respektive etablerings paket får inte ansluta enheter till Azure AD. Dessa Azure AD-konton skapas automatiskt när du konfigurerar ett konfigurations paket med Windows Configuration designer (WCD) eller Ställ in skol datorer, och dessa konton används sedan för att ansluta enheterna till Azure AD.
 
 #### <a name="resolution"></a>Lösning
-1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
+1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
 2. Gå till **Azure Active Directory > enheter > enhets inställningar**.    
-3. Ange **användare kan ansluta enheter till Azure AD** till **alla** eller **välja**.
+3. Ange **användare kan ansluta enheter till Azure AD** till **alla** eller **välja**.
 
-   Om du väljer **markerad**klickar du på **markerad**och klickar sedan på **Lägg till medlemmar** för att lägga till alla användare som kan ansluta sina enheter till Azure AD. Se till att alla Azure AD-konton för etablerings paketet har lagts till.
+   Om du väljer **markerad**klickar du på **markerad**och klickar sedan på **Lägg till medlemmar** för att lägga till alla användare som kan ansluta sina enheter till Azure AD. Se till att alla Azure AD-konton för etablerings paketet har lagts till.
  
 Mer information om hur du skapar ett konfigurations paket för Windows Configuration Designer finns i [skapa ett konfigurations paket för Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
 
@@ -246,7 +246,7 @@ När du försöker registrera en Windows 10-enhet automatiskt med hjälp av grup
     ```
 **Orsak:** Ett av följande villkor är uppfyllt: 
 - UPN: en innehåller en overifierad eller icke-dirigerad domän, t. ex. joe@contoso.locallokal (t. ex.).    
-- **MDM-användar omfång** har angetts till **ingen**. 
+- **MDM-användar omfång** har angetts till **ingen**. 
 
 #### <a name="resolution"></a>Lösning
 Om UPN: en innehåller en overifierad eller icke-dirigerad domän, följer du dessa steg: 
@@ -261,7 +261,7 @@ Om UPN: en innehåller en overifierad eller icke-dirigerad domän, följer du de
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
 
-Om **användar området** för MDM är inställt på **ingen**, följer du dessa steg: 
+Om **användar området för MDM** är inställt på **ingen**, följer du dessa steg: 
  
 1. Logga in på [Azure-portalen](https://portal.azure.com/) och välj sedan **Azure Active Directory**.
 2. Välj **mobilitet (MDM och MAM)** och välj sedan **Microsoft Intune**.    
