@@ -130,7 +130,7 @@ De här inställningarna använder [CSP för kontoprincip](https://docs.microsof
 - **Microsoft-konto**: **Blockera** hindrar slutanvändare från att associera ett Microsoft-konto med enheten. **Inte konfigurerat** (standard) tillåter tillägg och användning av ett Microsoft-konto.
 - **Icke-Microsoft-konto**: **Blockera** hindrar slutanvändare från att lägga till icke-Microsoft-konton via användargränssnittet. **Inte konfigurerat** (standard) tillåter användare att lägga till e-postkonton som inte associeras med ett Microsoft-konto.
 - **Synkroniseringsinställningar för Microsoft-konto**: **Inte konfigurerat** (standard) tillåter att enhets- och appinställningar som är associerade med ett Microsoft-konto synkroniseras mellan enheter. **Blockera** förhindrar den här synkroniseringen.
-- **Inloggningsassistent för Microsoft-konton**: när det här anges till **Inte konfigurerat** (standard) kan slutanvändare starta och stoppa tjänsten **	Inloggningsassistent för Microsoft-konton** (wlidsvc). Den här operativsystemtjänsten tillåter att användare loggar in på sitt Microsoft-konto. **Inaktivera** hindrar slutanvändare från att kontrollera Inloggningsassistent för Microsoft-konton (wlidsvc).
+- **Inloggningsassistent för Microsoft-konton**: när det här anges till **Inte konfigurerat** (standard) kan slutanvändare starta och stoppa tjänsten **Inloggningsassistent för Microsoft-konton** (wlidsvc). Den här operativsystemtjänsten tillåter att användare loggar in på sitt Microsoft-konto. **Inaktivera** hindrar slutanvändare från att kontrollera Inloggningsassistent för Microsoft-konton (wlidsvc).
 
 Klicka på **OK** för att spara ändringarna.
 
