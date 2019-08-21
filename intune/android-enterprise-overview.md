@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a003e4ab912452f278c838c600f75ddec0c1f5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 3a51951d02d73a0d79f6246dd9502c3c7fe89759
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885131"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550084"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Hantera Android-arbetsprofilenheter med Intune
 
@@ -68,7 +68,7 @@ Skyddsprinciperna för appar som tillämpas stöds helt och hållet i arbetsprof
 
 VPN-stöd påminner om Android VPN-profiler. Samma VPN-providrar och grundläggande konfigurationsalternativ är tillgängliga för Android Enterprise-hantering, med två skillnader:
 
-- **VPN begränsat till arbetsprofiler** – VPN-anslutningarna är begränsade till appar som distribuerats till arbetsprofilen. Endast Android Enterprise-hanterade appar kan använda VPN-anslutningen. Personliga appar på enheten kan inte använda en hanterad VPN-anslutning. Mer information finns i [VPN-inställningar för Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **VPN begränsat till arbetsprofiler** – VPN-anslutningarna är begränsade till appar som distribuerats till arbetsprofilen. Endast Android Enterprise-hanterade appar kan använda VPN-anslutningen. Personliga appar på enheten kan inte använda en hanterad VPN-anslutning. Mer information finns i [VPN-inställningar för Android Enterprise](vpn-settings-android-enterprise.md).
 
 - **Appspecifik VPN** – Appspecifik VPN kan konfigureras i Intune om VPN-providern stöder:
   - konfiguration av appspecifik VPN

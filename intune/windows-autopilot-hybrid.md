@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81e50c3f79ffe9a3b9bc8068d49ba966c35dbbfd
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 399b0c6065c51343e4802d4e8aec29381c6dc468
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649095"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861855"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -106,15 +106,14 @@ Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
 
 Intune Connector för Active Directory måste installeras på en dator som kör Windows Server 2016 eller senare. Datorn måste också ha åtkomst till internet och din Active Directory. Om du vill öka skalningen och tillgängligheten eller om du vill ha stöd för flera Active Directory-domäner kan du installera flera anslutningsprogram i din miljö. Vi rekommenderar att du installerar anslutningsappen på en server som inte kör några andra Intune-anslutningsappar.
 
-1. Se till att du har ett språkpaket installerat och konfigurerat enligt beskrivningen i [Språkkrav för Intune Connector (förhandsversion)](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector).
-2. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)**  > **Lägg till anslutningsapp**. 
-3. Följ anvisningarna för att ladda ned Connector.
-4. Öppna den nedladdade konfigurationsfilen för anslutningsappen, *ODJConnectorBootstrapper.exe*, för att installera Connector.
-5. Välj **Konfigurera** i slutet av konfigurationen.
-6. Välj **Logga in.**
-7. Ange autentiseringsuppgifter för rollen Global administratör eller Intune-administratör.  
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)**  > **Lägg till anslutningsapp**. 
+2. Följ anvisningarna för att ladda ned Connector.
+3. Öppna den nedladdade konfigurationsfilen för anslutningsappen, *ODJConnectorBootstrapper.exe*, för att installera Connector.
+4. Välj **Konfigurera** i slutet av konfigurationen.
+5. Välj **Logga in.**
+6. Ange autentiseringsuppgifter för rollen Global administratör eller Intune-administratör.  
    Användarkontot måste ha en tilldelad Intune-licens.
-8. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** och bekräfta sedan att anslutningsstatusen är **Aktiv**.
+7. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** och bekräfta sedan att anslutningsstatusen är **Aktiv**.
 
 > [!NOTE]
 > När du har loggat in på Connector kan det ta några minuter innan det visas i [Intune](https://aka.ms/intuneportal). Det visas bara om den kan kommunicera med Intune-tjänsten.
