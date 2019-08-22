@@ -665,6 +665,8 @@
                   href: app-protection-policies-validate.md
                 - name: Leverans av appskyddsprincip
                   href: app-protection-policy-delivery.md
+                - name: Skydda programtillägg
+                  href: app-protection-policy-extensions.md
                 - name: Övervaka användarstatus för programskydd
                   href: app-protection-policies-monitor.md
                 - name: Bli redo för WIP-programskyddsprinciper
