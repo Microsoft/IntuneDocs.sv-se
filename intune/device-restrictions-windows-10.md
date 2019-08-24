@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550172"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998949"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -66,13 +66,6 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
   - **Föredra butik**: varnar användare när de installerar appar från andra platser än Microsoft Store.
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
-
-- **Framtvinga omstart av appar vid uppdateringsfel**: när en app är i användning så kanske den inte uppdateras. Använd den här inställningen för att tvinga en app att starta om. **Inte konfigurerat** (standard) tvingar inte appar att starta om. **Kräv** låter administratörer tvinga en omstart vid ett specifikt datum och tid eller enligt ett återkommande schema. När det är angett till **Kräv** anger du även:
-
-  - **Startdatum/-tid**: Välj datum och tid när apparna ska startas om.
-  - **Upprepning**: välj omstart dagligen, veckovis eller månadsvis.
-
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 - **Användarkontroll över installationer**: när det angetts som **Inte konfigurerad** (standard), förhindrar Windows Installer att användare ändrar installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange den katalog som filerna ska installeras till. **Blockera** låter användare ändra de här installationsalternativen och några av säkerhetsfunktionerna i Windows Installer kringgås.
 
