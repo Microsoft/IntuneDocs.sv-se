@@ -16,12 +16,12 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 1775bdf0030968cdd16d87d91794480a43a22d12
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403488"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651041"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -73,7 +73,7 @@ Azure AD-användare är standardanvändare på enheterna och kan ta emot de till
 
 2. Välj hur du ska tillämpa konfigurationspaketet på enheten.  Ett konfigurationspaket kan tillämpas på en enhet på följande sätt:
    - Placera konfigurationspaketet på en USB-enhet, sätt i USB-enheten i den enhet som du vill massregistrera och tillämpa den under den första installationen
-   - Placera konfigurationspaketet i en nätverksmapp och infoga den på den enhet som du vill massregistrera efter den första installationen
+   - Placera konfigurationspaketet i en nätverksmapp och infoga den efter den första installationen
 
    Stegvisa anvisningar för att använda ett konfigurationspaket finns i [Tillämpa ett konfigurationspaket](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/12/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
+ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68679979"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978511"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -37,7 +37,7 @@ Separata typer av baslinje kan innehålla samma inställningar men använder oli
 > [!NOTE]
 > Microsoft rekommenderar inte att du använder förhandsversioner av säkerhetsbaslinjer i en produktionsmiljö. Inställningarna för en förhandsversion av en baslinje kan förändras medan förhandsversionen används. 
 
-Målet med att använda säkerhetsbaslinjer är att få ett säkert arbetsflöde från slutpunkt till slutpunkt när du arbetar med Microsoft 365. Några av fördelarna är:
+Säkerhetsbaslinjer kan hjälpa dig få ett säkert arbetsflöde från slutpunkt till slutpunkt när du arbetar med Microsoft 365. Några av fördelarna är:
 
 - En säkerhetsbaslinje innehåller metodtips och rekommendationer för inställningar som påverkar säkerheten. Intune samarbetar med samma Windows-säkerhetsteam som skapar grupprincipernas säkerhetsbaslinjer. De här rekommendationerna baseras på vägledning och omfattande erfarenhet.
 - Om Intune är nytt för dig och du inte är säker på var du ska börja, kan säkerhetsbaslinjerna vara till hjälp. Du kan snabbt skapa och distribuera en säker profil, där du vet att du hjälper till att skydda din organisations data och resurser.
@@ -47,20 +47,21 @@ Målet med att använda säkerhetsbaslinjer är att få ett säkert arbetsflöde
 
 [Windows säkerhetsbaslinjer](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) är en bra resurs om man vill lära sig mer om den här funktionen. [Hantering av mobilenheter](https://docs.microsoft.com/windows/client-management/mdm/) är en bra resurs om du vill lära dig mer om MDM och vad du kan göra på Windows-enheter.
 
-## <a name="security-baseline-versions-and-instances"></a>Baslinjeversioner för säkerhet och instanser
-Då och då blir nya uppdateringar för en baslinje tillgängliga. Varje ny versioninstans av en baslinje kan lägga till eller ta bort inställningar eller göra andra ändringar. När nya inställningar för Windows 10 blir tillgängliga tillsammans med nya versioner av Windows 10 kan MDM-säkerhetsbaslinjen få en ny versioninstans som innehåller de senaste inställningarna.  
+## <a name="about-baseline-versions-and-instances"></a>Om baslinjeversioner och instanser
 
-I Intune-konsolen kan du visa vilka säkerhetsbaslinjer som är tillgängliga och information om dessa. Tillgänglig information inkluderar hur många profiler du har som använder den typen av baslinje, hur många separata instanser av typen av baslinje som finns tillgängliga och när den senaste instansen blev tillgänglig eller publicerades.  Följande exempel visar en panel för en välanvänd MDM-säkerhetsbaslinje:  
+Varje ny versioninstans av en baslinje kan lägga till eller ta bort inställningar eller göra andra ändringar. När nya inställningar för Windows 10 blir tillgängliga tillsammans med nya versioner av Windows 10 kan MDM-säkerhetsbaslinjen få en ny versioninstans som innehåller de senaste inställningarna.  
+
+I Intune-konsolen visar panelen för varje baslinje mallens namn och grundläggande information om baslinjen. Informationen inkluderar hur många profiler du har som använder den typen av baslinje, hur många separata instanser (versioner) av typen av baslinje som finns tillgängliga och ett *Senaste publiceringsdatum* som identifierar när den här baslinjemallen las till i din klient. Följande exempel visar en panel för en välanvänd MDM-säkerhetsbaslinje:  
 
 ![Baslinjepanel](./media/security-baselines/baseline-tile.png)
 
-För att information om de baslinjeversioner du använder, markera en baslinje och välj sedan **Versioner**. Intune visar information om de versioner som används av dina profiler. I fönstret versioner kan du välja en version för att visa mer information om de profiler som använder den här versionen. Du kan också välja två olika versioner och sedan välja **Jämför baslinjer** för att hämta en CSV-fil som beskriver dessa skillnader.  
+Om du vill visa mer information om de baslinjeversioner som du använder väljer du en baslinjepanel för att öppna fönstret *Översikt* och väljer sedan **Versioner**. Intune visar information om versionerna av den baslinje som används av dina profiler. I fönstret versioner kan du välja en version för att visa mer information om de profiler som använder den här versionen. Du kan också välja två olika versioner och sedan välja **Jämför baslinjer** för att hämta en CSV-fil som beskriver dessa skillnader.  
 
 ![Jämför baslinjer](./media/security-baselines/compare-baselines.png)
 
 När du skapar en *profil* för säkerhetsbaslinjen använder profilen automatiskt den nyligen utgivna instansen av säkerhetsbaslinjen.  Du kan fortsätta att använda och redigera profiler som du har skapat tidigare som anvämnder en tidigare version av baslinjen, inklusive baslinjer som har skapats i en förhandsversion. 
 
-Säkerhetsprofiler med baslinjer stöder [ändringar av versionen](#change-the-baseline-instance-for-a-profile) för den baslinje som används. Det här innebär att när en ny version kommer behöver du inte skapa en ny baslinjeprofil för att använda den. När du är klar kan du istället välja en baslinjeprofil och sedan använda det inbyggda alternativet för att ändra instansversionen för profilen.  
+Du kan välja att [ändra versionen](#change-the-baseline-version-for-a-profile) för en baslinje som används med en specifik profil. Det här innebär att när en ny version kommer behöver du inte skapa en ny baslinjeprofil för att använda den. När du är klar kan du istället välja en baslinjeprofil och sedan använda det inbyggda alternativet för att ändra instansversionen för profilen till en ny.  
 
 ## <a name="available-security-baselines"></a>Tillgängliga säkerhetsbaslinjer 
 
@@ -79,18 +80,21 @@ Följande instanser av säkerhetsbaslinjer är tillgängliga för användning me
 
 Du kan fortsätta att använda och redigera profiler som du har skapat tidigare baserat på en förhandsvisningsmall, till och med när förhandsversionerna inte längre är tillgängliga för att skapa nya profiler. 
 
-## <a name="prerequisites"></a>Krav
+## <a name="manage-baselines"></a>Hantera baslinjer  
+
+Vanliga uppgifter när du arbetar med säkerhetsbaslinjer är:
+- [Skapa en profil](#create-the-profile) – konfigurera de inställningar som du vill använda och tilldela sedan baslinjen till grupper.
+- [Ändra versionen](#change-the-baseline-version-for-a-profile) – ändra den baslinjeversion som används av en profil.
+- [Ta bort en baslinjetilldelning](#remove-a-security-baseline-assignment) – lär dig vad som händer när du slutar hantera inställningar med en säkerhetsbaslinje.
+
+
+### <a name="prerequisites"></a>Krav
 - För att hantera baslinjer i Intune måste ditt konto ha den inbyggda rollen [Princip- och profilhanterare](role-based-access-control.md#built-in-roles).
 
 - Användningen av vissa baslinjer kräver att du har en aktiv prenumeration för ytterligare tjänster, till exempel Microsoft Defender ATP.  
 
-## <a name="co-managed-devices"></a>Samhanterade enheter
 
-Säkerhetsbaslinjer på Intune-hanterade enheter liknar samhanterade enheter med Configuration Manager. Samhanterade enheter använder System Center Configuration Manager och Microsoft Intune för att kunna hantera flera Windows 10-enheter samtidigt. Det innebär att du kan använda din befintliga Configuration Manager i molnet tillsammans med Intunes fördelar. [Översikt över samhantering](https://docs.microsoft.com/sccm/comanage/overview) är en bra resurs om du använder Configuration Manager och vill ha fördelarna med molnet.
-
-När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **Enhetskonfiguration** (i dess inställningar) till Intune. Mer information finns i [Enhetskonfigurationens arbetsbelastningar](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration).
-
-## <a name="create-the-profile"></a>Skapa profilen
+### <a name="create-the-profile"></a>Skapa profilen
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)** för att visa listan med tillgängliga baslinjer.
 
@@ -131,12 +135,13 @@ När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **
    ![Granska baslinjen](./media/security-baselines/review.png) 
 
   
-8. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**.  Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.  
+8. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**. Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.  
 
-## <a name="change-the-baseline-instance-for-a-profile"></a>Ändra baslinjeinstansen för en profil
-Baslinjeprofiler har stöd för ändringar av den instans av baslinjen som används av profilen. Du kan välja en äldre, eller vanligtvis en nyare, instans av samma baslinje.  Det går inte att växla mellan två olika baslinjer, till exempel att ändra en profil så att den inte längre använder en baslinje för Defender ATP utan istället använder MDM-säkerhetsbaslinjen. 
+### <a name="change-the-baseline-version-for-a-profile"></a>Ändra baslinjeversionen för en profil  
 
-När du konfigurerar en ändring av baslinjeversionen har du valet att hämta en CSV-fil som skapar en lista över ändringarna mellan de två aktuella baslinjeversionerna. Du kan också välja att behålla alla dina ändringar i den ursprungliga versionen av baslinjen och tillämpa dem i den nya versionen, eller implementera alla standardvärden som finns in den nya valda baslinjeversionen. 
+Du kan ändra den version av baslinjeinstansen som används med en profil.  När du ändrar versionen väljer du en tillgänglig instans av samma baslinje. Det går inte att växla mellan två olika baslinjetyper, till exempel att ändra en profil så att den inte längre använder en baslinje för Defender ATP utan istället använder MDM-säkerhetsbaslinjen. 
+
+När du konfigurerar en ändring av baslinjeversionen kan du hämta en CSV-fil som skapar en lista över ändringarna mellan de två aktuella baslinjeversionerna. Du kan också välja att behålla alla anpassningar från den ursprungliga baslinjeversionen eller implementera den nya versionen med alla standardvärden. Du har inte möjlighet att göra ändringar i enskilda inställningar när du ändrar versionen av en baslinje för en profil. 
 
 När du sparar efter en slutförd konvertering kommer baslinjen att distribueras på nytt omedelbart till tilldelade grupper.  
 
@@ -147,7 +152,7 @@ När du sparar efter en slutförd konvertering kommer baslinjen att distribueras
 
   När en inställning inte längre hanteras av en baslinjeprofil återställs inte inställningen på enheten. Istället bibehåller enheten sin senaste inställning tills någon annan process hanterar inställningen så att den ändras. Exempel på processer som kan ändra en inställning när du inte längre hanterar den inkluderar en annan baslinjeprofil, en grupprincipinställning eller en manuell konfiguration på enheten. 
 
-### <a name="to-change-the-instance-for-a-baseline"></a>Så här ändrar du instansen för en baslinje  
+#### <a name="to-change-the-baseline-version-for-a-profile"></a>Så här ändrar du baslinjeversionen för en profil  
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer**. Välj sedan panelen för den baslinjetyp som har den profil du vill använda.  
 
@@ -159,7 +164,7 @@ När du sparar efter en slutförd konvertering kommer baslinjen att distribueras
 
    ![välj en version](./media/security-baselines/select-instance.png)  
    
-4. Välj **Granska uppdateringen** för att hämta en CSV-fil som visar skillnaden mellan profilens aktuella instansversion och den nyvalda versionen. Granska den här filen så att du förstår vilka inställningar som har lagts till, tagits bort och vilka standardvärdena för dessa inställningar som gäller för den uppdaterade profilen.  
+4. Välj **Granska uppdateringen** för att hämta en CSV-fil som visar skillnaden mellan profilens aktuella instansversion och den nyvalda versionen. Granska den här filen så att du förstår vilka inställningar som är ny eller har tagits bort och vilka standardvärdena för dessa inställningar som gäller för den uppdaterade profilen.  
 
    När du är klar kan du fortsätta till nästa steg.  
 
@@ -169,14 +174,16 @@ När du sparar efter en slutförd konvertering kommer baslinjen att distribueras
 
 6. Välj **Skicka**. Profilen uppdaterar till den valda versionen av baslinjen. När konverteringen har slutförts distribueras baslinjen omedelbart till tilldelade grupper.
 
-## <a name="remove-a-security-baseline-assignment"></a>Ta bort en tilldelning av en säkerhetsbaslinje
+### <a name="remove-a-security-baseline-assignment"></a>Ta bort en tilldelning av en säkerhetsbaslinje
 När en inställning för en säkerhetsbaslinje inte längre gäller för en enhet eller inställningar i baslinjen är inställda på *Konfigureras ej* kommer dessa inställningar inte att återgå till en förhanterad konfiguration. Istället behåller de tidigare hanterade inställningarna på enheten sina senaste konfigurationer som har tagits emot från baslinjen fram tills dess att någon annan process uppdaterade dessa inställningar på enheten.  
 
 Andra processer som kan ändra inställningarna på enheten senare inkluderar en annan eller ny säkerhetsbaslinje, enhetskonfigurationsprofil, grupprincipkonfigurationer eller manuella ändringar av enhetens inställningar.  
 
+## <a name="co-managed-devices"></a>Samhanterade enheter
 
+Säkerhetsbaslinjer på Intune-hanterade enheter liknar samhanterade enheter med Configuration Manager. Samhanterade enheter använder System Center Configuration Manager och Microsoft Intune för att kunna hantera flera Windows 10-enheter samtidigt. Det innebär att du kan använda din befintliga Configuration Manager i molnet tillsammans med Intunes fördelar. [Översikt över samhantering](https://docs.microsoft.com/sccm/comanage/overview) är en bra resurs om du använder Configuration Manager och vill ha fördelarna med molnet.
 
-
+När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **Enhetskonfiguration** (i dess inställningar) till Intune. Mer information finns i [Enhetskonfigurationens arbetsbelastningar](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration).  
 
 ## <a name="q--a"></a>Frågor och svar
 

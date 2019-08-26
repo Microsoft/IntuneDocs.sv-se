@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e46eae92dfa145f1fc2b38379285dbb45b24590
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680079"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550063"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -44,6 +44,13 @@ Verksamhetsspecifika Windows 10-appar signeras och laddas upp till Intune-admini
 ## <a name="microsoft-store-for-business-apps"></a>Microsoft Store för företag-appar
 
 Microsoft Store för företag-appar är moderna appar som har köpts från Microsoft Store för företag-adminportalen och sedan synkroniserats över till Microsoft Intune för hantering. Apparna kan antingen vara **onlinelicensierade** eller **offlinelicensierade**. Uppdateringar av Microsoft Store för företag-appar hanteras direkt av Microsoft Store utan att ytterligare åtgärd krävs av dig, administratören. Du kan även förhindra uppdateringar till specifika appar med hjälp av anpassad URI (Uniform Resource Identifier). Mer information finns på sidan om [Enterprise-apphantering – förhindra automatiska uppdateringar för appen](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). På enheten kan slutanvändaren även inaktivera uppdateringar för alla Microsoft Store för företag-appar på enheten. 
+
+### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorisera appar i Microsoft Store för företag 
+Använd följande steg för att kategorisera appar i Microsoft Store för företag: 
+
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Välj **Klientappar** > **Appar**>Välj en Microsoft Store för företag-app > **Appinformation** > **Kategori** . 
+3. Välj en kategori i den nedrullningsbara menyn.
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Installera appar på Windows 10-enheter
 Beroende på apptypen kan appen installeras på en Windows 10-enhet på ett av två sätt:

@@ -17,17 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e0be106b47d933c4407a02369edff3645682b1c
-ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
+ms.openlocfilehash: 6df8922f9f7252c493b4a2119814c0001245fa8b
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68700989"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549998"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
 
-Det finns fyra typer av Autopilot-distributioner: [Självdistributionsläge](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/self-deploying) kan användas med kiosker, digital signering eller delade enheter, [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) gör det möjligt för partner eller IT-personal att etablera en Windows 10-dator i förväg, så att den är helt konfigurerad och klar för verksamheten, [Autopilot för befintliga enheter](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) gör att du enkelt kan distribuera den senaste versionen av Windows 10 till dina befintliga enheter och [Användardrivet läge](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/user-driven) för traditionella användare. 
+Det finns fyra typer av Autopilot-distributioner: [Självdistributionsläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) kan användas med kiosker, digital signering eller delade enheter, [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) gör det möjligt för partner eller IT-personal att etablera en Windows 10-dator i förväg, så att den är helt konfigurerad och klar för verksamheten, [Autopilot för befintliga enheter](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) gör att du enkelt kan distribuera den senaste versionen av Windows 10 till dina befintliga enheter och [Användardrivet läge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) för traditionella användare. 
 
 
 ## <a name="prerequisites"></a>Krav
@@ -49,10 +49,10 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
 
     ![Skärmbild av Windows Autopilot-enheter](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. Under **Lägg till Windows Autopilot-enheter** bläddrar du till en CSV-fil som innehåller en lista med de enheter som du vill lägga till. CSV-filen bör innehålla serienummer, Windows produkt-ID, maskinvaru-hasher och valfria grupptaggar. Du kan ha upp till 500 rader i listan. Använd rubrik- och radformatet som visas nedan:
+2. Under **Lägg till Windows Autopilot-enheter** bläddrar du till en CSV-fil som innehåller en lista med de enheter som du vill lägga till. CSV-filen bör innehålla serienummer, Windows-produkt-ID:n, maskinvaru-hasher, valfria grupptaggar och valfria tilldelade användare. Du kan ha upp till 500 rader i listan. Använd rubrik- och radformatet som visas nedan:
 
-    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag`</br>
-    `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>`
+    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
+    `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
     ![Skärmbild av Lägg till Windows Autopilot-enheter](media/enrollment-autopilot/autopilot-import-device2.png)
 

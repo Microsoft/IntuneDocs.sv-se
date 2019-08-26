@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3ed61f556cadf3ba04f7c33fbede2102c94b18f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 886241dcde88765c4879357ee42b2b281e7f3408
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549314"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861875"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Fler resurser för planeringen av din Intune-distribution
 
@@ -45,17 +45,14 @@ Här följer en lista över mallarna för respektive avsnitt.
 | | Policy för efterlevnad | |
 | | Princip för villkorlig åtkomst|-|
 
-
 ## <a name="further-reading"></a>Läs mer
 
 Ta en titt på dessa resurser om du vill ha ytterligare information som kan vara till hjälp när du planerar, utformar och implementerar Intune-distributionen.
 
-- [Microsoft Intune-dokumentation](/intune/) – Den kompletta uppsättningen Intune-dokumentation.
+- [Microsoft Intune-dokumentation](http://docs.microsoft.com/intune/) – Den kompletta uppsättningen Intune-dokumentation.
 
-- [Intune-blogg](https://blogs.technet.microsoft.com/enterprisemobility/) – Inlägg som hjälper dig att förstå hur Intune passar in i en större Enterprise Mobility-bild.
+- [Microsoft Trust Center](https://www.microsoft.com/TrustCenter) – Lär dig mer om Microsofts strategi för säkerhet, sekretess, efterlevnad och insyn i Microsofts alla produkter och tjänster i molnet.
 
-- [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – Lär dig mer om Microsofts strategi för säkerhet, sekretess, efterlevnad och insyn i Microsofts alla produkter och tjänster i molnet.
+- [Intune User Voice](https://microsoftintune.uservoice.com/) – Önskar du ha en viss funktion eller vill du rösta om funktioner med andra kunder? Ge feedback om Intune via User Voice. Vi lyssnar.
 
-- [Intune User Voice](http://microsoftintune.uservoice.com/) – Önskar du ha en viss funktion eller vill du rösta om funktioner med andra kunder? Ge feedback om Intune via User Voice. Vi lyssnar.
-
-- [Registreringsguide](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) – En uppsättning dokument som du kan använda som de är eller redigera som en del av din kommunikationsplan avseende dina slutanvändare, så att de bättre ska förstå vad det innebär att ha sina personliga enheter registrerade i Intune.
+- [Planera kommunikation](migration-guide-communication-plan.md) – Kommunikationsplanen är en nyckelfaktor i en Intune-migrering. I den här artikeln kan du hämta Intune Adoption Kit som innehåller e-postmallar, en registreringsguide för Intune och länkar till instruktionsvideor som hjälper dig att utbilda dina slutanvändare vid registreringen.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4dd77be45c21db53dd82322049d377ced247c4c7
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: e7272ddb502075f071b03925c47993c97e447bce
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427348"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960663"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
@@ -31,11 +31,12 @@ ms.locfileid: "68427348"
 
 Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip för att klassificera hot i MTD-partnerkonsolen och du skapade efterlevnadsprincipen för enheter i Intune. Om du redan har konfigurerat Intune-anslutningen i MTD-partnerkonsolen, kan du nu aktivera MTD-anslutningen för MTD-partnerprogram.
 
-När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, till exempel [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst.  Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
+När du När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen till Intune, skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, inklusive [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst. Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
 
 Klassiska principer för villkorlig åtkomst för MTD-appar: 
 
-- Används av Intune MTD för att kräva att enheter registreras i Azure AD så att de har ett enhets-ID. ID:t krävs så att enheterna kan rapportera deras status till Intune.  
+- Används av Intune MTD för att kräva att enheter registreras i Azure AD så att de har ett enhets-ID innan de kommunicerar med MTD-partners. ID:t krävs så att enheterna kan rapportera deras status till Intune.  
+- Har ingen påverkan på andra molnappar eller resurser.  
 - Är skilda från principer för villkorlig åtkomst som du kan skapa för att hantera MTD.
 - Samverkar inte som standard med andra principer för villkorlig åtkomst som du använder för utvärdering.  
 

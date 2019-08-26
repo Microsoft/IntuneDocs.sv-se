@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dc28a614514bf9b1a4987976cb057529b75a5fc
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: 75cdd958d9663d5b2d330a947a19963c219feaea
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412000"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545926"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Lägga till och använda Wi-Fi-inställningar på dina enheter i Microsoft Intune
 
@@ -40,7 +40,7 @@ Wi-Fi-profiler stöder följande enhetsplattformar:
 - Android 4 och senare
 - Android Enterprise och Kiosk
 - iOS 8.0 och senare
-- macOS (Mac OS X 10.11 och senare)
+- macOS X 10.11 och senare
 - Windows 10 och senare, Windows 10 Mobile och Windows Holographic for Business
 
 > [!NOTE]
@@ -48,35 +48,39 @@ Wi-Fi-profiler stöder följande enhetsplattformar:
 
 ## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-3. Ange **Namn** och **Beskrivning** för Wi-Fi-profilen.
-4. I listrutan **Plattform** väljer du den enhetsplattform där Wi-Fi-inställningarna ska tillämpas. Alternativen är:
+1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil i Intune**.
+2. Ange följande egenskaper:
 
-    - **Android**
-    - **Android enterprise**
-    - **iOS**
-    - **macOS**
-    - **Windows 8.1 och senare**
-    - **Windows 10 och senare**
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är t.ex. **WiFi-profil för hela företaget**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj plattform för dina enheter. Alternativen är:
 
-5. I **Profiltyp** väljer du **Wi-Fi**.
+      - **Android**
+      - **Android enterprise**
+      - **iOS**
+      - **macOS**
+      - **Windows 8.1 och senare**
+      - **Windows 10 och senare**
 
-    - För **Android Enterprise**-enheter som körs i helskärmsläge kan du välja **Endast enhetsägare** > **Wi-Fi**.
-    - För **Windows 8.1 och senare** kan du välja **Wi-Fi-import**. Med det alternativet kan du importera en XML-fil med Wi-Fi-inställningarna, som du tidigare har exporterat från en annan enhet.
+    - **Profiltyp**: Välj **Wi-Fi**.
 
-6. Några av Wi-Fi-inställningarna skiljer sig åt för de olika plattformarna. Om du vill se inställningarna för en viss plattform väljer du:
+      > [!TIP]
+      >
+      > - För **Android Enterprise**-enheter som körs i en dedikerad enhet (helskärmsläge) kan du välja **Endast enhetsägare** > **Wi-Fi**.
+      > - För **Windows 8.1 och senare** kan du välja **Wi-Fi-import**. Med det alternativet kan du importera en XML-fil med Wi-Fi-inställningarna, som du tidigare har exporterat från en annan enhet.
+
+3. Några av Wi-Fi-inställningarna skiljer sig åt för de olika plattformarna. Om du vill se inställningarna för en viss plattform väljer du din plattform:
 
     - [Android](wi-fi-settings-android.md)
-    - [Android Enterprise och Kiosk](wi-fi-settings-android-enterprise.md)
+    - [Android Enterprise](wi-fi-settings-android-enterprise.md), inklusive dedikerade enheter
     - [iOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
     - [Windows 10 och senare](wi-fi-settings-windows.md)
     - [Windows 8.1 och senare](wi-fi-settings-import-windows-8-1.md), inklusive Windows Holographic for Business
 
-    De flesta plattformar har **grundläggande** inställningar och **företagsinställningar**. De **grundläggande** inställningarna innehåller funktioner som nätverksnamn och SSID. I **företagsinställningarna** kan du ange mer avancerad information, som exempelvis EAP (Extensible Authentication Protocol).
+4. När du är klar väljer du **Skapa profil** > **Skapa**.
 
-7. När du är klar med Wi-Fi-inställningarna väljer du **Skapa profil** > **Skapa** för att lägga till konfigurationsprofilen. Profilen skapas och visas i profillistan (**Enhetskonfiguration** > **Profiler**).
+Profilen skapas och visas i profillistan (**Enhetskonfiguration** > **Profiler**).
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7636e1914e23e7009a25f45f330fe85af2a03536
-ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
+ms.openlocfilehash: 8ec1af80d52a8331c2bef136cd0947b81beaa3ea
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701016"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651176"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -181,7 +181,22 @@ Använd nyckel-/värdeparet nedan för att konfigurera en genväg på startsidan
 |    Tangent    |    Värde    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Ange en giltig URL. Felaktiga URL:er är blockerade som en säkerhetsåtgärd.<br>**Exempel:**  <`https://www.bing.com`>
-    |
+
+## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Konfigurera din organisations logotyp och varumärkesfärg för nya flikar i Microsoft Edge
+
+Med de här inställningarna kan du anpassa sidan Ny flik för Microsoft Edge och visa din organisations logotyp och varumärkesfärg som sidbakgrund.
+
+För att ladda upp organisationens logotyp och färg utför du först följande steg:
+- I Azure Portal navigerar du till Intune -> Klientappar-> Anpassning – > Företagsidentitetsanpassning
+- Om du vill ange ditt varumärkes logotyp, väljer du ”Enbart företagslogotyp”under ”Visa”. Transparenta bakgrundslogotyper rekommenderas. 
+- Om du vill ange bakgrundsfärg för ditt varumärke väljer du ”Temafärg”under ”Visa”. Microsoft Edge använder en ljusare nyans av färgen på sidan Ny flik, vilket gör att sidan har hög läsbarhet. 
+
+Använd sedan följande nyckel-/värdepar för att hämta dina organisationers varumärken till Microsoft Edge:
+
+|    Tangent    |    Värde    |
+|--------------------------------------------------------------------|------------|
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    Sant    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    Sant    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurera hanterade bokmärken för Microsoft Edge
 
@@ -232,7 +247,8 @@ Du kan använda olika URL-format för att skapa dina webbplatslistor med tillåt
     |    `http://www.contoso.com`    |    Matchar en enstaka sida    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Matchar en enstaka sida    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*;`   |    Matchar alla URL:er som börjar med `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Matchar alla underordnade domäner under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    Matchar alla underordnade som slutar med `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Matchar alla underordnade domäner under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
+    |    `http://*contoso.com/*`    |    Matchar alla underordnade som slutar med `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Matchar en enstaka mapp    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Matchar en enstaka sida, med ett portnummer    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Matchar en enstaka, säker sida    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |

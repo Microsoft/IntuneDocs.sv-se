@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c92f70844594fd8524f2e49c537f1afaadaf96
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: a637ae12f3a2ee395503bedd595c490579fdb43c
+ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783187"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68993555"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -52,7 +52,7 @@ För att registrera dig till Intune med KME måste du först registrera ditt fö
 
 4. [Registrera ett Samsung-konto](https://www2.samsungknox.com/en/user/register): Ett Samsung-konto krävs för att registrera och aktivera KME, samt hantera alla Knox Enterprise-rättigheter på en enda plats.
 
-5. Registreringsgranskning: När din profil har slutförts och skickats, utför Samsung en granskning av ditt program och antingen godkänner det direkt eller placerar det i en väntande granskningsstatus för ytterligare uppföljning. När ditt konto har godkänts, kan du fortsätta med ytterligare steg.
+5. Registreringsgranskning: När din profil har slutförts och skickats, granskar Samsung ditt program och antingen godkänner det direkt eller placerar det i en väntande granskningsstatus för ytterligare uppföljning. När ditt konto har godkänts, kan du fortsätta med ytterligare steg.
 
 ## <a name="create-mdm-profile"></a>Skapa MDM-profil
 
@@ -68,7 +68,7 @@ När ditt företag har registrerats kan du skapa din MDM-profil för Microsoft I
 |APK för MDM-agenten      | Ja       |https://aka.ms/intune_kme_deviceowner 
 |Aktivera den här appen som en Google-enhetsägare | Ja | Välj det här alternativet för registrering i Android Enterprise. 
 |MDM-stöd      | Ja       |Microsoft Intune 
-|Lämna alla systemappar aktiverade | Nej | Välj det här alternativet för att se till att alla appar är aktiverade och tillgängliga för profilen. Om det här alternativet inte är markerat visas endast en mycket begränsad uppsättning systemappar i enhetens appfält. Appar som exempelvis e-postappen förblir dolda. 
+|Lämna alla systemappar aktiverade | Nej | Välj det här alternativet för att se till att alla appar är aktiverade och tillgängliga för profilen. Om det här alternativet inte är markerat visas endast en begränsad uppsättning systemappar i enhetens appfält. Appar som exempelvis e-postappen förblir dolda. 
 |Anpassad JSON        | Nej        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Lär dig [hur du skapar en registreringsprofil](android-kiosk-enroll.md). 
 | Lägga till juridiska avtal | Nej | Lämna tomt. 
 
@@ -82,7 +82,7 @@ Detaljerade anvisningar finns i [Installationsguiden för Samsung Knox-profil](h
 |Profilnamn       | Ja       |Ange ett önskat profilnamn.
 |description        | Nej        |Ange text som beskriver profilen.
 |APK för MDM-agenten      | Ja       |https://aka.ms/intune_kme
-|Aktivera den här appen som en Google-enhetsägare | Nej | Lämna det här alternativet omarkerat för Android. Detta gäller endast för Android Enterprise.
+|Aktivera den här appen som en Google-enhetsägare | Nej | Lämna det här alternativet omarkerat för Android. Detta alternativ gäller endast för Android Enterprise.
 |Hoppa över installationsguiden  | Nej        |Välj det här alternativet för att hoppa över standardenhetens installationsuppmaning för slutanvändarens räkning.
 |Tillåt slutanvändaren att avbryta registreringen | Nej | Välj det här alternativet om du vill tillåta användare att avbryta KME.
 |Anpassad JSON        | Nej        |Lämna tomt.
@@ -103,9 +103,9 @@ Du måste tilldela en MDM-profil till enheter som lagts till i Knox-portalen inn
 
 För enheter som registrerats i Intune med KME för Android kan du konfigurera hur en användare loggar in på följande sätt:
 
-- **Utan association till användarnamnet:** I Knox-portalen under **Enhetsinformation** lämnar du fältet **Användar-ID** och **Lösenord** tomt för de enheter som har lagts till. Detta kräver att användaren måste ange både användarnamn och lösenord vid registrering i Intune.
+- **Utan association till användarnamnet:** I Knox-portalen under **Enhetsinformation** lämnar du fältet **Användar-ID** och **Lösenord** tomt för de enheter som har lagts till. Detta alternativ kräver att användaren måste ange både användarnamn och lösenord vid registrering i Intune.
 
-- **Med association till användarnamnet:** I Knox-portalen under **Enhetsinformation** anger du ett **Användar-ID** (till exempel ett användarnamn för den tilldelade användaren eller ett konto för [Enhetsregistreringshanteraren](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) för de enheter som har lagts till. Detta fyller i användarnamnet i förväg och kräver att användaren måste ange ett lösenord vid registrering i Intune.
+- **Med association till användarnamnet:** I Knox-portalen under **Enhetsinformation** anger du ett **Användar-ID** (till exempel ett användarnamn för den tilldelade användaren eller ett konto för [Enhetsregistreringshanteraren](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) för de enheter som har lagts till. Detta alternativ fyller i användarnamnet i förväg och kräver att användaren måste ange ett lösenord vid registrering i Intune.
 
 > [!NOTE]
 >
@@ -116,11 +116,11 @@ För enheter som registrerats i Intune med KME för Android kan du konfigurera h
 
 När du har skapat och tilldelat en MDM-profil, kopplat ett användarnamn och identifierat enheterna som företagsägda i Intune, kan du distribuera enheter till användare.
 
-Behöver du fortfarande hjälp? Kolla in hela [Användarhandboken för Knox Mobile-registrering](https://docs.samsungknox.com/KME-Getting-Started/Content/get-started.htm).
+Behöver du fortfarande hjälp? Kolla in den kompletta [KME-användarguiden](https://docs.samsungknox.com/KME-Getting-Started/Content/get-started.htm).
 
 ## <a name="frequently-asked-questions"></a>Vanliga frågor och svar
 
-- **Stöd för enhetsägare:** Intune stöder registrering av enheter till enbart helskärmsläge med Android Enterprise. Stöd för andra Android Enterprise-enhetsägarlägen implementeras allt eftersom de blir tillgängliga i Intune.
+- **Support för enhetsägare:**  - **Support för enhetsägare:** Intune stöder registrering av dedikerade och fullständigt hanterade enheter med hjälp av KME-portalen. Stöd för andra Android Enterprise-enhetsägarlägen implementeras allt eftersom de blir tillgängliga i Intune.
 
 - **Inget stöd för arbetsprofiler:** KME är en metod för registrering av företagets enheter och enheter som registreras i Android-arbetsprofiler som säkerställer att arbetsrelaterade och personliga data separeras på de privata enheterna. Registrering av enheter till arbetsprofilen med KME är därför inte ett scenario som stöds i Intune.
 

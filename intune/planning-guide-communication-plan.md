@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: cba8b59931bd60db0d9169af5016f01118c64cf0
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548352"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022834"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Utveckla en kommunikationsplan för distribution
 
@@ -50,7 +50,7 @@ Vilken information som ska förmedlas beror på när i Intune-distributionsproce
 
 **Våg efter registreringen**<br/> Kommunikation riktad till organisationsgrupper och användare som har registrerat sig i Intune. Innehållet i kommunikationen ska tillhandahålla ytterligare resurser som kan vara användbara för användaren samt samla feedback om deras upplevelser under och efter registreringen.
 
-Den här [registreringsguiden för användare](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) kan vara användbar. Du kan använda den som den är eller anpassa den för din organisation.
+Du kanske tycker att detta [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) är användbart. Du kan använda det som det är eller anpassa det för din organisation.
 
 ## <a name="communication-delivery-methods"></a>Leveransmetoder för kommunikation
 

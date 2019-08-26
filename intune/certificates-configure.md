@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80be1d39d9a562dbc13b9384c6256eb02c9ef50e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f13b5b92ca442f4b5ae05d3567f8385288d92909
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530551"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582929"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
@@ -88,30 +88,35 @@ Exportera certifikatet för betrodda rotcertifikatutfärdare som ett offentligt 
 Det här certifikatet importeras när du konfigurerar en certifikatprofil för en betrodd certifikatutfärdare.
 
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Steg 3: Skapa profiler för betrodda certifikat
+
 Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikatprofil. En betrodd certifikatprofil och en SCEP- eller PKCS-profil krävs för varje enhetsplattform. Stegen för att skapa betrodda certifikat fungerar ungefär på samma sätt för varje enhetsplattform.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profil**.
-4. Ange ett **namn** och en **beskrivning** för den betrodda certifikatprofilen.
-5. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat. Alternativen är:
+1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profiler**.
+2. Ange följande egenskaper:
 
-    - **Android**
-    - **Android enterprise**
-    - **iOS**
-    - **macOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 och senare**
-    - **Windows 10 och senare**
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är till exempel **betrodd certifikatprofil för Android Enterprise-användarenheter** eller **betrodd certifikatprofil för iOS-enheter**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj plattform för dina enheter. Alternativen är:
 
-6. Från listrutan **Profil** väljer du **Betrodda certifikat**.
-7. Bläddra till det certifikat som du sparade i [Steg 2: Exportera ditt betrodda rotcertifikat för certifikatutfärdaren](#step-2-export-your-trusted-root-ca-certificate) och välj sedan **OK**.
-8. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
+      - **Android**
+      - **Android Enterprise** > **endast enhetsägare**
+      - **Android Enterprise** > **endast arbetsprofil**
+      - **iOS**
+      - **macOS**
+      - **Windows Phone 8.1**
+      - **Windows 8.1 och senare**
+      - **Windows 10 och senare**
 
-    - **Datorcertifikatarkiv – rot**
-    - **Datorcertifikatarkiv – mellannivå**
-    - **Användarcertifikatarkiv – mellannivå**
+    - **Profiltyp**: Välj **Betrott certifikat**.
 
-9. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
+3. Bläddra till det certifikat som du sparade i [Steg 2: Exportera ditt betrodda rotcertifikat för certifikatutfärdaren](#step-2-export-your-trusted-root-ca-certificate) och välj sedan **OK**.
+4. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
+
+    - **Datorcertifikatarkiv – rot** (SCEP)
+    - **Datorcertifikatarkiv – mellannivå** (SCEP)
+    - **Användarcertifikatarkiv – mellannivå** (PKCS, SCEP)
+
+5. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
 
 Profilen skapas och visas i listan. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).
 
@@ -128,6 +133,7 @@ Se någon av följande artiklar för att få hjälp med att konfigurera och till
 När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar du SCEP- eller PKCS-certifikatprofiler för varje plattform som du vill använda. När du skapar en SCEP-certifikatprofil anger du en betrodd certifikatprofil för samma plattform. Detta steg länkar de två certifikatprofilerna, men du måste fortfarande tilldela varje profil separat.
 
 ## <a name="next-steps"></a>Nästa steg
+
 [Tilldela enhetsprofiler](device-profile-assign.md)  
 [Använd S/MIME att signera och kryptera e-postmeddelanden](certificates-s-mime-encryption-sign.md)  
 [Använd tredje parts certifikatutfärdare](certificate-authority-add-scep-overview.md)

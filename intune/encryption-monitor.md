@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671047"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550118"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Övervaka enhetskryptering med Intune   
 
@@ -102,15 +102,15 @@ När du väljer en enhet från krypteringsrapporten visas fönstret **Enhetens k
   Följande är några exempel på den statusinformation som Intune kan rapportera:  
   
   **macOS**:
-  - Det går för närvarande inte att installera profilen eftersom vi väntar på ett förhandskrav.  
+  - Återställningsnyckeln har inte hämtats och lagrats ännu. Förmodligen har enheten inte låsts upp, eller så har den inte checkat in.  
  
-    *Tänk på att: Det här resultatet inte nödvändigtvis är ett feltillstånd, utan ett tillfälligt tillstånd som kan bero på en tidsinställning på enheten där återställningsnycklarnas deponering måste konfigureras innan krypteringsbegäran skickas till enheten. Detta kan även indikera att enheten är låst eller inte har checkat in med Intune nyligen. Eftersom FileVault-kryptering inte startar förrän en enhet är ansluten (laddas) är det möjligt för en användare att ta emot en återställningsnyckel för en enhet som ännu inte har krypterats*.  
+    *Tänk på att: Det här resultatet inte nödvändigtvis är ett feltillstånd, utan ett tillfälligt tillstånd som kan bero på en tidsinställning på enheten där återställningsnycklarnas deponering måste konfigureras innan krypteringsbegäran skickas till enheten. Denna status kan även indikera att enheten är låst eller inte har checkat in med Intune nyligen. Eftersom FileVault-kryptering inte startar förrän en enhet är ansluten (laddas) är det möjligt för en användare att ta emot en återställningsnyckel för en enhet som ännu inte har krypterats*.  
 
-  - FileVault-profilen är installerad men FileVault är inte aktiverat på enheten.  
+  - Användaren skjuter upp krypteringen eller håller för närvarande på med krypteringsprocessen.  
  
     *Tänk på att: Antingen har användaren inte loggat ut än efter att ha tagit emot krypteringsbegäran, vilket är nödvändigt innan FileVault kan kryptera enheten, eller så har användaren dekrypterat enheten manuellt. Intune kan inte hindra en användare från att dekryptera sin enhet.*  
 
-  - FileVault har redan aktiverats av användaren, så Intune kan inte hantera återställningen.  
+  - Enheten är redan krypterad. Enhetsanvändaren måste dekryptera enheten för att kunna fortsätta.  
  
     *Tänk på att: Intune kan inte konfigurera FileVault på en enhet som redan är krypterad. I stället måste användaren dekryptera enheten manuellt innan den kan hanteras av en enhetskonfigurationsprincip och Intune*. 
  
@@ -118,9 +118,9 @@ När du väljer en enhet från krypteringsrapporten visas fönstret **Enhetens k
  
     *Tänk på att: Från och med MacOS version 10.15 (Catalina) kan användargodkända registreringsinställningar resultera i kravet att användare godkänner FileVault-kryptering manuellt. Mer information finns i avsnittet [om användargodkänd registrering](macos-enroll.md) i Intune-dokumentationen*.  
 
-  - iOS-enheten har returnerat NotNow (den är låst).  
+  - Okänt.  
 
-    *Tänk på att: Enheten är för närvarande låst och Intune kan inte starta depositions- eller krypteringsprocessen. När enheten har låsts upp kan förloppet fortsätta*.  
+    *Tänk på att: En möjlig orsak till okänd status är att enheten är låst och att Intune inte kan starta depositions- eller krypteringsprocessen. När enheten har låsts upp kan förloppet fortsätta*.  
 
   **Windows 10**:  
   - BitLocker-principen kräver användarens medgivande för att starta guiden för BitLocker-diskkryptering för att starta kryptering av OS-volymen, men användare gav inte sitt medgivande.  
@@ -161,7 +161,7 @@ När du visar fönstret Krypteringsrapport kan du välja **Exportera** för att 
   
 ![Exportera information](./media/encryption-monitor/export.png) 
  
-Den här rapporten kan användas för att identifiera problem för grupper av enheter. Du kan till exempel använda rapporten för att identifiera en lista med macOS-enheter som alla rapporterar *FileVault har redan aktiverats av användaren*, vilket indikerar enheter som måste dekrypteras manuellt innan Intune kan börja hantera deras FileVault-inställningar.  
+Den här rapporten kan användas för att identifiera problem för grupper av enheter. Du kan till exempel använda rapporten för att identifiera en lista med macOS-enheter som alla rapporterar *FileVault har redan aktiverats av användaren*, vilket indikerar enheter som måste dekrypteras manuellt innan Intune kan hantera deras FileVault-inställningar.  
  
 ## <a name="filevault-recovery-keys"></a>FileVault-återställningsnycklar   
 När Intune först krypterar en macOS-enhet med FileVault skapas en personlig återställningsnyckel. Efter krypteringen visas den personliga nyckeln en enda gång för slutanvändaren.  

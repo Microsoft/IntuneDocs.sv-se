@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8508915f0b4711b2aa65465dd7ac79f575a8d008
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: b148abfaeffaf02178e34c3e9abfe86f70fb529c
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670969"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960656"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune  
 
@@ -82,11 +82,12 @@ Det första steget är att skapa en tjänst-till-tjänst-anslutning mellan Intun
 Du gör normalt den här aktiviteten en gång. När du har aktiverat Microsoft Defender ATP för din Intune-klient behöver du inte göra det igen.
 
 > [!TIP]  
-> När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, till exempel [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst.  Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
+> När du När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen till Intune, skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, inklusive [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst. Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
 > 
 > Klassiska principer för villkorlig åtkomst för MTD-appar: 
 > 
-> - Används av Intune MTD för att kräva att enheter registreras i Azure AD så att de har ett enhets-ID. ID:t krävs så att enheterna kan rapportera deras status till Intune.  
+> - Används av Intune MTD för att kräva att enheter registreras i Azure AD så att de har ett enhets-ID innan de kommunicerar med MTD-partners. ID:t krävs så att enheterna kan rapportera deras status till Intune.  
+> - Har ingen påverkan på andra molnappar eller resurser.  
 > - Är skilda från principer för villkorlig åtkomst som du kan skapa för att hantera MTD.
 > - Samverkar inte som standard med andra principer för villkorlig åtkomst som du använder för utvärdering.  
 > 

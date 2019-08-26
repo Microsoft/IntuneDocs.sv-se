@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 83b1de6c246baaef54a31c0b3f4c5094d066c64d
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528236"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549962"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -85,16 +85,16 @@ Du kan tilldela användarna både anpassade och inbyggda roller. För att bli ti
 Om du vill se en rolltilldelning väljer du **Intune** > **Roller** > **Alla roller** > välj en roll > välj en tilldelning. Följande sidor visas:
 
 - **Egenskaper**: Namn, beskrivning, roll, medlemmar, omfång och taggar för tilldelningen.
-- **Medlemmar**: Alla användare i de angivna grupperna har behörighet att hantera de användare/enheter som anges i Omfång (grupper).
-- **Omfång (grupper)** : Alla användare/enheter i de här grupperna kan hanteras av användarna i Medlemmar.
+- **Medlemmar**: Alla användare i de angivna Azure-säkerhetsgrupperna har behörighet att hantera de användare/enheter som anges i Omfång (grupper).
+- **Omfång (grupper)** : Alla användare/enheter i de här Azure- säkerhetsgrupperna kan hanteras av användarna i Medlemmar.
 - **[Omfång (taggar)](scope-tags.md)** : Användare i Medlemmar kan se de resurser som har samma omfångstaggar.
 
 ### <a name="multiple-role-assignments"></a>Flera rolltilldelningar
-Om en användare har flera rolltilldelningar omfattar behörigheter i de rolltilldelningarna olika objekt på följande sätt:
+Om en användare har flera rolltilldelningar, behörigheter och omfångstaggar, utökas dessa rolltilldelningarna till olika objekt på följande sätt:
 
-- Tilldelningsbehörigheter gäller endast för objekten (till exempel principer eller appar) i den rollens tilldelningsomfång (grupper). Tilldelningsbehörigheter gäller inte för objekt i andra rolltilldelningar såvida inte den andra tilldelningen uttryckligen beviljar dem.
-- Andra behörigheter (till exempel Skapa och Läsa) gäller för alla objekt av samma typ (som alla principer eller alla appar) i alla tilldelningar för användaren.
-- Behörigheter för olika typer av objekt (till exempel principer eller appar) gäller inte för varandra. Till exempel ger inte en läsningsbehörighet för en princip läsningsbehörighet till appar i användarens tilldelningar.
+- Tilldelningsbehörigheter och omfångstaggar gäller endast för objekten (till exempel principer eller appar) i den rollens tilldelningsomfång (grupper). Tilldelningsbehörigheter och omfångstaggar gäller inte för objekt i andra rolltilldelningar såvida inte den andra tilldelningen uttryckligen beviljar dem.
+- Andra behörigheter (till exempel Skapa, Läsa, Uppdatera, Ta bort) och omfångstaggar gäller för alla objekt av samma typ (som alla principer eller alla appar) i alla tilldelningar för användaren.
+- Behörigheter och omfångstaggar för olika typer av objekt (till exempel principer eller appar) gäller inte för varandra. Till exempel ger inte en läsningsbehörighet för en princip läsningsbehörighet till appar i användarens tilldelningar.
 
 ## <a name="next-steps"></a>Nästa steg
 - [Tilldela en användare en roll](assign-role.md)

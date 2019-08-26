@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ce117f21c1ad78c2c977466398ce6d30989cc6a
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041291"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651199"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -152,7 +152,9 @@ Rapporten **Enhetsefterlevnad** > **Inställningskompatibilitet** visar det tota
 När du väljer en specifik inställning kan du se **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för alla enheter som den inställningen är inriktad på.
 
 > [!NOTE]
-> Windows 10-enheter som är anslutna till Azure AD kan visa systemkontot som en icke-kompatibel användare. Detta är normalt och påverkar inte den övergripande enhetsefterlevnaden. 
+> En princip kan tilldelas en enhet och en användare på samma enhet. I vissa fall kan en enhet synkroniseras innan användaren loggar in, till exempel när enheten startas om. Efterlevnad kan utvärdera den här användaren och visa enheten som icke-kompatibel. Det här beteendet kan också visa systemkontot som en icke-kompatibel användare.
+>
+> Detta är ett känt problem med Windows 10-enheter med flera användare. Ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](in-development.md) och/eller [vad som är nytt](whats-new.md).
 
 ## <a name="view-status-of-device-policies"></a>Visa status för enhetsprinciper
 

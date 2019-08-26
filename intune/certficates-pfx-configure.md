@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2019
-ms.topic: article
+ms.date: 08/15/2019
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 985ca70dba2a5a486947bd2de08e7f8934e90d75
-ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
+ms.openlocfilehash: 330bfa319ca0202a5edc09d8f27e40c18ce89d39
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263717"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582948"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -53,15 +53,19 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
 - **Rotcertifikat**:  
   En exporterad kopia av ditt rotcertifikat från din Enterprise-CA.
 
-- **Intune-certifikatanslutningsapp** (kallas även *NDES-certifikatanslutningsappen*):  
+- **Microsoft Intune Certificate Connector** (kallas även *NDES Certificate Connector*):  
   I Intune-portalen går du till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsappen för PKCS #12*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet för certifikatanslutningsappen: **NDESConnectorSetup.exe**.  
+
+  Intune har stöd för upp till 100 instanser av den här anslutningen per klient, med varje instans på en separat Windows Server. Du kan installera en instans av den här anslutningen på samma server som en instans av PFX-certifikatanslutningsappen för Microsoft Intune. När du använder flera kopplingar stöder kopplingsinfrastrukturen hög tillgänglighet och belastningsutjämning eftersom alla tillgängliga anslutningsinstanser kan bearbeta dina PKCS-certifikatbegäranden. 
 
   Anslutningsappen bearbetar PKCS-certifikatbegäranden som används för autentisering eller S/MIME-signering för e-post.
 
-  NDES-certifikatanslutningsappen har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
+  Microsoft Intune Certificate Connector har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
 
 - **PFX-certifikatanslutningsprogram för Microsoft Intune**:  
-   Om du planerar att använda S/MIME-kryptering för e-post använder du Intune-portalen för att ladda ned anslutningsappen för *importerade PFX-certifikat*.  Gå till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för importerade PFX-certifikat*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet **PfxCertificateConnectorBootstrapper.exe**. 
+  Om du planerar att använda S/MIME-kryptering för e-post använder du Intune-portalen för att ladda ned anslutningsappen för *importerade PFX-certifikat*.  Gå till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för importerade PFX-certifikat*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet **PfxCertificateConnectorBootstrapper.exe**. 
+
+  Varje Intune-klient har stöd för en enda instans av den här anslutningen. Du kan installera den här anslutningen på samma server som en instans av Microsoft Intune Certificate Connector.
 
   Anslutningsappen hanterar begäranden för PFX-filer som importeras till Intune för S/MIME-kryptering av e-post för en specifik användare.  
 
@@ -87,7 +91,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
  
 2. Gå till **Start** > **Kör** och ange **Cmd** för att öppna kommandotolken. 
     
-3. Ange **certutil  -ca.cert ca_name.cer** för att exportera rotcertifikatet som en fil med namnet *ca_name.cer*.
+3. Ange **certutil -ca.cert ca_name.cer** för att exportera rotcertifikatet som en fil med namnet *ca_name.cer*.
 
 
 
@@ -140,7 +144,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**.
 3. Ladda ned och spara anslutningsappfilen på en plats där du kan komma åt den från den server där du kommer att installera anslutningsappen.
 
-    ![Nedladdning av NDES-anslutningsapp](media/certificates-pfx-configure/download-ndes-connector.png)
+    ![Microsoft Intune Certificate Connector nedladdning](media/certificates-pfx-configure/download-ndes-connector.png)
  
 
 4. När nedladdningen är klar loggar du in på servern. Efter det:
@@ -149,7 +153,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
     2. Kör installationsprogrammet (NDESConnectorSetup.exe) och godkänn standardplatsen. Anslutningsprogrammet installeras då till `\Program Files\Microsoft Intune\NDESConnectorUI`. Bland installationsalternativen väljer du **PFX-distribution**. Fortsätt och slutför installationen.
     3. Som standard körs anslutningsapptjänsten under det lokala systemkontot. Om en proxy krävs för att få åtkomst till Internet kontrollerar du att det lokala tjänstkontot kan komma åt proxyinställningarna på servern.
 
-5. NDES-anslutningen öppnar fliken **Registrering**. Om du vill aktivera anslutningen till Intune **Loggar du in** och anger ett konto med globala administratörsbehörigheter.
+5. Microsoft Intune-certifikatanslutningsappen öppnar fliken **Registrering**. Om du vill aktivera anslutningen till Intune **Loggar du in** och anger ett konto med globala administratörsbehörigheter.
 6. Vi rekommenderar att du på fliken **Avancerat** låter **Använd den här datorns systemkonto (standard)** vara markerat.
 7. **Tillämpa** > **Stäng**
 8. Gå tillbaka till Intune-portalen (**Intune** > **Enhetskonfiguration** > **Certifikatanslutningsappar**). Efter en stund visas en grön bockmarkering och **Anslutningsstatus** är **Aktiv**. Anslutningsservern kan nu kommunicera med Intune.
@@ -218,6 +222,9 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 4. Välj **OK** > **Skapa** för att spara profilen.
 5. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](device-profile-assign.md).
+
+   > [!NOTE]
+   > På enheter med en Android Enterprise-profil syns inte certifikat som har installerats med en PKCS-certifikatprofil på enheten. Kontrollera statusen för profilen i Intune-konsolen för att bekräfta lyckad certifikatdistribution.
 
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>Skapa en PKCS-importerad certifikatprofil
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19b8693a5d2c2df042bd9339cb74bbcde0da626d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 890d398de938680447b71a46d4e329a6bdf52616
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884040"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960591"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -283,6 +283,8 @@ Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Informati
 ## <a name="app-dependencies"></a>Appsamband
 
 Appsamband är program som måste installeras innan du kan installera Win32-appen. Du kan kräva att andra appar installeras som beroenden. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. Det finns upp till 100 beroenden, vilket innefattar beroenden för eventuella inkluderade beroenden samt själva appen. Du kan lägga till Win32-appsamband först efter att Win32-appen har lagts till och laddats upp till Intune. När Win32-appen har lagts till visas alternativet **Beroenden** på bladet för din Win32-app. 
+
+Alla Win32-programberoenden måste också vara en Win32-app. Den har inte stöd för beroende på andra typer av appar, till exempel enkla MSI LOB- eller Store-appar.
 
 När du lägger till ett appsamband kan du söka baserat på appens namn och utgivare. Dessutom kan du sortera dina tillagda beroenden baserat på appens namn och utgivare. Appsamband som lagts till tidigare kan inte väljas i listan över appsamband. 
 
