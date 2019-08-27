@@ -5,7 +5,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d1ad3648348783306fb0bc1e61defc4197a9d9
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: dcfc43c3fe023d54c99a88356f9bfc2a8bdebc47
+ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680053"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894344"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -55,9 +55,11 @@ Xamarin-appar som skapats med Intune App SDK Xamarin-bindningar kan nu ta emot I
 
 Granska [licensvillkoren](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Skriv ut och behåll en kopia av licensvillkoren för framtida referens. Genom att ladda ned och använda Intune App SDK Xamarin-bindningar godkänner du licensvillkoren. Om du inte accepterar villkoren har du inte rätt att använda programvaran.
 
-SDK använder [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) för [autentisering](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) och villkorsstyrda startscenarier som kräver att apparna har konfigurerats med [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+Intune SDK använder [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) för [autentisering](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) och villkorsstyrda startscenarier som kräver att apparna har konfigurerats med [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
 Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har ett eget anpassat klient-ID som används för att autentisera med Azure Active Directory, ser du till att stegen för att ge Xamarin-appen behörigheter till Intune MAM-tjänsten (hantering av mobilprogram) följs. Följ instruktionerna i avsnittet [Ge din app åtkomst till Intune-appskyddstjänsten](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional) i [guiden Komma igång med Intune-SDK:n](app-sdk-get-started.md).
+
+
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Aktivera Intune-appskyddsprinciper i din iOS-mobilapp
 1. Lägg till [Microsoft.Intune.MAM.Xamarin.iOS NuGet-paketet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.iOS) i ditt Xamarin.iOS-projekt.
@@ -83,13 +85,15 @@ Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
       ```
 
-      Appar kan fastställa resultatet av ett registreringsförsök genom att implementera metoden EnrollmentRequestWithStatus i en underklass av IntuneMAMEnrollmentDelegate och ange IntuneMAMEnrollmentManagers Delegate-egenskap till en instans av den klassen. Ett exempel finns i vårt [Xamarin.iOS-exempelprogram](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
+      Appar kan fastställa resultatet av ett registreringsförsök genom att implementera metoden EnrollmentRequestWithStatus i en underklass av IntuneMAMEnrollmentDelegate och ange IntuneMAMEnrollmentManagers Delegate-egenskap till en instans av den klassen. 
 
       Vid en lyckad registrering kan appar fastställa UPN för det registrerade kontot (om det tidigare var okänt) genom att köra frågor mot följande egenskap: 
 
       ```csharp
        string enrolledAccount = IntuneMAMEnrollmentManager.Instance.EnrolledAccount;
       ```      
+### <a name="sample-applications"></a>Exempel program
+Exempel program som markerar MAM-funktioner i Xamarin. iOS-appar finns på [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
 
 > [!NOTE] 
 > Det finns ingen ommappning för iOS. Integrering i en Xamarin.Forms-app bör vara samma som för ett vanligt Xamarin.iOS-projekt. 
@@ -205,6 +209,7 @@ Det här förväntas, eftersom när ommappningen ändrar arvet för Xamarin-klas
 
 #### <a name="troubleshooting"></a>Felsökning
 * Om du påträffar en tom, vit skärm i programmet vid lanseringen kan du behöva tvinga navigerings anropen att köras på huvud tråden.
+* Intune SDK Xamarin-bindningarna stöder inte appar som använder en plattforms oberoende ramverk, till exempel MvvmCross på grund av konflikter mellan MvvmCross-och Intune MAM-klasser. Vissa kunder kan ha haft framgång med integreringen efter att ha flyttat sina appar till vanliga Xamarin. Forms, vi ger inte uttryckligen vägledning eller plugin-program för utvecklare som använder MvvmCross.
 
 ### <a name="company-portal-app"></a>Företagsportalappen
 Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android-appen på enheten för att aktivera skydds principer för appar. Företagsportalen hämtar appskyddsprinciper från Intune-tjänsten. När appen initieras läser den in principen och koden för att kunna aktivera principen från företagsportalen. Användaren behöver inte vara inloggad.
@@ -215,7 +220,7 @@ Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://pla
 Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera enheten med företagsportalappen.
 
 ### <a name="sample-applications"></a>Exempel program
-Exempel program som markerar MAM-funktioner i Xamarin. Android-och Xamarin-formulär appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
+Exempel program som markerar MAM-funktioner i Xamarin. Android-och Xamarin. Forms-appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Stöd
-Om din organisation är en befintlig Intune-kund kan du kontakta din representant på Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) så hjälper vi dig så snart vi kan. 
+Om din organisation är en befintlig Intune-kund kan du kontakta din representant på Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). Vi kommer att hjälpa dig så snart vi kan. 

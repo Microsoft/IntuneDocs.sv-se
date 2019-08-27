@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
-ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
+ms.openlocfilehash: e8300e9a4faf29ada79fad2a11e2470b965b53d1
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487757"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998898"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -97,6 +97,17 @@ Kör endast en app på enheten.
   - **Lägg till Store-app**: Välj **Lägg till en Store-app** och välj en app i listan.
 
     Har du inte några appar i listan? Lägg till några med hjälp av anvisningarna i [Klientappar](apps-add.md).
+    
+ - **Ange underhålls period för omstarter av appar**: standardvärdet är inte konfigurerat, Välj Kräv för att söka efter appar som kräver en omstart för att slutföra installationen.
+ 
+     Om du använder hel skärms läsare eller andra Microsoft Store for Business-appen, bestämmer du hur ofta du vill söka efter uppdateringar som kräver omstart för att slutföra installationen av programmet. Om den inte har kon figurer ATS startas Microsoft Store for Business Apps om vid en oplanerad tid tre dagar efter att en app-uppdatering har installerats.
+     
+     - **Start tid**för underhålls period: Välj datum och tid på dagen då du vill börja kontrol lera om det finns några uppdateringar som kräver omstart. Standardstarttiden är midnatt, eller noll minuter.
+     
+     - **Återkommande underhålls period**: standardvärdet är dagligen.
+         Ange hur ofta underhålls uppdateringar av Windows för appar ska äga rum. Rekommendationen är daglig för att undvika att oplanerade appar startas om.
+
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosks"></a>Helskärmsläge för flera appar
 
