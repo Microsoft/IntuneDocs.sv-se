@@ -541,7 +541,7 @@
       items:
         - name: Vad är apphantering i Intune?
           href: app-management.md
-        - name: Lägga till appar
+        - name: Lägg till översikt över appar
           href: apps-add.md
           displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
           items:
@@ -645,7 +645,7 @@
               href: apps-selective-wipe.md
             - name: Använd programskyddsprinciper
               items:
-                - name: Förstå appskyddsprinciper
+                - name: Översikt över principer för appskydd
                   href: app-protection-policy.md
                   displayName: app; protection; policy
                 - name: Skapa programskyddsprinciper
