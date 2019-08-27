@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,22 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19f0fbf401fee4bad660e946bb135544a29de310
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: df090e0e942291d5430b101db378aca296466bf9
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566513"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549993"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Du kan konfigurera Intune till att registrera iOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Du kan aktivera DEP-registrering för ett stort antal enheter utan att behöva röra dem. Du kan leverera enheter som iPhone och iPad direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
+Du kan konfigurera Intune till att registrera iOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Med DEP kan du konfigurera ett stort antal enheter utan att behöva röra dem. Enheter som iPhone och iPad kan levereras direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
 
 Om du vill aktivera DEP-registrering kan du använda både Intune och Apples DEP-portal. En lista med serienummer eller inköpsordernummer krävs så att du kan tilldela enheter till Intune för hantering. Du kan skapa DEP-registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
 DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
+
+## <a name="dep-and-the-company-portal"></a>DEP och företagsportalen
+DEP-registreringar är inte kompatibla med App Store-versionen av företagsportalappen. Du kan ge användarna åtkomst till företagsportalappen på en DEP-enhet. För att ge dem åtkomst kan du skicka appen till enheten med **Installera företagsportalen med VPP** (volymköpsprogram) i DEP-profilen. Mer information finns i [Registrera iOS-enheter automatiskt med Apples program för enhetsregistrering](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+ Du kan installera företagsportalappen på enheter som redan har registrerats med DEP. Det gör du genom att distribuera företagsportalappen via Intune med en tillämpad [Policy för programkonfiguration](app-configuration-policies-use-ios.md).
 
 ## <a name="what-is-supervised-mode"></a>Vad är övervakat läge?
 Apple införde övervakat läge i iOS 5. En iOS-enhet i övervakat läge kan hanteras med fler kontroller. Det är därför användbart för företagsägda enheter. Intune har stöd för konfigurering av enheter för övervakat läge som en del av Apples program för enhetsregistrering (DEP). 
@@ -50,7 +52,7 @@ Stöd för ej kontrollerade DEP-enheter upphörde i iOS 11. I iOS 11 och senare,
 -->
 ## <a name="prerequisites"></a>Krav
 - Enheter som köpts i [Apples enhetsregistreringsprogram](http://deploy.apple.com)
-- [MDM-utfärdare](mdm-authority-set.md)
+- [Utfärdare för hantering av mobil enhet (MDM)](mdm-authority-set.md)
 - [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-dep-token"></a>Hämta en Apple DEP-token
@@ -78,12 +80,12 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Steg 2. Använd din nyckel för att hämta en token från Apple.
 
 1. Välj **Skapa en token för Apples enhetsregistreringsprogram** för att öppna Apples portal för distributionsprogram och logga in med ditt företags Apple-ID. Du måste använda detta Apple-ID för att kunna förnya DEP-token.
-2.  Gå till Apples [portal för driftsättningsprogram](https://deploy.apple.com) och välj **Kom igång** för **Enhetsregistreringsprogram**.
+2. Gå till Apples [portal för driftsättningsprogram](https://deploy.apple.com) och välj **Kom igång** för **Enhetsregistreringsprogram**.
 
 3. På sidan **Hantera servrar** väljer du **Lägg till MDM-server**.
 4. Ange **MDM-servernamnet** och välj **Nästa**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
 
-5. Dialogrutan **Lägg till &lt;ServerName&gt;** öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
+5. Dialogrutan **Lägg till &lt;ServerName&gt;** öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Markera **Välj fil...** för att överföra PEM-filen och välj sedan **Nästa**.
 
 6. Gå till **Distributionsprogram** &gt; **Program för enhetsregistrering** &gt; **Hantera enheter**.
 7. Under **Choose Devices By** (Välj enheter efter) anger du hur enheterna ska identifieras:
@@ -120,45 +122,55 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
  
 
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
-2. Välj en token, välj **Profiler** och välj sedan **Skapa profil**.
+2. Välj en token, välj **Profiler** > **Skapa profil** > **iOS**.
 
     ![Skärmbild av Skapa en profil.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Under **Skapa profil**, anger du ett **Namn** och **Beskrivning** för profilen för administrationssyfte. Användarna kan inte se den här informationen. Du kan använda fältet **Namn** för att skapa en dynamisk grupp i Azure Active Directory. Använd profilnamnet för att definiera parametern enrollmentProfileName för att tilldela registreringsprofilen till enheter. Läs mer om [dynamiska Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
+3. På sidan **Grundinställningar**, anger du ett **Namn** och **Beskrivning** för profilen för administrationssyfte. Användarna kan inte se den här informationen. Du kan använda fältet **Namn** för att skapa en dynamisk grupp i Azure Active Directory. Använd profilnamnet för att definiera parametern enrollmentProfileName för att tilldela registreringsprofilen till enheter. Läs mer om [dynamiska Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Profilnamn och beskrivning.](./media/device-enrollment-program-enroll-ios/image05.png)
 
-4. Ange om enheter med den här profilen måste registreras med eller utan en tilldelad användare under **Användartillhörighet**.
+4. Välj **Nästa: Enhetshanteringsinställningar**.
+
+5. Ange om enheter med den här profilen måste registreras med eller utan en tilldelad användare under **Användartillhörighet**.
     - **Registrera med användartillhörighet** – välj det här alternativet för enheter som tillhör användare och som vill använda Intune-företagsportalappen för tjänster som installation av appar. Om du använder ADFS och registreringsprofilen har **Autentisera med Intune-företagsportalen istället för Installationsassistenten** inställt på **Nej**, krävs [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints) [ Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-    - **Registrera utan användartillhörighet** – välj det här alternativet för enheter som inte är kopplade till en enda användare. Använd det här alternativet för enheter som utför uppgifter utan att komma åt lokala användardata. Appar som företagsportalappen fungerar inte.
+    - **Registrera utan användartillhörighet** – välj det här alternativet för enheter som inte är kopplade till en enda användare. Använd det här alternativet för enheter som inte kommer åt lokala användardata. Appar som företagsportalappen fungerar inte.
 
-5. Om du väljer **Registrera med användartillhörighet**, får du alternativet att låta användare autentisera sig med Företagsportalen istället för Apple Installationsassistenten.
+5. Om du väljer **Registrera med användartillhörighet**, kan du låta användare autentisera sig med företagsportalen istället för Apple Installationsassistenten.
 
     ![Autentisera med Företagsportalen.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
     > [!NOTE]
-    > Om du vill göra något av följande, ställer du in **Autentisera med Intune-företagsportalen istället för Apple Installationsassistenten** till **Ja**:
+    > Om du vill göra något av följande anger du **Välj var användarna måste autentiseras** till **Företagsportal**.
     >    - använda multifaktorautentisering
     >    - ge en uppmaning till användare som behöver ändra sina lösenord när de loggar in första gången
     >    - be användarna att återställa sina utgångna lösenord under registreringen.
     >
     > Dessa stöds inte vid autentisering med Apples installationsassistent.
 
-6. Om du väljer **Ja** för **Autentisera med Företagsportalen istället för Apple Installationsassistenten** kan du välja att använda en token för Volyminköpsprogram (VPP) och automatiskt installera Företagsportalen på enheten utan att användaren anger något Apple-ID. Om du vill installera Företagsportalen med en VPP-token väljer du en token under **Installera Företagsportalen med VPP**. Se till att den token du väljer inte upphör att gälla och att du har tillräckligt många enhetslicenser för företagsportalappen. Om token upphör att gälla eller om licenserna tar slut kan Intune installera Företagsportalen från App Store istället, och då krävs ett Apple-ID.
+6. Om du väljer **Företagsportal** för **Välj var användarna måste autentiseras**, kan du använda en VPP-token för att automatiskt installera företagsportalen på enheten. I det här fallet behöver användaren inte ange ett Apple-ID. Om du vill installera Företagsportalen med en VPP-token väljer du en token under **Installera Företagsportalen med VPP**. Kräver att företagsportalen redan har lagts till i VPP-token. Konfigurera inte en princip för att begära appen för användare. Intune installerar automatiskt företagsportalen på enheter med den här registreringsprofilen. Se till att den token du väljer inte upphör att gälla och att du har tillräckligt många enhetslicenser för företagsportalappen. Om token upphör att gälla eller om licenserna tar slut kan Intune installera företagsportalen från App Store istället, och då krävs ett Apple-ID. 
 
+    > [!NOTE]
+    > När **Välj var användarna måste autentiseras** är inställt till **Företagsportal**, se till att enhetsregistreringsprocessen utförs inom de närmsta 24 timmarna efter att företagsportalen laddats ned till DEP-enheten. Annars kan registreringen misslyckas och en fabriksåterställning krävs för att registrera enheten.
+    
     ![Skärmbild av installation av Företagsportalen med VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
-7. Om du väljer en token för **Installera Företagsportalen med VPP** kan du välja att låsa enheten i enkelt appläge (specifikt företagsportalappen) direkt efter att installationsassistenten har slutförts. Välj **Ja** för **Run Company Portal in Single App Mode until authentication** (Kör företagsportalappen i enkelt appläge till autentisering) för att ange detta alternativ. För att kunna använda enheten måste användaren först autentisera genom att logga in med företagsportalen.
+7. Om du väljer **Installationsassistent** för **Välj var användarna måste autentiseras**, men du även vill använda villkorlig åtkomst eller distribuera företagsprogram på enheterna, måste du installera företagsportalen på enheterna. Välj **Ja** för att **Installera Företagsportalen**.  Om du vill att användarna ska kunna ta emot företagsportalen utan att behöva autentisera till App Store väljer du **Installera företagsportalen med VPP** och väljer en VPP-token. Se till att den token du väljer inte upphör att gälla och att du har tillräckligt många enhetslicenser för företagsportalappen för att distribuera den korrekt.
+
+8. Om du väljer en token för **Installera företagsportalen med VPP** kan du låsa enheten i enkelt appläge (specifikt företagsportalappen) direkt efter att installationsassistenten har slutförts. Välj **Ja** för **Run Company Portal in Single App Mode until authentication** (Kör företagsportalappen i enkelt appläge till autentisering) för att ange detta alternativ. För att kunna använda enheten måste användaren först autentisera genom att logga in med företagsportalen.
+
+    Multifaktorautentisering stöds inte på en enskild enhet som är låst i ett enkelt appläge. Den här begränsningen finns eftersom enheten inte kan växla till en annan app för att slutföra den andra faktorn för autentisering. Därför måste den andra faktorn vara på en annan enhet om du vill ha multifaktorautentisering på en enhet med enkelt appläge.
+
     Den här funktionen fungerar bara för iOS 11.3.1 och senare.
 
    ![Skärmbild av läget för enskilda appar.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
-8. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
+9. Om du vill att enheter som använder den här profilen ska övervakas väljer du **Ja** för **Övervakade**.
 
-    ![Skärmbild för Enhetshanteringsinställningar.](./media/device-enrollment-program-enroll-ios/devicemanagementsettingsblade.png)
+    ![Skärmbild för Enhetshanteringsinställningar.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    **Övervakade** enheter ger dig fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
+    **Övervakade** enheter ger dig fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt om du distribuerar större antal iOS-enheter.
 
     Användare meddelas att deras enheter är övervakade på två sätt:
 
@@ -168,15 +180,17 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
      > [!NOTE]
      > En enhet som registrerats utan övervakning kan bara återställas genom att använda Apple Configurator. Om du återställer enheten på det här sättet, måste du ansluta en iOS-enhet till en Mac-dator med en USB-kabel. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-9. Välj om du vill ha låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar iOS-inställningarna som tillåter att hanteringsprofilen tas bort från **Inställningar**-menyn. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en rensning av enheten. Sådana enheter måste ha hanteringsläget **Övervakad** inställt på *Ja*. 
+10. Välj om du vill ha låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar iOS-inställningarna som tillåter att hanteringsprofilen tas bort från **Inställningar**-menyn. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en rensning av enheten. Sådana enheter måste ha hanteringsläget **Övervakad** inställt på *Ja*. 
 
-10. Välj om du vill att enheter som använder den här profilen ska kunna **Synkronisera med datorer**. Om du väljer **Tillåt Apple Configurator efter certifikat** måste du välja ett certifikat under **Apple Configurator-certifikat**.
+11. Välj om du vill att enheter som använder den här profilen ska kunna **Synkronisera med datorer**. Om du väljer **Tillåt Apple Configurator efter certifikat** måste du välja ett certifikat under **Apple Configurator-certifikat**.
 
-11. Om du väljer **Tillåt Apple Configurator efter certifikat** i föregående steg, väljer du ett Apple Configurator-certifikat att importera.
+12. Om du väljer **Tillåt Apple Configurator efter certifikat** i föregående steg, väljer du ett Apple Configurator-certifikat att importera.
 
-12. Välj **OK**.
+13. Du kan ange ett namngivningsformat för enheter som tillämpas automatiskt när de registreras och vid varje incheckning. Om du vill skapa en namngivningsmall väljer du **Ja** under **Använd mall för enhetsnamn**. I rutan **Mall för enhetsnamn** anger du sedan den mall som ska användas för de namn som använder den här profilen. Du kan ange ett mallformat som innehåller enhetstyp och serienummer. 
 
-13. Välj **Anpassning av installationsassistenten** och konfigurera följande profilinställningar: ![Anpassning av installationsassistenten.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+14. Välj **Nästa: Anpassning av installationsassistenten**.
+
+15. På sidan **Anpassning av installationsassistenten** konfigurerar du följande profilinställningar: ![Anpassning av installationsassistenten.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Avdelningsinställningar | Beskrivning |
@@ -184,23 +198,23 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     | <strong>Avdelningsnamn</strong> | Visas när användare trycker på <strong>Om konfiguration</strong> vid aktiveringen. |
     |    <strong>Avdelningens telefonnummer</strong>     | Visas när användaren klickar på knappen <strong>Behöver hjälp</strong> vid aktiveringen. |
 
-  Du kan välja att visa eller dölja en mängd olika skärmar i Installationsassistenten på enheten för användaren.
-  - Om du väljer **Dölj** visas inte skärmen under installationen. När enheten har konfigurerats kan användaren fortfarande använda menyn **Inställningar** för att ställa in funktionen.
-  - Om du väljer **Visa** så visas skärmen under installationen. Användaren kan ibland hoppa över skärmen utan att vidta några åtgärder. Det går dock att öppna menyn **Inställningar** på enheten för att ställa in funktionen. 
+    Du kan välja att dölja installationsassistentens skärmar på enheten under användarinstallationen.
+    - Om du väljer **Dölj** visas inte skärmen under installationen. När enheten har konfigurerats kan användaren fortfarande använda menyn **Inställningar** för att ställa in funktionen.
+    - Om du väljer **Visa** så visas skärmen under installationen. Användaren kan ibland hoppa över skärmen utan att vidta några åtgärder. Det går dock att öppna menyn **Inställningar** på enheten för att ställa in funktionen. 
 
 
     | Inställningar på skärm i Installationsassistenten | Om du väljer **Visa** kommer enheten under installationen att ... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Lösenord</strong> | Fråga användaren om ett lösenord. Kräv alltid ett lösenord om inte enheten är skyddad eller åtkomstkontrolleras på något annat sätt (t.ex. helskärmsläge som begränsar enheten till en app). |
+    | <strong>Lösenord</strong> | Fråga användaren om ett lösenord. Kräv alltid ett lösenord för osäkrade enheter om inte åtkomsten kontrolleras på något annat sätt (t.ex. helskärmsläge som begränsar enheten till en app). |
     | <strong>Platstjänster</strong> | Fråga användaren om deras plats. |
-    | <strong>Återställa</strong> | Visa skärmen **Appar och data**. På den här skärmen kan användaren återställa eller överföra data från säkerhetskopieringen i iCloud när enheten konfigureras. |
-    | <strong>iCloud och Apple-ID</strong> | Ge användaren möjlighet att logga in med sitt **Apple-ID** och använda **iCloud**.                         |
+    | <strong>Återställa</strong> | Visa skärmen Appar och data. På den här skärmen kan användaren återställa eller överföra data från säkerhetskopieringen i iCloud när enheten konfigureras. |
+    | <strong>iCloud och Apple-ID</strong> | Ge användaren möjlighet att logga in med sitt Apple-ID och använda iCloud.                         |
     | <strong>Villkor</strong> | Kräva att användaren godkänner Apples användarvillkor. |
     | <strong>Touch ID</strong> | Ge användaren möjlighet att ställa in identifiering med fingeravtryck för enheten. |
     | <strong>Apple Pay</strong> | Ge användaren möjlighet att konfigurera Apple Pay på enheten. |
     | <strong>Zoom</strong> | Ge användaren möjlighet att zooma in på skärmen under konfigurationen. |
     | <strong>Siri</strong> | Ge användaren möjlighet att ställa in Siri. |
-    | <strong>Diagnostikdata</strong> | Visa skärmen **Diagnostik** för användaren. På den här skärmen kan användaren välja att skicka diagnostikdata till Apple. |
+    | <strong>Diagnostikdata</strong> | Visa skärmen Diagnostik för användaren. På den här skärmen kan användaren välja att skicka diagnostikdata till Apple. |
     | <strong>Visningston</strong> | Ge användaren möjlighet att aktivera Visningston. |
     | <strong>Sekretess</strong> | Visa sekretesskärmen för användaren. |
     | <strong>Android-migrering</strong> | Ge användaren möjlighet att migrera data från en Android-enhet. |
@@ -210,18 +224,23 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     | <strong>Skärmtid</strong> | Visa skärmen Skärmtid. |
     | <strong>Programuppdatering</strong> | Visa skärmen för obligatorisk programuppdatering. |
     | <strong>SIM-installation</strong> | Ge användaren möjlighet att lägga till ett mobilabonnemang. |
+    | <strong>Utseende</strong> | Visa skärmen Utseende för användaren. |
+    | <strong>Express-språk</strong>| Visa skärmen Express-språk för användaren. |
+    | <strong>Önskat språk</strong> | Ge användaren möjlighet att välja **Önskat språk**. |
+    | <strong>Migrering av enhet till enhet</strong> | Ge användaren möjlighet att migrera data från sin gamla enhet till den här enheten.|
+    
 
-14. Välj **OK**.
+16. Välj **Nästa** för att gå till sidan **Granska + skapa**.
 
-15. Spara profilen genom att välja **Skapa**.
+17. Spara profilen genom att välja **Skapa**.
 
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter
 Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronisera Intune med Apple och se dina hanterade enheter i Intune på Azure-portalen.
 
-1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild på noden Registreringsprogramenheter och länken Synkronisera.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
-   - En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering, hämtar Intune den fullständigt uppdaterade listan med serienummer som tilldelats den Apple MDM-server som är ansluten till Intune. Om en registreringsprogramenhet har tagits bort från Intune-portalen utan att tilldelningen till Apple MDM-servern har tagits bort i DEP-portalen så importeras den inte igen förrän en fullständig synkronisering körs.   
+   - En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering, hämtar Intune den fullständigt uppdaterade listan med serienummer som tilldelats den Apple MDM-server som är ansluten till Intune. Om en DEP-enhet tas bort från Intune-portalen ska den inte vara tilldelad från Apple MDM-servern i DEP-portalen. Om den ej är tilldelad, importeras den inte om till Intune förrän den fullständiga synkroniseringen har körts.   
    - En synkronisering körs automatiskt var 24:e timme. Du kan också synkronisera genom att klicka på **Synkronisera**-knappen (högst en gång var 15:e minut). Alla synkroniseringsbegäranden ges 15 minuter att slutföras. **Synkronisera**-knappen är inaktiverad tills att en synkronisering har slutförts. Synkroniseringen kommer att uppdatera status för befintliga enheter och importera nya enheter som tilldelats Apple MDM-servern.   
 
 
