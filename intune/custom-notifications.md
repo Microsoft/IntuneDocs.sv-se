@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680107"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021760"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
@@ -51,7 +51,6 @@ Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högs
 - Grupper kan innehålla användare eller enheter, men meddelanden skickas endast till användare, och skickas till alla iOS- eller Android-enheter som användaren har registrerat.  
 
 **Leverans**:  
-- Intune försöker leverera i upp till en timme efter att ett meddelande har skickats.  
 - Intune skickar meddelanden till användarnas Företagsportal-app, som sedan skapar push-meddelandet. Användarna behöver inte vara inloggade i appen för att meddelandet ska kunna push-överföras till enheten.  
 - Intune och appen Företagsportal kan inte garantera leverans av ett anpassat meddelande. Anpassade meddelanden kan visas efter flera timmars fördröjning, eller kanske inte alls. Därför bör de inte användas för brådskande meddelanden.  
 - Anpassade meddelanden från Intune visas på enheter som vanliga push-meddelanden. Om appen Företagsportal är öppen på en iOS-enhet när den tar emot meddelandet visas meddelandet i appen i stället för som ett push-meddelande.  
