@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/01/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf808a9a7f5a801997f37bd2ecf4c13e3823c332
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1c13bffa797d8480ee0ba1db2b72c787ed94274f
+ms.sourcegitcommit: dbb2410de7e4849626f84ef07cf6a2891bcdd542
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044796"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974264"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter i Intune
 
@@ -103,7 +103,13 @@ Du kan också lägga till en till åtgärd när du skapar en princip för efterl
     
     - **Fjärrlåsa en icke-kompatibel enhet**: Lås enheten när den är inkompatibel. Den här åtgärden tvingar användaren att ange en PIN-kod eller ett lösenord för att låsa upp enheten. 
     
-5. Konfigurera ett **schema**: Ange hur många dagar (0 till 365) efter en inkompatibilitet som åtgärden ska utlösas på användarnas enheter. Efter den här respittiden kan du tillämpa en princip för villkorlig åtkomst. Om du anger **0** (noll) dagar tillämpas den villkorliga åtkomsten **omedelbart**. Du kan exempelvis blockera åtkomsten till företagsresurser direkt om en enhet inte är kompatibel.
+5. Konfigurera ett **schema**: Ange hur många dagar (0 till 365) efter en inkompatibilitet som åtgärden ska utlösas på användarnas enheter. Efter den här respittiden kan du tillämpa en [princip för villkorlig åtkomst](conditional-access-intune-common-ways-use.md). Om du anger **0** (noll) dagar tillämpas den villkorliga åtkomsten **omedelbart**. Om en enhet till exempel inte är kompatibel kan du använda villkorlig åtkomst för att blockera åtkomsten till e-post, SharePoint och andra organisationsresurser omedelbart.
+
+    När du skapar en efterlevnadsprincip skapas automatiskt åtgärden **Markera enheten som inkompatibel**, och den ställs automatiskt in på **0** dagar (omedelbart). Med den här åtgärden bedöms enheten som icke-kompatibel direkt när den checkar in. Om du även använder villkorlig åtkomst träder den villkorliga åtkomsten i kraft direkt. Om du vill tillåta en respitperiod ändrar du **Schema** för åtgärden **Markera enheten som inkompatibel**.
+    
+    I efterlevnadsprincipen kanske du även vill meddela användaren. Du kan lägga till åtgärden **Skicka e-post till slutanvändare**. I åtgärden **Skicka e-post** anger du 2 dagar för **Schema**. Om enheten eller slutanvändaren fortfarande bedöms som icke-kompatibel dag 2 skickas e-postmeddelandet dag 2. Om du vill skicka e-post till användaren på dag 5 i lägger du till en annan åtgärd och anger 5 dagar för **Schema**.
+
+    Mer information om efterlevnad och de inbyggda åtgärderna finns i [översikt över efterlevnad](device-compliance-get-started.md).
 
 6. När du är klar väljer du **Lägg till** > **OK** för att spara ändringarna.
 

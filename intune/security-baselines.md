@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
-ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
+ms.openlocfilehash: b7c4cf67c93277ef4b54cdd72a6e06f64dd442e4
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978511"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063037"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -64,6 +64,12 @@ När du skapar en *profil* för säkerhetsbaslinjen använder profilen automatis
 Du kan välja att [ändra versionen](#change-the-baseline-version-for-a-profile) för en baslinje som används med en specifik profil. Det här innebär att när en ny version kommer behöver du inte skapa en ny baslinjeprofil för att använda den. När du är klar kan du istället välja en baslinjeprofil och sedan använda det inbyggda alternativet för att ändra instansversionen för profilen till en ny.  
 
 ## <a name="available-security-baselines"></a>Tillgängliga säkerhetsbaslinjer 
+
+ Du kan använda en eller flera av de tillgängliga baslinjerna i din Intune-miljö på samma gång. Du kan också använda flera instanser av samma säkerhetsbaslinjer med olika anpassningar. 
+
+När du använder flera säkerhetsbaslinjer granskar du inställningarna i var och en för att identifiera när olika baslinjer introducerar motstridiga värden för samma inställning. Eftersom du kan distribuera säkerhetsbaslinjer som är utformade för olika syften och distribuera flera instanser av samma baslinje som innehåller anpassade inställningar kan det hända att du skapar [konfigurationskonflikter för enheter, som då måste undersökas och lösas](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Tänk också på [enhetens konfigurationsprofiler](device-profiles.md), som kan ha en konfiguration där många av inställningarna är de samma som för säkerhetsbaslinjer. 
+
+
 
 Följande instanser av säkerhetsbaslinjer är tillgängliga för användning med Intune. Använd länkarna om du vill visa inställningarna för den senaste instansen av varje baslinje. 
 

@@ -510,8 +510,12 @@
           href: certificates-configure.md
           items:
             - name: SCEP
-              href: certificates-scep-configure.md
-              displayName: ksp
+              items:
+                - name: SCEP-infrastruktur
+                  href: certificates-scep-configure.md
+                  displayName: ksp
+                - name: SCEP-certifikatprofiler
+                  href: certificates-profile-scep.md
             - name: PKCS
               href: certficates-pfx-configure.md
               displayName: ksp
@@ -733,6 +737,8 @@
               href: troubleshoot-email-profiles-in-microsoft-intune.md
             - name: Felsöka villkorlig åtkomst
               href: troubleshoot-conditional-access.md
+            - name: Felsök certifikatanslutning
+              href: troubleshoot-certificate-connector-events.md
             - name: Felsöka Exchange Connector
               href: troubleshoot-exchange-connector.md
         - name: Få support

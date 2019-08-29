@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b7c76439b734837b5a4dd7e5fdbba5d21d0681d7
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 5e97e23322150c7a030a3657b6476090d719a448
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960431"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027407"
 ---
 # <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune  
 
@@ -80,6 +80,8 @@ Mer information om FileVault-inställningen som du kan hantera med Intune finns 
 ### <a name="manage-filevault"></a>Hantera FileVault  
 
 När Intune har krypterat en macOS-enhet med FileVault kan du visa och hantera FileVault-återställningsnycklarna när du visar [Intunes krypteringsrapport](encryption-monitor.md).  
+
+När Intune har krypterat en macOS-enhet med FileVault kan du visa enhetens personliga återställningsnyckel från företagsportalen på webben på vilken enhet som helst. När du är i Intune-företagsportalen väljer du den krypterade macOS-enheten och väljer sedan Hämta återställningsnyckel som en fjärrenhetsåtgärd. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-kryptering för Windows 10  
 

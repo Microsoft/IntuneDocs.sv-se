@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df8922f9f7252c493b4a2119814c0001245fa8b
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 0316138451c6105f22c196d17c1f2ec3b1f2e375
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69549998"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062932"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -55,6 +55,9 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
     `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
     ![Skärmbild av Lägg till Windows Autopilot-enheter](media/enrollment-autopilot/autopilot-import-device2.png)
+
+    >[!IMPORTANT]
+    > När du använder CSV-uppladdning för att tilldela en användare måste du se till att du tilldelar giltiga UPN. Om du tilldelar ett ogiltigt UPN (felaktigt användarnamn) kanske enheten inte är tillgänglig förrän du tar bort den ogiltiga tilldelningen. Under CSV-uppladdning är en kontroll av giltigt domännamn den enda validering som utförs på kolumnen **Tilldelad användare**. Vi kan inte utföra en individuell UPN-verifiering för att se till att du tilldelar en befintlig eller korrekt användare.
 
 3. Välj **Importera** för att börja importera enhetsinformationen. Det kan ta flera minuter att importera.
 

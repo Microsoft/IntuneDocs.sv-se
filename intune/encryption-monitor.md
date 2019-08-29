@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: c64ea07cb87bc980d01864468d788229bfc58a5f
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550118"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027377"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Övervaka enhetskryptering med Intune   
 
-Krypteringsrapporten i Microsoft Intune är en central plats där du kan visa information om krypteringsstatusen för dina hanterade enheter. Visa information om en enhets krypteringsstatus och se hur du kan hantera återställningsnycklar för enheter. Vilka alternativ för återställningsnycklar som är tillgängliga beror på vilken typ av enhet du visar.  
+Krypteringsrapporten i Microsoft Intune är en central plats där du kan visa information om en enhets krypteringsstatus och se alternativ för hantering av enhetsåterställningsnycklar. Vilka alternativ för återställningsnycklar som är tillgängliga beror på vilken typ av enhet du visar.  
 
 Du hittar rapporten genom att logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), gå till **Enhetskonfiguration** följt av *Övervakare*, där du väljer **Krypteringsrapport**.  
 
@@ -74,9 +74,11 @@ När du väljer en enhet från krypteringsrapporten visas fönstret **Enhetens k
 
 - **Krypteringsberedskap** – En utvärdering av enheternas beredskap för kryptering via MDM-principen.  
   
-  Exempel: När en Windows 10-enhet har beredskapen *Inte klar* kan den fortfarande ha stöd för kryptering. För att Windows 10-enheten ska ha statusen *Klar* måste den ha en TPM-krets. TPM-kretsar krävs inte för att det ska gå att kryptera. (Mer information finns i Krypteringsberedskap i föregående avsnitt.)  
+  Exempel: När en Windows 10-enhet har beredskapen *Inte klar* kan den fortfarande ha stöd för kryptering. För att Windows 10-enheten ska ha statusen *Klar* måste den ha en TPM-krets. TPM-kretsar krävs inte för att det ska gå att kryptera. (Mer information finns i *Krypteringsberedskap* i föregående avsnitt.)  
 
-- **Krypteringsstatus** – avser huruvida OS-enheten är krypterad. Det kan ta upp till 24 timmar innan Intune rapporterar om enhetens krypteringsstatus eller en statusändring.  
+- **Krypteringsstatus** – avser huruvida OS-enheten är krypterad. Det kan ta upp till 24 timmar innan Intune rapporterar om enhetens krypteringsstatus eller en statusändring. Tiden omfattar tiden då operativsystemet ska krypteras plus den tid då enheten ska rapportera tillbaka till Intune.  
+
+  Om du vill påskynda rapporteringen av FileVault-krypteringsstatus innan enhetsincheckningen normalt sker låter du användarna synkronisera sina enheter när krypteringen har slutförts.  
 
 - **Profiler** – En lista över *enhetskonfigurationsprofilerna* som gäller för den här enheten och som är konfigurerade med följande värden:  
 
@@ -86,11 +88,13 @@ När du väljer en enhet från krypteringsrapporten visas fönstret **Enhetens k
 
   - Windows 10:
     - Profiltyp = *Slutpunktsskydd*  
-    - Inställningar > Windows-kryptering > Kryptera enheter = *Krävs*  
+    - Inställningar > Windows-kryptering > Kryptera enheter = *Kräv*  
 
   Du kan använda listan över profiler för att identifiera enskilda principer för granskning om *Sammanfattning av profilstatus* indikerar problem.  
 
 - **Sammanfattning av profiltillstånd** – en sammanfattning av de profiler som gäller för den här enheten. Sammanfattningen representerar det minst fördelaktiga tillståndet bland de tillämpliga profilerna. Om till exempel bara en av flera tillämpliga profiler resulterar i ett fel visar *Sammanfattning av profilstatus* *Fel*.  
+  
+  Om du vill se mer information för en status går du till **Intune** > **Enhetskonfiguration** > **Profiler** och väljer profilen. Du kan också välja **Enhetsstatus** och sedan välja en enhet.  
 
 - **Statusinformation** – avancerad information om enhetens krypteringstillstånd.  
 
@@ -168,7 +172,7 @@ När Intune först krypterar en macOS-enhet med FileVault skapas en personlig å
  
 För hanterade enheter kan Intune deponera en kopia av den personliga återställningsnyckeln. Deponeringen av nycklar gör att Intune-administratörer kan rotera nycklar för att skydda enheter, och användare för att återställa en förlorad eller roterad personlig återställningsnyckel.  
  
-Intune stöder flera alternativ för att rotera och återställa personliga återställningsnycklar. En nyckel kan exempelvis roteras om den nuvarande personliga nyckeln försvinner och detta utgör en risk.  
+Intune stöder flera alternativ för att rotera och återställa personliga återställningsnycklar. En nyckel kan exempelvis roteras om den nuvarande personliga nyckeln försvinner eller misstänks vara utsatt för risk.  
  
 > [!IMPORTANT]  
 >  Enheter som krypteras av användare, och inte av Intune, kan inte hanteras av Intune. Det innebär att Intune inte kan deponera den personliga återställningsnyckeln för dessa enheter, eller hantera rotationen av återställningsnyckeln.  Innan Intune kan hantera FileVault och återställningsnycklar för enheten måste användaren dekryptera enheten och sedan låta Intune kryptera enheten.  
@@ -177,7 +181,7 @@ Intune stöder flera alternativ för att rotera och återställa personliga åte
 
 - **Automatisk rotation**: Som administratör kan du konfigurera FileVault-inställningen Rotering av privat återställningsnyckel för att automatiskt generera nya återställningsnycklar med jämna mellanrum.  När en ny nyckel skapas för en enhet visas inte nyckeln för användaren. Användaren måste i stället få nyckeln från en administratör eller via företagsportalappen.  
 
-- **Manuell rotation**: Som administratör kan du visa information om en enhet som du hanterar med Intune och som är krypterad med FileVault. Du kan sedan välja att manuellt rotera återställningsnyckeln för företagsenheter. Du kan inte rotera återställningsnycklar för personliga enheter.  
+- **Manuell rotation**: Som administratör kan du visa information om en enhet som du hanterar med Intune och som krypteras med FileVault. Du kan sedan välja att manuellt rotera återställningsnyckeln för företagsenheter. Du kan inte rotera återställningsnycklar för personliga enheter.  
 
   Så här roterar du en återställningsnyckel: 
   1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), gå till  **Enheter**  och välj  **Alla enheter** under Hantera.  
