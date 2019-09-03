@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6313741af237478bc5eea0cc5b5524250b5d46ac
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68993703"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062997"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av Windows-enheter i Microsoft Intune
 
@@ -100,9 +100,9 @@ Fel 0x801c0003: "den här användaren får inte registreras. Du kan försöka ig
 3. Ange **Användare kan ansluta enheter till Azure AD** till **Alla**.    
 4. Registrera enheten igen.   
 
-### <a name="the-device-is-already-enrolled"></a>Enheten har redan registrerats.
+### <a name="the-device-is-already-enrolled"></a>Enheten är redan registrerad.
 
-Fel 8018000a: "något gick fel. Enheten har redan registrerats.  Du kan kontakta system administratören och få felkod 8018000a. "
+Fel 8018000a: "något gick fel. Enheten är redan registrerad.  Du kan kontakta system administratören och få felkod 8018000a. "
 
 **Orsak:** Ett av följande villkor är uppfyllt:
 - En annan användare har redan registrerat enheten i Intune eller anslutit enheten till Azure AD. Du kan ta reda på om detta är fallet genom att gå till **Inställningar** > **konton** > **åtkomst till arbets**plats. Sök efter ett meddelande som liknar följande: "en annan användare på systemet är redan ansluten till ett jobb eller en skola. Ta bort den här arbets-eller skol anslutningen och försök igen. "    
@@ -223,7 +223,7 @@ Följ dessa steg för att åtgärda problemet i hybrid MDM med Intune och Config
 #### <a name="resolution"></a>Lösning
 1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
 2. Gå till **Azure Active Directory > enheter > enhets inställningar**.    
-3. Ange **användare kan ansluta enheter till Azure AD** till **alla** eller **välja**.
+3. Ange **Användare kan ansluta enheter till Azure AD** som **Alla** eller **Markerade**.
 
    Om du väljer **markerad**klickar du på **markerad**och klickar sedan på **Lägg till medlemmar** för att lägga till alla användare som kan ansluta sina enheter till Azure AD. Se till att alla Azure AD-konton för etablerings paketet har lagts till.
  
@@ -331,7 +331,7 @@ Fel 0x80070774: något gick fel. Bekräfta att du använder rätt inloggnings in
 
 Det här problemet uppstår vanligt vis innan enheten startas om i ett scenario med en hybrid Azure AD-pilot när enheten har nått sin första inloggnings skärm. Det innebär att domänkontrollanten inte kan hittas eller har nåtts på grund av anslutnings problem. Eller att enheten har angett ett tillstånd som inte kan ansluta till domänen.
 
-**Orsak:** Den vanligaste orsaken är att hybrid Azure AD-anslutning används och att funktionen tilldela användare konfigureras i autopilot-profilen. Om du använder funktionen tilldela användare utförs en Azure AD-anslutning på enheten under den inledande inloggnings skärmen som placerar enheten i ett tillstånd där den inte kan ansluta till din lokala domän. Därför bör funktionen tilldela användare bara användas i scenarier för automatisk pilot i Azure AD Join.  Funktionen ska användas i scenarier med hybrid Azure AD Join.
+**Orsak:** Den vanligaste orsaken är att hybrid Azure AD-anslutning används och att funktionen tilldela användare konfigureras i autopilot-profilen. Om du använder funktionen tilldela användare utförs en Azure AD-anslutning på enheten under den inledande inloggnings skärmen som placerar enheten i ett tillstånd där den inte kan ansluta till din lokala domän. Därför bör funktionen tilldela användare bara användas i scenarier för automatisk pilot i Azure AD Join.  Funktionen ska inte användas i scenarier med hybrid Azure AD-anslutning.
 
 #### <a name="resolution"></a>Lösning
 

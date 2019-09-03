@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca7e7646f51331e4d24cec9b50d7afae4870ebe3
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
-ms.translationtype: HT
+ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894365"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021819"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -115,21 +115,8 @@ Följ dessa steg för att aktivera Intune App SDK:
      Lägg till `IntuneMAMResources.bundle`-resurspaketet i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
 
      ![Intune App SDK iOS: kopiera paketresurser](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-     
-2. Om du behöver anropa någon av Intune-API: erna från Swift måste appen/tillägget importera de nödvändiga Intune SDK-huvudena via ett mål-C-bryggnings huvud. Om din app/tillägg inte redan innehåller en mål-c-bryggnings rubrik, kan du ange en via `SWIFT_OBJC_BRIDGING_HEADER` build-konfigurationsfilen eller Xcode-gränssnittets **mål-c-bryggnings huvud** fält. Ditt bro huvud bör se ut ungefär så här:
-
-   ```objc
-      #import <IntuneMAMSwift/IntuneMAM.h>
-   ```
-   
-   Detta gör alla Intune SDK: s API: er tillgängliga i alla Swift-källfiler för appen/tillägget. 
-   
-    > [!NOTE]
-    > * Du kan välja att bara överbrygga vissa Intune SDK-huvuden till Swift, i stället för alla-IntuneMAM. h
-    > * Beroende på vilket ramverk/statiska bibliotek som du har integrerat kan sökvägen till huvud fil (er) vara annorlunda.
-    > * Att göra Intune SDK-API: er tillgängliga i Swift via en modul import-instruktion (t. ex.: import IntuneMAMSwift) stöds inte för närvarande. Den rekommenderade metoden är att använda ett mål-C-bryggnings huvud.
-    
-3. Lägg till dessa iOS-ramverk i projektet:  
+         
+2. Lägg till dessa iOS-ramverk i projektet:  
 -  MessageUI.framework  
 -  Security.framework  
 -  MobileCoreServices.framework  
@@ -142,7 +129,7 @@ Följ dessa steg för att aktivera Intune App SDK:
 -  QuartzCore.framework  
 -  WebKit.framework
 
-4. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
+3. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
 
    > [!NOTE]
    > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
@@ -154,7 +141,7 @@ Följ dessa steg för att aktivera Intune App SDK:
    >  </array>
    >  ```
 
-5. När du har aktiverat delning av nyckelringar följer du dessa steg för att skapa en separat åtkomstgrupp där data i Intune App SDK kommer att sparas. Du kan skapa en åtkomstgrupp för nyckelringar med hjälp av användargränssnittet eller med behörighetsfilen. Om du använder användargränssnittet för att skapa gruppen med nyckelhanterare, följer du dessa steg:
+4. När du har aktiverat delning av nyckelringar följer du dessa steg för att skapa en separat åtkomstgrupp där data i Intune App SDK kommer att sparas. Du kan skapa en åtkomstgrupp för nyckelringar med hjälp av användargränssnittet eller med behörighetsfilen. Om du använder användargränssnittet för att skapa gruppen med nyckelhanterare, följer du dessa steg:
 
      a. Om mobilappen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den **första** gruppen.
     
@@ -172,11 +159,11 @@ Följ dessa steg för att aktivera Intune App SDK:
       > [!NOTE]
       > En rättighetsfil är en XML-fil som är unik för ditt mobila program. Den används för att ange särskilda behörigheter och funktioner i din iOS-app. Om din app inte tidigare har en behörighetsfil bör aktiveringen av nyckelringsdelning (steg 3) ha fått Xcode att generera en för din app. Kontrollera att appens paket-ID är den första posten i listan.
 
-6. Inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Glöm inte att spara ändringarna innan du fortsätter till nästa steg.
+5. Inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Glöm inte att spara ändringarna innan du fortsätter till nästa steg.
 
-7. Om din app inte redan använder FaceID redan bör du se till att [NSFaceIDUsageDescription Info.plist-nyckeln](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) har konfigurerats med ett standardmeddelande. Detta krävs så att iOS meddelar användaren om hur appen har för avsikt att använda FaceID. En inställning för Intune-appskyddsprincip gör att FaceID kan användas som en åtkomstmetod till appen när den konfigurerats av IT-administratören.
+6. Om din app inte redan använder FaceID redan bör du se till att [NSFaceIDUsageDescription Info.plist-nyckeln](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) har konfigurerats med ett standardmeddelande. Detta krävs så att iOS meddelar användaren om hur appen har för avsikt att använda FaceID. En inställning för Intune-appskyddsprincip gör att FaceID kan användas som en åtkomstmetod till appen när den konfigurerats av IT-administratören.
 
-8. Använd verktyget IntuneMAMConfigurator som ingår i [SDK-lagringsplatsen](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) för att slutföra konfigurationen av din apps Info.plist. Verktyget har tre parametrar:
+7. Använd verktyget IntuneMAMConfigurator som ingår i [SDK-lagringsplatsen](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) för att slutföra konfigurationen av din apps Info.plist. Verktyget har tre parametrar:
 
    |Egenskap|Använd så här|
    |---------------|--------------------------------|
@@ -228,7 +215,7 @@ Om din app redan använder ADAL eller MSAL, krävs följande konfigurationer:
 
 Dessutom kan appar åsidosätta de här Azure AD-inställningarna under körning. Gör detta genom att ange egenskaperna `aadAuthorityUriOverride`, `aadClientIdOverride` och `aadRedirectUriOverride` på instansen `IntuneMAMPolicyManager`.
 
-4. Se till att stegen som ger din iOS appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”.  
+4. Se till att stegen som ger din iOS appbehörigheter till APP-tjänsten följs. Använd instruktionerna i [Kom igång med Intune SDK-guiden](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under [Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).  
 
 > [!NOTE]
 > Metoden Info.plist rekommenderas för alla inställningar som är statiska och behöver inte fastställas vid körning. Värden som tilldelats egenskaperna `IntuneMAMPolicyManager` har företräde framför alla motsvarande värden som anges i Info.plist och behålls även när appen startas om. SDK fortsätter att använda dem för principkontroller tills användaren har avregistrerats eller värdena har rensats eller ändrats.

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 919fef62cf1d979d6a4f67c3653d90af1442fa55
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
+ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960417"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70158028"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Inställningar av slutpunktsskydd för macOS i Intune  
 
@@ -100,14 +100,14 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
     - **Rotation av personlig återställnings nyckel** – ange hur ofta den personliga återställnings nyckeln för en enhet ska roteras. Du kan välja standardvärdet **inte konfigurerad**eller värdet **1** till **12** månader.  
 
   - **Inaktivera prompt vid utloggning**  
-    Förhindra att användaren uppmanas att aktivera FileVault när de loggar ut.  När inställningen är aktive rad är uppmaningen vid utloggning inaktive rad och användaren tillfrågas när de loggar in.  
+    Förhindra att användaren uppmanas att aktivera FileVault när de loggar ut.  Vid inaktive ring är uppmaningen vid utloggning inaktive rad och användaren uppmanas att ange när de loggar in.  
     - **Inte konfigurerat**  
-    - **Aktivera** – inaktivera prompten vid utloggning.
+    - **Inaktivera** -inaktivera prompten vid utloggning.
 
     **Standard**: Inte konfigurerat  
 
      > [!IMPORTANT]  
-     > Det finns ett känt problem när inställningen **Inaktivera fråga vid utloggning** är inställd på *Aktivera*. När inställningen är inställd till *Aktivera* måste inställningen för **Antal gånger som ignorering tillåts** anges till ett värde och får inte anges som *Ej konfigurerad*. Om inställningen är inställd till *Inte konfigurerad*, misslyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **sammanfattning av profiltillstånd** som **fel** utan ytterligare information.
+     > Det finns ett känt problem när inställningen **Inaktivera prompten vid utloggning** är inställd på *Inaktivera*. När inställningen är inställd till *Inaktivera* måste inställningen för **Antal gånger som ignorering tillåts** anges till ett värde och får inte anges som *Ej konfigurerat*. Om inställningen är inställd till *Inte konfigurerad*, misslyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **sammanfattning av profiltillstånd** som **fel** utan ytterligare information.
      > 
      > När **Inaktivera prompt vid utloggning** är inställt på *Inte konfigurerad*, kan **Antal gånger som ignorering tillåts** vara *Inte konfigurerad* eller ha ett värde.  
      > 
@@ -122,4 +122,5 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
  
     **Standard**: Inte konfigurerat  
 
+Mer information om FileVault med Intune finns i återställnings [nycklar för FileVault](encryption-monitor.md#filevault-recovery-keys).
 
