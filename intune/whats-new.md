@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 267eb630b962893d5ab32530a095fe2fd3f7102e
-ms.sourcegitcommit: cbd406e3c6ab8c9a29d58dfda4a18e34277a1594
+ms.openlocfilehash: 09d80964a417772b1f011478db59398ceede5c5e
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620205"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122146"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -53,6 +53,18 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-august-26-2019"></a>Den vecka som börjar 26 augusti 2019
+
+### <a name="configure-microsoft-edge-settings-using-administrative-templates-for-windows-10-and-newer----5228061---"></a>Konfigurera Microsoft Edge-inställningar med hjälp av administrativa mallar för Windows 10 och senare <!-- 5228061 -->
+
+På enheter med Windows 10 och senare kan du skapa administrativa mallar för att konfigurera grupprincipinställningar i Intune. I den här uppdateringen kan du konfigurera inställningar som gäller för Microsoft Edge version 77 och senare.
+
+Mer information om administrativa mallar finns i [Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Intune](administrative-templates-windows.md).
+
+Gäller för:
+
+- Windows 10 och senare (Windows RS4 +)
 
 ## <a name="week-of-august-12-2019"></a>Veckan 12 augusti 2019
 
@@ -1016,8 +1028,8 @@ Eventuella nya eller befintliga ändringar av lösenordsprinciper av administrat
 Gäller för:  
 macOS
 
-#### <a name="assign-scep-certificates-to-a-userless-macos-device-----2340521----"></a>Tilldela SCEP-certifikat till en användarlös macOS-enhet  <!-- 2340521  -->
-Du kan tilldela SCEP-certifikat (Simple Certificate Enrollment Protocol ) med hjälp av enhetsattribut till macOS-enheter, inklusive enheter utan användartillhörighet, och koppla certifikatprofilen till Wi-Fi- eller VPN-profiler. Detta utökar det stöd som vi redan har för att [tilldela SCEP-certifikat till enheter med och utan användartillhörighet](certificates-scep-configure.md#create-a-scep-certificate-profile) som kör Windows, iOS eller Android.  Den här uppdateringen lägger till alternativet att välja certifikattypen *Enhet* när du konfigurerar en SCEP-certifikatprofil för macOS.
+#### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521------"></a>Tilldela SCEP-certifikat till en användarlös macOS-enhet    <!-- 2340521    -->
+Du kan tilldela SCEP-certifikat (Simple Certificate Enrollment Protocol ) med hjälp av enhetsattribut till macOS-enheter, inklusive enheter utan användartillhörighet, och koppla certifikatprofilen till Wi-Fi- eller VPN-profiler. Detta utökar det stöd som vi redan har för att [tilldela SCEP-certifikat till enheter med och utan användartillhörighet](certificates-profile-scep.md) som kör Windows, iOS eller Android.  Den här uppdateringen lägger till alternativet att välja certifikattypen *Enhet* när du konfigurerar en SCEP-certifikatprofil för macOS.
 
 Gäller för: 
 - macOS

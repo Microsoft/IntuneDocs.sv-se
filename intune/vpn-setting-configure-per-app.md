@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3c2b5bc0091544136848bf92fc6cef7524ffa54
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 4893f3484c497ed72352b2bbb229003c2d639107
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354505"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122291"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS-enheter i Intune
 
@@ -83,7 +83,7 @@ Den betrodda rotcertifikatprofilen gör det möjligt för enheten att automatisk
 
 Om du vill konfigurera och tilldela klientautentiseringscertifikatet läser du någon av följande artiklar:
 
-- [Konfigurera och hantera SCEP-certifikat med Intune](certificates-scep-configure.md)
+- [Konfigurera infrastrukturen för att stödja SCEP med Intune](certificates-scep-configure.md)
 - [Konfigurera och hantera PKCS-certifikat med Intune](certficates-pfx-configure.md)
 
 Se till att konfigurera certifikatet för klientautentisering. Du kan ange det här direkt i SCEP-certifikatprofiler (listan **Förbättrad nyckelanvändning** > **Klientautentisering**). För PKCS anger du klientautentisering i certifikatmallen i certifikatutfärdaren (CA).
@@ -107,7 +107,7 @@ VPN-profilen innehåller SCEP- eller PKCS-certifikatet med klientens autentiseri
     - **Autentiseringscertifikat**: Välj ett befintligt SCEP- eller PKCS-certifikat > **OK**.      
     - **Delade tunnlar**: Välj **Inaktivera** för att tvinga all trafik att använda VPN-tunneln när VPN-anslutningen är aktiv. 
 
-      ![I en per app-VPN-profile anger du en anslutning, en IP-adress eller ett fullständigt domännamn, en autentiseringsmetod och delade tunnlar i Microsoft Intune](./media/vpn-per-app-create-vpn-profile.png)
+      ![I en per app-VPN-profil anger du en anslutning, en IP-adress eller ett fullständigt domännamn, en autentiseringsmetod samt delade tunnlar i Microsoft Intune](./media/vpn-per-app-create-vpn-profile.png)
 
     Information om de andra inställningarna finns i [iOS VPN-inställningar](vpn-settings-ios.md).
 

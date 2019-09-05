@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
-ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
+ms.openlocfilehash: 1d545e5848330e8c4f34eca21a992ad05ca8c85d
+ms.sourcegitcommit: ffbd1542d33810ab97a0be8faf26f8061328c228
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590908"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206398"
 ---
 # <a name="intune-discovered-apps"></a>Intune-identifierade appar
 
@@ -62,6 +62,9 @@ Följande lista innehåller appens plattformstyp, de appar som övervakas för p
 | macOS | Alla appar som är installerade på enheten | Alla appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
 | Android | Endast hanterade appar | Alla appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
 | Android enterprise | Endast hanterade appar | Endast appar som har installerats i arbetsprofilen | Var sjunde dag från enhetsregistreringen |
+
+> [!NOTE]
+>Windows 10 Hybrid Azure AD-anslutna enheter med Intune-hanteringstillägget samlar för närvarande inte in appinventering enligt schemat ovan. Det här är ett känt problem. Ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](in-development.md) och/eller [vad som är nytt](whats-new.md).
 
 Antal appar som identifieras kanske inte matchar statusen för antalet installerade appar. Här är några möjliga orsaker till skillnaden:
 - En måländring för en installerad app som hanteras kan göra att antalet installerade appar på statusbladet minskar, men appen rapporteras fortfarande som identifierad.

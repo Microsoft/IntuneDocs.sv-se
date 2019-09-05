@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: a3055d375c98f9a74d0e738b7e894ba038b31776
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783247"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121867"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -166,7 +166,7 @@ Public Key Infrastructure tillhandahåller certifikat till enheter eller använd
 
 Om du planerar att använda certifikat med VPN-, Wi-Fi- eller e-postprofiler med Intune kontrollerar du att du har en [PKI-infrastruktur på plats](certificates-configure.md) som stöds och är redo att skapa och distribuera certifikatprofiler.
 
-Dessutom måste du fastställa vilken server som ska vara värd för registreringstjänsten för nätverksenheter (NDES) och hur kommunikationen ska ske om SCEP-certifikat ska utfärdas.
+Dessutom måste du fastställa vilken server som ska vara värd för registreringstjänsten för nätverksenheter (NDES) och hur kommunikationen ska ske om SCEP-certifikatprofiler kommer att användas.
 
 Läs mer om:
 
@@ -297,7 +297,7 @@ Certifikatprofiler gör det möjligt för Intune för att utfärda certifikat ti
 Vi rekommenderar att du dokumenterar vilken användargrupp som behöver ett certifikat, hur många certifikatprofiler som krävs och vilka användargrupper de ska distribueras till.
 
 >[!NOTE]
-> Kom ihåg att det betrodda rotcertifikatet krävs för SCEP-certifikatet, så se till att alla användare som är mål för SCEP-certifikatet även får ett betrott rotcertifikat. Om du behöver SCEP-certifikat ska du utforma och dokumentera vilka SCEP-certifikatmallar som krävs.
+> Kom ihåg att det betrodda rotcertifikatet krävs för SCEP-certifikatprofilen, så se till att alla användare som är mål för SCEP-certifikatprofilen även får ett betrott rotcertifikat. Om du behöver SCEP-certifikat ska du utforma och dokumentera vilka SCEP-certifikatmallar som krävs.
 
 Följande är ett exempel på hur du kan dokumentera certifikaten under utformningen:
 

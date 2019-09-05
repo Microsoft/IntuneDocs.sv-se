@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cda32e72956e5998d5ebc8d8bed2baea39951ec
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: bf4559d03f7dfc8ec8c48242defa391b4b49e41a
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021804"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122404"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -286,6 +286,5 @@ Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. Nä
 
 Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-[Använd SCEP-certifikat](certificates-scep-configure.md) eller [utfärda PKCS-certifikat från en Digicert PKI Manager-webbtjänst](certificates-digicert-configure.md).
-
+[Använda SCEP för certifikat](certificates-scep-configure.md) eller [utfärda PKCS-certifikat från en Symantec PKI Manager-webbtjänst](certificates-symantec-configure.md).
 

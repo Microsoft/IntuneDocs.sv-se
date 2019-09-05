@@ -1,5 +1,5 @@
 ---
-title: Signera och kryptera e-post med S/MIME – Microsoft Intune – Azure | Microsoft Docs
+title: Signera och kryptera e-post med hjälp av S/MIME – Microsoft Intune – Azure | Microsoft Docs
 description: Läs om hur du använder digitala certifikat för e-post i Microsoft Intune för att signera och kryptera e-postmeddelanden på enheter. De här certifikaten kallas S/MIME och konfigureras med hjälp av enhetskonfigurationsprofiler. Signerings- och krypteringscertifikat använder PKCS, eller privata certifikat, och använder ett anslutningsprogram för att importera certifikat.
 keywords: ''
 author: MandiOhlinger
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5dba3866df9ce5c779deb18cf13852b3d8af1b8d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 755073af455c1ee63fa52f435a397734d2897b47
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048897"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122228"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-översikt för att signera och kryptera e-post i Intune
 
@@ -80,7 +80,7 @@ När du har skapat certifikatprofiler för S/MIME-signering och kryptering kan d
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Använda SCEP-certifikat](certificates-scep-configure.md)
+- [Använda SCEP för certifikat](certificates-scep-configure.md)
 - [Använda PKCS-certifikat](certficates-pfx-configure.md)
 - [Använda en partner-CA](certificate-authority-add-scep-overview.md)
 - [Utfärda PKCS-certifikat från en Symantec PKI Manager-webbtjänst](certificates-symantec-configure.md)

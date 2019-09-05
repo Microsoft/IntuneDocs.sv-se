@@ -13,22 +13,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b49595493b5db3e5735e0a4717c27e91f058b8d8
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 398b8c748fddfa032194cfa60547d76322e28c9a
+ms.sourcegitcommit: 2a7d621587471822b1428440b24f08c8722612dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511374"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70234803"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Snabbstart: Skapa en användare i Intune och tilldela dem en licens
 
-I den här snabbstarten får du skapa en användare och tilldela dem en Intune. När du använder Intune måste varje person som du vill ge åtkomst till företagets data ha sitt eget användarkonto. Intune-administratörer kan konfigurera användare senare för att hantera åtkomstkontroll.
+I den här snabbstarten skapar du en användare och tilldelar den en Intune-licens. När du använder Intune måste varje person som du vill ge åtkomst till företagets data ha sitt eget användarkonto. Intune-administratörer kan konfigurera användare senare för att hantera åtkomstkontroll.
 
 Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](free-trial-sign-up.md).
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in på [Intune](https://aka.ms/intuneportal) som [global administratör eller Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
+Logga in på [Intune](https://aka.ms/intuneportal) som [global administratör eller Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för Intune-utvärdering är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-a-user"></a>Skapa en användare
 
@@ -47,7 +47,7 @@ Användare måste ha ett användarkonto för att registrera sig för Intune-enhe
 
 ## <a name="assign-a-license-to-the-user"></a>Tilldela användaren en licens
 
-När du har skapat en användare måste du använda [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) för att tilldela en Intune-licens till dem. Om du inte tilldelar användaren en licens, kommer de inte att kunna registrera sin enhet i Intune. 
+När du har skapat en användare måste du använda [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) för att tilldela en Intune-licens till dem. Om du inte tilldelar användaren en licens kommer den inte att kunna registrera sin enhet i Intune. 
 
 Så här tilldelar du en Intune-licens till en användare:
 
@@ -55,7 +55,7 @@ Så här tilldelar du en Intune-licens till en användare:
 2. Välj **Användare** > **Aktiva användare** > och välj den användare som du just skapade.
 3. Välj sedan **Redigera** bredvid **Produktlicenser**.
 4. Välj en plats för användaren under **Plats**.
-5. Klicka på **På** bredvid Intune-licensen (eller en annan licens som du har som omfattar Intune). [Produktnamnet](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)** som visas används som tjänstplan i Azure-hanteringen 
+5. Klicka på **På** intill Intune-licensen (eller en annan licens som du har som omfattar Intune). [Produktnamnet](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)** som visas används som tjänstplan i Azure-hanteringen 
 
    > [!NOTE]
    > Den här inställningen använder en av dina licenser för den här användaren. Om du använder en utvärderingsmiljö skulle du senare omtilldela den här licensen till en verklig användare i en livemiljö.
@@ -65,7 +65,7 @@ Den nya aktiva Intune-användaren visas nu som en användare med en **Intune**-l
 
 ## <a name="clean-up-resources"></a>Rensa resurser
 
-Om du inte längre behöver den här användaren kan du ta bort användaren genom att navigera till [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) och välja **Användare** > **Aktiva användare** > *välja användaren i listan* > **Ta bort användare** > **Ta bort användare** > **Bekräfta ändringar** > **Stäng**.
+Om du inte längre behöver den här användaren kan du ta bort användaren genom att gå till [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) och välja **Användare** > **Aktiva användare** > *välja användaren i listan* > **Ta bort användare** > **Ta bort användare** > **Bekräfta ändringar** > **Stäng**.
 
 ## <a name="next-steps"></a>Nästa steg
 

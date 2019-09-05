@@ -1,11 +1,11 @@
 ---
-title: Dirigera granskningsloggar i Azure monitor med hjälp av Microsoft Intune – Azure | Microsoft Docs
+title: Dirigera loggar till Azure Monitor med hjälp av Microsoft Intune – Azure | Microsoft Docs
 description: Använd diagnostikinställningar för att skicka gransknings- och driftloggar i Microsoft Intune till Azure storage-konto, händelsehubbar eller logganalys. Välj hur länge du vill behålla data och se några beräknade kostnader för olika storlek på klienter.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2019
+ms.date: 08/28/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ed32ad564f850c06b37b15e1994ac066a929ffaa
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354515"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122419"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Skicka data till lagring, händelsehubbar eller logganalys i Intune (förhandsversion)
 
-Microsoft Intune innehåller inbyggda loggarna som innehåller information om din miljö. **Granskningsloggar** visar information om olika händelser eller aktiviteter som sker i Intune. **Arbetsloggar (förhandsversion)** visar information om användare och enheter som har registrerats korrekt (eller misslyckats) samt information om inkompatibla enheter.
+Microsoft Intune innehåller inbyggda loggar med information om din miljö:
+
+- **Granskningsloggar** visar information om olika händelser eller aktiviteter som sker i Intune.
+- **Arbetsloggar (förhandsversion)** visar information om användare och enheter som har registrerats korrekt (eller misslyckats) samt information om icke-kompatibla enheter.
+- **Organisationsloggar för enhetsefterlevnad (förhandsversion)** visar en organisationsrapport för enhetsefterlevnad i Intune samt information om icke-kompatibla enheter.
 
 Dessa loggar kan också skickas till Azure Monitor-tjänster, inklusive lagringskonton, händelsehubbar och logganalyser. Mer specifikt kan du:
 
@@ -35,7 +39,7 @@ Dessa loggar kan också skickas till Azure Monitor-tjänster, inklusive lagrings
 
 Dessa funktioner är en del av **diagnostikinställningarna** i Intune.
 
-Den här artikeln visar hur du använder **diagnostikinställningar** för att skicka data till olika tjänster, ger exempel och uppskattade kostnader och innehåller några vanliga frågor och svar.
+Den här artikeln visar hur du använder **diagnostikinställningar** för att skicka data till olika tjänster, ger exempel och uppskattade kostnader och innehåller några vanliga frågor och svar. När du aktiverar den här funktionen dirigeras dina loggar till den Azure Monitor-tjänst som du väljer.
 
 ## <a name="prerequisites"></a>Krav
 
@@ -54,7 +58,7 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
 ## <a name="send-logs-to-azure-monitor"></a>Skicka loggar till Azure Monitor
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Under **Övervakning** väljer du **Diagnostikinställningar**. Första gången du öppnar den ska du aktivera den:
+2. Under **Övervakning** väljer du **Diagnostikinställningar**. Första gången du öppnar den ska du aktivera den. Annars lägger du till en inställning.
 
     ![Aktivera diagnostikinställningar i Intune för att skicka loggar till Azure Monitor](media/diagnostics-settings-turn-on.png)
 
@@ -87,7 +91,14 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
       Om du väljer att använda ett lagringskonto, ange då också hur många dagar som du vill behålla data (kvarhållning). Om du vill behålla data alltid ange **Kvarhållning (dagar)** till `0` (noll).
 
       > [!NOTE]
-      > Driftloggarna finns i förhandsversion. Om du vill ge feedback, inklusive information som ingår i de operativa loggarna går du till [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback) (öppnar en ny webbplats).
+      > Driftloggarna finns i förhandsversion. Om du vill ge feedback, inklusive information i driftsloggarna, går du till [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
+
+    - **LOG** > **DeviceComplianceOrg**: Organisationsloggar för enhetsefterlevnad (förhandsversion) visar organisationsrapporten för enhetsefterlevnad i Intune samt information om icke-kompatibla enheter. Välj det här alternativet för att skicka efterlevnadsloggarna till ditt lagringskonto, din händelsehubb eller din logganalys.
+
+      Om du väljer att använda ett lagringskonto, ange då också hur många dagar som du vill behålla data (kvarhållning). Om du vill behålla data alltid ange **Kvarhållning (dagar)** till `0` (noll).
+ 
+      > [!NOTE]
+      > Organisationsloggar för enhetsefterlevnad är i förhandsversion. Om du vill ge feedback, inklusive information i rapporten, går du till [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
     När du är klar ser inställningarna ut ungefär som följande inställningar: 
 

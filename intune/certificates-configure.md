@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/07/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,130 +16,87 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f13b5b92ca442f4b5ae05d3567f8385288d92909
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: 4d9554893a8317b014007bd7089ed62f222975c8
+ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582929"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214320"
 ---
-# <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
+# <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Använda certifikat för autentisering i Microsoft Intune  
 
-Du ger användare åtkomst till företagsresurser via VPN, Wi-Fi eller e-postprofiler. Du kan använda certifikat för att autentisera dessa anslutningar. När du använder certifikat behöver dina slutanvändare inte ange användarnamn och lösenord för att autentisera.
+Använd certifikat med Intune för att autentisera dina användare till program och företagsresurser via VPN, Wi-Fi eller e-postprofiler. När du använder certifikat för att autentisera dessa anslutningar behöver dina slutanvändare inte ange användarnamn och lösenord, vilket gör att deras åtkomst mer sömlös. Certifikat används även för signering och kryptering av e-post med hjälp av S/MIME.
 
-Du kan använda Intune för att tilldela dessa certifikat till enheter som du hanterar. Intune har stöd för tilldelning och hantering av följande certifikattyper:
+Intune har stöd för följande certifikattyper:  
 
-- Simple Certificate Enrollment Protocol (SCEP)
-- PKCS#12 (eller PFX)
+- Simple Certificate Enrollment Protocol (SCEP)  
+- PKCS#12 (eller PFX)  
+- PKCS-importerade certifikat
 
-Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastrukturen.
+Du distribuerar de här certifikaten genom att skapa och tilldela certifikatprofiler till enheter.  
 
+Varje enskild certifikatprofil som du skapar stöder en enda plattform. Om du till exempel använder PKCS-certifikat skapar du en PKCS-certifikatprofil för Android och en separat PKCS-certifikatfil för iOS. Om du även använder SCEP-certifikat för dessa två plattformar skapar du en SCEP-certifikatprofil för Android och en annan för iOS.  
 
-## <a name="overview"></a>Översikt
+**Generella saker att tänka på**:  
+- Om du inte har en företagscertifikatutfärdare (CA) måste du skapa en eller använda [någon av våra partner som stöds](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners).
+- Om du använder SCEP-certifikatprofiler med hjälp av Microsoft Active Directory Certificate Services konfigurerar du en NDES-server (registreringstjänst för nätverksenheter).
+- Om du använder SCEP med en av våra certifikatutfärdarpartner behöver du [integrera den med Intune](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
+- Både SCEP- och PKCS-certifikatprofiler kräver att du laddar ned, installerar och konfigurerar Microsoft Intune Certificate Connector. 
+- PCKS-importerade certifikat kräver att du laddar ned, installerar och konfigurerar PFX-certifikatets anslutningsprogram för Microsoft Intune.
+- PKCS-importerade certifikat kräver att du exporterar certifikat från din certifikatutfärdare och importerar dem till Microsoft Intune. Se [PFXImport PowerShell-projektet](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)
+- För att en enhet ska kunna använda SCEP-, PCKS- eller PKCS-importerade certifikatprofiler måste enheten lita på rotcertifikatutfärdaren. Du använder en *betrodd certifikatutfärdare* för att distribuera ditt betrodda rotcertifikatutfärdarcertifikat till enheter.  
 
-1. Se till att rätt certifikatinfrastruktur har konfigurerats. Du kan använda [SCEP-certifikat](certificates-scep-configure.md) och [PKCS-certifikat](certficates-pfx-configure.md).
+## <a name="supported-platforms-and-certificate-profiles"></a>Plattformar och certifikatprofiler som stöds  
+| Plattform              | Betrodd certifikatprofil | PKCS-certifikatprofil | SCEP-certifikatprofil | PKCS-importerad certifikatprofil  |
+|--|--|--|--|---|
+| Android-enhetsadministratör | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png)|  ![Stöds](./media/certificates-configure/green-check.png) |
+| Android enterprise <br> – Enhetens ägare   | ![Stöds](./media/certificates-configure/green-check.png) |   |  |   |
+| Android enterprise <br> – Arbetsprofil    | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
+| iOS                   | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
+| macOS                 | ![Stöds](./media/certificates-configure/green-check.png) |   |![Stöds](./media/certificates-configure/green-check.png)|![Stöds](./media/certificates-configure/green-check.png)|
+| Windows Phone 8.1     |![Stöds](./media/certificates-configure/green-check.png)  |  | ![Stöds](./media/certificates-configure/green-check.png)| ![Stöds](./media/certificates-configure/green-check.png) |
+| Windows 8.1 och senare |![Stöds](./media/certificates-configure/green-check.png)  |  |![Stöds](./media/certificates-configure/green-check.png) |   |
+| Windows 10 och senare  | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
 
-2. Installera ett rotcertifikat eller en mellanliggande certifikatutfärdare på alla enheter så att enheterna kan identifiera certifikatutfärdarens giltighet. För att installera certifikatet skapar och tilldelar du en **profil för betrott certifikat** till varje enhet. När du tilldelar den här profilen begär och tar Intune-hanterade enheter emot rotcertifikatet. Du måste skapa en separat profil för varje plattform. Profilerna för betrodda certifikat är tillgängliga för följande plattformar:
+## <a name="export-the-trusted-root-ca-certificate"></a>Exportera det betrodda rotcertifikatutfärdarcertifikatet  
+För att enheter ska kunna använda PKCS, SCEP- och PKCS-importerade certifikat måste de lita på din rotcertifikatutfärdare. Du skapar detta förtroende genom att exportera det betrodda rotcertifikatutfärdarcertifikatet (CA), samt alla mellanliggande eller utfärdande certifikatutfärdarcertifikat som ett offentligt certifikat. Du kan hämta dessa certifikat från den utfärdande certifikatutfärdaren eller från valfri enhet som litar på din utfärdande certifikatutfärdare.  
 
-    - iOS 8.0 och senare
-    - macOS 10.11 och senare
-    - Android 4.0 och senare
-    - Android enterprise  
-    - Windows 8.1 och senare
-    - Windows Phone 8.1 och senare
-    - Windows 10 och senare
+Information om hur du exporterar certifikatet finns i dokumentationen för certifikatutfärdaren. Du behöver exportera det offentliga certifikatet som en .cer-fil.  Exportera inte den privata nyckeln som en .pfx-fil.  
 
-    > [!NOTE]  
-    > Certifikatprofiler stöds inte på enheter som kör *Android Enterprise för dedikerade enheter*.
+Du använder den här .cer-filen när du [skapar betrodda certifikatprofiler](#create-trusted-certificate-profiles) för att distribuera det certifikatet till dina enheter.  
 
-3. Skapa certifikatprofiler så att enheter begär ett certifikat som ska användas för autentisering av VPN, Wi-Fi och åtkomst av e-post. Följande profiltyper av är tillgängliga för olika plattformar:  
+## <a name="create-trusted-certificate-profiles"></a>Skapa profiler för betrodda certifikat  
+Skapa en betrodd certifikatprofil innan du kan skapa en SCEP-, PKCS- eller PKCS-importerad certifikatprofil. Genom att distribuera en betrodd certifikatprofil ser du till att varje enhet känner igen giltigheten hos din certifikatutfärdare. SCEP-certifikatprofiler refererar direkt till en betrodd certifikatprofil. PKCS-certifikatprofiler refererar inte direkt till den betrodda certifikatprofilen, men de refererar direkt till den server som är värd för din certifikatutfärdare. PKCS-importerade certifikatprofiler refererar inte direkt till den betrodda certifikatprofilen men kan använda den på enheten. Distribution av en betrodd certifikatprofil till enheter säkerställer att det här förtroendet upprättas. När en enhet inte litar på rotcertifikatutfärdaren misslyckas SCEP- eller PKCS-certifikatprofilprincipen.  
 
-   | Plattform     |PKCS-certifikat|SCEP-certifikat| PKCS-importerat certifikat | 
-   |--------------|----------------|----------------|-------------------|
-   | Android                | Ja    | Ja    | Ja    |
-   | Android enterprise     | Ja    | Ja    | Ja    |
-   | iOS                    | Ja    | Ja    | Ja    |
-   | macOS                  |        | Ja    | Ja    |
-   | Windows Phone 8.1      |        | Ja    | Ja    |
-   | Windows 8.1 och senare  |        | Ja    |        |
-   | Windows 10 och senare   | Ja    | Ja    | Ja    |
-
-   Se till att du skapar en separat profil för varje enhetsplattform. När du skapar profilen kopplar du den med den betrodda rotcertifikatprofilen som du redan skapat.
-
-### <a name="further-considerations"></a>Ytterligare överväganden
-
-- Du måste skapa en utfärdare av företagscertifikat om du inte redan har en
-- Om du använder SCEP-profiler konfigurerar du en server för registreringstjänsten för nätverksenheter (NDES)
-- Oavsett om du tänker använda SCEP- eller PKCS-profiler ska du hämta och konfigurera Microsoft Intune Certificate Connector
+Skapa en separat betrodd certifikatprofil för varje enhetsplattform som du vill stödja, precis som du gör för SCEP-, PCKS- och PKCS-importerade certifikatprofiler.  
 
 
-## <a name="step-1-configure-your-certificate-infrastructure"></a>Steg 1: Konfigurera certifikatinfrastrukturen
+### <a name="to-create-a-trusted-certificate-profile"></a>Så här skapar du en betrodd certifikatprofil  
 
-Se någon av följande artiklar för att få hjälp med att konfigurera infrastrukturen för varje typ av certifikatprofil:
+1. Logga in på [Intune-portalen](https://aka.ms/intuneportal).  
+2. Välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profil**.  
+3. Ange ett **namn och en beskrivning** för den betrodda certifikatprofilen.  
+4. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat.  
+5. Från listrutan **Profil** väljer du **Betrodda certifikat**.  
+6. Bläddra till det betrodda rotcertifikatutfärdarcertifikatets .cer-fil som du exporterade för användning med den här certifikatprofilen och välj sedan **OK**.  
+7. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:  
+   - **Datorcertifikatarkiv – rot**
+   - **Datorcertifikatarkiv – mellannivå**
+   - **Användarcertifikatarkiv – mellannivå**
+8. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
+Profilen visas i listan över profiler i visningsfönstret *Enhetskonfiguration – Profiler*, med profiltypen **Betrott certifikat**.  Se till att tilldela den här profilen till enheter som ska använda SCEP- eller PCKS-certifikat. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).
 
-- [Konfigurera och hantera SCEP-certifikat med Intune](certificates-scep-configure.md)
-- [Konfigurera och hantera PKCS-certifikat med Intune](certficates-pfx-configure.md)
+> [!NOTE]  
+> Android-enheter visar kanske ett meddelande om att en tredje part har installerat ett betrott certifikat.  
 
+## <a name="additional-resources"></a>Ytterligare resurser  
+- [Tilldela enhetsprofiler](device-profile-assign.md)  
+- [Använd S/MIME att signera och kryptera e-postmeddelanden](certificates-s-mime-encryption-sign.md)  
+- [Använd certifikatutfärdare från tredje part](certificate-authority-add-scep-overview.md)  
 
-## <a name="step-2-export-your-trusted-root-ca-certificate"></a>Steg 2: Exportera ditt betrodda rotcertifikat för certifikatutfärdaren
+## <a name="next-steps"></a>Nästa steg  
+När du har skapat och tilldelat betrodda certifikatprofiler skapar du SCEP-, PKCS- eller PKCS-utfärdade certifikatprofiler för varje plattform som du vill använda. Fortsätt med följande artiklar:  
+- [Konfigurera infrastrukturen för att stödja SCEP-certifikat med Intune](certificates-scep-configure.md)  
+- [Konfigurera och hantera PKCS-certifikat med Intune](certficates-pfx-configure.md)  
+- [Skapa en PKCS-importerad certifikatprofil](certficates-pfx-configure.md#create-a-pkcs-imported-certificate-profile)  
 
-Exportera certifikatet för betrodda rotcertifikatutfärdare som ett offentligt certifikat (CER-fil) från den utfärdande certifikatutfärdaren eller från en enhet som litar på den utfärdande certifikatutfärdaren. Exportera inte den privata nyckeln (.pfx).
-
-Det här certifikatet importeras när du konfigurerar en certifikatprofil för en betrodd certifikatutfärdare.
-
-## <a name="step-3-create-trusted-certificate-profiles"></a>Steg 3: Skapa profiler för betrodda certifikat
-
-Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikatprofil. En betrodd certifikatprofil och en SCEP- eller PKCS-profil krävs för varje enhetsplattform. Stegen för att skapa betrodda certifikat fungerar ungefär på samma sätt för varje enhetsplattform.
-
-1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profiler**.
-2. Ange följande egenskaper:
-
-    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är till exempel **betrodd certifikatprofil för Android Enterprise-användarenheter** eller **betrodd certifikatprofil för iOS-enheter**.
-    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Plattform**: Välj plattform för dina enheter. Alternativen är:
-
-      - **Android**
-      - **Android Enterprise** > **endast enhetsägare**
-      - **Android Enterprise** > **endast arbetsprofil**
-      - **iOS**
-      - **macOS**
-      - **Windows Phone 8.1**
-      - **Windows 8.1 och senare**
-      - **Windows 10 och senare**
-
-    - **Profiltyp**: Välj **Betrott certifikat**.
-
-3. Bläddra till det certifikat som du sparade i [Steg 2: Exportera ditt betrodda rotcertifikat för certifikatutfärdaren](#step-2-export-your-trusted-root-ca-certificate) och välj sedan **OK**.
-4. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
-
-    - **Datorcertifikatarkiv – rot** (SCEP)
-    - **Datorcertifikatarkiv – mellannivå** (SCEP)
-    - **Användarcertifikatarkiv – mellannivå** (PKCS, SCEP)
-
-5. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
-
-Profilen skapas och visas i listan. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).
-
-   >[!NOTE]
-   > Android-enheter kan visa ett meddelande om att en tredje part har installerat ett betrott certifikat.
-
-## <a name="step-4-create-scep-or-pkcs-certificate-profiles"></a>Steg 4: Skapa SCEP- eller PKCS-certifikatprofiler
-
-Se någon av följande artiklar för att få hjälp med att konfigurera och tilldela varje typ av certifikatprofil:
-
-- [Konfigurera och hantera SCEP-certifikat med Intune](certificates-scep-configure.md)
-- [Konfigurera och hantera PKCS-certifikat med Intune](certficates-pfx-configure.md)
-
-När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar du SCEP- eller PKCS-certifikatprofiler för varje plattform som du vill använda. När du skapar en SCEP-certifikatprofil anger du en betrodd certifikatprofil för samma plattform. Detta steg länkar de två certifikatprofilerna, men du måste fortfarande tilldela varje profil separat.
-
-## <a name="next-steps"></a>Nästa steg
-
-[Tilldela enhetsprofiler](device-profile-assign.md)  
-[Använd S/MIME att signera och kryptera e-postmeddelanden](certificates-s-mime-encryption-sign.md)  
-[Använd tredje parts certifikatutfärdare](certificate-authority-add-scep-overview.md)
-
-## <a name="see-also"></a>Se även
-
-[Felsökning av NDES-konfiguration för användning med Microsoft Intune-certifikatprofiler](https://support.microsoft.com/help/4459540)
-
-[Felsökning av SCEP-certifikatprofildistribution i Microsoft Intune](https://support.microsoft.com/help/4457481)

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c5ddb32502aa15f6eaf8f5866772ecd32e970d4
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: faff917dfafaaedb988cbbfb8174547f0b0ccf3b
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648444"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122254"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Lägg till certifikatutfärdarpartner i Intune med hjälp av SCEP
 
@@ -42,7 +42,7 @@ Den här artikeln innehåller en översikt över den här funktionen från ett a
 
 ## <a name="overview"></a>Översikt
 
-Följande steg ger en översikt över utfärdande av SCEP-certifikat i Intune:
+Följande steg ger en översikt över användning av SCEP för certifikat i Intune:
 
 1. I Intune skapar en administratör en SCEP-certifikatprofil och riktar sedan profilen till användare eller enheter.
 2. Enheten checkar in till Intune.
@@ -106,9 +106,9 @@ Se till att du har behörighet att registrera en Azure AD-app. Se [Nödvändiga 
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Konfigurera och distribuera en SCEP-certifikatprofil
 Som administratör skapar du en SCEP-certifikatprofil att rikta mot användare eller enheter. Tilldela sedan profilen.
 
-- [Skapa en SCEP-certifikatprofil](certificates-scep-configure.md#create-a-scep-certificate-profile)
+- [Skapa en SCEP-certifikatprofil](certificates-profile-scep.md#create-a-scep-certificate-profile)
 
-- [Tilldela certifikatprofilen](certificates-scep-configure.md#assign-the-certificate-profile)
+- [Tilldela certifikatprofilen](certificates-profile-scep.md#assign-the-certificate-profile)
 
 ## <a name="removing-certificates"></a>Ta bort certifikat
 
