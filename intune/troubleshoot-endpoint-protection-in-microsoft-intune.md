@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 08/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: c76466acb375fe49afefc542606350733970f416
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353340"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302341"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problem med Endpoint Protection och möjliga lösningar i Microsoft Intune
 
@@ -60,20 +60,20 @@ Du kan få ett meddelande om att vissa funktioner är inaktiverade. Du får de h
 **Möjliga lösningar**: aktivera dessa funktioner. Anvisningar finns i:
 
 - [Lägg till Endpoint Protection-inställningar](endpoint-protection-configure.md)
-- [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Windows Defender Antivirus](device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [Slutanvändare: aktivera realtidsskydd om du vill komma åt företagsresurser](/intune-user-help/turn-on-defender-windows)
 
 ### <a name="malware-definitions-out-of-date"></a>Definitionerna för skadlig kod är inaktuella
 
 Den här statusen visas när definitionerna för skadlig kod på enheten är inaktuella med 14 dagar eller mer. Meddelandet kan till exempel indikera om enheten är frånkopplad från Internet eller om definitionerna för skadlig kod är inaktuella.
 
-[Möjliga lösningar](device-restrictions-windows-10.md#windows-defender-antivirus): om definitionerna för skadlig kod är inaktuella, kan du uppdatera definitionerna med **Windows Defender Antivirus**.
+[Möjliga lösningar](device-restrictions-windows-10.md#microsoft-defender-antivirus): om definitionerna för skadlig kod är inaktuella, kan du uppdatera definitionerna med **Windows Defender Antivirus**.
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Det är dags för Fullständig sökning eller Snabbsökning
 
 En fullständig sökning eller Snabbsökning har inte slutförts de senaste 14 dagarna. Det här scenariot kan inträffa om enheten startar om under en fullständig genomsökning.
 
-**Möjliga lösningar**: om en genomsökning har förfallit kan du köra en genomsökning en gång, eller schemalägga återkommande genomsökningar. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Möjliga lösningar**: om en genomsökning har förfallit kan du köra en genomsökning en gång, eller schemalägga återkommande genomsökningar. Se [Windows Defender Antivirus](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="another-endpoint-protection-application-running"></a>Ett annat program för slutpunktsskydd körs
 
