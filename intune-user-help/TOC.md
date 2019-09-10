@@ -4,7 +4,7 @@
 
 ## [Vilken information kan mitt företag se med Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
-## [Uppdatera lösenordet](password-does-not-meet-it-administrator-requirements.md)
+## [Krav på enhetslösenord](password-does-not-meet-it-administrator-requirements.md)
 
 ## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)
 
