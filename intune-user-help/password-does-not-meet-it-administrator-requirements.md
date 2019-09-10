@@ -1,11 +1,11 @@
 ---
-title: Ditt lösenord uppfyller inte kraven från företagets support | Microsoft Docs
-description: ''
+title: Lösen ords krav för enheter i Intune-företagsportal | Microsoft Docs
+description: I den här artikeln beskrivs vanliga lösen ords krav som din organisation kan genomdriva.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 09/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,42 +16,86 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac0a8b076fe6f21621826dec32f7aaa72eba88c7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bce3ae1fd5386c749285313f29fc88cf7b464750
+ms.sourcegitcommit: d0d320fbac69b063b4264491d8a918cfe12bd485
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837024"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751768"
 ---
-# <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Ditt lösenord uppfyller inte kraven från företagets support
+# <a name="device-password-requirements-for-enrolled-devices"></a>Krav på enhets lösen ord för registrerade enheter
 
-Företagssupporten kräver ett lösenord för att skydda din enhet. Lösenordet som du använder för att komma åt företags- eller skolresurser uppfyller för närvarande inte ett eller flera krav som företagets support har konfigurerat. Åtgärda problemet genom att följa anvisningarna som visas på enheten. Beskrivningar av problemen visas nedan.
+Din organisation kan kräva att du skapar ett säkrare lösen ord innan du ger åtkomst till arbets-eller skol resurser. I den här artikeln beskrivs vanliga lösen ords krav för Windows 10-, iOS-, macOS-och Android-enheter. Din organisation kanske inte tillämpar alla dessa krav.  
 
-Stegvisa instruktioner som krävs för att ställa in en PIN-kod eller ett lösenord finns i länken för din typ av enhet:
 
-- [Ange PIN-koden eller lösenordet för din Android-enhet](set-your-pin-or-password-android.md)
-- [Ange eller ändra lösenordet för din iOS-enhet](set-or-change-your-passcode-ios.md)
-- [Ange eller ändra lösenordet för din Windows-enhet](set-or-change-your-password-windows.md)
+När ett lösen ord eller ett lösen ord inte längre uppfyller ett krav får du ett meddelande från Företagsportal. Den beskriver de ändringar du behöver göra. Om det inte finns någon information i meddelandet använder du den här artikeln som referens för att jämföra med ditt nuvarande lösen ord.  
 
-> [!NOTE]
-> Kontakta företagets support om du har problem med att skapa ett lösenord som uppfyller kraven. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
+> [!IMPORTANT]
+> Om du har ändrat ditt lösen ord för att uppfylla kraven, men fortfarande tar emot meddelanden, startar du om enheten.  
 
-## <a name="pin-or-password-issue-descriptions"></a>Beskrivningar av problem relaterade till PIN-koder eller lösenord
+Kontakta din IT-support om du behöver ytterligare hjälp eller för att ta reda på din organisations särskilda krav. Kontaktuppgifterna hittar du på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-| **Problem** | **Beskrivning** |
+## <a name="windows-10-password-requirements"></a>Krav för Windows 10-lösenord
+
+| Meddelande | Så här åtgärdar du |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Lösenordet innehåller inte några komplexa tecken.** | Företagets support kräver att du använder komplexa tecken i lösenordet. Exempel på komplexa tecken kan vara siffror, versaler och symboler som $, % och #. |
-| **Lösenordet är för enkelt och inte tillräckligt säkert.** | Exempel på enkla lösenord kan vara 1234 eller 1111. Om du inte är säker på vilken typ av lösenord som tillåts försöker du se till att lösenordet inte innehåller sekventiella eller upprepade siffror som de i exemplet. |
-| **Lösenordet har upphört att gälla.** | Lösenordet har gått ut och du måste ange ett nytt som uppfyller kraven som angetts av företagets support. |
-| **Lösenordet har inte angetts.** | Innan du kan komma åt data och e-post för företaget på enheten måste du ange ett lösenord som uppfyller de krav som företagets support har konfigurerat. |
-| **Lösenordet är för kort.** | Företagets support kräver att du använder ett längre lösenord med fler tecken. |
-| **Lösenordet har använts nyligen.** | Företagets support tillåter inte att du använder tidigare lösenord som du har använt förut. Välj ett lösenord som du inte har använt tidigare. |
-| **Lösenordet är inte tillräckligt komplext för att uppfylla kraven.** | Företagets support kräver att du använder mer komplexa tecken i lösenordet. Pröva att använda tecken som siffror och versaler och symboler som $, % och #. Detta kan också gälla andra konton på enheten, så tänk på att kontrollera andra arbetskonton för att säkerställa att lösenordet uppfyller kraven som konfigurerats av administratören för din enhet. |
+| Lösenord måste anges. | Ställ in ett lösenord. Din organisation kräver att du anger ett lösen ord för att låsa upp enheten. |
+| Lösenordet är för enkelt. |  Kontrol lera att lösen ordet inte innehåller sekventiella eller upprepade siffror, till exempel 1234 eller 1111. |
+| Lösenordet är för kort.| Uppdatera eller Ställ in ett lösen ord med fler tecken. Din organisation kräver att ditt lösen ord är en viss längd. Vad de faktiskt väljer varierar, men den minsta längden som de kan kräva är 4 tecken och det högsta värdet är 16. |
+| Lösen ordet får bara innehålla siffror. | Ange ett lösen ord som endast innehåller siffror.|
+| Lösen ordet får bara innehålla alfanumeriska tecken. | Ange ett lösen ord som innehåller en blandning av siffror och bokstäver.|
+| Lösen ordet måste innehålla avancerade tecken. | Lägg till komplexa tecken som siffror, versaler och symboler som `$`, `%`och `#`. Din organisation kräver en blandning av bokstäver, siffror och icke-alfanumeriska tecken för att det ska bli svårare för andra att gissa lösen ordet.|  
+| Lösenordet har upphört att gälla. | Ange ett nytt lösen ord. Din organisation kräver att du ändrar ditt lösen ord efter ett visst antal dagar. |
+| Lösenordet har använts nyligen. | Välj ett lösenord som du inte har använt tidigare. Din organisation kräver att en viss tids period passerar innan du återanvänder ett lösen ord. |
+
+## <a name="ios-passcode-requirements"></a>krav för iOS-lösenord
+
+| Meddelande | Så här åtgärdar du |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lösen ord måste anges.| Ställ in ett lösenord. Din organisation kräver att du anger ett lösen ord för att låsa upp enheten. |
+| Lösen koden är för enkel. |  Kontrol lera att lösen ordet inte innehåller sekventiella eller upprepade siffror, till exempel 1234 eller 1111. |
+| Lösen koden är för kort. | Uppdatera eller Ställ in ett lösen ord med fler tecken. Din organisation kräver att ditt lösen ord är en viss längd. Vad de faktiskt väljer varierar, men den minsta längden som de kan kräva är 4 tecken och det maximala värdet är 14. När du ändrar ditt lösen ord kan du få en uppmaning från Apple som säger att du kan ange 6 eller fler tecken. Det här meddelandet är en system rekommendation för Apple. Om din organisation bara kräver ett lösen ord som är 4 eller 5 tecken, behöver du inte ange ett lösen ord med sex siffror.|  
+| Lösen ordet får bara innehålla siffror. | Ange ett lösen ord som endast innehåller siffror.|
+| Lösen ordet får bara innehålla alfanumeriska tecken.| Ange ett lösen ord som innehåller en blandning av siffror och bokstäver.|
+| Lösen ordet måste innehålla icke-alfanumeriska tecken. | Lägg till `&`specialtecken som `!` `$`, `#`, ,och.`%` Din organisation kräver en blandning av bokstäver, siffror och icke-alfanumeriska tecken för att det ska bli svårare för andra att gissa lösen ordet.|
+| Lösenkoden har gått ut. | Ange ett nytt lösen ord. Din organisation kräver att du ändrar ditt lösen ord efter ett visst antal dagar. |
+| Ditt lösen ord användes för det senaste.| Välj ett lösen ord som du inte har använt tidigare. Din organisation kräver att en viss tids period passerar innan du återanvänder ett lösen ord. |
+|Autentisering av Touch-ID eller ansikts-ID krävs. | Ställ in Touch ID eller ansikts-ID. Din organisation kräver att du autentiserar med någon av dessa metoder innan du använder Autofyll för lösen ord eller kreditkorts information. | 
+
+## <a name="macos-password-requirements"></a>lösen ords krav för macOS
+| Meddelande | Så här åtgärdar du |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lösenord måste anges. | Ställ in ett lösenord. Din organisation kräver att du anger ett lösen ord för att låsa upp enheten. |
+| Lösenordet är för enkelt.|  Kontrol lera att lösen ordet inte innehåller sekventiella eller upprepade siffror, till exempel 1234 eller 1111. |
+| Lösenordet är för kort. | Uppdatera eller Ställ in ett lösen ord med fler tecken. Din organisation kräver att ditt lösen ord är en viss längd.|
+| Lösen ordet får bara innehålla siffror. | Ange ett lösen ord som endast innehåller siffror.|
+| Lösen ordet får bara innehålla alfanumeriska tecken. | Ange ett lösen ord som innehåller en blandning av siffror och bokstäver.|
+| Lösen ordet måste innehålla icke-alfanumeriska tecken. | Lägg till `&`specialtecken som `!` `$`, `#`, ,och.`%` Din organisation kräver en blandning av bokstäver, siffror och icke-alfanumeriska tecken för att det ska bli svårare för andra att gissa lösen ordet.|
+| Lösenordet har upphört att gälla. | Ange ett nytt lösen ord. Din organisation kräver att du ändrar ditt lösen ord efter ett visst antal dagar. |
+| Lösenordet har använts nyligen. | Välj ett lösenord som du inte har använt tidigare. Din organisation kräver att en viss tids period passerar innan du återanvänder ett lösen ord. |
+
+## <a name="android-password-requirements"></a>Krav för Android-lösenord
+| Meddelande | Så här åtgärdar du |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lösenord måste anges. | Ange ett lösen ord eller en PIN-kod. Din organisation kräver att du anger ett lösen ord för att låsa upp enheten. |
+| Lösenordet är för enkelt. |  Kontrol lera att lösen ordet eller PIN-koden inte innehåller sekventiella eller upprepade siffror, till exempel 1234 eller 1111. |
+| Lösenordet är för kort. | Uppdatera eller Ställ in ett lösen ord med fler tecken. Din organisation kräver att ditt lösen ord är en viss längd.|
+| Lösenordet måste innehålla siffror. | Ange ett lösen ord eller en PIN-kod som innehåller siffror.|
+| Lösenordet måste innehålla bokstäver. | Ange ett lösen ord som innehåller bokstäver från alfabetet.|
+| Lösen ordet måste innehålla alfanumeriska tecken. | Ange ett lösen ord som innehåller en blandning av siffror och bokstäver.|
+| Lösen ordet måste innehålla alfanumeriska tecken och symboler. | Ange ett lösen ord som innehåller en blandning av bokstäver `&`, siffror och specialtecken som `$`, `!` `%`,, och `#`. |
+| Lösen ordet måste använda Bio metrisk teknik.| Konfigurera enheten för att använda Bio metrisk autentisering, t. ex. finger avtryck eller ansikts igenkänning.
+| Lösenordet har upphört att gälla. | Ange ett nytt lösen ord. Din organisation kräver att du ändrar ditt lösen ord efter ett visst antal dagar. |
+| Lösenordet har använts nyligen. | Välj ett lösenord som du inte har använt tidigare. Din organisation kräver att en viss tids period passerar innan du återanvänder ett lösen ord. |
 
 ## <a name="next-steps"></a>Nästa steg
 
-Stegvisa instruktioner som krävs för att ställa in en PIN-kod eller ett lösenord finns i länken för din typ av enhet:
+Se följande artiklar för att skapa eller ändra enhetens lösen ord, lösen ord eller PIN-kod.  
 
-- [Ange PIN-koden eller lösenordet för din Android-enhet](set-your-pin-or-password-android.md)
-- [Ange eller ändra lösenordet för din iOS-enhet](set-or-change-your-passcode-ios.md)
-- [Ange eller ändra lösenordet för din Windows-enhet](set-or-change-your-password-windows.md)
+- [Ange lösen ord för Windows 10-enhet](set-or-change-your-password-windows.md)  
+- [Ange lösen ord för iOS-enhet](set-or-change-your-passcode-ios.md)  
+- [Ställ in en PIN-kod eller ett lösenord för en Android-enhet](set-your-pin-or-password-android.md)  
+
+Behöver du fortfarande hjälp? Kontakta en support person. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+

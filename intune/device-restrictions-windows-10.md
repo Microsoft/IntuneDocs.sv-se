@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
-ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
+ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69998949"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302285"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
-Den här artikeln beskriver alla olika inställningar som du kan styra på enheter med Windows 10 och senare. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa inställningar för att tillåta eller inaktivera funktioner, ange lösenordsregler, anpassa låsskärmen använda Windows Defender med mera.
+Den här artikeln beskriver alla olika inställningar som du kan styra på enheter med Windows 10 och senare. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa inställningar för att tillåta eller inaktivera funktioner, ange lösenordsregler, anpassa låsskärmen, använda Microsoft Defender och mer.
 
 Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som sedan tilldelas eller distribueras till dina Windows 10-enheter.
 
@@ -79,8 +79,6 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 
   [ApplicationManagement/LaunchAppAfterLogOn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
 
 De här inställningarna använder CSP:er för [anslutningsprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) och [Wi-Fi-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi), som även visar de Windows-versioner som stöds.
@@ -114,8 +112,6 @@ De här inställningarna använder [CSP för Bluetooth-princip](https://docs.mic
 
   [Användningsguiden för ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) innehåller information om tjänstlistan.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
 De här inställningarna använder [CSP för kontoprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), som även visar de Windows-versioner som stöds.
@@ -124,8 +120,6 @@ De här inställningarna använder [CSP för kontoprincip](https://docs.microsof
 - **Icke-Microsoft-konto**: **Blockera** hindrar slutanvändare från att lägga till icke-Microsoft-konton via användargränssnittet. **Inte konfigurerat** (standard) tillåter användare att lägga till e-postkonton som inte associeras med ett Microsoft-konto.
 - **Synkroniseringsinställningar för Microsoft-konto**: **Inte konfigurerat** (standard) tillåter att enhets- och appinställningar som är associerade med ett Microsoft-konto synkroniseras mellan enheter. **Blockera** förhindrar den här synkroniseringen.
 - **Inloggningsassistent för Microsoft-konton**: när det här anges till **Inte konfigurerat** (standard) kan slutanvändare starta och stoppa tjänsten **Inloggningsassistent för Microsoft-konton** (wlidsvc). Den här operativsystemtjänsten tillåter att användare loggar in på sitt Microsoft-konto. **Inaktivera** hindrar slutanvändare från att kontrollera Inloggningsassistent för Microsoft-konton (wlidsvc).
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="cloud-printer"></a>Molnskrivare
 
@@ -140,8 +134,6 @@ De här inställningarna använder [CSP för EnterpriseCloudPrint-princip](https
 
 > [!TIP]
 > När du har konfigurerat en [Windows Server Hybrid Cloud Print](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview) kan du konfigurera dessa inställningar och sedan distribuera till dina Windows-enheter.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="control-panel-and-settings"></a>Kontrollpanel och inställningar
 
@@ -165,8 +157,6 @@ Klicka på **OK** för att spara ändringarna.
   - **Sekretess**: **Blockera** hindrar åtkomst till området Sekretess i appen Inställningar på enheten. **Inte konfigurerat** (standard) tillåter åtkomst.
   - **Uppdatering och säkerhet**: **Blockera** hindrar åtkomst till området Uppdatering och säkerhet i appen Inställningar på enheten. **Inte konfigurerat** (standard) tillåter åtkomst.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="display"></a>Visning
 
 De här inställningarna använder [CSP för visningsprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), som även visar de Windows-versioner som stöds.
@@ -182,8 +172,6 @@ Med GDI DPI-skalning kan program som inte är DPI-medvetna bli DPI-medvetna per 
   GDI DPI-skalning stängs av för alla äldre program i listan.
 
 Du kan även **Importera** en .csv-fil med listan över appar.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="general"></a>Allmänt
 
@@ -230,8 +218,6 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
 - **Avsluta processer från Aktivitetshanteraren**: Den här inställningen avgör om andra användare än administratörer kan använda Aktivitetshanteraren för att avsluta aktiviteter. **Blockera** förhindrar standardanvändare (icke-administratörer) att använda Aktivitetshanteraren till att avsluta en process eller uppgift på enheten. **Inte konfigurerad** (standard) låter standardanvändare att avsluta en process eller uppgift med Aktivitetshanteraren.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="locked-screen-experience"></a>Låsskärm
 
 - **Aviseringar från Åtgärdscenter (endast mobil)** : **Blockera** hindrar aviseringar från Åtgärdscenter från att visas på enhetens låsskärm. **Inte konfigurerat** (standard) tillåter användare att välja vilka appar som visar meddelanden på låsskärmen.
@@ -255,8 +241,6 @@ Klicka på **OK** för att spara ändringarna.
 
   [CSP för DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="messaging"></a>Meddelandefunktion
 
 De här inställningarna använder [CSP för meddelandeprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging), som även visar de Windows-versioner som stöds.
@@ -264,8 +248,6 @@ De här inställningarna använder [CSP för meddelandeprincip](https://docs.mic
 - **Meddelandesynkronisering (endast mobil)** : **Blockera** hindrar textmeddelanden från att säkerhetskopieras och återställas och hindrar meddelandesynkronisering mellan Windows-enheter. Inaktivera hjälper till att förhindra att information lagras på servrar utanför organisationens kontroll. **Inte konfigurerat** (standard) tillåter användare att ändra de här inställningarna och synkronisera sina meddelanden.
 - **MMS (endast mobil)** : **Blockera** inaktiverar funktionen för att skicka och ta emot MMS på enheten. På företag används den här principen för att inaktivera MMS på enheter som en del av kraven för granskning eller hantering. **Inte konfigurerat** (standard) tillåter att MMS skickas och tas emot.
 - **RCS (endast mobil)** : **Blockera** inaktiverar funktionen för att skicka och ta emot Rich Communication Services (RCS) på enheten. På företag används den här principen för att inaktivera RCS på enheter som en del av kraven för granskning eller hantering. **Inte konfigurerat** (standard) tillåter att RCS skickas och tas emot.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge-webbläsaren
 
@@ -327,7 +309,7 @@ Den här profilen för enhetsbegränsning är direkt kopplad till profilen för 
 - **Meddelande när webbplatser öppnas i Internet Explorer**: Använd den här inställningen för att konfigurera att Microsoft Edge ska visa ett meddelande innan en webbplats öppnas i Internet Explorer 11. Alternativen är:
   - **Visa inte meddelande**: Operativsystemets standardbeteende används, vilket kan innebära att ett meddelande inte visas.
   - **Visa meddelande om att webbplatsen har öppnats i Internet Explorer 11**: Visar meddelandet när webbplatser öppnas i Internet Explorer. Webbplatser öppnas i Internet Explorer. 
-  - **Visa meddelande med alternativ för att öppna webbplatser i Microsoft Edge**: Visar meddelandet när webbplatser öppnas i Edge. Meddelandet innehåller länken **Fortsätt i Microsoft Edge** för att användarna ska kunna välja Microsoft Edge i stället för Internet Explorer.
+  - **Visa meddelande med alternativ för att öppna webbplatser i Microsoft Edge**: Visar meddelandet när webbplatser öppnas i Microsoft Edge. Meddelandet innehåller länken **Fortsätt i Microsoft Edge** för att användarna ska kunna välja Microsoft Edge i stället för Internet Explorer.
 
   > [!IMPORTANT]
   > Den här inställningen kräver att du använder inställningen **Plats för webbplatslista för företagsläge** inställningen **Skicka intranätstrafik till Internet Explorer** eller båda inställningarna.
@@ -335,8 +317,6 @@ Den här profilen för enhetsbegränsning är direkt kopplad till profilen för 
 - **Tillåt Microsoft-kompatibilitetslista**: **Ja** (standard) tillåter användning av en Microsoft-kompatibilitetslista. **Nej** förhindrar Microsoft-kompatibilitetslistan i Microsoft Edge. Med den här listan från Microsoft kan Microsoft Edge korrekt visa webbplatser med kända kompatibilitetsproblem.
 - **Läs in startsidor och sidan Ny flik i förväg**: **Ja** (standard) använder standardbeteendet för operativsystemet, som kan vara att läsa in dessa sidor i förväg. Förinläsningen minimerar den tid det tar att starta Microsoft Edge och läsa in nya flikar. **Nej** förhindrar att Microsoft Edge läser in startsidor och sidan Ny flik i förväg.
 - **Starta startsidor och sidan Ny flik i förväg**: **Ja** (standard) använder standardbeteendet för operativsystemet, som kan vara att starta dessa sidor i förväg. Genom att starta Microsoft Edge i förväg förbättras prestandan och den tid som krävs för att starta Microsoft Edge minimeras. **Nej** förhindrar att Microsoft Edge startar startsidor och sidan Ny flik i förväg.
-
-Klicka på **OK** för att spara ändringarna.
 
 ### <a name="favorites-and-search"></a>Favoriter och sökning
 
@@ -357,8 +337,6 @@ Klicka på **OK** för att spara ändringarna.
 - **Tillåt ändringar av sökmotorn**: **Ja** (standard) tillåter användare att lägga till nya sökmotorer eller att ändra standardsökmotorn i Microsoft Edge. Välj **Nej** om du vill hindra användarna från att anpassa sökmotorn.
 
   Den här inställningen är endast tillgänglig med [normalläge (helskärmsläge för flera appar)](#use-microsoft-edge-kiosk-mode).
-
-Klicka på **OK** för att spara ändringarna.
 
 ### <a name="privacy-and-security"></a>Sekretess och säkerhet
 
@@ -383,8 +361,6 @@ När ”Blockera och aktivera åsidosättning av användaren” är markerat kan
 - **Tillåt datainsamling för levande panel**: **Ja** (standard) tillåter Microsoft Edge att samla in information från Live-paneler som är fästa på Start-menyn. **Nej** förhindrar insamling av den här informationen, vilket kan ge användarna en begränsad funktion.
 - **Användare kan åsidosätta certifikatfel**: **Ja** (standard) tillåter användare att få åtkomst till webbplatser som har fel gällande Secure Sockets Layer/Transport Layer Security (SSL/TLS). **Nej** (rekommenderas för ökad säkerhet) förhindrar användare från att komma åt webbplatser med SSL- eller TLS-fel.
 
-Klicka på **OK** för att spara ändringarna.
-
 ### <a name="additional"></a>Mer information
 
 - **Tillåt Microsoft Edge-webbläsare** (endast mobil): **Ja** (standard) tillåter användning av webbläsaren Microsoft Edge på den mobila enheten. **Nej** förhindrar att Microsoft Edge används på enheten. Om du väljer **Nej** tillämpas de enskilda inställningarna endast på den stationära datorn.
@@ -401,8 +377,6 @@ Klicka på **OK** för att spara ändringarna.
 
   Du kan också **Importera** en CSV-fil som innehåller paketfamiljenamnen. Eller så kan du **Exportera** paketfamiljenamn som du anger.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="network-proxy"></a>Nätverksproxy
 
 De här inställningarna använder [CSP för NetworkProxy-princip](https://docs.microsoft.com/windows/client-management/mdm/networkproxy-csp), som även visar de Windows-versioner som stöds.
@@ -415,8 +389,6 @@ De här inställningarna använder [CSP för NetworkProxy-princip](https://docs.
   - **Portnummer**: Ange portnumret till proxyservern.
   - **Proxyundantag**: Ange de webbadresser som inte får använda proxyservern. Använd semikolon för att avgränsa varje objekt.
   - **Använd ingen proxyserver för lokal adress**: **Inte konfigurerat** (standard) förhindrar användning av en proxyserver för lokala adresser på ditt intranät. **Tillåt** använder en proxyserver för lokala adresser.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="password"></a>Lösenord
 
@@ -466,8 +438,6 @@ De här inställningarna använder [CSP för DeviceLock-princip](https://docs.mi
 
   [Authentication/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="per-app-privacy-exceptions"></a>Sekretessundantag per app
 
 Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har definierat i ”Standardsekretess”.
@@ -496,23 +466,17 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 - **Feedback och diagnostik**: Definiera om den här appen kan komma åt diagnostisk information.
 - **Synkronisering med enheter**: Välj om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med enheten.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="personalization"></a>Anpassning
 
 De här inställningarna använder [CSP för personanpassningsprincip](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), som även visar de Windows-versioner som stöds.
 
 - **URL för skrivbordsbakgrundsbild (endast stationär dator)** : Ange URL:en till en bild i formatet .jpg, .jpeg eller .png som du vill använda som skrivbordsbakgrund i Windows. Användare kan inte ändra bilden. Ange till exempel `https://contoso.com/logo.png`.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="printer"></a>Skrivare
 
 - **Skrivare**: Lista över lokala skrivare som har lagts till.
 - **Standardskrivare**: Ange standardskrivaren.
 - **Användarbehörighet att lägga till nya skrivare**: Tillåt eller blockera användning av lokala skrivare.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="privacy"></a>Sekretess
 
@@ -524,8 +488,6 @@ De här inställningarna använder [CSP för sekretesspolicy](https://docs.micro
 - **Endast lokala aktiviteter**: **Blockera** förhindrar delad användning och identifiering av nyligen använda resurser i aktivitetsväxlingen, enbart baserat på lokal aktivitet. **Inte konfigurerat** (standard) aktiverar den här funktionen.
 
 Du kan konfigurera den information som alla appar på enheten kan komma åt. Du kan också definiera undantag per app med hjälp av **Sekretessundantag per app**.
-
-Klicka på **OK** för att spara ändringarna.
 
 ### <a name="exceptions"></a>Undantag
 
@@ -548,8 +510,6 @@ Klicka på **OK** för att spara ändringarna.
 - **Feedback och diagnostik**: Välj om den här appen ska komma åt diagnostisk information.
 - **Synkronisering med enheter** – Definiera om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med den här datorn, surfplattan eller telefonen.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="projection"></a>Projektion
 
 De här inställningarna använder [CSP för WirelessDisplay-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), som även visar de Windows-versioner som stöds.
@@ -557,8 +517,6 @@ De här inställningarna använder [CSP för WirelessDisplay-princip](https://do
 - **Användarindata från trådlösa visningsmottagare**: **Blockera** hindrar användarindata från trådlösa visningsmottagare. **Inte konfigurerat** (standard) tillåter att en trådlös display skickar indata från tangentbord, mus, penna och pekfunktion tillbaka till källenheten.
 - **Projektion till den här datorn**: **Blockera** hindrar andra enheter från att hitta enheten för projektion. **Inte konfigurerat** (standard) tillåter att enheten kan identifieras och projicera till enheten ovanför låsskärmen.
 - **Kräv en PIN-kod för parkoppling**: Välj **Kräv** för att alltid fråga efter en PIN-kod vid anslutning till en projektionsenhet. **Inte konfigurerat** (standard) kräver inte någon PIN-kod för att enheten ska parkopplas till en projektionsenhet.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="reporting-and-telemetry"></a>Rapportering och telemetri
 
@@ -602,8 +560,6 @@ De här inställningarna använder [CSP för sökpolicy](https://docs.microsoft.
   - **Strikt**: Högsta filtrering mot vuxet innehåll.
   - **Måttlig**: Måttlig filtrering mot vuxet innehåll. Giltiga sökresultat filtreras inte.
 - **Visa webbresultat i sökning**: När det här anges till **Blockera** kan användare inte söka, och webbresultat visas inte i sökning. **Inte konfigurerat** (standard) tillåter användare att söka på webben, och resultaten visas på enheten.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="start"></a>Start
 
@@ -675,8 +631,6 @@ De här inställningarna använder [CSP för startpolicy](https://docs.microsoft
   - **Dölj**: Genvägen döljs, och inställningen inaktiveras i appen Inställningar.
   - **Visa**: Genvägen visas, och inställningen inaktiveras i appen Inställningar.
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
 - **SmartScreen för Microsoft Edge**: **Kräv** inaktiverar Windows Defender SmartScreen och hindrar användarna från att aktivera funktionen. **Inte konfigurerat** (standard) aktiverar SmartScreen. Hjälper till att skydda användarna mot potentiella hot och hindrar användare från att stänga av den.
@@ -693,8 +647,6 @@ Klicka på **OK** för att spara ändringarna.
 
   [CSP för Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
-Klicka på **OK** för att spara ändringarna.
-
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
 De här inställningarna använder [CSP för upplevelseprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), som även visar de Windows-versioner som stöds.
@@ -709,38 +661,96 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
   - **Windows Spotlight-anpassning**: **Blockera** hindrar Windows från att använda diagnostikdata till att ge användaren anpassade funktioner. **Inte konfigurerat** (standard) tillåter att Microsoft använder diagnostikdata för att ge anpassade rekommendationer, tips och erbjudanden om att skräddarsy Windows för användarens behov.
   - **Välkommen till Windows-skärm**: **Blockera** stänger av funktionen för välkomst till Windows i Windows Spotlight. Välkommen till Windows-skärm visas inte när det finns uppdateringar och ändringar av Windows och dess program. **Inte konfigurerat** (standard) tillåter Välkommen till Windows-skärmen, där användarinformation om nya eller uppdaterade funktioner visas.
 
-Klicka på **OK** för att spara ändringarna.
-
-## <a name="windows-defender-antivirus"></a>Windows Defender Antivirus
+## <a name="microsoft-defender-antivirus"></a>Microsoft Defender Antivirus
 
 De här inställningarna använder [CSP för Defender-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), som även visar de Windows-versioner som stöds.
 
-- **Övervakning i realtid**: **Aktivera** hindrar genomsökning i realtid efter skadlig programvara, spionprogram och annan oönskad programvara. **Inte konfigurerat** (standard) tillåter den här funktionen.
-- **Övervaka funktionssätt**: **Aktivera** hindrar Defender från att söka efter kända mönster för misstänkt aktivitet på enheterna. **Inte konfigurerat** (standard) tillåter beteendeövervakning för Windows Defender.
-- **NIS (Network Inspection System)** : NIS hjälper till att skydda enheter mot nätverksbaserade säkerhetsrisker. Det använder signaturer för kända problem från Microsoft Endpoint Protection Center för att identifiera och blockera skadlig trafik.
-- **Sök igenom alla nedladdningar**: Styr om Defender genomsöker alla filer som laddas ner från Internet.
-- **Sök igenom skript som har lästs in via Microsoft-webbläsare**: **Inte konfigurerat** (standard) tillåter Defender-genomsökning av skript som används i Internet Explorer. **Aktivera** förhindrar denna sökning.
-- **Användaråtkomst till Defender**: **Blockera** döljer Windows Defender-användargränssnittet för slutanvändarna. Alla Windows Defender-meddelanden förhindras också. **Inte konfigurerat** (standard) tillåter användaråtkomst till Windows Defender-användargränssnittet. När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
-- **Intervall för signaturuppdatering (i timmar)** : Ange med vilket intervall Defender söker efter nya signaturfiler, 0 till 24. Alternativen är:
+- **Övervakning i realtid**: **Aktivera** inaktiverar genomsökning i realtid efter skadlig programvara, spionprogram och annan oönskad programvara. **Inte konfigurerat** (standard) tillåter den här funktionen.
 
-  - **Inte konfigurerat** (standard)
-  - **Kontrollera inte**: Defender inte söker efter nya signaturfiler.
+  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+- **Övervaka funktionssätt**: **Aktivera** inaktiverar funktionen i Defender som söker efter kända mönster av misstänkt aktivitet på enheterna. **Inte konfigurerat** (standard) tillåter beteendeövervakning för Windows Defender.
+
+  [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+
+- **NIS (Network Inspection System)** : NIS hjälper till att skydda enheter mot nätverksbaserade säkerhetsrisker. Det använder signaturer för kända problem från Microsoft Endpoint Protection Center för att identifiera och blockera skadlig trafik.
+
+  **Inte konfigurerad** (standard) inaktiverar den här funktionen. Användare blockeras inte från att ansluta till kända sårbarheter. När det är inställt på **Aktivera**, aktive ras nätverks skydd och nätverks blockering, och användarna kan inte inaktivera det. Användare blockeras från att ansluta till kända sårbarheter.
+
+  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+
+- **Sök igenom alla hämtningar**: **inte konfigurerat** (standard) har Defender söker igenom alla filer som hämtats från Internet. När inställningen är **aktive**rad är den här funktionen inaktive rad. Därför genomsöker Defender inte alla nedladdade Internetfiler.
+
+  [Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+
+- **Sök igenom skript som har lästs in via Microsoft-webbläsare**: **Inte konfigurerat** (standard) tillåter Defender-genomsökning av skript som används i Internet Explorer. **Aktivera** förhindrar denna sökning.
+
+  [Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
+- **Användaråtkomst till Defender**: **Blockera** döljer Windows Defender-användargränssnittet för slutanvändarna. Alla Windows Defender-meddelanden förhindras också. **Inte konfigurerat** (standard) tillåter användaråtkomst till Windows Defender-användargränssnittet. När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
+
+  [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+
+- **Uppdaterings intervall för säkerhets information (i timmar)** : Ange intervallet som Defender söker efter ny säkerhets information från 0-24. Alternativen är:
+
+  - **Inte konfigurerat** (standard): Sök efter uppdateringar var 8: e timme.
+  - **Kontrol lera inte**: Defender söker inte efter nya Security Intelligence-uppdateringar.
   - **1–24**: `1` kontrollerar varje timme, `2` kontrollerar varannan timme, `24` kontrollerar varje dag och så vidare.
-- **Övervaka fil- och programaktivitet**: Tillåter att Defender övervakar fil- och programaktivitet på enheter.
-- **Dagar innan skadlig kod i karantän tas bort**: Fortsätt att spåra åtgärdad skadlig kod i det antal dagar du anger, så att du manuellt kan kontrollera tidigare berörda enheter. Om du anger antalet dagar till **0** finns skadlig kod kvar i karantänmappen och tas inte bort automatiskt. När det här är inställt på `90` lagras karantänobjekt i 90 dagar i systemet och tas sedan bort.
-- **Gräns för processoranvändning under en genomsökning**: Låter dig begränsa hur mycket processorkraft som genomsökningarna får använda (från **1** till **100**).
-- **Sök igenom arkivfiler**: **Aktivera** hindrar Defender från att söka igenom arkiverade filer, till exempel ZIP- eller CAB-filer. **Inte konfigurerat** (standard) tillåter den här genomsökningen.
+  
+  [Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  
+- **Övervaka fil- och programaktivitet**: Tillåter att Defender övervakar fil- och programaktivitet på enheter. Alternativen är:
+
+  - **Inte konfigurerat** (standard): övervakar alla filer
+  - **Övervakning har inaktiverats**
+  - **Övervaka alla filer**
+  - **Övervaka enbart inkommande filer**
+  - **Övervaka enbart utgående filer**
+
+  [Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+
+- **Dagar innan skadlig kod i karantän tas bort**: Fortsätt att spåra åtgärdad skadlig kod i det antal dagar du anger, så att du manuellt kan kontrollera tidigare berörda enheter. Om du anger antalet dagar till `0`, hålls skadlig programvara kvar i karantänmappen och tas inte bort automatiskt. När det här är inställt på `90` lagras karantänobjekt i 90 dagar i systemet och tas sedan bort.
+
+  [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+
+- **Gräns för processoranvändning under genomsökning**: Låter dig begränsa hur mycket processorkraft som genomsökningar får använda (från `0` till `100`).
+- **Sök igenom arkivfiler**: **Aktivera** stänger av Defender från genomsökning av arkivfiler, till exempel zip-eller CAB-filer. **Inte konfigurerat** (standard) tillåter den här genomsökningen.
+
+  [Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+
 - **Sök igenom inkommande e-postmeddelanden**: **Aktivera** tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten. **Inte konfigurerat** (standard) förhindrar den här e-postgenomsökningen.
+
+  [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+
 - **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**: **Aktivera** förhindrar fullständiga genomsökningar av flyttbara enheter. **Inte konfigurerat** (standard) tillåter att Defender genomsöker flyttbara enheter, till exempel USB-minnen.
+
+  Under en snabb genomsökning kan flyttbara enheter fortfarande genomsökas.
+
+  [Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+
 - **Sök igenom mappade nätverksenheter vid fullständig genomsökning**: **Aktivera** tillåter att Defender genomsöker filer på mappade nätverksenheter. **Inte konfigurerat** (standard) förhindrar den fullständiga genomsökningen. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
+
+  Under en snabb genomsökning kan mappade nätverks enheter fortfarande genomsökas.
+
+  [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+
 - **Sök igenom filer öppnade från nätverksmappar**: **Inte konfigurerat** (standard) tillåter att Defender genomsöker filer på delade nätverksenheter, till exempel filer som nås från en UNC-sökväg. **Aktivera** förhindrar denna sökning. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
+
+  [Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+
 - **Molnskydd**: **Inte konfigurerat** (standard) tillåter att Microsoft Active Protection Service tar emot information om aktiviteter med skadlig kod från enheter som du hanterar. **Aktivera** blockerar den här funktionen.
+
+  [Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
 - **Be användarna att skicka exempel**: Anger om potentiellt skadliga filer som kan kräva ytterligare analys ska skickas automatiskt till Microsoft. Alternativen är:
-  - **Inte konfigurerat**
+
+  - **Inte konfigurerat** (standard): Skicka säkra exempel automatiskt.
   - **Fråga alltid**
   - **Fråga innan personlig information skickas**
   - **Skicka aldrig data**
-  - **Skicka alla data utan att fråga**: Data skickas automatiskt
+  - **Skicka alla data utan att fråga**: Data skickas automatiskt.
+
+  [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Tidpunkt för daglig snabbsökning**: Välj när den dagliga snabbgenomsökningen ska köras. **Inte konfigurerad** kör ingen daglig genomsökning. Om du vill göra fler anpassningar konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
 
@@ -756,12 +766,16 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
     - **Schemalagd dag**: Välj vilken dag genomsökningen ska köras.
     - **Schemalagd tid**: Välj vilken timme genomsökningen ska köras.
 
-  Den här inställningen kan orsaka en konflikt med inställningen **Tidpunkt för daglig snabbsökning**. Några rekommendationer:
-
-  - Om du vill köra en daglig snabbsökning konfigurerar du inställningen **Tidpunkt för daglig snabbsökning**.
-  - Om du vill köra en daglig snabbsökning och en fullständig genomsökning varje vecka konfigurerar du **Tidpunkt för daglig snabbsökning**. Ange **Typ av systemgenomsökning som ska utföras** till en fullständig genomsökning med dag och tid.
-  - Konfigurera inte inställningen **Tidpunkt för daglig snabbsökning** samtidigt som **Typ av systemgenomsökning som ska utföras** är inställd på **Snabbsökning**. Dessa inställningar kan orsaka en konflikt och genomsökningen kanske inte körs.
-  - Om du vill köra en snabbgenomsökning varje tisdag 06:00 konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
+  > [!TIP]
+  > Den här inställningen kan orsaka en konflikt med inställningen **Tidpunkt för daglig snabbsökning**. Några rekommendationer:  
+  >
+  > - Om du vill schemalägga en daglig snabb sökning och en fullständig veckovis fullständig genomsökning:
+  >   1. Konfigurera **tiden för att utföra en daglig snabb genomsöknings** inställning.
+  >   2. Konfigurera den **typ av system genomsökning som ska utföras** för en fullständig genomsökning.
+  > 
+  > - Om du bara vill ha en snabb genomsökning dagligen (ingen fullständig genomsökning) använder du antingen inställningen: **tid för att utföra en daglig snabb sökning eller en** **typ av system genomsökning som ska utföras**. Om du till exempel vill köra en snabbgenomsökning varje tisdag 06:00 konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
+  > 
+  > - Konfigurera inte inställningen **Tidpunkt för daglig snabbsökning** samtidigt som **Typ av systemgenomsökning som ska utföras** är inställd på **Snabbsökning**. Dessa inställningar kan orsaka en konflikt och genomsökningen kanske inte körs.
 
   [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
@@ -774,7 +788,10 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
 
   Mer information om potentiellt oönskade appar finns i [Identifiera och blockera potentiellt oönskade program](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Åtgärder vid hot om identifierad skadlig kod**: Välj de åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Om det inte är möjligt, väljer Windows Defender det bästa alternativet för att oskadliggöra hotet. Alternativen är:
+  [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+- **Åtgärder vid identifiering av skadlig kod**: Välj hur du vill hantera hot mot skadlig kod. **Inte konfigurerat** (standard) låter Microsoft Defender välja det bästa alternativet. När alternativet ställs in på **Aktivera**, väljer du vilka åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Alternativen är:
+  
   - **Rensa**
   - **Karantän**
   - **Ta bort**
@@ -782,15 +799,15 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   - **Användardefinierad**
   - **Blockera**
 
-Klicka på **OK** för att spara ändringarna.
+  Om åtgärden inte är möjlig väljer Windows Defender det bästa alternativet för att säkerställa att hotet åtgärdas. 
+
+  [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="windows-defender-antivirus-exclusions"></a>Windows Defender antivirusundantag
 
 - **Filer och mappar som ska undantas från genomsökningar och realtidsskydd**: Lägger till en eller flera filer och mappar, som t.ex. **C:\Path** eller **%ProgramFiles%\Path\filename.exe**, i undantagslistan. Dessa filer och mappar tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
 - **Filnamnstillägg som ska undantas från genomsökningar och realtidsskydd**: Lägg till ett eller flera filnamnstillägg, som t.ex. **jpg** eller **txt**, i undantagslistan. Filer med dessa filnamnstillägg tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
 - **Processer som ska undantas från genomsökningar och realtidsskydd**: Lägg till en eller flera processer av typen **.exe**, **.com** eller **.scr** i undantagslistan. Dessa processer tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
-
-Klicka på **OK** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
 

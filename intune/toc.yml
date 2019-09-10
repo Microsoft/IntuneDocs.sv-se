@@ -857,8 +857,8 @@
                   href: custom-settings-windows-10.md
             - name: Säkerhetsbaslinjer
               items:
-                - name: Windows 10-baslinjeinställningar
-                  href: security-baseline-settings-mdm.md
+                - name: Windows 10 MDM-baslinjeinställningar
+                  href: security-baseline-settings-mdm-all.md
                 - name: Microsoft Defender ATP-baslinjeinställningar
                   href: security-baseline-settings-defender-atp.md
             - name: Windows Update-inställningar
@@ -1047,10 +1047,6 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Vanliga fel med Endpoint Protection
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-        - name: Arkiv för säkerhetsbaslinjer
-          items:
-            - name: Arkiverade MDM-säkerhetsbaslinjer
-              href: security-baseline-settings-mdm-archive.md
     - name: Guider för implementeringsscenarier
       items:
         - name: Skydda Exchange Online
