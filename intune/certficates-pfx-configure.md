@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf4559d03f7dfc8ec8c48242defa391b4b49e41a
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 25beef7e6593865b92e349163768ded5ce3b9e2d
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122404"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376939"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -73,7 +73,7 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
   - Installera anslutningsappen för importerade PFX-certifikat för Microsoft Intune på din server.  
   - För att automatiskt få viktiga uppdateringar ser du till att brandväggarna är öppna så att anslutningsappen tillåts kontakta **autoupdate.msappproxy.net** på port **443**.   
 
-  Mer information om alla nätverksslutpunkter som anslutningen måste kunna komma åt finns i [Microsoft Intune Certificate Connector](intune-endpoints.md#microsoft-intune-certificate-connector).
+  Mer information om alla nätverksslutpunkter som anslutningen måste kunna komma åt finns i [Microsoft Intune Certificate Connector](intune-endpoints.md).
 
 - **Windows Server**:  
   Du använder en Windows Server som värd för:

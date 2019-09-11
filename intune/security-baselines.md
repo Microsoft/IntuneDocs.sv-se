@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7c4cf67c93277ef4b54cdd72a6e06f64dd442e4
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: 6b1b489bbc62e4f47847ad599debcecfc27e1918
+ms.sourcegitcommit: 393953dd2a15aff68b246d3633b47566dd43f7cc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063037"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70815454"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -74,8 +74,8 @@ När du använder flera säkerhetsbaslinjer granskar du inställningarna i var o
 Följande instanser av säkerhetsbaslinjer är tillgängliga för användning med Intune. Använd länkarna om du vill visa inställningarna för den senaste instansen av varje baslinje. 
 
 - **MDM-säkerhetsbaslinje**
-  - [MDM-säkerhetsbaslinje för maj 2019](security-baseline-settings-mdm.md)
-  - [Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018](security-baseline-settings-mdm-archive.md)
+  - [MDM-säkerhetsbaslinje för maj 2019](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)
+  - [Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-preview)
 
 - **Microsoft Defender ATP-baslinje**  
   *(Denna baslinje kan användas när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
@@ -215,7 +215,7 @@ Egentligen inte. Microsofts säkerhetsteam har kontakt med organisationer, som e
 
 ## <a name="next-steps"></a>Nästa steg
 - Visa inställningarna i de senaste versionerna av de tillgängliga baslinjerna:  
-  - [MDM-säkerhetsbaslinje](security-baseline-settings-mdm.md)  
+  - [MDM-säkerhetsbaslinje](security-baseline-settings-mdm-all.md)  
   - [Microsoft Defender ATP-baslinje](security-baseline-settings-defender-atp.md)  
 
 - Kontrollera statusen och övervaka [baslinje och profil](security-baselines-monitor.md)
