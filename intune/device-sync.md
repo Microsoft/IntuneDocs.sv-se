@@ -5,9 +5,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,19 +15,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f13e00abad5b48dcd7996cf9df1cc5756f250d3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 30910de4ae17aa3fde573155bde4643e2c3d67f7
+ms.sourcegitcommit: 1925eba3fb0b30592f07a924119e20b661588d12
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388094"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808625"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synkronisera enheter för att få de senaste principerna och åtgärderna med Intune
 
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen kan hjälpa dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
+Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen kan hjälpa dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -40,15 +37,14 @@ Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart check
 
 ## <a name="sync-a-device"></a>Synkronisera en enhet
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**. 
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
 3. I **Intune** väljer du **Enheter** > **Alla enheter**.
-4. I listan över enheter som du hanterar väljer du en enhet, väljer **Mer** och väljer sedan **Synkronisera**.
+4. I listan med enheter som du hanterar väljer du en enhet för att öppna dess *Översikt*. Välj sedan **Synkronisera**.
 5. Välj **Ja** för att bekräfta.
 
 Välj **Enheter** > **Enhetsåtgärder** om du vill se statusen för synkroniseringsåtgärden.
 
-Du kan hitta incheckningsfrekvensen för Intunes standardprincip i [Uppdatera cykeltider](device-profiles.md).
+Du kan hitta incheckningsfrekvensen för Intunes standardprincip i [Uppdatera cykeltider](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 ## <a name="retryable-error-codes"></a>Återförsöksbara felkoder
 

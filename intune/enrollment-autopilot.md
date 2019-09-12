@@ -17,17 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0316138451c6105f22c196d17c1f2ec3b1f2e375
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: e0f1f7d937f08e32b30ee9facdcca03d263bc27e
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70062932"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842177"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
 
-Det finns fyra typer av Autopilot-distributioner: [Självdistributionsläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) kan användas med kiosker, digital signering eller delade enheter, [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) gör det möjligt för partner eller IT-personal att etablera en Windows 10-dator i förväg, så att den är helt konfigurerad och klar för verksamheten, [Autopilot för befintliga enheter](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) gör att du enkelt kan distribuera den senaste versionen av Windows 10 till dina befintliga enheter och [Användardrivet läge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) för traditionella användare. 
+Det finns fyra typer av Autopilot-distributioner:
+- [Självdistribuerande läge](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) för helskärmslägen, digital signering eller delade enheter
+- Med [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) kan partners eller IT-personal etablera en Windows 10-dator i förväg, så att den är helt konfigurerad och klar för verksamheten - Med [Autopilot för befintliga enheter](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) kan du enkelt distribuera den senaste versionen av Windows 10 till dina befintliga enheter
+- [Användarläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) för traditionella användare. 
 
 
 ## <a name="prerequisites"></a>Krav
@@ -74,9 +77,9 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
     3. För **Medlemstyp** väljer du antingen **Tilldelad** eller **Dynamisk enhet**.
 3. Om du valde **Tilldelad** för **Medlemstyp** i föregående steg väljer du **Medlemmar** på bladet **Grupp** och lägger till Autopilot-enheter till gruppen.
     Autopilot-enheter som ännu inte har registrerats är enheter där namnet är samma som enhetens serienummer.
-4. Om du väljer **Dynamiska enheter** för **Medlemstyp** ovan väljer du sedan **Dynamiska enhetsmedlemmar** på bladet **Grupp** och anger någon av följande koder i rutan **Avancerad regel**.
+4. Om du väljer **Dynamiska enheter** för **Medlemstyp** ovan väljer du sedan **Dynamiska enhetsmedlemmar** på bladet **Grupp** och anger någon av följande koder i rutan **Avancerad regel**. Det är bara Autopilot-enheter som samlas in av de här reglerna, eftersom de avser attribut som endast finns i Autopilot-enheter.
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter anger du: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (OrderID) måste du ange: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (Azure AD-enhetens OrderID) måste du ange: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst inköpsorder-ID anger du `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     När du har lagt till koden för **Avancerad regel** väljer du **Spara**.
@@ -93,7 +96,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 4. Välj **Nästa**.
 5. På sidan **Välkomstupplevelse (OOBE)** för **Distributionsläge** väljer du något av följande två alternativ:
     - **Användarstyrda**: Enheter med den här profilen är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs för att registrera enheten.
-    - **Självdistribution (förhandsversion)** : (kräver Windows 10, version 1809 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten.
+    - **Självdistribution (förhandsversion)** : (kräver Windows 10, version 1809 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten. När en enhet inte har någon användare associerad, gäller inte användarbaserade efterlevnadsprinciper. Om du använder ett självdistribuerande läge, tillämpas bara efterlevnadsprinciper som avser enheten.
 
     ![Skärmbild av OOBE-sidan](media/enrollment-autopilot/create-profile-outofbox.png)
 

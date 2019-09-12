@@ -5,22 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b148abfaeffaf02178e34c3e9abfe86f70fb529c
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 0d9fe180e81c9e661954dd0986f05ac3b5e749ed
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960656"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739194"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune  
 
@@ -101,6 +101,7 @@ När du upprättar anslutningen till Microsoft Defender ATP fick Intune ett konf
 
 När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Du kan också publicera enheter med hjälp av en [Grupprincip eller System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
+
 ### <a name="create-the-device-configuration-profile"></a>Skapa en enhetskonfigurationsprofil
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
@@ -122,6 +123,7 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
 
 7. Välj **OK** och **Skapa** för att spara ändringarna, vilket skapar profilen.
 8. [Tilldela en enhetskonfigurationsprofil](device-profile-assign.md) till enheter som du vill utvärdera med Microsoft Defender ATP.  
+
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Skapa och tilldela en efterlevnadsprincip  
 
@@ -179,6 +181,9 @@ Principen för villkorlig åtkomst blockerar åtkomsten till resurser för enhet
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetsefterlevnad** > **Principefterlevnad**.
 3. Hitta din Microsoft Defender ATP-princip i listan och se vilka enheter som är kompatibla eller inkompatibla.
+
+## <a name="view-onboarding-status"></a>Visa registreringsstatus
+Om du vill se registreringsstatus för alla Intune-hanterade Windows 10-enheter, kan du gå till **Enhetsefterlevnad** > **Microsoft Defender ATP**. Från den här sidan kan du också börja skapa en enhetskonfigurationsprofil som kan registrera fler enheter till Microsoft Defender ATP.
 
 ## <a name="next-steps"></a>Nästa steg  
 

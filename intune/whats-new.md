@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09d80964a417772b1f011478db59398ceede5c5e
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 48474ca9fcfafcd050b7ef9c5a64adb56388b9a4
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122146"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842141"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -53,6 +53,25 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-september-9-2019"></a>Veckan då den 9 september 2019 infaller
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="updates-to-microsoft-intune-app----4997846---"></a>Uppdateringar av Microsoft Intune-appen <!-- 4997846 -->
+Microsoft Intune-appen för Android har uppdaterats med följande förbättringar:
+- Uppdaterad och förbättrad layout som inkluderar navigering i nederkant för de viktigaste åtgärderna.
+- Ytterligare en sida har lagts till som visar användarens profil.
+- Visning av interaktiva meddelanden i appen för användaren har lagts till, exempelvis om enhetsinställningarna behöver uppdateras.
+- Visning av anpassade push-meddelanden har lagts till, vilket ger appen samma stöd som nyligen lagts till i företagsportalappen för iOS och Android. Du hittar mer information i [Skicka anpassade meddelanden i Intune](custom-notifications.md).
+
+## <a name="week-of-september-2-2019"></a>Veckan då den 2 september 2019 infaller
+
+### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
+
+#### <a name="intune-user-interface-update--tenant-status-dashboard-----5273210----"></a>Uppdatering av Intunes användargränssnitt – Instrumentpanel för klientorganisationsstatus  <!-- 5273210  -->
+Användargränssnittet för instrumentpanelen med klientorganisationsstatus har uppdaterats så att den överensstämmer med Azures användargränssnitt. Mer information finns i [Klientorganisationsstatus](tenant-status.md).
+
 
 ## <a name="week-of-august-26-2019"></a>Den vecka som börjar 26 augusti 2019
 
@@ -185,7 +204,7 @@ I Intune kan du skapa principer för att använda Windows Defender Antivirus fö
 
 I den här uppdateringen ändras detta beteende. Det innebär att inställningarna **tid det tar att utföra en daglig snabbsökning** och **typ av systemgenomsökning som ska utföras** visar statusen Genomförd när skanningen slutförs korrekt och visar Misslyckad när inställningarna inte tillämpas. 
 
-Mer information om inställningarna för Windows Defender Antivirus finns i [Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med Intune](device-restrictions-windows-10.md#windows-defender-antivirus). 
+Mer information om inställningarna för Windows Defender Antivirus finns i [Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med Intune](device-restrictions-windows-10.md#microsoft-defender-antivirus). 
 
 ### <a name="device-enrollment"></a>Enhetsregistrering
 

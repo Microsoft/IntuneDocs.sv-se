@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/28/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 608f9045d676a756c4ee7440072040075e497605
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214331"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376930"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
 
 När du hanterar enheter i din organisation är det bra att skapa en grupp med inställningar som tillämpas på olika enhetsgrupper. Anta att du har flera enhetsgrupper. För grupp A vill du tilldela en viss uppsättning inställningar. För grupp B vill du tilldela en annan uppsättning inställningar. Du vill även ha en enkel vy över de inställningar du kan konfigurera.
 
-Du kan slutföra den här uppgiften med **Administrativa mallar** i Microsoft Intune. De administrativa mallarna innehåller hundratals inställningar som styr funktionerna i Internet Explorer, Microsoft Edge, Microsoft Office-program, fjärrskrivbord, OneDrive, lösenord och PIN-koder med mera. Med de här inställningarna kan gruppadministratörer hantera grupprinciper i molnet.
+Du kan slutföra den här uppgiften med **Administrativa mallar** i Microsoft Intune. De administrativa mallarna innehåller hundratals inställningar som styr funktionerna i Microsoft Edge version 77 och senare, Internet Explorer, Microsoft Office-program, fjärrskrivbord, OneDrive, lösenord och PIN-koder med mera. Med de här inställningarna kan gruppadministratörer hantera grupprinciper i molnet.
 
-Windows-inställningarna liknar inställningarna för grupprinciper (GPO) i Active Directory (AD). De här inställningarna är inbyggda i Windows och är [ADMX-baserade inställningar](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) som använder XML. Office-inställningarna är ADMX-inmatade och använder ADMX-inställningarna i [Office administrativa mallfiler](https://www.microsoft.com/download/details.aspx?id=49030). Men Intune-mallarna är 100 % molnbaserade. De ger ett enkelt och rakt sätt att konfigurera inställningarna på, och hittar de inställningar du vill ha.
+Windows-inställningarna liknar inställningarna för grupprinciper (GPO) i Active Directory (AD). De här inställningarna är inbyggda i Windows och är [ADMX-baserade inställningar](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) som använder XML. Office- och Microsoft Edge-inställningarna är ADMX-inmatade och använder ADMX-inställningarna i [Offices administrativa mallfiler](https://www.microsoft.com/download/details.aspx?id=49030) samt [Microsoft Edges administrativa mallfiler](https://www.microsoftedgeinsider.com/enterprise). Men Intune-mallarna är 100 % molnbaserade. De ger ett enkelt och rakt sätt att konfigurera inställningarna på, och hittar de inställningar du vill ha.
 
 **Administrativa mallar** är inbyggda i Intune och kräver inga anpassningar, inklusive användning av OMA-URI. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa mallinställningar som en heltäckande funktion för hantering av dina Windows 10-enheter.
 
@@ -58,16 +58,17 @@ Den här artikeln listar stegen för att skapa en mall för Windows 10-enheter o
     > [!TIP]
     > Windows-inställningarna i Intune motsvarar den lokala grupprincipen sökväg som du ser i redigeraren för grupprincipobjekt (`gpedit`).
 
-5. Som standard visas **alla produkter** i listrutan. I listan kan du även filtrera inställningarna så att endast inställningar för **Windows**, **Office** eller **Microsoft Edge** visas:
+5. Som standard visas **alla produkter** i listrutan. I listan kan du även filtrera inställningarna så att endast inställningar för **Windows**, **Office** eller **Edge version 77 eller senare** visas:
 
     ![Filtrera listan för att visa alla Windows- och alla Office-inställningar i administrativa mallar i Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Microsoft Edge-inställningar gäller för:
     >
-    > - Windows 10 RS4 och senare med [KB 4512509](https://support.microsoft.com/kb/4512509) installerat.
-    > - Windows 10 RS5 och senare med [KB 4512534](https://support.microsoft.com/kb/4512534) installerat.
-    > - Windows 10 19H1 och senare med [KB 4512941](https://support.microsoft.com/kb/4512941) installerat.
+    > - Microsoft Edge version 77 och senare. Information om hur du konfigurerar Microsoft Edge version 45 och tidigare finns i [inställningarna för Microsoft Edge-webbläsarens enhetsbegränsning](device-restrictions-windows-10.md#microsoft-edge-browser).
+    > - Windows 10 RS4 och senare med [KB 4512509](https://support.microsoft.com/kb/4512509) installerat
+    > - Windows 10 RS5 och senare med [KB 4512534](https://support.microsoft.com/kb/4512534) installerat
+    > - Windows 10 19H1 och senare med [KB 4512941](https://support.microsoft.com/kb/4512941) installerat
 
 6. Välj en inställning. Filtrera exempelvis på **Office** och välj **Aktivera begränsad bläddring**. En detaljerad beskrivning av inställningen visas. Välj **Aktiverad**, **Inaktiverad** eller lämna inställningen som **Inte konfigurerad** (standard). Den detaljerade beskrivningen förklarar även vad som händer när du väljer **Aktiverad**, **Inaktiverad** eller **Inte konfigurerad**.
 7. Klicka på **OK** för att spara ändringarna.

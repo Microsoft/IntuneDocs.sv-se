@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2019
+ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,28 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: bffbc96e945d522453c299717a6eb413354a4af4
+ms.sourcegitcommit: 98f2597eec28c6096985d5a1acae72430c2afb1a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021760"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70878050"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
-Använd Microsoft Intune för att skicka anpassade meddelanden till användare av hanterade iOS- och Android-enheter. Dessa meddelanden visas som push-standardmeddelanden från appen Företagsportal på en användares enhet, precis som meddelanden från andra program på enheten visas. Anpassade Intune-meddelanden stöds inte av Windows-enheter.   
+Använd Microsoft Intune för att skicka anpassade meddelanden till användare av hanterade iOS- och Android-enheter. Dessa meddelanden visas som push-standardmeddelanden från företagsportalappen och Microsoft Intune-appen på en användares enhet, på samma sätt som meddelanden från andra program visas på enheten. Anpassade Intune-meddelanden stöds inte av Windows-enheter.   
 
 Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högst 500 tecken. Dessa meddelanden kan anpassas för valfritt kommunikationssyfte.
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Vanliga scenarier för att skicka anpassade meddelanden  
 
-- Använd anpassade meddelanden för att avisera specifika användare om en ny app som är tillgänglig i appen Företagsportal.  
+- Använd anpassade meddelanden till att avisera specifika användare när en ny app är tillgänglig i företagsportalen.  
 - Meddela alla anställda om en ändring i schemat, till exempel om nedstängning av en byggnad på grund av dåligt väder.  
 
 ## <a name="considerations-for-using-custom-notifications"></a>Att tänka på när du använder anpassade meddelanden  
 
 **Enhetskonfiguration**:  
-- Appen Företagsportal måste vara installerad på enheten innan användarna kan ta emot anpassade meddelanden. De måste också ha konfigurerade behörigheter som tillåter att appen Företagsportal kan skicka push-meddelanden. Appen Företagsportal uppmanar användarna att tillåta aviseringar varje gång den installeras eller uppdateras.  
+- Företagsportalappen eller Microsoft Intune-appen måste vara installerad på enheten innan användarna kan ta emot anpassade meddelanden. De måste också ha konfigurerat behörigheter som tillåter att företagsportalappen eller Microsoft Intune-appen skickar push-meddelanden. Om det behövs kan företagsportalappen och Microsoft Intune-appen uppmana användarna att tillåta aviseringar.  
 - Google Play Services är ett obligatoriskt beroende i Android.  
 - Enheten måste vara MDM-registrerad.
 
@@ -51,8 +51,8 @@ Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högs
 - Grupper kan innehålla användare eller enheter, men meddelanden skickas endast till användare, och skickas till alla iOS- eller Android-enheter som användaren har registrerat.  
 
 **Leverans**:  
-- Intune skickar meddelanden till användarnas Företagsportal-app, som sedan skapar push-meddelandet. Användarna behöver inte vara inloggade i appen för att meddelandet ska kunna push-överföras till enheten.  
-- Intune och appen Företagsportal kan inte garantera leverans av ett anpassat meddelande. Anpassade meddelanden kan visas efter flera timmars fördröjning, eller kanske inte alls. Därför bör de inte användas för brådskande meddelanden.  
+- Intune skickar meddelandet till användarnas företagsportalapp eller Microsoft Intune-appen, som sedan skapar push-meddelandet. Användarna behöver inte vara inloggade i appen för att meddelandet ska kunna push-överföras till enheten.  
+- Varken Intune, företagsportalappen eller Microsoft Intune-appen kan garantera att ett anpassat meddelande levereras. Anpassade meddelanden kan visas efter flera timmars fördröjning, eller kanske inte alls. Därför bör de inte användas för brådskande meddelanden.  
 - Anpassade meddelanden från Intune visas på enheter som vanliga push-meddelanden. Om appen Företagsportal är öppen på en iOS-enhet när den tar emot meddelandet visas meddelandet i appen i stället för som ett push-meddelande.  
 - Anpassade meddelanden kan visas på låsskärmar på både iOS- och Android-enheter, beroende på enhetsinställningarna.  
 - Andra appar kan ha åtkomst till data i dina anpassade meddelanden på Android-enheter. Använd dem inte för känslig kommunikation.  
@@ -80,7 +80,7 @@ Intune spårar inte de anpassade meddelanden som du skickar, och enheterna logga
 
 ## <a name="receive-a-custom-notification"></a>Ta emot ett anpassat meddelande  
 
-På en enhet ser användarna anpassade meddelanden som skickas av Intune som ett push-standardmeddelande från appen Företagsportal. Dessa meddelanden liknar de push-meddelanden som användarna tar emot från andra appar på enheten.  
+På en enhet ser användarna anpassade meddelanden som skickas av Intune som ett push-standardmeddelande från företagsportalappen eller Microsoft Intune-appen. Dessa meddelanden liknar de push-meddelanden som användarna tar emot från andra appar på enheten.  
 
 Om appen Företagsportal är öppen när ett meddelande tas emot på en iOS-enhet visas meddelandet i appen i stället för som ett push-meddelande.  
 

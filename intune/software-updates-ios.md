@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a5c9dea847ace51c7d6f06cfa43c44beead18f8
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 6df42d908169ab591150e88e03f2f419710c9e54
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373422"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739210"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Lägga till principer för iOS-programuppdatering i Intune
 
@@ -53,14 +53,8 @@ Enheten checkar in med Intune ungefär var 8:e timme. Om en uppdatering är till
 
     - **Fördröj synligheten för programuppdateringar för slutanvändare utan ändring av schemalagda uppdateringar (dagar)** : 
 
-      **Den här inställningen har flyttats till [Enhetsbegränsningar](device-restrictions-ios.md#general). Den kommer att tas bort från den här platsen i portalen**. Under en kort period kan befintliga principer ändras här. Efter ungefär en månad tas den här inställningen bort från befintliga principer.
-
-      Vi rekommenderar följande för att begränsa påverkan:
-        - Ta bort den befintliga principen från den här platsen i portalen.
-        - Skapa en ny [princip för enhetsbegränsning](device-restrictions-ios.md#general).
-        - Ha samma användare som mål som den ursprungliga principen hade.
-
-      Om det finns en konflikt gör den här inställningen ingenting *såvida inte* de två värdena är identiska. För att förhindra konflikt bör du ändra eller ta bort den befintliga principen från den här platsen i portalen.
+      **Om du vill fördröja visningen av programuppdateringar under en viss tid på dina övervakade iOS-enheter, konfigurerar du inställningarna i [Enhetsbegränsningar.](device-restrictions-ios.md#general)
+     
       > [! Viktigt]  
       > En princip som har en *Starttid* och en *Sluttid* på 12:00 tolkas som 0 timmar och inte som 24 timmar. Detta resulterar i att det inte blir någon begränsning.  
 
