@@ -546,10 +546,11 @@
         - name: Vad är apphantering i Intune?
           href: app-management.md
           displayName: mam-we
-        - name: Lägg till översikt över appar
-          href: apps-add.md
-          displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
+        - name: Lägga till appar
           items:
+            - name: Lägg till översikt över appar
+              href: apps-add.md
+              displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
             - name: Skyddade appar i Intune
               href: apps-supported-intune-apps.md
             - name: Store-appar
@@ -561,9 +562,10 @@
                 - name: Windows Phone 8.1 Store-appar
                   href: store-apps-windows-phone-8-1.md
                 - name: Microsoft Store-appar
-                  href: store-apps-windows.md
                   items:
-                    - name: Lägg till företagsportalappen manuellt
+                    - name: Windows-appar
+                      href: store-apps-windows.md
+                    - name: Företagsportalappen
                       href: store-apps-company-portal-app.md
                 - name: Google Play-appar som hanteras
                   href: apps-add-android-for-work.md
@@ -571,10 +573,13 @@
                   href: apps-add-office365.md
                 - name: Office 365-appar för macOS
                   href: apps-add-office365-macos.md
+            - name: Webbappar
+              href: web-app.md
+              displayName: web; web link; weblink; web-link
+            - name: Inbyggda appar
+              href: apps-add-built-in.md
             - name: Skapa din app (LOB)
               items:
-                - name: Win32-apphantering
-                  href: apps-win32-app-management.md
                 - name: Android LOB-appar
                   href: lob-apps-android.md
                 - name: iOS LOB-appar
@@ -587,11 +592,8 @@
                   href: app-sideload-windows.md
                 - name: macOS LOB-appar
                   href: lob-apps-macos.md
-            - name: Webbappar
-              href: web-app.md
-              displayName: web; web link; weblink; web-link
-            - name: Inbyggda appar
-              href: apps-add-built-in.md
+            - name: Win32-apphantering
+              href: apps-win32-app-management.md
             - name: PowerShell-skript
               href: intune-management-extension.md
         - name: Tilldela appar
@@ -849,7 +851,7 @@
                   href: vpn-settings-windows-10.md
                 - name: Wi-Fi
                   href: wi-fi-settings-windows.md
-                - name: Utbildning
+                - name: Säker utvärdering
                   href: education-settings-windows.md
                 - name: Delad enhet för flera användare
                   href: shared-user-device-settings-windows.md
