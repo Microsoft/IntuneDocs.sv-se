@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ff5b411f14fef4ad294b0dd8b265680fd67df08
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 04cafd2cf69bbd42a35ade3ae180e8af8789c938
+ms.sourcegitcommit: e8d788d033be4320cd72c98c892b383e1bb77e18
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402767"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70912815"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Samlings-ID:n för inbyggda iOS-appar som du kan använda i Intune
 
@@ -30,11 +30,12 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 
 | Samlings-ID                   | Appnamn     | Utgivare |
 |-----------------------------|--------------|-----------|
-| com.apple.AppStore          | Appbutik    | Apple     |
+| com. Apple. Store             | Appbutik    | Apple     |
 | com.apple.calculator        | Kalkylator   | Apple     |
 | com.apple.mobilecal         | Kalender     | Apple     |
 | com.apple.camera            | Kamera       | Apple     |
 | com.apple.mobiletimer       | Klocka        | Apple     |
+| com. Apple. clipss             | Klipp        | Apple     |
 | com.apple.compass           | Kompass      | Apple     |
 | com.apple.MobileAddressBook | Kontakter     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
@@ -74,7 +75,7 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.VoiceMemos        | VoiceMemos   | Apple     |
 | com.apple.Passbook          | Plånbok       | Apple     |
 | com.apple.Bridge            | Titta på        | Apple     |
-| com.apple.weather           | Väder      | Apple     |
+| com.apple.weather           | Väder      | Apple     |      
 
 ## <a name="next-steps"></a>Nästa steg
 
