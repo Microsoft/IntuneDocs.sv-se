@@ -1,6 +1,6 @@
 # Användarhjälp för Intune
 
-## [Använd hanterade enheter för att få arbetet gjort](use-managed-devices-to-get-work-done.md)
+## [Vad är enhetsregistrering](use-managed-devices-to-get-work-done.md)
 
 ## [Vilken information kan mitt företag se med Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
