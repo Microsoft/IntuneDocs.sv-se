@@ -519,6 +519,8 @@
             - name: PKCS
               href: certficates-pfx-configure.md
               displayName: ksp
+            - name: Importerad PKCS
+              href: certificates-imported-pfx-configure.md
             - name: Använd S/MIME för att kryptera e-post
               href: certificates-s-mime-encryption-sign.md
             - name: Använd tredje parts certifikatutfärdare med SCEP
@@ -744,6 +746,8 @@
               href: troubleshoot-certificate-connector-events.md
             - name: Felsöka Exchange Connector
               href: troubleshoot-exchange-connector.md
+        - name: Med hjälp av Intune-dokument
+          href: use-docs.md
         - name: Få support
           href: get-support.md
 - name: Referens
