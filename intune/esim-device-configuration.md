@@ -14,19 +14,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 863d8d03836573a7425f2958e52a1e0331b34a10
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354380"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080076"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
-
-> [!NOTE]
-> Microsoft vill gärna höra från dig. Skicka frågor eller starta en diskussion genom att skicka e-post till `eSIMonIntune@microsoft.com`.
-
-## <a name="introduction"></a>Introduktion
 
 eSIM är ett inbäddat SIM-kort som du kan använda för att ansluta till Internet via en mobildataanslutning på en eSIM-kompatibel enhet, till exempel [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Med ett eSIM behöver du inte skaffa ett SIM-kort från din mobiloperatör. Som global resenär kan du även växla mellan mobiloperatörer och dataabonnemang så att du alltid håller dig uppkopplad.
 

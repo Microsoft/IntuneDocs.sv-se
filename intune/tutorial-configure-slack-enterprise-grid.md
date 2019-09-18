@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97bc1658dcd432bdd5e31c7100022959e96c3039
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 83b10bdfacbcf76b9f75b90d99e094b6854d525e
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842079"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061666"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Självstudie: Konfigurera Slack till att använda Intune för EMM och appkonfiguration
 
@@ -77,7 +77,6 @@ Lägg till en appkonfigurationsprincip till Slack för EMM iOS. Appkonfiguration
 5. Välj **Tillhörande app**.
 6. Ange ”Slack för EMM” i sökfältet och välj appen.
 7. Klicka på **OK** och välj sedan **Konfigurationsinställningar**. 
-    - Mer information om konfigurationsnycklar och deras värden finns i dokumentationen på fliken ”Tekniskt” på [Slacks AppConfig-webbsida](https://www.appconfig.org/company/slack/).
 8. Välj **OK** och välj sedan **Lägg till**.
 9. Ange ”Test av appkonfigurationsprincip för Slack” i sökfältet och välj den princip som du just lade till.
 10. Välj **Tilldelningar** under Hantera.

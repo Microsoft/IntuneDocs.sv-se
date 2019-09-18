@@ -8,17 +8,17 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-ms.reviewer: angerobe
+ms.reviewer: pjain
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cf4e365f4e68920ea5d24dc3ce2e1bd5eb9f817
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f63bbc80c055cfcb3bd52f79e7b810094107ec2a
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511598"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080044"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Snabbstart: Skapa och tilldela en anpassad roll
 
@@ -56,10 +56,10 @@ Innan din säkerhetsoperatör kan använda de nya behörigheterna måste du till
 1. I Intune väljer du **Roller** > **Alla roller** > **Säkerhetsåtgärder**.
 2. Välj **Tilldelningar** > **Tilldela** under **Intune-roller**.
 3. Ange *Säkerhetsalternativ* i rutan **Tilldelningsnamn**.
-4. Välj **Medlemmar (grupper)** > **Lägg till**.
+4. Välj **Medlemmar (grupper)**  > **Lägg till**.
 5. Välj gruppen **Contoso-testare**.
 6. Välj **Välj** > **OK**.
-7. Välj **Omfång (grupper)** > **Välj grupper att inkludera** > **Contoso-testare**.
+7. Välj **Omfång (grupper)**  > **Välj grupper att inkludera** > **Contoso-testare**.
 8. Välj **Välj** > **OK** > **OK**.
 
 Nu är alla i gruppen medlemmar i rollen *Säkerhetsåtgärder* och kan granska följande information om en enhet: företagsenhetsidentifierare, enhetsefterlevnadspolicyer, enhetskonfigurationer och organisationsinformation.
