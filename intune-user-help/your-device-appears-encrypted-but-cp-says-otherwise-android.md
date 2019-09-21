@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d63ecdb23b107d844c37d7a805247092116618e1
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 0ec52069c4c53c464cfe5a1e17718ba6725fd0b5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022737"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167441"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Enheten är krypterad men appar säger annars
 
@@ -48,16 +48,17 @@ Det här avsnittet gäller endast för Företagsportal-appen. Om enheten ger dig
 
 ## <a name="specific-manufacturer-issues"></a>Problem med vissa tillverkare
 
-På vissa Android-enheter med version 7.0 och senare krypteras data på ett sätt som strider mot vissa standarder för Android-plattformen. Dessa krypterings metoder sätter i risk för enhets information. Därför stöds inte dessa enheter. 
+På vissa Android-enheter med version 7.0 och senare krypteras data på ett sätt som strider mot vissa standarder för Android-plattformen. Dessa krypterings metoder sätter i risk för enhets information. Därför stöds inte dessa enheter.
 
-En icke-uttömmande lista över Android-enheter som stöds finns i artikeln [operativ system och webbläsare som stöds i Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Om enheten inte finns med i listan kan du läsa tillverkaren av enheten eller kontakta en support tekniker. 
+En icke-uttömmande lista över Android-enheter som stöds finns i artikeln [operativ system och webbläsare som stöds i Intune](https://docs.microsoft.com/intune/supported-devices-browsers.md#supported-samsung-knox-standard-devices). Om enheten inte finns med i listan kan du läsa tillverkaren av enheten eller kontakta en support tekniker.
 
 > [!Note]
-> Microsoft arbetar med tillverkare för att åtgärda eventuella problem som vi påträffar under testning eller som användarna rapporterar till oss. Vi uppdaterar den här artikeln när ny information är tillgänglig. 
+> Microsoft arbetar med tillverkare för att åtgärda eventuella problem som vi påträffar under testning eller som användarna rapporterar till oss. Vi uppdaterar den här artikeln när ny information är tillgänglig.
 
-## <a name="update-devices"></a>Uppdatera enheter   
+## <a name="update-devices"></a>Uppdatera enheter
 
 Om du inte har uppdaterat enheten till den senaste versionen av Android går du till enhetens **inställnings** app och väljer **Uppdatera**.  
 
-## <a name="next-steps"></a>Nästa steg   
+## <a name="next-steps"></a>Nästa steg
+
 Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.  
