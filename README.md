@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1c716f48a46e4fd2dc24d203426c364dd4cd88c0
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 8d76ff182ea4402b6a4cd3242b15288d8bea16b9
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545239"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166460"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Uppförandekod för Microsoft-öppen källkod
 
@@ -23,7 +23,7 @@ Vi **önskar och uppmuntrar till bidrag** från vår community (användare, kund
 * **Använd din webbläsare**: Det finns två alternativ: 
 
     **Alternativ 1: Redigera direkt från docs.microsoft.com**  
-    1. Gå till ämnet, t.ex [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune). 
+    1. Gå till ämnet, t.ex [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](troubleshoot-policies-in-microsoft-intune.md). 
     2. Välj **Redigera** (överst till höger). Detta visar markdown-filen på GitHub-lagringsplatsen.
     3. Välj pennikonen. När du hovrar över pennikonen ser du knappbeskrivningen **Redigera den här filen**. 
     4. Gör dina ändringar och **skicka** dem. 

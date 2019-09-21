@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: 0f78f069f46ce036752fde80519abc03dc7c424c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70062997"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167773"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av Windows-enheter i Microsoft Intune
 
@@ -75,7 +75,7 @@ Det finns flera möjliga lösningar på det här problemet:
 
 ##### <a name="check-device-type-restrictions"></a>Kontrollera begränsningar för enhetstypen
 1. Logga in på [Intune-portalen](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) med ett konto som global administratör.
-2. Gå till**registrerings begränsningar**för **enhets registrering** > och välj sedan **standard** begränsning under begränsningar av enhets **typ**.    
+2. Gå till**registrerings begränsningar**för **enhets registrering** > och välj sedan **standard** begränsning under **begränsningar av enhets typ**.    
 3. Välj **plattformar**och välj sedan **Tillåt** för **Windows (MDM)** .
 
     > [!IMPORTANT]
@@ -265,7 +265,7 @@ Om **användar området för MDM** är inställt på **ingen**, följer du dessa
  
 1. Logga in på [Azure-portalen](https://portal.azure.com/) och välj sedan **Azure Active Directory**.
 2. Välj **mobilitet (MDM och MAM)** och välj sedan **Microsoft Intune**.    
-3. Ange **användar omfång för MDM** till **alla**. Eller ange **MDM** -användarnamnet till **vissa**och välj de grupper som kan registrera sina Windows 10-enheter automatiskt.    
+3. Ange **användar omfång för MDM** till **alla**. Eller ange **MDM-användarnamnet** till **vissa**och välj de grupper som kan registrera sina Windows 10-enheter automatiskt.    
 4. Ange **Mam användar omfång** till **ingen**.
 
 
@@ -388,4 +388,4 @@ Det här problemet beror vanligt vis på felaktigt delegerade behörigheter till
 - [Ställ en fråga i Intunes forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Kontrol lera Microsoft Intune support teamets blogg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Kontrol lera Microsoft Enterprise Mobility and Security-bloggen](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
-- [Få support för Microsoft Intune](https://docs.microsoft.com/intune/get-support) 
+- [Få support för Microsoft Intune](get-support.md)

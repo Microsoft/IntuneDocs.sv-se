@@ -12,17 +12,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ROBOTS: ''
-ms.reviewer: ''
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 159e236a079adcd55ba73e8fea6f786c09d08bbd
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 8324f53d787bd307ac3befd0ccee52cb8153b611
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68772366"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080021"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Felsöka enhets åtgärder i Intune
 
@@ -74,7 +74,7 @@ Gå till**enhets åtgärder**i **Intune** > -**enheter** > .
 Enheter rapporterar inte alltid statusen tillbaka till Intune-tjänsten innan återställningen startades. Därför visas åtgärden som väntande. Om du har bekräftat att åtgärden lyckades tar du bort enheten från tjänsten.
 
 ### <a name="what-happens-if-i-start-a-retirewipe-on-an-offline-device-or-a-device-that-hasnt-communicated-with-the-service-in-a-while"></a>Vad händer om jag startar en borttagning/rensning på en offline-enhet eller en enhet som inte kommunicerat med tjänsten på ett tag?
-Enheten kommer att befinna sig i vänte läge **/rensning** tills MDM-certifikatet upphör att gälla. MDM-certifikatet varar i ett år från registreringen och förnyas automatiskt varje år. Om enheten checkar in innan MDM-certifikatet upphör att gälla, kommer det att dras tillbaka/rensas. Om enheten inte checkar in innan MDM-certifikatet går ut kan den inte checka in till tjänsten. 180 dagar efter att MDM-certifikatet upphör att gälla tas enheten bort automatiskt från Azure Portal.
+Enheten kommer att befinna sig i **vänte läge/rensning** tills MDM-certifikatet upphör att gälla. MDM-certifikatet varar i ett år från registreringen och förnyas automatiskt varje år. Om enheten checkar in innan MDM-certifikatet upphör att gälla, kommer det att dras tillbaka/rensas. Om enheten inte checkar in innan MDM-certifikatet går ut kan den inte checka in till tjänsten. 180 dagar efter att MDM-certifikatet upphör att gälla tas enheten bort automatiskt från Azure Portal.
 
 
 ## <a name="reset-passcode-action"></a>Återställ lösen ords åtgärd

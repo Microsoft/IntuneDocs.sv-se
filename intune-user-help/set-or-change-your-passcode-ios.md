@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,20 +16,21 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 346e6219c10cc8b90d3bf83170adffa677c6c484
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dddcb16a0067ed6e278ff3f9032695e075a0fb6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55849014"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163284"
 ---
 # <a name="set-or-change-your-passcode"></a>Ange eller ändra ditt lösenord
 
-Om iOS-enheten inte följer företagets supports lösenordsprincip visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
+Skapa ett nytt lösen ord eller ändra ett befintligt namn för att uppfylla organisationens krav. Lösen ordet förhindrar att obehöriga personer låser upp och använder enheten. 
 
-Företagets support kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken eller en blandning av siffror, bokstäver och tecken. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. Dessa lösenord används exempelvis för att komma åt enheten från låsskärmen.
+Din organisation kan ange fler än ett krav för lösen ord. En lista över vanliga lösen ords krav finns i [krav på enhets lösen ord för registrerade enheter](password-does-not-meet-it-administrator-requirements.md).  
 
-Om du har problem med att ange ett lösenord som uppfyller kraven för lösenord kan du be företagets support om hjälp.
+Kontakta din IT-support om du har problem med att skapa eller ändra ditt lösen ord.  
+
 
 ## <a name="set-your-passcode"></a>Ställ in ditt lösenord
 

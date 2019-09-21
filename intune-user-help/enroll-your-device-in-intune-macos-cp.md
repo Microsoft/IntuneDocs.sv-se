@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9047dd9bbc55162eae4693d3035cb05ff4becb91
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545736"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099848"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
@@ -46,7 +46,7 @@ Om organisationen inför ett nytt säkerhetskrav efter registreringen, t.ex. mul
 Mer information om registrering finns i [Vad händer när jag installerar företagsportalappen och registrerar min enhet?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
 ## <a name="get-your-device-managed"></a>Få din enhet hanterad  
-Använd följande steg för att registrera macOS-enheter som kör OS X El Capitan 10.11 och senare.   
+Använd följande steg för att registrera macOS-enheter som kör macOS 10,12 och senare.   
 
 
 1. Du kommer åt företagsportalwebbplatsen genom att öppna ett nytt fönster i __Safari__ och gå till https://portal.manage.microsoft.com.  

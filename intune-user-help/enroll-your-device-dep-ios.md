@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c592b558ace0a2a39059de9f64531f1e078c539d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 40fe8f1f54779d3ab0a49951ad13c0cb2d0f0ff5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847768"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166791"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrera din iOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -34,15 +34,16 @@ iOS-enheter som tillhandahålls till dig av arbete eller skola är ofta förkonf
 Du påbörjar konfigureringen genom att starta din enhet och logga in med dina inloggningsuppgifter för arbetet eller skolan. Resten av den här artikeln beskriver stegen och de skärmar du kommer att se i installationsassistenten. 
 
 ## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
-Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av iOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
 
-## <a name="set-up-your-ios-device"></a>Konfigurera din iOS-enhet  
+Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av iOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios.md).  
+
+## <a name="set-up-your-ios-device"></a>Konfigurera din iOS-enhet
+
 Om du använder en egen iOS-enhet i stället för en enhet som tillhandahålls av organisationen följer du de här stegen för [egna enheter](enroll-your-device-in-intune-ios.md).  
 
-1. Sätt igång din iOS-enhet. 
+1. Sätt igång din iOS-enhet.
 2. När du har valt **språk** ansluter du enheten till Wi-Fi.
-3. På skärmen för att **konfigurera iOS-enhet** väljer du om du vill: 
- 
+3. På skärmen för att **konfigurera iOS-enhet** väljer du om du vill:
    - **Set Up as New device** (Konfigurera som ny enhet)
    - **Restore from iCloud Backup** (Återställ från iCloud-säkerhetskopia)
    - **Restore from iTunes Backup** (Återställ från iTunes-säkerhetskopia)
@@ -53,7 +54,7 @@ Om du använder en egen iOS-enhet i stället för en enhet som tillhandahålls a
  
    **Konfigurationen tillhandahålls av: [Ditt företags] iOS-team [Adress]**
 
-5. Logga in med ditt Apple-ID. När du har loggat in kan du installera företagsportalappen och hanteringsprofilen som ger dig åtkomst till företagets resurser, t.ex. e-post och appar. 
+5. Logga in med ditt Apple-ID. När du har loggat in kan du installera företagsportalappen och hanteringsprofilen som ger dig åtkomst till företagets resurser, t.ex. e-post och appar.
 6. Godkänn **villkoren** och välj om du vill skicka diagnostikinformation till Apple eller inte.
 7. När du har slutfört registreringen kan du uppmanas att utföra fler åtgärder. I några av de här stegen kan du behöva ange lösenordet för e-poståtkomst eller konfigurera ett lösenord.
 

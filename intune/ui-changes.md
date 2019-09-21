@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 052190185159dfdee4adee94d4c43c72ce6f41d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ac74cc547d13e92b87a8e148845ff1bc7be8efe4
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046337"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166996"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
 Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Den här referensguiden är till för dem som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
@@ -77,7 +77,7 @@ Om du vill visa och göra ändringar i principer för Villkorsstyrd åtkomst fr�
 ## <a name="where-did-my-compliance-policies-go"></a>Vart tog mina efterlevnadsprinciper vägen?
 När din klientorganisation har migrerats till Azure-portalen fortsätter klientorganisationens efterlevnadsprinciper att tillämpas. Dock kan du inte visa eller ändra dem från Intune i Azure-portalen.
 
-Om du vill visa och göra ändringar i efterlevnadsprinciper från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om efterlevnadsprinciper för enheter i [Kom igång med efterlevnadsprinciper för enheter i Intune](https://docs.microsoft.com/intune/device-compliance-get-started). 
+Om du vill visa och göra ändringar i efterlevnadsprinciper från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om efterlevnadsprinciper för enheter i [Kom igång med efterlevnadsprinciper för enheter i Intune](device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Var finns Apple DEP?
 I den klassiska portalen kunde du konfigurera Intune till att integrera med Apples program för enhetsregistrering och manuellt begära synkronisering med Apple-tjänsten:

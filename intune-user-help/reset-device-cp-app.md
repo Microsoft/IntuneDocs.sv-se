@@ -1,6 +1,6 @@
 ---
-title: Återställa enheten från företagsportalappen | Microsoft Docs
-description: Återställa enheten till fabriksinställningarna från Företagsportalen för Windows 10.
+title: Återställa enheten från Intune-företagsportal app | Microsoft Docs
+description: Återställ enheten till fabriks inställningarna från Företagsportal för Windows 10.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,34 +18,35 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser; intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 882248261f4386a8191067a0e8533c4c24fc2a5b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e5aff186d3850e8f9a6081168a5adc9956504019
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57567490"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163345"
 ---
-# <a name="reset-device-from-the-company-portal-app"></a>Återställa enheten från företagsportalappen  
+# <a name="reset-device-from-the-company-portal-app"></a>Återställa enheten från Företagsportal-appen  
 
-Återställa en används, borttappade eller stulna enheten till fabriksinställningarna från företagsportalappen.  
+Återställa en Använd, borttappad eller stulen enhet till fabriks inställningarna från Företagsportal-appen.  
 
-När du återställer en enhet visas inte längre i Företagsportalen. Dess befintliga appar och filer tas bort och den kommer att återställas till dess out-of-box-inställningar.  
+När du har återställt en enhet visas den inte längre i Företagsportal. Befintliga appar och filer kommer att raderas och kommer att återställas till sina färdiga inställningar.  
 
-1. Öppna Företagsportalen.  
+
+1. Öppna Företagsportal.  
 2. Under **Mina Enheter** väljer du den enhet som du vill återställa.   
 
-    ![Exemplet på skärmbilden av företagsportalappen, startsidan markering avsnittet Mina enheter.](./media/1802-cp-app-windows-home.png)  
+    ![Exempel skärm bild av Företagsportal app, start skärmen, markera mina enheter-avsnittet.](./media/1802-cp-app-windows-home.png)  
 
-3. På den **enhetsinformation** väljer den **mer** menyn.  
+3. På skärmen **enhets information** väljer du menyn **Se fler** .  
 
-    ![Exemplet på skärmbilden av företagsportalappen, enhet beskriver kan du markera se mer-meny.](./media/1802-cp-app-windows-device-details.png)  
+    ![Exempel skärm bild av skärmen Företagsportal app, enhets information, markera Se fler menyer.](./media/1802-cp-app-windows-device-details.png)  
 
 4. Välj **Återställ**.  
 
-     ![Exemplet på skärmbilden av företagsportalappen, enhetens informationsskärm markering återställning av åtgärden. ](./media/1802-cp-app-windows-device-details-reset.png)  
+     ![Exempel skärm bild av skärmen Företagsportal app, enhets information, markera återställnings åtgärd. ](./media/1802-cp-app-windows-device-details-reset.png)  
 
-5. När du uppmanas att bekräfta, Välj **återställa**. Enheten återställs själva.  
+5. När du uppmanas att bekräfta väljer du **Återställ**. Enheten kommer att återställas.  
 
-     ![Exemplet på skärmbilden av företagsportalappen, återställning av bekräftelsemeddelande Markera knappen för lösenordsåterställning. ](./media/1802-cp-app-windows-reset-confirm.png)  
+     ![Exempel skärm bild av Företagsportal app, Återställ bekräftelse meddelande, markerings återställnings knapp. ](./media/1802-cp-app-windows-reset-confirm.png)  
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

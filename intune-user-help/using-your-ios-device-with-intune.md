@@ -18,25 +18,26 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9c25166ed9b004cc4e43e777008e33e88983912
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2ced8f1ec37f652b7e283328141bc591b5961587
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55843501"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099825"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Använd din iOS-enhet med Intune-företagsportalen
 Den här artikeln listar uppgifter och information som är specifik för företagsportalen för iOS. Du kan använda den för att hjälpa dig felsöka och hantera din iOS-enhet. Klicka på en länk om du vill se mer information, steg och skärmdumpar.
 
 ## <a name="supported-versions"></a>Versioner som stöds
 
-Företagsportalen för iOS stöder för närvarande iOS 10.0 och senare.
+Företagsportalen för iOS stöder för närvarande iOS 10.0 och senare.  
+
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrera enheten i Intune och installera företagsportalen
 
 - [Installera och logga in i Intune-företagsportalappen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [Registrera en iOS-enhet i Intune](enroll-your-device-in-intune-ios.md)
-- [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)  
 
 ## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Saker du kan göra när enheten har registrerats i Intune
 

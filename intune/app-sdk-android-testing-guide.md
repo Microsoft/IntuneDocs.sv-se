@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6b07c77b0d92ceb7bdc960d8c2fd754c277499
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 91b7fc7414c3a6d6517cd4b704cb5e99ddcf96d0
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713240"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167179"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testningsguide om Microsoft Intune-appens SDK för Android-utvecklare
 
@@ -30,20 +30,20 @@ Testningsguiden för Microsoft Intune App SDK för Android är utformat för att
 ## <a name="prerequisite-test-accounts"></a>Nödvändiga testkonton
 Nya konton kan skapas med och utan förgenererade data. Så här skapar du ett nytt konto:
 1. Gå till webbplatsen för [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
-2. [Konfigurera Intune](https://docs.microsoft.com/intune/setup-steps) för att aktivera hantering av mobilenheter (MDM).
-3. [Skapa användare](https://docs.microsoft.com/intune/users-add).
-4. [Skapa grupper](https://docs.microsoft.com/intune/groups-add).
-5. [Tilldela licenser](https://docs.microsoft.com/intune/licenses-assign) som passar din testning.
+2. [Konfigurera Intune](setup-steps.md) för att aktivera hantering av mobilenheter (MDM).
+3. [Skapa användare](users-add.md).
+4. [Skapa grupper](groups-add.md).
+5. [Tilldela licenser](licenses-assign.md) som passar din testning.
 
 
 ## <a name="azure-portal-policy-configuration"></a>Konfiguration av Azure-portalprinciper
-[Skapa och tilldela appskyddsprinciper](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview) på [Azure-portalens Intune-blad](https://docs.microsoft.com/intune/app-protection-policies). Din [appkonfigurationsprincip](https://docs.microsoft.com/intune/app-configuration-policies-overview) kan också skapas och tilldelas på Intune-bladet.
+[Skapa och tilldela appskyddsprinciper](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview) på [Azure-portalens Intune-blad](app-protection-policies.md). Din [appkonfigurationsprincip](app-configuration-policies-overview.md) kan också skapas och tilldelas på Intune-bladet.
 
 > [!NOTE]
 > Om din app inte visas i Azure-portalen kan du ange den som mål med en princip genom att välja alternativet **fler appar** och ange paketets namn i textrutan.
 
 > [!IMPORTANT]
-> För att en appkonfigurationsprincip ska gälla måste den registrerande användaren anges som mål av en [Intune-appskyddsprincip](https://docs.microsoft.com/intune/app-protection-policy).
+> För att en appkonfigurationsprincip ska gälla måste den registrerande användaren anges som mål av en [Intune-appskyddsprincip](app-protection-policy.md).
 
 ## <a name="test-cases"></a>Testfall
 
@@ -103,7 +103,7 @@ Du kan styra appsäkerhetskopiering på följande sätt:
 ### <a name="unenrollment"></a>Avregistrering
 Du kan fjärrensa hanterade appar från att innehålla företags-e-post, och dokument och personliga data dekrypteras när de inte längre administreras på följande sätt:
 
-1. Från Azure-portalen [utför du en rensning](https://docs.microsoft.com/intune/apps-selective-wipe).
+1. Från Azure-portalen [utför du en rensning](apps-selective-wipe.md).
 2. Om appen inte registreras för några rensningshanterare bekräftar du följande villkor:
     - En fullständig rensning av appen sker.
 3. Om appen har registrerats för `WIPE_USER_DATA` eller `WIPE_USER_AUXILARY_DATA` bekräftar du följande villkor:
@@ -123,7 +123,7 @@ Som minst bör följande scenarier för flera identiteter omvalideras:
 ### <a name="app-configuration-optional"></a>Appkonfiguration (valfritt)
 Du kan konfigurera beteendet för hanterade appar på följande sätt:
 
-1. Om din app förbrukar några inställningar för appkonfiguration bör du testa att appen korrekt hanterar alla värden som du (i egenskap av administratör) kan ange. [Appkonfigurationsprinciper](https://docs.microsoft.com/intune/app-configuration-policies-overview) kan skapas och tilldelas med hjälp av Intune.
+1. Om din app förbrukar några inställningar för appkonfiguration bör du testa att appen korrekt hanterar alla värden som du (i egenskap av administratör) kan ange. [Appkonfigurationsprinciper](app-configuration-policies-overview.md) kan skapas och tilldelas med hjälp av Intune.
 
 ## <a name="next-steps"></a>Nästa steg
 

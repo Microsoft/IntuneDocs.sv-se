@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2019
+ms.date: 09/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
-ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
+ms.openlocfilehash: 80b904893f118bac1f4d0d79da0cd10498b9f2ed
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158028"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71162868"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Inställningar av slutpunktsskydd för macOS i Intune  
 
@@ -106,13 +106,6 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
 
     **Standard**: Inte konfigurerat  
 
-     > [!IMPORTANT]  
-     > Det finns ett känt problem när inställningen **Inaktivera prompten vid utloggning** är inställd på *Inaktivera*. När inställningen är inställd till *Inaktivera* måste inställningen för **Antal gånger som ignorering tillåts** anges till ett värde och får inte anges som *Ej konfigurerat*. Om inställningen är inställd till *Inte konfigurerad*, misslyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **sammanfattning av profiltillstånd** som **fel** utan ytterligare information.
-     > 
-     > När **Inaktivera prompt vid utloggning** är inställt på *Inte konfigurerad*, kan **Antal gånger som ignorering tillåts** vara *Inte konfigurerad* eller ha ett värde.  
-     > 
-     > Problemet kommer att åtgärdas i en kommande uppdatering. 
-
   - **Antal gånger som tillåts kringgås**  
   Ange antalet gånger som en användare kan ignorera prompter för att aktivera FileVault innan FileVault krävs för att användaren ska kunna logga in.  
 
@@ -122,5 +115,5 @@ Mer information om Apple FileVault-inställningar finns i [FDEFileVault](https:/
  
     **Standard**: Inte konfigurerat  
 
-Mer information om FileVault med Intune finns i återställnings [nycklar för FileVault](encryption-monitor.md#filevault-recovery-keys).
+Mer information om FileVault med Intune finns i [återställnings nycklar för FileVault](encryption-monitor.md#filevault-recovery-keys).
 

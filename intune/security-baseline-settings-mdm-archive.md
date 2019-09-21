@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df943fdc0105b0f32401b79434045811f065bef
-ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
+ms.openlocfilehash: 19307f2ffc234a1eacf30b3aa43fe9c626073f6c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70864532"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167820"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -34,12 +34,12 @@ När en ny säkerhets bas linje för MDM lanseras flyttas den tidigare listan ö
 
 När en bas linje version inte längre stöds för användning kommer den att tas bort från den här artikeln.
 
-- Visa de inställningar som är tillgängliga i [den aktuella säkerhets bas linjen för MDM](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019). 
+- Visa de inställningar som är tillgängliga i [den aktuella säkerhets bas linjen för MDM](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019).
 - Lär dig mer om [säkerhets bas linjer](security-baselines.md)och hur du uppgraderar bas linje versionen i dina profiler för säkerhets bas linjen.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018  
 
-*Den här bas linjen ersätts av [säkerhets bas linjen för MDM för maj 2019](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)*
+*Den här bas linjen ersätts av [säkerhets bas linjen för MDM för maj 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)*
 
 ### <a name="above-lock"></a>På låsskärmen  
 
@@ -1441,5 +1441,5 @@ Mer information finns i [CSP-princip – WindowsPowerShell](https://docs.microso
  
 ## <a name="next-steps"></a>Nästa steg  
 
-[Visa den aktuella bas linje versionen](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)  
+[Visa den aktuella bas linje versionen](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)  
 [Uppgradera profiler för att använda en ny bas linje version](security-baselines.md#change-the-baseline-version-for-a-profile)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b333c848368f00f005ed0febc61f67f098ee7e5e
-ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
+ms.openlocfilehash: eb470885be8f09f0c99dfe26a1d982570644ac8a
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979189"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167613"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-informationslagersamlingar
 
@@ -731,5 +731,4 @@ Entiteten **vppProgramType** innehåller en lista över möjliga typer av volymk
 
 ## <a name="next-steps"></a>Nästa steg
 
-Mer information om Intune-informationslagret finns i [Datamodellen för informationslagret](https://docs.microsoft.com/intune/reports-ref-data-model).
-
+Mer information om Intune-informationslagret finns i [Datamodellen för informationslagret](reports-ref-data-model.md).

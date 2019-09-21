@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c626bb50868e6b966eb7c8867f4c4ff7178eadcf
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: f3891ce150ea740baa3ba18591139c66d78d9d00
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756532"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166369"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune i Azure-konsolen och äldre Intune PC-klient
 
@@ -31,7 +31,7 @@ När du använder Intune i Azure för att hantera din organisations Windows-enhe
 
 ## <a name="manage-windows-10-devices-by-using-mdm"></a>Hantera Windows 10-enheter med hjälp av MDM
 
-Vi rekommenderar att du använder [hantering av mobilenheter (MDM) för att hantera Windows 10-enheter](https://docs.microsoft.com/intune/device-restrictions-windows-10) istället för att använda den äldre Intune PC-klienten. Möjligheten att hantera Windows 10 via MDM är tillgänglig i Intune i Azure-portalen. Windows 10 MDM innehåller många nya hanterings- och säkerhetsfunktioner som inte finns tillgängliga via den äldre Intune PC-klienten.
+Vi rekommenderar att du använder [hantering av mobilenheter (MDM) för att hantera Windows 10-enheter](device-restrictions-windows-10.md) istället för att använda den äldre Intune PC-klienten. Möjligheten att hantera Windows 10 via MDM är tillgänglig i Intune i Azure-portalen. Windows 10 MDM innehåller många nya hanterings- och säkerhetsfunktioner som inte finns tillgängliga via den äldre Intune PC-klienten.
 
 ## <a name="legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Äldre PC-klientfunktioner finns endast tillgängliga i Silverlight-konsolen
 
@@ -54,7 +54,7 @@ Vi kommer att fortsätta att stödja befintliga Intune PC-klientfunktioner enbar
 
 ## <a name="mdm-capabilities"></a>MDM-funktioner
 
-En detaljerad jämförelse mellan funktionerna i PC-klienten och MDM finns i [jämför hantering av Windows-datorer som datorer eller mobila enheter](pc-management-comparison.md). MDM-uppdateringar kommer att fortsätta introducera nya hanteringsfunktioner till MDM-registrerade Windows 10-enheter, inklusive utvärdering av alternativ för Win 32-appar. Visa [nyheter](https://docs.microsoft.com/intune/whats-new) för de senaste versionstilläggen till tjänsten.
+En detaljerad jämförelse mellan funktionerna i PC-klienten och MDM finns i [jämför hantering av Windows-datorer som datorer eller mobila enheter](pc-management-comparison.md). MDM-uppdateringar kommer att fortsätta introducera nya hanteringsfunktioner till MDM-registrerade Windows 10-enheter, inklusive utvärdering av alternativ för Win 32-appar. Visa [nyheter](whats-new.md) för de senaste versionstilläggen till tjänsten.
 
 ## <a name="switch-from-pc-client-to-mdm"></a>Växla från PC-klienten till MDM
 
@@ -62,9 +62,7 @@ Följ dessa steg om du vill växla från att hantera Windows 10-enheter med Intu
 
 1. I Silverlight-konsolen, utför du en **selektiv rensning** för att avregistrera enheten från PC-klienten.
   ![Varnings fönster med alternativ knappen selektivt Rensa enhet vald](media/intune-legacy-pc-client/image02.png)
-2. Omregistrera enheten med hjälp av [MDM (och/eller Azure AD-anslut)](https://docs.microsoft.com/intune/windows-enroll). 
+2. Omregistrera enheten med hjälp av [MDM (och/eller Azure AD-anslut)](windows-enroll.md).
 
 ## <a name="next-steps"></a>Nästa steg
-[Registrera Windows-enheter](https://docs.microsoft.com/intune/windows-enroll)
-
- 
+[Registrera Windows-enheter](windows-enroll.md)

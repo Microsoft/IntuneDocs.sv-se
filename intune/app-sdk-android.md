@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 527d71f0e48627498b05af8ee497579c648d3156
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 8d6f0182fed362cba1e4c383ac6b4e083b6baa8e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960557"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167161"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -707,7 +707,7 @@ Auktoriteten kan anges om det behövs.
 
 Du måste registrera din app med Azure AD och ge appen åtkomst till appens tjänst för skyddsprincip:
 * Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-* Se till att stegen som ger din Android appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”. 
+* Se till att stegen som ger din Android appbehörigheter till APP-tjänsten följs. Följ instruktionerna i guiden [Komma igång med Intune-SDK:n](app-sdk-get-started.md#next-steps-after-integration) under ”Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)”. 
 
 Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
 
@@ -723,18 +723,18 @@ Authority och NonBrokerRedirectURI kan anges om det behövs.
 
 ### <a name="conditional-access"></a>Villkorlig åtkomst
 
-Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) i Azure Active Directory som kan användas för att kontrollera åtkomsten till AAD-resurser. [Intune-administratörer kan definiera regler för villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access) som endast tillåter åtkomst till resurser från enheter eller appar som hanteras av Intune. Följ stegen nedan för att säkerställa att din app kan komma åt resurser när det behövs. Om din app inte använder AAD-åtkomsttoken, eller om den endast kommer åt resurser som inte kan skyddas med villkorlig åtkomst (CA), kan du hoppa över de här stegen.
+Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) i Azure Active Directory som kan användas för att kontrollera åtkomsten till AAD-resurser. [Intune-administratörer kan definiera regler för villkorlig åtkomst](conditional-access.md) som endast tillåter åtkomst till resurser från enheter eller appar som hanteras av Intune. Följ stegen nedan för att säkerställa att din app kan komma åt resurser när det behövs. Om din app inte använder AAD-åtkomsttoken, eller om den endast kommer åt resurser som inte kan skyddas med villkorlig åtkomst (CA), kan du hoppa över de här stegen.
 
 1. Följ [riktlinjerna för ADAL-integration](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Se särskilt steg 11 för Broker-användning.
 2. [Registrera ditt program med Azure Active Directory] (https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). 
    Omdirigerings-URI finns i riktlinjerna för ADAL-integrering ovan.
 3. Ange manifestets metadataparametrar enligt informationen under punkt 2 i avsnittet [Vanliga ADAL-konfigurationer](#common-adal-configurations) ovan.
-4. Testa att allt är korrekt konfigurerat genom att aktivera [enhetsbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) på [Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) och bekräfta
+4. Testa att allt är korrekt konfigurerat genom att aktivera [enhetsbaserad villkorlig åtkomst](conditional-access-intune-common-ways-use.md) på [Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) och bekräfta
     - att inloggningen i din app begär installation och registrering av Intune-företagsportalen
     - att inloggningen till appen fungerar korrekt efter registreringen.
-5. När din app har skickat Intune APP SDK-integrering till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad Villkorsstyrd åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
-6. När din app har lagts till i listan med godkända appar bekräftar du detta genom att [konfigurera appbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) och kontrollera att inloggningen till din app fungerar korrekt.
+5. När din app har skickat Intune APP SDK-integrering till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad Villkorsstyrd åtkomst](conditional-access-intune-common-ways-use.md#app-based-conditional-access)
+6. När din app har lagts till i listan med godkända appar bekräftar du detta genom att [konfigurera appbaserad villkorlig åtkomst](app-based-conditional-access-intune-create.md) och kontrollera att inloggningen till din app fungerar korrekt.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Appskyddsprincip utan enhetsregistrering
 
@@ -1639,7 +1639,7 @@ Den selektiva standardrensningen stänger appen korrekt, vilket avslutar aktivit
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Aktivera MAM-riktad konfiguration för Android-appar (valfritt)
-Programspecifika nyckel/värde-par kan konfigureras i Intune-konsolen för [MAM-WE](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) och [Android-arbetsprofilappar](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+Programspecifika nyckel/värde-par kan konfigureras i Intune-konsolen för [MAM-WE](app-configuration-policies-managed-app.md) och [Android-arbetsprofilappar](app-configuration-policies-use-android.md).
 Dessa nyckel-/värdepar tolkas inte av Intune utan skickas till appen. Program som ska ta emot sådan konfiguration kan använda klasserna `MAMAppConfigManager` och `MAMAppConfig` för detta. Om flera principer är inriktade på samma app kan det finnas flera motstridiga värden för samma nyckel.
 
 > [!NOTE] 
@@ -1673,7 +1673,7 @@ Programkonfiguration lägger till en ny meddelandetyp:
 ### <a name="further-reading"></a>Mer information
 Mer information om funktionerna i Graph API finns i [Graph API-referens](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
-Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i Android finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android) (använda Microsoft Intune-appkonfigurationsprinciper för Android).
+Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i Android finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for Android](app-configuration-policies-use-android.md) (använda Microsoft Intune-appkonfigurationsprinciper för Android).
 
 ## <a name="style-customization-optional"></a>Formatanpassning (valfritt)
 

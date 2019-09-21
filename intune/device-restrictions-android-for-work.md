@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 09/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 53a9c3e8b80f611bc9e293ba7e07c1aece0cfc58
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550184"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163044"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -201,6 +201,9 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 - **Borttagning av användare**: Välj **Blockera** för att förhindra att användare tar bort användare. **Inte konfigurerad** låter användare att ta bort andra användare på enheten.
 - **Kontoändringar**: Välj **Blockera** för att förhindra att användare ändrar konton. **Inte konfigurerad** låter användare att uppdatera användarkonton på enheten.
 
+  > [!NOTE]
+  > Den här inställningen gäller inte för enhets ägarens (fullständigt hanterade) enheter. Om du konfigurerar den här inställningen ignoreras inställningen och har ingen effekt.
+
 ### <a name="applications"></a>Program
 
 - **Tillåt installation från okända källor**: Välj **Tillåt** så att användare kan aktivera **Okända källor**. Den här inställningen gör att appar kan installeras från okända källor, inklusive andra källor än Google Play. **Inte konfigurerad** förhindrar användare från att aktivera **Okända källor**.
@@ -270,6 +273,10 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 - **Sök arbetskontakter från personlig profil**: Välj **Blockera** för att förhindra användare från att söka efter arbetskontakter i appar i den personliga profilen. **Krävs inte** tillåter sökningar efter arbetskontakter i den personliga profilen.
 
 - **Kamera**: Välj **Blockera** för att förhindra åtkomst till kameran på enheten i arbetsprofilen. Kameran på den personliga sidan påverkas inte av inställningen. **Krävs inte** tillåter åtkomst till kameran i arbetsprofilen.
+
+- **Tillåt widgetar från appar för arbets profil**: **Aktivera** tillåter att slutanvändare kan skicka widgetar som exponeras av appar på Start skärmen. **Inte konfigurerad** (standard) inaktiverar den här funktionen.
+
+  Outlook är till exempel installerat i användarnas arbets profiler. När inställningen är **aktive**rad kan användarna lägga till Agenda-widgeten på enhetens start sida.
 
 #### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 

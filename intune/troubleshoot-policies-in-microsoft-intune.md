@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
-ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
+ms.openlocfilehash: 68ffdcccdd3588ac5127e6c54426acfdcad17d34
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298402"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071709"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -30,8 +30,8 @@ Microsoft Intune har några inbyggda felsökningsprinciper. Med hjälp av dessa 
 
 I den här artikeln beskrivs några vanliga felsökningsmetoder och några problem du kan stöta på.
 
-## <a name="check-tenant-status"></a>Kontrollera status för klient
-Kontrollera den [Status för klient](tenant-status.md) och bekräfta prenumerationen är aktiv. Du kan också visa information om aktiva incidenter och rekommendationerna som kan påverka distributionen av principer eller profil.
+## <a name="check-tenant-status"></a>Kontrol lera status för klient organisation
+Kontrol lera [klientens status](tenant-status.md) och bekräfta att prenumerationen är aktiv. Du kan också visa information om aktiva incidenter och rådgivare som kan påverka din princip eller profil distribution.
 
 ## <a name="use-built-in-troubleshooting"></a>Använda inbyggd felsökning
 
@@ -118,10 +118,10 @@ Kontrollera den [Status för klient](tenant-status.md) och bekräfta prenumerati
 
 ## <a name="policy-troubleshooting-resources"></a>Felsökningsresurser för principer
 
-- [Felsöka iOS- eller Android-principerna inte tillämpas på enheter](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öppnas ett annat Microsoft-webbplats)
-- [Felsökning av Windows 10 Intune principen fel](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öppnar en blogg)
-- [Felsöka CSP anpassade inställningar för Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öppnas ett annat Microsoft-webbplats)
-- [Grupprincip i Windows 10 vs Intune MDM princip](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öppnas ett annat Microsoft-webbplats)
+- [Felsöka iOS-eller Android-principer som inte tillämpas på enheter](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öppnar en annan Microsoft-webbplats)
+- [Felsöka princip fel i Windows 10 Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öppnar en blogg)
+- [Felsök anpassade CSP-inställningar för Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öppnar en annan Microsoft-webbplats)
+- [Princip för Windows 10 Grupprincip vs INTUNE MDM](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öppnar en annan Microsoft-webbplats)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Avisering: Det gick inte att spara åtkomstregler i Exchange
 
@@ -135,7 +135,7 @@ Om du har skapat principer på arbetsytan Exchange On-premises-princip (administ
 
 Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva principen tillämpas för enheten.
 
-Windows 10-enheter kan inte ta bort principer för säkerhet när du tar bort principer (stoppa distribution). Du kan behöva lämna tilldelad princip och ändra säkerhetsinställningarna tillbaka till standardvärdena.
+Windows 10-enheter kan inte ta bort säkerhets principer när du avtilldelar principen (stoppa distribution). Du kan behöva lämna den tilldelade principen och sedan ändra tillbaka säkerhets inställningarna till standardvärdena.
 
 Du kan, beroende på enhetsplattform, vara tvungen att återställa säkerhetsprinciperna om du vill ändra principen till ett mindre säkert värde.
 

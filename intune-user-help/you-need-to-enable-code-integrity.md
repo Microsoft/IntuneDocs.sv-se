@@ -18,23 +18,25 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 167d091f212536ed94e3f4ce0c103649e4a2e537
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: c518e0eeb18f51fa17d15a72735e319aef1d647d
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413834"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167470"
 ---
 # <a name="enable-code-integrity"></a>Aktivera kodintegritet
 
-Din organisation kan kräva din dator aktiveras med en threat protection-funktion som kallas *kodintegritet*. Kodintegritet kontrollerar drivrutiner och systemfiler på enheten för tecken på skadade eller skadlig programvara. För att kodintegritet ska fungera på din enhet, en annan säkerhetsfunktion som heter [ *säker Start* ](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) måste vara aktiverat. 
+Din organisation kan kräva att datorn aktive ras med en hot skydds funktion som kallas *kod integritet*. Kod integritet kontrollerar driv rutiner och systemfiler på enheten för tecken på skador eller skadlig program vara. För att kod integriteten ska fungera på enheten måste även en annan säkerhetsfunktion som kallas [*säker start*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) vara aktive rad.
 
-Om datorn inte är kompatibel eftersom kodintegritet är inaktiverad, bör du kontakta din organisations IT supportteam. De hjälper dig att aktivera säker start som ska utlösa kodintegritet nästa gång du startar enheten. 
+Om din dator inte är kompatibel eftersom kod integriteten är inaktive rad bör du kontakta din organisations IT-avdelning. De hjälper dig att aktivera säker start, vilket kommer att utlösa kod integritet nästa gången du startar enheten.
 
-Om du identifiera dig som en avancerade användare och vill prova steg på egen hand, se [återaktivera säker Start](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
+Om du identifierar dig själv som en avancerad enhets användare och vill prova stegen på egen hand, se återaktivera [säker start](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
-## <a name="additional-resources-for-it-administrators"></a>Ytterligare resurser för IT-administratörer  
-Om du är en Intune-administratör och vill ha mer information om inställningar för efterlevnad av Intunes enhetens hälsotillstånd, se [lägga till en enhetsefterlevnadsprincip för Windows 10-enheter i Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows). Mer detaljerad information om efterlevnadsåtgärder som du kan vidta i Intune, finns i den [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+## <a name="additional-resources-for-it-administrators"></a>Ytterligare resurser för IT-administratörer
 
-## <a name="next-steps"></a>Nästa steg  
+Om du är Intune-administratör och vill lära dig mer om Intunes inställningar för hälsokompatibilitet för enhetens hälso tillstånd läser du [lägga till en efterlevnadsprincip för Windows 10-enheter i Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows.md). En detaljerad titt på de regelefterlevnad som du kan vidta i Intune finns i [HEALTHATTESTATION CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+
+## <a name="next-steps"></a>Nästa steg
+
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

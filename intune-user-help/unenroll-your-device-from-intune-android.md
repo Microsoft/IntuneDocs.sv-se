@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b68ea31a6c5d902e66c0eda8127e0f68383910f8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 0a472e4d8c3ef7b922f02b4d2407362ba738486c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529125"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167541"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Avregistrera din Android-enhet från hanteringen  
 
@@ -35,7 +35,7 @@ Ta bort en registrerad Android-enhet så att den inte längre hanteras av din or
 * Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.  
 
 > [!NOTE]
-> Du kan inte avregistrera eller ta bort dina företagsägda enheter från Microsoft Intune app. Enheten har registrerats under den inledande enhetsinställningen och måste registreras för att komma åt din organisations resurser.  
+> Det går inte att avregistrera eller ta bort företagsägda enheter från Microsoft Intune-appen. Enheten registrerades under den första installationen av enheten och måste registreras för att få åtkomst till din organisations resurser.  
 
 1. Tryck på de tre lodräta punkterna i det övre högra hörnet på Företagsportalen. Åtgärdsmenyn öppnas.
 
@@ -54,24 +54,28 @@ Så här tar du bort alla data som företagsportalappen för Android lagrar på 
 - Rensa appdata genom att trycka på **Program** > **[*appens namn*]**  > **Rensa data**.
 - Ta bort följande mapp: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
-## <a name="uninstall-the-company-portal-app"></a>Avinstallera företagsportalappen  
+## <a name="uninstall-the-company-portal-app"></a>Avinstallera företagsportalappen
+
 Företagsportalen är en app för enhetshantering. Den kan inte avinstalleras förrän du avregistrerat din enhet från dess hantering. När du har gjort det trycker du på och håller ned ikonen för företagsportalappen tills du ser **Avinstallera**. Tryck på **Avinstallera** för att ta bort appen från enheten.  
 
 Du kan också trycka på **Inställningar** > **Appar** > **Företagsportal** > **Avinstallera**.  
 
-### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Ta bort företagsportalappen som enhetsadministratör  
+### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Ta bort företagsportalappen som enhetsadministratör
+
 Som en sista utväg kan du avinstallera appen från din enhet som enhetsadministratör.  
 
-Om du har en enhet som ägs av företaget kanske din organisation kräver att företagsportalen alltid ska finnas på din enhet. Om du avinstallerar den kan du förlora åtkomst till skyddade företagsresurser, till exempel e-post, appar, Wi-Fi eller VPN, tills appen har installerats om. Mer information om hur du installerar, uppdaterar eller tar bort obligatoriska appar finns i [Lägga till appar i Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+Om du har en enhet som ägs av företaget kanske din organisation kräver att företagsportalen alltid ska finnas på din enhet. Om du avinstallerar den kan du förlora åtkomst till skyddade företagsresurser, till exempel e-post, appar, Wi-Fi eller VPN, tills appen har installerats om. Mer information om hur du installerar, uppdaterar eller tar bort obligatoriska appar finns i [Lägga till appar i Microsoft Intune](https://docs.microsoft.com/intune/apps-add.md#apps-that-are-added-automatically-by-intune).  
 
 Så här inaktiverar du företagsportalen som enhetsadministratör. De faktiska namnen på varje inställning kan skilja sig åt beroende på Android-enhet.  
 
 **Alternativ 1**:  
+
 1. Välj **Inställningar** > **Säkerhet** > **Övriga säkerhetsinställningar** > **Enhetsadministratörer**.  
 2. Avmarkera **Företagsportal**.  
 
-**Alternativ 2**:  
-1. Välj **Inställningar** > **Låsskärm och säkerhet** > **Övriga säkerhetsinställningar** > **Enhetsadministratörsappar**.  
-2. Avmarkera **Företagsportal**.    
+**Alternativ 2**:
+
+1. Välj **Inställningar** > **Låsskärm och säkerhet** > **Övriga säkerhetsinställningar** > **Enhetsadministratörsappar**.
+2. Avmarkera **Företagsportal**.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

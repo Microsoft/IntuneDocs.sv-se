@@ -18,25 +18,26 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0ac5e31061612c0513499385a8ac9be12a933b4
-ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
+ms.openlocfilehash: 37f76f0e4a382dc356f6d5994c31178ad6f496df
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383948"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166514"
 ---
-# <a name="get-a-recovery-key-for-a-macos-device"></a>Hämta en återställnings nyckel för en macOS-enhet 
+# <a name="get-a-recovery-key-for-a-macos-device"></a>Hämta en återställnings nyckel för en macOS-enhet
+
 Använd Företagsportal webbplats för att få en återställnings nyckel för din låsta macOS-enhet. Om du glömmer ditt enhets lösen ord kan du logga in på Företagsportal från en annan enhet för att hämta din nyckel.  
 
-Det här alternativet är bara tillgängligt för enheter som har krypterats av din organisation med hjälp av FileVault. Det är inte tillgängligt för enheter som du har krypterat personligen. 
+Det här alternativet är bara tillgängligt för enheter som har krypterats av din organisation med hjälp av FileVault. Det är inte tillgängligt för enheter som du har krypterat personligen.
 
 1. På valfri enhet loggar du in på [företagsportal webbplats](https://portal.manage.microsoft.com) och väljer **meny** knappen > **enheter**.  
 2. Välj den krypterade macOS-enheten.  
 3. Välj **Hämta återställningsnyckel**.  
 
     ![Skärm bild av Företagsportal webbplats, markera Hämta återställnings nyckel avsnitt.](./media/1907-recovery2-cpweb-intune.PNG)  
-    
-1. Återställnings nyckeln kommer att visas.   
+
+4. Återställnings nyckeln kommer att visas.
 
     ![Skärm bild av Företagsportal webbplats som visar återställnings nyckeln.](./media/1907-recovery-cpweb-intune.PNG)  
 
@@ -44,10 +45,12 @@ Det här alternativet är bara tillgängligt för enheter som har krypterats av 
 
 Om en nyckel inte hittas men enheten är korrekt krypterad kontaktar du din organisations support person. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-## <a name="it-pro-support"></a>Support för IT-proffs  
-Om du är en IT-support person och vill konfigurera och hantera FileVault-kryptering för macOS-enheter, se [Använd enhets kryptering med Intune](https://docs.microsoft.com/intune/encrypt-devices).    
+## <a name="it-pro-support"></a>Support för IT-proffs
 
-## <a name="next-steps"></a>Nästa steg  
+Om du är en IT-support person och vill konfigurera och hantera FileVault-kryptering för macOS-enheter, se [Använd enhets kryptering med Intune](https://docs.microsoft.com/intune/encrypt-devices.md).
+
+## <a name="next-steps"></a>Nästa steg
+
 Ta reda på mer om vad du kan göra från Företagsportal webbplats. Se [använda Intune-företagsportal webbplats](using-the-intune-company-portal-website.md) för att få en lista över åtgärder.  
 
 Behöver du fortfarande hjälp? Kontakta IT-supporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
