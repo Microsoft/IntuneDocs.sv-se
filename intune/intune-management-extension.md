@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 230f226cba70a7fc61efd236cc0fde0ca6b7fa68
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: cbf2031a316b1f7c2e22d165363cca12cfd70291
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374966"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061582"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Använda PowerShell-skript på Windows 10-enheter i Intune
 
@@ -181,7 +181,7 @@ Om du vill se om enheten är automatiskt registrerad kan du:
 - Granska loggarna för eventuella fel. Mer information finns i [Loggar för Intune-hanteringstillägg](#intune-management-extension-logs) (i den här artikeln).
 - Vid eventuella behörighetsproblem kontrollerar du att egenskaperna för PowerShell-skriptet är inställda på `Run this script using the logged on credentials`. Kontrollera också att den inloggade användaren har lämplig behörighet att köra skriptet.
 
-- Om du vill isolera skriptproblem gör du följande:
+- Om du vill isolera skriptproblem kan du göra följande:
 
   - Granska PowerShell-körningskonfigurationen på dina enheter. Mer information finns i [PowerShell-körningsprincip](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6).
   - Kör ett exempelskript med hjälp av Intune-hanteringstillägget. Skapa t.ex. katalogen `C:\Scripts` och ge alla fullständig behörighet. Kör följande skript:
@@ -194,7 +194,31 @@ Om du vill se om enheten är automatiskt registrerad kan du:
 
   - Testa skriptkörningen utan Intune genom att köra skripten på systemkontot med hjälp av [psexec-verktyget](https://docs.microsoft.com/sysinternals/downloads/psexec) lokalt:
 
-    `psexec -i -s`
+    `psexec -i -s`  
+    
+  - Om skriptet rapporterar att det har utförts, men det egentligen har misslyckats, är det möjligt att din antivirustjänst har AgentExecutor i begränsat läge. Följande skript rapporterar alltid ett fel i Intune. Som ett test kan du använda det här skriptet:
+  
+    ```powershell
+    Write-Error -Message "Forced Fail" -Category OperationStopped
+    mkdir "c:\temp" 
+    echo "Forced Fail" | out-file c:\temp\Fail.txt
+    ```
+
+    Om skriptet rapporterar att det har utförts tittar du i `AgentExecutor.log` för att bekräfta felresultatet. Om skriptet körs ska längden vara >2.
+
+  - För att registrera .error- och .output-filerna kör följande kodavsnitt skriptet via AgentExecutor till PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). Här sparas loggarna som du kan granska. Kom ihåg att Intune-hanteringstilläget rensar loggarna när skriptet har körts:
+  
+    ```powershell
+    $scriptPath = read-host "Enter the path to the script file to execute"
+    $logFolder = read-host "Enter the path to a folder to output the logs to"
+    $outputPath = $logFolder+"\output.output"
+    $errorPath =  $logFolder+"\error.error"
+    $timeoutPath =  $logFolder+"\timeout.timeout"
+    $timeoutVal = 60000 
+    $PSFolder = "C:\Windows\SysWOW64\WindowsPowerShell\v1.0"
+    $AgentExec = "C:\Program Files (x86)\Microsoft Intune Management Extension\agentexecutor.exe"
+    &$AgentExec -powershell  $scriptPath $outputPath $errorPath $timeoutPath $timeoutVal $PSFolder 0 0
+    ```
 
 ## <a name="next-steps"></a>Nästa steg
 

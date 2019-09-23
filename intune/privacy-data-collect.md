@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d96167eb37ac7c3c90bad82783e9ce06814f8c88
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 08066c0742ad4ad02f907e55cc84eb65068c9b99
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884785"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70986429"
 ---
 # <a name="data-collection-in-intune"></a>Datainsamling i Intune
 
@@ -33,6 +33,9 @@ När användare registrerar sina företagsenheter eller personliga enheter med I
 - Information om diagnostik, prestanda och användning.
 
 Från dessa källor samlar Intune in data som tillhör följande tre kategorier: [identifierade](#identified-data), [pseudonymiserade](#pseudonymized-data), och [aggregerade](#aggregated-data).
+
+> [!NOTE]
+> Vi säljer inte några data som samlas in av vår tjänst till någon tredje part av någon anledning.
 
 ## <a name="identified-data"></a>Identifierade data
 

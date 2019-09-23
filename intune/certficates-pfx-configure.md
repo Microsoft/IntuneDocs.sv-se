@@ -16,18 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25beef7e6593865b92e349163768ded5ce3b9e2d
-ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
+ms.openlocfilehash: 064377ea05319242da087862b4d2b3a721b0caef
+ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70376939"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012469"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
 Intune stöder användning av PKCS-certifikat (privata och offentliga nyckelpar). Den här artikeln kan hjälpa dig att konfigurera den nödvändiga infrastrukturen som lokala certifikatanslutningsappar, exportera ett PKCS-certifikat och sedan lägga till certifikatet i en Intune-enhetskonfigurationsprofil.
 
 Microsoft Intune innehåller inbyggda inställningar för att använda PKCS-certifikat för åtkomst och autentisering till organisationens resurser. Certifikat autentiserar och skyddar åtkomst till dina företagsresurser, till exempel ett VPN- eller Wi-Fi-nätverk. Du distribuerar de här inställningarna till enheter med hjälp av enhetskonfigurationsprofiler i Intune.
+
+Information om användning av importerade PKCS-certifikat finns i [Importerade PFX-certifikat](certificates-imported-pfx-configure.md).
 
 
 ## <a name="requirements"></a>Krav
@@ -63,17 +65,17 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
   Microsoft Intune Certificate Connector har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
 
 - **PFX-certifikatanslutningsprogram för Microsoft Intune**:  
-  Om du planerar att använda S/MIME-kryptering för e-post använder du Intune-portalen för att ladda ned anslutningsappen för *importerade PFX-certifikat*.  Gå till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för importerade PFX-certifikat*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet **PfxCertificateConnectorBootstrapper.exe**. 
+  Om du planerar att använda S/MIME-kryptering för e-post använder du Intune-portalen för att ladda ned *PFX-anslutningsappen* som stöder import av PFX-certifikat.  Gå till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för importerade PFX-certifikat*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet **PfxCertificateConnectorBootstrapper.exe**. 
 
   Varje Intune-klient har stöd för en enda instans av den här anslutningen. Du kan installera den här anslutningen på samma server som en instans av Microsoft Intune Certificate Connector.
 
   Anslutningsappen hanterar begäranden för PFX-filer som importeras till Intune för S/MIME-kryptering av e-post för en specifik användare.  
 
   Den här anslutningsappen kan uppdatera sig automatiskt när nya versioner blir tillgängliga. För att kunna uppdatera kapaciteten behöver du:
-  - Installera anslutningsappen för importerade PFX-certifikat för Microsoft Intune på din server.  
+  - Installera anslutningsappen för PFX-certifikat för Microsoft Intune på din server.  
   - För att automatiskt få viktiga uppdateringar ser du till att brandväggarna är öppna så att anslutningsappen tillåts kontakta **autoupdate.msappproxy.net** på port **443**.   
 
-  Mer information om alla nätverksslutpunkter som anslutningen måste kunna komma åt finns i [Microsoft Intune Certificate Connector](intune-endpoints.md).
+  Mer information om nätverksslutpunkter som Intune och anslutningsappen måste kunna få åtkomst till finns i [Nätverksslutpunkter för Microsoft Intune](intune-endpoints.md).
 
 - **Windows Server**:  
   Du använder en Windows Server som värd för:
@@ -81,8 +83,8 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
   - Microsoft Intune-certifikatanslutningsapp – för scenarier med autentisering och S/MIME-signering av e-post
   - PFX-certifikatanslutningsapp för Microsoft Intune – för scenarier med S/MIME-kryptering av e-post.
 
-  Du kan installera båda anslutningsapparna (*Microsoft Intune-certifikatanslutningsapp* och *PFX-certifikatanslutningsapp*) på samma server.
-
+  Intune stöder installation av *PFX-certifikatanslutningsappen* på samma server som *Microsoft Intune Certificate Connector*.
+  
 ## <a name="export-the-root-certificate-from-the-enterprise-ca"></a>Exportera rotcertifikatet från Enterprise-CA:n
 
 För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enheten ett rot-CA-certifikat eller ett mellanliggande CA-certifikat. Följande steg förklarar hur du hämtar nödvändiga certifikat från din Enterprise CA.
@@ -134,9 +136,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 14. Logga ut från Enterprise-CA:n.
 
-## <a name="download-install-and-configure-the-certificate-connectors"></a>Ladda ned, installera och konfigurera certifikatanslutningsapparna
-
-### <a name="microsoft-intune-certificate-connector"></a>Microsoft Intune certifikat Connector
+## <a name="download-install-and-configure-the-microsoft-intune-certificate-connector"></a>Ladda ned, installera och konfigurera Microsoft Intune Certificate Connector
 
 > [!IMPORTANT]  
 > Microsoft Intune-certifikatanslutningsappen kan inte installeras på den utfärdande certifikatutfärdaren (CA) och måste i stället installeras på en separat Windows-server.  
@@ -162,21 +162,6 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 > [!NOTE]  
 > Microsoft Intune-certifikatanslutningsappen har stöd för TLS 1.2. Om TLS 1.2 installeras på den server som är värd för anslutningsappen använder anslutningsappen TLS 1.2. I annat fall används TLS 1.1. För närvarande används TLS 1.1 för autentisering mellan enheter och servern.
-
-### <a name="pfx-certificate-connector-for-microsoft-intune"></a>PFX-certifikatanslutningsapp för Microsoft Intune
-
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**
-3. Ladda ned och spara PFX-certifikatanslutningsappen för Microsoft Intune. Spara den på en plats som är tillgänglig från servern där du ska installera anslutningsappen.
-4. När nedladdningen är klar loggar du in på servern. Efter det:
-
-    1. Se till att .NET 4.6 Framework eller senare är installerat, eftersom det krävs av PFX-certifikatanslutningsappen för Microsoft Intune. Om .NET 4.6 Framework inte är installerat kommer installationsprogrammet att installera det automatiskt.
-    2. Kör installationsprogrammet (PfxCertificateConnectorBootstrapper.exe) och acceptera standardplatsen, som installerar anslutningsappen till `Program Files\Microsoft Intune\PFXCertificateConnector`.
-    3. Anslutningsapptjänsten körs under det lokala systemkontot. Om en proxy krävs för Internetåtkomst kontrollerar du att det lokala tjänstkontot kan komma åt proxyinställningarna på servern.
-
-5. PFX-certifikatanslutningsappen för Microsoft Intune öppnar fliken **Registrering** efter installationen. Om du vill aktivera anslutningen till Intune **loggar du in** och anger ett konto med behörigheter för global Azure-administratör eller Intune-administratör.
-6. Stäng fönstret.
-7. Gå tillbaka till Azure-portalen (**Intune** > **Enhetskonfiguration** > **Certifikatanslutningsappar**). Efter en stund visas en grön bockmarkering och **Anslutningsstatus** är **Aktiv**. Anslutningsservern kan nu kommunicera med Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Skapa en betrodd certifikatprofil
 
@@ -226,31 +211,6 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
    > [!NOTE]
    > På enheter med en Android Enterprise-profil syns inte certifikat som har installerats med en PKCS-certifikatprofil på enheten. Kontrollera statusen för profilen i Intune-konsolen för att bekräfta lyckad certifikatdistribution.
-
-## <a name="create-a-pkcs-imported-certificate-profile"></a>Skapa en PKCS-importerad certifikatprofil
-
-Du kan importera certifikat som tidigare utfärdats till en viss användare från valfri CA till Intune. Importerade certifikat installeras på varje enhet som en användare registrerar. S/MIME-kryptering för e-post är det vanligaste scenariot för att importera befintliga PFX-certifikat till Intune. En användare kan ha många certifikat för att kryptera e-post. Privata nycklar för de certifikaten måste finnas på alla användarens enheter så att de kan dekryptera tidigare krypterad e-post.
-
-Om du vill importera certifikat till Intune kan du använda [PowerShell-cmdletar som tillhandahålls på GitHub](https://github.com/Microsoft/Intune-Resource-Access).
-
-När du har importerat certifikaten till Intune skapar du en profil för **PKCS-importerat certifikat** och tilldelar den till Azure Active Directory-grupper.
-
-1. I [Azure Portal](https://portal.azure.com) går du till **Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-2. Ange följande egenskaper:
-
-    - **Namnet** på profilen
-    - Om du vill kan du ange en beskrivning
-    - **Plattform** att distribuera profilen till
-    - Ange **profiltypen** som **PKCS-importerat certifikat**
-
-3. Gå till **Inställningar** och ange följande egenskaper:
-
-    - **Avsett syfte**: Syftet med de certifikat som har importerats för den här profilen. En administratör kan ha importerat certifikat med olika syften (till exempel autentisering, S/MIME-signering eller S/MIME-kryptering). Avsett syfte som valts i certifikatprofilen matchar certifikatprofilen med rätt importerade certifikat.
-    - **Certifikatets giltighetsperiod**: Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år.
-    - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.
-
-4. Välj **OK** > **Skapa** för att spara profilen.
-5. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](device-profile-assign.md).
 
 ## <a name="whats-new-for-connectors"></a>Nyheter för anslutningsappar
 Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. När vi uppdaterar en anslutningsapp kan du läsa om ändringarna här. 

@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0721c62d44234a44881cdc562376c9bb62412187
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 041f37e56e85b0ac26a4dd7a9dbbdb49bc0ebd9e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68775928"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166335"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Minskat stöd för Android-enhetsadministratör 
-Enhetsadministratören för Android (kallas ibland för "äldre" Android-hantering och lanseras med Android 2.2) är ett sätt att hantera Android-enheter. Det finns dock en bättre hanteringsfunktion med [Android Enterprise]( https://docs.microsoft.com/intune/connect-intune-android-enterprise) (lanseras med Android 5.0). För att kunna flytta till en modern, mer omfattande och säkrare enhetshantering,minskar Google stödet för enhetsadministration i nya versioner av Android.
+Enhetsadministratören för Android (kallas ibland för "äldre" Android-hantering och lanseras med Android 2.2) är ett sätt att hantera Android-enheter. Det finns dock en bättre hanteringsfunktion med [Android Enterprise](../connect-intune-android-enterprise.md) (lanseras med Android 5.0). För att kunna flytta till en modern, mer omfattande och säkrare enhetshantering,minskar Google stödet för enhetsadministration i nya versioner av Android.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
 På grund av dessa ändringar av Google kommer Intune-användare att påverkas på följande sätt: 
@@ -66,7 +66,7 @@ Du behöver inte vidta några åtgärder, men du kan överväga att uppdatera di
 #### <a name="additional-information"></a>Ytterligare information 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Planera för förändring: Intune går över till iOS 11 och senare i september <!-- 4665342-->
+### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665324--"></a>Planera för förändring: Intune går över till iOS 11 och senare i september <!-- 4665324-->
 Vi förväntar oss att Apple lanserar iOS 13 i september. Strax efter lanseringen av iOS 13 går Intune, inklusive Intune-registreringen, företagsportalen och den hanterade webbläsaren, över till iOS 11 och senare.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
@@ -76,7 +76,7 @@ Förutsatt att mobilappar för O365 stöds i iOS 11.0 och senare kanske detta in
 - iPhone 5c
 - iPad (4:e generationen)
 
-Med början i juli får MDM-registrerade enheter med iOS 10 och företagsportalen en uppmaning om att uppgradera operativsystemet eller enheten. Om du använder appskyddsprinciper (APP) kan du även konfigurera åtkomstinställningen ”Kräv lägsta iOS-operativsystem (endast varning)”.
+Om du använder appskyddsprinciper (APP) kan du även konfigurera åtkomstinställningen ”Kräv lägsta iOS-operativsystem (endast varning)”.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Kontrollera din Intune-rapportering för att se vilka enheter eller användare som kan påverkas. Gå till **Enheter** > **Alla enheter** och filtrera efter operativsystem. Du kan lägga till fler kolumner för att hjälpa till att identifiera vem i din organisation som har enheter som kör iOS 10. Uppmana dina slutanvändare att uppgradera sina enheter till en operativsystemversion som stöds innan september.
@@ -96,7 +96,7 @@ Kontrollera dina appar från Microsoft och tredje part samt dina verksamhetsspec
 Du bör också uppdatera din dokumentation eller vägledning för utvecklare om det är tillämpligt för att inkludera den här ändringen i stödet för SDK.
 
 #### <a name="additional-information"></a>Ytterligare information
-https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+[Förbered branschspecifika appar för appskyddsprinciper](../apps-prepare-mobile-application-management.md)
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Ändringsplan: Nya inställningar för Windows-uppdateringar i Intune <!-- 4464404 -->
 Från och med augustiversionen till Intune-tjänsten eller 1908 lägger vi till nya ”Inställningar för tidsgräns” som du kan konfigurera i stället för inställningarna ”Tillåt att användaren startar om (interaktiv omstart)”. Vi planerar att inaktivera inställningarna för interaktiv omstart i användargränssnittet i 1909 eller septemberuppdateringen och sedan ta bort dem från konsolen i slutet av oktober. 

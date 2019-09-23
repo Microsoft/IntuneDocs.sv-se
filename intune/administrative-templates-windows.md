@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
-ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
+ms.openlocfilehash: 8b41405e2256d6d2608b05a9c7e8a40cbb3ab349
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70376930"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071057"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
 
@@ -36,7 +36,7 @@ Den här artikeln listar stegen för att skapa en mall för Windows 10-enheter o
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-- Några av de här inställningarna är tillgängliga från och med Windows 10 version 1703 (RS2). Vi rekommenderar att du använder Windows 10 Enterprise version 1903 (19H1) och senare för bästa möjliga upplevelse.
+- Några av de här inställningarna är tillgängliga från och med Windows 10 version 1703 (RS2). Vissa inställningar ingår inte i alla Windows-versioner. Vi rekommenderar att du använder Windows 10 Enterprise version 1903 (19H1) och senare för bästa möjliga upplevelse.
 
 - I Windows-inställningarna använder du [CSP:er för Windows-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). CSP:er fungerar i olika utgåvor av Windows, till exempel Home, Professional, Enterprise och så vidare. Om du vill se om en CSP fungerar i en viss version går du till [CSP:er för Windows-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecfd482df452c52d81621cdc49c6ca78c4d4c1f6
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 1710fd315803c4b47ad3be343893f93f7d155135
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354532"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061697"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 Läs mer om de senaste uppdateringarna för Microsoft Intune-apparna. Vi lägger regelbundet till och förbättrar Intune-företagsportalappen och webbplatsen. Om du är Intune-administratör eller support innehåller den här artikeln information som du behöver för att:
@@ -33,6 +33,23 @@ Läs mer om de senaste uppdateringarna för Microsoft Intune-apparna. Vi lägger
 Om du är anställd eller student bör du titta på skärmbilderna och länkarna till hjälpdokumentation om företagsportalen. Mer information om hur du använder företagsportalappen finns i [hjälpdokumentationen för användare av företagsportalen](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+
+## <a name="week-of-september-9-2019"></a>Veckan då den 9 september 2019 infaller
+
+### <a name="updates-to-microsoft-intune-app----4997846---"></a>Uppdateringar av Microsoft Intune-appen <!-- 4997846 -->
+Microsoft Intune-appen för Android har uppdaterats med följande förbättringar:
+- Uppdaterad och förbättrad layout som inkluderar navigering i nederkant för de viktigaste åtgärderna.
+- Ytterligare en sida har lagts till som visar användarens profil.
+- Visning av interaktiva meddelanden i appen för användaren har lagts till, exempelvis om enhetsinställningarna behöver uppdateras.
+- Visning av anpassade push-meddelanden har lagts till, vilket ger appen samma stöd som nyligen lagts till i företagsportalappen för iOS och Android. Du hittar mer information i [Skicka anpassade meddelanden i Intune](custom-notifications.md).
+
+    Exempel på användarprofil:<br>
+    <img src="./media/intune-app-android-device-profile.png" alt="Screenshot of Microsoft Intune app for Android - User Profile" width="300">   
+
+    Exempel på meddelanden och nedre navigering:<br>
+    <img src="./media/intune-app-android-device-notify.png" alt="Screenshot of Microsoft Intune app for Android - Notification" width="300">   
+
 
 ## <a name="week-of-june-24-2019"></a>Veckan som inleds med 24 juni 2019  
 

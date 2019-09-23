@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48474ca9fcfafcd050b7ef9c5a64adb56388b9a4
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 7b7b4453d441d2f2367b19a6bf0505dabd8e6e48
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842141"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061684"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -54,6 +54,21 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 
 <!-- ########################## -->
 
+## <a name="week-of-september-16-2019"></a>Veckan då den 16 september 2019 infaller
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="macos-support-for-web-apps----3174427---"></a>macOS-stöd för webbappar <!-- 3174427 -->
+Webbappar, som gör att du kan lägga till en genväg till en URL på webben, kan installeras på Dock med hjälp av Företagsportal i macOS. Slutanvändare kan komma åt **installationsåtgärden** via appinformationssidan för en webbapp i Företagsportal i macOS. Mer information om apptypen **Webblänk** finns i [Lägga till appar i Microsoft Intune](apps-add.md) och [Lägga till webbappar i Microsoft Intune](web-app.md).
+
+#### <a name="macos-support-for-vpp-apps----3173501----"></a>macOS-stöd för VPP-appar <!-- 3173501  -->
+macOS-appar som köpts via Apple Business Manager visas i konsolen när Apple VPP-token synkroniseras i Intune. Du kan tilldela, återkalla och omtilldela enhets- och användarbaserade licenser för grupper med hjälp av Intune-konsolen. Med Microsoft Intune kan du hantera VPP-appar som köpts för användning i företaget genom att:
+- Rapportera licensinformation från App Store.
+- Spåra antalet använda licenser.
+- Hjälpa dig att inte installera fler exemplar av en app än du äger.
+
+Mer information om Intune och VPP, finns i [Hantera volyminköpta appar och böcker med Microsoft Intune](vpp-apps.md).
+
 ## <a name="week-of-september-9-2019"></a>Veckan då den 9 september 2019 infaller
 
 ### <a name="app-management"></a>Apphantering
@@ -64,6 +79,10 @@ Microsoft Intune-appen för Android har uppdaterats med följande förbättringa
 - Ytterligare en sida har lagts till som visar användarens profil.
 - Visning av interaktiva meddelanden i appen för användaren har lagts till, exempelvis om enhetsinställningarna behöver uppdateras.
 - Visning av anpassade push-meddelanden har lagts till, vilket ger appen samma stöd som nyligen lagts till i företagsportalappen för iOS och Android. Du hittar mer information i [Skicka anpassade meddelanden i Intune](custom-notifications.md).
+
+#### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993---"></a>För iOS-enheter anpassar du registreringsprocessens sekretessida i Företagsportal <!-- 4394993 -->
+Med Markdown kan du anpassa sekretessidan i Företagsportal som slutanvändare ser vid iOS-registrering. Mer specifikt kan du anpassa listan med saker som organisationen inte kan se eller göra på enheten. Mer information finns i [Så konfigurerar du appen Intune-företagsportal](company-portal-app.md#privacy-statement-customization).
+
 
 ## <a name="week-of-september-2-2019"></a>Veckan då den 2 september 2019 infaller
 
@@ -228,7 +247,7 @@ Du kan ställa in att programprofiler för enhetsregistrering hoppar över följ
 Mer information om anpassning av installationsassistenten finns i [Skapa en Apple-registreringsprofil för iOS](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) och [Skapa en Apple-registreringsprofil för MacOS](device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
 #### <a name="add-a-user-column-to-the-autopilot-device-csv-upload-process----3823054---"></a>Lägg till en användarkolumn till CSV-överföringsprocessen för autopilotenheten <!-- 3823054 -->
-Nu kan du lägga till en användarkolumn till CSV-överföringen för autopilotenheter. På så sätt kan du tilldela många användare på samma gång när du importerar CSV-filen. Det nya formatet för raderna i CSV-filen ser ut så här: serienummer, Windows-produkt-ID, maskinvaruhash, valfri-grupptagg, valfri-tilldelad-användare. Du hittar mer information i [Registrera Windows-enheter i Intune med hjälp av Windows Autopilot](enrollment-autopilot.md).
+Nu kan du lägga till en användarkolumn till CSV-överföringen för autopilotenheter. På så sätt kan du tilldela många användare på samma gång när du importerar CSV-filen. Du hittar mer information i [Registrera Windows-enheter i Intune med hjälp av Windows Autopilot](enrollment-autopilot.md).
 
 
 ### <a name="device-management"></a>Enhetshantering

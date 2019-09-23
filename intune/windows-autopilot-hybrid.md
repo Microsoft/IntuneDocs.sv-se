@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
-ms.reviewer: damionw
+ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 399b0c6065c51343e4802d4e8aec29381c6dc468
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 0bf683aebee50b4f2172f11ce205a910a47d0845
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861855"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071137"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -106,14 +106,14 @@ Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
 
 Intune Connector för Active Directory måste installeras på en dator som kör Windows Server 2016 eller senare. Datorn måste också ha åtkomst till internet och din Active Directory. Om du vill öka skalningen och tillgängligheten eller om du vill ha stöd för flera Active Directory-domäner kan du installera flera anslutningsprogram i din miljö. Vi rekommenderar att du installerar anslutningsappen på en server som inte kör några andra Intune-anslutningsappar.
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)**  > **Lägg till anslutningsapp**. 
+1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)**  > **Lägg till**. 
 2. Följ anvisningarna för att ladda ned Connector.
 3. Öppna den nedladdade konfigurationsfilen för anslutningsappen, *ODJConnectorBootstrapper.exe*, för att installera Connector.
 4. Välj **Konfigurera** i slutet av konfigurationen.
 5. Välj **Logga in.**
 6. Ange autentiseringsuppgifter för rollen Global administratör eller Intune-administratör.  
    Användarkontot måste ha en tilldelad Intune-licens.
-7. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)** och bekräfta sedan att anslutningsstatusen är **Aktiv**.
+7. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory**  och bekräfta sedan att anslutningsstatusen är **Aktiv**.
 
 > [!NOTE]
 > När du har loggat in på Connector kan det ta några minuter innan det visas i [Intune](https://aka.ms/intuneportal). Det visas bara om den kan kommunicera med Intune-tjänsten.
@@ -183,14 +183,17 @@ När Autopilot-enheterna har registrerats ändras deras enhetsnamn till värdnam
 Autopilot-distributionsprofiler används för att konfigurera Autopilot-enheterna.
 
 1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
-1. Skriv ett **namn** och (frivilligt) en **beskrivning**.
-1. I **Distributionsläge** väljer du **Användarstyrd**.
-1. I rutan **Anslut till Azure AD som** väljer du **Hybrid Azure AD-ansluten (förhandsversion)** .
-1. Välj **Välkomstupplevelse (OOBE)** , konfigurera alternativen efter behov och välj sedan **Spara**.
-1. Välj **Skapa** för att skapa profilen. 
-1. I profilfönstret väljer du **Tilldelningar**.
-1. Välj **Välj grupper**.
-1. I fönstret **Välj grupper** väljer du enhetsgruppen och klickar sedan på **Välj**.
+2. På sidan **Grundinställningar** anger du ett **Namn** och en valfri **Beskrivning**.
+3. Om du vill att alla enheter i de tilldelade grupperna automatiskt ska omvandlas till Autopilot väljer du **Ja** för **Omvandla alla målenheter till Autopilot**. Enheter som inte är Autopilot-enheter i tilldelade grupper registreras med Autopilot-distributionstjänsten. Det kan ta upp till 48 timmar för registreringen att bearbetas. När enheten har avregistrerats och återställts registreras den av Autopilot. När en enhet har registrerats på det här sättet tas inte enheten bort från Autopilot-distributionstjänsten om det här alternativet inaktiveras eller om profiltilldelningen tas bort. Du måste i stället [ta bort enheten direkt](enrollment-autopilot.md#delete-autopilot-devices).
+4. Välj **Nästa**.
+5. På sidan **Välkomstupplevelse (OOBE)** för **Distributionsläge** väljer du **Användarbaserat**.
+6. I rutan **Anslut till Azure AD som** väljer du **Hybrid Azure AD-ansluten**.
+7. Konfigurera de återstående alternativen på sidan **Välkomstupplevelse (OOBE)** efter behov.
+8. Välj **Nästa**.
+9. På sidan **Omfångstaggar** väljer du [omfångstaggar](scope-tags.md) för den här profilen.
+10. Välj **Nästa**.
+11. På sidan **Tilldelningar** väljer du **Välj grupper att ta med** > sök efter och välj enhetsgruppen > **Välj**.
+12. Välj **Nästa** > **Skapa**.
 
 Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte tilldelad* till *Tilldelar* och slutligen till *Tilldelad*.
 

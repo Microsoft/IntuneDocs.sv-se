@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cf55084951c3a423b79e4588f8814b5e73ce8e8
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: a038f55f6dbdd894742a8712c878e77557a77210
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063027"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061548"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Rensar data selektivt med villkorsstyrda startåtgärder för appskyddsprinciper i Intune
 
@@ -44,7 +44,7 @@ Du kan uttryckligen välja att rensa ditt företags data från slutanvändarens 
 8. Välj den **åtgärd** du vill vidta att om användarna inte uppfyller dina krav. I vissa fall kan flera åtgärder konfigureras för en och samma inställning. Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md).
 
 >[!NOTE]
-> Om du vill använda inställningen **Enhetsmodeller eller enhetstillverkare** anger du en semikolonavgränsad lista över modell-ID:n. Undvik blanksteg i listor med flera värden. De här värdena är inte skiftlägeskänsliga. 
+> Om du vill använda inställningen **Enhetsmodeller eller enhetstillverkare** anger du en semikolonavgränsad lista över enhetsmodell-ID:n (iOS) eller enhetstillverkare (Android). Undvik blanksteg i listor med flera värden. De här värdena är inte skiftlägeskänsliga. 
 
 ## <a name="policy-settings"></a>Principinställningar 
 

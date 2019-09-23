@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cda0453009855d96e7c13e170ba908479a0773ea
-ms.sourcegitcommit: 513e805bbea8bf652c2901dfc5460e34946077df
+ms.openlocfilehash: c0cbc2c7334675e91450b9c2d7129a098498d978
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160528"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061594"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
 Appkonfigurationsprinciper kan hjälpa dig att förhindra problem med konfiguration av appar eftersom du kan tilldela konfigurationsinställningar till en princip som tilldelas till slutanvändare innan de kör appen. Inställningarna anges sedan automatiskt när appen konfigureras på slutanvändarnas enheter, och slutanvändarna behöver då inte vidta några åtgärder. Konfigurationsinställningarna är unika för varje app. 
 
-Du kan skapa och använda appkonfigurationsprinciper för att ge konfigurationsinställningar för både iOS-appar och Android-appar. Med dessa konfigurationsinställningar kan en app anpassas enligt [branschstandarden](https://www.appconfig.org/) för konfiguration och hantering av appar. Inställningarna för konfigurationsprincipen används när appen söker efter inställningarna, oftast första gången appen körs. 
+Du kan skapa och använda appkonfigurationsprinciper för att ge konfigurationsinställningar för både iOS-appar och Android-appar. Med dessa konfigurationsinställningar kan en app anpassas med hjälp av konfiguration och hantering av appar. Inställningarna för konfigurationsprincipen används när appen söker efter inställningarna, oftast första gången appen körs. 
 
 Till exempel kan en appkonfigurationsinställning kräva att du anger några av de följande uppgifterna:
 
@@ -60,7 +60,7 @@ Du har två alternativ vad gäller användning av appkonfigurationsprinciper med
 ## <a name="apps-that-support-app-configuration"></a>Appar som stöder appkonfiguration
 
 ### <a name="managed-devices"></a>Hanterade enheter
-Du kan använda appkonfigurationsprinciper för appar som stöder det. För att stödja appkonfiguration i Intune måste appar ha skrivits för att stödja användningen av appkonfigurationer enligt definitionen från [AppConfig-communityn](https://www.appconfig.org/members). Kontakta appleverantören om du vill ha mer information.
+Du kan använda appkonfigurationsprinciper för appar som stöder det. För att stödja appkonfiguration i Intune måste appar ha skrivits för att stödja användningen av appkonfigurationer enligt definitionen från operativsystemet. Kontakta appleverantören för information om vilka appkonfigurationsnycklar som stöds.
 
 ### <a name="managed-apps"></a>Hanterade appar
 Du kan förbereda dina verksamhetsspecifika appar genom att antingen integrera [Intune App SDK](app-sdk.md) i appen eller genom att omsluta appen när den har utvecklats med hjälp av [Intune-verktyget för omslutning av appar](apps-prepare-mobile-application-management.md). Intune App SDK syftar till att minimera den mängd kodändringar i programmet som apputvecklare behöver göra. Mer information finns i [Översikt över Intune App SDK](app-sdk.md). En jämförelse mellan Intune App SDK och Intune-verktyget för omslutning av appar finns i [Förbereda verksamhetsspecifika appar för appskyddsprinciper](apps-prepare-mobile-application-management.md#feature-comparison).
