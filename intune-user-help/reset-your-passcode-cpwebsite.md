@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,21 +18,20 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 690fb81350c0c264677c6c75b8942e9cdcd4e8f0
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546806"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163365"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Så återställer du enhetens lösenord från företagsportalens webbplats
 
-Om du har tappat bort PIN-koden eller lösenordet kan du återställa det på [företagsportalens webbplats](https://portal.manage.microsoft.com).  
+Om du har tappat bort PIN-koden eller lösenordet kan du återställa det på [företagsportalens webbplats](https://portal.manage.microsoft.com). 
 
-Om du använder en företagsregistrerad enhet kan det hända att du inte ser alternativet för att återställa enhetens lösenord. Kontakta företagets support som kan återställa lösenordet åt dig.
+Alternativet Återställ lösen ord kanske inte visas för en företags registrerad enhet. I det här fallet kontaktar du företagets support för att återställa den åt dig.  
 
-   > [!NOTE]
-   > Du kan inte återställa lösenord för enheter som kör Android 7.0 eller senare. Om du glömmer ditt lösenord måste du återställa enheten till fabriksinställningarna. 
+Återställning av lösen ord är inte tillgängligt för enheter som kör Android 7,0 och senare. Om du glömmer ditt lösen ord på någon av dessa enheter måste du återställa det till fabriks inställningarna.  
 
 ## <a name="reset-your-passcode"></a>Återställa lösenordet
 
@@ -40,15 +39,15 @@ Om du använder en företagsregistrerad enhet kan det hända att du inte ser alt
 
 2. Välj den enhet vars lösenord behöver återställas.  
 
-    ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/rename-reset-device-step2-1808.png) 
+    ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll visas under enheterna och uppmanar användaren att identifiera den enhet som används eller att lägga till en ny.](./media/rename-reset-device-step2-1808.png) 
 
 3. Välj **Återställ lösenord**. Om lösenordsalternativet inte visas längst upp på sidan väljer du **Mer (…)**  > **Återställ lösenord**.   
 
    ![Sidan med enhetsinformation för en vald enhet på webbplatsen för företagsportalen, med en lista över länkar längst upp som visar Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/rename-reset-device-1808.png)   
 
-    ![Närbild på ikonen Mer, markerad med en röd pil.](./media/rename-reset-device-step3-more-1808.png)  
+    ![Skärmbild av ikonen Mer, som visas med en röd pil.](./media/rename-reset-device-step3-more-1808.png)  
 
-4. När du uppmanas till detta klickar du på **Logga ut**. Logga in igen när en ny uppmaning visas. Du måste logga in på webbplatsen för företagsportalen igen inom fem minuter, annars återställer inte företagsportalen enhetens lösenord.  
+4. När du uppmanas till detta klickar du på **Logga ut**. Logga in igen när en ny uppmaning visas. Du måste logga in på företagsportalens webbplats inom fem minuter för att enhetens lösenord ska återställas.  
 
    > [!NOTE]
    > Du måste logga in för att bekräfta din identitet. Det här görs för att förhindra skadliga försök att återställa enhetens lösenord.
@@ -61,7 +60,7 @@ Om du använder en företagsregistrerad enhet kan det hända att du inte ser alt
 
    ![Exempel på skärmbild som visar det andra meddelandet för att återställa lösenord. Innehåller länkar så att du kan läsa mer om att ange ett nytt lösenord i dokumentationen, samt enskilda knappar för att återställa lösenord och avbryta.](./media/iwp-reset-passcode-popup2-1808.png) 
 
-6. Om du återställer lösenordet för en iOS-enhet kommer dess befintliga lösenord att tas bort. För Windows- eller Android-enheter kommer du att få ett tillfälligt lösenord så att du kan låsa upp enheten och ange ett nytt lösenord. 
+6. Om du återställer lösenordet för en iOS-enhet kommer dess befintliga lösenord att tas bort. För Windows- eller Android-enheter får du ett tillfälligt lösenord så att du kan låsa upp enheten och ange ett nytt lösenord. 
 
    > [!NOTE]
    > Du hittar det tillfälliga lösenordet för Windows- och Android-enheter i företagsportalen, på sidan med information om enheten. I avsnittet [Ställa in ett nytt lösenord](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode) finns mer operativsystemspecifika beskrivningar om lösenord.  
@@ -76,7 +75,7 @@ Det här avsnittet beskriver återställning av lösenord och funktionen med til
 
 **Android**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror.
 
-**iOS**: Tar bort det befintliga lösenordet, men skapar inte något tillfälligt lösenord. Om du använder fingeravtrycksläsning med Touch ID för att öppna enheten eller göra köp måste du konfigurera detta igen.  
+**iOS**: Tar bort det befintliga lösenordet, men skapar inte något tillfälligt lösenord. Om du använder Touch ID för att öppna din enhet eller göra inköp måste du konfigurera den igen.  
 
 **Windows 10 Mobile**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller bokstäver och siffror. Om ansiktsigenkänning med Windows Hello har konfigurerats fungerar det fortfarande med enheten.
 

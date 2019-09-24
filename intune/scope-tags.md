@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90865b8a8881ab85089fb379a8398e276574b771
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 2fb82b02057e1e028755da16a05755b0b8ddb93a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550039"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163807"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT
 
@@ -35,10 +35,10 @@ Anta exempelvis att administratören på regionkontoret i Seattle har rollen som
 3. Lägg till omfångstaggen Seattle i principer och profiler som du vill att administratörer i Medlemmar (Grupper) ska kunna komma åt.
 4. Lägga till omfångstaggen Seattle till enheter som ska vara synliga för administratörer i Medlemmar (Grupper). 
 
-## <a name="default-scope-tag"></a>Standard omfattnings tag gen
+## <a name="default-scope-tag"></a>Standardomfångstagg
 Standard omfångs tag gen läggs automatiskt till i alla otaggade objekt som stöder omfångs taggar.
 
-Standardvärdet för scope-taggen liknar funktionen säkerhets omfattningar i System Center Configuration Manager. 
+Funktionen för standardomfångstaggar liknar funktionen för säkerhetsomfång i System Center Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Skapa en omfångstagg
 
@@ -101,7 +101,6 @@ När du arbetar med omfångstaggar bör du beakta följande:
     - Enhetskategorier
     - Registreringsbegränsningar
     - Företags enhets identifierare
-    - Villkor
     - Autopilot-enheter
     - Platser för enhetskompatibilitet
     - JAMF-enheter

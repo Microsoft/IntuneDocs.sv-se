@@ -60,7 +60,7 @@
 ##### [Använd Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [Använda en iOS-enhet](using-your-iOS-device-with-intune.md)
-### [Vad händer när jag registrerar en iOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+### [Effekter av att återställa en iOS-enhet](effects-of-device-reset-company-portal-ios.md)
 ### [Installera och logga in i företagsportalen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
 ### [Registrera din iOS-enhet som tillhandahålls av organisationen](enroll-your-device-dep-ios.md)

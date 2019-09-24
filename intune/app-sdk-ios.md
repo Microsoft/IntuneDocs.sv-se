@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 09/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: ea31c06019643a3eaf10d79857dfdc319a8453c3
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021819"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167208"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -215,7 +215,7 @@ Om din app redan använder ADAL eller MSAL, krävs följande konfigurationer:
 
 Dessutom kan appar åsidosätta de här Azure AD-inställningarna under körning. Gör detta genom att ange egenskaperna `aadAuthorityUriOverride`, `aadClientIdOverride` och `aadRedirectUriOverride` på instansen `IntuneMAMPolicyManager`.
 
-4. Se till att stegen som ger din iOS appbehörigheter till APP-tjänsten följs. Använd instruktionerna i [Kom igång med Intune SDK-guiden](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under [Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).  
+4. Se till att stegen som ger din iOS appbehörigheter till APP-tjänsten följs. Använd instruktionerna i [Kom igång med Intune SDK-guiden](app-sdk-get-started.md#next-steps-after-integration) under [Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional).  
 
 > [!NOTE]
 > Metoden Info.plist rekommenderas för alla inställningar som är statiska och behöver inte fastställas vid körning. Värden som tilldelats egenskaperna `IntuneMAMPolicyManager` har företräde framför alla motsvarande värden som anges i Info.plist och behålls även när appen startas om. SDK fortsätter att använda dem för principkontroller tills användaren har avregistrerats eller värdena har rensats eller ändrats.
@@ -276,6 +276,9 @@ WebViewHandledURLSchemes | Strängmatris | Anger de URL-scheman som appens WebVi
 ### <a name="overview"></a>Översikt
 
 För att få appskyddsprincipen för Intune måste apparna starta en registreringsbegäran med Intune MAM-tjänsten. Appar kan konfigureras i Intune-konsolen för att ta emot appskyddsprincipen med eller utan enhetsregistrering. Med appskyddsprincip utan registrering, så kallad **APP-WE** eller MAM-WE, kan appar hanteras av Intune utan att enheten behöver registreras i Intunes hantering av mobila enheter (MDM). I båda fallen krävs registrering med Intune MAM-tjänsten för att ta emot principen.
+
+> [!Important]
+> Intune App SDK för iOS använder 256-bitars krypteringsnycklar när kryptering har aktiverats av appskyddsprinciper. Alla appar måste ha en aktuell SDK-version för att tillåta skyddad data delning.
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Appar som redan använder ADAL eller MSAL
 
@@ -412,9 +415,6 @@ Dessa ombudsmetoder returnerar ett `IntuneMAMEnrollmentStatus`-objekt som inneh�
 * En statuskod som visar resultatet av begäran
 * En felsträng med en beskrivning av statuskoden
 * Ett `NSError`-objekt. Det här objektet definieras i `IntuneMAMEnrollmentStatus.h`, tillsammans med de specifika statuskoder som kan returneras.
-
-> [!NOTE]
-> Den här informationen är endast till för felsökning. Ingen affärslogik i din app bör baseras på dessa aviseringar. Den här informationen kan skickas till en telemetritjänst för felsökning eller övervakning.
 
 ### <a name="sample-code"></a>Exempelkod
 
@@ -593,7 +593,7 @@ Intune-administratörerna kan rikta in och distribuera konfigurationsdata via In
 
 Mer information om funktionerna i Graph API finns i [Graph API-referens](https://developer.microsoft.com/graph/docs/concepts/overview).
 
-Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i iOS finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for iOS](https://docs.microsoft.com/intune/app-configuration-policies-use-ios) (använda Microsoft Intune-appkonfigurationsprinciper för iOS).
+Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i iOS finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for iOS](app-configuration-policies-use-ios.md) (använda Microsoft Intune-appkonfigurationsprinciper för iOS).
 
 ## <a name="telemetry"></a>Telemetri
 

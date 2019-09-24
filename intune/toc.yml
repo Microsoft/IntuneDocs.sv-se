@@ -321,30 +321,33 @@
           href: device-profiles.md
         - name: Skapa en profil
           href: device-profile-create.md
-        - name: Administrativa mallar
+        - name: Administrativa mallar i Windows
           href: administrative-templates-windows.md
-        - name: Enhetsfunktioner
+          displayName: 'group policy, gpo, admx'
+        - name: Enhetsfunktioner i iOS och macOS
           href: device-features-configure.md
         - name: Begränsa enhetsinställningar och funktioner
           href: device-restrictions-configure.md
           displayName: Device restrictions
-        - name: Leverera uppdateringar
+        - name: Uppdateringar
           href: delivery-optimization-windows.md
-          displayName: delivery optimization; updates
+          displayName: delivery optimization; Windows update
         - name: Uppgradera versioner och S-läge
           href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurera e-post
+        - name: E-post
           href: email-settings-configure.md
-        - name: Aktivera helskärmsläge
+        - name: Informationsdatorer och dedikerade enheter
           href: kiosk-settings.md
-        - name: Lägga till ett VPN
+        - name: Delade enheter för flera användare
+          href: shared-user-device-settings.md
+        - name: VPN
           href: vpn-settings-configure.md
           items:
             - name: Per app-VPN för Android
               href: android-pulse-secure-per-app-vpn.md
             - name: Per app-VPN för iOS
               href: vpn-setting-configure-per-app.md
-        - name: Lägga till ett trådlöst Wi-Fi-nätverk
+        - name: Wi-Fi-nätverk
           href: wi-fi-settings-configure.md
           displayName: wifi
           items:
@@ -354,8 +357,6 @@
           href: kernel-extensions-overview-macos.md
         - name: Education – appen Gör ett prov
           href: education-settings-configure.md
-        - name: Delade enheter för flera användare
-          href: shared-user-device-settings.md
         - name: Mobility Extensions på Zebra-enheter
           href: android-zebra-mx-overview.md
           displayName: mx
@@ -594,6 +595,8 @@
                   href: app-sideload-windows.md
                 - name: macOS LOB-appar
                   href: lob-apps-macos.md
+            - name: Android Enterprise-systemprogram
+              href: apps-ae-system.md
             - name: Win32-apphantering
               href: apps-win32-app-management.md
             - name: PowerShell-skript
@@ -623,12 +626,24 @@
               href: app-configuration-policies-use-ios.md
             - name: Android hanterade enheter
               href: app-configuration-policies-use-android.md
-            - name: Konfigurera Managed Home Screen
-              href: app-configuration-managed-home-screen-app.md
-            - name: Hanterade appar
+            - name: Konfigurera hanterade program utan registrering
               href: app-configuration-policies-managed-app.md
             - name: Använd iOS-appetableringsprofiler
               href: app-provisioning-profile-ios.md
+            - name: Konfigurera specifika program
+              items:
+                - name: Konfigurera Managed Home Screen
+                  href: app-configuration-managed-home-screen-app.md
+                - name: Konfigurera företagsportalen
+                  href: company-portal-app.md
+                - name: Konfigurera Managed Browser
+                  href: app-configuration-managed-browser.md
+                - name: Konfigurera Microsoft Launcher
+                  href: configure-microsoft-launcher.md
+                - name: Konfigurera Microsoft Edge
+                  href: manage-microsoft-edge.md
+                - name: Konfigurera Outlook
+                  href: app-configuration-policies-outlook.md
             - name: Volyminköpta appar och böcker
               items:
                 - name: Hantera VPP-appar och-böcker
@@ -640,14 +655,6 @@
                   href: windows-store-for-business.md
                 - name: iOS e-böcker
                   href: vpp-ebooks-ios.md
-            - name: Konfigurera företagsportalen
-              href: company-portal-app.md
-            - name: Konfigurera Managed Browser
-              href: app-configuration-managed-browser.md
-            - name: Konfigurera Microsoft Edge
-              href: manage-microsoft-edge.md
-            - name: Konfigurera Outlook
-              href: app-configuration-policies-outlook.md
         - name: Skydda appar
           items:
             - name: Rensa program selektivt

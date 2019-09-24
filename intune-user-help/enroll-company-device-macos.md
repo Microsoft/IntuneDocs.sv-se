@@ -18,31 +18,33 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: 9066fefccde39ccac281f3bda9008168ea28b77f
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783021"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166614"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrera din macOS-enhet som tillhandahålls av organisationen i hanteringen
 
 Läs om hur du får en ny macOS-enhet hanterad i Intune.  
 
-Enheter som tillhandahålls till dig av arbete eller skola är ofta förkonfigurerade innan du tar emot dem. Din organisation skickar dessa förkonfigurerade inställningar till enheten när du startar den och loggar in för första gången. När installationen är färdig får du tillgång till arbetets eller skolans resurser. 
+Enheter som tillhandahålls till dig av arbete eller skola är ofta förkonfigurerade innan du tar emot dem. Din organisation skickar dessa förkonfigurerade inställningar till enheten när du startar den och loggar in för första gången. När installationen är färdig får du tillgång till arbetets eller skolans resurser.
 
-Du påbörjar konfigureringen genom att starta din enhet och logga in med dina inloggningsuppgifter för arbetet eller skolan. Resten av den här artikeln beskriver stegen och de skärmar du kommer att se i installationsassistenten.   
+Du påbörjar konfigureringen genom att starta din enhet och logga in med dina inloggningsuppgifter för arbetet eller skolan. Resten av den här artikeln beskriver stegen och de skärmar du kommer att se i installationsassistenten.
 
 ## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
-Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
-## <a name="get-your-device-managed"></a>Få din enhet hanterad 
+Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos.md).  
+
+## <a name="get-your-device-managed"></a>Få din enhet hanterad
+
 Utför följande steg när du ska registrera din macOS-enhet för hantering. Om du använder en egen enhet i stället för en enhet som tillhandahålls av organisationen följer du de här stegen för [egna enheter](enroll-your-device-in-intune-macos-cp.md).  
 
-1. Starta din macOS-enhet. 
+1. Starta din macOS-enhet.
 2. Välj land/region och klicka på **Fortsätt**.  
 
-   ![Skärmbild av startskärmen i installationsassistenten för macOS-enheter och en lista med språk att välja mellan.](./media/macos-dep-welcome-1808.png)   
+   ![Skärmbild av startskärmen i installationsassistenten för macOS-enheter och en lista med språk att välja mellan.](./media/macos-dep-welcome-1808.png)
 3. Välj en tangentbordslayout. I listan visas ett eller flera alternativ som baseras på det valda landet/den valda regionen. Om du vill se alla layoutalternativ, oavsett vilket land/vilken region du har valt, klickar du på **Visa alla**. När du är färdig klickar du på **Fortsätt**.  
 
    ![Skärmbild av skärmen för tangentbordslayout i installationsassistenten för macOS-enheter och en lista med tangentbordsspråk att välja från, ett avmarkerat Visa alla-alternativ samt knapparna Tillbaka och Fortsätt.](./media/macos-dep-keyboard-1808.png)  
@@ -62,14 +64,17 @@ Utför följande steg när du ska registrera din macOS-enhet för hantering. Om 
     * skapa ett datorkonto
     * gå igenom en snabbkonfiguration
     * konfigurera din Mac  
-## <a name="get-the-company-portal-app"></a>hämta appen för företagsportalen.      
-Ladda ned Intunes företagsportalsapp för macOS på din enhet. Med den här appen kan du övervaka, synkronisera, lägga till och ta bort enheten från hanteringen samt installera appar. Här beskrivs också hur du registrerar din enhet i företagsportalen.  
-1. Gå till https://portal.manage.microsoft.com/EnrollmentRedirect.aspx på din macOS-enhet.
+
+## <a name="get-the-company-portal-app"></a>hämta appen för företagsportalen.
+
+Ladda ned Intunes företagsportalsapp för macOS på din enhet. Med den här appen kan du övervaka, synkronisera, lägga till och ta bort enheten från hanteringen samt installera appar. Här beskrivs också hur du registrerar din enhet i företagsportalen.
+
+1. Gå till [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx) på din macOS-enhet.
 2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto. 
 3. Hämta installationsprogrammet för företagsportalen för macOS genom att klicka på **Hämta appen**.
 4. Öppna pkg-filen när du uppmanas till detta och slutför installationen.
-4. Öppna företagsportalappen och logga in med ditt arbets- eller skolkonto.
-5. Leta reda på enheten och klicka på **Registrera**.
-6. Klicka på **Fortsätt** > **Klar**. Enheten bör nu visas i företagsportalsappen som en kompatibel företagsenhet.
+5. Öppna företagsportalappen och logga in med ditt arbets- eller skolkonto.
+6. Leta reda på enheten och klicka på **Registrera**.
+7. Klicka på **Fortsätt** > **Klar**. Enheten bör nu visas i företagsportalsappen som en kompatibel företagsenhet.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

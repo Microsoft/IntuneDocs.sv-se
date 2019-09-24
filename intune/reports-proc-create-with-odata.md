@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e18279fd9cca88de5f04c57a8bcccce1c211c6de
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
+ms.openlocfilehash: 4494d5f75336f7152668cfa1bb6fa1cd1a94305c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894325"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167857"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Skapa en Intune-rapport från OData-feeden med Power BI
 
@@ -58,7 +58,7 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 3. Kopiera den anpassade feed-URL:en. Exempelvis: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Öppna Power BI Desktop.
 5. Välj **Arkiv** > **Hämta data** > **OData-feed**från meny raden.
-6. Klistra in den anpassade feed-URL: en som du kopierade från föregående steg i URL-rutan i **OData** -matnings fönstret.
+6. Klistra in den anpassade feed-URL: en som du kopierade från föregående steg i URL-rutan i **OData-matnings** fönstret.
 7. Välj **Grundläggande**.
 
     ![OData-feeden för klientens Intune Data Warehouse](media/reports-create-01-odatafeed.png)
@@ -108,7 +108,7 @@ Du kan lägga till ett filter till din trädkarta så att du kan svara på fler 
 1. Lägg till ett filter genom att välja rapportarbetsytan och sedan **Utsnittsikonen** (![trädkarta med datamodell och relationer som stöds](media/reports-create-slicer.png)) under **Visualiseringar**. Den tomma visualiseringen av **utsnitt** kommer att visas på arbets ytan.
 2. Leta upp `ownerTypes` tabellen i **fönstret** fält.
 3. Expandera tabellen och `ownerTypeName` Välj data fältet. `ownerTypes`
-4. `ownerTypes` Dra data fältet från tabellen till **filter** fönstret och släpp det på under avsnittet **filter på den här sidan** i rutan **Lägg till data fält här.** `onwerTypeName`  
+4. Dra datafältet `onwerTypeName` från tabellen `ownerTypes` till rutan **Filter** och släpp det under avsnittet **Filter på den här sidan** i rutan med namnet **Lägg till datafält här**.  
 
    Under tabellen finns ett data fält med namnet `OwnerTypeKey`som innehåller data om huruvida en enhet är företagsägda eller personliga. `OwnerTypes` Eftersom du vill visa egna namn i det här filtret håller du utkik efter tabellen `ownerTypes` och drar **ownerTypeName**. Detta exempel visar hur datamodellen stöder relationer mellan tabeller.
 
@@ -122,4 +122,4 @@ Nu har du ett interaktivt filter som du kan använda för att växla mellan för
 ## <a name="next-steps"></a>Nästa steg
 
 - Läs mer om att [skapa och hantera relationer](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) i Power BI Desktop i Power BI-dokumentationen.
-- Läs informationen om [Intune-informationslagermodellen](https://docs.microsoft.com/intune/reports-ref-data-model).
+- Läs informationen om [Intune-informationslagermodellen](reports-ref-data-model.md).

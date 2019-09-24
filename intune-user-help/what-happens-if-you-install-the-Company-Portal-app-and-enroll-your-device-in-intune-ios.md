@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 09/12/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9333cda33142b9a0a4e0995b4bafe5365f7cb69f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c15f2434f67ec08baf04883da6f9525b5f803823
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545857"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099817"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din iOS-enhet i Intune?
 
@@ -37,7 +37,10 @@ När du installerar företagsportalappen och registrerar din iOS-enhet i Intune 
 
 - Konfigurera ditt företags-e-postkonto automatiskt.
 
-När du registrerar din enhet i Intune ger du företagets support tillstånd att hantera enheten, så att företagsinformation på enheten kan skyddas.
+> [!NOTE]
+> Vi säljer inte några data som samlas in av vår tjänst till någon tredje part av någon anledning.  
+
+När du registrerar din enhet i Intune ger du företagets support tillstånd att hantera enheten, så att företagsinformation på enheten kan skyddas.  
 
 När enheten har registrerats kan företagets support:
 
@@ -64,5 +67,7 @@ När enheten har registrerats kan företagets support:
 - Aktivera eller inaktivera röstroaming på enheten. Om röstroaming tillåts kan roamingavgifter tillkomma.
 
 - Aktivera eller inaktivera automatisk filsynkronisering när enheten är i roamingläge. Om automatisk filsynkronisering tillåts kan roamingavgifter tillkomma.
+
+
 
 Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
