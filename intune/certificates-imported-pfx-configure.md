@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18d01692f8c42b67605c223f59e13b1e5197a8db
-ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
+ms.openlocfilehash: f68ee794ce1fce2fbdbae8898c412309906b3f5c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71017143"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167073"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -43,7 +43,7 @@ Om du vill använda importerade PKCS-certifikat med Intune behöver du följande
 
   Den här anslutningsappen kan uppdatera sig automatiskt när nya versioner blir tillgängliga. Om du vill använda uppdateringsfunktionen måste du se till att brandväggarna är öppna så att anslutningsappen tillåts kontakta **autoupdate.msappproxy.net** på port **443**.  
 
-  Mer information om alla nätverksslutpunkter som anslutningsappen har åtkomst till finns i [Krav för Intune-nätverkskonfiguration och bandbredd](https://docs.microsoft.com/intune/network-bandwidth-use).
+  Mer information om alla nätverksslutpunkter som anslutningsappen har åtkomst till finns i [Krav för Intune-nätverkskonfiguration och bandbredd](network-bandwidth-use.md).
 
 
 - **Windows Server**:  

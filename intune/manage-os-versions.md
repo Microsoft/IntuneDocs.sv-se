@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6425c1346255caf70e73feef2aec1097625f921
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 4465a8715b84e06e337fb7dee5af4308cdd153ae
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427105"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167649"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Hantera versioner av operativsystem med Intune
 På moderna bärbara och stationära plattformar, viktiga uppdateringar, korrigeringar och nya versioner snabbt. Du har kontroller för att fullständigt hantera uppdateringar och korrigeringar i Windows, men för andra plattformar som iOS och Android krävs att slutanvändarna deltar i processen.  Microsoft Intune har funktioner som hjälper dig att strukturera versionshanteringen av operativsystem på olika plattformar.
@@ -32,30 +32,34 @@ Intune kan hjälpa dig att hantera dessa vanliga scenarier:
   
 ## <a name="operating-system-version-control-using-intune-mobile-device-management-mdm-enrollment-restrictions"></a>Versionskontroll för operativsystem med registreringsbegränsningar för Intunes hantering av mobila enheter (MDM)
 Med Intunes MDM-registreringsbegränsningar kan du definiera krav på klientenheter innan du tillåter att enheten registreras. Målet är att kräva att användarna enbart registrerar kompatibla enheter innan de får tillgång till företagsresurser. Enhetskraven innehåller både de lägsta och högsta tillåtna operativsystemsversionerna för plattformar som stöds.
- 
-![Blad med begränsningar för plattformskonfiguration](./media/os-version-platform-configurations.png) 
- 
+
+![Blad med begränsningar för plattformskonfiguration](./media/os-version-platform-configurations.png)
+
 ### <a name="in-practice"></a>I praktiken
-Organisationer använder begränsningar för enhetstyp för att kontrollera åtkomsten till företagsresurser genom att använda följande inställningar: 
-1. Använd den lägsta operativsystemversionen så att slutanvändarna använder aktuella plattformar och plattformar som stöds i din organisation. 
+
+Organisationer använder begränsningar för enhetstyp för att kontrollera åtkomsten till företagsresurser genom att använda följande inställningar:
+
+1. Använd den lägsta operativsystemversionen så att slutanvändarna använder aktuella plattformar och plattformar som stöds i din organisation.
 2. Lämna högsta operativsystemversion ospecificerat (ingen gräns) eller ställ in det på den senaste validerade versionen i din organisation för att låta intern testning av nya operativsystemversioner ske.
 
-Mer information finns i [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction).
- 
+Mer information finns i [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md#create-a-device-type-restriction).
+
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Rapportering av operativsystemversion och efterlevnad av Intunes MDM-efterlevnadsprinciper för enheter
-Efterlevnadsprinciper för Intune MDM-enheter innehåller följande verktyg: 
+
+Efterlevnadsprinciper för Intune MDM-enheter innehåller följande verktyg:
+
 - Ange regler för efterlevnad
 - Visa principefterlevnad via rapportering
 - Vidta åtgärder vid inkompatibilitet via enhetskarantän och villkorlig åtkomst
 
 Precis som registreringsbegränsningar innehåller efterlevnad för enhet både lägsta och högsta operativsystemversioner. Principer har också en tidslinje för efterlevnad för att ge användarna en respitperiod för att följa standard. Enhetsefterlevnadsprinciper håller dina registrerade slutanvändares enheter kompatibla med organisationens principer.
 
-![Enhetsefterlevnad – åtgärder för icke-kompatibla enheter](./media/os-version-actions-noncompliance.png) 
+![Enhetsefterlevnad – åtgärder för icke-kompatibla enheter](./media/os-version-actions-noncompliance.png)
 
 ### <a name="in-practice"></a>I praktiken
 Organisationer använder principer för enhetsefterlevnad i samma scenarier som begränsningar för registrering. Dessa principer ser till att användare håller sig till aktuella, validerade operativsystemversioner i din organisation. När slutanvändare inte följer standard kan åtkomsten till företagsresurser blockeras via villkorlig åtkomst tills slutanvändarna är inom det operativsystemintervall som krävs för organisationen. Slutanvändarna meddelas att de inte uppfyller kraven och de får anvisningar för att få åtkomst.   
 
-Mer information finns i [Kom igång med enhetsefterlevnad](https://docs.microsoft.com/intune/device-compliance-get-started).
+Mer information finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
  
 ## <a name="operating-system-version-controls-using-intune-app-protection-policies"></a>Kontroller för operativsystemversion med appskyddsprinciper i Intune    
 Med Intunes appskyddsprinciper och åtkomstinställningar för hantering av mobilprogram (MAM) kan du ange en lägsta operativsystemversion i appnivån. På så sätt kan du informera och uppmuntra, eller kräva, att dina slutanvändare uppdaterar sina operativsystem till en viss lägstaversion.
@@ -70,7 +74,7 @@ Du har två olika alternativ:
 ### <a name="in-practice"></a>I praktiken
 Organisationer använder principinställningar för appskydd idag när appar öppnas eller återupptas som ett sätt att utbilda slutanvändarna om behovet av att hålla sina program uppdaterade. En exempelkonfiguration betyder att slutanvändarna varnas om de använder aktuell version minus en och blockeras vid aktuell version minus två.
  
-Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](https://docs.microsoft.com/intune/app-protection-policies).
+Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md).
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Hantera distribution av en ny operativsystemversion
 Du kan använda Intune-funktionerna som beskrivs i den här artikeln för att flytta organisationen till en ny operativsystemversion inom tidslinjen du anger. I följande steg finns en exempel-distributionsmodell för att flytta dina användare från operativsystemet v1 till operativsystemet v2 på sju dagar.
@@ -84,8 +88,9 @@ Du kan använda Intune-funktionerna som beskrivs i den här artikeln för att fl
   - Principerna kräver att enheterna ska vara uppdaterade för att de ska fortsätta att få åtkomst till organisationsdata. Skyddade tjänster blockeras när de används med villkorlig åtkomst för enheten. Appar som är aktiverade med en appskyddsprincip blockeras när de öppnas eller när de får åtkomst till organisationsdata.
 
 ## <a name="next-steps"></a>Nästa steg
-Använd följande resurser för att hantera versioner av operativsystemet i din organisation: 
 
-- [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction)
-- [Kom igång med enhetsefterlevnad](https://docs.microsoft.com/intune/device-compliance-get-started)
-- [Hur du skapar och tilldelar skyddsprinciper för appar](https://docs.microsoft.com/intune/app-protection-policies)
+Använd följande resurser för att hantera versioner av operativsystemet i din organisation:
+
+- [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md#create-a-device-type-restriction)
+- [Kom igång med enhetsefterlevnad](device-compliance-get-started.md)
+- [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md)

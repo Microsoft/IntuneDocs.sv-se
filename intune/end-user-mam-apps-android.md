@@ -7,7 +7,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 02/15/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6122016f660e01b19862145d1a358fa154bf18f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f7e4a1081c76e1d41b84a7fadc84e93a221007c4
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396955"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71238409"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Vad som händer när din Android-app hanteras av appskyddsprinciper
 
@@ -30,7 +29,7 @@ ms.locfileid: "57396955"
 
 Den här artikeln beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper tillämpas endast när appar används i arbetssammanhang: Till exempel när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras på en plats för OneDrive för företag.
 
-##  <a name="access-apps"></a>Åtkomstappar
+## <a name="access-apps"></a>Åtkomstappar
 
 Företagsportalappen krävs för alla appar som är kopplade till appskyddsprinciper på Android-enheter.
 
@@ -39,30 +38,30 @@ För enheter som inte har registrerats i Intune måste företagsportalappen inst
 Företagsportalappen är ett sätt för Intune att dela data på en säker plats. Därför är företagsportalappen ett krav för alla appar som är associerade med appskyddsprinciper, även om enheten inte har registrerats i Intune.
 
 
-##  <a name="use-apps-with-multi-identity-support"></a>Använda appar med stöd för flera identiteter
+## <a name="use-apps-with-multi-identity-support"></a>Använda appar med stöd för flera identiteter
 
 Appskyddsprinciper tillämpas bara i arbetssammanhang. Därför kan appen fungerar på olika sätt beroende på om sammanhanget är arbete eller personligt.
 
 Användaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt arbetsdata. För **Outlook-appen**, uppmanas användaren att ange en PIN-kod när hen startar appen. För **OneDrive-appen**, uppmanas användaren att ange PIN-koden när hen skriver i arbetskontot. För Microsoft **Word**, **PowerPoint** och **Excel**, uppmanas användaren att ange PIN-koden när hen har åtkomst till dokument som lagras i företagets OneDrive för företag.
 
-##  <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
+## <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
 
 Med program med stöd för flera identiteter är det möjligt för användare att lägga till flera konton.  Intune APP har endast stöd för ett hanterat konto.  Intune APP begränsar inte antalet ohanterade konton.
 
 När ett hanterat konto finns i ett program:
-*   Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
-*   Om IT-administratören lägger till en princip till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+* Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+* Om IT-administratören lägger till en princip till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
 
 Läs följande exempel för att få en bättre förståelse för hur flera användarkonton behandlas.
 
 Användare A arbetar för två företag – **Företag X** och **Företag Y**. Användare A har ett arbetskonto för varje företag och båda använder Intune för att distribuera appskyddsprinciper. **Företag X** distribuerar appskyddsprinciper **före** **Företag Y**. Det konto som är kopplat till **Företag X** får appskyddsprincipen, men inte kontot som är kopplat till Företag Y. Om du vill att användarkontot som är kopplat till Företag Y ska hanteras av appskyddsprinciperna måste du ta bort användarkontot som är kopplat till Företag X och lägga till kontot som är kopplat till Företag Y.
 ### <a name="add-a-second-account"></a>Lägg till ett andra konto
-####  <a name="android"></a>Android
+#### <a name="android"></a>Android
 Om du använder en Android-enhet kan ett blockeringsmeddelande visas med instruktioner för att ta bort det befintliga kontot och lägga till ett nytt.  Om du vill ta bort det befintliga kontot går du till **Inställningar &gt;Allmänt &gt; Programhanterare &gt;Företagsportal.** Välj sedan **Rensa data**.
 
 ![Skärmbild av felmeddelande och anvisningar för att ta bort kontot](./media/Android_SwitchUser.png)
 
-##  <a name="view-media-files-with-the-azure-information-protection-app"></a>Visa mediefiler med Azure Information Protection-appen
+## <a name="view-media-files-with-the-azure-information-protection-app"></a>Visa mediefiler med Azure Information Protection-appen
 Du kan visa företagets AV-, PDF- och bildfiler på Android-enheter i [Azure Information Protection-app](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) (tidigare kallad Rights Management Sharing-app).
 
 Hämta den här appen från Google Play Store.  

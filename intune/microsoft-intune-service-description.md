@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 972f58da34c73253c85f4ca6183ad6fd4ce4c2e7
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882883"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167846"
 ---
 # <a name="microsoft-intune-service-description"></a>Beskrivning av Microsoft Intune-tjänsten
 
@@ -33,7 +33,7 @@ Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som
 
 Intune är nära integrerat med Azure Active Directory (Azure AD) för identitets- och åtkomstkontroll och Azure Information Protection för dataskydd. Du kan också integrera den med System Center Configuration Manager och på så sätt utöka hanteringsfunktionerna.
 
-Mer information om hur du kan hantera enheter och appar samt skydda företagsdata med Intune finns i [Intune-dokumentationen](https://docs.microsoft.com/intune/).
+Mer information om hur du kan hantera enheter och appar samt skydda företagsdata med Intune finns i [Intune-dokumentationen](index.yml).
 
 ## <a name="30-day-free-trial"></a>Kostnadsfri 30-dagars utvärderingsversion
 Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.

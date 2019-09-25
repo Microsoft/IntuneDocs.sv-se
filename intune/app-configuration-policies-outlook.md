@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14eded43200aed7e9ebf4454bcde61133351e4e2
-ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
+ms.openlocfilehash: d6fe60cf53f88186448cd9586d5c75fca4d517ad
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979206"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167386"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Microsoft Outlook-konfigurationsinställningar 
 
@@ -30,7 +30,7 @@ För registrerade enheter:
 - Information om hur du skapar en appkonfigurationsprincip för hanterade iOS-enheter finns i [Lägga till appkonfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md). 
 - Information om hur du skapar en appkonfigurationsprincip för hanterade Android-enheter finns i [Lägga till appkonfigurationsprinciper för hanterade Android-enheter](app-configuration-policies-use-android.md). 
 
-Information om hur du skapar en appkonfigurationsprincip för Outlook för iOS och Android för oregistrerade enheter finns i [Lägga till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering](https://docs.microsoft.com/intune/app-configuration-policies-managed-app).
+Information om hur du skapar en appkonfigurationsprincip för Outlook för iOS och Android för oregistrerade enheter finns i [Lägga till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering](app-configuration-policies-managed-app.md).
 
 ## <a name="configuration-settings"></a>Konfigurationsinställningar
 

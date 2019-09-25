@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fef4b6969680101e2e4f045bc83a8974536eaf2a
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 55132570683742bd3e8dcec1c20726b9eb2c4b16
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660956"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166818"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune  
 
@@ -35,8 +35,8 @@ Du kan använda Intune för att lägga till och distribuera MTD-apparna (Mobile 
 Följande steg måste utföras i [Azure-portalen](https://portal.azure.com/). Kontrollera att du vet hur man gör för att:
 
 - [Lägga till en app i Intune](apps-add.md).
-- [Lägga till en konfigurationsprincip för iOS-appar i Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
-- [Tilldela en app med Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune).
+- [Lägga till en konfigurationsprincip för iOS-appar i Intune](app-configuration-policies-use-ios.md).
+- [Tilldela en app med Intune](apps-deploy.md).
 
 > [!TIP]
 > Intune-företagsportalen fungerar som broker på Android-enheter så att användare kan få sina identiteter kontrollerade av Azure AD.
@@ -136,7 +136,7 @@ Välj det avsnitt som motsvarar din MTD-provider:
   - Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd den här [webbadressen för Wandera mobilappbutiken](https://play.google.com/store/apps/details?id=com.wandera.android) i **steg 7**. Som **Lägsta operativsystem** väljer du **Android 5.0**.
 
 - **iOS**
-  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](https://docs.microsoft.com/intune/store-apps-ios). Använd den här [webbadressen för Wandera-mobilappbutiken](https://itunes.apple.com/app/wandera/id605469330) i **steg 11** som **appbutiksadress**.
+  - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd den här [webbadressen för Wandera-mobilappbutiken](https://itunes.apple.com/app/wandera/id605469330) i **steg 11** som **appbutiksadress**.
 
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurera dina MTD-appar med en konfigurationsprincip för iOS-appar  
 

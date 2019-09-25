@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 23b3e8df9b3d5bafb567b6795b08d4be32aa8c88
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375232"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167812"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -447,7 +447,7 @@ En lista med iOS-registreringsfel finns i vår dokumentation i [Felsökning av i
 
 |Felmeddelande|Problem|Lösning|
 |---|---|---|
-|**Administratören behöver tilldela en licens för åtkomst**<br>Din IT-administratör har inte gett dig åtkomst till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer: <ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>De använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Läs mer om hur du [tilldelar Intune-licenser till dina användarkonton](https://docs.microsoft.com/intune/licenses-assign).|
+|**Administratören behöver tilldela en licens för åtkomst**<br>Din IT-administratör har inte gett dig åtkomst till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer: <ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>De använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Läs mer om hur du [tilldelar Intune-licenser till dina användarkonton](licenses-assign.md).|
 
 
 

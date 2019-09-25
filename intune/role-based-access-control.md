@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e636e2df8271210d8938727eb99491e1ffdd5bdc
-ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
+ms.openlocfilehash: a5372d079b08a3a324d8ef1d98d26c07073ccd45
+ms.sourcegitcommit: 49f25efb9bc0f16f587f27878cf45de5e4e6a27f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/18/2019
-ms.locfileid: "71080035"
+ms.locfileid: "71094664"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -43,7 +43,7 @@ Om du vill se en roll väljer du **Intune** > **Roller** > **Alla roller** > vä
 - **Tilldelningar**: En lista över [rolltilldelningar]( assign-role.md) som definierar vilka användare som har åtkomst till vilka användare/enheter. En roll kan ha flera tilldelningar och en användare kan vara i flera tilldelningar.
 
 ### <a name="built-in-roles"></a>Inbyggda roller
-Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du kan inte ta bort eller redigera namn, beskrivning, typ eller behörigheter för en inbyggd roll. En fullständig lista över behörigheterna för varje inbyggd roll finns i [Intune-RBAC-tabellen](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du kan inte ta bort eller redigera namn, beskrivning, typ eller behörigheter för en inbyggd roll.
 
 - **Supportavdelningen**: Utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter.
 - **Princip- och profilhanterare**: Hanterar principer för efterlevnad, konfigurationsprofiler, Apple-registrering, företagsenhetsidentifierare samt säkerhetsbaslinjer.

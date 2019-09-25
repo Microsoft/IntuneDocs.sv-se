@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58b27264e2f6955ae4f16843bb3493e5fdc993e
-ms.sourcegitcommit: fe67741c62749fc9114e9191092ed8b786dd4ffa
+ms.openlocfilehash: 69f214b4fd3f3b7767e719c0f68f19e178a8e29c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270283"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167245"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Använda Intune för att åtgärda sårbarheter som upptäckts av Microsoft Defender ATP  
 
@@ -37,13 +37,15 @@ På Microsoft Defender Security Center-konsolen får ATP-säkerhetsadministratö
 När en uppgift accepteras arbetar sedan Intune-administratören för att åtgärda säkerhetsrisken genom Intune med hjälp av riktlinjer som tillhandahålls som en del av säkerhetsuppgiften.  
 
 Vanliga åtgärder är:  
+
 - **Blockera** ett program från att köras  
 - **Distribuera** en operativsystemuppdatering för att minska säkerhetsrisken.  
 - **Ändra**  ett registervärde.  
 - **Inaktivera** eller **aktivera** en konfiguration för att påverka säkerhetsrisken.  
 - Aviseringen **Kräver uppmärksamhet** informerar administratören om hotet när det inte finns någon lämplig rekommendation att tillhandahålla.  
 
-Ett exempel på ett arbetsflöde:  
+Ett exempel på ett arbetsflöde:
+
 - Inom Microsoft Defender ATP upptäcks en säkerhetsrisk för en app med namnet Contoso Media Player v4 och en administratör skapar en säkerhetsåtgärd för att uppdatera appen. Contoso Media Player är en ohanterad app som distribuerades med Intune.  
 
   Den här säkerhetsuppgiften visas i Intune-konsolen med statusen Väntar:  
@@ -61,13 +63,16 @@ Ett exempel på ett arbetsflöde:
 ## <a name="prerequisites"></a>Krav  
 
 **Prenumerationer**:  
+
 - Microsoft Intune  
 - Microsoft Defender Advanced Threat Protection ([Registrera dig för en kostnadsfri utvärderingsversion](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)  
 
 **Intune-konfigurationer för ATP**:  
+
 - Konfigurera en tjänst-till-tjänst-anslutning med Microsoft Defender ATP.  
 - Distribuera en princip för enhetsefterlevnad med profiltypen **Microsoft Defender ATP (Windows 10 Desktop)** till enheter med risk som utvärderas av ATP.
-  Information om hur du ställer in Intune för att arbeta med ATP finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-microsoft-defender-atp-in-intune).  
+
+  Information om hur du ställer in Intune för att arbeta med ATP finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).  
 
 ## <a name="work-with-security-tasks"></a>Arbeta med säkerhetsuppgifter  
 
@@ -89,6 +94,6 @@ Ett exempel på ett arbetsflöde:
 När åtgärden har genomförts kan riskexponeringsbedömningen i ATP minska baserat på ny information från de åtgärdade enheterna. 
 
 ## <a name="next-steps"></a>Nästa steg
-Läs mer om Intune och [Microsoft Defender ATP](https://docs.microsoft.com/intune/advanced-threat-protection)  
-Titta närmare på Intune [Mobile Threat Defense](https://docs.microsoft.com/intune/mobile-threat-defense)  
+Läs mer om Intune och [Microsoft Defender ATP](advanced-threat-protection.md)  
+Titta närmare på Intune [Mobile Threat Defense](mobile-threat-defense.md)  
 Titta närmare på [Threat & Vulnerability Management-instrumentpanelen](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) i Microsoft Defender ATP

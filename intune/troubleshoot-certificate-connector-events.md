@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a282662032fe77cbf39da279c587bff31ad9e24
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 682d51269798dff181a3bd8384268da862118a70
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123230"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167756"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Händelser och diagnostikkoder för Intune Certificate Connector
 
@@ -60,7 +60,7 @@ Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Klart  | Klart |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Certifikatutfärdaren är inte giltig eller kan inte nås. Kontrollera att certifikatutfärdaren är tillgänglig och att servern kan kommunicera med den. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Symantec Client Auth-certifikatet gick inte att hitta i det lokala certifikatarkivet. Läs mer i artikeln [Installera Symantecs certifikat för registreringsauktorisering](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Symantec Client Auth-certifikatet gick inte att hitta i det lokala certifikatarkivet. Läs mer i artikeln [Installera Symantecs certifikat för registreringsauktorisering](certificates-digicert-configure.md#install-the-digicert-ra-certificate).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Det angivna kontot har inte behörighet att återkalla ett certifikat från certifikatutfärdaren. Du ser utfärdande certifikatmyndighet i motsvarande fält i händelsemeddelandet.  |
 | 0x00000403 | CertThumbprint_NotFound  | Det gick inte att hitta något certifikat som matchar dina indata. Registrera certifikatanslutningen och försök igen. |
 | 0x00000404 | Certificate_NotFound  | Det gick inte att hitta något certifikat som matchar angivna indata. Registrera om certifikatanslutningen och försök igen. |

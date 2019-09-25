@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
-ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
+ms.openlocfilehash: 22bee478160347256e7e2fa1422b74ccbead57b9
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69651199"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167047"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -60,7 +60,7 @@ När du går in djupare i dessa rapporter kan du även se eventuella specifika e
 Diagrammet visar efterlevnadsstatus för alla Intune-registrerade enheter. Kompatibilitetstillstånden finns i två olika databaser: Intune och Azure Active Directory. 
 
 > [!IMPORTANT]
-> Intune följer enhetens incheckningsschema för alla efterlevnadsutvärderingar på enheten. [Mer information om enhetens incheckningsschema](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune följer enhetens incheckningsschema för alla efterlevnadsutvärderingar på enheten. [Mer information om enhetens incheckningsschema](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Beskrivningar av statusar för enhetsefterlevnadsprinciper:
 

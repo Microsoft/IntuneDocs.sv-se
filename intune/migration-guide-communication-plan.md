@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5688039101e7cecf5631a0ad8dee4f343e183d96
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 325a0efeff56a2bc930fa0082023202f9c2e7696
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022842"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166770"
 ---
 # <a name="plan-communications"></a>Planera kommunikation
 
@@ -59,6 +59,6 @@ Vi har skapat korta, stegvisa videofilmer för att hjälpa dina användare att e
 
 Intune har ytterligare resurser som du kan använda för att underlätta användarnas enhetsregistrering:
 
-- [Informera slutanvändare om Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate) beskriver registreringsstegen baserat på OS-mobilplattform.
-- I [Intune device enrollment for IT administrators](https://docs.microsoft.com/intune/device-enrollment) (Intune-enhetsregistrering för IT-administratörer) beskrivs hur du registrerar Android-, iOS- och Mac-enheter i Intune.
+- [Informera slutanvändare om Microsoft Intune](end-user-educate.md) beskriver registreringsstegen baserat på OS-mobilplattform.
+- I [Intune device enrollment for IT administrators](device-enrollment.md) (Intune-enhetsregistrering för IT-administratörer) beskrivs hur du registrerar Android-, iOS- och Mac-enheter i Intune.
 - Dela [URL: för företagsportalappen](http://go.microsoft.com/fwlink/?LinkID=396941) med dina användare som kör Android, iOS eller Windows. Den här URL:en omdirigerar till lämplig företagsportalappen för enheter som kör Android, iOS eller Windows.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4236b3fd1b7dab25a3450b95b75f3623ec7ba95
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 02006acc58789f2a6fb5944e677a1983f7ea9614
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071645"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167414"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -105,7 +105,7 @@ För enheter som registrerats i Intune med KME för Android kan du konfigurera h
 
 - **Utan association till användarnamnet:** I Knox-portalen under **Enhetsinformation** lämnar du fältet **Användar-ID** och **Lösenord** tomt för de enheter som har lagts till. Detta alternativ kräver att användaren måste ange både användarnamn och lösenord vid registrering i Intune.
 
-- **Med association till användarnamnet:** I Knox-portalen under **Enhetsinformation** anger du ett **Användar-ID** (till exempel ett användarnamn för den tilldelade användaren eller ett konto för [Enhetsregistreringshanteraren](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) för de enheter som har lagts till. Detta alternativ fyller i användarnamnet i förväg och kräver att användaren måste ange ett lösenord vid registrering i Intune.
+- **Med association till användarnamnet:** I Knox-portalen under **Enhetsinformation** anger du ett **Användar-ID** (till exempel ett användarnamn för den tilldelade användaren eller ett konto för [Enhetsregistreringshanteraren](device-enrollment-manager-enroll.md)) för de enheter som har lagts till. Detta alternativ fyller i användarnamnet i förväg och kräver att användaren måste ange ett lösenord vid registrering i Intune.
 
 > [!NOTE]
 >

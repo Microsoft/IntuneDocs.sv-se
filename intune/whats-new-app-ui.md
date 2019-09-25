@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1710fd315803c4b47ad3be343893f93f7d155135
-ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
+ms.openlocfilehash: c8378986b1cf405a92e34b4c5bd805b169feaf32
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061697"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167871"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 Läs mer om de senaste uppdateringarna för Microsoft Intune-apparna. Vi lägger regelbundet till och förbättrar Intune-företagsportalappen och webbplatsen. Om du är Intune-administratör eller support innehåller den här artikeln information som du behöver för att:
@@ -120,7 +120,7 @@ En ny skärm som heter **Appkategorier** har lagts till i syfte att förbättra 
 ## <a name="week-of-november-12-2018"></a>Veckan som börjar den 12 november 2018
 
 ### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Kortkommandon för Windows-företagsportalen <!-- 2771518 -->
-Slutanvändare kan nu utlösa app- och enhetsåtgärder i Windows-företagsportalen [med hjälp av kortkommandon (acceleratorer)](https://docs.microsoft.com/intune/company-portal-app#windows-company-portal-keyboard-shortcuts).
+Slutanvändare kan nu utlösa app- och enhetsåtgärder i Windows-företagsportalen [med hjälp av kortkommandon (acceleratorer)](company-portal-app.md#windows-company-portal-keyboard-shortcuts).
 
 ## <a name="week-of-october-22-2018"></a>Veckan då den 22 oktober 2018 infaller
 
@@ -572,4 +572,4 @@ Det här är våra planer för hur vi kan förbättra användarupplevelsen genom
 ## <a name="see-also"></a>Se även
 * [Microsoft Intune-blogg](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Översikt över molnplattformen](https://www.microsoft.com/cloud-platform/roadmap)
-* [Nyheter i Intune](https://docs.microsoft.com/intune/whats-new)
+* [Nyheter i Intune](whats-new.md)
