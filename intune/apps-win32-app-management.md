@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d87b617f49a3df71b767fe91f1f03f88f36ee8a3
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 22cf93aa7418e5e8be2338e70f762a451bb3bdcf
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842204"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167156"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -194,6 +194,8 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 
     > [!NOTE]
     > I fönstret **Identifieringsregler** kan du välja att lägga till flera regler. Villkoren för **alla** regler måste vara uppfyllda för att appen ska identifieras.
+    >
+    > Om Intune identifierar att appen inte finns på enheten erbjuder Intune appen igen efter 24 timmar. Det här sker bara för appar med den avsikt som krävs.
 
     - **Ställ in identifieringsregler manuellt** – Du kan välja någon av följande regeltyper:
         1. **MSI** – Verifiera baserat på MSI-versionskontroll. Det här alternativet kan endast läggas till en gång. När du väljer den här regeltypen visas två inställningar:
@@ -278,7 +280,7 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 7. I fönstret **Lägg till grupp** väljer du **OK**.
 8. I appfönstret **Tilldelningar** väljer du **Spara**.
 
-Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Information om tilldelning och övervakning av appar finns i [Tilldela appar till grupper med Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) och [Övervaka appinformation och tilldelningar med Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Information om tilldelning och övervakning av appar finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md) och [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md).
 
 ## <a name="app-dependencies"></a>Appsamband
 

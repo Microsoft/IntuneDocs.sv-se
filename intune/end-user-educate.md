@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 06/01/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8405aceaa1fd9c00b966d03a1f7b80e5946d96
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 52f8af06fffb3643714ed318e474b73be21963ed
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59569785"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239785"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Informera slutanvändare om Microsoft Intune
 
@@ -58,9 +57,9 @@ I följande lista kan du läsa några tips om hur du kan göra organisationens I
 
 * __Var tillgänglig.__ Berätta för användarna var de kan be om hjälp med olika enhetsproblem. När du [anpassar företagsportalen](company-portal-customize.md) ska du se till att ta med kontaktuppgifter till IT-administratören.
 
-* __Var personlig.__ Ge instruktioner som är specifika för organisationens distribution. Det visar för användarna att du bryr dig om deras upplevelse. Använd den här [anpassningsbara mallen för slutanvändarregistrering i Intune](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c) till att skapa egna registreringsanvisningar för slutanvändarna.
+* __Var personlig.__ Ge instruktioner som är specifika för organisationens distribution. Det visar för användarna att du bryr dig om deras upplevelse. Använd detta anpassningsbara [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) till att skapa egna registreringsanvisningar för slutanvändarna.
 
-* __Hitta olika sätt att kommunicera.__ Användare har [olika sätt att lära sig saker](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) och på samma sätt har de olika sätt att använda information. För de som föredrar visuell inlärning tillhandahåller Intune [videoversioner av instruktionerna för hur du registrerar olika enhetstyper](https://channel9.msdn.com/Series/IntuneEnrollment) på Channel 9. Du kan bädda in videoklippen direkt på din [SharePoint-webbplats](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Du kan också ladda ned lokala kopior av videor och ljudspår.
+* __Hitta olika sätt att kommunicera.__ Användare har [olika sätt att lära sig saker](https://www.umassd.edu/dss/resources/faculty--staff/how-to-teach-and-accommodate/how-to-accommodate-different-learning-styles/) och på samma sätt har de olika sätt att använda information. För de som föredrar visuell inlärning tillhandahåller Intune [videoversioner av instruktionerna för hur du registrerar olika enhetstyper](https://channel9.msdn.com/Series/IntuneEnrollment) på Channel 9. Du kan bädda in videoklippen direkt på din [SharePoint-webbplats](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Du kan också ladda ned lokala kopior av videor och ljudspår.
 
 * __Var informerad.__ Användarupplevelsen i Intune påverkar även din produktivitet. Om du förstår användarnas upplevelse blir det enklare för dig att felsöka problem med enheter och användare. Du kan till exempel lära dig hur användarna hämtar sina appar. Om du vet det kan du snabbare och enklare diagnostisera och åtgärda olika problem.
 

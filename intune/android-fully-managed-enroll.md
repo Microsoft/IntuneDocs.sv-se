@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dff37794d6c58094749821748dcc96a4f36e28a
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 0035f8d5cd67a995924f7d07a662d8c0671bf063
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071631"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163783"
 ---
-# <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Konfigurera Intune-registrering av fullständigt hanterade Android Enterprise-enheter (förhandsversion)
+# <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Konfigurera Intune-registrering av fullständigt hanterade Android Enterprise-enheter 
 
 Fullständigt hanterade Android Enterprise-enheter är företagsägda enheter som är associerade med en enskild användare och som endast används för arbete och inte för personligt bruk. Administratörer kan hantera hela enheten och tillämpa principkontroller som inte är tillgängliga för arbetsprofiler, till exempel dessa:
 - Tillåt endast appinstallation från hanterad Google Play.
@@ -39,7 +39,7 @@ Du måste ha en fristående Intune-klientorganisation för att hantera fullstän
 
 Enheter måste uppfylla dessa krav för att kunna hanteras som fullständigt hanterade Android Enterprise-enheter:
 
-- Android OS version 5.1 och senare.
+- Android OS version 6.0 och senare.
 - Enheter måste köra en version av Android som har anslutningsfunktioner för Google Mobile Services (GMS). Enheter måste ha GMS tillgängligt för att kunna ansluta till GMS.
 
 Det finns ingen begränsning på enhetstillverkare/OEM om ovanstående krav är uppfyllda.
@@ -55,7 +55,7 @@ För de här stegen om du vill konfigurera hanteringen av fullständigt hanterad
 
 ### <a name="enable-corporate-owned-user-devices"></a>Aktivera företagsägda användarenheter
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda, fullständigt hanterade användarenheter (förhandsversion)** .
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda, fullständigt hanterade användarenheter**.
 2. Välj **Ja** under **Låt användarna registrera företagsägda användarenheter** .
 
 > [!NOTE]
@@ -65,25 +65,6 @@ När den här inställningen anges till **Ja** får du en token för programregi
 
 ## <a name="enroll-the-fully-managed-devices"></a>Registrera fullständigt hanterade enheter
 Du kan nu [registrera dina fullständigt hanterade enheter](android-dedicated-devices-fully-managed-enroll.md).
-
-## <a name="considerations-for-this-preview-feature"></a>Överväganden för den här förhandsversionen
-Den här offentliga förhandsversionen innehåller en uppsättning grundläggande funktioner för den fullständigt hanterade Android Enterprise-lösningen. Vi vill gärna höra om din upplevelse av funktionerna i förhandsversionen via någon av dina aktuella kommunikationskanaler till teamet (t.ex. [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas?category_id=210853)).
-
-Den här förhandsversionen har stöd för följande funktioner för fullständigt hanterade Android Enterprise-enheter:
-- enhetsregistrering med hjälp av NFC, inmatning av token, QR-kod och Zero Touch
-- enhetskonfiguration för användargrupper
-- appdistribution och konfiguration av användargrupper
-
-
-Tänk på följande när du använder den här förhandsversionen:
-- Funktioner i förhandsversioner bör inte användas i verksamhetskritiska eller produktionsmässig distribution. 
-- Förhandsfunktioner implementeras i Microsoft Intune-produktionsstandarder. Dock är inte alla Intune-funktioner tillgängliga för användning med fullständigt hanterade Android Enterprise-användarenheter. Förhandsversionsfunktioner är tydligt märkta med ”(förhandsversion)” i Intune-konsolen. 
-- För förhandsfunktionerna lämnas full support via de vanliga Intune-supportkanalerna.
-- Det är inte möjligt att registrera fullständigt hanterade Android Enterprise-enheter i förhandsversionen med hjälp av Samsung Knox Mobile Enrollment. 
-- Användning av appen Intune-företagsportal stöds inte på fullständigt hanterade Android Enterprise-enheter. 
-- Intune-funktioner som Villkorlig åtkomst, appskyddsprinciper och certifikatdistribution stöds inte i förhandsversionen. 
-- I förhandsversionen är det inte möjligt att ange enhetsgrupp som mål för en profil eller app. Endast användargrupper kan anges som mål. 
-- Det finns inget förstklassigt användargränssnitt för att konfigurera e-post, Wi-Fi eller VPN. Använd appkonfigurationsprinciper för att konfigurera inställningar för program som stöds.
 
 ## <a name="next-steps"></a>Nästa steg
 - [Lägga till konfigurationsprinciper för fullständigt hanterade Android Enterprise-enheter](device-restrictions-android-for-work.md#device-owner-only)

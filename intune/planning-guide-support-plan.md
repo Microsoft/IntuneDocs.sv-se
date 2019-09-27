@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c71edf84fb1ade261eefc1b3de4543e941bf0657
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548335"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166803"
 ---
 # <a name="develop-a-support-plan"></a>Utveckla en supportplan
 
@@ -84,7 +84,7 @@ Ett exempel på en agenda för Intune-supportutbildning visas nedan.
 
 - Frågor och svar
 
-[Intune-dokumentationen](https://docs.microsoft.com/intune/) ger en översikt över Intune, detaljerad funktionsbeskrivning och viss felsökningsinformation. [Intune-forumet](https://social.technet.microsoft.com/Forums/home) är en communitybaserad resurs för frågor och ämnen som inte täcks av Intune-dokumentationen.
+[Intune-dokumentationen](index.yml) ger en översikt över Intune, detaljerad funktionsbeskrivning och viss felsökningsinformation. [Intune-forumet](https://social.technet.microsoft.com/Forums/home) är en communitybaserad resurs för frågor och ämnen som inte täcks av Intune-dokumentationen.
 
 ## <a name="what-opportunities-are-there-to-involve-the-support-team-earlier"></a>Vilka möjligheter finns det att få med supportteamet tidigare?
 

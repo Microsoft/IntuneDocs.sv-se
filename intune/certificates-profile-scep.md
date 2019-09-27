@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2019
+ms.date: 09/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e553229530f826ead91be981ff446b7cb3ebbf2
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: a9091b4623e456f5b00134542282b2032ce70e6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214277"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163743"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Skapa och tilldela SCEP-certifikatprofiler i Intune
 
@@ -38,9 +38,19 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 3. Ange ett **namn** och en **beskrivning** för SCEP-certifikatprofilen.
 4. I listrutan **Plattform** väljer du en [enhetsplattform som stöds](certificates-configure.md#supported-platforms-and-certificate-profiles) för detta SCEP-certifikat. 
 5. I listrutan **Profil** väljer du **SCEP-certifikat**.  
+   
+   För **Android Enterprise**-plattformen är *Profiltyp* indelad i två kategorier: *Endast enhetens ägare* och *Endast arbetsprofil*. Se till att välja rätt SCEP-certifikatprofil för de enheter du hanterar.  
 
-   > [!NOTE]  
-   > För **Android Enterprise**-plattformen är *Profiltyp* indelad i två kategorier: *Endast enhetens ägare* och *Endast arbetsprofil*.  SCEP-certifikatprofiler stöds endast för *Endast arbetsprofil*.
+   SCEP-certifikatprofiler för profilen *Endast enhetens ägare* har följande begränsningar:  
+
+   1. Följande variabler stöds inte:  
+
+      - CN={{OnPrem_Distinguished_Name}}  
+      - CN={{onPremisesSamAccountName}}  
+
+   2. Under Övervakning är inte certifikatsrapportering tillgängligt för SCEP-certifikatprofiler för enhetsägare.
+   
+   3. Återkallande av certifikat som skapats av SCEP-certifikatprofiler för enhetsägare stöds inte via Intune men kan hanteras genom en extern process eller direkt med certifikatutfärdaren.
 
 6. Välj **Inställningar** och slutför sedan följande konfigurationer:
 

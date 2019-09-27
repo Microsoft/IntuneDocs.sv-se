@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,24 +16,27 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.openlocfilehash: 1ed123bcf8c5c1a5df1a356cf8d2522caad20ea2
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59569135"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "71239382"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 > [!NOTE]
-> Följande information gäller endast på enheter med Android 6.0+.
+> Följande information gäller endast på enheter med Android 6.0+ och iOS 10+.
 
 Förstå de olika appmeddelanden som slutanvändarna kan se i företagsportalen. Dessa appmeddelanden visas vanligtvis vid olika tillfällen i registreringen. Läs om var meddelanden visas, vad de innebär och vad som händer om användarna nekar åtkomst. Läs dessutom hur du förklarar meddelandena för användarna på bästa sätt.
 
 - __Tillåt att företagsportalen kan ringa och hantera telefonsamtal?__
 - __Tillåt att företagsportalen kommer åt foton, media och filer på enheten?__
+
+> [!NOTE]
+> Vi säljer inte några data som samlas in av vår tjänst till någon tredje part av någon anledning.
 
 ## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Tillåt att företagsportalen kan ringa och hantera telefonsamtal?
 
@@ -57,7 +59,7 @@ Om användare först tillåter men senare nekar åtkomst, visas meddelandet näs
 Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktivera den.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
-Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-help/enroll-your-device-in-intune-android) för mer information.
+Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-help/enroll-device-android-company-portal) för mer information.
 
 ## <a name="allow-company-portal-to-access-your-contacts"></a>Tillåta att företagsportalappen får åtkomst till dina kontakter?
 
@@ -78,7 +80,7 @@ Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång
 Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktivera den.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
-Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-help/enroll-your-device-in-intune-android) för mer information.
+Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-help/enroll-device-android-company-portal) för mer information.  
 
 ## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Tillåt att företagsportalen kommer åt foton, media och filer på enheten?
 
@@ -132,7 +134,7 @@ När du installerar sådana appar med hjälp av företagsportalen och startar ap
 
 3. Välj **Hanteringsprofil** > **Företagsapp**.
 4. Välj utvecklarens namn.
-5. Tryck på **Betrodd_utvecklares namn_**.
+5. Tryck på **Betrodd_utvecklares namn_** .
 6. Bekräfta appen genom att välja **Förtroende** i appinstallationens popup-meddelande.
 
    ![iOS-enhetens användargränssnitt – Meddelande om betrodd app](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
@@ -140,5 +142,5 @@ När du installerar sådana appar med hjälp av företagsportalen och startar ap
     Du ska nu kunna starta och använda företagsappen.
 
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 [Vad du ska berätta för slutanvändare om att använda Intune](end-user-educate.md)

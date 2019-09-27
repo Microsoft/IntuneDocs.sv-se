@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/03/2018
+ms.date: 07/29/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc0cf701450e594fd4b72a8e0565246994bb8a9e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5946f8ffb8179bb5109de45df8f89012ec706023
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460622"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "71239570"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Operativsystem och webbläsare som stöds i Intune
 
@@ -115,12 +114,12 @@ Följande webbläsare stöds för dessa portaler:
 
 ### <a name="intune-classic-portal"></a>Intunes klassiska portal
 
-Intunes klassiska funktioner, som t.ex. Intunes programvaruklient och integration med Mobile Threat Defense-partners, är tillgängliga i den klassiska Intune-portalen (https://manage.microsoft.com)). Den klassiska Intune-portalen kräver stöd för Silverlight-webbläsaren.
+Den klassiska Intune-portalen används bara för att hantera enheter som registrerats med Intune PC-klienten (https://manage.microsoft.com) ). Den klassiska Intune-portalen kräver stöd för Silverlight-webbläsaren.
 
 Följande Silverlight-webbläsare har stöd för Intune-konsolen:
 - Internet Explorer 10 eller senare
 - Google Chrome (versioner före version 42)
-- Mozilla Firefox med Silverlight aktiverat [Läs mer](https://go.microsoft.com/fwlink/?linkid=836872)
+- Mozilla Firefox med Silverlight aktiverat (tidigare versioner än version 56)
 
 > [!Note]
 > Den klassiska Intune-portalen stöder inte Microsoft Edge och mobila webbläsare eftersom de inte stöder [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).

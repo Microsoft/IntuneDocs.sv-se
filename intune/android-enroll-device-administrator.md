@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dc495e6356a35215943415e03a46496a72bddf1
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: c8c9375449e55d2e6cac511cb0e279355ec95294
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071036"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163283"
 ---
 # <a name="android-device-administrator-enrollment"></a>Administratörsregistrering för Android-enhet
 
@@ -49,8 +49,9 @@ Mer information om Googles Android Enterprise-funktioner finns i följande artik
 
 Intune stöder som standard registrering av Android-enheter med enhetsadministratörsfunktioner.
 
-1. Förbered hantering av mobila enheter genom att ange MDM-utfärdare som **Microsoft Intune**. Fler anvisningar finns i [Ange MDM-utfärdare](mdm-authority-set.md). Du anger det här objektet bara när du konfigurerar Intune för hantering av mobila enheter
-2. [Berätta för dina användare hur de registrerar sina enheter](/intune-user-help/enroll-your-device-in-intune-android).  
+1. Förbered hantering av mobila enheter genom att ange MDM-utfärdare som **Microsoft Intune**. Fler anvisningar finns i [Ange MDM-utfärdare](mdm-authority-set.md). Du anger det här objektet bara när du konfigurerar Intune för hantering av mobila enheter.
+2. Gå till **Intune** > **Enhetsregistrering** > **Android-registrering** > **Personal and corporate-owned devices with device administration privileges** (Personliga och företagsägda enheter med enhetsadministratörsbehörighet)  > **Use device administrator to manage devices** (Använd enhetsadministratör för att hantera enheter).
+3. [Berätta för dina användare hur de registrerar sina enheter](/intune-user-help/enroll-your-device-in-intune-android).  
 
 När en användare har registrerat sig kan du börja hantera användarens enheter i Intune, inklusive [tilldela efterlevnadsprinciper](compliance-policy-create-android.md), [hantera appar](app-management.md) med mera.
 

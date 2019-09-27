@@ -5,9 +5,8 @@ keywords: what is Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/26/2019
+ms.date: 06/20/2019
 ms.topic: overview
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 511e672193ec609f817c10572c99ac73831c54ae
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2cde4e37889b981decfd18138feeb4edac46c4c8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460588"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71238263"
 ---
 # <a name="what-is-microsoft-intune"></a>Vad är Microsoft Intune?
 
@@ -85,7 +84,7 @@ När vi talar om appkonfiguration och Intune avser vi särskilt teknik som [hant
 När du använder Intune med andra tjänster i EMS kan du genom appkonfigurationer tillämpa organisationens säkerhetskrav för mobilappar utöver säkerhetsfunktionerna i operativsystemet och själva mobilapparna. En app som hanteras med EMS har åtkomst till en bredare uppsättning mobilapps- och dataskyddsfunktioner, bland annat:
 
 * [Enkel inloggning](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
-*   [Multifaktorautentisering](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
+* [Multifaktorautentisering](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
 * [Villkorlig appåtkomst – tillåt åtkomst om mobilappen innehåller företagsdata](app-based-conditional-access-intune.md)
 * [Isolera företagsdata från personliga data i samma app](app-protection-policy.md)
 * [Princip för appskydd (PIN-kod, kryptering, Spara som, Urklipp osv.)](app-protection-policies.md)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 36e7b8468e4ee9d1f6be71a82d18f066bd7568d4
+ms.sourcegitcommit: 9110124a481160039d476cf0374a4fa0464a8509
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883795"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256204"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Tilldela om principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
@@ -194,15 +194,9 @@ När du har tilldelat om dina principer för villkorlig åtkomst i Azure-portale
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Så här inaktiverar du principerna för villkorlig åtkomst
 
-1. Gå till den [klassiska Intune-portalen](https://manage.microsoft.com) och logga in med dina autentiseringsuppgifter.
+Eftersom MDM har tagits bort från den klassiska Intune-portalen har följande länk angetts för att visa/inaktivera dessa klassiska principer:
 
-2. Välj **Princip** i den vänstra menyn.
-
-3. Välj **Villkorlig åtkomst** och sedan den molntjänst från Microsoft (t.ex. Exchange Online eller SharePoint Online) som du har skapat en princip för villkorlig åtkomst för.
-
-4. Avmarkera alternativet **Aktivera princip för villkorlig åtkomst** och klicka på **Spara**.
-
-    ![Bild av Inaktivera principer för villkorlig åtkomst i den klassiska Intune-portalen](./media/reassign-ca-18.png)
+https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies
 
 ## <a name="see-also"></a>Se även
 

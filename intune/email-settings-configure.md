@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b579849d9afdb50470b7a772e003cc616e1f94a0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2a534aef3cdb989376dc1c148abedfb4f4e4f78b
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530045"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71162890"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Lägg till e-postinställningar på enheter med Intune
 
@@ -40,23 +40,29 @@ Den här artikeln visar hur du skapar en e-postprofil i Microsoft Intune. Den in
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-3. Ange **Namn** och **Beskrivning** för e-postprofilen.
-4. Välj din **plattform** från den nedrullningsbara listan. Alternativen är:
+3. Ange följande egenskaper:
 
-    - **Android** (endast Samsung Android Knox Standard)
-    - **Android enterprise**
-    - **iOS**
-    - **Windows Phone 8.1**
-    - **Windows 10 och senare**
+    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra principnamn är till exempel **E-postinställningar för alla Windows-enheter**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj plattform för dina enheter. Alternativen är:
 
-5. Välj **E-post** från listrutan **Profil**.
-6. Vilka inställningar du kan konfigurera kan vara olika för varje plattform. För specifika inställningar, välj din plattform:
+        - **Android** (endast Samsung Android Knox Standard)
+        - **Android enterprise**
+        - **iOS/iPadOS**
+        - **Windows Phone 8.1**
+        - **Windows 10 och senare**
+
+    - **Profiltyp**: Välj **E-post**.
+
+4. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Välj din plattform för detaljerade inställningar:
 
     - [Inställningar för Android Samsung Knox Standard](email-settings-android.md)
     - [Inställningar för Android Enterprise](email-settings-android-enterprise.md)
-    - [Inställningar för iOS](email-settings-ios.md)
+    - [Inställningar för iOS/iPadOS](email-settings-ios.md)
     - [Inställningar för Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](email-settings-windows-10.md)
+
+5. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
 
 När du har angett dina inställningar och skapar profilen, visas din profil i profillistan. Härnäst [tilldela profilen till vissa grupper](device-profile-assign.md).
 

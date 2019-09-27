@@ -7,7 +7,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 02/15/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f013ec1d40b9593e7eb8d317b5b63545c58f181
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4039c9e3ae53d8db8ee282f802cd86149b40021e
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399139"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "71239764"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
 
@@ -30,7 +29,7 @@ ms.locfileid: "57399139"
 
  Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper tillämpas endast när appar används i arbetssammanhang, exempelvis när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras på en OneDrive för företag-plats.
 
-##  <a name="access-apps"></a>Åtkomstappar
+## <a name="access-apps"></a>Åtkomstappar
 
 Om enheten **inte har registrerats i Intune** uppmanas användarna att starta om appen första gången de använder den. En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen.
 
@@ -41,7 +40,7 @@ Om enheten **inte har registrerats i Intune** uppmanas användarna att starta om
 
 För enheter som **har registrerats för hantering i Intune** ser användaren ett meddelande som anger att appen nu hanteras.
 
-##  <a name="use-apps-with-multi-identity-support"></a>Använda appar med stöd för flera identiteter
+## <a name="use-apps-with-multi-identity-support"></a>Använda appar med stöd för flera identiteter
 
 Med appar som stöder flera identiteter kan du använda olika konton (arbetskonton och privata konton) för att få åtkomst till samma appar, där appskyddsprinciperna endast tillämpas när apparna används i arbetskontexten.  
 
@@ -51,13 +50,13 @@ Användaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt a
 
 Appskyddsprinciper tillämpas bara i arbetssammanhang. Därför kan appen fungerar på olika sätt beroende på om sammanhanget är arbete eller personligt.
 
-##  <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
+## <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
 
 Med program med stöd för flera identiteter är det möjligt för användare att lägga till flera konton.  Intune APP har endast stöd för ett hanterat konto.  Intune APP begränsar inte antalet ohanterade konton.
 
 När ett hanterat konto finns i ett program:
-*   Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
-*   Om IT-administratören lägger till principer till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+* Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+* Om IT-administratören lägger till principer till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
 
 Läs följande exempel för att få en bättre förståelse för hur flera användarkonton behandlas.
 

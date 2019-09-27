@@ -7,22 +7,21 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
-ms.reviewer: amyro
+ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14d5e01577100e0a66cfcf6ce935289a1dc26fab
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dd8b35fbbff89ca7f4c259e1903f4c9f9a6e3b38
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57459908"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71238319"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Tilldela licenser till användare så att de kan registrera enheter i Intune
 
@@ -45,7 +44,7 @@ Du kan använda [Administrationscenter för Microsoft 365](http://go.microsoft.c
 4. Användarkontot har nu de behörigheter som krävs för att använda tjänsten och registrera enheter för hantering.
 
 > [!NOTE]
-> Användarna visas i administratörskonsolen när de har registrerat en enhet. Du kan också välja en grupp användare som redigeras samtidigt, genom att välja att lägga till eller ersätta en licens för alla markerade användare.
+> Användarna visas bara i den klassiska Intune-portalen efter att de har registrerat en enhet med hjälp av Intune PC-klienten. Du kan också välja en grupp användare som redigeras samtidigt, genom att välja att lägga till eller ersätta en licens för alla markerade användare.
 
 ## <a name="assign-an-intune-license-by-using-azure-active-directory"></a>Tilldela en Intune-licens genom att använda Azure Active Directory
 
@@ -63,7 +62,7 @@ Kontrollera att Intune A Direct-licensen också tilldelas när du tilldelar en I
 Se den här [översikten över synkronisering av skolinformation](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91) om du vill veta mer om SDS.
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Hur användar- och enhetslicenser påverkar åtkomsten till tjänster
-* Varje **användare** som du tilldelar en programanvändarlicens kan få åtkomst till och använda onlinetjänster och relaterade program (t.ex. System Center-program) och hantera program och upp till 15 enheter.
+* Varje **användare** du tilldelar en användarprogramlicens till har åtkomst till och kan använda onlinetjänsterna och tillhörande programvara (inklusive System Center-program) för att hantera program och upp till 15 MDM-enheter. Intune PC-agenten tillåter 5 fysiska och 1 virtuell dator per användarlicens.
 * Du kan köpa licenser för enheter separat från användarlicenser. Enhetslicenser behöver inte tilldelas till enheterna. Varje enhet som har åtkomst till och använder onlinetjänster och relaterad programvara (som System Center-program) måste ha en enhetslicens.
 * Om en enhet används av mer än en användare så krävs det en programvarulicens för var och en, eller så krävs det en programlicens för varje användare.
 

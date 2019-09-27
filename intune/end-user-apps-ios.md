@@ -5,9 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/28/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 368eeec3c47b53d00e9130f41d36f05976a66b8f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8f069405d75b196c26c9c844e0d0a4bd57299199
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394249"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71239307"
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Så får dina iOS-användare sina appar
 
@@ -36,7 +35,7 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Hanterade appar** – Appar som kan hanteras med principer och har blivit "omslutna" av Intune eller skapats med Intune App Software Development Kit (SDK). De här apparna kan hanteras av Intune och appskyddsprinciper kan tillämpas på dem.
 
-**Ohanterade appar** – Appar som inte kan hanteras med principer eller som inte har omslutits av Intune eller som inte inkluderar Intunes App SDK. Applikations-policys kan inte tillämpas på de här apparna.
+**Ohanterade appar** – appar som användare kan ladda ned från iOS App Store som inte är integrerade med Intune App SDK. Intune har ingen kontroll över distribution, hantering eller selektiv rensning av dessa appar.  
 
 Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade appbutiks-appar listas i företagsportalsappen. För att undvika problemet visar panelerna i företagsportalsappen för iOS användarna flera vyer på en och samma plats (företagsportalens webbplats) för alla deras appar.
 
@@ -53,7 +52,7 @@ Registrerade användare får sina appar genom att trycka på följande paneler p
 
 Mer information om hur man lägger till appar finns i [Så här lägger du till en app i Microsoft Intune](apps-add.md).
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 [Så får dina Android-användare sina appar](end-user-apps-android.md)
 
 [Så får dina Windows-användare sina appar](end-user-apps-windows.md)
