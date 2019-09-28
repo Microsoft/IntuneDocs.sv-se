@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 05/9/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75628ab45d4c0d7f43f07d530a76988ca5f772b8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 578dcf8a714197d9414e8ffeeec9a6c6e8a30311
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461166"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "71302168"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
 
@@ -78,15 +77,14 @@ Du kan importera information till SDS på något av följande sätt:
 
 ### <a name="configure-general-settings"></a>Konfigurera allmänna inställningar
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
-5.  I profilfönstret väljer du **Skapa profil**.
-6.  Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen i fönstret **Skapa profil**.
-7.  Välj **iOS** i listrutan **Plattform**.
-8.  Välj **Utbildning** i listrutan **Profiltyp**.
-9.  Välj **Inställningar** > **Konfigurera**.
+5. I profilfönstret väljer du **Skapa profil**.
+6. Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen i fönstret **Skapa profil**.
+7. Välj **iOS** i listrutan **Plattform**.
+8. Välj **Utbildning** i listrutan **Profiltyp**.
+9. Välj **Inställningar** > **Konfigurera**.
 
 
 I nästa avsnitt kommer du att skapa certifikat för att upprätta en förtroenderelation mellan lärarens och elevernas iPad-enheter. Certifikat används för att smidigt och tyst autentisera anslutningar mellan enheter utan att behöva ange användarnamn och lösenord.
@@ -124,8 +122,8 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurera elevcertifikat
 
-1.  Välj **Elevcertifikat** i fönstret **Utbildning**.
-2.  Välj **1:1** i fönstret **Elevcertifikat** i typlistan för **Elevcertifikat**.
+1. Välj **Elevcertifikat** i fönstret **Utbildning**.
+2. Välj **1:1** i fönstret **Elevcertifikat** i typlistan för **Elevcertifikat**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurera rotcertifikat för elev
 
@@ -149,9 +147,9 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 ## <a name="finish-up"></a>Slutför
 
-1.  Välj OK i fönstret **Utbildning**.
-2.  Välj **Skapa** i fönstret **Skapa profil**.
-    
+1. Välj OK i fönstret **Utbildning**.
+2. Välj **Skapa** i fönstret **Skapa profil**.
+
 Profilen skapas och visas i fönstret med profillistan.
 
 Tilldela profilen till elevenheter i de klassrumsgrupper som skapades när du synkroniserade skolinformationen med Azure AD (se [Så här tilldelar du enhetsprofiler](device-profile-assign.md)).

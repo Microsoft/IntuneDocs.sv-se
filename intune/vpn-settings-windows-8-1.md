@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a4a48ef30a56ded80ca6d84aa1a8eee56654a13
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 521243d2c6560fbac77a4ee2aba6ed9577d3abe1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "71303245"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Windows 8.1
 
@@ -37,12 +36,12 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 - **Använd alla inställningar endast för Windows 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om detta är inställt på **Konfigurerad**, tillämpas inställningarna endast på Windows 8.1-enheter. Om det är inställt på **Inte konfigurerad**, gäller inställningarna även för Windows 10-enheter.
 - **Anslutningsnamn** – Ange ett namn på anslutningen. Användarna ser det här namnet när de bläddrar på enheten i listan med tillgängliga VPN-anslutningar.
 - **Servrar** – Lägg till en eller flera VPN-servrar som enheterna ansluter till.
-    - **Lägg till** – Öppnar sidan **Lägg till rad** där du kan ange följande information:
-        - **Beskrivning** – Ange ett beskrivande namn för servern, som t.ex. **Contoso VPN-server**.
-        - **IP-adress eller fullständigt domännamn** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
-        - **Standardserver** – Gör den här servern till den standardserver som enheterna använder för att upprätta anslutningen. Du ska endast ange en server som standard.
-    - **Importera** – Bläddra till en fil som innehåller en kommateckenavgränsad lista med servrar i formatbeskrivning, IP-adress eller FQDN, samt standardserver. Välj **OK** för att importera dessa till listan **Servrar**.
-    - **Exportera** – Exporterar listan med servrar till en kommateckenavgränsad fil (csv).
+  - **Lägg till** – Öppnar sidan **Lägg till rad** där du kan ange följande information:
+    - **Beskrivning** – Ange ett beskrivande namn för servern, som t.ex. **Contoso VPN-server**.
+    - **IP-adress eller fullständigt domännamn** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
+    - **Standardserver** – Gör den här servern till den standardserver som enheterna använder för att upprätta anslutningen. Du ska endast ange en server som standard.
+  - **Importera** – Bläddra till en fil som innehåller en kommateckenavgränsad lista med servrar i formatbeskrivning, IP-adress eller FQDN, samt standardserver. Välj **OK** för att importera dessa till listan **Servrar**.
+  - **Exportera** – Exporterar listan med servrar till en kommateckenavgränsad fil (csv).
 
 - **Anslutningstyp** – Välj VPN-anslutningstyp från leverantörslistan nedan:
 - **Check Point Capsule VPN**
@@ -63,23 +62,25 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 
 **Exempel för Pulse Secure:**
 
-```
+```xml
     <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
 ```
 
 **Exempel för CheckPoint Mobile VPN:**
-```
+
+```xml
     <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
 ```
 
 **Exempel för SonicWall Mobile Connect:**
-```
+
+```xml
     <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 ```
 
 **Exempel för F5 Edge Client:**
 
-```
+```xml
     <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
 ```
 
@@ -91,6 +92,6 @@ Mer information om hur du skriver anpassade XML-kommandon finns i varje tillverk
 - **Identifiera proxyinställningar automatiskt** – Om VPN-servern kräver en proxyserver för anslutningen, kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
 - **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **URL för proxyserver** som innehåller konfigurationsfilen. Ange till exempel `http://proxy.contoso.com`.
 - **Använd proxyserver** – Aktivera det här alternativet om du vill ange inställningarna för proxyservern manuellt.
-    - **Adress** – Ange proxyns serveradress (som en IP-adress).
-    - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.
+  - **Adress** – Ange proxyns serveradress (som en IP-adress).
+  - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.
 - **Kringgå proxy för lokala adresser** – Välj det här alternativet om VPN-servern kräver en proxyserver för anslutningen och du inte vill använda proxyservern för de lokala adresser som du anger. Mer information finns i dokumentationen till Windows Server.

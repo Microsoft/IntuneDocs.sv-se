@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 528819452accf4a7f17e54b3c05693dee5cab74f
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884248"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239460"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Lägga till Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
 
@@ -62,6 +62,9 @@ Den här artikeln beskriver dessa inställningar.
     
       > [!NOTE]
       > När du sparar Wi-Fi-profilen visas inte det PSK-värde som du angav av säkerhetsskäl. Vattenstämpeln för den i förväg delade nyckeln visar fortfarande **Inte konfigurerad** trots att PSK har sparats i profilen. För att ändra PSK anger du en ny nyckel och sparar profilen. Om du sparar en PSK, redigerar principen och lämnar PSK tomt fortsätter befintlig PSK att användas.
+      
+      > [!IMPORTANT]
+      > PSK är detsamma för alla enheter som du riktar profule till. Om nyckeln har komprometterats kan den användas av vilken enhet som helst för att ansluta till Wi-Fi-nätverket. Skydda din PSKs för att undvika obehörig åtkomst.
 
 - **Company Proxy settings** (Företagets proxyinställningar): Välj att använda proxyinställningarna i din organisation. Alternativen är:
   - **Inga**: Inga proxyinställningar konfigureras.

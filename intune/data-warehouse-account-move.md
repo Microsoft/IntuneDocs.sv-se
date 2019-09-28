@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c73e4c8aa5f71fb80110d4a223b9872c8dbaff3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 7d51d504f63e9a9c942bbcbc689c67bc63d74a2c
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798110"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "71304932"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Flytta Intune-kontodata för informationslager 
 
@@ -82,5 +81,5 @@ Kunden X begär att ett konto flyttas med start 2018-01-06. Kunden får som svar
 
 ## <a name="next-steps"></a>Nästa steg
 
- - Läs mer om [vad som är nytt i Intune varje vecka](whats-new.md). Du kan också läsa mer om kommande ändringar, viktiga meddelanden om tjänsten och information om tidigare versioner.
- - Läs [Microsoft Intune-bloggen](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Läs mer om [vad som är nytt i Intune varje vecka](whats-new.md). Du kan också läsa mer om kommande ändringar, viktiga meddelanden om tjänsten och information om tidigare versioner.
+- Läs [Microsoft Intune-bloggen](https://go.microsoft.com/fwlink/?LinkID=273882).

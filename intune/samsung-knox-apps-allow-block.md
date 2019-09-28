@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/5/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4efa2a813dda16805effe55ff3d1b967ef5d6c88
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: edff9ca3e292a2b5653a8b156a8deaa02bb79e9d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798235"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71303175"
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Använd anpassade principer för att tillåta och blockera appar för Samsung Knox Standard-enheter i Microsoft Intune 
 
@@ -36,8 +35,7 @@ De här inställningarna kan endast användas av enheter som kör Samsung Knox S
 
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Skapa en lista med tillåtna eller blockerade appar
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 2. I fönstret **Enhetskonfiguration** väljer du **Hantera** > **Profiler**.
 2. Välj **Skapa profil** i fönstret med profillistan.
@@ -51,9 +49,9 @@ De här inställningarna kan endast användas av enheter som kör Samsung Knox S
 
    - **Namn** – Ange **PreventStartPackages**.
    - **Beskrivning** – Ange en valfri beskrivning, till exempel ”lista över appar som har blockerats från att köras.”
-   -    **Datatyp** – Välj **Sträng** i listrutan.
-   -    **OMA-URI** – Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-   -    **Värde** – Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+   - **Datatyp** – Välj **Sträng** i listrutan.
+   - **OMA-URI** – Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+   - **Värde** – Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
    För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
    - **Namn** – Ange **AllowInstallPackages**.

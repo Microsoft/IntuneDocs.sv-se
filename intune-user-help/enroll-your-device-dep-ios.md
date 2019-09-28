@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40fe8f1f54779d3ab0a49951ad13c0cb2d0f0ff5
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 4484dbc9a8348101c0f7409b009998baca32f8a4
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166791"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239416"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrera din iOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -35,7 +35,7 @@ Du påbörjar konfigureringen genom att starta din enhet och logga in med dina i
 
 ## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
 
-Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av iOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios.md).  
+Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av iOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
 
 ## <a name="set-up-your-ios-device"></a>Konfigurera din iOS-enhet
 

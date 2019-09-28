@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9066fefccde39ccac281f3bda9008168ea28b77f
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 0de0e676e72d46bde922fd97b651cc1a9268e45e
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166614"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239781"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrera din macOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -35,7 +35,7 @@ Du påbörjar konfigureringen genom att starta din enhet och logga in med dina i
 
 ## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
 
-Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos.md).  
+Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
 ## <a name="get-your-device-managed"></a>Få din enhet hanterad
 

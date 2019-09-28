@@ -5,23 +5,26 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 08/07/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
+ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e37d6a2b7371cf20cd36a6f3f75a4dd252c332f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8e13c2dce5e8da2ce71b97de496d5234096c3b22
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048034"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "71301953"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Enhetsinställningar för Android Enterprise-enheter för att konfigurera e-post, autentisering och synkronisering i Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Den här artikeln beskriver de olika e-postinställningar som du kan styra på Android Enterprise-enheter. Som en del av din lösning för hantering av mobilenheter kan du använda dessa inställningar till att konfigurera en e-postserver, använda SSL för att kryptera e-postmeddelanden och mycket mer.
 
@@ -31,7 +34,7 @@ Mer information om e-postprofiler i Intune finns i [Konfigurera e-postinställni
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-[Skapa en profil för enhetskonfiguration](email-settings-configure.md#create-a-device-profile) och välj arbetsprofilen.
+Skapa en [profil för enhets konfiguration](email-settings-configure.md#create-a-device-profile) (Välj arbets profil) eller skapa en [konfigurations princip för appar](app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android enterprise
 

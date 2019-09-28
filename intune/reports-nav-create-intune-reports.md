@@ -6,9 +6,8 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 08/27/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,29 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0728fefc40bc82db7926faf282a69d0471c3a1ea
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: HT
+ms.openlocfilehash: 88681696716080b38d0f7d9e79264d002f335029
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798127"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "71303294"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Använda Microsoft Intune-informationslager
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Använd Intune-informationslagret för att skapa rapporter som ger inblick i företagets mobilmiljö. Några rapporter innehåller exempelvis:
--   Trend för användarnas registrering i Intune så att du kan optimera licensinköpen
--   Information på detaljnivå om app- och operativsystemversioner så att du kan granska status för mobila enheter
--   Trender för registrering och regelefterlevnad för enheter så att du smidigt kan rulla ut principuppdateringar
+- Trend för användarnas registrering i Intune så att du kan optimera licensinköpen
+- Information på detaljnivå om app- och operativsystemversioner så att du kan granska status för mobila enheter
+- Trender för registrering och regelefterlevnad för enheter så att du smidigt kan rulla ut principuppdateringar
 
 ## <a name="data-warehouse-benefits"></a>Fördelar med informationslager
 
 Informationslagret ger dig tillgång till mer information om din mobila miljö än Azure Portal. Med Intune-informationslagret får du tillgång till:
 
-  -  Tidigare Intune-data
-  -  Dagsaktuella data
-  -  En datamodell som använder OData-standarden
+- Tidigare Intune-data
+- Dagsaktuella data
+- En datamodell som använder OData-standarden
 
 > [!Note]
 > Om du använder samhanterad hantering av mobilenheter (MDM) med System Center Configuration Manager och Microsoft Intune behöver du hämta data från Configuration Manager. Intune-informationslagret innehåller endast Intune-data. Du kan använda en Power BI-instrumentpanel med Configuration Manager för anpassade rapporter. Mer information finns i ”[Meddelande om Power BI-lösningsmallen för System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template)” och ”[Power BI-innehåll för Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)”.

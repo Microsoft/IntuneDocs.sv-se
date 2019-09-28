@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 03/31/2019
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e912c14418d54321b0998dad3081f297ae81114d
-ms.sourcegitcommit: 55323746ca3c1c66326f1453ba66ded9c1b73b0e
+ms.openlocfilehash: 7837ab6e24c5d4fa848218b662cbd89dfbbe7b72
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58867440"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71301887"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Klassiska Microsoft Intune-grupper i Azure-portalen
 
@@ -47,11 +46,11 @@ Vissa av de funktioner för Intune-grupper som du tidigare kan ha använt är in
 ## <a name="how-to-get-started"></a>Hur kommer man igång?
 
 - Läs följande avsnitt för mer information om Azure AD-säkerhetsgrupper och hur de fungerar:
-    -  [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-    -  [Hantera grupper i Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-    -  [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
--  Kontrollera att administratörer som behöver skapa grupper läggs till i Azure AD-rollen **Administratör för Intune-tjänsten**. Azure AD-rollen Tjänstadministratör inte har behörighet att **hantera grupper**.
--  Om dina Intune-grupper använder alternativet **Exkludera särskilda medlemmar** så måste du bestämma om du ska göra om dessa grupper utan att använda undantag, eller om du behöver avancerade regler för att uppfylla affärsbehoven.
+  - [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
+  - [Hantera grupper i Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
+  - [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+- Kontrollera att administratörer som behöver skapa grupper läggs till i Azure AD-rollen **Administratör för Intune-tjänsten**. Azure AD-rollen Tjänstadministratör inte har behörighet att **hantera grupper**.
+- Om dina Intune-grupper använder alternativet **Exkludera särskilda medlemmar** så måste du bestämma om du ska göra om dessa grupper utan att använda undantag, eller om du behöver avancerade regler för att uppfylla affärsbehoven.
 
 
 ## <a name="what-happened-to-intune-groups"></a>Vad hände med Intune-grupperna?

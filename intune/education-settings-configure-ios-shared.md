@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e0b8230a842a7b4e3b1368388cb186defa8df72
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8747a398447dc1f477e2b0149104c4c65d3ed741
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566598"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71302192"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurera Intune-utbildningsinställningar för delade iPad-enheter
 
@@ -68,8 +67,7 @@ Du kan importera information till SDS på något av följande sätt:
 
 ### <a name="configure-general-settings"></a>Konfigurera allmänna inställningar
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
 5. I profilfönstret väljer du **Skapa profil**.
@@ -139,8 +137,7 @@ Profilen skapas och visas i fönstret med profillistan.
 
 ## <a name="step-3---create-a-device-category"></a>Steg 3 – Skapa en enhetskategori
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Välj **Enhetsregistrering** i fönstret **Intune**.
 4. I fönstret **Enhetsregistrering – Översikt** väljer du **Enhetskategorier**.
 5. Välj **Skapa** i fönstret **Enhetsregistrering – Enhetskategorier**.
@@ -151,8 +148,7 @@ Enhetskategorin skapas i fönstret **Registrering – Enhetskategorier**.
 
 ## <a name="step-4--create-a-dynamic-group"></a>Steg 4 – Skapa en dynamisk grupp
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Grupper**.
 4. Välj **Ny grupp** i fönstret **Användare och grupper – Alla grupper**.
 5. I fönstret **Grupp** väljer du en **Grupptyp** och anger sedan **Namn** och **Beskrivning** för gruppen.
@@ -169,8 +165,7 @@ Den dynamiska gruppen skapas i fönstret **Användare och grupper – Alla grupp
 
 ## <a name="step-5--assign-a-device-to-a-category-carts"></a>Steg 5 – Tilldela en enhet till en kategori (kundvagnar)
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enheter**.
 4. I fönstret **Enheter** väljer du **Alla enheter**.
 5. Välj en enhet i fönstret **Enheter – Alla enheter**.
@@ -182,14 +177,13 @@ Enheten är nu associerad med enhetskategorin. Upprepa proceduren för alla enhe
 
 ## <a name="step-6--create-classroom-profiles"></a>Steg 6 – Skapa klassrumsprofiler
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 4. Välj **Hantera** > **Kundvagnsprofiler** i fönstret **Enhetskonfiguration**.
 5. I profilfönstret väljer du **Skapa profil**.
 6. Ange ett **Namn** och en **Beskrivning** i fönstret **Skapa association**.
 7. Välj **Välj klasser** > **Konfigurera** för att associera grupper med kundvagnsprofilen.
-8. Välj de klasser du vill inkludera i kundvagnsprofilen och välj sedan **Välj**. 
+8. Välj de klasser du vill inkludera i kundvagnsprofilen och välj sedan **Välj**. 
 9. Välj **Välj kundvagnar** > **Konfigurera** för att associera grupper med kundvagnsprofilen.
 10. Välj de grupper du vill inkludera i kundvagnsprofilen och välj sedan **Välj**.
 11. Välj **Spara** i fönstret **Skapa association** för att spara kundvagnsprofilen.
@@ -198,13 +192,12 @@ Profilen skapas och visas i fönstret med profillistan.
 
 ## <a name="step-7---assign-the-cart-profile-to-classes"></a>Steg 7 – Tilldela kundvagnsprofilen till klasser
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 4. Välj **Övervaka** > **Tilldelningsstatus** i fönstret **Enhetskonfiguration**.
 5. Välj den **Kundvagnsprofil** du skapade i fönstret **Tilldelningsstatus**.
 6. Välj **Tilldelningar** i fönstret **Kundvagnsprofil** och välj **Välj grupper att ta med** under **Inkludera**.
-7. Välj de klasser du vill ange som mål kundvagnsprofilen (välj inte en grupp) och välj sedan **Välj**. 
+7. Välj de klasser du vill ange som mål kundvagnsprofilen (välj inte en grupp) och välj sedan **Välj**. 
 8. Välj **Spara** när du är klar.
 
 Tilldelningen slutförs och Intune distribuerar klassrumsprofilen till målenheterna baserat på klassrumstilldelningen.
