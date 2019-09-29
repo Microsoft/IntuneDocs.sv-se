@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 07/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 732e391ad3c85c1f3f5da36b3424544cf1cdf4aa
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566054"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71238792"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -36,35 +35,35 @@ Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-con
 
 ## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Kontrollera att du uppfyller kraven för att använda programhanteringsverktyget
 
--   Du måste köra programhanteringsverktyget på en Windows-dator som kör Windows 7 eller senare.
+- Du måste köra programhanteringsverktyget på en Windows-dator som kör Windows 7 eller senare.
 
--   Indataappen måste vara ett giltigt Android-programpaket med filtillägget .apk och:
+- Indataappen måste vara ett giltigt Android-programpaket med filtillägget .apk och:
 
-    -   Den kan inte krypteras.
-    -   Den får inte ha omslutits tidigare med Intunes programhanteringsverktyg.
-    -   Den måste vara skriven för Android 4.0 eller senare.
+  - Den kan inte krypteras.
+  - Den får inte ha omslutits tidigare med Intunes programhanteringsverktyg.
+  - Den måste vara skriven för Android 4.0 eller senare.
 
--   Appen måste ha utvecklats av eller för ditt företag. Du kan inte använda verktyget på appar som har hämtats från Google Play-butiken.
+- Appen måste ha utvecklats av eller för ditt företag. Du kan inte använda verktyget på appar som har hämtats från Google Play-butiken.
 
--   För att kunna köra programhanteringsverktyget måste du installera den senaste versionen av [Java Runtime Environment](https://java.com/download/) och sedan kontrollera att Java-sökvägsvariabeln är inställd på C:\ProgramData\Oracle\Java\javapath i Windows-miljövariablerna. Mer hjälp finns i [Java-dokumentationen](https://java.com/download/help/).
+- För att kunna köra programhanteringsverktyget måste du installera den senaste versionen av [Java Runtime Environment](https://java.com/download/) och sedan kontrollera att Java-sökvägsvariabeln är inställd på C:\ProgramData\Oracle\Java\javapath i Windows-miljövariablerna. Mer hjälp finns i [Java-dokumentationen](https://java.com/download/help/).
 
     > [!NOTE]
     > I vissa fall kan 32-bitarsversionen av Java orsaka minnesproblem. Det är en bra idé att installera 64-bitarsversionen.
 
-- Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
+- Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
 
     > [!NOTE]
     > Intunes programhanteringsverktyg har inte stöd för Googles signaturscheman v2 och v3 (kommande) för signering av appar. När du har omslutit .apk-filen med Intunes programhanteringsverktyg bör du använda [Googles Apksigner-verktyg]( https://developer.android.com/studio/command-line/apksigner). Då ser du till att appen kan startas enligt Android-standard när den skickats till slutanvändarnas enheter. 
 
-- (Valfritt) Ibland kan en app uppnå storleksgränsen i Dalvik för körbara filer (DEX) på grund av de MAM SDK-klasser i Intune som läggs till vid omslutning. DEX-filer ingår i kompileringen av en Android-app. Intune App Wrapping-verktyget hanterar automatiskt DEX filen dataspill vid wrapping för appar med en minsta API-nivå av 21 eller högre (från och med [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). För appar med en minsta API-nivå av < 21 bästa praxis är att öka det minsta värdet API-nivå med hjälp av omslutningen `-UseMinAPILevelForNativeMultiDex` flaggan. Följande DEX spill lösningar är tillgängliga för kunder som är det går inte att öka appens minsta API-nivå. I vissa organisationer kan du behöva kontakta den som kompilerar appen (dvs. apputvecklingsteamet):
-* Använd ProGuard för att eliminera outnyttjade klassreferenser från appens primära DEX-fil.
-* För kunder som använder v3.1.0 eller senare för Android Gradle-plugin-programmet, inaktivera den [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+- (Valfritt) Ibland kan en app uppnå storleksgränsen i Dalvik för körbara filer (DEX) på grund av de MAM SDK-klasser i Intune som läggs till vid omslutning. DEX-filer ingår i kompileringen av en Android-app. Intunes program hanterings verktyg hanterar automatiskt DEX fil spill under omplacering för appar med en min API-nivå på 21 eller högre (från och med [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). För appar med en lägsta API-nivå på < 21 är bästa praxis att öka den lägsta API-nivån med hjälp av omslutningens `-UseMinAPILevelForNativeMultiDex`-flagga. För kunder som inte kan öka appens lägsta API-nivå är följande DEX-spill i spill området tillgängligt. I vissa organisationer kan du behöva kontakta den som kompilerar appen (dvs. apputvecklingsteamet):
+* Använd proguard för att eliminera oanvända klass referenser från appens primära DEX-fil.
+* För kunder som använder v-3.1.0 eller högre av Android Gradle-plugin-programmet inaktiverar du [D8-dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
 
-1.  Från [GitHub-databasen](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) hämtar du installationsfilen InstallAWT.exe för Intunes programhanteringsverktyg för Android till en Windows-dator. Öppna installationsfilen.
+1. Från [GitHub-databasen](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) hämtar du installationsfilen InstallAWT.exe för Intunes programhanteringsverktyg för Android till en Windows-dator. Öppna installationsfilen.
 
-2.  Godkänn licensavtalet och slutför installationen.
+2. Godkänn licensavtalet och slutför installationen.
 
 Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
@@ -79,6 +78,7 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
    ```
 
 3. Kör verktyget genom att använda kommandot **invoke-AppWrappingTool**, med följande användningssyntax:
+
    ```PowerShell
    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
@@ -95,7 +95,7 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 |**-KeyAlias**&lt;String&gt;|Namnet på nyckeln som ska användas för signering.| |
 |**-KeyPassword**&lt;SecureString&gt;|Lösenordet som används för att dekryptera den privata nyckeln som ska användas för signering.| |
 |**-SigAlg**&lt;SecureString&gt;| (Valfritt) Namnet på signaturalgoritmen som ska användas för signering. Algoritmen måste vara kompatibel med den privata nyckeln.|Exempel: SHA256withRSA, SHA1withRSA|
-|**-UseMinAPILevelForNativeMultiDex**| (Valfritt) Använd den här flaggan för att öka källa Android appens minsta API-nivå 21. Den här flaggan uppmanas bekräfta som den kommer att begränsa vem som kan installera den här appen. Användare kan hoppa över dialogrutan genom att lägga till parametern ”-bekräfta: $false” till sina PowerShell-kommando. Flaggan bör endast användas av kunder på appar med min API < 21 som inte vill att omsluta har på grund av fel i DEX dataspill. | |
+|**-UseMinAPILevelForNativeMultiDex**| Valfritt Använd den här flaggan om du vill öka käll-Android-appens lägsta API-nivå till 21. Den här flaggan kommer att uppmanas att bekräfta att den begränsar vem som får installera den här appen. Användare kan hoppa över bekräftelse dialog rutan genom att lägga till parametern "-Confirm: $false" till deras PowerShell-kommando. Flaggan bör endast användas av kunder i appar med min API < 21 som inte kan radbrytas på grund av DEX overflow-fel. | |
 | **&lt;CommonParameters&gt;** | (Valfritt) Kommandot stöder vanliga PowerShell-parametrar som verbose och debug. |
 
 
@@ -110,10 +110,13 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 **Exempel:**
 
 Importera PowerShell-modulen.
+
 ```PowerShell
 Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
+
 Kör programhanteringsverktyget på den interna appen HelloWorld.apk.
+
 ```PowerShell
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
@@ -128,12 +131,12 @@ Huvudscenarierna när du måste omsluta dina program på nytt är följande:
 * Intunes programhanteringsverktyg för Android har publicerat en ny version som möjliggör viktiga felkorrigeringar, eller nya, specifika principfunktioner för skydd av Intune-program. Detta sker var sjätte till var åttonde vecka via GitHub-lagringsplatsen för [Microsoft Intunes programhanteringsverktyg för Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 
 Här är några metodtips för omslutning på nytt: 
-* Information om hur du hanterar signeringscertifikat som använts under skapandeprocessen finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps)
+* Information om hur du hanterar signeringscertifikat som använts under skapandeprocessen finns i [Återanvända signeringscertifikat och omslutande appar](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps)
 
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Återanvända signeringscertifikat och omslutande appar
 Android kräver att alla appar måste ha signerats av ett giltigt certifikat för att kunna installeras på Android-enheter.
 
-Omslutna appar kan antingen signeras som en del av omslutningsprocessen eller *efter* omslutning med ditt befintliga signeringsverktyg (signering informationen i appen innan radbrytning tas bort). Om möjligt ska signeringsinformationen som redan användes när för byggprocessen användas vid omslutning. I vissa organisationer kan du behöva arbeta med den som äger keystore-informationen (t.ex. apputvecklare). 
+Omslutna appar kan antingen signeras som en del av omslutningsprocessen eller *efter* omslutning med ditt befintliga signeringsverktyg (signering informationen i appen innan radbrytning tas bort). Om möjligt ska signeringsinformationen som redan användes när för byggprocessen användas vid omslutning. I vissa organisationer kan du behöva arbeta med den som äger keystore-informationen (t.ex. apputvecklare). 
 
 Om tidigare signeringscertifikatet kan inte användas eller om appen har inte distribuerats innan kan du skapa ett nytt signeringscertifikat genom att följa anvisningarna i [Android Utvecklarhandboken](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
@@ -142,17 +145,17 @@ Om appen har distribuerats tidigare med ett annat signeringscertifikat, kan appe
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Säkerhetsaspekter att tänka på när du kör programhanteringsverktyget
 För att förhindra eventuell förfalskning, avslöjande av information och privilegieangrepp:
 
--   Kontrollera att indata för affärsprogrammet (LOB), utdataappen och Java KeyStore finns på samma dator där programhanteringsverktyget körs.
+- Kontrollera att indata för affärsprogrammet (LOB), utdataappen och Java KeyStore finns på samma dator där programhanteringsverktyget körs.
 
--   Importera utdataprogrammet till Intune på samma dator som där verktyget körs. Mer information om Java Keytool finns i [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
+- Importera utdataprogrammet till Intune på samma dator som där verktyget körs. Mer information om Java Keytool finns i [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
 
--   Om utdataappen och verktyget finns på en UNC-sökväg (Universal Naming Convention) och du inte kör verktyget och indatafilerna på samma dator, konfigurerar du en säker miljö med hjälp av [IPsec (Internet Protocol Security)](https://wikipedia.org/wiki/IPsec) eller [signering med SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
+- Om utdataappen och verktyget finns på en UNC-sökväg (Universal Naming Convention) och du inte kör verktyget och indatafilerna på samma dator, konfigurerar du en säker miljö med hjälp av [IPsec (Internet Protocol Security)](https://wikipedia.org/wiki/IPsec) eller [signering med SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
 
--   Kontrollera att programmet kommer från en betrodd källa.
+- Kontrollera att programmet kommer från en betrodd källa.
 
--   Skydda utdatakatalogen som innehåller den omslutna appen. Fundera på att i stället använda en katalog på användarnivå för utdatan.
+- Skydda utdatakatalogen som innehåller den omslutna appen. Fundera på att i stället använda en katalog på användarnivå för utdatan.
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)
 
 - [Utvecklarhandbok för Microsoft Intune App SDK för Android](app-sdk-android.md)
