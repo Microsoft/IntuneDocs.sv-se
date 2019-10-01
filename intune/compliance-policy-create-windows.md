@@ -5,9 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 09/12/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,18 +14,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d956526d483a74ca5929180a48ea2dcd8b3eab7
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
-ms.translationtype: HT
+ms.openlocfilehash: cda6c5f5ffa2244376e318e81a38a1ed410a443f
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423636"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71305051"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Windows 10 och senare för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Windows 10-enheter och senare enheter i Intune. Som en del av din MDM-lösning för hantering av mobilenheter kan du använda dessa inställningar för att kräva BitLocker, ange en lägsta och högsta operativsystemversion, ange en risknivå med hjälp av Windows Defender Advanced Threat Protection (ATP) och mycket mer.
+Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Windows 10-enheter och senare enheter i Intune. Som en del av din MDM-lösning för hantering av mobilenheter kan du använda dessa inställningar för att kräva BitLocker, ange en lägsta och högsta operativsystemversion, ange en risknivå med hjälp av Microsoft Defender Advanced Threat Protection (ATP) och mycket mer.
 
 Den här funktionen gäller för:
 
@@ -100,23 +99,32 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 
 ### <a name="password"></a>Lösenord
 
-- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter. När det **inte är konfigurerat**utvärderar Intune inte enheten för lösen ords inställningar för efterlevnad.
 - **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
-- **Lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
+- **Krav på lösenordstyp**: Välj typ av lösenord eller PIN-kod. Alternativen är:
 
-  - **Antal icke-alfanumeriska tecken i lösenordet:** Om **Krav på lösenordstyp** är inställt till **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
-    - Gemener
-    - Versaler
-    - Symboler
-    - Siffror
+  - **Enhets standard**: Kräv lösen ord, numerisk PIN-kod eller alfanumerisk PIN-kod
+  - **Numerisk**: Kräv ett lösen ord eller en numerisk PIN-kod
+  - **Alfanumeriskt**: Kräv ett lösen ord eller en alfanumerisk PIN-kod. Välj också **lösen ords komplexitet**: 
+    
+    - **Kräv siffror och gemener**
+    - **Kräv siffror, gemener och versaler**
+    - **Siffror, gemener, versaler och specialtecken krävs.**
 
-    Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
+    > [!TIP]
+    > De alfanumeriska lösen ords principerna kan vara komplexa. Vi uppmuntrar administratörer att läsa kryptografiproviders för mer information:
+    >
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
 - **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
-- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
+- **Lösenordets giltighetstid (dagar)** : Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord, från 1-730.
 - **Antal tidigare lösenord för att förhindra återanvändning**: Ange det antal tidigare lösenord som inte får återanvändas.
-- **Kräv lösenord när enheten lämnar inaktivt läge (mobil och holografiskt)**: Tvinga användare att ange lösenordet varje gång enheten lämnar inaktivt läge.
+- **Kräv lösenord när enheten lämnar inaktivt läge (mobil och holografiskt)** : Tvinga användare att ange lösenordet varje gång enheten lämnar inaktivt läge.
+
+  > [!IMPORTANT]
+  > När lösenordskravet ändras på ett Windows-skrivbord påverkas användarna nästa gång de loggar in, eftersom det är då enheten går från inaktiv till aktiv. Användare med lösenord som uppfyller kravet uppmanas ändå att ändra sina lösenord.
 
 ### <a name="encryption"></a>Kryptering
 
@@ -127,10 +135,30 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 
 ### <a name="device-security"></a>Enhetssäkerhet
 
-- **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med hjälp av antivirusprogram som är registrerade i [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), till exempel Symantec och Windows Defender. När Intune **inte är konfigurerat** görs inga sökningar efter AV-lösningar installerade på enheten.
-- **Antispionprogram**: När **Kräv** har valts kan du kontrollera efterlevnaden med antispionprogram som har registrerats med [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), till exempel Symantec och Windows Defender. När Intune **inte är konfigurerat** görs inga sökningar efter lösningar med antispionprogram installerade på enheten.
+- **Brand vägg**: Ställ in på **Kräv** att aktivera Microsoft Defender-brandväggen och hindra användare från att stänga av den. **Inte konfigurerad** (standard) styr inte Microsoft Defender-brandväggen eller ändra befintliga inställningar.
 
-## <a name="windows-defender-atp"></a>Windows Defender ATP
+  [Brand vägg CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+
+- **Trusted Platform Module (TPM)** : När inställningen är **obligatorisk**kontrollerar Intune versionen för kompatibilitet. Enheten är kompatibel om TPM-chipets version är större än 0 (noll). Enheten är inte kompatibel om det inte finns någon TPM-version på enheten. När det **inte är konfigurerat**kontrollerar Intune inte enheten för en TPM-krets-version.
+
+  [DeviceStatus CSP-DeviceStatus/TPM/SpecificationVersion Node](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  
+- **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med hjälp av antivirusprogram som är registrerade i [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), till exempel Symantec och Microsoft Defender. När Intune **inte är konfigurerat** görs inga sökningar efter AV-lösningar installerade på enheten.
+- **Antispionprogram**: När **Kräv** har valts kan du kontrollera efterlevnaden med antispionprogram som har registrerats med [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), till exempel Symantec och Microsoft Defender. När Intune **inte är konfigurerat** görs inga sökningar efter lösningar med antispionprogram installerade på enheten.
+
+### <a name="defender"></a>Defender
+
+- **Microsoft Defender program mot skadlig kod**: Ställ in på **Kräv** att aktivera tjänsten Microsoft Defender skydd mot skadlig kod och hindra användare från att stänga av den. **Inte konfigurerad** (standard) styr inte tjänsten eller ändrar inte befintliga inställningar.
+- **Lägsta version av Microsoft Defender antimalware-skadlig kod**: Ange den lägsta tillåtna versionen av Microsoft Defender-tjänsten för skydd mot skadlig kod. Ange till exempel `4.11.0.0`. Om du lämnar tomt kan du använda en version av tjänsten Microsoft Defender program mot skadlig kod.
+- **Microsoft Defender program mot skadlig kod – säkerhets information uppdaterad**: styr uppdateringar av Windows säkerhets virus och hot skydd på enheterna. **Kräver** att Microsoft Defender Security Intelligence är uppdaterat. **Inte konfigurerad** (standard) upprätthåller inte några krav.
+
+  [Säkerhets information uppdateringar för Microsoft Defender Antivirus och andra Microsoft antimalware-program](https://www.microsoft.com/en-us/wdsi/defenderupdates) har mer information om säkerhets information.
+
+- **Real tids skydd**: **Kräv** aktiverar real tids skydd, som söker efter skadlig kod, spionprogram och annan oönskad program vara. **Inte konfigurerad** (standard) styr inte den här funktionen eller ändra befintliga inställningar.
+
+  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
 - **Kräv att enheten ska vara på eller under hotnivån för datorn**: Använd den här inställningen för att använda riskbedömningen från dina tjänster för skydd mot hot som ett villkor för efterlevnad. Välj högsta tillåtna hotnivå:
 
@@ -139,7 +167,7 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
   - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
   - **Hög**: Det här alternativet är det minst säkra och det tillåter alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
   
-  Information om hur du konfigurerar Windows Defender ATP (Advanced Threat Protection – Avancerat skydd) som skyddstjänst finns i [Aktivera Windows Defender ATP med villkorsstyrd åtkomst](advanced-threat-protection.md).
+  Information om hur du konfigurerar Microsoft Defender ATP (Advanced Threat Protection – Avancerat skydd) som skyddstjänst finns i [Aktivera Microsoft Defender ATP med villkorsstyrd åtkomst](advanced-threat-protection.md).
 
 Välj **OK** > **Skapa** för att spara ändringarna.
 

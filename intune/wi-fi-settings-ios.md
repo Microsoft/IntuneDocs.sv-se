@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 09/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,14 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04b864689bce1814eba78dc2435905d4df82e8c0
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 2358ec854e9cc78cbc36570c45a96b98d2844f5d
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022686"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302590"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina iOS-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk, lägga till ett PKS- eller ett SCEP-certifikat och mycket mer.
 
@@ -33,6 +35,9 @@ Den här artikeln beskriver dessa inställningar.
 ## <a name="before-you-begin"></a>Innan du börjar
 
 [Skapa en enhetsprofil](device-profile-create.md).
+
+> [!NOTE]
+> De här inställningarna är tillgängliga för alla registrerings typer. Mer information om registrerings typerna finns i [iOS-registrering](ios-enroll.md).
 
 ## <a name="basic-profiles"></a>Grundläggande profiler
 
@@ -74,18 +79,12 @@ Den här artikeln beskriver dessa inställningar.
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)** : Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
-
-      Klicka på **OK** för att spara ändringarna.
 
   - **EAP-TTLS**: Ange också:
 
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
-
-      Klicka på **OK** för att spara ändringarna.
 
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
@@ -96,8 +95,6 @@ Den här artikeln beskriver dessa inställningar.
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
-        Klicka på **OK** för att spara ändringarna.
-
       - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
   - **LEAP**
@@ -107,15 +104,11 @@ Den här artikeln beskriver dessa inställningar.
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. 
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
-
-        Klicka på **OK** för att spara ändringarna.
 
       - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
@@ -124,12 +117,8 @@ Den här artikeln beskriver dessa inställningar.
   - **Manuell** – Ange **Proxyserveradress** som en IP-adress och dess **Portnummer**.
   - **Automatisk**: Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `http://proxy.contoso.com`) som innehåller konfigurationsfilen.
 
-Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
-
 ## <a name="next-steps"></a>Nästa steg
 
-Profilen har skapats, men den gör inte något än. Nu ska vi [tilldela den här profilen](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. Därefter [tilldelar du profilen](device-profile-assign.md) och [övervakar dess status.](device-profile-monitor.md)
 
-## <a name="more-resources"></a>Fler resurser
-
-[Översikt över Wi-Fi-inställningar](wi-fi-settings-configure.md), inklusive andra tillgängliga plattformar.
+Konfigurera Wi-Fi-inställningar på [Android](wi-fi-settings-android.md)-, [Android Enterprise](wi-fi-settings-android-enterprise.md)-, [MacOS](wi-fi-settings-macos.md)-och [Windows 10](wi-fi-settings-windows.md) -enheter.

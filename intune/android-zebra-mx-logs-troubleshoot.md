@@ -1,13 +1,12 @@
 ---
-title: Använd StageNow loggar in på Android Zebra enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se vanliga problem och lösningar när du använder StageNow på Android-enheter med Microsoft Intune. Lär dig också att hämta loggarna och se exempel på hur du läser loggarna för slutförande- eller fel.
+title: Använda StageNow-loggar på Android Zebra-enheter i Microsoft Intune-Azure | Microsoft Docs
+description: Se vanliga problem och lösningar när du använder StageNow på Android-enheter med Microsoft Intune. Lär dig också hur du hämtar loggar och se exempel på hur du kan läsa loggarna efter framgång eller fel.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: ''
 ms.technology: ''
@@ -17,63 +16,63 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36476820805c00cefafcd9f64dd2f08a014762c0
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 6110476aace30daa27450326aea3f4abd4fb3ea0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490549"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71303894"
 ---
-# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Felsöka och se eventuella problem på Android Zebra enheter i Microsoft Intune
+# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Felsök och se potentiella problem på Android Zebra-enheter i Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Du kan använda i Microsoft Intune, [Zebra Mobility tillägg (MX) att hantera enheter med Android Zebra](android-zebra-mx-overview.md). När du använder Zebra enheter kan du skapa profiler i StageNow att hantera inställningar och överför dem till Intune. Intune använder StageNow appen för att tillämpa inställningarna på enheterna. Appen StageNow skapar även en detaljerad loggfil på den enhet som används för att felsöka.
+I Microsoft Intune kan du använda [Zebra Mobility Extensions (MX) för att hantera Android Zebra-enheter](android-zebra-mx-overview.md). När du använder Zebra-enheter kan du skapa profiler i StageNow för att hantera inställningar och ladda upp dem till Intune. Intune använder StageNow-appen för att tillämpa inställningarna på enheterna. StageNow-appen skapar också en detaljerad loggfil på enheten som används för fel sökning.
 
 Den här funktionen gäller för:
 
 - Android
 
-Exempelvis kan skapa du en profil i StageNow att konfigurera en enhet. När du skapar profilen StageNow genererar en fil i det sista steget för du testa profilen. Du kan använda den här filen med StageNow appen på enheten.
+Du kan till exempel skapa en profil i StageNow för att konfigurera en enhet. När du skapar StageNow-profilen genererar det sista steget en fil för att testa profilen. Du använder den här filen med StageNow-appen på enheten.
 
-Ett annat exempel är du skapar en profil i StageNow och testa den. I Intune, lägga till StageNow profilen och tilldela den till dina Zebra-enheter. När du kontrollerar status för den tillhörande profilen visar profilen statusen på hög nivå.
+I ett annat exempel skapar du en profil i StageNow och testar den. I Intune lägger du till StageNow-profilen och tilldelar den sedan till dina Zebra-enheter. När du kontrollerar status för den tilldelade profilen, visar profilen en hög nivå status.
 
-I båda dessa fall kan du få mer information från loggfil StageNow som sparas på enheten varje gång en StageNow profilen används.
+I båda fallen kan du få mer information från logg filen StageNow, som sparas på enheten varje gång en StageNow-profil tillämpas.
 
-Vissa problem inte är relaterade till innehållet i StageNow profilen och syns inte i loggarna.
+Vissa problem är inte relaterade till innehållet i StageNow-profilen och återspeglas inte i loggarna.
 
-Den här artikeln visar hur du läsa StageNow loggar och visar en lista över andra potentiella problem med Zebra enheter som inte kanske återspeglas i loggarna.
+Den här artikeln visar hur du läser StageNow-loggarna och visar en lista över andra potentiella problem med Zebra-enheter som kanske inte återspeglas i loggarna.
 
-[Använda och hantera Zebra enheter med Zebra Mobility tillägg](android-zebra-mx-overview.md) innehåller mer information om den här funktionen.
+[Använd och hantera Zebra-enheter med Zebra Mobility Extensions](android-zebra-mx-overview.md) innehåller mer information om den här funktionen.
 
 ## <a name="get-the-logs"></a>Hämta loggarna
 
-### <a name="use-the-stagenow-app-on-the-device"></a>Använd StageNow appen på enheten
-När du testar en profil som direkt med hjälp av StageNow i på datorn, istället för att använda [Intune för att distribuera profilen](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), StageNow-appen på enheten sparar loggar testet. Hämta filen med den **mer (...)**  alternativet i StageNow appen på enheten.
+### <a name="use-the-stagenow-app-on-the-device"></a>Använd StageNow-appen på enheten
+När du testar en profil direkt med StageNow på datorn i, i stället för [att använda Intune för att distribuera profilen](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), sparar StageNow-appen på enheten loggarna från testet. Om du vill hämta logg filen använder du alternativet **mer (...)** i StageNow-appen på enheten.
 
-### <a name="get-logs-using-android-debug-bridge"></a>Hämta loggar med Android Debug-bryggan
-Om du vill hämta loggar när profilen har redan distribuerats med Intune, ansluter du enheten till en dator med [Android Debug-bryggan (GDB)](https://developer.android.com/studio/command-line/adb) (öppnas Androids-webbplats).
+### <a name="get-logs-using-android-debug-bridge"></a>Hämta loggar med hjälp av Android Debug Bridge
+Om du vill hämta loggar när profilen redan har distribuerats med Intune ansluter du enheten till en dator med [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) (öppnar Android ' s webbplats).
 
 På enheten sparas loggar i `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Hämta loggar från e-post
-Om du vill hämta loggar när profilen har redan distribuerats med Intune, slutanvändare kan e-du loggarna via en e postapp på enheten. Öppna appen företagsportal på Zebra-enheten och [skicka loggarna](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Med funktionen Skicka loggar skapar även en PowerLift incident-ID som du kan referera till om du kontaktar Microsoft support.
+För att få loggar efter att profilen redan har distribuerats med Intune kan slutanvändare skicka in loggar med en e-postapp på enheten. Öppna appen Företagsportal på Zebra-enheten och [skicka loggarna](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Med funktionen skicka loggar skapas även ett PowerLift-incident-ID som du kan använda om du kontaktar Microsoft support.
 
-## <a name="read-the-logs"></a>Läsa loggarna
+## <a name="read-the-logs"></a>Läs loggarna
 
-När du tittar på loggarna, det finns ett fel när du ser den `<characteristic-error>` tagg. Information om fel skrivs till den `<parm-error>` tagg > `desc` egenskapen.
+När du tittar på loggarna uppstår ett fel när du ser taggen `<characteristic-error>`. Fel information skrivs till egenskapen `<parm-error>`-taggen > `desc`.
 
-## <a name="error-types"></a>Feltyper
+## <a name="error-types"></a>Fel typer
 
-Zebra enheter är olika nivåer för felrapportering:
+Zebra-enheter innehåller olika fel rapporterings nivåer:
 
-- CSP: N stöds inte på enheten. Enheten är inte en mobil enhet och har inte ett mobilt manager.
-- MX eller OSX-versionen matchar inte. Varje CSP är en ny version. En matris med fullständig support, se [Zebras dokumentation](http://techdocs.zebra.com/mx/) (öppnas Zebras-webbplats).
+- CSP: n stöds inte på enheten. Enheten är till exempel inte en mobil enhet och har inte någon mobil hanterare.
+- MX-eller OSX-versionen är felaktig. Varje KRYPTOGRAFIPROVIDER har versions hantering. En fullständig support mat ris finns i [Zebra-dokumentationen](http://techdocs.zebra.com/mx/) (öppnar Zebra ' s webbplats).
 - Enheten rapporterar ett annat problem eller fel.
 
 ## <a name="examples"></a>Exempel
 
-Till exempel ha följande indata profil:
+Du har till exempel följande ingångs profil:
 
 ```xml
 <wap-provisioningdoc>
@@ -86,7 +85,7 @@ Till exempel ha följande indata profil:
 </wap-provisioningdoc>
 ```
 
-I loggen är XML identisk med indata. Den här matchande utdata innebär att profilen har tillämpats på enheten utan fel:
+I loggen är XML-filen identisk med indata. Denna matchande utdata innebär att profilen har tillämpats på enheten utan fel:
 
 ```xml
 <wap-provisioningdoc>
@@ -99,7 +98,7 @@ I loggen är XML identisk med indata. Den här matchande utdata innebär att pro
 </wap-provisioningdoc>
 ```
 
-Ett annat exempel är innehåller följande indata:
+I ett annat exempel har du följande ingång:
 
 ```xml
 <wap-provisioningdoc>
@@ -113,7 +112,7 @@ Ett annat exempel är innehåller följande indata:
 </wap-provisioningdoc>
 ```
 
-Loggen visar ett fel, eftersom den innehåller en `<characteristic-error>` tagg. I det här scenariot profilen som försökte installera ett Android-paket (APK) som inte finns i den angivna sökvägen:
+Loggen visar ett fel eftersom det innehåller en `<characteristic-error>`-tagg. I det här scenariot försökte profilen installera ett Android-paket (APK) som inte finns på den angivna sökvägen:
 
 ```xml
 <wap-provisioningdoc>
@@ -127,28 +126,28 @@ Loggen visar ett fel, eftersom den innehåller en `<characteristic-error>` tagg.
 </wap-provisioningdoc>
 ```
 
-## <a name="other-potential-issues-with-zebra-devices"></a>Andra potentiella problem med Zebra enheter
+## <a name="other-potential-issues-with-zebra-devices"></a>Andra potentiella problem med Zebra-enheter
 
-Det här avsnittet innehåller andra möjliga problem uppstå när du använder Zebra enheter med Enhetsadministratör. De här problemen rapporteras inte i StageNow loggarna.
+I det här avsnittet visas andra möjliga problem som kan uppstå när du använder Zebra-enheter med enhets administratör. De här problemen rapporteras inte i StageNow-loggarna.
 
-### <a name="android-system-webview-is-out-of-date"></a>Android-systemets webbvy är inaktuell
+### <a name="android-system-webview-is-out-of-date"></a>Android System WebView är inaktuellt
 
-När äldre enheter loggar in med hjälp av företagsportalappen kan kan användare se ett meddelande att komponenten-systemets webbvy är inaktuell och måste uppgraderas. Om enheten inte har installerat Google Play, ansluter den till internet och Sök efter uppdateringar. Om enheten inte har installerat Google Play, hämta den uppdaterade versionen av komponenten och tillämpa den på enheterna. Eller uppdatera till den senaste enheten operativsystem som utfärdats av Zebra.
+När äldre enheter loggar in med Företagsportal-appen kan användarna se ett meddelande om att komponenten för system WebView är inaktuell och behöver uppgraderas. Om Google Play är installerat på enheten ansluter du den till Internet och söker efter uppdateringar. Om enheten inte har Google Play installerat hämtar du den uppdaterade versionen av komponenten och använder den på enheterna. Eller uppdatera till det senaste enhets operativ systemet som utfärdats av Zebra.
 
-### <a name="management-actions-take-a-long-time"></a>Hanteringsåtgärder ta lång tid
+### <a name="management-actions-take-a-long-time"></a>Hanterings åtgärder tar lång tid
 
-Om Google Play-tjänster inte är tillgänglig kan ta upp till 8 timmar att slutföra vissa uppgifter. [Begränsningar för Intune företagsportal-appen för Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (öppnas ett annat Microsoft-webbplats) kan vara en bra resurs.
+Om Google Play-tjänsterna inte är tillgängliga tar det upp till åtta timmar att slutföra vissa uppgifter. [Begränsningar i Intune-företagsportal app för Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (öppnar en annan Microsoft-webbplats) kan vara en lämplig resurs.
 
-### <a name="device-spoofing-suspected-shows-in-intune"></a>”Enhet-förfalskning misstänkt” visas i Intune
+### <a name="device-spoofing-suspected-shows-in-intune"></a>"Enhets förfalskning misstänkt" visas i Intune
 
-Detta fel innebär att Intune misstänker att en icke - Zebra Android-enhet rapporterar dess modell och tillverkare som en Zebra-enhet.
+Det här felet innebär att Intune misstänker att en icke-Zebra Android-enhet rapporterar sin modell och tillverkare som en zebra-enhet.
 
-### <a name="company-portal-app-is-older-than-minimum-required-version"></a>Företagsportalappen är äldre än version som krävs
+### <a name="company-portal-app-is-older-than-minimum-required-version"></a>Företagsportal-appen är äldre än den minsta version som krävs
 
-Intune kan uppdatera versionen som krävs av appen företagsportal. Om Google Play inte är installerad på enheten, uppdateras inte företagsportalappen automatiskt. Om den lägsta versionen är nyare än den installerade versionen, slutar företagsportalappen fungerar. Uppdatering av den senaste Företagsportalen med [separat inläsning på Zebra enheter](android-zebra-mx-overview.md#sideload-the-company-portal-app).
+Intune kan uppdatera den tidigaste version av Företagsportal-appen som krävs. Om Google Play inte är installerat på enheten kommer Företagsportal-appen inte att uppdateras automatiskt. Om den minsta version som krävs är nyare än den installerade versionen slutar Företagsportal-appen att fungera. Uppdatera till den senaste Företagsportal-appen med hjälp av [separat inläsning på Zebra-enheter](android-zebra-mx-overview.md#sideload-the-company-portal-app).
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Zebra diskussionstavlor](https://developer.zebra.com/community/home/discussions) (öppnas Zebras-webbplats)
+[Zebra diskussions tavlor](https://developer.zebra.com/community/home/discussions) (öppnar Zebra ' s webbplats)
 
-[Använda och hantera Zebra enheter med Zebra Mobility tillägg i Intune](android-zebra-mx-overview.md)
+[Använda och hantera Zebra-enheter med Zebra Mobility Extensions i Intune](android-zebra-mx-overview.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 09/16/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,35 +15,43 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bac591a625fd915056234a75b26bc2f90f50cae7
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 7eaed88adc8603ee1f79f47cbd94eec1c3b71b95
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387101"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71301851"
 ---
-# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>iOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
+# <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>iOS- och iPadOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Intune innehåller vissa inbyggda inställningar för att tillåta iOS-användare att använda olika Apple-funktioner på sina enheter. Till exempel så kan administratörer styra hur iOS-användare använder AirPrint-skrivare, lägga till appar och mappar till dockan och sidor på startskärmen, visa meddelanden i appen, visa information om tillgångstagg på låsskärmen, använda enkel inloggning och autentisera användare med certifikat.
 
 Du kan använda dessa funktioner för att styra iOS-enheter som en del av din MDM-lösning för hantering av mobilenheter.
 
-I den här artikeln visas inställningarna, tillsammans med en beskrivning av vad varje inställning gör.
+I den här artikeln visas inställningarna, tillsammans med en beskrivning av vad varje inställning gör. Mer information om dessa funktioner finns i lägga till [iOS-eller MacOS-enhetens funktions inställningar](device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-[Skapa en iOS-enhetskonfigurationsprofil](device-features-configure.md#create-a-device-profile).
+[Skapa en iOS-enhetskonfigurationsprofil](device-features-configure.md).
+
+> [!NOTE]
+> Dessa inställningar gäller för olika registrerings typer, med vissa inställningar som gäller för alla registrerings alternativ. Mer information om de olika registrerings typerna finns i [iOS-registrering](ios-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
 
 - **IP-adress**: Ange skrivarens IPv4- eller IPv6-adress. Om du använder värdnamn till att identifiera skrivare, kan du hämta IP-adressen genom att pinga skrivaren i terminalen. Det finns mer information i Hämta IP-adress och sökväg (i den här artikeln).
 - **Sökväg**: Sökvägen är vanligtvis `ipp/print` för skrivare i nätverket. Det finns mer information i Hämta IP-adress och sökväg (i den här artikeln).
 - **Port**: Ange lyssningsporten för AirPrint-målet. Om du lämnar den här egenskapen tom, kommer AirPrint att använda standardporten. Tillgängligt i iOS 11.0 och senare.
 - **TLS**: Välj **Aktivera** för att skydda AirPrint-anslutningar med TLS (Transport Layer Security). Tillgängligt i iOS 11.0 och senare.
 
-**Lägg till** lägger till AirPrint-servern i listan. Det går att lägga till många olika luftutskrifts servrar. Du kan också **Importera** en kommaavgränsad fil (CSV) med den här informationen. **Export** skapar en lista med de de skrivar servrar som du har lagt till.
+Om du vill lägga till luftutskrifts servrar kan du:
 
-Klicka på **OK** för att spara listan.
+- **Lägg till** lägger till AirPrint-servern i listan. Det går att lägga till många olika luftutskrifts servrar.
+- **Importera** en kommaavgränsad fil (CSV) med den här informationen. Eller **Exportera** för att skapa en lista med de de skrivar servrar som du har lagt till.
 
 ### <a name="get-server-ip-address-resource-path-and-port"></a>Hämta IP-adress för server, resurssökväg och port
 
@@ -60,9 +68,13 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
 
 4. Använd värdena för IP-adressen och resurssökvägen. I det här exemplet är IP-adressen `10.50.25.21` och resurssökvägen är `/ipp/port1`.
 
-## <a name="home-screen-layout-settings"></a>Layoutinställningar för startskärm
+## <a name="home-screen-layout"></a>Startsideslayout
 
-Dessa inställningar konfigurerar applayouten och mappar på dockan och startskärmen på iOS-enheter. Om du vill använda den här funktionen, måste iOS-enheter vara i övervakat läge och köra iOS 9.3 eller senare.
+Den här funktionen gäller för:
+
+- iOS 9,3 eller senare
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
 ### <a name="dock"></a>Docka
 
@@ -78,8 +90,6 @@ Du kan lägga till upp till **sex** objekt (appar och mappar som kombineras) fö
     - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
     - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
-    Klicka på **OK** för att spara ändringarna.
-
   - **Mapp**: Välj det här alternativet för att lägga till en mapp i dockan på skärmen.
 
     Apparna som du lägger till på en sida i en mapp ordnas från vänster till höger, och i samma ordning som i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en annan sida.
@@ -92,8 +102,6 @@ Du kan lägga till upp till **sex** objekt (appar och mappar som kombineras) fö
       - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
       Du kan lägga till upp till **20** sidor för enhetsdockan.
-
-    Klicka på **OK** för att spara ändringarna.
 
 > [!NOTE]
 > När du lägger till ikoner med hjälp av dockningsinställningarna låser du ikonerna på startsidan och andra sidor så att de inte kan flyttas. Detta kan vara standardinställningen för MDM-principer med iOS och Apple.
@@ -132,8 +140,6 @@ Du kan lägga till upp till **40** sidor på en enhet.
         - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
         - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
-      Klicka på **OK** för att spara ändringarna.
-
       - **Mapp**: Välj det här alternativet för att lägga till en mapp i dockan på skärmen.
 
         Apparna som du lägger till på en sida i en mapp ordnas från vänster till höger, och i samma ordning som i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en annan sida.
@@ -145,8 +151,6 @@ Du kan lägga till upp till **40** sidor på en enhet.
           - **Appnamn**: Ange ett namn för appen. Det här namnet används som din referens i Azure Portal. Det visas *inte* på iOS-enheten.
           - **Appsamlings-ID**: Ange samlings-ID för appen. Se [Samlings-ID för inbyggda iOS-appar](bundle-ids-built-in-ios-apps.md) för några exempel.
 
-      Klicka på **OK** för att spara ändringarna.
-
 #### <a name="example"></a>Exempel
 
 I följande exempel har en ny sida med namnet **Contoso** lagts till. Sidan visar apparna Hitta vänner och Inställningar. Inställningsappen är markerad för att visa dess egenskaper:
@@ -157,9 +161,9 @@ När du tilldelar principen till en iPhone liknar sidan följande bild:
 
 ![iOS-enhet med ändrad startskärm](./media/Bd37PHa.png)
 
-## <a name="app-notifications-settings"></a>Inställningar för appmeddelanden
+## <a name="app-notifications"></a>Appmeddelanden
 
-Välj hur installerade appar på iOS-enheter skickar meddelanden. Inställningarna har stöd för övervakade enheter som kör iOS 9.3 och senare.
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
 - **Lägg till**: Lägg till meddelanden för appar:
 
@@ -178,13 +182,13 @@ Välj hur installerade appar på iOS-enheter skickar meddelanden. Inställningar
     - **Bricka på appikon**: Välj **Aktivera** om du vill lägga till en aktivitetssymbol till appikonen. Aktivitetsikonen innebär att appen skickat en avisering.
     - **Ljud**: Välj **Aktivera** för att spela upp ett ljud när en avisering tas emot.
 
-Klicka på **OK** för att spara ändringarna.
+## <a name="lock-screen-message"></a>Meddelande på låsskärm
 
-## <a name="lock-screen-message-settings"></a>Inställningar för meddelande på låsskärm
+Den här funktionen gäller för:
 
-Använd de här inställningarna för att visa ett anpassat meddelande eller text i inloggningsfönstret och på låsskärmen. Du kan till exempel skriva ett meddelande av typen ”Upphittad enhet återlämnas till...” och resurstagginformation. 
+- iOS 9.3 och senare
 
-Den här funktionen har stöd för övervakade enheter som kör iOS 9.3 och senare.
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
 - **Resurstagginformation**: Ange information om resurstaggen för enheten. Ange till exempel `Owned by Contoso Corp` eller `Serial Number: {{serialnumber}}`.
 
@@ -197,18 +201,9 @@ Den här funktionen har stöd för övervakade enheter som kör iOS 9.3 och sena
   > [!NOTE]
   > Variablerna är inte validerade i användar gränssnittet och är Skift läges känsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Se till att ange rätt information.
 
-Klicka på **OK** för att spara ändringarna.
+## <a name="single-sign-on"></a>Enkel inloggning
 
-## <a name="single-sign-on-settings"></a>Inställningar för enkel inloggning
-
-De flesta verksamhetsspecifika appar kräver av säkerhetsskäl någon nivå av användarautentisering. I många fall kräver den här autentiseringen att användaren anger samma autentiseringsuppgifter upprepade gånger, vilket är frustrerande för användaren. För att förbättra användarupplevelsen kan utvecklare skapa appar som använder enkel inloggning (SSO). Med enkel inloggning minskar antalet gånger som en användare måste ange autentiseringsuppgifter.
-
-Om du vill använda enkel inloggning, måste du ha:
-
-- En app som är kodad för att leta efter användarens autentiseringsuppgifter lagrade i enkel inloggning på enheten.
-- Intune måste ha konfigurerats för enkel inloggning för iOS-enheter.
-
-![Fönstret Enkel inloggning](./media/sso-blade.png)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 
 - **Användarnamnattribut från AAD**: Intune söker efter det här attributet för varje användare i Azure AD. Intune fyller sedan i respektive fält (till exempel UPN) innan XML som installeras på enheten genereras. Alternativen är:
 
@@ -249,11 +244,9 @@ Om du vill använda enkel inloggning, måste du ha:
 
 - **Certifikat för förnyelse av autentiseringsuppgifter**: Om du använder certifikat för autentisering (inte lösenord), väljer du det befintliga SCEP- eller PFX-certifikatet som autentiseringscertifikat. Vanligtvis är det här certifikatet samma certifikat som distribueras till användaren för andra profiler, till exempel VPN, WiFi eller e-post.
 
-Klicka på **OK** för att spara ändringarna.
+## <a name="web-content-filter"></a>Webbinnehållsfilter
 
-## <a name="web-content-filter-settings"></a>Inställningar för webbinnehållsfilter
-
-Dessa inställningar styr webbläsarens URL-åtkomst på övervakade iOS-enheter.
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
 - **Filtertyp**: Välj att tillåta vissa webbplatser. Alternativen är:
 
@@ -261,14 +254,10 @@ Dessa inställningar styr webbläsarens URL-åtkomst på övervakade iOS-enheter
 
     - **Tillåtna webbadresser**: **Lägg till** de URL:er som du vill tillåta. Dessa URL:er kringgår Apple-webbfiltret.
 
-      > [!NOTE]
+        > [!NOTE]
         > URL:er som du anger är de URL:er som du inte vill ska utvärderas av Apple-webbfiltret. Dessa URL:er är inte en lista över tillåtna webbplatser. För att skapa en lista över tillåtna webbplatser ställer du in **Filtertyp** till **Endast vissa webbplatser**.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Blockerade URL:er**: **Lägg till** URL:er som du vill hindra från att öppnas, oavsett inställningarna i Apple-webbfiltret.
-
-      Klicka på **OK** för att spara ändringarna.
 
   - **Endast vissa webbplatser** (endast för Safari-webbläsaren): Dessa webbadresser läggs till i Safari-webbläsarens bokmärken. Användaren är **endast** tillåten att besöka dessa webbplatser, inga andra platser kan öppnas. Använd bara det här alternativet om du vet den exakta listan över webbadresser som kan nås av användarna.
 
@@ -278,13 +267,68 @@ Dessa inställningar styr webbläsarens URL-åtkomst på övervakade iOS-enheter
 
     Om du inte anger några URL:er kommer användarna inte att komma åt några webbplatser förutom för `microsoft.com`, `microsoft.net` och `apple.com`. Dessa URL:er tillåts automatiskt av Intune.
 
-    Klicka på **OK** för att spara ändringarna.
+## <a name="single-sign-on-app-extension"></a>Tillägg för enkel inloggning
 
-## <a name="wallpaper-settings"></a>Inställningar för bakgrundsbild
+Den här funktionen gäller för:
 
-Lägg till en anpassad PNG-, JPG- eller JPEG-bild till övervakade iOS-enheter. Till exempel kan du använda en företagslogotyp på låsskärmen.
+- iOS 13.0 och senare
+- iPad 13,0 och senare
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
+
+- **Typ av SSO-app-tillägg**: Välj typ av AUTENTISERINGSUPPGIFTER för SSO-appen. Alternativen är:
+
+  - **Inte konfigurerad**: app-tillägg används inte. Om du vill inaktivera ett app-tillägg kan du byta namn på SSO-appen från **Kerberos** eller **Credential** till **inte konfigurerad**.
+  - **Autentiseringsuppgift**: Använd ett allmänt, anpassningsbart app-tillägg för autentiseringsuppgifter för att utföra SSO. Se till att du känner till tilläggs-ID: t för din organisations SSO app-tillägg.
+  - **Kerberos**: Använd Apples inbyggda Kerberos-tillägg, som ingår i iOS 13,0 (och senare) och iPad 13,0 (och senare). Det här alternativet är en Kerberos-speciell version av appen för **autentiseringsuppgifter** .
+
+  > [!TIP]
+  > Med typen **autentiseringsuppgift** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Överväg i stället att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typen.
+
+- **Tilläggs-ID** (endast autentiseringsuppgift): Ange paket-ID: t som identifierar ditt SSO app-tillägg, till exempel `com.apple.extensiblesso`.
+- **Team-ID** (endast autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, till exempel `ABCDE12345`. Grupp-ID: t är inte obligatoriskt.
+
+  [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c) (öppna Apples webbplats) om du vill ha mer information.
+
+- **Sfär**: Ange namnet på din Kerberos-sfär. Sfär namnet ska vara kapitaliserat, t. ex. `CONTOSO.COM`. Vanligt vis är ditt sfär namn detsamma som ditt DNS-domännamn, men i alla versaler.
+
+- **Domäner**: ange domän-eller värd namnen för de platser som kan AUTENTISERA via SSO. Om din webbplats till exempel är `mysite.contoso.com`, är `mysite` värd namnet och `contoso.com` är domän namnet. När användarna ansluter till någon av dessa platser hanterar app-tillägget verifierings utmaningen. Med den här autentiseringen kan användare använda ansikts-ID, Touch-ID eller Apple-Pincode/lösen ord för att logga in.
+
+  - Alla domäner i Intune-tilläggen för enkel inloggning måste vara unika. Du kan inte upprepa en domän i valfri inloggnings profil för program tillägg, även om du använder olika typer av SSO-tillägg.
+  - Dessa domäner är inte Skift läges känsliga.
+
+- **Ytterligare konfiguration** (endast autentiseringsuppgift): ange ytterligare tilläggs information som ska skickas till SSO-appens tillägg:
+  - **Konfigurations nyckel**: Ange namnet på det objekt som du vill lägga till, till exempel `user name`.
+  - **Värdetyp**: ange typ av data. Alternativen är:
+
+    - Sträng
+    - Booleskt värde: Ange `True` eller `False` i **konfiguration svärdet**.
+    - Heltal: Ange ett tal i **konfiguration svärdet**.
+    
+  - **Konfigurations värde**: ange data.
+
+  - **Lägg till**: Välj om du vill lägga till dina konfigurations nycklar.
+
+- **Användning av nyckel ringar** (endast Kerberos): Välj **blockera** för att förhindra att lösen ord sparas och lagras i nyckel ringen. **Inte konfigurerad** (standard) tillåter att lösen ord sparas och lagras i nyckel ringen.
+- **Ansikts-ID, Touch-ID eller lösen ord** (endast Kerberos): **Kräv** att användarna anger sitt ansikts-ID, Touch ID eller Apple-lösenord för att logga in på de domäner som du har lagt till. **Inte konfigurerad** (standard) kräver inte att användare använder biometrik eller lösen ord för att logga in.
+- **Standard domän** (endast Kerberos): Välj **Aktivera** för att ange det **sfär** värde som du angav som standard sfär. **Inte konfigurerad** (standard) anger inte en standard sfär.
+
+  > [!TIP]
+  > - **Aktivera** den här inställningen om du konfigurerar flera Kerberos SSO app-tillägg i din organisation.
+  > - **Aktivera** den här inställningen om du använder flera sfärer. Den anger det **sfär** värde som du angav som standard sfär.
+  > - Lämna det **inte konfigurerat** (standard) om du bara har en sfär.
+
+- **Huvud namn** (endast Kerberos): Ange användar namnet för Kerberos-huvudobjektet. Du behöver inte inkludera sfär namnet. I `user@contoso.com` är `user` till exempel huvud namnet och `contoso.com` är sfär namnet.
+- **Active Directory platskod** (endast Kerberos): Ange namnet på den Active Directory plats som Kerberos-tillägget ska använda. Du kanske inte behöver ändra det här värdet eftersom Kerberos-tillägget automatiskt kan hitta Active Directory platskod.
+- **Cache-namn** (endast Kerberos): Ange GSS-namnet (Generic Security Services) för Kerberos-cachen. Du behöver förmodligen inte ange det här värdet.
+- **Programpaket-ID: n** (endast Kerberos): **Lägg till** de ID: n för appen som ska använda enkel inloggning på dina enheter. De här apparna beviljas åtkomst till biljett beviljande biljetten i Kerberos, autentiserings biljetten och autentisera användare till tjänster som de har behörighet att komma åt.
+- **Domän sfär mappning** (endast Kerberos): **Lägg till** DNS-suffixet för domänen som ska mappas till din sfär. Använd den här inställningen när DNS-namnen på värdarna inte matchar sfär namnet. Du behöver förmodligen inte skapa den här anpassade domän-till-sfär-mappningen.
+
+## <a name="wallpaper"></a>Skrivbordsunderlägg
 
 Ett oväntat beteende kan uppstå när en profil utan bild tilldelas till enheter med en befintlig bild. Exempel: Du skapar en profil utan någon bild. Profilen tilldelas till enheter som redan har en bild. I det här scenariot kan bilden ändras till enhetens standardinställda eller så kan den ursprungliga bilden stanna kvar på enheten. Det här beteendet styrs och begränsas av Apples MDM-plattform.
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
 - **Plats för visning av bakgrundsbild**: Välj var på enheten som bilden ska visas. Alternativen är:
   - **Inte konfigurerad**: Ingen anpassad bild läggs till på enheten. Enheten använder standardoperativsystemet.

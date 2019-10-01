@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 12/12/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b71bc2ea893199b83de5fd1480dae5630c3edfd
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: a35ebcf6ecbaaa746a6da98c5bd5c13ca9a7b130
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565677"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71302729"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Inställningar för Windows 10- och Windows Holographic-enheter för att lägga till VPN-anslutningar med Intune
 
@@ -68,29 +67,29 @@ Beroende på vilka inställningar du väljer, kanske inte alla värden är konfi
   - **PPTP**
 
   När du väljer en VPN-anslutningstyp, kan du också efterfrågas om följande inställningar:  
-    - **Always On**: Välj **Aktivera** för att automatiskt ansluta till VPN-anslutningen när följande händelser inträffar: 
-      - Användarna loggar in på sina enheter
-      - Nätverket på enheten ändras
-      - Skärmen på enheten sätts på efter att ha varit avstängd 
+  - **Always On**: Välj **Aktivera** för att automatiskt ansluta till VPN-anslutningen när följande händelser inträffar: 
+    - Användarna loggar in på sina enheter
+    - Nätverket på enheten ändras
+    - Skärmen på enheten sätts på efter att ha varit avstängd 
 
-    - **Autentiseringsmetod**: Välj hur du vill att användarna autentiseras mot VPN-servern. Med hjälp av **certifikat** får du utökade funktioner, t.ex. zero-touch-upplevelse, VPN på begäran och VPN per app.
-    - **Spara autentiseringsuppgifter för varje inloggning**: välja att cachelagra autentiseringsuppgifterna.
-    - **Anpassad XML**: Ange anpassade XML-kommandon som konfigurerar VPN-anslutningen.
-    - **EAP XML**: Ange EAP XML-kommandon som konfigurerar VPN-anslutningen
+  - **Autentiseringsmetod**: Välj hur du vill att användarna autentiseras mot VPN-servern. Med hjälp av **certifikat** får du utökade funktioner, t.ex. zero-touch-upplevelse, VPN på begäran och VPN per app.
+  - **Spara autentiseringsuppgifter för varje inloggning**: välja att cachelagra autentiseringsuppgifterna.
+  - **Anpassad XML**: Ange anpassade XML-kommandon som konfigurerar VPN-anslutningen.
+  - **EAP XML**: Ange EAP XML-kommandon som konfigurerar VPN-anslutningen
 
-#### <a name="pulse-secure-example"></a>Pulse Secure-exempel
+### <a name="pulse-secure-example"></a>Pulse Secure-exempel
 
 ```
 <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
 ```
 
-#### <a name="f5-edge-client-example"></a>F5 Edge Client-exempel
+### <a name="f5-edge-client-example"></a>F5 Edge Client-exempel
 
 ```
 <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
 ```
 
-#### <a name="sonicwall-mobile-connect-example"></a>SonicWall Mobile Connect-exempel
+### <a name="sonicwall-mobile-connect-example"></a>SonicWall Mobile Connect-exempel
 **Inloggningsgrupp eller domän**: Den här egenskapen kan inte anges i VPN-profilen. I stället parsar Mobile Connect värdet när användarnamn och domän har angetts i formatet `username@domain` eller `DOMAIN\username`.
 
 Exempel:
@@ -99,13 +98,13 @@ Exempel:
 <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 ```
 
-#### <a name="checkpoint-mobile-vpn-example"></a>Kontrollpunkt för mobilt VPN-exempel
+### <a name="checkpoint-mobile-vpn-example"></a>Kontrollpunkt för mobilt VPN-exempel
 
 ```
 <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
 ```
 
-#### <a name="writing-custom-xml"></a>Skriva anpassad XML
+### <a name="writing-custom-xml"></a>Skriva anpassad XML
 Mer information om hur du skriver anpassade XML-kommandon finns i varje tillverkares VPN-dokumentation.
 
 Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfiguration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
@@ -143,7 +142,7 @@ Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfigurat
 
   ![Välj de tre punkterna och klicka och dra för att flytta DNS-suffixet](./media/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Name Resolution NRPT-tabellen principregler**: Namnmatchningsprincip NRPT-tabellen används för att definiera hur DNS matchar namn när du är ansluten till VPN. När anslutningen har upprättats kan du välja vilka DNS-servrar som ska användas av VPN-anslutningen.
+- **NRPT-regler**: regler för namn matchnings princip tabell (NRPT) anger hur DNS matchar namn när de är anslutna till VPN. När anslutningen har upprättats kan du välja vilka DNS-servrar som ska användas av VPN-anslutningen.
 
   Du kan lägga till regler i tabellen som innehåller domän, DNS-server, proxy och andra detaljer för att matcha domänen du anger. VPN-anslutningen använder dessa regler när användare ansluter till de domäner du anger.
 

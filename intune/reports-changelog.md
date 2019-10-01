@@ -6,9 +6,8 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/11/2019
+ms.date: 08/23/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30f315f58a905e690a43ab3c44aee783bd0ef8c9
-ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
-ms.translationtype: HT
+ms.openlocfilehash: 0aaa305ac216e0f80f82116e626b21f3ae7a8510
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59571815"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "71303315"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
@@ -182,13 +181,13 @@ _Publicerat i februari 2019_
 
 ### <a name="power-bi-compliance-app"></a>Power BI-efterlevnadsapp 
 
-Få åtkomst till ditt Intune-informationslager i Power BI Online med hjälp av [Intune-efterlevnadsappen (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance). Med den här Power BI-appen kan du nu komma åt och dela i förväg skapade rapporter utan någon konfiguration och utan att lämna webbläsaren. 
+Få åtkomst till ditt Intune-informationslager i Power BI Online med hjälp av [Intune-efterlevnadsappen (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Med den här Power BI-appen kan du nu komma åt och dela i förväg skapade rapporter utan någon konfiguration och utan att lämna webbläsaren. 
 
 > [!NOTE]
 > Det finns ytterligare två filter som du kan använda för appen Intune Compliance.
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Lägga till ytterligare filter i Intune Compliance-appen
-1. Öppna appen [Intune Compliance (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) i webbläsaren.
+1. Öppna appen [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) i webbläsaren.
 2. Klicka på **Inkompatibla enheter** och välj **Inkompatibel** i **complianceStatus**-filtret. 
 3. Klicka på **Okända enheter** och välj **Inte tillgängligt ännu** i **complianceStatus**-filtret. 
 
@@ -239,8 +238,8 @@ Du kan använda <code>$select</code> som en OData-frågeparameter. Den aktuella 
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nya entiteter i datamodellen för informationslager <!-- 2077804 -->
 
- - Entiteten [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md) har lagts till. **MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
- - Entiteten [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstate) har lagts till. Entiteten **MobileAppInstallState** visar installationsstatus för ett mobilt program när det har tilldelats till en grupp som innehåller enheter och/eller användare. 
+- Entiteten [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md) har lagts till. **MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
+- Entiteten [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstates) har lagts till. Entiteten **MobileAppInstallState** visar installationsstatus för ett mobilt program när det har tilldelats till en grupp som innehåller enheter och/eller användare. 
 
 ## <a name="1710"></a>1710
 _Publicerat november 2017_
@@ -260,9 +259,9 @@ Du kan nu skapa rapporter och datavisualiseringar med hjälp av enhetens associa
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nya entiteter i datamodellen för informationslager <!-- 1479526 --><!-- -->
 
- - Entiteten [**UserDeviceAssociation**](reports-ref-user-device.md) har lagts till. **UserDeviceAssociation** innehåller användarenhetsassociationer i din organisation. Du kan nu skapa rapporter och datavisualiseringar med hjälp av enhetens associationsinformation som associerar användaren och enhetens entitetssamlingar.  
- - Entiteten, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), har lagts till. **IntuneManagementExtension** innehåller entiteter för mobila enheter som spårar information, t.ex. version och installationsstatus.
+- Entiteten [**UserDeviceAssociation**](reports-ref-user-device.md) har lagts till. **UserDeviceAssociation** innehåller användarenhetsassociationer i din organisation. Du kan nu skapa rapporter och datavisualiseringar med hjälp av enhetens associationsinformation som associerar användaren och enhetens entitetssamlingar.  
+- Entiteten, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), har lagts till. **IntuneManagementExtension** innehåller entiteter för mobila enheter som spårar information, t.ex. version och installationsstatus.
 
 ## <a name="next-steps"></a>Nästa steg
- - Läs mer om [vad som är nytt i Intune varje vecka](whats-new.md). Du kan också läsa mer om kommande ändringar, viktiga meddelanden om tjänsten och information om tidigare versioner.
- - Läs [Microsoft Intune-bloggen](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Läs mer om [vad som är nytt i Intune varje vecka](whats-new.md). Du kan också läsa mer om kommande ändringar, viktiga meddelanden om tjänsten och information om tidigare versioner.
+- Läs [Microsoft Intune-bloggen](https://go.microsoft.com/fwlink/?LinkID=273882).

@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2019
+ms.date: 09/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3addd79b20c685c5643a2b99fb7120e958cdecb
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: e7b1ea4914b2c4593c0d4abe6396e349020d1a95
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394889"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "71239529"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -74,6 +73,9 @@ Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja anv�
 |**iOS**|Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 |**Android**| Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 
+### <a name="not-using-an-app-development-platform-listed-above"></a>Använder du inte en plattform för program utveckling som anges ovan? 
+Intune SDK-utvecklingsteamet testar och underhåller aktivt stödet för appar som skapats med de ursprungliga Android-, iOS (Obj-C, Swift), Xamarin-, Xamarin.Forms- och Cordova-plattformarna. Även om vissa kunder har lyckats integrera Intune SDK med andra plattformar som React Native och NativeScript, tillhandahåller vi inte någon uttrycklig vägledning eller några plugin-program för apputvecklare som använder något annat än våra stödda plattformar. 
+
 ## <a name="feature-comparison"></a>Jämförelse av funktioner
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
 
@@ -87,12 +89,13 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Tillåt att appen överför information till andra appar|X|X|
 |Tillåt att appen hämtar data från andra appar|X|X|
 |Begränsa klipp ut, kopiera och klistra in med andra appar|X|X|
-|Ange antalet tecken som kan klipps ut eller kopieras från en hanterad app|X|X|
+|Ange hur många tecken som kan klippas ut eller kopieras från en hanterad app|X|X|
 |Kräv enkel PIN-kod för åtkomst|X|X|
 |Ange antal försök innan PIN-koden återställs|X|X|
 |Tillåt fingeravtryck istället för PIN|X|X|
 |Tillåt ansiktsigenkänning istället för PIN-kod (endast iOS)|X|X|
 |Kräv företagets autentiseringsuppgifter för åtkomst|X|X|
+|Ange ett förfallo datum för PIN-kod|X|X|
 |Hindra hanterade appar från att köras på jailbrokade eller rotade enheter|X|X|
 |Kryptera appdata|X|X|
 |Kontrollera åtkomstbehörigheterna på nytt efter angivet antal minuter|X|X|
@@ -102,21 +105,23 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Fullständig rensning av appdata|X|X|
 |Selektiv rensning av arbets- och skoldata i scenarier med flera identiteter <br><br>**Obs!** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
 |Förhindra ”Spara som”|X||
-|Konfiguration av målprogram|X||
+|Konfiguration av riktad program (eller app config via "MAM Channel")|X|X|
 |Stöd för flera identiteter|X||
 |Anpassningsbar stil |X|||
 |VPN-anslutningar för program på begäran med Citrix mVPN|X|X| 
 |Inaktivera synkronisering av kontakter|X|X|
 |Inaktivera utskrift|X|X|
 |Minimikrav på appversion|X|X|
-|Minimikrav på operativsystem (iOS och Android)|X|X|
+|Minimikrav på operativsystem|X|X|
 |Minimikrav på Android-säkerhetskorrigeringsversion (endast Android)|X|X|
 |Minimikrav på Intune SDK för iOS (endast iOS)|X|X|
+|SafetyNet enhets attestering (endast Android)|X|X|
+|Hot genomsökning på appar (endast Android)|X|X|
 
 ## <a name="next-steps"></a>Nästa steg
 
 Mer information om appskyddsprinciper i Intune finns i följande avsnitt:
 
-  - [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)<br>
-  - [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)<br>
-  - [Aktivera hantering av mobilprogram i appar med SDK](app-sdk.md)
+- [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)<br>
+- [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)<br>
+- [Aktivera hantering av mobilprogram i appar med SDK](app-sdk.md)

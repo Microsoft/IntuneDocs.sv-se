@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c75923440b8b8147f7ed75a06df2435ed6eb0981
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3bcfad3937b4ab6f533cd7ac915a964f2551be45
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565289"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "71302292"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Inställningar för enhetsbegränsningar för Windows Phone 8.1-enheter i Microsoft Intune
 
@@ -32,30 +31,30 @@ I den här artikeln visas inställningarna av enhetsbegränsningar som du kan ko
 
 ## <a name="general"></a>Allmänt
 
--   **Kamera** – Tillåter eller blockerar kameran på enheten.
--   **Kopiera och klistra in** – Tillåter eller blockerar kopierings- och inklistringsfunktioner på enheter.
--   **Flyttbara lagringsmedia** – Tillåter att enheten använder flyttbara lagringsmedia, t.ex. SD-kort.
--   **Geoplats** – Gör att enheten använder platsinformation.
--   **Microsoft-konto** – Tillåter eller blockerar användaren från att länka ett Microsoft-konto till enheten.
--   **Skärmdump** – Låter användaren fånga innehållet på skärmen som en bildfil.
--   **Sändning av diagnostikdata** – Gör att enheten skickar diagnostikinformation till Microsoft.
--   **Synkronisering av anpassade e-postkonton** – Gör det möjligt för enheten att ansluta till andra e-postkonton än Microsoft-e-postkonton.
+- **Kamera** – Tillåter eller blockerar kameran på enheten.
+- **Kopiera och klistra in** – Tillåter eller blockerar kopierings- och inklistringsfunktioner på enheter.
+- **Flyttbara lagringsmedia** – Tillåter att enheten använder flyttbara lagringsmedia, t.ex. SD-kort.
+- **Geoplats** – Gör att enheten använder platsinformation.
+- **Microsoft-konto** – Tillåter eller blockerar användaren från att länka ett Microsoft-konto till enheten.
+- **Skärmdump** – Låter användaren fånga innehållet på skärmen som en bildfil.
+- **Sändning av diagnostikdata** – Gör att enheten skickar diagnostikinformation till Microsoft.
+- **Synkronisering av anpassade e-postkonton** – Gör det möjligt för enheten att ansluta till andra e-postkonton än Microsoft-e-postkonton.
 
 ## <a name="password"></a>Lösenord
 
--   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
-    -   **Krav på lösenordstyp** – Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.
-    -   **Minsta längd på lösenord** – Anger det minsta antalet tecken som lösenordet måste innehålla.
-    -   **Enkla lösenord** – Anger att enkla lösenord kan användas, t.ex. 0000 och 1234.
-    -   **Antal felaktiga inloggningar innan enheten rensas** – Anger hur många gånger ett felaktigt lösenord kan anges innan enheten rensas.
-    -   **Maximalt antal minuter av inaktivitet innan skärmen låses** – Anger hur lång tid en enhet måste vara i viloläge innan skärmen låses automatiskt.
-    -   **Lösenordets giltighetstid (dagar)** – Anger antal dagar innan lösenordet för enheten måste ändras.
-    -   **Förhindra återanvändning av tidigare lösenord** – Anger hur många tidigare använda lösenord som koms ihåg.
--   **Kryptering** – Kräver att data på mobila enheter som stöds krypteras.
+- **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
+  - **Krav på lösenordstyp** – Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.
+  - **Minsta längd på lösenord** – Anger det minsta antalet tecken som lösenordet måste innehålla.
+  - **Enkla lösenord** – Anger att enkla lösenord kan användas, t.ex. 0000 och 1234.
+  - **Antal felaktiga inloggningar innan enheten rensas** – Anger hur många gånger ett felaktigt lösenord kan anges innan enheten rensas.
+  - **Maximalt antal minuter av inaktivitet innan skärmen låses** – Anger hur lång tid en enhet måste vara i viloläge innan skärmen låses automatiskt.
+  - **Lösenordets giltighetstid (dagar)** – Anger antal dagar innan lösenordet för enheten måste ändras.
+  - **Förhindra återanvändning av tidigare lösenord** – Anger hur många tidigare använda lösenord som koms ihåg.
+- **Kryptering** – Kräver att data på mobila enheter som stöds krypteras.
 
 ## <a name="app-store"></a>Appbutik
 
--   **Appbutik** – Tillåter att användarna ansluter till appbutiken från enheten.
+- **Appbutik** – Tillåter att användarna ansluter till appbutiken från enheten.
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
@@ -80,18 +79,18 @@ Exempel: Sök i butiken efter Skype-appen. Den URL som du använder är `http://
 
 ### <a name="additional-options"></a>Ytterligare alternativ
 
-Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*> <app publisher> eller klicka på**Exportera**Exportera för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.
+Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*>, <*appens utgivare*>, eller klicka på **Exportera** för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.
 
 
 ## <a name="browser"></a>Webbläsare
 
--   **Webbläsare** – Tillåter eller blockerar den inbyggda webbläsaren på enheter.
+- **Webbläsare** – Tillåter eller blockerar den inbyggda webbläsaren på enheter.
 
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
 
--   **Wi-Fi** – Aktiverar eller inaktiverar Wi-Fi-funktioner på enheten.
--   **Trådlös Internetdelning** – Tillåter att trådlös Internetdelning används på enheten.
--   **Anslut automatiskt till trådlösa surfpunkter** – Gör att enheten ansluter automatiskt till kostnadsfria trådlösa surfpunkter och att den automatiskt godkänner användningsvillkoren.
--   **Rapportering om trådlösa surfzoner** – Skickar information om Wi-Fi-anslutningar så att användaren lättare kan upptäcka närliggande anslutningar.
--   **NFC** – Aktiverar eller inaktiverar åtgärder som använder närfältskommunikation på de enheter som stöds.
--   **Bluetooth** – Aktiverar eller inaktiverar Bluetooth-funktionen på enheten.
+- **Wi-Fi** – Aktiverar eller inaktiverar Wi-Fi-funktioner på enheten.
+- **Trådlös Internetdelning** – Tillåter att trådlös Internetdelning används på enheten.
+- **Anslut automatiskt till trådlösa surfpunkter** – Gör att enheten ansluter automatiskt till kostnadsfria trådlösa surfpunkter och att den automatiskt godkänner användningsvillkoren.
+- **Rapportering om trådlösa surfzoner** – Skickar information om Wi-Fi-anslutningar så att användaren lättare kan upptäcka närliggande anslutningar.
+- **NFC** – Aktiverar eller inaktiverar åtgärder som använder närfältskommunikation på de enheter som stöds.
+- **Bluetooth** – Aktiverar eller inaktiverar Bluetooth-funktionen på enheten.

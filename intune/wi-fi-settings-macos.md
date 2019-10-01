@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 09/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,14 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50269e63f016c1d4f74b006d7748e5c300faac61
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0692a8ac0bcd1fd415d0bceb7f5a269648dd5b30
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050228"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302570"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för macOS-enheter i Microsoft Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina macOS-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk, lägga till ett PKS- eller ett SCEP-certifikat och mycket mer.
 
@@ -33,6 +35,9 @@ Den här artikeln beskriver dessa inställningar.
 ## <a name="before-you-begin"></a>Innan du börjar
 
 [Skapa en enhetsprofil](device-profile-create.md).
+
+> [!NOTE]
+> De här inställningarna är tillgängliga för alla registrerings typer. Mer information om registrerings typerna finns i [MacOS-registrering](macos-enroll.md).
 
 ## <a name="basic-profiles"></a>Grundläggande profiler
 
@@ -74,18 +79,12 @@ Den här artikeln beskriver dessa inställningar.
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)** : Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
-
-      Klicka på **OK** för att spara ändringarna.
 
   - **EAP-TTLS**: Ange också:
 
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
-
-      Klicka på **OK** för att spara ändringarna.
 
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
@@ -96,8 +95,6 @@ Den här artikeln beskriver dessa inställningar.
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
-        Klicka på **OK** för att spara ändringarna.
-
       - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
   - **LEAP**
@@ -107,15 +104,11 @@ Den här artikeln beskriver dessa inställningar.
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket och används för att autentisera anslutningen.
 
-      Klicka på **OK** för att spara ändringarna.
-
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. 
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
-
-        Klicka på **OK** för att spara ändringarna.
 
       - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
@@ -124,12 +117,8 @@ Den här artikeln beskriver dessa inställningar.
   - **Manuell** – Ange **Proxyserveradress** som en IP-adress och dess **Portnummer**.
   - **Automatisk**: Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `http://proxy.contoso.com`) som innehåller konfigurationsfilen.
 
-Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
-
 ## <a name="next-steps"></a>Nästa steg
 
-Profilen har skapats, men den gör inte något än. Nu ska vi [tilldela den här profilen](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. Därefter [tilldelar du profilen](device-profile-assign.md) och [övervakar dess status](device-profile-monitor.md).
 
-## <a name="more-resources"></a>Fler resurser
-
-[Översikt över Wi-Fi-inställningar](wi-fi-settings-configure.md), inklusive andra tillgängliga plattformar.
+Konfigurera Wi-Fi-inställningar på [Android](wi-fi-settings-android.md)-, [Android Enterprise](wi-fi-settings-android-enterprise.md)-, [iOS](wi-fi-settings-ios.md)-och [Windows 10](wi-fi-settings-windows.md) -enheter.

@@ -1,11 +1,11 @@
 ---
-title: Lägga till VPN-inställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+title: Konfigurera VPN-inställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
 description: Lägg till eller skapa en VPN-konfigurationsprofil med hjälp av konfigurationsinställningar för virtuella privata nätverk (VPN), inklusive anslutningsinformation, autentiseringsmetoder och delade tunnlar i de grundläggande inställningarna. Visa även de anpassade VPN-inställningarna med identifieraren och nyckel-värdeparen. Det är även möjligt att visa VPN-inställningarna per app som inkluderar Safari-webbadresser och VPN-anslutningar på begäran med SSID- eller DNS-sökningsdomäner samt proxyinställningar för att inkludera ett konfigurationsskript, en IP- eller FQDN-adress och en TCP-port i Microsoft Intune på iOS-enheter.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 09/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1eee827ace5dae92b485a250e6e4e0b9b426fbe6
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 696e335e422ed45af7b7c53db9e91dead5ea8502
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713192"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302769"
 ---
-# <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurera VPN-inställningar på iOS-enheter i Microsoft Intune
+# <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Microsoft Intune innehåller många VPN-inställningar som kan distribueras till iOS-enheter. De här inställningarna används för att skapa och konfigurera VPN-anslutningar till din organisations nätverk. Den här artikeln beskriver dessa inställningar. Vissa inställningar är bara tillgängliga för vissa VPN-klienter, till exempel Citrix och Zscaler.
+
+## <a name="before-you-begin"></a>Innan du börjar
+
+[Skapa en enhetskonfigurationsprofil](vpn-settings-configure.md).
+
+> [!NOTE]
+> De här inställningarna är tillgängliga för alla registrerings typer. Mer information om registrerings typerna finns i [iOS-registrering](ios-enroll.md).
 
 ## <a name="connection-type"></a>Anslutningstyp
 
@@ -42,6 +51,7 @@ Välj VPN-anslutningstypen från följande leverantörslista:
 - **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**: Om du vill använda Villkorsstyrd åtkomst eller tillåta att användarna hoppar över Zscaler-inloggningsskärmen måste du integrera Zscaler Private Access (ZPA) med ditt Azure AD-konto. Detaljerade anvisningar finns i [Zscaler-dokumentationen](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **IKEv2**: [IKEv2-inställningar](#ikev2-settings) (i den här artikeln) beskriver egenskaperna.
 - **Anpassat VPN**
 
 > [!NOTE]
@@ -93,6 +103,79 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
 
   - Om du vill ta bort den här inställningen återskapar du profilen och markerar inte **Jag accepterar**. Tilldela sedan profilen på nytt.
 
+## <a name="ikev2-settings"></a>IKEv2-inställningar
+
+Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
+
+- **Fjärridentifierare**: Ange NÄTVERKets IP-adress, FQDN, USERFQDN eller ASN1DN för IKEv2-servern. Ange till exempel `10.0.0.3` eller `vpn.contoso.com`. Normalt anger du samma värde som [**anslutnings namnet**](#base-vpn-settings) (i den här artikeln). Men det beror på inställningarna för IKEv2-servern.
+
+- **Typ av klientautentisering**: Välj hur VPN-klienten autentiserar till VPN. Alternativen är:
+  - **Användarautentisering** (standard): användarautentiseringsuppgifter autentiseras för VPN.
+  - **Datorautentisering**: autentiseringsuppgifter för enhet autentiseras för VPN.
+
+- **Autentiseringsmetod**: Välj den typ av klientautentiseringsuppgifter som ska skickas till servern. Alternativen är:
+  - **Certifikat**: använder en befintlig certifikat profil för att AUTENTISERA till VPN. Se till att den här certifikat profilen redan har tilldelats till användaren eller enheten. Annars Miss lyckas VPN-anslutningen.
+    - **Certifikat typ**: Välj den typ av kryptering som används av certifikatet. Se till att VPN-servern är konfigurerad för att godkänna den här typen av certifikat. Alternativen är:
+      - **RSA** (standard)
+      - **ECDSA256**
+      - **ECDSA384**
+      - **ECDSA521**
+
+  - **Användar namn och lösen ord** (endast användarautentisering): när användare ansluter till VPN-nätverket uppmanas de att ange sitt användar namn och lösen ord.
+  - **Delad hemlighet** (endast datorautentisering): gör att du kan ange en delad hemlighet att skicka till VPN-servern.
+    - **Delad hemlighet**: Ange den delade hemligheten, även kallat PSK (i förväg delad nyckel). Se till att värdet matchar den delade hemlighet som kon figurer ATS på VPN-servern.
+
+- **Server certifikat utfärdarens nätverks namn**: tillåter VPN-servern att autentisera till VPN-klienten. Ange certifikat utfärdarens nätverks namn (CN) för det VPN-servercertifikat som skickas till VPN-klienten på enheten. Se till att CN-värdet matchar konfigurationen på VPN-servern. Annars Miss lyckas VPN-anslutningen.
+- **Server certifikatets nätverks namn**: Ange CN för själva certifikatet. Om inget värde anges används värdet för Fjärrvärdet.
+
+- **Identifierings frekvens för döda peer**: Välj hur ofta VPN-klienten ska kontrol lera om VPN-tunneln är aktiv. Alternativen är:
+  - **Inte konfigurerad**: använder standard systemet för iOS, vilket kan vara detsamma som att välja **medel**.
+  - **Ingen**: inaktiverar utebliven peer-identifiering.
+  - **Låg**: skickar ett keepalive-meddelande var 30: e minut.
+  - **Medel** (standard): skickar ett keepalive-meddelande var tionde minut.
+  - **Hög**: skickar ett keepalive-meddelande var 60 sekund.
+
+- **Lägsta TLS-version intervall**: Ange den minsta TLS-version som ska användas. Ange `1.0`, `1.1` eller `1.2`. Om inget anges används standardvärdet `1.0`.
+- **Högsta TLS-versions intervall**: Ange den högsta TLS-version som ska användas. Ange `1.0`, `1.1` eller `1.2`. Om inget anges används standardvärdet `1.2`.
+- **Perfect Forward Secrecy**: Välj **Aktivera** för att aktivera PFS (Perfect Forward Secrecy). PFS är en funktion för IP-säkerhet som minskar påverkan om en sessionsnyckel komprometteras. **Disable** (standard) använder inte PFS.
+- **Certifikat återkallnings kontroll**: Välj **Aktivera** för att kontrol lera att certifikaten inte återkallas innan du tillåter att VPN-anslutningen lyckas. Den här kontrollen är bästa möjliga. Om VPN-servern tar tid på innan du fastställer om certifikatet har återkallats beviljas åtkomst. **Disable** (standard) söker inte efter återkallade certifikat.
+
+- **Konfigurera säkerhets Associations parametrar**: **inte konfigurerat** (standard) använder iOS-standardvärdet. Välj **Aktivera** för att ange de parametrar som används när du skapar säkerhets associationer med VPN-servern:
+  - **Krypteringsalgoritm**: Välj den algoritm du vill använda:
+    - DES
+    - 3DES
+    - AES-128
+    - AES-256 (standard)
+    - AES-128-GCM
+    - AES-256-GCM
+  - **Integritetsalgoritm**: Välj den algoritm du vill använda:
+    - SHA1-96
+    - SHA1-160
+    - SHA2-256 (standard)
+    - SHA2-384
+    - SHA2-512
+  - **Diffie-Hellman-grupp**: Välj den grupp du vill använda. Standardvärdet är grupp `2`.
+  - **Livs längd** (minuter): Välj hur länge säkerhets associationen ska förbli aktiv tills nycklarna roteras. Ange ett heltal mellan `10` och `1440` (1440 minuter är 24 timmar). Standardvärdet är `1440`.
+
+- **Konfigurera en separat uppsättning parametrar för underordnade säkerhets associationer**: med iOS kan du konfigurera separata parametrar för IKE-anslutningen och eventuella underordnade anslutningar. 
+
+  **Inte konfigurerad** (standard) använder de värden som du anger i den tidigare inställningen **Konfigurera säkerhets Associations parametrar** . Välj **Aktivera** för att ange de parametrar som används när du skapar *underordnade* säkerhets associationer med VPN-servern:
+  - **Krypteringsalgoritm**: Välj den algoritm du vill använda:
+    - DES
+    - 3DES
+    - AES-128
+    - AES-256 (standard)
+    - AES-128-GCM
+    - AES-256-GCM
+  - **Integritetsalgoritm**: Välj den algoritm du vill använda:
+    - SHA1-96
+    - SHA1-160
+    - SHA2-256 (standard)
+    - SHA2-384
+    - SHA2-512
+  - **Diffie-Hellman-grupp**: Välj den grupp du vill använda. Standardvärdet är grupp `2`.
+  - **Livs längd** (minuter): Välj hur länge säkerhets associationen ska förbli aktiv tills nycklarna roteras. Ange ett heltal mellan `10` och `1440` (1440 minuter är 24 timmar). Standardvärdet är `1440`.
+
 ## <a name="automatic-vpn-settings"></a>Inställningar för automatiskt VPN
 
 - **Per app-VPN**: Gör det möjligt att använda VPN per app. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS](vpn-setting-configure-per-app.md).
@@ -121,5 +204,8 @@ Konfigurera följande inställningar om du använder en proxyserver. Proxyinstä
 - **Adress**: Ange IP-adressen för det fullt kvalificerade värdnamnet för proxyservern.
 - **Portnummer**: Ange det portnummer som är associerat med proxyservern.
 
-## <a name="next-step"></a>Nästa steg
-[Skapa VPN-profiler i Intune](vpn-settings-configure.md)  
+## <a name="next-steps"></a>Nästa steg
+
+Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+
+Konfigurera VPN-inställningar på [Android](vpn-settings-android.md)-, [Android Enterprise](vpn-settings-android-enterprise.md)-, [MacOS](vpn-settings-macos.md)-och [Windows 10](vpn-settings-windows-10.md) -enheter.

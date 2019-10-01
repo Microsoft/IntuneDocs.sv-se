@@ -5,9 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 07/25/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7670af46657fed048bfe10b8659eae6d45db7620
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
-ms.translationtype: HT
+ms.openlocfilehash: e7c6cec515bfda95fed922785705b0e0b5339983
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423585"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "71305079"
 ---
 # <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Android-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
@@ -43,7 +42,7 @@ Som Intune-administratör kan du använda dessa kompatibilitetsinställningar f�
 ## <a name="device-health"></a>Device health
 
 - **Rotade enheter**: Välj **Blockera** för att markera rotade (jailbreakade) enheter som inkompatibla. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
-- **Kräv att enheten ska vara på eller under hotnivån för enheten**: Använd den här inställningen för att använda riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen. Om du vill använda den här inställningen väljer du den tillåtna hotnivån:
+- **Kräv att enheten ska vara på eller under hotnivån för enheten**: Använd den här inställningen för att använda riskbedömningen från Lookout Mobile Endpoint Security-lösningen som ett villkor för efterlevnad. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen. Om du vill använda den här inställningen väljer du den tillåtna hotnivån:
   - **Säkrad**: Det här alternativet är det säkraste eftersom enheten inte kan ha några hot. Om hot på någon nivå identifieras på enheten betraktas den som inkompatibel.
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
   - **Medel**: Enheten utvärderas som kompatibel om existerande hot på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen inkompatibel.
@@ -78,7 +77,7 @@ Som Intune-administratör kan du använda dessa kompatibilitetsinställningar f�
 - **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
 - **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som användarens lösenordet måste innehålla.
 - **Krav på lösenordstyp**: Välj om ett lösenord ska innehålla endast numeriska tecken eller en blandning av siffror och andra tecken. Alternativen är:
-  - **Standard för enheten**
+  - **Enhets standard**: om du vill utvärdera lösen ordet kontrollerar du att du väljer en annan lösen ords grad än **enhetens standardvärde**.
   - **Låg säkerhetsbiometri**
   - **Minst numeriskt** (standard)
   - **Numeriskt avancerat**: Upprepade eller efterföljande siffror, till exempel `1111` eller `1234`, tillåts inte.
@@ -87,7 +86,7 @@ Som Intune-administratör kan du använda dessa kompatibilitetsinställningar f�
   - **Minst alfanumeriskt med symboler**
 
 - **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt. Om du väljer **Ej konfigurerad** (standard) görs ingen kompatibilitetskontroll för den här inställningen.
-- **Lösenordets giltighetstid (dagar)**: Ange antalet dagar tills lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
+- **Lösenordets giltighetstid (dagar)** : Ange antalet dagar tills lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
 - **Förhindra återanvändning av tidigare lösenord**: Ange antalet senast använda lösenord som inte får återanvändas. Använd den här inställningen för att förhindra att användaren återanvänder tidigare använda lösenord.
 
 ### <a name="encryption"></a>Kryptering

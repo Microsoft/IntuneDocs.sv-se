@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 08/12/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6e51e936a70580643cbaa232441e0ba21c3db14
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 228a4af302a1344f60dc43c02c12efac23e34f74
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566666"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "71238619"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -169,9 +168,9 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 ## <a name="download-the-app-wrapping-tool"></a>Hämta programhanteringsverktyget
 
-1.  Hämta filerna för programhanteringsverktyget från [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) till en macOS-dator.
+1. Hämta filerna för programhanteringsverktyget från [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) till en macOS-dator.
 
-2.  Dubbelklicka på **Microsoft Intune App Wrapping Tool for iOS.dmg**. Ett fönster med licensavtalet för slutanvändare (EULA) visas. Läs igenom dokumentet noggrant.
+2. Dubbelklicka på **Microsoft Intune App Wrapping Tool for iOS.dmg**. Ett fönster med licensavtalet för slutanvändare (EULA) visas. Läs igenom dokumentet noggrant.
 
 3. Välj **Godkänn** för att godkänna licensavtalet och montera paketet på datorn.
 
@@ -203,30 +202,38 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
-|**-h**|Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget.|
-|**-v**|(Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel.|
+|**-h**| Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget. |
+|**-AA**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` t. ex. `login.windows.net/common` |
+|**-ac**|(Valfritt) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Detta är GUID i fältet klient-ID från appens lista i bladet app-registrering. |
+|**-ar**|(Valfritt) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` det här är omdirigerings-URI: n som kon figurer ATS i appens registrering. Detta är vanligt vis URL-protokollet för programmet som Microsoft Authenticator-appen kommer tillbaka till efter att ha tillämpat autentisering. |
+|**-v**| (Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel. |
 |**-e**| (Valfri) Använd den här flaggan om du vill att programhanteringsverktyget ska ta bort rättigheter som saknas när appen bearbetas. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements).|
 |**-xe**| (Valfri) Skriver ut information om iOS-tilläggen i appen och vilka rättigheter som krävs för att använda dem. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements). |
 |**-x**| (Valfritt) `<An array of paths to extension provisioning profiles>`. Använd det här alternativet om appen behöver tilläggsetableringsprofiler.|
-|**-f**|(Valfri) `<Path to a plist file specifying arguments.>` Använd den här flaggan framför [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-filen om du väljer att använda plist-mallen för att ange resten av IntuneMAMPackager-egenskaperna, t.ex. -i, -o och -p. Mer information finns i Använda en plist för att ange argument. |
 |**-b**|(Valfritt) Använd -b utan argument om du vill att den omslutna utdataappen ska ha samma paketversion som indataappen (rekommenderas inte). <br/><br/> Använd `-b <custom bundle version>` om du vill att den omslutna appen ska ha en anpassad CFBundleVersion. Om du väljer att ange en anpassad CFBundleVersion rekommenderar vi att du ökar den inbyggda appens CFBundleVersion med den minst viktiga komponenten, t.ex. 1.0.0 -> 1.0.1. |
+|**-citrix**|Valfritt Ta med Citrix XenMobile app SDK (endast nätverks-variant). Du måste ha [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) installerat för att kunna använda det här alternativet. |
+|**-f**|(Valfri) `<Path to a plist file specifying arguments.>` Använd den här flaggan framför [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-filen om du väljer att använda plist-mallen för att ange resten av IntuneMAMPackager-egenskaperna, t.ex. -i, -o och -p. Mer information finns i Använda en plist för att ange argument. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Använda en plist för att ange argument
 Ett enkelt sätt att köra appomslutningsverktyget är att placera alla kommandoradsargument i en [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-fil. Plist är ett filformat som liknar XML som du kan använda för att ange kommandoradsargument med hjälp av ett formulärgränssnitt.
 
 I mappen IntuneMAMPackager/Contents/MacOS öppnar du `Parameters.plist` (en tom plist-mall) med en textredigerare eller Xcode. Ange argumenten för följande nycklar:
 
-| Plist-nyckel |  Standardvärde| Obs! |
-|------------------|--------------|-----|
-| Paketsökväg för indataapp  |tomt| Samma som -i|
-| Paketsökväg för utdataapp |tomt| Samma som -o|
-| Sökväg för etableringsprofil |tomt| Samma som -p|
-| SHA-1-certifikatets hash |tomt| Samma som -c|
-| Utförlig aktiverad |falskt| Samma som -v|
-| Ta bort rättigheter som saknas | falskt| Samma som -c|
-| Förhindra standardversion |falskt | Likvärdigt med att använda -b utan argument|
-|Åsidosättning av versionssträng | tomt| Anpassad CFBundleVersion för den omslutna utdataappen |
-|Sökvägar för tilläggsetableringsprofil | tomt| En uppsättning med tilläggsetableringsprofiler för appen.
+| Plist-nyckel | Typ |  Standardvärde | Obs! |
+|------------------|-----|--------------|-----|
+| Paketsökväg för indataapp |Sträng|tomt| Samma som -i|
+| Paketsökväg för utdataapp |Sträng|tomt| Samma som -o|
+| Sökväg för etableringsprofil |Sträng|tomt| Samma som -p|
+| SHA-1-certifikatets hash |Sträng|tomt| Samma som -c|
+| ADAL-utfärdare |Sträng|tomt| Samma som -aa|
+| ADAL-klient-ID |Sträng|tomt| Samma som -ac|
+| ADAL svars-URI |Sträng|tomt| Samma som -ar|
+| Utförlig aktiverad |Boolesk|falskt| Samma som -v|
+| Ta bort rättigheter som saknas |Boolesk|falskt| Samma som -c|
+| Förhindra uppdatering av standardversion |Bool|falskt| Likvärdigt med att använda -b utan argument|
+| Åsidosättning av versionssträng |Sträng|tomt| Anpassad CFBundleVersion för den omslutna utdataappen|
+| Inkludera Citrix XenMobile app SDK (endast nätverks-variant)|Boolesk|falskt| Samma som-Citrix|
+| Sökvägar för tilläggsetableringsprofil |Strängmatris|tomt| En uppsättning med tilläggsetableringsprofiler för appen.
 
 
 Kör IntuneMAMPackager med plist som enda argument:
@@ -285,15 +292,16 @@ Om det inte går att slutföra programhanteringsverktyget visas något av följa
 ### <a name="log-files-for-the-app-wrapping-tool"></a>Loggfiler för programhanteringsverktyget
 Appar som har omslutits med hjälp av programhanteringsverktyget genererar loggar som skrivs till iOS-klientenhetskonsolen. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget. Använd följande steg för att hämta den här informationen:
 
-1.  Återskapa problemet genom att köra appen.
+1. Återskapa problemet genom att köra appen.
 
-2.  Samla in konsolens utdata genom att följa Apples instruktioner för att [felsöka distribuerade iOS-appar](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
+2. Samla in konsolens utdata genom att följa Apples instruktioner för att [felsöka distribuerade iOS-appar](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
-3.  Filtrera de sparade loggarna för utdata från appbegränsningarna genom att ange följande skript i konsolen:
+3. Filtrera de sparade loggarna för utdata från appbegränsningarna genom att ange följande skript i konsolen:
 
     ```bash
     grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
     ```
+
     Du kan skicka de filtrerade loggarna till Microsoft.
 
     > [!NOTE]
@@ -331,7 +339,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 ### <a name="steps-to-enable-entitlements"></a>Steg för att aktivera rättigheter
 
-1.  Aktivera funktioner i din app:
+1. Aktivera funktioner i din app:
 
     a.  Gå till målet för din app i Xcode och klicka på **Funktioner**.
 
@@ -341,7 +349,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
     d.  Skapa och registrera den app som ska omslutas.
 
-2.  Aktivera rättigheter i din etableringsprofil:
+2. Aktivera rättigheter i din etableringsprofil:
 
     a.  Logga in på Apple Developer Member Center.
 
@@ -351,7 +359,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
     d.  Slutför guiden för etableringsprofiler och ladda ner filen.
 
-3.  Kontrollera att du har uppfyllt alla krav och omslut därefter appen.
+3. Kontrollera att du har uppfyllt alla krav och omslut därefter appen.
 
 ### <a name="troubleshoot-common-errors-with-entitlements"></a>Felsökning av vanliga fel med rättigheter
 Prova följande felsökningssteg om programhanteringsverktyget för iOS rapporterar ett rättighetsfel.
@@ -364,20 +372,20 @@ Prova följande felsökningssteg om programhanteringsverktyget för iOS rapporte
 ### <a name="find-the-existing-entitlements-of-a-signed-app"></a>Hitta befintliga rättigheter för en signerad app
 Granska befintliga rättigheter för en signerad app och en etableringsprofil:
 
-1.  Hitta .ipa-filen och ändra dess tillägg till .zip.
+1. Hitta .ipa-filen och ändra dess tillägg till .zip.
 
-2.  Expandera .zip-filen. Detta genererar en nyttolast-mapp som innehåller ditt .app-paket.
+2. Expandera .zip-filen. Detta genererar en nyttolast-mapp som innehåller ditt .app-paket.
 
-3.  Använd codesign-verktyget för att kontrollera rättigheterna för .app-paketet, där `YourApp.app` är namnet på .app-paketet:
+3. Använd codesign-verktyget för att kontrollera rättigheterna för .app-paketet, där `YourApp.app` är namnet på .app-paketet:
 
     ```bash
-    $ codesign -d --entitlements :- "Payload/YourApp.app"
+    codesign -d --entitlements :- "Payload/YourApp.app"
     ```
 
-4.  Använd säkerhetsverktyget för att kontrollera rättigheterna för appens inbäddade etableringsprofil, där `YourApp.app` är namnet på .app-paketet.
+4. Använd säkerhetsverktyget för att kontrollera rättigheterna för appens inbäddade etableringsprofil, där `YourApp.app` är namnet på .app-paketet.
 
     ```bash
-    $ security -D -i "Payload/YourApp.app/embedded.mobileprovision"
+    security cms -D -i "Payload/YourApp.app/embedded.mobileprovision"
     ```
 
 ### <a name="remove-entitlements-from-an-app-by-using-the-e-parameter"></a>Ta bort rättigheter från en app med hjälp av parametern -e
@@ -390,19 +398,19 @@ Det här kommandot tar bort alla aktiverade funktioner i appen som inte ingår i
 ## <a name="security-and-privacy-for-the-app-wrapping-tool"></a>Säkerhet och sekretess för programhanteringsverktyget
 Använd följande riktlinjer för säkerhet och sekretess när du använder programhanteringsverktyget.
 
--   Signeringscertifikatet, etableringsprofilen och affärsappen som du anger måste finnas på samma Mac OS-dator som den som du använder för att köra programhanteringsverktyget. Om filerna finns på en UNC-sökväg kontrollerar du att de är tillgängliga från Mac OS-datorn. Sökvägen måste skyddas via IPsec- eller SMB-signering.
+- Signeringscertifikatet, etableringsprofilen och affärsappen som du anger måste finnas på samma Mac OS-dator som den som du använder för att köra programhanteringsverktyget. Om filerna finns på en UNC-sökväg kontrollerar du att de är tillgängliga från Mac OS-datorn. Sökvägen måste skyddas via IPsec- eller SMB-signering.
 
     Den omslutna appen importerats till administratörskonsolen bör vara på detsamma datorn som du körs verktyget på. Om filén finns på en UNC-sökväg, måste du kontrollera att det är tillgängligt på den dator som kör administratörskonsolen. Sökvägen måste skyddas via IPsec- eller SMB-signering.
 
--   Miljön där programhanteringsverktyget hämtas från GitHub-databasen måste vara skyddad med IPsec eller SMB-signering.
+- Miljön där programhanteringsverktyget hämtas från GitHub-databasen måste vara skyddad med IPsec eller SMB-signering.
 
--   Appen du bearbetar måste komma från en betrodd källa för att garantera skydd mot attacker.
+- Appen du bearbetar måste komma från en betrodd källa för att garantera skydd mot attacker.
 
--   Kontrollera att den utgående mappen som du anger i programhanteringsverktyget är skyddad, särskilt om det är en fjärransluten mapp.
+- Kontrollera att den utgående mappen som du anger i programhanteringsverktyget är skyddad, särskilt om det är en fjärransluten mapp.
 
--   Med iOS-appar som innehåller en dialogruta för filöverföring kan användarna kringgå de begränsningar för klipp ut, kopiera och klistra in som gäller för appen. En användare kan till exempel använda dialogrutan Överför för att överföra en skärmbild av appdata.
+- Med iOS-appar som innehåller en dialogruta för filöverföring kan användarna kringgå de begränsningar för klipp ut, kopiera och klistra in som gäller för appen. En användare kan till exempel använda dialogrutan Överför för att överföra en skärmbild av appdata.
 
--   När du övervakar dokumentmappen på enheten från en omsluten app kan du se en mapp med namnet .msftintuneapplauncher. Om du ändrar eller tar bort den här filen kan det resulterade i att begränsade appar inte fungerar som de ska.
+- När du övervakar dokumentmappen på enheten från en omsluten app kan du se en mapp med namnet .msftintuneapplauncher. Om du ändrar eller tar bort den här filen kan det resulterade i att begränsade appar inte fungerar som de ska.
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Intunes programhanteringsverktyg för iOS med Citrix MDX mVPN
 Den här funktionen är en integrering med Citrix MDX-programhanteringsverktyget för iOS. Integrationen är helt enkelt en extra valfri flagga på kommandoraden, `-citrix`, för Intunes allmänna programhanteringsverktyg.
@@ -418,11 +426,13 @@ Om du vill använda flaggan `-citrix` måste du även installera [Citrix MDX-pro
 Kör helt enkelt ditt vanliga programhanteringskommando med flaggan `-citrix` på slutet. Flaggan `-citrix` har för närvarande inte några argument.
 
 **Användningsformat**:
+
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
 ```
 
 **Exempelkommando**:
+
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
@@ -442,5 +452,5 @@ Använd följande steg för att hämta loggar för dina omslutna program under f
 ## <a name="see-also"></a>Se även
 
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)
-- [Vanliga frågor, problem och lösningar med principer för enheter och profiler](device-profile-troubleshoot.md)
+- [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md)
 - [Aktivera hantering av mobilprogram i appar med SDK](app-sdk.md)

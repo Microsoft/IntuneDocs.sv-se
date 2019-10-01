@@ -1,13 +1,12 @@
 ---
-title: Konfigurera VPN-inställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: När du skapar en VPN-konfigurationsprofil för Android- och Android for Work-enheter anger du anslutningsnamnet, IP-adressen eller FQDN för VPN-servern, väljer hur användare autentiserar med VPN-servern och väljer sedan anslutningstyperna Citrix, SonicWall, Check Point Capsule, Pulse Secure samt Microsoft Edge.
+title: Använd VPN-inställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Se alla inställningar för att skapa VPN-anslutningar på Android-enheter i Microsoft Intune. Ange anslutnings namn, IP-adress eller FQDN för VPN-servern, Välj hur användare autentiseras och välj Citrix, SonicWall, Check Point kapsel och Pulse Secure Connection types.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 08/06/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,55 +14,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 666b61eec021fa6a2cdad5126f572234d97b6883
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 36806769e3b4c2c726038c23edf22cb006819d8c
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566105"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "71302800"
 ---
-# <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurera VPN-inställningar för enheter som kör Android i Intune
+# <a name="android-device-settings-to-configure-vpn-in-intune"></a>Inställningar för Android-enhet för att konfigurera VPN i Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-I den här artikeln beskrivs de Intune-inställningar som du kan använda till att konfigurera VPN-anslutningar på enheter som kör Android.
+Den här artikeln beskriver de olika inställningar för VPN-anslutningar som du kan styra på Android-enheter. Som en del av din lösning för hantering av mobila enheter (MDM) använder du de här inställningarna för att skapa en VPN-anslutning, väljer hur VPN-autentiseringen ska autentiseras, väljer en VPN-server typ med mera.
 
-Du kan konfigurera VPN-inställningar för följande plattformar:
+Som Intune-administratör kan du skapa och tilldela VPN-inställningar till dina Android-enheter. 
 
-- [Android](#android-vpn-settings)
-- [Android enterprise](#android-enterprise-vpn-settings)
+Mer information om VPN-profiler i Intune finns i [VPN-profiler](vpn-settings-configure.md).
 
-Beroende på vilka inställningar du väljer kan bara vissa av följande värden konfigureras.
+## <a name="before-you-begin"></a>Innan du börjar
 
-## <a name="android-vpn-settings"></a>VPN-inställningar för Android
+[Skapa en profil för enhetskonfiguration](vpn-settings-configure.md#create-a-device-profile) och välj **Android**.
 
-- **Anslutningsnamn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar.
+## <a name="base-vpn"></a>Bas-VPN
+
+- **Anslutningsnamn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar. Ange till exempel `Contoso VPN`.
 - **IP-adress eller fullständigt domännamn**: Ange IP-adressen eller det fullständiga domännamnet för VPN-servern som enheterna ska ansluta till. Ange till exempel **192.168.1.1** eller **vpn.contoso.com**.
 
   - **Autentiseringsmetod**: Välj hur enheter autentiserar mot VPN-servern. Alternativen är:
 
-    - **Certifikat**:Välj en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](certificates-configure.md) visar stegen för att skapa en certifikatprofil.
-    - **Användarnamn och lösenord**: Vid inloggning till VPN-servern uppmanas slutanvändarna att ange ett användarnamn och lösenord.
-
-- **Anslutningstyp**: Välj VPN-anslutningstyp. Alternativen är:
-
-  - **Check Point Capsule VPN**
-  - **Cisco AnyConnect**
-  - **SonicWall Mobile Connect**
-  - **F5 Edge Client**
-  - **Pulse Secure**
-  - **Citrix**
-
-- **Fingeravtryck** (endast Check Point Capsule VPN): Ange en sträng, till exempel **Contoso fingeravtryckskod**, för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan skickas till klienten så att den vet att den ska lita på alla servrar som har samma fingeravtryck vid anslutningen. Om enheten inte har fingeravtrycket uppmanar den användaren att lita på VPN-servern medan fingeravtrycket visas. Användaren verifierar fingeravtrycket manuellt och väljer betrodd för att ansluta.
-- **Ange nyckel-värdepar för Citrix VPN-attributen** (endast Citrix): Ange nyckel- och värdepar som tillhandahålls av Citrix. Dessa värden konfigurerar egenskaperna för VPN-anslutningen.
-
-## <a name="android-enterprise-vpn-settings"></a>VPN-inställningar för Android Enterprise
-
-- **Anslutningsnamn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten efter tillgängliga VPN-anslutningar.
-- **IP-adress eller fullständigt domännamn**: Ange IP-adressen eller det fullständiga domännamnet för VPN-servern som enheterna ska ansluta till. Ange till exempel **192.168.1.1** eller **vpn.contoso.com**.
-
-  - **Autentiseringsmetod**: Välj hur enheter autentiserar mot VPN-servern. Alternativen är:
-  
     - **Certifikat**:Välj en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](certificates-configure.md) visar stegen för att skapa en certifikatprofil.
     - **Användarnamn och lösenord**: Vid inloggning till VPN-servern uppmanas slutanvändarna att ange ett användarnamn och lösenord.
 
@@ -74,6 +52,17 @@ Beroende på vilka inställningar du väljer kan bara vissa av följande värden
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
+  - **Citrix SSO**
+
+- **Fingeravtryck** (endast Check Point Capsule VPN): Ange en sträng, till exempel **Contoso fingeravtryckskod**, för att verifiera att VPN-servern är betrodd. Ett finger avtryck skickas till klienten så att klienten kan lita på alla servrar som har samma finger avtryck. Om enheten inte har fingeravtrycket uppmanar den användaren att lita på VPN-servern medan fingeravtrycket visas. Användaren verifierar fingeravtrycket manuellt och väljer betrodd för att ansluta.
+- **Ange nyckel-värdepar för Citrix VPN-attributen** (endast Citrix): Ange nyckel- och värdepar som tillhandahålls av Citrix. Dessa värden konfigurerar egenskaperna för VPN-anslutningen. 
+
+  Du kan också **Importera** en fil med kommaavgränsade värden (. csv) med nycklar och värdepar. Se till att granska **mina data har rubriker** och **nyckel** egenskaper.
+
+  När du har lagt till dina nyckel-och värdepar använder du **Exportera** för att säkerhetskopiera dina data till en. csv-fil.
 
 ## <a name="next-steps"></a>Nästa steg
-[VPN-profiler i Intune](vpn-settings-configure.md)
+
+[Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+
+Du kan också skapa VPN-profiler för [Android Enterprise](vpn-settings-android-enterprise.md), [iOS](vpn-settings-ios.md), [MacOS](vpn-settings-macos.md), [Windows 10 och senare](vpn-settings-windows-10.md), [Windows 8,1](vpn-settings-windows-8-1.md)och [Windows Phone 8,1](vpn-settings-windows-phone-8-1.md) -enheter.
