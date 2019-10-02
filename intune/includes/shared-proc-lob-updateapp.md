@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 66abce3b3dd2adc645695c9aab5fe6729713bbdc
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "71301808"
+---
 
 1. Logga in på [Azure Portal](https://portal.azure.com).  
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.  
