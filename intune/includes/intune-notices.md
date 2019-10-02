@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 90c770fec5bd9456151e601188254a3a022cd13f
-ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
+ms.openlocfilehash: fa251a0edd943d566849b138af5cbab0be248a53
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71279912"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71726407"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Minskat stöd för Android-enhetsadministratör 
-Enhetsadministratören för Android (kallas ibland för "äldre" Android-hantering och lanseras med Android 2.2) är ett sätt att hantera Android-enheter. Det finns dock en bättre hanteringsfunktion med [Android Enterprise](../connect-intune-android-enterprise.md) (lanseras med Android 5.0). För att kunna flytta till en modern, mer omfattande och säkrare enhetshantering,minskar Google stödet för enhetsadministration i nya versioner av Android.
+Enhetsadministratören för Android (kallas ibland för "äldre" Android-hantering och lanseras med Android 2.2) är ett sätt att hantera Android-enheter. Det finns dock en bättre hanteringsfunktion med [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (lanseras med Android 5.0). För att kunna flytta till en modern, mer omfattande och säkrare enhetshantering,minskar Google stödet för enhetsadministration i nya versioner av Android.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
 På grund av dessa ändringar av Google kommer Intune-användare att påverkas på följande sätt: 
@@ -67,10 +67,11 @@ Du behöver inte vidta några åtgärder, men du kan överväga att uppdatera di
 https://aka.ms/intune_fullscreen
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Ändringsplan: Nya inställningar för Windows-uppdateringar i Intune <!-- 4464404 -->
-Från och med augustiversionen till Intune-tjänsten eller 1908 lägger vi till nya ”Inställningar för tidsgräns” som du kan konfigurera i stället för inställningarna ”Tillåt att användaren startar om (interaktiv omstart)”. Vi planerar att inaktivera inställningarna för interaktiv omstart i användargränssnittet i 1909 eller septemberuppdateringen och sedan ta bort dem från konsolen i slutet av oktober. 
+Från och med augustiversionen till Intune-tjänsten eller 1908 lägger vi till nya ”Inställningar för tidsgräns” som du kan konfigurera i stället för inställningarna ”Tillåt att användaren startar om (interaktiv omstart)”. Vi planerar att inaktivera inställningarna för interaktiv omstart i användargränssnittet i 1909 eller septemberuppdateringen och sedan ta bort dem från konsolen i slutet av oktober.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Om du hanterar Windows 10-enheter i din miljö: 
+Om du hanterar Windows 10-enheter i din miljö:
+
 - Med Intune-uppdateringen i augusti eller 1908 visas nya inställningar för tidsgränser i konsolen utöver de gamla inställningarna för att starta om datorn.
 - När båda dessa gamla och nya inställningar har konfigurerats åsidosätter inställningarna för tidsgräns inställningen för att starta om datorn.
 - Inställningarna för tidsgräns kommer att ersätta alternativet ”Tillåt att användaren startar om (interaktiv omstart)” på konsolen i 1910-uppdateringen.
@@ -78,7 +79,7 @@ Om du hanterar Windows 10-enheter i din miljö:
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Börja använda inställningarna för tidsgräns i 1908 genom att konfigurera dem med önskade värden. När du har det på plats kan du ställa in inställningen för interaktiv omstart till ”Inte konfigurerad” för att förbereda inför att dessa tas bort från konsolen i oktober.
 
-Uppdatera din dokumentation och eventuella automatiserade skript om det behövs. 
+Uppdatera din dokumentation och eventuella automatiserade skript om det behövs.
 
 Vi håller dig uppdaterad och publicerar en påminnelse i meddelandecentret innan vi tar bort inställningarna för den interaktiva omstarten.
 
@@ -86,12 +87,13 @@ Vi håller dig uppdaterad och publicerar en påminnelse i meddelandecentret inna
 Intune kommer att stödja Android 5.x (Lollipop) och högre i oktober. Uppdatera alla omslutna appar med den senaste Intune App SDK:n och uppdatera dina enheter.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Om du inte använder eller planerar att använda antingen SDK eller appen för Android påverkar den här ändringen inte dig. Om du använder Intune App SDK måste du uppdatera till den senaste versionen och även uppdatera dina enheter till Android 5.x och högre. Om du inte uppdaterar kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid. 
+Om du inte använder eller planerar att använda antingen SDK eller appen för Android påverkar den här ändringen inte dig. Om du använder Intune App SDK måste du uppdatera till den senaste versionen och även uppdatera dina enheter till Android 5.x och högre. Om du inte uppdaterar kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid.
 
 Nedan hittar du en lista över vanliga enheter som har registrerats i Intune och som kör Android version 4.x. Om du har någon av dessa enheter bör du vidta lämpliga åtgärder för att se till att enheten stöder Android version 5.0 eller högre eller att den ersätts med en enhet som stöder Android version 5.0 eller högre. Den här listan är inte uttömmande för alla enheter som kan behöva utvärderas:
+
 - Samsung SM-T561  
-- Samsung SM-T365 
-- Samsung GT-I9195 
+- Samsung SM-T365
+- Samsung GT-I9195
 - Samsung SM-G800F
 - Samsung SM-G357FZ
 - Motorola XT1080
@@ -100,7 +102,6 @@ Nedan hittar du en lista över vanliga enheter som har registrerats i Intune och
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Omslut dina appar med den senaste Intune App SDK:n. Du kan också ställa in inställningen för villkorsstyrd start ”Kräv lägsta operativsystemversion (Endast varning)” för att meddela slutanvändare med personliga enheter om att uppgradera dem.
-
 
 ### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7----3042987---"></a>Intune-ändringsplan: närmar sig slutet på support för Windows 7 <!-- 3042987 -->
 Som vi meddelande i MC148476 förra september 2018 och återigen i MC176794 i mars 2019, tar det utökade stödet för Windows 7 slut den 14 januari 2020. Vid detta tillfälle kommer Intune att dra tillbaka stöd för enheter som kör Windows 7, så vi kan fokusera vår investering på att stödja nyare tekniker och tillhandahålla nya slutanvändarupplevelser. Efter det datumet kommer teknisk hjälp och automatiska uppdateringar som skyddar din Windows 7-dator inte längre vara tillgängliga via Intune. Microsoft rekommenderar starkt att du flyttar till Windows 10 före januari 2020 för att undvika ett scenario där du behöver tjänster eller support som inte längre är tillgänglig. Läs mer om Windows Support Lifecycle [ här](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
