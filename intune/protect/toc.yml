@@ -1,0 +1,269 @@
+- name: Skydda data och enheter med Intune
+  href: index.yml
+- name: Översikt
+  expanded: true
+  items:
+    - name: Översikt över enhetsskydd
+      href: device-protect.md
+      displayName: compliant; noncompliant; mfa
+- name: Snabbstarter
+  items:
+    - name: Skapa en enhetsefterlevnadsprincip
+      href: quickstart-set-password-length-android.md
+    - name: Skicka meddelanden till icke-kompatibla enheter
+      href: quickstart-send-notification.md
+- name: Självstudier
+  items:
+    - name: Skydda e-post på hanterade enheter
+      href: tutorial-protect-email-on-enrolled-devices.md
+    - name: Skydda e-post på ohanterade enheter
+      href: tutorial-protect-email-on-unmanaged-devices.md
+- name: Begrepp
+  items:
+    - name: Sekretess och personliga data
+      href: privacy-personal-data.md
+      items:
+        - name: Datainsamling
+          href: privacy-data-collect.md
+        - name: Bearbetning och lagring av data
+          href: privacy-data-store-process.md
+        - name: Datasäkerhet och delning
+          href: privacy-data-secure-share.md
+          items:
+            - name: Data Apple skickar till Intune
+              href: data-apple-sends-to-intune.md
+            - name: Data Google skickar till Intune
+              href: data-google-sends-to-intune.md
+            - name: Data som Intune skickar till Apple
+              href: data-intune-sends-to-apple.md
+            - name: Data som Intune skickar till Google
+              href: data-intune-sends-to-google.md
+            - name: Information som delas från Jamf Pro till Intune
+              href: data-jamf-sends-to-intune.md
+        - name: Visa och åtgärda personliga data
+          href: privacy-data-view-correct.md
+        - name: 'Granska, exportera, ta bort'
+          href: privacy-data-audit-export-delete.md
+        - name: Windows informationsskydd
+          href: windows-information-protection-configure.md
+- name: Instruktioner
+  items:
+    - name: Ange regler för enheter som tillåter åtkomst till resurser
+      items:
+        - name: Översikt över efterlevnad
+          href: device-compliance-get-started.md
+        - name: Skapa en princip
+          href: create-compliance-policy.md
+        - name: Platsbaserad efterlevnad
+          href: use-network-locations.md
+        - name: Åtgärder för inkompatibilitet
+          href: actions-for-noncompliance.md
+        - name: Övervaka enhetsefterlevnad
+          href: compliance-policy-monitor.md
+    - name: Kryptera enheter
+      items:
+        - name: Kryptera enheter
+          href: encrypt-devices.md
+        - name: Övervaka enhetskryptering
+          href: encryption-monitor.md
+    - name: Villkorlig åtkomst
+      items:
+        - name: Översikt över villkorsstyrd åtkomst
+          href: conditional-access.md
+          displayName: ca
+        - name: Vanliga sätt att använda villkorlig åtkomst
+          href: conditional-access-intune-common-ways-use.md
+        - name: Installera Exchange On-Premises Connector
+          href: exchange-connector-install.md
+        - name: Skapa och tilldela princip för villkorlig åtkomst
+          href: conditional-access-exchange-create.md
+        - name: Princip för enhetsbaserad villkorstyrd åtkomst
+          href: create-conditional-access-intune.md
+        - name: Tilldela principer för villkorlig åtkomst på nytt med den klassiska Intune-portalen
+          href: conditional-access-intune-reassign.md
+        - name: Appbaserad villkorlig åtkomst
+          href: app-based-conditional-access-intune.md
+        - name: Konfigurera programbaserad villkorlig åtkomst
+          href: app-based-conditional-access-intune-create.md
+        - name: ADAL och Intune
+          href: app-modern-authentication-block.md
+        - name: Integrera Jamf Pro med Intune för kompatibilitet
+          href: conditional-access-integrate-jamf.md
+        - name: Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
+          href: conditional-access-assign-jamf.md
+    - name: Skydd mot hot
+      items:
+        - name: Mobile Threat Defense
+          href: mobile-threat-defense.md
+          items:
+            - name: Konfigurera Intune för MTD
+              items:
+                - name: Lägg till MTD-program
+                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
+                - name: Skapa en MTD-enhetsefterlevnadsprincip
+                  href: mtd-device-compliance-policy-create.md
+                - name: Aktivera MTD i Intune
+                  href: mtd-connector-enable.md
+            - name: MTD-program
+              items:
+                - name: Konfigurera Better Mobile
+                  href: better-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrering av Better Mobile och Intune
+                      href: better-mobile-mtd-connector-integration.md
+                      displayName: sso
+                - name: Konfigurera Check Point
+                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+                  items:
+                    - name: Check Point- och Intune-integrering
+                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+                - name: Konfigurera Lookout
+                  href: lookout-mobile-threat-defense-connector.md
+                  items:
+                    - name: Lookout- och Intune-integrering
+                      href: lookout-mtd-connector-integration.md
+                - name: Konfigurera Pradeo
+                  href: pradeo-mobile-threat-defense-connector.md
+                  items:
+                    - name: Pradeo- och Intune-integrering
+                      href: pradeo-mtd-connector-integration.md
+                - name: Konfigurera Sophos Mobile
+                  href: sophos-mtd-connector.md
+                  items:
+                    - name: Sophos Mobile och Intune-integrering
+                      href: sophos-mtd-connector-integration.md
+                - name: Konfigurera Symantec
+                  href: skycure-mobile-threat-defense-connector.md
+                  items:
+                    - name: Symantec- och Intune-integrering
+                      href: skycure-mtd-connector-integration.md
+                - name: Konfigurera Wandera
+                  href: wandera-mtd-connector.md
+                  items:
+                    - name: Wandera- och Intune-integrering
+                      href: wandera-mtd-connector-integration.md
+                - name: Konfigurera Zimperium
+                  href: zimperium-mobile-threat-defense-connector.md
+                  items:
+                    - name: Zimperium- och Intune-integrering
+                      href: zimperium-mtd-connector-integration.md
+        - name: Microsoft Defender
+          items:
+            - name: Microsoft Defender ATP
+              href: advanced-threat-protection.md
+            - name: Säkerhetsuppgifter
+              href: atp-manage-vulnerabilities.md
+    - name: Säkerhetsbaslinjer
+      items:
+        - name: Säkerhetsbaslinjer
+          href: security-baselines.md
+        - name: Övervaka dina baslinjer
+          href: security-baselines-monitor.md
+    - name: Endpoint Protection
+      href: endpoint-protection-configure.md
+    - name: Åtkomstkontroll för nätverk
+      href: network-access-control-integrate.md
+    - name: Windows Hello
+      items:
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: Identity Protection
+          href: identity-protection-configure.md
+    - name: Certifikat
+      items:
+        - name: Använd certifikat för autentisering
+          href: certificates-configure.md
+        - name: SCEP
+          items:
+            - name: SCEP-infrastruktur
+              href: certificates-scep-configure.md
+              displayName: ksp
+            - name: SCEP-certifikatprofiler
+              href: certificates-profile-scep.md
+            - name: Använd tredje parts certifikatutfärdare med SCEP
+              href: certificate-authority-add-scep-overview.md
+        - name: PKCS
+          items:
+            - name: PKCS
+              href: certficates-pfx-configure.md
+              displayName: ksp
+            - name: Importerad PKCS
+              href: certificates-imported-pfx-configure.md
+            - name: Använd S/MIME för att kryptera e-post
+              href: certificates-s-mime-encryption-sign.md
+              displayName: csr
+        - name: Använda DigiCert PKI
+          href: certificates-digicert-configure.md
+          displayName: ca; pkcs; pki; ra; registration authority
+        - name: Ta bort SCEP- eller PKCS-certifikat
+          href: remove-certificates.md
+    - name: Programuppdateringar
+      items:
+        - name: Windows-uppdateringar
+          items:
+            - name: Inställningar för Windows Update för företag
+              href: windows-update-for-business-configure.md
+            - name: Efterlevnadsrapporter för Windows Update
+              href: windows-update-compliance-reports.md
+        - name: iOS-uppdateringsprinciper
+          href: software-updates-ios.md
+    - name: Felsök
+      items:
+        - name: Felsöka principer och profiler
+          href: troubleshoot-policies-in-microsoft-intune.md
+        - name: Felsöka villkorlig åtkomst
+          href: troubleshoot-conditional-access.md
+        - name: Felsök certifikatanslutning
+          href: troubleshoot-certificate-connector-events.md
+        - name: Felsöka Exchange Connector
+          items:
+            - name: Felsöka Exchange Connector
+              href: troubleshoot-exchange-connector.md
+            - name: Vanliga problem
+              href: troubleshoot-exchange-connector-common-problems.md
+            - name: Vanliga fel
+              href: troubleshoot-exchange-connector-common-errors.md
+        - name: Felsöka BitLocker-principer
+          href: troubleshoot-bitlocker-policies.md
+        - name: Felsöka Jamf Pro-integration
+          href: troubleshoot-jamf.md
+- name: Referens
+  items:
+    - name: API för att lägga till tredje parts certifikatutfärdare
+      href: scep-libraries-apis.md
+    - name: Inställningar för efterlevnadsprinciper
+      items:
+        - name: Säkerhetsbaslinjer
+          items:
+            - name: Windows 10 MDM-baslinjeinställningar
+              href: security-baseline-settings-mdm-all.md
+            - name: Microsoft Defender ATP-baslinjeinställningar
+              href: security-baseline-settings-defender-atp.md
+        - name: Windows Update-inställningar
+          href: windows-update-settings.md
+        - name: Inställningar för efterlevnadsprinciper – Android
+          href: compliance-policy-create-android.md
+        - name: Inställningar för efterlevnadsprinciper – Android Enterprise
+          href: compliance-policy-create-android-for-work.md
+        - name: Inställningar för efterlevnadsprinciper – iOS
+          href: compliance-policy-create-ios.md
+        - name: Inställningar för efterlevnadsprinciper – macOS
+          href: compliance-policy-create-mac-os.md
+        - name: Inställningar för efterlevnadsprinciper – Windows 10
+          href: compliance-policy-create-windows.md
+        - name: Inställningar för efterlevnadsprinciper – Windows 8.1
+          href: compliance-policy-create-windows-8-1.md
+        - name: Inställningar för efterlevnadsprinciper – Windows Phone 8.1
+          href: compliance-policy-create-windows-8-1.md
+    - name: Felkoder och beskrivningar
+      items:
+        - name: Programvaruuppdateringsfel
+          href: software-update-agent-error-codes.md
+- name: Guider för implementeringsscenarier
+  items:
+    - name: Skydda Exchange Online
+      href: exchange-online-protect.md
+    - name: Förhindra obehörig åtkomst
+      href: data-outside-protect.md
+    - name: Förhindra dataläckage på ej hanterade enheter
+      href: data-leak-prevention.md
