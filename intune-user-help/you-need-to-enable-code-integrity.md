@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a545bff8624f4447ca9805aecf6d4d288fe4314
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 6f37e5c8d700d33e368966c8c3c31abd4f42d3b9
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239525"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721189"
 ---
 # <a name="enable-code-integrity"></a>Aktivera kodintegritet
 
@@ -35,7 +35,7 @@ Om du identifierar dig själv som en avancerad enhets användare och vill prova 
 
 ## <a name="additional-resources-for-it-administrators"></a>Ytterligare resurser för IT-administratörer
 
-Om du är Intune-administratör och vill lära dig mer om Intunes inställningar för hälsokompatibilitet för enhetens hälso tillstånd läser du [lägga till en efterlevnadsprincip för Windows 10-enheter i Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows). En detaljerad titt på de regelefterlevnad som du kan vidta i Intune finns i [HEALTHATTESTATION CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+Om du är Intune-administratör och vill lära dig mer om Intunes inställningar för hälsokompatibilitet för enhetens hälso tillstånd läser du [lägga till en efterlevnadsprincip för Windows 10-enheter i Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows.md). En detaljerad titt på de regelefterlevnad som du kan vidta i Intune finns i [HEALTHATTESTATION CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## <a name="next-steps"></a>Nästa steg
 

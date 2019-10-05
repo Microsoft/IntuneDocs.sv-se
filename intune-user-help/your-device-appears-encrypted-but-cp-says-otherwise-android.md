@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caae22e59e8adb6952e9a69ff03c575ae4467b2d
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 13f22b66b5a0700eadda28b20e0db6edce507021
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238981"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721175"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Enheten är krypterad men appar säger annars
 
@@ -31,7 +31,7 @@ Om Företagsportal eller Microsoft Intunes appen säger att enheten inte är kry
 
 ## <a name="add-a-startup-pin"></a>Lägga till en start PIN-kod
 
-På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att enheten är skyddad. Platsen för den här inställningen kommer att finnas i enhetens **inställnings** app. Namnet och platsen för inställningen kan variera. I Samsung Galaxy-S7 kallas inställningen till exempel **säker start**. Om du vill aktivera det och skapa ett lösen ord går du till **Inställningar** > **Lås skärmen och säkerhet** > **säker start**.  
+På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att enheten är skyddad. Platsen för den här inställningen kommer att finnas i enhetens **inställnings** app. Namnet och platsen för inställningen kan variera. I Samsung Galaxy-S7 kallas inställningen till exempel **säker start**. Om du vill aktivera det och skapa ett lösen ord går du till **inställningar** > **Lås skärm och säkerhet** > **säker start**.  
 
 ## <a name="encrypt-the-entire-device"></a>Kryptera hela enheten
 
@@ -50,7 +50,7 @@ Det här avsnittet gäller endast för Företagsportal-appen. Om enheten ger dig
 
 På vissa Android-enheter med version 7.0 och senare krypteras data på ett sätt som strider mot vissa standarder för Android-plattformen. Dessa krypterings metoder sätter i risk för enhets information. Därför stöds inte dessa enheter.
 
-En icke-uttömmande lista över Android-enheter som stöds finns i artikeln [operativ system och webbläsare som stöds i Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Om enheten inte finns med i listan kan du läsa tillverkaren av enheten eller kontakta en support tekniker.
+En icke-uttömmande lista över Android-enheter som stöds finns i artikeln [operativ system och webbläsare som stöds i Intune](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Om enheten inte finns med i listan kan du läsa tillverkaren av enheten eller kontakta en support tekniker.
 
 > [!Note]
 > Microsoft arbetar med tillverkare för att åtgärda eventuella problem som vi påträffar under testning eller som användarna rapporterar till oss. Vi uppdaterar den här artikeln när ny information är tillgänglig.

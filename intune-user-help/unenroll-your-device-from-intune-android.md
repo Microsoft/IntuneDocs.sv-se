@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91aefbc8c3960100ce5e9164ce48a2b9d33c3f3e
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: ecc73fc9c51ae11f7541d1b9d28f0ccc8297c187
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238965"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721212"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Avregistrera din Android-enhet från hanteringen  
 
@@ -64,7 +64,7 @@ Du kan också trycka på **Inställningar** > **Appar** > **Företagsportal** > 
 
 Som en sista utväg kan du avinstallera appen från din enhet som enhetsadministratör.  
 
-Om du har en enhet som ägs av företaget kanske din organisation kräver att företagsportalen alltid ska finnas på din enhet. Om du avinstallerar den kan du förlora åtkomst till skyddade företagsresurser, till exempel e-post, appar, Wi-Fi eller VPN, tills appen har installerats om. Mer information om hur du installerar, uppdaterar eller tar bort obligatoriska appar finns i [Lägga till appar i Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+Om du har en enhet som ägs av företaget kanske din organisation kräver att företagsportalen alltid ska finnas på din enhet. Om du avinstallerar den kan du förlora åtkomst till skyddade företagsresurser, till exempel e-post, appar, Wi-Fi eller VPN, tills appen har installerats om. Mer information om hur du installerar, uppdaterar eller tar bort obligatoriska appar finns i [Lägga till appar i Microsoft Intune](https://docs.microsoft.com/intune/apps/apps-add.md#apps-that-are-added-automatically-by-intune).
 
 Så här inaktiverar du företagsportalen som enhetsadministratör. De faktiska namnen på varje inställning kan skilja sig åt beroende på Android-enhet.  
 
