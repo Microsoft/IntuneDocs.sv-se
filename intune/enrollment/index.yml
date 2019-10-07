@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: Registrera enheter i Microsoft Intune
+summary: Det finns flera metoder för att registrera personalens enheter. Varje metod påverkas av ägarskapet för enheten (personlig eller företagsägd), enhetstypen (iOS, Windows, Android) och hanteringskraven (återställning, tillhörighet, låsning).
+metadata:
+  title: Registrering i Microsoft Intune
+  description: Landningssida för registrering i Microsoft Intune
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: enrollment
+  ms.topic: landing-page
+  author: dougeby
+  ms.author: dougeby
+  manager: dougeby
+  ms.date: 08/07/2019
+  ms.openlocfilehash: a32d8c309e1008f28816fffdd7b101537af7947a
+  ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+  ms.translationtype: HT
+  ms.contentlocale: sv-SE
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71728813"
+landingContent:
+- title: Läs mer om registrering
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vad är enhetsregistrering?
+      url: device-enrollment.md
+    - text: Funktioner för hantering av registrerade enheter
+      url: device-management-capabilities.md
+    - text: Registreringsalternativ
+      url: enrollment-options.md
+- title: Windows-registrering
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Om Windows-registrering
+      url: windows-enrollment-methods.md
+    - text: Funktioner för registreringsmetod
+      url: enrollment-method-capab.md
+  - linkListType: quickstart
+    links:
+    - text: Konfigurera automatisk registrering för Windows 10-enheter
+      url: quickstart-setup-auto-enrollment.md
+    - text: Registrera din Windows 10-enhet
+      url: quickstart-enroll-windows-device.md
+  - linkListType: tutorial
+    links:
+    - text: Använda Autopilot till att registrera Windows-enheter
+      url: tutorial-use-autopilot-enroll-devices.md
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurera Windows-registrering
+      url: windows-enroll.md
+    - text: Konfigurera massregistrering för Windows-enheter
+      url: windows-bulk-enroll.md
+- title: Android-registrering
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Om Android-registrering
+      url: android-enroll.md
+  - linkListType: how-to-guide
+    links:
+    - text: Anslut ditt Intune-konto till ditt hanterade Google Play-konto
+      url: connect-intune-android-enterprise.md
+    - text: Konfigurera registrering av Android Enterprise-arbetsprofilenheter
+      url: android-work-profile-enroll.md
+    - text: Konfigurera registrering av Android Enterprise-arbetsprofilenheter
+      url: android-work-profile-enroll.md
+    - text: Konfigurera registrering av dedikerade Android Enterprise-enheter
+      url: android-kiosk-enroll.md
+    - text: Konfigurera Intune-registrering av fullständigt hanterade Android Enterprise-enheter (förhandsversion)
+      url: android-fully-managed-enroll.md
+- title: iOS-registrering
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Om iOS-registrering
+      url: ios-enroll.md
+  - linkListType: tutorial
+    links:
+    - text: Använd Apples funktioner för registrering av företagsenheter för att registrera iOS-enheter
+      url: tutorial-use-device-enrollment-program-enroll-ios.md
+  - linkListType: how-to-guide
+    links:
+    - text: Ställ in iOS-registrering
+      url: ios-enroll.md
+    - text: Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
+      url: device-enrollment-program-enroll-ios.md
+    - text: Konfigurera registrering av iOS-enheter med Apple School Manager
+      url: apple-school-manager-set-up-ios.md
+    - text: Konfigurera registrering av iOS-enheter med Apple Configurator
+      url: apple-configurator-enroll-ios.md
+- title: macOS-registrering
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Om macOS-registrering
+      url: macos-enroll.md
+  - linkListType: tutorial
+    links:
+    - text: Använd Apples funktioner för registrering av företagsenheter för att registrera iOS-enheter
+      url: tutorial-use-device-enrollment-program-enroll-ios.md
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurera registrering av macOS
+      url: macos-enroll.md
+    - text: Registrera macOS-enheter automatiskt med Programmet för enhetsregistrering eller Apple School Manager
+      url: device-enrollment-program-enroll-macos.md
+    - text: Konfigurera registrering av iOS-enheter med Apple Configurator
+      url: apple-configurator-enroll-ios.md

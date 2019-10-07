@@ -1,0 +1,83 @@
+### YamlMime:Landing
+title: Fjärrköra enhetsåtgärder med Intune
+summary: Intune ger administratörer möjlighet att fjärrköra enhetsåtgärder. Genom att använda dessa fjärråtgärder från Intune-portalen kan du starta om enheter, återställa lösenord, hitta borttappade eller stulna enheter med mera.
+metadata:
+  title: Fjärrköra enhetsåtgärder med Intune
+  description: Med Intune kan du köra åtgärder via fjärranslutning.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: collection
+  author: ErikjeMS
+  ms.author: erikje
+  ms.date: 09/13/2019
+  ms.openlocfilehash: 37f0a4f8017848f4e1672ae7e3e1979239551af3
+  ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+  ms.translationtype: HT
+  ms.contentlocale: sv-SE
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71729153"
+landingContent:
+- title: Fjärrköra enhetsåtgärder
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Översikt över enhetshantering
+      url: device-management.md
+  - linkListType: how-to-guide
+    links:
+    - text: Byt namn på enhet
+      url: device-rename.md
+    - text: Se enhetsinformation
+      url: device-inventory.md
+    - text: Skicka anpassade meddelanden till enheter
+      url: custom-notifications.md
+    - text: Synkronisera enhet
+      url: device-sync.md
+    - text: Fjärradministrera enheter med TeamViewer
+      url: teamviewer-support.md
+- title: Ta bort och starta om
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ta bort, rensa, dra tillbaka, avregistrera
+      url: devices-wipe.md
+    - text: Windows-nystart
+      url: device-fresh-start.md
+    - text: Starta om enheten
+      url: device-restart.md
+- title: Användaråtgärder
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Logga ut användare
+      url: device-logout-user.md
+    - text: Hitta primär användare
+      url: find-primary-user.md
+    - text: Ta bort användare
+      url: device-remove-user.md
+- title: Lås och lösenord
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Låsa enheten
+      url: device-remote-lock.md
+    - text: Återställa enhetens lösenkod
+      url: device-passcode-reset.md
+    - text: PIN-återställning i Windows 10
+      url: device-lost-mode.md
+- title: Åtgärder för Apple-enhet
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Lokalisera iOS-enheter
+      url: device-locate.md
+    - text: Aktivera övervakat läge på iOS
+      url: device-supervised-mode.md
+    - text: Aktivera förlorat läge i iOS
+      url: device-lost-mode.md
+    - text: Radera data från macOS-enhet
+      url: device-erase.md
+    - text: Kringgå aktiveringslås
+      url: device-activation-lock-bypass.md

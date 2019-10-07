@@ -1,0 +1,137 @@
+### YamlMime:Landing
+title: Skydda data och enheter med Intune
+summary: Intune hjälper till att skydda enheter och företagets data med verktyg som säkerhetsbaslinjer, villkorlig åtkomst till Azure AD och partners för skydd mot mobila hot.
+metadata:
+  title: Skydda data och enheter med Intune
+  description: Intune hjälper till att skydda enheter och företagets data med verktyg som säkerhetsbaslinjer, villkorlig åtkomst till Azure AD och partners för skydd mot mobila hot.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: collection
+  author: brenduns
+  ms.author: brenduns
+  ms.date: 08/20/2019
+  ms.openlocfilehash: 073177f7cd7426a86a110fc1cee7812b37fa083f
+  ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+  ms.translationtype: HT
+  ms.contentlocale: sv-SE
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71728711"
+landingContent:
+- title: Ange regler för enheter som tillåter åtkomst till resurser
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Översikt över efterlevnad
+      url: ../device-compliance-get-started.md
+  - linkListType: quickstart
+    links:
+    - text: Skapa en enhetsefterlevnadsprincip
+      url: ../quickstart-set-password-length-android.md
+  - linkListType: tutorial
+    links:
+    - text: Skydda e-post i Exchange Online på hanterade enheter
+      url: ../tutorial-protect-email-on-enrolled-devices.md
+  - linkListType: how-to-guide
+    links:
+    - text: Skapa en princip
+      url: ../create-compliance-policy.md
+    - text: Platsbaserad efterlevnad
+      url: ../use-network-locations.md
+    - text: Åtgärder för inkompatibilitet
+      url: ../actions-for-noncompliance.md
+- title: Hantera sekretess och personliga data
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Sekretess och personliga data
+      url: ../privacy-personal-data.md
+  - linkListType: concept
+    links:
+    - text: Datainsamling
+      url: ../privacy-data-collect.md
+    - text: Bearbetning och lagring av data
+      url: ../privacy-data-store-process.md
+    - text: Datasäkerhet och delning
+      url: ../privacy-data-secure-share.md
+  - linkListType: how-to-guide
+    links:
+    - text: Data som Intune delar
+      url: ../privacy-data-secure-share.md
+    - text: Granska, exportera, ta bort
+      url: ../privacy-data-audit-export-delete.md
+    - text: Visa och åtgärda personliga data
+      url: ../privacy-data-view-correct.md
+- title: Skydda enheter och nätverk
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Enhetsskydd
+      url: ../device-protect.md
+    - text: Mobile Threat Defense
+      url: ../mobile-threat-defense.md
+  - linkListType: how-to-guide
+    links:
+    - text: Microsoft Defender ATP
+      url: ../advanced-threat-protection.md
+    - text: Mobile Threat Defense-partner
+      url: ../mtd-apps-ios-app-configuration-policy-add-assign.md
+    - text: Säkerhetsbaslinjer
+      url: ../security-baselines.md
+    - text: Endpoint Protection
+      url: ../endpoint-protection-configure.md
+    - text: Åtkomstkontroll för nätverk
+      url: ../network-access-control-integrate.md
+    - text: Kryptera enheter
+      url: ../encrypt-devices.md
+- title: Använda säkra autentiseringsmetoder
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Certifikat och Intune
+      url: ../certificates-configure.md
+  - linkListType: how-to-guide
+    links:
+    - text: SCEP-certifikatprofiler
+      url: ../certificates-scep-configure.md
+    - text: PKCS-certifikatprofiler
+      url: ../certficates-pfx-configure.md
+    - text: Importerade PFX-certifikat
+      url: ../certificates-imported-pfx-configure.md
+    - text: Windows Hello för företag
+      url: ../windows-hello.md
+- title: Hantera programuppdateringar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: iOS
+      url: ../software-updates-ios.md
+    - text: Windows
+      url: ../windows-update-for-business-configure.md
+- title: Använd villkorlig åtkomst
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Översikt över villkorsstyrd åtkomst
+      url: ../conditional-access.md
+    - text: Skydda Exchange Online
+      url: ../exchange-online-protect.md
+  - linkListType: tutorial
+    links:
+    - text: Skydda e-post på hanterade enheter
+      url: ../tutorial-protect-email-on-enrolled-devices.md
+    - text: Skydda e-post på ohanterade enheter
+      url: ../tutorial-protect-email-on-unmanaged-devices.md
+  - linkListType: concept
+    links:
+    - text: ADAL och Intune
+      url: ../app-modern-authentication-block.md
+  - linkListType: how-to-guide
+    links:
+    - text: Skapa och tilldela princip för villkorlig åtkomst
+      url: ../conditional-access-exchange-create.md
+    - text: Vanliga sätt att använda villkorlig åtkomst
+      url: ../conditional-access-intune-common-ways-use.md
+    - text: Jamf Pro för macOS
+      url: ../conditional-access-integrate-jamf.md

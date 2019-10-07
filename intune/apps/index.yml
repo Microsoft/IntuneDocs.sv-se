@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: Hantera appar
+summary: Med Microsoft Intune kan du hantera de klientappar som din organisation använder. Du kan konfigurera, lägga till, tilldela, skydda, övervaka, uppdatera och dra tillbaka appar över flera olika plattformar och användare.
+metadata:
+  title: Hantera appar
+  description: Hantera appar och skydda dem
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: landing-page
+  ms.collection: collection
+  author: erikre
+  ms.author: erikre
+  ms.manager: dougeby
+  ms.date: 09/25/2019
+  ms.openlocfilehash: ba12c3a3253fd35bf803342214b73fc094abc3aa
+  ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+  ms.translationtype: HT
+  ms.contentlocale: sv-SE
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71729017"
+landingContent:
+- title: Komma igång med appar
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Översikt över apphantering
+      url: app-management.md
+  - linkListType: quickstart
+    links:
+    - text: Lägga till och tilldela ett program
+      url: quickstart-add-assign-app.md
+  - linkListType: concept
+    links:
+    - text: Applivscykel
+      url: app-lifecycle.md
+- title: Lägga till appar
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Lägg till översikt över appar
+      url: apps-add.md
+    - text: Skyddade appar i Intune
+      url: apps-supported-intune-apps.md
+  - linkListType: how-to-guide
+    links:
+    - text: Store-appar
+      url: store-apps-android.md
+    - text: Branschspecifika appar
+      url: lob-apps-android.md
+    - text: Win32-apphantering för fristående Intune
+      url: apps-win32-app-management.md
+    - text: Använda PowerShell-skript på Windows 10-enheter
+      url: intune-management-extension.md
+    - text: Tilldela appar till grupper
+      url: apps-deploy.md
+- title: Tilldela appar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Tilldela appar till grupper
+      url: apps-deploy.md
+    - text: Intune och exkludera appar
+      url: apps-inc-exl-assignments.md
+    - text: Distribuera följande gäller för Windows 10-appar
+      url: apps-windows-10-app-deploy.md
+    - text: Distribuera appar till myndighetsmiljöer
+      url: apps-deploy-gcc-dod.md
+- title: Konfigurera appar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Rensa program selektivt
+      url: apps-selective-wipe.md
+    - text: iOS hanterade enheter
+      url: app-configuration-policies-use-ios.md
+    - text: Hanterade Android Enterprise-enheter
+      url: app-configuration-policies-use-android.md
+    - text: Hantera appar utan enhetsregistrering
+      url: app-configuration-policies-managed-app.md
+    - text: Konfigurera Managed Browser
+      url: app-configuration-managed-browser.md
+    - text: Hantera VPP-appar och-böcker
+      url: vpp-apps.md
+- title: Skydda appar
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Översikt över principer för appskydd
+      url: app-protection-policy.md
+  - linkListType: how-to-guide
+    links:
+    - text: Skapa och tilldela skyddsprinciper för appar
+      url: app-protection-policies.md
+    - text: Verifiera programskyddsprinciper
+      url: app-protection-policies-validate.md
+    - text: Övervaka användarstatus för programskydd
+      url: app-protection-policies-monitor.md
+    - text: Skapa och tilldela WIP-programskyddsprinciper
+      url: windows-information-protection-policy-create.md
+    - text: Hantera dataöverföring mellan iOS-appar
+      url: data-transfer-between-apps-manage-ios.md
+- title: Felsöka appar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Felsöka problem med att installera appen
+      url: troubleshoot-app-install.md
+    - text: Felsök hantering av mobilprogram
+      url: troubleshoot-mam.md
+    - text: Granska appskyddsloggar
+      url: app-protection-policy-settings-log.md

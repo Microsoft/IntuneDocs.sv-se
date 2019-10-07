@@ -1,0 +1,79 @@
+- name: Vägledning för utvecklare
+  href: index.yml
+- name: Instruktioner
+  expanded: true
+  items:
+    - name: Skydda program med Intune App SDK
+      href: app-sdk.md
+      items:
+        - name: Kom igång med Intune App SDK
+          href: app-sdk-get-started.md
+        - name: Förbereda LOB-program för programskydd
+          href: apps-prepare-mobile-application-management.md
+        - name: Appomslutningsverktyg för iOS
+          href: app-wrapper-prepare-ios.md
+        - name: Intune App SDK för iOS
+          href: app-sdk-ios.md
+        - name: Appomslutningsverktyg för Android
+          href: app-wrapper-prepare-android.md
+          displayName: dex
+        - name: Intune App SDK för Android
+          href: app-sdk-android.md
+          items:
+            - name: Android-testguide för Intune App SDK
+              href: app-sdk-android-testing-guide.md
+        - name: Xamarin-bindningar för Intune App SDK
+          href: app-sdk-xamarin.md
+    - name: Använda Intune-informationslagret
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Ändringslogg för Informationslager
+          href: reports-changelog.md
+        - name: Ansluta till informationslagret med Power BI
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Skapa en rapport från OData-feeden med Power BI
+          href: reports-proc-create-with-odata.md
+    - name: Rapportera med Intunes informationslager-API
+      href: reports-nav-intune-data-warehouse.md
+      items:
+        - name: Hämta data från API för informationslager med en REST-klient
+          href: reports-proc-data-rest.md
+        - name: API-slutpunkt för informationslager
+          href: reports-api-url.md
+        - name: Autentisering endast med program för informationslager
+          href: data-warehouse-app-only-auth.md
+        - name: Datamodellen informationslager
+          href: reports-ref-data-model.md
+          items:
+            - name: Informationslagersamlingar
+              href: intune-data-warehouse-collections.md
+            - name: Informationslagersamlingar (beta)
+              items:
+                - name: Representation av användarens livstid i Intunes informationslager
+                  href: reports-ref-user-timeline.md
+                - name: Referens för programenheter
+                  href: reports-ref-application.md
+                - name: Referens för datumentitet
+                  href: reports-ref-date.md
+                - name: Referens för enhetsentiteter
+                  href: reports-ref-devices.md
+                - name: Referens för tilläggsentitet för Intune-hantering
+                  href: reports-ref-intunemanagementextension.md
+                - name: Referens för MAM-entiteter (hantering av mobilappshantering)
+                  href: reports-ref-mobile-app-management.md
+                - name: Referens för principentiteter
+                  href: reports-ref-policy.md
+                - name: Referens för entiteten för användarenhetsassociation
+                  href: reports-ref-user-device.md
+                - name: Referens för användarentitet
+                  href: reports-ref-user.md
+        - name: Flytta Intune-kontodata för informationslager
+          href: data-warehouse-account-move.md
+    - name: 'Få åtkomst till Intune API:er i Microsoft Graph'
+      items:
+        - name: 'Använd Azure AD för att få åtkomst till Intune API:er i Microsoft Graph'
+          href: intune-graph-apis.md
+        - name: Intune API-referens
+          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+        - name: 'Graph API:er som används för att konfigurera enheter'
+          href: graph-apis-used-by-intune-device-configuration-windows.md
