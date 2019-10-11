@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04afc9c44bc1c4898950e6f3aff5dac7cb93370f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3aadafbcf9c9208e7c87504c5459731de1e402b5
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56323417"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "71302615"
 ---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Aktivera automatisk registrering i Windows 10
 
@@ -21,7 +21,7 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
 
    ![Skärmbild av Azure-portalen](../media/auto-enroll-azure-main.png)
 
-2. Välj **Mobility (MDM och MAM)**.
+2. Välj **Mobility (MDM och MAM)** .
 
    ![Skärmbild av Azure-portalen](../media/auto-enroll-mdm.png)
 
@@ -41,7 +41,7 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
       > För företagsenheter har MDM-användaromfattningen företräde om båda omfattningarna har aktiverats. Enheterna MDM-registreras.
 
    > [!NOTE]
-   > MAM-användaromfånget måste anges till en användargrupp eller en samling.
+   > MDM-användaromfånget måste vara inställt på en Azure AD-grupp som innehåller användarobjekt.
 
    ![Skärmbild av Azure-portalen](../media/auto-enroll-scope.png)
 

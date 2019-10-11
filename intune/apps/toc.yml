@@ -43,18 +43,20 @@
               href: store-apps-ios.md
             - name: Windows Phone 8.1 Store-appar
               href: store-apps-windows-phone-8-1.md
-            - name: Microsoft Store-appar
-              items:
-                - name: Windows-appar
-                  href: store-apps-windows.md
-                - name: Företagsportalappen
-                  href: store-apps-company-portal-app.md
+            - name: Windows-appar
+              href: store-apps-windows.md
+            - name: Microsoft Store för företag-appar
+              href: windows-store-for-business.md
             - name: Google Play-appar som hanteras
               href: apps-add-android-for-work.md
+        - name: Office 365-programsvit
+          items:
             - name: Office 365-appar för Windows 10
               href: apps-add-office365.md
             - name: Office 365-appar för macOS
               href: apps-add-office365-macos.md
+        - name: Android Enterprise-systemprogram
+          href: apps-ae-system.md
         - name: Webbappar
           href: web-app.md
           displayName: web; web link; weblink; web-link
@@ -74,10 +76,12 @@
               href: app-sideload-windows.md
             - name: macOS LOB-appar
               href: lob-apps-macos.md
-        - name: Android Enterprise-systemprogram
-          href: apps-ae-system.md
-        - name: Win32-apphantering
-          href: apps-win32-app-management.md
+            - name: Win32-apphantering
+              href: apps-win32-app-management.md
+        - name: Lägga till specifika appar
+          items:
+            - name: Företagsportalappen
+              href: store-apps-company-portal-app.md
         - name: PowerShell-skript
           href: intune-management-extension.md
     - name: Tilldela appar
