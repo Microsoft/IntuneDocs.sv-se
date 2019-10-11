@@ -1,7 +1,7 @@
 ---
 title: Så här övervakar du appskyddsprinciper
 titleSuffix: Microsoft Intune
-description: I det här ämnet beskrivs hur du övervakar mobilappars efterlevnadsstatus för hanteringsprinciper i Intune.
+description: Det här avsnittet beskriver hur du övervakar appskyddsprinciper i Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -12,24 +12,24 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
-ms.reviewer: joglocke
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fad554ace3b7c8c279161f149bc06854dfaca93d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0b4ab3369f241c9f33d4e0bddfd0dcf98c8ab915
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725523"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830587"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Du kan övervaka efterlevnadsstatusen i de hanteringsprinciper för mobilappar som du har tillämpat på användare i fönstret för Intunes appskydd i [Azure-portalen](https://portal.azure.com). Där hittar du dessutom information om de användare som påverkas av principerna, dess efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
 
-Det finns tre olika platser där du kan övervaka efterlevnadsstatusen i hanteringsprinciper för mobilappar:
+Det finns tre olika platser för att övervaka appskyddsprinciper:
 - Sammanfattningsvy
 - Detaljerad vy
 - Rapporteringsvy
@@ -72,10 +72,20 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
 - **Status**:
   - **Incheckad**: Principen har distribuerats till användaren och appen användes i arbetskontexten minst en gång.
   - **Inte incheckad**: Principen har distribuerats till användaren, men appen har inte använts i arbetskontexten sedan dess.
-- **Senaste synkronisering**: När enheten senast synkroniserades.
+- **Senaste synkronisering**: När appen senast synkroniserades med Intune. 
 
 >[!NOTE]
-> Om MAM-principen inte har distribuerats till de användare som du sökte efter, visas ett meddelande om att inga MAM-principer tillämpas på användaren.
+> Kolumnen ”senaste synkronisering” representerar samma värde i både användarstatusrapporten i konsolen och appskyddsprincipens [exporterbara CSV-rapport](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities-to-csv). Skillnaden är en liten fördröjning i synkronisering mellan värdet i de två rapporterna. 
+>
+> Tiden som refereras i ”senaste synkronisering” är när Intune senast såg ”appinstansen”. En appinstans är en unik kombination av app + användare + enhet. När en slutanvändare startar en app kan det hända att den inte kommunicerar med Intunes appskyddstjänst vid starttiden, beroende på när den senast kontrollerades. Den här dokumentationen hjälper till att klargöra [återförsöksintervall för kontroll av appskyddsprincipen](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Så om en slutanvändare inte har använt den specifika appen vid det senaste kontrollintervallet (som vanligtvis är 30 minuter för aktiv användning) och de startar appen:
+>
+> - Kommer appskyddsprincipens exporterbara CSV-rapport att ha den senaste tiden inom 1 minut (vanligtvis) till 30 minuter (det högsta SLA som faktiskt tillhandahålls av SQL-sammanslagning som används av Intune-rapportering).
+> - Användarens statusrapport kommer att ha den senaste tiden omedelbart.
+>
+> Anta till exempel att du har en riktad och licensierad slutanvändare som startar en skyddad app kl 12.00:
+> - Om det här är en inloggning för första gången innebär det att slutanvändaren har loggat ut innan (inte aktiv användning), vilket kan innebära att de inte hade någon registrering av en appinstans med Intune. När de loggar in får de en ny appinstansregistrering och kontrolleras direkt om det inte finns anslutningsproblem, med samma tidsfördröjning som anges ovan för framtida kontroller. Den senaste synkroniseringen skulle alltså rapportera som 12.00 i rapporten om användarstatus och 12:01 (eller 12:30 i sämsta fall) i rapporten om appskyddsprinciper. 
+> - Om de bara startade appen, kommer den senaste synkroniseringstiden som rapporterats att vara beroende av när de senast kontrollerades.
+
 
 Visa rapporter för en användare genom att följa anvisningarna:
 
@@ -88,6 +98,9 @@ Visa rapporter för en användare genom att följa anvisningarna:
     ![Skärmbild som visar alternativet Välj användare i fönstret Apprapportering](./media/app-protection-policies-monitor/MAM-reporting-2.png)
 
 3. Välj användaren i listan. Du kan se information om användarens kompatibilitetsstatus.
+
+>[!NOTE]
+> Om MAM-principen inte har distribuerats till de användare som du sökte efter, visas ett meddelande om att inga MAM-principer tillämpas på användaren.
 
 ### <a name="flagged-users"></a>Flaggade användare
 I den detaljerade vyn visas felmeddelandet, appen som användes när felet inträffade, enhetens operativsystem och en tidsstämpel. Användare med enheter som är flaggade av den villkorliga startkontrollen ”SafetyNet-kontroll för enhetsattestering” rapporteras här med de orsaker som har rapporterats av Google.

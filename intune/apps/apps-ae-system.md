@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ffc99b34016eba6511f63d1df2184abc3cae858
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c07ce82bbc056e1d76abeb5d31bf57e0973fad6e
+ms.sourcegitcommit: bdf948be824cf5390d5166a277f389f3785c81f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725172"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960886"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Lägg till Android Enterprise-systemappar i Microsoft Intune
 
@@ -42,9 +42,13 @@ Du kan lägga till en Android Enterprise-systemapp till Intune från Azure Porta
 5. Välj **OK**.
 6. Välj **Lägg till**.
 
+> [!NOTE]
+> Du måste arbeta med enhetens OEM-enhet för att hitta paketnamnet för den app som du vill aktivera/inaktivera.
+
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. 
 
 Android Enterprise-appar aktiverar eller inaktiverar appar som redan ingår i plattformen. Om du vill aktivera en app tilldelar du systemappen som **Krävs**. Om du vill inaktivera en app tilldelar du systemappen som **Avinstallera**. Systemappar kan inte tilldelas som tillgängliga för en användare.
+
 
 ## <a name="next-steps"></a>Nästa steg
 

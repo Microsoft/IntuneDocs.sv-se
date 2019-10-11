@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a345cdf2162db6b55fe5698488036fad0677a6e1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e3fb9af260b8fddc78b644b8ede056c90bac24d0
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723274"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999351"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 |**Administratör för Android-enhet**|**(Förhandsdeklarerad IMEI eller SN) Användarinitierat via företagsportalen**| Nej | Ja | Nej | [Mer information](./../corporate-identifiers-add.md)|
 |**Administratör för Android-enhet med Zebra Mobility Extensions**|**Användare eller [DEM](#device-enrollment-manager) initierat via företagsportalen**| Nej | Ja vid användarinitierad, nej vid [DEM](#device-enrollment-manager)-initierad | Nej | [Mer information](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise-dedikerad**|**NFC, QR-kod, Zero Touch-token**| Ja | Nej | Kan konfigureras via princip | [Mer information](android-kiosk-enroll.md)|
-|**Fullständigt hanterade Android Enterprise (förhandsversion)**|**NFC, QR-kod, Zero Touch-token**| Ja | Ja | Kan konfigureras via princip | [Mer information](android-dedicated-devices-fully-managed-enroll.md)|
+|**Fullständigt hanterad Android Enterprise**|**NFC, QR-kod, Zero Touch-token**| Ja | Ja | Kan konfigureras via princip | [Mer information](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
