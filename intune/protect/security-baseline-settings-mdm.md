@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7bba4617aa756c5f7168a2febf1a3f1ffdd2029
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1938f6862fa7b74dccc4ea23ac139fcd955d77d7
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736006"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237266"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Inställningar för MDM-säkerhetsbaslinjer för Intune  
 
@@ -1622,7 +1622,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
 
 - **Email content execution type** (Körbara filtyper i e-postinnehåll)  
   Den här regeln blockerar följande filtyper från att köra eller startas från ett e-postmeddelande som visas i Microsoft Outlook eller webbaserad e-post (till exempel Gmail.com eller Outlook.com): körbara filer (till exempel .exe, .dll eller .scr) skriptfiler (till exempel en PowerShell .ps, VisualBasic .vbs eller JavaScript .js).  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067063)  
+  [Läs mer](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail) 
   
   **Standard**: Blockera
 
@@ -1632,7 +1632,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
 
 - **Network protection type** (Typ av nätverksskydd)  
   Med den här principen kan du aktivera nätverksskydd (blockera/granska) eller inaktivera nätverksskydd i Windows Defender Exploit Guard. Nätverksskydd är en funktion i Windows Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser. Värdetypen är ett heltal. Om du aktiverar den här principinställningen aktiveras nätverksskydd och anställda kan inte inaktivera funktionen. Beteendet kan styras med följande alternativ: Blockera och Granska. Om du aktiverar den här principen med alternativet ”Blockera” hindras användare och appar från att ansluta till farliga domäner. Du kan se den här aktiviteten i Windows Defender Security Center. Om du aktiverar den här principen med alternativet ”Granska” hindras inte användare/appar från att ansluta till farliga domäner. Du kommer dock fortfarande att se den här aktiviteten i Windows Defender Security Center. Om du inaktiverar den här principen blockeras inte användare/appar från att ansluta till farliga domäner. Du kommer inte att se någon nätverksaktivitet i Windows Defender Security Center. Om du inte konfigurerar den här principen inaktiveras nätverksblockering som standard.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067102)  
+  [Läs mer](/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)  
   
   **Standard**: Aktivera
   

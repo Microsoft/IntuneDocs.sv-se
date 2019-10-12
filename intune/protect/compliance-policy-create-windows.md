@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2019
+ms.date: 10/10/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 484035603e4fb447b004aad6c6f85726034f3c23
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 493db6299aa8242d0ca6ab669b313e85d0dc14c6
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732834"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251578"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Windows 10 och senare för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
@@ -138,6 +138,9 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 - **Brand vägg**: Ställ in på **Kräv** att aktivera Microsoft Defender-brandväggen och hindra användare från att stänga av den. **Inte konfigurerad** (standard) styr inte Microsoft Defender-brandväggen eller ändra befintliga inställningar.
 
   [Brand vägg CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+
+  > [!NOTE]
+  > Om enheten omedelbart synkroniseras efter en omstart eller om synkroniseringen genast aktive ras från vilo läge, kan den här inställningen rapportera **fel**. Det här scenariot kanske inte påverkar den övergripande status för enhetens efterlevnad. [Synkronisera enheten](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows)manuellt om du vill utvärdera kompatibilitetsstatus igen.
 
 - **Trusted Platform Module (TPM)** : När inställningen är **obligatorisk**kontrollerar Intune versionen för kompatibilitet. Enheten är kompatibel om TPM-chipets version är större än 0 (noll). Enheten är inte kompatibel om det inte finns någon TPM-version på enheten. När det **inte är konfigurerat**kontrollerar Intune inte enheten för en TPM-krets-version.
 
