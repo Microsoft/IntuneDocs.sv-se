@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b9091b723e78631a13c9358687ae77c36b8d47
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c4f3424c0d9712affbbf8ba3929e825b62ce5864
+ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722455"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940324"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
-Intune stöder hantering av mobila enheter (MDM) för iPad och iPhone och ger användarna åtkomst till företagets e-post och appar.
+Intune stöder hantering av mobila enheter (MDM) för iPad och iPhone och ger användarna säker åtkomst till företagets e-post, data och appar.
 
-Som en Intune-administratör kan du aktivera registrering för iOS-enheter. Du kan låta användare registrera personligt ägda enheter, vilket även kallas ”bring your own device” (BYOD)-registrering. Du kan också aktivera registrering av företagsägda enheter.
+Som Intune-administratör kan du konfigurera registrering för iOS- och iPad-enheter för åtkomst till företagets resurser. Du kan låta användare registrera personligt ägda enheter, även kallat BYOD-registrering (Bring Your Own Device). Du kan också konfigurera registrering av företagsägda enheter.
 
 ## <a name="prerequisites-for-ios-enrollment"></a>Krav för iOS-registrering
 
@@ -38,9 +38,14 @@ Innan du kan aktivera iOS-enheter måste du göra följande:
 - [Konfigurera Intune](../fundamentals/setup-steps.md) - följande steg konfigurerar din Intune-infrastruktur. I synnerhet kräver registrering av enheter att du [anger en MDM-utfärdare](../fundamentals/mdm-authority-set.md).
 - [Hämta ett certifikat för Apple MDM Push](apple-mdm-push-certificate-get.md) -Apple kräver ett certifikat för att aktivera hantering av iOS- och macOS-enheter.
 
-## <a name="user-owned-ios-devices-byod"></a>Användarägda iOS-enheter (BYOD)
+## <a name="user-owned-ios-and-ipados-devices-byod"></a>Användarägda iOS- och iPad-enheter (BYOD)
 
-Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. När du uppfyller kraven och har tilldelat licenser till användarna, kan de ladda ned företagsportalappen för Intune från App Store och följa instruktionerna för registrering i appen. Du kan anpassa sekretesspolicyn för Företagsportal på iOS-enheter enligt beskrivningen i [anpassning av sekretesspolicy](../apps/company-portal-app.md#privacy-statement-customization).
+Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. Det finns tre användarregistreringsalternativ:
+- Appskyddsprinciper ger den enklaste BYOD-upplevelsen, med hantering endast på appnivå. Om du även vill skydda enheten med en 6-siffrig komplex PIN-kod kan du använda dessa principer tillsammans med Användarregistrering.
+- Enhetsregistrering är antagligen det du tänker på när du tänker på en typisk BYOD-registrering. Med Enhetsregistrering har administratörer tillgång till en rad olika hanteringsalternativ.
+- Användarregistrering är en enklare registreringsprocess som ger tillgång till en mindre uppsättning enhetshanteringsalternativ. Den här funktionen finns för närvarande som en förhandsversion. 
+
+När alla krav är uppfyllda och du har tilldelat licenser till användarna, kan de ladda ned företagsportalappen för Intune från App Store och följa instruktionerna för registrering i appen. Du kan anpassa sekretesspolicyn för Företagsportal på iOS-enheter enligt beskrivningen i [anpassning av sekretesspolicy](../apps/company-portal-app.md#privacy-statement-customization).
 
 ## <a name="company-owned-ios-devices"></a>Företagsägda iOS-enheter
 
@@ -55,7 +60,10 @@ Du kan även registrera företagsägda iOS-enheter med ett konto för [enhetsreg
 
 ## <a name="device-enrollment-program"></a>Program för enhetsregistrering
 
-Företag kan nu hantera iOS-enheter som köpts via Apples program för enhetsregistrering (DEP). Med DEP kan du distribuera en registreringsprofil ”over-the-air” för att hantera enheter. Läs mer om [programmet för enhetsregistrering](device-enrollment-program-enroll-ios.md).
+Företag kan nu hantera iOS-enheter som köpts via Apples program för enhetsregistrering (DEP). Med DEP kan du distribuera en registreringsprofil ”over-the-air” för att hantera enheter. Mer information finns i [Programmet för enhetsregistrering](device-enrollment-program-enroll-ios.md).
+
+## <a name="user-enrollment"></a>Användarregistrering
+Med Användarregistrering får administratörer tillgång till en deluppsättning hanteringsalternativ jämfört med andra registreringsmetoder. Mer information finns i [Åtgärder, lösenord och andra alternativ som stöds i Användarregistrering](ios-user-enrollment-supported-actions.md) och [Konfigurera Användarregistrering för iOS och iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 

@@ -5,7 +5,7 @@ keywords: ''
 author: ralms
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b801da3bd4245361e8c55a40c67daf2c8890fd1e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fead8b9d69f5356876c0b3a2a4ce02e9b754128e
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721610"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999339"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -168,7 +168,7 @@ Välj den nyckellagrinsprovider som matchar providern du använde för att skapa
 
 7. Importera **UserPFXCertificate**-objektet till Intune genom att köra `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
 
-8. Validera certifikatet som har importerats genom att köra `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UsertList "<UserUPN>"`
+8. Validera certifikatet som har importerats genom att köra `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
 
 Mer information om andra tillgängliga kommandon finns i readme-filen i [PFXImport PowerShell Project på GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -186,7 +186,7 @@ När du har importerat certifikaten till Intune skapar du en profil för **PKCS-
 
 3. Gå till **Inställningar** och ange följande egenskaper:
 
-   - **Avsett syfte**: Ange syftet med de certifikat som har importerats för den här profilen. Administratörer kan importera certifikat med olika syften (till exempel autentisering, S/MIME-signering eller S/MIME-kryptering). Avsett syfte som valts i certifikatprofilen matchar certifikatprofilen med rätt importerade certifikat. Avsett syfte är en tagg för att gruppera importerade certifikat och garanterar inte att certifikat som importerats med den taggen uppfyller det avsedda syftet.  
+   - **Avsett syfte**: Ange syftet med de certifikat som har importerats för den här profilen. Administratörer kan importera certifikat med olika syften (till exempel S/MIME-signering eller S/MIME-kryptering). Avsett syfte som valts i certifikatprofilen matchar certifikatprofilen med rätt importerade certifikat. Avsett syfte är en tagg för att gruppera importerade certifikat och garanterar inte att certifikat som importerats med den taggen uppfyller det avsedda syftet.  
    - **Certifikatets giltighetsperiod**: Om giltighetsperioden inte har ändrats i certifikatmallen är standardinställningen för det här alternativet ett år.  
    - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.  
 

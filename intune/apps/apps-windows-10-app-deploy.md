@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 04e943f573fb2485a2ef7f1e3245f08d4222d142
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724977"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830565"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -36,6 +36,8 @@ Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de 
 > - För Windows 10 1709 [21 juni 2018 – KB4284822 (OS-version 16299.522)](https://support.microsoft.com/help/4284822).
 >
 > Endast Windows 10 1803 och senare har stöd för installation av appar när det inte finns någon primär användare associerad.
+>
+> Distribution av LOB-appar stöds inte på enheter som kör Windows 10 Home-utgåvor.
 
 ## <a name="windows-10-line-of-business-apps"></a>Verksamhetsspecifika Windows 10-appar
 

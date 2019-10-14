@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02006acc58789f2a6fb5944e677a1983f7ea9614
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b16dca0b6a73e7228e65c840bfbc91f3577bb59a
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723560"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999282"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -109,7 +109,8 @@ För enheter som registrerats i Intune med KME för Android kan du konfigurera h
 
 > [!NOTE]
 >
->Användarassociation gäller endast för Android-registrering. När användarassociationen definieras kan bara associerad användare registrera enheten med KME. Detta gäller även efter en fabriksåterställning på enheten. Om ingen användarassociation har definierats på Knox-portalen kan alla användare med en giltig licens för Intune registrera enheten med KME.
+>Användarassociationer gäller endast för administratörsregistrering av Android-enheter. När användarassociationen definieras kan bara associerad användare registrera enheten med KME. Detta gäller även efter en fabriksåterställning på enheten. Om ingen användarassociation har definierats på Knox-portalen kan alla användare med en giltig licens för Intune registrera enheten med KME.
+>Även om användarassociationer har definierats för fullständigt hanterade Android Enterprise-enheter överförs de inte till enheten och enheten kopplas inte heller till användaren.
 >
 
 ## <a name="distribute-devices"></a>Distribuera enheter
@@ -126,7 +127,7 @@ Behöver du fortfarande hjälp? Kolla in den kompletta [KME-användarguiden](htt
 
 - **Fabriksåterställning vid registrering i Android Enterprise:** Om syftet för redan konfigurerade enheter ändras, måste enheterna fabriksåterställas när de registreras i Android Enterprise.
 
-- **Uppdateringar med hjälp av Google Play-konto:** Ett Google Play-konto är inte nödvändigt för att registrera enheten till Microsoft Intune. Men framtida uppdateringar till företagsportalappen kan kräva ett Google Play-konto på enheten. Inget Google Play-konto krävs vid registrering i Google-enhetsägarläge.
+- **Uppdateringar med hjälp av Google Play-konto:** Ett Google Play-konto är inte nödvändigt för att registrera enheten till Microsoft Intune. För administratörsregistrering av Android-enheter kan framtida uppdateringar av Intune-företagsportalappen dock kräva ett Google Play-konto på enheten. Inget Google Play-konto krävs vid registrering i Google-enhetsägarläge.
 
 - **Fältet ”Lösenord” ignoreras:** Om fältet **Lösenord** fylls i vid **Enhetsinformation** i Knox-portalen, ignoreras det av Intune-företagsportalappen under Android-registreringen. Användaren måste ange ett lösenord på enheten för att slutföra enhetsregistreringen.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af81552942805bed07e818d6005231e9305b3460
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 08017be16e4257ef0bd7bfb775197feaa20baf75
+ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725796"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940360"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
@@ -88,6 +88,77 @@ Du kan verifiera appkonfigurationsprincipen med följande tre metoder:
 
       ![Skärmbild av appkonfiguration](./media/app-configuration-policies-overview/app-configuration.png)
 
+## <a name="diagnostic-logs"></a>Diagnostikloggar
+
+### <a name="ios-configuration-on-unmanaged-devices"></a>iOS-konfiguration på ohanterade enheter
+
+Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på ohanterade enheter för konfiguration av hanterade appar.
+
+1. Om den inte redan är installerad på enheten laddar du ned och installerar **Intune Managed Browser** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
+2. Starta **Intune Managed Browser** och välj **om** > **intune-hjälp** i navigeringsfältet.
+3. Klicka på **Kom igång**.
+4. Klicka på **Dela loggar**.
+5. Använd valfri e-postapp för att skicka loggen till dig själv så att den kan visas på din dator. 
+6. Granska **IntuneMAMDiagnostics.txt** i ditt visningsprogram för textfiler.
+7. Sök efter `ApplicationConfiguration`. Resultatet ser ut så här:
+
+    ``` JSON
+        {
+            (
+                {
+                    Name = "com.microsoft.intune.mam.managedbrowser.BlockListURLs";
+                    Value = "https://www.aol.com";
+                },
+                {
+                    Name = "com.microsoft.intune.mam.managedbrowser.bookmarks";
+                    Value = "Outlook Web|https://outlook.office.com||Bing|https://www.bing.com";
+                }
+            );
+        },
+        {
+            ApplicationConfiguration =             
+            (
+                {
+                Name = IntuneMAMUPN;
+                Value = "CMARScrubbedM:13c45c42712a47a1739577e5c92b5bc86c3b44fd9a27aeec3f32857f69ddef79cbb988a92f8241af6df8b3ced7d5ce06e2d23c33639ddc2ca8ad8d9947385f8a";
+                },
+                {
+                Name = "com.microsoft.outlook.Mail.NotificationsEnabled";
+                Value = false;
+                }
+            );
+        }
+    ```
+
+Informationen om programkonfigurationen bör överensstämma med de programkonfigurationsprinciper som konfigurerats för din klient. 
+
+![Konfiguration av riktade appar](./media/app-configuration-policies-overview/targeted-app-configuration-3.png)
+
+### <a name="ios-configuration-on-managed-devices"></a>iOS-konfiguration på hanterade enheter
+
+Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
+
+1. Om den inte redan är installerad på enheten laddar du ned och installerar **Intune Managed Browser** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
+2. Starta **Intune Managed Browser** och välj **om** > **intune-hjälp** i navigeringsfältet.
+3. Klicka på **Kom igång**.
+4. Klicka på **Dela loggar**.
+5. Använd valfri e-postapp för att skicka loggen till dig själv så att den kan visas på din dator. 
+6. Granska **IntuneMAMDiagnostics.txt** i ditt visningsprogram för textfiler.
+7. Sök efter `AppConfig`. Resultatet bör överensstämma med de programkonfigurationsprinciper som konfigurerats för din klient.
+
+### <a name="android-configuration-on-managed-devices"></a>Android-konfiguration på hanterade enheter
+
+Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
+
+Om du vill samla in loggar från en Android-enhet måste du eller slutanvändaren ladda ned loggarna från enheten via en USB-anslutning (eller motsvarigheten till **Utforskaren** på enheten). Här är stegen:
+
+1. Anslut Android-enheten till datorn med USB-kabeln.
+2. Leta efter en mapp med namnet på din enhet på datorn. I den katalogen söker du efter `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.
+3. Öppna mappen Filer i mappen `com.microsoft.windowsintune.companyportal` och öppna `OMADMLog_0`.
+3. Sök efter `AppConfigHelper` för att leta upp meddelanden relaterade till appkonfigurationen. Resultatet ser ut ungefär så här:
+
+    `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`
+    
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API har stöd för appkonfiguration
 
 Du kan använda Graph API för att utföra de här appkonfigurationsuppgifterna. Mer information finns i [Graph API-referens för MAM-riktad konfiguration](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).

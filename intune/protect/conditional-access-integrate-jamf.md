@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 09/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b439067d06cf49a4ff83288e109d1fccd3801106
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d7a63f3ff1e2936eff0961d4a9b368b0289e2b65
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722728"
+ms.locfileid: "71813958"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
 Gäller för: Intune i Azure Portal
 
-Om din organisation använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanvändares Mac-datorer, kan du använda Microsoft Intunes efterlevnadsprinciper med villkorlig åtkomst i Azure Active Directory för att se till att enheter inom din organisation är kompatibla.
+Om din organisation använder [Jamf Pro](https://www.jamf.com) för att hantera macOS-enheter, kan du använda Microsoft Intune-efterlevnadsprinciper med villkorsstyrd åtkomst i Azure AD (Azure Active Directory) för att kontrollera att enheterna i organisationen är kompatibla innan de får åtkomst till företagets resurser. Den här artikeln beskriver hur du konfigurerar Jamf-integrering med Intune.
+
+När Jamf Pro integreras med Intune kan du synkronisera inventeringsdata från macOS-enheter med Intune via Azure AD. Intunes efterlevnadsmotor analyserar sedan inventeringsdata för att generera en rapport. Intunes analys kombineras med information om enhetsanvändarens Azure AD-identitet för att kräva efterlevnad med villkorlig åtkomst. Enheter som är kompatibla med principerna för villkorlig åtkomst kan få åtkomst till skyddade företagsresurser.
+
+När du har konfigurerat integrationen [konfigurerar du Jamf och Intune för att kräva efterlevnad med villkorlig åtkomst](conditional-access-assign-jamf.md) på enheter som hanteras av Jamf.  
+
 
 ## <a name="prerequisites"></a>Krav
 
+### <a name="products-and-services"></a>Produkter och tjänster
 Du behöver följande för att konfigurera villkorlig åtkomst med Jamf Pro:
 
 - Jamf Pro 10.1.0 eller senare
 - [Företagsportalappen för macOS](https://aka.ms/macoscompanyportal)
 - macOS-enheter med OS X 10.11 Yosemite eller senare
+
+### <a name="network-ports"></a>Nätverksportar
+<!-- source: https://support.microsoft.com/en-us/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune -->
+Följande portar måste vara tillgängliga för att Jamf och Intune ska kunna integreras korrekt: 
+- **Intune**: Port 443
+- **Apple**: Portarna 2195, 2196 och 5223 (push-meddelanden till Intune)
+- **Jamf**: Portarna 80 och 5223
+
+För att APN ska fungera korrekt i nätverket måste du även aktivera utgående anslutningar till och omdirigerar från:
+- Apple 17.0.0.0/8-blocket över TCP-portarna 5223 och 443 från alla klientnätverk.   
+- portarna 2195 och 2196 från Jamf Pro-servrar.  
+
+Mer information om dessa portar finns i följande artiklar:  
+- [Krav för Intune-nätverkskonfiguration och bandbredd](../fundamentals/network-bandwidth-use.md).
+- [Nätverksportar som används av Jamf Pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro) på jamf.com.
+- [TCP- och UDP-portar som används av Apples programvaruprodukter](https://support.apple.com/HT202944) på support.apple.com
+
 
 ## <a name="connect-intune-to-jamf-pro"></a>Ansluta Intune till Jamf Pro
 
@@ -70,7 +93,7 @@ Så här ansluter du Intune till Jamf Pro:
 
    Välj **Lägg till behörighet** för att spara konfigurationen.  
 
-8. På sidan **API-behörigheter** väljer du **Bevilja administratörens godkännande för Microsoft** och väljer sedan **Ja**.  
+8. På sidan **API-behörigheter** väljer du **Bevilja administratörens godkännande för *\<din klientorganisation>*** och väljer sedan **Ja**.  När appen har registrerats bör API-behörigheterna visas på följande sätt: ![Lyckade behörigheter](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
    Registreringsprocessen i Azure AD har slutförts.
 
@@ -99,6 +122,7 @@ Så här ansluter du Intune till Jamf Pro:
 ## <a name="set-up-compliance-policies-and-register-devices"></a>Ställ in efterlevnadsprinciper och registrera enheter
 
 När du har konfigurerat integrationen mellan Intune och Jamf måste du [tillämpa efterlevnadsprinciper för enheter som hanteras av Jamf](conditional-access-assign-jamf.md).
+
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>Koppla från Jamf Pro och Intune 
 

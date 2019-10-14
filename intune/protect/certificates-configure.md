@@ -16,22 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74b920deeb5255f6f938f0c8b07eaab6d765e68e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722975"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999298"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Använda certifikat för autentisering i Microsoft Intune  
 
 Använd certifikat med Intune för att autentisera dina användare till program och företagsresurser via VPN, Wi-Fi eller e-postprofiler. När du använder certifikat för att autentisera dessa anslutningar behöver dina slutanvändare inte ange användarnamn och lösenord, vilket gör att deras åtkomst mer sömlös. Certifikat används även för signering och kryptering av e-post med hjälp av S/MIME.
 
-Intune har stöd för följande certifikattyper:  
-
-- Simple Certificate Enrollment Protocol (SCEP)  
-- PKCS#12 (eller PFX)  
-- PKCS-importerade certifikat
+## <a name="intune-supported-certificates-and-usage"></a>Intune-kompatibla certifikat och användning
+| Typ              | Autentisering | S/MIME-signering | S/MIME-kryptering  |
+|--|--|--|--|
+| PKCS-importerat certifikat |  | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png)|
+| PKCS#12 (eller PFX)    | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |  |
+| Simple Certificate Enrollment Protocol (SCEP)  | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | |
 
 Du distribuerar de här certifikaten genom att skapa och tilldela certifikatprofiler till enheter.  
 

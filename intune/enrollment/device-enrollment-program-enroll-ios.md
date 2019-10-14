@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e9b5eb15cf446b317818a93baa075cdbd33afd2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 19389a21aa28f5fa957f62c988753f46bf1bc731
+ms.sourcegitcommit: 46322ca7a92971e18dc0b230f436b9ca892b90c5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723313"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008339"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -31,6 +31,9 @@ Du kan konfigurera Intune till att registrera iOS-enheter som köpts via Apples 
 Om du vill aktivera DEP-registrering kan du använda både Intune och Apples DEP-portal. En lista med serienummer eller inköpsordernummer krävs så att du kan tilldela enheter till Intune för hantering. Du kan skapa DEP-registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
 DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
+
+> [!NOTE]
+> DEP definierar enhetskonfigurationer som inte kan tas bort av slutanvändaren. Innan [migreringen till DEP](../fundamentals/migration-guide-considerations.md) måste enheten därför rensas så att den återställs till dess ursprungliga tillstånd (fabriksinställningarna).
 
 ## <a name="dep-and-the-company-portal"></a>DEP och företagsportalen
 

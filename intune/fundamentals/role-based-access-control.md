@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eab50a21ea01cd4075bd78add980d2839606a1a2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6e9df15efc7a16a0ce1ee6b0412f9160831efdec
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721883"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163509"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -66,6 +66,7 @@ Du kan skapa egna roller med anpassade behörigheter. Mer information om anpassa
 | Säkerhetsläsare | Skrivskyddad | Skrivskyddad |
 | Efterlevnadsadministratör | Inga | Skrivskyddad |
 | Efterlevnadsdataadministratör | Inga | Skrivskyddad |
+| Global läsare | Skrivskyddad | Skrivskyddad |
 
 > [!TIP]
 > Intune visar också tre tillägg för Azure Active Directory: **Användare**, **Grupper** och **Villkorlig åtkomst**, som kontrolleras med hjälp av Azure Active Directory RBAC. Dessutom kan den **Användarkontoadministratören** endast utför aktiviteter för AAD-användare/-grupp och har inte fullständig behörighet att utföra alla aktiviteter i Intune. Mer information finns i [RBAC med Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
