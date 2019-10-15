@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b9b9119294fe0757671568eb6b627974796b2de
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
-ms.translationtype: HT
+ms.openlocfilehash: 22e3779cd0772753ccd8843cd1f1ff38617298d6
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732730"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163585"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Inställningar för Windows 10 (och senare) för att skydda delade enheter med Intune  
 
@@ -776,26 +776,27 @@ De här inställningarna gäller specifikt för flyttbara data enheter.
  
 ## <a name="windows-defender-exploit-guard"></a>Windows Defender Exploit Guard  
 
-Använd [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) för att hantera och minska attackytan för appar som medarbetarna använder.  
+Använd [sårbarhets skydd](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) för att hantera och minska risken för angrepp i appar som används av dina anställda.  
 
 ### <a name="attack-surface-reduction"></a>Minska attackytan  
 
-Information om regler för att minska risken för *attacker* finns i [minska angrepp med Windows Defender sårbarhet Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) i Windows Defender-dokumentationen.  
+Reglerna för minskning av attack ytan förhindrar att skadlig kod används ofta för att infektera datorer med skadlig kod.  
 
 #### <a name="attack-surface-reduction-rules"></a>Regler för att minska attackytan  
 
 - **Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem**  
   **Standard**: Inte konfigurerat  
-  Sårbarhets skydd: regler för att [minska attack ytan](https://go.microsoft.com/fwlink/?linkid=874499)
+  Regel: [Blockera stöld av autentiseringsuppgifter från det lokala säkerhetsundersystemet i Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
 
   Hjälp till att förhindra åtgärder och appar som normalt används av skadlig kod som söker sårbarheter för att angripa datorer.  
+
   - **Inte konfigurerat**  
   - **Aktivera** Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem (lsass.exe).  
   - **Endast granskning**  
 
 - **Skapa process från Adobe Reader (beta)**  
   **Standard**: Inte konfigurerat  
-  Sårbarhets skydd: regler för att [minska attack ytan](https://go.microsoft.com/fwlink/?linkid=853979)  
+  Regel: [blockera Adobe Reader från att skapa underordnade processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **Inte konfigurerat**  
   - **Aktivera** -blockera underordnade processer som skapas från Adobe Reader.  
@@ -807,7 +808,7 @@ Blockera Office-appar från att vidta följande åtgärder:
 
 - **Office-appar som infogar i andra processer (inga undantag)**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872974)  
+  Regel: [blockera Office-program från att injicera kod i andra processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Office-appar från att injiceras i andra processer.  
@@ -815,7 +816,7 @@ Blockera Office-appar från att vidta följande åtgärder:
 
 - **Office-appar/-makron som skapar körbart innehåll**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872975)  
+  Regel: [blockera Office-program från att skapa körbart innehåll](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Office-appar och makron från att skapa körbart innehåll.  
@@ -823,7 +824,7 @@ Blockera Office-appar från att vidta följande åtgärder:
 
 - **Office-appar som startar underordnade processer**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872976)  
+  Regel: [Blockera alla Office-program från att skapa underordnade processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Office-appar från att starta underordnade processer.  
@@ -831,7 +832,7 @@ Blockera Office-appar från att vidta följande åtgärder:
   
 - **Win32-importer från Office-makrokod**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872977)  
+  Regel: [blockera Win32 API-anrop från Office-makron](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Win32-importer från makrokod i Office.  
@@ -839,7 +840,7 @@ Blockera Office-appar från att vidta följande åtgärder:
   
 - **Skapa process från produkter för Office-kommunikation**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=874499)  
+  Regel: [blockera program från Office-kommunikation från att skapa underordnade processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Inte konfigurerat**  
   - **Aktivera** skapande av underordnade processer från appar för Office-kommunikation.  
@@ -851,7 +852,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
 
 - **Dold js/vbs/ps/makrokod**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872978)    
+  Regel: [blockera körning av potentiellt fördunklade skript](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera alla fördunklade JS/vbs/PS/makrokod.  
@@ -859,7 +860,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
 
 - **js/vbs kör nyttolaster som laddats ned från Internet (inga undantag)**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872979)  
+  Regel: [blockera java script eller VBScript från att starta hämtat körbart innehåll](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera JS/vbs från att köra nytto last som hämtats från Internet.  
@@ -867,7 +868,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
 
 - **Skapa process från PSExec- och WMI-kommandon**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=874500)  
+  Regel: [Blockera processer som skapas från PSExec- och WMI-kommandon](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera skapande av processer från PSExec- och WMI-kommandon.  
@@ -876,7 +877,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
 
 - **Ej betrodda och osignerade processer som körs via USB**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=874502)    
+  Regel: [Blockera obetrodda och osignerade processer som körs via USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera obetrodda och osignerade processer som körs via USB.  
@@ -884,7 +885,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
   
 - **Körbara filer som inte uppfyller ett villkor för användningsmönster, ålder eller betrodd lista**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=874503)    
+  Regel: [Blockera körbara filer från att köras om de inte uppfyller ett villkor för användningsmönster, ålder eller betrodd lista](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera körbara filer från att köras om de inte uppfyller ett villkor för användningsmönster, ålder eller betrodd lista.  
@@ -896,7 +897,7 @@ Blockera följande för att hjälpa till att förhindra e-posthot:
 
 - **Körning av körbart innehåll (exe, dll, ps, js, vbs, osv.) som har tagits bort från e-post (webbaserad e-post/e-postklient) (inga undantag)**  
   **Standard**: Inte konfigurerat  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=872980)  
+  Regel: [blockera körbart innehåll från e-postklient och webbaserad e-post](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera körning av körbart innehåll (exe, dll, ps, js, vbs, osv.) som har tagits bort från e-post (webbaserad e-post/e-postklient).  
@@ -906,7 +907,7 @@ Blockera följande för att hjälpa till att förhindra e-posthot:
 
 - **Avancerat skydd mot utpressningstrojaner**  
   Standard: ej konfigurerad  
-  [Dokumentation om sårbarhet Guard](https://go.microsoft.com/fwlink/?linkid=874504)  
+  Regel: [Använd avancerat skydd mot utpressnings tro Jan](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Inte konfigurerat**  
   - **Aktivera** – använd aggressivt skydd mot utpressningstrojan.  
@@ -932,7 +933,7 @@ Blockera följande för att hjälpa till att förhindra e-posthot:
 
 ### <a name="controlled-folder-access"></a>Reglerad mappåtkomst  
 
-Hjälp till att [skydda värdefulla data](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) från skadliga appar och hot, till exempel utpressningstrojaner.  
+Hjälp till att [skydda värdefulla data](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) från skadliga appar och hot, till exempel utpressningstrojaner.  
 
 - **Mappskydd**  
   **Standard**: Inte konfigurerat  
@@ -979,7 +980,7 @@ Blockera utgående anslutningar från alla appar till IP-adresser eller domäner
 - **Ladda upp XML**  
   **Standard**: *Inte konfigurerat*  
 
-  Om du vill använda sårbarhets skydd för att [skydda enheter från sårbarheter](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)skapar du en XML-fil som innehåller de inställningar för system-och program minskning som du vill ha. Det finns två metoder för att skapa XML-filen:  
+  Om du vill använda sårbarhets skydd för att [skydda enheter från sårbarheter](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)skapar du en XML-fil som innehåller de inställningar för system-och program minskning som du vill ha. Det finns två metoder för att skapa XML-filen:  
 
   - *PowerShell* – använd en eller flera av *Get-ProcessMitigation-* , *Set-ProcessMitigation-* och *ConvertTo-ProcessMitigationPolicy* PowerShell-cmdlets. Cmdlets konfigurerar åtgärdsinställningar och exporterar en XML-representation av dem.  
 

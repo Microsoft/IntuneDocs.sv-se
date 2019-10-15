@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/29/2019
+ms.date: 10/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 149da4c5aafc436156b7b29566bb5d792506de7c
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734797"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251554"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -665,29 +665,55 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
 De här inställningarna använder [CSP för Defender-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), som även visar de Windows-versioner som stöds.
 
-- **Övervakning i realtid**: **Aktivera** inaktiverar genomsökning i realtid efter skadlig programvara, spionprogram och annan oönskad programvara. **Inte konfigurerat** (standard) tillåter den här funktionen.
+- **Övervakning i realtid**: **Aktivera** aktiverar genomsökning i realtid efter skadlig programvara, spionprogram och annan oönskad programvara. Användaren kan inte inaktivera den här inställningen. 
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här funktionen och låter användarna ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-- **Övervaka funktionssätt**: **Aktivera** inaktiverar funktionen i Defender som söker efter kända mönster av misstänkt aktivitet på enheterna. **Inte konfigurerat** (standard) tillåter beteendeövervakning för Windows Defender.
+- **Övervaka funktionssätt**: **Aktivera** aktiverar övervakning av funktionssätt och söker efter kända tecken på misstänkt aktivitet på enheter. Användare kan inte aktivera beteende övervakning. 
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet beteende övervakning och gör det möjligt för användare att ändra det.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **NIS (Network Inspection System)** : NIS hjälper till att skydda enheter mot nätverksbaserade säkerhetsrisker. Det använder signaturer för kända problem från Microsoft Endpoint Protection Center för att identifiera och blockera skadlig trafik.
 
-  **Inte konfigurerad** (standard) inaktiverar den här funktionen. Användare blockeras inte från att ansluta till kända sårbarheter. När det är inställt på **Aktivera**, aktive ras nätverks skydd och nätverks blockering, och användarna kan inte inaktivera det. Användare blockeras från att ansluta till kända sårbarheter.
+  **Aktivera** aktiverar nätverks skydd och nätverks blockering. Användaren kan inte inaktivera den här inställningen. När den är aktive rad blockeras användarna från att ansluta till kända sårbarheter.
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet NIS och gör det möjligt för användare att ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Sök igenom alla hämtningar**: **inte konfigurerat** (standard) har Defender söker igenom alla filer som hämtats från Internet. När inställningen är **aktive**rad är den här funktionen inaktive rad. Därför genomsöker Defender inte alla nedladdade Internetfiler.
+- **Sök igenom alla hämtningar**: **Aktivera** aktiverar den här inställningen och Defender söker igenom alla filer som hämtats från Internet. Användarna kan inte inaktivera den här inställningen. 
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här inställningen och låter användarna ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
-- **Sök igenom skript som har lästs in via Microsoft-webbläsare**: **Inte konfigurerat** (standard) tillåter Defender-genomsökning av skript som används i Internet Explorer. **Aktivera** förhindrar denna sökning.
+- **Sök igenom skript som har lästs in via Microsoft-webbläsare**: **Aktivera** gör att Defender genomsöker skript som används i Internet Explorer. Användarna kan inte inaktivera den här inställningen. 
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här inställningen och låter användarna ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
-- **Användaråtkomst till Defender**: **Blockera** döljer Windows Defender-användargränssnittet för slutanvändarna. Alla Windows Defender-meddelanden förhindras också. **Inte konfigurerat** (standard) tillåter användaråtkomst till Windows Defender-användargränssnittet. När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
+- **Användaråtkomst till Defender**: **Blockera** döljer Microsoft Defender-användargränssnittet för slutanvändarna. Alla Microsoft Defender-meddelanden döljs också.
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du blockerar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard tillåter operativ systemet användare att komma åt användar gränssnittet i Microsoft Defender och gör det möjligt för användare att ändra det.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+
+  När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
 
   [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
@@ -714,31 +740,55 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Gräns för processoranvändning under genomsökning**: Låter dig begränsa hur mycket processorkraft som genomsökningar får använda (från `0` till `100`).
-- **Sök igenom arkivfiler**: **Aktivera** stänger av Defender från genomsökning av arkivfiler, till exempel zip-eller CAB-filer. **Inte konfigurerat** (standard) tillåter den här genomsökningen.
+- **Sök igenom arkivfiler**: **Aktivera** aktiverar Defender så att den söker igenom arkivfiler, till exempel zip-eller CAB-filer. Användarna kan inte inaktivera den här inställningen.
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här genomsökningen och gör det möjligt för användare att ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
-- **Sök igenom inkommande e-postmeddelanden**: **Aktivera** tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten. **Inte konfigurerat** (standard) förhindrar den här e-postgenomsökningen.
+- **Sök igenom inkommande e-postmeddelanden**: **Aktivera** tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten. När den är aktive rad tolkar motorn post lådan och e-postfilerna för att analysera e-postmeddelandet och bilagor. Du kan söka i formaten PST (Outlook),. dbx,. mbx, MIME (Outlook Express) och BinHex (Mac).
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard stänger operativ systemet av genomsökningen och gör att användarna kan ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**: **Aktivera** förhindrar fullständiga genomsökningar av flyttbara enheter. **Inte konfigurerat** (standard) tillåter att Defender genomsöker flyttbara enheter, till exempel USB-minnen.
+- **Genomsök flyttbara enheter under en fullständig genomsökning**: **Aktivera** aktiverar Defender-enheter för flyttbara enheter under en fullständig genomsökning. Användarna kan inte inaktivera den här inställningen.
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard tillåter operativ systemet Defender att söka igenom flyttbara enheter, till exempel USB-käppar, och gör att användarna kan ändra den här inställningen.
 
   Under en snabb genomsökning kan flyttbara enheter fortfarande genomsökas.
 
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+
   [Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
-- **Sök igenom mappade nätverksenheter vid fullständig genomsökning**: **Aktivera** tillåter att Defender genomsöker filer på mappade nätverksenheter. **Inte konfigurerat** (standard) förhindrar den fullständiga genomsökningen. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
+- **Sök igenom mappade nätverksenheter vid fullständig genomsökning**: **Aktivera** gör att Defender genomsöker filer på mappade nätverksenheter. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem. Användarna kan inte inaktivera den här inställningen.
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här funktionen och låter användarna ändra den.
 
   Under en snabb genomsökning kan mappade nätverks enheter fortfarande genomsökas.
 
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+
   [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
-- **Sök igenom filer öppnade från nätverksmappar**: **Inte konfigurerat** (standard) tillåter att Defender genomsöker filer på delade nätverksenheter, till exempel filer som nås från en UNC-sökväg. **Aktivera** förhindrar denna sökning. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
+- **Sök igenom filer öppnade från nätverksmappar**: **Aktivera** har Defender söker igenom filer öppnade från nätverksmappar eller delade nätverks enheter, till exempel filer som nås från en UNC-sökväg. Användarna kan inte inaktivera den här inställningen. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard söker operativ systemet igenom filer som öppnats från nätverksmappar och gör det möjligt för användare att ändra den.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
-- **Molnskydd**: **Inte konfigurerat** (standard) tillåter att Microsoft Active Protection Service tar emot information om aktiviteter med skadlig kod från enheter som du hanterar. **Aktivera** blockerar den här funktionen.
+- **Molnskydd**: **Aktivera** aktiverar Microsoft Active Protection Service, som samlar in information om aktivitet relaterad till skadlig kod från enheter som du hanterar. Användarna kan inte ändra denna inställning. 
+
+  När inställningen **inte är konfigurerad** , vidrör Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard tillåter operativ systemet Microsoft Active Protection Service att ta emot information och gör att användarna kan ändra den här inställningen.
+
+  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
 
   [Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 52420375ae5ed88ab713a1da3e927e43e433db83
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732964"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163489"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -86,7 +86,7 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
 ## <a name="attack-surface-reduction"></a>Minska attackytan  
 
 - **Office apps launch child process type** (Office-appar startar underordnad processtyp)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera*, kommer Office-appar inte att kunna skapa underordnade processer. Office-appar inkluderar Word, Excel, PowerPoint, OneNote och Access. Att skapa en underordnad process är ett typiskt beteende i skadlig kod, särskilt vid makrobaserade attacker som försöker använda Office-appar för att starta eller hämta skadliga körbara filer.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kommer Office-appar inte att kunna skapa underordnade processer. Office-appar inkluderar Word, Excel, PowerPoint, OneNote och Access. Att skapa en underordnad process är ett typiskt beteende i skadlig kod, särskilt vid makrobaserade attacker som försöker använda Office-appar för att starta eller hämta skadliga körbara filer.  
 
   **Standard**: Blockera
 
@@ -101,7 +101,7 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
   **Standard**: Aktivera
 
 - **Email content execution type** (Körbara filtyper i e-postinnehåll)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera* blockerar den här regeln följande filtyper från att köras eller startas från ett e-postmeddelande i Microsoft Outlook eller webbaserad e-post (till exempel Gmail.com eller Outlook.com):  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera* blockerar den här regeln följande filtyper från att köras eller startas från ett e-postmeddelande i Microsoft Outlook eller webbaserad e-post (till exempel Gmail.com eller Outlook.com):  
 
   - Körbara filer (till exempel .exe, .dll eller .scr)  
   - Skriptfiler (till exempel en PowerShell .ps-, VisualBasic .vbs- eller JavaScript .js-fil)  
@@ -110,17 +110,17 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
   **Standard**: Blockera
 
 - **Adobe Reader-start i en underordnad process**  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – *Aktivera* den här regeln för att blockera Adobe Reader från att skapa en underordnad process. Via sociala tekniker eller kryphål kan skadlig kod ladda ned och starta ytterligare nyttolaster och bryta ut från Adobe Reader.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *Aktivera* den här regeln för att blockera Adobe Reader från att skapa en underordnad process. Via sociala tekniker eller kryphål kan skadlig kod ladda ned och starta ytterligare nyttolaster och bryta ut från Adobe Reader.  
 
   **Standard**: Aktivera
 
 - **Script obfuscated macro code type** (Makrokod dold i skriptfiler)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Skadlig kod och andra hot kan försöka förvränga eller dölja skadlig kod i vissa skriptfiler. Den här regeln förhindrar att skript som verkar vara dolda körs.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Skadlig kod och andra hot kan försöka förvränga eller dölja skadlig kod i vissa skriptfiler. Den här regeln förhindrar att skript som verkar vara dolda körs.  
     
   **Standard**: Blockera
 
 - **Untrusted USB process type** (Obetrodd USB-processtyp)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan osignerade eller ej betrodda körbara filer från flyttbara USB-enheter och SD-kort inte köras.
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan osignerade eller ej betrodda körbara filer från flyttbara USB-enheter och SD-kort inte köras.
 
   Körbara filer inkluderar:
   - Körbara filer (till exempel .exe, .dll eller .scr)
@@ -129,22 +129,22 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
   **Standard**: Blockera
 
 - **Office apps other process injection type** (Annan processinmatningstyp i Office-appar)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan inte Office-appar, inklusive Word, Excel, PowerPoint och OneNote, mata in kod i andra processer. Kodinmatning används vanligtvis av skadlig kod för att köra skadlig kod i ett försök att dölja aktivitet från motorer för virusgenomsökning.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan inte Office-appar, inklusive Word, Excel, PowerPoint och OneNote, mata in kod i andra processer. Kodinmatning används vanligtvis av skadlig kod för att köra skadlig kod i ett försök att dölja aktivitet från motorer för virusgenomsökning.  
 
   **Standard**: Blockera
 
 - **Office macro code allow Win32 imports type** (Office-makrokod tillåter Win32-importer)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera*, försöker den här regeln att blockera Office-filer som innehåller makrokod som kan importera Win32-DLL:er. Office-filer inkluderar Word, Excel, PowerPoint och OneNote. Skadlig kod kan använda makrokod i Office-filer för att importera och läsa in Win32-DLL:er, som sedan används för att göra API-anrop som leder till ytterligare infektion hela systemet.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, försöker den här regeln att blockera Office-filer som innehåller makrokod som kan importera Win32-DLL:er. Office-filer inkluderar Word, Excel, PowerPoint och OneNote. Skadlig kod kan använda makrokod i Office-filer för att importera och läsa in Win32-DLL:er, som sedan används för att göra API-anrop som leder till ytterligare infektion hela systemet.  
 
   **Standard**: Blockera
 
 - **Office-kommunikationsappar startar i en underordnad process**  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Aktivera*, förhindrar den här regeln att Outlook skapar underordnade processer. Genom att blockera skapandet av en underordnad process skyddar regeln mot sociala manipulationsangrepp och förhindrar att koden missbrukar en svaghet i Outlook.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Aktivera*, förhindrar den här regeln att Outlook skapar underordnade processer. Genom att blockera skapandet av en underordnad process skyddar regeln mot sociala manipulationsangrepp och förhindrar att koden missbrukar en svaghet i Outlook.  
 
   **Standard**: Aktivera
 
 - **Office apps executable content creation or launch type** (Generering eller starttyp för körbart innehåll i Office-appar)  
-  [Regel för minskning av attackytan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan inte Office-appar skapa körbart innehåll. Office-appar inkluderar Word, Excel, PowerPoint, OneNote och Access.  
+  [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan inte Office-appar skapa körbart innehåll. Office-appar inkluderar Word, Excel, PowerPoint, OneNote och Access.  
 
   Den här regeln gäller typiska beteenden som används av misstänkta och skadliga tillägg och skript (tillägg) som skapar eller startar körbara filer. Det här är en vanlig teknik som används av skadlig kod. Tillägg hindras från att användas av Office-appar. De här tilläggen använder vanligtvis Windows Scripting Host (WSH-filer) för att köra skript som automatiserar vissa uppgifter eller tillhandahåller användargenererade tilläggsfunktioner.
 
@@ -273,7 +273,7 @@ Mer information finns i [WindowsAdvancedThreatProtection CSP](https://docs.micro
 ## <a name="exploit-protection"></a>Sårbarhetsskydd  
 
 - **Exploit protection XML** (XML för sårbarhetsskydd)  
-  Mer information finns i [Importera, exportera och distribuera konfigurationer för sårbarhetsskydd ](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml) i Windows-dokumentationen.  
+  Mer information finns i [Importera, exportera och distribuera konfigurationer för sårbarhetsskydd](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) i Windows-dokumentationen.  
 
   Gör det möjligt för IT-administratören att distribuera en konfiguration som representerar önskade system- och programskyddsalternativ till alla enheter i organisationen. Konfigurationen representeras av en XML-sträng. 
 
