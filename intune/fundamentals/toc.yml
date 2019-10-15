@@ -6,8 +6,9 @@
     - name: Översikt över Microsoft Intune
       href: what-is-intune.md
       displayName: ems; emm; azure ad; active directory; ad
-    - name: Vad kan Intune göra för mitt företag?
-      href: get-started-evaluation.md
+    - name: Översikt över enhetshantering
+      href: what-is-device-management.md
+      displayName: teamviewer
     - name: Nyheter
       href: whats-new.md
       items:
@@ -32,9 +33,6 @@
       href: tutorial-walkthrough-intune-portal.md
 - name: Begrepp
   items:
-    - name: Vad är enhetshantering?
-      href: what-is-device-management.md
-      displayName: teamviewer
     - name: Vad är Intune for Education?
       href: introduction-intune-education.md
     - name: Övergripande arkitektur

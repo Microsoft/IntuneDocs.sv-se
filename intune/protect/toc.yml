@@ -207,10 +207,10 @@
               href: windows-update-compliance-reports.md
         - name: iOS-uppdateringsprinciper
           href: software-updates-ios.md
-    - name: Felsök
+    - name: Felsöka
       items:
         - name: Felsöka principer och profiler
-          href: troubleshoot-policies-in-microsoft-intune.md
+          href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?context=./context/pr-context.yml
         - name: Felsöka villkorlig åtkomst
           href: troubleshoot-conditional-access.md
         - name: Felsök certifikatanslutning
