@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 909dba16e04b11989caa79112c5a89fbb7c52114
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 39858a74cd9503ff40de51ab3680ccf509d25c49
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722923"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310940"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurera infrastrukturen för att stödja SCEP med Intune  
   
@@ -37,7 +37,7 @@ Innan du fortsätter ska du ha [skapat och distribuerat en *betrodd certifikatpr
 
 ### <a name="servers-and-server-roles"></a>Servrar och serverroller  
 Följande lokala infrastruktur måste köras på servrar som är domänanslutna till din Active Directory, med undantag för webbprogramproxyservern.  
-- **Certifikatutfärdare** – använd en Microsoft Active Directory Certificate Services-certifikatutfärdare (CA) som körs på en Enterprise-version av Windows Server 2008 R2 med service pack 1 eller senare. Den version av Windows Server som du använder måste ha fortsatt support från Microsoft. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdaren](http://technet.microsoft.com/library/jj125375.aspx). Om din certifikatutfärdare kör Windows Server 2008 R2 SP1 måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).  
+- **Certifikatutfärdare** – använd en Microsoft Active Directory Certificate Services-certifikatutfärdare (CA) som körs på en Enterprise-version av Windows Server 2008 R2 med service pack 1 eller senare. Den version av Windows Server som du använder måste ha fortsatt support från Microsoft. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdaren](https://technet.microsoft.com/library/jj125375.aspx). Om din certifikatutfärdare kör Windows Server 2008 R2 SP1 måste du [installera snabbkorrigeringen från KB2483564](https://support.microsoft.com/kb/2483564/).  
 
 - **NDES-serverroll** – du måste konfigurera en NDES-serverroll (registreringstjänst för nätverksenheter) på Windows Server 2012 R2 eller senare. I ett senare avsnitt av den här artikeln vägleder vi dig genom [installationen av NDES](#set-up-ndes).  
 
@@ -45,7 +45,7 @@ Följande lokala infrastruktur måste köras på servrar som är domänanslutna 
   - Du kan inte använda NDES som är installerad på den server som är värd för företagscertifikatutfärdaren.  
   - Du installerar Microsoft Intune Certificate Connector på samma server som är värd för NDES.  
 
-  Mer information om NDES finns i [vägledningen för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) i Windows Server-dokumentationen samt [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).  
+  Mer information om NDES finns i [vägledningen för registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/hh831498.aspx) i Windows Server-dokumentationen samt [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).  
 
 - **Microsoft Intune Certificate Connector** – Microsoft Intune Certificate Connector krävs för användning av SCEP-certifikatprofiler med Intune. Den här artikeln vägleder dig genom [installationen av det här anslutningsprogrammet](#install-the-intune-certificate-connector).  
 
@@ -61,7 +61,7 @@ Följande lokala infrastruktur är valfri:
 
 - **Web Application Proxy-server** (valfritt) – använd en server som kör Windows Server 2012 R2 eller senare som en webbprogramproxyserver (WAP) för att publicera NDES-URL:en till Internet.  Detta gör att både intranät- och Internetriktade enheter kan hämta certifikat.
 
-  Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).  
+  Servern som är värd för WAP [måste installera en uppdatering](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](https://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](https://support.microsoft.com/kb/3011135).  
 
   WAP-servern måste ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter och lita på det SSL-certifikat som används på den dator som är värd för NDES-tjänsten. De här certifikaten gör det möjligt för WAP-servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-tjänsten.  
 

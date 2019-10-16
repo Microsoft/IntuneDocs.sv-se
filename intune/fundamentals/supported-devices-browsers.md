@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c87cb90ee7803b0848c57b91a801976b2aa4d6e9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2d2777f2caabc24a457fc407b3e47facb1f6fc3c
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721714"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314601"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Operativsystem och webbläsare som stöds i Intune
 
 Granska de operativsystem och webbläsare som stöds innan du installerar Microsoft Intune.
 
-Hjälp med att installera Intune på din enhet finns i [Användning av hanterade enheter för att få jobbet gjort https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) och [Bandbreddsanvändning i Intune-nätverk](network-bandwidth-use.md).
+Hjälp med att installera Intune på din enhet finns i [Användning av hanterade enheter för att få jobbet gjort](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) och [Bandbreddsanvändning i Intune-nätverk](network-bandwidth-use.md).
 
 Mer information om stöd för tjänstens konfigurationsprovider finns i [Referens för CSP (Configuration Service Provider)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 

@@ -1,0 +1,39 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Enterprise Mobility + Security
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/
+      items:
+        - name: Intune
+          tocHref: /intune/
+          topicHref: /intune/
+          items:
+            - name: Intune för utbildning
+              tocHref: /intune-education/
+              topicHref: /intune-education/
+            - name: Användarhjälp för Intune
+              tocHref: /intune-user-help/
+              topicHref: /intune-user-help/
+            - name: Appar
+              tocHref: /intune/apps/
+              topicHref: /intune/apps/
+            - name: Grunderna
+              tocHref: /intune/fundamentals/
+              topicHref: /intune/fundamentals/
+            - name: Registrering
+              tocHref: /intune/enrollment/
+              topicHref: /intune/enrollment/
+            - name: Fjärråtgärder
+              tocHref: /intune/remote-actions/
+              topicHref: /intune/remote-actions/
+            - name: Konfiguration
+              tocHref: /intune/configuration/
+              topicHref: /intune/configuration/
+            - name: Skydda
+              tocHref: /intune/protect/
+              topicHref: /intune/protect/
+            - name: Utvecklare
+              tocHref: /intune/developer/
+              topicHref: /intune/developer/

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 312aee3752525ab2898c6d4e4ea06da685d1cdec
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 308f152a585fe7b605d309943545f242031ea177
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728370"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379705"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Hitta den primära användaren av en Intune-enhet
 
@@ -46,7 +46,7 @@ Företagsportalappen förväntar sig att det användarkonto som har loggat in p�
 
 Om en Intune-enhet inte har någon primär användare tilldelad, identifierar företagsportalappen den som en delad enhet. Delade enheter kan identifieras visuellt tack vare den ”delad”-etikett som visas på enhetspanelen. I det här läget kan företagsportalen fortfarande användas för att begära och installera tillgängliga appar. Självbetjäningsåtgärder (återställ/byt namn/dra tillbaka) är dock inte tillgängliga.  
 
-För att tillgängliga appar ska kunna visas i företagsportalen på delade enheter, måste de tilldelas till en användargrupp. De kommer att installeras i systemets kontext eller användarkontext, beroende på hur appen konfigurerades av IT-administratören. Mer information om appkontext finns i [Installera appar på Windows 10-enheter](../apps/apps-windows-10-app-deploy.md#installing-apps-on-windows-10-devices). Företagsportalen version 10.3.4651.0 eller senare krävs för att använda den här funktionen.
+För att tillgängliga appar ska kunna visas i företagsportalen på delade enheter, måste de tilldelas till en användargrupp. De kommer att installeras i systemets kontext eller användarkontext, beroende på hur appen konfigurerades av IT-administratören. Mer information om appkontext finns i [Installera appar på Windows 10-enheter](../apps/apps-windows-10-app-deploy.md). Företagsportalen version 10.3.4651.0 eller senare krävs för att använda den här funktionen.
 
 
 ## <a name="who-is-assigned-as-the-primary-user"></a>Vem är tilldelad som primär användare?

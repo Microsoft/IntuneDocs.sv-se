@@ -1,5 +1,6 @@
 ---
 title: Visa och åtgärda personliga data
+titleSuffix: Microsoft Intune
 description: Lär dig hur du visar och korrigerar personliga data.
 keywords: ''
 author: ErikjeMS
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9261c451a7a5bdf5f718193adbfcb2389fa285a0
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9b6ca291f55511be9e88b0ff898d9383691542bf
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727928"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310900"
 ---
 # <a name="view-and-correct-personal-data"></a>Visa och åtgärda personliga data
 
@@ -43,7 +44,7 @@ Microsoft använder noggranna kontroller för att styra åtkomst till kunddata, 
 
 Du kan skydda och styra åtkomsten till slutanvändarens personliga data med hjälp av rollbaserad administrationskontroll (RBAC). Mer information finns i [RBAC med Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-Du kan lära dig mer om Microsofts datapraxis genom att läsa Villkor för Online Services och [Sekretesspolicy för Microsoft Online Services](http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
+Du kan lära dig mer om Microsofts datapraxis genom att läsa Villkor för Online Services och [Sekretesspolicy för Microsoft Online Services](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
 
 ## <a name="correct-end-user-personal-data"></a>Korrigera slutanvändares personliga data
 

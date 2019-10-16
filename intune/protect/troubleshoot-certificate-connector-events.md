@@ -1,5 +1,6 @@
 ---
 title: Felsöka Microsoft Intune Certificate Connector och händelse-ID:n | Microsoft Docs
+titleSuffix: Microsoft Intune
 description: Felsök Microsoft Intune Certificate Connector genom att granska händelse-ID:n och beskrivningar samt läsa diagnostikkoderna för Intune Connector-tjänsten.
 keywords: ''
 author: brenduns
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682d51269798dff181a3bd8384268da862118a70
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2d798f22ee4e0f11f46626eec01ad3b739d61467
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721766"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306721"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Händelser och diagnostikkoder för Intune Certificate Connector
 
