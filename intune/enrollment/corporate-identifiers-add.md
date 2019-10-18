@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac86e9155f08683ab073ae0b46ea3f2780060c90
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: afc9d953e1d324adb3f00eb5209732a858bbbcda
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723352"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314671"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -35,7 +35,7 @@ Vid registreringen tilldelar Intune automatiskt statusen Företagsägd till enhe
 - Registrerad med ett [enhetsregistreringshanterar](device-enrollment-manager-enroll.md)-konto (alla plattformar)
 - Registrerat med Apples [program för enhetsregistrering](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md) eller [Apple Configurator](apple-configurator-enroll-ios.md) (endast iOS)
 - [Identifierad som en företagsägd enhet innan registrering](#identify-corporate-owned-devices-with-imei-or-serial-number) med ett IMEI-nummer (alla plattformar med IMEI-nummer) eller serienummer (iOS och Android)
-- Ansluten till Azure Active Directory som en Windows 10 Enterprise-enhet
+- Ansluten till Azure Active Directory med autentiseringsuppgifter för arbete eller skola. [Enheter som är Azure Active Directory-registrerade](https://docs.microsoft.com/azure/active-directory/devices/overview) kommer att markeras som personliga.
 - Angetts som Företag i [enhetens egenskapslista](#change-device-ownership)
 
 Efter registreringen kan du [ändra ägarskapsinställningen](#change-device-ownership) mellan **Personlig** och **Företag**.

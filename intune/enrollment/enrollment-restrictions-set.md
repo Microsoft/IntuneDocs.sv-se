@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdeb88f3a69db160dca61bf3038c5a7d0235f2b2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3f041c76b4d9b3814a020d51ad4cbb8e33df6c27
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722468"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379803"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -48,7 +48,7 @@ Bland de specifika registreringsbegränsningarna som du kan skapa finns:
 - Version av plattformsoperativsystem för iOS, Android-enhetsadministratör, Android Enterprise-arbetsprofil, Windows och Windows Mobile. (Endast Windows 10-versioner kan användas. Lämna tomt om Windows 8.1 tillåts.)
   - Lägsta version.
   - Högsta version.
-- Begränsa personligt ägda enheter (endast för iOS, Android-enhetsadministratör, Android Enterprise-arbetsprofil, macOS, Windows och Windows Mobile).
+- Begränsa [personligt ägda enheter](device-enrollment.md#bring-your-own-device) (endast för iOS, Android-enhetsadministratör, Android Enterprise-arbetsprofil, macOS, Windows och Windows Mobile).
 
 ## <a name="default-restrictions"></a>Standardbegränsningar
 
@@ -68,9 +68,9 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
      Versionsformat som stöds är:
     - Android-enhetsadministratör- och Android Enterprise-arbetsprofilen stöder major.minor.rev.build.
     - iOS stöder major.minor.rev. Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
-    - Windows stöder endast major.minor.rev.build för Windows 10.
+    - Windows stöder endast major.minor.build.rev för Windows 10.
     > [!Note]
-    > Windows 10 tillhandahåller inte versionsnumret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registrering.
+    > Windows 10 tillhandahåller inte rev-numret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registreringen.
 
 8. Under **Personligt ägda** väljer du **Tillåt** för de plattformar som du vill tillåta som personligt ägda enheter.
 9. Välj **Nästa** för att gå till sidan **Tilldelningar**.
@@ -151,6 +151,12 @@ Följande personliga registreringsmetoder blockeras också:
 - Alternativet [MDM enrollment only]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) (Endast MDM-registrering) från Windows-inställningarna.
 
 \* Dessa kommer inte att blockeras om de registrerats med Autopilot.
+
+
+## <a name="blocking-personal-ios-devices"></a>Blockera personliga iOS-enheter
+Intune klassificerar iOS-enheter som personligt ägda som standard. För att klassificeras som företagsägd måste iOS-enheten uppfylla något av följande villkor:
+- Registrerad med ett serienummer eller IMEI.
+- Registrerad med automatisk enhetsregistrering (tidigare Programmet för enhetsregistrering)
 
 
 ## <a name="change-enrollment-restriction-priority"></a>Ändra prioritet för registreringsbegränsning

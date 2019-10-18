@@ -1,26 +1,26 @@
 ---
-title: Policyer för efterlevnad för enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Kom igång med att använda enhetsefterlevnadsprinciper, få en översikt över status och allvarlighetsgrader, använd statusen InGracePeriod, arbeta med villkorsstyrd åtkomst, hantera enheter utan en tilldelad princip och se skillnaderna i efterlevnad mellan Azure-portalen och den klassiska portalen i Microsoft Intune
+title: Skapa enhetsefterlevnadsprinciper i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa enhetsefterlevnadsprinciper, översikt över status och allvarlighetsgrader, använda statusen InGracePeriod, arbeta med villkorsstyrd åtkomst, hantera enheter utan en tilldelad princip, samt skillnader i efterlevnad i Azure-portalen och den klassiska portalen i Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8b3a99744f830da3c88473e79bce78c97875d73
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0ec8003264c28ea40d53731c8fb8c3eddef7fded
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722637"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306573"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Skapa en efterlevnadsprincip i Microsoft Intune
 
@@ -95,15 +95,15 @@ Om du vill använda enhetsefterlevnadsprinciper måste du:
 
 4. Välj **OK** > **Skapa** när du är klar för att spara dina ändringar. Principen skapas och visas i listan. Tilldela därefter principen till dina grupper.
 
-## <a name="assign-user-groups"></a>Tilldela användargrupper
+## <a name="assign-the-policy"></a>Tilldela principen
 
 När en princip har skapats är nästa steg att tilldela principen till dina grupper:
 
 1. Välj den princip som du skapade. Befintliga principer finns i **Enhetsefterlevnad** > **Principer**.
 2. Välj princip > **Tilldelningar**. Du kan inkludera eller exkludera säkerhetsgrupper i Azure Active Directory (AD).
-3. Välj **Valda grupper** för att se dina Azure AD-säkerhetsgrupper. Välj de användargrupper som du vill att principen ska tillämpas på > Välj **Spara** för att distribuera principen till användarna.
+3. Välj **Valda grupper** för att se dina Azure AD-säkerhetsgrupper. Välj de grupper som du vill att principen ska tillämpas på > Välj **Spara** för att distribuera principen.
 
-Du har tillämpat principen på användarna. Enheter som används av användare som omfattas av principen utvärderas för att kontrollera att de är kompatibla.
+De användare eller enheter som omfattas av din princip utvärderas för efterlevnad när de checkar in med Intune.
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>Utvärdera hur många användare som omfattas
 

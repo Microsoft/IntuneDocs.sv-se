@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d50fdbb766068e643604cdf729e62cdd07d22b62
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a1c2acc2ebe5528e30c344a31c9551ac64bdf3ca
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723521"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306777"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Konfigurera registrering av iOS-enheter med Apple Configurator
 
@@ -60,6 +60,9 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas under re
     - **Registrera med användartillhörighet** – välj det här alternativet för enheter som tillhör användare och som vill använda företagsportalen för tjänster som installation av appar. Enheten måste vara kopplad till en användare med Installationsassistenten och kan sedan komma åt företagsdata och e-post. Stöds endast för registrering med installationsassistenten. Mappning mellan användare kräver [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Registrera utan användartillhörighet** – välj det här alternativet för enheter som inte är kopplade till en enda användare. Använd det här för enheter som utför uppgifter utan att komma åt lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte. Krävs för direktregistrering.
+
+     > [!NOTE]
+     > När **Registrera med användartillhörighet** är markerat, kontrollerar du att enheten är kopplad till en användare med hjälp av installationsassistenten inom 24 timmar efter att enheten har registrerats. Annars kan registreringen misslyckas och en fabriksåterställning krävs för att registrera enheten.
 
 4. Om du väljer **Registrera med användartillhörighet**, får du alternativet att låta användare autentisera sig med Företagsportalen istället för Apple Installationsassistenten.
 

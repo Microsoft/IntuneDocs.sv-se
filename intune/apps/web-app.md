@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8beb8291ede1bf2fde32014fadf9f8cd52da5b6
-ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
+ms.openlocfilehash: 204a19546e9466fdf7064e15b8cba7268ec1b757
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71830584"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349968"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -30,7 +30,9 @@ ms.locfileid: "71830584"
 
 Intune stöder en mängd olika apptyper som bland annat webbappar. En webbapp är ett klientserverprogram. Servern tillhandahåller webbappen, som inkluderar användargränssnitt, innehåll och funktioner. Dessutom erbjuder moderna webbtjänstplattformar ofta säkerhet, belastningsutjämning och andra förmåner. En webbapp underhålls separat på webben. Du använder Microsoft Intune till att peka på den här apptypen. Du anger också vilka användargrupper som får åtkomst till den här appen. 
 
-Innan du kan hantera och tilldela appar för dina användare, lägger du till appen i Intune. Intune skapar en genväg till webbappen på användarenhetens startskärm.
+Innan du kan hantera och tilldela appar för dina användare, lägger du till appen i Intune. 
+
+Intune skapar en genväg till webbappen på användarens enhet. På iOS-enheter läggs en genväg till webbappen till på startskärmen. På Android-enheter läggs en genväg till webbappen till i Intunes företagsportalwidget. Widgeten måste sedan fästas manuellt av användaren. På Windows-enheter placeras en genväg till webbappen i Start-menyn.
 
 > [!Note]
 > Webbappar stöds inte på Android-arbetsprofilenheter. En webbläsare måste vara installerad på användarens enhet för att det ska gå att starta webbappar.

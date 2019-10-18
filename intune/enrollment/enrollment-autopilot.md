@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa955558120f88afb31e787376fdd1281dd5f4
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b2ebca165c067afbc3d830e5f75ac9f8e29effb2
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723183"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237236"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -110,7 +110,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     - **Dölj alternativ för att ändra konto (kräver Windows 10, version 1809 eller senare)** : Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Användarkontotyp**: Välj användarens kontotyp (**Administratör** eller **Standardanvändare**). Vi tillåter att användaren ansluter enheten som lokal administratör genom att lägga till dem i den lokala administratörsgruppen. Vi aktiverar inte användaren som standardadministratör på enheten.
     - **Tillåt White Glove OOBE** (kräver Windows 10, version 1903 eller senare. [Ytterligare fysiska krav](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)): Välj **Ja** för att tillåta assisterad support.
-    - **Använd mall för enhetsnamn** (kräver Windows 10, version 1809 eller senare): Välj **Ja** för att skapa en mall som ska användas när du namnger en enhet under registreringen. Namn får innehålla högst 15 tecken, och får innehålla bokstäver, siffror och bindestreck. Namn kan inte bestå av enbart siffror. Använd [makrot %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till ett maskinvaruspecifikt serienummer. Du kan även använda [makrot %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till en slumpmässig sträng med siffror, där x motsvarar antalet siffror som ska läggas till. 
+    - **Använd mall för enhetsnamn** (kräver Windows 10 version 1809 eller senare och Azure AD-anslutningstyp): Välj **Ja** för att skapa en mall som ska användas när du namnger en enhet under registreringen. Namn får innehålla högst 15 tecken, och får innehålla bokstäver, siffror och bindestreck. Namn kan inte bestå av enbart siffror. Använd [makrot %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till ett maskinvaruspecifikt serienummer. Du kan även använda [makrot %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till en slumpmässig sträng med siffror, där x motsvarar antalet siffror som ska läggas till. Du kan bara ange ett prefix för hybridenheter i en [domänanslutningsprofil](windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
     - **Språk (Region)** \*: Välj et språk som du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
     - **Konfigurera tangentbord automatiskt**\*: Om ett **Språk (Region)** har valts väljer du **Ja** för att hoppa över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
 8. Välj **Nästa**.

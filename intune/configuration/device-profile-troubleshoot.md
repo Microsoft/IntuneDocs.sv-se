@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 10/15/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618f88d6dbacb886f250b74f6a462b8449b59b18
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9944aa59f47b7263d46ac96f6aaca3f8ae5c9486
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724093"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349994"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune
 
@@ -67,11 +67,11 @@ Om enheten nyligen har registrerats sker efterlevnads- och konfigurationsincheck
 | iOS | Var 15:e minut i 1 timmar och därefter var omkring 8:e timme |  
 | macOS | Var 15:e minut i 1 timmar och därefter var omkring 8:e timme | 
 | Android | Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
-| Windows 10-datorer som registrerats som enheter | Var 3:e minut i 30 minuter och därefter var omkring 8:e timme | 
+| Windows 10-datorer som registrerats som enheter | Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
 | Windows Phone | Var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
 | Windows 8,1 | Var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
 
-Användarna kan när de vill öppna företagsportalappen och synkronisera enheten för att söka efter profil- eller principuppdateringar.
+Användarna kan när de vill öppna företagsportalappen, **Inställningar** > **Synkronisera** för att omedelbart söka efter profil- eller principuppdateringar.
 
 För enheter utan användartillhörighet kan synkroniseringsfrekvensen omedelbart efter registreringen variera mellan några timmar till en dag eller mer. Intune skickar begäranden med olika intervall för att en enhet ska kunna checka in på Intune. Det är dock fortfarande enheten som måste checka in. Efter den första registreringen är det svårt att veta hur lång tid det tar att slutföra incheckningen. Det beror också på typen av enhetsregistrering och de principer och profiler som har tilldelats till en enhet. När enheten har registrerats och alla inledande principer och profiler har tillämpats söker enheten efter nya principer och profiler om var 6–8: e timme, baserat på när enheten registrerar i Intune.
 

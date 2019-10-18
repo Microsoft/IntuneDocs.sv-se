@@ -14,16 +14,14 @@ ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a9ecc1cabb00122d2812580b663fcd0c1dfabc3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: aa8cc396c05150006799c1e9b86ecb63351cdb36
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728097"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314713"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Du kan använda Intune till att definiera uppdateringsringar som anger hur och när Windows som en tjänst ska uppdatera dina Windows 10-enheter. Uppdateringsringar är principer som du tilldelar till grupper av enheter. Genom att använda uppdateringsringar kan skapa du en uppdateringsstrategi som speglar dina affärsbehov. Mer information finns i [Hantera uppdateringar med hjälp av Windows Update för företag](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
@@ -92,7 +90,7 @@ Förutom att se tilldelningsstatus kan du längst upp i översiktsfönstret väl
 ### <a name="delete"></a>Ta bort  
 Välj **Ta bort** för att sluta tillämpa inställningarna för den valda Windows 10-uppdateringsringen. När en ring tas bort tas även dess konfiguration bort från Intune, vilket innebär att Intune inte längre tillämpar dessa inställningar.  
 
-Om en ring tas bort från Intune ändras inte inställningarna på enheter som har tilldelats uppdateringsringen.  I stället behåller enheten de aktuella inställningarna. Detta beror dels på att enheter inte har någon historik över vilka inställningar som tidigare fanns, och dels på att enheten kan ta emot inställningar från andra uppdateringsringar som fortfarande är aktiva.  
+Om en ring tas bort från Intune ändras inte inställningarna på enheter som har tilldelats uppdateringsringen.  I stället behåller enheten de aktuella inställningarna. Enheter har inte någon historik över de inställningar som de tidigare hade. Enheter kan också ta emot inställningar från fler uppdateringsringar som är aktiva.  
 
 #### <a name="to-delete-a-ring"></a>Ta bort en ring  
 1. När du ser översiktssidan för en uppdateringsring väljer du **Ta bort**.  
@@ -129,6 +127,12 @@ När en uppdateringsring har pausats kan du välja **Utöka** för att återstä
 
 ### <a name="uninstall"></a>Avinstallera  
 Intune-administratörer kan använda **Avinstallera** för att avinstallera (återställa) den senaste *funktions*- eller *kvalitets*uppdateringen för en aktiv eller pausad uppdateringsring. När du har avinstallerat en typ, kan du avinstallera den andra typen. Intune stöder eller hanterar inte användarnas möjlighet att avinstallera uppdateringar.  
+
+> [!IMPORTANT] 
+> När du använder alternativet *Avinstallera* skickar Intune denna begäran till enheterna omedelbart. 
+> - Windows-enheterna börjar ta bort uppdateringar så snart de får ändringen i Intune-principen. Borttagning av uppdateringen är inte begränsad till underhållsscheman, även om de är konfigurerade som en del av uppdateringsringen. 
+> - Om borttagningen av uppdateringen kräver en omstart av enheten, startas enheten om utan att enhetsanvändarna kan välja att senarelägga den.
+
 
 För att avinstallationen ska lyckas:  
 - En enhet måste köra Windows 10 april 2018-uppdateringen (version 1803) eller senare.  

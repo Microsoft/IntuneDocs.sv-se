@@ -1,11 +1,11 @@
 ---
-title: Vad är Microsoft Intune
+title: Vad är Microsoft Intune? – Azure | Microsoft Docs
 description: Lär dig mer om hur Microsoft Intune är en komponent för hantering av mobilenheter (MDM) och hantering av mobilappar (MAM) i Enterprise Mobility + Security-lösningen, och se hur den kan hjälpa dig att skydda företagets data.
 keywords: what is Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 10/14/2019
 ms.topic: overview
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,138 +16,97 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0ba46314a7c44e8db89d11a2866c86375a4cdfd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 56c76663330cae5cb771358542fd22ff09398118
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726186"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314722"
 ---
-# <a name="what-is-microsoft-intune"></a>Vad är Microsoft Intune?
+# <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune är en MDM- och MAM-provider för dina enheter
 
-Microsoft Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som hjälper anställda att vara produktiva samtidigt som företagets data skyddas. Microsoft Intune är tillgängligt i Azure Portal, precis som många andra Azure-tjänster. Med Intune kan du:
-
-- Hantera mobila enheter och datorer som de anställda använder för att komma åt företagets data.
-- Hantera mobila appar som används av anställda.
-- Skydda företagets information genom att styra hur anställda får åtkomst till och delar den.
-- Säkerställa att enheter och program är kompatibla med företagets säkerhetskrav.
-
-## <a name="common-business-problems-that-intune-helps-solve"></a>Exempel på vanliga affärsproblem som Intune kan lösa
-
-- [Skydda lokal e-post och lokala data så att mobila enheter kan komma åt dem](common-scenarios.md#protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices)
-- [Skydda e-post och data i Office 365 så att mobila enheter kan komma åt dem på ett säkert sätt](common-scenarios.md#protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices)
-- [Dela ut företagsägda telefoner till anställda](common-scenarios.md#issue-corporate-owned-phones-to-your-employees)
-- [Erbjud BYOD (Bring Your Own Device) eller ett program för personliga enheter till alla anställda](common-scenarios.md#offer-a-bring-your-own-device-program-to-all-employees)
-- [Gör det möjligt för anställda att på ett säkert sätt få åtkomst till Office 365 från en ej hanterad offentlig dator](common-scenarios.md#enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk)
-- [Utfärda delade surfplattor med begränsad användning till uppdragspersonal](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
-
-## <a name="how-does-intune-work"></a>Hur fungerar Intune?
-
-Intune är en komponent i Microsofts svit Enterprise Mobility + Security (EMS) som hanterar mobila enheter och appar. Det är nära integrerat med andra EMS-komponenter som Azure Active Directory (Azure AD) för identitets- och åtkomstkontroll och Azure Information Protection för dataskydd. När du använder det tillsammans med Office 365 gör du det möjligt för dina anställda att vara produktiva på alla deras enheter samtidigt som organisationens information är skyddad.
+Microsoft Intune är en molnbaserad tjänst som fokuserar på hantering av mobilenheter (MDM) och hantering av mobilprogram (MAM). Intune ingår i Microsofts [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) och gör det möjligt för användarna att vara produktiva samtidigt som organisationens data skyddas. Den integreras med andra tjänster, inklusive Microsoft 365 och Azure Active Directory (Azure AD) för att styra vilka som har åtkomst och vad de har åtkomst till, samt Azure Information Protection för dataskydd. När du använder den tillsammans med Microsoft 365 kan dina anställda vara produktiva på alla sina enheter, samtidigt som organisationens information skyddas.
 
 ![Bild av Intune-arkitektur](./media/what-is-intune/intunearch_sm.png)
 
-Visa en [större version](./media/intunearchitecture.svg) av Intune-arkitekturdiagrammet.
+Visa en [större version](./media/what-is-intune/intunearchitecture.svg) av Intune-arkitekturdiagrammet.
 
-Hur du använder enhets- och apphanteringsfunktionerna i Intune och dataskydd i EMS beror på vilket [affärsproblem som du försöker lösa](#common-business-problems-that-intune-helps-solve). Exempel:
-* Du använder enhetshantering i hög grad om du skapar en pool med enheter för en viss typ av användning som ska delas av skiftarbetare i en butik.
-* Du förlitar dig på apphantering och dataskydd om du låter anställda använda egna personliga enheter för att komma åt företagsdata (BYOD).  
-* Om du delar ut företagsägda telefoner till informationsarbetare använder du alla dessa metoder.
+Med Intune kan du:
 
-## <a name="intune-device-management-explained"></a>Så fungerar Intune-enhetshantering
-I Intune-enhetshantering används protokollen eller API:erna som är tillgängliga i mobiloperativsystem. Med MDD kan du bland annat:
-* Registrera enheter för hantering så att it-avdelningen enkelt kan se vilka enheter som har åtkomst till företagstjänster
-* Konfigurera enheter så att de uppfyller företagets säkerhets- och hälsostandarder.
-* Tillhandahålla certifikat och Wi-Fi-/VPN-profiler för åtkomst till företagstjänster.
-* Rapportera om och mäta enheternas efterlevnad mot företagets standarder.
-* Ta bort företagsdata från hanterade enheter.  
+- Välj att vara 100 % i molnet med Intune, eller vara [samhanterade](https://docs.microsoft.com/sccm/comanage/overview) med Configuration Manager och Intune.
+- Ange regler och konfigurera inställningar för personliga och organisationsägda enheter som ska ha åtkomst till data och nätverk.
+- Distribuera och autentisera appar på enheter – lokalt och mobilt.
+- Skydda företagets information genom att styra hur användarna får åtkomst till och delar information.
+- Säkerställ att enheter och appar följer säkerhetskraven.
 
-En del tror att **åtkomstkontroll till företagsdata** är en enhetshanteringsfunktion. Vi ser det inte så eftersom det inte är något som tillhandahålls av mobiloperativsystemet. Det är snarare något som identitetsprovidern tillhandahåller. I vårt fall är identitetsprovidern Azure AD (Active Directory Azure), Microsofts identitets- och åtkomsthanteringssystem.  
+## <a name="manage-devices"></a>Hantera enheter
 
-Intune är integrerat med Azure AD för att ge stöd för en bred uppsättning åtkomstkontrollscenarier. Du kan till exempel kräva att en mobil enhet ska vara kompatibel med företagets standarder som du har definierat i Intune innan enheten kan komma åt en företagstjänst, t.ex. Exchange. På samma sätt kan du låsa företagstjänsten till en specifik uppsättning mobila appar. Du kan till exempel låsa Exchange Online så att tjänsten endast kan nås av Outlook eller Outlook Mobile.
+I Intune hanterar du enheter med hjälp av den metod som passar dig. Om du har organisationsägda enheter kanske du vill ha fullständig kontroll över enheterna, inklusive inställningar, funktioner och säkerhet. Med den här metoden ”registreras” enheter och användare i Intune. När de har registrerats får de dina regler och inställningar via principer som konfigureras i Intune. Du kan till exempel ange krav på lösenord och PIN-kod, skapa en VPN-anslutning, konfigurera skydd mot hot och mycket annat.
 
-## <a name="intune-app-management-explained"></a>Så fungerar Intune-apphantering
-Med apphantering menar vi:
-* Tilldela anställda mobilappar
-* Konfigurera appar med standardinställningar som används när appen körs
-* Styra hur företagsdata används och delas i mobilappar.
-* Ta bort företagsdata från mobilappar.   
-* Uppdatera appar
-* Rapportera om inventering av mobilappar.
-* Spåra användningen av mobilappar.
+Användarna kanske inte vill att organisationens administratörer ska ha fullständig behörighet till deras personliga enheter eller BYOD-enheter. Med den här metoden får användarna alternativ. Till exempel kan användarna [registrera](../enrollment/device-enrollment.md) sina enheter om de vill ha fullständig åtkomst till organisationens resurser. Om användarna i stället bara vill ha åtkomst till e-post eller Microsoft Teams, använder du skyddsprinciper för appar som kräver multifaktorautentisering (MFA) för att använda dessa appar.
 
-Vi har sett begreppet mobilapphantering (MAM) användas för att beskriva allt det här separat eller kombinerat. Det är särskilt vanligt att begreppet appkonfiguration blandas ihop med begreppet att skydda företagsdata i mobilappar. Det beror på att vissa mobilappar exponerar inställningar som gör att deras säkerhetsfunktioner kan konfigureras.
+När enheterna har registrerats och hanteras i Intune kan administratörerna:
 
-När vi talar om appkonfiguration och Intune avser vi särskilt teknik som [hanterad appkonfiguration i iOS](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html).
+- Se vilka enheter som har registrerats och få en lista över de enheter som har åtkomst till organisationens resurser.
+- Konfigurera enheterna så att de uppfyller säkerhets- och hälsostandarder. Till exempel vill du förmodligen blockera jailbrokade enheter.
+- Skicka certifikat till enheterna så att användarna enkelt kan komma åt ditt Wi-Fi-nätverk, eller använd ett VPN för att ansluta till nätverket.
+- Se rapporter om användare och enheter som är kompatibla och de som inte uppfyller kraven.
+- Ta bort organisationsdata om en enhet tappas bort, blir stulen eller inte längre används.
 
-När du använder Intune med andra tjänster i EMS kan du genom appkonfigurationer tillämpa organisationens säkerhetskrav för mobilappar utöver säkerhetsfunktionerna i operativsystemet och själva mobilapparna. En app som hanteras med EMS har åtkomst till en bredare uppsättning mobilapps- och dataskyddsfunktioner, bland annat:
+**Onlineresurser**:
 
-* [Enkel inloggning](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
-* [Multifaktorautentisering](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
-* [Villkorlig appåtkomst – tillåt åtkomst om mobilappen innehåller företagsdata](../protect/app-based-conditional-access-intune.md)
-* [Isolera företagsdata från personliga data i samma app](../apps/app-protection-policy.md)
-* [Princip för appskydd (PIN-kod, kryptering, Spara som, Urklipp osv.)](../apps/app-protection-policies.md)
-* [Rensa företagsdata från en mobilapp](../apps/apps-selective-wipe.md)
-* [Stöd för rättighetshantering](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms)
+- [Vad är enhetsregistrering](../enrollment/device-enrollment.md)
+
+- [Tillämpa funktioner och inställningar på dina enheter med enhetsprofiler](../configuration/device-profiles.md)
+
+- [Skydda enheter med Microsoft Intune](../protect/device-protect.md)
+
+## <a name="manage-apps"></a>Hantera appar
+
+Hanteringen av mobilprogram (MAM) i Intune är utformat för att skydda organisationens data på programnivå, inklusive anpassade appar och Store-appar. Apphanteringen kan användas på organisationsägda enheter och personliga enheter.
+
+När appar hanteras i Intune kan administratörerna:
+
+- Lägga till och tilldela mobilappar till användargrupper och enheter, inklusive användare i vissa grupper, enheter i vissa grupper med mera.
+- Konfigurera att apparna startas eller körs med vissa inställningar aktiverade, samt uppdatera befintliga appar som redan finns på enheten.
+- Se rapporter om vilka appar som används och spåra deras användning.
+- Göra en selektiv rensning genom att enbart ta bort organisationens data från apparna.
+
+En metod i Intune som ger säkerhet för mobilappar är med hjälp av **[appskyddsprinciper](../apps/app-protection-policy.md)** . Appskyddsprinciper:
+
+- Använd Azure AD-identitet till att isolera organisationens data från personliga data. Den personliga informationen isoleras därmed från organisationens IT-hantering. Data som nås med autentiseringsuppgifter för organisationen ges ytterligare säkerhetsskydd.
+- Skydda åtkomsten till personliga enheter genom att begränsa de åtgärder som användarna kan vidta, till exempel att kopiera och klistra in, spara och visa.
+- Kan skapas och distribueras på enheter som har registrerats i Intune, registrerats i en annan MDM-tjänst, eller som inte är registrerade i någon MDM-tjänst. På registrerade enheter kan appskyddsprinciperna ge ett extra skyddslager.
+
+Till exempel kan en användare logga in på en enhet med sina autentiseringsuppgifter för organisationen. Organisationens identitet ger åtkomst till data som användarens personliga identitet inte har åtkomst till. När den här organisationsinformationen används reglerar appskyddsprinciperna hur datan får sparas och delas. När användarna loggar in med sin personliga identitet tillämpas inte samma skydd. På så sätt har IT-administratörerna kontroll över organisationens data, samtidigt som slutanvändarna har kvar sin integritet och kontroll över den personliga datan.
+
+Du kan också använda Intune med de andra tjänsterna i EMS. Den här funktionen ger organisationen en säkerhet för mobilappar som går utöver vad som ingår i operativsystem och appar. Appar som hanteras med EMS har åtkomst till en bredare uppsättning mobilapps- och dataskyddsfunktioner.
 
 ![Bild som visar datasäkerhetsnivåerna för apphantering](./media/what-is-intune/managing-mobile-apps.png)
 
-### <a name="intune-app-security"></a>Appsäkerhet i Intune
-Att tillhandahålla appsäkerhet är en del av apphanteringen, och när vi pratar om mobilappssäkerhet i Intune menar vi:
-* Isolera personlig information och förhindra åtkomst av företagets IT-personal.
-* Begränsa vad användarna kan göra med företagsdata, till exempel kopiera, klippa ut/klistra in, spara och visa.
-* Ta bort företagsdata från mobilappar, även kallat selektiv rensning eller företagsrensning.
+## <a name="compliance-and-conditional-access"></a>Efterlevnad och villkorsstyrd åtkomst
 
-Ett sätt som Intune tillhandahåller säkerhet för mobilappar är genom en funktion för **appskyddsprinciper**. Principer för appskydd använder Azure AD-identiteter för att isolera företagsdata från personliga data. Data som kräver företagsautentiseringsuppgifter för åtkomst får ytterligare företagsskydd.
+Intune är integrerat med Azure AD för att ge stöd för en bred uppsättning åtkomstkontrollscenarier. Kräv till exempel att mobila enheter ska följa organisationens standarder som definierats i Intune innan åtkomst ges till nätverkets resurser, t.ex. e-post eller SharePoint. På samma sätt kan du låsa tjänsterna så att de bara är tillgängliga för en specifik uppsättning mobilappar. Du kan till exempel låsa Exchange Online så att tjänsten endast kan nås av Outlook eller Outlook Mobile.
 
-När exempelvis en användare loggar in på sin enhet med sina företagsuppgifter ger användarens företagsidentitet åtkomst till data som inte är tillgängliga för användarens personliga identitet. När den här företagsinformationen används reglerar appskyddsprinciper hur den ska sparas och delas. Samma skydd tillämpas inte på data som blir tillgängliga när användaren loggar in på sin enhet med hans eller hennes personliga identitet. På så sätt har IT-administratörerna kontroll över företagsdata medan slutanvändaren behåller sin integritet och kontrollen över sina personliga data.
+**Onlineresurser**:
 
-## <a name="emm-with-and-without-device-enrollment"></a>EMM med och utan enhetsregistrering
-De flesta lösningar för hantering av företagsmobilitet stöder grundläggande tekniker för enheter och mobilappar. De är vanligtvis kopplade till enheten som registreras i din organisations lösning för mobilenhetshantering (MDM). Intune stöder dessa scenarier och stöder dessutom många scenarier som inte kräver registrering.  
+- [Ange regler för enheter som tillåter åtkomst till resurser i din organisation](../protect/device-compliance-get-started.md)
 
-Organisationer skiljer sig åt i den grad de implementerar scenarier ”utan registrering”. Vissa organisationer har det som standard. Vissa tillåter det för kompletterande enheter, till exempel en personlig surfplatta. Andra stöder det inte alls. Även i det sista fallet, då en organisation kräver att alla medarbetares enheter registreras i MDM, stöder de vanligtvis scenarier ”utan registrering” för leverantörer och för andra enheter som har ett särskilt undantag.
+- [Vanliga sätt att använda villkorlig åtkomst på med Intune](../protect/conditional-access-intune-common-ways-use.md)
 
-Du kan även använda Intunes ”utan registrering”-teknik på registrerade enheter. Exempelvis kan en enhet som har registrerats i MDM ha ”Öppna i”-skydd som tillhandahålls av mobiloperativsystemet. Öppna i-skydd är en funktion i Apples iOS som hindrar dig från att öppna ett dokument från en app, som Outlook, i en annan app, som Word, om inte båda apparna hanteras av samma MDM-leverantör. IT-administratören kan även tillämpa principen för appskydd på EMS-hanterade mobilappar för att styra ”Spara som” eller för att tillhandahålla multifaktorautentisering.
+## <a name="how-to-get-intune"></a>Så här skaffar du Intune
 
-Oavsett hur din organisation förhåller sig till registrerade och oregistrerade mobilenheter och mobilappar har Intune, som en del av EMS, verktyg som kan öka de anställdas produktivitet samtidigt som dina företagsdata är skyddade.
+Intune är tillgängligt:
 
-## <a name="microsoft-intune-in-the-azure-portal"></a>Microsoft Intune i Azure-portalen
+- Som fristående [Azure-tjänst](https://go.microsoft.com/fwlink/?linkid=2090973)
+- Ingår i [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) och [Microsoft 365 för myndigheter](https://www.microsoft.com/microsoft-365/government)
+- Som [hantering av mobilenheter i Office 365](https://support.office.com/article/choose-between-mdm-for-office-365-and-microsoft-intune-c93d9ab9-efb2-4349-9b93-30c30562ee22), vilken utgörs av vissa begränsade Intune-funktioner
 
-Du hittar Microsoft Intune-tjänsten på [Azure Portal](https://portal.azure.com).
-
-Exempel på viktiga funktioner i Microsoft Intune-miljön i Azure Portal:
-
-- En integrerad konsol för alla dina EMS-komponenter (Enterprise Mobility + Security)
-- En HTML-baserad konsol byggd på webbstandarder
-- Microsoft Graph API-stöd för att automatisera många åtgärder
-- Azure Active Directory (AD)-grupper för att ge kompatibilitet åt alla dina Azure-program
-- Stöd för de flesta moderna webbläsare
-
-[Komma igång med Intune på Azure Portal](tutorial-walkthrough-intune-portal.md) innehåller en snabbguide som hjälper dig att anpassa din portal.
-
-> [!NOTE]
-> Om du har använt en tidigare version av Microsoft Intune så kan följande information vara till hjälp:
-> * [Var tog mina saker vägen i Azure? ](../ui-changes.md) är en referens till specifika arbetsflöden och användargränssnitt som har ändrats med övergången till Azure.
-> * [Klassiska Intune-grupper i Azure portal](groups-get-started.md) beskriver konsekvenserna av en övergång till Azure Active Directory-säkerhetsgrupper för grupphantering.
-
-### <a name="before-you-start"></a>Innan du börjar
-
-Du måste ha ett administratörs- och ett klientkonto för Intune om du vill använda Intune i Azure-portalen. [Registrera dig för ett konto](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) om du inte redan har ett.
-
-### <a name="supported-web-browsers-for-the-azure-portal"></a>Webbläsare som stöds för Azure-portalen
-
-Azure-portalen kan köras på de flesta moderna datorer, Mac-datorer och surfplattor. Mobiltelefoner stöds inte.
-För närvarande stöds följande webbläsare:
-
-- Microsoft Edge (senaste versionen)
-- Microsoft Internet Explorer 11
-- Safari (senaste versionen, endast Mac)
-- Chrome (senaste versionen)
-- Firefox (senaste versionen)
-
-Kolla på [Azure Portal](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices) för den senaste informationen om vilka webbläsare som stöds.
+Intune används i många branscher, bland annat [myndigheter](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [utbildning](https://www.microsoft.com/en-us/education/intune), [kioskenheter eller särskilda enheter](../configuration/kiosk-settings.md), tillverkning och detaljhandel m.m.
 
 ## <a name="next-steps"></a>Nästa steg
-* Läs om några av de [vanliga sätten att använda Intune](common-scenarios.md).
-* Bekanta dig med produkten [med en 30-dagars utvärderingsversion av Intune](free-trial-sign-up.md).
-* Fördjupa dig i de [tekniska kraven och möjligheterna](supported-devices-browsers.md) med Intune.
+
+- Läs om några av de [vanligt förekommande affärsproblem som Intune hjälper till att lösa](https://docs.microsoft.com/intune/common-scenarios).
+- Börja med en [30-dagars kostnadsfri utvärderingsversion av Intune](free-trial-sign-up.md).
+- Planera din [migrering till Intune](migration-guide.md).
+- Använd din kostnadsfria utvärderingsversion eller prenumeration och gå igenom [Snabbstart: Skapa en e-postenhetsprofil för iOS](../configuration/quickstart-email-profile.md).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bac049aebfb0fec6c9d86e1e08e81237867175d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: bf862e59e135a875f5f18af731c581f3e5ea89d5
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723118"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306613"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funktioner för hantering av registrerade enheter i Microsoft Intune
 
@@ -43,6 +43,7 @@ Användare får tillgång till företagsportalen där de kan installera appar, r
 |Konfigurationsprinciper<br><br>Anpassade principer| Gör att du kan hantera många inställningar och funktioner på mobila enheter i organisationen. Du kan till exempel kräva ett lösenord, begränsa antalet lösenordsförsök, begränsa tiden tills skärmen låser sig, ställa in ett utgångsdatum för lösenord och förhindra återanvändningen av gamla lösenord. Du kan också styra användningen av maskin- och programvarufunktioner, till exempel kameran på enheten eller webbläsaren.<br><br>Använd anpassade principer när konfigurationsprinciperna saknar den inställning som du behöver. För iOS-enheter kan du importera inställningar som du har exporterat från verktyget Apple Configurator. För andra enheter kan du använda OMA-URI-inställningarna (Open Mobile Alliance Uniform Resource Identifier) för att konfigurera inställningarna och funktioner på enheten.|[Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](../protect/device-compliance-get-started.md)|
 |Fjärrensning, fjärrlåsning och återställning av lösenord|Raderar känsliga data när en enhet tappas bort eller blir stulen. Exempel: du kan fjärrlåsa enheten, återställa den till fabriksinställningarna eller endast rensa företagsdata.<br><br>Du kan nollställa lösenord om användare förlorar åtkomst till sina enheter, låsa försvunna eller stulna enheter, eller till och med radera data från försvunna eller stulna enheter.|Skydda dina enheter med [fjärrlåsning](../remote-actions/device-remote-lock.md) och [lösenordsåterställning](../remote-actions/device-passcode-reset.md)|
 |Helskärmsläge|Gör att du kan låsa vissa funktioner i mobila enheter, till exempel skärmbild och strömbrytarens funktion. Du kan även begränsa enheterna till att kunna köra en enda app som du anger. |[Inställningar för iOS-konfigurationsprinciper i Microsoft Intune](../configuration/device-restrictions-ios.md)|
+|Autopilot-återställning|Skickar en uppgift till enheten om att fjärrstarta återställningsprocessen, vilket innebär att IT-personal eller andra administratörer slipper starta processen i varje dator. När autopilot-återställning används på en enhet tas enhetens primära användare bort. Nästa användare som loggar in efter återställningen kommer att anges som primär användare.|[Fjärrstyrd Autopilot-återställning i Windows](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Apphantering
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b32d34c1878bc0355c510ca342091010af43bca7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 419fd15f747c8b41377f3aca94c4b96d7c4910c1
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724925"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350015"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -165,7 +165,7 @@ Användare kan utföra åtgärder på sina lokala eller fjärranslutna enheter v
 - **Synkronisera** – den här åtgärden startar en enhetsincheckning med Intune-tjänsten. Detta visas som **Kontrollera status** i företagsportalen.
 - **Fjärrlåsning** – detta låser enheten och kräver en PIN-kod för att låsa upp den.
 - **Återställ lösenord** – den här åtgärden används för att återställa enhetens lösenord. På iOS-enheter tas lösenordet bort och slutanvändaren måste ange ett nytt lösenord i inställningarna. På Android-enheter som stöds skapas ett nytt lösenord av Intune som visas tillfälligt i företagsportalen.
-- **Nyckelåterställning** – den här åtgärden används för att återställa en krypteringsnyckel för krypterade enheter.
+- **Nyckelåterställning** – Den här åtgärden används för att återställa en personlig återställningsnyckel för krypterade macOS-enheter från företagsportalens webbplats. 
 
 ### <a name="self-service-actions"></a>Självbetjäningsåtgärder
 
@@ -180,8 +180,8 @@ Vissa plattformar och konfigurationer tillåter inte självbetjäning av enhets�
 
 
 <sup>(1) </sup> Dra tillbaka blockeras alltid på Azure AD-anslutna Windows-enheter.<br>
-<sup>(2) </sup> Nyckelåterställning för MacOS är bara tillgänglig via webbportalen.<br>
-<sup>(3) </sup> Alla fjärråtgärder inaktiveras om du registrerar med en enhetsregistreringshanterare.<br>
+<sup>(2)</sup> Personlig nyckelåterställning för macOS är bara tillgänglig via företagsportalens webbplats.<br> 
+<sup>(3)</sup> Alla fjärråtgärder inaktiveras om du registrerar med en enhetsregistreringshanterare.<br>
 <sup>(4) </sup> Ändra namn på enhetsnamnet i företagsportalappen eller -webbplatsen, inte på enheten.<br>
 <sup>(5) </sup> Fjärrensning är inte tillgängligt på MacOS-enheter.<br>
 <sup>(6) </sup> Återställning av lösenord stöds inte på vissa Android- och Android Enterprise-konfigurationer. För mer information, se [Återställa eller ta bort ett enhetslösenord i Intune](../remote-actions/device-passcode-reset.md).<br>

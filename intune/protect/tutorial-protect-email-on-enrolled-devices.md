@@ -1,5 +1,5 @@
 ---
-title: Självstudie – Skydda e-post i Exchange Online på Intune-hanterade enheter
+title: Självstudie – Skydda e-post i Exchange Online på hanterade enheter
 titleSuffix: Microsoft Intune
 description: Lär dig att skydda Exchange Online med iOS-principer för Intune-efterlevnad och villkorlig åtkomst i Azure AD, som kräver att hanterade enheter och Outlook-appen används.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2d6f14b4b3e1e981cce789664203b74523b2474
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c20c0c1543cd8fcbf7345a02295486aaaa6ddcea
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727941"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306877"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Självstudie: Skydda e-post i Exchange Online på hanterade enheter
 Lär dig att använda principer för enhetsefterlevnad med villkorlig åtkomst för att se till att iOS-enheter endast har åtkomst till e-post i Exchange Online om de hanteras med Intune och använder en godkänd e-postapp. 
@@ -95,7 +95,7 @@ Nu ska vi skapa en princip för villkorlig åtkomst som kräver att alla enhetsp
     2. På fliken **Inkludera**, väljer du **Alla enheter** och sedan **Klar**. 
     3. Välj **Klar** igen.
    
-    ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
+    ![Ta med valfri enhet](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
 
 6. Under **Tilldelningar** väljer du **Villkor** > **Klientappar**.
      
@@ -103,7 +103,7 @@ Nu ska vi skapa en princip för villkorlig åtkomst som kräver att alla enhetsp
     2. För den här självstudien väljer du **Mobilappar och skrivbordsklienter** och **Moderna autentiseringsklienter** (som avser appar som Outlook för iOS och Outlook för Android). Avmarkera alla andra kryssrutor.
     3. Välj **Klar** och sedan **Klar** igen.
     
-    ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
+    ![Välj appar och klienter](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
 
 7. Under **Åtkomstkontroller** väljer du **Bevilja**. 
      
@@ -113,11 +113,11 @@ Nu ska vi skapa en princip för villkorlig åtkomst som kräver att alla enhetsp
     4. Under **För flera kontroller** väljer du **Kräv alla valda kontroller**. Den här inställningen garanterar att båda kraven som du har valt tillämpas när en enhet försöker få åtkomst till e-post.
     5. Välj **Välj**.
      
-    ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+    ![Välj kontroller](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. Under **Aktivera princip** väljer du **På**.
      
-    ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
+    ![Aktivera princip](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
 9. Välj **Skapa**.
 

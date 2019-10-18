@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: e993df5c37cfed8d5dd0481543b406dd25ad1a49
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999298"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251562"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Använda certifikat för autentisering i Microsoft Intune  
 
@@ -51,7 +51,8 @@ Varje enskild certifikatprofil som du skapar stöder en enda plattform. Om du ti
 | Plattform              | Betrodd certifikatprofil | PKCS-certifikatprofil | SCEP-certifikatprofil | PKCS-importerad certifikatprofil  |
 |--|--|--|--|---|
 | Android-enhetsadministratör | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png)|  ![Stöds](./media/certificates-configure/green-check.png) |
-| Android enterprise <br> – Enhetens ägare   | ![Stöds](./media/certificates-configure/green-check.png) |   |  |   |
+| Android enterprise <br> – Fullständigt hanterad (enhetsägare)   | ![Stöds](./media/certificates-configure/green-check.png) |   | ![Stöds](./media/certificates-configure/green-check.png) |   |
+| Android enterprise <br> – Dedikerad (enhetsägare)   |  |   |  |   |
 | Android enterprise <br> – Arbetsprofil    | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
 | iOS                   | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Stöds](./media/certificates-configure/green-check.png) |   |![Stöds](./media/certificates-configure/green-check.png)|![Stöds](./media/certificates-configure/green-check.png)|

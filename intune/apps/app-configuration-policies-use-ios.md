@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 542d9c7890f9484311ca8e6400d0a75a41e13d7c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 94480c8dcfe44dc451ea6a2409f52f06c2a87cf5
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725705"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350078"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -108,7 +108,7 @@ Använd följande nyckel-/värdepar för iOS-enheter:
 | **Värden** | <ul><li>**Aktiverad**: Det enda kontot som tillåts är det hanterade användarkonto som definierats av nyckeln [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Inaktiverad** (eller ett värde som inte är en skiftlägesokänslig matchning till **Aktiverad**): Alla konton tillåts.</li></ul> |.
 
    > [!NOTE]
-   > Du måste använda OneDrive för iOS 10.34 eller senare och Outlook för iOS 2.99.0 eller senare. Appen måste vara riktad mot [Intunes appskyddsprinciper](app-protection-policy.md) där endast konfigurerade organisationskonton med flera identiteter tillåts.
+   > Du måste använda OneDrive för iOS 10.34 eller senare, Outlook för iOS 2.99.0 eller senare, eller Edge för iOS 44.8.7 eller senare. Appen måste vara riktad mot [Intunes appskyddsprinciper](app-protection-policy.md) när endast konfigurerade organisationskonton med flera identiteter tillåts.
 
 ## <a name="enter-xml-data"></a>Ange XML-data
 

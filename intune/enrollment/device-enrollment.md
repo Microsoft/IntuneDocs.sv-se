@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3fb9af260b8fddc78b644b8ede056c90bac24d0
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: 304e869460a5396a486b6de0cd5c2f549c192b70
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999351"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379853"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -80,7 +80,7 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
-Bring Your Own Device (BYOD) omfattar personliga telefoner, surfplattor och datorer. Användarna installerar och kör appen Företagsportal för att registrera sina BYOD-enheter. Det här programmet låter användare komma åt företagsresurser som e-post.
+BYOD (Bring Your Own Device) innefattar personligt ägda telefoner, surfplattor och datorer. Användarna installerar och kör appen Företagsportal för att registrera sina BYOD-enheter. Det här programmet låter användare komma åt företagsresurser som e-post.
 
 ## <a name="corporate-owned-device"></a>Företagsägd enhet
 [Företagsägda enheter (COD)](corporate-identifiers-add.md) omfattar telefoner, surfplattor och datorer som ägs av organisationen och distribueras till personalen. COD-registrering har stöd för hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav. Ett vanligt sätt att registrera COD-enheter är att en administratör eller chef använder enhetsregistreringshanteraren (DEM). iOS-enheter kan registreras direkt via verktygen för programmet för enhetsregistrering (DEP) som tillhandahålls av Apple. Enheter med ett IMEI-nummer kan också identifieras och taggas som företagsägda.

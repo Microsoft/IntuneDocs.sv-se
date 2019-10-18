@@ -16,12 +16,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea6af0fd71acb7aad22930c6173540e3aece4f98
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4b761672ceace57ae7c0939959d25b8d6e45be32
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726381"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379822"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Kräv multifaktorautentisering för enhetsregistreringar i Intune
 
@@ -56,7 +56,7 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 6. Välj **Tilldelningar** i avsnittet **Användare och grupper**. 
 7. I **Användare och grupper** väljer du **Välj användare eller grupper** och markerar **Användare och grupper**. Välj sedan de användare och/eller grupper som ska få den här principen. Välj sedan **Klart**.
 8. I avsnittet **Tilldelningar** väljer du **Molnappar**.
-9. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**.
+9. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**. När du väljer **Microsoft Intune-registrering** tillämpas MFA för villkorsstyrd åtkomst endast vid registreringen av enheten (engångsfråga för MFA).
 10. I avsnittet **Tilldelningar** behöver du för **Villkor** inte ange några inställningar för MFA.
 11. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
 12. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering** . Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats. Välj sedan **Välj**.

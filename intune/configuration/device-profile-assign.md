@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 344ffdfefd8b354c9d2ab31f2d08c2a25456f970
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: db1f0944a6725d1f361ea20c972d8ffa8f5d9035
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724119"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237215"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
@@ -30,6 +30,9 @@ ms.locfileid: "71724119"
 Du skapar en profil som innehåller alla inställningar som du har angett. Nästa steg är att distribuera eller ”tilldela” profilen till din användare eller dina enhetsgrupper i Azure Active Directory (Azure AD). När den är tilldelad får användarna och enheterna din profil och de inställningar som du har angett tillämpas.
 
 Den här artikeln visar hur du tilldelar en profil, samt innehåller information om hur du använder omfångstaggar på dina profiler.
+
+> [!NOTE]  
+> När en princip tas bort eller inte längre är tilldelad till någon enhet kan det hända att inställningen har kvar det befintliga värdet. Inställningen återgår inte till standardvärdet. Om du vill ändra inställningen till ett annat värde skapar du en ny princip och tilldelar den.
 
 ## <a name="assign-a-device-profile"></a>Tilldela en enhetsprofil
 

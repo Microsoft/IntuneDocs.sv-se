@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bb684e787a75900ca2157a04150a8fc6c4ba715
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 7e0a01034bc35ddf8fd8eb1ede5fcf4c942dc735
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721272"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306804"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Självstudie: Skydda e-post i Exchange Online på ohanterade enheter
 
@@ -113,7 +113,7 @@ Nu ska vi skapa två principer för villkorlig åtkomst som gäller för alla en
    3. Avmarkera alla andra kryssrutor.  
    4. Välj **Klar** > **Klar** om du vill återgå till rutan Ny princip.  
 
-   ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
+   ![Välj Mobila appar och klienter](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
 
 7. Under **Åtkomstkontroller** väljer du **Bevilja**. 
      
@@ -123,11 +123,11 @@ Nu ska vi skapa två principer för villkorlig åtkomst som gäller för alla en
    4. Under **För flera kontroller** väljer du **Kräv alla valda kontroller**. Den här inställningen garanterar att båda kraven som du har valt tillämpas när en enhet försöker få åtkomst till e-post.
    5. Välj **Välj**.
      
-   ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
+   ![Välj kontroller](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
 
 7. Under **Aktivera princip** väljer du **På** och sedan **Skapa**.  
      
-    ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+    ![Skapa princip](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
 Principen för villkorlig åtkomst för moderna autentiseringsklienter skapas. Nu kan du skapa en princip för Exchange Active Sync-klienter.
 
@@ -153,14 +153,14 @@ Principen för villkorlig åtkomst för moderna autentiseringsklienter skapas. N
    4. Avmarkera alla andra kryssrutor.  
    5. Välj **Klar** och sedan **Klar** igen.  
     
-   ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
+   ![Tillämpa på plattformar som stöds](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
 
 7. Under **Åtkomstkontroller** väljer du **Bevilja**.  
    1. I rutan **Bevilja** väljer du **Bevilja åtkomst**.  
    2. Välj **Kräv godkänd klientapp**. Avmarkera alla andra kryssrutor.  
    3. Välj **Välj**.  
      
-   ![Välj Office 365 Exchange Online-appen](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
+   ![Kräv godkänd klientapp](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
 
 8. Under **Aktivera princip** väljer du **På**.  
 
