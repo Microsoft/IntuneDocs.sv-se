@@ -9,6 +9,7 @@ ms.date: 09/25/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 627cd171-6e1b-439e-809a-2e6f007c4b3d
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9c489e6bdfa2842f0939d7ee5cd43b258ef2b50
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e48930639e59ca4381ecbdb077d2d725db535cbe
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55833998"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507918"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Installera Symantec Endpoint Protection Mobile på Android-enheten
 
@@ -31,7 +32,7 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 ## <a name="what-you-need-to-do"></a>Vad du behöver göra
 
-1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Skycure från Play Store)**. Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
+1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Skycure från Play Store)** . Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
 
 2. Installationssidan för SEP Mobile i Play Store visas. Installera SEP Mobile och ge sedan SEP Mobile åtkomst till din enhet genom att trycka på **ACCEPTERA**.
 

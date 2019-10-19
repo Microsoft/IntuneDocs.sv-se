@@ -1,6 +1,6 @@
 ---
 title: Kryptera Android-enhet för Intune | Microsoft Docs
-description: Steg för att aktivera kryptering för Android-enhet om detta krävs av Intune
+description: Steg för att aktivera Android-enhets kryptering vid behov av Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
@@ -18,55 +19,55 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfc17c60412a1cfe90693216caa69ada3d2d2c9a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545245"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506359"
 ---
 # <a name="encrypting-your-android-device"></a>Kryptera din Android-enhet
 
-Enhetskryptering skyddar filer och mappar från obehörig åtkomst om enheten tappas bort eller blir stulen. När du har aktiverat kryptering för enheten kan kommer endast personer med rätt lösenord eller PIN-kod att kunna logga in på din enhet. 
+Enhets kryptering skyddar dina filer och mappar från obehörig åtkomst om enheten tappas bort eller blir stulen. När du har aktiverat enhets kryptering kan endast personer med rätt lösen ord eller PIN-kod logga in på enheten. 
 
-Innan du kan komma åt resurser skolan eller arbetet, kräver din organisation att du krypterar Android-enheten. Vissa nyare Android-enheter krypteras som standard out-of the box.  
+Innan du kan komma åt skol-eller arbets resurser kan din organisation kräva att du krypterar Android-enheten. Vissa nyare Android-enheter är krypterade som standard, färdiga.  
 
 ## <a name="turn-on-encryption"></a>Aktivera kryptering
 
-Om Företagsportalen eller Microsoft Intune app uppmanas du att kryptera din enhet, utför du följande steg. 
+Om Företagsportal eller Microsoft Intune-appen meddelar dig att du krypterar enheten utför du följande steg. 
 
 > [!Note]
-> Vissa Android-enheter från Huawei, Vivo och OPPO kan inte krypteras. Läs mer [här](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
+> Vissa Android-enheter från Huawei, vivo och OPPO kan inte krypteras. Läs mer [här](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1. Ange en skärmlås för enheten.  
+1. Ange ett lås för enhets skärmen.  
     a. Gå till **Inställningar** > **Låsskärm och säkerhet** > **Skärmlåstyp**.  
-    b. Välj antingen **PIN-kod**, **lösenord**, eller **mönstret**.  
-    c. Följ instruktionerna på skärmen för att konfigurera ditt skärmlås.  
+    b. Välj antingen **PIN**, **Password**eller **pattern**.  
+    c. Konfigurera skärm låset genom att följa anvisningarna på skärmen.  
 
-2. Gå tillbaka till **Låsskärm och säkerhet** och välj **säker Start**.
-3. Välj **Kräv PIN-kod när du aktiverar enheten** > **OK**.
-4. Ange din PIN-kod för att bekräfta och kryptera din enhet.
-5. Öppna appen företagsportal eller Microsoft Intune.
+2. Gå tillbaka till **Lås skärmen och säkerhet** och välj **säker start**.
+3. Välj **Kräv PIN-kod när enheten aktiverar**  > **OK**.
+4. Ange din PIN-kod för att bekräfta och kryptera enheten.
+5. Öppna appen Företagsportal eller Microsoft Intune.
     * Användare av företagsportalen: Välj din enhet och tryck på **Kontrollera enhetsinställningar**. 
-    * Microsoft Intune-användare: du måste vänta tills sidan uppdateringar, men när det gör det, bör din kryptering statusen ändras till kompatibla.  
+    * Microsoft Intune användare: du måste vänta tills sidan har uppdaterats, men när du gör det ska krypterings statusen ändras till kompatibel.  
 
-Enheter som kör Android 4.4 och tidigare kanske inte har den **säker Start** alternativet. I så fall utför följande steg för att kryptera din enhet.
+Enheter som kör Android 4,4 och tidigare kanske inte har alternativet **säker start** . I så fall kan du utföra följande steg för att kryptera enheten.
 
-1. Gå till **inställningar** > **Security** > **kryptera enheten**. På skärmen etiketter varierar mellan Android-enheter. Om du inte ser den **kryptera enheten** alternativet, checka in:
-    * **Storage** > **lagringskryptering**
-    * **Storage** > **Låsskärm och säkerhet** > **andra säkerhetsinställningar** 
+1. Gå till **inställningar**  > **säkerhets**  > **kryptera enhet**. Etiketter på skärmen varierar mellan Android-enheter. Om du inte ser alternativet **kryptera enhet** , checka in:
+    * **Lagring**  > **lagrings kryptering**
+    * **Lagrings**  > **Lås skärmen och säkerhets**  > **andra säkerhets inställningar** 
 
 2. Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
-3. Öppna appen företagsportal eller Microsoft Intune.
+3. Öppna appen Företagsportal eller Microsoft Intune.
     * Användare av företagsportalen: Välj din enhet och tryck på **Kontrollera enhetsinställningar**.  
-    * Microsoft Intune-användare: du måste vänta tills sidan uppdateringar, men när det gör det, bör din kryptering statusen ändras till kompatibla.
+    * Microsoft Intune användare: du måste vänta tills sidan har uppdaterats, men när du gör det ska krypterings statusen ändras till kompatibel.
 
 ## <a name="troubleshoot"></a>Felsöka  
-**Problemet**: du har redan krypterat enheten och
+**Problem**: du har redan krypterat enheten och
 
 - Krypteringsknappen är inaktiverad.
 - Du ser ett meddelande om att du fortfarande behöver kryptera enheten.
-- Fel uppstår när du försöker använda appen företagsportal eller Microsoft Intune.
+- Du får fel meddelanden när du försöker använda Företagsportal-eller Microsoft Intune-appen.
 
 **Saker du kan prova**
 

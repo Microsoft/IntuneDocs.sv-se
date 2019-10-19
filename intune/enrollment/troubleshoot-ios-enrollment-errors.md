@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a02e403fdba34b576aa90b82062b7a602cbb517
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e7c7ec23d0408aa4d4cf81baff2d7cdf749fb65e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735694"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509240"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av iOS-enhet i Microsoft Intune
 
@@ -51,7 +52,7 @@ Samla in följande information om problemet:
 #### <a name="resolution"></a>Lösning
 
 1. För att förhindra data förlust i följande steg (att återställa iOS tar bort alla data på enheten), se till att säkerhetskopiera dina data.
-2. Sätt enheten i återställnings läge och Återställ den sedan. Se till att du konfigurerar den som en ny enhet. Mer information om hur du återställer iOS-enheter finns i [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+2. Sätt enheten i återställnings läge och Återställ den sedan. Se till att du konfigurerar den som en ny enhet. Mer information om hur du återställer iOS-enheter finns [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Omregistrera enheten.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Det gick inte att installera profilen. Det gick inte att upprätta en anslutning till servern.
@@ -62,7 +63,7 @@ Samla in följande information om problemet:
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster**, sök efter Intune och välj sedan **Intune**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
-4. Under **begränsningar för enhets typ**väljer du den begränsning som du vill ange **> Egenskaper** > **2 Välj plattformar** > Välj **Tillåt** för **iOS**och klicka sedan på **OK**.
+4. Under **begränsningar för enhets typ**väljer du den begränsning som du vill ange > **Egenskaper**  > **väljer plattformar** > väljer **Tillåt** för **iOS**och klickar sedan på **OK**.
 5. Välj **Konfigurera plattformar**, Välj **Tillåt** för personligt ägda iOS-enheter och klicka sedan på **OK**.
 6. Omregistrera enheten.
 
@@ -89,10 +90,10 @@ Samla in följande information om problemet:
 **Orsak:** Användaren försöker registrera fler enheter än gränsen för enhets registrering.
 
 #### <a name="resolution"></a>Lösning
-1. Öppna [Intunes administrations portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) > **enheter** > **alla enheter**och kontrol lera antalet enheter som användaren har registrerat.
+1. Öppna [Intunes administratörs portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)  > **enheter**  > **alla enheter**och kontrol lera antalet enheter som användaren har registrerat.
     > [!NOTE]
     > Du bör också ha den berörda användar inloggningen till [Intune-användargränssnittet](https://portal.manage.microsoft.com/) och kontrol lera enheter som har registrerats. Det kan finnas enheter som visas i [användar portalen för Intune](https://portal.manage.microsoft.com/) , men inte i [Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)-administrationskonsolen, och sådana enheter räknas även mot enhetens registrerings gräns.
-2. Gå till **Admin** > **hantering av mobila enheter** > **registrerings regler** > kontrol lera enhets registrerings gränsen. Som standard är gränsen inställd på 15. 
+2. Gå till **Admin**  > **hantering av mobila enheter**  > **registrerings regler** > kontrol lera enhets registrerings gränsen. Som standard är gränsen inställd på 15. 
 3. Om antalet registrerade enheter har nått gränsen tar du bort onödiga enheter eller ökar gränsen för enhets registrering. Eftersom alla registrerade enheter förbrukar en Intune-licens rekommenderar vi att du alltid tar bort onödiga enheter först.
 4. Omregistrera enheten.
 
@@ -110,8 +111,8 @@ Samla in följande information om problemet:
 **Orsak:** Den användare som försöker registrera enheten har ingen giltig Intune-licens.
 
 #### <a name="resolution"></a>Lösning
-1. Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home#/homepage)och välj **användare** > **aktiva användare**.
-2. Välj det berörda användar kontot > **produkt licenser** > **Redigera**.
+1. Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home#/homepage)och välj sedan **användare**  > **aktiva användare**.
+2. Välj det påverkade användar kontot > **produkt licenser**  > **Redigera**.
 3. Kontrol lera att den här användaren har tilldelats en giltig Intune-licens.
 4. Omregistrera enheten.
 
@@ -119,8 +120,8 @@ Samla in följande information om problemet:
 
 **Orsak:** Den användare som försöker registrera enheten har ingen giltig Intune-licens.
 
-1. Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home#/homepage)och välj **användare** > **aktiva användare**.
-2. Välj det berörda användar kontot och välj sedan **produkt licenser** > **Redigera**.
+1. Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home#/homepage)och välj sedan **användare**  > **aktiva användare**.
+2. Välj det berörda användar kontot och välj sedan **produkt licenser**  > **Redigera**.
 3. Kontrol lera att den här användaren har tilldelats en giltig Intune-licens.
 4. Omregistrera enheten.
 
@@ -130,7 +131,7 @@ Samla in följande information om problemet:
 
 #### <a name="resolution"></a>Lösning
 
-1. Öppna **Inställningar** på iOS-enheten > **allmän** > **enhets hantering**.
+1. Öppna **Inställningar** på iOS-enheten > **allmän**  > **enhets hantering**.
 2. Tryck på den befintliga hanterings profilen och tryck på **ta bort hantering**.
 3. Omregistrera enheten.
 
@@ -183,7 +184,7 @@ När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings prof
 #### <a name="resolution"></a>Lösning
 
 1. Redigera registrerings profilen. Du kan göra ändringar i profilen. Syftet med detta är att uppdatera profilens ändrings tid.
-2. Synkronisera DEP-hanterade enheter: öppna Intune-portalen > **Admin** > **1 hantering av mobila enheter** > **iOS** > **programmet för enhetsregistrering** > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
+2. Synkronisera DEP-hanterade enheter: öppna Intune-portalen **> Admin**  > **hantering av mobila enheter**  > **iOS**  > **programmet för enhetsregistrering**  > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-registrering fastnat vid användar inloggning
 När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil, sker den första installationen efter att du angett autentiseringsuppgifter.

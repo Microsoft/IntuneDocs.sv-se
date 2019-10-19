@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 274b5a8d45f9fb525010e4d225172a6a1ce22275
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734160"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593792"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune
 
@@ -72,6 +73,8 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
     > [!NOTE]
     > Om användarnamnet och lösenordet används som autentiseringsmetod för Cisco IPsec VPN, måste de ge SharedSecret via en anpassad profil i Apple Configurator.
 
+  - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.
+
 - **Undantagna webbadresser** (endast Zscaler): Vid anslutning till Zscaler VPN är de angivna webbadresserna tillgängliga utanför Zscaler-molnet. 
 
 - **Delade tunnlar**: **Aktivera** eller **Inaktivera** för att låta enheterna bestämma vilken anslutning som ska användas beroende på trafiken. En användare på ett hotell kan till exempel använda VPN-anslutningen för att komma åt arbetsfiler, men använda hotellets standardnätverk för vanlig webbsurfning.
@@ -105,7 +108,7 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
 
 ## <a name="ikev2-settings"></a>IKEv2-inställningar
 
-Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
+Dessa inställningar gäller när du väljer **Anslutnings typ**  > **IKEv2**.
 
 - **Fjärridentifierare**: Ange NÄTVERKets IP-adress, FQDN, USERFQDN eller ASN1DN för IKEv2-servern. Ange till exempel `10.0.0.3` eller `vpn.contoso.com`. Normalt anger du samma värde som [**anslutnings namnet**](#base-vpn-settings) (i den här artikeln). Men det beror på inställningarna för IKEv2-servern.
 

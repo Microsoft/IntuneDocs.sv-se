@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ab0ebd9a7977b5433c814e9496276ce7a7fc900
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1089c382a39afb5aad0456e669cb3a2434af73c1
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735746"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503103"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av Windows-enheter i Microsoft Intune
 
@@ -60,7 +61,7 @@ Det finns flera möjliga lösningar på det här problemet:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Ta bort enheter som har registrerats
 1. Logga in på [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).    
-2. Gå till **användare** > **alla användare**.    
+2. Gå till **användare**  > **alla användare**.    
 3. Välj det berörda användar kontot och klicka sedan på **enheter**.    
 4. Välj eventuella oanvända eller oönskade enheter och klicka sedan på **ta bort**. 
 
@@ -70,12 +71,12 @@ Det finns flera möjliga lösningar på det här problemet:
 > Den här metoden ökar enhets registrerings gränsen för alla användare, inte bara den berörda användaren.
 
 1. Logga in på [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
-2. Gå till **enhets registrering** > **registrerings begränsningar**och välj sedan **begränsningar för enhets gräns**.    
+2. Gå till **enhets registrering**  > **registrerings begränsningar**och välj sedan **begränsningar för enhets gräns**.    
 3. Öka värdet för **enhets gräns**. 
 
 ##### <a name="check-device-type-restrictions"></a>Kontrollera begränsningar för enhetstypen
 1. Logga in på [Intune-portalen](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) med ett konto som global administratör.
-2. Gå till **enhets registrering** > **registrerings begränsningar**och välj sedan **standard** begränsningen under **begränsningar av enhets typ**.    
+2. Gå till **enhets registrering**  > **registrerings begränsningar**och välj sedan **standard** begränsning under **begränsningar för enhets typ**.    
 3. Välj **plattformar**och välj sedan **Tillåt** för **Windows (MDM)** .
 
     > [!IMPORTANT]
@@ -96,7 +97,7 @@ Fel 0x801c0003: "den här användaren får inte registreras. Du kan försöka ig
 
 #### <a name="resolution"></a>Lösning
 1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
-2. Gå till **Azure Active Directory** > **enheter** > **enhets inställningar**.    
+2. Gå till **Azure Active Directory**  > **enheter**  > **enhets inställningar**.    
 3. Ange **Användare kan ansluta enheter till Azure AD** till **Alla**.    
 4. Registrera enheten igen.   
 
@@ -105,7 +106,7 @@ Fel 0x801c0003: "den här användaren får inte registreras. Du kan försöka ig
 Fel 8018000a: "något gick fel. Enheten är redan registrerad.  Du kan kontakta system administratören och få felkod 8018000a. "
 
 **Orsak:** Ett av följande villkor är uppfyllt:
-- En annan användare har redan registrerat enheten i Intune eller anslutit enheten till Azure AD. Du kan ta reda på om detta är fallet genom att gå till **inställningar** > **konton** > **åtkomst till arbets**plats. Sök efter ett meddelande som liknar följande: "en annan användare på systemet är redan ansluten till ett jobb eller en skola. Ta bort den här arbets-eller skol anslutningen och försök igen. "    
+- En annan användare har redan registrerat enheten i Intune eller anslutit enheten till Azure AD. Du kan ta reda på om detta är fallet genom att gå till **inställningar**  > **konton**  > **åtkomst till arbets**plats. Sök efter ett meddelande som liknar följande: "en annan användare på systemet är redan ansluten till ett jobb eller en skola. Ta bort den här arbets-eller skol anslutningen och försök igen. "    
 - Configuration Manager klient agenten är installerad på datorn.    
 
 #### <a name="resolution"></a>Lösning
@@ -114,7 +115,7 @@ Använd någon av följande metoder för att lösa problemet:
 
 ##### <a name="remove-the-other-work-or-school-account"></a>Ta bort det andra arbets-eller skol kontot
 1. Logga ut från Windows och logga sedan in med det andra kontot som har registrerat eller anslutit enheten.    
-2. Gå till **inställningar** > **konton** > **arbets åtkomst**och ta sedan bort arbets-eller skol kontot.
+2. Gå till **inställningar**  > **konton**  > **arbets åtkomst**och ta sedan bort arbets-eller skol kontot.
 3. Logga ut från Windows och logga sedan in med ditt konto.    
 4. Registrera enheten i Intune eller Anslut enheten till Azure AD. 
 
@@ -166,7 +167,7 @@ Använd någon av följande metoder för att åtgärda problemet:
 
 ##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Inaktivera automatisk registrering i MDM i Azure.
 1. Logga in på [Azure Portal](https://portal.azure.com/).    
-2. Gå till **Azure Active Directory** > **Mobility (MDM och MAM)**  > **Microsoft Intune**.    
+2. Gå till **Azure Active Directory**  > **mobilitet (MDM och MAM)**  > **Microsoft Intune**.    
 3. Ange **användar omfång för MDM** till **ingen**och klicka sedan på **Spara**.    
      
 ##### <a name="uninstall"></a>Avinstallera
@@ -180,7 +181,7 @@ Fel: "det går inte att installera program vara, 0x80cf4017."
 
 #### <a name="resolution"></a>Lösning
 1. Logga in på [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Gå till **administratörs** > **klient program vara Ladda ned**och klicka på **Hämta klient program vara**.    
+2. Gå till **Admin**  > **Hämta klient program vara**och klicka sedan på **Hämta klient program vara**.    
 3. Spara installations paketet och installera sedan klient program varan. 
 
 
@@ -192,7 +193,7 @@ Fel: ”Kontocertifikatet är inte giltigt och kan ha upphört att gälla, 0x80c
 
 #### <a name="resolution"></a>Lösning
 1. Logga in på [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Gå till **administratörs** > **klient program vara Ladda ned**och klicka på **Hämta klient program vara**.    
+2. Gå till **Admin**  > **Hämta klient program vara**och klicka sedan på **Hämta klient program vara**.    
 3. Spara installations paketet och installera sedan klient program varan.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Din organisation har inte stöd för den här versionen av Windows. 
@@ -213,7 +214,7 @@ Följ dessa steg för att åtgärda problemet i hybrid MDM med Intune och Config
 1. Öppna Configuration Manager-konsolen.    
 2. Välj **Administration**och välj sedan **Cloud Services**.    
 3. Högerklicka på **Microsoft Intune prenumeration**och välj sedan **Konfigurera plattformar > Windows**.    
-4. Markera **Aktivera Windows-registrering** > **Använd** > **OK**.  
+4. Markera **Aktivera Windows-registrering**  > **tillämpa**  > **OK**.  
 
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Ett installations fel uppstod under Mass registreringen.
@@ -235,7 +236,7 @@ Mer information om appen konfigurera skol datorer finns i [använda appen konfig
 ### <a name="auto-mdm-enroll-failed"></a>Automatisk MDM-registrering: misslyckades 
 
 När du försöker registrera en Windows 10-enhet automatiskt med hjälp av grupprincip uppstår följande problem: 
-- I Schemaläggaren, under **Microsoft** > **Windows** > **EnterpriseMgmt**, är det senaste körnings resultatet av det **schema som skapats av registrerings klienten för automatisk registrering i MDM från AAD** -uppgiften följande: **händelse 76 Automatisk MDM-registrering: misslyckades (okänd Win32-felkod: 0x8018002b)**       
+- I Schemaläggaren, under **Microsoft**  > **Windows**  > **EnterpriseMgmt**, är det senaste körnings resultatet av **schemat som skapats av registrerings klienten för automatisk registrering i MDM från AAD** -uppgiften följande: **händelse 76 Automatisk MDM-registrering: misslyckades (okänd Win32-felkod: 0x8018002b)**       
 - I Loggboken loggas följande händelse under **program-och tjänst loggar/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/admin**:   
     ```asciidoc
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
@@ -271,7 +272,7 @@ Om **användar området för MDM** är inställt på **ingen**, följer du dessa
 
 ### <a name="an-error-occurred-while-creating-autopilot-profile"></a>Ett fel uppstod när autopilot-profilen skulle skapas.
 
-**Orsak:** Det angivna namngivnings formatet för enhets namns mal len uppfyller inte kraven. Du kan till exempel använda gemener för det seriella makrot, t. ex.% seriell% i stället för% seriell%.
+**Orsak:** Det angivna namngivnings formatet för enhets namns mal len uppfyller inte kraven. Du kan till exempel använda gemener för det seriella makrot, t. ex .% seriell% i stället för% seriell%.
 
 #### <a name="resolution"></a>Lösning
 
@@ -335,7 +336,7 @@ Det här problemet uppstår vanligt vis innan enheten startas om i ett scenario 
 
 #### <a name="resolution"></a>Lösning
 
-1. Gå till **Intune** >  **enhets registrering** > **Windows-registrering** > **enheter**.
+1. Gå till **Intune**  >  **enhets registrering**  > **Windows-registrering**  > **enheter**.
 2. Välj den enhet som upplever problemet > Klicka på ellipsen (...) på den högra sidan.
 3. Välj **ta bort tilldelning av användare** och vänta tills processen har slutförts.
 4. Verifiera att hybrid Azure AD autopilot-profilen tilldelas innan du försöker att starta om OOBE.
@@ -375,12 +376,12 @@ Det här problemet beror vanligt vis på felaktigt delegerade behörigheter till
 3. I guiden för **delegering av kontroll** väljer du **Nästa** > **Lägg till** > **Objekttyper**.
 4. I fönstret **Objekttyper** markerar du kryssrutan **Datorer** > **OK**.
 5. I fönstret **Välj användare**, **Datorer** eller **Grupper** går du till rutan **Ange de objektnamn som ska väljas** och anger namnet på datorn där anslutningsappen är installerad.
-6. Välj **kontrol lera namn** för att verifiera posten > **OK** > **Nästa**.
+6. Välj **kontrol lera namn** för att verifiera posten > **OK**  > **Nästa**.
 7. Välj **Skapa en anpassad aktivitet och delegera kontroll för den** > **Nästa**.
 8. Markera kryssrutan **Endast följande objekt i mappen** och markera sedan kryssrutorna **Datorobjekt**, **Skapa valda objekt i den här mappen** och **Ta bort valda objekt i den här mappen**.
 9. Välj **Nästa**.
 10. Under **Behörigheter** markerar du kryssrutan **Fullständig kontroll**. Den här åtgärden markerar alla de andra alternativen.
-11. Välj **nästa** > **Slutför**.
+11. Välj **nästa**  > **Slutför**.
 
 ## <a name="next-steps"></a>Nästa steg
 

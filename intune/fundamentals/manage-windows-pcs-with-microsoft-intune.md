@@ -5,27 +5,32 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2018
+ms.date: 10/15/2019
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology: ''
 ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f481c17e6cb1285147c7f6361bfff73801b2bba
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fb9fb439bd0bc59ae2c69ec966587d58c8c97bf4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736136"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510097"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
+
+> [!WARNING]
+> Microsoft tillkännagav att [stöd för Windows 7 upphör den 14 januari 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). På samma datum upphör även Intunes stöd för enheter med Windows 7. Microsoft rekommenderar att du övergår till Windows 10 för att förhindra eventuella avbrott i tjänsten eller supporten.
+> 
+> Mer information finns i [Intune-planen för ändring: närmast slutet på supporten för Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7-).
 
 > [!NOTE]
 > Du kan använda Microsoft Intune för att hantera Windows-datorer som antingen [mobila enheter med hantering av mobila enheter (MDM)](../enrollment/windows-enroll.md) eller som datorer med Intune-programvaruklienten enligt beskrivningen nedan. Microsoft rekommenderar dock att kunderna [använder MDM-hanteringslösningen](../enrollment/windows-enroll.md) närhelst det är möjligt. Mer information finns i [Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter](pc-management-comparison.md) 
@@ -35,7 +40,6 @@ Intune är en omfattande lösning som gör att organisationer kan hantera mobila
 Intune-programvaruklienten passar bäst för Windows-datorer som kör äldre operativsystem som Windows 7 som inte kan hanteras som mobila enheter. Intune-programvaruklienten använder hanteringsfunktioner som Grupprincip för att hantera datorer från molnet.
 
 Intune stöder hantering av Windows-datorer som datorer med hjälp av programvaruklienten för upp till 7 000 datorer. Hantera Windows 10-datorer som mobila enheter för större distributioner. Varje version av Intune och varje uppdatering av Windows 10 innehåller hanteringsfunktioner som baseras på den mobila arkitekturen för enhetshantering. Vi rekommenderar starkt att du flyttar din organisation till Windows 10 hanterad som mobila enheter.
-
 
 > [!NOTE]
 > Du kan hantera Windows 8.1-enheter och senare som datorer med hjälp av Intune-klientprogrammet eller som mobila enheter. Du kan inte använda båda metoderna på samma enhet. Överväg noggrant innan du bestämmer dig för att hantera datorer med Intune-klientprogrammet. Det här avsnittet gäller endast för att hantera enheter som datorer genom att köra Intune-klientprogrammet.
@@ -60,9 +64,6 @@ Programvarukrav för att installera klientprogrammet:
 |Administrativ behörighet|Det konto som installerar klientprogramvaran måste ha lokal administratörsbehörighet på enheten.|
 |Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.<br /><br />Så visar du versionen för Windows Installer på en dator:<br /><br />  Högerklicka på **%windir%\System32\msiexec.exe**, och sedan på **Egenskaper**.<br /><br />Du kan hämta den senaste versionen av Windows Installer från [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) på webbplatsen Microsoft Developer Network.|
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune-klientprogrammet ska du avinstallera all klientprogramvara för Configuration Manager, Operations Manager och Service Manager från datorn.|
-
-> [!WARNING]
-> Microsoft tillkännagav att [stöd för Windows 7 upphör den 14 januari 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). På samma datum upphör även Intunes stöd för enheter med Windows 7. Microsoft rekommenderar att du övergår till Windows 10 för att förhindra eventuella avbrott i tjänsten eller supporten. 
 
 ## <a name="deploying-the-intune-software-client"></a>Distribuera Intune-programklienten
 Som Intune-administratör kan du göra Intune programklienten tillgänglig för användarna på en mängd olika sätt. Vägledning finns i [Installera Intune-klientprogrammet på Windows-datorer](../install-the-windows-pc-client-with-microsoft-intune.md).

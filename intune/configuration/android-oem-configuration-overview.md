@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c46caf4d1c9f9a32a7f324fc5e1734dbe8043bd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2be1faa1296792d3d40de5ca0b304a287bae8e6f
+ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735265"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72550821"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
 
@@ -98,7 +99,7 @@ Kontrol lera att enheten har stöd för OEMConfig, att rätt OEMConfig-app lägg
 5. I **Konfigurera inställningar med**väljer du att använda **Configuration designer** eller **JSON-redigeraren**:
 
     > [!TIP]
-    > Läs OEM-dokumentationen för att kontrol lera att du har konfigurerat egenskaperna korrekt. De här app-egenskaperna ingår i OEM-tillverkaren, inte i Intune. Intune kontrollerar minimal verifiering av egenskaperna eller vad du anger. Om du till exempel anger `abcd` för ett port nummer sparar profilen som-är och distribueras till dina enheter med de värden som du konfigurerar. Se till att du anger rätt information.
+    > Läs OEM-dokumentationen för att kontrol lera att du har konfigurerat egenskaperna korrekt. De här app-egenskaperna ingår i OEM-tillverkaren, inte i Intune. Intune kontrollerar minimal verifiering av egenskaperna eller vad du anger. Om du till exempel anger `abcd` för ett port nummer, sparar profilen som-är och distribueras till dina enheter med de värden som du konfigurerar. Se till att du anger rätt information.
 
     - **Konfigurations design**: när du väljer det här alternativet visas de egenskaper som är tillgängliga i appens schema så att du kan konfigurera.
 
@@ -120,7 +121,7 @@ Kontrol lera att enheten har stöd för OEMConfig, att rätt OEMConfig-app lägg
 
     Ändringar som görs i Configuration designer görs också automatiskt i JSON-redigeraren. På samma sätt görs alla ändringar som görs i JSON-redigeraren automatiskt i Configuration designer. Om inaktuella inuppgifter innehåller ogiltiga värden kan du inte växla mellan Configuration designer och JSON-redigeraren förrän du har åtgärdat problemen.
 
-6. Välj **OK** > **Lägg till** för att spara ändringarna. Principen skapas och visas i listan.
+6. Klicka på **OK** > **Lägg till** för att spara ändringarna. Principen skapas och visas i listan.
 
 Kom ihåg att [tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
@@ -144,10 +145,11 @@ Jämfört med standard appar expanderar OEMConfig-appar de hanterade konfigurati
 | Zebra-tekniker | com. Zebra. oemconfig. common | [Översikt över Zebra-OEMConfig](http://techdocs.zebra.com/oemconfig ) |
 | Datalogic | com. Datalogic. oemconfig | [Användar dokumentation för Datalogic-OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com. Honeywell. oemconfig |  |
+| Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
 
 -----------------
 
-Om det finns ett OEMConfig-program för din enhet, men inte i tabellen ovan, eller inte visas i Intune-konsolen, måste du skicka ett e-`IntuneOEMConfig@microsoft.com`.
+Om det finns ett OEMConfig-program för enheten, men inte i tabellen ovan, eller om den inte visas i Intune-konsolen, kan du e-posta `IntuneOEMConfig@microsoft.com`.
 
 > [!NOTE]
 > OEMConfig-appar måste aktive ras av Intune innan de kan konfigureras med OEMConfig-profiler. När en app stöds behöver du inte kontakta Microsoft om hur du konfigurerar den i din klient organisation. Följ bara anvisningarna på den här sidan.

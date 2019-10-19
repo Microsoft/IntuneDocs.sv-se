@@ -8,20 +8,20 @@ manager: dougeby
 ms.date: 06/15/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology: ''
-ms.assetid: ''
+ms.assetid: 1f104923-12df-453c-9c20-942ef65a0945
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe6b5967a5980304ba2f6c9af75491463dae1b4b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 5ab1be3d34d52e824d1ff06124e28206fb7b07a1
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736110"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510184"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune i Azure-konsolen och äldre Intune PC-klient
 
@@ -34,6 +34,8 @@ När du använder Intune i Azure för att hantera din organisations Windows-enhe
 Vi rekommenderar att du använder [hantering av mobilenheter (MDM) för att hantera Windows 10-enheter](../configuration/device-restrictions-windows-10.md) istället för att använda den äldre Intune PC-klienten. Möjligheten att hantera Windows 10 via MDM är tillgänglig i Intune i Azure-portalen. Windows 10 MDM innehåller många nya hanterings- och säkerhetsfunktioner som inte finns tillgängliga via den äldre Intune PC-klienten.
 
 ## <a name="legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Äldre PC-klientfunktioner finns endast tillgängliga i Silverlight-konsolen
+
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune PC-klientens arbetsflöde för hantering använder sig av den [Silverlight-baserade Intune-administrationskonsolen](https://manage.microsoft.com/), vilket innebär följande:
 
@@ -61,7 +63,7 @@ En detaljerad jämförelse mellan funktionerna i PC-klienten och MDM finns i [j�
 Följ dessa steg om du vill växla från att hantera Windows 10-enheter med Intune PC-klienten till att hantera med MDM:
 
 1. I Silverlight-konsolen, utför du en **selektiv rensning** för att avregistrera enheten från PC-klienten.
-  ![Warning popup med alternativ knappen selektivt rensa enheten markerad @ no__t-1
+  ![Warning popup med alternativ knappen selektivt rensa enheten valt ](./media/intune-legacy-pc-client/image02.png)
 2. Omregistrera enheten med hjälp av [MDM (och/eller Azure AD-anslut)](../enrollment/windows-enroll.md).
 
 ## <a name="next-steps"></a>Nästa steg

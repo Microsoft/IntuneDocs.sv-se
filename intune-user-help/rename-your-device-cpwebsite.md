@@ -9,6 +9,7 @@ ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48b20381355c15c4f5df065382923789b94e8061
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7674366cc0332afd8eba2a4f145f47e40d5472e2
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55848853"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508451"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Byta namn på enheten från företagsportalens webbplats
 
@@ -35,7 +36,7 @@ Byta namn på en registrerad, hanterad enhet från företagsportalens webbplats.
 
     ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/rename-reset-device-step2-1808.png)   
 
-3. Välj **Byt namn**. Om alternativet för att byta namn inte visas längst upp på sidan väljer du **Mer (…)** > **Byt namn**.   
+3. Välj **Byt namn**. Om alternativet för att byta namn inte visas längst upp på sidan väljer du **Mer (…)**  > **Byt namn**.   
 
    ![Sidan med enhetsinformation för en vald enhet på webbplatsen för företagsportalen, med en lista över länkar längst upp som visar Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/rename-reset-device-1808.png)   
 

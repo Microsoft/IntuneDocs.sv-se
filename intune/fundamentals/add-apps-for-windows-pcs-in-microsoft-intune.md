@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/29/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 162a502bbb95adb248d09bb8184ffbbd5c05c465
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 23868303d598be1bc2e45f0852edfd3cf8338ab3
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733003"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509156"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Lägg till program för Windows-datorer som kör Intune-klientprogramvaran
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd informationen i det här avsnittet för att lära dig hur du lägger till appar i Intune innan du distribuerar dem.
 
@@ -77,7 +78,7 @@ Använd Intune-programvaruutgivaren för att konfigurera egenskaper för appen o
 5. På sidan **Identifieringsregler** kan du konfigurera regler för att identifiera om den app som du konfigurerar redan är installerad på en dator. Eller så kan du använda standardidentifieringsreglerna för att automatiskt skriva över eventuella tidigare installerade versioner av appen. Det här alternativet är för Windows Installer (endast .exe-filer).
 
    Reglerna du kan konfigurera är:
-   - **Filen finns**. Ange sökvägen till filen som du vill identifiera. Du kan söka under **%ProgramFiles%** (som söker i **Program Files**\&lt;sökväg&gt; och **Program Files (x86)**\&lt;sökväg&gt;) på datorn eller **%SystemDrive%** (som söker från datorns rotenhet, normalt enhet C).
+   - **Filen finns**. Ange sökvägen till filen som du vill identifiera. Du kan söka under **%ProgramFiles%** (som söker i **Program Files**\&lt;sökväg&gt; och **Program Files (x86)** \&lt;sökväg&gt;) på datorn eller **%SystemDrive%** (som söker från datorns rotenhet, normalt enhet C).
    - **MSI produktkod finns**. Välj **Bläddra** för att välja den Windows Installer-fil (.msi) som du vill identifiera.
    - <strong>Registernyckeln finns</strong>. Ange en registernyckel som börjar med <strong>HKEY_LOCAL_MACHINE\</strong>. Både 32-bitars och 64-bitars registersökvägar genomsöks. Om den nyckel som du angav finns på någon av platserna uppfylls identifieringsregeln.
 
