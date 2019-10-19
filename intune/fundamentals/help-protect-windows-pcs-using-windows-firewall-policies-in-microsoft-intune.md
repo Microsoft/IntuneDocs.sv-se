@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de635066b2f054b9061f6944bc4010a56d54526
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2c736c905045fd3afd40a12243986fbe69452ecd
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735824"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502826"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
 > Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran. Om du vill hantera brand Väggs inställningar för Windows-datorer som registrerats som mobila enheter, se [Lägg till Endpoint Protection-inställningar i Intune](../protect/endpoint-protection-configure.md).
@@ -43,7 +44,7 @@ Med principen för Windows-brandväggen kan du skapa och distribuera inställnin
 > [!NOTE]
 > Om Microsoft Intune-principen och grupprincipen har konfigurerats för att hantera samma inställning på samma dator åsidosätter grupprincipen principinställningen för Microsoft Intune. Information om hur du undviker konflikter mellan Intune-principer och grupprinciper finns i [Åtgärda konflikter mellan grupprincipobjekt och Microsoft Intune-principer](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Om du vill distribuera inställningar för Windows-brandväggen på datorer som kör Windows Vista, måste du först installera [Hotfix KB971800](http://support2.microsoft.com/kb/971800) på dessa datorer.
+> Om du vill distribuera inställningar för Windows-brandväggen på datorer som kör Windows Vista, måste du först installera [Hotfix KB971800](https://support2.microsoft.com/kb/971800) på dessa datorer.
 
 > [!IMPORTANT]
 > Om du vill hantera Windows-brandväggen med hjälp av Intune ser du till att följande två tjänster är aktiverade på de datorer som du hanterar:
@@ -84,7 +85,7 @@ De här principinställningarna konfigurerar Windows-brandväggen så att inkomm
 Standardvärdet för var och en av de här inställningarna är **Ja**, vilket är det säkraste värdet.
 
 > [!IMPORTANT]
-> Om det finns hanterade datorer som kör Windows Vista utan något Service Pack i din miljö måste du antingen installera uppdateringen som är kopplad till [artikel 971800](http://go.microsoft.com/fwlink/?LinkId=188405) i Microsoft Knowledge Base eller inaktivera principinställningarna **Blockera alla inkommande anslutningar** i principer som distribueras till dessa datorer.
+> Om det finns hanterade datorer som kör Windows Vista utan något Service Pack i din miljö måste du antingen installera uppdateringen som är kopplad till [artikel 971800](https://go.microsoft.com/fwlink/?LinkId=188405) i Microsoft Knowledge Base eller inaktivera principinställningarna **Blockera alla inkommande anslutningar** i principer som distribueras till dessa datorer.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Meddela användaren när ett nytt program blockeras av Windows-brandväggen
 

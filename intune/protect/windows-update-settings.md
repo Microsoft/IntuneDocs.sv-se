@@ -5,21 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aaa964151477896c236e504ec9b378cf580e838
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736383"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584457"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-inställningar för Intune  
 
@@ -216,45 +217,9 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
   - **Stäng av alla meddelanden, förutom omstarts varningar**
   - **Stäng av alla meddelanden, inklusive omstarts varningar**  
 
-- **Tillåt användaren att starta om (interaktiv omstart)**  
-  **Standard**: Inte konfigurerat  
-  > [!IMPORTANT]  
-  > Inställningarna för *interaktiv omstart* rekommenderas inte längre att använda. Använd i stället de nya inställningarna för *tids gräns* som ersätter inställningarna för *interaktiv omstart* . Intune kommer att [ha stöd för inställningar för *interaktiv omstart* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) i en framtida uppdatering.
-
-  Interaktiv omstart stöds för Windows 10 version 1803 och senare. 
-
-  > [!NOTE]  
-  > I Windows 10 version 1809 har ytterligare interaktiva omstartsinställningar införts, vilket gör att olika inställningar kan tillämpas på funktions- och kvalitetsuppdateringar. Dock tillämpas de inställningar som hanteras av Intune inte separat på de olika uppdateringstyperna. I stället använder Intune samma värden för både funktions- och kvalitetsuppdateringar.  
-  
-  - **Inte konfigurerat**  
-  - **Obligatoriskt** – Välj *Krävs* om du vill aktivera användningen av interaktiva omstartsalternativ för Windows 10-uppdateringar. Dessa alternativ hjälper enhetsanvändaren med hanteringen när en enhet ska startas om efter att en uppdatering har installerats som kräver en omstart.  
-
-  Mer information om det här alternativet finns i [Interaktiv omstart](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) i Windows 10-dokumentationen om att distribuera uppdateringar.  
-
-  Följande inställningar används för att styra när interaktiv omstart ska utföras.  
-
-  - **Övergång av användare till interaktiv omstart efter en automatisk omstart (dagar)**  
-    **Standard**: inte KONFIGURERAT Windows Update CSP: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-    
-    Ange ett värde mellan **2** och **30** dagar som anger hur lång tid efter installationen av en uppdatering som beteendet för interaktiv omstart ska aktiveras för enheten. Användarna får en uppmaning om att starta om enheten efter det konfigurerade antalet dagar.  
-
-  - **Snooza påminnelse om interaktiv omstart (dagar)**  
-    **Standard**: Inte konfigurerat    
-    Windows Update CSP: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-    
-    Ange ett värde från **1** till **3** för hur länge en uppstarts varning kan vara i vilo läge.  Efter snooze-perioden visas omstartsfrågan igen. Användaren kan fortsätta att snooza påminnelsen tills tidsgränsen har uppnåtts.  
-
-  - **Ställ in tidsgräns för väntande omstarter (dagar)**  
-    **Standard**: Inte konfigurerat  
-    Windows Update CSP: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  
-    Ange ett värde mellan **2** och **30** som anger det högsta antal dagar som du vill vänta efter att beteendet för interaktiv omstart aktiverades innan en enhet framtvingar en obligatorisk omstart. Omstarten uppmanar användarna att spara arbetet.
-
 - **Använd inställningar för tids gräns**  
   **Standard**: Inte konfigurerat  
-  > [!IMPORTANT]  
-  > Från och med augusti-uppdateringen för Intune rekommenderar vi att du använder följande tids gräns inställningar som ersätter inställningarna för interaktiv omstart. Intune kommer att [ha stöd för *interaktiv omstart* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) av inställningarna i en framtida uppdatering av Intune.  
-
+ 
   Tillåter att användare använder tids gräns inställningar.  
 
   - **Inte konfigurerat**
@@ -263,21 +228,21 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
   När inställningen *tillåts*kan du konfigurera följande inställningar för tids gränser:
 
   - **Tids gräns för funktions uppdateringar**  
-    **Standard**: 7  
+    **Standard**: *Inte konfigurerat*  
     Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Anger antalet dagar som en användare har innan funktions uppdateringar installeras på deras enheter automatiskt (2-30).
 
   - **Tids gräns för kvalitets uppdateringar**  
-    **Standard**: 7  
+    **Standard**: *Inte konfigurerat*  
     Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Anger antalet dagar som en användare har innan kvalitets uppdateringar installeras på deras enheter automatiskt (2-30).
 
   - **Respitperiod**  
-    **Standard**: 2 Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Standard**: *inte konfigurerat* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Anger ett minsta antal dagar efter deadline tills omstarter sker automatiskt (0-7).
+    Anger ett minsta antal dagar efter deadline tills omstarter sker automatiskt (2-7).
 
   - **Automatisk omstart före deadline**  
     **Standard**: Ja Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
@@ -285,9 +250,6 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
     Anger om enheten ska starta om automatiskt före tids gränsen.
     - **Ja**
     - **Nej**
-
-
-
 
 ### <a name="delivery-optimization-download-mode"></a>Leveransoptimering av nedladdningsläge  
 

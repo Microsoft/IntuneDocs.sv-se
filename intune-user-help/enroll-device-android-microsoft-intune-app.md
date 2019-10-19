@@ -9,6 +9,7 @@ ms.date: 08/07/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef7ec650c65206eeab69d8f666dc4fb39052bbdb
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 81c842eb27b1b9131c164ced5aeed86a78a37353
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862237"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506287"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrera din företagsenhet med Microsoft Intune-appen
 
@@ -78,11 +79,11 @@ Slutför dessa steg för att konfigurera och registrera din enhet.
 
    ![Exempelbild på Konfigurera på arbetstelefonskärmen med knappen Installera markerad.](./media/fully-managed-intune-app-11.png)   
 
-10. Tryck **på** start för att öppna appen Microsoft Intune och registrera din enhet. 
+10. Tryck på **Start** för att öppna appen Microsoft Intune och registrera din enhet. 
 
     ![Exempelbild på Konfigurera på arbetstelefonskärmen med knappen Start markerad.](./media/fully-managed-intune-app-17.png)   
 
-11. Tryck **på **logga in** och tryck sedan på Nästa för att börja registrera.** När du ser meddelandet att registreringen är klar trycker du på **klar**.  
+11. Tryck på **Logga** in och tryck sedan på **Nästa** för att börja registrera. När du ser meddelandet att registreringen är klar trycker du på **klar**.  
 
     ![Exempel bild av konfigurera åtkomst, registrera din enhets skärm och markera klart knapp.](./media/fully-managed-intune-app-19.png)   
 

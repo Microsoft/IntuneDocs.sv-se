@@ -4,18 +4,19 @@ titleSuffix: Microsoft Intune
 description: Lär dig hur du söker i Intune-dokument, ger dokument kommentarer och bidrar till dokumenten.
 ms.date: 09/15/2019
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.topic: conceptual
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fa3529866b786e75892b495102ca5cab46b09a5
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735538"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504815"
 ---
 # <a name="using-the-intune-docs"></a>Med hjälp av Intune-dokument
 
@@ -31,11 +32,11 @@ Allmän hjälp och support för Intune finns i [få support för Intune](../get-
 
   - Sök efter resultat från docs.microsoft.com. Resultatet från technet.microsoft.com eller msdn.microsoft.com är för äldre produkt versioner.  
 
-  - Om du vill fokusera Sök resultaten ytterligare till det aktuella innehålls biblioteket inkluderar du `site:docs.microsoft.com` för att omfånget med sökmotorn.  
+  - Om du vill fokusera Sök resultaten ytterligare till det aktuella innehålls biblioteket inkluderar du `site:docs.microsoft.com` att omfånget med sökmotorn.  
 
 - Använd Sök termer som matchar terminologin i användar gränssnittet och onlinedokumentationen. Undvik officiella villkor eller förkortningar som du kan se i Community-innehåll.
 
-- Om du vill söka i en artikel som du just nu visar använder du webbläsarens **Sök** funktion. I de flesta moderna webbläsare trycker du på **Ctrl**+**F** och anger sedan Sök villkoren.  
+- Om du vill söka i en artikel som du just nu visar använder du webbläsarens **Sök** funktion. Med de flesta moderna webbläsare trycker du på **Ctrl** +**F** och anger sedan Sök villkoren.  
 
 - Varje artikel på docs.microsoft.com innehåller följande fält för att hjälpa till med sökningen av innehållet:  
 
@@ -93,7 +94,7 @@ Skriv teamet får en pull-begäran, tilldelar objektet till rätt skrivare, gran
 
 Om du är intresse rad av att bidra, men inte vet var du ska starta, kan du läsa följande rekommendationer:  
 
-- Granska en artikel som är korrekt. Uppdatera sedan **MS. date** -metadata med hjälp av formatet `mm/dd/yyyy`. Detta bidrag hjälper till att hålla innehållet uppdaterat.  
+- Granska en artikel som är korrekt. Uppdatera sedan **MS. date** -metadata med hjälp av `mm/dd/yyyy` format. Detta bidrag hjälper till att hålla innehållet uppdaterat.  
 
 - Lägg till klargöranden, exempel eller vägledning baserat på din erfarenhet. Detta bidrag använder kraften i communityn för att dela kunskap.
 

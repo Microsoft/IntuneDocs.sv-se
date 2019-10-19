@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1a508a6c9bf834268a797f028a32c7651cf394c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d00ae284ff4ea911cecb571cfe765eafe32fac02
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733484"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490471"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Skapa en Intune-rapport från OData-feeden med Power BI
 
@@ -57,7 +58,7 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 2. Öppna fönstret **Intune Data Warehouse** genom att välja Data Warehouse-länken under **Övriga uppgifter** på höger sida om bladet **Microsoft Intune – översikt**.
 3. Kopiera den anpassade feed-URL:en. Exempelvis: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Öppna Power BI Desktop.
-5. Välj **fil** > **Hämta data** > **OData-feed**från meny raden.
+5. Välj **fil**  > **Hämta data**  > **OData-feed**från meny raden.
 6. Klistra in den anpassade feed-URL: en som du kopierade från föregående steg i URL-rutan i **OData-matnings** fönstret.
 7. Välj **Grundläggande**.
 
@@ -93,7 +94,7 @@ Ett trädkarta-diagram visar hierarkiska data som rutor i rutor. Varje gren i hi
 
 1. I fönstret **visualiseringar** letar du upp och väljer **TreeMap**. **TreeMap** -diagrammet kommer att läggas till i rapport arbets ytan.
 2. Leta upp `devices` tabellen i **fönstret** fält.
-3. Expandera tabellen `devices` och välj data fältet @no__t 1.
+3. Expandera tabellen `devices` och välj fältet `manufacturer` data.
 4. Dra data fältet till rapport arbets ytan och släpp det **i TreeMap**-diagrammet.`manufacturer`
 5. `devices` Dra data fältet från tabellen till fönstret **visualiseringar** och släpp det under avsnittet **värden** i rutan med etiketten **Lägg till data fält här**. `deviceKey`  
 
@@ -107,10 +108,10 @@ Du kan lägga till ett filter till din trädkarta så att du kan svara på fler 
 
 1. Lägg till ett filter genom att välja rapportarbetsytan och sedan **Utsnittsikonen** (![trädkarta med datamodell och relationer som stöds](./media/reports-proc-create-with-odata/reports-create-slicer.png)) under **Visualiseringar**. Den tomma visualiseringen av **utsnitt** kommer att visas på arbets ytan.
 2. Leta upp `ownerTypes` tabellen i **fönstret** fält.
-3. Expandera tabellen `ownerTypes` och välj data fältet @no__t 1.
+3. Expandera tabellen `ownerTypes` och välj fältet `ownerTypeName` data.
 4. Dra datafältet `onwerTypeName` från tabellen `ownerTypes` till rutan **Filter** och släpp det under avsnittet **Filter på den här sidan** i rutan med namnet **Lägg till datafält här**.  
 
-   Under `OwnerTypes`-tabellen finns ett data fält som heter `OwnerTypeKey` innehåller data om huruvida en enhet är företagsägda eller personliga. Eftersom du vill visa egna namn i det här filtret håller du utkik efter tabellen `ownerTypes` och drar **ownerTypeName**. Detta exempel visar hur datamodellen stöder relationer mellan tabeller.
+   Under `OwnerTypes` tabellen finns ett data fält som kallas `OwnerTypeKey`that innehåller data om huruvida en enhet är företagsägda eller personliga. Eftersom du vill visa egna namn i det här filtret håller du utkik efter tabellen `ownerTypes` och drar **ownerTypeName**. Detta exempel visar hur datamodellen stöder relationer mellan tabeller.
 
 ![Trädkarta med filter – stöder relationer mellan tabeller](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
 

@@ -1,34 +1,52 @@
 ---
-title: Hjälp företagets support att åtgärda enhetsproblem med hjälp av utförlig loggning | Microsoft Docs
+title: Konfigurera loggnings inställningar i Intune-appar | Microsoft Docs
 description: Hjälp företagets support att åtgärda enhetsproblem genom att använda utförlig loggning
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 2a9183a6-b40d-4132-a1ce-61ce0f1c23aa
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b0eb38b92ff5c18d58cf6ebe6f31e4b8a320dd9
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 2326aed90037fbcc6fc693bcdb67c86b57ed34a0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069388"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508016"
 ---
-# <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Hjälp företagets support att åtgärda enhetsproblem med hjälp av utförlig loggning
+# <a name="configure-logging-settings"></a>Konfigurera loggnings inställningar
 
-När din Android-enhet har registrerats i Intune kan du använda *Utförlig loggning* så att företagsportalappen och Intune-hanterade appar registrerar detaljerade loggar om vad som händer på din enhet. Dessa loggar hjälper företagets support att åtgärda eventuella problem som kan uppstå när du använder företagsportalen eller en app som hanteras av Intune. Utförlig loggning är aktiverat på enheten som standard och de loggar som skickas till företagets support innehåller din e-postadress.
+Konfigurera loggnings inställningarna så att Företagsportal app, Microsoft Intune App och Intune-hanterade appar spelar in app-åtgärder. Om du stöter på ett problem i appen och sedan rapporterar det, kommer Support teamet att granska dessa loggar för mer information. 
 
-För att aktivera eller inaktiva Utförlig loggning loggar du in i företagsportalappen med dina inloggningsuppgifter för arbetet eller skolan och trycker på **Inställningar** och sedan på på/av-knappen bredvid **Utförlig loggning**.
+> [!NOTE]
+> Loggarna som du skickar till support teamet kommer att innehålla din e-postadress.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="configure-company-portal-logging"></a>Konfigurera Företagsportal loggning
+Utförlig loggnings poster varje åtgärd som du vidtar i Företagsportal-appen. Den är aktive rad som standard på enheten. Så här aktiverar du utförlig inloggning i Företagsportal:  
+
+1. Logga in på företagsportalappen.
+2. Tryck på **Inställningar**.
+3. Bredvid **utförlig loggning**, vänder du växeln till **av**.
+
+## <a name="configure-microsoft-intune-app-logging"></a>Konfigurera Microsoft Intune App-loggning
+I Microsoft Intune-appen kan du konfigurera logg information. Nivån som standard är **viktig**. Så här justerar du loggnings informationen:  
+
+1. Öppna appen Microsoft Intune.  
+2. Tryck på **Inställningar**.  
+3. Under **information på loggnings nivå**väljer du **utförligt** för att öka detalj nivån som registreras eller väljer **av** för att inaktivera loggning.  
+
+## <a name="next-steps"></a>Nästa steg  
+
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

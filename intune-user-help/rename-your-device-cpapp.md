@@ -9,6 +9,7 @@ ms.date: 10/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 627cabb14def14494ca258fbc9ac7ebf736b10da
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3fab7a0a544a3dafc08ff1e635e49407825fb67d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55834389"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502144"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Byt namn på enheten från företagsportalappen för Windows
 Byt namn på en enhet så att den blir lättare att känna igen från andra enheter. Med företagsportalappen för Windows kan du byta namn på följande typer av anslutna enheter:  

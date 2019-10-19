@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa4dbfb7c13d767df41655b391767fc7aa13d914
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: b30a7e843850d6918abc2e76f84397a1f197516f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817592"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508859"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Lösa vanliga fel för Intune Exchange Connector
 
@@ -76,7 +77,7 @@ När du försöker konfigurera Microsoft Intune Exchange Connector får du följ
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Det här felet kan inträffa om en proxyserver används för att ansluta till Internet och blockerar trafik till Intune-tjänsten. För att avgöra om en proxyserver används, går du till **kontroll panelen** > **Internet alternativ**, väljer fliken **anslutning** och klickar sedan på **LAN-inställningar**.
+Det här felet kan inträffa om en proxyserver används för att ansluta till Internet och blockerar trafik till Intune-tjänsten. För att avgöra om en proxyserver används, går du till **kontroll panelen**  > **Internet alternativ**, väljer fliken **anslutning** och klickar sedan på **LAN-inställningar**.
 
 **Lösning**:  
 
@@ -131,7 +132,7 @@ Följ dessa steg om du vill koppla användar rättigheten **Logga in som en tjä
 
 1. Logga in på datorn som administratör eller som medlem i gruppen Administratörer.
 2. Kör **secpol. msc** för att öppna den lokala säkerhets principen.
-3. Gå till **säkerhets inställningar** > **lokala principer**och välj sedan **tilldelning av användar rättigheter**.
+3. Gå till **säkerhets inställningar**  > **lokala principer**och välj sedan **tilldelning av användar rättigheter**.
 4. I den högra rutan dubbelklickar du på **Logga in som en tjänst**.
 5. Välj **Lägg till användare eller grupp**, Lägg till **WIEC_USER** i principen och välj sedan **OK** två gånger.
 

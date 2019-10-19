@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c535dbd91605a41fdc1c526ecd8ff9d9fc9e2448
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b42642ec593112b0b247cd85b9230f68d6a803b8
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733679"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490982"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -203,8 +204,8 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget. |
-|**-AA**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` t. ex. `login.windows.net/common` |
-|**-ac**|(Valfritt) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Detta är GUID i fältet klient-ID från appens lista i bladet app-registrering. |
+|**-AA**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, dvs. `login.windows.net/common` |
+|**-ac**|(Valfritt) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` detta är det GUID i fältet klient-ID från appens lista i bladet app-registrering. |
 |**-ar**|(Valfritt) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` det här är omdirigerings-URI: n som kon figurer ATS i appens registrering. Detta är vanligt vis URL-protokollet för programmet som Microsoft Authenticator-appen kommer tillbaka till efter att ha tillämpat autentisering. |
 |**-v**| (Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel. |
 |**-e**| (Valfri) Använd den här flaggan om du vill att programhanteringsverktyget ska ta bort rättigheter som saknas när appen bearbetas. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements).|

@@ -9,6 +9,7 @@ ms.date: 04/19/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 6d8c6372-f2ce-4558-8886-1d7c1966699c
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 828afc63bdf1735188d921cb9dc441218564f414
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 84098d4d2152d62eda888cdcde1cf88e5081a470
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835171"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506170"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster
 
@@ -44,7 +45,7 @@ Välj ett lämpligt alternativ och du får en avisering om att installera progra
 
    ![En bild av skärmen Inställningar i Datalert-appen, med ett fält för telefonnummer för att registrera en enhet på den övre delen av skärmen och ”Registrera med Microsoft-konto” längst ned, där du måste ha ett Microsoft Office 365-konto och en Intune-prenumeration.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
-2. Du får ett meddelande om att __”Datalert” vill öppna ”Authenticator”__. Välj __Öppna__.
+2. Du får ett meddelande om att __”Datalert” vill öppna ”Authenticator”__ . Välj __Öppna__.
 
    ![En bild av popup-frågan till användaren om att öppna autentiseringsappen på begäran av Datalert-appen.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
 

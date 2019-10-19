@@ -9,6 +9,7 @@ ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: d2bdc4433e48fd77c12bfd5db706f8d226bf95a6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840957"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506053"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Så här uppdaterar du företagsportalappen
 
@@ -44,13 +45,13 @@ När en ny version är tillgänglig visas alternativet **Uppdatera** i listan ö
 
 ## <a name="update-the-company-portal-app-on-your-macos-device"></a>Uppdatera företagsportalappen på din macOS-enhet
 
-Konfigurera Företagsportalen för att installera uppdateringar automatiskt när de blir tillgängliga. 
+Konfigurera Företagsportal så att uppdateringar installeras automatiskt när de blir tillgängliga. 
 
-1. Öppna Företagsportalen och gå till **hjälpa**. 
-2. Välj **söka efter uppdateringar**. 
-3. På skärmen Microsoft AutoUpdate väljer **automatiskt hämta och installera**. 
+1. Öppna Företagsportal och gå till **Hjälp**. 
+2. Välj **Sök efter uppdateringar**. 
+3. På Microsoft AutoUpdate-skärmen väljer du **Hämta och installera automatiskt**. 
 
-Om du vill visa tillgängliga uppdateringar, Välj **söka efter uppdateringar**.  
+Om du vill visa tillgängliga uppdateringar väljer du **Sök efter uppdateringar**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Uppdatera företagsportalappen på en Windows-enhet
 Om du vill få uppdateringar automatiskt när de blir tillgängliga går du till **Inställningar**. Aktivera sedan **Appuppdateringar**. Om du vill visa de senaste uppdateringarna och appar som väntar i nedladdningskön går du till **Program och uppdateringar**.  

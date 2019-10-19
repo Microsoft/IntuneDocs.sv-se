@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efcb622681e4f3b3fba7b686551cca7db6bb4c3a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546042"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501898"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
 Hanterade appar konfigureras för att uppfylla din organisations säkerhetskrav och för att skydda arbets- och skoldata. De här apparna görs tillgängliga för dig på din enhet, där de kan installeras eller användas automatiskt. 
@@ -55,15 +56,15 @@ Exempel på vanliga obligatoriska eller tillgängliga hanterade appar i skolor o
 Det finns tre sätt att hämta hanterade appar.  
 * Din organisation installerar automatiskt appar på din enhet i samband med registreringen.  
 * Du installerar en app från Google Play Butik och loggar sedan in i appen med ditt arbets- eller skolkonto.    
-* Din organisation gör hanterade appar tillgängliga för dig på Företagsportalen. Gå till appen eller webbplatsen för Företagsportalen för att söka efter, visa eller installera tillgängliga appar. Mer information om dessa appar finns i avsnittet nästa [tillgängliga appar](#available-apps).  
+* Din organisation gör hanterade appar tillgängliga för dig på Företagsportalen. Gå till appen eller webbplatsen för Företagsportalen för att söka efter, visa eller installera tillgängliga appar. Mer information om dessa appar finns i nästa avsnitt, [tillgängliga appar](#available-apps).  
 
 ### <a name="available-apps"></a>Tillgängliga appar   
- Din organisation kan välja appar som är lämplig och användbar för dig i arbetet eller skolan och göra dem tillgängliga för dig i Företagsportalen.  
+ Din organisation kan välja appar som är lämpliga och användbara för dig på arbetet eller skolan och göra dem tillgängliga för dig i Företagsportal.  
 
  Appar görs också tillgängliga för dig utifrån enhetstyp. Om du till exempel använder appen Företagsportal för Android har du åtkomst till Android-appar men inte iOS-appar.   
 
 ## <a name="request-an-app-for-work-or-school"></a>Begär en app för arbete eller skola   
- Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Hitta kontaktuppgifter för din **supportavdelningen** i antingen app **Kontakta IT-avdelningen** fliken. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ Om det finns en app som du behöver men inte ser i Företagsportal kan du begära den. Hitta kontakt uppgifter för **supportavdelningen** på fliken **Kontakta IT** på appen. Du hittar samma kontaktinformation på [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Vad kan företagets support hantera i en app?  
 Följande lista beskriver de inställningar som företagets support kan hantera inifrån en app. De här inställningarna påverkar hur du ser, kommer åt och i övrigt använder arbets- eller skoldata på din enhet:

@@ -6,8 +6,9 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/26/2019
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 324550836cd8e7c8ea2786d15618d5f5010a043f
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e7ed93c86d3fbe7ed7a6ac5d4b1a3494fb55f2bc
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735252"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506986"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Felsök och se potentiella problem på Android Zebra-enheter i Microsoft Intune
 
@@ -60,7 +61,7 @@ För att få loggar efter att profilen redan har distribuerats med Intune kan sl
 
 ## <a name="read-the-logs"></a>Läs loggarna
 
-När du tittar på loggarna uppstår ett fel när du ser taggen `<characteristic-error>`. Fel information skrivs till egenskapen `<parm-error>`-taggen > `desc`.
+När du tittar på loggarna uppstår ett fel när du ser `<characteristic-error>`-taggen. Fel information skrivs till egenskapen `<parm-error>` tag > `desc`.
 
 ## <a name="error-types"></a>Fel typer
 
@@ -112,7 +113,7 @@ I ett annat exempel har du följande ingång:
 </wap-provisioningdoc>
 ```
 
-Loggen visar ett fel eftersom det innehåller en `<characteristic-error>`-tagg. I det här scenariot försökte profilen installera ett Android-paket (APK) som inte finns på den angivna sökvägen:
+Loggen visar ett fel, eftersom det innehåller en `<characteristic-error>`-tagg. I det här scenariot försökte profilen installera ett Android-paket (APK) som inte finns på den angivna sökvägen:
 
 ```xml
 <wap-provisioningdoc>
