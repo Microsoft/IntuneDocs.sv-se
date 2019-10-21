@@ -41,6 +41,16 @@
       href: device-lifecycle.md
     - name: Applivscykel
       href: ../apps/app-lifecycle.md
+    - name: Guidade scenarier
+      items:
+        - name: Översikt över guidade scenarier
+          href: guided-scenarios-overview.md
+        - name: Distribuera Microsoft Edge för mobil
+          href: guided-scenarios-edge.md
+        - name: Molnhanterat modernt skrivbord
+          href: guided-scenarios-cloud-managed-pc.md
+        - name: Säkra Microsoft Office-mobilappar
+          href: guided-scenarios-office-mobile.md
     - name: Vanliga scenarier
       href: common-scenarios.md
     - name: Teknikval för BYOD med EMS
@@ -175,6 +185,8 @@
       href: ../protect/index.yml
     - name: Hantera och skydda appar
       href: ../apps/index.yml
+    - name: Använda policyuppsättningar
+      href: ~/fundamentals/policy-sets.md
     - name: Vägledning för utvecklare
       href: ../developer/index.yml
     - name: Få hjälp och support
