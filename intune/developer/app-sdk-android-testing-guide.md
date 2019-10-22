@@ -1,5 +1,5 @@
 ---
-title: Testningsguide om Microsoft Intune-appens SDK för Android-utvecklare
+title: Android-testguide för Microsoft Intune App SDK
 description: Testningsguiden för Microsoft Intune App SDK för Android hjälper dig att testa din Intune-hanterade Android-app.
 keywords: SDK
 author: Erikre
@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4ef8f421-9610-4d34-a464-cc02eb1578a9
@@ -16,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1484567721283ddb91f3ecebbc448e7356ceaf5a
-ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
+ms.openlocfilehash: 9eada01f2b1e876d6d3b47140c671e3ff7eeab02
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71830542"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503503"
 ---
-# <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testningsguide om Microsoft Intune-appens SDK för Android-utvecklare
+# <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Android-testguide för Microsoft Intune App SDK
 
-Testningsguiden för Microsoft Intune App SDK för Android är utformat för att hjälpa dig att testa din Intune-hanterade Android-app.  
+Den här guiden hjälper utvecklare att testa sina Intune-hanterade Android-appar.  
 
 ## <a name="prerequisite-test-accounts"></a>Nödvändiga testkonton
-Nya konton kan skapas med och utan förgenererade data. Så här skapar du ett nytt konto:
-1. Gå till webbplatsen för [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
+Du kan skapa nya konton med eller utan data som skapats i förväg. Så här skapar du ett nytt konto:
+1. Gå till webbplatsen för [Microsoft-demonstrationer ](https://demos.microsoft.com/environments/create/tenant). 
 2. [Konfigurera Intune](../fundamentals/setup-steps.md) för att aktivera hantering av mobilenheter (MDM).
 3. [Skapa användare](../fundamentals/users-add.md).
 4. [Skapa grupper](../fundamentals/groups-add.md).
@@ -37,10 +38,10 @@ Nya konton kan skapas med och utan förgenererade data. Så här skapar du ett n
 
 
 ## <a name="azure-portal-policy-configuration"></a>Konfiguration av Azure-portalprinciper
-[Skapa och tilldela appskyddsprinciper](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview) på [Azure-portalens Intune-blad](../apps/app-protection-policies.md). Din [appkonfigurationsprincip](../apps/app-configuration-policies-overview.md) kan också skapas och tilldelas på Intune-bladet.
+[Skapa och tilldela appskyddsprinciper](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview) på [Azure-portalens Intune-blad](../apps/app-protection-policies.md). Du kan också skapa och tilldela din [konfigurations princip för appar](../apps/app-configuration-policies-overview.md) på Intune-bladet.
 
 > [!NOTE]
-> Om din app inte visas i Azure-portalen kan du ange den som mål med en princip genom att välja alternativet **fler appar** och ange paketets namn i textrutan.
+> Om din app inte visas på Azure-portalen kan du ange den som mål med en princip genom att välja alternativet **fler appar** och ange paketnamnet i textrutan.
 
 ## <a name="test-cases"></a>Testfall
 
@@ -48,22 +49,22 @@ Följande testfall innehåller steg för konfiguration och bekräftelse. Använd
 
 ### <a name="required-pin-and-corporate-credentials"></a>Nödvändig PIN-kod och företagets autentiseringsuppgifter
 
-Du kan kräva en PIN-kod för åtkomst till företagsresurser. Du kan även tillämpa företagsautentisering innan användare kan använda hanterade appar. Använd följande steg för att ange dessa krav:
+Du kan kräva en PIN-kod för åtkomst till företagsresurser. Du kan även tillämpa företagsautentisering innan användare kan använda hanterade appar. Så här gör du:
 
 1. Konfigurera **Kräv PIN-kod för åtkomst** och **Kräv företagsautentiseringsuppgifter för åtkomst** till **Ja**. Mer information finns i [Inställningar för Android-appskyddsprinciper i Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Bekräfta följande villkor:
-    - Appstart bör visa en uppmaning för PIN-kodsinmatning/konfiguration och/eller den produktionsanvändare som användes vid registrering med företagsportalen.
-    - Om en giltig inloggningsuppmaning inte visas kan det bero på ett felaktigt konfigurerade Android-manifest, specifikt värdena för ADAL-integrering (SkipBroker, ClientID och Authority).
-    - Om ingen uppmaning visas alls kan det bero på ett felaktigt integrerat `MAMActivity`-värde. Mer information om `MAMActivity` finns i [utvecklarhandboken för Microsoft Intune App SDK för Android](app-sdk-android.md).
+    - När appen startar uppmanas du att ange en PIN-kod eller autentiseringsuppgifterna för produktionsanvändaren som användes vid registreringen med företagsportalen.
+    - Om det inte finns någon giltig inloggnings varning kan det bero på ett felaktigt konfigurerat Android-manifest, särskilt värdena för ADAL-integration (Azure Active Directory Authentication Library) (SkipBroker, ClientID och Authority).
+    - Om ingen uppmaning visas kan det bero på ett felaktigt integrerat `MAMActivity`-värde. Mer information om `MAMActivity` finns i [utvecklarhandboken för Microsoft Intune App SDK för Android](app-sdk-android.md).
 
 > [!NOTE] 
-> Om testet ovan inte fungerar är det troligt att även testerna nedan misslyckas. Granska [SDK](app-sdk-android.md##sdk-integration)- och [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal)-integrering.
+> Om det föregående testet inte fungerar kommer följande test troligen också att Miss beta. Granska [SDK](app-sdk-android.md##sdk-integration)- och [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal)-integrering.
 
 ### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Begränsa överföring och mottagande av data med andra appar
-Du kan styra dataöverföring mellan företagshanterade program på följande sätt:
+Du kan styra dataöverföringen mellan företagshanterade program på följande sätt:
 
 1. Ange **Tillåt att appen överför data till andra appar** till **Principhanterade appar**.
-2. Ange **Tillåt att appen tar emot data från andra appar** till **Alla appar**. Användning av avsikter och innehållsprovidrar påverkas av dessa principer.
+2. Ange **Tillåt att appen tar emot data från andra appar** till **Alla appar**. Användningen av avsikter och innehållsleverantörer påverkas av dessa principer.
 3. Bekräfta följande villkor:
     - Att öppna från en ohanterad app till din app fungerar korrekt.
     - Delning av innehåll mellan hanterade appar tillåts.
@@ -76,8 +77,8 @@ Du kan begränsa systemets Urklipp till hanterade program på följande sätt:
 2. Bekräfta följande villkor:
     - Kopiering av text från din app till en ohanterad app (till exempel Meddelanden) blockeras.
 
-### <a name="prevent-save-as"></a>Förhindra **Spara som**
-Du kan styra funktionalitet för **Spara som** på följande sätt:
+### <a name="prevent-save"></a>Förhindra Spara som
+Du kan styra funktionen **Spara som** på följande sätt:
 
 1. Om din app kräver [integrerade ”Spara som”-kontroller](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted) anger du **Förhindra ”Spara som”** till **Ja**.
 2. Bekräfta följande villkor:
@@ -88,17 +89,17 @@ Du kan kryptera data på enheten på följande sätt:
 
 1. Ange **Kryptera appdata** till **Ja**.
 2. Bekräfta följande villkor:
-    - Normalt programbeteende påverkas inte.
+    - Normalt program beteende påverkas inte.
 
 ### <a name="prevent-android-backups"></a>Förhindra Android-säkerhetskopieringar
-Du kan styra appsäkerhetskopiering på följande sätt:
+Du kan styra säkerhetskopieringen av appar på följande sätt:
 
 1. Om du har angett [begränsningar för integrerad säkerhetskopiering](app-sdk-android.md#protecting-backup-data) konfigurerar du **Förhindra Android-säkerhetskopieringar** till **Ja**.
 2. Bekräfta följande villkor:
     - Säkerhetskopior begränsas.
 
 ### <a name="unenrollment"></a>Avregistrering
-Du kan fjärrensa hanterade appar från att innehålla företags-e-post, och dokument och personliga data dekrypteras när de inte längre administreras på följande sätt:
+Du kan fjärrensa e-post och dokument som tillhör företaget på hanterade appar. Personliga data dekrypteras när de inte längre administreras. Så här gör du:
 
 1. Från Azure-portalen [utför du en rensning](../apps/apps-selective-wipe.md).
 2. Om appen inte registreras för några rensningshanterare bekräftar du följande villkor:
@@ -106,22 +107,20 @@ Du kan fjärrensa hanterade appar från att innehålla företags-e-post, och dok
 3. Om appen har registrerats för `WIPE_USER_DATA` eller `WIPE_USER_AUXILARY_DATA` bekräftar du följande villkor:
     - Det hanterade innehållet tas bort från appen. Mer information finns i [utvecklarhandboken för Intune App SDK för Android – selektiv rensning](app-sdk-android.md#selective-wipe).
 
-### <a name="multi-identity"></a>Flera identiteter
-Integrering av [stöd för flera identiteter](app-sdk-android.md#multi-identity-optional) är en ändring med hög risk som behöver testas ordentligt. De vanligaste problemen beror på felaktig inställning av identiteten (kontext kontra hotnivå) och även filspårning (`MAMFileProtectionManager`).
+### <a name="multi-identity-support"></a>Stöd för flera identiteter
+Integrering av [stöd för flera identiteter](app-sdk-android.md#multi-identity-optional) är en ändring med hög risk som behöver testas ordentligt. De vanligaste problemen beror på felaktig inställning av identiteten (kontext vs. Threat Level) och spårning av filer (`MAMFileProtectionManager`).
 
-Som minst bör följande scenarier för flera identiteter omvalideras:
+Kontrol lera minimalt att:
 
 - **Spara som**-principen fungerar korrekt för hanterade identiteter.
-- Begränsningar för Kopiera/Klistra in framtvingas korrekt från hanterat till personligt.
-- Endast data som tillhör den hanterade identitet krypteras, och personliga filer ändras inte.
+- Begränsningar för Kopiera/Klistra tillämpas korrekt, från hanterat till personligt.
+- Endast data som tillhör den hanterade identiteten krypteras. Personliga filer ändras inte.
 - Selektiv rensning vid avregistrering tar endast bort data för hanterad identitet.
-- Slutanvändaren uppmanas att ange villkorlig start vid växling från ohanterat till hanterat konto (endast första gången).
+- Villkorlig start krävs när användaren växlar från ett ohanterat till ett hanterat konto (endast första gången).
 
 ### <a name="app-configuration-optional"></a>Appkonfiguration (valfritt)
-Du kan konfigurera beteendet för hanterade appar på följande sätt:
-
-1. Om din app förbrukar några inställningar för appkonfiguration bör du testa att appen korrekt hanterar alla värden som du (i egenskap av administratör) kan ange. [Appkonfigurationsprinciper](../apps/app-configuration-policies-overview.md) kan skapas och tilldelas med hjälp av Intune.
+Du kan konfigurera beteendet för hanterade appar. Om din app förbrukar några inställningar för appkonfiguration bör du testa att appen korrekt hanterar alla värden som du (i egenskap av administratör) kan ange. Du kan skapa och tilldela [konfigurations principer för appar](../apps/app-configuration-policies-overview.md) i Intune.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Lägg till en verksamhetsspecifik app för Android i Microsoft Intune](../apps/lob-apps-android.md).
+- [Lägga till en verksamhetsspecifik app för Android i Microsoft Intune](../apps/lob-apps-android.md)

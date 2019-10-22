@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 09/10/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 675f98d952cb243b5aa43e94972b3ef42fbee463
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fb5fe19852ffff30566cb6758e156def3b7d64a5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734823"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72494026"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -162,7 +163,7 @@ Om du vill lägga till appar i listorna kan du:
 - **Block iCloud Bookmark Backup** (Blockera säkerhetskopiering av bokmärken med iCloud): **Blockera** förhindrar att iCloud synkroniserar bokmärken på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av bokmärken med iCloud.
 - **Block iCloud Notes Backup** (Blockera säkerhetskopiering av anteckningar med iCloud): **Blockera** förhindrar att iCloud synkroniserar anteckningar på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av anteckningar med iCloud.
 - **Blockera iCloud-bildbibliotek**: **block** inaktiverar iCloud-bildbibliotek och hindrar iCloud från att synkronisera enheternas foton. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket tas bort från enhetens lokala lagringsutrymme. **Inte konfigurerad** (standard) tillåter synkronisering av foton mellan enheten och iCloud-bildbiblioteket.
-- **** Leverans: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
+- **Leverans**: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
 
   Den här funktionen gäller för:  
   - macOS 10.15 och senare

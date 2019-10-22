@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de367f28f3f1c7731e5ab67d904aec799925cc03
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 19202d4387635b7cd1f7e4604d755fb8a213d327
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733731"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503431"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -92,7 +93,7 @@ Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har
       ```csharp
        string enrolledAccount = IntuneMAMEnrollmentManager.Instance.EnrolledAccount;
       ```      
-### <a name="sample-applications"></a>Exempel program
+### <a name="sample-applications"></a>Exempelprogram
 Exempel program som markerar MAM-funktioner i Xamarin. iOS-appar finns på [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
 
 > [!NOTE] 
@@ -110,7 +111,7 @@ En fullständig översikt över integreringen av Intune App SDK finns i [utveckl
 #### <a name="remapper"></a>Remapper
 Från och med 1.4428.1-versionen kan `Microsoft.Intune.MAM.Remapper`-paketet läggas till i en Xamarin. Android-app som [build-verktyg](app-sdk-android.md#build-tooling) för att utföra Mam klass-, metod-och system tjänster. Om remapper ingår, utförs MAM motsvarande ersättnings delar av de metoder som har bytt namn och MAM program automatiskt när programmet har skapats.
 
-Om du vill undanta en klass från MAM-ppdateringar av Remapping kan du lägga till följande egenskap i dina projekt `.csproj`-fil.
+För att undanta en klass från MAM-ppdateringar av Remapping kan följande egenskap läggas till i dina projekt `.csproj`-filen.
 
 ```xml
   <PropertyGroup>
@@ -219,7 +220,7 @@ Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://pla
 
 Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera enheten med företagsportalappen.
 
-### <a name="sample-applications"></a>Exempel program
+### <a name="sample-applications"></a>Exempelprogram
 Exempel program som markerar MAM-funktioner i Xamarin. Android-och Xamarin. Forms-appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Stöd

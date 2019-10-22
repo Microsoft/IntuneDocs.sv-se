@@ -6,21 +6,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5adde9049f1e5f88df4a55b473f59f1d4a08e396
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d88705cbce0d5045ba7f45baf80de7b6e5d383d3
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733874"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593768"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
 
@@ -79,7 +80,13 @@ Den här artikeln beskriver dessa inställningar.
     - **Serverförtroende** - **Certifikatservernamn**: **Lägg till** ett eller flera egna namn som används i certifikat som utfärdats av din betrodda certifikatutfärdare (CA) till dina trådlösa nätverksåtskomtservrar. Lägg exempelvis till `mywirelessserver.contoso.com` eller `mywirelessserver`. När du anger den här informationen kan du hoppa över fönstret för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
-    - **Klientautentisering** - **Klientcertifikat för klientautentisering (identitetscertifikat)** : Välj den SCEP- eller PKCS-profil för klientcertifikatet som också distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+    - **Klientautentisering**: Välj en **autentiseringsmetod**. Alternativen är:
+      
+      - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.
+      
+      - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
+
+    - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
   - **EAP-TTLS**: Ange också:
 
@@ -88,6 +95,8 @@ Den här artikeln beskriver dessa inställningar.
 
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
+      - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.  
+      
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
         - **Annan metod än EAP (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
 
@@ -106,6 +115,8 @@ Den här artikeln beskriver dessa inställningar.
 
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
+      - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.  
+      
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. 
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.

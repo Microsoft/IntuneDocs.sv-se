@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e92e3442e1347cb1a2cd1c737078912b74f075c9
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817644"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503577"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Felsök integrering av JAMF Pro med Microsoft Intune
 
@@ -56,11 +57,11 @@ Följande information kan hjälpa dig att identifiera och lösa vanliga problem 
 |-----------------|--------------------------|
 | **Enheter har marker ATS som besvarade i JAMF Pro**  | [Enheter kan inte checka in med JAMF Pro eller med Azure AD](#devices-are-marked-as-unresponsive-in-jamf-pro) |
 | **Mac-enheter uppmanas att logga in på nyckel ringen när du öppnar en app-enheter kan inte registreras**  | [Användarna uppmanas att ange sina lösen ord för att tillåta att appar registreras med Azure AD](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app). |
-| **Enheterna kan inte registreras**  | Följande orsaker kan vara tillämpliga: <br> **-** [ ***Orsak 1*** – JAMF Pro-appen i Azure har felaktig behörighet](#cause-1) <br> **-** [ ***Orsak 2*** – det finns ett problem med den *JAMF-inhemska MacOS-anslutningen* i Azure AD](#cause-2) <br> **-** [ ***Orsak 3*** – användaren har ingen giltig Intune-eller JAMF-licens](#cause-3) <br> **-** [ ***orsak 4*** – användaren använde inte JAMF Self service för att starta företagsportal-appen](#cause-4) <br> **-** [ ***Orsak 5*** -Intune-integrering är inaktive rad](#cause-5) <br> **-** [ ***orsak 6*** – enheten har tidigare registrerats i Intune, eller så har användaren försökt registrera enheten flera gånger](#cause-6) <br> **-** [ ***orsak 7*** -JamfAAD begär åtkomst till en "Microsoft Workplace Join Key" från användarnas nyckel Ring](#cause-7) |
+| **Enheterna kan inte registreras**  | Följande orsaker kan vara tillämpliga: <br> **-** [ ***Orsak 1*** – JAMF Pro-appen i Azure har felaktig behörighet](#cause-1) <br> **-** [ ***Orsak 2*** – det finns ett problem för *JAMF-inhemska MacOS-anslutningsprogrammet* i Azure AD](#cause-2) <br> **-** [ ***Orsak 3*** – användaren har ingen giltig Intune-eller JAMF-licens](#cause-3) <br> **-** [ ***orsak 4*** – användaren använde inte JAMF Self service för att starta företagsportal-appen](#cause-4) <br> **-** [ ***Orsak 5*** – Intune-integrering är inaktive rad](#cause-5) <br> **-** [ ***orsak 6*** – enheten har tidigare registrerats i Intune, eller så har användaren försökt registrera enheten flera gånger](#cause-6) <br> **-** [ ***få 7*** -JamfAAD begär åtkomst till en "Microsoft Workplace Join Key" från användarnas nyckel Ring](#cause-7) |
 |  **Mac-enheten visar kompatibel i Intune men inte kompatibel i Azure** | [Problem med enhets registrering](#mac-device-shows-compliant-in-intune-but-noncompliant-in-azure) |
 | **Dubbla poster visas i Intune-konsolen för Mac-enheter som registrerats med hjälp av JAMF** | [Flera registreringar från samma enhet](#duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf) |
 | **Efterlevnadsprincip kan inte utvärdera enheten** | [Princip mål enhets grupper](#compliance-policy-fails-to-evaluate-the-device) |
-| **Det gick inte att hämta åtkomsttoken för Microsoft Graph-API** | Följande orsaker kan vara tillämpliga: <br> -[behörigheter för JAMF Pro-appen i Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> - -[licensen har upphört att gälla för JAMF eller Intune](#a-license-required-for-jamf-intune-integration-has-expired) <br> **--** [portar är inte öppna](#the-required-ports-arent-open-on-your-network)|
+| **Det gick inte att hämta åtkomsttoken för Microsoft Graph-API** | Följande orsaker kan vara tillämpliga: <br> -[behörigheter för JAMF Pro-appen i Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> - [utgången licens för JAMF eller Intune](#a-license-required-for-jamf-intune-integration-has-expired) <br> **-** [portar inte är öppna](#the-required-ports-arent-open-on-your-network)|
  
 
 ### <a name="devices-are-marked-as-unresponsive-in-jamf-pro"></a>Enheter har marker ATS som besvarade i JAMF Pro  
@@ -145,7 +146,7 @@ För att en enhet ska kunna registrera sig och registrera med Intune via JAMF m�
 
 För att avgöra vilken tjänst enheten som används för att registrera och registrera, se i Företagsportal-appen på enheten. När du har registrerat dig via JAMF bör du få ett meddelande om att öppna självbetjänings appen för att göra ändringar.
 
-I Företagsportal-appen kan användaren se **`Not registered`** och en post som liknar följande exempel kan visas i företagsportal loggarna:  
+I Företagsportal-appen kan användaren se **`Not registered`** , och en post som liknar följande exempel kan visas i företagsportal loggarna:  
 
 ```
    Line 7783: <DATE> <IP ADDRESS> INFO com.microsoft.ssp.application TID=1  
@@ -207,8 +208,8 @@ Om en enhet har avregistrerats från JAMF men inte tas bort från Intune, eller 
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/bibliotek/cookies/com. Microsoft. CompanyPortal. binarycookies
-   - /Users/<username>/Library/cookies/com. JAMF. Management. jamfAAD. binarycookies
+   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com. Microsoft. CompanyPortal
    - com. Microsoft. CompanyPortal. HockeySDK
    - enterpriseregistration.windows.net
@@ -273,7 +274,7 @@ Lös problemet genom att följa lösningen för [*orsak 6*](#cause-6) för *enhe
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>Efterlevnadsprincip kan inte utvärdera enheten  
 
-**Orsak**: JAMF-integrering med Intune stöder inte efterlevnadsprinciper som är mål för enhets grupper. 
+**Orsak**: Jamf-integreringen med Intune stöder inte efterlevnadsprinciper som tillämpas på enhetsgrupper. 
 
 **Lösning**  
 Ändra efterlevnadsprincip för macOS-enheter som ska tilldelas till användar grupper. 
@@ -293,7 +294,7 @@ Källan till det här felet kan vara en av följande orsaker:
 
 Ett av följande tillstånd inträffade när JAMF Pro-appen registrerades i Azure:  
 - Appen mottog fler än en behörighet.
-- **Anslags administratörs medgivande för *\< företags >***  alternativet har inte valts.  
+- Alternativet **bevilja administratörs medgivande för *\<your företags >***  har inte valts.  
 
 **Lösning**  
 Se lösning för orsak 1 för [enheter som inte kan registreras](#devices-fail-to-register)tidigare i den här artikeln.

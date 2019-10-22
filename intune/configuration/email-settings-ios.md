@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bd91891fa6da770404dc0af6d59016aeefe30b3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4cbf9c29a1e694726b1b42f7072eea859f812751
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734602"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593803"
 ---
 # <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till e-postinställningar för iOS-enheter i Microsoft Intune
 
@@ -55,7 +56,7 @@ Den här artikeln listar och beskriver alla e-postinställningar tillgängliga f
       - **Anpassat domännamn att använda**: Ange ett värde som Intune använder för domännamnet, till exempel `contoso.com` eller `contoso`
 
 - **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska skapas. Välj **User principal name** (`user1@contoso.com` eller `user1`) för att använda det fullständiga huvudnamnet som e-postadress. Välj **Primär SMTP-adress** (`user1@contoso.com`) för att använd den primära SMTP-adressen för att logga in på Exchange.
-- **Autentiseringsmetod**: Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som ska användas av e-postprofilen. Azure-multifaktorautentisering stöds inte.
+- **Autentiseringsmetod**: Välj **Användarnamn och lösenord**, **Certifikat** eller **Härledd autentiseringsuppgift** som autentiseringsmetod för e-postprofilen. Azure-multifaktorautentisering stöds inte.
   - Om du valde **Certifikat**, väljer du en SCEP- eller PKCS-certifikatprofil som du har skapat tidigare och som ska användas för att autentisera Exchange-anslutningen.
 - **SSL**: **Aktivera** använder Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
 - **OAuth**: **Aktivera** använder Open Authorization-kommunikation (OAuth) för att skicka e-post, ta emot e-post och kommunicera med Exchange. Om din OAuth-server använder certifikatautentisering väljer du **Certifikat** som **autentiseringsmetod** och inkluderar certifikatet med profilen. Annars väljer du **Användarnamn och lösenord** som **Autentiseringsmetod**. När du använder OAuth ska du se till att:
