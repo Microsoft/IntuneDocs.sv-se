@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14da6274546cbd4c1867975c08c60ece313714b1
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: e9542212e1b75d97c96c024eed20e20e610e2b5d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71917993"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503644"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Lösa vanliga problem med Intune Exchange Connector
  
@@ -55,7 +56,7 @@ En användare kanske inte får e-postmeddelandet eftersom:
 Läs följande avsnitt för att felsöka problem med e-postavisering.
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Kontrol lera det aviserings konto som hämtar inställningarna för automatisk identifiering
-1. Kontrol lera att tjänsten för automatisk upptäckt och EWS har kon figurer ATS på Exchange-klientens åtkomst tjänster. Mer information finns i [Client Access Services](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) och [tjänsten för automatisk upptäckt i Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Kontrollera att tjänsten för automatisk upptäckt och EWS har konfigurerats på Exchange-klientåtkomstservern. Mer information finns i [Client Access Services](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) och [tjänsten för automatisk upptäckt i Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 
 2. Kontrol lera att ditt meddelande konto uppfyller följande krav:
@@ -69,10 +70,10 @@ Läs följande avsnitt för att felsöka problem med e-postavisering.
    1. Skriv *nslookup*i kommando tolken.  
 
    2. Ange *Autodiscover.SMTPdomain.com*. Utdata bör likna följande bild:  
-      ![Nslookup resultat](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+      ![Nslookup resultat ](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
 )
 
-   Du kan också testa tjänsten för automatisk upptäckt från Internet på https://testconnectivity.microsoft.com. Eller testa den från en lokal domän med hjälp av Microsoft Connectivity Analyzer-verktyget. Mer information finns i [Microsoft Connectivity Analyzer-verktyget](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). Om det behövs kan [du hämta Microsoft Connectivity Analyzer-verktyget](http://go.microsoft.com/fwlink/?LinkID=313782).
+   Du kan också testa tjänsten för automatisk upptäckt från Internet på https://testconnectivity.microsoft.com. Eller testa den från en lokal domän med hjälp av Microsoft Connectivity Analyzer-verktyget. Mer information finns i [Microsoft Connectivity Analyzer-verktyget](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). Om det behövs kan [du hämta Microsoft Connectivity Analyzer-verktyget](https://go.microsoft.com/fwlink/?LinkID=313782).
 
 
 ### <a name="check-autodiscovery"></a>Kontrol lera automatisk identifiering  
