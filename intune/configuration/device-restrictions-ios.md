@@ -6,21 +6,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcd86cedc7684f31483d7cd3c8294a76a9c306b2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a26af380ef00c85c681beccdcdf188c343da1b94
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734914"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584891"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -140,13 +141,13 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 
 > [!IMPORTANT]
-> Om du konfigurerar en lösen ords inställning på användarens registrerade enheter ställs de **enkla lösen** ords inställningarna automatiskt in på **blockera**och en 6-siffrig PIN-kod tillämpas.
+> Om du konfigurerar en lösenordsinställning på en enhet som registreras via Användarregisterring används automatiskt inställningen **Blockera** för **Enkla lösenord**, och en 6-siffrig PIN-kod krävs.
 >
-> Du kan till exempel konfigurera inställningen för **lösen ordets giltighets tid** och skicka den här principen till användare-registrerade enheter. På enheterna händer följande:
+> Du kan till exempel konfigurera inställningen **Lösenordets giltighetstid** och skicka den här principen till användarregistrerade enheter. Följande händer på enheterna:
 >
-> - Inställningen för **lösen ordets giltighets tid** ignoreras.
-> - Enkla lösen ord, till exempel `1111` eller `1234`, tillåts inte.
-> - En 6-siffrig PIN-kod tillämpas.
+> - Inställningen **Lösenordets giltighetstid** ignoreras.
+> - Enkla lösenord, till exempel `1111` eller `1234`, tillåts inte.
+> - En 6-siffrig PIN-kod krävs.
 
 - **Enkla lösenord**: Välj **Blockera** om du vill kräva mer avancerade lösenord. **Inte konfigurerad** tillåter enkla lösenord som `0000` och `1234`.
 
@@ -159,7 +160,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Minsta längd på lösenord**: Ange den minsta längd som en användare måste ange (mellan 4 och 14 tecken). Ange en längd på mellan 4 och 6 tecken på användarens registrerade enheter.
   
   > [!NOTE]
-  > Användare kan ange en PIN-kod som är större än 6 siffror för enheter som har registrerats av användaren. Men högst 6 siffror tillämpas på enheten. En administratör anger till exempel den minsta längden `8`. På användare-registrerade enheter behöver användarna bara ange en 6-siffrig PIN-kod. Intune tvingar inte en PIN-kod som är större än 6 siffror på användarens registrerade enheter.
+  > Användare kan ange en PIN-kod som är större än 6 siffror för enheter som har registrerats av användaren. Men högst 6 siffror tillämpas på enheten. En administratör anger till exempel den minsta längden som `8`. På användare-registrerade enheter behöver användarna bara ange en 6-siffrig PIN-kod. Intune tvingar inte en PIN-kod som är större än 6 siffror på användarens registrerade enheter.
 
 - **Antal felaktiga inloggningar innan enheten rensas**: Ange antalet felaktiga inloggningar som tillåts innan enheten rensas (mellan 4–11).
   
@@ -266,6 +267,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Spel för flera**personer: Välj **blockera** för att förhindra spel i flera personer. **Inte konfigurerad** (standard) tillåter användaren att spela spel för flera personer på enheten.
 
   Från och med iOS 13,0 kräver den här inställningen övervakade enheter.
+
+- **Åtkomst till nätverks enhet i filer-appen**: genom att använda SMB-protokollet (Server Message Block) kan enheterna komma åt filer eller andra resurser på en nätverks server. **Inaktivera** förhindrar åtkomst till filer på en nätverks-SMB-enhet. **Inte konfigurerat** (standard) tillåter åtkomst.
+
+  Den här funktionen gäller för:  
+  - iOS och iPad 13,0 och senare
 
 ## <a name="built-in-apps"></a>Inbyggda appar
 
@@ -377,7 +383,7 @@ Gäller enheter som kör iOS 9,3 eller senare.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
-- **Lista över typer av appar**: skapa en lista över appar som ska visas eller döljas. Alternativen är:
+- **Lista över typer av appar**: skapa en lista över appar som ska visas eller döljas. Du kan visa eller dölja inbyggda appar och branschspecifika appar. På Apples webbplats finns en lista över [inbyggda Apple-appar](https://support.apple.com/HT208094). Alternativen är:
 
   - **Dolda appar**: Ange en lista med appar som är dolda för användarna. Användarna kan varken visa eller öppna de här apparna.
   - **Synliga appar**: Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
@@ -386,7 +392,7 @@ Gäller enheter som kör iOS 9,3 eller senare.
 
   - Om du vill lägga till appen Microsoft Work Folders anger du `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` eller `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
-  - Om du vill lägga till Microsoft Word-appen anger du `https://itunes.apple.com/de/app/microsoft-word/id586447913` eller `https://apps.apple.com/de/app/microsoft-word/id586447913`.
+  - Ange `https://itunes.apple.com/de/app/microsoft-word/id586447913` eller `https://apps.apple.com/de/app/microsoft-word/id586447913` för att lägga till Microsoft Word-appen.
 
   Du hittar webbadressen till en app genom att öppna iTunes App Store och söka efter appen. Du kan t.ex. söka efter `Microsoft Remote Desktop` eller `Microsoft Word`. Välj appen och kopiera webbadressen.
 
@@ -432,7 +438,12 @@ Om du vill lägga till appar kan du:
   - iOS 12.2 och senare
 
 - **Anslut till trådlösa nätverk med endast konfigurationsprofiler**: **Kräv** tvingar enheten att endast använda trådlösa nätverk som har konfigurerats med Intunes konfigurationsprofiler. **Inte konfigurerad** (standard) tillåter enheten att använda andra trådlösa nätverk.
-- **Ändring av Wi-Fi-tillstånd**: **inte konfigurerat** (standard) tillåter att användare aktiverar eller inaktiverar Wi-Fi på enheten. **Blockera** förhindrar att du aktiverar eller inaktiverar Wi-Fi.
+- **Wi-Fi är alltid aktiverat**: När inställningen är **nödvändig**stannar Wi-Fi i appen Inställningar. Den kan inte inaktive ras i inställningar eller i kontroll centret, även när enheten är i flyg Plans läge. **Inte konfigurerad** (standard) tillåter att användaren styr aktivering eller inaktive ring av Wi-Fi.
+
+  Att konfigurera den här inställningen hindrar inte användare från att välja ett Wi-Fi-nätverk.
+
+  Den här funktionen gäller för:  
+  - iOS och iPad 13,0 och senare
 
 ## <a name="connected-devices"></a>Anslutna enheter
 
@@ -458,6 +469,11 @@ Om du vill lägga till appar kan du:
 
   Den här funktionen gäller för:  
   - iOS 11.0 och senare
+
+- **Åtkomst till filer på USB-enhet**: enheter kan ansluta till och öppna filer på en USB-enhet. **Inaktivera** förhindrar enhets åtkomst till USB-enheten i Files-appen när en USB-enhet ansluts till enheten. Om du inaktiverar den här funktionen blockeras även slutanvändare från att överföra filer till en USB-enhet som är ansluten till en iPad. **Inte konfigurerad** (standard) tillåter åtkomst till en USB-enhet i appen filer.
+
+  Den här funktionen gäller för:  
+  - iOS och iPad 13,0 och senare
 
 ## <a name="keyboard-and-dictionary"></a>Tangentbord och ordlista
 
@@ -488,7 +504,7 @@ Om du vill lägga till appar kan du:
 - **Synkronisering av bildström till iCloud**: **Inte konfigurerad** (standard) låter användarna aktivera **My Photo Stream** på sina enheter och synkroniseras med iCloud och låta foton vara tillgängliga på användarens alla enheter. **Blockera** förhindrar bildströmssynkronisering till iCloud. Att blockera den här funktionen kan leda till data förlust. 
 - **iCloud-bildbiblioteket**: Ställ in på **Blockera** om du vill inaktivera användning av iCloud-bildbiblioteket för att lagra foton och videoklipp i molnet. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket till enheten tas bort från enheten. **Inte konfigurerad** (standard) tillåter att iCloud-bildbiblioteket används.
 - **Delad bildström**: Välj **Blockera** om du vill inaktivera **iCloud-bilddelning** på enheten. **Inte konfigurerad** (standard) tillåter delad bildström.
-- **** Leverans: **inte konfigurerat** (standard) gör det möjligt för användare att börja arbeta med en iOS-enhet och sedan fortsätta att fungera på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar den här överlämningen.
+- **Leverans**: **inte konfigurerat** (standard) gör det möjligt för användare att börja arbeta med en iOS-enhet och sedan fortsätta att fungera på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar den här överlämningen.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
@@ -533,7 +549,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 
   Den här inställningen gäller för:  
   - iOS 13.0 och senare
-  - iPad 13,0 och senare
+  - iPadOS 13.0 och senare
   
   > [!TIP]
   > Om du har LOB-appar som är tillgängliga för din organisation, och de inte **är klara på** dag 0 när iOS 13,0-versioner, rekommenderar vi att du låter den här inställningen vara **konfigurerad**.
@@ -553,7 +569,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 
   Den här inställningen gäller för:  
   - iOS 13.0 och senare
-  - iPad 13,0 och senare
+  - iPadOS 13.0 och senare
 
 - **VoiceOver-knapp**: **Tillåt** VoiceOver-ändringar så att användarna kan uppdatera VoiceOver-funktionen, t.ex. när det gäller hur snabbt texten ska läsas upp. **Inte konfigurerad** förhindrar VoiceOver-ändringar.
 - **Zoomkontroll**: **Tillåt** att användaren kan ändra zoominställningarna. **Inte konfigurerad** förhindrar zoominställningar.

@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f462b04166a2204d47f288d225e1490f8d3ea2a
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e0be7627403cc95316a99e841127a137e0279ff1
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736032"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508981"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Inställningar för Windows MDM-säkerhetsbaslinjer för Intune
 Visa inställningarna för säkerhets bas linje för MDM som stöds av Microsoft Intune för enheter som kör Windows 10 eller senare. Standardvärdena för inställningarna i den här bas linjen representerar den rekommenderade konfigurationen för tillämpliga enheter och kanske inte matchar bas linje standardvärden från andra säkerhets bas linjer eller andra versioner av den här bas linjen.
@@ -171,19 +172,19 @@ Mer information finns i [CSP-princip – Bitlocker](https://docs.microsoft.com/w
 Mer information finns i [CSP-princip – Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) i Windows-dokumentationen.  
 
 - **Require SmartScreen for Microsoft Edge** (Kräv SmartScreen för Microsoft Edge)  
-  Microsoft Edge använder som standard Windows Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara. Som standard kan användarna inte heller inaktivera (stänga av) Windows Defender SmartScreen. Om den här principen aktiveras inaktiveras Windows Defender SmartScreen och användarna kan inte aktivera funktionen. Konfigurera inte den här principen om du vill att användarna ska kunna aktivera och inaktivera Windows Defender SmartScreen.  
+  Microsoft Edge använder som standard Microsoft Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara. Som standard kan användarna inte heller inaktivera (stänga av) Microsoft Defender SmartScreen. Om den här principen aktiveras inaktiveras Microsoft Defender SmartScreen och användarna kan inte aktivera funktionen. Konfigurera inte den här principen om du vill att användarna ska kunna aktivera och inaktivera Microsoft Defender SmartScreen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067029)   
   
   **Standard**: Ja  
   
 - **Block malicious site access** (Blockera åtkomst till skadliga webbplatser)  
-  Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga webbplatser, så att de kan fortsätta till webbplatsen. Med den här principen kan du dock konfigurera Microsoft Edge för att hindra användarna från att kringgå varningar, så att de inte kan fortsätta till webbplatsen.  
+  Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Microsoft Defender SmartScreen-varningar om potentiellt skadliga webbplatser, så att de kan fortsätta till webbplatsen. Med den här principen kan du dock konfigurera Microsoft Edge för att hindra användarna från att kringgå varningar, så att de inte kan fortsätta till webbplatsen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067040)   
   
   **Standard**: Ja  
   
 - **Block unverified file download** (Blockera nedladdning av overifierade filer)  
-  Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga filer, så att de kan fortsätta att ladda ned overifierade filer. Om den här principen aktiveras kan användarna inte kringgå varningarna och hindras från att ladda ned overifierade filer.  
+  Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Microsoft Defender SmartScreen-varningar om potentiellt skadliga filer, så att de kan fortsätta att ladda ned overifierade filer. Om den här principen aktiveras kan användarna inte kringgå varningarna och hindras från att ladda ned overifierade filer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067023)  
   
   **Standard**: Ja  
@@ -272,7 +273,7 @@ Mer information finns i [CSP-princip – DeviceGuard](https://docs.microsoft.com
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **virtualiseringsbaserad säkerhets** 
+- **virtualiseringsbaserad säkerhets**  
   **standard**: Aktivera vbs med säker start
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1395,7 +1396,7 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
   **Standard**: Ja
 
 - **Virtualize file and registry write failures to per user locations** (Virtualisera skrivfel för filer och register till platser per användare)  
-  Den här principinställningen styr om programskrivningsfel omdirigeras till angivna register- och filsystemplatser. Den här principinställningen minskar risken med program som kör som administratörer och skriver körningsprogramdata till *%ProgramFiles%*, *%Windir%*, *%Windir%\system32* eller *HKLM\Software*.  
+  Den här principinställningen styr om programskrivningsfel omdirigeras till angivna register- och filsystemplatser. Den här principinställningen minskar risken med program som kör som administratörer och skriver körningsprogramdata till *%ProgramFiles%* , *%Windir%* , *%Windir%\system32* eller *HKLM\Software*.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067321)  
   
   **Standard**: Ja
@@ -1525,7 +1526,7 @@ Mer information finns i [CSP-princip – RemoteDesktopServices](https://docs.mic
   **Standard**: Aktiverat
   
 - **Block drive redirection** (Blockera omdirigering av enheter)  
-  Med den här principinställningen kan du ange om du vill förhindra mappningen av klientenheter i en session med Fjärrskrivbordstjänster (omdirigering). Som standard mappar en värdserver för fjärrskrivbordssessioner automatiskt klientenheter när anslutningen upprättas. Mappade enheter visas i trädet för sessionsmappar i Utforskaren eller på datorn i formatet *\<enhetsbeteckning >* på *\<datornamn>*. Du kan använda den här principinställningen om du vill åsidosätta detta beteende. Om du aktiverar den här principinställningen tillåts inte omdirigering av klientenheter i sessioner med Fjärrskrivbordstjänster och omdirigeringar av filkopiering med Urklipp tillåts inte på datorer som kör Windows Server 2003, Windows 8 och Windows XP. Om du inaktiverar den här principinställningen tillåts alltid omdirigering av klientenheter. Dessutom tillåts alltid omdirigering av filkopiering med Urklipp om omdirigering av Urklipp är tillåtet. Om du inte konfigurerar den här principinställningen anges inte omdirigering av klientenheter och omdirigering av filkopiering med Urklipp på grupprincipnivå.  
+  Med den här principinställningen kan du ange om du vill förhindra mappningen av klientenheter i en session med Fjärrskrivbordstjänster (omdirigering). Som standard mappar en värdserver för fjärrskrivbordssessioner automatiskt klientenheter när anslutningen upprättas. Mappade enheter visas i trädet för sessionsmappar i Utforskaren eller på datorn i formatet *\<enhetsbeteckning >* på *\<datornamn>* . Du kan använda den här principinställningen om du vill åsidosätta detta beteende. Om du aktiverar den här principinställningen tillåts inte omdirigering av klientenheter i sessioner med Fjärrskrivbordstjänster och omdirigeringar av filkopiering med Urklipp tillåts inte på datorer som kör Windows Server 2003, Windows 8 och Windows XP. Om du inaktiverar den här principinställningen tillåts alltid omdirigering av klientenheter. Dessutom tillåts alltid omdirigering av filkopiering med Urklipp om omdirigering av Urklipp är tillåtet. Om du inte konfigurerar den här principinställningen anges inte omdirigering av klientenheter och omdirigering av filkopiering med Urklipp på grupprincipnivå.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Standard**: Aktiverat
@@ -1670,7 +1671,7 @@ Mer information finns i [CSP-princip – WindowsConnectionManager](https://docs.
 
   **Standard**: Aktiverat
   
-## <a name="windows-defender"></a>Windows försvarare  
+## <a name="microsoft-defender"></a>Microsoft Defender  
 Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.  
 
 - **Scan incoming mail messages** (Sök igenom inkommande e-postmeddelanden)  
@@ -1686,7 +1687,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Blockera
   
 - **Defender sample submission consent type** (Medgivandetyp i Defender för överföring av dataprover)  
-  Kontrollerar nivån för användarmedgivande i Windows Defender för att skicka data. Om nödvändigt godkännande redan har beviljats, skickar Windows Defender dem. Om inte (och om användaren har valt att aldrig bli tillfrågad) startas användargränssnittet för att be om användarens medgivande (när Defender/AllowCloudProtection tillåts) innan data skickas.  
+  Kontrollerar nivån för användarmedgivande i Microsoft Defender för överföring av data. Om nödvändigt godkännande redan har beviljats, skickar Microsoft Defender dem. Om inte (och om användaren har valt att aldrig bli tillfrågad) startas användargränssnittet för att be om användarens medgivande (när Defender/AllowCloudProtection tillåts) innan data skickas.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067131)  
   
   **Standard**: Skicka säkra prover automatiskt 
@@ -1702,7 +1703,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Blockera
   
 - **Prevent credential stealing type** (Förhindra typ av stöld av autentiseringsuppgifter)  
-  Windows Defender Credential Guard använder virtualiseringsbaserad säkerhet för att isolera hemligheter så att endast privilegierad programvara kan komma åt dem. Obehörig åtkomst till dessa hemligheter kan leda till stöld av autentiseringsuppgifter, till exempel Pass-The-Hash eller Pass-The-Ticket. Windows Defender Credential Guard förhindrar dessa attacker genom att skydda NTLM-hashvärden för lösenord, biljettbeviljande Kerberos-biljetter och autentiseringsuppgifter som lagras av program som autentiseringsuppgifter för en domän.  
+  Microsoft Defender Credential Guard använder virtualiseringsbaserad säkerhet för att isolera hemligheter så att endast privilegierad programvara kan komma åt dem. Obehörig åtkomst till dessa hemligheter kan leda till stöld av autentiseringsuppgifter, till exempel Pass-The-Hash eller Pass-The-Ticket. Microsoft Defender Credential Guard förhindrar dessa attacker genom att skydda NTLM-hashvärden för lösenord, biljettbeviljande Kerberos-biljetter och autentiseringsuppgifter som lagras av program som autentiseringsuppgifter för en domän.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Standard**: Aktivera
@@ -1721,9 +1722,9 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
-- **Network protection type** (Typ av nätverksskydd)  
-  Med den här principen kan du aktivera nätverksskydd (blockera/granska) eller inaktivera nätverksskydd i Windows Defender Exploit Guard. Nätverksskydd är en funktion i Windows Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser. Värdetypen är ett heltal. Om du aktiverar den här principinställningen aktiveras nätverksskydd och anställda kan inte inaktivera funktionen. Beteendet kan styras med följande alternativ: Blockera och Granska. Om du aktiverar den här principen med alternativet ”Blockera” hindras användare och appar från att ansluta till farliga domäner. Du kan se den här aktiviteten i Windows Defender Security Center. Om du aktiverar den här principen med alternativet ”Granska” hindras inte användare/appar från att ansluta till farliga domäner. Du kommer dock fortfarande att se den här aktiviteten i Windows Defender Security Center. Om du inaktiverar den här principen blockeras inte användare/appar från att ansluta till farliga domäner. Du kommer inte att se någon nätverksaktivitet i Windows Defender Security Center. Om du inte konfigurerar den här principen inaktiveras nätverksblockering som standard.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067102)  
+- **Nätverksskydd**  
+  Med den här principen kan du aktivera nätverksskydd (blockera/granska) eller inaktivera nätverksskydd i Microsoft Defender Exploit Guard. Nätverksskydd är en funktion i Microsoft Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser. Värdetypen är ett heltal. Om du aktiverar den här principinställningen aktiveras nätverksskydd och anställda kan inte inaktivera funktionen. Beteendet kan styras med följande alternativ: Blockera och Granska. Om du aktiverar den här principen med alternativet ”Blockera” hindras användare och appar från att ansluta till farliga domäner. Du kan se den här aktiviteten i Microsoft Defender Säkerhetscenter. Om du aktiverar den här principen med alternativet ”Granska” hindras inte användare/appar från att ansluta till farliga domäner. Du kommer dock fortfarande att se den här aktiviteten i Microsoft Defender Security Center. Om du inaktiverar den här principen blockeras inte användare/appar från att ansluta till farliga domäner. Du kommer inte att se någon nätverksaktivitet i Microsoft Defender Security Center. Om du inte konfigurerar den här principen inaktiveras nätverksblockering som standard.  
+  [Läs mer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)  
   
   **Standard**: Aktivera
   
@@ -1733,13 +1734,13 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Varje dag
   
 - **Molnlevererat skydd**  
-  För att skydda din dator på bästa sätt skickar Windows Defender information till Microsoft om problem påträffas. Microsoft analyserar informationen, lär sig mer om problem som påverkar dig och andra kunder och erbjuder bättre lösningar.  
+  För att skydda din dator på bästa sätt skickar Microsoft Defender information till Microsoft om problem påträffas. Microsoft analyserar informationen, lär sig mer om problem som påverkar dig och andra kunder och erbjuder bättre lösningar.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067039)
   
   **Standard**: Ja  
 
 - **Defender potentially unwanted app action** (Potentiellt oönskad appåtgärd i Defender)  
-  Funktionen för skydd mot potentiellt oönskade program (PUA, Potentially Unwanted Application) i Windows Defender Antivirus kan identifiera och hindra potentiellt oönskade program från att hämtas och installeras på slutpunkter i ditt nätverk. Dessa program betraktas inte som virus, skadlig kod eller andra typer av hot, men kan utföra åtgärder på slutpunkter som negativt påverkar deras prestanda eller användning. Potentiellt oönskade program syftar även på program med dåligt rykte. Vanligt beteende för oönskade program innefattar: olika typer av programvarupaketerande Ad-inmatning i webbläsares drivrutin och registreringsoptimerare som identifierar problem, begär betalning för att åtgärda felen, men finns kvar på slutpunkten och gör inga ändringar eller optimeringar (även kallat ”antivirusfalska program”). Dessa program kan öka risken för att nätverket infekteras av skadlig kod, orsaka att infektioner av skadlig kod är vara svårare att identifiera och slösa på IT-resurser vid rensning av program.  
+  Funktionen för skydd mot potentiellt oönskade program (PUA, Potentially Unwanted Application) i Microsoft Defender Antivirus kan identifiera och hindra potentiellt oönskade program från att hämtas och installeras på slutpunkter i ditt nätverk. Dessa program betraktas inte som virus, skadlig kod eller andra typer av hot, men kan utföra åtgärder på slutpunkter som negativt påverkar deras prestanda eller användning. Potentiellt oönskade program syftar även på program med dåligt rykte. Vanligt beteende för oönskade program innefattar: olika typer av programvarupaketerande Ad-inmatning i webbläsares drivrutin och registreringsoptimerare som identifierar problem, begär betalning för att åtgärda felen, men finns kvar på slutpunkten och gör inga ändringar eller optimeringar (även kallat ”antivirusfalska program”). Dessa program kan öka risken för att nätverket infekteras av skadlig kod, orsaka att infektioner av skadlig kod är vara svårare att identifiera och slösa på IT-resurser vid rensning av program.  
   [Läs mer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)    
   
   **Standard**: Blockera  
@@ -1751,7 +1752,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Blockera
   
 - **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**  
-  Tillåter att Windows Defender söker efter skadlig och oönskad programvara på flyttbara enheter (till exempel flash-enheter) under en fullständig genomsökning. Windows Defender Antivirus söker igenom alla filer på USB-enheter innan de körs.  
+  Tillåter att Microsoft Defender söker efter skadlig och oönskad programvara på flyttbara enheter (till exempel flash-enheter) under en fullständig genomsökning. Microsoft Defender Antivirus söker igenom alla filer på USB-enheter innan de körs.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067036)  
   
   **Standard**: Ja  
@@ -1762,7 +1763,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Ja
   
 - **Beteendeövervakning**  
-  Tillåter eller underlåter Windows Defender beteende övervaknings funktioner. Dessa sensorer är inbäddade i Windows 10 och samlar in och bearbetar beteendesignaler från operativsystemet samt skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
+  Tillåter eller underlåter Microsoft Defender beteende övervaknings funktioner. Dessa sensorer är inbäddade i Windows 10 och samlar in och bearbetar beteendesignaler från operativsystemet samt skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Standard**: Ja
@@ -1816,7 +1817,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
-## <a name="windows-defender-firewall"></a>Windows Defender-brandvägg  
+## <a name="microsoft-defender-firewall"></a>Microsoft Defender-brandvägg  
 Mer information finns i [2.2.2-FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) i dokumentationen för Windows-protokoll.  
 
 - **Domän för brand Väggs profil**  
@@ -1985,11 +1986,11 @@ Följande inställningar är antingen:
   - **Inbjudnings metod för e-post**
 
 
-*[Nytt]* [**Windows Defender**](#windows-defender):
+*[Nytt]* [**Microsoft Defender**](#microsoft-defender):
 - **Adobe Reader-start i en underordnad process**  
 - **Office-kommunikationsappar startar i en underordnad process** 
 
-*[Nytt]* [**Windows Defender-brandvägg**](#windows-defender-firewall)
+*[Ny]* [ **Microsoft Defender-brandvägg**](#microsoft-defender-firewall)
 - **Domän för brand Väggs profil**  
   - **Inkommande anslutningar blockerade**  
   - **Utgående anslutningar krävs**  

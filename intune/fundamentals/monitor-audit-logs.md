@@ -8,17 +8,18 @@ manager: dougeby
 ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d999603abc539fda4d152d15dd1ab965c465f39e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736305"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585247"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Använd granskningsloggar för att spåra och övervaka händelser i Microsoft Intune
 
@@ -49,11 +50,12 @@ Granskningsloggar och arbetsloggar kan även dirigeras till Azure Monitor. I **G
 
 ![Exportera loggdata till Azure Monitor genom att Exportera datainställningar i Intune](./media/monitor-audit-logs/audit-logs-export-data-settings.png)
 
-Mer information om den här funktionen finns i [Skicka loggdata till lagring, händelsehubbar eller logganalys](review-logs-using-azure-monitor.md).
+> [!NOTE]
+> Mer information om den här funktionen och för att granska kraven för att använda den finns i [Skicka loggdata till lagring, Event Hub eller Log Analytics](review-logs-using-azure-monitor.md).
 
 ## <a name="review-audit-events"></a>Gå igenom granskningshändelser
 
-![Välj granskningsloggar i Intune för att se åtgärder och datum när händelser inträffade](./media/monitor-audit-logs/monitor-audit-logs.png "Granskningsloggar")
+![Välj granskningsloggar i Intune om du vill se åtgärder och datum när händelser inträffade](./media/monitor-audit-logs/monitor-audit-logs.png "Granskningsloggar")
 
 En granskningslogg har en standardlistvy som visar följande objekt:
 
@@ -67,11 +69,11 @@ En granskningslogg har en standardlistvy som visar följande objekt:
 
 Om du vill se mer specifik information om en händelse väljer du ett objekt i listan:
 
-![Få mer specifik information om vem som gjorde vad i granskningsloggar i Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "Information om granskningslogg")
+![Få mer specifik information om vem som gjorde vad i granskningsloggar i Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "|::ref2::|")
 
 > [!NOTE]
 > **Initierad av (aktör)** innehåller information om vem som körde uppgiften och var den kördes. Om du t.ex. utför aktiviteten i Intune i Azure Portal, visar **Program** alltid **Microsoft Intune-portaltillägg** och **Program-ID** använder alltid samma GUID.
-> 
+>
 > Avsnittet **Mål** anger flera mål och de egenskaper som har ändrats.  
 
 ## <a name="filter-audit-events"></a>Filtrera granskningshändelser

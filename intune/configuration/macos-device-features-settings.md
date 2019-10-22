@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ae9637e827330fb33c407122450deb014b3725a
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816873"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506667"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Funktionsinställningar för macOS-enheter i Intune
 
@@ -67,11 +68,11 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
 
 4. Använd värdena för IP-adressen och resurssökvägen. I det här exemplet är IP-adressen `10.50.25.21` och resurssökvägen är `/ipp/port1`.
 
-## <a name="login-items"></a>Inloggnings objekt
+## <a name="login-items"></a>Inloggningsobjekt
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
 
-- **Filer, mappar och anpassade appar**: **Lägg till** sökvägen till en fil, mapp, anpassad app eller systemappen som du vill öppna när en användare loggar in på enheten. Systemappar eller appar som skapats eller anpassats för din organisation är vanligt vis i mappen `Applications`, med en sökväg som liknar `/Applications/AppName.app`. 
+- **Filer, mappar och anpassade appar**: **Lägg till** sökvägen till en fil, mapp, anpassad app eller systemappen som du vill öppna när en användare loggar in på enheten. Systemappar eller appar som har skapats eller anpassats för din organisation är vanligt vis i `Applications` mapp, med en sökväg som liknar `/Applications/AppName.app`. 
 
   Du kan lägga till många filer, mappar och appar. Ange till exempel:  
   
@@ -80,7 +81,7 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  När du lägger till en app, mapp eller fil måste du ange rätt sökväg. Alla objekt finns inte i mappen `Applications`. Om en användare flyttar ett objekt från en plats till en annan ändras sökvägen. Det här flyttade objektet öppnas inte när användaren loggar in.
+  När du lägger till en app, mapp eller fil måste du ange rätt sökväg. Alla objekt finns inte i `Applications`-mappen. Om en användare flyttar ett objekt från en plats till en annan ändras sökvägen. Det här flyttade objektet öppnas inte när användaren loggar in.
 
 ## <a name="login-window"></a>Inloggningsfönstret
 
@@ -185,7 +186,7 @@ Den här funktionen gäller för:
 - **Programpaket-ID: n** (endast Kerberos): **Lägg till** de ID: n för appen som ska använda enkel inloggning på dina enheter. De här apparna beviljas åtkomst till biljett beviljande biljetten i Kerberos, autentiserings biljetten och autentisera användare till tjänster som de har behörighet att komma åt.
 - **Domän sfär mappning** (endast Kerberos): **Lägg till** DNS-suffixet för domänen som ska mappas till din sfär. Använd den här inställningen när DNS-namnen på värdarna inte matchar sfär namnet. Du behöver förmodligen inte skapa den här anpassade domän-till-sfär-mappningen.
 
-## <a name="associated-domains"></a>Tillhör ande domäner
+## <a name="associated-domains"></a>Tillhörande domäner
 
 Med Intune kan du:
 
@@ -200,26 +201,26 @@ Den här funktionen gäller för:
 
 - **App-ID**: Ange appens ID för den app som ska associeras med en webbplats. App-ID: t innehåller Team-ID: t och ett paket-ID: `TeamID.BundleID`.
 
-  Team-ID: t är en sträng med 10 tecken (bokstäver och siffror) som genereras av Apple för dina Apps-utvecklare, till exempel `ABCDE12345`. [Hitta ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c)  (öppnar Apples webbplats) innehåller mer information.
+  Team-ID: t är en sträng med 10 tecken (bokstäver och siffror) som genereras av Apple för dina Apps-utvecklare, till exempel `ABCDE12345`. [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c)   (öppna Apples webbplats) innehåller mer information.
 
   Bunt-ID: t identifierar appen unikt och är vanligt vis formaterad i omvänd domän namns notation. Till exempel är paket-ID: t för Finder `com.apple.finder`. Om du vill hitta paket-ID: t använder du Apple script i Terminal:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domän**: Ange den webbplats domän som ska associeras med en app. Domänen innehåller en tjänst typ och ett fullständigt kvalificerat värdnamn, till exempel `webcredentials:www.contoso.com`.
+- **Domän**: Ange den webbplats domän som ska associeras med en app. Domänen innehåller en tjänst typ och ett fullständigt kvalificerat värdnamn, t. ex. `webcredentials:www.contoso.com`.
 
   Du kan matcha alla under domäner i en associerad domän genom att ange `*.` (en asterisk med jokertecken och en punkt) innan domänen börjar. Perioden måste anges. Exakta domäner har högre prioritet än domäner med jokertecken. Därför matchas mönster från överordnade domäner *om* en matchning inte finns i den fullständigt kvalificerade under domänen.
 
   Tjänst typen kan vara:
 
-  - **authsrv**: tillägg för enkel inloggning
+  - **authsrv**: Tillägg till app för enkel inloggning
   - **AppLink**: Universal Link
   - **webcredentials**: lösen ord Autofyll
 
 - **Lägg till**: Välj om du vill lägga till dina appar och associerade domäner.
 
 > [!TIP]
-> Du kan felsöka på din macOS-enhet genom att öppna **Systeminställningar** > **profiler**. Bekräfta att profilen du skapade är i listan enhets profiler. Om den finns med i listan, se till att **konfigurationen för tillhör ande domäner** finns i profilen och att den innehåller rätt app-ID och domäner.
+> Du kan felsöka på din macOS-enhet genom att öppna **system inställningar**  > **profiler**. Bekräfta att profilen du skapade är i listan enhets profiler. Om den finns med i listan, se till att **konfigurationen för tillhör ande domäner** finns i profilen och att den innehåller rätt app-ID och domäner.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58eefffac670a12fc1d1a065534b4c1a4505426
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d1d83a77d8823a05accaf1c88b57f6e380636469
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734953"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585385"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -67,7 +68,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 - **Systemuppdatering**: Välj ett alternativ för att definiera hur enheten hanterar over-the-air-uppdateringar:
   - **Standard för enheten**: Använd enhetens standardinställning.
   - **Automatiskt**: Uppdateringar installeras automatiskt utan att användaren behöver göra något. Om du konfigurerar den här principen installeras väntande uppdateringar omedelbart.
-  - **Uppskjuten**: Uppdateringar skjuts upp 30 dagar. Mot slutet av 30-dagarsperioden uppmanar Android användaren att installera uppdateringen. Det är möjligt för enhetstillverkare eller operatörer att undanta viktiga säkerhetsuppdateringar från att skjutas upp. En undantagen uppdatering visar användaren ett systemmeddelande på enheten. 
+  - **Uppskjuten**: Uppdateringar skjuts upp 30 dagar. Mot slutet av 30-dagarsperioden uppmanar Android användaren att installera uppdateringen. Det är möjligt för enhetstillverkare eller operatörer att undanta viktiga säkerhetsuppdateringar från att skjutas upp. En undantagen uppdatering visar användaren ett systemmeddelande på enheten.
   - **Underhållsperiod**: Installerar uppdateringar automatiskt under en daglig underhållsperiod som du anger i Intune. Installationen gör ett försök dagligen under 30 dagar och kan misslyckas vid otillräckligt diskutrymme eller för låga batterinivåer. Efter 30 dagar uppmanar Android användaren att installera. Det här fönstret används också för att installera uppdateringar för Play-appar. Använd det här alternativet för dedikerade enheter såsom helskärmslägen, eftersom förgrundsappar för dedikerade enheter med enskild app kan uppdateras.
 
 - **Meddelandefönster**: När **Inaktivera** har valts visas inte fönstermeddelanden, bland annat popup-fönster, inkommande samtal, utgående samtal, systemaviseringar och systemfel, på enheten. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa meddelanden.
@@ -98,8 +99,8 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   > För dedikerade enheter för flera appar gäller att [appen Hanterade startskärmar](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) från Google Play **måste vara**:
   >   - [Tillagt som en klientapp](../apps/apps-add-android-for-work.md) i Intune
   >   - [Tilldelad till den enhetsgrupp](../apps/apps-deploy.md) som skapats för dina dedikerade enheter
-  > 
-  > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterad startskärm** läggs till som en klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i **Hanterad startskärm**-appen. 
+  >
+  > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterad startskärm** läggs till som en klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i **Hanterad startskärm**-appen.
   >
   > När du använder hel skärms läge för flera appar kanske inte uppringnings-/telefon program fungerar korrekt. 
 
@@ -157,7 +158,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
       Om du inte anger en URL används enhetens Standard avbildning, om det finns en standard avbildning.
 
-    - **Antal sekunder som enheten visar skärmsläckaren innan skärmen**stängs av: Välj hur länge enheten ska Visa skärmsläckaren. Ange ett värde mellan 0-9999999 sekunder. Standardvärdet är `0` sekunder. Om värdet är tomt eller är noll (`0`) är skärmsläckaren aktiv tills en användare interagerar med enheten.
+    - **Antal sekunder som enheten visar skärmsläckaren innan skärmen**stängs av: Välj hur länge enheten ska Visa skärmsläckaren. Ange ett värde mellan 0-9999999 sekunder. Standardvärdet är `0` sekunder. När värdet är tomt eller är inställt på noll (`0`) är skärmsläckaren aktiv tills en användare interagerar med enheten.
     - **Antal sekunder som enheten är inaktiv innan skärmsläckaren visas**: Välj hur länge enheten ska vara inaktiv innan skärmsläckaren visas. Ange ett värde mellan 1-9999999 sekunder. Standardvärdet är `30` sekunder. Du måste ange ett tal som är större än noll (`0`).
     - **Identifiera media innan**skärmsläckaren startas: **Aktivera** (standard) visar inte skärmsläckaren om ljud eller video spelas upp på enheten. **Inte konfigurerad** visar skärmsläckaren, även om ljud eller video spelas upp.
 
@@ -241,7 +242,22 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
   Välj **Inte konfigurerad** om du vill tillåta att trafik flödar via VPN-tunneln eller det mobila nätverket.
 
-## <a name="work-profile-only"></a>Endast arbetsprofil 
+- **Rekommenderad global proxy**: Välj **Aktivera** för att lägga till en global proxy till enheterna. När den är aktive rad kan HTTP-och HTTPS-trafik, inklusive vissa appar på enheten, använda den proxy som du anger. Den här proxyn är bara en rekommendation. Det är möjligt att vissa appar inte använder proxyn. **Inte konfigurerad** (standard) lägger inte till en rekommenderad global proxy.
+
+  Mer information om den här funktionen finns i [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (öppnar en Android-webbplats).
+
+  När det är aktiverat anger du även **typen** av proxy. Alternativen är:
+
+  - **Direkt**: Välj det här alternativet om du vill ange information om proxyservern manuellt, inklusive:
+    - **Värd**: Ange värd namnet eller IP-adressen för proxyservern. Ange till exempel `proxy.contoso.com` eller `127.0.0.1`.
+    - **Portnummer**: Ange TCP-portnumret som används av proxyservern. Ange till exempel `8080`.
+    - **Exkluderade värdar**: Ange en lista över värdnamn eller IP-adresser som inte använder proxyn. Den här listan kan innehålla en asterisk (`*`) som jokertecken och flera värdar avgränsade med semikolon (`;`) utan blank steg. Ange till exempel `127.0.0.1;web.contoso.com;*.microsoft.com`.
+
+  - **Automatisk proxykonfiguration**: ange **PAC-URL** : en för ett skript för automatisk konfiguration av proxy. Ange till exempel `https://proxy.contoso.com/proxy.pac`.
+
+    Mer information om PAC-filer finns i [PAC-fil (Proxy Auto-Configuration](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) ) (öppnar en webbplats som inte kommer från Microsoft).
+
+## <a name="work-profile-only"></a>Endast arbetsprofil
 
 ### <a name="work-profile-settings"></a>Inställningar för arbetsprofil
 
@@ -249,9 +265,10 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 - **Kopiera och klistra in mellan arbetsprofiler och personliga profiler**: Välj **Blockera** för att förhindra kopiera och klistra in mellan arbetsappar och personliga appar. **Inte konfigurerad** låter användare dela data med hjälp av kopiera och klistra in med appar i den personliga profilen 
 - **Datadelning mellan arbetsprofiler och personliga profiler**: Välj om appar i arbetsprofilen ska kunna dela med appar i den personliga profilen. Du kan till exempel styra delningsåtgärder i program, så som alternativet **Dela...** i Chrome-webbläsarappen. Den här inställningen gäller inte för kopierings- och inklistringsbeteendet i Urklipp. Delningsalternativ:
-  - **Standardbegränsningar för delning**: Detta är standardinställningen för delning av enheten, vilket varierar beroende på Android-version. Som standard tillåts delning från den personliga profilen till arbetsprofilen. Som standard är dessutom delning mellan arbetsprofilen och den personliga profilen blockerad. Den här inställningen förhindrar att arbetsdata delas till den personliga profilen. För enheter som kör version 6.0 och senare blockerar inte Google delning från den personliga profilen till arbetsprofilen.
+  - **Standard för enheten**: Det här är enhetens standardinställning för delning, som varierar beroende på Android-version. Som standard tillåts delning från den personliga profilen till arbetsprofilen. Som standard är dessutom delning mellan arbetsprofilen och den personliga profilen blockerad. Den här inställningen förhindrar att arbetsdata delas till den personliga profilen. För enheter som kör version 6.0 och senare blockerar inte Google delning från den personliga profilen till arbetsprofilen.
   - **Appar i arbetsprofilen kan hantera delningsförfrågningar från personlig profil**: Aktiverar den inbyggda Android-funktionen som tillåter delning från den personliga profilen till arbetsprofilen. När detta är aktiverat, kan en delningsbegäran från en app i den personliga profilen dela med appar i arbetsprofilen. Det här är standardinställningen för Android-enheter som kör tidigare versioner än 6.0.
-  - **Tillåt delning över gränser**: Aktiverar delning över arbetsprofilgränsen i bägge riktningarna. När du väljer den här inställningen så kommer appar i arbetsprofilen att kunna dela data med omärkta appar i den personliga profilen. Med den här inställningen kan hanterade appar i arbetsprofilen dela med appar på den ohanterade delen av enheten. Använd därför den här inställningen med försiktighet.
+  - **Förhindra all delning över gränser**: förhindrar delning mellan arbets profiler och personliga profiler.
+  - **Inga begränsningar vid delning**: aktiverar delning över arbets profilens gränser i båda riktningarna. När du väljer den här inställningen så kommer appar i arbetsprofilen att kunna dela data med omärkta appar i den personliga profilen. Med den här inställningen kan hanterade appar i arbetsprofilen dela med appar på den ohanterade delen av enheten. Använd därför den här inställningen med försiktighet.
 
 - **Arbetsprofilmeddelanden när enheten är låst**: Styr om appar i arbetsprofilen får visa data i meddelanden när enheten är låst. **Blockera** visar inte data. **Inte konfigurerad** visar data.
 - **Standardbehörigheter för app**: Anger principen för standardbehörighet för alla appar i arbetsprofilen. Från och med Android 6, måste användaren bevilja vissa behörigheter som krävs av appar när appen startas. Den här principinställningen låter dig välja om användare ombeds att bevilja behörigheter för alla appar i arbetsprofilen. Om du till exempel tilldelar en app i arbetsprofilen som kräver platsåtkomst. Normalt skulle den appen be användaren att godkänna eller neka platsåtkomst för appen. Använd den här principen för att automatiskt bevilja behörigheter utan att användaren tillfrågas, för att automatiskt neka behörigheter utan att användaren tillfrågas eller för att låta användaren bestämma. Välj mellan:
@@ -325,6 +342,13 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
 
    > [!Note]
    > Den här inställningen fungerar endast för Android O-enheter och senare.
+
+- **Förhindra att appar installeras från okända källor i den personliga profilen**: efter design kan Android Enterprise Work Profile-enheter inte installera appar från andra källor än den Play Store. Av typ är arbets profil enheter avsedda att vara dubbla profiler:
+
+  - En arbets profil som hanteras med MDM.
+  - En personlig profil som är isolerad från MDM-hantering.
+
+  Med den här inställningen kan administratörer styra applösenord från okända källor. **Inte konfigurerad** (standard) tillåter att app-installationer från okända källor i den personliga profilen används. **Blockera** förhindrar att program installationer från andra källor än Play Store i den personliga profilen.
 
 ### <a name="connectivity"></a>Anslutning
 

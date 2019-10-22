@@ -1,14 +1,15 @@
 ---
-title: Skicka loggar till företagets support via en USB-kabel | Microsoft Docs
-description: Skicka dataloggar med en USB-kabel
+title: Ladda upp och skicka e-postloggar med en USB-kabel | Microsoft Docs
+description: Ladda upp data loggar från enheten med USB-kabel
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/03/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
 searchScope:
@@ -18,23 +19,23 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd91a7c862b87d9842d08a2346e2e23af4f3665e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8a0ffebe7472666ce9ccd53a47460ab5f0a9b34d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836344"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508313"
 ---
-# <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Skicka loggar till företagets support via en USB-kabel
+# <a name="upload-and-email-logs-using-a-usb-cable"></a>Ladda upp och skicka e-postloggar med en USB-kabel
 
-Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
+E-postföretags support om ett problem som du upplever i Företagsportal-appen. Felinformation registreras och lagras på din enhet i ett särskilt dokument kallat en _diagnostiklogg_. Den här artikeln beskriver hur du laddar upp loggar från enheten till din dator. Du behöver en USB-kabel för att kunna utföra dessa steg.   
 
 > [!Note]
-> Innan du börjar ska du kontrollera att du har e-postadressen till företagets support redo. Du hittar den på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980) eller i företagsportalappen.
+> Kontrollera att du har e-postadressen till supportteamet till hands innan du börjar. Hitta kontakt informationen på [företagsportal webbplats](https://go.microsoft.com/fwlink/?linkid=2010980) och i företagsportal-appen. 
 
-1. Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
+1. Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.  
 
-2. Anslut din enhet till din dator med hjälp av en USB-kabel. Det är vanligtvis samma kabel som används för att ladda din enhet i vägguttaget.
+2. Anslut din enhet till din dator med hjälp av en USB-kabel. 
 
 3. Leta efter en mapp med namnet på din enhet på datorn. Hitta <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong> i mappen.
 

@@ -5,10 +5,11 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: df53feab-4f5e-46ae-b1e8-9adb048711e5
 searchScope:
@@ -18,17 +19,21 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9354c6019821a3d320c9bc50589ce420e969581
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4d6d54556f01ab047cc652f1f27238b74d003795
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847462"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501975"
 ---
 # <a name="turn-off-microsoft-usage-data-collection"></a>Inaktivera Microsofts insamling av användningsdata
 
-Microsoft samlar automatiskt in vissa data om våra produkter och tjänster. Det gör vi för att förbättra tillförlitlighet och prestanda hos våra produkter, inklusive företagsportalappen. Även om dessa data är maskerade är vissa användare inte bekväma med den här insamlingen. Företagets support har ingen kontroll över denna datainsamling och kan inte ändra din valda inställning.
+Microsoft samlar automatiskt in vissa data om produkter och tjänster. Data används för att förbättra tillförlitligheten och prestandan hos appar, t. ex. Företagsportal och Microsoft Intune. Även om dessa data är maskerade är vissa användare inte bekväma med den här insamlingen. Din organisation har inte kontroll över insamlingen av dessa data och de kan inte ändra val av inställningar.   
 
-Om du vill så kan du inaktivera insamlingen av dessa data på din Android-enhet genom att öppna inställningen **Användningsdata** i företagsportalappen.
+Stänga av data insamling på Android-enheten:  
+
+1. Öppna appen Företagsportal eller Microsoft Intune.
+2. Välj **Inställningar**.
+3. Under inställningen användnings data, vänder du växeln till off-läge. 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
