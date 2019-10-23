@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 02/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09f3cafc16d8a08885731aa244a089367c6c0933
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 55fa1109fde57e3104c8bb15e1f45761d661c735
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728110"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508725"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune-efterlevnadsrapporter för uppdateringar
 När du använder Intune för att distribuera Windows-uppdateringar till Windows 10-enheter visar du information om uppdateringsefterlevnad med hjälp av Intune eller en kostnadsfri lösning som heter *Uppdateringsefterlevnad*, som ingår i Microsoft Operations Management Suite (OMS).
