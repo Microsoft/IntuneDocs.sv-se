@@ -96,13 +96,21 @@
         - name: Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
-            - name: Konfigurera Intune för MTD
+            - name: MTD på oregistrerade enheter
               items:
-                - name: Lägg till MTD-program
+                - name: Lägg till MTD-appar på oregistrerade enheter
+                  href: mtd-add-apps-unenrolled-devices.md
+                - name: Skapa en MTD-appskyddsprincip
+                  href: mtd-app-protection-policy.md
+                - name: Aktivera MTD för oregistrerade enheter
+                  href: mtd-enable-unenrolled-devices.md
+            - name: MTD på registrerade enheter
+              items:
+                - name: Lägg till MTD-appar på registrerade enheter
                   href: mtd-apps-ios-app-configuration-policy-add-assign.md
                 - name: Skapa en MTD-enhetsefterlevnadsprincip
                   href: mtd-device-compliance-policy-create.md
-                - name: Aktivera MTD i Intune
+                - name: Aktivera MTD för registrerade enheter
                   href: mtd-connector-enable.md
             - name: MTD-program
               items:
