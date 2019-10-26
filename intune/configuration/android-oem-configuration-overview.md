@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2be1faa1296792d3d40de5ca0b304a287bae8e6f
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: eb992747765ea087d5ef536c2da7c444bfa2d987
+ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550821"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915734"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
 
@@ -66,7 +66,7 @@ Kontrol lera att du har följande krav för att använda OEMConfig på dina enhe
 
 - En Android Enterprise-enhet som har registrerats i Intune.
 - En OEMConfig-app som skapats av OEM-tillverkaren och laddats upp till Google Play. Kontakta OEM för mer information om det inte finns på Google Play.
-- Intune-administratören har behörighet som rollbaserad åtkomst kontroll (RBAC) för **mobilappar** och **DeviceConfigurations**. De här behörigheterna krävs eftersom OEMConfig-profiler använder hanterade AppData för att hantera enhetsspecifika konfigurationer.
+- Intune-administratören har behörighet som rollbaserad åtkomst kontroll (RBAC) för **mobilappar**, **enhets konfiguration**och Läs behörighet under **Android for Work**. De här behörigheterna krävs eftersom OEMConfig-profiler använder hanterade AppData för att hantera enhetsspecifika konfigurationer.
 
 ## <a name="prepare-the-oemconfig-app"></a>Förbereda OEMConfig-appen
 

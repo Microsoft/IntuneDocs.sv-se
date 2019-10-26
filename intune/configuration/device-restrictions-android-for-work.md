@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 10/24/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1d83a77d8823a05accaf1c88b57f6e380636469
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: ec6009096ac6ed39c8a217f8832661a575d83b78
+ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585385"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915704"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -193,7 +193,8 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 ### <a name="power-settings"></a>Energiinställningar
 
-- **Tid innan skärmen låses**: Ange hur lång väntetid som krävs innan enheten låses.
+- **Tid för att låsa skärmen**: Ange den längsta tid som en användare kan ange tills enheten låses. Om du till exempel ställer in den här inställningen på **10 minuter**kan användarna ange tiden från 15 sekunder upp till 10 minuter. När inställningen **inte är konfigurerad** , ändras inte Intune eller styrs av den här inställningen.
+
 - **Skärmen är på när enheten är ansluten**: Välj vilka strömkällor som gör så att enhetens skärm är på när den är ansluten.
 
 ### <a name="users-and-accounts-settings"></a>Inställningar för användare och konton

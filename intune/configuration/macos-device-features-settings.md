@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506667"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776919"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Funktionsinställningar för macOS-enheter i Intune
 
@@ -42,7 +42,7 @@ I den här artikeln visas inställningarna, tillsammans med en beskrivning av va
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering 
 
 - **IP-adress**: Ange skrivarens IPv4- eller IPv6-adress. Om du använder värdnamn till att identifiera skrivare, kan du hämta IP-adressen genom att pinga skrivaren i Terminal-appen. Det finns mer information i [Hämta IP-adress och sökväg](#get-the-ip-address-and-path) (i den här artikeln).
 - **Sökväg**: Ange sökvägen till skrivaren. Sökvägen är vanligtvis `ipp/print` för skrivare i nätverket. Det finns mer information i [Hämta IP-adress och sökväg](#get-the-ip-address-and-path) (i den här artikeln).
@@ -85,7 +85,7 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
 
 ## <a name="login-window"></a>Inloggningsfönstret
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering 
 
 #### <a name="window-layout"></a>Fönsterlayout
 

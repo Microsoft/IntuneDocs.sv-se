@@ -5,24 +5,24 @@ description: Inställningar för säkerhetsbaslinjer som stöds av Intune för a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 10/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2cb5d7375ae5b76a24861872d4abf786f199dfd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: aa3cb3481de6e1fdc3790b7330ac521772e252be
+ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509002"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923408"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -31,12 +31,6 @@ Visa baslinjeinställningarna för Microsoft Defender Avancerat skydd (tidigare 
 Baslinjen för Microsoft Defender Advanced Threat Protection är tillgänglig när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
 
 Den här bas linjen är optimerad för fysiska enheter och rekommenderas inte för användning på virtuella datorer (VM) eller VDI-slutpunkter. Vissa baslinjeinställningar kan påverka fjärranslutna interaktiva sessioner i virtualiserade miljöer. Mer information finns i [Öka efterlevnaden med säkerhetsbaslinjen i Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) i Windows-dokumentationen.
-
-
-> [!NOTE]  
-> Inställningarna för ATP-säkerhetsbaslinjer finns i **förhandsversionen**. I förhandsversionen kanske listan över tillgängliga inställningar, och ordningen som används i det här innehållet för att presentera inställningarna, inte stämmer med det som är tillgängligt i portalen.  
->
-> När baslinjeinställningarna inte är i förhandsversion längre uppdateras det här innehållet för att spegla en aktuell lista över säkerhetsbaslinjeinställningar som stöds av Intune.
 
 ## <a name="application-guard"></a>Application Guard  
 Mer information finns i [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) i Windows-dokumentationen.  
@@ -55,13 +49,13 @@ När du använder Microsoft Edge Microsoft Defender Application Guard skyddas di
 
   - **Funktionssätt för Urklipp** - *Inställningar/ClipboardSettings*  
     Välj vilka åtgärder för kopiera och klistra in som tillåts mellan den lokala datorn och den virtuella Application Guard-webbläsaren.  Alternativen är:
-    - *Inte konfigurerat*  
-    - *Blockera båda* – Data kan inte överföras mellan datorn och den virtuella webbläsaren.  
-    - *Blockera värd till behållare* – Data kan inte överföras från datorn i den virtuella webbläsaren.
-    - *Blockera behållare till värd* – Data kan inte överföras från den virtuella webbläsaren till PC-värden.
-    - *Blockera ingen* – Ingen blockering för innehåll finns.  
+    - Inte konfigurerat  
+    - Blockera kopiera och klistra in mellan både PC och webbläsar-block båda. Blockera båda – Data kan inte överföras mellan datorn och den virtuella webbläsaren.  
+    - Tillåt endast kopiering och inklistring från webbläsare till dator – data kan inte överföras från datorn till den virtuella webbläsaren.
+    - Tillåt endast kopiera och klistra in från PC till webbläsare – data kan inte överföras från den virtuella webbläsaren till värd datorn.
+    - Tillåt kopiera och klistra in mellan dator och webbläsare – det finns inget block för innehåll.  
 
-    **Standard**: Blockera båda  
+    **Standard**: blockera kopiera och klistra in mellan datorer och webbläsare  
 
 - **Isoleringsprincip för Windows-nätverk – domännamn på företagsnätverk**  
   Mer information finns i [CSP-princip – NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) i Windows-dokumentationen.
@@ -171,6 +165,10 @@ Mer information finns i [BitLocker-grupprincipinställningar](https://docs.micro
   - **Krypteringsmetod**  
     **Standard**: AES 128-bitars CBC
 
+- **Kryptera minnes kort (endast mobil)** Om du väljer *Ja* krypteras den mobila enhetens minnes kort.  
+
+   **Standard**: Ja
+
 - **Bit locker fixed drive policy** (Princip för BitLocker på fasta enheter)  
   Värdena för den här principen avgör krypteringsstyrkan som BitLocker använder för kryptering av fasta enheter. Företag kan styra krypteringsnivån för ökad säkerhet (AES-256 är starkare än AES-128). Om du aktiverar den här inställningen kan du konfigurera en krypteringsalgoritm och krypteringsstyrkan för nycklar för fasta dataenheter, operativsystemenheter och flyttbara dataenheter separat. För fasta enheter och operativsystemenheter rekommenderar vi att du använder XTS-AES-algoritmen. För flyttbara dataenheter bör du använda AES-CBC 128-bitars eller AES-CBC 256-bitars om dataenheten används i andra enheter som inte kör Windows 10 version 1511 eller senare. Ändringar av krypteringsmetoden har ingen effekt om enheten redan har krypterats eller om kryptering pågår. I dessa fall ignoreras den här principinställningen.
 
@@ -224,12 +222,12 @@ Mer information finns i [BitLocker-grupprincipinställningar](https://docs.micro
   - **Remove matching hardware devices** (Ta bort matchande maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).  
 
-    **Standard**: *Ingen standardkonfiguration*
+    **Standard**: Ja
 
   - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter). Expandera alternativet om du vill konfigurera den här inställningen, välj **+ Lägg till**, och ange sedan maskinvarans enhets-ID som du vill blockera.  
 
-    **Standard**: *Inga enheter blockeras*  
+    **Standard**: PCI\CC_0C0A
 
 - **Block direct memory access** (Blockera direkt minnesåtkomst)  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) – Använd den här principinställningen för att blockera direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med hot plug-stöd tills en användare loggar in i Windows. När en användare loggar in räknar Windows upp PCI-enheterna som är anslutna till PCI-portarna med hot plug-stöd. Varje gång användaren låser datorn blockeras DMA på PCI-portarna med hot plug-stöd utan underordnade enheter tills användaren loggar in igen. Enheter som räknades upp när datorn var upplåst fortsätter att fungera tills de kopplas från. 
@@ -249,23 +247,23 @@ Mer information finns i [BitLocker-grupprincipinställningar](https://docs.micro
   - **Remove matching hardware devices** (Ta bort matchande maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när *Hardware device installation by setup classes* (Installation av maskinvaruenheter efter installationsklasser) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter).  
  
-    **Standard**: *Ingen standardkonfiguration*  
+    **Standard**: Ja  
 
   - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när Installation av maskinvaruenheter efter installationsklasser har inställningen Blockera installation av maskinvaruenheter. Expandera alternativet om du vill konfigurera den här inställningen, välj **+ Lägg till**, och ange sedan maskinvarans enhets-ID som du vill blockera.  
  
-    **Standard**: *Inga enheter blockeras*
+    **Standard**: {d48179be-EC20-11D1-b6b8-00c04fa372a7}
 
 ## <a name="endpoint-detection-and-response"></a>Slutpunktsidentifiering och svar  
 Mer information finns i [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) i Windows-dokumentationen.  
 
-- **Skicka frekvensvärde för telemetrirapportering** - *Configuration/TelemetryReportingFrequency*  
+- **Skicka frekvensvärde för telemetrirapportering** - *Configuration/TelemetryReportingFrequency*
 
   Skicka frekvensvärde för telemetrirapportering för Microsoft Defender Avancerat skydd.  
 
   **Standard**: Ja
 
-- **Exempeldelning för alla filer** - *Configuration/SampleSharing*  
+- **Exempeldelning för alla filer** - *Configuration/SampleSharing* 
 
   Returnerar eller anger konfigurationsparametern för exempeldelning i Microsoft Defender Avancerat skydd.  
 
@@ -286,43 +284,7 @@ Mer information finns i [WindowsAdvancedThreatProtection CSP](https://docs.micro
   [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – Inställt på *Ja* för att förhindra användare från att göra ändringar i inställningsområdet för sårbarhetsskydd i Windows Defender Security Center. Om du inaktiverar eller inte konfigurerar denna inställning kan lokala användare göra ändringar i inställningsområdet för sårbarhetsskydd.  
   **Standard**: Ja  
 
-- **Reglerad mappåtkomst**  
-  Se [Defender/ControlledFolderAccessAllowedApplications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications) och [Defender/ControlledFolderAccessProtectedFolders](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders) 
-  
-   Skydda filer och mappar från obehöriga ändringar av oönskade appar.
-
-  **Standard**: Granskningsläge
-
-## <a name="web--network-protection"></a>Webb- och nätverksskydd  
-
-- **Network protection type** (Typ av nätverksskydd)  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  – Med den här principen kan du aktivera eller inaktivera nätverksskydd i Windows Defender Exploit Guard. Nätverksskydd är en funktion i Windows Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser.  
-
-  Då inställd på antingen *Aktivera* eller *Granskningsläge* kan användare inte inaktivera nätverksskydd och du kan använda Windows Defender Security Center för att visa information om anslutningsförsök.  
- 
-  - *Aktivera* blockerar användare och appar från att ansluta till farliga domäner.  
-  - *Granskningsläge* blockerar inte användare och appar från att ansluta till farliga domäner.  
-
-  Då inställd till *Användardefinierad*, blockeras användare och appar inte från att ansluta till farliga domäner och information om anslutningar är inte tillgänglig i Windows Defender Security Center.  
-
-  **Standard**: Granskningsläge
-
-- **Require SmartScreen for Microsoft Edge** (Kräv SmartScreen för Microsoft Edge)  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge använder som standard Windows Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara. Som standard är den här principen aktiverad (inställd på *Ja*), och då den är aktiverad förhindras användare från att stänga av Windows Defender SmartScreen.  När principen för en enhet inte är konfigurerad, kan användare inaktivera Windows Defender SmartScreen, vilket lämnar enheten oskyddad.  
-
-  **Standard**: Ja
-  
-- **Block malicious site access** (Blockera åtkomst till skadliga webbplatser)  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga webbplatser, så att användare kan fortsätta till webbplatsen. Med den här principen aktiverad (inställd till *Ja*) förhindrar Microsoft Edge användarna från att kringgå varningar och blockerar dem från att fortsätta till webbplatsen.  
-
-  **Standard**: Ja
-
-- **Block unverified file download** (Blockera nedladdning av overifierade filer)  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga filer så att de kan fortsätta hämta overifierade filer. Med den här principen aktiverad (inställd på *Ja*), förhindras användare från att kringgå varningar och det går inte att hämta overifierade filer.  
-
-  **Standard**: Ja
-
-## <a name="windows-defender-anti-virus----settings-review-pending-for-this-section"></a>Windows Defender Antivirus [Granskning av inställningar väntande för det här avsnittet]
+## <a name="microsoft-defender-antivirus"></a>Microsoft Defender Antivirus  
 
 Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.
 
@@ -594,6 +556,35 @@ Mer information finns i [CSP-brandvägg](https://docs.microsoft.com/windows/clie
 
 - **Verifiering av listan över återkallade certifikat**  
   **Standard**: Standard för enheten
+
+## <a name="web--network-protection"></a>Webb- och nätverksskydd  
+
+- **Network protection type** (Typ av nätverksskydd)  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  – Med den här principen kan du aktivera eller inaktivera nätverksskydd i Windows Defender Exploit Guard. Nätverksskydd är en funktion i Windows Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser.  
+
+  Då inställd på antingen *Aktivera* eller *Granskningsläge* kan användare inte inaktivera nätverksskydd och du kan använda Windows Defender Security Center för att visa information om anslutningsförsök.  
+ 
+  - *Aktivera* blockerar användare och appar från att ansluta till farliga domäner.  
+  - *Granskningsläge* blockerar inte användare och appar från att ansluta till farliga domäner.  
+
+  Då inställd till *Användardefinierad*, blockeras användare och appar inte från att ansluta till farliga domäner och information om anslutningar är inte tillgänglig i Windows Defender Security Center.  
+
+  **Standard**: Granskningsläge
+
+- **Require SmartScreen for Microsoft Edge** (Kräv SmartScreen för Microsoft Edge)  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge använder som standard Windows Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara. Som standard är den här principen aktiverad (inställd på *Ja*), och då den är aktiverad förhindras användare från att stänga av Windows Defender SmartScreen.  När principen för en enhet inte är konfigurerad, kan användare inaktivera Windows Defender SmartScreen, vilket lämnar enheten oskyddad.  
+
+  **Standard**: Ja
+  
+- **Block malicious site access** (Blockera åtkomst till skadliga webbplatser)  
+  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga webbplatser, så att användare kan fortsätta till webbplatsen. Med den här principen aktiverad (inställd till *Ja*) förhindrar Microsoft Edge användarna från att kringgå varningar och blockerar dem från att fortsätta till webbplatsen.  
+
+  **Standard**: Ja
+
+- **Block unverified file download** (Blockera nedladdning av overifierade filer)  
+  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga filer så att de kan fortsätta hämta overifierade filer. Med den här principen aktiverad (inställd på *Ja*), förhindras användare från att kringgå varningar och det går inte att hämta overifierade filer.  
+
+  **Standard**: Ja
 
 ## <a name="windows-hello-for-business"></a>Windows Hello för företag  
 
