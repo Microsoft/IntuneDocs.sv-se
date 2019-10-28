@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb5fe19852ffff30566cb6758e156def3b7d64a5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494026"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776887"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -40,7 +40,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="general"></a>Allmänt
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Definitionssökning**: **Blockera** förhindrar att användare markerar ett ord och sedan söka upp dess definition på enheten. **Inte konfigurerad** (standard) ger åtkomst till definitionssökningsfunktionen.
 - **Diktering**: **Blockera** förhindrar att användaren använder röstindata för att ange text. **Inte konfigurerat** (standard) tillåter användaren att använda röstindata.
@@ -82,7 +82,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="password"></a>Lösenord
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) kräver inget lösen ord. Det gäller inte heller några begränsningar, till exempel att blockera enkla lösen ord eller att ange en minimal längd.
   - **Krav på lösenordstyp**: Ange om lösenordet kan bestå av endast numeriska tecken om det måste vara alfanumeriskt (innehålla bokstäver och siffror).
@@ -114,7 +114,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="built-in-apps"></a>Inbyggda appar
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Blockera Autofyll i Safari**: **Blockera** inaktiverar funktionen Autofyll i Safari på enheten. **Inte konfigurerad** (standard) tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren.
 - **Blockera kamera**: Välj **Blockera** om du vill förhindra åtkomst till enhetens kamera. **Inte konfigurerad** (standard) ger åtkomst till enhetens kamera.
@@ -127,7 +127,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Lista över typer av begränsade appar**: skapa en lista över appar som användarna inte får installera eller använda. Alternativen är:
 
@@ -145,14 +145,14 @@ Om du vill lägga till appar i listorna kan du:
 
 ## <a name="connected-devices"></a>Anslutna enheter
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Blockera AirDrop**: **Blockera** förhindrar att AirDrop används på enheten. **Inte konfigurerad** (standard) tillåter att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
 - **Block Apple Watch Auto Unlock** (Blockera automatisk upplåsning av Apple Watch): **Blockera** hindrar användaren från att låsa upp en macOS-enhet med Apple Watch. **Inte konfigurerad** (standard) tillåter att användaren låser upp en macOS-enhet med Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Blockera synkronisering av iCloud-nyckelring**: Välj **Blockera** om du vill inaktivera synkronisering av autentiseringsuppgifter som lagras i nyckelringen till iCloud. **Inte konfigurerad** (standard) tillåter användare att synkronisera dessa autentiseringsuppgifter.
 - **Block iCloud Document Sync** (Blockera dokumentsynkronisering med iCloud): **Blockera** förhindrar att iCloud synkroniserar dokument och data. **Inte konfigurerad** (standard) tillåter synkronisering av dokument och nyckelvärden till ditt iCloud-lagringsutrymme.
@@ -170,7 +170,7 @@ Om du vill lägga till appar i listorna kan du:
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment"></a>Inställningarna gäller för: enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Webbadress till e-postdomän**: **Lägg till** en eller flera webbadresser i listan. När slutanvändarna får ett e-postmeddelande från en annan domän än den du har konfigurerat, markeras e-postmeddelandet som ej betrott i macOS-e-postappen.
 

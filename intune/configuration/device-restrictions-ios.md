@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a26af380ef00c85c681beccdcdf188c343da1b94
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 95cf688f3727f97aedd4126e00fa4dc4939ef6bc
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584891"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785507"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -300,6 +300,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
   Den här funktionen gäller för:  
   - iOS 12.2 och senare
+
+  > [!NOTE]
+  > Inställningen **loggning på Server sidan för Siri-kommandon** är föråldrad av Apple. I en kommande version tas den här inställningen bort från Intune-konsolen.
+  >
+  > Den här inställningen har för närvarande ingen påverkan på enheter, även om inställningen visas i hanteringen-profiler. Om du vill ta bort den här inställningen från någon princip öppnar du principen, gör en mindre ändring och sparar sedan principen. Principen uppdateras och inställningen tas bort från enheter.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
