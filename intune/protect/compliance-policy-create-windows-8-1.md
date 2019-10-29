@@ -2,10 +2,10 @@
 title: Kompatibilitetsinställningar för Windows 8.1 i Microsoft Intune – Azure | Microsoft Docs
 description: Visa en lista över alla inställningar som du kan använda när du konfigurerar kompatibilitet för Windows 8.1- och Windows Phone 8.1-enheter i Microsoft Intune. Kontrollera kompatibiliteten med den lägsta och högsta operativsystemversionen, ange begränsningar och längd för lösenord, aktivera kryptering för datalagring och mycket mer.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 322d6f1e23464f1f75cc79346d839a9ccdbd7bc7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3e074d922078a9772ca67a6ebd99948bc3e64601
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504651"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813212"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 8.1-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på Windows 8.1-enheter i Intune. Använd dessa inställningar som en del av din MDM-lösning för hantering av mobilenheter för att blockera enkla lösenord, ange en lägsta och högsta tillåten operativsystemversion och mycket mer.
 
@@ -39,10 +37,23 @@ Som Intune-administratör kan du använda dessa kompatibilitetsinställningar f�
 
 [Skapa en efterlevnadsprincip](create-compliance-policy.md#create-the-policy). För **Plattform** väljer du **Windows Phone 8.1** eller **Windows 8.1 och senare**.
 
-## <a name="device-properties"></a>Egenskaper för enheten
+## <a name="device-properties"></a>Egenskaper för enhet
 
-- **Lägsta version av operativsystemet som krävs**: Ange den lägsta tillåtna versionen. När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
-- **Högsta tillåtna version av operativsystemet**: Ange den högsta tillåtna versionen. När en enhet använder en senare version av operativsystemet än den som angivits i regeln, blockeras åtkomsten till företagets resurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän du ändrar regeln för att tillåta operativsystemets version.
+### <a name="operating-system-version"></a>Operativsystemversion
+
+**Windows phone 8.1 och senare**
+- **Lägsta operativ system version för mobila enheter**:  
+  Ange den lägsta tillåtna versionen. När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Användaren av enheten kan välja att uppgradera enheten för att sedan få åtkomst till företagets resurser.
+
+- **Högsta operativ system version för mobila enheter**:  
+  Ange den högsta tillåtna versionen. När en enhet använder en senare version av operativsystemet än den version som har angetts i regeln, så blockeras åtkomsten till organisationens resurser. Användaren av enheten ombeds att kontakta IT-administratören. Enheten får inte åtkomst till organisationens resurser förrän en regel ändras så att operativsystemversionen stöds.
+
+**Windows 8.1 och senare**
+- **Lägsta version av operativsystemet**:  
+  Ange den lägsta tillåtna versionen. När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Användaren av enheten kan välja att uppgradera enheten för att sedan få åtkomst till företagets resurser.
+
+- **Högsta version av operativsystemet**:  
+  Ange den högsta tillåtna versionen. När en enhet använder en senare version av operativsystemet än den version som har angetts i regeln, så blockeras åtkomsten till organisationens resurser. Användaren av enheten ombeds att kontakta IT-administratören. Enheten får inte åtkomst till organisationens resurser förrän en regel ändras så att operativsystemversionen stöds.
 
 Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsystemsversion är inställd på Windows 8.1 för Windows rapporteras enheten som inkompatibel även om den har Windows 8.1.
 
@@ -50,36 +61,59 @@ Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsyst
 
 ### <a name="password"></a>Lösenord
 
-- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
-- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
-- **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
+- **Kräv ett lösenord för att låsa upp mobila enheter**:  
+  - **Ej konfigurerad** (*standard*) – Ingen kompatibilitetskontroll görs för den här inställningen.
+  - **Kräv** – Användarna måste ange ett lösenord innan de får åtkomst till sina enheter.
 
-  För enheter som kör Windows och som nås med ett Microsoft-konto, kan inte efterlevnadsprincipen utvärdera korrekt:
-  - Om minsta längd på lösenordet är längre än åtta tecken
-  - Eller om minsta antal teckenuppsättningar är större än två
+- **Enkla lösenord**:  
+  - **Inte konfigurerad** (*standard*) – användare kan skapa enkla lösen ord som **1234** eller **1111**.
+  - **Blockera** – Användarna kan inte skapa enkla lösenord, som exempelvis **1234** eller **1111**.  
 
-- **Lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
-  
-  - **Antal icke-alfanumeriska tecken i lösenordet:** Om **Krav på lösenordstyp** är inställt till **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
+- **Minsta lösenordslängd**:  
+  Ange det minsta antal siffror eller tecken som lösenordet måste innehålla.
+
+  För enheter som kör Windows och som nås med en Microsoft-konto, kan efterlevnadsprinciper inte utvärderas korrekt om något av följande villkor uppfylls:  
+  - Minimilängden för lösenord är mer än åtta tecken
+  - Det minsta antalet teckenuppsättningar är mer än två
+
+- **Lösenordstyp**:  
+  Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
+
+  När värdet är *alfanumeriskt*är följande inställning tillgänglig.  
+
+  - **Antal icke-alfanumeriska tecken i lösenord**:  
+    När *lösen ords typen* har angetts till **alfanumeriskt**anger du det minsta antal teckenuppsättningar som lösen ordet måste innehålla. Alternativen omfattar **0** till **4** uppsättningar, med standardvärdet **1**.
+    
+    De fyra teckenuppsättningarna är:
     - Gemener
     - Versaler
     - Symboler
     - Siffror
 
-    Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext. För enheter som nås med ett Microsoft-konto, kan efterlevnadsprincipen inte korrekt utvärdera:
+    Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext. För enheter som nås med en Microsoft-konto utvärderas efterlevnadsprincip inte korrekt om något av följande villkor uppfylls:
 
-    - Om minsta längd på lösenordet är längre än åtta tecken
-    - Eller om minsta antal teckenuppsättningar är större än två
+    - Minimilängden för lösenord är mer än åtta tecken
+    - Det minsta antalet teckenuppsättningar är mer än två
 
-- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
-- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
-- **Antal tidigare lösenord för att förhindra återanvändning**: Ange det antal tidigare lösenord som inte får återanvändas.
+- **Maximalt antal minuters inaktivitet innan lösenord krävs**:  
+  Ange efter hur lång tids inaktivitet som användaren måste ange sitt lösenord igen.
+
+- **Lösenordets giltighetstid (dagar)** :  
+  Ange antalet dagar tills lösenordet upphör att gälla och användarna måste skapa ett nytt.
+
+- **Antal tidigare lösenord för att förhindra återanvändning**:  
+  Ange antal tidigare använda lösenord som inte får återanvändas.
 
 ### <a name="encryption"></a>Kryptering
 
-- **Kräv kryptering på mobila enheter**: **Kräv** att enheten krypteras för att ansluta till data-lagringsresurser.
+- **Kryptering av datalagring på enheten**:  
+  - **Ej konfigurerat** (*standard*)
+  - **Kräv** – Använd *Kräv* när du ska kryptera datalagring på dina enheter.
 
-Välj **OK** > **Skapa** för att spara ändringarna.
+
+<!-- not on phone   
+- **Require encryption on mobile device**: **Require** the device to be encrypted to connect to data storage resources.
+--> 
 
 ## <a name="next-steps"></a>Nästa steg
 
