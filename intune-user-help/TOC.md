@@ -6,7 +6,9 @@
 
 ## [Krav på enhetslösenord](password-does-not-meet-it-administrator-requirements.md)
 
-## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)
+## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)  
+
+## [Installera app med skydd mot mobilhot](set-up-mobile-threat-defense.md)  
 
 ## Använda Android-enheten
 ### [Varför du bör registrera Android-enheten](why-enroll-android-device.md)

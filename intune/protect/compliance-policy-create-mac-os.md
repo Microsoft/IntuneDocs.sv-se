@@ -2,30 +2,28 @@
 title: Kompatibilitetsinställningar för macOS-enheter i Microsoft Intune – Azure | Microsoft Docs
 description: Visa en lista över alla inställningar som du kan använda när du konfigurerar kompatibilitet för macOS-enheter i Microsoft Intune. Kräv Apples systemintegritetsskydd, ange begränsningar för lösenord, kräv en brandvägg, tillåt gatekeeper och mycket mer.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: muhosabe
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cada774003f73f487f87ed8051115dfcaaae6a20
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 518f0b825b71a9773ed66dd480b329e998f919c4
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502485"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813499"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>macOS-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på macOS-enheter i Intune. Använd dessa inställningar som en del av din MDM-lösning för hantering av mobilenheter, t.ex. för att ställa in en lägsta eller högsta operativsystemversion eller ange när lösenord upphör att gälla.
 
@@ -41,45 +39,78 @@ Som Intune-administratör kan du använda dessa kompatibilitetsinställningar f�
 
 ## <a name="device-health"></a>Enhetens hälsotillstånd
 
-- **Kräv systemintegritetsskydd**: **Kräv** att [Systemintegritetsskydd](https://support.apple.com/HT204899) är aktiverat för dina macOS-enheter (Apples webbplats öppnas). Om inställningen **Inte konfigurerad** (standard) används görs ingen kompatibilitetskontroll för den här inställningen.
+- **Kräv ett system integritets skydd**:  
+  - **Ej konfigurerad** (*standard*) – Ingen kompatibilitetskontroll görs för den här inställningen.
+  - **Kräv** -kräver att MacOS-enheter har [system integritets skydd](https://support.apple.com/HT204899) (öppnar Apples webbplats) aktiverat.  
 
-## <a name="device-properties"></a>Egenskaper för enheten
+## <a name="device-properties"></a>Egenskaper för enhet
 
-- **Lägsta operativsystemversion**: När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
-- **Högsta version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
-- **Lägsta OS-versionsnumret**: När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av Operativsystemet. Använd denna funktion för att ange ett minsta tillåtna versionsnummer på enheten.
-- **Högsta OS-versionsnumret**: När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av Operativsystemet. Använd denna funktion för att ange ett högsta tillåtna versionsnummer på enheten.
+- **Lägsta version av operativsystem som krävs**:  
+  När en enhet inte uppfyller minimikravet på operativsystemversion, rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Enhetsanvändarna kan välja att uppgradera sina enheter. Därefter kan de komma åt organisationens resurser.
+
+- **Högsta tillåtna version av operativsystemet**:  
+  När en enhet använder en senare version av operativsystemet än den version som anges i regeln, så blockeras åtkomsten till organisationens resurser. Användaren av enheten ombeds att kontakta IT-administratören. Enheten kan inte komma åt organisationens resurser förrän en regel ändras så att operativsystemversionen stöds.
+
+- **Lägsta operativsystembyggversion**:  
+  När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av operativsystemet. Använd denna funktion för att ange ett minsta tillåtna versionsnummer på enheten.
+
+- **Högsta operativsystembyggversion**:  
+  När Apple publicerar säkerhetsuppdateringar, uppdateras normalt inte versionsnumret av operativsystemet. Använd denna funktion för att ange ett högsta tillåtna versionsnummer på enheten.
 
 ## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
 ### <a name="password"></a>Lösenord
 
-- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
-- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
-- **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
+- **Kräv ett lösenord för att låsa upp mobila enheter**:  
+  - **Ej konfigurerat** (*standard*)
+  - **Kräv** Användarna måste ange ett lösenord innan de får åtkomst till sina enheter.
+
+- **Enkla lösenord**:  
+  - **Inte konfigurerad** (*standard*) – användare kan skapa lösen ord enkelt som **1234** eller **1111**.
+  - **Blockera** – Användarna kan inte skapa enkla lösenord, som exempelvis **1234** eller **1111**.
+
+- **Minsta lösenordslängd**:  
+  Ange det minsta antal siffror eller tecken som lösenordet måste innehålla.
+
 - **Lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
-- **Antal icke-alfanumeriska tecken i lösenord**: Ange det lägsta antalet specialtecken, t.ex. `&`, `#`, `%` och `!`, som lösenordet måste innehålla.
 
-    Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
+- **Antal icke-alfanumeriska tecken i lösenord**:  
+  Ange det lägsta antalet specialtecken (`&`, `#`, `%`, `!` osv) som måste ingå i lösenordet.
 
-- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
-- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
-- **Antal tidigare lösenord för att förhindra återanvändning**: Ange det antal tidigare lösenord som inte får återanvändas.
+  Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
 
-    > [!IMPORTANT]
-    > När lösenordskravet ändras på en macOS-enhet börjar det inte gälla förrän nästa gång användaren ändrar sitt lösenord. Om du till exempel ställer in begränsning av lösenordslängd till åtta siffror och macOS-enheten för närvarande har lösenord med sex siffror så fortsätter enheten att vara kompatibel till nästa gång användaren uppdaterar sitt lösenord på enheten.
+- **Maximalt antal minuters inaktivitet innan lösenord krävs**:  
+  Ange efter hur lång tids inaktivitet som användaren måste ange sitt lösenord igen.
+
+- **Förfallotid för lösenord (dagar)** :  
+  Ange antalet dagar tills lösenordet upphör att gälla och användaren måste skapa ett nytt.
+
+- **Antal tidigare lösenord för att förhindra återanvändning**:  
+  Ange antal tidigare använda lösenord som inte får återanvändas.
+> [!IMPORTANT]
+> När lösenordskravet ändras på en macOS-enhet börjar det inte gälla förrän nästa gång användaren ändrar sitt lösenord. Om du till exempel ställer in begränsning av lösenordslängd till åtta siffror och macOS-enheten för närvarande har lösenord med sex siffror så fortsätter enheten att vara kompatibel till nästa gång användaren uppdaterar sitt lösenord på enheten.
 
 ### <a name="encryption"></a>Kryptering
 
-- **Kryptering för lagring av data på en enhet**: Välj **Kräv** för att kryptera lagring av data på dina enheter.
+- **Kryptering av datalagring på en enhet**:  
+  - **Ej konfigurerat** (*standard*)
+  - **Kräv** – Använd *Kräv* när du ska kryptera datalagring på dina enheter.
 
 ### <a name="device-security"></a>Enhetssäkerhet
 
 Brandväggen skyddar enheter mot obehörig nätverksåtkomst. Du kan använda brandväggen för att styra anslutningar per program. 
 
-- **Brandvägg**: Välj **Aktivera** för att skydda enheter mot obehörig åtkomst. Genom att aktivera den här funktionen kan du hantera inkommande Internetanslutningar och använda dolt läge. **Inte konfigurerad** (standard) lämnar brandväggen avstängd, och nätverkstrafik tillåts (inte blockerad).
-- **Inkommande anslutningar**: **Blockera** alla inkommande nätverksanslutningar utom de anslutningar som krävs för grundläggande Internettjänster, till exempel DHCP, Bonjour och IPSec. Den här inställningen blockerar även alla delningstjänster, inklusive skärmdelning, fjärråtkomst, iTunes-musikdelning med mera. **Inte konfigurerad** (standard) tillåter inkommande anslutningar och delningstjänster.
-- **Dolt läge**: **Aktivera** dolt läge om du vill förhindra att enheter svarar på avsökningsförfrågningar, som kan göras av illvilliga användare. När det här är aktiverat fortsätter enheten att besvara inkommande begäranden för godkända appar. **Inte konfigurerad** (standard) lämnar dolt läge avstängt.
+- **Brandvägg**:  
+  - **Ej konfigurerad** (*standard*) – Den här inställningen lämnar brandväggen avstängd, och nätverkstrafik tillåts (blockeras ej).
+  - **Aktivera** – Använd *Aktivera* om du vill skydda enheter mot obehörig åtkomst. Genom att aktivera den här funktionen kan du hantera inkommande Internetanslutningar och använda dolt läge. 
+
+- **Inkommande anslutningar**:  
+  - **Ej konfigurerad** (*standard*) tillåter inkommande anslutningar och delningstjänster.
+  - **Block** – Blockera alla inkommande nätverksanslutningar utom de anslutningar som krävs för grundläggande Internettjänster, till exempel DHCP, Bonjour och IPSec. Den här inställningen blockerar även alla delningstjänster, inklusive skärmdelning, fjärråtkomst, iTunes-musikdelning med mera.  
+
+- **Dolt läge**:  
+  - **Inte konfigurerad** (*standard*) – den här inställningen låter dolt-läget vara inaktiverat.
+  - **Aktivera** – Aktivera dolt läge om du vill förhindra att enheter svarar på avsökningsförfrågningar, som kan göras av illvilliga användare. När det här är aktiverat fortsätter enheten att besvara inkommande begäranden för godkända appar.  
 
 ### <a name="gatekeeper"></a>Gatekeeper
 
@@ -87,12 +118,11 @@ Mer information finns i [Gatekeeper i macOS](https://support.apple.com/HT202491)
 
 **Tillåt nedladdade appar från de här platserna**: Gör att program som stöds kan installeras på dina enheter från olika platser. Du kan välja mellan följande platsalternativ:
 
-- **Inte konfigurerat**: Standard. Gatekeeper-alternativet har ingen effekt på kompatibilitet eller inkompatibilitet. 
-- **Mac App Store**: Installera endast appar för Mac App Store. Appar kan inte installeras från tredje part eller identifierade utvecklare. Om en användare väljer Gatekeeper för att installera appar utanför Mac App Store utvärderas enheten som inkompatibel.
-- **Mac App Store och identifierade utvecklare**: Installera appar för Mac App Store och från identifierade utvecklare. macOS kontrollerar utvecklarens identitet och gör vissa andra kontroller för att kontrollera appintegriteten. Om en användare väljer Gatekeeper för att installera appar som inte matchar dessa alternativ utvärderas enheten som inkompatibel.
-- **Överallt**: Appar kan installeras från valfri plats och utvecklare. Det här alternativet är det minst säkra.
-
-Välj **OK** > **Skapa** för att spara ändringarna.
+- **Inte konfigurerat** (*standard*) – Gatekeeper-alternativet har ingen inverkan på efterlevnad eller inkompatibilitet.  
+- **Mac App Store** – Installera endast appar för Mac App Store. Appar kan inte installeras från tredje part eller identifierade utvecklare. Om en användare väljer Gatekeeper för att installera appar utanför Mac App Store utvärderas enheten som inkompatibel.
+- **Mac App Store och identifierade utvecklare** – Installera appar för Mac App Store och från identifierade utvecklare. macOS kontrollerar utvecklarens identitet och gör vissa andra kontroller för att kontrollera appintegriteten. Om en användare väljer Gatekeeper för att installera appar som inte matchar dessa alternativ utvärderas enheten som inkompatibel.
+- **Överallt** – Appar kan installeras från valfri plats och utvecklare. Det här alternativet är det minst säkra.
+ 
 
 ## <a name="next-steps"></a>Nästa steg
 
