@@ -5,10 +5,10 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
-ms.topic: article
-ms.prod: ''
+ms.date: 10/18/2019
+ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e6b9f7d6aeda219af0f0cf3d0f5c34a3f03d258
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4e28db0d24101ae65ff8c5e49febd0ff5dddc6e2
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722897"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585439"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Skapa och tilldela SCEP-certifikatprofiler i Intune
 
@@ -50,7 +50,7 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 
    2. Under Övervakning är inte certifikatsrapportering tillgängligt för SCEP-certifikatprofiler för enhetsägare.
    
-   3. Återkallande av certifikat som skapats av SCEP-certifikatprofiler för enhetsägare stöds inte via Intune men kan hanteras genom en extern process eller direkt med certifikatutfärdaren.
+   3. Du kan inte använda Intune för att återkalla certifikat som etablerades av SCEP-certifikatprofiler för enhetsägare. Du kan hantera återkallning via en extern process eller direkt med certifikatutfärdaren. 
 
 6. Välj **Inställningar** och slutför sedan följande konfigurationer:
 
@@ -113,15 +113,13 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
         - **{{DeviceName}}**
         - **{{FullyQualifiedDomainName}}** *(Gäller endast för Windows och domänanslutna enheter)*
         - **{{MEID}}**
-        
+
         Du kan ange de här variablerna följt av texten för variabeln i textrutan. Till exempel kan det egna namnet för en enhet som heter *Device1* läggas till som **CN={{DeviceName}}Device1**.
 
         > [!IMPORTANT]  
         > - När du anger en variabel omger du variabelnamnet inom klammerparenteser { } som det visas i exemplet, för att undvika ett fel.  
         > - Enhetsegenskaper som används i *ämnet* eller *SAN* för ett enhetscertifikat, till exempel **IMEI**, **SerialNumber** och **FullyQualifiedDomainName**, är egenskaper som kan förfalskas av en person med åtkomst till enheten.
         > - En enhet måste ha stöd för alla variabler som anges i en certifikatprofil för att den profilen ska installeras på den enheten.  Om till exempel **{{IMEI}}** används i ämnesnamnet för en SCEP-profil och tilldelas till en enhet som inte har något IMEI-nummer kommer profilen inte att installeras.  
- 
-
 
    - **Alternativt namn för certifikatmottagare**:  
      Välj hur Intune automatiskt ska skapa det alternativa namnet för certifikatmottagare i certifikatbegäran. Alternativen för SAN beror på den certifikattyp du valde, antingen **Användare** eller **Enhet**.  
@@ -198,15 +196,15 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
      Lägg till värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet *klientautentisering* så att användaren eller enheten kan autentisera till en server. Du kan lägga till ytterligare nyckelanvändningar efter behov.
 
    - **Tröskelvärde för förnyelse (%)** :  
-     Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs. Om du till exempel anger 20 görs ett försök att förnya certifikatet när certifikatet är 80 % upphört, och försök fortsätter att göras tills förnyelsen lyckas. Förnyelsen genererar ett nytt certifikat, vilket resulterar i ett nytt offentligt/privat nyckelpar.
+     Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs. Om du till exempel anger 20 görs ett försök att förnya certifikatet när certifikatet är 80 % upphört. Förnyelseförsök fortsätter tills förnyelsen lyckas. Förnyelsen genererar ett nytt certifikat, vilket resulterar i ett nytt offentligt/privat nyckelpar.
 
    - **Webbadresser för SCEP-server**:  
-     Ange en eller flera webbadresser för de NDES-servrar som utfärdar certifikat via SCEP. Ange till exempel något i stil med *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Du kan lägga till ytterligare SCEP-URL:er för belastningsutjämning vid behov eftersom URL:er slumpmässigt skickas till enheten med profilen. Om någon av SCEP-servrarna inte är tillgänglig misslyckas SCEP-begäran, och vid efterföljande enhetsincheckningar är det möjligt att certifikatbegäran kan göras mot samma server som är nere.
+     Ange en eller flera webbadresser för de NDES-servrar som utfärdar certifikat via SCEP. Ange till exempel något i stil med *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . Du kan lägga till ytterligare SCEP-URL:er för belastningsutjämning vid behov eftersom URL:er slumpmässigt skickas till enheten med profilen. Om någon av SCEP-servrarna inte är tillgänglig misslyckas SCEP-begäran, och vid senare enhetsincheckningar är det möjligt att certifikatbegäran kan göras mot samma server som är nere.
 
 7. Välj **OK** och välj sedan **Skapa**. Profilen skapas och visas i listan *Enhetskonfiguration – Profiler*.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Undvik förfrågningar om certifikatsignering med undantagna specialtecken
-Det finns ett känt problem för SCEP-certifikatbegäran som innehåller ett ämnesnamn med ett eller flera av följande specialtecken som undantaget tecken. Ämnesnamn där ett av specialteckningen är ett undantaget tecken leder till ett CSR med ett felaktigt ämnesnamn, vilket i sin tur leder till att valideringen av Intune SCEP-verifieringen misslyckas och certifikatet inte utfärdas.  
+Det finns ett känt problem för SCEP- och PKCS-certifikatbegäranden som innehåller ett ämnesnamn med ett eller flera av följande specialtecken som undantaget tecken. Ämnesnamn som innehåller ett av specialtecknen som ett undantaget tecken resulterar i en CSR med ett felaktigt ämnesnamn. Ett felaktigt ämnesnamn resulterar i att Intunes kontrollvalidering misslyckas och att inget certifikat utfärdas.
 
 Specialtecknen är:
 - \+

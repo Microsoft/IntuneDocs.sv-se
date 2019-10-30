@@ -6,9 +6,10 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/23/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 571974e1736fb78ae633c02fcfd6e6233056379b
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: f32637173ec6cf5f7c284a87193eafffb6a16e6c
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71920126"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786134"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -50,8 +51,170 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 ### Intune apps
 ### Monitor and troubleshoot
 ### Role-based access control
-
 -->  
+
+
+<!-- ########################## -->
+
+## <a name="week-of-october-21-2019"></a>Veckan då den 21 oktober 2019 infaller
+
+### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073-idready-wnready---"></a>Ny gränssnittsprofil för konfiguration av enhetens inbyggda programvara för enheter med Windows 10 och senare <!-- 2266073 idready wnready -->
+
+I Windows 10 och senare kan du skapa en enhetskonfigurationsprofil för att kontrollera inställningar och funktioner (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform). I den här uppdateringen finns en ny typ av gränssnittsprofil för konfiguration av enhetens inbyggda programvara som gör att Intune kan hantera UEFI-inställningar (BIOS).
+
+Mer information om den här funktionen finns i avsnittet om att [använda DFCI-profiler på Windows-enheter i Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
+
+Gäller för:
+
+- Windows 10 RS5 (1809) och senare på inbyggd programvara som stöds
+
+## <a name="week-of-october-14-2019"></a>Veckan då den 14 oktober 2019 infaller
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Apphantering 
+
+#### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956-----"></a>Tillgänglig Google Play-apprapportering för Android-arbetsprofiler <!-- 3041956   -->
+För tillgängliga appinstallationer på Android Enterprise-enheter för arbetsprofil samt dedikerade och fullständigt hanterade enheter kan du visa appens installationsstatus samt den installerade versionen av hanterade Google Play-appar. Mer information finns i [Så här övervakar du appskyddsprinciper](~/apps/app-protection-policies-monitor.md), [Hantera Android-arbetsprofilenheter med Intune](~/enrollment/android-enterprise-overview.md) och [Hanterade Google Play-apptyper](~/apps/apps-add-android-for-work.md#managed-google-play-app-types).
+
+#### <a name="microsoft-edge-version-77-and-later-for-windows-10-and-macos-public-preview----3872025-4678761----"></a>Microsoft Edge version 77 och senare för Windows 10 och macOS (offentlig förhandsversion) <!-- 3872025, 4678761  -->
+Microsoft Edge version 77 och senare är nu tillgänglig för distribution till datorer som kör Windows 10 och macOS. Den offentliga förhandsversionen erbjuder kanalerna **Dev** och **Beta** för Windows 10 och en **Beta-kanal** för macOS. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Dessutom är automatiska uppdateringar av webbläsaren **På** som standard, och Microsoft Edge kan inte avinstalleras. Mer information finns i avsnittet om att [lägga till Microsoft Edge för Windows 10 till Microsoft Intune](~/apps/apps-windows-edge.md) och i [Microsoft Edge-dokumentationen](https://go.microsoft.com/fwlink/?linkid=2103823).
+
+#### <a name="update-to-app-protection-ui-and-ios-app-provisioning-ui----4102027-4102029-----"></a>Uppdatering av användargränssnittet för appskydd och användargränssnittet för etablering av iOS-appar <!-- 4102027, 4102029   -->
+Användargränssnittet för skapande och redigering av appskyddsprinciper samt etableringsprofiler för iOS-appar i Intune har uppdaterats. Gränssnittsändringarna omfattar:
+- En förenklad upplevelse med hjälp av ett format i guidestil som komprimerats till ett enskilt blad. 
+- En uppdatering av skapandeflödet så att tilldelningar inkluderas.
+- En sammanfattningssida för alla saker som anges vid visning av egenskaper, innan en ny princip skapas eller när en egenskap redigeras. Vid redigering av egenskaper visar sammanfattningen dessutom bara en lista över objekt från kategorin med de egenskaper som redigeras.
+
+Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](~/apps/app-protection-policies.md) och [Använd iOS-appetableringsprofiler](~/apps/app-provisioning-profile-ios.md).
+
+#### <a name="intune-guided-scenarios----4850318-4831296-3610611----"></a>Guidade Intune-scenarier <!-- 4850318, 4831296, 3610611  -->
+Intune har nu guidade scenarier som hjälper dig att slutföra en specifik uppgift eller uppsättning med uppgifter i Intune. Ett guidat scenario är en anpassad serie med steg (arbetsflöde) som handlar om ett visst användningsfall från slutpunkt till slutpunkt. Vanliga scenarier definieras baserat på den roll som en administratör, användare eller enhet har i din organisation. Dessa arbetsflöden kräver vanligtvis en samling noggrant samordnade profiler, inställningar, program och säkerhetskontroller för att ge bästa möjliga användarupplevelse och säkerhet. Nya guidade scenarier omfattar:
+- [Distribuera Microsoft Edge för mobil](~/fundamentals/guided-scenarios-edge.md)
+- [Skydda Microsoft Office-mobilappar](~/fundamentals/guided-scenarios-office-mobile.md) 
+- [Molnhanterat modernt skrivbord](~/fundamentals/guided-scenarios-cloud-managed-pc.md)
+
+Mer information finns i [översikten av guidade Intune-scenarier](guided-scenarios-overview.md).
+
+#### <a name="additional-app-configuration-variable-available----4969237-----"></a>Ytterligare variabel för appkonfiguration är tillgänglig <!-- 4969237   -->
+När du skapar en appkonfigurationsprincip kan du inkludera konfigurationsvariabeln `AAD Device ID` som en del av dina konfigurationsinställningar. Gå till Intune och välj **Klientappar** > **Appkonfigurationsprinciper** > **Lägg till**. Ange informationen om konfigurationsprincipen och välj **Konfigurationsinställningar** för att visa bladet **Konfigurationsinställningar**. Mer information finns i avsnittet om [appkonfigurationsprinciper för hanterade Android Enterprise-enheter – Använda Configuration Designer](~/apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+
+
+#### <a name="create-groups-of-management-objects-called-policy-sets----3762880----"></a>Skapa grupper av hanteringsobjekt som kallas principuppsättningar <!-- 3762880  -->
+Med principuppsättningar kan du skapa ett paket med referenser till redan befintliga hanteringsenheter som behöver identifieras, riktas och övervakas som en enda begreppsmässig enhet. Principuppsättningar ersätter inte befintliga begrepp eller objekt. Du kan fortsätta att tilldela enskilda objekt i Intune, och du kan referera till enskilda objekt som en del av en principuppsättning. Det innebär att alla ändringar av de enskilda objekten avspeglas i principuppsättningen.  I Intune väljer du **Principuppsättningar** > **Skapa** för att skapa en ny principuppsättning. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Enhetskonfiguration
+
+#### <a name="ui-update-for-creating-and-editing-windows-10-update-rings-----4099089-----------"></a>Uppdatering av användargränssnittet för skapande och redigering av Windows 10-uppdateringsringar  <!-- 4099089         -->
+Vi har uppdaterat gränssnittsupplevelsen för [skapande och redigering av Windows 10-uppdateringsringar](../protect/windows-update-for-business-configure.md#create-and-assign-update-rings) för Intune. Ändringar i användargränssnittet är följande:  
+- Ett format i guidestil med en mall som är komprimerad till ett enda konsolblad så att du slipper mängden med blad när du konfigurerar uppdateringsringar.   
+- Det ändrade arbetsflödet omfattar Tilldelningar före slutförandet av ringens första konfiguration.
+- En sammanfattningssida där du kan granska alla konfigurationer som du har gjort innan du sparar och distribuerar en ny uppdateringsring. Vid redigering av en uppdateringsring visar sammanfattningen endast listan över objekt som har angetts i kategorin med egenskaper som du redigerade.
+
+#### <a name="ui-update-for-creating-and-editing-ios-software-update-policy-----4099090---------"></a>Uppdatering av användargränssnittet för skapande och redigering av iOS-programuppdateringsprinciper  <!-- 4099090       --> 
+Vi har uppdaterat gränssnittsupplevelsen för [skapande](../protect/software-updates-ios.md#configure-the-policy) och [redigering](../protect/software-updates-ios.md#edit-a-policy) av iOS-programuppdateringsprinciper för Intune.  Ändringar i användargränssnittet är följande:  
+- Ett format i guidestil med en mall som är komprimerad till ett enda konsolblad så att du slipper mängden med blad när du konfigurerar uppdateringsprinciper.   
+- Det ändrade arbetsflödet omfattar Tilldelningar före slutförandet av principens första konfiguration.
+- En sammanfattningssida där du kan granska alla konfigurationer som du har gjort innan du sparar och distribuerar en ny princip. Vid redigering av en princip visar sammanfattningen endast listan över objekt som har angetts i kategorin med egenskaper som du redigerade.
+
+#### <a name="engaged-restart-settings-are-removed-from-windows-update-rings------4464404---wnready-----"></a>Inställningarna för interaktiv omstart tas bort från Windows-uppdateringsringar  <!--  4464404   WNReady   -->
+Som tidigare har meddelats har Intunes Windows 10-uppdateringsringar nu [stöd för inställningar för tidsgränser](../protect/windows-update-settings.md) och stöder inte längre *interaktiv omstart*. Inställningarna för *interaktiv omstart* är inte längre tillgängliga när du konfigurerar eller hanterar uppdateringsringar i Intune.  
+
+Den här ändringen stämmer överens med nyliga [Windows Servicing-ändringar](https://docs.microsoft.com//windows/whats-new/whats-new-windows-10-version-1903#servicing) och på enheter som kör Windows 10 1903 eller senare ersätter *tidsgränser* konfigurationer för *interaktiv omstart*.
+
+#### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices----4760025-----"></a>Förhindra installation av appar från okända källor på Android Enterprise-arbetsprofilenheter <!-- 4760025   -->
+På Android Enterprise-arbetsprofilenheter kan användarna aldrig installera appar från okända källor. I den här uppdateringen finns det en ny inställning – **Förhindra appinstallationer från okända källor i den personliga profilen**. Som standard förhindrar den här inställningen att användare läser in appar från okända källor till den personliga profilen på enheten.
+
+Om du vill se den inställning som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-android-for-work.md).
+
+Gäller för:
+- Android Enterprise-arbetsprofil
+
+#### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices----4816339-----"></a>Skapa en global HTTP-proxy på Android Enterprise-enhetsägarenheter <!-- 4816339   -->
+På Android Enterprise-enheter kan du konfigurera en global HTTP-proxy som uppfyller organisationens webbläsarstandarder (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsägare > Enhetsbegränsningar** för profiltyp > **Anslutningar**). Efter konfiguration använder all HTTP-trafik denna proxy.
+
+Om du vill konfigurera den här funktionen och se alla inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-android-for-work.md).
+
+Gäller för:
+- Android Enterprise-enhetsägare
+
+#### <a name="connect-automatically-setting-is-removed-in-wi-fi-profiles-on-android-device-administrator-and-android-enterprise----5021055-----"></a>Inställningen för automatisk anslutning tas bort från Wi-Fi-profiler på Android-enhetsadministratör och Android Enterprise <!-- 5021055   -->
+På Android-enhetsadministratör och Android Enterprise-enheter kan du skapa en Wi-Fi-profil för att konfigurera olika inställningar (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android-enhetsadministratör** eller **Android Enterprise** för plattform > **Wi-Fi** för profiltyp). I den här uppdateringen tas inställningen **Anslut automatiskt** bort eftersom den [inte stöds av Android](https://developer.android.com/reference/android/net/wifi/WifiManager.html#enableNetwork%28int%2c%20boolean%29). 
+
+Om du använder den här inställningen i en Wi-Fi-profil har du kanske märkt att **Anslut automatiskt** inte fungerar. Du behöver inte vidta några åtgärder, men tänk på att den här inställningen tas bort från användargränssnittet i Intune.
+
+Om du vill se de aktuella inställningarna går du till [Wi-Fi-inställningar för Android](../configuration/wi-fi-settings-android.md) eller [Wi-Fi-inställningar för Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md).
+
+Gäller för:
+- Android-enhetsadministratör 
+- Android enterprise
+
+
+#### <a name="new-device-configuration-settings-for-supervised-ios-and-ipados-devices----5199328-----"></a>Nya enhetskonfigurationsinställningar för övervakade iOS- och iPadOS-enheter <!-- 5199328   -->
+På iOS- och iPadOS-enheter kan du skapa en profil för att begränsa funktioner och inställningar på enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS/iPadOS** för plattform > **Enhetsbegränsningar** för profiltyp). I den här uppdateringen finns det nya inställningar du kan styra: 
+- Åtkomst till nätverksenheten i appen Filer  
+- Åtkomst till USB-enheten i appen Filer 
+- Wi-Fi är alltid aktiverat 
+
+Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](../configuration/device-restrictions-ios.md) för att se de här inställningarna.
+
+Gäller för:
+- iOS 13.0 och senare
+- iPadOS 13.0 och senare
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Enhetsregistrering
+
+#### <a name="specify-which-android-device-operating-system-versions-enroll-with-work-profile-or-device-administrator-enrollment----4350697-----"></a>Ange vilka operativsystemversioner för Android-enheter som registreras via registrering med arbetsprofil eller enhetsadministratör <!-- 4350697   -->
+Med hjälp av begränsningar för Intune-enhetstyp kan du använda enhetens OS-version för att ange vilka användarenheter som ska använda registrering med Android Enterprise-arbetsprofil eller registrering med Android-enhetsadministratör.  Mer information finns i [Konfigurera registreringsrestriktioner](../enrollment/enrollment-restrictions-set.md).
+
+#### <a name="windows-autopilot-deployment-reports----3856172---"></a>Windows Autopilot-distributionsrapporter <!-- 3856172 -->
+En ny rapport innehåller information om varje enhet som distribueras via Windows Autopilot. Mer information finns i [distributionsrapporten för Autopilot](../enrollment/enrollment-autopilot.md#autopilot-deployments-report). Vi håller på att lansera den här funktionen till alla kunder och förväntar oss att bli klara i slutet av nästa vecka.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Enhetshantering
+
+#### <a name="new-restrictions-for-renaming-windows-devices----3478938----"></a>Nya begränsningar för namnbyte av Windows-enheter <!-- 3478938  -->
+När du byter namn på en Windows-enhet måste du följa nya regler:
+- 15 tecken eller mindre (måste vara mindre än eller lika med 63 byte exklusive avslutande NULL)
+- Inte null eller en tom sträng
+- Tillåten ASCII: Bokstäver (a–z, A–Z), siffror (0–9) och bindestreck
+- Tillåten Unicode: tecken > = 0x80, måste vara en giltig UTF8, måste vara IDN-mappningsbara (det vill säga att RtlIdnToNameprepUnicode lyckas; se RFC 3492)
+- Namn får inte enbart innehålla siffror
+- Inga blanksteg i namnet
+- Förbjudna tecken: { | } ~ [ \ ] ^ ' : ; < = > ? & @ ! " # $ % ` ( ) + / , . _ *)
+
+ Mer information finns i [Ändra namn på en enhet i Intune](../remote-actions/device-rename.md).
+
+### <a name="new-android-report-on-devices-overview-page----4924364---"></a>Ny Android-rapport på sidan med enhetsöversikt <!-- 4924364 -->
+En ny rapport på sidan med enhetsöversikt visar hur många Android-enheter som har registrerats i varje enhetshanteringslösning. Det här diagrammet visar antal arbetsprofilenheter samt fullständigt hanterade, dedikerade och enhetsadministratörsregistrerade enheter. Om du vill se rapporten väljer du **Intune** > **Enheter** > **Översikt**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Enhetssäkerhet 
+
+#### <a name="pkcs-certificates-for-macos-----1333650---------"></a>PKCS-certifikat för macOS  <!-- 1333650       -->
+Nu kan du [använda PKCS-certifikat med macOS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile). Du kan välja PKCS-certifikatet som en profiltyp för macOS och distribuera användar- och enhetscertifikat som har [anpassade ämnesnamnfält och alternativa ämnesnamnfält](../protect/certficates-pfx-configure.md#subject-name-format-for-macos).  
+
+PKCS-certifikat för macOS har även stöd för en ny inställning, _Ge alla appar åtkomst_. Med den här inställningen kan du ge alla associerade appar åtkomst till den privata nyckeln för certifikatet.  Mer information om den här inställningen finns i Apple-dokumentationen på https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.
+
+####   <a name="derived-credentials-to-provision-ios-mobile-devices-with-certificates----------1736036-1736037-1772050-2777333-----------"></a>Härledda autentiseringsuppgifter för etablering av mobila iOS-enheter med certifikat      <!--  1736036, 1736037, 1772050, 2777333         -->  
+Intune stöder användning av [härledda autentiseringsuppgifter](../protect/derived-credentials.md) som autentiseringsmetod samt för S/MIME-signering och -kryptering för iOS-enheter. Härledda autentiseringsuppgifter är en implementering av standarden *National Institute of Standards and Technology (NIST) 800-157* för distribution av certifikat till enheter.  
+
+Härledda autentiseringsuppgifter är beroende av att ett PIV-kort (Personal Identity Verification) eller ett CAC-kort (Common Access Card) används, till exempel ett smartkort. För att få en härledd autentiseringsuppgift för sin mobila enhet börjar användare i Företagsportal-appen och följer ett registreringsarbetsflöde som är unikt för den provider som du använder.  Gemensamt för alla providrar är kravet på användning av ett smartkort på en dator för autentisering till providern för den härledda autentiseringsuppgiften. Providern utfärdar sedan ett certifikat till den enhet som härleds från användarens smartkort.  
+
+Intune stöder följande providrar för härledda autentiseringsuppgifter:   
+- DISA Purebred
+- Entrust Datacard
+- Intercede
+
+Du använder härledda autentiseringsuppgifter som autentiseringsmetod för enhetskonfigurationsprofiler för VPN, Wi-Fi och e-post. Du kan även använda dem för appautentisering samt för S/MIME-signering och -kryptering.  
+
+Mer information om standarden finns i [Derived PIV Credentials](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) (Härledda PIV-autentiseringsuppgifter) på www.nccoe.nist.gov.
+
+#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates--------5437939----------"></a>Använd Graph API för att ange ett lokalt användarhuvudnamn som en variabel för SCEP-certifikat    <!--  5437939        -->  
+När du använder [Intune-Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) kan du ange onPremisesUserPrincipalName som en variabel för SAN (alternativt namn för certifikatmottagare) för SCEP-certifikat.
+
+
 
 <!-- ########################## -->
 
@@ -367,7 +530,7 @@ Gäller för:
 #### <a name="deadlines-replace-engaged-restart-settings-for-windows-update-rings------4464404----------"></a>Tidsgränser ersätter inställningarna för interaktiv omstart för Windows-uppdateringsringar   <!-- 4464404        -->
 För att justera med de senaste [ändringarna i Windows-underhåll](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903#servicing) har Intunes Windows 10-uppdateringsringar nu [stöd för inställningar för tidsgränser](../protect/windows-update-settings.md). *Tidsgränser* fastställer när en enhet installerar funktions- och säkerhetsuppdateringar.  På enheter som kör Windows 10 1903 eller senare ersätter *tidsgränser* konfigurationerna för *interaktiv omstart*.  I framtiden kommer *tidsgränser* att ersätta *interaktiv omstart* på tidigare versioner av Windows 10 också.  
 
-När du inte konfigurerar *tidsgränser* fortsätter enheterna att använda sina inställningar för *interaktiv omstart*, men [Intune kommer att ha stöd för inställningar för interaktiv omstart](whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) i en framtida uppdatering.  
+När du inte konfigurerar *tidsgränser* fortsätter enheterna att använda sina inställningar för *interaktiv omstart*, men Intune kommer att ha stöd för inställningar för interaktiv omstart i en framtida uppdatering.  
 
 Planera att använda *tidsgränser* för alla dina Windows 10-enheter. När inställningarna för *tidsgränser* är på plats kan du ändra Intune-konfigurationerna för *interaktiv omstart* till Inte konfigurerad. När den är inställd på Inte konfigurerad, slutar Intune att hantera inställningarna på enheter, men tar inte bort de senaste konfigurationerna för inställningen från enheten. Därför förblir de senaste konfigurationerna som ställts in för *interaktiv omstart* aktiva och används på enheter tills inställningarna har ändrats via en annan metod än Intune. Senare, när enhetsversionen av Windows ändras eller när Intune-stöd för *tidsgränser* expanderar till enhetens Windows-version, börjar enheten att använda de nya inställningarna, som redan finns på plats.
 

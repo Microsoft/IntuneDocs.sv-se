@@ -6,9 +6,10 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbcc777cc6d8b803c502d847114ef7cff04ceb26
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3137db9d1ab82ebb99686f8f98aa768dae222caf
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725341"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584965"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Lägg till Google Play för företag-appar till Android enterprise-enheter med Intune
 
@@ -48,9 +49,9 @@ Intune lägger automatiskt till fyra vanliga Android Enterprise-relaterade appar
 ## <a name="managed-google-play-app-types"></a>Hanterade Google Play-apptyper
 Det finns tre typer av hanterade appar som är tillgängliga med Google Play för företag:
 
-* **Hanterad Google Play Store-app** – offentliga appar som är allmänt tillgängliga i Play Store. Hantera de här apparna i Intune genom att bläddra efter de appar som du vill hantera, godkänna dem och sedan synkronisera dem i Intune.
-* **Privat hanterad Google Play-app** – dessa är LOB-appar som publicerats till Google Play för företag av Intune-administratörer.  Dessa appar är privata och endast tillgängliga för din Intune-klient. PÅ detta vis hanteras och distribueras LOB-appar med Google Play för företag och Android Enterprise.
-* **Hanterad Google Play-webblänk** – webblänkar med ikoner som har definierats av IT-administratörer som kan distribueras till Android Enterprise-enheter. De visas på enheterna i deras applista precis som vanliga appar.
+- **Hanterad Google Play Store-app** – offentliga appar som är allmänt tillgängliga i Play Store. Hantera de här apparna i Intune genom att bläddra efter de appar som du vill hantera, godkänna dem och sedan synkronisera dem i Intune.
+- **Privat hanterad Google Play-app** – dessa är LOB-appar som publicerats till Google Play för företag av Intune-administratörer.  Dessa appar är privata och endast tillgängliga för din Intune-klient. PÅ detta vis hanteras och distribueras LOB-appar med Google Play för företag och Android Enterprise.
+- **Hanterad Google Play-webblänk** – webblänkar med ikoner som har definierats av IT-administratörer som kan distribueras till Android Enterprise-enheter. De visas på enheterna i deras applista precis som vanliga appar.
 
 ## <a name="managed-google-play-store-apps"></a>Hanterade appar från Google Play Store
 Det finns två sätt att söka efter och godkänna hanterade Google Play Store-appar med Intune:
@@ -209,8 +210,7 @@ Du kan också konfigurera Google Play att automatiskt godkänna app-behörighete
 
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Ytterligare rapportering för Managed Google Play-app för Android Enterprise-arbetsprofilenheter
 
-För Managed Google Play-appar som distribueras till Android Enterprise-arbetsprofilenheter kan du visa det specifika versionsnumret för den app som är installerad på en enhet. Det här gäller endast för obligatoriska appar. 
-
+För Managed Google Play-appar som distribueras till Android Enterprise-arbetsprofilenheter kan du visa status och versionsnumret för den app som är installerad på en enhet som använder Intune. 
 
 ## <a name="delete-managed-google-play-apps"></a>Radera hanterade Google Play-appar
 Du kommer att kunna ta bort hanterade Google Play-appar från Microsoft Intune om nödvändigt. Om du vill ta bort en hanterad Google Play-app öppnar du Microsoft Intune i Azure-portalen och väljer **Klientappar** > **Appar**. Från listan över appar väljer du ellipserna (...) till höger om den hanterade Google Play-appen och väljer sedan **Ta bort** från den visade listan. När du tar bort en hanterad Google Play-app från applistan blir den hanterade Google Play-appen automatiskt ej godkänd.

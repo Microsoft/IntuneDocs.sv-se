@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e27997b45f0a68f6eb9247c69fafc363787fb457
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b775bb09c289733cdc2837984874b7c1c7e286bc
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722598"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681372"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Skapa en princip för enhetsbaserad villkorlig åtkomst
 
@@ -61,7 +62,7 @@ En princip för villkorlig åtkomst anger de appar eller tjänster som du vill s
 
     - **Välj appar**: Välj det här alternativet, välj **Välj** och använd sedan listan med program för att söka efter och välja de appar eller tjänster som du vill skydda.
     
-      ![Skapa en ny princip för villkorlig åtkomst](./media/create-conditional-access-intune/create-ca-select-apps.png)
+      ![Konfigurera tilldelningar för princip för villkorsstyrd åtkomst](./media/create-conditional-access-intune/create-ca-select-apps.png)
 
 7. Välj **Klar**.
 8. Under **Tilldelningar** väljer du **Villkor**.
@@ -71,7 +72,7 @@ En princip för villkorlig åtkomst anger de appar eller tjänster som du vill s
     - **Klientappar**: Välj **Ja** för att ange om principen ska tillämpas på webbläsarappar, mobilappar och skrivbordsklienter. Du kan också välja **Moderna autentiseringsklienter** (till exempel Outlook för iOS eller Outlook för Android) och **Exchange ActiveSync-klienter**.
     - **Enhetstillstånd**: Principen för villkorlig åtkomst gäller alla enhetstillstånd, förutsatt att du väljer Ja och uttryckligen utelämnar de tillstånd som anger Hybrid Azure AD-ansluten enhet eller Enheten är markerad som kompatibel (eller båda).
     
-      ![Skapa en ny princip för villkorlig åtkomst](./media/create-conditional-access-intune/create-ca-device-platforms.png)
+      ![Ange villkor för princip för villkorsstyrd åtkomst](./media/create-conditional-access-intune/create-ca-device-platforms.png)
 
       > [!TIP]  
       > Om du vill skydda både **Modern autentisering**-klienter och **Exchange ActiveSync-klienter**, skapar du två separata principer för villkorlig åtkomst, en för varje klienttyp. Även om Exchange ActiveSync stöder modern autentisering, är det bara plattformar som stöds av Exchange ActiveSync. Andra villkor, inklusive multifaktorautentisering, stöds inte. Om du effektivt vill skydda åtkomsten till Exchange Online från Exchange ActiveSync, skapar du en princip för villkorlig åtkomst som anger molnappen Office 365 Exchange Online och klientappen Exchange ActiveSync där Tillämpa bara principen på plattformar som stöds är valt.

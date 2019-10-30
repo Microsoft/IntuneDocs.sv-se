@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc4c301ebc4e8dc4a26a49957d344ad52316f66a
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 4be8c383ded85dbfa9cf1c1b293bb979201ee4ab
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036413"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785667"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -126,3 +127,4 @@ Som standard finns flera inställningar med förkonfigurerade värden och åtgä
 | **Enhetstillverkare** | Ange en semikolonavgränsad lista över tillverkare. Undvik blanksteg i listor med flera värden. De här värdena är inte skiftlägeskänsliga. Exempel på *åtgärder* är: <br><ul><li>**Tillåt angivna (blockera icke-angivna)** – Endast enheter som matchar den angivna tillverkaren kan använda appen. Alla andra enheter blockeras. </li></ul> <ul><li>**Tillåt angivna (rensa icke-angivna)** – Användarkontot som associeras med programmet rensas från enheten. </li></ul> Mer information om hur du använder den här inställningen finns i [Åtgärder för villkorlig start](app-protection-policies-access-actions.md#android-policy-settings). |
 | **SafetyNet-enhetsattestering** | Appskyddsprinciper har stöd för några av API:erna för Google Play Protect. I synnerhet den här inställningen konfigurerar Googles SafetyNet-attestering på slutanvändarenheter. Ange antingen **Grundläggande integritet** eller **Grundläggande integritet och certifierade enheter**. **Grundläggande integritet** ger information om enhetens allmänna integritet. Rotade enheter, emulatorer, virtuella enheter och enheter med tecken på manipulation misslyckas med grundläggande integritet. **Grundläggande integritet och certifierade enheter** ger information om enhetens kompatibilitet med Google-tjänster. Endast oförändrade enheter som har certifierats av Google kan godkännas av den här kontrollen. Exempel på *åtgärder* är: <br><ul><li>**Varna** – användaren får ett meddelande om enheten inte uppfyller Googles SafetyNet-attesteringsgenomsökning baserat på det konfigurerade värdet. Det här meddelandet kan avvisas. </li></ul><ul><li>**Blockera åtkomst** – användaren blockeras från åtkomst om enheten inte uppfyller Googles SafetyNet-attesteringsgenomsökning baserat på det konfigurerade värdet. </li></ul> <ul><li>**Rensa data** – Användarkontot som associeras med programmet rensas från enheten. </li></ul> </li></ul> Vanliga frågor om den här inställningen finns i [Vanliga frågor och svar om MAM och appskydd](mam-faq.md#app-experience-on-android). |
 | **Hotgenomsökning för appar** | Appskyddsprinciper har stöd för några av API:erna för Google Play Protect. I synnerhet den här inställningen garanterar att Googles Verify Apps-genomsökning aktiveras för slutanvändarenheter. Om det här är konfigurerat blockeras slutanvändaren från åtkomst tills användaren aktiverar Googles appgenomsökning på sin Android-enhet. Exempel på *åtgärder* är: <br><ul><li>**Varna** – användaren får ett meddelande om Googles Verify Apps-genomsökning på enheten inte är aktiverad. Det här meddelandet kan avvisas. </li></ul><ul><li>**Blockera åtkomst** – användaren blockeras från åtkomst om Googles Verify Apps-genomsökning på enheten inte är aktiverad. </li></ul></li></ul> Resultat från Googles Verify Apps-genomsökning visas i rapporten **Potentiellt skadliga appar** i konsolen. |
+| **Högsta tillåtna hotnivå för enhet** | Appskyddsprinciper kan dra nytta av Intune-MTD-anslutningsprogrammet. Ange en högsta hotnivå som är acceptabel för användning av den här appen. Hot bestäms av din valda MTD-leverantörsapp (Mobile Threat Defense) på slutanvändarens enhet. Ange antingen *Skyddad*, *Låg*, *Medel*eller *Hög*. *Skyddad* kräver att det inte finns några hot på enheten och är det mest restriktiva konfigurerbara värdet, medan *Hög* i princip kräver en aktiv Intune-till-MTD-anslutning. Exempel på *åtgärder* är: <br><ul><li>**Blockera åtkomst** – användaren blockeras från åtkomst om den hotnivå som bestäms av din valda MTD-leverantör (Mobile Threat försvar) på slutanvändarens enhet inte uppfyller det här kravet.</li></ul> <ul><li>**Rensa data** – Användarkontot som associeras med programmet rensas från enheten.</li></ul>Mer information om hur du använder den här inställningen finns i (##Konfigurera Intune för MTD på oregistrerade enheter). |

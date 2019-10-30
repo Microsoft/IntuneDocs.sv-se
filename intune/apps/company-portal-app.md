@@ -6,9 +6,10 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 419fd15f747c8b41377f3aca94c4b96d7c4910c1
-ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
+ms.openlocfilehash: dd48eea5ee09562590844e11ac372480c892a7af
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72350015"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585014"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -128,6 +129,14 @@ Under **Anpassning av företagsportalen** > **Enhetshantering och sekretessavise
 - Godkänn **Standardinställningen** om du vill använda listan som visas eller
 - Välja **Anpassa** om du vill anpassa listan med de objekt som din organisation inte kan visa eller använda på hanterade iOS-enheter. Du kan använda [markdown](https://daringfireball.net/projects/markdown/) för att lägga till punkter, fet stil, kursiv stil och länkar.
 
+## <a name="company-portal-derived-credentials-for-ios-devices"></a>Företagsportal-härledda autentiseringsuppgifter för iOS-enheter
+Intune stöder PIV- (Personal Identity Verification) och CAC-härledda (Common Access Card) autentiseringsuppgifter i partnerskap med autentiseringsuppgiftsprovidrarna DISA Purebred, Entrust Datacard och Intercede. Slutanvändare går igenom ytterligare steg efter registreringen av sin iOS-enhet för att verifiera sin identitet i Företagsportal-programmet. Härledda autentiseringsuppgifter aktiveras för användare genom att en autentiseringsuppgiftsprovider först konfigureras för din klientorganisation. Därefter anges en profil som mål som använder härledda autentiseringsuppgifter till användare eller enheter.
+
+> [!NOTE]
+> Användaren får instruktioner om härledda autentiseringsuppgifter baserat på den länk som du har angett via Intune.
+
+Mer information om härledda autentiseringsuppgifter för iOS-enheter finns i [Använda härledda autentiseringsuppgifter i Microsoft Intune](~/protect/derived-credentials.md).
+
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Kortkommandon för Windows-företagsportalen
 
 Slutanvändare kan utlösa navigerings-, app- och enhetsåtgärder i Windows-företagsportalen med hjälp av kortkommandon (acceleratorer).
@@ -171,21 +180,25 @@ Användare kan utföra åtgärder på sina lokala eller fjärranslutna enheter v
 
 Vissa plattformar och konfigurationer tillåter inte självbetjäning av enhetsåtgärder. I tabellen nedan finns mer information om självbetjäningsåtgärder:
 
-|     Plattform    |    Pensionera    |    Rensning     |    Byt namn <sup>(4)</sup>    |    Synkronisera    |    Fjärrlåsning    |    Återställ lösenord    |    Återställning av nyckel    |
-|------------------------|--------------------|--------------------|-----------------|-----------------|--------------------------|--------------------------|--------------------|
-|    Windows 10<sup>(3)</sup>    |    Tillgängligt<sup>(1)</sup>    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    Endast på Windows Phone    |    Endast på Windows Phone    |    NA    |
-|    iOS<sup>(3)</sup>    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    NA    |
-|    MacOS<sup>(3)</sup><sup>(5)</sup>    |    Tillgänglig    |    NA    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    NA    |    Tillgängligt<sup>(2)</sup>    |
-|    Android<sup>(3)</sup>    |    Tillgängligt<sup>(7)</sup>    |    Tillgängligt<sup>(7)</sup>    |    Tillgänglig    |    Tillgänglig    |    Tillgänglig    |    Tillgängligt<sup>(6)</sup>    |    NA    |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
+| Pensionera | Tillgängligt<sup>(1)</sup> | Tillgängligt<sup>(8)</sup> | Tillgänglig | Tillgängligt<sup>(7)</sup> |
+| Rensning | Tillgänglig | Tillgänglig | NA | Tillgängligt<sup>(7)</sup> |
+| Byt namn <sup>(4)</sup> | Tillgänglig | Tillgängligt<sup>(8)</sup> | Tillgänglig | Tillgänglig |
+| Synkronisera | Tillgänglig | Tillgänglig | Tillgänglig | Tillgänglig |
+| Fjärrlåsning | Endast på Windows Phone | Tillgänglig | Tillgänglig | Tillgänglig |
+| Återställ lösenord | Endast på Windows Phone | Tillgänglig | NA | Tillgängligt<sup>(6)</sup> |
+| Återställning av nyckel | NA | NA | Tillgängligt<sup>(2)</sup> | NA |
+| Mörkt läge | NA | Tillgänglig | NA | NA |
 
-
-<sup>(1) </sup> Dra tillbaka blockeras alltid på Azure AD-anslutna Windows-enheter.<br>
-<sup>(2)</sup> Personlig nyckelåterställning för macOS är bara tillgänglig via företagsportalens webbplats.<br> 
-<sup>(3)</sup> Alla fjärråtgärder inaktiveras om du registrerar med en enhetsregistreringshanterare.<br>
-<sup>(4) </sup> Ändra namn på enhetsnamnet i företagsportalappen eller -webbplatsen, inte på enheten.<br>
-<sup>(5) </sup> Fjärrensning är inte tillgängligt på MacOS-enheter.<br>
-<sup>(6) </sup> Återställning av lösenord stöds inte på vissa Android- och Android Enterprise-konfigurationer. För mer information, se [Återställa eller ta bort ett enhetslösenord i Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7) </sup> Dra tillbaka och rensa är inte tillgängliga i scenarier för företagsenhetsägare i Android (COPE, COBO, COSU).<br> 
+<sup>(1) </sup> **Dra tillbaka** är alltid blockerat på Azure AD-anslutna Windows-enheter.<br>
+<sup>(2) </sup> **Nyckelåterställning** för MacOS är endast tillgängligt via webbportalen.<br>
+<sup>(3) </sup> Alla fjärråtgärder inaktiveras om du registrerar med en enhetsregistreringshanterare.<br>
+<sup>(4) </sup> **Byt namn** ändrar endast enhetsnamnet i Företagsportal-appen eller på webbplatsen, inte på enheten.<br>
+<sup>(5) </sup> **Fjärrensning** är inte tillgängligt på MacOS-enheter.<br>
+<sup>(6) </sup> **Återställ lösenord** stöds inte på vissa Android- och Android Enterprise-konfigurationer. För mer information, se [Återställa eller ta bort ett enhetslösenord i Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(7) </sup> **Dra tillbaka** och **Rensa** är inte tillgängliga i scenarier för Android Enterprise-enhetsägare (COPE, COBO, COSU).<br> 
+<sup>(8)</sup> **Dra tillbaka** (ta bort enhet) och **Byt namn** är tillgängliga för alla typer av registreringar. Andra åtgärder stöds inte för användarregistrering.<br> 
 
 ## <a name="next-steps"></a>Nästa steg
 

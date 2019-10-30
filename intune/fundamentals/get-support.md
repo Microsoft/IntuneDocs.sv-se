@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c4d40d3f15fe23511f3f15f7c13181a0fa72f6b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 91627a47f9dccfb436e64aaadeeb392648dff821
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726524"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585304"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune  
 
@@ -82,7 +83,7 @@ Använd följande alternativ för att få åtkomst till Hjälp och support:
   4. Välj länken Intune Hjälp och support-sida.
 
 > [!NOTE]  
-> Om din instans av Intune finns på Government Compute Cloud (GCC), även känt som ett nationellt moln som Azure Government, se Intune-support för Government Compute Cloud, senare i den här artikeln. Gränssnittet *Hjälp och support* i Intune blir inte tillgänglig på GCC förrän senare i år. 
+> Om din instans av Intune värdhanteras i det privata molnet för myndighetsentiteter, som även kallas nationellt moln, till exempel Azure Government, kan du läsa [Intune-stöd för privat moln för myndigheter](#intune-support-for-private-cloud-for-government) senare i den här artikeln. Upplevelsen *Hjälp och support* i Intune blir inte tillgänglig i det privata molnet för myndigheter förrän senare i år. 
 
 
 När du öppnar *Hjälp och support* visas i portalen en vy som beror på om du har aktiva supportärenden och, när du har Premier Support, några ytterligare element och alternativ:
@@ -162,20 +163,20 @@ Välj historikknappen för att visa supportärenden som du har skapat.
 
 När du använder det vänstra navigeringsfönstret **Hjälp + support**, eller använder **?** - alternativet i det övre högra hörnet i Azure Portal öppnar du Azure Hjälp + support-gränssnittet, som är distinkt från Intune Hjälp och support-gränssnittet.  
 
-Från och med april 2019 kan du inte komma åt Azure *Hjälp + support*-gränssnittet för att få hjälp med Intune, om din prenumeration inte finns på Government Compute Cloud (GCC).  
+Från och med april 2019 kan du inte komma åt Azure-upplevelsen *Hjälp + support* för att få hjälp med Intune, såvida inte din prenumeration finns i ett privat moln för myndighetsentiteter.  
 
-Om din instans av Intune inte körs på GCC och du navigerar genom Azure *Hjälp + support* omdirigeras du till Intune *Hjälp och support*-gränssnittet för att skapa och hantera supportärenden.  
+Om din instans av Intune inte körs i ett privat moln för myndigheter och du navigerar genom Azure *Hjälp + support* omdirigeras du till Intune-upplevelsen *Hjälp och support* för att skapa och hantera supportärenden.  
 
 
-## <a name="intune-support-for-government-compute-cloud"></a>Intune-support för Government Compute Cloud  
+## <a name="intune-support-for-private-cloud-for-government"></a>Intune-stöd för privat moln för myndigheter  
 
-När din Intune-prenumeration som finns på Government Compute Cloud (GCC), som även är känt som ett nationellt moln som Azure Government, har du ännu inte åtkomst till det nyare Intune Hjälp och support-gränssnittet.  Använd istället följande information för att få support för Intune. 
+När din Intune-prenumeration värdhanteras i det privata molnet för myndighetsentiteter, som även kallas för ett nationellt moln, till exempel Azure Government, har du ännu inte åtkomst till den nyare Intune-upplevelsen Hjälp och support.  Använd istället följande information för att få support för Intune. 
 
 
 ### <a name="create-an-online-support-ticket"></a>Skapa en supportbegäran online 
 
 >[!IMPORTANT]    
-> Eftersom *Hjälp och support* flyttas till ett nytt system som ännu inte är tillgängligt för GCC identifierar portalen, när du skapar ett supportärende, ett supportärende som använder en 15-siffrigt ID-nummer. När det 15-siffriga ärendet skapas en spegling av ärendet skapas för användning av Microsoft Support. Det här spegelärendet skapas i ett nytt supportsystem, använder ett 8-siffrigt ärende-ID och används av supporttjänster för att spåra allt arbete och kommunikation för ditt supportärende. Kort efter att det 15-siffriga ärendet har skapats får du ett e-postmeddelande som identifierar det 8-siffriga numret för det speglade supportärendet som används av supporttjänster.  
+> När *Hjälp och support* flyttas till ett nytt system som ännu inte är tillgängligt för det privata molnet för myndigheter gäller att när du skapar ett supportärende så identifierar portalen ett supportärende som använder ett 15-siffrigt ID-nummer. När det 15-siffriga ärendet skapas en spegling av ärendet skapas för användning av Microsoft Support. Det här spegelärendet skapas i ett nytt supportsystem, använder ett 8-siffrigt ärende-ID och används av supporttjänster för att spåra allt arbete och kommunikation för ditt supportärende. Kort efter att det 15-siffriga ärendet har skapats får du ett e-postmeddelande som identifierar det 8-siffriga numret för det speglade supportärendet som används av supporttjänster.  
 > 
 > Ge support för personligt arbete och kommunicera från det 8-siffriga supportärendet och använd bara det 8-siffriga supportärendet till att logga kommunikation och spåra ärendeförloppet. Därför får du e-postuppdateringar från det 8-siffriga supportärendet som fungerar som ärendets register. Ingen information loggas i det 15-siffriga supportärendet. När supporten avslutas och det 8-siffriga supportärendet stängs speglas den statusen av det 15 siffriga supportärendet som du kan se via Azure Portal.  Inga andra uppdateringar eller statusändringar ska förväntas för det 15-siffriga supportärendet.  
 > 
@@ -223,7 +224,7 @@ Du kan visa dina supportbegäranden via Azure Portal. Men det finns begränsad i
 2. På sidan **Hjälp + support** kan du visa listan över **Nya supportbegäranden**.
 
    > [!IMPORTANT]  
-   > Government Compute Cloud-kunder kan bara visa det 15-siffriga supportärendenumret och ärendestatusen. All ärendekommunikation och spårning av arbete eller aviseringar skickas per e-post och refererar till det 8-siffriga supportärendenumret som skapas som en spegling av supportärendet som öppnades i Intune-konsolen.   
+   > Kunder med privat moln för myndigheter kan bara visa det 15-siffriga supportärendenumret och ärendestatusen. All ärendekommunikation och spårning av arbete eller aviseringar skickas per e-post och refererar till det 8-siffriga supportärendenumret som skapas som en spegling av supportärendet som öppnades i Intune-konsolen.   
 
 ## <a name="additional-resources"></a>Ytterligare resurser  
 

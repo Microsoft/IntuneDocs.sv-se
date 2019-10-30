@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 1/15/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2abf391ddbdb1f7087cd06ed1865b3da8b155178
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 755aefb955c2d30652434f2bd2e91981145fc56f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723586"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505603"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Konfigurera Intune-registrering av fullständigt hanterade Android Enterprise-enheter 
 
@@ -61,7 +62,7 @@ För de här stegen om du vill konfigurera hanteringen av fullständigt hanterad
 > [!NOTE]
 > Om du har definierat en princip för villkorlig åtkomst för Azure AD som använder kontrollen *Kräv att enheten är markerad som kompatibel* och gäller för **alla molnappar**, **Android** och **webbläsare** måste du utesluta **Microsoft Intune**-molnappen från den här principen. Det beror på att Android-konfigureringsprocesser använder en Chrome-flik för att autentisera användarna under registreringen. Se [dokumentationen om villkorlig åtkomst till Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/) för mer information.
 
-När den här inställningen anges till **Ja** får du en token för programregistrering (en slumpmässig sträng) och en QR-kod för din Intune-klient. Den här enda registreringstoken är giltig för alla användare och förfaller inte. Beroende på enhetens Android OS-version kan du använda token eller QR-koden för att registrera kioskenheten.
+När den här inställningen anges till **Ja** får du en token för programregistrering (en slumpmässig sträng) och en QR-kod för din Intune-klient. Den här enda registreringstoken är giltig för alla användare och förfaller inte. Beroende på enhetens Android OS-version kan du använda antingen token eller QR-koden för att registrera enheten.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Registrera fullständigt hanterade enheter
 Du kan nu [registrera dina fullständigt hanterade enheter](android-dedicated-devices-fully-managed-enroll.md).

@@ -6,9 +6,10 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
@@ -17,15 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97efe5c2445263bba11ee083e89d36fde1986dc1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4abc35b625b9aa072e38c02d2fc4160faa916fb3
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727876"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785731"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Vad är Mobile Threat Defense-integrering med Intune?
-Intune kan integrera data från en Mobile Threat Defense-leverantör som informationskälla för efterlevnadsprinciper och regler för villkorlig åtkomst. Du kan använda den här informationen för att skydda företagsresurser som Exchange och SharePoint genom att blockera åtkomst från komprometterade mobila enheter.  
+Intune kan integrera data från en Mobile Threat Defense-leverantör som informationskälla för principer för enhetsefterlevnad samt regler för villkorlig enhetsåtkomst. Du kan använda den här informationen för att skydda företagsresurser som Exchange och SharePoint genom att blockera åtkomst från komprometterade mobila enheter.
+
+Intune kan använda samma data som källa för oregistrerade enheter som använder Intune-appskyddsprinciper. Administratörer kan därför använda den här informationen för att skydda företagsdata i en [Microsoft Intune-skyddad app](~/apps/apps-supported-intune-apps.md) och utfärda en blockering eller en selektiv rensning.
 
 ## <a name="what-problem-does-this-solve"></a>Vilka problem kan du lösa så här?
 Integrering av information från en Mobile Threat Defense-leverantör kan hjälpa dig att skydda företagets resurser från hot som påverkar mobila plattformar.  
@@ -42,7 +45,7 @@ Exempel: En ansluten Mobile Threat Defense-app rapporterar till Mobile Threat De
 
 Om Intune är aktiverat samlar det in information om appinventering från både personliga och företagsägda enheter och gör den tillgänglig för leverantörer av skydd mot mobilhot (MTD) att hämta, till exempel Lookout for Work. Du kan samla in en appinventering från användare av iOS-enheter.
 
-Den här tjänsten kräver anmälan; som standard delas ingen information om appinventering. En Intune-administratör måste aktivera appsynkronisering för iOS-enheter i tjänstinställningarna innan någon information om appinventering delas.
+Den här tjänsten kräver anmälan; som standard delas ingen information om appinventering. En Intune-administratör måste aktivera **appsynkronisering för iOS-enheter** i inställningarna för Mobile Threat Defense-anslutningsprogrammet innan någon information om appinventering delas.
 
 **Appinventering**  
 Om du aktiverar appsynkronisering för iOS-enheter skickas inventeringar från både företagsägda och personligt ägda iOS-enheter till din MTD-tjänstleverantör. Data i appinventeringen omfattar:
@@ -56,7 +59,7 @@ Om du aktiverar appsynkronisering för iOS-enheter skickas inventeringar från b
 - Oavsett om appen har verifierats eller inte
 - Oavsett om appen hanteras eller inte
 
-## <a name="sample-scenarios"></a>Exempelscenarier
+## <a name="sample-scenarios-for-enrolled-devices-using-device-compliance-policies"></a>Exempelscenarier för registrerade enheter med hjälp av principer för enhetsefterlevnad
 
 När en enhet betraktas som infekterad av Mobile Threat Defense-lösningen:
 
@@ -66,14 +69,22 @@ När en enhet betraktas som infekterad av Mobile Threat Defense-lösningen:
 
 ![Bild på åtkomst beviljad av Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-2.png)
 
+## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Exempelscenarier för oregistrerade enheter med hjälp av Intune-appskyddsprinciper
+
+När en enhet betraktas som infekterad av Mobile Threat Defense-lösningen:<br>
+![Bild på en infekterad enhet enligt Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-3.png)
+
+Åtkomst beviljas när enheten åtgärdats:<br>
+![Bild på åtkomst beviljad av Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-4.png)
+
 > [!NOTE] 
-> Användning av flera leverantörer för Mobile Threat Defense med Intune stöds inte. Om flera MTD-verktyg är aktiverade måste alla MTD-appar installeras och genomsöka enheterna beträffande hot.
+> Användning av flera leverantörer för Mobile Threat Defense med Intune stöds inte. Om flera MTD-anslutningsprogram är aktiverade måste alla MTD-appar installeras och genomsöka enheterna beträffande hot.
 
 ## <a name="mobile-threat-defense-partners"></a>Mobile Threat Defense-partner
 
 Lär dig hur du skyddar åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk med:
 
-- [Lookout](lookout-mobile-threat-defense-connector.md)
+- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)

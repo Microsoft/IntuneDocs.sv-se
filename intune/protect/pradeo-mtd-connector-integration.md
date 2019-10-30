@@ -6,24 +6,28 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d9844d7e0e56e46dc6373dfe63ec3e8b18fde3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 32e67ac961f2831a881bc160e19cefdb75723ff0
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722052"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681260"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integrera Pradeo Mobile Threat Defense med Intune
 
 Slutför följande steg för att integrera Pradeo Mobile Threat Defense-lösningen med Intune.
+
+> [!NOTE]  
+> Den här Mobile Threat Defense-leverantören stöds inte för oregistrerade enheter.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -86,4 +90,4 @@ Processen för Pradeo-appauktorisering består av följande:
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Konfigurera Pradeo-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Pradeo-appar för registrerade enheter](mtd-apps-ios-app-configuration-policy-add-assign.md)

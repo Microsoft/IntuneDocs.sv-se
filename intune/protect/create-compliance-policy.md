@@ -2,12 +2,13 @@
 title: Skapa enhetsefterlevnadsprinciper i Microsoft Intune – Azure | Microsoft Docs
 description: Skapa enhetsefterlevnadsprinciper, översikt över status och allvarlighetsgrader, använda statusen InGracePeriod, arbeta med villkorsstyrd åtkomst, hantera enheter utan en tilldelad princip, samt skillnader i efterlevnad i Azure-portalen och den klassiska portalen i Microsoft Intune
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: samyada
@@ -15,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ec8003264c28ea40d53731c8fb8c3eddef7fded
-ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
+ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306573"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786083"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Skapa en efterlevnadsprincip i Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Enhetsefterlevnadsprinciper är en viktig funktion när du använder Intune för att skydda din organisations resurser. I Intune kan du skapa regler och inställningar som enheter måste uppfylla för att anses vara kompatibla, till exempel en lägsta operativsystemversion. Om enheten inte är kompatibel kan du blockera åtkomst till data och resurser med hjälp av [villkorlig åtkomst](conditional-access.md).
 
@@ -48,10 +47,10 @@ Om du vill använda enhetsefterlevnadsprinciper måste du:
 
 - Använd en plattform som stöds:
 
-  - Android
+  - Android-enhetsadministratör
   - Android enterprise
   - iOS
-  - macOS (förhandsversion)
+  - macOS
   - Windows 10
   - Windows 8,1
   - Windows Phone 8.1
@@ -72,26 +71,40 @@ Om du vill använda enhetsefterlevnadsprinciper måste du:
 
 3. Välj **Principer** > **Skapa princip**. Ange följande egenskaper:
 
-    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Till exempel är ett bra principnamn **Markera jailbrokade iOS-enheter som inkompatibla**.
-    - **Beskrivning**: Ange en beskrivning av principen. Denna inställning är valfri, men rekommenderas.
-    - **Plattform**: Välj plattform för dina enheter. Alternativen är:  
+   - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Till exempel är ett bra principnamn **Markera jailbrokade iOS-enheter som inkompatibla**.  
 
-       - **Android**
-       - **Android enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 och senare**
-       - **Windows 10 och senare**
+   - **Beskrivning**: Ange en beskrivning av principen. Denna inställning är valfri, men rekommenderas.  
 
-    - **Inställningar**: I följande artiklar beskrivs inställningarna för varje plattform:
+   - **Plattform**: Välj plattform för dina enheter. Alternativen är:
+     - **Android-enhetsadministratör**
+     - **Android enterprise**
+     - **iOS/iPadOS**
+     - **macOS**
+     - **Windows Phone 8.1**
+     - **Windows 8.1 och senare**
+     - **Windows 10 och senare**
 
-        - [Android](compliance-policy-create-android.md)
-        - [Android enterprise](compliance-policy-create-android-for-work.md)
-        - [iOS](compliance-policy-create-ios.md)
-        - [macOS](compliance-policy-create-mac-os.md)
-        - [Windows Phone 8.1, Windows 8.1 och senare](compliance-policy-create-windows-8-1.md)
-        - [Windows 10 och senare](compliance-policy-create-windows.md)
+     För *Android Enterprise* måste du sedan välja en **Profiltyp**:
+     - **Enhetsägare**
+     - **Arbetsprofil**
+
+   - **Inställningar**: I följande artiklar beskrivs inställningarna för varje plattform:
+     - [Android-enhetsadministratör](compliance-policy-create-android.md)
+     - [Android enterprise](compliance-policy-create-android-for-work.md)
+     - [iOS/iPadOS](compliance-policy-create-ios.md)
+     - [macOS](compliance-policy-create-mac-os.md)
+     - [Windows Phone 8.1, Windows 8.1 och senare](compliance-policy-create-windows-8-1.md)
+     - [Windows 10 och senare](compliance-policy-create-windows.md)  
+
+   - **Platser** *(Android-enhetsadministratör)* : I principen kan du framtvinga kompatibilitet baserat på enhetens plats. Välj från befintliga platser. Har du inga platser ännu? Du kan läsa mer i [Använda platser (nätverksstängsel) i Intune](use-network-locations.md).  
+
+   - **Åtgärder för inkompatibilitet**: För enheter som inte uppfyller dina efterlevnadsprinciper kan du lägga till en sekvens av åtgärder som ska tillämpas automatiskt. Du kan ändra schemat när enheten har markerats som inkompatibel, till exempel efter en dag. Du kan också konfigurera en andra åtgärd som skickar ett e-postmeddelande till användaren när enheten inte är kompatibel.
+    
+     [Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) innehåller mer information, inklusive anvisningar för hur du skapar ett e-postmeddelande till användarna.
+
+     Anta till exempel att du använder funktionen Platser och lägger till en plats i en efterlevnadsprincip. Standardåtgärden för inkompatibilitet tillämpas när du väljer minst en plats. Om enheten inte är ansluten till de valda platserna utvärderas den omedelbart som inkompatibel. Du kan ge användarna en respitperiod, till exempel en dag.
+
+   - **Omfång (taggar)** : Omfångstaggar är ett bra sätt att tilldela och filtrera principer till specifika grupper, till exempel Försäljning, Personal eller Alla amerikanska NC-anställda. När du har lagt till inställningarna kan du också lägga till en omfångstagg till efterlevnadsprinciperna. [Använd omfångstaggar för att filtrera principer](../fundamentals/scope-tags.md) är en bra resurs.
 
 4. Välj **OK** > **Skapa** när du är klar för att spara dina ändringar. Principen skapas och visas i listan. Tilldela därefter principen till dina grupper.
 
@@ -114,17 +127,18 @@ När du tilldelar principen kan du också **utvärdera** hur många användare s
 
 Om knappen **Utvärdera** är nedtonad kontrollerar du att principen har tilldelats till en eller flera grupper.
 
-## <a name="actions-for-noncompliance"></a>Åtgärder för inkompatibilitet
+<!-- ## Actions for noncompliance
 
-För enheter som inte uppfyller dina efterlevnadsprinciper kan du lägga till en sekvens av åtgärder som ska tillämpas automatiskt. Du kan ändra schemat när enheten har markerats som inkompatibel, till exempel efter en dag. Du kan också konfigurera en andra åtgärd som skickar ett e-postmeddelande till användaren när enheten inte är kompatibel.
+For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
 
-[Lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md) innehåller mer information, inklusive anvisningar för hur du skapar ett e-postmeddelande till användarna.
+[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
 
-Anta till exempel att du använder funktionen Platser och lägger till en plats i en efterlevnadsprincip. Standardåtgärden för inkompatibilitet tillämpas när du väljer minst en plats. Om enheten inte är ansluten till de valda platserna utvärderas den omedelbart som inkompatibel. Du kan ge användarna en respitperiod, till exempel en dag.
+For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
 
-## <a name="scope-tags"></a>Omfångstaggar
+## Scope tags
 
-Omfångstaggar är ett bra sätt att tilldela och filtrera principer till specifika grupper, till exempel Försäljning, Personal eller Alla amerikanska NC-anställda. När du har lagt till inställningarna kan du också lägga till en omfångstagg till efterlevnadsprinciperna. [Använd omfångstaggar för att filtrera principer](../fundamentals/scope-tags.md) är en bra resurs.
+Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+-->
 
 ## <a name="refresh-cycle-times"></a>Uppdatera cykeltider
 

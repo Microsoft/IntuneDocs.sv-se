@@ -6,9 +6,10 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 624c6cec2a887396cb6ef6508ab26a16d72f8f7c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c0b5f087494e8033cb9645d0a08edd4e1c481a2c
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725328"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584926"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofilerna för iOS-appar för att förhindra att dina appar upphör att gälla
 
@@ -44,14 +45,22 @@ Som administratör kan du inkludera och undanta säkerhetsgrupper när du tillde
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Så här skapar du en etableringsprofil för iOS-mobilappar
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-1. Välj **Hantera** > **Etableringsprofiler för iOS-app** i arbetsbelastningen **Klientappar**.
-2. Välj **Skapa profil** i fönstret med profillistan.
-3. Ange följande värden i fönstret **Skapa profil**:
+2. I **Intune**-fönstret väljer du **Klientappar** > **Etableringsprofiler för iOS-app** > **Skapa profil**.
+3. På sidan **Grundläggande** lägger du till följande värden:
     - **Namn** – Ange ett namn för den här etableringsprofilen.
     - **Beskrivning** – Om du vill kan du ange en beskrivning av principen.
     - **Ladda upp profilfil** – Välj ikonen **Öppna** och välj sedan en konfigurationsprofilfil för Apple Mobile (med tillägget `.mobileprovision`) som du laddar ned från [webbplatsen för Apple Developer](https://developer.apple.com/).
-4. När du är klar väljer du **Skapa**.
+
+   **Förfallodatum** fylls i från ett värde i den fil för Apple Mobile-konfigurationsprofil som du lade till ovan.<br>
+
+   <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+
+4. Klicka på **Nästa: Omfångstaggar**.<br>
+   På sidan **Omfångstaggar** kan du välja att konfigurera omfångstaggar för att fastställa vem som kan se etableringsprofilen för iOS-app i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
+5. Klicka på **Nästa: Tilldelningar**.<br>
+   På sidan **Tilldelningar** kan du tilldela profilen till användare och enheter. Lägg märke till att du kan tilldela en profil till en enhet oavsett om enheten hanteras av Intune eller inte.
+6. Klicka på **Nästa: Granska och skapa** för att granska de värden som du har angett för profilen.
+7. När du är klar klickar du på **Skapa** för att skapa etableringsprofilen för iOS-app i Intune. 
 
 ## <a name="next-steps"></a>Nästa steg
 

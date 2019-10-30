@@ -5,21 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 10/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: coryfe
+ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8cc396c05150006799c1e9b86ecb63351cdb36
-ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
+ms.openlocfilehash: 1d34e44c6e046ddbc9b47bbe90900f5992df9e85
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314713"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584565"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -63,17 +64,30 @@ Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10-e
 
 ## <a name="create-and-assign-update-rings"></a>Skapa och tilldela uppdateringsringar
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Programuppdateringar** > **Windows 10-uppdateringsringar** > **Skapa**.
-4. Ange ett namn, en beskrivning (valfritt) och välj sedan **Konfigurera**.
-5. I **Inställningar** konfigurerar du inställningar för dina företagsbehov. Information om de tillgängliga inställningarna finns i [Inställningar för Windows Update](../windows-update-settings.md).  
-6. När du är klar väljer du **OK**. I **Skapa uppdateringsring** väljer du **Skapa**. Den nya uppdateringsringen visas i listan över uppdateringsringar.
-7. Tilldela ringen i listan med uppdateringsringar genom att välja en ring och sedan på \<fliken ringnamn> välja **Tilldelningar**.
-8. Använd flikarna **Inkludera** och **Undanta** för att definiera vilka grupper den här ringen är tilldelad till och välj sedan **Spara** för att slutföra tilldelningen.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Programuppdateringar** > **Windows 10-uppdateringsringar** > **Skapa**.  
+
+2. På fliken Grundläggande anger du ett namn samt en beskrivning (valfritt) och väljer **Nästa**.  
+
+   ![Skapa arbetsflöde för Windows 10-uppdateringsring](./media/windows-update-for-business-configure/basics-tab.png)
+
+3. På fliken **Inställningar för uppdateringsring** konfigurerar du inställningar för dina företagsbehov. Information om de tillgängliga inställningarna finns i [Inställningar för Windows Update](windows-update-settings.md). När du har konfigurerat inställningar för *Uppdatering* och *Användarupplevelse* väljer du **Nästa**.  
+
+4. På fliken **Omfångstaggar** väljer du **+ Välj omfångstaggar** för att öppna fönstret *Välj taggar* om du vill tillämpa dem på uppdateringsringen.  
+
+   - I fönstret **Välj taggar** väljer du en eller fler taggar och klickar sedan på **Välj** för att lägga till dem i uppdateringsringen och återgå till fönstret *Omfångstaggar*.  
+
+   När du är klar väljer du **Nästa** för att fortsätta till *Tilldelningar*. 
+
+5. På fliken **Tilldelningar** väljer du **+ Välj grupper som ska inkluderas** och tilldelar sedan uppdateringsringen till en eller fler grupper. Använd **+ Välj grupper att utesluta** för att finjustera tilldelningen. Fortsätt genom att välja **Nästa**.  
+
+6. På fliken **Granska och skapa** granskar du inställningarna och väljer **Skapa** när du är redo att spara din Windows 10-uppdateringsring. Din nya uppdateringsring visas i listan över uppdateringsringar.
 
 ## <a name="manage-your-windows-10-update-rings"></a>Hantera dina Windows 10-uppdateringsringar
-I portalen kan du välja en Windows 10-uppdateringsring för att öppna fönstret **Översikt**. I fönstret kan du se tilldelningsstatus för ringen och vidta ytterligare åtgärder för att hantera den. 
+
+I portalen kan du välja en Windows 10-uppdateringsring för att öppna fönstret **Översikt**. I fönstret kan du se tilldelningsstatus för ringen och vidta ytterligare åtgärder för att hantera den.
+
 ### <a name="to-view-an-updates-rings-overview-pane"></a>Visa uppdateringsringar i översiktsfönstret: 
+
 1. Logga in på Azure-portalen.
 2. Gå till **Intune** > **Programuppdateringar** > **Windows 10-uppdateringsringar**.
 3. Välj den uppdateringsring som du vill visa eller hantera.  
@@ -88,18 +102,22 @@ Förutom att se tilldelningsstatus kan du längst upp i översiktsfönstret väl
 ![Tillgängliga åtgärder](./media/windows-update-for-business-configure/overview-actions.png)
 
 ### <a name="delete"></a>Ta bort  
+
 Välj **Ta bort** för att sluta tillämpa inställningarna för den valda Windows 10-uppdateringsringen. När en ring tas bort tas även dess konfiguration bort från Intune, vilket innebär att Intune inte längre tillämpar dessa inställningar.  
 
 Om en ring tas bort från Intune ändras inte inställningarna på enheter som har tilldelats uppdateringsringen.  I stället behåller enheten de aktuella inställningarna. Enheter har inte någon historik över de inställningar som de tidigare hade. Enheter kan också ta emot inställningar från fler uppdateringsringar som är aktiva.  
 
 #### <a name="to-delete-a-ring"></a>Ta bort en ring  
+
 1. När du ser översiktssidan för en uppdateringsring väljer du **Ta bort**.  
 2. Välj **OK**.  
 
 ### <a name="pause"></a>Pausa  
+
 Välj **Pausa** för att förhindra att tilldelade enheter tar emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från den tidpunkt då du pausade ringen. Efter det att det maximala antalet dagar har passerat upphör pausfunktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen. Om du återupptar en pausad uppdateringsring och pausar den igen, kommer pausperioden att återställas till 35 dagar.  
 
 #### <a name="to-pause-a-ring"></a>Pausa en uppdateringsring  
+
 1. När du ser översiktssidan för en uppdateringsring väljer du **Pausa**.  
 2. Välj antingen **Funktion** eller **Kvalitet** för att pausa den typen av uppdatering och välj sedan **OK**.  
 3. När du har pausat en uppdateringstyp, kan du välja Pausa igen för att pausa den andra uppdateringstypen.  
@@ -110,22 +128,27 @@ När en uppdateringstyp har pausats visar översiktsfönstret för den ringen hu
 > När du utfärdar ett pauskommando får enheterna detta kommando nästa gång de checkar in på tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering. Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
 
 ### <a name="resume"></a>Resume  
+
 När en uppdateringsring har pausats kan du välja **Återuppta** för att aktivera funktions- och kvalitetsuppdateringarna för den ringen. När du har återupptagit en uppdateringsring, kan du pausa den igen.  
 
 #### <a name="to-resume-a-ring"></a>Återuppta en uppdateringsring  
+
 1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Återuppta**.  
 2. Välj bland de tillgängliga alternativen för att antingen återuppta **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.  
 3. När du har återupptagit en uppdateringstyp, kan du välja Återuppta igen för att återuppta den andra uppdateringstypen.  
 
 ### <a name="extend"></a>Utöka  
+
 När en uppdateringsring har pausats kan du välja **Utöka** för att återställa pausperioden för både funktions- och kvalitetsuppdateringar för uppdateringsringen till 35 dagar.  
 
 #### <a name="to-extend-the-pause-period-for-a-ring"></a>Utöka pausperioden för en uppdateringsring  
+
 1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Utöka**. 
 2. Välj bland de tillgängliga alternativen för att antingen återuppta **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.  
 3. När du har utökat pausen för en uppdateringstyp kan du välja Utöka igen för att utöka den andra uppdateringstypen.  
 
 ### <a name="uninstall"></a>Avinstallera  
+
 Intune-administratörer kan använda **Avinstallera** för att avinstallera (återställa) den senaste *funktions*- eller *kvalitets*uppdateringen för en aktiv eller pausad uppdateringsring. När du har avinstallerat en typ, kan du avinstallera den andra typen. Intune stöder eller hanterar inte användarnas möjlighet att avinstallera uppdateringar.  
 
 > [!IMPORTANT] 
@@ -153,14 +176,16 @@ Tänk på följande när du ska använda Avinstallera:
 Mer information om Windows Update-principer finns i [Uppdatera CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) i dokumentationen för Windows-klienthantering.  
 
 #### <a name="to-uninstall-the-latest-windows-10-update"></a>Avinstallera den senaste uppdateringen av Windows 10  
+
 1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Avinstallera**.  
 2. Välj bland de tillgängliga alternativen för att antingen avinstallera **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.  
 3. När du har utlöst avinstallationen för en uppdateringstyp kan du välja Avinstallera igen för att avinstallera den kvarvarande uppdateringstypen.  
 
 ## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrera uppdateringsinställningar till Azure-portalen  
+
 Den klassiska Azure-portalen har också ett begränsat antal andra inställningar för Windows 10-uppdateringar i enhetens konfigurationsprofil. Om du har konfigurerat några av dessa inställningar när du migrerade till Azure Portal, rekommenderar vi starkt att utför följande åtgärder:  
 
-1. Skapa uppdateringsringar för Windows 10 i Azure Portal med de inställningar som du behöver. Inställningen **Tillåt förhandsfunktioner** stöds inte i Azure-portalen eftersom den inte längre gäller för senaste Windows 10-versionerna. Du kan konfigurera de övriga tre inställningarna, såväl som andra uppdateringsinställningar för Windows 10, när du skapar uppdateringsringar.  
+1. Skapa uppdateringsringar för Windows 10 i Azure Portal med de inställningar som du behöver. Inställningen **Tillåt förhandsfunktioner** stöds inte i Azure-portalen eftersom den inte längre gäller för senaste Windows 10-versionerna. Du kan konfigurera de övriga tre inställningarna samt de andra uppdateringsinställningar för Windows 10 när du skapar uppdateringsringar.  
 
    > [!NOTE]  
    > Uppdateringsinställningar för Windows 10 som har skapats i den klassiska portalen visas inte i Azure-portalen efter migreringen. Dessa inställningar tillämpas dock. Om du har migrerat någon av dessa inställningar och redigerat den migrerade principen från Azure Portal, tas inställningarna bort från principen.  
@@ -168,6 +193,7 @@ Den klassiska Azure-portalen har också ett begränsat antal andra inställninga
 2. Ta bort uppdateringsinställningarna i den klassiska portalen. När du har migrerat till Azure Portal och lagt till samma inställningar i en uppdateringsring, måste du ta bort inställningarna i den klassiska portalen för att undvika eventuella principkonflikter. Exempelvis uppstår det en konflikt när samma inställning konfigureras med olika värden. Det finns inte något enkelt sätt att veta detta, eftersom inställningen som konfigurerats i den klassiska portalen inte visas i Azure-portalen.  
 
 ## <a name="next-steps"></a>Nästa steg
+
 [Windows Update-inställningar som stöds av Intune](../windows-update-settings.md)  
 
 [Intune-efterlevnadsrapporter för uppdateringar](../windows-update-compliance-reports.md)

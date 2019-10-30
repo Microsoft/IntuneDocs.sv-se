@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5491e0d2dfb1aa1989fc202203d9a895823b0b73
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 648ccd889714c2ee4f7ee1fa04301490ad9fd001
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727824"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749445"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Använda platser (nätverksstängsel) i Intune
 
@@ -68,9 +69,8 @@ Så här skapar du en platsbaserad efterlevnadsprincip:
 
 ## <a name="create-the-location-compliance-policy"></a>Skapa principen för platsefterlevnad
 
-När du skapar efterlevnadsprincipen väljer du **Android** för **Plattform**. I **Platser** kan du välja en eller flera av de nätverksplatser som du har lagt till. Dessa platser är en del av nätverksstängslet som du skapar för enheterna.
+När du [skapar efterlevnadsprincipen](create-compliance-policy.md) väljer du **Android** för **Plattform**. I **Platser** kan du välja en eller flera av de nätverksplatser som du har lagt till. Dessa platser är en del av nätverksstängslet som du skapar för enheterna. 
 
-Mer information finns i avsnittet [Skapa den nätverksplatsbaserade efterlevnadsprincipen](compliance-policy-create-android.md#locations).
 
 ## <a name="configure-the-actions-for-noncompliance"></a>Konfigurera åtgärderna för inkompatibilitet
 

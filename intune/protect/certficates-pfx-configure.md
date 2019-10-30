@@ -1,13 +1,14 @@
 ---
 title: Använda certifikat med privata och offentliga nycklar i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller skapa ett Public Key Cryptography Standards-certifikat (PKCS) med Microsoft Intune, inklusive stegen för att exportera ett rotcertifikat, konfigurera certifikatmallen, ladda ned och installera Intune-certifikatanslutningsappen (NDES), skapa en profil för enhetskonfiguration samt skapa en PKCS-certifikatprofil i Azure och din certifikatutfärdare.
+description: Använd PKCS-certifikat (Public Key Cryptography Standards) med Microsoft Intune. Detta omfattar arbete med rotcertifikat och certifikatmallar, installation av Intune Certificate Connector (NDES) samt enhetskonfigurationsprofiler för ett PKCS-certifikat.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ee5ef1b5c59bbef3834d44354508b767ae99088
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b0f31add65063665da5a7961e2caf9eb30a847e2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722936"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72787881"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -58,7 +59,7 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
 - **Microsoft Intune Certificate Connector** (kallas även *NDES Certificate Connector*):  
   I Intune-portalen går du till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsappen för PKCS #12*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet för certifikatanslutningsappen: **NDESConnectorSetup.exe**.  
 
-  Intune har stöd för upp till 100 instanser av den här anslutningen per klient, med varje instans på en separat Windows Server. Du kan installera en instans av den här anslutningen på samma server som en instans av PFX-certifikatanslutningsappen för Microsoft Intune. När du använder flera kopplingar stöder kopplingsinfrastrukturen hög tillgänglighet och belastningsutjämning eftersom alla tillgängliga anslutningsinstanser kan bearbeta dina PKCS-certifikatbegäranden. 
+  Intune har stöd för upp till 100 instanser av det här anslutningsprogrammet per klientorganisation. Varje instans av anslutningsprogrammet måste finnas på en separat Windows-server. Du kan installera en instans av den här anslutningen på samma server som en instans av PFX-certifikatanslutningsappen för Microsoft Intune. När du använder flera anslutningsprogram stöder kopplingsinfrastrukturen hög tillgänglighet och belastningsutjämning eftersom alla tillgängliga anslutningsinstanser kan bearbeta dina PKCS-certifikatbegäranden. 
 
   Anslutningsappen bearbetar PKCS-certifikatbegäranden som används för autentisering eller S/MIME-signering för e-post.
 
@@ -75,7 +76,7 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
   - Installera anslutningsappen för PFX-certifikat för Microsoft Intune på din server.  
   - För att automatiskt få viktiga uppdateringar ser du till att brandväggarna är öppna så att anslutningsappen tillåts kontakta **autoupdate.msappproxy.net** på port **443**.   
 
-  Mer information om nätverksslutpunkter som Intune och anslutningsappen måste kunna få åtkomst till finns i [Nätverksslutpunkter för Microsoft Intune](../fundamentals/intune-endpoints.md).
+  Mer information om nätverksslutpunkter som Intune och anslutningsprogrammet får åtkomst till finns i [Nätverksslutpunkter för Microsoft Intune](../fundamentals/intune-endpoints.md).
 
 - **Windows Server**:  
   Du använder en Windows Server som värd för:
@@ -102,7 +103,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 1. Logga in på din Enterprise CA med ett konto som har administratörsbehörighet.
 2. Öppna konsolen **Certifikatutfärdare**, högerklicka på **Certifikatmallar** och välj **Hantera**.
-3. Leta upp certifikatmallen **Användare**, högerklicka på den och välj **Duplicera mall**. **Egenskaper för ny mall** öppnas.
+3. Leta upp certifikatmallen **Användare**, högerklicka på den och välj **Duplicera mall** för att öppna **Egenskaper för ny mall**.
 
     > [!NOTE]
     > För scenarier med S/MIME-signering och kryptering av e-post använder många administratörer separata certifikat för signering och kryptering. Om du använder Microsoft Active Directory-certifikattjänster kan du använda mallen **Exchange Signature Only** (Endast Exchange-signatur) för certifikat för S/MIME-e-postsignering och mallen **Exchange User** (Exchange-användare) för S/MIME-krypteringscertifikat.  Om du använder en tredje parts certifikatutfärdare rekommenderas det att du granskar deras vägledning för att konfigurera mallar för signering och kryptering.
@@ -165,7 +166,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 ## <a name="create-a-trusted-certificate-profile"></a>Skapa en betrodd certifikatprofil
 
-1. I [Azure Portal](https://portal.azure.com) går du till **Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
     ![Navigera till Intune och skapa en ny profil för ett betrott certifikat](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
 
 2. Ange följande egenskaper:
@@ -187,7 +188,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Skapa en PKCS-certifikatprofil
 
-1. I [Azure Portal](https://portal.azure.com) går du till **Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 2. Ange följande egenskaper:
 
     - **Namnet** på profilen
@@ -195,22 +196,81 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
     - **Plattform** att distribuera profilen till
     - Ange **profiltypen** som **PKCS-certifikat**
 
-3. Gå till **Inställningar** och ange följande egenskaper:
-
-    - **Tröskelvärde för förnyelse (%)** : 20 % rekommenderas.
-    - **Certifikatets giltighetsperiod**: Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år.
-    - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.
-    - **Certifikatutfärdare**: Visar det interna fullständiga domännamnet (FQDN) för din Enterprise-CA.
-    - **Namn på certifikatutfärdare**: Anger namnet på din Enterprise-CA, till exempel ”Contoso Certification Authority”.
-    - **Certifikatmallens namn**: Namnet på den mall som du skapade tidigare. Kom ihåg att **mallnamnet** som standard är samma som **mallens visningsnamn** *utan blanksteg*.
-    - **Ämnesnamnets format**: Ange det här alternativet som **Eget namn** om inget annat krävs.
-    - **Alternativt namn för certifikatmottagare**: Ange det här alternativet som **Användarens huvudnamn** om inget annat krävs.
+3. Gå till **Inställningar** och konfigurera de egenskaper som gäller för den plattform som du har valt:  
+   
+   |Inställningen     | Plattform     | Information   |
+   |------------|------------|------------|
+   |**Tröskelvärde för förnyelse (%)**        |Alla         |20 % rekommenderas  | 
+   |**Certifikatets giltighetsperiod**  |Alla         |Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år. |
+   |**Nyckellagringsprovider (KSP)**   |Windows 10  | För Windows väljer du var du vill lagra nycklarna på enheten. |
+   |**Certifikatutfärdare**      |Alla         |Visar det interna fullständiga domännamnet (FQDN) för din Enterprise-CA.  |
+   |**Namn på certifikatutfärdare** |Alla         |Anger namnet på din Enterprise-CA, till exempel ”Contoso Certification Authority”. |
+   |**Certifikattyp**             |macOS       |Välj en typ: <br> **-** **Användarcertifikat** kan innehålla både användarattribut och enhetsattribut i certifikatets ämne och SAN. <br><br>**-** **Enhetscertifikat** kan endast innehålla enhetsattribut i certifikatets ämne och SAN. Använd Enhet för scenarier såsom användarlösa enheter, till exempel kiosker eller andra delade enheter.  <br><br> Det här valet påverkar ämnesnamnets format. |
+   |**Ämnesnamnets format**          |Alla         |För de flesta plattformar anger du det här alternativet som **Eget namn** om inget annat krävs.<br><br>För macOS bestäms ämnesnamnets format av certifikattypen. Se [Ämnesnamnets format för macOS](#subject-name-format-for-macos) senare i den här artikeln. |
+   |**Alternativt namn för certifikatmottagare**     |Alla         |Ange det här alternativet som **Användarens huvudnamn** om inget annat krävs. |
+   |**Förbättrad nyckelanvändning**           |**-** Android-enhetsadministratör <br>**-** Android Enterprise (*Enhetsägare*, *Arbetsprofil*) <br> **-** Windows 10 |Certifikat kräver vanligtvis *Klientautentisering* så att användaren eller enheten kan autentisera till en server. |
+   |**Tillåt alla appar att komma åt privat nyckel** |macOS  |Ange till **Aktivera** för att ge appar som är konfigurerade för den associerade Mac-enheten åtkomst till den privata nyckeln för PKCS-certifikat. <br><br> Mer information om den här inställningen finns i *AllowAllAppsAccess* avsnittet Certifikatnyttolast i [referensen för konfigurationsprofil](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) i Apple-utvecklardokumentationen. |
+   |**Rotcertifikat**             |**-** Android-enhetsadministratör <br> **-** Android Enterprise (*Enhetsägare*, *Arbetsprofil*) |Välj en certifikatprofil för en rotcertifikatutfärdare som tidigare har tilldelats. |
 
 4. Välj **OK** > **Skapa** för att spara profilen.
 5. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](../configuration/device-profile-assign.md).
 
    > [!NOTE]
    > På enheter med en Android Enterprise-profil syns inte certifikat som har installerats med en PKCS-certifikatprofil på enheten. Kontrollera statusen för profilen i Intune-konsolen för att bekräfta lyckad certifikatdistribution.
+
+### <a name="subject-name-format-for-macos"></a>Ämnesnamnets format för macOS
+
+När du skapar en PKCS-certifikatprofil för macOS beror alternativen för ämnesnamnets format på den certifikattyp du väljer, antingen **Användare** eller **Enhet**.  
+
+> [!NOTE]  
+> Det finns ett känt problem med användning av PKCS för att hämta certifikat; detta är [samma problem som för SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) när ämnesnamnet i den resulterande certifikatsigneringsförfrågan (CSR) innehåller något av följande tecken som undantaget tecken (med ett omvänt snedstreck \\):
+> - \+
+> - ;
+> - ,
+> - =
+
+- **Certifikattypen Användare**  
+  Formatalternativ för *Format för namn på certifikatmottagare* omfattar två variabler: **Eget namn (CN)** och **E-postadress (E)** . **Eget namn (cn)** kan ställas in till någon av följande variabler:
+
+  - **CN={{UserName}}** : Användarens huvudnamn, till exempel janedoe@contoso.com.
+  - **CN={{AAD_Device_ID}}** : Ett ID som tilldelas när du registrerar en enhet i Azure Active Directory (AD). Detta ID används vanligtvis för att autentisera med Azure AD.
+  - **CN={{SERIALNUMBER}}** : Det unika serienummer (SN) som vanligtvis används av tillverkaren för att identifiera en enhet.
+  - **CN={{IMEINumber}}** : Det unika IMEI-nummer (International Mobile Equipment Identity) som används för att identifiera en mobiltelefon.
+  - **CN={{OnPrem_Distinguished_Name}}** : En sekvens med relativa unika namn avgränsade med kommatecken, till exempel *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
+
+    Om du vill använda variabeln *{{OnPrem_Distinguished_Name}}* ska du synkronisera användarattributet *onpremisesdistinguishedname* med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
+
+  - **CN={{onPremisesSamAccountName}}** : Administratörer kan synkronisera attributet samAccountName från Active Directory till Azure AD med hjälp av Azure AD Connect till ett attribut som heter *onPremisesSamAccountName*. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett certifikat. Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: *Domännamn\testUser* eller bara *testUser*.
+
+    Om du vill använda variabeln *{{onPremisesSamAccountName}}* ska du synkronisera användarattributet *onPremisesSamAccountName* med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
+
+  Genom att kombinera en eller flera av dessa variabler och statiska strängar kan du skapa ett anpassat format för ämnesnamnet, till exempel:  
+  - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
+  
+  Det exemplet omfattar ett format för ämnesnamnet som använder variablerna CN och E samt strängar för värdena för organisationsenhet, organisation, plats, tillstånd och land/region. [CertStrToName-funktionen](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beskriver den här funktionen och dess strängar som stöds.
+
+- **Certifikattypen Enhet**  
+  Formatalternativ för Format för namn på certifikatmottagare omfattar följande variabler: 
+  - **{{AAD_Device_ID}}**
+  - **{{Device_Serial}}**
+  - **{{Device_IMEI}}**
+  - **{{SerialNumber}}**
+  - **{{IMEINumber}}**
+  - **{{AzureADDeviceId}}**
+  - **{{WiFiMacAddress}}**
+  - **{{IMEI}}**
+  - **{{DeviceName}}**
+  - **{{FullyQualifiedDomainName}}** *(Gäller endast för Windows och domänanslutna enheter)*
+  - **{{MEID}}**
+   
+  Du kan ange de här variablerna följt av texten för variabeln i textrutan. Till exempel kan det egna namnet för en enhet som heter *Device1* läggas till som **CN={{DeviceName}}Device1**.
+
+  > [!IMPORTANT]  
+  > - När du anger en variabel omger du variabelnamnet inom klammerparenteser { } som det visas i exemplet, för att undvika ett fel.  
+  > - Enhetsegenskaper som används i *ämnet* eller *SAN* för ett enhetscertifikat, till exempel **IMEI**, **SerialNumber** och **FullyQualifiedDomainName**, är egenskaper som kan förfalskas av en person med åtkomst till enheten.
+  > - En enhet måste ha stöd för alla variabler som anges i en certifikatprofil för att den profilen ska installeras på den enheten.  Om till exempel **{{IMEI}}** används i ämnesnamnet för en SCEP-profil och tilldelas till en enhet som inte har något IMEI-nummer kommer profilen inte att installeras.  
+ 
+
 
 ## <a name="whats-new-for-connectors"></a>Nyheter för anslutningsappar
 Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. När vi uppdaterar en anslutningsapp kan du läsa om ändringarna här. 

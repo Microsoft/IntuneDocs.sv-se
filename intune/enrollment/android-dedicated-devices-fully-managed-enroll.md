@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 1/15/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c54d82e2f0035272acce93f54f4080aca53579b9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2ad96c80a2cad71feec2afdfa87da767aa72fdb1
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726004"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505608"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Registrera dina dedikerade Android Enterprise-enheter eller fullständigt hanterade enheter
 
-När du har konfigurerat dina [dedikerade Android Enterprise-enheter](android-kiosk-enroll.md) eller [fullständigt hanterade enheter](android-fully-managed-enroll.md) i Intune kan du registrera enheterna. Hur du registrerar dina Android Enterprise-enheter beror på operativsystemet.
+När du har konfigurerat dina [dedikerade Android Enterprise-enheter](android-kiosk-enroll.md) eller [fullständigt hanterade enheter](android-fully-managed-enroll.md) i Intune kan du registrera enheterna. Intune-registrering för både dedikerade enheter och fullständigt hanterade enheter börjar med en fabriksåterställning. Hur du registrerar dina Android Enterprise-enheter beror på operativsystemet.
 
 | Registreringsmetod | Lägsta Android OS-version för dedikerade och fullständigt hanterade enheter |
 | ----- | ----- |

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ebca165c067afbc3d830e5f75ac9f8e29effb2
-ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
+ms.openlocfilehash: f2a1d964f157f33e439f659713fe8c2e02f852b3
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237236"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749414"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -77,7 +78,7 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
     3. För **Medlemstyp** väljer du antingen **Tilldelad** eller **Dynamisk enhet**.
 3. Om du valde **Tilldelad** för **Medlemstyp** i föregående steg väljer du **Medlemmar** på bladet **Grupp** och lägger till Autopilot-enheter till gruppen.
     Autopilot-enheter som ännu inte har registrerats är enheter där namnet är samma som enhetens serienummer.
-4. Om du väljer **Dynamiska enheter** för **Medlemstyp** ovan väljer du sedan **Dynamiska enhetsmedlemmar** på bladet **Grupp** och anger någon av följande koder i rutan **Avancerad regel**. Det är bara Autopilot-enheter som samlas in av de här reglerna, eftersom de avser attribut som endast finns i Autopilot-enheter.
+4. Om du väljer **Dynamiska enheter** för **Medlemstyp** ovan väljer du sedan **Dynamiska enhetsmedlemmar** på bladet **Grupp** och anger någon av följande koder i rutan **Avancerad regel**. Det är bara Autopilot-enheter som samlas in av de här reglerna, eftersom de avser attribut som endast finns i Autopilot-enheter. Skapandet av en grupp baserat på icke-Autopilot-attribut garanterar inte att enheter som ingår i gruppen faktiskt registreras till Autopilot.
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter anger du: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
     - Intunes grupptaggfält mappar till OrderID-attributet på Azure AD-enheter. Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med en viss grupptagg (Azure AD-enhetens OrderID) måste du ange: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Om du vill skapa en grupp som innehåller alla dina Autopilot-enheter med ett visst inköpsorder-ID anger du `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
@@ -167,6 +168,11 @@ Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, v
     ![Skärmbild av eget namn](./media/enrollment-autopilot/friendly-name.png)
 
 4. Välj **Ok**.
+
+## <a name="autopilot-deployments-report"></a>Rapport om Autopilot-distributioner
+Du kan se information om varje enhet som distribueras via Windows Autopilot.
+Om du vill se rapporten går du till **Intune**. Under **Övervaka** väljer du **Autopilot-distributioner**.
+Data är tillgängliga i 30 dagar efter distribution.
 
 
 ## <a name="delete-autopilot-devices"></a>Ta bort Autopilot-enheter

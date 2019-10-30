@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9306c7429adbe4a5159879ccbe7cb0f13e65ed
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725575"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785679"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Rensar data selektivt med villkorsstyrda startåtgärder för appskyddsprinciper i Intune
 
@@ -59,6 +60,7 @@ För iOS kan du konfigurera åtgärder för följande inställningar med hjälp 
 - Lägsta appversion
 - Lägsta SDK-version
 - Enhetsmodell(er)
+- Högsta tillåtna hotnivå för enhet
 
 Om du vill använda inställningen **Enhetsmodell(er)** anger du en semikolonavgränsad lista över iOS-modellidentifierare. Du hittar en iOS-modellidentifierare under kolumnen Enhetstyp i [Supportdokumentationen för HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Exempel på indata: *iPhone5,2;iPhone5,3*
@@ -83,6 +85,7 @@ För Android kan du konfigurera åtgärder för följande inställningar med hj�
 - Enhetstillverkare
 - SafetyNet-enhetsattestering
 - Hotgenomsökning för appar
+- Högsta tillåtna hotnivå för enhet
 
 Om du vill använda inställningen **Enhetstillverkare** anger du en semikolonavgränsad lista över Android-tillverkare. Du hittar Android-tillverkaren av en enhet under Enhetsinställningar.<br>
 Exempel på indata: *Tillverkare A;Tillverkare B* 

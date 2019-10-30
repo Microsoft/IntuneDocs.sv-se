@@ -5,34 +5,35 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
-ms.reviewer: heenamac
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd87b33d36d17f32945eb591307eb55241173ca9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a1c68421bf7c5dea0d93d45e0cbb748204d0f66b
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724080"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749411"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Övervaka enhetsprofiler i Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune innehåller några funktioner i Azure Portal för att övervaka och hantera din enhets konfigurationsprofiler. Du kan exempelvis kontrollera statusen för en profil, se vilka enheter som är tilldelade och uppdatera egenskaperna för en profil.
+Intune innehåller några funktioner som hjälper dig att övervaka och hantera dina enhetskonfigurationsprofiler. Du kan exempelvis kontrollera statusen för en profil, se vilka enheter som är tilldelade och uppdatera egenskaperna för en profil.
 
 ## <a name="view-existing-profiles"></a>Visa befintliga profiler
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Enhetskonfiguration** > **Profiler**.
+2. Välj **Enhetskonfiguration** > **Profiler**.
 
 Alla dina befintliga profiler visas, innehåller information såsom plattform och visar om profilen har tilldelats till några enheter.
 
@@ -43,13 +44,13 @@ När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. De
 1. Välj en befintlig profil. Välj till exempel en macOS-profil.
 2. Välj fliken **Översikt**.
 
-    Det övre diagrammet visar antalet enheter som är tilldelade till den specifika enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-enheter, visar diagrammet antal macOS-enheter.
+    Det övre diagrammet visar det antal enheter som är tilldelade till enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-enheter, visar diagrammet antal macOS-enheter.
 
     Det visar även antalet enheter för andra plattformar som tilldelats samma enhetsprofil. Till exempel visar det antalet enheter som inte är macOS-enheter.
 
     ![Visa antalet enheter som tilldelats enhetsprofilen](./media/device-profile-monitor/device-configuration-profile-graphical-chart.png)
 
-    Det under diagrammet visar antalet användare som är tilldelade till den specifika enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-användare visar diagrammet antalet macOS-användare.
+    Det nedre diagrammet visar det antal användare som är tilldelade till enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-användare visar diagrammet antalet macOS-användare.
 
 3. Välj cirkeln i det övre grafiska diagrammet. **Enhetstillstånd** öppnas.
 
@@ -67,12 +68,12 @@ När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. De
     - **Egenskaper**: Ändra namnet eller uppdatera befintliga inställningar.
     - **Tilldelningar**: Inkludera eller undanta enheter som principen ska gälla för. Välj **Valda grupper** för att välja särskilda enhetsgrupper.
     - **Enhetsstatus**: Enheter som är tilldelade till profilen visas samt om profilen har distribuerats korrekt. Du kan välja en specifik enhet för att få ytterligare information, inklusive installerade appar.
-    - **Användarstatus**: Visar en lista med användarnamn som påverkas av den här profilen, samt om profilen har distribuerats. Du kan välja en specifik användare för att få ytterligare information.
+    - **Användarstatus**: Visar de användarnamn med enheter som påverkas av den här profilen samt huruvida profilen har distribuerats. Du kan välja en specifik användare för att få ytterligare information.
     - **Status per inställning**: Filtrerar resultatet genom att visa de enskilda inställningarna i profilen, samt om inställningen har tillämpats.
 
 ## <a name="view-conflicts"></a>Visa konflikter
 
-I **Enheter** > **Alla enheter** kan du se alla inställningar som orsakar en konflikt. När det finns en konflikt visas även alla konfigurationsprofiler som innehåller inställningen. Administratörer kan använda funktionen till att felsöka och åtgärda avvikelser med profilerna.
+I **Enheter** > **Alla enheter** kan du se alla inställningar som orsakar en konflikt. När det finns en konflikt ser du även alla konfigurationsprofiler som innehåller den här inställningen. Administratörer kan använda funktionen till att felsöka och åtgärda avvikelser med profilerna.
 
 1. Välj i Intune **Enheter** > **Alla enheter** > välj en befintlig enhet i listan. Slutanvändare kan få enhetsnamnet från appen Företagsportal.
 2. Välj **Enhetskonfiguration**. Alla konfigurationsprinciper som gäller för enheten listas.
@@ -80,6 +81,34 @@ I **Enheter** > **Alla enheter** kan du se alla inställningar som orsakar en ko
 
 Nu när du känner till inställningen som orsakar konflikten och vilka principer som innehåller den inställningen bör det vara lättare att lösa konflikten. 
 
+## <a name="device-firmware-configuration-interface-profile-reporting"></a>Rapportering för konfigurationsgränssnittsprofil för enhetens inbyggda programvara
+
+> [!WARNING]
+> Övervakning av DFCI-profiler håller just nu på att skapas. Medan DFCI är i offentlig förhandsversion kan övervakningsdata saknas eller vara ofullständiga.
+
+DFCI-profiler rapporteras per inställning, precis som andra enhetskonfigurationsprofiler. Beroende på tillverkarens stöd för DFCI gäller kanske inte vissa inställningar.
+
+Med dina DFCI-profilinställningar visas kanske följande tillstånd:
+
+- **Kompatibel**: Det här tillståndet visar när ett inställningsvärde i profilen matchar inställningen på enheten. Det här tillståndet kan inträffa i följande scenarier:
+
+  - DFCI-profilen har konfigurerat inställningen i profilen.
+  - Enheten har inte den maskinvarufunktion som styrs av inställningen, och profilinställningen är **Inaktiverad**.
+  - UEFI tillåter inte att DFCI inaktiverar funktionen, och profilinställningen är **Aktiverad**.
+  - Enheten saknar maskinvara för att inaktivera funktionen, och profilinställningen är **Aktiverad**.
+
+- **Inte tillämpligt**: Det här tillståndet visar när ett inställningsvärde i profilen är **Aktiverat** och den matchande inställningen på enheten inte hittas. Detta tillstånd kan inträffa om enhetens maskinvara inte har funktionen.
+
+- **Inkompatibel**: Det här tillståndet visar när ett inställningsvärde i profilen inte matchar inställningen på enheten. Det här tillståndet kan inträffa i följande scenarier:
+
+  - UEFI tillåter inte att DFCI inaktiverar en inställning, och profilinställningen är **Inaktiverad**.
+  - Enheten saknar maskinvara för att inaktivera funktionen, och profilinställningen är **Inaktiverad**.
+  - Enheten har inte den senaste versionen av den inbyggda DFCI-programvaran.
+  - DFCI inaktiverades innan det registrerades i Intune med hjälp av en lokal ”bortvals”-kontroll i UEFI-menyn.
+  - Enheten registrerades till Intune utanför Autopilot-registreringen.
+  - Enheten registrerades inte till Autopilot av en Microsoft-CSP, eller registrerades direkt av OEM-tillverkaren.
+
 ## <a name="next-steps"></a>Nästa steg
-[Tilldela användar- och enhetsprofiler](../device-profile-assign.md)  
-[Vanliga problem och lösningar med enhetsprofiler](device-profile-troubleshoot.md)
+
+[Vanliga frågor, problem och lösningar med enhetsprofiler](device-profile-troubleshoot.md)  
+[Felsöka principer och profiler i Intune](troubleshoot-policies-in-microsoft-intune.md)

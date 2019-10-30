@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -15,17 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35fae5ea1b3294772db4f4db51179892e08ed5d1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c1c02248b3208073a3bb09cafe69cf0473eacb2b
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728513"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584526"
 ---
 # <a name="rename-a-device-in-intune"></a>Ändra namn på en enhet i Intune
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Med åtgärden **Byt namn på enhet** kan du byta namn på en enhet som har registrerats i Intune. Enhetens namn ändras i Intune och på enheten.
 
@@ -44,6 +42,15 @@ Den här funktionen stöder för närvarande inte namnbyte av Windows-hybridenhe
 5. Om du vill starta om enheten efter namnbytet väljer du **Ja** bredvid **Starta om efter namnbyte**.
 6. Välj **Byt namn**.
 
+## <a name="windows-device-rename-rules"></a>Regler för byte av Windows-enhetsnamn
+När du byter namn på en Windows-enhet måste det nya namnet följa dessa regler:
+- 15 tecken eller mindre (måste vara mindre än eller lika med 63 byte exklusive avslutande NULL)
+- Inte null eller en tom sträng
+- Tillåten ASCII: Bokstäver (a–z, A–Z), siffror (0–9) och bindestreck
+- Tillåten Unicode: tecken > = 0x80, måste vara en giltig UTF8, måste vara IDN-mappningsbara (det vill säga att RtlIdnToNameprepUnicode lyckas; se RFC 3492)
+- Namn får inte enbart innehålla siffror
+- Inga blanksteg i namnet
+- Förbjudna tecken: { | } ~ [ \ ] ^ ' : ; < = > ? & @ ! " # $ % ` ( ) + / , . _ *)
 
 
 ## <a name="next-steps"></a>Nästa steg

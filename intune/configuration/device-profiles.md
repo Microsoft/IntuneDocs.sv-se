@@ -5,23 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3afdb365d0ed88a58028287cc7010bb334e9001e
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036441"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749345"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Tillämpa funktioner och inställningar på dina enheter med enhetsprofiler i Microsoft Intune
 
@@ -48,7 +49,7 @@ Dessa mallar ger administratörer en förenklad vy över inställningar som likn
 
 Den här funktionen stöder:
 
-- Windows 10 och senare
+- Windows 10 1809 och senare med inbyggd programvara som stöds.
 
 ## <a name="certificates"></a>Certifikat
 
@@ -66,7 +67,7 @@ Den här funktionen stöder:
 
 ## <a name="custom-profile"></a>Anpassad profil
 
-Med [Anpassade inställningar](../custom-settings-configure.md) kan administratörer tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan ange OMA-URI-värden på Android-enheter. På iOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator.
+Med [Anpassade inställningar](custom-settings-configure.md) kan administratörer tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan ange OMA-URI-värden på Android-enheter. På iOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator.
 
 Den här funktionen stöder:
 
@@ -78,7 +79,7 @@ Den här funktionen stöder:
 
 ## <a name="delivery-optimization"></a>Leveransoptimering
 
-[Leveransoptimering](../delivery-optimization-windows.md) ger en bättre upplevelse vid leverans av programuppdateringar. De här inställningarna ersätter inställningarna i **Programuppdateringar** > **Windows 10-uppdateringsring**.
+[Leveransoptimering](delivery-optimization-windows.md) ger en bättre upplevelse vid leverans av programuppdateringar. De här inställningarna ersätter inställningarna i **Programuppdateringar** > **Windows 10-uppdateringsring**.
 
 Använd inställningarna för att styra hur programuppdateringar laddas ned till enheter i din organisation. Du kan exempelvis låta användarna hämta sina egna uppdateringar, eller hämta uppdateringar med hjälp av leveransoptimeringens molntjänster i en enhetsprofil.
 
@@ -88,12 +89,20 @@ Den här funktionen stöder:
 
 ## <a name="device-features"></a>Enhetsfunktioner
 
-[Enhetsfunktioner](../device-features-configure.md) styr funktioner på iOS- och macOS-enheter, t.ex. AirPrint, meddelanden och låsskärmsmeddelanden.
+[Enhetsfunktioner](device-features-configure.md) styr funktioner på iOS- och macOS-enheter, t.ex. AirPrint, meddelanden och låsskärmsmeddelanden.
 
 Den här funktionen stöder:
 
 - iOS/iPadOS
 - macOS
+
+## <a name="device-firmware-configuration-interface"></a>Konfigurationsgränssnitt för enhetens inbyggda programvara
+
+[DFCI (Device Firmware Configuration Interface, konfigurationsgränssnitt för enhetens inbyggda programvara)](device-firmware-configuration-interface-windows.md) gör att administratörer kan aktivera eller inaktivera UEFI-inställningar (BIOS) med hjälp av Intune. Använd de här inställningarna för att förbättra säkerheten på nivån för inbyggd programvara, som vanligtvis är mer motståndskraftig mot skadliga attacker.
+
+Den här funktionen stöder:
+
+- Windows 10 och senare
 
 ## <a name="device-restrictions"></a>Enhetsbegränsningar
 
@@ -210,9 +219,9 @@ Den här funktionen stöder:
 
 ## <a name="update-policies"></a>Uppdateringsprinciper
 
-I [Uppdateringsprinciper för iOS](../software-updates-ios.md) visas hur du skapar och tilldelar iOS-principer för installering av programuppdateringar på iOS-enheterna. Du kan också granska installationsstatusen.
+I [Uppdateringsprinciper för iOS](../protect/software-updates-ios.md) visas hur du skapar och tilldelar iOS-principer för installering av programuppdateringar på iOS-enheterna. Du kan också granska installationsstatusen.
 
-Se [Leveransoptimering](../delivery-optimization-windows.md) för uppdateringsprinciper på Windows-enheter. 
+Se [Leveransoptimering](delivery-optimization-windows.md) för uppdateringsprinciper på Windows-enheter. 
 
 Den här funktionen stöder:
 
@@ -265,7 +274,7 @@ Den här funktionen stöder:
 
 ## <a name="manage-and-troubleshoot"></a>Hantering och felsökning
 
-[Hantera dina profiler](../device-profile-monitor.md) för att kontrollera statusen för enheter och tilldelade profiler. Du får även hjälp med att lösa konflikter genom att se inställningarna som orsakar en konflikt och de profiler som innehåller dessa inställningar. I [Vanliga problem och lösningar](device-profile-troubleshoot.md) får administratörer hjälp med att arbeta med profiler. Där beskrivs vad som händer när en profil tas bort, vad som orsakar att meddelanden skickas till enheter och mycket mer.
+[Hantera dina profiler](device-profile-monitor.md) för att kontrollera statusen för enheter och tilldelade profiler. Du får även hjälp med att lösa konflikter genom att se inställningarna som orsakar en konflikt och de profiler som innehåller dessa inställningar. I [Vanliga problem och lösningar](device-profile-troubleshoot.md) får administratörer hjälp med att arbeta med profiler. Där beskrivs vad som händer när en profil tas bort, vad som orsakar att meddelanden skickas till enheter och mycket mer.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/22/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afc9d953e1d324adb3f00eb5209732a858bbbcda
-ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
+ms.openlocfilehash: c3d98a0e3c5bd2a5c11c9aa72d791306dfbe6578
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314671"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503294"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -121,7 +122,7 @@ Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers)
 
 ## <a name="change-device-ownership"></a>Ändra enhetsägande
 
-Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som administratör kan du ange enheter som **Personliga** eller **Företagsägda**.
+Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som administratör kan du ange enheter som **Personliga** eller **Företagsägda**. När en enhets ägarskapstyp ändras från Personlig till Företag tar Intune bort all appinformation som tidigare samlats in från den enheten inom 7 dagar. Om så är tillämpligt tar Intune även bort det registrerade telefonnumret. 
 
 **Ändra enhetsägande:**
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), gå till **Enheter** och välj enheten.

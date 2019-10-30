@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dac7069e30c173d80f15977ba2f06fcabcb7179b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724444"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785539"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS- och MacOS-appar som har köpts via ett Apples volymköpsprogram med Microsoft Intune
 
@@ -93,7 +94,7 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
         > När du byter land/region uppdateras apparnas metadata och butikens URL vid nästa synkronisering med Apple-tjänsten för appar som har skapats med denna token. Appen uppdateras inte om den inte finns i det nya landets/regionens butik.
 
     - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
-    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat identifierar Intune VPP-appuppdateringar i appbutiken och push-installerar dem automatiskt på enheten när den checkas in. Automatiska appuppdateringar för Apple VPP-appar uppdaterar endast de appar automatiskt som distribuerats med **krävd** installeringsavsikt. För appar som distribueras med **tillgänglig** installeringsavsikt, genererar den automatiska uppdateringen ett meddelande åt administratören som informerar om att en ny version av appen är tillgänglig. Dessutom ser användaren appen som inte installerad på Företagsportalen, även om en tidigare version av appen är installerad. I det här fallet kan användaren installera om appen genom att klicka på **Installera** på skärmen programinformation i företagsportalappen för att installera den nyare versionen av appen.
+    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat identifierar Intune VPP-appuppdateringar i appbutiken och push-installerar dem automatiskt på enheten när den checkas in. Automatiska appuppdateringar för Apple VPP-appar uppdaterar endast de appar automatiskt som distribuerats med **krävd** installeringsavsikt. För appar som distribueras med **tillgänglig** installeringsavsikt genererar den automatiska uppdateringen ett statusmeddelande åt IT-administratören som informerar om att en ny version av appen är tillgänglig. Det här statusmeddelandet visas när du väljer appen, väljer Installationsstatus för enhet och kontrollerar statusinformationen. Dessutom ser användaren appen som inte installerad på Företagsportalen, även om en tidigare version av appen är installerad. I det här fallet kan användaren installera om appen genom att klicka på **Installera** på skärmen programinformation i företagsportalappen för att installera den nyare versionen av appen.
 
         > [!NOTE]
         > Automatiska appuppdateringar fungerar för både enhets- och användarlicensierade appar för iOS version 11.0 eller macOS 10.12 eller senare.

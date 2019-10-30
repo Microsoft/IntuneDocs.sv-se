@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/17/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
@@ -17,20 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f041c76b4d9b3814a020d51ad4cbb8e33df6c27
-ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
+ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
+ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72379803"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587957"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Som Intune-administratör kan du skapa och hantera registreringsbegränsningar som definierar vilka enheter som kan registreras för hantering med Intune, inklusive:
-- antalet enheter
-- operativsystem och versioner. Du kan skapa flera begränsningar och applicera dem på olika användargrupper. Du kan ange [prioriteringsordningen](#change-enrollment-restriction-priority) för dina olika begränsningar.
+- Antalet enheter.
+- Operativsystem och versioner.
+
+Du kan skapa flera begränsningar och applicera dem på olika användargrupper. Du kan ange [prioriteringsordningen](#change-enrollment-restriction-priority) för dina olika begränsningar.
 
 >[!NOTE]
 >Begränsningar vid registrering ska inte betraktas som säkerhetsfunktioner. Komprometterade enheter kan ju utge sig för att vara en helt annan enhet. Det här är dock en bra barriär för att stänga ute användare utan skadliga avsikter.
@@ -69,8 +72,17 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
     - Android-enhetsadministratör- och Android Enterprise-arbetsprofilen stöder major.minor.rev.build.
     - iOS stöder major.minor.rev. Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
     - Windows stöder endast major.minor.build.rev för Windows 10.
-    > [!Note]
-    > Windows 10 tillhandahåller inte rev-numret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registreringen.
+    
+    > [!IMPORTANT]
+    > Plattformar för Android Enterprise (arbetsprofil) och Android-enhetsadministratör har följande beteende:
+    > - Om båda plattformarna tillåts för samma grupp registreras användarna med en arbetsprofil om deras enhet stöder det. Annars registreras de som DA. 
+    > - Om båda plattformarna tillåts för gruppen och raffineras för specifika och icke-överlappande versioner får användarna det registreringsflöde som definierats för deras OS-version. 
+    > - Om båda plattformarna är tillåtna, men blockeras för samma versioner, kommer användare på enheter med de blockerade versionerna att dirigeras till registreringsflödet för Android-enhetsadministratör och sedan blockeras från registrering samt uppmanas att logga ut. 
+    >
+    > Observera att varken registrering med arbetsprofil eller enhetsadministratör fungerar såvida inte rätt förutsättningar har uppfyllts i Android-registrering. 
+    
+   > [!Note]
+   > Windows 10 tillhandahåller inte rev-numret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registreringen.
 
 8. Under **Personligt ägda** väljer du **Tillåt** för de plattformar som du vill tillåta som personligt ägda enheter.
 9. Välj **Nästa** för att gå till sidan **Tilldelningar**.

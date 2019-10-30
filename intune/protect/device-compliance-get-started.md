@@ -2,29 +2,28 @@
 title: Policyer för efterlevnad för enheter i Microsoft Intune – Azure | Microsoft Docs
 description: Kom igång med att använda enhetsefterlevnadsprinciper, få en översikt över status och allvarlighetsgrader, använd statusen InGracePeriod, arbeta med villkorsstyrd åtkomst, hantera enheter utan en tilldelad princip och se skillnaderna i efterlevnad mellan Azure-portalen och den klassiska portalen i Microsoft Intune
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a743bb3b2003b1dbdf8088aca19bce898c8e40a8
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721428"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749177"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Många MDM-lösningar för hantering av mobilenheter skyddar organisationens data genom att kräva att användare och enheter uppfyller vissa krav. I Intune kan kallas den här funktionen för ”efterlevnadsprinciper”. Efterlevnadsprinciperna definierar de regler och inställningar som användare och enheter måste följa för att vara kompatibla. I kombination med villkorlig åtkomst kan administratörer blockera användare och enheter som inte följer reglerna.
 
@@ -89,7 +88,7 @@ Intune innehåller också en uppsättning inbyggda efterlevnadsprincipinställni
 
 - **Markera enheter utan någon tilldelad policy för efterlevnad som**: Den här egenskapen har två värden:
 
-  - **Kompatibel** (standard): säkerhetsfunktion på
+  - **Kompatibel** (*standard*): säkerhetsfunktion av
   - **Ej kompatibel**: säkerhetsfunktion av
 
   Om en enhet inte har en policy för efterlevnad är den kompatibel som standard. Om du använder villkorlig åtkomst med kompatibla principer rekommenderar vi att du ändrar standardinställningen till **Inte kompatibel**. Om en användare inte är kompatibel eftersom ingen princip har tilldelats, visar [företagsportalsappen](../apps/company-portal-app.md) `No compliance policies have been assigned`.
@@ -115,13 +114,13 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 |**Principinställning**| **Plattform** |
 | --- | ----|
-| **Konfiguration av PIN-kod eller lösenord** | - **Android 4.0 och senare**: I karantän</br>- **Samsung Knox Standard 4.0 och senare**: I karantän</br>- **Android Enterprise**: I karantän</br></br>- **iOS 8.0 och senare**: Åtgärdad</br>- **macOS 10.11 och senare**: Åtgärdad</br></br>- **Windows 8.1 och senare**: Åtgärdad</br>- **Windows Phone 8.1 och senare**: Åtgärdad|
-| **Enhetskryptering** | - **Android 4.0 och senare**: I karantän</br>- **Samsung Knox Standard 4.0 och senare**: I karantän</br>- **Android Enterprise**: I karantän</br></br>- **iOS 8.0 och senare**: Åtgärdad (genom angiven PIN-kod)</br>- **macOS 10.11 och senare**: Åtgärdad (genom angiven PIN-kod)</br></br>- **Windows 8.1 och senare**: Inte tillämpligt</br>- **Windows Phone 8.1 och senare**: Åtgärdad |
-| **Jailbreakad eller rotad enhet** | - **Android 4.0 och senare**: I karantän (inte en inställning)</br>- **Samsung Knox Standard 4.0 och senare**: I karantän (inte en inställning)</br>- **Android Enterprise**: I karantän (inte en inställning)</br></br>- **iOS 8.0 och senare**: I karantän (inte en inställning)</br>- **macOS 10.11 och senare**: Inte tillämpligt</br></br>- **Windows 8.1 och senare**: Inte tillämpligt</br>- **Windows Phone 8.1 och senare**: Inte tillämpligt |
-| **E-postprofil** | - **Android 4.0 och senare**: Inte tillämpligt</br>- **Samsung Knox Standard 4.0 och senare**: Inte tillämpligt</br>- **Android Enterprise**: Inte tillämpligt</br></br>- **iOS 8.0 och senare**: I karantän</br>- **macOS 10.11 och senare**: I karantän</br></br>- **Windows 8.1 och senare**: Inte tillämpligt</br>- **Windows Phone 8.1 och senare**: Inte tillämpligt |
-| **Lägsta version av operativsystemet** | - **Android 4.0 och senare**: I karantän</br>- **Samsung Knox Standard 4.0 och senare**: I karantän</br>- **Android Enterprise**: I karantän</br></br>- **iOS 8.0 och senare**: I karantän</br>- **macOS 10.11 och senare**: I karantän</br></br>- **Windows 8.1 och senare**: I karantän</br>- **Windows Phone 8.1 och senare**: I karantän |
-| **Högsta version av operativsystemet** | - **Android 4.0 och senare**: I karantän</br>- **Samsung Knox Standard 4.0 och senare**: I karantän</br>- **Android Enterprise**: I karantän</br></br>- **iOS 8.0 och senare**: I karantän</br>- **macOS 10.11 och senare**: I karantän</br></br>- **Windows 8.1 och senare**: I karantän</br>- **Windows Phone 8.1 och senare**: I karantän |
-| **Attestering av hälsotillstånd i Windows** | - **Android 4.0 och senare**: Inte tillämpligt</br>- **Samsung Knox Standard 4.0 och senare**: Inte tillämpligt</br>- **Android Enterprise**: Inte tillämpligt</br></br>- **iOS 8.0 och senare**: Inte tillämpligt</br>- **macOS 10.11 och senare**: Inte tillämpligt</br></br>- **Windows 10 and Windows 10 Mobile**: I karantän</br>- **Windows 8.1 och senare**: I karantän</br>- **Windows Phone 8.1 och senare**: Inte tillämpligt |
+| **Konfiguration av PIN-kod eller lösenord** | - **Android 4.0 och senare**: I karantän<br>- **Samsung Knox Standard 4.0 och senare**: I karantän<br>- **Android Enterprise**: I karantän  <br>  <br>- **iOS 8.0 och senare**: Åtgärdad<br>- **macOS 10.11 och senare**: Åtgärdad  <br>  <br>- **Windows 8.1 och senare**: Åtgärdad<br>- **Windows Phone 8.1 och senare**: Åtgärdad|
+| **Enhetskryptering** | - **Android 4.0 och senare**: I karantän<br>- **Samsung Knox Standard 4.0 och senare**: I karantän<br>- **Android Enterprise**: I karantän<br><br>- **iOS 8.0 och senare**: Åtgärdad (genom angiven PIN-kod)<br>- **macOS 10.11 och senare**: Åtgärdad (genom angiven PIN-kod)<br><br>- **Windows 8.1 och senare**: Inte tillämpligt<br>- **Windows Phone 8.1 och senare**: Åtgärdad |
+| **Jailbreakad eller rotad enhet** | - **Android 4.0 och senare**: I karantän (inte en inställning)<br>- **Samsung Knox Standard 4.0 och senare**: I karantän (inte en inställning)<br>- **Android Enterprise**: I karantän (inte en inställning)<br><br>- **iOS 8.0 och senare**: I karantän (inte en inställning)<br>- **macOS 10.11 och senare**: Inte tillämpligt<br><br>- **Windows 8.1 och senare**: Inte tillämpligt<br>- **Windows Phone 8.1 och senare**: Inte tillämpligt |
+| **E-postprofil** | - **Android 4.0 och senare**: Inte tillämpligt<br>- **Samsung Knox Standard 4.0 och senare**: Inte tillämpligt<br>- **Android Enterprise**: Inte tillämpligt<br><br>- **iOS 8.0 och senare**: I karantän<br>- **macOS 10.11 och senare**: I karantän<br><br>- **Windows 8.1 och senare**: Inte tillämpligt<br>- **Windows Phone 8.1 och senare**: Inte tillämpligt |
+| **Lägsta version av operativsystemet** | - **Android 4.0 och senare**: I karantän<br>- **Samsung Knox Standard 4.0 och senare**: I karantän<br>- **Android Enterprise**: I karantän<br><br>- **iOS 8.0 och senare**: I karantän<br>- **macOS 10.11 och senare**: I karantän<br><br>- **Windows 8.1 och senare**: I karantän<br>- **Windows Phone 8.1 och senare**: I karantän |
+| **Högsta version av operativsystemet** | - **Android 4.0 och senare**: I karantän<br>- **Samsung Knox Standard 4.0 och senare**: I karantän<br>- **Android Enterprise**: I karantän<br><br>- **iOS 8.0 och senare**: I karantän<br>- **macOS 10.11 och senare**: I karantän<br><br>- **Windows 8.1 och senare**: I karantän<br>- **Windows Phone 8.1 och senare**: I karantän |
+| **Attestering av hälsotillstånd i Windows** | - **Android 4.0 och senare**: Inte tillämpligt<br>- **Samsung Knox Standard 4.0 och senare**: Inte tillämpligt<br>- **Android Enterprise**: Inte tillämpligt<br><br>- **iOS 8.0 och senare**: Inte tillämpligt<br>- **macOS 10.11 och senare**: Inte tillämpligt<br><br>- **Windows 10 and Windows 10 Mobile**: I karantän<br>- **Windows 8.1 och senare**: I karantän<br>- **Windows Phone 8.1 och senare**: Inte tillämpligt |
 
 ---------------------------
 
@@ -156,8 +155,9 @@ Om du vill använda de funktioner i Azure Portal som är relaterade till policye
   - [Android enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows 10 och senare](compliance-policy-create-windows.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 8.1 och Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 och senare](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 och senare](compliance-policy-create-windows.md)
 
 - Information om principentiteter för Intune Data Warehouse finns i [Referens för principentiteter](../reports-ref-policy.md).
