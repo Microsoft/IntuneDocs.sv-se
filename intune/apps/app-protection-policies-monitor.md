@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d82813f1292c99cf248c56a102503413d2cb8fb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507449"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889580"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
 - **Senaste synkronisering**: När appen senast synkroniserades med Intune. 
 
 >[!NOTE]
-> Kolumnen **Senaste synkronisering** visar samma värde i både konsolens användarstatusrapport och appskyddsprincipens [exporteringsbara .csv-rapport](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities-to-csv). Skillnaden är en liten fördröjning i synkroniseringen mellan värdet i de två rapporterna. 
+> Kolumnen **Senaste synkronisering** visar samma värde i både konsolens användarstatusrapport och appskyddsprincipens [exporteringsbara .csv-rapport](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities). Skillnaden är en liten fördröjning i synkroniseringen mellan värdet i de två rapporterna. 
 >
 > Tiden som anges i Senaste synkronisering är när Intune senast såg appinstansen. När en användare startar en app kan den meddela starttiden till Intunes appskyddstjänst, beroende på när den senast checkades in. Se [återförsöksintervallets tider för incheckning till appskyddsprincipen](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Om en användare inte har använt den specifika appen under det senaste incheckningsintervallet (som vanligtvis är 30 minuter vid aktiv användning) och de startar appen, händer följande:
 >

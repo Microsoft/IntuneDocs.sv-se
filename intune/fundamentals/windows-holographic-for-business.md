@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb3623a61c16f69773703b8acdbb8f7c02b4ac4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e648d2eff8fd95cd3c995e9cce1bd0c9dfff32da
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504739"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889523"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda olika enhetshanteringsfunktioner på Windows Holographic- och HoloLens-enheter med Intune
 
@@ -80,7 +80,7 @@ Microsoft Intune kan distribuera universella Windows-appar till Microsoft HoloLe
 - Mer information om hur du utvecklar appar Microsoft HoloLens finns i [Mixed reality-appar för Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
 
 > [!NOTE]
-> HoloLens-enheter som kör Windows 10 Holographic för företag 1607 stöder inte online-licensierade appar från Microsoft Store för företag. Läs mer i [Installera appar på HoloLens](https://docs.microsoft.com/hololens/hololens-install-apps).
+> HoloLens-enheter som kör Windows 10 Holographic för företag 1607 stöder inte online-licensierade appar från Microsoft Store för företag. Läs mer i [Installera appar på HoloLens](/hololens/holographic-store-apps).
 
 ## <a name="device-actions"></a>Enhetsåtgärder
 Intune har vissa inbyggda åtgärder som gör att IT-administratörer kan utföra olika uppgifter, lokalt på enheten eller via fjärranslutning med Intune i Azure-portalen. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
