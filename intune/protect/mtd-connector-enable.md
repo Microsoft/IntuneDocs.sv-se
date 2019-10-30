@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e53f50c42e768eeb652a8602bea49c04d29364c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504419"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810287"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
@@ -44,7 +44,7 @@ Klassiska principer för villkorlig åtkomst för MTD-appar:
 Du kan visa klassiska principer för villkorlig åtkomst genom att gå till **Azure Active Directory** > **Villkorlig åtkomst** > **Klassiska principer** i [Azure](https://portal.azure.com/#home).
 
 
-## <a name="to-enable-the-mtd-connector"></a>Så här aktiverar du MTD-anslutningen
+## <a name="to-enable-the-mobile-threat-defense-connector"></a>Så här aktiverar du Mobile Threat Defense-anslutningsprogrammet
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
@@ -58,20 +58,23 @@ Du kan visa klassiska principer för villkorlig åtkomst genom att gå till **Az
 
 7. Aktivera växlingsalternativen enligt kraven i din organisation. Växlingsalternativen som visas varierar beroende på MTD-partnern.
 
-## <a name="mtd-toggle-options"></a>MTD-växlingsalternativ
+## <a name="mobile-threat-defense-toggle-options"></a>Växla alternativ för Mobile Threat Defense
 
-Du kan bestämma vilka MTD-växlingsalternativ som behöver aktiveras enligt din organisations krav. Här finns mer information:
+Du kan bestämma vilka växlingsalternativ för Mobile Threat Defense som behöver aktiveras enligt din organisations krav. Här finns mer information:
 
-- **Ansluta Android 4.1+-enheter till [MTD-partnernamn] för Work MTD**: När du aktiverar det här alternativet kan du låta Android 4.1+-enheter rapportera säkerhetsrisker till Intune.
-  - **Markera som icke-kompatibel om inga data tas emot**: Om Intune inte har tagit emot data om en enhet på den här plattformen från MTD-partnern, så kan du betrakta enheten som inkompatibel.
-<br></br>
-- **Ansluta iOS 8.0+-enheter till [MTD-partnernamn] för Work MTD**: När du aktiverar det här alternativet kan du låta iOS 8.0+-enheter rapportera säkerhetsrisker till Intune.
-  - **Markera som icke-kompatibel om inga data tas emot**: Om Intune inte har tagit emot data om en enhet på den här plattformen från MTD-partnern, så kan du betrakta enheten som inkompatibel.
-<br></br>
+**MDM-inställningar för efterlevnadsprinciper**
+- **Ansluta Android 4.1+-enheter till *\<MTD-partnernamn>***: När du aktiverar det här alternativet kan du låta Android 4.1+-enheter rapportera säkerhetsrisker till Intune.
+- **Ansluta iOS 8.0+-enheter till *\<MTD-partnernamn>***: När du aktiverar det här alternativet kan du låta iOS 8.0+-enheter rapportera säkerhetsrisker till Intune.
 - **Aktivera appsynkronisering för iOS-enheter**: Tillåter denna Mobile Threat Defense-partner att begära metadata för iOS-program från Intune för att använda för hotanalyssyften.
-
 - **Blockera operativsystemversioner som inte stöds**: Blockera om enheten kör ett operativsystem som är äldre än den äldsta version som stöds.
 
+**Inställningar för appskyddsprincip**
+- **Anslut Android-enheter med version 4.1 och senare till *\<MTD-partnernamn>* för utvärdering av appskyddsprincip**: När du aktiverar det här alternativet utvärderar appskyddsprinciper som använder regeln för hotnivå för enhet enheter, däribland data från det här anslutningsprogrammet.
+- **Anslut iOS-enheter med version 8.0 och senare till *\<MTD-partnernamn>* för utvärdering av appskyddsprincip**: När du aktiverar det här alternativet utvärderar appskyddsprinciper som använder regeln för hotnivå för enhet enheter, däribland data från det här anslutningsprogrammet.
+
+Mer information om hur du använder Mobile Threat Defense-anslutningsprogram för att utvärdera Intune-appskyddsprincip hittar du i [Konfigurera Mobile Threat Defense för oregistrerade enheter](~/protect/mtd-enable-unenrolled-devices.md).
+
+**Gemensamma delade inställningar**
 - **Antalet dagar tills partnern är icke-kommunikativ**: Maximalt antal dagar av inaktivitet innan Intune betraktar partnern som icke-kommunikativ eftersom anslutningen har gått förlorad. Intune ignorerar efterlevnadsstatusen för MTD-partners som inte svarar.
 
 > [!IMPORTANT] 

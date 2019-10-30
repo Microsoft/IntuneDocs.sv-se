@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1a1c03dc480ad66de22b4a5ee44a9b8c221980c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: edc884850b70ff7621224c5b01a68d016f27504e
+ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503382"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923380"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurera Intune-registrering av dedikerade Android Enterprise-enheter
 
@@ -78,7 +78,7 @@ Du kan rikta appar och principer till tilldelade eller dynamiska enhetsgrupper. 
 4. På bladet **Regler för dynamiskt medlemskap** fyller du i fälten så här:
     - **Lägg till dynamisk medlemskapsregel**: Enkel regel
     - **Lägg till enheter där**: enrollmentProfileName
-    - Välj **Matchning** i mittenrutan.
+    - Välj **Lika med** i mittenrutan.
     - I det sista fältet anger du registreringsprofilnamnet som du har skapat tidigare.
     Mer information om regler för dynamiskt medlemskap finns i [Regler för dynamiskt medlemskap för grupper i AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Välj **Lägg till fråga** > **Skapa**.

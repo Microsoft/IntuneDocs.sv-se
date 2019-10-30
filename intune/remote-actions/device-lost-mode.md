@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aecbcd91eef668ba2a92acfc9b42e6c68df3672a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 34a4c8adeef7e8b28c90ad38579f0f9ac7c4784d
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057530"
 ---
 # <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Aktivera borttappat läge på iOS-enheter med Intune
 
@@ -43,8 +43,10 @@ Den här funktionen stöds inte för:
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Välj **Enheter** och sedan **Alla enheter**.
-4. Välj en iOS-enhet i listan över de enheter du hanterar och välj **...Mer**. Välj sedan fjärråtgärden **Borttappat läge**.
-5. Aktivera funktionen i **borttappat läge**. Ange sedan det meddelande som ska visas och ett telefonnummer för kontakt.
+4. I listan med enheter som du hanterar väljer du en iOS-enhet och sedan **Borttappat läge (endast övervakat)** .
+5. Under **Borttappat läge**, väljer du **Aktivera**.
+6. I **Meddelande som ska visas på låsskärmen**, skriver du ett meddelande som ska visas på enhetens låsskärm.
+7. Alternativt kan du ange ett telefonnummer i rutan **Telefonnummer att visa**.
 6. Klicka på **OK** för att spara ändringarna.
 
 När du aktiverar borttappat läge blockeras all användning av enheten. Slutanvändaren kan inte öppna enheten förrän du inaktiverar borttappat läge. När borttappat läge är aktiverat kan du hitta enheten med hjälp av åtgärden [Hitta enhet](device-locate.md).

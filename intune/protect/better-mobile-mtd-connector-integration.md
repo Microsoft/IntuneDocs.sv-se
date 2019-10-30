@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9faf34a9b417962e412eaa730cf91cd821ff7eb6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0528ec962165f358b35afce98f58c8b9b4efe93c
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509632"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810318"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrera Better Mobile med Intune
 
@@ -28,8 +28,7 @@ Utför följande steg när du ska integrera Better Mobile Threat Defense-lösnin
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-> [!NOTE]
-> Följande steg ska utföras i [administratörskonsolen för Better Mobile](https://aad.bmobi.net).
+Följande steg måste utföras i [Better Mobile-administratörskonsolen](https://aad.bmobi.net) och gör det möjligt att ansluta Better Mobile-tjänsten för både Intune-registrerade enheter (via enhetsefterlevnad) och oregistrerade enheter (via appskyddsprinciper).
 
 Se till att du har följande innan du börjar integrera Better Mobile med Intune:
 
@@ -76,4 +75,5 @@ Det här är processen för behörighetskontroll av Better Mobile-appen:
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Konfigurera bättre klientappar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Better Mobile-appar för registrerade enheter](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Better Mobile-appar för oregistrerade enheter](~/protect/mtd-add-apps-unenrolled-devices.md)

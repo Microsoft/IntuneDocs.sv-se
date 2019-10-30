@@ -7,14 +7,28 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9965c6e85173ea9958182be43b6c93d9578d534f
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: a2675b1b601261e673923ab5e3ac41d0f3d83264
+ms.sourcegitcommit: 71b0cd7b81178e2f9e9f80830fa9a7985781628b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749383"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73057326"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="plan-for-change-the-server-side-logging-for-siri-commands-setting-will-be-removed-from-the-intune-console----5468501--"></a>Planera för förändring: Inställningen ”Loggning på serversidan av Siri-kommandon” tas bort från Intune-konsolen <!-- 5468501-->
+
+Vi planerar att ta bort inställningen ”Loggning på serversidan av Siri-kommandon” från Intune-konsolen vid novemberuppdateringen av Intune-tjänsten. Den här ändringen justeras med Apple som redan har tagit bort inställningen på sin sida.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+När novemberuppdateringen eller 1911 äger rum i mitten av november ser du att den här inställningen har tagits bort från menyn Enhetsbegränsningar (inbyggda appar) för iOS-konfigurationsprofiler i Intune-konsolen. Den kan visas i principerna och i målenhetens hanteringsprofil, men inställningen har ingen påverkan på enheten. Vi förväntar oss inte mycket påverkan på funktioner eftersom den för närvarande inte fungerar på enheter, trots att du ser den i hanteringsprofilen.
+
+Du kan välja en av två sökvägar:
+- Om du vill ta bort den här inställningen från dina principer kan du gå till den profil som har den här inställningen, göra en mindre redigering och spara principen. Principen kommer att beräknas om i serverdelen och inställningen tas bort från principen.
+- Om du väljer att inte utföra den här åtgärden ser slutanvändarna den här inställningen i hanteringsprofilen för enheten, men inställningen har ingen verkan.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Du kan vidta åtgärder enligt avsnittet ovan eller lämna principen som den är. Vi uppdaterar vår nya sida och dokumentation när den här ändringen träder i kraft.
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Stöd för hantering av äldre datorer upphör
 
@@ -71,8 +85,8 @@ Du behöver inte vidta några åtgärder, men du kan överväga att uppdatera di
 #### <a name="additional-information"></a>Ytterligare information 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Ändringsplan: Intune App SDK och appskyddsprinciper för Android kommer att stödja Android 5.0 och senare i oktober <!--4911065 -->
-Intune kommer att stödja Android 5.x (Lollipop) och högre i oktober. Uppdatera alla omslutna appar med den senaste Intune App SDK:n och uppdatera dina enheter.
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-an-upcoming-release---4911065---"></a>Ändringsplan: Intune App SDK och appskyddsprinciper för Android kommer att stödja Android 5.0 och senare i kommande versioner <!--4911065 -->
+Intune kommer att stödja Android 5.x (Lollipop) och högre i kommande versioner. Uppdatera alla omslutna appar med den senaste Intune App SDK:n och uppdatera dina enheter.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
 Om du inte använder eller planerar att använda antingen SDK eller appen för Android påverkar den här ändringen inte dig. Om du använder Intune App SDK måste du uppdatera till den senaste versionen och även uppdatera dina enheter till Android 5.x och högre. Om du inte uppdaterar kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid.

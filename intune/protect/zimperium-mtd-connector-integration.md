@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ba94a649f9d7b49437d5d97bb621b0b0a94466c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d843cf707cf182655d0044dde289caca730ccd6b
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508683"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810314"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrera Zimperium med Intune
 
@@ -31,8 +31,7 @@ Slutför följande steg för att integrera Zimperium Mobile Threat Defense-lösn
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-> [!NOTE]
-> Följande steg ska utföras i [Zimperium MTD-konsolen](https://www.zimperium.com/platform).
+Följande steg utförs i [Zimperium MTD-konsolen](https://www.zimperium.com/platform) och gör det möjligt att ansluta Lookout-tjänsten för både Intune-registrerade enheter (via enhetsefterlevnad) och oregistrerade enheter (via appskyddsprinciper).
 
 Kontrollera att du har följande prenumeration och autentiseringsuppgifter innan du börjar integrera Zimperium med Intune:
 
@@ -90,4 +89,5 @@ Mer information om medgivande och Azure Active Directory-program finns i [Begär
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Konfigurera Zimperium-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Zimperium-appar för registrerade enheter](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Zimperium-appar för oregistrerade enheter](~/protect/mtd-add-apps-unenrolled-devices.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b61281b0e82bcb839efdc31726d398eea08c364f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b4661b151493eb68cc6f71a5a77bd023ac27b826
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502199"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810218"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Konfigurera Lookout Mobile Endpoint Security-integration med Intune
 Med en miljö som uppfyller [kraven](lookout-mobile-threat-defense-connector.md#prerequisites) kan du integrera Lookout Mobile Endpoint Security med Intune. Informationen i den här artikeln vägleder dig genom stegen för att integrera och konfigurera viktiga inställningar i Lookout för användning med Intune.  
@@ -69,6 +69,9 @@ Om du vill aktivera prenumerationsintegrering för Lookout Mobile Endpoint Secur
    Kontakta Lookout-supporten (e-post: enterprisesupport@lookout.com) när du har samlat in den här informationen. Lookout-supporten kommer att samarbeta med din primära kontakt för att publicera din prenumeration och skapa ditt Lookout Enterprise-konto med hjälp av den information som du tillhandahåller.  
 
 ## <a name="configure-your-lookout-subscription"></a>Konfigurera din Lookout-prenumeration  
+
+Följande steg utförs i Lookout Enterprise-administratörskonsolen och gör det möjligt att ansluta till Lookout-tjänsten för Intune-registrerade enheter (via enhetens efterlevnad) **och** oregistrerade enheter (via appskyddsprinciper).
+
 Efter att Lookout-supporten har skapat ditt Lookout Enterprise-konto, skickar de ett e-postmeddelande till ditt företags primära kontakt med en länk till webbadressen för inloggning: https://aad.lookout.com/les?action=consent. 
 
 ### <a name="initial-sign-in"></a>Första inloggningen  
@@ -110,20 +113,7 @@ Följande procedur förutsätter att du tidigare har skapat en användargrupp i 
 6. Välj **Skapa anslutning** för att slutföra konfigurationen av anslutningsprogrammet. När du sedan är nöjd med resultatet kan du utöka registreringen till ytterligare användargrupper.
 
 ## <a name="configure-intune-to-use-lookout-as-a-mobile-threat-defense-provider"></a>Konfigurera Intune för att använda Lookout som Mobile Threat Defense-provider
-När du har konfigurerat Lookout MES, måste du konfigurera en anslutning till Lookout i Intune.  
-
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-
-2. Gå till **Enhetsefterlevnad** > **Mobile Threat Defense** och välj **Lägg till**.
-
-3. I fönstret *Lägg till anslutningsprogram* använder du listrutan och väljer **Lookout for Work**.  
-
-4. Välj **Skapa**. När anslutningsprogrammet har upprättat kontakt med Lookout MES blir alternativen för *anslutningsappinställningar* tillgängliga.
-
-5. Ställ in **Aktivera appsynkronisering för iOS-enheter** till **På**. 
-
-6. Välj **Spara** att slutföra konfigurationen.  Intune och Lookout MES är nu integrerade och redo att användas.
-
+När du har konfigurerat Lookout MES, måste du konfigurera en anslutning till [Lookout i Intune](https://docs.microsoft.com/en-us/intune/protect/mtd-connector-enable).  
 
 ## <a name="additional-settings-in-the-lookout-mes-console"></a>Ytterligare inställningar i Lookout MES-konsolen
 Nesan följer ytterligare inställningar som du kan konfigurera i Lookout MES-konsolen.  
@@ -146,8 +136,6 @@ Om du vill ta emot e-postaviseringar om hot, loggar du in på [Lookout MES-konso
 
   ![skärmbild av sidan Inställningar där användarkontot visas](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
 
-
-
 ## <a name="configure-threat-classifications"></a>Konfigurera hotklassificeringar  
 Lookout Mobile Threat Endpoint Security klassificerar olika typer av mobila hot. Lookout-hotklassificeringarna är kopplade till standardrisknivåer. Risknivåerna kan ändras när som helst för att passa företagets krav.
 
@@ -167,4 +155,5 @@ Mer information om hur du distribuerar *Lookout for Work-appen* till enheten fin
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Konfigurera Lookout-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Lookout-appar för registrerade enheter](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurera Lookout-appar för oregistrerade enheter](~/protect/mtd-add-apps-unenrolled-devices.md)
