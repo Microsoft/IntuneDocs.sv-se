@@ -78,6 +78,8 @@
               href: lob-apps-macos.md
             - name: Win32-apphantering
               href: apps-win32-app-management.md
+            - name: 'Win32-app, enheter med S-läge'
+              href: apps-win32-s-mode.md
         - name: Lägga till specifika appar
           items:
             - name: Företagsportalappen
