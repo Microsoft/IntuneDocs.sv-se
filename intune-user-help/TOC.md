@@ -64,8 +64,14 @@
 ## [Använda en iOS-enhet](using-your-iOS-device-with-intune.md)
 ### [Effekter av att återställa en iOS-enhet](effects-of-device-reset-company-portal-ios.md)
 ### [Installera och logga in i företagsportalen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
-### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
-### [Registrera din iOS-enhet som tillhandahålls av organisationen](enroll-your-device-dep-ios.md)
+### Registrera enheten
+#### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
+#### [Registrera iOS-enhet som tillhandahålls av organisationen](enroll-your-device-dep-ios.md)
+#### Registrera med härledda autentiseringsuppgifter
+##### [Registrera med Entrust Datacard](enroll-ios-device-entrust-datacard.md)
+##### [Registrera med Intercede](enroll-ios-device-intercede.md)
+##### [Registrera med DISA Purebred](enroll-ios-device-disa-purebred.md)
+
 
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 ### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
