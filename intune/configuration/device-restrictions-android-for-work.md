@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec6009096ac6ed39c8a217f8832661a575d83b78
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143037"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -42,7 +42,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
   - **Bevilja automatiskt**: Behörigheter beviljas automatiskt.
   - **Neka automatiskt**: Behörigheter nekas automatiskt.
 - **Datum- och tidsändringar**: Välj **Blockera** för att förhindra användare från att manuellt ange datum och tid. **Inte konfigurerad** tillåter användare att ange datum och tid på enheten.
-- **Volymändringar**: Välj **Blockera** för att förhindra användare att ändra enhetens volym. **Inte konfigurerad** tillåter volyminställningar på enheten.
+- **Volym ändringar**: **blockera** förhindrar att användare ändrar enhetens volym och även stänger av huvud volymen. **Inte konfigurerad** tillåter volyminställningar på enheten.
 - **Fabriksåterställning**: Välj **Blockera** för att förhindra användare från att använda alternativet fabriksåterställning i enhetens inställningar. **Inte konfigurerad** tillåter användare att använda inställningen på enheten.
 - **Säker start**: Välj **Blockera** för att förhindra att användare startar om enheten i felsäkert läge. **Inte konfigurerad** tillåter användare att starta om enheten i felsäkert läge.
 - **Statusfält**: Välj **Blockera** för att förhindra åtkomst till statusfältet, till exempel meddelanden och snabbinställningar. **Inte konfigurerad** ger användare åtkomst till statusfältet.

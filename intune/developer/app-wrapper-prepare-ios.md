@@ -17,24 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b42642ec593112b0b247cd85b9230f68d6a803b8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 783ae8bf3216c514bac183ed1945c454cbaa1708
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490982"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413860"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Använd Microsoft Intunes programhanteringsverktyg för iOS för att aktivera appskyddsprinciper från Intune för interna iOS-appar utan att ändra koden i själva appen.
 
 Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt en app. När en app har behandlats kan du ändra dess funktioner genom att distribuera [appskyddsprinciper](../apps/app-protection-policies.md) till den.
 
 Om du vill ladda ned verktyget går du till [Microsoft Intunes appomslutningsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) på GitHub.
-
-
 
 ## <a name="general-prerequisites-for-the-app-wrapping-tool"></a>Allmänna krav för programhanteringsverktyget
 
@@ -74,6 +70,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 * Etableringsprofil för intern distribution.
 
 ### <a name="steps-to-create-an-apple-developer-enterprise-account"></a>Steg för att skapa ett Apple Developer Enterprise-konto
+
 1. Gå till [webbplatsen för Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
 
 2. Klicka på **Registrera** i övre högra hörnet av sidan.
@@ -86,11 +83,11 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 6. Fyll i formuläret med information om din organisation. Klicka på **Fortsätt**. Efter detta kontaktar Apple dig för att kontrollera att du har behörighet att registrera din organisation.
 
-8. När kontrollen är klar klickar du på **Agree to License** (Godkänn licens).
+7. När kontrollen är klar klickar du på **Agree to License** (Godkänn licens).
 
-9. När du godkänt licensen slutför du genom att **köpa och aktivera programmet**.
+8. När du godkänt licensen slutför du genom att **köpa och aktivera programmet**.
 
-10. Om du är gruppagenten (den person som ansluter till Apple Developer Enterprise Program för din organisations räkning) kan du skapa din grupp genom att bjuda in gruppmedlemmar och tilldela dem roller. För att lära dig om hur du hanterar din grupp kan du läsa Apple-dokumentationen i [Managing Your Developer Account Team](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1) (Hantera din Developer-kontogrupp).
+9. Om du är gruppagenten (den person som ansluter till Apple Developer Enterprise Program för din organisations räkning) kan du skapa din grupp genom att bjuda in gruppmedlemmar och tilldela dem roller. För att lära dig om hur du hanterar din grupp kan du läsa Apple-dokumentationen i [Managing Your Developer Account Team](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1) (Hantera din Developer-kontogrupp).
 
 ### <a name="steps-to-create-an-apple-signing-certificate"></a>Steg för att skapa ett Apple-signeringscertifikat
 
@@ -145,8 +142,6 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
     ![iPhone-information – SHA1-sträng för fingeravtryck](./media/app-wrapper-prepare-ios/iOS-signing-cert-9.png)
 
-
-
 ### <a name="steps-to-create-an-in-house-distribution-provisioning-profile"></a>Steg för att skapa en etableringsprofil för intern distribution
 
 1. Gå tillbaka till [Apple Developer-kontoportalen](https://developer.apple.com/account/) och **logga in** med din organisations Apple-ID.
@@ -164,8 +159,6 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 6. Följ stegen för att hämta din profil (med filtillägget .mobileprovision) till din Mac OS-dator.
 
 7. Spara filen på en plats som är lätt att komma ihåg. Den här filen kommer att användas för -p-parametern när du använder programhanteringsverktyget.
-
-
 
 ## <a name="download-the-app-wrapping-tool"></a>Hämta programhanteringsverktyget
 
@@ -195,6 +188,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 ```
 
 ### <a name="command-line-parameters"></a>Kommandoradsparametrar
+
 Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 
 |Egenskap|Använd så här|
@@ -216,6 +210,7 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-f**|(Valfri) `<Path to a plist file specifying arguments.>` Använd den här flaggan framför [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-filen om du väljer att använda plist-mallen för att ange resten av IntuneMAMPackager-egenskaperna, t.ex. -i, -o och -p. Mer information finns i Använda en plist för att ange argument. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Använda en plist för att ange argument
+
 Ett enkelt sätt att köra appomslutningsverktyget är att placera alla kommandoradsargument i en [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-fil. Plist är ett filformat som liknar XML som du kan använda för att ange kommandoradsargument med hjälp av ett formulärgränssnitt.
 
 I mappen IntuneMAMPackager/Contents/MacOS öppnar du `Parameters.plist` (en tom plist-mall) med en textredigerare eller Xcode. Ange argumenten för följande nycklar:
@@ -236,7 +231,6 @@ I mappen IntuneMAMPackager/Contents/MacOS öppnar du `Parameters.plist` (en tom 
 | Inkludera Citrix XenMobile app SDK (endast nätverks-variant)|Boolesk|falskt| Samma som-Citrix|
 | Sökvägar för tilläggsetableringsprofil |Strängmatris|tomt| En uppsättning med tilläggsetableringsprofiler för appen.
 
-
 Kör IntuneMAMPackager med plist som enda argument:
 
 ```bash
@@ -255,19 +249,24 @@ Den omslutna appen sparas i den utdatamapp du har angett tidigare. Du kan ladda 
 Du kan nu distribuera appen till användargrupper och ange programskyddsprinciper till appen. Appen körs på enheten med de programskyddsprinciper som du har angett.
 
 ## <a name="how-often-should-i-rewrap-my-ios-application-with-the-intune-app-wrapping-tool"></a>Hur ofta ska jag omsluta mitt iOS-program på nytt med Intunes programhanteringsverktyg?
+
 Huvudscenarierna när du måste omsluta dina program på nytt är följande:
+
 * Programmet har publicerat en ny version. Den tidigare versionen av appen har omslutits och överförts till Intune-konsolen.
 * Intunes programhanteringsverktyg för iOS har publicerat en ny version som möjliggör viktiga felkorrigeringar, eller nya, specifika principfunktioner för skydd av Intune-program. Detta sker efter 6–8 veckor via GitHub-lagringsplatsen för [Microsoft Intunes programhanteringsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
 Även om det är möjligt för iOS att omsluta med en annan certifierings-/etableringsprofil än den som ursprungligen användes för att signera appen kommer omslutningen att misslyckas om de berättiganden som specificeras i appen inte inkluderas i den nya etableringsprofilen. Om du använder kommandoradsalternativet ”-e”, som tar bort eventuella berättiganden som saknas från appen för att tvinga omslutningen att inte misslyckas i detta scenario kan det leda till att appen inte fungerar som den ska.
 
 Här är några metodtips för omslutning på nytt:
+
 * Se till att en annan etableringsprofil har alla berättiganden som krävs som fanns i eventuell tidigare etableringsprofil. 
 
 ## <a name="error-messages-and-log-files"></a>Felmeddelanden och loggfiler
+
 Använd följande information för att felsöka problem med programhanteringsverktyget.
 
 ### <a name="error-messages"></a>Felmeddelanden
+
 Om det inte går att slutföra programhanteringsverktyget visas något av följande felmeddelanden i konsolen:
 
 |Felmeddelande|Mer information|
@@ -291,6 +290,7 @@ Om det inte går att slutföra programhanteringsverktyget visas något av följa
 |VARNING: Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
 
 ### <a name="log-files-for-the-app-wrapping-tool"></a>Loggfiler för programhanteringsverktyget
+
 Appar som har omslutits med hjälp av programhanteringsverktyget genererar loggar som skrivs till iOS-klientenhetskonsolen. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget. Använd följande steg för att hämta den här informationen:
 
 1. Återskapa problemet genom att köra appen.
@@ -310,7 +310,6 @@ Appar som har omslutits med hjälp av programhanteringsverktyget genererar logga
 
     Omslutna appar kommer också att erbjuda användarna möjlighet att skicka loggarna direkt från enheten via e-post när appen kraschar. Användarna kan skicka loggar till dig så att du kan undersöka dem och vidarebefordra dem till Microsoft om det behövs.
 
-
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Certifikat, etableringsprofil och autentiseringskrav
 
 Programhanteringsverktyget för iOS har vissa krav som måste uppfyllas för att säkerställa fullständig funktionalitet.
@@ -321,8 +320,8 @@ Programhanteringsverktyget för iOS har vissa krav som måste uppfyllas för att
 |iOS-signeringscertifikat|Kontrollera att signeringscertifikatet är giltigt innan du anger det. Verktyget kontrollerar inte om ett certifikat har upphört att gälla när iOS-appar bearbetas. Om hash-värdet för ett utgånget certifikat anges, behandlar verktyget appen och signerar den, men kommer inte att kunna installera den på enheterna.<br /><br />Kontrollera att certifikatet som angavs för signering av den omslutna appen har en motsvarighet i etableringsprofilen. Verktyget validerar inte om etableringsprofilen har en motsvarighet för det certifikat som angavs för signering av den omslutna appen.|
 |Autentisering|En enhet måste ha en PIN-kod för att krypteringen ska fungera. På enheter där du har distribuerat en omsluten app måste användaren loggar in igen med ett arbets- eller skolkonto när hen trycker i statusfältet på enheten. Standardprincipen i en omsluten app är *autentisering vid omstart*. iOS hanterar externa meddelanden (till exempel ett telefonsamtal) genom att avsluta appen och sedan starta om den.
 
-
 ## <a name="setting-app-entitlements"></a>Ställa in apprättigheter
+
 Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare behörigheter och funktioner utöver vad en app vanligtvis kan göra. En *rättighetsfil* används under kodsignering för att ange särskilda behörigheter i appen (till exempel åtkomst till en delad nyckelring). Vissa apptjänster, kallade *funktioner*, aktiveras i Xcode under apputvecklingen. När dessa funktioner har aktiverats visas de i din i din rättighetsfil. Mer information om rättigheter och funktioner finns i [Lägga till funktioner](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) i iOS Developer Library. En fullständig lista över funktioner som stöds finns i [Funktioner som stöds](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Funktioner som stöds för programhanteringsverktyg för iOS
@@ -363,6 +362,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 3. Kontrollera att du har uppfyllt alla krav och omslut därefter appen.
 
 ### <a name="troubleshoot-common-errors-with-entitlements"></a>Felsökning av vanliga fel med rättigheter
+
 Prova följande felsökningssteg om programhanteringsverktyget för iOS rapporterar ett rättighetsfel.
 
 |Problem|Orsak|Lösning|
@@ -371,6 +371,7 @@ Prova följande felsökningssteg om programhanteringsverktyget för iOS rapporte
 |Rättigheter saknas i etableringsprofilen (saknade rättigheter anges i listan). Paketera om appen med en etableringsprofil som har dessa rättigheter.|Det finns ett matchningsfel mellan rättigheter aktiverade i etableringsprofilen och de funktioner som aktiverats i appen. Denna felmatchning gäller även de ID:n som associeras med specifika funktioner (som appgrupper och nyckelringsåtkomst).|I allmänhet kan du skapa en ny etableringsprofil som möjliggör samma funktioner som appen. När ID:n mellan profilen och appen inte matchar ersätter programhanteringsverktyget dessa ID:n om så är möjligt. Om felet fortfarande visas när du har skapat en ny etableringsprofil kan du prova att ta bort rättigheter från appen med hjälp av parametern -e (se avsnittet Använda parametern -e för att ta bort rättigheter från en app).|
 
 ### <a name="find-the-existing-entitlements-of-a-signed-app"></a>Hitta befintliga rättigheter för en signerad app
+
 Granska befintliga rättigheter för en signerad app och en etableringsprofil:
 
 1. Hitta .ipa-filen och ändra dess tillägg till .zip.
@@ -390,6 +391,7 @@ Granska befintliga rättigheter för en signerad app och en etableringsprofil:
     ```
 
 ### <a name="remove-entitlements-from-an-app-by-using-the-e-parameter"></a>Ta bort rättigheter från en app med hjälp av parametern -e
+
 Det här kommandot tar bort alla aktiverade funktioner i appen som inte ingår i rättighetsfilen. Om du tar bort funktioner som används av appen kan appen skadas. Ett exempel på när du kan ta bort funktioner som saknas är om du har en leverantörsutvecklad app där alla funktioner är standard.
 
 ```bash
@@ -397,6 +399,7 @@ Det här kommandot tar bort alla aktiverade funktioner i appen som inte ingår i
 ```
 
 ## <a name="security-and-privacy-for-the-app-wrapping-tool"></a>Säkerhet och sekretess för programhanteringsverktyget
+
 Använd följande riktlinjer för säkerhet och sekretess när du använder programhanteringsverktyget.
 
 - Signeringscertifikatet, etableringsprofilen och affärsappen som du anger måste finnas på samma Mac OS-dator som den som du använder för att köra programhanteringsverktyget. Om filerna finns på en UNC-sökväg kontrollerar du att de är tillgängliga från Mac OS-datorn. Sökvägen måste skyddas via IPsec- eller SMB-signering.
@@ -414,6 +417,7 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 - När du övervakar dokumentmappen på enheten från en omsluten app kan du se en mapp med namnet .msftintuneapplauncher. Om du ändrar eller tar bort den här filen kan det resulterade i att begränsade appar inte fungerar som de ska.
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Intunes programhanteringsverktyg för iOS med Citrix MDX mVPN
+
 Den här funktionen är en integrering med Citrix MDX-programhanteringsverktyget för iOS. Integrationen är helt enkelt en extra valfri flagga på kommandoraden, `-citrix`, för Intunes allmänna programhanteringsverktyg.
 
 ### <a name="requirements"></a>Krav
@@ -424,6 +428,7 @@ Om du vill använda flaggan `-citrix` måste du även installera [Citrix MDX-pro
 > Integreringen av Intune och Citrix stöds bara på enheter med iOS 10 eller senare.
 
 ### <a name="use-the--citrix-flag"></a>Använda flaggan `-citrix`
+
 Kör helt enkelt ditt vanliga programhanteringskommando med flaggan `-citrix` på slutet. Flaggan `-citrix` har för närvarande inte några argument.
 
 **Användningsformat**:
@@ -439,6 +444,7 @@ Kör helt enkelt ditt vanliga programhanteringskommando med flaggan `-citrix` p�
 ```
 
 ## <a name="getting-logs-for-your-wrapped-applications"></a>Hämta loggar för dina omslutna program
+
 Använd följande steg för att hämta loggar för dina omslutna program under felsökningen.
 
 1. Gå till inställningar för iOS-appen på enheten och välj LOB-appen.

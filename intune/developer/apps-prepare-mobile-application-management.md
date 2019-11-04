@@ -17,20 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1750f789cfac98af998ebbd86b10a4e93a1772a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba1ec201cdb7e44570b53ce831b4e5ae26504973
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490830"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413817"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
-
-[!INCLUDE[both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Du kan använda appskyddsprinciper i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
 ## <a name="intune-app-wrapping-tool"></a>Intunes apphanteringsverktyg
+
 Apphanteringsverktyget används främst för **interna** affärsappar. Verktyget är ett kommandoradsprogram som skapar en omslutning runt en app, som sedan gör att appen kan hanteras av en Intune-appskyddsprincip. När du skyddar en app som tillhandahålls av en oberoende programvaruleverantör (ISV) är det viktigt att klargöra om ISV:n fortfarande kommer att stödja den omslutna appen.
 
 Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering. Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](app-wrapper-prepare-android.md) respektive [Appomslutningsverktyget för iOS](app-wrapper-prepare-ios.md).
@@ -40,6 +39,7 @@ Apphanteringsverktyget stöder **inte** appar i Apple App Store eller Google Pla
 Mer information om programhanteringsverktyget för appskyddsprinciper på enheter som inte har registrerats i Intune finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune](../apps/apps-add.md).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Skäl för att använda programhanteringsverktyget
+
 * Din app har inte några inbyggda dataskyddsfunktioner
 * Din app är enkel
 * Din app distribueras internt
@@ -55,11 +55,13 @@ Mer information om programhanteringsverktyget för appskyddsprinciper på enhete
 |**Android**|Nej – använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja|
 
 ## <a name="intune-app-sdk"></a>Intune App SDK
+
 App SDK är främst utformat för kunder som har appar i Apple App Store eller Google Play Store och som vill kunna hantera appar med Intune. Alla appar kan dock dra nytta av integrera SDK, även branschspecifika appar.
 
 Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja använda SDK:n läser du [Komma igång med Microsoft Intune App SDK](app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Skäl för att använda SDK
+
 * Din app har inte några inbyggda dataskyddsfunktioner
 * Din app är komplex och innehåller många funktioner
 * Din app har distribuerats via en offentlig appbutik som Google Play eller Apple App Store
@@ -74,10 +76,12 @@ Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja anv�
 |**iOS**|Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 |**Android**| Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 
-### <a name="not-using-an-app-development-platform-listed-above"></a>Använder du inte en plattform för program utveckling som anges ovan? 
+### <a name="not-using-an-app-development-platform-listed-above"></a>Använder du inte en plattform för program utveckling som anges ovan?
+
 Intune SDK-utvecklingsteamet testar och underhåller aktivt stödet för appar som skapats med de ursprungliga Android-, iOS (Obj-C, Swift), Xamarin-, Xamarin.Forms- och Cordova-plattformarna. Även om vissa kunder har lyckats integrera Intune SDK med andra plattformar som React Native och NativeScript, tillhandahåller vi inte någon uttrycklig vägledning eller några plugin-program för apputvecklare som använder något annat än våra stödda plattformar. 
 
 ## <a name="feature-comparison"></a>Jämförelse av funktioner
+
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
 
 > [!NOTE]

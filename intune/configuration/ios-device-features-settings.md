@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/28/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3baa1972593c5d836c49905b59e9a28932329fbe
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e3e0ea523d71ff036f1f23c9436c65e105328d8b
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057651"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>iOS- och iPadOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
 
@@ -266,7 +266,7 @@ Den här funktionen gäller för:
   - **Endast vissa webbplatser** (endast för Safari-webbläsaren): Dessa webbadresser läggs till i Safari-webbläsarens bokmärken. Användaren är **endast** tillåten att besöka dessa webbplatser, inga andra platser kan öppnas. Använd bara det här alternativet om du vet den exakta listan över webbadresser som kan nås av användarna.
 
     - **URL**: Ange URL:en till den webbplats som du vill tillåta. Ange till exempel `https://www.contoso.com`.
-    - **Bokmärkessökväg**: Ange sökvägen där du vill lagra bokmärket. Ange till exempel `/Contoso/Business Apps`. Om du inte lägger till någon sökväg läggs bokmärket till i standardmappen för bokmärken på enheten.
+    - **Sökväg till bok märke**: Apple ändrade den här inställningen. Alla bok märken går till mappen **godkända platser** . Bok märken går inte in på det bok märkes Sök väg du anger.
     - **Rubrik**: Ange en beskrivande rubrik för bokmärket.
 
     Om du inte anger några URL:er kommer användarna inte att komma åt några webbplatser förutom för `microsoft.com`, `microsoft.net` och `apple.com`. Dessa URL:er tillåts automatiskt av Intune.
@@ -280,14 +280,14 @@ Den här funktionen gäller för:
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
 
-- **Typ av SSO-app-tillägg**: Välj typ av AUTENTISERINGSUPPGIFTER för SSO-appen. När du sparar tilläggs profilen för SSO-appen kan du inte ändra tillägget för SSO-appen. Alternativen är:
+- **Typ av SSO-app-tillägg**: Välj typ av AUTENTISERINGSUPPGIFTER för SSO-appen. Alternativen är:
 
   - **Inte konfigurerad**: app-tillägg används inte. Om du vill inaktivera ett app-tillägg kan du byta namn på SSO-appen från **Kerberos** eller **Credential** till **inte konfigurerad**.
   - **Autentiseringsuppgift**: Använd ett allmänt, anpassningsbart app-tillägg för autentiseringsuppgifter för att utföra SSO. Se till att du känner till tilläggs-ID: t för din organisations SSO app-tillägg.
   - **Kerberos**: Använd Apples inbyggda Kerberos-tillägg, som ingår i iOS 13,0 (och senare) och iPad 13,0 (och senare). Det här alternativet är en Kerberos-speciell version av appen för **autentiseringsuppgifter** .
 
   > [!TIP]
-  > Med typen **autentiseringsuppgift** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Överväg i stället att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typen.
+  > Med typen **autentiseringsuppgift** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Överväg i stället att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typ.
 
 - **Tilläggs-ID** (endast autentiseringsuppgift): Ange paket-ID: t som identifierar ditt SSO app-tillägg, till exempel `com.apple.extensiblesso`.
 - **Team-ID** (endast autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, till exempel `ABCDE12345`. Grupp-ID: t är inte obligatoriskt.
