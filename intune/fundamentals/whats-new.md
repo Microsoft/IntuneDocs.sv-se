@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f32637173ec6cf5f7c284a87193eafffb6a16e6c
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 0faa7c7ec70ce7647a6a91ae732d8b15878964b7
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72786134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057630"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -54,20 +54,90 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 -->  
 
 
-<!-- ########################## -->
+## <a name="week-of-october-28-2019"></a>Veckan då den 28 oktober 2019 infaller
 
+### <a name="app-management"></a>Apphantering 
+
+#### <a name="dark-mode-for-ios-company-portal----4911422---"></a>Mörkt läge för iOS-företagsportalen <!-- 4911422 -->
+Mörkt läge är tillgängligt för iOS-företagsportalen. Användarna kan ladda ned företagsappar, hantera sina enheter och få IT-support i valfritt färgschema baserat på enhetsinställningarna. iOS-företagsportalen matchar automatiskt slutanvändarens enhetsinställningar för mörkt eller ljust läge. Mer information finns i [Lansering av mörkt läge i Microsoft Intunes företagsportal för iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). Mer information om hur du IOS-företagsportalen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](~/apps/company-portal-app.md).
+
+#### <a name="android-company-portal-enforced-minimum-app-version----2378776---"></a>Obligatorisk lägsta appversion för Android-företagsportalen <!-- 2378776 -->
+Genom att använda inställningen **Lägsta företagsportalversion** för en appskyddsprincip, kan du ange en specifik definierad minimiversion för företagsportalen som ska finnas på slutanvändarens enhet. Med den här inställningen för villkorlig start kan du använda **Blockera åtkomst**, **Rensa data** och **Varna** som möjliga åtgärder när värdet inte uppfylls. De möjliga formaten för det här värdet följer mönstret *[Major].[Minor]* , *[Major].[Minor].[Build]* , eller *[Major].[Minor].[Build].[Revision]* . 
+
+Om inställningen **Lägsta företagsportalversion** har konfigurerats, kommer det att påverka slutanvändare som hämtar version 5.0.4560.0 och eventuella framtida versioner av företagsportalen. Den här inställningen har ingen påverkan på användare som använder en version av företagsportalen som är äldre än den version som funktionen lanseras med. Slutanvändare som använder automatiska appuppdateringar kommer troligen inte att se några dialogrutor från den här funktionen, eftersom de sannolikt har den senaste företagsportalversionen. Den här inställningen gäller endast för Android med appskydd för registrerade och oregistrerade enheter. Mer information finns i [Inställningar för Android-appskyddsprinciper – Villkorlig start](~/apps/app-protection-policy-settings-android.md#conditional-launch).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="microsoft-365-device-management"></a>Microsoft 365 Enhetshantering
+
+#### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management-------5630102---"></a>Introduktion till noden för slutpunktssäkerhet i Microsoft 365 Enhetshantering    <!-- 5630102 -->
+
+Noden **Slutpunktssäkerhet** finns nu allmänt tillgänglig i specialistarbetsytan för Microsoft 365 Enhetshantering på https://devicemanagement.microsoft.com, som grupperar funktionerna för att skydda slutpunkter som exempelvis:
+
+- Säkerhetsbaslinjer:  En förkonfigurerad grupp med inställningar som hjälper dig att tillämpa kända inställningsgrupper och standardvärden som rekommenderas av Microsoft.
+
+- Säkerhetsaktiviteter: Dra nytta av hot- och sårbarhetshanteringen i Microsoft Defender ATP och använd Intune till att åtgärda svagheter i slutpunkterna.
+
+- Microsoft Defender ATP: Microsoft Defender Avancerat skydd är integrerat för att förhindra säkerhetsöverträdelser.
+
+Inställningarna kommer fortsatt att vara tillgängliga från andra tillämpliga noder, till exempel enheter, och det aktuella konfigurerade tillståndet är detsamma oavsett var du öppnar eller aktiverar funktionerna.
+
+Mer information om dessa förbättringar finns i [blogginlägget Kundframgång för Intune](https://aka.ms/Endpoint_security_node) på webbplatsen för Microsoft Tech Community.
+
+### <a name="device-management"></a>Enhetshantering
+
+#### <a name="intune-supports-ios-11-and-later----4665324----"></a>Intune har stöd för iOS 11 och senare <!-- 4665324  -->
+
+Intune-registreringen och företagsportalen har nu stöd för iOS-versionerna 11 och senare. Äldre versioner stöds inte.
+
+### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
+
+#### <a name="updated-support-experience------5012398---"></a>Uppdaterad supportupplevelse   <!-- 5012398 -->
+
+Konsolmiljön för att [få hjälp och support för Intune](get-support.md) uppdateras och förbättras.  Vi har förbättrat sökning och feedback i konsolen för vanliga problem, samt det arbetsflöde som du använder för att kontakta supporten. När du öppnar ett supportärende kan du se beräkningar i realtid för när du kan förvänta dig ett telefonsamtal eller e-postsvar. Premier och Unified Support-kunder kan dessutom ange en allvarlighetsgrad för problemet för att få hjälp snabbare.
+
+<!-- ########################## -->
 ## <a name="week-of-october-21-2019"></a>Veckan då den 21 oktober 2019 infaller
 
-### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073-idready-wnready---"></a>Ny gränssnittsprofil för konfiguration av enhetens inbyggda programvara för enheter med Windows 10 och senare <!-- 2266073 idready wnready -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="microsoft-365-device-management"></a>Microsoft 365 Enhetshantering
 
-I Windows 10 och senare kan du skapa en enhetskonfigurationsprofil för att kontrollera inställningar och funktioner (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform). I den här uppdateringen finns en ny typ av gränssnittsprofil för konfiguration av enhetens inbyggda programvara som gör att Intune kan hantera UEFI-inställningar (BIOS).
+#### <a name="improved-administration-experience-in-microsoft-365-device-management"></a>Förbättrad administrationsupplevelse i Microsoft 365 Enhetshantering
+
+En uppdaterad och förbättrad administrationsupplevelse är nu allmänt tillgänglig i specialistarbetsytan för Microsoft 365 Enhetshantering på [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com), inklusive:
+
+- **Uppdaterad navigering**: Du hittar en förenklad navigering på hög nivå som logiskt grupperar funktioner.
+- **Nya plattformsfilter**: Du kan välja en enda plattform som bara visar principer och appar för den valda plattformen på sidorna Enheter och Appar.
+- **Ny startsida**: Se snabbt tjänstens hälsa, status för din klientorganisation, nyheter osv. på den nya startsidan.
+
+Mer information om dessa förbättringar finns i [blogginlägget Enterprise Mobility + Security](https://go.microsoft.com/fwlink/?linkid=2109094) på webbplatsen för Microsoft Tech Community.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Apphantering
+
+#### <a name="add-mobile-threat-defense-apps-to-unenrolled-devices----3005337---"></a>Lägga till Mobile Threat Defense-appar till oregistrerade enheter <!-- 3005337 -->
+Du kan skapa en appskyddsprincip i Intune som kan blockera eller selektivt rensa användarnas företagsdata baserat på enhetens hälsa. Enhetens hälsotillstånd bestäms med hjälp av din valda MTD-lösning (Mobile Threat Defense). Den här funktionen finns i dag i Intune-registrerade enheter som en inställning för enhetsefterlevnad. Med den här nya funktionen utökar vi hotidentifieringen från en MTD-leverantör så att den nu även fungerar på oregistrerade enheter. På Android kräver funktionen att den senaste företagsportalen finns på enheten. På iOS är funktionen tillgänglig för användning när apparna integrerar den senaste Intune SDK:n (v 12.0.15+). Vi uppdaterar ämnet Nyheter när den första appen börjar använda den senaste Intune SDK:n. De återstående apparna blir tillgängliga löpande. Mer information finns i [Skapa en Mobile Threat Defense-appskyddsprincip med Intune](~/protect/mtd-app-protection-policy.md).
+
+### <a name="device-configuration"></a>Enhetskonfiguration
+
+#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073----"></a>Ny gränssnittsprofil för konfiguration av enhetens inbyggda programvara för enheter med Windows 10 och senare <!-- 2266073  -->
+
+I Windows 10 och senare kan du skapa en enhetskonfigurationsprofil för att kontrollera inställningar och funktioner (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform). I den här uppdateringen finns en ny typ av gränssnittsprofil för konfiguration av enhetens inbyggda programvara som gör att Intune kan hantera UEFI-inställningar (BIOS). Vi håller på att lansera den här funktionen till alla kunder och förväntar oss att bli klara i slutet av nästa vecka.
 
 Mer information om den här funktionen finns i avsnittet om att [använda DFCI-profiler på Windows-enheter i Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
 
 Gäller för:
-
 - Windows 10 RS5 (1809) och senare på inbyggd programvara som stöds
 
+### <a name="device-enrollment"></a>Enhetsregistrering
+
+#### <a name="toggle-to-only-show-enrollment-status-page-on-devices-provisioned-by-out-of-box-experience-oobe---3959566--"></a>Växla till att endast visa sidan Registreringsstatus på enheter som har etablerats med ett välkomstprogram <!--3959566-->
+Du kan nu välja att endast visa sidan Registreringsstatus på enheter som har etablerats med välkomstprogrammet för Autopilot.
+
+Om du vill se den nya växlingsfunktionen väljer du **Intune** > **Enhetsregistrering** > **Windows-registrering** > **sidan Registreringsstatus** > **Skapa profil** > **Inställningar** > **Visa bara sidan för enheter som har etablerats via välkomstprogrammet**.
+
+
+<!-- ########################## -->
 ## <a name="week-of-october-14-2019"></a>Veckan då den 14 oktober 2019 infaller
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -77,7 +147,12 @@ Gäller för:
 För tillgängliga appinstallationer på Android Enterprise-enheter för arbetsprofil samt dedikerade och fullständigt hanterade enheter kan du visa appens installationsstatus samt den installerade versionen av hanterade Google Play-appar. Mer information finns i [Så här övervakar du appskyddsprinciper](~/apps/app-protection-policies-monitor.md), [Hantera Android-arbetsprofilenheter med Intune](~/enrollment/android-enterprise-overview.md) och [Hanterade Google Play-apptyper](~/apps/apps-add-android-for-work.md#managed-google-play-app-types).
 
 #### <a name="microsoft-edge-version-77-and-later-for-windows-10-and-macos-public-preview----3872025-4678761----"></a>Microsoft Edge version 77 och senare för Windows 10 och macOS (offentlig förhandsversion) <!-- 3872025, 4678761  -->
-Microsoft Edge version 77 och senare är nu tillgänglig för distribution till datorer som kör Windows 10 och macOS. Den offentliga förhandsversionen erbjuder kanalerna **Dev** och **Beta** för Windows 10 och en **Beta-kanal** för macOS. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Dessutom är automatiska uppdateringar av webbläsaren **På** som standard, och Microsoft Edge kan inte avinstalleras. Mer information finns i avsnittet om att [lägga till Microsoft Edge för Windows 10 till Microsoft Intune](~/apps/apps-windows-edge.md) och i [Microsoft Edge-dokumentationen](https://go.microsoft.com/fwlink/?linkid=2103823).
+Microsoft Edge version 77 och senare kommer att göras tillgänglig för distribution till datorer som kör Windows 10 och macOS. 
+
+>[!NOTE]
+>Distributionen av funktionen har skjutits upp till senare denna månad.
+
+Den offentliga förhandsversionen erbjuder kanalerna **Dev** och **Beta** för Windows 10 och en **Beta-kanal** för macOS. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Dessutom är automatiska uppdateringar av webbläsaren **På** som standard, och Microsoft Edge kan inte avinstalleras. Mer information finns i avsnittet om att [lägga till Microsoft Edge för Windows 10 till Microsoft Intune](~/apps/apps-windows-edge.md) och i [Microsoft Edge-dokumentationen](https://go.microsoft.com/fwlink/?linkid=2103823).
 
 #### <a name="update-to-app-protection-ui-and-ios-app-provisioning-ui----4102027-4102029-----"></a>Uppdatering av användargränssnittet för appskydd och användargränssnittet för etablering av iOS-appar <!-- 4102027, 4102029   -->
 Användargränssnittet för skapande och redigering av appskyddsprinciper samt etableringsprofiler för iOS-appar i Intune har uppdaterats. Gränssnittsändringarna omfattar:
@@ -131,7 +206,7 @@ Gäller för:
 - Android Enterprise-arbetsprofil
 
 #### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices----4816339-----"></a>Skapa en global HTTP-proxy på Android Enterprise-enhetsägarenheter <!-- 4816339   -->
-På Android Enterprise-enheter kan du konfigurera en global HTTP-proxy som uppfyller organisationens webbläsarstandarder (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsägare > Enhetsbegränsningar** för profiltyp > **Anslutningar**). Efter konfiguration använder all HTTP-trafik denna proxy.
+På Android Enterprise-enheter kan du konfigurera en global HTTP-proxy som uppfyller organisationens webbläsarstandarder (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsägare > Enhetsbegränsningar** för profiltyp > **Anslutningar**). Efter konfigurationen använder all HTTP-trafik denna proxy.
 
 Om du vill konfigurera den här funktionen och se alla inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-android-for-work.md).
 

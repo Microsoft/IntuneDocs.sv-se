@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c42e5ef50f8a5a8514bc43670fc743f42b1b2d6
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 1716da820fd0d9a4b6d1bbc5024440cfb141c5a1
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585832"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889554"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Använda härledda autentiseringsuppgifter i Microsoft Intune
 
@@ -64,7 +64,7 @@ Intune har stöd för en enda utfärdare av härledda autentiseringsuppgifter f�
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
-Viktig information om hur du använder olika utfärdare finns i vägledningen för respektive utfärdare, däribland utfärdarens arbetsflöde för slutanvändare. Mer information finns i [Planera för härledda autentiseringsuppgifter](#plan-for-derived-credentials) i den här artikeln.
+Viktig information om hur du använder olika utfärdare finns i vägledningen för respektive utfärdare<!-- , including the issuers end-user workflow-->. Mer information finns i [Planera för härledda autentiseringsuppgifter](#plan-for-derived-credentials) i den här artikeln.
 
 > [!IMPORTANT]  
 > Om du tar bort en utfärdare av härledda autentiseringsuppgifter från din klientorganisation kommer de härledda autentiseringsuppgifter som konfigurerades via den utfärdaren inte längre att fungera.  
@@ -101,11 +101,14 @@ Allmän information:
 
 ### <a name="2-review-the-end-user-workflow-for-your-chosen-issuer"></a>2) Granska arbetsflödet för slutanvändare för din valda utfärdare
 
-Följande är viktiga överväganden för varje partner som stöds samt länkar till den utfärdarens arbetsflöde för slutanvändare.  Bekanta dig med den här informationen så att du kan se till att dina Intune-principer och konfigurationer inte blockerar användare och enheter från att slutföra registreringen för en härledd autentiseringsuppgift från den utfärdaren.
+Nedan visas viktiga överväganden för varje partner som stöds<!--  , and links to that issuers end-user workflow -->.  Bekanta dig med den här informationen så att du kan se till att dina Intune-principer och konfigurationer inte blockerar användare och enheter från att slutföra registreringen för en härledd autentiseringsuppgift från den utfärdaren.
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Granska [användararbetsflödet för DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Viktiga krav för det här arbetsflödet är:  
+Förstå slutanvändarens arbetsflöde och viktiga krav:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:  
+-->
 
 - Användare behöver åtkomst till en dator eller KIOSK där de kan använda sina smartkort för att autentisera till utfärdaren. 
 
@@ -120,8 +123,11 @@ Granska [användararbetsflödet för DISA Purebred](https://docs.microsoft.com/i
 Information om hur du hämtar och konfigurerar DISA Purebred-appen finns i [Distribuera DISA Purebred-appen](#deploy-the-disa-purebred-app) senare i den här artikeln.  
 
 #### <a name="entrust-datacard"></a>Entrust Datacard  
-Granska [användararbetsflödet för Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Viktiga krav för det här arbetsflödet är: 
 
+Förstå slutanvändarens arbetsflöde och viktiga krav:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include: 
+--> 
 - Användare behöver åtkomst till en dator eller KIOSK där de kan använda sina smartkort för att autentisera till utfärdaren. 
 
 - Enheter som ska registreras för en härledd autentiseringsuppgift måste installera Intune-företagsportalappen.
@@ -129,8 +135,11 @@ Granska [användararbetsflödet för Entrust Datacard](https://docs.microsoft.co
 - Användning av en enhetskamera för att skanna en QR-kod som länkar autentiseringsbegäran till begäran om härledd autentiseringsuppgift från den mobila enheten.
 
 #### <a name="intercede"></a>Intercede
-Granska [användararbetsflödet för Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Viktiga krav för det här arbetsflödet är: 
 
+Förstå slutanvändarens arbetsflöde och viktiga krav:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Key requirements for this workflow include: 
+-->
 - Användare behöver åtkomst till en dator eller KIOSK där de kan använda sina smartkort för att autentisera till utfärdaren. 
 
 - Enheter som ska registreras för en härledd autentiseringsuppgift måste installera Intune-företagsportalappen.

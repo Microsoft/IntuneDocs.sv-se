@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f34e321476ea634030a5e602bc362d409eee8f5
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785540"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889577"
 ---
-# <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune"></a>Använda DFCI-profiler på Windows-enheter i Microsoft Intune
+# <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Använda DFCI-profiler på Windows-enheter i Microsoft Intune (allmänt tillgänglig förhandsversion)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+> [!Note]
+> Varje [månadsuppdatering](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) kan ta flera dagar att distribuera. Vissa funktioner kan distribueras över flera veckor och kanske inte är tillgängliga för alla kunder direkt.
 
 När du använder Intune för att hantera Autopilot-enheter kan du hantera UEFI-inställningar (BIOS) när enheterna har registrerats med hjälp av DFCI (Device Firmware Configuration Interface). En översikt av fördelar, scenarier och förutsättningar finns i [översikten över DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -167,15 +170,9 @@ Du är nu redo att rensa enheten. När enheten har rensats tar du bort Autopilot
 
 ### <a name="recover"></a>Återställa
 
-Om du rensar en enhet och tar bort Autopilot-posten innan du låser upp UEFI-menyerna (BIOS) förblir menyerna låsta. Intune kan inte skicka profiluppdateringar för att låsa upp dem. Du kan låsa upp enheten så här:
+Om du rensar en enhet och tar bort Autopilot-posten innan du låser upp UEFI-menyerna (BIOS) förblir menyerna låsta. Intune kan inte skicka profiluppdateringar för att låsa upp dem.
 
-- **Alternativ 1**: Be din CSP-leverantör eller direkta OEM-enhetsleverantör att registrera enheten på nytt med Autopilot. Registrera den på nytt i Intune för att tillämpa Autopilot- och DFCI-profilerna.
-
-  Lås sedan upp UEFI-menyerna med hjälp av stegen i [ta enheten ur bruk](#retire) (i den här artikeln).
-
-- **Alternativ 2**: Öppna UEFI-menyn (BIOS) och välj ett återställningsalternativ. Bekräfta att enheten inte är registrerad för DFCI-hantering, och lås upp menyn. Återställningsalternativ låter alla UEFI-inställningar (BIOS) ha kvar värdena från den senaste Intune DFCI-profilen.
-
-  Lås sedan upp UEFI-menyerna med hjälp av stegen i [ta enheten ur bruk](#retire) (i den här artikeln).
+Om du vill låsa upp enheten öppnar du UEFI-menyn (BIOS) och uppdaterar hanteringen från nätverket. Återställningen låser upp menyerna, men lämnar alla UEFI-inställningar (BIOS) som värdena i den tidigare Intune DFCI-profilen.
 
 ## <a name="end-user-impact"></a>Påverkan för slutanvändare
 

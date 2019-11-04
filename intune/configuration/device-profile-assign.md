@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
-ms.reviewer: heenamac
+ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ed23e4d9d267e37ba5088fa32234c27e3935b6
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: a19515e859f5e78f7611bbd10088aea5f7c44650
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550801"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892647"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
@@ -69,19 +69,28 @@ På Windows 10-enheter kan du lägga till **tillämpbarhetsregler** så att prof
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Exkludera grupper från en profiltilldelning
 
-Med hjälp av Intunes profiler för enhetskonfiguration kan du exkludera grupper från principtilldelningen.
+Med hjälp av Intunes profiler för enhetskonfiguration kan du inkludera och exkludera grupper från principtilldelningen.
 
-Intune tittar inte på användar-till-enhets grupprelationer. Om du väljer att inkludera användargrupper och samtidigt exkludera enhetsgrupper får du kanske inte önskat resultat. I användargrupp-till-användargrupp-scenarier och enhetsgrupp-till-enhetsgrupp-scenarier har undantag företräde framför inkludering.
+Vi rekommenderar att du skapar och tilldelar principer som är specifika för dina användargrupper. Du kan även skapa och tilldela olika principer specifikt för dina enhetsgrupper. Mer information om grupper finns i [Lägga till grupper för att organisera användare och enheter](../fundamentals/groups-add.md).
 
-Du kan t.ex. tilldela en enhetsprofil till användargruppen **Alla företagsanvändare** men välja att exkludera medlemmar i användargruppen **Ledningsgrupp**. Eftersom båda grupperna är användargrupper undantas alla medlemmar i **Ledningsgrupp** från principen, även om de är medlemmar i gruppen **Alla företagsanvändare**.
+När du tilldelar principerna använder du följande tabell till att inkludera och exkludera grupper. En bockmarkering innebär att tilldelningen stöds:
 
-Inkludering har företräde framför undantag när blandade grupper används, t. ex. användargrupp-till-enhetsgrupp eller enhetsgrupp-till-användargrupp.
+![Alternativ som stöds för att inkludera eller exkludera grupper från en profiltilldelning](./media/device-profile-assign/include-exclude-user-device-groups.png)
 
-Säg att du t.ex. vill tilldela en profil till alla användare i din organisation, med undantag för allmänt tillgängliga informationsdatorer (kiosker). Du inkluderar gruppen **Alla användare**, men exkluderar gruppen **Alla enheter**. I detta fall får alla användare och deras enheter principen, även om användarens enhet finns i gruppen **Alla enheter**.
+### <a name="what-you-should-know"></a>Det här bör du veta
 
-Undantag avser bara direkta medlemmar i gruppen. De omfattar inte enheter som är associerade med en användare. Principen tilldelas inte till enheter som inte har någon användare. Det beror på att dessa enheter utan användare inte har någon relation till gruppen **Alla användare**.
+- Undantag har företräde framför inkludering i följande scenarier för grupptyper:
 
-Om du inkluderar **Alla enheter** och exkluderar **Alla användare**, tilldelas principen till alla enheter. I det här scenariot är avsikten att exkludera de enheter som har en associerad användare från den här principen. Men detta exkluderar inte enheterna eftersom exkluderingsfunktionen endast jämför direkta medlemmar av gruppen.
+  - Inkludera och exkludera användargrupper
+  - Inkludera och exkludera enhetsgrupper
+
+  Du kan t.ex. tilldela en enhetsprofil till användargruppen **Alla företagsanvändare** men välja att exkludera medlemmar i användargruppen **Ledningsgrupp**. Eftersom båda grupperna är användargrupper får **Alla företagsanvändare** förutom **Ledningsgrupp** principen.
+
+- Intune utvärderar inte grupprelationer från användare till enhet. Om du tilldelar principer till blandade grupper, kanske resultatet inte blir det du vill ha eller förväntar dig.
+
+  Du kan till exempel tilldela en enhetsprofil till användargruppen **Alla användare**, men undanta enhetsgruppen **Alla personliga enheter**. I den här blandade grupprinciptilldelningen får **Alla användare** principen. Undantaget tillämpas inte.
+
+  Därför rekommenderar vi inte att du tilldelar principer till blandade grupper.
 
 ## <a name="next-steps"></a>Nästa steg
 

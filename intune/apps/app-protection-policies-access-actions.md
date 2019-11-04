@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 882c542d6a1d981b9924bb33eee40f03b41689f7
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785679"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999481"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Rensar data selektivt med villkorsstyrda startåtgärder för appskyddsprinciper i Intune
 
@@ -84,8 +84,11 @@ För Android kan du konfigurera åtgärder för följande inställningar med hj�
 - Lägsta korrigeringsversion
 - Enhetstillverkare
 - SafetyNet-enhetsattestering
-- Hotgenomsökning för appar
+- Kräv hotgenomsökning för appar
+- Lägsta företagsportalversion
 - Högsta tillåtna hotnivå för enhet
+
+Genom att använda **Lägsta företagsportalversion** kan du ange en viss definierad minimiversion av företagsportalen för en slutanvändares enhet. Med den här inställningen för villkorlig start kan du ange värden för **Blockera åtkomst**, **Rensa data** och **Varna** som möjliga åtgärder när ett värde inte uppfylls. De möjliga formaten för det här värdet följer mönstret *[Major].[Minor]* , *[Major].[Minor].[Build]* , eller *[Major].[Minor].[Build].[Revision]* . Med tanke på att vissa slutanvändare kanske inte vill ha en tvingad uppdatering av appar direkt, kan alternativet ”Varna” vara bra att använda när du konfigurerar inställningen. Google Play Butik är bra på att enbart skicka deltabyte vid uppdateringar av appar, men det kan fortfarande vara en stor mängd data som användarna kanske inte vill ta emot om de använder datatrafik vid tidpunkten för uppdateringen. Att framtvinga en uppdatering och därmed ladda ned en uppdaterad app, kan resultera i oväntade datakostnader vid tidpunkten för uppdateringen. Om inställningen **Lägsta företagsportalversion** har konfigurerats, kommer den att påverka slutanvändare som hämtar version 5.0.4560.0 och eventuella framtida versioner av företagsportalen. Den här inställningen har ingen påverkan på användare som använder en version av företagsportalen som är äldre än den version som funktionen lanseras med. Slutanvändare som använder automatiska appuppdateringar kommer troligen inte att se några dialogrutor från den här funktionen, eftersom de sannolikt har den senaste företagsportalversionen. Den här inställningen gäller endast för Android med appskydd för registrerade och oregistrerade enheter.
 
 Om du vill använda inställningen **Enhetstillverkare** anger du en semikolonavgränsad lista över Android-tillverkare. Du hittar Android-tillverkaren av en enhet under Enhetsinställningar.<br>
 Exempel på indata: *Tillverkare A;Tillverkare B* 

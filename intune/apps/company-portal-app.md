@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd48eea5ee09562590844e11ac372480c892a7af
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585014"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999528"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -137,6 +137,10 @@ Intune stöder PIV- (Personal Identity Verification) och CAC-härledda (Common A
 
 Mer information om härledda autentiseringsuppgifter för iOS-enheter finns i [Använda härledda autentiseringsuppgifter i Microsoft Intune](~/protect/derived-credentials.md).
 
+## <a name="dark-mode-for-ios-company-portal"></a>Mörkt läge för iOS-företagsportalen
+
+Mörkt läge är tillgängligt för iOS-företagsportalen. Användarna kan ladda ned företagsappar, hantera sina enheter och få IT-support i valfritt färgschema baserat på enhetsinställningarna. iOS-företagsportalen matchar automatiskt slutanvändarens enhetsinställningar för mörkt eller ljust läge. 
+
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Kortkommandon för Windows-företagsportalen
 
 Slutanvändare kan utlösa navigerings-, app- och enhetsåtgärder i Windows-företagsportalen med hjälp av kortkommandon (acceleratorer).
@@ -180,25 +184,24 @@ Användare kan utföra åtgärder på sina lokala eller fjärranslutna enheter v
 
 Vissa plattformar och konfigurationer tillåter inte självbetjäning av enhetsåtgärder. I tabellen nedan finns mer information om självbetjäningsåtgärder:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Pensionera | Tillgängligt<sup>(1)</sup> | Tillgängligt<sup>(8)</sup> | Tillgänglig | Tillgängligt<sup>(7)</sup> |
-| Rensning | Tillgänglig | Tillgänglig | NA | Tillgängligt<sup>(7)</sup> |
-| Byt namn <sup>(4)</sup> | Tillgänglig | Tillgängligt<sup>(8)</sup> | Tillgänglig | Tillgänglig |
+| Pensionera | Tillgängligt<sup>(1)</sup> | Tillgänglig | Tillgänglig | Tillgängligt<sup>(7)</sup> |
+| Rensning | Tillgänglig | Tillgänglig<sup>(5)</sup> | NA | Tillgängligt<sup>(7)</sup> |
+| Byt namn <sup>(4)</sup> | Tillgänglig | Tillgänglig | Tillgänglig | Tillgänglig |
 | Synkronisera | Tillgänglig | Tillgänglig | Tillgänglig | Tillgänglig |
 | Fjärrlåsning | Endast på Windows Phone | Tillgänglig | Tillgänglig | Tillgänglig |
-| Återställ lösenord | Endast på Windows Phone | Tillgänglig | NA | Tillgängligt<sup>(6)</sup> |
+| Återställ lösenord | Endast på Windows Phone | Tillgängligt<sup>(8)</sup> | NA | Tillgängligt<sup>(6)</sup> |
 | Återställning av nyckel | NA | NA | Tillgängligt<sup>(2)</sup> | NA |
-| Mörkt läge | NA | Tillgänglig | NA | NA |
 
 <sup>(1) </sup> **Dra tillbaka** är alltid blockerat på Azure AD-anslutna Windows-enheter.<br>
 <sup>(2) </sup> **Nyckelåterställning** för MacOS är endast tillgängligt via webbportalen.<br>
 <sup>(3) </sup> Alla fjärråtgärder inaktiveras om du registrerar med en enhetsregistreringshanterare.<br>
-<sup>(4) </sup> **Byt namn** ändrar endast enhetsnamnet i Företagsportal-appen eller på webbplatsen, inte på enheten.<br>
-<sup>(5) </sup> **Fjärrensning** är inte tillgängligt på MacOS-enheter.<br>
+<sup>(4)</sup> **Byt namn** ändrar endast enhetsnamnet i företagsportalappen eller i webbportalen, inte på enheten.<br>
+<sup>(5)</sup> **Rensa** är inte tillgängligt på användarregistrerade iOS-enheter.<br>
 <sup>(6) </sup> **Återställ lösenord** stöds inte på vissa Android- och Android Enterprise-konfigurationer. För mer information, se [Återställa eller ta bort ett enhetslösenord i Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7) </sup> **Dra tillbaka** och **Rensa** är inte tillgängliga i scenarier för Android Enterprise-enhetsägare (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Dra tillbaka** (ta bort enhet) och **Byt namn** är tillgängliga för alla typer av registreringar. Andra åtgärder stöds inte för användarregistrering.<br> 
+<sup>(8)</sup> **Återställ lösenord** stöds inte på användarregistrerade iOS-enheter.
 
 ## <a name="next-steps"></a>Nästa steg
 
