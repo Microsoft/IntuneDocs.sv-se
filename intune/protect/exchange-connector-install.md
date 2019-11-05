@@ -84,7 +84,7 @@ Skapa ett Active Directory-användarkonto för Intune Exchange Connector. Kontot
 
 2. Gå till **Intune** > **Exchange-åtkomst**.  
 
-3. Under **Installation** väljer du **	Exchange ActiveSync On-Premises Connector** och sedan **Lägg till**.
+3. Under **Installation** väljer du **Exchange ActiveSync On-Premises Connector** och sedan **Lägg till**.
 
 4. På sidan **Lägg till anslutningsapp** väljer du **Ladda ned den lokala anslutningsappen**. Intune Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
 
