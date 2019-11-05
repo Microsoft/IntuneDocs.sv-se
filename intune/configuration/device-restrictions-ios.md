@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95cf688f3727f97aedd4126e00fa4dc4939ef6bc
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785507"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414681"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -167,7 +167,33 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   iOS har inbyggd säkerhet som kan påverka den här inställningen. Till exempel kan iOS fördröja utlösandet av principen beroende på antalet inloggnings försök. Det kan också övervägas att upprepade gånger ange samma lösen ord som ett försök. Apples [säkerhets guide för iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (öppnar Apples webbplats) är en lämplig resurs och ger mer detaljerad information om lösen ord.
   
 - **Maximalt antal minuter efter skärmlås innan ett lösenord krävs**<sup>1</sup>: Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt. Om den tid som du anger är längre än vad som är angivet i enhetens inställningar, så ignorerar enheten den tid som du anger. Stöds på enheter med iOS 8.0 och senare.
-- **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup>: Ange det maximala antal minuter av inaktivitet som ska tillåtas på enheten innan skärmen låses. Om den tid som du anger är längre än vad som är angivet i enhetens inställningar, så ignorerar enheten den tid som du anger. När den är inställd på **direkt**, låses skärmen utifrån enhetens minsta tid. På iPhone är det 30 sekunder. På iPad är det två minuter.
+
+- **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup>: Ange det maximala antal minuter av inaktivitet som ska tillåtas på enheten innan skärmen låses.
+
+  **iOS-alternativ**:  
+
+  - **Inte konfigurerat** (standard): Intune vidrör inte den här inställningen.
+  - **Omedelbart**: skärmen låser sig efter 30 sekunders inaktivitet.
+  - **1**: skärmen låser sig efter 1 minut inaktivitet.
+  - **2**: skärmen låser sig efter 2 minuters inaktivitet.
+  - **3**: skärmen låser sig efter 3 minuters inaktivitet.
+  - **4**: skärmen låser sig efter 4 minuters inaktivitet.
+  - **5**: skärmen låser sig efter 5 minuters inaktivitet.
+    
+  **iPad-alternativ**:  
+
+  - **Inte konfigurerat** (standard): Intune vidrör inte den här inställningen.
+  - **Direkt**: skärmen låser sig efter 2 minuters inaktivitet.
+  - **2**: skärmen låser sig efter 2 minuters inaktivitet.
+  - **5**: skärmen låser sig efter 5 minuters inaktivitet.
+  - **10**: skärmen låser sig efter 10 minuters inaktivitet.
+  - **15**: skärmen låser sig efter 15 minuters inaktivitet.
+
+  Om ett värde inte gäller för iOS eller iPad använder Apple det närmast *lägsta* värdet. Om du till exempel anger `4` minuter använder iPad-enheter `2` minuter. Om du anger `10` minuter använder iOS-enheter `5` minuter. Detta är en Apple-begränsning.
+  
+  > [!NOTE]
+  > Intune-ANVÄNDARGRÄNSSNITTET för den här inställningen skiljer inte värdena för iOS och iPad som stöds. Användar gränssnittet kan uppdateras i en framtida version.
+
 - **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan lösenordet för enheten måste ändras.
 - **Förhindra återanvändning av tidigare lösenord**: Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas.
 - **Lås upp Touch ID och ansikts-ID**: Välj **blockera** för att förhindra användning av finger avtryck eller ansikte för att låsa upp enheten. **Inte konfigurerad** låter användare låsa upp enheten med dessa metoder.
