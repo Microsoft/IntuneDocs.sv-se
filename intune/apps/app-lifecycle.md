@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53425b56985cbafb4033b11df54597959c0b0d59
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ef958468feb7e36f894537989675977e1d96bf8c
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72499719"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414743"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Översikt över applivscykeln i Microsoft Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Applivscykeln i Microsoft Intune börjar när en app läggs till och fortsätter genom fler faser tills du tar bort appen. Om du förstår faserna har du den information du behöver för att komma igång med apphantering i Intune.
 
@@ -34,7 +32,7 @@ Applivscykeln i Microsoft Intune börjar när en app läggs till och fortsätter
 
 ## <a name="add"></a>Lägg till
 
-Det första steget i appdistributionen är att lägga till de appar som du vill hantera och tilldela i Intune. Det finns många olika apptyper som du kan arbeta med, men de grundläggande procedurerna är samma. Med Intune kan du lägga till olika apptyper, däribland appar som skrivits internt (verksamhetsspecifik), appar från butiken, inbyggda appar och appar på webben. Mer information om varje apptyp finns i [Så här lägger du till en app i Microsoft Intune](apps-add.md). 
+Det första steget i appdistributionen är att lägga till de appar som du vill hantera och tilldela i Intune. Det finns många olika apptyper som du kan arbeta med, men de grundläggande procedurerna är samma. Med Intune kan du lägga till olika apptyper, däribland appar som skrivits internt (verksamhetsspecifik), appar från butiken, inbyggda appar och appar på webben. Mer information om varje apptyp finns i [Så här lägger du till en app i Microsoft Intune](apps-add.md).
 
 ## <a name="deploy"></a>Distribuera
 
@@ -43,12 +41,14 @@ När du har lagt till appen i Intune kan du sedan [tilldela den till användare 
 ## <a name="configure"></a>Konfigurera
 
 Som en del av applivscykeln släpps regelbundet nya versioner av appar. Intune tillhandahåller verktyg för att enkelt [uppdatera appar](apps-add.md) som du har distribuerat till en senare version. Dessutom kan du konfigurera ytterligare funktioner för vissa appar, till exempel:
+
 - [Konfigurationsprinciper för iOS-appar](app-configuration-policies-use-ios.md) tillhandahåller inställningar för kompatibla iOS-appar som används när appen körs. En app kan till exempel kräva specifika inställningar för anpassning eller namnet på en server som den måste ansluta till.
 - [Hanterade webbläsarprinciper](app-configuration-managed-browser.md) hjälper dig att konfigurera inställningar för den hanterade webbläsaren i Intune som ersätter enhetens standardwebbläsare och du kan begränsa vilka webbplatser som användarna kan besöka.
 
 ## <a name="protect"></a>Skydda
 
 Intune ger många sätt att skydda data i dina appar. De viktigaste metoderna är:
+
 - [Villkorlig åtkomst](../protect/conditional-access.md) styr åtkomsten till e-post och andra tjänster utifrån de villkor som du anger. Villkor innefattar enhetstyper eller efterlevnad av en [enhetsefterlevnadsprincip](../protect/device-compliance-get-started.md) som du har distribuerat.
 - [Appskyddsprinciperna](app-protection-policy.md) används i enskilda appar för att skydda de företagsdata som de använder. Du kan till exempel begränsa kopiering av data mellan ohanterade appar och appar som du hanterar, eller förhindra att appar körs på enheter som har jailbreakats eller rotats.
 

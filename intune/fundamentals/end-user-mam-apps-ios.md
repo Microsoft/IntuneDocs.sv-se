@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 807b33867d827415165eb65d81b91683830735f5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a1a3dcd7068a004f94b97b5ec6c43c609662a76d
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502866"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414563"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
  Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper tillämpas endast när appar används i arbetssammanhang, exempelvis när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras på en OneDrive för företag-plats.
 
@@ -35,7 +33,6 @@ ms.locfileid: "72502866"
 Om enheten **inte har registrerats i Intune** uppmanas användarna att starta om appen första gången de använder den. En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen.
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
-
 
 <!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
@@ -56,8 +53,9 @@ Appskyddsprinciper tillämpas bara i arbetssammanhang. Därför kan appen funger
 Med program med stöd för flera identiteter är det möjligt för användare att lägga till flera konton.  Intune APP har endast stöd för ett hanterat konto.  Intune APP begränsar inte antalet ohanterade konton.
 
 När ett hanterat konto finns i ett program:
-* Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
-* Om IT-administratören lägger till principer till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+
+- Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+- Om IT-administratören lägger till principer till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
 
 Läs följande exempel för att få en bättre förståelse för hur flera användarkonton behandlas.
 
@@ -68,4 +66,5 @@ Användare A arbetar för två företag – **Företag X** och **Företag Y**. A
 Om du använder en iOS-enhet kanske ett blockeringsmeddelande visas om du försöker lägga till ett andra arbetskonto på samma enhet. Kontona visas och sedan kan du välja det konto som du vill ta bort.
 
 ## <a name="next-steps"></a>Nästa steg
+
 [Vad som händer när din Android-app hanteras av appskyddsprinciper](end-user-mam-apps-android.md)

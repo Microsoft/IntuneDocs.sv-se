@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90066bf55f50819ba77babee1e1d4230bdead613
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b5b469c759ac34a6d8de09163534a580346e48a1
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504861"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415027"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Lägga till användare och ge administrativ behörighet till Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Som administratör kan du lägga till användare direkt eller synkronisera användare från din lokala Active Directory. När de har lagts till, kan användare registrera enheter och få åtkomst till företagsresurser. Du kan också ge användarna ytterligare behörigheter, inklusive behörigheter som *global administratör* och *tjänstadministratör*.
 
 ## <a name="add-users-to-intune"></a>Lägg till användare i Intune
+
 Du kan lägga till användare i Intune-prenumerationen manuellt via [Administrationscenter för Microsoft 365](https://admin.microsoft.com) eller [Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). En administratör kan redigera användarkonton för att tilldela Intune-licenser. Du kan tilldela licenser antingen i Administrationscenter för Microsoft 365 eller i Intune Azure-portalen. Mer information om hur du använder Administrationscenter för Microsoft 365 finns i [Lägga till användare individuellt eller flera samtidigt i Administrationscenter för Microsoft 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Lägga till Intune-användare i Administrationscenter för Microsoft 365
+
 1. Logga in på [Administrationscenter för Microsoft 365](https://admin.microsoft.com) med ett konto som global administratör eller användarhanteringsadministratör.
 2. Välj **Admin** på Office 365-menyn.
 3. Välj **Lägg till en användare** i administrationscentret.
@@ -56,6 +56,7 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Administrat
 6. Välj **Lägg till** för att skapa den nya användaren.
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Lägg till Intune-användare i Azure-portalen
+
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Välj **Användare** > **Alla användare**.
 3. Välj **Ny användare** i administrationscentret.
@@ -78,6 +79,7 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Administrat
 När du har lagt till användare i Intune-prenumerationen rekommenderar vi att du ger några av användarna administratörsbehörighet.  Följ dessa steg för att bevilja administratörsbehörighet:
 
 ### <a name="give-admin-permissions-in-office-365"></a>Ge administratörsbehörigheter i Office 365
+
 1. Logga in på [Administrationscenter för Microsoft 365](https://admin.microsoft.com) med ett globalt administratörskonto.
 2. Välj **Admin** på Office 365-menyn.
 3. I administrationscentret väljer du **Aktiva användare** och väljer sedan den användare som ska få administratörsbehörighet.
@@ -91,6 +93,7 @@ När du har lagt till användare i Intune-prenumerationen rekommenderar vi att d
 6. Välj **Spara**.
 
 ### <a name="give-admin-permissions-in-the-azure-portal"></a>Ge administratörsbehörigheter i Azure-portalen
+
 1. Logga in på [Azure-portalen](https://portal.azure.com) med ett globalt administratörskonto.
 2. I Azure-portalen väljer du **Användare** och sedan den användare som du vill ge administratörsbehörigheter.
 3. Välj **Katalogroll** och välj sedan behörigheten.
@@ -113,9 +116,11 @@ Det konto som du använder för att skapa Microsoft Intune-prenumerationen är e
 För att få åtkomst till Administrationscenter för Microsoft 365 måste ditt konto ha statusen **Inloggning tillåts**. Under **Profil** i Azure-portalen anger du **Blockera inloggning** till **Nej** för att tillåta åtkomst. Denna status skiljer sig från att ha en licens för prenumerationen. Som standard har alla användarkonton statusen **Tillåten**. Användare utan administratörsbehörighet kan använda Administrationscenter för Microsoft 365 till att återställa lösenord för Intune.
 
 ## <a name="sync-active-directory-and-add-users-to-intune"></a>Synkronisera Active Directory och lägga till användare i Intune
+
 Du kan konfigurera katalogsynkronisering om du vill importera användarkonton från organisationens lokala Active Directory till Microsoft Azure Active Directory (Azure AD) som inkluderar Intune-användare. När din lokala Active Directory-tjänst är ansluten till alla dina Azure Active Directory-baserade tjänster blir hanteringen av användaridentiteter mycket enklare. Du kan också konfigurera funktioner för enkel inloggning som gör autentiseringen av dina användare välbekant och enkel. Genom att länka samma [Azure AD-klient](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) med flera tjänster, är de användarkonton som du tidigare har synkroniserat tillgängliga för alla molnbaserade tjänster.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Så här synkroniserar du lokala användare med Azure AD
+
 Det enda verktyg som du behöver för att synkronisera dina användarkonton med Azure AD är [Azure AD Connect-guiden](https://www.microsoft.com/download/details.aspx?id=47594). Azure AD Connect-guiden är verktyget som steg för steg hjälper dig att ansluta den lokala identitetsinfrastrukturen till molnet. Välj topologi och preferenser (en eller flera kataloger, hash-synkronisering av lösenord, direktautentisering eller federation). Guiden distribuerar och konfigurerar alla komponenter som krävs för att upprätta anslutningen. Exempel: Sync Services, Active Directory Federation Services (AD FS) och Azure AD PowerShell-modulen.
 
 > [!TIP]

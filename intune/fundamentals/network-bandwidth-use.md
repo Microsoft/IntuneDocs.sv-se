@@ -18,20 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a3ecf2872832af6199620863a05b4275731db5c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0507d607bfac6c084f1ce0b1f59d7474810ec8b7
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505242"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415114"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Krav för Intune-nätverkskonfiguration och bandbredd
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Du kan använda den här informationen för att förstå bandbreddskraven för dina Intune-distributioner.
 
 ## <a name="average-network-traffic"></a>Genomsnittlig nätverkstrafik
+
 I den här tabellen visas den ungefärliga storleken och frekvensen för vanligt innehåll som skickas via nätverket för varje klient.
 
 > [!NOTE]
@@ -53,9 +52,11 @@ I den här tabellen visas den ungefärliga storleken och frekvensen för vanligt
 |Programvarudistribution|Det varierar<br /><br />Storleken beror på vilken programvara som distribueras.|**Det varierar**<br /><br />Beror på när du distribuerar programvaran.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Sätt att minska användningen av nätverksbandbredd
+
 Du kan använda en eller flera av följande metoder för att minska användningen av nätverksbandbredd för Intune-klienter.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Använd en proxyserver till att cachelagra innehållsbegäranden
+
 En proxyserver som kan cachelagra innehåll för att minska duplicerade hämtningar och minska användningen av nätverksbandbredd från innehåll från Internet.
 
 En cachelagrande proxyserver som tar emot innehållsbegäranden från klienter kan hämta innehållet och cachelagra både webbsvar och hämtade filer. Servern använder den cachelagrade informationen för att besvara efterföljande förfrågningar från klienter.
@@ -74,6 +75,7 @@ Nedan visas vanliga inställningar för en proxyserver som cachelagrar innehåll
 Information om hur du använder en proxyserver till att cachelagra innehåll finns i dokumentationen för din proxyserverlösning.
 
 ### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Använda BITS (Background Intelligent Transfer Service) på datorer
+
 Under den tid då du konfigurerar kan du använda BITS på en Windows-dator för att minska nätverksbandbredden. Du kan konfigurera BITS-principen på sidan **Nätverksbandbredd** i Intune-agentprincipen.
 
 > [!NOTE]
@@ -82,14 +84,15 @@ Under den tid då du konfigurerar kan du använda BITS på en Windows-dator för
 Läs mer om BITS och Windows-datorer i [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) i TechNet-biblioteket.
 
 ### <a name="delivery-optimization"></a>Leveransoptimering
+
 Med Leveransoptimering kan du använda Intune för att minska bandbreddsförbrukningen när dina Windows 10-enheter laddar ned program och uppdateringar. Genom att använda en självorganiserande distribuerad cache kan nedladdningar hämtas från traditionella servrar och alternativa källor (som nätverks-peer).
 
 Hela listan med Windows 10-versioner och innehållstyper som stöds av Leveransoptimering finns i [artikeln om Leveransoptimering för Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
 
 Du kan [konfigurera Leveransoptimering](../configuration/delivery-optimization-settings.md) som en del av dina enhetskonfigurationsprofiler.
 
-
 ### <a name="use-branchcache-on-computers"></a>Använda BranchCache på datorer
+
 Intune-klienter kan använda BranchCache för att minska WAN-trafiken (Wide Area Network). BranchCache stöds i följande operativsystem:
 
 - Windows 7

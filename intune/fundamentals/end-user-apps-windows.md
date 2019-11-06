@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1cd4dd270d276969d759bc9a9dccef80b281251
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: da2f080458df360667df235ff10cc8f750b049eb
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502923"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414581"
 ---
 # <a name="how-your-windows-users-get-their-apps"></a>Så får dina Windows-användare sina appar
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Använd informationen för att förstå hur och var dina användare får de appar som du distribuerar via Microsoft Intune.
 
@@ -39,5 +37,6 @@ Använd informationen för att förstå hur och var dina användare får de appa
 **Ohanterade appar** kan hanteras med principer, har inte omslutits av Intune och inkluderar inte Intune App SDK. Appskyddsprinciper kan inte tillämpas på de här apparna.
 
 ## <a name="see-also"></a>Se även
+
 [Så får dina Android-användare sina appar](end-user-apps-android.md)
 [Så får dina iOS-användare sina appar](end-user-apps-android.md)

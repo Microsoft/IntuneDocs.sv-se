@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a6b427552e545421e329b900833c889e67bf35
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143169"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
@@ -191,7 +191,6 @@ Nedan visas kända problem.
 - Om du inaktiverar ESP-profilen tas inte ESP-principen bort från enheterna och användarna får fortfarande ESP när de loggar in på enheten för första gången. Principen tas inte bort när ESP-profilen är inaktiverad. Du måste distribuera OMA-URI för att inaktivera ESP. Se ovan för instruktioner om hur du inaktiverar ESP med OMA-URI. 
 - En väntande omstart kommer alltid att orsaka ett avbrott. Avbrottet beror på att enheten måste startas om. Enheten måste starta om för att ge tillräckligt med tid för att objektet som spåras i registreringsstatussidan ska slutföras. En omstart kommer att leda till att registreringsstatussidan avslutas. Efter omstart kommer enheten inte att starta kontokonfigurationen.  Överväg att inte kräva omstart när programmet installeras. 
 - En omstart under enhetsinstallationen tvingar användaren att ange sina autentiseringsuppgifter innan de övergår till installationsfasen för kontot. Användarautentiseringsuppgifter bevaras inte under omstarten. Låt användaren ange sina autentiseringsuppgifter. Därefter kan registreringsstatussidan fortsätta. 
-- SCEP-certifikat med Windows Hello för företag-principer gör ett avbrott eftersom användaren inte kan slutföra konfigurationen av Hello-PIN-koden så att installationen av SCEP-certifikatet kan konkurrera.  Det finns ingen lösning. En lösning kommer under sommaren 2019. 
 - Registreringsstatussidan kommer alltid att göra ett avbrott under en registrering av arbets- eller skolkonto på enheter med versioner av Windows 10 som är äldre än 1903. Registreringsstatussidan väntar på att Azure AD-registreringen ska slutföras. Problemet åtgärdas i Windows 10-version 1903 och senare.  
 - Hybrid Azure AD-autopilotdistribution med ESP tar längre tid än det avbrott som har definierats i ESP-profilen. I hybriddistributioner av Azure AD-autopilot tar ESP 40 minuter längre än värdet som anges i ESP-profilen. Den här fördröjningen låter det lokala AD-anslutningsprogrammet skapa den nya enhetsposten i Azure AD. 
 - Inloggningssidan för Windows är inte ifylld med användarnamnet i användardrivet Autopilot-läge. Om en omstart sker under enhetskonfigurationsfasen i ESP:

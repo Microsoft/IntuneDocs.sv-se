@@ -16,16 +16,14 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a89392dabe695cf49e989351cef822852676916
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 7500000f8a34120e69c27ce01a6cfdb85f447abe
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507377"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414705"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Som Intune-administratör kan du distribuera verksamhetsspecifika (LOB) universella appar till Windows 8.1 Desktop- eller Windows 10 Desktop- och Mobile-enheter, inklusive appen Företagsportal. Om du vill distribuera .appx-appar till Windows 8.1 Desktop- eller Windows 10 Desktop- och Mobile-enheter kan du använda kodsigneringscertifikat från en offentlig certifikatutfärdare som redan är betrodd av dina Windows-enheter, eller så kan du använda din egen certifikatutfärdare.
 
@@ -53,6 +51,7 @@ Om du distribuerar appen efter behov till användare eller enheter behöver du i
 ### <a name="upload-the-code-signing-certificate"></a>Ladda upp kodsigneringscertifikatet
 
 Om din Windows 10-enhet inte redan litar på certifikatutfärdaren måste du, efter att du har signerat ditt appx-paket och laddat upp det till Intune-tjänsten, ladda upp kodsigneringscertifikatet till Intune-portalen:
+
 1. Klicka på Klientappar
 2. Klicka på Windows företagscertifikat
 3. Välj ”Välj en fil” under kodsigneringscertifikat
@@ -77,6 +76,7 @@ Windows 8.1 Desktop/Windows 10 Desktop och Mobile
 Om certifikatperioden har upphört kanske appx-filerna slutar att starta. Du bör skaffa en ny .cer-fil och följa instruktionerna för att kodsignera varje distribuerad appx-fil och ladda upp alla appx-filer och den uppdaterade .cer-filen på nytt till avsnittet för Windows Enterprise-certifikat i Intune-portalen
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Distribuera Windows 10-företagsportalsappen
+
 Om du inte vill ge åtkomst till Microsoft Store kan du distribuera Windows 10 företagsportalappen manuellt direkt från Intune, även om du inte har integrerat Intune med Microsoft Store för företag. Alternativt, om du har integrerat, kan du distribuera appen Företagsportal med hjälp av [distribuera appar med Microsoft Store för företag](store-apps-windows.md).
 
  > [!NOTE]
@@ -100,9 +100,11 @@ Om du inte vill ge åtkomst till Microsoft Store kan du distribuera Windows 10 f
 Mer information om hur Intune hanterar beroenden för universella appar finns i [Distribuera ett appxbundle med beroenden via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Hur uppdaterar jag företagsportalen på mina användaress enheter om de redan har installerat de äldre apparna?
-Om användarna redan har installerat företagsportalsapparna för Windows 8.1 eller Windows Phone 8.1 från Store, så borde de sedan uppdateras automatiskt till den nya versionen, utan att det krävs några åtgärder från dig eller användaren. Om uppdateringen inte genomförs, så be dina användare att kontrollera om de har aktiverat automatiska uppdateringar för Store-appar på sina enheter.   
+
+Om användarna redan har installerat företagsportalsapparna för Windows 8.1 eller Windows Phone 8.1 från Store, så borde de sedan uppdateras automatiskt till den nya versionen, utan att det krävs några åtgärder från dig eller användaren. Om uppdateringen inte genomförs, så be dina användare att kontrollera om de har aktiverat automatiska uppdateringar för Store-appar på sina enheter.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hur uppgraderar jag min separat inlästa företagsportalsapp för Windows 8.1 till företagsportalsappen för Windows 10?
+
 Våra rekommenderade migreringssökväg är att ta bort distributionen för Windows 8.1-företagsportalappen genom att ange distributionsåtgärden till Avinstallera. När detta är gjort kan du distribuera företagsportalappen för Windows 10 distribueras med hjälp av något av ovanstående alternativ.  
 
 Om du behöver läsa in appen separat och distribuera Windows 8.1-företagsportalsappen utan signera den med Symantec-certifikatet, så slutför uppgraderingen genom att följa stegen i avsnittet Distribuera direkt via Intune ovan.
@@ -110,6 +112,7 @@ Om du behöver läsa in appen separat och distribuera Windows 8.1-företagsporta
 Om du behöver läsa in appen separat och du har signerat och distribuerat företagsportalen för Windows 8.1 med Symantec-kodsigneringscertifikat, så följ stegen i avsnittet nedan.  
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hur uppgraderar jag min signerade och separat inlästa företagsportalsapp för Windows Phone 8.1 eller Windows 8.1 till företagsportalsappen för Windows 10?
+
 Våra rekommenderade migreringssökväg är att ta bort den befintliga distributionen av företagsportalsappen för Windows 8.1 Phone eller Windows 8.1 genom att ange distributionsåtgärden till Avinstallera. När detta är gjort kan du distribuera företagsportalappen för Windows 10 distribueras normalt.  
 
 I annat fall måste företagsportalappen för Windows 10 uppdateras på rätt sätt och signeras så att uppgraderingsvägen följs.  

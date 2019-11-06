@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc298691ea3df923d1804005be61217325f52112
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 06cc977ce8b0b892e1020436f89ada4a40bac3f2
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510265"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413986"
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Så får dina iOS-användare sina appar
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Använd informationen för att förstå hur och var dina slutanvändare får de appar som du distribuerar via Microsoft Intune.
 
@@ -48,12 +46,12 @@ Registrerade användare får sina appar genom att trycka på följande paneler p
 
 - **Kategorier** pekar på fliken KATEGORIER på företagsportalens webbplats.
 
-
 ![Skärmen Appar på företagsportalen för iOS](./media/end-user-apps-ios/ios-cp-app-main-apps-screen.png)
 
 Mer information om hur man lägger till appar finns i [Så här lägger du till en app i Microsoft Intune](../apps/apps-add.md).
 
 ## <a name="see-also"></a>Se även
+
 [Så får dina Android-användare sina appar](end-user-apps-android.md)
 
 [Så får dina Windows-användare sina appar](end-user-apps-windows.md)

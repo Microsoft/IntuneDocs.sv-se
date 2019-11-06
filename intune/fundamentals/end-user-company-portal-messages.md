@@ -17,16 +17,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a9fb3e006489603a04039e0810684a6fef152dd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 57467d3d073666c1c22ac0a412f68a258d5b3d75
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510283"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414078"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 > [!NOTE]
 > Följande information gäller endast på enheter med Android 6.0+ och iOS 10+.
@@ -42,9 +40,11 @@ Förstå de olika appmeddelanden som slutanvändarna kan se i företagsportalen.
 ## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Tillåt att företagsportalen kan ringa och hantera telefonsamtal?
 
 ### <a name="where-it-appears"></a>Var det visas
+
 Meddelandet är **Tillåt att företagsportalen kan ringa och hantera telefonsamtal?** och visas när användare trycker på **Registrera** i företagsportalen för första gången för att börja registrera sin enhet.
 
 ### <a name="what-it-means"></a>Betydelse
+
 Genom att acceptera varningen kan användarna låta telefonnummer och IMEI-nummer för deras enhet skickas till tjänsten Intune. Dessa visas i administrationskonsolen på sidan __Maskinvara__.
 
 > [!NOTE]
@@ -53,6 +53,7 @@ Genom att acceptera varningen kan användarna låta telefonnummer och IMEI-numme
 För att öppna sidan **Maskinvara** måste du gå till **Grupper** > **Alla mobila enheter** > **Enheter**. Välj användarens enhet och gå till **Visa egenskaper** > **Maskinvara**.
 
 ### <a name="what-happens-if-users-deny-access"></a>Vad händer om användarna nekar åtkomst
+
 Om användarna nekar åtkomst kan de fortsätta att använda programmet för företagsportalen och registrera sina enheter. Enhetens telefonnummer och IMEI saknar data på sidan __Maskinvara__ i administrationskonsolen. Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera för att inte se meddelandet fler gånger.
 
 Om användare först tillåter men senare nekar åtkomst, visas meddelandet nästa gång användaren loggar in på företagsportalappen efter registreringen.
@@ -60,20 +61,24 @@ Om användare först tillåter men senare nekar åtkomst, visas meddelandet näs
 Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktivera den.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
+
 Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-help/enroll-device-android-company-portal) för mer information.
 
 ## <a name="allow-company-portal-to-access-your-contacts"></a>Tillåta att företagsportalappen får åtkomst till dina kontakter?
 
 ### <a name="where-it-appears"></a>Var det visas
+
 Meddelandet är **Allow Company Portal to access your contacts?** (Tillåt att företagsportalen får åtkomst till dina kontakter?) och visas när användare trycker på **Registrera** i företagsportalen för första gången för att börja registrera sin enhet.
 
 ### <a name="what-it-means"></a>Betydelse
+
 Meddelandet uppmanar användarna att låta Intune skapa ett arbetskonto och hantera den Azure Active Directory-identitet som har registrerats för användaren på enheten.
 
 > [!NOTE]
 > **Microsoft bereder sig aldrig åtkomst till dina kontakter!** Meddelandetexten styrs av Google och kan inte ändras.
 
 ### <a name="what-happens-if-users-deny-access"></a>Vad händer om användarna nekar åtkomst
+
 Om användarna nekar åtkomst kommer enheten inte att registreras i Intune och kan inte hanteras. Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera så att meddelandet inte visas igen.
 
 Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång användaren loggar in på företagsportalappen efter registreringen.
@@ -81,31 +86,37 @@ Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång
 Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktivera den.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
+
 Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-help/enroll-device-android-company-portal) för mer information.  
 
 ## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Tillåt att företagsportalen kommer åt foton, media och filer på enheten?
 
 ### <a name="where-it-appears"></a>Var det visas
+
 Meddelandet **Tillåt att företagsportalen kommer åt foton, media och filer på enheten?** visas när användarna trycker på **Skicka Data** för att skicka dataloggar till sin IT-administratör.
 
 ### <a name="what-it-means"></a>Betydelse
+
 När användarna accepterar meddelandet kan deras enheter skriva dataloggar till enhetens SD-kort. Det innebär också att loggarna kan flyttas med hjälp av en USB-kabel.   
 
 > [!NOTE]
 > **Företagsportalappen bereder sig aldrig åtkomst till användarnas foton, media och filer!** Meddelandetexten styrs av Google och kan inte ändras.
 
 ### <a name="what-happens-if-users-deny-access"></a>Vad händer om användarna nekar åtkomst
+
 Om användarna nekar åtkomst kan de fortfarande skicka loggar via e-post, men loggarna kopieras inte till enhetens SD-kort.
 
 Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera så att meddelandet inte visas igen. Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång användaren försöker skicka loggar. Om användarna senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Lagring** och aktivera behörigheten.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
+
 Hänvisa dina användare till [Skicka loggar till IT-administratören via e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android). 
 
 ## <a name="your-company-support-needs-to-give-you-access-to-company-resources"></a>Din företagssupport måste ge dig åtkomst till företagsresurser
 
 ### <a name="where-it-appears"></a>Var det visas
+
 Om du inte har lagt till företagsportalappen i listan **Tillåtna appar** eller **Undanta appar** och en användare försöker logga in, så misslyckas inloggningen. Följande meddelande visas:
 
 > **Your company support needs to give you access to company resources (Din företagssupport måste ge dig åtkomst till företagsresurser)**  
@@ -118,11 +129,13 @@ Lägg till appen Företagsportal i listan **Tillåtna appar** eller **Undanta ap
 ## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Godkänna en iOS-företagsapp (verksamhetsspecifik app) på din iOS-enhet 
 
 ### <a name="where-it-appears"></a>Var det visas
+
 iOS-appar som har utvecklats av din organisation och som inte är tillgängliga i App Store är inte betrodda av din enhet som standard. När du installerar dessa appar med hjälp av företagsportalen och startar appen, visas följande meddelande:
 
 ![iOS-appmeddelande – Ej betrodd företagsutvecklare](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
 
 ### <a name="what-it-means"></a>Betydelse
+
 Det här meddelandet innebär att du behöver ändra dina iOS-enhetsinställningar för att kunna godkänna och installera en app som har utvecklats av ditt företag på iOS-enheten.
 
 När du installerar sådana appar med hjälp av företagsportalen och startar appen, följer du stegen nedan för att godkänna appen när du har hämtat den:

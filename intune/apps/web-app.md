@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6678b7c3519328623d9c0035c725af3877a36ba8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6600c75ce3e6120143b17fb863670b2eb423a09f
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507052"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592061"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -36,7 +36,7 @@ Innan du kan hantera och tilldela appar för dina användare, lägger du till ap
 Intune skapar en genväg till webbappen på användarens enhet. På iOS-enheter läggs en genväg till webbappen till på startskärmen. På Android-enheter läggs en genväg till webbappen till i Intunes företagsportalwidget. Widgeten måste sedan fästas manuellt av användaren. På Windows-enheter placeras en genväg till webbappen i Start-menyn.
 
 > [!Note]
-> Webbappar stöds inte på Android-arbetsprofilenheter. En webbläsare måste vara installerad på användarens enhet för att det ska gå att starta webbappar.
+> En webbläsare måste vara installerad på användarens enhet för att det ska gå att starta webbappar.
 
 ## <a name="add-a-web-app-to-intune"></a>Lägg till en webbapp i Intune
 Om du vill lägga till en app i Intune som en genväg till en app på webben gör du så här:
