@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96c802e76aab673aa6a9108dc0a14f553c26b96b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
+ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505414"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445301"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Intune-åtgärder och Intune-alternativ som stöds med Apples användarregistrering
 
 Användarregistrering har stöd för en deluppsättning av enhetshanteringsalternativen. Om en redan befintlig konfigurationsprofil tillämpas på en enhet som registreras via Användarregistrering, tillämpas bara de inställningar som stöds av Användarregistrering på enheten.
+
+> [!NOTE]
+> Stöd för Apples användarregistrering i Intune är för närvarande tillgänglig som en förhandsversion.
 
 ## <a name="password-settings"></a>Inställningar för lösenord
 
@@ -97,6 +100,19 @@ Följande alternativ stöds inte på enheter som har registrerats via Användarr
 - MDM-kontroll av program utanför den hanterade APFS-volymen.
 - Programskyddsprinciper används fortfarande för dessa appar. Men du kan inte ta över hanteringen eller distribuera en hanterad version av dessa appar om inte användaren tar bort dem från enheten.
 - Åtgärder, konfigurationer, inställningar och kommandon som kräver övervakning. 
+
+## <a name="options-not-supported-in-preview"></a>Alternativ som inte stöds i förhandsversionen
+- Registreringsbegränsningar för enhetstyp för att tillåta/blockera personligt ägda enheter 
+
+## <a name="known-issues-in-preview"></a>Kända problem i förhandsversionen
+- VPP-licensåterkallelse: Ett meddelande om att licensen har återkallats visas inte. Det aktuella beteendet är att återkallningen lyckas, men slutanvändaren får inget meddelande om det. 
+- VPP-programrapportering: I rapporten som finns i Klientappar > Appar > [appnamn] > Installationsstatus för enhet rapporteras att VPP-program som distribuerats till användarregistrerade enheter ”misslyckats”, även om programmet har distribuerats utan problem till enheten. 
+- Programrapportering: För de apptyper som inte stöds för användarregistrering kan rapporter innehålla irrelevanta felmeddelanden. 
+- Gränssnittet för företagsportalappen: Användarna ser alla program som är riktade mot dem, oavsett om dessa programtyper stöds för användarregistrerade enheter eller inte. 
+- Gränssnittet för företagsportalappen: Användarna ser samma text som visar vad organisationer kan och inte kan se för registrering av användare och enheter.
+- Om en användare väljer ”Min organisation äger den här enheten” under registreringen identifieras enheten fortfarande som personlig i Intune, om detta inte ändras i administratörskonsolen eller via Graph. 
+- Registreringsmål: iPadOS visas inte i plattformsväljaren. iPadOS stöds i förhandsversionen men anges inte uttryckligen i administratörskonsolen. 
+
 
 ## <a name="next-steps"></a>Nästa steg
 

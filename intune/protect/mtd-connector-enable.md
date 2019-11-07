@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
-ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
+ms.openlocfilehash: fae163cbcd97feb4f333d8ddfd44f2202dd343d6
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72810287"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627689"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
@@ -63,8 +63,8 @@ Du kan visa klassiska principer för villkorlig åtkomst genom att gå till **Az
 Du kan bestämma vilka växlingsalternativ för Mobile Threat Defense som behöver aktiveras enligt din organisations krav. Här finns mer information:
 
 **MDM-inställningar för efterlevnadsprinciper**
-- **Ansluta Android 4.1+-enheter till *\<MTD-partnernamn>***: När du aktiverar det här alternativet kan du låta Android 4.1+-enheter rapportera säkerhetsrisker till Intune.
-- **Ansluta iOS 8.0+-enheter till *\<MTD-partnernamn>***: När du aktiverar det här alternativet kan du låta iOS 8.0+-enheter rapportera säkerhetsrisker till Intune.
+- **Ansluta Android 4.1+-enheter till _\<MTD-partnernamn>_**: När du aktiverar det här alternativet kan du låta Android 4.1+-enheter rapportera säkerhetsrisker till Intune.
+- **Ansluta iOS 8.0+-enheter till _\<MTD-partnernamn>_**: När du aktiverar det här alternativet kan du låta iOS 8.0+-enheter rapportera säkerhetsrisker till Intune.
 - **Aktivera appsynkronisering för iOS-enheter**: Tillåter denna Mobile Threat Defense-partner att begära metadata för iOS-program från Intune för att använda för hotanalyssyften.
 - **Blockera operativsystemversioner som inte stöds**: Blockera om enheten kör ett operativsystem som är äldre än den äldsta version som stöds.
 

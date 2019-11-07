@@ -1,5 +1,5 @@
 ---
-title: Logga in eller registrera dig i Microsoft Intune
+title: Registrera dig eller logga in i Microsoft Intune
 description: Så här registrerar du dig för en Microsoft Intune-prenumeration, eller loggar in för att starta din prenumeration.
 keywords: ''
 author: ErikjeMS
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c3cf75c1b5d6984a7f922af8b969458b4e4336e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 78d38b72c9853a9eadaf71fcdff7567fc66d35ca
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509166"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414672"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrera dig eller logga in i Microsoft Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Det här avsnittet beskriver hur systemadministratörer kan registrera sig för ett Intune-konto.
 
@@ -46,14 +44,17 @@ Om du redan har ett arbets- eller skolkonto **loggar du in** med det kontot och 
 2. Logga in eller registrera dig på inloggningssidan om du vill hantera en ny prenumeration på Intune.
 
 ## <a name="post-sign-up-considerations"></a>Att tänka på efter registreringen
+
 När du har registrerat dig för en ny prenumeration skickas ett e-postmeddelande med din kontoinformation till den e-postadress som du angav när du registrerade dig. E-postmeddelandet bekräftar att din prenumeration är aktiv.
 
 När du har slutfört registreringsprocessen dirigeras du till Administrationscenter för Microsoft 365, där du kan lägga till användare och tilldela licenser till dem. Om du bara ska använda molnbaserade konton med standarddomännamnet onmicrosoft.com kan du fortsätta och lägga till användare och tilldela licenser nu. Om du däremot planerar att använda din organisations [domännamn](custom-domain-name-configure.md) eller [synkronisera information om användarkonton](users-add.md#sync-active-directory-and-add-users-to-intune) från lokala Active Directory, kan du stänga webbläsarfönstret.
 
 ## <a name="sign-in-to-microsoft-intune"></a>Logga in på Microsoft Intune
+
 När du har registrerat dig för Intune kan du använda valfri enhet med en [webbläsare som stöds](supported-devices-browsers.md#intune-supported-web-browsers) för att logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) för att administrera tjänsten.
 
 Som standard måste ditt konto ha en av följande behörigheter i Azure AD:
+
 - Global administratör
 - Intune-tjänstadministratör (även kallat Intune-administratör)
 
@@ -76,4 +77,5 @@ Microsoft 365 Business: https://portal.microsoft.com/adminportal
 Mobile Device Management för Office 365: https://portal.office.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Se även
+
 [Du kan inte logga in på Office 365, Azure eller Intune](https://support.microsoft.com/help/2412085)

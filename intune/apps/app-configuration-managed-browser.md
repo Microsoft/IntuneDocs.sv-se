@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ae1b5a51533bf14d4299fcf0248564562289f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a3fab0b14f8ed68d13021a0e141d5997532df2ec
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507565"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592083"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
@@ -179,7 +179,7 @@ Använd proceduren ovan för att skapa en Microsoft Edge-appkonfiguration. Ange 
 > [!NOTE]
 > Se till att följande dataskyddsprincipinställningar är konfigurerade i appens skyddsprincip som hanterar Microsoft Edge och associerade appar som anges i appens konfiguration:
 > - Skicka organisationsdata till andra appar: **Principhanterade appar**
-> - Dela webbinnehåll med principhanterade webbläsare: **Kräv**
+> - Begränsa överföring av webbinnehåll till andra appar: **Principhanterade webbläsare**
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Så här konfigurerar du programproxyinställningar för skyddade webbläsare
 
@@ -243,7 +243,7 @@ Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller 
 
 |Tangent|Värde|
 |-|-|
-|Välj mellan:<br><ul><li>Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Ange blockerade URL: er (alla andra platser kan nås):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;** .<br><br>Exempel:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
+|Välj mellan:<br><ul><li>Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Ange blockerade URL: er (alla andra platser kan nås):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
 
 >[!IMPORTANT]
 >Ange inte båda nycklarna. Om båda nycklarna används för samma användare tillämpas den tillåtna nyckeln eftersom det är det mest restriktiva alternativet.
@@ -252,7 +252,7 @@ Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller 
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>URL-format för tillåtna och blockerade URL:er
 Använd följande information för att lära dig om tillåtna format och jokertecken som du kan använda när du anger URL:er i listorna för tillåtna och blockerade webbplatser:
 
-- Du kan använda jokertecknet ( **&#42;** ) enligt reglerna i följande lista med tillåtna mönster:
+- Du kan använda jokertecknet (**&#42;**) enligt reglerna i följande lista med tillåtna mönster:
 
 - Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
 

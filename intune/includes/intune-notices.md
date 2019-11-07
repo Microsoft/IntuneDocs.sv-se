@@ -4,17 +4,32 @@ description: inkludera fil
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/28/2019
+ms.date: 11/4/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0aa78ec17aba5deb0c914c3698676219f203b856
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: edef1f43caff97ab75aa3c58034ed4fc2dffd208
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73415079"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73612179"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Planera för förändring: Uppdaterad upplevelse vid registrering av dedikerade Android Enterprise-enheter i Intune<!--5198878-->
+I novemberversionen, eller version 1911, av Intune har vi lagt till stöd för distribution av SCEP-enhetscertifikat till dedikerade Android Enterprise-enheter för att möjliggöra certifikatbaserad åtkomst till Wi-Fi-profiler. Den här ändringen omfattar även vissa mindre ändringar i flödet när du registrerar dedikerade Android Enterprise-enheter.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Om du hanterar dedikerade Android Enterprise-enheter i din miljö kommer du att börja se några ändringar i november.
+
+- För nya registreringar av dedikerade Android Enterprise-enheter: Slutanvändarna ser en annan uppsättning steg på enheterna under registreringen. Registreringen startar fortfarande på samma sätt som i dag (med QR, NFC, Zero-Touch eller enhetsidentifierare), men från och med novemberversionen finns det ett obligatoriskt appinstallationssteg.
+- För befintliga Android-enheter som registrerats som dedikerade enheter: Intune börjar automatiskt installera Microsoft Intune-appen på enheter från och med början av november. Du behöver inte vidta någon åtgärd. Appen laddas ned och installeras automatiskt på enheterna. 
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Du bör planera för att uppdatera vägledningen för slutanvändarna och informera supportavdelningen om den här ändringen. Klicka på Ytterligare information för mer information och skärmbilder. Vi uppdaterar sidan Nyheter när ändringen börjar distribueras.
+
+#### <a name="additional-information"></a>Ytterligare information
+[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="plan-for-change-the-server-side-logging-for-siri-commands-setting-will-be-removed-from-the-intune-console----5468501--"></a>Planera för förändring: Inställningen ”Loggning på serversidan av Siri-kommandon” tas bort från Intune-konsolen <!-- 5468501-->
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,19 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
+ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889577"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73432525"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Använda DFCI-profiler på Windows-enheter i Microsoft Intune (allmänt tillgänglig förhandsversion)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-> [!Note]
-> Varje [månadsuppdatering](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) kan ta flera dagar att distribuera. Vissa funktioner kan distribueras över flera veckor och kanske inte är tillgängliga för alla kunder direkt.
 
 När du använder Intune för att hantera Autopilot-enheter kan du hantera UEFI-inställningar (BIOS) när enheterna har registrerats med hjälp av DFCI (Device Firmware Configuration Interface). En översikt av fördelar, scenarier och förutsättningar finns i [översikten över DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -45,7 +42,7 @@ Den här funktionen gäller för:
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-- Enhetstillverkaren måste ha lagt till DFCI i sin inbyggda UEFI-programvara under tillverkningsprocessen eller som en uppdatering av inbyggd programvara som du installerar. Ta hjälp av dina enhetsleverantörer för att fastställa vilka tillverkare som stöder DFCI eller vilken version av inbyggd programvara som krävs för användning av DFCI.
+- Enhetstillverkaren måste ha lagt till DFCI i sin inbyggda UEFI-programvara under tillverkningsprocessen eller som en uppdatering av inbyggd programvara som du installerar. Ta hjälp av dina enhetsleverantörer för att fastställa [vilka tillverkare som stöder DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci) eller vilken version av inbyggd programvara som krävs för användning av DFCI.
 
 - Enheten måste registreras för Windows Autopilot av en [Microsoft Cloud Solution Provider-partner (CSP)](https://partner.microsoft.com/cloud-solution-provider) eller registreras direkt av OEM-tillverkaren. 
 
@@ -91,7 +88,7 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
 
 4. Konfigurera inställningarna:
 
-    - **Tillåt lokal användare att ändra UEFI-inställningar (BIOS)** : Alternativen är:
+    - **Tillåt lokal användare att ändra UEFI-inställningar (BIOS)**: Alternativen är:
       - **Endast ej konfigurerade inställningar**: Den lokala användaren kan ändra valfri inställningar *förutom* de inställningar som uttryckligen anges till **Aktivera** eller **Inaktivera** av Intune.
       - **Inga**: Den lokala användaren kan inte ändra UEFI-inställningar (BIOS), däribland inställningar som inte visas i DFCI-profilen.
 
@@ -107,7 +104,7 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
         - **Inte konfigurerad**: Intune ändrar inte den här funktionen och låter eventuella inställningar vara kvar som de är.
         - **Aktiverad**: Alla inbyggda mikrofoner och högtalare som hanteras direkt av UEFI (BIOS) aktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
         - **Inaktiverad**: Alla inbyggda mikrofoner och högtalare som hanteras direkt av UEFI (BIOS) inaktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
-    - **Radio (Bluetooth, Wi-Fi, NFC osv.)** : Alternativen är:
+    - **Radio (Bluetooth, Wi-Fi, NFC osv.)**: Alternativen är:
         - **Inte konfigurerad**: Intune ändrar inte den här funktionen och låter eventuella inställningar vara kvar som de är.
         - **Aktiverad**: Alla inbyggda radior som hanteras direkt av UEFI (BIOS) aktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
         - **Inaktiverad**: Alla inbyggda radior som hanteras direkt av UEFI (BIOS) inaktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
@@ -115,7 +112,7 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
         > [!WARNING]
         > Om du inaktiverar inställningen **Radio** måste enheten ha en trådbunden nätverksanslutning. Annars kan enheten bli ohanterbar.
 
-    - **Starta från externa media (USB, SD)** : Alternativen är:
+    - **Starta från externa media (USB, SD)**: Alternativen är:
         - **Inte konfigurerad**: Intune ändrar inte den här funktionen och låter eventuella inställningar vara kvar som de är.
         - **Aktiverad**: UEFI (BIOS) tillåter start från icke-hårddiskbaserad lagring.
         - **Inaktiverad**: UEFI (BIOS) tillåter inte start från icke-hårddiskbaserad lagring.

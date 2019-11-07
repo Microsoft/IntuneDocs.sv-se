@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d6fb5a703aad09592bfac3b5a16390389059d33
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143208"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -139,7 +139,7 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 
 ### <a name="step-4-configure-app-installation-details"></a>Steg 4: Konfigurera information om appinstallationen
 1. I **Lägg till app** väljer du **Program** för att konfigurera appinstallationen och borttagningskommandona för appen.
-2. Lägg till den fullständig kommandoraden för installationen för att installera appen. 
+2. Om du vill konfigurera **installationskommandot** lägger du till den fullständig kommandoraden för installationen för att installera appen. 
 
     Om appfilnamnet exempelvis är **MyApp123** lägger du till följande:<br>
     `msiexec /p “MyApp123.msp”`<p>
@@ -148,9 +148,11 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
     I kommandot ovan stöder paketet `ApplicationName.exe` kommandoargumentet `/quiet`.<p> 
     Kontakta leverantören av programmet för de specifika argument som stöds av programpaketet.
 
-3. Lägg till den fullständiga kommandoraden för avinstallation av appen baserat på appens GUID. 
+3. Om du vill konfigurera **avinstallationskommandot** lägger du till den fullständig kommandoraden för avinstallationen för att avinstallera appen baserat på appens GUID. 
 
     Exempelvis:  `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+4. Ange **System** eller **Användare** för **Installationsbeteende**.
 
     > [!NOTE]
     > Du kan konfigurera att en Win32-app installeras i kontexten **Användare** eller **System**. Kontexten **Användare** avser bara en viss användare. Kontexten **System** avser alla användare av en Windows 10-enhet.
@@ -159,7 +161,13 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
     > 
     > Installationen och avinstallationen av Win32-appen körs med administratörsbehörighet (som standard) när appen är inställd på att installeras i användarkontext och slutanvändaren på enheten har administratörsbehörighet.
 
-4. Välj **OK** när du är klar.
+5. Om du vill konfigurera **Beteende för enhetsomstart** väljer du något av följande alternativ:
+    - **Bestäm beteende baserat på returkoder**: Välj det här alternativet om du vill starta om enheten utifrån inställningarna för [returkoder](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes).
+    - **Ingen specifik åtgärd**: Välj det här alternativet om du inte vill att enheten ska startas om när MSI-baserade appar installeras.
+    - **Appinstallation kan tvinga fram omstart av enhet**: Välj det här alternativet om du vill att appinstallationen ska slutföras utan att åsidosätta omstart.
+    - **Intune tvingar fram obligatorisk omstart av enhet**: Välj det här alternativet om du vill att enheten alltid ska startas om efter en lyckad appinstallation.
+
+6. Välj **OK** när du är klar.
 
 ### <a name="step-5-configure-app-requirements"></a>Steg 5: Konfigurera appkrav
 
@@ -167,10 +175,10 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 2. I fönstret **Lägg till en kravregel** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
     - **Operativsystemarkitektur**: Välj de arkitekturer som krävs för att installera appen.
     - **Lägsta operativsystemversion**: Välj det lägsta operativsystem som krävs för att installera appen.
-    - **Diskutrymme som krävs (MB)** : Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
-    - **Fysiskt minne som krävs (MB)** : Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
+    - **Diskutrymme som krävs (MB)**: Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
+    - **Fysiskt minne som krävs (MB)**: Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
     - **Lägsta antal logiska processorer som krävs**: Om du vill kan du lägga till det lägsta antal logiska processorer som krävs för att installera appen.
-    - **Lägsta processorhastighet som krävs (MHz)** : Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
+    - **Lägsta processorhastighet som krävs (MHz)**: Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
 
 3. Klicka på **Lägg till** för att visa bladet **Lägg till en kravregel** och konfigurera ytterligare kravregler. Välj **typen av krav** för att välja vilken typ av regel som du använder för att avgöra hur ett krav ska valideras. Kravregler kan baseras på information om filsystem, registervärden eller PowerShell-skript. 
     - **Fil**: När du väljer **Fil** som **Typ av krav** måste kravregeln identifiera en fil eller en mapp, ett datum, en version eller en storlek. 
@@ -279,10 +287,11 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
     - **Obligatoriskt**: Appen installeras på enheter i de valda grupperna.
     - **Avinstallera**: Appen avinstalleras från enheter i de valda grupperna.
 4. Välj **Grupper som omfattas** och tilldela de grupper som ska använda den här appen.
-5. Klicka på **OK** i fönstret **Tilldela** för att slutföra valet av inkluderade grupper.
-6. Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
-7. I fönstret **Lägg till grupp** väljer du **OK**.
-8. I appfönstret **Tilldelningar** väljer du **Spara**.
+5. I fönstret **Tilldela** väljer du tilldelning baserat på användare eller enheter. När du väljer tilldelningar kan du även välja **Slutanvändarupplevelse**. Med **Slutanvändarupplevelse** kan du ange **Slutanvändarmeddelanden**, **Respitperiod för omstart**, **Tillgänglighet**och **Tidsgräns för installation**. Mer information finns i **Ange tillgänglighet och meddelanden för Win32-appen**.
+6. Välj **OK** för att slutföra valet av inkluderade grupper.
+7. Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
+8. I fönstret **Lägg till grupp** väljer du **OK**.
+9. I appfönstret **Tilldelningar** väljer du **Spara**.
 
 Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Information om tilldelning och övervakning av appar finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md) och [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md).
 
@@ -299,7 +308,7 @@ Du kan välja huruvida varje oberoende app ska installeras automatiskt. Som stan
 Om du vill lägga till ett appsamband till Win32-appen använder du följande steg:
 
 1. I Intune väljer du **Klientappar** > **Appar** för att visa listan över tillagda klientappar. 
-2. Välj en tillagd **Windows-app (Win32)** . 
+2. Välj en tillagd **Windows-app (Win32)**. 
 3. Välj **Beroenden** för att lägga till de beroende appar som måste installeras innan Win32-appen kan installeras. 
 4. Klicka på **Lägg till** för att lägga till ett appsamband.
 5. När du har lagt till beroende appar klickar du på **Välj**.
@@ -328,6 +337,36 @@ Slutanvändaren ser popup-meddelanden i Windows för nödvändiga och tillgängl
 Följande bild meddelar slutanvändaren att appändringar görs på enheten.
 
 ![Skärmbild som meddelar användaren att appändringar görs](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+## <a name="set-win32-app-availability-and-notifications"></a>Ange tillgänglighet och meddelanden för Win32-appen
+Du kan konfigurera starttid och tidsgräns för en Win32-app. Vid starttiden börjar Intune-hanteringstillägget ladda ned och cachelagra appinnehållet för den avsikt som krävs. Appen installeras vid tiden för tidsgränsen. För tillgängliga appar anger starttiden när appen är synlig i företagsportalen och innehållet laddas ned när slutanvändaren begär appen från företagsportalen. Du kan också aktivera en respitperiod för omstart. 
+
+Så här anger du appens tillgänglighet baserat på datum och tid för en app som krävs:
+
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. På bladet **Intune** väljer du **Klientappar** > **Appar**.
+3. Välj en befintlig **Windows-app (Win32)** i listan. 
+4. På appbladet väljer du **Tilldelningar** > **Lägg till grupp**. 
+5. Ställ in **Tilldelningstyp** på **Obligatorisk**. Observera att apptillgängligheten kan ställas in baserat på tilldelningstypen. **Tilldelningstyp** kan vara **Obligatorisk**, **Tillgängligt för registrerade enheter** eller **Avinstallera**.
+6. Välj **Grupper som ingår** för att avgöra vilken grupp av användare som ska tilldelas till appen. Bladet **Tilldela** visas.
+7. Ange **Ja** för **Gör den här appen obligatorisk för alla användare**.
+
+    > [!NOTE]
+    > Följande ingick i alternativen för **Tilldelningstyp**:<br>
+    > - **Obligatoriskt**: Du kan välja att **göra den här appen obligatorisk för alla användare** och/eller att **göra den här appen obligatorisk på alla enheter**.<br>
+    > - **Tillgänglig för registrerade enheter**: Du kan välja att **göra appen tillgänglig för alla användare med registrerade enheter**.<br>
+    > - **Avinstallera**: Du kan välja att ***avinstallera den här appen för alla användare** och/eller **avinstallera den här appen för alla enheter**.
+
+8. Välj **Redigera** om du vill ändra alternativen för **Slutanvändarupplevelse**.
+9. På bladet **Redigera tilldelning** anger du **Visa alla popup-meddelanden** för **Slutanvändarmeddelanden**. Observera att du kan ange **Visa alla popup-meddelanden**, **Visa popup-meddelanden om omstart av dator** eller **Dölj alla popup-meddelanden** för **Slutanvändarmeddelanden**.
+10. Ange **Ett visst datum och tid** för **Apptillgänglighet** och välj datum och tid. Datumet och tiden anger när appen laddas ned till slutanvändarens enhet. 
+11. Ange **Ett visst datum och tid** för **Tidsgräns för appinstallation** och välj datum och tid. Datumet och tiden anger när appen installeras på slutanvändarens enhet. Om fler än en tilldelning har gjorts för samma användare eller enhet väljs den tidigaste tidsgränsen för appinstallation.
+12. Klicka på **Aktiverad** bredvid **Respitperiod för omstart**. Respitperioden för omstart startar så snart appen har installerats på enheten. När den är inaktiverad kan enheten startas om utan varning. <br>Du kan anpassa följande alternativ:
+    - **Respitperiod för omstart av enhet (minuter)**: Standardvärdet är 1 440 minuter (24 timmar). Det här värdet kan vara högst 2 veckor.
+    - **Välj när dialogrutan för nedräkning till omstart ska visas innan omstart sker (minuter)**: Standardvärdet är 15 minuter.
+    - **Tillåt användaren att snooza omstartsmeddelande**: Du kan välja **Ja** eller **Nej**.
+        - **Välj snooze-tid (minuter)**: Standardvärdet är 240 minuter (4 timmar). Snooze-tiden får inte vara större än respitperioden för omstart.
+13. Klicka på **OK** > **OK** > **OK** > **Spara** för att lägga till tilldelningen.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Popup-meddelanden för Win32-appar 
 Om det behövs kan du förhindra att popup-meddelanden per apptilldelning visas för slutanvändarna. Från Intune, väljer du **Klientappar** > **Appar** > välj appen > **Tilldelningar** > **Inkludera grupper**. 

@@ -1,12 +1,12 @@
 ---
-title: Tilldela Office 365-appar till Windows 10-enheter med hjälp av Microsoft Intune
+title: Lägg till Office 365-appar i Windows 10-enheter med hjälp av Microsoft Intune
 titleSuffix: ''
 description: Lär dig hur du kan använda Microsoft Intune för installera Office 365-appar på Windows 10-enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35545d6c01e3acf7e54c3b932a4450c93f3dd4a9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 2cb247ec25b134fa9810a426be88b7fc90999394
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507308"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635417"
 ---
-# <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
+# <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Lägg till Office 365-appar i Windows 10-enheter med Microsoft Intune
 
 Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägga till dem till Intune. En av de tillgängliga [apptyperna](apps-add.md#app-types-in-microsoft-intune) är Office 365-appar för Windows 10-enheter. Genom att välja den här apptypen i Intune kan du tilldela och installera Office 365-appar på enheter som du hanterar och som kör Windows 10. Du kan även tilldela och installera appar för skrivbordsklienten för Microsoft Project Online och Microsoft Visio Online, abonnemang 2 om du har licenser för dessa. De tillgängliga Office 365-apparna visas som en enda post i listan med appar i Intune-konsolen i Azure.
 
@@ -131,7 +131,7 @@ Om du valde alternativet **Configuration Designer** i listrutan **Inställningsf
 ## <a name="select-scope-tags-optional"></a>Välj omfångstaggar (valfritt)
 Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
-1. Välj **Omfång (taggar)**  > **Lägg till**.
+1. Välj **Omfång (taggar)** > **Lägg till**.
 2. Använd rutan **Välj** för att söka efter omfångstaggar.
 3. Markera kryssrutan bredvid de omfångstaggar som du vill tilldela till den här appen.
 4. Välj **Välj** > **OK**.
@@ -142,12 +142,60 @@ Om du valde alternativet **Ange XML-format** i listrutan **Inställningsformat**
 
 ## <a name="finish-up"></a>Slutför
 
-I fönstret **Lägg till app** väljer du **Lägg till** när du är klar. Appen som du har skapat visas i applistan.
+I fönstret **Lägg till app** väljer du **Lägg till** när du är klar. Appen som du har skapat visas i applistan. Nästa steg är att tilldela apparna till de grupper du väljer. Mer information finns i [Tilldela appar till grupper](~/apps/apps-deploy.md).
+
+## <a name="deployment-details"></a>Distributionsinformation
+
+När distributionsprincipen från Intune har tilldelats till måldatorerna via [Office Configuration Service Provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/office-csp) hämtas installationspaketet automatiskt från *officecdn.microsoft.com* till målenheten. Två kataloger visas i katalogen *Programfiler*:
+
+![Installationspaket för Office i katalogen Programfiler](./media/apps-add-office365/office-folder.png)
+
+Under katalogen *Microsoft Office* skapas en ny mapp där installationsfilerna lagras:
+
+![Ny mapp som skapats under Microsoft Office-katalogen](./media/apps-add-office365/created-folder.png)
+
+Startfilerna för Office Klicka-och-kör-installationen lagras under *Microsoft Office 15*-katalogen. Installationen startar automatiskt om tilldelningstypen krävs:
+
+![Klicka om du vill köra startfilerna för installation](./media/apps-add-office365/clicktorun-files.png)
+
+Installationen körs i tyst läge om tilldelningen av O365-sviten är konfigurerad enligt krav. Installationsfilerna som hämtats tas bort när installationen är klar. Om tilldelningen konfigureras som **tillgänglig** visas Office-programmen i företagsportalappen så att slutanvändarna kan starta installationen manuellt.
 
 ## <a name="troubleshooting"></a>Felsökning
 Intune använder [distributionsverktyget för Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) för att hämta och distribuera Office 365 ProPlus till dina klientdatorer med [Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Hänvisa till bästa praxis i [hantera slutpunkter för Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) för att kontrollera att din nätverkskonfiguration tillåter att klienter får åtkomst till CDN direkt snarare än via routning av CDN-trafik genom centrala proxyservrar, så undviker du onödigt långa svarstider.
 
 Kör [Microsoft Support and Recovery Assistant for Office 365](https://diagnostics.office.com) på målenheter om du stöter på problem med installation eller körning.
+
+### <a name="additional-troubleshooting-details"></a>Ytterligare felsökningsinformation
+
+Om du inte kan installera O365-apparna på en enhet måste du ta reda på om problemet är relaterat till Intune eller OS/Office. Om mapparna *Microsoft Office* och *Microsoft Office 15* visas i katalogen *Programfiler* på enheten vet du att Intune har initierat distributionen. Om de två mapparna inte visas under *Programfiler* kontrollerar du följande:
+
+- Att enheten har registrerats korrekt i Microsoft Intune. 
+- Att det finns en aktiv nätverksanslutning på enheten. Om enheten är i flygplansläge, är inaktiverad eller är på en plats utan anslutning, gäller inte principen förrän nätverksanslutningen har upprättats.
+- Om både nätverkskraven för Intune och Office 365 är uppfyllda och relaterade IP-intervall är tillgängliga utifrån följande artiklar:
+
+  - [Krav för Intune-nätverkskonfiguration och bandbredd](https://docs.microsoft.com/intune/network-bandwidth-use)
+  - [Webbadresser och IP-adressintervall för Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
+
+- Rätt grupper har tilldelats O365-programsviten. 
+
+Övervaka också storleken på katalogen *C:\Program Files\Microsoft Office\Updates\Download*. Här lagras installationspaketet som hämtas från Intune-molnet. Om storleken inte ökar eller ökar mycket långsamt, rekommenderar vi att du kontrollerar nätverksanslutningen och bandbredden.
+
+När du vet att Intune och nätverksinfrastrukturen fungerar som förväntat går du vidare med att kontrollera operativsystemet. Tänk på följande:
+
+- Målenheten måste köra Windows 10 Creators Update eller senare.
+- Inga befintliga Office-appar får vara öppna medan Intune distribuerar programmen.
+- Befintliga MSI-versioner av Office måste ha tagits bort korrekt från enheten. Intune använder Office Klicka-och-kör, vilket inte är kompatibelt med Office MSI. Det här beteendet beskrivs närmare i det här dokumentet:<br>
+  [Office installerat med Klicka-och-kör och Windows Installer på samma dator stöds inte](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
+- Den inloggade användaren måste ha behörighet att installera program på enheten.
+- Bekräfta att det inte finns några problem baserat på Windows Loggboken-loggen **Windows-loggar** -> **Program**.
+- Samla in utförliga loggfiler för Office-installationen under installationen. Det gör du genom att följa dessa steg:<br>
+    1. Aktivera utförlig loggning för Office-installation på måldatorerna. Du gör detta genom att köra följande kommando för att ändra registret:<br>
+        `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>
+    2. Distribuera Office 365-sviten till målenheterna igen.<br>
+    3. Vänta i cirka 15 till 20 minuter och gå sedan till mappen **%temp%** och mappen **%windir%\temp**, sortera efter **Ändrad den** och välj *{Machine Name}-{TimeStamp}.log*-filerna som ändras enligt din reproduktionstid.<br>
+    4. Kör följande kommando för att inaktivera utförlig loggning:<br>
+        `reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /f`<br>
+        Utförliga loggfiler kan ge ytterligare detaljerad information om installationsprocessen.
 
 ## <a name="errors-during-installation-of-the-app-suite"></a>Fel under installationen av appsviten
 

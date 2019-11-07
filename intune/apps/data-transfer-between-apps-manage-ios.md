@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db583b1fc89edf72f329a605cc86363593eaaa9d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cdc849405b7404203faa6e86d3fed1ea8e35ec43
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497911"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414626"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -81,7 +81,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Sträng | %upn% |
 
 > [!NOTE]  
-> Om du distribuerar en Appkonfigurationsprincip i Outlook-appen med alternativet ”Använda konfigurationsdesigner” konfigureras konfigurationsnyckeln IntuneMAMUPN automatiskt i bakgrunden för principen. Mer information om detta finns i vanliga frågor och svar för [Nya appkonfigurationsprincip för Outlook för iOS och Android – allmän appkonfiguration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+> Om du distribuerar en appkonfigurationsprincip för hanterade enheter i Outlook för iOS med alternativet ”Använda konfigurationsdesigner” och aktiverar **Tillåt endast arbets- eller skolkonton** konfigureras konfigurationsnyckeln IntuneMAMUPN automatiskt i bakgrunden för principen. Mer information finns i vanliga frågor och svar för [Ny appkonfigurationsprincip för Outlook för iOS och Android – allmän appkonfiguration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Exempel 2: Upplevelse för slutanvändaren

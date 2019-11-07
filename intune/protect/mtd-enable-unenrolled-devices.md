@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63079757ee3610d825601921da1d33aa94f851b6
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: b2744a27a733824bab9d920f4de0b49e951c1c34
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72794413"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627641"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune för oregistrerade enheter
 
@@ -51,8 +51,8 @@ Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip f�
 Du kan bestämma vilka MTD-växlingsalternativ som behöver aktiveras enligt din organisations krav. Här finns mer information:
 
 **Inställningar för appskyddsprincip**
-- **Anslut Android-enheter med version 4.1 och senare till *\<MTD-partnernamn>* för utvärdering av appskyddsprincip**: När du aktiverar det här alternativet utvärderar appskyddsprinciper som använder regeln för hotnivå för enhet enheter, däribland data från det här anslutningsprogrammet.
-- **Anslut iOS-enheter med version 8.0 och senare till *\<MTD-partnernamn>* för utvärdering av appskyddsprincip**: När du aktiverar det här alternativet utvärderar appskyddsprinciper som använder regeln för hotnivå för enhet enheter, däribland data från det här anslutningsprogrammet.
+- **Anslut Android-enheter med version 4.4 och senare till *\<MTD-partnernamn>* för utvärdering av appskyddsprincip**: När du aktiverar det här alternativet utvärderar appskyddsprinciper som använder regeln för hotnivå för enhet enheter, däribland data från det här anslutningsprogrammet.
+- **Anslut iOS-enheter med version 11 och senare till *\<MTD-partnernamn>* för utvärdering av appskyddsprincip**: När du aktiverar det här alternativet utvärderar appskyddsprinciper som använder regeln för hotnivå för enhet enheter, däribland data från det här anslutningsprogrammet.
 
 **Gemensamma delade inställningar**
 - **Antalet dagar tills partnern är icke-kommunikativ**: Maximalt antal dagar av inaktivitet innan Intune betraktar partnern som icke-kommunikativ eftersom anslutningen har gått förlorad. Intune ignorerar efterlevnadsstatusen för MTD-partners som inte svarar.

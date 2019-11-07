@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c88366ea64182ccf8d45bc3e890a2579df20f1
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585650"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635370"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Översikt över guidade Intune-scenarier 
 
@@ -46,7 +46,7 @@ Guidade scenarier erbjuder specifika funktioner. Följande information hjälper 
 
 ### <a name="launching"></a>Starta  
 
-Alla guidade scenarier är tillgängliga från **[Enhetshanteringsportalen](https://devicemanagement.microsoft.com)**  > **Felsökning och hjälp** > **Guidade scenarier**. 
+Alla guidade scenarier är tillgängliga från **[Enhetshanteringsportalen](https://devicemanagement.microsoft.com)** > **Felsökning + support** > **Guidade scenarier**. 
 
 Det guidade scenariot börjar med en introduktion som förklarar syftet med scenariot och eventuella krav som krävs för att slutföra konfigurationen. I det här läget kontrolleras dina administratörsbehörigheter för att verifiera att du har alla nödvändiga behörigheter för att slutföra scenariot.  
 
