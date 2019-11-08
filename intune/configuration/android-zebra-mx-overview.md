@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13e5e7d49ec7e808f7cb5ba419dc881717539564
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e5804b415d26b07944c500b0158cf84a2d4412c
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496034"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182862"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Använda och hantera Zebra-enheter med Zebra Mobility Extensions i Microsoft Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "72496034"
 
 I Intune finns en omfattande uppsättning funktioner, bland annat för att hantera appar och konfigurera enhetsinställningar. Dessa inbyggda funktioner och inställningar används för att hantera Android-enheter som tillverkats av Zebra Technologies (även kallade ”Zebra-enheter”).
 
-Med **Mobility Extensions (MX)** -profiler kan du anpassa eller lägga till fler Zebra-specifika inställningar på Android-enheter.
+Med Zebras **Mobility Extensions (MX)** -profiler kan du anpassa eller lägga till fler Zebra-specifika inställningar på Android-enheter.
 
 Den här artikeln visar hur du använder Zebra Mobility Extensions (MX) på Zebra-enheter i Microsoft Intune.
 
@@ -52,6 +52,7 @@ Med Intune kan du registrera Zebra-enheter för att distribuera dina verksamhets
 - Se till att du har den senaste versionen av skrivbordsappen StageNow från Zebra Technologies.
 - Se [Zebras fullständiga MX-funktionstabell](http://techdocs.zebra.com/mx/compatibility) (öppnar Zebras webbplats) för att kontrollera att de profiler du skapar är kompatibla med enhetens MX-version, operativsystemversion och modell.
 - Vissa enheter, till exempel TC20/25-enheter, stöder inte alla tillgängliga MX-funktioner i StageNow. Gå till [Zebras funktionstabell](http://techdocs.zebra.com/mx/tc2x/) (öppnar Zebras webbplats) om du vill se den senaste supportinformationen.
+
 
 ## <a name="step-1-install-the-latest-company-portal-app"></a>Steg 1: Hämta den senaste versionen av appen Företagsportal
 

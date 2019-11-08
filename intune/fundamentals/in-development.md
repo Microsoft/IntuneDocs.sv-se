@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/07/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea5fae72f6e2057ef0b03a7bd295085ed1ac3bbd
-ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
+ms.openlocfilehash: 3720b0b9a67f0c3462993feef4162ef35f7f3f92
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601526"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182924"
 ---
-# <a name="in-development-for-microsoft-intune---october-2019"></a>Under utveckling för Microsoft Intune – oktober 2019
+# <a name="in-development-for-microsoft-intune---november-2019"></a>Under utveckling för Microsoft Intune – november 2019
 
 För att hjälpa dig med förberedelser och planering innehåller den här sidan information om uppdateringar av och funktioner i användargränssnittet i Intune som är under utveckling, men som inte släppts än. Förutom informationen på den här sidan:
 
@@ -58,8 +58,14 @@ För att hjälpa dig med förberedelser och planering innehåller den här sidan
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Apphantering
 
-### <a name="apply-dark-mode-in-ios-company-portal----4911422----"></a>Använd mörkt läge i iOS Företagsportal <!-- 4911422  -->
-Mörkt läge är planerat för iOS-Företagsportal. Du kommer att kunna hämta företags program, hantera enheter och få IT-support i valfritt färg schema. Mer information om iOS-företagsportalen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](../apps/company-portal-app.md).
+### <a name="smime-support-for-microsoft-outlook-mobile----2669398----"></a>S/MIME-stöd för Microsoft Outlook Mobile <!-- 2669398  -->
+Intune har stöd för att leverera S/MIME-signering och krypterings certifikat som kan användas med Outlook Mobile på iOS och Android. Relaterad information finns i [e-postinställningar för iOS-enheter](~/configuration/email-settings-ios.md) och [e-postinställningar för Android-enheter](~/configuration/email-settings-android.md).
+
+### <a name="custom-settings-support-for-macos-applications----4736278----"></a>Stöd för anpassade inställningar för macOS-program <!-- 4736278  -->
+Intune stöder anpassade inställningar, så att du kan lägga till vissa nycklar och värden i en befintlig egenskaps lista för inställningar (. plist) för att konfigurera macOS-appar och enheten. Alla appar har inte stöd för hanterade inställningar, och i vissa fall kan endast vissa inställningar hanteras. Inställningarna distribueras endast via enhets kanalen. Du bör bara ladda upp filer för egenskaps listor eller XML-filer som är riktade mot enhets kanal inställningar.
+
+### <a name="assignment-type-value-in-windows-company-portal----5459950----"></a>Tilldelnings typ värde i Windows Företagsportal <!-- 5459950  -->
+Sidan **installerade appar** i Windows företagsportal-appen kommer att uppdateras. Kolumnen **tilldelnings typ** på sidan **installerade appar** har uppdaterats så att den kallas "krävs av din organisation". Möjliga värden är **Ja** eller **Nej** för att ange nödvändiga eller tillgängliga appar. Den här ändringen görs som svar på viss förvirring i slutanvändaren. Mer information om Windows företagsportal finns i [Så här konfigurerar du appen för Microsoft Intune-företagsportal](~/apps/company-portal-app.md).
 
 ### <a name="run-win32-apps-on-windows-10-s-mode-devices----3747604----"></a>Köra Win32-appar på Windows 10 S-mode-enheter <!-- 3747604  --> 
 Du kan installera och köra Win32-appar på enheter som hanteras i Windows 10 S-läge. Skapa en eller flera kompletterande principer för S-läge med hjälp av PowerShell-verktygen för Windows Defender-WDAC (program kontroll). Använd Device Guard-signing Portal för att signera tilläggs principerna. Sedan laddar du upp och distribuerar principerna via Intune. 
@@ -93,15 +99,6 @@ Företagsportal-appen visar ytterligare status meddelanden för Programinstallat
 - Appen har installerats men kräver en omstart.
 - Appen håller på att installeras men kräver en omstart för att fortsätta.
 
-### <a name="assign-the-microsoft-edge-beta-for-macos----4678761----"></a>Tilldela Microsoft Edge beta för macOS <!-- 4678761  -->
-Du kan lägga till och tilldela den senaste versionen av Microsoft Edge beta till Intune för macOS-enheter. 
-
-Så här tilldelar du Microsoft Edge beta för macOS-enheter:
-1. I Intune väljer du **klient program**  > **appar**  > **Lägg till app**  > **Microsoft Edge – MacOS**. 
-1. Tilldela Microsoft Edge beta till de avsedda grupperna. Microsoft AutoUpdate (MAU) håller Microsoft Edge uppdaterat. 
- 
-Mer information om Microsoft Edge finns i [Hantera webb åtkomst med hjälp av Microsoft Edge med Microsoft Intune](../apps/manage-microsoft-edge.md).
-
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Konfigurera program meddelande innehåll för organisations konton <!-- 2576686 -->
 Med Intune-appen på Android-och iOS-enheter kan du styra appens meddelande innehåll för organisations konton. Den här funktionen kommer att kräva stöd från program och är kanske inte tillgänglig för alla APP-aktiverade program. Mer information om APP finns i [Vad är appskyddsprinciper?](../apps/app-protection-policy.md)
 
@@ -109,27 +106,55 @@ Med Intune-appen på Android-och iOS-enheter kan du styra appens meddelande inne
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Enhetskonfiguration
 
-### <a name="new-device-firmware-configuration-interface-profile-for-devices-that-run-windows-10-and-later----2266073----"></a>Ny enhets profil för konfiguration av inbyggd program vara för enheter som kör Windows 10 och senare <!-- 2266073  -->
-I Windows 10 och senare kan du skapa en enhets konfigurations profil för att kontrol lera inställningar och funktioner: 
+### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices----3246388----"></a>Använda PKCS-certifikat med Wi-Fi-profiler på enheter med Windows 10 och senare <!-- 3246388  -->
+För närvarande kan du autentisera Windows Wi-Fi-profiler med SCEP-certifikat (**enhets konfiguration** > **profiler** > **Skapa profil** > **Windows 10 och senare** för Platform > **Wi-Fi** för profil typ > **Enterprise** > **EAP-typ**). Du kommer att kunna använda PKCS-certifikat med dina Windows Wi-Fi-profiler. Med den här funktionen kan användarna autentisera Wi-Fi-profiler med hjälp av nya eller befintliga PKCS-certifikat profiler i din klient organisation. 
 
-1. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-1. Välj **Windows 10 och senare** som Plattform. 
- 
-En ny enhets typ för konfigurations gränssnitt för inbyggd enhet gör att Intune kan hantera UEFI-inställningar (BIOS).
+Mer information om Wi-Fi-profiler finns i [lägga till Wi-Fi-inställningar för enheter med Windows 10 och senare i Intune](../configuration/wi-fi-settings-windows.md).
 
-Information om de aktuella inställningar som du kan konfigurera finns i [använda funktioner och inställningar på dina enheter med hjälp av enhets profiler i Microsoft Intune](../configuration/device-profiles.md).
+Gäller för:
+- Windows 10 och senare
 
-Den här funktionen gäller för Windows 10-RS5 (1809) och senare på utvalda enheter.
- 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices----4892824----"></a>Nya ExchangeActiveSync-inställningar när du skapar en profil för e-postenhets konfiguration på iOS-enheter <!-- 4892824  --> 
+På iOS/iPad-enheter kan du konfigurera e-postanslutning i en enhets konfigurations profil (**enhets konfiguration** > **profiler** > **Skapa profil** > **iOS/iPad** för Platform > **e-post** för profil typ). 
+
+Det kommer att finnas nya ExchangeActiveSync-inställningar tillgängliga, inklusive:
+- Välj vilka tjänster som ska synkroniseras (eller blockera synkronisering), till exempel e-post, kalender och kontakter.
+- Tillåt (eller blockera) användare att ändra synkroniseringsinställningarna för dessa tjänster på sina enheter. 
+
+Om du vill se de aktuella inställningarna går du till [Inställningar för e-postprofil för iOS-enheter i Intune](../configuration/email-settings-ios.md).
+
+Gäller för:
+- iOS 13.0 och senare
+- iPadOS 13.0 och senare
+
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices----5353228----"></a>Hindra användare från att lägga till personliga Google-konton till Android Enterprise-enhetens ägare och dedikerade enheter <!-- 5353228  -->
+Du kan förhindra att användare skapar personliga Google-konton på Android Enterprise-enhetens ägare och dedikerade enheter (**enhets konfiguration** > **profiler** > **Skapa profil** > **Android Enterprise** för plattforms > **enhets ägaren bara > enhets begränsningar** för profil typ > **användare och konton inställningar**).
+
+Om du vill se de aktuella inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-android-for-work.md).
+
+Gäller för:
+- Android Enterprise-enhetsägare
+- Dedikerade Android Enterprise-enheter
+
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile----5468501----"></a>Loggning på Server sidan för Siri-kommandon tas bort i profilen iOS-enhets begränsningar <!-- 5468501  -->
+På iOS-enheter kan du skapa en profil för enhets begränsningar som konfigurerar loggning på Server sidan för Siri-kommandon (**enhets konfiguration** > **profiler** > **Skapa profil** > **iOS/iPad** för plattform > **Enhets begränsningar** för profil typ > **inbyggda appar**). Inställningen på **Server sidans loggning för Siri-kommandon** kommer att tas bort.
+
+Den här inställningen tas bort från Intunes administratörs konsol. Den här inställningen har ingen påverkan på enheten trots att befintliga principer som har den här inställningen konfigurerad kommer att fortsätta att visa inställningen. Om du vill ta bort inställningen från befintliga principer går du till principen, gör en mindre redigering, sparar den och principen kommer att uppdateras.
+
+Om du vill se de inställningar som du kan konfigurera går du till [Inställningar för iOS- och IPadOS-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-ios.md).
+
+Gäller för:
+- iOS
+
 
 <!-- ***********************************************-->
-## <a name="device-enrollment"></a>Enhetsregistrering
-
-### <a name="for-ios-devices-customize-the-enrollment-privacy-window-of-company-portal----4394993----"></a>För iOS-enheter anpassar du sekretess fönstret för registrering i Företagsportal <!-- 4394993  -->
-Med Markdown kan du anpassa företagsportalens sekretessida, som slutanvändarna ser vid iOS-registreringen. Mer specifikt kan du anpassa listan med saker som din organisation inte kan se eller göra på enheten.
+<!--## Device enrollment-->
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Enhetshantering
+
+### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Redigera enhets namn värde för autopilot-enheter<!-- 2640074  -->
+Du kan redigera enhets namn svärdet för Azure AD-anslutna autopilot-enheter. Det gör du genom att gå till **Intune** > **enhets registrering** > **Windows-registrering** > **Windows autopilot** > **enheter** > Välj enhet > ändra värdet för **enhets namn** i den högra rutan > **Spara**.
 
 
 ### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Redigera gruppens märkes värde för autopilot-enheter<!-- 4816775 -->
@@ -143,25 +168,38 @@ Du kan redigera **grupp märkes** värdet för autopilot-enheter:
 ### <a name="target-macos-user-groups-to-require-jamf-management----4061739---"></a>Mål användar grupper för macOS för att kräva JAMF-hantering <!-- 4061739 -->
 Du kan rikta in dig på specifika grupper av användare så att de kräver att deras macOS-enheter hanteras av JAMF. Den här anpassningen gör att du kan använda JAMF-kompatibilitet för en delmängd av macOS-enheter medan andra enheter fortsätter att hanteras av Intune. Med mål kan du också gradvis migrera användarnas enheter från ett MDM-system (Mobile Device Management) till en annan.
 
-### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Distribuera program uppdateringar till macOS-enheter <!-- 3194876 -->
-Du kan distribuera program uppdateringar till grupper av macOS-enheter. Den här funktionen inkluderar kritisk, inbyggd program vara, konfigurations fil och andra uppdateringar. Du kan skicka uppdateringar vid nästa enhets incheckning. Alternativt kan du välja ett vecko schema för att distribuera uppdateringar i eller utanför perioder som du har angett. 
+<!-- ***********************************************-->
+## <a name="intune-apps"></a>Intune-appar
 
-Den här funktionen hjälper dig när du vill uppdatera enheter utanför standard arbets tid eller utanför timmar när supportavdelningen är helt bemannad. Du får också en detaljerad rapport om alla macOS-enheter som har distribuerade uppdateringar. Du kan öka detalj nivån i rapporten efter enhet för att se status för en viss uppdatering.
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349----"></a>Förbättrad användning av macOS-registrering i Företagsportal <!-- 5074349  -->
+Företagsportal för macOS-registreringen kommer att ha en enklare registrerings process som kommer att justeras mer nära med Företagsportal för registrerings upplevelsen för iOS. Enhets användare ser:  
+
+* Ett slimmat användar gränssnitt.  
+* En förbättrad registrerings check lista.  
+* Tydligare instruktioner för hur du registrerar sina enheter.  
+* Förbättrade fel söknings alternativ.  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857----"></a>Förbättrad check lista design i Företagsportal app för Android<!-- 5550857  -->
+Check lista för installationen i Företagsportal-appen för Android kommer att uppdateras med en lätt design och nya ikoner. Ändringarna justeras med de senaste uppdateringarna som gjorts i Företagsportal-appen för iOS.
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Övervakning och fel sökning
 
-### <a name="android-report-on-the-devices-overview-page----2984353----"></a>Android-rapport på sidan enhets översikt <!-- 2984353  -->
-Vi lägger till en ny rapport på sidan **enhets översikt** . Rapporten visar hur många Android-enheter som har registrerats i varje enhets hanterings lösning. Diagrammet visar enhets antal för arbets profil, fullständigt hanterad, dedikerad och enhets administratör registrerad. 
-
-Om du vill se rapporten väljer du **Intune** > **enheter** > -**Översikt**.
-
-### <a name="updated-support-experience-------5012398------"></a>Uppdaterad support upplevelse   <!--  5012398    -->
+### <a name="updated-support-experience-------5012398------"></a>Uppdaterad supportupplevelse   <!--  5012398    -->
 Som en del av fortsatta förbättringar kommer vi att uppdatera support upplevelsen i konsolen för Intune.  Vi förbättrar sökningen och feedbacken i konsolen för vanliga problem och vi effektiviserar arbets flödet för att kontakta supporten.     
 
 <!-- ***********************************************-->
-<!--## Security-->
+## <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
 
+### <a name="duplicate-custom-or-built-in-roles----1081938---"></a>Duplicera anpassade eller inbyggda roller <!-- 1081938 -->
+Du kommer att kunna kopiera inbyggda och anpassade roller. Det gör du genom att gå till **Intune** > **roller** > **alla roller** > Välj en roll i listan > **dubblett**. Se till att ange ett nytt namn som är unikt.
+
+<!-- ***********************************************-->
+
+## <a name="security"></a>Säkerhet
+
+### <a name="bitlocker-key-rotation--------2564951--------"></a>BitLocker-nyckel rotation     <!-- 2564951      -->
+Du kan använda Intune för att rotera återställnings nycklar för BitLocker för hanterade enheter som kör Windows version 1909 eller senare. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Meddelanden

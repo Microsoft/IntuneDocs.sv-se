@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1670ddf9299d12312f09d188e4410d14ac40fbe7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 5baf0e9079cc148101a68e5cd2d3a4ed500f567f
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506332"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414865"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrera din enhet med företagsportalen  
 Registrera din personliga eller företagsägda Android-enhet för att få säker åtkomst till företagets e-post, appar och data. Företagsportalen har stöd för Android-enheter, däribland Samsung Knox, som kör Android 4.4 och senare.  
@@ -39,97 +39,63 @@ Se till att [installera den kostnadsfria Intune-företagsportalsappen från Goog
 
 Under registreringen kan du bli ombedd att välja en kategori som bäst beskriver hur du använder enheten. Företagets support använder ditt svar för att se vilka appar du har åtkomst till.  
 
-1. Öppna företagsportalappen.  
+1. Öppna företagsportalappen och logga in med ditt arbets- eller skolkonto.  
 
-3. På företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto.
+2. Om du uppmanas att godkänna din organisations villkor trycker du på **GODKÄNN ALLT**.  
 
-   ![Välkomstskärmen i företagsportalsappen för Android, som uppmanar användarna att logga in med sina obligatoriska arbets- eller skolkonton. Här informeras även om att Microsoft-konton och andra personliga konton inte godkänns.](./media/and-enroll-0-welcome-screen.png)   
+   ![Exempel bild på skärmen Företagsportal, villkor, som markerar knappen "acceptera alla".](./media/accept-terms-1911.png)  
 
-4. Om du uppmanas att godkänna organisationens villkor trycker du på **GODKÄNN**. Den här skärmen kan skilja sig något från exemplet på skärmbilden nedan. 
 
-   ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
+3. Granska vad din organisation kan och inte kan se. Tryck sedan på **FORTSÄTT**.
 
-5. Logga in på företagsportalappen med ditt konto och lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
 
-   ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
+    ![Exempel bild av Företagsportal, vi värnar om din integritets skärm och markerar knappen Fortsätt.](./media/android-privacy-screen-1911.png)  
+4. Granska vad du förväntar dig i de kommande stegen. Tryck sedan på **Nästa**.  
 
-6. Tryck på **FORTSÄTT** på skärmen **Konfiguration av företagsåtkomst**.
+    ![Exempel bild av Företagsportal, vad är nästa skärm och markerar knappen Nästa.](./media/android-whats-next-1911.png)  
 
-   ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_01_1709_new.png)
 
-   > [!NOTE]
-   > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
+5. Beroende på din version av Android kan du bli uppmanad att tillåta åtkomst till vissa delar av enheten. Dessa meddelanden krävs av Google och inte styrs av Microsoft.  
 
-7. Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
+    Tryck på **Tillåt** för följande behörigheter:  
+    * **Tillåt företagsportal att skapa och hantera telefonsamtal**: med den här behörigheten kan enheten dela sitt internationella IMEI-nummer (Mobile Station Equipment Identity) med Intune, din organisations enhets hanterings leverantör. Det är säkert att tillåta den här behörigheten. Microsoft kommer aldrig att ringa eller hantera telefonsamtal.  
+    * **Tillåt företagsportal åtkomst till dina kontakter**: med den här behörigheten kan företagsportal-appen skapa, använda och hantera ditt arbets konto.  Det är säkert att tillåta den här behörigheten. Microsoft kommer aldrig att få åtkomst till dina kontakter. 
 
-   ![Sekretessinställningar](/intune/media/android_cp_enroll_02_after_1710.png)
+    Om du nekar behörighet får du en uppmaning igen nästa gång du loggar in på Företagsportal. Om du vill stänga av de här meddelandena väljer du **Fråga inte igen**. Om du vill hantera app-behörigheter går du till inställningar appen > **appar** > **Företagsportal** > **behörigheter** > **telefon**.  
 
-8. På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
+6. Aktivera appen enhets administratör. 
 
-   ![Skärmen Vad kommer härnäst](/intune/media/android_cp_enroll_03_after_1710.png)
+    Företagsportal behöver enhets administratörs behörighet för att hantera enheten på ett säkert sätt. Genom att aktivera appen kan din organisation identifiera möjliga säkerhets problem, till exempel upprepade misslyckade försök att låsa upp enheten och svara på lämpligt sätt.  
 
-9. Gör så här om du använder Android 6.0 eller senare. Annars går du till nästa steg.
+    ![Exempel bild på skärmen Aktivera enhets administratör och markera knappen Aktivera.](./media/activate-device-administrator-1911.png)  
 
-   Följande meddelanden kan visas om företagets support har konfigurerat vissa principer:
-   - **Tillåt att företagsportalen kan ringa och hantera telefonsamtal?**
+> [!NOTE]
+> Microsoft styr inte meddelande tjänsten på den här skärmen. Vi förstår att dess formuleringen kan verka något drastiskt. Företagsportal kan inte ange vilka begränsningar och åtkomst som är relevanta för din organisation. Kontakta din IT-support om du har frågor om hur din organisation använder appen. Gå till [Företagsportal-webbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980) och leta upp din organisations kontaktuppgifter.  
 
-     ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
 
-   Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig ringer eller hanterar dina telefonsamtal**! Google styr meddelandetexten och Microsoft kan inte ändra den. Allt du gör när du ger åtkomst är att du låter din enhet skicka enhetens IMEI-nummer (International Mobile Station Equipment Identity) till Intune. IMEI är ett slags serienummer som är en unik identifierare för en mobil enhet.
+7. Enheten börjar registrera sig. Om du använder en Samsung KNOX-enhet uppmanas du först att granska och godkänna sekretess policyn för den andra.   
 
-   Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen. Om du vill inaktivera framtida meddelanden väljer du **Fråga inte igen**. Om du vill återkalla åtkomstbehörigheten går du till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktiverar sedan behörigheten.  
+    ![Exempel bild av skärmen för Samsung KNOX sekretess policy som visas under registreringen.](./media/and-enroll-7-knox-privacy-policy.png)  
 
-   - **Tillåt att företagsportalappen får åtkomst till dina kontakter?**
+8. På skärmen **konfiguration av företags åtkomst** kontrollerar du att enheten har registrerats. Tryck sedan på **FORTSÄTT**.  
 
-     ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
+    ![Exempel bild av Företagsportal, skärmen konfiguration av företags åtkomst, som visar Hämta enhets hantering är slutfört.](./media/update-settings-1911.png)  
 
-     Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. När du beviljar åtkomst låter det endast företagsportalappen att skapa, använda och hantera ditt arbetskonto.
+9. Din organisation kan kräva att du uppdaterar enhets inställningarna. Tryck på **Lös** för att justera en inställning. När du är klar med att uppdatera inställningarna trycker du på **Fortsätt**.  
 
-     Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
+   ![Exempel bild av Företagsportal, uppdatera enhets inställningar, markera lös och fortsätta knappar.](./media/resolve-settings-1911.png)  
 
-10. På skärmen **Aktivera enhetsadministratör** trycker du på **Aktivera**.
+10. När installationen är klar trycker du på **klar**.    
 
-    ![Skärmen Aktivera enhetsadministratör](./media/and-enroll-5-activate.png)
-
-    Företagsportalen måste innehålla enhetsadministratörens roll för att kunna hantera enheten. Det innebär att administratören kan se vissa saker – t.ex. hur många gånger som du har försökt att låsa upp din skärm – och utföra vissa åtgärder.    
-
-    Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta företagets support med hjälp av kontaktinformationen på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980) om du har frågor som är specifika för användningen i din organisation.  
-
-11. Följ anvisningarna för att ange en PIN-kod eller ett lösenord. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, visas inte den här skärmen och du behöver inte ange en ny PIN-kod eller ett nytt lösenord.  
-
-    ![Ange PIN-kod eller lösenord](./media/and-enroll-6-PIN-native.png)
-
-12. Om du använder en Samsung Knox-enhet trycker du på **Bekräfta**, så visas ett meddelande om att enheten registreras. Se följande skärm som visar att enheten registreras om du använder en Android-enhet.
-
-    ![Sekretesspolicy för Samsung Knox](./media/and-enroll-7-knox-privacy-policy.png)
-
-    Den här skärmen visar att enheten registreras.
-
-    ![Skärmen Registrerar enheten](./media/and-enroll-8-device-enrolling.png)
-
-13. När skärmen **Konfigurera företagsåtkomst** visas trycker du på **FORTSÄTT**. Om ett meddelande indikerar att enheten är inkompatibel följer du anvisningarna för att åtgärda problemet. Tryck sedan på **FORTSÄTT**.
-
-    ![Enheten är inte kompatibel, men har registrerats](/intune/media/android_cp_enroll_05_post_1709.png)
-
-    ![Det förekommer enhetsefterlevnadsproblem som måste lösas](/intune/media/android_cp_enroll_03_post_1709.png)
-
-    Du hittar mer information om problemen genom att trycka på dem.
-
-    ![Utvidgade enhetsefterlevnadsproblem](/intune/media/android_cp_enroll_04_post_1709.png)
-
-    ![Skärmen Konfiguration av företagsåtkomst](./media/and-enroll-9d-comp-access-setup.png)  
-
-14. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Enheten har nu registrerats.
-
-    ![Skärmen Konfiguration av företagsåtkomst slutförd](./media/and-enroll-10-comp-access-setup-complete.png)
+    ![Exempel bild av Företagsportal, skärmen konfiguration av företags åtkomst, som visar slutförd installation och markering klar.](./media/android-enrollment-done-1911.png) 
 
 ## <a name="next-steps"></a>Nästa steg  
 
-Innan du försöker installera företagsappar går du till **Inställningar** > **Säkerhet** och aktiverar **Okända källor**. Om du inte aktiverar det här alternativet innan du försöker installera apparna visas följande meddelande: "Installationen blockerades". Av säkerhetsskäl är enheten inställd på att blockera installationer av appar från okända källor. Du kan trycka på **Inställningar** i dialogrutan med felmeddelandet för att gå till alternativet **Okända källor**.  
+Innan du försöker installera en skola eller en arbets app går du till **inställningar** > **säkerhet**och aktiverar **okända källor**. Om du inte aktiverar det här alternativet visas följande meddelande när du försöker att installera en app: "Installationen blockerades. Av säkerhetsskäl är enheten inställd på att blockera installationer av appar från okända källor. Du kan trycka på **Inställningar** i meddelandet för att gå direkt till **okända källor**.  
 
 > [!Note]
 > Om din organisation använder kostnad hanteringsprogramvara för telekomtjänster måste ytterligare ett part steg utföras innan enheten har registrerats fullständigt. Läs mer [här](enroll-your-device-with-telecom-expense-management-android.md).
 
 Om du får ett felmeddelande när du försöker registrera enheten i Intune kan du [skicka ett e-postmeddelande till företagets support](send-logs-to-your-it-admin-by-email-android.md).  
 
-Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
