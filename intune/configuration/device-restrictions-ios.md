@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73414681"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709746"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -417,6 +417,9 @@ Gäller enheter som kör iOS 9,3 eller senare.
 - **Lista över typer av appar**: skapa en lista över appar som ska visas eller döljas. Du kan visa eller dölja inbyggda appar och branschspecifika appar. På Apples webbplats finns en lista över [inbyggda Apple-appar](https://support.apple.com/HT208094). Alternativen är:
 
   - **Dolda appar**: Ange en lista med appar som är dolda för användarna. Användarna kan varken visa eller öppna de här apparna.
+  
+    Apple förhindrar att vissa inbyggda appar döljs. Du kan till exempel inte dölja **Inställningar** eller **plån boks** program på enheten. [Ta bort inbyggda Apple Apps](https://support.apple.com/HT208094) visar de appar som kan vara dolda.
+  
   - **Synliga appar**: Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
 
 - **App-URL**: Ange Store-appens URL för den app som du vill visa eller dölja. Exempel:
