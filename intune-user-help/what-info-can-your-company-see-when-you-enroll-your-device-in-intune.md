@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c219b628348f51c2a5601e4977664d2636effb45
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fc50f48afbd527f3c6d82cc0c71a166b0356ab9e
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505919"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801468"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Vilken information min organisation se när jag registrerar min enhet?
 
@@ -52,8 +52,8 @@ Organisationen kan inte se din personliga information när du registrerar en enh
 
 **Det här kan organisationen kanske se:**
 
-- Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för organisationen. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
+- Telefonnummer: Vid företagsägda enheter kan det fullständiga telefonnumret visas. För personligt ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för organisationen. Du kan se ägarskaps typen för varje enskild enhet på sidan med **enhets information** .
 - Lagringsutrymme för enheten: om du inte kan installera en obligatorisk app kan organisationen titta på din enhets lagringsutrymme för att ta reda på om det är för lågt.  
 - Plats: din organisation kan aldrig se enhetens plats, såvida du inte behöver återställa en övervakad iOS-enhet som har försvunnit. Gå till [dokumentationen för Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) för att få mer information om övervakade enheter.  
-- Information om appinventering: om organisationen använder skydd mot mobilhot kommer de att kunna se information om de appar som är på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Information om appinventering: om organisationen använder skydd mot mobilhot kommer de att kunna se information om de appar som är på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). På personliga enheter kan organisationen bara se din hanterade appinventering. På företagsägda enheter kan organisationen se hela din appinventering.
 - Nätverksinformation: en del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din organisationssupport. Om organisationen till exempel kräver att enheter ska finnas kvar i en viss byggnad kan din enhet identifiera det nätverk som den är ansluten till. 

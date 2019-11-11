@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 783ae8bf3216c514bac183ed1945c454cbaa1708
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413860"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713473"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -44,7 +44,7 @@ Innan du kör programhanteringsverktyget måste du uppfylla vissa allmänna krav
 
   * App-filen för indata måste ha filnamnstillägget **.ipa** eller **.app**.
 
-  * Indataappen måste kompileras för iOS 10 eller senare.
+  * Indataappen måste kompileras för iOS 11 eller senare.
 
   * Indataappen kan vara krypterad.
 
@@ -289,26 +289,27 @@ Om det inte går att slutföra programhanteringsverktyget visas något av följa
 |Indataappen som du angav är redan omsluten och har den senaste versionen av principmallen.|Programhanteringsverktyget omsluter inte en befintlig omsluten app igen med den senaste versionen av principmallen.|
 |VARNING: Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
 
-### <a name="log-files-for-the-app-wrapping-tool"></a>Loggfiler för programhanteringsverktyget
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Samlar in loggar för dina omslutna program från enheten
+Använd följande steg för att hämta loggar för dina omslutna program under felsökningen.
 
-Appar som har omslutits med hjälp av programhanteringsverktyget genererar loggar som skrivs till iOS-klientenhetskonsolen. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget. Använd följande steg för att hämta den här informationen:
+1. Gå till inställningar för iOS-appen på enheten och välj LOB-appen.
+2. Växla **Diagnostikkonsolen** till **På**.
+3. Starta LOB-programmet.
+4. Klicka på länken ”Kom igång”.
+5. Du kan nu dela loggar via e-post eller kopiera dem till en plats i OneDrive.
+
+> [!NOTE]
+> Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
+
+### <a name="collecting-crash-logs-from-the-system"></a>Samla in krasch loggar från systemet
+
+Din app kan logga värdefull information i iOS-konsolen för klient enheter. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget. Använd följande steg för att hämta den här informationen:
 
 1. Återskapa problemet genom att köra appen.
 
 2. Samla in konsolens utdata genom att följa Apples instruktioner för att [felsöka distribuerade iOS-appar](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
-3. Filtrera de sparade loggarna för utdata från appbegränsningarna genom att ange följande skript i konsolen:
-
-    ```bash
-    grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
-    ```
-
-    Du kan skicka de filtrerade loggarna till Microsoft.
-
-    > [!NOTE]
-    > I loggfilen representerar objektet 'build-version' Xcode-versionen.
-
-    Omslutna appar kommer också att erbjuda användarna möjlighet att skicka loggarna direkt från enheten via e-post när appen kraschar. Användarna kan skicka loggar till dig så att du kan undersöka dem och vidarebefordra dem till Microsoft om det behövs.
+Omslutna appar kommer också att erbjuda användarna möjlighet att skicka loggarna direkt från enheten via e-post när appen kraschar. Användarna kan skicka loggar till dig så att du kan undersöka dem och vidarebefordra dem till Microsoft om det behövs.
 
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Certifikat, etableringsprofil och autentiseringskrav
 
@@ -442,19 +443,6 @@ Kör helt enkelt ditt vanliga programhanteringskommando med flaggan `-citrix` p�
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
-
-## <a name="getting-logs-for-your-wrapped-applications"></a>Hämta loggar för dina omslutna program
-
-Använd följande steg för att hämta loggar för dina omslutna program under felsökningen.
-
-1. Gå till inställningar för iOS-appen på enheten och välj LOB-appen.
-2. Växla **Diagnostikkonsolen** till **På**.
-3. Starta LOB-programmet.
-4. Klicka på länken ”Kom igång”.
-5. Du kan nu dela loggar via e-post eller kopiera dem till en plats i OneDrive.
-
-> [!NOTE]
-> Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
 
 ## <a name="see-also"></a>Se även
 

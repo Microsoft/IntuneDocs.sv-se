@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2e7dc729879eb6d16a4ab3555d8fe319501a53e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 687505a3ca2bbdffd26e8870705971aafb4783d2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492133"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754945"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -32,11 +32,12 @@ Microsoft Intune har några inbyggda felsökningsprinciper. Med hjälp av dessa 
 I den här artikeln beskrivs några vanliga felsökningsmetoder och några problem du kan stöta på.
 
 ## <a name="check-tenant-status"></a>Kontrol lera status för klient organisation
+
 Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta att prenumerationen är aktiv. Du kan också visa information om aktiva incidenter och rådgivare som kan påverka din princip eller profil distribution.
 
 ## <a name="use-built-in-troubleshooting"></a>Använda inbyggd felsökning
 
-1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du **Felsök**:
+1. I [administrations Center för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **fel sökning + support**:
 
     ![Gå till Hjälp och support i Intune och välj Felsök](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -102,7 +103,7 @@ Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta 
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Du är osäker på om en profil tillämpas korrekt
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Enheter** > **Alla enheter** > välj enheten > **Enhetskonfiguration**. 
 
     Profilerna för varje enhet listas. Varje profil har en **Status**. Statusen gäller när alla tilldelade profiler, inklusive begränsningar och krav på maskinvara och operativsystem, bedöms tillsammans. Möjliga statusar:

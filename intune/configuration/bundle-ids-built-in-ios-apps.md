@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1eda7fef3ee9c2ca4e4a13d9b6effba2ed121b0e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 27a020f4b45ae878718bed4ee6e230c3d288f260
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506949"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755412"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Samlings-ID:n för inbyggda iOS-appar som du kan använda i Intune
 
@@ -55,6 +55,7 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | E-post         | Apple     |
 | com.apple.Maps              | Kartor         | Apple     |
+| com. Apple. mått           | Åtgärd      | Apple     |
 | com.apple.MobileSMS         | Meddelanden     | Apple     |
 | com.apple.Music             | Musik        | Apple     |
 | com.apple.news              | Nyheter         | Apple     |

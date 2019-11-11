@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb992747765ea087d5ef536c2da7c444bfa2d987
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: e8747f3dfa9169a4f1f2de9dcf45db0f5cccadd1
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756754"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
 
@@ -80,8 +80,8 @@ Kontrol lera att enheten har stöd för OEMConfig, att rätt OEMConfig-app lägg
 
 ## <a name="create-an-oemconfig-profile"></a>Skapa en OEMConfig-profil
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **enheter** > **konfigurations profiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen.
@@ -108,11 +108,11 @@ Kontrol lera att enheten har stöd för OEMConfig, att rätt OEMConfig-app lägg
       - Många inställningar har standardvärden som tillhandahålls av OEM-tillverkaren. För att se om det finns ett standardvärde, Hovra över informations ikonen bredvid inställningen. En knapp Beskrivning visar standardvärden för den inställningen (om tillämpligt) och mer information från OEM-tillverkaren.
 
       - Om du klickar på **Rensa** tas en inställning bort från profilen. Om en inställning inte finns i profilen, ändras inte dess värde på enheten när profilen tillämpas.
-        
+
       - Om du skapar ett tomt (avkonfigurerat) paket i Configuration designer tas det bort när du växlar till JSON-redigeraren.
 
     - **JSON-redigerare**: när du väljer det här alternativet öppnas en JSON-redigerare med en mall för det fullständiga konfigurations schema som är inbäddat i appen. Anpassa mallen med värden för de olika inställningarna i redigeraren. Om du använder **Configuration designer** för att ändra dina värden skriver JSON-redigeraren över mallen med värden från Configuration designer.
-    
+
       - Om du uppdaterar en befintlig profil visar JSON-redigeraren de inställningar som senast sparades med profilen.
 
       - OEMConfig-scheman kan vara stora och komplexa. Om du vill uppdatera inställningarna med en annan redigerare väljer du knappen **Hämta JSON-mall** . Använd valfritt redigerings program för att lägga till dina konfigurations värden i mallen. Kopiera och klistra sedan in den uppdaterade JSON-filen i till **JSON-redigerarens** egenskap.

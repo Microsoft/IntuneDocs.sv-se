@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5776ebf3241968cca6da537bb58b7ab2a06f00ba
-ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
+ms.openlocfilehash: 348768be4a42667f579df0ccb500434425258db0
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72892542"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712850"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av Windows-enheter i Microsoft Intune
 
@@ -60,7 +60,7 @@ Fel 80180003: ”Något gick fel. Den här användaren har inte behörighet att 
 Det finns flera möjliga lösningar på det här problemet:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Ta bort enheter som har registrerats
-1. Logga in på [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).    
+1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
 2. Gå till **användare**  > **alla användare**.    
 3. Välj det berörda användar kontot och klicka sedan på **enheter**.    
 4. Välj eventuella oanvända eller oönskade enheter och klicka sedan på **ta bort**. 
@@ -70,12 +70,12 @@ Det finns flera möjliga lösningar på det här problemet:
 > [!NOTE]
 > Den här metoden ökar enhets registrerings gränsen för alla användare, inte bara den berörda användaren.
 
-1. Logga in på [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
+1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Gå till **enhets registrering**  > **registrerings begränsningar**och välj sedan **begränsningar för enhets gräns**.    
 3. Öka värdet för **enhets gräns**. 
 
 ##### <a name="check-device-type-restrictions"></a>Kontrollera begränsningar för enhetstypen
-1. Logga in på [Intune-portalen](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) med ett konto som global administratör.
+1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett globalt administratörs konto.
 2. Gå till **enhets registrering**  > **registrerings begränsningar**och välj sedan **standard** begränsning under **begränsningar för enhets typ**.    
 3. Välj **plattformar**och välj sedan **Tillåt** för **Windows (MDM)** .
 

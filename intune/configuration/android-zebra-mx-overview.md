@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e5804b415d26b07944c500b0158cf84a2d4412c
-ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
-ms.translationtype: HT
+ms.openlocfilehash: 7f343ace48c917e65d9d59cd7c42c53e9b892968
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182862"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756726"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Använda och hantera Zebra-enheter med Zebra Mobility Extensions i Microsoft Intune
 
@@ -52,7 +52,6 @@ Med Intune kan du registrera Zebra-enheter för att distribuera dina verksamhets
 - Se till att du har den senaste versionen av skrivbordsappen StageNow från Zebra Technologies.
 - Se [Zebras fullständiga MX-funktionstabell](http://techdocs.zebra.com/mx/compatibility) (öppnar Zebras webbplats) för att kontrollera att de profiler du skapar är kompatibla med enhetens MX-version, operativsystemversion och modell.
 - Vissa enheter, till exempel TC20/25-enheter, stöder inte alla tillgängliga MX-funktioner i StageNow. Gå till [Zebras funktionstabell](http://techdocs.zebra.com/mx/tc2x/) (öppnar Zebras webbplats) om du vill se den senaste supportinformationen.
-
 
 ## <a name="step-1-install-the-latest-company-portal-app"></a>Steg 1: Hämta den senaste versionen av appen Företagsportal
 
@@ -134,8 +133,8 @@ När du har testat filen är nästa steg att distribuera profilen till enheter m
 
 Skapa en enhetskonfigurationsprofil i Intune:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **enheter** > **konfigurations profiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 164c34f4a46ca11e2788b72dee70bdd40c25e7f3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493908"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755256"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -223,12 +223,12 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
 - **Aviseringar från Åtgärdscenter (endast mobil)** : **Blockera** hindrar aviseringar från Åtgärdscenter från att visas på enhetens låsskärm. **Inte konfigurerat** (standard) tillåter användare att välja vilka appar som visar meddelanden på låsskärmen.
 
-  [CSP för AboveLock/AllowActionCenterNotifications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowactioncenternotifications)
+  [CSP för AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **URL till bild på låst skärm (endast stationär dator)** : Anger URL till en bild i formatet JPG, JPEG eller PNG som används som bakgrundsbild för låsskärmen i Windows. Ange till exempel `https://contoso.com/image.png`. Den här inställningen låser bilden och kan inte ändras efteråt.
 - **Skärmtidsgräns kan ställas in av användaren (endast mobil)** : **Tillåt** låter användarna konfigurera skärmtidsgränsen. **Inte konfigurerat** (standard) ger inte användarna det här alternativet.
 
-  [CSP för DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowscreentimeoutwhilelockeduserconfig)
+  [CSP för DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
 - **Cortana på låst skärm** (endast stationär dator): **Blockera** hindrar användare från att interagera med Cortana när enheten är på låsskärmen. **Inte konfigurerat** (standard) tillåter interaktion med Cortana.
 
@@ -240,7 +240,7 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
 - **Skärmtidsgräns (endast mobil)** : Ange varaktigheten (i sekunder) från skärmlåsning till avstängning av skärmen. Värden som stöds är 11–1800. Ange till exempel `300` för att ställa in tidsgränsen på 5 minuter.
 
-  [CSP för DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
+  [CSP för DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
 ## <a name="messaging"></a>Meddelandefunktion
 
