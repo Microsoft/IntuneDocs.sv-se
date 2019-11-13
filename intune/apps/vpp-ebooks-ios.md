@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 022df428658a3c8791a07cbd797145bfe9a392bb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ae29d2ee5add475db89f6895b22299793a94ac36
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496459"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984084"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram med Microsoft Intune
 
@@ -42,7 +42,6 @@ Du köper flera licenser för e-böcker i iOS via [Apples volymköpsprogram för
 ## <a name="before-you-start"></a>Innan du börjar
 Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till ditt Intune-konto. Dessutom:
 
-* Du kan associera upp till 256 VPP-tokens med ditt Intune-konto.
 * Om du tidigare har använt en VPP-token med en annan produkt måste du generera en ny som ska användas med Intune.
 * Varje token är giltig i ett år.
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.

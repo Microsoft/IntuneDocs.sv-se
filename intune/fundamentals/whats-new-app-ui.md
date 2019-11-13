@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85f9bb72c6c40c67874326b06ebd41286d2d7220
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: d75e75dbce2563aaf31edede8eeab7249aad8e19
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73415209"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801783"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 
@@ -40,7 +40,7 @@ Om du är anställd eller student bör du titta på skärmbilderna och länkarna
 ## <a name="week-of-october-28-2019"></a>Veckan då den 28 oktober 2019 infaller  
 
 ### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Förbättrad utformning av checklistan i företagsportalappen för Android <!-- 5550857 -->  
-Checklistan för inställningar i företagsportalappen för Android har uppdaterats med en enklare design och nya ikoner. Ändringarna ligger i linje med de senaste uppdateringarna som gjorts i företagsportalappen för iOS. Vi håller på att lansera appuppdateringarna för alla kunder och förväntar oss att blir klara i slutet av nästa vecka. De uppdaterade registreringsstegen finns i [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) och [Registrera din Android-enhet](/intune-user-help/enroll-device-android-company-portal).  
+Checklistan för inställningar i företagsportalappen för Android har uppdaterats med en enklare design och nya ikoner. Ändringarna ligger i linje med de senaste uppdateringarna som gjorts i företagsportalappen för iOS. De uppdaterade registreringsstegen finns i [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) och [Registrera din Android-enhet](/intune-user-help/enroll-device-android-company-portal).  
 
 Den uppdaterade checklistan för registrering med Android-arbetsprofilen visas på följande skärmar:
 

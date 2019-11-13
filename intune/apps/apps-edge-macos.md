@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2405036535cd6aef74e417f75e22725e1c34bbfa
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585806"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754838"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Lägga till Microsoft Edge till macOS-enheter med hjälp av Microsoft Intune
 
@@ -88,7 +88,7 @@ Appen som du har skapat visas i applistan där du kan tilldela den till de grupp
 > Apple tillhandahåller för närvarande inget sätt för Intune att avinstallera Microsoft Edge på macOS-enheter.
 
 ## <a name="next-steps"></a>Nästa steg
-- Information om hur du konfigurerar Microsoft Edge på macOS-enheter finns i [Konfigurera Microsoft Edge på macOS-enheter](https://docs.microsoft.com/deployedge/configure-microsoft-edge#configure-microsoft-edge-on-mac).
+- Information om hur du konfigurerar Microsoft Edge på macOS-enheter finns i [Konfigurera Microsoft Edge på macOS-enheter](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
 - Om du vill veta mer om att inkludera och exkludera apptilldelningar från grupper med användare kan du läsa [Inkludera och exkludera apptilldelningar](~/apps/apps-inc-exl-assignments.md).
 - [Tilldela appar till grupper](~/apps/apps-deploy.md)
 
