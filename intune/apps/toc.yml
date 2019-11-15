@@ -185,7 +185,7 @@
     - name: Felsöka
       items:
         - name: Hjälpa användare att felsöka problem
-          href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/apps/breadcrumb/toc.json
+          href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
         - name: Felsöka problem med att installera appen
           href: troubleshoot-app-install.md
         - name: Felsök hantering av mobilprogram
