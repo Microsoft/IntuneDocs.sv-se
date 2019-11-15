@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc884850b70ff7621224c5b01a68d016f27504e
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923380"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709464"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurera Intune-registrering av dedikerade Android Enterprise-enheter
 
@@ -59,7 +59,7 @@ Konfigurera hanteringen av dedikerade Android Enterprise-enheter så här:
 
 Du måste skapa en registreringsprofil så att du kan registrera dina dedikerade enheter. När profilen har skapats får den en registreringstoken (slumpmässig sträng) och en QR-kod. Beroende på enhetens Android OS-version kan du använda token eller QR-koden för att [registrera den dedikerade enheten](#enroll-the-dedicated-devices).
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda dedikerade enheter**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda reserverade enheter**.
 2. Välj **Skapa** och fyll i de obligatoriska fälten.
     - **Namn**: Skriv ett namn som ska användas när du tilldelar profilen till den dynamiska enhetsgruppen.
     - **Förfallodatum för token**: Det datum när token upphör att gälla. Google använder ett maxvärde på 90 dagar.
@@ -69,7 +69,7 @@ Du måste skapa en registreringsprofil så att du kan registrera dina dedikerade
 
 Du kan rikta appar och principer till tilldelade eller dynamiska enhetsgrupper. Du kan konfigurera dynamiska AAD-enhetsgrupper att automatiskt fylla i enheter som har registrerats med den viss registreringsprofil med hjälp av följande steg:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Grupper** > **Alla grupper** > **Ny grupp**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Grupper** > **Alla grupper** > **Ny grupp**.
 2. På bladet **Grupp** fyller du i de obligatoriska fälten så här:
     - **Grupptyp**: Säkerhet
     - **Gruppnamn:** Ange ett intuitivt namn (till exempel Fabrik 1-enheter)
@@ -92,7 +92,7 @@ Du kan rikta appar och principer till tilldelade eller dynamiska enhetsgrupper. 
 
 När du ersätter eller återkallar en token/QR-kod påverkar inte enheter som redan har registrerats.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda dedikerade enheter**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda reserverade enheter**.
 2. Välj den profil du vill arbeta med.
 3. Välj **Token**.
 4. Välj **Ersätt token** om du vill ersätta token.

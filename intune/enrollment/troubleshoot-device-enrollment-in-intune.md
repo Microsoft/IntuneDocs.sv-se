@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f770db6927ed87786f7806e011cdc6cb9bae6b3f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509266"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713503"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -64,9 +64,9 @@ Dessa problem kan uppstå på alla enhetsplattformar.
 
 Kontrollera att användaren inte är tilldelad mer än det maximala antalet enheter genom att följa dessa steg:
 
-1. Välj **Enhetsregistrering** > **Registreringsbegränsningar** > **Begränsningar för enhetsgräns**. Notera värdet i kolumnen **Enhetsgräns**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Registreringsbegränsningar** > **Begränsningar för antal enheter**. Notera värdet i kolumnen **Enhetsgräns**.
 
-2. Välj **Användare** > **Alla användare** > Välj användaren > **Enheter** i Intune. Notera antalet enheter.
+2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Användare** > **Alla användare** > välj användaren > **Enheter**. Notera antalet enheter.
 
 3. Om användarens antal registrerade enheter redan är lika med enhetsgränsen kan de inte registrera fler innan:
     - [Befintliga enheter tas bort](../remote-actions/devices-wipe.md), eller

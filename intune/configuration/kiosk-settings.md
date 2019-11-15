@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 271b49a4c927bccb5cd967ea99b0d7bd5c2bd515
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b7d09700847eae6a43111b0a4e865522f01862b9
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492349"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755161"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Inställningar för enheter med Windows 10 (och senare) och Windows Holographic for Business som ska köras i dedikerat helskärmsläge med Intune
 
@@ -39,8 +39,8 @@ Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil. En list
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
@@ -60,7 +60,7 @@ Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil. En list
       - [Inställningar för helskärmsläge i Windows 10](kiosk-settings-windows.md)
       - [Inställningar för helskärmsläge i Windows Holographic for Business](kiosk-settings-holographic.md)
 
-5. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar. 
+5. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
 
 Profilen skapas och visas i profillistan. Nu ska du [tilldela](device-profile-assign.md) profilen.
 

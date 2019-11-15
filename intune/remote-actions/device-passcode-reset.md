@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7ca53786d372f53d63388fef1179ca271fdb9d9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: be6a254360d8e8e9ef1396515d261b6ff9077b87
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508582"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713125"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Återställa eller ta bort ett enhetslösenord i Intune
 
@@ -57,10 +57,9 @@ Använd åtgärden återställ lösenord för att skapa ett nytt lösenord för 
 ## <a name="reset-a-passcode"></a>Återställa ett lösenord
 
 
-1. Logga in på [Azure-portalen](https://portal.azure.com) med någon av följande roller: Global Azure Active Directory-administratör, Azure Active Directory Intune-tjänsteadministratör, supportoperatör eller rolladministratör.
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**.
-3. Välj **Enheter** och sedan **Alla enheter**.
-4. Välj en enhet från listan över enheter du hanterar och välj **...Mer**. Välj sedan fjärråtgärden **Ta bort lösenkod** för enheten.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med någon av följande roller: Global Azure Active Directory-administratör, Azure Active Directory Intune-tjänsteadministratör, supportoperatör eller rolladministratör.
+2. Välj **Enheter** och sedan **Alla enheter**.
+3. Välj en enhet från listan över enheter du hanterar och välj **...Mer**. Välj sedan fjärråtgärden **Ta bort lösenkod** för enheten.
 
 ## <a name="reset-android-work-profile-passcodes"></a>Återställa lösenord för Android-arbetsprofiler
 

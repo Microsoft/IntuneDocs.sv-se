@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e2f654d9e505afba00a1a9090febe4c06ca77ff
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: 454d23038a593829ea8a14929dc435e9f9ddb457
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445339"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709485"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -49,7 +49,7 @@ Se avsnittet om PowerShell-cmdleten för information.
 
 Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med deras information.
 
-1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
 
     ![Skärmbild av Windows Autopilot-enheter](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -71,7 +71,7 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
 
 ## <a name="create-an-autopilot-device-group"></a>Skapa en Autopilot-enhetsgrupp
 
-1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Grupper** > **Ny grupp**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Grupper** > **Ny grupp**.
 2. På bladet **Grupp**:
     1. Välj **Säkerhet** för **Grupptyp**.
     2. Ange ett **gruppnamn** och en **gruppbeskrivning**.
@@ -88,7 +88,7 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Skapa en Autopilot-distributionsprofil
 Autopilot-distributionsprofiler används för att konfigurera Autopilot-enheterna. Du kan skapa upp till 350 profiler per klientorganisation.
-1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
 2. På sidan **Grundinställningar** anger du ett **Namn** och en valfri **Beskrivning**.
 
     ![Skärmbild av sidan Grundinställningar](./media/enrollment-autopilot/create-profile-basics.png)
@@ -97,22 +97,22 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 4. Välj **Nästa**.
 5. På sidan **Välkomstupplevelse (OOBE)** för **Distributionsläge** väljer du något av följande två alternativ:
     - **Användarstyrda**: Enheter med den här profilen är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs för att registrera enheten.
-    - **Självdistribution (förhandsversion)**: (kräver Windows 10, version 1809 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten. När en enhet inte har någon användare associerad, gäller inte användarbaserade efterlevnadsprinciper. Om du använder ett självdistribuerande läge, tillämpas bara efterlevnadsprinciper som avser enheten.
+    - **Självdistribution (förhandsversion)** : (kräver Windows 10, version 1809 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten. När en enhet inte har någon användare associerad, gäller inte användarbaserade efterlevnadsprinciper. Om du använder ett självdistribuerande läge, tillämpas bara efterlevnadsprinciper som avser enheten.
 
     ![Skärmbild av OOBE-sidan](./media/enrollment-autopilot/create-profile-outofbox.png)
 
 6. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
 7. Konfigurera följande alternativ:
-    - **Licensavtal för slutanvändare (EULA)**: (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
+    - **Licensavtal för slutanvändare (EULA)** : (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
     - **Sekretessinställningar**: Välj om du vill visa sekretessinställningar för användarna.
     >[!IMPORTANT]
     >Standardvärdet för inställningen av diagnostikdata varierar mellan olika versioner av Windows. För enheter som kör Windows 10, version 1903, är standardvärdet inställt på fullständig under välkomstupplevelsen. Mer information finns i [Windows-diagnostikdata](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data). <br>
     
-    - **Dölj alternativ för att ändra konto (kräver Windows 10, version 1809 eller senare)**: Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    - **Dölj alternativ för att ändra konto (kräver Windows 10, version 1809 eller senare)** : Välj **Dölj** om du vill förhindra att alternativ för att ändra kontot visas på företagets sidor för inloggning och domänfel. Genom att dölja de här alternativen krävs att [företagsanpassning konfigureras i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Användarkontotyp**: Välj användarens kontotyp (**Administratör** eller **Standardanvändare**). Vi tillåter att användaren ansluter enheten som lokal administratör genom att lägga till dem i den lokala administratörsgruppen. Vi aktiverar inte användaren som standardadministratör på enheten.
     - **Tillåt White Glove OOBE** (kräver Windows 10, version 1903 eller senare. [Ytterligare fysiska krav](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)): Välj **Ja** för att tillåta assisterad support.
     - **Använd mall för enhetsnamn** (kräver Windows 10 version 1809 eller senare och Azure AD-anslutningstyp): Välj **Ja** för att skapa en mall som ska användas när du namnger en enhet under registreringen. Namn får innehålla högst 15 tecken, och får innehålla bokstäver, siffror och bindestreck. Namn kan inte bestå av enbart siffror. Använd [makrot %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till ett maskinvaruspecifikt serienummer. Du kan även använda [makrot %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) för att lägga till en slumpmässig sträng med siffror, där x motsvarar antalet siffror som ska läggas till. Du kan bara ange ett prefix för hybridenheter i en [domänanslutningsprofil](windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
-    - **Språk (Region)**\*: Välj et språk som du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
+    - **Språk (Region)** \*: Välj et språk som du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
     - **Konfigurera tangentbord automatiskt**\*: Om ett **Språk (Region)** har valts väljer du **Ja** för att hoppa över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
 8. Välj **Nästa**.
 9. På sidan **Omfångstaggar** lägger du eventuellt till omfångstaggar som du vill använda för den här profilen. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
@@ -134,7 +134,7 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
 ## <a name="edit-an-autopilot-deployment-profile"></a>Redigera en Autopilot-distributionsprofil
 När du har skapat en Autopilot-distributionsprofil kan du redigera vissa delar av den.   
 
-1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering**.
 2. Under **Windows-registrering** i avsnittet **Windows Autopilot** väljer du **Distributionsprofiler**.
 3. Välj den profil du vill redigera.
 4. Klicka på **Egenskaper** till vänster om du vill ändra distributionsprofilens namn eller beskrivning. Klicka på **Spara** när du har gjort ändringarna.
@@ -155,7 +155,7 @@ Du kan tilldela en användare till en specifik Autopilot-enhet. Den här tilldel
 
 Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, version 1809 eller senare.
 
-1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > väljer enheten > **Tilldela användare**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > välj enheten > **Tilldela användare**.
 
     ![Skärmbild av Tilldela användare](./media/enrollment-autopilot/assign-user.png)
 

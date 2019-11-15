@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39ea8b3859d3d2525433c4cafdf566e7a2c8d2ab
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509196"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709174"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
 
@@ -60,7 +60,7 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 2. Spara CSV-filen.
 
-3. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
+3. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
 
     ![Skärmbild av Windows Autopilot-enheter](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
 
@@ -78,7 +78,7 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 Nu ska du skapa en enhetsgrupp där du placerar de Autopilot-enheter som du nyss läste in.
 
-1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Grupper** > **Ny grupp**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Grupper** > **Ny grupp**.
 2. På bladet **Grupp**:
     1. Välj **Säkerhet** för **Grupptyp**.
     2. I **Gruppnamn** anger du *Autopilot-grupp*. I **Gruppbeskrivning** anger du *Testgrupp för Autopilot-enheter*.
@@ -90,7 +90,7 @@ Nu ska du skapa en enhetsgrupp där du placerar de Autopilot-enheter som du nyss
 
 När du har skapat en enhetsgrupp, måste du skapa en distributionsprofil så att du kan konfigurera Autopilot-enheterna.
 
-1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
 2. På sidan **Grundinställningar** vid **Namn**, anger du *Autopilot-profil*. I **Beskrivning** anger du *Testprofil för Autopilot-enheter*.
 3. Ange **Omvandla alla målenheter till Autopilot** som **Ja**. Den här inställningen ser till att alla enheter i listan blir registrerade med Autopilots distributionstjänst. Det kan ta upp till 48 timmar för registreringen att bearbetas.
 4. Välj **Nästa**.
@@ -116,7 +116,7 @@ Om du inte vill använda Autopilot-enheter mer kan du ta bort dem.
 
 1. Om enheterna har registrerats i Intune måste du först [ta bort dem från Azure Active Directory-portalen](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
+2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
 
 3. Under **Windows Autopilot-enheter** markerar du de enheter som du vill ta bort. Välj sedan **Ta bort**.
 

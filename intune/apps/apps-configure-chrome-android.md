@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f667940cc238fe243b05c7ab6f1459f63f18faa
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 14e9aa6e82d7b3e24350de8770f02b0a08695e1a
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635476"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801669"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurera Google Chrome för Android-enheter med Intune 
 
@@ -63,7 +63,7 @@ Mer information om hur du lägger till en hanterad Google Play-app i Intune finn
 
     Nedan visas ett exempel på vanliga inställningar:
     - **Blockera åtkomst till en lista med URL:er**: `["*"]`
-    - **Tillåt åtkomst till en lista med URL:er**: `["baidu.com", "yahoo.com", "chrome://*"]`
+    - **Tillåt åtkomst till en lista med URL:er**: `["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
     - **Hanterade bokmärken**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
     - **Tillgänglighet för inkognitoläge**: `Incognito mode disabled`
 
@@ -71,7 +71,7 @@ Mer information om hur du lägger till en hanterad Google Play-app i Intune finn
 
     ![Vanliga inställningar](~/apps/media/apps-configure-chrome-android/common-settings.png)
 
-    Inställningarna ovan skapar bokmärken och tillåter åtkomst till alla webbplatser, utom `baidu.com`, `yahoo.com` och `chrome://`.
+    Inställningarna ovan skapar bokmärken och blockerar åtkomsten till alla URL:er utom `baidu.com`, `yahoo.com`, `chromium.org` och `chrome://`.
 
 5. Klicka på **OK** och **Lägg till** för att lägga till konfigurationsprincipen i Intune.
 6. Tilldela den här konfigurationsprincipen till en användargrupp. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](~/apps/apps-deploy.md). 

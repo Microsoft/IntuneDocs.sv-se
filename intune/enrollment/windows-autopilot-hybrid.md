@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab90dc9a95e461ad8c5913131a23a0355e9d072c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3724072144a78e1f4f5a17914eff941469e27242
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509214"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709591"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -42,7 +42,7 @@ Enheter som ska registreras måste också:
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurera automatisk registrering i Windows 10
 
-1. Logga in på [Azure Portal](https://portal.azure.com) och välj **Azure Active Directory** i det vänstra fönstret.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Azure Active Directory** i det vänstra fönstret.
 
    ![Azure Portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
@@ -107,7 +107,7 @@ Organisationsenheten som beviljas behörighet att skapa datorer måste matcha:
 
 Intune Connector för Active Directory måste installeras på en dator som kör Windows Server 2016 eller senare. Datorn måste också ha åtkomst till internet och din Active Directory. Om du vill öka skalningen och tillgängligheten eller om du vill ha stöd för flera Active Directory-domäner kan du installera flera anslutningsprogram i din miljö. Vi rekommenderar att du installerar anslutningsappen på en server som inte kör några andra Intune-anslutningsappar.
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory (förhandsversion)**  > **Lägg till**. 
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory** > **Lägg till**. 
 2. Följ anvisningarna för att ladda ned Connector.
 3. Öppna den nedladdade konfigurationsfilen för anslutningsappen, *ODJConnectorBootstrapper.exe*, för att installera Connector.
 4. Välj **Konfigurera** i slutet av konfigurationen.
@@ -117,7 +117,7 @@ Intune Connector för Active Directory måste installeras på en dator som kör 
 7. Gå till **Enhetsregistrering** > **Windows-registrering** > **Intune Connector för Active Directory**  och bekräfta sedan att anslutningsstatusen är **Aktiv**.
 
 > [!NOTE]
-> När du har loggat in på Connector kan det ta några minuter innan det visas i [Intune](https://aka.ms/intuneportal). Det visas bara om den kan kommunicera med Intune-tjänsten.
+> När du har loggat in i Connector kan det ta några minuter innan det visas i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Det visas bara om den kan kommunicera med Intune-tjänsten.
 
 ### <a name="turn-off-ie-enhanced-security-configuration"></a>Aktivera förbättrad säkerhetskonfiguration i IE
 Som standard har Windows Server förbättrad säkerhetskonfiguration i Internet Explorer aktiverat. Om du inte kan logga in på Intune Connector för Active Directory ska du inaktivera Förbättrad säkerhetskonfiguration i IE för administratören. [Så här inaktiverar du Förbättrad säkerhetskonfiguration i Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
@@ -128,7 +128,7 @@ Om du har en webbproxy i nätverksmiljön kontrollerar du att Intune Connector f
 
 
 ## <a name="create-a-device-group"></a>Skapa en enhetsgrupp
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Grupper** > **Ny grupp**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Grupper** > **Ny grupp**.
 
 1. I fönstret **Grupp** gör du följande:
 
@@ -183,7 +183,7 @@ När Autopilot-enheterna har registrerats ändras deras enhetsnamn till värdnam
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Skapa och tilldela en Autopilot-distributionsprofil
 Autopilot-distributionsprofiler används för att konfigurera Autopilot-enheterna.
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
 2. På sidan **Grundinställningar** anger du ett **Namn** och en valfri **Beskrivning**.
 3. Om du vill att alla enheter i de tilldelade grupperna automatiskt ska omvandlas till Autopilot väljer du **Ja** för **Omvandla alla målenheter till Autopilot**. Enheter som ägs av företaget och som inte är Autopilot-enheter i tilldelade grupper registreras med Autopilot-distributionstjänsten. Personligt ägda enheter kommer inte att konverteras till autopilot. Det kan ta upp till 48 timmar för registreringen att bearbetas. När enheten har avregistrerats och återställts registreras den av Autopilot. När en enhet har registrerats på det här sättet tas inte enheten bort från Autopilot-distributionstjänsten om det här alternativet inaktiveras eller om profiltilldelningen tas bort. Du måste i stället [ta bort enheten direkt](enrollment-autopilot.md#delete-autopilot-devices).
 4. Välj **Nästa**.
@@ -200,7 +200,7 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Valfritt) Aktivera registreringsstatussidan
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Sidan för registreringsstatus**.
 1. I fönstret **Statussidan för registrering** väljer du **Standard** > **Inställningar**.
 1. I rutan **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler) väljer du **Yes** (Ja).
 1. Konfigurera de andra alternativen efter behov.
@@ -208,7 +208,7 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Skapa och tilldela en profil för domänanslutning
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 1. Ange följande egenskaper:
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
    - **Beskrivning**: Ange en beskrivning av profilen.

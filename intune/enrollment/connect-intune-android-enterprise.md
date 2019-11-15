@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fad076b33bed5375dd8e53dd401a2c9c4c39237
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a89b94f098292bf44122d6d2d144c7f35967cd32
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505570"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709452"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Ansluta ditt Intune-konto till ditt hanterade Google Play-konto
 
@@ -42,7 +42,7 @@ Intune lägger automatiskt till fyra vanliga Android Enterprise-relaterade appar
 > På grund av interaktion mellan Google- och Microsoft-domäner kan det i det här steget krävas att du justerar inställningarna för webbläsaren.  Se till att ”portal.azure.com” och ”play.google.com” finns i samma säkerhetszon i webbläsaren.
 
 1. Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](../fundamentals/mdm-authority-set.md).
-2. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.  Om du använder en anpassad Intune-administratörsroll krävs läs- och uppdateringsbehörigheter för organisationen för åtkomst till detta.
+2. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.  Om du använder en anpassad Intune-administratörsroll krävs läs- och uppdateringsbehörigheter för organisationen för åtkomst till detta.
    
    ![Sidan för Android enterprise-registrering](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -63,7 +63,7 @@ Intune lägger automatiskt till fyra vanliga Android Enterprise-relaterade appar
 
 Du kan inaktivera Android Enterprise-registrering och -hantering. För att göra detta måste du först återkalla alla registrerade Android Enterprise-enheter, inklusive arbetsprofilenheter, dedikerade enheter och fullständigt hanterade enheter. Sedan väljer du **Koppla från** i Intune-administrationskonsolen för att ta bort alla registrerade Android Enterprise-arbetsprofilenheter, dedikerade enheter och fullständight hanterade enheter från registreringen. Det här tar även bort relationen mellan det hanterade Google Play-kontot och Intune.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) som Intune-administratör.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som Intune-administratör.
 2. Välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto** > **Koppla från**.
 3. Välj **Ja** för att koppla från och avregistrera alla Android enterprise-enheter från Intune.
 

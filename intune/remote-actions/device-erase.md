@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0379ffc6a3c3ffd83a9d121e622e9ee8f7c0af5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 428b4040eb0d91b7fe32fcf71842ce5bd1910013
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509512"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713222"
 ---
 # <a name="erase-all-data-from-a-macos-device"></a>Radera alla data från en macOS-enhet
 
@@ -31,7 +31,7 @@ ms.locfileid: "72509512"
 
 Du kan ta bort alla data från en macOS-enhet, inklusive operativsystemet. Enheten tas även bort från Intune-hantering. Ingen varning ges till slutanvändaren.
 
-1. I [Intune i Azure Portal](https://aka.ms/intuneportal) väljer du till **Enheter** > **Alla enheter** > och väljer enheten som du vill ta bort.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Alla enheter** > välj den enhet som du vill radera.
 ![Skärmbild](./media/device-erase/choosedevice.png)
 2. Klicka på **Mer** > **Radera** > och ange 6 siffror för **PIN-kod för återställning**. Det här är PIN-koden som du måste ge användarna så att de kan installera om operativsystemet på enheten. Se till att anteckna den här PIN-koden eftersom den inte är synlig igen när raderingsåtgärden har slutförts.
 ![Skärmbild](./media/device-erase/providepin.png)

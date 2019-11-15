@@ -5,22 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/31/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84103c6264431773ab5928f1da22c37a80cc9036
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 15af657ec63c664d91c370fa0f18ff8c4f140b47
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492707"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755227"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 
@@ -69,11 +70,10 @@ Följande enheter har tillkännagivits som eSIM-kompatibla eller finns på markn
 
 Mobilaktiveringskoder tillhandahålls av mobiloperatören i en kommaavgränsad fil (csv). När du har den här filen lägger du till den i Intune med följande steg:
 
-1. Logga in på [Azure Portal](https://portal.azure.com/).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler** > **Lägg till**.
-4. Välj den CSV-fil som har dina aktiveringskoder.
-5. Klicka på **OK** för att spara ändringarna.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **eSIM-mobilprofiler** > **Lägg till**.
+3. Välj den CSV-fil som har dina aktiveringskoder.
+4. Klicka på **OK** för att spara ändringarna.
 
 ### <a name="csv-file-requirements"></a>Krav för CSV-fil
 
@@ -111,8 +111,8 @@ Skapa en enhetsgrupp som innehåller de eSIM-kompatibla enheterna. [Lägg till g
 
 Tilldela profilen till den Azure AD-grupp som innehåller eSIM-enheterna.
 
-1. I [Azure-portalen](https://portal.azure.com/) väljer du **Alla tjänster**, filtrerar på **Intune** och väljer **Microsoft Intune**.
-2. Välj **Enhetskonfiguration** > **eSIM-mobilnät** > **Profiler**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **eSIM-mobilprofiler**.
 3. I listan med profiler väljer du den eSIM-mobilabonnemangspool som du vill tilldela och väljer sedan **Tilldelningar**.
 4. Välj om du vill **inkludera** eller **exkludera** grupper och välj sedan grupperna.
 
@@ -129,15 +129,15 @@ eSIM-Aktiveringskoder används en gång. När Intune har installerat en aktiveri
 
 När du har tilldelat profilen kan du övervaka distributionsstatus för en abonnemangspool.
 
-1. Logga in på [Azure Portal](https://portal.azure.com/).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler**. Alla dina befintliga eSIM-mobilabonnemangspooler visas.
-4. Välj ett abonnemang och granska **Distributionsstatus**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **eSIM-mobilprofiler**. Alla dina befintliga eSIM-mobilabonnemangspooler visas.
+3. Välj ett abonnemang och granska **Distributionsstatus**.
 
 ### <a name="check-the-profile-status"></a>Kontrollera profilstatus
+
 När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. Dessa diagram visar status för en profil, som t.ex. om den har tilldelats till enheter korrekt eller om profilen visar en konflikt.
 
-1. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler** > Välj ett befintligt abonnemang.
+1. Välj **Enheter** > **eSIM-mobilprofiler** > Välj en befintlig prenumeration.
 2. I fliken **Översikt** visar det översta grafiska diagrammet det antal enheter som är tilldelade till den specifika distributionen av eSIM-mobilabonnemangspool.
 
     Det visar även antalet enheter för andra plattformar som tilldelats samma enhetsprofil.
@@ -153,7 +153,7 @@ När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. De
 
 Du kan övervaka och visa en detaljerad lista över enheter i Enhetsstatus.**
 
-1. Välj **Enhetskonfiguration** > **eSIM-mobilprofiler** > Välj ett befintligt abonnemang.
+1. Välj **Enheter** > **eSIM-mobilprofiler** > Välj en befintlig prenumeration.
 2. Välj **Enhetsstatus**. Intune visar ytterligare information om enheten:
 
     - **Enhetsnamn**: Namnet på den enhet som avses

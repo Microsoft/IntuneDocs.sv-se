@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 11/07/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4890410f5948cdc9bd1c6e3d85125d8e0713d9b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1929e58d3b22e4cb5bc5f6ad2121f2b6f903d023
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492325"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755112"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Snabbstart: Skapa en e-postenhetsprofil för iOS
 
@@ -33,39 +33,40 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
+Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-an-ios-email-profile"></a>Skapa en e-postprofil för iOS
-1. I Intune väljer du **Enhetskonfiguration** och sedan **Profiler**.
-2. Välj sedan **Skapa profil**.
-   
+
+1. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+
    ![Skapa en e-postprofil för iOS](./media/quickstart-email-profile/ios-create-profile.png)
 
-3. Under **Namn** anger du ett beskrivande namn på den nya profilen. I det här exemplet anger du **iOS måste använda e-postadress**.
-4. Ange följande profilinformation:
-   - För **beskrivning** anger du **iOS-enheter måste använda e-postadress**.
-   - För **Plattform**, välj **iOS**.
-   - För **Profiltyp** väljer du **e-post**.
-    
-     ![Skapa en e-postprofil för användning med iOS](./media/quickstart-email-profile/ios-email-profile-name.png)
+2. Under **Namn** anger du ett beskrivande namn på den nya profilen. I det här exemplet anger du **iOS måste använda e-postadress**.
+3. Ange följande profilinformation:
+    - För **beskrivning** anger du **iOS-enheter måste använda e-postadress**.
+    - För **Plattform**, välj **iOS**.
+    - För **Profiltyp** väljer du **e-post**.
 
-5. Välj **inställningar** och ange följande inställningar (lämna standardinställningarna för alla andra inställningar):
+        ![Skapa en e-postprofil för användning med iOS](./media/quickstart-email-profile/ios-email-profile-name.png)
+
+4. Välj **inställningar** och ange följande inställningar (lämna standardinställningarna för alla andra inställningar):
    - **E-postserver**: I den här snabbstarten använder vi **outlook.office365.com**. Den här inställningen anger Exchange-platsen (URL) för e-postservern som iOS e-postappen använder för att ansluta till e-post.
    - **Kontonamn**: Ange **Företagets e-postadress**.
    - **Användarnamnattribut från AAD**: Namnet är det attribut som Intune hämtar från Azure Active Directory (Azure AD). Intune genererar användarnamnet som används av den här profilen. I den här snabbstarten kommer vi att anta att **User Principal Name** ska användas som användarnamn för profilen (till exempel user1@contoso.com).
    - **E-postadressattribut från AAD**: Den här inställningen är e-postadressen från Azure AD som används för att logga in på Exchange. I den här snabbstarten använder vi **User Principal Name**.
    - **Autentiseringsmetod**: I den här snabbstarten väljer vi **användarnamn och lösenord**. (Du kan också välja **Certifikat** om du redan har konfigurerat ett certifikat för Intune.)
-    
-     ![Skapa en e-postprofil för användning med iOS](./media/quickstart-email-profile/ios-email-profile.png)
 
-6. Välj **OK**.
-7. Välj **Skapa**. Den nya profilen visas i profillistan med instrumentpanelen öppen så att du kan övervaka hur profilen har tilldelats till iOS-enheter och iOS-användare.
-8. Välj **Tilldelningar**.
-9. Välj fliken **inkludera** och välj sedan **Alla användare och Alla enheter**. 
-10. Välj **Spara**.
+        ![Skapa en e-postprofil för användning med iOS](./media/quickstart-email-profile/ios-email-profile.png)
+
+5. Välj **OK** > **Skapa**. Den nya profilen visas i profillistan med instrumentpanelen öppen så att du kan övervaka hur profilen har tilldelats till iOS-enheter och iOS-användare.
+6. Välj **Tilldelningar**.
+7. Välj fliken **inkludera** och välj sedan **Alla användare och Alla enheter**. 
+8. Välj **Spara**.
 
 ## <a name="clean-up-resources"></a>Rensa resurser
+
 Om du inte planerar att använda profilen du skapade för fler självstudier eller test bör du ta bort den nu.
+
 1. I Intune väljer du **Enhetskonfiguration** och sedan **Profiler**.
 2. Välj testprofilen som du skapade **iOS måste använda e-postadress**.
 3. Välj ellipserna ( **...** ) intill profilen och välj sedan **Ta bort**.

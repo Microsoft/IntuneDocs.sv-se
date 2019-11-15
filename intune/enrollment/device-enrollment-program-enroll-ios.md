@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 339f6b9476dae438d898b97abcaf3c1759fe9cfc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b553c89704ca68ab6be261e74f1cc62ad58476ed
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503341"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713015"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -72,7 +72,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckeln som krävs för att skapa token.
 
-1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > **Lägg till**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > **Lägg till**.
 
     ![Hämta en registreringsprogramtoken.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -107,7 +107,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Steg 3. Spara det Apple-ID som användes för att skapa den här token.
 
-I Intune på Azure-portalen anger du ditt Apple-ID för framtida bruk.
+I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) anger du Apple-ID:t för framtida referens.
 
 ![Skärmbild av någon som anger det Apple-ID som användes för att skapa registreringsprogramtoken och bläddrat till denna token.](./media/device-enrollment-program-enroll-ios/image03.png)
 
@@ -127,7 +127,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 > Enheterna kommer att blockeras om det inte finns tillräckligt med licenser i företagsportalen för en VPP-token, eller om token har upphört att gälla. Intune visar en varning när en token snart upphör att gälla, eller om licenserna börjar ta slut.
  
 
-1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 2. Välj en token, välj **Profiler** > **Skapa profil** > **iOS**.
 
     ![Skärmbild av Skapa en profil.](./media/device-enrollment-program-enroll-ios/image04.png)
@@ -243,7 +243,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter
 Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronisera Intune med Apple och se dina hanterade enheter i Intune på Azure-portalen.
 
-1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild på noden Registreringsprogramenheter och länken Synkronisera.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild på noden Registreringsprogramenheter och länken Synkronisera.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
    - En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering, hämtar Intune den fullständigt uppdaterade listan med serienummer som tilldelats den Apple MDM-server som är ansluten till Intune. Om en DEP-enhet tas bort från Intune-portalen ska den inte vara tilldelad från Apple MDM-servern i DEP-portalen. Om den ej är tilldelad, importeras den inte om till Intune förrän den fullständiga synkroniseringen har körts.   
@@ -256,7 +256,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 >[!NOTE]
 >Du kan även tilldela profiler serienummer från bladet **Apple-serienummer**.
 
-1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan.
 2. Välj **Enheter** > välj enheter i listan > **Tilldela profil**.
 3. Välj en profil för enheterna under **Tilldela profil** och välj sedan **Tilldela**.
 
@@ -264,7 +264,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 
 Du kan välja en standardprofil som ska tillämpas för alla enheter som registreras med en specifik token.
 
-1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan.
 2. Välj **Ange standardprofil**, välj en profil i listmenyn och välj sedan **Spara**. Den här profilen kommer att tillämpas på alla enheter som registreras med token.
 
 ## <a name="distribute-devices"></a>Distribuera enheter

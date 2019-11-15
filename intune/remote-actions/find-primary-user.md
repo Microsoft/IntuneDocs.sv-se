@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f594e20abf1a507d1d4e00641a4821fe1ba9b0
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3d8aadbd876ea03da0f16acea82b71ebd85cf9be
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509342"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712249"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Hitta den primära användaren av en Intune-enhet
 
@@ -30,7 +30,7 @@ Primär användare, även kallat mappning mellan användare och enhet, är en eg
 
 ## <a name="how-to-find-a-devices-primary-user"></a>Så här hittar du en enhets primära användare
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Enheter** > välj en enhet.
 3. På sidan **Översikt** väljer du **Visa mer** så visas den primära användaren i listan.
 

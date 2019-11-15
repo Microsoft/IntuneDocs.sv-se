@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 445737a1b0a72e380844af6225cdb735cd3ec02c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1b2390462376c88129435de30eb98020563f3878
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713098"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Återställa lösenord på Windows-enheter med Intune
 
@@ -64,11 +64,10 @@ Ange värdet för denna CSP till **Sant**.
 
 ## <a name="reset-the-passcode"></a>Återställa lösenordet
 
-1. Logga in på [Azure Portal](https://portal.azure.com). 
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enheter** och sedan **Alla enheter**.
-4. Välj den enhet som du vill återställa lösenordet för. I egenskaperna för enheten väljer du **Nytt lösenord**.
-5. Välj **Ja** för att bekräfta. Lösenordet genereras och visas i portalen under de nästföljande sju dagarna.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Välj **Enheter** och sedan **Alla enheter**.
+3. Välj den enhet som du vill återställa lösenordet för. I egenskaperna för enheten väljer du **Nytt lösenord**.
+4. Välj **Ja** för att bekräfta. Lösenordet genereras och visas i portalen under de nästföljande sju dagarna.
 
 ## <a name="next-step"></a>Nästa steg
 

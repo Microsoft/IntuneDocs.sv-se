@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: 5e453002493e95bd5147cca115075a17a6e7a298
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143169"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709330"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
@@ -64,14 +64,14 @@ Du kan också ange en prioritetsordning för varje profil om det skulle uppstå 
 
 Följ stegen nedan om du vill aktivera sidan för registreringsstatus.
  
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Sidan för registreringsstatus**.
 2. På bladet **Statussidan för registrering**  väljer du **Standard** > **Inställningar**.
 3. Välj **Ja** för **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler).
 4. Välj övriga inställningar som du vill aktivera och välj sedan **Spara**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Skapa en profil för registreringsstatussidan och tilldela den till en grupp
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Sidan för registreringsstatus** > **Skapa profil**.
 2. Ange ett **namn** och en **beskrivning**.
 3. Välj **Skapa**.
 4. Välj den nya profilen i listan **Statussidan för registrering**.
@@ -82,7 +82,7 @@ Följ stegen nedan om du vill aktivera sidan för registreringsstatus.
 
 En användare kan finnas i flera grupper och ha många profiler för registreringsstatussidan. För att lösa dessa konflikter kan du ange prioriteten för varje profil. Om någon har mer än en profil för registreringsstatussidan, tillämpas endast profilen med högst prioritet vid registreringen.
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Sidan för registreringsstatus**.
 2. Hovra över profilen i listan.
 3. Använd de tre lodräta punkterna och dra profilen till önskad plats i listan.
 
@@ -90,7 +90,7 @@ En användare kan finnas i flera grupper och ha många profiler för registrerin
 
 Du kan ange vilka appar som måste installeras innan användaren kan komma åt skrivbordet.
 
-1. I Intune väljer du **Enhetsregistrering** > **Windows-registrering** > **Statussidan för registrering**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Sidan för registreringsstatus**.
 2. Välj en profil > **Inställningar**.
 3. Välj **Ja** för **Show app and profile installation progress** (Visa installationsförlopp för appar och profiler).
 4. Välj **Ja** för **Block device use until all apps and profiles are installed** (Blockera enhetsanvändning tills alla appar och profiler är installerade).

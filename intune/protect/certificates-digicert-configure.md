@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,19 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc0194bfaf1ec5e3120b6bd30eb6b2eb82c6ec2d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ca76ffe0c8fa42f1c2cf24fcdefd287140231220
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504723"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801631"
 ---
-# <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Konfigurera Intune Certificate Connector för DigiCert PKI-plattformen  
+# <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Konfigurera Intune Certificate Connector för DigiCert PKI-plattformen
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Använd Intune Certificate Connector för att utfärda PKCS-certifikat från plattformen DigiCert PKI till Intune-hanterade enheter. Du kan bara använda anslutningen med en DigiCert-certifikatutfärdare (CA) eller med både en DigiCert CA och en Microsoft CA.
 
-Använd Intune Certificate Connector för att utfärda PKCS-certifikat från plattformen DigiCert PKI till Intune-hanterade enheter. Du kan bara använda anslutningen med en DigiCert-certifikatutfärdare (CA) eller med både en DigiCert CA och en Microsoft CA.  
-> [!TIP]  
+> [!TIP]
 > DigiCert har köpt Symantecs webbplatssäkerhet och relaterade PKI-lösningar. Mer information om den här ändringen finns i [Symantecs tekniska supportartikel](https://support.symantec.com/en_US/article.INFO4722.html).
 
 Om du redan använder Intune Certificate Connector för att utfärda certifikat från en Microsoft CA med hjälp av PKCS eller System Center Endpoint Protection kan du använda samma anslutning för att konfigurera och utfärda PKCS-certifikat från en DigiCert CA. När du har slutfört konfigurationen för att stödja DigiCert-CA kan Intune Certificate Connector utfärda följande certifikat:
@@ -41,15 +40,16 @@ Om du redan använder Intune Certificate Connector för att utfärda certifikat 
 
 Om du inte har installerat anslutningsprogrammet men planerar att använda det för såväl en Microsoft CA som en DigiCert-CA ska du först slutföra anslutnings konfigurationen för Microsoft CA:n. Gå sedan tillbaka till den här artikeln för att konfigurera den så att den också stöder DigiCert. Mer information om certifikatprofiler och anslutningsprogrammet finns i [Konfigurera en certifikatprofil för dina enheter i Microsoft Intune](certificates-configure.md).  
 
-Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda instruktionerna i den här artikeln för att installera och konfigurera anslutningen. 
+Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda instruktionerna i den här artikeln för att installera och konfigurera anslutningen.
 
-## <a name="prerequisites"></a>Krav  
+## <a name="prerequisites"></a>Krav
+
 - **En aktiv prenumeration på DigiCert CA**: Prenumerationen krävs för att hämta ett registreringsutfärdarcertifikat (RA) från DigiCert CA:n.
 
-## <a name="install-the-digicert-ra-certificate"></a>Installera DigiCert RA-certifikatet  
- 
+## <a name="install-the-digicert-ra-certificate"></a>Installera DigiCert RA-certifikatet
+
 1. Spara följande kodfragment som en fil med namnet **certreq.ini** och uppdatera om det behövs (till exempel: *Ämnesnamnet i CN-format*).
- 
+
         [Version] 
         Signature="$Windows NT$" 
         
@@ -81,7 +81,6 @@ Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda ins
 
 3. Öppna filen request.csr i anteckningar och kopiera CSR-innehållet till följande format:
 
-
         -----BEGIN NEW CERTIFICATE REQUEST-----
         MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
         …
@@ -92,11 +91,11 @@ Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda ins
 
 4. Logga in på DigiCert CA och bläddra till **Hämta ett RA-certifikat** från aktiviteterna.
 
-   a. Ange CSR-innehållet från steg 3 i textrutan. 
+   a. Ange CSR-innehållet från steg 3 i textrutan.
 
    b. Ange ett eget namn för certifikatet.
 
-   c. Välj **Fortsätt**. 
+   c. Välj **Fortsätt**.
 
    d. Använd den tillhandahållna länken för att ladda ned RA-certifikatet till den lokala datorn.
 
@@ -104,23 +103,23 @@ Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda ins
 
    a. Öppna en MMC-konsol.
 
-   b. Klicka på **Arkiv** > **Lägg till eller ta bort snapin-moduler** > **Certifikat** > **Lägg till**. 
+   b. Klicka på **Arkiv** > **Lägg till eller ta bort snapin-moduler** > **Certifikat** > **Lägg till**.
 
    c. Välj **Datorkonto** > **Nästa**.
 
-   d. Välj **Lokal dator** > **Avsluta**. 
+   d. Välj **Lokal dator** > **Avsluta**.
 
    e. I fönstret **Lägg till/ta bort snapin-moduler** klickar du på **OK**. Expandera **certifikat (lokal dator)**  > **personliga** > **certifikat**.
 
-   f. Högerklicka på noden **certifikat** och välj **alla aktiviteter** > **importera**.  
+   f. Högerklicka på noden **certifikat** och välj **alla aktiviteter** > **importera**.
 
    g. Välj platsen för RA-certifikatet som du hämtade från DigiCert CA:n och välj **nästa**.
 
-   h. Välj **Personligt certifikatarkiv** > **Nästa**. 
+   h. Välj **Personligt certifikatarkiv** > **Nästa**.
 
-   i. Välj **Avsluta** för att importera RA-certifikatet till den **lokala datorns personliga** arkiv tillsammans med dess privata nyckel.  
+   i. Välj **Avsluta** för att importera RA-certifikatet till den **lokala datorns personliga** arkiv tillsammans med dess privata nyckel.
 
-6. Exportera och importera privat nyckelcertifikat: 
+6. Exportera och importera privat nyckelcertifikat:
 
    a. Expandera **certifikat (lokal dator)**  > **personliga** > **certifikat**.
 
@@ -134,16 +133,17 @@ Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda ins
 
    f. Use the procedure from step 5 to import the private key certificate into the **Local Computer-Personal** store.
 
-   g. Kopiera tumavtrycket för RA-certifikatet utan blanksteg. Följande är ett exempel på ett tumavtryck: 
+   g. Kopiera tumavtrycket för RA-certifikatet utan blanksteg. Följande är ett exempel på ett tumavtryck:
 
         RA Cert Thumbprint: “EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5”
-    
+
     > [!NOTE]
-    > Kontakta [kundsupporten för DigiCert](mailto:enterprise-pkisupport@digicert.com) om du behöver hjälp med att hämta RA-certifikatet från DigiCert CA:n.  
+    > Kontakta [kundsupporten för DigiCert](mailto:enterprise-pkisupport@digicert.com) om du behöver hjälp med att hämta RA-certifikatet från DigiCert CA:n.
 
 ## <a name="prepare-to-install-intune-certificate-connector"></a>Förbered installation av Intune Certificate Connector
-> [!TIP]  
-> Det här avsnittet gäller om du använder Intune Certificate Connector med endast en DigiCert CA. Om du använder Intune Certificate Connector med en Microsoft-certifikatutfärdare och vill lägga till DigiCert CA-stöd, kan du gå vidare till [Konfigurera för att stödja DigiCert](#configure-the-connector-to-support-digicert).  
+
+> [!TIP]
+> Det här avsnittet gäller om du använder Intune Certificate Connector med endast en DigiCert CA. Om du använder Intune Certificate Connector med en Microsoft-certifikatutfärdare och vill lägga till DigiCert CA-stöd, kan du gå vidare till [Konfigurera för att stödja DigiCert](#configure-the-connector-to-support-digicert).
 
 1. Välj någon av versionerna av Windows-operativsystemet från följande lista och installera det på en dator:
    * Windows Server 2012 R2 Datacenter
@@ -159,31 +159,31 @@ Om du använder anslutningsprogrammet med endast DigiCert-CA kan du använda ins
 
    a. Öppna **Kontrollpanelen** > **program och funktioner** > **aktivera eller inaktivera Windows-funktioner**.
 
-   b. Välj **.NET Framework 3.5** och installera det.  
+   b. Välj **.NET Framework 3.5** och installera det.
 
-## <a name="install-intune-certificate-connector-for-use-with-digicert"></a>Installera Intune Certificate Connector för användning med DigiCert  
+## <a name="install-intune-certificate-connector-for-use-with-digicert"></a>Installera Intune Certificate Connector för användning med DigiCert
 
-> [!TIP]  
-> Om du använder Intune Certificate Connector med en Microsoft-certifikatutfärdare och vill lägga till DigiCert CA-stöd, kan du gå vidare till [Konfigurera för att stödja DigiCert](#configure-the-connector-to-support-digicert).  
+> [!TIP]
+> Om du använder Intune Certificate Connector med en Microsoft-certifikatutfärdare och vill lägga till DigiCert CA-stöd, kan du gå vidare till [Konfigurera för att stödja DigiCert](#configure-the-connector-to-support-digicert).
 
 Hämta den senaste versionen av Intune Certificate Connector från Intune-administrationsportalen och följer de här anvisningarna.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Välj **enhetskonfiguration** > **certifikatanslutningsprogram** >  **+ lägg till**.  
+2. Välj **Administration av klientorganisation** > **Anslutning och token** > **Certifikatanslutningsprogram** >  **+ Lägg till**.
 
-3. Välj **Ladda ned certifikatanslutningsprogrammet**. Spara programvaran på en plats där du kan komma åt den från den server där du kommer att installera den.  
+3. Klicka på *Ladda ned programvara för certifikatanslutningsapp* för anslutningsprogrammet för PKCS #12 och spara filen på en plats som du kan komma åt från servern där du ska installera anslutningsprogrammet.
 
    ![Ladda ner anslutningsprogrammet](./media/certificates-digicert-configure/connector-download.png)
-   
-4. Kör **NDESConnectorSetup.exe** med utökade privilegier på servern där du vill installera anslutningsprogrammet. 
 
-5. På sidan **Installationsalternativ** väljer du **PFX-distribution**.  
-   
+4. Kör **NDESConnectorSetup.exe** med utökade privilegier på servern där du vill installera anslutningsprogrammet.
+
+5. På sidan **Installationsalternativ** väljer du **PFX-distribution**.
+
    ![Välj PFX-distribution](./media/certificates-digicert-configure/digicert-ca-connector-install.png)
 
    > [!IMPORTANT]
-   > Om du vill använda Intune Certificate Connector till att utfärda certifikat från en Microsoft CA och en DigiCert CA, väljer du **SCEP- och PFX-profildistribution**. 
+   > Om du vill använda Intune Certificate Connector till att utfärda certifikat från en Microsoft CA och en DigiCert CA, väljer du **SCEP- och PFX-profildistribution**.
 
 6. Använd standardvalen för att slutföra konfigurationen av anslutningen.
 
@@ -197,7 +197,7 @@ Som standard installeras Intune Certificate Connector i **%ProgramFiles%\Microso
 
         <add key="RACertThumbprint"
         value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
-   
+
    b. Spara och stäng filen.
 
 2. Öppna **services.msc**:
@@ -210,20 +210,18 @@ Som standard installeras Intune Certificate Connector i **%ProgramFiles%\Microso
 
 ## <a name="set-up-the-intune-administrator-account"></a>Konfigurera Intune-administratörskontot  
 
-> [!TIP]  
-> Om du använder Intune Certificate Connector med en Microsoft-certifikatutfärdare och vill lägga till DigiCert CA-stöd, kan du gå vidare till [Skapa en betrodd certifikatprofil](#create-a-trusted-certificate-profile).   
+> [!TIP]
+> Om du använder Intune Certificate Connector med en Microsoft-certifikatutfärdare och vill lägga till DigiCert CA-stöd, kan du gå vidare till [Skapa en betrodd certifikatprofil](#create-a-trusted-certificate-profile).
  
-1. Öppna användargränssnittet för NDES Connector från **% ProgramFiles% \ Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe**.  
+1. Öppna användargränssnittet för NDES Connector från **% ProgramFiles% \ Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe**.
 
 2. På fliken **Registrering** väljer du **Logga in**.
 
 3. Ange dina autentiseringsuppgifter som Intune-klientadministratör.
 
 4. Välj **Logga in** och välj sedan **OK** för att bekräfta en lyckad registrering. Stäng sedan användargränssnittet för NDES Connector.
-   
+
    ![NDES Connector-gränssnitt med meddelandet "Registrerad"](./media/certificates-digicert-configure/certificates-digicert-configure-connector-configure.png)
-
-
 
 ## <a name="create-a-trusted-certificate-profile"></a>Skapa en betrodd certifikatprofil
 
@@ -231,36 +229,37 @@ PKCS-certifikaten som distribueras för Intune-hanterade enheter måste kopplas 
 
 1. Hämta ett betrott rotcertifikat från DigiCert CA:n:
 
-    a. Logga in på administratörsportalen för DigiCert CA.
+   a. Logga in på administratörsportalen för DigiCert CA.
 
-    b. Klicka på **Hantera certifikatutfärdare** från **aktiviteter**. 
+   b. Klicka på **Hantera certifikatutfärdare** från **aktiviteter**.
 
-    c. Välja rätt certikatutfärdare från listan.  
+   c. Välja rätt certikatutfärdare från listan.
 
-    d. Klicka på **hämta rotcertifikat** för att hämta det betrodda rotcertifikatet.
+   d. Klicka på **hämta rotcertifikat** för att hämta det betrodda rotcertifikatet.
 
 2. Skapa en betrodd certifikatprofil i Intune-portalen:
 
-   a. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+   a. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   b. Välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profil**.
+   b. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 
-   c. Ange ett **namn** och en **beskrivning** för den betrodda certifikatprofilen.
+   c. Ange följande egenskaper:
 
-   d. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat.
+      - **Namnet** på profilen
+      - Om du vill kan du ange en **beskrivning**
+      - **Plattform** att distribuera profilen till
+      - Ange **profiltypen** som **betrott certifikat**
 
-   e. Från listrutan **Profil** väljer du **Betrodda certifikat**.
+   d. Välj **Inställningar** och bläddra till den betrodda .CER-filen för rotcertifikatutfärdarens certifikat som du exporterade för användning med den här certifikatprofilen och välj sedan **OK**.
 
-   f. Bläddra till den betrodda rotcertifikatutfärdarens .cer-fil som du hämtade från DigiCert-CA: n i föregående steg och välj sedan **OK**.
+   e. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
+      - **Datorcertifikatarkiv – rot**
+      - **Datorcertifikatarkiv – mellannivå**
+      - **Användarcertifikatarkiv – mellannivå**
 
-   g. För Windows 8.1- och Windows 10-enheter, väjer du målarkiv för det betrodda certifikatet från:    
-      - **Datorcertifikatarkiv – rot**  
-      - **Datorcertifikatarkiv – mellannivå**  
-      - **Användarcertifikatarkiv – mellannivå** 
+   f. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.  
 
-   h. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.  
- 
-Profilen visas i listan över profiler i visningsfönstret **Enhetskonfiguration – Profiler**, med profiltypen **Betrott certifikat**.  Se till att tilldela den här profilen till enheter som ska ta emot certifikat. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](../configuration/device-profile-assign.md).
+  Profilen visas i listan över profiler i visningsfönstret **Enhetskonfiguration – Profiler**, med profiltypen **Betrott certifikat**.  Se till att tilldela den här profilen till enheter som ska ta emot certifikat. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](../configuration/device-profile-assign.md).
 
 
 ## <a name="get-the-certificate-profile-oid"></a>Hämta certifikatprofilens OID  
@@ -272,40 +271,40 @@ Certifikatprofilens OID är associerad med en certifikatprofilsmall i DigiCert C
 3. Välj den certifikatprofil som du vill använda.
 4. Kopiera certifikatprofilens OID. Den liknar följande exempel:
 
- 
        Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
- 
 
 > [!NOTE]
 > Kontakta [DigiCerts kundsupport](mailto:enterprise-pkisupport@digicert.com) om du behöver hjälp med att hämta certifikatprofilens OID.
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Skapa en PKCS-certifikatprofil
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Gå till **Enhetskonfiguration** >  **Profiler** och välj **Skapa profil**.
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 
-3. Ange ett **namn** och en **beskrivning** för PKCS-certifikatprofilen.  
+3. Ange följande egenskaper:
 
-4. I listrutan **Plattform** väljer du en enhetsplattform som stöds.
+   - **Namnet** på profilen
+   - Om du vill kan du ange en **beskrivning**
+   - **Plattform** att distribuera profilen till
+   - Ange **profiltypen** som **PKCS-certifikat**
 
-5. I listrutan **Profil** väljer du **PKCS-certifikat**.
- 
-6. I fönstret **PKCS-certifikat** konfigurerar du parametrar med värdena från följande tabell. Dessa värden krävs för att utfärda PKCS-certifikat från en DigiCert CA, via Intune Certificate Connector. 
+4. I fönstret **PKCS-certifikat** konfigurerar du parametrar med värdena från följande tabell. Dessa värden krävs för att utfärda PKCS-certifikat från en DigiCert CA, via Intune Certificate Connector.
 
    |PKCS-certifikatparameter | Värde | Beskrivning |
    | --- | --- | --- |
    | Certifikatutfärdare | pki-ws.symauth.com | Det här värdet måste vara bastjänst-FQDN för DigiCert-certifikatutfärdaren utan avslutande snedstreck. Om du inte är säker på om det här är rätt bastjänst-FQDN för din DigiCert CA-prenumeration så kan du kontakta DigiCert kundsupport. <br><br>*Med ändringen från Symantec till DigiCert, förblir denna URL oförändrad*. <br><br> Om detta FQDN är felaktigt så utfärdar inte Intune Certificate Connector PKCS-certifikat från DigiCert-certifikatutfärdaren.| 
    | Namn på certifikatutfärdare | Symantec | Det här värdet måste vara strängen **Symantec**. <br><br> Om det här värdet ändras, kommer Intune Certificate Connector inte att utfärda PKCS-certifikat från DigiCert CA:n.|
-   | Certifikatmallens namn | Certifikatprofil-OID från DigiCert CA:n. Exempel: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| Det här värdet måste vara ett certifikatprofils-OID som [hämtats i det föregående avsnittet](#get-the-certificate-profile-oid) från DigiCert CA-certifikatprofilmallen. <br><br> Om Intune Certificate Connector inte kan hitta en certifikatmall som är associerad med det här certifikatprofils-OID:n i DigiCertt CA:n, utfärdar den inga PKCS-certifikat från DigiCert CA:n.|  
+   | Certifikatmallens namn | Certifikatprofil-OID från DigiCert CA:n. Exempel: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| Det här värdet måste vara ett certifikatprofils-OID som [hämtats i det föregående avsnittet](#get-the-certificate-profile-oid) från DigiCert CA-certifikatprofilmallen. <br><br> Om Intune Certificate Connector inte kan hitta en certifikatmall som är associerad med det här certifikatprofils-OID:n i DigiCertt CA:n, utfärdar den inga PKCS-certifikat från DigiCert CA:n.|
 
-   ![Val för certifikatutfärdare och certifikatmall](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)  
+   ![Val för certifikatutfärdare och certifikatmall](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)
 
    > [!NOTE]
    > PKCS-certifikatprofiler för Windows-plattformar behöver inte associeras med en betrodd certifikatprofil. Men det krävs för icke-Windows-plattformprofiler, till exempel Android.
-7. Slutför konfigurationen av profilen för att uppfylla dina affärsbehov och välj sedan **OK** för att spara profilen. 
 
-8. Välj **Tilldelningar** och konfigurera en lämplig grupp som får den här profilen. Minst en användare eller enhet måste vara en del av den tilldelade gruppen.
+5. Slutför konfigurationen av profilen baserat på dina affärsbehov och välj sedan **Skapa** för att spara profilen.
+
+6. På sidan *Översikt* i den nya profilen väljer du **Tilldelningar** och konfigurerar en lämplig grupp som ska använda den här profilen. Minst en användare eller enhet måste vara en del av den tilldelade gruppen.
  
 När du har slutfört föregående steg, utfärdar Intune Certificate Connector PKCS-certifikat från DigiCert CA:n till Intune-hanterade enheter i den tilldelade gruppen. De här certifikaten blir tillgängliga i det **personliga** arkivet för den **aktuella användarens** certifikatarkiv på den Intune-hanterade enheten.
 
@@ -314,7 +313,7 @@ När du har slutfört föregående steg, utfärdar Intune Certificate Connector 
 |Attribut | Format som stöds av Intune | Format som stöds av DigiCert Cloud CA | resultat |
 | --- | --- | --- | --- |
 | Mottagarnamn |Intune stöder enbart ämnesnamnet i följande tre format: <br><br> 1. Allmänt namn <br> 2. Eget namn som inkluderar e-post <br> 3. Eget namn som e-post <br><br> Exempel: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | DigiCert CA har stöd för fler attribut.  Om du vill välja ytterligare attribut måste de ha definierats med fasta värden i DigiCert-certifikatprofilmallen.| Vi använder egna namn eller e-post från PKCS-certifikatbegäran. <br><br> Alla matchningsfel i attributval mellan Intune-certifikatprofilen och DigiCert-certifikatprofilmallen resulterar i att inga certifikat utfärdas av DigiCert CA:n.|
-| SAN | Intune stöder endast följande SAN fältvärden: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (kodat värde) | DigiCert Cloud CA:n har också stöd för dessa parametrar. Om du vill välja ytterligare attribut måste de ha definierats med fasta värden i DigiCert-certifikatprofilmallen. <br><br> **AltNameTypeEmail**: Om den här typen inte finns i SAN använder Intune Certificate Connector värdet från **AltNameTypeUpn**.  Om **AltNameTypeUpn** inte heller hittades i SAN använder Intune Certificate Connector värdet från ämnesnamnet om det är i e-postformat.  Om typen fortfarande inte hittas kan inte Intune Certificate Connector utfärda certifikaten. <br><br> Exempel: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn:** Om den här typen inte finns i SAN använder Intune Certificate Connector värdet från **AltNameTypeEmail**. Om **AltNameTypeEmail** inte heller hittas i SAN, används värdet från ämnesnamnet om det är i e-postformat. Om typen fortfarande inte hittas kan inte Intune Certificate Connector utfärda certifikaten.  <br><br> Exempel: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: Om den här typen inte finns i SAN kan inte Intune Certificate Connector utfärda certifikaten. <br><br> Exempel: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Observera att värdet i det här fältet endast stöds i kodat format (hexadecimalt värde) av DigiCert-certifikatutfärdaren. För alla värden i det här fältet konverterar Intune Certificate Connector det till base64-kodat innan den skickar certifikatbegäran. *Intune Certificate Connector verifierar inte om det här värdet redan är kodat eller inte.* | Inga |
+| SAN | Intune stöder endast följande SAN fältvärden: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (kodat värde) | DigiCert Cloud CA:n har också stöd för dessa parametrar. Om du vill välja ytterligare attribut måste de ha definierats med fasta värden i DigiCert-certifikatprofilmallen. <br><br> **AltNameTypeEmail**: Om den här typen inte finns i SAN använder Intune Certificate Connector värdet från **AltNameTypeUpn**.  Om **AltNameTypeUpn** inte heller hittades i SAN använder Intune Certificate Connector värdet från ämnesnamnet om det är i e-postformat.  Om typen fortfarande inte hittas kan inte Intune Certificate Connector utfärda certifikaten. <br><br> Exempel: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn:** Om den här typen inte finns i SAN använder Intune Certificate Connector värdet från **AltNameTypeEmail**. Om **AltNameTypeEmail** inte heller hittas i SAN, används värdet från ämnesnamnet om det är i e-postformat. Om typen fortfarande inte hittas kan inte Intune Certificate Connector utfärda certifikaten.  <br><br> Exempel: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: Om den här typen inte finns i SAN kan inte Intune Certificate Connector utfärda certifikaten. <br><br> Exempel: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Värdet i det här fältet stöds endast i kodat format (hexadecimalt värde) av DigiCert-certifikatutfärdaren. För alla värden i det här fältet konverterar Intune Certificate Connector det till base64-kodat innan den skickar certifikatbegäran. *Intune Certificate Connector verifierar inte om det här värdet redan är kodat eller inte.* | Inga |
 
 ## <a name="troubleshooting"></a>Felsökning
 
@@ -322,7 +321,7 @@ Tjänstloggar för Intune Certificate Connector är tillgängliga i **% ProgramF
 
 | Problem/felmeddelande | Steg |
 | --- | --- |
-| Det går inte att logga in med Intune-klientadministratörskontot på användargränssnittet för NDES Connector. | Detta kan hända när den lokala Certificate Connectorn inte är aktiverad i Intune-administrationsportalen. Följ någon av metoderna nedan för att lösa problemet: <br><br> Från Silverlight-gränssnittet: <br> 1. Logga in på [Intune-administratörsportalen](https://admin.manage.microsoft.com). <br> 2. Välj **ADMIN**. <br> 3. Välj **hantering av mobila enheter** > **Certificate Connector**. <br> 4. Välj **konfigurera lokal Certificate Connector**. <br> 5. Markera kryssrutan **aktivera Certificate Connector**. <br> 6. Välj **OK**. <br><br> Från Azure-portalens användargränssnitt: <br> 1. Logga in på [Azure Portal](https://portal.azure.com). <br> 2. Gå till Microsoft Intune. <br> 3. Välj **enhetskonfiguration** > **certifikatutfärdare**. <br> 4. Välj **Aktivera**. <br><br> När du har utfört de föregående stegen antingen från Silver Light-gränssnittet eller Azure-portalen, försöker du att logga in med samma Intune-klientadministratörskonto i användargränssnittet för NDES Connector. |
+| Det går inte att logga in med Intune-klientadministratörskontot på användargränssnittet för NDES Connector. | Detta kan inträffa när det lokala certifikatanslutningsprogrammet inte är aktiverat i administrationscentret för Microsoft Endpoint Manager. Så här löser du det här problemet: <br><br> 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Välj **Administration av klientorganisation** > **Anslutning och token** > **Certifikatanslutningsprogram**. <br> 3. Leta reda på certifikatanslutningsprogrammet och kontrollera att det är aktiverat. <br><br> När du har slutfört de föregående stegen provar du att logga in med samma administratörskontot för Intune-klientorganisationen i användargränssnittet för NDES Connector. |
 | NDES Connector-certifikatet hittades inte. <br><br> System.ArgumentNullException: Värdet får inte vara noll. | Intune Certificate Connector visar det här felet om Intune-klientadministratörskontot aldrig har loggat in till användargränssnittet för NDES Connector. <br><br> Om felet kvarstår startar du om Intune Service Connector. <br><br> 1. Öppna **services.msc**. <br> 2. Välj **Intune Connector-tjänsten**. <br> 3. Högerklicka och välj **starta om**.|
 | NDES Connector – IssuePfx – allmänt undantag: <br> System.NullReferenceException: Objektreferensen är inte en instans av ett objekt. | Det här felet är tillfälligt. Starta om Intune Service Connector. <br><br> 1. Öppna **services.msc**. <br> 2. Välj **Intune Connector-tjänsten**. <br> 3. Högerklicka och välj **starta om**. |
 | DigiCert Provider – Det gick inte att hämta DigiCert-principen. <br><br>”Åtgärden har nått sin tidsgräns." | Intune Certificate Connector tog emot ett timeout-fel för åtgärden vid kommunikation med DigiCert CA:n. Om felet kvarstår kan du öka anslutningens timeout-värde och försöka igen. <br><br> Om du vill öka anslutningens timeout-värde: <br> 1. Gå till datorn med NDES-anslutningsprogrammet. <br>2. Öppna **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config**-filen i anteckningar. <br> 3. Öka värdet för tidsgränsen för följande parameter: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Starta om tjänsten Intune Certificate Connector. <br><br> Kontakta DigiCerts kundsupport om problemet kvarstår. |
@@ -336,4 +335,3 @@ Tjänstloggar för Intune Certificate Connector är tillgängliga i **% ProgramF
 ## <a name="next-steps"></a>Nästa steg
 
 Använd informationen i den här artikeln utöver informationen i [vad är Microsoft Intune-enhetsprofiler?](../configuration/device-profiles.md) för att hantera din organisations enheter och certifikaten på dem.
-

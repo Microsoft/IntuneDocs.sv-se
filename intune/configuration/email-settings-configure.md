@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8961614a85992b927e31d590c7abadca75a85a6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 75644ac4d8ccfb8a63e077f2b6625ac96364f5d7
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492859"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755188"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Lägg till e-postinställningar på enheter med Intune
 
@@ -39,8 +39,8 @@ Den här artikeln visar hur du skapar en e-postprofil i Microsoft Intune. Den in
 
 ## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra principnamn är till exempel **E-postinställningar för alla Windows-enheter**.
@@ -71,7 +71,7 @@ När du har angett dina inställningar och skapar profilen, visas din profil i p
 
 E-postprofiler tilldelas till enhetsgrupper, inte till användargrupper. Du kan ta bort en e-postprofil från en enhet på olika sätt, även om det bara finns en e-postprofil på enheten:
 
-- **Alternativ 1**: Öppna e-postprofilen (**Enhetskonfiguration** > **Profiler**) och välj **Tilldelningar**. Fliken **Inkludera** visar de grupper som har tilldelats profilen. Högerklicka på gruppen > **Ta bort**. **Spara** dina ändringar.
+- **Alternativ 1**: Öppna e-postprofilen (**Enheter** > **Konfigurationsprofiler** > välj din profil) och välj **Tilldelningar**. Fliken **Inkludera** visar de grupper som har tilldelats profilen. Högerklicka på gruppen > **Ta bort**. **Spara** dina ändringar.
 
 - **Alternativ 2**: [Rensa eller dra tillbaka enheten](../remote-actions/devices-wipe.md). Du kan använda de här åtgärderna för att selektivt eller helt ta bort data och inställningar.
 
@@ -103,4 +103,4 @@ Om du gör ändringar i en e-postprofil som du tidigare tilldelat, kan användar
 
 ## <a name="next-steps"></a>Nästa steg
 
-När profilen har skapats gör den ingenting ännu. Härnäst [tilldela profilen till några enheter](../device-profile-assign.md).
+När profilen har skapats gör den ingenting ännu. Nu ska du [tilldela profilen](../device-profile-assign.md).

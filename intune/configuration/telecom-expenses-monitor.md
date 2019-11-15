@@ -6,24 +6,24 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/09/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
-ms.reviewer: sumitp
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce9a6916cc77714a87aeac33555c0be1e59463f5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 20743d19ba101a9c400cb9f72dca59223254e6de
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506639"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755053"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
 
@@ -54,7 +54,7 @@ Om du vill använda Datalert-tjänsten med Intune finns det vissa konfigurations
 
 ## <a name="prerequisites"></a>Krav
 
-- En prenumeration på Microsoft Intune och åtkomst till [Azure-portalen](https://portal.azure.com)
+- En prenumeration på Microsoft Intune och åtkomst till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)
 - En prenumeration på [Datalert](http://www.datalert.biz/) (öppnar Datalerts webbplats)
 
 ## <a name="telecom-expense-management-providers"></a>Leverantörer som erbjuder kostnadsuppföljning av telekommunikation
@@ -109,9 +109,9 @@ Intune kan integreras med följande leverantörer för kostnadsuppföljning av t
 
 När du har slutfört steg 1 aktiveras anslutningen automatiskt. I Intune visas anslutningsstatusen **Aktiv**. Gör så här för att kontrollera att statusen är aktiv:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Välj **Enhetskonfiguration** > **kostnadsuppföljning av telekommunikation**. Leta efter anslutningsstatusen **Aktiv**:
+2. Välj **Administration av klientorganisation** > **Anslutning och token** > **Kostnadsuppföljning av telekommunikation**. Leta efter anslutningsstatusen **Aktiv**:
 
    ![Intune-sidan visar att Datalerts anslutningsstatus är Aktiv](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
 
@@ -138,7 +138,7 @@ Dessa kategorier visas för användare under registreringen ([registrera Android
 
 Följande steg lägger till Datalert-appen. I detta exempel används iOS. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
 
-1. I **[Intune](https://go.microsoft.com/fwlink/?linkid=2090973)** , väljer du **Klientappar** > **Appar** > **Lägg till**.
+1. Välj **Appar** > **Alla appar** > **Lägg till** i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Välj din **Apptyp**. För iOS väljer du till exempel **Store-app – iOS**.
 
@@ -156,7 +156,7 @@ Följande steg lägger till Datalert-appen. I detta exempel används iOS. [Add a
 
 #### <a name="assign-the-datalert-app-to-the-corporate-device-group"></a>Associera Datalert-appen med gruppen för företagsenheter
 
-1. I **Klientappar – Appar** väljer du appen Datalert som du lade till i föregående steg.
+1. I **Appar** > **Alla appar** väljer du appen Datalert som du lade till i föregående steg.
 
 2. Välj **Tilldelningar** > **Lägg till grupp**. Välj hur appen är tilldelad. [Tilldela appar till grupper i Intune](../apps/apps-deploy.md) har mer information om dessa inställningar.
 
@@ -183,7 +183,7 @@ För slutanvändarupplevelsen kan följande artiklar vara användbara:
 
 ## <a name="turn-off-the-datalert-service"></a>Stänga av tjänsten Datalert
 
-1. Välj **Enhetskonfiguration** > **kostnadsuppföljning av telekommunikation** i **[Intune](https://go.microsoft.com/fwlink/?linkid=2090973)** .
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Administration av klientorganisation** > **Anslutning och token** > **Kostnadsuppföljning av telekommunikation**.
 2. Ställ in **Enable kostnadsuppföljning av telekommunikation och blockera mobil- och roamingdata på enheter som överskrider de kvoter som du har angett** på **Inaktivera**.
 3. **Spara** ändringarna.
 

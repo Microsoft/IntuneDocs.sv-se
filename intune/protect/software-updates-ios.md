@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ada1f6e5292684803fbea40430cdd43d61796746
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681358"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984185"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Lägga till principer för iOS-programuppdatering i Intune
 
@@ -28,7 +28,7 @@ Den här funktionen gäller för:
 
 - iOS 10.3 och senare (övervakade enheter)
 
-Enheten checkar in med Intune ungefär var 8:e timme. Om det finns en uppdatering tillgänglig laddar enheten ned och installerar den, förutom under begränsade tider. Det krävs inga användaråtgärder för att uppdatera enheten. Principen förhindrar inte att en användare uppdaterar operativsystemet manuellt.
+Enheten checkar in med Intune ungefär var 8:e timme. Om det finns en uppdatering tillgänglig laddar enheten ned och installerar den, förutom under begränsade tider. Normalt krävs ingen användarinteraktion under uppdateringsprocessen, men om enheten har ett lösenord måste användaren ange detta för att starta en programuppdatering. Detta gäller för iOS 10.3 och senare versioner. Principen förhindrar inte att en användare uppdaterar operativsystemet manuellt.
 
 ## <a name="configure-the-policy"></a>Konfigurera principen
 

@@ -5,96 +5,106 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/12/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65213dab28210ad8162a7c18fe0e733ec7964571
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a9529f5b3047a8d4ca2a1e9c22d2c4427761078c
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502583"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754888"
 ---
-# <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Använda Intune för att åtgärda sårbarheter som upptäckts av Microsoft Defender ATP  
+# <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Använda Intune för att åtgärda sårbarheter som upptäckts av Microsoft Defender ATP
 
-När du integrerar Intune med Microsoft Defender Advanced Threat Protection (ATP) kan du dra nytta av ATP:s Threat & Vulnerability Management (TVM) och använda Intune för att åtgärda sårbarheter i slutpunkterna som har upptäckts av TVM. Den här integreringen ger en riskbaserad metod för identifiering och prioritering av sårbarheter som kan förbättra svarstiden för åtgärder i din miljö.  
+När du integrerar Intune med Microsoft Defender Advanced Threat Protection (ATP) kan du dra nytta av ATP:s Threat & Vulnerability Management (TVM) och använda Intune för att åtgärda sårbarheter i slutpunkterna som har upptäckts av TVM. Den här integreringen ger en riskbaserad metod för identifiering och prioritering av sårbarheter som kan förbättra svarstiden för åtgärder i din miljö.
 
-[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) är en del av [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).  
+[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) är en del av [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
-## <a name="how-integration-works"></a>Så här fungerar integreringen  
+## <a name="how-integration-works"></a>Så här fungerar integreringen
 
-När du ansluter Intune till Microsoft Defender Advanced Threat Protection får ATP information om hot och säkerhetsrisker från hanterade enheter.  
+När du ansluter Intune till Microsoft Defender Advanced Threat Protection får ATP information om hot och säkerhetsrisker från hanterade enheter.
 
-På Microsoft Defender Security Center-konsolen får ATP-säkerhetsadministratörer granska data om sårbarheter i slutpunkter. Administratörerna kan sedan med ett enda musklick skapa säkerhetsuppgifter som flaggar sårbara enheter för reparation. Säkerhetsuppgifterna skickas direkt till Intune-konsolen där Intune-administratörer kan se dem. Säkerhetsuppgiften anger typen av säkerhetsrisk, prioritet, status och vilka åtgärder som måste vidtas för att åtgärda säkerhetsrisken. Intune-administratören väljer att godkänna eller avvisa uppgiften.  
+På Microsoft Defender Security Center-konsolen får ATP-säkerhetsadministratörer granska data om sårbarheter i slutpunkter. Administratörerna kan sedan med ett enda musklick skapa säkerhetsuppgifter som flaggar sårbara enheter för reparation. Säkerhetsuppgifterna skickas direkt till Intune-konsolen där Intune-administratörer kan se dem. Säkerhetsuppgiften anger typen av säkerhetsrisk, prioritet, status och vilka åtgärder som måste vidtas för att åtgärda säkerhetsrisken. Intune-administratören väljer att godkänna eller avvisa uppgiften.
 
-När en uppgift accepteras arbetar sedan Intune-administratören för att åtgärda säkerhetsrisken genom Intune med hjälp av riktlinjer som tillhandahålls som en del av säkerhetsuppgiften.  
+När en uppgift accepteras arbetar sedan Intune-administratören för att åtgärda säkerhetsrisken genom Intune med hjälp av riktlinjer som tillhandahålls som en del av säkerhetsuppgiften.
 
-Vanliga åtgärder är:  
+Vanliga åtgärder är:
 
-- **Blockera** ett program från att köras  
-- **Distribuera** en operativsystemuppdatering för att minska säkerhetsrisken.  
-- **Ändra**  ett registervärde.  
-- **Inaktivera** eller **aktivera** en konfiguration för att påverka säkerhetsrisken.  
-- Aviseringen **Kräver uppmärksamhet** informerar administratören om hotet när det inte finns någon lämplig rekommendation att tillhandahålla.  
+- **Blockera** ett program från att köras
+- **Distribuera** en operativsystemuppdatering för att minska säkerhetsrisken.
+- **Ändra**  ett registervärde.
+- **Inaktivera** eller **aktivera** en konfiguration för att påverka säkerhetsrisken.
+- Aviseringen **Kräver uppmärksamhet** informerar administratören om hotet när det inte finns någon lämplig rekommendation att tillhandahålla.
 
 Ett exempel på ett arbetsflöde:
 
-- Inom Microsoft Defender ATP upptäcks en säkerhetsrisk för en app med namnet Contoso Media Player v4 och en administratör skapar en säkerhetsåtgärd för att uppdatera appen. Contoso Media Player är en ohanterad app som distribuerades med Intune.  
+- Inom Microsoft Defender ATP upptäcks en säkerhetsrisk för en app med namnet Contoso Media Player v4 och en administratör skapar en säkerhetsåtgärd för att uppdatera appen. Contoso Media Player är en ohanterad app som distribuerades med Intune.
 
-  Den här säkerhetsuppgiften visas i Intune-konsolen med statusen Väntar:  
+  Den här säkerhetsuppgiften visas i Intune-konsolen med statusen Väntar:
+
   ![Visa listan över säkerhetsuppgifter i Intune-konsolen](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
- 
-- Intune-administratören väljer en säkerhetsuppgift att visa detaljer om den åtgärden.  Administratören väljer sedan **Acceptera**, vilket uppdaterar statusen i Intune och i ATP till *Accepterad*.  
-  ![Godkänna eller avvisa en säkerhetsuppgift](./media/atp-manage-vulnerabilities/temp-accept-task.png) 
- 
-- Administratören utför sedan åtgärden baserat på vägledningen som tillhandahålls.  Vägledningen varierar beroende på vilken typ av åtgärd som behövs. När det är tillgängligt innehåller åtgärdsvägledningen länkar till relevanta fönster för konfigurationer i Intune. 
 
-  Eftersom mediaspelaren i det här exemplet inte är en hanterad app kan Intune endast ge textinstruktioner. Om appen hade varit hanterad kunde Intune ha gett anvisningar för att hämta en uppdaterad version och visat en länk för att öppna distributionen för appen, så att de uppdaterade filerna kan läggas till i distributionen. 
+- Intune-administratören väljer en säkerhetsuppgift att visa detaljer om den åtgärden.  Administratören väljer sedan **Acceptera**, vilket uppdaterar statusen i Intune och i ATP till *Accepterad*.
 
-- När åtgärden har slutförts öppnar Intune-administratören säkerhetsuppgiften och väljer **Slutför uppgift**.  Status för åtgärden uppdateras för Intune och i ATP, där säkerhetsadministratörer bekräftar den ändrade statusen för säkerhetsrisken.  
+  ![Godkänna eller avvisa en säkerhetsuppgift](./media/atp-manage-vulnerabilities/temp-accept-task.png)
+
+- Administratören utför sedan åtgärden baserat på vägledningen som tillhandahålls. Vägledningen varierar beroende på vilken typ av åtgärd som behövs. När det är tillgängligt innehåller åtgärdsvägledningen länkar till relevanta fönster för konfigurationer i Intune.
+
+  Eftersom mediaspelaren i det här exemplet inte är en hanterad app kan Intune endast ge textinstruktioner. Om appen hade varit hanterad kunde Intune ha gett anvisningar för att hämta en uppdaterad version och visat en länk för att öppna distributionen för appen, så att de uppdaterade filerna kan läggas till i distributionen.
+
+- När åtgärden har slutförts öppnar Intune-administratören säkerhetsuppgiften och väljer **Slutför uppgift**.  Status för åtgärden uppdateras för Intune och i ATP, där säkerhetsadministratörer bekräftar den ändrade statusen för säkerhetsrisken.
 
 ## <a name="prerequisites"></a>Krav  
 
-**Prenumerationer**:  
+**Prenumerationer**:
 
 - Microsoft Intune  
-- Microsoft Defender Advanced Threat Protection ([Registrera dig för en kostnadsfri utvärderingsversion](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)  
+- Microsoft Defender Advanced Threat Protection ([Registrera dig för en kostnadsfri utvärderingsversion](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
-**Intune-konfigurationer för ATP**:  
+**Intune-konfigurationer för ATP**:
 
-- Konfigurera en tjänst-till-tjänst-anslutning med Microsoft Defender ATP.  
+- Konfigurera en tjänst-till-tjänst-anslutning med Microsoft Defender ATP.
 - Distribuera en princip för enhetskonfiguration med profiltypen **Microsoft Defender ATP (Windows 10 Desktop)** till enheter med risk som utvärderas av ATP.
 
-  Information om hur du ställer in Intune för att arbeta med ATP finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).  
+  Information om hur du ställer in Intune för att arbeta med ATP finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
 
-## <a name="work-with-security-tasks"></a>Arbeta med säkerhetsuppgifter  
+## <a name="work-with-security-tasks"></a>Arbeta med säkerhetsuppgifter
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetssäkerhet** > **Säkerhetsuppgifter**.  
-2. Markera en aktivitet i listan för att öppna ett resursfönster som visar ytterligare information för den säkerhetsuppgiften.  
-3. När du visar resursfönstret för säkerhetsuppgiften kan du välja ytterligare länkar:  
-   - HANTERADE APPAR – Visa den app som är sårbar. När det gäller sårbarheten för flera appar visas en filtrerad lista över appar.  
-   - ENHETER – Visa en lista över *Sårbara enheter*, från vilken du kan länka till en post med mer information för sårbarhetsbedömning på den enheten.  
-   - BEGÄRANDE – Använd länken för att skicka e-post till den administratör som skickade den här säkerhetsuppgiften.  
-   - INFORMATION – Läs anpassade meddelanden som skickas av förfrågaren när du öppnar säkerhetsuppgiften.  
-4. Välj **Godkänn** eller **Avvisa** för att skicka ett meddelande till ATP om din planerade åtgärd. När du godkänner eller avvisar en uppgift kan du skicka information som vidarebefordras till ATP.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-5. När du har godkänt en uppgift ska du öppna säkerhetsuppgiften igen (om den är stängd) och följa anvisningarna för att åtgärda sårbarheten.  Anvisningarna från ATP informationen om säkerhetsuppgiften varierar beroende på vilken typ av sårbarhet det gäller.  
+2. Välj **Slutpunktssäkerhet** > **Säkerhetsaktiviteter**.
 
-   När det är möjligt innehåller åtgärdsanvisningarna länkar till de relevanta konfigurationsobjekten i Intune-konsolen.  
+3. Markera en aktivitet i listan för att öppna ett resursfönster som visar ytterligare information för den säkerhetsuppgiften.
 
-6. När du har slutfört åtgärdsanvisningarna ska du öppna säkerhetsuppgiften och välja **Slutför uppgift**.  Den här åtgärden uppdaterar säkerhetsuppgiftens status i både Intune och ATP.  
+   När du visar resursfönstret för säkerhetsuppgiften kan du välja ytterligare länkar:
 
-När åtgärden har genomförts kan riskexponeringsbedömningen i ATP minska baserat på ny information från de åtgärdade enheterna. 
+   - HANTERADE APPAR – Visa den app som är sårbar. När det gäller sårbarheten för flera appar visas en filtrerad lista över appar.
+   - ENHETER – Visa en lista över *Sårbara enheter*, från vilken du kan länka till en post med mer information för sårbarhetsbedömning på den enheten.
+   - BEGÄRANDE – Använd länken för att skicka e-post till den administratör som skickade den här säkerhetsuppgiften.
+   - INFORMATION – Läs anpassade meddelanden som skickas av förfrågaren när du öppnar säkerhetsuppgiften.
+
+4. Välj **Godkänn** eller **Avvisa** för att skicka ett meddelande till ATP om din planerade åtgärd. När du godkänner eller avvisar en uppgift kan du skicka information som vidarebefordras till ATP.
+
+5. När du har godkänt en uppgift ska du öppna säkerhetsuppgiften igen (om den är stängd) och följa anvisningarna för att åtgärda sårbarheten. Anvisningarna från ATP informationen om säkerhetsuppgiften varierar beroende på vilken typ av sårbarhet det gäller.
+
+   När det är möjligt innehåller åtgärdsanvisningarna länkar till de relevanta konfigurationsobjekten i Intune-konsolen.
+
+6. När du har slutfört åtgärdsanvisningarna ska du öppna säkerhetsuppgiften och välja **Slutför uppgift**.  Den här åtgärden uppdaterar säkerhetsuppgiftens status i både Intune och ATP.
+
+När åtgärden har genomförts kan riskexponeringsbedömningen i ATP minska baserat på ny information från de åtgärdade enheterna.
 
 ## <a name="next-steps"></a>Nästa steg
-Läs mer om Intune och [Microsoft Defender ATP](advanced-threat-protection.md)  
-Titta närmare på Intune [Mobile Threat Defense](mobile-threat-defense.md)  
-Titta närmare på [Threat & Vulnerability Management-instrumentpanelen](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) i Microsoft Defender ATP
+Läs mer om Intune och [Microsoft Defender ATP](advanced-threat-protection.md).
+
+Titta närmare på Intune [Mobile Threat Defense](mobile-threat-defense.md).
+
+Titta närmare på [Threat & Vulnerability Management-instrumentpanelen](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) i Microsoft Defender ATP.

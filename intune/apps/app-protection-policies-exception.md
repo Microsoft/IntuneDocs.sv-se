@@ -1,7 +1,7 @@
 ---
 title: Undantag för dataöverföringsprinciper i appar
 titleSuffix: Microsoft Intune
-description: Skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring.
+description: Skapa undantag till dataöverföringsprincipen Intune-appskydd (APP).
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6453f5b5886c5691383bc81fb76598146e884e0e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 18b1b8feda00f5c669b39bc365c637dcd3968078
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813350"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984077"
 ---
-# <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Så här skapar du undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring
+# <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Skapa undantag till dataöverföringsprincipen Intune-appskydd (APP)
 
-Som administratör kan du skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring. Med ett undantag kan du uttryckligen välja vilka ohanterade appar som får överföra data till och från hanterade appar. IT-avdelningen måste ange de ohanterade apparna som du lägger i undantagslistan som betrodda. 
+Som administratör kan du skapa undantag till dataöverföringsprincipen Intune-appskydd (APP). Med ett undantag kan du uttryckligen välja vilka ohanterade appar som får överföra data till och från hanterade appar. IT-avdelningen måste ange de ohanterade apparna som du lägger i undantagslistan som betrodda. 
 
 >[!WARNING] 
 > Du ansvarar för att göra ändringar i undantagsprincipen för dataöverföring. Tillägg till den här principen tillåter att ohanterade appar (som inte hanteras av Intune) får åtkomst till data som skyddas av hanterade appar. Den här åtkomsten till skyddade data kan resultera i datasäkerhetsläckor. Lägg endast till dataöverföringsundantag för appar som din organisation måste använda, men som saknar stöd för Intunes principer för programskydd. Dessutom bör du bara lägga till undantag för appar som du inte anser utgöra någon risk för dataläckor.
@@ -65,6 +65,8 @@ Genom att lägga till **Webex**-paketet som ett undantag till MAM-dataöverföri
     <code>com.android.mms</code>
     
     <code>com.samsung.android.messaging</code>
+
+- Exempel på **installationsprogram för Android-certifikat**: För att undanta den inbyggda appen för **certifikatinstallation** så att Outlook för Android kan installera ett S/MIME-certifikat (levereras som en e-postbilaga) i Android KeyStore måste du lägga till dataöverföringsundantaget för följande sträng: <code>com.android.certinstaller</code>. Mer information finns i avsnittet om [känslighetsetiketter och skydd i Outlook för iOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
 
 ## <a name="next-steps"></a>Nästa steg
 

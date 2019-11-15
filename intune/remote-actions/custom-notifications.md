@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002989bd61167d6f0d20e2c5cb3fa80a4051a99c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508669"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713228"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
@@ -69,7 +69,7 @@ Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högs
 
 ## <a name="send-a-custom-notification-to-groups"></a>Skicka ett anpassat meddelande till grupper  
 
-1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med ett konto som har behörighet att skapa och skicka meddelanden och gå till **Enheter** > **Skicka anpassade notiser**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå till **Enheter** > **Skicka anpassade meddelanden**.  
 
 2. På fliken Grundläggande anger du följande och väljer sedan **Nästa** för att fortsätta.  
    - **Rubrik** – Ange en rubrik för meddelandet. Rubriken får innehålla högst 50 tecken.  
@@ -89,7 +89,7 @@ Intune spårar inte de anpassade meddelanden som du skickar, och enheterna logga
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Skicka ett anpassat meddelande till en enskild enhet  
 
-1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med ett konto som har behörighet att skapa och skicka meddelanden och gå sedan till **Enheter** > **Alla enheter**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå sedan till **Enheter** > **Alla enheter**.  
 
 2. Välj en enhet som du vill skicka ett meddelande till.  
 

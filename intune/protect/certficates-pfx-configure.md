@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0f31add65063665da5a7961e2caf9eb30a847e2
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 3db085e6e88f8f57eb0276afa77290df8574568f
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72787881"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801723"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -142,13 +142,14 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 > [!IMPORTANT]  
 > Microsoft Intune-certifikatanslutningsappen kan inte installeras på den utfärdande certifikatutfärdaren (CA) och måste i stället installeras på en separat Windows-server.  
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till**.
-3. Ladda ned och spara anslutningsappfilen på en plats där du kan komma åt den från den server där du kommer att installera anslutningsappen.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    ![Microsoft Intune Certificate Connector nedladdning](./media/certficates-pfx-configure/download-ndes-connector.png)
+2. Välj **Administration av klientorganisation** > **Anslutning och token** > **Certifikatanslutningsprogram** >  **+ Lägg till**.
+
+3. Klicka på *Ladda ned programvara för certifikatanslutningsapp* för anslutningsprogrammet för PKCS #12 och spara filen på en plats som du kan komma åt från servern där du ska installera anslutningsprogrammet.
+
+   ![Microsoft Intune Certificate Connector nedladdning](./media/certficates-pfx-configure/download-ndes-connector.png)
  
-
 4. När nedladdningen är klar loggar du in på servern. Efter det:
 
     1. Se till att .NET 4.5 Framework eller senare är installerat, eftersom det krävs av NDES-certifikatanslutningsappen. .NET 4.5 framework ingår automatiskt i Windows Server 2012 R2 och senare versioner.
@@ -166,37 +167,44 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 
 ## <a name="create-a-trusted-certificate-profile"></a>Skapa en betrodd certifikatprofil
 
-1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-    ![Navigera till Intune och skapa en ny profil för ett betrott certifikat](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Ange följande egenskaper:
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+
+   ![Navigera till Intune och skapa en ny profil för ett betrott certifikat](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+
+3. Ange följande egenskaper:
 
     - **Namnet** på profilen
     - Om du vill kan du ange en beskrivning
     - **Plattform** att distribuera profilen till
     - Ange **profiltypen** som **betrott certifikat**
 
-3. Gå till **Inställningar** och ange .cer-filen med rot CA-certifikatet som du exporterade tidigare.
+4. Välj **Inställningar** och ange .CER-filen för certifikatutfärdarens rotcertifikat som du exporterade tidigare.
 
    > [!NOTE]
    > Beroende på vilken plattform du valde i **steg 2** kan du få alternativet att välja **målarkiv** för certifikatet.
 
-   ![Skapa en profil och ladda upp ett betrott certifikat](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
+   ![Skapa en profil och ladda upp ett betrott certifikat](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-4. Välj **OK** > **Skapa** för att spara profilen.
-5. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](../configuration/device-profile-assign.md).
+5. Välj **OK** > **Skapa** för att spara profilen.
+
+6. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](../configuration/device-profile-assign.md).
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Skapa en PKCS-certifikatprofil
 
-1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
-2. Ange följande egenskaper:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Välj och gå till **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+
+3. Ange följande egenskaper:
 
     - **Namnet** på profilen
     - Om du vill kan du ange en beskrivning
     - **Plattform** att distribuera profilen till
     - Ange **profiltypen** som **PKCS-certifikat**
 
-3. Gå till **Inställningar** och konfigurera de egenskaper som gäller för den plattform som du har valt:  
+4. Välj **Inställningar** och konfigurera de egenskaper som gäller för den plattform som du har valt:
    
    |Inställningen     | Plattform     | Information   |
    |------------|------------|------------|
@@ -212,8 +220,9 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
    |**Tillåt alla appar att komma åt privat nyckel** |macOS  |Ange till **Aktivera** för att ge appar som är konfigurerade för den associerade Mac-enheten åtkomst till den privata nyckeln för PKCS-certifikat. <br><br> Mer information om den här inställningen finns i *AllowAllAppsAccess* avsnittet Certifikatnyttolast i [referensen för konfigurationsprofil](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) i Apple-utvecklardokumentationen. |
    |**Rotcertifikat**             |**-** Android-enhetsadministratör <br> **-** Android Enterprise (*Enhetsägare*, *Arbetsprofil*) |Välj en certifikatprofil för en rotcertifikatutfärdare som tidigare har tilldelats. |
 
-4. Välj **OK** > **Skapa** för att spara profilen.
-5. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](../configuration/device-profile-assign.md).
+5. Välj **OK** > **Skapa** för att spara profilen.
+
+6. Om du vill tilldela den nya profilen till en eller flera enheter läser du [tilldela Microsoft Intune-enhetsprofiler](../configuration/device-profile-assign.md).
 
    > [!NOTE]
    > På enheter med en Android Enterprise-profil syns inte certifikat som har installerats med en PKCS-certifikatprofil på enheten. Kontrollera statusen för profilen i Intune-konsolen för att bekräfta lyckad certifikatdistribution.
@@ -262,7 +271,7 @@ När du skapar en PKCS-certifikatprofil för macOS beror alternativen för ämne
   - **{{DeviceName}}**
   - **{{FullyQualifiedDomainName}}** *(Gäller endast för Windows och domänanslutna enheter)*
   - **{{MEID}}**
-   
+
   Du kan ange de här variablerna följt av texten för variabeln i textrutan. Till exempel kan det egna namnet för en enhet som heter *Device1* läggas till som **CN={{DeviceName}}Device1**.
 
   > [!IMPORTANT]  
@@ -273,21 +282,25 @@ När du skapar en PKCS-certifikatprofil för macOS beror alternativen för ämne
 
 
 ## <a name="whats-new-for-connectors"></a>Nyheter för anslutningsappar
-Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. När vi uppdaterar en anslutningsapp kan du läsa om ändringarna här. 
+
+Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. När vi uppdaterar en anslutningsapp kan du läsa om ändringarna här.
 
 *PFX-certifikatanslutningsappen för Microsoft Intune* [har stöd för automatiska uppdateringar](#requirements), medan *Intune-certifikatanslutningsappen* uppdateras manuellt.
 
-### <a name="may-17-2019"></a>17 maj 2019  
+### <a name="may-17-2019"></a>17 maj 2019
+
 - **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1905.0.404**  
   Ändringar i den här versionen:  
   - Åtgärdade ett problem där befintliga PFX-certifikat fortsätter att bearbetas, vilket gör att anslutningsappen slutar att bearbeta nya begäranden. 
 
-### <a name="may-6-2019"></a>Den 6 maj 2019  
+### <a name="may-6-2019"></a>Den 6 maj 2019
+
 - **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1905.0.402**  
   Ändringar i den här versionen:  
   - Avsökningsintervallet för anslutningsappen har minskats från 5 minuter till 30 sekunder.
  
-### <a name="april-2-2019"></a>2 april 2019  
+### <a name="april-2-2019"></a>2 april 2019
+
 - **Intune-certifikatanslutningsapp – version 6.1904.1.0**  
   Ändringar i den här versionen:  
   - Åtgärdade ett problem där anslutningsappen kunde misslyckas med att registrera till Intune efter inloggning till anslutningsappen med ett konto för global administratör.  

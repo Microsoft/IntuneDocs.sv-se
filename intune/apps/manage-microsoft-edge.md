@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ee68392feaa59ef5207edce75250e539407273b
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593693"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754422"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -106,7 +106,7 @@ Skapa en appkonfiguration för Microsoft Edge:
 7. Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Microsoft Edge. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
 
     > [!NOTE]
-    > Microsoft Edge använder samma nyckel/värde-par som Managed Browser. 
+    > Microsoft Edge använder samma nyckel/värde-par som Managed Browser. På Android måste appskyddsprinciper vara riktade mot Microsoft Edge för att appkonfigurationsprinciperna ska tillämpas.
 
 8. När du är klar väljer du **OK**.
 9. På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.<br>

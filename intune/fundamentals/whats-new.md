@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6da1b15d482d20340163b0bb79e88d74e8e375
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 37ed7bfd204289c963b8134252d9d76f2379ecba
+ms.sourcegitcommit: 768d581cb8bcc5fdcb8ade95d402b11223ab226c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635347"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882498"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -53,12 +53,20 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 ### Role-based access control
 -->  
 
+## <a name="week-of-november-4-2019"></a>Veckan som börjar den 4 november 2019
+
+### <a name="device-security"></a>Enhetssäkerhet
+
+#### <a name="security-baselines-are-supported-on-microsoft-azure-government---4062552---"></a>Microsoft Azure Government stöder säkerhetsbaslinjer<!-- 4062552 -->
+
+Nu kan instanser av Intune som finns i *Microsoft Azure Government* använda [säkerhetsbaslinjer](../protect/security-baselines.md) för att skydda användare och enheter.
+
 ## <a name="week-of-october-28-2019"></a>Veckan då den 28 oktober 2019 infaller
 
 ### <a name="app-management"></a>Apphantering
 
 #### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857---"></a>Förbättrad utformning av checklistan i företagsportalappen för Android<!-- 5550857 -->  
-Checklistan för inställningar i företagsportalappen för Android har uppdaterats med en enklare design och nya ikoner. Ändringarna ligger i linje med de senaste uppdateringarna som gjorts i företagsportalappen för iOS. Vi håller på att lansera appuppdateringarna för alla kunder och förväntar oss att blir klara i slutet av nästa vecka. En jämförelse av ändringar sida vid sida finns i [Nyheter i användargränssnittet för appen](whats-new-app-ui.md). De uppdaterade registreringsstegen finns i [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) och [Registrera din Android-enhet](/intune-user-help/enroll-device-android-company-portal).  
+Checklistan för inställningar i företagsportalappen för Android har uppdaterats med en enklare design och nya ikoner. Ändringarna ligger i linje med de senaste uppdateringarna som gjorts i företagsportalappen för iOS. En jämförelse av ändringar sida vid sida finns i [Nyheter i användargränssnittet för appen](whats-new-app-ui.md). De uppdaterade registreringsstegen finns i [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) och [Registrera din Android-enhet](/intune-user-help/enroll-device-android-company-portal).  
 
 #### <a name="win32-apps-on-windows-10-s-mode-devices---3747604---"></a>Win32-appar på enheter med Windows 10 i S-läge<!-- 3747604 --> 
 Du kan installera och köra Win32-appar på hanterade enheter med Windows 10 i S-läge. Det gör du genom att skapa en eller flera tilläggsprinciper för S-läge med PowerShell-verktygen i Windows Defender-programreglering (WDAC). Signera tilläggsprinciperna med Device Guard-signeringsportalen och ladda sedan upp och distribuera principerna via Intune. I Intune hittar du den här funktionen genom att välja **Klientappar** > **Tilläggsprinciper för Windows 10 S**. Mer information finns i [Aktivera Win32-appar i S-lägesenheter](~/apps/apps-win32-s-mode.md).
@@ -73,7 +81,7 @@ Du kan kräva att en enhet måste startas om efter att en Win32-app har installe
 Mörkt läge är tillgängligt för iOS-företagsportalen. Användarna kan ladda ned företagsappar, hantera sina enheter och få IT-support i valfritt färgschema baserat på enhetsinställningarna. iOS-företagsportalen matchar automatiskt slutanvändarens enhetsinställningar för mörkt eller ljust läge. Mer information finns i [Lansering av mörkt läge i Microsoft Intunes företagsportal för iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). Mer information om hur du IOS-företagsportalen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](~/apps/company-portal-app.md).
 
 #### <a name="android-company-portal-enforced-minimum-app-version---2378776---"></a>Obligatorisk lägsta appversion för Android-företagsportalen<!-- 2378776 -->
-Genom att använda inställningen **Lägsta företagsportalversion** för en appskyddsprincip, kan du ange en specifik definierad minimiversion för företagsportalen som ska finnas på slutanvändarens enhet. Med den här inställningen för villkorlig start kan du använda **Blockera åtkomst**, **Rensa data** och **Varna** som möjliga åtgärder när värdet inte uppfylls. De möjliga formaten för det här värdet följer mönstret *[Major].[Minor]*, *[Major].[Minor].[Build]*, eller *[Major].[Minor].[Build].[Revision]*.
+Genom att använda inställningen **Lägsta företagsportalversion** för en appskyddsprincip, kan du ange en specifik definierad minimiversion för företagsportalen som ska finnas på slutanvändarens enhet. Med den här inställningen för villkorlig start kan du använda **Blockera åtkomst**, **Rensa data** och **Varna** som möjliga åtgärder när värdet inte uppfylls. De möjliga formaten för det här värdet följer mönstret *[Major].[Minor]* , *[Major].[Minor].[Build]* , eller *[Major].[Minor].[Build].[Revision]* .
 
 Om inställningen **Lägsta företagsportalversion** har konfigurerats, kommer det att påverka slutanvändare som hämtar version 5.0.4560.0 och eventuella framtida versioner av företagsportalen. Den här inställningen har ingen påverkan på användare som använder en version av företagsportalen som är äldre än den version som funktionen lanseras med. Slutanvändare som använder automatiska appuppdateringar kommer troligen inte att se några dialogrutor från den här funktionen, eftersom de sannolikt har den senaste företagsportalversionen. Den här inställningen gäller endast för Android med appskydd för registrerade och oregistrerade enheter. Mer information finns i [Inställningar för Android-appskyddsprinciper – Villkorlig start](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
@@ -631,10 +639,10 @@ Du kan skapa profiler för att begränsa inställningar på enheter som kör iOS
 
 - På **iOS** > **Enhetsbegränsningar** finns det vissa ändringar:
 
-  - **Inbyggda appar** > **Hitta min iPhone (endast övervakat)**: Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
-  - **Inbyggda appar** > **Hitta mina vänner (endast övervakat)**: Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
-  - **Trådlös** > **Ändring av Wi-Fi-tillstånd (endast övervakat)**: Ny inställning som förhindrar att användare aktiverar eller inaktiverar Wi-Fi på enheten.
-  - **Tangentbord och ordlista** > **QuickPath (endast övervakat)**: Ny inställning som blockerar QuickPath-funktionen.
+  - **Inbyggda appar** > **Hitta min iPhone (endast övervakat)** : Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
+  - **Inbyggda appar** > **Hitta mina vänner (endast övervakat)** : Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
+  - **Trådlös** > **Ändring av Wi-Fi-tillstånd (endast övervakat)** : Ny inställning som förhindrar att användare aktiverar eller inaktiverar Wi-Fi på enheten.
+  - **Tangentbord och ordlista** > **QuickPath (endast övervakat)** : Ny inställning som blockerar QuickPath-funktionen.
   - **Moln och lagring**: **Aktivitetsfortsättning** har bytt namn till **Handoff**.
 
   Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](../configuration/device-restrictions-ios.md) för att se de aktuella inställningarna.
@@ -684,7 +692,7 @@ Mer information om inställningarna för Windows Defender Antivirus finns i [Enh
 En nyinbyggd standardomfångstagg är nu tillgänglig. Alla icke-taggade Intune-objekt som stöder omfångstaggar tilldelas automatiskt till standardomfångstaggen. **Standardomfångstaggen** läggs till i alla befintliga rolltilldelningar för att upprätthålla paritet med administratörsupplevelsen idag. Om du inte vill att en administratör ska se Intune-objekt med standardomfångstaggen, tar du bort standardomfångstaggen från rolltilldelningen. Den här funktionen liknar funktionen säkerhetsomfattningar i System Center Configuration Manager. Mer information finns i [Använda RBAC och omfångstaggar för distribuerad IT](scope-tags.md).
 
 #### <a name="android-enrollment-device-administrator-support---4869749-----"></a>Stöd för registrering av Android-enhetens administratör<!-- 4869749   -->
-Alternativet för registrering av Android-enhetens administratör har lagts till på sidan Android-registrering (**Intune** > **Enhetsregistrering** > **Android-registrering)**. Android-enhetens administratör är fortfarande aktiverad som standard för alla klienter.  Du hittar mer information i [Registrering av Android-enhetens administratör](../enrollment/android-enroll-device-administrator.md).
+Alternativet för registrering av Android-enhetens administratör har lagts till på sidan Android-registrering (**Intune** > **Enhetsregistrering** > **Android-registrering)** . Android-enhetens administratör är fortfarande aktiverad som standard för alla klienter.  Du hittar mer information i [Registrering av Android-enhetens administratör](../enrollment/android-enroll-device-administrator.md).
 
 #### <a name="skip-more-screens-in-setup-assistant---4877451----"></a>Hoppa över fler skärmar i installationsassistenten <!--4877451  -->
 Du kan ställa in att programprofiler för enhetsregistrering hoppar över följande installationsassistentskärmar:
@@ -924,7 +932,7 @@ Gäller för: iOS
 När du skapar en enhetsbegränsningsprofil för iOS-enheter kan du använda ett fingeravtryck som lösenord. Inställningarna för lösenord med fingeravtryck tillåter även ansiktsigenkänning i denna uppdatering (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **Lösenord**). Därför ändras följande inställningar:
 
 - **Upplåsning med fingeravtryck** är nu **Upplåsning av Touch ID och Face ID**.
-- **Ändring av fingeravtryck (endast övervakat)** är nu **Ändring av Touch ID och Face ID (endast övervakat)**.
+- **Ändring av fingeravtryck (endast övervakat)** är nu **Ändring av Touch ID och Face ID (endast övervakat)** .
 
 Face ID är tillgängligt i iOS 11.0 och senare. Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](../configuration/device-restrictions-ios.md#password) för att se inställningarna.
 

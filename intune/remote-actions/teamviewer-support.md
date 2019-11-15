@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac9d22ff4b203a4e7a85121df6c021eec1bcd1e3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d03859d5775193e6bbc482c06b28942a1a5bce2f
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508535"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712143"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
@@ -47,8 +47,8 @@ Genom att använda TeamViewer tillåter du att TeamViewer för Intune-anslutning
 
 För att kunna ge fjärrhjälp till enheter måste du först konfigurera Intune TeamViewer-anslutningsprogrammet med följande steg:
 
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
-2. I **Microsoft Intune** väljer du **Enheter** och sedan **TeamViewer Connector**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **TeamViewer Connector**.
 3. Välj **Anslut** och acceptera sedan licensavtalet.
 4. Välj **Logga in på TeamViewer och auktorisera**.
 5. En webbsida öppnas med TeamViewer-webbplatsen. Ange dina autentiseringsuppgifter för TeamViewer-licensen och välj sedan **Logga in**.
@@ -57,8 +57,8 @@ För att kunna ge fjärrhjälp till enheter måste du först konfigurera Intune 
 
 När anslutningen har konfigurerats är du redo att fjärradministrera en enhet. Gör så här: 
 
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
-2. I **Microsoft Intune** väljer du **Enheter** och sedan **Alla enheter**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** och sedan **Alla enheter**.
 3. Välj den enhet som du vill fjärradministrera i listan. I egenskaperna för enheten väljer du **Ny fjärrhjälpssession**.
 4. När Intune ansluter till TeamViewer-tjänsten visas information enheten. Välj **Anslut** för att starta fjärrsessionen.
 

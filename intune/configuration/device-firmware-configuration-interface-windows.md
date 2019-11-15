@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
-ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
+ms.openlocfilehash: e9fe2b2174252aa1081eb311d79b4b5ba37f96f2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73432525"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755342"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Använda DFCI-profiler på Windows-enheter i Microsoft Intune (allmänt tillgänglig förhandsversion)
 
@@ -77,8 +77,8 @@ Den här profilen ser till att enheterna verifieras och aktiveras för DFCI unde
 
 Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett användbart profilnamn är till exempel **Windows: Konfigurera DFCI-inställningar på Windows-enheter**.
@@ -88,7 +88,7 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
 
 4. Konfigurera inställningarna:
 
-    - **Tillåt lokal användare att ändra UEFI-inställningar (BIOS)**: Alternativen är:
+    - **Tillåt lokal användare att ändra UEFI-inställningar (BIOS)** : Alternativen är:
       - **Endast ej konfigurerade inställningar**: Den lokala användaren kan ändra valfri inställningar *förutom* de inställningar som uttryckligen anges till **Aktivera** eller **Inaktivera** av Intune.
       - **Inga**: Den lokala användaren kan inte ändra UEFI-inställningar (BIOS), däribland inställningar som inte visas i DFCI-profilen.
 
@@ -104,7 +104,7 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
         - **Inte konfigurerad**: Intune ändrar inte den här funktionen och låter eventuella inställningar vara kvar som de är.
         - **Aktiverad**: Alla inbyggda mikrofoner och högtalare som hanteras direkt av UEFI (BIOS) aktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
         - **Inaktiverad**: Alla inbyggda mikrofoner och högtalare som hanteras direkt av UEFI (BIOS) inaktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
-    - **Radio (Bluetooth, Wi-Fi, NFC osv.)**: Alternativen är:
+    - **Radio (Bluetooth, Wi-Fi, NFC osv.)** : Alternativen är:
         - **Inte konfigurerad**: Intune ändrar inte den här funktionen och låter eventuella inställningar vara kvar som de är.
         - **Aktiverad**: Alla inbyggda radior som hanteras direkt av UEFI (BIOS) aktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
         - **Inaktiverad**: Alla inbyggda radior som hanteras direkt av UEFI (BIOS) inaktiveras. Kringutrustning, till exempel USB-enheter, påverkas inte.
@@ -112,7 +112,7 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
         > [!WARNING]
         > Om du inaktiverar inställningen **Radio** måste enheten ha en trådbunden nätverksanslutning. Annars kan enheten bli ohanterbar.
 
-    - **Starta från externa media (USB, SD)**: Alternativen är:
+    - **Starta från externa media (USB, SD)** : Alternativen är:
         - **Inte konfigurerad**: Intune ändrar inte den här funktionen och låter eventuella inställningar vara kvar som de är.
         - **Aktiverad**: UEFI (BIOS) tillåter start från icke-hårddiskbaserad lagring.
         - **Inaktiverad**: UEFI (BIOS) tillåter inte start från icke-hårddiskbaserad lagring.
@@ -127,9 +127,11 @@ Den här profilen innehåller de DFCI-inställningar som du konfigurerar.
 
 När profilerna har skapats är de [redo att tilldelas](../configuration/device-profile-assign.md). Tilldela profilerna till dina Azure AD-säkerhetsgrupper som omfattar dina DFCI-enheter.
 
-Nästa gången enheten synkroniseras eller startas om tillämpas DFCI-profilinställningarna. När principen har börjat gälla startar du om enheten.
+När enheten kör Windows Autopilot kan DFCI framtvinga en omstart på sidan för registreringsstatus. Den första omstarten registrerar UEFI i Intune. 
 
-När enheten kör Windows-enhetskonfiguration kan DFCI framtvinga en omstart på sidan för registreringsstatus. När konfigurationen är klar kan du kontrollera att DFCI-inställningarna är aktiva genom att starta om enheten. Använd sedan enhetstillverkarens instruktioner för att öppna UEFI-menyn.
+Om du vill bekräfta att enheten har registrerats kan du starta om enheten igen, men det är inget krav. Följ enhetstillverkarens instruktioner för att öppna UEFI-menyn och bekräfta att UEFI hanteras.
+
+Nästa gången enheten synkroniserar med Intune, tar Windows emot DFCI-inställningarna. Starta om enheten. Den här tredje omstarten krävs för att UEFI ska kunna ta emot DFCI-inställningarna från Windows.
 
 ## <a name="update-existing-dfci-settings"></a>Uppdatera befintliga DFCI-inställningar
 
@@ -156,7 +158,7 @@ När du har rensat enheten flyttar du enheten till den grupp som tilldelats de n
 
 När du är redo att ta enheten ur bruk och frigöra den från hantering uppdaterar du DFCI-profilen till de UEFI-inställningar (BIOS) som du vill ha i utgångstillståndet. Vanligtvis vill du att alla inställningar är aktiverade. Exempel:
 
-1. Öppna din DFCI-profil (**Enhetskonfiguration** > **Profiler**).
+1. Öppna din DFCI-profil (**Enheter** > **Konfigurationsprofiler**).
 2. Ändra **Tillåt lokal användare att ändra UEFI-inställningar (BIOS)** till **Endast ej konfigurerade inställningar**.
 3. Ange alla andra inställningar till **Ej konfigurerat**.
 4. Spara inställningarna.

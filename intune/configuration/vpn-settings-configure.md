@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5628ba39cafe38cc66827d69584d009c15326bd4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 59a1b5679b81a8de90e39d6ec13bbe87dac90947
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72491765"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984174"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Skapa VPN-profiler för att ansluta till VPN-servrar i Intune
 
@@ -50,7 +50,7 @@ Du kan skapa VPN-profiler med följande anslutningstyper:
 |Check Point Capsule VPN|- Android<br/>- Android Enterprise-arbetsprofiler<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |Cisco AnyConnect|- Android<br/>- Android Enterprise-arbetsprofiler<br/>- Ägare av Android Enterprise-enhet (helt hanterad)<br/>- iOS<br/>- macOS|
 |Cisco (IPSec)|iOS|
-|Citrix SSO|- Android<br/>- Android Enterprise-arbetsprofiler: Använd [konfigurationsprincip för app](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
+|Citrix SSO|- Android<br/>- Android Enterprise-arbetsprofiler: Använd [konfigurationsprincip för app](../apps/app-configuration-policies-use-android.md)<br/>– Ägare av Android Enterprise-enhet (helt hanterad): Använd [konfigurationsprincip för app](../apps/app-configuration-policies-use-android.md)<br/>- iOS<br/>- Windows 10|
 |Anpassat VPN|- iOS<br/>- macOS|
 |F5 Access|- Android<br/>- Android Enterprise-arbetsprofiler<br/>- Ägare av Android Enterprise-enhet (helt hanterad)<br/>- iOS<br/>- macOS<br/>- Windows 10<br/>- Windows 8.1<br/>- Windows Phone 8.1|
 |IKEv2| - iOS<br/>- Windows 10|
@@ -68,8 +68,9 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
 
 ## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
 
-1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil i Intune**.
-2. Ange följande egenskaper:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är t.ex. **VPN-profil för hela företaget**.
     - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
@@ -86,7 +87,7 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
 
     - **Profiltyp**: Välj **VPN**.
 
-3. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Se följande artiklar om du vill se detaljerade inställningar på respektive plattform:
+4. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Se följande artiklar om du vill se detaljerade inställningar på respektive plattform:
 
     - [Inställningar för Android](vpn-settings-android.md)
     - [Inställningar för Android Enterprise](vpn-settings-android-enterprise.md)
@@ -96,7 +97,7 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
     - [Inställningar för Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows 10 settings](vpn-settings-windows-10.md) (Inställningar för Windows 10) (inklusive Windows Holographic for Business)
 
-4. När du är klar väljer du att **Skapa** din profil.
+5. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
 
 Profilen skapas och visas i profillistan. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).
 

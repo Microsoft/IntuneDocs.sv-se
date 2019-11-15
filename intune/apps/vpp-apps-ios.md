@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785539"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984112"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS- och MacOS-appar som har köpts via ett Apples volymköpsprogram med Microsoft Intune
 
@@ -72,7 +72,6 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 * Varje token är giltig i ett år.
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.
 * Innan du börjar använda Apple VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobila enheter). Av säkerhetsskäl synkroniserar Intune inte dessa användarkonton till Intune. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
-* Intune har stöd för att lägga till upp till 256 VPP-token.
 * Apples program för enhetsregistreringsprofil (DEP) automatiserar registrering för hantering av mobila enheter (MDM). Med hjälp av DEP kan du konfigurera företagsenheter utan att röra dem. Du kan registrera dig i DEP-programmet med hjälp av samma programagentkonto som du använde med Apples volymköpsprogram. Apples ID för distributionsprogram är unikt för program som anges på webbplatsen för [Apples distributionsprogram](https://deploy.apple.com) och kan inte användas för att logga in på Apple-tjänster som iTunes-butiken.
 * När du tilldelar VPP-appar med hjälp av användarlicensieringsmodellen till användare eller enheter (med användartillhörighet), måste varje Intune-användare associeras med ett unikt Apple-ID eller en e-postadress när de accepterar Apples villkor på sin enhet.
 * När du konfigurerar en enhet för en ny Intune-användare ser du till att konfigurera den med användarens unika Apple-ID eller e-postadress. Kombinationen av Intune-användare och Apple-ID eller e-postadress bildar ett unikt par och kan användas på upp till fem enheter.
@@ -89,6 +88,8 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 5. I fönstret **Skapa VPP-token** anger du följande information:
     - **VPP-tokenfil** – Om du inte redan gjort det, registrerar du dig för volymköpsprogram för företag eller programmet för utbildning. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto och väljer det här.
     - **Apple-ID** – Ange Apple-ID för det konto som är associerat med inköpsprogrammet för volymen.
+    - **Take control of token from another MDM** (Ta kontroll över token från en annan MDM) – Om du väljer **ja** för det här alternativet kan token omtilldelas till Intune från en annan MDM.
+    - **Tokennamn** – Ett administrativt fält för att ange tokennamn.    
     - **Land/region** – Välj VPP-landskod/-regionkod.  Intune synkroniserar VPP-appar för alla språk från det angivna VPP-landet/-regionens App Store.
         > [!WARNING]  
         > När du byter land/region uppdateras apparnas metadata och butikens URL vid nästa synkronisering med Apple-tjänsten för appar som har skapats med denna token. Appen uppdateras inte om den inte finns i det nya landets/regionens butik.
@@ -98,6 +99,9 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 
         > [!NOTE]
         > Automatiska appuppdateringar fungerar för både enhets- och användarlicensierade appar för iOS version 11.0 eller macOS 10.12 eller senare.
+
+    - **Ge Microsoft behörighet att skicka information om både användare och enhet till Apple.** – Du måste välja **Jag accepterar** för att kunna fortsätta. Information om vilka data som Microsoft skickar till Apple finns i [Data som Intune skickar till Apple](~/protect/data-intune-sends-to-apple.md).
+
 6. När du är klar väljer du **Skapa**.
 
 Den token du önskar visas i fönstret med tokenlistan.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e3c9e3bbdc65ae3f97e4be871cfaf638f1bafcd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ee924a8c32c3c0591f968db0655044500c8c759d
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506593"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754967"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS-enheter i Intune
 
@@ -66,11 +66,11 @@ Skapa eller välj en befintlig grupp i Azure Active Directory (AD Azure) för an
 
 Importera VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren till en profil som skapats i Intune. Den betrodda certifikatprofilen instruerar iOS-enheten att automatiskt ha förtroende för den certifikatutfärdare som VPN-servern anger.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
-    - **Namn**
-    - **Beskrivning**
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett exempel på ett bra profilnamn är **iOS trusted certificate VPN profile for entire company** (VPN-profil för betrodda iOS-certifikat för hela företaget).
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj **iOS**.
     - **Profiltyp**: Välj **Betrott certifikat**.
 4. Välj mappikonen och bläddra till VPN-certifikatet (CER-filen) som du exporterade från VPN-administrationskonsolen. 
@@ -95,15 +95,15 @@ Se till att konfigurera certifikatet för klientautentisering. Du kan ange det h
 
 VPN-profilen innehåller SCEP- eller PKCS-certifikatet med klientens autentiseringsuppgifter, anslutningsinformation för det virtuella privata nätverket och VPN per app-flaggan för aktivering av funktionen i iOS-appen.
 
-1. I **Intune** väljer du **Enhetskonfiguration** > **Profiler** > **Skapa profil i Intune**. 
-2. Ange följande egenskaper: 
-    - **Namn**
-    - **Beskrivning**
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+2. Ange följande egenskaper:
+    - **Namn**: Ange ett beskrivande namn för den anpassade profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett exempel på ett bra profilnamn är **iOS per-app VPN profile for entire company** (VPN-profil per iOS-app för hela företaget).
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj **iOS**.
     - **Profiltyp**: Välj **VPN**.
 3. I **Anslutningstyp** väljer du din VPN-klientapp.
-4. Välj **Bas-VPN**. [iOS VPN-inställningar](vpn-settings-ios.md) listar och beskriver alla inställningar. När du använder per app-VPN ser du till att ange följande egenskaper enligt listan: 
-    
+4. Välj **Bas-VPN**. [iOS VPN-inställningar](vpn-settings-ios.md) listar och beskriver alla inställningar. När du använder per app-VPN ser du till att ange följande egenskaper enligt listan:
+
     - **Autentiseringsmetod**: Välj **Certifikat**. 
     - **Autentiseringscertifikat**: Välj ett befintligt SCEP- eller PKCS-certifikat > **OK**.      
     - **Delade tunnlar**: Välj **Inaktivera** för att tvinga all trafik att använda VPN-tunneln när VPN-anslutningen är aktiv. 
@@ -122,7 +122,7 @@ VPN-profilen innehåller SCEP- eller PKCS-certifikatet med klientens autentiseri
 
 När du har lagt till VPN-profilen associerar du appen och Azure AD-gruppen med profilen.
 
-1. I **Intune** väljer du **Klientappar** > **Appar**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Appar** > **Alla appar**.
 2. Välj en app i listan > **Tilldelningar** > **Lägg till grupp**.
 3. I **Tilldelningstyp** väljer du **Krävs** eller **Tillgänglig för registrerade enheter**.
 4. Välj **Inkluderade grupper** > **Välj grupper att ta med** > välj gruppen [du har skapat](#create-a-group-for-your-vpn-users) (i den här artikeln) > **Välj**.
@@ -161,18 +161,6 @@ Kontrollera att zero touch-upplevelsen fungerar genom att ansluta utan att behö
 - Enheten ber dig inte att ha förtroende för VPN-servern. Med andra ord visas dialogrutan **Dynamiskt förtroende** för användaren.
 - Användaren behöver inte ange autentiseringsuppgifterna.
 - Användarens enhet är ansluten till VPN när användaren öppnar någon av de associerade apparna.
-
-<!-- ## Troubleshooting the per-app VPN
-
-The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
-
-`Note -- use the Apple Configurator as the supported tool. Only runs on a mac.'
-
-To review event logs:
-
-1. Connect your iOS device to a PC
-2. Open the **iPhone Configuration Utility** (IPCU). If you do not have a copy, you can install it from [CompatCenter](http://www.microsoft.com/en-us/windows/compatibility/CompatCenter/ProductDetailsViewer?Name=iPhone%20Configuration%20Utility&vendor=Apple&Locale=1033%2C2057%2C3081%2C4105%2C16393&ModelOrVersion=3&BreadCrumbPath=iphone%20configuration%20utility&LastSearchTerm=iphone%2Bconfiguration%2Butility&Type=Software&tempOsid=Windows%208.1)
-3. Review the logs. -->
 
 ## <a name="next-steps"></a>Nästa steg
 

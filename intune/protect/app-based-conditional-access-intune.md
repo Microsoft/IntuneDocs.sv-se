@@ -6,28 +6,26 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
-ms.reviewer: chrisgre
+ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3cae06c3ce763fe8ca94bbed9bf35e8abef52c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f0b5e67c433f2d3633219650f48307dccae196e9
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502612"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713285"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 [Intunes appskyddsprinciper](../apps/app-protection-policy.md) hjälper dig att skydda företagets data på enheter som är registrerade i Intune. Du kan även använda appskyddsprinciper på medarbetarnas enheter som inte har registrerats för hantering i Intune. Även om ditt företag inte hanterar enheten i det här fallet, måste du fortfarande se till att företagets data och resurser är skyddade.
 
@@ -39,6 +37,7 @@ Appbaserad, villkorlig åtkomst och klientapphantering lägger till ett säkerhe
 Du kan blockera inbyggda e-postappar i iOS och Android genom att bara tillåta att Microsoft Outlook-appen får åtkomst till Exchange Online. Dessutom kan du blockera appar där Intunes appskyddsprinciper inte har tillämpats för åtkomst till SharePoint Online.
 
 ## <a name="prerequisites"></a>Krav
+
 Innan du skapar en appbaserad princip för villkorlig åtkomst måste du ha:
 
 - **Enterprise Mobility + Security (EMS)** eller en **Azure Active Directory (AD) Premium-prenumeration**
@@ -57,7 +56,7 @@ Appbaserad villkorlig åtkomst [stöder också verksamhetsspecifika appar (LOB)]
 I det här exemplet har administratören tillämpat appskyddsprinciper på Outlook-appen, följt av en regel för villkorlig åtkomst som lägger till Outlook-appen i en lista med godkända appar som kan användas för att få åtkomst till företagets e-post.
 
 > [!NOTE]
-> Flödesschemat för strukturen nedan kan användas för andra hanterade appar.
+> Följande flödesdiagram kan användas för andra hanterade appar.
 
 ![Flödesdiagram över processen för appbaserad villkorlig åtkomst](./media/app-based-conditional-access-intune/ca-intune-common-ways-3.png)
 

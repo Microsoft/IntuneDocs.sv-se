@@ -2,10 +2,10 @@
 title: Inkompatibilitetsmeddelande och åtgärder med Microsoft Intune – Azure | Microsoft Docs
 description: Skapa ett e-postmeddelande som ska skickas till inkompatibla enheter. Lägg till åtgärder när en enhet har markerats som inkompatibel, t.ex. en respitperiod för att bli kompatibel, eller skapa ett schema som blockerar åtkomst tills enheten är kompatibel. Gör detta med Microsoft Intune i Azure.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c432fbd38250212fcba346ec4762cb88a418cbce
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 9e3867bfc2de29c059766e134bd0d2c8801e1c70
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509698"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712905"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter i Intune
 
@@ -36,7 +36,7 @@ Det finns flera typer av åtgärder:
 
     Dessutom inkluderar Intune information om den inkompatibla enheten i e-postmeddelandet.
 
-- **Fjärrlåsa en icke-kompatibel enhet**: För enheter som inte är kompatibla kan du utfärda en fjärrlåsning. Användaren uppmanas i så fall att ange en PIN-kod eller ett lösenord för att låsa upp enheten. Mer om funktionen [Fjärrlåsning](../remote-actions/device-remote-lock.md). 
+- **Fjärrlåsa en icke-kompatibel enhet**: För enheter som inte är kompatibla kan du utfärda en fjärrlåsning. Användaren uppmanas i så fall att ange en PIN-kod eller ett lösenord för att låsa upp enheten. Mer om funktionen [Fjärrlåsning](../remote-actions/device-remote-lock.md).
 
 - **Markera enhet som inkompatibel**: Skapa ett schema (med antal dagar) varefter enheten markeras som inkompatibel. Du kan konfigurera åtgärden till att börja gälla omedelbart, eller ge användaren en respitperiod för att bli kompatibel.
 
@@ -62,55 +62,63 @@ Den här artikeln visar hur du:
 
 Om du vill skicka ett e-postmeddelande till användarna skapar du en mall för aviseringsmeddelanden. När en enhet är inkompatibel visas informationen som du anger i mallen i e-postmeddelandet som skickas till användarna.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetsefterlevnad** > **Meddelanden**.
-3. Välj **Skapa meddelande**. Ange följande information:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Efterlevnadsprinciper** > **Meddelanden** > **Skapa meddelande**.
+3. Ange följande information under *Grundläggande*:
 
    - **Namn**
    - **Ämne**
    - **Meddelande**
+
+4. Under *Grundläggande* konfigurerar du även följande alternativ för meddelandet, som alla är *aktiverade* som standard:
+
    - **E-postsidhuvud – Infoga företagets logotyp**
    - **E-postsidfot – Infoga företagets namn**
    - **E-postsidfot – Infoga kontaktinformation**
 
+   Den logotyp som du laddar upp som en del av varumärkesanpassningen av företagsportalen används för e-postmallar. Läs mer om varumärkesanpassning av företagsportalen i [Varumärkesanpassning för företagsidentitet](../apps/company-portal-app.md#company-identity-branding-customization).
+
    ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
-4. När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas. Den logotyp som du laddar upp som en del av varumärkesanpassningen av företagsportalen används för e-postmallar. Läs mer om varumärkesanpassning av företagsportalen i [Varumärkesanpassning för företagsidentitet](../apps/company-portal-app.md#company-identity-branding-customization).
+   Fortsätt genom att välja **Nästa**.
+
+5. Under **Granska + skapa** granskar du dina konfigurationer för att säkerställa att meddelandemallen är redo att användas. Välj **Skapa** för att skapa meddelandet.
 
 > [!NOTE]
-> Du kan även ändra eller uppdatera en befintlig aviseringsmall som du skapade tidigare.
+> Du kan också välja en befintlig meddelandemall som du skapat tidigare och uppdatera den genom att **redigera** informationen i den.
 
 ## <a name="add-actions-for-noncompliance"></a>Lägga till åtgärder vid inkompatibilitet
 
 När du skapar en princip för enhetsefterlevnad skapar Intune automatiskt en åtgärd för inkompatibilitet. Om en enhet inte uppfyller din efterlevnadsprincip markerar den här åtgärden enheten som inkompatibel. Du kan anpassa hur länge enheten ska markeras som inkompatibel. Det går inte att ta bort åtgärden.
 
-Du kan också lägga till en till åtgärd när du skapar en princip för efterlevnad eller uppdatera en befintlig princip. 
+Du kan också lägga till en till åtgärd när du skapar en princip för efterlevnad eller uppdatera en befintlig princip.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Efterlevnad för enhet**.
-2. Välj **Principer**, välj en av dina principer och sedan **Egenskaper**. 
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
-  
-    > [!NOTE]
-    > JAMF-enheter och enheter som är mål för enhetsgrupper kan inte ta emot efterlevnadsåtgärder just nu.
+2. Välj **Enheter** > **Efterlevnadsprinciper** > **Principer**, välj en av dina principer och välj sedan **Egenskaper**.
+
+   Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
+
+   > [!NOTE]
+   > JAMF-enheter och enheter som är mål för enhetsgrupper kan inte ta emot efterlevnadsåtgärder just nu.
 
 3. Välj **Åtgärder för inkompatibilitet** > **Lägg till**.
-4. Välj din **åtgärd**: 
 
-    - **Skicka e-post till slutanvändare**: Välj att skicka ett e-postmeddelande till användaren om enheten inte är kompatibel. Du kan också: 
-    
-         - Välj den **meddelandemall** som du skapade tidigare
-         - Ange eventuella **ytterligare mottagare** genom att välja grupper
-    
-    - **Fjärrlåsa en icke-kompatibel enhet**: Lås enheten när den är inkompatibel. Den här åtgärden tvingar användaren att ange en PIN-kod eller ett lösenord för att låsa upp enheten. 
-    
+4. Välj din **åtgärd**:
+
+   - **Skicka e-post till slutanvändare**: Välj att skicka ett e-postmeddelande till användaren om enheten inte är kompatibel. Du kan också:
+     - Välj den **meddelandemall** som du skapade tidigare
+     - Ange eventuella **ytterligare mottagare** genom att välja grupper
+
+   - **Fjärrlåsa en icke-kompatibel enhet**: Lås enheten när den är inkompatibel. Den här åtgärden tvingar användaren att ange en PIN-kod eller ett lösenord för att låsa upp enheten.
+
 5. Konfigurera ett **schema**: Ange hur många dagar (0 till 365) efter en inkompatibilitet som åtgärden ska utlösas på användarnas enheter. Efter den här respittiden kan du tillämpa en [princip för villkorlig åtkomst](conditional-access-intune-common-ways-use.md). Om du anger **0** (noll) dagar tillämpas den villkorliga åtkomsten **omedelbart**. Om en enhet till exempel inte är kompatibel kan du använda villkorlig åtkomst för att blockera åtkomsten till e-post, SharePoint och andra organisationsresurser omedelbart.
 
-    När du skapar en efterlevnadsprincip skapas automatiskt åtgärden **Markera enheten som inkompatibel**, och den ställs automatiskt in på **0** dagar (omedelbart). Med den här åtgärden bedöms enheten som icke-kompatibel direkt när den checkar in. Om du även använder villkorlig åtkomst träder den villkorliga åtkomsten i kraft direkt. Om du vill tillåta en respitperiod ändrar du **Schema** för åtgärden **Markera enheten som inkompatibel**.
-    
-    I efterlevnadsprincipen kanske du även vill meddela användaren. Du kan lägga till åtgärden **Skicka e-post till slutanvändare**. I åtgärden **Skicka e-post** anger du 2 dagar för **Schema**. Om enheten eller slutanvändaren fortfarande bedöms som icke-kompatibel dag 2 skickas e-postmeddelandet dag 2. Om du vill skicka e-post till användaren på dag 5 i lägger du till en annan åtgärd och anger 5 dagar för **Schema**.
+   När du skapar en efterlevnadsprincip skapas automatiskt åtgärden **Markera enheten som inkompatibel**, och den ställs automatiskt in på **0** dagar (omedelbart). Med den här åtgärden bedöms enheten som icke-kompatibel direkt när den checkar in. Om du även använder villkorlig åtkomst träder den villkorliga åtkomsten i kraft direkt. Om du vill tillåta en respitperiod ändrar du **Schema** för åtgärden **Markera enheten som inkompatibel**.
 
-    Mer information om efterlevnad och de inbyggda åtgärderna finns i [översikt över efterlevnad](device-compliance-get-started.md).
+   I efterlevnadsprincipen kanske du även vill meddela användaren. Du kan lägga till åtgärden **Skicka e-post till slutanvändare**. I åtgärden **Skicka e-post** anger du 2 dagar för **Schema**. Om enheten eller slutanvändaren fortfarande bedöms som icke-kompatibel dag 2 skickas e-postmeddelandet dag 2. Om du vill skicka e-post till användaren på dag 5 i lägger du till en annan åtgärd och anger 5 dagar för **Schema**.
+
+   Mer information om efterlevnad och de inbyggda åtgärderna finns i [översikt över efterlevnad](device-compliance-get-started.md).
 
 6. När du är klar väljer du **Lägg till** > **OK** för att spara ändringarna.
 

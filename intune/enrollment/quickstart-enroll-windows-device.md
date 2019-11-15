@@ -2,7 +2,7 @@
 title: Snabbstart – Registrera din Windows 10 Desktop-enhet i Microsoft Intune
 description: Snabbstart – Använda företagsportalen för att registrera din Windows 10 Desktop-enhet i Microsoft Intune.
 services: microsoft-intune
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 07/30/2019
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aeeb55804a2bdd3ef1143bbb88dee968892c5c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 91f20411f668428c8bf3af8b0bd4ae6f4b0b545f
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509284"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713513"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Snabbstart: Registrera din Windows 10-enhet
 
@@ -91,7 +91,7 @@ Innan du registrerar ditt Windows 10 Desktop måste du bekräfta den version av 
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Bekräfta din enhetsregistrering i Intune
 
-1. Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som global administratör eller Intune-tjänstadministratör.
 2. Välj **Enheter** > **Samtliga enheter** för att visa de registrerade enheterna i Intune.
 3. Kontrollera att du har ytterligare en enhet registrerad i Intune.
 
