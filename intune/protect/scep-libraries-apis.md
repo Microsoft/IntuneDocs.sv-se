@@ -3,8 +3,8 @@ title: API:er som kan publicera certifikatutfärdare från tredje part
 titleSuffix: Microsoft Intune
 description: Lägg till eller integrera SCEP GitHub-lösningen för tredjeparts certifikatutfärdare (CA) för att utfärda SCEP-certifikat till enheter i Microsoft Intune. Den här lösningen innehåller Java- och C#-API:er som validerar, skickar meddelanden om lyckat och misslyckat till Intune samt använder SSL socket factory vid kommunikation med Intune. Se även en översikt över stegen för att testa din SCEP CA-konfiguration.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cadadcb8379d2de73b166d863c0b471747f5f6c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0a888e2087b98eeec82aeeb555677dddcb3eff4e
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504108"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058228"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Använda API:er för att lägga till tredjeparts certifikatutfärdare för SCEP i Intune
 

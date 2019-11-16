@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d0cff4ad624d35843f3388535b60549d1893eeb
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: 54995b54d7810c02c5a8b24e5ddff3fa1f08cb05
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143156"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117864"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Funktionsinställningar för macOS-enheter i Intune
 
@@ -139,22 +139,22 @@ Den här funktionen gäller för:
   > Med typen **autentiseringsuppgift** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Överväg i stället att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typen.
 
 - **Tilläggs-ID** (endast autentiseringsuppgift): Ange paket-ID: t som identifierar ditt SSO app-tillägg, till exempel `com.apple.ssoexample`.
-- **Team-ID** (endast autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, till exempel `ABCDE12345`. 
+- **Team-ID** (endast autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, t. ex. `ABCDE12345`. 
 
   [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c) (öppna Apples webbplats) om du vill ha mer information.
 
 - **Sfär**: Ange namnet på din autentiserings-sfär. Sfär namnet ska vara kapitaliserat, t. ex. `CONTOSO.COM`. Vanligt vis är ditt sfär namn detsamma som ditt DNS-domännamn, men i alla versaler.
-- **Domäner**: ange domän-eller värd namnen för de platser som kan AUTENTISERA via SSO. Om din webbplats till exempel är `mysite.contoso.com`, är `mysite` värd namnet och `contoso.com` är domän namnet. När användarna ansluter till någon av dessa platser hanterar app-tillägget verifierings utmaningen. Med den här autentiseringen kan användare använda ansikts-ID, Touch-ID eller Apple-Pincode/lösen ord för att logga in.
+- **Domäner**: ange domän-eller värd namnen för de platser som kan AUTENTISERA via SSO. Om din webbplats till exempel är `mysite.contoso.com`, `mysite` är värd namnet och `contoso.com` är domän namnet. När användarna ansluter till någon av dessa platser hanterar app-tillägget verifierings utmaningen. Med den här autentiseringen kan användare använda ansikts-ID, Touch-ID eller Apple-Pincode/lösen ord för att logga in.
 
   - Alla domäner i Intune-tilläggen för enkel inloggning måste vara unika. Du kan inte upprepa en domän i valfri inloggnings profil för program tillägg, även om du använder olika typer av SSO-tillägg.
   - Dessa domäner är inte Skift läges känsliga.
 
 - **Ytterligare konfiguration** (endast autentiseringsuppgift): ange ytterligare tilläggs information som ska skickas till SSO-appens tillägg:
-  - **Konfigurations nyckel**: Ange namnet på det objekt som du vill lägga till, till exempel `user name`.
+  - **Konfigurations nyckel**: Ange namnet på det objekt som du vill lägga till, t. ex. `user name`.
   - **Värdetyp**: ange typ av data. Alternativen är:
 
     - Sträng
-    - Booleskt värde: Ange `True` eller `False` i **konfiguration svärdet**.
+    - Boolean: Ange `True` eller `False`i **konfiguration svärdet**.
     - Heltal: Ange ett tal i **konfiguration svärdet**.
     
   - **Konfigurations värde**: ange data.
@@ -179,12 +179,13 @@ Den här funktionen gäller för:
 - **Lägsta ålder för lösen ord** (endast Kerberos): Ange antalet dagar som ett lösen ord måste användas på domänen innan användaren kan ändra det. **Inte konfigurerad** (standard) upprätthåller inte en minsta ålder på lösen ord innan de kan ändras.
 - **Meddelande om förfallo datum för lösen ord** (endast Kerberos): Ange antalet dagar innan ett lösen ord upphör att gälla som användare får ett meddelande om att lösen ordet upphör att gälla. **Inte konfigurerad** (standard) använder `15` dagar.
 - **Lösenordets giltighetstid** (endast Kerberos): Ange antal dagar innan lösenordet för enheten måste ändras. **Inte konfigurerat** (standard) innebär att användar lösen ord aldrig upphör att gälla.
-- **Huvud namn** (endast Kerberos): Ange användar namnet för Kerberos-huvudobjektet. Du behöver inte inkludera sfär namnet. I `user@contoso.com` är `user` till exempel huvud namnet och `contoso.com` är sfär namnet.
+- **Huvud namn** (endast Kerberos): Ange användar namnet för Kerberos-huvudobjektet. Du behöver inte inkludera sfär namnet. I `user@contoso.com`är `user` till exempel huvud namnet och `contoso.com` är sfär namnet.
 - **Active Directory platskod** (endast Kerberos): Ange namnet på den Active Directory plats som Kerberos-tillägget ska använda. Du kanske inte behöver ändra det här värdet eftersom Kerberos-tillägget automatiskt kan hitta Active Directory platskod.
 - **Cache-namn** (endast Kerberos): Ange GSS-namnet (Generic Security Services) för Kerberos-cachen. Du behöver förmodligen inte ange det här värdet.  
 - **Meddelande krav för lösen ord** (endast Kerberos): Ange en text version av organisationens lösen ords krav som visas för användarna. Meddelandet visas om du inte behöver Active Directory krav på lösen ords komplexitet eller inte anger en minsta längd på lösen ord.  
 - **Programpaket-ID: n** (endast Kerberos): **Lägg till** de ID: n för appen som ska använda enkel inloggning på dina enheter. De här apparna beviljas åtkomst till biljett beviljande biljetten i Kerberos, autentiserings biljetten och autentisera användare till tjänster som de har behörighet att komma åt.
 - **Domän sfär mappning** (endast Kerberos): **Lägg till** DNS-suffixet för domänen som ska mappas till din sfär. Använd den här inställningen när DNS-namnen på värdarna inte matchar sfär namnet. Du behöver förmodligen inte skapa den här anpassade domän-till-sfär-mappningen.
+- **PKINIT-certifikat** (endast Kerberos): **Välj** kryptering för offentlig nyckel för inledande autentisering (PKINIT) som kan användas för att förnya Kerberos-autentiseringsuppgiften utan användar interaktion. Certifikatet ska vara ett PKCS-eller SCEP-certifikat som du tidigare lagt till i Intune.
 
 ## <a name="associated-domains"></a>Tillhörande domäner
 

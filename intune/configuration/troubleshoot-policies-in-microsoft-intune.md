@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687505a3ca2bbdffd26e8870705971aafb4783d2
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754945"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059272"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -103,7 +103,7 @@ Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta 
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Du är osäker på om en profil tillämpas korrekt
 
-1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Enheter** > **Alla enheter** > välj enheten > **Enhetskonfiguration**. 
 
     Profilerna för varje enhet listas. Varje profil har en **Status**. Statusen gäller när alla tilldelade profiler, inklusive begränsningar och krav på maskinvara och operativsystem, bedöms tillsammans. Möjliga statusar:

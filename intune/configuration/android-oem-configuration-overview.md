@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8747f3dfa9169a4f1f2de9dcf45db0f5cccadd1
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: bacb7e26df8a5b0d6c7500b24a5e749a85ca62f2
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73756754"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059637"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
 
@@ -80,8 +80,8 @@ Kontrol lera att enheten har stöd för OEMConfig, att rätt OEMConfig-app lägg
 
 ## <a name="create-an-oemconfig-profile"></a>Skapa en OEMConfig-profil
 
-1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Välj **enheter** > **konfigurations profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen.
@@ -141,7 +141,7 @@ Jämfört med standard appar expanderar OEMConfig-appar de hanterade konfigurati
 
 | OEM | Samlings-ID | OEM-dokumentation (om tillgänglig) |
 | --- | --- | ---|
-| Samsung | com. Samsung. Android. Knox. KPU | [Administratörs guide för Knox Service plugin-program](https://docs.samsungknox.com/knox-service-plugin/admin-guide/welcome.htm) |
+| Samsung | com. Samsung. Android. Knox. KPU | [Administratörs guide för Knox Service plugin-program](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Zebra-tekniker | com. Zebra. oemconfig. common | [Översikt över Zebra-OEMConfig](http://techdocs.zebra.com/oemconfig ) |
 | Datalogic | com. Datalogic. oemconfig | [Användar dokumentation för Datalogic-OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com. Honeywell. oemconfig |  |

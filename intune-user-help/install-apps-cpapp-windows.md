@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8cb6976121f4c5a9ce755e8feb189ea007e7ffd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 80fd2d54a99bc3f4ab47f48f94eb14aa1a7f630c
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506124"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126192"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 
@@ -41,7 +41,7 @@ Installera appar på enheten från företagsportalappen för Windows.
     * **Visa alla**: från avsnittet **Startsida** > **Appar**, klickar du på **Visa alla** för att visa alla tillgängliga appar.  
     * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella. Visa, sortera och filtrera apparna. Sökresultat sorteras automatiskt efter relevans.  
     * **App-kategorier**: Välj den här sidan i navigerings fönstret för att välja appar baserat på typ eller funktion. Apparna sorteras under kategorier som **aktuella**, **utbildning**och **produktivitet**.  
-    * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
+    * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster. Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
 
 3. Välj en app.   
 4. På sidan appinformation, klickar du på **Installera**. När installationen är klar visas statusen **Installerad**.  
@@ -69,10 +69,10 @@ Dela och rekommendera appar till dina arbets- och skolkontakter. Följande steg 
 
 När du delar får mottagaren en länk och ett meddelande för att visa appens information. Länken öppnar företagsportalens **appinformationssida**. 
 
-## <a name="available-and-required-apps"></a>Tillgängliga appar och appar som krävs
-Appar tilldelas dig av din organisation och märks i Företagsportal antingen **tillgängliga** eller **obligatoriska**. 
+## <a name="optional-and-required-apps"></a>Valfria och obligatoriska appar
+Appar tilldelas dig av din organisation. Din organisation kräver att du har några appar och kommer att göra andra appar valfria. Om du vill ta reda på vilka appar som är obligatoriska och valfria kan du gå till **installerade appar** och titta under den kolumn **som krävs av din organisation**.  
 
-* Tillgängliga appar: de här apparna väljs av din organisation och är lämpliga och användbara för arbete eller skola. De är valfria att installera och är de enda appar som du hittar i Företagsportal att installera. 
+* Valfria appar: de här apparna väljs av din organisation och är lämpliga och användbara för arbete eller skola. De är tillgängliga för dig, men det är upp till dig om du vill installera dem. Detta är den enda typen av appar som du hittar i Företagsportal att installera. 
 
 * Obligatoriska appar: de här apparna är nödvändiga för arbete och skola och distribueras direkt till din enhet. De här apparna installeras automatiskt utan att du behöver göra något. 
 
@@ -86,15 +86,13 @@ Om det finns en app som du behöver men inte ser i Företagsportal kan du begär
 ## <a name="view-installed-apps"></a>Visa installerade appar  
 Visa en lista över alla appar som är installerade på enheten. Sidan **installerade appar** innehåller följande information om varje app:
 
-* Namn: Namnet på appen. Tillgängliga appar innehåller en länk till sidan med **information om appar** .
+* Namn: Namnet på appen. Valfria appar innehåller en länk till sidan med **information om appar** .
 * Tilldelnings typ: hur appen tilldelas och görs tillgänglig för dig. 
 * Utgivare: namnet på den utvecklare eller det företag som distribuerade appen. En utgivare är vanligt vis en program varu leverantör eller din organisation.  
 * Publicerings datum: det datum då appen gjordes tillgänglig för hämtning. Publicerings datumet kan visa appens första version eller en Apps senaste uppdatering.
 * Status: appens aktuella installations status på enheten. Appar kan visa att installation, installation och installation misslyckades. Obligatoriska appar kan ta upp till 10 minuter innan en uppdaterad status visas. Information om hur du installerar en app som krävs finns i avsnittet [installera appar](#install-apps) . 
 
-För att komma till den här sidan går du till navigerings menyn och väljer **installerade appar**. 
-
-  ![En exempelskärmbild av företagsportalappen för Windows 10,sidan Installerade Appar. ](./media/installed-apps-cp-1906.png)  
+För att komma till den här sidan går du till navigerings menyn och väljer **installerade appar**.  
 
 
 Använd **Sortera efter** för att ordna om tilldelnings typen för appar, utgivare, alfabetiskt efter namn eller kronologiskt efter Publicerings datum. Använd **Filtrera efter** för att begränsa vilka appar som visas efter installations status.  Om inga appar är tillgängliga visas ett meddelande om att inga företags program har installerats.  

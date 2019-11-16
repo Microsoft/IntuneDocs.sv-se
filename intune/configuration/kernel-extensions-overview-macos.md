@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e69f1b11833da0906aaf831f8bb82b04241e442f
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: bce6b99723c5eada8f8f29e875a1df1daa02751a
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755182"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059359"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Lägga till macOS kernel-tillägg i Intune
 
@@ -67,8 +67,8 @@ Den här artikeln visar hur du skapar en enhets konfigurations profil med hjälp
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Välj **enheter** > **konfigurations profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen.

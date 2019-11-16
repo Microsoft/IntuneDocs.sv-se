@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/13/2018
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ab16d79549a7fe7b0249c0c4af79ed56817ecec
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d8fd53e9d12dd38639d204e214aea03d733e584b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510043"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059200"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter
 
@@ -42,8 +42,8 @@ Organisationer kan använda Microsoft Intune för att hantera Windows-datorer so
 |**Hantering av programvaruuppdateringar**| Windows-uppdateringar och appuppdateringar för Microsoft<br>[Hålla Windows-datorerna uppdaterade med programvaruuppdateringar](../keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)|Microsoft Store för företag för både Windows 10- och Microsoft-appar<br> [Konfigurera inställningar för Windows Update för företag](../protect/windows-update-for-business-configure.md) |
 |**Hantering av programlicenser**|Tillgänglig <br>[Hantera licensavtal för Windows-datorprogram](../manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Microsoft Store för företag (endast .appx-appar)<br>[Hantera appar som du har köpt från Microsoft Store för företag](../apps/windows-store-for-business.md)|
 |**Inventering**|Tillgänglig <br>[Visa maskin- och programvaruinventering för Windows-datorer](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Tillgänglig <br>[Så här övervakar du appinformation](../apps/apps-monitor.md)<br>[Vad är enhetshantering](../remote-actions/device-management.md)|
-|**Princip för Windows-brandväggen**|Tillgänglig <br>[Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Tillgänglig <br>[Windows Defender-brandvägg](../protect/endpoint-protection-windows-10.md#windows-defender-firewall)|
-|**Skydd mot skadlig kod**|Slutpunktsskydd<br>[Skydda Windows-datorer med Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Windows försvarare<br>[Aktivera Windows Defender](../protect/advanced-threat-protection.md)|
+|**Princip för Windows-brandväggen**|Tillgänglig <br>[Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Tillgänglig <br>[Microsoft Defender-brandvägg](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
+|**Skydd mot skadlig kod**|Slutpunktsskydd<br>[Skydda Windows-datorer med Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Microsoft Defender<br>[Aktivera Microsoft Defender](../protect/advanced-threat-protection.md)|
 |**Fjärrhjälp** |TeamViewer<br>[Begära och tillhandahålla hjälp för Windows-datorer](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Fjärradministrera Intune-enheter med TeamViewer](../remote-actions/teamviewer-support.md) |
 |**Appdistribution** | Inte tillgängligt för Microsoft Store för företag,<br>enbart .exe, .appx och multi-file .msi<br>[Lägg till program för Windows-datorer som kör Intune-klientprogramvaran](add-apps-for-windows-pcs-in-microsoft-intune.md)|Tillgängliga för Microsoft Store-appar och branschspecifika appar<br>[Så här lägger du till Windows Store-appar](../apps/store-apps-windows.md)<br>[Så här lägger du till Windows branschspecifika appar (LOB-appar)](../apps/lob-apps-windows.md)|
 |**Appskydd**|Saknas|Tillgänglig <br>[Vad är appskyddsprinciper?](../apps/app-protection-policy.md)|

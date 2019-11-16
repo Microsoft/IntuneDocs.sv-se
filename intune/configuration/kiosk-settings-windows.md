@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17dce8f7c5aa55a2044e663f724a5784cee8b375
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 42ccb1d1654ba45b63672eebf00acd10fdc56a67
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506680"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059346"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -40,6 +40,8 @@ Mer information om Windows helskärmsfunktion i Intune finns i [Konfigurera inst
 
   1. Skapa den här helskärmsprofilen för att köra enheten i helskärmsläge.
   2. Skapa [profilen för enhetsbegränsningar](device-restrictions-windows-10.md#microsoft-edge-browser) och konfigurera specifika funktioner och inställningar som tillåts i Microsoft Edge.
+
+- Se till att alla filer, skript och genvägar finns på det lokala systemet. Mer information, inklusive andra Windows-krav, finns i [Anpassa och exportera startlayout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Var noga med att tilldela den här helskärmsprofilen till samma enheter som din [Microsoft Edge-profil](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -194,3 +196,5 @@ Appar i det här läget är tillgängliga på startmenyn. De här apparna är de
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
 Du kan också skapa helskärmsprofiler för [Android](device-restrictions-android.md#kiosk)-, [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)- och [Windows Holographic for Business](kiosk-settings-holographic.md)-enheter.
+
+Se även [Konfigurera en hel](https://docs.microsoft.com/windows/configuration/kiosk-single-app) skärms kiosk eller [Konfigurera en hel skärms kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) i Windows-vägledningen.
