@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709746"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984129"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -194,7 +194,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   > [!NOTE]
   > Intune-ANVÄNDARGRÄNSSNITTET för den här inställningen skiljer inte värdena för iOS och iPad som stöds. Användar gränssnittet kan uppdateras i en framtida version.
 
-- **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan lösenordet för enheten måste ändras.
+- **Lösenordets giltighetstid (dagar)**: Ange antal dagar innan lösenordet för enheten måste ändras.
 - **Förhindra återanvändning av tidigare lösenord**: Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas.
 - **Lås upp Touch ID och ansikts-ID**: Välj **blockera** för att förhindra användning av finger avtryck eller ansikte för att låsa upp enheten. **Inte konfigurerad** låter användare låsa upp enheten med dessa metoder.
 
@@ -265,7 +265,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 - **Kräv lösen ord för iTunes Store för alla köp**: **Kräv** att användaren anger lösen ordet för Apple-ID för varje app-eller iTunes-inköp. **Inte konfigurerad** (standard) tillåter köp utan att du behöver ange ett lösen ord varje gång.
 - **Köp i appar**: Välj **Blockera** om du vill förhindra att köp från butiken görs i appen. **Inte konfigurerad** (standard) tillåter köp i butiken från en app som körs.
-- **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”** : Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** (standard) tillåter att användare laddar ned böcker i kategorin Erotik.
+- **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”**: Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** (standard) tillåter att användare laddar ned böcker i kategorin Erotik.
 - **Tillåt att hanterade appar skriver kontakter till ohanterade kontakt konton**: när de är inställda på **Tillåt**kan hanterade appar, t. ex. Outlook-mobilappen, Spara eller synkronisera kontakt information, inklusive företags-och företags kontakter, till de inbyggda iOS-kontakterna mobilappar. Om det är inställt på **inte konfigurerat** (standard) kan hanterade appar inte spara eller synkronisera kontakt information till den inbyggda appen för iOS-kontakter på enheten.
   
   Om du vill använda inställningen ställer du in **Visa företagsdokument i ohanterade appar** på **Blockera**.
@@ -447,12 +447,21 @@ Om du vill lägga till appar kan du:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 
+Obs! för data nätverks växling (tips eller viktig information som hjälper till med kund förvirring): den här inställningen visas inte i mål enhetens hanterings profil. Det beror på att den här inställningen behandlas som en fjär renhets åtgärd, och varje gång statusen för data nätverks växling ändras på enheten kommer den att blockeras igen av Intune-tjänsten. Även om den inte finns i hanterings profilen fungerar den om den visas som lyckad från rapportering i administratörs konsolen. 
 - **Dataroaming**: Välj **Blockera** om du vill förhindra dataroaming över det mobila nätverket. **Inte konfigurerad** (standard) tillåter dataroaming när enheten är i ett mobilnät.
+
+  > [!IMPORTANT]
+  > Den här inställningen behandlas som en fjär renhets åtgärd. Därför visas inte den här inställningen i hanterings profilen på enheten. Varje gång statusen för data nätverks växling ändras på enheten blockeras **data nätverks växling** av Intune-tjänsten. Om rapporterings statusen i Intune visar att den fungerar som den ska, vet du att den fungerar, även om inställningen inte visas i hanterings profilen på enheten.
+
 - **Global bakgrundssamling under nätverksväxling**: **Blockera** förhindrar att funktionen för global bakgrundssamling används under nätverksväxling i mobilnätverket. **Inte konfigurerad** (standard) tillåter att enheten hämtar data, till exempel e-post, när den nätverksväxlar i ett mobilnät.
 - **Röstsamtal**: Välj **Blockera** om du vil förhindra användare från att använda enhetens röstsamtalsfunktion. **Inte konfigurerad** (standard) tillåter röstsamtal på enheten.
 - **Röstroaming**: Välj **Blockera** om du vill förhindra röstroaming över det mobila nätverket. **Inte konfigurerad** (standard) tillåter röstroaming när enheten är i ett mobilnät.
 - **Internetdelning**: **Blockera** inaktiverar Internetdelning på användarnas enheter vid varje enhetssynkronisering. Den här inställningen kanske inte är kompatibel med vissa operatörer. **Inte konfigurerad** (standard) behåller användarens standardinställning för Internetdelning.
-- **Regler för mobilanvändning (endast hanterade appar)** : Definiera de datatyper som hanterade appar kan använda i mobilnät. Alternativen är:
+
+  > [!IMPORTANT]
+  > Den här inställningen behandlas som en fjär renhets åtgärd. Därför visas inte den här inställningen i hanterings profilen på enheten. Varje gång statusen för personlig hotspot-status ändras på enheten blockeras **personlig hotspot** av Intune-tjänsten. Om rapporterings statusen i Intune visar att den fungerar som den ska, vet du att den fungerar, även om inställningen inte visas i hanterings profilen på enheten.
+
+- **Regler för mobilanvändning (endast hanterade appar)**: Definiera de datatyper som hanterade appar kan använda i mobilnät. Alternativen är:
   - **Blockera användning av mobildata**: Blockera användningen av mobildata för **Alla hanterade appar** eller **Välj särskilda appar**.
   - **Blockera användning av mobildata vid nätverksväxling**: Blockera användningen av mobildata vid nätverksväxling för **Alla hanterade appar** eller **Välj särskilda appar**.
 
@@ -531,7 +540,7 @@ Om du vill lägga till appar kan du:
 - **Krypterad säkerhetskopiering**: **Kräv** att säkerhetskopior av enheter måste vara krypterade.
 - **Synkronisering av hanterade appar till molnet**: **Inte konfigurerad** (standard) tillåter att appar som du hanterar med Intune synkroniserar data till användarens iCloud-konton. **Blockera** förhindrar denna datasynkronisering till iCloud.
 - **Blockera säkerhetskopiering av företagsbok**: Välj **Blockera** om du vill förhindra användarna från att säkerhetskopiera företagsböcker. **Inte konfigurerad** (standard) tillåter användarna att säkerhetskopiera dessa böcker.
-- **Blockera synkronisering av företagsboksmetadata (anteckningar och markeringar)** : **Blockera** förhindrar synkronising av anteckningar och markeringar i företagsböcker. **Inte konfigurerad** (standard) tillåter synkronisering.
+- **Blockera synkronisering av företagsboksmetadata (anteckningar och markeringar)**: **Blockera** förhindrar synkronising av anteckningar och markeringar i företagsböcker. **Inte konfigurerad** (standard) tillåter synkronisering.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 
