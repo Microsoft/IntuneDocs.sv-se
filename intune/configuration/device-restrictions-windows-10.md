@@ -1,11 +1,11 @@
 ---
 title: Enhetsbegränsningsinställningar för Windows 10 i Microsoft Intune – Azure | Microsoft Docs
-description: Se en lista med alla inställningar och deras beskrivningar för att skapa enhetsbegränsningar i enheter med Windows 10 och senare. Använd dessa inställningar i en konfigurationsprofil för att styra skärmbilder, lösenordskrav, inställningar för helskärmsläge, appar i butiken, Microsoft Edge-webbläsaren, Windows Defender, åtkomst till molnet, startmenyn och mer i Microsoft Intune.
+description: Se en lista med alla inställningar och deras beskrivningar för att skapa enhetsbegränsningar i enheter med Windows 10 och senare. Använd dessa inställningar i en konfigurationsprofil för att styra skärmbilder, lösenordskrav, inställningar för helskärmsläge, appar i butiken, Microsoft Edge-webbläsaren, Microsoft Defender, åtkomst till molnet, startmenyn och mer i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: f0cf7d6f18b0d345a8c491984987b9ffa234d66e
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755256"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059487"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -523,7 +523,7 @@ De här inställningarna använder [CSP för WirelessDisplay-princip](https://do
 
 - **Dela användningsdata**: Välj nivå av diagnostikdata som skickas. Alternativen är:
   - **Inte konfigurerat**: Inga data delas.
-  - **Säkerhet**: Information som krävs för att hålla Windows säkrare, däribland data om inställningar för komponenten Enhetlig användarupplevelse och telemetri, Borttagning av skadlig programvara samt Windows Defender.
+  - **Säkerhet**: Information som krävs för att hålla Windows säkrare, däribland data om inställningar för komponenten Enhetlig användarupplevelse och telemetri, Borttagning av skadlig programvara samt Microsoft Defender.
   - **Grundläggande**: Grundläggande enhetsinformation såsom kvalitetsrelaterade data, appkompatibilitet, appanvändningsdata och data från nivån Säkerhet.
   - **Förbättrad**: Ytterligare information som omfattar: hur Windows, Windows Server, System Center och appar används, hur de presterar, avancerade tillförlitlighetsdata samt data från både nivåerna Grundläggande och Säkerhet.
   - **Fullständig**: alla data som behövs för att identifiera och bidra till att lösa problem, plus data från nivåerna Säkerhet, Grundläggande och Förbättrad.
@@ -632,19 +632,19 @@ De här inställningarna använder [CSP för startpolicy](https://docs.microsoft
   - **Dölj**: Genvägen döljs, och inställningen inaktiveras i appen Inställningar.
   - **Visa**: Genvägen visas, och inställningen inaktiveras i appen Inställningar.
 
-## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
+## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender Smart skärm
 
-- **SmartScreen för Microsoft Edge**: **Kräv** inaktiverar Windows Defender SmartScreen och hindrar användarna från att aktivera funktionen. **Inte konfigurerat** (standard) aktiverar SmartScreen. Hjälper till att skydda användarna mot potentiella hot och hindrar användare från att stänga av den.
+- **SmartScreen för Microsoft Edge**: **Kräv** inaktiverar Microsoft Defender SmartScreen och hindrar användarna från att aktivera funktionen. **Inte konfigurerat** (standard) aktiverar SmartScreen. Hjälper till att skydda användarna mot potentiella hot och hindrar användare från att stänga av den.
 
-  Microsoft Edge använder Windows Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara.
+  Microsoft Edge använder Microsoft Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara.
 
   [CSP för Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-- **Åtkomst till skadlig webbplats**: **Blockera** hindrar användarna från att ignorera varningarna från Windows Defender SmartScreen-filtret och blockerar dem från att gå till webbplatsen. **Inte konfigurerat** (standard) tillåter användare att ignorera varningarna och fortsätta till webbplatsen.
+- **Åtkomst till skadlig webbplats**: **Blockera** hindrar användarna från att ignorera varningarna från Microsoft Defender SmartScreen-filtret och blockerar dem från att gå till webbplatsen. **Inte konfigurerat** (standard) tillåter användare att ignorera varningarna och fortsätta till webbplatsen.
 
   [CSP för Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
-- **Overifierad filhämtning**: **Blockera** hindrar användarna från att ignorera varningarna från Windows Defender SmartScreen-filtret och blockerar dem från att hämta overifierade filer. **Inte konfigurerat** (standard) tillåter användare att ignorera varningarna och fortsätta ladda ned de overifierade filerna.
+- **Overifierad filhämtning**: **Blockera** hindrar användarna från att ignorera varningarna från Microsoft Defender SmartScreen-filtret och blockerar dem från att hämta overifierade filer. **Inte konfigurerat** (standard) tillåter användare att ignorera varningarna och fortsätta ladda ned de overifierade filerna.
 
   [CSP för Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
@@ -833,9 +833,9 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Identifiera potentiellt oönskade program**: Välj nivå av skydd när Windows identifierar potentiellt oönskade program. Alternativen är:
-  - **Inte konfigurerat** (standard): Skydd mot potentiellt oönskade program för Windows Defender inaktiveras.
-  - **Blockera**: Windows Defender identifierar potentiellt oönskade program och blockerar identifierade objekt. Dessa objekt visas i historiken tillsammans med andra hot.
-  - **Granskning**: Windows Defender identifierar potentiellt oönskade program men vidtar inga åtgärder. Du kan granska information om det program som Windows Defender skulle vidta åtgärder mot. Till exempel kan du söka efter händelser som skapats av Windows Defender i Loggboken.
+  - **Inte konfigurerat** (standard): Skydd mot potentiellt oönskade program för Microsoft Defender inaktiveras.
+  - **Blockera**: Microsoft Defender identifierar potentiellt oönskade program och blockerar identifierade objekt. Dessa objekt visas i historiken tillsammans med andra hot.
+  - **Granskning**: Microsoft Defender identifierar potentiellt oönskade program men vidtar inga åtgärder. Du kan granska information om det program som Microsoft Defender skulle vidta åtgärder mot. Till exempel kan du söka efter händelser som skapats av Microsoft Defender i Loggboken.
 
   Mer information om potentiellt oönskade appar finns i [Identifiera och blockera potentiellt oönskade program](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
@@ -850,11 +850,11 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   - **Användardefinierad**
   - **Blockera**
 
-  Om åtgärden inte är möjlig väljer Windows Defender det bästa alternativet för att säkerställa att hotet åtgärdas. 
+  Om åtgärden inte är möjlig väljer Microsoft Defender det bästa alternativet för att säkerställa att hotet åtgärdas. 
 
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
-### <a name="windows-defender-antivirus-exclusions"></a>Windows Defender antivirusundantag
+### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender antivirusundantag
 
 - **Filer och mappar som ska undantas från genomsökningar och realtidsskydd**: Lägger till en eller flera filer och mappar, som t.ex. **C:\Path** eller **%ProgramFiles%\Path\filename.exe**, i undantagslistan. Dessa filer och mappar tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
 - **Filnamnstillägg som ska undantas från genomsökningar och realtidsskydd**: Lägg till ett eller flera filnamnstillägg, som t.ex. **jpg** eller **txt**, i undantagslistan. Filer med dessa filnamnstillägg tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.

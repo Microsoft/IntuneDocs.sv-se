@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/12/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535ae4dd986940da17d247136b37185cfaa58b57
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f00a680d8d7799e0307021926677d1e0ed1e9a12
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510221"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059686"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Skydda Windows-datorer med Endpoint Protection för Microsoft Intune
 
@@ -189,7 +189,7 @@ Intune kan visa sökvägar för upp till 10 av de senaste upptäckta fallen av s
 4. Högerklicka på en kolumnrubrik. En lista över tillgängliga kolumner visas. Tryck på kryssrutan **Senaste upptäckta sökvägar** i listan. Kolumnen **Senaste upptäckta sökvägar** visas på skärmen och visar upp till de 10 senaste tillfällena av skadlig kod som upptäckts på enheten.
 
 ## <a name="run-a-malware-scan-or-update-malware-definitions-on-a-computer"></a>Köra en sökning efter skadlig kod eller uppdatera definitionerna för skadlig kod på en dator
-Intune kan antingen köra en fullständig sökning eller snabbsökning efter skadlig kod med Endpoint Protection eller Windows Defender på en fjärrhanterad dator som har Intune-klienten installerad.
+Intune kan antingen köra en fullständig sökning eller snabbsökning efter skadlig kod med Endpoint Protection eller Microsoft Defender på en fjärrhanterad dator som har Intune-klienten installerad.
 
 1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) går du till **Grupper** > **Översikt** > **Alla enheter** > **Alla datorer** och sedan markerar du den dator som du vill använda.
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7c7ec23d0408aa4d4cf81baff2d7cdf749fb65e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
-ms.translationtype: MTE75
+ms.openlocfilehash: 03ceaf5493f544dbb815146eb67c3fae8856d29e
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509240"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126144"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av iOS-enhet i Microsoft Intune
 
@@ -55,7 +55,7 @@ Samla in följande information om problemet:
 2. Sätt enheten i återställnings läge och Återställ den sedan. Se till att du konfigurerar den som en ny enhet. Mer information om hur du återställer iOS-enheter finns [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Omregistrera enheten.
 
-### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Det gick inte att installera profilen. Det gick inte att upprätta en anslutning till servern.
+### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Det gick inte att installera profilen. Det går inte att upprätta någon anslutning till servern.
 
 **Orsak:** Din Intune-klient är konfigurerad för att endast tillåta företagsägda enheter. 
 
@@ -84,6 +84,8 @@ Samla in följande information om problemet:
 1. Ta bort företagsportalappen från enheten.
 2. Ladda ner och installera **Microsoft Intune-företagsportalappen** från **App Store**.
 3. Omregistrera enheten.
+ > [!NOTE]
+    > Det här felet kan också inträffa om användaren försöker registrera fler enheter än enhets registreringen har kon figurer ATS för att tillåta. Följ lösnings stegen för **enhets höljet** nedan om de här stegen inte löser problemet.
 
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
 
@@ -156,7 +158,7 @@ Förnya APNs-certifikatet och registrera sedan enheten på nytt.
 - Information om hur du förnyar APN-certifikatet i Intune hybrid med Configuration Manager finns i [Konfigurera iOS hybrid Device Management med System Center Configuration Manager och Microsoft Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-ios-mac).
 - Om du vill förnya APNs-certifikatet i Office 365, se [skapa ett APN-certifikat för iOS-enheter](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
-### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR-anslutningen är ogiltig
+### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR anslutningen är ogiltig
 
 När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil, Miss lyckas registreringen och du får följande fel meddelande:
 

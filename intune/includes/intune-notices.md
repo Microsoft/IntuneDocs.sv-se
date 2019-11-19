@@ -7,14 +7,48 @@ ms.topic: include
 ms.date: 11/4/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: edef1f43caff97ab75aa3c58034ed4fc2dffd208
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 3d49d31ed08683508d3d231521e578688dd21bac
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73612179"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74125615"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Ändringsplan för Intune: Stödet för företagsportalen för Windows 10, version 1703, upphör<!--5026679-->
+Windows 10, version 1703 (även kallad Windows 10, RS2) tas ur drift den 8 oktober 2019 för företags- och EDU-versioner. Intune avslutar stödet för motsvarande företagsportalsapp för RS2/RS1 med början den 26 december 2019.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Framöver kommer du inte att se några nya funktioner i den specifika versionen av företagsportalsappen, men vi fortsätter att stödja den här versionen av företagsportalsappen till och med den 26 december 2019 och kommer bland annat att fortsätta att tillhandahålla säkerhetsuppdateringar till den vid behov. Eftersom Windows 10, version 1703, inte kommer att få några säkerhetsuppdateringar när det har tagits ur drift, rekommenderar vi starkt att du uppdaterar dina Windows-enheter till en nyare Windows-version och ser till att du använder den senaste företagsportalsappen så att du kan fortsätta att få nya funktioner och ytterligare funktionalitet.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+De steg som du ska vidta beror på hur din miljö är konfigurerad. I allmänhet bör du dock identifiera vilka enheter som har den äldre versionen av operativsystemet och/eller företagsportalen och uppdatera dessa. För att konfigurera dina Windows 10-uppdateringsringar loggar du in på Intune-> Programuppdateringar – Windows 10-uppdateringsringar. Den senaste versionen av företagsportalen är version 10.3.5601.0. Be användarna att ladda ned den från Microsoft Store för att hålla sig uppdaterade med framtida versioner. Du kan också använda Intune för att installera den senaste på dina Windows-enheter via [Microsoft Store för företag](https://docs.microsoft.com/intune/windows-store-for-business).
+
+#### <a name="additional-information"></a>Ytterligare information
+[Lägga till appen Företagsportal för Windows 10 manuellt med Microsoft Intune](https://docs.microsoft.com/intune/store-apps-company-portal-app)
+
+
+### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Vidta åtgärd: Använd Microsoft Edge för att skydda din Intune-webbläsarupplevelse<!--5728447-->
+Som vi har berättat under det senaste året stöder Microsoft Edge för mobil samma uppsättning hanteringsfunktioner som Managed Browser, samtidigt som du får en mycket bättre slutanvändarupplevelse. För att bereda vägen för Microsoft Edges robusta upplevelser kommer vi att dra tillbaka Intune Managed Browser. Från och med den 27 januari 2020 kommer Intune inte längre att stödja Intune Managed Browser.  
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig? 
+Från den 1 februari 2020 är Intune Managed Browser inte längre tillgänglig i Google Play Butik eller iOS App Store. Vid den här tidpunkten kan du fortfarande ange nya appskyddsprinciper i Intune Managed Browser som mål, men nya användare kommer inte att kunna hämta Intune Managed Browser-appen. Dessutom kommer nya webbklipp i iOS som flyttas ned till en MDM-registrerad enhet att öppnas i Microsoft Edge i stället för i Intune Managed Browser.  
+
+Den 31 mars 2020 tas Intune Managed Browser bort från Azure-konsolen. Det innebär att du inte längre kommer att kunna skapa nya principer för Intune Managed Browser. Om du har befintliga Intune Managed Browser-principer på plats kommer de inte att påverkas. Intune Managed Browser visas i konsolen som en LOB-app utan ikon och befintliga policyer visas fortfarande som mål för appen. Vid den här tidpunkten kommer vi också att ta bort alternativet för att omdirigera webbinnehåll till Intune Managed Browser i dataskyddsavsnittet för appskyddsprinciper.  
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen? 
+För att säkerställa en smidig övergång från Intune Managed Browser till Microsoft Edge, rekommenderar vi att du utför följande steg proaktivt: 
+
+1. Ange Microsoft Edge för iOS och Android som mål med appskyddsprincip (kallas även MAM) och appkonfigurationsinställningar. Du kan återanvända dina Intune Managed Browser-principer för Microsoft Edge genom att helt enkelt också ange dessa befintliga principer som mål för Microsoft Edge.  
+2. Se till att alla MAM-skyddade appar i din miljö har appskyddsprincipsinställningen "Begränsa överföring av webbinnehåll till andra appar" inställd på "Principhanterade webbläsare". 
+3. Ange alla MAM-skyddade med den hanterade appkonfigurationsinställningen "com.microsoft.intune.useEdge" inställd som sant som mål. Från och med nästa månad med lanseringen av 1911, kommer du att kunna utföra steg 2 och 3 genom att helt enkelt konfigurera inställningen "Begränsa överföring av webbinnehåll till andra appar" så att "Microsoft Edge" är valt i dataskyddsavsnittet i appskyddsprinciperna. 
+
+Stöd för webbklipp i iOS och Android kommer. När det här stödet släpps måste du ange befintliga webbklipp som mål på nytt för att säkerställa att de öppnas i Microsoft Edge i stället för i Managed Browser. 
+
+#### <a name="additional-information"></a>Ytterligare information
+Besök våra dokument om att [använda Microsoft Edge med appskyddsprinciper](../apps/manage-microsoft-edge.md) för mer information eller läs vidare i våra [supportbloggsinlägg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+
 
 ### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Planera för förändring: Uppdaterad upplevelse vid registrering av dedikerade Android Enterprise-enheter i Intune<!--5198878-->
 I novemberversionen, eller version 1911, av Intune har vi lagt till stöd för distribution av SCEP-enhetscertifikat till dedikerade Android Enterprise-enheter för att möjliggöra certifikatbaserad åtkomst till Wi-Fi-profiler. Den här ändringen omfattar även vissa mindre ändringar i flödet när du registrerar dedikerade Android Enterprise-enheter.
@@ -33,7 +67,7 @@ Du bör planera för att uppdatera vägledningen för slutanvändarna och inform
 
 ### <a name="plan-for-change-the-server-side-logging-for-siri-commands-setting-will-be-removed-from-the-intune-console----5468501--"></a>Planera för förändring: Inställningen ”Loggning på serversidan av Siri-kommandon” tas bort från Intune-konsolen <!-- 5468501-->
 
-Vi planerar att ta bort inställningen ”Loggning på serversidan av Siri-kommandon” från Intune-konsolen vid novemberuppdateringen av Intune-tjänsten. Den här ändringen justeras med Apple som redan har tagit bort inställningen på sin sida.
+Vi planerar att ta bort inställningen ”Loggning på serversidan för Siri-kommandon” från Intune-konsolen vid novemberuppdateringen av Intune-tjänsten. Den här ändringen justeras med Apple som redan har tagit bort inställningen på sin sida.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
 När novemberuppdateringen eller 1911 äger rum i mitten av november ser du att den här inställningen har tagits bort från menyn Enhetsbegränsningar (inbyggda appar) för iOS-konfigurationsprofiler i Intune-konsolen. Den kan visas i principerna och i målenhetens hanteringsprofil, men inställningen har ingen påverkan på enheten. Vi förväntar oss inte mycket påverkan på funktioner eftersom den för närvarande inte fungerar på enheter, trots att du ser den i hanteringsprofilen.

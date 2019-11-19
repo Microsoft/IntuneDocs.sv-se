@@ -1,11 +1,11 @@
 ---
 title: Skyddsinställningar för Windows 10-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: På Windows 10-enheter kan du använda eller konfigurera inställningar för slutpunktsskydd för att aktivera Windows Defender-funktionalitet, inklusive Application Guard, brandvägg, SmartScreen, kryptering och bitlocker, Exploit Guard, programreglering, Säkerhetscenter och säkerhet på lokala enheter i Microsoft Intune.
+description: På Windows 10-enheter kan du använda eller konfigurera inställningar för slutpunktsskydd för att aktivera Microsoft Defender-funktionalitet, inklusive Application Guard, brandvägg, SmartScreen, kryptering och bitlocker, Exploit Guard, programreglering, Säkerhetscenter och säkerhet på lokala enheter i Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40865dcca0b0109ae36f65b6691672c0035732b5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502282"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058433"
 ---
-# <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Inställningar för Windows 10 (och senare) för att skydda delade enheter med Intune  
+# <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Inställningar för Windows 10 (och senare) för att skydda delade enheter med Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
+Microsoft Intune innehåller många inställningar som skyddar dina enheter. Den här artikeln beskriver alla inställningar du kan aktivera och kon i Windows 10 och nyare enheter. Dessa inställningar skapas i en konfigurationsprofil för slutpunktsskydd i Intune för att kontrollera säkerheten, inklusive BitLocker och Microsoft Defender.  
 
-Microsoft Intune innehåller många inställningar som skyddar dina enheter. Den här artikeln beskriver alla inställningar du kan aktivera och kon i Windows 10 och nyare enheter. Dessa inställningar skapas i en konfigurationsprofil för slutpunktsskydd i Intune för att kontrollera säkerheten, inklusive BitLocker och Windows Defender.  
-
-Information om att konfigurera Windows Defender Antivirus finns i [Enhetsbegränsningar för Windows 10](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
+Information om att konfigurera Microsoft Defender Antivirus finns i [Enhetsbegränsningar för Windows 10](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
 
 ## <a name="before-you-begin"></a>Innan du börjar  
 
@@ -38,9 +36,9 @@ Information om att konfigurera Windows Defender Antivirus finns i [Enhetsbegrän
 
 Mer information om konfigurations tjänst leverantörer (CSP: er) finns i [referens för Configuration Service-Provider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
 
-## <a name="windows-defender-application-guard"></a>Windows Defender Application Guard  
+## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
-När du använder Microsoft Edge Windows Defender Application Guard skyddas din miljö från webbplatser som inte är betrodda av din organisation. När användare besöker webbplatser som inte listas i din isolerade nätverksgräns, öppnas webbplatserna i en virtuell webbläsarsession i Hyper-V. Betrodda webbplatser definieras av en nätverksgräns som konfigureras i enhetskonfigurationen.  
+När du använder Microsoft Edge Microsoft Defender Application Guard skyddas din miljö från webbplatser som inte är betrodda av din organisation. När användare besöker webbplatser som inte listas i din isolerade nätverksgräns, öppnas webbplatserna i en virtuell webbläsarsession i Hyper-V. Betrodda webbplatser definieras av en nätverksgräns som konfigureras i enhetskonfigurationen.  
 
 Application Guard är endast tillgängligt för Windows 10-enheter (64-bitars). Med den här profilen installeras en Win32-komponent för att aktivera Application Guard.  
 
@@ -122,7 +120,7 @@ Application Guard är endast tillgängligt för Windows 10-enheter (64-bitars). 
   - **Aktivera** – användare laddar ned filer från den virtuella webbläsaren till värdoperativsystemet.  
   - **Inte konfigurerad** – håller filerna lokala på enheten och laddar inte ned filer till värdfilsystemet.  
 
-## <a name="windows-defender-firewall"></a>Windows Defender-brandvägg  
+## <a name="microsoft-defender-firewall"></a>Microsoft Defender-brandvägg  
  
 ### <a name="global-settings"></a>Globala inställningar  
 
@@ -196,7 +194,7 @@ Följande inställningar visas i den här artikeln en gång, men alla gäller f�
 
 #### <a name="general-settings"></a>Allmänna inställningar  
 
-- **Windows Defender-brandvägg**  
+- **Microsoft Defender-brandvägg**  
   **Standard**: Inte konfigurerat  
   Brand Väggs-CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)  
   
@@ -224,7 +222,7 @@ Följande inställningar visas i den här artikeln en gång, men alla gäller f�
   **Standard**: Inte konfigurerat  
   Brand Väggs-CSP: [skärmad](https://go.microsoft.com/fwlink/?linkid=872561)  
     - **Inte konfigurerat**  
-    - **Blockera** – när Windows Defender-brandväggen är aktive rad och den här inställningen är inställd på *blockera*, blockeras all inkommande trafik, oavsett andra princip inställningar. 
+    - **Blockera** – när Microsoft Defender-brandväggen är på och den här inställningen är inställd på *blockera*, blockeras all inkommande trafik, oavsett andra princip inställningar. 
     - **Tillåt** – när är inställt på *Tillåt*är den här inställningen inaktive rad och inkommande trafik tillåts baserat på andra princip inställningar.
 
 - **Unicast-svar på multicast-sändningar**  
@@ -264,7 +262,7 @@ Följande inställningar visas i den här artikeln en gång, men alla gäller f�
 
 #### <a name="rule-merging"></a>Sammanslagning av regler  
 
-- **Windows Defender-brandväggsregler från det lokala arkivet**  
+- **Microsoft Defender-brandväggsregler från det lokala arkivet**  
   **Standard**: Inte konfigurerat  
   Brand Väggs-CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)  
 
@@ -273,7 +271,7 @@ Följande inställningar visas i den här artikeln en gång, men alla gäller f�
   - **Tillåt** -
    Välj **Aktivera** för att tillämpa brandväggsregler i det lokala arkivet så att de känns igen och framtvingas.  
 
-- **Globala Windows Defender-portalbrandväggen från det lokala arkivet**  
+- **Globala Microsoft Defender-portalbrandväggen från det lokala arkivet**  
   **Standard**: Inte konfigurerat  
   Brand Väggs-CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)  
 
@@ -281,7 +279,7 @@ Följande inställningar visas i den här artikeln en gång, men alla gäller f�
   - **Blockera** – de globala port brand Väggs reglerna i det lokala arkivet ignoreras och verkställs inte.  
   - **Aktivera** – tillämpa brandväggsregler på globala portar i det lokala arkivet så att de känns igen och framtvingas.  
 
-- **Windows Defender-brandväggsregler från det lokala arkivet**  
+- **Microsoft Defender-brandväggsregler från det lokala arkivet**  
   **Standard**: Inte konfigurerat  
   Brand Väggs-CSP: [AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)  
 
@@ -336,7 +334,7 @@ Anpassade brand Väggs regler stöder följande alternativ:
 #### <a name="application-settings"></a>Programinställningar  
 
 - **Program**  
-  **Standard**: alla  
+  **Standard**: Alla  
 
   Kontrol lera anslutningar för en app eller ett program. Välj ett av följande alternativ och slutför sedan den ytterligare konfigurationen:  
   - **Paket familje namn** – ange ett paket familje namn. Använd PowerShell **-kommandot Get-AppxPackage**för att hitta paket familje namnet.   
@@ -422,7 +420,7 @@ Ange de lokala portar och fjärrportar som regeln gäller.
   Ange en lista över behöriga lokala användare för den här regeln. Det går inte att ange en lista över behöriga användare om den här regeln gäller för en Windows-tjänst.  
 
 
-## <a name="windows-defender-smartscreen-settings"></a>Inställningar för Windows Defender SmartScreen  
+## <a name="microsoft-defender-smartscreen-settings"></a>Inställningar för Microsoft Defender SmartScreen  
  
 Microsoft Edge måste vara installerat på enheten.  
 
@@ -443,8 +441,6 @@ Microsoft Edge måste vara installerat på enheten.
 ## <a name="windows-encryption"></a>Windows-kryptering  
  
 ### <a name="windows-settings"></a>Windows-inställningar  
-
-Dessa krypterings inställningar gäller för alla versioner av Windows 10.  
 
 - **Kryptera enheter**  
   **Standard**: Inte konfigurerat  
@@ -775,7 +771,7 @@ De här inställningarna gäller specifikt för flyttbara data enheter.
     - **Blockera** – blockerar skrivbehörighet för enheter som har konfigurerats i en annan organisation.  
     - **Inte konfigurerad** -neka skriv åtkomst.  
  
-## <a name="windows-defender-exploit-guard"></a>Windows Defender Exploit Guard  
+## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender sårbarhets skydd  
 
 Använd [sårbarhets skydd](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) för att hantera och minska risken för angrepp i appar som används av dina anställda.  
 
@@ -809,7 +805,7 @@ Blockera Office-appar från att vidta följande åtgärder:
 
 - **Office-appar som infogar i andra processer (inga undantag)**  
   **Standard**: Inte konfigurerat  
-  Regel: [blockera Office-program från att injicera kod i andra processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  Regel: [Blockera Office-program från att infoga kod i andra processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Office-appar från att injiceras i andra processer.  
@@ -817,7 +813,7 @@ Blockera Office-appar från att vidta följande åtgärder:
 
 - **Office-appar/-makron som skapar körbart innehåll**  
   **Standard**: Inte konfigurerat  
-  Regel: [blockera Office-program från att skapa körbart innehåll](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  Regel: [Blockera Office-program från att skapa körbart innehåll](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Office-appar och makron från att skapa körbart innehåll.  
@@ -825,7 +821,7 @@ Blockera Office-appar från att vidta följande åtgärder:
 
 - **Office-appar som startar underordnade processer**  
   **Standard**: Inte konfigurerat  
-  Regel: [Blockera alla Office-program från att skapa underordnade processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  Regel: [Blockera Office-program från att skapa underordnade processer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Office-appar från att starta underordnade processer.  
@@ -833,7 +829,7 @@ Blockera Office-appar från att vidta följande åtgärder:
   
 - **Win32-importer från Office-makrokod**  
   **Standard**: Inte konfigurerat  
-  Regel: [blockera Win32 API-anrop från Office-makron](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  Regel: [Blockera Win32-API-anrop från Office-makron](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera Win32-importer från makrokod i Office.  
@@ -853,7 +849,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
 
 - **Dold js/vbs/ps/makrokod**  
   **Standard**: Inte konfigurerat  
-  Regel: [blockera körning av potentiellt fördunklade skript](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  Regel: [Blockera körning av potentiellt skadliga skript](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera alla fördunklade JS/vbs/PS/makrokod.  
@@ -861,7 +857,7 @@ Blockera följande för att hjälpa till att förhindra skripthot:
 
 - **js/vbs kör nyttolaster som laddats ned från Internet (inga undantag)**  
   **Standard**: Inte konfigurerat  
-  Regel: [blockera java script eller VBScript från att starta hämtat körbart innehåll](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  Regel: [Blockera JavaScript eller VBScript från att starta nedladdat körbart innehåll](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera JS/vbs från att köra nytto last som hämtats från Internet.  
@@ -898,7 +894,7 @@ Blockera följande för att hjälpa till att förhindra e-posthot:
 
 - **Körning av körbart innehåll (exe, dll, ps, js, vbs, osv.) som har tagits bort från e-post (webbaserad e-post/e-postklient) (inga undantag)**  
   **Standard**: Inte konfigurerat  
-  Regel: [blockera körbart innehåll från e-postklient och webbaserad e-post](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  Regel: [Blockera körbart innehåll från e-postklient och webbaserad e-post](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Inte konfigurerat**  
   - **Blockera** – blockera körning av körbart innehåll (exe, dll, ps, js, vbs, osv.) som har tagits bort från e-post (webbaserad e-post/e-postklient).  
@@ -971,21 +967,20 @@ Blockera utgående anslutningar från alla appar till IP-adresser eller domäner
 
   Avsikten med den här inställningen är att skydda slutanvändare från appar med åtkomst till nätfiske-bedrägerier, webbplatser för sårbarhets värd och skadligt innehåll på Internet. Det förhindrar också att tredje parts webbläsare ansluter till farliga platser.  
 
-  - **Inte konfigurerad** – inaktivera den här funktionen. Användare och appar blockeras inte från att ansluta till farliga domäner. Administratörer kan inte se den här aktiviteten i Windows Defender Security Center.  
-  - **Aktivera** – aktivera nätverks skydd och blockera användare och appar från att ansluta till farliga domäner. Aktivera kan se den här aktiviteten i Windows Defender Security Center.  
-  - **Endast granskning**: – användare och appar blockeras inte från att ansluta till farliga domäner. Aktivera kan se den här aktiviteten i Windows Defender Security Center.  
+  - **Inte konfigurerad** – inaktivera den här funktionen. Användare och appar blockeras inte från att ansluta till farliga domäner. Administratörer kan inte se den här aktiviteten i Microsoft Defender Security Center.  
+  - **Aktivera** – aktivera nätverks skydd och blockera användare och appar från att ansluta till farliga domäner. Administratörer kan inte se den här aktiviteten i Microsoft Defender Security Center.  
+  - **Endast granskning**: – användare och appar blockeras inte från att ansluta till farliga domäner. Administratörer kan inte se den här aktiviteten i Microsoft Defender Security Center.  
 
 ### <a name="exploit-protection"></a>Sårbarhetsskydd  
- 
 
 - **Ladda upp XML**  
   **Standard**: *Inte konfigurerat*  
 
-  Om du vill använda sårbarhets skydd för att [skydda enheter från sårbarheter](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)skapar du en XML-fil som innehåller de inställningar för system-och program minskning som du vill ha. Det finns två metoder för att skapa XML-filen:  
+  Om du vill använda sårbarhets skydd för att [skydda enheter från sårbarheter](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)skapar du en XML-fil som innehåller de inställningar för system-och program minskning som du vill ha. Det finns två metoder för att skapa XML-filen:  
 
   - *PowerShell* – använd en eller flera av *Get-ProcessMitigation-* , *Set-ProcessMitigation-* och *ConvertTo-ProcessMitigationPolicy* PowerShell-cmdlets. Cmdlets konfigurerar åtgärdsinställningar och exporterar en XML-representation av dem.  
 
-  - *Gränssnittet för Windows Defender Säkerhetscenter* – i Windows Defender Säkerhetscenter klickar du på App- & webbläsarkontroll och bläddrar sedan längst ned på skärmen för att hitta Sårbarhetsskydd. Använd först flikarna Systeminställningar och Programinställningar för att konfigurera minskningsinställningar. Leta sedan reda på länken Exportera inställningar längst ned på skärmen för att exportera en XML-återgivning av dem.  
+  - *Gränssnittet för Microsoft Defender Säkerhetscenter* – i Microsoft Defender Säkerhetscenter klickar du på App- & webbläsarkontroll och bläddrar sedan längst ned på skärmen för att hitta Sårbarhetsskydd. Använd först flikarna Systeminställningar och Programinställningar för att konfigurera minskningsinställningar. Leta sedan reda på länken Exportera inställningar längst ned på skärmen för att exportera en XML-återgivning av dem.  
 
 - **Användar redigering av gränssnittet för sårbarhets skydd**  
   **Standard**: Inte konfigurerat  
@@ -995,9 +990,9 @@ Blockera utgående anslutningar från alla appar till IP-adresser eller domäner
   - **Blockera** – Ladda upp en XML-fil som gör att du kan konfigurera minnes-, kontroll flödes-och princip begränsningar. Inställningarna i XML-filen kan användas för att blockera ett program från kryphål.  
   - **Inte konfigurerad** – ingen anpassad konfiguration används.  
 
-## <a name="windows-defender-application-control"></a>Windows Defender Application Control  
+## <a name="microsoft-defender-application-control"></a>Microsoft Defender Application Control  
 
-Välj ytterligare appar som antingen måste granskas av eller som är betrodda att köras av Windows Defender Application Control. Windows-komponenter och alla appar från Windows Store är automatiskt betrodda att köras.  
+Välj ytterligare appar som antingen måste granskas av eller så kan de vara betrodda att köras av Microsoft Defender Application Control. Windows-komponenter och alla appar från Windows Store är automatiskt betrodda att köras.  
 
 
 - **Kod integritets principer för program kontroll**  
@@ -1012,9 +1007,9 @@ Välj ytterligare appar som antingen måste granskas av eller som är betrodda a
  
   - **Endast granskning** – program blockeras inte. Alla händelser loggas i de lokala klient loggarna.  
 
-## <a name="windows-defender-credential-guard"></a>Windows Defender Credential Guard  
+## <a name="microsoft-defender-credential-guard"></a>Microsoft Defender Credential Guard  
 
-Windows Defender Credential Guard skyddar mot attacker för stöld av autentiseringsuppgifter. Den isolerar hemligheter så att endast privilegierad programvara kan komma åt dem.  
+Microsoft Defender Credential Guard skyddar mot attacker för stöld av autentiseringsuppgifter. Den isolerar hemligheter så att endast privilegierad programvara kan komma åt dem.  
 
 - **Credential Guard**  
   **Standard**: Inaktivera  
@@ -1036,19 +1031,19 @@ Windows Defender Credential Guard skyddar mot attacker för stöld av autentiser
   - **Säker start med direkt minnesåtkomst**  
     Aktiverar VBS med säker start och DMA-skydd (direkt minnesåtkomst). DMA-skydd kräver maskinvarustöd och aktiveras endast på enheter som är korrekt konfigurerade.  
 
-## <a name="windows-defender-security-center"></a>Windows Defender Säkerhetscenter  
+## <a name="microsoft-defender-security-center"></a>Microsoft Defender Security Center  
 
-Windows Defender Security Center fungerar som en separat app eller process från var och en av de enskilda funktionerna. Den visar aviseringar via Action Center. Den fungerar som en insamlare eller enskild plats för att visa status och köra konfiguration för var och en av funktionerna. Läs mer i dokumentationen till [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
+Microsoft Defender Security Center fungerar som en separat app eller process från var och en av de enskilda funktionerna. Den visar aviseringar via Action Center. Den fungerar som en insamlare eller enskild plats för att visa status och köra konfiguration för var och en av funktionerna. Lär dig mer i [Microsoft Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) -dokumenten.  
 
-### <a name="windows-defender-security-center-app-and-notifications"></a>Appen Windows Defender Säkerhetscenter och meddelanden  
+### <a name="microsoft-defender-security-center-app-and-notifications"></a>Appen Microsoft Defender Säkerhetscenter och meddelanden  
 
-Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender Säkerhetscenter. Om ett avsnitt döljs blockeras även relaterade meddelanden.  
+Blockera slutanvändarens åtkomst till olika delar av appen Microsoft Defender Säkerhetscenter. Om ett avsnitt döljs blockeras även relaterade meddelanden.  
 
 - **Skydd mot virus och hot**  
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableVirusUI](https://go.microsoft.com/fwlink/?linkid=873662)  
 
-  Konfigurera om slutanvändarna ska kunna visa skydds ytan för virus och hot i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör virus-och hot skydd.  
+  Konfigurera om slutanvändarna ska kunna visa skydds ytan för virus och hot i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör virus-och hot skydd.  
 
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1057,7 +1052,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)  
 
-  Konfigurera om slutanvändare ska kunna visa skydds ytan för utpressnings områden i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör utpressnings skydd.  
+  Konfigurera om slutanvändare ska kunna visa skydds ytan för utpressnings områden i Microsoft Defender-Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör utpressnings skydd.  
 
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1066,7 +1061,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableAccountProtectionUI](https://go.microsoft.com/fwlink/?linkid=873666)  
 
-  Konfigurera om slutanvändarna ska kunna Visa konto skydds ytan i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden relaterade till konto skydd.  
+  Konfigurera om slutanvändarna ska kunna Visa konto skydds ytan i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden relaterade till konto skydd.  
 
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1075,7 +1070,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableNetworkUI](https://go.microsoft.com/fwlink/?linkid=873668)  
 
-  Konfigurera om slutanvändarna ska kunna se sektionen brand vägg och nätverks skydd i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör brand vägg och nätverks skydd.  
+  Konfigurera om slutanvändarna ska kunna se sektionen brand vägg och nätverks skydd i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör brand vägg och nätverks skydd.  
 
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1084,7 +1079,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableAppBrowserUI](https://go.microsoft.com/fwlink/?linkid=873669)  
 
-  Konfigurera om slutanvändarna ska kunna visa kontroll områden för appar och webbläsare i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör app-och webb läsar kontroll.  
+  Konfigurera om slutanvändarna ska kunna visa kontroll områden för appar och webbläsare i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör app-och webb läsar kontroll.  
 
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1093,7 +1088,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableDeviceSecurityUI](https://go.microsoft.com/fwlink/?linkid=873670)  
 
-  Konfigurera om slutanvändare ska kunna se avsnittet maskin varu skydd i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör maskin varu skydd.  
+  Konfigurera om slutanvändare ska kunna se sektionen för maskin varu skydd i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör maskin varu skydd.  
 
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1102,7 +1097,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableHealthUI](https://go.microsoft.com/fwlink/?linkid=873671)  
 
-  Konfigurera om slutanvändarna ska kunna se området för enhets prestanda och hälsa i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör enhetens prestanda och hälsa.  
+  Konfigurera om slutanvändarna ska kunna se området för enhets prestanda och hälsa i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som rör enhetens prestanda och hälsa.  
   
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1111,7 +1106,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableFamilyUI](https://go.microsoft.com/fwlink/?linkid=873673)  
 
-  Konfigurera om slutanvändare ska kunna se avsnittet familje alternativ i Windows Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som är relaterade till familje alternativ.  
+  Konfigurera om slutanvändare ska kunna se avsnittet familje alternativ i Microsoft Defender Security Center. Om du döljer det här avsnittet blockeras även alla meddelanden som är relaterade till familje alternativ.  
   
   - **Inte konfigurerat**  
   - **Dölj**  
@@ -1120,7 +1115,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
   **Standard**: Inte konfigurerat  
   WindowsDefenderSecurityCenter CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)  
 
-  Välj vilka meddelanden som ska visas för slutanvändare. Meddelanden som är mindre viktiga omfattar sammanfattningar av Windows Defender Antivirus-aktivitet, inklusive meddelanden när genomsökningar har slutförts. Alla andra meddelanden anses viktiga.  
+  Välj vilka meddelanden som ska visas för slutanvändare. Meddelanden som är mindre viktiga omfattar sammanfattningar av Microsoft Defender Antivirus-aktivitet, inklusive meddelanden när genomsökningar har slutförts. Alla andra meddelanden anses viktiga.  
 
   - **Inte konfigurerat**  
   - **Blockera icke-kritiska meddelanden**  
@@ -1160,7 +1155,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
 
 ### <a name="it-contact-information"></a>IT-kontaktuppgifter  
 
-Ange IT-kontaktuppgifter som ska visas i appen Windows Defender Säkerhetscenter och i appmeddelanden.  
+Ange IT-kontaktuppgifter som ska visas i appen Microsoft Defender Säkerhetscenter och i appmeddelanden.  
 
 Du kan välja **Visa i app och i aviseringar**, **Visa endast i app**, **Visa endast i aviseringar** eller **Visa inte**. Ange **IT-organisationens namn** och minst ett av följande kontaktalternativ:  
 
@@ -1639,6 +1634,240 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
   - **Manuell**
   - **Automatiskt**
   - **Inaktiverad**
+
+## <a name="user-rights"></a>Användar rättigheter
+
+- **Åtkomst Autentiseringshanteraren som en betrodd anropare**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
+
+  Den här användar rättigheten används av Autentiseringshanteraren under säkerhets kopierings-och återställnings åtgärder. Användarens sparade autentiseringsuppgifter kan komprometteras om den här behörigheten ges till andra entiteter.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Tillåt lokal inloggning**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
+
+  Den här användar rättigheten avgör vilka användare som kan logga in på datorn.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Tillåt åtkomst från nätverket**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
+
+  Den här användar rättigheten avgör vilka användare och grupper som tillåts ansluta till datorn över nätverket.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Agera som del av operativ systemet**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
+
+  Agera som del av operativ systemet
+  - **Inte konfigurerat**
+  - **Tillåt**  
+
+- **Säkerhetskopiera filer och kataloger**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
+
+  Den här användar rättigheten avgör vilka användare som kan kringgå behörigheter för fil, katalog, register och andra beständiga objekt vid säkerhets kopiering av filer och kataloger.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Ändra datorns tid**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
+
+  Den här användar rättigheten avgör vilka användare och grupper som kan ändra tid och datum på datorns interna klocka.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Skapa globala objekt**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
+
+  Den här säkerhets inställningen anger om användare ska kunna skapa globala objekt som är tillgängliga för alla sessioner. Användare som kan skapa globala objekt kan påverka processer som körs under andra användares sessioner, vilket kan leda till program fel eller skadade data.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Skapa växlings fil**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
+
+  Den här användar rättigheten avgör vilka användare och grupper som kan anropa ett internt API för att skapa och ändra storleken på en växlings fil.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Skapa permanent delade objekt**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
+
+  Den här användar rättigheten avgör vilka konton som kan användas av processer för att skapa ett katalog objekt med hjälp av objekt hanteraren.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Skapa symboliska länkar**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
+
+  Den här användar rättigheten avgör om användaren kan skapa en symbolisk länk från datorn som de är inloggade på.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Skapa token**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/skapatoken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
+
+  Den här användar rättigheten avgör vilka användare/grupper som kan användas av processer för att skapa en token som sedan kan användas för att få åtkomst till alla lokala resurser när processen använder ett internt API för att skapa en åtkomsttoken.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Felsöka program**  
+  **Standard**: Inte konfigurerat  
+    CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
+
+  Den här användar rättigheten avgör vilka användare som kan koppla en fel sökare till en process eller till kerneln.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Neka åtkomst från nätverket**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
+
+  Den här användar rättigheten avgör vilka användare som nekas åtkomst till en dator över nätverket.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Neka inloggning som en tjänst**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
+
+  Den här säkerhets inställningen avgör vilka tjänst konton som hindras från att registrera en process som en tjänst.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Neka inloggning genom Fjärrskrivbordstjänster**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
+
+  Den här användar rättigheten avgör vilka användare och grupper som förbjuds att logga in som en Fjärrskrivbordstjänster-klient.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Aktivera delegering**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
+
+ Den här användar rättigheten avgör vilka användare som kan ställa in inställningen betrodd för delegering för en användare eller ett dator objekt.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Skapa säkerhetsgranskningar**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
+
+  Den här användar rättigheten avgör vilka konton som kan användas av en process för att lägga till poster i säkerhets loggen. Säkerhets loggen används för att spåra obehörig åtkomst till systemet.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Personifiera en klient**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
+
+  Genom att tilldela den här användar rättigheten till en användare kan program som körs åt användaren personifiera en klient. Att kräva den här användar rättigheten för den här typen av personifiering förhindrar att en obehörig användare kan använda en klient för att ansluta till en tjänst som de har skapat och sedan personifiera klienten, vilket kan öka behörigheten för obehöriga användare till administrativa eller system nivåer.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Öka schemaläggning prioritet**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
+
+  Den här användar rättigheten avgör vilka konton som kan använda en process med behörigheten Skriv egenskap till en annan process för att öka körnings prioriteten som tilldelats den andra processen.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Läsa in och ta bort drivrutiner**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
+
+  Den här användar rättigheten avgör vilka användare som dynamiskt kan läsa in och ta bort enhets driv rutiner eller annan kod i kernel-läge.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Låsa sidor i minnet**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
+
+  Den här användar rättigheten avgör vilka konton som kan använda en process för att lagra data i fysiskt minne, vilket förhindrar att systemet växlar data till virtuellt minne på disken.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Hantera granskning- och säkerhetsloggar**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
+
+  Den här användar rättigheten avgör vilka användare som kan ange objekt åtkomst gransknings alternativ för enskilda resurser, till exempel filer, Active Directory objekt och register nycklar.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Utföra underhållsaktiviteter**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
+
+  Den här användar rättigheten avgör vilka användare och grupper som kan köra underhålls aktiviteter på en volym, till exempel fjärrfragmentering.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Ändra maskinvarumiljö**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
+
+  Den här användar rättigheten avgör vem som kan ändra miljö värden för inbyggd program vara.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Ändra etikett för ett objekt**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
+
+  Den här användar rättigheten avgör vilka användar konton som kan ändra integritets etiketten för objekt, till exempel filer, register nycklar eller processer som ägs av andra användare.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Studera enstaka process**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
+
+  Den här användar rättigheten avgör vilka användare som kan använda verktyg för prestanda övervakning för att övervaka prestanda för system processer.
+  - **Inte konfigurerat**
+  - **Tillåt**
+
+- **Fjärravstängning**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
+
+  Den här användar rättigheten avgör vilka användare som får stänga av en dator från en annan plats i nätverket. Missbruk av den här användar rättigheten kan resultera i en denial of service.
+  - **Inte konfigurerat**
+  - **Tillåt**
+  
+- **Återställa filer och kataloger**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
+  
+  Den här användar rättigheten avgör vilka användare som kan kringgå behörigheter för filer, kataloger, registret och andra beständiga objekt vid återställning av säkerhetskopierade filer och kataloger, och avgör vilka användare som kan ange ett giltigt säkerhets objekt som ägare till ett objekt.
+  - **Inte konfigurerat**
+  - **Tillåt**
+  
+- **Bli ägare till filer eller objekt**  
+  **Standard**: Inte konfigurerat  
+  CSP: [UserRights/TakeOwnerShip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
+
+  Den här användar rättigheten avgör vilka användare som kan bli ägare till alla skydds bara objekt i systemet, inklusive Active Directory objekt, filer och mappar, skrivare, register nycklar, processer och trådar.
+  - **Inte konfigurerat**
+  - **Tillåt**
 
 ## <a name="next-steps"></a>Nästa steg
 

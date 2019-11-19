@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d88705cbce0d5045ba7f45baf80de7b6e5d383d3
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: dd37813e5ea0b6a64d7fae22cada06cccb01a942
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593768"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059223"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina iOS-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk, lägga till ett PKS- eller ett SCEP-certifikat och mycket mer.
+Du kan skapa en profil med specifika Wi-Fi-inställningar och sedan distribuera profilen till dina iOS-enheter. Microsoft Intune innehåller många funktioner, inklusive autentisering till ditt nätverk, lägga till ett PKCS- eller ett SCEP-certifikat och mycket mer.
 
 Dessa Wi-Fi-inställningar är uppdelade i två kategorier: Grundläggande inställningar och inställningar på företagsnivå.
 
@@ -81,9 +79,9 @@ Den här artikeln beskriver dessa inställningar.
     - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatprofil. Det här certifikatet gör att klienten kan lita på certifikat för trådlös nätverks åtkomst Server.
 
     - **Klientautentisering**: Välj en **autentiseringsmetod**. Alternativen är:
-      
-      - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.
-      
+
+      - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Om ingen utfärdare av härledd autentiseringsuppgift har kon figurer ATS, kommer Intune att fråga dig om att lägga till en. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
     - **Identitetsskydd (yttre identitet)** : Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
@@ -95,8 +93,8 @@ Den här artikeln beskriver dessa inställningar.
 
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
-      - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.  
-      
+      - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Om ingen utfärdare av härledd autentiseringsuppgift har kon figurer ATS, kommer Intune att fråga dig om att lägga till en. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. Ange även:
         - **Annan metod än EAP (inre identitet)** : Välj hur anslutningen ska autentiseras. Du måste välja samma protokoll som är konfigurerat på ditt Wi-Fi-nätverk.
 
@@ -115,8 +113,8 @@ Den här artikeln beskriver dessa inställningar.
 
     - **Klientautentisering** – Välj en **Autentiseringsmetod**. Alternativen är:
 
-      - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.  
-      
+      - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Om ingen utfärdare av härledd autentiseringsuppgift har kon figurer ATS, kommer Intune att fråga dig om att lägga till en. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+
       - **Användarnamn och lösenord**: Be användaren ange ett användarnamn och ett lösenord för att autentisera anslutningen. 
 
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.

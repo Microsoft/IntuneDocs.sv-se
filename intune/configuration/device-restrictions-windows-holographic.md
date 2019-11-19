@@ -1,11 +1,11 @@
 ---
 title: Inställningar för Windows Holographic for Business-enheter – Microsoft Intune – Azure | Microsoft Docs
-description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Microsoft Edge, Windows Defender, sökning, moln och lagring, Bluetooth-anslutning, systemtid och användningsdata i Azure.
+description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Microsoft Edge, Microsoft Defender, sökning, moln och lagring, Bluetooth-anslutning, systemtid och användningsdata i Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28a697b841d8b264a19d97059d272b7119bc7f4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1f90a5a13859ff19765e22444a84b9c11405af73
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493917"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059493"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Windows Holographic for Business tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -57,7 +57,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Windows
 - **Lösenordshanteraren**: Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
 - **Skicka Do Not Track-huvuden**: Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 
-## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
+## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender Smart skärm
 
 - **SmartScreen för Microsoft Edge**: Aktivera Microsoft Edge SmartScreen för åtkomst till webbplats och filnedladdningar.
 

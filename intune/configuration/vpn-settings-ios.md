@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: 52fb1ea5077b424a1d3cf10812d8d9b5f79e4752
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593792"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059806"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Microsoft Intune innehåller många VPN-inställningar som kan distribueras till iOS-enheter. De här inställningarna används för att skapa och konfigurera VPN-anslutningar till din organisations nätverk. Den här artikeln beskriver dessa inställningar. Vissa inställningar är bara tillgängliga för vissa VPN-klienter, till exempel Citrix och Zscaler.
 
@@ -73,7 +71,7 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
     > [!NOTE]
     > Om användarnamnet och lösenordet används som autentiseringsmetod för Cisco IPsec VPN, måste de ge SharedSecret via en anpassad profil i Apple Configurator.
 
-  - **Härledd autentiseringsuppgift**: om det inte har kon figurer ATS någon härledd Credential-utfärdare, så kommer Intune att fråga dig om detta.
+  - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Om ingen utfärdare av härledd autentiseringsuppgift har kon figurer ATS, kommer Intune att fråga dig om att lägga till en. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
 
 - **Undantagna webbadresser** (endast Zscaler): Vid anslutning till Zscaler VPN är de angivna webbadresserna tillgängliga utanför Zscaler-molnet. 
 
@@ -102,7 +100,7 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
   - När NAC har aktiverats kopplas VPN-anslutningen bort en gång per dygn. VPN-anslutningen kan omedelbart återanslutas.
   - Enhets-ID:t är en del av profilen, men det visas inte i Intune. Detta ID lagras inte av Microsoft någonstans, och det delas inte heller av Microsoft.
 
-  Om enhets-ID:t stöds av VPN-partner kan VPN-klienten, till exempel Citrix SSO, hämta ID:t. Sedan kan den skicka en fråga till Intune för att bekräfta att enheten är registrerad, och om VPN-profilen är kompatibel eller inte.
+  För VPN-partner som stöder enhets-ID kan VPN-klienten, till exempel Citrix SSO, Hämta ID: t. Sedan kan den skicka en fråga till Intune för att bekräfta att enheten är registrerad, och om VPN-profilen är kompatibel eller inte.
 
   - Om du vill ta bort den här inställningen återskapar du profilen och markerar inte **Jag accepterar**. Tilldela sedan profilen på nytt.
 
@@ -189,7 +187,10 @@ Dessa inställningar gäller när du väljer **Anslutnings typ**  > **IKEv2**.
 - **VPN på begäran**: Konfigurera villkorliga regler som styr när VPN-anslutningen ska initieras. Du kan till exempel skapa ett villkor där VPN-anslutningen endast används när en enhet inte är ansluten till ett trådlöst företagsnätverk. Eller skapa ett villkor. Om en enhet till exempel inte kan komma åt en DNS-sökdomän som du har angett startas inte VPN-anslutningen.
 
   - **SSID:n eller DNS-sökdomäner**: Välj om det här villkoret ska använda det trådlösa nätverkets **SSID:n** eller **DNS-sökdomäner**. Välj **Lägg till** för att konfigurera en eller flera SSID:er eller sökdomäner.
-  - **URL-strängavsökning**: Valfritt. Ange en URL som regeln använder som ett test. Om enheten med den här profilen kommer åt den här URL:en utan omdirigering, startas VPN-anslutningen. Och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängens avsökningsplats. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att webbadressen testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till målwebbadressen via VPN.
+  - **URL-strängavsökning**: Valfritt. Ange en URL som regeln använder som ett test. Om enheten kommer åt den här URL:en utan omdirigering, startas VPN-anslutningen. Och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängens avsökningsplats.
+
+    En URL-strängavsökning är till exempel en URL för en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. Eller också testar URL: en VPN-anslutningens möjlighet att ansluta till en plats innan enheten ansluter till mål-URL: en via VPN.
+.
   - **Domänåtgärd**: Välj något av följande:
     - Anslut vid behov
     - Anslut aldrig

@@ -1,11 +1,11 @@
 ---
-title: Registrera din macOS-enhet i Intune med företagsportalen| Microsoft Docs
-description: Beskriver hur du registrerar en macOS-enhet i Intune med företagsportalappen
+title: Registrera din Mac med Intune-företagsportal | Microsoft Docs
+description: Lär dig hur du registrerar din Mac i Intune med Företagsportal-appen.
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 11/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,93 +15,94 @@ ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: elocholi
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee725d118353e18924858569ac861992d19f839a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba285fc9de58b3fb739a16722e0e05e36e840e87
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506197"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098122"
 ---
-# <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
+# <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrera din macOS-enhet med hjälp av Företagsportal-appen  
 
-Registrera din macOS-enhet i Intune-företagsportalappen för att få säker åtkomst till organisationens e-post, filer och appar.
+Registrera din macOS-enhet i Intune-företagsportalappen för att få säker åtkomst till arbetets eller skolans e-post, filer och appar.
 
-Organisationer kräver ofta att din enhet blir hanterad innan du kan komma åt egna data från den. När en enhet blir hanterad kan organisationer skicka principer och appar till enheten via sin leverantör av hantering av mobilenheter. För att få kontinuerlig tillgång till arbets- eller skolinformation från enheten måste du konfigurera den så att principinställningarna matchar.  
+Organisationer kräver vanligt vis att du registrerar din enhet innan du kan komma åt patentskyddade data. När enheten har registrerats blir den *hanterad*. Din organisation kan tilldela principer och appar till enheten via en MDM-provider för hantering av mobilenheter, t.ex. Intune. För att få kontinuerlig tillgång till arbets- eller skolinformation på enheten måste du konfigurera den så att principinställningarna matchar organisationens.  
 
-Den här artikeln beskriver hur Intune-företagsportalappen för macOS hjälper dig att registrera, konfigurera och underhålla enheten så att den uppfyller organisationens krav.  
-</br>
-> [!VIDEO https://www.youtube.com/embed/Pa2pfhwq_yk?rel=0]
+Den här artikeln beskriver hur du använder företagsportalappen för macOS för att registrera, konfigurera och underhålla enheten så att du uppfyller organisationens krav.  
+
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Vad du kan förvänta dig av företagsportalappen
 
-Under installationen kräver appen att du autentiserar dig själv hos organisationen. Den informerar dig sedan om eventuella enhetsinställningar du måste göra. Organisationer anger exempelvis ofta krav på lägsta eller högsta antal tecken i lösenordet som du måste uppfylla.    
+Under den första installationen kräver Företagsportal-appen att du loggar in och autentiserar dig själv med din organisation. Företagsportal sedan informerar dig om eventuella enhets inställningar som du behöver konfigurera för att uppfylla organisationens krav. Organisationer anger exempelvis ofta krav på lägsta eller högsta antal tecken i lösenordet som du måste uppfylla.    
 
-När enheten har registrerats fortsätter företagsportalappen att se till att enheten är skyddad. Om du till exempel installerar en app från en ej betrodd källa kommer appen meddela dig och återkallar ibland åtkomst till företagets data. Appskyddsprinciper som den här är vanliga i organisationer och kräver ofta att du avinstallerar ej betrodda appar innan du kan få åtkomst.
+När du har registrerat din enhet ser Företagsportal alltid till att enheten skyddas enligt organisationens krav. Om du till exempel installerar en app från en obetrodd källa, kan Företagsportal varna dig och kan begränsa åtkomsten till organisationens resurser. App Protection-principer som detta är vanliga. För att få åtkomst måste du förmodligen avinstallera den ej betrodda appen. 
 
-Om organisationen inför ett nytt säkerhetskrav efter registreringen, t.ex. multifaktorautentisering, meddelar företagsportalappen dig. Du får möjlighet att justera dina inställningar så att du kan fortsätta arbeta från enheten.  
+Om organisationen inför ett nytt säkerhetskrav efter registreringen, t.ex. multifaktorautentisering, meddelar företagsportalen dig. Du får möjlighet att justera dina inställningar så att du kan fortsätta arbeta från enheten.  
 
 Mer information om registrering finns i [Vad händer när jag installerar företagsportalappen och registrerar min enhet?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
-## <a name="get-your-device-managed"></a>Få din enhet hanterad  
-Använd följande steg för att registrera macOS-enheter som kör macOS 10,12 och senare.   
+## <a name="get-your-macos-device-managed"></a>Få din macOS-enhet hanterad  
+Använd följande steg för att registrera din macOS-enhet med din organisation. Din enhet måste köra macOS 10,12 eller senare.   
+
+> [!NOTE]
+> I den här processen kan du uppmanas att tillåta Företagsportal att använda konfidentiell information som lagras i din nyckel Ring. Dessa meddelanden är en del av Apples säkerhet. När du får frågan skriver du in lösen ordet för inloggnings nyckel och väljer **Tillåt alltid**. Om du trycker på **RETUR** eller **RETUR** på tangent bordet väljer du i stället **Tillåt**, vilket kan resultera i ytterligare prompter.  
+
+### <a name="install-company-portal-app"></a>Installera företagsportalappen  
+1. Gå till [registrera min Mac](https://go.microsoft.com/fwlink/?linkid=853070).  
+2. Filen Företagsportal Installer. pkg laddas ned. Öppna installations programmet och Fortsätt genom stegen. 
+3. Godkänn licens avtalet för program varan. 
+4. Ange enhetens lösen ord eller det registrerade finger avtryck för att installera program varan.  
+5. Öppna Företagsportal. 
+
+> [!IMPORTANT]
+> Microsoft AutoUpdate kan vara öppet för att uppdatera din Microsoft-programvara. När alla uppdateringar har installerats öppnar du appen Företagsportal. För bästa installations upplevelse installerar du de senaste versionerna av Microsoft AutoUpdate och Företagsportal.  
 
 
-1. Du kommer åt företagsportalwebbplatsen genom att öppna ett nytt fönster i __Safari__ och gå till https://portal.manage.microsoft.com.  
-
-2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto.
-
-   [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
+### <a name="enroll-your-mac"></a>Registrera din Mac  
 
 
-3. Gå till sidans övre vänstra hörn och klicka på **Meny** > **Enheter**.  
+1. Logga in på företagsportalen med ditt arbets- eller skolkonto.  
+2. När appen öppnas väljer du **Starta**.  
+3. Granska [vad din organisation kan och inte kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) på den registrerade enheten. Välj sedan **Fortsätt**.  
+4. På skärmen **Installera hanterings profil** väljer du **Hämta profil**.   
 
-4. På sidan __Enheter__ visas en lista över hanterade enheter eller ett meddelande. Vad som visas beror på om du redan har en hanterad enhet. 
-    * Om du vill lägga till en enhet som inte visas i listan väljer du meddelandet **Tap here to tell us which device you're using or add a new device** (Tryck här för att berätta vilken enhet du använder eller lägga till en ny enhet).
-    * Om du inte har några enheter visas meddelandet: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
+    ![Exempel skärm bild av skärmen Företagsportal installera hanterings profil och markera knappen Ladda ned profil.](./media/install-mgmt-profile-mac-1911.PNG)   
+5. Enhetens system inställningar kommer att öppnas. Välj **Installera** och välj sedan **Installera** igen. Om du uppmanas till det anger du enhetens lösen ord.  
 
-     ![En skärmbild av sidan Enheter med en röd ruta runt meddelandealternativet för att markera var du ska klicka.](./media/CP-enroll-MACOS-1808.png)  
-5. Slutför det steg nedan som överensstämmer med det meddelande som visas i företagsportalen.  
-    * Om du lägger till en enhet för första gången uppmanas du att ladda ned företagsportalappen på enheten. Klicka på **Hämta** att fortsätta.  
+    ![Exempel skärm bild av macOS-Systeminställningar, installations prompt, markera knappen Installera.](./media/system-preference-install-1911.PNG)  
+6. När profilen har installerats visas den i listan profiler under **hanterings profil.**  
 
-         ![Exempel på skärmbild för meddelandeskärmen för att hämta macOS-företagsportalappen. Användaren kan välja att klicka på den blå knappen Hämta längst ned till vänster i meddelandet, eller den grå knappen Avbryt längst ned till höger.](./media/CP-enroll-download-macOS-1808.png)  
+   ![Exempel skärm bild av OS-inställningar för macOS, profil skärmen, som markerar den installerade hanterings profilen.](./media/system-preference-verify-1911.PNG)   
+7. Återgå till Företagsportal.   
+8. Din organisation kan kräva att du uppdaterar enhets inställningarna. När du är klar med att uppdatera inställningarna väljer du **kontrol lera inställningar**.  
 
-    * Om du redan har en hanterad macOS-enhet visas ett meddelande med en lista över dina macOS-enheter som hanteras för närvarande. Välj **My device isn't listed here** (Min enhet visas inte här) > **Hämta** för att hämta företagsportalappen på den enhet som du lägger till.  
+    ![Exempel skärm bild av skärmen Företagsportal, uppdatera enhets inställningar och markera knappen kontrol lera inställningar.](./media/update-settings-mac-1911.PNG)  
+9. När installationen är klar väljer du **klar**.  
 
-         ![Exempel på skärmbild för meddelandeskärmen för att hämta macOS-företagsportalappen. Användaren kan välja *My device isn't listed here* (Min enhet visas inte här) eller en specifik enhet från mitten av sidan. Den blå knappen Hämta visas längst ned till vänster i meddelandet och den grå knappen Avbryt visas längst ned till höger](./media/cp-mac-os-device-isnt-here-1808.png)  
 
-6. Enheten kontrollerar att installationsfilen **CompanyPortal.pkg** är säker att öppna. När det är slutfört öppnar du installationsprogrammet och slutför installationen.  
+ ## <a name="troubleshooting-and-feedback"></a>Fel sökning och feedback   
 
-7. När installationsprogrammet har slutförts går du till **Startfönstret** och öppnar **Företagsportal**.  
+Om du stöter på problem under registreringen kan du gå till **hjälp** > **Skicka diagnostisk rapport** för att rapportera problemet till Microsoft Apps-utvecklare. Den här informationen används för att hjälpa till att förbättra appen. De använder också den här informationen för att hjälpa till att lösa problemet om IT-supporten når dem för att få hjälp.  
 
-8. macOS-enheten uppmanar dig att bekräfta att du vill öppna företagsportalappen. Klicka på **Öppna**.  
+När du har rapporterat problemet till Microsoft kan du skicka information om din upplevelse till IT-supporten. Välj **e-postinformation**. Skriv vad du fick i e-postmeddelandets brödtext. Om du vill hitta din support persons e-postadress går du till Företagsportal app > **Kontakta**. Eller kontrol lera [företagsportal webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+ 
 
-   > [!TIP]
-   > Intune behöver åtkomst till datorn för att se till att enheten är säker nog för att få åtkomst till organisationens resurser. Om datorn vägrar att öppna företagsportalappen kan du [inaktivera Gatekeeper](https://support.apple.com/HT202491). Öppna sedan appen.
+Dessutom skulle Microsoft Intune Företagsportals teamet älska att höra din feedback. Gå till **hjälp** > **Skicka feedback** för att dela med dig av dina tankar och idéer.  
 
-9. Den första skärmen som visas i företagsportalappen uppmanar dig att **Logga in**. Använd samma arbets- eller skolkonto som du använde för att logga in på företagsportalens webbplats.
+## <a name="unverified-profiles"></a>Overifierade profiler  
+När du visar de installerade MDM-profilerna för hantering av mobilenheter i **Systeminställningar** > **Profiler**, kan vissa profiler visas med statusen Inte verifierad. Så länge som hanteringsprofilen visar statusen Verifierad behöver du inte bry dig om detta.  
 
-10. Företagsportalen bekräftar kontoinformationen och visar statusen för **Enhetsregistrering** och **Enhetsefterlevnad**. Gula trianglar markerar de åtgärder du måste utföra för att skydda din macOS-enhet för skolan eller arbetet. Klicka på **Börja** för att starta registreringen. 
-
-11. Om du uppmanas att göra det anger du datorns inloggningsinformation.  
-
-Det kan ta några minuter att registrera enheten i hantering. Du kan göra andra saker på enheten under tiden. Du får ett meddelande när du har slutfört konfigurationen av företagsåtkomst så att du vet att du är färdig.  
-
-## <a name="unverified-profiles"></a>Overifierade profiler
-När du visar de installerade MDM-profilerna för hantering av mobilenheter för din macOS-enhet kan vissa profiler visas med statusen **Inte verifierad**. Så länge som **Hanteringsprofil** visar statusen **Verifierad** behöver du inte bry dig om detta.  
-
-Hanteringsprofilen är vad som definierar MDM-kanalanslutningen. Så länge hanteringsprofilen är verifierad ärver alla andra profiler som levereras till datorn, via kanalen, hanteringsprofilens säkerhetsegenskaper.
-
-Och eftersom de övriga profilerna inte kräver enskilda verifieringar genereras och levereras de snabbare till enheter. 
+Hanteringsprofilen är vad som definierar MDM-kanalanslutningen. Så länge hanteringsprofilen är verifierad ärver alla andra profiler som levereras till datorn, via kanalen, hanteringsprofilens säkerhetsegenskaper.  
 
 ## <a name="updating-the-company-portal-app"></a>Uppdatera företagsportalappen
 
-Företagsportalappen uppdateras på samma sätt som andra Office-appar, genom Microsoft AutoUpdate för Mac. Läs mer om [uppdatering av Microsoft-appar för macOS här](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+Företagsportalappen uppdateras på samma sätt som andra Office-appar, genom Microsoft AutoUpdate för macOS. Läs mer om [uppdatering av Microsoft-appar för macOS](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
 
 ## <a name="next-steps"></a>Nästa steg  
-Behöver du mer hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

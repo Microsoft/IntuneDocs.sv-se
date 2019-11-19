@@ -5,7 +5,7 @@ description: Inställningar för säkerhetsbaslinjer som stöds av Intune för a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cb3481de6e1fdc3790b7330ac521772e252be
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: b7363682960cff6688e9727d2b6869b6bf357084
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923408"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74060059"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -50,7 +50,7 @@ När du använder Microsoft Edge Microsoft Defender Application Guard skyddas di
   - **Funktionssätt för Urklipp** - *Inställningar/ClipboardSettings*  
     Välj vilka åtgärder för kopiera och klistra in som tillåts mellan den lokala datorn och den virtuella Application Guard-webbläsaren.  Alternativen är:
     - Inte konfigurerat  
-    - Blockera kopiera och klistra in mellan både PC och webbläsar-block båda. Blockera båda – Data kan inte överföras mellan datorn och den virtuella webbläsaren.  
+    - Blockera kopiera och klistra in mellan både PC och webbläsar-block båda. Data kan inte överföras mellan datorn och den virtuella webbläsaren.  
     - Tillåt endast kopiering och inklistring från webbläsare till dator – data kan inte överföras från datorn till den virtuella webbläsaren.
     - Tillåt endast kopiera och klistra in från PC till webbläsare – data kan inte överföras från den virtuella webbläsaren till värd datorn.
     - Tillåt kopiera och klistra in mellan dator och webbläsare – det finns inget block för innehåll.  
@@ -91,11 +91,11 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
   **Standard**: Blockera 
 
 - **Prevent credential stealing type** (Förhindra typ av stöld av autentiseringsuppgifter)  
-  Ställ in till *Aktivera* för att [Skydda härledda domänautentiseringsuppgifter med Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Windows Defender Credential Guard använder virtualiseringsbaserad säkerhet för att isolera hemligheter så att endast privilegierad programvara kan komma åt dem. Obehörig åtkomst till dessa hemligheter kan leda till stöld av autentiseringsuppgifter, till exempel Pass-The-Hash eller Pass-The-Ticket. Windows Defender Credential Guard förhindrar dessa attacker genom att skydda NTLM-hashvärden för lösenord, biljettbeviljande Kerberos-biljetter och autentiseringsuppgifter som lagras av program som autentiseringsuppgifter för en domän.  
+  Ställ in till *Aktivera* för att [Skydda härledda domänautentiseringsuppgifter med Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Microsoft Defender Credential Guard använder virtualiseringsbaserad säkerhet för att isolera hemligheter så att endast privilegierad programvara kan komma åt dem. Obehörig åtkomst till dessa hemligheter kan leda till stöld av autentiseringsuppgifter, till exempel Pass-The-Hash eller Pass-The-Ticket. Microsoft Defender Credential Guard förhindrar dessa attacker genom att skydda NTLM-hashvärden för lösenord, biljettbeviljande Kerberos-biljetter och autentiseringsuppgifter som lagras av program som autentiseringsuppgifter för en domän.  
 
   **Standard**: Aktivera
 
-- **Email content execution type** (Körbara filtyper i e-postinnehåll)  
+- **Körbara filer i e-postinnehåll**  
   [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera* blockerar den här regeln följande filtyper från att köras eller startas från ett e-postmeddelande i Microsoft Outlook eller webbaserad e-post (till exempel Gmail.com eller Outlook.com):  
 
   - Körbara filer (till exempel .exe, .dll eller .scr)  
@@ -109,12 +109,12 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
 
   **Standard**: Aktivera
 
-- **Script obfuscated macro code type** (Makrokod dold i skriptfiler)  
+- **Makrokod dold i skriptfiler**  
   [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Skadlig kod och andra hot kan försöka förvränga eller dölja skadlig kod i vissa skriptfiler. Den här regeln förhindrar att skript som verkar vara dolda körs.  
     
   **Standard**: Blockera
 
-- **Untrusted USB process type** (Obetrodd USB-processtyp)  
+- **Obetrodd USB-process**  
   [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan osignerade eller ej betrodda körbara filer från flyttbara USB-enheter och SD-kort inte köras.
 
   Körbara filer inkluderar:
@@ -123,12 +123,12 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
 
   **Standard**: Blockera
 
-- **Office apps other process injection type** (Annan processinmatningstyp i Office-appar)  
+- **Annan processinmatning i Office-appar**  
   [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan inte Office-appar, inklusive Word, Excel, PowerPoint och OneNote, mata in kod i andra processer. Kodinmatning används vanligtvis av skadlig kod för att köra skadlig kod i ett försök att dölja aktivitet från motorer för virusgenomsökning.  
 
   **Standard**: Blockera
 
-- **Office macro code allow Win32 imports type** (Office-makrokod tillåter Win32-importer)  
+- **Office-makrokod tillåter Win32-importer**  
   [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, försöker den här regeln att blockera Office-filer som innehåller makrokod som kan importera Win32-DLL:er. Office-filer inkluderar Word, Excel, PowerPoint och OneNote. Skadlig kod kan använda makrokod i Office-filer för att importera och läsa in Win32-DLL:er, som sedan används för att göra API-anrop som leder till ytterligare infektion hela systemet.  
 
   **Standard**: Blockera
@@ -138,7 +138,7 @@ Mer information finns i [CSP-princip – SmartScreen](https://docs.microsoft.com
 
   **Standard**: Aktivera
 
-- **Office apps executable content creation or launch type** (Generering eller starttyp för körbart innehåll i Office-appar)  
+- **Generering eller start för körbart innehåll i Office-appar**  
   [Regel för minskning av attackytan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Då inställt till *Blockera*, kan inte Office-appar skapa körbart innehåll. Office-appar inkluderar Word, Excel, PowerPoint, OneNote och Access.  
 
   Den här regeln gäller typiska beteenden som används av misstänkta och skadliga tillägg och skript (tillägg) som skapar eller startar körbara filer. Det här är en vanlig teknik som används av skadlig kod. Tillägg hindras från att användas av Office-appar. De här tilläggen använder vanligtvis Windows Scripting Host (WSH-filer) för att köra skript som automatiserar vissa uppgifter eller tillhandahåller användargenererade tilläggsfunktioner.
@@ -227,7 +227,7 @@ Mer information finns i [BitLocker-grupprincipinställningar](https://docs.micro
   - **Hardware device identifiers that are blocked** (ID:n för blockerade maskinvaruenheter)  
     Den här inställningen är endast tillgänglig när *Hardware device installation by device identifiers* (Installation av maskinvaruenheter efter enhets-ID) har inställningen *Block hardware device installation* (Blockera installation av maskinvaruenheter). Expandera alternativet om du vill konfigurera den här inställningen, välj **+ Lägg till**, och ange sedan maskinvarans enhets-ID som du vill blockera.  
 
-    **Standard**: PCI\CC_0C0A
+    **Standard**: PCI \ CC_0C0A
 
 - **Block direct memory access** (Blockera direkt minnesåtkomst)  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) – Använd den här principinställningen för att blockera direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med hot plug-stöd tills en användare loggar in i Windows. När en användare loggar in räknar Windows upp PCI-enheterna som är anslutna till PCI-portarna med hot plug-stöd. Varje gång användaren låser datorn blockeras DMA på PCI-portarna med hot plug-stöd utan underordnade enheter tills användaren loggar in igen. Enheter som räknades upp när datorn var upplåst fortsätter att fungera tills de kopplas från. 
@@ -281,7 +281,7 @@ Mer information finns i [WindowsAdvancedThreatProtection CSP](https://docs.micro
   Du kan också konvertera och importera en befintlig EMET XML-konfigurationsfil till en XML-konfigurationsfil för sårbarhetsskydd.
 
 - **Blockera åsidosättning av sårbarhetsskydd**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – Inställt på *Ja* för att förhindra användare från att göra ändringar i inställningsområdet för sårbarhetsskydd i Windows Defender Security Center. Om du inaktiverar eller inte konfigurerar denna inställning kan lokala användare göra ändringar i inställningsområdet för sårbarhetsskydd.  
+  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – Inställt på *Ja* för att förhindra användare från att göra ändringar i inställningsområdet för sårbarhetsskydd i Microsoft Defender Security Center. Om du inaktiverar eller inte konfigurerar denna inställning kan lokala användare göra ändringar i inställningsområdet för sårbarhetsskydd.  
   **Standard**: Ja  
 
 ## <a name="microsoft-defender-antivirus"></a>Microsoft Defender Antivirus  
@@ -289,17 +289,17 @@ Mer information finns i [WindowsAdvancedThreatProtection CSP](https://docs.micro
 Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.
 
 - **Sök igenom skript som har lästs in via Microsoft-webbläsare**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – Inställd på *Ja* för att tillåta Windows Defender-funktioner för skriptgenomsökning.  
+  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – Inställd på *Ja* för att tillåta Microsoft Defender-funktioner för skriptgenomsökning.  
 
   **Standard**: Ja
 
 - **Scan incoming mail messages** (Sök igenom inkommande e-postmeddelanden)  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – Inställd på *Ja* för att tillåta Windows Defender att skanna e-post.  
+  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – Inställd på *Ja* för att tillåta Microsoft Defender att skanna e-post.  
 
   **Standard**: Ja
 
-- **Defender sample submission consent type** (Medgivandetyp i Defender för överföring av dataprover)  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) – Kontrollerar nivån för användarmedgivande i Windows Defender för att skicka data. Om nödvändigt godkännande redan har beviljats, skickar Windows Defender dem. Annars (och om användaren har valt att aldrig bli tillfrågad) startas användargränssnittet för att be om användarens medgivande (när *Molnlevererat skydd* är inställt på *Ja*) innan data skickas.  
+- **Medgivande i Defender för överföring av dataprover**  
+  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) – Kontrollerar nivån för användarmedgivande i Microsoft Defender för att skicka data. Om nödvändigt godkännande redan har beviljats, skickar Microsoft Defender dem. Annars (och om användaren har valt att aldrig bli tillfrågad) startas användargränssnittet för att be om användarens medgivande (när *Molnlevererat skydd* är inställt på *Ja*) innan data skickas.  
 
   **Standard**: Skicka säkra prover automatiskt
 
@@ -319,7 +319,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
     **Standard**: Ja
 
 - **Defender-blockering på åtkomstskydd**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – Då inställt till *Ja*, är Windows Defender på NAP aktiverat.  
+  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – Då inställt till *Ja*, är Microsoft Defender på NAP aktiverat.  
 
   **Standard**: Ja
 
@@ -346,30 +346,30 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: 02.00
 
 - **Molnlevererat skydd**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – Då inställt till *Ja*, skickar Windows Defender information till Microsoft om något problem påträffas. Microsoft analyserar informationen, lär sig mer om problem som påverkar dig och andra kunder och erbjuder bättre lösningar.
+  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – Då inställt till *Ja*, skickar Microsoft Defender information till Microsoft om något problem påträffas. Microsoft analyserar informationen, lär sig mer om problem som påverkar dig och andra kunder och erbjuder bättre lösningar.
 
   När den här principen är inställd till *Ja*, kan du använda *Medgivandetyp för Defender-exempelsändning* för att ge användare kontroll över att skicka information från sina enheter.  
 
   **Standard**: Ja
 
 - **Defender potentially unwanted app action** (Potentiellt oönskad appåtgärd i Defender)  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – i Windows Defender Antivirus kan identifiera och hindra *potentiellt oönskade program* från att hämtas och installeras på slutpunkter i ditt nätverk. 
+  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – i Microsoft Defender Antivirus kan identifiera och hindra *potentiellt oönskade program* från att hämtas och installeras på slutpunkter i ditt nätverk. 
  
-  - Då inställt till *Blockera*, blockerar Windows Defender potentiellt oönskade program och visar dem i historiken tillsammans med andra hot.
-  - Då inställt till *Granskning*, identifierar Windows Defender potentiellt oönskade program men blockerar dem inte. Information om vilka program som Windows Defender skulle ha tagit åtgärder mot kan hittas genom att söka efter händelser som har skapats av Windows Defender i Loggboken.  
+  - Då inställt till *Blockera*, blockerar Microsoft Defender potentiellt oönskade program och visar dem i historiken tillsammans med andra hot.
+  - Då inställt till *Granskning*, identifierar Microsoft Defender potentiellt oönskade program men blockerar dem inte. Information om vilka program som Microsoft Defender skulle ha tagit åtgärder mot kan hittas genom att söka efter händelser som har skapats av Microsoft Defender i Loggboken.  
   - Då inställt till *Enhetsstandard*, är skydd mot oönskade program inaktiverat.  
  
   **Standard**: Blockera
 
 - **Defender-molnet utökade tidsgränsen**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – Ange den längsta tid som Windows Defender Antivirus ska blockera en fil under väntan på ett resultat från molnet. Den grundläggande mängd tid som Windows Defender väntar är 10 sekunder. Ytterligare tid som du anger här (upp till 50 sekunder) läggs till de 10 sekunderna. I de flesta fall går genomsökningen snabbare än maxvärdet. En utökning av tiden gör att molnet kan undersöka misstänkta filer noggrant.  
+  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – Ange den längsta tid som Microsoft Defender Antivirus ska blockera en fil under väntan på ett resultat från molnet. Den grundläggande mängd tid som Microsoft Defender väntar är 10 sekunder. Ytterligare tid som du anger här (upp till 50 sekunder) läggs till de 10 sekunderna. I de flesta fall går genomsökningen snabbare än maxvärdet. En utökning av tiden gör att molnet kan undersöka misstänkta filer noggrant.  
 
   Som standard är utökat tidsvärde 0 (inaktiverad). Intune rekommenderar att du aktiverar den här inställningen och anger minst 20 ytterligare sekunder.  
  
   **Standard**: 0
 
 - **Sök igenom arkivfiler**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – Inställd på *Ja* för att Windows Defender ska söka igenom arkivfiler.  
+  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – Inställd på *Ja* för att Microsoft Defender ska söka igenom arkivfiler.  
 
   **Standard**: Ja
 
@@ -381,17 +381,17 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Användardefinierad
 
 - **Beteendeövervakning**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – Inställd på *Ja* för att aktivera beteendeövervakning för Windows Defender-funktioner. Inbäddad i Windows 10, övervakar funktionssätt i Windows Defender och samlar in och bearbetar beteendesignaler från operativsystemet och skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
+  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – Inställd på *Ja* för att aktivera beteendeövervakning för Microsoft Defender-funktioner. Inbäddad i Windows 10, övervakar funktionssätt i Microsoft Defender och samlar in och bearbetar beteendesignaler från operativsystemet och skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
 
   **Standard**: Ja
 
 - **Sök igenom filer öppnade från nätverksmappar**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – Inställd till *Ja* för att Windows Defender ska söka igenom filer i nätverket. Användaren kan inte ta bort identifierad skadlig kod från skrivskyddade filer.  
+  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – Inställd till *Ja* för att Microsoft Defender ska söka igenom filer i nätverket. Användaren kan inte ta bort identifierad skadlig kod från skrivskyddade filer.  
 
   **Standard**: Ja
 
 - **Defender cloud block level** (Molnblockeringsnivå i Defender)  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – Använd den här principen för att avgöra hur aggressiva Windows Defender Antivirus är vid blockering och genomsökning av misstänkta filer. Alternativen är:
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – Använd den här principen för att avgöra hur aggressiva Microsoft Defender Antivirus är vid blockering och genomsökning av misstänkta filer. Alternativen är:
 
   - Hög – aggressiv blockering av okända filer och samtidigt optimering av klientprestanda (större risk för falska positiva resultat)
   - Hög plus – aggressiv blockering av okända filer och tillämpning av ytterligare skyddsåtgärder (kan påverka klientprestanda)
@@ -400,24 +400,24 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
   **Standard**: Inte konfigurerat
 
 - **Realtidsövervakning**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – Inställd på *Ja* för att tillåta övervakning för Windows Defender i realtid.  
+  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – Inställd på *Ja* för att tillåta övervakning för Microsoft Defender i realtid.  
 
   **Standard**: Ja
 
 - **Gräns för processoranvändning under genomsökning**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – Ange den högsta genomsnittliga CPU-användning i procent som Windows Defender kan använda under en genomsökning.  
+  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – Ange den högsta genomsnittliga CPU-användning i procent som Microsoft Defender kan använda under en genomsökning.  
 
   **Standard**: 50
 
 - **Sök igenom mappade nätverksdrivrutiner vid fullständig genomsökning**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) – Inställd på *Ja* för att Windows Defender ska söka igenom filer i nätverket. Användaren kan inte ta bort identifierad skadlig kod från skrivskyddade filer,
+  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) – Inställd på *Ja* för att Microsoft Defender ska söka igenom filer i nätverket. Användaren kan inte ta bort identifierad skadlig kod från skrivskyddade filer,
 
   Relaterade inställning i den här listan: *Defender/AllowScanningNetworkFiles*
 
   **Standard**: Ja
 
 - **Blockera användaråtkomst till Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – Inställd på *Ja* för att blockera slutanvändaråtkomst till Windows Defender-gränssnittet på enheten.  
+  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – Inställd på *Ja* för att blockera slutanvändaråtkomst till Microsoft Defender-gränssnittet på enheten.  
 
   **Standard**: Ja
 
@@ -426,7 +426,7 @@ Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/wi
 
   **Standard**: 02.00
 
-## <a name="windows-defender-firewall"></a>Windows Defender-brandvägg
+## <a name="microsoft-defender-firewall"></a>Microsoft Defender-brandvägg
 Mer information finns i [CSP-brandvägg](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) i Windows-dokumentationen.
 
 - **Inaktiv tid för säkerhetsassociation före borttagning** - *MdmStore/Global/SaIdleTime*   
@@ -560,29 +560,29 @@ Mer information finns i [CSP-brandvägg](https://docs.microsoft.com/windows/clie
 ## <a name="web--network-protection"></a>Webb- och nätverksskydd  
 
 - **Network protection type** (Typ av nätverksskydd)  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  – Med den här principen kan du aktivera eller inaktivera nätverksskydd i Windows Defender Exploit Guard. Nätverksskydd är en funktion i Windows Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser.  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  – Med den här principen kan du aktivera eller inaktivera nätverksskydd i Microsoft Defender Exploit Guard. Nätverksskydd är en funktion i Microsoft Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser.  
 
-  Då inställd på antingen *Aktivera* eller *Granskningsläge* kan användare inte inaktivera nätverksskydd och du kan använda Windows Defender Security Center för att visa information om anslutningsförsök.  
+  Då inställd på antingen *Aktivera* eller *Granskningsläge* kan användare inte inaktivera nätverksskydd och du kan använda Microsoft Defender Security Center för att visa information om anslutningsförsök.  
  
   - *Aktivera* blockerar användare och appar från att ansluta till farliga domäner.  
   - *Granskningsläge* blockerar inte användare och appar från att ansluta till farliga domäner.  
 
-  Då inställd till *Användardefinierad*, blockeras användare och appar inte från att ansluta till farliga domäner och information om anslutningar är inte tillgänglig i Windows Defender Security Center.  
+  Då inställd till *Användardefinierad*, blockeras användare och appar inte från att ansluta till farliga domäner och information om anslutningar är inte tillgänglig i Microsoft Defender Security Center.  
 
   **Standard**: Granskningsläge
 
 - **Require SmartScreen for Microsoft Edge** (Kräv SmartScreen för Microsoft Edge)  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge använder som standard Windows Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara. Som standard är den här principen aktiverad (inställd på *Ja*), och då den är aktiverad förhindras användare från att stänga av Windows Defender SmartScreen.  När principen för en enhet inte är konfigurerad, kan användare inaktivera Windows Defender SmartScreen, vilket lämnar enheten oskyddad.  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge använder som standard Microsoft Defender SmartScreen (aktiverat) för att skydda användarna mot potentiella nätfiskeförsök och skadlig programvara. Som standard är den här principen aktiverad (inställd på *Ja*), och då den är aktiverad förhindras användare från att stänga av Microsoft Defender SmartScreen.  När principen för en enhet inte är konfigurerad, kan användare inaktivera Microsoft Defender SmartScreen, vilket lämnar enheten oskyddad.  
 
   **Standard**: Ja
   
 - **Block malicious site access** (Blockera åtkomst till skadliga webbplatser)  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga webbplatser, så att användare kan fortsätta till webbplatsen. Med den här principen aktiverad (inställd till *Ja*) förhindrar Microsoft Edge användarna från att kringgå varningar och blockerar dem från att fortsätta till webbplatsen.  
+  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Microsoft Defender SmartScreen-varningar om potentiellt skadliga webbplatser, så att användare kan fortsätta till webbplatsen. Med den här principen aktiverad (inställd till *Ja*) förhindrar Microsoft Edge användarna från att kringgå varningar och blockerar dem från att fortsätta till webbplatsen.  
 
   **Standard**: Ja
 
 - **Block unverified file download** (Blockera nedladdning av overifierade filer)  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Windows Defender SmartScreen-varningar om potentiellt skadliga filer så att de kan fortsätta hämta overifierade filer. Med den här principen aktiverad (inställd på *Ja*), förhindras användare från att kringgå varningar och det går inte att hämta overifierade filer.  
+  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – Som standard tillåter Microsoft Edge att användarna kringgår (ignorerar) Microsoft Defender SmartScreen-varningar om potentiellt skadliga filer så att de kan fortsätta hämta overifierade filer. Med den här principen aktiverad (inställd på *Ja*), förhindras användare från att kringgå varningar och det går inte att hämta overifierade filer.  
 
   **Standard**: Ja
 

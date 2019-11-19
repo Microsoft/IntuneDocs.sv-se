@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise innehåller Microsoft Intune. Se hur Intun
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfa7e34d19465eb43b5eb9cd68b7513545938fa8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504788"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058533"
 ---
 # <a name="device-management-overview"></a>Översikt över enhetshantering
 
@@ -84,7 +84,7 @@ När du har konfigurerat Intune kan välja att enbart arbeta i Azure Portal, ell
 
 ## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Förenkla IT-uppgifter med hjälp av vårt administrationscenter för enhetshantering
 
-I vårt administrationscenter för [enhetshantering](https://devicemanagement.microsoft.com/) kan du hantera och utföra alla åtgärder för dina mobilenheter. Arbetsytan innehåller de tjänster som används för hantering av enheter, t.ex. Intune och Azure Active Directory, och även för hantering av klientappar.
+I [administrationscentret för Microsoft Endpoint-enhetshantering](https://go.microsoft.com/fwlink/?linkid=2109431) kan du hantera och utföra alla åtgärder för dina mobilenheter. Arbetsytan innehåller de tjänster som används för hantering av enheter, t.ex. Intune och Azure Active Directory, och även för hantering av klientappar.
 
 I administrations centret för enhets hantering kan du:
 
