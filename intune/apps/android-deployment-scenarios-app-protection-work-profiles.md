@@ -2,8 +2,8 @@
 title: Appskyddsprinciper och arbetsprofiler i Microsoft Intune – Azure | Microsoft Docs
 description: Se skillnader och för- och nackdelar innan du bestämmer dig för att använda appskyddsprinciper eller arbetsprofiler i personliga eller egna enheter (BYOD) med Android Enterprise i Microsoft Intune. Jämför de skillnader och funktioner som du får med appskyddsprinciper utan registrering (APP-WE) och Android Enterprise-arbetsprofiler.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 02/13/2019
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a2c71e04cf842fda7b16fb8ad4a05668ccbfaa84
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d0b4f8d5124924d013e7ac131dafc947a95c7b65
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507599"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059800"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Appskyddsprinciper och arbetsprofiler på Android Enterprise-enheter i Intune
 

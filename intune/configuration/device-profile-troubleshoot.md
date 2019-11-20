@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7779e265680ded1b5d5d5b670bcf694376ee8016
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4a1177a37ddbfa7f760339c4ad0cd7773d670540
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494409"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199194"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune
 
@@ -73,10 +73,6 @@ Om enheten nyligen har registrerats sker efterlevnads- och konfigurationsincheck
 | Windows 8,1 | Var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
 
 Användarna kan när de vill öppna företagsportalappen, **Inställningar** > **Synkronisera** för att omedelbart söka efter profil- eller principuppdateringar.
-
-För enheter utan användartillhörighet kan synkroniseringsfrekvensen omedelbart efter registreringen variera mellan några timmar till en dag eller mer. Intune skickar begäranden med olika intervall för att en enhet ska kunna checka in på Intune. Det är dock fortfarande enheten som måste checka in. Efter den första registreringen är det svårt att veta hur lång tid det tar att slutföra incheckningen. Det beror också på typen av enhetsregistrering och de principer och profiler som har tilldelats till en enhet. När enheten har registrerats och alla inledande principer och profiler har tillämpats söker enheten efter nya principer och profiler om var 6–8: e timme, baserat på när enheten registrerar i Intune.
-
-Vi rekommenderar att du kontrollerar att enheterna är online i minst åtta timmar i följd för att få bästa möjliga resultat.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Vilka åtgärder gör att Intune genast skickar en avisering till en enhet?
 

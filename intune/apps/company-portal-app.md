@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999528"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199202"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -32,7 +32,7 @@ ms.locfileid: "72999528"
 Microsofts företagsportal för Intune är den plats där användare kan komma åt företagets data och utföra vanliga aktiviteter som att registrera enheter, installera appar och hitta information för att få hjälp från IT-avdelningen. Dessutom ger företagsportalappen användare säker åtkomst till företagets resurser. Företagsportalsappen innehåller flera olika sidor, till exempel hem, appar, appinformation, enheter och enhetsinformation. Om du snabbt vill hitta appar i företagsportalen kan du filtrera apparna på sidan appar.
 
 > [!IMPORTANT]
-> För att stödja Googles Firebase Cloud Messaging (FCM) måste du uppdatera din Android-företagsportalapp till den senaste versionen. För mer information, se nyheter – [Uppdatera företagsportalappen för Android till den senaste versionen](../fundamentals/whats-new.md#update-your-android-company-portal-app-to-the-latest-version-).
+> För att stödja Googles Firebase Cloud Messaging (FCM) måste du uppdatera din Android-företagsportalapp till den senaste versionen.  
 
 > [!Tip]
 > När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar. Observera att användarna måste ha tilldelats en Intune-licens för att få åtkomst till webbplatsen Företagsportal.
