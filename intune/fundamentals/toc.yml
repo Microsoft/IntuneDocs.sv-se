@@ -145,6 +145,8 @@
           items:
             - name: Konfiguration av nätverk
               href: network-bandwidth-use.md
+            - name: Använda virtuella Windows 10-datorer med Intune
+              href: windows-10-virtual-machines.md
             - name: Intune-slutpunkter
               href: intune-endpoints.md
             - name: Intune-slutpunkter för amerikanska myndigheter
