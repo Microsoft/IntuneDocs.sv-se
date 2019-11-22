@@ -130,7 +130,7 @@ När du väljer panelen visas alla enheter utan efterlevnadsprincip. Då visas �
 
 - Med säkerhetsinställningen **Markera enheter som saknar en policy för efterlevnad som** är det viktigt att identifiera enheter som inte har en efterlevnadsprincip. Du kan sedan tilldela minst en policy för efterlevnad till dem.
 
-  Säkerhetsinställningen kan konfigureras i Intune-portalen. Gå till **Enheter** > **Efterlevnadsprinciper** > **	Inställningar för policy för efterlevnad**. Ställ sedan in **Markera enheter som saknar en policy för efterlevnad som** på **Kompatibel** eller **Inte kompatibel**. 
+  Säkerhetsinställningen kan konfigureras i Intune-portalen. Gå till **Enheter** > **Efterlevnadsprinciper** > **Inställningar för policy för efterlevnad**. Ställ sedan in **Markera enheter som saknar en policy för efterlevnad som** på **Kompatibel** eller **Inte kompatibel**. 
 
   Läs mer om denna [förbättrade säkerhet i Intune-tjänsten](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
