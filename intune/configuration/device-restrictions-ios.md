@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: 751ddfae96ebcd190d4d9ce2ca93bfccba972df5
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984129"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390862"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -131,9 +131,6 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="password"></a>Lösenord
 
-> [!NOTE]
-> I en senare version uppdateras lösen ords inställningarna i Intune-ANVÄNDARGRÄNSSNITTET för att matcha registrerings typen.
-
 ### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
 
 - **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerad** (standard) låter användare komma åt enheten utan att ange ett lösenord.
@@ -194,7 +191,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   > [!NOTE]
   > Intune-ANVÄNDARGRÄNSSNITTET för den här inställningen skiljer inte värdena för iOS och iPad som stöds. Användar gränssnittet kan uppdateras i en framtida version.
 
-- **Lösenordets giltighetstid (dagar)**: Ange antal dagar innan lösenordet för enheten måste ändras.
+- **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan lösenordet för enheten måste ändras.
 - **Förhindra återanvändning av tidigare lösenord**: Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas.
 - **Lås upp Touch ID och ansikts-ID**: Välj **blockera** för att förhindra användning av finger avtryck eller ansikte för att låsa upp enheten. **Inte konfigurerad** låter användare låsa upp enheten med dessa metoder.
 
@@ -265,8 +262,8 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 - **Kräv lösen ord för iTunes Store för alla köp**: **Kräv** att användaren anger lösen ordet för Apple-ID för varje app-eller iTunes-inköp. **Inte konfigurerad** (standard) tillåter köp utan att du behöver ange ett lösen ord varje gång.
 - **Köp i appar**: Välj **Blockera** om du vill förhindra att köp från butiken görs i appen. **Inte konfigurerad** (standard) tillåter köp i butiken från en app som körs.
-- **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”**: Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** (standard) tillåter att användare laddar ned böcker i kategorin Erotik.
-- **Tillåt att hanterade appar skriver kontakter till ohanterade kontakt konton**: när de är inställda på **Tillåt**kan hanterade appar, t. ex. Outlook-mobilappen, Spara eller synkronisera kontakt information, inklusive företags-och företags kontakter, till de inbyggda iOS-kontakterna mobilappar. Om det är inställt på **inte konfigurerat** (standard) kan hanterade appar inte spara eller synkronisera kontakt information till den inbyggda appen för iOS-kontakter på enheten.
+- **Ladda ned innehåll från iBook-butiken flaggat som ”erotik”** : Välj **Blockera** om du vill förhindra användare från att ladda ned mediainnehåll som klassificeras som erotik från iBook-butiken. **Inte konfigurerad** (standard) tillåter att användare laddar ned böcker i kategorin Erotik.
+- **Tillåt att hanterade appar skriver kontakter till ohanterade kontakt konton**: när de är inställda på **Tillåt**kan hanterade appar, t. ex. Outlook-mobilappen, Spara eller synkronisera kontakt information, inklusive företags-och företags kontakter, till den inbyggda appen för iOS-kontakter. Om det är inställt på **inte konfigurerat** (standard) kan hanterade appar inte spara eller synkronisera kontakt information till den inbyggda appen för iOS-kontakter på enheten.
   
   Om du vill använda inställningen ställer du in **Visa företagsdokument i ohanterade appar** på **Blockera**.
 
@@ -321,16 +318,6 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **JavaScript i Safari**: **Blockera** förhindrar att Java-skript i webbläsaren körs på enheten. **Inte konfigurerad** (standard) tillåter Java-skript.
 
 - **Popup-fönster i Safari**: **Blockera** så att blockering av popup-fönster inaktivas i webbläsaren. **Inte konfigurerad** (standard) tillåter blockering av popup-fönster.
-
-- **Loggning på Server sidan för Siri-kommandon**: När inställningen är inaktive rad stängs Siri **loggning på Server**sidan av. Det kan även förhindra loggning av användar förfrågningar på Siri-servrar. **Inte konfigurerad** (standard) loggar Siri-kommandon på Server sidan. Den här inställningen är inte beroende av att Siri-inställningen är blockerad eller inte konfigurerad.
-
-  Den här funktionen gäller för:  
-  - iOS 12.2 och senare
-
-  > [!NOTE]
-  > Inställningen **loggning på Server sidan för Siri-kommandon** är föråldrad av Apple. I en kommande version tas den här inställningen bort från Intune-konsolen.
-  >
-  > Den här inställningen har för närvarande ingen påverkan på enheter, även om inställningen visas i hanteringen-profiler. Om du vill ta bort den här inställningen från någon princip öppnar du principen, gör en mindre ändring och sparar sedan principen. Principen uppdateras och inställningen tas bort från enheter.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
@@ -426,7 +413,7 @@ Gäller enheter som kör iOS 9,3 eller senare.
 
   - Om du vill lägga till appen Microsoft Work Folders anger du `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` eller `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
-  - Ange `https://itunes.apple.com/de/app/microsoft-word/id586447913` eller `https://apps.apple.com/de/app/microsoft-word/id586447913` för att lägga till Microsoft Word-appen.
+  - Ange `https://itunes.apple.com/de/app/microsoft-word/id586447913` eller `https://apps.apple.com/de/app/microsoft-word/id586447913`för att lägga till Microsoft Word-appen.
 
   Du hittar webbadressen till en app genom att öppna iTunes App Store och söka efter appen. Du kan t.ex. söka efter `Microsoft Remote Desktop` eller `Microsoft Word`. Välj appen och kopiera webbadressen.
 
@@ -461,7 +448,7 @@ Obs! för data nätverks växling (tips eller viktig information som hjälper ti
   > [!IMPORTANT]
   > Den här inställningen behandlas som en fjär renhets åtgärd. Därför visas inte den här inställningen i hanterings profilen på enheten. Varje gång statusen för personlig hotspot-status ändras på enheten blockeras **personlig hotspot** av Intune-tjänsten. Om rapporterings statusen i Intune visar att den fungerar som den ska, vet du att den fungerar, även om inställningen inte visas i hanterings profilen på enheten.
 
-- **Regler för mobilanvändning (endast hanterade appar)**: Definiera de datatyper som hanterade appar kan använda i mobilnät. Alternativen är:
+- **Regler för mobilanvändning (endast hanterade appar)** : Definiera de datatyper som hanterade appar kan använda i mobilnät. Alternativen är:
   - **Blockera användning av mobildata**: Blockera användningen av mobildata för **Alla hanterade appar** eller **Välj särskilda appar**.
   - **Blockera användning av mobildata vid nätverksväxling**: Blockera användningen av mobildata vid nätverksväxling för **Alla hanterade appar** eller **Välj särskilda appar**.
 
@@ -540,7 +527,7 @@ Obs! för data nätverks växling (tips eller viktig information som hjälper ti
 - **Krypterad säkerhetskopiering**: **Kräv** att säkerhetskopior av enheter måste vara krypterade.
 - **Synkronisering av hanterade appar till molnet**: **Inte konfigurerad** (standard) tillåter att appar som du hanterar med Intune synkroniserar data till användarens iCloud-konton. **Blockera** förhindrar denna datasynkronisering till iCloud.
 - **Blockera säkerhetskopiering av företagsbok**: Välj **Blockera** om du vill förhindra användarna från att säkerhetskopiera företagsböcker. **Inte konfigurerad** (standard) tillåter användarna att säkerhetskopiera dessa böcker.
-- **Blockera synkronisering av företagsboksmetadata (anteckningar och markeringar)**: **Blockera** förhindrar synkronising av anteckningar och markeringar i företagsböcker. **Inte konfigurerad** (standard) tillåter synkronisering.
+- **Blockera synkronisering av företagsboksmetadata (anteckningar och markeringar)** : **Blockera** förhindrar synkronising av anteckningar och markeringar i företagsböcker. **Inte konfigurerad** (standard) tillåter synkronisering.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 
