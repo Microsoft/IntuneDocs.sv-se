@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3fb99a363bda762ccfb834388f3abb4ab80f81a
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: cc950f9e60f5549a7a74c2963f33c36369d3ebd3
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709708"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126164"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Självstudie: Använda Apples företagsenhetsregistrering i Apple Business Manager (ABM) för registrering av iOS-enheter i Intune
 Funktionerna för registrering av enheter i Apple Business Manager underlättar registrering av enheter. Intune stöder också Apples äldre DEP-portal (Programmet för enhetsregistrering), men vi rekommenderar att du börjar om från början med Apple Business Manager. Med Microsoft Intune och Apples företagsenhetsregistrering registreras enheter automatiskt den första gången som användaren slår på enheten. Du kan därför leverera enheter till många användare utan att behöva konfigurera varje enhet individuellt. 
@@ -90,7 +90,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för f�
 
 5. Bestäm om du vill att dina enheter som ska registreras med eller utan **användartillhörighet**. Användartillhörighet är utformat för enheter som ska användas av specifika användare. Om användarna vill använda företagsportalen för tjänster som att installera appar väljer du **Registrera med användartillhörighet**. Om användarna inte behöver företagsportalen, eller om du vill erbjuda många användare enheten väljer du **Registrera utan användartillhörighet**.
 
-6. Om du väljer att registrera med användartillhörighet kan du avgöra om du vill autentisera med företagsportalen eller Apples installationsassistent. Om du vill använda Multi-Factor Authentication, låta användarna byta lösenord vid första inloggningen eller uppmana dem att återställa sina utgångna lösenord under registreringen väljer du **Ja** under **Autentisera med Företagsportalen istället för Apple-installationsassistenten**. Om du är nöjd med att använda Apples tillhandahållna grundläggande HTTP-autentisering via Apple-installationsassistenten väljer du **Nej**.
+6. Om du väljer att registrera med användartillhörighet kan du avgöra om du vill autentisera med företagsportalen eller Apples installationsassistent. Om du vill använda Multi-Factor Authentication, låta användarna byta lösenord vid första inloggningen eller uppmana dem att återställa sina utgångna lösenord under registreringen väljer du **Ja** under **Autentisera med Företagsportalen istället för Apple-installationsassistenten**. Om du är nöjd med att använda Apples tillhandahållna grundläggande HTTP-autentisering via Apple-installationsassistenten väljer du **Nej**. Om du väljer **Ja** och vill att företagsportalappen ska uppdateras automatiskt på slutanvändarnas enheter, måste du distribuera Företagsportal separat som en obligatorisk app för dessa användare via Apples volymköpsprogram (VPP).
 
 7. Om du väljer att registrera med användartillhörighet och autentisera med företagsportalen kan du avgöra om du vill installera företagsportalen med Apples volymköpsprogram (VPP). Om du installerar företagsportalen med en VPP-token behöver användaren inte ange något Apple-ID och lösenord för att ladda ned företagsportalen från App Store under registreringen. Välj **Använd token:** under **Installera företagsportalen med VPP** för att välja en VPP-token som har tillgängliga kostnadsfria licenser för företagsportalen. Om du inte vill använda VPP för att distribuera företagsportalen väljer du **Don't use VPP** (Använd inte DPP) under **Installera företagsportalen med VPP**. 
 

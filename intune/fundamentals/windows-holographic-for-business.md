@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2018
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e648d2eff8fd95cd3c995e9cce1bd0c9dfff32da
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 0f82fce8cc31a831f2c032b85d6464e418bd215c
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889523"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058487"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Hantera och använda olika enhetshanteringsfunktioner på Windows Holographic- och HoloLens-enheter med Intune
 
@@ -42,6 +42,7 @@ Azure Active Directory (AD) är en utmärkt resurs för att hantera och kontroll
 - **[Massregistrering för Windows-enheter](../enrollment/windows-bulk-enroll.md)** : Du kan ansluta ett stort antal nya Windows-enheter till Azure Active Directory (AD) och Intune. Den här funktionen kallas massregistrering och använder konfigurationspaket. Med dessa paket ansluts enheter som kör Windows Holographic for Business till Azure AD-klienten och registrerar dem i Intune.
 
 ## <a name="company-portal"></a>Företagsportal
+
 **[Konfigurera företagsportalappen](../apps/company-portal-app.md)**
 
 Intune tillhandahåller företagsportalappen för användarna så att de kan få åtkomst till företagets data, registrera enheter, installera appar, kontakta IT-avdelningen m.m. Du kan anpassa företagsportalappen för dina enheter som kör Windows Holographic for Business.
@@ -54,6 +55,7 @@ Med företagsportalappen kan du också köra följande åtgärder:
 - [Synkronisera enheter manuellt](/intune-user-help/sync-your-device-manually-windows) från inställningsappen eller företagsportalappen
 
 ## <a name="compliance-policy"></a>Policy för efterlevnad
+
 **[Skapa en policy för efterlevnad för enheter](../protect/compliance-policy-create-windows.md)**
 
 Efterlevnadsprinciper är regler och inställningar som enheter måste uppfylla för att vara kompatibla. Använd dessa principer med villkorlig åtkomst för att blockera åtkomst till företagsresurser för enheter som är inte kompatibla. I Intune skapar du efterlevnadsprinciper för att tillåta eller blockera åtkomst för enheter som kör Windows Holographic for Business. Du kan till exempel skapa en princip som kräver att BitLocker är aktiverat.
@@ -61,6 +63,7 @@ Efterlevnadsprinciper är regler och inställningar som enheter måste uppfylla 
 Se också **[Komma igång med efterlevnadsprinciper](../protect/device-compliance-get-started.md)** .
 
 ## <a name="deploy-and-manage-apps"></a>Distribuera och hantera appar
+
 **[Lägga till appar i Intune](../apps/apps-add.md)**
 
 Du kan lägga till appar på enheter som kör Windows Holographic for Business med hjälp av Intune. Det finns många sätt att distribuera appar på, bland annat:
@@ -83,6 +86,7 @@ Microsoft Intune kan distribuera universella Windows-appar till Microsoft HoloLe
 > HoloLens-enheter som kör Windows 10 Holographic för företag 1607 stöder inte online-licensierade appar från Microsoft Store för företag. Läs mer i [Installera appar på HoloLens](/hololens/holographic-store-apps).
 
 ## <a name="device-actions"></a>Enhetsåtgärder
+
 Intune har vissa inbyggda åtgärder som gör att IT-administratörer kan utföra olika uppgifter, lokalt på enheten eller via fjärranslutning med Intune i Azure-portalen. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
 
 Följande inställningar kan användas för enheter som kör Windows Holographic for Business: 
@@ -96,14 +100,16 @@ Följande inställningar kan användas för enheter som kör Windows Holographic
 **[Vad är enhetshantering i Microsoft Intune?](../remote-actions/device-management.md)** är en bra resurs för att lära dig hantera enheter med hjälp av Azure-portalen. 
 
 ## <a name="device-categories-and-groups"></a>Enhetskategorier och grupper
+
 **[Kategorisera enheter i grupper](../enrollment/device-group-mapping.md)**
 
 Med Intune kan du skapa enhetskategorier som automatiskt lägger till enheter i grupper baserat på kategorier som du skapar, till exempel försäljning, redovisning, personal och så vidare. Tanken är att göra det enklare att hantera enheter som kör Windows Holographic for Business.
 
-## <a name="device-configuration-profiles"></a>Enhetens konfigurationsprofiler 
+## <a name="device-configuration-profiles"></a>Enhetens konfigurationsprofiler
+
 **[Kom igång med konfigurationsprofiler](../configuration/device-profiles.md) och [skapa din egen profil](../configuration/device-profile-create.md)**
 
-Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner hanteras med hjälp av profiler. Du kan till exempel skapa en profil som aktiverar Cortana eller använder Windows Defender SmartScreen på enheter som kör Windows Holographic for Business.
+Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner hanteras med hjälp av profiler. Du kan till exempel skapa en profil som aktiverar Cortana eller använder Microsoft Defender SmartScreen på enheter som kör Windows Holographic for Business.
 
 Du kan använda OMA-URI i dina profiler för att anpassa vissa inställningar, skapa enhetsbegränsningar och konfigurera ett virtuellt privat nätverk (VPN) och ett trådlöst nätverk.
 
@@ -128,21 +134,29 @@ Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säke
 Du kan också skapa en profil för trådlöst nätverk i Intune för att tilldela trådlösa nätverksinställningar till dina Windows Holographic for Business-enheter. När du tilldelar en profil för trådlöst nätverk får dina slutanvändare åtkomst till företagets nätverk, utan att någon nätverkskonfiguration behövs. Du kan exempelvis skapa ett trådlöst nätverk som endast är dedikerat till dina Windows Holographic for Business-enheter.
 
 ## <a name="shared-multi-user-devices"></a>Delade enheter för flera användare
+
 [Delade enheter](../configuration/shared-user-device-settings-windows-holographic.md)
 
 Enheter som kör Windows Holographic for Business, till exempel Microsoft HoloLens, kan ha flera användare. Intune innehåller inställningar för att styra olika funktioner på de här delade enheterna, till exempel energisparfunktioner, användning av lokal lagring och kontohantering. Konfigurationsprofilerna kan också tillämpas på enheter med olika operativsystem. Enheter som kör RS2 och RS3 kan exempelvis ingå i samma grupp.
 
 ## <a name="software-updates"></a>Programuppdateringar
+
 **[Hantera programuppdateringar](../protect/windows-update-for-business-configure.md)**
 
 Intune innehåller en funktion som kallas uppdateringsringar för Windows 10-enheter. I dessa uppdateringsringar finns en grupp med inställningar som avgör hur uppdateringar ska installeras. Du kan till exempel skapa en underhållsperiod för installation av uppdateringar, eller välja att datorn startas om när uppdateringarna har installerats. En uppdateringsring kan tillämpas på flera enheter som kör Windows Holographic for Business.
 
 ## <a name="terms-and-conditions"></a>Villkor
+
 **[Hantera företagets villkor för användaråtkomst](../enrollment/terms-and-conditions-create.md)**
 
 Du kan kräva att användarna ska acceptera företagets villkor innan de registrerar enheter och får åtkomst till företagets appar, inklusive sin e-post. I Intune definierar du hur villkoren ska visas i företagsportalen och tilldelar dessutom dessa villkor till enheter som kör Windows Holographic for Business.
 
 ## <a name="windows-hello-for-business"></a>Windows Hello för företag
+
 **[Använda Windows Hello för företag](../protect/windows-hello.md)**
 
 Hello för företag är en alternativ inloggningsmetod som använder ett Azure Active Directory-konto för att ersätta lösenord, smartkort eller virtuella smartkort. Med Hello för företag kan Windows Holographic for Business-enheter logga in med en PIN-kod som har en minimilängd som du har angett.
+
+## <a name="next-steps"></a>Nästa steg
+
+[Konfigurera Intune](setup-steps.md).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d223fb0cac7ad7435366db70bbb5bf4117216aa0
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983970"
+ms.locfileid: "74059783"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -45,7 +45,7 @@ Det finns tre typer av principinställningar: dataskydd, åtkomstkrav och villko
 | **Begränsa klipp ut, kopiera och klistra in mellan andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj mellan: <ul><li>**Blockerad**:  Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt åtgärderna klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen. | **Alla appar** |
 | <ul><ui>**Gräns för att klippa ut och kopiera tecken för alla appar** | Ange det antal tecken som kan klippas ut eller kopieras från organisationens data och konton.  Det här tillåter delning av det angivna antalet tecken till valfritt program oavsett inställningen ”Begränsa klipp ut, kopiera och klistra in med andra appar”.<p>Standardvärde = 0<p>**Obs!** Kräver Intune-företagsportalen version 5.0.4364.0 eller senare.  | **0** |
 | **Skärmdump och Google Assistant** | Välj **Inaktivera** om du vill blockera funktionerna för skärmdumpar och **Google-assistenten** på enheten när den här appen används. Om du väljer **Inaktivera** blir även förhandsgranskningsbilden i appväxlaren suddig när den här appen används med ett arbets- eller skolkonto.| **Aktivera** |
-
+| **Meddelanden om organisationsdata** | Ange hur mycket organisationsdata som ska delas via OS-meddelanden för organisationskonton. Den här principinställningen påverkar den lokala enheten och alla anslutna enheter, till exempel kroppsnära teknik och smarta högtalare. Appar kan ha ytterligare kontroller för att anpassa meddelandebeteendet, eller kan välja att inte respektera alla värden. Välj: <ul><li>**Blockera**:  Dela inte meddelanden.</li><ul><li>Om detta inte stöds av programmet kommer meddelanden att tillåtas.</li></ul><li>**Blockera organisationsdata**: Undvik att dela organisationsdata i meddelanden. Exempel: ”Du har ny e-post”; ”Du har ett möte”</li><UL><li>Om programmet inte stöds kommer meddelanden att blockeras.</li></ul><li>**Tillåt**: Delar organisationsdata i meddelanden</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen.</ul> <p>**Obs!** *Den här inställningen kräver appstöd. För tillfället kommer Outlook för Android version 4.75.0 eller senare att ha stöd för den här inställningen, som vi planerar att ge ut veckan som börjar den 16 december 2019.* | **Tillåt**   |
   
 ### <a name="encryption"></a>Kryptering
 | Inställningen | Använd så här | Standardvärde |

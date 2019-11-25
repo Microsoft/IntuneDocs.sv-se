@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20743d19ba101a9c400cb9f72dca59223254e6de
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 340659adfa3bbd40f98ccec9d8d44e952f7ec9b9
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755053"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059929"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
 
@@ -183,7 +183,7 @@ För slutanvändarupplevelsen kan följande artiklar vara användbara:
 
 ## <a name="turn-off-the-datalert-service"></a>Stänga av tjänsten Datalert
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Administration av klientorganisation** > **Anslutning och token** > **Kostnadsuppföljning av telekommunikation**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Innehavaradministratör** > **Anslutningar och token** > **Kostnadsuppföljning av telekommunikation**.
 2. Ställ in **Enable kostnadsuppföljning av telekommunikation och blockera mobil- och roamingdata på enheter som överskrider de kvoter som du har angett** på **Inaktivera**.
 3. **Spara** ändringarna.
 

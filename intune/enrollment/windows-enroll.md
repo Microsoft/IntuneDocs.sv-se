@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb5a8f462846afd97ae4ea84b7431ae147d918c
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 30a1c9b1fddaa59d633c8dc969063b26b25097de
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709200"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098177"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -117,6 +117,15 @@ Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-e
 > Om du inte har aktiverat automatisk MDM-registrering, men du har Windows 10-enheter som har anslutits till Azure AD, visas två poster i Intune-konsolen efter registreringen. Du kan stoppa detta genom att se till att användare med Azure AD-anslutna enheter går till **Konton** > **Åtkomst för arbete eller skola** och **Anslut** med samma konto. 
 
 Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](../fundamentals/end-user-educate.md).
+
+## <a name="registration-and-enrollment-cnames"></a>CNAME-registrering
+Azure Active Directory har ett annat CNAME som används för enhetsregistrering av iOS-, Android- och Windows-enheter. Villkorlig åtkomst i Intune kräver att enheterna blir registrerade, även kallat ”arbetsplatsanslutna”. Om du planerar att använda villkorlig åtkomst bör du även konfigurera EnterpriseRegistration CNAME för varje företagsnamn som du har.
+
+| Typ | Värdnamn | Pekar på | TTL |
+| --- | --- | --- | --- |
+| NAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 timme|
+
+Mer information om enhetsregistrering finns i [Hantera enhetsidentiteter med hjälp av Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d75e75dbce2563aaf31edede8eeab7249aad8e19
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.openlocfilehash: a3b391bb4ab064c080083e2c31dc28483f6d419a
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801783"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098216"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 
@@ -36,6 +36,20 @@ Om du är anställd eller student bör du titta på skärmbilderna och länkarna
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-november-11-2019"></a>Veckan som börjar den 11 november 2019  
+
+#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Webbappar som startas från Windows företagsportalapp<!-- 5030972 -->
+Slutanvändare kan nu starta webbappar direkt från Windows företagsportalapp. Slutanvändare kan välja webbappen och sedan välja alternativet **Öppna i webbläsare**. Den publicerade webbadressen öppnas direkt i webbläsaren. Den här funktionen kommer att distribueras under nästa vecka. Mer information om hur du lägger till webbappar finns i [Lägga till appar i Microsoft Intune](~/apps/web-app.md).
+
+![Exempelbild av en webbapp som startas från Windows företagsportalapp](./media/whats-new-app-ui/webapp-open-in-browser.png)  
+
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Förbättrad macOS-registrering i företagsportalen <!-- 5074349 WNready -->  
+Företagsportalen för macOS-registrering har en enklare registreringsprocess som stämmer bättre överens med företagsportalen för iOS-registrering. Enhetsanvändarna ser nu följande:  
+
+* Ett mer elegant användargränssnitt.  
+* En förbättrad checklista för registrering.  
+* Tydligare instruktioner för hur man registrerar sina enheter.  
+* Förbättrade felsökningsalternativ.  
 
 ## <a name="week-of-october-28-2019"></a>Veckan då den 28 oktober 2019 infaller  
 
@@ -50,7 +64,7 @@ Den uppdaterade checklistan för registrering med Android-arbetsprofilen visas p
 
 Den uppdaterade checklistan för administratörsregistrering för Android-enheter visas på följande skärmar:  
 
-|Uppdaterad|Föregånde|  
+|Uppdaterad|Föregående|  
 |---|---|  
 |![Exempelbild av administratörskonfigurationen för Android-enheter i företagsportalen med den förenklade checklistan och de nya ikonerna.](./media/whats-new-app-ui/android-checklist-1911.png)|![Exempelbild av den tidigare administratörskonfigurationen för Android-enheter i företagsportalen med en checklista med mer information.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 

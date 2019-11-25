@@ -2,10 +2,10 @@
 title: Binda Android-enheter efter nätverksplats i Microsoft Intune – Azure | Microsoft Docs
 description: Skapa eller konfigurera nätverksplatser i Microsoft Intune för Android-enheter. Du kan märka enheter som inkompatibla baserat på enhetens nätverksplats. Om enheten ansluter utanför nätverksplatsen kan du blockera åtkomsten till företagsresurser.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 648ccd889714c2ee4f7ee1fa04301490ad9fd001
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 847ab759b697d402acb07d9c8d83d3a3ef9aaef2
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749445"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058159"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Använda platser (nätverksstängsel) i Intune
 
@@ -50,7 +50,7 @@ Så här skapar du en platsbaserad efterlevnadsprincip:
 
 ## <a name="create-a-location"></a>Skapa en plats
 
-1. Välj **Enhetsefterlevnad** > **Platser** > **Skapa** i Intune.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Efterlevnadsprinciper** > **Platser** > **Skapa**.
 
 2. Ange följande egenskaper:  
 
@@ -69,8 +69,7 @@ Så här skapar du en platsbaserad efterlevnadsprincip:
 
 ## <a name="create-the-location-compliance-policy"></a>Skapa principen för platsefterlevnad
 
-När du [skapar efterlevnadsprincipen](create-compliance-policy.md) väljer du **Android** för **Plattform**. I **Platser** kan du välja en eller flera av de nätverksplatser som du har lagt till. Dessa platser är en del av nätverksstängslet som du skapar för enheterna. 
-
+När du [skapar efterlevnadsprincipen](create-compliance-policy.md) väljer du **Android** för **Plattform**. I **Platser** kan du välja en eller flera av de nätverksplatser som du har lagt till. Dessa platser är en del av nätverksstängslet som du skapar för enheterna.
 
 ## <a name="configure-the-actions-for-noncompliance"></a>Konfigurera åtgärderna för inkompatibilitet
 
@@ -83,5 +82,6 @@ Mer information finns i avsnittet [Lägga till åtgärder för inkompatibilitet]
 När enheten är ansluten till dina platser visas den som kompatibel i företagsportalappen. När enheten inte är ansluten till någon av platserna visas enheten som inkompatibel.
 
 ## <a name="next-steps"></a>Nästa steg
+
 [Övervaka principer för enhetsefterlevnad](compliance-policy-monitor.md)  
 [Komma igång med efterlevnadsprinciper](device-compliance-get-started.md)

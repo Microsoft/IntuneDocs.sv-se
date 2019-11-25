@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3372fc83e467b08b479490b3707f2be03409156
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: f78f3696827ebd50084f0e4b012c5f94427eeb35
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749325"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164582"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Guidat scenario – Molnhanterat modernt skrivbord
 
-Det moderna skrivbordet är informationsarbetarens förstklassiga produktivitetsplattform. Det moderna skrivbordets huvudkomponenter är Office 365 ProPlus och Windows 10 samt de senaste säkerhetsbaslinjerna för Windows 10 och Windows Defender Advanced Threat Protection. 
+Det moderna skrivbordet är informationsarbetarens förstklassiga produktivitetsplattform. Det moderna skrivbordets huvudkomponenter är Office 365 ProPlus och Windows 10 samt de senaste säkerhetsbaslinjerna för Windows 10 och Microsoft Defender Advanced Threat Protection. 
 
 Hanteringen av det moderna skrivbordet från molnet ger ytterligare fördelar med Internetomspännande fjärråtgärder. Molnhantering använder Windows inbyggda principer för hantering av mobilenheter och eliminerar beroenden av lokal Active Directory-grupprincip. 
 
@@ -33,7 +33,7 @@ Om du vill utvärdera ett molnhanterat modernt skrivbord i din organisation hitt
 
 ## <a name="prerequisites"></a>Krav
 - [Ange MDM-auktoriteten till Intune](~/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) – inställningen för hantering av mobilenheter (MDM, Mobile Device Management) avgör hur du hanterar dina enheter. Som IT-administratör måste du ange en utfärdare för hantering av mobila enheter innan användarna kan registrera enheter för hantering.
-- Minst M356 E3 (eller M365 E5 för bästa säkerhet)
+- Minst M365 E3 (eller M365 E5 för bästa säkerhet)
 - Windows 10 1903-enhet (registrerad med Windows Autopilot för bästa slutanvändarupplevelse)
 - Intune-administratörsbehörigheter som krävs för slutförande av det här guidade scenariot:
   - Läsa, skriva, ta bort, tilldela och uppdatera för enhetskonfiguration
@@ -118,5 +118,5 @@ När användaren ansluter enheten till Azure Active Directory tillämpas följan
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Om du använder Windows Defender Advanced Threat Detection skapar du en [Intune-efterlevnadsprincip](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) för att kräva att hotanalysen i Defender uppfyller efterlevnad.
+- Om du använder Microsoft Defender Advanced Threat Detection skapar du en [Intune-efterlevnadsprincip](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) för att kräva att hotanalysen i Defender uppfyller efterlevnad.
 - Skapa en [enhetsbaserad princip för villkorsstyrd åtkomst](~/protect/advanced-threat-protection.md#create-a-conditional-access-policy) för att blockera åtkomst om enheten inte uppfyller Intune-efterlevnad.

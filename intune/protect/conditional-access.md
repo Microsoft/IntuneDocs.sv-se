@@ -17,27 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb9dd31c87d27ec7885d25269988cfd968e81e08
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 179d135ee8e216495cd7435bf38d8087e5c990e8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504557"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188280"
 ---
 # <a name="learn-about-conditional-access-and-intune"></a>Läs om villkorlig åtkomst och Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Med villkorlig åtkomst kan du styra vilka enheter och appar som kan ansluta till dina e-post- och företagsresurser. 
 
-Villkorlig åtkomst syftar på de olika sätt på vilka du kan styra de enheter och appar som tillåts ansluta till dina e-post- och företagsresurser. I det här avsnittet får du veta mer som enhetsbaserad och appbaserad villkorlig åtkomst och hittar vanliga scenarier för att använda villkorlig åtkomst med Intune.
-
-Villkorlig åtkomst i Enterprise Mobility + Security (EMS) är inte någon fristående produkt, utan en lösning som förekommer i alla tjänster och produkter som ingår i EMS. Den ger detaljerad åtkomstkontroll så att företagets data skyddas, samtidigt den gör det möjligt för användarna att utföra sitt arbete på bästa sätt från vilken enhet som helst och oavsett var de befinner sig.
+Enterprise Mobility + Security (EMS) är inte en fristående produkt. Det är en lösning som involverar alla tjänster och produkter som ingår i EMS. Villkorlig åtkomst ger detaljerad åtkomstkontroll så att företagets data skyddas, samtidigt den gör det möjligt för användarna att utföra sitt arbete på bästa sätt från vilken enhet som helst och oavsett var de befinner sig.
 
 Du kan definiera villkor som reglerar åtkomsten till företagets data baserat på plats, enhet och användare och programmets känslighet.
 
-> [!NOTE] 
+> [!NOTE]
 > Funktionerna för villkorlig åtkomst omfattar även [tjänster i Office 365](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access).
 
-![Arkitekturdiagram för villkorlig åtkomst](./media/conditional-access/ca-diagram-1.png)
+![Diagram över villkorlig åtkomst](./media/conditional-access/ca-diagram-1.png)
 
 ## <a name="use-conditional-access-with-intune"></a>Använda villkorlig åtkomst med Intune
 

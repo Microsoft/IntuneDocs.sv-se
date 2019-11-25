@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6026cf3ef8d044c92680cf4c4c88ba55c9777e0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 889b0a7562f1a663556e955271681e0747aeb3c4
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713251"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199168"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune
 
@@ -31,7 +31,7 @@ För att lyckas, använder du följande konfigurationer tillsammans:
 
 - **Etablera en tjänst-till-tjänst-anslutning mellan Intune och Microsoft Defender ATP**. Med den här anslutningen kan Microsoft Defender ATP samla in data om datorrisker från Windows 10-enheter som du hanterar med Intune.
 - **Använd en enhetskonfigurationsprofil för att publicera enheter med Microsoft Defender ATP**. Du registrerar enheter för att konfigurera som så att de kommunicerar med Microsoft Defender ATP och för att tillhandahålla data som hjälper dem att utvärdera sin risknivå.
-- **Använd en efterlevnadsprincip för enheter för att ange den risknivå som du vill tillåta**. Risknivåer rapporteras av Microsoft Defender ATP.  Enheter som överskrider den tillåtna risknivån identifieras som icke-kompatibla.
+- **Använd en efterlevnadsprincip för enheter för att ange den risknivå som du vill tillåta**. Risknivåer rapporteras av Microsoft Defender ATP. Enheter som överskrider den tillåtna risknivån identifieras som icke-kompatibla.
 - **Använd en princip** för villkorlig åtkomst för att blockera användare från att komma åt företagsresurser från enheter som inte är kompatibla.
 
 När du integrerar Intune med Microsoft Defender ATP kan du dra nytta av ATP:s Threat & Vulnerability Management (TVM) och [använda Intune för att åtgärda sårbarheter i slutpunkterna som har upptäckts av TVM](atp-manage-vulnerabilities.md).
@@ -62,7 +62,7 @@ Om du vill använda Microsoft Defender ATP med Intune måste du ha följande kon
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) och åtkomst till Microsoft Defender Security Center (ATP-portal)
 
 > [!NOTE]
-> Microsoft Defender ATP stöds inte med Intune-appskyddsprinciper.
+> Microsoft Defender ATP stöds inte med Intune-appskyddsprinciper för iOS och Android.
 
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Aktivera Microsoft Defender ATP i Intune
 
@@ -70,7 +70,7 @@ Det första steget är att skapa en tjänst-till-tjänst-anslutning mellan Intun
 
 ### <a name="to-enable-defender-atp"></a>Så här aktiverar du Defender ATP
 
-Du behöver bara aktivera Defender ATP en gång per klientorganisation. 
+Du behöver bara aktivera Defender ATP en gång per klientorganisation.
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -92,6 +92,8 @@ Du behöver bara aktivera Defender ATP en gång per klientorganisation.
 
 > [!TIP]
 > När du När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen till Intune, skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, inklusive [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst. Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
+>
+> Om den klassiska principen tas bort måste du ta bort anslutningen till Intune som var ansvarig för skapandet och sedan konfigurera den igen. Detta återskapar den klassiska principen. Den har inte stöd för att migrera klassiska principer för MTD-appar till den nya principtypen för villkorlig åtkomst.
 >
 > Klassiska principer för villkorlig åtkomst för MTD-appar:
 >
@@ -130,7 +132,7 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
      [Registrera Windows 10-datorer med hjälp av System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) innehåller mer information om dessa Microsoft Defender ATP-inställningar.
 
 7. Välj **OK** och **Skapa** för att spara ändringarna, vilket skapar profilen.
-8. [Tilldela en enhetskonfigurationsprofil](../configuration/device-profile-assign.md) till enheter som du vill utvärdera med Microsoft Defender ATP.  
+8. [Tilldela en enhetskonfigurationsprofil](../configuration/device-profile-assign.md) till enheter som du vill utvärdera med Microsoft Defender ATP.
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Skapa och tilldela en efterlevnadsprincip
 

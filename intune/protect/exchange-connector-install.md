@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30b5debc6e1ab113a08d8930f96f6cbc9bf12b48
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 62db99fc2e47bdfa1a767db3bb2916649dedc074
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509531"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164702"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Konfigurera lokala Intune Exchange Connector
 För att skydda åtkomsten till Exchange använder Intune en lokal komponent kallad Microsoft Intune Exchange Connector. På vissa ställen i Intune-konsolen kallas det här anslutningsprogrammet även för *Exchange ActiveSync On-Premises Connector*. 
@@ -80,14 +80,15 @@ Skapa ett Active Directory-användarkonto för Intune Exchange Connector. Kontot
 
 ## <a name="download-the-installation-package"></a>Ladda ned installationspaketet
 
-1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) på en Windows-server som har stöd för Intune Exchange Connector. Använd ett konto som är administratör på den lokala Exchange-servern och som har en Exchange Server-licens.
+På en Windows-server som har stöd för Intune Exchange Connector:
 
-2. Gå till **Intune** > **Exchange-åtkomst**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Använd ett konto som är administratör på den lokala Exchange-servern och som har en Exchange Server-licens.
+
+2. Välj **Innehavaradministratör** > **Exchange-åtkomst**.  
 
 3. Under **Installation** väljer du **Exchange ActiveSync On-Premises Connector** och sedan **Lägg till**.
 
 4. På sidan **Lägg till anslutningsapp** väljer du **Ladda ned den lokala anslutningsappen**. Intune Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
-
 
 ## <a name="install-and-configure-the-intune-exchange-connector"></a>Installera och konfigurera Intune Exchange Connector
 
@@ -149,8 +150,6 @@ När Exchange Connector har konfigurerat anslutningen synkroniseras automatiskt 
 > [!NOTE]
 > Om du installerar Intune Exchange Connector och senare behöver ta bort Exchange-anslutningen måste du avinstallera anslutningsprogrammet från den dator där det installerades.
 
-
-
 ## <a name="install-connectors-for-multiple-exchange-organizations"></a>Installera anslutningsappar för flera Exchange-organisationer
 
 Intune stöder flera Intune Exchange-anslutningsprogram per prenumeration. För en klientorganisation som har flera Exchange-organisationer kan du bara installera ett anslutningsprogram per Exchange-organisation. 
@@ -161,52 +160,60 @@ Alla Exchange-organisationer som ansluter till Intune stöder hög tillgängligh
 
 ## <a name="on-premises-intune-exchange-connector-high-availability-support"></a>Stöd för hög tillgänglighet i lokala Intune Exchange Connector  
 
-För det lokala anslutningsprogrammet innebär hög tillgänglighet att om den Exchange CAS-server som anslutningsprogrammet använder blir otillgänglig, så kan anslutningsprogrammet växla till en annan CAS-server för den aktuella Exchange-organisationen. Exchange Connector i sig har inte stöd för hög tillgänglighet. Om anslutningsprogrammet misslyckas sker ingen automatisk redundansväxling. Du måste [installera ett nytt anslutningsprogram](#reinstall-the-intune-exchange-connector) för att ersätta anslutningsprogrammet som misslyckades. 
+För det lokala anslutningsprogrammet innebär hög tillgänglighet att om den Exchange CAS-server som anslutningsprogrammet använder blir otillgänglig, så kan anslutningsprogrammet växla till en annan CAS-server för den aktuella Exchange-organisationen. Exchange Connector i sig har inte stöd för hög tillgänglighet. Om anslutningsprogrammet misslyckas sker ingen automatisk redundansväxling. Du måste [installera ett nytt anslutningsprogram](#reinstall-the-intune-exchange-connector) för att ersätta anslutningsprogrammet som misslyckades.
 
-Vid en redundansväxling använder anslutningsprogrammet den angivna CAS-servern för att upprätta en anslutning till Exchange. Därefter identifieras ytterligare CAS-servrar för den aktuella Exchange-organisationen. Den här identifieringen gör det möjligt för anslutningsprogrammet att redundansväxla till en annan CAS-server om en sådan finns tillgänglig, tills den primära CAS-servern blir tillgänglig. 
+Vid en redundansväxling använder anslutningsprogrammet den angivna CAS-servern för att upprätta en anslutning till Exchange. Därefter identifieras ytterligare CAS-servrar för den aktuella Exchange-organisationen. Den här identifieringen gör det möjligt för anslutningsprogrammet att redundansväxla till en annan CAS-server om en sådan finns tillgänglig, tills den primära CAS-servern blir tillgänglig.
 
-Som standard är identifiering av ytterligare CAS aktiverad. Om du behöver inaktivera redundans:  
-1. På den server där Exchange Connector är installerat går du till **%*ProgramData*%\Microsoft\Windows Intune Exchange Connector**. 
+Som standard är identifiering av ytterligare CAS aktiverad. Om du behöver inaktivera redundans:
+
+1. På den server där Exchange Connector är installerat går du till **%*ProgramData*%\Microsoft\Windows Intune Exchange Connector**.
+
 2. Med en textredigerare öppnar du **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Ändra **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** till **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .  
- 
+
+3. Ändra **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** till **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .
+
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Justera prestanda för Exchange Connector (valfritt)
 
-När Exchange ActiveSync hanterar 5 000 eller fler enheter kan du konfigurera en valfri inställning för att förbättra anslutningsprogrammets prestanda. Du kan förbättra prestanda genom att tillåta Exchange att använda flera instanser av ett körningsutrymme för PowerShell-kommandon. 
+När Exchange ActiveSync hanterar 5 000 eller fler enheter kan du konfigurera en valfri inställning för att förbättra anslutningsprogrammets prestanda. Du kan förbättra prestanda genom att tillåta Exchange att använda flera instanser av ett körningsutrymme för PowerShell-kommandon.
 
-Innan du gör den här ändringen kontrollerar du att det konto som du använder för att köra Exchange Connector inte används för andra Exchange-hanteringsbehov. Ett Exchange-konto har ett begränsat antal körningsutrymmen och anslutningsprogrammet använder de flesta av dem. 
+Innan du gör den här ändringen kontrollerar du att det konto som du använder för att köra Exchange Connector inte används för andra Exchange-hanteringsbehov. Ett Exchange-konto har ett begränsat antal körningsutrymmen och anslutningsprogrammet använder de flesta av dem.
 
-Prestandajustering är inte lämpligt för anslutningsprogram som körs på äldre eller långsammare maskinvara.  
+Prestandajustering är inte lämpligt för anslutningsprogram som körs på äldre eller långsammare maskinvara.
 
-Så här förbättrar du prestanda i Exchange Connector: 
+Så här förbättrar du prestanda i Exchange Connector:
 
-1. Öppna installationskatalogen för anslutningsprogrammet på den server där anslutningsprogrammet är installerat.  Standardplatsen är *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*. 
+1. Öppna installationskatalogen för anslutningsprogrammet på den server där anslutningsprogrammet är installerat.  Standardplatsen är *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*.
+
 2. Redigera filen *OnPremisesExchangeConnectorServiceConfiguration.xml*.
-3. Leta upp **EnableParallelCommandSupport** och ange värdet till **true**:  
-     
+
+3. Leta upp **EnableParallelCommandSupport** och ange värdet till **true**:
+
    \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+
 4. Spara filen och starta om Microsoft Intune Exchange Connector-tjänsten.
 
 ## <a name="reinstall-the-intune-exchange-connector"></a>Installera om Intune Exchange Connector
 
 Du kan behöva installera om ett Intune Exchange-anslutningsprogram. Endast ett anslutningsprogram kan ansluta till respektive Exchange-organisation. Det betyder att om du installerar ett andra anslutningsprogram för en organisation så ersätter det nya anslutningsprogrammet som du installerar det ursprungliga anslutningsprogrammet.
 
-1. Du kan installera det nya anslutningsprogrammet genom att följa stegen i avsnittet [Installera och konfigurera Exchange Connector](#install-and-configure-the-intune-exchange-connector). 
-2. När du uppmanas väljer du **Ersätt** för att installera den nya anslutningsappen.  
+1. Du kan installera det nya anslutningsprogrammet genom att följa stegen i avsnittet [Installera och konfigurera Exchange Connector](#install-and-configure-the-intune-exchange-connector).
+
+2. När du uppmanas väljer du **Ersätt** för att installera den nya anslutningsappen.
    ![Konfigurationsvarning om att ersätta ett anslutningsprogram](./media/exchange-connector-install/prompt-to-replace.png)
 
 3. Fortsätt med stegen i avsnittet [Installera och konfigurera Intune Exchange Connector](#install-and-configure-the-intune-exchange-connector) och logga in i Intune igen.
-4. I det sista fönstret väljer du **Stäng** för att slutföra installationen.  
+
+4. I det sista fönstret väljer du **Stäng** för att slutföra installationen.
    ![Slutför installationen](./media/exchange-connector-install/successful-reinstall.png)
- 
 
 ## <a name="monitor-an-exchange-connector"></a>Övervaka ett Exchange-anslutningsprogram
 
-När du har konfigurerat Exchange-anslutningsprogrammet kan du visa statusen för anslutningarna och det senaste lyckade synkroniseringsförsöket. 
+När du har konfigurerat Exchange-anslutningsprogrammet kan du visa statusen för anslutningarna och det senaste lyckade synkroniseringsförsöket.
 
 Så här verifierar du anslutningen för Exchange-anslutningsappen:
 
 1. På Intune-instrumentpanelen väljer du **Exchange-åtkomst**.
+
 2. Verifiera **Lokal Exchange-åtkomst** för att verifiera anslutningsstatusen för varje Exchange-anslutningsapp.
 
 Du kan också kontrollera datum och tid för det senaste lyckade synkroniseringsförsöket.
@@ -219,13 +226,14 @@ Intune Exchange Connector synkroniserar automatiskt och regelbundet EAS- och Int
 
 - En **snabbsynkronisering** görs regelbundet flera gånger om dagen. Vid en snabbsynkronisering hämtas enhetsinformation för Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst som har ändrats sedan den senaste synkroniseringen.
 
-- En **fullständig synkronisering** utförs en gång om dagen som standard. Vid en fullständig synkronisering hämtas enhetsinformation för alla Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst. En fullständig synkronisering hämtar även information om Exchange Server och ser till att konfigurationen som anges av Intune på Azure-portalen är uppdaterad på Exchange-servern. 
-
+- En **fullständig synkronisering** utförs en gång om dagen som standard. Vid en fullständig synkronisering hämtas enhetsinformation för alla Intune-licensierade och lokala Exchange-användare med villkorlig åtkomst. En fullständig synkronisering hämtar även information om Exchange Server och ser till att konfigurationen som anges av Intune på Azure-portalen är uppdaterad på Exchange-servern.
 
 Du kan tvinga ett anslutningsprogram att synkronisera med alternativen **Snabbsynkronisering** eller **Fullständig synkronisering** på Intune-instrumentpanelen:
 
    1. På Intune-instrumentpanelen väljer du **Exchange-åtkomst**.
+
    2. Välj **Lokal Exchange-åtkomst**.
+
    3. Välj den anslutningsapp du vill synkronisera och välj sedan **Snabbsynkronisering** eller **Fullständig synkronisering**.
 
 ## <a name="next-steps"></a>Nästa steg
