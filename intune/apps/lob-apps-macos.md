@@ -18,18 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9802b85a9674535cea62ae28f135153352ef76c
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: aeae231e07ceeee6a54f8f60ec5d53cc96d55be0
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813268"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117874"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Lägga till verksamhetsspecifika appar för macOS i Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Informationen i den här artikeln visar hur du lägger till verksamhetsspecifika appar för macOS i Microsoft Intune. Du måste hämta ett externt verktyg för att förbearbeta dina *.pkg*-filer innan du kan ladda upp din verksamhetsspecifika fil till Microsoft Intune. Förbearbetningen av dina *.pkg*-filer måste ske på en macOS-enhet.
+
+> [!NOTE]
+> Från och med lanseringen av macOS Catalina 10.15 bör du kontrollera att dina LOB-appar för macOS har attesterats innan du lägger till dem i Intune. Om utvecklarna till LOB-apparna inte har attesterat sina appar, kommer apparna inte att kunna köras på användarnas macOS-enheter. Mer information om hur du kontrollerar om en app är attesterad finns [Attestera dina macOS-appar inför lanseringen av macOS Catalina](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Notarizing-your-macOS-apps-to-prepare-for-macOS/ba-p/808579).
 
 > [!NOTE]
 > Användare av macOS-enheter kan ta bort några av de inbyggda macOS-apparna som Aktier och Kartor, men du kan inte använda Intune för att distribuera dessa appar igen. Om slutanvändarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.

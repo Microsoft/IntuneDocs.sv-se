@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a9eb45898102e9d5fcde88f69026467255c513
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: d2ab21321b171c8fe8f5f9dab3032507c0e740cf
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445270"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059760"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Aktivera Win32-appar på S-lägesenheter
 
-[Windows 10 S-läge](https://docs.microsoft.com/windows/deployment/s-mode) är ett låst operativsystem som bara kör Store-appar. Som standard tillåts inte installation och körning av Win32-appar i Windows S-läge. S-lägesenheter har bara en *Win 10 S-basprincip* och den hindrar enheterna från att köra Win32-appar. Men genom att skapa och använda en **tilläggsprincip för S-läge** i Intune kan du installera och köra Win32-appar på hanterade Windows 10 S-lägesenheter. Med PowerShell-verktygen i [Windows Defender-programreglering (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) kan du skapa en eller flera tilläggsprinciper för Windows S-läge. Du måste signera tilläggsprinciperna med [Device Guard-signeringstjänsten (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) eller [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool) och sedan ladda upp och distribuera principerna via Intune. Alternativt kan du signera tilläggsprinciperna med ett kodsigneringscertifikat från din organisation, men den rekommenderade metoden är att använda DGSS. I instansen som kodsigneringscertifikatet från din organisation används i, måste rotcertifikatet som kodsigneringscertifikatet är kopplat till finnas på enheten.
+[Windows 10 S-läge](https://docs.microsoft.com/windows/deployment/s-mode) är ett låst operativsystem som bara kör Store-appar. Som standard tillåts inte installation och körning av Win32-appar i Windows S-läge. S-lägesenheter har bara en *Win 10 S-basprincip* och den hindrar enheterna från att köra Win32-appar. Men genom att skapa och använda en **tilläggsprincip för S-läge** i Intune kan du installera och köra Win32-appar på hanterade Windows 10 S-lägesenheter. Med PowerShell-verktygen i [Microsoft Defender-programreglering](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) kan du skapa en eller flera tilläggsprinciper för Windows S-läge. Du måste signera tilläggsprinciperna med [Device Guard-signeringstjänsten (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) eller [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool) och sedan ladda upp och distribuera principerna via Intune. Alternativt kan du signera tilläggsprinciperna med ett kodsigneringscertifikat från din organisation, men den rekommenderade metoden är att använda DGSS. I instansen som kodsigneringscertifikatet från din organisation används i, måste rotcertifikatet som kodsigneringscertifikatet är kopplat till finnas på enheten.
 
 Genom att tilldela tilläggsprincipen för S-läge i Intune kan ett undantag göras för den befintliga principen för S-lägesenheten så att den överförda signerade appkatalogen tillåts. Principen anger en lista med tillåtna appar (appkatalogen) som kan användas på S-lägesenheten.
 
@@ -40,7 +40,7 @@ Följande steg används för att tillåta att Win32-appar körs på en Windows 1
 
 1. Aktivera S-lägesenheter via Intune som en del av registreringsprocessen för Windows 10 S.
 2. Skapa en tilläggsprincip för att tillåta Win32-appar:
-   - Du kan använda verktygen för [Windows Defender-programreglering (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) för att skapa en tilläggsprincip. Basprincips-ID:t i principen måste matcha basprincip-ID:t för S-läget (som är hårdkodat på klienten). Kontrollera också att principversionen är högre än den tidigare versionen.
+   - Du kan använda verktygen för [Microsoft Defender-programreglering](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) för att skapa en tilläggsprincip. Basprincips-ID:t i principen måste matcha basprincip-ID:t för S-läget (som är hårdkodat på klienten). Kontrollera också att principversionen är högre än den tidigare versionen.
    - Du använder DGSS för att signera tilläggsprincipen. Mer information finns i [Signera kodintegritetsprincip med Device Guard-signering](https://docs.microsoft.com/microsoft-store/sign-code-integrity-policy-with-device-guard-signing).
    - Du överför den signerade tilläggsprincipen till Intune genom att skapa en tilläggsprincip för Windows 10 S-läge (se nedan).
 3. Du tillåter Win32-appkataloger via Intune:

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8e61be086323a16a6220573874ed80ce4e9bd32
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ecde59d81ebeba7de64f2693eecb576faac6e722
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498983"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164710"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune 
 
@@ -151,7 +151,7 @@ Krav för lagringsutrymme i molnet:
 - Den maximala filstorleken för en fil som du överför är 8 GB.
 
   > [!NOTE]
-  > Windows verksamhetsspecifika appar (LOB) har en maximal storleksgräns på 8 GB per app. iOS LOB-appar har en maximal storleksgräns på 4 GB per app.
+  > Windows verksamhetsspecifika appar (LOB), inklusive Win32, Windows Universal AppX, Windows Universal AppX-paket, Windows Universal MSI X och Windows Universal MSI X-paket, har en maximal storleksgräns på 8 GB per app. Alla andra LOB-appar, inklusive LOB-appar för iOS, har en maximal storleksgräns på 2 GB per app.
 
 ## <a name="create-and-edit-categories-for-apps"></a>Skapa och redigera kategorier för appar
 

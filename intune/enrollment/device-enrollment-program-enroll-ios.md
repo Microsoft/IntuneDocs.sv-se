@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b553c89704ca68ab6be261e74f1cc62ad58476ed
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 99d946366724b03ecdf5c47d8ba7b1d820ed3055
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713015"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164727"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -155,7 +155,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     >
     > Dessa stöds inte vid autentisering med Apples installationsassistent.
 
-6. Om du väljer **Företagsportal** för **Välj var användarna måste autentiseras**, kan du använda en VPP-token för att automatiskt installera företagsportalen på enheten. I det här fallet behöver användaren inte ange ett Apple-ID. Om du vill installera Företagsportalen med en VPP-token väljer du en token under **Installera Företagsportalen med VPP**. Kräver att företagsportalen redan har lagts till i VPP-token. Konfigurera inte en princip för att begära appen för användare. Intune installerar automatiskt företagsportalen på enheter med den här registreringsprofilen. Se till att den token du väljer inte upphör att gälla och att du har tillräckligt många enhetslicenser för företagsportalappen. Om token upphör att gälla eller om licenserna tar slut kan Intune installera företagsportalen från App Store istället, och då krävs ett Apple-ID. 
+6. Om du väljer **Företagsportal** för **Välj var användarna måste autentiseras**, kan du använda en VPP-token för att automatiskt installera företagsportalen på enheten. I det här fallet behöver användaren inte ange ett Apple-ID. Om du vill installera Företagsportalen med en VPP-token väljer du en token under **Installera Företagsportalen med VPP**. Kräver att företagsportalen redan har lagts till i VPP-token. Kontrollera att du har konfigurerat appdistribution i Intune (Intune>Klientappar) för att säkerställa att företagsportalappen uppdateras även efter registreringen. Om du vill undvika användarinteraktion ska du skaffa Företagsportal som en iOS VPP-app, göra den till en obligatorisk app och använda enhetslicenser för tilldelningen. Se till att den token du väljer inte upphör att gälla och att du har tillräckligt många enhetslicenser för företagsportalappen. Om token upphör att gälla eller om licenserna tar slut kan Intune installera företagsportalen från App Store istället, och då krävs ett Apple-ID. 
 
     > [!NOTE]
     > När **Välj var användarna måste autentiseras** är inställt till **Företagsportal**, se till att enhetsregistreringsprocessen utförs inom de närmsta 24 timmarna efter att företagsportalen laddats ned till DEP-enheten. Annars kan registreringen misslyckas och en fabriksåterställning krävs för att registrera enheten.

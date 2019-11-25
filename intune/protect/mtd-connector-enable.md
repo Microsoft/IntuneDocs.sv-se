@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fae163cbcd97feb4f333d8ddfd44f2202dd343d6
-ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
+ms.openlocfilehash: 38ddec9d76a51ca0afe7561c3616e3a97050ba02
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627689"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199216"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
@@ -33,6 +33,8 @@ ms.locfileid: "73627689"
 Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip för att klassificera hot i MTD-partnerkonsolen och du skapade efterlevnadsprincipen för enheter i Intune. Om du redan har konfigurerat Intune-anslutningen i MTD-partnerkonsolen, kan du nu aktivera MTD-anslutningen för MTD-partnerprogram.
 
 När du När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen till Intune, skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, inklusive [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst. Dessa principer kan ignoreras, men de bör inte redigeras, tas bort eller inaktiveras.
+
+Om den klassiska principen tas bort måste du ta bort anslutningen till Intune som var ansvarig för skapandet och sedan konfigurera den igen. Den här processen återskapar den klassiska principen. Den har inte stöd för att migrera klassiska principer för MTD-appar till den nya principtypen för villkorlig åtkomst.
 
 Klassiska principer för villkorlig åtkomst för MTD-appar: 
 
@@ -63,8 +65,8 @@ Du kan visa klassiska principer för villkorlig åtkomst genom att gå till **Az
 Du kan bestämma vilka växlingsalternativ för Mobile Threat Defense som behöver aktiveras enligt din organisations krav. Här finns mer information:
 
 **MDM-inställningar för efterlevnadsprinciper**
-- **Ansluta Android 4.1+-enheter till _\<MTD-partnernamn>_**: När du aktiverar det här alternativet kan du låta Android 4.1+-enheter rapportera säkerhetsrisker till Intune.
-- **Ansluta iOS 8.0+-enheter till _\<MTD-partnernamn>_**: När du aktiverar det här alternativet kan du låta iOS 8.0+-enheter rapportera säkerhetsrisker till Intune.
+- **Ansluta Android 4.1+-enheter till _\<MTD-partnernamn>_** : När du aktiverar det här alternativet kan du låta Android 4.1+-enheter rapportera säkerhetsrisker till Intune.
+- **Ansluta iOS 8.0+-enheter till _\<MTD-partnernamn>_** : När du aktiverar det här alternativet kan du låta iOS 8.0+-enheter rapportera säkerhetsrisker till Intune.
 - **Aktivera appsynkronisering för iOS-enheter**: Tillåter denna Mobile Threat Defense-partner att begära metadata för iOS-program från Intune för att använda för hotanalyssyften.
 - **Blockera operativsystemversioner som inte stöds**: Blockera om enheten kör ett operativsystem som är äldre än den äldsta version som stöds.
 

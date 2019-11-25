@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3cfcc4ac0c5125324102c55dc7bc887006df6b
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.openlocfilehash: b9f9d6626d26e919efbd3a3d8b5dd735ecb7fb62
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801427"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199141"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Skapa och tilldela SCEP-certifikatprofiler i Intune
 
@@ -49,14 +49,9 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 
    SCEP-certifikatprofiler för profilen *Endast enhetens ägare* har följande begränsningar:
 
-   1. Följande variabler stöds inte:
+   1. Under Övervakning är inte certifikatsrapportering tillgängligt för SCEP-certifikatprofiler för enhetsägare.
 
-      - CN={{OnPrem_Distinguished_Name}}
-      - CN={{onPremisesSamAccountName}}
-
-   2. Under Övervakning är inte certifikatsrapportering tillgängligt för SCEP-certifikatprofiler för enhetsägare.
-
-   3. Du kan inte använda Intune för att återkalla certifikat som etablerades av SCEP-certifikatprofiler för enhetsägare. Du kan hantera återkallning via en extern process eller direkt med certifikatutfärdaren. 
+   2. Du kan inte använda Intune för att återkalla certifikat som etablerades av SCEP-certifikatprofiler för enhetsägare. Du kan hantera återkallning via en extern process eller direkt med certifikatutfärdaren. 
 
 7. Välj **Inställningar** och slutför sedan följande konfigurationer:
 
@@ -115,12 +110,11 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 
         Formatalternativ för Format för namn på certifikatmottagare omfattar följande variabler:
 
-        - **{{AAD_Device_ID}}**
+        - **{{AAD_Device_ID}}** eller **{{AzureADDeviceId}}** – Vilken som helst av variablerna kan användas för att identifiera en enhet med hjälp av dess Azure AD-ID.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{SerialNumber}}**
         - **{{IMEINumber}}**
-        - **{{AzureADDeviceId}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{DeviceName}}**
@@ -157,12 +151,11 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 
         Med certifikattypen *Enhet* kan du använda följande variabler för enhetscertifikat för värdet:
 
-        - **{{AAD_Device_ID}}**
+        - **{{AAD_Device_ID}}** eller **{{AzureADDeviceId}}** – Vilken som helst av variablerna kan användas för att identifiera en enhet med hjälp av dess Azure AD-ID.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{SerialNumber}}**
         - **{{IMEINumber}}**
-        - **{{AzureADDeviceId}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{DeviceName}}**

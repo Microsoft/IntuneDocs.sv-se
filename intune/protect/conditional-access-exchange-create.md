@@ -6,28 +6,26 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
-ms.reviewer: stama
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c18da57282a190dec363e3dfbde5293f5228cb0b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 644297777e8a103d6ffdc5f025ebf8f29591fda8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504630"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188460"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 I den här artikeln beskrivs hur du konfigurerar villkorlig åtkomst för Exchange lokalt baserat på enhetsefterlevnad.
 
@@ -46,7 +44,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera att följande
 
 - Anslutningsappen för en lokal Exchange-organisation kan installeras på valfri dator, förutsatt att datorn kan kommunicera med Exchange-servern.
 
-- Anslutningen stöder **Exchange CAS-miljön**. Intune har stöd för att installera anslutningen på Exchange CAS-servern direkt, men vi rekommenderar att du installerar den på en separat dator eftersom servern belastas ytterligare av anslutningsprogrammet. När du konfigurerar anslutningen måste du ställa in den så att den kommunicerar med en av Exchange CAS-servrarna.
+- Anslutningen stöder **Exchange CAS-miljön**. Intune har stöd för direkt installation av anslutningen på Exchange CAS-servern. Vi rekommenderar att du installerar den på en separat dator på grund av den extra belastningen som anslutningen medför på servern. När du konfigurerar anslutningen måste du ställa in den så att den kommunicerar med en av Exchange CAS-servrarna.
 
 - **Exchange ActiveSync** måste konfigureras med certifikatbaserad autentisering eller genom att användaren anger autentiseringsuppgifter.
 
@@ -60,7 +58,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera att följande
 
 - Om en enhet inte uppfyller inställningarna för villkorlig åtkomst visas något av följande meddelanden när användaren loggar in:
   - Om enheten inte är registrerad i Intune eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med enhetsposten i Azure Active Directory.
-  - Om enheten inte är godkänd visas ett meddelande som leder användaren till webbplatsen för Intune-företagsportalen eller företagsportalappen där de kan hitta information om problemet och hur det kan åtgärdas.
+  - Om enheten inte är godkänd visas ett meddelande som leder användaren till webbplatsen för Intune-företagsportalen eller företagsportalappen. På företagsportalen hittar man information om problemet och hur det kan åtgärdas.
 
 ### <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 
@@ -70,7 +68,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera att följande
 - EAS-e-postklienter på **Android-arbetsprofilenheter:** Endast **Gmail** och **Nine Work for Android Enterprise** i **arbetsprofilen** stöds på Android-arbetsprofilenheter. För villkorlig åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för Gmail eller Nine Work for Android Enterprise-appen och distribuera de apparna som en nödvändig installation.
 
 > [!NOTE]
-> Microsoft Outlook för Android och iOS stöds inte via den lokala Exchange-anslutningsappen. Om du vill dra nytta av principerna för villkorsstyrd åtkomst för Azure Active Directory och Intune-appskydd med Outlook för iOS och Android för dina lokala postlådor bör du läsa [Använda modern hybridautentisering med Outlook för iOS och Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
+> Microsoft Outlook för Android och iOS stöds inte via den lokala Exchange-anslutningsappen. Om du vill dra nytta av principerna för villkorsstyrd åtkomst för Azure Active Directory och Intune-appskydd med Outlook för iOS och Android för dina lokala postlådor bör du läsa [Använda modern hybridautentisering med Outlook för iOS och Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Stöd för datorer
 
@@ -80,19 +78,19 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 Innan du kan använda följande procedur för att konfigurera en lokal åtkomstkontroll för Exchange måste du installera och konfigurera minst ett [lokalt Intune Exchange-anslutningsprogram](exchange-connector-install.md) för lokal Exchange.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Gå till **Exchange-åtkomst** och välj sedan **Åtkomst till Exchange lokalt**. 
+2. Gå till **Innehavaradministratör** > **Exchange-åtkomst** och välj sedan **Åtkomst till Exchange lokalt**.
 
 3. I fönstret **Åtkomst till Exchange lokalt** väljer du **Ja** för att *	Aktivera åtkomstkontroll för Exchange lokalt*.
 
-4. Under **Tilldelning** väljer du **Välj grupper att inkludera** och sedan en eller flera grupper vars åtkomst du vill konfigurera. 
+4. Under **Tilldelning** väljer du **Välj grupper att inkludera** och sedan en eller flera grupper vars åtkomst du vill konfigurera.
 
    Princip för villkorlig åtkomst för Exchange lokalt har redan tillämpats på de grupper som du har valt. Användare som får den här principen måste registrera sina enheter i Intune och vara kompatibla med efterlevnadsprofilerna innan de kan komma åt Exchange lokalt.
 
 5. Om du vill utesluta grupper väljer du **Välj grupper att undanta** och välj sedan en eller flera grupper som är undantagna från kraven för att registrera enheter och vara kompatibla med efterlevnadsprinciper innan de får åtkomst till Exchange lokalt. 
 
-6. Konfigurera därefter den lokala Exchange-anslutningsappen för Intune.  Under **Konfigurera** i **fönstret Exchange-åtkomst**, välj **Lokalt anslutningsprogram Exchange ActiveSync** och välj sedan anslutningsprogrammet för den Exchange-organisation som du vill konfigurera.
+6. Konfigurera därefter den lokala Exchange-anslutningsappen för Intune.  Under **Konfigurera** i fönstret *Åtkomst till Exchange lokalt* väljer du **Lokalt anslutningsprogram Exchange ActiveSync** och välj sedan anslutningsprogrammet för den Exchange-organisation som du vill konfigurera.
 
 7. Under **Inställningar** väljer du **Användaraviseringar** för att ändra standardmeddelandet som skickas per e-post till användarna om deras enhet inte är kompatibel och de vill ha lokal åtkomst till Exchange. Meddelandemallen använder Markup Language.  Du kan även se en förhandsgranskning av hur meddelandet blir medan du skriver.
    > [!TIP]
@@ -120,6 +118,6 @@ Innan du kan använda följande procedur för att konfigurera en lokal åtkomstk
 
 Skapa sedan en efterlevnadsprincip och tilldela den till användare så att Intune kan utvärdera deras mobilenheter. Se [Komma igång med enhetsefterlevnad](device-compliance-get-started.md).
 
-## <a name="see-also"></a>Se även
+## <a name="next-steps"></a>Nästa steg
 
 [Felsöka den lokala Exchange-anslutningsappen för Intune i Microsoft Intune](https://support.microsoft.com/help/4471887)

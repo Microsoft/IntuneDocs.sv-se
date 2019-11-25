@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e453002493e95bd5147cca115075a17a6e7a298
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 6f9c09105ab7286eb315c6bf0f04f1801706bfa8
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709330"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059710"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurera en sida för registreringsstatus
  
@@ -197,7 +197,7 @@ Nedan visas kända problem.
     - bevaras inte användarautentiseringsuppgifterna
     - måste användaren ange autentiseringsuppgifterna igen innan de fortsätter från enhetsinstallationsfasen till kontoinstallationsfasen
 - ESP har fastnat under en längre tid eller så slutförs aldrig fasen "Identifierar". Intune beräknar ESP-principerna under identifieringsfasen. En enhet kan kanske inte slutföra beräkningen av ESP-principerna om den aktuella användaren inte har en tilldelad Intune-licens.  
-- Om du konfigurerar Windows Defender Application Control kan du bli ombedd att starta om under autopilot. Att konfigurera Windows Defender-programmet (AppLocker CSP) kräver en omstart. När den här principen har konfigurerats kan det leda till att en enhet startas om under autopilot. För närvarande finns det inget sätt att utelämna eller skjuta upp omstarten.
+- Om du konfigurerar Windows Defender-programreglering kan du bli ombedd att starta om under Autopilot. Konfigurering av Microsoft Defender-programmet (AppLocker CSP) kräver en omstart. När den här principen har konfigurerats kan det leda till att en enhet startas om under autopilot. För närvarande finns det inget sätt att utelämna eller skjuta upp omstarten.
 - När DeviceLock-principen (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) är aktiverad som en del av en ESP-profil kan fel på automatisk inloggning med användarskrivbord eller OOBE uppstå oväntat av två orsaker.
   - Om enheten inte har startats om innan du avbröt installationsfasen för ESP-enheten kan användaren uppmanas att ange sina autentiseringsuppgifter för Azure AD. Det här meddelandet visas i stället för en lyckad automatisk inloggning där användaren ser en animation för första inloggningen på Windows.
   - Automatisk inloggning kommer att misslyckas om enheten startade om efter att användaren angav sina inloggningsuppgifter för Azure AD men innan ESP-enhetens konfigurationsfas avslutades. Felet uppstår eftersom ESP-konfigurationsfasen inte slutfördes. Lösningen är att återställa enheten.

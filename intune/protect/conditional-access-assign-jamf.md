@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3552eca925865eb3278b50490a6b70ee5807e2b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b09b30fd32caace9ed3259350c01548d5e5fae15
+ms.sourcegitcommit: 93265c2491058afde7168134075bed77031b9311
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502447"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161587"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
@@ -37,12 +37,11 @@ Procedurerna i den här artikeln kräver åtkomst till både Intune- och Jamf Pr
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Ställ in efterlevnadsprinciper för enheter i Intune
 
-1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetsefterlevnad** > **Principer**. 
-2. Om du använder en princip som du skapat tidigare väljer du den principen i konsolen och går sedan vidare till nästa steg i proceduren.  
-   
-   Välj **Skapa princip** och ange sedan information för en princip med *plattformen* **macOS**. Konfigurera *Inställningar* och *Åtgärder vid inkompatibilitet* enligt organisationens krav och spara principen genom att välja **Skapa**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-3. Välj **Tilldelningar** i fönstret *Översikt* för principerna. Använd de tillgängliga alternativen och välj vilka Azure AD-användare (Azure Active Directory) och säkerhetsgrupper som principen ska tillämpas på. Jamf-integreringen med Intune stöder inte efterlevnadsprinciper som tillämpas på enhetsgrupper. 
+2. Välj **Enheter** > **Efterlevnadsprinciper**. Om du använder en princip som du skapat tidigare väljer du den principen i konsolen och går sedan vidare till nästa steg i proceduren. Skapa en ny princip genom att välja **Skapa princip** och ange sedan information för en princip med *plattformen* **macOS**. Konfigurera *Inställningar* och *Åtgärder vid inkompatibilitet* enligt organisationens krav och spara principen genom att välja **Skapa**.
+
+3. Välj **Tilldelningar** i fönstret *Översikt* för principerna. Använd de tillgängliga alternativen och välj vilka Azure AD-användare (Azure Active Directory) och säkerhetsgrupper som principen ska tillämpas på. Jamf-integreringen med Intune stöder inte efterlevnadsprinciper som tillämpas på enhetsgrupper.
 
 4. Principen distribueras till användarna när du väljer **Spara**.  
 
@@ -103,7 +102,7 @@ Enhetsregistreringen kräver att en enhetsanvändare manuellt väljer Intune-fö
 
 Använd Jamf Pro-konsolen för att bekräfta att kommunikationen mellan Jamf Pro och Microsoft Intune fungerar. 
 
-- I Jamf Pro går du till **Inställningar** > **Global hantering** > **Microsoft Intune-integrering** och väljer **Test**. 
+- I Jamf Pro går du till **Inställningar** > **Global hantering** > **Microsoft Intune-integrering** och väljer **Test**.
 
     I konsolen visas ett meddelande som anger om anslutningen lyckades eller misslyckades.  
 
@@ -112,7 +111,7 @@ Kontrollera Jamf-konfigurationen om anslutningstestet från Jamf Pro-konsolen mi
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Ta bort en Jamf-hanterad enhet från Intune
 
-Du kan ta bort en Jamf-hanterad enhet från Intune-konsolen genom att välja **Ta bort** i vyn **Alla enheter**. Du kan aktivera massborttagning av enheter genom att välja flera enheter och klicka på **Ta bort**.
+Om du vill ta bort en Jamf-hanterad enhet öppnar du administrationscentret för Microsoft Endpoint Manager och väljer **Enheter** > **Alla enheter**, väljer enheten och väljer sedan **Ta bort**.  Du kan aktivera massborttagning av enheter genom att välja flera enheter och klicka på **Ta bort**.
 
 Få information om hur du [tar bort en Jamf-hanterad enhet i Jamf Pro-dokumenten](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Du kan även skicka in ett supportärende med [Jamf-support](https://www.jamf.com/support/) för ytterligare hjälp. 
 

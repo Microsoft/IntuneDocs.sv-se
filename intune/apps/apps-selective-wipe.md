@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5bcdf9c3218df91bea85858ea21e88718e81633
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0fafe7c17c698a5eb4e5ad6825bee0ae3fe874c2
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498328"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199239"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
@@ -44,23 +44,12 @@ WIP-principer (Windows Information Protection) kan distribueras utan att MDM-anv
 
 ## <a name="create-a-wipe-request"></a>Skapa en rensningsbegäran
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-
-2. Välj **Alla tjänster**, skriv **Intune** i filtrets textruta och välj **Intune**. Intune-fönstret öppnas. Välj fönstret **Klientappar**.
-
-    ![Skärmbild på fönstret Microsoft Intune](./media/apps-selective-wipe/apps-selective-wipe01.png)
-
-3. Välj **Selektiv radering av app** i fönstret **Klientappar**.
-
-4. Välj  **Ny rensningsförfrågan**. Då öppnas fönstret **Ny rensningsförfrågan**.
-
-    ![Skärmbild av fönstret Ny rensningsförfrågan](./media/apps-selective-wipe/AzurePortal_MAM_NewWipeRequest.png)
-
-5. Välj en användare och sedan **Välj** för att välja användaren vars appdata du vill rensa.
-
-6. Välj sedan **Enhet** i fönstret **Ny rensningsförfrågan**. Detta öppnar fönstret **Välj enhet** med en lista över alla enheter som är associerade med den valda användaren. Den innehåller även två kolumner: namnet på enheten, som är ett eget namn som definierats av användaren, och typ av enhet, vilket är dess enhetsplattform. Välj den enhet som du vill rensa.
-
-7. Nu är du tillbaka i fönstret **Ny rensningsförfrågan**. Välj **OK** för att skicka en rensningsförfrågan.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Välj **Klientappar** > **Selektiv radering av app** > **Skapa rensningsbegäran** i Intune-fönstret.<br>
+   Fönstret **Skapa rensningsbegäran** visas.
+3. Klicka på **Markera användaren**, markera den användare vars appdata du vill rensa och klicka på **Välj** längst ned i fönstret **Användare**.
+4. Klicka på **Markera enheten**, markera enheten och klicka på **Välj** längst ned i fönstret **Välj enhet**.
+5. Välj **Skapa** för att skicka en rensningsförfrågan.
 
 Tjänsten skapar och spårar en separat rensningsförfrågan för varje skyddad app på enheten, samt för användaren som är associerad med rensningsförfrågningar.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 333b94bf3226c99ed50c4b433f4b477814b8e4bb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4fce03913042675588ea12e5399e6f5a1be04946
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509542"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188240"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Använd Windows Hello för företag på Windows 10 på enheter med Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Windows Hello för företag är en metod för att logga in till Windows-enheter genom att ersätta lösenord, smartkort och virtuella smartkort. Intune innehåller inbyggda inställningar så att administratörer kan konfigurera och använda Windows Hello för företag. Du kan till exempel använda dessa inställningar för att:
 
@@ -44,23 +42,33 @@ Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil. En list
 
 ## <a name="create-the-device-profile"></a>Skapa enhetsprofilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+
 3. Ange följande egenskaper:
 
-    - **Namn**: Ange ett beskrivande namn på den nya profilen.
-    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Plattform**: Välj **Windows 10 och senare**. Windows Hello för företag stöds endast stöds på enheter som kör Windows 10 och senare.
-    - **Profiltyp**: Välj **Identitetsskydd**.
-    - **Konfigurera Windows Hello för företag**: Välj hur du vill konfigurera Windows Hello för företag. Alternativen är:
+   - **Namn**: Ange ett beskrivande namn på den nya profilen.
+   - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+   - **Plattform**: Välj **Windows 10 och senare**. Windows Hello för företag stöds endast stöds på enheter som kör Windows 10 och senare.
+   - **Profiltyp**: Välj **Identitetsskydd**.
 
-        - **Inte konfigurerad**: [Etablerar Windows Hello för företag](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) på enheten. När du tilldelar profiler för identitetsskydd till endast användare blir enhetskontext som standard **Inte konfigurerad**.
-        - **Inaktiverad**: Välj det här alternativet om du inte vill använda Windows Hello för företag. Det här alternativet inaktiverar Windows Hello för företag för alla användare.
-        - **Aktiverad**: Välj det här alternativet för att [etablera](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) och konfigurera Windows Hello för företag-inställningar i Intune. Ange vilka inställningar som du vill konfigurera. En lista med alla inställningar och vad de gör finns i:
+4. Konfigurera följande alternativ i fönstret *Windows Hello för företag*:
 
-            - [Inställningar i enheter som kör Windows 10 för att aktivera Windows Hello för företag](identity-protection-windows-settings.md)
+   - **Konfigurera Windows Hello för företag**: Välj hur du vill konfigurera Windows Hello för företag:
 
-4. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
+     - **Inte konfigurerat** (standard): [Etablerar Windows Hello för företag](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) på enheten. När du tilldelar profiler för identitetsskydd till endast användare blir enhetskontext som standard **Inte konfigurerad**.
+
+     - **Inaktiverad**: Välj det här alternativet om du inte vill använda Windows Hello för företag. Det här alternativet inaktiverar Windows Hello för företag för alla användare.
+
+     - **Aktiverad**: Välj det här alternativet för att [etablera](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) och konfigurera Windows Hello för företag-inställningar i Intune. Ange vilka inställningar som du vill konfigurera. En lista över alla inställningar och vad de gör finns i [Enhetsinställningar för Windows 10 för att aktivera Windows Hello för företag](identity-protection-windows-settings.md).
+
+   - **Använd säkerhetsnycklar för inloggning**: Aktivera säkerhetsnyckeln för Windows Hello som inloggningsinformation för alla datorer i klientorganisationen.
+
+     - **Aktivera**
+     - **Ej konfigurerat** (standard)
+
+5. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
 
 Profilen skapas och visas i profillistan. [Tilldela](../configuration/device-profile-assign.md) sedan den här profilen till användar- och enhetsgrupper som uppfyller dina behov.
 

@@ -1,11 +1,11 @@
 ---
 title: Konfigurera inställningar av Windows Update för företag i Microsoft Intune – Azure | Microsoft Docs
-description: Uppdatera inställningarna för programuppdateringar i en profil för att skapa en uppdateringsring, granska kompatibiliteten och pausa uppdateringar i Windows Update för företag-inställningarna med hjälp av Microsoft Intune på Windows 10-enheter.
+description: Hantera Windows 10-programuppdateringar med hjälp av uppdateringsringar och princip för funktionsuppdateringar. Du kan granska regelefterlevnaden och pausa installationen av uppdateringar via Windows Update för företag genom att justera inställningarna i Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,186 +15,243 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d34e44c6e046ddbc9b47bbe90900f5992df9e85
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 53ac86ce88481176ab6f2472b1c0fbae8d3453c1
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584565"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199317"
 ---
-# <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
+# <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
-Du kan använda Intune till att definiera uppdateringsringar som anger hur och när Windows som en tjänst ska uppdatera dina Windows 10-enheter. Uppdateringsringar är principer som du tilldelar till grupper av enheter. Genom att använda uppdateringsringar kan skapa du en uppdateringsstrategi som speglar dina affärsbehov. Mer information finns i [Hantera uppdateringar med hjälp av Windows Update för företag](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Använd Intune för att hantera installationer av Windows 10-programuppdateringar via Windows Update för företag.
 
-I Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Det innebär att om du har installerat den senaste uppdateringen kan du vara säker på att dina Windows 10-enheter är uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
+Genom att använda Windows Update för företag förenklar du hanteringen av uppdateringar. Du behöver inte godkänna enskilda uppdateringar för grupper av enheter. Du kan hantera risker i dina miljöer genom att konfigurera en distributionsstrategi för uppdateringen. I Intune kan du [konfigurera uppdateringsinställningar](windows-update-settings.md) för enheterna och skjuta upp installationen av uppdateringar. Du kan förhindra att enheterna installerar funktioner från nya Windows-versioner för att hålla dem på en stabil nivå, men ändå tillåta installationer av kvalitets- och säkerhetsuppdateringar.
 
+Intune lagrar endast de tilldelade principerna för uppdatering, inte själva innehållet i uppdateringarna. Enheter får åtkomst till Windows Update direkt för uppdateringarna.
 
-Genom att använda Windows Update för företag förenklar du hanteringen av uppdateringar. Du behöver inte godkänna enskilda uppdateringar för grupper av enheter. Du kan hantera risker i dina miljöer genom att konfigurera en distributionsstrategi för uppdateringen. I Intune kan du [konfigurera uppdateringsinställningar](../windows-update-settings.md) för enheterna och skjuta upp installationen av uppdateringar. Intune lagrar inte uppdateringar, utan enbart uppdateringarnas principtilldelning. Enheter får åtkomst till Windows Update direkt för uppdateringarna. Den här samlingen av inställningar som konfigurerar när Windows 10-uppdateringar ska installeras kallas en *Windows 10-uppdateringsring*.
+Intune tillhandahåller följande principtyper för hanteringen av uppdateringar:
 
-Windows 10-uppdateringsringar har stöd för [omfångstaggar](../fundamentals/scope-tags.md). Du kan använda omfångstaggar med uppdateringsringar för att filtrera och hantera uppsättningar med konfigurationer som du använder.
+- **Uppdateringsring för Windows 10**: Den här principen är en samling av inställningar som konfigureras när Windows 10-uppdateringar installeras.
 
-## <a name="prerequisites"></a>Krav  
+- **Funktionsuppdateringar för Windows 10 (offentlig förhandsversion)** : Den här principen uppdaterar enheter till den Windows-version som du anger och fryser funktionsuppsättningen på de enheter som du valt. Du kan när som helst välja att uppdatera alla dessa till en senare Windows-version.  Även om funktionsversionen förblir statisk kan enheterna ändå fortsätta installera de kvalitets- och säkerhetsuppdateringar som finns tillgängliga för funktionsversionen i fråga.
 
-Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10-enheter i Intune ska kunna användas.  
+Du tilldelar principer för Windows 10-uppdateringsringar och Windows 10-funktionsuppdateringar till enhetsgrupper. Du kan använda båda principtyperna i samma Intune-miljö för att hantera programuppdateringar för dina Windows 10-enheter samt för att skapa en uppdateringsstrategi som återspeglar just ditt företags behov.
 
-- Windows 10-datorer måste köra Windows 10 Pro eller senare med Windows Anniversary-uppdateringen eller senare (version 1607 eller senare)
+Mer information finns i [Hantera uppdateringar med hjälp av Windows Update för företag](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+
+## <a name="prerequisites"></a>Krav
+
+Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10-enheter i Intune ska kunna användas.
+
+- Datorer med Windows 10 måste köra följande Windows 10-versioner:
+  - **Windows 10-uppdateringsringar**: version 1607 eller senare
+  - **Windows 10-funktionsuppdateringar**: version 1703 eller senare
+
 - Windows Update stöder följande Windows 10-utgåvor:
   - Windows 10
-  - Windows 10 Team (för Surface Hub-enheter)
-  - Windows 10 Holographic for Business  
+  - Windows 10 Team – för Surface Hub-enheter (stöder inte *Windows 10-funktionsuppdateringar*)
+  - Windows 10 Holographic for Business
 
     Windows Holographic for Business har stöd för en delmängd inställningar i Windows-uppdateringar, bland annat:
     - **Beteende för automatisk uppdatering**
     - **Uppdateringar för Microsoft-produkter**
-    - **Underhållskanal**: Stöd för alternativen **Halvårskanal** och **Halvårskanal (riktad)** . Mer information finns i [Hantera Windows Holographic](../fundamentals/windows-holographic-for-business.md).  
+    - **Underhållskanal**: Stöd för alternativen **Halvårskanal** och **Halvårskanal (riktad)** . Mer information finns i [Hantera Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
-    > [!NOTE]  
-    > **Versioner och utgåvor som inte stöds**:
-    > - Windows 10 Mobil  
-    > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) stöder för närvarande inte versioner av *Långsiktig servicekanal*. Planera att använda alternativa uppdateringsmetoder som WSUS eller Configuration Manager.  
+  > [!NOTE]
+  > **Versioner och utgåvor som inte stöds**:
+  > - Windows 10 Mobil  
+  > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) stöder för närvarande inte versioner av *Långsiktig servicekanal*. Planera att använda alternativa uppdateringsmetoder som WSUS eller Configuration Manager.
 
 - På Windows-enheter måste du **Feedback och diagnostik** > **Diagnostik och användningsdata** vara inställt på **Grundläggande**, **Utökad** eller **Fullständig**.  
 
   Du kan konfigurera den här inställningen *Diagnostik och användningsdata* för WIndows 10 manuellt eller använda en begränsningsprofil för Intune-enheter för Windows 10 och senare. Om du använder en enhetsbegränsningsprofil ställer du in [enhetsbegränsningsinställningen](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) för **Dela användningsdata** på minst **Grundläggande**. Den här inställningen finns under kategorin **Rapportering och telemetri** när du konfigurerar en princip för enhetsbegränsning för Windows 10 eller senare.
 
-  Mer information om enhetsprofiler finns i [Konfigurera inställningar för enhetsbegränsning](../configuration/device-restrictions-configure.md).  
+  Mer information om enhetsprofiler finns i [Konfigurera inställningar för enhetsbegränsning](../configuration/device-restrictions-configure.md).
 
-- Om du använder den klassiska Azure-portalen [migrerar du dina inställningar till Azure-portalen](#migrate-update-settings-to-the-azure-portal).  
+- Om du använder den klassiska Azure-portalen [migrerar du dina inställningar till Azure-portalen](#migrate-update-settings-to-the-azure-portal).
 
 
-## <a name="create-and-assign-update-rings"></a>Skapa och tilldela uppdateringsringar
+## <a name="windows-10-update-rings"></a>Windows 10-uppdateringsringar
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Programuppdateringar** > **Windows 10-uppdateringsringar** > **Skapa**.  
+Skapa uppdateringsringar som anger hur och när Windows som en tjänst ska uppdatera dina Windows 10-enheter med funktions- och kvalitetsuppdateringar. I Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Det innebär att om du har installerat den senaste uppdateringen kan du vara säker på att dina Windows 10-enheter är uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
 
-2. På fliken Grundläggande anger du ett namn samt en beskrivning (valfritt) och väljer **Nästa**.  
+Windows 10-uppdateringsringar har stöd för [omfångstaggar](../fundamentals/scope-tags.md). Du kan använda omfångstaggar med uppdateringsringar för att filtrera och hantera uppsättningar med konfigurationer som du använder.
 
-   ![Skapa arbetsflöde för Windows 10-uppdateringsring](./media/windows-update-for-business-configure/basics-tab.png)
+### <a name="create-and-assign-update-rings"></a>Skapa och tilldela uppdateringsringar
 
-3. På fliken **Inställningar för uppdateringsring** konfigurerar du inställningar för dina företagsbehov. Information om de tillgängliga inställningarna finns i [Inställningar för Windows Update](windows-update-settings.md). När du har konfigurerat inställningar för *Uppdatering* och *Användarupplevelse* väljer du **Nästa**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager]( https://go.microsoft.com/fwlink/?linkid=2109431).
 
-4. På fliken **Omfångstaggar** väljer du **+ Välj omfångstaggar** för att öppna fönstret *Välj taggar* om du vill tillämpa dem på uppdateringsringen.  
+2. Välj **Enheter** > **Windows** > **Windows 10-uppdateringsringar** > **Skapa**.
 
-   - I fönstret **Välj taggar** väljer du en eller fler taggar och klickar sedan på **Välj** för att lägga till dem i uppdateringsringen och återgå till fönstret *Omfångstaggar*.  
+3. På fliken *Grundläggande information* anger du ett namn samt en beskrivning (valfritt) och väljer **Nästa**.
+  ![Skapa en uppdateringsring]( ./media/windows-update-for-business-configure/basics-tab.png)
+  
+4. På fliken med **inställningar för uppdateringsringen** konfigurerar du inställningar som passar just ditt företags behov. Information om de tillgängliga inställningarna finns i inställningarna för Windows Update. När du har konfigurerat inställningar för *Uppdatering och Användarupplevelse* väljer du **Nästa**.
 
-   När du är klar väljer du **Nästa** för att fortsätta till *Tilldelningar*. 
+5. Under **Omfångstaggar** väljer du **+ Välj omfångstaggar** för att öppna fönstret *Välj taggar* om du vill tillämpa dem på uppdateringsringen. Välj en eller fler taggar och klickar sedan på **Välj** för att lägga till dem i uppdateringsringen och återgå till sidan *Omfångstaggar*.
 
-5. På fliken **Tilldelningar** väljer du **+ Välj grupper som ska inkluderas** och tilldelar sedan uppdateringsringen till en eller fler grupper. Använd **+ Välj grupper att utesluta** för att finjustera tilldelningen. Fortsätt genom att välja **Nästa**.  
+   När du är klar väljer du **Nästa** för att fortsätta till *Tilldelningar*.
 
-6. På fliken **Granska och skapa** granskar du inställningarna och väljer **Skapa** när du är redo att spara din Windows 10-uppdateringsring. Din nya uppdateringsring visas i listan över uppdateringsringar.
+6. Under **Tilldelningar** väljer du **+ Välj grupper som ska inkluderas** och tilldelar sedan uppdateringsringen till en eller fler grupper. Använd **+ Välj grupper att utesluta** för att finjustera tilldelningen. Fortsätt genom att välja **Nästa**.
 
-## <a name="manage-your-windows-10-update-rings"></a>Hantera dina Windows 10-uppdateringsringar
+7. Under **Granska och skapa** granskar du inställningarna och väljer **Skapa** när du är redo att spara din Windows 10-uppdateringsring. Din nya uppdateringsring visas i listan över uppdateringsringar.
 
-I portalen kan du välja en Windows 10-uppdateringsring för att öppna fönstret **Översikt**. I fönstret kan du se tilldelningsstatus för ringen och vidta ytterligare åtgärder för att hantera den.
+### <a name="manage-your-windows-10-update-rings"></a>Hantera dina Windows 10-uppdateringsringar
 
-### <a name="to-view-an-updates-rings-overview-pane"></a>Visa uppdateringsringar i översiktsfönstret: 
+I portalen navigerar du till **Enheter** > **Windows** > **Windows 10-uppdateringsringar** och väljer den princip som du vill hantera.  Principen öppnas på sidan **Översikt**.
 
-1. Logga in på Azure-portalen.
-2. Gå till **Intune** > **Programuppdateringar** > **Windows 10-uppdateringsringar**.
-3. Välj den uppdateringsring som du vill visa eller hantera.  
+På den här sidan kan du se ringens tilldelningsstatus och högst upp i översiktsfönstret kan du välja följande åtgärder för att hantera uppdateringsringen:
 
-Förutom att se tilldelningsstatus kan du längst upp i översiktsfönstret välja följande åtgärder för att hantera uppdateringsringen:  
-- [Ta bort](#delete)  
-- [Pausa](#pause)  
-- [Återuppta](#resume)  
-- [Utöka](#extend)  
-- [Avinstallera](#uninstall)  
+- [Ta bort](#delete)
+- [Pausa](#pause)
+- [Återuppta](#resume)
+- [Utöka](#extend)
+- [Avinstallera](#uninstall)
 
 ![Tillgängliga åtgärder](./media/windows-update-for-business-configure/overview-actions.png)
 
-### <a name="delete"></a>Ta bort  
+#### <a name="delete"></a>Ta bort
 
-Välj **Ta bort** för att sluta tillämpa inställningarna för den valda Windows 10-uppdateringsringen. När en ring tas bort tas även dess konfiguration bort från Intune, vilket innebär att Intune inte längre tillämpar dessa inställningar.  
+Välj **Ta bort** för att sluta tillämpa inställningarna för den valda Windows 10-uppdateringsringen. När en ring tas bort tas även dess konfiguration bort från Intune, vilket innebär att Intune inte längre tillämpar dessa inställningar.
 
-Om en ring tas bort från Intune ändras inte inställningarna på enheter som har tilldelats uppdateringsringen.  I stället behåller enheten de aktuella inställningarna. Enheter har inte någon historik över de inställningar som de tidigare hade. Enheter kan också ta emot inställningar från fler uppdateringsringar som är aktiva.  
+Om en ring tas bort från Intune ändras inte inställningarna på enheter som har tilldelats uppdateringsringen.  I stället behåller enheten de aktuella inställningarna. Enheter har inte någon historik över de inställningar som de tidigare hade. Enheter kan också ta emot inställningar från fler uppdateringsringar som är aktiva.
 
-#### <a name="to-delete-a-ring"></a>Ta bort en ring  
+##### <a name="to-delete-a-ring"></a>Ta bort en ring
 
-1. När du ser översiktssidan för en uppdateringsring väljer du **Ta bort**.  
-2. Välj **OK**.  
+1. När du ser översiktssidan för en uppdateringsring väljer du **Ta bort**.
+2. Välj **OK**.
 
-### <a name="pause"></a>Pausa  
+#### <a name="pause"></a>Pausa
 
-Välj **Pausa** för att förhindra att tilldelade enheter tar emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från den tidpunkt då du pausade ringen. Efter det att det maximala antalet dagar har passerat upphör pausfunktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen. Om du återupptar en pausad uppdateringsring och pausar den igen, kommer pausperioden att återställas till 35 dagar.  
+Välj **Pausa** för att förhindra att tilldelade enheter tar emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från den tidpunkt då du pausade ringen. Efter det att det maximala antalet dagar har passerat upphör pausfunktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen.
+Om du återupptar en pausad uppdateringsring och pausar den igen, kommer pausperioden att återställas till 35 dagar.
 
-#### <a name="to-pause-a-ring"></a>Pausa en uppdateringsring  
+##### <a name="to-pause-a-ring"></a>Pausa en uppdateringsring
 
-1. När du ser översiktssidan för en uppdateringsring väljer du **Pausa**.  
-2. Välj antingen **Funktion** eller **Kvalitet** för att pausa den typen av uppdatering och välj sedan **OK**.  
-3. När du har pausat en uppdateringstyp, kan du välja Pausa igen för att pausa den andra uppdateringstypen.  
+1. När du ser översiktssidan för en uppdateringsring väljer du **Pausa**.
+2. Välj antingen **Funktion** eller **Kvalitet** för att pausa den typen av uppdatering och välj sedan **OK**.
+3. När du har pausat en uppdateringstyp, kan du välja Pausa igen för att pausa den andra uppdateringstypen.
 
 När en uppdateringstyp har pausats visar översiktsfönstret för den ringen hur många dagar som återstår innan uppdateringstypen återupptas.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > När du utfärdar ett pauskommando får enheterna detta kommando nästa gång de checkar in på tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering. Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
 
-### <a name="resume"></a>Resume  
+#### <a name="resume"></a>Resume
 
-När en uppdateringsring har pausats kan du välja **Återuppta** för att aktivera funktions- och kvalitetsuppdateringarna för den ringen. När du har återupptagit en uppdateringsring, kan du pausa den igen.  
+När en uppdateringsring har pausats kan du välja **Återuppta** för att aktivera funktions- och kvalitetsuppdateringarna för den ringen. När du har återupptagit en uppdateringsring, kan du pausa den igen.
 
-#### <a name="to-resume-a-ring"></a>Återuppta en uppdateringsring  
+##### <a name="to-resume-a-ring"></a>Återuppta en uppdateringsring
 
-1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Återuppta**.  
-2. Välj bland de tillgängliga alternativen för att antingen återuppta **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.  
-3. När du har återupptagit en uppdateringstyp, kan du välja Återuppta igen för att återuppta den andra uppdateringstypen.  
+1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Återuppta**.
+2. Välj bland de tillgängliga alternativen för att antingen återuppta **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.
+3. När du har återupptagit en uppdateringstyp, kan du välja Återuppta igen för att återuppta den andra uppdateringstypen.
 
-### <a name="extend"></a>Utöka  
+#### <a name="extend"></a>Utöka  
 
-När en uppdateringsring har pausats kan du välja **Utöka** för att återställa pausperioden för både funktions- och kvalitetsuppdateringar för uppdateringsringen till 35 dagar.  
+När en uppdateringsring har pausats kan du välja **Utöka** för att återställa pausperioden för både funktions- och kvalitetsuppdateringar för uppdateringsringen till 35 dagar.
 
-#### <a name="to-extend-the-pause-period-for-a-ring"></a>Utöka pausperioden för en uppdateringsring  
+##### <a name="to-extend-the-pause-period-for-a-ring"></a>Utöka pausperioden för en uppdateringsring
 
-1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Utöka**. 
-2. Välj bland de tillgängliga alternativen för att antingen återuppta **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.  
-3. När du har utökat pausen för en uppdateringstyp kan du välja Utöka igen för att utöka den andra uppdateringstypen.  
+1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Utöka**.
+2. Välj bland de tillgängliga alternativen för att antingen återuppta **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.
+3. När du har utökat pausen för en uppdateringstyp kan du välja Utöka igen för att utöka den andra uppdateringstypen.
 
-### <a name="uninstall"></a>Avinstallera  
+#### <a name="uninstall"></a>Avinstallera  
 
 Intune-administratörer kan använda **Avinstallera** för att avinstallera (återställa) den senaste *funktions*- eller *kvalitets*uppdateringen för en aktiv eller pausad uppdateringsring. När du har avinstallerat en typ, kan du avinstallera den andra typen. Intune stöder eller hanterar inte användarnas möjlighet att avinstallera uppdateringar.  
 
-> [!IMPORTANT] 
-> När du använder alternativet *Avinstallera* skickar Intune denna begäran till enheterna omedelbart. 
-> - Windows-enheterna börjar ta bort uppdateringar så snart de får ändringen i Intune-principen. Borttagning av uppdateringen är inte begränsad till underhållsscheman, även om de är konfigurerade som en del av uppdateringsringen. 
+> [!IMPORTANT]
+> När du använder alternativet *Avinstallera* skickar Intune denna begäran till enheterna omedelbart.
+>
+> - Windows-enheterna börjar ta bort uppdateringar så snart de får ändringen i Intune-principen. Borttagning av uppdateringen är inte begränsad till underhållsscheman, även om de är konfigurerade som en del av uppdateringsringen.
 > - Om borttagningen av uppdateringen kräver en omstart av enheten, startas enheten om utan att enhetsanvändarna kan välja att senarelägga den.
 
+För att avinstallationen ska lyckas:
 
-För att avinstallationen ska lyckas:  
-- En enhet måste köra Windows 10 april 2018-uppdateringen (version 1803) eller senare.  
+- En enhet måste köra Windows 10 april 2018-uppdateringen (version 1803) eller senare.
 
-En enhet måste ha installerat den senaste uppdateringen. Eftersom uppdateringar är kumulativa har enheter som installerar den senaste uppdateringen den senaste funktions- och kvalitetsuppdateringen. Ett exempel på när du kan använda det här alternativet för att återställa den senaste uppdateringen är om ett större problem uppstår på dina Windows 10-datorer.  
+En enhet måste ha installerat den senaste uppdateringen. Eftersom uppdateringar är kumulativa har enheter som installerar den senaste uppdateringen den senaste funktions- och kvalitetsuppdateringen. Ett exempel på när du kan använda det här alternativet för att återställa den senaste uppdateringen är om ett större problem uppstår på dina Windows 10-datorer.
 
-Tänk på följande när du ska använda Avinstallera:  
-- Du kan bara avinstallera en funktions- eller kvalitetsuppdatering via enhetens underhållskanal.  
+Tänk på följande när du ska använda Avinstallera:
 
-- Vid avinstallation av funktions- eller kvalitetsuppdateringar utlöses en princip som återställer den föregående uppdateringen på Windows 10-datorerna.  
+- Du kan bara avinstallera en funktions- eller kvalitetsuppdatering via enhetens underhållskanal.
 
-- När en kvalitetsuppdatering har återställts på Windows 10-datorer, ser slutanvändarna fortfarande uppdateringen i listan **Windows-inställningar** > **Uppdateringar** > **Uppdateringshistorik**.  
+- Vid avinstallation av funktions- eller kvalitetsuppdateringar utlöses en princip som återställer den föregående uppdateringen på Windows 10-datorerna.
 
-- För funktionsuppdateringar specifikt är den tidsperiod då du kan avinstallera funktionsuppdateringen begränsad till mellan 2 och 60 dagar, vilket konfigureras i inställningarna för uppdateringsringarnas uppdatering **Ställ in avinstallationsperiod för funktionsuppdatering (2–60 dagar)** . Du kan inte återställa en funktionsuppdatering som installerades på en enhet längre tid tillbaka än den konfigurerade avinstallationsperioden.  
+- När en kvalitetsuppdatering har återställts på Windows 10-datorer ser enhetsanvändarna fortfarande uppdateringen i listan **Windows-inställningar** > **Uppdateringar** > **Uppdateringshistorik**.
 
-  Anta exempelvis att en uppdateringsring har en funktionsuppdatering med en avinstallationsperiod på 20 dagar. Efter 25 dagar vill du återställa till den senaste funktionsuppdateringen och du använder alternativet Avinstallera.  Enheter som installerade funktionsuppdateringen för mer än 20 dagar sedan kan inte avinstallera den, eftersom de bitar som krävs har tagits bort vid underhållet. Men enheter som installerade funktionsuppdateringen för upp till 19 dagar sedan kan avinstallera uppdateringen, om de checkar in för att få avinstallationskommandot innan avinstallationsperioden på 20 dagar har löpt ut.  
+- För just funktionsuppdateringar har du 2–60 dagar på dig att avinstallera uppdateringen. Den här tidsperioden konfigureras via uppdateringsringens uppdateringsinställning **Konfigurera avinstallationsperiod för funktionsuppdatering (2–60 dagar)** . Du kan inte återställa en funktionsuppdatering som installerades på en enhet längre tid tillbaka än den konfigurerade avinstallationsperioden.
 
-Mer information om Windows Update-principer finns i [Uppdatera CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) i dokumentationen för Windows-klienthantering.  
+  Anta exempelvis att en uppdateringsring har en funktionsuppdatering med en avinstallationsperiod på 20 dagar. Efter 25 dagar vill du återställa till den senaste funktionsuppdateringen och du använder alternativet Avinstallera.  Enheter som installerade funktionsuppdateringen för mer än 20 dagar sedan kan inte avinstallera den, eftersom de bitar som krävs har tagits bort vid underhållet. Men enheter som installerade funktionsuppdateringen för upp till 19 dagar sedan kan avinstallera uppdateringen, om de checkar in för att få avinstallationskommandot innan avinstallationsperioden på 20 dagar har löpt ut.
 
-#### <a name="to-uninstall-the-latest-windows-10-update"></a>Avinstallera den senaste uppdateringen av Windows 10  
+Mer information om Windows Update-principer finns i [Uppdatera CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) i dokumentationen för Windows-klienthantering.
 
-1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Avinstallera**.  
-2. Välj bland de tillgängliga alternativen för att antingen avinstallera **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.  
-3. När du har utlöst avinstallationen för en uppdateringstyp kan du välja Avinstallera igen för att avinstallera den kvarvarande uppdateringstypen.  
+##### <a name="to-uninstall-the-latest-windows-10-update"></a>Avinstallera den senaste uppdateringen av Windows 10
 
-## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrera uppdateringsinställningar till Azure-portalen  
+1. När du ser översiktssidan för en pausad uppdateringsring väljer du **Avinstallera**.
+2. Välj bland de tillgängliga alternativen för att antingen avinstallera **funktions**- eller **kvalitets**uppdateringar och välj sedan **OK**.
+3. När du har utlöst avinstallationen för en uppdateringstyp kan du välja Avinstallera igen för att avinstallera den kvarvarande uppdateringstypen.
 
-Den klassiska Azure-portalen har också ett begränsat antal andra inställningar för Windows 10-uppdateringar i enhetens konfigurationsprofil. Om du har konfigurerat några av dessa inställningar när du migrerade till Azure Portal, rekommenderar vi starkt att utför följande åtgärder:  
+## <a name="windows-10-feature-updates"></a>Windows 10-funktionsuppdateringar
 
-1. Skapa uppdateringsringar för Windows 10 i Azure Portal med de inställningar som du behöver. Inställningen **Tillåt förhandsfunktioner** stöds inte i Azure-portalen eftersom den inte längre gäller för senaste Windows 10-versionerna. Du kan konfigurera de övriga tre inställningarna samt de andra uppdateringsinställningar för Windows 10 när du skapar uppdateringsringar.  
+*Den här funktionen tillhandahålls som en offentlig förhandsversion.*
 
-   > [!NOTE]  
-   > Uppdateringsinställningar för Windows 10 som har skapats i den klassiska portalen visas inte i Azure-portalen efter migreringen. Dessa inställningar tillämpas dock. Om du har migrerat någon av dessa inställningar och redigerat den migrerade principen från Azure Portal, tas inställningarna bort från principen.  
+Med *Windows 10-funktionsuppdateringar* kan du välja den Windows-funktionsversion som du vill att enheterna ska låsas vid, t.ex. Windows 10 version 1803 eller version 1809. Du kan ange funktionsnivån 1803 eller senare.
 
-2. Ta bort uppdateringsinställningarna i den klassiska portalen. När du har migrerat till Azure Portal och lagt till samma inställningar i en uppdateringsring, måste du ta bort inställningarna i den klassiska portalen för att undvika eventuella principkonflikter. Exempelvis uppstår det en konflikt när samma inställning konfigureras med olika värden. Det finns inte något enkelt sätt att veta detta, eftersom inställningen som konfigurerats i den klassiska portalen inte visas i Azure-portalen.  
+När en enhet tar emot en princip för Windows 10-funktionsuppdateringar:
+
+- Enheten kommer att uppdateras till den version av Windows som anges i principen. En enhet som redan kör en senare version av Windows finns kvar i den aktuella versionen. Om du fryser versionen förblir enhetens funktionsuppsättningen stabil under principens varaktighet.
+
+- Även om den installerade versionen av Windows förblir låst kan enheterna fortfarande ta emot och installera kvalitets- och säkerhetsuppdateringar för Windows-versionen så länge som det finns stöd för versionen i fråga. På så sätt ser du till att enheterna hålls aktuella och skyddade.
+
+- Till skillnad från om man använder *pausfunktionen* med en uppdateringsring – som upphör att gälla efter 35 dagar – förblir principen för Windows 10-funktionsuppdateringar fortfarande aktiv. Enheterna installerar inte någon ny Windows-version förrän du har ändrat eller tagit bort principen för Windows 10-funktionsuppdateringar. Om du redigerar principen för att ange en nyare version kan enheterna sedan installera funktionerna från just den Windows-versionen.
+
+> [!IMPORTANT]
+> När du distribuerar både en *Windows 10-funktionsuppdatering* och en princip för *Windows 10-uppdateringsring* på samma enhet granskar du uppdateringsringen för att kontrollera följande konfigurationer:
+>
+> - **Uppskjutningsperiod för funktionsuppdatering (dagar)** måste vara inställd på **0**
+> - Uppdateringsringens funktionsuppdateringar måste vara *aktiva*. De får inte pausas.
+
+Windows 10-funktionsuppdateringar stöds inte av Windows Autopilot.
+
+### <a name="create-and-assign-windows-10-feature-updates"></a>Skapa och tilldela Windows 10-funktionsuppdateringar
+
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Välj **Enheter** > **Windows** > **Windows 10-funktionsuppdateringar** > **Skapa**.
+
+3. Under **Grundläggande information** anger du ett namn samt en beskrivning (valfritt). Under **Funktionsuppdatering att distribuera** väljer du den Windows-version och den funktionsuppsättning som du vill använda och väljer **Nästa**.
+
+4. Under **Tilldelningar** väljer du **+ Välj grupper som ska inkluderas** och tilldelar sedan uppdateringsringen till en eller fler grupper. Fortsätt genom att välja **Nästa**.
+
+5. Under **Granska och skapa** granskar du inställningarna och väljer **Skapa** när du är redo att spara principen för Windows 10-funktionsuppdateringar.  
+
+### <a name="manage-windows-10-feature-updates"></a>Hantera Windows 10-funktionsuppdateringar
+
+I administrationscentret navigerar du till **Enheter** > **Windows** > **Windows 10-funktionsuppdateringar** och väljer den princip som du vill hantera. Principen öppnas i fönstret **Översikt**.
+
+I det här fönstret kan du göra följande:
+
+- Välj **Ta bort** för att ta bort principen från Intune och även ta bort den från enheterna.
+- Välj **Egenskaper** för att ändra distributionen.  I fönstret *Egenskaper* väljer du **Redigera** för att öppna *Distributionsinställningar eller Tilldelningar*, där du sedan kan ändra distributionen.
+- Välj **slutanvändarens uppdateringsstatus** om du vill visa information om principen.
+
+## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrera uppdateringsinställningar till Azure-portalen
+
+Den klassiska Azure-portalen har också ett begränsat antal andra inställningar för Windows 10-uppdateringar i enhetens konfigurationsprofil. Om du har konfigurerat några av dessa inställningar när du migrerade till Azure Portal, rekommenderar vi starkt att utför följande åtgärder:
+
+1. Skapa uppdateringsringar för Windows 10 i Azure Portal med de inställningar som du behöver. Inställningen **Tillåt förhandsfunktioner** stöds inte i Azure-portalen eftersom den inte längre gäller för senaste Windows 10-versionerna. Du kan konfigurera de övriga tre inställningarna samt de andra uppdateringsinställningar för Windows 10 när du skapar uppdateringsringar.
+
+   > [!NOTE]
+   > Uppdateringsinställningar för Windows 10 som har skapats i den klassiska portalen visas inte i Azure-portalen efter migreringen. Dessa inställningar tillämpas dock. Om du har migrerat någon av dessa inställningar och redigerat den migrerade principen från Azure Portal, tas inställningarna bort från principen.
+
+2. Ta bort uppdateringsinställningarna i den klassiska portalen. När du har migrerat till Azure Portal och lagt till samma inställningar i en uppdateringsring, måste du ta bort inställningarna i den klassiska portalen för att undvika eventuella principkonflikter. Exempelvis uppstår det en konflikt när samma inställning konfigureras med olika värden. Det finns inte något enkelt sätt att veta detta, eftersom inställningen som konfigurerats i den klassiska portalen inte visas i Azure-portalen.
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Windows Update-inställningar som stöds av Intune](../windows-update-settings.md)  
+[Windows Update-inställningar som stöds av Intune](../windows-update-settings.md)
 
 [Intune-efterlevnadsrapporter för uppdateringar](../windows-update-compliance-reports.md)
 
