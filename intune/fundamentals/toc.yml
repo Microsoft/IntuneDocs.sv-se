@@ -205,6 +205,10 @@
           href: use-docs.md
         - name: Få support
           href: get-support.md
+    - name: Rapporter
+      items:
+        - name: Intune-rapporter
+          href: reports.md
 - name: Referens
   items:
     - name: Felkoder och beskrivningar

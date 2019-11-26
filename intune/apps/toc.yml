@@ -133,6 +133,8 @@
               href: manage-microsoft-edge.md
             - name: Konfigurera Outlook
               href: app-configuration-policies-outlook.md
+            - name: Konfigurera S/MIME för Outlook
+              href: app-configuration-policies-outlook-smime.md
             - name: Konfigurera Google Chrome för Android
               href: apps-configure-chrome-android.md
         - name: Volyminköpta appar och böcker
