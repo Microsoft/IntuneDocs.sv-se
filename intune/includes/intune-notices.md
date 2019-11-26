@@ -7,14 +7,23 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b59419be9f381a1c646a7778b73ed172526f6ef6
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188408"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74309831"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="end-support-for-windows-phone-81--3544909--"></a>Support för Windows Phone 8.1 har upphört<!--3544909-->
+Microsofts mainstream-support för Windows Phone 8.1 upphörde under juli 2017 och utökad support upphörde under juni 2019. Företagsportalappen för Windows Phone 8.1 har varit i berett läge sedan oktober 2017. Support för Windows Phone 8.1 på Microsoft Intune upphör den 20 februari 2020.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Efter 20 februari 2020 får de här enheterna inga nya säkerhetsuppdateringar och du kommer inte att kunna registrera några nya enheter. Befintliga Windows Phone 8.1-enheter förblir registrerade (policy, appar, rapportering), men observera att felsökning av befintlig registrering inte kommer att stödas efter detta datum eftersom support för plattformen redan har upphört från många komponenter, till exempel certifikat från tredje part. Kompatibilitetstestning mellan Intune och Windows Phone 8.1 kommer att stoppas.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Du kan kontrollera din Intune-rapportering för att se vilka enheter eller användare som kan påverkas. Gå till Enheter > Alla enheter och filtrera efter operativsystem. Du kan lägga till fler kolumner för att hjälpa till att identifiera vilka i din organisation som har enheter som kör Windows Phone 8.1. Uppmana dina slutanvändare att uppgradera sina enheter till en operativsystemversion som stöds.
 
 ### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Uppdatera dina appskyddsprinciper (APP) för Outlook i Intune<!--2576686-->
 Om du tagit emot koden MC195618 i Meddelandecenter kan du behöva vidta åtgärder. Som tidigare angetts i produktvägledningen för Microsoft 365:s funktions-ID:n 56325 och 56326 kommer Intune och Outlook för iOS och Android att distribuera stöd för begränsning av känsliga data i e-postmeddelanden och kalenderpåminnelser. Som ett resultat av dessa förbättringar kommer Outlook för iOS och Android att ta bort stödet för flera appkonfigurationsnycklar för dataskydd som du för närvarande använder för att hantera meddelanden.
