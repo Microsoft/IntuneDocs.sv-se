@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143037"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390928"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -72,7 +72,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
   - **Underhållsperiod**: Installerar uppdateringar automatiskt under en daglig underhållsperiod som du anger i Intune. Installationen gör ett försök dagligen under 30 dagar och kan misslyckas vid otillräckligt diskutrymme eller för låga batterinivåer. Efter 30 dagar uppmanar Android användaren att installera. Det här fönstret används också för att installera uppdateringar för Play-appar. Använd det här alternativet för dedikerade enheter såsom helskärmslägen, eftersom förgrundsappar för dedikerade enheter med enskild app kan uppdateras.
 
 - **Meddelandefönster**: När **Inaktivera** har valts visas inte fönstermeddelanden, bland annat popup-fönster, inkommande samtal, utgående samtal, systemaviseringar och systemfel, på enheten. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa meddelanden.
-- **Hoppa över tips vid första start**: Välj **Aktivera** om du vill dölja eller hoppa över förslag från appar om att gå igenom självstudier eller läsa inledande tips när appen startar. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa de här förslagen när appen startar.
+- **Hoppa över första tipsen**: **Aktivera** gömmer eller hoppa över förslag från appar som går igenom självstudier eller tips när appen startar. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan visa de här förslagen när appen startar.
 
 ### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
@@ -150,13 +150,16 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
     Konfigurera även när det är aktiverat:
 
-    - **Ange anpassad skärmsläckare-bild**: Ange webb adressen till en anpassad bild. Ange till exempel:
+    - **Ange avbildning av anpassad skärmsläckare**: Ange webb adressen till en anpassad png-, jpg-, JPEG-, GIF-, BMP-, WebP-eller ICOimage. Ange till exempel:
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.html`
+      - `https://www.contoso.com/image.webp`
 
       Om du inte anger en URL används enhetens Standard avbildning, om det finns en standard avbildning.
+      
+      > [!TIP]
+      > Alla fil resurs-URL: er som kan omvandlas till en bitmapp stöds.
 
     - **Antal sekunder som enheten visar skärmsläckaren innan skärmen**stängs av: Välj hur länge enheten ska Visa skärmsläckaren. Ange ett värde mellan 0-9999999 sekunder. Standardvärdet är `0` sekunder. När värdet är tomt eller är inställt på noll (`0`) är skärmsläckaren aktiv tills en användare interagerar med enheten.
     - **Antal sekunder som enheten är inaktiv innan skärmsläckaren visas**: Välj hur länge enheten ska vara inaktiv innan skärmsläckaren visas. Ange ett värde mellan 1-9999999 sekunder. Standardvärdet är `30` sekunder. Du måste ange ett tal som är större än noll (`0`).
@@ -199,12 +202,14 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 ### <a name="users-and-accounts-settings"></a>Inställningar för användare och konton
 
-- **Lägg till nya användare**: Välj **Blockera** för att förhindra att användare lägger till nya användare. Varje användare har ett personligt utrymme på enheten för anpassade startskärmar, konton, appar och inställningar. **Inte konfigurerad** tillåter användare att lägga till andra användare på enheten.
-- **Borttagning av användare**: Välj **Blockera** för att förhindra att användare tar bort användare. **Inte konfigurerad** låter användare att ta bort andra användare på enheten.
-- **Kontoändringar**: Välj **Blockera** för att förhindra att användare ändrar konton. **Inte konfigurerad** låter användare att uppdatera användarkonton på enheten.
+- **Lägg till nya användare**: Välj **Blockera** för att förhindra att användare lägger till nya användare. Varje användare har ett personligt utrymme på enheten för anpassade startskärmar, konton, appar och inställningar. **Inte konfigurerad** (standard) tillåter användare att lägga till andra användare på enheten.
+- **Borttagning av användare**: Välj **Blockera** för att förhindra att användare tar bort användare. **Inte konfigurerad** (standard) tillåter användare att ta bort andra användare från enheten.
+- **Konto ändringar** (endast dedikerade enheter): Välj **blockera** för att förhindra att användare ändrar konton. **Inte konfigurerad** (standard) låter användare att uppdatera användarkonton på enheten.
 
   > [!NOTE]
   > Den här inställningen gäller inte för enhets ägarens (fullständigt hanterade) enheter. Om du konfigurerar den här inställningen ignoreras inställningen och har ingen effekt.
+
+- **Personliga Google-konton**: **blockera** förhindrar att användare lägger till sina personliga Google-konton på enheten. **Inte konfigurerad** (standard) tillåter användare att lägga till sitt personliga Google-konto.
 
 ### <a name="applications"></a>Program
 
@@ -254,7 +259,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
     - **Portnummer**: Ange TCP-portnumret som används av proxyservern. Ange till exempel `8080`.
     - **Exkluderade värdar**: Ange en lista över värdnamn eller IP-adresser som inte använder proxyn. Den här listan kan innehålla en asterisk (`*`) som jokertecken och flera värdar avgränsade med semikolon (`;`) utan blank steg. Ange till exempel `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
-  - **Automatisk proxykonfiguration**: ange **PAC-URL** : en för ett skript för automatisk konfiguration av proxy. Ange till exempel `https://proxy.contoso.com/proxy.pac`.
+  - Autokonfiguration av proxy: ange **PAC-URL** : en för skript för **Automatisk**proxykonfiguration. Ange till exempel `https://proxy.contoso.com/proxy.pac`.
 
     Mer information om PAC-filer finns i [PAC-fil (Proxy Auto-Configuration](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) ) (öppnar en webbplats som inte kommer från Microsoft).
 
@@ -314,7 +319,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   - **Minst alfanumeriskt med symboler**
 - **Förhindra återanvändning av tidigare lösenord**: Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas (från **1**-**24**).
 - **Upplåsning med fingeravtryck**: Välj **Blockera** för att förhindra slutanvändare från att använda enhetens fingeravtrycksläsare för att låsa upp den. **Inte konfigurerad** låter användare låsa upp enheter med ett fingeravtryck i arbetsprofilen.
-- **Smart Lock och andra betrodda agenter**: Välj **Blockera** för att förhindra Smart Lock och andra betrodda agenter från att justera låsskärmsinställningar på kompatibla enheter. Med den här funktionen, ibland även kallad förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten finns på en betrodd plats. Du kan exempelvis kringgå lösenordet för arbetsprofilen när enheten är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg. Använd den här inställningen för att förhindra att användare konfigurerar Smart Lock.
+- **Smart Lock och andra betrodda agenter**: Välj **Blockera** för att förhindra Smart Lock och andra betrodda agenter från att justera låsskärmsinställningar på kompatibla enheter. Med den här funktionen, även kallad förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten finns på en betrodd plats. Du kan exempelvis kringgå lösenordet för arbetsprofilen när enheten är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg. Använd den här inställningen för att förhindra att användare konfigurerar Smart Lock.
 
 ### <a name="device-password"></a>Enhetslösenord
 
@@ -335,14 +340,14 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
   - **Minst alfanumeriskt med symboler**
 - **Förhindra återanvändning av tidigare lösenord**: Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas (från **1**-**24**).
 - **Upplåsning med fingeravtryck**: Välj **Blockera** för att förhindra slutanvändare från att använda enhetens fingeravtrycksläsare för att låsa upp den. **Inte konfigurerad** låter användare låsa upp enheten med ett fingeravtryck.
-- **Smart Lock och andra betrodda agenter**: Välj **Blockera** för att förhindra Smart Lock och andra betrodda agenter från att justera låsskärmsinställningar på kompatibla enheter. Med den här funktionen, ibland även kallad förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten finns på en betrodd plats. Du kan exempelvis kringgå lösenordet för arbetsprofilen när enheten är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg. Använd den här inställningen för att förhindra att användare konfigurerar Smart Lock.
+- **Smart Lock och andra betrodda agenter**: Välj **Blockera** för att förhindra Smart Lock och andra betrodda agenter från att justera låsskärmsinställningar på kompatibla enheter. Med den här funktionen, även kallad förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten finns på en betrodd plats. Du kan exempelvis kringgå lösenordet för arbetsprofilen när enheten är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg. Använd den här inställningen för att förhindra att användare konfigurerar Smart Lock.
 
 ### <a name="system-security"></a>Systemsäkerhet
 
 - **Hotgenomsökning för appar**: **Kräv** ser till att inställningen för **Verifiera appar** är aktiverad för arbetsprofiler och personliga profiler.
 
    > [!Note]
-   > Den här inställningen fungerar endast för Android O-enheter och senare.
+   > Den här inställningen fungerar endast för Android 8 (Oreo)-enheter och senare.
 
 - **Förhindra att appar installeras från okända källor i den personliga profilen**: efter design kan Android Enterprise Work Profile-enheter inte installera appar från andra källor än den Play Store. Av typ är arbets profil enheter avsedda att vara dubbla profiler:
 

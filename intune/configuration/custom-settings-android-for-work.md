@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/01/2019
+ms.date: 11/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d85793dcf0ee6fa0186147606c9fd695a268e529
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: bd2ab7ad8eb155719695bede1f539d5c264d455b
+ms.sourcegitcommit: eb2e420b304c7da9d3be5ef49a676cba66766d2b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506973"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74319819"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Använda anpassade inställningar för Android Enterprise-enheter i Microsoft Intune
 
@@ -30,11 +30,11 @@ Med Microsoft Intune kan du lägga till eller skapa anpassade inställningar fö
 
 Anpassade profiler för Android Enterprise använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) för att styra funktioner på Android Enterprise-enheter. De här inställningarna används vanligtvis av tillverkare av mobila enheter för att styra dessa funktioner.
 
-Intune stöder ett begränsat antal anpassade Android Enterprise-profiler, inklusive:
+Intune har stöd för följande anpassade Android Enterprise-profiler:
 
 - ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [skapa en Wi-Fi-profil med en i förväg delad nyckel](wi-fi-profile-shared-key.md) har några exempel.
 - ./Vendor/MSFT/VPN/Profile/Name/PackageList: [skapa en VPN-profil per app](android-pulse-secure-per-app-vpn.md) innehåller några exempel.
-- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: se [exemplet](#example) (i den här artikeln).
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: se [exemplet](#example) i den här artikeln. Den här inställningen är också tillgänglig i användar gränssnittet. Mer information finns i [Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner](device-restrictions-android-for-work.md).
 
 Om du behöver ytterligare inställningar, se [OEMConfig för Android Enterprise](android-oem-configuration-overview.md).
 
