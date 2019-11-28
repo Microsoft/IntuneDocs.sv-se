@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99e89db1bbef3d08cd6709b2600c4a684ac618f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498606"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540750"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -94,35 +94,23 @@ Informationen i tabellen nedan kan hjälpa dig att förstå avsikten som uppstå
 | Avsikt för grupp 1 | Avsikt för grupp 2 | Resulterande avsikt |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Nödvändig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
-|Nödvändig för användare|Inte tillgänglig för användare|Obligatoriskt|
 |Nödvändig för användare|Avinstalleras för användare|Obligatoriskt|
-|Tillgänglig för användare|Inte tillgänglig för användare|Inte tillgängligt|
 |Tillgänglig för användare|Avinstallation av användare|Avinstallera|
-|Inte tillgänglig för användare|Avinstalleras för användare|Avinstallera
 |Nödvändig för användare|Nödvändig för enhet|Båda finns, hanteras som nödvändig av Intune
 |Nödvändig för användare|Avinstalleras för enhet|Båda finns, löses som nödvändig av Intune
 |Tillgänglig för användare|Nödvändig för enhet|Båda finns, matchas som nödvändig av Intune (nödvändig och tillgänglig)
 |Tillgänglig för användare|Avinstalleras för enhet|Båda finns, löses som tillgänglig av Intune.<br><br>Appen visas i företagsportalen.<br><br>Appen avinstalleras om den redan har installerats (som nödvändig app med föregående avsikt).<br><br>Om användaren väljer **Installera i företagsportalen** installeras appen och avinstallationen åsidosätts.|
-|Inte tillgänglig för användare|Nödvändig för enhet|Obligatoriskt|
-|Inte tillgänglig för användare|Avinstalleras för enhet|Avinstallera|
 |Avinstalleras för användare|Nödvändig för enhet|Båda finns, löses som nödvändig av Intune|
 |Avinstalleras för användare|Avinstalleras för enhet|Båda finns, löses som tillgänglig av Intune|
 |Nödvändig för enhet|Avinstalleras för enhet|Obligatoriskt|
 |Nödvändig och tillgänglig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
 |Nödvändig och tillgänglig för användare|Avinstalleras för användare|Nödvändig och Tillgänglig|
-|Nödvändig och tillgänglig för användare|Inte tillgänglig för användare|Nödvändig och Tillgänglig|
 |Nödvändig och tillgänglig för användare|Nödvändig för enhet|Båda finns, nödvändig och tillgänglig
-|Nödvändig och tillgänglig för användare|Inte tillgänglig för enhet|Nödvändig och Tillgänglig|
 |Nödvändig och tillgänglig för användare|Avinstalleras för enhet|Båda finns, matchas som nödvändig av Intune (nödvändig och tillgänglig)
-|Inte tillgänglig för användare|Inte tillgänglig för enhet|Inte tillgängligt|
-|Tillgänglig för användare|Inte tillgänglig för enhet|Tillgänglig|
-|Nödvändig för användare|Inte tillgänglig för enhet|Obligatoriskt|
 |Tillgänglig för användare utan registrering|Nödvändig och tillgänglig för användare|Nödvändig och Tillgänglig
 |Tillgänglig för användare utan registrering|Nödvändig för användare|Obligatoriskt
-|Tillgänglig för användare utan registrering|Inte tillgänglig för användare|Inte tillgängligt
 |Tillgänglig för användare utan registrering|Tillgänglig för användare|Tillgänglig|
 |Tillgänglig för användare utan registrering|Nödvändig för enhet|Nödvändig och tillgänglig utan registrering|
-|Tillgänglig för användare utan registrering|Inte tillgänglig för enhet|Tillgänglig utan registrering|
 |Tillgänglig för användare utan registrering|Avinstalleras för enhet|Avinstalleras och tillgänglig utan registrering.<br><br>Avinstallationsavsikten åsidosätts inte om användaren inte har installerat appen från företagsportalen.<br><br>Om användaren installerar appen från företagsportalen prioriteras installation framför avinstallation.|
 
 > [!NOTE]

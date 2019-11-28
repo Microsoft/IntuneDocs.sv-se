@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e0cef06f2f939c996fe59d5b6acb10560125718
-ms.sourcegitcommit: e7798c9faa7b7471d0994de2dcd94c259ee8874c
+ms.openlocfilehash: 752b4ae8440df0ebefbabbf7e5ccb48fed684827
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73931017"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540820"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Skyddade appar i Microsoft Intune  
 
@@ -72,7 +72,6 @@ Följande tabeller innehåller information om partners som stöds och Microsoft-
 | **Visningsprogrammet Microsoft Visio**<p><img alt="Microsoft app - Microsoft Visio Viewer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-visio-viewer.png" width="100"> | Du kan visa och interagera med Visio-diagram på iPhone utan kostnad. Logga in med ditt Microsoft-konto eller öppna en Visio-bilaga från din e-post och få de fantastiska Visio-diagrammen på alla iPhone som körs med iOS 9.0 eller senare. Du kan även dela diagrammen med andra som sedan kan se Visio-diagrammen på sin iPhone eller i en webbläsare, även om de inte har Visio installerat på sin Windows-dator.| [iOS Store-länk](https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983?mt=8) |  
 | **Microsoft Word**<p><img alt="Microsoft app - Microsoft Word icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-word.png" width="100"> | Få Word-dokument att se bättre ut än någonsin på din surfplatta och telefon. Känn dig säker att när du redigerar eller skapar dokument kommer de se ut exakt så som du vill på datorer, Mac-datorer, surfplattor och telefoner. Var igång på nolltid med det välbekanta utseendet och känslan hos Office tillsammans med en intuitiv pekupplevelse.<p><p>Den här appen kan användas som en app med flera identiteter för Android och iOS. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.microsoft.office.word),<br>[iOS Store-länk](https://itunes.apple.com/us/app/microsoft-word/id586447913?mt=8) |  
 | **Microsoft arbetsmappar**<p><img alt="Microsoft app - Microsoft Work Folders icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-work-folders.png" width="100"> | Tillåt enskilda anställda säker åtkomst till sina filer från både inuti och utanför företagsmiljön med hjälp av funktionen arbetsmappar i Windows Server. | [iOS Store-länk](https://itunes.apple.com/us/app/work-folders/id950878067?mt=8) | 
-| **Microsoft Whiteboard**<p><img alt="Microsoft app - Microsoft Whiteboard icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-whiteboard.png" width="100"> | Microsoft Whiteboard-appen innehåller en intelligent arbetsyta med frihandsfunktion där team kan skapa idéer och innehåll och samarbeta visuellt via molnet.  Den förbättrar teamarbetet genom att ge alla teammedlemmar möjligheten att redigera och kommentera direkt på arbetsytan i realtid, oavsett var de befinner sig. Dessutom förvaras allt ditt arbete säkert i molnet, där du kan återuppta det från valfri enhet. | [iOS Store-länk](https://apps.apple.com/us/app/microsoft-whiteboard/id1352499399) |  
 | **Yammer**<p><img alt="Microsoft app - Yammer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-yammer.png" width="100"> | Bryt ned organisationsväggarna och underlätta teamsamarbete med Yammer. Anslut till rätt person i organisationen, dela och sök efter information över teamen och organisera runt projekt och idéer så att du får mer gjort. | [Google Play-länk](https://play.google.com/store/apps/details?id=com.yammer.v1),<br>[iOS Store-länk](https://itunes.apple.com/us/app/yammer/id289559439?mt=8) |  
 
 ## <a name="partner-apps"></a>Partnerprogram 
