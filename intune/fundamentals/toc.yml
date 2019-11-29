@@ -16,6 +16,8 @@
           href: whats-new-app-ui.md
         - name: Funktioner under utveckling
           href: in-development.md
+        - name: Viktiga meddelanden
+          href: 'whats-new.md#notices'
 - name: Snabbstarter
   items:
     - name: Prova Intune utan kostnad

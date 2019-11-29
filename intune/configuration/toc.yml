@@ -14,7 +14,11 @@
     - name: Skapa en profil
       href: device-profile-create.md
     - name: Administrativa mallar i Windows
-      href: administrative-templates-windows.md
+      items:
+        - name: Administrativa mallar i Windows
+          href: administrative-templates-windows.md
+        - name: Uppdatera Office med hjälp av administrativa mallar
+          href: administrative-templates-update-office.md
     - name: Enhetsfunktioner i iOS och macOS
       href: device-features-configure.md
     - name: Begränsa enhetsinställningar och funktioner
@@ -47,6 +51,8 @@
       items:
         - name: Wi-Fi med en i förväg delad nyckel
           href: wi-fi-profile-shared-key.md
+        - name: Felsöka Wi-Fi
+          href: troubleshoot-wi-fi-profiles.md
     - name: Tillägg på macOS
       href: kernel-extensions-overview-macos.md
     - name: Education – appen Gör ett prov
