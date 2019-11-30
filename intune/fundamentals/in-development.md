@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796439581ca0ae91e788a91ab0bc2ef8f6019626
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199344"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540728"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>Under utveckling för Microsoft Intune – december 2019
 
@@ -181,34 +181,12 @@ Gäller för:
 <!--## Device enrollment-->
 
 <!-- ***********************************************-->
-## <a name="device-management"></a>Enhetshantering
+<!--## Device management-->
 
-
-
-### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Redigera enhets namn värde för autopilot-enheter<!-- 2640074  -->
-Du kan redigera enhets namn svärdet för Azure AD-anslutna autopilot-enheter. Det gör du genom att gå till **Intune** > **enhets registrering** > **Windows-registrering** > **Windows autopilot** > **enheter** > Välj enhet > ändra värdet för **enhets namn** i den högra rutan > **Spara**.
-
-### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Redigera gruppens märkes värde för autopilot-enheter<!-- 4816775 -->
-Du kan redigera **grupp märkes** värdet för autopilot-enheter:
-
-1. Välj **Intune** > **enhets registrering** > **Windows-registrering** > **Windows autopilot** - > **enheter**.
-1. Välj enhet.
-1. Ändra värdet för **grupp tag gen** i rutan till höger.
-1. Välj **Spara**.
-
-### <a name="target-macos-user-groups-to-require-jamf-management---4061739---"></a>Mål användar grupper för macOS för att kräva JAMF-hantering<!-- 4061739 -->
-Du kan rikta in dig på specifika grupper av användare så att de kräver att deras macOS-enheter hanteras av JAMF. Den här anpassningen gör att du kan använda JAMF-kompatibilitet för en delmängd av macOS-enheter medan andra enheter fortsätter att hanteras av Intune. Med mål kan du också gradvis migrera användarnas enheter från ett MDM-system (Mobile Device Management) till en annan.
 
 <!-- ***********************************************-->
-## <a name="intune-apps"></a>Intune-appar
-
-### <a name="improved-macos-enrollment-experience-in-company-portal---5074349----"></a>Förbättrad användning av macOS-registrering i Företagsportal<!-- 5074349  -->
-Företagsportal för macOS-registreringen kommer att ha en enklare registrerings process som kommer att justeras mer nära med Företagsportal för registrerings upplevelsen för iOS. Enhets användare ser:  
-
-* Ett slimmat användar gränssnitt.  
-* En förbättrad registrerings check lista.  
-* Tydligare instruktioner för hur du registrerar sina enheter.  
-* Förbättrade fel söknings alternativ.  
+<!--## Intune apps-->
+ 
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Övervakning och fel sökning
@@ -217,10 +195,8 @@ Företagsportal för macOS-registreringen kommer att ha en enklare registrerings
 En ny Centraliserad gransknings loggs upplevelse samlar in gransknings loggar för alla kategorier på en sida. You'l kan filtrera loggarna för att hämta de data du söker. Om du vill se gransknings loggarna går du till **klient administration** > **gransknings loggar**. Mer information finns i [kommande ändring av gransknings loggar i Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Upcoming-change-to-Audit-logs-in-Intune/ba-p/1015858).
 
 <!-- ***********************************************-->
-## <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
+<!--## Role-based access control-->
 
-### <a name="duplicate-custom-or-built-in-roles---1081938---"></a>Duplicera anpassade eller inbyggda roller<!-- 1081938 -->
-Du kommer att kunna kopiera inbyggda och anpassade roller. Det gör du genom att gå till **Intune** > **roller** > **alla roller** > Välj en roll i listan > **dubblett**. Se till att ange ett nytt namn som är unikt.
 
 <!-- ***********************************************-->
 
