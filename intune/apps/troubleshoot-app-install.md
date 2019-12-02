@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1067c8ef23add50c921217b9e4b115346be2951
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4783d24e3fc25583a61f88c2e7375d4eed673186
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497041"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563489"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
@@ -32,8 +32,8 @@ På Microsoft Intune MDM-hanterade enheter kan ibland appinstallationer misslyck
 
 Intune tillhandahåller appfelsökningsinformation baserad på de appar som installerats på en viss användares enhet.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Felsök** i fönstret **Intune**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Välj **Felsök + support**.
 4. Klicka på **Välj användare** om du vill välja en användare att felsöka. Fönstret **Välj användare** visas.
 5. Välj en användare genom att skriva namnet eller e-postadressen. Klicka på **Nästa** längst ner i fönstret. Felsökningsinformationen för användaren visas i fönstret **Felsökning**. 
 6. Välj den enhet som du vill felsöka i listan **Enheter**.
@@ -57,12 +57,12 @@ Följande åtgärder bör beaktas när du har problem med att installera appar:
 - Om appen inte visas i Företagsportal, se till att appen distribueras med **tillgänglig** avsikt och att användaren får åtkomst till företagsportal med den enhets typ som stöds av appen.
 - För Windows BYOD-enheter måste användaren lägga till ett arbets konto till enheten.
 - Kontrol lera om användaren är över enhets gränsen för AAD:
-  1. Navigera till [Azure Active Directory enhets inställningar](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  1. Navigera till [Azure Active Directory enhets inställningar](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
   2. Anteckna det värde som har angetts för **maximalt antal enheter per användare**.
-  3. Navigera till [Azure Active Directory användare](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  3. Navigera till [Azure Active Directory användare](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Välj den berörda användaren och klicka på **enheter**.
   5. Om användaren är över angiven gräns tar du bort eventuella inaktuella poster som inte längre behövs.
-- För iOS DEP-enheter kontrollerar du att användaren är listad som **registrerad av användaren** i Intune-bladet översikt. Om det visar NA, distribuerar du en konfigurations princip för Intune-företagsportal. Mer information finns i [Konfigurera appen Företagsportal](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- För iOS DEP-enheter kontrollerar du att användaren är listad som **registrerad av användaren** i översikts fönstret för Intune-enheter. Om det visar NA, distribuerar du en konfigurations princip för Intune-företagsportal. Mer information finns i [Konfigurera appen Företagsportal](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Felsökning av Win32-appinstallationen
 
@@ -75,7 +75,7 @@ Välj Win32-appen som distribuerats med Intune-hanteringstillägget. Du kan väl
 
 Om du vill samla in installationsloggarna för Win32-appen följer du stegen i avsnittet med [information om felsökning av appar](troubleshoot-app-install.md#app-troubleshooting-details). Fortsätt sedan med följande steg:
 
-1. Klicka på alternativet **Samla in loggar** på bladet **Installationsinformation**.
+1. Klicka på alternativet **Samla in loggar** i fönstret **Installationsinformation**.
 
     <image alt="Win32 app installation details - Collect log option" src="./media/troubleshoot-app-install/troubleshoot-app-install-04.png" width="500" />
 
