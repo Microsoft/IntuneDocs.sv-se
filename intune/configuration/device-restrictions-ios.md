@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2019
+ms.date: 11/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 751ddfae96ebcd190d4d9ce2ca93bfccba972df5
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 6fde277e16043662420864adcc0458e3dccad308
+ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390862"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465650"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -244,6 +244,10 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 ### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
 
 - **Visa företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av företagsdokument i ohanterade appar. **Inte konfigurerad** (standard) tillåter visning av företagsdokument i vilken app som helst. Exempelvis vill du kanske förhindra användare från att spara filer från OneDrive-appen till Dropbox. Konfigurera den här inställningen som **Blockera**. När enheten har hämtat principen (t.ex. efter en omstart) kommer det inte längre att vara tillåtet att spara.
+
+
+  > [!NOTE]
+  > När den här inställningen blockeras blockeras även tredjeparts tangent bord som är installerade från App Store.
 
   - **Tillåt ohanterade appar att läsa från hanterade kontakt konton**: när den är inställd på **Tillåt**kan ohanterade appar, t. ex. den inbyggda appen iOS-kontakter, läsa och få åtkomst till kontakt information från hanterade appar, inklusive Outlook Mobile-appen. **Inte konfigurerad** (standard) förhindrar läsning, inklusive ta bort dubbletter, från den inbyggda appen Kontakter på enheter.  
   
