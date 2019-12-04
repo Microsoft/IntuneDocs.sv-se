@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 918468bf8948ce54082f3fccc0325db07e116966
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713196"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564387"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -84,7 +84,7 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|Windows, iOS, Android|
 |Registreringsdatum|Datum och tid då enheten registrerades i Intune.|Windows, iOS, Android|
 |Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|Windows, iOS, Android|
-|Kod för att kringgå aktiveringslås|Koden som kan användas för att förbikoppla aktiveringslåset.|Windows, iOS, Android|
+|Kod för att kringgå aktiveringslås|Koden som kan användas för att förbikoppla aktiveringslåset.|iOS|
 |Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|Windows, iOS, Android|
 |Intune-registrerad|Om inställningen är **Ja** är enheten registrerad i Intune|Windows, iOS, Android|
 |Efterlevnad|Enhetens kompatibilitetstillstånd.|Windows, iOS, Android|
