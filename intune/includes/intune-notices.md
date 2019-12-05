@@ -7,14 +7,29 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.openlocfilehash: 8db05399c4a880d72d24cde885976309bf9a4fa7
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309831"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74549515"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Uppdaterad supportinstruktion för mobilappen "Adobe Acrobat Reader för Intune"<!--5746776-->
+I MC188653 i slutet på augusti meddelade vi att Adobe Acrobat Reader för Intune-mobilappen når slutet på sin livslängd den 1 december 2019 och att Adobe planerar att stödja Intunes programskyddsprinciper i sin huvudsakliga app i Acrobat Reader. Sedan dess har vi fått feedback från kunder om att de behövde mer tid för att fortsätta att låta IT-administratörerna skapa mål och slutanvändare börja använda Adobe Acrobat Reader för Intune. Med tanke på den stora användningen av Adobe Acrobat Reader för Intune på slutanvändarnas enheter och dess betydelse i företagsscenarier vill vi se till att alla erfarenheter uppfyller din organisations behov av skydd av appar. 
+
+Även om vi fortfarande rekommenderar att du använder den allmänna Acrobat Reader-mobilappen för dina principer eftersom Acrobat Reader-mobilappen har stöd för skyddsprinciper för appar och har integrerat Intune SDK, fortsätter vi att stödja Adobe Acrobat Reader för Intune-appen till och med den 31 mars 2020. 
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Du får det här meddelandet eftersom rapporten visar att en eller flera principer i din organisation är riktade mot Adobe Acrobat Reader för Intune-programmet och/eller att du har fått vårt föregående meddelande om att appen har nått slutet på sin livslängd. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Meddela slutanvändare och supportavdelningen om den här ändringen. Du kan använda funktionen [Supportinformation för företagsportalen](../apps/company-portal-app.md#support-information) för att upprätta en kanal för Intune-relaterade frågor.
+
+#### <a name="additional-information"></a>Ytterligare information
+https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
+
 
 ### <a name="end-support-for-windows-phone-81--3544909--"></a>Support för Windows Phone 8.1 har upphört<!--3544909-->
 Microsofts mainstream-support för Windows Phone 8.1 upphörde under juli 2017 och utökad support upphörde under juni 2019. Företagsportalappen för Windows Phone 8.1 har varit i berett läge sedan oktober 2017. Support för Windows Phone 8.1 på Microsoft Intune upphör den 20 februari 2020.

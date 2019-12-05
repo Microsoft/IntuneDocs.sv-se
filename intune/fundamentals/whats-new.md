@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71045489ac703860073a3023e6d6170778117d33
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 7ad5c26770537ce6a285989f8ca3804277616419
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199296"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540779"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -53,18 +53,93 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 ### Role-based access control
 -->  
 
-## <a name="week-of-november-18-2019"></a>Veckan som börjar den 18 november 2019
+<!-- ########################## -->
+## <a name="week-of-november-18-2019-1911-service-release"></a>Veckan den 18 november 2019 (1911 Service Release)
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Apphantering
+
+#### <a name="smime-support-with-microsoft-outlook-for-ios---2669398-idready---"></a>S/MIME-stöd med Microsoft Outlook för iOS<!-- 2669398 idready -->
+Intune stöder leverans av S/MIME-signering och -krypteringscertifikat som kan användas med Outlook för iOS på iOS-enheter. Mer information finns i [konfigurera S/MIME för Outlook för iOS](~/apps/app-configuration-policies-outlook-smime.md).
+
+#### <a name="ui-update-when-selectively-wiping-app-data---4102028---"></a>Uppdaterat gränssnitt för selektiv rensning av appdata<!-- 4102028 -->
+Gränssnittet för att selektivt rensa appdata i Intune har uppdaterats. Gränssnittsändringarna omfattar:
+- En förenklad upplevelse med hjälp av ett format i guidestil som komprimerats till ett enskilt blad.
+- En uppdatering av skapandeflödet så att tilldelningar inkluderas.
+- En sammanfattningssida för alla saker som anges vid visning av egenskaper, innan en ny princip skapas eller när en egenskap redigeras. Vid redigering av egenskaper visar sammanfattningen dessutom bara en lista över objekt från kategorin med de egenskaper som redigeras.
+
+Mer information finns i [Hur du rensar endast företagsdata från Intune-hanterade appar](~/apps/apps-selective-wipe.md).
+
+#### <a name="ios-and-ipados-third-party-keyboard-support---4922950---"></a>Stöd för tangentbord från tredje part för iOS och iPad<!-- 4922950 -->
+I mars 2019 informerade vi om att supporten för iOS-appens skyddsprincipinställning "tangentbord från tredje part" upphör. Funktionen återkommer till Intune med stöd för både iOS och iPad. Om du vill aktivera den här inställningen går du till fliken **Dataskydds** i en ny eller befintlig iOS/iPad-appskyddsprincip och hittar inställningen **Tredje parts tangentbord** under **Dataöverföring**.
+
+Beteendet för den här inställningen skiljer sig något från föregående implementering. I appar med flera identiteter som använder SDK-version 12.0.16 och senare som omfattas av skyddsprinciper för appar där den här inställningen är konfigurerad som **Blockera** kan slutanvändare inte välja att använda tangentbord från tredje part i både organisationens och personliga konton. Appar som använder SDK-versioner 12.0.12 och tidigare kommer att fortsätta att följa det beteende som dokumenteras i blogginlägget [Känt problem: Tangentbord från tredje part blockeras inte i iOS för personliga konton](https://aka.ms/3rdparty_iOS_Intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Enhetskonfiguration
 
-#### <a name="windows-10-feature-updates-public-preview---2384877---"></a>Funktionsuppdateringar för Windows 10 (offentlig förhandsversion)<!-- 2384877 -->
+#### <a name="target-macos-user-groups-to-require-jamf-management---4061739----"></a>Välj att användargrupper med macOS ska kräva JAMF-hantering<!-- 4061739  --> 
+Du kan rikta in specifika grupper av användare vars [macOS-enheter hanteras av JAMF](../protect/conditional-access-integrate-jamf.md). På så sätt kan du använda JAMF-efterlevnadsintegreringen för en delmängd av macOS-enheter medan andra enheter hanteras av Intune. Om du redan använder JAMF-integreringen är omfattas alla användare av integreringen som standard.
 
+#### <a name="new-exchange-activesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824-----"></a>Nya Exchange ActiveSync-inställningar när du skapar en profil för e-postenhetskonfiguration på iOS-enheter<!-- 4892824   --> 
+På iOS/iPad-enheter kan du konfigurera e-postanslutningen i en enhetskonfigurationsprofil (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS/iPad** för plattform > **E-post** för profiltyp). 
+
+Det finns nya Exchange ActiveSync-inställningar, inklusive:
+- **Exchange-data att synkronisera**: Välj vilka Exchange-tjänster som ska synkroniseras (eller blockera synkronisering) för kalender, kontakter, påminnelser, anteckningar och e-post.
+- **Tillåt användare att ändra inställningar för synkronisering**: Tillåt (eller blockera) användare att ändra synkroniseringsinställningarna för dessa tjänster på sina enheter.  
+
+Mer information om den här inställningen finns i [E-postprofilinställningar för iOS-enheter i Intune](../configuration/email-settings-ios.md). 
+
+Gäller för:
+- iOS 13.0 och senare
+- iPadOS 13.0 och senare
+
+#### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-fully-managed-and-dedicated-devices---5353228-----"></a>Hindra användare från att lägga till personliga Google-konton i fullständigt hanterade och dedikerade Android Enterprise-enheter<!-- 5353228   -->
+På fullständigt hanterade och dedikerade Android Enterprise-enheter finns det en ny inställning som hindrar användare från att skapa personliga Google-konton (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Endast enhetens ägare > Enhetsbegränsningar** för profiltypen > **Användar- och kontoinställningar** > **Personliga Google-konton**).
+
+Om du vill se alla inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-android-for-work.md).
+
+Gäller för:
+- Fullständigt hanterade Android Enterprise-enheter
+- Dedikerade Android Enterprise-enheter
+
+#### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-iosipados-device-restrictions-profile----5468501-----"></a>Loggning på serversidan för Siri-kommandon tas bort från enhetsbegränsningsprofilen för iOS/iPadOS <!-- 5468501   -->
+På iOS- och iPad-enheter tas inställningen **Loggning på serversidan för Siri-kommandon** bort från administratörskonsolen för Microsoft Endpoint Manager (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS/iPadOS** för plattform > **Enhetsbegränsningar** för profiltyp > **Inbyggda appar**). 
+
+Den här inställningen har ingen påverkan på enheter. Om du vill ta bort inställningen från befintliga profiler öppnar du profilen, gör eventuella ändringar och sparar sedan profilen. Profilen uppdateras och inställningen tas bort från enheterna.
+
+Om du vill se alla de inställningar som du kan konfigurera går du till [Inställningar för iOS- och IPadOS-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-ios.md).
+
+Gäller för:
+- iOS/iPadOS
+
+#### <a name="windows-10-feature-updates-public-preview---2384877---"></a>Funktionsuppdateringar för Windows 10 (offentlig förhandsversion)<!-- 2384877 -->
 Nu kan du distribuera [Windows 10-funktionsuppdateringar](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) till Windows 10-enheter. Windows 10-funktionsuppdateringar är en ny programuppdateringsprincip som gör det möjligt att fastställa den version av Windows 10 som du vill installera på enheterna och sedan stanna på. Du kan använda den här nya principtypen tillsammans med dina befintliga Windows 10-uppdateringsringar.
 
 Enheter som tar emot en princip för Windows 10-funktionsuppdateringar får den fastställda versionen av Windows installerad. Enheterna stannar sedan kvar på den fastställda versionen tills principen redigeras eller tas bort. Enheter med en senare version av Windows stannar kvar på sina respektive aktuella versioner. Enheter som stannar kvar på en fastställd version av Windows kan fortfarande installera kvalitets- och säkerhetsuppdateringar för den versionen via Windows 10-uppdateringsringarna.
 
 Den här nya principtypen börjar distribueras till klientorganisationer nu i veckan. Om principen inte är tillgänglig för din klientorganisation än, kommer den att bli det inom kort.
 
+#### <a name="add-and-change-key-information-in-plist-files-for-macos-applications---4736278---"></a>Lägga till och ändra nyckelinformation i PLIST-filer för macOS-program<!-- 4736278 -->
+På macOS-enheter kan du nu skapa en enhetskonfigurationsprofil som laddar upp en fil med egenskapslistan (. plist) som är associerad med en app eller med enheten (**Enheter** > **Konfigurationsprofiler** > **Skapa profil** > **macOS** för plattform > **Inställningsfil** för profiltyp).
+
+Endast vissa appar har stöd för hanterade inställningar och de här apparna kanske inte tillåter att du hanterar alla inställningar. Se till att ladda upp en fil med en egenskapslista som konfigurerar enhetskanalinställningarna och inte användarkanalinställningarna.
+
+Mer information om den här funktionen finns i [Lägga till en fil med en egenskapslista i macOS-enheter med Microsoft Intune](../configuration/preference-file-settings-macos.md).
+
+Gäller för:
+- macOS-enheter som kör 10.7 och senare
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Enhetshantering
+
+#### <a name="edit-device-name-value-for-autopilot-devices---2640074---"></a>Redigera enhetsnamnvärde för Autopilot-enheter<!-- 2640074 -->
+Du kan redigera enhetsnamnsvärdet för Azure AD-anslutna Autopilot-enheter.  Mer information finns i [Redigera attribut för Autopilot-enheter](../enrollment/enrollment-autopilot.md#edit-autopilot-device-attributes).
+
+#### <a name="edit-group-tag-value-for-autopilot-devices---4816775-----"></a>Redigera grupptaggvärde för Autopilot-enheter<!-- 4816775   -->
+Du kan redigera grupptaggvärdet för Autopilot-enheter. Mer information finns i [Redigera attribut för Autopilot-enheter](../enrollment/enrollment-autopilot.md#edit-autopilot-device-attributes).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
 
 #### <a name="updated-support-experience---5012398---"></a>Uppdaterad supportupplevelse<!-- 5012398 -->
@@ -73,8 +148,41 @@ Från och med idag distribueras en uppdaterad och strömlinjeformad konsolupplev
 
 Vi har förbättrat sökning och feedback i konsolen för vanliga problem, samt det arbetsflöde som du använder för att kontakta supporten. När du öppnar ett supportärende kan du se beräkningar i realtid för när du kan förvänta dig ett telefonsamtal eller e-postsvar. Premier och Unified Support-kunder kan dessutom ange en allvarlighetsgrad för problemet för att få hjälp snabbare.
 
+#### <a name="improved-intune-reporting-experience-public-preview----3791418---"></a>Förbättrad rapporterings upplevelse i Intune (offentlig förhandsversion) <!-- 3791418 -->
+Intune har nu en förbättrad rapporteringsupplevelse, inklusive nya rapporttyper, bättre rapportorganisation, mer fokuserade vyer, förbättrade rapportfunktioner samt mer konsekventa och tidsrelevanta data. De nya rapporttyperna fokuserar på följande:
+- **Drift** – tillhandahåller färska poster med fokus på driftproblem. 
+- **Organisation** – innehåller en bred sammanfattning av det övergripande läget.
+- **Historisk** – visar mönster och trender under en viss tidsperiod.
+- **Specialist** – låter dig använda rådata för att skapa dina egna anpassade rapporter.
+
+Den första uppsättningen nya rapporter fokuserar på enhetsefterlevnad. Mer information finns i [Blogg – Rapporteringsramverk i Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) och [Intune-rapporter](~/fundamentals/reports.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
+
+#### <a name="duplicate-custom-or-built-in-roles----1081938-----"></a>Duplicera anpassade eller inbyggda roller <!-- 1081938   -->
+Du kan nu kopiera de inbyggda och de anpassade rollerna. För mer information, se [Kopiera en roll](../fundamentals/create-custom-role.md#copy-a-role).
+
+#### <a name="new-permissions-for-school-administrator-role----5621805----"></a>Nya behörigheter för skoladministratörsrollen <!-- 5621805  -->  
+Två nya behörigheter, **Tilldela profil** och **Synkronisera enhet**, har lagts till i skoladministratörsrollen > **Behörigheter** > **Registreringsprogram**. Med behörigheten synkroniseraprofil kan gruppadministratörer synkronisera Windows Autopilot-enheter. Med behörigheten tilldela profil kan de ta bort användarinitierade Apple-registreringsprofiler. De har också behörighet att hantera tilldelningar av Autopilot-enheter och distributionsprofiler för Autopilot. En lista över alla behörigheter för skoladministratör/gruppadministratör finns i [Tilldela gruppadministratörer](https://docs.microsoft.com/intune-education/group-admin-delegate). 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>Säkerhet
+
+#### <a name="bitlocker-key-rotation---2564951----"></a>BitLocker-nyckel-ID<!-- 2564951  -->
+Du kan använda en enhetsåtgärd i Intune för att [fjärrrotera återställningsnycklar för BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) för hanterade enheter som kör Windows-version 1909 eller senare. För att kunna rotera återställningsnycklar måste enheterna konfigureras för att stödja rotation av återställningsnycklar.  
+
+#### <a name="updates-to-dedicated-device-enrollment-to-support-scep-device-certificate-deployment----5198878----"></a>Uppdateringar av dedikerad enhetsregistrering för att stödja distribution av SCEP-enhetscertifikat <!-- 5198878  -->
+Intune har nu stöd för distribution av SCEP-enhetscertifikat till dedikerade Android Enterprise-enheter för att möjliggöra certifikatbaserad åtkomst till Wi-Fi-profiler. Microsoft Intune appen måste finnas på enheten för att distributionen ska fungera. Därför har vi uppdaterat registreringsupplevelsen för dedikerade Android Enterprise-enheter. Nya registreringar är fortfarande samma (med QR, NFC, Zero-Touch eller Device Identifier) men har nu ett steg som kräver att användare installerar Intune-appen. På befintliga enheter kommer appen att installeras på löpande basis.
+
+#### <a name="intune-audit-logs-for-business-to-business-collaboration--5670211---"></a>Granskningsloggar i Intune för samarbete mellan företag<!--5670211 -->
+Samarbete mellan företag (B2B) gör att du på ett säkert sätt kan dela ditt företags program och tjänster med gästanvändare från en annan organisation, samtidigt som du behåller kontrollen över dina egna företagsdata. Intune stöder nu granskningsloggar för B2B-gästanvändare. Till exempel, när gästanvändare gör ändringar kommer Intune att kunna fånga dessa data via granskningsloggar. Mer information finns i [Vad är gästanvändaråtkomst i Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
+
+
+<!-- ########################## -->
 ## <a name="week-of-november-11-2019"></a>Veckan som börjar den 11 november 2019  
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering  
 
 #### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Förbättrad macOS-registrering i företagsportalen <!-- 5074349 WNready -->  
@@ -92,17 +200,20 @@ Slutanvändare kan nu starta webbappar direkt från Windows företagsportalapp. 
 #### <a name="new-assignment-type-column-in-company-portal-for-windows-10----5459950-wnready---"></a>Tilldelningstyp – ny kolumn i Företagsportal för Windows 10 <!-- 5459950 WNready -->
 Kolumnen Företagsportal > **Installerade appar** > **Tilldelningstyp** har bytt namn till **Krävs av din organisation**.  I denna kolumn visas värdet **Ja** eller **Nej** för att indikera om organisationen klassat en app som obligatorisk eller valfri. Förändringarna föranleddes av att många enhetsanvändare uttryckte förvirring kring apparnas natur. Dina användare hittar mer information om hur man installerar appar från företagsportalen i [Installera och dela appar på din enhet](/intune-user-help/install-apps-cpapp-windows). Mer information om hur du konfigurerar företagsportalappen för dina användare finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](~/apps/company-portal-app.md).  
 
-
+<!-- ########################## -->
 ## <a name="week-of-november-4-2019"></a>Veckan som börjar den 4 november 2019
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Enhetssäkerhet
 
 #### <a name="security-baselines-are-supported-on-microsoft-azure-government---4062552---"></a>Microsoft Azure Government stöder säkerhetsbaslinjer<!-- 4062552 -->
 
 Nu kan instanser av Intune som finns i *Microsoft Azure Government* använda [säkerhetsbaslinjer](../protect/security-baselines.md) för att skydda användare och enheter.
 
+<!-- ########################## -->
 ## <a name="week-of-october-28-2019"></a>Veckan då den 28 oktober 2019 infaller
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering
 
 #### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857---"></a>Förbättrad utformning av checklistan i företagsportalappen för Android<!-- 5550857 -->  
@@ -143,12 +254,14 @@ Inställningarna kommer fortsatt att vara tillgängliga från andra tillämpliga
 
 Mer information om dessa förbättringar finns i [blogginlägget Kundframgång för Intune](https://aka.ms/Endpoint_security_node) på webbplatsen för Microsoft Tech Community.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Enhetshantering
 
 #### <a name="intune-supports-ios-11-and-later---4665324----"></a>Intune har stöd för iOS 11 och senare<!-- 4665324  -->
 
 Intune-registreringen och företagsportalen har nu stöd för iOS-versionerna 11 och senare. Äldre versioner stöds inte.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Enhetssäkerhet
 
 #### <a name="microsoft-edge-baseline-preview----3787164----"></a>Microsoft Edge-baslinje (förhandsversion)<!--  3787164  -->
@@ -156,7 +269,7 @@ Intune-registreringen och företagsportalen har nu stöd för iOS-versionerna 11
 Vi har lagt till en förhandsversion med säkerhetsbaslinje för [Microsoft Edge-inställningar](../protect/security-baseline-settings-edge.md). 
 
 <!-- ########################## -->
-## <a name="week-of-october-21-2019"></a>Veckan då den 21 oktober 2019 infaller
+## <a name="week-of-october-21-2019-1910-service-release"></a>Veckan den 21 oktober 2019 (1910 Service Release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 Enhetshantering
@@ -299,9 +412,6 @@ Gäller för:
 #### <a name="specify-which-android-device-operating-system-versions-enroll-with-work-profile-or-device-administrator-enrollment---4350697-----"></a>Ange vilka operativsystemversioner för Android-enheter som registreras via registrering med arbetsprofil eller enhetsadministratör<!-- 4350697   -->
 Med hjälp av begränsningar för Intune-enhetstyp kan du använda enhetens OS-version för att ange vilka användarenheter som ska använda registrering med Android Enterprise-arbetsprofil eller registrering med Android-enhetsadministratör.  Mer information finns i [Konfigurera registreringsrestriktioner](../enrollment/enrollment-restrictions-set.md).
 
-#### <a name="windows-autopilot-deployment-reports---3856172---"></a>Windows Autopilot-distributionsrapporter<!-- 3856172 -->
-En ny rapport innehåller information om varje enhet som distribueras via Windows Autopilot. Mer information finns i [distributionsrapporten för Autopilot](../enrollment/enrollment-autopilot.md#autopilot-deployments-report). Vi håller på att lansera den här funktionen till alla kunder och förväntar oss att bli klara i slutet av nästa vecka.
-
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Enhetshantering
 
@@ -367,7 +477,7 @@ Intune har nu stöd för enheter med såväl iPadOS som iOS 13.1. Mer informatio
 
 <!-- ########################## -->
 
-## <a name="week-of-september-16-2019"></a>Veckan då den 16 september 2019 infaller
+## <a name="week-of-september-16-2019-1909-service-release"></a>Veckan den 16 september 2019 (1909 Service Release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering 
@@ -603,7 +713,7 @@ Gäller för:
 
 - Windows 10 och senare (Windows RS4 +)
 
-## <a name="week-of-august-12-2019"></a>Veckan 12 augusti 2019
+## <a name="week-of-august-12-2019-1908-service-release"></a>Veckan den 12 augusti 2019 (1908 Service Release)
 
 ### <a name="app-management"></a>Apphantering
 
@@ -775,7 +885,7 @@ Gäller för:
 
 <!-- ########################## -->
 
-## <a name="week-of-july-22-2019"></a>Veckan som inleds med den 22 juli 2019 
+## <a name="week-of-july-22-2019-1907-service-release"></a>Veckan den 22 juli 2019 (1907 Service Release)
 
 ### <a name="app-management"></a>Apphantering
 
@@ -916,7 +1026,7 @@ När du registrerar fullständigt hanterade Android Enterprise-enheter kommer an
 
 Förutom AAD-uppdateringar stöds nu Intune App Protection-principer (APP) på fullständigt hanterade Android Enterprise-enheter. Den här funktionen kommer att bli tillgänglig då vi distribuerar den. Du hittar mer information i [Lägg till hanterade Google Play-appar till Android enterprise-enheter med Intune](../apps/apps-add-android-for-work.md).
 
-## <a name="week-of-june-24-2019"></a>Veckan som inleds med 24 juni 2019
+## <a name="week-of-june-24-2019-1906-service-release"></a>Veckan den 24 juni 2019 (1906 Service Release)
 
 ### <a name="app-management"></a>Apphantering
 
@@ -1076,7 +1186,7 @@ Windows-företagsportalappen har nu en ny sida med etiketten **Enheter**. På si
 
 För att göra det mer intuitivt har **OrderID**-attributets namn på Autopilot-enheter ändrats till **Grupptagg**. När du använder CSV-filer för att ladda upp Autopilot-enhetsinformation måste du använda Grupptagg som kolumnrubrik, inte OrderID.  
 
-## <a name="week-of-may-13-2019"></a>Den vecka som börjar 13 maj 2019
+## <a name="week-of-may-13-2019-1905-service-release"></a>Veckan den 13 maj 2019 (1905 Service Release)
 
 ### <a name="app-management"></a>Apphantering
 

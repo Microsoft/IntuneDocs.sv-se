@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c6e519f4f5f31a11bd2e762b9e33357825d783d
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: e7242b661668f994208aa36a8f9fc5d350623ccd
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984159"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390379"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -46,6 +46,7 @@ Det finns tre typer av principinställningar: *Dataflytt*, *åtkomstkrav* och *v
 | **Begränsa klipp ut, kopiera och klistra in mellan andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj: <ul><li>**Blockerad**:  Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt åtgärderna klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen.</ul> | **Alla appar**   |
 | <ul><ui>**Gräns för att klippa ut och kopiera tecken för alla appar** | Ange det antal tecken som kan klippas ut eller kopieras från organisationens data och konton.  Det här tillåter delning av det angivna antalet tecken i valfritt program, oavsett vilken inställning som gjorts i **Begränsa klipp ut, kopiera och klistra in med andra appar**.<p>Standardvärde = 0<p>**Obs!** *Kräver att appen har Intune SDK version 9.0.14 eller senare.*  | **0**   |
 | **Meddelanden om organisationsdata** | Ange hur mycket organisationsdata som ska delas via OS-meddelanden för organisationskonton. Den här principinställningen påverkar den lokala enheten och alla anslutna enheter, till exempel kroppsnära teknik och smarta högtalare. Appar kan ha ytterligare kontroller för att anpassa meddelandebeteendet, eller kan välja att inte respektera alla värden. Välj: <ul><li>**Blockera**:  Dela inte meddelanden.</li><ul><li>Om detta inte stöds av programmet kommer meddelanden att tillåtas.</li></ul><li>**Blockera organisationsdata**: Undvik exempelvis att dela organisationsdata i meddelanden.</li><UL><li>”Du har ny e-post”; ”Du har ett möte”</li><li>Om programmet inte stöds kommer meddelanden att blockeras.</li></ul><li>**Tillåt**: Delar organisationsdata i meddelanden</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen.</ul> <p>**Obs!** *Den här inställningen kräver appstöd. För tillfället kommer Outlook för iOS version 4.16.0 eller senare att ha stöd för den här inställningen, som vi planerar att ge ut veckan som börjar den 16 december 2019.* | **Tillåt**   |
+| **Tangentbord från tredje part** | Välj **Blockera** för att förhindra användningen av tredje parts tangentbord i hanterade program.<p>När den här inställningen är aktiverad får användaren ett engångsmeddelande som anger att användning av tredje parts tangentbord har blockerats. Det här meddelandet visas första gången en användare interagerar med organisationens data som kräver användning av ett tangentbord. Enbart standardtangentbordet i iOS är tillgängligt när du använder hanterade program och alla andra tangentbordsalternativ är inaktiverade. Den här inställningen påverkar såväl organisationskonton som personliga konton för program med flera identiteter. Den här inställningen påverkar inte användningen av tredje parts tangentbord i ej hanterade program.<p>**Obs:** Den här funktionen kräver att appen använder Intune SDK-version 12.0.16 eller senare. På appar med SDK-versioner från 8.0.14 till och med, 12.0.15 kan den här funktionen inte användas korrekt på program med flera identiteter. Mer information finns i det [Kända felet: Tangentbord från tredje part blockeras inte i iOS för personliga konton](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Tillåt**  |
 
 ### <a name="encryption"></a>Kryptering
 | Inställningen | Använd så här | Standardvärde |

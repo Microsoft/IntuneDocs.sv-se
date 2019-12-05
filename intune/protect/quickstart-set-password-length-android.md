@@ -1,12 +1,12 @@
 ---
 title: Snabbstart – Efterlevnadsprincip för lösenord för Android-enheter
 titleSuffix: Microsoft Intune
-description: I den här snabbstarten använder du Microsoft Intune till att ange den lösenordslängd som krävs för Android-enheter.
+description: I den här snabbstarten använder du Microsoft Intune för att ange den lösenordslängd som krävs för Android-enheter.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/21/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f73bc84be46252cb99a47966b480e585545dde12
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 61fdf91d57ce5d187a0c43153f317b0b42c6b46c
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504165"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409761"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Snabbstart: Skapa en efterlevnadsprincip för lösenord för Android-enheter
 
-I den här snabbstarten använder du Microsoft Intune för att ange att Android-användare på företaget måste ange ett lösenord med en viss längd innan åtkomst beviljas till information i deras Android-enheter. 
+I den här snabbstarten använder du Microsoft Intune för att ange att Android-användare på företaget måste ange ett lösenord med en viss längd innan åtkomst beviljas till information i deras Android-enheter.
 
 En Intune-enhetsefterlevnadsprincip anger de regler och inställningar som enheter måste uppfylla för att anses vara kompatibla. Du kan använda efterlevnadsprinciper med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet.
 
@@ -38,25 +38,33 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
-Logga in på [Intune](https://aka.ms/intuneportal) som global administratör eller Intune-tjänstadministratör. 
+Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som [global administratör](../fundamentals/users-add.md#types-of-administrators) eller [tjänstadministratör](../fundamentals/users-add.md#types-of-administrators) för Intune.
 
 ## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
 
-För den här snabbstarten använder du Intune för att kräva att Android-användare bland personalen anger ett lösenord med en viss längd innan åtkomst beviljas till information i deras Android-enheter.
+Skapa en enhetsefterlevnadsprincip som kräver att Android-användare anger ett lösenord med en viss längd innan åtkomst beviljas till information på deras Android-enheter.
 
-1. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip** i Intune.
+1. I Intune väljer du **Enheter** > **Efterlevnadsprinciper** > **Skapa princip**.
+
 2. Lägg till **Android-efterlevnad** som **Namn**. Ange även en **Beskrivning**.
-3. För **Plattform**, välj **Android**. 
-4. Välj **Inställningar** > **Systemsäkerhet** för att visa Android-bladet **Systemsäkerhet**.
-5. Klicka på **Kräv** intill **Kräv ett lösenord för att låsa upp mobila enheter**.
-6. Ange **Minst numeriskt** bredvid **Krav på lösenordstyp**.
-7. Ange **6** intill **Minsta längd på lösenord**. 
+
+3. Välj **Android Enterprise** för **Plattform**.
+
+4. I **Profiltyp** väljer du **Arbetsprofil**.
+
+5. Välj **Inställningar** > **Systemsäkerhet** för att visa Android-bladet **Systemsäkerhet**.
+
+6. I **Kräv ett lösenord för att låsa upp mobila enheter** väljer du **Kräv**.
+
+7. I **Krav på lösenordstyp** väljer du **Minst numeriskt**.
+
+8. I **Minsta lösenordslängd** anger du **6**.
 
     ![Skärmbild som visar hur en grupp skapas i Microsoft Intune](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-7. När du är klar klickar du på **OK** > **OK** > **Skapa** för att skapa principen.
+9. När du är klar väljer du **OK** > **OK** > **Skapa** för att skapa principen.
 
-När du har skapat principen visas den i listan över enhetsefterlevnadsprinciper. 
+När du har skapat principen visas den i listan över enhetsefterlevnadsprinciper.
 
 ## <a name="clean-up-resources"></a>Rensa resurser
 

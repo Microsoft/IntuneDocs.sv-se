@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14ff8ad2d41a6f2235c18f155e3a5b865e3a32e4
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 5aca7dbae7a74af399bcbf21aec1dd9dd2d1e851
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199311"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390753"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune
 
@@ -39,7 +39,7 @@ Som Intune-administratör kan du använda alternativet **Hjälp och support** f�
 
 ## <a name="help-and-support-experience"></a>Nytt gränssnitt för hjälp och support
 
-Hjälp och support-gränssnittet för Intune är tillgängligt via [Microsoft 365 Enhetshantering-portalen](https://devicemanagement.microsoft.com) och på alla blad (eller sidor) under Intune i Azure-portalen.
+Hjälp och support-gränssnittet för Intune är tillgängligt från [administrationscentret Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och på alla blad (eller sidor) under Intune i Azure-portalen.
 
 *Hjälp och support*gränssnittet liknar det som finns i [Administrationscenter för Microsoft 365](https://admin.microsoft.com/) och ersätter det tidigare *Hjälp + support*, som blir kvar för andra tjänster i Azure.
 
@@ -48,16 +48,27 @@ Hjälp och support-gränssnittet för Intune är tillgängligt via [Microsoft 36
 
 ### <a name="options-to-access-help-and-support"></a>Alternativ för att få åtkomst till hjälp och support
 
-- **I Azure Portal:**
+När du använder en nyligen skapad klient för Intune kan det hända att *Hjälp och support* inte öppnas och följande meddelande returneras:
+
+- *Ett okänt fel har inträffat. Uppdatera sidan. Om problemet kvarstår skapar du ett ärende genom [administrationscentret för M365](https://admin.microsoft.com) och hänvisar till det sessions-ID som ges.*
+
+Felinformationen innehåller ett *sessions-ID*, information om *tillägg* med mera. 
+ 
+Det här problemet uppstår när du ännu inte har autentiserat ditt nya klientkonto via antingen **administrationscentret för M365** på https://admin.microsoft.com eller **Office 365-portalen** på https://portal.office.com. Lös problemet genom att välja länken för *administrationscentret för M365* i meddelandet eller gå till https://portal.office.com och logga in. Efter autentisering på någon av platserna blir *Hjälp och support* för Intune tillgängligt.
+
+
+**Åtkomst till Hjälp och support**:
+
+- **I Azure Portal**
 
   - Välj **Hjälp och support** på valfritt blad eller valfri sida för Intune.
 
   > [!NOTE]  
   > Om din Intune-instans värdhanteras i det privata molnet för myndigheter (ett nationellt moln som t.ex. Azure Government), kan du läsa om [Intune-stöd för privat moln för myndigheter](#intune-support-for-private-cloud-for-government) senare i den här artikeln. Upplevelsen *Hjälp och support* i Intune blir inte tillgänglig i det privata molnet för myndigheter förrän nästa år.
 
-- **På instrumentpanelen för enhetshantering:**
+- **I administrationscentret för Microsoft Endpoint Manager**
   - När du har valt ett funktionsområde för Intune väljer du alternativet för **Hjälp och support**.
-  - Från valfri nod i portalen Enhetshantering väljer du **?** - ikonen i det övre högra hörnet i portalen och använder sedan listrutan för att välja den tjänst du vill ha hjälp med. **?** - ikonen i portalen Enhetshantering stöder flera tjänster och du måste välja den specifika tjänst du vill ha hjälp med.  
+  - Från valfri nod i administrationscentret för Microsoft Endpoint Manager väljer du **?** - ikonen i det övre högra hörnet i portalen och använder sedan listrutan för att välja den tjänst du vill ha hjälp med. **?** - ikonen i administrationscentret för Microsoft Endpoint Manager stöder flera tjänster och du måste välja den specifika tjänst du vill ha hjälp med.  
 
     ![Välj din tjänst](./media/get-support/select-a-service.png)
 

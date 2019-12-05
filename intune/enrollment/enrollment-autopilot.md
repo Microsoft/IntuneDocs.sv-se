@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 454d23038a593829ea8a14929dc435e9f9ddb457
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 8d24a858ec66433e72d63bea922eac0c4072a27c
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709485"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547754"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -49,7 +49,7 @@ Se avsnittet om PowerShell-cmdleten för information.
 
 Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med deras information.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Enheter** (under **Windows AutoPilot-distributionsprogram** > **Importera**.
 
     ![Skärmbild av Windows Autopilot-enheter](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -65,7 +65,7 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
 
 3. Välj **Importera** för att börja importera enhetsinformationen. Det kan ta flera minuter att importera.
 
-4. När importen är klar väljer du **Enhetsregistrering** > **Windows-registrering** > **Windows Autopilot** > **Enheter** > **Synkronisera**. Ett meddelande visar att synkroniseringen pågår. Processen kan ta några minuter att slutföra beroende på hur många enheter som synkroniseras.
+4. När importen är klar väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram** > **Synkronisera**. Ett meddelande visar att synkroniseringen pågår. Processen kan ta några minuter att slutföra beroende på hur många enheter som synkroniseras.
 
 5. Uppdatera vyn för att se de nya enheterna.
 
@@ -88,7 +88,7 @@ Du kan lägga till Windows Autopilot-enheter genom att importera en CSV-fil med 
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Skapa en Autopilot-distributionsprofil
 Autopilot-distributionsprofiler används för att konfigurera Autopilot-enheterna. Du kan skapa upp till 350 profiler per klientorganisation.
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
 2. På sidan **Grundinställningar** anger du ett **Namn** och en valfri **Beskrivning**.
 
     ![Skärmbild av sidan Grundinställningar](./media/enrollment-autopilot/create-profile-basics.png)
@@ -129,25 +129,35 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     ![Skärmbild av granskningssidan](./media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune söker regelbundet efter nya enheter i de tilldelade grupperna och påbörjar sedan processen med att tilldela profiler till dessa enheter. Det kan ta flera minuter att slutföra processen. Se till att processen har slutförs innan du distribuerar en enhet.  Du kan kontrollera detta under **Enhetsregistrering** > **Windows-registrering** > **Enheter**, där du bör se att profilstatusen ändras från ”Ej tilldelad” till ”Tilldelar” och slutligen ”Tilldelad”.
+> Intune söker regelbundet efter nya enheter i de tilldelade grupperna och påbörjar sedan processen med att tilldela profiler till dessa enheter. Det kan ta flera minuter att slutföra processen. Se till att processen har slutförs innan du distribuerar en enhet.  Du kan kontrollera detta under **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram**, där du bör se att profilstatusen ändras från ”Ej tilldelad” till ”Tilldelar” och slutligen ”Tilldelad”.
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Redigera en Autopilot-distributionsprofil
 När du har skapat en Autopilot-distributionsprofil kan du redigera vissa delar av den.   
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering**.
-2. Under **Windows-registrering** i avsnittet **Windows Autopilot** väljer du **Distributionsprofiler**.
-3. Välj den profil du vill redigera.
-4. Klicka på **Egenskaper** till vänster om du vill ändra distributionsprofilens namn eller beskrivning. Klicka på **Spara** när du har gjort ändringarna.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Distributionsprofiler**.
+2. Välj den profil du vill redigera.
+3. Välj **Egenskaper** till vänster om du vill ändra distributionsprofilens namn eller beskrivning. Klicka på **Spara** när du har gjort ändringarna.
 5. Klicka på **Inställningar** när du vill göra ändringar i OOBE-inställningarna. Klicka på **Spara** när du har gjort ändringarna.
 
 > [!NOTE]
 > Ändringar i profilen tillämpas på enheter som är tilldelade till profilen. Den uppdaterade profilen tillämpas emellertid inte på enheter som redan har registrerats i Intune förrän enheten har återställts och omregistrerats.
 
+## <a name="edit-autopilot-device-attributes"></a>Redigera attribut för Autopilot-enhet
+När du har laddat upp en Autopilot-enhet kan du redigera vissa av enhetens attribut.
+
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram**.
+2. Välj den enhet som du vill redigera.
+3. I fönstret till höger på skärmen kan du redigera enhetsnamn, grupptagg eller användarvänligt namn (om du har tilldelat en användare).
+4. Välj **Spara**.
+
+> [!NOTE]
+> Enhetsnamn kan konfigureras för alla enheter, men ignoreras i Hybrid Azure Active Directory-anslutna distributioner. Enhetsnamnet kommer fortfarande från domänanslutningsprofilen för Hybrid Azure Active Directory-enheter.
+
 ## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Aviseringar för otilldelade Windows Autopilot-enheter  <!-- 163236 -->  
 
 Aviseringar visar hur många Autopilot-programenheter som inte har Autopilot-distributionsprofiler. Använd informationen i aviseringen för att skapa profiler och tilldela dem till de otilldelade enheterna. När du klickar på aviseringen visas en fullständig lista över Windows Autopilot-enheter och detaljerad information om dem.
 
-Om du vill visa aviseringar för otilldelade enheter väljer du **Enhetsregistrering** > **Översikt** > **Ej tilldelade enheter** i [Intune i Azure-portalen](https://aka.ms/intuneportal).  
+Om du vill se aviseringar för ej tilldelade enheter väljer du i [Intune i Azure Portal](https://aka.ms/intuneportal) **Enheter** > **Översikt** > **Registreringsaviseringar** > **Ej tilldelade enheter**.  
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Tilldela en användare till en specifik Autopilot-enhet
 
@@ -155,7 +165,7 @@ Du kan tilldela en användare till en specifik Autopilot-enhet. Den här tilldel
 
 Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, version 1809 eller senare.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > välj enheten > **Tilldela användare**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram** > välj enheten > **Tilldela användare**.
 
     ![Skärmbild av Tilldela användare](./media/enrollment-autopilot/assign-user.png)
 
@@ -171,7 +181,7 @@ Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, v
 
 ## <a name="autopilot-deployments-report"></a>Rapport om Autopilot-distributioner
 Du kan se information om varje enhet som distribueras via Windows Autopilot.
-Om du vill se rapporten går du till **Intune**. Under **Övervaka** väljer du **Autopilot-distributioner**.
+Om du vill se rapporten går du till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och väljer **Enheter** > **Övervaka** > **Autopilot-distributioner**.
 Data är tillgängliga i 30 dagar efter distribution.
 
 
@@ -179,7 +189,7 @@ Data är tillgängliga i 30 dagar efter distribution.
 
 Du kan ta bort Windows Autopilot-enheter som inte har registrerats på Intune:
 
-- Ta bort enheterna från Windows Autopilot på **Enhetsregistrering** > **Windows-registrering** > **Enheter**. Välj de enheter som du vill ta bort och välj sedan **Ta bort**. Det kan ta några minuter att ta bort en Windows Autopilot-enhet.
+- Ta bort enheter från Windows Autopilot under **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram**. Välj de enheter som du vill ta bort och välj sedan **Ta bort**. Det kan ta några minuter att ta bort en Windows Autopilot-enhet.
 
 Om du vill ta bort en enhet helt från klienten fullständigt måste du ta bort Intune-enheten, Azure Active Directory-enheten och Windows Autopilot-enhetsposterna. Det kan du göra från Intune:
 
@@ -187,7 +197,7 @@ Om du vill ta bort en enhet helt från klienten fullständigt måste du ta bort 
 
 2. Ta bort enheterna på Azure Active Directory-enheter via **Enheter** > **Azure AD-enheter**.
 
-3. Ta bort enheterna från Windows Autopilot på **Enhetsregistrering** > **Windows-registrering** > **Enheter**. Välj de enheter som du vill ta bort och välj sedan **Ta bort**. Det kan ta några minuter att ta bort en Windows Autopilot-enhet.
+3. Ta bort enheter från Windows Autopilot under **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram** >. Välj de enheter som du vill ta bort och välj sedan **Ta bort**. Det kan ta några minuter att ta bort en Windows Autopilot-enhet.
 
 ## <a name="using-autopilot-in-other-portals"></a>Använda Autopilot på andra portaler
 Om du inte är intresserad av hantering av mobilenheter kan du använda Autopilot på andra portaler. Det går att använda andra portaler, men vi rekommenderar att du enbart hanterar dina Autopilot-distributioner i Intune. När du använder Intune med en annan portal kan inte Intune:  

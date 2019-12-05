@@ -6,63 +6,66 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: aiwang
+ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55fa1109fde57e3104c8bb15e1f45761d661c735
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0de98a0820e15a09c2b3724b216359580327259e
+ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508725"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465720"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune-efterlevnadsrapporter för uppdateringar
+
 När du använder Intune för att distribuera Windows-uppdateringar till Windows 10-enheter visar du information om uppdateringsefterlevnad med hjälp av Intune eller en kostnadsfri lösning som heter *Uppdateringsefterlevnad*, som ingår i Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Använda Intune
-Så här granskar du en principrapport om distributionsstatusen för de Windows 10-uppdateringsringar som du har konfigurerat: 
-1. Logga in på [Azure Portal](https://portal.azure.com/).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Programuppdateringar** > **Översikt**. Här kan du se allmän information om status för alla uppdateringsringar som du tilldelade.
-4. Öppna någon av följande rapporter:  
 
-   **För alla testgrupper för distribution**:
-   1. I **Programuppdateringar** > **Windows 10-uppdateringsringar**
-   2. I avsnittet om **övervakning** ska du välja **Distributionsstatus per uppdateringstestgrupp**.  
+Så här granskar du en principrapport om distributionsstatusen för de Windows 10-uppdateringsringar som du har konfigurerat:
 
-   **För specifika testgrupper för distribution**:  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   1. I **Programuppdateringar** > **Windows 10-uppdateringsringar** väljer du den testgrupp för distribution som du vill granska.  
-   2. I avsnittet om **övervakning** väljer du bland följande rapporter för att visa mer detaljerad information om uppdateringsringen:  
-      - **Enhetstillstånd**  
-      - **Användarstatus**  
+2. Välj **Enheter** > **Översikt** > **Programuppdateringsstatus**. Här kan du se allmän information om status för alla uppdateringsringar som du tilldelade.
+
+3. Om du vill visa mer information väljer du **Övervaka**. Under **Programuppdateringar**väljer du **Per distributionsstatus för uppdateringsring** och väljer den distributionsring som ska granskas.
+
+   I avsnittet om **övervakning** väljer du bland följande rapporter för att visa mer detaljerad information om uppdateringsringen:
+
+   - **Enhetsstatus** – här visas enhetens konfigurationsstatus. Mer information finns i [Uppdatera enhetskonfigurationsstatus]( https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
+
+   - **Användarstatus** – här visas användarnamn, status och senaste rapportdatum. Mer information finns i [Lista med status för enhetskonfigureringsanvändare](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
+
+   - **Status för slutanvändaruppdatering** – detta visar status för Windows enhets uppdatering. Mer information finns i [Windows uppdateringsstatus](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
 
 ## <a name="use-update-compliance"></a>Använda Uppdateringsefterlevnad
+
 Du kan övervaka Windows 10-uppdateringsdistribution med hjälp av [Uppdateringsefterlevnad](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor), en Windows Analytics-lösning. Uppdateringsefterlevnad erbjuds via Azure-portalen och är tillgängligt utan kostnad för enheter som uppfyller dess [krav](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 När du använder den här lösningen distribuerar du ett kommersiellt ID till valfria Intune-hanterade Windows 10 enheter som du vill rapportera uppdateringsefterlevnad för.  
 
-I Intune-konsolen använder du OMA-URI-inställningarna för en anpassad princip till att konfigurera det kommersiella ID:t. Mer information finns i [Intune-principinställningar för Windows 10-enheter i Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
+I Intune kan du konfigurera det kommersiella ID:t med hjälp av OMA-URI-inställningarna för en anpassad princip. Se [Intune-principinställningar för Windows 10-enheter i Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
 
 Den OMA-URI-sökväg (skiftlägeskänslig) du använder när du ska konfigurera det kommersiella ID:t är: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
 
 Du kan t.ex. använda följande värden i **Lägga till eller redigera OMA-URI-inställningen**:
+
 - **Inställningsnamn**: Kommersiellt ID för Windows Analytics
 - **Beskrivning av inställning**: Konfigurera kommersiellt ID för Windows Analytics-lösningar
 - **OMA-URI** (skiftlägeskänsligt): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 - **Datatyp**: Sträng
 - **Värde**: \<Använd det GUID som visas på fliken Windows-telemetri på din OMS-arbetsyta>
- 
-> [!NOTE]  
+
+> [!NOTE]
 > Mer information om MS DM-server finns i [DMClient-konfigurationsprovider]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
 
 ## <a name="next-steps"></a>Nästa steg
-[Hantera programuppdateringar i Intune](windows-update-for-business-configure.md)
 
+[Hantera programuppdateringar i Intune](windows-update-for-business-configure.md)

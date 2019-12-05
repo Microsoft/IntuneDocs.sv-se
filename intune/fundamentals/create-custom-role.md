@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b60e4d801d09a834e11119260d3054cf43251bbd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3ca83287c58f8d2fb7c8eec5f8cc793e2c67b77a
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502969"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390705"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Skapa en anpassad roll i Intune
 
@@ -49,6 +49,21 @@ För att kunna skapa, redigera eller tilldela roller måste ditt konto ha en av 
 7. När du är klar väljer du **OK**.
 
 8. På bladet **Lägg till anpassad roll** klickar du på **Skapa**. Den nya rollen visas i listan på bladet **Intune-roller – Alla roller**.
+
+
+## <a name="copy-a-role"></a>Kopiera en roll
+
+Du kan även kopiera en befintlig roll.
+
+1. Logga in i [Azure-portalen](https://portal.azure.com) med dina Intune-autentiseringsuppgifter och välj **Intune**.
+
+2. Välj **Roller** > **Alla roller** > välj en roll i listan > **Duplicera**.
+
+3. Under **Duplicera roll** anger du ett namn. Se till att du använder ett unikt namn.
+
+4. Alla behörigheter och omfångstaggar från den ursprungliga rollen är redan markerade. Du kan senare ändra den duplicerade rollens **Namn**, **Beskrivning**, **Behörigheter**och **Omfång (taggar)** .
+
+5. Välj **Skapa**. 
 
 ## <a name="next-steps"></a>Nästa steg
 - [Tilldela en användare en roll](assign-role.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,14 +17,14 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ce5db670f0084626f1c053b64679623ccf28eb21
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: 13d6a2b9cdc8596c7f5cf81218377754e9412be1
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164630"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390307"
 ---
-# <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune  
+# <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune
 
 Skydda data på dina enheter genom att använda Intune för att hantera inbyggd disk- eller enhetskryptering för enheter.
 
@@ -68,7 +68,7 @@ Mer information om FileVault-inställningen som du kan hantera med Intune finns 
 
    Överväg att lägga till ett meddelande som hjälper slutanvändarna att hämta återställningsnyckeln för deras enheter. Den här informationen kan vara användbar för dina slutanvändare när du använder inställningen för rotation av personliga återställningsnycklar, som automatiskt kan generera en ny återställningsnyckel för en enhet med jämna mellanrum.
 
-   Exempel: Om du vill hämta en förlorad eller nyligen roterad återställningsnyckel loggar du in på webbplatsen för Intune-företagsportalen från valfri enhet. På portalen går du till *Enheter* och väljer den enhet där FileVault är aktiverat och väljer sedan *Hämta återställningsnyckel*. Den aktuella återställningsnyckeln visas.  
+   Exempel: Om du vill hämta en förlorad eller nyligen roterad återställningsnyckel loggar du in på webbplatsen för Intune-företagsportalen från valfri enhet. På portalen går du till *Enheter* och väljer den enhet där FileVault är aktiverat och väljer sedan *Hämta återställningsnyckel*. Den aktuella återställningsnyckeln visas.
 
 7. Konfigurera de återstående [FileVault](endpoint-protection-macos.md#filevault)inställningarna efter dina affärsbehov och välj **OK**.
 
@@ -114,13 +114,37 @@ Konfigurera BitLocker när du skapar en [enhetskonfigurationsprofil](../configur
 
 6. Slutför konfigurationen av ytterligare inställningar och spara sedan profilen.
 
-### <a name="manage-bitlocker"></a>Hantera BitLocker  
+### <a name="manage-bitlocker"></a>Hantera BitLocker
 
 När Intune har krypterat en Windows 10-enhet med BitLocker kan du visa och hämta BitLocker-återställningsnycklar när du visar [Intunes krypteringsrapport](encryption-monitor.md).
 
+### <a name="rotate-bitlocker-recovery-keys"></a>Rotera BitLocker-återställningsnycklar
+
+Du kan använda en enhetsåtgärd i Intune för att fjärrrotera BitLocker-återställningsnyckeln på en enhet som kör Windows 10 version 1909 eller senare.
+
+#### <a name="prerequisites"></a>Krav
+
+Enheter måste uppfylla följande krav för att stödja rotation av BitLocker-återställningsnyckel:
+
+- Enheterna måste köra Windows 10 version 1909 eller senare
+
+- Azure Active Directory-anslutna och hybridanslutna enheter måste ha stöd för nyckelrotation aktiverat:
+
+  - **Klientbaserad rotering av återställningslösenord**
+
+  Den här inställningen finns under *Windows-kryptering* som en del av en enhetskonfigurationsprincip för Windows 10 slutpunktsskydd.
+  
+#### <a name="to-rotate-the-bitlocker-recovery-key"></a>Så här roterar du BitLocker-återställningsnycklar
+
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Välj **Enheter** > **Alla enheter**.
+
+3. I listan över enheter som du hanterar väljer du en enhet, väljer **Mer** och sedan fjärråtgärden **BitLocker-nyckelrotering**.
+
 ## <a name="next-steps"></a>Nästa steg
 
-Skapa en [efterlevnadsprincip för enheter](compliance-policy-create-windows.md)
+Skapa [en enhetsefterlevnadsprincip](compliance-policy-create-windows.md).
 
 Använd krypteringsrapporten för att hantera:
 

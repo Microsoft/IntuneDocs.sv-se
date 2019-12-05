@@ -6,30 +6,31 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
-ms.reviewer: chrisbal
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3683d2aeada791c6ec827e915e02365a336e6045
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 62f418e396c5030a47ea0bcb31914cd4e1069c40
+ms.sourcegitcommit: eb2e420b304c7da9d3be5ef49a676cba66766d2b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059663"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74319846"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter
 
-[!INCLUDE[azure_portal](../includes/azure_portal.md)]
-
 Du kan skapa en VPN-profil per app för enheter som kör Android 5.0 och senare som hanteras av Intune. Börja med att skapa en VPN-profil som använder antingen Pulse Secure- eller Citrix-anslutningstypen. Skapa sedan en princip för anpassad konfiguration som associerar VPN-profilen med specifika appar.
+
+> [!NOTE]
+> Om du vill använda VPN per app på Android Enterprise-enheter kan du också använda de här stegen. Men vi rekommenderar att du använder en [konfigurationsprincip för appar](../apps/app-configuration-policies-use-android.md) för VPN-klientprogramvaran.
 
 När du har tilldelat principen till din Android-enhet eller till användargrupper måste användarna starta Pulse Secure- eller Citrix VPN-klienten. VPN-klienten tillåter då endast trafik från de angivna apparna att använda den öppna VPN-anslutningen.
 
@@ -48,7 +49,7 @@ När du har tilldelat principen till din Android-enhet eller till användargrupp
     - **Plattform**: Välj **Android**.
     - **Profiltyp**: Välj **VPN**.
 
-4. Välj **Inställningar** > **Konfigurera** och konfigurera sedan VPN-profilen enligt inställningarna i [Så här konfigurerar du VPN-inställningar](vpn-settings-configure.md) och [Intunes VPN-inställningar för Android-enheter](vpn-settings-android.md).
+4. Välj **Inställningar** > **Konfigurera**. Konfigurera sedan VPN-profilen. Mer information finns i [Konfigurera VPN-inställningar](vpn-settings-configure.md) och [Intune VPN-inställningar för Android-enheter](vpn-settings-android.md).
 
 Notera **anslutningens namn** , det vill säga det värde som du anger när du skapar VPN-profilen. Detta krävs i nästa steg. Till exempel **MyAppVpnProfile**.
 
@@ -75,7 +76,7 @@ Notera **anslutningens namn** , det vill säga det värde som du anger när du s
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Ange applistan som svartlistad eller vitlistad (valfritt)
 
-Du kan ange en lista över appar som *inte* kan använda VPN-anslutningen med hjälp av värdet **BLACKLIST** (svartlistat). Alla andra appar ansluter via VPN. Eller så kan du använda värdet **WHITELIST** (vitlistat) för att ange en lista över appar som *kan* använda VPN-anslutningen. Appar som inte finns med i listan ansluter inte via VPN-anslutningen.
+Du kan ange en lista över appar som *inte* kan använda VPN-anslutningen med hjälp av värdet **BLACKLIST** (svartlistat). Alla andra appar ansluter via VPN. Eller så kan du använda värdet **WHITELIST** (vitlistat) för att ange en lista över appar som *får* använda VPN-anslutningen. Appar som inte finns med i listan ansluter inte via VPN-anslutningen.
 
 1. I fönstret **Anpassade OMA-URI-inställningar** väljer du **Lägg till**.
 2. Ange ett namn på inställningen.

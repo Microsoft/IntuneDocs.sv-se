@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2019
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84ef86a0b3c0ffbfffde572c9759c62645d57dc5
-ms.sourcegitcommit: 8c651a3ed1f358f19b65206a52f7808282de97c3
+ms.openlocfilehash: 844e93f3a063ae43342d2967cbd544f3ec425c21
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844807"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410151"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -56,7 +57,7 @@ När instrumentpanelen öppnas kan du få en översikt med alla efterlevnadsrapp
 
 När du går in djupare i dessa rapporter kan du även se eventuella specifika efterlevnadsprinciper och inställningar som gäller för en viss enhet, inklusive efterlevnadsstatus för varje inställning.
 
-### <a name="device-compliance-status-report"></a>Rapport för enhetens efterlevnadsstatus
+### <a name="device-compliance-status"></a>Enhetens efterlevnadsstatus
 
 Diagrammet **Status för enhetsefterlevnad** visar efterlevnadsstatusen för alla Intune-registrerade enheter. Kompatibilitetstillstånden finns i två olika databaser: Intune och Azure Active Directory.
 
@@ -119,7 +120,8 @@ I diagrammet **Enhetsinformation** väljer du en specifik enhet och väljer seda
 
 Intune visar mer information om principinställningarna för enhetsefterlevnad som används på enheten. När du väljer en specifik princip visas alla inställningar i principen.
 
-### <a name="devices-without-compliance-policy"></a>Enheter utan policy för efterlevnad
+### <a name="devices-without-compliance"></a>Enheter utan efterlevnad
+
 Bredvid diagrammet *Principefterlevnad* på sidan *Efterlevnadsstatus* kan du välja panelen **Enheter utan policy för efterlevnad** för att visa information om enheter som inte har några tilldelade efterlevnadsprinciper:
 
 ![Se enheter utan efterlevnadsprinciper](./media/compliance-policy-monitor/devices-without-policies.png)
@@ -136,13 +138,13 @@ När du väljer panelen visas alla enheter utan efterlevnadsprincip. Då visas �
 
 - Användare som är tilldelade en efterlevnadsprincip av valfri typ visas inte i rapporten, oavsett enhetsplattform. Om du exempelvis har tilldelat en Windows-efterlevnadsprincip till en användare med en Android-enhet, visas enheten inte i rapporten. Intune anser emellertid att Android-enheten inte är kompatibel. För att undvika problem rekommenderar vi att du skapar principer för varje enhetsplattform och distribuerar dem till alla användare.
 
-### <a name="per-policy-device-compliance-report"></a>Rapport om enhetsefterlevnad per princip
+### <a name="per-policy-device-compliance"></a>Enhetsefterlevnad per princip
 
 Diagrammet **Principefterlevnad** visar principerna och hur många enheter som är kompatibla och hur många som inte är det. 
 
 ![Visa en lista över principen och hur många kompatibla och inte kompatibla enheter som finns för den principen](./media/compliance-policy-monitor/idc-8.png)
 
-## <a name="setting-compliance-report"></a>Inställning av efterlevnadsrapport
+### <a name="setting-compliance"></a>Ställa in efterlevnad
 
 Diagrammet **Inställningskompatibilitet** visar alla principinställningar för enhetsefterlevnad från alla efterlevnadsprinciper, de plattformar som principinställningarna används på, samt antalet ej kompatibla enheter.
 
@@ -152,6 +154,24 @@ Diagrammet **Inställningskompatibilitet** visar alla principinställningar för
 > En princip kan tilldelas en enhet och en användare på samma enhet. I vissa fall kan en enhet synkroniseras innan användaren loggar in, till exempel när enheten startas om. Efterlevnad kan utvärdera den här användaren och visa enheten som icke-kompatibel. Det här beteendet kan också visa systemkontot som en icke-kompatibel användare.
 >
 > Detta är ett känt problem med Windows 10-enheter med flera användare. Ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](../fundamentals/in-development.md) och/eller [vad som är nytt](../fundamentals/whats-new.md).
+
+## <a name="view-compliance-reports"></a>Visa efterlevnadsrapporter
+
+Förutom att använda diagrammen i *Efterlevnadsstatus*kan du visa efterlevnadsrapporter på sidan *Övervakare* i administrationscentret.
+
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Välj **Enheter** > **Övervaka**och under **Efterlevnad** väljer du sedan den rapport du vill visa. Några av de tillgängliga efterlevnadsrapporterna är:
+
+   - Efterlevnad för enhet
+   - Icke-kompatibla enheter
+   - Enheter utan policy för efterlevnad
+   - Ställa in efterlevnad
+   - Principefterlevnad
+   - Hälsoattesteringsrapporter för Windows
+   - Status för hotagent
+
+Mer information om rapporter finns i [Intune-rapporter](../fundamentals/reports.md)
 
 ## <a name="view-status-of-device-policies"></a>Visa status för enhetsprinciper
 

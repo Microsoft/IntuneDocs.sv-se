@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b3c82faab08248640e19573582ccbd232e0587d
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: 0012a80f0e9ea60b41c94a582e42d5f647c6bbc2
+ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923355"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239208"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrera enheter i Intune med ett konto för enhetsregistreringshanteraren
 
@@ -37,6 +37,7 @@ DEM-användarkonton och enheter som har registrerats med ett DEM-användarkonto 
 - Rensning kan inte utföras från företagsportalen. Rensning av en enhet som har registrerats med ett DEM-användarkonto kan göras från Intune på Azure-portalen.
 - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
 - DEM-användarkonton kan inte använda apparna för Apples volymköpsprogram (VPP) med Apple VPP-användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
+- DEM-konton kan inte användas när du registrerar enheter via Apples program för enhetsregistrering (DEP).
 - Enheter kan installera VPP-appar om de har Apple VPP-enhetslicenser.
 - Enheter har blockerats för villkorlig åtkomst med undantag för Windows 10 1803+
 - Alla enheter som registreras med DEM-konton måste vara korrekt licensierade för att hanteras av Intune. Licensen kan vara en Intune-användarlicens eller en Intune-enhetslicens.

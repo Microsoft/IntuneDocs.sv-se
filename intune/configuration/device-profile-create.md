@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02603651587837211d9a67d7e4bbeb90cb358dc5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059564"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390875"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Med enhetsprofiler kan du lägga till och konfigurera inställningar och sedan skicka dem till enheter i din organisation. [Tillämpa funktioner och inställningar på dina enheter med enhetsprofiler](device-profiles.md) innehåller mer information, inklusive vad du kan göra.
 
@@ -78,6 +76,7 @@ Den här artikeln:
        - [Helskärmsläge](kiosk-settings.md)
        - [PKCS-certifikat](../protect/certficates-pfx-configure.md)
        - [PKCS-importerat certifikat](../protect/certificates-imported-pfx-configure.md)
+       - [Inställningsfil](preference-file-settings-macos.md)
        - [SCEP-certifikat](../protect/certificates-scep-configure.md)
        - [Betrott certifikat](../protect/certificates-configure.md)
        - [Uppdateringsprinciper](../software-updates-ios.md)
@@ -160,6 +159,32 @@ När du tilldelar profilen till grupperna fungerar tillämplighetsreglerna som e
 Intune använder olika uppdateringscykler till att söka efter uppdateringar av konfigurationsprofiler. Om enheten nyligen har registrerats körs incheckningarna oftare. [Princip-och profil uppdaterings cykler](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) visar de uppskattade uppdateringstiderna.
 
 Användarna kan när de vill öppna företagsportalappen och synkronisera enheten för att söka efter profiluppdateringar.
+
+## <a name="recommendations"></a>Rekommendationer
+
+När du skapar profiler bör du tänka på följande rekommendationer:
+
+- Namnge dina principer så att du vet vad de är och vad de gör. Alla [efterlevnadsprinciper](../protect/create-compliance-policy.md) och [konfigurationsprofiler](../configuration/device-profile-create.md) har en valfri **Beskrivnings**egenskap. Var specifik och inkludera information som beskriver profilen för andra personer i **Beskrivning**.
+
+  Några exempel på konfigurationsprofiler är:
+
+  **Profilnamn**: Adminmall – konfigurationsprofil för OneDrive för alla Windows 10-användare  
+  **Profilbeskrivning**: Mallprofil för OneDrive-administratör som innehåller minimi- och basinställningar för alla Windows 10-användare. Skapad av user@contoso.com för att hindra användare från att dela organisationsdata till personliga OneDrive-konton.
+
+  **Profilnamn**: VPN-profil för alla iOS-användare  
+  **Profilbeskrivning**: VPN-profil som innehåller minimi- och basinställningar för alla iOS-användare som ansluter sig till Contosos VPN. Skapas av user@contoso.com så att användarna autentiseras automatiskt på VPN i stället för att uppmana användarna att ange sina användarnamn och lösenord.
+
+- Skapa din profil efter dess uppgift, till exempel konfigurera Microsoft Edge-inställningar, aktivera Microsoft Defender Antivirus-inställningar, blockera olåsta enheter och så vidare.
+
+- Skapa profiler som gäller för vissa grupper, till exempel marknadsföring, försäljning, IT-administratörer eller enligt plats eller skolsystem.
+
+- Skilj användarprinciper från enhetsprinciper.
+
+  [Administrativa mallar i Intune](administrative-templates-windows.md) har till exempel hundratals ADMX-inställningar. Dessa mallar visar om en inställning gäller för användare eller enheter. När du skapar administrativa mallar tilldelar du användarinställningarna till en användargrupp och tilldelar enhetsinställningarna till en enhetsgrupp.
+
+  Följande bild visar ett exempel på en inställning som kan gälla för användare och/eller tillämpas på enheter:
+
+  ![Intune-administratörsmall som tillämpas på användare och enheter](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 ## <a name="next-steps"></a>Nästa steg
 

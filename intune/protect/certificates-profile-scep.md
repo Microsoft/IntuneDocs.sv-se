@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f9d6626d26e919efbd3a3d8b5dd735ecb7fb62
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199141"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390290"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Skapa och tilldela SCEP-certifikatprofiler i Intune
 
@@ -53,6 +53,9 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 
    2. Du kan inte använda Intune för att återkalla certifikat som etablerades av SCEP-certifikatprofiler för enhetsägare. Du kan hantera återkallning via en extern process eller direkt med certifikatutfärdaren. 
 
+   4. För dedikerade Android Enterprise-enheter stöds SCEP-certifikatprofiler endast för Wi-Fi-nätverksanslutning och -autentisering.  SCEP-certifikatprofiler på dedikerade Android Enterprise-enheter stöds inte för VPN- eller appautentisering.   
+
+   
 7. Välj **Inställningar** och slutför sedan följande konfigurationer:
 
    - **Certifikattyp**:

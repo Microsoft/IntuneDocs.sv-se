@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53014376a7e220e975878031ffd759da40db7f6b
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413844"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409975"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -75,13 +75,13 @@ Följande instanser av säkerhetsbaslinjer är tillgängliga för användning me
   - [Förhandsversion: MDM-säkerhetsbaslinje för oktober 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
 - **Microsoft Defender ATP-baslinje**
-   *(Denna baslinje kan användas när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))*.
+   *(Denna baslinje kan användas när din miljö uppfyller förhandskraven för att använda [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
   - [Microsoft Defender ATP-baslinje](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Säkerhetsbaslinjen för Microsoft Defender ATP är optimerad för fysiska enheter och rekommenderas inte för användning på virtuella datorer (VM) eller VDI-slutpunkter. Vissa baslinjeinställningar kan påverka fjärranslutna interaktiva sessioner i virtualiserade miljöer.  Mer information finns i [Öka efterlevnaden med säkerhetsbaslinjen i Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) i Windows-dokumentationen.
 
-- **Microsoft Edge-baslinje** 
+- **Microsoft Edge-baslinje**
   - [Förhandsversion: Microsoft Edge-baslinje](security-baseline-settings-edge.md)
 
 Du kan fortsätta att använda och redigera profiler som du har skapat tidigare baserat på en förhandsvisningsmall, till och med när förhandsversionerna inte längre är tillgängliga för att skapa nya profiler.
@@ -103,13 +103,15 @@ Vanliga uppgifter när du arbetar med säkerhetsbaslinjer är:
 
 ### <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer (förhandsversion)** för att visa listan med tillgängliga baslinjer.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Välj **Slutpunktssäkerhet** > **Säkerhetsbaslinjer** för att visa listan med tillgängliga baslinjer.
 
    ![Välj en säkerhetsbaslinje att konfigurera](./media/security-baselines/available-baselines.png)
 
-2. Välj den baslinje som du vill använda och välj sedan **Skapa profil**.
+3. Välj den baslinje som du vill använda och välj sedan **Skapa profil**.
 
-3. På fliken **Grundinställningar** anger du följande egenskaper:
+4. På fliken **Grundinställningar** anger du följande egenskaper:
 
    - **Namn**: Ange ett namn på säkerhetsbaslinjernas profil. Ange till exempel *Standardprofil för Defender ATP*.
 
@@ -117,7 +119,7 @@ Vanliga uppgifter när du arbetar med säkerhetsbaslinjer är:
 
    Välj **nästa** för att gå till nästa flik. När du har fortsatt till en ny flik kan du välja fliknamnet för att återgå till en tidigare flik.
 
-4. På inställningsfliken Konfiguration visas grupperna av **Inställningar** som är tillgängliga i den baslinje som du har valt. Du kan expandera en grupp om du vill visa inställningarna i gruppen och standardvärdena för dessa inställningar i baslinjen. Så här hittar du specifika inställningar:
+5. På inställningsfliken Konfiguration visas grupperna av **Inställningar** som är tillgängliga i den baslinje som du har valt. Du kan expandera en grupp om du vill visa inställningarna i gruppen och standardvärdena för dessa inställningar i baslinjen. Så här hittar du specifika inställningar:
    - Välj en grupp att expandera och granska de tillgängliga inställningarna.
    - Använd *Sökfältet* och ange nyckelord som filtrera för att visa endast de grupper som innehåller dina sökkriterier.
 
@@ -125,13 +127,13 @@ Vanliga uppgifter när du arbetar med säkerhetsbaslinjer är:
 
    ![Expandera en grupp om du vill visa inställningarna för den gruppen](./media/security-baselines/sample-list-of-settings.png)
 
-5. På fliken **Omfångstaggar** väljer du **Välj omfångstaggar** för att öppna fönstret *Välj taggar* för att tilldela omfångstaggar till profilen.
+6. På fliken **Omfångstaggar** väljer du **Välj omfångstaggar** för att öppna fönstret *Välj taggar* för att tilldela omfångstaggar till profilen.
 
-6. På fliken **Tilldelningar** väljer du **Välj grupper som ska ingå** och tilldela sedan baslinjen till en eller flera grupper. Använd **Välj grupper att utesluta** för att finjustera tilldelningen.
+7. På fliken **Tilldelningar** väljer du **Välj grupper som ska ingå** och tilldela sedan baslinjen till en eller flera grupper. Använd **Välj grupper att utesluta** för att finjustera tilldelningen.
 
    ![Tilldela en profil](./media/security-baselines/assignments.png)
 
-7. När du är redo att distribuera baslinjen fortsätter du till fliken **Granska och skapa** för att granska informationen för baslinjen. Spara och distribuera profilen genom att välja **Skapa**.
+8. När du är redo att distribuera baslinjen fortsätter du till fliken **Granska och skapa** för att granska informationen för baslinjen. Spara och distribuera profilen genom att välja **Skapa**.
 
    När du skapar profilen skickas den till den tilldelade gruppen och kan tillämpas direkt.
 
@@ -140,7 +142,7 @@ Vanliga uppgifter när du arbetar med säkerhetsbaslinjer är:
 
    ![Granska baslinjen](./media/security-baselines/review.png)
 
-8. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**. Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.
+9. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**. Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Ändra baslinjeversionen för en profil
 
@@ -160,25 +162,27 @@ När du sparar efter en slutförd konvertering kommer baslinjen att distribueras
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Så här ändrar du baslinjeversionen för en profil
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj sedan **Enhetssäkerhet** > **Säkerhetsbaslinjer**. Välj sedan panelen för den baslinjetyp som har den profil du vill använda.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Välj sedan **Profiler**, och markera kryssrutan för den profil du vill redigera. Välj sedan **Ändra version**.
+2. Välj **Slutpunktssäkerhet** > **Säkerhetsbaslinjer**. Välj sedan panelen för den baslinjetyp som har den profil du vill använda.
+
+3. Välj sedan **Profiler**, och markera kryssrutan för den profil du vill redigera. Välj sedan **Ändra version**.
 
    ![välj en baslinje](./media/security-baselines/select-baseline.png)
 
-3. I fönstret **Ändra version** använder du listrutan **Välj en säkerhetsbaslinje att uppdatera till** och välj den versioninstans som du vill använda.
+4. I fönstret **Ändra version** använder du listrutan **Välj en säkerhetsbaslinje att uppdatera till** och välj den versioninstans som du vill använda.
 
    ![välj en version](./media/security-baselines/select-instance.png)
 
-4. Välj **Granska uppdateringen** för att hämta en CSV-fil som visar skillnaden mellan profilens aktuella instansversion och den nyvalda versionen. Granska den här filen så att du förstår vilka inställningar som är ny eller har tagits bort och vilka standardvärdena för dessa inställningar som gäller för den uppdaterade profilen.
+5. Välj **Granska uppdateringen** för att hämta en CSV-fil som visar skillnaden mellan profilens aktuella instansversion och den nyvalda versionen. Granska den här filen så att du förstår vilka inställningar som är ny eller har tagits bort och vilka standardvärdena för dessa inställningar som gäller för den uppdaterade profilen.
 
    När du är klar kan du fortsätta till nästa steg.
 
-5. Välj något av de två alternativen för **Välj en motod för att uppdatera profilen**:
+6. Välj något av de två alternativen för **Välj en motod för att uppdatera profilen**:
    - **Acceptera baslinje ändringar men behåll mina befintliga anpassade inställningar** – det här alternativet behåller dina ändringar i baslinjeprofilen och tillämpar dem på den nya versionen som du har valt att använda.
    - **Acceptera ändringar av baslinjen och ta bort befintliga anpassade inställningar** – det här alternativet skriver över din ursprungliga profil. Den uppdaterade profilen använder standardvärden för alla inställningar.
 
-6. Välj **Skicka**. Profilen uppdaterar till den valda versionen av baslinjen. När konverteringen har slutförts distribueras baslinjen omedelbart till tilldelade grupper.
+7. Välj **Skicka**. Profilen uppdaterar till den valda versionen av baslinjen. När konverteringen har slutförts distribueras baslinjen omedelbart till tilldelade grupper.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Ta bort en tilldelning av en säkerhetsbaslinje
 

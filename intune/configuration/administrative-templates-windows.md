@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9cec7395fc766f6a937e6c43ef3a32fb21610be
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059994"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547974"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
 
@@ -101,3 +101,5 @@ Det finns hundratals inställningar tillgängliga i dessa mallar. För att göra
 ## <a name="next-steps"></a>Nästa steg
 
 Mallen har skapats, men den gör inte något än. [Tilldela mallen (kallas även profil)](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
+
+[Uppdatera Office 365 med hjälp av administrativa mallar](administrative-templates-update-office.md).

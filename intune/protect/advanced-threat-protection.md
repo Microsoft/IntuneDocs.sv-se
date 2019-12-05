@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 889b0a7562f1a663556e955271681e0747aeb3c4
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: c8c756ad2df00a97df7289491daf830e584c0045
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199168"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410200"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune
 
@@ -193,6 +193,12 @@ Principen för villkorlig åtkomst blockerar åtkomsten till resurser för enhet
 2. Välj **Enheter** > **Övervaka** > **Principefterlevnad**.
 
 3. Hitta din Microsoft Defender ATP-princip i listan och se vilka enheter som är kompatibla eller inkompatibla.
+
+Du kan också använda den *operativa* rapporten för icke-kompatibla enheter från samma plats:
+
+1. Välj **Enheter** > **Övervaka** > **icke-kompatibla enheter**.
+
+Mer information om rapporter finns i [Intune-rapporter](../fundamentals/reports.md).
 
 ## <a name="view-onboarding-status"></a>Visa registreringsstatus
 

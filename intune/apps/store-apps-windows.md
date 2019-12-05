@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7624800b1f53c6e8dcdf0b37f9e352deb47563a5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c19d14b2f2cfa838d79af1c6fbb3c3500004e56e
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497497"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74548027"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Lägga till Microsoft Store-appar i Microsoft Intune
 
@@ -43,7 +43,7 @@ Du kan lägga till en Microsoft-Store-app i Intune genom att göra följande:
     - **Namn**: Ange namnet på appen så som den ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
-    - **Webbadress till appbutik**: Skriv webbadressen till App Store för den app som du vill skapa.
+    - **Webbadress till appbutik**: Skriv webbadressen till App Store för den app som du vill skapa. Du hittar webbadressen genom att söka i [Microsoft Store](https://store.microsoft.com) efter det önskade programmet. Använd webbadressen från webbläsarens adressfält.
     - **Kategori**: Du kan även välja en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
     - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
     - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
