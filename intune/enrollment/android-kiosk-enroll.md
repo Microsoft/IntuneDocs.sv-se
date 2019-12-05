@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: d4ff9126fec182d1e0d2f3eb75297ede8a632e2e
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390727"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurera Intune-registrering av dedikerade Android Enterprise-enheter
 
@@ -101,6 +101,9 @@ När du ersätter eller återkallar en token/QR-kod påverkar inte enheter som r
 ## <a name="enroll-the-dedicated-devices"></a>Registrera de dedikerade enheterna
 
 Du kan nu [registrera dina dedikerade enheter](android-dedicated-devices-fully-managed-enroll.md).
+
+> [!NOTE]
+> **Microsoft Intune**-appen installeras automatiskt när en dedikerad enhet registreras.  Den här appen krävs för registreringen och kan inte avinstalleras. 
 
 ## <a name="managing-apps-on-android-enterprise-dedicated-devices"></a>Hantera appar på dedikerade Android Enterprise-enheter
 

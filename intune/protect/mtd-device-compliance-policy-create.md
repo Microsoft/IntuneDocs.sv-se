@@ -6,31 +6,31 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/02/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
-ms.reviewer: heenamac
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42500618c5ec753fcabf72b03f175b823c3337d4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 504c77fb56918cf97312e70f50b38356f9f7efef
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504396"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409704"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Skapa en princip för Mobile Threat Defense-enhetsefterlevnad med Intune
 
-> [!NOTE] 
-> Denna information gäller alla partners för skydd mot mobilhot.
-
 Intune med MTD hjälper dig att identifiera hot och bedöma risker på mobila enheter. Du kan skapa en Intune-principregel för enhetsefterlevnad som bedömer risken och avgör om enheten uppfyller efterlevnadskraven. Du kan sedan använda en [princip för villkorlig åtkomst](create-conditional-access-intune.md) för att blockera åtkomst till tjänster utifrån enhetens efterlevnad.
+
+> [!NOTE]
+> Denna information gäller alla partners för skydd mot mobilhot.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -42,44 +42,41 @@ Förutsättningar för principen för enhetsefterlevnad med MTD:
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Skapa en MTD-enhetsefterlevnadsprincip
 
-1. Gå till [Azure Portal](https://portal.azure.com/) och logga in med dina Intune-autentiseringsuppgifter.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Välj **Alla tjänster** i den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
+2. Välj **Enhet** > **Efterlevnadsprinciper** > **Skapa princip**.
 
-3. Välj **Intune**. **Intune-instrumentpanelen** öppnas.
+3. Ange en efterlevnadsprincip för enheter i **Namn**, **Beskrivning**, välj **Plattform**, **Konfigurera** under avsnittet **Inställningar**.
 
-4. Välj **Enhetsefterlevnad** på **Intunes instrumentpanel** och välj sedan **Principer** under avsnittet **Hantera**.
+4. Välj **Enhetens hälsotillstånd** i fönstret för **efterlevnadsprincip**.
 
-5. Välj **Skapa princip**, ange ett **namn** på och en **beskrivning** av principen för enhetsefterlevnad, välj **plattform** och välj sedan **Konfigurera** under avsnittet **Inställningar**.
+5. I fönstret **Enhetens hälsotillstånd** väljer du mobilhotnivå i listrutan under **Kräv att enheten ska hållas vid eller under hotnivån för enheten**.
 
-6. Välj **Enhetens hälsotillstånd** i fönstret för **efterlevnadsprincip**.
+   - **Skyddad**: Den här nivån är säkrast. Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
 
-7. I fönstret **Enhetens hälsotillstånd** väljer du mobilhotnivå i listrutan under **Kräv att enheten ska hållas vid eller under hotnivån för enheten**.
+   - **Låg**: Enheten följer standard om det enbart finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
 
-    a.  **Skyddad**: Den här nivån är säkrast. Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
+   - **Medel**: Enheten följer standard om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
 
-    b.  **Låg**: Enheten följer standard om det enbart finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
+   - **Hög**: Det här är den minst säkra nivån. Detta tillåter alla hotnivåer och använder endast Mobile Threat Defense i rapporteringssyfte. Enheterna måste ha MTD-appen aktiverad med den här inställningen.
 
-    c.  **Medel**: Enheten följer standard om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-
-    d.  **Hög**: Det här är den minst säkra nivån. Detta tillåter alla hotnivåer och använder endast Mobile Threat Defense i rapporteringssyfte. Enheterna måste ha MTD-appen aktiverad med den här inställningen.
-
-8. Klicka på **OK** två gånger och välj sedan **Skapa**.
+6. Välj **OK** två gånger och sedan **Skapa** för att skapa principen.
 
 > [!IMPORTANT]
 > Om du skapar principer för villkorlig åtkomst till Office 365 eller andra tjänster kommer utvärderingen av efterlevnad att bedömas och icke-kompatibla enheter kommer inte att få åtkomst till företagsresurser förrän hotet har lösts i enheten.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>Tilldela en MTD-enhetsefterlevnadsprincip
 
-Om du vill tilldela en princip för enhetsefterlevnad till användare, väljer du en princip som du tidigare har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad – Principer**.
+Tilldela en efterlevnadsprincip för enheter till användare:
 
-1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Åtgärden öppnar ett fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Öppna sidan som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper att ta med**.  När du väljer **Välj** distribueras principen till användarna.
+2. Välj **Enhet** > **Efterlevnadsprinciper**.
 
-    > [!NOTE] 
-    > Du har tillämpat principen på användarna. Enheterna som används av de användare som principen är inriktad på kommer att utvärderas för att se om de följer standard.
+3. Välj den princip som du vill tilldela till användarna och välj sedan **Tilldelningar**. Använd de tillgängliga alternativen för att *inkludera* och *exkludera* grupper som ska ta emot principen.  
+
+4. Välj Spara för att slutföra tilldelningen. När du sparar tilldelningen, distribueras principen till de valda användarna och efterlevnaden utvärderas i deras enheter.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Aktivera MTD med Intune](mtd-connector-enable.md)
+[Aktivera MTD med Intune](mtd-connector-enable.md)

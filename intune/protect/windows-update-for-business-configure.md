@@ -5,22 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: aiwang
+ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53ac86ce88481176ab6f2472b1c0fbae8d3453c1
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199317"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291102"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
@@ -208,13 +208,18 @@ När en enhet tar emot en princip för Windows 10-funktionsuppdateringar:
 
 - Till skillnad från om man använder *pausfunktionen* med en uppdateringsring – som upphör att gälla efter 35 dagar – förblir principen för Windows 10-funktionsuppdateringar fortfarande aktiv. Enheterna installerar inte någon ny Windows-version förrän du har ändrat eller tagit bort principen för Windows 10-funktionsuppdateringar. Om du redigerar principen för att ange en nyare version kan enheterna sedan installera funktionerna från just den Windows-versionen.
 
-> [!IMPORTANT]
-> När du distribuerar både en *Windows 10-funktionsuppdatering* och en princip för *Windows 10-uppdateringsring* på samma enhet granskar du uppdateringsringen för att kontrollera följande konfigurationer:
->
-> - **Uppskjutningsperiod för funktionsuppdatering (dagar)** måste vara inställd på **0**
-> - Uppdateringsringens funktionsuppdateringar måste vara *aktiva*. De får inte pausas.
+### <a name="limitations-for-windows-10-feature-updates"></a>Begränsningar för funktionsuppdateringar i Windows 10
 
-Windows 10-funktionsuppdateringar stöds inte av Windows Autopilot.
+- När du distribuerar en princip för *Windows 10-funktionsuppdatering* till en enhet som också får en princip för *Windows 10-uppdateringsring*, granskar du uppdateringsringen för att kontrollera följande konfigurationer:
+  - **Uppskjutningsperiod för funktionsuppdatering (dagar)** måste vara inställd på **0**.
+  - Uppdateringsringens funktionsuppdateringar måste vara *aktiva*. De får inte pausas.
+
+- Principen för *Windows 10-funktionsuppdateringar* stöds inte av Autopilot. Intune distribuerar inte principen till:
+  - Enheter som etableras av Autopilot.
+  - Enheter som tidigare har etablerats med Autopilot.
+
+  Den här begränsningen undersöks för att se om den har stöd framöver.
+
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Skapa och tilldela Windows 10-funktionsuppdateringar
 

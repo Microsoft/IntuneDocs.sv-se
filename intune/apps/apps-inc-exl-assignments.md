@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47ecc2363244634cb355fdeaeb51074417322e4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f073c8ad7a8e087a791ee756683011fac6947162
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507293"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547973"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -31,9 +31,20 @@ I Intune kan du se vem som har åtkomst till en app genom att tilldela grupper a
 
 För att ställa in tillgängligheten för en app inkluderar och exkluderar du apptilldelningar till en grupp med användare eller enheter genom att använda en kombination av grupptilldelningar som inkluderar och exkluderar. Den här funktionen kan vara användbar när du gör appen tillgänglig genom att inkludera en stor grupp och sedan begränsar valda användare genom att även exkludera en mindre grupp. Den mindre gruppen kan vara en testgrupp eller en exekutiv grupp. 
 
-När du exkluderar grupper från en apptilldelning kan du endast exkludera användargrupper eller enhetsgrupper. Du kan inte utelämna en blandning av användargrupper och enhetsgrupper. 
+Vi rekommenderar att du skapar och tilldelar appar specifikt för dina användargrupper och separat för dina enhetsgrupper. Mer information om grupper finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md).  
 
-Intune tar inte hänsyn till några kopplingar mellan användare och specifika enheter vid exkludering av grupper. Om du väljer att inkludera användargrupper och samtidigt exkludera enhetsgrupper kommer du aldrig att få önskat resultat. Inkludering har företräde framför exkludering. Om du till exempel riktar en iOS-app till **Alla användare** och exkluderar **Alla iPad-enheter** blir resultatet att alla användare som använder en iPad fortfarande får appen. Om du däremot riktar iOS-appen till **Alla enheter** och exkluderar **Alla iPad-enheter** så lyckas distributionen.  
+Det finns viktiga scenarier när du inkluderar eller exkluderar apptilldelningar:
+
+- Undantag har företräde framför inkludering i följande scenarier för grupptyper:
+    - Inkludera och exkludera användargrupper när appar tilldelas
+    - Inkludera och exkludera enhetsgrupper när appar tilldelas
+
+    Om du till exempel tilldelar en enhetsgrupp till användargruppen **Alla företagsanvändare** men exkluderar medlemmar i användargruppen **Ledningsgrupp**, får **Alla företagsanvändare** förutom **Ledningsgrupp** tilldelningen eftersom båda grupperna är användargrupper.
+- Intune utvärderar inte grupprelationer från användare till enhet. Om du tilldelar appar till blandade grupper, kanske resultatet inte blir det du vill ha eller förväntar dig.
+
+    Du kan till exempel tilldela en enhetsgrupp till användargruppen **Alla användare**, men exkludera enhetsgruppen **Alla personliga enheter**. I den här blandade gruppapptilldelningen får **Alla användare** appen. Undantaget tillämpas inte.
+
+Därför rekommenderar vi inte att du tilldelar appar till blandade grupper.
 
 > [!NOTE]
 > När du ställer in en grupptilldelning för en app blir typen **Ej tillämplig** inaktuell och ersätts med gruppfunktioner för att exkludera. 
@@ -41,7 +52,6 @@ Intune tar inte hänsyn till några kopplingar mellan användare och specifika e
 > Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen. Grupperna har inbyggda optimeringar för din bekvämlighet. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du kanske själv har skapat.  
 >
 > Android enterprise stöder att inkludera och exkludera grupper. Du kan använda de inbyggda grupperna **Alla användare** och **Alla enheter** vid Android enterprise-apptilldelning. 
-
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Inkludera och exkludera grupper när du tilldelar appar 
 Tilldela en app till grupper med hjälp av en tilldelning för att inkludera eller exkludera:

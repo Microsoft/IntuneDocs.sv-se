@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/13/2018
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,52 +18,92 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0702eebdd3899c6da527af0078e5e7d47cf95194
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6e3219e32ef9bea838f0c19258d0b22a99083a12
+ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510230"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74261579"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
-Intune använder Azure Active Directory-grupper (AD) för att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
+
+Intune använder Azure Active Directory-grupper (Azure AD) till att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
 
 Du kan lägga till följande typer av grupper:
-- **Tilldelade grupper** – Lägg manuellt till användare eller enheter i en statisk grupp
-- **Dynamiska grupper** – (med Azure Active Directory Premium) Möjliggör dynamiskt skapande av antingen användar- eller enhetsgrupper som definierats med enkla eller avancerade regler
+
+- **Tilldelade grupper** – Lägg manuellt till användare eller enheter i en statisk grupp. 
+- **Dynamiska grupper** (kräver Azure AD Premium) – Lägg automatiskt till användare eller enheter i användargrupper eller enhetsgrupper baserat på ett uttryck som du skapar.
+
+  Till exempel när en användare läggs till med en chefstitel, läggs användaren automatiskt till i användargruppen **Alla chefer**. Eller när en enhet har operativsystemet iOS, läggs enheten automatiskt till i enhetsgruppen **Alla iOS-enheter**.
 
 ## <a name="add-a-new-group"></a>Lägg till en ny grupp
 
 Använd följande anvisningar för att skapa en ny grupp.
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Gå till **Intune**-fönstret, välj **Grupper** och sedan **Ny grupp** i fönstret **Alla grupper**.
+
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Grupper** > **Ny grupp**:
+
    ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add/groups-add-new.png)
-4. Välj något av följande alternativ för **Grupptyp**:
-    - **Säkerhet**: Säkerhetsgrupper är en bra resurs att använda när du ska fylla användargrupper. Eftersom säkerhetsgrupper definierar vem som har åtkomst till vilka resurser så kan de lätt överföras till Intune-användargrupper. Säkerhetsgrupper som synkroniseras från Active Directory till Azure Active Directory, eller som skapats direkt i Azure Active Directory via Microsoft 365-administrationscentret eller Azure-portalen, kan användas för att skapa användargrupper i Intune.
-    - **Office 365**
 
-5. Skriv ett **Namn** och en **Beskrivning** för den nya gruppen. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
+3. Välj något av följande alternativ i **Grupptyp**:
 
-6. Välj **Medlemskapstyp**:
-   - **Tilldelad** för att skapa gruppen med manuellt tilldelade medlemmar. Läs mer om [grupper som tilldelats i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
-   - **Dynamisk användare** för att skapa en användargrupp som definierats med en **dynamisk fråga**.
-   - **Dynamisk enhet** för att skapa en enhetsgrupp som definierats med en **dynamisk fråga**.
+    - **Säkerhet**: Säkerhetsgrupper definierar vem som har åtkomst till resurser. Vi rekommenderar att du använder detta för dina grupper i Intune. Du kan till exempel skapa grupper för användare, t.ex. **Alla anställda i Charlotte** eller **Alla kvinnor på Contoso**. Du kan också skapa grupper för enheter, till exempel **Alla iOS-enheter** eller **Alla Windows 10 Student-enheter**.
 
-   ![Skärmbild av Intune-gruppegenskaper](./media/groups-add/groups-add-properties.png)
+        > [!TIP]
+        > De användare och grupper som skapas visas också i [Administrationscenter för Microsoft 365](https://admin.microsoft.com), Administrationscenter för Azure Active Directory och [Microsoft Intune i Azure-portalen](https://go.microsoft.com/fwlink/?linkid=2090973). I din organisationsklient kan du skapa och hantera grupper inom alla dessa områden.
+        >
+        > Om din primära roll är enhetshantering, rekommenderar vi att du använder [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   Med Azure AD kan du skapa dynamiska grupper baserat på regler som definierar medlemskap. Läs mer om hur du [skapar attributbaserade dynamiska grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal).
+    - **Office 365**: De här grupperna är utformade för att styra åtkomst och dela Office 365-resurser. Du kan till exempel skapa en Office 365-grupp och dela en Outlook-inkorg eller kalender. Mer information finns i [Mer information om Office 365-grupper](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
-7. Du kan välja **Aktivera Office-funktioner** och ge medlemmarna i användargruppen tillgång till delade Office 365-appar. Läs mer om [Office 365-grupper](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
-8. Välj **Skapa** om du vill lägga till en ny grupp.
+4. Ange ett **gruppnamn** och en **gruppbeskrivning** för den nya gruppen. Var specifik och inkludera information som beskriver gruppen för andra personer.
+
+    Ange till exempel **Alla Windows 10 Student-enheter** som gruppnamn och **Alla Windows 10-enheter som används av elever i Contoso High School 9–12** som gruppbeskrivning.
+
+5. Ange **Medlemskapstyp**. Alternativen är:
+
+    - **Tilldelade**: Administratörer tilldelar manuellt användare eller enheter till den här gruppen och tar bort användare eller enheter manuellt.
+    - **Dynamisk användare**: Administratörer skapar medlemskapsregler för att automatiskt kunna lägga till och ta bort medlemmar.
+    - **Dynamisk enhet**: Administratörer skapar dynamiska gruppregler för att automatiskt kunna lägga till och ta bort enheter.
+
+        ![Skärmbild av Intune-gruppegenskaper](./media/groups-add/groups-add-properties.png)
+
+    Mer information om dessa medlemskapstyper och hur du skapar dynamiska uttryck finns i:
+
+    - [Skapa en basgrupp och lägg till medlemmar med hjälp av Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Regler för dynamiskt medlemskap i grupper i Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+
+    > [!NOTE]
+    > När du skapar användare eller grupper i det här administrationscentret kanske du inte ser **Azure Active Directory**-anpassningen. Men det är det som du använder.
+
+6. Välj **Skapa** om du vill lägga till en ny grupp. Gruppen visas i listan.
+
+> [!TIP]
+> Du kan även skapa andra dynamiska användar- och enhetsgrupper, till exempel:
+>
+> - Alla elever i Contoso High School
+> - Alla Android Enterprise-enheter
+> - Alla iOS 11-enheter och äldre enheter
+> - Marknadsföring
+> - HR-avdelningen
+> - Alla anställda i Charlotte
+> - Alla anställda i WA
 
 ## <a name="groups-and-policies"></a>Grupper och principer
 
-När du skapar grupper bör du tänka på hur du kommer att tillämpa [principerna](../protect/device-compliance-get-started.md). Du kan t.ex. ha principer som är specifika för ett operativsystem för en enhet och principer som är specifika för olika roller i din organisation eller till organisationsenheter som du redan har definierat i Active Directory. Det kan vara praktiskt att ha separata enhetsgrupper för iOS, Android och Windows, och användargrupper som är specifika för olika organisationsroller.
+Åtkomsten till organisationens resurser styrs av vilka användare och grupper som du skapar.
 
-Du vill förmodligen även skapa en standardprincip som gäller för alla grupper och enheter och som fastställer de grundläggande kompatibilitetskraven för din organisation. Sedan kan du skapa mer specifika principer för de bredaste användar- och enhetskategorierna. Du kan till exempel skapa e-postprinciper för vart och ett av enhetsoperativsystemen.
+När du skapar grupper bör du fundera på hur du ska tillämpa [efterlevnadsprinciper](../protect/device-compliance-get-started.md) och [konfigurationsprofiler](../configuration/device-profiles.md). Du kan till exempel ha:
 
+- Principer som är specifika för en enhets operativsystem.
+- Principer som är specifika för olika roller i din organisation.
+- Principer som är specifika för organisationsenheter som du har definierat i Active Directory Domain Services.
 
+När du skapar de grundläggande kompatibilitetskraven för din organisation, kan du skapa en standardprincip som gäller alla grupper och enheter. Sedan kan du skapa mer specifika principer för de bredaste användar- och enhetskategorierna. Du kan till exempel skapa e-postprinciper för vart och ett av enhetsoperativsystemen.
+
+Rekommendationer och vägledning för konfigurationsprofiler finns i [Tilldela principer till användargrupper eller enhetsgrupper](../configuration/device-profile-assign.md#user-groups-vs-device-groups) och [profilrekommendationer](../configuration/device-profile-create.md#recommendations).
 
 ## <a name="see-also"></a>Se även
-- [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
-- [Klassiska Intune-grupper i Azure-portalen](groups-get-started.md)
+
+- [Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune](role-based-access-control.md)
+- [Hantera åtkomst till resurser med Azure AD-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)

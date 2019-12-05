@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: bc781ea72b54468b21fb70e60e334f1c8d8832ea
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709174"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547955"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
 
@@ -60,9 +60,9 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 2. Spara CSV-filen.
 
-3. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
+3. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Enheter** (under **Windows AutoPilot-distributionsprogram** > **Importera**.
 
-    ![Skärmbild av Windows Autopilot-enheter](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
+    ![Skärmbild av Windows Autopilot-enheter](./media/enrollment-autopilot/autopilot-import-device.png)
 
 4. Under **Lägg till Windows Autopilot-enheter** bläddrar du till den CSV-fil som du sparade.
 
@@ -70,7 +70,7 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 5. Välj **Importera** för att börja importera enhetsinformationen. Det kan ta flera minuter att importera.
 
-4. När importen är klar väljer du **Enhetsregistrering** > **Windows-registrering** > **Windows Autopilot** > **Enheter** > **Synkronisera**. Ett meddelande visar att synkroniseringen pågår. Processen kan ta några minuter att slutföra, beroende på hur många enheter du synkroniserar.
+4. När importen är klar väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows AutoPilot-distributionsprogram** > **Synkronisera**. Ett meddelande visar att synkroniseringen pågår. Processen kan ta några minuter att slutföra, beroende på hur många enheter du synkroniserar.
 
 5. Uppdatera vyn för att se de nya enheterna.
 
@@ -90,7 +90,7 @@ Nu ska du skapa en enhetsgrupp där du placerar de Autopilot-enheter som du nyss
 
 När du har skapat en enhetsgrupp, måste du skapa en distributionsprofil så att du kan konfigurera Autopilot-enheterna.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
 2. På sidan **Grundinställningar** vid **Namn**, anger du *Autopilot-profil*. I **Beskrivning** anger du *Testprofil för Autopilot-enheter*.
 3. Ange **Omvandla alla målenheter till Autopilot** som **Ja**. Den här inställningen ser till att alla enheter i listan blir registrerade med Autopilots distributionstjänst. Det kan ta upp till 48 timmar för registreringen att bearbetas.
 4. Välj **Nästa**.
@@ -116,9 +116,9 @@ Om du inte vill använda Autopilot-enheter mer kan du ta bort dem.
 
 1. Om enheterna har registrerats i Intune måste du först [ta bort dem från Azure Active Directory-portalen](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
+2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows AutoPilot-distributionsprogram**).
 
-3. Under **Windows Autopilot-enheter** markerar du de enheter som du vill ta bort. Välj sedan **Ta bort**.
+3. Välj de enheter som du vill ta bort och välj sedan **Ta bort**.
 
 4. Bekräfta borttagningen genom att välja **Ja**. Det kan ta några minuter att ta bort.
 
