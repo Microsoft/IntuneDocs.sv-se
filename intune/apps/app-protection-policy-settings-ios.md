@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7242b661668f994208aa36a8f9fc5d350623ccd
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: ba3b145c3a48992b1e8a01ad2cee4be60646df6f
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390379"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781251"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-I den här artikeln beskrivs inställningarna för appskyddsprinciper för iOS-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal när du skapar en ny princip.
+I den här artikeln beskrivs inställningarna för appskyddsprinciper för iOS-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip i fönstret **Inställningar** i Microsoft Azure-portalen när du skapar en ny princip.
 
 Det finns tre typer av principinställningar: *Dataflytt*, *åtkomstkrav* och *villkorlig start*. I den här artikeln används termen ***principhanterade appar*** för att hänvisa till appar som har konfigurerats med appskyddsprinciper.
 
@@ -88,7 +88,7 @@ Det finns vissa undantag för appar och plattformstjänster som Intune-appskydds
 | <ul><ui> **Välj minimilängd för PIN-kod** | Ange det minsta antalet siffror i en PIN-kodsekvens.  | **4**  |
 | <ul><ui> **Touch ID istället för PIN-kod för åtkomst (iOS 8+)** | Välj **Tillåt** om du vill tillåta att [Touch ID](https://support.apple.com/HT201371) används i stället för en PIN-kod för åtkomst till appen.    | **Tillåt**  |
 |<ul><ui><ul><ui>**Åsidosätt Touch ID med PIN-kod efter tidsgräns**|  Om du vill använda den här inställningen väljer du **Kräv** och konfigurerar sedan en tidsgräns för inaktivitet.  |**Kräv**  |
-| <ul><ui><ul><ui><ul><ui> **Tidsgräns (minuters aktivitet)** |  Ange efter hur många minuter antingen ett lösenord eller en numerisk PIN-kod (beroende på vad som är konfigurerat) ska åsidosätta användningen av fingeravtryck. Det här tidsgränsvärdet ska vara större en värdet som anges under ”Kontrollera åtkomstbehörigheterna på nytt efter (minuters inaktivitet)”.  |**30**  |
+| <ul><ui><ul><ui><ul><ui> **Tidsgräns (minuters aktivitet)** |  Ange efter hur många minuter antingen ett lösenord eller en numerisk PIN-kod (beroende på vad som är konfigurerat) ska åsidosätta användningen av fingeravtryck eller identifiering av ansikte för åtkomst. Det här tidsgränsvärdet ska vara större en värdet som anges under ”Kontrollera åtkomstbehörigheterna på nytt efter (minuters inaktivitet)”.  |**30**  |
 | <ul><ui><ul><ui>**Face ID istället för PIN-kod för åtkomst (iOS 11+)** | Välj **Tillåt** för att tillåta användaren att använda ansiktsigenkänningsteknik för att autentisera användare på iOS-enheter. Om det tillåts måste Face ID användas för åtkomst till appen på en enhet med Face ID-funktioner.    | **Tillåt**  |
 | <ul><ui>**Återställ PIN-kod efter antal dagar** | Välj **Ja** för att kräva att användarna ändrar PIN-kod för appen efter en viss tid, i dagar.  <br><br>När värdet är *Ja* kan du sedan konfigurera antalet dagar innan återställning av PIN-koden krävs. |**Nej**  |  
 | <ul><ui><ul><ui> **Antal dagar** | Konfigurera antalet dagar innan återställning av PIN-koden krävs.  |**90**  |

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2f483415d050486ae9979899d9308154a9b131
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 348d1fe2fd236a2af11f7e58dc11530a5ce397bc
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74411365"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564189"
 ---
 # <a name="configure-smime-with-outlook-for-ios"></a>Konfigurera S/MIME med Outlook för iOS
 
@@ -62,14 +62,14 @@ Outlook för iOS har stöd för två sätt att leverera certifikat till enheter 
 Använd följande steg för att konfigurera Outlook för iOS S/MIME i Endpoint Manager, inklusive automatiskt leverans av S/MIME-certifikat som Outlook för iOS kan använda:
 
 ### <a name="add-the-microsoft-outlook-app"></a>Lägg till programmet Microsoft Outlook
-1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Lägg till programmet Microsoft Outlook för iOS från App Store till Endpoint Manager eller synkronisera Outlook för iOS från Apples volymköpsprogram. Mer information finns i [Lägg till iOS-butiksprogram i Microsoft Intune](~/apps/store-apps-ios.md) eller [Så här hanterar du iOS- och macOS-program som köpts genom Apples volymköpsprogram med Microsoft Intune](~/apps/vpp-apps-ios.md).
 
 ### <a name="create-the-outlook-for-ios-smime-configuration-policy"></a>Skapa konfigurationsprincipen för Outlook för iOS S/MIME
 
 Med följande steg kan du skapa och konfigurera Outlook-principen för iOS S/MIME i Endpoint Manager. De här inställningarna gör att signerings- och krypteringscertifikaten levereras automatiskt.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Program** > **Konfigurationsprincip för program** > **Lägg till**.<br>
+1. Logga in i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.<br>
 Fönstret **Lägg till konfigurationsprincip** visas.
 2. Ange **Namn** och **Beskrivning** för den nya konfigurationsprincipen.
 3. Välj **Hanterade enheter** som **Registreringstyp för enhet**.

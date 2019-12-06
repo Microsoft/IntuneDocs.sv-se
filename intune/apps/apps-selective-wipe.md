@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e827075b56d1751e837c25d85c304201bcafa01
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 9c0ca82b434b83937c7962b2676ce3c2a12c1424
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390444"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564010"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
@@ -44,8 +44,8 @@ WIP-principer (Windows Information Protection) kan distribueras utan att MDM-anv
 
 ## <a name="create-a-wipe-request"></a>Skapa en rensningsbegäran
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Klientappar** > **Selektiv radering av app** > **Skapa rensningsbegäran** i Intune-fönstret.<br>
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Selektiv radering av app** > **Skapa rensningsbegäran**.<br>
    Fönstret **Skapa rensningsbegäran** visas.
 3. Klicka på **Välj användare**, välj den användare vars appdata du vill rensa och klicka sedan på **Välj** längst ned i fönstret **Välj användare**.
 
@@ -65,7 +65,7 @@ Tjänsten skapar och spårar en separat rensningsförfrågan för varje skyddad 
 
 Du kan få en sammanfattande rapport som visar övergripande status för rensningsförfrågan och som innehåller antalet väntande förfrågningar och fel. Följ dessa steg för mer information:
 
-1. I fönstret **Klientappar** > **Selektiv radering av app** kan du se en lista med dina förfrågningar grupperade efter användare. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
+1. Du kan se en lista med dina förfrågningar grupperade efter användare i fönstret **Appar** > **Selektiv radering av app**. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
 
     ![Skärmbild på status för rensningsförfrågan i fönstret Selektiv radering av app](./media/apps-selective-wipe/wipe-request-status-1.png)
 

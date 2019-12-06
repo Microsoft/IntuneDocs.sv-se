@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291102"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691778"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
@@ -214,9 +214,7 @@ När en enhet tar emot en princip för Windows 10-funktionsuppdateringar:
   - **Uppskjutningsperiod för funktionsuppdatering (dagar)** måste vara inställd på **0**.
   - Uppdateringsringens funktionsuppdateringar måste vara *aktiva*. De får inte pausas.
 
-- Principen för *Windows 10-funktionsuppdateringar* stöds inte av Autopilot. Intune distribuerar inte principen till:
-  - Enheter som etableras av Autopilot.
-  - Enheter som tidigare har etablerats med Autopilot.
+- Policyer för funktionsuppdateringar för Windows 10 kan inte tillämpas under OOBE (out of box experience) och tillämpas endast vid den första Windows Update-genomsökningen när en enhet har etablerats färdigt (detta tar vanligtvis en dag). Enheter som etableras med AutoPilot tar dessutom inte emot policyn.
 
   Den här begränsningen undersöks för att se om den har stöd framöver.
 

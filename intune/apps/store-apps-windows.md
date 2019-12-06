@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19d14b2f2cfa838d79af1c6fbb3c3500004e56e
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 3c13d7960c0bb5c73908a0a574ab7d6c169d6460
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74548027"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563424"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Lägga till Microsoft Store-appar i Microsoft Intune
 
@@ -34,12 +34,10 @@ Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägg
 ## <a name="add-an-app-to-intune"></a>Lägga till en app i Intune
 Du kan lägga till en Microsoft-Store-app i Intune genom att göra följande:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**.
-5. Välj **Lägg till** i fönsterrutan **Appar**.
-6. I fönsterrutan **Lägg till app** väljer du **Windows Phone 8.1** som **Apptyp** och väljer sedan **Appinformation**.
-7. Lägg till appinformationen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
+3. I fönsterrutan **Lägg till app** väljer du **Windows Phone 8.1** som **Apptyp** och väljer sedan **Appinformation**.
+4. Lägg till appinformationen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
     - **Namn**: Ange namnet på appen så som den ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
@@ -52,8 +50,8 @@ Du kan lägga till en Microsoft-Store-app i Intune genom att göra följande:
     - **Ägare**: Alternativt kan du ange ett namn på appens ägare, t.ex. *Personalavdelningen*.
     - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
     - **Logotyp**: Om du vill kan du ladda upp en ikon som ska kopplas till appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-8. Välj **OK**.
-9. Välj **Lägg till**.
+5. Välj **OK**.
+6. Välj **Lägg till**.
 
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. Microsoft Store-appar kan endast tilldelas till grupper med tilldelningstypen **Tillgängligt för registrerade enheter** (användarna installerar appen från företagsportalappen eller webbplatsen för företagsportalen).
 
