@@ -31,6 +31,8 @@
       href: quickstart-create-custom-role.md
 - name: Självstudier
   items:
+    - name: Genomgång av Intune i Microsoft Endpoint Manager
+      href: tutorial-walkthrough-endpoint-manager.md
     - name: Genomgång av Intune i Azure Portal
       href: tutorial-walkthrough-intune-portal.md
 - name: Begrepp
