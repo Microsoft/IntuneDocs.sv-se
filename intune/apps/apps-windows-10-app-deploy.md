@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ce24081eae1808d3db0c5078026b306fd209d5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507253"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563949"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -51,9 +51,10 @@ Appar i Microsoft Store för företag är moderna appar som har köpts från Mic
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorisera appar i Microsoft Store för företag 
 Så här kategoriserar du appar i Microsoft Store för företag: 
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Klientappar** > **Appar**. Välj en Microsoft Store för företag-app. Välj sedan **Appinformation** > **Kategori**. 
-3. Välj en kategori.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar**. 
+3. Välj en Microsoft Store för företag-app. Välj sedan **Egenskaper** > **Appinformation** > **Kategori**. 
+4. Välj en kategori.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Installera appar på Windows 10-enheter
 Beroende på apptyp kan appen installeras på en Windows 10-enhet på något av följande två sätt:

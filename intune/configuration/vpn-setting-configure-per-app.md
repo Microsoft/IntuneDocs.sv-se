@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36039334f7e93b66735e10d0ac2c5d80602e2b83
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: f0cd3dd71a5999b69e3f5c34ef4cc73fb3d6a938
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781166"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS-enheter i Intune
 
@@ -37,6 +37,9 @@ Kontrollera VPN-leverantörens dokumentation för att se om VPN stöder per app-
 Den här artikeln visar hur du skapar en per app-VPN-profil och tilldelar profilen till dina appar. Använd dessa steg för att skapa en sömlös per app-VPN-miljö för dina slutanvändare. För de flesta VPN:er som stöder per app-VPN öppnar användaren en app och ansluter automatiskt till VPN.
 
 Vissa VPN:er tillåter autentisering med användarnamn och lösenord med per app-VPN. Det betyder att användarna måste ange ett användarnamn och lösenord för anslutning till VPN.
+
+> [!IMPORTANT]
+> Per app-VPN stöds inte för IKEv2 VPN-profiler för iOS.
 
 ## <a name="per-app-vpn-with-zscaler"></a>Per app-VPN med Zscaler
 

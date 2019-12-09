@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540750"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563987"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -55,13 +55,12 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 
 ## <a name="assign-an-app"></a>Tilldela en app
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. I avsnittet**Hantera** på menyn, väljer du **Appar**.
-5. I fönstret **Appar** välj den app som du vill tilldela.
-6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**.
-7. Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
-8. Välj en **Tilldelningstyp** för den specifika appen:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar**.
+3. I fönstret **Appar** välj den app som du vill tilldela.
+4. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**.
+5. Välj **Lägg till grupp** för att öppna fönstret **Lägg till grupp** som är relaterat till appen.
+6. Välj en **Tilldelningstyp** för den specifika appen:
    - **Tillgänglig för registrerade enheter**: Tilldela appen till användargrupper som kan installera appen från företagsportalappen eller webbplatsen.
    - **Tillgänglig med eller utan registrering**: Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Användarna måste tilldelas en Intune-licens, se [Intune-licenser](../fundamentals/licenses.md).
    - **Obligatoriskt**: Appen installeras på enheter i valda grupper. Vissa plattformar kan ha ytterligare uppmaningar som användaren ska bekräfta innan appinstallationen påbörjas.
@@ -76,19 +75,19 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
      >
      > För **Tillgänglig för registrerade enheter**: Appen visas bara som tillgänglig om användaren som är inloggad på företagsportalen är samma primära användare som registrerade enheten och om appen är tillämplig på enheten.
 
-9. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av den här apptilldelningen.
-10. Klicka på **Välj** när du har valt en eller flera grupper som ska inkluderas.
-11. Klicka på **OK** i fönstret **Tilldela** för att slutföra valet av inkluderade grupper.
-12. Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
-13. Om du har valt att undanta grupper i **Välj grupper**, klicka på **Välj**.
-14. I fönstret **Lägg till grupp** väljer du **OK**.
-15. I appfönstret **Tilldelningar** väljer du **Spara**.
+7. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av den här apptilldelningen.
+8. Klicka på **Välj** när du har valt en eller flera grupper som ska inkluderas.
+9. Klicka på **OK** i fönstret **Tilldela** för att slutföra valet av inkluderade grupper.
+10. Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
+11. Om du har valt att undanta grupper i **Välj grupper**, klicka på **Välj**.
+12. I fönstret **Lägg till grupp** väljer du **OK**.
+13. I appfönstret **Tilldelningar** väljer du **Spara**.
 
 Appen har nu tilldelats till de grupper du valde. Mer information om hur du inkluderar och exkluderar apptilldelningar finns i [Inkludera och exkludera apptilldelningar](apps-inc-exl-assignments.md).
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Lösa konflikter mellan appavsikter
 
-En enskild grupp förhindras från att bli mål för flera appar för tilldelning av appar. Om en användare eller enhet är medlem i flera grupper som är tilldelade till olika syften kan detta leda till en konflikt. Det rekommenderas inte att skapa tilldelningskonflikter för appar.
+En enskild grupp förhindras från att bli mål för flera appars apptilldelningsavsikter. Men om en användare eller enhet är medlem i flera grupper, som var och en har tilldelats olika avsikter, så kan detta leda till en konflikt. Det rekommenderas inte att skapa tilldelningskonflikter för appar.
 Informationen i tabellen nedan kan hjälpa dig att förstå avsikten som uppstår när detta inträffar:
 
 | Avsikt för grupp 1 | Avsikt för grupp 2 | Resulterande avsikt |

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeae231e07ceeee6a54f8f60ec5d53cc96d55be0
-ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
+ms.openlocfilehash: 81a084528fdc500bf9b6de0ca5fa847c2e0b3797
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117874"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563928"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Lägga till verksamhetsspecifika appar för macOS i Microsoft Intune
 
@@ -71,11 +71,9 @@ Du måste hämta ett externt verktyg, markera det hämtade verktyget som en kör
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. Välj **Hantera** > **Appar** i arbetsbelastningen **Klientappar**.
-5. Välj **Lägg till** ovanför applistan.
-6. I fönstret **Lägg till app** väljer du **Verksamhetsspecifik app**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
+3. Välj **Branschspecifik app** som**Apptyp** i fönstret **Lägg till app**.
 
 ## <a name="step-2---configure-the-app-package-file"></a>Steg 2 – Konfigurera appaketfilen
 

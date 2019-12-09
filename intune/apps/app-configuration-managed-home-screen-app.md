@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: e86aeb3191c1cfdf2fc9dfab3a4474327b3fbb06
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813470"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564215"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurera Microsofts hanterade hemskärmsapp för Android Enterprise
 
@@ -31,12 +31,12 @@ Hanterad hemskärm är appen som används för företagsägda Android Enterprise
 
 ## <a name="when-to-configure-the-microsoft-managed-home-screen-app"></a>När du ska konfigurera Microsofts hanterade hemskärmsapp
 
-Om du når inställningar via enhetskonfiguration ska du vanligtvis konfigurera inställningarna där. Om du gör det kan du spara tid, minimera fel och få ett bättre Intune-stöd. Men vissa inställningar för hanterad startskärm är för närvarande endast tillgängligt via bladet **Konfigurationsprinciper för appar** i Intune-konsolen. Med hjälp av det här dokumentet kan du lära dig att konfigurera olika inställningar, antingen med Configuration Designer eller ett JSON-skript. 
+Om du når inställningar via enhetskonfiguration ska du vanligtvis konfigurera inställningarna där. Om du gör det kan du spara tid, minimera fel och få ett bättre Intune-stöd. Vissa av inställningarna för hanterad startskärm är dock för närvarande endast tillgängliga via fönstret **Appkonfigurationsprinciper** i Intune-konsolen. Med hjälp av det här dokumentet kan du lära dig att konfigurera olika inställningar, antingen med Configuration Designer eller ett JSON-skript. 
 
 > [!NOTE]
-> Det är för närvarande möjligt, och lämpligt, att ange godkända program och fästa webblänkar via **Klientappar** och **Enhetskonfiguration**. En fullständig lista över vilka inställningar som är tillgängliga i **Enhetskonfiguration** som påverkar hanterad startskärm finns i [Inställningar för särskilda enheter](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> Det är för närvarande möjligt, och tillrådligt, att konfigurera godkända program och fästa webblänkar via **Appar** och **Enhetskonfiguration**. En fullständig lista över vilka inställningar som är tillgängliga i **Enhetskonfiguration** som påverkar hanterad startskärm finns i [Inställningar för särskilda enheter](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
-Gå först till Intune-konsolen i Azure-portalen och gå till **Klientappar** > **Konfigurationsprinciper för appar**. Lägg till en konfigurationsprincip för **Hanterade enheter** som kör **Android** och välj **Hanterad startskärm** som den tillhörande appen. Klicka på **Konfigurationsinställningar** om du vill konfigurera de olika tillgängliga inställningarna för Hanterad startskärm. 
+Gå först till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Appar** > **Appkonfigurationsprinciper**. Lägg till en konfigurationsprincip för **Hanterade enheter** som kör **Android** och välj **Hanterad startskärm** som den tillhörande appen. Klicka på **Konfigurationsinställningar** om du vill konfigurera de olika tillgängliga inställningarna för Hanterad startskärm. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Välja ett format för konfigurationsinställningar
 

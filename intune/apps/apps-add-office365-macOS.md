@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796b1709260c7f507e78aa8404129fa996b59088
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 01ca17c9f8e3fd86e12f225621e6dc0e07bb4acb
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498805"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564086"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Tilldela Office 365 till macOS-enheter med Microsoft Intune
 
@@ -41,14 +41,12 @@ Innan du börjar lägga till Office 365 till macOS-enheter bör du förstå föl
 ## <a name="create-and-configure-the-app-suite"></a>Skapa och konfigurera app-paketet
 
 Lägg till Office 365 från fönstret **Appar**.
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**. 
-5. Välj **Lägg till**.
-6. I listan **Apptyp** i gruppen **Office 365-paket** väljer du **macOS**.
-7. Välj **Information om appsvit** för att få information om appsviten.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
+3. I listan **Apptyp** i gruppen **Office 365-paket** väljer du **macOS**.
+4. Välj **Information om appsvit** för att få information om appsviten.  
     Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
-8. Ange följande information:
+5. Ange följande information:
     - **Namn på programsvit**: Ange namnet på appsviten så som det visas i företagsportalen. Kontrollera att alla svitnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Beskrivning av programsvit**: Ange en beskrivning av appsviten.
     - **Utgivare**: Microsoft visas som utgivare.
@@ -60,8 +58,8 @@ Lägg till Office 365 från fönstret **Appar**.
     - **Ägare**: Microsoft visas som ägare.
     - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
     - **Logotyp**: Office 365-logotypen visas med appen när användarna söker på företagsportalen.
-9. Välj **OK**.
-10. I fönstret **Lägg till app** väljer du **Lägg till**.  
+6. Välj **OK**.
+7. I fönstret **Lägg till app** väljer du **Lägg till**.  
     Programsviten visas som en enda post i listan över appar.
 
 ## <a name="configure-app-assignments"></a>Konfigurera apptilldelningar

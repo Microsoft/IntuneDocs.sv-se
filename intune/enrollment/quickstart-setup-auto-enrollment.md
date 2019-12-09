@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78620818bfd13f0292e159c6a3670b5e3af53dab
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: e9649a84650a555e964cd9200ed2295fee5efb9a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709507"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562316"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Snabbstart: Konfigurera automatisk registrering för Windows 10-enheter
 
@@ -41,7 +41,7 @@ Logga in till [administrationscentret för Microsoft Endpoint Manager](https://g
 
 I det här exemplet kommer du att använda MDM-registrering så att både företagets enheter och BYOD-enheter kan registreras automatiskt. Du kommer att registrera dig för en kostnadsfri Azure Active Directory Premium-prenumeration.
 
-1. I Azure väljer du **Azure Active Directory** > **Mobilitet (MDM och MAM)** .
+1. Välj **Azure Active Directory** > **Mobilitet (MDM och MAM)** i [Azure Portal](https://portal.azure.com).
 2. Välj **Hämta en kostnadsfri utvärderingsversion för att använda den här funktionen**. Om du väljer det här alternativet tillåts automatisk registrering med hjälp av den kostnadsfria utvärderingsversionen av Azure Active Directory Premium. 
 
     ![Välja den kostnadsfria utvärderingsversionen av Azure Active Directory Premium](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754838"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563591"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Lägga till Microsoft Edge till macOS-enheter med hjälp av Microsoft Intune
 
@@ -40,15 +40,15 @@ Innan du kan distribuera, konfigurera, övervaka eller skydda appar måste du l�
 ## <a name="add-microsoft-edge-to-intune"></a>Lägga till Microsoft Edge till Intune
 Du kan lägga till Microsoft Edge version 77 och senare till Intune med hjälp av följande steg:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
 3. I listan **Apptyp**, under **Microsoft Edge, version 77 och senare**, väljer du **macOS**.
 
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 I det här steget anger du information om den här appdistributionen. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
 
-1. Klicka på **Appinformation** för att visa bladet **Appinformation**.
-2. På bladet **Appinformation** anger du information om den här appdistributionen. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
+1. Visa fönstret **Appinformation** genom att klicka på **Appinformation**.
+2. Ange information om den här appdistributionen i fönstret **Appinformation**. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
     - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen. Kontrollera att alla namn är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Du kan till exempel ange målanvändarna i beskrivningen.
     - **Utgivare**: Microsoft visas som utgivare.
@@ -64,8 +64,8 @@ I det här steget anger du information om den här appdistributionen. Den här i
 ## <a name="configure-microsoft-edge-settings"></a>Konfigurera Microsoft Edge-inställningar
 I det här steget konfigurerar du installationsalternativ för appen.
 
-1. På bladet **Lägg till app** väljer du **Appinställningar**.
-2. På bladet **Appinställningar** är kanalen **Beta** automatiskt vald och kan inte ändras.
+1. Välj **Appinställningar** i fönstret **Lägg till app**.
+2. I fönstret **Appinställningar** har kanalen **Beta** valts automatiskt, och den kan inte ändras.
     - Kanalen **Beta** är den mest stabila Microsoft Edge-förhandsupplevelsen och det bästa valet för en fullständig pilotlansering i din organisation. Det sker större uppdateringar var sjätte vecka.
 
     > [!NOTE]
@@ -80,7 +80,7 @@ Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinfor
 4.  Klicka på **Välj** > **OK**.
 
 ## <a name="add-the-app"></a>Lägg till appen
-När du har slutfört konfigurationen väljer du **Lägg till** från bladet **Lägg till app**. 
+När du har slutfört konfigurationen väljer du **Lägg till** i fönstret **Lägg till app**. 
 
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. 
 

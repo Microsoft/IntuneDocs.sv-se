@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3afd51fe27feb0c058ba703ed11e4a15a5ea2f0d
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813420"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563415"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
@@ -44,7 +44,7 @@ Logga in på [Intune](https://aka.ms/intuneportal) som [global administratör el
 En app kan inkluderas så att Intune kan hantera aspekter av appen. 
 
 Använd följande steg för att lägga till en app i Intune:
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appar** > **Lägg till**. 
+1. Välj **Appar** > **Alla appar** > **Lägg till** i [Intune](https://aka.ms/intuneportal). 
 2. Välj **Windows 10** i avsnittet **Office 365-paket** i listrutan **Apptyp**.
 3. Välj **Konfigurera appaket** och välj de Office-appar som ska tilldelas till Intune-användaren.
 4. Klicka på **OK** för att godkänna de appar som valts som standard.
@@ -68,9 +68,9 @@ När du har lagt till en app till Microsoft Intune kan du tilldela appen till gr
 > Den här snabbstarten bygger på tidigare snabbstarter i den här serien. Information finns i [förutsättningarna](quickstart-add-assign-app.md#prerequisites) i den här snabbstarten.
 
 Använd följande steg för att tilldela en app till en grupp:
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appar**. 
+1. Välj **Appar** > **Alla appar** i [Intune](https://aka.ms/intuneportal). 
 2. Välj den app som du vill tilldela till en grupp.
-3. Klicka på **Tilldelningar** > **Lägg till grupp** för att visa bladet **Lägg till grupp**.
+3. Klicka på **Tilldelningar** > **Lägg till grupp** så att fönstret **Lägg till grupp** visas.
 4. Välj **Tillgänglig för registrerade enheter** i listrutan **Tilldelningstyp**. 
 5. Klicka på **Inkluderade grupper** > **Välj grupper som ska inkluderas** > **Contoso-testare**.
 6. Klicka på **Välj** > **OK** > **OK** > **Spara** för att tilldela gruppen.

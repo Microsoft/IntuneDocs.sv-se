@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98976403d58c33f22f7ceeabec1d38f076f9bbe7
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592072"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563714"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -44,9 +44,9 @@ Information om att lägga till organisationens affärsapplikationer i Microsoft 
 När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer du ett modernt Intune-processflöde som resulterar i en ny appskyddsprincip.
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Skapa en appskyddsprincip för iOS/iPadOS eller Android
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. I Intune-portalen väljer du **Klientappar** > **Appskyddsprinciper**. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga.
-3. Välj **Skapa princip** och välj antingen **iOS/iPadOS** eller **Android**. Bladet **Skapa princip** visas.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appskyddsprinciper** i Intune-portalen. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga.
+3. Välj **Skapa princip** och välj antingen **iOS/iPadOS** eller **Android**. Fönstret **Skapa princip** visas.
 4. På sidan **Grundläggande** lägger du till följande värden:
 
     | Värde | Beskrivning |
@@ -57,7 +57,7 @@ När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer
 
     Värdet för **Plattform** anges baserat på ditt val ovan.
 
-    ![Skärmbild av sidan Grundläggande på bladet Skapa princip](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Skärmbild av sidan Grundläggande i fönstret Skapa princip](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Klicka på **Nästa** för att visa sidan **Appar**.<br>
     På sidan **Appar** kan du välja hur du vill tillämpa den här principen på appar på olika enheter. Du måste lägga till minst en app.<p>
@@ -171,7 +171,7 @@ I många organisationer är det vanligt att tillåta användare att använda bå
 
 Eftersom Intune-appskyddsprinciper som är riktade till en användares identitet kan skyddsinställningarna för en användare gälla både för registrerade (MDM-hanterade) och icke-registrerade enheter (utan MDM). Därför kan du rikta en Intune-appskyddsprincip till antingen Intune-registrerade eller icke-registrerade iOS- och Android-enheter. Du kan ha en skyddsprincip för ohanterade enheter där ett strikt dataförlustskydd (DLP) används och en separat skyddsprincip för MDM-hanterade enheter, där du kan använda lite mindre strikta DLP-kontroller. Mer information om hur det här fungerar på personliga Android Enterprise-enheter finns i [Appskyddsprinciper och arbetsprofiler](android-deployment-scenarios-app-protection-work-profiles.md).
 
-Om du vill skapa de här principerna bläddrar du till **Klientappar** > **Appskyddsprinciper** i Intune-konsolen och väljer **Skapa princip**. Du kan även redigera eller en befintlig princip. För att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter går du till sidan **Appar** och bekräftar att **Rikta till appar på alla typer av enheter** är angett till **Ja**, som är standardvärdet. Om du vill tilldela detaljerat baserat på hanteringstillståndet anger du **Rikta till appar på alla typer av enheter** till **Nej**. 
+Om du vill skapa de här principerna, så gå till **Appar** > **Appskyddsprinciper** på Intune-konsolen och välj **Skapa princip**. Du kan även redigera eller en befintlig princip. För att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter går du till sidan **Appar** och bekräftar att **Rikta till appar på alla typer av enheter** är angett till **Ja**, som är standardvärdet. Om du vill tilldela detaljerat baserat på hanteringstillståndet anger du **Rikta till appar på alla typer av enheter** till **Nej**. 
 
 ### <a name="device-types"></a>Enhetstyper
 

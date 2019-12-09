@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecde59d81ebeba7de64f2693eecb576faac6e722
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: ef9548a77a3a745eda24b927118d1447d5afd1f0
+ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164710"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74784246"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune 
 
@@ -56,8 +56,10 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | Windows Phone 8.1 Store-appar  | Store-app  | Välj **Windows Phone 8.1** som **apptyp** och ange appens webbadress på Microsoft Store. |
 | Microsoft Store-appar  | Store-app  | Välj **Windows** som **apptyp** och ange appens webbadress på Microsoft Store. |
 | Google Play-appar som hanteras | Store-app  | Välj **Hanterad Google Play** som **apptyp**, sök efter appen och välj appen i Intune. |
-| Office 365-appar för Windows 10  | Store-app (Office 365) | Välj **Windows 10** under **Office 365-paket** som **apptyp**, och välj sedan den Office 365-app som du vill installera.  |
+| Office 365-appar för Windows 10  | Store-app (Office 365) | Välj **Windows 10** under **Office 365-paket** som **apptyp**, och markera sedan den Office 365-app som du vill installera.  |
 | Office 365-appar för macOS | Store-app (Office 365) | Välj **macOS** under **Office 365-paket** som **apptyp**, och välj sedan Office 365-appaketet. |
+| Microsoft Edge version 77 och senare för Windows 10 | Store-app | Välj **Windows 10** under **Microsoft Edge, version 77 och senare** som **apptyp**. |
+| Microsoft Edge version 77 och senare för Windows 10 | Store-app | Välj **macOS** under **Microsoft Edge, version 77 och senare** som **apptyp**. |
 | Verksamhetsspecifika appar för Android | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Android-installationsfil med tillägget **.apk**.  |
 | iOS LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en iOS-installationsfil med tillägget **.ipa**.  |
 | Windows Phone LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Windows Phone-installationsfil med tillägget **.xap**.  |
@@ -72,7 +74,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 
 <sup>1</sup> Mer information om Android Enterprise- och Android Work-profiler finns i [Förstå licensierade appar](apps-add.md#understanding-licensed-apps) nedan.
 
-Du kan lägga till en app i Microsoft Intune genom att välja **Klientappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. 
+Du kan lägga till en app i Microsoft Intune genom att välja **Appar** > **Alla appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. 
 
 >[!TIP]
 > En verksamhetsspecifik app är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en iOS LOB-app lägger du till programmet genom att välja **Branschspecifik app** som **Apptyp** i fönstret **Lägg till app**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
@@ -159,9 +161,8 @@ Appkategorier kan användas för att sortera appar så att användarna lättare 
 
 När du lägger till en app i Intune ges möjlighet att välja den kategori som du önskar. Använd de plattformsspecifika avsnitten för att lägga till en app och tilldela kategorier. Använd följande procedur för att skapa och redigera dina egna kategorier:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appkategorier** under **Installera**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Välj **Appar** > **Appkategorier**.  
     Fönstret **Appkategorier** visar en lista över aktuella kategorier. 
 5. Gör något av följande:
     - För at lägga till en kategori i fönstret **Skapa kategori** väljer du **Lägg till**, och anger sedan ett namn på kategorin.  
@@ -206,6 +207,8 @@ Information om hur du lägger till appar för varje plattform till Intune finns 
 - [Windows LOB-appar](lob-apps-windows.md)
 - [Office 365-appar för Windows 10](apps-add-office365.md)
 - [Office 365-appar för macOS](apps-add-office365-macos.md)
+- [Microsoft Edge för Windows 10](apps-windows-edge.md)
+- [Microsoft Edge för macOS](apps-edge-macos.md)
 - [Inbyggda appar](apps-add-built-in.md)
 - [Android Enterprise-systemprogram](apps-ae-system.md)
 - [Win32-appar](app-management.md)

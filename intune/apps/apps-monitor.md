@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee22ee435830137a423423aa692376aabbb6cecb
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 72e1f95e2bd81d974d900acbcb0f785bb7966eaa
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585422"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563707"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Övervaka appinformation och tilldelningar med Microsoft Intune
 
@@ -31,10 +31,9 @@ ms.locfileid: "72585422"
 
 I Intune kan du övervaka egenskaperna för appar som du hanterar och hantera apptilldelningsstatus på flera sätt.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. I avsnittet**Hantera** på menyn, väljer du **Appar**.
-5. Välj en app att övervaka i listan över appar. Appfönstret visas med en översikt över enhetens och användarens status.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar**.
+3. Välj en app att övervaka i listan över appar. Appfönstret visas med en översikt över enhetens och användarens status.
 
 > [!NOTE]
 > Installationsstatus rapporteras inte för Android Store-appar som distribueras som **tillgängliga**.

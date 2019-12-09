@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a2575c0d4e6cdcfdffe09e37880f56647bc835
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8d1a8ee3f6d5eb190fb2ee252dfb5f6c23a1cf16
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496430"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563777"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -71,53 +71,51 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 > Mer information om hur du skapar WIP-principer för Intune, inklusive tillgängliga inställningar och hur du konfigurerar dem, finns i [Skapa en princip för Windows Information Protection (WIP) med MAM med hjälp av Azure-portalen för Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) i dokumentationsbiblioteket för Windows-säkerhet. 
 
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**.
-3. Välj **Klientappar** på **Microsoft Intune**-bladet.
-4. Välj **Appskyddsprinciper** på bladet **Klientappar**.
-5. Välj **Lägg till en princip** så att bladet **Lägg till en princip** visas.
-6. Lägg till följande värden:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appskyddsprinciper** > **Skapa princip**.
+3. Lägg till följande värden:
     - **Namn:** Skriv ett namn (obligatoriskt) för den nya principen.
     - **Beskrivning:** (Valfritt) Ge en beskrivning.
     - **Plattform:** Välj **Windows 10** som den plattform som stöds för din appskyddsprincip.
     - **Registreringsstatus:** Välj **Utan registrering** som din princips registreringsstatus.
-7. Välj **Skapa**. Principen skapas och visas i tabellen på bladet **Appskyddsprinciper**.
+4. Välj **Skapa**. Principen skapas och visas i tabellen i fönstret **Appskyddsprinciper**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Lägga till rekommenderade appar i listan över skyddade appar
 
-1. Välj **Klientappar** på **Microsoft Intune**-bladet.
-2. Välj **Appskyddsprinciper** på bladet **Klientappar**.
-3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
-4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
-5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appskyddsprinciper**.
+3. Välj den princip som du vill ändra i fönstret **Appskyddsprinciper**. Fönstret **Intune-appskydd** visas.
+4. Välj **Skyddade appar** i fönstret **Intune-appskydd**. Fönstret **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
+5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. Du kan ändra listfiltret i listan högst upp i fönstret.
 6. Markera varje app som ska få åtkomst till företagets data.
-7. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
+7. Klicka på **OK**. Fönstret **Skyddade appar** uppdateras och visar alla valda appar.
 8. Klicka på **Spara**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Lägga till en Store-app i listan över skyddade appar
 
 **Lägga till en Store-app**
-1. Välj **Klientappar** på **Microsoft Intune**-bladet.
-2. Välj **Appskyddsprinciper** på bladet **Klientappar**.
-3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
-4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
-5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
+
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appskyddsprinciper**.
+3. Välj den princip som du vill ändra i fönstret **Appskyddsprinciper**. Fönstret **Intune-appskydd** visas.
+4. Välj **Skyddade appar** i fönstret **Intune-appskydd**. Fönstret **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
+5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. Du kan ändra listfiltret i listan högst upp i fönstret.
 6. Välj **Store-appar** i listan.
 7. Ange värden för **Namn**, **Utgivare**, **Produktnamn** och **Åtgärd**. Se till att ange värdet för **Åtgärd** till **Tillåt** så att appen får åtkomst till företagets data.
-9. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
+9. Klicka på **OK**. Fönstret **Skyddade appar** uppdateras och visar alla valda appar.
 10. Klicka på **Spara**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Lägga till en skrivbordsapp i listan över skyddade appar
 
 **Lägga till en skrivbordsapp**
-1. Välj **Klientappar** på **Microsoft Intune**-bladet.
-2. Välj **Appskyddsprinciper** på bladet **Klientappar**.
-3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
-4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
-5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appskyddsprinciper**.
+3. Välj den princip som du vill ändra i fönstret **Appskyddsprinciper**. Fönstret **Intune-appskydd** visas.
+4. Välj **Skyddade appar** i fönstret **Intune-appskydd**. Fönstret **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
+5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. Du kan ändra listfiltret i listan högst upp i fönstret.
 6. Välj **Skrivbordsappar** i listan.
 7. Ange värden för **Namn**, **Utgivare**, **Produktnamn**, **Fil**, **Lägsta version**, **Högsta version** och **Åtgärd**. Se till att ange värdet för **Åtgärd** till **Tillåt** så att appen får åtkomst till företagets data.
-9. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
+9. Klicka på **OK**. Fönstret **Skyddade appar** uppdateras och visar alla valda appar.
 10. Klicka på **Spara**.
 
 ## <a name="wip-learning"></a>WIP-utbildning
@@ -150,7 +148,7 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
 ### <a name="add-a-protection-mode"></a>Lägga till ett skyddsläge
 
-1. Välj principens namn på bladet **Apprincip** och välj sedan **Nödvändiga inställningar**.
+1. Välj principens namn i fönstret **Apprincip** och välj sedan **Nödvändiga inställningar**.
 
     ![Skärmbild av fönstret Inlärningsläge](./media/windows-information-protection-policy-create/learning-mode-sc1.png)
 
@@ -160,7 +158,7 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
 1. Öppna [Azure Portal](https://portal.azure.com). Välj **Alla tjänster**. Skriv **Intune** i textrutefiltret.
 
-3. Välj **Intune** > **Klientappar**.
+3. Välj **Intune** > **Appar**.
 
 4. Välj **Appskyddsstatus** > **Rapporter** > **Windows informationsskydd-inlärning**.  
 
@@ -188,9 +186,9 @@ Förutom att ställa in alternativet **Tillåt att Windows Search-indexeraren s�
 
 När du har skapat din WIP-appskyddsprincip måste du distribuera den till din organisation med hjälp av hantering av mobila program.
 
-1. Välj den appskyddsprincip du precis skapade på bladet **Apprincip**, välj **Användargrupper** > **Lägg till användargrupp**.
+1. Välj den appskyddsprincip du precis skapade i fönstret **Apprincip** och välj sedan **Användargrupper** > **Lägg till användargrupp**.
 
-    En lista med användargrupper, som består av alla säkerhetsgrupper i Azure Active Directory, öppnas på bladet **Lägg till användargrupp**.
+    En lista med användargrupper, som består av alla säkerhetsgrupper i Azure Active Directory, öppnas i fönstret **Lägg till användargrupp**.
 
 2. Välj den grupp du vill att principen ska tillämpas på och distribuera sedan principen genom att välja **Välj**.
 

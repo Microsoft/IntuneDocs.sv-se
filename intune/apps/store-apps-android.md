@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3153a470649e86bbafc9e8295a1c68532fc27c63
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ec800064d109cca42878c79ade6777de9b782015
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497690"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563503"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Lägga till Android Store-appar i Microsoft Intune
 
@@ -35,12 +35,10 @@ Innan du tilldelar en app till en enhet eller en grupp av användare måste du f
 
 Du kan lägga till en Android Store-app till Intune från Azure Portal genom att göra så här:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**.
-5. Välj **Lägg till**.
-6. I fönstret **Lägg till App** väljer du **Android** under de tillgängliga **Store-app**-typerna.
-7. Om du vill konfigurera information om appen väljer **Konfigurera** och ange följande information. För Android-appar går du till [Google Play Butik](https://play.google.com/store) och söker efter den app du vill distribuera. Välj appen och notera appinformationen. Beroende på vilken app du har valt kan det hända att några av värdena har fyllts i automatiskt.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
+3. I fönstret **Lägg till App** väljer du **Android** under de tillgängliga **Store-app**-typerna.
+4. Om du vill konfigurera information om appen väljer **Konfigurera** och ange följande information. För Android-appar går du till [Google Play Butik](https://play.google.com/store) och söker efter den app du vill distribuera. Välj appen och notera appinformationen. Beroende på vilken app du har valt kan det hända att några av värdena har fyllts i automatiskt.
     - **Namn**: Ange namnet på appen så som den ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
@@ -54,8 +52,8 @@ Du kan lägga till en Android Store-app till Intune från Azure Portal genom att
     - **Ägare**: Alternativt kan du ange ett namn på appens ägare, t.ex. *Personalavdelningen*.
     - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
     - **Logotyp**: Om du vill kan du ladda upp en ikon som ska kopplas till appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-8. Välj **OK**.
-9. Välj **Lägg till**.
+5. Välj **OK**.
+6. Välj **Lägg till**.
 
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. 
 

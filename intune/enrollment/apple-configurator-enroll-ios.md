@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6a9c6b824f8d6369f7bf2d06b44fa8a20417d1c
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: f80312c2bd82063ed0b61c36bef9b8bf4ae3e1aa
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713146"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691816"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Konfigurera registrering av iOS-enheter med Apple Configurator
 
@@ -48,7 +48,7 @@ Registreringsmetoder med Apple Configurator kan inte användas med [enhetsregist
 
 En enhetsregistreringsprofil definierar inställningarna som tillämpas under registreringen. Dessa inställningar tillämpas bara en gång. Följ dessa steg om du vill skapa en registreringsprofil för att registrera iOS-enheter med Apple Configurator.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Profiler** > **Skapa**.
+1. Välj **Enheter** > **iOS** > **iOS-registrering** > **Apple Configurator** > **Profiler** > **Skapa** i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
     ![Skapa en profil för Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
 
@@ -88,7 +88,7 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas under re
     DLXQPCWVGHMJ, enhetsinformation
 
    Lär dig [hitta serienumret för en iOS-enhet](https://support.apple.com/HT204073).
-2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Enheter** > **Lägg till**.
+2. Välj **Enheter** > **iOS** > **iOS-registrering** > **Apple Configurator** > **Enheter** > **Lägg till** i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 5. Välj en **Registeringsprofil** som ska tillämpas på de serienummer som du importerar. Om du vill att den nya serienummersinformationen ska skriva över befintlig information, väljer du **Skriv över information för befintliga identifierare**.
 6. Under **Importera enheter**, bläddrar du till csv-filen med serienummer och väljer **Lägg till**.
@@ -100,18 +100,18 @@ Du kan tilldela en registreringsprofil när du importerar iOS-serienummer för A
 - **AC-profiler**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Tilldela från Apple Configurator-enheter
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Enheter** > välj serienumren > **Tilldela profil**.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Apple Configurator** > **Enheter** > välj serienummer > **Tilldela profil**.
 2. Under **Tilldela profil**, väljer du den **Nya profil** som du vill tilldela och väljer därefter **Tilldela**.
 
 #### <a name="assign-from-profiles"></a>Tilldela från profiler
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Profiler** > välj en profil.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Apple Configurator** > **Profiler** > välj en profil.
 2. I profilen väljer du **Tilldelade enheter** och väljer sedan **Tilldela**.
 3. Filtrera för att hitta enhetsserienummer som du vill tilldela till profilen, välj enheterna och välj sedan **Tilldela**.
 
 ### <a name="export-the-profile"></a>Exportera profilen
 När du har skapat profilen och tilldelat serienummer måste du exportera profilen från Intune som en URL. Du kan sedan importera den till Apple Configurator på en Mac för distribution till enheter.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Profiler** > välj profilen som ska exporteras.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Apple Configurator** > **Profiler** > välj den profil som ska exporteras.
 2. Välj **Exportera profil** i profilen.
 3. Kopiera **Profilens URL**. Du kan sedan lägga till den i Apple Configurator för att definiera den Intune-profil som används av iOS-enheter.
 
@@ -147,7 +147,7 @@ Appar som kräver användartillhörighet, inklusive företagsportalappen som anv
 
 ### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Exportera profilen som .mobileconfig för iOS-enheter
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Profiler** >  välj profilen som ska exporteras > **Exportera profil**.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Apple Configurator** > **Profiler** > välj den profil som ska exporteras > **Exportera profil**.
 2. Under **Direktregistrering**, väljer du **Hämta profil** och sparar filen. En fil för registreringsprofiler är endast giltig i två veckor, efter det måste du återskapa den.
 3. Överför filen till en Mac-dator som kör [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) för att skicka den direkt som en hanteringsprofil till iOS-enheter.
 4. Förbered enheten med Apple Configurator med följande steg:

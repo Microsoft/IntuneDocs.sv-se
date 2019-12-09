@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e538204306ce80d6a13739fc981edf2748a622de
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: d77a275e3a48845f56b22ecc21b75f664ea619c5
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713454"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691755"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Konfigurera Användarregistrering för iOS och iPadOS (förhandsversion)
 
@@ -43,7 +43,7 @@ Mer information om vilka alternativ som är tillgängliga med Användarregistrer
 
 En registreringsprofil definierar inställningarna som tillämpas på en grupp enheter vid registreringen. 
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringstyper (förhandsversion)**  > **Skapa profil** > **iOS**. I den här profilen väljer du registreringsupplevelsen för iOS- och iPad-slutanvändare på enheter som inte har registrerats via en företagsspecifik Apple-metod. Om du vill göra ändringar kan du redigera profilen i efterhand.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **iOS** > **ioS-registrering** > **Registreringstyper (förhandsversion)**  > **Skapa profil** > **iOS/iPadOS**. I den här profilen väljer du registreringsupplevelsen för iOS- och iPad-slutanvändare på enheter som inte har registrerats via en företagsspecifik Apple-metod. Om du vill göra ändringar kan du redigera profilen i efterhand.
 
     ![Skapa en Apple-registreringsprofil](./media/ios-user-enrollment/create-profile.png)
 
@@ -88,7 +88,7 @@ En registreringsprofil definierar inställningarna som tillämpas på en grupp e
 
 När du har skapat mer än en profil för registreringstyper kan du ändra profilernas prioritetsordning.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringstyper (förhandsversion)** .
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **iOS** > **ioS-registrering** > **Registreringstyper (förhandsversion)** .
 2. Dra och släpp profilerna i listan i den ordning som de ska tillämpas.
 
 Om det uppstår konflikter mellan profiler för en användare används profilen med högre prioritet för användaren.

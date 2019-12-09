@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199202"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563642"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -37,7 +37,7 @@ Microsofts företagsportal för Intune är den plats där användare kan komma �
 > [!Tip]
 > När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar. Observera att användarna måste ha tilldelats en Intune-licens för att få åtkomst till webbplatsen Företagsportal.
 
-Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Gör detta i Intune-portalen genom att välja **Klientappar** > **Anpassning** och konfigurera sedan inställningarna som krävs.
+Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Gör detta i Intune-portalen genom att välja **Appar** > **Anpassning** och konfigurera sedan de inställningar som krävs.
 
 När en användare installerar ett iOS-program från företagsportalen får de ett meddelande. Detta inträffar när iOS-appen är länkad till App Store, ett volymköpt program (VPP) eller en verksamhetsspecifik app (LOB). Användaren kan acceptera åtgärden eller tillåta hantering av appen. Meddelandet visar företagets namn. Om företagets namn inte är tillgängligt visas **företagsportalen**. 
 
@@ -92,7 +92,7 @@ Välj en logotyp som ser bäst ut på vita eller ljusa bakgrunder.
 
 ### <a name="brand-image-for-company-portal"></a>Varumärkesbild för företagsportalen
 
-Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har sparat ändringarna kan du välja **Förhandsgranska inställningarna** på Intune-webbportalen längst upp på bladet för att se hur dina konfigurationer kommer att se ut. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS-enhet, inte på Intune-webbportalen. 
+Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har sparat ändringarna kan du se hur dina konfigurationer kommer att se ut genom att välja **Förhandsgranska inställningarna** högst upp i fönstret i Intune-portalen. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS-enhet, inte på Intune-webbportalen. 
 
 |Fältnamn|Mer information|
 |---|---|

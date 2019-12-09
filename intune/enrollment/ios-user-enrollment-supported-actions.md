@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445301"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562412"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Intune-åtgärder och Intune-alternativ som stöds med Apples användarregistrering
 
@@ -57,13 +57,18 @@ Slutanvändarna kan utföra följande åtgärder på enheter som registrerats vi
 - Fjärrlåsning
 - Kontrollera status
 
+## <a name="app-deployment-options"></a>Appdistributionsalternativ
+Du kan distribuera följande apptyper på användarregistreringsenheter:
+- Användarlicensierade VPP-appar (Volume Purchasing Plan) inklusive anpassade appar
+- Verksamhetsspecifika appar
+- Webbappar
+
 ## <a name="other-supported-options"></a>Andra alternativ som stöds
 
 Följande alternativ stöds i Intune för enheter som har registrerats via Apples användarregistrering:
 - Per app-VPN. Det här alternativet gäller inte Safari-domäner eftersom det inte går att konfigurera Safari-inställningar i Användarregistrering.
 - WiFi 
 - Borttagning av företagsappar vid avregistrering
-- Appdistribution via användarlicensierad volyminköpsplan (VPP)
 - Upplåsningsidentifiering
 
 Följande begränsningar stöds:
@@ -97,6 +102,7 @@ Följande alternativ stöds inte på enheter som har registrerats via Användarr
 - SCEP-användarprofiler som använder serienummer som format för mottagarnamn.
 - VPN på enhetsnivå.
 - Enhetslicensierad VPP-appdistribution.
+- Installera App Store-appar som hanterade appar.
 - MDM-kontroll av program utanför den hanterade APFS-volymen.
 - Programskyddsprinciper används fortfarande för dessa appar. Men du kan inte ta över hanteringen eller distribuera en hanterad version av dessa appar om inte användaren tar bort dem från enheten.
 - Åtgärder, konfigurationer, inställningar och kommandon som kräver övervakning. 

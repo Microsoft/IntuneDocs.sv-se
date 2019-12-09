@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 26972bb034ea4cb65f1bf64c61c20395cf94dc36
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889580"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564175"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -42,9 +42,8 @@ Kvarhållningsperioden för appskyddsdata är 90 dagar. Alla appinstanser som ha
 
 ## <a name="summary-view"></a>Sammanfattningsvy
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. Visa sammanfattningsvyn genom att i **Övervaka** välja **Status för appskydd** i arbetsbelastningen **Klientappar**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Välj **Appar** > **Övervaka** > **Appskyddsstatus**.
 
    ![Skärmbild av panelen Sammanfattning i fönstret för hantering av mobilprogram i Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -78,7 +77,7 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
 >[!NOTE]
 > Kolumnen **Senaste synkronisering** visar samma värde i både konsolens användarstatusrapport och appskyddsprincipens [exporteringsbara .csv-rapport](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities). Skillnaden är en liten fördröjning i synkroniseringen mellan värdet i de två rapporterna. 
 >
-> Tiden som anges i Senaste synkronisering är när Intune senast såg appinstansen. När en användare startar en app kan den meddela starttiden till Intunes appskyddstjänst, beroende på när den senast checkades in. Se [återförsöksintervallets tider för incheckning till appskyddsprincipen](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Om en användare inte har använt den specifika appen under det senaste incheckningsintervallet (som vanligtvis är 30 minuter vid aktiv användning) och de startar appen, händer följande:
+> Tiden som anges i Senaste synkronisering är när Intune senast såg appinstansen. När en användare startar en app kan den meddela starttiden till Intunes appskyddstjänst, beroende på när den senast checkades in. Se [återförsöksintervallets tider för incheckning till appskyddsprincipen](~/apps/app-protection-policy-delivery.md). Om en användare inte har använt den specifika appen under det senaste incheckningsintervallet (som vanligtvis är 30 minuter vid aktiv användning) och de startar appen, händer följande:
 >
 > - Appskyddsprincipens exporteringsbara .csv-rapport har den nyaste tidsangivelsen, inom 1 minut (minst) till 30 minuter (högst).
 > - Användarens statusrapport har den nyaste tidsangivelsen omedelbart.
@@ -104,7 +103,7 @@ Visa rapporter för en användare genom att följa anvisningarna:
 > Om MAM-principen inte har distribuerats till de användare som du sökte efter, visas ett meddelande om att inga MAM-principer tillämpas på användaren.
 
 ### <a name="flagged-users"></a>Flaggade användare
-I den detaljerade vyn visas felmeddelandet, appen som användes när felet inträffade, enhetens operativsystem och en tidsstämpel. Felet är vanligt i jailbrokade (iOS) eller rotade (Android) enheter. Användare med enheter som har flaggats av den villkorsstyrda startkontrollen ”SafetyNet-enhetsbestyrkande” visas här med den orsak som rapporterades av Google. För att en användare ska kunna tas bort från rapporten måste status för själva enheten ha ändrats, vilket inträffar efter nästa kontroll av rotidentifiering (eller kontroll av jailbreak/SafetyNet) som rapporterar ett positivt resultat. Om enheten är helt åtgärdad sker uppdateringen av rapporten Flaggade användare när bladet läses in på nytt.
+I den detaljerade vyn visas felmeddelandet, appen som användes när felet inträffade, enhetens operativsystem och en tidsstämpel. Felet är vanligt i jailbrokade (iOS) eller rotade (Android) enheter. Användare med enheter som har flaggats av den villkorsstyrda startkontrollen ”SafetyNet-enhetsbestyrkande” visas här med den orsak som rapporterades av Google. För att en användare ska kunna tas bort från rapporten måste status för själva enheten ha ändrats, vilket inträffar efter nästa kontroll av rotidentifiering (eller kontroll av jailbreak/SafetyNet) som rapporterar ett positivt resultat. Om enheten är helt åtgärdad sker uppdateringen av rapporten Flaggade användare när fönstret läses in på nytt.
 
 ### <a name="users-with-potentially-harmful-apps"></a>Användare med potentiellt skadliga appar
 I den detaljerade vyn visas:
@@ -121,14 +120,14 @@ Användare med enheter som är flaggade av den villkorsstyrda startkontrollen **
 
 ## <a name="reporting-view"></a>Rapporteringsvy
 
-Du hittar samma rapporter överst på bladet **Appskyddsstatus**.
+Du hittar samma rapporter högst upp i fönstret **Appskyddsstatus**.
 
 > [!NOTE]
-> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS-modell. I Intune når du dessa fält genom att välja **Klientappar** > **Appskyddsstatus** > **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodellen (Android och iOS) och lägsta tillåtna version för Android-säkerhetsuppdateringar. 
+> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS-modell. I Intune når du dessa fält genom att välja **Appar** > **Appskyddsstatus** > **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodellen (Android och iOS) och lägsta tillåtna version för Android-säkerhetsuppdateringar. 
 
-Det finns ytterligare rapporter som hjälper dig med efterlevnadsstatusen för MAM-principer. Du visar de rapporterna genom att välja **Klientappar** > **Appskyddsstatus** > **Rapporter**. 
+Det finns ytterligare rapporter som hjälper dig med efterlevnadsstatusen för MAM-principer. Du visar de rapporterna genom att välja **Appar** > **Appskyddsstatus** > **Rapporter**. 
 
-På bladet **Rapporter** finns flera rapporter baserade på användare och app, bland annat följande:
+Fönstret **Rapporter** tillhandahåller flera rapporter som baseras på användare och appar, däribland följande:
 
 - **Användarrapport**: Den här rapporten visar en översikt över samma information som du hittar i rapporten **Användarstatus** under avsnittet [Detaljerad vy](app-protection-policies-monitor.md#detailed-view) ovan.
 
@@ -139,7 +138,7 @@ På bladet **Rapporter** finns flera rapporter baserade på användare och app, 
     - Apparna används antingen av en användare eller en app som för närvarande inte omfattas av någon MAM-princip.
     - Alla appar är incheckade men kommer inte åt MAM-principer.
 
-    ![Skärmbild av en användares blad för apprapportering med information om tre appar](./media/app-protection-policies-monitor/MAM-reporting-4.png)
+    ![Skärmbild av en användares apprapporteringsfönster med information om tre appar](./media/app-protection-policies-monitor/MAM-reporting-4.png)
 
 - **Användarkonfigurationsrapport**: Rapporten baseras på en vald användare och innehåller information om de appkonfigurationer som användaren har tagit emot.
 - **Appkonfigurationsrapport**: Rapporten baseras på den valda plattformen och appen och innehåller information om vilka användare som har tagit emot konfigurationer av den valda appen.

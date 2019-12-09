@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/26/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86e9d100847641064f472f0c3da0c9ec694f72dd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a3b01c1444b44e3f5c66fc129f78f321c9c9f5aa
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496717"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563406"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Självstudie: Konfigurera Slack till att använda Intune för EMM och appkonfiguration
 
@@ -55,7 +55,7 @@ Lägg till iOS-appen Slack för EMM till Intune-klienten och skapa en appkonfigu
 
 ### <a name="add-slack-for-emm-to-intune"></a>Lägg till Slack för EMM i Intune
 Lägg till Slack för EMM som en hanterad iOS-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på Android-enheter.
-1. I Intune, väljer du **Klientappar** > **Appar** > **Lägg till**.
+1. Välj **Appar** > **Alla appar** > **Lägg till** i Intune.
 2. Under Apptyp väljer du **Store-app – iOS**.
 3. Välj **Sök i App Store**. Ange sökorden ”Slack för EMM” och välj appen.
 4. Välj **Appinformation** och konfigurera eventuella ändringar som du tycker behövs.
@@ -71,7 +71,7 @@ Lägg till Slack för EMM som en hanterad iOS-app i Intune och tilldela dina Sla
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Lägga till en appkonfigurationsprincip till Slack för EMM
 Lägg till en appkonfigurationsprincip till Slack för EMM iOS. Appkonfigurationsprinciper för hanterade enheter är plattformsspecifika, så du måste lägga till en separat princip för dina Slack-användare på Android-enheter.
-1. Gå till Intune och välj **Klientappar** > **Appkonfigurationsprinciper** > **Lägg till**.
+1. Gå till Intune och välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
 2. Ange Test av appkonfigurationsprincip för Slack vid Namn.
 3. Under Registreringstyp för enhet väljer du **Hanterade enheter**.
 4. Under Plattform väljer du **iOS**.
@@ -107,7 +107,7 @@ Lägg till det hanterade Google Play-kontot för Slack till din Intune-klient oc
 
 ### <a name="add-slack-to-intune"></a>Lägga till Slack i Intune
 Lägg till Slack som en hanterad Google Play-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på iOS-enheter.
-1. I Intune, väljer du **Klientappar** > **Appar** > **Lägg till**.
+1. Välj **Appar** > **Alla appar** > **Lägg till** i Intune.
 2. Under Apptyp väljer du **Store-app – Hanterat Google Play-konto**.
 3. Välj **Hanterat Google Play-konto – Godkänn**. Ange sökorden ”Slack för EMM” och välj appen.
 4. Välj **Godkänn**.
@@ -122,7 +122,7 @@ Lägg till Slack som en hanterad Google Play-app i Intune och tilldela dina Slac
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Lägga till en appkonfigurationsprincip för Slack
 Lägg till en appkonfigurationsprincip för Slack. Appkonfigurationsprinciper för hanterade enheter är plattformsspecifika, så du måste lägga till en separat princip för dina Slack-användare på iOS-enheter.
-1. Gå till Intune och välj **Klientappar** > **Appkonfigurationsprinciper** > **Lägg till**.
+1. Gå till Intune och välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
 2. Ange Test av appkonfigurationsprincip för Slack vid Namn.
 3. Under Registreringstyp för enhet väljer du **Hanterade enheter**.
 4. Under Plattform väljer du **Android**.

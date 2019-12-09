@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/07/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14e9aa6e82d7b3e24350de8770f02b0a08695e1a
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.openlocfilehash: c344a518890a2309a7805d61a5675e2646029bbb
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801669"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564048"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurera Google Chrome för Android-enheter med Intune 
 
@@ -36,8 +36,8 @@ Du kan använda en konfigurationsprincip för Intune-appar med Google Chrome fö
 
 ## <a name="add-the-google-chrome-app-to-intune"></a>Lägga till Google Chrome-appen i Intune
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till** och lägger sedan till appen **Hanterat Google Play-konto**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till** och lägg sedan till appen **Hanterat Google Play-konto**.
 3. Gå till Hanterat Google Play-konto, sök med **Google Chrome** och godkänn.
 
     ![Söka och godkänna Google Chrome](~/apps/media/apps-configure-chrome-android/search.png)

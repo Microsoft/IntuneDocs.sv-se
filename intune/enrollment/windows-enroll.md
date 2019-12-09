@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30a1c9b1fddaa59d633c8dc969063b26b25097de
-ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
+ms.openlocfilehash: 5f12feca6d43a4194e7c60639a93747c7f389f93
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74098177"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558194"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com är det föredragna fullständiga do
 Det går inte att använda en annan metod än CNAME-konfigurationen. Till exempel stöds inte användning av en proxyserver för att omdirigera enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc till enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc eller manage.microsoft.com/EnrollmentServer/Discovery.svc.
 
 **Steg 2: Verifiera CNAME** (valfritt)<br>
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Windows-registrering** > **CNAME-validering**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **CNAME-validering**.
 2. I rutan **Domän** skriver du företagets webbplats och väljer **Test**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Berätta för användare hur de ska registrera Windows-enheter

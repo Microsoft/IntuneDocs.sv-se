@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984112"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563831"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS- och MacOS-appar som har köpts via ett Apples volymköpsprogram med Microsoft Intune
 
@@ -82,8 +82,8 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Så här skaffar du och laddar upp en Apple VPP-token
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. I fönstret **Intune** väljer du **Klientappar** > **Apple VPP-token** under **Konfiguration**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Välj **Administration av klientorganisation** > **Anslutningsappar och token** > **Apple VPP-token**.
 4. I fönstret med VPP-tokenlistan väljer du **Skapa**.
 5. I fönstret **Skapa VPP-token** anger du följande information:
     - **VPP-tokenfil** – Om du inte redan gjort det, registrerar du dig för volymköpsprogram för företag eller programmet för utbildning. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto och väljer det här.
@@ -110,7 +110,7 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Tilldela en volyminköpt app
 
-1. I fönstret **Intune** väljer du **Klientappar** > **Appar** under **Hantera**.
+1. Välj **Appar** > **Alla appar**.
 2. I fönstret med applistan väljer du den app som du vill tilldela och väljer sedan **Tilldelningar**.
 3. I fönstret ***Appnamn*** - **Tilldelningar** väljer du **Lägg till grupp** och i fönstret **Lägg till grupp** väljer du sedan en **Tilldelningstyp** och den Azure AD-användare eller de enhetsgrupper som du vill tilldela till appen.
 5. Välj följande inställningar för varje grupp som du har valt:
@@ -176,8 +176,8 @@ Du kan för närvarande inte ta bort en iOS VPP-app från Microsoft Intune.
 
 Åtkomst till Apple VPP-token och VPP-appar kan kontrolleras oberoende av de behörigheter som tilldelats anpassade administratörsroller i Intune.
 
-* För att låta en anpassad Intune-roll hantera Apple VPP-tokens under **Klientappar** > **Appar** ska du tilldela behörigheter till **mobilappar**.
-* För att låta en anpassad Intune-roll hantera appar som har köpts med iOS VPP-tokens under **Klientappar** > **Appar** ska du tilldela behörigheter till **mobilappar**. 
+* Om du vill låta en anpassad Intune-roll hantera Apple VPP-token, så måste du tilldela behörigheter för **Hanterade appar** under **Appar** > **Apple VPP-token**.
+* Om du vill låta en anpassad Intune-roll hantera appar som har köpts med iOS VPP-token, så måste du tilldela behörigheter för **Mobilappar** under **Appar** > **Alla appar**. 
 
 ## <a name="additional-information"></a>Ytterligare information
 
@@ -196,7 +196,7 @@ Licensen bör vara uppdaterad inom några timmar efter installation eller avinst
 Ja. Intune-administratören kan överprenumerera på en app. Exempelvis om administratören köper 100 licenser för appen XYZ och sedan riktar appen till en grupp med 500 medlemmar. De första 100 medlemmarna (användare eller enheter) får den licens som tilldelats till dem, men resten av medlemmarna misslyckas vid licenstilldelningen.
 
 ### <a name="how-frequently-does-intune-sync-vpp-tokens-with-apple"></a>Hur ofta ska Intune synkronisera VPP-token med Apple?
-Intune synkroniserar VPP-tokens och licenser två gånger om dagen med Apple. Intune-administratören kan starta en manuell synkronisering under **Klientappar** > **Apple VPP-token**.
+Intune synkroniserar VPP-tokens och licenser två gånger om dagen med Apple. Intune-administratören kan starta en manuell synkronisering under **Appar** > **Apple VPP-token**.
 
 ## <a name="next-steps"></a>Nästa steg
 

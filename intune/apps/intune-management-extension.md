@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d73d28f34258bce99199731579969604c0a3d97
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059727"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563465"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Använda PowerShell-skript på Windows 10-enheter i Intune
 
@@ -62,7 +62,7 @@ Intune-hanteringstillägget har följande krav. När förhandskraven är uppfyll
     
     - Användaren loggar in på enheten med sitt Azure AD-konto, och registrerar sedan i Intune.
 
-  - Samhanterade enheter som använder Configuration Manager och Intune. Kontrollera att arbetsbelastningen för **Klientappar** är inställd på **Pilot Intune** eller **Intune**. Se följande artiklar för vägledning: 
+  - Samhanterade enheter som använder Configuration Manager och Intune. Kontrollera att arbetsbelastningen för **Appar** är inställd på **Pilot Intune** eller **Intune**. Se följande artiklar för vägledning: 
   
     - [Vad är samhantering?](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Arbetsbelastning för klientappar](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
@@ -73,8 +73,8 @@ Intune-hanteringstillägget har följande krav. När förhandskraven är uppfyll
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Skapa en skriptprincip och tilldela den
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **PowerShell-skript** > **Lägg till**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **PowerShell-skript** > **Lägg till**.
 
     ![Lägga till och använda PowerShell-skript i Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 

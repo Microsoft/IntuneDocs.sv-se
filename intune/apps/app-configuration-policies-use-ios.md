@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ee3ecd64254c0e212ffc86155d677bf18ba647a
-ms.sourcegitcommit: f6b82c62af81a2643a1aaec774afa42d02eef352
+ms.openlocfilehash: a104b4d41a364c552a8ebac73ff3341af71d6d21
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73566184"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564171"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -51,8 +51,7 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 ## <a name="create-an-app-configuration-policy"></a>Skapa en appkonfigurationsprincip
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj arbetsbelastningen **Klientappar**.
-4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
+3. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
 5. Ange följande information:
     - **Namn** – namnet på den profil som visas i Azure Portal.
     - **Beskrivning** – beskrivning av den profil som visas i Azure Portal.
@@ -74,7 +73,7 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 13. Välj fliken **Exkludera**. 
 14. Klicka på **Välj grupper att utesluta** för att visa det relaterade fönstret.
 
-    ![Skärmbild av principtilldelningar – bladet Välj grupper att undanta](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+    ![Skärmbild av Principtilldelningar – fönstret Välj grupper att undanta](./media/app-configuration-policies-use-ios/app-config-policy03.png)
 15. Välj de grupper som du vill exkludera och klicka sedan på **Välj**.
 
     >[!NOTE]
@@ -181,10 +180,9 @@ Dessutom stöder Intune följande typer av token i egenskapslistan:
 
 DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med App Store-versionen av företagsportalappen. Du kan dock konfigurera företagsportalappen så att den stöder iOS DEP-enheter med följande steg.
 
-1. I Intune på Azure-portalen:
-    - Lägg till Intune-företagsportalen vid behov genom att gå till **Intune** > **Klientappar** > **Appar** > **Lägg till**.
-    - Gå till **Klientappar** > **Appkonfigurationsprinciper** för att skapa en konfigurationsprincip för appar för företagsportalappen.
-2. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du skapar en konfigurationsprincip för appar och anger XML-data finns i [Lägg till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md) eller, för hybrid MDM, [Tillämpa inställningar på iOS-appar med appkonfigurationsprinciper i System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+1. Lägg till Intune-företagsportalen i Intune när så behövs genom att gå till **Intune** > **Appar** > **Alla appar** > **Lägg till**.
+2. Om du vill skapa en appkonfigurationsprincip för företagsportalsappen går du till **Appar** > **Appkonfigurationsprinciper**.
+3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du skapar en konfigurationsprincip för appar och anger XML-data finns i [Lägg till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md) eller, för hybrid MDM, [Tillämpa inställningar på iOS-appar med appkonfigurationsprinciper i System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
     ``` xml
     <dict>
@@ -202,7 +200,7 @@ DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med A
 4. Be slutanvändarna att logga in på företagsportalappen när den installeras automatiskt.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Övervaka konfigurationsstatus för iOS-appar per enhet 
-När en konfigurationsprincip har tilldelats kan du övervaka iOS-appens konfigurationsstatus för varje hanterad enhet. Gå till **Microsoft Intune** i Azure Portal och välj **Enheter** > **Alla enheter**. Välj en specifik enhet från listan med hanterade enheter för att visa ett blad för enheten. Välj **Appkonfiguration** på enhetsbladet.  
+När en konfigurationsprincip har tilldelats kan du övervaka iOS-appens konfigurationsstatus för varje hanterad enhet. Gå till **Microsoft Intune** i Azure Portal och välj **Enheter** > **Alla enheter**. Om du vill visa ett fönster för enheten väljer du en specifik enhet från listan med hanterade enheter. Välj **Appkonfiguration** i enhetens fönster.  
 
 ## <a name="additional-information"></a>Ytterligare information
 

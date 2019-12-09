@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56814550cae814bd89d55a6f72df98dd24df4caf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507458"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564371"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -76,14 +76,14 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 
 ## <a name="get-started"></a>Kom igång
 
-Du hittar den mesta app-relaterade informationen i arbetsbelastningen **Klientappar** som du kan komma åt genom att göra följande:
+Du hittar den mesta apprelaterade informationen i arbetsbelastningen **Appar** som du öppnar på följande sätt:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. I fönstret **Microsoft Intune** väljer du **Klientappar**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Välj **Appar**.
 
-    ![Välj arbetsbelastningen ”Klientappar”](./media/app-management/apps-workload.png)
+    ![Arbetsbelastningsfönstret Appar](./media/app-management/apps-workload.png)
 
-I följande fyra avsnitt beskrivs alternativ som är tillgängliga i fönstret **Klientappar**.
+I följande fyra avsnitt beskrivs de alternativ som är tillgängliga i fönstret **Appar**.
 
 ### <a name="manage"></a>Hantera
 - **Appar**: Välj det här alternativet för att lägga till, visa, tilldela och övervaka apparna som personalen använder. Mer information finns i:

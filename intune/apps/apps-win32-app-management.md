@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143208"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564031"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -101,17 +101,17 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Välj **Appar** > **Alla appar** > **Lägg till**.
 4. I appfönstret **Lägg till** väljer du **Windows-app (Win32)** från den nedrullningsbara listan.
 
-    ![Skärmbild av bladet Lägg till app – Listrutan Lägg till typ](./media/apps-win32-app-management/apps-win32-app-01.png)
+    ![Skärmbild av bladet Lägg till en app – listrutan Lägg till typ](./media/apps-win32-app-management/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Steg 2: Ladda upp appaketfilen
 
 1. I fönstret **Lägg till app** väljer du **Appaketfil** för att välja en fil. Fönstret Appaketfil visas.
 
-    ![Skärmbild av bladet Appaketfil](./media/apps-win32-app-management/apps-win32-app-02.png)
+    ![Skärmbild av fönstret Appaketfil](./media/apps-win32-app-management/apps-win32-app-02.png)
 
 2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en Windows-installationsfil med tillägget *.intunewin*.
 
@@ -175,12 +175,12 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 2. I fönstret **Lägg till en kravregel** konfigurerar du följande information. Vissa värden i det här fönstret kan fyllas i automatiskt.
     - **Operativsystemarkitektur**: Välj de arkitekturer som krävs för att installera appen.
     - **Lägsta operativsystemversion**: Välj det lägsta operativsystem som krävs för att installera appen.
-    - **Diskutrymme som krävs (MB)**: Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
-    - **Fysiskt minne som krävs (MB)**: Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
+    - **Diskutrymme som krävs (MB)** : Om du vill kan du lägga till mängden ledigt diskutrymme som krävs på systemenheten för att installera appen.
+    - **Fysiskt minne som krävs (MB)** : Om du vill kan du lägga till mängden fysiskt minne (RAM) som krävs för att installera appen.
     - **Lägsta antal logiska processorer som krävs**: Om du vill kan du lägga till det lägsta antal logiska processorer som krävs för att installera appen.
-    - **Lägsta processorhastighet som krävs (MHz)**: Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
+    - **Lägsta processorhastighet som krävs (MHz)** : Om du vill kan du lägga till den lägsta processorhastighet som krävs för att installera appen.
 
-3. Klicka på **Lägg till** för att visa bladet **Lägg till en kravregel** och konfigurera ytterligare kravregler. Välj **typen av krav** för att välja vilken typ av regel som du använder för att avgöra hur ett krav ska valideras. Kravregler kan baseras på information om filsystem, registervärden eller PowerShell-skript. 
+3. Klicka på **Lägg till** om du vill visa fönstret **Lägg till en kravregel** och konfigurera ytterligare kravregler. Välj **typen av krav** för att välja vilken typ av regel som du använder för att avgöra hur ett krav ska valideras. Kravregler kan baseras på information om filsystem, registervärden eller PowerShell-skript. 
     - **Fil**: När du väljer **Fil** som **Typ av krav** måste kravregeln identifiera en fil eller en mapp, ett datum, en version eller en storlek. 
         - **Sökväg** – Den fullständiga sökvägen till mappen som innehåller filen eller mappen som ska identifieras.
         - **Fil eller mapp** – Filen eller mappen som ska identifieras.
@@ -297,7 +297,7 @@ Du har nu slutfört stegen för att lägga till en Win32-app i Intune. Informati
 
 ## <a name="app-dependencies"></a>Appsamband
 
-Appsamband är program som måste installeras innan du kan installera Win32-appen. Du kan kräva att andra appar installeras som beroenden. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. Det finns upp till 100 beroenden, vilket innefattar beroenden för eventuella inkluderade beroenden samt själva appen. Du kan lägga till Win32-appsamband först efter att Win32-appen har lagts till och laddats upp till Intune. När Win32-appen har lagts till visas alternativet **Beroenden** på bladet för din Win32-app. 
+Appsamband är program som måste installeras innan du kan installera Win32-appen. Du kan kräva att andra appar installeras som beroenden. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. Det finns upp till 100 beroenden, vilket innefattar beroenden för eventuella inkluderade beroenden samt själva appen. Du kan lägga till Win32-appsamband först efter att Win32-appen har lagts till och laddats upp till Intune. När Win32-appen har lagts till visas alternativet **Beroenden** i din Win32-apps fönster. 
 
 Alla Win32-programberoenden måste också vara en Win32-app. Den har inte stöd för beroende på andra typer av appar, till exempel enkla MSI LOB- eller Store-appar.
 
@@ -307,8 +307,8 @@ Du kan välja huruvida varje oberoende app ska installeras automatiskt. Som stan
 
 Om du vill lägga till ett appsamband till Win32-appen använder du följande steg:
 
-1. I Intune väljer du **Klientappar** > **Appar** för att visa listan över tillagda klientappar. 
-2. Välj en tillagd **Windows-app (Win32)**. 
+1. I Intune väljer Välj **Appar** > **Alla appar** i Intune om du vill visa listan med tillagda klientappar. 
+2. Välj en tillagd **Windows-app (Win32)** . 
 3. Välj **Beroenden** för att lägga till de beroende appar som måste installeras innan Win32-appen kan installeras. 
 4. Klicka på **Lägg till** för att lägga till ett appsamband.
 5. När du har lagt till beroende appar klickar du på **Välj**.
@@ -343,12 +343,12 @@ Du kan konfigurera starttid och tidsgräns för en Win32-app. Vid starttiden bö
 
 Så här anger du appens tillgänglighet baserat på datum och tid för en app som krävs:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. På bladet **Intune** väljer du **Klientappar** > **Appar**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar**.
 3. Välj en befintlig **Windows-app (Win32)** i listan. 
-4. På appbladet väljer du **Tilldelningar** > **Lägg till grupp**. 
+4. Välj **Tilldelningar** > **Lägg till grupp** i appfönstret. 
 5. Ställ in **Tilldelningstyp** på **Obligatorisk**. Observera att apptillgängligheten kan ställas in baserat på tilldelningstypen. **Tilldelningstyp** kan vara **Obligatorisk**, **Tillgängligt för registrerade enheter** eller **Avinstallera**.
-6. Välj **Grupper som ingår** för att avgöra vilken grupp av användare som ska tilldelas till appen. Bladet **Tilldela** visas.
+6. Välj **Grupper som ingår** för att avgöra vilken grupp av användare som ska tilldelas till appen. Fönstret **Tilldela** visas.
 7. Ange **Ja** för **Gör den här appen obligatorisk för alla användare**.
 
     > [!NOTE]
@@ -358,18 +358,18 @@ Så här anger du appens tillgänglighet baserat på datum och tid för en app s
     > - **Avinstallera**: Du kan välja att ***avinstallera den här appen för alla användare** och/eller **avinstallera den här appen för alla enheter**.
 
 8. Välj **Redigera** om du vill ändra alternativen för **Slutanvändarupplevelse**.
-9. På bladet **Redigera tilldelning** anger du **Visa alla popup-meddelanden** för **Slutanvändarmeddelanden**. Observera att du kan ange **Visa alla popup-meddelanden**, **Visa popup-meddelanden om omstart av dator** eller **Dölj alla popup-meddelanden** för **Slutanvändarmeddelanden**.
+9. Ställ in **Slutanvändarmeddelanden** på **Visa alla popup-meddelanden** i fönstret **Redigera tilldelning**. Observera att du kan ange **Visa alla popup-meddelanden**, **Visa popup-meddelanden om omstart av dator** eller **Dölj alla popup-meddelanden** för **Slutanvändarmeddelanden**.
 10. Ange **Ett visst datum och tid** för **Apptillgänglighet** och välj datum och tid. Datumet och tiden anger när appen laddas ned till slutanvändarens enhet. 
 11. Ange **Ett visst datum och tid** för **Tidsgräns för appinstallation** och välj datum och tid. Datumet och tiden anger när appen installeras på slutanvändarens enhet. Om fler än en tilldelning har gjorts för samma användare eller enhet väljs den tidigaste tidsgränsen för appinstallation.
 12. Klicka på **Aktiverad** bredvid **Respitperiod för omstart**. Respitperioden för omstart startar så snart appen har installerats på enheten. När den är inaktiverad kan enheten startas om utan varning. <br>Du kan anpassa följande alternativ:
-    - **Respitperiod för omstart av enhet (minuter)**: Standardvärdet är 1 440 minuter (24 timmar). Det här värdet kan vara högst 2 veckor.
-    - **Välj när dialogrutan för nedräkning till omstart ska visas innan omstart sker (minuter)**: Standardvärdet är 15 minuter.
+    - **Respitperiod för omstart av enhet (minuter)** : Standardvärdet är 1440 minuter (24 timmar). Det här värdet kan vara högst 2 veckor.
+    - **Välj när dialogrutan för nedräkning till omstart ska visas innan omstart sker (minuter)** : Standardvärdet är 15 minuter.
     - **Tillåt användaren att snooza omstartsmeddelande**: Du kan välja **Ja** eller **Nej**.
-        - **Välj snooze-tid (minuter)**: Standardvärdet är 240 minuter (4 timmar). Snooze-tiden får inte vara större än respitperioden för omstart.
+        - **Välj snooze-tid (minuter)** : Standardvärdet är 240 minuter (4 timmar). Snooze-tiden får inte vara större än respitperioden för omstart.
 13. Klicka på **OK** > **OK** > **OK** > **Spara** för att lägga till tilldelningen.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Popup-meddelanden för Win32-appar 
-Om det behövs kan du förhindra att popup-meddelanden per apptilldelning visas för slutanvändarna. Från Intune, väljer du **Klientappar** > **Appar** > välj appen > **Tilldelningar** > **Inkludera grupper**. 
+Om det behövs kan du förhindra att popup-meddelanden per apptilldelning visas för slutanvändarna. Gå till Intune, välj **Appar** > **Alla appar** > välj appen > **Tilldelningar** > **Inkludera grupper**. 
 
 > [!NOTE]
 > Win32-appar som installerats via Intune-hanteringstillägget avinstalleras inte på oregistrerade enheter. Administratörer kan använda tilldelningsundantag för att inte erbjuda Win32-appar till BYOD-enheter.

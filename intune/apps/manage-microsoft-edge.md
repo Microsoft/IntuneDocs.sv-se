@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754422"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563884"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -58,15 +58,15 @@ Om Microsoft Edge inte riktar sig mot en Intune-princip kan inte användare anv�
 Du kan använda villkorlig åtkomst för Azure AD för att omdirigera användare så att de endast kommer åt företagets innehåll via Microsoft Edge. Detta begränsar mobil webbläsaråtkomst till Azure AD-anslutna webbappar till principskyddade Microsoft Edge. Detta blockerar åtkomst från andra oskyddade webbläsare, som Safari eller Chrome. Du kan tillämpa villkorlig åtkomst på Azure-resurser som Exchange Online och SharePoint Online, Administrationscenter för Microsoft 365 och även lokala platser som du exponerar för externa användare via [Azure AD-programproxyn](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
 Så här kan du begränsa Azure AD-anslutna webbappar för att använda Microsoft Edge i iOS och Android:
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Under Intune-noden väljer du **Villkorlig åtkomst** > **Ny princip**.
-3. Välj **Bevilja** i avsnittet **Åtkomstkontroller** på bladet.
+3. Välj **Bevilja** i avsnittet **Åtkomstkontroller** i fönstret.
 4. Välj **Kräv godkänd klientapp**.
-5. Klicka på **Välj** på bladet **Bevilja**. Den här principen måste tilldelas till de molnappar som du vill ska vara tillgängliga enbart för appen Intune Managed Browser.
+5. Klicka på **Välj** i fönstret **Bevilja**. Den här principen måste tilldelas till de molnappar som du vill ska vara tillgängliga enbart för appen Intune Managed Browser.
 
     ![Skärmbild för princip för villkorlig åtkomst – Bevilja](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. I avsnittet Tilldelningar väljer du **Villkor** > **Klientappar**. Bladet **Klientappar** visas.
+6. Välj **Villkor** > **Appar** i avsnittet Tilldelningar. Fönstret **appar** visas.
 7. Klicka på **Ja** under **Konfigurera** för att tillämpa principen på specifika klientappar.
 8. Kontrollera att **Webbläsare** har valts som klientapp.
 
@@ -97,29 +97,29 @@ Enkel inloggning kräver att din enhet har registrerats av antingen Microsoft Au
 
 Skapa en appkonfiguration för Microsoft Edge:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Klientappar** > **Appkonfigurationsprinciper** > **Lägg till**.
-3. På bladet **Lägg till konfigurationsprincip** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
+3. Gå till fönstret **Lägg till konfigurationsprincip**, ange ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
 4. För **Registreringstyp för enhet** väljer du **Hanterade appar**.
-5. Välj **Välj den obligatoriska appen**. Gå till bladet **Målappar** välj **den hanterade webbläsaren** eller **Edge** för iOS, Android eller båda.
-6. Välj **OK** för att återgå till bladet **Lägg till konfigurationsprincip**.
-7. Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Microsoft Edge. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
+5. Välj **Välj den obligatoriska appen**. Gå till fönstret **Målappar** välj **Hanterad webbläsare** eller **Edge** för iOS, Android eller båda.
+6. Välj **OK** om du vill gå tillbaka till fönstret **Lägg till konfigurationsprincip**.
+7. Välj **Konfigurationsinställningar**. Definiera nyckel- och värdepar för konfigurationerna för Microsoft Edge i fönstret **Konfiguration**. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
 
     > [!NOTE]
     > Microsoft Edge använder samma nyckel/värde-par som Managed Browser. På Android måste appskyddsprinciper vara riktade mot Microsoft Edge för att appkonfigurationsprinciperna ska tillämpas.
 
 8. När du är klar väljer du **OK**.
-9. På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.<br>
-    Den nya konfigurationen skapas och visas på bladet **Appkonfiguration**.
+9. Välj **Lägg till** i fönstret **Lägg till konfigurationsprincip**.<br>
+    Den nya konfigurationen skapas och visas i fönstret **Appkonfiguration**.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Tilldela de konfigurationsinställningar som du har skapat 
 
 Du kan tilldela inställningarna till Azure AD-grupper med användare. Om användaren har den aktuella skyddade webbläsaren installerad så hanteras appen med de inställningar du har angett.
 
-1. På bladet **Klientappar** i instrumentpanelen för Intunes hantering av mobilprogram väljer du **Appkonfigurationsprinciper**.
+1. Välj **Appkonfigurationsprinciper** i fönstret **Appar** på Intunes instrumentpanel för hantering av mobilprogram.
 2. Välj den du vill tilldela i listan med appkonfigurationer.
-3. Välj **Tilldelningar** på nästa blad.
-4. På bladet **Tilldelningar** väljer du den Azure AD-grupp som du vill tilldela appkonfigurationen till. Välj sedan **OK**.
+3. Välj **Tilldelningar** i nästa fönster.
+4. Välj den Azure AD-grupp vilken du vill tilldela appkonfigurationen i fönstret **Tilldelningar** och välj sedan **OK**.
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Dirigera användarna till Microsoft Edge i stället för Intune Managed Browser 
 

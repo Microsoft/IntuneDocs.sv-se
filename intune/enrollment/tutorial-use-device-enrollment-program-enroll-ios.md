@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc950f9e60f5549a7a74c2963f33c36369d3ebd3
-ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
+ms.openlocfilehash: 56b8ab9507acda8fc1145bd65c4438da838dd806
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74126164"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558171"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Självstudie: Använda Apples företagsenhetsregistrering i Apple Business Manager (ABM) för registrering av iOS-enheter i Intune
 Funktionerna för registrering av enheter i Apple Business Manager underlättar registrering av enheter. Intune stöder också Apples äldre DEP-portal (Programmet för enhetsregistrering), men vi rekommenderar att du börjar om från början med Apple Business Manager. Med Microsoft Intune och Apples företagsenhetsregistrering registreras enheter automatiskt den första gången som användaren slår på enheten. Du kan därför leverera enheter till många användare utan att behöva konfigurera varje enhet individuellt. 
@@ -44,7 +44,7 @@ Innan du registrerar iOS-enheter med Apples företagsägda funktioner behöver d
 
 Du kan använda ABM- eller DEP-portalen för att skapa en token för enhetsregistrering. Du kan också använda portalerna för att tilldela enheter till Intune för hantering.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > **Lägg till**.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheeter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > **Lägg till**.
 
 2. Välj **Jag godkänner** för att ge Microsoft behörighet att skicka information om användare och enhet till Apple.
 
@@ -80,7 +80,7 @@ Du kan använda ABM- eller DEP-portalen för att skapa en token för enhetsregis
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
 Nu när du har installerat din token kan skapa du en registreringsprofil för företagsägda iOS-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken**.
 
 2. Välj den token du precis har installerat och välj **Profiler** > **Skapa profil**.
 
@@ -118,13 +118,13 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för f�
 
 När du ställer in en registreringsprogramtoken med ABM-, ASM- eller DEP-portalen och tilldelar enheter där till MDM-servern kan du vänta på att enheterna ska synkroniseras till Intune-tjänsten eller push-överföra en synkronisering manuellt. Utan manuell synkronisering kan det ta upp till 24 timmar innan enheterna visas i Azure-portalen.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan > **Enheter** > **Synkronisera**.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token i listan > **Enheter** > **Synkronisera**.
 
 ## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Tilldela iOS-enheterna en registreringsprofil
 
 Du måste tilldela en registreringsprogramprofil till enheterna innan de kan registreras. Enheterna synkroniseras till Intune från Apple och måste tilldelas rätt MDM-servertoken i ABM-, ASM- eller DEP-portalen.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj din token i listan.
+1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token i listan.
 2. Välj **Enheter** > välj enheter i listan > **Tilldela profil**.
 3. Välj en profil för enheterna under **Tilldela profil** och välj sedan **Tilldela**.
 

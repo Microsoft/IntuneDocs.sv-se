@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9561c50e21a9667ccec3f9de3627e7a933cf0736
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584984"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564271"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Lägg till konfigurationsprinciper för hanterade Android Enterprise-enheter
 
@@ -34,7 +34,7 @@ Konfigurationsprinciper för appar i Microsoft Intune tillhandahåller inställn
 > [!NOTE]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
 
-1. Gå till [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Klientappar** > **Appkonfigurationsprinciper** >  **Lägg till**.
+1. Gå till [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Appar** > **Appkonfigurationsprinciper** >  **Lägg till**.
 2. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra exempel på ett principnamn är **Android Enterprise Nine Work-apprincip för hela företaget**.
@@ -110,7 +110,7 @@ Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till
 
 En app använder till exempel enhetens mikrofon. Användaren uppmanas att ge appen behörighet att använda mikrofonen.
 
-1. Gå till [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Klientappar** > **Appkonfigurationsprinciper** >  **Lägg till**.
+1. Gå till [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Appar** > **Appkonfigurationsprinciper** >  **Lägg till**.
 2. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra exempel på ett principnamn är **Android Enterprise fråga apprincip för hela företaget**.

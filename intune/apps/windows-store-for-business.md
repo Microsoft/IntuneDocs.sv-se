@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04bc1fac8d3362a173c4777cdf5228fed6b6349d
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 3c1627ba89ad50b2053187a20fee6cbc7a9064e8
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712538"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562501"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du volymköpta appar från Microsoft Store för företag med Microsoft Intune
 
@@ -51,7 +51,7 @@ Granska följande information innan du börjar synkronisera och tilldela appar f
 - För användning av den här funktionen måste enheterna vara anslutna till Active Directory Domain Services eller arbetsplatsanslutna.
 - Registrerade enheter måste använda 1511-versionen av Windows 10 eller senare.
 
-Relaterade uppsättningar och offlinelicensierade appar som synkroniseras från Microsoft Store för företag kommer dessutom nu konsolideras till en enda appost i användargränssnittet. All distributionsinformation från enskilda paket migreras till den enda posten. Om du vill se relaterade uppsättningar i Azure-portalen väljer du **Applicenser** på bladet **Klientappar**.
+Relaterade uppsättningar och offlinelicensierade appar som synkroniseras från Microsoft Store för företag kommer dessutom nu konsolideras till en enda appost i användargränssnittet. All distributionsinformation från enskilda paket migreras till den enda posten. Om du vill visa relaterade uppsättningar i Azure Portal, så välj **Applicenser** i fönstret **Appar**.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Koppla ditt konto för Microsoft Store för företag till Intune
 Innan du aktiverar synkronisering i Intune-konsolen måste du konfigurera ditt Windows Store-konto för att använda Intune som ett hanteringsverktyg:
@@ -66,17 +66,16 @@ Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 
 ## <a name="configure-synchronization"></a>Konfigurera synkronisering
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-1. I fönstret **Klientappar** väljer du **Installation** > **Microsoft Store för företag**.
-2. Klicka på **Aktivera**.
-3. Om du inte redan gjort det klickar du på länken för att registrera Microsoft Store för företag och kopplar kontot på det sätt som beskrivs tidigare.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Administration av klientorganisation** > **Anslutningsappar och token** > **Microsoft Store för företag**.
+3. Klicka på **Aktivera**.
+4. Om du inte redan gjort det klickar du på länken för att registrera Microsoft Store för företag och kopplar kontot på det sätt som beskrivs tidigare.
 5. I listrutan **Språk** väljer du det språk som ska användas vid visning av program från Microsoft Store för företag i Azure Portal. Apparna installeras i slutanvändarens språk om det är tillgängligt oavsett vilket språk de visas i.
 6. Klicka på **Synkronisera** för att hämta appar som du har köpt från Microsoft Store i Intune.
 
 ## <a name="synchronize-apps"></a>Synkronisera appar
 
-1. I arbetsbelastningen **Klientappar** väljer du **Installation** > **Microsoft Store för företag**.
+1. Välj **Administration av klientorganisation** > **Anslutningsappar och token** > **Microsoft Store för företag**.
 2. Klicka på **Synkronisera** för att hämta appar som du har köpt från Microsoft Store i Intune.
 
 > [!NOTE]

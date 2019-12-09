@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5983742043dca9d07242315d4aaa97de2ead8d6
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: a0440e2d6f5890b20ccf020c40bb1037bcfcae38
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984026"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564128"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Rensar data selektivt med villkorsstyrda startåtgärder för appskyddsprinciper i Intune
 
@@ -33,16 +33,16 @@ Du kan uttryckligen välja att rensa ditt företags data från slutanvändarens 
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Skapa en app med villkorsstyrda startåtgärder för skyddsprincip
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. I **Intune**-fönstret väljer du **Klientappar** > **Principer för appskydd**.
-4. Klicka på **Lägg till en princip** (du kan även redigera en befintlig princip). 
-5. Klicka på **Konfigurera obligatoriska inställningar** för att se listan över inställningar tillgängliga för konfiguration för principen. 
-6. När du rullar ned i fönstret Inställningar visas avsnittet **Villkorsstyrda startåtgärder** med en redigerbar tabell.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appskyddsprinciper**.
+3. Klicka på **Skapa princip** och välj enhetens plattform för principen. 
+4. Klicka på **Konfigurera obligatoriska inställningar** för att se listan över inställningar tillgängliga för konfiguration för principen. 
+5. När du rullar ned i fönstret Inställningar visas avsnittet **Villkorsstyrda startåtgärder** med en redigerbar tabell.
 
     ![Skärmbild av åtkomståtgärder för Intune-appskydd](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
 
-7. Välj en **inställning** och ange det **värde** som användare måste uppfylla för att logga in på företagsappen. 
-8. Välj den **åtgärd** du vill vidta att om användarna inte uppfyller dina krav. I vissa fall kan flera åtgärder konfigureras för en och samma inställning. Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md).
+6. Välj en **inställning** och ange det **värde** som användare måste uppfylla för att logga in på företagsappen. 
+7. Välj den **åtgärd** du vill vidta att om användarna inte uppfyller dina krav. I vissa fall kan flera åtgärder konfigureras för en och samma inställning. Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md).
 
 ## <a name="policy-settings"></a>Principinställningar 
 

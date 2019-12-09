@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8519ad00024be43371cd118e3f37ae2fbc57898b
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813363"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564250"
 ---
 # <a name="intune-discovered-apps"></a>Intune-identifierade appar
 
@@ -33,18 +33,18 @@ ms.locfileid: "72813363"
 
 Intune tillhandahåller en sammanställd lista över detekterade appar på Intune-registrerade enheter på din klient.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. I fönstret **Intune** väljer du **Klientappar** > **Identifierade appar**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Övervaka** > **Identifierade appar**.
 
 >[!NOTE]
->Du kan exportera listan över identifierade appar till en CSV-fil genom välja **Exportera** från bladet **Identifierade appar** .
+>Du kan exportera listan över identifierade appar till en CSV-fil genom välja **Exportera** i fönstret **Identifierade appar**.
 >
 >För upptäckta Win32-appar finns det för tillfället inget sammanlagt antal. Den här typen av data kan endast visas på specifika enheter.
 
 Intune tillhandahåller dessutom en lista över upptäckta appar för den individuella enheten på din klient.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enheter** > **Alla Enheter** i fönstret Intune.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Alla enheter**.
 3. Välj en enhet.
 4. Om du vill visa identifierade appar för den här enheten väljer du **Identifierade appar** från området **Övervaka**.
 
@@ -69,7 +69,7 @@ Följande lista innehåller appens plattformstyp, de appar som övervakas för p
 
 Antal appar som identifieras kanske inte matchar statusen för antalet installerade appar. Här är några möjliga orsaker till skillnaden:
 
-- En måländring för en installerad app som hanteras kan göra att antalet installerade appar på statusbladet minskar, men appen rapporteras fortfarande som identifierad.
+- En måländring för en installerad hanterad app kan medföra att antalet installerade appar i statusfönstret minskar, samtidigt som de fortfarande rapporteras som identifierade appar.
 - Om flera instanser av samma app är mål i en klientorganisation blir antalen olika eftersom användare eller enheter kan överlappa. Varje instans av appen räknar överlappande användare, men det kommer att finnas dubbletter bland de identifierade apparna.
 - Identifierade appar och appstatus samlas in under olika tidsintervall, och det här kan leda till avvikelser i antalet appar.
 

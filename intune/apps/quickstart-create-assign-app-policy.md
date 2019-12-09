@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcda312274e78d327a3a515eb6c95454e38c96f1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1800fa91ed5650fd57a31d24fdb3767a60dc5816
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507119"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563781"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Snabbstart: Skapa och tilldela en skyddsprincip för ett program
 
@@ -43,7 +43,7 @@ Logga in i [Intune](https://aka.ms/intuneportal) som [global administratör elle
 
 Använd följande steg om du vill skapa en appskyddsprincip:
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Klientappar** > **Appskyddsprinciper** > **Skapa princip**. 
+1. Gå till [Intune](https://aka.ms/intuneportal) och välj **Appar** > **Appskyddsprinciper** > **Skapa princip**. 
 2. Ange följande information: 
 
     - **Namn**: *Windows 10-innehållsskydd*
@@ -67,7 +67,7 @@ När du har skapat en appskyddsprincip i Intune kan du tilldela till grupper.
 
 Använd följande steg för att tilldela appskyddsprincipen:
 
-1. I [Intune](https://aka.ms/intuneportal) väljer du **Intune** > **Klientappar** > **Appskyddsprinciper**. 
+1. Gå till [Intune](https://aka.ms/intuneportal), välj **Intune** > **Appar** > **Appskyddsprinciper**. 
 2. Välj den appskyddsprincip som du skapade tidigare. I den här snabbstarten är principen **Windows 10-innehållsskydd**.
 3. Välj **Tilldelningar**.
 4. Klicka på **Välj grupper som ska inkluderas** på fliken **Inkludera**.

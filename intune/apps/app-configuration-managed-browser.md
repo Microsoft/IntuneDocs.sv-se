@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3fab0b14f8ed68d13021a0e141d5997532df2ec
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 52f907b8762322684ec9e21910745a197c3dbe4e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592083"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564320"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
@@ -91,29 +91,28 @@ Om du vill begränsa Azure AD-anslutna webbappars användning av Intune Managed 
 > [!TIP]  
 > Villkorsstyrd åtkomst är en Azure Active Directory-teknik (Azure AD). Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.  
 
-
-1. I Intune-portalen väljer du **Villkorsstyrd åtkomst** > **Ny princip**. 
-2. Välj därefter **Bevilja** i avsnittet **Åtkomstkontroller** på bladet. 
-3. Klicka på **Kräv godkänd klientapp**. 
-4. Klicka på **Välj** på bladet **Bevilja**. Den här principen måste tilldelas till de molnappar som du vill ska vara tillgängliga enbart för appen Intune Managed Browser.
-
-    ![Azure AD – villkorlig åtkomstprincip för Managed Browser](./media/app-configuration-managed-browser/managed-browser-conditional-access-01.png)
-
-5. I avsnittet **Tilldelningar** väljer du **Villkor** > **Klientappar**. Bladet **Klientappar** visas.
-6. Klicka på **Ja** under **Konfigurera** för att tillämpa principen på specifika klientappar.
-7. Kontrollera att **Webbläsare** har valts som klientapp.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Villkorsstyrd åtkomst** > **Ny princip**.
+3. Lägg till principens **namn**. 
+4. I avsnittet **Tilldelningar** väljer du **Villkor** > **Klientappar**. Fönstret **Klientappar** visas.
+5. Klicka på **Ja** under **Konfigurera** för att tillämpa principen på specifika klientappar.
+6. Kontrollera att **Webbläsare** har valts som klientapp.
 
     ![Azure AD – Managed Browser – Välj klientappar](./media/app-configuration-managed-browser/managed-browser-conditional-access-02.png)
 
     > [!NOTE]
     > Om du vill begränsa vilka interna appar (icke-webbläsarbaserade appar) som har åtkomst till dessa molnprogram kan du också välja **Mobilappar och skrivbordsklienter**.
 
-8. I avsnittet **Tilldelningar** väljer du **Användare och grupper** och sedan de användare eller grupper som du vill tilldela den här principen till. 
+7. Klicka på **Klar** > **Klar**.
+8. I avsnittet **Tilldelningar** väljer du **Användare och grupper** och därefter de användare eller grupper till vika du vill tilldela den här principen. Stäng fönstret genom att klicka på **Klar**.
+9. I avsnittet **Tilldelningar** väljer du **Molnappar eller åtgärder** och därefter de appar som ska skyddas med den här principen. Stäng fönstret genom att klicka på **Klar**.
+10. Välj **Bevilja** i avsnittet **Åtkomstkontroller** i fönstret. 
+11. Klicka på **Bevilja åtkomst** och sedan på **Kräv godkänd klientapp**. 
+12. Klicka på **Välj** i fönstret **Bevilja**. Den här principen måste tilldelas till de molnappar som du vill ska vara tillgängliga enbart för appen Intune Managed Browser.
 
-    > [!NOTE]
-    > Användarna måste också använda principen Intune-appskydd för att kunna ta emot principer för appkonfiguration. Mer information om att skapa Intune-appskyddsprinciper finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
+    ![Azure AD – villkorlig åtkomstprincip för Managed Browser](./media/app-configuration-managed-browser/managed-browser-conditional-access-01.png)
 
-9. I avsnittet **Tilldelningar** går du till **Molnappar** och väljer vilka appar som ska skyddas med den här principen.
+
 
 När du har konfigurerat principen ovan tvingas användarna använda Intune Managed Browser för att få åtkomst till de Azure AD-anslutna webbappar som du har skyddat med den här principen. Om användarna försöker använda en ohanterad webbläsare i det här scenariot, visas ett meddelande om att Intune Managed Browser måste användas i stället.
 
@@ -133,27 +132,28 @@ Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticat
 >[!IMPORTANT]
 >För att appkonfigurationer ska tillämpas så måste den användarskyddade webbläsaren eller en annan app på enheten redan hanteras av [Intunes appskyddsprincip]( ../app-protection-policy.md)
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. På bladet **Klientappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
-4. På bladet **Appkonfigurationsprinciper** väljer du **Lägg till**.
-5. På bladet **Lägg till konfigurationsprincip** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
-6. För **Registreringstyp för enhet** väljer du **Hanterade appar**.
-7. Välj alternativet **Välj den obligatoriska appen** och klicka på bladet **Riktade appar**. Välj sedan **Managed Browser** och/eller **Edge** för iOS, Android eller båda.
-8. Välj **OK** för att återgå till bladet **Lägg till konfigurationsprincip**.
-9. Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Managed Browser. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
-10. När du är klar väljer du **OK**.
-11. På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.
-12. Den nya konfigurationen skapas och visas på bladet **Appkonfiguration**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade appar**.
+3. Ange **Namn** och valfri **Beskrivning** för appkonfigurationsinställningarna sidan **Grundläggande** i fönstret **Skapa appkonfigurationsprincip**.
+4. Välj alternativet **Välj den offentliga appen** och välj **Hanterad webbläsare** och/eller **Edge** för iOS, för Android eller för båda två.
+5. Gå tillbaka till fönstret **Skapa appkonfigurationsprincip** genom att klicka på **Välj**.
+6. Visa sidan **Inställningar** genom att klicka på **Nästa**.
+7. Förse appen med konfigurationer genom att definiera nyckel- och värdepar på sidan **Inställningar**. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
+8. Visa sidan**Tilldelning** genom att klicka på **Nästa** och klicka sedan på **Välj grupper att inkludera** och/eller **Välj grupper att exkludera**.
+9. Visa sidan **Granska och skapa** genom att klicka på **Nästa**.
+10. Klicka på **Skapa** när du har granskat appkonfigurationsprincipen.
+
+Den nya konfigurationen skapas och visas i fönstret **Appkonfiguration**.
 
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Tilldela de konfigurationsinställningar som du har skapat
 
 Du kan tilldela inställningarna till Azure AD-grupper med användare. Om användaren har den aktuella skyddade webbläsaren installerad så hanteras appen med de inställningar du har angett.
 
-1. På bladet **Klientappar** i instrumentpanelen för Intunes hantering av mobilprogram väljer du **Appkonfigurationsprinciper**.
+1. Välj **Appkonfigurationsprinciper** i fönstret **Appar** på Intunes instrumentpanel för hantering av mobilprogram.
 2. Välj den du vill tilldela i listan med appkonfigurationer.
-3. Välj **Tilldelningar** på nästa blad.
-4. På bladet **Tilldelningar** väljer du den Azure AD-grupp som du vill tilldela appkonfigurationen till. Välj sedan **OK**.
+3. Välj **Tilldelningar** i nästa fönster.
+4. Välj den Azure AD-grupp som du vill tilldela appkonfigurationen i fönstret **Tilldelningar** och välj sedan **OK**.
 
 ## <a name="how-to-set-microsoft-edge-as-the-protected-browser-for-your-organization"></a>Så här ställer du in Microsoft Edge som den skyddade webbläsaren för din organisation
 
@@ -170,7 +170,7 @@ Om den här inställningen är inställd på ”False”:
 - Om **antingen** Managed Browser **eller** Microsoft Edge finns på enheten kommer den webbläsaren att öppnas. 
 - Om användarna inte har hämtat någon webbläsare uppmanas de att ladda ned Managed Browser.
 
-Använd proceduren ovan för att skapa en Microsoft Edge-appkonfiguration. Ange följande nyckel och värdepar när du väljer inställningarna för **Konfigurationsinställningar** på bladet **Konfiguration** (steg 9):
+Använd proceduren ovan för att skapa en Microsoft Edge-appkonfiguration. Ange följande nyckel. och värdepar när du väljer **Konfigurationsinställningar** i fönstret **Konfiguration** (steg 9):
 
 | Tangent                              |  Värde   |
 |----------------------------------|----------|
@@ -243,7 +243,7 @@ Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller 
 
 |Tangent|Värde|
 |-|-|
-|Välj mellan:<br><ul><li>Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Ange blockerade URL: er (alla andra platser kan nås):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
+|Välj mellan:<br><ul><li>Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Ange blockerade URL: er (alla andra platser kan nås):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;** .<br><br>Exempel:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
 
 >[!IMPORTANT]
 >Ange inte båda nycklarna. Om båda nycklarna används för samma användare tillämpas den tillåtna nyckeln eftersom det är det mest restriktiva alternativet.
@@ -252,7 +252,7 @@ Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller 
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>URL-format för tillåtna och blockerade URL:er
 Använd följande information för att lära dig om tillåtna format och jokertecken som du kan använda när du anger URL:er i listorna för tillåtna och blockerade webbplatser:
 
-- Du kan använda jokertecknet (**&#42;**) enligt reglerna i följande lista med tillåtna mönster:
+- Du kan använda jokertecknet ( **&#42;** ) enligt reglerna i följande lista med tillåtna mönster:
 
 - Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
 
@@ -309,7 +309,7 @@ Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller 
 
 | Tangent                                                                | Värde                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
-| **com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock** | **False** blockerar dessa mjuka övergångar |
+| **com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock** | **False** förhindrar att dessa mjuka övergångar sker |
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Komma åt loggar för hanterade appar med Managed Browser i iOS
 

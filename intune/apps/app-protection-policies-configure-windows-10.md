@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e1ff8fd39d301bd685e9806c319f49e9189d7f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 41c08d1912bf9c79507c2a6627205979504f340d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507414"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564225"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Förbered konfigurationen av appskyddsprinciper för Windows 10 
 
@@ -33,13 +33,12 @@ Aktivera hantering av mobilprogram (MAM) för Windows 10 genom att ange MAM-prov
 
 ## <a name="to-configure-the-mam-provider"></a>Konfigurera MAM-providern
 
-1. Logga in på Azure Portal och välj **Azure Active Directory.**
-
-2. Välj **Mobility (MDM och MAM)** i gruppen **Hantera**.
-
-3. Klicka på **Microsoft Intune**.
-
-4. Konfigurera inställningar i gruppen **Återställ standard MAM-URL:er** på bladet **Konfigurera**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Alla tjänster** och växla instrumentpaneler genom att välja **M365 Azure Active Directory**.
+3. Välj **Azure Active Directory**.
+4. Välj **Mobility (MDM och MAM)** i gruppen **Hantera**.
+5. Klicka på **Microsoft Intune**.
+6. Konfigurera inställningarna i gruppen **Återställ standard MAM-URL:er** i fönstret **Konfigurera**.
 
    **MAM-användaromfattning**  
    Använd MA- autoregistrering för att hantera företagsdata på Windows-enheter för dina anställda. MAM-autoregistrering kommer att konfigureras för Bring Your Own Device-scenarier.<ul><li>**Inga**<br>Välj om inga användare ska kunna registreras på MAM.</li><li>**Vissa**<br>Välj Microsoft Azure Active Directory-grupper som innehåller användare som ska registreras på MAM.</li><li>**Alla**<br>Välj om alla användare kan registreras på MAM.</li></ul>
@@ -53,7 +52,7 @@ Aktivera hantering av mobilprogram (MAM) för Windows 10 genom att ange MAM-prov
    **MAM kompatibilitets-URL**  
    MAM kompatibilitets-URL stöds inte för Microsoft Intune. Den här textrutan måste vara tom för att skyddsprinciper ska gälla. 
 
-5. Klicka på **Spara**.
+7. Klicka på **Spara**.
 
 ## <a name="next-steps"></a>Nästa steg
 

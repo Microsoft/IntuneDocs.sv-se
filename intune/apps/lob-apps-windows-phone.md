@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1540abcc9ff7a5958da55154258e1fc1d9555dd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: dd8025c18ef10580eb16883727bf08a316989d2e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507157"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563538"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows Phone i Microsoft Intune
 
@@ -33,11 +33,9 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Klientappar** i **Intune**-fönstret.
-4. Välj **Hantera** > **Appar** i arbetsbelastningen **Klientappar**.
-5. Välj **Lägg till** ovanför listan över appar.
-6. I fönstret **Lägg till app** väljer du **Branschspecifik app**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
+3. Välj **Branschspecifik app** som**Apptyp** i fönstret **Lägg till app**.
 
 ## <a name="step-2-configure-the-app-package-file"></a>Steg 2: Konfigurera appaketfilen
 

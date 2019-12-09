@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af24b5fe33bc1e794529ef5a5ab6975eed4fb9cc
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: b4839340ba1f3bad6f28a1120d882d0f600b1d44
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709920"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563568"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Lägga till Microsoft Edge för Windows 10 till Microsoft Intune
 
@@ -34,7 +34,7 @@ Innan du kan distribuera, konfigurera, övervaka eller skydda appar måste du l�
 > [!NOTE]
 > Microsoft Edge *version 77 och senare* är även tillgängligt för macOS.
 > 
-> Du kan inte använda den inbyggda programdistributionen för Microsoft Edge för Workplace Join-datorer. Inbyggd programdistribution kräver Intune-hanteringstillägget, som endast finns för AAD-anslutna enheter. Du kan fortfarande distribuera Microsoft Edge *version 77 och senare* med hjälp av en *.msi* som laddats upp till **Klientappar**; se [Lägga till en verksamhetsspecifik Windows-app till Microsoft Intune](~/apps/lob-apps-windows.md).
+> Du kan inte använda den inbyggda programdistributionen för Microsoft Edge för Workplace Join-datorer. Inbyggd programdistribution kräver Intune-hanteringstillägget, som endast finns för AAD-anslutna enheter. Du kan fortfarande distribuera Microsoft Edge *version 77 och senare* med hjälp av en *.msi* som laddats upp till **Appar**. Mer information finns i [Lägga till en verksamhetsspecifik Windows-app till Microsoft Intune](~/apps/lob-apps-windows.md).
 
 ## <a name="prerequisites"></a>Krav
 - Windows 10 RS2 och senare krävs.
@@ -43,15 +43,15 @@ Innan du kan distribuera, konfigurera, övervaka eller skydda appar måste du l�
 ## <a name="configure-the-app-in-intune"></a>Konfigurera appen i Intune
 Du kan lägga till en Microsoft Edge version 77 och senare till Intune med hjälp av följande steg:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. I fönstret **Intune** väljer du **Klientappar** > **Appar** > **Lägg till**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > **Lägg till**.
 3. I listan **Apptyp**, under **Microsoft Edge, version 77 och senare**, väljer du **Windows 10**.
 
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 I det här steget anger du information om den här appdistributionen. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
 
-1. Klicka på **Appinformation** för att visa bladet **Appinformation**.
-2. På bladet **Appinformation** anger du information om den här appdistributionen. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
+1. Visa fönstret **Appinformation** genom att klicka på **Appinformation**.
+2. Ange information om den här appdistributionen i fönstret **Appinformation**. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
     - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen. Kontrollera att alla namn är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Du kan till exempel ange målanvändarna i beskrivningen.
     - **Utgivare**: Microsoft visas som utgivare.
@@ -67,8 +67,8 @@ I det här steget anger du information om den här appdistributionen. Den här i
 ## <a name="configure-app-settings"></a>Konfigurera appinställningar
 I det här steget konfigurerar du installationsalternativ för appen.
 
-1. På bladet **Lägg till app** väljer du **Appinställningar**.
-2. På bladet **Appinställningar** väljer du antingen **Beta** eller **Dev** i listan **Kanal** för att avgöra vilken Edge-kanal du kommer att distribuera appen från.
+1. Välj **Appinställningar** i fönstret **Lägg till app**.
+2. Avgör vilken Edge-kanal du kommer att distribuera appen från genom att gå till fönstret **Appinställningar** och välja **Beta** eller **Dev** i listan **Kanal**.
     - Kanalen **Beta** är den mest stabila Microsoft Edge-förhandsupplevelsen och det bästa valet för en fullständig pilotlansering i din organisation. Större uppdateringar sker var sjätte vecka, och i varje ny version ingår lärdomar och förbättringar från Dev-kanalen.
     - **Dev**-kanalen är redo för företagsfeedback för Windows, Windows Server och macOS. Den uppdateras varje vecka och innehåller de senaste förbättringarna och korrigeringarna.
 
@@ -85,7 +85,7 @@ Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinfor
 4.  Klicka på **Välj** > **OK**.
 
 ## <a name="add-the-app"></a>Lägg till appen
-När du har slutfört konfigurationen av appen väljer du **Lägg till** från bladet **Lägg till app**. 
+När du har slutfört konfigurationen av appen väljer du **Lägg till** i fönstret **Lägg till en app**. 
 
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. 
 

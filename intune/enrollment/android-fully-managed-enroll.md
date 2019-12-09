@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44e757be5f109b81772daa6ff59505ccc0f033f8
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: c5cd8c1a1d17ca38c42b6ed6821d20367b147ad6
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709439"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562387"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Konfigurera Intune-registrering av fullständigt hanterade Android Enterprise-enheter 
 
@@ -56,7 +56,7 @@ För de här stegen om du vill konfigurera hanteringen av fullständigt hanterad
 
 ### <a name="enable-corporate-owned-user-devices"></a>Aktivera företagsägda användarenheter
 
-1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enhetsregistrering** > **Android-registrering** > **Företagsägda, fullständigt hanterade användarenheter**.
+1. Logga in på [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Android** > **Android-registrering**  > **Företagsägda fullständigt hanterade användarenheter**.
 2. Välj **Ja** under **Låt användarna registrera företagsägda användarenheter** .
 
 > [!NOTE]

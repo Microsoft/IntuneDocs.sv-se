@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08193aa329a1bee4e66638de5c0d7518d15db2a4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 678eb92bb6f5f23756092cd5d9cc1a645e1e8db3
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547918"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562360"
 ---
 # <a name="android-device-administrator-enrollment"></a>Administratörsregistrering för Android-enhet
 
@@ -49,7 +49,7 @@ Mer information om Googles Android Enterprise-funktioner finns i följande artik
 ## <a name="set-up-device-administrator-enrollment"></a>Ställ in administratörsregistrering
 
 1. Förbered hantering av mobila enheter genom att ange MDM-utfärdare som **Microsoft Intune**. Fler anvisningar finns i [Ange MDM-utfärdare](../fundamentals/mdm-authority-set.md). Du anger det här objektet bara när du konfigurerar Intune för hantering av mobila enheter.
-2. Gå till **Intune** > **Enhetsregistrering** > **Android-registrering** > **Personal and corporate-owned devices with device administration privileges** (Personliga och företagsägda enheter med enhetsadministratörsbehörighet)  > **Use device administrator to manage devices** (Använd enhetsadministratör för att hantera enheter).
+2. Logga in på [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj > **Enheter** > **Android** > **Android-registrering** > **Personliga och företagsägda enheter med enhetsadministratörsbehörigheter** > **Hantera enheter med enhetsadministratören**.
 3. [Berätta för dina användare hur de registrerar sina enheter](/intune-user-help/enroll-your-device-in-intune-android).  
 
 När en användare har registrerat sig kan du börja hantera användarens enheter i Intune, inklusive [tilldela efterlevnadsprinciper](../protect/compliance-policy-create-android.md), [hantera appar](../apps/app-management.md) med mera.

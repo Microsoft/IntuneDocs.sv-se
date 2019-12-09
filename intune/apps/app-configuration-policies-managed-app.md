@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ddb9ec795b9cc8842cbc6c9d33897b5e0f45e88
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 68032f47be043e8c49b6ad922392d14549293c35
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74548001"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564281"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
@@ -31,18 +31,15 @@ ms.locfileid: "74548001"
 
 Du kan använda appkonfigurationsprinciper med hanterade appar som har stöd för Intune App SDK på enheter som inte har registrerats. 
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj arbetsbelastningen **Klientappar**.
-4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
-5. Ange följande information:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade appar**.
+3. Ange följande information:
     - **Namn**  
       Namnet på den profil som visas i Azure Portal.
     - **Beskrivning**  
       Beskrivning av den profil som visas i Azure Portal.
-    - **Enhetsregistreringstyp**  
-      Välj **Hantera appar**.
-6. Välj **Associerad app** för att välja den app som du ska konfigurera. Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
-7. För varje konfigurationsinställning som stöds av appen anger du **Namn** och **Värde**, och väljer sedan ellipsen ( **...** ).  
+4. Välj den app du vill konfigurera genom att välja **Välj offentliga appar** eller **Välj anpassade appar**. Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
+5. Ange **Namn** och **Värde** för varje konfigurationsinställning som stöds av appen.  
     Välj ellipsen ( **...** ) och välj **Ta bort** för att ta bort en konfiguration.  
     
 Intune App SDK-aktiverade appar har stöd för konfigurationer i nyckel/värde-par. Läs dokumentationen för varje app om du vill lära dig mer om vilka nyckel/värde-konfigurationer som stöds. Observera att du kan använda token som fylls i dynamiskt med data som skapas av programmet. Information om principinställningar för Outlook för iOS-appen, se [Hantera appkonfiguration för Outlook för iOS med Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
