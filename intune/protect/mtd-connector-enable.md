@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b8243ae4014660a76c6327afd9c970ce8a9eae58
-ms.sourcegitcommit: 960ffb2214c35d75ad219fa2571a999529a0abd4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74478843"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
@@ -36,7 +36,7 @@ Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip f�
 
 När du När du integrerar ett nytt program för Skydd mot mobilhot (MTD) i Intune och aktiverar anslutningen till Intune, skapar Intune en klassisk princip för villkorlig åtkomst i Azure Active Directory. Alla MTD-appar som du integrerar, inklusive [Defender ATP](advanced-threat-protection.md) eller något annat [MTD-partnerprogram](mobile-threat-defense.md#mobile-threat-defense-partners), skapar en ny klassisk princip för villkorlig åtkomst. Dessa principer kan ignoreras, men de får inte redigeras, tas bort eller inaktiveras.
 
-Om den klassiska principen tas bort måste du ta bort anslutningen till Intune som var ansvarig för skapandet och sedan konfigurera den igen. Den här processen återskapar den klassiska principen. Den har inte stöd för att migrera klassiska principer för MTD-appar till den nya principtypen för villkorlig åtkomst.
+Om den klassiska principen tas bort måste du ta bort anslutningen till Intune som var ansvarig för skapandet och sedan konfigurera den igen. Den här processen återskapar den klassiska principen. Den saknar stöd för att migrera klassiska principer för MTD-appar till den nya principtypen för villkorlig åtkomst.
 
 Klassiska principer för villkorlig åtkomst för MTD-appar:
 

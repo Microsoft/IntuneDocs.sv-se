@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 84f82cf2fde7d400e5531bac219b6cbb4877032f
-ms.sourcegitcommit: 960ffb2214c35d75ad219fa2571a999529a0abd4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74478918"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune för oregistrerade enheter

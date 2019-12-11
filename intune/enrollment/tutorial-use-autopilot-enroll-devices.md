@@ -20,10 +20,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bc781ea72b54468b21fb70e60e334f1c8d8832ea
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74547955"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
@@ -70,7 +70,7 @@ Det första steget i att konfigurera Windows Autopilot är att lägga till Windo
 
 5. Välj **Importera** för att börja importera enhetsinformationen. Det kan ta flera minuter att importera.
 
-4. När importen är klar väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows AutoPilot-distributionsprogram** > **Synkronisera**. Ett meddelande visar att synkroniseringen pågår. Processen kan ta några minuter att slutföra, beroende på hur många enheter du synkroniserar.
+4. När importen är klar väljer du **Enheter** > **Windows** > **Windows-registrering** > **Enheter** (under **Windows Autopilot-distributionsprogram** > **Synkronisera**. Ett meddelande visar att synkroniseringen pågår. Processen kan ta några minuter att slutföra, beroende på hur många enheter du synkroniserar.
 
 5. Uppdatera vyn för att se de nya enheterna.
 
