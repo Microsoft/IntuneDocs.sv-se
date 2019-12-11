@@ -145,6 +145,8 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
+            - name: Kabelanslutet nätverk
+              href: wired-network-settings-macos.md
             - name: Anpassad
               href: custom-settings-macos.md
         - name: Windows 10 och senare
