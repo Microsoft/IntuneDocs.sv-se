@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: de365312a7d293527c3c83fbbd84ab55de41d530
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74547679"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Lösa vanliga problem med Intune Exchange Connector
@@ -84,7 +84,7 @@ Om automatisk identifiering Miss lyckas kan du prova följande steg:
 
    1. Bestäm EWS-URL: en. Standard-EWS-URL: en för Exchange är `https://<mailServerFQDN>/ews/exchange.asmx`, men URL: en kan vara annorlunda. Kontakta Exchange-administratören för att kontrol lera rätt URL för din miljö.
 
-   2. Redigera filen *OnPremisesExchangeConnectorServiceConfiguration.xml*. Som standard finns filen i *%programdata%\Microsoft\Windows Intune Exchange Connector* på den dator som kör Exchange-anslutaren. Öppna filen i en text redigerare och ändra sedan följande rad så att den återspeglar EWS-URL: en för din miljö: `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. Redigera filen *OnPremisesExchangeConnectorServiceConfiguration.xml*. Som standard finns filen i *%programdata%\Microsoft\Windows Intune Exchange Connector* på den dator som kör Exchange-anslutaren. Öppna filen i en text redigerare och ändra sedan följande rad så att den återspeglar EWS-URL: en för din miljö: `<ExchangeWebServiceURL> https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Spara filen och starta om datorn eller Microsoft Intune Exchange Connector-tjänsten.
 
