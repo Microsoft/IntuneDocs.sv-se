@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8eef3af9a82e7a61bc5200bf45143657072d6db7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508365"
 ---
 # <a name="upload-and-email-logs"></a>Ladda upp och skicka loggar med e-post  
@@ -38,7 +38,7 @@ Den faktiska felinformationen sparas på din enhet i ett specialdokument som kal
 ## <a name="upload-and-email-logs-from-company-portal"></a>Ladda upp och skicka loggar från Företagsportal  
 
 1. I Företagsportal-appen finns det två sätt att initiera stöd för e-post.
-    * Från Start skärmen: Tryck på **meny**  > **Hjälp**  > **stöd för e-post**.  
+    * Från Start skärmen: Tryck på **meny** > **Hjälp** > **stöd för e-post**.  
     * Från ett fel meddelande: Tryck på **Hjälp** eller **skicka information**, om det är tillgängligt.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Den faktiska felinformationen sparas på din enhet i ett specialdokument som kal
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Ladda upp och skicka loggar från Microsoft Intune App   
 
 1. I Microsoft Intune-appen finns det två sätt att initiera stöd för e-post.  
-    * Från Start skärmen: Tryck på **meny**  > **Hjälp**  > **få support**.  
+    * Från Start skärmen: Tryck på **meny** > **Hjälp** > **få support**.  
     * Från ett fel meddelande: Tryck på **Hjälp** eller **skicka information**, om det är tillgängligt.  
 
     > [!NOTE]

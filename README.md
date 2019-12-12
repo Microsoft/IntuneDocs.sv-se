@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: f87848b43e040681085f3e89b063d5006f904464
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71720919"
 ---
-## <a name="microsoft-open-source-code-of-conduct"></a>Uppförandekod för Microsoft-öppen källkod
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsofts regler för uppförande för öppen källkod
 
-Det här projektet har antagit [uppförandekoden för Microsoft-öppen källkod](https://opensource.microsoft.com/codeofconduct/).
+Det här projektet har antagit [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Microsofts regler för uppförande för öppen källkod).
 Mer information finns i [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Vanliga frågor och svar om regler för uppförande), eller kontakta [opencode@microsoft.com](mailto:opencode@microsoft.com) med ytterligare frågor eller kommentarer.
 
 # <a name="docsmicrosoftcom-github-repository"></a>Docs.microsoft.com Github-databas

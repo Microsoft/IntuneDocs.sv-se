@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b94be3e1454c60f16ff40e73ce37f8c4e349126d
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72813351"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Visning av användarlivstiden i Microsoft Intunes informationslager
@@ -37,13 +37,13 @@ Scenariot blir tydligare om du går igenom livslängden för en entitet.
 
 Anta att en användare **John Smith**, blir tilldelad en licens 2017-06-01, då skulle tabellen **användare** innehålla följande post: 
  
-| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| Visningsnamn | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 06/01/2017 | 12/31/9999 | TRUE
  
 John Smith säger upp sin licens 2017-07-25. Tabellen **användare** har följande poster. Ändringar i befintliga poster är `marked`. 
 
-| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| Visningsnamn | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 06/01/2017 | `07/26/2017` | `FALSE` 
 | John Smith | TRUE | 07/26/2017 | 12/31/9999 | TRUE 
@@ -52,7 +52,7 @@ Den första raden anger att John Smith fanns i Intune från 2017-06-01 till 2017
 
 Anta att en användare John Smith, får en ny licens tilldelad 2017-08-31, då skulle tabellen användare innehålla följande poster:
  
-| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| Visningsnamn | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | John Smith | FALSE | 06/01/2017 | 07/26/2017 | FALSE 
 | John Smith | TRUE | 07/26/2017 | `08/31/2017` | `FALSE` 

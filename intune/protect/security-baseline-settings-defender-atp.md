@@ -5,7 +5,7 @@ description: Inställningar för säkerhetsbaslinjer som stöds av Intune för a
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7363682960cff6688e9727d2b6869b6bf357084
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 85d0b28de6c133ece5116dd78b1646f497ff2f6b
+ms.sourcegitcommit: 0a85af9d584709ecc29062f91645a4c47a61ebb9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74060059"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882328"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Baslinjeinställningar för Intune för Microsoft Defender Avancerat skydd
 
@@ -593,8 +593,18 @@ Mer information finns i [PassportForWork CSP](https://docs.microsoft.com/windows
 - **Konfigurera Windows Hello för företag** - *TenantId/principer/UsePassportForWork*    
   Windows Hello för företag är en alternativ metod för att logga in till Windows genom att ersätta lösenord, smartkort och virtuella smartkort.  
 
-  - När det är inställt på *Ja*aktiverar du den här principen och enheten etablerar Windows Hello för företag.  
-  - Om inställningen *inte är konfigurerad*, påverkar inte bas linjen enhetens princip inställning. Det innebär att om Windows Hello för företag är inaktiverat på en enhet förblir det inaktiverat. Om den är aktive rad förblir den aktive rad. 
+
+  > [!IMPORTANT]
+  > Alternativen för den här inställningen återförs från deras underförstådda innebörd. När värdet *Ja* inte är aktiverat aktive ras Windows Hello inte, och i stället behandlas det som *Ej konfigurerat*. När den här inställningen är inställd på *inte konfigurerad*, aktive ras Windows Hello på enheter som tar emot den här bas linjen.
+  >
+  > Följande beskrivningar har ändrats för att avspegla detta beteende. Återföringen av inställningarna kommer att åtgärdas i en framtida uppdatering av den här säkerhets bas linjen.
+
+  - När den är inställd på *inte konfigurerad*är Windows Hello aktiverat och enheten etablerar Windows Hello för företag.
+  - När värdet är *Ja*påverkar bas linjen inte enhetens princip inställning. Det innebär att om Windows Hello för företag är inaktiverat på en enhet förblir det inaktiverat. Om den är aktive rad förblir den aktive rad.
+  <!-- expected behavior 
+  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
+  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
+  -->
 
   Du kan inte inaktivera Windows Hello för företag via den här bas linjen. Du kan inaktivera Windows Hello för företag när du konfigurerar [Windows-registrering](windows-hello.md)eller som en del av en enhets konfigurations profil för [identitets skydd](identity-protection-configure.md).  
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 381ceea979dedf9b33cb7ef9c47291e3ac6ce20c
-ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
+ms.openlocfilehash: e73612080e52c8eb49a0c090b68e917e24fef3ab
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117905"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992952"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>iOS- och iPadOS-enhetsinställningar som används; vanliga iOS-funktioner i Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune innehåller vissa inbyggda inställningar för att tillåta iOS-användare att använda olika Apple-funktioner på sina enheter. Till exempel så kan administratörer styra hur iOS-användare använder AirPrint-skrivare, lägga till appar och mappar till dockan och sidor på startskärmen, visa meddelanden i appen, visa information om tillgångstagg på låsskärmen, använda enkel inloggning och autentisera användare med certifikat.
 
@@ -280,36 +278,43 @@ Den här funktionen gäller för:
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
 
-- **Typ av SSO-app-tillägg**: Välj typ av AUTENTISERINGSUPPGIFTER för SSO-appen. Alternativen är:
+- **Typ av SSO-app-tillägg**: Välj typ av SSO-applösenord. Alternativen är:
 
-  - **Inte konfigurerad**: app-tillägg används inte. Om du vill inaktivera ett app-tillägg kan du byta namn på SSO-appen från **Kerberos** eller **Credential** till **inte konfigurerad**.
-  - **Autentiseringsuppgift**: Använd ett allmänt, anpassningsbart app-tillägg för autentiseringsuppgifter för att utföra SSO. Se till att du känner till tilläggs-ID: t för din organisations SSO app-tillägg.
+  - **Inte konfigurerad**: app-tillägg används inte. Om du vill inaktivera ett app-tillägg kan du byta typ av SSO-tillägg till **inte konfigurerad**.
+  - **Omdirigera**: Använd ett allmänt, anpassningsbart omdirigerings-app-tillägg för att utföra SSO med moderna autentiserings flöden. Se till att du känner till tilläggs-ID: t för din organisations app-tillägg.
+  - **Autentiseringsuppgift**: Använd ett generiskt, anpassningsbart program tillägg för autentiseringsuppgifter för att utföra SSO med autentiserings flöden med anrop och svar. Se till att du känner till tilläggs-ID: t för din organisations app-tillägg.
   - **Kerberos**: Använd Apples inbyggda Kerberos-tillägg, som ingår i iOS 13,0 (och senare) och iPad 13,0 (och senare). Det här alternativet är en Kerberos-speciell version av appen för **autentiseringsuppgifter** .
 
   > [!TIP]
-  > Med typen **autentiseringsuppgift** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Överväg i stället att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typ.
+  > Med hjälp av typerna **omdirigering** och **autentiseringsuppgifter** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Om du använder **autentiseringsuppgifter**bör du överväga att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typen.
 
-- **Tilläggs-ID** (endast autentiseringsuppgift): Ange paket-ID: t som identifierar ditt SSO app-tillägg, till exempel `com.apple.extensiblesso`.
-- **Team-ID** (endast autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, t. ex. `ABCDE12345`. Grupp-ID: t är inte obligatoriskt.
+- **Tilläggs-ID** (omdirigering och autentiseringsuppgift): Ange det paket-ID som identifierar ditt SSO app-tillägg, till exempel `com.apple.extensiblesso`.
+
+- **Team-ID** (omdirigering och autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, t. ex. `ABCDE12345`. Grupp-ID: t är inte obligatoriskt.
 
   [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c) (öppna Apples webbplats) om du vill ha mer information.
 
-- **Sfär**: Ange namnet på din Kerberos-sfär. Sfär namnet ska vara kapitaliserat, t. ex. `CONTOSO.COM`. Vanligt vis är ditt sfär namn detsamma som ditt DNS-domännamn, men i alla versaler.
+- **Sfär** (autentiseringsuppgift och Kerberos): Ange namnet på din autentiserings-sfär. Sfär namnet ska vara kapitaliserat, t. ex. `CONTOSO.COM`. Vanligt vis är ditt sfär namn detsamma som ditt DNS-domännamn, men i alla versaler.
 
-- **Domäner**: ange domän-eller värd namnen för de platser som kan AUTENTISERA via SSO. Om din webbplats till exempel är `mysite.contoso.com`, `mysite` är värd namnet och `contoso.com` är domän namnet. När användarna ansluter till någon av dessa platser hanterar app-tillägget verifierings utmaningen. Med den här autentiseringen kan användare använda ansikts-ID, Touch-ID eller Apple-Pincode/lösen ord för att logga in.
+- **Domäner** (autentiseringsuppgift och Kerberos): ange domän-eller värd namnen för de platser som kan AUTENTISERA via SSO. Om din webbplats till exempel är `mysite.contoso.com`, `mysite` är värd namnet och `contoso.com` är domän namnet. När användarna ansluter till någon av dessa platser hanterar app-tillägget verifierings utmaningen. Med den här autentiseringen kan användare använda ansikts-ID, Touch-ID eller Apple-Pincode/lösen ord för att logga in.
 
   - Alla domäner i Intune-tilläggen för enkel inloggning måste vara unika. Du kan inte upprepa en domän i valfri inloggnings profil för program tillägg, även om du använder olika typer av SSO-tillägg.
   - Dessa domäner är inte Skift läges känsliga.
 
-- **Ytterligare konfiguration** (endast autentiseringsuppgift): ange ytterligare tilläggs information som ska skickas till SSO-appens tillägg:
-  - **Konfigurations nyckel**: Ange namnet på det objekt som du vill lägga till, t. ex. `user name`.
-  - **Värdetyp**: ange typ av data. Alternativen är:
+- **URL: er** (endast omdirigering): Ange URL-prefixen för dina identitets leverantörer i vars ställe som omdirigerings-tillägget utför SSO. När en användare omdirigeras till dessa URL: er kommer SSO app Extension att ingripa och uppmana SSO.
+
+  - Alla webb adresser i Intune-tilläggen för enkel inloggning i Intune måste vara unika. Du kan inte upprepa en domän i valfri SSO-profil, även om du använder olika typer av SSO-tillägg.
+  - URL: erna måste börja med http://eller https://.
+
+- **Ytterligare konfiguration** (omdirigering och autentiseringsuppgift): ange ytterligare tilläggs information som ska skickas till SSO-appens tillägg:
+  - **Nyckel**: Ange namnet på det objekt som du vill lägga till, t. ex. `user name`.
+  - **Typ**: ange typ av data. Alternativen är:
 
     - Sträng
     - Boolean: Ange `True` eller `False`i **konfiguration svärdet**.
     - Heltal: Ange ett tal i **konfiguration svärdet**.
     
-  - **Konfigurations värde**: ange data.
+  - **Värde**: ange data.
 
   - **Lägg till**: Välj om du vill lägga till dina konfigurations nycklar.
 
@@ -323,11 +328,16 @@ Den här funktionen gäller för:
   > - Lämna det **inte konfigurerat** (standard) om du bara har en sfär.
 
 - **Huvud namn** (endast Kerberos): Ange användar namnet för Kerberos-huvudobjektet. Du behöver inte inkludera sfär namnet. I `user@contoso.com`är `user` till exempel huvud namnet och `contoso.com` är sfär namnet.
+
+  > [!TIP]
+  > - Du kan också använda variabler i huvud namnet genom att ange klammerparenteser `{{ }}`. Om du till exempel vill visa användar namnet anger du `Username: {{username}}`. 
+  > - Var dock försiktig med variabel ersättning eftersom variablerna inte verifieras i användar gränssnittet och är Skift läges känsliga. Se till att ange rätt information.
+
 - **Active Directory platskod** (endast Kerberos): Ange namnet på den Active Directory plats som Kerberos-tillägget ska använda. Du kanske inte behöver ändra det här värdet eftersom Kerberos-tillägget automatiskt kan hitta Active Directory platskod.
 - **Cache-namn** (endast Kerberos): Ange GSS-namnet (Generic Security Services) för Kerberos-cachen. Du behöver förmodligen inte ange det här värdet.
 - **Programpaket-ID: n** (endast Kerberos): **Lägg till** de ID: n för appen som ska använda enkel inloggning på dina enheter. De här apparna beviljas åtkomst till biljett beviljande biljetten i Kerberos, autentiserings biljetten och autentisera användare till tjänster som de har behörighet att komma åt.
 - **Domän sfär mappning** (endast Kerberos): **Lägg till** DNS-suffixet för domänen som ska mappas till din sfär. Använd den här inställningen när DNS-namnen på värdarna inte matchar sfär namnet. Du behöver förmodligen inte skapa den här anpassade domän-till-sfär-mappningen.
-- **PKINIT-certifikat** (endast Kerberos): **Välj** kryptering för offentlig nyckel för inledande autentisering (PKINIT) som kan användas för att förnya Kerberos-autentiseringsuppgiften utan användar interaktion. Certifikatet ska vara ett PKCS-eller SCEP-certifikat som du tidigare lagt till i Intune.
+- **PKINIT-certifikat** (endast Kerberos): **Välj** kryptering för offentlig nyckel för inledande autentisering (PKINIT) som kan användas för Kerberos-autentisering. Du kan välja mellan [PKCS](../protect/certficates-pfx-configure.md) -eller [SCEP](../protect/certificates-scep-configure.md) -certifikat som du har lagt till i Intune. Mer information om certifikat finns [i använda certifikat för autentisering i Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="wallpaper"></a>Skrivbordsunderlägg
 

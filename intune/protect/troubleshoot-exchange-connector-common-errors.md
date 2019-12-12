@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b30a7e843850d6918abc2e76f84397a1f197516f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508859"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Lösa vanliga fel för Intune Exchange Connector
@@ -45,7 +45,7 @@ Det här problemet kan uppstå om proxyinställningarna för Internet är felkon
 **Lösning**:  
 Konfigurera proxyinställningar:
 1. Kontakta den lokala nätverks administratören för att se till att proxyinställningarna är korrekt konfigurerade. 
-2. Använd kommandot **netsh WinHTTP** för att konfigurera proxyservern och lägga till den undantags lista som krävs. Exempel:  
+2. Använd kommandot **netsh WinHTTP** för att konfigurera proxyservern och lägga till den undantags lista som krävs. Till exempel:  
 
    ```
    Netsh winhttp set proxy proxy-server="http=proxy.corp.domain.com" bypass-list"34*.*;134.132.*.*;10.*.*;localhost;*.corp.domain.com;*.staging.domain.com"
@@ -77,7 +77,7 @@ När du försöker konfigurera Microsoft Intune Exchange Connector får du följ
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Det här felet kan inträffa om en proxyserver används för att ansluta till Internet och blockerar trafik till Intune-tjänsten. För att avgöra om en proxyserver används, går du till **kontroll panelen**  > **Internet alternativ**, väljer fliken **anslutning** och klickar sedan på **LAN-inställningar**.
+Det här felet kan inträffa om en proxyserver används för att ansluta till Internet och blockerar trafik till Intune-tjänsten. För att avgöra om en proxyserver används, går du till **kontroll panelen** > **Internet alternativ**, väljer fliken **anslutning** och klickar sedan på **LAN-inställningar**.
 
 **Lösning**:  
 
@@ -126,17 +126,17 @@ En iOS-enhet kan inte registreras i Intune och genererar något av följande fel
 Det här problemet kan uppstå om **WIEC_User** -kontot inte har användar rättigheten **Logga in som tjänst** i den lokala principen.
 
 **Lösning**:  
-På den dator som kör Intune Exchange Connector tilldelar du kontot **Logga in som en tjänst** användare till **WIEC_User** -tjänstkontot. Om datorn är en nod i ett kluster ser du till att tilldela kontot för att *Logga in som en tjänst* användare till kluster tjänst kontot på alla noder i klustret.  
+På den dator som kör Intune Exchange Connector tilldelar du tjänsten **Logga in som en tjänst** användare direkt till **WIEC_User** tjänst konto. Om datorn är en nod i ett kluster ser du till att tilldela kontot för att *Logga in som en tjänst* användare till kluster tjänst kontot på alla noder i klustret.  
 
-Följ dessa steg om du vill koppla användar rättigheten **Logga in som en tjänst** till **WIEC_User** -tjänstkontot på datorn:
+Följ dessa steg om du vill tilldela användar rättigheten **Logga in som en tjänst** till **WIEC_User** tjänst konto på datorn:
 
 1. Logga in på datorn som administratör eller som medlem i gruppen Administratörer.
 2. Kör **secpol. msc** för att öppna den lokala säkerhets principen.
-3. Gå till **säkerhets inställningar**  > **lokala principer**och välj sedan **tilldelning av användar rättigheter**.
+3. Gå till **säkerhets inställningar** > **lokala principer**och välj sedan **tilldelning av användar rättigheter**.
 4. I den högra rutan dubbelklickar du på **Logga in som en tjänst**.
-5. Välj **Lägg till användare eller grupp**, Lägg till **WIEC_USER** i principen och välj sedan **OK** två gånger.
+5. Välj **Lägg till användare eller grupp**, lägg till **WIEC_USER** i principen och välj sedan **OK** två gånger.
 
-Kontakta domän administratören för att ta reda på om en grupprincips inställning skrivs över om användaren **loggar in som en tjänst** användare rättigheten har tilldelats **WIEC_User** , men senare togs bort.  
+Om **inloggningen logga in som en tjänst** användare har tilldelats **WIEC_User** men senare togs bort, kontaktar du domän administratören för att ta reda på om en grupprincips inställning skrivs över.  
 
 ## <a name="next-steps"></a>Nästa steg  
 

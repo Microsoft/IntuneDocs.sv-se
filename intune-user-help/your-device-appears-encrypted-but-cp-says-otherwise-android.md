@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af1c7d1f9d8236fd95413317acefbe8887d90f47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507678"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Enheten är krypterad men appar säger annars
@@ -32,7 +32,7 @@ Om Företagsportal eller Microsoft Intunes appen säger att enheten inte är kry
 
 ## <a name="add-a-startup-pin"></a>Lägga till en start PIN-kod
 
-På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att enheten är skyddad. Platsen för den här inställningen kommer att finnas i enhetens **inställnings** app. Namnet och platsen för inställningen kan variera. I Samsung Galaxy-S7 kallas inställningen till exempel **säker start**. Om du vill aktivera det och skapa ett lösen ord går du till **inställningar**  > **Lås skärmen och säkerhets**  > **säker start**.  
+På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att enheten är skyddad. Platsen för den här inställningen kommer att finnas i enhetens **inställnings** app. Namnet och platsen för inställningen kan variera. I Samsung Galaxy-S7 kallas inställningen till exempel **säker start**. Om du vill aktivera det och skapa ett lösen ord går du till **inställningar** > **Lås skärmen och säkerhets** > **säker start**.  
 
 ## <a name="encrypt-the-entire-device"></a>Kryptera hela enheten
 

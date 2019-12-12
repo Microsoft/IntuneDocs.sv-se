@@ -20,10 +20,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6a6b5585501851bb52db70ca222f8cfff7ad0597
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73635469"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nyheter i Microsoft Intune – föregående månader
@@ -1857,7 +1857,7 @@ Create profile\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Minska attackytan
 
-|Inställningsnamn  |Inställningsalternativ  |Beskrivning  |
+|Namn på inställning  |Inställningsalternativ  |Beskrivning  |
 |---------|---------|---------|
 |Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
 |Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem|Aktiverad, granskad, inte konfigurerad|Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem (lsass.exe).|
@@ -1867,7 +1867,7 @@ Create profile\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
 
-|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Beskrivning |
+|              Namn på inställning               |                                                              Inställningsalternativ                                                              | Beskrivning |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Mappskydd (redan implementerat) | Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> <strong>Nytt</strong><br>Blockera diskändring, Granska diskändring |             |
 
@@ -2030,7 +2030,7 @@ Resurskontot kan till exempel visas som **konferensrum B41/6233**.
 
 ##### <a name="attack-surface-reduction"></a>Minska attackytan
 
-|Inställningsnamn  |Inställningsalternativ  |Beskrivning  |
+|Namn på inställning  |Inställningsalternativ  |Beskrivning  |
 |---------|---------|---------|
 |Körning av lösenordsskyddat körbart innehåll från e-post|Blockera, Granska, Inte konfigurerat|Förhindra körning av körbara filer som skyddas av lösenord och som hämtats via e-post.|
 |Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
@@ -2041,7 +2041,7 @@ Resurskontot kan till exempel visas som **konferensrum B41/6233**.
 
 ##### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
 
-|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Beskrivning |
+|              Namn på inställning               |                                                              Inställningsalternativ                                                              | Beskrivning |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Mappskydd (redan implementerat) | Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> <strong>Nytt</strong><br>Blockera diskändring, Granska diskändring |             |
 
@@ -2960,7 +2960,7 @@ Mer information finns i [Endpoint Protection-inställningar för Windows 10 och 
 ### <a name="new-settings-for-windows-10-device-restriction-profile----978527--978550-978569-1050031-1058611-----"></a>Nya inställningar för enhetsbegränsningsprofilen i Windows 10<!--- 978527,  978550, 978569, 1050031, 1058611,  --->
 I den här versionen har vi lagt till nya inställningar för begränsningsprofilen för Windows 10-enheter. Nyheterna finns i följande kategorier:
 
-- Windows försvarare
+- Windows Defender
 - Mobilnät och anslutning
 - Låsskärm
 - Sekretess

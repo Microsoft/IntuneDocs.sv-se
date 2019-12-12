@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfe795a812572fa92c51a23b9e15b7fe48254174
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a167fa4f0ddc9832ea70b4281a42b5c0aae5bb81
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72495763"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74694938"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Använda anpassade inställningar för iOS-enheter i Microsoft Intune
 
@@ -57,7 +57,7 @@ Den här artikeln innehåller rikt linjer om hur du använder Apple Configurator
 ## <a name="custom-configuration-profile-settings"></a>Anpassade inställningar för konfigurationsprofil
 
 - **Anpassat namn på konfigurationsprofil**: Ange ett namn för principen. Det här namnet visas på enheten och i Intune-statusen.
-- **Konfigurationsprofilfil**: Bläddra till konfigurationsprofilen som du skapade med Apple Configurator eller Apple Profile Manager. Filen som du importerade visas i området **Filinnehåll**.
+- **Konfigurationsprofilfil**: Bläddra till konfigurationsprofilen som du skapade med Apple Configurator eller Apple Profile Manager. Den största fil storleken är 1000000 byte (precis under 1 MB). Filen som du importerade visas i området **Filinnehåll**.
 
   Du kan också lägga till token för enheter i dina anpassade konfigurationsfiler. Enhets-token används för att lägga till enhetsspecifika information. Ange till exempel `{{serialnumber}}` om du vill visa serienumret. På enheten visas texten på ungefär samma sätt som `123456789ABC` som är unik för varje enhet. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceid` eller andra enhetsspecifika värden.
 

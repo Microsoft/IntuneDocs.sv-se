@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503577"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Felsök integrering av JAMF Pro med Microsoft Intune
@@ -31,7 +31,7 @@ Den här artikeln hjälper Intune-administratörer att förstå och felsöka pro
 > [!TIP]  
 > Mycket av informationen i den här artikeln visades ursprungligen i [Felsöka problem när du integrerar JAMF med Microsoft Intune](https://support.microsoft.com/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune) på support.Microsoft.com.
 
-## <a name="prerequisites"></a>Krav
+## <a name="prerequisites"></a>Förutsättningar
 
 Innan du påbörjar fel sökningen samlar du in lite grundläggande information som klargör problemet och minskar tiden för att hitta en lösning. Om du till exempel stöter på ett JAMF problem med Intune kontrollerar du alltid att kraven är uppfyllda. Granska följande överväganden innan du påbörjar fel sökningen:
 
@@ -294,7 +294,7 @@ Källan till det här felet kan vara en av följande orsaker:
 
 Ett av följande tillstånd inträffade när JAMF Pro-appen registrerades i Azure:  
 - Appen mottog fler än en behörighet.
-- Alternativet **bevilja administratörs medgivande för *\<your företags >***  har inte valts.  
+- Alternativet **bevilja administratörs medgivande för *\<ditt företags >***  valdes inte.  
 
 **Lösning**  
 Se lösning för orsak 1 för [enheter som inte kan registreras](#devices-fail-to-register)tidigare i den här artikeln.

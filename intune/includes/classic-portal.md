@@ -9,15 +9,15 @@ ms.author: dougeby
 ms.custom: include file
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 85afbae2921510688e5457eb75b5c9517a863048
-ms.sourcegitcommit: 9997f22e044af96b392b7318dacbbb82b01bb3eb
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72427101"
 ---
 **Gäller för: Intune i klassiska portalen**
 
 > [!Important]
-> Äldre dator hantering upphör att fungera den 15 oktober 2020. Uppgradera enheter till Windows 10 och registrera dem på samma sätt som MDM-enheter för att hålla dem hanterade av Intune.
+> Stöd för hantering av äldre datorer upphör den 15 oktober 2020. Uppgradera dina enheter till Windows 10 och registrera dem igen som MDM-enheter så att de fortsätter att hanteras av Intune.
 >
 > [Läs mer](https://go.microsoft.com/fwlink/?linkid=2107122)

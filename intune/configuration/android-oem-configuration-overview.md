@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 075e7a99f72de30e83447a2869154859e33356b9
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74390844"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
@@ -60,7 +60,7 @@ När du använder OEMConfig bör du vara medveten om följande information:
 - OEM-tillverkare kan när som helst uppdatera sina funktioner och scheman och ladda upp en ny app i Google Play. Intune synkroniserar alltid den senaste versionen av OEMConfig-appen från Google Play. Intune behåller inte äldre versioner av schemat eller appen. Om du stöter på versions konflikter rekommenderar vi att du kontaktar OEM för mer information.
 - Tilldela en enhet en OEMConfig-profil. Om flera profiler tilldelas till samma enhet kan det hända att du ser inkonsekventa beteenden. OEMConfig-modellen har endast stöd för en enda princip per enhet.
 
-## <a name="prerequisites"></a>Krav
+## <a name="prerequisites"></a>Förutsättningar
 
 Kontrol lera att du har följande krav för att använda OEMConfig på dina enheter:
 

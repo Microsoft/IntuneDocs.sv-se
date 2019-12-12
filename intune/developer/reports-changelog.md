@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9740eed3ab727d76a9af4e46642d8279b310fd9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a37699542c5a9fe5268541aadc91b4c5d3ab5e9a
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490520"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899314"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
@@ -40,13 +40,13 @@ I följande tabell visas de senaste borttagna samlingarna och ersättningarna i 
 
 |    Samling                          |    Ändra     |    Ytterligare information                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    mobileAppDeviceUserInstallStatus    |    Borttaget    |    Använd [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) i stället.                                                                                                                                                                                                                                                                     |
-|    EnrollmentTypes                     |    Borttaget    |    Använd [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) i stället.                                                                                                                                                                                                                                                                                      |
-|    mdmStatuses                         |    Borttaget    |    Använd [complianceStates](intune-data-warehouse-collections.md#compliancestates) i stället.                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Borttaget    |    Använd `azureAdRegistered`-egenskapen i [devices](intune-data-warehouse-collections.md#devices)- och [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories)-samlingarna i stället.                                                                                                                                                                                                             |
-|    ClientRegistrationStateTypes        |    Borttaget    |    Använd [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) i stället.                                                                                                                                                                                                                                                                             |
-|    currentUser                         |    Borttaget    |    Använd [users](intune-data-warehouse-collections.md#users)-samlingen i stället.                                                                                                                                                                                                                                                                                                      |
-|    mdmDeviceInventoryHistories         |    Borttaget    |    Många av egenskaperna var redundanta eller finns nu i [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories)- eller [devices](intune-data-warehouse-collections.md#devices)-samlingen. **mdmDeviceInventoryHistories**-egenskaper som inte redan visas i listan med de här två samlingarna är inte längre tillgängliga. Se informationen nedan.    |
+|    mobileAppDeviceUserInstallStatus    |    Borttagen    |    Använd [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) i stället.                                                                                                                                                                                                                                                                     |
+|    EnrollmentTypes                     |    Borttagen    |    Använd [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) i stället.                                                                                                                                                                                                                                                                                      |
+|    mdmStatuses                         |    Borttagen    |    Använd [complianceStates](intune-data-warehouse-collections.md#compliancestates) i stället.                                                                                                                                                                                                                                                                                               |
+|    workPlaceJoinStateTypes             |    Borttagen    |    Använd `azureAdRegistered`-egenskapen i [devices](intune-data-warehouse-collections.md#devices)- och [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories)-samlingarna i stället.                                                                                                                                                                                                             |
+|    ClientRegistrationStateTypes        |    Borttagen    |    Använd [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) i stället.                                                                                                                                                                                                                                                                             |
+|    currentUser                         |    Borttagen    |    Använd [users](intune-data-warehouse-collections.md#users)-samlingen i stället.                                                                                                                                                                                                                                                                                                      |
+|    mdmDeviceInventoryHistories         |    Borttagen    |    Många av egenskaperna var redundanta eller finns nu i [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories)- eller [devices](intune-data-warehouse-collections.md#devices)-samlingen. **mdmDeviceInventoryHistories**-egenskaper som inte redan visas i listan med de här två samlingarna är inte längre tillgängliga. Se informationen nedan.    |
 
 I följande tabell visas de gamla egenskaper som tidigare ingick i **mdmDeviceInventoryHistories**-samlingen och ändringen/ersättningen. Egenskaper som fanns i **mdmDeviceInventoryHistories** men som inte visas nedan har tagits bort.
 
@@ -84,28 +84,28 @@ I följande tabell visas ändringar av egenskaper som finns i [devicePropertyHis
 |    Tidigare egenskap                  |    Ändring/ersättning                                               |
 |----------------------------------|---------------------------------------------------------------------|
 |    categoryId                    |    deviceCategoryKey, som refererar till deviceCategories-samlingen       |
-|    certExpirationDate            |    Borttaget                                                          |
+|    certExpirationDate            |    Borttagen                                                          |
 |    clientRegistrationStateKey    |    deviceRegistrationStateKey                                       |
 |    createdDate                   |    enrolledDateTime i devices-samlingen                           |
 |    deviceTypeKey                 |    deviceTypeKey i devices-samlingen                              |
 |    easID                         |    easDeviceId i devices-samlingen                                |
 |    enrolledByUser                |    userId i devices-samlingen                                     |
 |    enrollmentTypeKey             |    deviceEnrollmentTypeKey i devices-samlingen                    |
-|    graphDeviceIsCompliant        |    Borttaget                                                          |
-|    graphDeviceIsManaged          |    Borttaget                                                          |
+|    graphDeviceIsCompliant        |    Borttagen                                                          |
+|    graphDeviceIsManaged          |    Borttagen                                                          |
 |    lastContact                   |    lastSyncDateTime i devices-samlingen                           |
-|    lastContactNotification       |    Borttaget                                                          |
-|    lastContactWorkplaceJoin      |    Borttaget                                                          |
-|    lastExchangeStatusUtc         |    Borttaget                                                          |
-|    lastModifiedDateTimeUTC       |    Borttaget                                                          |
-|    lastPolicyUpdateUtc           |    Borttaget                                                          |
+|    lastContactNotification       |    Borttagen                                                          |
+|    lastContactWorkplaceJoin      |    Borttagen                                                          |
+|    lastExchangeStatusUtc         |    Borttagen                                                          |
+|    lastModifiedDateTimeUTC       |    Borttagen                                                          |
+|    lastPolicyUpdateUtc           |    Borttagen                                                          |
 |    managementAgentKey            |    managementStateKey                                               |
 |    manufacturer                  |    manufacturer i devices-samlingen                               |
 |    mdmStatusKey                  |    complianceStateKey, som refererar till complianceStates-samlingen    |
 |    modell                         |    model i devices-samlingen                                      |
 |    osFamily                      |    operatingSystem i devices-samlingen                            |
 |    osRevisionNumber              |    osVersion i devices-samlingen                                  |
-|    processorArchitecture         |    Borttaget                                                          |
+|    processorArchitecture         |    Borttagen                                                          |
 |    referenceId                   |    azureAdDeviceId i devices-samlingen                            |
 |    serialNumber                  |    serialNumber i devices-samlingen                               |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
@@ -115,22 +115,22 @@ I följande tabell visas ändringar av egenskaper som finns i [devices](intune-d
 |    Tidigare egenskap                  |    Ändring/ersättning                                               |
 |----------------------------------|---------------------------------------------------------------------|
 |    categoryId                    |    deviceCategoryKey, som refererar till deviceCategories-samlingen       |
-|    certExpirationDate            |    Borttaget                                                          |
+|    certExpirationDate            |    Borttagen                                                          |
 |    clientRegistrationStateKey    |    deviceRegistrationStateKey                                       |
 |    createdDate                   |    enrolledDateTime                                                 |
 |    easId                         |    easDeviceId                                                      |
 |    enrolledByUser                |    userId                                                           |
 |    enrollmentTypeKey             |    deviceEnrollmentTypeKey                                          |
-|    graphDeviceIsCompliant        |    Borttaget                                                          |
-|    graphDeviceIsManaged          |    Borttaget                                                          |
+|    graphDeviceIsCompliant        |    Borttagen                                                          |
+|    graphDeviceIsManaged          |    Borttagen                                                          |
 |    lastContact                   |    lastSyncDateTime                                                 |
-|    lastContactNotification       |    Borttaget                                                          |
-|    lastContactWorkplaceJoin      |    Borttaget                                                          |
-|    lastExchangeStatusUtc         |    Borttaget                                                          |
-|    lastPolicyUpdateUtc           |    Borttaget                                                          |
+|    lastContactNotification       |    Borttagen                                                          |
+|    lastContactWorkplaceJoin      |    Borttagen                                                          |
+|    lastExchangeStatusUtc         |    Borttagen                                                          |
+|    lastPolicyUpdateUtc           |    Borttagen                                                          |
 |    mdmStatusKey                  |    complianceStateKey, som refererar till complianceStates-samlingen    |
 |    osFamily                      |    operatingSystem                                                  |
-|    processorArchitecture         |    Borttaget                                                          |
+|    processorArchitecture         |    Borttagen                                                          |
 |    referenceId                   |    azureAdDeviceId                                                  |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
@@ -167,9 +167,9 @@ I följande tabell visas ändringar av egenskaper som finns i [users](intune-dat
 
 |    Tidigare egenskap             |    Ändring/ersättning    |
 |-----------------------------|--------------------------|
-|    startDateInclusiveUtc    |    Borttaget               |
-|    endDateInclusiveUtc      |    Borttaget               |
-|    isCurrent                |    Borttaget               |
+|    startDateInclusiveUtc    |    Borttagen               |
+|    endDateInclusiveUtc      |    Borttagen               |
+|    isCurrent                |    Borttagen               |
 
 ## <a name="1903"></a>1903
 _Utgiven mars 2019_

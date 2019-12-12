@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 93b48fd5f6482669da923e4c15dcb09c7d328197
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503448"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
@@ -31,7 +31,7 @@ ms.locfileid: "72503448"
 
 Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade APP- eller MAM-principer) i din ursprungliga iOS-app. Ett MAM-aktiverat program är ett program som är integrerat med Intune App SDK. Det kan användas av IT-administratörer för att distribuera appskyddsprinciper till din mobilapp om Intune aktivt hanterar appen.
 
-## <a name="prerequisites"></a>Krav
+## <a name="prerequisites"></a>Förutsättningar
 
 * Du behöver en Mac OS-dator som kör OS X 10.8.5 eller senare och som också har Xcode-version 9 eller senare installerad.
 
@@ -133,7 +133,7 @@ Följ dessa steg för att aktivera Intune App SDK:
 3. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
 
    > [!NOTE]
-   > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
+   > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Till exempel:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -152,7 +152,7 @@ Följ dessa steg för att aktivera Intune App SDK:
     
       ![Intune App SDK iOS: delning av nyckelringar](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Om du redigerar behörighetsfilen direkt, i stället för att använda det Xcode-användargränssnitt som visas ovan för att skapa åtkomstgrupperna för nyckelringen, ska du lägga till åtkomstgrupperna för nyckelringen med `$(AppIdentifierPrefix)` (Xcode hanterar detta automatiskt). Exempel:
+    d. Om du redigerar behörighetsfilen direkt, i stället för att använda det Xcode-användargränssnitt som visas ovan för att skapa åtkomstgrupperna för nyckelringen, ska du lägga till åtkomstgrupperna för nyckelringen med `$(AppIdentifierPrefix)` (Xcode hanterar detta automatiskt). Till exempel:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -249,25 +249,25 @@ ADALClientId  | Sträng  | Appens klient-ID för Azure AD. | Krävs för alla ap
 ADALAuthority | Sträng | Appens Azure AD-auktoritet används. Du bör använda din egen miljö där AAD-konton har konfigurerats. | Krävs om appen använder ADAL eller MSAL för att komma åt en AAD-resurs som inte är Intune. Om detta värde saknas används ett Intune-standardvärde.|
 ADALRedirectUri  | Sträng  | Appens omdirigerings-URI för Azure AD. | ADALRedirectUri eller ADALRedirectScheme krävs för alla appar som använder MSAL och alla ADAL-appar som har åtkomst till en AAD-resurs som inte är Intune.  |
 ADALRedirectScheme  | Sträng  | Appens omdirigeringsschema för Azure AD. Detta kan användas i stället för ADALRedirectUri om programmets omdirigerings-URI har formatet `scheme://bundle_id`. | ADALRedirectUri eller ADALRedirectScheme krävs för alla appar som använder MSAL och alla ADAL-appar som har åtkomst till en AAD-resurs som inte är Intune. |
-ADALLogOverrideDisabled | Boolesk  | Anger om SDK dirigerar alla ADAL/MSAL-loggar (inklusive eventuella ADAL-anrop från appen) till den egna loggfilen. Standardvärdet är NO (NEJ). Ange YES (JA) om appen ska ange egna återanrop i ADAL/MSAL-loggen. | Valfritt. |
-ADALCacheKeychainGroupOverride | Sträng  | Anger nyckelringsgruppen som ska användas för ADAL/MSAL-cache i stället för ”com.microsoft.adalcache”. Observera att detta inte har app-id-prefixet. Det föregår strängen som anges vid körning. | Valfritt. |
+ADALLogOverrideDisabled | Boolesk  | Anger om SDK dirigerar alla ADAL/MSAL-loggar (inklusive eventuella ADAL-anrop från appen) till den egna loggfilen. Standardvärdet är NO (NEJ). Ange YES (JA) om appen ska ange egna återanrop i ADAL/MSAL-loggen. | Valfri. |
+ADALCacheKeychainGroupOverride | Sträng  | Anger nyckelringsgruppen som ska användas för ADAL/MSAL-cache i stället för ”com.microsoft.adalcache”. Observera att detta inte har app-id-prefixet. Det föregår strängen som anges vid körning. | Valfri. |
 AppGroupIdentifiers | Strängmatris  | Matris med appgrupper från appens behörigheter i avsnittet com.apple.security.application-groups | Krävs om appen använder programgrupper. |
 ContainingAppBundleId | Sträng | Anger paket-ID:t för programmet som ingår i tillägget. | Krävs för iOS-tillägg. |
-DebugSettingsEnabled| Boolesk | Om detta är inställt på JA kan testprinciper i inställningspaketet användas. Program bör *inte* levereras med den här inställningen aktiverad. | Valfritt. Standardvärdet är no (nej). |
-AutoEnrollOnLaunch| Boolesk| Anger om programmet ska försöka registrera sig automatiskt vid start om en befintlig hanterad identitet identifieras och den inte redan har gjort det. Standardvärdet är NO (NEJ). <br><br> Kommentarer: Om ingen hanterad identitet hittas eller om det inte finns en tillgänglig giltig token för identiteten i ADAL/MSAL-cachen, misslyckas registreringsförsöket utan att användaren uppmanas att ange autentiseringsuppgifter, om inte MAMPolicyRequired också är inställt på YES (JA) för appen. | Valfritt. Standardvärdet är no (nej). |
-MAMPolicyRequired| Boolesk| Anger om appen kommer att blockeras från att starta om appen inte har en Intune-appskyddsprincip. Standardvärdet är NO (NEJ). <br><br> Obs! Appar kan inte skickas till App Store om MAMPolicyRequired är inställt på YES (JA). Om du ställer in MAMPolicyRequired till YES (JA) bör även AutoEnrollOnLaunch ha värdet YES (JA). | Valfritt. Standardvärdet är no (nej). |
-MAMPolicyWarnAbsent | Boolesk| Anger om appen kommer att varna användaren under start om appen inte har en Intune-appskyddsprincip. <br><br> Obs! Användare kommer fortfarande att kunna använda appen utan en princip när varningen har ignorerats. | Valfritt. Standardvärdet är no (nej). |
-MultiIdentity | Boolesk| Anger om appen är multiidentitetsmedveten. | Valfritt. Standardvärdet är no (nej). |
-SafariViewControllerBlockedOverride | Boolesk| Inaktiverar Intunes SafariViewController-hookar för att aktivera MSAL-autentisering via SFSafariViewController, SFAuthSession eller ASWebAuthSession. | Valfritt. Standardvärdet är no (nej). Varning: kan leda till data läckage om det används felaktigt. Aktivera endast om det är absolut nödvändigt. Se [särskilda överväganden när du använder MSAL](#special-considerations-when-using-msal) för mer information.  |
-SplashIconFile <br>SplashIconFile~ipad | Sträng  | Anger filen för Intunes ikon för välkomstskärmen (startskärm). | Valfritt. |
-SplashDuration | Antal | Kortaste tid i sekunder som startskärmen för Intune visas när programmet startas. Standardvärdet är 1,5. | Valfritt. |
-BackgroundColor| Sträng| Anger bakgrunds färgen för Intune SDK: s UI-komponenter. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.   | Valfritt. Standardvärdet för systemets bakgrunds färg, som kan variera mellan olika versioner av iOS och enligt inställningen iOS-mörkt läge. |
-ForegroundColor| Sträng| Anger förgrunds färgen för Intune SDK: s UI-komponenter, till exempel textfärg. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.  | Valfritt. Standardvärdet för system etiketts färgen, som kan variera mellan olika versioner av iOS och enligt inställningen iOS-mörkt läge. |
-AccentColor | Sträng| Anger accentfärg för Intune SDK: s UI-komponenter, t. ex. knapp text färg och färg markerings färg. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.| Valfritt. Standardinställningen är systemblått. |
-SupportsDarkMode| Boolesk | Anger om Intune SDK: s färg schema ska Observera inställningen system mörk läge, om inget uttryckligt värde har angetts för BackgroundColor/ForegroundColor/AccentColor | Valfritt. Standardvärdet är ja. |
-MAMTelemetryDisabled| Boolesk| Anger om SDK inte ska skicka några telemetridata till serverdelen.| Valfritt. Standardvärdet är no (nej). |
-MAMTelemetryUsePPE | Boolesk | Anger om MAM SDK ska skicka data till PPE-telemetriserverdelen. Använd det här när du testar dina appar med Intune-principen så att testets telemetridata inte blandas med kunddata. | Valfritt. Standardvärdet är no (nej). |
-MaxFileProtectionLevel | Sträng | Valfritt. Tillåter appen att ange maximal `NSFileProtectionType` som den stöder. Det här värdet åsidosätter den princip som skickas av tjänsten om nivån är högre än vad programmet stöder. Möjliga värden: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+DebugSettingsEnabled| Boolesk | Om detta är inställt på JA kan testprinciper i inställningspaketet användas. Program bör *inte* levereras med den här inställningen aktiverad. | Valfri. Standardvärdet är no (nej). |
+AutoEnrollOnLaunch| Boolesk| Anger om programmet ska försöka registrera sig automatiskt vid start om en befintlig hanterad identitet identifieras och den inte redan har gjort det. Standardvärdet är NO (NEJ). <br><br> Kommentarer: Om ingen hanterad identitet hittas eller om det inte finns en tillgänglig giltig token för identiteten i ADAL/MSAL-cachen, misslyckas registreringsförsöket utan att användaren uppmanas att ange autentiseringsuppgifter, om inte MAMPolicyRequired också är inställt på YES (JA) för appen. | Valfri. Standardvärdet är no (nej). |
+MAMPolicyRequired| Boolesk| Anger om appen kommer att blockeras från att starta om appen inte har en Intune-appskyddsprincip. Standardvärdet är NO (NEJ). <br><br> Obs! Appar kan inte skickas till App Store om MAMPolicyRequired är inställt på YES (JA). Om du ställer in MAMPolicyRequired till YES (JA) bör även AutoEnrollOnLaunch ha värdet YES (JA). | Valfri. Standardvärdet är no (nej). |
+MAMPolicyWarnAbsent | Boolesk| Anger om appen kommer att varna användaren under start om appen inte har en Intune-appskyddsprincip. <br><br> Obs! Användare kommer fortfarande att kunna använda appen utan en princip när varningen har ignorerats. | Valfri. Standardvärdet är no (nej). |
+MultiIdentity | Boolesk| Anger om appen är multiidentitetsmedveten. | Valfri. Standardvärdet är no (nej). |
+SafariViewControllerBlockedOverride | Boolesk| Inaktiverar Intunes SafariViewController-hookar för att aktivera MSAL-autentisering via SFSafariViewController, SFAuthSession eller ASWebAuthSession. | Valfri. Standardvärdet är no (nej). Varning: kan leda till data läckage om det används felaktigt. Aktivera endast om det är absolut nödvändigt. Se [särskilda överväganden när du använder MSAL](#special-considerations-when-using-msal) för mer information.  |
+SplashIconFile <br>SplashIconFile~ipad | Sträng  | Anger filen för Intunes ikon för välkomstskärmen (startskärm). | Valfri. |
+SplashDuration | Antal | Kortaste tid i sekunder som startskärmen för Intune visas när programmet startas. Standardvärdet är 1,5. | Valfri. |
+BackgroundColor| Sträng| Anger bakgrunds färgen för Intune SDK: s UI-komponenter. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.   | Valfri. Standardvärdet för systemets bakgrunds färg, som kan variera mellan olika versioner av iOS och enligt inställningen iOS-mörkt läge. |
+ForegroundColor| Sträng| Anger förgrunds färgen för Intune SDK: s UI-komponenter, till exempel textfärg. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.  | Valfri. Standardvärdet för system etiketts färgen, som kan variera mellan olika versioner av iOS och enligt inställningen iOS-mörkt läge. |
+AccentColor | Sträng| Anger accentfärg för Intune SDK: s UI-komponenter, t. ex. knapp text färg och färg markerings färg. Godkänner en hexadecimal RGB-sträng med formatet #XXXXXX, där X kan vara något mellan 0–9 eller A–F. Pundtecknet kan utelämnas.| Valfri. Standardinställningen är systemblått. |
+SupportsDarkMode| Boolesk | Anger om Intune SDK: s färg schema ska Observera inställningen system mörk läge, om inget uttryckligt värde har angetts för BackgroundColor/ForegroundColor/AccentColor | Valfri. Standardvärdet är ja. |
+MAMTelemetryDisabled| Boolesk| Anger om SDK inte ska skicka några telemetridata till serverdelen.| Valfri. Standardvärdet är no (nej). |
+MAMTelemetryUsePPE | Boolesk | Anger om MAM SDK ska skicka data till PPE-telemetriserverdelen. Använd det här när du testar dina appar med Intune-principen så att testets telemetridata inte blandas med kunddata. | Valfri. Standardvärdet är no (nej). |
+MaxFileProtectionLevel | Sträng | Valfri. Tillåter appen att ange maximal `NSFileProtectionType` som den stöder. Det här värdet åsidosätter den princip som skickas av tjänsten om nivån är högre än vad programmet stöder. Möjliga värden: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Boolesk | Inställt på YES (JA) för Open in Action-tillägg. Mer information finns i avsnittet Sharing Data via UIActivityViewController (Dela data via UIActivityViewController). |
 WebViewHandledURLSchemes | Strängmatris | Anger de URL-scheman som appens WebView hanterar. | Krävs om appen använder en WebView som hanterar URL:er via länkar och/eller javascript. |
 

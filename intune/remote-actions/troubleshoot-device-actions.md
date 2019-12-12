@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f6dc3d1a8f8589395cf49b3bb934adadf437a4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 239dd8630eb361da8609e3a34eb2c9346a64dab0
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508508"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907193"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Felsöka enhets åtgärder i Intune
 
@@ -54,7 +54,7 @@ Nej. Och du behöver inte ange bindestrecken.
 ## <a name="remove-devices-action"></a>Åtgärden ta bort enheter
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Hur gör jag för att se vem som startade en borttagning/rensning?
-Gå till **Intune**  > **enheter**  > **enhets åtgärder** > kontrol lera kolumnen **initierad av** .
+I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)går du till **innehavaradministration** > **gransknings loggar** > kontrollerar kolumnen **initierad av** .
 Om du inte ser någon post är den mest sannolika personen som har initierat åtgärden är användare av enheten. De använde förmodligen Företagsportal app-eller portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Varför avinstallerades inte programmet när det har tagits ur bruk?
@@ -69,7 +69,7 @@ Det här beteendet är förväntat. Google tillåter inte att fabriks återstäl
 Eftersom en enhet dras tillbaka återkallar inte åtkomsttoken. Du kan använda principer för villkorlig åtkomst för att minimera det här tillståndet.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Hur kan jag övervaka en borttagnings-/rensnings åtgärd när den har utfärdats?
-Gå till **Intune** - > **enheter**  > **enhets åtgärder**.
+I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)går du till **klient administration** > **gransknings loggar**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Varför visas ibland rensningar som väntar på obestämd tid?
 Enheter rapporterar inte alltid statusen tillbaka till Intune-tjänsten innan återställningen startades. Därför visas åtgärden som väntande. Om du har bekräftat att åtgärden lyckades tar du bort enheten från tjänsten.

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c8c5be1d7a02c2c8329afe05dcdce22f48c49d05
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503486"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
@@ -180,7 +180,7 @@ Om du svarar ”Ja” på båda dessa frågor måste du ta med biblioteket i `in
 | Du inkluderar ett bibliotek som React Native som innehåller klasser härledda från `Activity`, `Application` och `Fragment`, men du använder endast statiska hjälpverktyg eller verktygsklasser | Nej |
 | Du inkluderar ett bibliotek som innehåller visningsklasser härledda från `TextView` och använder eller härleder dessa klasser ytterligare i din app | Ja |
 
-#### <a name="reporting"></a>Rapportering
+#### <a name="reporting"></a>Rapporter
 Plugin-programmet för utveckling kan generera en HTML-rapport över de ändringar som det gör. Om du vill begära generering av den här rapporten anger du `report = true` i konfigurationsblocket `intunemam`. Om rapporten genereras skrivs den till `outputs/logs` i utvecklingskatalogen.
 
 ```groovy
@@ -614,7 +614,7 @@ NotificationRestriction notificationRestriction =
     MAMPolicyManager.getPolicyForIdentity(notificationIdentity).getNotificationRestriction();
 ```
 
-Om begränsningen är `BLOCKED` får appen inte visa några meddelanden för användaren som är associerad med den här principen. Om `BLOCK_ORG_DATA` måste appen Visa ett ändrat meddelande som inte innehåller organisations data. Om `UNRESTRICTED` är alla meddelanden tillåtna.
+Om begränsningen är `BLOCKED`får appen inte visa några meddelanden för användaren som är associerad med den här principen. Om `BLOCK_ORG_DATA`måste appen Visa ett ändrat meddelande som inte innehåller organisations data. Om `UNRESTRICTED`är alla meddelanden tillåtna.
 
 Om `getNotificationRestriction` inte anropas, gör MAM SDK det bästa arbetet för att begränsa meddelanden automatiskt för appar med en identitet. Om automatisk blockering är aktiverat och `BLOCK_ORG_DATA` anges visas inte meddelandet alls. Om du vill ha mer detaljerad kontroll kontrollerar du värdet för `getNotificationRestriction` och ändrar appens aviseringar på lämpligt sätt.
 
@@ -1254,7 +1254,7 @@ Om din app använder `Application`-kontexten för att hämta systemtjänster bö
 För hantering av specialfall vid uppdatering av UI-identiteten med `setUIPolicyIdentity` eller `switchMAMIdentity` kan båda metoderna skickas som en uppsättning `IdentitySwitchOption`-värden.
 
 * `IGNORE_INTENT`: Använd om du begär en identitetsväxling som ska ignorera den avsikt som är associerad med den aktuella aktiviteten.
-  Exempel:
+  Till exempel:
 
   1. Appen tar emot en avsikt från en hanterad identitet som innehåller ett hanterat dokument, och appen visar dokumentet.
   2. Användaren växlar till sin personliga identitet, så appen begär en UI-identitetsväxling. I den personliga identiteten visar din app inte längre dokumentet, så du använder `IGNORE_INTENT` när du begär identitetsväxlingen.
@@ -1419,7 +1419,7 @@ Det är vanligt att åtgärder i UI-tråden skickar bakgrundsaktiviteter till en
 Dessa måste användas om den asynkrona åtgärden skulle kunna företagsdata till en fil eller kommunicera med andra appar.
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
-Om du vill använda `MAMAsyncTask` kan du helt enkelt ärva från den i stället för `AsyncTask` och ersätta åsidosättningar av `doInBackground` och `onPreExecute` med `doInBackgroundMAM` respektive `onPreExecuteMAM`. Konstruktorn `MAMAsyncTask` tar ett aktivitetssammanhang. Exempel:
+Om du vill använda `MAMAsyncTask` kan du helt enkelt ärva från den i stället för `AsyncTask` och ersätta åsidosättningar av `doInBackground` och `onPreExecute` med `doInBackgroundMAM` respektive `onPreExecuteMAM`. Konstruktorn `MAMAsyncTask` tar ett aktivitetssammanhang. Till exempel:
 
 ```java
   AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {

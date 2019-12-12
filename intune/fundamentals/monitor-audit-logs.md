@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: d6af0718f2b926383bb943b6321b4d5839346ce7
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585247"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991991"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Använd granskningsloggar för att spåra och övervaka händelser i Microsoft Intune
 
@@ -40,9 +40,14 @@ Användare med följande behörigheter kan gå igenom granskningsloggar:
 
 Du kan gå igenom granskningsloggar i övervakningsgruppen för varje arbetsbelastning i Intune:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj den arbetsbelastning som du vill granska granskningsloggar för. Välj exempelvis **Enheter**.
-3. Under **Övervakning** väljer du **Granskningsloggar**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **klient administration** > **gransknings loggar**.
+3. Filtrera resultaten genom att välja **filter** och förfina resultaten med hjälp av följande alternativ.
+    - **Kategori**: till exempel **efterlevnad**, **enhet**och **roll**.
+    - **Aktivitet**: de alternativ som anges här begränsas av det alternativ som valts under **kategori**.
+    - **Datum intervall**: du kan välja loggar för föregående månad, vecka eller dag.
+4. Välj **Använd**.
+4. Markera ett objekt i listan om du vill se aktivitets detaljerna.
 
 ## <a name="route-logs-to-azure-monitor"></a>Dirigera loggar till Azure Monitor
 
@@ -53,32 +58,10 @@ Granskningsloggar och arbetsloggar kan även dirigeras till Azure Monitor. I **G
 > [!NOTE]
 > Mer information om den här funktionen och för att granska kraven för att använda den finns i [Skicka loggdata till lagring, Event Hub eller Log Analytics](review-logs-using-azure-monitor.md).
 
-## <a name="review-audit-events"></a>Gå igenom granskningshändelser
-
-![Välj granskningsloggar i Intune om du vill se åtgärder och datum när händelser inträffade](./media/monitor-audit-logs/monitor-audit-logs.png "Granskningsloggar")
-
-En granskningslogg har en standardlistvy som visar följande objekt:
-
-- Datum och tid för händelsen
-- Initierad av (aktör)
-- Programnamn
-- Aktivitet
-- Mål
-- Kategori
-- Status
-
-Om du vill se mer specifik information om en händelse väljer du ett objekt i listan:
-
-![Få mer specifik information om vem som gjorde vad i granskningsloggar i Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "|::ref2::|")
-
 > [!NOTE]
 > **Initierad av (aktör)** innehåller information om vem som körde uppgiften och var den kördes. Om du t.ex. utför aktiviteten i Intune i Azure Portal, visar **Program** alltid **Microsoft Intune-portaltillägg** och **Program-ID** använder alltid samma GUID.
 >
 > Avsnittet **Mål** anger flera mål och de egenskaper som har ändrats.  
-
-## <a name="filter-audit-events"></a>Filtrera granskningshändelser
-
-Varje arbetsbelastning har ett menyalternativ som i förväg filtrerar kategorin för granskningshändelser som är associerade med detta fönster. Med ett separat filteralternativ kan du ändra till olika kategorier och information om händelseåtgärd inom denna kategori. Du kan söka med UPN, till exempel den användare som utförde åtgärden. Ett filter för datumintervall ger alternativ för 24 timmar, 7 dagar eller 30 dagar. Som standard visas de senaste 30 dagarna av granskningshändelserna.
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Använd Graph API för att hämta granskningshändelser
 

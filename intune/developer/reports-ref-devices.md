@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 36407bda1f74d0c4601f78cedc2af5426e944fee
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503413"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
@@ -52,7 +52,7 @@ Entiteten **deviceTypes** representerar den enhetstyp som andra informationslage
 
 | deviceTypeID  | Namn | Beskrivning |
 |---------|------------|--------|
-| 0 |skrivbords- |Windows Desktop-enhet |
+| 0 |Stationär dator |Windows Desktop-enhet |
 | 1 |WindowsRT |WindowsRT-enhet |
 | 2 |WinMO6 |Windows Mobile 6.0-enhet |
 | 3 |Nokia |Nokia-enhet |
@@ -191,7 +191,7 @@ Entiteten **managementStates** innehåller information om enhetens tillstånd. I
 | 2 |RetireFailed | Det gick inte att utföra kommandot för tillbakadragande på enheten. |
 | 3 |WipePending | Ett rensningskommando väntar på enheten. |
 | 4 |WipeFailed | Det gick inte att utföra rensningskommandot på enheten. |
-| 5 |Ohälsosamt | Ej felfritt tillstånd. |
+| 5 |Inte felfri | Ej felfritt tillstånd. |
 | 6 |DeletePending | Ett borttagningskommando väntar på enheten. |
 | 7 |RetireIssued | Ett kommando om tillbakadragande har utfärdats till enheten. |
 | 8 |WipeIssued | Ett rensningskommando har utfärdats. |

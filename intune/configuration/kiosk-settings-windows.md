@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42ccb1d1654ba45b63672eebf00acd10fdc56a67
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 80da0e6952c5aaab6fa8146b2d91d32259966d5d
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059346"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74691725"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune
 
@@ -83,16 +83,17 @@ Kör endast en app på enheten.
 
     - **Uppdatera webbläsaren efter viloläge**: Ange efter hur lång tids inaktivitet (1–1440 minuter) webbläsaren på kioskenheten ska startas om. Hur inaktivitetstiden är antalet minuter sedan den senaste interaktionen från en användare. Värdet är tomt som standard, vilket innebär att det inte finns någon tidsgräns för inaktivitet.
 
-    - **Tillåtna webbplatser**: Använd den här inställningen för att tillåta att vissa webbplatser öppnas. Med andra ord kan du använda denna funktion till att begränsa eller förhindra webbplatser på enheten. Du kan till exempel tillåta att alla webbplatser på `http://contoso.com*` öppnas. Som standard tillåts alla webbplatser.
+    - **Tillåtna webbplatser**: Använd den här inställningen för att tillåta att vissa webbplatser öppnas. Med andra ord kan du använda denna funktion till att begränsa eller förhindra webbplatser på enheten. Du kan till exempel tillåta att alla webbplatser på `http://contoso.com` öppnas. Som standard tillåts alla webbplatser.
 
-      Ladda upp en fil som innehåller en lista med tillåtna webbplatser på separata rader om du vill tillåta specifika webbplatser. Om du inte lägger till någon fil tillåts alla webbplatser. Intune stöder `*` (asterisk) som jokertecken.
+      Ladda upp en fil som innehåller en lista med tillåtna webbplatser på separata rader om du vill tillåta specifika webbplatser. Om du inte lägger till någon fil tillåts alla webbplatser. Som standard stöder Intune jokertecken. Så när du anger domänen, till exempel `sharepoint.com`, tillåts under domäner automatiskt, till exempel `contoso.sharepoint.com`, `my.sharepoint.com`och så vidare.
 
       Exempelfilen bör likna följande lista:
 
       `http://bing.com`  
       `https://bing.com`  
-      `http://contoso.com/*`  
-      `https://contoso.com/*`
+      `http://contoso.com`  
+      `https://contoso.com`  
+      `office.com`
 
     > [!NOTE]
     > Windows 10-kiosker med automatisk logo typ aktive rad med Microsoft kiosk webbläsare måste använda en offline-licens från Microsoft Store för företag. Detta krav beror på att den automatiska logo typen använder ett lokalt användar konto utan autentiseringsuppgifter för Azure Active Directory (AD). Det går därför inte att utvärdera Online licenser. Mer information finns i [distribuera offline-appar](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).

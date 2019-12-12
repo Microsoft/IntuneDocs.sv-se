@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506359"
 ---
 # <a name="encrypting-your-android-device"></a>Kryptera din Android-enhet
@@ -45,7 +45,7 @@ Om Företagsportal eller Microsoft Intune-appen meddelar dig att du krypterar en
     c. Konfigurera skärm låset genom att följa anvisningarna på skärmen.  
 
 2. Gå tillbaka till **Lås skärmen och säkerhet** och välj **säker start**.
-3. Välj **Kräv PIN-kod när enheten aktiverar**  > **OK**.
+3. Välj **Kräv PIN-kod när enheten aktiverar** > **OK**.
 4. Ange din PIN-kod för att bekräfta och kryptera enheten.
 5. Öppna appen Företagsportal eller Microsoft Intune.
     * Användare av företagsportalen: Välj din enhet och tryck på **Kontrollera enhetsinställningar**. 
@@ -53,16 +53,16 @@ Om Företagsportal eller Microsoft Intune-appen meddelar dig att du krypterar en
 
 Enheter som kör Android 4,4 och tidigare kanske inte har alternativet **säker start** . I så fall kan du utföra följande steg för att kryptera enheten.
 
-1. Gå till **inställningar**  > **säkerhets**  > **kryptera enhet**. Etiketter på skärmen varierar mellan Android-enheter. Om du inte ser alternativet **kryptera enhet** , checka in:
-    * **Lagring**  > **lagrings kryptering**
-    * **Lagrings**  > **Lås skärmen och säkerhets**  > **andra säkerhets inställningar** 
+1. Gå till **inställningar** > **säkerhets** > **kryptera enhet**. Etiketter på skärmen varierar mellan Android-enheter. Om du inte ser alternativet **kryptera enhet** , checka in:
+    * **Lagring** > **lagrings kryptering**
+    * **Lagrings** > **Lås skärmen och säkerhets** > **andra säkerhets inställningar** 
 
 2. Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
 3. Öppna appen Företagsportal eller Microsoft Intune.
     * Användare av företagsportalen: Välj din enhet och tryck på **Kontrollera enhetsinställningar**.  
     * Microsoft Intune användare: du måste vänta tills sidan har uppdaterats, men när du gör det ska krypterings statusen ändras till kompatibel.
 
-## <a name="troubleshoot"></a>Felsöka  
+## <a name="troubleshoot"></a>Felsök  
 **Problem**: du har redan krypterat enheten och
 
 - Krypteringsknappen är inaktiverad.

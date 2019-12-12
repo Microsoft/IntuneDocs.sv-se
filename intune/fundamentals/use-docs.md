@@ -12,10 +12,10 @@ ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72504815"
 ---
 # <a name="using-the-intune-docs"></a>Med hjälp av Intune-dokument
@@ -36,7 +36,7 @@ Allmän hjälp och support för Intune finns i [få support för Intune](../get-
 
 - Använd Sök termer som matchar terminologin i användar gränssnittet och onlinedokumentationen. Undvik officiella villkor eller förkortningar som du kan se i Community-innehåll.
 
-- Om du vill söka i en artikel som du just nu visar använder du webbläsarens **Sök** funktion. Med de flesta moderna webbläsare trycker du på **Ctrl** +**F** och anger sedan Sök villkoren.  
+- Om du vill söka i en artikel som du just nu visar använder du webbläsarens **Sök** funktion. Med de flesta moderna webbläsare trycker du på **Ctrl**+**F** och anger sedan Sök villkoren.  
 
 - Varje artikel på docs.microsoft.com innehåller följande fält för att hjälpa till med sökningen av innehållet:  
 

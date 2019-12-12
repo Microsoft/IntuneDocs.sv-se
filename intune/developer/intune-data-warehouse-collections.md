@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aad4e2295cb7b85abcb73a9c8e94ed7501348be
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 42d07f02e76669c735d09b5d7843a4102dd0f835
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490495"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899233"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-informationslagersamlingar
 
@@ -85,7 +85,7 @@ I följande tabell sammanfattas tilldelningsstatusen för efterlevnadsprinciper 
 | DateKey       | Datumnyckel när sammanfattningen skapades för kompatibilitetsprincipen.                                                                                                                   | 20161204 |
 | Okänt       | Antalet enheter som är offline eller inte kunde kommunicera med Intune eller Azure AD av andra orsaker.                                                                           | 5        |
 | NotApplicable | Antalet enheter där kompatibilitetsprinciper som tilldelats av administratören inte kan användas.                                                                                     | 201      |
-| Kompatibel     | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 4083     |
+| Godkänd     | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 4083     |
 | InGracePeriod | Antalet enheter som inte är kompatibla men som är i respitperioden som angetts av administratören.                                                                                  | 57       |
 | NonCompliant  | Antalet enheter som inte har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål, eller där användaren inte har följt de principer som administratören har satt upp som mål. | 43       |
 |    Fel      |    Antalet enheter som inte kunde kommunicera med Intune eller Azure AD och returnerade ett felmeddelande.                                                                          |    3     |
@@ -100,7 +100,7 @@ I följande tabell sammanfattas tilldelningsstatus för efterlevnadsprinciper f�
 | PolicyPlatformKey | Nyckel för plattformstypen för efterlevnadsprincipen som sammanfattningen skapades för.                                                                                            | 5        |
 | Okänt           | Antalet enheter som är offline eller inte kunde kommunicera med Intune eller Azure AD av andra orsaker.                                                                           | 13       |
 | NotApplicable     | Antalet enheter där kompatibilitetsprinciper som tilldelats av administratören inte kan användas.                                                                                     | 3        |
-| Kompatibel         | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 45       |
+| Godkänd         | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 45       |
 | InGracePeriod     | Antalet enheter som inte är kompatibla men som är i respitperioden som angetts av administratören.                                                                                  | 3        |
 | NonCompliant      | Antalet enheter som inte har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål, eller där användaren inte har följt de principer som administratören har satt upp som mål. | 7        |
 | Fel             | Antalet enheter som inte kunde kommunicera med Intune eller Azure AD och returnerade ett felmeddelande.                                                                             | 3        |
@@ -117,7 +117,7 @@ I följande tabell sammanfattas tilldelningsstatus för efterlevnadsprinciper f�
 |  complianceStatus  |                       Beskrivning                      |
 |:------------------:|:------------------------------------------------------:|
 |    Okänt         |    Okänt.                                                                        |
-|    Kompatibel       |    Kompatibel.                                                                      |
+|    Godkänd       |    Kompatibel.                                                                      |
 |    Ej kompatibel    |       Enheten är icke-kompatibel och blockeras från företagsresurser.             |
 |    Konflikt        |    Konflikt med andra regler.                                                      |
 |    Fel           |       Fel.                                                                       |
@@ -266,7 +266,7 @@ Entiteten **deviceType** representerar den enhetstyp som andra informationslager
 | deviceTypeID |        Namn       |                      Beskrivning                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Inte tillgänglig   | Enhetstypen är inte tillgänglig.                     |
-| 0            | skrivbords-           | Windows-skrivbordsenhet                              |
+| 0            | Stationär dator           | Windows-skrivbordsenhet                              |
 | 1            | Windows           | Windows-enhet                                      |
 | 2            | WinMO6            | Windows Mobile 6.0-enhet                           |
 | 3            | Nokia             | Nokia-enhet                                        |
@@ -550,7 +550,7 @@ Entiteten **ManagementState** innehåller information om enhetens tillstånd. In
 | 2                 | RetireFailed   | Det gick inte att utföra kommandot för tillbakadragande på enheten.                                                                      |
 | 3                 | WipePending    | Ett rensningskommando väntar på enheten.                                                               |
 | 4                 | WipeFailed     | Det gick inte att utföra rensningskommandot på enheten.                                                                        |
-| 5                 | Ohälsosamt      | Ej felfritt tillstånd.                                                                                              |
+| 5                 | Inte felfri      | Ej felfritt tillstånd.                                                                                              |
 | 6                 | DeletePending  | Ett borttagningskommando väntar på enheten.                                                             |
 | 7                 | RetireIssued   | Ett kommando om tillbakadragande har utfärdats till enheten.                                                               |
 | 8                 | WipeIssued     | Ett rensningskommando har utfärdats.                                                                               |
@@ -697,7 +697,7 @@ Entitetssamlingen **user** innehåller användardata. De här posterna innehåll
 | UserId                     | Unik identifierare för användaren, liknar UserKey men är en naturlig nyckel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Användarens e-postadress.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | Användarens huvudnamn.                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | Användarens visningsnamn.                                                                                                                                                                                                      | John                                 |
+| Visningsnamn                | Användarens visningsnamn.                                                                                                                                                                                                      | John                                 |
 | IntuneLicensed             | Anger om användaren är Intune-licensierad eller inte.                                                                                                                                                                              | Sant/falskt                           |
 | IsDeleted                  | Anger om alla användarens licenser har gått ut och om användaren därför har tagits bort från Intune. Den här flaggan ändras inte för en enskild post. I stället skapas en ny post för ett nytt användartillstånd. | Sant/falskt                           |
 | RowLastModifiedDateTimeUTC | Datum och tid i UTC när posten senast ändrades i informationslagret                                                                                                                                                 | 11/23/2016 0:00                      |

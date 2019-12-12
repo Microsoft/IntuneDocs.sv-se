@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3c6c029a5c5864eda46a68832b2f9f655553846
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889544"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946673"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Windows 10 och senare för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
@@ -161,6 +161,7 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 ### <a name="encryption"></a>Kryptering
 
 - **Kryptering av datalagring på en enhet**:  
+  Den här inställningen gäller för alla enheter på en enhet.
   - **Ej konfigurerat** (*standard*)
   - **Kräv** – Använd *Kräv* när du ska kryptera datalagring på dina enheter.
 
@@ -198,7 +199,7 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
 
 - **Microsoft Defender program mot skadlig kod**:  
   - **Inte konfigurerat** (*standard*) – Intune kontrollerar inte tjänsten eller ändrar befintliga inställningar.
-  - **Kräv** – aktivera tjänsten Microsoft Defender program mot skadlig kod och förhindra att användare stänger av den. 
+  - **Kräv** – aktivera tjänsten Microsoft Defender program mot skadlig kod och förhindra att användare stänger av den.
 
 - **Lägsta version för Microsoft Defender antimalware-skadlig kod**:  
   Ange den lägsta tillåtna versionen av Microsoft Defender-tjänsten för skydd mot skadlig kod. Ange till exempel `4.11.0.0`. Om du lämnar tomt kan du använda en version av tjänsten Microsoft Defender program mot skadlig kod.  
@@ -206,10 +207,12 @@ Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter
   *Som standard konfigureras ingen version*.
 
 - **Microsoft Defender program mot skadlig kod – säkerhets information uppdaterad**:  
-  Kontrollerar uppdateringar av Windows säkerhets virus och hot skydd på enheterna.  
+  Kontrollerar uppdateringar av Windows säkerhets virus och hot skydd på enheterna.
   - **Inte konfigurerat** (*standard*) – Intune upprätthåller inte några krav.
-  - **Kräv** -Force att Microsoft Defender Security Intelligence är uppdaterad. 
+  - **Kräv** -Force att Microsoft Defender Security Intelligence är uppdaterad.
 
+  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  
   Mer information finns i [Security Intelligence-uppdateringar för Microsoft Defender Antivirus och andra Microsoft antimalware-program](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 - **Realtidsskydd**:  

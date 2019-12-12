@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2c736c905045fd3afd40a12243986fbe69452ecd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502826"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
@@ -49,7 +49,7 @@ Med principen för Windows-brandväggen kan du skapa och distribuera inställnin
 > [!IMPORTANT]
 > Om du vill hantera Windows-brandväggen med hjälp av Intune ser du till att följande två tjänster är aktiverade på de datorer som du hanterar:
 >
-> - Windows-brandvägg
+> - Windows-brandväggen
 > - IPsec Policy Agent
 
 ## <a name="configure-a-windows-firewall-policy"></a>Konfigurera en princip för Windows-brandväggen
@@ -101,7 +101,7 @@ Standardvärdet för var och en av de här inställningarna är **Ja**.
 
 Du kan konfigurera undantag som tillåter specifika typer av nätverkstrafik att passera genom brandväggen oavsett de värden som du konfigurerat tidigare. Ingen av de här inställningarna är konfigurerade som standard.
 
-|Inställningsnamn|Information|
+|Namn på inställning|Information|
 |------------------|--------------------|
 |**BranchCache – innehållshämtning**<br>(Windows 7 eller senare)|Låter BranchCache-klienter använda HTTP vid hämtning av innehåll från andra BranchCache-klienter i distributionsläget och från värdhanterad cache i värdhanterat cacheläge. Inställningen använder HTTP.|
 |**BranchCache – klient för värdhanterad cache**<br>(Windows 7 eller senare)|Låter BranchCache-klienter använda en värdbaserad cache. Inställningen använder HTTPS.|

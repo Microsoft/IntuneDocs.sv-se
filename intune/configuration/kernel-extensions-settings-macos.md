@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8632f5b8df0f483de3bb4d06a6823639ba52c604
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506708"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>macOS-enhets inställningar för att konfigurera och använda kernel-tillägg i Intune
@@ -63,7 +63,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   > [!TIP]
   > Om du vill hämta paket-ID: t för ett kernel-tillägg (KEXT) på en macOS-enhet kan du:
   >
-  > 1. Kör `kextstat | grep -v com.apple` i terminalen och anteckna utdata. Installera den program vara eller KEXT som du vill använda. Kör `kextstat | grep -v com.apple` igen och leta efter ändringar.
+  > 1. Kör `kextstat | grep -v com.apple`i terminalen och anteckna utdata. Installera den program vara eller KEXT som du vill använda. Kör `kextstat | grep -v com.apple` igen och leta efter ändringar.
   >
   >    I terminalen visar `kextstat` alla kernel-tillägg på operativ systemet. 
   >

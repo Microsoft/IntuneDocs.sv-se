@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52fb1ea5077b424a1d3cf10812d8d9b5f79e4752
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059806"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74781149"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune
 
@@ -106,7 +106,7 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
 
 ## <a name="ikev2-settings"></a>IKEv2-inställningar
 
-Dessa inställningar gäller när du väljer **Anslutnings typ**  > **IKEv2**.
+Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
 
 - **Fjärridentifierare**: Ange NÄTVERKets IP-adress, FQDN, USERFQDN eller ASN1DN för IKEv2-servern. Ange till exempel `10.0.0.3` eller `vpn.contoso.com`. Normalt anger du samma värde som [**anslutnings namnet**](#base-vpn-settings) (i den här artikeln). Men det beror på inställningarna för IKEv2-servern.
 
@@ -136,8 +136,8 @@ Dessa inställningar gäller när du väljer **Anslutnings typ**  > **IKEv2**.
   - **Medel** (standard): skickar ett keepalive-meddelande var tionde minut.
   - **Hög**: skickar ett keepalive-meddelande var 60 sekund.
 
-- **Lägsta TLS-version intervall**: Ange den minsta TLS-version som ska användas. Ange `1.0`, `1.1` eller `1.2`. Om inget anges används standardvärdet `1.0`.
-- **Högsta TLS-versions intervall**: Ange den högsta TLS-version som ska användas. Ange `1.0`, `1.1` eller `1.2`. Om inget anges används standardvärdet `1.2`.
+- **Lägsta TLS-version intervall**: Ange den minsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.0`.
+- **Högsta TLS-versions intervall**: Ange den högsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.2`.
 - **Perfect Forward Secrecy**: Välj **Aktivera** för att aktivera PFS (Perfect Forward Secrecy). PFS är en funktion för IP-säkerhet som minskar påverkan om en sessionsnyckel komprometteras. **Disable** (standard) använder inte PFS.
 - **Certifikat återkallnings kontroll**: Välj **Aktivera** för att kontrol lera att certifikaten inte återkallas innan du tillåter att VPN-anslutningen lyckas. Den här kontrollen är bästa möjliga. Om VPN-servern tar tid på innan du fastställer om certifikatet har återkallats beviljas åtkomst. **Disable** (standard) söker inte efter återkallade certifikat.
 
@@ -179,7 +179,7 @@ Dessa inställningar gäller när du väljer **Anslutnings typ**  > **IKEv2**.
 
 ## <a name="automatic-vpn-settings"></a>Inställningar för automatiskt VPN
 
-- **Per app-VPN**: Gör det möjligt att använda VPN per app. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS](vpn-setting-configure-per-app.md).
+- **Per app-VPN**: Gör det möjligt att använda VPN per app. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Per app-VPN stöds inte i IKEv2. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS](vpn-setting-configure-per-app.md). 
   - **Typ av provider**: Endast tillgängligt för Pulse Secure och anpassat VPN.
   - När du använder **per app-VPN-profiler** i iOS med Pulse Secure eller Anpassat VPN väljer du händelsedirigering nedåt på applager (app-proxy) eller på paketnivå (paket-tunnel). Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå. Om du inte är säker på vilket värde du ska använda läser du VPN-leverantörens dokumentation.
   - **Safari-webbadresser som utlöser denna VPN**: Lägg till en eller flera webbadresser. VPN-anslutningen upprättas automatiskt när de här webbadresserna besöks i Safari-webbläsaren på enheten.

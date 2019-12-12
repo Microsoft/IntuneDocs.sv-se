@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8d7a5f67dfd8f7256559cb54d873ed48205ad751
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72490422"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
@@ -31,7 +31,7 @@ ms.locfileid: "72490422"
 
 Du kan använda Compliance-appen i Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för din Intune-klientorganisation. Du kan också läsa in klientorganisationens data i Power BI med hjälp av OData-länken. Intune tillhandahåller anslutningsinställningar för din klientorganisation så att du kan visa följande exempelrapporter och diagram relaterade till:  
 
-- Egenskaper
+- Enheter
 - Registrering
 - Appskyddsprincip
 - Policy för efterlevnad

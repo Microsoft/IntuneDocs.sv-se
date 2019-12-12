@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 12/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,19 +19,19 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72501898"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74781217"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
 Hanterade appar konfigureras för att uppfylla din organisations säkerhetskrav och för att skydda arbets- och skoldata. De här apparna görs tillgängliga för dig på din enhet, där de kan installeras eller användas automatiskt. 
 
 Innan du tar emot och installerar en hanterad app, konfigureras appens behörigheter av din organisation. Appfunktioner eller användarinteraktioner kan begränsas så att appens data inte kan delas eller ses av obehöriga. Exempelvis kan en organisation blockera kopierings- och inklistringsfunktionerna i appen. Eller så kan de hindra dig från att spara data till enhetens lokala lagring.
 
-För att maximera dataskyddet kan din organisation konfigurera flera hanterade appar så att de fungerar tillsammans. Exempel:
+För att maximera dataskyddet kan din organisation konfigurera flera hanterade appar så att de fungerar tillsammans. Till exempel:
 1. Du ansluter till din organisations nätverk i en hanterad webbläsare, till exempel Microsoft Edge.
 2. Du klickar på en länk för att öppna en kollegas presentationsfil.
 3. Filen öppnas i lämplig hanterad app, till exempel Microsoft PowerPoint.
@@ -39,9 +39,7 @@ För att maximera dataskyddet kan din organisation konfigurera flera hanterade a
 Organisationer kan kräva att du använder en hanterad app för att göra något, till exempel för att öppna en arbetsfil eller komma åt en webblänk. Om du inte har appen kanske du inte kan slutföra åtgärden. Vissa hanterade appar är tillgängliga för installation, men är inte obligatoriska.
 
 ## <a name="how-do-i-know-im-using-a-managed-app"></a>Hur vet jag om jag använder en hanterad app?
-Första gången du kommer åt arbets- eller skoldata i en hanterad app får du ett meddelande som liknar det i exemplet i skärmbilden nedan. Meddelandet uppmanar dig att starta om appen för att fortsätta.
-
-![Skärmbild av meddelandet som visas när en användare öppnar en hanterad app på sin enhet. Meddelandet ”Your organization is not protecting its data in this app. You need to restart the app to continue." (Din organisation skyddar inte sina data i den här appen. Du måste starta om appen för att fortsätta.) visas, följt av en OK-knapp.](./media/managed-apps-message.png)
+När du försöker komma åt arbets-eller skol data i en hanterad app får du ett meddelande på skärmen som appen skyddas av din organisation. 
 
 ## <a name="commonly-managed-apps"></a>Vanliga hanterade appar  
 Exempel på vanliga obligatoriska eller tillgängliga hanterade appar i skolor och på arbetsplatser är:

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26df7250aefa519c20708879b68af7c35113814f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72509869"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Begära och tillhandahålla hjälp för Windows-datorer
@@ -63,7 +63,7 @@ Innan du börjar upprätta och svara på förfrågningar om fjärrhjälp måste 
 
 ## <a name="respond-to-a-remote-assistance-request"></a>Svara på en begäran om fjärrhjälp
 
-1. När en användare skickar en begäran om fjärrhjälp kan du visa den på arbetsytan **Aviseringar** under **Övervakning** > **Fjärrhjälp**. Exempel:
+1. När en användare skickar en begäran om fjärrhjälp kan du visa den på arbetsytan **Aviseringar** under **Övervakning** > **Fjärrhjälp**. Till exempel:
    > ![Skärmbild av en begäran om fjärrhjälp](./media/request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune/team-viewer.png)
 
 <br>Om en begäran inte besvaras på fyra timmar tas den bort.

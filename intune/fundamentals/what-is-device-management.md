@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058533"
 ---
 # <a name="device-management-overview"></a>Översikt över enhetshantering
@@ -59,7 +59,7 @@ Mer information om Intune finns i [Vad är Intune](what-is-intune.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrering med tjänster för att säkra och skydda
 
-En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhet och skydd. Intune gör ett bra jobb med att genomföra den här uppgiften genom integration med andra tjänster. Exempel:
+En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhet och skydd. Intune gör ett bra jobb med att genomföra den här uppgiften genom integration med andra tjänster. Till exempel:
 
 - **Microsoft 365** är en viktig komponent när det gäller att förenkla vanliga IT-uppgifter. I Microsoft 365 Administrationscenter skapar du användare och hanterar grupper. Du får även åtkomst till andra tjänster, till exempel Intune och Azure AD.
 
@@ -101,7 +101,7 @@ I administrations centret för enhets hantering kan du:
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Hantera användare](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Hantera grupper och medlemmar](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Felsöka](help-desk-operators.md)
+- [Felsök](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Nästa steg
 
