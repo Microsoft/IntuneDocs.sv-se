@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fde277e16043662420864adcc0458e3dccad308
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 5f9a01adaa6f5ab59819c2924172c30a437ebd8c
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465650"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992918"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Den här artikeln beskriver de olika inställningar som du kan styra på iOS- och iPadOS-enheter. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa inställningar för att tillåta eller inaktivera funktioner, ange lösenordsregler, tillåta eller begränsa specifika appar med mera.
 
@@ -52,7 +50,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 
 - **Ej betrodda TLS-certifikat**: Välj**Blockera** om du vill stoppa ej betrodda TLS-certifikat på enheten. **Inte konfigurerad** (standard) tillåter TLS-certifikat.
-- **Tillåt trådlösa PKI-uppdateringar**: **Tillåt** låter dina användare ta emot programuppdateringar utan att ansluta sina enheter till en dator.
+- **Blockera uppdateringar över flyg-PKI**: **blockera** hindrar användarna från att ta emot program uppdateringar utan att ansluta sina enheter till en dator. **Inte konfigurerad** (standard) uppdaterar inte den här inställningen på enheten.
 - **Begränsa reklamspårning**: Välj **Begränsa** om du vill inaktivera enhetens reklamidentifierare. **Inte konfigurerad** (standard) gör att den förblir aktiverad.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
@@ -95,7 +93,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Ändra konfigurationsprofil**: **Blockera** förhindrar ändringar av enhetens konfigurationsprofil. **Inte konfigurerad** (standard) tillåter användaren att installera konfigurationsprofiler.
 - **Aktiveringslås**: Välj **Tillåt** för att aktivera aktiveringslåset på övervakade iOS-enheter. Aktiveringslåset gör det svårare att återaktivera en förlorad eller stulen enhet.
 - **Blockera borttagning av appar**: Välj **Blockera** för att förhindra att användare tar bort appar. **Inte konfigurerad** (standard) tillåter användaren att ta bort appar från enheten.
-- **Blockera USB-begränsat läge**: Välj **Blockera** om du vill inaktivera USB-begränsat läge på övervakade enheter. USB-begränsat läge blockerar USB-tillbehör från att utbyta data med en enhet som har varit låst i över en timma. **Inte konfigurerad** (standard) tillåter USB-begränsat läge.
+- **Tillåt USB-tillbehör när enheten är låst**: **Tillåt tillåter att** USB-tillbehör utbyter data med en enhet som är låst i mer än en timme. **Inte konfigurerad** (standard) uppdaterar inte USB-begränsat läge på enheten.
 - **Framtvinga automatisk datum och tid**: **Kräv** tvingar övervakade enheter att konfigurera datum och tid automatiskt. Enhetens tidszon uppdateras när enheten har mobila anslutningar eller har aktiverats för Wi-Fi med platstjänster.
 - **Kräv att elever begär tillstånd att lämna Classroom-kurs**: **Kräv** tvingar elever som har registrerats i en ohanterad kurs med appen Classroom att begära tillstånd från läraren om att lämna kursen. **Inte konfigurerad** (standard) tvingar inte eleven att be om behörighet.
 
@@ -413,7 +411,7 @@ Gäller enheter som kör iOS 9,3 eller senare.
   
   - **Synliga appar**: Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
 
-- **App-URL**: Ange Store-appens URL för den app som du vill visa eller dölja. Exempel:
+- **App-URL**: Ange Store-appens URL för den app som du vill visa eller dölja. Till exempel:
 
   - Om du vill lägga till appen Microsoft Work Folders anger du `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` eller `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
@@ -538,7 +536,7 @@ Obs! för data nätverks växling (tips eller viktig information som hjälper ti
 - **Synkronisering av bildström till iCloud**: **Inte konfigurerad** (standard) låter användarna aktivera **My Photo Stream** på sina enheter och synkroniseras med iCloud och låta foton vara tillgängliga på användarens alla enheter. **Blockera** förhindrar bildströmssynkronisering till iCloud. Att blockera den här funktionen kan leda till data förlust. 
 - **iCloud-bildbiblioteket**: Ställ in på **Blockera** om du vill inaktivera användning av iCloud-bildbiblioteket för att lagra foton och videoklipp i molnet. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket till enheten tas bort från enheten. **Inte konfigurerad** (standard) tillåter att iCloud-bildbiblioteket används.
 - **Delad bildström**: Välj **Blockera** om du vill inaktivera **iCloud-bilddelning** på enheten. **Inte konfigurerad** (standard) tillåter delad bildström.
-- **Leverans**: **inte konfigurerat** (standard) gör det möjligt för användare att börja arbeta med en iOS-enhet och sedan fortsätta att fungera på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar den här överlämningen.
+- **** Leverans: **inte konfigurerat** (standard) gör det möjligt för användare att börja arbeta med en iOS-enhet och sedan fortsätta att fungera på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar den här överlämningen.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhets registrering (övervakad)
 
@@ -612,7 +610,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 > Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda Apple Configurator-verktyget eller Apples enhetsregistreringsprogram för att placera enheten i övervakat läge. Information om hur du använder Apple Configurator-verktyget finns i Apples guide.
 > Om den iOS-appen som du anger har installerats efter det att du har tilldelat profilen så går inte enheten över i helskärmsläge förrän den startas om.
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domäner
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhets registrering, automatisk enhets registrering (övervakad)
 

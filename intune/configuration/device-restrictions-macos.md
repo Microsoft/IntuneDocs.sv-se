@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
-ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72776887"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
@@ -163,12 +163,12 @@ Om du vill lägga till appar i listorna kan du:
 - **Block iCloud Bookmark Backup** (Blockera säkerhetskopiering av bokmärken med iCloud): **Blockera** förhindrar att iCloud synkroniserar bokmärken på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av bokmärken med iCloud.
 - **Block iCloud Notes Backup** (Blockera säkerhetskopiering av anteckningar med iCloud): **Blockera** förhindrar att iCloud synkroniserar anteckningar på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av anteckningar med iCloud.
 - **Blockera iCloud-bildbibliotek**: **block** inaktiverar iCloud-bildbibliotek och hindrar iCloud från att synkronisera enheternas foton. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket tas bort från enhetens lokala lagringsutrymme. **Inte konfigurerad** (standard) tillåter synkronisering av foton mellan enheten och iCloud-bildbiblioteket.
-- **Leverans**: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
+- **** Leverans: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
 
   Den här funktionen gäller för:  
   - macOS 10.15 och senare
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domäner
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
