@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: f49ea9e1e59fadcb90a773e362ec3ef41e25ab63
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502238"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Inställningar i enheter som kör Windows 10 för att aktivera Windows Hello för företag i Intune
@@ -129,7 +129,7 @@ Mer information om Windows Hello för företag-profiler i Intune finns i [Konfig
 
   **Standard**: Inte konfigurerat
 
-- **Använda säkerhets nycklar för inloggning**  
+- **Använd säkerhetsnycklar för inloggning**  
   Den här inställningen är tillgänglig för enheter som kör Windows 10 version 1903 eller senare. Använd den för att hantera stöd för användning av Windows Hello-säkerhetsnycklar för inloggning.  
 
   - **Aktive rad** – användare kan använda en Windows Hello-säkerhetsnyckel som inloggnings uppgifter för datorer som är riktade till den här principen. 

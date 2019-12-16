@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3d98a0e3c5bd2a5c11c9aa72d791306dfbe6578
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503294"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955481"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -85,9 +85,7 @@ CSV-filen när den visas i en textredigerare:
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Ladda upp en CSV-lista med företagsidentifierare
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Sedan väljer du **Enhetsregistrering** > **ID:n för företagsenheter** > **Lägg till** > **Ladda upp CSV-fil**.
-
-   ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/corporate-identifiers-add/add-corp-id.png)
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Registrera enheter** > **ID:n för företagsenheter** > **Lägg till** > **Ladda upp CSV-fil**.
 
 2. På bladet **Lägg till identifierare** anger du ID-typen: **IMEI** eller **Seriell**.
 
@@ -97,7 +95,7 @@ CSV-filen när den visas i en textredigerare:
 
 ## <a name="manually-enter-corporate-identifiers"></a>Ange företagsidentifierare manuellt
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Sedan väljer du **Enhetsregistrering** > **ID:n för företagsenheter** > **Lägg till** > **Ange manuellt**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Registrera enheter** > **ID:n för företagsenheter** > **Lägg till** > **Ange manuellt**.
 
 2. På bladet **Lägg till identifierare** anger du ID-typen: **IMEI** eller **Seriell**.
 
@@ -111,7 +109,7 @@ Importerade enheter registreras inte nödvändigtvis. Enheterna kan antingen ha 
 
 ## <a name="delete-corporate-identifiers"></a>Ta bort företagsidentifierare
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Sedan väljer du **Enhetsregistrering** > **ID:n för företagsenheter**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Registrera enheter** > **ID:n för företagsenheter**.
 2. Markera de enhetsid:n du vill ta bort och välj **Ta bort**.
 3. Bekräfta borttagningen.
 
@@ -125,7 +123,7 @@ Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers)
 Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som administratör kan du ange enheter som **Personliga** eller **Företagsägda**. När en enhets ägarskapstyp ändras från Personlig till Företag tar Intune bort all appinformation som tidigare samlats in från den enheten inom 7 dagar. Om så är tillämpligt tar Intune även bort det registrerade telefonnumret. 
 
 **Ändra enhetsägande:**
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), gå till **Enheter** och välj enheten.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Alla enheter** > välj enhet.
 2. Välj **Egenskaper**.
 3. Ange **Äganderätt till enhet** som **Personlig** eller **Företagsägd**.
 

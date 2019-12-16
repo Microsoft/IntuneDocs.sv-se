@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad5c26770537ce6a285989f8ca3804277616419
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 77cf4745262346ec2f8bfb5d4d7e67e1ee5c5e07
+ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540779"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75000388"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -54,12 +54,42 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-december-9-2019"></a>Veckan som börjar med 9 december 2019
+
+#### <a name="migrating-to-microsoft-edge-for-managed-browsing-scenarios---5173762---"></a>Migrera till Microsoft Edge för scenarier med hanterade webbläsare<!-- 5173762 -->
+
+Nu när vi närmar oss tillbakadragningen av Intune Managed Browser, har vi gjort ändringar i appskyddsprinciperna för att förenkla de steg som krävs för att flytta användare till Edge. Vi har uppdaterat alternativen i inställningen av appskyddsprincipen **Begränsa överföring av webbinnehåll till andra appar** till att vara något av följande:
+
+- Alla appar
+- Intune Managed Browser
+- Microsoft Edge
+- Ohanterad webbläsare 
+
+När du väljer **Microsoft Edge** visas ett meddelande om villkorsstyrd åtkomst för användarna som informerar om att Microsoft Edge krävs för hanterad webbsökning. De uppmanas att ladda ned och logga in på Microsoft Edge med sina AAD-konton, om de inte redan har gjort det.  Detta motsvarar när du har riktat dina MAM-aktiverade appar med appens konfigurationsinställning `com.microsoft.intune.useEdge` inställd på **Sant**. Befintliga appskyddsprinciper som använde inställningen **Principhanterade webbläsare** har nu **Intune Managed Browser** valt och du upplever inte någon ändring av funktionerna. Det innebär att användarna kommer att se meddelanden om att använda Microsoft Edge om du har angett appkonfigurationsinställningen **useEdge** som **Sant**. Vi uppmuntrar alla kunder som använder scenarier med hanterad webbsökning till att uppdatera sina appskyddsprinciper med **Begränsa överföring av webbinnehåll till andra appar** att säkerställa att användarna ser rätt vägledning för övergången till Microsoft Edge, oavsett vilken app de öppnar länkarna från. 
+
+<!-- ########################## -->
+## <a name="week-of-december-2-2019"></a>Veckan som börjar med 2 december 2019
+
+#### <a name="new-microsoft-endpoint-configuration-manager-co-management-licensing--5027281--"></a>Ny licensiering av samhantering i Microsoft Endpoint Configuration Manager<!--5027281-->
+Nu finns en ny licens där Configuration Manager-kunder med Software Assurance kan få Intune-samhantering för Windows 10-datorer utan att behöva köpa ytterligare en Intune-licens för samhantering. Kunderna behöver inte längre tilldela enskilda Intune/EMS-licenser till sina slutanvändare för samhantering av Windows 10.
+- Enheter som hanteras i Configuration Manager och registreras för samhantering har nästan samma rättigheter som fristående MDM-hanterade datorer i Intune. När du har återställt dem kan du dock inte etablera dem igen med hjälp av Autopilot.
+- Windows 10-enheter som har registrerats i Intune med hjälp av andra metoder kräver fullständiga Intune-licenser.
+- Enheter på andra plattformar kräver fortfarande fullständiga Intune-licenser.
+
+Mer information finns i [Licensvillkor](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
+
+
+<!-- ########################## -->
 ## <a name="week-of-november-18-2019-1911-service-release"></a>Veckan den 18 november 2019 (1911 Service Release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering
 
 #### <a name="smime-support-with-microsoft-outlook-for-ios---2669398-idready---"></a>S/MIME-stöd med Microsoft Outlook för iOS<!-- 2669398 idready -->
+
+   > [!NOTE]
+   > Den här funktionen är försenad, men kommer snart att lanseras.
+
 Intune stöder leverans av S/MIME-signering och -krypteringscertifikat som kan användas med Outlook för iOS på iOS-enheter. Mer information finns i [konfigurera S/MIME för Outlook för iOS](~/apps/app-configuration-policies-outlook-smime.md).
 
 #### <a name="ui-update-when-selectively-wiping-app-data---4102028---"></a>Uppdaterat gränssnitt för selektiv rensning av appdata<!-- 4102028 -->
@@ -232,7 +262,7 @@ Du kan kräva att en enhet måste startas om efter att en Win32-app har installe
 Mörkt läge är tillgängligt för iOS-företagsportalen. Användarna kan ladda ned företagsappar, hantera sina enheter och få IT-support i valfritt färgschema baserat på enhetsinställningarna. iOS-företagsportalen matchar automatiskt slutanvändarens enhetsinställningar för mörkt eller ljust läge. Mer information finns i [Lansering av mörkt läge i Microsoft Intunes företagsportal för iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). Mer information om hur du IOS-företagsportalen finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](~/apps/company-portal-app.md).
 
 #### <a name="android-company-portal-enforced-minimum-app-version---2378776---"></a>Obligatorisk lägsta appversion för Android-företagsportalen<!-- 2378776 -->
-Genom att använda inställningen **Lägsta företagsportalversion** för en appskyddsprincip, kan du ange en specifik definierad minimiversion för företagsportalen som ska finnas på slutanvändarens enhet. Med den här inställningen för villkorlig start kan du använda **Blockera åtkomst**, **Rensa data** och **Varna** som möjliga åtgärder när värdet inte uppfylls. De möjliga formaten för det här värdet följer mönstret *[Major].[Minor]* , *[Major].[Minor].[Build]* , eller *[Major].[Minor].[Build].[Revision]* .
+Genom att använda inställningen **Lägsta företagsportalversion** för en appskyddsprincip, kan du ange en specifik definierad minimiversion för företagsportalen som ska finnas på slutanvändarens enhet. Med den här inställningen för villkorlig start kan du använda **Blockera åtkomst**, **Rensa data** och **Varna** som möjliga åtgärder när värdet inte uppfylls. De möjliga formaten för det här värdet följer mönstret *[Major].[Minor]*, *[Major].[Minor].[Build]*, eller *[Major].[Minor].[Build].[Revision]*.
 
 Om inställningen **Lägsta företagsportalversion** har konfigurerats, kommer det att påverka slutanvändare som hämtar version 5.0.4560.0 och eventuella framtida versioner av företagsportalen. Den här inställningen har ingen påverkan på användare som använder en version av företagsportalen som är äldre än den version som funktionen lanseras med. Slutanvändare som använder automatiska appuppdateringar kommer troligen inte att se några dialogrutor från den här funktionen, eftersom de sannolikt har den senaste företagsportalversionen. Den här inställningen gäller endast för Android med appskydd för registrerade och oregistrerade enheter. Mer information finns i [Inställningar för Android-appskyddsprinciper – Villkorlig start](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
@@ -789,10 +819,10 @@ Du kan skapa profiler för att begränsa inställningar på enheter som kör iOS
 
 - På **iOS** > **Enhetsbegränsningar** finns det vissa ändringar:
 
-  - **Inbyggda appar** > **Hitta min iPhone (endast övervakat)** : Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
-  - **Inbyggda appar** > **Hitta mina vänner (endast övervakat)** : Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
-  - **Trådlös** > **Ändring av Wi-Fi-tillstånd (endast övervakat)** : Ny inställning som förhindrar att användare aktiverar eller inaktiverar Wi-Fi på enheten.
-  - **Tangentbord och ordlista** > **QuickPath (endast övervakat)** : Ny inställning som blockerar QuickPath-funktionen.
+  - **Inbyggda appar** > **Hitta min iPhone (endast övervakat)**: Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
+  - **Inbyggda appar** > **Hitta mina vänner (endast övervakat)**: Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
+  - **Trådlös** > **Ändring av Wi-Fi-tillstånd (endast övervakat)**: Ny inställning som förhindrar att användare aktiverar eller inaktiverar Wi-Fi på enheten.
+  - **Tangentbord och ordlista** > **QuickPath (endast övervakat)**: Ny inställning som blockerar QuickPath-funktionen.
   - **Moln och lagring**: **Aktivitetsfortsättning** har bytt namn till **Handoff**.
 
   Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](../configuration/device-restrictions-ios.md) för att se de aktuella inställningarna.
@@ -842,7 +872,7 @@ Mer information om inställningarna för Windows Defender Antivirus finns i [Enh
 En nyinbyggd standardomfångstagg är nu tillgänglig. Alla icke-taggade Intune-objekt som stöder omfångstaggar tilldelas automatiskt till standardomfångstaggen. **Standardomfångstaggen** läggs till i alla befintliga rolltilldelningar för att upprätthålla paritet med administratörsupplevelsen idag. Om du inte vill att en administratör ska se Intune-objekt med standardomfångstaggen, tar du bort standardomfångstaggen från rolltilldelningen. Den här funktionen liknar funktionen säkerhetsomfattningar i System Center Configuration Manager. Mer information finns i [Använda RBAC och omfångstaggar för distribuerad IT](scope-tags.md).
 
 #### <a name="android-enrollment-device-administrator-support---4869749-----"></a>Stöd för registrering av Android-enhetens administratör<!-- 4869749   -->
-Alternativet för registrering av Android-enhetens administratör har lagts till på sidan Android-registrering (**Intune** > **Enhetsregistrering** > **Android-registrering)** . Android-enhetens administratör är fortfarande aktiverad som standard för alla klienter.  Du hittar mer information i [Registrering av Android-enhetens administratör](../enrollment/android-enroll-device-administrator.md).
+Alternativet för registrering av Android-enhetens administratör har lagts till på sidan Android-registrering (**Intune** > **Enhetsregistrering** > **Android-registrering)**. Android-enhetens administratör är fortfarande aktiverad som standard för alla klienter.  Du hittar mer information i [Registrering av Android-enhetens administratör](../enrollment/android-enroll-device-administrator.md).
 
 #### <a name="skip-more-screens-in-setup-assistant---4877451----"></a>Hoppa över fler skärmar i installationsassistenten <!--4877451  -->
 Du kan ställa in att programprofiler för enhetsregistrering hoppar över följande installationsassistentskärmar:
@@ -1082,7 +1112,7 @@ Gäller för: iOS
 När du skapar en enhetsbegränsningsprofil för iOS-enheter kan du använda ett fingeravtryck som lösenord. Inställningarna för lösenord med fingeravtryck tillåter även ansiktsigenkänning i denna uppdatering (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **Lösenord**). Därför ändras följande inställningar:
 
 - **Upplåsning med fingeravtryck** är nu **Upplåsning av Touch ID och Face ID**.
-- **Ändring av fingeravtryck (endast övervakat)** är nu **Ändring av Touch ID och Face ID (endast övervakat)** .
+- **Ändring av fingeravtryck (endast övervakat)** är nu **Ändring av Touch ID och Face ID (endast övervakat)**.
 
 Face ID är tillgängligt i iOS 11.0 och senare. Gå till [Enhetsinställningarna för iOS tillåter eller begränsar funktioner med hjälp av Intune](../configuration/device-restrictions-ios.md#password) för att se inställningarna.
 

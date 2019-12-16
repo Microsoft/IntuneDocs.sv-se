@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712193"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991779"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -47,6 +47,8 @@ Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter
 
 Alternativet **Behåll registreringstillstånd och användarkonto** är endast tillgängligt för Windows 10 version 1709 eller senare.
 
+Med alternativet **Utför skyddad rensning** säkerställer du att rensningsåtgärden inte kan kringgås genom att enheten stängs av. En skyddad rensning försöker återställa enheten tills den har lyckats. I vissa konfigurationer kan den här åtgärden medföra att enheten inte kan startas om.
+
 MDM-principer kommer att tillämpas igen nästa gång enheten ansluter till Intune.
 
 En rensning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen. Var försiktig med att välja **Rensa**. Det går inte att återställa data på enheten.
@@ -57,7 +59,7 @@ En rensning är praktisk om du vill återställa en enhet innan du ger den till 
 3. Välj **Enheter** > **Alla enheter**.
 4. Välj namnet på den enhet som du vill rensa.
 5. I fönstret som visar enhetsnamnet väljer du **Rensa**.
-6. För Windows 10 version 1709 eller senare kan du även välja alternativet **Behåll registreringstillstånd och användarkonto**. 
+6. I Windows 10 version 1709 eller senare kan du även välja alternativet **Rensa enheten men behåll registreringsläget och tillhörande användarkonto**. 
     
     |Behålls under en rensning |Behålls inte|
     | -------------|------------|

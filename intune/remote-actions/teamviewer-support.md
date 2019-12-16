@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d03859d5775193e6bbc482c06b28942a1a5bce2f
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 0372c9629e111c460b095d8c0236305866da42e3
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712143"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907210"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
@@ -48,7 +48,7 @@ Genom att använda TeamViewer tillåter du att TeamViewer för Intune-anslutning
 För att kunna ge fjärrhjälp till enheter måste du först konfigurera Intune TeamViewer-anslutningsprogrammet med följande steg:
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Välj **Enheter** > **TeamViewer Connector**.
+2. Välj **Administration av klientorganisation** > **Anslutning och token** > **TeamViewer-anslutningsprogram**.
 3. Välj **Anslut** och acceptera sedan licensavtalet.
 4. Välj **Logga in på TeamViewer och auktorisera**.
 5. En webbsida öppnas med TeamViewer-webbplatsen. Ange dina autentiseringsuppgifter för TeamViewer-licensen och välj sedan **Logga in**.
@@ -59,7 +59,7 @@ När anslutningen har konfigurerats är du redo att fjärradministrera en enhet.
 
 1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Enheter** och sedan **Alla enheter**.
-3. Välj den enhet som du vill fjärradministrera i listan. I egenskaperna för enheten väljer du **Ny fjärrhjälpssession**.
+3. I listan väljer du den enhet som du vill fjärradministrera > **...** > **Ny fjärrhjälpssession**.
 4. När Intune ansluter till TeamViewer-tjänsten visas information enheten. Välj **Anslut** för att starta fjärrsessionen.
 
 ![Exempel på hur du fjärradministrerar en Android-enhet](./media/teamviewer-support/android-teamviewer.png)

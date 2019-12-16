@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0718fae09228b9359b073901f3a344a09a6176e7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3fb5818609763753878fec7a84fd8c19eb154f88
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509244"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955447"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Allmänna villkor för användaråtkomst
 
@@ -46,31 +46,30 @@ Om du inte vet vilken metod som passar bäst för dig rekommenderar vi att du l�
 ## <a name="create-terms-and-conditions"></a>Skapa allmänna villkor
 Slutför stegen nedan för att skapa allmänna villkor. Namn och beskrivning som visas är för administrativa syften, medan villkorsegenskaperna visas för användarna i företagsportalen.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. I fönstret **Intune** väljer du **Enhetsregistrering** > **Allmänna villkor**.
-3. Välj **Skapa**.
-4. På sidan **Grundläggande** anger du följande information:
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Administration av klientorganisation** > **Allmänna villkor**.
+2. Välj **Skapa**.
+3. På sidan **Grundläggande** anger du följande information:
 
    - **Namn**: Namnet på villkoren i Azure-portalen. Användarna ser inte det här namnet.
    - **Beskrivning**: Valfri information som hjälper dig att identifiera den här uppsättningen med villkor i Azure-portalen.
 
     ![Skärmbild av Azure-portalen som visar den grundläggande sidan för villkor](./media/terms-and-conditions-create/terms-basics-page.png)
 
-5. Välj **Nästa** för att gå till sidan **Villkor** och ange följande information:
+4. Välj **Nästa** för att gå till sidan **Villkor** och ange följande information:
 
    - **Rubrik**: Namnet på dina villkor som användarna ser i företagsportalen ovanför **Sammanfattning**.
    - **Allmänna villkor**: De villkor som användarna ser och antingen måste godkänna eller avvisa.
    - **Sammanfattning av villkoren**: Text som förklarar vad det innebär när användarna accepterar villkoren. Till exempel, ”Genom att registrera din enhet accepterar du användningsvillkoren som anges av Contoso. Läs villkoren noggrant innan du fortsätter.”
 
-6. Välj **Nästa** för att gå till sidan **Omfångskoder**.
+5. Välj **Nästa** för att gå till sidan **Omfångskoder**.
 
-7. Markera **Välj omfångskoder**, välj de omfångskoder som du vill tilldela till dessa avtalsvillkor och välj sedan **Välj**. 
+6. Markera **Välj omfångskoder**, välj de omfångskoder som du vill tilldela till dessa avtalsvillkor och välj sedan **Välj**. 
 
-8. Välj **Nästa** för att gå till sidan **Tilldelningar** och välj ett av följande alternativ för **Tilldela till**:
+7. Välj **Nästa** för att gå till sidan **Tilldelningar** och välj ett av följande alternativ för **Tilldela till**:
     - **Alla användare**: Välj det här alternativet om du vill tilldela de här villkoren till alla användare.
     - **Välj grupper**: Välj det här alternativet om du vill tilldela de här villkoren till alla i de grupper som du identifierar genom att välja **Välj grupper som ska inkluderas**.
 
-9. Välj **Nästa** > **Skapa**.
+8. Välj **Nästa** > **Skapa**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Se hur villkoren visas för användarna
 I följande exempel visas **Rubrik** och **Sammanfattning av villkoren** i administratörskonsolen och företagsportalen.
@@ -84,8 +83,7 @@ I följande exempel visas användarvillkoren i administratörskonsolen och före
 
 ## <a name="monitor-terms-and-conditions"></a>Övervaka användarvillkor
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
-1. I fönstret Intune väljer du **Enhetsregistrering** > **Allmänna villkor**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Administration av klientorganisation** > **Allmänna villkor**.
 2. I listan med allmänna villkor väljer du de villkor som du vill visa godkännande för > **Rapportering av godkännande**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Arbeta med flera versioner av användarvillkor
@@ -95,12 +93,10 @@ Du kan redigera dina villkor och hantera deras versioner. Varje gång du gör en
 
 Behåll det nuvarande versionsnumret om du exempelvis korrigerar stavfel eller ändrar formateringen.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Administration av klientorganisation** > **Allmänna villkor** > välj de villkor som du vill ändra > **Egenskaper**.
 
-2. I Intune-fönstret väljer du **Enhetsregistrering** > **Allmänna villkor** > välj de villkor som du vill ändra > **Egenskaper**.
+2. I fönstret **Egenskaper** väljer du **Allmänna villkor**. Ändra sedan **Rubrik**, **Sammanfattning av villkoren** och **Allmänna villkor** efter behov. Om ändringarna gör det nödvändigt att användarna måste godkänna de nya villkoren igen, klickar du på **Kräv att användarna godkänner på nytt och öka versionsnumret till**
 
-4. I fönstret **Egenskaper** väljer du **Allmänna villkor**. Ändra sedan **Rubrik**, **Sammanfattning av villkoren** och **Allmänna villkor** efter behov. Om ändringarna gör det nödvändigt att användarna måste godkänna de nya villkoren igen, klickar du på **Kräv att användarna godkänner på nytt och öka versionsnumret till**
-
-4. Välj **OK** > **Spara**.
+3. Välj **OK** > **Spara**.
 
 Användarna behöver bara godkänna uppdaterade villkor en gång. Användare med flera enheter behöver inte godkänna användarvillkoren på varje enhet.

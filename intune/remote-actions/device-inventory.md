@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564387"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74819789"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -77,7 +77,7 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |MEID|Enhetens mobilutrustningsnummer.|Windows, iOS, Android|
 |Tillverkare|Enhetstillverkaren.|Windows, iOS, Android|
 |Modell|Enhetsmodellen.|Windows, iOS, Android|
-|Telefonnummer|Telefonnumret som har tilldelats enheten.|Windows, iOS, Android|
+|Telefonnummer|Telefonnumret som har tilldelats enheten.|Windows, iOS, Android*|
 |Abonnentens operatör|Enhetens mobiloperatör.|Windows, iOS, Android|
 |Mobilteknik|Radiosystem som används av enheten.|Windows, iOS, Android|
 |Wi-Fi MAC|Enhetens MAC-adress.|Windows, iOS, Android|
@@ -93,7 +93,7 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|Windows, iOS, Android|
 |Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|Windows, iOS, Android|
 
-
+\* Inte tillgängligt i Android med Googles principhanterare, till exempel fullständigt hanterade och dedikerade enheter
 
 ## <a name="next-steps"></a>Nästa steg
 Se vad mer du kan göra för att [hantera dina enheter](device-management.md) med Intune.

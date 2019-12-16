@@ -1,11 +1,11 @@
 ---
 title: Policyer för efterlevnad för enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Kom igång med att använda enhetsefterlevnadsprinciper, få en översikt över status och allvarlighetsgrader, använd statusen InGracePeriod, arbeta med villkorsstyrd åtkomst, hantera enheter utan en tilldelad princip och se skillnaderna i efterlevnad mellan Azure-portalen och den klassiska portalen i Microsoft Intune
+description: Kom igång med att använda enhetsefterlevnadsprinciper, få en översikt över status och allvarlighetsgrader, använd statusen InGracePeriod, arbeta med villkorsstyrd åtkomst och hantera enheter utan en tilldelad princip.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749177"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860303"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune
 
@@ -130,21 +130,6 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 - Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
 - Företagsportalappen meddelar användaren om eventuella efterlevnadsproblem.
-
-## <a name="azure-classic-portal-vs-azure-portal"></a>Den klassiska Azure-portalen jämfört med Azure-portalen
-
-De största skillnaderna när du använder policyer för efterlevnad i Azure Portal:
-
-- Policyer för efterlevnad skapas separat för varje plattform som stöds i Azure Portal
-- I den klassiska Azure-portalen är en policy för efterlevnad gemensam för alla plattformar som stöds
-
-<!--- - In the Azure portal, you have the ability to specify actions and notifications that are initiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
-
-- In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
-
-Policyer för efterlevnad för enheter som skapas i den [klassiska portalen](https://manage.microsoft.com) visas inte i [Azure Portal](https://portal.azure.com). De gäller dock fortfarande användare och kan hanteras via den klassiska portalen.
-
-Om du vill använda de funktioner i Azure Portal som är relaterade till policyer för enhetsefterlevnad måste du skapa nya policyer för enhetsefterlevnad i Azure Portal. Om du tilldelar en användare en ny policy för enhetsefterlevnad i Azure Portal och denna användare även har tilldelats en policy för enhetsefterlevnad från den klassiska portalen så har policyerna för enhetsefterlevnad från Azure Portal företräde framför dem från den klassiska portalen.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18cf8e3aec0c7ed7d8869c0f5b13b6e39df23d77
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: b7b77c4f0127c9ee16b255d0e0e28622b85c323b
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713424"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907261"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Starta om enheter med Intune med en fjärråtgärd
 
@@ -46,7 +46,7 @@ ms.locfileid: "73713424"
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Välj **Enheter** > **Alla enheter**.
-4. I listan över enheter som du hanterar väljer du en enhet, väljer **Mer** och väljer sedan fjärråtgärden **Starta om**.
+4. I listan med enheter som du hanterar väljer du en enhet > **Starta om** > **Ja**.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f41caddc7ab9cc09c8d5403f67b6112d58c3ffd
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 697e950c881a0c4233358d8363aa6cc7ec0006b2
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713548"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832684"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Registrera macOS-enheter automatiskt med Programmet för enhetsregistrering eller Apple School Manager
 
@@ -61,7 +61,7 @@ Du kan skapa en token med hjälp av Apple-portalen. Du kan också använda Apple
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckeln som krävs för att skapa token
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > **Lägg till**.
+1. Gå till [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **macOS** > **macOS-registrering** > **Token för registreringsprogram** > **Lägg till**.
 
     ![Hämta en registreringsprogramtoken.](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -103,7 +103,7 @@ I rutan **Apple-token**, bläddrar du till certifikatfilen (.pem), väljer **Öp
 
 Nu när du har installerat din token kan skapa du en registreringsprofil för enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
+1. Gå till [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **macOS** > **macOS-registrering** > **Token för registreringsprogram**.
 2. Välj en token, välj **Profiler** och välj sedan **Skapa profil**.
 
     ![Skärmbild av Skapa en profil.](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -165,7 +165,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för en
 
 Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronisera Intune med Apple och se dina hanterade enheter i Intune på Azure-portalen.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. I [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **macOS** > **macOS-registrering** > **Token för registreringsprogram** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
    - En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering, hämtar Intune den fullständigt uppdaterade listan med serienummer som tilldelats den Apple MDM-server som är ansluten till Intune. Om en registreringsprogramenhet har tagits bort från Intune-portalen utan att tilldelningen till Apple MDM-servern har tagits bort i DEP-portalen så importeras den inte igen förrän den fullständiga synkroniseringen körs.   
@@ -175,7 +175,7 @@ Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronise
 
 Du måste tilldela en registreringsprogramprofil till enheterna innan de kan registreras.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan.
+1. Gå till [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **macOS** > **macOS-registrering** > **Token för registreringsprogram** > välj en token i listan.
 2. Välj **Enheter** > välj enheter i listan > **Tilldela profil**.
 3. Välj en profil för enheterna under **Tilldela profil** och välj sedan **Tilldela**.
 
@@ -183,7 +183,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 
 Du kan välja en macOS- och iOS-profil av standardtyp som ska tillämpas för alla enheter som registreras med en specifik token. 
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram** > välj en token i listan.
+1. Gå till [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **macOS** > **macOS-registrering** > **Token för registreringsprogram** > välj en token i listan.
 2. Välj **Ange standardprofil**, välj en profil i listmenyn och välj sedan **Spara**. Den här profilen kommer att tillämpas på alla enheter som registreras med token.
 
 ## <a name="distribute-devices"></a>Distribuera enheter

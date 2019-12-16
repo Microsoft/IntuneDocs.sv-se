@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713503"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832728"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -64,7 +64,7 @@ Dessa problem kan uppstå på alla enhetsplattformar.
 
 Kontrollera att användaren inte är tilldelad mer än det maximala antalet enheter genom att följa dessa steg:
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enhetsregistrering** > **Registreringsbegränsningar** > **Begränsningar för antal enheter**. Notera värdet i kolumnen **Enhetsgräns**.
+1. I [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Registreringsbegränsningar** > **Begränsningar för antal enheter**. Notera värdet i kolumnen **Enhetsgräns**.
 
 2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Användare** > **Alla användare** > välj användaren > **Enheter**. Notera antalet enheter.
 
@@ -242,7 +242,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 3. Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
 4. Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5. På varje överordnat certifikat väljer du **Visa certifikat**.
-6. Välj **Information** > **Kopiera till fil...** .
+6. Välj **Information** > **Kopiera till fil...**.
 7. Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för det överordnade certifikatet på önskad plats.
 8. Högerklicka på **Certifikat** > **Alla aktiviteter** > **Importera**.
 9. Följ guidens uppmaningar att importera överordnade certifikat till **Lokal dator\Personliga\Certifikat**.
@@ -374,7 +374,7 @@ Det här problemet kan inträffa om:
 4. Säga till användaren att starta om registreringsprocessen.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Avgöra om det finns något fel med VPP-token
-1. Gå till **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > tokennamn > **Profiler** > profilnamn > **Hantera** > **Egenskaper**.
+1. Gå till [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **iOS** > **iOS-registrering** > **Token för registreringsprogram** > tokennamn > **Profiler** > profilnamn > **Hantera** > **Egenskaper**.
 2. Granska egenskaperna för att se om några fel som liknar följande visas:
     - Den här token har upphört att gälla.
     - Den här token ligger utanför Företagsportalens licenser.
@@ -384,13 +384,13 @@ Det här problemet kan inträffa om:
 3. Åtgärda problemen för token.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identifiera vilka enheter som blockeras av VPP-token
-1. Gå till **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > tokennamn > **Enheter**.
+1. I [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **iOS** > **iOS-registrering** > **Token för registreringsprogram** > tokennamn > **Enheter**.
 2. Filtrera kolumnen **Profilstatus** efter **Blockerad**.
 3. Anteckna serienummer för alla enheter som är **Blockerade**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Fjärrensa de blockerade enheterna
 När du har åtgärdat problemen med VPP-token, måste du rensa enheterna som har blockerats.
-1. Gå till **Intune** > **Enheter** > **Alla enheter** > **Kolumner**  >  **Serienummer** > **Tillämpa**. 
+1. I [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Alla enheter** > **Kolumner** > **Serienummer** > **Använd**. 
 2. För varje blockerade enhet, väljer du den från listan **Alla enheter** och väljer sedan **Rensa** > **Ja**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Säg till användarna att starta om registreringsprocessen
@@ -414,8 +414,8 @@ När du har rensat de blockerade enheterna kan du be användarna att starta om r
 - Om din organisation aktiverade registreringsbegränsningar som blockerar personliga macOS-enheter måste du manuellt [lägga till den personliga enhetens serienummer](corporate-identifiers-add.md#manually-enter-corporate-identifiers) till Intune.  
 - Om enheten fortfarande är tilldelad till en annan användare i Intune använde den tidigare ägaren inte företagsportalappen att ta bort eller återställa den. Så här rensar du den inaktuella enhetsposten från Intune:  
 
-    1. Gå till [Intune i Azure-portalen](https://portal.manage.microsoft.com) och logga in med dina administrativa autentiseringsuppgifter.
-    2. Gå till Intune > **Enheter** > **Alla enheter**.  
+    1. Logga in med din administratörsautentisering i [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+    2. Välj **Enheter** > **Alla enheter**.  
     3. Hitta enheten med registreringsproblemet. Sök efter enhetsnamn eller MAC/HW-adress för att begränsa resultaten.
     4. Välj enheten > **Ta bort**. Ta bort alla andra poster som hör till enheten.  
 

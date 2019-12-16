@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: ebb17324355fff9631ef74a76388ef0ab797d437
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635370"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899131"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Översikt över guidade Intune-scenarier 
 
@@ -33,7 +33,7 @@ Guidade scenarier utgör inte ett annat hanteringsutrymme än de vanliga arbetsf
 
 ## <a name="types-of-guided-scenarios"></a>Typer av guidade scenarier 
 
-För enkelhetens skull utelämnar alla guidade scenarier komplexa omfångsfunktioner såsom omfångstaggar <link>, uteslutningsgrupper och tilldelningar av virtuella grupper <link>. Alla resurser som skapas av ett guidat scenario ärver varje omfångstagg från den administratör som slutför scenariot. Vissa scenarier erbjuder viss anpassningsbarhet för gemensamma inställningar i syfte att täcka nära relaterade scenarier. Dessa scenarier stöder endast grupptilldelning till inkluderingsgrupper. För andra guidade scenarier garanterar hela scenariot en konsekvent upplevelse genom att inte erbjuda någon anpassning och genererar automatiskt en ny grupp för att ta emot alla tilldelningar. När det guidade scenariot har slutförts kan du använda mer avancerade tilldelningar direkt via befintliga arbetsbelastningar för principer, appar och profiler.  
+För enkelhetens skull utelämnar alla guidade scenarier komplexa omfångsfunktioner som omfångstaggar, uteslutningsgrupper och tilldelningar av virtuella grupper. Alla resurser som skapas av ett guidat scenario ärver varje omfångstagg från den administratör som slutför scenariot. Vissa scenarier erbjuder viss anpassningsbarhet för gemensamma inställningar i syfte att täcka nära relaterade scenarier. Dessa scenarier stöder endast grupptilldelning till inkluderingsgrupper. För andra guidade scenarier garanterar hela scenariot en konsekvent upplevelse genom att inte erbjuda någon anpassning och genererar automatiskt en ny grupp för att ta emot alla tilldelningar. När det guidade scenariot har slutförts kan du använda mer avancerade tilldelningar direkt via befintliga arbetsbelastningar för principer, appar och profiler.  
 
 Följande scenarier är guidade: 
 - Distribuera Microsoft Edge för mobil 
@@ -46,7 +46,7 @@ Guidade scenarier erbjuder specifika funktioner. Följande information hjälper 
 
 ### <a name="launching"></a>Starta  
 
-Alla guidade scenarier är tillgängliga från **[Enhetshanteringsportalen](https://devicemanagement.microsoft.com)** > **Felsökning + support** > **Guidade scenarier**. 
+Alla guidade scenarier är tillgängliga från **[Enhetshanteringsportalen](https://devicemanagement.microsoft.com)**  > **Felsökning + support** > **Guidade scenarier**. 
 
 Det guidade scenariot börjar med en introduktion som förklarar syftet med scenariot och eventuella krav som krävs för att slutföra konfigurationen. I det här läget kontrolleras dina administratörsbehörigheter för att verifiera att du har alla nödvändiga behörigheter för att slutföra scenariot.  
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0012a80f0e9ea60b41c94a582e42d5f647c6bbc2
-ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
+ms.openlocfilehash: 30191aea892e8409bb6165034256a99f6f32a502
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74239208"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955413"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrera enheter i Intune med ett konto för enhetsregistreringshanteraren
 
@@ -46,7 +46,7 @@ DEM-användarkonton och enheter som har registrerats med ett DEM-användarkonto 
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare
 
-1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Enhetsregistreringshanterare**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Registrera enheter** > **Enhetsregistreringshanterare**.
 
 2. Välj **Lägg till**.
 
@@ -67,6 +67,6 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 **Ta bort en enhetsregistreringshanterare**
 
-1. I [Intune i Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** och sedan **Enhetsregistreringshanterare**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Registrera enheter** > **Enhetsregistreringshanterare**.
 2. På bladet **Enhetsregistreringshanterare** väljer du enhetsregistreringshanteraren och **Ta bort**.
 

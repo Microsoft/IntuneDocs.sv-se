@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592024"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899391"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -63,7 +63,7 @@ Vi använder e-postadresserna som står i frågeformulärets svar för att konta
 Om din apps djuplänk ändras i framtiden, måste du omregistrera din app.
 
 > [!NOTE]
-> Vänligen meddela oss om du uppdaterar appen med en ny version av Intune App SDK.
+> Meddela oss om du uppdaterar appen med en ny version av Intune App SDK.
 
 ## <a name="download-the-sdk-files"></a>Hämta SDK-filerna
 
@@ -164,7 +164,7 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
   * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](../fundamentals/licenses-assign.md).
 
-* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](../apps/app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](../apps/app-protection-policy-settings-android.md). Om din app har integrerat Intune SDK, men ännu inte visas i Azure-portalen som en riktad app, kan du rikta den med en princip genom att välja alternativet ”+ fler appar” och ange paket-ID (iOS) eller paketnamn (Android) i textrutan.
+* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](../apps/app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](../apps/app-protection-policy-settings-android.md). Om din app har integrerat Intune SDK, men inte visas i listan över mål bara appar, kan du ange appens paket-ID (iOS) eller paket namnet (Android) i text rutan när du väljer anpassade appar. 
 
 * **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna installerar din app, kan du gå till [Felsöka appinstallationsproblem](../apps/troubleshoot-app-install.md). 
 

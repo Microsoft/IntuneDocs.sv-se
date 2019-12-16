@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2326aed90037fbcc6fc693bcdb67c86b57ed34a0
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508016"
 ---
 # <a name="configure-logging-settings"></a>Konfigurera loggnings inställningar
@@ -37,7 +37,7 @@ Konfigurera loggnings inställningarna så att Företagsportal app, Microsoft In
 Utförlig loggnings poster varje åtgärd som du vidtar i Företagsportal-appen. Den är aktive rad som standard på enheten. Så här aktiverar du utförlig inloggning i Företagsportal:  
 
 1. Logga in på företagsportalappen.
-2. Tryck på **Inställningar**.
+2. Tryck på **inställningar**.
 3. Bredvid **utförlig loggning**, vänder du växeln till **av**.
 
 ## <a name="configure-microsoft-intune-app-logging"></a>Konfigurera Microsoft Intune App-loggning

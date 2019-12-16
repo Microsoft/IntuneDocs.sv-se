@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 71f2bc855673b6b189ed7581b979527485e86083
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390875"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860391"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
@@ -93,13 +93,13 @@ Den här artikeln:
 
 ## <a name="scope-tags"></a>Omfångstaggar
 
-När du har lagt till inställningarna kan du också lägga till en omfångstagg i profilen. Omfångstaggar tilldelar och filtrerar principer till specifika grupper, till exempel Personal eller Alla amerikanska NC-anställda.
+När du har lagt till inställningarna kan du också lägga till en omfångstagg i profilen. Omfångstaggar filtrerar profiler till vissa IT-grupper, till exempel `US-NC IT Team` eller `JohnGlenn_ITDepartment`.
 
 Mer information om omfångstaggar och vad du kan göra finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
 ### <a name="add-a-scope-tag"></a>Lägga till en omfångstagg
 
-1. Välj **Omfång (taggar)** .
+1. Välj **Omfång (taggar)**.
 2. Välj **Lägg till** för att skapa en ny omfångstagg. Eller välj en befintlig omfångstagg i listan.
 3. Klicka på **OK** för att spara ändringarna.
 
@@ -185,6 +185,8 @@ När du skapar profiler bör du tänka på följande rekommendationer:
   Följande bild visar ett exempel på en inställning som kan gälla för användare och/eller tillämpas på enheter:
 
   ![Intune-administratörsmall som tillämpas på användare och enheter](./media/device-profile-create/setting-applies-to-user-and-device.png)
+
+- Varje gång du skapar en begränsad princip bör du informera användarna om detta. Om du till exempel vill ändra lösenordskravet från 4 tecken till 6 tecken, meddelar du användarna detta innan du tilldelar principen.
 
 ## <a name="next-steps"></a>Nästa steg
 

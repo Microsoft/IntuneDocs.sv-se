@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/14/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844e93f3a063ae43342d2967cbd544f3ec425c21
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410151"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992980"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -98,9 +98,8 @@ I diagrammet **Kompatibilitetsstatus för enhet** väljer du en status. Välj ti
 
 ![Välj statusen inte kompatibel](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-Den här åtgärden öppnar fönstret **Enhetsefterlevnad** och visar enheter i diagrammet **Enhetsstatus**. Diagrammet visar mer information om de enheter som har den här statusen, inklusive operativsystemplattform, datum för senaste incheckning med mera. 
-
-![Bild på instrumentpanelen visar mer information på enheten med den specifika statusen](./media/compliance-policy-monitor/drill-down-details.png)
+Den här åtgärden öppnar fönstret **Enhetsefterlevnad** och visar enheter i diagrammet **Enhetsstatus**. Diagrammet visar mer information om de enheter som har den här statusen, inklusive operativsystemplattform, datum för senaste incheckning med mera.
+![Bilden av instrumentpanelen visar mer information på enheten med den specifika statusen](./media/compliance-policy-monitor/drill-down-details.png)
 
 Om du vill se alla enheter som ägs av en specifik användare kan du även filtrera diagramrapporten genom att skriva in användarens e-postadress.
 
@@ -132,7 +131,7 @@ När du väljer panelen visas alla enheter utan efterlevnadsprincip. Då visas �
 
 - Med säkerhetsinställningen **Markera enheter som saknar en policy för efterlevnad som** är det viktigt att identifiera enheter som inte har en efterlevnadsprincip. Du kan sedan tilldela minst en policy för efterlevnad till dem.
 
-  Säkerhetsinställningen kan konfigureras i Intune-portalen. Gå till **Enheter** > **Efterlevnadsprinciper** > **Inställningar för policy för efterlevnad**. Ställ sedan in **Markera enheter som saknar en policy för efterlevnad som** på **Kompatibel** eller **Inte kompatibel**. 
+  Säkerhetsinställningen kan konfigureras i Intune-portalen. Gå till **Enheter** > **Efterlevnadsprinciper** > **Inställningar för policy för efterlevnad**. Ställ sedan in **Markera enheter som saknar en policy för efterlevnad som** på **Kompatibel** eller **Inte kompatibel**.
 
   Läs mer om denna [förbättrade säkerhet i Intune-tjänsten](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -140,7 +139,7 @@ När du väljer panelen visas alla enheter utan efterlevnadsprincip. Då visas �
 
 ### <a name="per-policy-device-compliance"></a>Enhetsefterlevnad per princip
 
-Diagrammet **Principefterlevnad** visar principerna och hur många enheter som är kompatibla och hur många som inte är det. 
+Diagrammet **Principefterlevnad** visar principerna och hur många enheter som är kompatibla och hur många som inte är det.
 
 ![Visa en lista över principen och hur många kompatibla och inte kompatibla enheter som finns för den principen](./media/compliance-policy-monitor/idc-8.png)
 
@@ -149,11 +148,6 @@ Diagrammet **Principefterlevnad** visar principerna och hur många enheter som �
 Diagrammet **Inställningskompatibilitet** visar alla principinställningar för enhetsefterlevnad från alla efterlevnadsprinciper, de plattformar som principinställningarna används på, samt antalet ej kompatibla enheter.
 
 ![Visa en lista över alla inställningar i olika principer](./media/compliance-policy-monitor/idc-10.png)
-
-> [!NOTE]
-> En princip kan tilldelas en enhet och en användare på samma enhet. I vissa fall kan en enhet synkroniseras innan användaren loggar in, till exempel när enheten startas om. Efterlevnad kan utvärdera den här användaren och visa enheten som icke-kompatibel. Det här beteendet kan också visa systemkontot som en icke-kompatibel användare.
->
-> Detta är ett känt problem med Windows 10-enheter med flera användare. Ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](../fundamentals/in-development.md) och/eller [vad som är nytt](../fundamentals/whats-new.md).
 
 ## <a name="view-compliance-reports"></a>Visa efterlevnadsrapporter
 
@@ -183,14 +177,15 @@ Den här funktionen ingår i statusrapporteringen för enheter:
 2. Välj en princip > **Översikt**. I den här vyn innehåller principtilldelningen följande statusar:
 
     - **Lyckades**: Principen tillämpas
-    - **Fel**: Det gick inte att tillämpa principen. Detta meddelande visas vanligtvis med en felkod som länkar till en förklaring. 
+    - **Fel**: Det gick inte att tillämpa principen. Detta meddelande visas vanligtvis med en felkod som länkar till en förklaring.
     - **Konflikt**: Två inställningar tillämpas på samma enhet och Intune kan inte lösa konflikten. En administratör bör granska.
-    - **Väntar**: Enheten har inte checkats in i Intune ännu för att ta emot principen. 
-    - **Ej tillämpligt**: Enheten kan inte ta emot principen. Principen uppdaterar t.ex. en inställning som är specifik för iOS 11.1, men enheten använder iOS 10. 
+    - **Väntar**: Enheten har inte checkats in i Intune ännu för att ta emot principen.
+    - **Ej tillämpligt**: Enheten kan inte ta emot principen. Principen uppdaterar t.ex. en inställning som är specifik för iOS 11.1, men enheten använder iOS 10.
 
 3. Om du vill visa information om de enheter som använder den här principen väljer du en av statusarna. Välj till exempel **Lyckades**. I nästa fönster visas specifik enhetsinformation, inklusive enhetsnamn och distributionsstatus.
 
 ## <a name="how-intune-resolves-policy-conflicts"></a>Så här löser Intune principkonflikter
+
 Principkonflikter kan uppstå när flera Intune-principer används på en enhet. Om principinställningarna överlappar varandra löser Intune eventuella konflikter med hjälp av följande regler:
 
 - Om de motstridiga inställningarna gäller en Intune-konfigurationsprincip och en efterlevnadsprincip, prioriteras inställningarna i efterlevnadsprincipen framför inställningarna i konfigurationsprincipen. Detta gäller även om inställningarna i konfigurationsprincipen är säkrare.

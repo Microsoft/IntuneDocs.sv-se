@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74540728"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>Under utveckling för Microsoft Intune – december 2019
@@ -138,15 +138,15 @@ Gäller för:
 Du kan ange en lista över godkända tangent bord som ska användas i hanterade Android-appar. Från den hanterade appen uppmanas användaren att byta till ett av de godkända tangent bord som redan är installerat på enheten eller, om det behövs, de dirigeras till Google Play Butik att ladda ned och konfigurera ett av de godkända tangent bord. Användaren kan bara redigera textfält i en hanterad app om deras aktiva tangent bord är ett av de godkända tangent borden.
 
 ### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices---3246388----"></a>Använda PKCS-certifikat med Wi-Fi-profiler på enheter med Windows 10 och senare<!-- 3246388  -->
-För närvarande kan du autentisera Windows Wi-Fi-profiler med SCEP-certifikat (**enhets konfiguration** > **profiler** > **Skapa profil** > **Windows 10 och senare** för Platform > **Wi-Fi** för profil typ > **Enterprise** > **EAP-typ**). Du kommer att kunna använda PKCS-certifikat med dina Windows Wi-Fi-profiler. Med den här funktionen kan användarna autentisera Wi-Fi-profiler med hjälp av nya eller befintliga PKCS-certifikat profiler i din klient organisation. 
+För närvarande kan du autentisera Windows Wi-Fi-profiler med SCEP-certifikat (**enhets konfiguration** > **profiler** > **Skapa profil** > **Windows 10 och senare** för platform > **Wi-Fi** för profil typ > **Enterprise** > **EAP-typ**). Du kommer att kunna använda PKCS-certifikat med dina Windows Wi-Fi-profiler. Med den här funktionen kan användarna autentisera Wi-Fi-profiler med hjälp av nya eller befintliga PKCS-certifikat profiler i din klient organisation. 
 
 Mer information om Wi-Fi-profiler finns i [lägga till Wi-Fi-inställningar för enheter med Windows 10 och senare i Intune](../configuration/wi-fi-settings-windows.md).
 
 Gäller för:
 - Windows 10 och senare
 
-### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nya ExchangeActiveSync-inställningar när du skapar en profil för e-postenhets konfiguration på iOS-enheter<!-- 4892824  --> 
-På iOS/iPad-enheter kan du konfigurera e-postanslutning i en enhets konfigurations profil (**enhets konfiguration** > **profiler** > **Skapa profil** > **iOS/iPad** för Platform > **e-post** för profil typ). 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nya Exchange ActiveSync-inställningar när du skapar en profil för e-postenhetskonfiguration på iOS-enheter<!-- 4892824  --> 
+På iOS/iPad-enheter kan du konfigurera e-postanslutningen i en enhetskonfigurationsprofil (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS/iPad** för plattform > **E-post** för profiltyp). 
 
 Det kommer att finnas nya ExchangeActiveSync-inställningar tillgängliga, inklusive:
 - Välj vilka tjänster som ska synkroniseras (eller blockera synkronisering), till exempel e-post, kalender och kontakter.
@@ -158,8 +158,8 @@ Gäller för:
 - iOS 13.0 och senare
 - iPadOS 13.0 och senare
 
-### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Hindra användare från att lägga till personliga Google-konton till Android Enterprise-enhetens ägare och dedikerade enheter<!-- 5353228  -->
-Du kan förhindra att användare skapar personliga Google-konton på Android Enterprise-enhetens ägare och dedikerade enheter (**enhets konfiguration** > **profiler** > **Skapa profil** > **Android Enterprise** för plattforms > **enhets ägaren bara > enhets begränsningar** för profil typ > **användare och konton inställningar**).
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Hindra användare från att lägga till personliga Google-konton i företagsägda och dedikerade Android Enterprise-enheter<!-- 5353228  -->
+På fullständigt hanterade och dedikerade Android Enterprise-enheter kan du hindra användare från att skapa personliga Google-konton (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Endast enhetens ägare > Enhetsbegränsningar** för profiltypen > **Användar- och kontoinställningar**).
 
 Om du vill se de aktuella inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner med Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -167,8 +167,8 @@ Gäller för:
 - Android Enterprise-enhetsägare
 - Dedikerade Android Enterprise-enheter
 
-### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Loggning på Server sidan för Siri-kommandon tas bort i profilen iOS-enhets begränsningar<!-- 5468501  -->
-På iOS-enheter kan du skapa en profil för enhets begränsningar som konfigurerar loggning på Server sidan för Siri-kommandon (**enhets konfiguration** > **profiler** > **Skapa profil** > **iOS/iPad** för plattform > **Enhets begränsningar** för profil typ > **inbyggda appar**). Inställningen på **Server sidans loggning för Siri-kommandon** kommer att tas bort.
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Loggning på serversidan för Siri-kommandon tas bort från enhetsbegränsningsprofilen för iOS<!-- 5468501  -->
+På iOS-enheter kan du skapa en profil för enhets begränsningar som konfigurerar loggning på Server sidan för Siri-kommandon (**enhets konfiguration** > **profiler** > **Skapa profil** > **iOS/iPad** för plattforms > **enhets begränsningar** för profil typ > **inbyggda appar**). Inställningen på **Server sidans loggning för Siri-kommandon** kommer att tas bort.
 
 Den här inställningen tas bort från Intunes administratörs konsol. Den här inställningen har ingen påverkan på enheten trots att befintliga principer som har den här inställningen konfigurerad kommer att fortsätta att visa inställningen. Om du vill ta bort inställningen från befintliga principer går du till principen, gör en mindre redigering, sparar den och principen kommer att uppdateras.
 

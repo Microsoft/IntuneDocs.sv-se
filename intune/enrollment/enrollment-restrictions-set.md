@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
-ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
+ms.openlocfilehash: 78f79a734d0a7b4901b2248b20abd9d304926dd2
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587957"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955515"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -59,15 +59,12 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
 
 ## <a name="create-a-device-type-restriction"></a>Skapa en enhetstypsbegränsning
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
-3. Välj **Enhetsregistrering** > **Registreringsbegränsningar** > **Skapa begränsning** > **Enhetstypsbegränsning**.
-    ![Skärmpunkt för att skapa en enhetstypsbegränsning](./media/enrollment-restrictions-set/create-device-type-restriction.png)
-4. På sidan **Grundinställningar** ger du begränsningen ett **Namn** och en valfri **Beskrivning**.
-5. Välj **Nästa** för att gå till sidan **Plattforminställningar**.
-6. Under **Plattform** väljer du **Tillåt** för de plattformar som du vill att begränsningen ska tillåta.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Enheter** > **Registreringsbegränsningar** > **Skapa begränsning** > **Begränsning av enhetstyp**.
+2. På sidan **Grundinställningar** ger du begränsningen ett **Namn** och en valfri **Beskrivning**.
+3. Välj **Nästa** för att gå till sidan **Plattforminställningar**.
+4. Under **Plattform** väljer du **Tillåt** för de plattformar som du vill att begränsningen ska tillåta.
     ![Skärmpunkt för att välja plattformsinställningar](./media/enrollment-restrictions-set/choose-platform-settings.png)
-7. Under **Versioner** väljer du de lägsta och högsta versioner som du vill att de tillåtna plattformarna ska stödja. Versionsbegränsningar gäller endast för enheter som har registrerats med företagsportalen.
+5. Under **Versioner** väljer du de lägsta och högsta versioner som du vill att de tillåtna plattformarna ska stödja. Versionsbegränsningar gäller endast för enheter som har registrerats med företagsportalen.
      Versionsformat som stöds är:
     - Android-enhetsadministratör- och Android Enterprise-arbetsprofilen stöder major.minor.rev.build.
     - iOS stöder major.minor.rev. Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
@@ -84,31 +81,28 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
    > [!Note]
    > Windows 10 tillhandahåller inte rev-numret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registreringen.
 
-8. Under **Personligt ägda** väljer du **Tillåt** för de plattformar som du vill tillåta som personligt ägda enheter.
-9. Välj **Nästa** för att gå till sidan **Tilldelningar**.
-10. Välj **Välj grupper att inkludera** och använd sedan sökrutan för att hitta grupper som du vill ska ingå i begränsningen. Begränsningen gäller endast för grupper som den är tilldelad till. Om du inte tilldelar en begränsning till minst en grupp så påverkar den inte något. Välj sedan **Välj**. 
+6. Under **Personligt ägda** väljer du **Tillåt** för de plattformar som du vill tillåta som personligt ägda enheter.
+7. Välj **Nästa** för att gå till sidan **Tilldelningar**.
+8. Välj **Välj grupper att inkludera** och använd sedan sökrutan för att hitta grupper som du vill ska ingå i begränsningen. Begränsningen gäller endast för grupper som den är tilldelad till. Om du inte tilldelar en begränsning till minst en grupp så påverkar den inte något. Välj sedan **Välj**. 
     ![Skärmpunkt för att välja plattformsinställningar](./media/enrollment-restrictions-set/select-groups.png)
-11. Välj **Nästa** för att gå till sidan **Granska + skapa**.
-12. Välj **Skapa** för att skapa begränsningen.
-13. Den nya begränsningen skapas med prioritet precis ovanför standardvärdet. Du kan [ändra prioriteten](#change-enrollment-restriction-priority).
+9. Välj **Nästa** för att gå till sidan **Granska + skapa**.
+10. Välj **Skapa** för att skapa begränsningen.
+11. Den nya begränsningen skapas med prioritet precis ovanför standardvärdet. Du kan [ändra prioriteten](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Skapa en enhetsgränsbegränsning
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
-3. Välj **Enhetsregistrering** > **Registreringsbegränsningar** > **Skapa begränsning** > **Enhetsgränsbegränsning**.
-    ![Skärmpunkt för att skapa en enhetsgränsbegränsning](./media/enrollment-restrictions-set/create-device-limit-restriction.png)
-4. På sidan **Grundinställningar** ger du begränsningen ett **Namn** och en valfri **Beskrivning**.
-5. Välj **Nästa** för att gå till sidan **Enhetsgräns**.
-6. För **Enhetsgräns**, ange det maximala antalet enheter som en användare kan registrera.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Enheter** > **Registreringsbegränsningar** > **Skapa begränsning** > **Begränsning av enhetsgräns**.
+2. På sidan **Grundinställningar** ger du begränsningen ett **Namn** och en valfri **Beskrivning**.
+3. Välj **Nästa** för att gå till sidan **Enhetsgräns**.
+4. För **Enhetsgräns**, ange det maximala antalet enheter som en användare kan registrera.
     ![Skärmpunkt för att välja enhetsgräns](./media/enrollment-restrictions-set/choose-device-limit.png)
-7. Välj **Nästa** för att gå till sidan **Tilldelningar**.
-8. Välj **Välj grupper att inkludera** och använd sedan sökrutan för att hitta grupper som du vill ska ingå i begränsningen. Begränsningen gäller endast för grupper som den är tilldelad till. Om du inte tilldelar en begränsning till minst en grupp så påverkar den inte något. Välj sedan **Välj**. 
+5. Välj **Nästa** för att gå till sidan **Tilldelningar**.
+6. Välj **Välj grupper att inkludera** och använd sedan sökrutan för att hitta grupper som du vill ska ingå i begränsningen. Begränsningen gäller endast för grupper som den är tilldelad till. Om du inte tilldelar en begränsning till minst en grupp så påverkar den inte något. Välj sedan **Välj**. 
     ![Skärmpunkt för att välja grupper](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-11. Välj **Nästa** för att gå till sidan **Granska + skapa**.
-12. Välj **Skapa** för att skapa begränsningen.
-13. Den nya begränsningen skapas med prioritet precis ovanför standardvärdet. Du kan [ändra prioriteten](#change-enrollment-restriction-priority).
+7. Välj **Nästa** för att gå till sidan **Granska + skapa**.
+8. Välj **Skapa** för att skapa begränsningen.
+9. Den nya begränsningen skapas med prioritet precis ovanför standardvärdet. Du kan [ändra prioriteten](#change-enrollment-restriction-priority).
 
 Vid BYOD-registrering ser användarna information om att de har uppnått gränsen för antalet registrerade enheter. Till exempel i iOS:
 
@@ -131,11 +125,9 @@ Vid BYOD-registrering ser användarna information om att de har uppnått gränse
 
 Du kan ändra inställningarna för en begränsning för registrering genom att följa stegen nedan. Dessa begränsningar påverkar inte enheter som redan har registrerats. Enheter som registreras med [Intune PC-agenten](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) kan inte blockeras med den här funktionen.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
-3. Välj **Enhetsregistrering** > **Registreringsbegränsningar** > välj vilken begränsning du vill ändra > **Egenskaper**.
-4. Välj **Redigera** bredvid de inställningar som du vill ändra.
-5. På sidan **Redigera** gör du dina önskade ändringar och fortsätter till sidan **Granska + spara** och väljer sedan **Save**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Enheter** > **Registreringsbegränsningar** > välj den begränsning som du vill ändra > **Egenskaper**.
+2. Välj **Redigera** bredvid de inställningar som du vill ändra.
+3. På sidan **Redigera** gör du dina önskade ändringar och fortsätter till sidan **Granska + spara** och väljer sedan **Save**.
 
 
 ## <a name="blocking-personal-android-devices"></a>Blockera personliga Android-enheter
@@ -150,7 +142,7 @@ Följande metoder räknas som auktoriserade som Windows-företagsregistrering:
 - Den registrerande användaren använder ett [konto för enhetsregistreringshanteraren]( device-enrollment-manager-enroll.md).
 - Enheten registreras via [Windows Autopilot](enrollment-autopilot.md).
 - Enheten registreras med Windows Autopilot, men är inte det enda MDM-registreringsalternativet i Windows-inställningarna.
-- Enhetens IMEI-nummer anges i **Enhetsregistrering** >  **[ID:n för företagsenheter](corporate-identifiers-add.md)** . (Stöds inte för Windows Phone 8.1.)
+- Enhetens IMEI-nummer anges i **Enhetsregistrering** > **[ID:n för företagsenheter](corporate-identifiers-add.md)**. (Stöds inte för Windows Phone 8.1.)
 - Enheten registreras via ett [bulketableringspaket](windows-bulk-enroll.md).
 - Enheten registreras via GPO eller [automatisk registrering från SCCM för samhantering](https://docs.microsoft.com/sccm/comanage/quickstart-paths#bkmk_path1).
  

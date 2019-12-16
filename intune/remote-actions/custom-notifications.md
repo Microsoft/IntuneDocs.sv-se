@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713228"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907295"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
@@ -69,7 +69,7 @@ Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högs
 
 ## <a name="send-a-custom-notification-to-groups"></a>Skicka ett anpassat meddelande till grupper  
 
-1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå till **Enheter** > **Skicka anpassade meddelanden**.  
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå till **Administration av klientorganisation** > **Anpassade meddelanden**.  
 
 2. På fliken Grundläggande anger du följande och väljer sedan **Nästa** för att fortsätta.  
    - **Rubrik** – Ange en rubrik för meddelandet. Rubriken får innehålla högst 50 tecken.  
@@ -93,7 +93,7 @@ Intune spårar inte de anpassade meddelanden som du skickar, och enheterna logga
 
 2. Välj en enhet som du vill skicka ett meddelande till.  
 
-3. På sidan **Översikt** på enheterna väljer du alternativet **…Mer** högst upp till vänster på sidan.  
+3. På enhetssidan **Översikt** väljer du alternativet **…** (ellips) högst upp till höger på sidan.  
 
 4. Välj **Skicka anpassad notis** för att öppna fönstret *Skicka anpassad notis* där du anger följande meddelandeinformation:  
 

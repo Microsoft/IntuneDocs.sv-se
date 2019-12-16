@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 275b3961e87f0d0eda8299337fe3fb7ac89ef03b
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 651b02dc276ca2aa2003955e6aa7b0dfa6724a40
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74261689"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860323"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
@@ -61,7 +61,7 @@ Om knappen **Utvärdera** är nedtonad, kontrollerar du att profilen har tilldel
 
 När du skapar eller uppdaterar en profil, kan du också lägga till omfångstaggar och tillämpbarhetsregler i profilen.
 
-**Omfångstaggar** är ett bra sätt för att tilldela och filtrera profiler till specifika grupper, till exempel Personal eller Alla amerikanska NC-anställda. Mer information finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
+**Omfångstaggar** kan användas till att filtrera profiler till vissa IT-grupper, till exempel `US-NC IT Team` eller `JohnGlenn_ITDepartment`. Mer information finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
 På Windows 10-enheter kan du lägga till **tillämpbarhetsregler** så att profilen endast gäller för en speciell OS-version eller en speciell Windows-version. [Tillämpbarhetsregler](device-profile-create.md#applicability-rules) innehåller mer information.
 

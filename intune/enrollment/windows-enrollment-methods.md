@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: 59ba9ab5fb0ddeb527ed852de042568920cf38e1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b6144767ee69de8c1ff14e5c189c078994a9dcf4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509175"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74819708"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-registreringsmetoder för Windows-enheter
 
@@ -42,7 +42,7 @@ Användare kan själva registrera sina Windows-enheter med hjälp av någon av d
 Om en administratör har konfigurerat automatisk registrering (tillgängligt med Azure AD Premium-prenumerationer) behöver användaren bara ange sina autentiseringsuppgifter en gång. Annars behöver användaren registrera separat via registrering med endast MDM och ange autentiseringsuppgifterna på nytt.  
 - **Registrering med endast MDM** gör att användarna kan registrera en befintlig arbetsgrupp, Active Directory eller Azure Active Directory-ansluten dator till Intune. Användare registrerar från inställningarna på den befintliga Windows-datorn. Den här metoden rekommenderas inte eftersom den inte registrerar enheten till Azure Active Directory. Den förhindrar även användningen av funktioner som villkorsstyrd åtkomst.
 - [Azure Active Directory-anslutning (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) – ansluter enheten till Azure Active Directory och gör att användarna kan logga in på Windows med sina Azure AD-autentiseringsuppgifter. Om automatisk registrering har aktiverats registreras enheten automatiskt i Intune. Fördelen med automatisk registrering är att användarna får en enstegsprocess. Annars behöver användaren registrera separat via registrering med endast MDM och ange autentiseringsuppgifterna på nytt. Användarna registrerar på det här sättet antingen under det inledande Windows-välkomstprogrammet (OOBE) eller från Inställningar. Enheten har markerats som en företagsägd enhet i Intune.
-- [Autopilot](enrollment-autopilot.md) – automatiserar Azure AD-anslutning och registrerar nya företagsägda enheter till Intune. Den här metoden förenklar välkomstprogrammet och eliminerar behovet av att tillämpa anpassade operativsystemavbildningar på enheterna. När administratörer använder Intune för att hantera Autopilot-enheter kan de hantera principer, profiler, appar med mera när de har registrerats.  Det finns fyra typer av Autopilot-distributioner: [Självdistributionsläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (för kiosker, digital signering eller en delad enhet) [Användardrivet läge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (för traditionella användare), [White Glove] (https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) gör det möjligt för partner eller IT-personal att etablera en Windows 10-dator så att den är fullständigt konfigurerad och klar för verksamheten och [Autopilot för befintliga enheter] (https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) låter dig enkelt distribuera den senaste versionen av Windows 10 till dina befintliga enheter.
+- [Autopilot](enrollment-autopilot.md) – automatiserar Azure AD-anslutning och registrerar nya företagsägda enheter till Intune. Den här metoden förenklar välkomstprogrammet och eliminerar behovet av att tillämpa anpassade operativsystemavbildningar på enheterna. När administratörer använder Intune för att hantera Autopilot-enheter kan de hantera principer, profiler, appar med mera när de har registrerats.  Det finns fyra typer av Autopilot-distributioner: [Självdistribuerande läge](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (för informationsdatorer, digital signering eller delade enheter), [Användarläge](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (för traditionella användare), [Assisterad](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) (där partners eller IT-personal kan etablera en Windows 10-dator så att den är fullständigt konfigurerad och klar för verksamheten) och [Autopilot för befintliga enheter](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) (där du enkelt kan distribuera den senaste versionen av Windows 10 till dina befintliga enheter).
 
 ## <a name="administrator-based-enrollment-in-intune"></a>Administratörbaserad registrering i Intune
 

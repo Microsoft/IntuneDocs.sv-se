@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73713473"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
@@ -303,7 +303,7 @@ Använd följande steg för att hämta loggar för dina omslutna program under f
 
 ### <a name="collecting-crash-logs-from-the-system"></a>Samla in krasch loggar från systemet
 
-Din app kan logga värdefull information i iOS-konsolen för klient enheter. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget. Använd följande steg för att hämta den här informationen:
+Din app kan logga värdefull information i iOS-konsolen för klient enheter. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget eller själva appen. Använd följande steg för att hämta den här informationen:
 
 1. Återskapa problemet genom att köra appen.
 
@@ -327,7 +327,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Funktioner som stöds för programhanteringsverktyg för iOS
 
-|Funktion|Beskrivning|Råd|
+|Kapacitet|Beskrivning|Råd|
 |--------------|---------------|------------------------|
 |Appgrupper|Använd appgrupper om du vill ge flera appar åtkomst till delade container och tillåta ytterligare kommunikation mellan processer för olika appar.<br /><br />Om du vill aktivera appgrupper öppnar du rutan **Funktioner** och klickar på **PÅ** i **Appgrupper**. Du kan lägga till app-grupper eller välja befintliga.|Använd omvänd DNS-notering när du använder app-grupper:<br /><br />*group.com.companyName.AppGroup*|
 |Bakgrundslägen|Om du aktiverar bakgrundslägen kan din iOS-app fortsätta att köras i bakgrunden.||

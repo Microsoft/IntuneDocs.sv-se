@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188267"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860238"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Skapa en efterlevnadsprincip i Microsoft Intune
 
@@ -92,7 +92,7 @@ Om du vill använda enhetsefterlevnadsprinciper måste du:
      - [Windows Phone 8.1, Windows 8.1 och senare](compliance-policy-create-windows-8-1.md)
      - [Windows 10 och senare](compliance-policy-create-windows.md)  
 
-   - **Platser** *(Android-enhetsadministratör)* : I principen kan du framtvinga kompatibilitet baserat på enhetens plats. Välj från befintliga platser. Har du inga platser ännu? Du kan läsa mer i [Använda platser (nätverksstängsel) i Intune](use-network-locations.md).  
+   - **Platser** *(Android-enhetsadministratör)*: I principen kan du framtvinga kompatibilitet baserat på enhetens plats. Välj från befintliga platser. Har du inga platser ännu? Du kan läsa mer i [Använda platser (nätverksstängsel) i Intune](use-network-locations.md).  
 
    - **Åtgärder för inkompatibilitet**: För enheter som inte uppfyller dina efterlevnadsprinciper kan du lägga till en sekvens av åtgärder som ska tillämpas automatiskt. Du kan ändra schemat när enheten har markerats som inkompatibel, till exempel efter en dag. Du kan också konfigurera en andra åtgärd som skickar ett e-postmeddelande till användaren när enheten inte är kompatibel.
 
@@ -100,7 +100,7 @@ Om du vill använda enhetsefterlevnadsprinciper måste du:
 
      Anta till exempel att du använder funktionen Platser och lägger till en plats i en efterlevnadsprincip. Standardåtgärden för inkompatibilitet tillämpas när du väljer minst en plats. Om enheten inte är ansluten till de valda platserna utvärderas den omedelbart som inkompatibel. Du kan ge användarna en respitperiod, till exempel en dag.
 
-   - **Omfång (taggar)** : Omfångstaggar är ett bra sätt att tilldela och filtrera principer till specifika grupper, till exempel Försäljning, Personal eller Alla amerikanska NC-anställda. När du har lagt till inställningarna kan du också lägga till en omfångstagg till efterlevnadsprinciperna. [Använd omfångstaggar för att filtrera principer](../fundamentals/scope-tags.md) är en bra resurs.
+   - **Omfång (taggar)**: Omfångstaggar kan användas till att filtrera profiler till vissa grupper, till exempel `US-NC IT Team` eller `JohnGlenn_ITDepartment`. När du har lagt till inställningarna kan du också lägga till en omfångstagg till efterlevnadsprinciperna. [Använd omfångstaggar för att filtrera principer](../fundamentals/scope-tags.md) är en bra resurs.
 
 4. Välj **OK** > **Skapa** när du är klar för att spara dina ändringar. Principen skapas och visas i listan. Tilldela därefter principen till dina grupper.
 

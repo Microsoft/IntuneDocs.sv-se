@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50dbbb19cca9b5c46f0ba8b9d4e16c499534b536
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: db04b93deffd2476a97b952fd1c6942fa79e1f05
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503121"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955396"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Kräv multifaktorautentisering för enhetsregistreringar i Intune
 
@@ -50,18 +50,17 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 >[!Important]
 >Konfigurera inte **Enhetsbaserade åtkomstregler** för Microsoft Intune-registrering.
 
-1. Logga in med dina autentiseringsuppgifter på [Microsoft Azure Portal](https://portal.azure.com).
-2. I portalen går du till **Intune** och väljer **Villkorlig åtkomst**. Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.
-4. Välj **Ny princip**.
-5. I **Ny** princip anger du ett beskrivande namn för principen.
-6. Välj **Tilldelningar** i avsnittet **Användare och grupper**. 
-7. I **Användare och grupper** väljer du **Välj användare eller grupper** och markerar **Användare och grupper**. Välj sedan de användare och/eller grupper som ska få den här principen. Välj sedan **Klart**.
-8. I avsnittet **Tilldelningar** väljer du **Molnappar**.
-9. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**. När du väljer **Microsoft Intune-registrering** tillämpas MFA för villkorsstyrd åtkomst endast vid registreringen av enheten (engångsfråga för MFA).
-10. I avsnittet **Tilldelningar** behöver du för **Villkor** inte ange några inställningar för MFA.
-11. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
-12. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering** . Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats. Välj sedan **Välj**.
-13. I **Ny princip**, väljer du **Aktivera princip** > **På** och väljer sedan **Skapa**.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Villkorsstyrd åtkomst**. Den nod för villkorsstyrd åtkomst som nås från *Intune* är samma nod som den som nås från *Azure AD*.
+2. Välj **Ny princip**.
+3. I **Ny** princip anger du ett beskrivande namn för principen.
+4. Välj **Tilldelningar** i avsnittet **Användare och grupper**. 
+5. I **Användare och grupper** väljer du **Välj användare eller grupper** och markerar **Användare och grupper**. Välj sedan de användare och/eller grupper som ska få den här principen. Välj sedan **Klart**.
+6. I avsnittet **Tilldelningar** väljer du **Molnappar**.
+7. På fliken **Ta med** i **Molnappar** väljer du **Välj appar** och välj sedan **Välj** > **Microsoft Intune-registrering** och väljer sedan **Klart**. När du väljer **Microsoft Intune-registrering** tillämpas MFA för villkorsstyrd åtkomst endast vid registreringen av enheten (engångsfråga för MFA).
+8. I avsnittet **Tilldelningar** behöver du för **Villkor** inte ange några inställningar för MFA.
+9. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
+10. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering**. Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats. Välj sedan **Välj**.
+11. I **Ny princip**, väljer du **Aktivera princip** > **På** och väljer sedan **Skapa**.
 
 
 

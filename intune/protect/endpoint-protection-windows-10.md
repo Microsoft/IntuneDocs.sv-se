@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058433"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Inställningar för Windows 10 (och senare) för att skydda delade enheter med Intune
@@ -636,7 +636,7 @@ Dessa inställningar gäller specifikt för operativsystemets dataenheter.
     - **Säkerhetskopiera återställningslösenord och nyckelpaket**  
     - **Säkerhetskopiera endast återställningslösenord**  
 
-  - **Rotation av lösen ord för klient driven återställning**  
+  - **Klientbaserad rotering av återställningslösenord**  
     **Standard**: nyckel rotation aktive rad för Azure AD-anslutna enheter  
     BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -733,7 +733,7 @@ De här inställningarna gäller specifikt för fasta data enheter.
     - **Säkerhetskopiera återställningslösenord och nyckelpaket**  
     - **Säkerhetskopiera endast återställningslösenord**  
 
-  - **Rotation av lösen ord för klient driven återställning**  
+  - **Klientbaserad rotering av återställningslösenord**  
     **Standard**: nyckel rotation aktive rad för Azure AD-anslutna enheter  
     BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -1243,7 +1243,7 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
   
   Definiera att ett annat kontonamn ska associeras med säkerhetsidentifieraren (SID) för kontot ”Gäst”.  
 
-### <a name="devices"></a>Egenskaper  
+### <a name="devices"></a>Enheter  
 
 - **Koppla bort enhet från dockningsstation utan inloggning**  
   **Standard**: Inte konfigurerat  

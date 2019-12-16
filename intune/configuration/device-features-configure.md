@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f02188e6dd6cea6048731d119f8f307224810dd9
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059955"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992935"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Lägga till funktionsinställningar för iOS- eller macOS-enheter i Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune innehåller många funktioner och inställningar som hjälper administratörer styra iOS- och macOS-enheter. Administratörerna kan exempelvis:
 
@@ -113,7 +111,7 @@ Gäller för:
 
 ## <a name="login-items"></a>Inloggningsobjekt
 
-Använd den här funktionen för att välja appar, anpassade appar, filer och mappar som öppnas när användare loggar in på enheterna. 
+Använd den här funktionen för att välja appar, anpassade appar, filer och mappar som öppnas när användare loggar in på enheterna.
 
 En lista över de inställningar som du kan konfigurera i Intune finns i [Inloggningsobjekt på macOS](macos-device-features-settings.md#login-items).
 
@@ -153,22 +151,29 @@ Gäller för:
 
 De här inställningarna konfigurerar ett apptillägg som möjliggör enkel inloggning (SSO) för iOS-, iPadOS-och macOS-enheter. De flesta verksamhetsspecifika appar och företagswebbplatser kräver någon nivå av säker användarautentisering. I många fall kräver den här autentiseringen att användaren anger samma autentiseringsuppgifter upprepade gånger. SSO ger användare åtkomst till appar och webbplatser när de har angett sina autentiseringsuppgifter en gång. När användarna har loggat in kan de komma åt appar och webbplatser automatiskt eller använda ansikts-ID, fingeravtryck eller Apple-lösenord för att få åtkomst.
 
-Använd de här inställningarna i Intune för att konfigurera Apples inbyggda Kerberos-tillägg eller konfigurera ett SSO-tillägg som skapats av din organisation. Tillägget för SSO-appen hanterar autentisering för dina användare. De här inställningarna konfigurerar SSO-tillägg för inloggningstyp som är utformade för autentisering med anrop och svar. Du kan välja mellan ett Kerberos-specifikt tillägg för autentiseringsuppgifter från Apple och ett generiskt för autentiseringsuppgifter.
+Använd de här inställningarna i Intune för att konfigurera ett apptillägg för enkel inloggning som har skapats av din organisation, identitetsprovider eller Apple. Tillägget för SSO-appen hanterar autentisering för dina användare. De här inställningarna konfigurerar apptillägg för enkel inloggning av omdirigerings- och inloggningsinformationstyp.
+
+- Omdirigeringstypen är utformad för moderna autentiseringsprotokoll som OAuth och SAML2.
+- Inloggningsinformationstypen är utformad för autentiseringsflöden med anrop och svar. Du kan välja mellan ett Kerberos-specifikt tillägg för autentiseringsuppgifter från Apple och ett generiskt för autentiseringsuppgifter.
 
 En lista över de inställningar som du kan konfigurera i Intune finns i [iOS SSO-apptillägg](ios-device-features-settings.md#single-sign-on-app-extension) och [macOS SSO-apptillägg](macos-device-features-settings.md#single-sign-on-app-extension).
 
-Mer information om hur du utvecklar ett SSO-apptillägg finns i [Utökningsbar företags-SSO](https://developer.apple.com/videos/play/tech-talks/301) på Apples webbplats.
+Mer information om hur du utvecklar ett SSO-apptillägg finns i [Utökningsbar företags-SSO](https://developer.apple.com/videos/play/tech-talks/301) på Apples webbplats. Om du vill läsa Apples beskrivning av funktionen går du till [Nyttolastinställningar av tillägg för enkel inloggning](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > Funktionen **Apptillägget enkel inloggning** skiljer sig från funktionen **Enkel inloggning**:
 >
-> - Inställningarna för **Apptillägget enkel inloggning** gäller för iPadOS 13.0 (och senare) och iOS 13.0 (och senare). Inställningarna för **Enkel inloggning** gäller för iPadOS 13.0 (och senare) och iOS 7.0 (och senare).
-> - Ett **Apptillägg för enkel inloggning** hanterar autentiseringen med operativsystemet. Med **enkel inloggning** hanteras autentiseringen av en specifik app.
-> - När användarna använder **apptillägget för enkel inloggning** loggar de in på appar och webbplatser tyst eller med ansikts-ID, fingeravtryck eller Apples pinkod eller lösenord. När användarna använder **enkel inloggning** loggar de in på appar och webbplatser med en annan app.
+> - Inställningarna i **Apptillägg för enkel inloggning** gäller för iPadOS 13.0 (och senare), iOS 13.0 (och senare), samt macOS 10.15 (och senare). Inställningarna för **Enkel inloggning** gäller för iPadOS 13.0 (och senare) och iOS 7.0 (och senare).
 >
->    **Apptillägget enkel inloggning** använder Apples operativsystem för att autentisera. Det kan därför ge en bättre användarupplevelse.
+> - Inställningarna i **Apptillägg för enkel inloggning** definierar tillägg som används av identitetsproviders eller organisationer som vill tillhandahålla en sömlös företagsinloggning. Inställningarna i **Enkel inloggning** definierar Kerberos-kontoinformationen för när användare får åtkomst till servrar eller appar.
 >
-> - Från ett utvecklingsperspektiv kan **apptillägget för enkel inloggning** använda vilken typ av SSO-autentisering som helst. Med **enkel inloggning** kan du endast använda Kerberos SSO-autentisering.  
+> - **Apptillägget enkel inloggning** använder Apples operativsystem för att autentisera. Det kan därför ge en slutanvändarna en upplevelse som är bättre än i **Enkel inloggning**.
+>
+> - Ur ett utvecklingsperspektiv kan du med **apptillägget för enkel inloggning** använda vilken typ av omdirigerings-SSO eller SSO-autentisering som helst. Med **enkel inloggning** kan du endast använda Kerberos SSO-autentisering.
+>
+> - **Apptillägget för enkel inloggning** i Kerberos har utvecklats av Apple och är inbyggt i plattformarna iOS 13.0+ och macOS 10.15+. Det inbyggda Kerberos-tillägget kan användas för att logga in användare i interna appar och webbplatser som stöder Kerberos-autentisering. **Enkel inloggning** är inte en Apple-implementering av Kerberos.
+>
+> - Det inbyggda **apptillägget för enkel inloggning** i Kerberos hanterar Kerberos-anrop för webbsidor och appar på samma sätt som i **Enkel inloggning**. Det inbyggda Kerberos-tillägget stöder dock lösenordsändringar och fungerar bättre i företagsnätverk. När du väljer mellan Kerberos **apptillägg för enkel inloggning** och **enkel inloggning**, rekommenderar vi att du använder tillägget tack vare dess förbättrade prestanda och funktioner.
 
 Gäller för:
 
@@ -204,7 +209,7 @@ Gäller för:
 2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
-    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Till exempel är ett användbart principnamn **macOS: Konfigurerar inloggningsskärmen** .
+    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Till exempel är ett användbart principnamn **macOS: Konfigurerar inloggningsskärmen**.
     - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj plattform för dina enheter. Alternativen är:  
         - **iOS/iPadOS**

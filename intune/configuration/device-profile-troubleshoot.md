@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2019
+ms.date: 12/04/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a1177a37ddbfa7f760339c4ad0cd7773d670540
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: d445b86359b2c5cde7b56a52a0cc6ee72a34c0ea
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199194"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832602"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune
 
@@ -50,7 +50,9 @@ Ytterligare rekommendationer:
 
 Senaste gången Intune aviserade enheten om att checka in på Intune. Aviseringstiderna varierar, ibland upp till flera timmar. Dessa aviseringstider varierar också mellan olika plattformar.
 
-Om enheten inte checkar in för att hämta principen eller profilen efter den första aviseringen, gör Intune ytterligare tre försök. Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen eller profilen vid nästa schemalagda incheckning på Intune-tjänsten, enligt följande **uppskattning**:
+Om enheten inte checkar in för att hämta principen eller profilen efter den första aviseringen, gör Intune ytterligare tre försök. Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I dessa fall får enheten principen eller profilen vid nästa schemalagda incheckning på Intune-tjänsten. Samma sak gäller vid kontroller som inte följer standarden, inklusive enheter som flyttas från ett kompatibelt till ett icke-kompatibelt tillstånd.
+
+**Beräknad** frekvens:
 
 | Plattform | Uppdateringscykel|
 | --- | --- |
@@ -61,7 +63,7 @@ Om enheten inte checkar in för att hämta principen eller profilen efter den f�
 | Windows Phone | Ungefär var 8:e timme |
 | Windows 8,1 | Ungefär var 8:e timme |
 
-Om enheten nyligen har registrerats sker efterlevnads- och konfigurationsincheckningarna oftare, vilket **uppskattas** till cirka:
+Om enheten nyligen har registrerats sker efterlevnads-, icke-efterlevnads- och konfigurationsincheckningarna oftare, vilket **uppskattas** till cirka:
 
 | Plattform | Frekvens |
 | --- | --- |

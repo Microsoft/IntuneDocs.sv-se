@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e71ae2d2bcee22040c256ea711edd22b1d1fc80a
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 46b46cd4a407df686e094198c588371ed4a01bb6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199277"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832578"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av iOS-enhet i Microsoft Intune
 
 Den här artikeln hjälper Intune-administratörer att förstå och felsöka problem när de registrerar iOS-enheter i Intune.
 
-## <a name="prerequisites"></a>Krav
+## <a name="prerequisites"></a>Förutsättningar
 
 Innan du påbörjar fel sökningen är det viktigt att samla in grundläggande information. Den här informationen kan hjälpa dig att bättre förstå problemet och minska tiden för att hitta en lösning.
 
@@ -136,10 +136,10 @@ Om ditt företag använder flera domäner för användarautentiseringsuppgifter 
 **Orsak:** Användaren försöker registrera fler enheter än gränsen för enhets registrering.
 
 #### <a name="resolution"></a>Lösning
-1. Öppna [Intunes administratörs portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) > **enheter** > **alla enheter**och kontrol lera antalet enheter som användaren har registrerat.
+1. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **enheter** > **alla enheter**och kontrollerar antalet enheter som användaren har registrerat.
     > [!NOTE]
     > Du bör också ha den berörda användar inloggningen till [Intune-användargränssnittet](https://portal.manage.microsoft.com/) och kontrol lera enheter som har registrerats. Det kan finnas enheter som visas i [användar portalen för Intune](https://portal.manage.microsoft.com/) , men inte i [Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)-administrationskonsolen, och sådana enheter räknas även mot enhetens registrerings gräns.
-2. Gå till **Admin** > **hantering av mobila enheter** > **registrerings regler** > kontrol lera enhets registrerings gränsen. Som standard är gränsen inställd på 15. 
+2. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **enheter** > **registrerings begränsningar** > kontrollerar enhetens registrerings gräns. Som standard är gränsen inställd på 15. 
 3. Om antalet registrerade enheter har nått gränsen tar du bort onödiga enheter eller ökar gränsen för enhets registrering. Eftersom alla registrerade enheter förbrukar en Intune-licens rekommenderar vi att du alltid tar bort onödiga enheter först.
 4. Omregistrera enheten.
 
@@ -230,7 +230,7 @@ När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings prof
 #### <a name="resolution"></a>Lösning
 
 1. Redigera registrerings profilen. Du kan göra ändringar i profilen. Syftet med detta är att uppdatera profilens ändrings tid.
-2. Synkronisera DEP-hanterade enheter: öppna Intune-portalen **> Admin** > **hantering av mobila enheter** > **iOS** > **programmet för enhetsregistrering** > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
+2. Synkronisera DEP-hanterade enheter: Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token i listan > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-registrering fastnat vid användar inloggning
 När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil, sker den första installationen efter att du angett autentiseringsuppgifter.
@@ -244,5 +244,5 @@ Inaktivera MFA och registrera sedan enheten på nytt.
 
 - [Felsöka enhetsregistrering i Intune](../troubleshoot-device-enrollment-in-intune.md)
 - [Ställ en fråga i Intunes forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
-- [Kontrol lera Microsoft Intune support teamets blogg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-- [Kontrol lera Microsoft Enterprise Mobility and Security-bloggen](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
+- [Läs Microsoft Intune-supportteamets blogg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
+- [Läs bloggen om Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

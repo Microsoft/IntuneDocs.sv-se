@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d15fd73a608c799745c92c4b07df4b9705d00106
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 178e1a3d0f58eb925c4d48be10bfa46e68c6b2c6
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490315"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955464"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Hämta ett Apple MDM-pushcertifikat
 
@@ -41,7 +41,7 @@ När ett pushcertifikat upphör att gälla måste du förnya det. När du förny
 
 
 ## <a name="steps-to-get-your-certificate"></a>Steg för att få ditt certifikat
-Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Sedan väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple MDM-pushcertifikat**. Utför sedan nedanstående steg i [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **Registrera enheter** > **Apple-registrering** > **Apple MDM-pushcertifikat** och följ sedan de här stegen.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Steg 1. Ge Microsoft behörighet att skicka information om användare och enhet till Apple
 Välj **Jag godkänner** för att ge Microsoft behörighet att skicka data till Apple.
@@ -68,7 +68,7 @@ MDM Apple-pushcertifikatet är giltigt i ett år och måste förnyas årligen f�
 
 Certifikatet associeras med det Apple-ID som användes för att skapa det. Förnya MDM-pushcertifikatet med samma Apple-ID som användes för att skapa det.
 
-1. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du **Enhetsregistrering** > **Apple-registrering** och därefter rutan **Apple MDM-pushcertifikat** i informationsområdet.
+1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Registrera enheter** > **Apple-registrering** > **Apple MDM-pushcertifikat**.
 2. Välj **Ladda ned CSR** för att hämta och spara begärandefilen lokalt. Filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen.
 3. Välj **Skapa ett MDM-pushcertifikat** för att gå till Apple Push Certificates-portalen. Leta upp det certifikat som du vill förnya och välj **Förnya**.
 4. På skärmen för att **förnya pushcertifikat** lägger du till kommentarer som hjälper dig att identifiera certifikatet i framtiden. Välj sedan **Välj fil** för att bläddra till den nya begärandefil som du laddade ned och därefter **Ladda upp**.

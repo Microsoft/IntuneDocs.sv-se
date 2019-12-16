@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 904c3d2267decdfa3929bf29376c05a995c77eb8
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390928"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946669"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -31,6 +31,8 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 [Skapa en enhetskonfigurationsprofil](device-restrictions-configure.md).
 
 ## <a name="device-owner-only"></a>Endast enhetens ägare
+
+Dessa inställningar gäller för Android Enterprise-registrerings typer där Intune styr hela enheten, till exempel Android Enterprise fullständigt hanterade eller dedikerade enheter.
 
 ### <a name="general-settings"></a>Allmänna inställningar
 
@@ -242,6 +244,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   > [!IMPORTANT]
   > - Den VPN-klient som du väljer måste vara installerad på enheten och den måste ha stöd för ”per app-VPN” i arbetsprofiler. Annars uppstår ett fel. 
   > - Du måste godkänna VPN-klientappen i **den hanterade Google Play Store-butiken**, synkronisera appen till Intune och distribuera appen till enheten. När du har gjort det installeras appen i användarens arbetsprofil.
+  > - Du måste fortfarande konfigurera VPN-klienten med en [VPN-profil](vpn-settings-android-enterprise.md)eller via en [konfigurations profil för appen](../apps/app-configuration-policies-use-android.md).
   > - Det kan finnas kända problem när du använder per app-VPN med F5-åtkomst för Android 3.0.4. Du hittar mer information i [Viktig F5-information för F5-åtkomst i Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Låsningsläge**: Välj **Aktivera** om du vill tvinga all nätverkstrafik att använda VPN-tunneln. Om en anslutning till VPN inte upprättas har inte enheten åtkomst till nätverket.
@@ -264,6 +267,8 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
     Mer information om PAC-filer finns i [PAC-fil (Proxy Auto-Configuration](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) ) (öppnar en webbplats som inte kommer från Microsoft).
 
 ## <a name="work-profile-only"></a>Endast arbetsprofil
+
+Dessa inställningar gäller för Android Enterprise-registrerings typer där Intune bara styr arbets profilen, t. ex. Android företags arbets profil registrering på en personlig eller en egen enhet (BYOD).
 
 ### <a name="work-profile-settings"></a>Inställningar för arbetsprofil
 

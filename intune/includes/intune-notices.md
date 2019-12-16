@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 8db05399c4a880d72d24cde885976309bf9a4fa7
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 7373ca24c1ae1f439096d9bedcb8e81979c95586
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74549515"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74828783"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
 
@@ -119,8 +119,8 @@ Android-enhetsadministratören (kallas ibland för ”äldre” Android-hanterin
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
 På grund av dessa ändringar av Google kommer Intune-användare att påverkas på följande sätt:  
-- Intune kommer bara att kunna tillhandahålla stöd för enhetsadministratörshanterade Android-enheter som kör Android 10 och senare (även kallat Android Q) till och med sommaren 2020. Det här datumet är när nästa högre version av Android förväntas släppas.   
-- Enhetsadministratörshanterade enheter som kör Android 10 eller senare efter sommaren 2020 kommer inte längre att kunna hanteras helt.       
+- Intune kommer bara att kunna erbjuda fullt stöd för enhetsadministratörshanterade Android-enheter som kör Android 10 och senare till och med andra kvartalet 2020. Enheter med Android 10 eller senare som hanteras av enhetsadministratörer efter denna tidpunkt kommer inte längre att kunna hanteras fullt ut. Det innebär exempelvis att berörda enheter inte får de nya lösenordskraven.
+    - Samsung KNOX-enheter kommer inte att påverkas av denna tidsram, eftersom utökad support tillhandahålls via Intunes integrering med KNOX-plattformen. Detta ger dig mer tid att planera övergången från enhetsadministratörernas hantering.    
 - Android-enheter som hanteras av en enhetsadministratör som blir kvar på tidigare versioner av Android än Android 10 påverkas inte och kan fortfarande hanteras av en enhetsadministratör.    
 - För alla enheter med Android 10 och senare har Google begränsat möjligheten för hanteringsagenter för enhetsadministratören, t.ex. företagsportalen, att komma åt information om enhetsidentifierare. Denna begränsning påverkar följande Intune-funktioner efter att enheten har uppdaterats till Android 10 eller senare:  
     - Nätverksåtkomstkontroll för VPN fungerar inte längre.   
@@ -130,7 +130,7 @@ På grund av dessa ändringar av Google kommer Intune-användare att påverkas p
         > Detta påverkar endast enheter som hanteras av enhetsadministratören på Android 10 och senare och påverkar inte enheter som hanteras som Android Enterprise. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-För att undvika de kommande funktionsbegränsningarna under sommaren 2020 rekommenderar vi följande:
+För att undvika den minskade funktionaliteten i tredje kvartalet 2020, rekommenderar vi följande:
 - Publicera inte nya enheter för hantering av enhetsadministratören.
 - Om en enhet väntar på en Android 10-uppdatering kan du migrera den från enhetsadministratörshantering till Android Enterprise-hantering och/eller appskyddsprinciper.
 

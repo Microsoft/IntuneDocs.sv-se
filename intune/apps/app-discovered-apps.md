@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564250"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899417"
 ---
 # <a name="intune-discovered-apps"></a>Intune-identifierade appar
 
@@ -60,12 +60,13 @@ Följande lista innehåller appens plattformstyp, de appar som övervakas för p
 | Windows Phone 8 | Endast hanterade appar | Endast hanterade appar | Var sjunde dag från enhetsregistreringen |
 | Windows RT | Endast hanterade appar | Endast hanterade appar | Var sjunde dag från enhetsregistreringen |
 | iOS | Endast hanterade appar | Alla appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
-| macOS | Alla appar som är installerade på enheten | Alla appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
+| macOS | Endast hanterade appar | Alla appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
 | Android | Endast hanterade appar | Alla appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
 | Android enterprise | Endast hanterade appar | Endast appar som har installerats i arbetsprofilen | Var sjunde dag från enhetsregistreringen |
 
 > [!NOTE]
-> Windows 10 Hybrid Azure AD-anslutna enheter som visas i apphanteringsarbetsbelastningen i konfigurationshanteraren samlar för närvarande inte in appinventering via Intune-hanteringstillägget enligt schemat ovan. För att undvika det här problemet bör arbetsbelastningen för apphantering i konfigurationshanteraren växlas till Intune för att installera IME på enheten (IME krävs för Win32-inventering och PowerShell-distribution). Observera att ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](../fundamentals/in-development.md) och/eller [vad som är nytt](../fundamentals/whats-new.md).
+> - Windows 10 Hybrid Azure AD-anslutna enheter som visas i apphanteringsarbetsbelastningen i konfigurationshanteraren samlar för närvarande inte in appinventering via Intune-hanteringstillägget enligt schemat ovan. För att undvika det här problemet bör arbetsbelastningen för apphantering i konfigurationshanteraren växlas till Intune för att installera IME på enheten (IME krävs för Win32-inventering och PowerShell-distribution). Observera att ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](../fundamentals/in-development.md) och/eller [vad som är nytt](../fundamentals/whats-new.md).
+> - Personligt ägda macOS-enheter som registrerats före november 2019 kan fortsätta att visa alla appar som är installerade på enheten tills enheterna har registrerats igen.
 
 Antal appar som identifieras kanske inte matchar statusen för antalet installerade appar. Här är några möjliga orsaker till skillnaden:
 
