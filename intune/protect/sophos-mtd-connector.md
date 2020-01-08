@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8823aa8467ef380223a486874c68d52926db733
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f41d5d1ec3e302a277fe5e6ff6af9d33a7e89517
+ms.sourcegitcommit: d21539e52631c589bfeaa182418390f66672736c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503735"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75564925"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Sophos Mobile Threat Defense-anslutning i Intune
 Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst baserat på riskbedömning som utförs av Sophos Mobile, en MTD-lösning (Mobile Threat Defense) som är integrerad i Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Sophos Mobile-appen.
@@ -72,7 +72,7 @@ Identifiera hot mot ditt nätverk såsom man-in-the-middle-angrepp, och förhind
 - Microsoft Intune-prenumeration 
 - Prenumeration på Sophos Mobile Threat Defense
 
-Mer information finns på [Sophos webbplats](https://www.sophos.com/products/mobile-control).  
+Mer information finns på [Sophos webbplats](https://www.sophos.com/en-us/products/mobile-control.aspx).
 
 ## <a name="next-steps"></a>Nästa steg  
 - [Integrera Sophos med Intune](sophos-mtd-connector-integration.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 1e96f46dc0e79de3fc78739c246abdc0b9e52702
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899417"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205538"
 ---
 # <a name="intune-discovered-apps"></a>Intune-identifierade appar
 
@@ -54,7 +54,7 @@ Följande lista innehåller appens plattformstyp, de appar som övervakas för p
 
 | Plattform | För personligt ägda enheter | För företagsägda enheter | Uppdateringscykel |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32-appar) Obs! [Intune-hanteringstillägget krävs](intune-management-extension.md) på enheten | Ej tillämpligt | Alla Win32-appar som hittas i listan Lägg till eller ta bort program | Var 24:e timme från enhetsregistreringen |
+| Windows 10 (Win32-appar) Obs! [Intune-hanteringstillägget krävs](intune-management-extension.md) på enheten | Ej tillämpligt | Endast hanterade appar | Var 24:e timme från enhetsregistreringen |
 | Windows 10 (moderna appar) | Endast hanterade moderna appar | Alla moderna appar som är installerade på enheten | Var sjunde dag från enhetsregistreringen |
 | Windows 8,1 | Endast hanterade appar | Endast hanterade appar | Var sjunde dag från enhetsregistreringen |
 | Windows Phone 8 | Endast hanterade appar | Endast hanterade appar | Var sjunde dag från enhetsregistreringen |

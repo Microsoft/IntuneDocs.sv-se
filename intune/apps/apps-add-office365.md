@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: b566dd58b01a411126ffabb46d526e4480c2ba0a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563669"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205980"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Lägg till Office 365-appar i Windows 10-enheter med Microsoft Intune
 
@@ -197,7 +197,7 @@ När du vet att Intune och nätverksinfrastrukturen fungerar som förväntat gå
 
 ## <a name="errors-during-installation-of-the-app-suite"></a>Fel under installationen av appsviten
 
-Se [Så här aktiverar du loggning för Office 365 ProPlus ULS](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) för information om hur du visar utförliga installationsloggar.
+Se [Så här aktiverar du loggning för Office 365 ProPlus ULS](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) för information om hur du visar utförliga installationsloggar.
 
 I följande tabeller visas vanliga felkoder som kan uppstå och deras innebörd.
 

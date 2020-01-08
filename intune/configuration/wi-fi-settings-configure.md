@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fe0bed94c66a1b82ed26bdbd43f68073223101e
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 47eae4d2e662be85de2831666f944e57ba674417
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540685"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206116"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Lägga till och använda Wi-Fi-inställningar på dina enheter i Microsoft Intune
 
@@ -35,7 +35,7 @@ Anta till exempel att du installerar ett nytt Wi-Fi-nätverk som heter Contoso W
 
 Den här artikeln visar stegen för att skapa en Wi-Fi-profil. Den innehåller även länkar som beskriver de olika inställningarna för varje plattform.
 
-## <a name="supported-device-platforms"></a>Enhetsplattformar som stöds
+## <a name="supported-device-platforms"></a>Mobila enhetsplattformar som stöds
 
 Wi-Fi-profiler stöder följande enhetsplattformar:
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 1fb628d68f50ce1862b3cce51f9fd08804d042a6
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992935"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206728"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Lägga till funktionsinställningar för iOS- eller macOS-enheter i Intune
 

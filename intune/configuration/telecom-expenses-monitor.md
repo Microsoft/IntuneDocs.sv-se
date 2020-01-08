@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 340659adfa3bbd40f98ccec9d8d44e952f7ec9b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9c97a3ad329ce0e431c6dc8ef318306e4e002f36
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059929"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207119"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Med Intune kan du hantera telekomutgifter från dataanvändning på företagsägda mobilenheter. Intune kan integreras med Saaswedos [kostnadsuppföljningstjänst för telekommunikation Datalert](http://datalert.biz/get-started). Datalert är en programvara för kostnadsuppföljning av telekommunikation som låter dig hantera telekommunikationens dataanvändning. Den hjälper dig att undvika kostsam och oväntad överförbrukning av data och nätverksväxling för dina Intune-hanterade enheter.
 
@@ -183,7 +183,7 @@ För slutanvändarupplevelsen kan följande artiklar vara användbara:
 
 ## <a name="turn-off-the-datalert-service"></a>Stänga av tjänsten Datalert
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Innehavaradministratör** > **Anslutningar och token** > **Kostnadsuppföljning av telekommunikation**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Administration av klientorganisation** > **Anslutning och token** > **Kostnadsuppföljning av telekommunikation**.
 2. Ställ in **Enable kostnadsuppföljning av telekommunikation och blockera mobil- och roamingdata på enheter som överskrider de kvoter som du har angett** på **Inaktivera**.
 3. **Spara** ändringarna.
 
