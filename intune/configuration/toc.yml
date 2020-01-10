@@ -9,7 +9,11 @@
   items:
     - name: Skapa en e-postenhetsprofil
       href: quickstart-email-profile.md
-- name: Instruktioner
+- name: Självstudier
+  items:
+    - name: Skapa en administrativ mall
+      href: tutorial-walkthrough-administrative-templates.md
+- name: Instruktionsguider
   items:
     - name: Skapa en profil
       href: device-profile-create.md
@@ -145,8 +149,6 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: Kabelanslutet nätverk
-              href: wired-network-settings-macos.md
             - name: Anpassad
               href: custom-settings-macos.md
         - name: Windows 10 och senare
