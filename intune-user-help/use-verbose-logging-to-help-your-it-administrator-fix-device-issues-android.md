@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2326aed90037fbcc6fc693bcdb67c86b57ed34a0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: b8da85deae3113995e2836d6af924c5e8938e6ec
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508016"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858955"
 ---
 # <a name="configure-logging-settings"></a>Konfigurera loggnings inställningar
 
@@ -44,7 +44,7 @@ Utförlig loggnings poster varje åtgärd som du vidtar i Företagsportal-appen.
 I Microsoft Intune-appen kan du konfigurera logg information. Nivån som standard är **viktig**. Så här justerar du loggnings informationen:  
 
 1. Öppna appen Microsoft Intune.  
-2. Tryck på **Inställningar**.  
+2. Tryck på **inställningar**.  
 3. Under **information på loggnings nivå**väljer du **utförligt** för att öka detalj nivån som registreras eller väljer **av** för att inaktivera loggning.  
 
 ## <a name="next-steps"></a>Nästa steg  

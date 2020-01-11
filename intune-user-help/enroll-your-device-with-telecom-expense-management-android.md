@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1a6e2a001e8c323ba73dd7e9ad4dd82df968e6d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 6a296b096044b23822ff5fdd368abcf6e4b896df
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506204"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855467"
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Registrera Android-enheten i kostnadshanteringsprogrammet
 
@@ -32,7 +32,7 @@ Din organisation kanske använder ett kostnadshanteringsprogram för telekomtjä
 
 ![En skärmbild av skärmen "Välja den bästa kategorin för en enhet" på en iOS-enhet. Den visar ett val mellan företagsregistrering och personlig registrering.](./media/and-enroll-11-tem-select-best-category.png)
 
-Välj ett lämpligt alternativ och du får en avisering om att installera programmet [ __Datalert__ ](https://play.google.com/store/apps/details?id=fr.memobox.databox) från Google Play Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Om din organisation har konfigurerat alternativet arbets- eller skolregistrering, måste du logga in med ditt arbets- eller skolkonto. Om detta inte har aktiverats måste du ange information som exempelvis ditt telefonnummer, samt verifiera din enhet med en kod för att kunna registrera till Datalert-tjänsten från appen.
+Välj ett lämpligt alternativ och du får en avisering om att installera programmet [__Datalert__](https://play.google.com/store/apps/details?id=fr.memobox.databox) från Google Play Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Om din organisation har konfigurerat alternativet arbets- eller skolregistrering, måste du logga in med ditt arbets- eller skolkonto. Om detta inte har aktiverats måste du ange information som exempelvis ditt telefonnummer, samt verifiera din enhet med en kod för att kunna registrera till Datalert-tjänsten från appen.
 
 Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsätta. Företagets support bör tala om ifall du ska logga in med ditt __arbets- eller skolkonto hos Microsoft__ eller använda ditt __telefonnummer__.
 

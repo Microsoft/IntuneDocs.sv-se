@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80fd2d54a99bc3f4ab47f48f94eb14aa1a7f630c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 11037da11e6400f157aea6aa86c0c293c9818d31
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74126192"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855018"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 
@@ -37,11 +37,11 @@ Installera appar på enheten från företagsportalappen för Windows.
     ![Hemsida för företagsportalappen för Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)
 2. Hitta och installera appar från något av följande avsnitt i företagsportalappen:  
 
-    * **Start**: välj från en lista över din organisations aktuella appar.  
-    * **Visa alla**: från avsnittet **Startsida** > **Appar**, klickar du på **Visa alla** för att visa alla tillgängliga appar.  
-    * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella. Visa, sortera och filtrera apparna. Sökresultat sorteras automatiskt efter relevans.  
+    * **Startsida**: Välj från en lista över din organisations aktuella appar.  
+    * **Visa alla**: Från avsnittet **Startsida** > **Appar** klickar du på **Visa alla** för att visa alla tillgängliga appar.  
+    * **Alla appar**: Välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella. Visa, sortera och filtrera apparna. Sökresultat sorteras automatiskt efter relevans.  
     * **App-kategorier**: Välj den här sidan i navigerings fönstret för att välja appar baserat på typ eller funktion. Apparna sorteras under kategorier som **aktuella**, **utbildning**och **produktivitet**.  
-    * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster. Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
+    * **Sök efter appar**: Det finns ett statiskt sökfält i appens navigeringsfönster. Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
 
 3. Välj en app.   
 4. På sidan appinformation, klickar du på **Installera**. När installationen är klar visas statusen **Installerad**.  

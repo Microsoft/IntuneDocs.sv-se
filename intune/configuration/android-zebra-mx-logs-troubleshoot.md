@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7ed93c86d3fbe7ed7a6ac5d4b1a3494fb55f2bc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2319fb0d1198289398912793e52482bf66d87173
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506986"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206847"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Felsök och se potentiella problem på Android Zebra-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I Microsoft Intune kan du använda [Zebra Mobility Extensions (MX) för att hantera Android Zebra-enheter](android-zebra-mx-overview.md). När du använder Zebra-enheter kan du skapa profiler i StageNow för att hantera inställningar och ladda upp dem till Intune. Intune använder StageNow-appen för att tillämpa inställningarna på enheterna. StageNow-appen skapar också en detaljerad loggfil på enheten som används för fel sökning.
 

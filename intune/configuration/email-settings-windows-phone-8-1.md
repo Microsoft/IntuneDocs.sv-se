@@ -16,21 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 455d69328f8b70b1de73067c6290b6955df1e710
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: aab4379e30397132cead64acbd8d43039b128e02
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506744"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206422"
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>E-postprofilinställningar i Microsoft Intune för enheter som kör Windows Phone 8.1
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Den här artikeln visar de e-postprofilinställningar som du kan konfigurera för enheter som kör Windows Phone 8.1.
 
+>[!IMPORTANT]
+>Windows Phone 8,1-e-postprofiler tillämpas också på Windows 10-enheter.
 
-- **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad** gäller inställningarna även för Windows 10 Mobile-enheter.
 - **E-postserver** – Värdnamnet för din Exchange-server.
 - **Kontonamn** – Visningsnamnet för e-postkontot som det visas för användare på deras enheter.
 - **Användarnamnattribut för AAD** – Det här är attributet i Active Directory (AD) eller Azure AD som används för att generera användarnamn för den här e-postprofilen. Välj **Primär SMTP-adress**, t.ex. **user1@contoso.com** eller **Användarens huvudnamn (UPN)** som **user1** eller **user1@contoso.com** .

@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84098d4d2152d62eda888cdcde1cf88e5081a470
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: c9bb0ba02b5d7576f4dafad8e612f56969e8dd57
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506170"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855501"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster
 
@@ -32,7 +32,7 @@ Din organisation kanske använder ett kostnadshanteringsprogram för telekomtjä
 
   ![En skärmbild av skärmen "Välja den bästa kategorin för en enhet" på en iOS-enhet. Den visar ett val mellan företagsregistrering och personlig registrering.](./media/ios-enroll-10-tem-select-best-category.png)
 
-Välj ett lämpligt alternativ och du får en avisering om att installera programmet [ __Datalert__ ](https://itunes.apple.com/app/datalert/id771029268?mt=8) från App Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Om din organisation har konfigurerat alternativet arbets- eller skolregistrering i Microsoft, måste du logga in med ditt arbets- eller skolkonto. Om detta inte har aktiverats måste du ange information som exempelvis ditt telefonnummer, samt verifiera din enhet med en kod för att kunna registrera till Datalert-tjänsten från appen.
+Välj ett lämpligt alternativ och du får en avisering om att installera programmet [__Datalert__](https://itunes.apple.com/app/datalert/id771029268?mt=8) från App Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Om din organisation har konfigurerat alternativet arbets- eller skolregistrering i Microsoft, måste du logga in med ditt arbets- eller skolkonto. Om detta inte har aktiverats måste du ange information som exempelvis ditt telefonnummer, samt verifiera din enhet med en kod för att kunna registrera till Datalert-tjänsten från appen.
 
   ![En skärmbild på välkomstskärmen i programmet Datalert, där du uppmanas att fortsätta till nästa steg samt en kort förklaring om hur Datalert låter dig få ut det mesta av din dataförbrukning.](./media/ios-enroll-11-tem-datalert-setup.png)
 

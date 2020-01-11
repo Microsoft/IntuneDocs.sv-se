@@ -18,20 +18,20 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 2f075aed1c9cc00963c89a9e76122484d1a430b1
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781217"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857647"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
 Hanterade appar konfigureras för att uppfylla din organisations säkerhetskrav och för att skydda arbets- och skoldata. De här apparna görs tillgängliga för dig på din enhet, där de kan installeras eller användas automatiskt. 
 
 Innan du tar emot och installerar en hanterad app, konfigureras appens behörigheter av din organisation. Appfunktioner eller användarinteraktioner kan begränsas så att appens data inte kan delas eller ses av obehöriga. Exempelvis kan en organisation blockera kopierings- och inklistringsfunktionerna i appen. Eller så kan de hindra dig från att spara data till enhetens lokala lagring.
 
-För att maximera dataskyddet kan din organisation konfigurera flera hanterade appar så att de fungerar tillsammans. Till exempel:
+För att maximera dataskyddet kan din organisation konfigurera flera hanterade appar så att de fungerar tillsammans. Exempel:
 1. Du ansluter till din organisations nätverk i en hanterad webbläsare, till exempel Microsoft Edge.
 2. Du klickar på en länk för att öppna en kollegas presentationsfil.
 3. Filen öppnas i lämplig hanterad app, till exempel Microsoft PowerPoint.

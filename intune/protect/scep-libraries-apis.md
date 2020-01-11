@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a888e2087b98eeec82aeeb555677dddcb3eff4e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e9b44e50300c3bd034ca2bb3b0454a5ce953dc18
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058228"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206983"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Använda API:er för att lägga till tredjeparts certifikatutfärdare för SCEP i Intune
 
@@ -202,7 +202,7 @@ Parametrar:
 
     - transactionId           SCEP-transaktions-ID:t
     - certificateRequest      DER-kodad PKCS #10-certifikatbegäran Base64-kodad som en sträng
-    - certThumprint           Tumavtryck för det etablerade certifikatet
+    - certThumprint SHA1-hash för det etablerade certifikatets tumavtryck
     - certSerialNumber        Serienummer för det etablerade certifikatet
     - certExpirationDate      Utgångsdatum för det etablerade certifikatet. Strängen för datum och tid ska formateras som webb-UTC-tid (ÅÅÅÅ-MM-DDThh:mm:ss.sssTZD) ISO 8601.
     - certIssuingAuthority    Namnet på den utfärdare som utfärdade certifikatet

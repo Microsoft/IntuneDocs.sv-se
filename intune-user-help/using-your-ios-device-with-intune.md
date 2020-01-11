@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3f1996052e31a70ca44c40c277a7c5ff93819a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 774c67b67094782d98e8ca325f092f8a5760dd2f
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72507989"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858938"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Använd din iOS-enhet med Intune-företagsportalen
 Den här artikeln listar uppgifter och information som är specifik för företagsportalen för iOS. Du kan använda den för att hjälpa dig felsöka och hantera din iOS-enhet. Klicka på en länk om du vill se mer information, steg och skärmdumpar.

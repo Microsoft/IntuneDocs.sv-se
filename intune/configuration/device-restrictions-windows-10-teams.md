@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20e25b2a2d1b20e577e99cf0b391945c16c67c64
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0a007683487b406c562fb50a416cb08a8ac60113
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489882"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206524"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Inställningar för begränsningar för Windows 10 Team-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I den här artikeln visas inställningarna av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10 Team.
 
