@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b84cd52dfe2eb6332ddbc89bc00a17ec3361b79
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: add92c038e33ba1b5873eb0e9588242f8f3d0f57
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000439"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207442"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -128,6 +128,9 @@ Azure Active Directory har ett annat CNAME som används för enhetsregistrering 
 Mer information om enhetsregistrering finns i [Hantera enhetsidentiteter med hjälp av Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Automatisk registrering av Windows 10 och enhetsregistrering
+
+Det här avsnittet gäller för amerikanska myndigheters molnkunder.
+
 Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post för registreringen hittas, uppmanas användarna att manuellt ange MDM-servernamnet, enrollment.manage.microsoft.us.
 
 | Typ | Värdnamn | Pekar på | TTL |

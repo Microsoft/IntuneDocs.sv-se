@@ -7,14 +7,30 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7373ca24c1ae1f439096d9bedcb8e81979c95586
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c64f9a6afc054a3d22518c4305bda62a36d67c7
+ms.sourcegitcommit: 8ab98c2773f112f5cf2d817c170633b15de3dec2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74828783"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75323018"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="updated-feature-new-rbac-role-coming-to-intune--4253397--"></a>Uppdaterad funktion: Ny RBAC-roll kommer till Intune<!--4253397-->
+I den här januariuppdateringen av Intune-tjänsten planerar vi att lansera en ny säkerhetsroll i Intune. Den här rollen visas som ”Endpoint Security Manager” i Intune och rollen är en utökning av rollen ”säkerhetsadministratör” från Azure AD.
+ 
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Idag finns det tre roller som är tillgängliga i Azure AD för dina säkerhetstekniker:
+- Säkerhetsläsarrollen i Azure AD som ger läsbehörighet till Intune.
+- Säkerhetsoperatörsrollen i Azure AD som ger läsbehörighet till Intune.
+- Säkerhetsadministratör i Azure AD. När Intune lanserar januariuppdateringen, tillsammans med läsbehörighet till Intune, så är de nya behörigheterna som tillhandahålls av rollen Endpoint Security Manager följande:
+    - Läsa, skapa, uppdatera, ta bort och tilldela efterlevnadsprinciper för enheter
+    - Läsa, ta bort och uppdatera hanterade enheter
+    - Läsa, skapa, uppdatera, ta bort och tilldela säkerhetsbaslinjer
+    - Läsa och uppdatera säkerhetsuppgifter
+ 
+### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Granska dina Intune RBAC-roller idag. Om du för närvarande bara har globala administratörer som roller behövs inga ändringar. Om du använder roller och du vill ha den granularitet som Endpoint Security Manager tillhandahåller, tilldelar du sedan rollen när den är tillgänglig. Gå till Intunes sida med [Nyheter](../fundamentals/whats-new.md) för att få uppdaterad information om Intune-lanseringen. 
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Uppdaterad supportinstruktion för mobilappen "Adobe Acrobat Reader för Intune"<!--5746776-->
 I MC188653 i slutet på augusti meddelade vi att Adobe Acrobat Reader för Intune-mobilappen når slutet på sin livslängd den 1 december 2019 och att Adobe planerar att stödja Intunes programskyddsprinciper i sin huvudsakliga app i Acrobat Reader. Sedan dess har vi fått feedback från kunder om att de behövde mer tid för att fortsätta att låta IT-administratörerna skapa mål och slutanvändare börja använda Adobe Acrobat Reader för Intune. Med tanke på den stora användningen av Adobe Acrobat Reader för Intune på slutanvändarnas enheter och dess betydelse i företagsscenarier vill vi se till att alla erfarenheter uppfyller din organisations behov av skydd av appar. 
@@ -39,25 +55,6 @@ Efter 20 februari 2020 får de här enheterna inga nya säkerhetsuppdateringar o
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Du kan kontrollera din Intune-rapportering för att se vilka enheter eller användare som kan påverkas. Gå till Enheter > Alla enheter och filtrera efter operativsystem. Du kan lägga till fler kolumner för att hjälpa till att identifiera vilka i din organisation som har enheter som kör Windows Phone 8.1. Uppmana dina slutanvändare att uppgradera sina enheter till en operativsystemversion som stöds.
-
-### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Uppdatera dina appskyddsprinciper (APP) för Outlook i Intune<!--2576686-->
-Om du tagit emot koden MC195618 i Meddelandecenter kan du behöva vidta åtgärder. Som tidigare angetts i produktvägledningen för Microsoft 365:s funktions-ID:n 56325 och 56326 kommer Intune och Outlook för iOS och Android att distribuera stöd för begränsning av känsliga data i e-postmeddelanden och kalenderpåminnelser. Som ett resultat av dessa förbättringar kommer Outlook för iOS och Android att ta bort stödet för flera appkonfigurationsnycklar för dataskydd som du för närvarande använder för att hantera meddelanden.
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-De nya funktionerna har ännu inte sjösatts, men när de väl är i bruk kommer följande appkonfigurationsnycklar att sluta fungera i Outlook för iOS och Android:
-- com.microsoft.outlook.Mail.NotificationsEnabled
-- com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed
-- com.microsoft.outlook.Calendar.NotificationsEnabled
-- com.microsoft.outlook.Calendar.NotificationsEnabled.UserChangeAllowed
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Vi rekommenderar att du konfigurerar dataskyddsinställningen för meddelanden om organisationsdata i Intunes appskyddsprincip och anger värdet ”Blockera organisationsdata” inför den nya funktionen. Från och med den 16 december 2019 aktiveras dataskyddsinställningen för meddelanden om organisationsdata i Outlook för iOS och Android och har inte längre stöd för de tidigare nycklarna. Genom att konfigurera den nya inställningen säkerställer du att känsliga data inte läcker ut när stödet för ovanstående konfigurationsnycklar försvinner. Om du ställer in dataskyddsinställningen för meddelanden om organisationsdata på ”Blockera organisationsdata” kan Outlook kan dessutom tillhandahålla ytterligare granularitet med hjälp av ytterligare en appkonfigurationsinställning för kalenderaviseringar. Kombinationen av appskyddsprincipinställningen och konfigurationsinställningen appen begränsar användningen av känslig information i e-postmeddelanden, samtidigt som känslig information kan visas i kalenderaviseringar så att användarna snabbt kan få en översikt över mötena genom att titta på meddelandet eller i meddelandecentret.
-
-#### <a name="additional-information"></a>Ytterligare information
-Mer information om APP-inställningar och Outlook-inställningar finns i:
-- [Inställningar för appskyddsprinciper, Android](../apps/app-protection-policy-settings-android.md)
-- [Inställningar för appskyddsprinciper, iOS](../apps/app-protection-policy-settings-ios.md)
-- [Distribuera appkonfigurationsinställningar för Outlook för iOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 
 ### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Ändringsplan för Intune: Stödet för företagsportalen för Windows 10, version 1703, upphör<!--5026679-->

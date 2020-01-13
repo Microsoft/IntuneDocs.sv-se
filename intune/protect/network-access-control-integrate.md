@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b2083a493fd723c649bdfe2b709dbaa4c0ec663
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: baeece091358a7cd05f0d1f8db7c0032870fc262
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810274"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207102"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrering av nätverksåtkomstkontroll (NAC) i Intune
 
 Intune kan integreras med en NAC-partner (Network Access Control) som hjälper ditt företag att skydda företagsdata när enheterna söker åtkomst till lokala resurser.
+
+>[!IMPORTANT]
+> NAC stöds för närvarande inte för fullständigt hanterade Android Enterprise-enheter eller dedikerade Android Enterprise-enheter.
 
 ## <a name="how-do-intune-and-nac-solutions-help-protect-your-organization-resources"></a>Hur skyddar man företagets resurser med Intune och NAC-lösningar?
 

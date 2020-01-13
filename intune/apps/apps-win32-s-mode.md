@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e17972a3a87bd9c42db54753d4da3bb81703377
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4b2a6019a0af33cd227d88444bb5ddda5bc22715
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563612"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75204909"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Aktivera Win32-appar på S-lägesenheter
 
@@ -57,7 +57,7 @@ Följande steg används för att tillåta att Win32-appar körs på en Windows 1
 
 Så här skapar du en tilläggsprincip för Windows 10 S-läge:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Tillägsprinciper för S-läge** > **Skapa princip**.
 3. Innan du kan lägga till **principfilen** måste du skapa och signera den. Mer information finns i:
     - [Skapa en princip för Windows Defender-programreglering med PowerShell-verktyg och omvandla den till binärformat](https://go.microsoft.com/fwlink/?linkid=2095387)
@@ -68,7 +68,7 @@ Så här skapar du en tilläggsprincip för Windows 10 S-läge:
     | Värde | Beskrivning |
     |--------------|------------------------------------------------|
     | Principfil | Filen som innehåller WDAC-principen. |
-    | Namn | Namnet på principen. |
+    | Name | Namnet på principen. |
     | Beskrivning | [Valfritt] En beskrivning av principen. |
 
 5. Klicka på **Nästa: Omfångstaggar**.<br>

@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05258c5363b43398dee1815bb91c50878803e426
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 3ae06ae3f9f76d86a792721d45f8319bfe6491fd
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74391948"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654234"
 ---
 # <a name="intune-reports"></a>Intune-rapporter
 Microsoft Intune-rapporter gör det möjligt för dig att övervaka hälsotillståndet och aktiviteten hos punkter i din organisation på ett mer effektivt sätt och ger även andra rapporteringsdata i Intune. Du kan till exempel se rapporter om enhetens efterlevnad, enhetens hälsotillstånd och enhetstrender. Dessutom kan du skapa anpassade rapporter för att få mer information. 
@@ -53,16 +53,19 @@ Rapporten över icke-kompatibla enheter lyfter fram data som vanligtvis används
 
 Du kan visa rapporten över **icke-kompatibla enheter** med följande steg:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskompatibilitet** > **Icke-kompatibla enheter**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Övervaka** > **icke-kompatibla enheter**.
 
     ![Rapport över icke-kompatibla enheter](./media/intune-reports/intune-reports-02.png)
+
+    > [!TIP]
+    > Om du tidigare använde Intune i Azure-portalen hittade du informationen ovan i Azure-portalen genom att logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välja **Enhetsefterlevnad** > **Inte kompatibla enheter**.
 
 ## <a name="device-compliance-report-organizational"></a>Rapport om enhetsefterlevnad (organisatorisk)
 Rapporter om enhetsefterlevnad är avsedda att vara breda och ger en mer traditionell rapporteringsvy över data för att identifiera aggregerade mått. Den här rapporten är utformad för att fungera med stora datauppsättningar för att ge en helhetsbild av enhetsefterlevnaden. Till exempel visar kompatibilitetsrapport för enhetskompatibilitet alla efterlevnadsprinciper för enheter för att ge en bredare vy över dina data, oavsett hur stor datauppsättningen är. I den här rapporten visas en fullständig analys av poster utöver en praktisk visualisering av sammansatta mått. Den här rapporten kan skapas genom att använda filter och välja knappen ”Skapa rapport”. Detta uppdaterar data för att visa det senaste läget med möjlighet att visa de enskilda poster som utgör aggregerade data. Precis som de flesta rapporter i det nya ramverket kan dessa poster sorteras och genomsökas för att fokusera på den information du behöver. 
 
 Använd följande steg för att visa en rapport över enhetens status:
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Rapporter** för att visa rapportsammanfattningen.
 3. Välj **Enhetsefterlevnad**.
 4. Select the **Efterlevnadsstatus**, **Operativsystem** och **Ownership** filter för att förfina din rapport.
@@ -79,7 +82,7 @@ Mer information finns i [Tvinga fram kompatibilitet för Microsoft Defender ATP 
 
 Enhetskompatibilitetsrapporten är tillgänglig som sammanfattningsrapport i arbetsbelastningen **Rapporter**. Använd följande steg för att visa enhetskompatibilitetsrapporten:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Rapporter** för att visa rapportsammanfattningen.
 
     ![Sammanfattning av Intune-rapporter](./media/intune-reports/intune-reports-01.png)
@@ -91,7 +94,7 @@ En trendrapport för enhetsefterlevnad kan visa trenden för enheternas efterlev
 
 Du kan visa rapporten över **Trender** med följande steg:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Rapporter** > **Trender** för att visa enhetsefterlevnad som en 60-dagarstrend.
 
     ![Intune-trendrapport](./media/intune-reports/intune-reports-03.png)
@@ -106,7 +109,7 @@ Ett exempel på en specialistrapport skulle korrelera enhetens ägarskapsdata me
 
 Du kan skapa och visa anpassade rapporter med hjälp av följande steg:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **rapporter** > **Diagnostikinställningar** lägg till en [diagnostisk inställning](reports.md#diagnostic-settings).
 
     ![Sammanfattning av Intune-rapporter](./media/intune-reports/intune-reports-04.png)
@@ -143,7 +146,7 @@ Log Analytics är det primära verktyget i Azure Portal för att skriva loggfrå
 ### <a name="workbooks"></a>Arbetsböcker
 Arbetsböcker kombinerar text, analysfrågor, Azure-mått och parametrar i omfattande och interaktiva rapporter. Arbetsböcker kan redigeras av andra teammedlemmar som har åtkomst till samma Azure-resurser. Mer information om arbetsböcker finns i [Azure Monitor-arbetsböcker](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Du kan också arbeta med och bidra till mallar för arbetsböcker. Mer information finns i [Mallar för arbetsböcker i Azure Monitor](https://go.microsoft.com/fwlink/?linkid=867045).
 
-## <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Nästa steg 
 
 Läs mer om följande tekniker:
 - [Blogg – Microsoft Intune-rapporteringsramverk](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)

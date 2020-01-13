@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 7ce6def40c6c0fff3a28f884c458220283979234
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 001e68fdbab7074abb4e1bbefc697d3e34c47762
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465766"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683790"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrera Windows Hello för företag med Microsoft Intune  
 
@@ -53,9 +53,9 @@ Använd den här artikeln för att skapa en standardprincip för Windows Hello f
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Skapa en princip för Windows Hello för företag
 
-1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Gå till **Enheter** >  registrering** > **Enhetsregistrering** > **Windows-registrering** > **Windows Hello för företag**. Fönstret Windows Hello för företag öppnas.
+2. Gå till **Enheter** >  **Registrering** > **Registrera enheter** > **Windows.-registrering** > **Windows Hello för företag**. Fönstret Windows Hello för företag öppnas.
 
 3. Välj bland följande alternativ för **Konfigurera Windows Hello för företag**:
 

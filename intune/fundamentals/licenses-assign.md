@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,30 +16,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dcdc2b69de52ea3bf23f4e3c5d11399b62bc8daa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a62cc6ef2f1b3bd6f305fe6fa23a24f95d3dd37
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414097"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207372"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Tilldela licenser till användare så att de kan registrera enheter i Intune
 
 Oavsett om du lägger till användare manuellt eller synkroniserar från din lokala Active Directory, så måste du först tilldela varje användare en Intune-licens innan de kan registrera sina enheter i Intune. En lista över licenser finns i [Licenser som inkluderar Intune](../licenses.md).
 
-## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Tilldela en Intune-licens i Administrationscenter för Microsoft 365
+> [!NOTE]
+> Användare som har tilldelats en Intune-appskyddsprincip och inte registrerar sina enheter i Microsoft Intune måste också ha en Intune-licens för att ta emot principer. 
 
-Du kan använda [Administrationscenter för Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure AD.
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Tilldela en Intune-licens i administrationscentret för Microsoft Endpoint Manager
 
-1. Logga in på [Administrationscenter för Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) med dina klientadministratörsuppgifter och välj sedan **Användare** > **Aktiva användare**.
+Du kan använda [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure AD.
 
-2. Markera det användarkonto som du vill tilldela en Intune-användarlicens och välj sedan **Produktlicenser** > **Redigera**.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Användare** > **Alla användare** > välj användaren > **Licenser** > **Tilldelningar**.
 
-3. Växla **Intune** eller **Enterprise Mobility + säkerhet** till **På** och Välj **Spara**.
+2. Markera kryssrutan för **Intune** > **Spara**.
 
-   ![Skärmbild av Administrationscenter för Microsoft 365, avsnittet Produktlicenser.](./media/licenses-assign/office-assign-license.png)
+   ![Skärmbild av Administrationscenter för Microsoft 365, avsnittet Produktlicenser.](./media/licenses-assign/mem-assign-license.png)
 
-4. Användarkontot har nu de behörigheter som krävs för att använda tjänsten och registrera enheter för hantering.
+3. Användarkontot har nu de behörigheter som krävs för att använda tjänsten och registrera enheter för hantering.
 
 > [!NOTE]
 > Användarna visas bara i den klassiska Intune-portalen efter att de har registrerat en enhet med hjälp av Intune PC-klienten. Du kan också välja en grupp användare som redigeras samtidigt, genom att välja att lägga till eller ersätta en licens för alla markerade användare.

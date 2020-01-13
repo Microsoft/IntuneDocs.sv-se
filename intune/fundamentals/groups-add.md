@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e3219e32ef9bea838f0c19258d0b22a99083a12
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74261579"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303065"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 
@@ -47,7 +47,7 @@ Använd följande anvisningar för att skapa en ny grupp.
 
 3. Välj något av följande alternativ i **Grupptyp**:
 
-    - **Säkerhet**: Säkerhetsgrupper definierar vem som har åtkomst till resurser. Vi rekommenderar att du använder detta för dina grupper i Intune. Du kan till exempel skapa grupper för användare, t.ex. **Alla anställda i Charlotte** eller **Alla kvinnor på Contoso**. Du kan också skapa grupper för enheter, till exempel **Alla iOS-enheter** eller **Alla Windows 10 Student-enheter**.
+    - **Säkerhet**: Säkerhetsgrupper definierar vem som har åtkomst till resurser. Vi rekommenderar att du använder detta för dina grupper i Intune. Du kan till exempel skapa grupper för användare, t.ex. **Alla anställda i Charlotte** eller **Distansarbetare**. Du kan också skapa grupper för enheter, till exempel **Alla iOS-enheter** eller **Alla Windows 10 Student-enheter**.
 
         > [!TIP]
         > De användare och grupper som skapas visas också i [Administrationscenter för Microsoft 365](https://admin.microsoft.com), Administrationscenter för Azure Active Directory och [Microsoft Intune i Azure-portalen](https://go.microsoft.com/fwlink/?linkid=2090973). I din organisationsklient kan du skapa och hantera grupper inom alla dessa områden.
@@ -85,7 +85,7 @@ Använd följande anvisningar för att skapa en ny grupp.
 > - Alla Android Enterprise-enheter
 > - Alla iOS 11-enheter och äldre enheter
 > - Marknadsföring
-> - HR-avdelningen
+> - Personalfrågor
 > - Alla anställda i Charlotte
 > - Alla anställda i WA
 

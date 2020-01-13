@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02d1311be0943d93f80f2f5a1c3f421d476af1e5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5a65000d46941876b95e0b110d21f2dfb900ca33
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059831"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206235"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel i Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I förväg delade nycklar (PSK) används vanligtvis för att autentisera användare i WiFi-nätverk eller trådlösa nätverk. Med Intune kan du skapa en WiFi-profil med en i förväg delad nyckel. Skapa profilen med funktionen för **anpassade enhetsprofiler** i Intune. I den här artikeln finns även några exempel på hur du skapar en EAP-baserade Wi-Fi-profil.
 

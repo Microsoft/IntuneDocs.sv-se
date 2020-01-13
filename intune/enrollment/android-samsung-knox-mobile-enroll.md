@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f290370dd6ec05677a7073d9ca3edd854c9aa5e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ecb043300578e5eba0613b6fa5f0fb249b1e515c
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505579"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692149"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -75,7 +75,7 @@ När ditt företag har registrerats kan du skapa din MDM-profil för Microsoft I
 
 ### <a name="for-android"></a>För Android
 
-Detaljerade anvisningar finns i [Installationsguiden för Samsung Knox-profil](https://docs.samsungknox.com/KME-Getting-Started/Content/getting-started-wizard.htm).
+Detaljerade anvisningar finns i [Installationsguiden för Samsung Create-profil](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm).
 
 | Fält för MDM-profil| Obligatoriskt? | Värden |
 |-------------------|-----------|-------|

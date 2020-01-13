@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f5787509438ec3280f29be8449d78979806042
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74542669"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547973"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Felsöka WiFi-enhetens konfigurationsprofiler i Microsoft Intune
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Kontrollera att alla certifikat som krävs i den fullständiga certifikatkedjan finns på Android-enheten. Annars kan inte WiFi-profilen installeras på enheten. Mer information finns i [Utfärdare av mellanliggande certifikat saknas](https://developer.android.com/training/articles/security-ssl#MissingCa) (öppnar Androids webbplats).
   - Filtrera Omadmlog med nyckelord för att söka efter information, till exempel vilket certifikat som används i WiFi-profilen och om profilen har tillämpats.
 
-    Använd exempelvis [CMTrace](https://docs.microsoft.com/sccm/core/support/cmtrace) för att läsa loggarna. Använd söksträngen för att filtrera ”wifimgr”:
+    Använd exempelvis [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) för att läsa loggarna. Använd söksträngen för att filtrera ”wifimgr”:
 
     > [!div class="mx-imgBorder"]
     > ![Filtrera CMTrace för att söka efter WiFiMgr-konfigurationsprofiler på Android-enheter](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

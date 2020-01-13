@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 678eb92bb6f5f23756092cd5d9cc1a645e1e8db3
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 309860fb5ddf6fa9488ecaf395534bf869234176
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562360"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547852"
 ---
 # <a name="android-device-administrator-enrollment"></a>Administratörsregistrering för Android-enhet
 
@@ -39,7 +39,7 @@ Fortsätt till nästa avsnitt om du fortfarande vill att användarna ska registr
 
 
 > [!Note]  
-> Android 10 och högre stöds inte i hybridhantering av mobila enheter (hybrid-MDM, Intune som hanteras med System Center Configuration Manager-konsolen) eftersom hybrid-MDM tas ur drift den 1 september 2019. Om du fortfarande använder hybrid-MDM bör du migrera till fristående Intune så snart som möjligt. Kontakta supporten om du behöver hjälp med att migrera. Mer information finns i [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://aka.ms/hybrid_notification).
+> Android 10 och högre stöds inte i hybridhantering av mobila enheter (hybrid-MDM, Intune som hanteras med Configuration Manager-konsolen) eftersom hybrid-MDM tas ur drift den 1 september 2019. Om du fortfarande använder hybrid-MDM bör du migrera till fristående Intune så snart som möjligt. Kontakta supporten om du behöver hjälp med att migrera. Mer information finns i [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://aka.ms/hybrid_notification).
 
 Mer information om Googles Android Enterprise-funktioner finns i följande artiklar:
 - [Googles vägledning för migrering från enhetsadministratör till Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)

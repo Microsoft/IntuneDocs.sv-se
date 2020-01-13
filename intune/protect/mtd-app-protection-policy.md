@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48dc7de86965741d8ed42bd5a5f29f72ae66d4f3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7cc873079d9a139edfa2217d97806afe0c5bbf28
+ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188499"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545964"
 ---
 # <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Skapa en Mobile Threat Defense-appskyddsprincip med Intune
 
@@ -34,7 +34,7 @@ Intune med Mobile Threat Defense (MTD) hjälper dig att identifiera hot och bed�
 > Den här artikeln gäller för alla Mobile Threat Defense-partner som har stöd för appskyddsprinciper:
 >
 > - Better Mobile (Android)
-> - Zimperium (iOS)
+> - Zimperium (Android, iOS)
 > - Lookout for Work (Android, iOS).
 
 ## <a name="before-you-begin"></a>Innan du börjar

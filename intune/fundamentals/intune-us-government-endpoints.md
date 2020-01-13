@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d876c0268f38a09ea3729a7e19ee00b321ae897a
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: 02c1508dd3eb9c8a8932c1504c6f4d0a53c5a0d5
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000405"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207391"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Slutpunkter för amerikanska myndigheter för Microsoft Intune
 
@@ -37,6 +37,8 @@ Om du vill hantera enheter bakom brandväggar och proxyservrar, måste du aktive
 Du kan ändra inställningarna för proxyservern på enskilda klientdatorer. Du kan också använda grupprincipinställningar till att ändra inställningarna för alla klientdatorer som finns bakom en angiven proxyserver.
 
 Hanterade enheter kräver konfigurationer som låter **Alla användare** komma åt tjänster genom brandväggar.
+
+För ytterligare information om automatisk registrering av Windows 10 och enhetsregistrering för amerikanska myndighetskunder, se [Konfigurera registrering för Windows-enheter](../enrollment/windows-enroll.md#windows-10-auto-enrollment-and-device-registration).
 
 I följande tabeller visas de portar och tjänster som Intune-klienten har åtkomst till:
 
@@ -78,4 +80,3 @@ Mer information finns i:
 ## <a name="next-steps"></a>Nästa steg
 [Nätverksslutpunkter för Microsoft Intune](intune-endpoints.md)
 
-[Automatisk registrering och enhetsregistrering i Windows 10](../enrollment/windows-enroll.md#registration-and-enrollment-cnames)

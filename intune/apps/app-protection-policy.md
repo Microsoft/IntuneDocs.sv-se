@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b712922824fa9d54f33fb43114e852fbeb52a81
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: f11ccb51e08e96595dfcb9118c1f479f1b0fc3de
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899434"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692130"
 ---
 # <a name="app-protection-policies-overview"></a>Översikt över principer för appskydd
 
@@ -36,7 +36,7 @@ Med skyddsprinciper för hantering av mobila program (MAM) kan du hantera och sk
 ## <a name="how-you-can-protect-app-data"></a>Hur du kan skydda appdata
 Dina anställda använder mobila enheter för både personliga och arbetsrelaterade uppgifter. Samtidigt som du vill se till att de anställda kan vara produktiva vill du förhindra dataförlust, både avsiktlig och oavsiktlig. Du vill även skydda företagsdata som nås från enheter som inte hanteras av dig.
 
-Du kan använda Intunes appskyddsprinciper **oberoende av någon lösning för hantering av mobila enheter (MDM)**. Detta oberoende hjälper dig att skydda företagets data med eller utan registrering av enheter i en enhetshanteringslösning. Genom att implementera **principer på appnivå** kan du begränsa åtkomsten till företagsresurser och hålla data inom IT-avdelningens kontroll.
+Du kan använda Intunes appskyddsprinciper **oberoende av någon lösning för hantering av mobila enheter (MDM)** . Detta oberoende hjälper dig att skydda företagets data med eller utan registrering av enheter i en enhetshanteringslösning. Genom att implementera **principer på appnivå** kan du begränsa åtkomsten till företagsresurser och hålla data inom IT-avdelningens kontroll.
 
 ### <a name="app-protection-policies-on-devices"></a>Skyddsprinciper för appar på enheter
 
@@ -95,7 +95,7 @@ När appar används utan begränsningar kan företagsrelaterade och personliga d
 ### <a name="data-protection-with-app-protection-policies-app"></a>Dataskydd med appskyddsprinciper (APP)
 
 Du kan använda appskyddsprinciper för att förhindra att företagets data sparas till enhetens lokala lagring (se nedanstående bild). Du kan även begränsa dataflytten till andra appar som inte skyddas av appskyddsprinciper. Principinställningar för appskydd inkluderar:
-- Dataflyttningsprinciper som **Förhindra spara som** och **Begränsa klipp ut, kopiera och klistra in**.
+- Dataflyttningsprinciper såsom **Spara kopior av organisationsdata** och **Begränsa klipp ut, kopiera och klistra in**.
 - Åtkomstprincipsinställningar som **Kräv enkel PIN för åtkomst** och **Blockera hanterade appar från att köras på jailbrokade eller rotade enheter**.
 
 ![Konceptbild som visar företagsdata som skyddas av principer](./media/app-protection-policy/apps-with-protection-policies.png)
@@ -147,8 +147,7 @@ Följande lista innehåller kraven för att använda appskyddsprinciper på en I
 
 - Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](../fundamentals/licenses-assign.md) för information om hur du tilldelar Intune-licenser till slutanvändare.
 
-- Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål.
- Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Microsoft 365-administrationscentret](https://admin.microsoft.com).
+- Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål. Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](https://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Microsoft 365-administrationscentret](https://admin.microsoft.com).
 
 - Slutanvändaren måste logga in på appen med sitt AAD-konto.
 
@@ -170,7 +169,7 @@ De ytterligare kraven för att använda [Word-, Excel- och PowerPoint](https://p
 
 - Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Microsoft 365-administrationscentret](https://admin.microsoft.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-- Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddsprincipen Förhindra spara som. Om den hanterade platsen till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen vara konfigurerad i slutanvändarens Word-, Excel- eller PowerPoint-app.
+- Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddsprincipen ”Spara kopior av organisationsdata”. Om den hanterade platsen till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen vara konfigurerad i slutanvändarens Word-, Excel- eller PowerPoint-app.
 
 - Om den hanterade platsen är OneDrive, måste appen vara mål för appskyddsprincipen som distribuerats till slutanvändaren.
 
@@ -201,7 +200,6 @@ Medan den **Globala** principen gäller för alla användare i din klient kommer
 
 Med stöd för flera identiteter kan en app stödja flera målgrupper. Dessa målgrupper är både ”företagsanvändare” och ”personliga” användare. Arbets- och skolkonton används av företagsgrupper medan personliga konton används för konsumentanvändare, t. ex. Microsoft Office-användare. En app som har stöd för flera identiteter kan publiceras offentligt, där appskyddsprinciperna endast tillämpas när appen används i arbets- och skolkontexten (”företag”). Stöd för flera identiteter är möjligheten för [Intune App SDK](../developer/app-sdk.md) att bara tillämpa appskyddsprinciper på arbets- eller skolkontot som använts för inloggning i appen. Om ett personligt konto är inloggat i appen ändras inga data.
 
-
 För ett exempel på ”privat” kontext, anta att en användare som startar ett nytt dokument i Word, då anses detta vara privat kontext så Intune-appskyddsprinciper tillämpas inte. När dokumentet sparas på ”företagets” OneDrive-konto kommer det anses vara ”företagskontext” och Intune-appskyddsprinciperna tillämpas.
 
 Anta som ett exempel på ett arbets- eller ”företagskontext” att en användare startar appen OneDrive med sitt arbetskonto. De kan inte flytta filerna till en personlig lagringsplats i ett arbetskontext. Om användaren senare använder OneDrive med ett personligt konto kan hen kopiera och flytta data från sin personliga OneDrive utan begränsningar.
@@ -230,7 +228,7 @@ För iOS-enheter visas meddelandet igen när värdet **Kontrollera åtkomstbehö
   > För att verifiera användarens åtkomstkrav oftare (till exempel med en PIN-fråga), särskilt för appar som används ofta, rekommenderar vi att du minskar värdet för inställningen Kontrollera åtkomstkraven igen efter (minuter).
 
 **Inbyggda app-PIN-koder för Outlook och OneDrive**<br>
-Intune PIN-koden fungerar enligt en inaktivitetsbaserad timer (värdet för **Kontrollera åtkomstkraven igen efter (minuter)**). Därför visas Intune PIN-uppmaningar oberoende av de inbyggda app-PIN-uppmaningarna för Outlook och OneDrive, som ofta är kopplade till appstart som standard. Om användaren får PIN-uppmaningarna samtidigt är det förväntade beteendet att Intune PIN-koden har företräde.
+Intune PIN-koden fungerar enligt en inaktivitetsbaserad timer (värdet för **Kontrollera åtkomstkraven igen efter (minuter)** ). Därför visas Intune PIN-uppmaningar oberoende av de inbyggda app-PIN-uppmaningarna för Outlook och OneDrive, som ofta är kopplade till appstart som standard. Om användaren får PIN-uppmaningarna samtidigt är det förväntade beteendet att Intune PIN-koden har företräde.
 
 **Säkerhet för Intune-PIN**<br>
 PIN-koden fungerar så att endast rätt användare får åtkomst till organisationens data i appen. Därför måste en slutanvändare logga in med sitt arbets- eller skolkonto innan de kan ställa in eller återställa Intune-appens PIN-kod. Den här autentiseringen hanteras av Azure Active Directory via utbyte av säker token och är inte transparent för [Intune App SDK](../developer/app-sdk.md). Ur ett säkerhetsperspektiv är bästa sättet att skydda data från arbete eller skola att kryptera den. Kryptering är inte relaterad till appens PIN-kod, utan en egen appskyddsprincip.
@@ -302,7 +300,7 @@ Intunes appskyddsprinciper kan styra åtkomst till den Intune-licensierade anvä
 Syftet med detta är att fortsätta att hålla din organisations data i appen säkra och skyddade på appnivå. Den här funktionen är endast tillgänglig för iOS och kräver medverkan av program som integrerar Intune APP SDK för iOS, version 9.0.1 eller senare. Integrering av SDK krävs så att beteendet kan tillämpas på de berörda programmen. Den här integreringen händer på löpande bas, och är beroende av specifika programteam. Vissa appar som deltar omfattar WXP, Outlook, Managed Browser och Yammer.
   
 ### <a name="ios-share-extension"></a>Tillägg för iOS-resurs
-Du kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på **Endast hanterade appar** eller **Inga appar**. Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta krypteringsbeteende genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
+Du kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på **Endast hanterade appar** eller **Inga appar**. Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _**"företagets" data innan den delas utanför appen**_ . Du kan verifiera detta krypteringsbeteende genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Flera åtkomstinställningar för Intune App Protection för samma uppsättning appar och användare
 Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får rensningar företräde, följt av blockeringar och därefter varningar som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta iOS-operativsysteminställning som varnar en användare för att göra en uppdatering av sin iOS-version efter den lägsta iOS-operativsysteminställningen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar det äldsta iOS-operativsystemet till 11.0.0.0 och det äldsta iOS-operativsystemet (endast varning) till 11.1.0.0, medan enheten som försöker få åtkomst till appen hade iOS-version 10 blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta iOS-operativsystemversionen. Det leder till blockerad åtkomst.
@@ -312,8 +310,7 @@ När du hanterar olika typer av inställningar får ett krav på Intune App SDK-
 ## <a name="app-protection-experience-for-android-devices"></a>Appskyddsupplevelse för Android-enheter
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>Företagsportalapp och Intune-appskydd
-Många av appskyddets funktioner är inbyggda i företagsportalappen.
- Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För mobilapphantering utan registrering (MAM-WE) behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
+Många av appskyddets funktioner är inbyggda i företagsportalappen. Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För mobilapphantering utan registrering (MAM-WE) behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Flera åtkomstinställningar för Intune App Protection för samma uppsättning appar och användare
 Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får en blockering företräde, och därefter en varning som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta inställning för Android-korrigeringsprogramversionen. Den varnar en användare för att göra en uppdatering efter den lägsta inställningen för Android-korrigeringsprogramversionen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar den äldsta Android-korrigeringsprogramversionen till 2018-03-01 och den äldsta Android-korrigeringsprogramversionen (endast varning) till 2018-02-01, medan enheten som försöker få åtkomst till appen hade korrigeringsprogramversionen 2018-01-01, blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta Android-korrigeringsprogramversionen. Det leder till blockerad åtkomst. 

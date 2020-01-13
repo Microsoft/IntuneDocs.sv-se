@@ -1,11 +1,11 @@
 ---
 title: Använda certifikat med privata och offentliga nycklar i Microsoft Intune – Azure | Microsoft Docs
-description: Använd PKCS-certifikat (Public Key Cryptography Standards) med Microsoft Intune. Detta omfattar arbete med rotcertifikat och certifikatmallar, installation av Intune Certificate Connector (NDES) samt enhetskonfigurationsprofiler för ett PKCS-certifikat.
+description: Använd PKCS-certifikat (Public Key Cryptography Standards) med Microsoft Intune, arbeta med rotcertifikat och certifikatmallar, installation av Intune Certificate Connector (NDES) och använd enhetskonfigurationsprofiler för ett PKCS-certifikat.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db085e6e88f8f57eb0276afa77290df8574568f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9142ea3f7728fd24883a311bbf967a7a59dbf457
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801723"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207255"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -161,9 +161,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 7. **Tillämpa** > **Stäng**
 8. Gå tillbaka till Intune-portalen (**Intune** > **Enhetskonfiguration** > **Certifikatanslutningsappar**). Efter en stund visas en grön bockmarkering och **Anslutningsstatus** är **Aktiv**. Anslutningsservern kan nu kommunicera med Intune.
 9. Om du har en webbproxy i nätverksmiljön kan du behöva ytterligare konfigurationer för att anslutningsappen ska fungera. Mer information finns i [Arbeta med befintliga lokala proxyservrar](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) i Azure Active Directory-dokumentationen.
-
-> [!NOTE]  
-> Microsoft Intune-certifikatanslutningsappen har stöd för TLS 1.2. Om TLS 1.2 installeras på den server som är värd för anslutningsappen använder anslutningsappen TLS 1.2. I annat fall används TLS 1.1. För närvarande används TLS 1.1 för autentisering mellan enheter och servern.
+<ul><li>Android Enterprise (*Arbetsprofil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 och senare > Microsoft Intune-certifikatanslutningsappen har stöd för TLS 1.2. Om TLS 1.2 installeras på den server som är värd för anslutningsappen använder anslutningsappen TLS 1.2. I annat fall används TLS 1.1. För närvarande används TLS 1.1 för autentisering mellan enheter och servern.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Skapa en betrodd certifikatprofil
 
@@ -208,17 +206,17 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
    
    |Inställningen     | Plattform     | Information   |
    |------------|------------|------------|
-   |**Tröskelvärde för förnyelse (%)**        |Alla         |20 % rekommenderas  | 
-   |**Certifikatets giltighetsperiod**  |Alla         |Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år. |
-   |**Nyckellagringsprovider (KSP)**   |Windows 10  | För Windows väljer du var du vill lagra nycklarna på enheten. |
-   |**Certifikatutfärdare**      |Alla         |Visar det interna fullständiga domännamnet (FQDN) för din Enterprise-CA.  |
-   |**Namn på certifikatutfärdare** |Alla         |Anger namnet på din Enterprise-CA, till exempel ”Contoso Certification Authority”. |
-   |**Certifikattyp**             |macOS       |Välj en typ: <br> **-** **Användarcertifikat** kan innehålla både användarattribut och enhetsattribut i certifikatets ämne och SAN. <br><br>**-** **Enhetscertifikat** kan endast innehålla enhetsattribut i certifikatets ämne och SAN. Använd Enhet för scenarier såsom användarlösa enheter, till exempel kiosker eller andra delade enheter.  <br><br> Det här valet påverkar ämnesnamnets format. |
-   |**Ämnesnamnets format**          |Alla         |För de flesta plattformar anger du det här alternativet som **Eget namn** om inget annat krävs.<br><br>För macOS bestäms ämnesnamnets format av certifikattypen. Se [Ämnesnamnets format för macOS](#subject-name-format-for-macos) senare i den här artikeln. |
-   |**Alternativt namn för certifikatmottagare**     |Alla         |Ange det här alternativet som **Användarens huvudnamn** om inget annat krävs. |
-   |**Förbättrad nyckelanvändning**           |**-** Android-enhetsadministratör <br>**-** Android Enterprise (*Enhetsägare*, *Arbetsprofil*) <br> **-** Windows 10 |Certifikat kräver vanligtvis *Klientautentisering* så att användaren eller enheten kan autentisera till en server. |
-   |**Tillåt alla appar att komma åt privat nyckel** |macOS  |Ange till **Aktivera** för att ge appar som är konfigurerade för den associerade Mac-enheten åtkomst till den privata nyckeln för PKCS-certifikat. <br><br> Mer information om den här inställningen finns i *AllowAllAppsAccess* avsnittet Certifikatnyttolast i [referensen för konfigurationsprofil](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) i Apple-utvecklardokumentationen. |
-   |**Rotcertifikat**             |**-** Android-enhetsadministratör <br> **-** Android Enterprise (*Enhetsägare*, *Arbetsprofil*) |Välj en certifikatprofil för en rotcertifikatutfärdare som tidigare har tilldelats. |
+   |**Tröskelvärde för förnyelse (%)**        |<ul><li>Alla         |20 % rekommenderas  | 
+   |**Certifikatets giltighetsperiod**  |<ul><li>Alla         |Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år. |
+   |**Nyckellagringsprovider (KSP)**   |<ul><li>Windows 10  | För Windows väljer du var du vill lagra nycklarna på enheten. |
+   |**Certifikatutfärdare**      |<ul><li>Alla         |Visar det interna fullständiga domännamnet (FQDN) för din Enterprise-CA.  |
+   |**Namn på certifikatutfärdare** |<ul><li>Alla         |Anger namnet på din Enterprise-CA, till exempel ”Contoso Certification Authority”. |
+   |**Certifikattyp**             |<ul><li>Android Enterprise (*Arbetsprofil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 och senare|Välj en typ: <ul><li> Certifikat av typen **Användare** kan innehålla både användarattribut och enhetsattribut i certifikatets ämne och SAN. </il><li>**Enhetscertifikat** kan endast innehålla enhetsattribut i certifikatets ämne och SAN. Använd Enhet för scenarier såsom användarlösa enheter, till exempel kiosker eller andra delade enheter.  <br><br> Det här valet påverkar ämnesnamnets format. |
+   |**Ämnesnamnets format**          |<ul><li>Alla         |För de flesta plattformar anger du det här alternativet som **Eget namn** om inget annat krävs.<br><br>För följande plattformar bestäms ämnesnamnets format av certifikattypen: <ul><li>Android Enterprise (*Arbetsprofil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 och senare</li></ul>  <p> Se [Ämnesnamnets format](#subject-name-format) senare i den här artikeln. |
+   |**Alternativt namn för certifikatmottagare**     |<ul><li>Alla         |Ange det här alternativet som **Användarens huvudnamn** om inget annat krävs. |
+   |**Förbättrad nyckelanvändning**           |<ul><li> Android-enhetsadministratör </li><li>Android Enterprise (*Enhetsägare*, *Arbetsprofil*) </li><li>Windows 10 |Certifikat kräver vanligtvis *Klientautentisering* så att användaren eller enheten kan autentisera till en server. |
+   |**Tillåt alla appar att komma åt privat nyckel** |<ul><li>macOS  |Ange till **Aktivera** för att ge appar som är konfigurerade för den associerade Mac-enheten åtkomst till den privata nyckeln för PKCS-certifikat. <br><br> Mer information om den här inställningen finns i *AllowAllAppsAccess* avsnittet Certifikatnyttolast i [referensen för konfigurationsprofil](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) i Apple-utvecklardokumentationen. |
+   |**Rotcertifikat**             |<ul><li>Android-enhetsadministratör </li><li>Android Enterprise (*Enhetsägare*, *Arbetsprofil*) |Välj en certifikatprofil för en rotcertifikatutfärdare som tidigare har tilldelats. |
 
 5. Välj **OK** > **Skapa** för att spara profilen.
 
@@ -227,11 +225,18 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
    > [!NOTE]
    > På enheter med en Android Enterprise-profil syns inte certifikat som har installerats med en PKCS-certifikatprofil på enheten. Kontrollera statusen för profilen i Intune-konsolen för att bekräfta lyckad certifikatdistribution.
 
-### <a name="subject-name-format-for-macos"></a>Ämnesnamnets format för macOS
+### <a name="subject-name-format"></a>Format för namn på certifikatmottagare
 
-När du skapar en PKCS-certifikatprofil för macOS beror alternativen för ämnesnamnets format på den certifikattyp du väljer, antingen **Användare** eller **Enhet**.  
+När du skapar en PKCS-certifikatprofil för följande plattformar beror alternativen för ämnesnamnets format på den certifikattyp du väljer, antingen **Användare** eller **Enhet**.  
 
-> [!NOTE]  
+Plattformar:
+
+- Android Enterprise (*Arbetsprofil*)
+- iOS
+- macOS
+- Windows 10 och senare
+
+> [!NOTE]
 > Det finns ett känt problem med användning av PKCS för att hämta certifikat; detta är [samma problem som för SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) när ämnesnamnet i den resulterande certifikatsigneringsförfrågan (CSR) innehåller något av följande tecken som undantaget tecken (med ett omvänt snedstreck \\):
 > - \+
 > - ;

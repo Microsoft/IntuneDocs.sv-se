@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c344a518890a2309a7805d61a5675e2646029bbb
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: c02ea34417073091e2f2841b363edfb9966ce558
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564048"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205912"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurera Google Chrome för Android-enheter med Intune 
 
@@ -48,12 +48,16 @@ Mer information om hur du lägger till en hanterad Google Play-app i Intune finn
 
 ## <a name="add-app-configuration-for-managed-ae-devices"></a>Lägga till appkonfiguration för hanterade Android Enterprise-enheter
 
-1. I fönstret [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du **Appkonfigurationsprinciper** > **Lägg till**.
-2. Lägg till principnamnet, välj **Hanterade enheter** under Enhetsregistreringstyp och **Android** under Plattform.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade enheter**.
+2. Ange följande information:
+    - **Namn** – namnet på den profil som visas i Azure Portal.
+    - **Beskrivning** – beskrivning av den profil som visas i Azure Portal.
+    - **Enhetsregistreringstyp** – Denna inställning är inställd på **Hanterade enheter**.
+    - **Plattform** – Välj **Android**.
 
     ![Lägga till en konfigurationsprincip för Google Chrome](~/apps/media/apps-configure-chrome-android/add-policy.png)
 
-3. Klicka på **Associerad app** och välj **Google Chrome**.
+3. Klicka på **Associerad app** för att visa fönstret **Associerad app**. Sök efter och välj **Google Chrome**. Listan innehåller [hanterade Google Play-appar som du har godkänt och synkroniserat med Intune](~/apps/apps-add-android-for-work.md).
 
     ![Välj Google Chrome under Associerad app](~/apps/media/apps-configure-chrome-android/associated-app.png)
 

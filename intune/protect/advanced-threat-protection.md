@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8c756ad2df00a97df7289491daf830e584c0045
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 2fa80697f24167e2a9634bd506e9548ca654129f
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410200"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547085"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune
 
@@ -108,9 +108,7 @@ Du behöver bara aktivera Defender ATP en gång per klientorganisation.
 
 När du har upprättat tjänst-till-tjänst-anslutningen mellan Intune och Microsoft Defender ATP kan du publicera dina Intune-hanterade enheter till ATP så att data om deras risknivå kan samlas in och användas. Använd en enhetskonfigurationsprofil för att publicera enheter med Microsoft Defender ATP.
 
-När du upprättar anslutningen till Microsoft Defender ATP fick Intune ett konfigurationspaket för Microsoft Defender ATP-registrering från Microsoft Defender ATP. Det här paketet distribueras till enheter med enhetskonfigurationsprofilen. Konfigurationspaketet konfigurerar enheter för att kommunicera med [Microsoft Defender ATP-tjänster](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) för att söka igenom filer, identifiera hot och rapportera risken till Microsoft Defender ATP.
-
-När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Du kan också publicera enheter med hjälp av en [Grupprincip eller System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+När du upprättar anslutningen till Microsoft Defender ATP fick Intune ett konfigurationspaket för Microsoft Defender ATP-registrering från Microsoft Defender ATP. Det här paketet distribueras till enheter med enhetskonfigurationsprofilen. Konfigurationspaketet konfigurerar enheter för att kommunicera med [Microsoft Defender ATP-tjänster](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) för att söka igenom filer, identifiera hot och rapportera risken till Microsoft Defender ATP. När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Du kan också publicera enheter med hjälp av en [grupprincip eller Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-device-configuration-profile"></a>Skapa en enhetskonfigurationsprofil
 
@@ -129,7 +127,7 @@ När du publicerat en enhet med konfigurationspaketet behöver du inte göra det
    - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel samlas in och delas med Microsoft Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Microsoft Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Microsoft Defender ATP.
    - **Skicka frekvensvärde för telemetrirapportering**: För enheter med hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Microsoft Defender ATP oftare.
 
-     [Registrera Windows 10-datorer med hjälp av System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) innehåller mer information om dessa Microsoft Defender ATP-inställningar.
+     [Registrera Windows 10-datorer med hjälp av Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) innehåller mer information om dessa Microsoft Defender ATP-inställningar.
 
 7. Välj **OK** och **Skapa** för att spara ändringarna, vilket skapar profilen.
 8. [Tilldela en enhetskonfigurationsprofil](../configuration/device-profile-assign.md) till enheter som du vill utvärdera med Microsoft Defender ATP.

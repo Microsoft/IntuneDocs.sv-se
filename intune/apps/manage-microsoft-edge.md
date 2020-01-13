@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563884"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548013"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -199,6 +199,14 @@ Använd sedan följande nyckel-/värdepar för att hämta dina organisationers v
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    Sant    |
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    Sant    |
 
+## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Visa relevanta branschnyheter på sidan Ny flik
+
+Du kan konfigurera upplevelsen på sidan Ny flik i Microsoft Edge Mobile så att den visar branschnyheter som är relevanta för din organisation. När du aktiverar den här funktionen använder Microosft Edge Mobile din organisations domännamn för att samla nyheter från webben om din organisation, organisationens bransch och konkurrenter, så att användarna kan hitta relevanta externa nyheter från den centrala sidan Ny flik i Microsoft Edge. Branschnyheter är inaktiverat som standard och du kan välja till det alternativet för din organisation. 
+
+|    Tangent    |    Värde    |
+|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|    'com.microsoft.intune.SohwIndustryNews'    |    **Sant** kommer att visa bransch nyheter på sidan Ny flik i Microsoft Edge Mobile.<p>**Falskt** (standard) döljer branschnyheter från sidan Ny flik.    |
+
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurera hanterade bokmärken för Microsoft Edge
 
 För enkel åtkomst kan du konfigurera bokmärken som du vill att användarna har tillgängliga när de använder Microsoft Edge. 
@@ -268,7 +276,7 @@ Du kan använda olika URL-format för att skapa dina webbplatslistor med tillåt
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Definiera beteendet när användare försöker komma åt en blockerad webbplats
+## <a name="transition-users-to-their-personal-context-when-trying-to-access-a-blocked-site"></a>Överföra användare till deras personliga sammanhang när de försöker komma åt en blockerad webbplats
 
 Du kan skapa en mer flexibel upplevelse för slutanvändarna som inte var möjligt med Intune Managed Browser med modellen med dubbla identiteter som är inbyggda i Microsoft Edge. När användare trycker på en plats som är blockerad i Microsoft Edge kan du uppmana dem att öppna länken i den personliga kontexten i stället för arbetskontexten. Därmed skyddas de och företagets resurser samtidigt. Till exempel om en användare får en länk till en nyhetsartikel via Outlook kan de öppna länken i sin personliga kontext eller i en InPrivate-flik. Arbetskontexten tillåter inte nyhetswebbplatser. Dessa övergångar tillåts som standard.
 
@@ -276,7 +284,16 @@ Använd nyckel-/värdeparet nedan för att konfigurera om dessa mjuka övergång
 
 |    Tangent    |    Värde    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock'    |    **Sant** gör att länkar som är begränsade öppnas direkt med InPrivate-surfning.<p>**Falskt** (standard) visar användare med ett alternativ för att öppna en begränsad länk med antingen InPrivate-surfning eller med deras personliga (MSA) konto.    |
+
+## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Öppna begränsade länkar direkt på InPrivate-flikar
+
+Du kan konfigurera så att begränsade länkar ska öppnas direkt med InPrivate-surfning, vilket ger användarna en smidigare webbupplevelse. Då slipper användarna steget med övergången till deras personliga sammanhang för att visa en webbplats. InPrivate-surfning betraktas som ohanterat, så användarna kan inte komma åt det när de använder läget för InPrivate-surfning. 
+
+|    Tangent    |    Värde    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **Sant** tillåter att Microsoft Edge flyttar användare till sina privata kontexter för att öppna blockerade webbplatser.<p>**Blockera** förhindrar att Microsoft Edge flyttar användare. Användare får helt enkelt se ett meddelande om att webbplatsen de försöker besöka är blockerad.    |
+
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Använda Microsoft Edge i iOS för att komma åt loggar för hanterade appar 
 

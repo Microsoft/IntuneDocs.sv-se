@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74409975"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548140"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -192,9 +192,9 @@ Andra processer som kan ändra inställningarna på enheten senare inkluderar en
 
 ## <a name="co-managed-devices"></a>Samhanterade enheter
 
-Säkerhetsbaslinjer på Intune-hanterade enheter liknar samhanterade enheter med Configuration Manager. Samhanterade enheter använder System Center Configuration Manager och Microsoft Intune för att kunna hantera flera Windows 10-enheter samtidigt. Det innebär att du kan använda din befintliga Configuration Manager i molnet tillsammans med Intunes fördelar. [Översikt över samhantering](https://docs.microsoft.com/sccm/comanage/overview) är en bra resurs om du använder Configuration Manager och vill ha fördelarna med molnet.
+Säkerhetsbaslinjer på Intune-hanterade enheter liknar samhanterade enheter med Configuration Manager. Samhanterade enheter använder Configuration Manager och Microsoft Intune för att kunna hantera flera Windows 10-enheter samtidigt. Det innebär att du kan använda din befintliga Configuration Manager i molnet tillsammans med Intunes fördelar. [Översikt över samhantering](https://docs.microsoft.com/configmgr/comanage/overview) är en bra resurs om du använder Configuration Manager och vill ha fördelarna med molnet.
 
-När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **Enhetskonfiguration** (i dess inställningar) till Intune. Mer information finns i [Enhetskonfigurationens arbetsbelastningar](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration).
+När du använder samhanterade enheter, måste du ändra arbetsbelastningen i **Enhetskonfiguration** (i dess inställningar) till Intune. Mer information finns i [Enhetskonfigurationens arbetsbelastningar](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration).
 
 ## <a name="q--a"></a>Frågor och svar
 

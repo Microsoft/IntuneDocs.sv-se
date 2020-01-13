@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 442432e7638c69083dcad5abc571c00e4051553d
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547974"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731532"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Använda Windows 10-mallar för att konfigurera grupprincipinställningar i Microsoft Intune
 
@@ -52,16 +52,10 @@ Den här artikeln listar stegen för att skapa en mall för Windows 10-enheter o
     - **Plattform**: Välj **Windows 10 och senare**.
     - **Profiltyp**: Välj **Administrativa mallar**.
 
-4. Välj **Skapa**. Välj **Inställningar** i det nya fönstret. Varje inställning är listad och du kan använda föregående- och nästa-pilarna om du vill se fler inställningar:
+4. Välj **Skapa**. I det nya fönstret väljer du den nedrullningsbara listrutan och väljer **Alla produkter**. I listan kan du även filtrera inställningarna så att endast inställningar för **Windows**, **Office** eller **Edge version 77 eller senare** visas:
 
-    ![Se en lista exempellista över inställningar och använd föregående- och nästa-knapparna](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-    > [!TIP]
-    > Windows-inställningarna i Intune motsvarar den lokala grupprincipen sökväg som du ser i redigeraren för grupprincipobjekt (`gpedit`).
-
-5. Välj **Alla produkter** i listrutan. I listan kan du även filtrera inställningarna så att endast inställningar för **Windows**, **Office** eller **Edge version 77 eller senare** visas:
-
-    ![Filtrera listan för att visa alla Windows- och alla Office-inställningar i administrativa mallar i Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
+    > [!div class="mx-imgBorder"]
+    > ![Filtrera listan för att visa alla Windows- och alla Office-inställningar i administrativa mallar i Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Microsoft Edge-inställningar gäller för:
@@ -70,6 +64,14 @@ Den här artikeln listar stegen för att skapa en mall för Windows 10-enheter o
     > - Windows 10 RS4 och senare med [KB 4512509](https://support.microsoft.com/kb/4512509) installerat
     > - Windows 10 RS5 och senare med [KB 4512534](https://support.microsoft.com/kb/4512534) installerat
     > - Windows 10 19H1 och senare med [KB 4512941](https://support.microsoft.com/kb/4512941) installerat
+
+5. Varje inställning är listad och du kan använda föregående- och nästa-pilarna om du vill se fler inställningar:
+
+    > [!div class="mx-imgBorder"]
+    > ![Se en lista exempellista över inställningar och använd föregående- och nästa-knapparna](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+    > [!TIP]
+    > Windows-inställningarna i Intune motsvarar den lokala grupprincipen sökväg som du ser i redigeraren för grupprincipobjekt (`gpedit`).
 
 6. Välj en inställning. Filtrera exempelvis på **Office** och välj **Aktivera begränsad bläddring**. En detaljerad beskrivning av inställningen visas. Välj **Aktiverad**, **Inaktiverad** eller lämna inställningen som **Inte konfigurerad** (standard). Den detaljerade beskrivningen förklarar även vad som händer när du väljer **Aktiverad**, **Inaktiverad** eller **Inte konfigurerad**.
 7. Klicka på **OK** för att spara ändringarna.
@@ -88,13 +90,15 @@ Fortsätt gå igenom listan med inställningar och konfigurera de inställningar
 
 Det finns hundratals inställningar tillgängliga i dessa mallar. För att göra det enklare att hitta specifika inställningar använder du de inbyggda funktionerna:
 
-- I mallen markerar du kolumnerna **Inställningar**, **Tillstånd**, **Inställningstyp** eller **Sökväg** för att sortera listan. Markera till exempel kolumnen **Sökväg** om du vill se alla inställningar i sökvägen `Microsoft Excel`:
+- I mallen markerar du kolumnerna **Inställningar**, **Tillstånd**, **Inställningstyp** eller **Sökväg** för att sortera listan. Markera till exempel kolumnen **Sökväg** och klicka på pilen Nästa om du vill se alla inställningar i sökvägen `Microsoft Excel`:
 
-  ![Klicka på sökväg för att visa alla inställningar grupperade efter grupprincip eller ADMX-sökväg i administrativa mallar i Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
+  > [!div class="mx-imgBorder"]
+  > ![Klicka på sökvägen för att visa alla inställningar grupperade efter grupprincip eller ADMX-sökväg i administrativa mallar i Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 
-- Använd rutan **Sök** i mallen för att hitta specifika inställningar. Du kan söka genom att ange rubrik eller sökväg. Sök t.ex. efter `copy`. Alla inställningar med `copy` visas:
+- Använd rutan **Sök** i mallen för att hitta specifika inställningar. Du kan söka genom att ange inställning eller sökväg. Sök t.ex. efter `copy`. Alla inställningar med `copy` visas:
 
-  ![Sök efter kopia för att visa alla Windows- och Office-inställningar i administrativa mallar i Intune](./media/administrative-templates-windows/search-copy-settings.png) 
+  > [!div class="mx-imgBorder"]
+  > ![Sök efter kopia för att visa alla Windows- och Office-inställningar i administrativa mallar i Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   I ett annat exempel söker du efter `microsoft word`. Du ser alla inställningar du kan ange för Microsoft Word-programmet. Sök efter `explorer` om du vill se alla Internet Explorer-inställningar du kan lägga till i mallen.
 
@@ -103,3 +107,5 @@ Det finns hundratals inställningar tillgängliga i dessa mallar. För att göra
 Mallen har skapats, men den gör inte något än. [Tilldela mallen (kallas även profil)](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
 [Uppdatera Office 365 med hjälp av administrativa mallar](administrative-templates-update-office.md).
+
+[Självstudie: Använd molnet för att konfigurera grupprinciper på Windows 10-enheter med ADMX-mallar och Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

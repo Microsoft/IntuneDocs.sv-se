@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 89b4516017d7ac8bf1e27134db6a67a0a86b17cb
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992980"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206082"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -36,9 +36,9 @@ Efterlevnadsrapporter hjälper dig att granska enhetsefterlevnad och felsöka ef
 
 Öppna **Intunes instrumentpanel för enhetsefterlevnad**:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Välj **Enhetsefterlevnad** > **Översikt**. **Instrumentpanelen för enhetsefterlevnad** öppnas.
+2. Välj **Enheter** > **Översikt** > **fliken Efterlevnadsstatus**.
 
 > [!IMPORTANT]
 > Enheter måste registreras i Intune för att kunna ta emot principer för enhetsefterlevnad.
@@ -151,7 +151,7 @@ Diagrammet **Inställningskompatibilitet** visar alla principinställningar för
 
 ## <a name="view-compliance-reports"></a>Visa efterlevnadsrapporter
 
-Förutom att använda diagrammen i *Efterlevnadsstatus*kan du visa efterlevnadsrapporter på sidan *Övervakare* i administrationscentret.
+Förutom att använda diagrammen på *Efterlevnadsstatus* kan du gå till **Rapporter** > **Enhetsefterlevnad**.
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -191,3 +191,7 @@ Principkonflikter kan uppstå när flera Intune-principer används på en enhet.
 - Om de motstridiga inställningarna gäller en Intune-konfigurationsprincip och en efterlevnadsprincip, prioriteras inställningarna i efterlevnadsprincipen framför inställningarna i konfigurationsprincipen. Detta gäller även om inställningarna i konfigurationsprincipen är säkrare.
 
 - Om du har distribuerat flera efterlevnadsprinciper använder Intune den säkraste av dessa principer.
+
+## <a name="next-steps"></a>Nästa steg
+
+[Översikt över efterlevnadsprinciper](device-compliance-get-started.md)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19d02694ab5e53dc43e0861c6a427a044bf50648
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a01b6643de2dd75c41aec0806b97df6154d99a7a
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502632"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547769"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -34,7 +34,7 @@ Möjliga konfigurationerna är:
 
 - **Fristående Intune** – Endast molnbaserad hantering, som du konfigurerar med hjälp av Azure-portalen. Innehåller den fullständiga uppsättning funktioner som Intune erbjuder. [Ange utfärdare för hantering av mobila enheter i Intune-konsolen](#set-mdm-authority-to-intune).
 
-- **Intune-samhantering** – Integration av Intunes molnlösning med System Center Configuration Manager för Windows 10-enheter. Du kan konfigurera Intune med hjälp av Configuration Manager-konsolen. [Konfigurera automatisk registrering av enheter i Intune](https://docs.microsoft.com/sccm/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
+- **Intune-samhantering** – Integration av Intunes molnlösning med Configuration Manager för Windows 10-enheter. Du kan konfigurera Intune med hjälp av Configuration Manager-konsolen. [Konfigurera automatisk registrering av enheter i Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
     > [!Important]
     >Registrering av nya hybrid-MDM-kunder är nu inaktuell. Mer information finns i blogginlägget [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
@@ -45,9 +45,9 @@ Möjliga konfigurationerna är:
 
 ## <a name="set-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
 
-Följ stegen nedan om du inte har angett MDM-utfärdaren än. Information om att byta från SCCM finns i [Migrera hybrida MDM-användare och -enheter till fristående Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+Följ stegen nedan om du inte har angett MDM-utfärdaren än. Information om att byta från SCCM finns i [Migrera hybrida MDM-användare och -enheter till fristående Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-1. Välj den orangefärgade banderollen för att öppna inställningen **Utfärdare av Hantering av mobila enheter** i [Intune i Azure-portalen](https://aka.ms/intuneportal). Den orangefärgade banderollen visas bara om du inte har angett MDM-utfärdaren än.
+1. I [administationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du den orangefärgade banderollen för att öppna inställningen **Utfärdare av Hantering av mobila enheter**. Den orangefärgade banderollen visas bara om du inte har angett MDM-utfärdaren än.
 2. Under **Utfärdare av Hantering av mobila enheter** väljer du en utfärdare bland följande alternativ:
    - **Intune-utfärdare av mobilenhetshantering**
    - **Inga**

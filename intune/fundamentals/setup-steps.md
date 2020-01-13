@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a45160fc0e728b4c53590455a2bd0b5d904ddb1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2a300070e06725e165316172bf10ca079861f56f
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504895"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547558"
 ---
 # <a name="set-up-intune"></a>Konfigurera Intune
 
@@ -30,7 +30,7 @@ De här anvisningarna visar hur du aktiverar mobilenhetshantering (MDM) med hjä
 
 Vissa anvisningar, till exempel konfigurering av en Intune-prenumeration och inställning av utfärdare för mobilenhetshantering krävs i de flesta scenarier. Andra åtgärder valfria, till exempel konfigurera en anpassad domän eller lägga till appar, beroende på företagets behov.
 
-Om du använder Microsoft System Center Configuration Manager för att hantera datorer och servrar, kan du [fästa Configuration Manager i molnet med samhantering](https://docs.microsoft.com/sccm/comanage/overview).
+Om du använder MicrosoftEndpoint Configuration Manager för att hantera datorer och servrar, kan du [fästa Configuration Manager i molnet med samhantering](https://docs.microsoft.com/configmgr/comanage/overview).
 
 >[!TIP]
 >Om du köper minst 150 Intune-licenser inom ramen för en berättigad prenumeration kan du utnyttja *FastTrack Center-förmånen*. I den här tjänsten ingår hjälp från Microsoft-specialister med att förbereda din miljö för Intune. Mer information finns i [FastTrack Center-förmån för Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).

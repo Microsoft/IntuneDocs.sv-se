@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bb146fdee7a1d7d770575334eeed84f73cda8894
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73984185"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207493"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Lägga till principer för iOS-programuppdatering i Intune
 
@@ -32,8 +32,8 @@ Enheten checkar in med Intune ungefär var 8:e timme. Om det finns en uppdaterin
 
 ## <a name="configure-the-policy"></a>Konfigurera principen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Programuppdateringar** > **Uppdateringsprinciper för iOS** > **Skapa**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Uppdateringsprinciper för iOS** > **Skapa**.
 3. På fliken **Grundläggande** anger du ett namn för den här principen, anger en beskrivning och väljer **Nästa**.
 
    ![Fliken Grundläggande](./media/software-updates-ios/basics-tab.png) 
@@ -77,7 +77,7 @@ Vägledning från Intune-supportteamet finns i [Fördröj synligheten för progr
 ## <a name="edit-a-policy"></a>Redigera en princip
 Du kan redigera en befintlig princip, inklusive att ändra de begränsade tiderna:
 
-1. I **Programuppdateringar** väljer du **Uppdateringsprinciper för iOS** och väljer sedan den princip som du vill redigera.
+1. Välj **Enheter** > **Uppdateringsprinciper för iOS**. Välj den princip som du vill redigera.
 
 2. När du visar principernas **Egenskaper** väljer du **Redigera** för den principsida som du vill ändra.  
    ![Redigera en princip](./media/software-updates-ios/edit-policy.png)   

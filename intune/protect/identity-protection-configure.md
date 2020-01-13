@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fce03913042675588ea12e5399e6f5a1be04946
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a4f5d3a232cab25c60189132732a0ea3f347c74a
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188240"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683807"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Använd Windows Hello för företag på Windows 10 på enheter med Microsoft Intune
 
@@ -71,6 +71,9 @@ Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil. En list
 5. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
 
 Profilen skapas och visas i profillistan. [Tilldela](../configuration/device-profile-assign.md) sedan den här profilen till användar- och enhetsgrupper som uppfyller dina behov.
+
+> [!IMPORTANT]
+> Om du vill tillåta att flera användare är etablerade på en enhet anger du att Windows Hello för företag-principen ska tillämpas på enheterna. Om principen endast ska tillämpas på användare kan bara en användare vara etablerad på en enhet.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

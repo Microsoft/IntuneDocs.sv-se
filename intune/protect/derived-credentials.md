@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4d0772f9a0afce0607d0193bfb82ea6bd22709d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73445322"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207219"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Använda härledda autentiseringsuppgifter i Microsoft Intune
 
@@ -160,28 +160,30 @@ Undvik att kräva användning av en härledd autentiseringsuppgift för åtkomst
 
 Innan du skapar principer som kräver användning av en härledd autentiseringsuppgift konfigurerar du en utfärdare av autentiseringsuppgifter i Intune-konsolen. En utfärdare av härledda autentiseringsuppgifter är en inställning som gäller i hela klientorganisationen. Klientorganisationer har bara stöd för en enda utfärdare åt gången.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetskonfiguration** > **Härledda autentiseringsuppgifter**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Administration av klientorganisation** > **Anslutningsappar och token** > **Härledda autentiseringsuppgifter**.
 
-   ![Konfigurera härledda autentiseringsuppgifter i konsolen](./media/derived-credentials/configure-provider.png)
+    > [!div class="mx-imgBorder"]
+    > ![Konfigurera härledda autentiseringsuppgifter i konsolen](./media/derived-credentials/configure-provider.png)
 
-2. Ange ett eget **Visningsnamn** för principen för utfärdare av härledda autentiseringsuppgifter.  Det här namnet visas inte för dina enhetsanvändare.
+3. Ange ett eget **Visningsnamn** för principen för utfärdare av härledda autentiseringsuppgifter.  Det här namnet visas inte för dina enhetsanvändare.
 
-3. För **Utfärdare av härledda autentiseringsuppgifter**väljer du den utfärdare av härledda autentiseringsuppgifter som du har valt för din klientorganisation:
+4. För **Utfärdare av härledda autentiseringsuppgifter**väljer du den utfärdare av härledda autentiseringsuppgifter som du har valt för din klientorganisation:
    - DISA Purebred
    - Entrust Datacard
    - Intercede  
 
-4. Ange en **hjälp-URL för härledd autentiseringsuppgift** för att tillhandahålla en länk till en plats som innehåller anpassade instruktioner som hjälper användarna att hämta härledda autentiseringsuppgifter för din organisation. Instruktionerna bör gälla specifikt för din organisation och för det arbetsflöde som krävs för att få en autentiseringsuppgift från din valda utfärdare. Länken visas i Företagsportal-appen och bör vara tillgänglig från enheten.
+5. Ange en **hjälp-URL för härledd autentiseringsuppgift** för att tillhandahålla en länk till en plats som innehåller anpassade instruktioner som hjälper användarna att hämta härledda autentiseringsuppgifter för din organisation. Instruktionerna bör gälla specifikt för din organisation och för det arbetsflöde som krävs för att få en autentiseringsuppgift från din valda utfärdare. Länken visas i Företagsportal-appen och bör vara tillgänglig från enheten.
 
    Om du inte anger din egen URL tillhandahåller Intune en länk till allmän information som inte kan omfatta alla scenarier. Den här allmänna vägledningen är kanske inte korrekt för din miljö.
 
-5. Välj ett eller flera alternativ för **Meddelandetyp**. Meddelandetyper är de metoder som du använder för att informera användarna om följande scenarier:
+6. Välj ett eller flera alternativ för **Meddelandetyp**. Meddelandetyper är de metoder som du använder för att informera användarna om följande scenarier:
 
    - Registrera en enhet med en utfärdare för att hämta en ny härledd autentiseringsuppgift.
    - Hämta en ny härledd autentiseringsuppgift när den aktuella autentiseringsuppgiften är nära att upphöra.
    - Använd en härledd autentiseringsuppgift med en princip för autentisering via Wi-Fi, e-post eller app samt för S/MIME-signering och -kryptering.
 
-6. När du är klar väljer du **Spara** för att slutföra konfigurationen av utfärdare av härledda autentiseringsuppgifter.
+7. När du är klar väljer du **Spara** för att slutföra konfigurationen av utfärdare av härledda autentiseringsuppgifter.
 
 När du har sparat konfigurationen kan du göra ändringar i alla fält förutom *Utfärdare av härledda autentiseringsuppgifter*.  Om du vill ändra utfärdaren kan du läsa [Ändra utfärdaren av härledda autentiseringsuppgifter](#change-the-derived-credential-issuer).
 
@@ -216,19 +218,20 @@ Du kan ange **Härledd autentiseringsuppgift** för följande profiltyper och sy
 
 ### <a name="use-derived-credentials-for-app-authentication"></a>Använda härledda autentiseringsuppgifter för appautentisering
 
-Använd härledda autentiseringsuppgifter för certifikatbaserad autentisering till webbplatser och program. Leverera en härledd autentiseringsuppgift för appautentisering genom att utföra följande steg i Intune-konsolen:  
+Använd härledda autentiseringsuppgifter för certifikatbaserad autentisering till webbplatser och program. Så här använder du en härledd autentiseringsuppgift för appautentisering:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), gå till **Enhetskonfiguration** > **Profiler** och välj **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
+3. Ange följande inställningar:
 
-2. Ange ett eget namn på profilen under **Namn**.
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är till exempel **Härledd autentiseringsuppgift för iOS-enhetsprofil**.
+    - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
+    - **Plattform**: Välj **iOS/iPadOS**.
+    - **Profiltyp**: Välj **Härledd autentiseringsuppgift**.
 
-3. För **Plattform**, välj **iOS**.
-
-4. För **Profiltyp** väljer du **Härledd autentiseringsuppgift**.
-
-5. Välj **OK** och klicka sedan på **Skapa**.
-
-6. Välj **Tilldelningar** för att välja vilka grupper som ska ta emot principen.
+4. Klicka på **OK** för att spara ändringarna.
+5. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
+6. Välj din nya profil > **Tilldelningar**. Välj de grupper som ska ta emot principen.
  
 Användare får appen eller e-postaviseringen beroende på vilka inställningar du angav när du konfigurerade utfärdaren av härledda autentiseringsuppgifter. Meddelandet uppmanar användaren att starta Företagsportalen så att de härledda autentiseringsuppgifterna kan bearbetas.
 
@@ -252,11 +255,10 @@ När du har ändrat utfärdaren uppmanas användarna att hämta en ny härledd a
 > [!IMPORTANT]  
 > Om du tar bort en utfärdare och omedelbart konfigurerar om samma utfärdare måste du fortfarande uppdatera profiler och enheter för att använda härledda autentiseringsuppgifter från den utfärdaren. Härledda autentiseringsuppgifter som hämtades innan du tar bort utfärdaren är inte längre giltiga.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och gå till **Enhetskonfiguration** > **Härledda autentiseringsuppgifter**.
-
-2. Välj **Ta bort** för att ta bort den aktuella utfärdaren av härledda autentiseringsuppgifter.
-
-3. Konfigurera en ny utfärdare.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Administration av klientorganisation** > **Anslutningsappar och token** > **Härledda autentiseringsuppgifter**.
+3. Välj **Ta bort** för att ta bort den aktuella utfärdaren av härledda autentiseringsuppgifter.
+4. Konfigurera en ny utfärdare.
 
 ### <a name="update-profiles-that-use-derived-credentials"></a>Uppdatera profiler som använder härledda autentiseringsuppgifter
 
@@ -268,4 +270,4 @@ När du har tagit bort en utfärdare och sedan lägger till en ny måste enhetsa
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Skapa profiler för enhetskonfiguration](../configuration/device-profile-create.md)
+[Skapa profiler för enhetskonfiguration](../configuration/device-profile-create.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691778"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207459"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
@@ -68,9 +68,6 @@ Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10-e
   Du kan konfigurera den här inställningen *Diagnostik och användningsdata* för WIndows 10 manuellt eller använda en begränsningsprofil för Intune-enheter för Windows 10 och senare. Om du använder en enhetsbegränsningsprofil ställer du in [enhetsbegränsningsinställningen](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) för **Dela användningsdata** på minst **Grundläggande**. Den här inställningen finns under kategorin **Rapportering och telemetri** när du konfigurerar en princip för enhetsbegränsning för Windows 10 eller senare.
 
   Mer information om enhetsprofiler finns i [Konfigurera inställningar för enhetsbegränsning](../configuration/device-restrictions-configure.md).
-
-- Om du använder den klassiska Azure-portalen [migrerar du dina inställningar till Azure-portalen](#migrate-update-settings-to-the-azure-portal).
-
 
 ## <a name="windows-10-update-rings"></a>Windows 10-uppdateringsringar
 
@@ -138,7 +135,7 @@ När en uppdateringstyp har pausats visar översiktsfönstret för den ringen hu
 > [!IMPORTANT]
 > När du utfärdar ett pauskommando får enheterna detta kommando nästa gång de checkar in på tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering. Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
 
-#### <a name="resume"></a>Resume
+#### <a name="resume"></a>Återuppta
 
 När en uppdateringsring har pausats kan du välja **Återuppta** för att aktivera funktions- och kvalitetsuppdateringarna för den ringen. När du har återupptagit en uppdateringsring, kan du pausa den igen.
 
@@ -227,7 +224,7 @@ När en enhet tar emot en princip för Windows 10-funktionsuppdateringar:
 
 3. Under **Grundläggande information** anger du ett namn samt en beskrivning (valfritt). Under **Funktionsuppdatering att distribuera** väljer du den Windows-version och den funktionsuppsättning som du vill använda och väljer **Nästa**.
 
-4. Under **Tilldelningar** väljer du **+ Välj grupper som ska inkluderas** och tilldelar sedan uppdateringsringen till en eller fler grupper. Fortsätt genom att välja **Nästa**.
+4. Under **Tilldelningar** väljer du **+ Välj grupper som ska inkluderas** och tilldelar sedan distributionen av funktionsuppdateringen till en eller flera grupper. Fortsätt genom att välja **Nästa**.
 
 5. Under **Granska och skapa** granskar du inställningarna och väljer **Skapa** när du är redo att spara principen för Windows 10-funktionsuppdateringar.  
 
@@ -240,17 +237,6 @@ I det här fönstret kan du göra följande:
 - Välj **Ta bort** för att ta bort principen från Intune och även ta bort den från enheterna.
 - Välj **Egenskaper** för att ändra distributionen.  I fönstret *Egenskaper* väljer du **Redigera** för att öppna *Distributionsinställningar eller Tilldelningar*, där du sedan kan ändra distributionen.
 - Välj **slutanvändarens uppdateringsstatus** om du vill visa information om principen.
-
-## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrera uppdateringsinställningar till Azure-portalen
-
-Den klassiska Azure-portalen har också ett begränsat antal andra inställningar för Windows 10-uppdateringar i enhetens konfigurationsprofil. Om du har konfigurerat några av dessa inställningar när du migrerade till Azure Portal, rekommenderar vi starkt att utför följande åtgärder:
-
-1. Skapa uppdateringsringar för Windows 10 i Azure Portal med de inställningar som du behöver. Inställningen **Tillåt förhandsfunktioner** stöds inte i Azure-portalen eftersom den inte längre gäller för senaste Windows 10-versionerna. Du kan konfigurera de övriga tre inställningarna samt de andra uppdateringsinställningar för Windows 10 när du skapar uppdateringsringar.
-
-   > [!NOTE]
-   > Uppdateringsinställningar för Windows 10 som har skapats i den klassiska portalen visas inte i Azure-portalen efter migreringen. Dessa inställningar tillämpas dock. Om du har migrerat någon av dessa inställningar och redigerat den migrerade principen från Azure Portal, tas inställningarna bort från principen.
-
-2. Ta bort uppdateringsinställningarna i den klassiska portalen. När du har migrerat till Azure Portal och lagt till samma inställningar i en uppdateringsring, måste du ta bort inställningarna i den klassiska portalen för att undvika eventuella principkonflikter. Exempelvis uppstår det en konflikt när samma inställning konfigureras med olika värden. Det finns inte något enkelt sätt att veta detta, eftersom inställningen som konfigurerats i den klassiska portalen inte visas i Azure-portalen.
 
 ## <a name="next-steps"></a>Nästa steg
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78f79a734d0a7b4901b2248b20abd9d304926dd2
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 4246dab0cf22053d76fdd50f99de53e827332a23
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955515"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547826"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -142,9 +142,9 @@ Följande metoder räknas som auktoriserade som Windows-företagsregistrering:
 - Den registrerande användaren använder ett [konto för enhetsregistreringshanteraren]( device-enrollment-manager-enroll.md).
 - Enheten registreras via [Windows Autopilot](enrollment-autopilot.md).
 - Enheten registreras med Windows Autopilot, men är inte det enda MDM-registreringsalternativet i Windows-inställningarna.
-- Enhetens IMEI-nummer anges i **Enhetsregistrering** > **[ID:n för företagsenheter](corporate-identifiers-add.md)**. (Stöds inte för Windows Phone 8.1.)
+- Enhetens IMEI-nummer anges i **Enhetsregistrering** >  **[ID:n för företagsenheter](corporate-identifiers-add.md)** . (Stöds inte för Windows Phone 8.1.)
 - Enheten registreras via ett [bulketableringspaket](windows-bulk-enroll.md).
-- Enheten registreras via GPO eller [automatisk registrering från SCCM för samhantering](https://docs.microsoft.com/sccm/comanage/quickstart-paths#bkmk_path1).
+- Enheten registreras via GPO eller [automatisk registrering från Configuration Manager för samhantering](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  
 Följande registreringar är markerade som företagets av Intune. Men eftersom Intune-administratören inte har någon kontroll per enhet, kommer de att blockeras:
 - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning under Windows-installationen](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.

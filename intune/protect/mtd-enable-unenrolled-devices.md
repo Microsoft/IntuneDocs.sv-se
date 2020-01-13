@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84f82cf2fde7d400e5531bac219b6cbb4877032f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9571f7d0ae10f33007d5ae50b403580232c2e870
+ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74478918"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545946"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune för oregistrerade enheter
 
 Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip för klassificering av hot i Mobile Threat Defense-partnerkonsolen, och du skapade appskyddsprincipen i Intune. Om du redan har konfigurerat Intune-anslutningen i MTD-partnerkonsolen, kan du nu aktivera MTD-anslutningen för MTD-partnerprogram.
 
 > [!NOTE]
-> Den här artikeln gäller för alla Mobile Threat Defense-partner som har stöd för appskyddsprinciper: Better Mobile (Android), Zimperium (iOS) samt Lookout for Work (Android/iOS).
+> Den här artikeln gäller för alla Mobile Threat Defense-partner som har stöd för appskyddsprinciper: Better Mobile (Android), Zimperium (Android/iOS) samt Lookout for Work (Android/iOS).
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Klassiska principer för villkorlig åtkomst för MTD-appar
 

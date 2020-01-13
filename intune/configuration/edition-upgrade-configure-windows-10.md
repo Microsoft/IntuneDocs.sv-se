@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3595e75a73868378c9c366de6c751c21a9151ae3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 13fca4de8e36b1bdeb9026985e2eabd21e56e924
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059521"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206949"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Uppgradera Windows 10-utgåvor eller växla från S-läge på enheter med Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Som en del av din lösning för hantering av mobila enheter kan du uppgradera Windows 10-enheter. Exempelvis kan du uppgradera dina Windows 10 Professional-enheter till Windows 10 Enterprise. Eller så vill du att enheten ska växla från S-läge.
 

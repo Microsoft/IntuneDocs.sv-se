@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe2377bfd353dc00ddfdf53a6d091c486644194
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d0ef42e301efe2c323ea98265272ba71596a8083
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059383"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206405"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 
@@ -95,7 +95,7 @@ När du arbetar med csv-filen med aktiveringskoderna ser du till att du eller di
 
         ![Exempel på CSV-fil med mobiloperatörens aktiveringskod](./media/esim-device-configuration/url-activation-code-examples.png)
 
-3. CSV-filnamnet blir namnet på mobilabonnemangspoolen i Azure-portalen. I föregående bild är filnamnet `UnlimitedDataSkynet.csv`. Därför ger Intune abonnemangspoolen namnet `UnlimitedDataSkynet.csv`:
+3. CSV-filnamnet blir namnet på mobilabonnemangspoolen i Endpoint Managers administrationscenter. I föregående bild är filnamnet `UnlimitedDataSkynet.csv`. Därför ger Intune abonnemangspoolen namnet `UnlimitedDataSkynet.csv`:
 
     ![Mobilabonnemangspoolen namnges efter CSV-exempelfilens aktiveringskod](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
 

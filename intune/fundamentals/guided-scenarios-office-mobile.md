@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd02e2b7f9582308109d1e6986d7e6a8014e5af7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585715"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691811"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Guidat scenario – Skydda Microsoft Office-mobilappar 
 
@@ -46,7 +46,7 @@ Office-mobilappar och Microsoft Edge för mobila enheter har stöd för dubbla i
 [Intune-appskyddsprinciper](~/apps/app-protection-policy.md) hjälper dig att skydda arbetsfiler på enheter som är registrerade i Intune. Du kan även använda appskyddsprinciper på medarbetarnas enheter som inte har registrerats för hantering i Intune. Även om ditt företag inte hanterar enheten i det här fallet måste du fortfarande se till att arbetsfiler och resurser är skyddade.
 
 Du kan använda appskyddsprinciper för att förhindra att användare sparar arbetsfiler på oskyddade platser. Du kan även begränsa dataflytten till andra appar som inte skyddas av appskyddsprinciper. Principinställningar för appskydd inkluderar:
-- Dataflyttningsprinciper såsom Förhindra Spara som och Begränsa klipp ut, kopiera och klistra in.
+- Dataflyttningsprinciper såsom **Spara kopior av organisationsdata** och **Begränsa klipp ut, kopiera och klistra in**.
 - Åtkomstprincipsinställningar för att kräva enkel PIN för åtkomst och blockera hanterade appar från att köras på jailbrokade eller rotade enheter.
 
 Appbaserad, villkorsstyrd åtkomst och klientapphantering lägger till ett säkerhetslager genom att se till att enbart klientappar som stöder Intunes appskyddsprinciper kommer åt Exchange Online och andra Office 365-tjänster.

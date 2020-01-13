@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f31e500b7a3383c5c0c53f1df72cb4a42660328f
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 4669d02f149e7f815ff94b4daa85c4c539c26c96
+ms.sourcegitcommit: 90369aef160945171435b03d82bae395609c7a62
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74284164"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75500188"
 ---
 
 
@@ -34,7 +34,7 @@ ms.locfileid: "74284164"
 - Windows 10 Teams (Surface Hub)
 
    Mer information om hantering av mobilenheter som kör Windows 10 Teams finns i [Manage Surface Hub with MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) (Hantera Surface Hub med MDM)
-- Windows Phone 8.1, Windows 8.1 RT och datorer som kör Windows 8.1 (hanteringsläge)
+- Windows 10 1709 (RS3) och senare, Windows Phone 8.1, Windows 8.1 RT och datorer som kör Windows 8.1 (hanteringsläge)
 
 > [!NOTE]
 > Det är inte alla Windows-versioner som stöder alla tillgängliga operativsystemfunktioner som konfigureras via MDM. Se [referensdokumenten för Windows Configuration Service Provider](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Varje CSP markerar vilka Windows-versioner som stöds.

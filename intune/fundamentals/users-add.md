@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5b469c759ac34a6d8de09163534a580346e48a1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b25b761b3857fdf91bbbe827d288d09e350a1a7a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73415027"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206099"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Lägga till användare och ge administrativ behörighet till Intune
 
@@ -57,22 +57,20 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Administrat
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Lägg till Intune-användare i Azure-portalen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Användare** > **Alla användare**.
-3. Välj **Ny användare** i administrationscentret.
-   ![Skärmbild av Lägg till ny användare](./media/users-add/intune-add-user.png)
-4. Ange följande användarinformation:
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Användare** > **Alla användare**.
+2. Välj **Ny användare** i administrationscentret.
+3. Ange följande användarinformation:
    - **Namn**
    - **Användarnamn** – Det nya namnet på Azure Active Directory-portalen ![Skärmbild av administrationscenter](./media/users-add/intune-add-user-info.png) Fortsätt genom att välja **OK**.
-5. Om du vill kan du ange följande användaregenskaper:
+4. Om du vill kan du ange följande användaregenskaper:
    - **Profil** – Arbetsrelaterad information inklusive **befattning** och **avdelning**
    - **Grupper** – Välj de grupper du vill lägga till för användaren
    - **Katalogroll** – Ge användaren administratörsbehörighet, inklusive en administratörsroll för Intune-tjänsten.
 
    Välj **Skapa** för att lägga till den nya användaren i Intune.
-6. Välj **Profil** och sedan en **Användningsplats** för den nya användaren. Användningsplatsen krävs innan du kan tilldela den nya användaren en Intune-licens. Fortsätt genom att välja **Spara**.
+5. Välj **Profil** och sedan en **Användningsplats** för den nya användaren. Användningsplatsen krävs innan du kan tilldela den nya användaren en Intune-licens. Fortsätt genom att välja **Spara**.
     ![Skärmbild av Användningsplats](./media/users-add/intune-add-user-loc.png)
-7. Välj **Licenser** och välj sedan **Tilldela** för att tilldela en Intune-licens till den här användaren. En Intune-licens krävs för att registrera enheter eller komma åt företagsresurser. Välj **Produkter**, välj licenstypen, välj **Välj** och välj sedan **Tilldela**.
+6. Välj **Licenser** och välj sedan **Tilldela** för att tilldela en Intune-licens till den här användaren. En Intune-licens krävs för att registrera enheter eller komma åt företagsresurser. Välj **Produkter**, välj licenstypen, välj **Välj** och välj sedan **Tilldela**.
 
 ## <a name="grant-admin-permissions"></a>Bevilja administratörsbehörigheter
 

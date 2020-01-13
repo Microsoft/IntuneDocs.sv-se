@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832728"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547798"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -113,7 +113,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
     4. Aktivera DirSync igen och kontrollera om användaren nu är korrekt synkroniserad.
 
-3. I ett scenario där du använder System Center Configuration Manager med Intune ska du kontrollera att användaren har ett giltigt molnanvändar-ID:
+3. I ett scenario där du använder Configuration Manager med Intune ska du kontrollera att användaren har ett giltigt molnanvändar-ID:
 
     1. Öppna SQL Management Studio.
 
@@ -242,7 +242,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 3. Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
 4. Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5. På varje överordnat certifikat väljer du **Visa certifikat**.
-6. Välj **Information** > **Kopiera till fil...**.
+6. Välj **Information** > **Kopiera till fil...** .
 7. Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för det överordnade certifikatet på önskad plats.
 8. Högerklicka på **Certifikat** > **Alla aktiviteter** > **Importera**.
 9. Följ guidens uppmaningar att importera överordnade certifikat till **Lokal dator\Personliga\Certifikat**.
@@ -332,7 +332,7 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 5. Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
+### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när Configuration Manager används med Intune
 **Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen för Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
 
 - Microsoft Intune Connector på din plats för konfigurationshanteraren kommunicerar inte med Intune-tjänsten.
@@ -419,7 +419,7 @@ När du har rensat de blockerade enheterna kan du be användarna att starta om r
     3. Hitta enheten med registreringsproblemet. Sök efter enhetsnamn eller MAC/HW-adress för att begränsa resultaten.
     4. Välj enheten > **Ta bort**. Ta bort alla andra poster som hör till enheten.  
 
-## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problem när du använder System Center Configuration Manager med Intune
+## <a name="issues-when-using-configuration-manager-with-intune"></a>Problem när du använder Configuration Manager med Intune
 
 ### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner
 

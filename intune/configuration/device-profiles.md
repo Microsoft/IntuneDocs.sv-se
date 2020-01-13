@@ -1,6 +1,6 @@
 ---
 title: Funktioner och inställningar för enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Översikt över de olika enhetsprofilerna i Microsoft Intune. Få information om funktioner, begränsningar, e-post, Wi-Fi, VPN, utbildning, certifikat, uppgradering av Windows 10, BitLocker och Microsoft Defender, Windows Information Protection, administrativa mallar och anpassade inställningar för enhetskonfiguration i Azure-portalen. Använd dessa profiler för att hantera och skydda data och enheter i företaget.
+description: Översikt över de olika enhetsprofilerna i Microsoft Intune. Få information om funktioner, begränsningar, e-post, Wi-Fi, VPN, utbildning, certifikat, uppgradering av Windows 10, BitLocker och Microsoft Defender, Windows Information Protection, administrativa mallar och anpassade inställningar för enhetskonfiguration i administrationscentret för Microsoft Endpoint Manager. Använd dessa profiler för att hantera och skydda data och enheter i företaget.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
-ms.sourcegitcommit: 7001dc5a9cffeb2e161748f9e6dba126bf1cb06f
+ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74694955"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206626"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Tillämpa funktioner och inställningar på dina enheter med enhetsprofiler i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter och plattformar, till exempel iOS, Android och Windows. Använd sedan Intune för att tillämpa eller ”tilldela” profilen till enheterna.
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf872387d6e6f4f91af9f074f54695b081b79119
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 63ebbc22c5452c99439d34813509b5652daef1f0
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74549115"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548099"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Använd inställningar för Uppdatera kanal och Målversion till att uppdatera Office 365 med Microsoft Intunes administrativa mallar
 
@@ -75,7 +75,7 @@ När du har tilldelat principen och synkroniserat enheten, kan du kontrollera at
     ![Exempel på registernyckelns administrativa mall L_Updatebranch](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > I [Hantera Office 365 ProPlus med Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) visas värdena och vad de innebär. Registervärdena baseras på den valda distributionskanalen:
+    > I [Hantera Office 365 ProPlus med Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) visas värdena och vad de innebär. Registervärdena baseras på den valda distributionskanalen:
     >
     >- Månadskanal                - value="Current"
     >- Månadskanal (riktad)     - value="Current"
@@ -95,7 +95,7 @@ I det här läget har Intune-principen tillämpats på enheten.
     - `UpdateChannel`: En dynamisk nyckel som ändras, beroende på de konfigurerade inställningarna.
     - `CDNBaseUrl`: Ange när Office 365 installeras på enheten.
 
-3. Titta på värdet `UpdateChannel`. Värdet visar hur ofta Office uppdateras. I [Hantera Office 365 ProPlus med Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) visas värdena och vad de är inställda på.
+3. Titta på värdet `UpdateChannel`. Värdet visar hur ofta Office uppdateras. I [Hantera Office 365 ProPlus med Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) visas värdena och vad de är inställda på.
 
     I följande exempel visas att `UpdateChannel` har angetts till `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, som är **månadsvis**:
 
@@ -173,7 +173,7 @@ Du kan använda de här stegen för att testa principen innan du distribuerar de
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Uppdatera kanalvärden för Office 365-klienter](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)
+[Uppdatera kanalvärden för Office 365-klienter](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Översikt över molnprinciptjänsten i Office för Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
 

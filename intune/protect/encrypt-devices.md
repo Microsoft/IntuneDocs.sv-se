@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 13d6a2b9cdc8596c7f5cf81218377754e9412be1
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 26013ab06cabdfd64ec3cd34254e3cfa2bb2428d
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390307"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654268"
 ---
 # <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune
 
@@ -86,6 +86,10 @@ Mer information om FileVault-inställningen som du kan hantera med Intune finns 
 När Intune har krypterat en macOS-enhet med FileVault kan du visa och hantera FileVault-återställningsnycklarna när du visar [Intunes krypteringsrapport](encryption-monitor.md).
 
 När Intune har krypterat en macOS-enhet med FileVault kan du visa enhetens personliga återställningsnyckel från företagsportalen på webben på vilken enhet som helst. När du är i Intune-företagsportalen väljer du den krypterade macOS-enheten och väljer sedan Hämta återställningsnyckel som en fjärrenhetsåtgärd.
+
+### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Hämta personlig återställningsnyckel från MEM-krypterade macOS-enheter
+
+Slutanvändarna kommer att kunna hämta sin personliga återställningsnyckel (FileVault Key) med hjälp av iOS-företagsportalappen. Den enhet som har den personliga återställningsnyckeln måste registreras med Intune och krypteras med FileVault via Intune. Med hjälp av iOS-företagsportalappen kan slutanvändaren öppna en webbsida som innehåller den personliga återställningsnyckeln för FileVault. Du kan också hämta återställningsnyckeln från Intune genom att välja **Enheter** > *den krypterade och registrerade macOS-enheten* > **Hämta återställningsnyckel**. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-kryptering för Windows 10
 

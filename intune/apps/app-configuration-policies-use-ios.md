@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a104b4d41a364c552a8ebac73ff3341af71d6d21
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2c447c67e631365e831f033c2811c36d936f2e85
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564171"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547986"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -50,35 +50,35 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 
 ## <a name="create-an-app-configuration-policy"></a>Skapa en appkonfigurationsprincip
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
-5. Ange följande information:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade enheter**.
+3. Ange följande information:
     - **Namn** – namnet på den profil som visas i Azure Portal.
     - **Beskrivning** – beskrivning av den profil som visas i Azure Portal.
-    - **Enhetsregistreringstyp** – Välj **Hanterade enheter** för enheter som har registrerats i Intune.
-6. Välj **iOS** för **Plattform**.
-7. Välj **Tillhörande app**. I fönstret **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på och sedan **OK**.
-8. I fönstret **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**.
-9. Välj **Format för konfigurationsinställningar**. Välj en av följande metoder för att lägga till konfigurationsinformation:
+    - **Enhetsregistreringstyp** – Denna inställning är inställd på **Hanterade enheter**.
+4. Välj **iOS** för **Plattform**.
+5. Välj **Tillhörande app**. I fönstret **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på och sedan **OK**.
+6. Klicka på **Konfigurationsinställningar** för att visa fönstret **Konfigurationsinställningar**.
+7. Välj **Format för konfigurationsinställningar**. Välj en av följande metoder för att lägga till konfigurationsinformation:
     - **Använd Configuration Designer**
     - **Ange XML-data**<br><br>
     Information om hur du använder Configuration Designer finns i [Använda Configuration Designer](#use-configuration-designer). Information om hur du anger XML-data finns i [Ange XML-data](#enter-xml-data). 
-10. När du har lagt till konfigurationsinformationen väljer du **OK** och sedan väljer du **Lägg till** för att lägga till konfigurationsprincipen. Översiktsfönstret för konfigurationsprincipen visas.
-11. Välj **Tilldelningar** för att visa alternativen för att inkludera och exkludera. 
+8. När du har lagt till konfigurationsinformationen väljer du **OK** och sedan väljer du **Lägg till** för att lägga till konfigurationsprincipen. Översiktsfönstret för konfigurationsprincipen visas.
+9. Välj **Tilldelningar** för att visa alternativen för att inkludera och exkludera. 
 
     ![Skärmbild av fliken Inkludera för principtilldelningar](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-12. Välj **Alla användare** på fliken **Inkludera**.
+10. Välj **Alla användare** på fliken **Inkludera**.
 
     ![Skärmbild av principtilldelningar – listrutealternativet Alla användare](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-13. Välj fliken **Exkludera**. 
-14. Klicka på **Välj grupper att utesluta** för att visa det relaterade fönstret.
+11. Välj fliken **Exkludera**. 
+12. Klicka på **Välj grupper att utesluta** för att visa det relaterade fönstret.
 
     ![Skärmbild av Principtilldelningar – fönstret Välj grupper att undanta](./media/app-configuration-policies-use-ios/app-config-policy03.png)
-15. Välj de grupper som du vill exkludera och klicka sedan på **Välj**.
+13. Välj de grupper som du vill exkludera och klicka sedan på **Välj**.
 
     >[!NOTE]
     >Om någon annan grupp redan har inkluderats för en viss tilldelning när du lägger till en grupp så blir den förvald och kan inte ändras för andra tilldelningstyper för inkludering. Gruppen som har använts kan därför inte användas som en undantagen grupp.
-16. Klicka på **Spara**.
+14. Klicka på **Spara**.
 
 ## <a name="use-configuration-designer"></a>Använda Configuration Designer
 
@@ -182,7 +182,7 @@ DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med A
 
 1. Lägg till Intune-företagsportalen i Intune när så behövs genom att gå till **Intune** > **Appar** > **Alla appar** > **Lägg till**.
 2. Om du vill skapa en appkonfigurationsprincip för företagsportalsappen går du till **Appar** > **Appkonfigurationsprinciper**.
-3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du skapar en konfigurationsprincip för appar och anger XML-data finns i [Lägg till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md) eller, för hybrid MDM, [Tillämpa inställningar på iOS-appar med appkonfigurationsprinciper i System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du skapar en konfigurationsprincip för appar och anger XML-data finns i [Lägg till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md) eller, för hybrid MDM, [Tillämpa inställningar på iOS-appar med appkonfigurationsprinciper i Configuration Manager](https://docs.microsoft.com/configmgr/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
     ``` xml
     <dict>

@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7f14e939e7241cd34c01d73e9af822dea7acdc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
+ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74410037"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556410"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Övervaka säkerhetsbaslinje och profil i Microsoft Intune
 
@@ -42,10 +42,14 @@ I fönstret **Översikt** finns två metoder för att övervaka status:
 - **Enhetsvy** – en sammanfattning av hur många enheter som finns i varje statuskategori för baslinjen.
 - **Per kategori** – en vy som visar varje kategori i baslinjen och innehåller procentandelen enheter för varje statusgrupp för varje baslinjekategori.
 
-Varje enhet visas med någon av följande statusar, som används i både *enhetsvyn* och *per kategori-vyerna*:
+Varje enhet visas med någon av följande statusar (som används i både *enhetsvyn* och *per kategori-vyerna*):
 
 - **Matchar baslinjen** – alla inställningarna i baslinjen överensstämmer med de rekommenderade inställningarna.
-- **Matchar inte baslinjen** – minst en inställning i baslinjen matchar inte de rekommenderade inställningarna.
+- **Matchar inte baslinjen** – minst en inställning i baslinjen matchar inte den rekommenderade inställningen.
+
+  > [!NOTE]
+  > När du skapar eller redigerar en baslinjeprofil, gör alla ändringar av ett standardvärde eller en konfigurationsinställning att statusen "Matchar inte baslinjen" visas. Kontakta Microsoft Support om du vill ha hjälp med att avgöra vilka inställningar som har ändrats. 
+
 - **Felkonfigurerad** – minst en inställning har inte konfigurerats korrekt. Denna status innebär att inställningen är i en konflikt, fel eller i ett väntande tillstånd.
 - **Ej tillämpligt** – minst en inställning är inte tillämplig och används inte.
 
@@ -132,7 +136,7 @@ På Windows 10-enheter finns det en inbyggd rapport för MDM-diagnostikinformati
 
 > [!TIP]
 > - Vissa inställningar visar även GUID. Du kan söka efter detta GUID i det lokala registret (regedit) för alla inställda värden.
-> - Loggboken kan också innehålla viss felinformation om den problematiska inställningen (**Loggboken** > **Applikationer och tjänsteloggar**  >   **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
+> - Loggboken kan också innehålla viss felinformation om den problematiska inställningen (**Loggboken** > **Applikationer och tjänsteloggar** >  **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 
 ## <a name="next-steps"></a>Nästa steg
 

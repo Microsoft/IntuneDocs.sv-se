@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 3da8e89679f974c7d91cf19ae37365f75217d153
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563465"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548024"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Använda PowerShell-skript på Windows 10-enheter i Intune
 
@@ -64,9 +64,9 @@ Intune-hanteringstillägget har följande krav. När förhandskraven är uppfyll
 
   - Samhanterade enheter som använder Configuration Manager och Intune. Kontrollera att arbetsbelastningen för **Appar** är inställd på **Pilot Intune** eller **Intune**. Se följande artiklar för vägledning: 
   
-    - [Vad är samhantering?](https://docs.microsoft.com/sccm/comanage/overview) 
-    - [Arbetsbelastning för klientappar](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
-    - [Växla Configuration Manager-arbetsbelastningar till Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
+    - [Vad är samhantering?](https://docs.microsoft.com/configmgr/comanage/overview) 
+    - [Arbetsbelastning för klientappar](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
+    - [Så här växlar du Configuration Manager-arbetsbelastningar till Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
 > [!TIP]
 > Se till att enheterna är [anslutna](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) till Microsoft Azure AD. Enheter som endast är [registrerade](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) i Microsoft Azure AD kommer inte att ta emot skripten.
@@ -134,7 +134,7 @@ Välj det skript som du vill övervaka i fönstret **PowerShell-skript**, välj 
 
 ## <a name="intune-management-extension-logs"></a>Loggar för Intune-hanteringstillägg
 
-Agentloggar på klientdatorn finns vanligtvis i `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Du kan använda [CMTrace.exe](https://docs.microsoft.com/sccm/core/support/tools) för att visa dessa loggfiler. 
+Agentloggar på klientdatorn finns vanligtvis i `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Du kan använda [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) för att visa dessa loggfiler.
 
 ![Skärmbild eller exempel på cmtrace-agentloggar i Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 

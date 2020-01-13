@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3b01c1444b44e3f5c66fc129f78f321c9c9f5aa
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: dce6d71a4bc056146b581458d5c39325adad1584
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563406"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206915"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Självstudie: Konfigurera Slack till att använda Intune för EMM och appkonfiguration
 
@@ -48,32 +48,31 @@ Du måste också en [Slack Enterprise Grid](https://get.slack.help/hc/articles/3
 Du aktiverar EMM för din Slack Enterprise Grid-plan genom att följa [Slacks instruktioner](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) och [ansluta Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) som Grid-planens identitetsprovider (IDP).
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
-Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
+Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Konfigurera Slack för EMM på iOS-enheter
 Lägg till iOS-appen Slack för EMM till Intune-klienten och skapa en appkonfigurationsprincip för att möjliggöra för dina organisationers iOS-användare att få åtkomst till Slack med Intune som EMM-provider.
 
 ### <a name="add-slack-for-emm-to-intune"></a>Lägg till Slack för EMM i Intune
 Lägg till Slack för EMM som en hanterad iOS-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på Android-enheter.
-1. Välj **Appar** > **Alla appar** > **Lägg till** i Intune.
-2. Under Apptyp väljer du **Store-app – iOS**.
-3. Välj **Sök i App Store**. Ange sökorden ”Slack för EMM” och välj appen.
-4. Välj **Appinformation** och konfigurera eventuella ändringar som du tycker behövs.
-5. Välj **Lägg till**.
-6. Ange ”Slack för EMM” i sökfältet och välj den app som du just lade till.
-7. Välj **Tilldelningar** under Hantera.
-8. Välj **Lägg till grupp**. Beroende på vilka som du har valt ska påverkas när du aktiverade EMM för Slack, kan du under **Tilldelningstyp** välja:
+1. Välj **Appar** > **Alla appar** > **Lägg till** i administrationscentret.
+2. Under **Apptyp** väljer du **iOS**-Store-appen.
+3. Välj **Sök i App Store**. Ange sökorden ”Slack för EMM” och välj appen. Klicka på **Välj** i **Sök i App Store**-fönstret.
+4. Välj **Appinformation** och konfigurera eventuella ändringar som du tycker behövs. Välj **OK** för att ange information om din app.
+5. Klicka på **Lägg till**.
+6. Välj **Tilldelningar**.
+7. Klicka på **Lägg till grupp**. Beroende på vilka som du har valt ska påverkas när du aktiverade EMM för Slack, kan du under **Tilldelningstyp** välja:
     - **Tillgänglig för registrerade enheter** om du väljer ”Alla medlemmar (inklusive gäster)” ELLER
     - **Tillgänglig med eller utan registrering** om du väljer ”Alla medlemmar (exklusive gäster)” eller ”Valfritt”.
-9. Välj **Inkluderade grupper**. Under Gör den här appen tillgänglig för alla användare väljer du **Ja**.
-10. Klicka på **OK** och sedan på **OK** igen.
-11. Klicka på **Spara**.
+8. Välj **Inkluderade grupper**. Under **Gör den här appen tillgänglig för alla användare** väljer du **Ja**.
+9. Klicka på **OK** och sedan på **OK** igen för att lägga till gruppen.
+10. Klicka på **Spara**.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Lägga till en appkonfigurationsprincip till Slack för EMM
 Lägg till en appkonfigurationsprincip till Slack för EMM iOS. Appkonfigurationsprinciper för hanterade enheter är plattformsspecifika, så du måste lägga till en separat princip för dina Slack-användare på Android-enheter.
-1. Gå till Intune och välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
-2. Ange Test av appkonfigurationsprincip för Slack vid Namn.
-3. Under Registreringstyp för enhet väljer du **Hanterade enheter**.
+1. I administrationscentret väljer du **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade enheter**.
+2. Ange ”Test av appkonfigurationsprincip för Slack” vid Namn.
+3. Under Registreringstyp för enhet bekräftar du att **Hanterade enheter** har angetts.
 4. Under Plattform väljer du **iOS**.
 5. Välj **Tillhörande app**.
 6. Ange ”Slack för EMM” i sökfältet och välj appen.
@@ -86,7 +85,7 @@ Lägg till en appkonfigurationsprincip till Slack för EMM iOS. Appkonfiguration
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>(Valfritt) Skapa en iOS-enhetsefterlevnadsprincip
 Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel. I den här självstudien skapar vi en enhetsefterlevnadsprincip för iOS-enheter. Efterlevnadspolicyer är plattformsspecifika så du måste skapa en separat princip för dina Slack-användare på Android-enheter.
-1. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip** i Intune.
+1. I administrationscentret väljer du **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
 2. Vid Namn anger du ”Test av iOS-efterlevnadsprincip”.
 3. I Beskrivning anger du ”Test av iOS-efterlevnadsprincip”.
 4. Under Plattform väljer du **iOS**.

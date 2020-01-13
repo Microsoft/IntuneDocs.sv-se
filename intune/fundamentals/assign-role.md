@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e337d47757e3c5507c94433f90d5c2863bc1b0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c82805bf70259d43d738644e5663b93533bcb56a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503006"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207170"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Tilldela en roll till en Intune-användare
 
@@ -32,27 +32,23 @@ För att kunna skapa, redigera eller tilldela roller måste ditt konto ha en av 
 - **Global administratör**
 - **Intune Service-administratör**
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Roller** > **Alla roller**.
 
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+2. På bladet **Intune-roller – Alla roller** väljer du den inbyggda roll som du vill tilldela.
 
-3. På bladet **Intune** väljer du **Roller** > **Alla roller**.
+3. På bladet <*rollnamn*> – **Översikt** väljer du **Hantera** > **Tilldelningar**.
 
-4. På bladet **Intune-roller – Alla roller** väljer du den inbyggda roll som du vill tilldela.
+4. På bladet anpassad roll väljer du **Tilldela**.
 
-5. På bladet <*rollnamn*> – **Översikt** väljer du **Hantera** > **Tilldelningar**.
+5. På bladet **Rolltilldelningar** anger du ett **Tilldelningsnamn** och en valfri **Tilldelningsbeskrivning** för tilldelningen.
 
-6. På bladet anpassad roll väljer du **Tilldela**.
+6. I **Medlemmar (grupper)** väljer du den grupp som innehåller användaren som du vill ge behörighet till.
 
-7. På bladet **Rolltilldelningar** anger du ett **Tilldelningsnamn** och en valfri **Tilldelningsbeskrivning** för tilldelningen.
+7. För **Omfång (grupper)** väljer du en grupp som innehåller de användare/enheter som ovanstående medlem ska kunna hantera.
 
-8. I **Medlemmar (grupper)** väljer du den grupp som innehåller användaren som du vill ge behörighet till.
+8. För **Omfång (taggar)** väljer du de taggar som den här rolltilldelningen ska tillämpas på.
 
-9. För **Omfång (grupper)** väljer du en grupp som innehåller de användare/enheter som ovanstående medlem ska kunna hantera.
-
-10. För **Omfång (taggar)** väljer du de taggar som den här rolltilldelningen ska tillämpas på.
-
-11. När du är klar väljer du **OK**. Den nya tilldelningen visas i listan över tilldelningar.
+9. När du är klar väljer du **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
 
 ## <a name="next-steps"></a>Nästa steg

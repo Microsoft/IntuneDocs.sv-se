@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: ec80922cf2539fdbacb572fd96c5a5e45549b5c3
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564271"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205045"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Lägg till konfigurationsprinciper för hanterade Android Enterprise-enheter
 
@@ -34,15 +34,15 @@ Konfigurationsprinciper för appar i Microsoft Intune tillhandahåller inställn
 > [!NOTE]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
 
-1. Gå till [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Appar** > **Appkonfigurationsprinciper** >  **Lägg till**.
-2. Ange följande egenskaper:
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Appar** > **Appkonfigurationsprinciper** >  **Lägg till** > **Hanterade enheter**.
+2. Lägg till följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra exempel på ett principnamn är **Android Enterprise Nine Work-apprincip för hela företaget**.
     - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Enhetsregistreringstyp**: Välj **Hanterade enheter**.
+    - **Enhetsregistreringstyp**: Den här inställningen är inställd på **Hanterade enheter**.
     - **Plattform**: Välj **Android**.
 
-3. Välj **Tillhörande app**. Välj den app som du vill definiera en konfigurationsprincip för. Välj i listan med Google Play för företag-appar som du har godkänt och synkroniserat med Intune.
+3. Välj **Tillhörande app**. Välj den Android-app som den här appkonfigurationsprincipen ska kopplas till. Välj i listan med [hanterade Google Play-appar som du har godkänt och synkroniserat med Intune](~/apps/apps-add-android-for-work.md).
 4. Välj **Behörigheter**. Du kan ange konfigurationer med:
 
     - [Configuration Designer](#use-the-configuration-designer)
@@ -110,12 +110,12 @@ Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till
 
 En app använder till exempel enhetens mikrofon. Användaren uppmanas att ge appen behörighet att använda mikrofonen.
 
-1. Gå till [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välj **Appar** > **Appkonfigurationsprinciper** >  **Lägg till**.
-2. Ange följande egenskaper:
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Appar** > **Appkonfigurationsprinciper** >  **Lägg till** > **Hanterade enheter**.
+2. Lägg till följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra exempel på ett principnamn är **Android Enterprise fråga apprincip för hela företaget**.
     - **Beskrivning**. Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Enhetsregistreringstyp**: Välj **Hanterade enheter**.
+    - **Enhetsregistreringstyp**: Den här inställningen är inställd på **Hanterade enheter**.
     - **Plattform**: Välj **Android**.
 
 3. Välj **Tillhörande app**. Välj den app som du vill definiera en konfigurationsprincip för. Välj i listan med Android-arbetsprofilappar som du har godkänt och synkroniserat med Intune.

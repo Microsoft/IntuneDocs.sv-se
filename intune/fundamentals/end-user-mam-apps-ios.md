@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1a3dcd7068a004f94b97b5ec6c43c609662a76d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 165ce160339647e396b9cfc3a8374f21c77665f8
+ms.sourcegitcommit: f9dc50642efa8656054ef67f9335b9b46b655f93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414563"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75606629"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
 
- Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper tillämpas endast när appar används i arbetssammanhang, exempelvis när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras på en OneDrive för företag-plats.
+Intunes appskyddsprinciper tillämpas på appar som används för arbete eller skola. Det innebär att när dina anställda och studenter använder sina appar i ett personligt sammanhang, kan de se till att upplevelsen blir likadan. I arbets- eller skolsammanhang kan de däremot få meddelanden om att fatta kontobeslut, uppdatera inställningar eller kontakta dig för hjälp. Använd den här artikeln för att lära dig vad dina användare upplever när de försöker komma åt och använda Intune-skyddade appar.  
 
 ## <a name="access-apps"></a>Åtkomstappar
 
@@ -40,30 +40,29 @@ För enheter som **har registrerats för hantering i Intune** ser användaren et
 
 ## <a name="use-apps-with-multi-identity-support"></a>Använda appar med stöd för flera identiteter
 
-Med appar som stöder flera identiteter kan du använda olika konton (arbetskonton och privata konton) för att få åtkomst till samma appar, där appskyddsprinciperna endast tillämpas när apparna används i arbetskontexten.  
+Appar som stöder flera identiteter gör att du kan använda olika arbetskonton och personliga konton för att komma åt samma appar. Appskyddsprinciper, som att ange en PIN-kod för enheten, aktiveras när användarna kommer åt dessa appar i ett arbets- eller skolsammanhang.   
 
-Användaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt arbetsdata. För **Outlook-appen**, uppmanas användaren att ange en PIN-kod när hen startar appen. För **OneDrive-appen**, uppmanas användaren att ange en PIN-kod när hen skriver i arbetskontot.  För Microsoft **Word**, **PowerPoint** och **Excel**, uppmanas användaren att ange en PIN-kod när hen har åtkomst till dokument som lagras i företagets OneDrive för företag.
+Användarna kan uppleva inmatningen av PIN-koden på olika sätt i sina olika appar, beroende på hur du konfigurerar principerna.  Du kan till exempel konfigurera principerna så att:       
+* Outlook-appen uppmanar användarna att ange en PIN-kod när de startar appen. 
+* OneDrive uppmanar användarna att ange en PIN-kod när de loggar in på sitt arbetskonto.  
+* Microsoft, PowerPoint och Excel uppmanar användarna att ange en PIN-kod när de använder dokument som lagrats i företagets OneDrive för företag.  
 
-- Mer information om appar som stöder [appskydd och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.
+- Mer information om appar som stöder [appskydd och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.  
 
-Appskyddsprinciper tillämpas bara i arbetssammanhang. Därför kan appen fungerar på olika sätt beroende på om sammanhanget är arbete eller personligt.
+## <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten  
 
-## <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
+Intunes appskyddsprinciper begränsar användare till ett hanterat arbets- eller skolkonto per app. Appskyddsprinciperna begränsar inte antalet ohanterade konton som en användare kan lägga till.   
 
-Med program med stöd för flera identiteter är det möjligt för användare att lägga till flera konton.  Intune APP har endast stöd för ett hanterat konto.  Intune APP begränsar inte antalet ohanterade konton.
+- Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas. Om användaren lägger till ett andra konto tas det första kontot bort.
+- Om du lägger till skyddsprinciper till en annan användares konton uppmanas användaren att välja vilket hanterat konto som ska användas. Det andra kontot tas bort. 
 
-När ett hanterat konto finns i ett program:
+Vissa användare får inte möjlighet att växla eller välja mellan hanterade konton. Alternativet är inte tillgängligt på enheter som:
+* Hanteras av Intune  
+* Hanteras av lösningar för hantering av företagsmobilitet från tredje part och konfigureras med IntuneMAMUPN-inställningen 
 
-- Om en användare försöker lägga till ett andra hanterat konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
-- Om IT-administratören lägger till principer till ett andra befintligt konto uppmanas användaren att välja vilket av de hanterade kontona som ska användas.  Det andra kontot tas bort.
+Följande exempelscenario beskriver hur användarkonton med flera användare behandlas:  
 
-Läs följande exempel för att få en bättre förståelse för hur flera användarkonton behandlas.
-
-Användare A arbetar för två företag – **Företag X** och **Företag Y**. Användare A har ett arbetskonto för varje företag och båda använder Intune för att distribuera appskyddsprinciper. **Företag X** distribuerar appskyddsprinciper **före** **Företag Y**. Det konto som är associerad med **Företag X** får appskyddsprincipen först. Om du vill att användarkontot som är kopplat till Företag Y ska hanteras av appskyddsprinciperna måste du ta bort användarkontot som är kopplat till Företag X och lägga till användarkontot som är associerat med Företag Y.
-
-### <a name="add-a-second-account"></a>Lägg till ett andra konto
-
-Om du använder en iOS-enhet kanske ett blockeringsmeddelande visas om du försöker lägga till ett andra arbetskonto på samma enhet. Kontona visas och sedan kan du välja det konto som du vill ta bort.
+Användare A arbetar för två företag – **Företag X** och **Företag Y**. Användare A har ett arbetskonto för varje företag och båda använder Intune för att distribuera appskyddsprinciper. **Företag X** distribuerar appskyddsprinciper **före** **Företag Y**. Det konto som är associerad med **Företag X** får appskyddsprincipen först. Om du vill att användarkontot som är kopplat till Företag Y ska hanteras av appskyddsprinciperna måste du ta bort användarkontot som är kopplat till Företag X och lägga till användarkontot som är associerat med Företag Y.  
 
 ## <a name="next-steps"></a>Nästa steg
 

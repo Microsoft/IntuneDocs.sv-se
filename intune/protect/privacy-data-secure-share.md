@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b17b87462b2c73e265f062c33a06a810e7c58bf8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cfa2c5366d1b38cf819cfc68840a29fad9002979
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504344"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548113"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Datasäkerhet och delning i Intune
 
@@ -68,11 +68,11 @@ Information om data som delas med vissa tredje parter finns i följande artiklar
 - [Data som Google skickar till Intune](data-google-sends-to-intune.md)
 - [Data som Jamf Pro skickar till Intune](data-jamf-sends-to-intune.md)
 
-### <a name="system-center-configuration-manager-data-sharing"></a>System Center Configuration Manager-datadelning
+### <a name="microsoft-endpoint-configuration-manager-data-sharing"></a>Datadelning i Microsoft Endpoint Configuration Manager
 
-Microsoft Intune delar inte data med System Center Configuration Manager. System Center Configuration Manager är en lokal produkt som distribueras, hanteras och drivs direkt av kunden. Diagnostik och användningsdata som samlas in av Configuration Manager används endast för att förbättra installationsproceduren, kvaliteten och säkerheten i framtida versioner.
+Microsoft Intune delar inte data med Configuration Manager. Configuration Manager är en lokal produkt som distribueras, hanteras och drivs direkt av kunden. Diagnostik och användningsdata som samlas in av Configuration Manager används endast för att förbättra installationsproceduren, kvaliteten och säkerheten i framtida versioner.
 
-Mer information finns i [Diagnostik och användningsdata för SCCM](https://docs.microsoft.com/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Mer information finns i [Diagnostik- och användningsdata för Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Nästa steg

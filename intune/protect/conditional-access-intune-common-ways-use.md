@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9795ca8a585fd926cc269d493760b37aa7666eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74051965"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547049"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -83,11 +83,11 @@ Villkorlig åtkomst för datorer har ungefär samma funktioner som för mobila e
 
 #### <a name="corporate-owned"></a>Företagsägd
 
-- **Lokalt domänansluten AD:** Det här alternativet används ofta av organisationer som är relativt nöjda med sitt sätt att hantera datorer via AD-grupprinciper eller System Center Configuration Manager.
+- **Lokalt domänansluten AD:** Det här alternativet används ofta av organisationer som är relativt nöjda med sitt sätt att hantera datorer via AD-grupprinciper eller Configuration Manager.
 
 - **Domänansluten Azure AD och Intune-hantering:** Det här scenariot är avsett för organisationer som vill vara delvis molnbaserade (som huvudsakligen använder molntjänster med målet för att minska användningen av en lokal infrastruktur) eller enbart molnbaserade (ingen lokal infrastruktur). Azure AD Join fungerar bra i en hybridmiljö, vilket ger åtkomst till såväl molnet som lokala appar och resurser. Enheten ansluter till Azure AD och registreras i Intune som kan användas som ett villkor för villkorlig åtkomst till företagsresurser.
 
-- **Domänansluten AD och System Center Configuration Manager:** Från och med den aktuella grenen tillhandahåller System Center Configuration Manager funktioner för villkorsstyrd åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
+- **Domänansluten AD och Configuration Manager:** Från och med den aktuella grenen tillhandahåller Configuration Manager funktioner för villkorsstyrd åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
 
   - Har datorn krypterats?
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 88b7411095aee1b1d3a892ce4845812ceb1a9ac9
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390290"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547070"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Skapa och tilldela SCEP-certifikatprofiler i Intune
 
@@ -275,7 +275,7 @@ Tilldela SCEP-certifikatprofiler på samma sätt som du [distribuerar enhetsprof
 
 - Om du vill publicera certifikat till enheter kort efter att enheten registrerats, tilldelar du certifikatprofilen till en användargrupp i stället för en enhetsgrupp. Om du tilldelar till en enhetsgrupp krävs en fullständig enhetsregistrering innan enheten kan ta emot principer.
 
-- Om du använder samhantering för Intune och Configuration Manager i Configuration Manager ska du [ange arbetsbelastningsreglaget](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) för resursåtkomstprincipen till **Intune** eller **Pilot Intune**. Den här inställningen gör att Windows 10-klienter kan starta processen för att begära certifikatet.
+- Om du använder samhantering för Intune och Configuration Manager i Configuration Manager ska du [ange arbetsbelastningsreglaget](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) för resursåtkomstprinciper till **Intune** eller **Pilot Intune**. Den här inställningen gör att Windows 10-klienter kan starta processen för att begära certifikatet.
 
 - Även om du skapar och tilldelar den betrodda certifikatprofilen och SCEP-certifikatprofilen separat måste båda tilldelas. Om inte båda är installerade på en enhet misslyckas SCEP-certifikatprincipen. Se till att alla betrodda rotcertifikatprofiler också distribueras till samma grupper som SCEP-profilen.
 
