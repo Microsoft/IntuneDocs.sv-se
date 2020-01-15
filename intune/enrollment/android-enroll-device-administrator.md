@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 309860fb5ddf6fa9488ecaf395534bf869234176
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: ebeb5830136ad6dae19babbc8ecf45c1d6e5c36c
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547852"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885977"
 ---
 # <a name="android-device-administrator-enrollment"></a>Administratörsregistrering för Android-enhet
 
@@ -36,10 +36,6 @@ Av samma skäl rekommenderar vi också att du migrerar enheter från enhetsadmin
 Mer information om Intune-support för stöd för Android-enhetsadministratörer finns i [området Meddelanden](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Fortsätt till nästa avsnitt om du fortfarande vill att användarna ska registrera sina Android-enheter med enhetsadministratörshantering.  
-
-
-> [!Note]  
-> Android 10 och högre stöds inte i hybridhantering av mobila enheter (hybrid-MDM, Intune som hanteras med Configuration Manager-konsolen) eftersom hybrid-MDM tas ur drift den 1 september 2019. Om du fortfarande använder hybrid-MDM bör du migrera till fristående Intune så snart som möjligt. Kontakta supporten om du behöver hjälp med att migrera. Mer information finns i [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://aka.ms/hybrid_notification).
 
 Mer information om Googles Android Enterprise-funktioner finns i följande artiklar:
 - [Googles vägledning för migrering från enhetsadministratör till Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)

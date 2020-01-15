@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd320dddeb7717461188bdb701044bf060e7d75e
-ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
+ms.openlocfilehash: 4e5a16a8be6fcce8c6c34d3ddf8979b17eccddd1
+ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/21/2019
-ms.locfileid: "75324890"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75920124"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -178,11 +178,6 @@ Krav: Azure Active Directory Företagsportal har konfigurerats och Windows 10, v
     ![Skärmbild av eget namn](./media/enrollment-autopilot/friendly-name.png)
 
 4. Välj **Ok**.
-
-## <a name="autopilot-deployments-report"></a>Rapport om Autopilot-distributioner
-Du kan se information om varje enhet som distribueras via Windows Autopilot.
-Om du vill se rapporten går du till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och väljer **Enheter** > **Övervaka** > **Autopilot-distributioner**.
-Data är tillgängliga i 30 dagar efter distribution.
 
 
 ## <a name="delete-autopilot-devices"></a>Ta bort Autopilot-enheter

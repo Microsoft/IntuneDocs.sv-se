@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 92e6aa1a66429c6407556444e903c158aff9dfa0
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547049"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885986"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -86,14 +86,6 @@ Villkorlig åtkomst för datorer har ungefär samma funktioner som för mobila e
 - **Lokalt domänansluten AD:** Det här alternativet används ofta av organisationer som är relativt nöjda med sitt sätt att hantera datorer via AD-grupprinciper eller Configuration Manager.
 
 - **Domänansluten Azure AD och Intune-hantering:** Det här scenariot är avsett för organisationer som vill vara delvis molnbaserade (som huvudsakligen använder molntjänster med målet för att minska användningen av en lokal infrastruktur) eller enbart molnbaserade (ingen lokal infrastruktur). Azure AD Join fungerar bra i en hybridmiljö, vilket ger åtkomst till såväl molnet som lokala appar och resurser. Enheten ansluter till Azure AD och registreras i Intune som kan användas som ett villkor för villkorlig åtkomst till företagsresurser.
-
-- **Domänansluten AD och Configuration Manager:** Från och med den aktuella grenen tillhandahåller Configuration Manager funktioner för villkorsstyrd åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
-
-  - Har datorn krypterats?
-
-  - Har skydd mot skadlig kod installerats? Är den uppdaterad?
-
-  - Är enheten är jailbrokad eller rotad?
 
 #### <a name="bring-your-own-device-byod"></a>BYOD (Bring Your Own Device)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86640c831e8836a72ad5a0a7d5023ff7d836a43a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 501bfcbef0dd46f6021fc5db16cf3b9e2f2cd0c0
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801560"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885998"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurera infrastrukturen för att stödja SCEP med Intune
 
@@ -373,8 +373,7 @@ Microsoft Intune Certificate Connector installeras på den server som kör din N
 
    2. Kör installationsprogrammet (**NDESConnectorSetup.exe**). Installationsprogrammet installerar även policymodulen för NDES och IIS-certifikatregistreringsplatsens (CRP) webbtjänst. CRP-webbtjänsten, *CertificateRegistrationSvc*, körs som ett program i IIS.
 
-      - När du installerar NDES för fristående Intune installeras CRP-tjänsten automatiskt med certifikatanslutningsappen.
-      - När du använder Intune med Configuration Manager installerar du certifikatregistreringsplatsen som en Configuration Manager-platssystemroll.
+      När du installerar NDES för fristående Intune installeras CRP-tjänsten automatiskt med certifikatanslutningsappen.
 
 5. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen väljer du **Välj** och väljer det certifikat för **klientautentisering** som du installerade på NDES-servern under steg 3 i proceduren [Installera och binda certifikat på den server som är värd för NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) tidigare i den här artikeln.
 

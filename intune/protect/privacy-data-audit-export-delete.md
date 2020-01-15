@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cfb0f69d74cc6146b2497cd53be3e123f79cc70
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fdcf88449a4f6ec0b3b352afb87ebcb5bd0b8389
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504354"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885733"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Granska, exportera eller ta bort personliga data i Intune
 
@@ -74,16 +74,6 @@ Användare kan ta bort sin personliga [Android-, Apple- eller Windows-enhet](htt
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Ta bort en klientorganisation från Microsoft Intune
 
 Om en Intune-klientorganisationskund avbryter sitt Intune-konto tas alla klientorganisationsdata bort inom 180 dagar efter att kunden har stängt Intune-kontot. Om AAD-klientorganisationen är associerad med andra Microsoft-företagsprenumerationer (Azure, Office 365) tas endast Intune-kunddata bort. AAD-klientorganisationsresursen underhålls för användning av de andra prenumerationerna. Om Intune-kontot är den enda prenumeration som associeras med AAD-klientorganisationen tas klientorganisationen bort, och alla resurser och kunddata tas också bort.
-
-### <a name="delete-a-user-in-a-hybrid-mobile-device-management-mdm-environment"></a>Ta bort en användare i en miljö för hantering av mobila hybridenheter (MDM)
-När du har en hybrid-MDM-miljö (Intune integrerat med Configuration Manager) måste du utföra följande åtgärder (i ordning) för att helt radera en användare och ta bort den fullständigt från din lokala Active Directory, Configuration Manager och Intune.
-
-1. Ta bort användaren från din lokala Azure Active Directory (AD). Detta förhindrar att användaren synkroniseras till Azure AD och identifieras av Configuration Manager-identifiering. 
-2. Ta bort användaren från Configuration Manager-konsolen för att ta bort användaren och associerade data från Configuration Manager. I konsolen går du till **Tillgångar och efterlevnad** > **Användare**, högerklickar på användaren för att ta bort och klickar på **Ta bort**.
-3. [Ta bort användaren från AAD](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), som tar bort användaren och associerade data från både Azure Active Directory och Intune på samma gång. När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
-
-> [!Important]
->Registrering av nya hybrid-MDM-kunder är nu inaktuell. Mer information finns i blogginlägget [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
 
 ## <a name="next-steps"></a>Nästa steg
 
