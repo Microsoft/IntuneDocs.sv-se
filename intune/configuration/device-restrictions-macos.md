@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6513c09f252d5a914ace4e57e5a593877a387172
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72776887"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206558"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I den här artikeln beskrivs de olika inställningar som du kan kontrollera på macOS-enheter. Som en del av din MDM-lösning (hantering av mobilenheter) använder du dessa inställningar för att tillåta eller inaktivera funktioner, ange lösenordsregler, tillåta eller begränsa specifika appar med mera.
 
@@ -42,9 +42,9 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
-- **Definitionssökning**: **Blockera** förhindrar att användare markerar ett ord och sedan söka upp dess definition på enheten. **Inte konfigurerad** (standard) ger åtkomst till definitionssökningsfunktionen.
-- **Diktering**: **Blockera** förhindrar att användaren använder röstindata för att ange text. **Inte konfigurerat** (standard) tillåter användaren att använda röstindata.
-- **Blockera innehållscachelagring**: Välj **Inte konfigurerad** (standard) för att aktivera cachelagring av innehåll. Innehållscachelagring lagrar till exempel appdata, data i webbläsaren och nedladdningar lokalt på enheten. Välj **Blockera** om du vill förhindra att dessa data lagras i cacheminnet.
+- **Slå upp definition**: **Blockera** förhindrar användare från att markera ett ord och sedan söka upp dess definition på enheten. **Inte konfigurerad** (standard) ger åtkomst till definitionssökningsfunktionen.
+- **Diktering**: **Blockera** hindrar användaren från att använda röstindata för att ange text. **Inte konfigurerat** (standard) tillåter användaren att använda röstindata.
+- **Cachelagring av innehåll**: Välj **Inte konfigurerad** (standard) för att aktivera cachelagring av innehåll. Innehållscachelagring lagrar till exempel appdata, data i webbläsaren och nedladdningar lokalt på enheten. Välj **Blockera** om du vill förhindra att dessa data lagras i cacheminnet.
 
   Mer information om cachelagring av innehåll på macOS finns i [Hantera cachelagring av innehåll på Mac](https://support.apple.com/guide/mac-help/manage-content-caching-on-mac-mchl3b6c3720/mac) (en annan webbplats öppnas).
 
@@ -55,7 +55,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
   **Aktivera** gör att du kan skjuta upp visningen av programuppdateringar på enheter i 0–90 dagar. Den här inställningen styr inte när uppdateringar installeras eller inte. 
 
-  - **Fördröj visning av programuppdateringar**: Ange ett värde mellan 0 och 90 dagar. När fördröjningen upphör får användarna ett meddelande om att uppdatera till den tidigaste versionen av OS som var tillgänglig när fördröjningen utlöstes.
+  - **Fördröj visning av programuppdateringar**: Ange ett värde mellan 0–90 dagar. När fördröjningen upphör får användarna ett meddelande om att uppdatera till den tidigaste versionen av OS som var tillgänglig när fördröjningen utlöstes.
 
     Exempel: Om en macOS-uppdatering är tillgänglig **den 1 januari** och **Fördröjd visning** är inställt på **5 dagar**, så visas inte uppdateringen som en tillgänglig uppdatering. På **den sjätte dagen** efter utgivningen är uppdateringen tillgänglig och slutanvändarna kan installera den.
 
@@ -80,25 +80,25 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 - **Studenter kan automatiskt ansluta klass rums klassen**: **Tillåt att** studenter ansluter till en klass utan att behöva lämna läraren. **Inte konfigurerad** (standard) kräver godkännande av lärare för att ansluta till en klass.
 
-## <a name="password"></a>Lösenord
+## <a name="password"></a>lösenordsinställning
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
-- **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) kräver inget lösen ord. Det gäller inte heller några begränsningar, till exempel att blockera enkla lösen ord eller att ange en minimal längd.
-  - **Krav på lösenordstyp**: Ange om lösenordet kan bestå av endast numeriska tecken om det måste vara alfanumeriskt (innehålla bokstäver och siffror).
+- **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) kräver inget lösen ord. Det gäller inte heller några begränsningar, till exempel att blockera enkla lösen ord eller att ange en minimal längd.
+  - **Lösenordstyp som krävs**: Ange om lösenordet kan vara endast Numeriskt eller om det måste vara Alfanumeriskt (innehålla bokstäver och siffror).
 
     Den här funktionen gäller för:  
     - macOS 10.10.3 och senare
 
-  - **Antal icke-alfanumeriska tecken i lösenord**: Ange antalet avancerade tecken i lösenordet (**0** till **4**).<br>Ett avancerat tecken är en symbol, t.ex. ” **?** ”.
-  - **Minsta längd på lösenord**: Ange den minsta längd på lösenord som en användare måste konfigurera (mellan **4** och **16** tecken).
-  - **Enkla lösenord**: Låt användarna skapa enkla lösenord, till exempel **0000** eller **1234**.
-  - **Största antal minuter innan lösenord krävs efter det att skärmen låsts**: Ange hur länge datorn måste vara inaktiv innan ett lösenord krävs för att låsa upp den.
+  - **Antal icke-alfanumeriska tecken i lösenord**: Ange det antal avancerade tecken som krävs i lösenordet (**0** till **4**).<br>Ett avancerat tecken är en symbol, t.ex. ” **?** ”.
+  - **Minsta lösenordslängd**: Ange den minsta längden på lösenord som en användare måste konfigurera (mellan **4** och **16** tecken).
+  - **Enkla lösenord**: Låt användarna skapa enkla lösenord som **0000** eller **1234**.
+  - **Maximalt antal minuter efter skärmlås innan ett lösenord krävs**: Ange hur länge datorn måste vara inaktiv innan ett lösenord krävs för att låsa upp den.
   - **Maximalt antal minuter av inaktivitet innan skärmen låses**: Anger hur lång tid datorn måste vara i viloläge innan skärmen låses.
-  - **Lösenordets giltighetstid (i dagar)** : Ange efter hur många dagar användaren måste byta lösenord (**1** till **255** dagar).
-  - **Förhindra återanvändning av tidigare lösenord**: Ange det antal tidigare lösenord som inte får återanvändas, från **1** till **24**.
+  - **Lösenordets giltighetstid (dagar)** : Ange efter hur många dagar användaren måste byta lösenord (**1** till **255** dagar).
+  - **Förhindra återanvändning av tidigare lösenord**: Ange antal tidigare använda lösenord som inte får återanvändas, från **1** till **24**.
 
-- **Block User from Modifying Passcode** (Förhindra att användare ändrar lösenord): Välj **Blockera** för att förhindra att lösenordet ändras, läggs till eller tas bort. **Inte konfigurerad** (standard) tillåter att lösenord läggs till, ändras eller tas bort.
+- **Blockera användare från att ändra lösenkod**: Välj **Blockera** om du vill förhindra att lösenkoden ändras, läggs till eller tas bort. **Inte konfigurerad** (standard) tillåter att lösenord läggs till, ändras eller tas bort.
 - **Blockera upplåsning med fingeravtryck**: Välj **Blockera** om du vill förhindra att fingeravtryck används för att låsa upp enheten. **Inte konfigurerad** (standard) tillåter att användare låser upp enheten med ett fingeravtryck.
 
 - **Blockera automatisk ifyllning av lösenord**: Förhindra användningen av funktionen för automatisk ifyllning av lösenord i macOS genom att välja **Blockera**. Inställningen **Blockera** har också följande effekt:
@@ -116,11 +116,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
-- **Blockera Autofyll i Safari**: **Blockera** inaktiverar funktionen Autofyll i Safari på enheten. **Inte konfigurerad** (standard) tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren.
+- **Blockera autofyll i Safari**: **Blockera** inaktiverar funktionen Autofyll i Safari på enheten. **Inte konfigurerad** (standard) tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren.
 - **Blockera kamera**: Välj **Blockera** om du vill förhindra åtkomst till enhetens kamera. **Inte konfigurerad** (standard) ger åtkomst till enhetens kamera.
 - **Blockera Apple Music**: **Blockera** återställer appen Apple Music till klassiskt läge och inaktiverar tjänsten Musik. **Inte konfigurerad** (standard) tillåter att Apple Music-appen används.
-- **Block Spotlight Internet Search Results** (Blockera resultat från Internetsökningar i Spotlight): **Blockera** hindrar Spotlight från att returnera resultat från en Internetsökning. **Inte konfigurerad** (standard) tillåter att Spotlight-sökningar ansluter till Internet för att visa sökresultat.
-- **Block File Transfer using iTunes** (Blockera filöverföringar med iTunes): **Blockera** inaktiverar fildelningstjänster för program. **Inte konfigurerad** (standard) tillåter fildelningstjänster för program.
+- **Blockera Internetsökresultat i Spotlight**: **Blockera** förhindrar Spotlight från att returnera resultat från sökningar på Internet. **Inte konfigurerad** (standard) tillåter att Spotlight-sökningar ansluter till Internet för att visa sökresultat.
+- **Blockera filöverföring via iTunes**: **Blockera** inaktiverar fildelningstjänster för program. **Inte konfigurerad** (standard) tillåter fildelningstjänster för program.
 
   Den här funktionen gäller för:  
   - macOS 10.13 och senare
@@ -136,7 +136,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   - **Godkända appar**: Appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt. Användarna hindras inte från att installera en app som inte finns med i listan över godkända appar. Men om de gör det rapporteras de i Intune.
 - **Appsamlings-ID**: Ange [appsamlings-ID](bundle-ids-built-in-ios-apps.md) för den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och branschspecifika appar. På Apples webbplats finns en lista över [inbyggda Apple-appar](https://support.apple.com/HT208094).
 - **Appnamn**: Ange namnet på den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och branschspecifika appar. På Apples webbplats finns en lista över [inbyggda Apple-appar](https://support.apple.com/HT208094).
-- **Utgivare**: Ange utgivaren av den app som du vill lägga till.
+- **Utgivare**: Ange namnet på den utgivare som du vill lägga till.
 
 Om du vill lägga till appar i listorna kan du:
 
@@ -147,28 +147,28 @@ Om du vill lägga till appar i listorna kan du:
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
-- **Blockera AirDrop**: **Blockera** förhindrar att AirDrop används på enheten. **Inte konfigurerad** (standard) tillåter att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
-- **Block Apple Watch Auto Unlock** (Blockera automatisk upplåsning av Apple Watch): **Blockera** hindrar användaren från att låsa upp en macOS-enhet med Apple Watch. **Inte konfigurerad** (standard) tillåter att användaren låser upp en macOS-enhet med Apple Watch.
+- **Blockera AirDrop**: **Blockera** förhindrar att du använder AirDrop på enheten. **Inte konfigurerad** (standard) tillåter att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
+- **Blockera automatisk upplåsning av Apple Watch**: **Blockera** hindrar användaren från att låsa upp en macOS-enhet med Apple Watch. **Inte konfigurerad** (standard) tillåter att användaren låser upp en macOS-enhet med Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
 - **Blockera synkronisering av iCloud-nyckelring**: Välj **Blockera** om du vill inaktivera synkronisering av autentiseringsuppgifter som lagras i nyckelringen till iCloud. **Inte konfigurerad** (standard) tillåter användare att synkronisera dessa autentiseringsuppgifter.
-- **Block iCloud Document Sync** (Blockera dokumentsynkronisering med iCloud): **Blockera** förhindrar att iCloud synkroniserar dokument och data. **Inte konfigurerad** (standard) tillåter synkronisering av dokument och nyckelvärden till ditt iCloud-lagringsutrymme.
-- **Block iCloud Mail Backup** (Blockera säkerhetskopiering av e-post med iCloud): **Blockera** förhindrar att iCloud synkroniseras med e-postprogrammet i macOS. **Inte konfigurerad** (standard) tillåter e-postsynkronisering med iCloud.
-- **Block iCloud Contact Backup** (Blockera säkerhetskopiering av kontakter med iCloud): **Blockera** förhindrar att iCloud synkroniserar kontakter på enheten. **Inte konfigurerad** (standard) tillåter synkronisering av kontakter med iCloud.
-- **Block iCloud Calendar Backup** (Blockera säkerhetskopiering av kalendern med iCloud): **Blockera** förhindrar att iCloud synkroniserar kalenderappen i macOS. **Inte konfigurerad** (standard) tillåter kalendersynkronisering med iCloud.
-- **Block iCloud Reminder Backup** (Blockera säkerhetskopiering av påminnelser med iCloud): **Blockera** förhindrar att iCloud synkroniserar påminnelseappen i macOS. **Inte konfigurerad** (standard) tillåter synkronisering av påminnelser med iCloud.
-- **Block iCloud Bookmark Backup** (Blockera säkerhetskopiering av bokmärken med iCloud): **Blockera** förhindrar att iCloud synkroniserar bokmärken på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av bokmärken med iCloud.
-- **Block iCloud Notes Backup** (Blockera säkerhetskopiering av anteckningar med iCloud): **Blockera** förhindrar att iCloud synkroniserar anteckningar på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av anteckningar med iCloud.
+- **Blockera synkronisering av iCloud-dokument**: **Blockera** förhindrar iCloud från att synkronisera dokument och data. **Inte konfigurerad** (standard) tillåter synkronisering av dokument och nyckelvärden till ditt iCloud-lagringsutrymme.
+- **Blockera säkerhetskopiering av Mail i iCloud**: **Blockera** förhindrar att iCloud synkroniseras med e-postprogrammet i macOS. **Inte konfigurerad** (standard) tillåter e-postsynkronisering med iCloud.
+- **Blockera säkerhetskopiering av Kontakter i iCloud**: **Blockera** förhindrar att iCloud synkroniserar kontakter på enheten. **Inte konfigurerad** (standard) tillåter synkronisering av kontakter med iCloud.
+- **Blockera säkerhetskopiering av Kalender i iCloud**: **Blockera** förhindrar att iCloud synkroniserar kalenderappen i macOS. **Inte konfigurerad** (standard) tillåter kalendersynkronisering med iCloud.
+- **Blockera säkerhetskopiering av Påminnelser i iCloud**: **Blockera** förhindrar att iCloud synkroniserar påminnelseappen i macOS. **Inte konfigurerad** (standard) tillåter synkronisering av påminnelser med iCloud.
+- **Blockera säkerhetskopiering av Bokmärken i iCloud**: **Blockera** förhindrar att iCloud synkroniserar bokmärken på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av bokmärken med iCloud.
+- **Blockera säkerhetskopiering av Anteckningar i iCloud**: **Blockera** förhindrar att iCloud synkroniserar anteckningar på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av anteckningar med iCloud.
 - **Blockera iCloud-bildbibliotek**: **block** inaktiverar iCloud-bildbibliotek och hindrar iCloud från att synkronisera enheternas foton. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket tas bort från enhetens lokala lagringsutrymme. **Inte konfigurerad** (standard) tillåter synkronisering av foton mellan enheten och iCloud-bildbiblioteket.
-- **** Leverans: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
+- **Leverans**: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
 
   Den här funktionen gäller för:  
   - macOS 10.15 och senare
 
-## <a name="domains"></a>Domäner
+## <a name="domains"></a>Domains
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
 
