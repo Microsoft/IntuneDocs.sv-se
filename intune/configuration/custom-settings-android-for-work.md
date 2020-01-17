@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd2ab7ad8eb155719695bede1f539d5c264d455b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1bd6e2d5ceebd23e87f464d15376594d1764c5b8
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74319819"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206813"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Använda anpassade inställningar för Android Enterprise-enheter i Microsoft Intune
 
@@ -42,14 +42,14 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Android Enterp
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
-    - **Namn**: Ange ett namn för profilen, till exempel `android enterprise custom profile`
-    - **Beskrivning:** Ange en beskrivning för profilen
-    - **Plattform**: Välj **Android-företag**
-    - **Profiltyp**: Välj **Anpassad**
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett användbart profil namn är till exempel en **anpassad profil för Android Enterprise**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj **Android Enterprise**.
+    - **Profil typ**: Välj **anpassad**.
 
 4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
 
@@ -77,14 +77,14 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Android Enterp
 
 I det här exemplet skapar du en anpassad profil som begränsar kopierings- och inklistringsåtgärder mellan arbetsappar och personliga appar på Android Enterprise-enheter.
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
-    - **Namn**: Ange ett namn för profilen, till exempel `android ent block copy paste custom profile`.
-    - **Beskrivning:** Ange en beskrivning för profilen.
-    - **Plattform**: Välj **Android-företag**.
-    - **Profiltyp**: Välj **Anpassad**.
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ange till exempel Android-överordnad **block kopiera klistra in anpassad profil**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj **Android Enterprise**.
+    - **Profil typ**: Välj **anpassad**.
 
 4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
 
@@ -102,6 +102,6 @@ När du tilldelar den här profilen till Android Enterprise-enheter som du hante
 
 ## <a name="next-steps"></a>Nästa steg
 
-Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. [Tilldela profilen](../device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Se hur du [skapar profilen på Android-enheter](../custom-settings-android.md).
+Skapa en [anpassad profil på Android-enheter](../custom-settings-android.md).

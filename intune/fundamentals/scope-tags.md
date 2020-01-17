@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b92dca399afeb035bf58d998efdd469318de389
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e1f81d26227bb206aa55ca495f4a4ee5e8ae9907
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504956"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548119"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT
 
@@ -39,14 +39,15 @@ Anta exempelvis att administratören på regionkontoret i Seattle har rollen som
 ## <a name="default-scope-tag"></a>Standardomfångstagg
 Standard omfångs tag gen läggs automatiskt till i alla otaggade objekt som stöder omfångs taggar.
 
-Funktionen för standardomfångstaggar liknar funktionen för säkerhetsomfång i System Center Configuration Manager. 
+Funktionen för standardomfångstaggar liknar funktionen för säkerhetsomfång i Microsoft Endpoint Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Skapa en omfångstagg
 
-1. I Intune väljer du **Roller** > **Omfång (taggar)**  > **Skapa**.
+1. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **innehavaradministratör** > **roller** > **omfattning (Taggar)**  > **skapa**.
 
     ![Skärmbild av skapande av en omfångstagg.](./media/scope-tags/create-scope-tag.png)
 
+2. Ange ett **Namn** och en valfri **beskrivning**.
 3. Om du vill använda alla enheter i vissa grupper väljer du **tilldela scope-tagg till alla enheter i valda grupper**.
     1. På sidan **Välj grupper att inkludera** väljer du de grupper som innehåller de enheter som du vill tilldela den här omfångs tag gen till.
     2. Välj **Välj**.
@@ -54,10 +55,7 @@ Funktionen för standardomfångstaggar liknar funktionen för säkerhetsomfång 
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Tilldela en omfångstagg till en roll
 
-1. I Intune väljer du **Roller** > **Alla roller** > välj en roll > **Tilldelningar** > **Tilldela**.
-
-    ![Skärmbild av tilldelning av omfång till en roll.](./media/scope-tags/assign-scope-to-role.png)
-
+1. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **klient administration** > **roller** > **alla roller** > väljer en roll > **tilldelningar** > **tilldela**.
 2. Ange ett **Tilldelningsnamn** och en **Beskrivning**.
 3. Välj **Medlemmar (Grupper)**  > **Lägg till** > välj de grupper som du vill ha som en del av tilldelningen > **Välj** > **OK**. Användare i den här gruppen har behörighet att hantera användare/enheter i omfånget (grupper).
 
@@ -81,9 +79,7 @@ Funktionen för standardomfångstaggar liknar funktionen för säkerhetsomfång 
 
 För objekt som stöder omfångs taggar visas omfångs Taggar vanligt vis under **Egenskaper**. Om du till exempel vill tilldela en scope-tagg till en konfigurations profil följer du dessa steg:
 
-1. I Intune väljer du **Enhetskonfiguration** > **Profiler** > välj en profil.
-
-    ![Skärmbild av val av profil.](./media/scope-tags/choose-profile.png)
+1. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **enheter** > **konfigurations profiler** > väljer en profil.
 
 2. Välj **Egenskaper** > **Omfång (Taggar)**  > **Lägg till**.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2018
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfc791450eec9f17be68228bb291ca89fd7d88ce
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6e7709eac2b360aa09415249c1c3f704b52a492b
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506825"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206592"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Intune
 
@@ -32,31 +32,31 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 
 ## <a name="general"></a>Allmänt
 
-- **Kamera**: Välj **Blockera** för att förhindra åtkomst till kameran. **Inte konfigurerad** ger åtkomst till kameran på enheten.
-- **Kopiera och klistra in (endast Samsung Knox)** : Välj **Blockera** för att förhindra kopiera och klistra in. **Inte konfigurerad** tillåter funktioner för att kopiera och klistra in på enheten.
-- **Urklippsdelning mellan appar (endast Samsung Knox)** : Välj **Blockera** för att förhindra användning av Urklipp vid funktionen kopiera och klistra in mellan appar. **Inte konfigurerad** tillåter att urklipp används för att kopiera och klistra in mellan appar.
+- **Kamera**: Välj **Blockera** för att förhindra åtkomst till kameran. **Inte konfigurerad** ger åtkomst till enhetens kamera.
+- **Kopiera och klistra in (endast Samsung Knox)** : Välj **Blockera** för att förhindra kopiering och inklistring. **Inte konfigurerad** tillåter funktioner för att kopiera och klistra in på enheten.
+- **Urklippsdelning mellan appar (endast Samsung Knox)** : Välj **Blockera** för att förhindra att urklipp används för att kopiera och klistra in mellan appar. **Inte konfigurerad** tillåter att urklipp används för att kopiera och klistra in mellan appar.
 - **Sändning av diagnostikdata (endast Samsung Knox)** : Välj **Blockera** för att hindra användaren från att skicka diagnostikdata från enheten. **Inte konfigurerat** låter användaren skicka in data.
 - **Rensning (endast Samsung Knox)** : Tillåter att användaren kör en [rensning](../remote-actions/devices-wipe.md) på enheten.
 - **Geoplats (endast Samsung Knox)** : Välj **Blockera** för att inaktivera användningen av platsinformation på enheten. **Inte konfigurerad** tillåter enheten att använda platsinformationen.
-- **Avstängning (endast Samsung Knox)** : Välj **Blockera** för att förhindra användaren från att stänga av enheten. Om den här inställningen inaktiveras kan inte inställningen **Antal felaktiga inloggningar innan enheten rensas** ställas in och kommer inte att fungera. **Inte konfigurerad** låter användaren stänga av enheten.
-- **Skärmdump (endast Samsung Knox)** : Välj **Blockera** för att förhindra skärmdumpar. **Inte konfigurerat** låter användaren fånga skärminnehållet som en bild.
-- **Röstassistent (endast Samsung Knox)** : Välj **Blockera** för att inaktivera S Voice-tjänsten. **Inte konfigurerad** tillåter användning av S Voice-tjänsten och appen på enheten. Inställningen gäller inte för Bixby eller röstassistenten för hjälpmedel som läser upp skärmens innehåll.
-- **YouTube (endast Samsung Knox)** : Välj **Blockera** för att förhindra användare från att använda YouTube-appen. **Inte konfigurerad** tillåter användning av YouTube-appen på enheten.
+- **Stäng av (endast Samsung Knox)** : Välj **Blockera** för att förhindra användaren från att stänga av enheten. Om den här inställningen inaktiveras kan inte inställningen **Antal felaktiga inloggningar innan enheten rensas** ställas in och kommer inte att fungera. **Inte konfigurerad** låter användaren stänga av enheten.
+- **Skärmbild (endast Samsung Knox)** : Välj **Blockera** för att förhindra skärmbilder. **Inte konfigurerat** låter användaren fånga skärminnehållet som en bild.
+- **Röstassistent (endast Samsung Knox)** : Välj **Blockera** för att inaktivera tjänsten S Voice. **Inte konfigurerad** tillåter användning av S Voice-tjänsten och appen på enheten. Inställningen gäller inte för Bixby eller röstassistenten för hjälpmedel som läser upp skärmens innehåll.
+- **YouTube (endast Samsung Knox)** : Välj **Blockera** för att förhindra användare från att använda appen YouTube. **Inte konfigurerad** tillåter användning av YouTube-appen på enheten.
 - **Delade enheter (endast Samsung Knox)** : Konfigurera en hanterad Samsung Knox Standard-enhet som delad. När det är satt på **Tillåt** så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.</br>När detta används med en SCEP-certifikatprofil gör den här funktionen det möjligt för slutanvändare att dela en enhet med samma appar för alla användare. Men varje användare har sina egna SCEP-användarcertifikat. Alla appdata rensas när användaren loggar ut. Den här funktionen är begränsad till endast LOB-appar. </br>**Inte konfigurerad** förhindrar att flera slutanvändare loggar in på företagsportalappen på enheten med sina autentiseringsuppgifter för Azure AD.
-- **Blockera datum- och tidsändringar (Samsung Knox)** : Välj **Blockera** för att förhindra användaren från att ändra datum- och tidsinställningar på enheten. **Inte konfigurerad** låter användare ändra datum- och tidsinställningar.
+- **Blockera ändringar av datum och tid (endast Samsung Knox)** : Välj **Blockera** för att förhindra användaren från att ändra datum- och tidsinställningar på enheten. **Inte konfigurerad** låter användare ändra datum- och tidsinställningar.
 
-## <a name="password"></a>Lösenord
+## <a name="password"></a>lösenordsinställning
 
-- **Lösenord**: **Kräv** att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerad** låter användare komma åt enheten utan att ange ett lösenord.
+- **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerad** låter användare komma åt enheten utan att ange ett lösenord.
 
     > [!NOTE]
     > Samsung Knox-enheter kräver automatiskt en fyrsiffrig PIN-kod under MDM-registreringen. Android-enheter kan automatiskt kräva att en PIN-kod är kompatibel med villkorsstyrd åtkomst.
 
-- **Minsta längd på lösenord**: Ange den minsta längd på lösenord som en användare måste ange (mellan 4 och 16 tecken).
+- **Minsta lösenordslängd**: Ange den minsta längden på lösenord som en användare måste ange (mellan 4 och 16 tecken).
 - **Maximalt antal minuter av inaktivitet innan skärmen låses**: Ange det maximala antal minuter av inaktivitet som ska tillåtas på enheten innan skärmen låses. En slutanvändare kan inte ange ett tidsvärde på en enhet som är större än den konfigurerade tiden i profilen. En slutanvändare kan dock ange ett lägre värde. Om profilen t.ex. är inställd på 15 minuter, kan en slutanvändare ange värdet till 5 minuter. En slutanvändare kan inte ange värdet till 30 minuter. 
-- **Antal felaktiga inloggningar innan enheten rensas**: Ange antalet tillåtna felinloggningar innan enheten rensas.
-- **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan lösenordet för enheten måste ändras.
-- **Krav på lösenordstyp**: Ange den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas. Alternativen är:
+- **Antal felaktiga inloggningar innan enheten rensas**: Anger antalet tillåtna felinloggningar innan enheten rensas.
+- **Lösenordets giltighetstid (dagar)** : Ange antalet dagar innan lösenordet måste ändras.
+- **Lösenordstyp som krävs**: Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas. Alternativen är:
   - **Standard för enheten**
   - **Låg säkerhetsbiometri**
   - **Minst numeriskt**
@@ -65,8 +65,8 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
   - **Minst alfanumeriskt**
   - **Minst alfanumeriskt med symboler**
 - **Förhindra återanvändning av tidigare lösenord**: Hindrar slutanvändaren från att skapa ett lösenord som har använts tidigare.
-- **Upplåsning med fingeravtryck (endast Samsung Knox)** : Välj **Blockera** för att förhindra användning av fingeravtryck för att låsa upp enheten. **Inte konfigurerad** låter användare låsa upp enheten med ett fingeravtryck.
-- **Smart Lock och andra betrodda agenter**: Välj **Blockera** för att förhindra Smart Lock och andra betrodda agenter från att justera låsskärmsinställningar (Samsung KNOX Standard 5.0+). Med den här telefonfunktionen, ibland även kallad förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten finns på en betrodd plats. Funktionen kan till exempel användas när enheten är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
+- **Upplåsning med fingeravtryck (endast Samsung Knox)** : Välj **Blockera** om du vill förhindra att fingeravtryck används för att låsa upp enheten. **Inte konfigurerad** låter användare låsa upp enheten med ett fingeravtryck.
+- **Smart Lock och andra betrodda agenter**: Välj **Blockera** för att förhindra Smart Lock och andra betrodda agenter från att ändra låsskärmsinställningar (endast Samsung KNOX Standard 5.0+). Med den här telefonfunktionen, ibland även kallad förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten finns på en betrodd plats. Funktionen kan till exempel användas när enheten är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
 - **Kryptering**: Välj **Krävs** så att filer på enheten krypteras. Alla enheter stöder inte kryptering. Gör även så här för att använda funktionen: 
   1. Ställ in **Lösenord** till **Krävs**.
   2. Ställ in **Krav på lösenordstyp** till **Minst numeriskt**.
@@ -79,8 +79,8 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 
 Om du ställer in **Krav på lösenordstyp** till **Numeriskt avancerad** och sedan tilldelar den till en enhet som kör en tidigare version av Android än 5.0, gäller följande:
 
-- Om företagsportalappen kör en tidigare version än 1704 kommer ingen PIN-princip att tillämpas på enheten och ett fel visas i Azure-portalen.
-- Om företagsportalappen kör version 1704 eller senare, kan bara en enkel PIN-kod användas. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i Azure-portalen.
+- Om företagsportalappen kör en tidigare version än 1704 kommer ingen PIN-princip att tillämpas på enheten och ett fel visas i administrationscentret för Microsoft Endpoint Manager.
+- Om företagsportalappen kör version 1704 eller senare, kan bara en enkel PIN-kod användas. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i administrations centret för Microsoft Endpoint Manager.
 
 ## <a name="google-play-store"></a>Google Play Store
 
@@ -125,27 +125,27 @@ Alternativen är:
 
 Lägg till en lista över appar för varje inställning. Alternativen är:
 
-- **Lägg till appar efter paketnamn**: Används främst för verksamhetsspecifika program. Ange namnet på programmet och namnet på appaketet.
+- **Lägg till appar efter paketnamn**: Används främst för verksamhetsspecifika appar. Ange namnet på programmet och namnet på appaketet.
 - **Lägg till appar efter URL**: Ange namnet på programmet och dess URL i Google Play Butik.
-- **Lägg till butiksapp**: Välj en app från den befintliga listan med appar som du hanterar i Intune.
+- **Lägg till Store-app**: Välj en app från den befintliga listan med appar som du hanterar i Intune.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
 - **Google-säkerhetskopiering (endast Samsung Knox)** : Välj **Blockera** för att förhindra att enheten synkroniserar med Google-säkerhetskopiering. **Inte konfigurerad** tillåter användning av Google-säkerhetskopiering.
 - **Automatisk synkronisering av Google-konto (endast Samsung Knox)** : Välj **Blockera** för att hindra funktionen automatisk synkronisering av Google-konto på enheten. **Inte konfigurerad** låter Google-kontoinställningarna synkroniseras automatiskt.
 - **Flyttbara lagringsenheter (endast Samsung Knox)** : Välj **Blockera** för att förhindra att enheten använder flyttbara lagringsenheter. **Inte konfigurerad** tillåter att enheten använder flyttbara lagringsenheter, t.ex. ett SD-kort.
-- **Kryptering på minneskort (endast Samsung Knox)** : **Kräv** framtvingar att enhetens minneskort måste vara krypterat. **Inte konfigurerad** tillåter användning av okrypterade minneskort. Alla enheter stöder inte kryptering av minneskort. Bekräfta genom att kontrollera detta med enhetstillverkaren.
+- **Kryptering på lagringskort (endast Samsung Knox)** : **Kräv** tvingar lagringskorten att vara krypterade. **Inte konfigurerad** tillåter användning av okrypterade minneskort. Alla enheter stöder inte kryptering av minneskort. Bekräfta genom att kontrollera detta med enhetstillverkaren.
 
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
 
-- **Datanätverksväxling (endast Samsung Knox)** : Välj **Blockera** för att förhindra datanätverksväxling över det mobila nätverket. **Inte konfigurerad** tillåter datanätverksväxling när enheten är i ett mobilnät.
-- **SMS och MMS (endast Samsung Knox)** : Välj **Blockera** för att förhindra användning av textmeddelanden på enheten. **Inte konfigurerad** tillåter att SMS och MMS används på enheten.
-- **Röstsamtal (endast Samsung Knox)** : Välj **Blockera** för att förhindra funktionen röstsamtal från att användas på enheten. **Inte konfigurerad** tillåter röstsamtal på enheten.
-- **Röstnätverksväxling (endast Samsung Knox)** : Välj **Blockera** för att förhindra röstnätverksväxling över det mobila nätverket. **Inte konfigurerad** tillåter röstnätverksväxling när enheten är i ett mobilnät.
+- **Datanätverksväxling (endast Samsung Knox)** : Välj **Blockera** om du vill förhindra dataroaming över det mobila nätverket. **Inte konfigurerad** tillåter dataroaming när enheten är i ett mobilnät.
+- **SMS-/MMS-meddelanden (endast Samsung Knox)** : Välj **Blockera** för att förhindra textmeddelanden på enheten. **Inte konfigurerad** tillåter att SMS och MMS används på enheten.
+- **Röstsamtal (endast Samsung Knox)** : Välj **Blockera** om du vil förhindra användare från att använda enhetens röstsamtalsfunktion. **Inte konfigurerad** tillåter röstsamtal på enheten.
+- **Röstnätverksväxling (endast Samsung Knox)** : Välj **Blockera** om du vill förhindra röstroaming över det mobila nätverket. **Inte konfigurerad** tillåter röstroaming när enheten är i ett mobilnät.
 - **Bluetooth (endast Samsung Knox)** : Välj **Blockera** för att förhindra användningen av Bluetooth på enheten. **Inte konfigurerad** tillåter att Bluetooth används på enheten.
 - **NFC (endast Samsung Knox)** : Välj **Blockera** för att stoppa NFC-teknik (Near Field Communication). **Inte konfigurerad** tillåter åtgärder som använder närfältskommunikation, om enheten har stöd för det.
 - **Wi-Fi (endast Samsung Knox)** : Välj **Blockera** för att förhindra användningen av Wi-Fi på enheten. **Inte konfigurerad** tillåter användning av Wi-Fi-funktioner på enheten.
-- **Trådlös internetdelning (endast Samsung Knox)** : Välj **Blockera** för att förhindra användningen av trådlös internetdelning på enheten. **Inte konfigurerad** tillåter att trådlös internetdelning används på enheten.
+- **Trådlös Internetdelning (endast Samsung Knox)** : Välj **Blockera** för att förhindra användningen av trådlös Internetdelning på enheten. **Inte konfigurerad** tillåter att trådlös internetdelning används på enheten.
 
 ## <a name="kiosk"></a>Helskärmsläge
 
@@ -155,11 +155,11 @@ Inställningarna för helskärmsläget gäller endast för Samsung Knox Standard
 
   Alternativ för din app:
 
-  - **Lägg till appar efter paketnamn**: Används främst för verksamhetsspecifika program. Ange namnet på programmet och namnet på appaketet.
+  - **Lägg till appar efter paketnamn**: Används främst för verksamhetsspecifika appar. Ange namnet på programmet och namnet på appaketet.
   - **Lägg till appar efter URL**: Ange namnet på programmet och dess URL i Google Play Butik.
-  - **Lägg till butiksapp**: Välj en app från den befintliga listan med appar som du hanterar i Intune.
+  - **Lägg till Store-app**: Välj en app från den befintliga listan med appar som du hanterar i Intune.
 
-- **Viloläge för skärmknapp**: Välj **Blockera** för att förhindra eller dölja viloläge för skärmknapp. **Inte konfigurerad** tillåter aktiveringsknappen på enheten.
+- **Viloläge för skärm-knapp**: Välj **Blockera** för att förhindra eller dölja viloläge för skärmknapp. **Inte konfigurerad** tillåter aktiveringsknappen på enheten.
 - **Volymknappar**: Välj **Blockera** för att förhindra användaren från att ändra volymen genom att inaktivera volymknapparna. **Inte konfigurerad** tillåter användningen av volymknapparna på enheten.
 
 ## <a name="next-steps"></a>Nästa steg

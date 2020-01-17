@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d6ecdc84371c0f485fc1cf26065ed681f29804
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 8dd81a6c850fbb3b3d36d4f7b09cd04682e5b31e
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72501920"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857698"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>Avregistrera din macOS-enhet från Företagsportal
 
@@ -36,7 +36,7 @@ Så här avregistrerar du en macOS-enhet från hanteringen:
 2. Gå till **Enheter** och välj den enhet du vill avregistrera.
 
 3. Välj Meny ikonen för ellipser > **ta bort**.
-4. Ett bekräftelse meddelande visas. Välj **ta bort** för att avregistrera enheten. 
+4. Ett bekräftelsemeddelande visas. Välj **ta bort** för att avregistrera enheten. 
 
 När du avregistrerar en enhet från Intune händer följande:
 

@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 12/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba285fc9de58b3fb739a16722e0e05e36e840e87
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: e04950a67938d883b0762c03efa371fcb74d0731
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74098122"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855484"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrera din macOS-enhet med hjälp av Företagsportal-appen  
 
@@ -56,7 +56,7 @@ Använd följande steg för att registrera din macOS-enhet med din organisation.
 2. Filen Företagsportal Installer. pkg laddas ned. Öppna installations programmet och Fortsätt genom stegen. 
 3. Godkänn licens avtalet för program varan. 
 4. Ange enhetens lösen ord eller det registrerade finger avtryck för att installera program varan.  
-5. Öppna Företagsportal. 
+5. Öppna appen Företagsportal. 
 
 > [!IMPORTANT]
 > Microsoft AutoUpdate kan vara öppet för att uppdatera din Microsoft-programvara. När alla uppdateringar har installerats öppnar du appen Företagsportal. För bästa installations upplevelse installerar du de senaste versionerna av Microsoft AutoUpdate och Företagsportal.  
@@ -67,18 +67,17 @@ Använd följande steg för att registrera din macOS-enhet med din organisation.
 
 1. Logga in på företagsportalen med ditt arbets- eller skolkonto.  
 2. När appen öppnas väljer du **Starta**.  
-3. Granska [vad din organisation kan och inte kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) på den registrerade enheten. Välj sedan **Fortsätt**.  
-4. På skärmen **Installera hanterings profil** väljer du **Hämta profil**.   
+3. Granska vad din organisation kan och inte kan se på den registrerade enheten. Välj sedan **Fortsätt**.
+4.  Om du uppmanas till anger du enhetens lösen ord på skärmen **Installera hanterings profil** .
 
-    ![Exempel skärm bild av skärmen Företagsportal installera hanterings profil och markera knappen Ladda ned profil.](./media/install-mgmt-profile-mac-1911.PNG)   
-5. Enhetens system inställningar kommer att öppnas. Välj **Installera** och välj sedan **Installera** igen. Om du uppmanas till det anger du enhetens lösen ord.  
+    ![Exempel skärm bild av skärmen Företagsportal installera hanterings profil och markera lösen ords prompt.](./media/install-management-profile-macos-1912.PNG)   
+5. På skärmen **Bekräfta enhets hantering** väljer du **Öppna Systeminställningar**.  
 
-    ![Exempel skärm bild av macOS-Systeminställningar, installations prompt, markera knappen Installera.](./media/system-preference-install-1911.PNG)  
-6. När profilen har installerats visas den i listan profiler under **hanterings profil.**  
-
-   ![Exempel skärm bild av OS-inställningar för macOS, profil skärmen, som markerar den installerade hanterings profilen.](./media/system-preference-verify-1911.PNG)   
-7. Återgå till Företagsportal.   
-8. Din organisation kan kräva att du uppdaterar enhets inställningarna. När du är klar med att uppdatera inställningarna väljer du **kontrol lera inställningar**.  
+    ![Exempel skärm bild av skärmen Bekräfta enhets hantering, markera knappen "öppna Systeminställningar".](./media/confirm-device-management-macos-1912.PNG)  
+6. Enhetens system inställningar kommer att öppnas. Välj **hanterings profil** i listan enhets profiler och välj sedan **Godkänn** > **Godkänn**.  
+    ![exempel skärm bild av skärmen system inställningar, hanterings profil, som markerar knappen Godkänn.](./media/management-profile-approve-macos-1912.PNG)   
+1. Gå tillbaka till Företagsportal och välj **Fortsätt**.    
+2. Din organisation kan kräva att du uppdaterar enhets inställningarna. När du är klar med att uppdatera inställningarna väljer du **kontrol lera inställningar**.  
 
     ![Exempel skärm bild av skärmen Företagsportal, uppdatera enhets inställningar och markera knappen kontrol lera inställningar.](./media/update-settings-mac-1911.PNG)  
 9. När installationen är klar väljer du **klar**.  
@@ -88,7 +87,7 @@ Använd följande steg för att registrera din macOS-enhet med din organisation.
 
 Om du stöter på problem under registreringen kan du gå till **hjälp** > **Skicka diagnostisk rapport** för att rapportera problemet till Microsoft Apps-utvecklare. Den här informationen används för att hjälpa till att förbättra appen. De använder också den här informationen för att hjälpa till att lösa problemet om IT-supporten når dem för att få hjälp.  
 
-När du har rapporterat problemet till Microsoft kan du skicka information om din upplevelse till IT-supporten. Välj **e-postinformation**. Skriv vad du fick i e-postmeddelandets brödtext. Om du vill hitta din support persons e-postadress går du till Företagsportal app > **Kontakta**. Eller kontrol lera [företagsportal webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+När du har rapporterat problemet till Microsoft kan du skicka information om din upplevelse till IT-supporten. Välj **e-postinformation**. Skriv vad du fick i e-postmeddelandets brödtext. Om du vill hitta din support persons e-postadress går du till Företagsportal app > **Kontakta**. Mer information finns på [webbplatsen Företagsportal](https://go.microsoft.com/fwlink/?linkid=2010980).  
  
 
 Dessutom skulle Microsoft Intune Företagsportals teamet älska att höra din feedback. Gå till **hjälp** > **Skicka feedback** för att dela med dig av dina tankar och idéer.  

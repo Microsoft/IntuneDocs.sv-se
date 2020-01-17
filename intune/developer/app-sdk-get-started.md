@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 3529a21483d0207dbfe55af914badf3ed895af1a
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899391"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691873"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -60,7 +60,7 @@ Vi använder e-postadresserna som står i frågeformulärets svar för att konta
 
 4. Slutligen läggs djuplänken för din app till i nästa månatliga Intune Service-uppdatering. Om registreringsinformationen exempelvis slutfördes i juli, stöds appens djuplänk i mitten av augusti.
 
-Om din apps djuplänk ändras i framtiden, måste du omregistrera din app.
+Djup länken är länken till appens lista i det offentliga App Store. Om din apps djuplänk ändras i framtiden, måste du omregistrera din app.
 
 > [!NOTE]
 > Meddela oss om du uppdaterar appen med en ny version av Intune App SDK.
@@ -82,11 +82,11 @@ Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda
 
 Du behöver en av följande utvecklarguider för att hjälpa dig att integrera Intune App SDK till din app:
 
-* **[Utvecklarguide för Intune App SDK för iOS](app-sdk-ios.md)** : Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
+* **[iOS-utvecklarhandbok för Intune App SDK](app-sdk-ios.md)** : Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
 
-* **[Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md)** : Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
+* **[Android-utvecklarhandbok för Intune App SDK](app-sdk-android.md)** : Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
 
-* **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)** : Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
+* **[Handbok för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)** : Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
 
 
 
@@ -164,9 +164,9 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
   * Om du testar din app på en mobil enhet med hjälp av ett slutanvändarkonto ska du ha gett det kontot en Intune-licens på Microsoft 365-administrationscentrets webbplats efter att ha loggat in med ett administratörskonto. Se [Tilldela Microsoft Intune-licens](../fundamentals/licenses-assign.md).
 
-* **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](../apps/app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](../apps/app-protection-policy-settings-android.md). Om din app har integrerat Intune SDK, men inte visas i listan över mål bara appar, kan du ange appens paket-ID (iOS) eller paket namnet (Android) i text rutan när du väljer anpassade appar. 
+* **Appskyddsprinciper i Intune**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](../apps/app-protection-policy-settings-ios.md) och [Android-appskyddsprinciper](../apps/app-protection-policy-settings-android.md). Om din app har integrerat Intune SDK, men inte visas i listan över mål bara appar, kan du ange appens paket-ID (iOS) eller paket namnet (Android) i text rutan när du väljer anpassade appar. 
 
-* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna installerar din app, kan du gå till [Felsöka appinstallationsproblem](../apps/troubleshoot-app-install.md). 
+* **Felsökning**: Om du stöter på problem när du testar manuellt hur användarna kommer att installera din app, kan du gå till [Felsökning av appinstallationsproblem](../apps/troubleshoot-app-install.md). 
 
 ### <a name="give-your-app-access-to-the-intune-app-protection-service-optional"></a>Ge din app åtkomst till Intune-appskyddstjänsten (valfritt)
 
@@ -179,11 +179,11 @@ När du har registrerat din app i en Azure-klientorganisation, och den visas ten
 3. Klicka på **+ Lägg till en behörighet**.
 4. Klicka på **API:er som min organisation använder**. 
 5. I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
-6. Under **Delegerade behörigheter** markerar du kryssrutan **DeviceManagementManagedApps.ReadWrite: Read and Write the User’s App Management Data*** (DeviceManagementManagedApps.ReadWrite: Läs och skriv användarens apphanteringsdata).
+6. Under **Delegerade behörigheter** väljer du **DeviceManagementManagedApps.ReadWrite: Kryssrutan Read and Write the User’s App Management Data*** (Läs och skriv användarens apphanteringsdata).
 7. Klicka på **Lägg till behörigheter**.
 
 > [!NOTE]
-> Om din app hindrar dig från att logga in på grund av ett fel vid åtkomst till den här resursen: https://intunemam.microsoftonline.com måste du skicka en anteckning till msintuneappsdk@microsoft.com med appens klient-ID. Det här är en manuell godkännande process idag.
+> Om din app hindrar dig från att logga in på grund av ett fel vid åtkomst till den här resursen: https\://intunemam.microsoftonline.com, måste du skicka en anteckning till msintuneappsdk@microsoft.com med appens klient-ID. Det här är en manuell godkännande process idag.
 
 ### <a name="badge-your-app-optional"></a>Ge din app en skylt (valfritt)
 

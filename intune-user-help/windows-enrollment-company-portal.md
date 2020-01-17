@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86aeb2b54d45f111864d71e65b8c90fce7205868
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 86c158f73d820fa2e719fe92b884c77f315fcb94
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508022"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858819"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Windows-enhetsregistrering i Intune-företagsportalen  
 
@@ -62,8 +62,8 @@ Registreringssteg skiljer sig åt för olika versioner av Windows 10-enheter. F�
 
 4. Om du har version  
 
-    * __1607 eller senare__: Registrera din enhet via [**Inställningar** > **Konto** > **Åtkomst till arbete eller skola** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 eller tidigare__: Registrera din enhet via [**Inställningar** > **Konto** > **Ditt konto** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 eller senare__: Registrera din enhet via [**Inställningar** > **Konto** > **Åtkomst till arbete eller skola**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 eller tidigare__: Registrera din enhet via [**Inställningar** > **Konto** > **Ditt konto**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Windows 10 Mobile-enheter
 
@@ -72,8 +72,8 @@ Registreringssteg skiljer sig åt för olika versioner av Windows 10-enheter. F�
 3. Under __Enhetsinformation__ letar du upp __Version__.  
 4. Om du har version  
 
-    * __1607 eller senare__: Registrera din enhet via [**Inställningar** > **Åtkomst till arbete eller skola** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 eller senare__: Registrera din enhet via [**Inställningar** > **Konton** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 eller senare__: Registrera din enhet via [**Inställningar** > **Åtkomst till arbete eller skola**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 eller tidigare__: Registrera din enhet via [**Inställningar** > **Konton**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Registrera icke-Windows 10-enheter  
 Använd följande artiklar för att registrera andra Windows-enheter som stöds via företagsportalens webbplats:   

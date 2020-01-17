@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42d07f02e76669c735d09b5d7843a4102dd0f835
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 7ceaf5c62f34cc248813a064de9e8e3710797779
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899233"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547928"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-informationslagersamlingar
 
@@ -61,7 +61,7 @@ Entiteten **AppType** visar en lista över installationskällan för en app.
 
 ### <a name="example"></a>Exempel
 
-| AppTypeID |                Namn               |                     Beskrivning                     |
+| AppTypeID |                Name               |                     Beskrivning                     |
 |:---------:|:---------------------------------:|:---------------------------------------------------:|
 | 0         | Android-butiksapp               | En app från en Android-butik.                             |
 | 1         | Verksamhetsspecifik Android-app                 | En verksamhetsspecifik app för Android.                  |
@@ -85,7 +85,7 @@ I följande tabell sammanfattas tilldelningsstatusen för efterlevnadsprinciper 
 | DateKey       | Datumnyckel när sammanfattningen skapades för kompatibilitetsprincipen.                                                                                                                   | 20161204 |
 | Okänt       | Antalet enheter som är offline eller inte kunde kommunicera med Intune eller Azure AD av andra orsaker.                                                                           | 5        |
 | NotApplicable | Antalet enheter där kompatibilitetsprinciper som tilldelats av administratören inte kan användas.                                                                                     | 201      |
-| Godkänd     | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 4083     |
+| Kompatibel     | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 4083     |
 | InGracePeriod | Antalet enheter som inte är kompatibla men som är i respitperioden som angetts av administratören.                                                                                  | 57       |
 | NonCompliant  | Antalet enheter som inte har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål, eller där användaren inte har följt de principer som administratören har satt upp som mål. | 43       |
 |    Fel      |    Antalet enheter som inte kunde kommunicera med Intune eller Azure AD och returnerade ett felmeddelande.                                                                          |    3     |
@@ -100,7 +100,7 @@ I följande tabell sammanfattas tilldelningsstatus för efterlevnadsprinciper f�
 | PolicyPlatformKey | Nyckel för plattformstypen för efterlevnadsprincipen som sammanfattningen skapades för.                                                                                            | 5        |
 | Okänt           | Antalet enheter som är offline eller inte kunde kommunicera med Intune eller Azure AD av andra orsaker.                                                                           | 13       |
 | NotApplicable     | Antalet enheter där kompatibilitetsprinciper som tilldelats av administratören inte kan användas.                                                                                     | 3        |
-| Godkänd         | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 45       |
+| Kompatibel         | Antalet enheter som har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål.                                                                        | 45       |
 | InGracePeriod     | Antalet enheter som inte är kompatibla men som är i respitperioden som angetts av administratören.                                                                                  | 3        |
 | NonCompliant      | Antalet enheter som inte har tillämpat en eller flera kompatibilitetsprinciper som administratören har satt upp som mål, eller där användaren inte har följt de principer som administratören har satt upp som mål. | 7        |
 | Fel             | Antalet enheter som inte kunde kommunicera med Intune eller Azure AD och returnerade ett felmeddelande.                                                                             | 3        |
@@ -117,7 +117,7 @@ I följande tabell sammanfattas tilldelningsstatus för efterlevnadsprinciper f�
 |  complianceStatus  |                       Beskrivning                      |
 |:------------------:|:------------------------------------------------------:|
 |    Okänt         |    Okänt.                                                                        |
-|    Godkänd       |    Kompatibel.                                                                      |
+|    Kompatibel       |    Kompatibel.                                                                      |
 |    Ej kompatibel    |       Enheten är icke-kompatibel och blockeras från företagsresurser.             |
 |    Konflikt        |    Konflikt med andra regler.                                                      |
 |    Fel           |       Fel.                                                                       |
@@ -263,10 +263,10 @@ Entiteten **deviceType** representerar den enhetstyp som andra informationslager
 
 ### <a name="example"></a>Exempel
 
-| deviceTypeID |        Namn       |                      Beskrivning                      |
+| deviceTypeID |        Name       |                      Beskrivning                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Inte tillgänglig   | Enhetstypen är inte tillgänglig.                     |
-| 0            | Stationär dator           | Windows-skrivbordsenhet                              |
+| 0            | skrivbords-           | Windows-skrivbordsenhet                              |
 | 1            | Windows           | Windows-enhet                                      |
 | 2            | WinMO6            | Windows Mobile 6.0-enhet                           |
 | 3            | Nokia             | Nokia-enhet                                        |
@@ -300,7 +300,7 @@ Entiteten **deviceEnrollmentType** visar hur en enhet registrerades. Typ av regi
 
 ### <a name="example"></a>Exempel
 
-| enrollmentTypeID |                Namn                |                                        Beskrivning                                       |
+| enrollmentTypeID |                Name                |                                        Beskrivning                                       |
 |:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
 | 0                | Okänt                            | Registreringstyp samlades inte in                                                      |
 | 1                | UserEnrollment                     | Användardriven registrering via BYOD-kanal.                                           |
@@ -518,14 +518,14 @@ Entiteten **managementAgentType** representerar de agenter som används för att
 
 ### <a name="example"></a>Exempel
 
-| ManagementAgentTypeID |                Namn               |                                  Beskrivning                                 |
+| ManagementAgentTypeID |                Name               |                                  Beskrivning                                 |
 |:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
 | 1                     | EAS                               | Enheten hanteras via Exchange Active Sync                         |
 | 2                     | MDM                               | Enheten hanteras med hjälp av en MDM-agent                                   |
 | 3                     | EasMdm                            | Enheten hanteras både av Exchange Active Sync och en MDM-agent        |
 | 4                     | IntuneClient                      | Enheten hanteras av Intune PC-agenten                               |
 | 5                     | EasIntuneClient                   | Enheten hanteras både av Exchange Active Sync och Intune PC-agenten |
-| 8                     | ConfigManagerClient               | Enheten hanteras av System Center Configuration Manager-agenten     |
+| 8                     | ConfigManagerClient               | Enheten hanteras av Configuration Manager-agenten     |
 | 10                    | ConfigurationManagerClientMdm     | Enheten hanteras av Configuration Manager och MDM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | Enheten hanteras av Configuration Manager, MDM och Exchange Active Sync.               |
 | 16                    | Okänt                           | Okänd typ av hanteringsagent                                              |
@@ -543,14 +543,14 @@ Entiteten **ManagementState** innehåller information om enhetens tillstånd. In
 
 ### <a name="example"></a>Exempel
 
-| managementStateID |      Namn      |                                                   Beskrivning                                                   |
+| managementStateID |      Name      |                                                   Beskrivning                                                   |
 |:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
 | 0                 | Hanterade        | Hanterad utan väntande fjärråtgärder.                                                                       |
 | 1                 | RetirePending  | Ett kommando för tillbakadragande väntar på enheten.                                                             |
 | 2                 | RetireFailed   | Det gick inte att utföra kommandot för tillbakadragande på enheten.                                                                      |
 | 3                 | WipePending    | Ett rensningskommando väntar på enheten.                                                               |
 | 4                 | WipeFailed     | Det gick inte att utföra rensningskommandot på enheten.                                                                        |
-| 5                 | Inte felfri      | Ej felfritt tillstånd.                                                                                              |
+| 5                 | Ohälsosamt      | Ej felfritt tillstånd.                                                                                              |
 | 6                 | DeletePending  | Ett borttagningskommando väntar på enheten.                                                             |
 | 7                 | RetireIssued   | Ett kommando om tillbakadragande har utfärdats till enheten.                                                               |
 | 8                 | WipeIssued     | Ett rensningskommando har utfärdats.                                                                               |
@@ -586,7 +586,7 @@ Entiteten **ownerType** visar om en enhet är företagsägd, privat ägd eller o
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikt id för ägartyp.                                                                                                                                               |                            |
 | ownerTypeKey  | Unik identifierare för ägartypen i informationslagret – surrogatnyckel.                                                                                                       |                            |
-| ownerTypeName | Representerar ägartypen för enheterna: Företag – enheten är företagsägd.  Privat – enheten är privatägd (BYOD).   Okänd – det finns ingen information om enheten. | Företag Privat Okänd |
+| ownerTypeName | Representerar enheternas ägartyp:  Företag – Enheten är företagsägd.  Privat – enheten är privatägd (BYOD).   Okänd – det finns ingen information om enheten. | Företag Privat Okänd |
 
 > [!Note]  
 > För `ownerTypeName`-filtret i AzureAD måste du ange värdet `deviceOwnership` som `Company` när du skapar dynamiska grupper för enheter. Mer information finns i [Regler för enheters](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -678,7 +678,7 @@ En **termsAndConditions**-entitet representerar metadata och innehållet i en vi
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 Entiteten **Användarenhetsassociation** innehåller användarenhetsassociationer i din organisation.
 
-|        Namn        |                                             Beskrivning                                            |     Exempel     |
+|        Name        |                                             Beskrivning                                            |     Exempel     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | Unikt id för användaren i informationslagret.   (Surrogatnyckel).                            | 123             |
 | DeviceKey          | Unikt id för enheten i informationslagret.                                             | 123             |
@@ -697,7 +697,7 @@ Entitetssamlingen **user** innehåller användardata. De här posterna innehåll
 | UserId                     | Unik identifierare för användaren, liknar UserKey men är en naturlig nyckel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Användarens e-postadress.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | Användarens huvudnamn.                                                                                                                                                                                               | John@constoso.com                    |
-| Visningsnamn                | Användarens visningsnamn.                                                                                                                                                                                                      | John                                 |
+| DisplayName                | Användarens visningsnamn.                                                                                                                                                                                                      | John                                 |
 | IntuneLicensed             | Anger om användaren är Intune-licensierad eller inte.                                                                                                                                                                              | Sant/falskt                           |
 | IsDeleted                  | Anger om alla användarens licenser har gått ut och om användaren därför har tagits bort från Intune. Den här flaggan ändras inte för en enskild post. I stället skapas en ny post för ett nytt användartillstånd. | Sant/falskt                           |
 | RowLastModifiedDateTimeUTC | Datum och tid i UTC när posten senast ändrades i informationslagret                                                                                                                                                 | 11/23/2016 0:00                      |
@@ -724,7 +724,7 @@ Entiteten **vppProgramType** innehåller en lista över möjliga typer av volymk
 
 ### <a name="example"></a>Exempel
 
-|             VppProgramID             |         Namn        | Beskrivning                |
+|             VppProgramID             |         Name        | Beskrivning                |
 |:------------------------------------:|:-------------------:|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Microsofts volymköpsprogram. |
 | 00000000-0000-0000-0000-000000000000 | Inte tillgängligt än | Standardvärde, inget volymköpsprogram.   |

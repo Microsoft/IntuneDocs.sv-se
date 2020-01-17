@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cc2f84ad73c86a823984e6caa11dad5d4aec8a8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f056b44301c1d0f94dde2dbb6202ed7c78e90fbf
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72507821"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857367"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work  
 
@@ -52,7 +52,7 @@ Få åtkomst till företagets resurser när Lookout for Work-appen identifierar 
 
 Om du installerar en app som Lookout for Work identifierar som ett hot visas ett meddelande som liknar det som syns i skärmbilden nedan.  
 
-![Exempel på skärmbild som visar ett meddelande med virusvarning från Lookout i Lookout for Work-appgränssnittet. Visar tre knappar: ”Stäng”, ”Mer information” och ”Avinstallera”.](./media/lookout-virus-alert-android.png)  
+![Exempel på skärmbild som visar ett meddelande med virusvarning från Lookout i Lookout for Work-appgränssnittet. Visar tre knappar: Stäng, Mer information och Avinstallera.](./media/lookout-virus-alert-android.png)  
 
 Avinstallera appen med problem för att återfå den åtkomst du förlorat till företagets e-post och data. Så länge som appen finns kvar på enheten kan du inte komma åt företagsresurser.    
 

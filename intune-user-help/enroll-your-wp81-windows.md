@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01b03e986cd2540c364f2b6d8d3e20412fd5b82e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 20228277e496ca6f594859d40836e50609d05a8a
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506163"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855449"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrera din Windows Phone 8.1-enhet i Intune  
 
@@ -73,7 +73,7 @@ Registrera din enhet:
 
     ![Skärmen Inställningar för arbetsplats](./media/WP81-enroll-3-workplace-add-acct.png)  
 
-7. Ange mer information som begärs och tryck sedan på **logga in** för att slutföra registreringen. Du bör nu se ditt arbetsplatskonto i listan om du trycker på **Inställningar** &gt; **Arbetsplats**.  
+7. Ange mer information som begärs och tryck sedan på **logga in** för att slutföra registreringen. Du bör nu se ditt arbetsplatskonto listat om du trycker på **Inställningar** &gt; **Arbetsplats**.  
 
 
     ![Skärmen Kontot har lagts till](./media/WP81-enroll-4-account-added.png)  

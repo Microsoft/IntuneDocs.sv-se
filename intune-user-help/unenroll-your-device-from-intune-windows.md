@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: e64911ea9b1b1d3c619a82eac9dc78e4e78a53e9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 4540c4d58bebcbec06e73eaf51d91d6685d0243b
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508122"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75859006"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Ta bort din Windows-enhet från hanteringen
 
@@ -94,7 +94,7 @@ Utför följande steg om du vill ta bort en Windows 8.1-telefon från Intune.
 Det finns två typer av data som företagsportalen lagrar på din Windows-enhet:
 
 - **Diagnostikloggar**: Standarddata om appaktivitet som Microsoft samlar in. Dessa data raderas automatiskt när du avinstallerar företagsportalappen. Aktivitetsdata för appen är till exempel data om hur länge appen var öppen eller om appen har kraschat.
-- **Cacheminne**: Stödfiler som krävs för att appen ska fungerar, till exempel ikoner och inställningar.
+- **Programcache**: Stödfiler som krävs för att appen ska fungerar, till exempel ikoner och inställningar.
 
 Om du vill ta bort lagrade loggar och cacheminnet utför du något av följande steg:
 

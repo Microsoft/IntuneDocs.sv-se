@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5519bdc405e725556db18d36fa98289c4edb5090
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 791e2a1313480bdf1ad95988d48664d6620ba0b3
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992908"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206354"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Funktionsinställningar för macOS-enheter i Intune
 
@@ -93,7 +93,7 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
   - **Fråga efter användarnamn och lösenord** (standard): Kräver att användarna anger ett användarnamn och lösenord.
   - **Lista alla användare, fråga efter lösenord**: Kräver att användarna väljer sitt användarnamn från en användarlista och sedan anger sitt lösenord. Konfigurera också:
 
-    - **Lokala användare** : Om du väljer **Dölj** visas inte lokala användarkonton i användarlistan, som kan innehålla standardkonton och administratörskonton. Endast nätverks- och systemanvändarkonton visas. **Inte konfigurerad** (standard) visar de lokala användarkontona i användarlistan.
+    - **Lokala användare**: Om du väljer **Dölj** visas inte lokala användarkonton i användarlistan, som kan innehålla standardkonton och administratörskonton. Endast nätverks- och systemanvändarkonton visas. **Inte konfigurerad** (standard) visar de lokala användarkontona i användarlistan.
     - **Mobilkonton**: Om du väljer **Dölj** visas inte mobilkonton i användarlistan. **Inte konfigurerad** (standard) visar mobilkontona i användarlistan. Vissa mobilkonton kan visas som nätverksanvändare.
     - **Nätverksanvändare**: Välj **Visa** om du vill visa nätverksanvändare i användarlistan. **Inte konfigurerad** (standard) visar nätverksanvändarkontona i användarlistan.
     - **Administratörer**: Om du väljer **Dölj** visas inte administratörskonton i användarlistan. **Inte konfigurerad** (standard) visar administratörskontona i användarlistan.
@@ -105,7 +105,7 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
 - **Starta om**: Om du väljer **Dölj** visas inte omstartsknappen på inloggningsskärmen. **Inte konfigurerad** (standard) visar omstartsknappen.
 - **Vila**: Om du väljer **Dölj** visas inte Vila-knappen på inloggningsskärmen. **Inte konfigurerad** (standard) visar Vila-knappen.
 
-#### <a name="other"></a>Annat
+#### <a name="other"></a>Andra
 
 - **Inaktivera användarinloggning från konsol**: Om du väljer **Inaktivera** döljs macOS-kommandoraden som används för att logga in. Vanliga användare kan **inaktivera** den här inställningen. **Inte konfigurerad** (standard) gör att avancerade användare kan logga in med macOS-kommandoraden. För att gå till konsolläget anger användarna `>console` i fältet Användarnamn. Användarna måste sedan autentiseras i konsolfönstret.
 
@@ -117,7 +117,7 @@ När användarna loggar in på enheterna påverkar följande inställningar vad 
 - **Inaktivera omstart** : Om du väljer **Inaktivera** kan användarna inte välja alternativet **Starta om** efter att de har loggat in. **Inte konfigurerad** (standard) tillåter användare att välja menyalternativet **Starta om** på enheten.
 - **Inaktivera Ström av**: Om du väljer **Inaktivera** kan användarna inte välja alternativet **Ström av** efter att de har loggat in. **Inte konfigurerad** (standard) tillåter användare att välja menyalternativet **Ström av** på enheten.
 - **Inaktivera Logga ut** (macOS 10.13 och senare): Om du väljer **Inaktivera** kan användarna inte välja alternativet **Logga ut** efter att de har loggat in. **Inte konfigurerad** (standard) tillåter användare att välja menyalternativet **Logga ut** på enheten.
-- **Inaktivera Lås skärm**  (macOS 10.13 och senare): Om du väljer **Inaktivera** kan användarna inte välja alternativet **Lås skärm** efter att de har loggat in. **Inte konfigurerad** (standard) tillåter användare att välja menyalternativet **Lås skärm** på enheten.
+- **Inaktivera Lås skärm** (macOS 10.13 och senare): Om du väljer **Inaktivera** kan användarna inte välja alternativet **Lås skärm** efter att de har loggat in. **Inte konfigurerad** (standard) tillåter användare att välja menyalternativet **Lås skärm** på enheten.
 
 ## <a name="single-sign-on-app-extension"></a>Tillägg för enkel inloggning
 
@@ -183,7 +183,7 @@ Den här funktionen gäller för:
 - **Återanvändnings gräns för lösen ord** (endast Kerberos): Ange antalet nya lösen ord, från 1-24, som måste användas tills ett tidigare lösen ord kan återanvändas på domänen. **Inte konfigurerad** (standard) upprätthåller inte en gräns för lösen ords åter användning.
 - **Lägsta ålder för lösen ord** (endast Kerberos): Ange antalet dagar som ett lösen ord måste användas på domänen innan användaren kan ändra det. **Inte konfigurerad** (standard) upprätthåller inte en minsta ålder på lösen ord innan de kan ändras.
 - **Meddelande om förfallo datum för lösen ord** (endast Kerberos): Ange antalet dagar innan ett lösen ord upphör att gälla som användare får ett meddelande om att lösen ordet upphör att gälla. **Inte konfigurerad** (standard) använder `15` dagar.
-- **Lösenordets giltighetstid** (endast Kerberos): Ange antal dagar innan lösenordet för enheten måste ändras. **Inte konfigurerat** (standard) innebär att användar lösen ord aldrig upphör att gälla.
+- **Lösenordets giltighetstid** (endast Kerberos): Ange antalet dagar innan lösenordet måste ändras. **Inte konfigurerat** (standard) innebär att användar lösen ord aldrig upphör att gälla.
 - **URL för lösen ords ändring** (endast Kerberos): Ange URL: en som startar när användaren initierar en ändring av Kerberos-lösenordet.
 - **Huvud namn** (endast Kerberos): Ange användar namnet för Kerberos-huvudobjektet. Du behöver inte inkludera sfär namnet. I `user@contoso.com`är `user` till exempel huvud namnet och `contoso.com` är sfär namnet.
 
@@ -225,7 +225,7 @@ Den här funktionen gäller för:
 
   Tjänst typen kan vara:
 
-  - **authsrv**: Tillägg till app för enkel inloggning
+  - **authsrv**: Tillägg för enkel inloggning
   - **AppLink**: Universal Link
   - **webcredentials**: lösen ord Autofyll
 

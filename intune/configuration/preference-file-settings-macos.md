@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/02/2019
+ms.date: 01/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ed04c1bf135793da9cece9debc2c7cdd481601a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d226a5b8ee448b7b168a03fe6b8a1c63bc1be432
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74691695"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827793"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Lägg till en fil med en egenskaps lista till macOS-enheter med Microsoft Intune
 
@@ -53,6 +53,16 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 - **Preferens domän namn**: filer med egenskaps listor används vanligt vis för webbläsare (Microsoft Edge), [Microsoft Defender Avancerat skydd](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)och anpassade appar. När du skapar en inställnings domän skapas även ett paket-ID. Ange paket-ID: t, till exempel `com.company.application`. Ange till exempel `com.Contoso.applicationName`, `com.Microsoft.Edge` eller `com.microsoft.wdav`.
 - **Egenskaps lista fil**: Välj den egenskaps list fil som är kopplad till din app. Se till att det är en `.plist`-eller `.xml`-fil. Du kan till exempel Ladda upp en `YourApp-Manifest.plist` eller `YourApp-Manifest.xml` fil.
 - **Fil innehåll**: nyckelinformation i filen med egenskaps listan visas. Om du behöver ändra nyckelinformation öppnar du list filen i en annan redigerare och laddar sedan om filen i Intune.
+
+Se till att filen är korrekt formaterad. Filen får bara innehålla nyckel värde par och får inte vara figursatt i `<dict>`, `<plist>`eller `<xml>` taggar. Till exempel bör filen med egenskaps listan likna följande fil:
+
+```xml
+<key>SomeKey</key>
+<string>someString</string>
+<key>AnotherKey</key>
+<false/>
+...
+```
 
 Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
 

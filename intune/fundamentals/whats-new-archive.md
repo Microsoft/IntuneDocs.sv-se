@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a6b5585501851bb52db70ca222f8cfff7ad0597
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 4a9454d11fd1209e715cbcb1e9d2ce7aae4a003c
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73635469"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886060"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nyheter i Microsoft Intune – föregående månader
 
@@ -84,7 +84,7 @@ På macOS-enheter kan du skapa en profil för enhetskonfiguration (**Enhetskonfi
 Om du vill se de här inställningarna går du till [inställningarna för iOS-enhetsfunktioner](../configuration/macos-device-features-settings.md).
 
 #### <a name="configure-wifi-on-android-enterprise-device-owner-dedicated-devices-running-in-multi-app-kiosk-mode--3041940----"></a>Konfigurera Wi-Fi på enhetsägardedikerade Android Enterprise-enheter som körs i helskärmsläge för flera appar<!--3041940  -->
-Du kan aktivera inställningar på Android Enterprise-enhetsägarenheter när de körs som dedikerade enheter i helskärmsläge för flera appar. I den här uppdateringen kan du ge användare möjlighet att konfigurera och ansluta till Wi-Fi-nätverk (**Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Endast enhetens ägare, Enhetsbegränsningar** för profiltyp > **Dedikerade enheter** > **Helskärmsläge**: **Flera appar** > **Wi-Fi-konfiguration**).
+Du kan aktivera inställningar på Android Enterprise-enhetsägarenheter när de körs som dedikerade enheter i helskärmsläge för flera appar. I den här uppdateringen kan du ge användare möjlighet att konfigurera och ansluta till Wi-Fi-nätverk (**Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Endast enhetens ägare, Enhetsbegränsningar** för profiltyp > **Dedikerade enheter** > **Helskärmsläge**: **Flera appar** > **WiFi-konfiguration**).
 
 Om du vill se alla inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner](../configuration/device-restrictions-android-for-work.md).
 
@@ -95,7 +95,7 @@ Du kan aktivera inställningar på Android Enterprise-enhetsägarenheter när de
 
 Om du vill se alla inställningar som du kan konfigurera går du till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner](../configuration/device-restrictions-android-for-work.md).
 
-Gäller för: dedikerade Android Enterprise-enheter som körs i helskärmsläge för flera appar
+Gäller för: Dedikerade Android Enterprise-enheter som körs i helskärmsläge för flera appar
 
 #### <a name="create-and-use-oemconfig-device-configuration-profiles-in-intune---3305883----"></a>Skapa och använda OEMConfig-profiler för enhetskonfiguration i Intune<!-- 3305883  -->
 I den här uppdateringen stöder Intune konfiguration av Android Enterprise-enheter med OEMConfig. Mer specifikt kan du kan skapa en profil för enhetskonfiguration och använda inställningar för Android Enterprise-enheter med hjälp av OEMConfig (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform).
@@ -104,7 +104,7 @@ Stöd för OEM-tillverkare sker för närvarande per varje enskild OEM. Om en OE
 
 Om du vill veta mer om den här funktionen kan du gå till [Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-Gäller: Android Enterprise
+Gäller för: Android Enterprise
 
 #### <a name="windows-update-notifications---3316758-3316782----"></a>Windows Update-meddelanden<!-- 3316758, 3316782  -->
 Vi har lagt till två *inställningar för användarupplevelse* i de konfigurationer av Windows Update-uppdateringsring som du kan hantera från Intune-konsolen. Nu kan du:
@@ -127,7 +127,7 @@ När du skapar en profil för enhetskonfiguration kan du tillåta eller begräns
 
 Om du vill se de här funktionerna går du till [inställningarna för enhetsbegränsningar i Microsoft Edge-webbläsaren](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser).
 
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="expanded-support-for-android-enterprise-fully-managed-devices--preview-----3903241-3903244-3903246-----"></a>Utökat stöd för fullständigt hanterade Android Enterprise-enheter (förhandsversion)<!--   3903241, 3903244, 3903246   -->
 Fullständigt hanterade Android Enterprise-enheter som först tillkännagavs i januari 2019 är fortfarande i offentlig förhandsversion, men vi har utökat stödet för dem till att omfatta följande:
@@ -235,7 +235,7 @@ På enheter med Windows 10 och senare kan du köra en enhet i helskärmsläge oc
 
 En lista och beskrivningar av alla inställningar för helskärmsläge finns i [Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge i Intune](../configuration/kiosk-settings-windows.md).
 
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="operational-logs-also-show-details-on-non-compliant-devices---4063755----"></a>Arbetsloggar visar även information om icke-kompatibla enheter<!-- 4063755  -->
 När Intune-loggar dirigeras till Azure Monitor-funktioner kan du även dirigera arbetsloggarna. I den här uppdateringen ger arbetsloggarna även information om icke-kompatibla enheter.
@@ -252,7 +252,7 @@ I den här uppdateringen stöder Intune konfiguration av Android Zebra-enheter. 
 
 Mer information om den här funktionen finns i [Använd och hantera Zebra-enheter med mobilitetstillägg i Intune](../configuration/android-zebra-mx-overview.md).
 
-Gäller: Android
+Gäller för: Android
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Enhetshantering
@@ -354,7 +354,7 @@ När du lägger till ett PowerShell-skript i en enhetskonfigurationsprofil körs
 
 Mer information om användning av PowerShell finns i [PowerShell-skript i Intune](../apps/intune-management-extension.md).
 
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="macos-users-are-prompted-to-update-their-password---1873216---"></a>macOS-användare uppmanas att uppdatera sitt lösenord<!-- 1873216 -->
 Intune framtvingar inställningen **ChangeAtNextAuth** på macOS-enheter. Den här inställningen påverkar slutanvändare och enheter som har efterlevnadsprinciper för lösenord eller lösenordsprofiler för enhetsbegränsning. Slutanvändare uppmanas en gång att uppdatera sitt lösenord. Den här uppmaningen sker när en användare för första gången kör en uppgift som kräver autentisering, till exempel inloggning på enheten. Användare kan även uppmanas att uppdatera sitt lösenord när de gör något som kräver administratörsprivilegier, till exempel att begära nyckelringsåtkomst.
@@ -394,7 +394,7 @@ Se följande för en lista över dessa inställningar:
 - [Enhetsbegränsningar för Microsoft Edge-webbläsaren](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser)
 - [Enhetsbegränsningar för favoriter och sökning](../configuration/device-restrictions-windows-10.md##favorites-and-search)
 
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="new-device-restriction-settings-for-ios-and-macos-devices---3448774-----"></a>Nya inställningar för enhetsbegränsning för iOS-enheter och macOS-enheter<!-- 3448774   -->
 Du kan begränsa vissa inställningar och funktioner på enheter som kör iOS och macOS (**Enhetskonfiguration** > **Profiler** > **Ny profil** > **iOS** eller **macOS** som plattform > **Enhetsbegränsningar** som profiltyp). Den här uppdateringen lägger till fler funktioner och inställningar som du kan kontrollera, till exempel ange skärmtid, ändra eSIM-inställningar och mobilabonnemang och mer på iOS-enheter. Det går även att fördröja programuppdateringars synlighet för användaren och blockera innehållscachelagring på macOS-enheter.
@@ -437,7 +437,7 @@ Du kan konfigurera **Aktivera begränsningar i enhetsinställningarna** på öve
 
 Beteendet är samma. Specifikt:
 
-- iOS 11.4.1 och tidigare: **Blockera** förhindrar slutanvändare från att ange egna begränsningar i enhetsinställningarna. 
+- iOS 11.4.1 och tidigare: **Blockera** förhindrar slutanvändare att ange egna begränsningar i enhetsinställningarna. 
 - iOS 12.0 och senare: **Blockera** förhindrar slutanvändare att ange en egen **skärmtid** i enhetsinställningarna, som innehålls- och sekretessbegränsningar. Fliken för begränsningar visas inte längre på enheter uppgraderade till iOS 12.0. Dessa inställningar finns i **Skärmtid**. 
 
 En lista över inställningarna finns i [iOS-enhetsbegränsningar](../configuration/device-restrictions-ios.md#general).
@@ -540,7 +540,7 @@ Administrativa mallar i Intune (**Enhetskonfiguration** > **Administrationsmalla
 
 Mer information om den här funktionen finns i [Windows 10-mallar för att konfigurera grupprincipinställningar](../configuration/administrative-templates-windows.md).
 
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user---1333642---"></a>Använda S/MIME för att kryptera och signera flera enheter för en användare<!-- 1333642 -->
 Den här uppdateringen innehåller S/MIME-e-postkryptering som använder en ny importerad certifikatprofil (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj plattformen > profiltypen **PKCS-importerat certifikat**). Du kan importera certifikat i PFX-format i Intune. Intune kan sedan leverera samma certifikat till flera enheter som registrerats av en enda användare. Detta omfattar även följande:
@@ -554,7 +554,7 @@ Stöds på: Windows, Windows Phone 10, macOS, iOS och Android
 
 #### <a name="new-options-to-automatically-connect-and-persist-rules-when-using-dns-settings-on-windows-10-and-later-devices---1333665-2999078---"></a>Nya alternativ för att automatiskt ansluta och bevara regler vid användning av DNS-inställningarna på enheter med Windows 10 och senare<!-- 1333665, 2999078 -->
 I Windows 10 och senare enheter kan du skapa en VPN-profil som innehåller en lista över DNS-servrar för att lösa domäner, som till exempel contoso.com. Den här uppdateringen omfattar nya inställningar för namnmatchning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > välj **Windows 10 och senare** för plattform > välj **VPN** för Profiltyp > **DNS-inställningarna** >**Lägg till**): 
-- **Anslut automatiskt**: När **Aktiverad**, ansluter enheten automatiskt till VPN-anslutningen när en enhet kontaktar en domän som du anger, t.ex contoso.com.
+- **Anslut automatiskt**: När den är **Aktiverad**, ansluter enheten automatiskt till VPN-anslutningen när en enhet kontaktar en domän som du anger, t.ex contoso.com.
 - **Beständig**: Som standard är alla NRPT-regler (principtabell för namnmatchning) aktiva så länge enheten är ansluten med hjälp av den här VPN-profilen. När inställningen är **Aktiverad** för en NRPT-regel förblir regeln aktiv på enheten, även om VPN-anslutningen kopplas bort. Regeln gäller tills VPN-profilen tas bort eller tills regeln tas bort manuellt, vilket kan göras med hjälp av PowerShell.
 [Windows 10 VPN-inställningar](../configuration/vpn-settings-windows-10.md) beskriver inställningarna.
 
@@ -607,7 +607,7 @@ Du kan aktivera VPN-anslutningar som alltid är aktiva i **Enhetskonfiguration**
 #### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices---3285177---"></a>Ny inställning för att avsluta processer i Aktivitetshanteraren på Windows 10-enheter<!-- 3285177 --> 
 Den här uppdateringen innehåller en ny inställning för att avsluta processer med hjälp av Aktivitetshanteraren på Windows 10-enheter. Med hjälp av en profil för enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Windows 10** > i **Profiltyp**, välj **Enhetsbegränsningar** > **Allmänna** inställningar), väljer du att tillåta eller förhindra den här inställningen.
 Om du vill visa de här inställningarna går du till [Inställningar av begränsningar för Windows 10-enheter](../configuration/device-restrictions-windows-10.md).
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview---2055484-----"></a>Använda Microsofts rekommenderade inställningar med säkerhetsbaslinjer (allmänt tillgänglig förhandsversion)<!-- 2055484   -->
 
@@ -620,20 +620,20 @@ Läs mer om säkerhetsbaslinjer i [Skapa en säkerhetsbaslinje för Windows 10 i
 Den här funktionen gäller för: Windows 10 och senare
 
 #### <a name="non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379-----"></a>Icke-administratörer kan aktivera BitLocker på Windows 10-enheter som är anslutna till Azure AD<!-- 2147379   -->
-När du aktiverar BitLocker-inställningar på Windows 10-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  **Windows 10 och senare** för plattform > **Endpoint protection** för Profiltyp > **Windows-kryptering**), lägger du till BitLocker-inställningar.
+När du aktiverar BitLocker-inställningar på Windows 10-enheter (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10 och senare** för plattform > **Endpoint protection** för Profiltyp > **Windows-kryptering**), lägger du till BitLocker-inställningar.
 
 Den här uppdateringen innehåller en ny inställning för BitLocker för att låta standardanvändare (icke-administratörer) aktivera kryptering.
 
 De här inställningarna finns i [Inställningar för slutpunktsskydd för Windows 10](../protect/endpoint-protection-windows-10.md#windows-encryption).
 
 #### <a name="check-for-configuration-manager-compliance---2192052--eepublished----"></a>Kontrollera Configuration Manager-kompatibilitet<!-- 2192052  eepublished  -->
-Den här uppdateringen innehåller en ny kompatibilitetsinställning för System Center Configuration Manager (**Enhetskompabilitet** > **Principer** > **Skapa princip** > **Windows 10 och senare** > **Configuration Manager-kompabilitet**). Configuration Manager skickar signaler till Intune-kompatibilitet. Med hjälp av inställningen kan du kräva att alla Configuration Manager-signaler returnerar ”kompatibel”.
+Den här uppdateringen innehåller en ny kompatibilitetsinställning för Configuration Manager (**Enhetskompabilitet** > **Principer** > **Skapa princip** > **Windows 10 och senare** > **Configuration Manager-kompabilitet**). Configuration Manager skickar signaler till Intune-kompatibilitet. Med hjälp av inställningen kan du kräva att alla Configuration Manager-signaler returnerar ”kompatibel”.
 
 Du kan till exempel kräva att alla programuppdateringar installeras på enheter. Det här kravet har tillståndet ”installerad” i Configuration Manager. Om några program på enheten är i ett okänt tillstånd är enheten inte kompatibel i Intune.
 
 [Configuration Manager-kompatibilitet](../protect/compliance-policy-create-windows.md#configuration-manager-compliance) beskriver den här inställningen.
 
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile---2809324-----"></a>Anpassa bakgrund på övervakade iOS-enheter med hjälp av en profil för enhetskonfiguration<!-- 2809324   -->
 När du skapar en profil för enhetskonfiguration för iOS-enheter kan du anpassa vissa inställningar (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsfunktioner** för profiltypen). Den här uppdateringen innehåller nya inställningar för **Bakgrund** som gör att administratörer kan använda en .png-, .jpg- eller .jpeg-bild på startsidan eller låsskärmen. Inställningar för bakgrund gäller endast för övervakade enheter. 
@@ -644,7 +644,7 @@ En lista över de här inställningarna finns i [Funktionsinställningar för iO
 I den här uppdateringen är funktionen helskärmsläge på Windows 10 och senare enheter allmänt tillgängligt (GA). Alla inställningar som du kan lägga till och konfigurera finns i [Inställningar för helskärmsläge för Windows 10 (och senare)](../configuration/kiosk-settings.md).
 
 #### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise---3598396-----"></a>Kontaktdelning via Bluetooth har tagits bort i Enhetsbegränsningar > Enhetens ägare för Android Enterprise<!-- 3598396   -->
-När du skapar en profil för enhetsbegränsningar för Android Enterprise-enheter finns inställningen **Dela kontakter via Bluetooth**. I den här uppdateringen tas inställningen **Dela kontakter via Bluetooth** bort (**Enhetskonfiguration** > **Profiler**  >  **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar > Enhetens ägare** för profiltyp > **Allmän**).
+När du skapar en profil för enhetsbegränsningar för Android Enterprise-enheter finns inställningen **Dela kontakter via Bluetooth**. I den här uppdateringen tas inställningen **Dela kontakter via Bluetooth** bort (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Android Enterprise** för plattform > **Enhetsbegränsningar > Enhetens ägare** för profiltyp > **Allmän**).
 
 Inställningen **Dela kontakter via Bluetooth** har inte stöd för hantering av Android Enterprise-enhetens ägare. Så när den här inställningen tas bort, påverkar det inga enheter eller klienter, även om den här inställningen är aktiverad och konfigurerad i din miljö.
 
@@ -695,7 +695,7 @@ Intune har inbyggd granskningsloggning som spårar händelser när de ändras. D
 [Skicka data till lagring, händelsehubbar eller logganalyser i Intune](../review-logs-using-azure-monitor.md) har mer information om den här funktionen.
 
 #### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device---2687509----"></a>Hoppa över flera skärmar för installationsassistenten på en iOS DEP-enhet<!-- 2687509  -->
-Förutom skärmar som du kan hoppa över just nu, kan du ställa in så att iOS DEP-enheter hoppar över följande skärmar i installationsassistenten när en användare registrerar enheten: Visa ton, Sekretess, Android-migrering, Start-knappen, iMessage och FaceTime, Registrering, Bevaka migrering, Utseende, Skärmtid, Programuppdateringen, SIM-installation.
+Förutom de skärmar som du kan hoppa över just nu kan du ange att iOS DEP-enheter hoppar över följande skärmar i installationsassistenten när en användare registrerar enheten: Skärmton, Sekretess, Android-migrering, Start-knapp, iMessage och FaceTime, Registrering, Bevaka migrering, Utseende, Skärmtid, Programuppdatering, SIM-installation.
 Om du vill välja vilka skärmar som ska hoppas över, går du till **Enhetsregistrering** > **Apple-registrering** > **Tokens för registreringsprogram** > välj en token > **Profiler** > välj en profil > **Egenskaper** > **Anpassning av installationsassistenten** > välj **Dölj** för alla skärmar som du vill hoppa över > **OK**.
 Om du skapar en ny profil eller redigerar en profil måste den valda överhoppningsskärmen synkroniseras med Apple MDM-servern. Användare kan utfärda en manuell synkronisering av enheterna så att det inte sker någon fördröjning i att plocka upp profiländringarna.
 
@@ -762,7 +762,7 @@ Du kan nu hantera följande appar med [Intune principer för appskydd](../apps/a
 - PowerApps (Android, iOS)
 - Flow (Android, iOS)
 
-Använd appskyddsprinciper för att skydda företagsdata och kontrollera dataöverföring för dessa appar, så som andra principhanterade Intune-appar. Obs! Om Flow inte visas i konsolen ännu kan du lägga till det när du skapar eller redigerar principer för appskydd. Du gör detta genom att använda alternativet **+ fler appar** och sedan ange *app-ID* för Flow i indatafältet. Använd *com.microsoft.flow* för Android och *com.microsoft.procsimo* för iOS.
+Använd appskyddsprinciper för att skydda företagsdata och kontrollera dataöverföring för dessa appar, så som andra principhanterade Intune-appar. Obs! Om Flow ännu inte syns i konsolen kan du lägga till det när du skapar eller redigerar principerna för appskydd. Du gör detta genom att använda alternativet **+ fler appar** och sedan ange *app-ID* för Flow i indatafältet. Använd *com.microsoft.flow* för Android och *com.microsoft.procsimo* för iOS.
 
 
 ### <a name="device-configuration"></a>Enhetskonfiguration
@@ -894,7 +894,7 @@ Du kan felsöka installationen av klientappar genom att granska kolumnen **Appin
 ### <a name="device-configuration"></a>Enhetskonfiguration
 
 #### <a name="create-dns-suffixes-in-vpn-configuration-profiles-on-devices-running-windows-10---1333668---"></a>Skapa DNS-suffix i VPN-konfigurationsprofiler på enheter som kör Windows 10<!-- 1333668 -->
-När du skapar en profil för VPN-enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  plattform: **Windows 10 och senare** > profiltyp: **VPN**), anger du vissa DNS-inställningar. Med den här uppdateringen kan du även ange flera **DNS-suffix** i Intune. När du använder DNS-suffix, kan du söka efter en nätverksresurs med dess korta namn i stället för det fullständiga domännamnet (FQDN). I och med den här uppdateringen kan du ändra ordningen på DNS-suffix i Intune.
+När du skapar en profil för VPN-enhetskonfiguration (**Enhetskonfiguration** > **Profiler** > **Skapa profil** >  plattform: **Windows 10 och senare** > profiltyp: **VPN**), anger du vissa DNS-inställningar. Med den här uppdateringen kan du även ange flera **DNS-suffix** i Intune. När du använder DNS-suffix, kan du söka efter en nätverksresurs med dess korta namn i stället för det fullständiga domännamnet (FQDN). I och med den här uppdateringen kan du ändra ordningen på DNS-suffix i Intune.
 [Windows 10-VPN-inställningar](../configuration/vpn-settings-windows-10.md#dns-settings) visar en lista över aktuella DNS-inställningar.
 Gäller för: Windows 10-enheter
 
@@ -953,7 +953,7 @@ Den här uppdateringen innehåller följande förbättringar i konfigurationspro
 - För närvarande kan du skapa flera informationsdatorprofiler på samma enhet. I och med den här uppdateringen stöder Intune endast en informationsdatorprofil per enhet. Om du fortfarande behöver flera informationsdatorprofiler på en enskild enhet kan du använda en anpassad URI.
 - I en profil för **informationsdator med flera appar** kan du välja programikonernas storlek och ordning i **Startmenylayout** i programrutnätet. Om du vill anpassa mera, kan du ladda upp en XML-fil.
 - Inställningarna för webbläsare för informationsdator flyttas till inställningarna för **Informationsdator**. För närvarande har inställningarna för **Webbläsare för informationsdator** sin egen kategori i Azure Portal.
-Gäller: Windows 10 och senare
+Gäller för: Windows 10 och senare
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device----2637704----"></a>Ange PIN-kod när du ändrar fingeravtryck eller ansikts-ID på en iOS-enhet <!-- 2637704  -->
 Nu uppmanas användarna att ange en PIN-kod när de gör biometriska ändringar på sin iOS-enhet. Detta omfattar ändringar i registrerade fingeravtryck eller ansikts-ID. Tidsinställningen för uppmaningen beror på hur konfigurationen av *Kontrollera åtkomstkraven efter (minuter)* löper ut.  När ingen PIN-kod har angetts, uppmanas användaren att skapa en. 
@@ -980,7 +980,7 @@ PowerShell-skript i Intune kan riktas till säkerhetsgrupper för AAD-enheter.
 #### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Ny standardinställning för ”Krav på lösenordstyp” för Android, Android Enterprise<!-- 2649963 -->
 När du skapar en ny efterlevnadsprincip (**Intune** > **enhetsefterlevnad** > **principer** > **skapa princip** > **Android** eller **Android Enterprise** för Plattform > Systemsäkerhet), ändras standardvärdet för **krav på lösenordstyp**:
 
-Från: Standard för enheten till: Minst numeriskt
+Från: Standard för enheten Till: Minst numeriskt
 
 Gäller för: Android, Android Enterprise
 
@@ -1038,7 +1038,7 @@ Med Intune-appskyddsprinciper kan du konfigurera olika dataskyddsinställningar 
 Funktionerna i inställningarna ändras inte, men det är lättare att hitta dem när du arbetar i principen för redigering av flödet.
 
 #### <a name="restricts-apps-and-block-access-to-company-resources-on-android-devices---2451462----"></a>Begränsa appar och blockera åtkomsten till företagsresurser på Android-enheter<!-- 2451462  -->  
-I **Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Android**  >  **Systemsäkerhet** finns det en ny inställning under avsnittet *Enhetssäkerhet* med namnet **Begränsade appar**. Inställningen **Begränsade appar** använder en efterlevnadsprincip för att blockera åtkomsten till företagsresurser om vissa appar installeras på enheten. Enheten betraktas som icke-kompatibel tills de begränsade apparna tas bort från enheten.
+I **Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Android** > **Systemsäkerhet** finns det en ny inställning under avsnittet *Enhetssäkerhet* med namnet **Begränsade appar**. Inställningen **Begränsade appar** använder en efterlevnadsprincip för att blockera åtkomsten till företagsresurser om vissa appar installeras på enheten. Enheten betraktas som icke-kompatibel tills de begränsade apparna tas bort från enheten.
 Gäller för: 
 - Android
 
@@ -1295,9 +1295,9 @@ Du kan registrera dig för att ta emot versioner tidigt genom att gå med i Insi
 #### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices---1497640---"></a>Skapa en princip för enhetsefterlevnad med hjälp av brandväggsinställningar på macOS-enheter<!-- 1497640 -->
 När du skapar en ny efterlevnadsprincip i macOS (**Enhetsefterlevnad** > **Principer** > **skapa princip** > **Plattform: macOS** > **Systemsäkerhet**) finns det några nya **brandväggsinställningar** tillgängliga: 
 
-- **Brandvägg**: konfigurera hur inkommande anslutningar ska hanteras i din miljö.
-- **Inkommande anslutningar**: **Blockera** alla inkommande anslutningar utom de som behövs för grundläggande internettjänster, som DHCP, Bonjour och IPSec. Den här inställningen blockerar också alla delningstjänster.
-- **Stealthläge**: **Aktivera** stealthläget om du vill förhindra att enheten svarar på avsökningsförfrågningar. Enheten fortsätter att besvara inkommande begäranden för godkända appar.
+- **Brandvägg**: Konfigurera hur inkommande anslutningar ska hanteras i din miljö.
+- **Inkommande anslutningar**: **Blockera** alla inkommande anslutningar, förutom de som behövs för grundläggande Internettjänster som DHCP, Bonjour och IPSec. Den här inställningen blockerar också alla delningstjänster.
+- **Dolt läge**: **Aktivera** dolt läge om du vill förhindra att enheten svarar på avsökningsförfrågningar. Enheten fortsätter att besvara inkommande begäranden för godkända appar.
 
 Gäller: macOS 10.12 och senare
 
@@ -1354,11 +1354,11 @@ Följande nya tillstånd har lagts till i **Enhetskonfiguration** > **Principer*
 - inte tillämpligt En bild med antalet enheter på andra plattformar visas också. Om du till exempel tittar på en iOS-profil visas antalet enheter med andra system än iOS som också har tilldelats till den här profilen. Se [Efterlevnadsprinciper för enheter](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions---2325484---"></a>Enhetsefterlevnaden stöder antiviruslösningar från tredje part<!-- 2325484 -->
-När du skapar en ny princip för enhetsefterlevnad (**Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Plattform: Windows 10 eller senare** > **Inställningar** > **Systemsäkerhet**) är några nya alternativ för **[Enhetssäkerhet](../protect/compliance-policy-create-windows.md)** tillgängliga: 
-- **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med antivirusprogram som är registrerade i Windows Security Center, t.ex. Symantec och Windows Defender. 
-- **Antispionprogram**: När **Kräv** har valts kan du kontrollera efterlevnaden med antispionprogram som har registrerats med Windows Security Center, t.ex. Symantec och Windows Defender. 
+När du skapar en princip för enhetsefterlevnad (**Enhetsefterlevnad** > **Principer** > **Skapa princip** > **Plattform: Windows 10 och senare** > **Inställningar** > **Systemsäkerhet**), finns det nya alternativ för **[Enhetssäkerhet](../protect/compliance-policy-create-windows.md)** : 
+- **Antivirus**: När **Kräv** har valts kan du kontrollera efterlevnaden med antivirusprogram som är registrerade i Windows Security Center, t.ex. Symantec eller Windows Defender. 
+- **AntiSpyware**: När **Kräv** har valts kan du kontrollera efterlevnaden med något av de antispionprogram som har registrerats med Windows Security Center, t.ex. Symantec eller Windows Defender. 
 
-Gäller: Windows 10 och senare 
+Gäller för: Windows 10 och senare 
 
 ### <a name="device-enrollment"></a>Enhetsregistrering
 
@@ -1435,7 +1435,7 @@ Med den här uppdateringen kan du välja Palo Alto Networks GlobalProtect som VP
 Nu kan du konfigurera ytterligare inställningar av säkerhetsalternativ för lokala Windows 10-enheter. Det finns fler inställningar i Microsoft-nätverksklienten, Microsoft-nätverksservern, för nätverksåtkomst och säkerhet, samt för interaktiv inloggning. Inställningarna finns i kategorin Endpoint Protection när du skapar en princip för Windows 10-enhetskonfiguration.
 
 #### <a name="enable-kiosk-mode-on-windows-10-devices---1560072----"></a>Aktivera helskärmsläge på Windows 10-enheter<!-- 1560072 ! -->
-På Windows 10-enheter kan du skapa en konfigurationsfil och aktivera helskärmsläge (**Enhetskonfiguration** > **Profiler** > **Skapa profil**  >  **Windows 10** > **Enhetsbegränsningar** > **Helskärmsläge**). I den här uppdateringen av **Helskärmsläge (förhandsgranskning)** döps inställningen om till **Helskärmsläge (föråldrad)** . **Helskärmsläge (föråldrad)** rekommenderas inte längre för användning, men fortsätter att fungera fram till juli-uppdateringen. **Helskärmsläge (föråldrad)** ersätts av den nya profiltypen **Helskärmsläge** (**Skapa profil** > **Windows 10**  >  **Helskärmsläge (förhandsgranskning)** ), som innehåller inställningar för att konfigurera helskärmslägen på Windows 10 RS4 och senare.
+På Windows 10-enheter kan du skapa en konfigurationsfil och aktivera helskärmsläge (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Windows 10** > **Enhetsbegränsningar** > **Helskärmsläge**). I den här uppdateringen av **Helskärmsläge (förhandsgranskning)** döps inställningen om till **Helskärmsläge (föråldrad)** . **Helskärmsläge (föråldrad)** rekommenderas inte längre för användning, men fortsätter att fungera fram till juli-uppdateringen. **Helskärmsläge (föråldrad)** ersätts av den nya profiltypen **Helskärmsläge** (**Skapa profil** > **Windows 10** > **Helskärmsläge (förhandsgranskning)** ), som innehåller inställningar för att konfigurera helskärmslägen på Windows 10 RS4 och senare.
 
 Gäller för Windows 10 och senare.
 
@@ -1463,7 +1463,7 @@ AutoPilot-distributionsprofiler kan tilldelas till Azure AD-grupper som innehål
 #### <a name="set-compliance-by-device-location---851881----"></a>Ange efterlevnad enligt enhetsplats<!-- 851881 ! -->
 I vissa fall kanske du vill begränsa åtkomsten till företagets resurser till en specifik plats som definierats av en nätverksanslutning. Nu kan du skapa en efterlevnadsprincip (**Enhetsefterlevnad** > **Platser**) baserat på IP-adressen till enheten. Om enheten flyttas utanför IP-intervallet kan enheten inte komma åt företagets resurser.
 
-Gäller: Android-enheter 6.0 och senare med den uppdaterade företagsportalappen
+Gäller för: Android-enheter med version 6.0 och senare, med den uppdaterade företagsportalappen
 
 #### <a name="prevent-consumer-apps-and-experiences-on-windows-10-enterprise-rs4-autopilot-devices---1621980---"></a>Förhindra konsumentappar och funktioner för anpassad upplevelse i Windows 10 Enterprise RS4 AutoPilot-enheter<!-- 1621980 -->
 Du kommer att kunna förhindra installationen av konsumentappar och funktioner för anpassad upplevelse på dina Windows 10 Enterprise RS4 AutoPilot-enheter. Du ser den här funktionen om du går till **Intune** > **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **Plattform** = **Windows 10 eller senare** > **Profiltyp** = **Enhetsbegränsningar** > **Konfigurera** > **Windows Spotlight** > **Konsumentfunktioner**. 
@@ -1578,7 +1578,7 @@ Med den här uppdateringen kan administratörer aktivera AlwaysOn för VPN-profi
 
 #### <a name="new-printer-settings-for-education-profiles---1308900---"></a>Nya skrivarinställningar för utbildningsprofiler<!-- 1308900 -->
 
-För utbildningsprofiler finns nya inställningar under kategorin **Skrivare**: **Skrivare**, **Standardskrivare**, **Lägg till nya skrivare**.
+Det finns nya inställningar för utbildningsprofiler under kategorin **Skrivare**: **Skrivare**, **Standardskrivare**, **Lägg till nya skrivare**.
 
 #### <a name="show-caller-id-in-personal-profile---android-enterprise-work-profile--1098984---"></a>Visa nummerpresentation i personlig profil – Android Enterprise-arbetsprofil<!--1098984 -->
 När du använder en personlig profil på en enhet, kan slutanvändare inte se nummerpresentation för en arbetskontakt. 
@@ -1595,16 +1595,16 @@ Gäller för: Androids arbetsprofilenheter på Android OS v6.0 och senare
 Med denna uppdatering, inkluderar [Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard) (**Enhetskonfiguration** > **Profiler** > **Slutpunktsskydd**) följande inställningar: 
 
 - **Windows Defender Credential Guard**: Aktiverar Credential Guard med virtualiseringsbaserad säkerhet. Aktivering av den här funktionen hjälper till att skydda autentiseringsuppgifterna vid nästa omstart när både **Säker start för Säkerhetsnivå för plattform** och **Virtualiseringsbaserad säkerhet** är aktiverade. Alternativen är:
-  - **Inaktiverad**: Om Credential Guard tidigare slagits på med alternativet**Aktiverat utan lås**, slås Credential Guard av på distans.
+  - **Inaktiverad**: Om Credential Guard har aktiverats tidigare med alternativet**Aktiverat utan lås**, slås Credential Guard av på distans.
 
-  - **Aktiverat med UEFI-lås**: Ser till att Credential Guard inte kan inaktiveras med registernyckel eller via en grupprincip. Om du vill inaktivera Credential Guard när du använder den här inställningen måste du ställa in Grupprincip som ”Inaktiverad”. Ta sedan bort säkerhetsfunktionen från varje dator med en användare fysiskt närvarande. De här stegen rensar den kvarstående konfigurationen i UEFI. Så länge UEFI-konfigurationen finns kvar är Credential Guard aktiverat.
+  - **Aktiverat med UEFI-lås**: Ser till att Credential Guard inte kan inaktiveras med en registernyckel eller via en grupprincip. Om du vill inaktivera Credential Guard när du använder den här inställningen måste du ställa in Grupprincip som ”Inaktiverad”. Ta sedan bort säkerhetsfunktionen från varje dator med en användare fysiskt närvarande. De här stegen rensar den kvarstående konfigurationen i UEFI. Så länge UEFI-konfigurationen finns kvar är Credential Guard aktiverat.
 
-  - **Aktiverat utan lås**: Medför att Credential Guard kan inaktiveras via fjärranslutning med grupprincipen. Enheterna som använder den här inställningen måste köra Windows 10 eller senare (version 1511).
+  - **Aktiverat utan lås**: Innebär att Credential Guard kan inaktiveras på distans med grupprincipen. Enheterna som använder den här inställningen måste köra Windows 10 eller senare (version 1511).
 
 Följande beroende tekniker aktiveras automatiskt när du konfigurerar Credential Guard: 
 
 - **Aktivera virtualiseringsbaserad säkerhet (VBS)** : Aktiverar virtualiseringsbaserad säkerhet (VBS) vid nästa omstart. Virtualiseringsbaserad säkerhet använder Windows Hypervisor för att ge stöd för säkerhetstjänster och kräver Säker start.
-- **Säker start med Direkt minnesåtkomst**: Aktiverar VBS med Säker start och Direkt minnesåtkomst. DMA-skydd kräver maskinvarustöd och aktiveras endast på enheter som är korrekt konfigurerade. 
+- **Säker start med direkt minnesåtkomst (DMA)** : Aktiverar VBS med säker start och direkt minnesåtkomst. DMA-skydd kräver maskinvarustöd och aktiveras endast på enheter som är korrekt konfigurerade. 
 
 #### <a name="use-a-custom-subject-name-on-scep-certificate---2064190---"></a>Använda ett anpassat certifikatmottagarnamn på SCEP-certifikat<!-- 2064190 -->
 Du kan använda det egna namnet **OnPremisesSamAccountName** i en anpassad certifikatmottagare för en SCEP-certifikatprofil. Du kan till exempel använda `CN={OnPremisesSamAccountName})`.
@@ -1612,13 +1612,13 @@ Du kan använda det egna namnet **OnPremisesSamAccountName** i en anpassad certi
 #### <a name="block-camera-and-screen-captures-on-android-enterprise-work-profiles---1098977---"></a>Blockera kamera- och skärmbilder i Android Enterprise-arbetsprofiler<!-- 1098977 -->
 Två nya egenskaper kan blockeras när du konfigurerar enhetsbegränsningar för Android-enheter: 
 - Kamera: Blockerar åtkomsten till alla kameror på enheten
-- Skärmbild: Blockerar skärmbildtagning och förhindrar också att innehållet visas på enheter som inte har en säker videoutgång
+- Skärmbild: Blockerar skärmbildtagning och förhindrar också att innehållet visas på enheter som inte har någon säker videoutgång
 
 Gäller för Android Enterprise-arbetsprofiler.
 
 #### <a name="use-cisco-anyconnect-client-for-ios---1333708---"></a>Använda Cisco AnyConnect-klienten för iOS<!-- 1333708 -->
 
-När du skapar en ny VPN-profil för iOS finns nu två alternativ: **Cisco AnyConnect** och **Cisco Legacy AnyConnect**. Cisco AnyConnect-profiler stöder 4.0.7x och nyare versioner. Befintliga iOS Cisco AnyConnect VPN-profiler är märkta **Cisco Legacy AnyConnect** och kommer fortsatt att fungera med Cisco AnyConnect 4.0.5x och äldre versioner som de gör i dag.
+Det finns nu två alternativ när du skapar en ny VPN-profil för iOS: **Cisco AnyConnect** och **Cisco Legacy AnyConnect**. Cisco AnyConnect-profiler stöder 4.0.7x och nyare versioner. Befintliga iOS Cisco AnyConnect VPN-profiler är märkta **Cisco Legacy AnyConnect** och kommer fortsatt att fungera med Cisco AnyConnect 4.0.5x och äldre versioner som de gör i dag.
 
 > [!NOTE]
 > Den här ändringen gäller bara för iOS. Det finns fortfarande ett enda Cisco AnyConnect-alternativ för Android-, Android Enterprise-arbetsprofiler- och macOS-plattformar.
@@ -1799,7 +1799,7 @@ Intune-administratören kan konfigurera dessa inställningar för att aktivera d
 
 #### <a name="configure-gatekeeper-to-control-macos-app-download-source---1690459---"></a>Konfigurera Gatekeeper för att styra nedladdningskälla för appar i macOS<!-- 1690459 -->
 
-Du kan konfigurera Gatekeeper till att skydda dina enheter från appar genom att styra var apparna kan laddas ned från. Du kan konfigurera följande nedladdningskällor: **Mac App Store**, **Mac App Store och identifierade utvecklare**, eller **Valfri plats**. Du kan även konfigurera om användarna ska kunna installera en app med CTRL-klick för att åsidosätta dessa Gatekeeper-kontroller.
+Du kan konfigurera Gatekeeper till att skydda dina enheter från appar genom att styra var apparna kan laddas ned från. Du kan konfigurera följande hämtningskällor: **Mac App Store**, **Mac App Store och identifierade utvecklare** eller **Var som helst**. Du kan även konfigurera om användarna ska kunna installera en app med CTRL-klick för att åsidosätta dessa Gatekeeper-kontroller.
 
 Inställningarna finns i **Enhetskonfiguration** -> **Skapa profil** -> **macOS** -> **Slutpunktsskydd**.
 
@@ -1852,12 +1852,12 @@ Mer information om hur du skapar distributionskanaler i Intune finns i [Hantera 
 
 ### <a name="new-windows-defender-exploit-guard-settings---1631893---"></a>Nya inställningar för Windows Defender Exploit Guard<!-- 1631893 -->
 
-Sex nya inställningar för <strong>minskning av attackytan</strong> och utökade funktioner för <strong>Reglerad mappåtkomst: Mappskydd</strong> är nu tillgängliga. Inställningarna finns här: Device configuration\Profiles\
+Sex nya inställningar för <strong>minskning av attackytan</strong> och utökade funktioner för <strong>reglerad mappåtkomst: Det finns nu funktioner för mappskydd</strong> tillgängliga. De här inställningarna finns på: Device configuration\Profiles\
 Create profile\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Minska attackytan
 
-|Namn på inställning  |Inställningsalternativ  |Beskrivning  |
+|Inställningsnamn  |Inställningsalternativ  |Beskrivning  |
 |---------|---------|---------|
 |Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
 |Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem|Aktiverad, granskad, inte konfigurerad|Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem (lsass.exe).|
@@ -1867,7 +1867,7 @@ Create profile\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
 
-|              Namn på inställning               |                                                              Inställningsalternativ                                                              | Beskrivning |
+|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Beskrivning |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Mappskydd (redan implementerat) | Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> <strong>Nytt</strong><br>Blockera diskändring, Granska diskändring |             |
 
@@ -1906,7 +1906,7 @@ Om enheten körs på Windows 10 RS1 eller senare, kan du hämta den senaste vers
 
 - **Aktivera grafikacceleration**: Administratörer kan aktivera en virtuell grafikprocessor för Windows Defender Application Guard. Med den här inställningen kan processorn avlasta grafikåtergivning till vGPU. Detta kan förbättra prestanda när du arbetar med grafikintensiva webbplatser eller tittar på videor inuti containern.
 
-- **SaveFilestoHost**: Administratörer kan aktivera att filer kan skickas från Microsoft Edge som körs i containern till värdfilsystemet. Det gör att användare kan ladda ned filer från Microsoft Edge i containern till värdfilsystemet.
+- **SaveFilestoHost**: Administratörer kan aktivera att filer skickas från Microsoft Edge som körs i containern till värdfilsystemet. Det gör att användare kan ladda ned filer från Microsoft Edge i containern till värdfilsystemet.
 
 #### <a name="mam-protection-policies-targeted-based-on-management-state---1665993---"></a>MAM-skyddsprinciper riktas utifrån hanteringsstatus<!-- 1665993 -->
 Du kan rikta MAM-principer baserat på hanteringsstatus för enheten:
@@ -1924,10 +1924,10 @@ Vi har förbättrat språket i företagsportalen för att Windows 10 ska vara me
 #### <a name="new-additions-to-our-docs-about-user-privacy---1440709---"></a>Nya tillägg till vår dokumentation om användarsekretess<!-- 1440709 -->
 Som en del i vårt arbete att ge användarna mer kontroll över sina data och sin sekretess har vi publicerat uppdateringar i vår dokumentation som förklarar hur du visar och tar bort data som lagras lokalt av företagsportalappar. Du hittar uppdateringarna på:
 
-- **Android**: [Så här avregistrerar du en Android-enhet från Intune](/intune-user-help/unenroll-your-device-from-intune-android)
-- **Android, om användaren har avböjt användningsvillkoren** : [Ta bort enhetshantering om du har avböjt användningsvillkoren](/intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android)
-- **iOS**: [Ta bort en iOS-enhet från Intune](/intune-user-help/unenroll-your-device-from-intune-ios)
-- **Windows**: [Ta bort en Windows-enhet från Intune](/intune-user-help/unenroll-your-device-from-intune-windows)
+- **Android**: [Så här tar du bort en Android-enhet från Intune](/intune-user-help/unenroll-your-device-from-intune-android)
+- **Android, om användaren har avvisat användningsvillkoren**: [Ta bort enhetshanteringen om du inte godkände våra ”Användningsvillkor”](/intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android)
+- **iOS**: [Ta bort din iOS-enhet från Intune](/intune-user-help/unenroll-your-device-from-intune-ios)
+- **Windows**: [Ta bort din Windows-enhet från Intune](/intune-user-help/unenroll-your-device-from-intune-windows)
 
 <!-- ########################## -->
 ## <a name="february-2018"></a>Februari 2018
@@ -1990,7 +1990,7 @@ En detaljerad rapport för varje statuskategori visar de enskilda datorer som be
 - **Endast lokala aktiviteter**: Ställ in det här alternativet på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen baserat på lokala aktiviteter.
 
 #### <a name="new-settings-for-the-microsoft-edge-browser--1469166---"></a>Nya inställningar för webbläsaren Microsoft Edge<!--1469166 -->
-[Två nya inställningar](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser) är nu tillgängliga för enheter med Microsoft Edge-webbläsaren: **Sökväg till favoritfil** och **Ändringar i favoriter**.
+Det finns nu [två nya inställningar](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser) tillgängliga för enheter med Microsoft Edge-webbläsaren: **Sökväg till favoritfil** och **Ändringar i favoriter**.
 
 ### <a name="app-management"></a>Apphantering
 
@@ -2030,7 +2030,7 @@ Resurskontot kan till exempel visas som **konferensrum B41/6233**.
 
 ##### <a name="attack-surface-reduction"></a>Minska attackytan
 
-|Namn på inställning  |Inställningsalternativ  |Beskrivning  |
+|Inställningsnamn  |Inställningsalternativ  |Beskrivning  |
 |---------|---------|---------|
 |Körning av lösenordsskyddat körbart innehåll från e-post|Blockera, Granska, Inte konfigurerat|Förhindra körning av körbara filer som skyddas av lösenord och som hämtats via e-post.|
 |Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
@@ -2041,7 +2041,7 @@ Resurskontot kan till exempel visas som **konferensrum B41/6233**.
 
 ##### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
 
-|              Namn på inställning               |                                                              Inställningsalternativ                                                              | Beskrivning |
+|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Beskrivning |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Mappskydd (redan implementerat) | Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> <strong>Nytt</strong><br>Blockera diskändring, Granska diskändring |             |
 
@@ -2333,8 +2333,6 @@ Det finns nu nya processer och verktyg för att flytta användare och deras enhe
 - Kopiera principer och profiler från Configuration Manager-konsolen till Intune på Azure Portal
 - Flytta en del av användarna till Intune på Azure Portal medan resten fortsätter att använda hybrid MDM
 - Migrera enheter till Intune på Azure Portal utan att behöva registrera dem på nytt
-
-Mer information finns i [Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) (Migrera hybrida MDM-användare och -enheter till fristående Intune).
 
 ### <a name="on-premises-exchange-connector-high-availability-support----676614---"></a>Support med hög tillgänglighet för lokalt Exchange-anslutningsprogram <!-- 676614 -->
 När Exchange-anslutningsappen skapar en anslutning till Exchange med angiven klientåtkomstserver (CAS) har anslutningsappen nu möjlighet att identifiera andra CAS. Om den primära certifikatutfärdaren blir otillgänglig, kommer anslutningsappen att växla till en annan certifikatutfärdare, om tillgänglig, tills den primära certifikatutfärdaren blir tillgänglig. Du hittar mer information i [Support med hög tillgänglighet för lokalt Exchange-anslutningsprogram](../protect/exchange-connector-install.md#on-premises-intune-exchange-connector-high-availability-support).
@@ -2629,9 +2627,9 @@ Du kan nu även köra en **snabbsökning**, **fullständig genomsökning** och *
 
 **Snabbsökning**: En snabbsökning genomsöker platser där skadliga register startas, till exempel registernycklar och kända startmappar i Windows. En snabbsökning tar i genomsnitt fem minuter. I kombination med inställningen **Realtidsskydd alltid på** som söker igenom filer när de öppnas, stängs och när användaren navigerar till en mapp, ger snabbsökningen skydd mot skadlig kod som kan finnas i systemet eller kärnan. Användarna ser resultatet av genomsökningen på sina enheter när den är klar. 
 
-**Fullständig genomsökning**: En fullständig genomsökning kan användas på enheter där det finns en skadlig kod för att se om det finns några inaktiva komponenter som kräver en mer omfattande rensning. Den är även användbar för att köra genomsökningar på begäran. En fullständig genomsökning kan ta en timme att köra. Användarna ser resultatet av genomsökningen på sina enheter när den är klar. 
+**Fullständig genomsökning**: En fullständig genomsökning kan användas på enheter med ett skadligt hot, för att se om det finns några inaktiva komponenter som kräver en mer omfattande rensning. Den är även användbar för att köra genomsökningar på begäran. En fullständig genomsökning kan ta en timme att köra. Användarna ser resultatet av genomsökningen på sina enheter när den är klar. 
 
-**Uppdatering av signaturer**: Kommandot för att uppdatera signaturer uppdaterar Windows Defender Antivirus-definitionerna för skadlig kod och signaturerna. På så sätt kan du vara säker på att Windows Defender Antivirus fungerar när det gäller att identifiera skadlig kod. Den här funktionen finns endast för Windows 10-enheter och väntar på att enheten ska ansluta till Internet. 
+**Uppdatering av signaturer**: Kommandot för att uppdatera signaturer uppdaterar Windows Defender Antivirus-definitionerna för skadlig kod och signaturer. På så sätt kan du vara säker på att Windows Defender Antivirus fungerar när det gäller att identifiera skadlig kod. Den här funktionen finns endast för Windows 10-enheter och väntar på att enheten ska ansluta till Internet. 
 
 ### <a name="the-enabledisable-button-is-removed-from-the-intune-certificate-authority-page-of-the-intune-azure-portal----1400455---"></a>Knappen för att aktivera/inaktivera har tagits bort från sidan med Intune-certifikatutfärdare i Intune Azure-portalen <!-- 1400455 -->
  Vi tar bort ett extra steg vid konfigurationen av certifikatanslutningen i Intune. För närvarande laddar du ned certifikatanslutningen och aktiverar den sedan i Intune-konsolen. Om du emellertid inaktiverar anslutningsprogrammet i Intune-konsolen fortsätter anslutningsprogrammet att utfärda certifikat.
@@ -2876,11 +2874,11 @@ Med den här versionen kan administratörer nu ställa in Microsoft-Store för f
 ### <a name="ui-updates-to-the-company-portal-website--1313244-part-1--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen<!--1313244 part 1-->
 Vi har gjort flera uppdateringar i gränssnittet för [företagsportalswebbplatsen](https://portal.manage.microsoft.com) för att förbättra användarupplevelsen.
 
-- __Förbättringar av appaneler__: Appikoner visas nu med en automatiskt genererad bakgrund som baseras på ikonens huvudsakliga färg (om den kan identifieras). När tillämpligt ersätter den här bakgrunden den grå kantlinje som tidigare fanns på appanelerna.
+- __Förbättringar av appaneler__:  Appikoner visas nu med en automatiskt genererad bakgrund som baseras på ikonens huvudsakliga färg (om den kan identifieras). När tillämpligt ersätter den här bakgrunden den grå kantlinje som tidigare fanns på appanelerna.
 
     Företagsportalens webbplats visar stora ikoner när det är möjligt i en kommande version. Vi rekommenderar att IT-administratörer publicerar appar med högupplösta ikoner som har en storlek på minst 120 x120 pixlar. 
 
-- __Navigeringsändringar__: Objekt i navigeringsraden har flyttats till menyn längst upp till vänster. Sidan Kategorier har tagits bort. Användarna kan nu filtrera innehåll efter kategori när de bläddrar.
+- __Navigeringsändringar__: Objekt i navigeringsfältet har flyttats till Hamburger-menyn längst upp till vänster. Sidan Kategorier har tagits bort. Användarna kan nu filtrera innehåll efter kategori när de bläddrar.
 
 - __Uppdateringar av aktuella appar__: Vi har lagt till en särskild sida på webbplatsen där användarna kan bläddra bland appar som du har valt att presentera och vi har gjort några gränssnittsförändringar på avsnittet Aktuella på startsidan.
 
@@ -3003,7 +3001,7 @@ Användare av iOS-enheter kan se vår nya kontoväljare när de loggar in på f�
 ## <a name="may-2017"></a>Maj 2017
 
 ### <a name="change-your-mdm-authority-without-unenrolling-managed-devices--1103950--"></a>Ändra din utfärdare för hantering av mobila enheter utan att avregistrera hanterade enheter<!--1103950-->
-Du kommer att kunna ändra din utfärdare för hantering av mobila enheter utan att behöva kontakta Microsoft Support och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. I Configuration Manager-konsolen kan du [ändra utfärdare för hantering av mobila enheter](/sccm/mdm/deploy-use/change-mdm-authority) från Ange till Configuration Manager (hybrid) till Microsoft Intune (fristående) eller vice versa.
+Du kommer att kunna ändra din utfärdare för hantering av mobila enheter utan att behöva kontakta Microsoft Support och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. I Configuration Manager-konsolen kan du ändra utfärdare för hantering av mobila enheter från Ange till Configuration Manager (hybrid) till Microsoft Intune (fristående) eller vice versa.
 
 
 ### <a name="improved-notification-for-samsung-knox-startup-pins--1087143--"></a>Förbättrat meddelande för PIN-koder för start av Samsung Knox<!--1087143-->

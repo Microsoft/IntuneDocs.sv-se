@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b46cd4a407df686e094198c588371ed4a01bb6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9bca046302b221b934d0802c0bf637aced2cec3f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832578"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885921"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av iOS-enhet i Microsoft Intune
 
 Den här artikeln hjälper Intune-administratörer att förstå och felsöka problem när de registrerar iOS-enheter i Intune.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 Innan du påbörjar fel sökningen är det viktigt att samla in grundläggande information. Den här informationen kan hjälpa dig att bättre förstå problemet och minska tiden för att hitta en lösning.
 
@@ -40,7 +40,7 @@ Samla in följande information om problemet:
 - Vilken plattform (Android, iOS, Windows) har problemet?
 - Hur många användare påverkas? Påverkas alla användare eller bara vissa av dem?
 - Hur många enheter påverkas? Påverkas alla enheter eller bara vissa av dem?
-- Vad är MDM-utfärdare? Vilken version av Configuration Manager använder du om det är System Center Configuration Manager?
+- Vad är MDM-utfärdare?
 - Hur utförs registreringen? Är det "ta med din egen enhet" (BYOD) eller Apple Programmet för enhetsregistrering (DEP) med registrerings profiler?
 
 ## <a name="error-messages"></a>Felmeddelanden
@@ -186,7 +186,7 @@ Om ditt företag använder flera domäner för användarautentiseringsuppgifter 
 **Orsak:** APN-certifikatet (Apple Push Notification Service) saknas, är ogiltigt eller har upphört att gälla.
 
 #### <a name="resolution"></a>Lösning
-Kontrol lera att ett giltigt APN-certifikat har lagts till i Intune. Mer information finns i [Konfigurera iOS-och Mac-enhets hantering](https://docs.microsoft.com/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune). 
+Kontrol lera att ett giltigt APN-certifikat har lagts till i Intune. Mer information finns i [Konfigurera iOS-registrering](ios-enroll.md).
 
 ### <a name="accountnotonboarded"></a>AccountNotOnboarded
 
@@ -199,7 +199,6 @@ Förnya APNs-certifikatet och registrera sedan enheten på nytt.
 > Se till att du förnyar APNs-certifikatet. Ersätt inte APNs-certifikatet. Om du ersätter certifikatet måste du Omregistrera alla iOS-enheter i Intune. 
 
 - Information om hur du förnyar APN-certifikatet i fristående Intune finns i [förnya Apple MDM Push-certifikat](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Information om hur du förnyar APN-certifikatet i Intune hybrid med Configuration Manager finns i [Konfigurera iOS hybrid Device Management med System Center Configuration Manager och Microsoft Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-ios-mac).
 - Om du vill förnya APNs-certifikatet i Office 365, se [skapa ett APN-certifikat för iOS-enheter](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR anslutningen är ogiltig
@@ -230,7 +229,7 @@ När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings prof
 #### <a name="resolution"></a>Lösning
 
 1. Redigera registrerings profilen. Du kan göra ändringar i profilen. Syftet med detta är att uppdatera profilens ändrings tid.
-2. Synkronisera DEP-hanterade enheter: Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token i listan > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
+2. Synkronisera DEP-hanterade enheter: Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-registrering fastnat vid användar inloggning
 När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil, sker den första installationen efter att du angett autentiseringsuppgifter.

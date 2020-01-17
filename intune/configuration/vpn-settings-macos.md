@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 044b35b34a9a5b01537e82dcfddca74a284ebdcc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e0bb2cb757e944369642807f117683dad3a9805a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72491006"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206269"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar för macOS-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I den här artikeln beskrivs de Intune-inställningar som du kan använda till att konfigurera VPN-anslutningar på enheter som kör macOS.
 
@@ -39,12 +39,12 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 
 ## <a name="base-vpn-settings"></a>Grundläggande VPN-inställningar
 
-**Anslutningsnamn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten i listan över tillgängliga VPN-anslutningar.
+**Anslutningens namn**: Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten i listan över tillgängliga VPN-anslutningar.
 - **IP-adress eller fullständigt domännamn**: Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
 - **Autentiseringsmetod**: Välj hur enheter ska autentiseras mot VPN-servern från:
   - **Certifikat**: Under **Autentiseringscertifikat** väljer du den SCEP- eller PKCS-certifikatprofil som du skapade tidigare för att autentisera anslutningen. Mer information om certifikatprofiler finns i [Så här konfigurerar du certifikat](../protect/certificates-configure.md).
   - **Användarnamn och lösenord**: Slutanvändare måste ange ett användarnamn och lösenord för att logga in på VPN-servern.
-- **Anslutningstyp**: Välj VPN-anslutningstypen från leverantörslistan nedan:
+- **Anslutningstyp**: Välj VPN-anslutningstypen från följande leverantörslista:
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
   - **SonicWall Mobile Connect**
@@ -60,11 +60,11 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 Om du har valt **Anpassat VPN** kan du konfigurera inställningarna ytterligare:
 
 - **VPN-ID**: Ange en identifierare för VPN-appen som du använder. Den här identifieraren tillhandahålls av VPN-providern.
-- **Ange nyckel/värdepar för de anpassade VPN-attributen** Lägg till eller importera **Nycklar** och **Värden** som anpassar VPN-anslutningen. Dessa värden tillhandahålls vanligtvis av VPN-leverantören.
+- **Ange nyckel/värdepar för de anpassade VPN-attributen**: Lägg till eller importera **nycklar** och **värden** som anpassar VPN-anslutningen. Dessa värden tillhandahålls vanligtvis av VPN-leverantören.
 
 ## <a name="proxy-settings"></a>Proxyinställningar
 
-- **Skript för automatisk konfiguration**: Använd en fil för att konfigurera proxyservern. Ange den **URL för proxyserver** som innehåller konfigurationsfilen. Ange till exempel `http://proxy.contoso.com`.
+- **Automatiskt konfigurationsskript**: Använd en fil för att konfigurera proxyservern. Ange den **URL för proxyserver** som innehåller konfigurationsfilen. Ange till exempel `http://proxy.contoso.com`.
 - **Adress**: Ange proxyserverns adress (som en IP-adress).
 - **Portnummer**: Ange det portnummer som är associerat med proxyservern.
 

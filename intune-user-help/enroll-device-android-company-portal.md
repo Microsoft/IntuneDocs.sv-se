@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5baf0e9079cc148101a68e5cd2d3a4ed500f567f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: e0a2297509d6077d6508adaab96ae6eb3cf9b28f
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414865"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856742"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrera din enhet med företagsportalen  
 Registrera din personliga eller företagsägda Android-enhet för att få säker åtkomst till företagets e-post, appar och data. Företagsportalen har stöd för Android-enheter, däribland Samsung Knox, som kör Android 4.4 och senare.  
@@ -91,7 +91,7 @@ Under registreringen kan du bli ombedd att välja en kategori som bäst beskrive
 
 ## <a name="next-steps"></a>Nästa steg  
 
-Innan du försöker installera en skola eller en arbets app går du till **inställningar** > **säkerhet**och aktiverar **okända källor**. Om du inte aktiverar det här alternativet visas följande meddelande när du försöker att installera en app: "Installationen blockerades. Av säkerhetsskäl är enheten inställd på att blockera installationer av appar från okända källor. Du kan trycka på **Inställningar** i meddelandet för att gå direkt till **okända källor**.  
+Innan du försöker installera en skola eller en arbets app går du till **inställningar** > **säkerhet**och aktiverar **okända källor**. Om du inte aktiverar det här alternativet visas följande meddelande när du försöker att installera en app: ”Installationen blockerades. Av säkerhetsskäl är enheten inställd på att blockera installationer av appar från okända källor. Du kan trycka på **Inställningar** i meddelandet för att gå direkt till **okända källor**.  
 
 > [!Note]
 > Om din organisation använder kostnad hanteringsprogramvara för telekomtjänster måste ytterligare ett part steg utföras innan enheten har registrerats fullständigt. Läs mer [här](enroll-your-device-with-telecom-expense-management-android.md).

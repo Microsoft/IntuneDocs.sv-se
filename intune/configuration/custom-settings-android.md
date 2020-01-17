@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f0b30d0a8c706a7fdff1c7da722eeccdf097eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8137a806598facd540781702b1c2c359e89d6bda
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72495787"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206796"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Använda anpassade inställningar för Android-enheter i Microsoft Intune
 
@@ -43,14 +43,14 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Android-enhete
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
-    - **Namn**: Ange ett namn för profilen, till exempel `android custom profile`.
-    - **Beskrivning:** Ange en beskrivning för profilen.
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett användbart profil namn är till exempel en **anpassad Android-profil**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj **Android**.
-    - **Profiltyp**: Välj **Anpassad**.
+    - **Profil typ**: Välj **anpassad**.
 
 4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
 
@@ -71,11 +71,11 @@ Den här artikeln beskriver hur du skapar en anpassad profil för Android-enhete
 
     När du har lagt till några inställningar kan du välja **Exportera**. **Exportera** skapar en lista över alla värden som du har lagt till i en fil med kommaavgränsade värden (.csv).
 
-5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov. 
+5. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
 6. När du är klar väljer du **OK** > **Skapa** för att skapa Intune-profilen. När du är klar visas din profil i listan **Enhetskonfiguration – profiler**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. [Tilldela profilen](../device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Se hur du [skapar profilen på Android Enterprise-enheter](custom-settings-android-for-work.md).
+Skapa en [anpassad profil på Android Enterprise-enheter](custom-settings-android-for-work.md).

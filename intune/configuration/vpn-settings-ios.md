@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9eb7ee99d69fd56707bd9dfe5453ffe0bb107bad
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781149"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885669"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune
 
@@ -38,12 +38,12 @@ Microsoft Intune innehåller många VPN-inställningar som kan distribueras till
 Välj VPN-anslutningstypen från följande leverantörslista:
 
 - **Check Point Capsule VPN**
-- **Cisco Legacy AnyConnect VPN**: Gäller för [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924)-appversion 4.0.5x och tidigare.
+- **Cisco Legacy AnyConnect**: Gäller för [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924)-appversion 4.0.5x och tidigare.
 - **Cisco AnyConnect**: Gäller för [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690)-appversion 4.0.7x och senare.
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy**: Gäller för F5 Access-appversion 2.1 och tidigare.
 - **F5 Access**: Gäller för F5 Access-appversion 3.0 och senare.
-- **Palo Alto Networks GlobalProtect (Legacy)** : Gäller för Palo Alto Networks GlobalProtect-appversion 4.1 och tidigare.
+- **Palo Alto Networks GlobalProtect (äldre)** : Gäller för Palo Alto Networks GlobalProtect-appversion 4.1 och tidigare.
 - **Palo Alto Networks GlobalProtect**: Gäller för Palo Alto Networks GlobalProtect-appversion 5.0 och tidigare.
 - **Pulse Secure**
 - **Cisco (IPSec)**
@@ -60,12 +60,12 @@ Välj VPN-anslutningstypen från följande leverantörslista:
 
 De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp som du väljer.  
 
-- **Anslutningsnamn**: Slutanvändarna ser det här namnet när de bläddrar i en lista över tillgängliga VPN-anslutningar på enheten.
+- **Anslutningens namn**: Slutanvändarna ser det här namnet när de bläddrar i en lista över tillgängliga VPN-anslutningar på enheten.
 - **Anpassat domännamn** (endast Zscaler): Fyll i Zscaler-appens inloggningsfält på förhand med den domän som användarna tillhör. Om ett användarnamn exempelvis är `Joe@contoso.net`, kommer domänen `contoso.net` att visas statiskt i fältet när appen öppnas. Om du inte anger ett domännamn används domändelen av UPN-namnet i Azure Active Directory (AD).
 - **IP-adress eller fullständigt domännamn**: IP-adressen eller det fullständiga domännamnet för VPN-servern som enheterna ska ansluta till. Ange till exempel `192.168.1.1` eller `vpn.contoso.com`.
 - **Organisationens molnnamn** (endast Zscaler): Ange namnet på det moln där din organisation har etablerats. URL:en som du använder för att logga in till Zscaler innehåller namnet.  
 - **Autentiseringsmetod**: Välj hur enheter autentiserar mot VPN-servern. 
-  - **Certifikat**:Under **Autentiseringscertifikat** väljer du en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](../protect/certificates-configure.md) innehåller vägledning om certifikatprofiler.
+  - **Certifikat**: Under **Autentiseringscertifikat** väljer du en befintlig SCEP- eller PKCS-certifikatprofil för att autentisera anslutningen. [Konfigurera certifikat](../protect/certificates-configure.md) innehåller vägledning om certifikatprofiler.
   - **Användarnamn och lösenord**: Slutanvändare måste ange ett användarnamn och ett lösenord för att logga in på VPN-servern.  
 
     > [!NOTE]
@@ -77,15 +77,15 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
 
 - **Delade tunnlar**: **Aktivera** eller **Inaktivera** för att låta enheterna bestämma vilken anslutning som ska användas beroende på trafiken. En användare på ett hotell kan till exempel använda VPN-anslutningen för att komma åt arbetsfiler, men använda hotellets standardnätverk för vanlig webbsurfning.
 
-- **VPN-identifierare** (Anpassad VPN, Zscaler och Citrix): En identifierare för VPN-appen som du använder och som tillhandahålls av din VPN-leverantör.
-  - **Ange nyckel/värdepar för organisationens anpassade VPN-attribut**: Lägg till eller importera **Nycklar** och **Värden** som anpassar VPN-anslutningen. Glöm inte att dessa värden vanligtvis tillhandahålls av VPN-leverantören.
+- **VPN-id** (anpassat VPN, Zscaler och Citrix): En identifierare för VPN-appen som du använder och som tillhandahålls av VPN-leverantören.
+  - **Ange nyckel/värde-par för organisationens anpassade VPN-attribut**: Lägg till eller importera **nycklar** och **värden** som anpassar VPN-anslutningen. Glöm inte att dessa värden vanligtvis tillhandahålls av VPN-leverantören.
 
-- **Aktivera nätverksåtkomstkontroll (NAC)** (Citrix SSO, F5-åtkomst): När du väljer **Jag godkänner** inkluderas enhetens ID i VPN-profilen. Detta ID kan användas för VPN-autentisering för att tillåta eller förhindra nätverksåtkomst.
+- **Aktivera nätverksåtkomstkontroll** (Citrix SSO, F5 Access): När du väljer **Jag accepterar** tas det här enhets-ID:t med i VPN-profilen. Detta ID kan användas för VPN-autentisering för att tillåta eller förhindra nätverksåtkomst.
 
   **När du använder F5-åtkomst** måste du se till att:
 
   - Bekräfta att du använder F5 BIG-IP 13.1.1.5. BIG-IP 14 inte stöds.
-  - Integrera BIG-IP med Intune för NAC. Se F5-guiden [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
+  - Integrera BIG-IP med Intune för NAC. Läs F5-guiden [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Översikt: Konfigurera APM för enhetsstatuskontroller med slutpunktshanteringssystem).
   - Aktivera NAC i VPN-profilen.
 
   **När du använder Citrix SSO med Gateway** så var noga med att:
@@ -138,6 +138,10 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
 
 - **Lägsta TLS-version intervall**: Ange den minsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.0`.
 - **Högsta TLS-versions intervall**: Ange den högsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.2`.
+
+> [!NOTE]
+> TLS-versions intervallets lägsta och högsta värde måste anges när du använder användarautentisering och certifikat.
+
 - **Perfect Forward Secrecy**: Välj **Aktivera** för att aktivera PFS (Perfect Forward Secrecy). PFS är en funktion för IP-säkerhet som minskar påverkan om en sessionsnyckel komprometteras. **Disable** (standard) använder inte PFS.
 - **Certifikat återkallnings kontroll**: Välj **Aktivera** för att kontrol lera att certifikaten inte återkallas innan du tillåter att VPN-anslutningen lyckas. Den här kontrollen är bästa möjliga. Om VPN-servern tar tid på innan du fastställer om certifikatet har återkallats beviljas åtkomst. **Disable** (standard) söker inte efter återkallade certifikat.
 
@@ -179,10 +183,10 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
 
 ## <a name="automatic-vpn-settings"></a>Inställningar för automatiskt VPN
 
-- **Per app-VPN**: Gör det möjligt att använda VPN per app. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Per app-VPN stöds inte i IKEv2. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS](vpn-setting-configure-per-app.md). 
+- **Per app-VPN**: Aktiverar per app-VPN. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Per app-VPN stöds inte i IKEv2. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS](vpn-setting-configure-per-app.md). 
   - **Typ av provider**: Endast tillgängligt för Pulse Secure och anpassat VPN.
   - När du använder **per app-VPN-profiler** i iOS med Pulse Secure eller Anpassat VPN väljer du händelsedirigering nedåt på applager (app-proxy) eller på paketnivå (paket-tunnel). Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå. Om du inte är säker på vilket värde du ska använda läser du VPN-leverantörens dokumentation.
-  - **Safari-webbadresser som utlöser denna VPN**: Lägg till en eller flera webbadresser. VPN-anslutningen upprättas automatiskt när de här webbadresserna besöks i Safari-webbläsaren på enheten.
+  - **Safariwebbadresser som aktiverar den här VPN-anslutningen**: Lägg till en eller flera webbadresser. VPN-anslutningen upprättas automatiskt när de här webbadresserna besöks i Safari-webbläsaren på enheten.
 
 - **VPN på begäran**: Konfigurera villkorliga regler som styr när VPN-anslutningen ska initieras. Du kan till exempel skapa ett villkor där VPN-anslutningen endast används när en enhet inte är ansluten till ett trådlöst företagsnätverk. Eller skapa ett villkor. Om en enhet till exempel inte kan komma åt en DNS-sökdomän som du har angett startas inte VPN-anslutningen.
 
@@ -191,10 +195,10 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
 
     En URL-strängavsökning är till exempel en URL för en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. Eller också testar URL: en VPN-anslutningens möjlighet att ansluta till en plats innan enheten ansluter till mål-URL: en via VPN.
 .
-  - **Domänåtgärd**: Välj något av följande:
+  - **Domänåtgärd**: Välj något av följande objekt:
     - Anslut vid behov
     - Anslut aldrig
-  - **Åtgärd**: Välj något av följande:
+  - **Åtgärd**: Välj något av följande objekt:
     - Ansluta
     - Utvärdera anslutning
     - Ignorera
@@ -204,7 +208,7 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
 
 Konfigurera följande inställningar om du använder en proxyserver. Proxyinställningar är inte tillgängliga för Zscaler VPN-anslutningar.  
 
-- **Skript för automatisk konfiguration**: Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `http://proxy.contoso.com`) som innehåller konfigurationsfilen.
+- **Automatiskt konfigurationsskript**: Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel `http://proxy.contoso.com`) som innehåller konfigurationsfilen.
 - **Adress**: Ange IP-adressen för det fullt kvalificerade värdnamnet för proxyservern.
 - **Portnummer**: Ange det portnummer som är associerat med proxyservern.
 

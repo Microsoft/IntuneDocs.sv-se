@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc29a7a5026691371370b167a4445bfd70cc76bd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 37fa650fb8c742b1f1b0cfbf154fe8cf63d35c89
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206473"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Inställningar för enhetsbegränsningar för Windows Phone 8.1-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I den här artikeln visas inställningarna av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows Phone 8.1.
 
@@ -41,7 +41,7 @@ I den här artikeln visas inställningarna av enhetsbegränsningar som du kan ko
 - **Sändning av diagnostikdata** – Gör att enheten skickar diagnostikinformation till Microsoft.
 - **Synkronisering av anpassade e-postkonton** – Gör det möjligt för enheten att ansluta till andra e-postkonton än Microsoft-e-postkonton.
 
-## <a name="password"></a>Lösenord
+## <a name="password"></a>lösenordsinställning
 
 - **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
   - **Krav på lösenordstyp** – Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.

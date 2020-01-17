@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 075e7a99f72de30e83447a2869154859e33356b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e514c10ea61bb12ef3c4626b077aa105b66866f1
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390844"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206881"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 I Microsoft Intune kan du använda OEMConfig för att lägga till, skapa och anpassa OEM-/regionsspecifika inställningar för Android Enterprise-enheter. OEMConfig används vanligt vis för att konfigurera inställningar som inte är inbyggda i Intune. Olika OEM-tillverkare (Original Equipment Manufacturer) innehåller olika inställningar. De tillgängliga inställningarna beror på vad OEM-tillverkaren inkluderar i sin OEMConfig-app.
 
@@ -60,7 +60,7 @@ När du använder OEMConfig bör du vara medveten om följande information:
 - OEM-tillverkare kan när som helst uppdatera sina funktioner och scheman och ladda upp en ny app i Google Play. Intune synkroniserar alltid den senaste versionen av OEMConfig-appen från Google Play. Intune behåller inte äldre versioner av schemat eller appen. Om du stöter på versions konflikter rekommenderar vi att du kontaktar OEM för mer information.
 - Tilldela en enhet en OEMConfig-profil. Om flera profiler tilldelas till samma enhet kan det hända att du ser inkonsekventa beteenden. OEMConfig-modellen har endast stöd för en enda princip per enhet.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 Kontrol lera att du har följande krav för att använda OEMConfig på dina enheter:
 
@@ -85,8 +85,8 @@ Kontrol lera att enheten har stöd för OEMConfig, att rätt OEMConfig-app lägg
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen.
-    - **Beskrivning:** Ange en beskrivning för profilen. Denna inställning är valfri, men rekommenderas.
-    - Välj **Android Enterprise** för **Plattform**.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
+    - **Plattform**: Välj **Android Enterprise**.
     - **Profil typ**: Välj **OEMConfig**.
 
 4. Välj **tillhör ande app**, Välj en befintlig OEMConfig-app som du tidigare lade till > **OK**. Se till att välja rätt OEMConfig-app för de enheter som du tilldelar principen till.

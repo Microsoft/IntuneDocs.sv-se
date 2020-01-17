@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 62ee300b7357132e6f9e18ef4528110dfc988dc3
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713473"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653673"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -198,7 +198,7 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget. |
-|**-AA**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, dvs. `login.windows.net/common` |
+|**-aa**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, dvs. `login.windows.net/common` |
 |**-ac**|(Valfritt) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` detta är det GUID i fältet klient-ID från appens lista i bladet app-registrering. |
 |**-ar**|(Valfritt) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` det här är omdirigerings-URI: n som kon figurer ATS i appens registrering. Detta är vanligt vis URL-protokollet för programmet som Microsoft Authenticator-appen kommer tillbaka till efter att ha tillämpat autentisering. |
 |**-v**| (Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel. |
@@ -287,7 +287,7 @@ Om det inte går att slutföra programhanteringsverktyget visas något av följa
 |Indataappen du angav har inte signerats. Ange en giltig signerad app.|Appomslutningsverktyget kräver att apparna signeras. Läs utvecklardokumentationen om du vill veta hur du signerar en omsluten app.|
 |Indataappen du har angett måste vara i formatet IPA eller APP.|Endast appar med filnamnstilläggen APP och IPA godkänns av appomslutningsverktyget. Kontrollera att indatafilen har ett giltigt filnamnstillägg och har kompilerats som en APP- eller IPA-fil.|
 |Indataappen som du angav är redan omsluten och har den senaste versionen av principmallen.|Programhanteringsverktyget omsluter inte en befintlig omsluten app igen med den senaste versionen av principmallen.|
-|VARNING: Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
+|Varning! Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
 
 ### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Samlar in loggar för dina omslutna program från enheten
 Använd följande steg för att hämta loggar för dina omslutna program under felsökningen.
@@ -327,7 +327,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Funktioner som stöds för programhanteringsverktyg för iOS
 
-|Kapacitet|Beskrivning|Råd|
+|Funktion|Beskrivning|Råd|
 |--------------|---------------|------------------------|
 |Appgrupper|Använd appgrupper om du vill ge flera appar åtkomst till delade container och tillåta ytterligare kommunikation mellan processer för olika appar.<br /><br />Om du vill aktivera appgrupper öppnar du rutan **Funktioner** och klickar på **PÅ** i **Appgrupper**. Du kan lägga till app-grupper eller välja befintliga.|Använd omvänd DNS-notering när du använder app-grupper:<br /><br />*group.com.companyName.AppGroup*|
 |Bakgrundslägen|Om du aktiverar bakgrundslägen kan din iOS-app fortsätta att köras i bakgrunden.||

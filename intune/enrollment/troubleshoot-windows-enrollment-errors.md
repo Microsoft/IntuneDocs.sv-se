@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46012b11cdb458243658e858b53c2dfb1a69dc88
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 0d5c6db598a7f64f75f6f5a8e0cf25b8e4b81465
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991795"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885881"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av Windows-enheter i Microsoft Intune
 
 Den här artikeln hjälper Intune-administratörer att förstå och felsöka problem vid registrering av Windows-enheter i Intune.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 Innan du påbörjar fel sökningen är det viktigt att samla in grundläggande information. Den här informationen kan hjälpa dig att bättre förstå problemet och minska tiden för att hitta en lösning.
 
 Samla in följande information om problemet:
@@ -40,7 +40,7 @@ Samla in följande information om problemet:
 - Vilken plattform (Android, iOS, Windows) har problemet?
 - Hur många användare påverkas? Påverkas alla användare eller bara vissa av dem?
 - Hur många enheter påverkas? Påverkas alla enheter eller bara vissa av dem?
-- Vad är MDM-utfärdare? Vilken version av Configuration Manager använder du om det är System Center Configuration Manager?
+- Vad är MDM-utfärdare?
 - Hur utförs registreringen? Är det "ta med din egen enhet" (BYOD) eller Apple Programmet för enhetsregistrering (DEP) med registrerings profiler?
 
 ## <a name="error-messages"></a>Felmeddelanden
@@ -96,7 +96,7 @@ Fel 0x801c0003: "den här användaren får inte registreras. Du kan försöka ig
 **Orsak:** **Användare kan ansluta enheter till Azure AD** -inställningen är inställd på **ingen**. Detta förhindrar att nya användare ansluter sina enheter till Azure AD. Det går därför inte att registrera Intune.
 
 #### <a name="resolution"></a>Lösning
-1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
+1. Logga in på [Azure-portalen](https://portal.azure.com/) som administratör.    
 2. Gå till **Azure Active Directory** > **enheter** > **enhets inställningar**.    
 3. Ange **Användare kan ansluta enheter till Azure AD** till **Alla**.    
 4. Registrera enheten igen.   
@@ -107,7 +107,6 @@ Fel 8018000a: "något gick fel. Enheten är redan registrerad.  Du kan kontakta 
 
 **Orsak:** Ett av följande villkor är uppfyllt:
 - En annan användare har redan registrerat enheten i Intune eller anslutit enheten till Azure AD. Du kan ta reda på om detta är fallet genom att gå till **inställningar** > **konton** > **åtkomst till arbets**plats. Sök efter ett meddelande som liknar följande: "en annan användare på systemet är redan ansluten till ett jobb eller en skola. Ta bort den här arbets-eller skol anslutningen och försök igen. "    
-- Configuration Manager klient agenten är installerad på datorn.    
 
 #### <a name="resolution"></a>Lösning
 
@@ -118,9 +117,6 @@ Använd någon av följande metoder för att lösa problemet:
 2. Gå till **inställningar** > **konton** > **arbets åtkomst**och ta sedan bort arbets-eller skol kontot.
 3. Logga ut från Windows och logga sedan in med ditt konto.    
 4. Registrera enheten i Intune eller Anslut enheten till Azure AD. 
-
-##### <a name="remove-the-configuration-manager-client"></a>Ta bort Configuration Manager-klienten
-Ta bort Configuration Manager klienten och registrera sedan enheten igen.
 
 
 
@@ -160,7 +156,7 @@ Fel 80180026: ”Något gick fel. Bekräfta att du använder rätt inloggnings i
 
 **Orsak:** Det här felet kan inträffa när du försöker ansluta till en Windows 10-dator till Azure AD och båda följande villkor är uppfyllda: 
 - Automatisk registrering i MDM är aktiverat i Azure.    
-- Antingen Intune PC-klienten (Intune PC agent) eller Configuration Manager klient agenten är installerad på Windows 10-datorn.
+- Intune PC-klienten (Intune PC agent) är installerad på Windows 10-datorn.
 
 #### <a name="resolution"></a>Lösning
 Använd någon av följande metoder för att åtgärda problemet:
@@ -171,7 +167,7 @@ Använd någon av följande metoder för att åtgärda problemet:
 3. Ange **användar omfång för MDM** till **ingen**och klicka sedan på **Spara**.    
      
 ##### <a name="uninstall"></a>Avinstallera
-Avinstallera Intune PC-klienten eller Configuration Manager klient agenten från datorn.    
+Avinstallera Intune PC Client Agent från datorn.    
 
 ### <a name="the-software-cannot-be-installed"></a>Det går inte att installera programmet.
 
@@ -208,20 +204,13 @@ Följ dessa steg om du vill åtgärda det här problemet i en fristående Intune
 1. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **enheter** > **registrerings begränsningar** > väljer en begränsning för enhets typ.    
 2. Välj **egenskaper** > **Redigera** (vid **plattforms inställningar**) > **Tillåt** **Windows (MDM)** .    
 3. Klicka på **Granska + Spara**.    
- 
-Följ dessa steg för att åtgärda problemet i hybrid MDM med Intune och Configuration Manager: 
-1. Öppna Configuration Manager-konsolen.    
-2. Välj **Administration**och välj sedan **Cloud Services**.    
-3. Högerklicka på **Microsoft Intune prenumeration**och välj sedan **Konfigurera plattformar > Windows**.    
-4. Markera **Aktivera Windows-registrering** > **tillämpa** > **OK**.  
-
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Ett installations fel uppstod under Mass registreringen.
 
 **Orsak:** Azure AD-användarkontonna i konto paketet (Package_GUID) för respektive etablerings paket får inte ansluta enheter till Azure AD. Dessa Azure AD-konton skapas automatiskt när du konfigurerar ett konfigurations paket med Windows Configuration designer (WCD) eller Ställ in skol datorer, och dessa konton används sedan för att ansluta enheterna till Azure AD.
 
 #### <a name="resolution"></a>Lösning
-1. Logga in på [Azure Portal](https://portal.azure.com/) som administratör.    
+1. Logga in på [Azure-portalen](https://portal.azure.com/) som administratör.    
 2. Gå till **Azure Active Directory > enheter > enhets inställningar**.    
 3. Ange **Användare kan ansluta enheter till Azure AD** som **Alla** eller **Markerade**.
 
@@ -389,4 +378,4 @@ Det här problemet beror vanligt vis på felaktigt delegerade behörigheter till
 - [Läs Microsoft Intune-supportteamets blogg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Läs bloggen om Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Få support för Microsoft Intune](../fundamentals/get-support.md)
-- [Hitta registrerings fel för samhantering](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)
+- [Hitta registrerings fel för samhantering](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)

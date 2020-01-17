@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8c5be1d7a02c2c8329afe05dcdce22f48c49d05
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2e4c96cefef9f535d68ed8da20dfcaeb0deffbe1
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503486"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653928"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -36,15 +36,15 @@ Med Microsoft Intune App SDK för Android kan du lägga till Intune-appskyddspri
 
 Intune App SDK består av följande filer:
 
-* **Microsoft.Intune.MAM.SDK.aar**: SDK-komponenterna, med undantag för JAR-filerna för stödbiblioteket.
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: De klasser som behövs för att aktivera MAM i appar som använder Androids v4-stödbiblioteket.
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: De klasser som behövs för att aktivera MAM i appar som använder Androids v7-stödbiblioteket.
-* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: De klasser som behövs för att aktivera MAM i appar som använder Androids v17-stödbiblioteket. 
-* **Microsoft.Intune.MAM.SDK.Support.Text.jar**: De klasser som behövs för att aktivera MAM i appar som använder Android-stödbiblioteksklasser i paketet `android.support.text`.
-* **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: Den här AAR-filen innehåller stub-rutiner för Android-systemklasser som endast finns på nya enheter men som refereras till av metoder i `MAMActivity`. Nya enheter ignorerar de här stub-klasserna. Den här AAR-filen krävs endast om din app utför reflektion på klasser härledda från `MAMActivity`. För de flesta appar behövs den inte. AAR innehåller proguard-regler för att undanta alla dess klasser.
-* **com.microsoft.Intune.mam.build.JAR**: Ett Gradle-plugin-program som [underlättar integreringen av SDK](#build-tooling).
+* **Microsoft.Intune.MAM.SDK.aar**: SDK-komponenterna, med undantag för JAR-filerna i stödbiblioteket.
+* **Microsoft.Intune.MAM.SDK.Suppeller till ent.v4.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android v4-supportbiblioteket.
+* **Microsoft.Intune.MAM.SDK.Suppeller till ent.v7.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android v7-supportbiblioteket.
+* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android v17-supportbiblioteket. 
+* **Microsoft.Intune.MAM.SDK.Support.Text.jar**: Klasser som behövs för att aktivera MAM i appar som använder Android-stödbiblioteksklasser i paketet `android.support.text`.
+* **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: Den här AAR-filen innehåller stub-rutiner för Android-systemklasser som endast finns på nya enheter, men som refereras av metoder i `MAMActivity`. Nya enheter ignorerar de här stub-klasserna. Den här AAR-filen krävs endast om din app utför reflektion på klasser härledda från `MAMActivity`. För de flesta appar behövs den inte. AAR innehåller proguard-regler för att undanta alla dess klasser.
+* **com.microsoft.intune.mam.build.jar**: Ett plugin-program för Gradle som [hjälper till med integrering av SDK:n](#build-tooling).
 * **CHANGELOG.txt**: Innehåller en post med ändringar som gjorts i varje SDK-version.
-* **THIRDPARTYNOTICES.TXT**: Information om tredjeparts- och/eller OSS-kod som ingår i appen.
+* **THIRDPARTYNOTICES.TXT**:  Information om tredjeparts- och/eller OSS-kod som ingår i appen.
 
 ## <a name="requirements"></a>Krav
 
@@ -180,7 +180,7 @@ Om du svarar ”Ja” på båda dessa frågor måste du ta med biblioteket i `in
 | Du inkluderar ett bibliotek som React Native som innehåller klasser härledda från `Activity`, `Application` och `Fragment`, men du använder endast statiska hjälpverktyg eller verktygsklasser | Nej |
 | Du inkluderar ett bibliotek som innehåller visningsklasser härledda från `TextView` och använder eller härleder dessa klasser ytterligare i din app | Ja |
 
-#### <a name="reporting"></a>Rapporter
+#### <a name="reporting"></a>Rapportering
 Plugin-programmet för utveckling kan generera en HTML-rapport över de ändringar som det gör. Om du vill begära generering av den här rapporten anger du `report = true` i konfigurationsblocket `intunemam`. Om rapporten genereras skrivs den till `outputs/logs` i utvecklingskatalogen.
 
 ```groovy
@@ -675,13 +675,13 @@ Följande meddelanden skickas till appen och några av dem kan kräva appens med
 
 * **WIPE_USER_DATA**: Det här meddelandet skickas i en `MAMUserNotification`-klass. När det här meddelandet tas emot *måste* appen ta bort alla data som är kopplade till den hanterade identiteten (från `MAMUserNotification.getUserIdentity()`). Aviseringen kan inträffa av olika orsaker, inklusive när appen anropar `unregisterAccountForMAM`, när en IT-administratör initierar en rensning eller när administratörs nödvändiga principer för villkorlig åtkomst inte uppfylls. Om din app inte registreras för det här meddelandet utförs en rensning av standard beteendet. Standard beteendet tar bort alla filer för en app med en enda identitet eller alla filer som taggats med den hanterade identiteten för en app med flera identiteter. Det här meddelandet skickas aldrig till UI-tråden.
 
-* **WIPE_USER_AUXILIARY_DATA**: Appar kan registreras för det här meddelandet om man vill att Intune App SDK ska utföra standardbeteendet för selektiv rensning, men dessutom vill ta bort vissa ytterligare data när rensningen utförs. Det här meddelandet skickas inte till appar med en enda identitet – det skickas endast till appar med flera identiteter. Det här meddelandet skickas aldrig till UI-tråden.
+* **WIPE_USER_AUXILIARY_DATA**: Appar kan registreras för det här meddelandet om de vill att Intune App SDK ska använda standardbeteendet för selektiva rensningar, men fortfarande vill ta bort vissa extra data när rensningen utförs. Det här meddelandet skickas inte till appar med en enda identitet – det skickas endast till appar med flera identiteter. Det här meddelandet skickas aldrig till UI-tråden.
 
 * **REFRESH_POLICY**: Det här meddelandet skickas i en `MAMUserNotification`. När det här meddelandet tas emot måste eventuella Intune-principbeslut som cachelagras av din app ogiltigförklaras och uppdateras. Om din app inte lagrar några principantaganden behöver den inte registrera för det här meddelandet. Inga garantier görs för vilken tråd den här aviseringen kommer att skickas.
 
 * **REFRESH_APP_CONFIG**: Det här meddelandet skickas i en `MAMUserNotification`. När det här meddelandet tas emot måste cachelagrade programkonfigurationsdata ogiltigförklaras och uppdateras. Inga garantier görs för vilken tråd den här aviseringen kommer att skickas.
 
-* **MANAGEMENT_REMOVED**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen att den håller på att blir ohanterad. När den är ohanterad kommer den inte längre kunna läsa krypterade filer, läsa data som krypterats med MAMDataProtectionManager, interagera med krypterade urklipp eller på annat sätt delta i ekosystemet för hanterade appar. Se ytterligare information nedan. Det här meddelandet skickas aldrig till UI-tråden.
+* **MANAGEMENT_REMOVED**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen att den håller på att bli ohanterad. När den är ohanterad kommer den inte längre kunna läsa krypterade filer, läsa data som krypterats med MAMDataProtectionManager, interagera med krypterade urklipp eller på annat sätt delta i ekosystemet för hanterade appar. Se ytterligare information nedan. Det här meddelandet skickas aldrig till UI-tråden.
 
 * **MAM_ENROLLMENT_RESULT**: Det här meddelandet skickas i en `MAMEnrollmentNotification` för att meddela appen att en APP-WE-registrering har slutförts samt för att ange statusen för det försöket. Inga garantier görs för vilken tråd den här aviseringen kommer att skickas.
 
@@ -1154,7 +1154,7 @@ Med Intune kan du använda alla tillgängliga [funktioner för automatisk säker
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:value="true" />  
     ```
 
-    **Exempel 2**: Om du vill att din app ska använda sin anpassade BackupAgent och välja bort fullständiga Intune-principkompatibla, automatiska säkerhetskopieringar, måste du ange attributet och metadatataggen till **false**:
+    **Exempel 2**: Om du vill att din app ska använda sin anpassade BackupAgent och välja bort fullständiga, Intune-principkompatibla och automatiska säkerhetskopieringar, måste du ange attributet och metadatataggen till **false**:
 
     ```xml
     android:fullBackupContent="false"
@@ -1254,7 +1254,7 @@ Om din app använder `Application`-kontexten för att hämta systemtjänster bö
 För hantering av specialfall vid uppdatering av UI-identiteten med `setUIPolicyIdentity` eller `switchMAMIdentity` kan båda metoderna skickas som en uppsättning `IdentitySwitchOption`-värden.
 
 * `IGNORE_INTENT`: Använd om du begär en identitetsväxling som ska ignorera den avsikt som är associerad med den aktuella aktiviteten.
-  Till exempel:
+  Exempel:
 
   1. Appen tar emot en avsikt från en hanterad identitet som innehåller ett hanterat dokument, och appen visar dokumentet.
   2. Användaren växlar till sin personliga identitet, så appen begär en UI-identitetsväxling. I den personliga identiteten visar din app inte längre dokumentet, så du använder `IGNORE_INTENT` när du begär identitetsväxlingen.
@@ -1396,7 +1396,7 @@ Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsänd
 
   * Om en identitetsväxling blockeras är resultatet är samma som om delningsinställningar i `Receive` hade förbjudit inkommande data.
 
-  * Om en tjänst körs på huvudtråden **måste** `reportIdentitySwitchResult` anropas synkront, annars låser sig UI-tråden.
+  * Om en tjänst körs på huvudtråden `reportIdentitySwitchResult` **måste** anropas synkront, annars låser sig UI-tråden.
 
   * För **`Activity`** -generering anropas `onMAMIdentitySwitchRequired` före `onMAMCreate`. Om appen måste visa ett användargränssnitt för att avgöra om identitetsväxlingen ska tillåtas eller inte, måste användargränssnittet visas med hjälp av en *annan* aktivitet.
 
@@ -1419,7 +1419,7 @@ Det är vanligt att åtgärder i UI-tråden skickar bakgrundsaktiviteter till en
 Dessa måste användas om den asynkrona åtgärden skulle kunna företagsdata till en fil eller kommunicera med andra appar.
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
-Om du vill använda `MAMAsyncTask` kan du helt enkelt ärva från den i stället för `AsyncTask` och ersätta åsidosättningar av `doInBackground` och `onPreExecute` med `doInBackgroundMAM` respektive `onPreExecuteMAM`. Konstruktorn `MAMAsyncTask` tar ett aktivitetssammanhang. Till exempel:
+Om du vill använda `MAMAsyncTask` kan du helt enkelt ärva från den i stället för `AsyncTask` och ersätta åsidosättningar av `doInBackground` och `onPreExecute` med `doInBackgroundMAM` respektive `onPreExecuteMAM`. Konstruktorn `MAMAsyncTask` tar ett aktivitetssammanhang. Exempel:
 
 ```java
   AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -1769,7 +1769,7 @@ Long barValue = appConfig.getIntegerForKey("bar", MAMAppConfig.NumberQueryType.M
 
 ### <a name="notification"></a>Meddelande
 Programkonfiguration lägger till en ny meddelandetyp:
-* **REFRESH_APP_CONFIG**: det här meddelandet skickas en `MAMUserNotification` och informerar appen att nya app config-data är tillgängliga.
+* **REFRESH_APP_CONFIG**: Det här meddelandet skickas i en `MAMUserNotification` och informerar appen om att nya appkonfigurationsdata finns tillgängliga.
 
 ### <a name="further-reading"></a>Mer information
 Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i Android finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for Android](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) (använda Microsoft Intune-appkonfigurationsprinciper för Android).

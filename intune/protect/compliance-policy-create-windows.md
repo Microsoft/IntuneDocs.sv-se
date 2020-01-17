@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 0ca5d475f92cbe3298689273dcdf0da1644078b2
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946673"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547042"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Inställningar för Windows 10 och senare för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
@@ -65,7 +65,7 @@ Som Intune-administratör kan du använda dessa kompatibilitetsinställningar f�
 Fler resurser:
 
 - Mer information om hur tjänsten hälsoattestering fungerar finns i CSP för [hälsoattestering](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
-- [Supporttips: Använda Hälsoattestering för enhet som en del av din Intune-kompatibilitetsprincip](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- [Tips för support: Använda Hälsoattestering för enhet som en del av din Intune-kompatibilitetsprincip](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Egenskaper för enhet
 
@@ -102,15 +102,15 @@ Fler resurser:
 
 Gäller enbart för samhanterade enheter som kör Windows 10 och senare. Enheter med enbart Intune returnerar statusen inte tillgänglig.
 
-- **Kräv enhetskompatibilitet från System Center Configuration Manager**:  
+- **Kräv att enheten följer Configuration Manager**:  
   - **Inte konfigurerad** (*standard*) – Intune gör inte några kompatibilitetskontroller av inställningarna i Configuration Manager.
-  - **Kräv** – Kräv att alla inställningar (konfigurationsobjekt) i System Center Configuration Manager följer standard.  
+  - **Kräv** – Kräv att alla inställningar (konfigurationsobjekt) i Configuration Manager följer standard.  
 
     Du kan till exempel kräva att alla programuppdateringar installeras på enheter. Det här kravet har tillståndet ”installerad” i Configuration Manager. Om några program på enheten är i ett okänt tillstånd är enheten inte kompatibel i Intune.
 
 ## <a name="system-security"></a>Systemsäkerhet
 
-### <a name="password"></a>Lösenord
+### <a name="password"></a>lösenordsinställning
 
 - **Kräv ett lösenord för att låsa upp mobila enheter**:  
   - **Ej konfigurerad** (*standard*) – Ingen kompatibilitetskontroll görs för den här inställningen.

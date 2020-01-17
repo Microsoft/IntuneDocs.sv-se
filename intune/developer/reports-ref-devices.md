@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 01/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36407bda1f74d0c4601f78cedc2af5426e944fee
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 85b6d49f435ec45a2c6a2b81387ea25a1c15299b
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503413"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654081"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -50,9 +50,9 @@ Entiteten **deviceTypes** representerar den enhetstyp som andra informationslage
 
 ### <a name="example"></a>Exempel
 
-| deviceTypeID  | Namn | Beskrivning |
+| deviceTypeID  | Name | Beskrivning |
 |---------|------------|--------|
-| 0 |Stationär dator |Windows Desktop-enhet |
+| 0 |skrivbords- |Windows Desktop-enhet |
 | 1 |WindowsRT |WindowsRT-enhet |
 | 2 |WinMO6 |Windows Mobile 6.0-enhet |
 | 3 |Nokia |Nokia-enhet |
@@ -184,14 +184,14 @@ Entiteten **managementStates** innehåller information om enhetens tillstånd. I
 
 ### <a name="example"></a>Exempel
 
-| managementStateID  | Namn | Beskrivning |
+| managementStateID  | Name | Beskrivning |
 |---------|------------|--------|
 | 0 |Hanterade | Hanterad utan väntande fjärråtgärder. |
 | 1 |RetirePending | Ett kommando för tillbakadragande väntar på enheten. |
 | 2 |RetireFailed | Det gick inte att utföra kommandot för tillbakadragande på enheten. |
 | 3 |WipePending | Ett rensningskommando väntar på enheten. |
 | 4 |WipeFailed | Det gick inte att utföra rensningskommandot på enheten. |
-| 5 |Inte felfri | Ej felfritt tillstånd. |
+| 5 |Ohälsosamt | Ej felfritt tillstånd. |
 | 6 |DeletePending | Ett borttagningskommando väntar på enheten. |
 | 7 |RetireIssued | Ett kommando om tillbakadragande har utfärdats till enheten. |
 | 8 |WipeIssued | Ett rensningskommando har utfärdats. |
@@ -211,14 +211,14 @@ Entiteten **managementAgentType** representerar de agenter som används för att
 
 ### <a name="example"></a>Exempel
 
-| ManagementAgentTypeID  | Namn | Beskrivning |
+| ManagementAgentTypeID  | Name | Beskrivning |
 |---------|------------|--------|
 | 1 |EAS | Enheten hanteras via Exchange Active Sync |
 | 2 |MDM | Enheten hanteras med hjälp av en agent för mobilenhetshantering |
 | 3 |EasMdm | Enheten hanteras både av Exchange Active Sync och en agent för mobilenhetshantering |
 | 4 |IntuneClient | Enheten hanteras av Intune PC-agenten |
 | 5 |EasIntuneClient | Enheten hanteras både av Exchange Active Sync och Intune PC-agenten |
-| 8 |ConfigManagerClient | enheten hanteras av System Center Configuration Manager-agenten |
+| 8 |ConfigManagerClient | Enheten hanteras av Configuration Manager-agenten |
 | 16 |Okänt | Okänd typ av hanteringsagent |
 
 ## <a name="devices"></a>devices

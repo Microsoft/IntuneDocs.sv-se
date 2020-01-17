@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 085ec1f329eb9b423797a110ada53eb7693edf6f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 6fb6c1295947b9f51ef861b1fcc6582c6690137f
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506137"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855432"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Så här registrerar din Windows 8.1- eller Windows RT 8.1-enhet i Intune  
 
@@ -33,7 +33,7 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera dina enh
 
 Registrera din Windows 8.1- eller Windows RT 8.1-enhet:  
 
-1. Tryck på **Inställningar** &gt; **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats** på enheten.  
+1. Tryck på **Inställningar** &gt; **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats**.  
 
     ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 
@@ -61,7 +61,7 @@ Registrera din Windows 8.1- eller Windows RT 8.1-enhet:
 
 Vi rekommenderar också att du installerar appen Företagsportalen som gör att du lätt kan identifiera och ladda ner de företagsappar som är relevanta för dig och din arbetsroll. Företagsportalen kan ha installerats som en del i din registrering, beroende på hur ditt företag har konfigurerat Intune. Du kan kontrollera att du har appen genom att se om **Företagsportalen** finns i din applista. Om du inte ser Företagsportalen i app-listan kan du följa de här stegen för att installera den.
 
-1. Tryck på **Start** &gt; **Store**.  
+1. Tryck på **Starta** &gt; **Store**.  
 
 2. Tryck på **Sök** och skriv sedan **företagsportal**.  
 

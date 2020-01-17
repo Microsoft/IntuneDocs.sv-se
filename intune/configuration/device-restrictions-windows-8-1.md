@@ -1,12 +1,12 @@
 ---
-title: Inställningar av enhetsbegränsningar för enheter som kör Windows 8.1 i Microsoft Intune
+title: Inställningar för begränsningar för Windows 8.1-enheter i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
 description: Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows 8.1.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,19 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0df55e79dbc54926c0507889620f2667d7b8bd7b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 82eaf1bc2c0737e1cc54751ff6fb5751227d180c
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489826"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302971"
 ---
-# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Inställningar av enhetsbegränsningar för Microsoft Intune i Windows 8.1 och senare
+# <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Inställningar för begränsningar för Windows 8.1-enheter i Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-I den här artikeln visas inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 8.1 och senare.
-
+I den här artikeln visas inställningarna av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 8.1.
 
 ## <a name="general"></a>Allmänt
 
@@ -36,7 +33,7 @@ I den här artikeln visas inställningar av enhetsbegränsningar som du kan konf
 - **Brandvägg** – Kräver att Windows-brandväggen är aktiverad.
 - **User Account Control** – Kräver användning av UAC (User Account Control) på enheter.
 
-## <a name="password"></a>Lösenord
+## <a name="password"></a>lösenordsinställning
 - **Krav på lösenordstyp** – Kräver att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
 - **Minsta längd på lösenord** – Konfigurerar den minsta tillåtna längden (i antal tecken) för lösenordet.
 - **Antal felaktiga inloggningar innan enheten rensas** – Rensar enheten om inloggningsförsök misslyckas detta antal gånger.
@@ -48,8 +45,6 @@ I den här artikeln visas inställningar av enhetsbegränsningar som du kan konf
 Om du aktiverar den här inställningen för Windows 8.1-enheter måste alla användare av sådana enheter ha ett Microsoft-konto.
 För att krypteringen ska fungera måste enheten uppfylla kraven för [Microsoft InstantGo](https://blogs.windows.com/windowsexperience/2014/06/19/instantgo-a-better-way-to-sleep/#IBHULcTfI4PokO8X.97)-maskinvarucertifiering.
 När du framtvingar kryptering på en enhet är återställningsnyckeln enbart tillgänglig från användarens Microsoft-konto, som nås från användarens OneDrive-konto. Du kan inte återställa denna nyckel för en användares räkning. 
-
-
 
 ## <a name="browser"></a>Webbläsare
 - **Autofyll** – Gör att användarna kan ändra inställningarna för att komplettera automatiskt i webbläsaren.
@@ -75,3 +70,7 @@ Om du väljer den här inställningen kan du även ange en **plats för loggning
 ## <a name="cloud-and-storage"></a>Moln och lagring
 - **URL till arbetsmappar** – Anger arbetsmappens URL så att dokument kan synkroniseras mellan enheter.
 - **Åtkomst till Windows Mail-app utan Microsoft-konto** – Ger åtkomst till Windows Mail utan ett Microsoft-konto.
+
+## <a name="next-steps"></a>Nästa steg
+
+Skapa en profil för enhets begränsningar i [Windows 10 och senare](device-restrictions-windows-10.md).

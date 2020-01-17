@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 962e66a9fdf6d8abcf6855f645775026ee4db850
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d3d9473b68f0420670130203409abf477355d93f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508835"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885523"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Felsöka Intune Exchange Connector
 
@@ -40,7 +40,7 @@ Innan du börjar felsöka ett Exchange Connector-problem i Intune samlar du in l
   - Konfigurerar du anslutningen för första gången? 
   - Fungerade kopplingen korrekt och kunde sedan inte köras?
   - Om det fungerade, vilka ändringar som gjorts i Intune-miljön, Exchange-miljön eller på datorn som kör anslutnings programmet?
-- Vad är MDM-utfärdare? Om det är System Center Configuration Manager, vilken version av Configuration Manager använder du?
+- Vad är MDM-utfärdare?
 - Vilken version av Exchange använder du?
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Använda PowerShell för att få mer information om problem med Exchange Connector
@@ -65,7 +65,7 @@ Granska kraven för den [lokala Exchange Connector](exchange-connector-install.m
 
 ### <a name="common-issues-for-connector-configurations"></a>Vanliga problem för anslutnings konfiguration
 
-- **Kontobehörigheter**: I dialogrutan för Microsoft Intune Exchange Connector ser du till att du har angett ett användarkonto som har nödvändiga behörigheter för att köra [Windows PowerShell Exchange-cmdletar](exchange-connector-install.md#exchange-cmdlet-requirements).
+- **Kontobehörigheter**: I dialogrutan för Microsoft Intune Exchange Connector ser du till att du har angett ett användarkonto som har nödvändiga behörigheter för att köra [Windows PowerShell Exchange-cmdlets](exchange-connector-install.md#exchange-cmdlet-requirements).
 - **E-postmeddelanden för aviseringar**: Aktivera meddelanden och ange ett meddelande konto.
 - **Synkronisering av klient åtkomst Server**: när du konfigurerar Exchange Connector ska du ange en certifikat utfärdare som har den lägsta nätverks fördröjning som är möjlig för servern som är värd för Exchange Connector. Svarstiden för kommunikationen mellan klientåtkomstservern och Exchange-anslutningen kan orsaka fördröjningar i enhetsidentifieringen, särskilt om Dedikerad Exchange Online används.
 - **Synkroniseringsschema**: Åtkomst för en användare med en nyligen registrerad enhet kan fördröjas tills Exchange-anslutningen synkroniserar med Exchange-CAS. En fullständig synkronisering görs en gång per dag, och en deltasynkronisering (snabbsynkronisering) görs flera gånger per dag. Du kan [manuellt framtvinga en snabbsynkronisering eller en fullständig synkronisering](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) för att minimera fördröjningar.

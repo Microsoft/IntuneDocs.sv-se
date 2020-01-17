@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1362f6c6453569d1c306cd16397cc9a7f83736e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6ed1f43e7c7e6f0580cb22513a489fb32c30e5f6
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72495347"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206762"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Använda anpassade inställningar för Windows Phone 8.1-enheter i Intune
 
@@ -33,20 +33,20 @@ Den här artikeln visar hur du skapar en anpassad profil för Windows Phone 8.1-
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
-    - **Namn**: Ange ett namn för profilen, till exempel `windows phone custom profile`.
-    - **Beskrivning:** Ange en beskrivning för profilen.
-    - **Plattform**: Välj **Windows Phone 8.1**.
-    - **Profiltyp**: Välj **Anpassad**.
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett användbart profil namn är till exempel **Windows Phone-anpassad profil**.
+    - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
+    - **Plattform**: välj **Windows Phone 8,1**.
+    - **Profil typ**: Välj **anpassad**.
 
 4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till**. Ange följande inställningar:
 
     - **Namn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
     - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen och eventuell annan relevant information som gör det enklare att hitta profilen.
-    - **OMA-URI** (skiftlägeskänsligt): Ange den OMA-URI som du vill använda som inställning.
+    - **OMA-URI** (skiftlägeskänslig): Ange den OMA-URI som du vill använda som inställning.
     - **Datatyp**: Välj den datatyp som du vill använda för den här OMA-URI-inställningen. Alternativen är:
 
         - Sträng
@@ -66,16 +66,16 @@ Den här artikeln visar hur du skapar en anpassad profil för Windows Phone 8.1-
 
 ## <a name="example"></a>Exempel
 
-I följande exempel hindras Windows 8,1 Phone-enheter från att ändra mobila nätverk när de befinner sig utanför området för bär Vågs täckning.
+I följande exempel hindras Windows 8,1 Phone-enheter från att ändra mobila nätverk när de reser utanför området för bär Vågs täckning.
 
 - **Namn**: Tillåt mobil data nätverks växling
 - **Beskrivning**: Tillåt eller neka mobil data nätverks växling
 - **OMA-URI** (Skift läges känslig):./Vendor/MSFT/PolicyManager/My/Connectivity/AllowCellularDataRoaming
-- **Datatyp**: heltal
+- **Datatyp**: Heltal
 - **Värde**: 0
 
 ## <a name="next-steps"></a>Nästa steg
 
-Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
+Profilen har skapats, men den gör inte något än. [Tilldela profilen](../device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Se hur du skapar en anpassad profil på [Windows 10-enheter](../custom-settings-windows-10.md).
+Skapa en anpassad profil på [Windows 10-enheter](../custom-settings-windows-10.md).
