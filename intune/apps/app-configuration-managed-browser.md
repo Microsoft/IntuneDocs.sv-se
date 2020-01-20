@@ -135,7 +135,7 @@ Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticat
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade appar**.
 3. Ange **Namn** och valfri **Beskrivning** för appkonfigurationsinställningarna sidan **Grundläggande** i fönstret **Skapa appkonfigurationsprincip**.
-4. Välj alternativet **Välj den offentliga appen** och välj **Hanterad webbläsare** och/eller **Edge** för iOS, för Android eller för båda två.
+4. Välj alternativet **Välj den offentliga appen** och välj **Hanterad webbläsare** och/eller **Microsoft Edge** för iOS, för Android eller för båda två.
 5. Gå tillbaka till fönstret **Skapa appkonfigurationsprincip** genom att klicka på **Välj**.
 6. Visa sidan **Inställningar** genom att klicka på **Nästa**.
 7. Förse appen med konfigurationer genom att definiera nyckel- och värdepar på sidan **Inställningar**. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
