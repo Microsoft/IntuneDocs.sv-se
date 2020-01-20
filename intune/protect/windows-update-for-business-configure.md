@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207459"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956273"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
@@ -63,7 +63,7 @@ Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10-e
   > - Windows 10 Mobil  
   > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) stöder för närvarande inte versioner av *Långsiktig servicekanal*. Planera att använda alternativa uppdateringsmetoder som WSUS eller Configuration Manager.
 
-- På Windows-enheter måste du **Feedback och diagnostik** > **Diagnostik och användningsdata** vara inställt på **Grundläggande**, **Utökad** eller **Fullständig**.  
+- På Windows-enheter måste du **Feedback och diagnostik** > **Diagnostik och användningsdata** vara inställt på **Grundläggande**, **Utökad** eller **Fullständig**.
 
   Du kan konfigurera den här inställningen *Diagnostik och användningsdata* för WIndows 10 manuellt eller använda en begränsningsprofil för Intune-enheter för Windows 10 och senare. Om du använder en enhetsbegränsningsprofil ställer du in [enhetsbegränsningsinställningen](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) för **Dela användningsdata** på minst **Grundläggande**. Den här inställningen finns under kategorin **Rapportering och telemetri** när du konfigurerar en princip för enhetsbegränsning för Windows 10 eller senare.
 
@@ -215,6 +215,10 @@ När en enhet tar emot en princip för Windows 10-funktionsuppdateringar:
 
   Den här begränsningen undersöks för att se om den har stöd framöver.
 
+> [!IMPORTANT]
+> Om du vill använda principen för funktionsuppdateringar med Intune, så måste enheterna ha telemetri aktiverat, med minst inställningen [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Du konfigurerar telemetri under *Rapportering och telemetri* som en del av en [enhetsbegränsningsprincip](../configuration/device-restrictions-configure.md).
+>
+> Enheter som tar emot principen för funktionsuppdateringar och som har telemetri inställt på *Inte konfigurerat*, vilket innebär att telemetrin är avstängd, kan installera en senare version av Windows än den som definieras i principen för funktionsuppdateringar. Förutsättningen för att kräva telemetri granskas medan den här funktionen flyttas till allmän tillgänglighet.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Skapa och tilldela Windows 10-funktionsuppdateringar
 
@@ -245,4 +249,3 @@ I det här fönstret kan du göra följande:
 [Intune-efterlevnadsrapporter för uppdateringar](../windows-update-compliance-reports.md)
 
 [Felsöka Windows 10-uppdateringsringar](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
-

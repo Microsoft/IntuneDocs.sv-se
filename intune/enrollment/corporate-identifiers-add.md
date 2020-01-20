@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 7cc67ce304dba500095c130e035a0b29322c84ef
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955481"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956302"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -120,7 +120,7 @@ Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers)
 
 ## <a name="change-device-ownership"></a>Ändra enhetsägande
 
-Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som administratör kan du ange enheter som **Personliga** eller **Företagsägda**. När en enhets ägarskapstyp ändras från Personlig till Företag tar Intune bort all appinformation som tidigare samlats in från den enheten inom 7 dagar. Om så är tillämpligt tar Intune även bort det registrerade telefonnumret. 
+Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som administratör kan du ange enheter som **Personliga** eller **Företagsägda**. När en enhets ägarskapstyp ändras från Företag till Personlig tar Intune bort all appinformation som tidigare samlats in från den enheten inom 7 dagar. Om så är tillämpligt tar Intune även bort det registrerade telefonnumret. 
 
 **Ändra enhetsägande:**
 1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Alla enheter** > välj enhet.

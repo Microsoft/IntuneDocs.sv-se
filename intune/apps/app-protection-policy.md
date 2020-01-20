@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f11ccb51e08e96595dfcb9118c1f479f1b0fc3de
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 3f1563c092d8dd4c34e4a18caea56910267eb623
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692130"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956325"
 ---
 # <a name="app-protection-policies-overview"></a>Översikt över principer för appskydd
 
@@ -133,11 +133,11 @@ Det finns dock vissa begränsningar som du bör känna till, t.ex.:
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Appar som du kan hantera med appskyddsprinciper
 
-Alla appar som har integrerats med [Intune App-SDK](../developer/app-sdk.md) eller inslutits av [Intunes programhanteringsverktyg](../developer/apps-prepare-mobile-application-management.md) kan hanteras med Intunes appskyddsprinciper. Se den officiella listan med [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md) som har skapats med hjälp av dessa verktyg och är tillgängliga för offentligt bruk.
+Du kan hantera alla appar som har integrerats med [Intune-SDK:n](../developer/app-sdk.md) eller omslutits av [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) med Intunes appskyddsprinciper. Se den officiella listan med [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md) som har skapats med hjälp av dessa verktyg och är tillgängliga för offentligt bruk.
 
 Intune SDK-utvecklingsteamet testar och underhåller aktivt stödet för appar som skapats med de ursprungliga Android-, iOS (Obj-C, Swift), Xamarin-, Xamarin.Forms- och Cordova-plattformarna. Även om vissa kunder har lyckats integrera Intune SDK med andra plattformar som React Native och NativeScript, tillhandahåller vi inte någon uttrycklig vägledning eller några plugin-program för apputvecklare som använder något annat än våra stödda plattformar.
 
-[Intune APP SDK](../developer/app-sdk.md) använder vissa avancerade moderna autentiseringar från [Azure Active Directory-autentiseringsbibliotek](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) för SDK-versioner från såväl första som tredje part. Därför fungerar [Microsofts-autentiseringsbibliotek](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) inte bra ihop med många av våra grundläggande scenarier, till exempel autentisering till tjänsten Intune-appskydd och villkorlig start. Eftersom den allmänna instruktionen från Microsoft Identity-teamet är att gå över till MSAL för alla Microsoft Office-appar kommer [Intune App SDK](../developer/app-sdk.md) så småningom att behöva stödja detta, men det finns inga planer på det idag.
+[Intune SDK:n](../developer/app-sdk.md) använder vissa avancerade moderna autentiseringsfunktioner från [Azure Active Directory-autentiseringsbiblioteket](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) för SDK-versioner från såväl första som tredje part. Därför fungerar [Microsofts-autentiseringsbibliotek](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) inte bra ihop med många av våra grundläggande scenarier, till exempel autentisering till tjänsten Intune-appskydd och villkorlig start. Eftersom den allmänna instruktionen från Microsoft Identity-teamet är att gå över till MSAL för alla Microsoft Office-appar kommer [Intune SDK:n](../developer/app-sdk.md) så småningom att behöva stödja detta, men det finns inga planer på det idag.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Slutanvändarkrav för att använda skyddsprinciper för appar
 
@@ -198,7 +198,7 @@ Medan den **Globala** principen gäller för alla användare i din klient kommer
 
 ### <a name="multi-identity"></a>Flera identiteter
 
-Med stöd för flera identiteter kan en app stödja flera målgrupper. Dessa målgrupper är både ”företagsanvändare” och ”personliga” användare. Arbets- och skolkonton används av företagsgrupper medan personliga konton används för konsumentanvändare, t. ex. Microsoft Office-användare. En app som har stöd för flera identiteter kan publiceras offentligt, där appskyddsprinciperna endast tillämpas när appen används i arbets- och skolkontexten (”företag”). Stöd för flera identiteter är möjligheten för [Intune App SDK](../developer/app-sdk.md) att bara tillämpa appskyddsprinciper på arbets- eller skolkontot som använts för inloggning i appen. Om ett personligt konto är inloggat i appen ändras inga data.
+Med stöd för flera identiteter kan en app stödja flera målgrupper. Dessa målgrupper är både ”företagsanvändare” och ”personliga” användare. Arbets- och skolkonton används av företagsgrupper medan personliga konton används för konsumentanvändare, t. ex. Microsoft Office-användare. En app som har stöd för flera identiteter kan publiceras offentligt, där appskyddsprinciperna endast tillämpas när appen används i arbets- och skolkontexten (”företag”). Stöd för flera identiteter använder [Intune App SDK:n](../developer/app-sdk.md) till att enbart tillämpa appskyddsprinciper på det arbets- eller skolkonto som har registrerats i appen. Om ett personligt konto är inloggat i appen ändras inga data.
 
 För ett exempel på ”privat” kontext, anta att en användare som startar ett nytt dokument i Word, då anses detta vara privat kontext så Intune-appskyddsprinciper tillämpas inte. När dokumentet sparas på ”företagets” OneDrive-konto kommer det anses vara ”företagskontext” och Intune-appskyddsprinciperna tillämpas.
 
@@ -213,7 +213,7 @@ Mer information om flera identiteter i Intune finns i [MAM och flera identiteter
 PIN-kod (Personal Identification Number) är ett lösenord som används för att verifiera att rätt användare har åtkomst till organisationens data i en app.
 
 **PIN-fråga**<br>
-Intune frågar endast efter användarens PIN-kod för appen när användaren ska få åtkomst till företagsdata. I appar för flera identiteter som till exempel Word, Excel eller PowerPoint uppmanas användarna att ange sina PIN-koder när de försöker öppna ett "företags"-dokument eller -fil. I appar för en identitet, till exempel branschspecifika appar som använder [Intunes apphanteringsverktyg](../developer/apps-prepare-mobile-application-management.md), efterfrågas PIN-koden redan vid start eftersom [Intune App SDK:n](../developer/app-sdk.md) vet att användarupplevelsen i appen alltid är företag.
+Intune frågar endast efter användarens PIN-kod för appen när användaren ska få åtkomst till företagsdata. I appar för flera identiteter som till exempel Word, Excel eller PowerPoint uppmanas användarna att ange sina PIN-koder när de försöker öppna ett "företags"-dokument eller -fil. I appar för enskilda identiteter, exempelvis branschspecifika appar som hanteras med [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md), efterfrågas PIN-koden redan vid start eftersom [Intune SDK:n](../developer/app-sdk.md) vet att användarupplevelsen i appen alltid är företagsrelaterad.
 
 **Fråga om PIN-kod eller behörighet för företaget, frekvens**<br>
 IT-administratören kan definiera Intune-appskyddsprincipen **Kontrollera åtkomskraven igen efter (minuter)** i Intune-administratörskonsolen. Inställningen anger hur lång tid som ska passera innan åtkomstkraven kontrolleras på enheten och programmets PIN-skärm eller företagets behörighetsfråga visas igen. Detta är dock viktig information om PIN-koden som påverkar hur ofta användaren uppmanas:
@@ -231,13 +231,22 @@ För iOS-enheter visas meddelandet igen när värdet **Kontrollera åtkomstbehö
 Intune PIN-koden fungerar enligt en inaktivitetsbaserad timer (värdet för **Kontrollera åtkomstkraven igen efter (minuter)** ). Därför visas Intune PIN-uppmaningar oberoende av de inbyggda app-PIN-uppmaningarna för Outlook och OneDrive, som ofta är kopplade till appstart som standard. Om användaren får PIN-uppmaningarna samtidigt är det förväntade beteendet att Intune PIN-koden har företräde.
 
 **Säkerhet för Intune-PIN**<br>
-PIN-koden fungerar så att endast rätt användare får åtkomst till organisationens data i appen. Därför måste en slutanvändare logga in med sitt arbets- eller skolkonto innan de kan ställa in eller återställa Intune-appens PIN-kod. Den här autentiseringen hanteras av Azure Active Directory via utbyte av säker token och är inte transparent för [Intune App SDK](../developer/app-sdk.md). Ur ett säkerhetsperspektiv är bästa sättet att skydda data från arbete eller skola att kryptera den. Kryptering är inte relaterad till appens PIN-kod, utan en egen appskyddsprincip.
+PIN-koden fungerar så att endast rätt användare får åtkomst till organisationens data i appen. Därför måste en slutanvändare logga in med sitt arbets- eller skolkonto innan de kan ställa in eller återställa Intune-appens PIN-kod. Den här autentiseringen hanteras av Azure Active Directory via säkert tokenutbyte och är inte transparent för [Intune SDK:n](../developer/app-sdk.md). Ur ett säkerhetsperspektiv är bästa sättet att skydda data från arbete eller skola att kryptera den. Kryptering är inte relaterad till appens PIN-kod, utan en egen appskyddsprincip.
 
-**Intune-PIN – skyddar mot nyckelsökningsattacker**<br>
-Som en del av appens PIN-princip kan IT-administratören ange det maximala antalet gånger som en användare kan försöka att autentisera sin PIN-kod innan appen blir låst. När antalet försök har uppfyllts kan [Intune App SDK](../developer/app-sdk.md) rensa företagets data i appen.
-  
+**Skyddar mot nyckelsökningsattacker och Intune-PIN**<br>
+Som en del av appens PIN-princip kan IT-administratören ange det maximala antalet gånger som en användare kan försöka att autentisera sin PIN-kod innan appen blir låst. När antalet försök har uppfyllts kan [Intune SDK:n](../developer/app-sdk.md) rensa företagets data i appen.
+
+**Intune-PIN och en selektiv rensning**<br>
+I iOS lagras PIN-information på appnivå i den nyckelkedja som delas mellan appar med samma utgivare, t.ex. alla Microsoft-appar från första part. Denna PIN-information är även kopplad till ett slutanvändarkonto. En selektiv rensning av en app ska inte påverka någon annan app. 
+
+En PIN-kod som har konfigurerats för Outlook för den inloggade användaren lagras t.ex. i en delad nyckelkedja. När användaren loggar in på OneDrive (även publicerad av Microsoft), kommer hen att se samma PIN-kod som Outlook eftersom den använder samma delade nyckelkedja. När användaren loggar ut från Outlook eller rensar användardata i Outlook, så rensar Intune SDK:n inte den nyckelkedjan eftersom OneDrive kanske fortfarande använder den PIN-koden. Därför tar selektiva rensningar inte bort den delade nyckelkedjan, inklusive PIN-koden. Det här beteendet är detsamma även om det bara finns en app från en utgivare på enheten. 
+
+Eftersom PIN-koden delas mellan appar med samma utgivare, och om rensningen avser en enda app, så vet inte Intune SDK:n om det finns några andra appar på enheten med samma utgivare. Därför rensar Intune SDK:n inte PIN-koden, eftersom den fortfarande kanske används av andra appar. Förväntningen är att appens PIN-kod ska rensas när den sista appen från utgivaren till slut tas bort som en del av en rensning av operativsystemet.
+ 
+Om du märker att PIN-koden rensas på vissa enheter, så kommer förmodligen följande att hända: Eftersom PIN-koden är kopplad till en identitet, och om användaren har loggat in med ett annat konto efter en rensning, så uppmanas hen att ange en ny PIN-kod. Men om användaren loggar in med ett tidigare befintligt konto, så kan en befintlig PIN-kod i nyckelkedjan användas för att logga in.
+
 **Ställer du in en PIN-kod två gånger på appar från samma utgivare?**<br>
-MAM (på iOS) tillåter för tillfället PIN på programnivå med alfanumeriska tecken och specialtecken (kallas lösenord) som kräver medverkan av program (d.v.s. WXP, Outlook, hanterad webbläsare, Yammer) för att integrera [Intune APP SDK:n för iOS](../developer/app-sdk-ios.md). Utan detta tillämpas inställningar för lösenord inte korrekt för de aktuella programmen. Detta var en funktion som introducerades i Intune SDK för iOS v. 7.1.12.
+MAM (på iOS) tillåter för tillfället PIN-koder på programnivå med alfanumeriska tecken och specialtecken (s.k. lösenord) som kräver medverkan av program (som WXP, Outlook, hanterad webbläsare, Yammer) för att integrera [Intune SDK:n för iOS](../developer/app-sdk-ios.md). Utan detta tillämpas inställningar för lösenord inte korrekt för de aktuella programmen. Detta var en funktion som introducerades i Intune SDK för iOS v. 7.1.12.
 
 För att stödja den här funktionen och säkerställa bakåtkompatibilitet med tidigare versioner av Intune SDK för iOS, hanteras alla PIN-koder (numeriska eller lösenord) i 7.1.12+ separat från den numeriska PIN-koden i tidigare versioner av SDK. Därför måste en enhet som har program med Intune SDK för iOS-versioner före 7.1.12 och efter 7.1.12 från samma utgivare, ställa in två PIN-koder. De två PIN-koderna (för varje app) är inte relaterade på något sätt, d.v.s. de måste följa den appskyddsprincip som tillämpas på appen. Därför kan användare konfigurera samma PIN-kod två gånger *endast* om apparna A och B har samma principer tillämpade (med avseende på PIN-kod). 
 
@@ -261,6 +270,8 @@ Endast data som har markerats som "företagets" krypteras enligt IT-administrat�
 
 För branschspecifika appar som hanteras av [Intunes programhanteringsverktyg](../developer/apps-prepare-mobile-application-management.md), betraktas alla appdata som företag.
 
+### <a name="selective-wipe"></a>Selektiv rensning
+
 **Fjärrensa data**<br>
 Intune kan rensa appdata på tre olika sätt: 
 - Fullständig enhetsrensning
@@ -269,10 +280,10 @@ Intune kan rensa appdata på tre olika sätt:
 
 Mer information om fjärrensning för MDM finns i [Ta bort enheter med rensning eller dra tillbaka](../remote-actions/devices-wipe.md). Om du vill ha mer information om selektiv rensning med hjälp av MAM kan du läsa om [åtgärden Dra tillbaka](../remote-actions/devices-wipe.md#retire) och [Hur du rensar endast företagsdata från appar](apps-selective-wipe.md).
 
-[Rensning](../remote-actions/devices-wipe.md) tar bort all användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
+[Fullständig rensning](../remote-actions/devices-wipe.md) tar bort alla användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
 
   >[!NOTE]
-  > Rensning kan bara ske på enheter som registrerats med Intunes hantering av mobila enheter (MDM).
+  > Fullständig enhetsrensning, och selektiv rensning för MDM, kan bara ske på enheter som har registrerats med Intunes hantering av mobilenheter (MDM).
 
 **Selektiv rensning för MDM**<br>
 Se [Ta bort enheter – dra tillbaka](../remote-actions/devices-wipe.md#retire) för att läsa om hur du tar bort företagsdata.
@@ -280,24 +291,20 @@ Se [Ta bort enheter – dra tillbaka](../remote-actions/devices-wipe.md#retire) 
 **Selektiv rensning för MAM**<br>
 Selektiv rensning för MAM tar helt enkelt bort företagsdata från en app. Begäran initieras med hjälp av Intune Azure-portalen. Information om hur du initierar en rensningsbegäran finns i [Så här rensar du endast företagsdata från appar](apps-selective-wipe.md).
 
-Om användaren använder appen när selektiv rensning initieras söker [Intune App SDK](../developer/app-sdk.md) var 30:e minut efter en begäran om selektiv rensning från Intune MAM-tjänsten. Den söker även efter selektiv rensning när användaren startar appen för första gången och loggar in med sitt arbets- eller skolkonto.
+Om användaren använder appen när selektiv rensning initieras söker [Intune SDK:n](../developer/app-sdk.md) var 30:e minut efter en begäran om selektiv rensning från Intune MAM-tjänsten. Den söker även efter selektiv rensning när användaren startar appen för första gången och loggar in med sitt arbets- eller skolkonto.
 
 **När tjänster på plats inte fungerar med Intunes appskydd**<br>
-Intunes appskydd är beroende av att användarens identiteten är konsekvent mellan appen och [Intune App SDK](../developer/app-sdk.md). Det enda sättet att garantera detta är via modern autentisering. Det finns scenarier där appar kan fungera med en lokal konfiguration, men de är varken konsekventa eller garanterade.
+Intunes appskydd är beroende av att användaridentiteten är stämmer överens mellan programmet och [Intune SDK:n](../developer/app-sdk.md). Det enda sättet att garantera detta är via modern autentisering. Det finns scenarier där appar kan fungera med en lokal konfiguration, men de är varken konsekventa eller garanterade.
 
 **Ett säkert sätt att öppna webblänkar från hanterade appar**<br>
 IT-administratören kan distribuera och ange appskyddsprincip för [Intune Managed Browser-appen](app-configuration-managed-browser.md), en webbläsare som har utvecklats av Microsoft Intune som enkelt kan hanteras med Intune. IT-administratören kan kräva att alla webblänkar i Intune-hanterade appar ska öppnas med Managed Browser-appen.
-
-## <a name="examples-of-app-protection-policies"></a>Exempel på appskyddsprinciper
-
-Se [Inställningar för Android-appskyddsprinciper](app-protection-policy-settings-android.md) och [Inställningar för iOS-appskyddsprinciper](app-protection-policy-settings-ios.md) för att läsa mer om respektive inställning av appskyddprincip och exempel på appskyddsprinciper.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Appskyddsupplevelse för iOS-enheter
 
 ### <a name="device-fingerprint-or-face-ids"></a>Fingeravtryck för enhet eller ansikts-ID 
 Intunes appskyddsprinciper kan styra åtkomst till den Intune-licensierade användaren. Ett sätt att styra åtkomst till appen är att kräva antingen Apples Touch-ID eller ansikts-ID på enheter som stöds. Intune implementerar ett beteende där, om det förekommer ändringar till enhetens biometriska databas, Intune uppmanar användaren att ange en PIN-kod när nästa tidsgränsen för inaktivitet uppfylls. Ändringar av biometriska data inkluderar tillägg eller borttagning av ett fingeravtryck eller ansikte. Om Intune-användare inte har en PIN-kod, leds de till att ställa in en PIN-kod i Intune.
  
-Syftet med detta är att fortsätta att hålla din organisations data i appen säkra och skyddade på appnivå. Den här funktionen är endast tillgänglig för iOS och kräver medverkan av program som integrerar Intune APP SDK för iOS, version 9.0.1 eller senare. Integrering av SDK krävs så att beteendet kan tillämpas på de berörda programmen. Den här integreringen händer på löpande bas, och är beroende av specifika programteam. Vissa appar som deltar omfattar WXP, Outlook, Managed Browser och Yammer.
+Syftet med detta är att fortsätta att hålla din organisations data i appen säkra och skyddade på appnivå. Den här funktionen är endast tillgänglig för iOS och kräver medverkan av program som integrerar Intune SDK:n för iOS, version 9.0.1 eller senare. Integrering av SDK krävs så att beteendet kan tillämpas på de berörda programmen. Den här integreringen händer på löpande bas, och är beroende av specifika programteam. Vissa appar som deltar omfattar WXP, Outlook, Managed Browser och Yammer.
   
 ### <a name="ios-share-extension"></a>Tillägg för iOS-resurs
 Du kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på **Endast hanterade appar** eller **Inga appar**. Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _**"företagets" data innan den delas utanför appen**_ . Du kan verifiera detta krypteringsbeteende genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
@@ -305,7 +312,7 @@ Du kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohan
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Flera åtkomstinställningar för Intune App Protection för samma uppsättning appar och användare
 Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får rensningar företräde, följt av blockeringar och därefter varningar som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta iOS-operativsysteminställning som varnar en användare för att göra en uppdatering av sin iOS-version efter den lägsta iOS-operativsysteminställningen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar det äldsta iOS-operativsystemet till 11.0.0.0 och det äldsta iOS-operativsystemet (endast varning) till 11.1.0.0, medan enheten som försöker få åtkomst till appen hade iOS-version 10 blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta iOS-operativsystemversionen. Det leder till blockerad åtkomst.
 
-När du hanterar olika typer av inställningar får ett krav på Intune App SDK-version företräde, följt av kravet på appversion, och därefter kravet på iOS-operativsystemets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning. Vi rekommenderar att du endast konfigurerar Intune App SDK-versionskraven vid vägledning från Intune-produktteamet för väsentliga blockeringsscenarier.
+När du hanterar olika typer av inställningar, så måste ett krav avseende Intune SDK-version ha företräde, följt av krav på appversion, och därefter krav på iOS-operativsystemsversion. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning. Vi rekommenderar att du endast konfigurerar Intune SDK-versionskraven efter det att du fått vägledning från Intune-produktteamet avseende viktiga blockeringsscenarier.
 
 ## <a name="app-protection-experience-for-android-devices"></a>Appskyddsupplevelse för Android-enheter
 
@@ -344,6 +351,10 @@ De inställningar för appskyddsprincip som använder Google Play Protect-API:er
 ## <a name="next-steps"></a>Nästa steg
 
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](app-protection-policies.md)
+
+[Tillgängliga inställningar för Android-appskyddsprinciper med Microsoft Intune](app-protection-policy-settings-android.md)
+
+[Tillgängliga inställningar för iOS-appskyddsprinciper med Microsoft Intune](app-protection-policy-settings-ios.md)
 
 ## <a name="see-also"></a>Se även
 Appar från tredje part, till exempel Salesforce-mobilappen fungerar med Intune på specifika sätt för att skydda företagsdata. Läs mer om hur Salesforce-appen i synnerhet fungerar med Intune (inklusive MDM-appkonfigurationsinställningar) i [Salesforce-appen och Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

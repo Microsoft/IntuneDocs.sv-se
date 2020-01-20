@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 26013ab06cabdfd64ec3cd34254e3cfa2bb2428d
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654268"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755997"
 ---
 # <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune
 
@@ -38,6 +38,8 @@ Intune tillhandahåller också en inbyggd [krypteringsrapport](encryption-monito
 ## <a name="filevault-encryption-for-macos"></a>FileVault-kryptering för macOS
 
 Använd Intune för att konfigurera FileVault-diskkryptering på enheter som kör macOS. Använd sedan Intunes krypteringsrapport för att visa krypteringsinformation för de enheterna och för att hantera återställningsnycklar för FileVault-krypterade enheter.
+
+Observera att en användardefinierad enhet måste registreras för att FileVault ska fungera på den. Användaren måste godkänna hanteringsprofilen manuellt i systeminställningarna för att registreringen ska betraktas som användargodkänd. 
 
 FileVault är ett program för kryptering av hela diskar som ingår i macOS. Du kan använda Intune för att konfigurera FileVault på enheter som kör **MacOS 10.13 eller senare**.
 
@@ -72,14 +74,7 @@ Mer information om FileVault-inställningen som du kan hantera med Intune finns 
 
 7. Konfigurera de återstående [FileVault](endpoint-protection-macos.md#filevault)inställningarna efter dina affärsbehov och välj **OK**.
 
-   > [!IMPORTANT]
-   > Det finns ett känt problem när inställningen **Inaktivera fråga vid utloggning** är inställd på *Aktivera*. När inställningen är inställd till *Aktivera* måste inställningen för **Antal gånger som ignorering tillåts** anges till ett värde och får inte anges som *Ej konfigurerad*. Om inställningen är inställd till *Inte konfigurerad*, misslyckas profilen på enheten. I det här scenariot rapporterar enheten att det är en **sammanfattning av profiltillstånd** som **fel** utan ytterligare information.
-   >
-   > När **Inaktivera prompt vid utloggning** är inställt på *Inte konfigurerad*, kan **Antal gånger som ignorering tillåts** vara *Inte konfigurerad* eller ha ett värde.
-   >
-   > Problemet kommer att åtgärdas i en kommande uppdatering.
-
-8. Slutför konfigurationen av ytterligare inställningar och spara sedan profilen.  
+  8. Slutför konfigurationen av ytterligare inställningar och spara sedan profilen.  
 
 ### <a name="manage-filevault"></a>Hantera FileVault
 

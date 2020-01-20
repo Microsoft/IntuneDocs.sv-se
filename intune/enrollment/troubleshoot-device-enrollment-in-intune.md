@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 328a578f4d2ada41bed17839f1f85b3b9add80fa
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547798"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885949"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -56,7 +56,7 @@ Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar
 Dessa problem kan uppstå på alla enhetsplattformar.
 
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
-**Problem:** En användare råkar ut för ett fel under registreringen (t.ex. **Företagsportalen är inte tillgänglig för tillfället**) och DMPdownloader.log i Configuration Manager innehåller felet **DeviceCapReached**.
+**Problem:** En användare drabbas av ett fel under registreringen (t.ex. att **företagsportalen inte är tillgänglig för tillfället**).
 
 **Lösning:**
 
@@ -113,23 +113,6 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
     4. Aktivera DirSync igen och kontrollera om användaren nu är korrekt synkroniserad.
 
-3. I ett scenario där du använder Configuration Manager med Intune ska du kontrollera att användaren har ett giltigt molnanvändar-ID:
-
-    1. Öppna SQL Management Studio.
-
-    2. Anslut till rätt DB.
-
-    3. Öppna databasmappen och leta upp och öppna mappen **CM_DBName** där DBName är namnet på kunddatabasen.
-
-    4. Klicka på **Ny fråga** överst och kör följande frågor:
-
-        - Om du vill visa alla användare: `select * from [CM_ DBName].[dbo].[User_DISC]`
-
-        - Om du vill se specifika användare använder du följande fråga där %testuser1% är en platshållare för username@domain.com för den användare som du vill söka efter:   `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
-
-        När du har skrivit frågan väljer du **!Execute**.
-        När resultatet har returnerats, leta efter molnanvändar-ID:et.  Om det finns något ID är inte användaren licensierad för att använda Intune.
-
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Det går inte att skapa en princip eller registrera enheter om företagets namn innehåller specialtecken
 **Problem:** Du kan inte skapa en princip eller registrera enheter.
 
@@ -144,7 +127,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 - har flera toppnivådomäner för användarnas UPN-suffix i sin organisation (till exempel @contoso.com eller @fabrikam.com).
 
 
-En [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) fungerar tillsammans med växeln <strong>SupportMultipleDomain</strong> och gör att AD FS-servern stöder det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [det här blogginlägget](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+En [sammanslagning för AD FS 2.0](https://support.microsoft.com/kb/2607496) fungerar tillsammans med växeln <strong>SupportMultipleDomain</strong> och gör att AD FS-servern stöder det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [det här blogginlägget](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Android-problem
@@ -332,23 +315,6 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 5. Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när Configuration Manager används med Intune
-**Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen för Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
-
-- Microsoft Intune Connector på din plats för konfigurationshanteraren kommunicerar inte med Intune-tjänsten.
-- Antingen bearbetar inte Data Discovery Manager (ddm)-komponenten eller State Manager (statmgr)-komponenten meddelanden från Intune-tjänsten.
-- Du kanske har hämtat MDM-certifikatet från ett konto och använt det för ett annat.
-
-
-**Lösning:** Granska följande loggfiler efter möjliga fel:
-
-- dmpdownloader.log
-- ddm.log
-- statmgr.log
-
-Exempel läggs snart till om vad du ska leta efter i loggfilerna.
-
-
 ### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Användarens iOS-enhet har fastnat på en registreringsskärm i mer än 10 minuter
 
 **Problem**: En registrerande enhet kan fastna på någon av följande två skärmar:
@@ -418,36 +384,6 @@ När du har rensat de blockerade enheterna kan du be användarna att starta om r
     2. Välj **Enheter** > **Alla enheter**.  
     3. Hitta enheten med registreringsproblemet. Sök efter enhetsnamn eller MAC/HW-adress för att begränsa resultaten.
     4. Välj enheten > **Ta bort**. Ta bort alla andra poster som hör till enheten.  
-
-## <a name="issues-when-using-configuration-manager-with-intune"></a>Problem när du använder Configuration Manager med Intune
-
-### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner
-
-**Problem:** När du har registrerat en mobil enhet i Configuration Manager så försvinner den från samlingen med mobila enheter. Men enheten har fortfarande Hanteringsprofilen och visas i CSS Gateway.
-
-**Lösning:** Det här problemet kan uppstå när:
-
-- Du har en egen process som tar bort icke-domänanslutna enheter eller
-- användaren har dragit tillbaka enheten från prenumerationen.
-Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
-
-#### <a name="check-how-device-was-removed"></a>Kontrollera hur enheten har tagits bort
-
-1. I administrationskonsolen i Configuration Manager väljer du **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor**.
-
-2. Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**.
-
-3. Välj lämplig tid/datum eller de senaste 12 timmarna.
-
-4. Hitta enheten i fråga och granska hur enheten har tagits bort. Exemplet nedan visar att kontot SCCMInstall tog bort enheten via ett okänt program.
-
-    ![Skärmbild av enhetsborttagningsdiagnostik](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
-
-5. Kontrollera att Configuration Manager inte har någon schemalagd uppgift, något skript eller någon annan process som automatiskt kan rensa icke-domän, mobila, eller relaterade enheter.
-
-### <a name="other-ios-enrollment-errors"></a>Övriga iOS-registreringsfel
-
-En lista med iOS-registreringsfel finns i vår dokumentation i [Felsökning av iOS-enhet med registreringsproblem i Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Datorproblem
 

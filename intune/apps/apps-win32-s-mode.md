@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b2a6019a0af33cd227d88444bb5ddda5bc22715
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: a3074b30921a4daba7469e670a17ad29ee1edc00
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75204909"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827810"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Aktivera Win32-appar på S-lägesenheter
 
@@ -45,7 +45,7 @@ Följande steg används för att tillåta att Win32-appar körs på en Windows 1
    - Du överför den signerade tilläggsprincipen till Intune genom att skapa en tilläggsprincip för Windows 10 S-läge (se nedan).
 3. Du tillåter Win32-appkataloger via Intune:
    - Du skapar katalogfiler (en för varje app) och signerar dem med hjälp av DGSS eller någon annan certifikatinfrastruktur.
-   - Du paketerar den signerade katalogen i filen *.intunewin* med hjälp av [Microsofts verktyg för konvertering av Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730). Mer information finns i [Win32-apphantering – Förbereda Win32-appinnehållet för uppladdning](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
+   - Du paketerar den signerade katalogen i filen *.intunewin* med hjälp av [Microsofts verktyg för konvertering av Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730). Det finns inga namngivningsbegränsningar när du skapar en katalogfil med hjälp av [verktyget för konvertering av Microsoft Win32-innehåll](https://go.microsoft.com/fwlink/?linkid=2065730). När du genererar *.intunewin*-filen från den angivna källmappen och installationsfilen, kan du, genom att ange alternativet -a cmdline, tillhandahålla en separat mapp som bara innehåller katalogfiler. Mer information finns i [Win32-apphantering – Förbereda Win32-appinnehållet för uppladdning](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
    - Intune använder den signerade appkatalogen för att installera Win32-appen på S-lägesenheten med hjälp av [Intune-hanteringstillägget](~/apps/intune-management-extension.md).
 
 > [!NOTE]

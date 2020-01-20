@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
-ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
+ms.openlocfilehash: 237eca2f8e00f00fda5fa3cf401be87de9602743
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303065"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956264"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 
@@ -54,7 +54,7 @@ Använd följande anvisningar för att skapa en ny grupp.
         >
         > Om din primära roll är enhetshantering, rekommenderar vi att du använder [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: De här grupperna är utformade för att styra åtkomst och dela Office 365-resurser. Du kan till exempel skapa en Office 365-grupp och dela en Outlook-inkorg eller kalender. Mer information finns i [Mer information om Office 365-grupper](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Office 365**: Tillhandahåller samarbetsmöjligheter genom att ge medlemmar åtkomst till en delad postlåda, kalender, filer, SharePoint-webbplats med mera. Med det här alternativet kan du också ge personer utanför organisationen åtkomst till gruppen. Mer information finns i [Mer information om Office 365-grupper](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Ange ett **gruppnamn** och en **gruppbeskrivning** för den nya gruppen. Var specifik och inkludera information som beskriver gruppen för andra personer.
 

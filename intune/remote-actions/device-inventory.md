@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819789"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756016"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -59,7 +59,7 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 
 |Information|Beskrivning|Plattform| 
 |--------------|----------------------|----|  
-|Namn|Namnet på enheten.|Windows, iOS|
+|Name|Namnet på enheten.|Windows, iOS|
 |Hanteringsnamn|Enhetsnamnet används endast i konsolen. Även om du ändrar det här namnet ändras inte namnet på enheten.|Windows, iOS|
 |UDID|Enhetens unika enhets-ID.|Windows, iOS|
 |ID för Intune-enhet|Ett GUID som unikt identifierar den här enheten.|Windows, iOS|
@@ -94,6 +94,9 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|Windows, iOS, Android|
 
 \* Inte tillgängligt i Android med Googles principhanterare, till exempel fullständigt hanterade och dedikerade enheter
+
+> [!Note]  
+> Telefonnumret har inte inventerats på Android Enterprise-dedikerade enheter eller fullständigt hanterade enheter.
 
 ## <a name="next-steps"></a>Nästa steg
 Se vad mer du kan göra för att [hantera dina enheter](device-management.md) med Intune.

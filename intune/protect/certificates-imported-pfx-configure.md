@@ -2,27 +2,27 @@
 title: Använda importerade PFX-certifikat i Microsoft Intune – Azure | Microsoft Docs
 description: Använd importerade PKCS-certifikat (Public Key Cryptography Standards) med Microsoft Intune, inklusive import av certifikat, konfiguration at certifikatmallen, installation av Intune-anslutningsappen för importerade PFX-certifikat, och skapa en profil för importerade PKCS-certifikat.
 keywords: ''
-author: ralms
+author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: lacranda
+ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d54c58523fdb44080b6c4210d639f9ad0ce476e2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801522"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886027"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -46,14 +46,17 @@ Om du vill använda importerade PKCS-certifikat med Intune behöver du följande
 
   Mer information om alla nätverksslutpunkter som anslutningsappen har åtkomst till finns i [Krav för Intune-nätverkskonfiguration och bandbredd](../fundamentals/network-bandwidth-use.md).
 
-- **Windows Server**:  
+- **Windows Server**:
+
   Du använder Windows Server som värd för PFX-certifikatanslutningsappen för Microsoft Intune.  Anslutningsappen används för att bearbeta begäranden för certifikat som importerats till Intune.
 
   Intune stöder installation av *Microsoft Intune Certificate Connector* på samma server som *PFX-certifikatanslutningsappen för Microsoft Intune*.
 
   För att stödja anslutningsappen måste servern köra .NET 4.6 Framework eller senare. Om .NET 4.6 Framework inte är installerad när du startar installationen av installeras det av anslutningsappens installation automatiskt.
 
-- **Visual Studio 2015 eller senare** (valfritt): Du använder Visual Studio för att bygga PowerShell-hjälpmodulen med cmdletar för import av PFX-certifikat till Microsoft Intune. Information om hur du hämtar PowerShell-hjälp-cmdletar finns i [PFXImport PowerShell Project på GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
+- **Visual Studio 2015 eller senare** (valfritt):
+
+  Du använder Visual Studio för att bygga PowerShell-hjälpmodulen med cmdletar för import av PFX-certifikat till Microsoft Intune. Information om hur du hämtar PowerShell-hjälp-cmdletar finns i [PFXImport PowerShell Project på GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## <a name="how-it-works"></a>Så här fungerar det
 
@@ -143,15 +146,14 @@ Du kan använda en modul för maskinvarusäkerhet (HSM) för att generera och la
 
 I följande process används PowerShell-cmdletarna som ett exempel på hur du importerar PFX-certifikaten. Du kan välja olika alternativ beroende på dina krav.
 
-Alternativen är:  
-- Avsett syfte (grupperar certifikat baserat på en tagg):  
+Alternativen är:
+
+- Avsett syfte (grupperar certifikat baserat på en tagg):
   - unassigned
   - smimeEncryption
   - smimeSigning
 
-- Utfyllnadsschema:  
-  - pkcs1
-  - oaepSha1
+- Utfyllnadsschema:
   - oaepSha256
   - oaepSha384
   - oaepSha512

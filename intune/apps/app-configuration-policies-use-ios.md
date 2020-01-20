@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c447c67e631365e831f033c2811c36d936f2e85
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: d5a3204721a0d40cfb5bf729ca17ef8e4ded1f0f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547986"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885774"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -182,7 +182,7 @@ DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med A
 
 1. Lägg till Intune-företagsportalen i Intune när så behövs genom att gå till **Intune** > **Appar** > **Alla appar** > **Lägg till**.
 2. Om du vill skapa en appkonfigurationsprincip för företagsportalsappen går du till **Appar** > **Appkonfigurationsprinciper**.
-3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du skapar en konfigurationsprincip för appar och anger XML-data finns i [Lägg till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md) eller, för hybrid MDM, [Tillämpa inställningar på iOS-appar med appkonfigurationsprinciper i Configuration Manager](https://docs.microsoft.com/configmgr/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du kan skapa en konfigurationsprincip för appar och ange XML-data finns i [Lägga till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>

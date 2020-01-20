@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e96f46dc0e79de3fc78739c246abdc0b9e52702
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: f368f5f15f71246a2899f2acb7a791d65df26c99
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205538"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857051"
 ---
 # <a name="intune-discovered-apps"></a>Intune-identifierade appar
 
@@ -67,6 +67,7 @@ Följande lista innehåller appens plattformstyp, de appar som övervakas för p
 > [!NOTE]
 > - Windows 10 Hybrid Azure AD-anslutna enheter som visas i apphanteringsarbetsbelastningen i konfigurationshanteraren samlar för närvarande inte in appinventering via Intune-hanteringstillägget enligt schemat ovan. För att undvika det här problemet bör arbetsbelastningen för apphantering i konfigurationshanteraren växlas till Intune för att installera IME på enheten (IME krävs för Win32-inventering och PowerShell-distribution). Observera att ändringar eller uppdateringar av det här beteendet presenteras i [under utveckling](../fundamentals/in-development.md) och/eller [vad som är nytt](../fundamentals/whats-new.md).
 > - Personligt ägda macOS-enheter som registrerats före november 2019 kan fortsätta att visa alla appar som är installerade på enheten tills enheterna har registrerats igen.
+> - Fullstständigt hanterade och dedikerade Android Enterprise visar inte identifierade appar.
 
 Antal appar som identifieras kanske inte matchar statusen för antalet installerade appar. Här är några möjliga orsaker till skillnaden:
 

@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b2ce91cea1fdef211a8e6a9dc1c19086f355385
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9cbdd99dfb7b42677048b4f214e7de537db0edda
+ms.sourcegitcommit: 5db0769274d788a1218dca3ad90d8649927becb4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585282"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75925829"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -95,7 +95,7 @@ Du kan kontrollera lyckad/misslyckad status för inställningarna i ditt paket i
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Massregistrering med Wi-Fi 
 
-Massregistrerade enheter kan inte använda användarriktade certifikat och Wi-Fi-distribution. Du måste använda [certifikat på enhetsnivå](../protect/certificates-configure.md) för att hantera dessa anslutningar. 
+Om du inte använder ett öppet nätverk måste du använda [certifikat på enhetsnivå](../protect/certificates-configure.md) för att kunna initiera anslutningar. Massregistrerade enheter kan inte använda användarriktade certifikat för nätverksåtkomst. 
 
 ### <a name="conditional-access"></a>Villkorlig åtkomst
 Villkorlig åtkomst är inte tillgänglig för Windows-enheter som registreras med massregistrering.

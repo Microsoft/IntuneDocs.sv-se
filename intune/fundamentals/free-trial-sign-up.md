@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 01/09/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1264f5113ded280ed9d5cb9b9d4ece8e0187fe7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 35dd017eaa2dd3cd6c17dc611aaa9d457b18aca2
+ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502883"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75839249"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad
 
@@ -100,7 +100,7 @@ Mer information om MDM-utfärdaren finns i [Ange utfärdare för hantering av mo
 Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmicrosoft.com** kan du ändra valet i administrationscentret för Microsoft 365. Du kan lägga till, verifiera och konfigurera ditt anpassade domännamn med följande steg.  
 
 > [!IMPORTANT]
-> Du kan inte byta namn på eller ta bort den *första* delen av domännamnet, **onmicrosoft.com**. Däremot kan du lägga till, verifiera eller ta bort *anpassade* domännamn som används med Intune så att din företagsidentitet alltid är tydlig. Mer information finns i avsnittet [Så här konfigurerar du ett eget domännamn](custom-domain-name-configure.md).
+> Du kan inte byta namn på eller ta bort den *initiala* **onmicrosoft.com**-delen av domännamnet. Däremot kan du lägga till, verifiera eller ta bort *anpassade* domännamn som används med Intune så att din företagsidentitet alltid är tydlig. Mer information finns i avsnittet [Så här konfigurerar du ett eget domännamn](custom-domain-name-configure.md).
 
 1. Gå till [administrationscentret för Microsoft 365](https://admin.microsoft.com) och logga in med ditt administratörskonto.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 479d88c09f48acbbfaedf1f4c69546b7f52dfbf1
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692196"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885796"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
@@ -93,7 +93,7 @@ Du kan verifiera appkonfigurationsprincipen med följande tre metoder:
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>iOS-konfiguration på ohanterade enheter
 
-Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på ohanterade enheter för konfiguration av hanterade appar.
+Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på ohanterade enheter för konfiguration av hanterade appar. Förutom stegen nedan så kan du få åtkomst till hanterade apploggar med hjälp av Microsoft Edge. Mer information finns i [Använda Microsoft Edge i iOS för att få åtkomst till loggar för hanterade appar](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Om den inte redan är installerad på enheten laddar du ned och installerar **Intune Managed Browser** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
 2. Starta **Intune Managed Browser** och välj **om** > **intune-hjälp** i navigeringsfältet.
@@ -162,7 +162,7 @@ Om du vill samla in loggar från en Android-enhet måste du eller slutanvändare
     
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API har stöd för appkonfiguration
 
-Du kan använda Graph API för att utföra de här appkonfigurationsuppgifterna. Mer information finns i [Graph API-referens för MAM-riktad konfiguration](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
+Du kan använda Graph API för att utföra de här appkonfigurationsuppgifterna. Mer information finns i [Graph API-referens för MAM-riktad konfiguration](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Mer information om Intune och Graph finns i [Arbeta med Intune i Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Felsökning
 

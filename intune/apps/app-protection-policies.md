@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 9b5f973e5ce169edcf6149b0588c905d8497cca2
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563714"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885751"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -51,7 +51,7 @@ När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer
 
     | Värde | Beskrivning |
     |--------------|------------------------------------------------|
-    | Namn | Namnet på den här appskyddsprincipen. |
+    | Name | Namnet på den här appskyddsprincipen. |
     | Beskrivning | [Valfritt] Beskrivningen av den här appskyddsprincipen. |
 
 
@@ -93,9 +93,6 @@ När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer
 
 9. Klicka på **Nästa** för att visa sidan **Tilldelningar**.<br>
    På sidan **Tilldelningar** kan du tilldela appskyddsprincipen till grupper av användare.
-   
-    >[!IMPORTANT]
-    > Om du använder Intune med Configuration Manager för att hantera enheter tillämpas principen endast på användarna direkt i den grupp du valt. Medlemmar i underordnade grupper som är kapslade i den grupp som du har valt påverkas inte.
 
 10. Klicka på **Nästa: Granska och skapa** för att granska de värden och inställningar som du angav för den här appskyddsprincipen.
 
@@ -186,7 +183,7 @@ Om du vill skapa de här principerna, så gå till **Appar** > **Appskyddsprinci
 För iOS-krävs ytterligare appkonfigurationsinställningar för att rikta in appinställningar (APP) till appar på Intune-registrerade enheter:
 
 - **IntuneMAMUPN** måste konfigureras för alla MDM-hanterade program. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** måste konfigureras för alla tredjeparts och verksamhetsspecifika MDM-hanterade program. **IntuneMAMDeviceID** ska konfigureras till enhetens ID-token. Till exempel `key=IntuneMAMDeviceID, value={{deviceID}}`. Mer information finns i [Lägg till appkonfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md).
+- **IntuneMAMDeviceID** måste konfigureras för alla tredjeparts och verksamhetsspecifika MDM-hanterade program. **IntuneMAMDeviceID** ska konfigureras till enhetens ID-token. Exempelvis `key=IntuneMAMDeviceID, value={{deviceID}}`. Mer information finns i [Lägg till appkonfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md).
 - Om bara **IntuneMAMDeviceID** är konfigurerat kan Intune App betrakta enheten som ohanterad.
 
 > [!NOTE]

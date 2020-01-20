@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547548"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885786"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -101,19 +101,11 @@ Tänk på att notera eventuella projekt eller andra planer som finns som kan på
 | **SharePoint** | Lokalt SharePoint | Inga planer på att övergå till SharePoint online |  
 | **Nuvarande MDM** | Exchange ActiveSync |  |
 | **Certifikatlösning** | Microsoft Server 2012 R2, AD Certificate Services | Använd endast PKI för webbplatsservrar |
-| **Systemhantering** | Configuration Manager CB 1606 | Vill undersöka Intune-hybridlösning |
+| **Systemhantering** | Aktuell gren för Configuration Manager | Skulle vilja undersöka en samhanteringslösning |
 | **VPN-lösning** | Cisco AnyConnect |  |
 
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att utveckla din utformningsplan för Intune.
-
-## <a name="choose-an-intune-deployment-option"></a>Välj ett alternativ för Intune-distribution
-
-Intune erbjuder två distributionsalternativ: fristående och hybrid. Fristående avser den Intune-tjänst som körs i molnet. Hybrid avser integreringen av Intune med Configuration Manager. Den här guiden är främst avsedd att användas med det fristående alternativet. [Bestäm vilket alternativ som passar dina affärsbehov](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
-
-> [!Important]
->Registrering av nya hybrid-MDM-kunder är nu inaktuell. Mer information finns i blogginlägget [Flytt från hybridhantering av mobilenheter till Intune i Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
-
 
 ## <a name="intune-tenant-location"></a>Plats för Intune-klient
 
