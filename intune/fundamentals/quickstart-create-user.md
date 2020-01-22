@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75a875fc3ff11eb1e3befad425c16a710544f781
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fdd97e69c97df5a266e147381d94b3d4419bab34
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509875"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036578"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Snabbstart: Skapa en användare i Intune och tilldela dem en licens
 
@@ -50,11 +50,11 @@ Användare måste ha ett användarkonto för att registrera sig för Intune-enhe
 
 ## <a name="assign-a-license-to-the-user"></a>Tilldela användaren en licens
 
-När du har skapat en användare måste du använda [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) för att tilldela en Intune-licens till dem. Om du inte tilldelar användaren en licens kommer den inte att kunna registrera sin enhet i Intune. 
+När du har skapat en användare måste du använda [Administrationscenter för Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) för att tilldela en Intune-licens till dem. Om du inte tilldelar användaren en licens kommer den inte att kunna registrera sin enhet i Intune. 
 
 Så här tilldelar du en Intune-licens till en användare:
 
-1. Logga in på [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) med samma autentiseringsuppgifter du använde för att logga in på Intune.
+1. Logga in på [Administrationscenter för Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) med samma autentiseringsuppgifter du använde för att logga in på Intune.
 2. Välj **Användare** > **Aktiva användare** > och välj den användare som du just skapade.
 3. Välj sedan **Redigera** bredvid **Produktlicenser**.
 4. Välj en plats för användaren under **Plats**.
@@ -68,7 +68,7 @@ Den nya aktiva Intune-användaren visas nu som en användare med en **Intune**-l
 
 ## <a name="clean-up-resources"></a>Rensa resurser
 
-Om du inte längre behöver den här användaren kan du ta bort användaren genom att gå till [Administrationscenter för Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) och välja **Användare** > **Aktiva användare** > *välja användaren i listan* > **Ta bort användare** > **Ta bort användare** > **Bekräfta ändringar** > **Stäng**.
+Om du inte längre behöver den här användaren kan du ta bort användaren genom att gå till [Administrationscenter för Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) och välja **Användare** > **Aktiva användare** > *välja användaren i listan* > **Ta bort användare** > **Ta bort användare** > **Bekräfta ändringar** > **Stäng**.
 
 ## <a name="next-steps"></a>Nästa steg
 

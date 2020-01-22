@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 1bad86e561c8695d58296c8f473815a203ef210a
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886027"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258485"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -134,7 +134,7 @@ PowerShell-modulen tillhandahåller metoder för att skapa en nyckel med Windows
    > [!TIP]
    > Providern du använder måste väljas igen när du importerar PFX-certifikat. Du kan använda  **Microsoft-programvaruprovidern för nyckellagring** men den stöds för att använda en annan provider. Nyckelnamnet anges också som ett exempel och du kan välja ett annat nyckelnamn.
 
-   Om du planerar att importera certifikatet kan du exportera den här nyckeln till en fil med följande kommando: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path to write to>"`
+   Om du planerar att importera certifikatet kan du exportera den här nyckeln till en fil med följande kommando: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
    Den privata nyckeln måste importeras på servern som är värd för PFX-certifikatanslutningsappen för Microsoft Intune så att importerade PFX-certifikat kan bearbetas korrekt.
 
