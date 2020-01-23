@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f1563c092d8dd4c34e4a18caea56910267eb623
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 3c340ffaacad303c4ff395c84d92e3907e42a521
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956325"
+ms.locfileid: "76036643"
 ---
 # <a name="app-protection-policies-overview"></a>Översikt över principer för appskydd
 
@@ -184,7 +184,7 @@ Det finns ytterligare krav som ställs för användning av Skype för företag. 
 
 ## <a name="app-protection-global-policy"></a>Global princip för appskydd
 
-Om en OneDrive-administratör går till **admin.office.com** och väljer **Enhetsåtkomst** kan de ange kontroller för **hantering av mobilprogram** för OneDrive- och SharePoint-klientappar. 
+Om en OneDrive-administratör går till **admin.onedrive.com** och väljer **Enhetsåtkomst** kan de ange kontroller för **hantering av mobilprogram** för OneDrive- och SharePoint-klientappar. 
 
 Inställningarna, som nås via OneDrive Admin-konsolen, konfigurerar en särskild Intune-appskyddsprincip som kallas **den Globala** principen. Den globala principen gäller för alla användare i din klient och kan inte styra riktad principtillämpning. 
 

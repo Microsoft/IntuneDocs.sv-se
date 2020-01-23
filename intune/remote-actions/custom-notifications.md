@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907295"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036607"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
@@ -89,13 +89,13 @@ Intune spårar inte de anpassade meddelanden som du skickar, och enheterna logga
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Skicka ett anpassat meddelande till en enskild enhet  
 
-1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå sedan till **Enheter** > **Alla enheter**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå sedan till **Enheter** > **Alla enheter**.
 
-2. Välj en enhet som du vill skicka ett meddelande till.  
+2. Öppna *översiktssidan* för den hanterade enhet som du vill skicka en avisering till genom att dubbelklicka på namnet på enheten.
 
-3. På enhetssidan **Översikt** väljer du alternativet **…** (ellips) högst upp till höger på sidan.  
+3. Öppna fönstret **Skicka anpassad notis** genom att välja enhetsåtgärden **Skicka anpassad notis** på *översiktssidan* för enheten. Om det här alternativet inte är tillgängligt väljer du alternativet **...** (ellipser) längst upp till höger på sidan och väljer sedan **Skicka anpassad notis**.
 
-4. Välj **Skicka anpassad notis** för att öppna fönstret *Skicka anpassad notis* där du anger följande meddelandeinformation:  
+4. Ange följande meddelandeinformation i fönstret **Skicka anpassad notis**:  
 
    - **Rubrik** – Ange en rubrik för meddelandet. Rubriken får innehålla högst 50 tecken.  
    - **Brödtext** – Ange meddelandet. Meddelanden får innehålla högst 500 tecken.  

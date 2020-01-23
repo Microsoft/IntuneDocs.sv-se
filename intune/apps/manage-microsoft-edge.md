@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: e64741a92804ec4149b654480166720ff3092e35
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548013"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258505"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -205,7 +205,7 @@ Du kan konfigurera upplevelsen på sidan Ny flik i Microsoft Edge Mobile så att
 
 |    Tangent    |    Värde    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    'com.microsoft.intune.SohwIndustryNews'    |    **Sant** kommer att visa bransch nyheter på sidan Ny flik i Microsoft Edge Mobile.<p>**Falskt** (standard) döljer branschnyheter från sidan Ny flik.    |
+|    com.microsoft.intune.ShowIndustryNews    |    **Sant** visar branschnyheter på sidan Ny flik i Microsoft Edge Mobile.<p>**Falskt** (standard) döljer branschnyheter från sidan Ny flik.    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurera hanterade bokmärken för Microsoft Edge
 
@@ -217,6 +217,7 @@ Här följer lite information:
 - De här bokmärkena kan inte tas bort eller ändras av användare.
 - De här bokmärkena visas överst i listan. Alla bokmärken som användare skapar visas under de här bokmärkena.
 - Om du har aktiverat omdirigering av Application Proxy kan du lägga till Application Proxy-webbappar med antingen deras interna eller externa URL-adress.
+- Lägg till prefixet **http://** eller **https://** till alla URL:er när du lägger till dem i listan.
 
 Använd följande nyckel/värde-par för att konfigurera hanterade bokmärken:
 
@@ -243,7 +244,7 @@ Använd nyckel/värde-paren nedan för att konfigurera en lista över tillåtna 
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>URL-format för listan över tillåtna och blockerade webbplatser 
 Du kan använda olika URL-format för att skapa dina webbplatslistor med tillåtna/blockerade. De här tillåtna mönstren beskrivs i tabellen nedan. Lite information innan du sätter igång: 
-- Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
+- Lägg till prefixet **http://** eller **https://** till alla URL:er när du lägger till dem i listan.
 - Du kan använda jokertecknet (\*) enligt reglerna i följande lista med tillåtna mönster.
 - Ett jokertecken kan endast motsvara hela värdnamnet (avgränsat med punkter) eller hela delar av sökvägen (avgränsade med snedstreck). `http://*contoso.com` och  **stöds till exempel inte**.
 - Du kan ange portnummer i adressen. Om du inte anger ett portnummer, används följande värden:

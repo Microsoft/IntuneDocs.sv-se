@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc618f2502647ba33a16cff4305b9f4671e05996
-ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
+ms.openlocfilehash: d87a4b5d46a5f0d40cebe3dbcaff211ff508d667
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74558193"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125318"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuera Azure AD-anslutna hybridenheter med hjälp av Intune och Windows Autopilot
 Du kan använda Intune och Windows Autopilot för att konfigurera Azure Active Directory-anslutna hybridenheter. Du gör det genom att följa stegen i den här artikeln.
@@ -209,17 +209,30 @@ Det tar ungefär 15 minuter innan enhetsprofilens status ändras från *Inte til
 ## <a name="create-and-assign-a-domain-join-profile"></a>Skapa och tilldela en profil för domänanslutning
 
 1. I administrationscentret för [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
-1. Ange följande egenskaper:
+2. Ange följande egenskaper:
    - **Namn**: Ange ett beskrivande namn på den nya profilen.
    - **Beskrivning**: Ange en beskrivning av profilen.
    - **Plattform**: Välj **Windows 10 och senare**.
    - **Profiltyp**: Välj **Domänanslutning (förhandsversion)** .
-1. Välj **Inställningar** och ange sedan **Datornamnprefix**, **Domännamn** och (valfritt) **Organisationsenhet** i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+3. Välj **Inställningar** och ange sedan **datornamnprefix**, **domännamn**.
+4. (Valfritt) Ange en **organisationsenhet** (OU) i [DN-format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Alternativen är:
+   - Ange en organisationsenhet där du har delegerat kontrollen till Windows 2016-enheten som kör Intune Connector.
+   - Ange en organisationsenhet där du har delegerat kontrollen till rotdatorerna i din lokala Active Directory.
+   - Om du lämnar detta tomt skapas datorobjektet i Active Directory-standardcontainern (CN=Computers om du inte [ändrade det](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
+   
+   Här följer några giltiga exempel:
+   - OU=Level 1,OU=Level2,DC=contoso,DC=com
+   - OU=Mine,DC=contoso,DC=com
+   
+   Här följer några exempel som inte är giltiga:
+   - CN=Computers,DC=contoso,DC=com (du kan inte ange en container; i stället lämnar du värdet tomt om du vill använda standardvärdet för domänen)
+   - OU=Mine (du måste ange domänen via attributen för DC=)
+     
    > [!NOTE]
    > Använd inte citattecken runt värdet i **Organisationsenhet**.
-1. Välj **OK** > **Skapa**.  
+5. Välj **OK** > **Skapa**.  
     Profilen skapas och visas i listan.
-1. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](../configuration/device-profile-assign.md#assign-a-device-profile) och tilldelar profilen till samma grupp som används i det här steget [Skapa en enhetsgrupp](windows-autopilot-hybrid.md#create-a-device-group)
+6. Om du vill tilldela profilen följer du anvisningarna under [Tilldela en enhetsprofil](../configuration/device-profile-assign.md#assign-a-device-profile) och tilldelar profilen till samma grupp som används i det här steget [Skapa en enhetsgrupp](windows-autopilot-hybrid.md#create-a-device-group)
    - Distribuera flera profiler för domänanslutning
    
      a. Skapa en dynamisk grupp som innehåller alla dina Autopilot-enheter med en specifik Autopilot-distributionsprofil, ange (device.enrollmentProfileName –dvs. ”Autopilot-profilnamn”). 

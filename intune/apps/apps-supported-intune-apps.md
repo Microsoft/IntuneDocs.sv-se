@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67ff4f0cbe11c24c03b504968735e0a68d54f12d
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: c199964409a91aa6f5b75ae067968e37c1b1a189
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692166"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125351"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Skyddade appar i Microsoft Intune  
 
@@ -45,6 +45,7 @@ Följande tabeller innehåller information om partners som stöds och Microsoft-
 
 | Apprubrik | Appbeskrivning och information | App Store-länk för plattformar som stöds |
 |-------------------------------------------------|-------------------------|---------------------------------------------|
+| **Field Service Mobile**<p><img alt="Microsoft app - Field Service Mobile icon" src="./media/apps-supported-intune-apps/icon-m-field-service-mobile.png" width="100"> | Dynamics 365 för Field Service Mobile är det plattformsoberoende Field Service Mobile-programmet för flera enheter som är specifikt framtaget för att uppfylla fältservicearbetarnas behov. Robusta offline-funktioner gör att fältservicearbetare kan komma åt och interagera med de data som de behöver när de arbetar på platser utan Internetanslutning. Fältservicearbetare kan uppdatera kontoret om arbete som utförs i fältet genom att regelbundet synkronisera data till servern så att rätt åtgärder kan vidtas eller initieras vid behov. Mobilprogrammet är helt anpassningsbart och utökningsbart, vilket gör det möjligt för organisationer att anpassa programmet till det egna varumärket, definiera vilka datafält som fältservicearbetare kan komma åt och mycket mer. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile), [Länk till App Store (iOS)](https://apps.apple.com/us/app/field-service-mobile/id1414669075) |
 | **Visningsprogram för Microsoft Azure Information Protection**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Samarbeta säkert tillsammans med andra med visningsprogrammet AIP. Visa skyddade filer (rättighetsskyddade meddelanden, PDF-filer, bilder, textfiler) som någon har delat med dig. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer), [Länk till App Store (iOS)](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) |
 | **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings är ett mötes- och schemaläggningsprogram som hjälper dig att hålla koll på dina bokningar, din personal och dina kunder. Du kommer aldrig att missa en avtalad tid och får färre missade möten.<p>Med Bookings-programmet kan du:<br><ul><li>Visa och hantera din kalender</li><li>Skapa bokningar eller göra ändringar i befintliga i farten</li><li>Se tillgängligheten för din personal i realtid</li><li>Snabbt och enkelt svara kunder</li><li>Snabbt få en vägbeskrivning till dit din nästa avtalade tid är</li><li>Hantera din kundlista</li></ul> | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
 | **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Det är snabbt, enkelt och roligt att hålla koll på jobbet och livet med din personliga assistent Cortana. Hämta dina smarta digitala assistent till din telefon för att hålla reda på viktiga saker var du än är och på alla dina enheter. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[Länk till App Store (iOS)](https://apps.apple.com/us/app/cortana/id1054501703)

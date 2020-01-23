@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4839340ba1f3bad6f28a1120d882d0f600b1d44
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 42f1c8fae156eaf08203f4a88cad8433749940ac
+ms.sourcegitcommit: b6fe084b0419b3c9d456a8b0439b00f8c784db23
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563568"
+ms.lasthandoff: 01/21/2020
+ms.locfileid: "76294803"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Lägga till Microsoft Edge för Windows 10 till Microsoft Intune
 
 Innan du kan distribuera, konfigurera, övervaka eller skydda appar måste du lägga till dem till Intune. En av de tillgängliga [apptyperna](~/apps/apps-add.md#app-types-in-microsoft-intune) är Microsoft Edge *version 77 och senare*. Genom att välja den här apptypen i Intune kan du tilldela och installera Microsoft Edge *version 77 och senare* till enheter som du hanterar och som kör Windows 10.
 
 > [!IMPORTANT]
-> Den här apptypen är i **offentlig förhandsversion** och erbjuder utvecklar- och betakanaler för Windows 10. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Intune identifierar alla befintliga Microsoft Edge-installationer. Om installationen görs i användarkontexten skrivs den över av en systeminstallation. Om installationen görs i systemkontexten rapporteras installationen som lyckad. Dessutom är automatiska uppdateringar av Microsoft Edge **På** som standard, och Microsoft Edge kan inte avinstalleras.
+> Den här typen av app är tillgänglig som en **allmänt tillgänglig förhandsversion** och erbjuder en stabil kanal, betakanal och utvecklarkanal för Windows 10. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Intune identifierar alla befintliga Microsoft Edge-installationer. Om installationen görs i användarkontexten skrivs den över av en systeminstallation. Om installationen görs i systemkontexten rapporteras installationen som lyckad. Dessutom är automatiska uppdateringar av Microsoft Edge **På** som standard, och Microsoft Edge kan inte avinstalleras.
 
 > [!NOTE]
 > Microsoft Edge *version 77 och senare* är även tillgängligt för macOS.
@@ -38,7 +38,7 @@ Innan du kan distribuera, konfigurera, övervaka eller skydda appar måste du l�
 
 ## <a name="prerequisites"></a>Krav
 - Windows 10 RS2 och senare krävs.
-- Eventuella förinstallerade versioner av Microsoft Edge *version 77 och senare* för **utvecklarkanaler** och **betakanaler** i användarkontext skrivs över med Edge installerat i systemkontext.
+- En Edge-installation i systemkontexten skriver över förinstallerade versioner av Microsoft Edge *version 77 och senare* för alla kanaler som gjorts i användarkontexten.
 
 ## <a name="configure-the-app-in-intune"></a>Konfigurera appen i Intune
 Du kan lägga till en Microsoft Edge version 77 och senare till Intune med hjälp av följande steg:
@@ -68,7 +68,8 @@ I det här steget anger du information om den här appdistributionen. Den här i
 I det här steget konfigurerar du installationsalternativ för appen.
 
 1. Välj **Appinställningar** i fönstret **Lägg till app**.
-2. Avgör vilken Edge-kanal du kommer att distribuera appen från genom att gå till fönstret **Appinställningar** och välja **Beta** eller **Dev** i listan **Kanal**.
+2. Bestäm vilken Edge-kanal du ska distribuera appen från genom att gå till fönstret **Appinställningar** och välja **Stabil**, **Beta** eller **Dev** i listan **Kanal**.
+    - Kanalen **Stabil** är den rekommenderade kanalen för bredare distributioner i företagsmiljöer. Den uppdateras var sjätte vecka, och varje utgåva innehåller förbättringar från betakanalen.
     - Kanalen **Beta** är den mest stabila Microsoft Edge-förhandsupplevelsen och det bästa valet för en fullständig pilotlansering i din organisation. Större uppdateringar sker var sjätte vecka, och i varje ny version ingår lärdomar och förbättringar från Dev-kanalen.
     - **Dev**-kanalen är redo för företagsfeedback för Windows, Windows Server och macOS. Den uppdateras varje vecka och innehåller de senaste förbättringarna och korrigeringarna.
 
