@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 039ec17b1a56a7339f2159d7af6ad1bd9280bf63
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: 6c1b6417489d1443596113a18476b9cbc8f3832e
+ms.sourcegitcommit: 8cc3eca2bce847b0c2b40d8531698e21df848878
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855518"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951461"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrera din iOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -44,11 +44,7 @@ Om du använder en egen iOS-enhet i stället för en enhet som tillhandahålls a
 
 1. Sätt igång din iOS-enhet.
 2. När du har valt **språk** ansluter du enheten till Wi-Fi.
-3. På skärmen för att **konfigurera iOS-enhet** väljer du om du vill:
-   - **Set Up as New device** (Konfigurera som ny enhet)
-   - **Restore from iCloud Backup** (Återställ från iCloud-säkerhetskopia)
-   - **Restore from iTunes Backup** (Återställ från iTunes-säkerhetskopia)
-
+3. På skärmen **Konfigurera iOS-enhet** väljer du **Konfigurera som ny enhet**.  
 4. När du har anslutit till Wi-Fi visas skärmen **Konfiguration**. Skärmen meddelar att **[ditt företag] kommer att konfigurera din enhet automatiskt**.
 
    **Med konfigurationen kan [Ditt företag] att hantera enheten trådlöst. En administratör kan hjälpa dig att konfigurera e-post och nätverkskonton, installera och konfigurera appar, samt fjärrhantera inställningar. En administratör kan inaktivera funktioner, installera och ta bort appar, övervaka och begränsa Internet-trafiken, samt fjärradera den här enheten.**

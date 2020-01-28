@@ -1,12 +1,12 @@
 ---
-title: Skapa en enhets profil för macOS kernel Extensions med Microsoft Intune-Azure | Microsoft Docs
+title: Skapa enhetsprofil för macOS-kerneltillägg med Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Lägg till eller skapa en macOS-enhets profil och konfigurera sedan kernel-tillägg så att användare åsidosätter, Lägg till Team-ID och ett paket-och grupp-ID i Microsoft Intune.
+description: Lägg till eller skapa en macOS-enhetsprofil och konfigurera sedan kerneltillägg för att tillåta användaråsidosättning samt lägg till teamidentifierare och ett paket och teamidentifierare i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,54 +16,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bce6b99723c5eada8f8f29e875a1df1daa02751a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1075054f3812e8c40f38e705a440c46ba09fdd0e
+ms.sourcegitcommit: 11cbd2a9d90dea20f6dc1f54f0a6acbeec3a71d6
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059359"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76146777"
 ---
-# <a name="add-macos-kernel-extensions-in-intune"></a>Lägga till macOS kernel-tillägg i Intune
+# <a name="add-macos-kernel-extensions-in-intune"></a>Lägg till macOS kernel-tillägg i Intune
 
-På macOS-enheter kan du lägga till funktioner på kernel-nivå. Dessa funktioner kommer åt delar av operativ systemet som normala program inte har åtkomst till. Din organisation kan ha särskilda behov eller krav som inte är tillgängliga i en app, en enhets funktion och så vidare. 
+På macOS-enheter kan du lägga till funktioner på kernelnivå. Dessa funktioner kommer åt delar av operativsystemet som vanliga program inte har åtkomst till. Din organisation kan ha särskilda behov eller krav som inte är tillgängliga i en app, en enhetsfunktion och så vidare. 
 
-Om du vill lägga till kernel-tillägg som alltid får läsas in på dina enheter lägger du till "kernel-tillägg" (KEXT) i Microsoft Intune och distribuerar sedan tilläggen till dina enheter.
+Om du vill lägga till kerneltillägg som alltid får läsas in på dina enheter lägger du till "kernel extensions" (KEXT) i Microsoft Intune och distribuerar sedan tilläggen till dina enheter.
 
-Till exempel har du ett antivirus program som söker igenom enheten efter skadligt innehåll. Du kan lägga till det här Antivirus programmets kernel-tillägg som ett tillåtet kernel-tillägg i Intune. Tilldela sedan "tillägget till dina macOS-enheter.
+Till exempel har du ett antivirusprogram som söker igenom enheten efter skadligt innehåll. Du kan lägga till det här antivirusprogrammets kerneltillägg som ett tillåtet kerneltillägg i Intune. Sedan "assign" (tilldelar) du tillägget till dina macOS-enheter.
 
-Med den här funktionen kan administratörer tillåta att användare åsidosätter kernel-tillägg, lägger till Team identifierare och lägger till vissa kernel-tillägg i Intune.
+Med den här funktionen kan administratörer tillåta att användare åsidosätter kerneltillägg, lägger till teamidentifierare och lägger till specifika kerneltillägg i Intune.
 
 Den här funktionen gäller för:
 
 - macOS 10.13.2 och senare
 
-Om du vill använda den här funktionen måste enheterna vara:
+För användning av den här funktionen måste enheterna vara:
 
-- Registreras i Intune med Apples Programmet för enhetsregistrering (DEP). [Registrera MacOS-enheter automatiskt](../enrollment/device-enrollment-program-enroll-macos.md) med mer information.
+- Registrerade i Intune med hjälp av Apple-programmet för enhetsregistrering (DEP). Mer information finns i [Registrera macOS-enheter automatiskt](../enrollment/device-enrollment-program-enroll-macos.md).
 
   ELLER
 
-- Registreras i Intune med "User-godkänd registrering" (Apples). [Förbered för ändringar i kernel-tillägg i MacOS med hög Sierra](https://support.apple.com/en-us/HT208019) (öppnar Apples webbplats) har mer information.
+- Registrerade i Intune med "user approved enrollment" (användargodkänd registrering, term från Apple). Mer information finns i [Förbered för ändringar av kerneltillägg i macOS High Sierra](https://support.apple.com/en-us/HT208019) (öppnar Apple-webbplatsen).
 
 Intune använder ”konfigurationsprofiler” till att skapa och anpassa inställningarna efter din organisations behov. När du har lagt till dessa funktioner i en profil, kan du skicka eller distribuera profilen till macOS-enheter i din organisation.
 
-Den här artikeln visar hur du skapar en enhets konfigurations profil med hjälp av kernel-tillägg i Intune.
+Den här artikeln beskriver hur du skapar en enhetskonfigurationsprofil med hjälp av kerneltillägg i Intune.
 
 > [!TIP]
-> Mer information om kernel-tillägg finns i [Översikt över kernel-tillägg](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (öppnar Apples webbplats).
+> Mer information om kerneltillägg finns i [översikten av kerneltillägg](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (öppnar Apple-webbplatsen).
 
 ## <a name="what-you-need-to-know"></a>Vad du behöver veta
 
-- Osignerade gamla kernel-tillägg kan läggas till.
-- Se till att ange rätt team identifierare och paket-ID för kernel-tillägget. Intune validerar inte de värden du anger. Om du anger fel information fungerar inte tillägget på enheten.
+- Osignerade äldre kerneltillägg kan läggas till.
+- Se till att ange rätt teamidentifierare och paket-ID för kerneltillägget. Intune validerar inte de värden som du anger. Om du anger fel information fungerar inte tillägget på enheten. En teamidentifierare består av exakt 10 alfanumeriska tecken. 
 
 > [!NOTE]
-> Apple har publicerat information om signering och notarization för all program vara. I macOS 10.14.5 och senare behöver kernel-tillägg som distribueras via Intune inte uppfylla Apples notarization-princip.
+> Apple har publicerat information om signering och notarisering för all programvara. I macOS 10.14.5 och senare behöver kerneltillägg som distribueras via Intune inte uppfylla Apples notariseringsprincip.
 >
-> Information om den här notarization-principen och eventuella uppdateringar och ändringar finns i följande resurser:
+> Information om den här notariseringsprincipen och eventuella uppdateringar eller ändringar finns i följande resurser:
 >
-> - [Notarizing din app före distributionen](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (öppnar Apples webbplats) 
-> - [Förbered för ändringar i kernel-tillägg i MacOS med hög Sierra](https://support.apple.com/en-us/HT208019) (öppnar Apples webbplats)
+> - [Notarisera din app före distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (öppnar Apple-webbplatsen) 
+> - [Förbered för ändringar av kerneltillägg i macOS High Sierra](https://support.apple.com/en-us/HT208019) (öppnar Apple-webbplatsen)
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
@@ -72,9 +72,9 @@ Den här artikeln visar hur du skapar en enhets konfigurations profil med hjälp
 3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen.
-    - **Beskrivning:** Ange en beskrivning för profilen. Denna inställning är valfri, men rekommenderas.
+    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj **macOS**
-    - **Profil typ**: Välj **tillägg**.
+    - **Profiltyp**: Välj **Tillägg**.
     - **Inställningar**: Ange vilka inställningar som du vill konfigurera. En lista med alla inställningar och vad de gör finns i:
 
         - [macOS](kernel-extensions-settings-macos.md)

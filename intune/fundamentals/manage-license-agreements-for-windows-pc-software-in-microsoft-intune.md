@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5e5d3e645410b876a5d3d0be0eafed9c790780
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 831a22dfb6eebfe74b9886a1c83560f68a11c04e
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502647"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036587"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 
@@ -51,7 +51,7 @@ Du kan även generera rapporter som visar installations- och licensantal för pr
 > Arbetsytan **Licenser** visas inte i administratörskonsolen förrän du hanterar minst en Windows-dator med Intune-klienten för Windows.
 
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Lägga till Microsofts volymlicensavtal
-Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
+Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](https://go.microsoft.com/fwlink/?LinkID=223842).
 
 1. Välj **Licenser** i [Microsoft Intune-administratörskonsolen](https://admin.manage.microsoft.com/).
 
@@ -67,7 +67,7 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         - Endast ASCII tecken stöds.
 
-        - Följande tecken är inte tillåtna i avtalsnamnet: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
+        - Följande tecken tillåts inte i avtalsnamnet: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Mellanslag är tillåtna i namnet.
 
         - Filnamnet får inte vara mer än 128 tecken långt.
 
@@ -79,7 +79,7 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         - **Open Value-kunder:** *Avtalsnummer*, *upprepa avtalsnummer*, *avtalsnamn*
 
-        - **Open-kunder:** *Auktoriseringsnummer*, *relaterat licensnummer*, *avtalsnamn*
+        - **Öppna kunder:** *Auktoriseringsnummer*, *relaterat licensnummer*, *avtalsnamn*
 
         - **Select- och Enterprise-kunder:** *Avtalsnummer*, *relaterat registreringsnummer*, *avtalsnamn*
 
@@ -116,7 +116,7 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
 Vyn **Alla avtal** visas och Intune ansluter till Microsoft VLSC för att bekräfta de avtalsnummerpar som du har angett.
 
-Om du vill uppdatera volymlicensinformationen efter att du har lagt till licensavtal i Intune går du till sidan **Licensöversikt** och väljer **Uppdatera nu**. Denna åtgärd hämtar den aktuella licensinformationen från [Microsoft volymlicens servicecenter (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
+Om du vill uppdatera volymlicensinformationen efter att du har lagt till licensavtal i Intune går du till sidan **Licensöversikt** och väljer **Uppdatera nu**. Denna åtgärd hämtar den aktuella licensinformationen från [Microsoft volymlicens servicecenter (VLSC)](https://go.microsoft.com/fwlink/?LinkId=223842).
 
 > [!IMPORTANT]
 > Tills du uppdaterat volymlicensinformationen, kan du se olika typer av information i avtalslistan och rättighetsinformationen på **Avtalsöversikt** sidan.
@@ -182,8 +182,8 @@ Avtal för mjukvaruprogram kan läggas till licensgrupper. Du kan använda licen
 |                            |                                                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |            Uppgift            |                                                                                                                                                                                 Information                                                                                                                                                                                  |
-|   Skapa en licensgrupp   |                                                            På sidan <strong>Översikt</strong> i arbetsytan <strong>Licenser</strong> väljer du <strong>Skapa licensgrupp</strong> på menyn <strong>Aktiviteter</strong> . <strong>Obs!</strong> Du kan skapa max 500 licensgrupper totalt.                                                             |
+|   Skapa en licensgrupp   |                                                            På sidan <strong>Översikt</strong> i arbetsytan <strong>Licenser</strong> väljer du <strong>Skapa licensgrupp</strong> på menyn <strong>Aktiviteter</strong> . <strong>Obs:</strong> Du kan skapa max 500 licensgrupper totalt.                                                             |
 |   Byta namn på en licensgrupp   |                                                                                                      Välj en licensgrupp i arbetsytan <strong>Licenser</strong> och välj sedan <strong>Redigera licensgrupp</strong> på menyn <strong>Aktiviteter</strong> .                                                                                                       |
-|   Ta bort en licensgrupp   |                                 Välj en licensgrupp i arbetsytan <strong>Licenser</strong> och välj sedan <strong>Ta bort licensgrupp</strong> på menyn <strong>Aktiviteter</strong> . <strong>Tips!</strong> Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen <strong>Otilldelade avtal</strong>.                                 |
-| Ta bort ett licensavtal | I arbetsytan <strong>Licenser</strong> väljer du ett avtal och sedan <strong>Ta bort</strong>. <strong>Tips!</strong> När du har tagit bort volymlicensavtalen uppdaterar du licensinformationen genom att välja <strong>Uppdatera nu</strong> på sidan <strong>Licensöversikt</strong> eller på fliken <strong>Allmänt</strong> för en viss licensgrupp. |
+|   Ta bort en licensgrupp   |                                 Välj en licensgrupp i arbetsytan <strong>Licenser</strong> och välj sedan <strong>Ta bort licensgrupp</strong> på menyn <strong>Aktiviteter</strong> . <strong>Tips:</strong> Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen <strong>Otilldelade avtal</strong>.                                 |
+| Ta bort ett licensavtal | I arbetsytan <strong>Licenser</strong> väljer du ett avtal och sedan <strong>Ta bort</strong>. <strong>Tips:</strong> När du har tagit bort volymlicensavtalen uppdaterar du licensinformationen genom att välja <strong>Uppdatera nu</strong> på sidan <strong>Licensöversikt</strong> eller på fliken <strong>Allmänt</strong> för en viss licensgrupp. |
 
