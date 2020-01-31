@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/14/2020
+ms.date: 01/21/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,16 +17,19 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0786174ebb90352fa1a41923f9cfce305aece49f
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
-ms.translationtype: HT
+ms.openlocfilehash: be66f99006b06dce9f9bfe21eafa9f2be302e7b9
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956320"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76540987"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
 På Microsoft Intune MDM-hanterade enheter kan ibland appinstallationer misslyckas. När dessa appinstallationer misslyckas, kan det vara en utmaning att förstå felorsaken eller felsöka problemet. Microsoft Intune tillhandahåller information om appinstallationsfel som tillåter supportansvariga och Intune-administratörer att visa information som underlättar användarnas begäran om hjälp. Felsökningsfönstret i Intune ger information om felet, inklusive information om hanterade appar på en användares enhet. Information om en apps livscykel från början till slut ges under varje enskild enhet i fönstret **Hanterade appar**. Du kan visa installationsrelaterad information, t.ex. när appen har skapats, ändrats, inriktats och levereras till en enhet. 
+
+> [!NOTE]
+> Specifik information om felkoder vid appinstallation finns i [Referens för fel vid Intune-appinstallation](~/apps/app-install-error-codes.md).
 
 ## <a name="app-troubleshooting-details"></a>Information om felsökning av appar
 
@@ -47,7 +50,7 @@ Intune tillhandahåller appfelsökningsinformation baserad på de appar som inst
     > Samma app kan tilldelas till flera grupper, men med olika avsedda åtgärder (avsikter) för appen. En löst avsikt för en app kan t.ex. visa **Exkluderad** om appen har exkluderats för en användare under apptilldelningen. Mer information finns i [Lösa konflikter mellan appavsikter](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
     > Om ett installationsfel inträffar för en app som krävs kan varken du eller supporten synkronisera enheten och försöka installera appen igen.
 
-Problemet indikeras i informationen om appinstallationsfel. Du kan använda den här informationen för att komma fram till vilket som är det bästa sättet att lösa problemet på. Mer information om felsökning av problem med appinstallation finns i [Fel vid installation av Android-appar](troubleshoot-app-install.md#android-app-installation-errors) och [Fel vid installation av iOS-appar](troubleshoot-app-install.md#ios-app-installation-errors).
+Problemet indikeras i informationen om appinstallationsfel. Du kan använda den här informationen för att komma fram till vilket som är det bästa sättet att lösa problemet på. Mer information om felsökning av problem med appinstallation finns i [Fel vid installation av Android-appar](app-install-error-codes.md#android-app-installation-errors) och [Fel vid installation av iOS-appar](app-install-error-codes.md#ios-app-installation-errors).
 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -99,79 +102,11 @@ Det finns särskilda krav som du måste följa för att samla in loggfiler:
 - Du kan ange miljövariabler för logginsamling, till exempel följande:<br>
   *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
 - Endast exakta filnamnstillägg är tillåtna, till exempel:<br>
-  *.log, .txt, .dmp, .cab, .zip, .xml*
+  *.log,.txt,.dmp,.cab,.zip,.xml*
 - Du kan ladda upp loggfiler på högst 60 MB eller högst 25 filer, beroende på vilken gräns som nås först. 
 - Du kan samla in Win32-appinstallationsloggar för appar som uppfyller apptilldelningsavsikten Krävs, Tillgänglig eller Avinstallera.
 - Lagrade loggar krypteras för att skydda personligt identifierbar information som finns i loggarna.
 - När du öppnar supportbegäranden om Win32-appfel bifogar du associerade felloggar genom att följa stegen ovan.
-
-## <a name="android-app-installation-errors"></a>Fel vid installation av Android-appar
-
-I det här avsnittet beskrivs registrering med både enhetsadministratör (DA) och Samsung Knox. Mer information finns i [Administratörsregistrering för Android-enhet](../enrollment/android-enroll-device-administrator.md) och [Registrera Android-enheter automatiskt med hjälp av Samsung Knox Mobile-registrering](../enrollment/android-samsung-knox-mobile-enroll.md). 
-
-| Felmeddelande/kod | Beskrivning |
-|---------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Det gick inte att installera appen. (0xC7D14FB5) | Det här felmeddelandet visas när Intune inte kan fastställa orsaken till Android-appens installationsfel. Ingen information angavs av Android om felet. Det här felet returneras när APK-nedladdningen utfördes men det inte gick att installera appen. Det här felet beror normalt på att APK-filen är skadad och inte går att installera på enheten. En möjlig orsak kan vara att Google Play Protect blockerar installationen av appen av säkerhetsskäl. En annan möjlig orsak till felet är att enheten saknar stöd för appen. Appen kanske kräver API-version 21 eller senare medan enheten för närvarande har API-version 19. Intune returnerar det här felet för både DA- och KNOX-enheter, och om det är problem med APK:t kommer installationen inte att lyckas även om användaren ser ett meddelande om att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. |
-| Appinstallationen avbröts eftersom installationsfilen (APK) togs bort efter nedladdningen men före installationen. (0xC7D14FBA) | APK-filen laddades ned, men innan användaren installerade appen så togs filen bort från enheten. Det här kan inträffa om det förflöt lång tid mellan nedladdningen och installationen. Användaren avbröt kanske den ursprungliga installationen, väntade en stund och sedan klickade på meddelandet om att försöka igen. Det här felmeddelandet returneras bara för DA-scenarier. KNOX-scenarier kan utföras tyst. Vi visar ett meddelande om att försöka igen som användaren kan godkänna i stället för att avbryta. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. |
-| Appinstallationen avbröts eftersom processen startades om under installationen. (0xC7D14FBB) | Enheten startades om under APK-installationsprocessen, vilket gjorde att installationen avbröts. Det här felmeddelandet returneras för både DA och KNOX-enheter. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. |
-| Programmet hittades inte efter att installationen slutfördes. (0x87D1041C) | Användaren har uttryckligen avinstallerat appen. Det här felet returneras inte från klienten. Det är ett fel som genererades när appen installerades tidigare, men sedan har användaren avinstallerat den. Det här felet ska bara inträffa för obligatoriska appar. Användare kan avinstallera appar som inte är obligatoriska. Det här felet kan endast inträffa i DA. KNOX blockerar avinstallation av hanterade appar. Vid nästa synkronisering visas meddelandet om avinstallation för användaren igen. Användaren kan ignorera meddelandet. Felet fortsätter att rapporteras tills användaren installerar appen. |
-| Nedladdningen misslyckades på grund av ett okänt fel. (0xC7D14FB2) | Det här felet inträffar när nedladdningen misslyckas. Felet beror ofta på problem med Wi-Fi eller att anslutningen är långsam. Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. |
-| Nedladdningen misslyckades på grund av ett okänt fel. Principen utförs igen nästa gång enheten synkroniseras. (0xC7D15078) | Det här felet inträffar när nedladdningen misslyckas. Felet beror ofta på problem med Wi-Fi eller att anslutningen är långsam. Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. |
-| Slutanvändaren avbröt appinstallationen. (0xC7D14FB1) | Användaren har uttryckligen avinstallerat appen. Det här felet returneras när användaren avbryter installationen i Android-operativsystemet. Användaren tryckte på knappen Avbryt vid installationsprompten i operativsystemet eller stängde kommandotolken. Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. Be användaren att inte avbryta installationen. |
-| Filnedladdningen stoppades oväntat. (0xC7D15015) | Operativsystemet stoppade nedladdningen innan den slutfördes. Det här felet kan inträffa när enheten har låg batterinivå eller om nedladdningen tar för lång tid. Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. Se till att enheten har en tillförlitlig nätverksanslutning.  |
-| Filnedladdningstjänsten stoppades oväntat. Principen utförs igen nästa gång enheten synkroniseras. (0xC7D1507C) | Operativsystemet avslutade nedladdningen innan den slutfördes. Det här felet kan inträffa när enheten har låg batterinivå eller om nedladdningen tar för lång tid. Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Synkronisera enheten manuellt eller vänta 24 timmar och kontrollera sedan statusen. |
-| Det gick inte att avinstallera appen. (0xc7d14fb8) | Det här felet är ett allmänt avinstallationsfel. Operativsystemet angav inte varför appen inte kunde avinstalleras. Vissa administratörsappar kan avinstalleras utan vidare. Kontrollera att appen kan avinstalleras manuellt och samla in loggarna från Företagsportal om avinstallationen misslyckas. |
-| Den APK-fil för appinstallation som används för uppgraderingen överensstämmer inte med signaturen för den aktuella appen på enheten. (0xc7d14fb7) | Android-operativsystemet har en begränsning som kräver att signeringscertifikatet för uppgraderingsversionen är exakt samma som det certifikat som används för att signera den befintliga versionen. Om utvecklaren inte kan använda samma certifikat för att signera den nya versionen behöver du avinstallera den befintliga appen och distribuera om den nya appen i stället för att uppgradera den befintliga appen. |
-| Slutanvändaren avbröt appinstallationen. (0xc7d14fb9) | Instruera användaren att acceptera den Intune-distribuerade appen och installera appen vid uppmaning. |
-| Avinstallationen av appen avbröts eftersom processen startades om under installationen. (0xc7d14fbc) | Processen för appinstallation avslutades av operativsystemet, eller så startades enheten om. Försök att installera igen och samla in loggar från Företagsportal om felet uppstår igen. |
-| APK-filen för appinstallation kan inte installeras eftersom den inte hade signerats. (0xc7d14fb6) | Som standard kräver Android-operativsystemet att appar signeras. Se till att appen är signerad före distributionen. |
-
-## <a name="ios-app-installation-errors"></a>Fel vid installation av iOS-appar
-
-Följande felmeddelanden och beskrivningar ger information om iOS-installationsfel. 
-
-| Felmeddelande/kod | Beskrivning/felsökningstips |
-|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| (0x87D12906) | Apple MDM-agenten returnerade att installationskommandot misslyckades. |
-| (0x87D1313C) | Nätverksanslutningen bröts medan den uppdaterade webbadressen för nedladdningstjänsten skickades till enheten. Mer specifikt gick det inte att hitta någon server med det angivna värdnamnet. |
-| iOS-enheten är upptagen för närvarande. (0x87D11388) | iOS-enheten var upptagen, vilket ledde till ett fel. Enheten var låst. Användaren behöver låsa upp enheten för att kunna installera appen. |
-| Appinstallationen misslyckades. (0x87D13B64) | Ett appinstallationsfel inträffade. Du behöver iOS-konsolloggar för att felsöka problemet. |
-| Appen är hanterad men har upphört att gälla eller tagits bort av användaren. (0x87D13B66) | Antingen avinstallerade användaren appen uttryckligen, eller så har appen upphört att gälla men kunde inte laddas ned eller så matchar inte appidentifieringen svaret från enheten. Det här felet kan också inträffa på grund av en bugg i plattformen iOS 9.2.2. |
-| Appen är schemalagd för installation, men det krävs en inlösningskod för att slutföra transaktionen. (0x87D13B60) | Det här felet inträffar vanligen med betalda iOS Store-appar. |
-| Programmet hittades inte efter att installationen slutfördes. (0x87D1041C) | Appidentifieringsprocessen matchade inte svaret från enheten. |
-| Användaren avvisade erbjudandet att installera appen. (0x87D13B62) | Användaren klickade på Avbryt under den inledande appinstallationen. Be användaren att acceptera installationsbegäran nästa gång. |
-| Användaren avvisade erbjudandet att uppdatera appen. (0x87D13B63) | Slutanvändaren klickade på Avbryt under uppdateringsprocessen. Distribuera efter behov eller instruera användaren att acceptera uppgraderingsuppmaningen. |
-| Okänt fel (0x87D103E8) | Ett okänt fel inträffade under appinstallationen. Det här felet visas om inget annat fel kan identifieras. |
-| Det går bara att installera VPP-appar på en delad iPad (-2016330861). | Apparna måste hämtas med Apples volymköpsprogram för installation på en delad iPad. |
-| Det går inte att installera appar när App Store är inaktiverad (-2016330860). | App Store måste vara aktiverad för att användaren ska kunna installera appen. |
-| Det går inte att hitta VPP-licensen för appen (-2016330859). | Prova att återkalla och omtilldela applicensen. |
-| Det går inte att installera systemappar med din MDM-provider (-2016330858). | Det går inte att installera appar som förinstallerats av iOS-operativsystemet. |
-| Det går inte att installera appar när enheten är i Borttappat läge (-2016330857). | All användning av enheten är blockerad i Borttappat läge. Inaktivera Borttappat läge om du vill installera appar. |
-| Det går inte att installera appar när enheten är i helskärmsläge (-2016330856). | Prova att lägga till enheten i en exkluderingsgrupp under konfigurationsprincipen för helskärmsläge för att installera appar. |
-| Det går inte att installera 32-bitarsappar på enheten (-2016330852). | Enheten stöder inte installation av 32-bitarsappar. Prova att distribuera 64-bitarsversionen av appen. |
-| Användaren måste logga in i App Store (-2016330855). | Användaren måste logga in i App Store innan appen kan installeras. |
-| Okänt problem. Försök igen (-2016330854). | Appinstallationen misslyckades på grund av ett okänt problem. Försök igen senare. |
-| Appinstallationen misslyckades. Intune gör ett nytt försök nästa gång enheten synkroniseras (-2016330853). | Ett enhetsfel påträffades under appinstallationen. Synkronisera enheten och prova att installera appen igen. |
-| Licenstilldelningen misslyckades med Apple-felet "Inga återstående VPP-licenser" (0x87d13b7e) | Det här beteendet är avsiktligt. Du löser detta genom att köpa ytterligare VPP-licenser eller återta licenser från användare som inte längre är riktade. |
-| Appinstallationsfel 12024: Okänd orsak. (0x87d13b6e) | Apple har inte gett oss tillräckligt med information för att avgöra varför installationen misslyckades. Inget att rapportera. |
-| Nödvändig princip för appkonfiguration finns inte. Se till att principen riktas till samma grupper. (0x87d13b7f) | Appen kräver appkonfiguration men det finns ingen riktad appkonfiguration. Administratören bör se till att de grupper som appen är riktad till också har den nödvändiga appkonfigurationen riktad till grupperna. |
-| VPP-enhetslicensiering gäller endast för enheter med iOS 9.0+. (0x87d13b69) | Uppgradera berörda iOS-enheter till iOS 9.0+. |
-| Programmet är installerat på enheten men är ohanterat. (0x87d13b8f) | Det här felet inträffar bara för LOB-appar. Appen installerades utanför Intune. Du kan åtgärda det här felet genom att avinstallera appen från enheten. Nästa gång enhetssynkronisering sker bör enheten installera appen från Intune. |
-| Användaren avvisade apphantering (0x87d13b68) | Be användaren att acceptera apphantering. |
-| Okänt fel. (0x87d1279d) | Det här felet uppstår för iOS Store-appar, men felscenariot är okänt. |
-| Den senaste versionen av appen kunde inte uppdateras från en tidigare version. (0x87D13B9D) | Det här felmeddelandet visas om appen är installerad och hanterad men med fel version på enheten. Detta omfattar den situation då en enhet har tagit emot ett kommando för att uppdatera en app men den nya versionen ännu inte har installerats och rapporterat tillbaka. Det här felet rapporteras för den första incheckningen av en enhet när uppgraderingen har distribuerats och sker tills enheten rapporterar att den nya versionen är installerad eller misslyckas på grund av ett annat fel.  |
-
-
-## <a name="other-installation-errors"></a>Andra installationsfel
-
-|  Felmeddelande/kod  |  Beskrivning  |
-|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  0x80073CFF, 0x80CF201C (klientfel)  |  Om du vill installera den här appen måste du ha ett system där separat inläsning tillåts. Kontrollera att app-paketet är signerat med en betrodd signatur och installerat på en domänansluten enhet där principen **AllowAllTrustedApps** är aktiverad, eller en enhet med en Windows-licens för separat inläsning med principen **AllowAllTrustedApps** aktiverad. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).   |
-|  0x80073CF0  |  Paketet kunde inte öppnas. Möjliga orsaker:<ul><li> Paketet är inte signerat.</li><li> Utgivarens namn matchar inte signeringscertifikatets ämne.</li></ul> Mer information finns i **AppxPackagingOM**-händelseloggen. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
-|  0x80073CF3  |  Paketet misslyckades med uppdaterings-, beroende- eller konfliktverifiering. Möjliga orsaker:<ul><li> Det inkommande paketet är i konflikt med ett installerat paket.</li><li> Det gick inte att hitta ett angivet paketberoende.</li><li> Paketet stöder inte korrekt processorarkitektur.</li></ul> Mer information finns i **AppXDeployment-Server**-händelseloggen. Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
-|  0x80073CFB  |  Det angivna paketet har redan installerats och en ominstallation av paketet är blockerad. Du kan råka ut för det här felet om du installerar ett paket som inte är identiskt med det paket som redan har installerats. Bekräftelse av den digitala signaturen ingår också i paketet. När ett paket har byggts om eller signerats på nytt så är det inte längre binärt identiskt med det tidigare installerade paketet. De två möjliga alternativ för att åtgärda det här felet är:<ul><li> Öka appens versionsnummer och bygg sedan om och signera paketet på nytt.</li><li> Ta bort det gamla paketet för varje användare i systemet innan du installerar det nya paketet.</li></ul> Mer information finns i [Felsöka paketering, distribution och frågor för Windows Store-appar](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
-|  0x87D1041C  |  Programinstallationen lyckades men programmet identifieras inte. Appen har distribuerats av Intune och sedan avinstallerats. Orsaker till att appen avinstalleras är:<ul><li> Slutanvändaren avinstallerade appen.</li><li> Identitetsinformationen i paketet matchar inte vad enheten rapporterar för felaktiga appar.</li><li>Vid automatiskt uppdaterade MSI:er matchar produktversionen inte appinformationen när den har uppdaterats utanför Intune.</li></ul> Be användaren att installera om appen via företagsportalen. Observera att de appar som krävs ominstalleras automatiskt nästa gång enheten checkas in.  |
-|  0x8000FFFF  |  Ett oväntat fel inträffade under installationen. Mer information finns i installationsloggarna.  |
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Felsöka appar från Microsoft Store
 

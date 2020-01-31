@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d697b2b0bc3fa5ffea4f8e8ff15cd7c62af3ad30
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
-ms.translationtype: MTE75
+ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547950"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517566"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -42,11 +42,11 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 - **Appbutik** (endast mobil): **Inte konfigurerat** (standard) ger användarna åtkomst till appbutiken på mobila enheter. **Blockera** förhindrar användning av appbutiken.
 - **Uppdatera appar automatiskt från Store:** : **Inte konfigurerat** (standard) tillåter att appar som installeras från Microsoft Store uppdateras automatiskt. **Blockera** förhindrar att uppdateringar installeras automatiskt.
 - **Installation av betrodd app**: Välj om icke-Microsoft Store-appar kan installeras, även kallat separat inläsning. Separat inläsning är att installera och sedan köra eller testa en app som inte är certifierad av Microsoft Store. Ett exempel kan vara en app som är intern för endast ditt företag. Alternativen är:
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
   - **Blockera**: Förhindrar separat inläsning. Icke-Microsoft Store-appar kan inte installeras.
   - **Tillåt**: Tillåter separat inläsning. Icke-Microsoft Store-appar kan installeras.
 - **Lås upp via utvecklare**: Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av slutanvändarna. Alternativen är:
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
   - **Blockera**: Förhindrar utvecklarläge och separat inläsning av appar.
   - **Tillåt**: Tillåter utvecklarläge och separat inläsning av appar.
 
@@ -58,15 +58,15 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 - **Installera appdata på systemvolym**: **Blockera** hindrar appar från att lagra data på enhetens systemvolym. **Inte konfigurerat** (standard) tillåter appar att lagra data på systemdiskvolymen.
 - **Installera appar på systemenhet**: **Blockera** hindrar appar från att installera på enhetens systemenhet. **Inte konfigurerat** (standard) tillåter appar att installera på systemenheten.
 - **Spel-DVR (endast stationär dator)** : **Blockera** inaktiverar Windows-inspelning och -sändning av spel. **Inte konfigurerat** (standard) tillåter inspelning och sändning av spel.
-- **Endast appar från Store**: den här inställningen avgör användar upplevelsen när användare installerar appar från andra platser än den Microsoft Store. Alternativen är:
+- **Endast appar från Store**: Den här inställningen styr användarupplevelsen när användare installerar appar från andra platser än Microsoft Store. Alternativen är:
 
-  - **Inte konfigurerat** (standard): gör att slutanvändare kan installera appar från andra platser än Microsoft Store, inklusive appar som definierats i andra princip inställningar.  
-  - **Överallt**: stänger av appens rekommendationer och låter användarna installera appar från vilken plats som helst.  
-  - **Endast Store**: tvingar slutanvändare att bara installera appar från Microsoft Store.
-  - **Rekommendationer**: när du installerar en app från webben som är tillgänglig i Microsoft Store visas ett meddelande som rekommenderar att de hämtas från Store.  
-  - **Föredra butik**: varnar användare när de installerar appar från andra platser än Microsoft Store.
+  - **Inte konfigurerat** (standard): Tillåter att slutanvändare installerar appar från andra platser än Microsoft Store, inklusive appar som definierats i andra principinställningar.  
+  - **Överallt**: Stänger av apprekommendationer och låter användarna installera appar från valfri plats.  
+  - **Endast Store**: Tvingar slutanvändare att endast installera appar från Microsoft Store.
+  - **Rekommendationer**: Vid installation av en app från webben som är tillgänglig i Microsoft Store visas ett meddelande för användare där de rekommenderas att ladda ned den från Store.  
+  - **Prioritera Store**: Varnar användare när de installerar appar från andra platser än Microsoft Store.
 
-  [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+  [CSP för SmartScreen/EnableAppInstallControl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
 - **Användarkontroll över installationer**: När det angetts som **Inte konfigurerad** (standard), förhindrar Windows Installer att användare ändrar installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange den katalog som filerna ska installeras till. **Blockera** låter användare ändra de här installationsalternativen och några av säkerhetsfunktionerna i Windows Installer kringgås.
 
@@ -87,7 +87,7 @@ De här inställningarna använder CSP:er för [anslutningsprincip](https://docs
 - [CSP för Wi-Fi-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)
 
 - **Mobildatakanal**: Välj huruvida slutanvändare kan använda data, till exempel för webbsurfning, när de har anslutning till ett mobilnät. Alternativen är:
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen. Slutanvändare kan stänga av det.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen. Slutanvändare kan stänga av det.
   - **Blockera**: Tillåt inte mobildatakanalen. Slutanvändare kan inte aktivera det.
   - **Tillåt (kan inte redigeras)** : Tillåter mobildatakanalen. Slutanvändare kan inte stänga av det.
 
@@ -139,24 +139,24 @@ De här inställningarna använder [CSP för EnterpriseCloudPrint-princip](https
 ## <a name="control-panel-and-settings"></a>Kontrollpanel och inställningar
 
 - **Inställningar**: **Blockera** hindrar slutanvändare från att komma åt appen Inställningar i Windows. **Inte konfigurerat** (standard) gör att användarna kan öppna appen Inställningar på enheten.
-  - **System**: **Blockera** hindrar åtkomst till området System i appen Inställningar. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+  - **System**: **Blockera** hindrar åtkomst till området System i appen Inställningar. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
     - **Ändra energialternativinställningar (endast stationär dator)** : **Blockera** hindrar slutanvändare från att ändra energialternativinställningar på enheten. **Inte konfigurerat** (standard) tillåter användare att ändra energialternativinställningarna.
-  - **Enheter**: **Blockera** hindrar åtkomst till området Enheter i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Nätverk och Internet**: **Blockera** hindrar åtkomst till området Nätverk och Internet i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Anpassning**: **Blockera** hindrar åtkomst till området Personanpassning i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Appar**: **Blockera** hindrar åtkomst till området Appar i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Konton**: **Blockera** hindrar åtkomst till området Konton i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Tid och språk**: **Blockera** hindrar åtkomst till området Tid och språk i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-    - **Ändring av systemtid**: **Blockera** hindrar slutanvändare från att ändra inställningar för datum och tid på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Användarna kan ändra inställningarna.
-    - **Ändra regionsinställningar** (endast skrivbordsversion): **Blockera** hindrar slutanvändare från att ändra de nationella inställningarna på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Användarna kan ändra inställningarna.
-    - **Ändra språkinställningar (endast stationär dator)** : **Blockera** hindrar slutanvändare från att ändra språkinställningarna på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Användarna kan ändra inställningarna.
+  - **Enheter**: **Blockera** hindrar åtkomst till området Enheter i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Nätverk och Internet**: **Blockera** hindrar åtkomst till området Nätverk och Internet i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Anpassning**: **Blockera** hindrar åtkomst till området Personanpassning i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Appar**: **Blockera** hindrar åtkomst till området Appar i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Konton**: **Blockera** hindrar åtkomst till området Konton i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Tid och språk**: **Blockera** hindrar åtkomst till området Tid och språk i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+    - **Ändring av systemtid**: **Blockera** hindrar slutanvändare från att ändra inställningar för datum och tid på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Användarna kan ändra inställningarna.
+    - **Ändra regionsinställningar** (endast skrivbordsversion): **Blockera** hindrar slutanvändare från att ändra de nationella inställningarna på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Användarna kan ändra inställningarna.
+    - **Ändra språkinställningar (endast stationär dator)** : **Blockera** hindrar slutanvändare från att ändra språkinställningarna på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Användarna kan ändra inställningarna.
 
       [CSP för inställningsprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
-  - **Spel**: **Blockera** hindrar åtkomst till området Spel i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Hjälpmedel**: **Blockera** hindrar åtkomst till området Hjälpmedel i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Sekretess**: **Blockera** hindrar åtkomst till området Sekretess i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-  - **Uppdatering och säkerhet**: **Blockera** hindrar åtkomst till området Uppdatering och säkerhet i appen Inställningar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+  - **Spel**: **Blockera** hindrar åtkomst till området Spel i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Hjälpmedel**: **Blockera** hindrar åtkomst till området Hjälpmedel i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Sekretess**: **Blockera** hindrar åtkomst till området Sekretess i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+  - **Uppdatering och säkerhet**: **Blockera** hindrar åtkomst till området Uppdatering och säkerhet i appen Inställningar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 
 ## <a name="display"></a>Visning
 
@@ -178,31 +178,31 @@ Du kan även **Importera** en .csv-fil med listan över appar.
 
 De här inställningarna använder [CSP för upplevelseprincip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), som även visar de Windows-versioner som stöds. 
 
-- **Skärmdump** (endast mobil): **Blockera** hindrar slutanvändare från att få skärmbilder på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Kopiera och klistra in (endast mobil)** : **Blockera** hindrar slutanvändare från att använda kopiera och klistra in mellan appar på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Manuell avregistrering**: **Blockera** hindrar slutanvändare från att ta bort arbetskontot via arbetskontrollpanelen på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Skärmdump** (endast mobil): **Blockera** hindrar slutanvändare från att få skärmbilder på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Kopiera och klistra in (endast mobil)** : **Blockera** hindrar slutanvändare från att använda kopiera och klistra in mellan appar på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Manuell avregistrering**: **Blockera** hindrar slutanvändare från att ta bort arbetskontot via arbetskontrollpanelen på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 
   Den här principinställningen gäller inte om datorn är Azure AD-ansluten och automatisk registrering har aktiverats.
 
-- **Manuell installation av rotcertifikat** (endast mobil): **Blockera** hindrar slutanvändare från att manuellt installera rotcertifikat och mellanliggande CAP-certifikat. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Kamera**: **Blockera** hindrar slutanvändare från att använda kameran på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Manuell installation av rotcertifikat** (endast mobil): **Blockera** hindrar slutanvändare från att manuellt installera rotcertifikat och mellanliggande CAP-certifikat. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Kamera**: **Blockera** hindrar slutanvändare från att använda kameran på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 
-  [Kamera-CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
+  [CSP för kamera](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
-- **OneDrive-filsynkronisering**: **Blockera** hindrar slutanvändare från att synkronisera filer till OneDrive från enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Flyttbara lagringsmedier**: **Blockera** hindrar slutanvändare från att använda externa lagringsenheter, till exempel SD-kort, med enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Geoplats**: **Blockera** hindrar slutanvändare från att aktivera platstjänster på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Internetdelning**: **Blockera** hindrar delning av Internetanslutning på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Telefonåterställning**: **Blockera** hindrar slutanvändare från att rensa eller utföra en fabriksåterställning av enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **USB-anslutning**: **Blockera** hindrar åtkomst till externa lagringsenheter via en USB-anslutning på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. USB-laddning påverkas inte av den här inställningen.
-- **Stöldskyddsläge** (endast mobil): **Blockera** hindrar slutanvändare från att välja inställningar för stöldskyddsläge på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **OneDrive-filsynkronisering**: **Blockera** hindrar slutanvändare från att synkronisera filer till OneDrive från enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Flyttbara lagringsmedier**: **Blockera** hindrar slutanvändare från att använda externa lagringsenheter, till exempel SD-kort, med enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Geoplats**: **Blockera** hindrar slutanvändare från att aktivera platstjänster på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Internetdelning**: **Blockera** hindrar delning av Internetanslutning på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Telefonåterställning**: **Blockera** hindrar slutanvändare från att rensa eller utföra en fabriksåterställning av enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **USB-anslutning**: **Blockera** hindrar åtkomst till externa lagringsenheter via en USB-anslutning på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. USB-laddning påverkas inte av den här inställningen.
+- **Stöldskyddsläge** (endast mobil): **Blockera** hindrar slutanvändare från att välja inställningar för stöldskyddsläge på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 - **Cortana**: **Blockera** inaktiverar röstassistenten Cortana på enheten. När Cortana är avstängt kan användare fortfarande söka för att hitta objekt på enheten. **Inte konfigurerat** (standard) tillåter Cortana.
 - **Röstinspelning** (endast mobil): **Blockera** hindrar slutanvändare från att använda enhetens röstinspelning på enheten. **Inte konfigurerat** (standard) tillåter röstinspelning för appar.
-- **Ändra enhetsnamn** (endast mobil): **Blockera** hindrar slutanvändare från att ändra enhetens namn. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Lägg till konfigurationspaket**: **Blockera** hindrar den runtime-konfigurationsagent som installerar konfigurationspaket på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Ta bort konfigurationspaket**: **Blockera** hindrar den runtime-konfigurationsagent som tar bort konfigurationspaket från enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Enhetsidentifiering**: **Blockera** hindrar enheten från att identifieras av andra enheter. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Växla mellan aktiviteter** (endast mobil): **Blockera** hindrar aktivitetsväxling på enheten. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Ändra enhetsnamn** (endast mobil): **Blockera** hindrar slutanvändare från att ändra enhetens namn. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Lägg till konfigurationspaket**: **Blockera** hindrar den runtime-konfigurationsagent som installerar konfigurationspaket på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Ta bort konfigurationspaket**: **Blockera** hindrar den runtime-konfigurationsagent som tar bort konfigurationspaket från enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Enhetsidentifiering**: **Blockera** hindrar enheten från att identifieras av andra enheter. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Växla mellan aktiviteter** (endast mobil): **Blockera** hindrar aktivitetsväxling på enheten. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 - **Dialogruta om SIM-kortsfel** (endast mobil): **Blockera** felmeddelanden från att visas på enheten om inget SIM-kort har upptäckts. **Inte konfigurerat** (standard) visar felmeddelandena.
 - **Ink-arbetsytan**: Välj om och hur användaren kommer åt ink-arbetsytan. Alternativen är:
   - **Inte konfigurerat** (standard): Aktiverar Ink-arbetsytan och användaren kan använda den ovanför låsskärmen.
@@ -216,7 +216,7 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
   Inställningen börjar gälla nästa gång enheten rensas eller återställs. Som alla andra Intune-konfigurationer måste enheten vara registrerad och hanteras av Intune för att ta emot konfigurationsinställningar. När den har registrerats och tar emot principer tillämpas inställningen under nästa Windows-installation om enheten återställs.
 
-  [TenantLockdown CSP](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp)
+  [CSP för TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp)
 
 - **Direkt minnesåtkomst**: **Blockera** förhindrar direkt minnesåtkomst (DMA) för alla underordnade PCI-portar med enhetsbyte vid drift tills en användare loggar in i Windows. **Aktiverad** (standard) ger åtkomst till DMA, även när en användare inte har loggat in.
 
@@ -231,6 +231,9 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
   [CSP för AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **URL till bild på låst skärm (endast stationär dator)** : Anger URL till en bild i formatet JPG, JPEG eller PNG som används som bakgrundsbild för låsskärmen i Windows. Ange till exempel `https://contoso.com/image.png`. Den här inställningen låser bilden och kan inte ändras efteråt.
+
+  [CSP för Personalization/LockScreenImageUrl](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+
 - **Skärmtidsgräns kan ställas in av användaren (endast Mobile)** : **Tillåt** låter användare konfigurera skärmtidsgränsen. **Inte konfigurerat** (standard) ger inte användarna det här alternativet.
 
   [CSP för DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
@@ -379,7 +382,7 @@ När ”Blockera och aktivera åsidosättning av användaren” är markerat kan
 - **Tillåt JavaScript**: **Ja** (standard) Tillåter att skript, exempelvis JavaScript, körs i Microsoft Edge-webbläsaren. **Nej** förhindrar att Java-skript körs i webbläsaren.
 - **Användaren kan installera tillägg**: **Ja** tillåter att slutanvändarna installerar Microsoft Edge-tillägg på enheten. **Nej** förhindrar installationen.
 - **Tillåt separat inläsning av utvecklartillägg**: **Ja** (standard) använder operativsystemets standardvärde, vilket kan tillåta separat inläsning. Separat inläsning installerar och kör overifierade tillägg. **Nej** hindrar Microsoft Edge från att utföra separat inläsning med hjälp av funktionen **Läs in tillägg**. Det förhindrat inte separat inläsning av tillägg på andra sätt, till exempel via PowerShell.
-- **Tillägg som krävs**: Välj vilka tillägg som inte ska kunna inaktiveras av slutanvändarna i Microsoft Edge. Ange paketfamiljenamnet och välj **Lägg till**. [Hitta ett paket familje namn (PFN) för per app-VPN](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) ger viss vägledning.
+- **Tillägg som krävs**: Välj vilka tillägg som inte ska kunna inaktiveras av slutanvändarna i Microsoft Edge. Ange paketfamiljenamnet och välj **Lägg till**. [Hitta ett paketfamiljenamn (PFN) för VPN per app](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) innehåller viss vägledning.
 
   Du kan också **Importera** en CSV-fil som innehåller paketfamiljenamnen. Eller så kan du **Exportera** paketfamiljenamn som du anger.
 
@@ -400,7 +403,7 @@ De här inställningarna använder [CSP för NetworkProxy-princip](https://docs.
 
 De här inställningarna använder [CSP för DeviceLock-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), som även visar de Windows-versioner som stöds.
 
-- **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) tillåter åtkomst till enheten utan lösenord. Gäller endast för lokala konton. Domän kontots lösen ord förblir konfigurerade av Active Directory (AD) och Azure AD.
+- **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) tillåter åtkomst till enheten utan lösenord. Gäller endast för lokala konton. Lösenord för domänkonton förblir konfigurerade av Active Directory (AD) och Azure AD.
 
   - **Lösenordstyp som krävs**: Välj typ av lösenord. Alternativen är:
     - **Inte konfigurerad**: Lösenordet kan innehålla siffror och bokstäver.
@@ -411,7 +414,7 @@ De här inställningarna använder [CSP för DeviceLock-princip](https://docs.mi
     > [!IMPORTANT]
     > När lösenordskravet ändras på ett Windows-skrivbord påverkas användarna nästa gång de loggar in, eftersom det är då enheten går från inaktiv till aktiv. Användare med lösenord som uppfyller kravet uppmanas ändå att ändra sina lösenord.
     
-  - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som tillåts innan enheten kan rensas, upp till 11. Det giltiga tal du anger beror på utgåvan. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) visar de värden som stöds. `0` (noll) kan inaktivera funktionen för rensning av enheten.
+  - **Antal felaktiga inloggningar innan enheten rensas**: Ange det antal autentiseringsfel som tillåts innan enheten kan rensas, upp till 11. Det giltiga tal som du anger beror på utgåvan. I [CSP för DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) anges de värden som stöds. `0` (noll) kan inaktivera funktionen för rensning av enheten.
 
     Den här inställningen har även olika effekt beroende på version. Specifik information om den här inställningen finns i [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
@@ -420,21 +423,21 @@ De här inställningarna använder [CSP för DeviceLock-princip](https://docs.mi
   - **Förhindra återanvändning av tidigare lösenord**: Ange antal tidigare använda lösenord som inte får återanvändas, från 1–24. Ange till exempel `5` om användare inte ska kunna ange ett nytt lösenord till sina nuvarande lösenord eller något av de föregående fyra lösenorden.
   - **Kräv lösenord när enheten återgår från viloläge** (Mobile och Holographic): Välj **Kräv** så att användarna måste ange ett lösenord för att låsa upp enheten när den är inaktiv. **Inte konfigurerat** (standard) kräver inte PIN-kod eller lösenord när enheten återställs från inaktivt tillstånd.
   - **Enkla lösenord**: Ställ in på **Blockera** om du vill att användarna inte ska kunna skapa enkla lösenord, som `1234` eller `1111`. Ange till **Inte konfigurerat** (standard) om användarna ska kunna skapa lösenord som `1234` eller `1111`. Dessutom tillåter eller blockerar den här inställningen användningen av Windows-bildlösenord.
-- **Automatisk kryptering under AADJ**: **Blockera** förhindrar automatisk BitLocker-enhetskryptering när enheten förbereds för första användning, när enheten är ansluten till Azure AD. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Mer om [BitLocker-enhetskryptering](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+- **Automatisk kryptering under AADJ**: **Blockera** förhindrar automatisk BitLocker-enhetskryptering när enheten förbereds för första användning, när enheten är ansluten till Azure AD. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Mer om [BitLocker-enhetskryptering](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Princip för FIPS-standard (Federal Information Processing Standard)** : **Tillåt** använder FIPS-principen (Federal Information Processing Standard), som är standarden för kryptering, hashing och signering för amerikanska myndigheter. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Standardvärdet för operativ systemet kan inte använda FIPS.
+- **Princip för FIPS-standard (Federal Information Processing Standard)** : **Tillåt** använder FIPS-principen (Federal Information Processing Standard), som är standarden för kryptering, hashing och signering för amerikanska myndigheter. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Standardinställningen för operativsystemet använder kanske inte FIPS.
 
   [Cryptography/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Windows Hello-enhetsautentisering**: **Tillåt** att användare använder en Windows Hello-tillbehörsenhet, t.ex. en telefon, ett fitnessband eller en IoT-enhet, för att logga in på en Windows 10-dator. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Standardvärdet för operativ systemet kan hindra Windows Hello Companion-enheter från att autentisera med Windows.
+- **Windows Hello-enhetsautentisering**: **Tillåt** att användare använder en Windows Hello-tillbehörsenhet, t.ex. en telefon, ett fitnessband eller en IoT-enhet, för att logga in på en Windows 10-dator. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Standardinställningen för operativsystemet kan förhindra att Windows Hello-tillbehörsenheter autentiseras med Windows.
 
   [Authentication/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
 - **Webbinloggning**: Aktiverar stöd för Windows-inloggning för providrar som inte är ADFS-federerade providrar (Active Directory Federation Services), till exempel SAML (Security Assertion Markup Language). SAML använder säkra token som ger möjlighet att använda enkel inloggning med webbläsare. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
   - **Aktiverad**: Providern för webbautentiseringsuppgifter är aktiverad för inloggning.
   - **Inaktiverad**: Providern för webbautentiseringsuppgifter är inaktiverad för inloggning.
 
@@ -491,7 +494,7 @@ De här inställningarna använder [CSP för sekretesspolicy](https://docs.micro
 - **Anpassning av inmatning**: **Blockera** förhindrar användning av röst för diktering och för samtal med Cortana och andra appar som använder Microsofts molnbaserade röstigenkänning. Det är inaktiverat och användarna kan inte aktivera onlinebaserad taligenkänning via inställningarna. **Inte konfigurerat** (standard) låter användarna välja. Om du tillåter dessa tjänster kan det hända att Microsoft samlar in röstdata för att förbättra tjänsten.
 - **Automatiskt godkännande av frågor om användarens medgivande till parkoppling och sekretess**: Välj **Tillåt** så att Windows automatiskt godkänner meddelanden om medgivande till parkoppling och sekretess när appar körs. **Inte konfigurerat** (standard) förhindrar automatiskt godkännande av fönstret med användarmedgivande för parkoppling och sekretess när appar öppnas.
 - **Publicera användaraktiviteter**: **Blockera** förhindrar delad användning och identifiering av nyligen använda resurser i aktivitetsfeeden. **Inte konfigurerat** (standard) aktiverar den här funktionen så att appar kan publicera slutanvändaraktiviteter.
-- **Endast lokala aktiviteter**: **Blockera** förhindrar delad användning och identifiering av nyligen använda resurser i aktivitetsväxlingen, enbart baserat på lokal aktivitet. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Endast lokala aktiviteter**: **Blockera** förhindrar delad användning och identifiering av nyligen använda resurser i aktivitetsväxlingen, enbart baserat på lokal aktivitet. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 
 Du kan konfigurera den information som alla appar på enheten kan komma åt. Du kan också definiera undantag per app med hjälp av **Sekretessundantag per app**.
 
@@ -536,7 +539,7 @@ De här inställningarna använder [CSP för WirelessDisplay-princip](https://do
   [CSP för System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Skicka Microsoft Edge-webbdata till Microsoft 365 Analytics**: Om du vill använda denna funktion kan du ange inställningar för **Dela användningsdata** till **Utökad** eller **Fullständig**. Den här funktionen styr vilka data Microsoft Edge skickar till Microsoft 365 Analytics för Enterprise-enheter med ett konfigurerat kommersiellt ID. Alternativen är:
-  - **Inte konfigurerad**: Intune ändrar eller uppdaterar inte den här inställningen. Standardvärdet för operativ systemet kan inte skicka några data för webb historik.
+  - **Inte konfigurerad**: Intune varken ändrar eller uppdaterar den här inställningen. Standardinställningen för operativsystemet skickar kanske inte webbhistorik.
   - **Skicka endast data för intranät**: Låter administratören skicka historik för intranät
   - **Skicka endast data för Internet**: Låter administratören skicka historik för Internet
   - **Skicka endast data för Internet**: Låter administratören skicka historik för Internet
@@ -591,11 +594,11 @@ De här inställningarna använder [CSP för startpolicy](https://docs.microsoft
 - **Användarpanel**: **Blockera** döljer användarpanelen så att den inte visas på Start-menyn. **Inte konfigurerat** (standard) visar användarpanelen och anger även följande inställningar:
   - **Lås**: **Blockera** döljer alternativet **Lås** från att visas i användarpanelen på Start-menyn. **Inte konfigurerat** (standard) visar alternativet **Lås**.
   - **Logga ut**: **Blockera** döljer alternativet **Logga ut** från att visas i användarpanelen på Start-menyn. **Inte konfigurerat** (standard) visar alternativet **Logga ut**.
-- **Stäng av**: **Blockera** döljer alternativen **Uppdatera och stäng av** och **Stäng av** från att visas i strömknappen på Start-menyn. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Viloläge**: **Blockera** döljer alternativet **Strömsparläge** från att visas i strömknappen på Start-menyn. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Viloläge**: **Blockera** döljer alternativet **Viloläge** från att visas i strömknappen på Start-menyn. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Växla konto**: **Blockera** döljer **Växla konto** från att visas i användarpanelen på Start-menyn. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
-- **Omstartsalternativ**:  **Blockera** döljer alternativen **Uppdatera och starta om** och **Starta om** från att visas i strömknappen på Start-menyn. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Stäng av**: **Blockera** döljer alternativen **Uppdatera och stäng av** och **Stäng av** från att visas i strömknappen på Start-menyn. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Viloläge**: **Blockera** döljer alternativet **Strömsparläge** från att visas i strömknappen på Start-menyn. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Viloläge**: **Blockera** döljer alternativet **Viloläge** från att visas i strömknappen på Start-menyn. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Växla konto**: **Blockera** döljer **Växla konto** från att visas i användarpanelen på Start-menyn. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
+- **Omstartsalternativ**:  **Blockera** döljer alternativen **Uppdatera och starta om** och **Starta om** från att visas i strömknappen på Start-menyn. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 - **Dokument på Start**: Dölj eller visa mappen Dokument i Start-menyn i Windows. Alternativen är:
   - **Inte konfigurerat** (standard): Ingen inställning framtvingas. Användare väljer att visa eller dölja genvägen.
   - **Dölj**: Genvägen döljs, och inställningen inaktiveras i appen Inställningar.
@@ -637,7 +640,7 @@ De här inställningarna använder [CSP för startpolicy](https://docs.microsoft
   - **Dölj**: Genvägen döljs, och inställningen inaktiveras i appen Inställningar.
   - **Visa**: Genvägen visas, och inställningen inaktiveras i appen Inställningar.
 
-## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender Smart skärm
+## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
 
 - **SmartScreen för Microsoft Edge**: **Kräv** inaktiverar Microsoft Defender SmartScreen och hindrar användarna från att aktivera funktionen. **Inte konfigurerat** (standard) aktiverar SmartScreen. Hjälper till att skydda användarna mot potentiella hot och hindrar användare från att stänga av den.
 
@@ -659,9 +662,9 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
 - **Windows Spotlight**: **Blockera** inaktiverar Windows Spotlight på låsskärmen, Windows-tips, Microsoft-konsumentfunktioner och liknande funktioner. Om målet är att minimera nätverkstrafik från enheter anger du det här till **Blockera**. **Inte konfigurerat** (standard) tillåter Windows Spotlight-funktioner och kan styras av slutanvändare. När det här är aktiverat kan du även tillåta eller blockera följande inställningar:
 
-  - **Windows Spotlight på låsskärm**: **Blockera** hindrar Windows Spotlight från att visa information på enhetens låsskärm. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+  - **Windows Spotlight på låsskärm**: **Blockera** hindrar Windows Spotlight från att visa information på enhetens låsskärm. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
   - **Tredjepartsförslag i Windows Spotlight**: **Blockera** hindrar Windows Spotlight från att föreslå innehåll som inte har publicerats av Microsoft. **Inte konfigurerat** (standard) tillåter app- och innehållsförslag från partnerutgivare av programvara i Windows Spotlight-funktioner, till exempel låsskärmen, föreslagna appar på Start-menyn och Windows-tips.
-  - **Konsumentfunktioner**: **Blockera** stänger av funktioner som vanligtvis endast är till för konsumenter, till exempel startförslag, medlemskapsaviseringar, appinstallation efter välkomstprogram (OOBE) och omdirigeringspaneler. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+  - **Konsumentfunktioner**: **Blockera** stänger av funktioner som vanligtvis endast är till för konsumenter, till exempel startförslag, medlemskapsaviseringar, appinstallation efter välkomstprogram (OOBE) och omdirigeringspaneler. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
   - **Windows-tips**: **Blockera** inaktiverar popup-Windows-tips. **Inte konfigurerat** (standard) tillåter att popup-Windows-tips visas.
   - **Windows Spotlight i Åtgärdscenter**: **Blockera** hindrar att Windows Spotlight-meddelanden visas i Åtgärdscenter. **Inte konfigurerat** (standard) kan visa meddelanden i Åtgärdscenter som föreslår appar eller funktioner som hjälper användarna att bli mer produktiva i Windows.
   - **Windows Spotlight-anpassning**: **Blockera** hindrar Windows från att använda diagnostikdata till att ge användaren anpassade funktioner. **Inte konfigurerat** (standard) tillåter att Microsoft använder diagnostikdata för att ge anpassade rekommendationer, tips och erbjudanden om att skräddarsy Windows för användarens behov.
@@ -673,140 +676,140 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
 
 - **Realtidsövervakning**: **Aktivera** aktiverar genomsökning i realtid efter skadlig programvara, spionprogram och annan oönskad programvara. Användaren kan inte inaktivera den här inställningen. 
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här funktionen och låter användarna ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet den här funktionen och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [CSP för Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-- **Beteendeövervakning** **Aktivera** aktiverar övervakning av funktionssätt och söker efter kända tecken på misstänkt aktivitet på enheter. Användare kan inte aktivera beteende övervakning. 
+- **Beteendeövervakning** **Aktivera** aktiverar övervakning av funktionssätt och söker efter kända tecken på misstänkt aktivitet på enheter. Användare kan inte stänga av beteendeövervakning. 
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet beteende övervakning och gör det möjligt för användare att ändra det.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet beteendeövervakning och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+  [CSP för Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **NIS (Network Inspection System)** : NIS hjälper till att skydda enheter mot nätverksbaserade säkerhetsrisker. Det använder signaturer för kända problem från Microsoft Endpoint Protection Center för att identifiera och blockera skadlig trafik.
 
-  **Aktivera** aktiverar nätverks skydd och nätverks blockering. Användaren kan inte inaktivera den här inställningen. När den är aktive rad blockeras användarna från att ansluta till kända sårbarheter.
+  **Aktivera** aktiverar nätverksskydd och nätverksblockering. Användaren kan inte inaktivera den här inställningen. När detta är aktiverat blockeras användarna från att ansluta till kända sårbarheter.
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet NIS och gör det möjligt för användare att ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet NIS och tillåter att användare ändrar det.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [CSP för Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Sök igenom alla hämtningar**: **Aktivera** aktiverar den här inställningen och Defender söker igenom alla filer som hämtats från Internet. Användarna kan inte inaktivera den här inställningen. 
+- **Sök igenom alla hämtningar**: **Aktivera** aktiverar den här inställningen, och Defender genomsöker alla filer som laddas ned från Internet. Användarna kan inte inaktivera den här inställningen. 
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här inställningen och låter användarna ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet den här inställningen och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+  [CSP för Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
 - **Sök igenom skript som har lästs in via Microsoft-webbläsare**: **Aktivera** gör att Defender genomsöker skript som används i Internet Explorer. Användarna kan inte inaktivera den här inställningen. 
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här inställningen och låter användarna ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet den här inställningen och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+  [CSP för Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
 - **Användaråtkomst till Defender**: **Blockera** döljer Microsoft Defender-användargränssnittet för slutanvändarna. Alla Microsoft Defender-meddelanden döljs också.
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du blockerar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard tillåter operativ systemet användare att komma åt användar gränssnittet i Microsoft Defender och gör det möjligt för användare att ändra det.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du blockerar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard tillåter operativsystemet användare att komma åt och ändra användargränssnittet i Microsoft Defender.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
   När den här inställningen ändras börjar den gälla nästa gång användarens dator startas om.
 
-  [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+  [CSP för Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
-- **Uppdaterings intervall för säkerhets information (i timmar)** : Ange intervallet som Defender söker efter ny säkerhets information från 0-24. Alternativen är:
+- **Intervall för uppdatering av säkerhetsinsikter (i timmar)** : Ange det intervall som Defender använder för att söka efter ny säkerhetsinformation, 0 till 24. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen. Standardvärdet för operativ systemet kan söka efter uppdateringar var 8: e timme.
-  - **Kontrol lera inte**: Defender söker inte efter nya Security Intelligence-uppdateringar.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen. Standardvärdet för operativsystemet kan söka efter uppdateringar var 8:e timme.
+  - **Kontrollera inte**: Defender söker inte efter nya uppdateringar av säkerhetsinformation.
   - **1–24**: `1` kontrollerar varje timme, `2` kontrollerar varannan timme, `24` kontrollerar varje dag och så vidare.
   
-  [Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  [CSP för Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
   
 - **Övervaka fil- och programaktivitet**: Tillåter att Defender övervakar fil- och programaktivitet på enheter. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen. Standardvärdet för operativ systemet kan övervaka alla filer.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen. Standardinställningen för operativsystemet kan övervaka alla filer.
   - **Övervakning har inaktiverats**
   - **Övervaka alla filer**
   - **Övervaka enbart inkommande filer**
   - **Övervaka enbart utgående filer**
 
-  [Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+  [CSP för Defender/RealTimeScanDirection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
 
 - **Dagar innan skadlig kod i karantän tas bort**: Fortsätt att spåra åtgärdad skadlig kod i det antal dagar du anger, så att du manuellt kan kontrollera tidigare berörda enheter. Om du anger antalet dagar till `0`, hålls skadlig programvara kvar i karantänmappen och tas inte bort automatiskt. När det här är inställt på `90` lagras karantänobjekt i 90 dagar i systemet och tas sedan bort.
 
-  [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+  [CSP för Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Gräns för processoranvändning under genomsökning**: Låter dig begränsa hur mycket processorkraft som genomsökningar får använda (från `0` till `100`).
-- **Sök igenom arkivfiler**: **Aktivera** aktiverar Defender så att den söker igenom arkivfiler, till exempel zip-eller CAB-filer. Användarna kan inte inaktivera den här inställningen.
+- **Sök igenom arkivfiler**: **Aktivera** aktiverar Defender så att det söker igenom arkivfiler, till exempel ZIP- eller CAB-filer. Användarna kan inte inaktivera den här inställningen.
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här genomsökningen och gör det möjligt för användare att ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet den här genomsökningen och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+  [CSP för Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
-- **Sök igenom inkommande e-postmeddelanden**: **Aktivera** tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten. När den är aktive rad tolkar motorn post lådan och e-postfilerna för att analysera e-postmeddelandet och bilagor. Du kan söka i formaten PST (Outlook),. dbx,. mbx, MIME (Outlook Express) och BinHex (Mac).
+- **Sök igenom inkommande e-postmeddelanden**: **Aktivera** tillåter att Defender söker igenom e-postmeddelanden när de tas emot på enheten. När detta aktiveras parsar motorn postlådan och e-postfilerna för att analysera e-postmeddelandets brödtext och bifogade filer. Du kan genomsöka formaten .pst (Outlook), .dbx, .mbx, MIME (Outlook Express), och BinHex (Mac).
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard stänger operativ systemet av genomsökningen och gör att användarna kan ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard inaktiverar operativsystemet den här genomsökningen och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+  [CSP för Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Genomsök flyttbara enheter under en fullständig genomsökning**: **Aktivera** aktiverar Defender-enheter för flyttbara enheter under en fullständig genomsökning. Användarna kan inte inaktivera den här inställningen.
+- **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**: **Aktivera** aktiverar Defender-genomsökningar av flyttbara enheter under en fullständig genomsökning. Användarna kan inte inaktivera den här inställningen.
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard tillåter operativ systemet Defender att söka igenom flyttbara enheter, till exempel USB-käppar, och gör att användarna kan ändra den här inställningen.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard tillåter operativsystemet Defender att genomsöka flyttbara enheter, till exempel USB-minnen, och gör att användarna kan ändra den här inställningen.
 
   Under en snabb genomsökning kan flyttbara enheter fortfarande genomsökas.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+  [CSP för Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
 - **Sök igenom mappade nätverksdrivrutiner vid fullständig genomsökning**: **Aktivera** gör att Defender genomsöker filer på mappade nätverksenheter. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem. Användarna kan inte inaktivera den här inställningen.
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard aktiverar operativ systemet den här funktionen och låter användarna ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard aktiverar operativsystemet den här funktionen och tillåter att användare ändrar den.
 
-  Under en snabb genomsökning kan mappade nätverks enheter fortfarande genomsökas.
+  Under en snabb genomsökning kan mappade nätverksenheter fortfarande genomsökas.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+  [CSP för Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
-- **Sök igenom filer öppnade från nätverksmappar**: **Aktivera** har Defender söker igenom filer öppnade från nätverksmappar eller delade nätverks enheter, till exempel filer som nås från en UNC-sökväg. Användarna kan inte inaktivera den här inställningen. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
+- **Sök igenom filer öppnade från nätverksmappar**: **Aktivera** gör att Defender genomsöker filer som öppnats från nätverksmappar eller delade nätverksenheter, till exempel filer som nås via en UNC-sökväg. Användarna kan inte inaktivera den här inställningen. Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell skadlig kod i dem.
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard söker operativ systemet igenom filer som öppnats från nätverksmappar och gör det möjligt för användare att ändra den.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard genomsöker operativsystemet filer som öppnats från nätverksmappar och tillåter att användare ändrar den.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+  [CSP för Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
 - **Molnskydd**: **Aktivera** aktiverar Microsoft Active Protection Service, som samlar in information om aktivitet relaterad till skadlig kod från enheter som du hanterar. Användarna kan inte ändra denna inställning. 
 
-  Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune. Om du aktiverar inställningen och sedan ändrar tillbaka den till **inte konfigurerad**, lämnar Intune inställningen i den tidigare konfigurerade statusen. Som standard tillåter operativ systemet Microsoft Active Protection Service att ta emot information och gör att användarna kan ändra den här inställningen.
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du aktiverar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare konfigurerade tillstånd. Som standard tillåter operativsystemet att Microsoft Active Protection Service tar emot information och att användarna ändrar den här inställningen.
 
-  Intune stänger inte av den här funktionen. Använd en anpassad URI för att inaktivera den.
+  Intune stänger inte av den här funktionen. Om du vill inaktivera den använder du en anpassad URI.
 
-  [Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  [CSP för Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
 - **Be användarna att skicka exempel**: Anger om potentiellt skadliga filer som kan kräva ytterligare analys ska skickas automatiskt till Microsoft. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen. Standardvärdet för operativ systemet kan automatiskt skicka säkra exempel.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen. Standardvärdet för operativsystemet kan skicka säkra exempel automatiskt.
   - **Fråga alltid**
   - **Fråga innan personlig information skickas**
   - **Skicka aldrig data**
   - **Skicka alla data utan att fråga**: Data skickas automatiskt.
 
-  [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
+  [CSP för Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Tidpunkt för daglig snabbsökning**: Välj vilken timme en daglig snabbsökning ska köras. **Inte konfigurerad** kör ingen daglig genomsökning. Om du vill göra fler anpassningar konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
 
@@ -825,11 +828,11 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   > [!TIP]
   > Den här inställningen kan orsaka en konflikt med inställningen **Tidpunkt för daglig snabbsökning**. Några rekommendationer:  
   >
-  > - Om du vill schemalägga en daglig snabb sökning och en fullständig veckovis fullständig genomsökning:
-  >   1. Konfigurera **tiden för att utföra en daglig snabb genomsöknings** inställning.
-  >   2. Konfigurera den **typ av system genomsökning som ska utföras** för en fullständig genomsökning.
+  > - Om du vill schemalägga en daglig snabb genomsökning och en veckovis fullständig genomsökning gör du följande:
+  >   1. Konfigurera inställningen **Tidpunkt för daglig snabbsökning**.
+  >   2. Konfigurera **Typ av systemgenomsökning som ska utföras** till en fullständig genomsökning.
   > 
-  > - Om du bara vill ha en snabb genomsökning dagligen (ingen fullständig genomsökning) använder du antingen inställningen: **tid för att utföra en daglig snabb sökning eller en** **typ av system genomsökning som ska utföras**. Om du till exempel vill köra en snabbgenomsökning varje tisdag 06:00 konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
+  > - Om du bara vill ha en snabb genomsökning dagligen (ingen fullständig genomsökning) använder du antingen inställningen **Tidpunkt för daglig snabbsökning** eller **Typ av systemgenomsökning som ska utföras**. Om du till exempel vill köra en snabbgenomsökning varje tisdag 06:00 konfigurerar du inställningen **Typ av systemgenomsökning som ska utföras**.
   > 
   > - Konfigurera inte inställningen **Tidpunkt för daglig snabbsökning** samtidigt som **Typ av systemgenomsökning som ska utföras** är inställd på **Snabbsökning**. Dessa inställningar kan orsaka en konflikt och genomsökningen kanske inte körs.
 
@@ -844,11 +847,19 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
 
   Mer information om potentiellt oönskade appar finns i [Identifiera och blockera potentiellt oönskade program](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-  [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  [CSP för Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
-- **Skicka exempel medgivande**: för närvarande har den här inställningen ingen effekt. Använd inte den här inställningen. Det kan tas bort i en framtida version.
+- **Medgivande till att skicka stickprov**: För närvarande har den här inställningen ingen inverkan. Använd inte den här inställningen. Det kan tas bort i en framtida version.
 
-- **Åtgärder vid identifiering av skadlig kod**: Välj hur du vill hantera hot mot skadlig kod. **Inte konfigurerad** (standard) låter Microsoft Defender välja det bästa alternativet. När alternativet ställs in på **Aktivera**, väljer du vilka åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Alternativen är:
+- **Kontinuerligt skydd**: **Blockera** förhindrar genomsökning av filer som har öppnats eller laddats ned. Användare kan inte aktivera det.
+
+  När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Om du blockerar inställningen och sedan ändrar tillbaka den till **Inte konfigurerad** låter Intune inställningen vara kvar i dess tidigare OS-konfigurerade tillstånd. Som standard aktiverar operativsystemet den här funktionen och tillåter att användare ändrar den.
+
+  Intune aktiverar inte den här funktionen. Om du vill aktivera den använder du en anpassad URI.
+
+  [CSP för Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
+
+- **Åtgärder vid hot om identifierad skadlig kod**: Välj hur du vill hantera hot från skadlig kod. **Inte konfigurerad** (standard) låter Microsoft Defender välja det bästa alternativet. När alternativet ställs in på **Aktivera**, väljer du vilka åtgärder du vill att Defender ska vidta för varje hotnivå den identifierar: låg, måttlig, hög och allvarlig. Alternativen är:
   
   - **Rensa**
   - **Karantän**
@@ -857,9 +868,9 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
   - **Användardefinierad**
   - **Blockera**
 
-  Om åtgärden inte är möjlig väljer Microsoft Defender det bästa alternativet för att säkerställa att hotet åtgärdas. 
+  Om din åtgärd inte är möjlig väljer Windows Defender det bästa alternativet för att oskadliggöra hotet. 
 
-  [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
+  [CSP för Defender/ThreatSeverityDefaultAction](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Microsoft Defender antivirusundantag
 
@@ -871,83 +882,83 @@ De här inställningarna använder [CSP för Defender-princip](https://docs.micr
 
 ### <a name="battery"></a>Batteri
 
-- **Batteri nivå för att aktivera energi spar läge på**: när enheten använder batteri drift anger du batteriets laddnings nivå för att aktivera energi spar läge från 0-100. Ange ett procent värde som anger batteriets laddnings nivå. Standardvärdet är 70 %. När värdet är 70% aktive ras energi spar läge när batteriet har 70% eller mindre tillgängligt.
+- **Batterinivå för aktivering av energisparläge**: Ange den laddningsnivå för batteriet då energisparläge ska aktiveras, 0 till 100, när enheten använder batteridrift. Ange ett procentvärde som anger batteriets laddningsnivå. Standardvärdet är 70 %. När detta anges 70 % aktiveras energisparläge när batteriet har 70 % eller mindre laddning.
 
-  [Ström-/EnergySaverBatteryThresholdOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
+  [CSP för Power/EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
 
-- **Locket stängs (endast mobil)** : när enheten använder batteri drift väljer du vad som händer när locket stängs. Alternativen är:
+- **Stängning av lock (endast mobil)** : Välj vad som ska hända när enheten använder batteridrift och locket stängs. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
-  - **Ingen åtgärd**: enheten är kvar på och fortsätter att använda batteri drift.
-  - **Vilo**läge: enheten försätts i vilo läge och använder en liten stor batteri laddning. Datorn är fortfarande på och öppna appar och filer lagras i RAM-minne (Random Access Memory).
-  - **Vilo**läge: enheten försätts i vilo läge. Öppna appar och filer lagras på hård disken och enheten stängs av.
-  - **Avstängning**: enheten stängs av. Öppna appar och filer stängs utan att spara.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
+  - **Ingen åtgärd**: Enheten förblir aktiverad och fortsätter att använda batteridrift.
+  - **Viloläge**: Enheten försätts i strömsparläge och använder en liten mängd batteriladdning. Datorn förblir på, och öppnade appar och filer lagras i RAM (Random Access Memory).
+  - **Viloläge**: Enheten försätts i viloläge. Öppnade appar och filer lagras på hårddisken, och enheten stängs av.
+  - **Stäng av**: Enheten stängs av. Öppnade appar och filer stängs utan att sparas.
 
-  [Ström-/SelectLidCloseActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
+  [CSP för Power/SelectLidCloseActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
 
-- **Ström knapp**: när enheten använder batteri drift väljer du vad som händer när strömbrytaren är markerad. Alternativen är:
+- **Strömknapp**: Välj vad som ska hända när enheten använder batteridrift och strömknappen väljs. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
-  - **Ingen åtgärd**: enheten är kvar på och fortsätter att använda batteri drift.
-  - **Vilo**läge: enheten försätts i vilo läge och använder en liten stor batteri laddning. Datorn är fortfarande på och öppna appar och filer lagras i RAM-minne (Random Access Memory).
-  - **Vilo**läge: enheten försätts i vilo läge. Öppna appar och filer lagras på hård disken och enheten stängs av.
-  - **Avstängning**: enheten stängs av. Öppna appar och filer stängs utan att spara.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
+  - **Ingen åtgärd**: Enheten förblir aktiverad och fortsätter att använda batteridrift.
+  - **Viloläge**: Enheten försätts i strömsparläge och använder en liten mängd batteriladdning. Datorn förblir på, och öppnade appar och filer lagras i RAM (Random Access Memory).
+  - **Viloläge**: Enheten försätts i viloläge. Öppnade appar och filer lagras på hårddisken, och enheten stängs av.
+  - **Stäng av**: Enheten stängs av. Öppnade appar och filer stängs utan att sparas.
 
-  [Ström-/SelectPowerButtonActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
+  [CSP för Power/SelectPowerButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
 
-- **Vila-knapp**: när enheten använder batteri drift väljer du vad som händer när du väljer vila-knappen. Alternativen är:
+- **Vila**: Välj vad som ska hända när enheten använder batteridrift och knappen Strömsparläge väljs. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
-  - **Ingen åtgärd**: enheten är kvar på och fortsätter att använda batteri drift.
-  - **Vilo**läge: enheten försätts i vilo läge och använder en liten stor batteri laddning. Datorn är fortfarande på och öppna appar och filer lagras i RAM-minne (Random Access Memory).
-  - **Vilo**läge: enheten försätts i vilo läge. Öppna appar och filer lagras på hård disken och enheten stängs av.
-  - **Avstängning**: enheten stängs av. Öppna appar och filer stängs utan att spara.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
+  - **Ingen åtgärd**: Enheten förblir aktiverad och fortsätter att använda batteridrift.
+  - **Viloläge**: Enheten försätts i strömsparläge och använder en liten mängd batteriladdning. Datorn förblir på, och öppnade appar och filer lagras i RAM (Random Access Memory).
+  - **Viloläge**: Enheten försätts i viloläge. Öppnade appar och filer lagras på hårddisken, och enheten stängs av.
+  - **Stäng av**: Enheten stängs av. Öppnade appar och filer stängs utan att sparas.
 
-  [Ström-/SelectSleepButtonActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
+  [CSP för Power/SelectSleepButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
 
-- **Hybrid vilo**läge: när enheten använder batteri drift kan du **inaktivera** förhindrar att enheten försätts i hybrid vilo läge. I hybrid vilo läge lagras öppna appar och filer i RAM-minnet och på hård disken. En liten mängd batteri avgift används. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Hybridströmsparläge**: När enheten använder batteridrift förhindrar **Inaktivera** enheten från att försättas i hybridströmsparläge. I hybridströmsparläge lagras öppna appar och filer i RAM och på hårddisken. Detta använder en liten mängd batteriladdning. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 
-  [Ström-/TurnOffHybridSleepOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
+  [CSP för Power/TurnOffHybridSleepOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
 
-### <a name="pluggedin"></a>Ansluten
+### <a name="pluggedin"></a>PluggedIn
 
-- **Batteri nivå för att aktivera energi spar läge på**: när enheten är ansluten anger du batteriets laddnings nivå för att aktivera energi spar läge från 0-100. Ange ett procent värde som anger batteriets laddnings nivå. Standardvärdet är 70 %. När värdet är 70% aktive ras energi spar läge när batteriet har 70% eller mindre tillgängligt.
+- **Batterinivå för aktivering av energisparläge**: Ange den laddningsnivå för batteriet då energisparläge ska aktiveras, 0 till 100, när enheten är ansluten till ström. Ange ett procentvärde som anger batteriets laddningsnivå. Standardvärdet är 70 %. När detta anges 70 % aktiveras energisparläge när batteriet har 70 % eller mindre laddning.
 
-  [Ström-/EnergySaverBatteryThresholdPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
+  [CSP för Power/EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
 
-- **Locket stängs (endast mobil)** : när enheten är ansluten väljer du vad som händer när locket stängs. Alternativen är:
+- **Stängning av lock (endast mobil)** : Välj vad som ska hända när enheten är ansluten till ström och locket stängs. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
-  - **Ingen åtgärd**: enheten är kvar.
-  - **Vila**: enheten försätts i vilo läge. Datorn är fortfarande på och öppna appar och filer lagras i RAM-minne (Random Access Memory).
-  - **Vilo**läge: enheten försätts i vilo läge. Öppna appar och filer lagras på hård disken och enheten stängs av.
-  - **Avstängning**: enheten stängs av. Öppna appar och filer stängs utan att spara.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
+  - **Ingen åtgärd**: Enheten förblir aktiverad.
+  - **Viloläge**: Enheten försätts i strömsparläge. Datorn förblir på, och öppnade appar och filer lagras i RAM (Random Access Memory).
+  - **Viloläge**: Enheten försätts i viloläge. Öppnade appar och filer lagras på hårddisken, och enheten stängs av.
+  - **Stäng av**: Enheten stängs av. Öppnade appar och filer stängs utan att sparas.
   
-    [Ström-/SelectLidCloseActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
+    [CSP för Power/SelectLidCloseActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
   
-- **Ström knapp**: när enheten är ansluten väljer du vad som händer när strömbrytaren är markerad. Alternativen är:
+- **Strömknapp**: Välj vad som ska hända när enheten är ansluten till ström och strömknappen väljs. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
-  - **Ingen åtgärd**: enheten är kvar.
-  - **Vila**: enheten försätts i vilo läge. Datorn är fortfarande på och öppna appar och filer lagras i RAM-minne (Random Access Memory).
-  - **Vilo**läge: enheten försätts i vilo läge. Öppna appar och filer lagras på hård disken och enheten stängs av.
-  - **Avstängning**: enheten stängs av. Öppna appar och filer stängs utan att spara.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
+  - **Ingen åtgärd**: Enheten förblir aktiverad.
+  - **Viloläge**: Enheten försätts i strömsparläge. Datorn förblir på, och öppnade appar och filer lagras i RAM (Random Access Memory).
+  - **Viloläge**: Enheten försätts i viloläge. Öppnade appar och filer lagras på hårddisken, och enheten stängs av.
+  - **Stäng av**: Enheten stängs av. Öppnade appar och filer stängs utan att sparas.
 
-  [Ström-/SelectPowerButtonActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
+  [CSP för Power/SelectPowerButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
 
-- **Vila-knapp**: när enheten är ansluten väljer du vad som händer när du väljer vila-knappen. Alternativen är:
+- **Vila**: Välj vad som ska hända när enheten är ansluten till ström och knappen Strömsparläge väljs. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Intune ändrar eller uppdaterar inte den här inställningen.
-  - **Ingen åtgärd**: enheten är kvar.
-  - **Vila**: enheten försätts i vilo läge. Datorn är fortfarande på och öppna appar och filer lagras i RAM-minne (Random Access Memory).
-  - **Vilo**läge: enheten försätts i vilo läge. Öppna appar och filer lagras på hård disken och enheten stängs av.
-  - **Avstängning**: enheten stängs av. Öppna appar och filer stängs utan att spara.
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
+  - **Ingen åtgärd**: Enheten förblir aktiverad.
+  - **Viloläge**: Enheten försätts i strömsparläge. Datorn förblir på, och öppnade appar och filer lagras i RAM (Random Access Memory).
+  - **Viloläge**: Enheten försätts i viloläge. Öppnade appar och filer lagras på hårddisken, och enheten stängs av.
+  - **Stäng av**: Enheten stängs av. Öppnade appar och filer stängs utan att sparas.
 
-  [Ström-/SelectSleepButtonActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
+  [CSP för Power/SelectSleepButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
 
-- **Hybrid vilo**läge: när enheten är **ansluten förhindrar du** att enheten försätts i hybrid vilo läge. I hybrid vilo läge lagras öppna appar och filer i RAM-minnet och på hård disken. Om inställningen **inte är konfigurerad eller inte är konfigurerad** , ändras eller uppdateras inte Intune.
+- **Hybridströmsparläge**: När enheten är ansluten till ström förhindrar **Inaktivera** enheten från att försättas i hybridströmsparläge. I hybridströmsparläge lagras öppna appar och filer i RAM och på hårddisken. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen.
 
-  [Ström-/TurnOffHybridSleepPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
+  [CSP för Power/TurnOffHybridSleepPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
 ## <a name="next-steps"></a>Nästa steg
 
