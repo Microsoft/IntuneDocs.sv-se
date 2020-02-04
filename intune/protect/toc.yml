@@ -8,7 +8,7 @@
       displayName: compliant; noncompliant; mfa
 - name: Snabbstarter
   items:
-    - name: Skapa en enhetsefterlevnadsprincip
+    - name: Skapa en efterlevnadsprincip för enheten
       href: quickstart-set-password-length-android.md
     - name: Skicka meddelanden till icke-kompatibla enheter
       href: quickstart-send-notification.md
@@ -46,13 +46,13 @@
           href: privacy-data-audit-export-delete.md
         - name: Windows informationsskydd
           href: windows-information-protection-configure.md
-- name: Instruktioner
+- name: Instruktionsguider
   items:
     - name: Ange regler för enheter som tillåter åtkomst till resurser
       items:
         - name: Översikt över efterlevnad
           href: device-compliance-get-started.md
-        - name: Skapa en princip
+        - name: Skapa en policy
           href: create-compliance-policy.md
         - name: Platsbaserad efterlevnad
           href: use-network-locations.md
@@ -225,6 +225,20 @@
           href: troubleshoot-conditional-access.md
         - name: Felsök certifikatanslutning
           href: troubleshoot-certificate-connector-events.md
+        - name: Felsöka SCEP-certifikatprofiler
+          items:
+            - name: Felsöka SCEP-certifikatprofiler
+              href: troubleshoot-scep-certificate-profiles.md
+            - name: Distribuera profiler till enheter
+              href: troubleshoot-scep-certificate-profile-deployment.md
+            - name: Kommunikation mellan enheter och NDES
+              href: troubleshoot-scep-certificate-device-to-ndes.md
+            - name: NDES-åtgärder
+              href: troubleshoot-scep-certificate-ndes-policy-module.md
+            - name: Leverera certifikat till enheter
+              href: troubleshoot-scep-certificate-delivery.md
+            - name: Rapportering om certifikatdistribution
+              href: troubleshoot-scep-certificate-reporting.md
         - name: Felsöka Exchange Connector
           items:
             - name: Felsöka Exchange Connector

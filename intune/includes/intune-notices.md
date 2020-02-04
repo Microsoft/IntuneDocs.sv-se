@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: e745290991da4d80c7e3839250edbfdd64ef1b7a
-ms.sourcegitcommit: 01c57ac880dcb5f474908977c89810f5bedaf326
+ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75760982"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912648"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
 
@@ -23,7 +23,7 @@ I den här januariuppdateringen av Intune-tjänsten planerar vi att lansera en n
 Idag finns det tre roller som är tillgängliga i Azure AD för dina säkerhetstekniker:
 - Säkerhetsläsarrollen i Azure AD som ger läsbehörighet till Intune.
 - Säkerhetsoperatörsrollen i Azure AD som ger läsbehörighet till Intune.
-- Säkerhetsadministratör i Azure AD. När Intune lanserar januariuppdateringen, tillsammans med läsbehörighet till Intune, så är de nya behörigheterna som tillhandahålls av rollen Endpoint Security Manager följande:
+- Säkerhetsadministratör i Azure AD. När Intune lanserar januariuppdateringen, med de nya rollerna för läsbehörighet till Intune, så kan rollen Endpoint Security Manager tilldela följande behörigheter:
     - Läsa, skapa, uppdatera, ta bort och tilldela efterlevnadsprinciper för enheter
     - Läsa, ta bort och uppdatera hanterade enheter
     - Läsa, skapa, uppdatera, ta bort och tilldela säkerhetsbaslinjer
@@ -51,7 +51,7 @@ https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 Microsofts mainstream-support för Windows Phone 8.1 upphörde under juli 2017 och utökad support upphörde under juni 2019. Företagsportalappen för Windows Phone 8.1 har varit i berett läge sedan oktober 2017. Support för Windows Phone 8.1 på Microsoft Intune upphör den 20 februari 2020.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Efter 20 februari 2020 får de här enheterna inga nya säkerhetsuppdateringar och du kommer inte att kunna registrera några nya enheter. Befintliga Windows Phone 8.1-enheter förblir registrerade (policy, appar, rapportering), men observera att felsökning av befintlig registrering inte kommer att stödas efter detta datum eftersom support för plattformen redan har upphört från många komponenter, till exempel certifikat från tredje part. Kompatibilitetstestning mellan Intune och Windows Phone 8.1 kommer att stoppas.
+Efter 20 februari 2020 får de här enheterna inga nya säkerhetsuppdateringar och du kommer inte att kunna registrera några nya enheter. Befintliga Windows Phone 8.1-enheter förblir registrerade (policy, appar, rapportering), men observera att felsökning av befintliga registreringar inte stöds efter detta datum eftersom stödet för plattformen redan har upphört för många komponenter som certifikat från tredje part. Kompatibilitetstestning mellan Intune och Windows Phone 8.1 kommer att stoppas.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Du kan kontrollera din Intune-rapportering för att se vilka enheter eller användare som kan påverkas. Gå till Enheter > Alla enheter och filtrera efter operativsystem. Du kan lägga till fler kolumner för att hjälpa till att identifiera vilka i din organisation som har enheter som kör Windows Phone 8.1. Uppmana dina slutanvändare att uppgradera sina enheter till en operativsystemversion som stöds.
@@ -72,25 +72,11 @@ För att säkerställa en smidig övergång från Intune Managed Browser till Mi
 2. Se till att alla MAM-skyddade appar i din miljö har appskyddsprincipsinställningen "Begränsa överföring av webbinnehåll till andra appar" inställd på "Principhanterade webbläsare". 
 3. Ange alla MAM-skyddade med den hanterade appkonfigurationsinställningen "com.microsoft.intune.useEdge" inställd som sant som mål. Från och med nästa månad med lanseringen av 1911, kommer du att kunna utföra steg 2 och 3 genom att helt enkelt konfigurera inställningen "Begränsa överföring av webbinnehåll till andra appar" så att "Microsoft Edge" är valt i dataskyddsavsnittet i appskyddsprinciperna. 
 
-Stöd för webbklipp i iOS och Android kommer. När det här stödet släpps måste du ange befintliga webbklipp som mål på nytt för att säkerställa att de öppnas i Microsoft Edge i stället för i Managed Browser. 
+Stöd för webbklipp i iOS och Android kommer. När det här stödet lanseras måste du rikta om befintliga webbklipp så att de öppnas i Microsoft Edge i stället för i Managed Browser. 
 
 #### <a name="additional-information"></a>Ytterligare information
-Besök våra dokument om att [använda Microsoft Edge med appskyddsprinciper](../apps/manage-microsoft-edge.md) för mer information eller läs vidare i våra [supportbloggsinlägg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+Läs våra dokument om att [använda Microsoft Edge med policyer för appsäkerhet](../apps/manage-microsoft-edge.md) om du vill veta mer, eller läs våra [blogginlägg](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Planera för förändring: Uppdaterad upplevelse vid registrering av dedikerade Android Enterprise-enheter i Intune<!--5198878-->
-I novemberversionen, eller version 1911, av Intune har vi lagt till stöd för distribution av SCEP-enhetscertifikat till dedikerade Android Enterprise-enheter för att möjliggöra certifikatbaserad åtkomst till Wi-Fi-profiler. Den här ändringen omfattar även vissa mindre ändringar i flödet när du registrerar dedikerade Android Enterprise-enheter.
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Om du hanterar dedikerade Android Enterprise-enheter i din miljö kommer du att börja se några ändringar i november.
-
-- För nya registreringar av dedikerade Android Enterprise-enheter: Slutanvändarna ser en annan uppsättning steg på enheterna under registreringen. Registreringen startar fortfarande på samma sätt som i dag (med QR, NFC, Zero-Touch eller enhetsidentifierare), men från och med novemberversionen finns det ett obligatoriskt appinstallationssteg.
-- För befintliga Android-enheter som registrerats som dedikerade enheter: Intune börjar automatiskt installera Microsoft Intune-appen på enheter från och med början av november. Du behöver inte vidta någon åtgärd. Appen laddas ned och installeras automatiskt på enheterna. 
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Du bör planera för att uppdatera vägledningen för slutanvändarna och informera supportavdelningen om den här ändringen. Klicka på Ytterligare information för mer information och skärmbilder. Vi uppdaterar sidan Nyheter när ändringen börjar distribueras.
-
-#### <a name="additional-information"></a>Ytterligare information
-[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Stöd för hantering av äldre datorer upphör
 
@@ -106,7 +92,7 @@ På grund av dessa ändringar av Google kommer Intune-användare att påverkas p
 - Intune kommer bara att kunna erbjuda fullt stöd för enhetsadministratörshanterade Android-enheter som kör Android 10 och senare till och med andra kvartalet 2020. Enheter med Android 10 eller senare som hanteras av enhetsadministratörer efter denna tidpunkt kommer inte längre att kunna hanteras fullt ut. Det innebär exempelvis att berörda enheter inte får de nya lösenordskraven.
     - Samsung KNOX-enheter kommer inte att påverkas av denna tidsram, eftersom utökad support tillhandahålls via Intunes integrering med KNOX-plattformen. Detta ger dig mer tid att planera övergången från enhetsadministratörernas hantering.    
 - Android-enheter som hanteras av en enhetsadministratör som blir kvar på tidigare versioner av Android än Android 10 påverkas inte och kan fortfarande hanteras av en enhetsadministratör.    
-- För alla enheter med Android 10 och senare har Google begränsat möjligheten för hanteringsagenter för enhetsadministratören, t.ex. företagsportalen, att komma åt information om enhetsidentifierare. Denna begränsning påverkar följande Intune-funktioner efter att enheten har uppdaterats till Android 10 eller senare:  
+- För alla enheter med Android 10 och senare har Google begränsat möjligheten för hanteringsagenter för enhetsadministratören, t.ex. företagsportalen, att komma åt information om enhetsidentifierare. Den här begränsningen påverkar följande Intune-funktioner när enheten uppdateras till Android 10 eller senare:  
     - Nätverksåtkomstkontroll för VPN fungerar inte längre.   
     - Om enheter identifieras som företagsägda med IMEI eller serienummer markeras de inte automatiskt som företagsägda.  
     - IMEI och serienumret kommer inte längre att vara synligt för IT-administratörer i Intune. 
@@ -158,6 +144,6 @@ Vi uppmuntrar din organisation att omedelbart överväga den här åtgärdsplane
 - [Desktop App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) är en Microsoft-tjänst som hjälper dig med programkompatibilitet. Du kan utforska tjänsten via FastTrack.
 - Migrera befintliga äldre klienthanterade enheter med Intune-program till Microsofts rekommenderade lösning för att hantera Windows 10 med MDM-hantering. Registrera alla nya Windows 10-datorer med MDM-hantering för Intune på Azure-portalen.
 
-Mer information finns i [blogginlägget här](https://aka.ms/Windows7_Intune).
+Du kan läsa mer i [det här blogginlägget](https://aka.ms/Windows7_Intune).
 
 
