@@ -7,30 +7,14 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 6064fb657454106a8a7213e0bbbcecdcef765857
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912648"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966374"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
-
-### <a name="updated-feature-new-rbac-role-coming-to-intune--4253397--"></a>Uppdaterad funktion: Ny RBAC-roll kommer till Intune<!--4253397-->
-I den här januariuppdateringen av Intune-tjänsten planerar vi att lansera en ny säkerhetsroll i Intune. Den här rollen visas som ”Endpoint Security Manager” i Intune och rollen är en utökning av rollen ”säkerhetsadministratör” från Azure AD.
- 
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Idag finns det tre roller som är tillgängliga i Azure AD för dina säkerhetstekniker:
-- Säkerhetsläsarrollen i Azure AD som ger läsbehörighet till Intune.
-- Säkerhetsoperatörsrollen i Azure AD som ger läsbehörighet till Intune.
-- Säkerhetsadministratör i Azure AD. När Intune lanserar januariuppdateringen, med de nya rollerna för läsbehörighet till Intune, så kan rollen Endpoint Security Manager tilldela följande behörigheter:
-    - Läsa, skapa, uppdatera, ta bort och tilldela efterlevnadsprinciper för enheter
-    - Läsa, ta bort och uppdatera hanterade enheter
-    - Läsa, skapa, uppdatera, ta bort och tilldela säkerhetsbaslinjer
-    - Läsa och uppdatera säkerhetsuppgifter
- 
-### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Granska dina Intune RBAC-roller idag. Om du för närvarande bara har globala administratörer som roller behövs inga ändringar. Om du använder roller och du vill ha den granularitet som Endpoint Security Manager tillhandahåller, tilldelar du sedan rollen när den är tillgänglig. Gå till Intunes sida med [Nyheter](../fundamentals/whats-new.md) för att få uppdaterad information om Intune-lanseringen. 
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Uppdaterad supportinstruktion för mobilappen "Adobe Acrobat Reader för Intune"<!--5746776-->
 I MC188653 i slutet på augusti meddelade vi att Adobe Acrobat Reader för Intune-mobilappen når slutet på sin livslängd den 1 december 2019 och att Adobe planerar att stödja Intunes programskyddsprinciper i sin huvudsakliga app i Acrobat Reader. Sedan dess har vi fått feedback från kunder om att de behövde mer tid för att fortsätta att låta IT-administratörerna skapa mål och slutanvändare börja använda Adobe Acrobat Reader för Intune. Med tanke på den stora användningen av Adobe Acrobat Reader för Intune på slutanvändarnas enheter och dess betydelse i företagsscenarier vill vi se till att alla erfarenheter uppfyller din organisations behov av skydd av appar. 

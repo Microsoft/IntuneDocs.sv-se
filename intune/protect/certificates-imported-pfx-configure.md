@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bad86e561c8695d58296c8f473815a203ef210a
-ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.openlocfilehash: 469ee615cd9a9f1d3a7aee40ce764b8d8100fe69
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258485"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912896"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -132,7 +132,7 @@ PowerShell-modulen tillhandahåller metoder för att skapa en nyckel med Windows
 4. Kör sedan `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
 
    > [!TIP]
-   > Providern du använder måste väljas igen när du importerar PFX-certifikat. Du kan använda  **Microsoft-programvaruprovidern för nyckellagring** men den stöds för att använda en annan provider. Nyckelnamnet anges också som ett exempel och du kan välja ett annat nyckelnamn.
+   > Providern du använder måste väljas igen när du importerar PFX-certifikat. Du kan använda **Microsoft-programvaruprovidern för nyckellagring** men den stöds för att använda en annan provider. Nyckelnamnet anges också som ett exempel och du kan välja ett annat nyckelnamn.
 
    Om du planerar att importera certifikatet kan du exportera den här nyckeln till en fil med följande kommando: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
@@ -175,9 +175,9 @@ Välj den nyckellagrinsprovider som matchar providern du använde för att skapa
 
 5. Konvertera lösenordet för varje PFX-filen du importerar till en säker sträng genom att köra `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 
-6. Om du vill skapa ett **UserPFXCertificate**-objekt kör du `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>"`
+6. Om du vill skapa ett **UserPFXCertificate**-objekt kör du `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
-   Exempelvis: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption" "pkcs1"`
+   Exempelvis: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
 
    > [!NOTE]
    > När du importerar certifikatet från ett annat system än servern där anslutningsappen är installerad måste du använda följande kommando som innehåller nyckelfilsökvägen: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
@@ -207,7 +207,7 @@ När du har importerat certifikaten till Intune skapar du en profil för **PKCS-
 
    - **Avsett syfte**: Ange syftet med de certifikat som har importerats för den här profilen. Administratörer kan importera certifikat med olika syften (till exempel S/MIME-signering eller S/MIME-kryptering). Avsett syfte som valts i certifikatprofilen matchar certifikatprofilen med rätt importerade certifikat. Avsett syfte är en tagg för att gruppera importerade certifikat och garanterar inte att certifikat som importerats med den taggen uppfyller det avsedda syftet.  
    - **Certifikatets giltighetsperiod**: Om giltighetsperioden inte har ändrats i certifikatmallen är standardinställningen för det här alternativet ett år.
-   - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.
+   - **Nyckellagringsprovider (KSP)**: För Windows väljer du var du vill lagra nycklarna på enheten.
 
 5. Välj **OK** > **Skapa** för att spara profilen.
 

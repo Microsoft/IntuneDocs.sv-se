@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 6ebcb81cd0f186a3fd23e0701d12ea871eab129a
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563591"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912581"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Lägga till Microsoft Edge till macOS-enheter med hjälp av Microsoft Intune
 
@@ -65,16 +65,20 @@ I det här steget anger du information om den här appdistributionen. Den här i
 I det här steget konfigurerar du installationsalternativ för appen.
 
 1. Välj **Appinställningar** i fönstret **Lägg till app**.
-2. I fönstret **Appinställningar** har kanalen **Beta** valts automatiskt, och den kan inte ändras.
-    - Kanalen **Beta** är den mest stabila Microsoft Edge-förhandsupplevelsen och det bästa valet för en fullständig pilotlansering i din organisation. Det sker större uppdateringar var sjätte vecka.
+2. Bestäm vilken Edge-kanal du ska distribuera appen från genom att gå till fönstret **Appinställningar** och välja **Stabil**, **Beta** eller **Dev** i listan **Kanal**.
+
+    - Kanalen **Stabil** är den rekommenderade kanalen för bredare distributioner i företagsmiljöer. Den uppdateras var sjätte vecka, och varje utgåva innehåller förbättringar från betakanalen.
+    - Kanalen **Beta** är den mest stabila Microsoft Edge-förhandsupplevelsen och det bästa valet för en fullständig pilotlansering i din organisation. Större uppdateringar sker var sjätte vecka, och i varje ny version ingår lärdomar och förbättringar från Dev-kanalen.
+    - **Dev**-kanalen är redo för företagsfeedback för Windows, Windows Server och macOS. Den uppdateras varje vecka och innehåller de senaste förbättringarna och korrigeringarna.
 
     > [!NOTE]
     > Microsoft Edge-webbläsarens logotyp visas med appen när användare söker på företagsportalen.
+
 3.  Välj **OK**.
 
 ## <a name="select-scope-tags-optional"></a>Välj omfångstaggar (valfritt)
 Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Fullständig information om omfångstaggar finns i Använda RBAC och omfångstaggar för distribuerad IT.
-1.  Välj **Omfång (taggar)**  > **Lägg till**.
+1.  Välj **Omfång (taggar)** > **Lägg till**.
 2.  Använd rutan **Välj** för att söka efter omfångstaggar.
 3.  Markera kryssrutan bredvid de omfångstaggar som du vill tilldela till den här appen.
 4.  Klicka på **Välj** > **OK**.

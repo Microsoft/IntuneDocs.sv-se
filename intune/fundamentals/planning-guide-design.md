@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885786"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886738"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -308,7 +308,10 @@ Wi-Fi-profiler används för att ansluta en mobil enhet till ett trådlöst nät
 
 Nedan visas ett exempel på en utformning för en Wi-Fi-profil:
 
-| **Typ** | **Profilnamn** | **Enhetsplattform** | **Användningsfall** | | Wi-Fi | Wi-Fi-profil Asien | Android | Företag, BYOD i regionen Asien | | Wi-Fi | Wi-Fi-profil Nordamerika | Android, iOS, Windows 10 Mobile | Företag, BYOD regionen Nordamerika |
+| **Typ** | **Profilnamn** | **Enhetsplattform** | **Användningsfall** |
+|:---:|:---:|:---:|:---:|
+| Wi-Fi | Wi-Fi-profil | Android | Företag, BYOD regionen Asien|
+| Wi-Fi | Nordamerika Wi-Fi-profil | Android, iOS, Windows 10 Mobile | Företag, BYOD regionen Nordamerika |
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för Wi-Fi-profilen.
 
