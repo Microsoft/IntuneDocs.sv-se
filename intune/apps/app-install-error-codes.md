@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/27/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ade7676cb8f6265dd63eb1ba7847c50f526a9a
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
-ms.translationtype: HT
+ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76541867"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812447"
 ---
 # <a name="intune-app-installation-error-reference"></a>Referens för fel vid Intune-appinstallation
 
@@ -78,7 +78,7 @@ Följande felmeddelanden och beskrivningar ger information om iOS-installationsf
 | 0x87D13B9A | -2016330854 | Okänt problem. Försök igen. | Appinstallationen misslyckades på grund av ett okänt problem. Försök igen senare. |
 | 0x87D13B9B | -2016330853 | Appinstallationen misslyckades. Intune gör ett nytt försök nästa gång enheten synkroniseras. | Ett enhetsfel påträffades under appinstallationen. Synkronisera enheten och prova att installera appen igen. |
 | 0x87d13b7e | -2016330882 | Licenstilldelningen misslyckades med Apple-felet Inga återstående VPP-licenser.  | Det här beteendet är avsiktligt. Du löser detta genom att köpa ytterligare VPP-licenser eller återta licenser från användare som inte längre är riktade. |
-| 0x87d13b6e | -2016330898 | Appinstallationsfel 12024: Okänd orsak.  | Apple har inte gett oss tillräckligt med information för att avgöra varför installationen misslyckades.   Inget att rapportera. |
+| 0x87d13b6e | -2016330898 | Fel vid appinstallation 12024: Okänd orsak.  | Apple har inte gett oss tillräckligt med information för att avgöra varför installationen misslyckades.   Inget att rapportera. |
 | 0x87d13b7f | -2016330881 | Nödvändig princip för appkonfiguration finns inte. Se till att principen riktas till samma grupper.  | Appen kräver appkonfiguration men det finns ingen riktad appkonfiguration. Administratören bör se till att de grupper som appen är riktad till också har den nödvändiga appkonfigurationen riktad till grupperna. |
 | 0x87d13b69 | -2016330903 | VPP-enhetslicensiering gäller endast för enheter med iOS 9.0+.  | Uppgradera berörda iOS-enheter till iOS 9.0+. |
 | 0x87d13b8f | -2016330865 | Programmet är installerat på enheten men är ohanterat.  | Det här felet inträffar bara för LOB-appar. Appen installerades utanför Intune. Du kan åtgärda det här felet genom att avinstallera appen från enheten. Nästa gång enhetssynkronisering sker bör enheten installera appen från Intune. |
@@ -90,9 +90,7 @@ Följande felmeddelanden och beskrivningar ger information om iOS-installationsf
 | 0x87D13B72 | -2016330894 | Du har förlorat anslutningen till Internet.  | Fel vid validering av appmanifest på grund av nätverksanslutning (anslutningen bröts). |
 | 0x87D13B73 | -2016330893 | Du har förlorat anslutningen till Internet.  | Fel vid validering av appmanifest på grund av nätverksanslutning (inte ansluten till Internet). |
 | 0x87D13B77 | -2016330889 | Ingen säker anslutning kunde upprättas.  | Fel vid validering av appmanifest på grund av nätverksanslutning (säker anslutning misslyckades). |
-| 0x87D13B6F | -2016330897 |  |   |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | Det gick inte att installera appen på grund av att det inte gick att ansluta till iTunes Store. |
-| 0x87D13B6E | -2016330898 |   | Fel vid validering av appmanifest på grund av nätverksanslutning (okänt). |
 | 0x87D13B9F  | -2016330849 | Det finns en tillgänglig uppdatering för VPP-appen. | Den här koden returneras när en VPP-app är installerad men en senare version är tillgänglig. |
 
 ## <a name="other-installation-errors"></a>Andra installationsfel

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8d4fd8dabd862899cab116c61d4ae4584d398c
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 10f3d4c54d9a8fcb797ae3359b1a833ac9080548
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899381"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912707"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin-bindningar
 
@@ -52,14 +52,25 @@ Med Microsoft Intune App SDK Xamarin-bindningar kan du inkludera Intunes appskyd
 
 Xamarin-appar som skapats med Intune App SDK Xamarin-bindningar kan nu ta emot Intunes appskyddsprinciper på både MDM-registrerade Intune-enheter och oregistrerade enheter.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
-Granska [licensvillkoren](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Skriv ut och behåll en kopia av licensvillkoren för framtida referens. Genom att ladda ned och använda Intune App SDK Xamarin-bindningar godkänner du licensvillkoren. Om du inte accepterar villkoren har du inte rätt att använda programvaran.
+Granska [licensvillkoren](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Skriv ut och behåll en kopia av licensvillkoren för framtida referens. Genom att ladda ned och använda Intune App SDK Xamarin-bindningar godkänner du licensvillkoren. Om du inte godkänner dem ska du inte använda programvaran.
 
 Intune SDK använder [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) för [autentisering](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) och villkorsstyrda startscenarier som kräver att apparna har konfigurerats med [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
 Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har ett eget anpassat klient-ID som används för att autentisera med Azure Active Directory, ser du till att stegen för att ge Xamarin-appen behörigheter till Intune MAM-tjänsten (hantering av mobilprogram) följs. Följ instruktionerna i avsnittet [Ge din app åtkomst till Intune-appskyddstjänsten](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional) i [guiden Komma igång med Intune-SDK:n](app-sdk-get-started.md).
 
+## <a name="security-considerations"></a>Säkerhetsöverväganden
+
+För att förhindra eventuell förfalskning, avslöjande av information och privilegieangrepp:
+
+* Se till att Xamarin-apputveckling utförs på en säker arbetsstation.
+* Se till att bindningarna kommer från en giltig Microsoft-källa:
+  * [MS Intune App SDK NuGet Profile](https://www.nuget.org/profiles/msintuneappsdk)
+  * [Intune App SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* Konfigurera NuGet-konfigurationen för ditt projekt för att lita på signerade, oförändrade NuGet-paket.
+Mer information finns i [Installera signerade paket](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages).
+* Skydda den utdatakatalog som innehåller Xamarin-appen. Fundera på att i stället använda en katalog på användarnivå för utdatan.
 
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Aktivera Intune-appskyddsprinciper i din iOS-mobilapp
@@ -94,7 +105,7 @@ Om programmet redan har konfigurerats för att använda ADAL eller MSAL, och har
        string enrolledAccount = IntuneMAMEnrollmentManager.Instance.EnrolledAccount;
       ```      
 ### <a name="sample-applications"></a>Exempelprogram
-Exempel program som markerar MAM-funktioner i Xamarin. iOS-appar finns på [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
+Exempelprogram som lyfter fram MAM-funktioner i Xamarin.iOS-appar finns på [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
 
 > [!NOTE] 
 > Det finns ingen ommappning för iOS. Integrering i en Xamarin.Forms-app bör vara samma som för ett vanligt Xamarin.iOS-projekt. 
@@ -109,9 +120,9 @@ Exempel program som markerar MAM-funktioner i Xamarin. iOS-appar finns på [GitH
 En fullständig översikt över integreringen av Intune App SDK finns i [utvecklarhandboken för Microsoft Intune App SDK för Android](app-sdk-android.md). När du läser handboken och integrerar Intune App SDK med Xamarin-appen beskriver följande avsnitt skillnaderna mellan implementeringen av en intern Android-app som utvecklas i Java och en Xamarin-app som utvecklas i C#. De här avsnitten kompletterar men ersätter inte resten av handboken.
 
 #### <a name="remapper"></a>Remapper
-Från och med 1.4428.1-versionen kan `Microsoft.Intune.MAM.Remapper`-paketet läggas till i en Xamarin. Android-app som [build-verktyg](app-sdk-android.md#build-tooling) för att utföra Mam klass-, metod-och system tjänster. Om remapper ingår, utförs MAM motsvarande ersättnings delar av de metoder som har bytt namn och MAM program automatiskt när programmet har skapats.
+Från och med version 1.4428.1 kan `Microsoft.Intune.MAM.Remapper`-paketet läggas till i en Xamarin.Android-app som [versionsverktyg](app-sdk-android.md#build-tooling) för att utföra MAM-klass-, metod- och systemtjänstersättningar. Om Remapper ingår, utförs motsvarande MAM-ersättningsdelar av de metoder som har bytt namn och MAM-programavsnitt automatiskt när programmet har skapats.
 
-För att undanta en klass från MAM-ppdateringar av Remapping kan följande egenskap läggas till i dina projekt `.csproj`-filen.
+För att undanta en klass från MAM-bearbetning av Remapper kan följande egenskap läggas till i dina projekts `.csproj`-fil.
 
 ```xml
   <PropertyGroup>
@@ -120,13 +131,13 @@ För att undanta en klass från MAM-ppdateringar av Remapping kan följande egen
 ```
 
 > [!NOTE]
-> För närvarande förhindrar ett problem med remapper fel sökning i Xamarin. Android-appar. Manuell integrering rekommenderas för att felsöka programmet tills problemet har lösts.
+> Remapper förhindrar för närvarande felsökning i Xamarin.Android-appar. Manuell integrering rekommenderas för att felsöka ditt program.
 
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Metoder som fått nya namn](app-sdk-android.md#renamed-methods)
 I många fall har en metod som är tillgänglig i Android-klassen markerats som slutgiltig i MAM-ersättningsklassen. I detta fall tillhandahåller MAM-ersättningsklassen en metod med liknande namn (med suffixet `MAM`) som ska åsidosättas i stället. Om du härleder från `MAMActivity`, i stället för att åsidosätta `OnCreate()` och anropa `base.OnCreate()`, måste `Activity` åsidosätta `OnMAMCreate()` och anropa `base.OnMAMCreate()`.
 
 #### <a name="mam-applicationapp-sdk-androidmdmamapplication"></a>[MAM-program](app-sdk-android.md#mamapplication)
-Din app måste definiera en `Android.App.Application`-klass. Om du manuellt integrerar MAM måste det ärva från `MAMApplication`. Se till att din underklass är korrekt dekorerad med attributet `[Application]` och åsidosätter konstruktorn `(IntPtr, JniHandleOwnership)`.
+Din app måste definiera en `Android.App.Application`-klass. Om du integrerar MAM manuellt måste det ärva från `MAMApplication`. Se till att din underklass är korrekt dekorerad med attributet `[Application]` och åsidosätter konstruktorn `(IntPtr, JniHandleOwnership)`.
 
 ```csharp
     [Application]
@@ -185,7 +196,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 För `Xamarin.Forms`-program utför `Microsoft.Intune.MAM.Remapper`-paketet MAM-klassersättning automatiskt genom att injicera `MAM`-klasser i klasshierarkin för vanliga `Xamarin.Forms`-klasser. 
 
 > [!NOTE]
-> Xamarin.Forms-integrationen ska göras utöver Xamarin.Android-integreringen som beskrivs ovan. Remappingen fungerar annorlunda för Xamarin. Forms-appar så att de manuella MAM-ersättningarna fortfarande måste göras.
+> Xamarin.Forms-integrationen ska göras utöver Xamarin.Android-integreringen som beskrivs ovan. Remapper fungerar annorlunda för Xamarin.Forms-appar, så manuella MAM-ersättningar måste fortfarande göras.
 
 När ommappningen har lagts till i ditt projekt måste du utföra motsvarande MAM-ersättningar. Exempelvis kan `FormsAppCompatActivity` och `FormsApplicationActivity` fortsätta att användas i dina program förutsatt att `OnCreate`- och `OnResume`-åsidosättningar ersätts med MAM-motsvarigheterna `OnMAMCreate` respektive `OnMAMResume`.
 
@@ -203,17 +214,17 @@ När ommappningen har lagts till i ditt projekt måste du utföra motsvarande MA
 Om ersättningarna inte görs kan du få följande kompileringsfel tills du gör ersättningarna:
 * [Kompilatorfel CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Det här felet hittas oftast i det här formatet ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
 Det här förväntas, eftersom när ommappningen ändrar arvet för Xamarin-klasser så blir vissa funktioner `sealed`, och en ny variant av MAM läggs i stället till som åsidosättning.
-* [Kompilatorfel CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Det här felet uppstår ofta i följande form: ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. När ommappningen ändrar arvet för några av Xamarin-klasserna ändras vissa av medlemsfunktionerna till `public`. Om du åsidosätter någon av dessa funktioner måste du ändra åtkomstmodifierarna för dessa åsidosättningar till `public`.
+* [Kompilatorfel CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Det här felet hittas oftast i det här formatet ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. När ommappningen ändrar arvet för några av Xamarin-klasserna ändras vissa av medlemsfunktionerna till `public`. Om du åsidosätter någon av dessa funktioner måste du ändra åtkomstmodifierarna för dessa åsidosättningar till `public`.
 
 > [!NOTE]
 > Ommappningen skriver om ett beroende som Visual Studio använder för automatisk komplettering med IntelliSense. Därför kan du behöva återskapa och läsa in projektet igen när ommappningen läggs till för att IntelliSense ska identifiera ändringarna korrekt.
 
 #### <a name="troubleshooting"></a>Felsökning
-* Om du påträffar en tom, vit skärm i programmet vid lanseringen kan du behöva tvinga navigerings anropen att köras på huvud tråden.
-* Intune SDK Xamarin-bindningarna stöder inte appar som använder en plattforms oberoende ramverk, till exempel MvvmCross på grund av konflikter mellan MvvmCross-och Intune MAM-klasser. Vissa kunder kan ha haft framgång med integreringen efter att ha flyttat sina appar till vanliga Xamarin. Forms, vi ger inte uttryckligen vägledning eller plugin-program för utvecklare som använder MvvmCross.
+* Om du stöter på en tom, vit skärm i programmet vid start kan du behöva tvinga navigeringsanropen att köras på huvudtråden.
+* Intune SDK Xamarin-bindningarna stöder inte appar som använder ett plattformsoberoende ramverk, till exempel MvvmCross, på grund av konflikter mellan MvvmCross- och Intune MAM-klasser. Vissa kunder kan ha haft framgång med integreringen efter att ha flyttat sina appar till vanliga Xamarin.Forms. Vi tillhandahåller inte uttryckligen vägledning eller plugin-program för apputvecklare som använder MvvmCross.
 
 ### <a name="company-portal-app"></a>Företagsportalappen
-Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android-appen på enheten för att aktivera skydds principer för appar. Företagsportalen hämtar appskyddsprinciper från Intune-tjänsten. När appen initieras läser den in principen och koden för att kunna aktivera principen från företagsportalen. Användaren behöver inte vara inloggad.
+Intune SDK Xamarin-bindningar använder sig av närvaron av Android-appen för [Företagsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) på enheten för att aktivera skyddsprinciper. Företagsportalen hämtar appskyddsprinciper från Intune-tjänsten. När appen initieras läser den in principen och koden för att kunna aktivera principen från företagsportalen. Användaren behöver inte vara inloggad.
 
 > [!NOTE]
 > Om Företagsportalsappen inte finns på **Android**-enheten fungerar en Intune-hanterad app som en normal app som saknar stöd för Intunes appskyddsprinciper.
@@ -221,7 +232,7 @@ Intune SDK Xamarin-bindningar använder sig av den [företagsportal](https://pla
 Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera enheten med företagsportalappen.
 
 ### <a name="sample-applications"></a>Exempelprogram
-Exempel program som markerar MAM-funktioner i Xamarin. Android-och Xamarin. Forms-appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
+Exempelprogram som markerar MAM-funktioner i Xamarin.Android- och Xamarin.Forms-appar finns på [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
-## <a name="support"></a>Support
+## <a name="support"></a>Stöd
 Om din organisation är en befintlig Intune-kund kan du kontakta din representant på Microsofts support för att öppna en supportbegäran och skapa ett ärende [på sidan med GitHub-ärenden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). Vi kommer att hjälpa dig så snart vi kan. 

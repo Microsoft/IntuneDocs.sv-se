@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5381d139247424d976b6b510d62681f623203a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ac63ef1f35e7b4730e275c6c9e566c53463c72ce
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72490515"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754804"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
@@ -62,7 +62,7 @@ Mer information finns i:
 
 Registrera en app för att använda Microsoft Graph API:
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administratörs behörighet.
+1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) med administratörsbehörighet.
 
     Om det behövs kan du använda:
     - Klientorganisationens administratörskonto.
@@ -185,7 +185,7 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- Inställningen **Aktivera åtkomst**: __Läsa enhetskonfiguration och principer för Microsoft Intune__
+- Inställningen **Aktivera åtkomst**: __Läs Microsoft Intune-enhetskonfiguration och principer__
 
 - Tillåter läsbehörighet till följande entitetsegenskaper och status:
   - Enhetskonfiguration
@@ -194,7 +194,7 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- Inställningen **Aktivera åtkomst**: __Läsa och skriva enhetskonfiguration och principer för Microsoft Intune__
+- Inställningen **Aktivera åtkomst**: __Läs och skriv Microsoft Intune-enhetskonfiguration och principer__
 
 - Tillåter samma åtgärder som __DeviceManagementConfiguration.Read.All__
 
@@ -240,7 +240,7 @@ Behörighetsomfattningar för Intune kräver för närvarande administratörsåt
 
 - Följande fjärråtgärder är också tillåtna:
   - Hitta enheter
-  - Kringgå aktiveringslås
+  - Inaktivera aktiveringslås
   - Begära fjärrhjälp
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All

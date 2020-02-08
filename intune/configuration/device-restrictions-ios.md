@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39978043428f6ad912832007f60628815d6549a6
-ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
+ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75920081"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754583"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -41,19 +41,19 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="general"></a>Allmänt
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Dela användningsdata**: Välj **Blockera** för att förhindra enheten från att skicka diagnostik- och användningsdata till Apple. **Inte konfigurerad** (standard) tillåter att dessa data skickas.
 
 - **Skärmdump**: Välj **Blockera** för att förhindra skärmbilder eller skärmdumpar på enheten. I iOS 9.0 och senare blockeras även skärminspelningar. **Inte konfigurerad** (standard) låter användaren spara skärminnehållet som en bild eller video.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Ej betrodda TLS-certifikat**: Välj**Blockera** om du vill stoppa ej betrodda TLS-certifikat på enheten. **Inte konfigurerad** (standard) tillåter TLS-certifikat.
 - **Blockera trådlösa PKI-uppdateringar**: **Blockera** hindrar användarna från att ta emot programuppdateringar om inte enheten är ansluten till en dator. **Inte konfigurerad** (standard): tillåter att en enhet tar emot programuppdateringar utan att vara ansluten till en dator.
 - **Begränsa reklamspårning**: Välj **Begränsa** om du vill inaktivera enhetens reklamidentifierare. **Inte konfigurerad** (standard) gör att den förblir aktiverad.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Ändring av inställningar för att skicka diagnostik**: **Blockera** hindrar användaren från att ändra inställningarna för diagnostiköverföring och appanalys i **Diagnostik och användning** (enhetsinställningar). **Inte konfigurerad** (standard) tillåter att användaren ändrar dessa enhetsinställningar.
 
@@ -129,11 +129,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="password"></a>lösenordsinställning
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerad** (standard) låter användare komma åt enheten utan att ange ett lösenord.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 > [!IMPORTANT]
 > Om du konfigurerar en lösenordsinställning på en enhet som registreras via Användarregisterring används automatiskt inställningen **Blockera** för **Enkla lösenord**, och en 6-siffrig PIN-kod krävs.
@@ -167,7 +167,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
   **iOS-alternativ**:  
 
-  - **Inte konfigurerad** (standard): Intune rör inte den här inställningen.
+  - **Inte konfigurerat** (standard): Intune rör inte den här inställningen.
   - **Omedelbart**: Skärmen låses efter 30 sekunders inaktivitet.
   - **1**: Skärmen låses efter 1 minuts inaktivitet.
   - **2**: Skärmen låses efter 2 minuters inaktivitet.
@@ -177,7 +177,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
     
   **iPad-alternativ**:  
 
-  - **Inte konfigurerad** (standard): Intune rör inte den här inställningen.
+  - **Inte konfigurerat** (standard): Intune rör inte den här inställningen.
   - **Omedelbart**: Skärmen låses efter 2 minuters inaktivitet.
   - **2**: Skärmen låses efter 2 minuters inaktivitet.
   - **5**: Skärmen låses efter 5 minuters inaktivitet.
@@ -198,11 +198,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   Face ID gäller för:  
   - iOS 11.0 och senare
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Ändring av lösenord**: Välj **Blockera** om du vill förhindra att lösenkoden ändras, läggs till eller tas bort. Ändringar av lösenkodsbegränsningar ignoreras på övervakade enheter när den här funktionen har blockerats. **Inte konfigurerad** (standard) tillåter att lösenord läggs till, ändras eller tas bort.
 
-  - **Ändring av Touch ID och Face ID**: **Blockera** hindrar användaren från att ändra, lägga till eller ta bort TouchID-fingeravtryck och Face ID. **Inte konfigurerad** (standard) tillåter att användaren uppdaterar TouchID-fingeravtryck och Face ID på enheten.
+  - **Ändring av Touch ID och Face ID**: **Blockera** stoppar användaren från att ändra, lägga till eller ta bort TouchID-fingeravtryck och Face ID. **Inte konfigurerad** (standard) tillåter att användaren uppdaterar TouchID-fingeravtryck och Face ID på enheten.
 
     Om den här inställningen blockeras hindras användaren även från att ändra, lägga till eller ta bort FaceID-autentisering.
 
@@ -223,23 +223,23 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   Den här funktionen gäller för:  
   - iOS 11.0 och senare
   
-<sup>1</sup> När du konfigurerar **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter fem minuter. Enheten låses efter ytterligare fem minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. När användaren i det här exemplet har stängt av skärmen låses enheten fem minuter senare.
+<sup>1</sup> När du konfigurerar **Max. antal minuters inaktivitet tills skärmen låses** och **Max. antal minuter efter skärmlås innan lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter fem minuter. Enheten låses efter ytterligare fem minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. När användaren i det här exemplet har stängt av skärmen låses enheten fem minuter senare.
 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Åtkomst till Kontrollcenter när enheten är låst**: Välj **Blockera** om du vill förhindra åtkomst till kontrollcenterappen när enheten är låst. **Inte konfigurerad** (standard) låter användare få åtkomst till kontrollcenterappen när enheten är låst.
 - **Meddelanden när enheten är låst**: **Blockera** förhindrar åtkomst till meddelanden när enheten är låst. **Inte konfigurerad** (standard) tillåter användaren att få åtkomst till aviseringsvyn utan att låsa upp enheten.
 - **Dagsvyn när enheten är låst**: **Blockera** förhindrar åtkomst till dagsvyn när enheten är låst. **Inte konfigurerad** (standard) tillåter användaren att se vyn Idag när enheten är låst.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Wallet-notiser när enheten är låst**: **Blockera** förhindrar åtkomst till Wallet-appen när enheten är låst. **Inte konfigurerad** (standard) tillåter användare åtkomst till appen Plånbok när enheten är låst.
 
 ## <a name="app-store-doc-viewing-gaming"></a>App Store, dokumentvisning, spel
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Visa företagsdokument i ohanterade appar**: **Blockera** förhindrar visning av företagsdokument i ohanterade appar. **Inte konfigurerad** (standard) tillåter visning av företagsdokument i vilken app som helst. Exempelvis vill du kanske förhindra användare från att spara filer från OneDrive-appen till Dropbox. Konfigurera den här inställningen som **Blockera**. När enheten har hämtat principen (t.ex. efter en omstart) kommer det inte längre att vara tillåtet att spara.
 
@@ -260,7 +260,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
   Om detta anges till **Blockera** förhindrar det även synkroniseringen av kontaktexport i Outlook för iOS. Mer information finns i [Supporttips: Aktivera synkronisering av Outlook iOS-kontakter med iOS12 MDM-kontroller](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Kräv iTunes Store-lösenord för alla köp**: **Kräv** att användaren anger Apple ID-lösenordet för varje köp i app eller iTunes. **Inte konfigurerad** (standard) tillåter köp utan att ett lösenord begärs varje gång.
 - **Köp i app**: Välj **Blockera** om du vill förhindra att köp från butiken görs i appen. **Inte konfigurerad** (standard) tillåter köp i butiken från en app som körs.
@@ -271,7 +271,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 - **Klassificeringsregion**: Välj den klassificeringsregion som du vill använda för tillåtna hämtningsbara filer. Och välj sedan tillåtna klassificeringar för **filmer**, **TV-program** och **appar**.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **App Store**: **Blockera** förhindrar åtkomst till App Store på övervakade enheter. **Inte konfigurerat** (standard) tillåter åtkomst.
 
@@ -300,14 +300,14 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="built-in-apps"></a>Inbyggda appar
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Siri**: **Blockera** förhindrar åtkomst till Siri. **Inte konfigurerad** (standard) tillåter att röstassistenten Siri används på enheten.
   - **Siri när enheten är låst**: Välj **Blockera** om du vill förhindra åtkomst till Siri när enheten är låst. **Inte konfigurerad** (standard) tillåter att röstassistenten Siri används på enheten när den när låst.
 
 - **Bedrägerivarningar i Safari**: **Kräv** att bedrägerivarningar ska visas i webbläsaren på enheten. **Inte konfigurerad** (standard) inaktiverar den här funktionen.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Spotlight-sökning för att returnera resultat från Internet**: **Blockera** förhindrar Spotlight från att returnera resultat från sökningar på Internet. **Inte konfigurerad** (standard) tillåter att Spotlight-sökningar ansluter till Internet för att visa sökresultat.
 
@@ -321,7 +321,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 - **Popupfönster i Safari**: **Blockera** så att blockering av popup-fönster inaktiveras i webbläsaren. **Inte konfigurerad** (standard) tillåter popup-blockeraren.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Kamera**: Välj **Blockera** om du vill förhindra åtkomst till enhetens kamera. **Inte konfigurerad** (standard) ger åtkomst till enhetens kamera.
 
@@ -355,7 +355,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
   Den här funktionen gäller för:  
   - iOS 13.0 och iPadOS 13.0 och senare
 
-- **Hitta mina vänner**: **Inte konfigurerad** (standard) tillåter att den här Hitta min-appen används för att hitta släkt och vänner från en Apple-enhet eller iCloud.com. **Blockera** förhindrar den här funktionen i Hitta min-appen.
+- **Hitta mina vänner**: **Inte konfigurerad** (standard) tillåter att den här Hitta min-funktionen används för att hitta släkt och vänner från en Apple-enhet eller iCloud.com. **Blockera** förhindrar den här funktionen i Hitta min-appen.
 
   Den här funktionen gäller för:  
   - iOS 13.0 och iPadOS 13.0 och senare
@@ -376,11 +376,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Lista över typer av begränsade appar**: Skapa en lista över appar som användarna inte får installera eller använda. Alternativen är:
 
-  - **Inte konfigurerad** (standard): Det finns inga begränsningar från Intune. Användare har åtkomst till appar som du tilldelar samt inbyggda appar.
+  - **Inte konfigurerat** (standard): Det finns inga begränsningar från Intune. Användare har åtkomst till appar som du tilldelar samt inbyggda appar.
   - **Otillåtna appar**: Appar som inte hanteras av Intune som du inte vill ha installerade på enheten. Användare hindras inte från att installera en förbjuden app. Men om en användare installerar en app från den här listan rapporteras det i Intune.
   - **Godkända appar**: Appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt. Användarna hindras inte från att installera en app som inte finns med i listan över godkända appar. Men om de gör det rapporteras det i Intune.
 
@@ -401,7 +401,7 @@ Om du vill lägga till appar i listorna kan du:
 
 Gäller enheter som kör iOS 9.3 eller senare.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Lista över typer av appar**: Skapa en lista över appar som ska visas eller döljas. Du kan visa eller dölja inbyggda appar och verksamhetsspecifika appar. På Apple-webbplatsen finns en lista med [inbyggda Apple-appar](https://support.apple.com/HT208094). Alternativen är:
 
@@ -411,7 +411,7 @@ Gäller enheter som kör iOS 9.3 eller senare.
   
   - **Synliga appar**: Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
 
-- **App-URL**: Ange butiks-URL:en för den app som du vill visa eller dölja. Exempel:
+- **Appens webbadress**: Ange butiks-URL:en för den app som du vill visa eller dölja. Exempel:
 
   - Om du vill lägga till appen Microsoft Work Folders anger du `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` eller `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
@@ -434,9 +434,9 @@ Om du vill lägga till appar kan du:
 
 ## <a name="wireless"></a>Trådlöst
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
-Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder kunder): Den här inställningen visas inte i avsedd profil för enhetshantering. Det beror på att den här inställningen behandlas som en fjärrenhetsåtgärd, och varje gång tillståndet för dataroaming ändras på enheten blockeras den igen av Intune-tjänsten. Även om den inte finns i hanteringsprofilen fungerar den om den visas som lyckad från rapporteringen i administratörskonsolen. 
+Information som krävs för datanätverksväxling (tips eller viktig information för att hjälpa förvirrade kunder): Den här inställningen visas inte i målenhetens hanteringsprofil. Det beror på att den här inställningen behandlas som en fjärrenhetsåtgärd, och varje gång tillståndet för dataroaming ändras på enheten blockeras den igen av Intune-tjänsten. Även om den inte finns i hanteringsprofilen fungerar den om den visas som lyckad från rapporteringen i administratörskonsolen. 
 - **Datanätverksväxling**: Välj **Blockera** om du vill förhindra dataroaming över det mobila nätverket. **Inte konfigurerad** (standard) tillåter dataroaming när enheten är i ett mobilnät.
 
   > [!IMPORTANT]
@@ -454,7 +454,7 @@ Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder 
   - **Blockera användning av mobildata**: Blockera användningen av mobildata för **Alla hanterade appar** eller **Välj särskilda appar**.
   - **Blockera användning av mobildata vid nätverksväxling**: Blockera användningen av mobildata vid nätverksväxling för **Alla hanterade appar** eller **Välj särskilda appar**.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Ändringar av inställningar för mobildataanvändning**: Välj **Blockera** om du vill förhindra att inställningarna för användning av appmobildata ska kunna ändras. **Inte konfigurerad** (standard) tillåter att användaren bestämmer vilka appar som ska få använda mobildata.
 - **Ändringar av mobilabonnemangsinställningar**: **Blockera** hindrar användarna från att ändra inställningar i mobilabonnemanget. **Inte konfigurerad** (standard) tillåter att användarna gör ändringar.
@@ -462,7 +462,7 @@ Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder 
   Den här funktionen gäller för:  
   - iOS 11.0 och senare
 
-- **Användarändring av personlig hotspot**: När detta anges till **Blockera** kan användaren inte ändra inställningen för personlig hotspot. **Inte konfigurerad** (standard) tillåter slutanvändare att aktivera eller inaktivera sin personliga hotspot.
+- **Användarändring av Internetdelning**: När detta anges till **Blockera** kan användaren inte ändra inställningen för internetdelning. **Inte konfigurerad** (standard) tillåter slutanvändare att aktivera eller inaktivera sin personliga hotspot.
 
   Om du blockerar den här inställningen och blockerar inställningen **Personlig hotspot** stängs personlig hotspot av.
 
@@ -484,18 +484,18 @@ Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder 
 
 ## <a name="connected-devices"></a>Anslutna enheter
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Handledsavkänning för parkopplad Apple Watch**: **Kräv** tvingar en parkopplad Apple Watch att använda handledsavkänning. När så krävs visar inte Apple Watch meddelanden när den inte bärs runt handleden. 
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Kräv parkopplingslösenord för utgående AirPlay-förfrågningar**: **Kräv** ett parkopplingslösenord när användaren använder AirPlay för att strömma innehåll till andra Apple-enheter. **Inte konfigurerad** (standard) tillåter att användaren strömmar innehåll med AirPlay utan att behöva ange något lösenord.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **AirDrop**: **Blockera** förhindrar att du använder AirDrop på enheten. **Inte konfigurerad** (standard) tillåter att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
-- **Apple Watch-parkoppling**: **Blockera** förhindrar parkoppling med en Apple Watch. **Inte konfigurerad** (standard) tillåter att enheten parkopplas med en Apple Watch.
+- **Apple Watch-parkoppling**: **Blockera** förhindrar att enheten parkopplas med en Apple Watch. **Inte konfigurerad** (standard) tillåter att enheten parkopplas med en Apple Watch.
 - **Bluetooth-ändring**: **Blockera** förhindrar att slutanvändaren från att ändra enhetens Bluetooth-inställningar. **Inte konfigurerad** (standard) tillåter att användaren ändrar dessa inställningar.
 - **Parkoppling av värd för att styra de enheter som en iOS-enhet kan parkopplas till**: **Inte konfigurerad** (standard) tillåter parkoppling så att administratören kan kontrollera vilka enheter som en iOS-enhet kan kopplas med. **Blockera** förhindrar parkoppling av värd.
 - **Blockera AirPrint**: Välj **Blockera** om du vill förhindra att AirPrint-funktionen används på enheten. **Inte konfigurerat** (standard) tillåter användaren att använda AirPrint.
@@ -514,12 +514,12 @@ Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder 
 
 ## <a name="keyboard-and-dictionary"></a>Tangentbord och ordlista
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Slå upp definition av ord**: **Blockera** förhindrar användare från att markera ett ord och sedan söka upp dess definition på enheten. **Inte konfigurerad** (standard) ger åtkomst till definitionssökningsfunktionen.
 - **Tangentbord med förslag**: **Inte konfigurerad** (standard) tillåter tangentbord med förslag på ord som användaren kan ha nytta av. **Blockera** förhindrar den här funktionen.
 - **Automatisk korrigering**: **Inte konfigurerad** (standard) låter enheten automatiskt korrigera felstavade ord. **Blockera** förhindrar att autokorrigering används.
-- **Tangentbord med stavningskontroll**: **Inte konfigurerad** (standard) tillåter att stavningskontroll används på enheten. **Blockera** tillåter stavningskontroll.
+- **Tangentbord med stavningskontroll**: **Inte konfigurerad** (standard) tillåter användning av stavningskontroll på enheten. **Blockera** tillåter stavningskontroll.
 - **Kortkommandon**: **Inte konfigurerad** (standard) tillåter att kortkommandon används på enheten. **Blockera** hindrar användaren från att använda kortkommandon.
 - **Diktering**: **Blockera** hindrar användaren från att använda röstindata för att ange text. **Inte konfigurerat** (standard) tillåter användaren att använda röstindata.
 - **QuickPath**: **Inte konfigurerad** (standard) gör att användare kan använda QuickPath, som möjliggör kontinuerlig inmatning på enhetens tangentbord. Användare kan skriva genom att svepa över tangenterna för att skapa ord. **Blockera** förhindrar användare från att använda QuickPath. 
@@ -529,21 +529,21 @@ Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder 
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registreringstyper
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
 - **Krypterad säkerhetskopiering**: **Kräv** att säkerhetskopior av enheter måste vara krypterade.
 - **Synkronisering av hanterade appar till molnet**: **Inte konfigurerad** (standard) tillåter att appar som du hanterar med Intune synkroniserar data till användarens iCloud-konton. **Blockera** förhindrar denna datasynkronisering till iCloud.
 - **Blockera säkerhetskopiering av företagsbok**: Välj **Blockera** om du vill förhindra användarna från att säkerhetskopiera företagsböcker. **Inte konfigurerad** (standard) tillåter användarna att säkerhetskopiera dessa böcker.
 - **Blockera synkronisering av företagsboksmetadata (anteckningar och markeringar)** : **Blockera** förhindrar synkronising av anteckningar och markeringar i företagsböcker. **Inte konfigurerat** (standard) tillåter synkronisering.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Synkronisering av bildström till iCloud**: **Inte konfigurerad** (standard) låter användarna aktivera **My Photo Stream** på sina enheter och synkroniseras med iCloud och låta foton vara tillgängliga på användarens alla enheter. **Blockera** förhindrar bildströmssynkronisering till iCloud. Om den här funktionen blockeras kan det leda till dataförlust. 
 - **iCloud-bildbiblioteket**: Ställ in på **Blockera** om du vill inaktivera användning av iCloud-bildbiblioteket för att lagra foton och videoklipp i molnet. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket till enheten tas bort från enheten. **Inte konfigurerad** (standard) tillåter att iCloud-bildbiblioteket används.
 - **Delad bildström**: Välj **Blockera** om du vill inaktivera **iCloud-bilddelning** på enheten. **Inte konfigurerad** (standard) tillåter delad bildström.
 - **Handoff**: **Inte konfigurerad** (standard) tillåter användare att påbörja arbete på en iOS-enhet och sedan fortsätta det arbete som de inledde på en annan iOS- eller macOS-enhet. **Blockera** förhindrar den här överlämningen.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Säkerhetskopiera till iCloud**: **Inte konfigurerad** (standard) tillåter användaren att säkerhetskopiera enheten till iCloud. **Blockera** hindrar användaren från att säkerhetskopiera enheten till iCloud.
 
@@ -561,7 +561,7 @@ Anteckning behövs för dataroaming (tips eller viktig anteckning som vägleder 
 
 Använd inställningarna för att konfigurera iOS-enheter så att de kör specifika appar i autonomt enkelappsläge. När det här läget har konfigurerats och appen körs låses enheten. Bara den appen kan köras. Lägg t.ex. till en app som låter användarna göra ett prov på enheten. När appens åtgärder har slutförts, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Appnamn**: Ange namnet på appen som du vill ha.
 - **Appsamlings-ID**: Ange [samlings-ID](bundle-ids-built-in-ios-apps.md) för den önskade appen.
@@ -571,7 +571,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 
 ## <a name="kiosk"></a>Helskärmsläge
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **App som ska köras i helskärmsläge**: Välj den apptyp som du vill köra i helskärmsläge. Alternativen är:
   - **Inte konfigurerat** (standard): Inställningar för helskärmsläge tillämpas inte. Enheten körs inte i helskärmsläge.
@@ -582,7 +582,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 - **AssistiveTouch**: **Kräv** att hjälpmedelsinställningen för AssistiveTouch ska finnas på enheten. Den här funktionen hjälper användarna med skärmgester som de behöver hjälp med. **Inte konfigurerad** kör eller aktiverar inte den här funktionen i helskärmsläge.
 - **Invertera färger**: **Kräv** att hjälpmedelsinställningen Invertera färger ska användas, så att användare med synsvårigheter kan anpassa skärmen. **Inte konfigurerad** kör eller aktiverar inte den här funktionen i helskärmsläge.
 - **Monoljud**: **Kräv** att hjälpmedelsinställningen för Monoljud ska finnas på enheten. **Inte konfigurerad** kör eller aktiverar inte den här funktionen i helskärmsläge.
-- **Röstkontroll**: **Kräv** aktiverar röstkontroll på enheten och gör det möjligt för användare att fullständigt styra operativsystemet med hjälp av Siri-kommandon. **Inte konfigurerad** inaktiverar röstkontroll på enheten.
+- **Röststyrning**: **Kräv** aktiverar röststyrning på enheten och gör det möjligt för användare att fullständigt styra operativsystemet med hjälp av Siri-kommandon. **Inte konfigurerad** inaktiverar röstkontroll på enheten.
 
   Den här inställningen gäller för:  
   - iOS 13.0 och senare
@@ -602,7 +602,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 - **AssistiveTouch-knapp**: **Tillåt** låter användarna använda funktionen AssistiveTouch. **Inte konfigurerad** inaktiverar den här funktionen.
 - **Invertera färger-knapp**: **Tillåt** att inställningarna för att invertera färger kan justeras. **Inte konfigurerad** inaktiverar den här funktionen.
 - **Läs upp markerad text**: **Tillåt** att hjälpmedelsinställningen Läs upp markering finns på enheten. Den här funktionen läser upp text som användaren väljer. **Inte konfigurerad** inaktiverar den här funktionen.
-- **Ändring av röstkontroll**: **Tillåt** användare att ändra tillståndet för röstkontroll på sina enheter. **Inte konfigurerad** blockerar användare från att ändra tillståndet för röstkontroll på sina enheter.
+- **Ändring av röststyrning**: **Tillåt** användare att ändra tillståndet för röststyrning på sina enheter. **Inte konfigurerad** blockerar användare från att ändra tillståndet för röstkontroll på sina enheter.
 
   Den här inställningen gäller för:  
   - iOS 13.0 och senare
@@ -617,13 +617,13 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: enhetsregistrering, automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Enhetsregistrering, automatisk enhetsregistrering (övervakad)
 
 - **Omarkerade e-postdomäner** > **Webbadress till e-postdomän**: Lägg till en eller flera webbadresser i listan. När slutanvändarna får ett e-postmeddelande från en annan domän än någon av de du har angett, så markeras e-postmeddelandet som ej betrott i iOS-e-postappen.
 
 - **Hanterade webbdomäner** > **Webbadress till webbdomän**: Lägg till en eller flera webbadresser i listan. Dokument som laddas ned från de domäner du anger här anses vara hanterade. Den här inställningen gäller enbart för dokument som hämtas i Safari-webbläsaren.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: automatisk enhetsregistrering (övervakad)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 
 - **Fyll i lösenord automatiskt på Safari-domäner** > **Domänwebbadress**: Lägg till en eller flera webbadresser i listan. Användarna kan bara spara webblösenord från webbadresser i den här listan. Den här inställningen gäller enbart för Safari-webbläsaren och enheter i övervakat läge. Om du inte anger någon webbadress, kan lösenorden sparas från alla webbplatser.
 
@@ -636,7 +636,7 @@ Du kan även **Importera** en CSV-fil med listan över appnamn och deras samling
 
 - Applås (enkelt appläge) 
 - Global HTTP-proxy 
-- Kringgå aktiveringslås 
+- Inaktivera aktiveringslås 
 - Autonomt enkelt appläge 
 - Webbinnehållsfilter 
 - Ange bakgrund och låsskärm 

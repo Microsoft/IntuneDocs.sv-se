@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8b5b323c4bb80cd15bf9c6c8f0f7a8be577d6bf
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653945"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912683"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -41,7 +41,6 @@ Mer information om programhanteringsverktyget för appskyddsprinciper på enhete
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Skäl för att använda programhanteringsverktyget
 
 * Din app har inte några inbyggda dataskyddsfunktioner
-* Din app är enkel
 * Din app distribueras internt
 * Du har inte tillgång till appens källkod
 * Du har inte utvecklat appen
@@ -63,7 +62,6 @@ Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja anv�
 ### <a name="reasons-to-use-the-sdk"></a>Skäl för att använda SDK
 
 * Din app har inte några inbyggda dataskyddsfunktioner
-* Din app är komplex och innehåller många funktioner
 * Din app har distribuerats via en offentlig appbutik som Google Play eller Apple App Store
 * Du är en apputvecklare och har de tekniska förutsättningarna att kunna använda SDK:n
 * Din app har andra SDK-integrationer
@@ -76,13 +74,13 @@ Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja anv�
 |**iOS**|Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 |**Android**| Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 
-### <a name="not-using-an-app-development-platform-listed-above"></a>Använder du inte en plattform för program utveckling som anges ovan?
+## <a name="not-using-an-app-development-platform-listed-above"></a>Använder du inte någon av de plattformar för programutveckling som anges ovan?
 
 Intune SDK-utvecklingsteamet testar och underhåller aktivt stödet för appar som skapats med de ursprungliga Android-, iOS (Obj-C, Swift), Xamarin-, Xamarin.Forms- och Cordova-plattformarna. Även om vissa kunder har lyckats integrera Intune SDK med andra plattformar som React Native och NativeScript, tillhandahåller vi inte någon uttrycklig vägledning eller några plugin-program för apputvecklare som använder något annat än våra stödda plattformar. 
 
 ## <a name="feature-comparison"></a>Jämförelse av funktioner
 
-Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
+Den här tabellen visar de inställningar som aktiveras om en app använder app-SDK eller App Wrapping Tool. Vissa funktioner kräver att apputvecklare använder en del logik utanför den grundläggande integreringen med Intune SDK, och därför är de inte aktiverade om appen använder App Wrapping Tool. 
 
 |Funktion|App SDK|Apphanteringsverktyg|
 |-----------|---------------------|-----------|
@@ -97,7 +95,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Tillåt fingeravtryck istället för PIN|X|X|
 |Tillåt ansiktsigenkänning istället för PIN-kod (endast iOS)|X|X|
 |Kräv företagets autentiseringsuppgifter för åtkomst|X|X|
-|Ange ett förfallo datum för PIN-kod|X|X|
+|Ange ett förfallodatum för PIN-kod|X|X|
 |Hindra hanterade appar från att köras på jailbrokade eller rotade enheter|X|X|
 |Kryptera appdata|X|X|
 |Kontrollera åtkomstbehörigheterna på nytt efter angivet antal minuter|X|X|
@@ -107,7 +105,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Fullständig rensning av appdata|X|X|
 |Selektiv rensning av arbets- och skoldata i scenarier med flera identiteter <br><br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
 |Förhindra ”Spara som”|X||
-|Konfiguration av riktad program (eller app config via "MAM Channel")|X||
+|Riktad programkonfiguration (eller appkonfiguration via MAM-kanal)|X|X|
 |Stöd för flera identiteter|X||
 |Anpassningsbar stil |X|||
 |VPN-anslutningar för program på begäran med Citrix mVPN|X|X| 
@@ -117,8 +115,13 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Minimikrav på operativsystem|X|X|
 |Minimikrav på Android-säkerhetskorrigeringsversion (endast Android)|X|X|
 |Minimikrav på Intune SDK för iOS (endast iOS)|X|X|
-|SafetyNet enhets attestering (endast Android)|X|X|
-|Hot genomsökning på appar (endast Android)|X|X|
+|SafetyNet-enhetsattestering (endast Android)|X|X|
+|Hotgenomsökning för appar (endast Android)|X|X|
+|Kräv maximalt skydd mot mobilhot som risknivå för leverantörsenheter|X||
+|Konfigurera innehåll i appmeddelande för organisationskonton|X|X|
+|Kräv användning av godkända tangentbord (endast Android)|X|X|
+|Kräv appskyddsprincip (villkorlig åtkomst)|X||
+|Kräv godkänd klientapp (villkorlig åtkomst)|X||
 
 ## <a name="next-steps"></a>Nästa steg
 

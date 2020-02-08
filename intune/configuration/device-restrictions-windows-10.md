@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
-ms.translationtype: HT
+ms.openlocfilehash: 0dd1ecb5666b8bbb8b26a001be56372d86839f31
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517566"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812320"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningar för Windows 10 (och senare) för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -39,8 +39,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 De här inställningarna använder [CSP för ApplicationManagement-princip](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), som även visar de Windows-versioner som stöds.
 
-- **Appbutik** (endast mobil): **Inte konfigurerat** (standard) ger användarna åtkomst till appbutiken på mobila enheter. **Blockera** förhindrar användning av appbutiken.
-- **Uppdatera appar automatiskt från Store:** : **Inte konfigurerat** (standard) tillåter att appar som installeras från Microsoft Store uppdateras automatiskt. **Blockera** förhindrar att uppdateringar installeras automatiskt.
+- **App Store** (endast mobil): **Blockera** förhindrar att slutanvändare får åtkomst till App Store på mobila enheter. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta slutanvändare att komma åt App Store.
+- **Uppdatera appar automatiskt från Store**: **Blockera** förhindrar att uppdateringar installeras automatiskt från Microsoft Store. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta att appar installerade från Microsoft Store uppdateras automatiskt.
+
+  [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+
 - **Installation av betrodd app**: Välj om icke-Microsoft Store-appar kan installeras, även kallat separat inläsning. Separat inläsning är att installera och sedan köra eller testa en app som inte är certifierad av Microsoft Store. Ett exempel kan vara en app som är intern för endast ditt företag. Alternativen är:
   - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen.
   - **Blockera**: Förhindrar separat inläsning. Icke-Microsoft Store-appar kan inte installeras.
@@ -51,16 +54,36 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
   - **Tillåt**: Tillåter utvecklarläge och separat inläsning av appar.
 
   [Aktivera din enhet för utveckling](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) innehåller mer information om den här funktionen.
+  
+  [ApplicationManagement/AllowAllTrustedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **Dela appdata mellan användare**: Välj **Tillåt** för att dela programdata mellan olika användare på samma enhet och med andra instanser av den appen. **Inte konfigurerat** (standard) förhindrar delning av data med andra användare och andra instanser av samma app.
-- **Använd endast privat katalog**: **Tillåt** tillåter endast att appar laddas ned från en privat katalog och inte laddas ned från den offentliga katalogen, inklusive butikskataloger. **Inte konfigurerat** (standard) tillåter att appar laddas ned från en privat katalog och en offentlig katalog.
-- **Start av appar från Store**: **Blockera** inaktiverar alla appar som har förinstallerats på enheten eller hämtats från Microsoft Store. **Inte konfigurerat** (standard) tillåter att de här apparna öppnas.
-- **Installera appdata på systemvolym**: **Blockera** hindrar appar från att lagra data på enhetens systemvolym. **Inte konfigurerat** (standard) tillåter appar att lagra data på systemdiskvolymen.
-- **Installera appar på systemenhet**: **Blockera** hindrar appar från att installera på enhetens systemenhet. **Inte konfigurerat** (standard) tillåter appar att installera på systemenheten.
-- **Spel-DVR (endast stationär dator)** : **Blockera** inaktiverar Windows-inspelning och -sändning av spel. **Inte konfigurerat** (standard) tillåter inspelning och sändning av spel.
+- **Dela appdata mellan användare**: Välj **Tillåt** för att dela programdata mellan olika användare på samma enhet och med andra instanser av den appen. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet förhindra delning av data med andra användare och andra instanser av samma app.
+
+  [ApplicationManagement/AllowSharedUserAppData CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+
+- **Använd endast privat katalog**: **Tillåt** tillåter endast att appar laddas ned från en privat katalog och inte laddas ned från den offentliga katalogen, inklusive butikskataloger. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta att appar laddas ned från en privat katalog och en offentlig katalog.
+
+  [ApplicationManagement/RequirePrivateStoreOnly CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+
+- **Start av appar från Store**: **Blockera** inaktiverar alla appar som har förinstallerats på enheten eller hämtats från Microsoft Store. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta att dessa appar öppnas.
+
+  [ApplicationManagement/DisableStoreOriginatedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+
+- **Installera appdata på systemvolym**: **Blockera** hindrar appar från att lagra data på enhetens systemvolym. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta att appar lagrar data på systemdiskvolymen.
+
+  [ApplicationManagement/RestrictAppDataToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+
+- **Installera appar på systemenhet**: **Blockera** hindrar appar från att installera på enhetens systemenhet. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta att appar installeras på systemenheten.
+
+  [ApplicationManagement/RestrictAppToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+
+- **Spel-DVR (endast stationär dator)** : **Blockera** inaktiverar Windows-inspelning och -sändning av spel. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan operativsystemet tillåta inspelning och sändning av spel.
+
+  [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+
 - **Endast appar från Store**: Den här inställningen styr användarupplevelsen när användare installerar appar från andra platser än Microsoft Store. Alternativen är:
 
-  - **Inte konfigurerat** (standard): Tillåter att slutanvändare installerar appar från andra platser än Microsoft Store, inklusive appar som definierats i andra principinställningar.  
+  - **Inte konfigurerat** (standard): Intune varken ändrar eller uppdaterar den här inställningen. Som standard kan operativsystemet tillåta att slutanvändare installerar appar från andra platser än Microsoft Store, inklusive appar som definierats i andra principinställningar.  
   - **Överallt**: Stänger av apprekommendationer och låter användarna installera appar från valfri plats.  
   - **Endast Store**: Tvingar slutanvändare att endast installera appar från Microsoft Store.
   - **Rekommendationer**: Vid installation av en app från webben som är tillgänglig i Microsoft Store visas ett meddelande för användare där de rekommenderas att ladda ned den från Store.  
@@ -68,11 +91,11 @@ De här inställningarna använder [CSP för ApplicationManagement-princip](http
 
   [CSP för SmartScreen/EnableAppInstallControl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
-- **Användarkontroll över installationer**: När det angetts som **Inte konfigurerad** (standard), förhindrar Windows Installer att användare ändrar installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange den katalog som filerna ska installeras till. **Blockera** låter användare ändra de här installationsalternativen och några av säkerhetsfunktionerna i Windows Installer kringgås.
+- **Användarkontroll över installationer**: **Blockera** förhindrar att användare ändrar installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange den katalog som filerna ska installeras till. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan Windows Installer hindra användare från att ändra de här installationsalternativen, och några av säkerhetsfunktionerna i Windows Installer kringgås.
 
   [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Installera appar med förhöjd behörighet**: När det angetts som **Inte konfigurerat** (standard), använder systemet den aktuella användarens behörigheter när det installerar program som en systemadministratör inte distribuerar eller erbjuder. **Blockera** säger till Windows Installer att använda förhöjda behörigheter när alla program installeras på systemet. De här behörigheterna används för alla program.
+- **Installera appar med förhöjd behörighet**: **Blockera** anger att Windows Installer ska använda förhöjda behörigheter när program installeras på systemet. De här behörigheterna används för alla program. När detta anges till **Inte konfigurerad** (standard) ändrar eller uppdaterar Intune inte den här inställningen. Som standard kan systemet använda den aktuella användarens behörigheter när det installerar program som en systemadministratör inte distribuerar eller erbjuder. 
 
   [ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
@@ -232,7 +255,7 @@ De här inställningarna använder [CSP för upplevelseprincip](https://docs.mic
 
 - **URL till bild på låst skärm (endast stationär dator)** : Anger URL till en bild i formatet JPG, JPEG eller PNG som används som bakgrundsbild för låsskärmen i Windows. Ange till exempel `https://contoso.com/image.png`. Den här inställningen låser bilden och kan inte ändras efteråt.
 
-  [CSP för Personalization/LockScreenImageUrl](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+  [CSP för Personalization/LockScreenImageUrl](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
 - **Skärmtidsgräns kan ställas in av användaren (endast Mobile)** : **Tillåt** låter användare konfigurera skärmtidsgränsen. **Inte konfigurerat** (standard) ger inte användarna det här alternativet.
 
