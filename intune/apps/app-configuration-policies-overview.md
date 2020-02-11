@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885796"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812481"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
@@ -95,8 +95,8 @@ Du kan verifiera appkonfigurationsprincipen med följande tre metoder:
 
 Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på ohanterade enheter för konfiguration av hanterade appar. Förutom stegen nedan så kan du få åtkomst till hanterade apploggar med hjälp av Microsoft Edge. Mer information finns i [Använda Microsoft Edge i iOS för att få åtkomst till loggar för hanterade appar](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
-1. Om den inte redan är installerad på enheten laddar du ned och installerar **Intune Managed Browser** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
-2. Starta **Intune Managed Browser** och välj **om** > **intune-hjälp** i navigeringsfältet.
+1. Om den inte redan är installerad på enheten laddar du ned och installerar **Microsoft Edge** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
+2. Starta **Microsoft Edge** och välj **Om** > **intunejälp** i navigeringsfältet.
 3. Klicka på **Kom igång**.
 4. Klicka på **Dela loggar**.
 5. Använd valfri e-postapp för att skicka loggen till dig själv så att den kan visas på din dator. 
@@ -139,8 +139,8 @@ Informationen om programkonfigurationen bör överensstämma med de programkonfi
 
 Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
 
-1. Om den inte redan är installerad på enheten laddar du ned och installerar **Intune Managed Browser** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
-2. Starta **Intune Managed Browser** och välj **om** > **intune-hjälp** i navigeringsfältet.
+1. Om den inte redan är installerad på enheten laddar du ned och installerar **Microsoft Edge** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
+2. Starta **Microsoft Edge** och välj **Om** > **intunejälp** i navigeringsfältet.
 3. Klicka på **Kom igång**.
 4. Klicka på **Dela loggar**.
 5. Använd valfri e-postapp för att skicka loggen till dig själv så att den kan visas på din dator. 

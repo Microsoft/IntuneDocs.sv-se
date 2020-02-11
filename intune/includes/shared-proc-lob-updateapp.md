@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 66abce3b3dd2adc645695c9aab5fe6729713bbdc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 40462763aa010ccd788223690ec285eb02d1d11c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71301808"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755142"
 ---
 
-1. Logga in på [Azure Portal](https://portal.azure.com).  
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.  
-3. Välj **Klientappar** > **Appar**.
-4. Sök efter och välj din app i listan över appar.  
-5. I bladet **Översikt** väljer du **Egenskaper**.  
-6. Välj **Appaketfil**.  
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar**.
+3. Sök efter och välj din app i applistan.  
+4. Välj **Egenskaper** under **Hantera** i appfönstret.
+5. Välj **Redigera** bredvid **Appinformation**.  
+6. Klicka på den listade filen intill **Välj fil att uppdatera**. Fönstret **Appaketfil** visas.
 7. Välj mappikonen och bläddra till platsen för den uppdaterade appfilen. Välj **Öppna**. Informationen om appen uppdateras med paketinformationen.  
-8. Kontrollera att **Appversion** visar det uppdaterade appaketet.  
+8. Kontrollera att **Appversion** visar det uppdaterade appaketet.

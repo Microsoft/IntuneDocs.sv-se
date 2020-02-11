@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3168d517ebbb59dc9d6fe5a9c262ad8e1c909619
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: d43e0f913020e3e2e8b0ac463d5983447d7c1fa2
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563809"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754957"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Lägga till Windows Phone 8.1 Store-appar i Microsoft Intune
 
@@ -36,8 +36,11 @@ Du kan lägga till en Windows Phone 8.1 Store-app till Intune från Azure Portal
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. I fönstret **Lägg till app** väljer du **Windows Phone 8.1** som **Apptyp** och väljer sedan **Appinformation**.
-4. Lägg till appinformationen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
+3. Välj **Windows Phone 8.1 Store-app** i rutan **Välj apptyp** bland de tillgängliga typerna av **Store-appar**.
+4. Klicka på **Välj**.<br>
+   Stegen **Lägg till app** visas.
+5. Om du vill konfigurera **Appinformation** för Windows Phone 8,1 Store-appar, så gå till [Microsoft Store](https://www.microsoft.com/store/apps/windows-phone) och sök efter den app som du vill distribuera. Visa appsidan och notera appinformationen. 
+6. Lägg till information om appen i fönstret **Appinformation**:
     - **Namn**: Ange namnet på appen så som den ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
@@ -50,8 +53,15 @@ Du kan lägga till en Windows Phone 8.1 Store-app till Intune från Azure Portal
     - **Ägare**: Alternativt kan du ange ett namn på appens ägare, t.ex. *Personalavdelningen*.
     - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
     - **Logotyp**: Om du vill kan du ladda upp en ikon som ska kopplas till appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-5. Välj **OK**.
-6. Välj **Lägg till**.
+7. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
+8. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. Mer information finns i [Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT](~/fundamentals/scope-tags.md).
+9. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+10. Välj grupptilldelningar för appen. Mer information finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md). 
+11. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. Granska värdena och inställningarna som du har angett för appen.
+12. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+**Översiktsbladet** för appen som du har skapat visas i applistan.
+
 
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer.
 

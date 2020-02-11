@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68032f47be043e8c49b6ad922392d14549293c35
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 06c1119b474d82c4d00db3276179b962ff5b5a44
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564281"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755569"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
@@ -33,16 +33,29 @@ Du kan använda appkonfigurationsprinciper med hanterade appar som har stöd fö
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade appar**.
-3. Ange följande information:
-    - **Namn**  
-      Namnet på den profil som visas i Azure Portal.
-    - **Beskrivning**  
-      Beskrivning av den profil som visas i Azure Portal.
+3. Ange följande information på sidan **Grundläggande**:
+    - **Namn**: Namnet på den profil som visas i Azure Portal.
+    - **Beskrivning**: Beskrivning av den profil som visas i Azure Portal.
+    - **Enhetsregistreringstyp**: Hanterade appar har valts.
 4. Välj den app du vill konfigurera genom att välja **Välj offentliga appar** eller **Välj anpassade appar**. Välj appen i listan över appar som du har godkänt och synkroniserat med Intune.
-5. Ange **Namn** och **Värde** för varje konfigurationsinställning som stöds av appen.  
+5. Visa sidan **Inställningar** genom att klicka på **Nästa**.
+6. Ange **Namn** och **Värde** för varje konfigurationsinställning som stöds av appen. 
+
+   Intune App SDK-aktiverade appar har stöd för konfigurationer i nyckel/värde-par. Läs dokumentationen för varje app om du vill lära dig mer om vilka nyckel/värde-konfigurationer som stöds. Observera att du kan använda token som fylls i dynamiskt med data som skapas av programmet. Mer information finns i [Konfigurationsvärden för att använda token](~/apps/app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Information om principinställningar för Outlook för iOS-appen, se [Hantera appkonfiguration för Outlook för iOS med Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+
     Välj ellipsen ( **...** ) och välj **Ta bort** för att ta bort en konfiguration.  
-    
-Intune App SDK-aktiverade appar har stöd för konfigurationer i nyckel/värde-par. Läs dokumentationen för varje app om du vill lära dig mer om vilka nyckel/värde-konfigurationer som stöds. Observera att du kan använda token som fylls i dynamiskt med data som skapas av programmet. Information om principinställningar för Outlook för iOS-appen, se [Hantera appkonfiguration för Outlook för iOS med Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+
+7. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+8. Klicka på **Välj de grupper som ska inkluderas**.
+9. Välj en grupp i rutan **Välj grupper att inkludera** och klicka på **Välj**.
+10. Klicka på **Välj grupper att utesluta** för att visa det relaterade fönstret.
+11. Välj de grupper som du vill exkludera och klicka sedan på **Välj**.
+
+    >[!NOTE]
+    >Om någon annan grupp redan har inkluderats för en viss tilldelning när du lägger till en grupp så blir den förvald och kan inte ändras för andra tilldelningstyper för inkludering. Gruppen som har använts kan därför inte användas som en undantagen grupp.
+
+12. Visa sidan **Granska och skapa** genom att klicka på **Nästa**.
+13. Lägg till konfigurationsprincipen i Intune genom att klicka på **Skapa**.
 
 ## <a name="configuration-values-for-using-tokens"></a>Konfigurationsvärden för att använda token
 
@@ -57,7 +70,6 @@ Intune stöder följande typer av token i konfigurationsinställningarna. Andra 
 - \{\{userid\}\} – till exempel 3ec2c00f-b125-4519-acf0-302ac3761822
 - \{\{username\}\} – till exempel Johan Danielsson
 - \{\{PrimarySMTPAddress\}\} – till exempel testuser@ad.domain.com
-
 
 > [!Note]  
 > Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för andra ändamål.

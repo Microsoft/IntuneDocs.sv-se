@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e2e768067a88b8ae58adeb38c17d90ac995a30
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.openlocfilehash: 90cdff66d32ac5edb3b1867a545f2c9627ccfe39
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781234"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754787"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -46,9 +46,9 @@ Om du vill lägga till en app i Intune som en genväg till en app på webben gö
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. Välj typen **Webblänk** i listrutan **Typ av app** i fönsterrutan **Lägg till app**.
-4. Välj **Konfigurera**.
-5. Lägg till följande information i fönstret **Appinformation**:
+3. Välj **Webblänk** i rutan **Välj apptyp** under **Övriga** tillgängliga typer.
+4. Klicka på **Välj**. Stegen **Lägg till app** visas.
+5. Lägg till följande information på sidan **Appinformation**:
     - **Namn**:  Ange namnet på appen så som den ska visas i företagsportalen. 
 
         > [!NOTE]
@@ -61,8 +61,14 @@ Om du vill lägga till en app i Intune som en genväg till en app på webben gö
     - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
     - **Kräv en hanterad webbläsare för att öppna den här länken**: Välj det här alternativet om du vill tilldela en länk till användarna till en webbplats eller en webbapp som de kan öppna i en Intune-hanterad webbläsare. Den här webbläsaren måste installeras på enheterna.
     - **Logotyp**: Överför en ikon som ska kopplas till appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-6. Välj **OK**.
-7. I fönstret **Lägg till app** väljer du **Lägg till**.
+6. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
+7. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. Mer information finns i [Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT](~/fundamentals/scope-tags.md).
+8. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+9. Välj grupptilldelningar för appen. Mer information finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md). 
+10. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. Granska värdena och inställningarna som du har angett för appen.
+11. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+    **Översiktsbladet** för appen som du har skapat visas i applistan.
 
 > [!Note]
 > För närvarande associeras distribution av Intune-webappar till iOS-enheter med hanteringsprofilen och kan inte tas bort manuellt. Du kan ändra distributionstypen till **Avinstallera** i Intune-portalen, så att webbappen kan tas bort automatiskt. Om du tar bort distributionen innan du ändrar tilldelningsavsikt för appen till **Avinstallera**, kommer webbappen dock att förbli permanent på enheten tills enheten har avregistrerats från Intune.

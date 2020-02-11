@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4246dab0cf22053d76fdd50f99de53e827332a23
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 0dac0607fcaa92ebe65a7ddacc3cd91c63bf246e
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547826"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971862"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -73,7 +73,7 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
     > [!IMPORTANT]
     > Plattformar för Android Enterprise (arbetsprofil) och Android-enhetsadministratör har följande beteende:
     > - Om båda plattformarna tillåts för samma grupp registreras användarna med en arbetsprofil om deras enhet stöder det. Annars registreras de som DA. 
-    > - Om båda plattformarna tillåts för gruppen och raffineras för specifika och icke-överlappande versioner får användarna det registreringsflöde som definierats för deras OS-version. 
+    > - Om båda plattformarna tillåts för gruppen och förfinas för specifika och icke-överlappande versioner får användarna det registreringsflöde som definierats för deras OS-version. 
     > - Om båda plattformarna är tillåtna, men blockeras för samma versioner, kommer användare på enheter med de blockerade versionerna att dirigeras till registreringsflödet för Android-enhetsadministratör och sedan blockeras från registrering samt uppmanas att logga ut. 
     >
     > Observera att varken registrering med arbetsprofil eller enhetsadministratör fungerar såvida inte rätt förutsättningar har uppfyllts i Android-registrering. 
@@ -82,12 +82,13 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
    > Windows 10 tillhandahåller inte rev-numret under registrering, så om du exempelvis anger 10.0.17134.100 och enheten är 10.0.17134.174 kommer den att blockeras under registreringen.
 
 6. Under **Personligt ägda** väljer du **Tillåt** för de plattformar som du vill tillåta som personligt ägda enheter.
-7. Välj **Nästa** för att gå till sidan **Tilldelningar**.
-8. Välj **Välj grupper att inkludera** och använd sedan sökrutan för att hitta grupper som du vill ska ingå i begränsningen. Begränsningen gäller endast för grupper som den är tilldelad till. Om du inte tilldelar en begränsning till minst en grupp så påverkar den inte något. Välj sedan **Välj**. 
+7. Ange en kommateckenavgränsad lista över de tillverkare som du vill blockera under **Enhetstillverkare**.
+8. Välj **Nästa** för att gå till sidan **Tilldelningar**.
+9. Välj **Välj grupper att inkludera** och använd sedan sökrutan för att hitta grupper som du vill ska ingå i begränsningen. Begränsningen gäller endast för grupper som den är tilldelad till. Om du inte tilldelar en begränsning till minst en grupp så påverkar den inte något. Välj sedan **Välj**. 
     ![Skärmpunkt för att välja plattformsinställningar](./media/enrollment-restrictions-set/select-groups.png)
-9. Välj **Nästa** för att gå till sidan **Granska + skapa**.
-10. Välj **Skapa** för att skapa begränsningen.
-11. Den nya begränsningen skapas med prioritet precis ovanför standardvärdet. Du kan [ändra prioriteten](#change-enrollment-restriction-priority).
+10. Välj **Nästa** för att gå till sidan **Granska + skapa**.
+11. Välj **Skapa** för att skapa begränsningen.
+12. Den nya begränsningen skapas med prioritet precis ovanför standardvärdet. Du kan [ändra prioriteten](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Skapa en enhetsgränsbegränsning

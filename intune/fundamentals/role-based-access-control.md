@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a03366037f9b0eced70f0375b3f4b39401e3141
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8441a93a34af68a680aec2f48b3a5375fa74558c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509806"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754311"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Rollbaserad åtkomstkontroll (RBAC) med Microsoft Intune
 
@@ -52,6 +52,7 @@ Du kan tilldela inbyggda roller till grupper utan ytterligare konfiguration. Du 
 - **Programhanterare**: Hanterar mobila och hanterade program, kan läsa enhetsinformation och kan visa enhetsinformationsprofiler.
 - **Administratör för Intune-roll**: Hanterar anpassade Intune-roller och lägger till tilldelningar för inbyggda Intune-roller. Det är den enda Intune-rollen som kan tilldela behörigheter till administratörer.
 - **Skoladministratör**: Hanterar Windows 10-enheter i [Intune for Education](../introduction-intune-education.md).
+- **Slutpunktssäkerhetshanteraren**: Hanterar funktioner för säkerhet och efterlevnad, t.ex. säkerhetsbaslinjer, enhetskompatibilitet, villkorsstyrd åtkomst och Microsoft Defender ATP.
 
 ### <a name="custom-roles"></a>Anpassade roller
 Du kan skapa egna roller med anpassade behörigheter. Mer information om anpassade roller finns i [Skapa en anpassad roll](create-custom-role.md).
@@ -62,7 +63,7 @@ Du kan skapa egna roller med anpassade behörigheter. Mer information om anpassa
 | Global administratör | Läsning/skrivning | Läsning/skrivning |
 | Intune Service-administratör | Läsning/skrivning | Läsning/skrivning |
 | Administratör för villkorsstyrd åtkomst | Inga | Inga |
-| Säkerhetsadministratör | Skrivskyddad | Skrivskyddad |
+| Säkerhetsadministratör | Skrivskyddad (fullständig administrativ behörighet för slutpunktssäkerhetsnoden) | Skrivskyddad |
 | Säkerhetsoperatör | Skrivskyddad | Skrivskyddad |
 | Säkerhetsläsare | Skrivskyddad | Skrivskyddad |
 | Efterlevnadsadministratör | Inga | Skrivskyddad |

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,16 +16,16 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4a4c6d40dc729fb72210c455c7819baaf89de3b
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 03b8f050dc6232b87d1149aff0a93cd7b06839cd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691832"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755416"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
-Som Intune-administratör kan du distribuera verksamhetsspecifika (LOB) universella appar till Windows 8.1 Desktop- eller Windows 10 Desktop- och Mobile-enheter, inklusive appen Företagsportal. Om du vill distribuera .appx-appar till Windows 8.1 Desktop- eller Windows 10 Desktop- och Mobile-enheter kan du använda kodsigneringscertifikat från en offentlig certifikatutfärdare som redan är betrodd av dina Windows-enheter, eller så kan du använda din egen certifikatutfärdare.
+Som Intune-administratör kan du distribuera verksamhetsspecifika (LOB) universella appar till Windows 8.1 Desktop- eller Windows 10 Desktop- och Mobile-enheter, inklusive appen Företagsportal. Om du vill distribuera *.appx*-appar till Windows 8.1 Desktop- eller Windows 10 Desktop- och Mobile-enheter kan du använda kodsigneringscertifikat från en offentlig certifikatutfärdare som redan är betrodd av dina Windows-enheter, eller så kan du använda din egen certifikatutfärdare.
 
  > [!NOTE]
  > Windows 8.1 Desktop kräver en företagsprincip för att möjliggöra separat inläsning eller användningen av nycklar för separat inläsning (automatiskt aktiverade för domänanslutna enheter). Mer information finns i inlägget om [separat inläsning i Windows 8.1](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
@@ -52,10 +52,11 @@ Om du distribuerar appen efter behov till användare eller enheter behöver du i
 
 Om din Windows 10-enhet inte redan litar på certifikatutfärdaren måste du, efter att du har signerat ditt appx-paket och laddat upp det till Intune-tjänsten, ladda upp kodsigneringscertifikatet till Intune-portalen:
 
-1. Klicka på Klientappar
-2. Klicka på Windows företagscertifikat
-3. Välj ”Välj en fil” under kodsigneringscertifikat
-4. Välj din .cer-fil och klicka på ladda upp
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Klicka på **Klientadministration** > **Anslutningar och token** > **Windows företagscertifikat**.
+3. Välj en fil under **Kodsigneringscertifikatsfil**.
+4. Välj din *.cer*-fil och klicka på **Öppna**.
+5. Lägg till certifikatfilen i Intune genom att klicka på **Ladda upp**.
 
 Nu laddar automatiskt alla Windows 10 Desktop- och Mobile-enheter med en appx-distribution av Intune-tjänsten ned motsvarande företagscertifikat och appen tillåts att starta efter installation.
 
@@ -94,7 +95,7 @@ Om du inte vill ge åtkomst till Microsoft Store kan du distribuera Windows 10 f
       ![Bild av beroendemappen sparad med APPXBUN-filen](./media/app-sideload-windows/Win10CP-Dependencies-save.png)
    2. Placera de nio beroendepaketen i mappen Dependencies.  
       Om beroendena inte placeras i det här formatet kommer Intune inte att kunna känna igen och överföra dem under paketöverföringen, vilket innebär att överföringen kommer att misslyckas med följande fel.  
-      ![Felmeddelande – Windows-appberoendet måste anges.](./media/app-sideload-windows/Win10CP-error-message.png)
+      <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Gå tillbaka till Intune och överför företagsportalsappen som en ny app. Distribuera den som en obligatorisk app för den önskade uppsättningen målanvändare.  
 
 Mer information om hur Intune hanterar beroenden för universella appar finns i [Distribuera ett appxbundle med beroenden via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  

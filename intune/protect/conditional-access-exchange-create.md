@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 01/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 644297777e8a103d6ffdc5f025ebf8f29591fda8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d04897d38c1b46f27fe86e72ecfa6856aa9eece2
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188460"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755697"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
 
@@ -37,7 +37,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera att följande
 
 - Din Exchange-version måste vara **Exchange 2010 SP1 eller senare**. Matrisen för Exchange Server-klientåtkomstservern (CAS) stöds.
 
-- Du måste ha installerat och använda [Exchange Active Syncs lokala Exchange Connector](exchange-connector-install.md) som ansluter Intune till Exchange lokalt.
+- Du har installerat och använt [Exchange Active Syncs lokala Exchange-anslutningsprogram](exchange-connector-install.md) som ansluter Intune till Exchange lokalt.
 
     >[!IMPORTANT]  
     >Intune har stöd för flera lokala Exchange-anslutningsappar per prenumeration.  Den lokala Exchange-anslutningen dock är specifik för en enda Intune-klient och kan inte användas med någon annan klient.  Om du har fler än en lokal Exchange-organisation kan du ställa in en separat anslutningsapp för varje Exchange-organisation.
@@ -84,40 +84,57 @@ Innan du kan använda följande procedur för att konfigurera en lokal åtkomstk
 
 3. I fönstret **Åtkomst till Exchange lokalt** väljer du **Ja** för att *	Aktivera åtkomstkontroll för Exchange lokalt*.
 
+   > [!div class="mx-imgBorder"]
+   > ![Exempel på skärmbild av den lokala Exchange-åtkomstskärmen](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
+
 4. Under **Tilldelning** väljer du **Välj grupper att inkludera** och sedan en eller flera grupper vars åtkomst du vill konfigurera.
 
    Princip för villkorlig åtkomst för Exchange lokalt har redan tillämpats på de grupper som du har valt. Användare som får den här principen måste registrera sina enheter i Intune och vara kompatibla med efterlevnadsprofilerna innan de kan komma åt Exchange lokalt.
 
-5. Om du vill utesluta grupper väljer du **Välj grupper att undanta** och välj sedan en eller flera grupper som är undantagna från kraven för att registrera enheter och vara kompatibla med efterlevnadsprinciper innan de får åtkomst till Exchange lokalt. 
+   > [!div class="mx-imgBorder"]
+   > ![Välj de grupper som ska inkluderas](./media/conditional-access-exchange-create/select-groups.png)
 
-6. Konfigurera därefter den lokala Exchange-anslutningsappen för Intune.  Under **Konfigurera** i fönstret *Åtkomst till Exchange lokalt* väljer du **Lokalt anslutningsprogram Exchange ActiveSync** och välj sedan anslutningsprogrammet för den Exchange-organisation som du vill konfigurera.
+5. Om du vill utesluta grupper väljer du **Välj grupper att undanta** och välj sedan en eller flera grupper som är undantagna från kraven för att registrera enheter och vara kompatibla med efterlevnadsprinciper innan de får åtkomst till Exchange lokalt.
 
-7. Under **Inställningar** väljer du **Användaraviseringar** för att ändra standardmeddelandet som skickas per e-post till användarna om deras enhet inte är kompatibel och de vill ha lokal åtkomst till Exchange. Meddelandemallen använder Markup Language.  Du kan även se en förhandsgranskning av hur meddelandet blir medan du skriver.
+   Välj **Spara** om du vill spara konfigurationen och gå tillbaka till **Exchange-åtkomst**fönstret.
+
+6. Konfigurera därefter den lokala Exchange-anslutningsappen för Intune. Välj **Klientadministration** > **Exchange-åtkomst**> **Lokalt anslutningsprogram för Exchange ActiveSync** och välj sedan anslutningsprogrammet för den Exchange-organisation som du vill konfigurera.
+
+7. Öppna arbetsflödet **Redigera organisation** genom att välja **Redigera** för **Användarmeddelanden**, varefter du kan ändra meddelandet *Användaravisering*.
+
+   > [!div class="mx-imgBorder"]
+   > ![Exempel på skärmbild av arbetsflödet Redigera organisation för meddelanden](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
+
+   Andra standardmeddelandet som skickas per e-post till användarna om deras enhet inte är kompatibel och om de vill ha lokal åtkomst till Exchange. Meddelandemallen använder Markup Language. Du kan även se en förhandsgranskning av hur meddelandet blir medan du skriver
+
+   Välj **Granska och spara**  och sedan **Spara** om du vill spara dina ändringar och slutföra konfigurationen av lokal åtkomst till Exchange.
+
    > [!TIP]
    > Läs mer om Markup Language i den här [artikeln](https://en.wikipedia.org/wiki/Markup_language) på Wikipedia.
- 
-   Välj **OK** för att spara dina ändringar och slutföra konfigurationen av lokal åtkomst till Exchange.
 
-8. Välj sedan **Avancerade åtkomstinställningar för Exchange ActiveSync** för att öppna fönstret *Avancerade åtkomstinställningar för Exchange ActiveSync* där du kan konfigurera regler för enhetsåtkomst:  
+8. Välj sedan **Avancerade åtkomstinställningar för Exchange ActiveSync** för att öppna arbetsflödet *Avancerade åtkomstinställningar för Exchange ActiveSync* där du kan konfigurera regler för enhetsåtkomst.
+
+   > [!div class="mx-imgBorder"]
+   > ![Exempel på skärmbild av arbetsflödet Redigera organisation för avancerade inställningar](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
    - För **Åtkomst för ej hanterad enhet** ställer du in en global standardinställning för åtkomst från enheter som inte påverkas av villkorlig åtkomst eller andra regler:
 
      - **Tillåt åtkomst** – alla enheter får åtkomst till Exchange lokalt omedelbart. Enheter som tillhör användare i de konfigurerade grupperna blockeras om de senare utvärderas till att inte vara kompatibla med efterlevnadsprinciperna eller inte har registrerats i Intune.
 
-     - **Blockera åtkomst** och **Karantän** –alla enheter blockeras omedelbart från att komma åt Exchange lokalt till att börja med. Enheter som tillhör användare i de grupper som du har konfigurerat enligt beskrivningen i föregående procedur får åtkomst efter att enheten registrerats i Intune och bedömt som kompatibel. 
+     - **Blockera åtkomst** och **Karantän** –alla enheter blockeras omedelbart från att komma åt Exchange lokalt till att börja med. Enheter som tillhör användare i de grupper som du har konfigurerat enligt beskrivningen i föregående procedur får åtkomst efter att enheten registrerats i Intune och bedömt som kompatibel.
 
        Android-enheter som *inte* kör Samsung Knox Standard blockeras alltid eftersom de inte stöder den här inställningen.
 
-   -  För **Enhetsplattformsundantag** väljer du **Lägg till** och anger sedan den plattformsinformation som krävs för din miljö. 
-   
+   - Välj **Lägg till** för **Enhetsplattformsundantag** och ange sedan den plattformsinformation som krävs för din miljö.
+
       Om inställningen **Åtkomst för ohanterad enhet** är angiven till **Blockerad** kommer enheter som är registrerade och kompatibla att tillåtas, även om det finns ett plattformsundantag som ska blockeras.  
-   
-   Klicka på **OK** för att spara dina ändringar.
 
-9. Välj **Spara** för att spara principen för villkorlig åtkomst till Exchange.
+9. Klicka på **OK** för att spara dina ändringar.
 
-Skapa sedan en efterlevnadsprincip och tilldela den till användare så att Intune kan utvärdera deras mobilenheter. Se [Komma igång med enhetsefterlevnad](device-compliance-get-started.md).
+10. Välj **Granska och spara** och sedan **Spara** om du vill spara principen för villkorlig åtkomst till Exchange.
 
 ## <a name="next-steps"></a>Nästa steg
+
+Skapa sedan en efterlevnadsprincip och tilldela den till användare så att Intune kan utvärdera deras mobilenheter. Se [Komma igång med enhetsefterlevnad](device-compliance-get-started.md).
 
 [Felsöka den lokala Exchange-anslutningsappen för Intune i Microsoft Intune](https://support.microsoft.com/help/4471887)

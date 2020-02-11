@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 01/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95186e4d1e54737ffeaa5e4c9728d188c2f867d6
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206643"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812349"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune
-
-
 
 Få svar på vanliga frågor när du arbetar med enhetsprofiler och principer i Intune. I denna artikel visas också listor med incheckningsintervall, mer information om konflikter och mycket mer.
 
@@ -83,6 +81,8 @@ Det finns olika åtgärder som utlöser en aviseringe, till exempel när en prin
 Enheter checkar in på Intune när de får en avisering eller enligt schemalagda intervall. När du riktar en åtgärd mot en enhet eller användare, t.ex. en låsning, återställning av lösenord, app, profil- eller principtilldelning, meddelar Intune genast enheten att den ska checka in för att få dessa uppdateringar.
 
 Andra ändringar, t.ex. en uppdatering av kontaktinformationen på företagsportalappen, utlöser inte en omedelbar avisering till enheter.
+
+Inställningarna i policyn eller profilen tillämpas vid varje inloggning. Inlägget i [Windows 10 MDM-policyuppdateringsbloggen](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) kan vara en bra resurs.
 
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Hur vet jag vilka inställningar som tillämpas om flera principer tilldelas samma användare eller enhet?
 

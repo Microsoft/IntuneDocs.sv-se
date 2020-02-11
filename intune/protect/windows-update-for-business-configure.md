@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956273"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886795"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
@@ -71,7 +71,7 @@ Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10-e
 
 ## <a name="windows-10-update-rings"></a>Windows 10-uppdateringsringar
 
-Skapa uppdateringsringar som anger hur och när Windows som en tjänst ska uppdatera dina Windows 10-enheter med funktions- och kvalitetsuppdateringar. I Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Det innebär att om du har installerat den senaste uppdateringen kan du vara säker på att dina Windows 10-enheter är uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
+Skapa uppdateringsringar som anger hur och när Windows som en tjänst ska uppdatera dina Windows 10-enheter med funktions- och kvalitetsuppdateringar. I Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Så länge du alltid har installerat den senaste uppdateringen, så vet du att dina Windows 10-enheter är uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
 
 Windows 10-uppdateringsringar har stöd för [omfångstaggar](../fundamentals/scope-tags.md). Du kan använda omfångstaggar med uppdateringsringar för att filtrera och hantera uppsättningar med konfigurationer som du använder.
 
@@ -205,20 +205,22 @@ När en enhet tar emot en princip för Windows 10-funktionsuppdateringar:
 
 - Till skillnad från om man använder *pausfunktionen* med en uppdateringsring – som upphör att gälla efter 35 dagar – förblir principen för Windows 10-funktionsuppdateringar fortfarande aktiv. Enheterna installerar inte någon ny Windows-version förrän du har ändrat eller tagit bort principen för Windows 10-funktionsuppdateringar. Om du redigerar principen för att ange en nyare version kan enheterna sedan installera funktionerna från just den Windows-versionen.
 
+### <a name="prerequisites-for-windows-10-feature-updates"></a>Förutsättningar för funktionsuppdateringar i Windows 10
+
+Följande krav måste uppfyllas för att Windows-uppdateringar för Windows 10 i Intune ska kunna användas.
+
+- Enheterna måste vara registrerade i Intune MDM och anslutna till Azure AD eller registrerade i Azure AD.
+- Om du vill använda principen för funktionsuppdateringar med Intune, så måste enheterna ha telemetri aktiverat, med minst inställningen [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Du konfigurerar telemetri under *Rapportering och telemetri* som en del av en [enhetsbegränsningsprincip](../configuration/device-restrictions-configure.md).
+  
+  Enheter som tar emot principen för funktionsuppdateringar och som har telemetri inställt på *Inte konfigurerat*, vilket innebär att telemetrin är avstängd, kan installera en senare version av Windows än den som definieras i principen för funktionsuppdateringar. Förutsättningen för att kräva telemetri granskas medan den här funktionen flyttas till allmän tillgänglighet.
+
 ### <a name="limitations-for-windows-10-feature-updates"></a>Begränsningar för funktionsuppdateringar i Windows 10
 
 - När du distribuerar en princip för *Windows 10-funktionsuppdatering* till en enhet som också får en princip för *Windows 10-uppdateringsring*, granskar du uppdateringsringen för att kontrollera följande konfigurationer:
   - **Uppskjutningsperiod för funktionsuppdatering (dagar)** måste vara inställd på **0**.
   - Uppdateringsringens funktionsuppdateringar måste vara *aktiva*. De får inte pausas.
 
-- Policyer för funktionsuppdateringar för Windows 10 kan inte tillämpas under OOBE (out of box experience) och tillämpas endast vid den första Windows Update-genomsökningen när en enhet har etablerats färdigt (detta tar vanligtvis en dag). Enheter som etableras med AutoPilot tar dessutom inte emot policyn.
-
-  Den här begränsningen undersöks för att se om den har stöd framöver.
-
-> [!IMPORTANT]
-> Om du vill använda principen för funktionsuppdateringar med Intune, så måste enheterna ha telemetri aktiverat, med minst inställningen [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Du konfigurerar telemetri under *Rapportering och telemetri* som en del av en [enhetsbegränsningsprincip](../configuration/device-restrictions-configure.md).
->
-> Enheter som tar emot principen för funktionsuppdateringar och som har telemetri inställt på *Inte konfigurerat*, vilket innebär att telemetrin är avstängd, kan installera en senare version av Windows än den som definieras i principen för funktionsuppdateringar. Förutsättningen för att kräva telemetri granskas medan den här funktionen flyttas till allmän tillgänglighet.
+- Policyer för funktionsuppdateringar för Windows 10 kan inte tillämpas samtidigt som Autopilot-välkomstprogrammet körs och tillämpas endast vid den första Windows Update-genomsökningen när en enhet har etablerats färdigt (detta tar vanligtvis en dag).
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Skapa och tilldela Windows 10-funktionsuppdateringar
 
@@ -242,10 +244,12 @@ I det här fönstret kan du göra följande:
 - Välj **Egenskaper** för att ändra distributionen.  I fönstret *Egenskaper* väljer du **Redigera** för att öppna *Distributionsinställningar eller Tilldelningar*, där du sedan kan ändra distributionen.
 - Välj **slutanvändarens uppdateringsstatus** om du vill visa information om principen.
 
+## <a name="validation-and-reporting-for-windows-10-updates"></a>Validering och rapportering för Windows 10-uppdateringar
+
+För både Windows 10-uppdateringsringar och funktionsuppdateringar i Windows 10 använder du [Intune-efterlevnadsrapporter för uppdateringar](../windows-update-compliance-reports.md) när du ska övervaka enheternas uppdateringsstatus. Den här lösningen använder [Uppdateringsefterlevnad](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) med din Azure-prenumeration.
+
 ## <a name="next-steps"></a>Nästa steg
 
 [Windows Update-inställningar som stöds av Intune](../windows-update-settings.md)
-
-[Intune-efterlevnadsrapporter för uppdateringar](../windows-update-compliance-reports.md)
 
 [Felsöka Windows 10-uppdateringsringar](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)

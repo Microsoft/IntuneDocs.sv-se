@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563949"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912572"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -39,6 +39,26 @@ Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de 
 > Det är bara Windows 10 1803 och senare som har stöd för installation av appar när det inte finns någon primär användare associerad.
 >
 > Distribution av verksamhetsspecifika appar stöds inte på enheter som kör Windows 10 Home-utgåvor.
+
+## <a name="supported-windows-10-app-types"></a>Windows 10-apptyper som stöds
+
+Vissa apptyper stöds baserat på den version av Windows 10 som användarna kör. Följande tabell innehåller apptyp och support för Windows 10.
+
+| Typ av app | Hem | Pro | Företag | Enterprise | Utbildning | S-Mode | Hololense | SurfaceHub | WCOS | Mobiltelefon |
+|----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
+|  .MSI | Nej | Ja | Ja | Ja | Ja | Nej | Nej | Nej | Nej | Nej |
+| .IntuneWin | Nej | Ja | Ja | Ja | Ja | 19H2+ | Nej | Nej | Nej | Nej |
+| Office C2R | Nej | Ja | Ja | Ja | Ja | Nej | Nej | Nej | Nej | Nej |
+| VERKSAMHETSSPECIFIK: APPX/MSIX | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja |
+| MSFB Offline | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja |
+| MSFB Online | Ja | Ja | Ja | Ja | Ja | Ja | RS4+ | Ja | Ja | Ja |
+| Web Apps | Ja | Ja | Ja | Ja | Ja | Ja | Ja<sup>1 | Ja<sup>1 | Ja | Ja |
+| Store-länk | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja |
+
+<sup>1</sup> Starta endast från företagsportalen.
+
+> [!NOTE]
+> Alla typer av Windows-appar kräver registrering.
 
 ## <a name="windows-10-lob-apps"></a>Verksamhetsspecifika appar i Windows 10
 
@@ -69,13 +89,19 @@ Beroende på apptyp kan appen installeras på en Windows 10-enhet på något av 
 > [!NOTE]
 > För Win32-appar som skapats som Dubbelläge, måste administratören välja om appen ska användas som en app i Användarläge eller Datorläge för alla tilldelningar som är associerade med instansen. Distributionskontexten kan inte ändras per tilldelning.  
 
-När en app distribueras i enhetskontext lyckas installationen bara när den riktas mot en enhet som stöder enhetskontext. Dessutom stöder distribuering i enhetskontext dessutom följande villkor:
-- Om en app distribueras i enhetskontexten och riktas mot en användare, misslyckas installationen. Följande status och fel visas i administratörskonsolen:
+Appar kan bara installeras i enhetskontexten när de stöds av både enheten och Intune-apptypen. Du kan installera följande typer av appar i enhetskontexten och tilldela en enhetsgrupp dessa appar:
+
+- Win32-appar
+- Offline-licensierade Microsoft Store för företag-appar
+- Verksamhetsspecifika appar (MSI, APPX och MSIX)
+- Office 365 ProPlus
+
+Verksamhetsspecifika Windows-appar (i synnerhet APPX och MSIX) och Microsoft Store för företag-appar (offline-appar) som du har valt att installera i enhetskontext måste tilldelas till en enhetsgrupp. Installationen misslyckas om någon av dessa appar distribueras i användarkontexten. Följande status och fel visas i administratörskonsolen:
   - Status: Misslyckades.
   - Fel: Det går inte att rikta sig mot en användare med en installation för enhetskontext.
-- Om en app distribueras i enhetskontext, men riktas mot en enhet som inte stöder enhetskontext, misslyckas installationen. Följande status och fel visas i administratörskonsolen:
-  - Status: Misslyckades.
-  - Fel: Den här plattformen stöder inte kontextinstallationer för enheter. 
+
+> [!IMPORTANT]
+> När det används tillsammans med ett assisterat etableringsscenario för Autopilot, så finns det inga krav på att verksamhetsspecifika appar eller Microsoft Store för företag-appar som distribuerats i enhetskontexten ska vara inriktade på någon enhetsgrupp. Mer information finns i [Assisterad distribution av Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > När en apptilldelning har sparats med en specifik distribution går det inte att ändra kontexten för tilldelningen, förutom för moderna appar. För moderna appar kan du ändra kontexten från användarkontext till enhetskontext. 
