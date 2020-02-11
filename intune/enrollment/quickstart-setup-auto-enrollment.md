@@ -8,19 +8,19 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 03/26/2019
+ms.date: 01/17/2020
 ms.author: erikje
 ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9649a84650a555e964cd9200ed2295fee5efb9a
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: e5cc7cf3661caa2b2640d9370d26402b7702d36b
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562316"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76541091"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Snabbstart: Konfigurera automatisk registrering för Windows 10-enheter
 
@@ -33,7 +33,7 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 - Microsoft Intune-prenumeration [registrera dig för ett kostnadsfritt utvärderingskonto](../fundamentals/free-trial-sign-up.md).
 - För att kunna slutföra den här snabbstarten måste du först [skapa en användare](../fundamentals/quickstart-create-user.md) och [skapa en grupp](../fundamentals/quickstart-create-group.md).
 
-## <a name="sign-in-to-intune"></a>Logga in i Intune
+## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Logga in på Intune i Microsoft Endpoint Manager
 
 Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
@@ -41,16 +41,20 @@ Logga in till [administrationscentret för Microsoft Endpoint Manager](https://g
 
 I det här exemplet kommer du att använda MDM-registrering så att både företagets enheter och BYOD-enheter kan registreras automatiskt. Du kommer att registrera dig för en kostnadsfri Azure Active Directory Premium-prenumeration.
 
-1. Välj **Azure Active Directory** > **Mobilitet (MDM och MAM)** i [Azure Portal](https://portal.azure.com).
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Alla tjänster** > **M365 Azure Active Directory** > **Azure Active Directory** > **Mobility (MDM och MAM)** .
 2. Välj **Hämta en kostnadsfri utvärderingsversion för att använda den här funktionen**. Om du väljer det här alternativet tillåts automatisk registrering med hjälp av den kostnadsfria utvärderingsversionen av Azure Active Directory Premium. 
 
     ![Välja den kostnadsfria utvärderingsversionen av Azure Active Directory Premium](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
 
-    Välj alternativet för kostnadsfri utvärderingsversion av **Enterprise Mobility + Security E5**. Dessutom måste du välja att **Aktivera** den kostnadsfria utvärderingsversionen.
+3. Välj alternativet för kostnadsfri utvärderingsversion av **Enterprise Mobility + Security E5**. 
+4. Klicka på **kostnadsfri utvärderingsversion** > **Aktivera** den kostnadsfria utvärderingsversionen.
 
     ![Välja kostnadsfri utvärderingsversion av Enterprise Mobility + Security E5](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-02.png)
 
-3. Välj **Microsoft Intune**. 
+    > [!NOTE]
+    > Det kan ta någon minut att aktivera den. 
+
+3. Välj **Microsoft Intune** för att konfigurera Intune. 
 
     ![Välja Microsoft Intune i listan](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-03.png)
 
@@ -58,11 +62,14 @@ I det här exemplet kommer du att använda MDM-registrering så att både föret
 
     ![Välj ”Vissa” i listan Konfigurera](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
 
-5. Välj **Välj grupper** > **Contoso-testare** > **Välj** som tilldelad grupp.
+5. Klicka på **Välj grupper** > **Contoso-testare** > **Välj** som tilldelad grupp.
 
     ![Välj den grupp som ska registreras](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
 6. Välj **Vissa** i **MAM-användaromfång** för att hantera data på personalens enheter.
+
+    ![Välj den grupp som ska registreras](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
+
 7. Välj **Välj grupper** > **Contoso-testare** > **Välj** som tilldelad grupp. 
 8. Använd standardvärdena för de återstående konfigurationsvärdena.
 9. Välj **Spara**.

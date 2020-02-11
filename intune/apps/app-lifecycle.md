@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e70191ed133d9427a3c8565d1dbf03573b628b
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 6ce23d77d9b9d89ce51738a9c4e244dfca9a1c59
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692221"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812410"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Översikt över applivscykeln i Microsoft Intune
 
@@ -43,7 +43,7 @@ När du har lagt till appen i Intune kan du sedan [tilldela den till användare 
 Som en del av applivscykeln släpps regelbundet nya versioner av appar. Intune tillhandahåller verktyg för att enkelt [uppdatera appar](apps-add.md) som du har distribuerat till en senare version. Dessutom kan du konfigurera ytterligare funktioner för vissa appar, till exempel:
 
 - [Konfigurationsprinciper för iOS-appar](app-configuration-policies-use-ios.md) tillhandahåller inställningar för kompatibla iOS-appar som används när appen körs. En app kan till exempel kräva specifika inställningar för anpassning eller namnet på en server som den måste ansluta till.
-- [Hanterade webbläsarprinciper](app-configuration-managed-browser.md) hjälper dig att konfigurera inställningar för den hanterade webbläsaren i Intune som ersätter enhetens standardwebbläsare och du kan begränsa vilka webbplatser som användarna kan besöka.
+- [Hanterade webbläsarprinciper](app-configuration-managed-browser.md) hjälper dig att konfigurera inställningar för den hanterade [Microsoft Edge](~/apps/apps-supported-intune-apps.md#microsoft-apps) som ersätter enhetens standardwebbläsare och du kan begränsa vilka webbplatser som användarna kan besöka.
 
 ## <a name="protect"></a>Skydda
 

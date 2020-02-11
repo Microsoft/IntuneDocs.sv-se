@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d7a166e97cb9161df7c6d024e200adec0974715
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: c3deb9f3c96a4c2c2de72b7016aca855f679bbd7
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75204977"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755143"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows i Microsoft Intune
 
@@ -34,48 +34,64 @@ En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinst
 > [!IMPORTANT]
 > När du distribuerar Win32-appar med hjälp av en installationsfil med tillägget *.msi* kan du överväga att använda [tillägget Intune-hantering](../apps/intune-management-extension.md). Om du blandar installationen av Win32-appar och verksamhetsspecifika appar under autopilotregistreringen, kan det hända att appen inte kan installeras.  
 
-## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
+## <a name="select-the-app-type"></a>Välj typ av app
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. Välj **Branschspecifik app** som**Apptyp** i fönstret **Lägg till app**.
+3. I fönstret **Välj apptyp** väljer du **Branschspecifik app** under **Övriga** typer av appar.
+4. Klicka på **Välj**. Stegen **Lägg till app** visas.
 
-## <a name="step-2-configure-the-app-package-file"></a>Steg 2: Konfigurera appaketfilen
+## <a name="step-1---app-information"></a>Steg 1 – information om app
 
-1. I fönstret **Lägg till app** väljer du **Appaketfilen**.
+### <a name="select-the-app-package-file"></a>Välj appaketfilen
+
+1. I fönstret **Lägg till app** klickar du på **Välj appaketfilen**. 
 2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en fil för Windows-installationen med tillägget **.msi**, **.appx** eller **.appxbundle**.
+   Appens information visas.
 
     > [!NOTE]
     > Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx**, **.appxbundle**, **.msix** och **.msixbundle**.  
 
-1. Välj **OK** när du är klar.
+3. När du är klar väljer du **OK** i fönstret **Appaketfil** för att lägga till appen.
 
+### <a name="set-app-information"></a>Konfigurera appinformation
 
-## <a name="step-3-configure-app-information"></a>Steg 3: Konfigurera appinformation
-
-1. Välj **Appinformation** i fönstret **Lägg till app**.
-2. Konfigurera följande information i fönstret **Appinformation**. Vissa värden i det här fönstret kan fyllas i automatiskt.
+1. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
     - **Namn**: Ange namnet på appen så som det visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna på företagsportalen.
-    - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
+    - **Beskrivning**: Ange beskrivningen av appen. Beskrivningen visas i företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
-    - **Ignorera appversion**: Ange **Ja** om apputvecklaren uppdaterar appen automatiskt. Det här alternativet gäller endast mobila .msi-appar.
+    - **Lägsta operativsystemversion**: Välj den lägsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
     - **Visa denna som en aktuell app i företagsportalen**: Visa appen tydligt på huvudsidan för företagsportalen när användare söker efter appar.
-    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om appen. Webbadressen visas i företagsportalen.
-    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation om appen. Webbadressen visas i företagsportalen.
-    - **Kommandoradsargument**: Alternativt kan du ange kommandoradsargument som du vill tillämpa på MSI-filen när den körs.  Ett exempel är **/q**. Ta inte med msiexec-kommandot eller argument, till exempel **/i** eller **/x**, eftersom de används automatiskt. Mer information finns i [Kommandoradsalternativ](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Om. MSI-filen behöver ytterligare kommandoradsalternativ kan du använda [Win32-apphantering](app-management.md).
+    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas i företagsportalen.
+    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas i företagsportalen.
     - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
     - **Ägare**: Alternativt kan du ange ett namn på appägaren. Ett exempel är **Personalavdelningen**.
     - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Logotyp**: Ladda upp en ikon som är associerad med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-3. Välj **OK** när du är klar.
+2. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
 
-## <a name="step-4-finish-up"></a>Steg 4: Slutför
+## <a name="step-2---select-scope-tags-optional"></a>Steg 2 – Välj omfångstaggar (valfritt)
+Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
-1. I fönstret **Lägg till app** kontrollerar du att appinformationen är rätt konfigurerad.
-2. Välj **Lägg till** för att ladda upp appen till Intune.
+1. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. 
+2. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
 
-## <a name="step-5-update-a-line-of-business-app"></a>Steg 5: Uppdatera en verksamhetsspecifik app
+## <a name="step-3---assignments"></a>Steg 3 – Tilldelningar
+
+1. Välj **Obligatorisk**, **Tillgängligt för registrerade enheter** eller **Avinstallera** som grupptilldelning för appen. Mer information finns i [Lägg till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md) och [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
+2. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. 
+
+## <a name="step-4---review--create"></a>Steg 4 – Granska och skapa
+
+1. Granska värdena och inställningarna som du har angett för appen.
+2. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+    Bladet **Översikt** för den branschspecifika appen visas.
+
+Den app som du har skapat visas nu i listan över appar. Du kan tilldela appar till grupper som du väljer i listan. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
+
+## <a name="update-a-line-of-business-app"></a>Uppdatera en verksamhetsspecifik app
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

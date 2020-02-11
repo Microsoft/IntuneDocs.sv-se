@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: 11e3465c583197582a545cdd6f4b71bc8d24e115
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756016"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754209"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -84,7 +84,7 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|Windows, iOS, Android|
 |Registreringsdatum|Datum och tid då enheten registrerades i Intune.|Windows, iOS, Android|
 |Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|Windows, iOS, Android|
-|Kod för att kringgå aktiveringslås|Koden som kan användas för att förbikoppla aktiveringslåset.|iOS|
+|Kod för att kringgå aktiveringslås|Koden som kan användas för att inaktivera aktiveringslåset.|iOS|
 |Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|Windows, iOS, Android|
 |Intune-registrerad|Om inställningen är **Ja** är enheten registrerad i Intune|Windows, iOS, Android|
 |Efterlevnad|Enhetens kompatibilitetstillstånd.|Windows, iOS, Android|
@@ -92,8 +92,6 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |Aktiverings-ID för EAS|Enhetens identifierare för Exchange ActiveSync.|Windows, iOS, Android|
 |Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|Windows, iOS, Android|
 |Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|Windows, iOS, Android|
-
-\* Inte tillgängligt i Android med Googles principhanterare, till exempel fullständigt hanterade och dedikerade enheter
 
 > [!Note]  
 > Telefonnumret har inte inventerats på Android Enterprise-dedikerade enheter eller fullständigt hanterade enheter.

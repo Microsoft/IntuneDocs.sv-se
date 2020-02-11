@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92699ccce4f0b2590e526b3442cd45bfda6407c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: e299601f69a7052ea52f9da2537306cb8556982b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563602"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755382"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Lägg till inbyggda appar i Microsoft Intune
 
@@ -39,18 +39,27 @@ I tidigare versioner av Intune-konsolen tillhandahöll Intune flera hanterade Of
 För att lägga till en inbyggd app till dina tillgängliga appar i Microsoft Intune, gör följande:
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. I appfönstret **Lägg till** i listan **Apptyp** väljer du **Inbyggd app**.
-4. Välj **Välj app**.
-5. I fönstret **Inbyggd app** väljer du de appar som du vill inkludera.
-6. I fönstret **Lägg till app** väljer du **Lägg till**.
+3. I rutan **Välj typ av app** väljer du **Inbyggd app** bland tillgängliga **typer av appar i Store**.
+4. Klicka på **Välj**. Stegen **Lägg till app** visas.
+5. På sidan **Välj inbyggda appar** klickar du på **Välj app** för att välja de appar som du vill inkludera.
+6. Välj de inbyggda appar som du vill inkludera. 
+7. När du har valt apparna klickar du på **Välj** i fönstret **Välj inbyggda appar**.
+8. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
+9. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. Mer information finns i [Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT](~/fundamentals/scope-tags.md).
+10. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+11. Välj grupptilldelningar för appen. Mer information finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md). 
+12. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. Granska värdena och inställningarna som du har angett för appen.
+13. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
 
+    **Översiktsbladet** för appen som du har skapat visas i applistan.
 
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 
 Du kan modifiera informationen om den inbyggda appen. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
 1. Välj **Appar** > **Alla appar** och välj den inbyggda app som du vill ändra.  
    Ett fönster för den inbyggda appen visas.
-2. Välj **Egenskaper** > **Konfigurera**.
+2. Välj **Egenskaper**.
+3. Välj **Redigera** bredvid **Appinformation**.
 4. I fönstret **Appinformation** kan du ändra följande information:
     - **Namn**: Ange namnet på den inbyggda appen så som det visas i företagsportalen. Kontrollera att alla namn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. 
@@ -63,8 +72,10 @@ Du kan modifiera informationen om den inbyggda appen. Den här informationen hj�
     - **Ägare**: Alternativt kan du ange ett namn på appens ägare (till exempel *HR-avdelningen*).
     - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Ladda upp ikon**: Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
-4. Välj **OK**.
-5. I fönstret **Egenskaper** väljer du **Spara**.
+5. Visa sidan **Granska och skapa** genom att klicka på **Granska och skapa**. Granska värdena och inställningarna som du har angett för appen.
+13. När du är klar klickar du på **Spara** för att uppdatera appen i Intune.
+
+    **Översiktsbladet** för appen som du har skapat visas i applistan.
 
 ## <a name="next-steps"></a>Nästa steg
 

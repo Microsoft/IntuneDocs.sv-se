@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563987"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912666"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -132,7 +132,7 @@ Anvisningar för att tilldela en hanterad Google Play-app till ohanterade enhete
 När en selektiv rensning av appskyddsprinciper görs i Intune-konsolen, tas arbetskontot automatiskt bort från Play Store-appen. Slutanvändaren kommer därefter inte längre se några arbetsappar i Play Stores appkatalog. När arbetskontot tas bort från en enhet förblir appar som installerats från Play Store installerade på enheten och kommer inte att avinstalleras. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Avinstallationsinställningar för iOS-hanterade appar
-För iOS-enheter kan du välja vad som händer med hanterade appar när enheten avregistreras från Intune eller hanteringsprofilen tas bort med inställningen **Avinstallera om enheten tas bort**. Den här inställningen tillämpas endast efter att enheten har registrerats och apparna har installerats som hanterade. Det går inte att konfigurera den här inställningen för webbprogram eller webblänkar. 
+För iOS-enheter kan du välja vad som händer med hanterade appar när enheten avregistreras från Intune eller hanteringsprofilen tas bort med inställningen **Avinstallera om enheten tas bort**. Den här inställningen tillämpas endast efter att enheten har registrerats och apparna har installerats som hanterade. Det går inte att konfigurera den här inställningen för webbprogram eller webblänkar. Endast data som skyddas av hantering av mobilprogram (MAM) tas bort efter utsättning genom selektiv radering av app.
 
 Standardvärden för inställningen är förifyllda för nya tilldelningar enligt följande:
 

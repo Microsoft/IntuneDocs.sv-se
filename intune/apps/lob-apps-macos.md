@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a084528fdc500bf9b6de0ca5fa847c2e0b3797
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: c7aa6af751e5ab3e1e3cdff6b1d2e3d6693f65df
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563928"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755178"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Lägga till verksamhetsspecifika appar för macOS i Microsoft Intune
 
@@ -59,7 +59,9 @@ Du måste hämta ett externt verktyg, markera det hämtade verktyget som en kör
 3. Använd `IntuneAppUtil`-kommandot inom den **Intunes programhanteringsverktyg för Mac** för att omsluta den verksamhetsspecifika *.pkg*-filen från en *.intunemac*-fil.<br>
 
     Exempelkommandon att använda för Microsoft Intune programhanteringsverktyget för macOS:
-    
+    > [!IMPORTANT]
+    > Kontrollera att argumentet `<source_file>` inte innehåller blanksteg innan du kör `IntuneAppUtil`-kommandona.
+
     - `IntuneAppUtil -h`<br>
     Det här kommandot visar användningsinformation för verktyget.
     
@@ -69,48 +71,63 @@ Du måste hämta ett externt verktyg, markera det hämtade verktyget som en kör
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Det här kommandot extraherar identifierade parametrar och version för den skapade *.intunemac*-filen.
 
-## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
+## <a name="select-the-app-type"></a>Välj typ av app
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. Välj **Branschspecifik app** som**Apptyp** i fönstret **Lägg till app**.
+3. I fönstret **Välj apptyp** väljer du **Branschspecifik app** under **Övriga** typer av appar.
+4. Klicka på **Välj**. Stegen **Lägg till app** visas.
 
-## <a name="step-2---configure-the-app-package-file"></a>Steg 2 – Konfigurera appaketfilen
+## <a name="step-1---app-information"></a>Steg 1 – information om app
 
-1. I fönstret **Lägg till app** väljer du **Appaketfil**.
-2. I fönstret **Appaketfil** klickar du på knappen Bläddra och väljer en macOS-installationsfil med filnamnstillägget *.intunemac*.
-3. Välj **OK** när du är klar.
+### <a name="select-the-app-package-file"></a>Välj appaketfilen
 
+1. I fönstret **Lägg till app** klickar du på **Välj appaketfilen**. 
+2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en macOS-installationsfil med tillägget *.intunemac*.
+   Appens information visas.
+3. När du är klar väljer du **OK** i fönstret **Appaketfil** för att lägga till appen.
 
-## <a name="step-3---configure-app-information"></a>Steg 3 – Konfigurera appinformation
+### <a name="set-app-information"></a>Konfigurera appinformation
 
-1. Välj **Appinformation** i fönstret **Lägg till app**.
-2. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
-    - **Namn** – Ange namnet på appen som ska visas på företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
-    - **Beskrivning** – Ange en beskrivning av appen som ska visas för användare på företagsportalen.
-    - **Utgivare** – Ange namnet på appens utgivare.
-    - **Minsta operativsystem** – Välj den minsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
-    - **Kategori** – Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen** – Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Sekretess-URL (valfritt)** – Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Utvecklare (valfritt)** – Ange apputvecklarens namn.
-    - **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
-    - **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
-    - **Logotyp** – Ladda upp en ikon som är associerad med appen. Den här ikonen visas med appen när användare söker på företagsportalen.
-3. Välj **OK** när du är klar.
+1. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
+    - **Namn**: Ange namnet på appen så som det visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna på företagsportalen.
+    - **Beskrivning**: Ange beskrivningen av appen. Beskrivningen visas i företagsportalen.
+    - **Utgivare**: Ange namnet på appens utgivare.
+    - **Lägsta operativsystemversion**: Välj den lägsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
+    - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
+    - **Visa denna som en aktuell app i företagsportalen**: Visa appen tydligt på huvudsidan för företagsportalen när användare söker efter appar.
+    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas i företagsportalen.
+    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas i företagsportalen.
+    - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
+    - **Ägare**: Alternativt kan du ange ett namn på appägaren. Ett exempel är **Personalavdelningen**.
+    - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
+    - **Logotyp**: Ladda upp en ikon som är associerad med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
+2. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
 
-## <a name="step-4---finish-up"></a>Steg 4 – Slutför
+## <a name="step-2---select-scope-tags-optional"></a>Steg 2 – Välj omfångstaggar (valfritt)
+Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
-1. I fönstret **Lägg till app** kontrollerar du att informationen för appen är korrekt.
-2. Välj **Lägg till** för att överföra appen till Intune.
+1. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. 
+2. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+
+## <a name="step-3---assignments"></a>Steg 3 – Tilldelningar
+
+1. Välj **Obligatorisk**, **Tillgängligt för registrerade enheter** eller **Avinstallera** som grupptilldelning för appen. Mer information finns i [Lägg till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md) och [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
+2. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. 
+
+## <a name="step-4---review--create"></a>Steg 4 – Granska och skapa
+
+1. Granska värdena och inställningarna som du har angett för appen.
+2. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+    Bladet **Översikt** för den branschspecifika appen visas.
 
 Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
 
 > [!NOTE]
 > Om *.pkg*-filen innehåller flera appar eller appinstallationsprogram kommer Microsoft Intune endast rapportera att *appen* har installerats korrekt när alla installerade appar har upptäckts på enheten.
 
-## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
+## <a name="update-a-line-of-business-app"></a>Uppdatera en verksamhetsspecifik app
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

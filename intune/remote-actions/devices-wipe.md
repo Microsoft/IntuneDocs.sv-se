@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991779"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812461"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -88,7 +88,7 @@ Följande tabeller beskriver vilka data som tas bort och hur åtgärden **Dra ti
 
 |Datatyp|iOS|
 |-------------|-------|
-|Företagsappar och associerade data som installerats av Intune|**Appar som installerats med hjälp av Företagsportalen:** För appar som är fästa på hanteringsprofilen tas alla appdata och appar bort. Dessa appar innehåller appar som ursprungligen installerats från App Store och som senare har hanterats som företagsappar. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** För appar som inte hanteras med hjälp av Företagsportalen kommer data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring att tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort. Personliga appdata och appar tas inte bort.|
+|Företagsappar och associerade data som installerats av Intune|**Appar som installerats med hjälp av Företagsportalen:** För appar som är fästa på hanteringsprofilen tas alla appdata och appar bort. Dessa appar innehåller appar som ursprungligen installerades från App Store och som hanteras senare som företagsappar, om inte appen är konfigurerad att inte avinstalleras vid borttagning av enheten. <br /><br /> **Microsoft-appar som använder mobil apphantering och som installerades från App Store:** För appar som inte hanteras med hjälp av Företagsportalen kommer data från företagsappar som skyddas av MAM-kryptering (Mobile Application Management) i appens lokala lagring att tas bort. Data som skyddas med MAM-kryptering utanför appen förblir krypterade och oanvändbara, men tas inte bort. Personliga appdata och appar tas inte bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre. Användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|

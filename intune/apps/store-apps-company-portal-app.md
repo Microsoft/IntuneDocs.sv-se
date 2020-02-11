@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93570bc9dab20801ea6681f6a142de62990a1c57
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 061644a1c83b02902a6bbdaf3cfbd04815d32ea3
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712958"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755042"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Lägga till appen Företagsportal för Windows 10 manuellt med Microsoft Intune
 
@@ -56,7 +56,7 @@ Användarna kan själva installera appen Företagsportal från Microsoft Store f
     Den här åtgärden måste slutföras för x86-, x64- och ARM-arkitekturer:<br> 
     *Det finns 9 nödvändiga ramverkspaket när du väljer 1507 som lägsta version av operativsystemet, 12 paket när du väljer 1511 och 15 paket när du väljer 1607.*
 
-8. Ladda upp appen Företagsportal som en ny app i Microsoft Intune i Azure Portal. Du lägger till programmet genom att välja Branschspecifik app som **Apptyp** i fönstret **Lägg till app**. Välj sedan appaketfilen (tillägget .Appxbundle).
+8. Ladda upp appen Företagsportal som en ny app i Microsoft Intune i Azure Portal. Du lägger till programmet genom att välja Branschspecifik app som **Apptyp** i fönstret **Välj apptyp**. Välj sedan appaketfilen (tillägget .Appxbundle).
 
 9. Under **Välj beroende appfiler** väljer du alla beroenden som du laddade ner i steg 7 genom att använda shift+klick. Kontrollera att kolumnen **Tillagda** visar **Ja** för alla arkitekturer som du behöver.
 

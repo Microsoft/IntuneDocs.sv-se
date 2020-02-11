@@ -6,7 +6,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5616b27b97d5623958ec872390e2a6de79db3c5
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2daa7428cf8677f9e1a2b11db2b3ce65e2df8bc4
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563457"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755008"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Lägg till iOS Store-appar i Microsoft Intune
 
@@ -43,19 +43,23 @@ Du kan endast tilldela appar med den här metoden om de är gratis i App Store. 
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. I listan **Apptyp** under den **Store-app**, välj **iOS**.
-4. Välj **Sök i App Store**.
-5. Välj nationella/regionala inställningar för App Store i rutan **Sök i App Store**.
-6. Ange namnet (eller en del av namnet) i fönstret **Sök**.  
+3. Välj **iOS Store-app** i rutan **Välj apptyp** bland de tillgängliga typerna av **Store-appar**.
+4. Klicka på **Välj**.<br>
+   Stegen **Lägg till app** visas.
+5. Välj **Sök i App Store**.
+6. Välj nationella/regionala inställningar för App Store i rutan **Sök i App Store**.
+7. Ange namnet (eller en del av namnet) i fönstret **Sök**.  
     Intune söker i butiken och returnerar en lista över relevanta resultat.
-7. I resultatlistan väljer du den app du önskar och klickar sedan på **Välj**.
-8. I fönstret **Lägg till app** väljer du **Appinformation** för att konfigurera appen.
-9. Lägg till appinformationen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
+8. I resultatlistan väljer du den app du önskar och klickar sedan på **Välj**.<br>
+
+   Sidan **Appinformation** visas i fönstret **Lägg till app**. När det är möjligt läggs appinformation till utifrån den app som du valde i butiken.
+
+9. Lägg till information om appen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
     - **Namn**: Ange namnet på appen så som den ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
     - **Webbadress till appbutik**: Skriv App Stores URL för den app som du vill skapa.
-    - **Lägsta operativsystemsversion**: Välj den tidigaste operativsystemsversion i listan som appen kan installeras i. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
+    - **Lägsta operativsystemversion**: Välj den tidigaste operativsystemsversion i listan som appen kan installeras i. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
     - **Tillämplig enhetstyp**: I listan väljer du de enheter som används av appen.
     - **Kategori**: Du kan även välja en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
     - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
@@ -65,10 +69,14 @@ Du kan endast tilldela appar med den här metoden om de är gratis i App Store. 
     - **Ägare**: Alternativt kan du ange ett namn på appens ägare, t.ex. *Personalavdelningen*. Det här fältet visas bara för administratörer och är inte synligt för användarna.
     - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen. Det här fältet visas bara för en administratör och kommer inte att visas för slutanvändarna.
     - **Logotyp**: Om du vill kan du ladda upp en ikon som ska kopplas till appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-10. Välj **OK**.
-11. Välj **Lägg till**.
+10. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
+11. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. Mer information finns i [Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT](~/fundamentals/scope-tags.md).
+12. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+13. Välj grupptilldelningar för appen. Mer information finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md). 
+14. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. Granska värdena och inställningarna som du har angett för appen.
+15. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
 
-Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer.
+**Översiktsbladet** för appen som du har skapat visas i applistan.
 
 ## <a name="next-steps"></a>Nästa steg
 

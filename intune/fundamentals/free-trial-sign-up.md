@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 01/16/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35dd017eaa2dd3cd6c17dc611aaa9d457b18aca2
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: e1baf0b4273a9074ac7172c08240a8e3c3a9d7fa
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839249"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76541123"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Snabbstart: Prova Microsoft Intune utan kostnad
 
 Microsoft Intune hjälper dig att skydda din arbetskrafts företagsdata genom att hantera enheter och appar. I den här snabbstarten skapar du en kostnadsfri prenumeration för att prova Intune i en testmiljö.
 
-Intune ger hantering av mobilenheter (MDM) och hantering av mobilappar (MAM) från en säker molnbaserad tjänst som administreras med hjälp av Microsoft Azure-portalen. Med Intune kan du se till att personalens företagsresurser (data, enheter och appar) är korrekt konfigurerade och uppdaterade, har korrekt åtkomst och uppfyller företagets efterlevnadsprinciper och krav.
+Intune ger hantering av mobilenheter (MDM) och hantering av mobilappar (MAM) från en säker molnbaserad tjänst som administreras med hjälp av administrationscentret för Microsoft Endpoint Manager. Med Intune kan du se till att personalens företagsresurser (data, enheter och appar) är korrekt konfigurerade och uppdaterade, har korrekt åtkomst och uppfyller företagets efterlevnadsprinciper och krav.
 
 ## <a name="prerequisites"></a>Krav
 Innan du konfigurerar Microsoft Intune, bör du granska följande krav:
@@ -60,27 +60,31 @@ Du kan prova Intune utan kostnad i 30 dagar. Om du redan har ett arbets- eller s
 
     ![Bild av din kontoinformation](./media/free-trial-sign-up/intune-end-of-sign-up-process.png) 
 
-## <a name="sign-in-to-the-azure-portal"></a>Logga in på Azure Portal
+## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Logga in på Intune i Microsoft Endpoint Manager
 
-1. Öppna ett nytt webbläsarfönster och ange **https://portal.azure.com** i adressfältet. 
-2. Använda de autentiseringsuppgifter som du fick i stegen ovan för att logga in.
+Om du inte redan har loggat in på portalen utför du följande steg:
 
-    ![Bild på inloggningssidan i Azure-portalen](./media/free-trial-sign-up/azure-portal-signin.png)
+1. Öppna ett nytt webbläsarfönster och ange **https://devicemanagement.microsoft.com** i adressfältet. 
+2. Använd det användar-ID som du angav i stegen ovan för att logga in ( *yourID@yourdomain* .onmicrosoft.com).
 
-3. Välj **Alla tjänster** på sidopanelen till vänster för att visa Microsoft Intune i Azure-portalen.
-4. Sök efter **Microsoft Intune** i filterrutan och välj den.
-5. Markera **stjärnan** för att lägga till Intune längst ned i listan över dina favorittjänster och öppna Intune-kontrollpanelen.
+    ![Bild på inloggningssidan i portalen](./media/free-trial-sign-up/azure-portal-signin.png)
 
 När du registrerar dig för en utvärderingsversion skickas dessutom ett e-postmeddelande med din kontoinformation till den e-postadress som du angav när du registrerade dig. E-postmeddelandet bekräftar att din utvärderingsversion är aktiv.
 
 > [!TIP]
-> När du arbetar med Azure-portalen kanske du får bättre resultat om du arbetar med en webbläsare i standardläge, i stället för i privat läge.
+> När du arbetar med Microsoft Endpoint Manager får du kanske bättre resultat om du arbetar med en webbläsare i standardläge, i stället för i privat läge.
 
-## <a name="set-the-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
+## <a name="confirm-the-mdm-authority-in-intune"></a>Bekräfta MDM-utfärdaren i Intune
 
-När du har loggat in på Azure-portalen och valt Intune kanske du ser en orangefärgad banderoll som anger att du inte har angett MDM-utfärdaren. Inställningen av hantering av mobil enhet bestämmer hur du ska hantera dina enheter. MDM-utfärdaren måste anges innan användarna kan registrera enheter för hantering.
+Som standard ställs MDM-utfärdaren in när du skapar din kostnadsfria utvärderingsversion. Du kan bekräfta att MDM-utfärdaren har ställts in med hjälp av följande steg:
 
-Följ dessa steg om du vill ställa in utfärdare för hantering av mobila enheter till Intune.
+1. Om du inte redan har loggat in loggar du in på Microsoft Endpoint Manager.
+2. Klicka på **Klientadministration**.
+3. Visa information om klienten. **MDM-utfärdaren** ska vara inställd på **Microsoft Intune**.
+
+Om du när du har loggat in på Microsoft Endpoint Manager visas en orange banderoll som anger att du ännu inte har angett någon MDM-utfärdare kan du aktivera den nu. Inställningen av hantering av mobil enhet bestämmer hur du ska hantera dina enheter. MDM-utfärdaren måste anges innan användarna kan registrera enheter för hantering.
+
+### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>Följ dessa steg om du vill ställa in utfärdare för hantering av mobila enheter till Intune:
 
 1. Öppna ett nytt webbläsarfönster och ange **https://portal.azure.com** i adressfältet. 
 2. Välj **Alla tjänster** > **Microsoft Intune**.
@@ -121,9 +125,9 @@ Om ditt företag har sin egen anpassade domän som du vill använda utan **.onmi
 
 ## <a name="admin-experiences"></a>Administratörsupplevelser
 
-Det finns två portaler som du kan använda:
-- Intune-instrumentpanel i Azure ([portal.azure.com](https://portal.azure.com)) där du kan utforska [Intune-funktionerna](what-is-intune.md). Vanligtvis utför du ditt arbete i Intune-instrumentpanelen.
-- I administrationscentret för Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) kan du lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
+Det finns två portaler som används oftast:
+- I administrationscentret för Microsoft Endpoint Manager ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) kan du utforska [funktionerna i Intune](what-is-intune.md). Det är här som administratören arbetar med Intune.
+- I administrationscentret för Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)) kan du lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
 
 ## <a name="next-steps"></a>Nästa steg
 

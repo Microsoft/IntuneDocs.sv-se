@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c199964409a91aa6f5b75ae067968e37c1b1a189
-ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
+ms.openlocfilehash: 5c916e5cfb09da50bfcbfbe2ac4b094172357e80
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125351"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812387"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Skyddade appar i Microsoft Intune  
 
@@ -53,7 +53,7 @@ Följande tabeller innehåller information om partners som stöds och Microsoft-
 | **Microsoft Edge**<p><img alt="Microsoft app - Microsoft Edge icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-edge.png" width="100"> | Microsoft Edge skapar en kontinuerlig webbläsarupplevelsen över enheter för Windows 10-användare. Innehåll och data synkroniserar sömlöst i bakgrunden så att användare kan surfa över flera enheter utan att missa något. Välbekanta Microsoft Edge-funktioner som hubben låter användare organisera webben på ett sätt som rensar upp röran och gör det enklare att hitta, visa och hantera sitt innehåll i farten. Microsoft Edge är utformat så att Windows 10-användare kan surfa på nätet som de vill, var de än är, utan att störa flödet. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-edge/id1288723196?mt=8) |  
 | **Microsoft Excel**<p><img alt="Microsoft app - Microsoft Excel icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-excel.png" width="100"> | Excel-kalkylblad ser bättre ut än någonsin på din surfplatta och telefon. Känn dig säker att när du redigerar eller skapar kalkylblad kommer de se ut exakt så som du vill på datorer, Mac-datorer, surfplattor och telefoner. Var igång på nolltid med det välbekanta utseendet och känslan hos Office tillsammans med en intuitiv pekupplevelse.<p><p>Den här appen kan användas som en app med flera identiteter för Android och iOS. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.excel),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) |  
 | **Power Automate**<p><img alt="Microsoft Flow icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-flow.png" width="100"> | Bär med dig hela kraften hos Power Automate i fickan. Power Automate låter dig skapa automatiserade arbetsflöden mellan favoritappar och tjänster för att effektivisera verksamheten, spara tid och arbeta mer effektivt.| [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.flow),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-flow/id1094928825) |  
-| **Microsoft Intune Managed Browser**<p><img alt="Microsoft app - Microsoft Intune Managed Browser icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-intune-managed-browser.png" width="100"> | Få en webblösning som hanteras av företagets IT-administratör med hanteringsprinciper för mobilprogram i Intune. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) |   
+| **Microsoft Intune Managed Browser**<p><img alt="Microsoft app - Microsoft Intune Managed Browser icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-intune-managed-browser.png" width="100"> | Få en webblösning som hanteras av företagets IT-administratör med hanteringsprinciper för mobilprogram i Intune.<p>**Obs!** Intune Managed Browser kommer att dras tillbaka. Använd Microsoft Edge för att skydda din Intune-webbläsarupplevelse. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) |   
 | **Microsoft Invoicing**<p><img alt="Microsoft app - Microsoft Invoicing icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-invoicing.png" width="100"> | Microsoft Invoicing gör det enkelt för småföretag att skapa professionella uppskattningar och fakturor, få betalt snabb och spara tid. Oavsett om du är på kontoret eller i farten låter Invoicing dig snabbt skapa och skicka fakturor, ta emot betalningar online och tillbringa mindre tid på administration och mer tid på att göra affärer. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.dynamics.ProjectMadeira),<br>[Länk till App Store (iOS)](https://itunes.apple.com/us/app/microsoft-invoicing/id1145475572?mt=8) |  
 | **Microsoft Kaizala**<p><img alt="Microsoft app - Microsoft Kaizala icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-kiazala.png" width="100"> | Microsoft Kaizala är en mobilapp och tjänst som utformats för stora gruppkommunikationer och arbetshantering. Kaizala gör det enkelt att ansluta och samordna arbetet med hela värdekedjan, inklusive anställda på fältet, leverantörer, partners och kunder var de än är. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer),<br>[Länk till App Store (iOS)](https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399) |  
 | **Microsoft Launcher**<p><img alt="Microsoft app - Microsoft Launcher icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-launcher.png" width="100"> | Microsoft Launcher (tidigare Arrow Launcher) kan anpassa din Android-enhet så att den matchar din stil med bakgrundsbilder, temafärger, ikoner och mycket mer. Ett Microsoft-konto eller ett arbets-/skolkonto låter dig komma åt din kalender, dina dokument och senaste aktiviteter i det personliga flödet. Du kan även öppna foton, dokument och webbsidor på din Windows-dator så att du kan vara produktiv på alla enheter. | [Länk till Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.launcher) |  

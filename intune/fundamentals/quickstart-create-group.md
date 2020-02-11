@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 01/17/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d73cc367e6c3308b34c2d2dd14c9fed94d80ba74
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d9b06043dd10f92b6176d4b2e9f90f1b7c87aac9
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72813400"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76540968"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Snabbstart: Skapa en grupp för att hantera användare
 
@@ -36,22 +36,23 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 
 ## <a name="prerequisites"></a>Krav
 
+- Microsoft Intune-prenumeration [registrera dig för ett kostnadsfritt utvärderingskonto](../fundamentals/free-trial-sign-up.md).
 - För att kunna slutföra den här snabbstarten måste du först [skapa en användare](quickstart-create-user.md).
 
-## <a name="sign-in-to-intune"></a>Logga in i Intune
+## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Logga in på Intune i Microsoft Endpoint Manager
 
-Logga in i [Intune-portalen](https://aka.ms/intuneportal) som [global administratör eller Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
+Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som global administratör eller [Intune-tjänstadministratör](users-add.md#types-of-administrators). Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="create-a-group"></a>Skapa en grupp
 
 Du ska skapa en grupp som ska användas senare i den här snabbstarten. Så här skapar du en grupp:
 
-1. När du har öppnat fönstret **Microsoft Intune** väljer du **Grupper** > **Ny grupp**.
+1. När du har öppnat  **Microsoft Endpoint Manager** väljer du **Grupper** > **Ny grupp**.
 2. Välj **Säkerhet** i listrutan **Grupptyp**.
 3. I fältet **Gruppnamn** anger du namnet för den nya gruppen (exempelvis **Contoso-testare**).
-4. Fyll i en **Beskrivning** av gruppen
+4. Fyll i en **Gruppbeskrivning** för gruppen.
 5. Ange **Typ av medlemskap** till **Tilldelad**. 
-6. Klicka på **Medlemmar** och välj en eller flera medlemmar för gruppen från listan.
+6. Klicka på **Medlemmar** och välj länken eller lägg till en eller flera medlemmar för gruppen från listan.
 
     ![Skärmbild som visar hur en grupp skapas i Microsoft Intune](./media/quickstart-create-group/quickstart-use-groups-01.png)
 

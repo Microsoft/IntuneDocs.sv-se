@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb98ee2974cefeebb90689207388d5fe9229dad2
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
+ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036656"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977809"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -158,6 +158,13 @@ När du har laddat upp en Autopilot-enhet kan du redigera vissa av enhetens attr
 Aviseringar visar hur många Autopilot-programenheter som inte har Autopilot-distributionsprofiler. Använd informationen i aviseringen för att skapa profiler och tilldela dem till de otilldelade enheterna. När du klickar på aviseringen visas en fullständig lista över Windows Autopilot-enheter och detaljerad information om dem.
 
 Om du vill se aviseringar för ej tilldelade enheter väljer du **Enheter** > **Översikt** > **Registreringsaviseringar** > **Ej tilldelade enheter** i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  
+
+## <a name="autopilot-deployments-report"></a>Rapport om Autopilot-distributioner
+Du kan se information om varje enhet som distribueras via Windows Autopilot.
+Om du vill se rapporten går du till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och väljer **Enheter** > **Övervaka** > **Autopilot-distributioner**.
+Data är tillgängliga i 30 dagar efter distribution.
+
+Den här rapporten är i förhandsversion. Enhetsdistributionsposter utlöses för närvarande endast av nya Intune-registreringar. Det innebär att alla distributioner som inte utlöser en ny Intune-registrering inte hämtas av den här rapporten. Detta omfattar alla typer av återställning som upprätthåller registreringen och användardelen av assisterad Autopilot.
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Tilldela en användare till en specifik Autopilot-enhet
 

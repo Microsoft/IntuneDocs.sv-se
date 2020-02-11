@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d45455a97f8016527dce49839b5493f16b173d43
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 613369070d847265f371a7b228a2b6d81bf813fe
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563648"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755263"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Lägg till Android Enterprise-systemappar i Microsoft Intune
 
@@ -35,13 +35,20 @@ Du kan lägga till en Android Enterprise-systemapp till Intune från Azure Porta
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. I fönstret **Lägg till App** väljer du **Android Enterprise-systemapp** under de tillgängliga **Övriga** typerna.
-4. Om du vill konfigurera information om appen väljer du **Konfigurera** och anger följande information:
+3. I fönstret **Välj apptyp** väljer du **Android Enterprise-systemapp** under de tillgängliga **Övriga** typerna.
+4. Klicka på **Välj**. Stegen **Lägg till app** visas.
+Lägg till information om appen i fönstret **Appinformation**:
     - **Appnamn**: Ange namnet på appen.
     - **Utgivare**: Ange namnet på appens utgivare.  
     - **Paketnamn**: Ange ett paketnamn. Intune kommer att verifiera att paketnamnet är giltigt.
-5. Välj **OK**.
-6. Välj **Lägg till**.
+5. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
+8. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. Mer information finns i [Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT](~/fundamentals/scope-tags.md).
+9. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+10. Välj grupptilldelningar för appen. Mer information finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md). 
+11. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. Granska värdena och inställningarna som du har angett för appen.
+12. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+**Översiktsbladet** för appen som du har skapat visas i applistan.
 
 > [!NOTE]
 > Du måste arbeta med enhetens OEM-enhet för att hitta paketnamnet för den app som du vill aktivera/inaktivera.

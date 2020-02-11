@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd8025c18ef10580eb16883727bf08a316989d2e
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 328bafc2a55191c203263911ceaac9b520eb07f5
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563538"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755161"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows Phone i Microsoft Intune
 
@@ -31,26 +31,29 @@ ms.locfileid: "74563538"
 
 Informationen i den här artikeln visar hur du lägger till en verksamhetsspecifik app för Windows Phone i Microsoft Intune. En verksamhetsspecifik app är en app som du lägger till i Intune från en appinstallationsfil. Den här typen av app skrivs vanligtvis inom företaget. Intune installerar den verksamhetsspecifika appen på användarens enhet. 
 
-## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange programinstallationsfilen
+## <a name="select-the-app-type"></a>Välj typ av app
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. Välj **Branschspecifik app** som**Apptyp** i fönstret **Lägg till app**.
+3. I fönstret **Välj apptyp** väljer du **Branschspecifik app** under **Övriga** typer av appar.
+4. Klicka på **Välj**. Stegen **Lägg till app** visas.
 
-## <a name="step-2-configure-the-app-package-file"></a>Steg 2: Konfigurera appaketfilen
+## <a name="step-1---app-information"></a>Steg 1 – information om app
 
-1. I fönstret **Lägg till app** väljer du **Appaketfilen**.
+### <a name="select-the-app-package-file"></a>Välj appaketfilen
+
+1. I fönstret **Lägg till app** klickar du på **Välj appaketfilen**. 
 2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en fil för installation av Windows Phone med tillägget **.xap**.
-3. Välj **OK** när du är klar.
+   Appens information visas.
+3. När du är klar väljer du **OK** i fönstret **Appaketfil** för att lägga till appen.
 
+### <a name="set-app-information"></a>Konfigurera appinformation
 
-## <a name="step-3-configure-app-information"></a>Steg 3: Konfigurera appinformation
-
-1. Välj **Appinformation** i fönstret **Lägg till app**.
-2. I fönstret **Appinformation** konfigurerar du appinformationen. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
+1. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
     - **Namn**: Ange namnet på appen så som det visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna på företagsportalen.
-    - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
+    - **Beskrivning**: Ange beskrivningen av appen. Beskrivningen visas i företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
+    - **Lägsta operativsystemversion**: Välj den lägsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
     - **Visa denna som en aktuell app i företagsportalen**: Visa appen tydligt på huvudsidan för företagsportalen när användare söker efter appar.
     - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas i företagsportalen.
@@ -59,12 +62,27 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
     - **Ägare**: Alternativt kan du ange ett namn på appägaren. Ett exempel är **Personalavdelningen**.
     - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Logotyp**: Ladda upp en ikon som är associerad med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
-3. Välj **OK** när du är klar.
+2. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
 
-## <a name="step-4-finish-up"></a>Steg 4: Slutför
+## <a name="step-2---select-scope-tags-optional"></a>Steg 2 – Välj omfångstaggar (valfritt)
+Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
-1. I fönstret **Lägg till app** kontrollerar du att informationen är rätt konfigurerad.
-2. Välj **Lägg till** för att ladda upp appen till Intune.
+1. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. 
+2. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+
+## <a name="step-3---assignments"></a>Steg 3 – Tilldelningar
+
+1. Välj **Obligatorisk**, **Tillgängligt för registrerade enheter** eller **Avinstallera** som grupptilldelning för appen. Mer information finns i [Lägg till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md) och [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
+2. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. 
+
+## <a name="step-4---review--create"></a>Steg 4 – Granska och skapa
+
+1. Granska värdena och inställningarna som du har angett för appen.
+2. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+    Bladet **Översikt** för den branschspecifika appen visas.
+
+Den app som du har skapat visas nu i listan över appar. Du kan tilldela appar till grupper som du väljer i listan. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
 
 ## <a name="next-steps"></a>Nästa steg
 

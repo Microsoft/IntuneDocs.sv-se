@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec80922cf2539fdbacb572fd96c5a5e45549b5c3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: b30da567d1a25028c51cf8268eab9613a7c3b8af
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205045"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755538"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Lägg till konfigurationsprinciper för hanterade Android Enterprise-enheter
 
@@ -34,21 +34,43 @@ Konfigurationsprinciper för appar i Microsoft Intune tillhandahåller inställn
 > [!NOTE]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Appar** > **Appkonfigurationsprinciper** >  **Lägg till** > **Hanterade enheter**.
-2. Lägg till följande egenskaper:
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade enheter**. Observera att du kan välja mellan **Hanterade enheter** och **Hanterade appar**. Mer information finns i [Program som stöder appkonfiguration](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. På sidan **Grundläggande** lägger du till följande värden:
+    - **Namn** – namnet på den profil som visas i Azure Portal.
+    - **Beskrivning** – beskrivning av den profil som visas i Azure Portal.
+    - **Enhetsregistreringstyp** – Denna inställning är inställd på **Hanterade enheter**.
+4. Välj **Android Enterprise** under **Plattform**.
+5. Klicka på **Välj app** bredvid **Målapp**. Fönstret **Associerad app** visas. 
+6. I fönstret **Associerad app** väljer du den hanterade app som ska associeras med konfigurationsprincipen och klickar sedan på **OK**.
+7. Visa sidan **Inställningar** genom att klicka på **Nästa**.
+8. Klicka på **Lägg till** för att visa fönstret **Lägg till behörigheter**.
+9. Välj de behörigheter som du vill åsidosätta. De behörigheter som beviljas här åsidosätter principen ”Standardbehörigheter för app” för de valda apparna.
+10. Ange **behörighetstillstånd** för varje behörighet. Du kan välja från **Fråga**, **Bevilja automatiskt** eller **Neka automatiskt**. För mer information om behörigheter, se [Android Enterprise-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune](~/protect/compliance-policy-create-android-for-work.md).
+11. I listrutan väljer du **Konfigurationsinställningsformat**. Välj en av följande metoder för att lägga till konfigurationsinformation:
+    - **Använd Configuration Designer**
+    - **Ange JSON-data**<br><br>
+    Information om hur du använder Configuration Designer finns i [Använda Configuration Designer](#use-the-configuration-designer). Information om hur du anger XML-data finns i [Ange JSON-data](#enter-json-data). 
+12. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+13. I listrutan bredvid **Tilldela till** väljer du antingen **Utvalda grupper**, **Alla användare**, **Alla enheter** eller **Alla användare och alla enheter** för att tilldela konfigurationsprincipen för appen.
 
-    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett bra exempel på ett principnamn är **Android Enterprise Nine Work-apprincip för hela företaget**.
-    - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Enhetsregistreringstyp**: Den här inställningen är inställd på **Hanterade enheter**.
-    - **Plattform**: Välj **Android**.
+    ![Skärmbild av fliken Inkludera för principtilldelningar](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-3. Välj **Tillhörande app**. Välj den Android-app som den här appkonfigurationsprincipen ska kopplas till. Välj i listan med [hanterade Google Play-appar som du har godkänt och synkroniserat med Intune](~/apps/apps-add-android-for-work.md).
-4. Välj **Behörigheter**. Du kan ange konfigurationer med:
+14. Välj **Alla användare** i listrutan.
 
-    - [Configuration Designer](#use-the-configuration-designer)
-    - [JSON-redigerare](#enter-the-json-editor)
+    ![Skärmbild av principtilldelningar – listrutealternativet Alla användare](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 
-5. Välj **OK** > **Lägg till**.
+15. Klicka på **Välj grupper att utesluta** för att visa det relaterade fönstret.
+
+    ![Skärmbild av Principtilldelningar – fönstret Välj grupper att undanta](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
+16. Välj de grupper som du vill exkludera och klicka sedan på **Välj**.
+
+    >[!NOTE]
+    >Om någon annan grupp redan har inkluderats för en viss tilldelning när du lägger till en grupp så blir den förvald och kan inte ändras för andra tilldelningstyper för inkludering. Gruppen som har använts kan därför inte användas som en undantagen grupp.
+
+17. Visa sidan **Granska och skapa** genom att klicka på **Nästa**.
+18. Klicka på **Skapa** för att lägga till konfigurationsprincipen i Intune.
 
 ## <a name="use-the-configuration-designer"></a>Använd Configuration Designer
 
@@ -92,7 +114,7 @@ Använd följande nyckel-/värdepar för Android-enheter:
    > Du måste använda Outlook för Android 2.2.222 och senare, Word, Excel, PowerPoint för Android 16.0.9327.1000 och senare, eller OneDrive för Android 5.28 och senare när du enbart tillåter konfigurerade organisationskonton med flera identiteter.<p></p>
    > Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton.<p></p>
 
-## <a name="enter-the-json-editor"></a>Gå in i JSON-redigeraren
+## <a name="enter-json-data"></a>Ange JSON-data
 
 Vissa konfigurationsinställningar för appar (till exempel appar med pakettyper) kan inte konfigureras med Configuration Designer. Använd JSON-redigeraren för dessa värden. Inställningarna skickas automatiskt till appar när de installeras.
 

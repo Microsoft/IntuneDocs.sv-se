@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252af3c7447b59ee6aaeb4cb05bed0579ae8af4c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206711"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812373"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
@@ -31,7 +31,11 @@ Du skapar en profil som innehåller alla inställningar som du har angett. Näst
 Den här artikeln visar hur du tilldelar en profil, samt innehåller information om hur du använder omfångstaggar på dina profiler.
 
 > [!NOTE]  
-> När en profil tas bort eller inte längre är tilldelad till någon enhet kan det hända att inställningen har kvar det befintliga värdet. Inställningen återgår inte till standardvärdet. Om du vill ändra inställningen till ett annat värde skapar du en ny princip och tilldelar den.
+> När en profil tas bort eller inte längre är tilldelad till en enhet kan olika saker hända, beroende på inställningarna i profilen. Inställningarna baseras på konfigurationstjänstprovider och varje konfigurationstjänstprovider kan hantera borttagningen av profilen på olika sätt. En inställning kan till exempel behålla det befintliga värdet och inte återgå till ett standardvärde. Beteendet styrs av varje konfigurationstjänstprovider i operativsystemet. En lista över Windows-konfigurationstjänstprovider finns i [referensen för konfigurationstjänstprovider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+>
+> Om du vill ändra en inställning till ett annat värde skapar du en ny profil, konfigurerar inställningen som **Inte konfigurerad** och tilldelar profilen. När inställningen har tillämpats bör användarna ha kontroll över att ändra den till deras önskade värde.
+>
+> När du konfigurerar de här inställningarna rekommenderar vi att du distribuerar till en pilotgrupp. Mer information om Intune-distribution finns i [Skapa en distributionsplan](../fundamentals/planning-guide-rollout-plan.md).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 

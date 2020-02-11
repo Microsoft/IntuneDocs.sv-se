@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01ca17c9f8e3fd86e12f225621e6dc0e07bb4acb
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 3cf4c2abb5506f297af8a4e77145abea5360381b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564086"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755365"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Tilldela Office 365 till macOS-enheter med Microsoft Intune
 
@@ -38,17 +38,20 @@ Innan du börjar lägga till Office 365 till macOS-enheter bör du förstå föl
 - Intune har stöd för att lägga till Office-appar som ingår i Office 2016 för Mac-paket endast.
 - Om alla Office-program är öppna när Intune installerar appen kan användare förlora data från filer som inte sparats.
 
-## <a name="create-and-configure-the-app-suite"></a>Skapa och konfigurera app-paketet
+## <a name="select-the-office-365-suite-app-type"></a>Välj en app av Office 365-pakettyp
 
-Lägg till Office 365 från fönstret **Appar**.
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. I listan **Apptyp** i gruppen **Office 365-paket** väljer du **macOS**.
-4. Välj **Information om appsvit** för att få information om appsviten.  
-    Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
-5. Ange följande information:
+3. Välj **macOS** i avsnittet **Office 365-paket** i fönstret **Välj apptyp**.
+4. Klicka på **Välj**. Stegen **Lägga till Office 365-paket** visas.
+
+## <a name="step-1---app-suite-information"></a>Steg 1 – Information om appsvit
+
+I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
+
+1. På sidan **Information om appsvit** kan du bekräfta eller ändra standardvärdena:
     - **Namn på programsvit**: Ange namnet på appsviten så som det visas i företagsportalen. Kontrollera att alla svitnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
-    - **Beskrivning av programsvit**: Ange en beskrivning av appsviten.
+    - **Beskrivning av programsvit**: Ange en beskrivning av appsviten. Exempelvis kan du visa de appar som ingår.
     - **Utgivare**: Microsoft visas som utgivare.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Inställningen gör det enklare för användarna att hitta appaketet när de söker på företagsportalen.
     - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
@@ -56,29 +59,31 @@ Lägg till Office 365 från fönstret **Appar**.
     - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
     - **Utvecklare**: Microsoft visas som utvecklare.
     - **Ägare**: Microsoft visas som ägare.
-    - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
+    - **Kommentarer**: Ange eventuella kommentarer som du vill koppla till den här appen.
     - **Logotyp**: Office 365-logotypen visas med appen när användarna söker på företagsportalen.
-6. Välj **OK**.
-7. I fönstret **Lägg till app** väljer du **Lägg till**.  
-    Programsviten visas som en enda post i listan över appar.
+2. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
 
-## <a name="configure-app-assignments"></a>Konfigurera apptilldelningar
+## <a name="step-2---select-scope-tags-optional"></a>Steg 2 – Välj omfångstaggar (valfritt)
+Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Mer information om omfångstaggar finns i [Använda RBAC och omfångstaggar för distribuerad IT](../fundamentals/scope-tags.md).
 
-Konfigurera tilldelningarna för appaket i det här steget. 
+1. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appsviten. 
+2. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
 
-1. I listan över appar, väljer du **Office 365**-appsvit för att visa översiktsfönstret för **Office 365**.
-2. I fönstret **Office 365** väljer du **Tilldelningar**.
-3. Om du vill lägga till en grupp som ska använda appsviten välj **Lägg till grupp**.  
-    Fönstret **Lägg till grupp** visas.
-4. Ställ in **Tilldelningstyp** på **Obligatorisk** eller **Tillgänglig**.
-5. Tilldela programsviten till de grupper som du har valt. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
+## <a name="step-3---assignments"></a>Steg 3 – Tilldelningar
+
+1. Välj **Obligatorisk**, **Tillgängligt för registrerade enheter**som grupptilldelning för appsviten. Mer information finns i [Lägg till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md) och [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
 
     >[!Note]
-    > Du kan inte avinstallera Office 365-appsviten via Intune.
+    > Du kan inte avinstallera Office 365 för macOS-appsviten via Intune.
 
-5. I fönstret **Tilldela** väljer du **OK**.
-6. I fönstret **Lägg till grupp** väljer du **OK**.
-7. Välj **Spara** för att genomföra dina tilldelningar.
+2. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. 
+
+## <a name="step-4---review--create"></a>Steg 4 – Granska och skapa
+
+1. Granska värdena och inställningarna som du har angett för appsviten.
+2. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
+
+    **Översiktsbladet** för Office 365 Windows 10-appsviten som du har skapat visas i applistan. Programsviten visas som en enda post i listan över appar.
 
 ## <a name="next-steps"></a>Nästa steg
 

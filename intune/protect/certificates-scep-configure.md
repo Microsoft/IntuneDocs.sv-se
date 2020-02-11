@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 501bfcbef0dd46f6021fc5db16cf3b9e2f2cd0c0
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885998"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966393"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurera infrastrukturen för att stödja SCEP med Intune
 
@@ -378,6 +378,32 @@ Microsoft Intune Certificate Connector installeras på den server som kör din N
 5. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen väljer du **Välj** och väljer det certifikat för **klientautentisering** som du installerade på NDES-servern under steg 3 i proceduren [Installera och binda certifikat på den server som är värd för NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) tidigare i den här artikeln.
 
    När du har valt certifikatet för klientautentisering tas du tillbaka till ytan **Klientcertifikat för Microsoft Intune Certifikat Connector**. Även om det certifikat som du valde inte visas väljer du **Nästa** för att visa egenskaperna för certifikatet. Välj **Nästa** och sedan **Installera**.
+
+> [!NOTE]
+> Följande ändringar måste göras för GCC-klienter med hög belastning innan du startar Intune Certificate Connector.
+> 
+> Gör ändringar i de två konfigurationsfilerna som anges nedan för att uppdatera tjänstens slutpunkter för GCC-miljön med hög belastning. Observera att dessa uppdateringar ändrar URI:ernas suffix från **.com** till **.us**. Det finns totalt tre URI-uppdateringar, två uppdateringar i konfigurationsfilen NDESConnectorUI.exe.config och en uppdatering i filen NDESConnector.exe.config.
+> 
+> - Filnamn: <install_Path>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
+> 
+>   Exempel: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
+>   ```
+>    <appSettings>
+>        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon"/>
+>        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses"/>
+>        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
+>    </appSettings>
+>   ```
+> 
+> - Filnamn: <install_Path>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
+>
+>   Exampel: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
+>    ```
+>    <appSettings>
+>        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
+>    ```
+>
+> Om dessa ändringar inte slutförs kommer GCC-klienter att få felmeddelandet: ”Åtkomst nekad” ”Du saknar behörighet att visa denna sida”
 
 6. När guiden slutförts väljer du **Starta användargränssnittet för Certificate Connector** innan du stänger guiden.
 

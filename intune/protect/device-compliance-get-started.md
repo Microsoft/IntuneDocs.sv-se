@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860303"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812173"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune
 
@@ -91,7 +91,11 @@ Intune innehåller också en uppsättning inbyggda efterlevnadsprincipinställni
   - **Kompatibel** (*standard*): säkerhetsfunktion av
   - **Ej kompatibel**: säkerhetsfunktion av
 
-  Om en enhet inte har en policy för efterlevnad är den kompatibel som standard. Om du använder villkorlig åtkomst med kompatibla principer rekommenderar vi att du ändrar standardinställningen till **Inte kompatibel**. Om en användare inte är kompatibel eftersom ingen princip har tilldelats, visar [företagsportalsappen](../apps/company-portal-app.md) `No compliance policies have been assigned`.
+  Om en enhet inte har en policy för efterlevnad är den kompatibel som standard. Om du använder villkorlig åtkomst med kompatibla principer rekommenderar vi att du ändrar standardinställningen till **Inte kompatibel**. Om en användare inte är kompatibel eftersom ingen princip har tilldelats, visar [företagsportalsappen](../apps/company-portal-app.md)`No compliance policies have been assigned`.
+
+
+> [!NOTE]
+> Förbättrad identifiering av upplåsning för iOS-enheter har tillfälligt inaktiverats i Intune.
 
 - **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad kommer iOS-enheter checka in till Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarens platsdata lagras inte av Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956220"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755280"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune 
 
@@ -74,10 +74,10 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 
 <sup>1</sup> Mer information om Android Enterprise- och Android Work-profiler finns i [Förstå licensierade appar](apps-add.md#understanding-licensed-apps) nedan.
 
-Du kan lägga till en app i Microsoft Intune genom att välja **Appar** > **Alla appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. 
+Du kan lägga till en app i Microsoft Intune genom att välja **Appar** > **Alla appar** > **Lägg till**. Fönstret **Välj apptyp** visas där du kan välja **Apptyp**. 
 
 >[!TIP]
-> En verksamhetsspecifik app är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en iOS LOB-app lägger du till programmet genom att välja **Branschspecifik app** som **Apptyp** i fönstret **Lägg till app**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
+> En verksamhetsspecifik app är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en iOS LOB-app lägger du till programmet genom att välja **Branschspecifik app** som **Apptyp** i fönstret **Välj apptyp**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
 
 ## <a name="assess-app-requirements"></a>Utvärdera appkrav
 Som IT-administratör ska du inte bara bestämma vilka appar gruppen måste använda, utan du ska även bestämma vilka funktioner som behövs för varje grupp och undergrupp. För varje app ska du besluta vilka plattformar som behövs, vilka användargrupper som behöver appen, vilka konfigurationsprinciper som ska gälla för grupperna och vilka skyddsprinciper som ska gälla.  

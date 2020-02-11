@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: 73b7617ad6a2d9aa756ddf9a8a4833289e5710ff
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036607"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517526"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
 Använd Microsoft Intune för att skicka anpassade meddelanden till användare av hanterade iOS- och Android-enheter. Dessa meddelanden visas som push-standardmeddelanden från företagsportalappen och Microsoft Intune-appen på en användares enhet, på samma sätt som meddelanden från andra program visas på enheten. Anpassade Intune-meddelanden stöds inte av macOS- och Windows-enheter.   
 
 Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högst 500 tecken. Dessa meddelanden kan anpassas för valfritt kommunikationssyfte.
+
+### <a name="what-the-notification-looks-like-on-an-ios-device"></a>Så här ser meddelandet ut på en iOS-enhet
+
+Om du har företagsportalappen öppen på en iOS-enhet liknar meddelandet följande skärmbild:
+
+> [!div class="mx-imgBorder"]
+> ![Testmeddelande för företagsportalen i iOS](./media/custom-notifications/105046-1.png)
+
+Om enheten är låst liknar meddelandet följande skärmbild:
+
+> [!div class="mx-imgBorder"]
+> ![Testmeddelande om låst iOS-enhet](./media/custom-notifications/105046-2.png)
+
+### <a name="what-the-notification-looks-like-on-an-android-device"></a>Så här ser meddelandet ut på en Android-enhet
+
+Om du har företagsportalappen öppen på en Android-enhet liknar meddelandet följande skärmbild:
+
+> [!div class="mx-imgBorder"]
+> ![Testmeddelande för Android](./media/custom-notifications/105046-3.png)
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Vanliga scenarier för att skicka anpassade meddelanden  
 

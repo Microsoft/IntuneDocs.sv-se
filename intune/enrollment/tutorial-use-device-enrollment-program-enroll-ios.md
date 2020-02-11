@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56b8ab9507acda8fc1145bd65c4438da838dd806
-ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
+ms.openlocfilehash: f5599e7ea8c9a26c4624f98133db566fb07c89af
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74558171"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971787"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Självstudie: Använda Apples företagsenhetsregistrering i Apple Business Manager (ABM) för registrering av iOS-enheter i Intune
 Funktionerna för registrering av enheter i Apple Business Manager underlättar registrering av enheter. Intune stöder också Apples äldre DEP-portal (Programmet för enhetsregistrering), men vi rekommenderar att du börjar om från början med Apple Business Manager. Med Microsoft Intune och Apples företagsenhetsregistrering registreras enheter automatiskt den första gången som användaren slår på enheten. Du kan därför leverera enheter till många användare utan att behöva konfigurera varje enhet individuellt. 

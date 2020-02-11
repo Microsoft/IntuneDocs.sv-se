@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d77a275e3a48845f56b22ecc21b75f664ea619c5
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 0872eef38e3ea5a70ebb64d3ae3c62069045fa97
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691755"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754648"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Konfigurera Användarregistrering för iOS och iPadOS (förhandsversion)
 
@@ -54,23 +54,14 @@ En registreringsprofil definierar inställningarna som tillämpas på en grupp e
 
 3. Välj **Nästa**.
 
-4. På sidan **Inställningar** kan du välja att ge användarna möjlighet att välja typen av registrering. Alternativt kan du ange ett standardvärde.
+4. På sidan **Inställningar** väljer du något av följande alternativ för **Registreringstyp**:
 
     ![Sidan Inställningar](./media/ios-user-enrollment/settings-page.png)
 
-    - Följ dessa steg om du vill att alla användare i den här profilen ska använda Användarregistrering:
-        1. Välj **Inte konfigurerat** för **Användaren måste välja enhetstyp**.
-        2. Välj **Användarregistrering** för **Standardregistreringstyp**.
-    - Följ dessa steg om du vill att alla användare i den här profilen ska använda Enhetsregistrering:
-        1. Välj **Inte konfigurerat** för **Användaren måste välja enhetstyp**.
-        2. Välj **Enhetsregistrering** för **Standardregistreringstyp**.
-    - Om du vill att användarna i den här gruppen ska kunna välja registreringstypen väljer du **Obligatorisk** för **Användaren måste välja enhetstyp**. När användarna registrerar sina enheter kan de välja mellan **Jag äger den här enheten** och **(Företaget) äger den här enheten**. Om de väljer det första alternativet registreras enheten via Användarregistrering. Om de väljer det andra alternativet registreras enheten via Enhetsregistrering. Om användaren väljer **Jag äger den här enheten** måste han eller hon välja om hela enheten ska skyddas eller endast arbetsrelaterade appar och data. Vilket alternativ slutanvändaren väljer vad gäller ägarskap av enheten avgör endast vilken typ av registrering som implementeras på deras enheter. Det här användarvalet visas inte i attributet Ägarskap för enhet i Intune. Mer information om användarupplevelsen finns i [Konfigurera iOS-enhetsåtkomst till företagsresurser](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
+    - **Enhetsregistrering**: Alla användare i den här profilen kommer att använda enhetsregistrering.
+    - **Användarregistrering**: Alla användare i den här profilen kommer att använda användarregistrering.
+    - **Bestäm baserat på användarens val**: Alla användare i den här gruppen får välja vilken typ av registrering som ska användas. När användarna registrerar sina enheter kan de välja mellan **Jag äger den här enheten** och **(Företaget) äger den här enheten**. Om de väljer det andra alternativet registreras enheten via Enhetsregistrering. Om användaren väljer **Jag äger den här enheten** måste han eller hon välja om hela enheten ska skyddas eller endast arbetsrelaterade appar och data. Vilket alternativ slutanvändaren väljer vad gäller ägarskap av enheten avgör endast vilken typ av registrering som implementeras på deras enheter. Det här användarvalet visas inte i attributet Ägarskap för enhet i Intune. Mer information om användarupplevelsen finns i [Konfigurera iOS-enhetsåtkomst till företagsresurser](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
     
-    > [!NOTE]
-    > Följande meddelande är fel och kommer att tas bort från användargränssnittet.
-    > ”För att villkorlig åtkomst ska fungera på enheter som kräver Användarregistrering måste du distribuera Azure Authenticator-appen som en obligatorisk app till den här användargruppen för att aktivera Enkel inloggning och Workplace Join.”
-    > Som administratör behöver du inte vidta några åtgärder för att distribuera Authenticator-appen till dina användare. Användarna uppmanas att installera Authenticator-appen i företagsportalappen för att slutföra användarregistreringen och säkerställa att dessa scenarier fungerar korrekt.
-
 5. Välj **Nästa**.
 
 6. På sidan **Tilldelningar** väljer du användargrupperna som innehåller de användare som du vill tilldela den här profilen till. Du kan välja att tilldela profilen till alla användare eller till specifika grupper. Alla användare i de valda grupperna använder den registreringstyp du valt ovan. Enhetsgrupper stöds inte i användarregistreringsscenarier eftersom funktionen baseras på användaridentiteter i stället för enheter. Du kan välja att tilldela profilen till alla användare eller till specifika grupper.

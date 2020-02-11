@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 40337b3c45885dacf486173814044a27b7f3f6cc
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563415"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755076"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Snabbstart: Lägg till och tilldela en klientapp
 
@@ -45,20 +45,18 @@ En app kan inkluderas så att Intune kan hantera aspekter av appen.
 
 Använd följande steg för att lägga till en app i Intune:
 1. Välj **Appar** > **Alla appar** > **Lägg till** i [Intune](https://aka.ms/intuneportal). 
-2. Välj **Windows 10** i avsnittet **Office 365-paket** i listrutan **Apptyp**.
-3. Välj **Konfigurera appaket** och välj de Office-appar som ska tilldelas till Intune-användaren.
-4. Klicka på **OK** för att godkänna de appar som valts som standard.
-5. Välj **Information om appsvit**.
-6. Ange **Microsoft Office 365-appaket** som **Paketnamn**.
-7. Ange **Microsoft Office 365-appaket** som **Beskrivning av svit**.
-8. Klicka på **Ja** intill **Visa den som aktuell app i företagsportalen**.
-9. Klicka på **OK**.
-
-    ![Skärmbild av tillägg av appinformation](./media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
-
-10. Välj **Inställningar för appaket**.
-11. I listrutan **Uppdateringskanal** väljer du **Varje månad**.
-12. Klicka på **OK** > **Lägg till**.
+2. Välj **Windows 10** i avsnittet **Office 365-paket** på fönstret **Välj apptyp**.
+3. Klicka på **Välj**. Stegen **Lägg till app** visas.
+4. Bekräfta standardinformationen på sidan **Information om appsvit**.
+5. Klicka på **Nästa** för att visa sidan **Konfigurera appsviten**.
+6. Bredvid **Uppdatera kanal** väljer du **Varje månad** i listrutan.
+7. Bekräfta de återstående standardvärdena på sidan ***Konfigurera appsvit**.
+8. Visa sidan **Omfångstaggar** genom att klicka på **Nästa**.
+9. Klicka på **Välj omfångstaggar** om du vill lägga till omfångstaggar för appen. Mer information finns i [Använda rollbaserad åtkomstkontroll (RBAC) och omfångstaggar för distribuerad IT](~/fundamentals/scope-tags.md).
+10. Klicka på **Nästa** för att visa sidan **Tilldelningar**.
+11. Välj grupptilldelningar för appen. Mer information finns i [Lägga till grupper för att organisera användare och enheter](~/fundamentals/groups-add.md). 
+12. Visa sidan **Granska och skapa** genom att klicka på **Nästa**. Granska värdena och inställningarna som du har angett för appen.
+13. När du är färdig klickar du på **Skapa** för att lägga till appen i Intune.
 
 ## <a name="assign-the-app-to-a-group"></a>Tilldela appen till en grupp
 
