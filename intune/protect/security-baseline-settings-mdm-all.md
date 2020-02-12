@@ -1,11 +1,11 @@
 ---
 title: Inställningar för Intune-säkerhetsbaslinjer för Windows 10 MDM
 titleSuffix: Microsoft Intune
-description: Granska standardinställningarna och de tillgängliga inställningarna för de olika versionerna av säkerhets bas linjen för Windows MDM som du kan hantera med Microsoft Intune.
+description: Granska standardinställningarna och de tillgängliga inställningarna för de olika versionerna av säkerhetsbaslinjen för mobilenhetshantering i Windows som du kan hantera med Microsoft Intune.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,35 +17,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b2cb1b277f78ed81dea8c2d82eff6860182ea5d
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: abf23bff0d8889b57ab05c55b7e1464d0a9d2436
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899257"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075798"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Inställningar för Windows MDM-säkerhetsbaslinjer för Intune
 
-Visa inställningarna för säkerhets bas linje för MDM som Microsoft Intune stöd för enheter som kör Windows 10 eller senare. Standardvärdena för inställningarna i den här bas linjen representerar den rekommenderade konfigurationen för tillämpliga enheter. Standardvärden för en bas linje kanske inte matchar standardvärden från andra säkerhets bas linjer eller andra versioner av den här bas linjen.
+Visa inställningarna för MDM-säkerhetsbaslinjer som Microsoft Intune stödjer för enheter som kör Windows 10 eller senare. Standardvärdena för inställningarna i den här baslinjen representerar den rekommenderade konfigurationen för tillämpliga enheter. Standardvärden för en baslinje kanske inte matchar standardvärden för andra säkerhetsbaslinjer eller andra versioner av den här baslinjen.
 
-- Information om hur du använder säkerhets bas linjer med Intune och hur du uppgraderar bas linje versionen i dina säkerhets bas linje profiler finns i [använda säkerhets bas linjer](../security-baselines.md).
-- Den senaste bas linje versionen är **säkerhets bas linje för MDM för maj 2019**
+- Mer information om hur du använder säkerhetsbaslinjer med Intune och hur du uppgraderar baslinjeversionen i dina säkerhetsbaslinjeprofiler finns i [Använda säkerhetsbaslinjer](../security-baselines.md).
+- Den senaste baslinjeversionen är **Säkerhetsbaslinje för mobilenhetshantering för maj 2019**
 
-Se till att välja den version av bas linjen som du vill visa.
+Se till att du väljer den version av baslinjen som du vill visa.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
 **MDM-säkerhetsbaslinje för maj 2019**:  
 > [!NOTE]
-> I juni 2019 släpptes *säkerhets bas linjen för MDM för maj 2019* som allmänt tillgänglig (inte i för hands version). Den här versionen av säkerhets bas linjen ersätter den tidigare bas linjen, *säkerhets bas linjen för MDM för oktober 2018*.  Profiler som har skapats före tillgängligheten för maj 2019-bas linjen kommer inte att uppdateras för att avspegla de inställningar och värden som finns i maj 2019-versionen.  Även om du inte kan skapa nya profiler baserade på för hands versions mal len kan du redigera och fortsätta att använda profiler som du skapade tidigare och som baseras på för hands versions mal len.
+> I juni 2019 släpptes mallen *Säkerhetsbaslinje för mobilenhetshantering för maj 2019* som allmänt tillgänglig (inte förhandsversion). Den här versionen av säkerhetsbaslinjen ersätter den tidigare baslinjen, *MDM-säkerhetsbaslinje för oktober 2018*.  Profiler som har skapats före maj 2019-baslinjen kommer inte att uppdateras för att avspegla de inställningar och värden som finns i maj 2019-versionen.  Du kan inte skapa nya profiler baserat på förhandsversionsmallen, men du kan redigera och fortsätta att använda profiler som du skapat tidigare som är baserade på förhandsversionsmallen.
 
-Om du vill veta mer om vad som har ändrats i den här versionen av bas linjen från den tidigare versionen, se [vad som har ändrats i den nya mallen](#whats-changed-in-the-new-template).
+Information om vad som har ändrats i den här versionen av baslinjen jämfört med den tidigare versionen finns i [Ändringar i den nya mallen](#whats-changed-in-the-new-template).
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
 **Förhandsversion – MDM-säkerhetsbaslinje för oktober 2018**:  
 > [!NOTE]
-> Det här är för hands versionen av säkerhets bas linjen för MDM, som lanserades i oktober 2018. Den här förhands gransknings bas linjen ersattes i juni 2019 genom lanseringen av *säkerhets bas linjen för MDM för maj 2019* -mall, som är allmänt tillgänglig (inte i för hands version). Profiler som har skapats före tillgängligheten för *säkerhets bas linjen för MDM för maj 2019* kommer inte att uppdateras för att avspegla de inställningar och värden som finns i säkerhets bas linjen för MDM för maj 2019-version. Även om du inte kan skapa nya profiler baserade på för hands versions mal len kan du redigera och fortsätta att använda profiler som du skapade tidigare och som baseras på för hands versions mal len.
+> Det här är förhandsversionen av säkerhetsbaslinjen för mobilenhetshantering, som lanserades i oktober 2018. I juni 2019 ersattes förhandsversionen av mallen *Säkerhetsbaslinje för mobilenhetshantering för maj 2019*, som är allmänt tillgänglig (inte en förhandsversion). Profiler som har skapats innan *Säkerhetsbaslinje för mobilenhetshantering för maj 2019* blev tillgänglig kommer inte att uppdateras för att avspegla de inställningar och värden som finns i MDM-säkerhetsbaslinje för maj 2019. Du kan inte skapa nya profiler baserat på förhandsversionsmallen, men du kan redigera och fortsätta att använda profiler som du skapat tidigare som är baserade på förhandsversionsmallen.
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview"
@@ -64,7 +64,7 @@ Mer information finns i [CSP-princip – AboveLock](https://docs.microsoft.com/w
 ::: zone pivot="mdm-may-2019"
 
 - **Röstaktivera appar från en låst skärm**:  
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview"
@@ -77,7 +77,7 @@ Mer information finns i [CSP – AppRuntime](https://docs.microsoft.com/windows/
   Med den här principinställningen kan du ange om Microsoft-konton är valfria för Windows Store-appar som kräver ett konto för inloggning. Den här principen påverkar bara Windows Store-appar som stöder den. Om du aktiverar den här principinställningen tillåter Windows Store-appar som vanligtvis kräver ett Microsoft-konto för inloggning att användarna loggar in med ett företagskonto i stället. Om du inaktiverar eller inte konfigurerar den här principinställningen måste användarna logga in med ett Microsoft-konto.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067104)
   
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="application-management"></a>Programhantering
 
@@ -86,18 +86,18 @@ Mer information finns i [CSP – ApplicationManagement](https://docs.microsoft.c
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Blockera användar kontroll över installationer**:  
-  Med den här princip inställningen kan användarna ändra installations alternativ som vanligt vis bara är tillgängliga för system administratörer. Om du aktiverar den här princip inställningen kringgås några av säkerhetsfunktionerna i Windows Installer. Det gör att installationer kan slutföras på grund av en säkerhets överträdelse. Om du inaktiverar eller inte konfigurerar den här policy inställningen kan säkerhetsfunktionerna i Windows Installer hindra användare från att ändra installations alternativ som vanligt vis är reserverade för system administratörer, till exempel att ange katalogen som filerna installeras i. Om Windows Installer upptäcker att ett installations paket har tillåtit att användaren ändrar ett skyddat alternativ, stoppar installationen och visar ett meddelande. Dessa säkerhetsfunktioner fungerar bara när installations programmet körs i en privilegie rad säkerhets kontext där det har åtkomst till kataloger som nekas till användaren. Den här inställningen är utformad för mindre restriktiva miljöer. Det kan användas för att kringgå fel i ett installations program som förhindrar att program vara installeras.  
+- **Blockera användarkontroll över installationer**:  
+  Med den här principinställningen kan användarna ändra installationsalternativ som vanligtvis bara är tillgängliga för systemadministratörer. Om du aktiverar den här principinställningen kringgås vissa av säkerhetsfunktionerna i Windows Installer. Det gör att installationer, som annars skulle stoppas på grund av säkerhetsöverträdelse, kan slutföras. Om du inaktiverar eller inte konfigurerar den här principinställningen kan säkerhetsfunktionerna i Windows Installer hindra användare från att ändra installationsalternativ som vanligtvis är reserverade för systemadministratörer, till exempel att ange vilken katalog som filerna ska installeras i. Om Windows Installer upptäcker att ett installationspaket har tillåtit användaren att ändra ett skyddat alternativ, stoppas installationen och ett meddelande visas. Dessa säkerhetsfunktioner fungerar bara när installationsprogrammet körs i en privilegierad säkerhetskontext där det har åtkomst till kataloger som användaren nekas åtkomst till. Den här principinställningen är utformad för mindre restriktiva miljöer. Den kan användas för att kringgå fel i ett installationsprogram som förhindrar att programvara installeras.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067060)
 
   **Standard**: Ja
 
-- **Blockera MSI-programinstallationer med utökade privilegier**:  
+- **Blockera MSI-appinstallationer med utökade privilegier**:  
   Den här policyinställningen säger till Windows Installer att använda förhöjda behörigheter när alla program installeras på systemet.
 
-  - *Om du aktiverar den här inställningen*utökas behörigheter till alla program. Normalt är de här behörigheterna reserverade för program som är tilldelade till användaren (erbjuds på Skriv bordet), tilldelas datorn (installeras automatiskt) eller är tillgängliga i Lägg till eller ta bort program på kontroll panelen. Med den här profil inställningen kan användarna installera program som behöver åtkomst till kataloger som användaren kanske inte har behörighet att visa eller ändra, inklusive kataloger på datorer med hög begränsning.
+  - *Om du aktiverar den här principinställningen*utökas behörigheterna till alla program. Dessa behörigheter är vanligtvis reserverade för program som har tilldelats till användaren (erbjuds på skrivbordet), som har tilldelats datorn (har installerats automatiskt) eller som har gjorts tillgängliga i Lägg till eller ta bort program på Kontrollpanelen. Med den här profilinställningen kan användare installera program som kräver åtkomst till kataloger som användaren kanske inte har behörighet att visa eller ändra, inklusive kataloger i starkt begränsade datorer.
 
-  - *Om du inaktiverar eller inte konfigurerar den här policy inställningen*tillämpar systemet den aktuella användarens behörigheter när program installeras som system administratören inte distribuerar eller erbjuder. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. För att den här inställningen ska vara effektiv måste du aktivera den i båda mapparna. Varning! erfarna användare kan dra nytta av de behörigheter som den här princip inställningen ger för att ändra sina privilegier och få permanent åtkomst till begränsade filer och mappar. Användar konfigurations versionen för den här princip inställningen är inte garanterat säker.  
+  - *Om du inaktiverar eller inte konfigurerar den här principinställningen* tillämpas den aktuella användarens behörighet vid installation av program som en systemadministratör inte distribuerar eller erbjuder. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. För att den här inställningen ska gälla måste du aktivera den i båda mapparna. Varning! Erfarna användare kan dra nytta av de behörigheter som den här principinställningen ger för att ändra sin behörighet och få permanent åtkomst till begränsade filer och mappar. Det är inte garanterat att användarkonfigurationsversionen av den här principinställningen är säker.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Standard**: Ja
@@ -125,13 +125,13 @@ Mer information finns i [CSP-princip – Autoplay](https://docs.microsoft.com/wi
   Med den här principinställningen kan du inaktivera funktionen Spela upp automatiskt. Funktionen Spela upp automatiskt börjar läsa från en enhet när du sätter in media i enheten. Därför startar installationsfiler för program och musik på ljudmedier direkt. Med Windows XP SP2 och tidigare är funktionen Spela upp automatiskt inaktiverad som standard på flyttbara enheter, till exempel diskettenheten (men inte CD-ROM-enheten) och på nätverksenheter. Från och med Windows XP SP2 är funktionen Spela upp automatiskt aktiverad på flyttbara enheter, inklusive Zip-enheter och vissa USB-lagringsenheter. Om du aktiverar den här principinställningen inaktiveras Spela upp automatiskt på CD-ROM-enheter och flyttbara medieenheter, eller inaktiveras på alla enheter. Den här principinställningen inaktiverar Spela upp automatiskt på fler typer av enheter. Du kan inte använda den här inställningen för att aktivera Spela upp automatiskt på enheter där det är inaktiverat som standard. Om du inaktiverar eller inte konfigurerar den här principinställningen aktiveras Spela upp automatiskt. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. Om principinställningarna står i konflikt med varandra har principinställningen i Datorkonfiguration företräde framför principinställningen i Användarkonfiguration.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2066793)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Blockera automatisk uppspelning av andra enheter än volymenheter**:  
   Den här principinställningen tillåter inte automatisk uppspelning av MTP-enheter som exempelvis kameror och telefoner. Om du aktiverar den här principinställningen tillåts inte automatisk uppspelning för MTP-enheter såsom kameror och telefoner. Om du inaktiverar eller inte konfigurerar den här principinställningen aktiveras automatisk uppspelning för andra enheter än volymenheter.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067106)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="bitlocker"></a>BitLocker
 
@@ -208,13 +208,13 @@ Mer information finns i [CSP-princip – Browser](https://docs.microsoft.com/win
   
   **Standard**: Ja
   
-- **Förhindra åsidosättning av certifikatfel**:  
+- **Hindra användare från att åsidosätta certifikatfel**:  
   Den här principinställningen hindrar användaren från att ignorera SSL/TLS-certifikatfel (Secure Sockets Layer/Transport Layer Security) som avbryter surfningen (t.ex. fel av typen ”har upphört att gälla”, ”har återkallats” eller ”namnkonflikt”) i Internet Explorer. Användaren kan inte fortsätta att surfa om du aktiverar den här principinställningen. Om du inaktiverar eller inte konfigurerar den här principinställningen kan användaren välja att ignorera certifikatfel och fortsätta att surfa.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067126)
   
   **Standard**: Ja
 
-## <a name="connectivity"></a>Anslutning
+## <a name="connectivity"></a>Anslutningar
 
 Mer information finns i avsnittet [CSP-princip – Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) i Windows-dokumentationen.
 
@@ -222,21 +222,21 @@ Mer information finns i avsnittet [CSP-princip – Connectivity](https://docs.mi
   Den här principinställningen anger om Windows ska ladda ned en lista över leverantörer för webbpublicerings- och onlinebeställningsguider. Dessa guider låter användarna välja från en lista över företag som tillhandahåller tjänster, till exempel onlinelagring eller fotoutskrifter. Som standard visar Windows leverantörer som hämtats från en Windows-webbplats och leverantörer som angetts i registret. Om du aktiverar den här principinställningen laddar Windows inte ned leverantörer, och endast de tjänstleverantörer som cachelagras i det lokala registret visas. Om du inaktiverar eller inte konfigurerar den här principinställningen laddas en lista över leverantörer ned när användaren använder webbpublicerings- eller onlinebeställningsguider. Mer information med detaljer om hur du anger leverantörer i registret finns i dokumentationen för webbpublicerings- och onlinebeställningsguiderna.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067136)
   
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Konfigurera säker åtkomst till UNC-sökvägar**:  
-  Denna princip inställning konfigurerar säker åtkomst till UNC-sökvägar. Om du aktiverar den här principen tillåter Windows endast åtkomst till de angivna UNC-sökvägarna när ytterligare säkerhets krav har uppfyllts.  
+  Den här principinställningen konfigurerar säker åtkomst till UNC-sökvägar. Om du aktiverar principen tillåter Windows endast åtkomst till de UNC-sökvägar som angetts efter att ytterligare säkerhetskrav uppfyllts.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067243)
 
-  **Standard**: Konfigurera Windows till att endast tillåta åtkomst till angivna UNC-sökvägar när ytterligare säkerhets krav har uppfyllts.
+  **Standard**: Konfigurera Windows till att endast tillåta åtkomst till de UNC-sökvägar som angetts efter att ytterligare säkerhetskrav uppfyllts.
 
-  När du har valt att *Konfigurera Windows till att endast tillåta åtkomst till de angivna UNC-sökvägarna när du har angett ytterligare säkerhets krav* , kan du konfigurera *listan med strikt UNC-sökväg*.
+  När *Konfigurera Windows till att endast tillåta åtkomst till de UNC-sökvägar som angetts efter att ytterligare säkerhetskrav uppfyllts* har valts kan du konfigurera *listan över härdade UNC-sökvägar*.
 
   - **Lista över härdade UNC-sökvägar**:  
-    Välj **Lägg till** för att ange ytterligare säkerhets flaggor och Server Sök vägar.
+    Välj **Lägg till** för att ange ytterligare säkerhetsflaggor och serversökvägar.
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -245,7 +245,7 @@ Mer information finns i avsnittet [CSP-princip – Connectivity](https://docs.mi
   Den här principinställningen anger om klienten kan ladda ned paket med utskriftsdrivrutiner via HTTP. För att konfigurera HTTP-utskrift måste ”non-inbox”-drivrutiner hämtas via HTTP. Obs! Den här principinställningen hindrar inte klienten från att skriva ut till skrivare i intranätet eller på Internet via HTTP. Den förbjuder endast nedladdningen av drivrutiner som inte redan har installerats lokalt. Om du aktiverar den här principinställningen går det inte att ladda ned utskriftsdrivrutiner via HTTP. Om du inaktiverar eller inte konfigurerar den här principinställningen kan användarna ladda ned utskriftsdrivrutiner via HTTP.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067141)
   
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="credentials-delegation"></a>Delegering av autentiseringsuppgifter
 
@@ -255,7 +255,7 @@ Mer information finns i [CSP-princip – CredentialsDelegation](https://docs.mic
   Fjärrvärden tillåter delegering av autentiseringsuppgifter som inte kan exporteras. När du använder delegering av autentiseringsuppgifter, ger enheter en exporteringsbar version av autentiseringsuppgifter till fjärrvärden vilket exponerar användare för risk för stöld av autentiseringsuppgifter från angripare på fjärrdatorn. Om du aktiverar den här principinställningen kan värden använda läget Restricted Admin (Begränsad administration) eller Remote Credential Guard (Fjärrskydd av autentiseringsuppgifter). Om du inaktiverar eller inte konfigurerar den här principinställningen stöds inte läget Restricted Admin (Begränsad administration) eller Remote Credential Guard (Fjärrskydd av autentiseringsuppgifter). Användaren måste alltid skicka sina autentiseringsuppgifter till värden.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067103)
   
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="credentials-ui"></a>Användargränssnitt för autentiseringsuppgifter
 
@@ -265,7 +265,7 @@ Mer information finns i [CSP-princip – CredentialsUI](https://docs.microsoft.c
   Den här principinställningen styr om administratörskonton visas när en användare försöker upphöja ett program som körs. Som standard visas inte administratörskonton när användaren försöker upphöja ett program som körs. Om du aktiverar den här principinställningen visas alla lokala administratörskonton på datorn så att användaren kan välja ett och ange rätt lösenord. Om du inaktiverar den här principinställningen måste användaren alltid ange ett användarnamn och lösenord för att upphöja ett program som körs.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067021)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ## <a name="data-protection"></a>Dataskydd
 
@@ -291,7 +291,7 @@ Mer information finns i [CSP-princip – DeviceGuard](https://docs.microsoft.com
 ::: zone pivot="mdm-may-2019"
 
 - **Virtualiseringsbaserad säkerhet**:  
-  **Standard**: Aktivera vbs med säker start
+  **Standard**: Aktivera virtualiseringsbaserad säkerhet med säker start
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -303,7 +303,7 @@ Mer information finns i [CSP-princip – DeviceGuard](https://docs.microsoft.com
   **Standard**: Ja
 
 - **Starta systemskydd**:  
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="device-installation"></a>Enhetsinstallation
 
@@ -353,7 +353,7 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
   Inaktiverar kameraväxlingsreglaget på låsskärmen i Datorinställningar och förhindrar att en kamera anropas på låsskärmen. Som standard kan användare aktivera anrop av en tillgänglig kameran på låsskärmen. Om du aktiverar den här inställningen kan användarna inte längre aktivera eller inaktivera kameraåtkomst på låsskärmen i Datorinställningar, och kameran kan inte anropas på låsskärmen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067052)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Kräv lösenord**:  
   Anger om enhetslås har aktiverats.  
@@ -364,7 +364,7 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
   När *Kräv lösenord* är inställt på *Ja*, är följande inställningar tillgängliga.
 
   - **Minsta antal tecken för lösenord**:  
-    Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. PIN-kod tillämpar följande beteende för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1.  
+    Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. För PIN-kod krävs följande för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1.  
     [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067055)
 
     **Standard**: 3
@@ -385,7 +385,7 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
     Avgör vilken typ av PIN-kod eller lösenord som krävs.  
     [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067027)
 
-    **Standard**: Alfanumeriskt
+    **Standard**: Alfanumerisk
 
   - **Minsta lösenordslängd**:  
     Inställningen Minsta längd för lösenord avgör det minsta antal tecken som ett lösenord för ett användarkonto måste innehålla. Du kan ange ett värde mellan 1 och 14 tecken, eller ange att inga lösenord krävs genom att ange antalet tecken till 0.  
@@ -410,7 +410,7 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
   Inaktiverar inställningarna för bildspel på låsskärmen i Datorinställningar och förhindrar att ett bildspel spelas upp på låsskärmen. Som standard kan användare aktivera ett bildspel som körs när de låst datorn. Om du aktiverar den här inställningen kan användarna inte ändra inställningarna för bildspel i Datorinställningar och inga bildspel kan starta.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067105)
 
-  **Standard**: Aktiverat  
+  **Standard**: Aktiverad  
 
   *Inställningen Aktiverad förhindrar att bildspel körs.*
 
@@ -423,12 +423,12 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-## <a name="dma-guard"></a>DMA-skydd
+## <a name="dma-guard"></a>DMA Guard
 
 Mer information finns i [CSP-princip – DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) i Windows-dokumentationen.
 
 - **Uppräkning av externa enheter som är inkompatibla med Kernel DMA-skydd**:  
-  Den här principen är avsedd att ge ytterligare säkerhet mot externa DMA-kompatibla enheter. Det möjliggör större kontroll över uppräkning av externa DMA-kompatibla enheter som inte är kompatibla med minnesisolering och sandbox-miljö för DMA-mappning/-enhet. Den här principen börjar bara gälla när Kernel DMA-skydd stöds och aktiveras av datorns inbyggda programvara. Kernel DMA-skydd är en plattforms funktion som inte kan styras via en princip eller av slutanvändaren. Den måste stödjas av systemet vid tidpunkten för tillverkning. Om du vill kontrol lera om systemet har stöd för kernel DMA-skydd kontrollerar du fältet kernel DMA-skydd på sidan Sammanfattning i MSINFO32. exe.  
+  Den här principen är avsedd att ge ytterligare skydd mot externa DMA-kompatibla enheter. Det möjliggör större kontroll över uppräkning av externa DMA-kompatibla enheter som inte är kompatibla med minnesisolering och sandbox-miljö för DMA-mappning/-enhet. Den här principen börjar bara gälla när Kernel DMA-skydd stöds och aktiveras av datorns inbyggda programvara. Kernel DMA-skydd är en plattformsfunktion som inte kan styras via en princip eller av slutanvändaren. Den måste stödjas av systemet vid tidpunkten för tillverkning. Om du vill kontrollera om systemet har stöd för kernel DMA-skydd kontrollerar du fältet Kernel DMA-skydd på sammanfattningssidan i MSINFO32.exe.  
   [Läs mer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Standard**: Blockera alla
@@ -486,7 +486,7 @@ Mer information finns i [CSP-princip – Experience](https://docs.microsoft.com/
 
 Mer information finns i [CSP-princip – ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) i Windows-dokumentationen.
 
-- **XML för sårbarhetsskydd**:  
+- **Ladda upp XML**:  
   Gör det möjligt för IT-administratören att distribuera en konfiguration som representerar önskade system- och programskyddsalternativ till alla enheter i organisationen. Konfigurationen representeras av en XML-sträng. Sårbarhetsskydd hjälper dig att skydda enheter mot skadlig kod som utnyttjar kryphål för att spridas och infektera. Du kan använda Windows Security-appen eller PowerShell för att skapa en uppsättning skyddsåtgärder (kallas en konfiguration). Du kan exportera den här konfigurationen som en XML-fil och dela den med flera datorer i nätverket så att alla har samma uppsättning skyddsåtgärder. Du kan också konvertera och importera en befintlig EMET XML-konfigurationsfil till en XML-konfigurationsfil för sårbarhetsskydd.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067035)
 
@@ -500,13 +500,71 @@ Mer information finns i [CSP-princip – FileExplorer](https://docs.microsoft.co
   Om dataexekveringsskydd inaktiveras kan vissa äldre plugin-program fungera utan att Explorer avslutas.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067043)  
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Blockera heap-avslutning vid fel**:  
   Om heap-avslutning vid fel inaktiveras kan vissa äldre plugin-program fungera utan att Explorer omedelbart avslutas, även om Explorer fortfarande kan avslutas oväntat senare.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067107)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
+
+## <a name="firewall"></a>Brandvägg
+
+Mer information finns i [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) i dokumentationen för Windows-protokoll.
+
+- **Domän för brandväggsprofil**:  
+  Anger de profiler som regeln tillhör: Domän, Privat eller Allmän. Det här värdet representerar profilen för nätverk som är anslutna till domäner.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Inkommande anslutningar blockerade**:  
+    **Standard**: Ja
+
+  - **Utgående anslutningar krävs**:  
+    **Standard**: Ja
+
+  - **Inkommande meddelanden blockerade**:  
+    **Standard**: Ja
+
+  - **Brandväggen är aktiverad**:  
+    **Standard**: Tillåts
+
+- **Offentlig brandväggsprofil**:  
+  Anger de profiler som regeln tillhör: Domän, Privat eller Allmän. Det här värdet representerar profilen för offentliga nätverk. Dessa nätverk klassificeras som offentliga av administratörer i server-värden. Klassificeringen sker första gången värden ansluter till nätverket. Dessa nätverk är vanligtvis på flygplatser eller kaféer och andra offentliga platser där peer-datorer i nätverket eller nätverksadministratörer inte är betrodda.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067143)
+
+  - **Inkommande anslutningar blockerade**:  
+    **Standard**: Ja
+
+  - **Utgående anslutningar krävs**:  
+    **Standard**: Ja
+
+  - **Inkommande meddelanden blockerade**:  
+    **Standard**: Ja
+
+  - **Brandväggen är aktiverad**:  
+    **Standard**: Tillåts
+
+  - **Regler för anslutningssäkerhet från inte sammanfogad grupprincip**:  
+    **Standard**: Ja
+
+  - **Principregler från inte sammanfogad grupprincip**:  
+    **Standard**: Ja
+
+- **Privat brandväggsprofil**:  
+  Anger de profiler som regeln tillhör: Domän, Privat eller Allmän. Det här värdet representerar profilen för privata nätverk.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067041)
+
+  - **Inkommande anslutningar blockerade**:  
+    **Standard**: Ja
+
+  - **Utgående anslutningar krävs**:  
+    **Standard**: Ja
+
+  - **Inkommande meddelanden blockerade**:  
+    **Standard**: Ja
+
+  - **Brandväggen är aktiverad**:  
+    **Standard**: Tillåts
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
@@ -520,7 +578,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
 
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067074)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -541,7 +599,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om Internet Explorer kör program mot skadlig kod mot ActiveX-kontroller för att se om det är säkert att läsa in dem på sidor. Om du aktiverar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inaktiverar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inte konfigurerar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Användare kan aktivera eller inaktivera det här beteendet med hjälp av säkerhetsinställningarna för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067152)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -556,13 +614,13 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange alternativ för att dra innehåll från en domän till en annan domän när källan och målet finns i samma fönster. Om du aktiverar den här principinställningen och klickar på Aktivera kan användarna dra innehåll från en domän till en annan domän när källan och målet finns i samma fönster. Användarna kan inte ändra denna inställning. Om du aktiverar den här principinställningen och klickar på Inaktivera kan användarna inte dra innehåll från en domän till en annan domän när källan och målet finns i samma fönster. Användarna kan inte ändra den här inställningen i dialogrutan Internetalternativ. Om du inaktiverar den här principinställningen eller inte konfigurerar den i Internet Explorer 10 kan användarna inte dra innehåll från en domän till en annan domän när källan och målet finns i samma fönster. Användarna kan ändra den här inställningen i dialogrutan Internetalternativ. Om du inaktiverar den här principinställningen eller inte konfigurerar den i Internet Explorer 9 och tidigare versioner kan användarna dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra den här inställningen i dialogrutan Internetalternativ.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067079)  
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: varning om adressmatchningsfel för certifikat**:  
   Med den här principinställningen kan du aktivera säkerhetsvarningen för adressmatchningsfel för certifikat. När den här inställningen är aktiverad varnas användarna när de besöker webbplatser med säker HTTP (HTTPS) som visar certifikat som utfärdats för en annan webbadress. Den här varningen hjälper till att förhindra förfalskningsattacker. Om du aktiverar den här principinställningen visas alltid varningen om adressmatchningsfel för certifikat. Om du inaktiverar eller inte konfigurerar den här inställningen kan användarna välja om varningen om adressmatchningsfel för certifikat ska visas (visa sidan Avancerat i Internet på Kontrollpanelen).  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067153)  
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: mindre privilegierade platser i zonen Begränsad**:  
   Med den här principinställningen kan du ange om webbplatser i mindre privilegierade zoner, till exempel webbplatser på Internet, kan navigera till den här zonen. Om du aktiverar den här principinställningen kan webbplatser från mindre privilegierade zoner öppna nya fönster i, eller navigera till, den här zonen. Säkerhetszonen körs utan det ytterligare säkerhetslager som tillhandahålls av säkerhetsfunktionen Skydd mot zonförhöjning. Om du väljer Fråga i listrutan visas en varning för användarna om att potentiellt riskabel navigering snart initieras. Om du inaktiverar den här principinställningen förhindras potentiellt skadlig navigering. Säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på inställningen för funktionen Skydd mot zonförhöjning. Om du inaktiverar den här principinställningen förhindras potentiellt skadlig navigering. Säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på inställningen för funktionen Skydd mot zonförhöjning.  
@@ -574,7 +632,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger huruvida användarna tillfrågas innan en filnedladdning som inte har initierats av användaren inleds. Oavsett den här inställningen visas dialogrutor för filnedladdning vid användarinitierade nedladdningar. Om du aktiverar den här inställningen visas en dialogruta för filnedladdning vid automatiska nedladdningsförsök. Om du inaktiverar eller inte konfigurerar den här inställningen blockeras filnedladdningar som inte har initierats av användaren, och användaren ser meddelandefältet i stället för dialogrutan för filnedladdning. Användare kan sedan klicka på meddelandefältet för att tillåta filhämtningen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067150)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: .NET Framework-beroende komponenter i zonen Internet**:  
   Med den här inställningen kan du ange huruvida .NET Framework-komponenter som har signerats med Authenticode kan köras från Internet Explorer. Dessa komponenter är hanterade kontroller som en objekttagg refererar till och hanterade körbara filer som en länk refererar till. Om du aktiverar den här principinställningen kör Internet Explorer osignerade hanterade komponenter. Om du väljer Fråga i listrutan uppmanas användarna att välja om de vill köra osignerade hanterade komponenter i Internet Explorer. Om du inaktiverar den här principinställningen kör Internet Explorer inte osignerade hanterade komponenter. Om du inte konfigurerar den här principinställningen kör Internet Explorer osignerade hanterade komponenter.  
@@ -586,31 +644,31 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen styr om användaren kan köra TDC ActiveX-kontrollen på webbplatser. Om du aktiverar den här principinställningen körs inte TDC ActiveX-kontrollen från webbplatser i den här zonen. Om du inaktiverar den här principinställningen körs TDC ActiveX-kontrollen från alla platser i den här zonen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067151)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: skriptinitierade fönster i zonen Begränsad**:  
   Med den här principinställningen kan du hantera begränsningar för skriptinitierade popup-fönster och fönster som innehåller namnlisten och statusfältet. Om du aktiverar den här principinställningen gäller inte begränsningar för Windows-säkerhet i den här zonen. Säkerhetszonen körs utan det ytterligare säkerhetslager som tillhandahålls av den här funktionen. Om du inaktiverar den här principinställningen kan inte de potentiellt skadliga åtgärderna i skriptinitierade popup-fönster och fönster som innehåller namnlisten och statusfältet köras. Den här säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på kontrollinställningen för skriptinitierade säkerhetsbegränsningar för Windows. Om du inte konfigurerar den här principinställningen kan inte de potentiellt skadliga åtgärderna i skriptinitierade popup-fönster och fönster som innehåller namnlisten och statusfältet köras. Den här säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på kontrollinställningen för skriptinitierade säkerhetsbegränsningar för Windows.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067075)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: ta med lokal sökväg när filer laddas upp till servern i zonen Internet**:  
   Den här principinställningen styr huruvida information om den lokala sökvägen skickas när användaren laddar upp en fil via ett HTML-formulär. Om information om den lokala sökvägen skickas kan servern oavsiktligt få tillgång till viss information. Filer som skickas från användarens dator kan exempelvis innehålla användarnamnet som en del av sökvägen. Om du aktiverar den här principinställningen skickas information om sökvägen när användaren överför en fil via ett HTML-formulär. Om du inaktiverar den här principinställningen tas information om sökvägen bort när användaren överför en fil via ett HTML-formulär. Om du inte konfigurerar den här principinställningen kan användarna välja om sökvägsinformation skickas när de laddar upp en fil via ett HTML-formulär. Sökvägsinformation skickas som standard.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067072)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: inaktivera processer i utökat skyddat läge**:  
-  Den här principinställningen anger om Internet Explorer 11 använder 64-bitarsprocesser (för högre säkerhet) eller 32-bitarsprocesser (för bättre kompatibilitet) när programmet körs i utökat skyddat läge i 64-bitarsversioner av Windows. Viktigt! Vissa ActiveX-kontroller och -verktygsfält är kanske inte tillgängliga när 64-bitarsprocesser används. Om du aktiverar den här principinställningen använder Internet Explorer 11 64-bitarsprocesser i utökat skyddat läge i 64-bitarsversioner av Windows. Om du inaktiverar den här principinställningen använder Internet Explorer 11 32-bitarsprocesser i utökat skyddat läge i 64-bitarsversioner av Windows. Om du inte konfigurerar den här principinställningen kan användarna aktivera eller inaktivera den här funktionen via Internet Explorer-inställningarna. Den här funktionen är inaktiverad som standard.  
+  Den här principinställningen anger om Internet Explorer 11 använder 64-bitarsprocesser (för högre säkerhet) eller 32-bitarsprocesser (för bättre kompatibilitet) när programmet körs i utökat skyddat läge i 64-bitarsversioner av Windows. Viktigt! Vissa ActiveX-kontroller och -verktygsfält kanske inte är tillgängliga när 64-bitarsprocesser används. Om du aktiverar den här principinställningen använder Internet Explorer 11 64-bitarsprocesser i utökat skyddat läge i 64-bitarsversioner av Windows. Om du inaktiverar den här principinställningen använder Internet Explorer 11 32-bitarsprocesser i utökat skyddat läge i 64-bitarsversioner av Windows. Om du inte konfigurerar den här principinställningen kan användarna aktivera eller inaktivera den här funktionen via Internet Explorer-inställningarna. Den här funktionen är inaktiverad som standard.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067149)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: ignorera certifikatfel**:  
   Den här principinställningen hindrar användaren från att ignorera SSL/TLS-certifikatfel (Secure Sockets Layer/Transport Layer Security) som avbryter surfningen (t.ex. fel av typen ”har upphört att gälla”, ”har återkallats” eller ”namnkonflikt”) i Internet Explorer. Användaren kan inte fortsätta att surfa om du aktiverar den här principinställningen. Om du inaktiverar eller inte konfigurerar den här principinställningen kan användaren ignorera certifikatfel och fortsätta att surfa.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067071)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: inläsning av XAML-filer i zonen Internet**:  
   Med den här principinställningen kan du hantera inläsningen av XAML-filer (Extensible Application Markup Language). XAML är ett XML-baserat deklarativt märkspråk som ofta används för att skapa mångsidiga användargränssnitt och grafik som utnyttjar Windows Presentation Foundation. Om du aktiverar den här inställningen och väljer Aktivera i listrutan läses XAML-filer in automatiskt i Internet Explorer. Användaren kan inte ändra det här beteendet. Om du väljer Fråga i listrutan tillfrågas användaren innan XAML-filerna läses in. Om du inaktiverar den här principinställningen läses XAML-filer inte in i Internet Explorer. Användaren kan inte ändra det här beteendet. Om du inte konfigurerar den här principinställningen kan användaren bestämma huruvida XAML-filerna ska läsas in i Internet Explorer.  
@@ -625,7 +683,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger huruvida användarna tillfrågas innan en filnedladdning som inte har initierats av användaren inleds. Oavsett den här inställningen visas dialogrutor för filnedladdning vid användarinitierade nedladdningar. Om du aktiverar den här inställningen visas en dialogruta för filnedladdning vid automatiska nedladdningsförsök. Om du inaktiverar eller inte konfigurerar den här inställningen blockeras filnedladdningar som inte har initierats av användaren, och användaren ser meddelandefältet i stället för dialogrutan för filnedladdning. Användare kan sedan klicka på meddelandefältet för att tillåta filhämtningen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067117)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -634,7 +692,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger huruvida användarna tillfrågas innan en filnedladdning som inte har initierats av användaren inleds. Oavsett den här inställningen visas dialogrutor för filnedladdning vid användarinitierade nedladdningar. Om du aktiverar den här inställningen visas en dialogruta för filnedladdning vid automatiska nedladdningsförsök. Om du inaktiverar eller inte konfigurerar den här inställningen blockeras filnedladdningar som inte har initierats av användaren, och användaren ser meddelandefältet i stället för dialogrutan för filnedladdning. Användare kan sedan klicka på meddelandefältet för att tillåta filhämtningen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067117)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -649,7 +707,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principen styr huruvida XSS-filtret (Cross Site-Scripting) identifierar och förhindrar XSS-inmatningar till webbplatser i den här zonen. Om du aktiverar den här principinställningen aktiveras XSS-filtret för platser i den här zonen och XSS-filtret försöker blockera XSS-inmatningar. Om du inaktiverar den här principinställningen inaktiveras XSS-filtret för platser i den här zonen och Internet Explorer tillåter XSS-inmatningar.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067053)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer-återställning till SSL3**:  
   Med den här principinställningen kan du blockera en osäker återställning till SSL 3.0. När den här principen är aktiverad försöker Internet Explorer ansluta till platser med hjälp av SSL 3.0 eller lägre om TLS 1.0 eller senare misslyckas. Vi rekommenderar att du inte tillåter osäker återställning för att förhindra en man-i-mitten-attack. Den här principen påverkar inte vilka säkerhetsprotokoll som aktiveras. Om du inaktiverar den här principen används standardvärdena för systemet.  
@@ -660,24 +718,24 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Stöd för Internet Explorer-kryptering**:  
-  Med den här princip inställningen kan du inaktivera stöd för Transport Layer Security (TLS) 1,0, TLS 1,1, TLS 1,2, Secure Sockets Layer (SSL) 2,0 eller SSL-3,0 i webbläsaren. TLS och SSL är protokoll som hjälper till att skydda kommunikationen mellan webbläsaren och mål servern. När webbläsaren försöker konfigurera en skyddad kommunikation med mål servern, förhandlar webbläsaren och servern vilket protokoll och vilken version som ska användas. Webbläsaren och servern försöker matcha varje annans lista över protokoll och versioner som stöds, och de väljer den mest önskade matchningen. Om du aktiverar den här policy inställningen förhandlar webbläsaren eller förhandlar inte om en krypterings tunnel med hjälp av de krypterings metoder som du väljer i den nedrullningsbara listan. Om du inaktiverar eller inte konfigurerar den här policy inställningen kan användaren välja vilken krypterings metod som webbläsaren stöder.  
+- **Krypteringsstöd för Internet Explorer**:  
+  Med den här principinställningen kan du inaktivera stöd för Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 eller SSL 3.0 i webbläsaren. TLS och SSL är protokoll som skyddar kommunikationen mellan webbläsaren och målservern. När webbläsaren försöker skapa en säker anslutning till målservern kommer webbläsaren och servern att förhandla om vilket protokoll och vilken version de ska använda. Webbläsaren och servern försöker matcha varandras listor över protokoll och versioner som stöds och väljer den bästa matchningen. Om du aktiverar den här principinställningen kommer webbläsaren att förhandla eller inte förhandla om en krypteringstunnel med hjälp av de krypteringsmetoder som du väljer i listrutan. Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan användaren välja vilken krypteringsmetod som ska stödjas av webbläsaren.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Standard**: 2 objekt: TLS v 1.1 och TLS v 1.2  
-  *Välj nedpilen för att visa alternativ som du kan välja för den här inställningen.*
+  **Standard**: 2 objekt: TLS v1.1 och TLS v1.2  
+  *Välj nedpilen för att visa de alternativ som du kan välja för den här inställningen.*
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Internet Explorer: låst SmartScreen i zonen Internet**:  
-  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen huruvida nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
+  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen om nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067059)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: starta program och filer i en iFrame i zonen Begränsad**:  
-  Med den här principinställningen kan du ange om program kan köras och om filer kan laddas ned från en IFRAME-referens i HTML-koden för sidorna i den här zonen. Om du aktiverar den här principinställningen kan användarna köra program och ladda ned filer från en IFRAME på sidorna i den här zonen utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill köra program och ladda ned filer från en IFRAME på sidorna i den här zonen. Om du inaktiverar den här inställningen kan användarna inte köra program och hämta filer från IFRAMEs på sidorna i den här zonen. Om du inte konfigurerar den här principinställningen kan användarna inte köra program och ladda ned filer från en IFRAME på sidorna i den här zonen.  
+  Med den här principinställningen kan du ange om program kan köras och om filer kan laddas ned från en IFRAME-referens i HTML-koden för sidorna i den här zonen. Om du aktiverar den här principinställningen kan användarna köra program och ladda ned filer från en IFRAME på sidorna i den här zonen utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill köra program och ladda ned filer från en IFRAME på sidorna i den här zonen. Om du inaktiverar den här principinställningen kan användarna inte köra program och ladda ned filer från en IFRAME på sidorna i den här zonen. Om du inte konfigurerar den här principinställningen kan användarna inte köra program och ladda ned filer från en IFRAME på sidorna i den här zonen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067061)
 
   **Standard**: Inaktivera
@@ -686,7 +744,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om användaren kan kringgå varningar från SmartScreen-filtret. SmartScreen-filtret varnar användaren om körbara filer som Internet Explorer-användare vanligtvis inte laddar ned från Internet. Om du aktiverar den här principinställningen blockerar SmartScreen-filtret användaren. Om du inaktiverar eller inte konfigurerar den här principinställningen kan användaren kringgå varningar från SmartScreen-filtret.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067068)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: blockera popup-fönster i zonen Internet**:  
   Med den här principinställningen kan du ange om oönskade popup-fönster ska visas eller inte. Popup-fönster som öppnas när slutanvändaren klickar på en länk blockeras inte. Om du aktiverar den här principinställningen hindras de flesta oönskade popup-fönster från att visas. Om du inaktiverar den här principinställningen hindras inte popup-fönster från att visas. Om du inte konfigurerar den här principinställningen hindras de flesta oönskade popup-fönster från att visas.  
@@ -698,7 +756,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Internet Explorer innehåller dynamiska binära beteenden: komponenter som kapslar in specifika funktioner för HTML-elementen som de är kopplade till. Den här inställningen styr huruvida inställningen Säkerhetsbegränsning för uppföranden i binärkod ska tillåtas eller blockeras. Om du aktiverar den här principinställningen förhindras binära beteenden för processer relaterade till Utforskaren och Internet Explorer. Om du inaktiverar den här principinställningen tillåts binära beteenden för processer relaterade till Utforskaren och Internet Explorer. Om du inte konfigurerar den här principinställningen förhindras binära beteenden för processer relaterade till Utforskaren och Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067144)  
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: Java-behörigheter i begränsad plats**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen inaktiveras Java-appletar.  
@@ -710,7 +768,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen förhindrar att ActiveX-kontroller körs i skyddat läge när utökat skyddat läge är aktiverat. När en användare har en ActiveX-kontroll installerad som inte är kompatibel med utökat skyddat läge och en webbplats försöker läsa in kontrollen, meddelar Internet Explorer användaren om detta och ger möjlighet att köra webbplatsen i det vanliga skyddade läget. Den här inställningen inaktiverar det här meddelandet och tvingar alla webbplatser att köras i utökat skyddat läge. Utökat skyddat läge ger ytterligare skydd mot skadliga webbplatser genom att använda 64-bitarsprocesser i 64-bitarsversioner av Windows. För datorer som kör minst Windows 8 begränsar utökat skyddat läge också vilka platser Internet Explorer kan läsa från i registret och filsystemet. När utökat skyddat läge är aktiverat och en användare påträffar en webbplats som försöker läsa in en ActiveX-kontroll som inte är kompatibel med utökat skyddat läge, meddelar Internet Explorer användaren och ger möjlighet att inaktivera utökat skyddat läge för den specifika webbplatsen. Om du aktiverar den här principinställningen ger Internet Explorer inte användaren möjlighet att inaktivera utökat skyddat läge. Alla webbplatser i skyddat läge körs i utökat skyddat läge. Om du inaktiverar eller inte konfigurerar den här principinställningen meddelar Internet Explorer användaren, som ges möjlighet att köra webbplatser med inkompatibla ActiveX-kontroller i det vanliga skyddade läget.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067145)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: inläsning av XAML-filer i zonen Begränsad**:  
   Med den här principinställningen kan du hantera inläsningen av XAML-filer (Extensible Application Markup Language). XAML är ett XML-baserat deklarativt märkspråk som ofta används för att skapa mångsidiga användargränssnitt och grafik som utnyttjar Windows Presentation Foundation. Om du aktiverar den här inställningen och väljer Aktivera i listrutan läses XAML-filer in automatiskt i Internet Explorer. Användaren kan inte ändra det här beteendet. Om du väljer Fråga i listrutan tillfrågas användaren innan XAML-filerna läses in. Om du inaktiverar den här principinställningen läses XAML-filer inte in i Internet Explorer. Användaren kan inte ändra det här beteendet. Om du inte konfigurerar den här principinställningen kan användaren bestämma huruvida XAML-filerna ska läsas in i Internet Explorer.  
@@ -722,7 +780,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Internet Explorer tillåter att skript öppnar, ändrar storlek på och flyttar olika typer av fönster via programmering. Säkerhetsfunktionen för fönsterbegränsningar begränsar popup-fönster och hindrar skript från att visa fönster där namnlisten och statusfältet inte visas för användaren eller som förvränger andra namnlister eller statusfält i Windows. Om du aktiverar den här principinställningen begränsas skriptbaserade fönster för alla processer. Om du inaktiverar eller inte konfigurerar den här principinställningen begränsas inte skriptbaserade fönster.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067146)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: kör Active X-kontroller och plugin-program i zonen Begränsad**:  
   Med den här principinställningen kan du ange huruvida ActiveX-kontroller och plugin-program kan köras på sidor från den angivna zonen. Om du aktiverar den här principinställningen kan kontroller och plugin-program köras utan inblandning av användaren. Om du väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att kontroller eller plugin-programmet körs. Om du inaktiverar den här principinställningen hindras kontroller och plugin-program från att köras. Om du inte konfigurerar den här principinställningen hindras kontroller och plugin-program från att köras.  
@@ -750,7 +808,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Om du inaktiverar den här principinställningen anges inloggningen till *Automatisk inloggning endast i Intranät-zonen*. Om du inte konfigurerar den här principen anges inloggningen till att *Fråga* efter användarnamn och lösenord.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067110)
 
-  **Standard**: Anonyma
+  **Standard**: Anonym
 
 - **Internet Explorer: initiera och kör skript för Active X-kontroller som inte markerats som säkra i zonen Betrodda platser**:  
   Med den här principinställningen kan du hantera ActiveX-kontroller som inte har markerats som säkra. Om du aktiverar den här principinställningen körs ActiveX-kontroller, initieras med parametrar och körs med skript utan att objektsäkerhet anges för obetrodda data eller skript. Den här inställningen rekommenderas inte, förutom för säkra och administrerade zoner. Den här inställningen gör att både osäkra och säkra kontroller initieras och körs med skript, samtidigt som ActiveX-skriptkontrollerna som markerats som säkra i skriptalternativet ignoreras. Om du aktiverar den här principinställningen och väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att kontrollen initieras med parametrar eller körs med skript. Om du inaktiverar den här principinställningen initieras inte ActiveX-kontroller som inte kan göras säkra med parametrar, och de körs inte med skript. Om du inte konfigurerar den här principen tillfrågas användarna om de vill tillåta att kontrollen startas med parametrar eller körs med skript.  
@@ -762,7 +820,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange om Internet Explorer ska kontrollera återkallelsestatusen för servercertifikat. Certifikat återkallas när de komprometteras eller inte längre är giltiga, och det här alternativet hindrar användarna från att skicka känsliga data till en webbplats som kan vara bedräglig eller inte säker. Om du aktiverar den här principinställningen kontrollerar Internet Explorer om servercertifikat har återkallats. Om du inaktiverar den här principinställningen kontrollerar Internet Explorer inte om servercertifikat har återkallats. Om du inte konfigurerar den här principinställningen kontrollerar Internet Explorer inte om servercertifikat har återkallats.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067046)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: mindre privilegierade platser i zonen Internet**:  
   Med den här principinställningen kan du ange om webbplatser i mindre privilegierade zoner, till exempel Begränsade platser, kan navigera till den här zonen. Om du aktiverar den här principinställningen kan webbplatser från mindre privilegierade zoner öppna nya fönster i, eller navigera till, den här zonen. Säkerhetszonen körs utan det ytterligare säkerhetslager som tillhandahålls av säkerhetsfunktionen Skydd mot zonförhöjning. Om du väljer Fråga i listrutan visas en varning för användarna om att potentiellt riskabel navigering snart initieras. Om du inaktiverar den här principinställningen förhindras potentiellt skadlig navigering. Säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på inställningen för funktionen Skydd mot zonförhöjning. Om du inte konfigurerar den här principinställningen kan webbplatser från mindre privilegierade zoner öppna nya fönster i, eller navigera till, den här zonen.  
@@ -786,7 +844,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du förhindra installationen av ActiveX-kontroller separat för varje enskild användare. Om du aktiverar den här principinställningen kan ActiveX-kontroller inte installeras per användare. Om du inaktiverar eller inte konfigurerar den här principinställningen kan ActiveX-kontroller installeras per användare.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067058)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: förhindra hantering av SmartScreen-filtret**:  
   Den här inställningen hindrar användarna från att hantera SmartScreen-filtret, som varnar användarna om den webbplats som de besöker är känd för att försöka samla in personlig information via ”nätfiske” eller är känd för att innehålla skadlig kod. Om du aktiverar den här principinställningen uppmanas användaren inte om att aktivera SmartScreen-filtret. Alla webbplatsadresser som inte finns med på filtrets lista för tillåtna webbplatser skickas automatiskt till Microsoft utan att fråga användaren. Om du inaktiverar eller inte konfigurerar den här principinställningen uppmanas användarna att bestämma om de vill aktivera SmartScreen-filtret vid första körningen.  
@@ -798,7 +856,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om funktionen MIME-kontroll i Internet Explorer ska förhindra upphöjning av en fil av en typ till en farligare filtyp. Om du aktiverar den här principinställningen upphöjer funktionen MIME-kontroll aldrig en fil av en typ till en farligare filtyp. Om du inaktiverar den här principinställningen kan Internet Explorer-processer tillåta att MIME-kontroll höjer upp en fil av en typ till en farligare filtyp. Om du inte konfigurerar den här principen upphöjer MIME-kontroll aldrig en fil av en typ till en farligare filtyp.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067124)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: ladda ned signerade Active X-kontroller i zonen Begränsad**:  
   Med den här principinställningen kan du bestämma om användare kan ladda ned signerade ActiveX-kontroller från en sida i zonen. Om du aktiverar den här principen kan användarna ladda ned signerade kontroller utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill hämta kontroller som signerats av utfärdare som inte är betrodda. Kod som signerats av betrodda utfärdare hämtas i bakgrunden. Om du inaktiverar den här inställningen kan inte signerade kontroller laddas ned. Om du inte konfigurerar den här principinställningen tillfrågas användarna om de vill ladda ned kontroller som signerats av utfärdare som inte är betrodda. Kod som signerats av betrodda utfärdare hämtas i bakgrunden.  
@@ -810,7 +868,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Funktionen Komplettera automatiskt kan komma ihåg och föreslå användarnamn och lösenord för formulär. Om du aktiverar den här inställningen kan användarna inte ändra ”Användarnamn och lösenord i formulär” eller ”Fråga mig om jag vill spara lösenord”. Funktionen Komplettera automatiskt för användarnamn och lösenord för formulär aktiveras. Ange om det ska gå att spara lösenord. Om du inaktiverar den här inställningen kan användarna inte ändra ”Användarnamn och lösenord i formulär” eller ”Fråga mig om jag vill spara lösenord”. Funktionen Komplettera automatiskt för användarnamn och lösenord för formulär inaktiveras. Användarna kan inte heller välja om de vill tillfrågas om att spara lösenord. Om du inte konfigurerar den här inställningen kan användarna välja att aktivera Komplettera automatiskt för användarnamn och lösenord för formulär och välja att bli tillfrågade om de vill spara lösenord. För att visa det här alternativet öppnar användarna dialogrutan Internetalternativ, klickar på fliken Innehåll och sedan på knappen Inställningar.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067122)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: tillåt att VBscript-körs i zonen Internet**:  
   Med den här inställningen kan du välja om VBScript kan köras på sidor i specifika Internet Explorer-zoner. Alternativen är:
@@ -829,13 +887,13 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen styr om användaren kan köra TDC ActiveX-kontrollen på webbplatser. Om du aktiverar den här principinställningen körs inte TDC ActiveX-kontrollen från webbplatser i den här zonen. Om du inaktiverar den här principinställningen körs TDC ActiveX-kontrollen från alla platser i den här zonen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067032)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer-betrodda zoner kör inte program mot skadlig kod mot Active X-kontroller**:  
   Den här principinställningen anger om Internet Explorer kör program mot skadlig kod mot ActiveX-kontroller för att se om det är säkert att läsa in dem på sidor. Om du aktiverar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inaktiverar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inte konfigurerar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Användare kan aktivera eller inaktivera det här beteendet med hjälp av säkerhetsinställningarna för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067115)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: Java-behörigheter i zonen Lokal dator**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen ställs behörigheten in på Normal säkerhet.  
@@ -847,19 +905,19 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om Internet Explorer kör program mot skadlig kod mot ActiveX-kontroller för att se om det är säkert att läsa in dem på sidor. Om du aktiverar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inaktiverar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inte konfigurerar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Användare kan aktivera eller inaktivera det här beteendet med hjälp av säkerhetsinställningarna för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067138)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: skriptlet i zonen Begränsad**:  
   Med den här principinställningen kan du ange om användaren kan köra skriptlet. Om du aktiverar den här principinställningen kan användaren köra skriptlet. Om du inaktiverar den här principinställningen kan användaren inte köra skriptlet. Om du inte konfigurerar den här principinställningen kan användaren aktivera eller inaktivera skriptlet.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067112)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer-processer: meddelandefältet**:  
   Med den här inställningen kan du ange om meddelandefältet ska visas i Internet Explorer-processer när fil- eller kodinstallationer begränsas. Som standard visas meddelandefältet i Internet Explorer-processer. Om du aktiverar den här principinställningen visas meddelandefältet för Internet Explorer-processerna. Om du inaktiverar den här principinställningen visas inte meddelandefältet för Internet Explorer-processerna. Om du inte konfigurerar den här principinställningen visas inte meddelandefältet för Internet Explorer-processerna.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067139)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: ladda ned signerade ActiveX-kontroller i zonen Internet**:  
   Med den här principinställningen kan du bestämma om användare kan ladda ned signerade ActiveX-kontroller från en sida i zonen. Om du aktiverar den här principen kan användarna ladda ned signerade kontroller utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill hämta kontroller som signerats av utfärdare som inte är betrodda. Kod som signerats av betrodda utfärdare hämtas i bakgrunden. Om du inaktiverar den här inställningen kan inte signerade kontroller laddas ned. Om du inte konfigurerar den här principinställningen tillfrågas användarna om de vill ladda ned kontroller som signerats av utfärdare som inte är betrodda. Kod som signerats av betrodda utfärdare hämtas i bakgrunden.  
@@ -868,19 +926,19 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   **Standard**: Inaktivera
 
 - **Internet Explorer: SmartScreen i zonen Begränsad**:  
-  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen huruvida nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
+  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen om nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067034)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: ta bort knappen Kör den här gången för inaktuella Active X-kontroller**:  
   Med den här principinställningen kan du hindra användare från att se knappen ”Kör den här gången” och från att köra specifika inaktuella ActiveX-kontroller i Internet Explorer. Om du aktiverar den här principinställningen ser inte användarna knappen ”Kör den här gången” i varningsmeddelandet som visas när Internet Explorer blockerar en inaktuell ActiveX-kontroll. Om du inaktiverar eller inte konfigurerar den här principinställningen ser användarna knappen ”Kör den här gången” i varningsmeddelandet som visas när Internet Explorer blockerar en inaktuell ActiveX-kontroll. Genom att klicka på den här knappen kan användaren köra den inaktuella ActiveX-kontrollen en gång. Mer information finns i avsnittet om inaktuella ActiveX-kontroller i TechNet-biblioteket för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067123)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: starta program och filer i en iFrame i zonen Internet**:  
-  Med den här principinställningen kan du ange om program kan köras och om filer kan laddas ned från en IFRAME-referens i HTML-koden för sidorna i den här zonen. Om du aktiverar den här principinställningen kan användarna köra program och ladda ned filer från en IFRAME på sidorna i den här zonen utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill köra program och ladda ned filer från en IFRAME på sidorna i den här zonen. Om du inaktiverar den här inställningen kan användarna inte köra program och hämta filer från IFRAMEs på sidorna i den här zonen. Om du inte konfigurerar den här principinställningen tillfrågas användarna om de vill köra program och ladda ned filer från en IFRAME på sidorna i den här zonen.  
+  Med den här principinställningen kan du ange om program kan köras och om filer kan laddas ned från en IFRAME-referens i HTML-koden för sidorna i den här zonen. Om du aktiverar den här principinställningen kan användarna köra program och ladda ned filer från en IFRAME på sidorna i den här zonen utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill köra program och ladda ned filer från en IFRAME på sidorna i den här zonen. Om du inaktiverar den här principinställningen kan användarna inte köra program och ladda ned filer från en IFRAME på sidorna i den här zonen. Om du inte konfigurerar den här principinställningen tillfrågas användarna om de vill köra program och ladda ned filer från en IFRAME på sidorna i den här zonen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067020)
 
   **Standard**: Inaktivera
@@ -892,10 +950,10 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   **Standard**: Inaktivera
 
 - **Internet Explorer: SmartScreen i zonen Internet**:  
-  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen huruvida nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
+  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen om nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067047)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: låsta Java-behörigheter i zonen Betrodda platser**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen inaktiveras Java-appletar.  
@@ -907,19 +965,19 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange om Internet Explorer ska söka efter digitala signaturer (som identifierar utgivaren av signerad programvara och verifierar att den inte har ändrats eller manipulerats) på användarnas datorer innan körbara program laddas ned. Om du aktiverar den här principinställningen letar Internet Explorer efter digitala signaturer för körbara program och visar deras identiteter innan de laddas ned till användarnas datorer. Om du inaktiverar den här principinställningen letar inte Internet Explorer efter digitala signaturer för körbara program och visar inte deras identiteter innan de laddas ned till användarnas datorer. Om du inte konfigurerar den här principen letar inte Internet Explorer efter digitala signaturer för körbara program och visar inte deras identiteter innan de laddas ned till användarnas datorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067051)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: skriptkörning med webbläsarkontroller i zonen Begränsad**:  
   Den här principinställningen anger om en sida kan styra inbäddade WebBrowser-kontroller via skript. Om du aktiverar den här principinställningen tillåts skriptåtkomst till WebBrowser-kontrollen. Om du inaktiverar den här principinställningen tillåts inte skriptåtkomst till WebBrowser-kontrollen. Om du inte konfigurerar den här principinställningen kan användarna aktivera eller inaktivera skriptåtkomst till WebBrowser-kontrollen. Som standard tillåts skriptåtkomst till WebBrowser-kontrollen endast i zonerna Lokal dator och Intranät.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067098)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: skriptfiler mellan webbplatser i zonen Begränsad**:  
   Den här principen styr huruvida XSS-filtret (Cross Site-Scripting) identifierar och förhindrar XSS-inmatningar till webbplatser i den här zonen. Om du aktiverar den här principinställningen aktiveras XSS-filtret för platser i den här zonen och XSS-filtret försöker blockera XSS-inmatningar. Om du inaktiverar den här principinställningen inaktiveras XSS-filtret för platser i den här zonen och Internet Explorer tillåter XSS-inmatningar.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067178)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: beteenden för binärfiler och skript i zonen Begränsad**:  
   Med den här principinställningen kan du hantera dynamiska beteenden för binärfiler och skript: komponenter som kapslar in specifika funktioner för HTML-element som de kopplats till. Om du aktiverar den här principinställningen är binärfiler och skript tillgängliga. Om du väljer Godkänns av administratör i listrutan är endast beteenden som visas i Uppföranden som godkänns av administratören under säkerhetsbegränsningsprincipen för binärt beteende tillgängliga. Om du inaktiverar den här principinställningen är beteenden för binärfiler och skript inte tillgängliga såvida inte programmen har implementerat en anpassad säkerhetshanterare. Om du inte konfigurerar den här principinställningen är beteenden för binärfiler och skript inte tillgängliga såvida inte programmen har implementerat en anpassad säkerhetshanterare.  
@@ -931,7 +989,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen inaktiverar funktionen för kontroll av säkerhetsinställningar, som kontrollerar säkerhetsinställningarna i Internet Explorer för att avgöra om inställningarna utsätter Internet Explorer för risk. Om du aktiverar den här principinställningen inaktiveras funktionen. Om du inaktiverar eller inte konfigurerar den här principinställningen aktiveras funktionen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067182)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: säkerhetsvarning om potentiellt osäkra filer i zonen Internet**:  
   Den här principinställningen styr huruvida meddelandet ”Öppna fil – säkerhetsvarning” visas när användaren försöker öppna körbara filer eller andra potentiellt skadliga filer (till exempel från en filresurs i intranätet med hjälp av Utforskaren). Om du aktiverar den här principinställningen och väljer Aktivera i listrutan öppnas dessa filer utan någon säkerhetsvarning. Om du väljer Fråga i listrutan visas en säkerhetsvarning innan filerna öppnas. Om du inaktiverar den här principinställningen öppnas inte dessa filer. Om du inte konfigurerar den här principinställningen kan användaren konfigurera hur datorn hanterar dessa. Som standard blockeras dessa filer i zonen Begränsad, tillåts i zonerna Intranät och Lokal dator och har inställningen Fråga i zonerna Internet och Betrodda platser.  
@@ -949,7 +1007,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om Internet Explorer blockerar specifika inaktuella ActiveX-kontroller. Inaktuella ActiveX-kontroller blockeras aldrig i zonen Intranät. Om du aktiverar den här principinställningen slutar Internet Explorer att blockera inaktuella ActiveX-kontroller. Om du inaktiverar eller inte konfigurerar den här principinställningen fortsätter Internet Explorer att blockera specifika inaktuella ActiveX-kontroller. Mer information finns i avsnittet om inaktuella ActiveX-kontroller i TechNet-biblioteket för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067203)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: popup-blockerare i zonen Begränsad**:  
   Med den här principinställningen kan du ange om oönskade popup-fönster ska visas eller inte. Popup-fönster som öppnas när slutanvändaren klickar på en länk blockeras inte. Om du aktiverar den här principinställningen hindras de flesta oönskade popup-fönster från att visas. Om du inaktiverar den här principinställningen hindras inte popup-fönster från att visas. Om du inte konfigurerar den här principinställningen hindras de flesta oönskade popup-fönster från att visas.  
@@ -961,7 +1019,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Principinställningen Säkerhetsbegränsningar för protokollet MK minskar angreppsytan genom att förhindra MK-protokollet. Resurser som hanteras av MK-protokollet misslyckas. Om du aktiverar den här principinställningen blockeras MK-protokollet för Utforskaren och Internet Explorer och resurser som hanteras av MK-protokollet misslyckas. Om du inaktiverar den här principinställningen kan program använda API:et för MK-protokollet. Resurser som hanteras av MK-protokollet fungerar för processerna i Utforskaren och Internet Explorer. Om du inte konfigurerar den här principinställningen blockeras MK-protokollet för Utforskaren och Internet Explorer och resurser som hanteras av MK-protokollet misslyckas.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067179)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: Java-behörigheter i zonen Betrodda platser**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen ställs behörigheten in på Låg säkerhet.  
@@ -985,13 +1043,13 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen styr huruvida användarna tillfrågas om de vill tillåta att ActiveX-kontroller körs på andra webbplatser än den webbplats som ActiveX-kontrollen installerades på. Om du aktiverar den här principinställningen tillfrågas användaren innan ActiveX-kontroller kan köras från webbplatser i den här zonen. Användaren kan välja att tillåta att kontrollen körs från den aktuella webbplatsen eller från alla webbplatser. Om du inaktiverar den här principinställningen ser inte användarna ActiveX-prompten per webbplats, och ActiveX-kontroller kan köras från alla webbplatser i den här zonen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067091)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: ta med alla nätverkssökvägar**:  
   Internet Explorer: ta med alla nätverkssökvägar.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067090)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: skyddat läge i zonen Internet**:  
   Med den här principinställningen kan du aktivera skyddat läge. Skyddat läge hjälper dig att skydda Internet Explorer mot säkerhetsproblem genom att begränsa de platser som Internet Explorer kan skriva till i registret och filsystemet. Om du aktiverar den här principinställningen aktiveras skyddat läge. Användaren kan inte inaktivera skyddat läge. Om du inaktiverar den här principinställningen inaktiveras skyddat läge. Användaren kan inte aktivera skyddat läge. Om du inte konfigurerar den här principinställningen kan användaren aktivera eller inaktivera skyddat läge.  
@@ -1006,16 +1064,16 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   **Standard**: Inaktivera
 
 - **Internet Explorer: låst SmartScreen i zonen Begränsad**:  
-  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen huruvida nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
+  Den här principinställningen styr huruvida SmartScreen-filtret söker igenom sidor i den här zonen och letar efter skadligt innehåll. Om du aktiverar den här principinställningen söker SmartScreen-filtret igenom sidor i den här zonen och letar efter skadligt innehåll. Om du inaktiverar den här principinställningen söker SmartScreen-filtret inte igenom sidor i den här zonen för att leta efter skadligt innehåll. Om du inte konfigurerar den här principinställningen kan användaren välja huruvida SmartScreen-filtret ska söka igenom sidor i den här zonen och leta efter skadligt innehåll. Obs! I Internet Explorer 7 styr den här principinställningen om nätfiskefiltret söker igenom sidor i den här zonen och letar efter skadligt innehåll.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067092)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: kraschidentifiering**:  
   Med den här principinställningen kan du hantera kraschidentifieringsfunktionen för tilläggshantering. Om du aktiverar den här principinställningen uppvisar en krasch i Internet Explorer samma beteende som i Windows XP Professional Service Pack 1 och tidigare, nämligen att Windows Felrapportering anropas. Alla principinställningar för Windows Felrapportering fortsätter att tillämpas. Om du inaktiverar eller inte konfigurerar den här principinställningen fungerar kraschidentifieringsfunktionen för tilläggshantering.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067094)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: Java-behörigheter i zonen Internet**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen ställs behörigheten in på Hög säkerhet.  
@@ -1045,7 +1103,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange alternativ för att dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Om du aktiverar den här principinställningen och klickar på Aktivera kan användarna dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra denna inställning. Om du aktiverar den här principinställningen och klickar på Inaktivera kan användarna inte dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra denna inställning. Om du inaktiverar den här principinställningen eller inte konfigurerar den i Internet Explorer 10 kan användarna inte dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan ändra den här inställningen i dialogrutan Internetalternativ. Om du inaktiverar den här principinställningen eller inte konfigurerar den i Internet Explorer 9 och tidigare versioner kan användarna dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra denna inställning.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067093)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: initiera och kör skript för Active X-kontroller som inte markerats som säkra i zonen Intranät**:  
   Med den här principinställningen kan du hantera ActiveX-kontroller som inte har markerats som säkra. Om du aktiverar den här principinställningen körs ActiveX-kontroller, initieras med parametrar och körs med skript utan att objektsäkerhet anges för obetrodda data eller skript. Den här inställningen rekommenderas inte, förutom för säkra och administrerade zoner. Den här inställningen gör att både osäkra och säkra kontroller initieras och körs med skript, samtidigt som ActiveX-skriptkontrollerna som markerats som säkra i skriptalternativet ignoreras. Om du aktiverar den här principinställningen och väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att kontrollen initieras med parametrar eller körs med skript. Om du inaktiverar den här principinställningen initieras inte ActiveX-kontroller som inte kan göras säkra med parametrar, och de körs inte med skript. Om du inte konfigurerar den här principinställningen initieras inte ActiveX-kontroller som inte kan göras säkra med parametrar, och de körs inte med skript.  
@@ -1057,7 +1115,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen hindrar användaren från att ladda ned bilagor (bifogade filer) från en feed till användarens dator. Om du aktiverar den här principinställningen kan användaren inte ange att feed-synkroniseringsmotorn ska ladda ned en bilaga via sidan för feed-egenskaper. Utvecklare kan inte ändra nedladdningsinställningen via Feed-API:erna. Om du inaktiverar eller inte konfigurerar den här principinställningen kan användaren ange att feed-synkroniseringsmotorn ska ladda ned en bilaga via sidan för feed-egenskaper. Utvecklare kan ändra nedladdningsinställningen via Feed-API:et.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067245)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: ladda ned osignerade Active X-kontroller i zonen Begränsad**:  
   Med den här principinställningen kan du ange om användarna kan ladda ned osignerade ActiveX-kontroller från zonen. Den här typen av kod kan vara skadlig, särskilt om den kommer från en obetrodd zon. Om du aktiverar den här principinställningen kan användarna köra osignerade kontroller utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att den osignerade kontrollen körs eller inte. Om du inaktiverar den här principinställningen kan användarna inte köra osignerade kontroller. Om du inte konfigurerar den här principinställningen kan användarna inte köra osignerade kontroller.  
@@ -1069,15 +1127,15 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange om användarna kan ladda ned osignerade ActiveX-kontroller från zonen. Den här typen av kod kan vara skadlig, särskilt om den kommer från en obetrodd zon. Om du aktiverar den här principinställningen kan användarna köra osignerade kontroller utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att den osignerade kontrollen körs eller inte. Om du inaktiverar den här principinställningen kan användarna inte köra osignerade kontroller. Om du inte konfigurerar den här principinställningen kan användarna inte köra osignerade kontroller.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067095)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer-processer: begränsa Active X-installation**:  
   Den här principinställningen gör det möjligt för program som hanterar webbläsarkontrollen att blockera automatiska frågor om installationen av ActiveX-kontroller. Om du aktiverar den här principinställningen blockerar webbläsarkontrollen automatiska frågor om installationen av ActiveX-kontroller för alla processer. Om du inaktiverar eller inte konfigurerar den här principinställningen blockerar inte webbläsarkontrollen automatiska frågor om installationen av ActiveX-kontroller för alla processer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067250)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
-- Internet **Explorer Internet Zone-skriptlet**:  
+- **Internet Explorer: skriplet i zonen Internet**:  
   Med den här principinställningen kan du ange om användaren kan köra skriptlet. Om du aktiverar den här principinställningen kan användaren köra skriptlet. Om du inaktiverar den här principinställningen kan användaren inte köra skriptlet. Om du inte konfigurerar den här principinställningen kan användaren aktivera eller inaktivera skriptlet.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067176)
 
@@ -1093,7 +1151,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange om programvara, till exempel ActiveX-kontroller och nedladdning av filer, kan installeras och köras av användaren även om signaturen är ogiltig. En ogiltig signatur kan tyda på att någon har manipulerat filen. Om du aktiverar den här principinställningen tillfrågas användarna innan de kan installera eller köra filer med en ogiltig signatur. Om du inaktiverar den här principinställningen kan användarna inte köra eller installera filer med en ogiltig signatur. Om du inte konfigurerar den här principinställningen kan användarna välja om de vill köra eller installera filer med en ogiltig signatur.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067201)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: kopiera och klistra in via skript i zonen Begränsad**:  
   Med den här principinställningen kan du ange om skript kan utföra åtgärder med Urklipp (till exempel Klipp ut, Kopiera och Klistra in) i en angiven region. Om du aktiverar den här principinställningen kan skript utföra åtgärder med Urklipp. Om du väljer Fråga i listrutan tillfrågas användarna om de vill tillåta åtgärder med Urklipp. Om du inaktiverar den här principinställningen kan skript inte utföra åtgärder med Urklipp. Om du inte konfigurerar den här principinställningen kan skript inte utföra åtgärder med Urklipp.  
@@ -1105,25 +1163,25 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange alternativ för att dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Om du aktiverar den här principinställningen och klickar på Aktivera kan användarna dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra denna inställning. Om du aktiverar den här principinställningen och klickar på Inaktivera kan användarna inte dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra denna inställning. Om du inaktiverar den här principinställningen eller inte konfigurerar den i Internet Explorer 10 kan användarna inte dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan ändra den här inställningen i dialogrutan Internetalternativ. Om du inaktiverar den här principinställningen eller inte konfigurerar den i Internet Explorer 9 och tidigare versioner kan användarna dra innehåll från en domän till en annan domän när källan och målet finns i olika fönster. Användarna kan inte ändra denna inställning.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067166)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: användarna lägger till platse**:  
-  Förhindrar att användarna kan lägga till eller ta bort platser från säkerhetszoner. En säkerhetszon är en grupp med webbplatser med samma säkerhetsnivå. Om du aktiverar den här principen inaktiveras platshanteringsinställningarna för säkerhetszoner. (Du kan visa platshanteringsinställningarna för säkerhetszoner i dialogrutan Internetalternativ genom att klicka på fliken Säkerhet och sedan på knappen Platser.) Om du inaktiverar den här principen eller inte konfigurerar den kan användarna lägga till webbplatser till eller ta bort webbplatser från zonerna Betrodda platser och Begränsade platser och ändra inställningarna för zonen Lokalt intranät. Den här principen förhindrar att användarna kan ändra platshanteringsinställningar för säkerhetszoner som angetts av administratören. Obs! Principen ”Inaktivera fliken Säkerhet” (i \Användarkonfiguration\Administrativa mallar\Windows-komponenter\Internet Explorer\Internet på Kontrollpanelen), som tar bort fliken Säkerhet från gränssnittet, prioriteras framför den här principen. Om den aktiveras så ignoreras den här principen. Mer information finns i principen ”Säkerhetszoner använder endast datorinställningar”.  
+  Förhindrar att användarna kan lägga till eller ta bort platser från säkerhetszoner. En säkerhetszon är en grupp med webbplatser med samma säkerhetsnivå. Om du aktiverar den här principen inaktiveras platshanteringsinställningarna för säkerhetszoner. (Du kan visa platshanteringsinställningarna för säkerhetszoner i dialogrutan Internetalternativ genom att klicka på fliken Säkerhet och sedan på knappen Platser.) Om du inaktiverar den här principen eller inte konfigurerar den kan användarna lägga till webbplatser till eller ta bort webbplatser från zonerna Betrodda platser och Begränsade platser och ändra inställningarna för zonen Lokalt intranät. Den här principen förhindrar att användarna kan ändra platshanteringsinställningar för säkerhetszoner som angetts av administratören. Obs! Principen ”Inaktivera fliken Säkerhet” (i \Användarkonfiguration\Administrativa mallar\Windows-komponenter\Internet Explorer\Internet på Kontrollpanelen), som tar bort fliken Säkerhet från gränssnittet, prioriteras framför den här principen. Om den aktiveras så ignoreras den här principen. Se även principen”Säkerhetszoner: Använd endast datorinställningar”.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067167)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: skriptinitierade fönster i zonen Internet**:  
   Med den här principinställningen kan du hantera begränsningar för skriptinitierade popup-fönster och fönster som innehåller namnlisten och statusfältet. Om du aktiverar den här principinställningen gäller inte begränsningar för Windows-säkerhet i den här zonen. Säkerhetszonen körs utan det ytterligare säkerhetslager som tillhandahålls av den här funktionen. Om du inaktiverar den här principinställningen kan inte de potentiellt skadliga åtgärderna i skriptinitierade popup-fönster och fönster som innehåller namnlisten och statusfältet köras. Den här säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på kontrollinställningen för skriptinitierade säkerhetsbegränsningar för Windows. Om du inte konfigurerar den här principinställningen kan inte de potentiellt skadliga åtgärderna i skriptinitierade popup-fönster och fönster som innehåller namnlisten och statusfältet köras. Den här säkerhetsfunktionen i Internet Explorer aktiveras i den här zonen baserat på kontrollinställningen för skriptinitierade säkerhetsbegränsningar för Windows.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067088)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: säkerhetszoner använder endast datorinställningar**:  
   Använder information om säkerhetszoner för alla användare på samma dator. En säkerhetszon är en grupp med webbplatser med samma säkerhetsnivå. Om du aktiverar den här principen tillämpas ändringar som användaren gör i en säkerhetszon på alla användare av den aktuella datorn. Om du inaktiverar den här principen eller inte konfigurerar den kan användare på samma dator konfigurera egna inställningar för säkerhetszoner. Använd den här principen om du vill se till att inställningarna för säkerhetszoner är enhetliga på samma dator och att de inte varierar mellan användare. Se även principen ”Säkerhetszoner: Tillåt inte att användare ändrar principer”.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067086)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: låsta Java-behörigheter i zonen Lokal dator**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen inaktiveras Java-appletar.  
@@ -1135,7 +1193,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om Internet Explorer kör program mot skadlig kod mot ActiveX-kontroller för att se om det är säkert att läsa in dem på sidor. Om du aktiverar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inaktiverar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inte konfigurerar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Användare kan aktivera eller inaktivera det här beteendet med hjälp av säkerhetsinställningarna för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067089)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: kör .NET Framework-beroende komponenter som har signerats med Authenticode i zonen Begränsad**:  
   Med den här inställningen kan du ange om .NET Framework-komponenter som har signerats med Authenticode kan köras från Internet Explorer. Dessa komponenter är hanterade kontroller som en objekttagg refererar till och hanterade körbara filer som en länk refererar till. Om du aktiverar den här principinställningen kör Internet Explorer signerade hanterade komponenter. Om du väljer Fråga i listrutan uppmanas användarna att välja om de vill köra signerade hanterade komponenter i Internet Explorer. Om du inaktiverar den här principinställningen kör Internet Explorer inte osignerade hanterade komponenter. Om du inte konfigurerar den här principinställningen kör Internet Explorer inte osignerade hanterade komponenter.  
@@ -1153,7 +1211,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Den här principinställningen anger om Internet Explorer kör program mot skadlig kod mot ActiveX-kontroller för att se om det är säkert att läsa in dem på sidor. Om du aktiverar den här principinställningen stämmer inte Internet Explorer av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inaktiverar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Om du inte konfigurerar den här principinställningen stämmer Internet Explorer alltid av med ditt program mot skadlig kod för att se om det är säkert att skapa en instans av ActiveX-kontrollen. Användare kan aktivera eller inaktivera det här beteendet med hjälp av säkerhetsinställningarna för Internet Explorer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067162)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: kopiera och klistra in via skript i zonen Internet**:  
   Med den här principinställningen kan du ange om skript kan utföra åtgärder med Urklipp (till exempel Klipp ut, Kopiera och Klistra in) i en angiven region. Om du aktiverar den här principinställningen kan skript utföra åtgärder med Urklipp. Om du väljer Fråga i listrutan tillfrågas användarna om de vill tillåta åtgärder med Urklipp. Om du inaktiverar den här principinställningen kan skript inte utföra åtgärder med Urklipp. Om du inte konfigurerar den här principinställningen kan skript inte utföra åtgärder med Urklipp.  
@@ -1165,13 +1223,13 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du ange hur ActiveX-kontroller installeras. Om du aktiverar den här principinställningen installeras ActiveX-kontroller endast om ActiveX-installationstjänsten är tillgänglig och har konfigurerats att tillåta installationen av ActiveX-kontroller. Om du inaktiverar eller inte konfigurerar den här principinställningen installeras ActiveX-kontroller, inklusive kontroller för varje användare, via standardinstallationsprocessen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067163)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: skydda processer från zonupplyftning**:  
   Internet Explorer begränsar varje webbsida som öppnas. Begränsningarna är beroende av webbsidans plats (Internet, intranät, zonen Lokal dator och så vidare). Till exempel har webbsidor på den lokala datorn minst begränsningar och finns i zonen Lokal dator, vilket gör den lokala datorn till ett favoritmål för illvilliga användare. Om du aktiverar den här principinställningen kan alla zoner skyddas från zonupplyftning för alla processer. Om du inaktiverar eller inte konfigurerar den här principinställningen skyddas inte andra processer än Internet Explorer och de som anges i processlistan på detta sätt.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067160)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: ladda ned osignerade ActiveX-kontroller i zonen Internet**:  
   Med den här principinställningen kan du ange om användarna kan ladda ned osignerade ActiveX-kontroller från zonen. Den här typen av kod kan vara skadlig, särskilt om den kommer från en obetrodd zon. Om du aktiverar den här principinställningen kan användarna köra osignerade kontroller utan manuella åtgärder. Om du väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att den osignerade kontrollen körs eller inte. Om du inaktiverar den här principinställningen kan användarna inte köra osignerade kontroller. Om du inte konfigurerar den här principinställningen kan användarna inte köra osignerade kontroller.  
@@ -1189,25 +1247,25 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du bestämma huruvida skript kan uppdatera statusfältet i zonen. Om du aktiverar den här principinställningen kan skript uppdatera statusfältet. Om du inaktiverar eller inte konfigurerar den här principinställningen kan inte skript uppdatera statusfältet.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067087)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: ta med lokal sökväg när filer laddas upp till servern i zonen Begränsad**:  
   Den här principinställningen styr huruvida information om den lokala sökvägen skickas när användaren laddar upp en fil via ett HTML-formulär. Om information om den lokala sökvägen skickas kan servern oavsiktligt få tillgång till viss information. Filer som skickas från användarens dator kan exempelvis innehålla användarnamnet som en del av sökvägen. Om du aktiverar den här principinställningen skickas information om sökvägen när användaren överför en fil via ett HTML-formulär. Om du inaktiverar den här principinställningen tas information om sökvägen bort när användaren överför en fil via ett HTML-formulär. Om du inte konfigurerar den här principinställningen kan användarna välja om sökvägsinformation ska skickas när de laddar upp en fil via ett HTML-formulär. Sökvägsinformation skickas som standard.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067085)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer-processer: begränsa filnedladdning**:  
   Den här principinställningen gör det möjligt för program som hanterar webbläsarkontrollen att blockera automatiska frågor om filnedladdningar som inte har initierats av användaren. Om du aktiverar den här principinställningen blockerar webbläsarkontrollen automatiska frågor om filnedladdningar som inte har initierats av användaren för alla processer. Om du inaktiverar den här principinställningen blockerar inte webbläsarkontrollen automatiska frågor om filnedladdningar som inte har initierats av användaren för alla processer.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067164)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: tillåt endast att godkända domäner använder Active X-kontroller i zonen Begränsad**:  
   Den här principinställningen styr huruvida användarna tillfrågas om de vill tillåta att ActiveX-kontroller körs på andra webbplatser än den webbplats som ActiveX-kontrollen installerades på. Om du aktiverar den här principinställningen tillfrågas användaren innan ActiveX-kontroller kan köras från webbplatser i den här zonen. Användaren kan välja att tillåta att kontrollen körs från den aktuella webbplatsen eller från alla webbplatser. Om du inaktiverar den här principinställningen ser inte användarna ActiveX-prompten per webbplats, och ActiveX-kontroller kan köras från alla webbplatser i den här zonen.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067233)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: initiera och kör skript för Active X-kontroller som inte markerats som säkra i zonen Begränsad**:  
   Med den här principinställningen kan du hantera ActiveX-kontroller som inte har markerats som säkra. Om du aktiverar den här principinställningen körs ActiveX-kontroller, initieras med parametrar och körs med skript utan att objektsäkerhet anges för obetrodda data eller skript. Den här inställningen rekommenderas inte, förutom för säkra och administrerade zoner. Den här inställningen gör att både osäkra och säkra kontroller initieras och körs med skript, samtidigt som ActiveX-skriptkontrollerna som markerats som säkra i skriptalternativet ignoreras. Om du aktiverar den här principinställningen och väljer Fråga i listrutan tillfrågas användarna om de vill tillåta att kontrollen initieras med parametrar eller körs med skript. Om du inaktiverar den här principinställningen initieras inte ActiveX-kontroller som inte kan göras säkra med parametrar, och de körs inte med skript. Om du inte konfigurerar den här principinställningen initieras inte ActiveX-kontroller som inte kan göras säkra med parametrar, och de körs inte med skript.  
@@ -1216,10 +1274,10 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   **Standard**: Inaktivera
 
 - **Internet Explorer: användare ändrar principer**:  
-  Hindrar användare från att ändra inställningarna för säkerhetszoner. En säkerhetszon är en grupp med webbplatser med samma säkerhetsnivå. Om du aktiverar den här principen inaktiveras knappen Anpassad nivå och skjutreglaget för säkerhetsnivå på fliken Säkerhet i dialogrutan Internetalternativ. Om du inaktiverar den här principen eller inte konfigurerar den kan användarna ändra inställningarna för säkerhetszoner. Den här principen hindrar användarna från att ändra inställningarna för säkerhetszoner som angetts av administratören. Obs! Principen ”Inaktivera fliken Säkerhet” (i \Användarkonfiguration\Administrativa mallar\Windows-komponenter\Internet Explorer\Internet på Kontrollpanelen), som tar bort fliken Säkerhet i Internet Explorer på Kontrollpanelen prioriteras framför den här principen. Om den aktiveras så ignoreras den här principen. Mer information finns i principen ”Säkerhetszoner använder endast datorinställningar”.  
+  Hindrar användare från att ändra inställningarna för säkerhetszoner. En säkerhetszon är en grupp med webbplatser med samma säkerhetsnivå. Om du aktiverar den här principen inaktiveras knappen Anpassad nivå och skjutreglaget för säkerhetsnivå på fliken Säkerhet i dialogrutan Internetalternativ. Om du inaktiverar den här principen eller inte konfigurerar den kan användarna ändra inställningarna för säkerhetszoner. Den här principen hindrar användarna från att ändra inställningarna för säkerhetszoner som angetts av administratören. Obs! Principen ”Inaktivera fliken Säkerhet” (i \Användarkonfiguration\Administrativa mallar\Windows-komponenter\Internet Explorer\Internet på Kontrollpanelen), som tar bort fliken Säkerhet i Internet Explorer på Kontrollpanelen prioriteras framför den här principen. Om den aktiveras så ignoreras den här principen. Se även principen”Säkerhetszoner: Använd endast datorinställningar”.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067155)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: skyddat läge i zonen Begränsad**:  
   Med den här principinställningen kan du aktivera skyddat läge. Skyddat läge hjälper dig att skydda Internet Explorer mot säkerhetsproblem genom att begränsa de platser som Internet Explorer kan skriva till i registret och filsystemet. Om du aktiverar den här principinställningen aktiveras skyddat läge. Användaren kan inte inaktivera skyddat läge. Om du inaktiverar den här principinställningen inaktiveras skyddat läge. Användaren kan inte aktivera skyddat läge. Om du inte konfigurerar den här principinställningen kan användaren aktivera eller inaktivera skyddat läge.  
@@ -1231,19 +1289,19 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du hantera lagringen av information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk. När en användare kommer tillbaka till en bestående sida, kan sidans tillstånd återställas om den här principinställningen är korrekt konfigurerad. Om du aktiverar den här principinställningen kan användarna lagra information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk. Om du inaktiverar den här principinställningen kan användarna inte lagra information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk. Om du inte konfigurerar den här principinställningen kan användarna lagra information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067156)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: skriptkörning med webbläsarkontroller i zonen Internet**:  
   Den här principinställningen anger om en sida kan styra inbäddade WebBrowser-kontroller via skript. Om du aktiverar den här principinställningen tillåts skriptåtkomst till WebBrowser-kontrollen. Om du inaktiverar den här principinställningen tillåts inte skriptåtkomst till WebBrowser-kontrollen. Om du inte konfigurerar den här principinställningen kan användarna aktivera eller inaktivera skriptåtkomst till WebBrowser-kontrollen. Som standard tillåts skriptåtkomst till WebBrowser-kontrollen endast i zonerna Lokal dator och Intranät.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067157)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: datapersistence av användare i zonen Begränsad**:  
   Med den här principinställningen kan du hantera lagringen av information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk. När en användare kommer tillbaka till en bestående sida, kan sidans tillstånd återställas om den här principinställningen är korrekt konfigurerad. Om du aktiverar den här principinställningen kan användarna lagra information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk. Om du inaktiverar den här principinställningen kan användarna inte lagra information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk. Om du inte konfigurerar den här principinställningen kan inte användarna lagra information i webbläsarens historik, i Favoriter, i ett XML-arkiv eller direkt i en webbsida som sparats till disk.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067081)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: låsta Java-behörigheter i zonen Intranät**:  
   Med den här principinställningen kan du hantera behörigheter för Java-appletar. Om du aktiverar den här principinställningen kan du välja alternativ från listrutan. Anpassat om du vill kontrollera behörighetsinställningar individuellt. Låg säkerhet innebär att appletar kan utföra alla åtgärder. Normal säkerhet innebär att appletar kan köra i sandbox-miljöer (ett område i minnet utanför vilket programmet inte kan göra anrop) samt funktioner som tillfälligt utrymme (ett säkert och skyddat lagringsområde på klientdatorn) och användarstyrd I/O för filer. Hög säkerhet innebär att appletar kan köra i sandbox-miljöer. Inaktivera Java om du vill förhindra att appletar körs. Om du inaktiverar den här principinställningen kan inte Java-appletar köras. Om du inte konfigurerar den här principinställningen inaktiveras Java-appletar.  
@@ -1252,35 +1310,35 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   **Standard**: Inaktivera Java
 
 - **Internet Explorer: utökat skyddat läge**:  
-  Utökat skyddat läge ger ytterligare skydd mot skadliga webbplatser genom att använda 64-bitarsprocesser i 64-bitarsversioner av Windows. För datorer som kör minst Windows 8 begränsar utökat skyddat läge också vilka platser Internet Explorer kan läsa från i registret och filsystemet. Om du aktiverar den här principinställningen aktiveras utökat skyddat läge. Alla zoner som har skyddat läge aktiverat använder utökat skyddat läge. Användare kan inte inaktivera utökat kernelläge. Om du inaktiverar den här principinställningen inaktiveras utökat skyddat läge. Alla zoner som har skyddat läge aktiverat använder den version av skyddat läge som introducerades i Internet Explorer 7 för Windows Vista. Om du inte konfigurerar den här principen kan användarna aktivera eller inaktivera utökat skyddat läge på fliken Avancerat i dialogrutan Internetalternativ.  
+  Utökat skyddat läge ger ytterligare skydd mot skadliga webbplatser genom att använda 64-bitarsprocesser i 64-bitarsversioner av Windows. För datorer som kör minst Windows 8 begränsar utökat skyddat läge också vilka platser Internet Explorer kan läsa från i registret och filsystemet. Om du aktiverar den här principinställningen aktiveras utökat skyddat läge. Alla zoner som har skyddat läge aktiverat använder utökat skyddat läge. Användare kan inte inaktivera utökat skyddat läge. Om du inaktiverar den här principinställningen inaktiveras utökat skyddat läge. Alla zoner som har skyddat läge aktiverat använder den version av skyddat läge som introducerades i Internet Explorer 7 för Windows Vista. Om du inte konfigurerar den här principen kan användarna aktivera eller inaktivera utökat skyddat läge på fliken Avancerat i dialogrutan Internetalternativ.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067158)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Internet Explorer: kringgå SmartScreen-varningar**:  
   Den här principinställningen anger om användaren kan kringgå varningar från SmartScreen-filtret. SmartScreen-filtret varnar användaren om körbara filer som Internet Explorer-användare vanligtvis inte laddar ned från Internet. Om du aktiverar den här principinställningen blockerar SmartScreen-filtret användaren. Om du inaktiverar eller inte konfigurerar den här principinställningen kan användaren kringgå varningar från SmartScreen-filtret.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067159)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Internet Explorer: metauppdatering i zonen Begränsad**:  
   Med den här principinställningen kan du ange om en användares webbläsare kan omdirigeras till en annan webbsida om den som skapat webbsidan använder inställningen för uppdatering av metadata (tagg) för att omdirigera till en annan webbsida. Om du aktiverar den här principinställningen kan en användares webbläsare som läser in en sida som innehåller en aktiv inställning för metadatauppdatering omdirigeras till en annan webbsida. Om du inaktiverar den här principinställningen kan inte en användares webbläsare som läser in en sida som innehåller en aktiv inställning för metadatauppdatering omdirigeras till en annan webbsida. Om du inte konfigurerar den här principinställningen kan inte en användares webbläsare som läser in en sida som innehåller en aktiv inställning för metadatauppdatering omdirigeras till en annan webbsida.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067154)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ## <a name="local-policies-security-options"></a>Säkerhetsalternativ för lokala principer
 
 Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) i Windows-dokumentationen.
 
 - **Begränsa anonym åtkomst till namngivna pipes och resurser**:  
-  Då den är aktiverad begränsar den här säkerhetsinställningen anonym åtkomst till resurser och pipes till inställningarna för: (1) namngivna pipes som kan nås anonymt (2) Resurser som kan nås anonymt.  
+  När den här säkerhetsinställningen är aktiverad begränsar den anonym åtkomst för resurser och pipes till inställningar för: (1) Namngivna pipes som kan nås anonymt (2) Resurser som kan nås anonymt.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067212)
 
   **Standard**: Ja
 
 - **Minsta sessionssäkerhet för NTLM SSP-baserade servrar**:  
-  Den här säkerhetsinställningen gör att en server kan kräva förhandling av 128-bitarskryptering och NTLMv2-sessionssäkerhet. Dessa värden är beroende av säkerhetsinställningen för autentiseringsnivån för LAN Manager. Alternativen är: Kräv NTLMv2-sessionssäkerhet: Anslutningen misslyckas om meddelandeintegritet inte förhandlas. Kräv 128-bitarskryptering. Anslutningen misslyckas om inte stark kryptering (128-bitars) förhandlas.  
+  Den här säkerhetsinställningen gör att en server kan kräva förhandling av 128-bitarskryptering och NTLMv2-sessionssäkerhet. Dessa värden är beroende av säkerhetsinställningen för autentiseringsnivån för LAN Manager. Alternativen är: Kräv NTLMv2-sessionssäkerhet: Anslutningen misslyckas om inte meddelandeintegritet förhandlas. Kräv 128-bitarskryptering. Anslutningen misslyckas om inte stark kryptering (128-bitars) förhandlas.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067246)
 
   **Standard**: Kräv NTLM V2 och 128-bitarskryptering
@@ -1291,8 +1349,8 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
 
   **Standard**: 15
 
-- **Kräv att klienten alltid signerar kommunikation digitalt**:  
-  Säkerhetsinställningen anger den om all säker kanaltrafik som initieras av domänmedlemmen måste signeras eller krypteras. När en dator ansluter till en domän skapas ett datorkonto. När datorn sedan startas använder den lösenordet för datorkontot för att skapa en säker kanal med en domänkontrollant för dess domän. Den här säkra kanalen används för att utföra åtgärder som NTLM-direktautentisering, LSA SID/namnuppslag och mer. Den här inställningen anger huruvida all säker kanaltrafik som initieras av domänmedlemmen uppfyller säkerhetskraven. Mer specifikt anger den huruvida all säker kanaltrafik som startas av domänmedlemmen måste signeras eller krypteras. Om den här principen aktiveras upprättas inte den säkra kanalen, såvida inte signering eller kryptering av all säker kanaltrafik förhandlas. Om den här principen inaktiveras förhandlas kryptering och signering av all säker kanaltrafik med domänkontrollanten. I så fall beror signerings- och krypteringsnivån på domänkontrollantens version och inställningarna för följande två principer: Domänmedlem: kryptera säkra kanaldata digitalt ( om det är möjligt) Domänmedlem: signera säkra kanaldata digitalt (om det är möjligt).  
+- **Kräv att klienten signerar all kommunikation digitalt**:  
+  Säkerhetsinställningen anger den om all säker kanaltrafik som initieras av domänmedlemmen måste signeras eller krypteras. När en dator ansluter till en domän skapas ett datorkonto. När datorn sedan startas använder den lösenordet för datorkontot för att skapa en säker kanal med en domänkontrollant för dess domän. Den här säkra kanalen används för att utföra åtgärder som NTLM-direktautentisering, LSA SID/namnuppslag och mer. Den här inställningen anger huruvida all säker kanaltrafik som initieras av domänmedlemmen uppfyller säkerhetskraven. Mer specifikt anger den huruvida all säker kanaltrafik som startas av domänmedlemmen måste signeras eller krypteras. Om den här principen aktiveras upprättas inte den säkra kanalen, såvida inte signering eller kryptering av all säker kanaltrafik förhandlas. Om den här principen inaktiveras förhandlas kryptering och signering av all säker kanaltrafik med domänkontrollanten. I så fall beror signerings- och krypteringsnivån på domänkontrollantens version och inställningarna för följande två principer: Domänmedlem: Kryptera data för säker kanal digitalt (om det är möjligt) Domänmedlem: Signera säkra kanaldata digitalt (om det är möjligt).  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067187)
 
   **Standard**: Ja
@@ -1302,19 +1360,19 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
 
   - *Skicka LM- och NTLM-svar* – Klienter använder LM- och NTLM-autentisering och använder aldrig NTLMv2-sessionssäkerhet; domänkontrollanter accepterar LM-, NTLM- och NTLMv2-autentisering.
 
-  - *Skicka LM och NTLM-NTLMv2 om förhandlat* -klienter använder LM-och NTLM-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter accepterar LM-, NTLM-och NTLMv2-autentisering.
+  - *Skicka LM och NTLM - använd NTLMv2-sessionssäkerhet om detta förhandlats* – Klienter använder LM- och NTLM-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter accepterar LM-, NTLM- och NTLMv2-autentisering.
 
   - *Skicka endast NTLM-svar* – Klienter använder endast NTLM-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det; domänkontrollanter accepterar LM-, NTLM- och NTLMv2-autentisering.
 
   - *Skicka endast NTLMv2-svar* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det; domänkontrollanter accepterar LM-, NTLM- och NTLMv2-autentisering.
 
-  - *Skicka endast NTLMv2-svar. Neka LM*-klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter vägrar LM (Godkänn endast NTLM-och NTLMv2-autentisering).
+  - *Skicka endast NTLMv2-svar/neka LM* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter nekar LM (endast NTLM- och NTLMv2-autentisering accepteras).
 
-  - *Skicka endast NTLMv2-svar. Neka LM-och NTLM-* -klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter vägrar LM och NTLM (Godkänn endast NTLMv2-autentisering).
+  - *Skicka endast NTLMv2-svar/neka LM och NTLM* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter nekar LM och NTLM (endast NTLMv2-autentisering accepteras).
 
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067189)
 
-  **Skicka**: Skicka endast NTLMv2-svar. Neka LM och NTLM
+  **Standard**: Skicka endast NTLMv2-svar. Neka LM och NTLM
 
 - **Förhindra att klienter skickar okrypterade lösenord till SMB-servrar från tredje part**:  
   Om den här säkerhetsinställningen är aktiverad kan SMB-omdirigeraren (Server Message Block) skicka lösenord i klartext till SMB-servrar från tredje part som inte har stöd för lösenordskryptering under autentiseringen. Att skicka okrypterade lösenord utgör en säkerhetsrisk.  
@@ -1402,12 +1460,12 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
 
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067183)
 
-  **Standard**: Neka begäranden om utökade privilegier automatiskt
+  **Standard**: Neka förfrågningar om utökade privilegier automatiskt
 
 - **Kräv läge för administratörstillåtelse för administratörer**:  
   Den här principinställningen styr beteendet för alla UAC-principinställningar (User Account Control) för datorn. Om du ändrar den här inställningen måste du starta om datorn. Alternativen är:
 
-  - *Inte konfigurerat* – Läge för administratörstillåtelse och alla relaterade UAC-principinställningar är inaktiverade. Obs! Om den här inställningen är inaktiverad meddelar Security Center dig om att den övergripande säkerheten för operativsystemet har minskas.
+  - *Inte konfigurerat* – Läge för administratörstillåtelse och alla relaterade UAC-principinställningar är inaktiverade. Obs! Om den här inställningen är inaktiverad meddelar i Security Center dig om att den övergripande säkerheten för operativsystemet har minskas.
 
   - *Ja* – Läge för administratörstillåtelse är aktiverat. Den här principen måste vara aktiverad och associerade UAC-principinställningar måste anges på lämpligt sätt så att det inbyggda administratörskontot och alla andra användare som är medlemmar i gruppen Administratörer kan köra i läget för administratörstillåtelse.
 
@@ -1446,9 +1504,9 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
 - **Tillåt att gränssnittet får åtkomst till program för säkra platser**:  
   Den här principinställningen styr om UIAccess- eller UIA-program (User Interface Accessibility ) kan inaktivera det säkra skrivbordet automatiskt för att fråga om förhöjd behörighet när de används av en standardanvändare.
 
-  - *Ja* – UIA-program, inklusive Windows Fjärrhjälp, inaktiverar automatiskt det skyddade skrivbordet för frågor om utökade privilegier. Om du inte inaktiverar principinställningen ”User Account Control”: Switch to the secure desktop when prompting for elevation” (User Account Control: Växla till det säkra skrivbordet vid frågor om utökade privilegier) visas frågorna på den interaktiva användarens skrivbord i stället för på det skyddade skrivbordet.
+  - *Ja* – UIA-program, inklusive Windows Fjärrhjälp, inaktiverar automatiskt det skyddade skrivbordet för frågor om utökade privilegier. Om du inte inaktiverar principinställningen ”User Account Control: Switch to the secure desktop when prompting for elevation” (User Account Control: Växla till det säkra skrivbordet vid frågor om utökade privilegier) visas frågorna på den interaktiva användarens skrivbord i stället för på det skyddade skrivbordet.
 
-  - *Inte konfigurerat* – Det skyddade skrivbordet kan endast inaktiveras av användaren av det interaktiva skrivbordet, eller genom att inaktivera principinställningen ”User Account Control: Switch to the secure desktop when prompting for elevation”.
+  - *Inte konfigurerat*: Det skyddade skrivbordet kan endast inaktiveras av användaren av det interaktiva skrivbordet eller genom att principinställningen ”User Account Control: Switch to the secure desktop when prompting for elevation” inaktiveras (User Account Control: Växla till det säkra skrivbordet vid frågor om utökade privilegier).
 
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067185)
 
@@ -1477,6 +1535,153 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
 
   **Standard**: Ja
 
+## <a name="microsoft-defender"></a>Microsoft Defender
+
+Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.
+
+- **Sök igenom inkommande e-postmeddelanden**:  
+  Tillåter eller nekar genomsökning av e-post.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067116)
+
+  **Standard**: Ja
+
+- **Office-appar startar underordnad processtyp**:  
+  Office-appar kan inte skapa underordnade processer. Detta inkluderar Word, Excel, PowerPoint, OneNote och Access. Det här är ett typiskt beteende i skadlig kod, särskilt vid makrobaserade attacker som försöker använda Office-appar för att starta eller hämta skadliga körbara filer.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067121)
+
+  **Standard**: Blockera
+
+- **Medgivandetyp i Defender för överföring av dataprover**:  
+  Kontrollerar nivån för användarmedgivande i Microsoft Defender för överföring av data. Om nödvändigt godkännande redan har beviljats, skickar Microsoft Defender dem. Annars (och om användaren har valt att aldrig bli tillfrågad) startas användargränssnittet för att be om användarens medgivande (när Defender/AllowCloudProtection tillåts) innan data skickas.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  **Standard**: Skicka säkra prover automatiskt
+
+- **Intervall för signaturuppdatering (i timmar)** :  
+  Signaturuppdateringsintervall i timmar i Defender.
+
+  **Standard**: 4
+
+- **Körningstyp för nedladdad nyttolast med skript**:  
+  Körningstyp för nedladdad nyttolast med skript i Defender.
+
+  **Standard**: Blockera
+  
+- **Förhindra typ av stöld av autentiseringsuppgifter**:  
+  Microsoft Defender Credential Guard använder virtualiseringsbaserad säkerhet för att isolera hemligheter så att endast privilegierad programvara kan komma åt dem. Obehörig åtkomst till hemligheterna kan leda till stöld av autentiseringsuppgifter i form av Pass-the-Hash och Pass-The-Ticket. Microsoft Defender Credential Guard förhindrar dessa attacker genom att skydda NTLM-hashvärden för lösenord, biljettbeviljande Kerberos-biljetter och autentiseringsuppgifter som lagras av program som autentiseringsuppgifter för en domän.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067065)
+  
+  **Standard**: Aktivera
+
+- **Körbara filtyper i e-postinnehåll**:  
+  Den här regeln blockerar följande filtyper från att köras eller startas från ett e-postmeddelande i Microsoft Outlook eller webbaserad e-post (till exempel Gmail.com eller Outlook.com): Körbara filer (t.ex. .exe, .dll eller .scr), skriptfiler (t.ex. en PowerShell .ps-fil, VisualBasic .vbs-fil eller JavaScript .js-fil) och skriptarkivfiler.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067063)
+
+  **Standard**: Blockera
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Adobe Reader-start i en underordnad process**:  
+  **Standard**: Aktivera
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
+- **Nätverksskydd**:  
+  Med den här principen kan du aktivera nätverksskydd (blockera/granska) eller inaktivera nätverksskydd i Microsoft Defender Exploit Guard. Nätverksskydd är en funktion i Microsoft Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser. Värdetypen är ett heltal. Om du aktiverar den här principinställningen aktiveras nätverksskydd och anställda kan inte inaktivera funktionen. Beteendet kan styras med följande alternativ: Blockera och granska. Om du aktiverar den här principen med alternativet ”Blockera” hindras användare och appar från att ansluta till farliga domäner. Du kan se den här aktiviteten i Microsoft Defender Säkerhetscenter. Om du aktiverar den här principen med alternativet ”Granska” hindras inte användare/appar från att ansluta till farliga domäner. Du kommer dock fortfarande att se den här aktiviteten i Microsoft Defender Security Center. Om du inaktiverar den här principen blockeras inte användare/appar från att ansluta till farliga domäner. Du kommer inte att se någon nätverksaktivitet i Microsoft Defender Security Center. Om du inte konfigurerar den här principen inaktiveras nätverksblockering som standard.  
+  [Läs mer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+
+  **Standard**: Aktivera
+
+- **Genomsökningsschema (dag) i Defender**:  
+  Genomsökningsschema (dag) i Defender.
+
+  **Standard**: Varje dag
+
+- **Molnlevererat skydd**:  
+  För att skydda din dator på bästa sätt skickar Microsoft Defender information till Microsoft om problem påträffas. Microsoft analyserar informationen, lär sig mer om problem som påverkar dig och andra kunder och erbjuder bättre lösningar.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067039)
+
+  **Standard**:  Ja  
+
+- **Potentiellt oönskad appåtgärd i Defender**:  
+  Funktionen för skydd mot potentiellt oönskade program (PUA, Potentially Unwanted Application) i Microsoft Defender Antivirus kan identifiera och hindra potentiellt oönskade program från att hämtas och installeras på slutpunkter i ditt nätverk. Dessa program betraktas inte som virus, skadlig kod eller andra typer av hot, men kan utföra åtgärder på slutpunkter som negativt påverkar deras prestanda eller användning. Potentiellt oönskade program syftar även på program med dåligt rykte. Exempel på potentiellt oönskade program är: Olika typer av programvarupaket, AD-inmatning i webbläsare, drivrutins- och registeroptimerare som identifierar problem och begär betalning för att åtgärda felen, men som finns kvar på slutpunkten utan att göra några ändringar eller optimeringar (även kallade ”falska” antivirusprogram). Dessa program kan öka risken för att nätverket infekteras av skadlig kod, orsaka att infektioner av skadlig kod är vara svårare att identifiera och slösa på IT-resurser vid rensning av program.  
+  [Läs mer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  **Standard**: Blockera  
+
+- **Makrokod dold i skriptfiler**:  
+  Skadlig kod och andra hot kan försöka förvränga eller dölja skadlig kod i vissa skriptfiler. Den här regeln förhindrar att skript som verkar vara dolda körs.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067026)
+
+  **Standard**: Blockera
+
+- **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**:  
+  Tillåter att Microsoft Defender söker efter skadlig och oönskad programvara på flyttbara enheter (till exempel flash-enheter) under en fullständig genomsökning. Microsoft Defender Antivirus söker igenom alla filer på USB-enheter innan de körs.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067036)
+
+  **Standard**: Ja  
+
+- **Sök igenom arkivfiler**:  
+  Defender söker igenom arkivfiler.
+
+  **Standard**: Ja
+
+- **Beteendeövervakning**  
+  Tillåter eller tillåter inte beteendeövervakning i Microsoft Defender. Dessa sensorer är inbäddade i Windows 10 och samlar in och bearbetar beteendesignaler från operativsystemet samt skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067111)
+
+  **Standard**: Ja
+
+- **Sök igenom filer öppnade från nätverksmappar**:  
+  Om filerna är skrivskyddade kan användaren inte ta bort identifierad skadlig kod.
+
+  **Standard**: Ja
+
+- **Obetrodd USB-processtyp**:  
+  Med den här regeln kan administratörer förhindra att osignerade eller ej betrodda körbara filer körs från flyttbara USB-enheter, till exempel SD-kort.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067100)
+
+  **Standard**: Blockera
+
+- **Annan processinmatningstyp i Office-appar**:  
+  Office-appar, inklusive Word, Excel, PowerPoint och OneNote, kan inte mata in kod i andra processer. Detta används vanligtvis av skadlig kod för att köra skadlig kod i ett försök att dölja aktivitet från motorer för virusgenomsökning.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067019)
+
+  **Standard**:  Blockera
+
+- **Office-makrokod tillåter Win32-importer**:  
+  Skadlig kod kan använda makrokod i Office-filer för att importera och läsa in Win32-DLL:er, som sedan används för att göra API-anrop som leder till ytterligare infektion hela systemet. Den här regeln försöker blockera Office-filer som innehåller makrokod som kan importera Win32-DLL:er. Detta inkluderar Word, Excel, PowerPoint och OneNote.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067130)
+
+  **Standard**: Blockera
+
+- **Molnblockeringsnivå i Defender**:  
+  Molnblockeringsnivå i Defender.
+
+  **Standard**: Inte konfigurerat
+
+- **Realtidsövervakning**:  
+  Defender kräver övervakning i realtid.
+
+  **Standard**: Ja
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Office-kommunikationsappar startar i en underordnad process**:  
+  **Standard**:  Aktivera
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
+- **Genererings- eller starttyp för körbart innehåll i Office-appar**:  
+  Den här regeln gäller typiska beteenden som används av misstänkta och skadliga tillägg och skript (tillägg) som skapar eller startar körbara filer. Det här är en vanlig teknik som används av skadlig kod. Tillägg hindras från att användas av Office-appar. De här tilläggen använder vanligtvis Windows Scripting Host (.WSH-filer) för att köra skript som automatiserar vissa uppgifter eller tillhandahåller användargenererade tilläggsfunktioner.  
+  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067108)
+
+  **Standard**: Blockera
+
 ## <a name="ms-security-guide"></a>MS-Säkerhetsguide
 
 Mer information finns i [CSP-princip – MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) i Windows-dokumentationen.
@@ -1484,7 +1689,7 @@ Mer information finns i [CSP-princip – MSSecurityGuide](https://docs.microsoft
 - **Använd UAC-begränsningar för lokala konton vid nätverksinloggning**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067188)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Startkonfiguration för SMB v1-klientdrivrutin**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067214)
@@ -1494,17 +1699,17 @@ Mer information finns i [CSP-princip – MSSecurityGuide](https://docs.microsoft
 - **SMB v1-server**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067190)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Sammanfattad autentisering**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067193)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Strukturerat överskrivningsskydd vid undantagshantering**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067217)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="mss-legacy"></a>MSS Legacy
 
@@ -1518,7 +1723,7 @@ Mer information finns i [CSP-princip – MSSLegacy](https://docs.microsoft.com/w
 - **Ignorera begäranden om NetBIOS-namnfrigörande från WINS-servrar i nätverket**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067218)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Skyddsnivå för routning för IPv6-nätverkskälla**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067216)
@@ -1528,7 +1733,7 @@ Mer information finns i [CSP-princip – MSSLegacy](https://docs.microsoft.com/w
 - **ICMP-omdirigeringar åsidosätter OSPF-genererade rutter i nätverket**:  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067326)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ## <a name="power"></a>Ström
 
@@ -1538,25 +1743,25 @@ Mer information finns i [CSP-princip – Power](https://docs.microsoft.com/windo
   Den här principinställningen anger huruvida användaren uppmanas att ange ett lösenord när datorn återgår från strömsparläge. Om du aktiverar eller inte konfigurerar den här principinställningen uppmanas användaren att ange ett lösenord när datorn återgår från strömsparläge. Om du inaktiverar den här principinställningen uppmanas inte användaren att ange ett lösenord när datorn återgår från strömsparläge.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067221)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Vänteläget aktiveras i viloläge vid batteridrift**:  
   Den här principinställningen hanterar om Windows kan använda väntelägen när datorn försätts i viloläge. Om du aktiverar eller inte konfigurerar den här principinställningen använder Windows väntelägen för att försätta datorn i viloläge. Om du inaktiverar den här principinställningen tillåts inte väntelägen (S1–S3).  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067195)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Vänteläget startar när datorn är i viloläge och ansluten**:  
   Den här principinställningen hanterar om Windows kan använda väntelägen när datorn försätts i viloläge. Om du aktiverar eller inte konfigurerar den här principinställningen använder Windows väntelägen för att försätta datorn i viloläge. Om du inaktiverar den här principinställningen tillåts inte väntelägen (S1–S3).  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067196)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Kräv lösenord vid aktivering under batteridrift**:  
   Den här principinställningen anger huruvida användaren uppmanas att ange ett lösenord när datorn återgår från strömsparläge. Om du aktiverar eller inte konfigurerar den här principinställningen uppmanas användaren att ange ett lösenord när datorn återgår från strömsparläge. Om du inaktiverar den här principinställningen uppmanas inte användaren att ange ett lösenord när datorn återgår från strömsparläge.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067322)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -1565,32 +1770,32 @@ Mer information finns i [CSP-princip – Power](https://docs.microsoft.com/windo
 
 Mer information finns i [CSP-princip – RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) i Windows-dokumentationen.
 
-- **Begärd**Fjärrhjälp:  
-  Med den här princip inställningen kan du aktivera eller inaktivera begärd Fjärrhjälp (fråga efter) på den här datorn.
+- **Begärd fjärrhjälp**:  
+  Med den här principinställningen kan du aktivera eller inaktivera funktionen Begärd fjärrhjälp på den här datorn.
   
-  - *Om du aktiverar den här inställningen*kan användare på den här datorn använda e-post eller fil överföring för att be någon om hjälp. Dessutom kan användare använda snabb meddelande program för att tillåta anslutningar till den här datorn och du kan konfigurera ytterligare inställningar för Fjärrhjälp.
+  - *Om du aktiverar den här principinställningen* kan de som använder datorn be någon om hjälp via e-post eller filöverföring. Användarna kan också använda program för snabbmeddelanden för att tillåta anslutningar till den här datorn, och du kan konfigurera ytterligare inställningar för Fjärrhjälp.
 
-  - *Om du inaktiverar den här inställningen*kan användare på den här datorn inte använda e-post eller fil överföring för att be någon om hjälp. Användare kan inte heller använda snabb meddelande program för att tillåta anslutningar till den här datorn.
+  - *Om du inaktiverar den här principinställningen* kan de som använder datorn inte be någon om hjälp via e-post eller filöverföring. Användarna kan inte heller utnyttja program för snabbmeddelanden för att tillåta anslutningar till den här datorn.
 
-  - *Om du inte konfigurerar den här inställningen*kan användare aktivera eller inaktivera begärd Fjärrhjälp i system egenskaper på kontroll panelen. Användare kan även konfigurera inställningar för Fjärrhjälp.
+  - *Om du inte konfigurerar den här principinställningen* kan användarna aktivera eller inaktivera Begärd fjärrhjälp själva i Systemegenskaper på Kontrollpanelen. Användarna kan också konfigurera inställningar för Fjärrhjälp.
 
-  Om du aktiverar den här princip inställningen har du två sätt att låta hjälpare tillhandahålla Fjärrhjälp: "Tillåt handledare att endast Visa datorn" eller "Tillåt handledare att fjärrstyra datorn". Princip inställningen "längsta biljett tid" anger en gräns för hur lång tid en inbjudan om Fjärrhjälp som skapats med e-post eller fil överföring kan vara öppen. Inställningen Välj metod för att skicka e-postinbjudningar anger vilken e-poststandard som ska användas för att skicka inbjudningar till Fjärrhjälp. Beroende på ditt e-postprogram, kan du använda antingen *mailto* -standarden (mottagaren av inbjudan ansluter via en Internet länk) eller smapi (Simple MAPI) standard (inbjudan är kopplad till e-postmeddelandet). Den här princip inställningen är inte tillgänglig i Windows Vista eftersom SMAPI är den enda metoden som stöds. Om du aktiverar den här policy inställningen bör du även aktivera lämpliga brand Väggs undantag för att tillåta kommunikation mellan Fjärrhjälp.  
+  Om du aktiverar den här principinställningen finns det två möjligheter att låta handledare erbjuda fjärrhjälp: Låt handledare endast se datorn och Låt handledare fjärrstyra datorn. Principinställningen Högsta biljettid anger hur länge en fjärrhjälpsinbjudan skapad via e-post eller filöverföring, är giltig. Inställningen Metod för att skicka inbjudningar via e-post anger vilken e-poststandard som ska användas när en fjärrhjälpsinbjudan skickas. Beroende på vilket e-postprogram som används kan du använda protokollet *Mailto* (mottagaren ansluter genom en vanlig Internetlänk) eller protokollet SMAPI (inbjudan bifogas i ett e-postmeddelande). Den här principinställningen är inte tillgänglig i Windows Vista eftersom SMAPI är den enda metod som stöds. Om du aktiverar den här principinställningen bör du även aktivera tillämpliga brandväggsundantag för att tillåta fjärrhjälpkommunikation.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-  **Standard**: inaktivera Fjärrhjälp
+  **Standard**: Inaktivera Fjärrhjälp
 
-  Konfigurera följande ytterligare inställningar när du har angett att *Fjärrhjälp ska aktive ras*:
+  När *Aktivera Fjärrhjälp* har angetts konfigurerar du ytterligare inställningar:
 
-  - **Begärd behörighet för Fjärrhjälp**:  
+  - **Fjärrhjälp bad om behörighet**:  
     **Standard**: Vy
 
-  - **Maximalt värde för biljett tid**:  
+  - **Högsta biljettid, värde**:  
     **Standard**: *Inte konfigurerat*
 
-  - **Längsta biljett tids period**:  
-    **Standard**: minuter
+  - **Högsta biljettid, period**:  
+    **Standard**: Minuter
 
-  - **Inbjudnings metod för e-post**:  
+  - **Metod för e-postinbjudan**:  
     **Standard**: Enkel MAPI
 
 ::: zone-end
@@ -1604,25 +1809,25 @@ Mer information finns i [CSP-princip – RemoteDesktopServices](https://docs.mic
   Styr om lösenord kan sparas på den här datorn från Anslutning till fjärrskrivbord. Om du aktiverar den här inställningen inaktiveras kryssrutan om att spara lösenord i Anslutning till fjärrskrivbord, och användarna kan inte längre spara lösenord. När en användare öppnar en RDP-fil med hjälp av Anslutning till fjärrskrivbord och sparar sina inställningar tas eventuella lösenord som tidigare fanns i RDP-filen bort. Om du inaktiverar den här inställningen eller inte konfigurerar den kan användaren spara lösenord med hjälp av Anslutning till fjärrskrivbord.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067301)
 
-   **Standard**: Aktiverat
+   **Standard**: Aktiverad
 
 - **Säker RPC-kommunikation**:  
   Anger om en värdserver för fjärrskrivbordssessioner kräver säker RPC-kommunikation med alla klienter eller om osäker kommunikation tillåts. Du kan använda den här inställningen för att öka säkerheten vid RPC-kommunikation med klienter genom att endast tillåta autentiserade och krypterade begäranden. Om statusen är inställd på Aktiverad accepterar Fjärrskrivbordstjänster begäranden från RPC-klienter som stöder säkra begäranden och tillåter inte osäker kommunikation med obetrodda klienter. Om statusen är inställd på Inaktiverad begär Fjärrskrivbordstjänster alltid säkerhet för all RPC-trafik. Osäker kommunikation tillåts dock för RPC-klienter som inte svarar på begäran. Om statusen är inställd på Inte konfigurerad tillåts osäker kommunikation. Obs! RPC-gränssnittet används för att administrera och konfigurera Fjärrskrivbordstjänster.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067248)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Blockera omdirigering av enheter**:  
   Med den här principinställningen kan du ange om du vill förhindra mappningen av klientenheter i en session med Fjärrskrivbordstjänster (omdirigering). Som standard mappar en värdserver för fjärrskrivbordssessioner automatiskt klientenheter när anslutningen upprättas. Mappade enheter visas i trädet för sessionsmappar i Utforskaren eller på datorn i formatet *\<enhetsbeteckning >* på *\<datornamn>* . Du kan använda den här principinställningen om du vill åsidosätta detta beteende. Om du aktiverar den här principinställningen tillåts inte omdirigering av klientenheter i sessioner med Fjärrskrivbordstjänster och omdirigeringar av filkopiering med Urklipp tillåts inte på datorer som kör Windows Server 2003, Windows 8 och Windows XP. Om du inaktiverar den här principinställningen tillåts alltid omdirigering av klientenheter. Dessutom tillåts alltid omdirigering av filkopiering med Urklipp om omdirigering av Urklipp är tillåtet. Om du inte konfigurerar den här principinställningen anges inte omdirigering av klientenheter och omdirigering av filkopiering med Urklipp på grupprincipnivå.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067197)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Fråga efter lösenord vid anslutning**:  
   Den här principinställningen anger om Fjärrskrivbordstjänster alltid frågar klienten efter ett lösenord när anslutningen upprättas. Du kan använda den här inställningen för att framtvinga en lösenordsfråga för användare som loggar in i Fjärrskrivbordstjänster, även om de redan har angett lösenordet i Anslutning till fjärrskrivbord-klienten. Som standard tillåter Fjärrskrivbordstjänster användarna att logga in automatiskt genom att ange ett lösenord i Anslutning till fjärrskrivbord-klienten. Om du aktiverar den här principinställningen kan användarna inte logga in automatiskt i Fjärrskrivbordstjänster genom att ange lösenord i Anslutning till fjärrskrivbord-klienten. De uppmanas att ange ett lösenord för att logga in. Om du inaktiverar den här principinställningen kan användarna alltid logga in i Fjärrskrivbordstjänster automatiskt genom att ange lösenord i Anslutning till fjärrskrivbord-klienten. Om du inte konfigurerar den här principinställningen anges inte automatisk inloggning på grupprincipnivå.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067328)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Krypteringsnivå för klientanslutning med Fjärrskrivbordstjänster**:  
   Anger om du vill kräva en specifik krypteringsnivå för att skydda kommunikationen mellan klientdatorer och värdservrar för fjärrskrivbordssessioner under RDP-anslutningar (Remote Desktop Protocol). Den här principen gäller bara när du använder inbyggd RDP-kryptering. Inbyggd RDP-kryptering (till skillnad mot SSL-kryptering) rekommenderas dock inte. Den här principen gäller inte för SSL-kryptering. Om du aktiverar den här principinställningen måste all kommunikation mellan klienter och värdservrar för fjärrskrivbordssessioner under fjärranslutningar använda krypteringsmetoden som anges i den här inställningen. Som standard är krypteringsnivån inställd på Hög. Följande krypteringsmetoder är tillgängliga:
@@ -1646,44 +1851,44 @@ Mer information finns i [CSP-princip – RemoteManagement](https://docs.microsof
   Grundläggande klientautentisering.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067300)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Grundläggande autentisering**:  
   Med den här principinställningen kan du ange om tjänsten WinRM (Windows Remote Management) accepterar grundläggande autentisering från en fjärransluten klient. Om du aktiverar den här principinställningen accepterar WinRM-tjänsten grundläggande autentisering från en fjärransluten klient. Om du inaktiverar eller inte konfigurerar den här principinställningen accepterar WinRM-tjänsten inte grundläggande autentisering från en fjärransluten klient.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067223)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Blockera sammanfattad autentisering för klient**:  
   Med den här inställningen kan du ange om WinRM-klienten (Windows Remote Management) använder sammanfattad autentisering. Om du aktiverar den här principinställningen använder inte WinRM-klienten sammanfattad autentisering. Om du inaktiverar eller inte konfigurerar den här principinställningen använder WinRM-klienten sammanfattad autentisering.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067302)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 - **Okrypterad trafik**:  
   Med den här principinställningen kan du ange om tjänsten WinRM (Windows Remote Management) skickar och tar emot okrypterade meddelanden över nätverket. Om du aktiverar den här principinställningen skickar och tar WinRM-klienten emot okrypterade meddelanden över nätverket. Om du inaktiverar eller inte konfigurerar den här principinställningen skickar eller tar WinRM-klienten endast emot krypterade meddelanden över nätverket.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067226)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Okrypterad klienttrafik**:  
   Med den här principinställningen kan du ange om klienten WinRM (Windows Remote Management) ska skicka och ta emot okrypterade meddelanden över nätverket. Om du aktiverar den här principinställningen skickar och tar WinRM-klienten emot okrypterade meddelanden över nätverket. Om du inaktiverar eller inte konfigurerar den här principinställningen skickar eller tar WinRM-klienten endast emot krypterade meddelanden över nätverket.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067304)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 - **Grundläggande klientautentisering**:  
   Med den här inställningen kan du ange om WinRM-klienten (Windows Remote Management) använder grundläggande autentisering. Om du aktiverar den här principinställningen använder WinRM-klienten grundläggande autentisering. Om WinRM har konfigurerats att använda HTTP-transport skickas användarnamnet och lösenordet över nätverket i klartext. Om du inaktiverar eller inte konfigurerar den här principinställningen använder inte WinRM-klienten grundläggande autentisering.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067252)
 
-  **Standard**: Inaktiverat
+  **Standard**: Inaktiverad
 
 ## <a name="remote-procedure-call"></a>RPC (Remote Procedure Call)
 
 Mer information finns i [CSP-princip – RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) i Windows-dokumentationen.
 
 - **Alternativ för oautentiserad klient med RPC**:  
-  Den här principinställningen styr hur RPC-serverkörningar hanterar oautentiserade RPC-klienter som ansluter till RPC-servrar. Den här principinställningen påverkar alla RPC-program. I en domänmiljö ska den här principinställningen används med försiktighet eftersom den kan påverka en mängd olika funktioner, inklusive själva bearbetningen av grupprinciper. Återställning av ändringar i den här principinställningen kan kräva manuella åtgärder på varje dator som påverkas. Använd inte den här inställningen på en domänkontrollant. Om du inaktiverar den här inställningen använder RPC-serverkörningen värdet ”Autentiserad” på Windows-klienten och värdet ”Ingen” i Windows Server-versioner som stöder den här principinställningen. Om du inte konfigurerar den här principinställningen förblir den inaktiverad. RPC-serverkörningen beter sig som om den vore aktiverad med värdet ”Autentiserad” för Windows-klienter och värdet ”Ingen” för Server-SKU:er som har stöd för den här principinställningen. Om du aktiverar den här principinställningen beordras RPC-serverkörningen att begränsa oautentiserade RPC-klienter som ansluter till RPC-servrar på en dator. En klient betraktas som en autentiserad klient om den använder en namngiven pipe för att kommunicera med servern eller om den använder RPC-säkerhet. RPC-gränssnitt som uttryckligen har begärt att vara tillgängliga för oautentiserade klienter kan undantas från den här begränsningen, beroende på det valda värdet för den här principinställningen.
+  Den här principinställningen styr hur RPC-serverkörningar hanterar oautentiserade RPC-klienter som ansluter till RPC-servrar. Den här principinställningen påverkar alla RPC-program. I en domänmiljö ska den här principinställningen används med försiktighet eftersom den kan påverka en mängd olika funktioner, inklusive själva bearbetningen av grupprinciper. Återställning av ändringar i den här principinställningen kan kräva manuella åtgärder på varje dator som påverkas. Tillämpa inte den här principinställningen på en domänkontrollant. Om du inaktiverar den här inställningen använder RPC-serverkörningen värdet ”Autentiserad” på Windows-klienten och värdet ”Ingen” i Windows Server-versioner som stöder den här principinställningen. Om du inte konfigurerar den här principinställningen förblir den inaktiverad. RPC-serverkörningen beter sig som om den vore aktiverad med värdet ”Autentiserad” för Windows-klienter och värdet ”Ingen” för Server-SKU:er som har stöd för den här principinställningen. Om du aktiverar den här principinställningen beordras RPC-serverkörningen att begränsa oautentiserade RPC-klienter som ansluter till RPC-servrar på en dator. En klient betraktas som en autentiserad klient om den använder en namngiven pipe för att kommunicera med servern eller om den använder RPC-säkerhet. RPC-gränssnitt som uttryckligen har begärt att vara tillgängliga för oautentiserade klienter kan undantas från den här begränsningen, beroende på det valda värdet för den här principinställningen.
 
   - *Ingen* gör att alla RPC-klienter kan ansluta till RPC-servrar som körs på den dator där principinställningen tillämpas.
 
@@ -1776,221 +1981,16 @@ Mer information finns i [CSP-princip – WindowsConnectionManager](https://docs.
   Om den här inställningen inte konfigureras eller om den inaktiveras kan datorer ansluta samtidigt till både domänbaserade nätverk och icke-domänbaserade nätverk.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067323)
 
-  **Standard**: Aktiverat
-
-## <a name="microsoft-defender"></a>Microsoft Defender
-
-Mer information finns i [CSP-princip – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) i Windows-dokumentationen.
-
-- **Sök igenom inkommande e-postmeddelanden**:  
-  Tillåter eller nekar genomsökning av e-post.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Standard**: Ja
-
-- **Office-appar startar underordnad processtyp**:  
-  Office-appar kan inte skapa underordnade processer. Detta inkluderar Word, Excel, PowerPoint, OneNote och Access. Det här är ett typiskt beteende i skadlig kod, särskilt vid makrobaserade attacker som försöker använda Office-appar för att starta eller hämta skadliga körbara filer.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Standard**: Blockera
-
-- **Medgivandetyp i Defender för överföring av dataprover**:  
-  Kontrollerar nivån för användarmedgivande i Microsoft Defender för överföring av data. Om nödvändigt godkännande redan har beviljats, skickar Microsoft Defender dem. Annars (och om användaren har valt att aldrig bli tillfrågad) startas användargränssnittet för att be om användarens medgivande (när Defender/AllowCloudProtection tillåts) innan data skickas.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Standard**: Skicka säkra prover automatiskt
-
-- **Intervall för signaturuppdatering (i timmar)** :  
-  Signaturuppdateringsintervall i timmar i Defender.
-
-  **Standard**: 4
-
-- **Körningstyp för nedladdad nyttolast med skript**:  
-  Körningstyp för nedladdad nyttolast med skript i Defender.
-
-  **Standard**: Blockera
-  
-- **Förhindra typ av stöld av autentiseringsuppgifter**:  
-  Microsoft Defender Credential Guard använder virtualiseringsbaserad säkerhet för att isolera hemligheter så att endast privilegierad programvara kan komma åt dem. Obehörig åtkomst till dessa hemligheter kan leda till stöld av autentiseringsuppgifter, till exempel Pass-The-Hash eller Pass-The-Ticket. Microsoft Defender Credential Guard förhindrar dessa attacker genom att skydda NTLM-hashvärden för lösenord, biljettbeviljande Kerberos-biljetter och autentiseringsuppgifter som lagras av program som autentiseringsuppgifter för en domän.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Standard**: Aktivera
-
-- **Körbara filtyper i e-postinnehåll**:  
-  Den här regeln blockerar följande filtyper från att köras eller startas från ett e-postmeddelande som visas i Microsoft Outlook eller webbaserad e-post (till exempel Gmail.com eller Outlook.com): körbara filer (till exempel .exe, .dll eller .scr) skriptfiler (till exempel en PowerShell .ps, VisualBasic .vbs eller JavaScript .js).  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Standard**: Blockera
+  **Standard**: Aktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
-
-- **Adobe Reader-start i en underordnad process**:  
-  **Standard**: Aktivera
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Nätverksskydd**:  
-  Med den här principen kan du aktivera nätverksskydd (blockera/granska) eller inaktivera nätverksskydd i Microsoft Defender Exploit Guard. Nätverksskydd är en funktion i Microsoft Defender Exploit Guard som skyddar anställda som använder appar mot nätfiske, webbplatser som utnyttjar sårbarheter samt skadligt innehåll på Internet. Exempelvis hindras webbläsare från tredje part från att ansluta till farliga platser. Värdetypen är ett heltal. Om du aktiverar den här principinställningen aktiveras nätverksskydd och anställda kan inte inaktivera funktionen. Beteendet kan styras med följande alternativ: Blockera och Granska. Om du aktiverar den här principen med alternativet ”Blockera” hindras användare och appar från att ansluta till farliga domäner. Du kan se den här aktiviteten i Microsoft Defender Säkerhetscenter. Om du aktiverar den här principen med alternativet ”Granska” hindras inte användare/appar från att ansluta till farliga domäner. Du kommer dock fortfarande att se den här aktiviteten i Microsoft Defender Security Center. Om du inaktiverar den här principen blockeras inte användare/appar från att ansluta till farliga domäner. Du kommer inte att se någon nätverksaktivitet i Microsoft Defender Security Center. Om du inte konfigurerar den här principen inaktiveras nätverksblockering som standard.  
-  [Läs mer](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
-
-  **Standard**: Aktivera
-
-- **Genomsökningsschema (dag) i Defender**:  
-  Genomsökningsschema (dag) i Defender.
-
-  **Standard**: Varje dag
-
-- **Molnlevererat skydd**:  
-  För att skydda din dator på bästa sätt skickar Microsoft Defender information till Microsoft om problem påträffas. Microsoft analyserar informationen, lär sig mer om problem som påverkar dig och andra kunder och erbjuder bättre lösningar.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067039)
-
-  **Standard**: Ja  
-
-- **Potentiellt oönskad appåtgärd i Defender**:  
-  Funktionen för skydd mot potentiellt oönskade program (PUA, Potentially Unwanted Application) i Microsoft Defender Antivirus kan identifiera och hindra potentiellt oönskade program från att hämtas och installeras på slutpunkter i ditt nätverk. Dessa program betraktas inte som virus, skadlig kod eller andra typer av hot, men kan utföra åtgärder på slutpunkter som negativt påverkar deras prestanda eller användning. Potentiellt oönskade program syftar även på program med dåligt rykte. Vanligt beteende för oönskade program innefattar: olika typer av programvarupaketerande Ad-inmatning i webbläsares drivrutin och registreringsoptimerare som identifierar problem, begär betalning för att åtgärda felen, men finns kvar på slutpunkten och gör inga ändringar eller optimeringar (även kallat ”antivirusfalska program”). Dessa program kan öka risken för att nätverket infekteras av skadlig kod, orsaka att infektioner av skadlig kod är vara svårare att identifiera och slösa på IT-resurser vid rensning av program.  
-  [Läs mer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
-
-  **Standard**: Blockera  
-
-- **Makrokod dold i skriptfiler**:  
-  Skadlig kod och andra hot kan försöka förvränga eller dölja skadlig kod i vissa skriptfiler. Den här regeln förhindrar att skript som verkar vara dolda körs.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Standard**: Blockera
-
-- **Sök igenom flyttbara drivrutiner vid fullständig genomsökning**:  
-  Tillåter att Microsoft Defender söker efter skadlig och oönskad programvara på flyttbara enheter (till exempel flash-enheter) under en fullständig genomsökning. Microsoft Defender Antivirus söker igenom alla filer på USB-enheter innan de körs.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Standard**: Ja  
-
-- **Sök igenom arkivfiler**:  
-  Defender söker igenom arkivfiler.
-
-  **Standard**: Ja
-
-- **Beteendeövervakning**  
-  Tillåter eller underlåter Microsoft Defender beteende övervaknings funktioner. Dessa sensorer är inbäddade i Windows 10 och samlar in och bearbetar beteendesignaler från operativsystemet samt skickar dessa sensordata till din privata, isolerade molninstans av Microsoft Defender ATP.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067111)
-
-  **Standard**: Ja
-
-- **Sök igenom filer öppnade från nätverksmappar**:  
-  Om filerna är skrivskyddade kan användaren inte ta bort identifierad skadlig kod.
-
-  **Standard**: Ja
-
-- **Obetrodd USB-processtyp**:  
-  Med den här regeln kan administratörer förhindra att osignerade eller ej betrodda körbara filer körs från flyttbara USB-enheter, till exempel SD-kort.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067100)
-
-  **Standard**: Blockera
-
-- **Annan processinmatningstyp i Office-appar**:  
-  Office-appar, inklusive Word, Excel, PowerPoint och OneNote, kan inte mata in kod i andra processer. Detta används vanligtvis av skadlig kod för att köra skadlig kod i ett försök att dölja aktivitet från motorer för virusgenomsökning.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067019)
-
-  **Standard**: Blockera
-
-- **Office-makrokod tillåter Win32-importer**:  
-  Skadlig kod kan använda makrokod i Office-filer för att importera och läsa in Win32-DLL:er, som sedan används för att göra API-anrop som leder till ytterligare infektion hela systemet. Den här regeln försöker blockera Office-filer som innehåller makrokod som kan importera Win32-dll: er. Detta inkluderar Word, Excel, PowerPoint och OneNote.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067130)
-
-  **Standard**: Blockera
-
-- **Molnblockeringsnivå i Defender**:  
-  Molnblockeringsnivå i Defender.
-
-  **Standard**: Inte konfigurerat
-
-- **Realtidsövervakning**:  
-  Defender kräver övervakning i realtid.
-
-  **Standard**: Ja
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Office-kommunikationsappar startar i en underordnad process**:  
-  **Standard**:  Aktivera
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Genererings- eller starttyp för körbart innehåll i Office-appar**:  
-  Den här regeln gäller typiska beteenden som används av misstänkta och skadliga tillägg och skript (tillägg) som skapar eller startar körbara filer. Det här är en vanlig teknik som används av skadlig kod. Tillägg hindras från att användas av Office-appar. De här tilläggen använder vanligtvis Windows Scripting Host (.WSH-filer) för att köra skript som automatiserar vissa uppgifter eller tillhandahåller användargenererade tilläggsfunktioner.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Standard**: Blockera
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-## <a name="microsoft-defender-firewall"></a>Microsoft Defender-brandvägg
-
-Mer information finns i [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) i dokumentationen för Windows-protokollet.
-
-- **Domän för brand Väggs profil**:  
-  Anger de profiler som regeln tillhör: domän, privat, offentlig. Det här värdet representerar profilen för nätverk som är anslutna till domäner.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2066796)
-
-  - **Inkommande anslutningar blockerade**:  
-    **Standard**: Ja
-
-  - **Utgående anslutningar krävs**:  
-    **Standard**: Ja
-
-  - **Inkommande meddelanden blockerade**:  
-    **Standard**: Ja
-
-  - **Brandväggen är aktiverad**:  
-    **Standard**: Tillåten
-
-- **Brand Väggs profil offentlig**:  
-  Anger de profiler som regeln tillhör: domän, privat, offentlig. Det här värdet representerar profilen för offentliga nätverk. Dessa nätverk klassificeras som offentliga av administratörer i server-värden. Klassificeringen sker första gången värden ansluter till nätverket. Dessa nätverk är vanligtvis på flygplatser eller kaféer och andra offentliga platser där peer-datorer i nätverket eller nätverksadministratörer inte är betrodda.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067143)
-
-  - **Inkommande anslutningar blockerade**:  
-    **Standard**: Ja
-
-  - **Utgående anslutningar krävs**:  
-    **Standard**: Ja
-
-  - **Inkommande meddelanden blockerade**:  
-    **Standard**: Ja
-
-  - **Brandväggen är aktiverad**:  
-    **Standard**: Tillåten
-
-  - **Regler för anslutningssäkerhet från inte sammanfogad grupprincip**:  
-    **Standard**: Ja
-
-  - **Principregler från inte sammanfogad grupprincip**:  
-    **Standard**: Ja
-
-- **Brand Väggs profil privat**:  
-  Anger de profiler som regeln tillhör: domän, privat, offentlig. Det här värdet representerar profilen för privata nätverk.  
-  [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067041)
-
-  - **Inkommande anslutningar blockerade**:  
-    **Standard**: Ja
-
-  - **Utgående anslutningar krävs**:  
-    **Standard**: Ja
-
-  - **Inkommande meddelanden blockerade**:  
-    **Standard**: Ja
-
-  - **Brandväggen är aktiverad**:  
-    **Standard**: Tillåten
 
 ## <a name="windows-hello-for-business"></a>Windows Hello för företag
 
-- **Kräv utökat skydd mot förfalskning när det är tillgängligt**
+- **Aktivera om du vill använda utökat skydd mot förfalskning när det är tillgängligt**
 
-  Om ja, kommer enheterna att använda utökat skydd mot förfalskning när det är tillgängligt. Om nej, kommer skydd mot förfalskning att blockeras. Inte konfigurerad följer konfigurationer som utförs på klienten.  
+  Om Ja, används utökat skydd mot förfalskning på enheterna när det är tillgängligt. Om Nej, blockeras skydd mot förfalskning. Om det inte är konfigurerat gäller de inställningar som gjorts på klienten.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067192)
 
   **Standard**: Ja
@@ -2000,40 +2000,40 @@ Mer information finns i [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/open
   Windows Hello för företag är en alternativ metod för att logga in till Windows genom att ersätta lösenord, smartkort och virtuella smartkort.
 
   > [!IMPORTANT]
-  > Alternativen för den här inställningen återförs från deras underförstådda innebörd. När värdet *Ja* inte är aktiverat aktive ras Windows Hello inte, och i stället behandlas det som *Ej konfigurerat*. När den här inställningen är inställd på *inte konfigurerad*, aktive ras Windows Hello på enheter som tar emot den här bas linjen.
+  > Alternativen blir felaktiga för den här inställningen (omvända). Värdet *Ja* aktiverar inte Windows Hello när inställningarna är omvända utan hanteras som *Inte konfigurerad*. När *Inte konfigurerad* har angetts aktiveras Windows Hello på enheter som får den här baslinjen.
   >
-  > Följande beskrivningar har ändrats för att avspegla detta beteende. Återföringen av inställningarna kommer att åtgärdas i en framtida uppdatering av den här säkerhets bas linjen.
+  > Följande beskrivningar har ändrats för att återspegla detta beteende. De omvända inställningarna kommer att åtgärdas i en framtida uppdatering av den här säkerhetsbaslinjen.
 
-  - När den är inställd på *inte konfigurerad*är Windows Hello aktiverat och enheten etablerar Windows Hello för företag.
-  - När värdet är *Ja*påverkar bas linjen inte princip inställningen för enheten. Det innebär att om Windows Hello för företag är inaktiverat på en enhet förblir det inaktiverat. Om den är aktive rad förblir den aktive rad.
+  - När *Inte konfigurerad* har angetts är Windows Hello aktiverat och enheten etablerar Windows Hello för företag.
+  - När *Ja* har angetts påverkar baslinjen inte principinställningen för enheten. Det innebär att om Windows Hello för företag är inaktiverat på en enhet förblir det inaktiverat. Och om det är aktiverat förblir det aktiverat.
   <!-- expected behavior 
   - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
   - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
   -->
 
-  Du kan inte inaktivera Windows Hello för företag via den här bas linjen. Du kan inaktivera Windows Hello för företag när du konfigurerar [Windows-registrering](windows-hello.md)eller som en del av en enhets konfigurations profil för [identitets skydd](identity-protection-configure.md).  
+  Du kan inte inaktivera Windows Hello för företag via den här baslinjen. Du kan inaktivera Windows Hello för företag när du konfigurerar [Windows-registrering](windows-hello.md), eller som en del i enhetskonfigurationsprofilen för [identitetsskydd](identity-protection-configure.md).  
 
   **Standard**: Ja
 
 - **Kräv gemener i PIN-koden**:  
-  Om det behövs måste användarens PIN-kod innehålla minst en gemen bokstav.
+  Om alternativet krävs måste användarens PIN-kod innehålla minst en liten bokstav.
 
-  **Standard**: Tillåten
+  **Standard**: Tillåts
 
 - **Kräv specialtecken i PIN-koden**:  
-  Vid behov måste användarens PIN-kod innehålla minst ett specialtecken.
+  Om alternativet krävs måste användarens PIN-kod innehålla minst ett specialtecken.
 
-  **Standard**: Tillåten
+  **Standard**: Tillåts
 
 - **Minimilängd för PIN-kod**:  
-  Minsta PIN-kodslängd måste vara mellan 4 och 127.
+  Minimilängd för PIN-kod måste vara mellan 4 och 127.
 
   **Standard**: 6
 
 - **Kräv versaler i PIN-koden**:  
-  Vid behov måste användarens PIN-kod innehålla minst en versal bokstav.
+  Om alternativet krävs måste användarens PIN-kod innehålla minst en stor bokstav.
 
-  **Standard**: Tillåten
+  **Standard**: Tillåts
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2053,7 +2053,7 @@ Mer information finns i [CSP-princip – WindowsInkWorkspace](https://docs.micro
 
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067241)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
@@ -2063,37 +2063,37 @@ Mer information finns i [CSP-princip – WindowsPowerShell](https://docs.microso
   Den här inställningen aktiverar loggning av alla PowerShell-skriptindata i Microsoft-Windows-PowerShell/Operational-händelseloggen. Om du aktiverar den här principinställningen loggar Windows PowerShell bearbetningen av kommandon, skriptblock, funktioner och skript – oavsett om de anropas interaktivt eller via automatisering. Om du inaktiverar den här principinställningen inaktiveras loggning av PowerShell-skriptindata. Om du aktiverar loggning av indata av skriptblock loggar PowerShell även händelser om anrop av ett kommando, skriptblock, funktion eller skript startar eller stoppar. Om du aktiverar loggning av anrop genereras ett stort antal händelseloggar. Obs! Den här principinställningen finns under både Datorkonfiguration och Användarkonfiguration i redigeraren för grupprinciper. Principinställningen Datorkonfiguration ges företräde framför principinställningen Användarkonfiguration.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067330)
 
-  **Standard**: Aktiverat
+  **Standard**: Aktiverad
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-## <a name="whats-changed-in-the-new-template"></a>Vad som har ändrats i den nya mallen
+## <a name="whats-changed-in-the-new-template"></a>Ändringar i den nya mallen
 
-*Säkerhets bas linjen för MDM för maj 2019* -mallen har följande ändringar från för *hands versions* mal len.
+Följande ändringar har gjorts i mallen *Säkerhetsbaslinje för mobilenhetshantering för maj 2019* från *förhandsversionen*.
 
-### <a name="changes-to-the-baseline-settings"></a>Ändringar i bas linje inställningarna
+### <a name="changes-to-the-baseline-settings"></a>Ändringar i baslinjeinställningarna
 
 Följande inställningar är antingen:
 
-- *Nytt* i den här senaste versionen av bas linjen.
-- Har *tagits bort* från den senaste bas linje versionen, men fanns i den tidigare versionen.
-- *Ändrade* på något sätt från hur inställningarna visades i den tidigare versionen.
+- *Nytt* i den senaste versionen av baslinjen.
+- *Har tagits bort* från den senaste baslinjeversionen, men fanns i den tidigare versionen.
+- *Har ändrats* på något sätt jämfört med hur inställningarna visades i den tidigare versionen.
 
-*[Ny]* [**över lås**](#above-lock):
+*[Nytt]* [**På låsskärmen**](#above-lock):
 
 - **Röstaktivera appar från en låst skärm**
 
 *[Nytt]* [**Programhantering**](#application-management):
 
-- **Blockera användar kontroll över installationer**
-- **Blockera installationer av MSI-appar med utökade privilegier**
+- **Blockera användarkontroll över installationer**
+- **Blockera MSI-appinstallationer med utökade privilegier**
 
 *[Borttaget]* [**BitLocker**](#bitlocker):
 
-- Princip > **krypterings metod** för BitLocker-flyttbar enhet
-- **Princip för fast BitLocker-enhet** *(alla inställningar)*
-- **BitLocker-systemen hets princip** *(alla inställningar)*
+- Princip för BitLocker på flyttbara enheter > **Krypteringsmetod**
+- **Princip för BitLocker på fasta enheter** *(alla inställningar)*
+- **Princip för BitLocker på systemenheter** *(alla inställningar)*
 
 *[Nytt]* [**Anslutningar**](#connectivity):
 
@@ -2103,7 +2103,7 @@ Följande inställningar är antingen:
 
 - **Virtualiseringsbaserad säkerhet**
 
-*[Ny]* [**DMA-skydd**](#dma-guard):
+*[Nytt]* [**DMA Guard**](#dma-guard):
 
 - **Uppräkning av externa enheter som är inkompatibla med Kernel DMA-skydd**
 
@@ -2113,40 +2113,40 @@ Följande inställningar är antingen:
 - **Internet Explorer: dra eller kopiera och klistra in filer i zonen Internet**
 - **Internet Explorer: .NET Framework-beroende komponenter i zonen Begränsad**
 - **Internet Explorer: kör inte program mot skadlig kod mot Active X-kontroller i zonen Lokal dator**
-- **Stöd för Internet Explorer-kryptering**
+- **Krypteringsstöd för Internet Explorer**
 
 *[Ändrad]* [**Internet Explorer**](#internet-explorer):
 
-- **Automatisk prompt i Internet Explorer Internet Zone vid hämtning av filer** > standardvärdet har **inaktiverats**. I för hands versionen har inställningen Aktiver ATS.
+- **Internet Explorer: fråga automatiskt vid filnedladdningar i zonen Internet** > standardvärdet är nu **Inaktiverat**. I förhandsversionen var inställningen Aktiverat.
 
 *[Nytt]* [**Fjärrhjälp**](#remote-assistance):
 
-- **Begärd Fjärrhjälp**
-  - **Begärd Fjärrhjälp-behörighet**
-  - **Maximalt biljett tids värde**
-  - **Maximal biljett tids period**
-  - **Inbjudnings metod för e-post**
+- **Begärd fjärrhjälp**
+  - **Fjärrhjälp bad om behörighet**
+  - **Högsta biljettid, värde**
+  - **Högsta biljettid, period**
+  - **Metod för e-postinbjudan**
 
 *[Nytt]* [**Microsoft Defender**](#microsoft-defender):
 
 - **Adobe Reader-start i en underordnad process**
 - **Office-kommunikationsappar startar i en underordnad process**
 
-*[Ny]* [ **Microsoft Defender-brandvägg**](#microsoft-defender-firewall)
+*[Nytt]* [**Brandvägg**](#firewall)
 
-- **Domän för brand Väggs profil**
+- **Domän för brandväggsprofil**
   - **Inkommande anslutningar blockerade**
   - **Utgående anslutningar krävs**
   - **Inkommande meddelanden blockerade**
   - **Brandväggen är aktiverad**
-- **Brand Väggs profil offentlig**
+- **Offentlig brandväggsprofil**
   - **Inkommande anslutningar blockerade**
   - **Utgående anslutningar krävs**
   - **Inkommande meddelanden blockerade**
   - **Brandväggen är aktiverad**
   - **Regler för anslutningssäkerhet från inte sammanfogad grupprincip**
   - **Principregler från inte sammanfogad grupprincip**
-- **Brand Väggs profil privat**
+- **Privat brandväggsprofil**
   - **Inkommande anslutningar blockerade**
   - **Utgående anslutningar krävs**
   - **Inkommande meddelanden blockerade**

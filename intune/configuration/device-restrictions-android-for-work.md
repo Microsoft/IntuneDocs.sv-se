@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6afd80517df3496e0c1402fc0c76f3fc24969fa
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 122f0b0194a96b844e274ab39a73224eb23cc6b3
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206609"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051600"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för Android Enterprise tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -32,7 +32,7 @@ Den här artikeln beskriver de olika inställningar som du kan styra på Android
 
 ## <a name="device-owner-only"></a>Endast enhetens ägare
 
-Dessa inställningar gäller för Android Enterprise-registrerings typer där Intune styr hela enheten, till exempel Android Enterprise fullständigt hanterade eller dedikerade enheter.
+Dessa inställningar gäller för Android Enterprise-registreringstyper där Intune styr hela enheten, till exempel fullständigt hanterade Android Enterprise-enheter eller dedikerade Android Enterprise-enheter.
 
 ### <a name="general-settings"></a>Allmänna inställningar
 
@@ -44,7 +44,7 @@ Dessa inställningar gäller för Android Enterprise-registrerings typer där In
   - **Bevilja automatiskt**: Behörigheter beviljas automatiskt.
   - **Neka automatiskt**: Behörigheter nekas automatiskt.
 - **Datum- och tidsändringar**: Välj **Blockera** för att förhindra att användarna anger datum och tid manuellt. **Inte konfigurerad** tillåter användare att ange datum och tid på enheten.
-- **Volym ändringar**: **blockera** förhindrar att användare ändrar enhetens volym och även stänger av huvud volymen. **Inte konfigurerad** tillåter volyminställningar på enheten.
+- **Volymändringar**: **Blockera** hindrar användare från att ändra enhetens volym och stänger också av huvudvolymen. **Inte konfigurerad** tillåter volyminställningar på enheten.
 - **Fabriksåterställning**: Välj **Blockera** för att förhindra att användarna använder alternativet för fabriksåterställning i enhetens inställningar. **Inte konfigurerad** tillåter användare att använda inställningen på enheten.
 - **Säker start**: Välj **Blockera** för att förhindra att användarna startar om enheten i felsäkert läge. **Inte konfigurerad** tillåter användare att starta om enheten i felsäkert läge.
 - **Statusfält**: Välj **Blockera** för att förhindra åtkomst till statusfältet, till exempel meddelanden och snabbinställningar. **Inte konfigurerad** ger användare åtkomst till statusfältet.
@@ -59,7 +59,7 @@ Dessa inställningar gäller för Android Enterprise-registrerings typer där In
 - **Överför data via NFC**: Välj **Blockera** för att förhindra användningen av NFC-teknik (Near Field Communication) vid överföring av data från appar. **Inte konfigurerad** tillåter NFC för att dela data mellan enheter.
 - **Felsökningsfunktioner**: Välj **Tillåt** för att tillåta att användarna använder felsökningsfunktioner på enheten. **Inte konfigurerad** förhindrar användare från att använda felsökningsfunktioner på enheten.
 - **Mikrofonjustering**: Välj **Blockera** för att förhindra att användarna slår på ljudet på mikrofonen och ändrar dess volym. **Inte konfigurerad** tillåter användaren att använda och justera mikrofonvolymen på enheten.
-- **E-post för skydd mot fabriksåterställning**: Välj **E-postadresser för Google-konto**. Ange e-postadresserna för enhetsadministratörer som kan låsa upp enheten när den har rensats. Se till att avgränsa e-postadresser med semikolon, till exempel `admin1@gmail.com;admin2@gmail.com`. Om en e-postadress inte anges kan vem som helst låsa upp enheten efter den har återställts till fabriksinställningarna. De här e-postmeddelandena gäller endast när fabriks återställning från användare inte körs, till exempel att köra en fabriks återställning via återställnings menyn.
+- **E-post för skydd mot fabriksåterställning**: Välj **E-postadresser för Google-konto**. Ange e-postadresserna för enhetsadministratörer som kan låsa upp enheten när den har rensats. Se till att avgränsa e-postadresser med semikolon, till exempel `admin1@gmail.com;admin2@gmail.com`. Om en e-postadress inte anges kan vem som helst låsa upp enheten efter den har återställts till fabriksinställningarna. De här e-postadresserna gäller endast när fabriksåterställning har körts (inte av användaren), till exempel om en fabriksåterställning körs via återställningsmenyn.
 - **Nätverkshjälp**: Välj **Aktivera** för att tillåta att användarna aktiverar funktionen för nätverkshjälp. Om en nätverksanslutning inte skapats när enheten startas kommer nätverkshjälpen tillfälligt be om att ansluta till ett nätverk och uppdatera enhetsprincipen. När principen har tillämpats glöms det tillfälliga nätverket och starten av enheten fortsätter. Funktionen ansluter enheten till ett nätverk om:
   - Den förra principen saknar ett lämpligt nätverk.
   - Enheten startar i en app i låsläget.
@@ -74,7 +74,7 @@ Dessa inställningar gäller för Android Enterprise-registrerings typer där In
   - **Underhållsperiod**: Uppdateringar installeras automatiskt under en daglig underhållsperiod som du anger i Intune. Installationen gör ett försök dagligen under 30 dagar och kan misslyckas vid otillräckligt diskutrymme eller för låga batterinivåer. Efter 30 dagar uppmanar Android användaren att installera. Det här fönstret används också för att installera uppdateringar för Play-appar. Använd det här alternativet för dedikerade enheter såsom helskärmslägen, eftersom förgrundsappar för dedikerade enheter med enskild app kan uppdateras.
 
 - **Meddelandefönster**: När **Inaktivera** har valts visas inte fönstermeddelanden, bland annat popup-fönster, inkommande samtal, utgående samtal, systemaviseringar och systemfel, på enheten. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan vara att visa meddelanden.
-- **Hoppa över första tipsen**: **Aktivera** gömmer eller hoppa över förslag från appar som går igenom självstudier eller tips när appen startar. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan visa de här förslagen när appen startar.
+- **Hoppa över tips vid första start**: Om du väljer **Aktivera** döljs eller utelämnas förslag från appar som går igenom självstudier eller tips när appen startar. När **Inte konfigurerat** har valts används operativsystemets standardinställning, som kan visa de här förslagen när appen startar.
 
 ### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
@@ -93,7 +93,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
     Om du inte har några appar som visas kan du [lägga till Android-appar](../apps/apps-add-android-for-work.md) till enheten. Se till att [tilldela appen till den enhetsgrupp som skapats för dina dedikerade enheter](../apps/apps-deploy.md).
 
   > [!IMPORTANT]
-  > När du använder hel skärms läge för en enda app fungerar inte uppringnings-/telefon program korrekt. 
+  > När du använder helskärmsläge för enskild app fungerar kanske inte uppringnings-/telefonappar som de ska. 
   
 - **Flera appar**: Användarna har åtkomst till en begränsad uppsättning appar på enheten. Endast de appar du lägger till startar när enheten startar. Du kan också lägga till webblänkar som användare kan öppna. När principen används ser användarna ikoner för tillåtna appar på startskärmen.
 
@@ -104,7 +104,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   >
   > Appen **Hanterade startskärmar** måste inte finnas i konfigurationsprofilen, men den måste läggas till som klientapp. När appen **Hanterad startskärm** läggs till som en klientapp visas alla andra appar som du lägger till i konfigurationsprofilen som ikoner i **Hanterad startskärm**-appen.
   >
-  > När du använder hel skärms läge för flera appar kanske inte uppringnings-/telefon program fungerar korrekt. 
+  > När du använder helskärmsläge för flera appar kanske inte uppringnings-/telefonappar fungerar som de ska. 
 
   - **Lägg till**: Välj dina appar i listan.
 
@@ -112,19 +112,19 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
     Du kan även lägga till andra [Android-appar](../apps/apps-add-android-for-work.md) och [webbappar](../apps/web-app.md) som skapats av din organisation till enheten. Se till att [tilldela appen till den enhetsgrupp som skapats för dina dedikerade enheter](../apps/apps-deploy.md).
 
-  - **Virtuell Start knapp**: en knapp med mjuka nycklar som returnerar användare till den hanterade start skärmen så att användarna kan växla mellan appar. Alternativen är:
+  - **Virtuell hemknapp**: En programstyrd knapp som tar användarna tillbaka till den hanterade startskärmen så att användarna kan växla mellan appar. Alternativen är:
 
-    - **Inte konfigurerad** (standard): en Start knapp visas inte. Användarna måste använda knappen bakåt för att växla mellan appar.
-    - **Svep uppåt**: en Start knapp visar när en användare sveper upp på enheten.
-    - **Flytande**: visar en beständigt, flytande Start knapp på enheten.
+    - **Inte konfigurerad** (standard): Ingen hemknapp visas. Användarna måste använda knappen Bakåt för att växla mellan appar.
+    - **Svep uppåt**: En hemknapp visas när en användare sveper uppåt på enheten.
+    - **Flytande**: En beständig flytande hemknapp visas på enheten.
 
   - **Lämna helskärmsläge**: Välj **Aktivera** för att tillåta att administratörer tillfälligt kan pausa helskärmsläget för att uppdatera enheten. Om du vill använda den här funktionen kan administratören:
   
     1. Fortsätta att välja bakåtknappen tills knappen **Avsluta helskärmsläge** visas. 
     2. Väljer knappen **Avsluta helskärmsläge** och anger PIN-koden för **Kod för att lämna helskärmsläge**.
-    3. När du är färdig väljer du appen **hanterad start** sida. Det här steget låser enheten i helskärmsläge för flera appar.
+    3. När du är klar väljer du den **hanterade hemskärmsappen**. Det här steget låser enheten i helskärmsläge för flera appar.
 
-      När inställningen **inte är konfigurerad**kan administratörer inte pausa hel skärms läge. Om administratören fortsätter att välja bakåtknappen och väljer knappen **Avsluta helskärmsläge** visas ett meddelande om att ett lösenord krävs.
+      När **Inte konfigurerad** har angetts kan administratörer inte pausa helskärmsläget. Om administratören fortsätter att välja bakåtknappen och väljer knappen **Avsluta helskärmsläge** visas ett meddelande om att ett lösenord krävs.
 
     - **Lämna kod för helskärmsläge**: Ange en numerisk PIN-kod på 4–6 siffror. Administratören använder den här PIN-koden för att tillfälligt pausa helskärmsläge.
 
@@ -140,32 +140,32 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
     >
     > Moderna bildskärmar har högre bildpunktsdensitet och kan visa bilder i 2K/4K.
 
-  - **Wi-Fi-konfiguration**: **Aktivera** visar Wi-Fi-kontrollen på den hanterade start skärmen och gör att slutanvändarna kan ansluta enheten till olika WiFi-nätverk. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerad** (standard) visar inte Wi-Fi-kontrollen på den hanterade start skärmen. Den förhindrar användare från att ansluta till Wi-Fi-nätverk när den hanterade start skärmen används.
+  - **Wi-Fi-konfiguration**: Om du väljer **Aktivera** visas Wi-Fi-kontrollen på den hanterade hemskärmen och slutanvändarna kan ansluta enheten till olika WiFi-nätverk. Om du aktiverar den här funktionen aktiveras också enhetsplats. Om du väljer **Inte konfigurerad** (standard) visas inte Wi-Fi-kontrollen på den hanterade startskärmen. Användare hindras från att ansluta till Wi-Fi-nätverk när den hanterade startskärmen används.
 
-  - **Bluetooth-konfiguration**: **Aktivera** visar Bluetooth-kontrollen på den hanterade start skärmen och gör att slutanvändarna kan koppla enheter över Bluetooth. Om du aktiverar den här funktionen aktiveras också enhetsplats. **Inte konfigurerad** (standard) visar inte Bluetooth-kontrollen på den hanterade start skärmen. Den förhindrar användare från att konfigurera Bluetooth och para ihop enheter när den hanterade start skärmen används.
+  - **Bluetooth-konfiguration**: Om du väljer **Aktivera** visas Bluetooth-kontrollen på den hanterade startskärmen och slutanvändarna kan koppla enheter över Bluetooth. Om du aktiverar den här funktionen aktiveras också enhetsplats. Om du väljer **Inte konfigurerad** (standard) visas inte Bluetooth-kontrollen på den hanterade startskärmen. Användare hindras från att konfigurera Bluetooth och para ihop enheter när den hanterade startskärmen används.
 
-  - **Strålkastare Access**: **Enable** visar strålkastare-kontrollen på den hanterade start skärmen och gör att slutanvändarna kan aktivera eller inaktivera strålkastare. **Inte konfigurerad** (standard) visar inte kontrollen strålkastare på den hanterade start skärmen. Den förhindrar användare från att använda strålkastare när den hanterade start skärmen används.
+  - **Åtkomst till ficklampa**: Om du väljer **Aktivera** visas ficklampekontrollen på den hanterade startskärmen och slutanvändarna kan aktivera eller inaktivera ficklampan. **Inte konfigurerad** (standard) visar inte ficklampekontrollen på den hanterade startskärmen. Användare hindras från att använda ficklampan när den hanterade startskärmen används.
 
-  - **Medie volym kontroll**: **Aktivera** visar medie volym kontrollen på den hanterade start skärmen och gör att användarna kan justera enhetens medie volym med hjälp av ett skjutreglage. **Inte konfigurerad** (standard) visar inte medie volym kontrollen på den hanterade start skärmen. Det förhindrar att användare justerar enhetens medie volym på den hanterade start skärmen, om inte deras maskin varu knappar stöder det. 
+  - **Medievolymkontroll**: Om du väljer **Aktivera** visas medievolymkontrollen på den hanterade startskärmen och användarna kan justera enhetens medievolym med hjälp av ett skjutreglage. Om du väljer **Inte konfigurerad** (standard) visas inte medievolymkontrollen på den hanterade startskärmen. Användarna hindras från att justera enhetens medievolym på den hanterade startskärmen, om inte deras maskinvaruknappar stöder det. 
 
-  - **Skärmsläckare**: **Aktivera** visar en skärmsläckare på den hanterade start skärmen när enheten är låst eller tids gräns. **Inte konfigurerad** (standard) visar inte en skärmsläckare på den hanterade start skärmen.
+  - **Skärmsläckarläge**: Om du väljer **Aktivera** visas en skärmsläckare på den hanterade startskärmen när enheten låses eller tidsgränsen nås. Om du väljer **Inte konfigurerad** (standard) visas inte en skärmsläckare på den hanterade startskärmen.
 
-    Konfigurera även när det är aktiverat:
+    När läget är aktiverat konfigurerar du även:
 
-    - **Ange avbildning av anpassad skärmsläckare**: Ange webb adressen till en anpassad png-, jpg-, JPEG-, GIF-, BMP-, WebP-eller ICOimage. Ange till exempel:
+    - **Ställ in anpassad skärmsläckarbild**: Ange URL:en till en anpassad PNG, JPG, JPEG, GIF, BMP, WebP eller ICOimage. Ange till exempel:
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
       - `https://www.contoso.com/image.webp`
 
-      Om du inte anger en URL används enhetens Standard avbildning, om det finns en standard avbildning.
+      Om du inte anger en URL används enhetens standardbild, om det finns en sådan.
       
       > [!TIP]
-      > Alla fil resurs-URL: er som kan omvandlas till en bitmapp stöds.
+      > Alla filresurs-URL:er som kan omvandlas till en bitmapp stöds.
 
-    - **Antal sekunder som enheten visar skärmsläckaren innan skärmen**stängs av: Välj hur länge enheten ska Visa skärmsläckaren. Ange ett värde mellan 0-9999999 sekunder. Standardvärdet är `0` sekunder. När värdet är tomt eller är inställt på noll (`0`) är skärmsläckaren aktiv tills en användare interagerar med enheten.
-    - **Antal sekunder som enheten är inaktiv innan skärmsläckaren visas**: Välj hur länge enheten ska vara inaktiv innan skärmsläckaren visas. Ange ett värde mellan 1-9999999 sekunder. Standardvärdet är `30` sekunder. Du måste ange ett tal som är större än noll (`0`).
-    - **Identifiera media innan**skärmsläckaren startas: **Aktivera** (standard) visar inte skärmsläckaren om ljud eller video spelas upp på enheten. **Inte konfigurerad** visar skärmsläckaren, även om ljud eller video spelas upp.
+    - **Antal sekunder som enheten visar skärmsläckaren innan skärmen stängs av**: Välj hur länge enheten ska visa skärmsläckaren. Ange ett värde mellan 0 och 9999999 sekunder. Standardvärdet är `0` sekunder. När värdet är tomt eller är inställt på noll (`0`) är skärmsläckaren aktiv tills en användare interagerar med enheten.
+    - **Antal sekunder som enheten är inaktiv innan skärmsläckaren visas**: Välj hur länge enheten ska vara inaktiv innan skärmsläckaren visas. Ange ett värde mellan 1 och 9999999 sekunder. Standardvärdet är `30` sekunder. Du måste ange ett tal som är större än noll (`0`).
+    - **Identifiera mediet innan skärmsläckaren startar**: Om du väljer **Aktivera** (standard) visas inte skärmsläckaren om ljud eller video spelas upp på enheten. Om du väljer **Inte konfigurerad** visas skärmsläckaren, även om ljud eller video spelas upp.
 
 ### <a name="device-password-settings"></a>Inställningar för enhetslösenord
 
@@ -198,7 +198,7 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 ### <a name="power-settings"></a>Energiinställningar
 
-- **Tid för att låsa skärmen**: Ange den längsta tid som en användare kan ange tills enheten låses. Om du till exempel ställer in den här inställningen på **10 minuter**kan användarna ange tiden från 15 sekunder upp till 10 minuter. När inställningen **inte är konfigurerad** , ändras inte Intune eller styrs av den här inställningen.
+- **Tid innan skärmen låses**: Ange den längsta tid som en användare kan ange innan enheten låses. Om du till exempel anger **10 minuter** kan användarna ange en tid från 15 sekunder till 10 minuter. Intune ändrar eller kontrollerar inte den här inställningen när **Inte konfigurerad** (standard) är valt.
 
 - **Skärmen är tänd när enheten är ansluten**: Välj vilka strömkällor som innebär att enhetens skärm är tänd när den är ansluten.
 
@@ -206,13 +206,13 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
 
 - **Lägg till nya användare**: Välj **Blockera** för att förhindra att användarna lägger till nya användare. Varje användare har ett personligt utrymme på enheten för anpassade startskärmar, konton, appar och inställningar. **Inte konfigurerad** (standard) tillåter användare att lägga till andra användare på enheten.
 - **Borttagning av användare**: Välj **Blockera** för att förhindra att användarna tar bort användare. **Inte konfigurerad** (standard) tillåter användare att ta bort andra användare från enheten.
-- **Konto ändringar** (endast dedikerade enheter): Välj **blockera** för att förhindra att användare ändrar konton. **Inte konfigurerad** (standard) låter användare att uppdatera användarkonton på enheten.
+- **Kontoändringar** (endast dedikerade enheter): Välj **Blockera** för att förhindra att användare ändrar konton. **Inte konfigurerad** (standard) låter användare att uppdatera användarkonton på enheten.
 
   > [!NOTE]
-  > Den här inställningen gäller inte för enhets ägarens (fullständigt hanterade) enheter. Om du konfigurerar den här inställningen ignoreras inställningen och har ingen effekt.
+  > Den här inställningen gäller inte för enhetsägares (fullständigt hanterade) enheter. Om du konfigurerar den här inställningen ignoreras inställningen och har ingen effekt.
 
-- **Användaren kan konfigurera autentiseringsuppgifter**: **blockera** förhindrar användare från att konfigurera certifikat som har tilldelats till enheter, även enheter som inte är associerade med ett användar konto. **Inte konfigurerad** kan göra det möjligt för användare att konfigurera eller ändra sina autentiseringsuppgifter när de ansluter till dem i nyckel arkivet. 
-- **Personliga Google-konton**: **blockera** förhindrar att användare lägger till sina personliga Google-konton på enheten. **Inte konfigurerad** (standard) tillåter användare att lägga till sitt personliga Google-konto.
+- **Användaren kan ställa in autentiseringsuppgifter**: Om du väljer **Blockera** hindras användare från att konfigurera certifikat som har tilldelats till enheter. Det gäller även enheter som inte är associerade med ett användarkonto. Om du väljer **Inte konfigurerad** kan användare eventuellt konfigurera eller ändra sina autentiseringsuppgifter i nyckellagret. 
+- **Personliga Google-konton**: Om du väljer **Blockera** kan inte användare lägga till sina personliga Google-konton på enheten. Om du väljer **Inte konfigurerad** (standard) kan användare lägga till sina personliga Google-konton.
 
 ### <a name="applications"></a>Program
 
@@ -245,31 +245,31 @@ Använd dessa inställningar om du vill konfigurera en upplevelse i helskärmsfo
   > [!IMPORTANT]
   > - Den VPN-klient som du väljer måste vara installerad på enheten och den måste ha stöd för ”per app-VPN” i arbetsprofiler. Annars uppstår ett fel. 
   > - Du måste godkänna VPN-klientappen i **den hanterade Google Play Store-butiken**, synkronisera appen till Intune och distribuera appen till enheten. När du har gjort det installeras appen i användarens arbetsprofil.
-  > - Du måste fortfarande konfigurera VPN-klienten med en [VPN-profil](vpn-settings-android-enterprise.md)eller via en [konfigurations profil för appen](../apps/app-configuration-policies-use-android.md).
+  > - Du måste fortfarande konfigurera VPN-klienten med en [VPN-profil](vpn-settings-android-enterprise.md) eller via en [appkonfigurationsprofil](../apps/app-configuration-policies-use-android.md).
   > - Det kan finnas kända problem när du använder per app-VPN med F5-åtkomst för Android 3.0.4. Du hittar mer information i [Viktig F5-information för F5-åtkomst i Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Låst läge**: Välj **Aktivera** om du vill tvinga all nätverkstrafik att använda VPN-tunneln. Om en anslutning till VPN inte upprättas har inte enheten åtkomst till nätverket.
 
   Välj **Inte konfigurerad** om du vill tillåta att trafik flödar via VPN-tunneln eller det mobila nätverket.
 
-- **Rekommenderad global proxy**: Välj **Aktivera** för att lägga till en global proxy till enheterna. När den är aktive rad kan HTTP-och HTTPS-trafik, inklusive vissa appar på enheten, använda den proxy som du anger. Den här proxyn är bara en rekommendation. Det är möjligt att vissa appar inte använder proxyn. **Inte konfigurerad** (standard) lägger inte till en rekommenderad global proxy.
+- **Rekommenderad global proxy**: Välj **Aktivera** om du vill lägga till en global proxy till enheterna. När inställningen är aktiverad kan HTTP- och HTTPS-trafik, inklusive vissa appar på enheten, använda den proxy som du anger. Den här proxyn är bara en rekommendation. Det är möjligt att vissa appar inte använder proxyn. Om du väljer **Inte konfigurerad** (standard) läggs inte en rekommenderad global proxy till.
 
   Mer information om den här funktionen finns i [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (öppnar en Android-webbplats).
 
-  När det är aktiverat anger du även **typen** av proxy. Alternativen är:
+  När detta är aktiverat anger du även en **proxytyp**. Alternativen är:
 
   - **Direkt**: Välj det här alternativet om du vill ange information om proxyservern manuellt, inklusive:
-    - **Värd**: Ange värd namnet eller IP-adressen för proxyservern. Ange till exempel `proxy.contoso.com` eller `127.0.0.1`.
+    - **Värd**: Ange värdnamnet eller IP-adressen för proxyservern. Ange till exempel `proxy.contoso.com` eller `127.0.0.1`.
     - **Portnummer**: Ange TCP-portnumret som används av proxyservern. Ange till exempel `8080`.
-    - **Exkluderade värdar**: Ange en lista över värdnamn eller IP-adresser som inte använder proxyn. Den här listan kan innehålla en asterisk (`*`) som jokertecken och flera värdar avgränsade med semikolon (`;`) utan blank steg. Ange till exempel `127.0.0.1;web.contoso.com;*.microsoft.com`.
+    - **Undantagna värdar**: Ange en lista över värdnamn eller IP-adresser som inte ska använda proxyn. Den här listan kan innehålla en asterisk (`*`) som jokertecken och flera värdar avgränsade med semikolon (`;`) utan blanksteg. Ange till exempel `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
-  - Autokonfiguration av proxy: ange **PAC-URL** : en för skript för **Automatisk**proxykonfiguration. Ange till exempel `https://proxy.contoso.com/proxy.pac`.
+  - **Automatisk konfigurerad proxy**: Ange en **PAC-webbadress** till ett skript för automatisk proxykonfiguration. Ange till exempel `https://proxy.contoso.com/proxy.pac`.
 
-    Mer information om PAC-filer finns i [PAC-fil (Proxy Auto-Configuration](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) ) (öppnar en webbplats som inte kommer från Microsoft).
+    Mer information om PAC-filer finns under [PAC-fil (Proxy Auto-Configuration)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (öppnar en webbplats som inte tillhör Microsoft).
 
 ## <a name="work-profile-only"></a>Endast arbetsprofil
 
-Dessa inställningar gäller för Android Enterprise-registrerings typer där Intune bara styr arbets profilen, t. ex. Android företags arbets profil registrering på en personlig eller en egen enhet (BYOD).
+Dessa inställningar gäller för Android Enterprise-registreringstyper där Intune bara styr arbetsprofilen, t. ex. Android Enterprise-arbetsprofilregistrering på en personlig enhet eller BYOD (Bring Your Own Device).
 
 ### <a name="work-profile-settings"></a>Inställningar för arbetsprofil
 
@@ -279,8 +279,8 @@ Dessa inställningar gäller för Android Enterprise-registrerings typer där In
 - **Datadelning mellan arbetsprofiler och personliga profiler**: Välj om appar i arbetsprofilen ska kunna dela data med appar i den personliga profilen. Du kan till exempel styra delningsåtgärder i program, så som alternativet **Dela...** i Chrome-webbläsarappen. Den här inställningen gäller inte för kopierings- och inklistringsbeteendet i Urklipp. Delningsalternativ:
   - **Standard för enheten**: Detta är standardinställningen för delning av enheten, vilket varierar beroende på Android-version. Som standard tillåts delning från den personliga profilen till arbetsprofilen. Som standard är dessutom delning mellan arbetsprofilen och den personliga profilen blockerad. Den här inställningen förhindrar att arbetsdata delas till den personliga profilen. För enheter som kör version 6.0 och senare blockerar inte Google delning från den personliga profilen till arbetsprofilen.
   - **Appar i arbetsprofilen kan hantera delningsförfrågningar från den personliga profilen**: Aktiverar den inbyggda Android-funktionen som tillåter delning från den personliga profilen till arbetsprofilen. När detta är aktiverat, kan en delningsbegäran från en app i den personliga profilen dela med appar i arbetsprofilen. Det här är standardinställningen för Android-enheter som kör tidigare versioner än 6.0.
-  - **Förhindra all delning över gränser**: förhindrar delning mellan arbets profiler och personliga profiler.
-  - **Inga begränsningar vid delning**: aktiverar delning över arbets profilens gränser i båda riktningarna. När du väljer den här inställningen så kommer appar i arbetsprofilen att kunna dela data med omärkta appar i den personliga profilen. Med den här inställningen kan hanterade appar i arbetsprofilen dela med appar på den ohanterade delen av enheten. Använd därför den här inställningen med försiktighet.
+  - **Hindra all delning över gränser**: förhindrar delning mellan arbetsprofiler och personliga profiler.
+  - **Inga begränsningar för delning**: aktiverar delning över arbetsprofilgränsen i bägge riktningarna. När du väljer den här inställningen så kommer appar i arbetsprofilen att kunna dela data med omärkta appar i den personliga profilen. Med den här inställningen kan hanterade appar i arbetsprofilen dela med appar på den ohanterade delen av enheten. Använd därför den här inställningen med försiktighet.
 
 - **Arbetsprofilmeddelanden när enheten är låst**: Styr om appar i arbetsprofilen får visa data i meddelanden när enheten är låst. **Blockera** visar inte data. **Inte konfigurerad** visar data.
 - **Standardappbehörigheter**: Ange standardprincipen för behörighet för alla appar i arbetsprofilen. Från och med Android 6, måste användaren bevilja vissa behörigheter som krävs av appar när appen startas. Den här principinställningen låter dig välja om användare ombeds att bevilja behörigheter för alla appar i arbetsprofilen. Om du till exempel tilldelar en app i arbetsprofilen som kräver platsåtkomst. Normalt skulle den appen be användaren att godkänna eller neka platsåtkomst för appen. Använd den här principen för att automatiskt bevilja behörigheter utan att användaren tillfrågas, för att automatiskt neka behörigheter utan att användaren tillfrågas eller för att låta användaren bestämma. Välj mellan:
@@ -294,7 +294,7 @@ Dessa inställningar gäller för Android Enterprise-registrerings typer där In
 - **Lägga till och ta bort konton**: Välj **Blockera** för att förhindra att slutanvändarna lägger till eller tar bort konton i arbetsprofilen manuellt. När du till exempel distribuerar Gmail-appen till en Android-arbetsprofil kan du hindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen. **Inte konfigurerad** tillåter att konton läggs till i arbetsprofilen.  
 
   > [!NOTE]
-  > Google-konton kan inte läggas till i en arbets profil.
+  > Google-konton kan inte läggas till i en arbetsprofil.
 
 - **Kontaktdelning via Bluetooth**: Ger åtkomst till arbetskontakter från en annan enhet, till exempel en bil som har anslutits med Bluetooth. Den här inställningen konfigureras inte som standard och arbetsprofilens kontakter visas därför inte. Välj **Aktivera** för att tillåta denna delning och visa arbetsprofilens kontakter. Inställningen gäller för Androids arbetsprofilenheter i Android OS v6.0 och senare. När den här inställningen är aktiverad kan vissa Bluetooth-enheter tillåtas att cachelagra arbetskontakter vid den första anslutningen. Att inaktiverar den här principen efter en inledande länkning/synkronisering kanske inte kan ta bort arbetskontakter från en bluetooth-enhet.
 
@@ -306,9 +306,9 @@ Dessa inställningar gäller för Android Enterprise-registrerings typer där In
 
 - **Kamera**: Välj **Blockera** för att förhindra åtkomst till kameran på enheten i arbetsprofilen. Kameran på den personliga sidan påverkas inte av inställningen. **Krävs inte** tillåter åtkomst till kameran i arbetsprofilen.
 
-- **Tillåt widgetar från appar för arbets profil**: **Aktivera** tillåter att slutanvändare kan skicka widgetar som exponeras av appar på Start skärmen. **Inte konfigurerad** (standard) inaktiverar den här funktionen.
+- **Tillåt widgetar från arbetsprofilappar**: Om du väljer **Aktivera** kan slutanvändare placera widgetar som exponeras av appar på startskärmen. **Inte konfigurerad** (standard) inaktiverar den här funktionen.
 
-  Outlook är till exempel installerat i användarnas arbets profiler. När inställningen är **aktive**rad kan användarna lägga till Agenda-widgeten på enhetens start sida.
+  Outlook är till exempel installerat i dina användares arbetsprofiler. När **Aktivera** har angetts kan användarna placera agendawidgeten på enhetens startsida.
 
 #### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 
@@ -336,7 +336,7 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
 
 - **Minsta lösenordslängd**: Ange det minsta antal tecken som användarens lösenord måste innehålla, från **4**-**14**.
 - **Maximalt antal minuter av inaktivitet innan skärmen låses**: Välj hur lång tid det tar innan en inaktiv enhet låses automatiskt
-- **Antal felaktiga inloggningar innan enheten rensas**: Anger hur många gånger ett felaktigt lösenord kan anges innan alla data rensas från enheten
+- **Antal felaktiga inloggningar innan enheten rensas**: Anger hur många gånger ett felaktigt lösenord kan anges innan arbetsprofilen rensas från enheten.
 - **Lösenordets giltighetstid (dagar)** : Ange antal dagar innan slutanvändarens lösenord måste ändras (från **1**-**255**)
 - **Lösenordstyp som krävs**: Välj den typ av lösenord som måste anges på enheten. Välj mellan:
   - **Standard för enheten**
@@ -358,12 +358,12 @@ Lösenordsinställningarna gäller för personliga profiler på enheter som anv�
    > [!Note]
    > Den här inställningen fungerar endast för Android 8 (Oreo)-enheter och senare.
 
-- **Förhindra att appar installeras från okända källor i den personliga profilen**: efter design kan Android Enterprise Work Profile-enheter inte installera appar från andra källor än den Play Store. Av typ är arbets profil enheter avsedda att vara dubbla profiler:
+- **Hindra appinstallationer från okända källor i privat profil**: Android Enterprise-arbetsprofilenheter har utformats för att inte kunna installera appar från andra källor än Play Store. Arbetsprofilenheter har två profiler:
 
-  - En arbets profil som hanteras med MDM.
+  - En arbetsprofil som hanteras med MDM.
   - En personlig profil som är isolerad från MDM-hantering.
 
-  Med den här inställningen kan administratörer styra applösenord från okända källor. **Inte konfigurerad** (standard) tillåter att app-installationer från okända källor i den personliga profilen används. **Blockera** förhindrar att program installationer från andra källor än Play Store i den personliga profilen.
+  Med den här inställningen får administratörer större kontroll över appinstallationer från okända källor. Om du väljer **Inte konfigurerad** (standard) tillåts appinstallationer från okända källor i den personliga profilen. Om du väljer **Blockera** går det inte att installera appar från andra källor än Play Store i den personliga profilen.
 
 ### <a name="connectivity"></a>Anslutningar
 

@@ -14,12 +14,12 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: 0a5e90c6bc6b352f4d7a0fc0ae22c65110563461
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ed2d00541c2d89efd0f8cd6aa60f29c527656fc0
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68354403"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971807"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadata- och markdownmall
 
@@ -34,11 +34,11 @@ Det fullständiga metadatablocket ligger över och det är indelat i obligatoris
 
 - Du **måste** ha ett blanksteg mellan kolon (:) och värdet för ett metadataelement.
 - Om ett valfritt metadataelement saknar ett värde kommenterar du ut elementet med # (lämna det inte tomt eller använd "saknas"). Om du lägger till ett värde till ett element som har kommenterats ut måste du ta bort #.
-- Kolon i ett värde (t.ex. en rubrik) bryter metadataparsern. Använd istället HTML-kodningen &#58; (t.ex. "rubrik: Azure Rights Management&#58; Grunderna | "Azure RMS").
-- **rubrik**: den här rubriken visas i sökresultat. Rubriken ska avslutas med ett lodstreck (|) följt av namnet på tjänsten (se ovan). Rubriken behöver inte (och bör troligtvis inte) vara identisk med rubriken i H1 rubriken. Den bör innehålla ungefär 65 tecken (inklusive | TJÄNSTENS NAMN)
+- Kolon i ett värde (t.ex. en rubrik) bryter metadataparsern. I dess ställe använder du HTML-kodningen &#58; (t. ex. ”rubrik: Grunderna i Azure Rights Management | Azure RMS”).
+- **rubrik**: Den här rubriken visas i sökresultat. Rubriken ska avslutas med ett lodstreck (|) följt av namnet på tjänsten (se ovan). Rubriken behöver inte (och bör troligtvis inte) vara identisk med rubriken i H1 rubriken. Den bör innehålla ungefär 65 tecken (inklusive | TJÄNSTENS NAMN)
 - **författare**, **ansvarig**, **granskare**: Fältet Författare ska innehålla författarens **Github-användarnamn** och inte hans/hennes alias.  I fälten "ansvarig" och "granskare" ska du däremot ange alias. ms.reviewer anger namnet på projektledaren som är kopplad till artikeln eller tjänsten.
 - **ms.assetid**: Det här är artikelns GUID. När du skapar en ny markdownfil hämtar du GUID:en från [https://www.guidgenerator.com](https://www.guidgenerator.com). 
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Du hittar möjliga värden för de här elementen [här](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Möjliga värden för dessa element finns [här](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Grundläggande markdown och GFM
 
@@ -74,7 +74,7 @@ Av rubriker på andra nivån skapas innehållsförteckningen på sidan som visas
 
 Om du vill länka till en markdownfil på samma lagringsplats använder du [relativa länkar](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2). 
 
-- Exempel: [Vad är Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
+- Exempel: [Vad är Azure Rights Management?](./understand-explore/what-is-azure-rights-management.md)
 
 Du länkar till en rubrik i samma markdownfil genom att visa källan för den publicerade artikeln och leta upp id för huvudet (t.ex. `id="blockquote"`, och länka med # + id (t.ex. `#blockquote`).
 
@@ -117,7 +117,7 @@ När en webbadress finns i en markdownfil omvandlas den till en klickbar länk.
 
 ### <a name="unordered-lists"></a>Osorterade listor
 
-- Denna
+- Det här
 - är
 - en
 - punkt-
@@ -216,7 +216,7 @@ Det här är ett exempel på `in-line code`.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
 
-## <a name="docsms-extentions"></a>docs.ms-tillägg
+## <a name="docsms-extensions"></a>docs.ms-tillägg
 
 ### <a name="button"></a>Knapp
 

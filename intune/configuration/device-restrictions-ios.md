@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
-ms.translationtype: HT
+ms.openlocfilehash: dc252068d963d75bf6ade79852d6ba01bda8800b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754583"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051617"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Enhetsinställningarna för iOS och iPadOS tillåter eller begränsar funktioner med hjälp av Intune
 
@@ -420,8 +420,6 @@ Gäller enheter som kör iOS 9.3 eller senare.
   Du hittar webbadressen till en app genom att öppna iTunes App Store och söka efter appen. Du kan t.ex. söka efter `Microsoft Remote Desktop` eller `Microsoft Word`. Välj appen och kopiera webbadressen.
 
   Du kan även använda iTunes för att hitta appen och sedan använda uppgiften **Kopiera länk** för att hämta appens webbadress.
-  
-  Mer information om hur du hittar ett samlings-ID finns i [Hitta samlings-ID för en iOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
 
 - **Appsamlings-ID**: Ange [appsamlings-ID](bundle-ids-built-in-ios-apps.md) för den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och verksamhetsspecifika appar. På Apple-webbplatsen finns en lista med [inbyggda Apple-appar](https://support.apple.com/HT208094).
 - **Appnamn**: Ange namnet på den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och verksamhetsspecifika appar. På Apple-webbplatsen finns en lista med [inbyggda Apple-appar](https://support.apple.com/HT208094).
@@ -559,7 +557,9 @@ Information som krävs för datanätverksväxling (tips eller viktig information
 
 ## <a name="autonomous-single-app-mode"></a>Autonomt enkelt appläge
 
-Använd inställningarna för att konfigurera iOS-enheter så att de kör specifika appar i autonomt enkelappsläge. När det här läget har konfigurerats och appen körs låses enheten. Bara den appen kan köras. Lägg t.ex. till en app som låter användarna göra ett prov på enheten. När appens åtgärder har slutförts, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
+Använd inställningarna för att konfigurera iOS/iPadOS-enheter så att de kör specifika appar i autonomt enkelt appläge. När det här läget har konfigurerats och användaren startar någon av de konfigurerade apparna blir enheten låst till den appen. Det går inte att byta app/aktivitet förrän användaren avslutar den tillåtna appen.
+
+På en skola eller ett universitet kan du till exempel lägga till en app som gör att användarna kan skriva prov på enheten. Du kan också låsa enheten i företagsportalsappen tills användaren har autentiserats. När appens åtgärder har slutförts av användaren, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Inställningarna gäller för: Automatisk enhetsregistrering (övervakad)
 

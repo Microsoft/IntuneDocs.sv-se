@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71ae3c15dddedd5d9ebfaf06fcae25af89f6b82
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
-ms.translationtype: HT
+ms.openlocfilehash: cafe9d3036a727d79de88eda050399138da55675
+ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912647"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977758"
 ---
-# <a name="in-development-for-microsoft-intune---january-2020"></a>Under utveckling för Microsoft Intune – januari 2020
+# <a name="in-development-for-microsoft-intune---february-2020"></a>Under utveckling för Microsoft Intune – februari 2020
 
 För att hjälpa dig med förberedelser och planering innehåller den här sidan information om uppdateringar av och funktioner i användargränssnittet i Intune som är under utveckling, men som inte släppts än. Förutom informationen på den här sidan: 
 
@@ -66,8 +66,22 @@ Företagsportalappen visar ytterligare statusmeddelanden för appinstallation f�
 - Appen gick inte att installera. Beroenden som definierats av administratören uppfylldes inte.
 
 ### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Omdirigera webbklipp till Microsoft Edge på iOS-enheter<!-- 5455276 -->
-Webbklipp, som fungerar som fästa webbappar på iOS-enheter, måste uppdateras. Nyligen distribuerade webbklipp öppnas i Microsoft Edge i stället för Intune Managed Browser om det behövs för att öppna i en skyddad webbläsare. Du måste omdirigera befintliga webbklipp för att se till att de öppnas i Microsoft Edge i stället för Managed Browser. 
+Webbklipp, som fungerar som fästa webbappar på iOS-enheter, måste uppdateras. Nyligen distribuerade webbklipp öppnas i Microsoft Edge i stället för Intune Managed Browser om det behövs för att öppna i en skyddad webbläsare. Du måste omdirigera befintliga webbklipp för att se till att de öppnas i Microsoft Edge i stället för Managed Browser.
 
+### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>Förbättringar av användarupplevelsen i företagsportalen för macOS<!-- 5568987 -->
+Vi håller på att förbättra registreringsupplevelsen för macOS-enheter och företagsportalappen för Mac. Du kan förvänta dig följande:
+- En bättre Microsoft **AutoUpdate**-upplevelse under registreringen som ser till att användarna har den senaste versionen av företagsportalen.
+- En bättre kompatibilitetskontroll under registreringen.
+- Stöd för kopierade incident-ID:n så att användarna snabbare kan skicka fel från sina enheter till företagets supportteam.
+
+Mer information om registrering och företagsportalappen för Mac finns i Registrera din macOS-enhet med hjälp av företagsportalappen (https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+
+
+### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>En skärm kommer att tas bort från registreringen av Android-arbetsprofiler i företagsportalen<!--6103987 -->
+Skärmen **Vad händer nu?** kommer att tas bort från registreringsflödet för Android-arbetsprofiler i företagsportalen för att effektivisera användarupplevelsen. Gå till [Registrera med Android-arbetsprofilen]( https://docs.microsoft.com/intune-user-help/enroll-device-android-work-profile) om du vill se det aktuella registreringsflödet för Android-arbetsprofiler.
+
+### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424518-idready---"></a>Appen Microsoft Defender Avancerat skydd (ATP) för macOS<!-- 5424518 idready -->
+Intune kommer att tillhandahålla ett enkelt sätt att distribuera appen Microsoft Defender Avancerat skydd (ATP) för macOS till hanterade Mac-enheter. Mer information finns i [Microsoft Defender Avancerat skydd för Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac). 
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Enhetskonfiguration
@@ -104,14 +118,32 @@ När du skapar eller redigerar en OEMConfig-profil för Android Enterprise-enhet
 Den här funktionen gäller för:
 - Android enterprise 
 
+
 <!-- ***********************************************-->
 <!--## Device enrollment-->
 
 
-
 <!-- ***********************************************-->
-<!--## Device management-->
+## <a name="device-management"></a>Enhetshantering
 
+### <a name="change-primary-user-for-windows-devices----3794742---"></a>Ändra primär användare för Windows-enheter <!-- 3794742 -->
+Du kommer att kunna ändra den primära användaren för Windows-hybridanslutna och Azure AD-anslutna enheter. Om du vill göra det går du till **Intune** > - **Enheter** > **Alla enheter** > väljer en enhet > **Egenskaper** > **Primär användare**. 
+
+### <a name="serial-number-on-the-apple-mdm-push-certificate-page--5947765---"></a>Serienummer på sidan för Apple MDM-pushcertifikat<!--5947765 -->
+Serienumret visas på sidan för Apple MDM-pushcertifikat. Serienumret behövs för att få åtkomst till Apple MDM-pushcertifikatet om åtkomsten till det Apple-ID som skapade certifikatet skulle förloras. Om du vill visa serienumret går du till **Devices (Enheter)**  > **iOS** > **iOS enrollment (iOS-registrering)**  > **Apple MDM Push certificate (Apple MDM-pushcertifikat)** .
+
+### <a name="choose-which-iosipados-updates-to-push-to-enrolled-devices--5879689---"></a>Välja vilka iOS/iPadOS-uppdateringar som ska skickas till registrerade enheter<!--5879689 -->
+Du kommer att kunna välja en specifik iOS/iPadOS-uppdatering som ska skickas till enheter som har registrerats med hjälp av antingen Apple Business Manager eller Apple School Manager. För dessa enheter måste en enhetskonfigurationsprincip anges för att fördröja programuppdateringens synlighet ett antal dagar. Om du vill se den här funktionen går du till MEM > **Devices (Enheter)**  > **iOS** > **Update policies for iOS/iPadOS (Uppdateringsprinciper för iOS/iPadOS)**  > **Create profile (Skapa profil)** .
+
+### <a name="new-update-schedule-options-for-pushing-os-updates-to-enrolled-iosipados-devices--5879689--"></a>Nya alternativ för uppdateringsschemat för att skicka OS-uppdateringar till registrerade iOS/iPadOS-enheter<!--5879689-->
+Du kommer att kunna använda följande alternativ när du schemalägger operativsystemsuppdateringar för iOS/iPadOS-enheter. Detta gäller för enheter som använde registreringstypen Apple Business Manager eller Apple School Manager.
+- Uppdatera vid nästa incheckning
+- Uppdatera under schemalagd tid
+- Uppdatera utanför schemalagd tid
+
+För de två sista alternativen kan du skapa flera tidsperioder.
+
+Om du vill se de nya alternativen går du till MEM > **Devices (Enheter)**  > **iOS** > **Update policies for iOS/iPadOS (Uppdateringsprinciper för iOS/iPadOS)**  > **Create profile (Skapa profil)** .
 
 
 <!-- ***********************************************-->
@@ -119,10 +151,19 @@ Den här funktionen gäller för:
  
 
 <!-- ***********************************************-->
+## <a name="monitoring-and-troubleshooting"></a>Övervakning och felsökning
 
-<!--
-## Monitoring and troubleshooting
--->
+### <a name="improved-intune-reporting-experience---3791418-idready---"></a>Förbättrad rapporteringsupplevelse i Intune<!-- 3791418 idready -->
+Intune har nu en förbättrad rapporteringsupplevelse, inklusive nya rapporttyper, bättre rapportorganisation, mer fokuserade vyer, förbättrade rapportfunktioner samt mer konsekventa och tidsrelevanta data. Rapporteringsupplevelsen kommer att flyttas från allmänt tillgänglig förhandsversion till GA (allmän tillgänglighet). Dessutom tillhandahåller GA-versionen lokaliseringsstöd, felkorrigeringar, designförbättringar och aggregerade enhetsefterlevnadsdata på paneler i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+De nya rapporttyperna fokuserar på följande:
+- **Drift** – tillhandahåller färska poster med fokus på driftproblem. 
+- **Organisation** – innehåller en bred sammanfattning av det övergripande läget.
+- **Historisk** – visar mönster och trender under en viss tidsperiod.
+- **Specialist** – låter dig använda rådata för att skapa dina egna anpassade rapporter.
+
+Den första uppsättningen nya rapporter fokuserar på enhetsefterlevnad. Mer information finns i [Blogg – Rapporteringsramverk i Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) och [Intune-rapporter](~/fundamentals/reports.md).
+
 
 
 <!-- ***********************************************-->
@@ -136,7 +177,13 @@ Användargränssnittet för [Microsoft Endpoint Manager-administrationscenter](h
 ## <a name="security"></a>Säkerhet
 
 ### <a name="derived-credentials-support-on-android-cobo-devices--4839592--"></a>Stöd för härledda autentiseringsuppgifter på Android COBO-enheter<!--4839592-->
-Du kommer att kunna använda härledda autentiseringsuppgifter på fullständigt hanterade Android Enterprise-enheter. Support kommer att inkluderas för att hämta en härledd autentiseringsuppgift för Entrust Datacard, Intercede och DISA Purebred. Du kan använda en härledd autentiseringsuppgift för appautentisering, Wi-Fi, VPN eller S/MIME-signering och/eller kryptering med appar som stöder det. 
+Du kommer att kunna använda härledda autentiseringsuppgifter på fullständigt hanterade Android Enterprise-enheter. Support kommer att inkluderas för att hämta en härledd autentiseringsuppgift för Entrust Datacard, Intercede och DISA Purebred. Du kan använda en härledd autentiseringsuppgift för appautentisering, Wi-Fi, VPN eller S/MIME-signering och/eller kryptering med appar som stöder det.
+
+### <a name="use-antivirus-policy-to-manage-settings-for-microsoft-defender-antivirus-and-the-windows-security-experience--6131401---"></a>Använda antivirusprincipen för att hantera inställningar för Microsoft Defender Antivirus och Windows-säkerhetsupplevelsen<!--6131401 -->
+Från noden *Slutpunktsskydd* kommer du att kunna konfigurera inställningar för **Antivirus**. När du konfigurerar en princip för Antivirus kommer du att definiera inställningar för dina Windows 10-enheter via två profiltyper:
+
+- Microsoft Defender Antivirus: hantera inställningar för molnskydd, undantag för Antivirus, reparation, alternativ för sökning och mycket annat.
+- Windows-säkerhetsupplevelsen: hantera hur användare upplever Windows-säkerhetsinställningar på sina enheter. Du kommer att kunna konfigurera vad slutanvändare kan visa i Microsoft Defender Security Center och vilka meddelanden de får. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Meddelanden
