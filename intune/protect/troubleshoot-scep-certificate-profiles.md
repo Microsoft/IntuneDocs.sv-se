@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7ffe5a8c20aa7edd67853ff86ef9e28cf2d175
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
+ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76915830"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034251"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Översikt för felsökning av SCEP-certifikatprofiler i Microsoft Intune
 
@@ -115,11 +115,11 @@ Följande lista innehåller loggar eller konsoler som refereras till i följande
 
 ### <a name="logs-for-android-devices"></a>Loggar för Android-enheter
 
-För enheter som kör Android använder du programloggfilen **OMADM.log** i **Företagsportalen för Android**. Innan du samlar in och granskar loggar måste [utförlig loggning](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) vara aktiverad. Återskapa sedan problemet.
+För enheter som kör Android använder du programloggfilen **OMADM.log** i **Företagsportalen för Android**. Innan du samlar in och granskar loggar måste [utförlig loggning](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) vara aktiverad. Återskapa sedan problemet.
 
-Om du vill samla in OMADM.logs från en enhet, se [Ladda upp och skicka e-postloggar med en USB-kabel](/intune-user-help/send-logs-to-your-it-admin-using-cable-android.md).
+Om du vill samla in OMADM.logs från en enhet, se [Ladda upp och skicka e-postloggar med en USB-kabel](/intune-user-help/send-logs-to-your-it-admin-using-cable-android).
 
-Du kan också [Ladda upp och skicka loggarna med e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android.md#upload-and-email-logs-from-microsoft-intune-app) som stöd.
+Du kan också [Ladda upp och skicka loggarna med e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) som stöd.
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Loggar för iOS- och iPadOS-enheter
 

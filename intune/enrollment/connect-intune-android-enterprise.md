@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2c6463ddce7d04168e1929414faf441ae415837
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 581d88e49391bc874625e9c84318c039706b0c1b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563833"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124834"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Ansluta ditt Intune-konto till ditt hanterade Google Play-konto
 
@@ -69,4 +69,4 @@ Du kan inaktivera Android Enterprise-registrering och -hantering. För att göra
 
 ## <a name="next-steps"></a>Nästa steg
 
-När du har anslutit till Google Play för företag-kontot kan du [konfigurera Android Enterprise-arbetsprofilenheter](android-work-profile-enroll.md) och [dedikerade Android Enterprise-enheter](android-kiosk-enroll.md) och [ställa in fullständigt hanterade Android Enterprise-enheter](android-kiosk-enroll.md)
+När du har anslutit till Google Play för företag-kontot kan du [konfigurera Android Enterprise-arbetsprofilenheter](android-work-profile-enroll.md) och [dedikerade Android Enterprise-enheter](android-kiosk-enroll.md) och [ställa in fullständigt hanterade Android Enterprise-enheter](android-fully-managed-enroll.md)
