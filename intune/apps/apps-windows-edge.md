@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa0156d059513a2586eb7d8866d23508be0af10c
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: 8d5082376c42ff3b92e3979a53b6deac3e59c88e
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886682"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075815"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Lägga till Microsoft Edge för Windows 10 till Microsoft Intune
 
 Innan du kan distribuera, konfigurera, övervaka eller skydda appar måste du lägga till dem till Intune. En av de tillgängliga [apptyperna](~/apps/apps-add.md#app-types-in-microsoft-intune) är Microsoft Edge *version 77 och senare*. Genom att välja den här apptypen i Intune kan du tilldela och installera Microsoft Edge *version 77 och senare* till enheter som du hanterar och som kör Windows 10.
 
 > [!IMPORTANT]
-> Den här typen av app är tillgänglig som en **allmänt tillgänglig förhandsversion** och erbjuder en stabil kanal, betakanal och utvecklarkanal för Windows 10. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Intune identifierar alla befintliga Microsoft Edge-installationer. Om installationen görs i användarkontexten skrivs den över av en systeminstallation. Om installationen görs i systemkontexten rapporteras installationen som lyckad. Dessutom är automatiska uppdateringar av Microsoft Edge **På** som standard, och Microsoft Edge kan inte avinstalleras.
+> Den här typen av app är tillgänglig som en **allmänt tillgänglig förhandsversion** och erbjuder en stabil kanal, betakanal och utvecklarkanal för Windows 10. Distributionen är bara på engelska (EN), men slutanvändarna kan ändra visningsspråket i webbläsaren under **Inställningar** > **Språk**. Microsoft Edge är en Win32-app som installeras i systemkontext och på samma arkitektur (x86-appen i x86-operativsystem och x64-appen i x64-operativsystem). Intune identifierar alla befintliga Microsoft Edge-installationer. Om installationen görs i användarkontexten skrivs den över av en systeminstallation. Om installationen görs i systemkontexten rapporteras installationen som lyckad. Dessutom är automatiska uppdateringar av Microsoft Edge **På** som standard.
 
 > [!NOTE]
 > Microsoft Edge *version 77 och senare* är även tillgängligt för macOS.
@@ -80,7 +80,7 @@ I det här steget konfigurerar du installationsalternativ för appen.
 
 ## <a name="select-scope-tags-optional"></a>Välj omfångstaggar (valfritt)
 Du kan använda omfångstaggar för att bestämma vem som kan se klientappsinformation i Intune. Fullständig information om omfångstaggar finns i Använda RBAC och omfångstaggar för distribuerad IT.
-1.  Välj **Omfång (taggar)** > **Lägg till**.
+1.  Välj **Omfång (taggar)**  > **Lägg till**.
 2.  Använd rutan **Välj** för att söka efter omfångstaggar.
 3.  Markera kryssrutan bredvid de omfångstaggar som du vill tilldela till den här appen.
 4.  Klicka på **Välj** > **OK**.
@@ -92,6 +92,28 @@ Appen som du har skapat visas i applistan där du kan tilldela den till de grupp
 
 > [!NOTE]
 > För närvarande gäller att om du tar bort tilldelningen av Microsoft Edge-distributionen så blir den kvar på enheten.
+
+## <a name="uninstall-the-app"></a>Avinstallera appen
+
+Använd följande steg när du behöver avinstallera Microsoft Edge från användarnas enheter.
+
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Appar** > **Alla appar** > *Microsoft Edge* app > **Tilldelningar** > **Lägg till grupp**.
+3. I fönstret **Lägg till grupp** väljer du **Avinstallera**.
+
+    > [!NOTE]
+    > Appen avinstalleras från enheter i de valda grupperna om Intune tidigare har installerat programmet på enheten via tilldelningen **Tillgänglig för registrerade enheter** eller **Obligatorisk** med hjälp av samma distribution.
+4. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av apptilldelningen.
+5. Välj de grupper som du vill tillämpa avinstallationen på.
+6. Klicka på **Välj** i fönstret **Välj grupper**.
+7. Klicka på **OK** i fönstret **Tilldela** för att ange tilldelningen.
+8. Välj **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
+9. Om du har valt att undanta grupper i **Välj grupper**, klicka på **Välj**.
+10. Välj **OK** i fönstret **Lägg till grupp**.
+11. Välj **Spara** i appfönstret **Tilldelningar**.
+
+> [!IMPORTANT]
+> Om du vill avinstallera appen måste du ta bort medlemmarna eller grupptilldelningen för installationen innan du tilldelar en avinstallation. Om en grupp är tilldelad att både installera en app och avinstallera en app, förblir appen kvar och tas inte bort.
 
 ## <a name="troubleshooting"></a>Felsökning
 **Microsoft Edge version 77 och senare för Windows 10:**<br>

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: 4f97c4c56073044e79b5251dc83c54decb5c9c55
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977809"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124851"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrera Windows-enheter i Intune med hjälp av Windows Autopilot  
 Det är enklare att registrera enheter i Intune med Windows Autopilot. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och Autopilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och installera anpassade operativsystemavbildningar på enheterna. Om du använder Intune för att hantera Autopilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -100,6 +100,9 @@ Autopilot-distributionsprofiler används för att konfigurera Autopilot-enhetern
     - **Självdistribution (förhandsversion)** : (kräver Windows 10, version 1809 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs inte för att registrera enheten. När en enhet inte har någon användare associerad, gäller inte användarbaserade efterlevnadsprinciper. Om du använder ett självdistribuerande läge, tillämpas bara efterlevnadsprinciper som avser enheten.
 
     ![Skärmbild av OOBE-sidan](./media/enrollment-autopilot/create-profile-outofbox.png)
+
+   > [!NOTE]
+   > Alternativ som visas nedtonade eller skuggade stöds för närvarande inte av det valda distributionsläget.
 
 6. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
 7. Konfigurera följande alternativ:

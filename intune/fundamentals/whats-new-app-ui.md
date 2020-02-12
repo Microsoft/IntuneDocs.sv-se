@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 02/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3b391bb4ab064c080083e2c31dc28483f6d419a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7e38e4f8552b6ef217d264cfa74597bda5c665ab
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74098216"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125055"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 
@@ -36,9 +36,14 @@ Om du är anställd eller student bör du titta på skärmbilderna och länkarna
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-february-3-2020"></a>Den vecka som börjar den 3 februari 2020
+
+### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>En skärm har tagits bort från registreringen av Android-arbetsprofiler i företagsportalen <!--6103987 -->
+Skärmen **Vad händer nu?** har tagits bort från registreringsflödet för Android-arbetsprofiler i företagsportalen för att effektivisera användarupplevelsen. Gå till [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) om du vill se det uppdaterade registreringsflödet för Android-arbetsprofiler.  
+
 ## <a name="week-of-november-11-2019"></a>Veckan som börjar den 11 november 2019  
 
-#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Webbappar som startas från Windows företagsportalapp<!-- 5030972 -->
+### <a name="web-apps-launched-from-the-windows-company-portal-app----5030972---"></a>Webbappar som startas från Windows företagsportalapp <!-- 5030972 -->
 Slutanvändare kan nu starta webbappar direkt från Windows företagsportalapp. Slutanvändare kan välja webbappen och sedan välja alternativet **Öppna i webbläsare**. Den publicerade webbadressen öppnas direkt i webbläsaren. Den här funktionen kommer att distribueras under nästa vecka. Mer information om hur du lägger till webbappar finns i [Lägga till appar i Microsoft Intune](~/apps/web-app.md).
 
 ![Exempelbild av en webbapp som startas från Windows företagsportalapp](./media/whats-new-app-ui/webapp-open-in-browser.png)  
@@ -58,13 +63,13 @@ Checklistan för inställningar i företagsportalappen för Android har uppdater
 
 Den uppdaterade checklistan för registrering med Android-arbetsprofilen visas på följande skärmar:
 
-|Uppdaterad|Föregånde|  
+|Uppdaterad|Föregående|  
 |---|---|  
 |![Exempelbild av arbetsprofilkonfigurationen i företagsportalen med den förenklade checklistan och de nya ikonerna.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Exempelbild av den tidigare arbetsprofilkonfigurationen i företagsportalen med en checklista med mer information.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
 
 Den uppdaterade checklistan för administratörsregistrering för Android-enheter visas på följande skärmar:  
 
-|Uppdaterad|Föregånde|  
+|Uppdaterad|Föregående|  
 |---|---|  
 |![Exempelbild av administratörskonfigurationen för Android-enheter i företagsportalen med den förenklade checklistan och de nya ikonerna.](./media/whats-new-app-ui/android-checklist-1911.png)|![Exempelbild av den tidigare administratörskonfigurationen för Android-enheter i företagsportalen med en checklista med mer information.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
@@ -175,7 +180,7 @@ Uppdateringar som du kan se är bland annat:
 - Förbättrad prestanda för stora app-kataloger
 - Bättre tillgänglighet för alla användare  
 
-|Uppdaterad|Föregånde|
+|Uppdaterad|Föregående|
 |---|---|
 |![Den uppdaterade enhetssidan visar enheten korrekt placerad ovanför enhetsinformationen, den dyker inte längre upp ovanför hela listan.](./media/whats-new-app-ui/iwp-device-after-1803.png)|![Den tidigare versionen av enhetssidan.](./media/whats-new-app-ui/iwp-device-before-1803.png)|
 |![Den uppdaterade appinstallationssidan visar appen korrekt placerad ovanför en beskrivning och olika typer av installationsinformation, inklusive publiceringsdatum, version och typ av app.](./media/whats-new-app-ui/iwp-app-install-after-1803.png)|![Den tidigare versionen av appinstallationssidan.](./media/whats-new-app-ui/iwp-app-install-before-1803.png)|  
@@ -557,9 +562,9 @@ En uppdatering av Android-företagsportalappen visar en förloppsindikator för 
 ### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Förbättrade appinstallationsstatus för företagsportalappen för Windows 10 <!--676495-->
 Företagsportalappen för Windows 10 innehåller nu en förloppsindikator för installation på appinformationssidan. Den stöds för moderna appar på enheter som kör Windows 10 Anniversary Update och senare.
 
-__Före__ ![En avbildning av den tidigare versionen av inläsningsskärmen där status bara angavs som "Installerar".](./media/whats-new-app-ui/cp_win10_install_status_before_1704.png)
+__Före__ ![En bild av den tidigare versionen av inläsningsskärmen där status bara angavs som ”Installerar”.](./media/whats-new-app-ui/cp_win10_install_status_before_1704.png)
 
-__Efter__ ![En avbildning av den uppdaterade versionen av inläsningsskärmen nu visar en förloppsindikator för installationen.](./media/whats-new-app-ui/cp_win10_install_status_after_1704.png)
+__Efter__ ![En bild av den uppdaterade versionen av inläsningsskärmen som nu visar en förloppsindikator för installationen.](./media/whats-new-app-ui/cp_win10_install_status_after_1704.png)
 
 ## <a name="february-2017"></a>Februari 2017
 

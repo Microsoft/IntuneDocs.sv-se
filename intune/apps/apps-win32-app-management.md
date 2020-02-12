@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c120fab1da43230888866cba9d818d7b433b711e
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dbefd797fead7113045ee7e7655b715a0b4961fd
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755297"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075832"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Fristående Intune – Win32-apphantering
 
@@ -112,7 +112,7 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 
 ### <a name="select-the-app-package-file"></a>Välj appaketfilen
 
-1. Klicka på **Välj appaketfil** fönstret **Lägg till app**. 
+1. I fönstret **Lägg till app** klickar du på **Välj appaketfil**. 
 2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en Windows-installationsfil med tillägget *.intunewin*.
    Appinformationen visas.
 3. När du är klar väljer du **OK** i fönstret **Appaketfil**.
@@ -204,7 +204,7 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
         2. När du har konfigurerat klart kravreglerna väljer du **OK**.
 2. Visa sidan **Identifieringsregler** genom att klicka på **Nästa**.   
 
-### <a name="step-4-detection-rules"></a>Steg 4: Identifieringsregler
+## <a name="step-4-detection-rules"></a>Steg 4: Identifieringsregler
 
 1. Konfigurera de regler som ska identifiera förekomsten av appen på sidan **Identifieringsregler**:
     
@@ -268,7 +268,7 @@ Följande steg beskriver riktlinjer som hjälper dig att lägga till en Windows-
 
 2. När du har lagt till din eller dina regler visar du sidan **Beroenden** genom att välja **Nästa**.
 
-### <a name="step-5-dependencies"></a>Steg 5: Beroenden
+## <a name="step-5-dependencies"></a>Steg 5: Beroenden
 
 Appsamband är program som måste installeras innan du kan installera Win32-appen. Du kan kräva att andra appar installeras som beroenden. Mer specifikt måste enheten installera de beroende apparna innan den installerar Win32-appen. Det finns upp till 100 beroenden, vilket innefattar beroenden för eventuella inkluderade beroenden samt själva appen. Du kan lägga till Win32-appsamband först efter att Win32-appen har lagts till och laddats upp till Intune. När Win32-appen har lagts till visas alternativet **Beroenden** i din Win32-apps fönster. 
 

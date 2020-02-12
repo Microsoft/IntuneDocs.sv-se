@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e64741a92804ec4149b654480166720ff3092e35
-ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.openlocfilehash: 3ae5a7508f27dbf15a58ba3386e744bb63bf102b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258505"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125021"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Hantera webbåtkomst med Microsoft Edge med Microsoft Intune
 
@@ -285,16 +285,27 @@ Använd nyckel-/värdeparet nedan för att konfigurera om dessa mjuka övergång
 
 |    Tangent    |    Värde    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock'    |    **Sant** gör att länkar som är begränsade öppnas direkt med InPrivate-surfning.<p>**Falskt** (standard) visar användare med ett alternativ för att öppna en begränsad länk med antingen InPrivate-surfning eller med deras personliga (MSA) konto.    |
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **Sant** (standard) tillåter att Microsoft Edge överför användare till sin personliga kontext för att öppna blockerade webbplatser.<p>**Falskt** förhindrar att Microsoft Edge överför användare. Användare får helt enkelt se ett meddelande om att webbplatsen de försöker besöka är blockerad.    |
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Öppna begränsade länkar direkt på InPrivate-flikar
 
-Du kan konfigurera så att begränsade länkar ska öppnas direkt med InPrivate-surfning, vilket ger användarna en smidigare webbupplevelse. Då slipper användarna steget med övergången till deras personliga sammanhang för att visa en webbplats. InPrivate-surfning betraktas som ohanterat, så användarna kan inte komma åt det när de använder läget för InPrivate-surfning. 
+Du kan konfigurera så att begränsade länkar ska öppnas direkt med InPrivate-surfning, vilket ger användarna en smidigare webbupplevelse. Då slipper användarna steget med övergången till deras personliga sammanhang för att visa en webbplats. InPrivate-surfning betraktas som ohanterat, så användarna kan inte komma åt det när de använder läget för InPrivate-surfning.
 
 |    Tangent    |    Värde    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **Sant** tillåter att Microsoft Edge flyttar användare till sina privata kontexter för att öppna blockerade webbplatser.<p>**Blockera** förhindrar att Microsoft Edge flyttar användare. Användare får helt enkelt se ett meddelande om att webbplatsen de försöker besöka är blockerad.    |
 
+## <a name="disable-microsoft-edge-prompt-to-save-passwords"></a>Inaktivera Microsoft Edge-frågan om att spara lösenord
+
+|    Tangent    |    Värde    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **Sant** gör att länkar som är begränsade öppnas direkt med InPrivate-surfning.<p>**Falskt** (standard) visar användare med ett alternativ för att öppna en begränsad länk med antingen InPrivate-surfning eller med deras personliga (MSA) konto.    |
+
+Som standard erbjuder Microsoft Edge för iOS att spara dina användares lösenord i nyckelringen. Om du vill inaktivera frågan för din organisation konfigurerar du följande inställning:
+
+|    Tangent    |    Värde    |
+|-----------|-------------|
+|     ”com.microsoft.intune.mam.managedbrowser.disableFeatures”    |    **password** inaktiverar frågan om att spara lösenord.    |
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Använda Microsoft Edge i iOS för att komma åt loggar för hanterade appar 
 

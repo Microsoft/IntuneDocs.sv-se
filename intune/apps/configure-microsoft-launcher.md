@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dc2e2ce7e19933accdb1063ccacf99fa3f54b09
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: b0145a17434d8b309806f468bf066d54ae117144
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563953"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155368"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurera Microsoft Launcher
 
@@ -31,13 +31,13 @@ Microsoft Launcher är en Android-app som gör att användare kan anpassa sin te
 
 På fullständigt hanterade Android Enterprise-enheter kan IT-företagsadministratörer anpassa startskärmen för hanterade enheter genom att välja bakgrundsbild, appar och ikonpositioner. Detta standardiserar utseendet för alla hanterade Android-enheter på olika OEM-enheter och systemversioner. 
 
-## <a name="how-to-configure-the-microsoft-managed-home-screen-app"></a>Så här konfigurerar du Microsofts hanterade hemskärmsapp 
+## <a name="how-to-configure-the-microsoft-launcher-app"></a>Så här konfigurerar du Microsoft Launcher-appen 
 
-Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Appar** > **Appkonfigurationsprinciper**. Lägg till en konfigurationsprincip för **Hanterade enheter** som kör **Android** och välj **Microsoft Launcher** som den tillhörande appen. Klicka på **Konfigurationsinställningar** om du vill konfigurera de olika tillgängliga inställningarna för Hanterad startskärm. 
+Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Appar** > **Appkonfigurationsprinciper**. Lägg till en konfigurationsprincip för **Hanterade enheter** som kör **Android** och välj **Microsoft Launcher** som den tillhörande appen. Klicka på **Konfigurationsinställningar** för att konfigurera de olika tillgängliga inställningarna för Microsoft Launcher. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Välja ett format för konfigurationsinställningar 
 
-Det finns två metoder som du kan använda för att definiera konfigurationsinställningarna för Hanterad startskärm: 
+Det finns två metoder som du kan använda för att definiera konfigurationsinställningarna för Microsoft Launcher: 
 
 - Med **Configuration Designer** kan du konfigurera inställningar med ett lättanvänt användargränssnitt som låter dig slå på och stänga av funktioner och ange värden. Det finns några inaktiverade konfigurationsnycklar med värdetyp BundleArray i den här metoden. Du kan endast konfigurera konfigurationsnycklarna genom att ange JSON-data. 
 

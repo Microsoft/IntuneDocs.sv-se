@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bc511669ec8a88523581b3afbcca161d5208934
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956202"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051634"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS- och MacOS-appar som har köpts via ett Apples volymköpsprogram med Microsoft Intune
 
@@ -130,6 +130,11 @@ Du kan synkronisera appnamn, metadata och licensinformation för dina köpta app
 
 >[!NOTE]
 >Tillgänglig distributionsavsikt stöds inte för enhetsgrupper – det är bara användargrupper som stöds. Listan över appar som visas är associerad med en token. Om du har en app som är associerad med flera VPP-token kan du se samma app visas flera gånger, en gång för varje token.
+
+> [!NOTE]  
+> Intune (eller någon annan MDM) installerar egentligen inte VPP-appar. I stället ansluter Intune till ditt VPP-konto och talar om för Apple vilka applicenser som ska tilldelas till de olika enheterna. Därifrån sköts den faktiska installationen mellan Apple och enheten.
+> 
+> [Apple MDM-protokollreferens, sidan 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>Slutanvändarprompt för VPP
 

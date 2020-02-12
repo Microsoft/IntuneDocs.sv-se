@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 02/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f46b8c7f0f57ab7831d6487495946aa9326b2d5
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: dc2e77db1aa322eb70c64d82ddca238f49b39fb2
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977792"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125038"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -60,32 +60,20 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering
 
+#### <a name="microsoft-edge-version-77-and-later-on-windows-10-devices---5843584---"></a>Microsoft Edge version 77 och senare på Windows 10-enheter<!-- 5843584 -->
+Intune stöder nu avinstallation av Microsoft Edge version 77 och senare på Windows 10-enheter. Mer information finns i [Lägga till Microsoft Edge för Windows 10 till Microsoft Intune](~/apps/apps-windows-edge.md).
+
 #### <a name="company-portal-app-improved-performance---6178652---"></a>Förbättrade prestanda för Företagsportal-appen<!-- 6178652 -->
 Företagsportal-appen har uppdaterats för att ge stöd för förbättrade prestanda för enheter som använder ARM64-processorer, t.ex. Surface Pro X. Tidigare använde Företagsportal ett emulerat ARM32-läge. Nu kompileras Företagsportal-appen internt för ARM64. Mer information om Företagsportal-appen finns i [Så här konfigurerar du Microsoft Intune-företagsportalsappen](~/apps/company-portal-app.md).
+
+#### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>En skärm kommer att tas bort från registreringen av Android-arbetsprofiler i företagsportalen<!--6103987 -->
+Skärmen **Vad händer nu?** har tagits bort från registreringsflödet för Android-arbetsprofiler i företagsportalen för att effektivisera användarupplevelsen. Gå till [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) om du vill se det uppdaterade registreringsflödet för Android-arbetsprofiler.  
 
 <!-- ########################## -->
 ## <a name="week-of-january-27-2020"></a>Veckan som börjar den 27 januari 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering
-
-#### <a name="new-setting-to-remove-specific-windows-built-in-apps---6184390---"></a>Ny inställning för att ta bort vissa inbyggda Windows-appar<!-- 6184390 -->
-Med hjälp av en ny policyinställning för konfiguration av Windows 10-enheter kan du ta bort följande inbyggda Windows-appar:
-
-- Visningsprogrammet Mixed Reality
-- MSN Väder
-- Appinstallationsprogram
-- Microsoft Tips
-- Mitt Office
-- Microsoft Harpan-samling 
-- Mobilabonnemang
-- Feedback Hub 
-- Xbox 
-- Groove Music
-- E-post
-- Kalender
-
-I administrationscentret för Microsoft Endpoint Manager väljer du **Enheter** > **Konfigurationsprofiler** > **Skapa profil**. Välj sedan **Windows 10 och senare** som **Plattform**. Välj **Enhetsbegränsningar** som **Profiltyp**. Välj **App Store** i rutan **Enhetsbegränsningar**. Välj **Ta bort** längst ned i fönstret bredvid **Ta bort inbyggda appar**. Mer information om hur du lägger till inbyggda appar finns i [Lägga till inbyggda appar i Microsoft Intune](~/apps/apps-add-built-in.md).
 
 #### <a name="intune-support-for-additional-microsoft-edge-version-77-deployment-channel-for-macos---5983950----"></a>Intune-stöd för ytterligare en Microsoft Edge version 77-distributionskanal för macOS<!-- 5983950  -->
 Microsoft Intune har nu stöd för ytterligare en **Stabil** distributionskanal för Microsoft Edge-appen för macOS. Kanalen **Stabil** är den rekommenderade kanalen för att brett distribuera Microsoft Edge i företagsmiljöer. Den uppdateras var sjätte vecka, och varje utgåva innehåller förbättringar från **beta**kanalen. Förutom kanalerna **Stabil** och **Beta** så stöder Intune en **Dev**-kanal. Den offentliga förhandsversionen tillhandahåller stabila kanaler och dev-kanaler för Microsoft Edge version 77 och senare för macOS. Automatiska uppdateringar av webbläsaren är aktiverade som standard. Mer information finns i [Lägga till Microsoft Edge till macOS-enheter med hjälp av Microsoft Intune](~/apps/apps-edge-macos.md).

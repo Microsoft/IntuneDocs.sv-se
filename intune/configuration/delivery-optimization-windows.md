@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,25 +15,22 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 44078f61e4f1939b1f0b15b3dde5ac54938ffbc3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9fb4aab6b02c6ad6a5d2f18ca9d15beafc12d58a
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059966"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124817"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Inställningar för leveransoptimering i Microsoft Intune
 
-Med Intune kan du använda inställningar för leveransoptimering för dina Windows 10-enheter för att minska bandbreddsförbrukningen när de enheterna laddar ned program och uppdateringar. Leveransoptimering konfigureras som en del av dina profiler för enhetskonfiguration.  
+Med Intune kan du använda inställningar för leveransoptimering till dina Windows 10-enheter för att minska bandbreddsförbrukningen när enheterna laddar ned program och uppdateringar. Konfigurera leveransoptimering som en del av dina enhetskonfigurationsprofiler.  
 
 Den här artikeln beskriver hur du konfigurerar inställningar för leveransoptimering som en del av en profil för enhetskonfiguration. När du har skapat en profil tilldelar eller distribuerar du profilen till Windows 10-enheterna. 
 
-En lista över inställningar för leveransoptimering som Intune stöder finns i [Inställningar för leveransoptimering för Intune](../delivery-optimization-settings.md).  
+En lista med de inställningar för leveransoptimering som Intune stöder finns i [Inställningar för leveransoptimering för Intune](../delivery-optimization-settings.md).  
 
 Information om leveransoptimering i Windows 10 finns i [Uppdateringar av leveransoptimering](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) i Windows-dokumentationen.  
-
-> [!NOTE]
-> **Programuppdateringar – Windows 10-uppdateringsringar** har ersatts av inställningarna för **leveransoptimering**. Du kan ändra dina befintliga uppdateringsringar så att du kan använda inställningarna för **leveransoptimering**. [Flytta befintliga uppdateringsringar till leveransoptimering](#move-existing-update-rings-to-delivery-optimization) (i den här artikeln)
 
 ## <a name="create-the-profile"></a>Skapa profilen
 
@@ -54,11 +51,16 @@ Information om leveransoptimering i Windows 10 finns i [Uppdateringar av leveran
 
 Profilen skapas och visas i listan. Sedan [tilldelar du profilen](device-profile-assign.md) och [övervakar dess status](device-profile-monitor.md).
 
-## <a name="move-existing-update-rings-to-delivery-optimization"></a>Flytta befintliga uppdateringsringar till leveransoptimering
+<!-- ## Move existing update rings to delivery optimization
 
-Inställningarna för **leveransoptimering** ersätter **Programuppdateringar – Windows 10-uppdateringsringar**. Du kan lätt ändra dina befintliga uppdateringsringar så att du kan använda inställningarna för **leveransoptimering**. Om du vill behålla samma inställningar när du skapar en profil för leveransoptimering använder du samma *Nedladdningsläge för leveransoptimering* och anger sedan samma inställningar som du redan använder. Du kan dock välja att konfigurera om inställningar för leveransoptimering för att dra nytta av ett komplett utbud av ytterligare inställningar som profilen för leveransoptimering kan hantera.
+**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
+-->
 
-1. Skapa en konfigurationsprofil för leveransoptimering:
+## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Ta bort leveransoptimering från Windows 10-uppdateringsgrupper
+
+Leveransoptimering konfigurerades tidigare som en del av programuppdateringsgrupperna. Från och med februari 2019 konfigureras inställningarna för leveransoptimering som en del av en enhetskonfigurationsprofil med leveransoptimering, med ytterligare inställningar som påverkar mer än leveransen av programuppdateringar till enheter. Om du inte redan har gjort det tar du bort inställningen för leveransoptimering från dina uppdateringsgrupper genom att ange den som *Inte konfigurerad*. Sedan använder du en leveransoptimeringsprofil för att hantera det större intervallet av tillgängliga alternativ.
+
+1. Skapa en enhetskonfigurationsprofil för leveransoptimering:
 
     1. I administrationscentret för Microsoft Endpoint Manager väljer du **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
     2. Ange följande egenskaper:

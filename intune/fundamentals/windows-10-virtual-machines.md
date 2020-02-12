@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9afaf2c8a63bfaed1fdb593baf42c8fa258d7893
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 486ca7eae1b1e8b016f44c735ec04a23145421a8
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263123"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124987"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Använda virtuella Windows 10-datorer med Intune
 
@@ -33,7 +33,7 @@ Tänk på följande när du hanterar virtuella Windows 10-datorer med Intune:
 
 ## <a name="enrollment"></a>Registrering
 - Vi rekommenderar inte att du hanterar virtuella datorer med sessionsvärdar vid behov med Intune. Varje virtuella dator måste registreras när den skapas. Genom att regelbundet ta bort virtuella datorer lämnar du också kvar överblivna enhetsposter i Intune tills de [rensas](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
-- Läget för automatisk distribuering av Windows Autopilot stöds inte eftersom det kräver en Trusted Platform Module (TPM). 
+- Distributionstyperna i Windows Autopilot för självdistribution och assisterad distribution stöds inte eftersom det krävs en fysisk Trusted Platform Module (TPM). 
 - OOBE-registreringen (Out-of-Box Experience) stöds inte på virtuella datorer som bara kan nås med hjälp av RDP (till exempel virtuella datorer som har Azure som värd). Den här begränsningen innebär följande:
     - Windows Autopilot och kommersiell OOBE stöds inte.
     - Alternativen för registreringstatussidan för enhetssammanhangsprinciper stöds inte.
@@ -48,7 +48,7 @@ Intune identifierar automatiskt virtuella datorer och rapporterar dem som ”vir
 
 Frigjorda virtuella datorer kan bidra till rapporter om inkompatibla enheter eftersom de inte kan [checka in med Intune-tjänsten](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-## <a name="retirement"></a>Dra in
+## <a name="retirement"></a>Tillbakadragande
 Om du bara har RDP-åtkomst ska du inte använda åtgärden [Rensa](../remote-actions/devices-wipe.md#wipe). Åtgärden Rensa tar bort den virtuella datorns RDP-inställningar och hindrar dig från att någonsin ansluta igen.
 
 
