@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 06982bdf0aff1870f1a759f68bc6cdd48227a3cf
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72584457"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125004"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-inställningar för Intune  
 
@@ -55,18 +55,18 @@ Uppdateringsinställningarna styr vilka bitar som en enhet laddar ner och när d
   > Från och med Windows version 1903 har användningen av *Halvårskanal (riktad)* (SAC-T) dragits tillbaka. Den här ändringen innebär att SAC-T slås samman med *Halvårskanal*. Mer information om den här förändringen och hur den påverkar Windows Update för företag finns i blogginlägget från Windows IT Pro om [Windows Update för företag och tillbakadragning av SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).  
  
 - **Uppdateringar för Microsoft-produkter**  
-  **Standard**: Tillåt  
+  **Standard**:  Tillåt  
   Windows Update CSP: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
-  - **Tillåt** – Välj *Tillåt* för att söka efter uppdateringar av appen från Microsoft Update.  
-  - **Blockera** – Välj block för att förhindra sökning efter uppdateringar av appar.  
+  - **Tillåt** – Välj *Tillåt* för att söka efter appuppdateringar i Microsoft Update.  
+  - **Blockera** – Välj Blockera för att förhindra sökning efter appuppdateringar.  
 
 - **Windows-drivrutiner**  
-  **Standard**: Tillåt  
+  **Standard**:  Tillåt  
   Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
-  - **Tillåt** – Välj *tillåt att* inkludera Windows Update driv rutiner under uppdateringar.  
-  - **Blockera** – Välj block för att förhindra genomsökning av driv rutiner.  
+  - **Tillåt** – Välj *Tillåt* inkludera Windows Update-drivrutiner under uppdateringar.  
+  - **Blockera** – Välj Blockera för att förhindra sökning efter drivrutiner.  
 
 - **Uppskjutningsperiod för kvalitetsuppdatering (dagar)**  
   **Standard**: 0  
@@ -118,11 +118,11 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
     Det här alternativet kan starta om en enhet automatiskt när uppdateringen har installerats. Använd inställningarna för **Aktiva timmar** för att definiera en tidsperiod under vilken de automatiska omstarterna blockeras:  
 
     - **Aktiva timmar startar**: Ange en starttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-      **Standard**: kl. 08:00  
+      **Standard**: 8.00  
       Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Aktiva timmar slutar**: Ange en sluttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-      **Standard**: kl. 17:00  
+      **Standard**: 17.00  
       Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Installera automatiskt och starta om vid underhåll** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. När omstart krävs startas enheten om när den inte används. (Detta är standard för ohanterade enheter.)  
@@ -130,11 +130,11 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
     Det här alternativet kan starta om en enhet automatiskt när uppdateringen har installerats. Användningen av inställningar för **Aktiva timmar** beskrivs inte i Windows Update-inställningarna, men används av Intune för att definiera en tidsperiod när de automatiska omstarterna blockeras:  
 
     - **Aktiva timmar startar**: Ange en starttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-      **Standard**: kl. 08:00  
+      **Standard**: 8.00  
       Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Aktiva timmar slutar**: Ange en sluttid för att förhindra omstarter på grund av uppdateringsinstallationer.  
-      **Standard**: kl. 17:00  
+      **Standard**: 17.00  
       Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Automatisk installation och omstart vid schemalagd tid** – Ange dag och tidpunkt för installationen. Om inget anges körs installationen kl. 3.00 varje dag, följt av en 15 minuters nedräkning till en omstart. Inloggade användare kan fördröja nedräkningen och omstarten.   
@@ -149,7 +149,7 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
       **Standard**: Vilken dag som helst  
 
     - **Schemalagd installationstid** – Ange den tid på dagen då du vill att uppdateringar ska installeras.  
-      **Standard**: kl. 03:00  
+      **Standard**: 3.00  
 
   - **Installera automatiskt och starta om utan slutanvändarkontroll** – Uppdateringar laddas ned automatiskt och installeras vid automatiskt underhåll när enheten inte används eller körs med batteridrift. När omstart krävs startas enheten om när den inte används. Det här alternativet innebär att slutanvändarnas kontrollpanel är skrivskyddad.  
 
@@ -172,15 +172,15 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
   **Standard**: Tillåt  
   Windows Update CSP: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
-  - **Tillåt** – Tillåt att enhets användare pausar installationen av en uppdatering.  
-  - **Blockera** – förhindra att enhets användare pausar installationen av en uppdatering.  
+  - **Tillåt** – Tillåt att enhetsanvändare pausar installationen av en uppdatering.  
+  - **Blockera** – förhindra att enhetsanvändare pausar installationen av en uppdatering.  
 
 - **Hindra användare från att söka efter Windows-uppdateringar**  
   **Standard**: Tillåt  
   Windows Update CSP: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
-  - **Tillåt** – Tillåt att enhets användare använder Windows Update sökning för att hitta och hämta uppdateringar och installera funktioner.
-  - **Blockera** – förhindra att enhets användare får åtkomst till Windows Update genomsökning, hämta uppdateringar och installera funktioner.  
+  - **Tillåt** – Tillåt att enhetsanvändare använder Windows Update-sökning för att hitta och hämta uppdateringar och installera funktioner.
+  - **Blockera** – förhindra att enhetsanvändare får åtkomst till Windows Update-sökning, ladda ner uppdateringar och installera funktioner.  
 
 - **Kräv användarens godkännande för att starta om utanför arbetstid**  
   **Standard**: Inte konfigurerat  
@@ -195,7 +195,7 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
 
   Ange lång tid före en automatisk omstart ett ignorerbart meddelande ska visas för enhetsanvändaren om omstarten. Värdena **2**, **4**, **8**, **12** eller **24** timmar stöds.  
   
-  När du rensar standardvärdet är den här inställningen *inte konfigurerad*.  
+  När du rensar standardvärdet blir den här inställningen *Inte konfigurerad*.  
 
 - **Påminn användaren innan automatisk omstart krävs med permanent påminnelse (minuter)**  
   **Standard**: 15  
@@ -203,10 +203,10 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
 
   Ange hur lång tid före en automatisk omstart en icke-ignorerbar varning ska visas för enhetsanvändaren om omstarten. Värdena **15**, **30** eller **60** minuter stöds.  
 
-  När du rensar standardvärdet är den här inställningen *inte konfigurerad*.  
+  När du rensar standardvärdet blir den här inställningen *Inte konfigurerad*.  
 
 - **Ändra meddelandenivå för uppdatering**  
-  **Standard**: Använd standardmässiga Windows Update-meddelanden  
+  **Standard**: Använd Windows Update-standardmeddelanden  
   Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
   Ange vilken nivå av Windows Update-meddelanden som användare ser. Den här inställningen styr inte hur och när uppdateringarna laddas ned och installeras.  
@@ -214,40 +214,40 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
   Alternativ som stöds:
   - **Inte konfigurerat**
   - **Använd Windows Update-standardmeddelanden**
-  - **Stäng av alla meddelanden, förutom omstarts varningar**
-  - **Stäng av alla meddelanden, inklusive omstarts varningar**  
+  - **Stäng av alla meddelanden, förutom omstartsvarningar**
+  - **Stäng av alla meddelanden, inklusive omstartsvarningar**  
 
-- **Använd inställningar för tids gräns**  
+- **Använd tidsgränsinställningar**  
   **Standard**: Inte konfigurerat  
  
-  Tillåter att användare använder tids gräns inställningar.  
+  Låter användare använda tidsgränsinställningar.  
 
   - **Inte konfigurerat**
   - **Tillåt**
 
-  När inställningen *tillåts*kan du konfigurera följande inställningar för tids gränser:
+  När det är satt till *Tillåt* kan du konfigurera följande tidsgränsinställningar:
 
-  - **Tids gräns för funktions uppdateringar**  
+  - **Tidsgräns för funktionsuppdateringar**  
     **Standard**: *Inte konfigurerat*  
     Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
-    Anger antalet dagar som en användare har innan funktions uppdateringar installeras på deras enheter automatiskt (2-30).
+    Anger antalet dagar som en användare har innan funktionsuppdateringar installeras på deras enheter automatiskt (2–30).
 
-  - **Tids gräns för kvalitets uppdateringar**  
+  - **Tidsgräns för kvalitetsuppdateringar**  
     **Standard**: *Inte konfigurerat*  
     Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
-    Anger antalet dagar som en användare har innan kvalitets uppdateringar installeras på deras enheter automatiskt (2-30).
+    Anger antalet dagar som en användare har innan kvalitetsuppdateringar installeras på deras enheter automatiskt (2–30).
 
   - **Respitperiod**  
-    **Standard**: *inte konfigurerat* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Standard**: *Inte konfigurerat* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Anger ett minsta antal dagar efter deadline tills omstarter sker automatiskt (2-7).
+    Anger ett minsta antal dagar efter tidsgränsen tills omstarter sker automatiskt (2–7).
 
-  - **Automatisk omstart före deadline**  
+  - **Automatisk omstart före tidsgräns**  
     **Standard**: Ja Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
-    Anger om enheten ska starta om automatiskt före tids gränsen.
+    Anger om enheten ska starta om automatiskt före tidsgränsen.
     - **Ja**
     - **Nej**
 
@@ -255,4 +255,4 @@ Inställningarna för användargränssnittet styr slutanvändarens upplevelse vi
 
 Leveransoptimering konfigureras inte längre som en del av en Windows 10-uppdateringsring under Programuppdateringar. Leveransoptimering anges nu via enhetskonfiguration. Men tidigare konfigurationer finns kvar i konsolen. Du kan ta bort dessa tidigare konfigurationer genom att ändra dem till inställningen *Inte konfigurerat*, men de kan inte ändras på något annat sätt. 
 
-Information om hur du undviker konflikter mellan ny och gammal princip finns i [Flytta från befintliga uppdateringsringar till leveransoptimering](../configuration/delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization). Flytta sedan dina inställningar till en leveransoptimeringsprofil.
+Undvik konflikter mellan ny och gammal princip, se [Ta bort leveransoptimering från Windows 10-uppdateringsringar](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings). Flytta sedan dina inställningar till en leveransoptimeringsprofil.

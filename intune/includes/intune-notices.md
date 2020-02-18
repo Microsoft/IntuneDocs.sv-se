@@ -7,14 +7,29 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 6064fb657454106a8a7213e0bbbcecdcef765857
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: 4e93cb7f2d503704251b16d1af03924358020d4e
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966374"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77156735"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
+
+### <a name="plan-for-change-change-in-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--6114580--"></a>Planera för förändring: Ändring av upplevelse vid registrering av dedikerade Android Enterprise-enheter i Intune<!--6114580-->
+I novemberversionen som vi delade lade vi till stöd för distribution av SCEP-certifikat till dedikerade Android Enterprise-enheter för att möjliggöra certifikatbaserad åtkomst till Wi-Fi-profiler. Den här ändringen involverade några mindre registreringsflödesändringar för Android Enterprise-dedikerade enheter. I den kommande mars-tjänstuppdateringen eller 2003 finns det ytterligare ändringar som vi vill att du ska känna till.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Om du hanterar dedikerade Android Enterprise-enheter i din miljö kommer du att börja se några ändringar i mars.
+- För befintliga Android-dedikerade enheter som registrerats före den 22 november 2019 eller tjänstuppdateringen för 1911: De här enheterna har Microsoft Intune-appen installerad. När serverdelsändringarna införs i Intune-tjänsten i mars, börjar SCEP-certifikaten som har distribuerats till enheter och som har associerats med Wi-Fi-profiler att tillämpas.
+- För enheter som har registrerats efter den 22 november 2019 och innan denna ändring införs i mars: De här enheterna har Microsoft Intune-appen installerad. SCEP-certifikat som har distribuerats till enheter och som har associerats med Wi-Fi-profiler fortsätter att tillämpas.
+- För registrering av nya Android Enterprise-dedikerade enheter efter att ändringen har införts i mars: Slutanvändarna ser en annan uppsättning steg på enheterna under registreringen. Registreringen startar fortfarande på samma sätt som i dag (med QR, NFC, Zero-Touch eller enhetsidentifierare), men det kommer inte att finnas något obligatoriskt appinstallationssteg. I stället installeras Microsoft Intune-appen automatiskt på enheter. Användarna behöver dessutom inte trycka på "Aktivera Intune-agent" under flödet. SCEP-certifikat som är associerade till WiFi-profiler kan distribueras till dessa enheter.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Du kan uppdatera vägledningen för slutanvändarna och informera supportavdelningen om den här ändringen. Vi kommer att uppdatera sidan Nyheter och meddela dig via meddelandecentret när ändringen börjar införas.
+
+#### <a name="additional-information"></a>Ytterligare information
+[Stöd för SCEP-certifikat i Android Enterprise-dedikerade enheter](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Uppdaterad supportinstruktion för mobilappen "Adobe Acrobat Reader för Intune"<!--5746776-->
 I MC188653 i slutet på augusti meddelade vi att Adobe Acrobat Reader för Intune-mobilappen når slutet på sin livslängd den 1 december 2019 och att Adobe planerar att stödja Intunes programskyddsprinciper i sin huvudsakliga app i Acrobat Reader. Sedan dess har vi fått feedback från kunder om att de behövde mer tid för att fortsätta att låta IT-administratörerna skapa mål och slutanvändare börja använda Adobe Acrobat Reader för Intune. Med tanke på den stora användningen av Adobe Acrobat Reader för Intune på slutanvändarnas enheter och dess betydelse i företagsscenarier vill vi se till att alla erfarenheter uppfyller din organisations behov av skydd av appar. 
