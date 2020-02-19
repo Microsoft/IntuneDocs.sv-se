@@ -20,7 +20,7 @@
   items:
     - name: Använda Autopilot till att registrera Windows-enheter
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: Registrera iOS-enheter med DEP
+    - name: Registrera iOS/iPadOS-enheter med DEP
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Begrepp
   items:
@@ -40,7 +40,7 @@
       href: device-enrollment-manager-enroll.md
     - name: Mappa enheter till grupper
       href: device-group-mapping.md
-- name: Instruktioner
+- name: Instruktionsguider
   items:
     - name: Konfigurera Windows-registrering
       items:
@@ -84,12 +84,12 @@
         - name: Samsung Knox Mobile Enrollment
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
-    - name: Ställ in iOS-registrering
+    - name: Konfigurera iOS/iPadOS-registrering
       href: ios-enroll.md
       items:
         - name: Program för enhetsregistrering
           href: device-enrollment-program-enroll-ios.md
-        - name: Konfigurera användarregistrering för iOS och iPadOS
+        - name: Konfigurera användarregistrering för iOS/iPadOS och iPadOS
           href: ios-user-enrollment.md
         - name: Åtgärder och alternativ som stöd för användarregistrering
           href: ios-user-enrollment-supported-actions.md
@@ -109,7 +109,7 @@
         - name: Felsöka enhetsregistrering
           href: troubleshoot-device-enrollment-in-intune.md
           displayName: sso
-        - name: Felsöka iOS-enhetsregistrering
+        - name: Felsöka iOS/iPadOS-enhetsregistrering
           href: troubleshoot-ios-enrollment-errors.md
         - name: Felsöka Windows-enhetsregistrering
           href: troubleshoot-windows-enrollment-errors.md
