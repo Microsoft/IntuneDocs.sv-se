@@ -25,11 +25,11 @@
           href: device-restart.md
     - name: Åtgärder för Apple-enhet
       items:
-        - name: Hitta förlorade iOS-enheter
+        - name: Lokalisera förlorade iOS/iPadOS-enheter
           href: device-locate.md
-        - name: Aktivera förlorat läge i iOS
+        - name: Aktivera förlorat läge på iiOS/iPadOSOS
           href: device-lost-mode.md
-        - name: Aktivera övervakat läge på iOS
+        - name: Aktivera övervakat läge på iOS/iPadOS
           href: device-supervised-mode.md
         - name: Ta bort macOS-enhet
           href: device-erase.md
