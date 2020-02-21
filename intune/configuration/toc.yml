@@ -23,7 +23,7 @@
           href: administrative-templates-windows.md
         - name: Uppdatera Office med hjälp av administrativa mallar
           href: administrative-templates-update-office.md
-    - name: Enhetsfunktioner i iOS och macOS
+    - name: Enhetsfunktioner i iOS/iPadOS och macOS
       href: device-features-configure.md
     - name: Begränsa enhetsinställningar och funktioner
       href: device-restrictions-configure.md
@@ -47,7 +47,7 @@
       items:
         - name: Per app-VPN för Android
           href: android-pulse-secure-per-app-vpn.md
-        - name: Per app-VPN för iOS
+        - name: Per app-VPN för iOS/iPadOS
           href: vpn-setting-configure-per-app.md
     - name: Wi-Fi-nätverk
       href: wi-fi-settings-configure.md
@@ -117,7 +117,7 @@
               href: wi-fi-settings-android-enterprise.md
             - name: Anpassad
               href: custom-settings-android-for-work.md
-        - name: iOS
+        - name: iOS/iPadOS
           items:
             - name: Enhetsfunktioner
               href: ios-device-features-settings.md

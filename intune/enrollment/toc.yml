@@ -100,7 +100,7 @@
     - name: Konfigurera registrering av macOS
       href: macos-enroll.md
       items:
-        - name: Programmet för enhetsregistrering eller Apple School Manager
+        - name: Automatisk enhetsregistrering
           href: device-enrollment-program-enroll-macos.md
     - name: Ofullständig registreringsrapport
       href: enrollment-report-company-portal-abandon.md

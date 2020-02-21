@@ -27,7 +27,7 @@
       items:
         - name: Lokalisera förlorade iOS/iPadOS-enheter
           href: device-locate.md
-        - name: Aktivera förlorat läge på iiOS/iPadOSOS
+        - name: Aktivera förlorat läge på iOS/iPadOS
           href: device-lost-mode.md
         - name: Aktivera övervakat läge på iOS/iPadOS
           href: device-supervised-mode.md
