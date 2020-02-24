@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dde69fc70522684193f9cf6712a2192f77110dab
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: b780f22fd6823499128a3975f1812a1d1f7c032b
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754260"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413777"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
@@ -36,7 +36,7 @@ Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och l�
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Välj **Enheter**. Den här vyn visar detaljerad information om enskilda enheter och vad du kan göra med dem, inklusive:
 
-   - **Översikt** visar en visuell ögonblicksbild av de registrerade enheterna och visar även hur många enheter som använder olika plattformar, inklusive Android, iOS och mycket mer.
+   - **Översikt** visar en visuell ögonblicksbild av de registrerade enheterna och visar även hur många enheter som använder olika plattformar, inklusive Android, iOS/iPadOS och mycket mer.
    - **Alla enheter** visar en lista över de registrerade enheter du hanterar.
 
      Använd funktionen **Exportera** för att skapa en .csv-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Microsoft Edge, Chrome).
@@ -70,7 +70,7 @@ Vilka åtgärder som är tillgängliga beror på enhetsplattformen och enhetens 
   - [Fjärrstyrning för Android](teamviewer-support.md)
   - [Synkronisera enhet](device-sync.md)
   - [Byta namn på en enhet](device-rename.md)
-  - [Skicka anpassade meddelanden](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [Skicka anpassade meddelanden](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [BitLocker Key-rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (endast Windows)
 
 ## <a name="next-steps"></a>Nästa steg

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 469ee615cd9a9f1d3a7aee40ce764b8d8100fe69
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 4db1a1a74c1a19f310aba0f1c10ed5d01869073f
+ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912896"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258138"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -44,7 +44,7 @@ Om du vill använda importerade PKCS-certifikat med Intune behöver du följande
 
   Den här anslutningsappen kan uppdatera sig automatiskt när nya versioner blir tillgängliga. Om du vill använda uppdateringsfunktionen måste du se till att brandväggarna är öppna så att anslutningsappen tillåts kontakta **autoupdate.msappproxy.net** på port **443**.
 
-  Mer information om alla nätverksslutpunkter som anslutningsappen har åtkomst till finns i [Krav för Intune-nätverkskonfiguration och bandbredd](../fundamentals/network-bandwidth-use.md).
+  Mer information finns i [Nätverksslutpunkter för Microsoft Intune](../fundamentals/intune-endpoints.md) och [Krav för Intune-nätverkskonfiguration och bandbredd](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:
 
@@ -207,7 +207,7 @@ När du har importerat certifikaten till Intune skapar du en profil för **PKCS-
 
    - **Avsett syfte**: Ange syftet med de certifikat som har importerats för den här profilen. Administratörer kan importera certifikat med olika syften (till exempel S/MIME-signering eller S/MIME-kryptering). Avsett syfte som valts i certifikatprofilen matchar certifikatprofilen med rätt importerade certifikat. Avsett syfte är en tagg för att gruppera importerade certifikat och garanterar inte att certifikat som importerats med den taggen uppfyller det avsedda syftet.  
    - **Certifikatets giltighetsperiod**: Om giltighetsperioden inte har ändrats i certifikatmallen är standardinställningen för det här alternativet ett år.
-   - **Nyckellagringsprovider (KSP)**: För Windows väljer du var du vill lagra nycklarna på enheten.
+   - **Nyckellagringsprovider (KSP)** : För Windows väljer du var du vill lagra nycklarna på enheten.
 
 5. Välj **OK** > **Skapa** för att spara profilen.
 
