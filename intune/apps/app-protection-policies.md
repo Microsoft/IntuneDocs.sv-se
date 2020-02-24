@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b5f973e5ce169edcf6149b0588c905d8497cca2
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: c7a6914e8174023704cfc593ec08a525ec5889f3
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885751"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437910"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -65,7 +65,7 @@ När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer
     | Värde/alternativ | Beskrivning |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Rikta till appar på alla enhetstyper | Använd det här alternativet om du vill att principen ska riktas mot appar på enheter i valfritt hanteringstillstånd. Välj **Nej** om du vill rikta till appar på specifika enhetstyper. Information finns i [Ange mål för appskyddsprinciper utifrån enhetens hanteringsstatus](#target-app-protection-policies-based-on-device-management-state) |
-    |     Enhetstyper | Använd det här alternativet för att ange huruvida den här principen gäller för MDM-hanterade enheter eller ohanterade enheter. För iOS APP-principer väljer du från **Ohanterade** och **Hanterade** enheter. För Android APP-principer väljer du från **Ohanterade**, **Android-enhetsadministratör** och **Android Enterprise**.  |
+    |     Enhetstyper | Använd det här alternativet för att ange huruvida den här principen gäller för MDM-hanterade enheter eller ohanterade enheter. När det gäller iOS/iPadOS APP-principer väljer du bland **Ohanterade** och **Hanterade** enheter. För Android APP-principer väljer du från **Ohanterade**, **Android-enhetsadministratör** och **Android Enterprise**.  |
     | Offentliga appar | Klicka på **Välj offentliga appar** för att välja de appar som ska vara mål. |
     | Anpassade appar | Klicka på **Välj anpassade appar** för att välja anpassade appar som mål baserat på ett paket-ID. |
     
@@ -103,7 +103,7 @@ När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer
 
 Slutanvändarna kan hämta apparna från App Store eller Google Play. Mer information finns i:
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-android.md)
-* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-ios.md)
+* [Vad som händer när din iOS/iPadOS-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-ios.md)
 
 ## <a name="change-existing-policies"></a>Ändra befintliga principer
 Du kan redigera en befintlig princip och tillämpa den på inriktade användare. När du ändrar befintliga principer ser dock inte användare som redan är inloggade i apparna ändringarna förrän efter åtta timmar.
@@ -123,7 +123,7 @@ För att kunna se effekten av ändringarna direkt måste slutanvändaren logga u
     | Värde/alternativ | Beskrivning |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Rikta till appar på alla enhetstyper | Använd det här alternativet om du vill att principen ska riktas mot appar på enheter i valfritt hanteringstillstånd. Välj **Nej** om du vill rikta till appar på specifika enhetstyper. Information finns i [Ange mål för appskyddsprinciper utifrån enhetens hanteringsstatus](#target-app-protection-policies-based-on-device-management-state) |
-    |     Enhetstyper | Använd det här alternativet för att ange huruvida den här principen gäller för MDM-hanterade enheter eller ohanterade enheter. För iOS APP-principer väljer du från **Ohanterade** och **Hanterade** enheter. För Android APP-principer väljer du från **Ohanterade**, **Android-enhetsadministratör** och **Android Enterprise**.  |
+    |     Enhetstyper | Använd det här alternativet för att ange huruvida den här principen gäller för MDM-hanterade enheter eller ohanterade enheter. När det gäller iOS/iPadOS APP-principer väljer du bland **Ohanterade** och **Hanterade** enheter. För Android APP-principer väljer du från **Ohanterade**, **Android-enhetsadministratör** och **Android Enterprise**.  |
     | Offentliga appar | Klicka på **Välj offentliga appar** för att välja de appar som ska vara mål. |
     | Anpassade appar | Klicka på **Välj anpassade appar** för att välja anpassade appar som mål baserat på ett paket-ID. |
 
@@ -166,7 +166,7 @@ För att kunna se effekten av ändringarna direkt måste slutanvändaren logga u
 ## <a name="target-app-protection-policies-based-on-device-management-state"></a>Ange mål för appskyddsprinciper utifrån enhetens hanteringsstatus
 I många organisationer är det vanligt att tillåta användare att använda både enheter som hanteras av hantering av mobilenheter (MDM) i Intune, till exempel företagsägda enheter, och ohanterade enheter som endast är skyddade med Intune-appskyddsprinciper. Ohanterade enheter är ofta kända som BYOD-enheter (Bring Your Own Devices).
 
-Eftersom Intune-appskyddsprinciper som är riktade till en användares identitet kan skyddsinställningarna för en användare gälla både för registrerade (MDM-hanterade) och icke-registrerade enheter (utan MDM). Därför kan du rikta en Intune-appskyddsprincip till antingen Intune-registrerade eller icke-registrerade iOS- och Android-enheter. Du kan ha en skyddsprincip för ohanterade enheter där ett strikt dataförlustskydd (DLP) används och en separat skyddsprincip för MDM-hanterade enheter, där du kan använda lite mindre strikta DLP-kontroller. Mer information om hur det här fungerar på personliga Android Enterprise-enheter finns i [Appskyddsprinciper och arbetsprofiler](android-deployment-scenarios-app-protection-work-profiles.md).
+Eftersom Intune-appskyddsprinciper som är riktade till en användares identitet kan skyddsinställningarna för en användare gälla både för registrerade (MDM-hanterade) och icke-registrerade enheter (utan MDM). Därför kan du rikta en Intune-appskyddsprincip till Intune-registrerade enheter eller icke-registrerade iOS/iPadOS- och Android-enheter. Du kan ha en skyddsprincip för ohanterade enheter där ett strikt dataförlustskydd (DLP) används och en separat skyddsprincip för MDM-hanterade enheter, där du kan använda lite mindre strikta DLP-kontroller. Mer information om hur det här fungerar på personliga Android Enterprise-enheter finns i [Appskyddsprinciper och arbetsprofiler](android-deployment-scenarios-app-protection-work-profiles.md).
 
 Om du vill skapa de här principerna, så gå till **Appar** > **Appskyddsprinciper** på Intune-konsolen och välj **Skapa princip**. Du kan även redigera eller en befintlig princip. För att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter går du till sidan **Appar** och bekräftar att **Rikta till appar på alla typer av enheter** är angett till **Ja**, som är standardvärdet. Om du vill tilldela detaljerat baserat på hanteringstillståndet anger du **Rikta till appar på alla typer av enheter** till **Nej**. 
 
@@ -182,15 +182,15 @@ Om du vill skapa de här principerna, så gå till **Appar** > **Appskyddsprinci
 
 För iOS-krävs ytterligare appkonfigurationsinställningar för att rikta in appinställningar (APP) till appar på Intune-registrerade enheter:
 
-- **IntuneMAMUPN** måste konfigureras för alla MDM-hanterade program. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** måste konfigureras för alla tredjeparts och verksamhetsspecifika MDM-hanterade program. **IntuneMAMDeviceID** ska konfigureras till enhetens ID-token. Exempelvis `key=IntuneMAMDeviceID, value={{deviceID}}`. Mer information finns i [Lägg till appkonfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md).
+- **IntuneMAMUPN** måste konfigureras för alla MDM-hanterade program. Mer information finns i [Hantera dataöverföring mellan iOS/iPadOS-appar med Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+- **IntuneMAMDeviceID** måste konfigureras för alla tredjeparts och verksamhetsspecifika MDM-hanterade program. **IntuneMAMDeviceID** ska konfigureras till enhetens ID-token. Exempelvis `key=IntuneMAMDeviceID, value={{deviceID}}`. Mer information finns i [Lägg till appkonfigurationsprinciper för hanterade iOS/iPadOS-enheter](app-configuration-policies-use-ios.md).
 - Om bara **IntuneMAMDeviceID** är konfigurerat kan Intune App betrakta enheten som ohanterad.
 
 > [!NOTE]
-> Läs [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.
+> Läs [MAM protection policies targeted based on management state](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) om du vill ha specifik information om iOS/iPadOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.
 
 ## <a name="policy-settings"></a>Principinställningar
-Välj någon av följande länkar om du vill se en fullständig lista med principinställningar för iOS och Android:
+Välj någon av följande länkar om du vill se en fullständig lista med principinställningar för iOS/iPadOS och Android:
 
 - [iOS-principer](app-protection-policy-settings-ios.md)
 - [Android-principer](app-protection-policy-settings-android.md)
@@ -200,4 +200,4 @@ Välj någon av följande länkar om du vill se en fullständig lista med princi
 
 ## <a name="see-also"></a>Se även
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-android.md)
-* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-ios.md)
+* [Vad som händer när din iOS/iPadOS-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-ios.md)

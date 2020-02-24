@@ -1,7 +1,7 @@
 ---
-title: Registrering av Apple School Manager-programmet för iOS-enheter
+title: Registrering av Apple School Manager-programmet för iOS/iPadOS-enheter
 titleSuffix: Microsoft Intune
-description: Lär dig hur du konfigurerar Apple School Manager-programmets registrering av företagsägda iOS-enheter med Intune.
+description: Lär dig hur du konfigurerar Apple School Manager-programmets registrering av företagsägda iOS/iPadOS-enheter med Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c574714b4bd4f748c2dbe898555de35b0e03190
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 3336ed09c414538e2879a7c50d1e3a0111f58b11
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691826"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415381"
 ---
-# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Konfigurera registrering av iOS-enheter med Apple School Manager
+# <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Konfigurera registrering av iOS/iPadOS-enheter med Apple School Manager
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Du kan konfigurera Intune till att registrera iOS-enheter som köpts via [Apple School Manager](https://school.apple.com/)-programmet. Med hjälp av Intune med Apple School Manager kan du registrera många iOS-enheter utan att ens behöva röra dem. När en student eller en lärare sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
+Du kan konfigurera Intune till att registrera iOS/iPadOS-enheter som köpts via [Apple School Manager](https://school.apple.com/)-programmet. Med hjälp av Intune med Apple School Manager kan du registrera många iOS/iPadOS-enheter utan att ens behöva röra dem. När en student eller en lärare sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
 
 Om du vill aktivera Apple School Manager-registrering använder du både Intune-portalen och Apple School Manager-portalen. En lista med serienummer eller inköpsordernummer krävs så att du kan tilldela enheter till Intune för hantering. Du kan skapa DEP-registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
@@ -44,7 +44,7 @@ Apple School Manager-registrering kan inte användas med [Apples program för en
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Skaffa en Apple-token och tilldela enheter
 
-Innan du kan registrera företagsägda iOS-enheter med Apple School Manager behöver du en tokenfil (.p7m) från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till Apple School Manager. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler. I Apples portal kan du också tilldela de enhetsserienummer som ska hanteras.
+Innan du kan registrera företagsägda iOS/iPadOS-enheter med Apple School Manager behöver du en tokenfil (.p7m) från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till Apple School Manager. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler. I Apples portal kan du också tilldela de enhetsserienummer som ska hanteras.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple-token
 
@@ -76,7 +76,7 @@ I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.
 ![Skärmbild av någon som anger det Apple-ID som användes för att skapa registreringsprogramtoken och bläddrat till denna token.](./media/apple-school-manager-set-up-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>Steg 4. Överför din token
-I rutan **Apple-token**, bläddrar du till certifikatfilen (.pem), väljer **Öppna** och väljer sedan **Skapa**. Med pushcertifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter. Intune synkroniserar automatiskt dina Apple School Manager-enheter från Apple.
+I rutan **Apple-token**, bläddrar du till certifikatfilen (.pem), väljer **Öppna** och väljer sedan **Skapa**. Med pushcertifikatet kan Intune registrera och hantera iOS/iPadOS-enheter genom push-överföring av principer till registrerade mobila enheter. Intune synkroniserar automatiskt dina Apple School Manager-enheter från Apple.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
 Nu när du har installerat din token, kan du skapa en registreringsprofil för Apple School-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
@@ -106,7 +106,7 @@ Nu när du har installerat din token, kan du skapa en registreringsprofil för A
     > Dessa stöds inte vid autentisering med Apples installationsassistent.
 
 6. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
-    **Övervakade** enheter ger dig fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
+    **Övervakade** enheter ger dig fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS/iPadOS-enheter.
 
     Användare meddelas att deras enheter är övervakade på två sätt:
 
@@ -114,9 +114,9 @@ Nu när du har installerat din token, kan du skapa en registreringsprofil för A
    - Skärmen **Inställningar** > **Allmänt** > **Om** säger: ”Denna iPhone är övervakad. Contoso can monitor your Internet traffic and locate this device." (Denna iPhone är övervakad. Contoso kan övervaka din Internettrafik och hitta denna enhet.)
 
      > [!NOTE]
-     > En enhet som registrerats utan övervakning kan bara återställas genom att använda Apple Configurator. Om du återställer enheten på det här sättet, måste du ansluta en iOS-enhet till en Mac-dator med en USB-kabel. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3).
+     > En enhet som registrerats utan övervakning kan bara återställas genom att använda Apple Configurator. Om du återställer enheten på det här sättet, måste du ansluta en iOS/iPadOS-enhet till en Mac-dator med en USB-kabel. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-7. Välj om du vill ha låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar iOS-inställningarna som tillåter att hanteringsprofilen tas bort från **Inställningar**-menyn. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en rensning av enheten. Sådana enheter måste ha hanteringsläget **Övervakad** inställt på *Ja*. 
+7. Välj om du vill ha låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar iOS/iPadOS-inställningarna som tillåter att hanteringsprofilen tas bort från menyn **Inställningar**. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en rensning av enheten. Sådana enheter måste ha hanteringsläget **Övervakad** inställt på *Ja*. 
 
 8. Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Det gör du genom att välja **Ja** under **Delad iPad** (det här alternativet kräver att **Registrera utan användartillhörighet** och **Övervakat** är inställda på **Ja**). Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Läs mer om [Delad iPad](../fundamentals/education-settings-configure-ios-shared.md) och [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
@@ -135,7 +135,7 @@ Nu när du har installerat din token, kan du skapa en registreringsprofil för A
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |     <strong>Avdelningsnamn</strong>     |                                                             Visas när användare trycker på <strong>Om konfiguration</strong> vid aktiveringen.                                                              |
     |    <strong>Avdelningens telefonnummer</strong>     |                                                          Visas när användaren klickar på knappen <strong>Behöver hjälp</strong> vid aktiveringen.                                                          |
-    | <strong>Alternativ för installationsassistenten</strong> |                                                     Följande valfria inställningar kan ställas in senare i iOS <strong>Inställningar</strong>-menyn.                                                      |
+    | <strong>Alternativ för installationsassistenten</strong> |                                                     Följande valfria inställningar kan du ställa in senare på menyn <strong>Inställningar</strong> i iOS/iPadOS.                                                      |
     |        <strong>Lösenord</strong>         | Fråga efter lösenord under aktiveringen. Kräv alltid ett lösenord för osäkrade enheter om inte åtkomsten kontrolleras på något annat sätt (t.ex. helskärmsläge som begränsar enheten till en app). |
     |    <strong>Platstjänster</strong>    |                                                                 Om den här funktionen är aktiverad frågar installationsassistenten efter tjänsten under aktivering.                                                                  |
     |         <strong>Återställa</strong>         |                                                                Om den här funktionen är aktiverad frågar Installationsassistenten om iCloud-säkerhetskopiering vid aktivering.                                                                 |
@@ -184,4 +184,4 @@ Apple School Manager-enheter som hanteras av Intune måste tilldelas en registre
 
 ## <a name="distribute-devices-to-users"></a>Distribuera enheter till användare
 
-Du har aktiverat hantering och synkronisering mellan Apple och Intune och har tilldelat en profil så att dina Apple School-enheter kan registreras. Du kan nu distribuera enheter till användare. När en Apple School Manager-enhet i iOS aktiveras kommer den att registreras för hantering av Intune. Profiler kan inte tilldelas till aktiverade enheter som används för tillfället förrän enheten har rensats.
+Du har aktiverat hantering och synkronisering mellan Apple och Intune och har tilldelat en profil så att dina Apple School-enheter kan registreras. Du kan nu distribuera enheter till användare. När en Apple School Manager-enhet i iOS/iPadOS aktiveras registreras den för hantering av Intune. Profiler kan inte tilldelas till aktiverade enheter som används för tillfället förrän enheten har rensats.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812173"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413653"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune
 
@@ -104,7 +104,9 @@ Intune innehåller också en uppsättning inbyggda efterlevnadsprincipinställni
   - Tillåt att företagsportalen använder platstjänster.
   - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel. Utvärderingen utlöses genom att företagsportalappen öppnas, eller att enheten fysiskt flyttas minst 500 meter. Om enheten inte flyttas 500 meter inom 72 timmar, måste användaren öppna företagsportalappen för utökad utvärdering av upplåsningen.
 
-- **Giltighetsperiod för efterlevnadsstatus (dagar)** : Ange inom vilken tidsperiod enheterna ska rapportera status för alla mottagna efterlevnadsprinciper. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar.
+- **Giltighetsperiod för efterlevnadsstatus (dagar)** : Ange inom vilken tidsperiod enheterna ska rapportera status för alla mottagna efterlevnadsprinciper. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar. Minimivärdet är 1 dag.
+
+  Den här inställningen visar **Är aktiv** för efterlevnadsstandardpolicyn (**Enheter** > **Övervaka** > **Ställa in regelefterlevnad**). Bakgrundsaktiviteten för den här principen körs en gång om dagen.
 
 Du kan använda dessa inbyggda principer till att övervaka inställningarna. Intune [uppdaterar eller söker efter uppdateringar](create-compliance-policy.md#refresh-cycle-times) med olika intervall, beroende på enhetsplattform. [Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune](../configuration/device-profile-troubleshoot.md) är en bra resurs.
 

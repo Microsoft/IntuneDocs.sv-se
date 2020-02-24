@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b643ed41d01b70376dac32c26a66dcf9f9735ceb
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: c4b3313d5ec7fe81944431276a63bfafb7a1b3dc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907227"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413635"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Återställa lösenord på Windows-enheter med Intune
 
@@ -60,7 +60,7 @@ Ersätt ditt *klientorganisations-ID* med det Azure AD Directory-ID som finns i 
 Ange värdet för denna CSP till **Sant**.
 
 > [!TIP]
-> När du har skapat principen kan du tilldela (eller distribuera) den till en grupp. Principen kan tilldelas till användar- eller enhetsgrupper. Om du tilldelar den till en användargrupp kan gruppen innehålla användare som har andra enheter, till exempel iOS. Tekniskt sett tillämpas principen inte, men dessa enheter ingår ändå i statusinformationen.
+> När du har skapat principen kan du tilldela (eller distribuera) den till en grupp. Principen kan tilldelas till användar- eller enhetsgrupper. Om du tilldelar den till en användargrupp kan gruppen innehålla användare som har andra enheter, till exempel iOS/iPadOS. Tekniskt sett tillämpas principen inte, men dessa enheter ingår ändå i statusinformationen.
 
 ## <a name="reset-the-passcode"></a>Återställa lösenordet
 

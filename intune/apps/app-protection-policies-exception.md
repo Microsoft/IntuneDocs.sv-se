@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ea66458060417fc828b2b7735b384e8cd3e25a9
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: 09c8a8819c288663936174e9317267c39eac63bc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839384"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437859"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Skapa undantag till dataöverföringsprincipen Intune-appskydd (APP)
 
@@ -38,7 +38,7 @@ I en Intune-princip för programskydd betyder inställningen **Tillåt att appen
 > Att ändra eller lägga till undantag för dataöverföringsprinciper påverkar inte andra appskyddsprinciper, som till exempel begränsningar för att klippa ut, kopiera och klistra in. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Undantag vid iOS-dataöverföring
-Du kan konfigurera dataöverföringsundantag för en princip med iOS som mål med hjälp av URL-protokoll. Om du vill lägga till ett undantag kan du läsa mer i dokumentationen från apputvecklaren om vilka URL-protokoll som stöds. Mer information om undantag vid iOS-dataöverföring finns i [Principinställningar för iOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+Du kan konfigurera dataöverföringsundantag för en princip med iOS/iPadOS som mål med hjälp av URL-protokoll. Om du vill lägga till ett undantag kan du läsa mer i dokumentationen från apputvecklaren om vilka URL-protokoll som stöds. Mer information om undantag vid iOS/iPadOS-dataöverföring finns i [Principinställningar för iOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > Microsoft har inte en metod för att hitta URL-protokollet för att skapa appundantag för program från tredje part manuellt. 
@@ -53,9 +53,9 @@ Du kan konfigurera dataöverföringsundantag för en princip med Android som må
 ### <a name="example"></a>Exempel
 Genom att lägga till **Webex**-paketet som ett undantag till MAM-dataöverföringsprincipen, tillåts att Webex-länkar i ett hanterat e-postmeddelande i Outlook öppnas direkt i Webex-programmet. Dataöverföringen är fortfarande begränsad i andra ohanterade appar.
 
-- **Webex**-exempel för iOS:   Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>wbx</code>
+- **Webex**-exempel för iOS/iPadOS:   Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>wbx</code>
     
-- **Kartor**-exempel för iOS:   Om du vill göra ett undantag för den inbyggda appen **Kartor** så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>maps</code>
+- **Maps**-exempel för iOS/iPadOS:   Om du vill göra ett undantag för den inbyggda appen **Kartor** så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>maps</code>
 
 - **Webex**-exempel för Android:   Om du vill göra ett undantag för **Webex**-appen så att den kan anropas av Intune-hanterade appar, måste du lägga till ett dataöverföringsundantag för följande sträng: <code>com.cisco.webex.meetings</code>
     
@@ -66,7 +66,7 @@ Genom att lägga till **Webex**-paketet som ett undantag till MAM-dataöverföri
     
     <code>com.samsung.android.messaging</code>
 
-- Exempel på **installationsprogram för Android-certifikat**: För att undanta den inbyggda appen för **certifikatinstallation** så att Outlook för Android kan installera ett S/MIME-certifikat (levereras som en e-postbilaga) i Android KeyStore måste du lägga till dataöverföringsundantaget för följande sträng: <code>com.android.certinstaller</code>. Mer information finns i avsnittet om [känslighetsetiketter och skydd i Outlook för iOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
+- Exempel på **installationsprogram för Android-certifikat**: För att undanta den inbyggda appen för **certifikatinstallation** så att Outlook för Android kan installera ett S/MIME-certifikat (levereras som en e-postbilaga) i Android KeyStore måste du lägga till dataöverföringsundantaget för följande sträng: <code>com.android.certinstaller</code>. Mer information finns i [Känslighetsetiketter och skydd i Outlook för iOS/iPadOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
 
 ## <a name="next-steps"></a>Nästa steg
 

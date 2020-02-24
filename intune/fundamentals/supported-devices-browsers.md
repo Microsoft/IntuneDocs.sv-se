@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e28f8a2cc43e4ca210a391151383633da457c056
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73415042"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437927"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Operativsystem och webbläsare som stöds i Intune
 
@@ -87,16 +87,16 @@ Följande är en lista över Samsung-enhetsmodeller som inte har stöd för Knox
 
 ### <a name="windows-pc-software-client"></a>Windows PC-programvaruklient
 
-En [Intune-programvaruklient](manage-windows-pcs-with-microsoft-intune.md) kan distribueras och installeras på Windows-datorer som en alternativ metod för registrering. Den här funktionen är bara tillgänglig i den klassiska Intune-portalen. Du kan använda Intune-programvaruklienten för att hantera datorer med Windows 7 och senare, förutom Windows 10 Home Edition.
+En [Intune-programvaruklient](manage-windows-pcs-with-microsoft-intune.md) kan distribueras och installeras på Windows-datorer som en alternativ metod för registrering. Den här funktionen är bara tillgänglig i den klassiska Intune-portalen. Du kan använda Intune-programvaruklienten till att hantera datorer med Windows 10 och senare, förutom Windows 10 Home Edition.
 
 > [!Note]
 > Microsoft tillkännagav att stöd för Windows 7 upphör den 14 januari 2020. På samma datum upphör även Intunes stöd för enheter med Windows 7.
 >
-> Mer information finns i [Intune-plan för förändring: snart slut på supporten för Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
+> Mer information finns i [Intune-plan för förändring: Supporten för Windows 7 upphör](https://docs.microsoft.com/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
 >
-> Microsoft Intune kommer att dra tillbaka supporten för den Silverlight-baserade Intune-konsolen den 15 oktober 2020. Den här indragningen omfattar slut support för Silverlight-konsolens konfigurerade PC-programklient (kallas även för PC-agent)
+> Microsoft Intune kommer att dra tillbaka supporten för den Silverlight-baserade Intune-konsolen den 15 oktober 2020. Den här indragningen omfattar slut support för Silverlight-konsolens konfigurerade PC-programklient (kallas även för PC-agent).
 >
-> Mer information finns i [Microsoft Intune avslutar supporten för den Silverlight-baserade administratörskonsolen](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249)
+> Mer information finns i [Microsoft Intune avslutar supporten för den Silverlight-baserade administratörskonsolen](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249).
 
 <!--  ### Exchange ActiveSync management
 

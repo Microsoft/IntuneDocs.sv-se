@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a5629e6a318836e23c6a2f7fceb59363a0ed72
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: cd6e58efa096c006780c17d991a9ea5da26099d4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812501"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415550"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Återställa eller ta bort ett enhetslösenord i Intune
 
@@ -35,8 +35,8 @@ Det här dokumentet beskriver återställning av lösenord på såväl enhets- s
 | ---- | ---- |
 | Android-enheter på version 6.x eller tidigare | Ja |
 | Android Enterprise-enheter registrerade som enhetsägare | Ja |
-| iOS-enheter | Ja |
-| iOS-enheter som registrerats med användarregistrering | Nej |
+| iOS-/iPadOS-enheter | Ja |
+| iOS/iPadOS-enheter som registrerats med användarregistrering | Nej |
 | Android-enheter som registrerats med en arbetsprofil | Nej |
 | Android-enheter på version 7.0 eller senare | Nej |
 | macOS | Nej |
@@ -68,9 +68,9 @@ Android Enterprise-arbetsprofilenheter som stöds får ett nytt lösenord för a
 För Android Enterprise-enheter som kör version 8.x eller senare och som har registrerats med en arbetsprofil informeras slutanvändarna att de ska aktivera det återställa lösenordet när registreringen har slutförts. Meddelandet visas om ett lösenord för arbetsprofilen krävs och har ställts in. När de har angett lösenordet tas meddelandet bort.
 
 
-## <a name="remove-ios-passcodes"></a>Ta bort iOS-lösenord
+## <a name="remove-iosipados-passcodes"></a>Ta bort iOS/iPadOS-lösenord
 
-Lösenord tas bort från iOS-enheter istället för att återställas. Om en efterlevnadsprincip för lösenord har angetts uppmanar enheten användaren att ange ett nytt lösenord i inställningarna.
+Lösenord tas bort från iOS/iPadOS-enheter istället för att återställas. Om en efterlevnadsprincip för lösenord har angetts uppmanar enheten användaren att ange ett nytt lösenord i inställningarna.
 
 ## <a name="next-steps"></a>Nästa steg
 

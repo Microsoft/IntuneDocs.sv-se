@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0440e2d6f5890b20ccf020c40bb1037bcfcae38
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 64faf797c69302e2a5cdbdde090330ab99fcc2e4
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564128"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437893"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Rensar data selektivt med villkorsstyrda startåtgärder för appskyddsprinciper i Intune
 
@@ -49,7 +49,7 @@ Du kan uttryckligen välja att rensa ditt företags data från slutanvändarens 
 Tabellen över inställningar för appskyddsprinciper har kolumner för **Inställning**, **Värde** och **Åtgärd**.
 
 ### <a name="ios-policy-settings"></a>iOS-principinställningar
-För iOS kan du konfigurera åtgärder för följande inställningar med hjälp av listrutan **Inställning**:
+För iOS/iPadOS kan du konfigurera åtgärder för följande inställningar med hjälp av listrutan **Inställning**:
 - Högsta antal PIN-försök
 - Offline-respitperiod
 - Jailbrokade/rotade enheter
@@ -59,7 +59,7 @@ För iOS kan du konfigurera åtgärder för följande inställningar med hjälp 
 - Enhetsmodell(er)
 - Högsta tillåtna hotnivå för enhet
 
-Om du vill använda inställningen **Enhetsmodell(er)** anger du en semikolonavgränsad lista över iOS-modellidentifierare. De här värdena är inte skiftlägeskänsliga. Förutom i Intune-rapportering av indata för enhetsmodellerna kan du hitta en identifierare för iOS-modeller i kolumnen Enhetstyp i [dokumentationen om HockeyApp-stöd](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) eller på den här [GitHub-lagringsplatsen från tredje part](https://gist.github.com/adamawolf/3048717).<br>
+Om du vill använda inställningen **Enhetsmodell(er)** anger du en semikolonavgränsad lista med iOS/iPadOS-modellidentifierare. De här värdena är inte skiftlägeskänsliga. Förutom i Intune-rapportering av indata för enhetsmodellerna kan du hitta en identifierare för iOS/iPadOS-modeller i kolumnen Enhetstyp i [dokumentationen om HockeyApp-stöd](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) eller på den här [GitHub-lagringsplatsen från tredje part](https://gist.github.com/adamawolf/3048717).<br>
 Exempel på indata: *iPhone5,2;iPhone5,3*
 
 På slutanvändarens enheter kan Intune-klienten utföra åtgärder baserat på en enkel matchning av enhetsmodellsträngar som angetts i Intune för programskyddsprinciper. Matchningen beror helt på vad enheten rapporterar. Du (IT-administratören) uppmuntras säkerställa att det avsedda beteendet fungerar genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. Standardvärdet är **Inte konfigurerat**.<br>
@@ -67,8 +67,8 @@ Ange en av följande åtgärder:
 - Tillåt angivna (Blockera icke-angivna)
 - Tillåt angivna (Rensa icke-angivna)
 
-**Vad händer om IT-administratören matar in en annan lista över iOS-modellidentifierare mellan principer för samma appar för samma användare i Intune?**<br>
-När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför en del av de listade iOS modellidentifierarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar till exempel ”iPhone5,2;iPhone5,3” medan *Princip B* specificerar”iPhone5,3”. Den resulterande principen för Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”iPhone5,3”. 
+**Vad händer om IT-administratören matar in en annan lista över iOS/iPadOS-modellidentifierare mellan principer för samma appar för samma användare i Intune?**<br>
+När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför en del av de listade iOS/iPadOS-modellidentifierarna i *Princip A* och *Princip B* som riktas till samma app/användare-kombination. *Princip A* specificerar till exempel ”iPhone5,2;iPhone5,3” medan *Princip B* specificerar”iPhone5,3”. Den resulterande principen för Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”iPhone5,3”. 
 
 ### <a name="android-policy-settings"></a>Principinställningar för Android
 
@@ -93,7 +93,7 @@ Exempel på indata: *Tillverkare A;Tillverkare B*
 >[!NOTE]
 > Nedan visas några vanliga tillverkare som har rapporterats från enheter med Intune. Dessa kan användas som indata: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
-På slutanvändarens enheter kan Intune-klienten utföra åtgärder baserat på en enkel matchning av enhetsmodellsträngar som angetts i Intune för programskyddsprinciper. Matchningen beror helt på vad enheten rapporterar. Du (IT-administratören) uppmuntras att säkerställa att det avsedda beteendet fungerar genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. Standardvärdet är **Inte konfigurerat**.<br>
+På slutanvändarens enheter kan Intune-klienten utföra åtgärder baserat på en enkel matchning av enhetsmodellsträngar som angetts i Intune för programskyddsprinciper. Matchningen beror helt på vad enheten rapporterar. Du (IT-administratören) uppmuntras säkerställa att det avsedda beteendet fungerar genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. Standardvärdet är **Inte konfigurerat**.<br>
 Ange en av följande åtgärder: 
 - Tillåt angivna (Blockera på icke-angivna)
 - Tillåt angivna (Rensa på icke-angivna)

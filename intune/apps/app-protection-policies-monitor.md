@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36a84296aabd2d78cbc3cdc14ffb8f696afa5c22
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 899e2d2dc8458d0909f01e9dfcc1056874ef0fa7
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205266"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437978"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -51,8 +51,8 @@ Kvarhållningsperioden för appskyddsdata är 90 dagar. Alla appinstanser som ha
 - **Flaggade användare**: Antalet användare som har problem med sina enheter. Upplåsta (iOS) och rotade (Android) enheter rapporteras under **Flaggade användare**. Även användare med enheter som är flaggade av Googles SafetyNet-kontroll för enhetsattestering (om det är aktiverat av IT-administratören) rapporteras här. 
 - **Användare med potentiellt skadliga appar**: Antalet användare som kan ha en skadlig app på en Android-enhet som identifieras av Google Play Protect. 
 - **Användarstatus för iOS** och **Användarstatus för Android**: Antal användare som har använt en app som har en princip tilldelad till dem i en arbetskontext för den relaterade plattformen. Den här informationen visar antalet användare som hanteras av principen, samt antalet användare som använder en app som ingen princip i en arbetskontext inriktar sig på. Du kan välja att lägga till dessa användare i principen.
-- **Viktigaste skyddade iOS-appar** och **Viktigaste skyddade Android-appar**: Den här informationen, som baseras på de mest använda iOS- och Android-apparna, visar antalet skyddade och oskyddade appar efter plattform.
-- **Populära konfigurerade iOS-appar utan registrering** och **Populära konfigurerade Android-appar utan registrering**: Den här informationen, som baseras på de mest använda iOS- och Android-apparna för oregistrerade enheter, visar antalet konfigurerade appar efter plattform (som använder en appkonfigureringspolicy).
+- **De viktigaste skyddade iOS/iPadOS-apparna** och **De viktigaste skyddade Android-apparna**: Den här informationen, som baseras på de mest använda iOS/iPadOS- och Android-apparna, visar antalet skyddade och oskyddade appar efter plattform.
+- **Populära konfigurerade iOS/iPadOS-appar utan registrering** och **Populära konfigurerade Android-appar utan registrering**: Den här informationen, som baseras på de mest använda iOS/iPadOS- och Android-apparna för oregistrerade enheter, visar antalet konfigurerade appar efter plattform (som använder en appkonfigureringspolicy).
 
     > [!NOTE]
     > Om du har flera principer per plattform anses en användare vara hanterad av en princip när användaren har minst en tilldelad princip.
@@ -170,9 +170,9 @@ Följ de här stegen om du vill skapa en appskyddsfil i . csv-format eller en ap
     ![Skärmbild av bekräftelserutan Spara rapport](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS-modell. I Intune når du dessa fält genom att välja **Appar** > **Appskyddsstatus** > **Appskyddsrapport: iOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodellen (Android och iOS) och **lägsta tillåtna version för Android-säkerhetsuppdateringar**.   
+> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS/iPadOS-modell. I Intune når du dessa fält genom att välja **Appar** > **Appskyddsstatus** > **Appskyddsrapport: iOS/iPadOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodellen (Android och iOS) och **lägsta tillåtna version för Android-säkerhetsuppdateringar**.   
  
 ## <a name="see-also"></a>Se även
-- [Hantera dataöverföring mellan iOS-appar](data-transfer-between-apps-manage-ios.md)
+- [Hantera dataöverföring mellan iOS/iPadOS-appar](data-transfer-between-apps-manage-ios.md)
 - [Vad som händer när din Android-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-android.md)
-- [Vad som händer när din iOS-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-ios.md)
+- [Vad som händer när din iOS/iPadOS-app hanteras av appskyddsprinciper](../fundamentals/end-user-mam-apps-ios.md)

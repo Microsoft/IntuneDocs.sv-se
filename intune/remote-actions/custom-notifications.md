@@ -1,7 +1,7 @@
 ---
 title: Skicka anpassade meddelanden till användare med Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Använda Intune för att skapa och skicka anpassade push-meddelanden till användare av iOS- och Android-enheter
+description: Använda Intune för att skapa och skicka anpassade push-meddelanden till användare av iOS/iPadOS- och Android-enheter
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -18,30 +18,30 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b7617ad6a2d9aa756ddf9a8a4833289e5710ff
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 412dc631f2092d1eb7d9a7332b903a4742472202
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517526"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413890"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
-Använd Microsoft Intune för att skicka anpassade meddelanden till användare av hanterade iOS- och Android-enheter. Dessa meddelanden visas som push-standardmeddelanden från företagsportalappen och Microsoft Intune-appen på en användares enhet, på samma sätt som meddelanden från andra program visas på enheten. Anpassade Intune-meddelanden stöds inte av macOS- och Windows-enheter.   
+Använd Microsoft Intune för att skicka anpassade meddelanden till användare av hanterade iOS/iPadOS- och Android-enheter. Dessa meddelanden visas som push-standardmeddelanden från företagsportalappen och Microsoft Intune-appen på en användares enhet, på samma sätt som meddelanden från andra program visas på enheten. Anpassade Intune-meddelanden stöds inte av macOS- och Windows-enheter.   
 
 Anpassade meddelanden innehåller en kort rubrik och en meddelandetext på högst 500 tecken. Dessa meddelanden kan anpassas för valfritt kommunikationssyfte.
 
-### <a name="what-the-notification-looks-like-on-an-ios-device"></a>Så här ser meddelandet ut på en iOS-enhet
+### <a name="what-the-notification-looks-like-on-an-iosipados-device"></a>Så här ser meddelandet ut på en iOS/iPadOS-enhet
 
-Om du har företagsportalappen öppen på en iOS-enhet liknar meddelandet följande skärmbild:
+Om du har företagsportalappen öppen på en iOS/iPadOS-enhet ser meddelandet ut ungefär som på följande skärmbild:
 
 > [!div class="mx-imgBorder"]
-> ![Testmeddelande för företagsportalen i iOS](./media/custom-notifications/105046-1.png)
+> ![Testmeddelande för företagsportalen i iOS/iPadOS](./media/custom-notifications/105046-1.png)
 
 Om enheten är låst liknar meddelandet följande skärmbild:
 
 > [!div class="mx-imgBorder"]
-> ![Testmeddelande om låst iOS-enhet](./media/custom-notifications/105046-2.png)
+> ![Testmeddelande om låst iOS/iPadOS-enhet](./media/custom-notifications/105046-2.png)
 
 ### <a name="what-the-notification-looks-like-on-an-android-device"></a>Så här ser meddelandet ut på en Android-enhet
 
@@ -75,14 +75,14 @@ Om du har företagsportalappen öppen på en Android-enhet liknar meddelandet f�
 - När du skickar meddelanden till enskilda enheter kan du bara skicka upp till 10 meddelanden per timme till samma enhet. 
 - Du kan skicka meddelanden till flera användare eller enheter genom att tilldela meddelandet till grupper. När du använder grupper kan varje meddelande vara direkt riktat till 25 grupper. Kapslade grupper räknas inte mot den här summan.  
 
-  Grupper kan innehålla användare eller enheter, men meddelanden skickas endast till användare, och till alla iOS- eller Android-enheter som användaren har registrerat.  
+  Grupper kan innehålla användare eller enheter, men meddelanden skickas endast till användare, och till alla iOS/iPadOS- eller Android-enheter som användaren har registrerat.  
 - Du kan skicka meddelanden till en enskild enhet. I stället för att använda grupper väljer du en enhet och använder sedan en fjärransluten [enhetsåtgärd](device-management.md#available-device-actions) för att skicka det anpassade meddelandet.  
 
 **Leverans**:  
 - Intune skickar meddelandet till användarnas företagsportalapp eller Microsoft Intune-appen, som sedan skapar push-meddelandet. Användarna behöver inte vara inloggade i appen för att meddelandet ska kunna push-överföras till enheten.  
 - Varken Intune, företagsportalappen eller Microsoft Intune-appen kan garantera att ett anpassat meddelande levereras. Anpassade meddelanden kan visas efter flera timmars fördröjning, eller kanske inte alls. Därför bör de inte användas för brådskande meddelanden.  
-- Anpassade meddelanden från Intune visas på enheter som vanliga push-meddelanden. Om appen Företagsportal är öppen på en iOS-enhet när den tar emot meddelandet visas meddelandet i appen i stället för som ett push-meddelande.  
-- Anpassade meddelanden kan visas på låsskärmar på både iOS- och Android-enheter, beroende på enhetsinställningarna.  
+- Anpassade meddelanden från Intune visas på enheter som vanliga push-meddelanden. Om appen Företagsportal är öppen på en iOS/iPadOS-enhet när den tar emot meddelandet visas meddelandet i appen i stället för som ett push-meddelande.  
+- Anpassade meddelanden kan visas på låsskärmar på både iOS/iPadOS- och Android-enheter, beroende på enhetsinställningarna.  
 - Andra appar kan ha åtkomst till data i dina anpassade meddelanden på Android-enheter. Använd dem inte för känslig kommunikation.  
 - Användare av en enhet som nyligen har avregistrerats eller användare som har tagits bort från en grupp kan fortfarande få ett anpassat meddelande som skickas till den gruppen senare.  Om du lägger till en användare i en grupp efter att ett anpassat meddelande har skickats till gruppen, kan den nyligen tillagda användaren på motsvarande sätt ta emot det meddelande som skickades tidigare.  
 
@@ -127,7 +127,7 @@ Intune bearbetar meddelandet direkt. Den enda bekräftelse på att meddelandet h
 
 På en enhet ser användarna anpassade meddelanden som skickas av Intune som ett push-standardmeddelande från företagsportalappen eller Microsoft Intune-appen. Dessa meddelanden liknar de push-meddelanden som användarna tar emot från andra appar på enheten.  
 
-Om appen Företagsportal är öppen när ett meddelande tas emot på en iOS-enhet visas meddelandet i appen i stället för som ett push-meddelande.  
+Om appen Företagsportal är öppen när ett meddelande tas emot på en iOS/iPadOS-enhet visas meddelandet i appen i stället för som ett push-meddelande.  
 
 Meddelandet är kvar tills användaren stänger det.  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee8bc3cdee9f61a901854e08000e9e2cbbb2864
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: f0976ff8e6ec45f1f861fd4a4e0474255d701ae4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955379"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414265"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorisera enheter i grupper
 
@@ -32,7 +32,7 @@ Om du vill få en enklare hantering av enheter kan du använda Microsoft Intunes
 
 Enhetskategorier använder följande arbetsflöde:
 1. Skapa kategorier som användare kan välja från när de registrerar sina enheter.
-2. När användare av iOS- och Android-enheter registrerar en enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. Om de vill tilldela en kategori till en Windows-enhet måste användarna använda webbplatsen Företagsportal.
+2. När användare av iOS/iPadOS- och Android-enheter registrerar en enhet, så måste de välja en kategori från listan med kategorier som du har konfigurerat. Om de vill tilldela en kategori till en Windows-enhet måste användarna använda webbplatsen Företagsportal.
 3. Du kan sedan distribuera principer och appar för dessa grupper.
 
 Du kan skapa vilken typ av enhetskategori som du vill. Exempel:
@@ -76,13 +76,13 @@ Om kolumnen **Enhetskategori** inte visas, väljer du **Kolumner** > **Kategori*
 
 ## <a name="after-you-configure-device-groups"></a>När du har konfigurerat enhetsgrupper
 
-När användare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Intune-enhetsgruppen eller Active Directory-säkerhetsgruppen som motsvarar den kategori som har valts.
+När användare av iOS/iPadOS- och Android-enheter registrerar sin enhet, så måste de välja en kategori från listan med kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Intune-enhetsgruppen eller Active Directory-säkerhetsgruppen som motsvarar den kategori som har valts.
 
 Windows-användare bör använda den nya webbplatsen för företagsportalen och välja en kategori där.
 
 Oavsett vilken plattform användarna har kan de alltid gå till portal.manage.microsoft.com efter att enheten registrerats. Få användaren att gå till **Mina enheter** på företagsportalens webbplats. Användaren kan välja en registrerad enhet som visas på sidan och sedan välja en kategori.
 
-Efter att du har valt en kategori, läggs enheten automatiskt till i motsvarande grupp som du har skapat. Om en enhet redan har registrerats innan du konfigurerar kategorier, ser användaren ett meddelande om enheten på Företagsportalen. Användaren får veta att hon eller han ska välja en kategori nästa gång öppnar företagsportalsappen på iOS eller Android.
+Efter att du har valt en kategori, läggs enheten automatiskt till i motsvarande grupp som du har skapat. Om en enhet redan har registrerats innan du konfigurerar kategorier, ser användaren ett meddelande om enheten på Företagsportalen. Här får användaren veta att hen ska välja en kategori nästa gång företagsportalsappen öppnas i iOS/iPadOS eller Android.
 
 ## <a name="further-information"></a>Ytterligare information
 - Du kan redigera en enhetskategori i Azure-Portal, men du måste manuellt uppdatera alla Azure AD-säkerhetsgrupper som refererar till den här kategorin.

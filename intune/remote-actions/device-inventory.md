@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11e3465c583197582a545cdd6f4b71bc8d24e115
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: af4270587ab5894d52a7d12b1c2082b7b3298e51
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754209"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413745"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -73,25 +73,25 @@ Eventuellt samlas inte all information in, beroende på vilken operatör enheter
 |Säkerhetskorrigeringsnivå|Säkerhetskorrigeringsnivå för enheten.|Android|
 |Totalt lagringsutrymme|Det totala lagringsutrymmet på enheten (i gigabyte).|Windows, iOS|
 |Ledigt lagringsutrymme|Det oanvända lagringsutrymmet på enheten (i gigabyte).|Windows, iOS|
-|IMEI|Enhetens IMEI (International Mobile Equipment Identity).|Windows, iOS, Android|
-|MEID|Enhetens mobilutrustningsnummer.|Windows, iOS, Android|
-|Tillverkare|Enhetstillverkaren.|Windows, iOS, Android|
-|Modell|Enhetsmodellen.|Windows, iOS, Android|
-|Telefonnummer|Telefonnumret som har tilldelats enheten.|Windows, iOS, Android*|
-|Abonnentens operatör|Enhetens mobiloperatör.|Windows, iOS, Android|
-|Mobilteknik|Radiosystem som används av enheten.|Windows, iOS, Android|
-|Wi-Fi MAC|Enhetens MAC-adress.|Windows, iOS, Android|
-|ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|Windows, iOS, Android|
-|Registreringsdatum|Datum och tid då enheten registrerades i Intune.|Windows, iOS, Android|
-|Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|Windows, iOS, Android|
+|IMEI|Enhetens IMEI (International Mobile Equipment Identity).|Windows, iOS/iPadOS, Android|
+|MEID|Enhetens mobilutrustningsnummer.|Windows, iOS/iPadOS, Android|
+|Tillverkare|Enhetstillverkaren.|Windows, iOS/iPadOS, Android|
+|Modell|Enhetsmodellen.|Windows, iOS/iPadOS, Android|
+|Telefonnummer|Telefonnumret som har tilldelats enheten.|Windows, iOS/iPadOS, Android*|
+|Abonnentens operatör|Enhetens mobiloperatör.|Windows, iOS/iPadOS, Android|
+|Mobilteknik|Radiosystem som används av enheten.|Windows, iOS/iPadOS, Android|
+|Wi-Fi MAC|Enhetens MAC-adress.|Windows, iOS/iPadOS, Android|
+|ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|Windows, iOS/iPadOS, Android|
+|Registreringsdatum|Datum och tid då enheten registrerades i Intune.|Windows, iOS/iPadOS, Android|
+|Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|Windows, iOS/iPadOS, Android|
 |Kod för att kringgå aktiveringslås|Koden som kan användas för att inaktivera aktiveringslåset.|iOS|
-|Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|Windows, iOS, Android|
-|Intune-registrerad|Om inställningen är **Ja** är enheten registrerad i Intune|Windows, iOS, Android|
-|Efterlevnad|Enhetens kompatibilitetstillstånd.|Windows, iOS, Android|
-|EAS-aktiverad|Om inställningen är **Ja** så är enheten synkroniserad med en Exchange-postlåda.|Windows, iOS, Android|
-|Aktiverings-ID för EAS|Enhetens identifierare för Exchange ActiveSync.|Windows, iOS, Android|
-|Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|Windows, iOS, Android|
-|Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|Windows, iOS, Android|
+|Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|Windows, iOS/iPadOS, Android|
+|Intune-registrerad|Om inställningen är **Ja** är enheten registrerad i Intune|Windows, iOS/iPadOS, Android|
+|Efterlevnad|Enhetens kompatibilitetstillstånd.|Windows, iOS/iPadOS, Android|
+|EAS-aktiverad|Om inställningen är **Ja** så är enheten synkroniserad med en Exchange-postlåda.|Windows, iOS/iPadOS, Android|
+|Aktiverings-ID för EAS|Enhetens identifierare för Exchange ActiveSync.|Windows, iOS/iPadOS, Android|
+|Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|Windows, iOS/iPadOS, Android|
+|Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
 > Telefonnumret har inte inventerats på Android Enterprise-dedikerade enheter eller fullständigt hanterade enheter.

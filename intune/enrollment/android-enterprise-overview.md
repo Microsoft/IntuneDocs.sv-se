@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5c980b3f9ababaf94aa7b279e533679ed74b0e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6941b3b79dd690c9861c8efead7f525e56e2b350
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503371"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415407"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Hantera Android-arbetsprofilenheter med Intune
 
@@ -55,7 +55,7 @@ Android Enterprise tillhandahåller infrastruktur för distribution av appkonfig
 
 ## <a name="email-configuration"></a>E-postkonfiguration
 
-Android Enterprise tillhandahåller inte någon standardapp för e-post eller ett internt objekt för e-postprofiler som iOS gör. I stället kan du ange e-postkonfigurationer genom att använda appkonfigurationsinställningar för e-postappar som stöder dem. Gmail och Nine Work är två EAS-klientappar (Exchange ActiveSync) i Play Store som stöder konfiguration med en Android Enterprise-appkonfiguration.
+Android Enterprise tillhandahåller inte någon standardapp för e-post eller något internt objekt för e-postprofiler som iOS/iPadOS gör. I stället kan du ange e-postkonfigurationer genom att använda appkonfigurationsinställningar för e-postappar som stöder dem. Gmail och Nine Work är två EAS-klientappar (Exchange ActiveSync) i Play Store som stöder konfiguration med en Android Enterprise-appkonfiguration.
 
 Intune tillhandahåller konfigurationsmallar för Gmail- och Nine Work-appar när de hanteras som arbetsappar. Andra e-postappar som stöder appkonfigurationsprofiler kan konfigureras med konfigurationsprinciper för mobilappar.
 

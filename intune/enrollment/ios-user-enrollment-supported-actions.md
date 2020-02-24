@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/2/2019
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
-ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
+ms.openlocfilehash: 9c6fb7da3a791d369fc3005367ee7670af8bc63e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/21/2019
-ms.locfileid: "75324873"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414138"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Intune-åtgärder och Intune-alternativ som stöds med Apples användarregistrering
 
 Användarregistrering har stöd för en deluppsättning av enhetshanteringsalternativen. Om en redan befintlig konfigurationsprofil tillämpas på en enhet som registreras via Användarregistrering, tillämpas bara de inställningar som stöds av Användarregistrering på enheten.
 
 > [!NOTE]
-> Stöd för Apples användarregistrering i Intune är för närvarande tillgänglig som en förhandsversion.
+> Stöd för Apples användarregistrering i Intune är för närvarande tillgängligt som en förhandsversion för iOS och iPadOS.
 
 ## <a name="password-settings"></a>Inställningar för lösenord
 
@@ -107,19 +107,15 @@ Följande alternativ stöds inte på enheter som har registrerats via Användarr
 - Programskyddsprinciper används fortfarande för dessa appar. Men du kan inte ta över hanteringen eller distribuera en hanterad version av dessa appar om inte användaren tar bort dem från enheten.
 - Åtgärder, konfigurationer, inställningar och kommandon som kräver övervakning. 
 
-## <a name="options-not-supported-in-preview"></a>Alternativ som inte stöds i förhandsversionen
-- Registreringsbegränsningar för enhetstyp för att tillåta/blockera personligt ägda enheter 
 
 ## <a name="known-issues-in-preview"></a>Kända problem i förhandsversionen
 - VPP-licensåterkallelse: Ett meddelande om att licensen har återkallats visas inte. Det aktuella beteendet är att återkallningen lyckas, men slutanvändaren får inget meddelande om det. 
 - VPP-programrapportering: I rapporten som finns i Klientappar > Appar > [appnamn] > Installationsstatus för enhet rapporteras att VPP-program som distribuerats till användarregistrerade enheter ”misslyckats”, även om programmet har distribuerats utan problem till enheten. 
 - Programrapportering: För de apptyper som inte stöds för användarregistrering kan rapporter innehålla irrelevanta felmeddelanden. 
 - Gränssnittet för företagsportalappen: Användarna ser alla program som är riktade mot dem, oavsett om dessa programtyper stöds för användarregistrerade enheter eller inte. 
-- Gränssnittet för företagsportalappen: Användarna ser samma text som visar vad organisationer kan och inte kan se för registrering av användare och enheter.
-- Om en användare väljer ”Min organisation äger den här enheten” under registreringen identifieras enheten fortfarande som personlig i Intune, om detta inte ändras i administratörskonsolen eller via Graph. 
-- Registreringsmål: iPadOS visas inte i plattformsväljaren. iPadOS stöds i förhandsversionen men anges inte uttryckligen i administratörskonsolen. 
+- Gränssnittet för företagsportalappen: Användarna ser samma text, vilken indikerar vad organisationer kan se avseende användar- och enhetsregistrering om administratören har anpassat texten så att den indikerar vad organisationerna inte kan se.
 
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Konfigurera användarregistrering för iOS och iPadOS](ios-user-enrollment.md)
+[Konfigurera användarregistrering för iOS/iPadOS och iPadOS](ios-user-enrollment.md)

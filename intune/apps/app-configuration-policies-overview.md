@@ -1,7 +1,7 @@
 ---
 title: Appkonfigurationsprinciper för Microsoft Intune
 titleSuffix: ''
-description: Läs om hur du använder appkonfigurationsprinciper på en iOS- eller Android-enhet i Microsoft Intune.
+description: Läs om hur du använder appkonfigurationsprinciper på en iOS/iPadOS- eller Android-enhet i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: a2cf53b26c1617ca7fc493c837e57823c23781bc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812481"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414844"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
 Appkonfigurationsprinciper kan hjälpa dig att förhindra problem med konfiguration av appar eftersom du kan tilldela konfigurationsinställningar till en princip som tilldelas till slutanvändare innan de kör appen. Inställningarna anges sedan automatiskt när appen konfigureras på slutanvändarnas enheter, och slutanvändarna behöver då inte vidta några åtgärder. Konfigurationsinställningarna är unika för varje app. 
 
-Du kan skapa och använda appkonfigurationsprinciper för att ge konfigurationsinställningar för både iOS-appar och Android-appar. Med dessa konfigurationsinställningar kan en app anpassas med hjälp av konfiguration och hantering av appar. Inställningarna för konfigurationsprincipen används när appen söker efter inställningarna, oftast första gången appen körs. 
+Du kan skapa och använda appkonfigurationsprinciper för att ge konfigurationsinställningar för både iOS/iPadOS-appar och Android-appar. Med dessa konfigurationsinställningar kan en app anpassas med hjälp av konfiguration och hantering av appar. Inställningarna för konfigurationsprincipen används när appen söker efter inställningarna, oftast första gången appen körs. 
 
 Till exempel kan en appkonfigurationsinställning kräva att du anger några av de följande uppgifterna:
 
@@ -71,7 +71,7 @@ Val av **Hanterade appar** som **Enhetsregistreringstyp** syftar specifikt på a
 ![Enhetsregistreringstyp](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> För appar med flera identiteter, till exempel Microsoft Outlook, kan användarinställningar beaktas. Prioriterad inkorg, till exempel, respekterar användarinställningen och ändrar inte konfigurationen. Andra parametrar gör det möjligt att kontrollera huruvida en användare kan ändra inställningen. Mer information finns i [Distribuera appkonfigurationsinställningar för Outlook för iOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> För appar med flera identiteter, till exempel Microsoft Outlook, kan användarinställningar beaktas. Prioriterad inkorg, till exempel, respekterar användarinställningen och ändrar inte konfigurationen. Andra parametrar gör det möjligt att kontrollera huruvida en användare kan ändra inställningen. Mer information finns i [Distribuera appkonfigurationsinställningar för Outlook för iOS/iPadOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Verifiera den tillämpade appkonfigurationsprincipen
 
@@ -93,7 +93,7 @@ Du kan verifiera appkonfigurationsprincipen med följande tre metoder:
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>iOS-konfiguration på ohanterade enheter
 
-Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på ohanterade enheter för konfiguration av hanterade appar. Förutom stegen nedan så kan du få åtkomst till hanterade apploggar med hjälp av Microsoft Edge. Mer information finns i [Använda Microsoft Edge i iOS för att få åtkomst till loggar för hanterade appar](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Du kan verifiera iOS/iPadOS-konfigurationen med **Intune-diagnostikloggen** på ohanterade enheter för konfiguration av hanterade appar. Förutom stegen nedan så kan du få åtkomst till hanterade apploggar med hjälp av Microsoft Edge. Mer information finns i [Använda Microsoft Edge i iOS/iPadOS för att få åtkomst till loggar för hanterade appar](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Om den inte redan är installerad på enheten laddar du ned och installerar **Microsoft Edge** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
 2. Starta **Microsoft Edge** och välj **Om** > **intunejälp** i navigeringsfältet.
@@ -137,7 +137,7 @@ Informationen om programkonfigurationen bör överensstämma med de programkonfi
 
 ### <a name="ios-configuration-on-managed-devices"></a>iOS-konfiguration på hanterade enheter
 
-Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
+Du kan verifiera iOS/iPadOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
 
 1. Om den inte redan är installerad på enheten laddar du ned och installerar **Microsoft Edge** från App Store. Mer information finns i [Microsoft Intune-skyddade appar](apps-supported-intune-apps.md).
 2. Starta **Microsoft Edge** och välj **Om** > **intunejälp** i navigeringsfältet.
@@ -149,7 +149,7 @@ Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på hantera
 
 ### <a name="android-configuration-on-managed-devices"></a>Android-konfiguration på hanterade enheter
 
-Du kan verifiera iOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
+Du kan verifiera iOS/iPadOS-konfigurationen med **Intune-diagnostikloggen** på hanterade enheter för konfiguration av hanterade appar.
 
 Om du vill samla in loggar från en Android-enhet måste du eller slutanvändaren ladda ned loggarna från enheten via en USB-anslutning (eller motsvarigheten till **Utforskaren** på enheten). Här är stegen:
 
@@ -173,7 +173,7 @@ När loggarna visar en konfigurationsparameter som har bekräftats tillämpas me
 
 ### <a name="managed-devices"></a>Hanterade enheter
 
-- Lär dig hur du använder appkonfiguration med iOS-enheter.  Se [Lägg till konfigurationsprinciper för hanterade iOS-mobilappar](app-configuration-policies-use-ios.md).
+- Lär dig hur du använder appkonfiguration med iOS/iPadOS-enheter.  Mer information finns i [Lägg till konfigurationsprinciper för hanterade iOS/iPadOS-mobilappar](app-configuration-policies-use-ios.md).
 - Lär dig hur du använder appkonfiguration med Android-enheter.  Se [Lägg till konfigurationsprinciper för hanterade Android-enheter](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Hanterade appar

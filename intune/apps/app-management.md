@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 84d33e0ff6bbe407d9838f97214f37d042a2e261
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564371"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414705"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -51,7 +51,7 @@ Intune MAM stöder två konfigurationer:
 
 Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du behöver, på de enheter som du önskar köra dem på. Följande tabell innehåller en sammanfattning av apphanteringsfunktionerna.
 
-|  | Android/Android Enterprise | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Lägga till och tilldela appar till enheter och användare | Ja | Ja | Ja | Ja | Ja |
 | Tilldela appar till enheter som inte registrerats i Intune | Ja | Ja | Nej | Nej | Nej |
@@ -98,7 +98,7 @@ I följande fyra avsnitt beskrivs de alternativ som är tillgängliga i fönstre
   - [Appskyddsprinciper](app-protection-policies.md).
 - **Selektiv radering av app**: Välj det här alternativet för att ta bort enbart företagsdata från en vald användares enhet. Mer information finns i:
   - [Appselektiv rensning](apps-selective-wipe.md).
-- **Etableringsprofiler för iOS-app**: iOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla. Mer information finns i:
+- **Etableringsprofiler för iOS-app**: iOS/iPadOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla. Mer information finns i:
   - [iOS-appetableringsprofiler](app-provisioning-profile-ios.md).
 
 Mer information om det här avsnittet finns [Hantera appar](app-management.md).
@@ -115,7 +115,7 @@ Mer information om det här avsnittet finns [Hantera appar](app-management.md).
 Mer information om det här avsnittet finns [Övervaka appar](apps-monitor.md).
 
 ### <a name="set-up"></a>Konfigurera
-- **iOS VPP-token**: Tillämpa och visa dina licenser för iOS volymköpsprogram (VPP). Mer information finns i:
+- **iOS VPP-token**: Tillämpa och visa dina licenser för iOS/iPadOS-volymköpsprogrammet (VPP). Mer information finns i:
   - [Volyminköpta iOS-appar](vpp-apps-ios.md)
 - **Windows företagscertifikat**: Tillämpa eller visa status för ett kodsigneringscertifikat som används för att distribuera verksamhetsspecifika appar till dina hanterade Windows-enheter.
 - **Windows Symantec-certifikat**: Tillämpa eller visa status för ett Symantec-kodsigneringscertifikat som behövs för att distribuera XAP- och WP8.x appx-filer till Windows 10 Mobile-enheter.

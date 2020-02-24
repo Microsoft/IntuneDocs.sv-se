@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae3c2380aa27096be2490d2404858179ea9d222e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b7861d26650aaf74ea9c58608c33e72495244575
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503190"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414228"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Rapport om ofullständiga användarregistreringar
 
@@ -44,7 +44,7 @@ Om en användare väljer att avbryta registreringen och börjar om flera gånger
 
 ## <a name="what-does-the-report-show"></a>Vad visar rapporten?
 
-Rapporterna innehåller data för iOS- och Android-enheter.
+Rapporterna innehåller data för iOS/iPadOS- och Android-enheter.
 
 Rapporterna visar data för de senaste två veckorna, men du kan filtrera rapporten och visa valfri period upp till 30 dagar bakåt i tiden.
 
@@ -86,10 +86,10 @@ Följande tabeller visar listan över användaråtgärder som betraktas som upph
 
 | Åtgärdsnamn | Skärm eller flöde | Plattform | Action |
 | ---- |---- |---- |---- |
-| iOSProfileLaunch | Uppmaning om att visa en konfigurationsprofil | iOS | **Ignorera** |
-| iOSProfileLaunch | Skärmen Installera profil | iOS | **Avbryt** |
-| iOSProfileLaunch | Uppmaning om att lita på profilens källa för att registrera enheten | iOS | **Avbryt** |
-| iOSProfileLaunch | Skärmen Installera profil tills profilen har installerats | iOS | Tog mer än 30 minuter |
+| iOSProfileLaunch | Uppmaning om att visa en konfigurationsprofil | iOS/iPadOS | **Ignorera** |
+| iOSProfileLaunch | Skärmen Installera profil | iOS/iPadOS | **Avbryt** |
+| iOSProfileLaunch | Uppmaning om att lita på profilens källa för att registrera enheten | iOS/iPadOS | **Avbryt** |
+| iOSProfileLaunch | Skärmen Installera profil tills profilen har installerats | iOS/iPadOS | Tog mer än 30 minuter |
 | AndroidPermissions | Aktiveringsskärm för enhetsadministratör | Android | **Avbryt** |
 | AndroidPermissions | Från uppmaning om godkännande att ringa och hantera telefonsamtal tills enhetsadministratören väljer att **aktivera** | Android | Tog mer än 30 minuter |
 | KnoxActivation | KLMS-agentaktivering (endast Samsung) | Android| **Avbryt** |

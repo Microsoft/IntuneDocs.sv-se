@@ -1,5 +1,5 @@
 ---
-title: Hantera volyminköpta e-böcker i iOS
+title: Hantera volyminköpta e-böcker i iOS/iPadOS
 titleSuffix: Microsoft Intune
 description: Läs mer om hur du kan synkronisera böcker som du har köpt i volym från iOS Store till Intune och hur du sedan hanterar och spårar deras användning.
 keywords: ''
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08275e2573fe8aae8c59ea25c85cdd8f7a3246ee
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: f7c2bd0603961b9d618b3f743ecb323fb7fc9823
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563749"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437876"
 ---
-# <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram med Microsoft Intune
+# <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS/iPadOS som du har köpt via ett volymköpsprogram med Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -37,7 +37,7 @@ Med Microsoft Intune kan du synkronisera, hantera och tilldela böcker som du k�
 Procedurerna för att hantera böcker liknar att [hantera VPP-appar](../vpp-apps-ios.md).
 
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>Hantera böcker som köpts genom volyminköpsprogrammet för iOS-enheter
-Du köper flera licenser för e-böcker i iOS via [Apples volymköpsprogram för företag](https://www.apple.com/business/vpp/) eller [Apples volymköpsprogram för utbildning](https://volume.itunes.apple.com/us/store). Processen innebär bland annat att skapa ett Apple VPP-konto från Apples webbplats och ladda upp en Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av böcker som du köpt med volyminköpsprogrammet.
+Du köper flera licenser för e-böcker i iOS/iPadOS via [Apples volymköpsprogram för företag](https://www.apple.com/business/vpp/) eller [Apples volymköpsprogram för utbildning](https://volume.itunes.apple.com/us/store). Processen innebär bland annat att skapa ett Apple VPP-konto från Apples webbplats och ladda upp en Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av böcker som du köpt med volyminköpsprogrammet.
 
 ## <a name="before-you-start"></a>Innan du börjar
 Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till ditt Intune-konto. Dessutom:
@@ -46,7 +46,7 @@ Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till dit
 * Varje token är giltig i ett år.
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.
 * När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
-* Innan du börjar använda iOS-böcker med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobilenheter). Av säkerhetsskäl synkroniserar Intune inte dessa användarkonton till Intune. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
+* Innan du börjar använda iOS/iPadOS-böcker med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobilenheter). Av säkerhetsskäl synkroniserar Intune inte dessa användarkonton till Intune. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
 * När du tilldelar en bok till en enhet måste enheten ha den inbyggda iBooks-appen installerad. Om den inte finns måste slutanvändaren installera appen på nytt för att kunna läsa boken. Du kan för närvarande inte använda Intune för att återställa borttagna inbyggda appar.
 * Du kan bara tilldela böcker från webbplatsen för Apples volymköpsprogram. Du kan inte ladda upp och sedan tilldela böcker som du skapat internt.
 * Du kan för närvarande inte tilldela böcker till slutanvändarkategorier på samma sätt som du gör med appar.

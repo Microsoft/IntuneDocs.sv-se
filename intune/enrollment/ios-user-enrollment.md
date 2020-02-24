@@ -1,7 +1,7 @@
 ---
-title: Registrera iOS-enheter – Användarregistrering
+title: Registrera iOS/iPadOS-enheter – Användarregistrering
 titleSuffix: Microsoft Intune
-description: Lär dig hur du konfigurerar Användarregistrering för iOS och iPad.
+description: Lär dig hur du konfigurerar Användarregistrering för iOS/iPadOS och iPadOS.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0872eef38e3ea5a70ebb64d3ae3c62069045fa97
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: d22d8d4772754fddbd366610402d64acc28ffc65
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754648"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415252"
 ---
-# <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Konfigurera Användarregistrering för iOS och iPadOS (förhandsversion)
+# <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Konfigurera användarregistrering för iOS/iPadOS och iPadOS (förhandsversion)
 
-Du kan konfigurera registreringen av iOS- och iPad-enheter i Intune med hjälp av Apples användarregistreringsprocess. Med Användarregistrering får administratörer tillgång till en enklare deluppsättning hanteringsalternativ jämfört med andra registreringsmetoder.
+Du kan konfigurera registreringen av iOS/iPadOS- och iPadOS-enheter i Intune med hjälp av Apples användarregistreringsprocess. Med Användarregistrering får administratörer tillgång till en enklare deluppsättning hanteringsalternativ jämfört med andra registreringsmetoder.
 
 Mer information om vilka alternativ som är tillgängliga med Användarregistrering finns i [Åtgärder, lösenord och andra alternativ som stöds i Användarregistrering](ios-user-enrollment-supported-actions.md).
 
@@ -43,7 +43,7 @@ Mer information om vilka alternativ som är tillgängliga med Användarregistrer
 
 En registreringsprofil definierar inställningarna som tillämpas på en grupp enheter vid registreringen. 
 
-1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **iOS** > **ioS-registrering** > **Registreringstyper (förhandsversion)**  > **Skapa profil** > **iOS/iPadOS**. I den här profilen väljer du registreringsupplevelsen för iOS- och iPad-slutanvändare på enheter som inte har registrerats via en företagsspecifik Apple-metod. Om du vill göra ändringar kan du redigera profilen i efterhand.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **iOS** > **ioS-registrering** > **Registreringstyper (förhandsversion)**  > **Skapa profil** > **iOS/iPadOS**. I den här profilen väljer du registreringsupplevelsen för iOS/iPadOS- och iPadOS-slutanvändare på enheter som inte har registrerats via en företagsspecifik Apple-metod. Om du vill göra ändringar kan du redigera profilen i efterhand.
 
     ![Skapa en Apple-registreringsprofil](./media/ios-user-enrollment/create-profile.png)
 
@@ -60,7 +60,7 @@ En registreringsprofil definierar inställningarna som tillämpas på en grupp e
 
     - **Enhetsregistrering**: Alla användare i den här profilen kommer att använda enhetsregistrering.
     - **Användarregistrering**: Alla användare i den här profilen kommer att använda användarregistrering.
-    - **Bestäm baserat på användarens val**: Alla användare i den här gruppen får välja vilken typ av registrering som ska användas. När användarna registrerar sina enheter kan de välja mellan **Jag äger den här enheten** och **(Företaget) äger den här enheten**. Om de väljer det andra alternativet registreras enheten via Enhetsregistrering. Om användaren väljer **Jag äger den här enheten** måste han eller hon välja om hela enheten ska skyddas eller endast arbetsrelaterade appar och data. Vilket alternativ slutanvändaren väljer vad gäller ägarskap av enheten avgör endast vilken typ av registrering som implementeras på deras enheter. Det här användarvalet visas inte i attributet Ägarskap för enhet i Intune. Mer information om användarupplevelsen finns i [Konfigurera iOS-enhetsåtkomst till företagsresurser](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
+    - **Bestäm baserat på användarens val**: Alla användare i den här gruppen får välja vilken typ av registrering som ska användas. När användarna registrerar sina enheter kan de välja mellan **Jag äger den här enheten** och **(Företaget) äger den här enheten**. Om de väljer det andra alternativet registreras enheten via Enhetsregistrering. Om användaren väljer **Jag äger den här enheten** måste han eller hon välja om hela enheten ska skyddas eller endast arbetsrelaterade appar och data. Vilket alternativ slutanvändaren väljer vad gäller ägarskap av enheten avgör endast vilken typ av registrering som implementeras på deras enheter. Det här användarvalet visas inte i attributet Ägarskap för enhet i Intune. Mer information om användarupplevelsen finns i [Konfigurera iOS/iPadOS-enhetsåtkomst till företagsresurser](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
     
 5. Välj **Nästa**.
 

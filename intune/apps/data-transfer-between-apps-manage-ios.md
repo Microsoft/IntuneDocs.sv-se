@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ae9b3b1ab274e236ad43c52569574718d3eec4
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: ef9810f9414af4d1f57fa71189a6960b491800c0
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839309"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414892"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -45,7 +45,7 @@ Använd appskyddsprinciper med iOS-funktionen **Öppna i hantering** för att sk
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurera inställningen för användar-UPN för Microsoft Intune eller en EMM-lösning från tredje part
 Inställningen för användar-UPN **måste** konfigureras för enheter som hanteras av Intune eller en EMM-lösning från tredje part för att identifiera det registrerade användarkontot. UPN-konfigurationen används med de appskyddsprinciper som du distribuerar från Intune. Proceduren nedan beskriver det allmänna flödet för att konfigurera UPN-inställningen, samt den resulterande användarupplevelsen:
 
-1. [Skapa och tilldela en appskyddsprincip](app-protection-policies.md) för iOS på [Azure Portal](https://portal.azure.com). Konfigurera principinställningar enligt företagets krav och välj de iOS-appar som ska ha principen.
+1. [Skapa och tilldela en appskyddsprincip](app-protection-policies.md) för iOS/iPadOS i [Azure Portal](https://portal.azure.com). Konfigurera principinställningar enligt företagets krav och välj de iOS-appar som ska ha principen.
 
 2. Distribuera de appar och den e-postprofil som ska hanteras via Intune, eller MDM-lösningen från tredje part, genom att följa de allmänna stegen nedan. Se även *Exempel 1*.
 
@@ -90,7 +90,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 1. En användare öppnar Microsoft OneDrive-appen på en registrerad iOS-enhet och loggar in på deras arbetskonto.  Det konto som användaren anger måste matcha kontots användarhuvudnamn som du angav i appkonfigurationsinställningarna för Microsoft OneDrive-appen.
 
-2. Efter inloggning gäller dina administratörskonfigurerade APP-inställningar för användarkontot i Microsoft OneDrive.  Det här inkluderar att konfigurera inställningen **Skicka organisationsdata till andra appar** med värdet **Principhanterade appar med operativsystemdelning**.
+2. Efter inloggningen gäller dina administratörskonfigurerade APP-inställningar för användarkontot i Microsoft OneDrive.  Det här inkluderar att konfigurera inställningen **Skicka organisationsdata till andra appar** med värdet **Principhanterade appar med operativsystemdelning**.
 
 3. Användaren förhandsgranskar en arbetsfil och försöker dela via Öppna i till iOS-hanterad app.  
 
@@ -105,7 +105,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 1. När Word-appen startar sker någon av följande två funktioner:
    1. Data skyddas med Intunes appskyddsprincip när:
       - Användaren loggas in på det arbetskonto som matchar kontots användarhuvudnamn du har angett i appkonfigurationsinställningarna för Microsoft Word-appen. 
-      - Din administratörskonfigurerade inställningar för appskyddsprinciper gäller dina administratörskonfigurerade APP-inställningar för användarkontot i Microsoft Word.  Detta omfattar att konfigurera **Ta emot data från andra appar** med värdet **Alla appar med inkommande organisationsdata**.
+      - Dina administratörskonfigurerade APP-inställningar gäller för användarkontot i Microsoft Word.  Detta omfattar att konfigurera **Ta emot data från andra appar** med värdet **Alla appar med inkommande organisationsdata**.
       - Dataöverföringen utförs och dokumentet märks med ett arbetsidentiteten i appen.  Intunes appskyddsprincip skyddar användaråtgärderna för dokumentet.
    1. Data skyddas **inte** med Intunes appskyddsprincip när:
       - Användaren loggas **inte** in på arbetskontot.

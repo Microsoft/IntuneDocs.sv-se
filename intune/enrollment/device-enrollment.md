@@ -1,7 +1,7 @@
 ---
 title: Vad är enhetsregistrering i Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Läs om registrering av iOS-, Android- och Windows-enheter.
+description: Läs om registrering av iOS/iPadOS-, Android- och Windows-enheter.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feee58d926a25e9132204798ba93d10a7c90f41e
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 7955c91a33edef37b86f5bd8f29dfb681d28030e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547831"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415352"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -33,7 +33,7 @@ Det finns flera metoder för att registrera personalens enheter, vilket visas i 
 
 Som standard tillåts enheter för alla plattformar registreras i Intune. Men du kan [begränsa enheter efter plattform](enrollment-restrictions-set.md#create-a-device-type-restriction).
 
-## <a name="ios-enrollment-methods"></a>Metoder för iOS-registrering
+## <a name="iosipados-enrollment-methods"></a>iOS/iPadOS-registreringsmetoder
 
 | **Metod** | **Återställning krävs** | [**Användartillhörighet**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Låst** | **Information** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -84,36 +84,36 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 BYOD (Bring Your Own Device) innefattar personligt ägda telefoner, surfplattor och datorer. Användarna installerar och kör appen Företagsportal för att registrera sina BYOD-enheter. Det här programmet låter användare komma åt företagsresurser som e-post.
 
 ## <a name="corporate-owned-device"></a>Företagsägd enhet
-[Företagsägda enheter (COD)](corporate-identifiers-add.md) omfattar telefoner, surfplattor och datorer som ägs av organisationen och distribueras till personalen. COD-registrering har stöd för hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav. Ett vanligt sätt att registrera COD-enheter är att en administratör eller chef använder enhetsregistreringshanteraren (DEM). iOS-enheter kan registreras direkt via verktygen för programmet för enhetsregistrering (DEP) som tillhandahålls av Apple. Enheter med ett IMEI-nummer kan också identifieras och taggas som företagsägda.
+[Företagsägda enheter (COD)](corporate-identifiers-add.md) omfattar telefoner, surfplattor och datorer som ägs av organisationen och distribueras till personalen. COD-registrering har stöd för hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav. Ett vanligt sätt att registrera COD-enheter är att en administratör eller chef använder enhetsregistreringshanteraren (DEM). iOS/iPadOS-enheter kan registreras direkt via verktygen för programmet för enhetsregistrering (DEP) som tillhandahålls av Apple. Enheter med ett IMEI-nummer kan också identifieras och taggas som företagsägda.
 
 ### <a name="device-enrollment-manager"></a>Hanterare av enhetsregistrering
 Enhetsregistreringshanteraren (DEM) är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Dessa typer av enheter är till exempel bra för verktygs- eller kassaappar (Point-of-Sale), men inte för användare som behöver åtkomst till e-post eller företagsresurser. Läs mer om [DEM](device-enrollment-manager-enroll.md).
 
 ### <a name="apple-device-enrollment-program"></a>Apples DEP (Device Enrollment Program)
-Med Apples program för enhetsregistrering kan du skapa och distribuera principen ”trådlöst” till iOS- och macOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör installationsassistenten. Den här metoden har stöd för övervakat läge för iOS som gör det möjligt att konfigurera en enhet med specifika funktioner.
+Med Apples program för enhetsregistrering kan du skapa och distribuera principen ”trådlöst” till iOS/iPadOS- och macOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör installationsassistenten. Den här metoden har stöd för övervakat läge för iOS/iPadOS som gör det möjligt att konfigurera en enhet med specifika funktioner.
 
-Läs mer om iOS DEP-registrering:
+Läs mer om iOS/iPadOS DEP-registrering:
 
-- [Välj hur du vill registrera iOS-enheter](ios-enroll.md)
-- [Registrera iOS-enheter med enhetsregistreringsprogrammet](device-enrollment-program-enroll-ios.md)
+- [Välj hur du vill registrera iOS/iPadOS-enheter](ios-enroll.md)
+- [Registrera iOS/iPadOS-enheter med enhetsregistreringsprogrammet](device-enrollment-program-enroll-ios.md)
 
 ### <a name="usb-sa"></a>USB-SA
 IT-administratörer använder Apple Configurator, via USB, för att förbereda varje företagsägd enhet manuellt för registrering med installationsassistenten. IT-administratören skapar en registreringsprofil och exporterar den till Apple Configurator. När användarna får sina enheter uppmanas de att köra installationsassistenten för att registrera sin enhet. Den här metoden har stöd för **iOS-övervakat** läge, vilket i sin tur aktiverar följande funktioner:
 - Låst registrering
 - Helskärmsläge och andra avancerade konfigurationer och begränsningar
 
-Läs mer om iOS Apple Configurator-registrering med installationsassistenten:
+Läs mer om iOS/iPadOS Apple Configurator-registrering med installationsassistenten:
 
-- [Välj hur du vill registrera iOS-enheter](ios-enroll.md)
-- [Registrera iOS-enheter med Configurator och Installationsassistenten](apple-configurator-enroll-ios.md)
+- [Bestäm hur du vill registrera iOS/iPadOS-enheter](ios-enroll.md)
+- [Registrera iOS/iPadOS-enheter med Configurator och Installationsassistenten](apple-configurator-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB-Direct
 För direkt registrering måste administratören registrera varje enhet manuellt genom att skapa en registreringsprincip och exportera den till Apple Configurator. USB-anslutna, företagsägda enheter registreras direkt och kräver ingen rensning. Enheter hanteras som användarlösa enheter. De är inte låsta eller övervakade och har inte stöd för villkorlig åtkomst, upplåsningsidentifiering eller hantering av mobila program.
 
-Mer information om iOS-registrering finns i:
+Mer information om iOS/iPadOS-registrering finns i:
 
-- [Välj hur du vill registrera iOS-enheter](ios-enroll.md)
-- [Registrera iOS-enheter med Configurator och direktregistrering](apple-configurator-enroll-ios.md)
+- [Bestäm hur du vill registrera iOS/iPadOS-enheter](ios-enroll.md)
+- [Registrera iOS/iPadOS-enheter med Configurator och direktregistrering](apple-configurator-enroll-ios.md)
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla
 

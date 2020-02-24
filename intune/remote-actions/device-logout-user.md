@@ -1,7 +1,7 @@
 ---
-title: Logga ut användaren av en iOS-enhet
+title: Logga ut användaren från en iOS/iPadOS-enhet
 titleSuffix: Microsoft Intune
-description: Lär dig hur du kan logga ut den aktuella användaren av en iOS-enhet med Intune."
+description: Lär dig hur du kan logga ut den aktuella användaren från en iOS/iPadOS-enhet med Intune."
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdb23916319b06fb4d85b913209d1ac9e007d551
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6e23f95d169a95244abc8669eb9a19150cff8138
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713167"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413696"
 ---
-# <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Logga ut den aktuella användaren på Intune-hanterade iOS-enheter
+# <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Logga ut den aktuella användaren från Intune-hanterade iOS/iPadOS-enheter
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73713167"
 
 - Windows – stöds inte
 - Windows Phone – stöds inte
-- iOS – stöds på iOS 9.3 och senare (endast delade iPad-enheter)
+- iOS/iPadOS – stöds på iOS/iPadOS 9.3 och senare (endast delade iPad-enheter)
 - macOS – stöds inte
 - Android – stöds inte
 
@@ -43,7 +43,7 @@ ms.locfileid: "73713167"
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter**.
 4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. Välj en iOS-enhet i listan med de enheter du hanterar och välj sedan fjärråtgärden **Logga ut aktuell användare**.
+5. Välj en iOS/iPadOS-enhet i listan med de enheter du hanterar och välj sedan fjärråtgärden **Logga ut aktuell användare**.
 
 ## <a name="next-steps"></a>Nästa steg
 

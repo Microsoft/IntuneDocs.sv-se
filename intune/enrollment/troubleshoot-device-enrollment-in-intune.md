@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 328a578f4d2ada41bed17839f1f85b3b9add80fa
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 9cb323dc6f8110d77343fb11c9e0a1c40f9e3cd8
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885949"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415282"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Felsöka enhetsregistrering i Microsoft Intune
 
@@ -36,7 +36,7 @@ Den här artikeln innehåller förslag på hur du kan felsöka problem med [enhe
 Kontrollerar att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Du kan läsa om konfigurationskraven i:
 
 - [Dags att registrera enheter i Microsoft Intune](../fundamentals/setup-steps.md)
-- [Konfigurera iOS- och Mac-enhetshantering](../ios-enroll.md)
+- [Konfigurera iOS/iPadOS- och Mac-enhetshantering](../ios-enroll.md)
 - [Konfigurera Windows-enhetshantering](windows-enroll.md)
 - [Konfigurera hantering av Android-enhet](android-enroll.md) – Inga ytterligare åtgärder krävs
 
@@ -49,7 +49,7 @@ Du kan också kontrollera att tid och datum på användarens enhet är inställt
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
 
 - [Skicka Android-registreringsfel till IT-administratören](https://docs.microsoft.com/intune-user-help/send-enrollment-errors-to-your-it-admin-android)
-- [Skicka iOS-fel till IT-administratören](https://docs.microsoft.com/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Skicka iOS/iPadOS-fel till IT-administratören](https://docs.microsoft.com/intune-user-help/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Allmänna registreringsproblem
@@ -93,7 +93,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
 4. Om det inte går ska du validera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory.
 
-5. Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera Intune-företagsportalappen och därefter kan du prova att registrera dig igen.
+5. Om användaren loggar in uppmanas hen av en iOS/iPadOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera Intune-företagsportalappen och därefter kan du prova att registrera dig igen.
 
 ### <a name="mdm-authority-not-defined"></a>MDM-auktoritet har inte definierats
 **Problem:** En användare får felet **MDM-utfärdare har inte definierats**.
@@ -244,23 +244,23 @@ Följande steg beskriver bara en av många metoder och verktyg som du kan använ
 Om servercertifikatet har installerats korrekt, ser du alla kryssmarkeringar i resultaten. Om problemet ovan kvarstår, ser du ett rött X i avsnitten ”Certifikatnamnmatchningar” och ”SSL-certifikatet är korrekt installerat” i rapporten.
 
 
-## <a name="ios-issues"></a>iOS-problem
+## <a name="iosipados-issues"></a>iOS/iPadOS-problem
 
-### <a name="ios-enrollment-errors"></a>Fel vid iOS-registrering
-I följande tabell finns de felmeddelanden som kan visas när användarna registrerar iOS-enheter i Intune.
+### <a name="iosipados-enrollment-errors"></a>iOS/iPadOS-registreringsfel
+Följande innehåller de felmeddelanden som kan visas för slutanvändarna när de registrerar iOS/iPadOS-enheter i Intune.
 
 |Felmeddelande|Problem|Lösning|
 |-------------|-----|----------|
-|NoEnrollmentPolicy|Ingen registreringsprincip hittades|Kontrollera att alla krav för registrering har konfigurerats, till exempel APNs-certifikatet (Apple Push Notification Service), och att ”iOS som en plattform” är aktiverat. Anvisningar finns i [Konfigurera iOS- och Mac-enhetshantering](../ios-enroll.md).|
-|DeviceCapReached|Det finns redan för många registrerade mobila enheter.|För att kunna registrera en ny enhet måste användaren först ta bort en registrerad mobil enhet från företagsportalen. Se anvisningarna för den typ av enhet som du använder: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
-|APNSCertificateNotValid|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information om hur du konfigurerar användare finns i [Synkronisera Active Directory och lägga till användare i Intune](../fundamentals/users-add.md) och [Ordna användare och enheter](../fundamentals/groups-add.md).|
-|AccountNotOnboarded|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information finns i [Konfigurera och iOS- och Mac-hantering med Microsoft Intune](../ios-enroll.md).|
-|DeviceTypeNotSupported|Användaren kan ha försökt att registrera en enhet som inte är iOS. Den mobila enhetstyp som du försöker registrera stöds inte.<br /><br />Kontrollera att enheten kör iOS-version 8.0 eller senare.<br /><br />|Kontrollera att din användares enhet kör iOS version 8.0 eller senare.|
-|UserLicenseTypeInvalid|Enheten kan inte registreras eftersom användarens konto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer:<ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>de använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Se följande artiklar för mer information:<br /><br />Läs [Konfigurera iOS- och Mac-hantering med Microsoft Intune](../ios-enroll.md) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](../fundamentals/users-add.md) och [Ordna användare och enheter](../fundamentals/groups-add.md).|
+|NoEnrollmentPolicy|Ingen registreringsprincip hittades|Kontrollera att alla krav för registrering har konfigurerats, till exempel APNs-certifikatet (Apple Push Notification Service), och att ”iOS/iPadOS som en plattform” är aktiverat. Anvisningar finns i [Konfigurera iOS/iPadOS- och Mac-enhetshantering](../ios-enroll.md).|
+|DeviceCapReached|Det finns redan för många registrerade mobila enheter.|För att kunna registrera en ny enhet måste användaren först ta bort en registrerad mobil enhet från företagsportalen. Se anvisningarna för den typ av enhet som du använder: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS/iPadOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
+|APNSCertificateNotValid|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS/iPadOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information om hur du konfigurerar användare finns i [Synkronisera Active Directory och lägga till användare i Intune](../fundamentals/users-add.md) och [Ordna användare och enheter](../fundamentals/groups-add.md).|
+|AccountNotOnboarded|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS/iPadOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information finns i [Konfigurera och iOS/iPadOS- och Mac-hantering med Microsoft Intune](../ios-enroll.md).|
+|DeviceTypeNotSupported|Användaren kan ha försökt att registrera en enhet som inte är iOS. Den mobila enhetstyp som du försöker registrera stöds inte.<br /><br />Kontrollera att enheten kör iOS/iPadOS-version 8.0 eller senare.<br /><br />|Kontrollera att din användares enhet kör iOS/iPadOS version 8.0 eller senare.|
+|UserLicenseTypeInvalid|Enheten kan inte registreras eftersom användarens konto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer:<ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>de använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Se följande artiklar för mer information:<br /><br />Läs [Konfigurera iOS/iPadOS- och Mac-hantering med Microsoft Intune](../ios-enroll.md) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](../fundamentals/users-add.md) och [Ordna användare och enheter](../fundamentals/groups-add.md).|
 |MdmAuthorityNotDefined|Utfärdaren för hantering av mobila enheter har inte definierats.<br /><br />|Utfärdaren för hantering av mobila enheter har inte definierats i Intune.<br /><br />Granska objekt nr 1 i ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](../fundamentals/free-trial-sign-up.md).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cant-communicate-with-them"></a>Enheterna är inaktiva eller så kan administratörskonsolen inte kommunicera med dem
-**Problem:** iOS-enheter checkar inte in med Intune-tjänsten. Enheter måste regelbundet checka in med tjänsten för att behålla åtkomst till skyddade företagsresurser. Om enheter inte checkar in:
+**Problem:** iOS/iPadOS-enheter checkar inte in med Intune-tjänsten. Enheter måste regelbundet checka in med tjänsten för att behålla åtkomst till skyddade företagsresurser. Om enheter inte checkar in:
 
 - Kan de inte ta emot princip, appar och fjärranslutna kommandon från Intune-tjänsten.
 - Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
@@ -268,15 +268,15 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 
 **Lösning:** Dela följande lösningar med dina slutanvändare för att hjälpa dem att återfå åtkomsten till företagets resurser.
 
-När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om den identifierar att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta (användaren ser då meddelandet **Försöker synkronisera…** ).
+När användarna startar företagsportalsappen i iOS/iPadOS kan den avgöra om enheten har tappat kontakten med Intune. Om den identifierar att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta (användaren ser då meddelandet **Försöker synkronisera…** ).
 
   ![Meddelandet ”Försöker att synkronisera”](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
 
-Om synkroniseringen lyckas visas ett infogat meddelande som lyder **Synkronisering är klar** i iOS-företagsportalappen. Detta betyder att enheten är i felfri.
+Om synkroniseringen lyckas visas ett infogat meddelande som lyder **Synkronisering är klar** i företagsportalappen i iOS/iPadOS. Detta betyder att enheten är i felfri.
 
   ![Meddelandet ”Synkronisering är klar”](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_sync_successful_notification.png)
 
-Om synkroniseringen misslyckas visas ett infogat meddelande som lyder **Det går inte att synkronisera** i iOS-företagsportalappen.
+Om synkroniseringen misslyckas visas ett infogat meddelande som lyder **Det går inte att synkronisera** i företagsportalappen i iOS/iPadOS.
 
   ![Meddelandet ”Det går inte att synkronisera”](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_unable_to_sync_notification.png)
 
@@ -287,7 +287,7 @@ För att åtgärda problemet måste användarna trycka på knappen **Konfigurera
 När de registrerats återgår enheterna till ett felfritt tillstånd och återfår åtkomst till företagets resurser.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Kontrollera att WS-Trust 1.3 är aktiverat
-**Problem** Det går inte att registrera iOS-enheter med programmet för enhetsregistrering (DEP)
+**Problem** Det går inte att registrera iOS/iPadOS-enheter med programmet för enhetsregistrering (DEP)
 
 Registrering av DEP-enheter med användartillhörighet kräver att WS-Trust 1.3 användarnamn/kombinerad slutpunkt är aktiverat för att begära användartokens. Active Directory aktiverar den här slutpunkten som standard. Hämta en lista med aktiverade slutpunkter med hjälp av PowerShell-cmdleten Get-AdfsEndpoint och sök efter slutpunkten trust/13/UsernameMixed. Exempel:
 
@@ -301,7 +301,7 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen
-**Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS-enhet.
+**Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS/iPadOS-enhet.
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Felsökningssteg för misslyckad profilinstallation
 
@@ -313,9 +313,9 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 4. Gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
 
-5. Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
+5. Bekräfta att Safari för iOS/iPadOS är standardwebbläsare och att cookies har aktiverats.
 
-### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Användarens iOS-enhet har fastnat på en registreringsskärm i mer än 10 minuter
+### <a name="users-iosipados-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Användarens iOS/iPadOS-enhet har fastnat i en registreringsskärm under mer än 10 minuter
 
 **Problem**: En registrerande enhet kan fastna på någon av följande två skärmar:
 - Väntar på slutlig konfiguration från Microsoft
@@ -323,11 +323,11 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 Det här problemet kan inträffa om:
 - det finns ett tillfälligt avbrott med Apple-tjänster, eller
-- iOS-registrering är konfigurerad att använda VPP-tokens som visas i tabellen, men det är något fel med VPP-token.
+- iOS/iPadOS-registreringen har konfigurerats så att den använder VPP-token så som visas i tabellen, men det är något fel med VPP-token.
 
 | Registreringsinställningar | Värde |
 | ---- | ---- |
-| Plattform | iOS |
+| Plattform | iOS/iPadOS |
 | Användartillhörighet | Registrera med användartillhörighet |
 |Autentisera med Företagsportalen istället för Apple-installationsassistenten | Ja |
 | Installera företagsportalen med VPP | Använd token: tokenadress |

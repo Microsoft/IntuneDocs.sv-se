@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90cdff66d32ac5edb3b1867a545f2c9627ccfe39
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: e018fb9888db19995556a6671d93a1db5fa78c2a
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754787"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415453"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune stöder en mängd olika apptyper som bland annat webbappar. En webbapp ä
 
 Innan du kan hantera och tilldela appar för dina användare, lägger du till appen i Intune. 
 
-Intune skapar en genväg till webbappen på användarens enhet. På iOS-enheter läggs en genväg till webbappen till på startskärmen. På Android Device Admin-enheter läggs en genväg till webbappen till i Intunes företagsportalswidget, vilken användaren måste fästa manuellt. På Windows-enheter placeras en genväg till webbappen i Start-menyn.
+Intune skapar en genväg till webbappen på användarens enhet. På iOS/iPadOS-enheter läggs en genväg till webbappen till på startskärmen. På Android Device Admin-enheter läggs en genväg till webbappen till i Intunes företagsportalswidget, vilken användaren måste fästa manuellt. På Windows-enheter placeras en genväg till webbappen i Start-menyn.
 
 > [!Note]
 > En webbläsare måste vara installerad på användarens enhet för att det ska gå att starta webbappar. 
@@ -71,7 +71,7 @@ Om du vill lägga till en app i Intune som en genväg till en app på webben gö
     **Översiktsbladet** för appen som du har skapat visas i applistan.
 
 > [!Note]
-> För närvarande associeras distribution av Intune-webappar till iOS-enheter med hanteringsprofilen och kan inte tas bort manuellt. Du kan ändra distributionstypen till **Avinstallera** i Intune-portalen, så att webbappen kan tas bort automatiskt. Om du tar bort distributionen innan du ändrar tilldelningsavsikt för appen till **Avinstallera**, kommer webbappen dock att förbli permanent på enheten tills enheten har avregistrerats från Intune.
+> För närvarande associeras distribution av Intune-webappar till iOS/iPadOS-enheter med hanteringsprofilen och kan inte tas bort manuellt. Du kan ändra distributionstypen till **Avinstallera** i Intune-portalen, så att webbappen kan tas bort automatiskt. Om du tar bort distributionen innan du ändrar tilldelningsavsikt för appen till **Avinstallera**, kommer webbappen dock att förbli permanent på enheten tills enheten har avregistrerats från Intune.
 
 Slutanvändarna kan starta webbappar direkt från Windows företagsportalapp genom att välja webbappen och sedan välja alternativet **Öppna i webbläsare**. Den publicerade webbadressen öppnas direkt i webbläsaren. 
 

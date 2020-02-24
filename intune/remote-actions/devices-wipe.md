@@ -1,6 +1,6 @@
 ---
 title: Dra tillbaka eller rensa enheter med hjälp av Microsoft Intune – Azure | Microsoft Docs
-description: Dra tillbaka eller rensa en enhet på en enhet med Android, Android-arbetsprofil, iOS, macOS eller Windows med hjälp av Microsoft Intune. Även ta bort en enhet från Azure Active Directory.
+description: Dra tillbaka eller rensa en enhet på en enhet med Android, Android-arbetsprofil, iOS/iPadOS, macOS eller Windows med hjälp av Microsoft Intune. Även ta bort en enhet från Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812461"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415518"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -43,7 +43,7 @@ Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter
 
 
 > [!NOTE]
-> Åtgärden rensa är inte tillgänglig för iOS-enheter som har registrerats med användarregistrering.
+> Åtgärden Rensa är inte tillgänglig för iOS/iPadOS-enheter som har registrerats med användarregistrering.
 
 Alternativet **Behåll registreringstillstånd och användarkonto** är endast tillgängligt för Windows 10 version 1709 eller senare.
 

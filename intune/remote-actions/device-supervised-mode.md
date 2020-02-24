@@ -1,7 +1,7 @@
 ---
-title: Aktivera övervakat läge på iOS med Microsoft Intune
+title: Aktivera övervakat läge på iOS/iPadOS med Microsoft Intune
 titleSuffix: ''
-description: Lär dig hur du aktiverar övervakat läge på iOS med Intune.
+description: Lär dig hur du aktiverar övervakat läge på iOS/iPadOS med Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e995dbc89321bf844151accd654a2d17d35afd9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d266dbc9fa72b1579e05e7798315e2e718a9797
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713405"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413669"
 ---
-# <a name="turn-on-ios-supervised-mode"></a>Aktivera övervakat läge på iOS
+# <a name="turn-on-iosipados-supervised-mode"></a>Aktivera övervakat läge på iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Övervakat läge på Apple iOS ger administratörer fler alternativ vid hantering av Apple-enheter, vilket gör att det blir användbart för företagsägda enheter som distribueras i större skala. Du kan till exempel begränsa AirDrop eller hindra användare från att ändra namnet på enheten. [Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune](../configuration/device-restrictions-ios.md) innehåller en lista med inställningar som kräver övervakat läge.
+Övervakat läge på Apple iOS/iPadOS ger administratörer fler alternativ vid hantering av Apple-enheter, vilket gör att det blir användbart för företagsägda enheter som distribueras i större skala. Du kan till exempel begränsa AirDrop eller hindra användare från att ändra namnet på enheten. [Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune](../configuration/device-restrictions-ios.md) innehåller en lista med inställningar som kräver övervakat läge.
 
 Intune har stöd för övervakat läge som en del av Apples [program för enhetsregistrering (DEP)](../enrollment/device-enrollment-program-enroll-ios.md).
 
@@ -41,7 +41,7 @@ I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Aktivera övervakat läge efter registreringen
 
-Efter registreringen går det endast att aktivera övervakat läge genom att ansluta en iOS-enhet till en Mac-dator och använda [Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (vilket återställer enheten). Du kan inte konfigurera en enhet för övervakat läge i Intune efter registreringen.
+Efter registreringen går det endast att aktivera övervakat läge genom att ansluta en iOS/iPadOS-enhet till en Mac-dator och använda [Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (vilket återställer enheten). Du kan inte konfigurera en enhet för övervakat läge i Intune efter registreringen.
 
 ## <a name="identify-a-supervised-device"></a>Identifiera en övervakad enhet
 

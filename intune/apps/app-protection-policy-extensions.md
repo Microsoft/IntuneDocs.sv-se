@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ff4fcd7d1b2115c4fbe0bc00759ef3d60482904
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: e568bb5520b4f8cc242cb58a1ee48e8729f4e387
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692105"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414597"
 ---
 # <a name="protecting-application-extensions"></a>Skydda programtillägg
 
@@ -31,7 +31,7 @@ I den här artikeln beskrivs programskyddsprinciper för tillägg i Microsoft In
 
 ## <a name="add-ins-for-outlook-app"></a>Tillägg för Outlook-appen
 
-Med Outlook-tillägg kan du integrera populära appar med e-postklienten. Tillägg för Outlook är tillgängliga för Outlook på webben, Windows, Mac och Outlook för Android och iOS. Appskyddsprinciperna för Intune APP SDK och Intune har inte stöd för att hantera tillägg till Outlook, men det finns andra sätt för att användningen. Eftersom tillägg hanteras via Microsoft Exchange kan användarna dela data och meddelanden via Outlook och ohanterade tilläggsprogram, såvida inte tilläggen har inaktiverats för användarna av Exchange.
+Med Outlook-tillägg kan du integrera populära appar med e-postklienten. Tillägg för Outlook är tillgängliga för Outlook på webben, Windows, Mac och Outlook för Android och iOS/iPadOS. Appskyddsprinciperna för Intune APP SDK och Intune har inte stöd för att hantera tillägg till Outlook, men det finns andra sätt för att användningen. Eftersom tillägg hanteras via Microsoft Exchange kan användarna dela data och meddelanden via Outlook och ohanterade tilläggsprogram, såvida inte tilläggen har inaktiverats för användarna av Exchange.
 
 Om du vill förhindra slutanvändarna från att få åtkomst till och kunna installera Outlook-tillägg (vilket påverkar alla Outlook-klienter) gör du följande rolländringar i Exchange-administrationscentret:
 

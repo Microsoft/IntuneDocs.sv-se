@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: babe556d6810ad027a1b0b3cae6364c99bc9a07c
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: c7c47a829f8f609528f45b30d0dd9bf56d9d8eb9
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812503"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414910"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Hantera Internetåtkomst med hjälp av en Microsoft Intune-principskyddad webbläsare
 
@@ -42,7 +42,7 @@ Med en webbläsare som skyddas med Intune-principer (Microsoft Edge eller Intune
 
 ## <a name="microsoft-edge-support"></a>Microsoft Edge-stöd
 
-Du kan använda Microsoft Edge för företagsscenarier på iOS- och Android-enheter. Microsoft Edge har stöd för samma hanteringsscenarier som Intune Managed Browser, men där finns dessutom förbättringar av användarupplevelsen. Nedanstående Microsoft Edge-företagsfunktioner som aktiveras med Intune-principer är tillgängliga:
+Du kan använda Microsoft Edge för företagsscenarier på iOS/iPadOS- och Android-enheter. Microsoft Edge har stöd för samma hanteringsscenarier som Intune Managed Browser, men där finns dessutom förbättringar av användarupplevelsen. Nedanstående Microsoft Edge-företagsfunktioner som aktiveras med Intune-principer är tillgängliga:
 
 - **Dubbel identitet** – Användarna kan lägga till både ett arbetskonto och ett personligt konto för surfning. Det finns en fullständig uppdelning mellan de två identiteterna, vilket liknar arkitektur och funktioner i Office 365 och Outlook. Intune-administratörer kommer att kunna ställa in de önskade principerna för en skyddad surfupplevelse på arbetskontot. 
 - **Integrering med Intunes appskyddsprincip** – Administratörer kan nu använda appskyddsprinciper i Microsoft Edge, inklusive kontroll av klipp ut, kopiera och klistra in, förhindra skärmdumpar och säkerställa att användarvalda länkar bara öppnas i andra hanterade appar.
@@ -57,9 +57,9 @@ Microsoft Edge och Intune Managed Browser är webbappar för webbläsare som du 
 
 Operativsystemkrav för webbläsarprinciper:
 - Android 4 och senare eller
-- iOS 8.0 och senare.
+- iPad iOS/iPadOS 8.0 och senare.
 
-Tidigare versioner av Android och iOS kommer att kunna fortsätta att använda Managed Browser, men kommer inte att kunna installera nya versioner av appen och kanske inte använda alla funktioner. Vi rekommenderar att du uppdaterar de här enheterna till en version av operativsystemet som stöds.
+Tidigare versioner av Android och iOS/iPadOS kommer att kunna fortsätta att använda Managed Browser, men kommer inte att kunna installera nya versioner av appen och kanske inte använda alla funktioner. Vi rekommenderar att du uppdaterar de här enheterna till en version av operativsystemet som stöds.
 
 >[!NOTE]
 >Managed Browser inte har stöd för det kryptografiska protokollet Secure Sockets Layer version 3 (SSLv3).
@@ -123,9 +123,9 @@ Managed Browser har inget stöd för klassiska principer för villkorlig åtkoms
 
 ## <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Enkel inloggning till Azure AD-anslutna webbappar i principskyddade webbläsare
 
-Microsoft Edge och Intune Managed Browser i iOS och Android kan dra nytta av enkel inloggning till alla webbappar (SaaS och lokala) som är Azure AD-anslutna. Om Microsoft Authenticator-appen finns i iOS eller Intune-företagsportalappen i Android, kommer användare av principskyddade webbläsare att kunna komma åt Azure AD-anslutna webbappar utan att ange sina autentiseringsuppgifter på nytt.
+Microsoft Edge och Intune Managed Browser i iOS/iPadOS och Android kan dra nytta av enkel inloggning till alla webbappar (SaaS och lokala) som är Azure AD-anslutna. Om Microsoft Authenticator-appen finns i iOS/iPadOS eller Intune-företagsportalappen i Android, kommer användare av principskyddade webbläsare att kunna få åtkomst till Azure AD-anslutna webbappar utan att behöva ange sina autentiseringsuppgifter på nytt.
 
-Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticator-appen i iOS eller på Intune-företagsportalen i Android. Användare med Authenticator-appen eller Intune-företagsportalen uppmanas att registrera sin enhet när de navigerar till en Azure AD-ansluten webbapp i en principskyddad webbläsare, om enheten inte redan har registrerats av ett annat program. När enheten är registrerad med kontot som hanteras av Intune, kommer detta konto ha enkel inloggning aktiverat för Azure AD-anslutna webbappar. 
+Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticator-appen i iOS/iPadOS eller på Intune-företagsportalen i Android. Användare med Authenticator-appen eller Intune-företagsportalen uppmanas att registrera sin enhet när de navigerar till en Azure AD-ansluten webbapp i en principskyddad webbläsare, om enheten inte redan har registrerats av ett annat program. När enheten är registrerad med kontot som hanteras av Intune, kommer detta konto ha enkel inloggning aktiverat för Azure AD-anslutna webbappar. 
 
 > [!NOTE]
 > Enhetsregistrering är en enkel incheckning med Azure AD-tjänsten. Det kräver inte fullständig enhetsregistrering och inte ger IT-avdelningen ytterligare behörighet på enheten.
@@ -138,7 +138,7 @@ Enkel inloggning kräver att din enhet har registrerats av Microsoft Authenticat
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till** > **Hanterade appar**.
 3. Ange **Namn** och valfri **Beskrivning** för appkonfigurationsinställningarna sidan **Grundläggande** i fönstret **Skapa appkonfigurationsprincip**.
-4. Välj alternativet **Välj den offentliga appen** och välj **Hanterad webbläsare** och/eller **Microsoft Edge** för iOS, för Android eller för båda två.
+4. Välj alternativet **Välj den offentliga appen** och välj **Hanterad webbläsare** och/eller **Microsoft Edge** för iOS/iPadOS, för Android eller för båda två.
 5. Gå tillbaka till fönstret **Skapa appkonfigurationsprincip** genom att klicka på **Välj**.
 6. Visa sidan **Inställningar** genom att klicka på **Nästa**.
 7. Förse appen med konfigurationer genom att definiera nyckel- och värdepar på sidan **Inställningar**. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
@@ -186,7 +186,7 @@ Använd proceduren ovan för att skapa en Microsoft Edge-appkonfiguration. Ange 
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Så här konfigurerar du programproxyinställningar för skyddade webbläsare
 
-Microsoft Edge, Intune Managed Browser och [Azure AD-programproxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) kan användas tillsammans så att du kan hantera följande scenarier för användare av iOS och Android-enheter:
+Microsoft Edge, Intune Managed Browser och [Azure AD-programproxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) kan användas tillsammans så att du kan hantera följande scenarier för användare av iOS/iPadOS- och Android-enheter:
 
 - En användare laddar ned och loggar in på Microsoft Outlook-appen. Intunes appskyddsprinciper tillämpas automatiskt. De krypterar sparade data och blockerar användaren från att överföra företagets filer till ohanterade appar och platser på enheten. När användaren sedan klickar på en länk till en intranätplats i Outlook kan du ange att länken ska öppnas i en skyddad webbläsare snarare än någon annan webbläsare. Den skyddade webbläsaren identifierar att intranätsplatsen har gjorts tillgänglig för användaren via programproxyn. Användaren omdirigeras automatiskt via programproxyn för att autentisera med alla tillämpliga multifaktorautentiseringar och principer för villkorlig åtkomst innan de når intranätplatsen. Den här platsen, som tidigare inte hittades när användaren använde en fjärranslutning, kan nu öppnas och länken i Outlook fungerar som förväntat.
 - En fjärranvändare öppnar den skyddade webbläsaren och navigerar till en intranätplats via den interna webbadressen. Den skyddade webbläsaren identifierar att intranätsplatsen har gjorts tillgänglig för användaren via programproxyn. Användaren omdirigeras automatiskt via programproxyn för att autentisera med alla tillämpliga multifaktorautentiseringar och principer för villkorlig åtkomst innan de når intranätplatsen. Den här platsen, som tidigare inte hittades när användaren använde en fjärranslutning, kan nu öppnas.
@@ -316,9 +316,9 @@ Använd proceduren för att skapa en appkonfiguration för Microsoft Edge eller 
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Komma åt loggar för hanterade appar med Managed Browser i iOS
 
-Slutanvändare med Managed Browser installerade på sina iOS-enheter kan se hanteringsstatus för alla appar som har publicerats av Microsoft. De kan skicka loggar för felsökning av deras hanterade iOS-appar.
+Slutanvändare med Managed Browser installerade på sina iOS/iPadOS-enheter kan se hanteringsstatus för alla appar som har publicerats av Microsoft. De kan skicka loggar för felsökning av deras hanterade iOS/iPadOS-appar.
 
-1. Öppna iOS **Inställningar**.
+1. Öppna **Inställningar** för iOS/iPadOS.
 2. Välj programinställningar för hanterad **Webbläsare**.
 3. Växla **Aktivera Intune-diagnostik** för att ställa in webbläsaren på felsökningsläge.
 4. Öppna den hanterade **webbläsaren**. Klicka på **Visa status för Intune-app** om du vill granska enskilda programprincipinställningar.
@@ -345,7 +345,7 @@ En lista över de inställningar som finns lagrade i apploggarna finns i [gransk
 ### <a name="turn-off-usage-data"></a>Stäng av användningsdata
 Microsoft samlar automatiskt in anonyma data om prestanda och användning av Managed Browser för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.
 
-- Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS-enheter.
+- Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS/iPadOS-enheter.
 
 ## <a name="next-steps"></a>Nästa steg
 

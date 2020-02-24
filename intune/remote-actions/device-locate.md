@@ -1,6 +1,6 @@
 ---
-title: Hitta borttappade iOS-enheter med Microsoft Intune – Azure | Microsoft Docs
-description: Leta upp förlorade eller stulna iOS-enheter med hjälp av funktionen för att hitta enhet i Microsoft Intune. Få information om säkerhet och sekretess när du använder åtgärden för att hitta enhet.
+title: Hitta borttappade iOS/iPadOS-enheter med Microsoft Intune – Azure | Microsoft Docs
+description: Leta upp förlorade eller stulna iOS/iPadOS-enheter med hjälp av funktionen för att hitta enhet i Microsoft Intune. Få information om säkerhet och sekretess när du använder åtgärden för att hitta enhet.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 817f46558932c074abc37b45d2885496419a0db0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: dc276a6235fb4951c83b62e3c488145062814728
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712426"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415582"
 ---
-# <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Hitta borttappade eller stulna iOS-enheter med Intune
+# <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Hitta borttappade eller stulna iOS/iPadOS-enheter med Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Med åtgärden **Hitta enhet** kan du visa platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara i övervakat läge. Innan du använder åtgärden ser du till att enheten är i [borttappat läge](device-lost-mode.md).
+Med åtgärden **Hitta enhet** kan du visa platsen för en förlorad eller stulen iOS/iPadOS-enhet på en karta. Enheten måste vara i övervakat läge. Innan du använder åtgärden ser du till att enheten är i [borttappat läge](device-lost-mode.md).
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
-- iOS 9.3 och senare
+- iPad iOS/iPadOS 9.3 och senare
 
 Den här funktionen stöds inte för följande system: 
 - Windows
@@ -43,16 +43,16 @@ Den här funktionen stöds inte för följande system:
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Välj **Enheter** och sedan **Alla enheter**.
-4. Välj en iOS-enhet i listan över de enheter du hanterar och välj **...Mer**. Välj sedan fjärråtgärden **Hitta enhet**.
+4. Välj en iOS/iPadOS-enhet i listan över de enheter du hanterar och välj **...Mer**. Välj sedan fjärråtgärden **Hitta enhet**.
 5. När enheten har hittats visas dess plats i **Hitta enhet**.
     ![Skärmbild för Hitta enhet med Intune i Azure](./media/device-locate/locate-device.png)
 
 
 ## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktivera ljudavisering för borttappat läge på en iOS-enhet
 
-Om någon har tappat bort sin iOS 9.3-enhet eller senare enhet kan du via fjärranslutning utlösa en ljudavisering på enheten så att användaren kan hitta den. Enheten måste vara i [Borttappat läge](device-lost-mode.md).
+Om någon har tappat bort sin iOS/iPadOS 9.3-enhet eller senare enhet kan du via fjärranslutning utlösa en ljudavisering på enheten så att användaren kan hitta den. Enheten måste vara i [Borttappat läge](device-lost-mode.md).
 
-I [Intune i Azure Portal](https://aka.ms/intuneportal), välj **Enheter** > **Alla enheter** > välj en iOS-enhet > **Översikt**  >  **Mer** > **Spela upp ljud för Borttappat läge (övervaka endast)** .
+Välj **Enheter** > **Alla enheter** > välj en iOS/iPadOS-enhet > **Översikt** > **Mer** > **Spela upp ljud för Borttappat läge (övervaka endast)** i [Intune i Azure Portal](https://aka.ms/intuneportal).
 
 Ljudet fortsätter att spelas upp tills användaren inaktiverar ljudet på enheten eller enheten tas bort från Borttappat läge.
 

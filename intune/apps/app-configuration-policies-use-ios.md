@@ -1,7 +1,7 @@
 ---
-title: Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
+title: Lägg till konfigurationsprinciper för hanterade iOS/iPadOS-mobilappar
 titleSuffix: Microsoft Intune
-description: Lär dig hur du använder appkonfigurationsprinciper för att skicka konfigurationsdata till en iOS-app när den körs.
+description: Lär dig hur du använder appkonfigurationsprinciper för att skicka konfigurationsdata till en iOS/iPadOS-app när den körs.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755773"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77438012"
 ---
-# <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
+# <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Lägg till konfigurationsprinciper för hanterade iOS/iPadOS-mobilappar
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att ge anpassade konfigurationsinställningar för en iOS-app. Med de här konfigurationsinställningarna kan en app anpassas efter appleverantörens önskemål. Du behöver få de här konfigurationsinställningarna (nycklar och värden) från appleverantören. För att konfigurera appen anger du inställningarna som nycklar och värden eller som XML som innehåller nycklarna och värdena.
+Använd appkonfigurationsprinciper i Microsoft Intune för att ge anpassade konfigurationsinställningar för en iOS/iPadOS-app. Med de här konfigurationsinställningarna kan en app anpassas efter appleverantörens önskemål. Du behöver få de här konfigurationsinställningarna (nycklar och värden) från appleverantören. För att konfigurera appen anger du inställningarna som nycklar och värden eller som XML som innehåller nycklarna och värdena.
 
 Som Microsoft Intune-administratör kan du styra vilka användarkonton som läggs till i Microsoft Office-program på hanterade enheter. Du kan begränsa åtkomsten till endast tillåtna användarkonton i organisationen och blockera personliga konton på registrerade enheter. De stödjande programmen bearbetar appkonfigurationen och tar bort och blockerar icke-godkända konton. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
 
@@ -41,7 +41,7 @@ När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för 
 När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen kan du även välja de specifika grupper som du vill exkludera. Mer information finns i [Inkludera och exkludera apptilldelningar i Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
-> Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 8.0 och senare. Den stöder följande appinstallationstyper:
+> Den här principen är för närvarande endast tillgänglig för enheter som kör iOS/iPadOS 8.0 och senare. Den stöder följande appinstallationstyper:
 >
 > - **Hanterade iOS-appar från App Store**
 > - **App-paket för iOS**
@@ -106,7 +106,7 @@ Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Tillåt endast konfigurerade organisationskonton i appar med flera identiteter 
 
-Använd följande nyckel-/värdepar för iOS-enheter:
+Använd följande nyckel-/värdepar för iOS/iPadOS-enheter:
 
 | **Nyckel** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -177,17 +177,17 @@ Dessutom stöder Intune följande typer av token i egenskapslistan:
 - \{\{deviceid\}\} – till exempel **b9841cd9-9843-405f-be28-b2265c59ef97**
 - \{\{userid\}\} – till exempel **3ec2c00f-b125-4519-acf0-302ac3761822**
 - \{\{username\}\} – till exempel **Johan Danielsson**
-- \{\{serialnumber\}\} – till exempel **F4KN99ZUG5V2** (för iOS-enheter)
-- \{\{serialnumberlast4digits\}\} – till exempel **G5V2** (för iOS-enheter)
+- \{\{serialnumber\}\} – till exempel **F4KN99ZUG5V2** (för iOS/iPadOS-enheter)
+- \{\{serialnumberlast4digits\}\} – till exempel **G5V2** (för iOS/iPadOS-enheter)
 - \{\{aaddeviceid\}\} – till exempel **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurera företagsportalappen så att den stöder iOS DEP-enheter
 
-DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med App Store-versionen av företagsportalappen. Du kan dock konfigurera företagsportalappen så att den stöder iOS DEP-enheter med följande steg.
+DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med App Store-versionen av företagsportalappen. Du kan dock, med hjälp av följande steg, konfigurera företagsportalsappen så att den stöder iOS/iPadOS DEP-enheter.
 
 1. Lägg till Intune-företagsportalen i Intune när så behövs genom att gå till **Intune** > **Appar** > **Alla appar** > **Lägg till**.
 2. Om du vill skapa en appkonfigurationsprincip för företagsportalsappen går du till **Appar** > **Appkonfigurationsprinciper**.
-3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du kan skapa en konfigurationsprincip för appar och ange XML-data finns i [Lägga till konfigurationsprinciper för hanterade iOS-enheter](app-configuration-policies-use-ios.md).
+3. Skapa en appkonfigurationsprincip med XML nedan. Mer information om hur du kan skapa en konfigurationsprincip för appar och ange XML-data finns i [Lägga till konfigurationsprinciper för hanterade iOS/iPadOS-enheter](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>
@@ -205,11 +205,11 @@ DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med A
 4. Be slutanvändarna att logga in på företagsportalappen när den installeras automatiskt.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Övervaka konfigurationsstatus för iOS-appar per enhet 
-När en konfigurationsprincip har tilldelats kan du övervaka iOS-appens konfigurationsstatus för varje hanterad enhet. Gå till **Microsoft Intune** i Azure Portal och välj **Enheter** > **Alla enheter**. Om du vill visa ett fönster för enheten väljer du en specifik enhet från listan med hanterade enheter. Välj **Appkonfiguration** i enhetens fönster.  
+När en konfigurationsprincip har tilldelats kan du övervaka iOS/iPadOS-appens konfigurationsstatus för varje hanterad enhet. Gå till **Microsoft Intune** i Azure Portal och välj **Enheter** > **Alla enheter**. Om du vill visa ett fönster för enheten väljer du en specifik enhet från listan med hanterade enheter. Välj **Appkonfiguration** i enhetens fönster.  
 
 ## <a name="additional-information"></a>Ytterligare information
 
-- [Distribuera appkonfigurationsinställningar för Outlook för iOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Distribuera appkonfigurationsinställningar för Outlook för iOS/iPadOS och Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Nästa steg
 

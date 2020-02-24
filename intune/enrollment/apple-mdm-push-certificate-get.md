@@ -1,7 +1,7 @@
 ---
 title: Hämta ett Apple MDM-pushcertifikat för Intune
 titleSuffix: ''
-description: Hämta ett Apple MDM-pushcertifikat för att hantera iOS-enheter med Intune.
+description: Hämta ett Apple MDM-pushcertifikat så att du kan hantera iOS/iPadOS-enheter med Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,24 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 178e1a3d0f58eb925c4d48be10bfa46e68c6b2c6
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 673f63194b46ca7e4dbf1206d363cbe70c6e6098
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955464"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414427"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Hämta ett Apple MDM-pushcertifikat
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Ett Apple MDM-pushcertifikat krävs för att Intune ska kunna hantera iOS- och macOS-enheter. När du har lagt till certifikatet i Intune kan dina användare registrera sina enheter med hjälp av följande:
+Ett Apple MDM-pushcertifikat krävs för att Intune ska kunna hantera iOS/iPadOS- och macOS-enheter. När du har lagt till certifikatet i Intune kan dina användare registrera sina enheter med hjälp av följande:
 
 - Företagsportalsappen
 
 - Apples metoder för bulkregistrering, till exempel programmet för enhetsregistrering, Apple School Manager eller Apple Configurator.
 
-Mer information om registreringsalternativ för finns [Välj hur du vill registrera iOS-enheter](ios-enroll.md).
+Mer information om registreringsalternativ finns i [Välj hur du vill registrera iOS/iPadOS-enheter](ios-enroll.md).
 
 När ett pushcertifikat upphör att gälla måste du förnya det. När du förnyar ska du se till att använda samma Apple-ID som du använde när du först skapade pushcertifikatet.
 
@@ -64,7 +64,7 @@ Spara ID:t som en påminnelse när du behöver förnya certifikatet.
 Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med pushcertifikatet kan Intune registrera och hantera Apple-enheter.
 
 ## <a name="renew-apple-mdm-push-certificate"></a>Förnya ett Apple MDM-pushcertifikat
-MDM Apple-pushcertifikatet är giltigt i ett år och måste förnyas årligen för iOS- och Mac OS-enhetshantering. Om certifikatet går ut kan inte registrerade Apple-enheter kontaktas.
+MDM Apple-pushcertifikatet är giltigt i ett år och måste förnyas årligen för iOS/iPadOS- och macOS-enhetshantering. Om certifikatet går ut kan inte registrerade Apple-enheter kontaktas.
 
 Certifikatet associeras med det Apple-ID som användes för att skapa det. Förnya MDM-pushcertifikatet med samma Apple-ID som användes för att skapa det.
 
@@ -73,7 +73,7 @@ Certifikatet associeras med det Apple-ID som användes för att skapa det. Förn
 3. Välj **Skapa ett MDM-pushcertifikat** för att gå till Apple Push Certificates-portalen. Leta upp det certifikat som du vill förnya och välj **Förnya**.
 4. På skärmen för att **förnya pushcertifikat** lägger du till kommentarer som hjälper dig att identifiera certifikatet i framtiden. Välj sedan **Välj fil** för att bläddra till den nya begärandefil som du laddade ned och därefter **Ladda upp**.
    > [!TIP]
-   > Ett certifikat kan identifieras av sitt UID. Granska **Ämnes-ID:t** i certifikatinformationen för att hitta UID:ts GUID-del. På en registrerad iOS-enhet går du till **Inställningar** > **Allmänt** > **Enhet** **Hantering** > **Hanteringsprofil** > **Mer information** > **Hanteringsprofil**. Objektet på den andra raden, **Ämne**, innehåller det unika GUID du kan matcha certifikatet i portalen för Apple Push-certifikat.
+   > Ett certifikat kan identifieras av sitt UID. Granska **Ämnes-ID:t** i certifikatinformationen för att hitta UID:ts GUID-del. Gå till **Inställningar** > **Allmänt** > **Enhet** **Hantering** > **Hanteringsprofil** > **Mer information** > **Hanteringsprofil** på en registrerad iOS/iPadOS-enhet. Objektet på den andra raden, **Ämne**, innehåller det unika GUID du kan matcha certifikatet i portalen för Apple Push-certifikat.
  
 6. På skärmen **Bekräftelse** väljer du **Ladda ned** och sparar PEM-filen lokalt.
 7. I [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) väljer du först bläddringsikonen för **Apple MDM-pushcertifikat** och sedan den .pem-fil som du laddade ned från Apple. Välj sedan **Ladda upp**.

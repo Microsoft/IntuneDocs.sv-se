@@ -1,7 +1,7 @@
 ---
-title: Självstudier – Använda Apple Business Manager eller programmet för enhetsregistrering för registrering av iOS-enheter i Intune
+title: Självstudier – Använda Apple Business Manager eller programmet för enhetsregistrering för registrering av iOS/iPadOS-enheter i Intune
 titleSuffix: Microsoft Intune
-description: I de här självstudierna ska du ställa in registreringsfunktioner för Apples företagsenheter från ABM för att registrera iOS-enheter i Intune.
+description: I de här självstudierna ska du ställa in registreringsfunktioner för Apples företagsenheter från ABM för att registrera iOS/iPadOS-enheter i Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,14 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5599e7ea8c9a26c4624f98133db566fb07c89af
-ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
+ms.openlocfilehash: 9aab0233c05416fc50413a7889435cb221179730
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971787"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415147"
 ---
-# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Självstudie: Använda Apples företagsenhetsregistrering i Apple Business Manager (ABM) för registrering av iOS-enheter i Intune
+# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Självstudie: Använda Apples företagsenhetsregistrering i Apple Business Manager (ABM) för registrering av iOS/iPadOS-enheter i Intune
 Funktionerna för registrering av enheter i Apple Business Manager underlättar registrering av enheter. Intune stöder också Apples äldre DEP-portal (Programmet för enhetsregistrering), men vi rekommenderar att du börjar om från början med Apple Business Manager. Med Microsoft Intune och Apples företagsenhetsregistrering registreras enheter automatiskt den första gången som användaren slår på enheten. Du kan därför leverera enheter till många användare utan att behöva konfigurera varje enhet individuellt. 
 
 I den här självstudien får du lära dig att:
@@ -40,7 +40,7 @@ Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsf
 - Hämta ett [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-device-enrollment-token"></a>Hämta token för enhetsregistrering från Apple
-Innan du registrerar iOS-enheter med Apples företagsägda funktioner behöver du en enhetsregistreringstokenfil från Apple (.pem). Med denna token kan Intune synkronisera information om Apple-enheter som ditt företag äger. Intune kan även överföra registreringsprofiler till Apple och tilldela enheter till dessa profiler.
+Innan du registrerar några iOS/iPadOS-enheter med Apples företagsägda funktioner behöver du en enhetsregistreringstokenfil från Apple (.pem). Med denna token kan Intune synkronisera information om Apple-enheter som ditt företag äger. Intune kan även överföra registreringsprofiler till Apple och tilldela enheter till dessa profiler.
 
 Du kan använda ABM- eller DEP-portalen för att skapa en token för enhetsregistrering. Du kan också använda portalerna för att tilldela enheter till Intune för hantering.
 
@@ -78,13 +78,13 @@ Du kan använda ABM- eller DEP-portalen för att skapa en token för enhetsregis
 11. Om du vill tillämpa omfångstaggar för att begränsa vilka administratörer som har åtkomst till denna token väljer du omfång.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
-Nu när du har installerat din token kan skapa du en registreringsprofil för företagsägda iOS-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
+Nu när du har installerat din token kan skapa du en registreringsprofil för företagsägda iOS/iPadOS-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
 1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken**.
 
 2. Välj den token du precis har installerat och välj **Profiler** > **Skapa profil**.
 
-3. Under **Skapa profil** anger du *TestDEPProfile* i fältet **Namn** och *Testing DEP for iOS devices* (Testar DEP för iOS-enheter) i fältet **Beskrivning**. Användarna kan inte se den här informationen.
+3. Under **Skapa profil** anger du *TestDEPProfile* i fältet **Namn** och *Testar DEP för iOS/iPadOS-enheter* i fältet **Beskrivning**. Användarna kan inte se den här informationen.
 
 4. Välj **iOS** under **Plattform**.
 
@@ -96,11 +96,11 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för f�
 
 8. Om du väljer att registrera med användartillhörighet, autentisera med företagsportalen och installera företagsportalen med VPP kan du välja om du vill köra företagsportalen i enkelt appläge till autentiseringen. Med den här inställningen kan du se till att användaren inte har åtkomst till andra appar förrän företagets registrering är klar. Om du vill förhindra att användaren begränsas till det här flödet tills registreringen är klar väljer du **Ja** under **Kör företagsportalen i enkelt appläge tills autentisering**. 
 
-9. Välj **Inställningar för enhetshantering** och välj **Ja** under **Kontrollerad**. Med övervakade enheter får du flest hanteringsalternativ för företagets iOS-enheter.
+9. Välj **Inställningar för enhetshantering** och välj **Ja** under **Kontrollerad**. Med övervakade enheter får du flest hanteringsalternativ för företagets iOS/iPadOS-enheter.
 
 10. Välj **Ja** under **Låst registrering** för att se till att användarna inte kan ta bort hantering av företagets enheter. 
 
-11. Välj ett alternativ under **Synkronisera med datorer** för att avgöra om iOS-enheter ska kunna synkroniseras med datorer.
+11. Välj ett alternativ under **Synkronisera med datorer** för att avgöra om iOS/iPadOS-enheter ska kunna synkroniseras med datorer.
 
 12. Som standard namnger Apple enheten efter typ av enhet (t.ex. iPad). Om du vill ange en annan namnmall väljer du **Ja** under **Använd mall för enhetsnamn**. Ange namnet som du vill tillämpa på enheterna, där strängarna *{{SERIAL}}* och *{{DEVICETYPE}}* kommer att ersätta varje enhets serienummer och typ av enhet. Annars väljer du **Nej** under **Använd mall för enhetsnamn**.
 
@@ -120,7 +120,7 @@ När du ställer in en registreringsprogramtoken med ABM-, ASM- eller DEP-portal
 
 1. Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token i listan > **Enheter** > **Synkronisera**.
 
-## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Tilldela iOS-enheterna en registreringsprofil
+## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Tilldela iOS/iPadOS-enheterna en registreringsprofil
 
 Du måste tilldela en registreringsprogramprofil till enheterna innan de kan registreras. Enheterna synkroniseras till Intune från Apple och måste tilldelas rätt MDM-servertoken i ABM-, ASM- eller DEP-portalen.
 
@@ -134,12 +134,12 @@ Du har konfigurerat hantering och synkronisering mellan Apple och Intune, och ha
 
 ## <a name="next-steps"></a>Nästa steg
 
-Det finns mer information om andra alternativ som är tillgängliga för registrering av iOS-enheter.
+Det finns mer information om andra alternativ som är tillgängliga för registrering av iOS/iPadOS-enheter.
 
 > [!div class="nextstepaction"]
-> [Fördjupande artikel om iOS DEP-registrering](device-enrollment-program-enroll-ios.md)
+> [Fördjupande artikel om iOS/iPadOS DEP-registrering](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources
-<!--If you don't want to use iOS corporate enrolled devices anymore, you can delete them.>
+<!--If you don't want to use iOS/iPadOS corporate enrolled devices anymore, you can delete them.>
 <!--- If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).>
