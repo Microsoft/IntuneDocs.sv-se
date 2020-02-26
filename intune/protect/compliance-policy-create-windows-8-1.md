@@ -77,7 +77,7 @@ Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsyst
   - Det minsta antalet teckenuppsättningar är mer än två
 
 - **Lösenordstyp**:  
-  Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (alfanumeriska).
+  Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
 
   När värdet är *alfanumeriskt*är följande inställning tillgänglig.  
 
