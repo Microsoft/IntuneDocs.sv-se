@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c72cf963822284702f6b924ca506f8ec1157e91
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a03a92f715496b3c647a12bb99457d151ead54a3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505134"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514939"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Fastställa scenariokrav för användningsfall
 
@@ -37,11 +37,11 @@ Följande är några exempel på krav för användningsfall i en organisation, s
 
 | **Användningsfall** | **Underanvändningsfall** | **Grupper** | **Enhetsplattformar** | **Krav** |
 |:---:|:---:|:---:|:---:|:---:|
-| Företag | Informationsarbetare | Personalavdelning, ekonomi | iOS | Säker e-post, enhetsinställningar, profiler, appar |                                                          
-| Företag | Chefer | Personalavdelning, ekonomi | iOS | Säker e-post, enhetsinställningar, profiler, appar |                                                         
+| Företag | Informationsarbetare | Personalavdelning, ekonomi | iOS/iPadOS | Säker e-post, enhetsinställningar, profiler, appar |                                                          
+| Företag | Chefer | Personalavdelning, ekonomi | iOS/iPadOS | Säker e-post, enhetsinställningar, profiler, appar |                                                         
 | Företag | Helskärmsläge | Återförsäljning | Android | Enhetsinställningar, profiler, appar |
-| BYOD | Informationsarbetare | Marknadsföring, försäljning | iOS | Säker e-post, enhetsinställningar, profiler, appar |                                                         
-| BYOD | Chefer | Marknadsföring, försäljning | iOS | Säker e-post, enhetsinställningar, profiler, appar |
+| BYOD | Informationsarbetare | Marknadsföring, försäljning | iOS/iPadOS | Säker e-post, enhetsinställningar, profiler, appar |                                                         
+| BYOD | Chefer | Marknadsföring, försäljning | iOS/iPadOS | Säker e-post, enhetsinställningar, profiler, appar |
 
 Du kan [ladda ned en mall för ovanstående tabell](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) där du kan ange din organisations krav för användningsfall och underanvändningsfall.
 

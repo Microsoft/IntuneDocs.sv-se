@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: f23d81ddb07fcafb198cd725781747b61a3b73ea
-ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
+ms.openlocfilehash: 373aeea9ab4fcbd075ac2ab18f205f3ddd191a39
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77529351"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609289"
 ---
 Dessa meddelanden innehåller viktig information som kan hjälpa dig att förbereda dig för framtida ändringar och funktioner i Intune.
 
@@ -84,7 +84,7 @@ Stöd för hantering av äldre datorer upphör den 15 oktober 2020. Uppgradera d
 
 [Läs mer](https://go.microsoft.com/fwlink/?linkid=2107122)
 
-### <a name="decreasing-support-for-android-device-administrator"></a>Minskat stöd för Android-enhetsadministratör 
+### <a name="decreasing-support-for-android-device-administrator--5857738--"></a>Minskat stöd för Android-enhetsadministratör<!--5857738-->
 Android-enhetsadministratören (kallas ibland för ”äldre” Android-hantering och lanserades med Android 2.2) är ett sätt att hantera Android-enheter. Det finns dock en bättre hanteringsfunktion med [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (lanseras med Android 5.0). För att kunna flytta till en modern, mer omfattande och säkrare enhetshantering,minskar Google stödet för enhetsadministration i nya versioner av Android.
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
@@ -108,24 +108,5 @@ För att undvika den minskade funktionaliteten i tredje kvartalet 2020, rekommen
 - [Googles vägledning för migrering från enhetsadministratören till Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
 - [Googles dokumentation om tillbakadragningen av API:et för enhetsadministratören](https://developers.google.com/android/work/device-admin-deprecation)
 
-### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-an-upcoming-release---4911065---"></a>Ändringsplan: Intune App SDK och appskyddsprinciper för Android kommer att stödja Android 5.0 och senare i kommande versioner <!--4911065 -->
-Intune kommer att stödja Android 5.x (Lollipop) och högre i kommande versioner. Uppdatera alla omslutna appar med den senaste Intune App SDK:n och uppdatera dina enheter.
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Om du inte använder eller planerar att använda antingen SDK eller appen för Android påverkar den här ändringen inte dig. Om du använder Intune App SDK måste du uppdatera till den senaste versionen och även uppdatera dina enheter till Android 5.x och högre. Om du inte uppdaterar kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid.
-
-Nedan hittar du en lista över vanliga enheter som har registrerats i Intune och som kör Android version 4.x. Om du har någon av dessa enheter bör du vidta lämpliga åtgärder för att se till att enheten stöder Android version 5.0 eller högre eller att den ersätts med en enhet som stöder Android version 5.0 eller högre. Den här listan är inte uttömmande för alla enheter som kan behöva utvärderas:
-
-- Samsung SM-T561  
-- Samsung SM-T365
-- Samsung GT-I9195
-- Samsung SM-G800F
-- Samsung SM-G357FZ
-- Motorola XT1080
-- Samsung GT-I9305
-- Samsung SM-T231
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Omslut dina appar med den senaste Intune App SDK:n. Du kan också ställa in inställningen för villkorsstyrd start ”Kräv lägsta operativsystemversion (Endast varning)” för att meddela slutanvändare med personliga enheter om att uppgradera dem.
 
 
