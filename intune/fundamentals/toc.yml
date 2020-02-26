@@ -39,6 +39,8 @@
   items:
     - name: Vad är Intune for Education?
       href: introduction-intune-education.md
+    - name: Vad är Intune for US Government?
+      href: introduction-intune-government.md
     - name: Övergripande arkitektur
       href: high-level-architecture.md
     - name: Enhetslivscykel
