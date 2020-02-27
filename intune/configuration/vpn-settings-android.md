@@ -1,11 +1,11 @@
 ---
 title: Använd VPN-inställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se alla inställningar för att skapa VPN-anslutningar på Android-enheter i Microsoft Intune. Ange anslutnings namn, IP-adress eller FQDN för VPN-servern, Välj hur användare autentiseras och välj Citrix, SonicWall, Check Point kapsel och Pulse Secure Connection types.
+description: Se alla inställningar för att skapa VPN-anslutningar på Android-enheter i Microsoft Intune. Ange anslutningsnamn, IP-adress eller FQDN för VPN-servern, välj hur användare autentiseras och välj anslutningstyperna Citrix, SonicWall, Check Point Capsule och Pulse Secure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/06/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 458c38e4cce7022d7a56e86cc171365f1496741e
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3f82cc74aa2e351ee63ffba2629e9ddddb57fc76
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206303"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512525"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Inställningar för Android-enhet för att konfigurera VPN i Intune
 
-
-
-Den här artikeln beskriver de olika inställningar för VPN-anslutningar som du kan styra på Android-enheter. Som en del av din lösning för hantering av mobila enheter (MDM) använder du de här inställningarna för att skapa en VPN-anslutning, väljer hur VPN-autentiseringen ska autentiseras, väljer en VPN-server typ med mera.
+Den här artikeln beskriver de olika inställningar för VPN-anslutningar som du kan styra på Android-enheter. Som en del av din lösning för hantering av mobila enheter (MDM) använder du de här inställningarna för att skapa en VPN-anslutning, välja hur VPN-autentiseringen ska autentiseras, välja en VPN-servertyp med mera.
 
 Som Intune-administratör kan du skapa och tilldela VPN-inställningar till dina Android-enheter. 
 
@@ -55,15 +53,15 @@ Mer information om VPN-profiler i Intune finns i [VPN-profiler](vpn-settings-con
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Fingeravtryck** (endast Check Point Capsule VPN): Ange en sträng, till exempel **Contoso fingeravtryckskod**, för att verifiera att VPN-servern är betrodd. Ett finger avtryck skickas till klienten så att klienten kan lita på alla servrar som har samma finger avtryck. Om enheten inte har fingeravtrycket uppmanar den användaren att lita på VPN-servern medan fingeravtrycket visas. Användaren verifierar fingeravtrycket manuellt och väljer betrodd för att ansluta.
+- **Fingeravtryck** (endast Check Point Capsule VPN): Ange en sträng, till exempel **Contoso fingeravtryckskod**, för att verifiera att VPN-servern är betrodd. Ett fingeravtryck skickas till klienten så att klienten kan lita på alla servrar som har samma fingeravtryck. Om enheten inte har fingeravtrycket uppmanar den användaren att lita på VPN-servern medan fingeravtrycket visas. Användaren verifierar fingeravtrycket manuellt och väljer betrodd för att ansluta.
 - **Ange nyckel och värdepar för Citrix VPN-attributen** (endast Citrix): Ange nyckel och värdepar som tillhandahålls av Citrix. Dessa värden konfigurerar egenskaperna för VPN-anslutningen. 
 
-  Du kan också **Importera** en fil med kommaavgränsade värden (. csv) med nycklar och värdepar. Se till att granska **mina data har rubriker** och **nyckel** egenskaper.
+  Du kan också **Importera** en fil med kommaavgränsade värden (csv) med nycklar och värdepar. Se till att granska egenskaperna **Data innehåller rubriker** och **Nyckel**.
 
-  När du har lagt till dina nyckel-och värdepar använder du **Exportera** för att säkerhetskopiera dina data till en. csv-fil.
+  När du har lagt till din nyckel och dina värdepar använder du **Exportera** för att säkerhetskopiera dina data till en csv-fil.
 
 ## <a name="next-steps"></a>Nästa steg
 
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Du kan också skapa VPN-profiler för [Android Enterprise](vpn-settings-android-enterprise.md), [iOS](vpn-settings-ios.md), [MacOS](vpn-settings-macos.md), [Windows 10 och senare](vpn-settings-windows-10.md), [Windows 8,1](vpn-settings-windows-8-1.md)och [Windows Phone 8,1](vpn-settings-windows-phone-8-1.md) -enheter.
+Du kan också skapa VPN-profiler för [Android Enterprise](vpn-settings-android-enterprise.md)-, [iOS/iPad](vpn-settings-ios.md)-, [macOS](vpn-settings-macos.md)-, [Windows 10 och senare](vpn-settings-windows-10.md)-, [Windows 8.1](vpn-settings-windows-8-1.md)- och [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)-enheter.

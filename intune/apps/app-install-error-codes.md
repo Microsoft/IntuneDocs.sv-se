@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: ef20d378740eae73c41521d8dfc7f8fdd853fdb9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812447"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513912"
 ---
 # <a name="intune-app-installation-error-reference"></a>Referens för fel vid Intune-appinstallation
 
@@ -51,17 +51,17 @@ I det här avsnittet beskrivs registrering med både enhetsadministratör (DA) o
 | 0xC7D14FB1  | -942583887 | Slutanvändaren avbröt appinstallationen. | Användaren har uttryckligen avinstallerat appen. Det här felet returneras när användaren avbryter installationen i Android-operativsystemet. Användaren tryckte på knappen Avbryt vid installationsprompten i operativsystemet eller stängde kommandotolken. Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet. Be användaren att inte avbryta installationen. |
 | 0xC7D14FB9 | -942583879 | Slutanvändaren avbröt appinstallationen. (Vid frågan om godkännande) | Instruera användaren att acceptera den Intune-distribuerade appen och installera appen vid uppmaning. |
 
-## <a name="ios-app-installation-errors"></a>Fel vid installation av iOS-appar
+## <a name="ios-and-ipados-app-installation-errors"></a>Installationsfel för iOS- och iPad-appar
 
-Följande felmeddelanden och beskrivningar ger information om iOS-installationsfel. 
+Följande felmeddelanden och beskrivningar ger information om iOS/iPadOS-installationsfel. 
 
 | Felkod (hex) | Felkod (dec) | Felmeddelande/kod | Beskrivning/felsökningstips |
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Apple MDM-agentfel: Appinstallationen misslyckades utan att orsak angetts. Försök att installera appen igen. | Apple MDM-agenten returnerade att installationskommandot misslyckades. |
 | 0x87D1313C | -2016333508 | Nätverksanslutningen på klienten bröts. Senare försök kan lyckas i en bättre nätverksmiljö. | Nätverksanslutningen bröts medan den uppdaterade webbadressen för nedladdningstjänsten skickades till enheten. Mer specifikt gick det inte att hitta någon server med det angivna värdnamnet. |
-| 0x87D11388 | -2016341112 | iOS-enheten är upptagen för närvarande.  | IOS-enheten var upptagen och detta ledde till ett fel. Enheten var låst. Användaren behöver låsa upp enheten för att kunna installera appen. |
-| 0x87D13B64 | -2016330908 | Appinstallationen misslyckades.  | Ett appinstallationsfel inträffade. Du behöver iOS-konsolloggar för att felsöka problemet. |
-| 0x87D13B66 | -2016330906 | Appen är hanterad men har upphört att gälla eller tagits bort av användaren.  | Antingen avinstallerade användaren appen uttryckligen, eller så har appen upphört att gälla men kunde inte laddas ned eller så matchar inte appidentifieringen svaret från enheten.   Det här felet kan också inträffa på grund av en bugg i plattformen iOS 9.2.2. |
+| 0x87D11388 | -2016341112 | iOS/iPadOS-enheten är upptagen för närvarande.  | iOS/iPadOS-enheten var upptagen, vilket ledde till ett fel. Enheten var låst. Användaren behöver låsa upp enheten för att kunna installera appen. |
+| 0x87D13B64 | -2016330908 | Appinstallationen misslyckades.  | Ett appinstallationsfel inträffade. Du behöver iOS/iPadOS-konsolloggar för att felsöka problemet. |
+| 0x87D13B66 | -2016330906 | Appen är hanterad men har upphört att gälla eller tagits bort av användaren.  | Antingen avinstallerade användaren appen uttryckligen, eller så har appen upphört att gälla men kunde inte laddas ned eller så matchar inte appidentifieringen svaret från enheten.   Det här felet kan också inträffa på grund av en bugg i plattformen iOS/iPadOS 9.2.2. |
 | 0x87D13B60 | -2016330912 | Appen är schemalagd för installation, men det krävs en inlösningskod för att slutföra transaktionen.  | Det här felet inträffar vanligen med betalda iOS Store-appar. |
 | 0x87D1041C | -2016345060 | Programmet hittades inte efter att installationen slutfördes.  | Appidentifieringen matchar inte svaret från enheten. |
 | 0x87D13B62 | -2016330910 | Användaren avvisade erbjudandet att installera appen.  | Användaren klickade på Avbryt under den inledande appinstallationen. Be användaren att acceptera installationsbegäran nästa gång. |
@@ -70,7 +70,7 @@ Följande felmeddelanden och beskrivningar ger information om iOS-installationsf
 | 0x87D13B93 | -2016330861 | Det går bara att installera VPP-appar på en delad iPad. | Apparna måste hämtas med Apples volymköpsprogram för installation på en delad iPad. |
 | 0x87D13B94 | -2016330860 | Det går inte att installera appar när App Store är inaktiverad. | App Store måste vara aktiverad för att användaren ska kunna installera appen. |
 | 0x87D13B95 | -2016330859 | Det går inte att hitta VPP-licensen för appen. | Prova att återkalla och omtilldela applicensen. |
-| 0x87D13B96 | -2016330858 | Det går inte att installera systemappar med din MDM-provider. | Det går inte att installera appar som förinstallerats av iOS-operativsystemet. |
+| 0x87D13B96 | -2016330858 | Det går inte att installera systemappar med din MDM-provider. | Det går inte att installera appar som förinstallerats av iOS/iPadOS-operativsystemet. |
 | 0x87D13B97 | -2016330857 | Det går inte att installera appar när enheten är i Borttappat läge. | All användning av enheten är blockerad i Borttappat läge. Inaktivera Borttappat läge om du vill installera appar. |
 | 0x87D13B98 | -2016330856 | Det går inte att installera appar när enheten är i helskärmsläge. | Prova att lägga till enheten i en exkluderingsgrupp under konfigurationsprincipen för helskärmsläge för att installera appar. |
 | 0x87D13B9C | -2016330852 | Det går inte att installera 32-bitarsappar på enheten. | Enheten stöder inte installation av 32-bitarsappar. Prova att distribuera 64-bitarsversionen av appen. |
@@ -80,7 +80,7 @@ Följande felmeddelanden och beskrivningar ger information om iOS-installationsf
 | 0x87d13b7e | -2016330882 | Licenstilldelningen misslyckades med Apple-felet Inga återstående VPP-licenser.  | Det här beteendet är avsiktligt. Du löser detta genom att köpa ytterligare VPP-licenser eller återta licenser från användare som inte längre är riktade. |
 | 0x87d13b6e | -2016330898 | Fel vid appinstallation 12024: Okänd orsak.  | Apple har inte gett oss tillräckligt med information för att avgöra varför installationen misslyckades.   Inget att rapportera. |
 | 0x87d13b7f | -2016330881 | Nödvändig princip för appkonfiguration finns inte. Se till att principen riktas till samma grupper.  | Appen kräver appkonfiguration men det finns ingen riktad appkonfiguration. Administratören bör se till att de grupper som appen är riktad till också har den nödvändiga appkonfigurationen riktad till grupperna. |
-| 0x87d13b69 | -2016330903 | VPP-enhetslicensiering gäller endast för enheter med iOS 9.0+.  | Uppgradera berörda iOS-enheter till iOS 9.0+. |
+| 0x87d13b69 | -2016330903 | VPP-enhetslicensiering gäller endast för enheter med iOS/iPadOS 9.0+.  | Uppgradera berörda iOS/iPad-enheter till iOS/iPad 9.0 +. |
 | 0x87d13b8f | -2016330865 | Programmet är installerat på enheten men är ohanterat.  | Det här felet inträffar bara för LOB-appar. Appen installerades utanför Intune. Du kan åtgärda det här felet genom att avinstallera appen från enheten. Nästa gång enhetssynkronisering sker bör enheten installera appen från Intune. |
 | 0x87d13b68 | -2016330904 | Användaren avvisade apphantering.  | Be användaren att acceptera apphantering. |
 | 0x87d1279d | -2016335971 | Okänt fel.  | Det här felet uppstår för iOS Store-appar, men felscenariot är okänt. |

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c662de98ffa497c5fbc89ac1b78ed8537ff0d80c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d6dc10eca80a7d403d0ff44c25d3cfaed85fafa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71732704"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514208"
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 Den här artikeln beskriver vad du gör om dina användare inte kan komma åt resurser som skyddas med Villkorsstyd åtkomst, eller om användare kan komma åt skyddade resurser men ska blockeras.
@@ -30,7 +30,7 @@ Den här artikeln beskriver vad du gör om dina användare inte kan komma åt re
 Med Intune och villkorlig åtkomst kan du skydda åtkomst till tjänster som:
 - Office 365-tjänster som Exchange Online, SharePoint Online och Skype för företag – Online
 - Exchange on-premises
-- Olika tjänster
+- Fler tjänster
 
 Med den här funktionen kan du se till att endast enheter som har registrerats med Intune och som är kompatibla med de regler för villkorsstyrd åtkomst som du anger i Intune-administratörskonsolen eller i Azure Active Directory har åtkomst till företagets resurser. 
 
@@ -48,7 +48,7 @@ Följande krav måste uppfyllas för att Villkorsstyrd åtkomst ska fungera:
 
 - För lokal Exchange måste din Intune Exchange Connector vara korrekt konfigurerad. Mer information finns i [Felsöka Exchange Connector i Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- För lokal Skype måste du konfigurera hybrid modern autentisering. Se [Översikt över hybrid modern auth](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- För lokal Skype måste du konfigurera modern hybridautentisering. Se [Översikt över modern hybridautentisering](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
 Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapporten för enheten.
 
@@ -60,9 +60,9 @@ Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapp
 
 - Första gången en enhet registreras kan det ta lite tid innan kompatibilitetsinformationen registreras för en enhet. Vänta några minuter och försök igen.
 
-- För iOS-enheter kan en befintlig e-postprofil blockera distributionen av en e-postprofil som skapats av en Intune-administratör och tilldelats användaren, vilket gör enheten inkompatibel. I det här scenariot meddelar företagsportalappen användaren att enheten inte är kompatibel på grund av en manuellt konfigurerad e-postprofil, och användaren uppmanas att ta bort profilen. När användaren har tagit bort den befintliga e-postprofilen kan e-postprofilen för Intune distribueras. Du kan förhindra det här problemet genom att be användarna att ta bort alla befintliga e-postprofiler på deras enheter före registreringen.
+- För iOS-/iPadOS-enheter kan en befintlig e-postprofil blockera distributionen av en e-postprofil som skapats av en Intune-administratör och tilldelats användaren, vilket gör enheten inkompatibel. I det här scenariot meddelar företagsportalappen användaren att enheten inte är kompatibel på grund av en manuellt konfigurerad e-postprofil, och användaren uppmanas att ta bort profilen. När användaren har tagit bort den befintliga e-postprofilen kan e-postprofilen för Intune distribueras. Du kan förhindra det här problemet genom att be användarna att ta bort alla befintliga e-postprofiler på deras enheter före registreringen.
 
-- En enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Om du har en enhet i det här läget:
+- En enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Om du har en enhet i detta tillstånd:
   - Kontrollera att enheten använder den senaste versionen av företagsportalappen.
   - Starta om enheten.
   - Kontrollera om problemet är begränsat till särskilda nätverk (t.ex. mobilnät, Wi-Fi osv.).
@@ -76,7 +76,7 @@ Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapp
 
 - En Android-enhet som är registrerad och kompatibel kanske fortfarande blockeras och får ett karantänmeddelande första gången den försöker komma åt företagsresurser. Om detta inträffar kontrollerar du att företagsportalappen inte körs och väljer sedan länken **Kom igång nu** i karantänmeddelandet för att starta en utvärdering. Detta är endast nödvändigt första gången villkorlig åtkomst aktiveras.
 
-- En Android-enhet som har registrerats kan uppmana användaren att hitta "inga certifikat hittades" och inte beviljas åtkomst till O365-resurser. Användaren måste aktivera alternativet *Aktivera webbläsaråtkomst* på den registrerade enheten enligt följande:
+- En Android-enhet som har registrerats kan uppmana användaren med ”Inga certifikat har hittats” och inte bevilja åtkomst till O365-resurser. Användaren måste aktivera alternativet *Aktivera webbläsaråtkomst* på den registrerade enheten enligt följande:
   1. Öppna företagsportalappen.
   2. Gå till sidan Inställningar från de tre punkterna (…) eller menyknappen för maskinvara.
   3. Välj knappen *Aktivera webbläsaråtkomst*.
@@ -97,9 +97,9 @@ Du kan se dessa villkor för varje enhet i Azure-portalen och i inventeringsrapp
 
 - Om enheten rensas selektivt eller dras tillbaka från Intune kan den fortfarande ha åtkomst flera timmar efter att den dragits tillbaka. Det beror på att Exchange cachelagrar åtkomsträttigheter i sex timmar. Överväg andra sätt att skydda data på pensionerade enheter i det här scenariot.
 
-- Surface Hub, Mass registrering och DEM registrerade Windows-enheter har stöd för villkorlig åtkomst när en användare som har tilldelats en licens för Intune är inloggad. Du måste dock distribuera policyn för efterlevnad till enhets grupper (inte användar grupper) för korrekt utvärdering.
+- Surface Hub, Massregistrering och DEM-registrerade Windows-enheter har stöd för villkorlig åtkomst när en användare som har tilldelats en licens för Intune är inloggad. Du måste dock distribuera policyn för efterlevnad till enhetsgrupper (inte användargrupper) för korrekt utvärdering.
 
-- Kontrollera tilldelningarna för dina efterlevnadsprinciper och principer för villkorlig åtkomst. Om en användare inte finns i gruppen som har tilldelats principerna, eller finns i en grupp som är Exkluderad, blockeras inte användaren. Kompatibiliteten kontrolleras endast för enheter som hör till användare i en tilldelad grupp.
+- Kontrollera tilldelningarna för dina efterlevnadsprinciper och principer för villkorlig åtkomst. Om en användare inte finns i gruppen som har tilldelats principerna, eller finns i en grupp som är exkluderad, blockeras inte användaren. Kompatibiliteten kontrolleras endast för enheter som hör till användare i en tilldelad grupp.
 
 ## <a name="noncompliant-device-is-not-blocked"></a>Inkompatibel enhet blockeras inte
 
@@ -110,7 +110,7 @@ Om en enhet inte är kompatibel men fortsätter att ha åtkomst, vidtar du följ
 - Kontrollera att enheten identifieras. Pekar Exchange Connector på en Exchange 2010-klientåtkomstserver när användaren har en Exchange 2013-servern? I så fall kan Intune inte känna till enhetens anslutning till Exchange om Exchange-standardregeln är Tillåt, även om användaren är i målgruppen.
 
 - Kontrollera om enhetens finns/enhetens åtkomststatus i Exchange:
-  - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: ”Get-ActiveSyncDeviceStatistics -mailbox mbx”. Om enheten inte visas har den inte åtkomst till Exchange.
+  - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: Get-ActiveSyncDeviceStatistics -mailbox mbx. Om enheten inte visas har den inte åtkomst till Exchange.
   
   - Om enheten visas använder du cmdleten ”Get-CASmailbox -identity:’upn’ | fl” för att få detaljerad information om enhetens åtkomststatus och skicka informationen till Microsoft Support.
 

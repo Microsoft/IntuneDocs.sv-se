@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bee04eabb7036d9a28ac628175b27f763d0ccb
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 47be57dece7867109565622ec2a1380e9a9d57d7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207068"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512508"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Inställningar för Windows 10- och Windows Holographic-enheter för att lägga till VPN-anslutningar med Intune
 
@@ -143,7 +143,7 @@ Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfigurat
 
   ![Välj de tre punkterna och klicka och dra för att flytta DNS-suffixet](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 
-- **NRPT-regler**: regler för namn matchnings princip tabell (NRPT) anger hur DNS matchar namn när de är anslutna till VPN. När anslutningen har upprättats kan du välja vilka DNS-servrar som ska användas av VPN-anslutningen.
+- **Regler för namnmatchningsprinciptabell (NRPT)** : NRPT-regler anger hur DNS matchar namn vid anslutning till VPN. När anslutningen har upprättats kan du välja vilka DNS-servrar som ska användas av VPN-anslutningen.
 
   Du kan lägga till regler i tabellen som innehåller domän, DNS-server, proxy och andra detaljer för att matcha domänen du anger. VPN-anslutningen använder dessa regler när användare ansluter till de domäner du anger.
 
@@ -185,4 +185,4 @@ Om användaren till exempel redan är ansluten till ett betrott DNS-suffix ignor
 
 Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Konfigurera VPN-inställningar på [Android](vpn-settings-android.md)-, [iOS](vpn-settings-ios.md)- och [macOS](vpn-settings-macos.md)-enheter.
+Konfigurera VPN-inställningar på [Android](vpn-settings-android.md)-, [iOS/iPadOS](vpn-settings-ios.md)- och [macOS](vpn-settings-macos.md)-enheter.

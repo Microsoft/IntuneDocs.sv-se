@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6513c09f252d5a914ace4e57e5a593877a387172
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3d26c4c6cd05a411555f7824ad21b72431eb569c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206558"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511180"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS-enhetsinställningar för att tillåta eller begränsa funktioner med hjälp av Intune
 
@@ -36,11 +36,11 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 [Skapa en konfigurationsprofil för enhetsbegränsningar](../device-restrictions-configure.md).
 
 > [!NOTE]
-> De här inställningarna gäller för olika registrerings typer. Mer information om de olika registrerings typerna finns i [MacOS-registrering](../macos-enroll.md).
+> De här inställningarna gäller för olika registreringstyper. Mer information om de olika registreringstyperna finns i [macOS-registrering](../macos-enroll.md).
 
 ## <a name="general"></a>Allmänt
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
 - **Slå upp definition**: **Blockera** förhindrar användare från att markera ett ord och sedan söka upp dess definition på enheten. **Inte konfigurerad** (standard) ger åtkomst till definitionssökningsfunktionen.
 - **Diktering**: **Blockera** hindrar användaren från att använda röstindata för att ange text. **Inte konfigurerat** (standard) tillåter användaren att använda röstindata.
@@ -62,29 +62,29 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
     Den här funktionen gäller för:  
     - macOS 10.13.4 och senare
 
-- **Skärm bilder**: enheten måste vara registrerad i Apples automatiserad enhets registrering (DEP). När inställningen **blockeras**kan användarna inte spara en skärm bild av visningen. Det förhindrar också att klass rummets app styr fjärrskärmar. **Inte konfigurerad** (standard) gör att användare kan samla in skärm bilder och att appen klass rummet kan visa fjärrskärmar.
+- **Skärmbilder**: enheten måste vara registrerad i Apples automatiska enhetsregistrering (DEP). När inställningen **blockeras** kan användarna inte spara en skärmbild av visningen. Det förhindrar också att appen Klassrum styr fjärrskärmar. **Inte konfigurerad** (standard) gör att användare kan samla in skärmbilder och tillåter appen Klassrum att visa fjärrskärmar.
 
-### <a name="settings-apply-to-automated-device-enrollment"></a>Inställningarna gäller för: automatisk enhets registrering
+### <a name="settings-apply-to-automated-device-enrollment"></a>Inställningarna gäller för: Automatisk enhetsregistrering
 
-- **Fjärrstyrd skärm genom program klass**: **inaktivera** hindrar lärare från att använda klass rummets app för att se sina studenters skärmar. **Inte konfigurerad** (standard) låter lärare se sina studenters skärmar.
+- **Fjärrstyrd skärm genom appen Klassrum**: **Inaktivera** hindrar lärare från att använda appen Klassrum för att se sina studenters skärmar. **Inte konfigurerad** (standard) låter lärare se sina studenters skärmar.
 
-  Om du vill använda den här inställningen anger du **skärm** bilds inställningen till **inte konfigurerad** (skärm bilder tillåts).
+  Om du vill använda den här inställningen anger du inställningen **Skärmbilder** till **Inte konfigurerad** (skärmbilder tillåts).
 
-- **Skärm visning utan uppmaning i program klass rummet**: **Tillåt** låter lärare se sina studenters skärmar utan att behöva enas om att komma över från studenten. **Inte konfigurerad** (standard) kräver att studenten samtycker till att läraren kan se skärmarna.
+- **Skärmvisning utan uppmaning i appen Klassrum**: **Tillåt** låter lärare se sina studenters skärmar utan att behöva studentens medgivande. **Inte konfigurerad** (standard) kräver att studenten samtycker till att läraren kan se skärmarna.
 
-  Om du vill använda den här inställningen anger du **skärm** bilds inställningen till **inte konfigurerad** (skärm bilder tillåts).
+  Om du vill använda den här inställningen anger du inställningen **Skärmbilder** till **Inte konfigurerad** (skärmbilder tillåts).
 
-- **Studenter måste begära behörighet att lämna klass rums klassen**: **kräver** tvingar studenter som är registrerade i en ohanterad klass rums kurs för att få ett godkännande för lärare att lämna kursen. **Inte konfigurerad** (standard) gör att student kan lämna kursen varje gång studenten väljer.
+- **Studenter måste begära tillstånd att lämna klassrum-klass**: **Kräv** tvingar studenter som är registrerade i en ohanterad klassrum-klass att få ett godkännande från läraren att lämna klassen. **Inte konfigurerad** (standard) gör att student kan lämna klassen när studenten vill.
 
-- **Lärare kan automatiskt låsa enheter eller appar i klass rums appen**: **Tillåt att** lärare låser en students enhet eller app utan student godkännande. **Inte konfigurerad** (standard) kräver att studenten samtycker till att läraren kan låsa enheten eller appen.
+- **Lärare kan automatiskt låsa enheter eller appar i appen Klassrum**: **Tillåt** låter lärare låsa en students enhet eller app utan studentens godkännande. **Inte konfigurerad** (standard) kräver att studenten samtycker till att läraren kan låsa enheten eller appen.
 
-- **Studenter kan automatiskt ansluta klass rums klassen**: **Tillåt att** studenter ansluter till en klass utan att behöva lämna läraren. **Inte konfigurerad** (standard) kräver godkännande av lärare för att ansluta till en klass.
+- **Studenter kan automatiskt ansluta till Klassrum-klassen**: **Tillåt** låter studenter ansluta till en klass utan att behöva fråga läraren. **Inte konfigurerad** (standard) kräver godkännande av lärare för att ansluta till en klass.
 
 ## <a name="password"></a>lösenordsinställning
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
-- **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) kräver inget lösen ord. Det gäller inte heller några begränsningar, till exempel att blockera enkla lösen ord eller att ange en minimal längd.
+- **Lösenord**: Slutanvändaren **måste** ange ett lösenord för att få åtkomst till enheten. **Inte konfigurerat** (standard) kräver inget lösenord. Det gäller inte heller några begränsningar, till exempel att blockera enkla lösenord eller att ange en minsta längd.
   - **Lösenordstyp som krävs**: Ange om lösenordet kan vara endast Numeriskt eller om det måste vara Alfanumeriskt (innehålla bokstäver och siffror).
 
     Den här funktionen gäller för:  
@@ -114,7 +114,7 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="built-in-apps"></a>Inbyggda appar
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
 - **Blockera autofyll i Safari**: **Blockera** inaktiverar funktionen Autofyll i Safari på enheten. **Inte konfigurerad** (standard) tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren.
 - **Blockera kamera**: Välj **Blockera** om du vill förhindra åtkomst till enhetens kamera. **Inte konfigurerad** (standard) ger åtkomst till enhetens kamera.
@@ -127,32 +127,32 @@ Dessa inställningar läggs till en profil för enhetskonfiguration i Intune som
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
-- **Lista över typer av begränsade appar**: skapa en lista över appar som användarna inte får installera eller använda. Alternativen är:
+- **Lista över typer av begränsade appar**: Skapa en lista över appar som användarna inte får installera eller använda. Alternativen är:
 
-  - **Inte konfigurerat** (standard): det finns inga begränsningar från Intune. Användare har åtkomst till appar som du tilldelar och inbyggda appar.
-  - **Otillåtna appar**: Appar som inte hanteras av Intune som du inte vill ha installerade på enheten. Användare hindras inte från att installera en förbjuden app. Men om en användare installerar en app från den här listan, rapporteras den i Intune.
-  - **Godkända appar**: Appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt. Användarna hindras inte från att installera en app som inte finns med i listan över godkända appar. Men om de gör det rapporteras de i Intune.
-- **Appsamlings-ID**: Ange [appsamlings-ID](bundle-ids-built-in-ios-apps.md) för den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och branschspecifika appar. På Apples webbplats finns en lista över [inbyggda Apple-appar](https://support.apple.com/HT208094).
-- **Appnamn**: Ange namnet på den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och branschspecifika appar. På Apples webbplats finns en lista över [inbyggda Apple-appar](https://support.apple.com/HT208094).
+  - **Inte konfigurerat** (standard): Det finns inga begränsningar från Intune. Användare har åtkomst till appar som du tilldelar samt inbyggda appar.
+  - **Otillåtna appar**: Appar som inte hanteras av Intune som du inte vill ha installerade på enheten. Användare hindras inte från att installera en förbjuden app. Men om en användare installerar en app från den här listan rapporteras det i Intune.
+  - **Godkända appar**: Appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt. Användarna hindras inte från att installera en app som inte finns med i listan över godkända appar. Men om de gör det rapporteras det i Intune.
+- **Appsamlings-ID**: Ange [appsamlings-ID](bundle-ids-built-in-ios-apps.md) för den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och verksamhetsspecifika appar. På Apple-webbplatsen finns en lista med [inbyggda Apple-appar](https://support.apple.com/HT208094).
+- **Appnamn**: Ange namnet på den app som du vill lägga till. Du kan visa eller dölja inbyggda appar och verksamhetsspecifika appar. På Apple-webbplatsen finns en lista med [inbyggda Apple-appar](https://support.apple.com/HT208094).
 - **Utgivare**: Ange namnet på den utgivare som du vill lägga till.
 
 Om du vill lägga till appar i listorna kan du:
 
-- **Lägg till**: Välj om du vill skapa en lista över appar.
-- **Importera** en CSV-fil med information om appen, inklusive webbadressen. Använd formatet `<app bundle ID>, <app name>, <app publisher>`. Eller **Exportera** för att skapa en lista över appar som du har lagt till i samma format.
+- **Lägg till**: Välj om du vill skapa din lista över appar.
+- **Importera** en CSV-fil med information om appen, inklusive webbadressen. Använd formatet `<app bundle ID>, <app name>, <app publisher>`. Eller välj **Exportera** om du vill skapa en lista över appar som du har lagt till, i samma format.
 
 ## <a name="connected-devices"></a>Anslutna enheter
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
 - **Blockera AirDrop**: **Blockera** förhindrar att du använder AirDrop på enheten. **Inte konfigurerad** (standard) tillåter att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
 - **Blockera automatisk upplåsning av Apple Watch**: **Blockera** hindrar användaren från att låsa upp en macOS-enhet med Apple Watch. **Inte konfigurerad** (standard) tillåter att användaren låser upp en macOS-enhet med Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
 - **Blockera synkronisering av iCloud-nyckelring**: Välj **Blockera** om du vill inaktivera synkronisering av autentiseringsuppgifter som lagras i nyckelringen till iCloud. **Inte konfigurerad** (standard) tillåter användare att synkronisera dessa autentiseringsuppgifter.
 - **Blockera synkronisering av iCloud-dokument**: **Blockera** förhindrar iCloud från att synkronisera dokument och data. **Inte konfigurerad** (standard) tillåter synkronisering av dokument och nyckelvärden till ditt iCloud-lagringsutrymme.
@@ -162,15 +162,15 @@ Om du vill lägga till appar i listorna kan du:
 - **Blockera säkerhetskopiering av Påminnelser i iCloud**: **Blockera** förhindrar att iCloud synkroniserar påminnelseappen i macOS. **Inte konfigurerad** (standard) tillåter synkronisering av påminnelser med iCloud.
 - **Blockera säkerhetskopiering av Bokmärken i iCloud**: **Blockera** förhindrar att iCloud synkroniserar bokmärken på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av bokmärken med iCloud.
 - **Blockera säkerhetskopiering av Anteckningar i iCloud**: **Blockera** förhindrar att iCloud synkroniserar anteckningar på enheter. **Inte konfigurerad** (standard) tillåter synkronisering av anteckningar med iCloud.
-- **Blockera iCloud-bildbibliotek**: **block** inaktiverar iCloud-bildbibliotek och hindrar iCloud från att synkronisera enheternas foton. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket tas bort från enhetens lokala lagringsutrymme. **Inte konfigurerad** (standard) tillåter synkronisering av foton mellan enheten och iCloud-bildbiblioteket.
-- **Leverans**: **inte konfigurerat** (standard) gör att användare kan börja arbeta på en MacOS-enhet och sedan fortsätta att arbeta på en annan iOS-eller MacOS-enhet. **Blockera** förhindrar funktionen för leverans på enheten. 
+- **Blockera iCloud-bildbibliotek**: **Blockera** inaktiverar iCloud-bildbibliotek och hindrar iCloud från att synkronisera enheternas foton. Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket tas bort från enhetens lokala lagringsutrymme. **Inte konfigurerad** (standard) tillåter synkronisering av foton mellan enheten och iCloud-bildbiblioteket.
+- **Handoff**: **Inte konfigurerad** (standard) tillåter användare att påbörja arbete på en macOS-enhet och sedan fortsätta det arbete som de inledde på en annan iOS/iPadOS- eller macOS-enhet. **Blockera** förhindrar Handoff-funktionen på enheten. 
 
   Den här funktionen gäller för:  
   - macOS 10.15 och senare
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
 - **Webbadress till e-postdomän**: **Lägg till** en eller flera webbadresser i listan. När slutanvändarna får ett e-postmeddelande från en annan domän än den du har konfigurerat, markeras e-postmeddelandet som ej betrott i macOS-e-postappen.
 
@@ -178,4 +178,4 @@ Om du vill lägga till appar i listorna kan du:
 
 [Tilldela profilen](../device-profile-assign.md) och [övervaka dess status](../device-profile-monitor.md).
 
-Du kan också begränsa enhetens funktioner och inställningar på [iOS](../device-restrictions-ios.md)-enheter.
+Du kan också begränsa enhetens funktioner och inställningar på [iOS/iPadOS](../device-restrictions-ios.md)-enheter.

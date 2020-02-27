@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/07/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc86e82f189377d63422cc3306b8554637164b0f
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 978ddf279dc221a56fddaf99da4dbb2377a93c24
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206439"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511161"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Enhetsinställningar för Android Enterprise-enheter för att konfigurera e-post, autentisering och synkronisering i Intune
 
@@ -35,7 +35,7 @@ Mer information om e-postprofiler i Intune finns i [Konfigurera e-postinställni
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-Skapa en [profil för enhets konfiguration](email-settings-configure.md#create-a-device-profile) (Välj arbets profil) eller skapa en [konfigurations princip för appar](../apps/app-configuration-policies-use-android.md).
+Skapa en [profil för enhetskonfiguration](email-settings-configure.md#create-a-device-profile) (välj arbetsprofil) eller skapa en [konfigurationsprincip för appar](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android enterprise
 
@@ -63,4 +63,4 @@ Skapa en [profil för enhets konfiguration](email-settings-configure.md#create-a
 
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Du kan också skapa e-postprofiler för [Android Samsung Konx](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 och senare](email-settings-windows-10.md) och [Windows Phone 8.1](email-settings-windows-phone-8-1.md)-enheter.
+Du kan också skapa e-postprofiler för [Android Samsung Konx](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), [Windows 10 och senare](email-settings-windows-10.md) och [Windows Phone 8.1](email-settings-windows-phone-8-1.md)-enheter.

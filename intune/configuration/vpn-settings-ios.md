@@ -1,11 +1,11 @@
 ---
-title: Konfigurera VPN-inställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller skapa en VPN-konfigurationsprofil med hjälp av konfigurationsinställningar för virtuella privata nätverk (VPN), inklusive anslutningsinformation, autentiseringsmetoder och delade tunnlar i de grundläggande inställningarna. Visa även de anpassade VPN-inställningarna med identifieraren och nyckel-värdeparen. Det är även möjligt att visa VPN-inställningarna per app som inkluderar Safari-webbadresser och VPN-anslutningar på begäran med SSID- eller DNS-sökningsdomäner samt proxyinställningar för att inkludera ett konfigurationsskript, en IP- eller FQDN-adress och en TCP-port i Microsoft Intune på iOS-enheter.
+title: Konfigurera VPN-inställningar för iOS/iPadOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Lägg till eller skapa en VPN-konfigurationsprofil med hjälp av konfigurationsinställningar för virtuella privata nätverk (VPN), inklusive anslutningsinformation, autentiseringsmetoder och delade tunnlar i de grundläggande inställningarna. Visa även de anpassade VPN-inställningarna med identifieraren och nyckel-värdeparen. Det är även möjligt att visa VPN-inställningarna per app som inkluderar Safari-webbadresser och VPN-anslutningar på begäran med SSID- eller DNS-sökningsdomäner samt proxyinställningar för att inkludera ett konfigurationsskript, en IP- eller FQDN-adress och en TCP-port i Microsoft Intune på iOS/iPadOS-enheter.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,23 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9eb7ee99d69fd56707bd9dfe5453ffe0bb107bad
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
-ms.translationtype: MTE75
+ms.openlocfilehash: 01c6ae06459590fa9bb9842e90ad53e6c522d6a6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885669"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512491"
 ---
-# <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune
+# <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar på iOS- och iPadOS-enheter i Microsoft Intune
 
-Microsoft Intune innehåller många VPN-inställningar som kan distribueras till iOS-enheter. De här inställningarna används för att skapa och konfigurera VPN-anslutningar till din organisations nätverk. Den här artikeln beskriver dessa inställningar. Vissa inställningar är bara tillgängliga för vissa VPN-klienter, till exempel Citrix och Zscaler.
+Microsoft Intune innehåller många VPN-inställningar som kan distribueras till iOS/iPadOS-enheter. De här inställningarna används för att skapa och konfigurera VPN-anslutningar till din organisations nätverk. Den här artikeln beskriver dessa inställningar. Vissa inställningar är bara tillgängliga för vissa VPN-klienter, till exempel Citrix och Zscaler.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
 [Skapa en enhetskonfigurationsprofil](vpn-settings-configure.md).
 
 > [!NOTE]
-> De här inställningarna är tillgängliga för alla registrerings typer. Mer information om registrerings typerna finns i [iOS-registrering](../enrollment/ios-enroll.md).
+> De här inställningarna är tillgängliga för alla registreringstyper. Mer information om de olika registreringstyperna finns i [iOS/iPadOS-registrering](../enrollment/ios-enroll.md).
 
 ## <a name="connection-type"></a>Anslutningstyp
 
@@ -71,7 +71,7 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
     > [!NOTE]
     > Om användarnamnet och lösenordet används som autentiseringsmetod för Cisco IPsec VPN, måste de ge SharedSecret via en anpassad profil i Apple Configurator.
 
-  - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Om ingen utfärdare av härledd autentiseringsuppgift har kon figurer ATS, kommer Intune att fråga dig om att lägga till en. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+  - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Om ingen utfärdare av härledd autentiseringsuppgift har konfigurerats, kommer Intune att be dig lägga till en. Mer information finns i [Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
 
 - **Undantagna webbadresser** (endast Zscaler): Vid anslutning till Zscaler VPN är de angivna webbadresserna tillgängliga utanför Zscaler-molnet. 
 
@@ -100,52 +100,52 @@ De inställningar som visas i följande lista bestäms av den VPN-anslutningstyp
   - När NAC har aktiverats kopplas VPN-anslutningen bort en gång per dygn. VPN-anslutningen kan omedelbart återanslutas.
   - Enhets-ID:t är en del av profilen, men det visas inte i Intune. Detta ID lagras inte av Microsoft någonstans, och det delas inte heller av Microsoft.
 
-  För VPN-partner som stöder enhets-ID kan VPN-klienten, till exempel Citrix SSO, Hämta ID: t. Sedan kan den skicka en fråga till Intune för att bekräfta att enheten är registrerad, och om VPN-profilen är kompatibel eller inte.
+  För VPN-partner som stöder enhets-ID kan VPN-klienten, till exempel Citrix SSO, hämta ID:t. Sedan kan den skicka en fråga till Intune för att bekräfta att enheten är registrerad, och om VPN-profilen är kompatibel eller inte.
 
   - Om du vill ta bort den här inställningen återskapar du profilen och markerar inte **Jag accepterar**. Tilldela sedan profilen på nytt.
 
 ## <a name="ikev2-settings"></a>IKEv2-inställningar
 
-Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
+Dessa inställningar gäller när du väljer **Anslutningstyp** > **IKEv2**.
 
-- **Fjärridentifierare**: Ange NÄTVERKets IP-adress, FQDN, USERFQDN eller ASN1DN för IKEv2-servern. Ange till exempel `10.0.0.3` eller `vpn.contoso.com`. Normalt anger du samma värde som [**anslutnings namnet**](#base-vpn-settings) (i den här artikeln). Men det beror på inställningarna för IKEv2-servern.
+- **Fjärridentifierare**: Ange nätverkets IP-adress, FQDN, UserFQDN eller ASN1DN för IKEv2-servern. Ange till exempel `10.0.0.3` eller `vpn.contoso.com`. Normalt anger du samma värde som [**Anslutningsnamnet**](#base-vpn-settings) (i den här artikeln). Men det beror på inställningarna för IKEv2-servern.
 
 - **Typ av klientautentisering**: Välj hur VPN-klienten autentiserar till VPN. Alternativen är:
-  - **Användarautentisering** (standard): användarautentiseringsuppgifter autentiseras för VPN.
-  - **Datorautentisering**: autentiseringsuppgifter för enhet autentiseras för VPN.
+  - **Användarautentisering** (standard): användarautentiseringsuppgifter autentiseras till VPN.
+  - **Datorautentisering**: autentiseringsuppgifter för enhet autentiseras till VPN.
 
 - **Autentiseringsmetod**: Välj den typ av klientautentiseringsuppgifter som ska skickas till servern. Alternativen är:
-  - **Certifikat**: använder en befintlig certifikat profil för att AUTENTISERA till VPN. Se till att den här certifikat profilen redan har tilldelats till användaren eller enheten. Annars Miss lyckas VPN-anslutningen.
-    - **Certifikat typ**: Välj den typ av kryptering som används av certifikatet. Se till att VPN-servern är konfigurerad för att godkänna den här typen av certifikat. Alternativen är:
+  - **Certifikat**: använder en befintlig certifikatprofil för att autentisera till VPN. Se till att den här certifikatprofilen redan har tilldelats till användaren eller enheten. Annars misslyckas VPN-anslutningen.
+    - **Certifikattyp**: Välj den typ av kryptering som används av certifikatet. Se till att VPN-servern är konfigurerad för att godkänna den här typen av certifikat. Alternativen är:
       - **RSA** (standard)
       - **ECDSA256**
       - **ECDSA384**
       - **ECDSA521**
 
-  - **Användar namn och lösen ord** (endast användarautentisering): när användare ansluter till VPN-nätverket uppmanas de att ange sitt användar namn och lösen ord.
+  - **Användarnamn och lösenord** (endast användarautentisering): när användare ansluter till VPN-nätverket uppmanas de att ange sitt användarnamn och lösenord.
   - **Delad hemlighet** (endast datorautentisering): gör att du kan ange en delad hemlighet att skicka till VPN-servern.
-    - **Delad hemlighet**: Ange den delade hemligheten, även kallat PSK (i förväg delad nyckel). Se till att värdet matchar den delade hemlighet som kon figurer ATS på VPN-servern.
+    - **Delad hemlighet**: ange den delade hemligheten, även kallat PSK (i förväg delad nyckel). Se till att värdet matchar den delade hemlighet som konfigurerats på VPN-servern.
 
-- **Server certifikat utfärdarens nätverks namn**: tillåter VPN-servern att autentisera till VPN-klienten. Ange certifikat utfärdarens nätverks namn (CN) för det VPN-servercertifikat som skickas till VPN-klienten på enheten. Se till att CN-värdet matchar konfigurationen på VPN-servern. Annars Miss lyckas VPN-anslutningen.
-- **Server certifikatets nätverks namn**: Ange CN för själva certifikatet. Om inget värde anges används värdet för Fjärrvärdet.
+- **Servercertifikatutfärdarens nätverksnamn**: tillåter VPN-servern att autentisera till VPN-klienten. Ange certifikatutfärdarens nätverksnamn (CN) för det VPN-servercertifikat som skickas till VPN-klienten på enheten. Se till att CN-värdet matchar konfigurationen på VPN-servern. Annars misslyckas VPN-anslutningen.
+- **Servercertifikatets nätverksnamn**: Ange CN för själva certifikatet. Om inget värde anges används värdet för fjärridentifieraren.
 
-- **Identifierings frekvens för döda peer**: Välj hur ofta VPN-klienten ska kontrol lera om VPN-tunneln är aktiv. Alternativen är:
-  - **Inte konfigurerad**: använder standard systemet för iOS, vilket kan vara detsamma som att välja **medel**.
-  - **Ingen**: inaktiverar utebliven peer-identifiering.
-  - **Låg**: skickar ett keepalive-meddelande var 30: e minut.
+- **DPD-frekvens (dead peer detection)** : Välj hur ofta VPN-klienten ska kontrollera om VPN-tunneln är aktiv. Alternativen är:
+  - **Inte konfigurerad**: använder iOS/iPad-systemstandard, vilket kan vara detsamma som att välja **Medel**.
+  - **Ingen**: inaktiverar DPD (dead peer detection).
+  - **Låg**: skickar ett keepalive-meddelande var 30:e minut.
   - **Medel** (standard): skickar ett keepalive-meddelande var tionde minut.
-  - **Hög**: skickar ett keepalive-meddelande var 60 sekund.
+  - **Hög**: skickar ett keepalive-meddelande var 60:e sekund.
 
-- **Lägsta TLS-version intervall**: Ange den minsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.0`.
-- **Högsta TLS-versions intervall**: Ange den högsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.2`.
+- **Lägsta TLS-versionsintervall**: Ange den lägsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.0`.
+- **Högsta TLS-versionsintervall**: Ange den högsta TLS-version som ska användas. Ange `1.0`, `1.1`eller `1.2`. Om inget anges används standardvärdet `1.2`.
 
 > [!NOTE]
-> TLS-versions intervallets lägsta och högsta värde måste anges när du använder användarautentisering och certifikat.
+> TLS-versionsintervallets lägsta och högsta värde måste anges när du använder användarautentisering och certifikat.
 
-- **Perfect Forward Secrecy**: Välj **Aktivera** för att aktivera PFS (Perfect Forward Secrecy). PFS är en funktion för IP-säkerhet som minskar påverkan om en sessionsnyckel komprometteras. **Disable** (standard) använder inte PFS.
-- **Certifikat återkallnings kontroll**: Välj **Aktivera** för att kontrol lera att certifikaten inte återkallas innan du tillåter att VPN-anslutningen lyckas. Den här kontrollen är bästa möjliga. Om VPN-servern tar tid på innan du fastställer om certifikatet har återkallats beviljas åtkomst. **Disable** (standard) söker inte efter återkallade certifikat.
+- **Perfect Forward Secrecy**: Välj **Aktivera** för att aktivera PFS (Perfect Forward Secrecy). PFS är en funktion för IP-säkerhet som minskar påverkan om en sessionsnyckel komprometteras. **Inaktivera** (standard) använder inte PFS.
+- **Certifikatåterkallningskontroll**: Välj **Aktivera** för att kontrollera att certifikaten inte återkallas innan VPN-anslutningen tillåts att lyckas. Den här kontrollen är bästa möjliga. Om VPN-servern når tidsgränsen innan du fastställer om certifikatet har återkallats, beviljas åtkomst. **Inaktivera** (standard) söker inte efter återkallade certifikat.
 
-- **Konfigurera säkerhets Associations parametrar**: **inte konfigurerat** (standard) använder iOS-standardvärdet. Välj **Aktivera** för att ange de parametrar som används när du skapar säkerhets associationer med VPN-servern:
+- **Konfigurera säkerhetskopplingsparametrar**: **Inte konfigurerat** (standard) använder iOS/iPad-systemstandard. Välj **Aktivera** för att ange de parametrar som används när du skapar säkerhetskopplingar med VPN-servern:
   - **Krypteringsalgoritm**: Välj den algoritm du vill använda:
     - DES
     - 3DES
@@ -160,11 +160,11 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
     - SHA2-384
     - SHA2-512
   - **Diffie-Hellman-grupp**: Välj den grupp du vill använda. Standardvärdet är grupp `2`.
-  - **Livs längd** (minuter): Välj hur länge säkerhets associationen ska förbli aktiv tills nycklarna roteras. Ange ett heltal mellan `10` och `1440` (1440 minuter är 24 timmar). Standardvärdet är `1440`.
+  - **Livslängd** (minuter): Välj hur länge säkerhetskopplingen ska förbli aktiv tills nycklarna roteras. Ange ett heltal mellan `10` och `1440` (1440 minuter är 24 timmar). Standardvärdet är `1440`.
 
-- **Konfigurera en separat uppsättning parametrar för underordnade säkerhets associationer**: med iOS kan du konfigurera separata parametrar för IKE-anslutningen och eventuella underordnade anslutningar. 
+- **Konfigurera en separat uppsättning parametrar för underordnade säkerhetskopplingar**: iOS/iPad gör att du kan konfigurera separata parametrar för IKE-anslutningen och eventuella underordnade anslutningar. 
 
-  **Inte konfigurerad** (standard) använder de värden som du anger i den tidigare inställningen **Konfigurera säkerhets Associations parametrar** . Välj **Aktivera** för att ange de parametrar som används när du skapar *underordnade* säkerhets associationer med VPN-servern:
+  **Inte konfigurerad** (standard) använder de värden som du anger i den tidigare inställningen **Ställ in säkerhetskopplingsparametrar**. Välj **Aktivera** för att ange de parametrar som används när du skapar *underordnade* säkerhetskopplingar med VPN-servern:
   - **Krypteringsalgoritm**: Välj den algoritm du vill använda:
     - DES
     - 3DES
@@ -179,13 +179,13 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
     - SHA2-384
     - SHA2-512
   - **Diffie-Hellman-grupp**: Välj den grupp du vill använda. Standardvärdet är grupp `2`.
-  - **Livs längd** (minuter): Välj hur länge säkerhets associationen ska förbli aktiv tills nycklarna roteras. Ange ett heltal mellan `10` och `1440` (1440 minuter är 24 timmar). Standardvärdet är `1440`.
+  - **Livslängd** (minuter): Välj hur länge säkerhetskopplingen ska förbli aktiv tills nycklarna roteras. Ange ett heltal mellan `10` och `1440` (1440 minuter är 24 timmar). Standardvärdet är `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Inställningar för automatiskt VPN
 
-- **Per app-VPN**: Aktiverar per app-VPN. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Per app-VPN stöds inte i IKEv2. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS](vpn-setting-configure-per-app.md). 
+- **Per app-VPN**: Aktiverar per app-VPN. Tillåter att VPN-anslutningen aktiveras automatiskt när vissa program öppnas. Associerar även appar med den här VPN-profilen. Per app-VPN stöds inte i IKEv2. Om du vill ha mer information läser du [instruktionerna för hur du konfigurerar per app-VPN för iOS/iPadOS](vpn-setting-configure-per-app.md). 
   - **Typ av provider**: Endast tillgängligt för Pulse Secure och anpassat VPN.
-  - När du använder **per app-VPN-profiler** i iOS med Pulse Secure eller Anpassat VPN väljer du händelsedirigering nedåt på applager (app-proxy) eller på paketnivå (paket-tunnel). Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå. Om du inte är säker på vilket värde du ska använda läser du VPN-leverantörens dokumentation.
+  - När du använder **per app-VPN-profiler** i iOS/iPadOS med Pulse Secure eller Anpassat VPN väljer du händelsedirigering nedåt på applager (app-proxy) eller på paketnivå (paket-tunnel). Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå. Om du inte är säker på vilket värde du ska använda läser du VPN-leverantörens dokumentation.
   - **Safariwebbadresser som aktiverar den här VPN-anslutningen**: Lägg till en eller flera webbadresser. VPN-anslutningen upprättas automatiskt när de här webbadresserna besöks i Safari-webbläsaren på enheten.
 
 - **VPN på begäran**: Konfigurera villkorliga regler som styr när VPN-anslutningen ska initieras. Du kan till exempel skapa ett villkor där VPN-anslutningen endast används när en enhet inte är ansluten till ett trådlöst företagsnätverk. Eller skapa ett villkor. Om en enhet till exempel inte kan komma åt en DNS-sökdomän som du har angett startas inte VPN-anslutningen.
@@ -193,7 +193,7 @@ Dessa inställningar gäller när du väljer **Anslutnings typ** > **IKEv2**.
   - **SSID:n eller DNS-sökdomäner**: Välj om det här villkoret ska använda det trådlösa nätverkets **SSID:n** eller **DNS-sökdomäner**. Välj **Lägg till** för att konfigurera en eller flera SSID:er eller sökdomäner.
   - **URL-strängavsökning**: Valfritt. Ange en URL som regeln använder som ett test. Om enheten kommer åt den här URL:en utan omdirigering, startas VPN-anslutningen. Och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängens avsökningsplats.
 
-    En URL-strängavsökning är till exempel en URL för en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. Eller också testar URL: en VPN-anslutningens möjlighet att ansluta till en plats innan enheten ansluter till mål-URL: en via VPN.
+    En URL-strängavsökning är till exempel en URL för en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. Eller så testar webbadressen VPN-nätverkets förmåga att ansluta till en plats innan enheten ansluter till målwebbadressen via VPN.
 .
   - **Domänåtgärd**: Välj något av följande objekt:
     - Anslut vid behov
@@ -216,4 +216,4 @@ Konfigurera följande inställningar om du använder en proxyserver. Proxyinstä
 
 Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Konfigurera VPN-inställningar på [Android](vpn-settings-android.md)-, [Android Enterprise](vpn-settings-android-enterprise.md)-, [MacOS](vpn-settings-macos.md)-och [Windows 10](vpn-settings-windows-10.md) -enheter.
+Konfigurera VPN-inställningar på [Android](vpn-settings-android.md)-, [Android Enterprise](vpn-settings-android-enterprise.md)-, [macOS](vpn-settings-macos.md)- och [Windows 10](vpn-settings-windows-10.md)-enheter.

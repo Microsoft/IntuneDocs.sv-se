@@ -1,7 +1,7 @@
 ---
-title: Felsöka problem med registrering av iOS-enhet i Microsoft Intune
+title: Felsöka problem med registrering av iOS/iPadOS-enhet i Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Förslag på fel sökning av några av de vanligaste problemen när du registrerar iOS-enheter i Intune.
+description: Förslag på felsökning av några av de vanligaste problemen när du registrerar iOS-/iPad-enheter i Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,42 +17,42 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bca046302b221b934d0802c0bf637aced2cec3f
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: a29fab4be6e2046b2c6757505001a7ba3455b8d6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MTE75
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885921"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514327"
 ---
-# <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av iOS-enhet i Microsoft Intune
+# <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Felsöka problem med registrering av iOS/iPadOS-enhet i Microsoft Intune
 
-Den här artikeln hjälper Intune-administratörer att förstå och felsöka problem när de registrerar iOS-enheter i Intune.
+Den här artikeln hjälper Intune-administratörer att förstå och felsöka problem när de registrerar iOS/iPad-enheter i Intune.
 
 ## <a name="prerequisites"></a>Krav
 
-Innan du påbörjar fel sökningen är det viktigt att samla in grundläggande information. Den här informationen kan hjälpa dig att bättre förstå problemet och minska tiden för att hitta en lösning.
+Innan du påbörjar felsökningen är det viktigt att samla in grundläggande information. Den här informationen kan hjälpa dig att bättre förstå problemet och minska tiden för att hitta en lösning.
 
 Samla in följande information om problemet:
 
 - Vilket är det exakta felmeddelandet?
-- Var visas fel meddelandet?
+- Var visas felmeddelandet?
 - När började problemet? Har registreringen någonsin fungerat?
-- Vilken plattform (Android, iOS, Windows) har problemet?
+- Vilken plattform (Android, iOS/iPad, Windows) har problemet?
 - Hur många användare påverkas? Påverkas alla användare eller bara vissa av dem?
 - Hur många enheter påverkas? Påverkas alla enheter eller bara vissa av dem?
 - Vad är MDM-utfärdare?
-- Hur utförs registreringen? Är det "ta med din egen enhet" (BYOD) eller Apple Programmet för enhetsregistrering (DEP) med registrerings profiler?
+- Hur utförs registreringen? Är det ”ta med din egen enhet” (BYOD) eller Apple-programmet för enhetsregistrering (DEP) med registreringsprofiler?
 
 ## <a name="error-messages"></a>Felmeddelanden
 
-### <a name="profile-installation-failed-a-network-error-has-occurred"></a>Det gick inte att installera profilen. Ett nätverks fel har uppstått.
+### <a name="profile-installation-failed-a-network-error-has-occurred"></a>Det gick inte att installera profilen. Ett nätverksfel har uppstått.
 
-**Orsak:** Det finns ett ospecificerat problem med iOS på enheten.
+**Orsak:** Det finns ett ospecificerat problem med iOS/iPad på enheten.
 
 #### <a name="resolution"></a>Lösning
 
-1. För att förhindra data förlust i följande steg (att återställa iOS tar bort alla data på enheten), se till att säkerhetskopiera dina data.
-2. Sätt enheten i återställnings läge och Återställ den sedan. Se till att du konfigurerar den som en ny enhet. Mer information om hur du återställer iOS-enheter finns [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+1. För att förhindra dataförlust i följande steg (att återställa iOS/iPad tar bort alla data på enheten), se till att säkerhetskopiera dina data.
+2. Sätt enheten i återställningsläge och återställ den sedan. Se till att du konfigurerar den som en ny enhet. Mer information om hur du återställer iOS/iPad-enheter finns i [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Omregistrera enheten.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Det gick inte att installera profilen. Det går inte att upprätta någon anslutning till servern.
@@ -63,8 +63,8 @@ Samla in följande information om problemet:
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster**, sök efter Intune och välj sedan **Intune**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
-4. Under **begränsningar för enhets typ**väljer du den begränsning som du vill ange > **Egenskaper** > **väljer plattformar** > väljer **Tillåt** för **iOS**och klickar sedan på **OK**.
-5. Välj **Konfigurera plattformar**, Välj **Tillåt** för personligt ägda iOS-enheter och klicka sedan på **OK**.
+4. Under **Begränsningar för enhetstyper**, väljer du den begränsning som du vill ställa in > **Egenskaper** > **Välj plattformar** > väljer **Tillåt** för **iOS**och klickar sedan på **OK**.
+5. Välj **Konfigurera plattformar**, välj **Tillåt** för personligt ägda iOS/iPad-enheter och klicka sedan på **OK**.
 6. Omregistrera enheten.
 
 **Orsak:** De nödvändiga CNAME-posterna i DNS finns inte.
@@ -86,124 +86,124 @@ Om ditt företag använder flera domäner för användarautentiseringsuppgifter 
 > [!NOTE]
 > Distributionen av DNS-poständringarna kan ta upp till 72 timmar. Du kan inte verifiera DNS-ändringen i Intune förrän DNS-posten har spridits.
 
-**Orsak:** Du registrerar en enhet som tidigare har registrerats med ett annat användar konto och den tidigare användaren togs inte bort på rätt sätt från Intune.
+**Orsak:** Du registrerar en enhet som tidigare har registrerats med ett annat användarkonto och den tidigare användaren togs inte bort på rätt sätt från Intune.
 
 #### <a name="resolution"></a>Lösning
-1. Avbryt all aktuell profil installation.
+1. Avbryt all aktuell profilinstallation.
 2. Öppna [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i Safari.
 3. Omregistrera enheten.
 
 > [!NOTE]
-> Om registreringen fortfarande Miss lyckas kan du ta bort cookies i Safari (Blockera inte cookies) och sedan registrera enheten på nytt.
+> Om registreringen fortfarande misslyckas kan du ta bort cookies i Safari (blockera inte cookies) och sedan registrera enheten på nytt.
 
-**Orsak:** Enheten har redan registrerats med en annan MDM-Provider.
+**Orsak:** Enheten har redan registrerats med en annan MDM-provider.
 
 #### <a name="resolution"></a>Lösning
-1. Öppna **Inställningar** på iOS-enheten, gå till **allmän > enhets hantering**.
-2. Ta bort eventuell befintlig hanterings profil.
+1. Öppna **Inställningar** på iOS/iPad-enheten, gå till **Allmänt > Enhetshantering**.
+2. Ta bort eventuell befintlig hanteringsprofil.
 3. Omregistrera enheten.
 
 **Orsak:** Den användare som försöker registrera enheten har ingen Microsoft Intune-licens.
 
 #### <a name="resolution"></a>Lösning
-1. Gå till [administrations centret för Office 365](https://portal.office.com/adminportal/home#/homepage)och välj **användare > aktiva användare**.
+1. Gå till [Administrationscentret för Office 365](https://portal.office.com/adminportal/home#/homepage) och välj **Användare > Aktiva användare**.
 2. Markera det användarkonto som du vill tilldela en Intune-användarlicens och välj sedan **Produktlicenser > Redigera**.
-3. Växla till den plats för den licens som du vill tilldela **till den här** användaren och välj sedan **Spara**.
+3. Växla till **På** för den licens som du vill tilldela till den här användaren och välj sedan **Spara**.
 4. Omregistrera enheten.
 
 ### <a name="this-service-is-not-supported-no-enrollment-policy"></a>Den här tjänsten stöds inte. Ingen registreringsprincip.
 
-**Orsak**: ett Apple MDM-Push-certifikat har inte kon figurer ATS i Intune eller så är certifikatet ogiltigt. 
+**Orsak**: ett Apple MDM-pushcertifikat har inte konfigurerats i Intune eller så är certifikatet ogiltigt. 
 
 #### <a name="resolution"></a>Lösning
 
-- Om MDM-push-certifikatet inte har kon figurer ATS följer du stegen i [Hämta ett Apple MDM-Push-certifikat](apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
-- Om MDM-push-certifikatet är ogiltigt följer du stegen i [förnya Push-certifikat för Apple MDM](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+- Om MDM-pushcertifikatet inte har konfigurerats följer du stegen i [Hämta ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
+- Om MDM-pushcertifikatet är ogiltigt följer du stegen i [Förnya Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
 
-### <a name="company-portal-temporarily-unavailable-the-company-portal-app-encountered-a-problem-if-the-problem-persists-contact-your-system-administrator"></a>Företagsportalen är för tillfället otillgänglig. Ett fel uppstod i Företagsportals appen. Om problemet kvarstår kontaktar du systemadministratören.
+### <a name="company-portal-temporarily-unavailable-the-company-portal-app-encountered-a-problem-if-the-problem-persists-contact-your-system-administrator"></a>Företagsportalen är för tillfället otillgänglig. Ett fel uppstod i Företagsportalappen. Om problemet kvarstår kontaktar du systemadministratören.
 
-**Orsak:** Företagsportal appen är inaktuell eller skadad.
+**Orsak:** Företagsportalappen är inaktuell eller skadad.
 
 #### <a name="resolution"></a>Lösning
 1. Ta bort företagsportalappen från enheten.
 2. Ladda ner och installera **Microsoft Intune-företagsportalappen** från **App Store**.
 3. Omregistrera enheten.
  > [!NOTE]
-    > Det här felet kan också inträffa om användaren försöker registrera fler enheter än enhets registreringen har kon figurer ATS för att tillåta. Följ lösnings stegen för **enhets höljet** nedan om de här stegen inte löser problemet.
+    > Det här felet kan också inträffa om användaren försöker registrera fler enheter än enhetsregistreringen har konfigurerats för att tillåta. Följ lösningsstegen för **Enhetstaket har nåtts** nedan om de här stegen inte löser problemet.
 
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
 
-**Orsak:** Användaren försöker registrera fler enheter än gränsen för enhets registrering.
+**Orsak:** Användaren försöker registrera fler enheter än gränsen för enhetsregistrering.
 
 #### <a name="resolution"></a>Lösning
-1. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **enheter** > **alla enheter**och kontrollerar antalet enheter som användaren har registrerat.
+1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Alla enheter** och kontrollerar antalet enheter som användaren har registrerat.
     > [!NOTE]
-    > Du bör också ha den berörda användar inloggningen till [Intune-användargränssnittet](https://portal.manage.microsoft.com/) och kontrol lera enheter som har registrerats. Det kan finnas enheter som visas i [användar portalen för Intune](https://portal.manage.microsoft.com/) , men inte i [Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)-administrationskonsolen, och sådana enheter räknas även mot enhetens registrerings gräns.
-2. I [administrations centret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **enheter** > **registrerings begränsningar** > kontrollerar enhetens registrerings gräns. Som standard är gränsen inställd på 15. 
-3. Om antalet registrerade enheter har nått gränsen tar du bort onödiga enheter eller ökar gränsen för enhets registrering. Eftersom alla registrerade enheter förbrukar en Intune-licens rekommenderar vi att du alltid tar bort onödiga enheter först.
+    > Du bör också ha den berörda användarinloggningen till [Intune-användargränssnittet](https://portal.manage.microsoft.com/) och kontrollera enheter som har registrerats. Det kan finnas enheter som visas i [Intune-användarportalen](https://portal.manage.microsoft.com/), men inte i [Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)-administrationskonsolen, och sådana enheter räknas även mot enhetsregistreringsgränsen.
+2. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Registreringsbegränsningar** > kontrollera enhetsregistreringsgränsen. Som standard är gränsen inställd på 15. 
+3. Om antalet registrerade enheter har nått gränsen tar du bort onödiga enheter eller ökar enhetsregistreringsgränsen. Eftersom alla registrerade enheter förbrukar en Intune-licens rekommenderar vi att du alltid tar bort onödiga enheter först.
 4. Omregistrera enheten.
 
 ### <a name="workplace-join-failed"></a>Workplace Join misslyckades
 
-**Orsak:** Företagsportal appen är inaktuell eller skadad.  
+**Orsak:** Företagsportalappen är inaktuell eller skadad.  
 
 #### <a name="resolution"></a>Lösning
 1. Ta bort företagsportalappen från enheten.
 2. Ladda ner och installera **Microsoft Intune-företagsportalappen** från **App Store**.
 3. Omregistrera enheten.
 
-### <a name="user-license-type-invalid"></a>Användar licens typen är ogiltig
+### <a name="user-license-type-invalid"></a>Användarlicenstypen är ogiltig
 
 **Orsak:** Den användare som försöker registrera enheten har ingen giltig Intune-licens.
 
 #### <a name="resolution"></a>Lösning
-1. Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home#/homepage)och välj sedan **användare** > **aktiva användare**.
-2. Välj det påverkade användar kontot > **produkt licenser** > **Redigera**.
-3. Kontrol lera att den här användaren har tilldelats en giltig Intune-licens.
+1. Gå till [administrationscentret för Microsoft 365 ](https://portal.office.com/adminportal/home#/homepage) och välj sedan **Användare** > **Aktiva användare**.
+2. Välj det påverkade användarkontot > **Produktlicenser** > **Redigera**.
+3. Kontrollera att den här användaren har tilldelats en giltig Intune-licens.
 4. Omregistrera enheten.
 
-### <a name="user-name-not-recognized-this-user-account-is-not-authorized-to-use-microsoft-intune-contact-your-system-administrator-if-you-think-you-have-received-this-message-in-error"></a>Användarnamnet godkänns inte. Det här användar kontot har inte behörighet att använda Microsoft Intune. Kontakta system administratören om du anser att du har fått det här meddelandet i fel.
+### <a name="user-name-not-recognized-this-user-account-is-not-authorized-to-use-microsoft-intune-contact-your-system-administrator-if-you-think-you-have-received-this-message-in-error"></a>Användarnamnet godkänns inte. Det här användarkontot har inte behörighet att använda Microsoft Intune. Kontakta systemadministratören om du anser att du har fått det här meddelandet av misstag.
 
 **Orsak:** Den användare som försöker registrera enheten har ingen giltig Intune-licens.
 
-1. Gå till [Microsoft 365 administrations Center](https://portal.office.com/adminportal/home#/homepage)och välj sedan **användare** > **aktiva användare**.
-2. Välj det berörda användar kontot och välj sedan **produkt licenser** > **Redigera**.
-3. Kontrol lera att den här användaren har tilldelats en giltig Intune-licens.
+1. Gå till [administrationscentret för Microsoft 365 ](https://portal.office.com/adminportal/home#/homepage) och välj sedan **Användare** > **Aktiva användare**.
+2. Välj det berörda användarkontot och välj sedan **Produktlicenser** > **Redigera**.
+3. Kontrollera att den här användaren har tilldelats en giltig Intune-licens.
 4. Omregistrera enheten.
 
-### <a name="profile-installation-failed-the-new-mdm-payload-does-not-match-the-old-payload"></a>Det gick inte att installera profilen. Den nya MDM-nyttolasten matchar inte den gamla nytto lasten.
+### <a name="profile-installation-failed-the-new-mdm-payload-does-not-match-the-old-payload"></a>Det gick inte att installera profilen. Den nya MDM-nyttolasten matchar inte den gamla nyttolasten.
 
-**Orsak:** En hanterings profil har redan installerats på enheten.
+**Orsak:** En hanteringsprofil har redan installerats på enheten.
 
 #### <a name="resolution"></a>Lösning
 
-1. Öppna **Inställningar** på iOS-enheten > **allmän** > **enhets hantering**.
-2. Tryck på den befintliga hanterings profilen och tryck på **ta bort hantering**.
+1. Öppna **Inställningar** på iOS/iPad-enheten > **Allmänt** > **Enhetshantering**.
+2. Tryck på den befintliga hanteringsprofilen och tryck på **Ta bort hantering**.
 3. Omregistrera enheten.
 
 ### <a name="noenrollmentpolicy"></a>NoEnrollmentPolicy
 
-**Orsak:** APN-certifikatet (Apple Push Notification Service) saknas, är ogiltigt eller har upphört att gälla.
+**Orsak:** APNs-certifikatet (Apple Push Notification Service) saknas, är ogiltigt eller har upphört att gälla.
 
 #### <a name="resolution"></a>Lösning
-Kontrol lera att ett giltigt APN-certifikat har lagts till i Intune. Mer information finns i [Konfigurera iOS-registrering](ios-enroll.md).
+Kontrollera att ett giltigt APNs-certifikat har lagts till i Intune. Mer information finns i [Konfigurera iOS/iPad-registrering](ios-enroll.md).
 
 ### <a name="accountnotonboarded"></a>AccountNotOnboarded
 
-**Orsak:** Det har uppstått ett problem med APNs-certifikatet (Apple Push Notification Service) som kon figurer ATS i Intune.
+**Orsak:** Det har uppstått ett problem med APNs-certifikatet (Apple Push Notification Service) som konfigurerats i Intune.
 
 #### <a name="resolution"></a>Lösning
 Förnya APNs-certifikatet och registrera sedan enheten på nytt.
 
 > [!IMPORTANT]
-> Se till att du förnyar APNs-certifikatet. Ersätt inte APNs-certifikatet. Om du ersätter certifikatet måste du Omregistrera alla iOS-enheter i Intune. 
+> Se till att du förnyar APNs-certifikatet. Ersätt inte APNs-certifikatet. Om du ersätter certifikatet måste du omregistrera alla iOS/iPad-enheter i Intune. 
 
-- Information om hur du förnyar APN-certifikatet i fristående Intune finns i [förnya Apple MDM Push-certifikat](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Om du vill förnya APNs-certifikatet i Office 365, se [skapa ett APN-certifikat för iOS-enheter](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- Information om hur du förnyar APNs-certifikatet i fristående Intune finns i [Förnya Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+- Om du vill förnya APNs-certifikatet i Office 365, se [Skapa ett APNs-certifikat för iOS/iPad-enheter](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
-### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR anslutningen är ogiltig
+### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR Anslutningen är ogiltig
 
-När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil, Miss lyckas registreringen och du får följande fel meddelande:
+När du aktiverar en DEP-hanterad enhet som har tilldelats en registreringsprofil, misslyckas registreringen och du får följande felmeddelande:
 
 ```
 asciidoc
@@ -213,31 +213,32 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Orsak:** Det finns ett anslutnings problem mellan enheten och Apple DEP-tjänsten.
+**Orsak:** Det finns ett anslutningsproblem mellan enheten och Apple DEP-tjänsten.
 
 #### <a name="resolution"></a>Lösning
-Åtgärda anslutnings problemet eller Använd en annan nätverks anslutning för att registrera enheten. Du kan också behöva kontakta Apple om problemet kvarstår.
+Åtgärda anslutningsproblemet eller använd en annan nätverksanslutning för att registrera enheten. Du kan också behöva kontakta Apple om problemet kvarstår.
 
 
 ## <a name="other-issues"></a>Andra problem
 
 ### <a name="dep-enrollment-doesnt-start"></a>DEP-registrering startar inte
-När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil initieras inte Intunes registrerings process.
+När du aktiverar en DEP-hanterad enhet som har tilldelats en registreringsprofil initieras inte Intune-registreringsprocessen.
 
-**Orsak:** Registrerings profilen skapas innan DEP-token laddas upp till Intune.
+**Orsak:** Registreringen skapas innan DEP-token laddas upp till Intune.
 
 #### <a name="resolution"></a>Lösning
 
-1. Redigera registrerings profilen. Du kan göra ändringar i profilen. Syftet med detta är att uppdatera profilens ändrings tid.
+1. Redigera registreringsprofilen. Du kan göra ändringar i profilen. Syftet med detta är att uppdatera profilens ändringstid.
 2. Synkronisera DEP-hanterade enheter: Gå till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välj **Enheter** > **iOS** > **iOS-registrering** > **Registreringsprogramstoken** > välj en token > **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-registrering fastnat vid användar inloggning
-När du aktiverar en DEP-hanterad enhet som har tilldelats en registrerings profil, sker den första installationen efter att du angett autentiseringsuppgifter.
+### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-registrering har fastnat vid användarinloggning
+När du aktiverar en DEP-hanterad enhet som har tilldelats en registreringsprofil, sker den första installationen efter att du angett dina autentiseringsuppgifter.
 
-**Orsak:** Multi-Factor Authentication (MFA) har Aktiver ATS. För närvarande fungerar MFA inte under registreringen på DEP-enheter.
+**Orsak:** Multifaktorautentisering (MFA) har aktiverats. Förnärvarande fungerar inte MFA under registreringen på DEP-enheter.
 
 #### <a name="resolution"></a>Lösning
 Inaktivera MFA och registrera sedan enheten på nytt.
+
 
 ## <a name="next-steps"></a>Nästa steg
 
