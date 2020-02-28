@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 9acb934cdf67aae9c18091a0340f27de635b5399
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059272"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511025"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Felsökning av principer och profiler i Intune
 
@@ -31,13 +31,13 @@ Microsoft Intune har några inbyggda felsökningsprinciper. Med hjälp av dessa 
 
 I den här artikeln beskrivs några vanliga felsökningsmetoder och några problem du kan stöta på.
 
-## <a name="check-tenant-status"></a>Kontrol lera status för klient organisation
+## <a name="check-tenant-status"></a>Kontrollera klientorganisationens status
 
-Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta att prenumerationen är aktiv. Du kan också visa information om aktiva incidenter och rådgivare som kan påverka din princip eller profil distribution.
+Kontrollera [Klientorganisationens status](../fundamentals/tenant-status.md) och bekräfta att prenumerationen är aktiv. Du kan också visa information om aktiva incidenter och rekommendationer som kan påverka din princip eller profildistribution.
 
 ## <a name="use-built-in-troubleshooting"></a>Använda inbyggd felsökning
 
-1. I [administrations Center för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)väljer du **fel sökning + support**:
+1. Välj **Felsökning och support** i [Administrationscenter för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431):
 
     ![Gå till Hjälp och support i Intune och välj Felsök](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -77,7 +77,7 @@ Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta 
 
         - Framtvinga incheckning:
             - På Android-enheten öppnar du appen Företagsportal > **Enheter** > välj enheten i listan > **Kontrollera enhetsinställningarna**.
-            - På iOS-enheten öppnar du appen Företagsportal > **Enheter** > välj enheten i listan > **Kontrollera inställningar**.
+            - Gå till iOS/iPadOS-enheten, öppna appen Företagsportal > **Enheter** > välj enheten i listan > **Kontrollera inställningar**.
 
         - På en Windows-enhet öppnar du **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** > välj kontot eller MDM-registreringen > **Info** > **Synkronisera**.
 
@@ -91,7 +91,7 @@ Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta 
 
         **Principtillstånd**:
 
-        - **Ej tillämpligt**: Principen stöds inte på den här plattformen. Till exempel fungerar inte iOS-principer på Android. Samsung KNOX-principer fungerar inte på Windows-enheter.
+        - **Inte tillämpligt**: Principen stöds inte på den här plattformen. iOS/iPadOS-principer fungerar t.ex. inte på Android. Samsung KNOX-principer fungerar inte på Windows-enheter.
         - **Konflikt**: Det finns en befintlig inställning på enheten som Intune inte kan åsidosätta. Eller så har du distribuerat två principer med samma inställning med olika värden.
         - **Väntar**: Enheten har inte checkats in i Intune för att få principen. Eller så har enheten tagit emot principen men har inte rapporterat statusen till Intune.
         - **Fel**: Du hittar fel och möjliga lösningar i [Felsöka åtkomstproblem för företagsresurser](../fundamentals/troubleshoot-company-resource-access-problems.md).
@@ -110,7 +110,7 @@ Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta 
 
     - **Överensstämmer**: Enheten har tagit emot profilen och rapporterar till Intune att den överensstämmer med inställningen.
 
-    - **Inte tillämplig**: Profilinställningen är inte tillämplig. Till exempel är e-postinställningar för iOS-enheter inte tillämpliga för Android-enheter.
+    - **Ej tillämpligt**: Profilinställningen är inte tillämplig. E-postinställningar för iOS/iPadOS-enheter är t.ex. inte tillämpliga för Android-enheter.
 
     - **Väntar**: Profilen har skickats till enheten men har inte rapporterat statusen till Intune. Till exempel kräver kryptering på Android användaraktivering, vilket kan leda till att krypteringen väntar.
 
@@ -121,14 +121,14 @@ Kontrol lera [klientens status](../fundamentals/tenant-status.md) och bekräfta 
 
 ## <a name="policy-troubleshooting-resources"></a>Felsökningsresurser för principer
 
-- [Felsöka iOS-eller Android-principer som inte tillämpas på enheter](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öppnar en annan Microsoft-webbplats)
-- [Felsöka Windows 10 Intune-princip fel](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öppnar en blogg)
+- [Felsöka iOS/iPadOS- eller Android-principer som inte tillämpas på enheter](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (öppnar en annan Microsoft-webbplats)
+- [Felsöka Windows 10 Intune-principfel](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (öppnar en blogg)
 - [Felsök anpassade CSP-inställningar för Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (öppnar en annan Microsoft-webbplats)
-- [Princip för Windows 10 Grupprincip vs INTUNE MDM](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öppnar en annan Microsoft-webbplats)
+- [Windows 10-grupprincipen jämfört med Intunes MDM-princip](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (öppnar en annan Microsoft-webbplats)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Avisering: Det gick inte att spara åtkomstregler i Exchange
 
-**Problem**: Du får aviseringen **Det gick inte att spara åtkomstregler i Exchange**  i administrationskonsolen.
+**Problem**: Du får aviseringen **Det gick inte att spara åtkomstregler i Exchange** i administrationskonsolen.
 
 Om du har skapat principer på arbetsytan Exchange On-premises-princip (administrationskonsolen) men använder Office 365, tillämpas inte de konfigurerade principinställningarna av Intune. Observera principkällan i aviseringen. Ta bort de gamla reglerna under arbetsytan Exchange On-premises-princip. De gamla reglerna är globala Exchange-regler i Intune för lokal Exchange och är inte relevanta för Office 365. Skapa sedan en ny princip för Office 365.
 
@@ -138,13 +138,13 @@ Om du har skapat principer på arbetsytan Exchange On-premises-princip (administ
 
 Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in med hjälp av MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva principen tillämpas för enheten.
 
-Windows 10-enheter kan inte ta bort säkerhets principer när du avtilldelar principen (stoppa distribution). Du kan behöva lämna den tilldelade principen och sedan ändra tillbaka säkerhets inställningarna till standardvärdena.
+Windows 10-enheter kan inte ta bort säkerhetsprinciper när du tar bort principtilldelningen (stoppar distributionen). Du kan behöva lämna den tilldelade principen och sedan ändra tillbaka säkerhetsinställningarna till standardvärdena.
 
 Du kan, beroende på enhetsplattform, vara tvungen att återställa säkerhetsprinciperna om du vill ändra principen till ett mindre säkert värde.
 
 I Windows 8.1 sveper du till exempel från höger på skrivbordet för att öppna menyraden för **Snabbknappar**. Choose **Inställningar** > **Kontrollpanelen** > **Användarkonton**. Till vänster väljer du länken **Återställ säkerhetsprinciper** och sedan **Återställ principer**.
 
-Andra plattformar, som Android, iOS och Windows Phone 8.1, kan behöva tas ur bruk och sedan registreras på nytt för att en mindre begränsande profil ska kunna tillämpas.
+Andra plattformar, som Android, iOS/iPadOS och Windows Phone 8.1, kan behöva tas ur bruk och sedan registreras på nytt om en mindre begränsande profil ska kunna tillämpas.
 
 [Felsöka enhetsregistrering](../enrollment/troubleshoot-device-enrollment-in-intune.md) kan vara en bra resurs.
 
@@ -170,7 +170,7 @@ För Windows-datorer som hanteras med Intune-programklienten kan principfel i fi
 
 4. Dra meddelandereglaget till standardinställningen.
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>Fel: Det går inte att hämta värdet från datorn, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>FEL: Det går inte att hämta värdet från datorn, 0x80041013
 
 Inträffar om tiden på det lokala systemet är felsynkroniserat med fem minuter eller mer. Om tiden på den lokala datorn inte är rätt synkroniserad misslyckas säkra transaktioner eftersom tidsstämplarna blir ogiltiga.
 

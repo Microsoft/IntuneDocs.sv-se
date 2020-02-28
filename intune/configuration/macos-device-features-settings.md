@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,36 +16,36 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 791e2a1313480bdf1ad95988d48664d6620ba0b3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: df5b53be159fd082090e61fd736e4c9329644c85
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206354"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512746"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Funktionsinställningar för macOS-enheter i Intune
 
-I Intune finns vissa inbyggda inställningar för att anpassa funktioner i dina macOS-enheter. Administratörer kan till exempel lägga till skrivare för utskrift, välja hur användare loggar in, konfigurera energi kontrollerna, använda autentisering med enkel inloggning och mycket mer.
+I Intune finns vissa inbyggda inställningar för att anpassa funktioner i dina macOS-enheter. Administratörer kan exempelvis lägga till AirPrint-skrivare, välja hur användare ska logga in, konfigurera energikontrollerna, använda autentisering med enkel inloggning och mycket annat.
 
 Du kan använda dessa funktioner för att styra macOS-enheter som en del av din MDM-lösning för hantering av mobilenheter.
 
-I den här artikeln visas inställningarna, tillsammans med en beskrivning av vad varje inställning gör. Här visas även anvisningar för att hämta IP-adress, sökväg och port för AirPrint-skrivare som använder Terminal-appen (emulator). Mer information om enhets funktioner finns i [lägga till iOS-eller MacOS-enhetens funktions inställningar](device-features-configure.md).
+I den här artikeln visas inställningarna, tillsammans med en beskrivning av vad varje inställning gör. Här visas även anvisningar för att hämta IP-adress, sökväg och port för AirPrint-skrivare som använder Terminal-appen (emulator). Om du vill ha mer information om enhetsfunktionerna går du till [Lägg till funktionsinställningar för iOS/iPadOS- eller macOS-enhet](device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
 [Skapa en macOS-enhetskonfigurationsprofil](device-features-configure.md).
 
 > [!NOTE]
-> Dessa inställningar gäller för olika registrerings typer, med vissa inställningar som gäller för alla registrerings alternativ. Mer information om de olika registrerings typerna finns i [MacOS-registrering](../enrollment/macos-enroll.md).
+> Dessa inställningar gäller för olika registreringstyper. Vissa inställningar gäller för alla registreringsalternativ. Mer information om de olika registreringstyperna finns i [macOS-registrering](../enrollment/macos-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering 
 
 - **IP-adress**: Ange skrivarens IPv4- eller IPv6-adress. Om du använder värdnamn till att identifiera skrivare, kan du hämta IP-adressen genom att pinga skrivaren i Terminal-appen. Det finns mer information i [Hämta IP-adress och sökväg](#get-the-ip-address-and-path) (i den här artikeln).
 - **Sökväg**: Ange sökvägen till skrivaren. Sökvägen är vanligtvis `ipp/print` för skrivare i nätverket. Det finns mer information i [Hämta IP-adress och sökväg](#get-the-ip-address-and-path) (i den här artikeln).
-- **Port** (iOS 11.0 och senare): Ange lyssningsporten för AirPrint-målet. Om du lämnar den här egenskapen tom, kommer AirPrint att använda standardporten.
-- **TLS** (iOS 11.0 och senare): Välj **Aktivera** för att skydda AirPrint-anslutningar med TLS (Transport Layer Security).
+- **Port** (iOS 11.0+, iPadOS 13.0+): Ange lyssningsporten för AirPrint-målet. Om du lämnar den här egenskapen tom, kommer AirPrint att använda standardporten.
+- **TLS** (iOS 11.0+, iPadOS 13.0+): Välj **Aktivera** för att skydda AirPrint-anslutningar med TLS (Transport Layer Security).
 
 - **Lägg till** AirPrint-servern. Du kan lägga till flera AirPrint-servrar.
 
@@ -68,9 +68,9 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
 
 ## <a name="login-items"></a>Inloggningsobjekt
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
-- **Filer, mappar och anpassade appar**: **Lägg till** sökvägen till en fil, mapp, anpassad app eller systemappen som du vill öppna när en användare loggar in på enheten. Systemappar eller appar som har skapats eller anpassats för din organisation är vanligt vis i `Applications` mapp, med en sökväg som liknar `/Applications/AppName.app`. 
+- **Filer, mappar och anpassade appar**: **Lägg till** sökvägen för en fil, mapp, anpassad app eller systemapp som du vill ska öppnas när en användare loggar in på enheten. Systemappar eller appar som har skapats eller anpassats för din organisation finns vanligtvis i `Applications`-mappen, med en sökväg liknande `/Applications/AppName.app`. 
 
   Du kan lägga till många filer, mappar och appar. Ange till exempel:  
   
@@ -83,7 +83,7 @@ Om du vill lägga till AirPrinter-servrar, behöver du ha skrivarens IP-adress, 
 
 ## <a name="login-window"></a>Inloggningsfönstret
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: enhets registrering och automatisk enhets registrering
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Inställningarna gäller för: Enhetsregistrering och automatisk enhetsregistrering
 
 #### <a name="window-layout"></a>Fönsterlayout
 
@@ -125,117 +125,117 @@ Den här funktionen gäller för:
 
 - macOS 10.15 och senare
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer 
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper 
 
-- **Typ av SSO-app-tillägg**: Välj typ av AUTENTISERINGSUPPGIFTER för SSO-appen. Alternativen är:
+- **Typ av SSO-apptillägg**: Välj typ av autentiseringsuppgifter för SSO-apptillägget. Alternativen är:
 
-  - **Inte konfigurerad**: app-tillägg används inte. Om du vill inaktivera ett app-tillägg byter du typ av SSO-appaket till **inte konfigurerad**.
-  - **Omdirigera**: Använd ett allmänt, anpassningsbart omdirigerings-app-tillägg för att utföra SSO med moderna autentiserings flöden. Se till att du känner till tillägget och Team-ID: t för din organisations app-tillägg.
-  - **Autentiseringsuppgift**: Använd ett generiskt, anpassningsbart program tillägg för autentiseringsuppgifter för att utföra SSO med autentiserings flöden med anrop och svar. Se till att du känner till tilläggs-ID: t och Team-ID: t för din organisations SSO app-tillägg.  
-  - **Kerberos**: Använd Apples inbyggda Kerberos-tillägg, som ingår i macOS Catalina 10,15 och senare. Det här alternativet är en Kerberos-speciell version av appen för **autentiseringsuppgifter** .
+  - **Inte konfigurerad**: apptilläggen används inte. Om du vill inaktivera ett apptillägg, så ändra SSO-apptilläggstypen till **Inte konfigurerad**.
+  - **Omdirigera**: Använd ett allmänt, anpassningsbart omdirigeringsapptillägg om du vill utföra SSO med moderna autentiseringsflöden. Försäkra dig om att du känner till tillägget och grupp-ID:t för din organisations apptillägg.
+  - **Autentiseringsuppgift**: Använd ett generiskt, anpassningsbart apptillägg för autentiseringsuppgifter om du vill utföra SSO med autentiserings flöden med anrop och svar. Försäkra dig om att du känner till tilläggs-ID och grupp-ID för din organisations SSO-apptillägg.  
+  - **Kerberos**: Använd Apples inbyggda Kerberos-tillägg, som ingår i macOS Catalina 10.15 och senare. Det här alternativet är en Kerberos-specifik version av apptillägget **Autentiseringsuppgifter**.
 
   > [!TIP]
-  > Med hjälp av typerna **omdirigering** och **autentiseringsuppgifter** lägger du till dina egna konfigurations värden för att gå igenom tillägget. Om du använder **autentiseringsuppgifter**bör du överväga att använda inbyggda konfigurations inställningar från Apple i **Kerberos** -typen.
+  > Gå igenom tillägget genom att lägga till dina egna konfigurationsvärden med hjälp av typerna **Omdirigering** och **Autentiseringsuppgifter**. Om du använder **autentiseringsuppgifter**bör du överväga att använda inbyggda konfigurationsinställningar från Apple i **Kerberos**-typen.
 
-- **Tilläggs-ID** (omdirigering och autentiseringsuppgift): Ange det paket-ID som identifierar ditt SSO app-tillägg, till exempel `com.apple.ssoexample`.
-- **Team-ID** (omdirigering och autentiseringsuppgift): Ange Team-ID för SSO-appens tillägg. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, t. ex. `ABCDE12345`. 
+- **Tilläggs-ID** (omdirigering och autentiseringsuppgifter): Ange det paket-ID som identifierar ditt SSO apptillägg, exempelvis `com.apple.ssoexample`.
+- **Team-ID** (omdirigering och autentiseringsuppgifter): Ange SSO-apptilläggets team-ID. Ett team-ID är en sträng med 10 tecken (siffror och bokstäver) som genereras av Apple, t. ex. `ABCDE12345`. 
 
   [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c) (öppna Apples webbplats) om du vill ha mer information.
 
-- **Sfär** (autentiseringsuppgift och Kerberos): Ange namnet på din autentiserings-sfär. Sfär namnet ska vara kapitaliserat, t. ex. `CONTOSO.COM`. Vanligt vis är ditt sfär namn detsamma som ditt DNS-domännamn, men i alla versaler.
+- **Sfär** (autentiseringsuppgifter och Kerberos): Ange din autentiseringssfärs namn. Sfärnamnet måste skrivas med versaler, t. ex. `CONTOSO.COM`. Vanligtvis är sfärnamnet detsamma som ditt DNS-domännamn, men skrivet enbart med versaler.
 
-- **Domäner** (autentiseringsuppgift och Kerberos): ange domän-eller värd namnen för de platser som kan AUTENTISERA via SSO. Om din webbplats till exempel är `mysite.contoso.com`, `mysite` är värd namnet och `contoso.com` är domän namnet. När användarna ansluter till någon av dessa platser hanterar app-tillägget verifierings utmaningen. Med den här autentiseringen kan användare använda ansikts-ID, Touch-ID eller Apple-Pincode/lösen ord för att logga in.
+- **Domäner** (autentiseringsuppgifter och Kerberos): ange domän- eller värdnamnen för de platser som kan autentiseras via SSO. Om din webbplats exempelvis är `mysite.contoso.com`, så är `mysite` värdnamnet och `contoso.com` domännamnet. När användarna ansluter till någon av dessa platser så hanterar apptillägget autentiseringsutmaningen. Med den här autentiseringen kan användarna logga in med hjälp av Ansiktsigenkänning-ID, Touch ID eller PIN-kod/lösenord för Apple.
 
-  - Alla domäner i Intune-tilläggen för enkel inloggning måste vara unika. Du kan inte upprepa en domän i valfri inloggnings profil för program tillägg, även om du använder olika typer av SSO-tillägg.
-  - Dessa domäner är inte Skift läges känsliga.
+  - Alla domäner i Intune-profiltilläggen för enkel inloggning måste vara unika. Du kan inte upprepa en domän i vilken apptilläggsprofil för enkel inloggning som helst, även om du använder olika typer av SSO-apptillägg.
+  - Dessa domäner är inte skiftlägeskänsliga.
 
-- **URL: er** (endast omdirigering): Ange URL-prefixen för dina identitets leverantörer i vars ställe som omdirigerings-tillägget utför SSO. När en användare omdirigeras till dessa URL: er kommer SSO app Extension att ingripa och uppmana SSO.
+- **URL:er** (endast omdirigering): Ange URL-prefixen för dina identitetsleverantörer, å vilkas vägnar omdirigeringstillägget utför SSO. När en användare omdirigeras till dessa URL:er ingriper SSO-apptillägget att och framtvingar SSO.
 
-  - Alla webb adresser i Intune-tilläggen för enkel inloggning i Intune måste vara unika. Du kan inte upprepa en domän i valfri SSO-profil, även om du använder olika typer av SSO-tillägg.
-  - URL: erna måste börja med http://eller https://.
+  - Alla URL:er i Intune-apptilläggsprofilerna för enkel inloggning måste vara unika. Du kan inte upprepa en domän i vilken SSO-apptilläggsprofil som helst, även om du använder olika typer av SSO-tillägg.
+  - URL:erna måste inledas med http://eller https://.
 
-- **Ytterligare konfiguration** (omdirigering och autentiseringsuppgift): ange ytterligare tilläggs information som ska skickas till SSO-appens tillägg:
+- **Ytterligare konfiguration** (omdirigering och autentiseringsuppgifter): Ange ytterligare tilläggsspecifika data som ska skickas till SSO-apptillägget:
   - **Nyckel**: Ange namnet på det objekt som du vill lägga till, t. ex. `user name`.
-  - **Typ**: ange typ av data. Alternativen är:
+  - **Typ**: Ange datatyp. Alternativen är:
 
     - Sträng
-    - Boolean: Ange `True` eller `False`i **konfiguration svärdet**.
-    - Heltal: Ange ett tal i **konfiguration svärdet**.
+    - Boolean: Ange `True` eller `False` i **Konfigurationsvärde**.
+    - Heltal: Ange ett tal i **Konfigurationsvärde**.
     
-  - **Värde**: ange data.
+  - **Värde**: Ange data.
   
-  - **Lägg till**: Välj om du vill lägga till dina konfigurations nycklar.
+  - **Lägg till**: Välj om du vill lägga till dina konfigurationsnycklar.
 
-- **Användning av nyckel ringar** (endast Kerberos): Välj **blockera** för att förhindra att lösen ord sparas och lagras i nyckel ringen. **Inte konfigurerad** (standard) tillåter att lösen ord sparas och lagras i nyckel ringen.  
-- **Ansikts-ID, Touch-ID eller lösen ord** (endast Kerberos): **Kräv** att användarna anger sitt ansikts-ID, Touch ID eller Apple-lösenord för att logga in på de domäner som du har lagt till. **Inte konfigurerad** (standard) kräver inte att användare använder biometrik eller lösen ord för att logga in.
-- **Standard domän** (endast Kerberos): Välj **Aktivera** för att ange det **sfär** värde som du angav som standard sfär. **Inte konfigurerad** (standard) anger inte en standard sfär.
+- **Använda nyckelringar** (endast Kerberos): Förhindra att lösenord sparas och lagras i nyckelringen genom att välja **Blockera**. **Inte konfigurerad** (standard) tillåter att lösenord sparas och lagras i nyckelringen.  
+- **Ansiktsigenkänning-ID, Touch-ID eller lösenord** (endast Kerberos): Med **Kräv** måste användarna ange sitt Face ID, Touch ID eller Apple-lösenord för att kunna logga in på de domäner som du har lagt till. **Inte konfigurerad** (standard) kräver inte att användare använder biometrik eller lösenord för att logga in.
+- **Standarddomän** (endast Kerberos): Välj **Aktivera** om du vill ange det **Sfär**-värde som du angav som standardsfär. **Inte konfigurerad** (standard) anger inte någon standardsfär.
 
   > [!TIP]
-  > - **Aktivera** den här inställningen om du konfigurerar flera Kerberos SSO app-tillägg i din organisation.
-  > - **Aktivera** den här inställningen om du använder flera sfärer. Den anger det **sfär** värde som du angav som standard sfär.
-  > - Lämna det **inte konfigurerat** (standard) om du bara har en sfär.
+  > - **Aktivera** den här inställningen om du konfigurerar flera Kerberos SSO-ap-tillägg i din organisation.
+  > - **Aktivera** den här inställningen om du använder flera sfärer. Den anger det **Sfär**-värde som du angav som standardsfär.
+  > - Om du bara har en sfär så låt inställningen vara **Inte konfigurerad** (standard).
 
-- **Identifiera** automatiskt (endast Kerberos): när värdet är **blockerat**använder KERBEROS-tillägget inte LDAP och DNS för att fastställa Active Directory plats namn. **Inte konfigurerad** (standard) tillåter att tillägget automatiskt hittar Active Directoryens plats namn.
-- **Lösen ords ändringar** (endast Kerberos): **blockera** förhindrar att användare ändrar lösen ord som de använder för att logga in på de domäner som du har angett. **Inte konfigurerad** (standard) tillåter lösen ords ändringar.  
-- **Lösenordssynkronisering** (endast Kerberos): Välj **Aktivera** för att synkronisera dina användares lokala lösen ord till Azure AD. **Inte konfigurerad** (standard) inaktiverar synkronisering av lösen ord till Azure AD. Använd den här inställningen som ett alternativ eller en säkerhets kopia till SSO. Den här inställningen fungerar inte om användarna är inloggade med ett Apple Mobile-konto.
-- **Windows Server Active Directory lösen ords komplexitet** (endast Kerberos): Välj **Kräv** för att tvinga användar lösen ord att uppfylla Active Directory lösen ords komplexitets krav. Mer information finns i [lösen ordet måste uppfylla komplexitets kraven](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) . **Inte konfigurerad** (standard) kräver inte att användare uppfyller Active Directory lösen ords krav.
-- **Minsta längd på lösen ord** (endast Kerberos): Ange det minsta antalet tecken som kan vara en användares lösen ord. **Inte konfigurerad** (standard) framtvingar inte användarens minsta längd på lösen ord.
-- **Återanvändnings gräns för lösen ord** (endast Kerberos): Ange antalet nya lösen ord, från 1-24, som måste användas tills ett tidigare lösen ord kan återanvändas på domänen. **Inte konfigurerad** (standard) upprätthåller inte en gräns för lösen ords åter användning.
-- **Lägsta ålder för lösen ord** (endast Kerberos): Ange antalet dagar som ett lösen ord måste användas på domänen innan användaren kan ändra det. **Inte konfigurerad** (standard) upprätthåller inte en minsta ålder på lösen ord innan de kan ändras.
-- **Meddelande om förfallo datum för lösen ord** (endast Kerberos): Ange antalet dagar innan ett lösen ord upphör att gälla som användare får ett meddelande om att lösen ordet upphör att gälla. **Inte konfigurerad** (standard) använder `15` dagar.
-- **Lösenordets giltighetstid** (endast Kerberos): Ange antalet dagar innan lösenordet måste ändras. **Inte konfigurerat** (standard) innebär att användar lösen ord aldrig upphör att gälla.
-- **URL för lösen ords ändring** (endast Kerberos): Ange URL: en som startar när användaren initierar en ändring av Kerberos-lösenordet.
-- **Huvud namn** (endast Kerberos): Ange användar namnet för Kerberos-huvudobjektet. Du behöver inte inkludera sfär namnet. I `user@contoso.com`är `user` till exempel huvud namnet och `contoso.com` är sfär namnet.
+- **Identifiera automatiskt** (endast Kerberos): När värdet ställts in på **Blockera** så använder Kerberos-tillägget inte LDAP eller DNS automatiskt för att fastställa Active Directory-platsens namn. **Inte konfigurerad** (standard) tillåter att tillägget automatiskt hittar Active Directory-platsens namn.
+- **Ändringar av lösenord** (endast Kerberos): **Blockera** förhindrar att användana ändrar de lösenord som de använder för att logga in på de domäner som du har angett. **Inte konfigurerad** (standard) tillåter att lösenord ändras.  
+- **Lösenordssynkronisering** (endast Kerberos): Välj **Aktivera** om du vill synkronisera dina användares lokala lösenord med Azure AD. **Inte konfigurerad** (standard) inaktiverar synkronisering av lösenord med Azure AD. Använd den här inställningen som alternativ till eller säkerhetskopia för SSO. Den här inställningen fungerar inte om användarna är inloggade med ett Apple-mobilkonto.
+- **Windows Server Active Directory-lösenordskomplexitet** (endast Kerberos): Välj **Kräv** om du vill framtvinga att användarlösenorden uppfyller kraven på Active Directory-lösenordkomplexitet. Mer information finns i [Lösenord måste uppfylla komplexitetskraven](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) . **Inte konfigurerad** (standard) kräver inte att användarna uppfyller Active Directory-lösenordskraven.
+- **Minsta lösenordslängd**: Ange det minsta antal tecken som användarens lösenord måste innehålla. **Inte konfigurerad** (standard) framtvingar inte någon minsta längd för användarens lösenord.
+- **Gräns för återanvändning av lösenord** (endast Kerberos): Ange det antal nya lösenord, från 1 till 24, som måste användas innan ett tidigare lösenord kan återanvändas på domänen. **Inte konfigurerad** (standard) framtivingar inte någon gräns för återanvändning av lösenord.
+- **Lägsta ålder för lösenord** (endast Kerberos): Ange det antal dagar som ett lösenord måste användas på domänen innan användaren kan ändra det. **Inte konfigurerad** (standard) framtvingar inte någon lägsta ålder på lösenord innan de kan ändras.
+- **Meddelande om förfallodatum för lösenord** (endast Kerberos): Ange hur många dagar innan ett lösenord upphör att gälla som användaren får ett meddelande om detta. **Inte konfigurerad** (standard) använder `15` dagar.
+- **Lösenordets giltighetstid** (endast Kerberos): Ange antalet dagar innan lösenordet måste ändras. **Inte konfigurerat** (standard) innebär att användarlösenorden aldrig upphör att gälla.
+- **URL för ändring av lösenord** (endast Kerberos): Ange den URL som startar när användaren initierar en ändring av Kerberos-lösenordet.
+- **Huvudkontonamn** (endast Kerberos): Ange användarnamnet för Kerberos-huvudkontot. Du behöver inte inkludera sfärnamnet. I `user@contoso.com` är t.ex. `user` huvudkontots namn och `contoso.com` är sfärens namn.
 
   > [!TIP]
-  > - Du kan också använda variabler i huvud namnet genom att ange klammerparenteser `{{ }}`. Om du till exempel vill visa användar namnet anger du `Username: {{username}}`. 
-  > - Var dock försiktig med variabel ersättning eftersom variablerna inte verifieras i användar gränssnittet och är Skift läges känsliga. Se till att ange rätt information.
+  > - Du kan också använda variabler i huvudkontots namn genom inom klammerparenteser `{{ }}`. Om du t.ex. vill visa användarnamnet anger du `Username: {{username}}`. 
+  > - Var dock försiktig med variabel ersättning eftersom variablerna inte verifieras i användargränssnittet och är skiftlägeskänsliga. Se till att du anger rätt information.
   
-- **Active Directory platskod** (endast Kerberos): Ange namnet på den Active Directory plats som Kerberos-tillägget ska använda. Du kanske inte behöver ändra det här värdet eftersom Kerberos-tillägget automatiskt kan hitta Active Directory platskod.
-- **Cache-namn** (endast Kerberos): Ange GSS-namnet (Generic Security Services) för Kerberos-cachen. Du behöver förmodligen inte ange det här värdet.  
-- **Meddelande krav för lösen ord** (endast Kerberos): Ange en text version av organisationens lösen ords krav som visas för användarna. Meddelandet visas om du inte behöver Active Directory krav på lösen ords komplexitet eller inte anger en minsta längd på lösen ord.  
-- **Programpaket-ID: n** (endast Kerberos): **Lägg till** de ID: n för appen som ska använda enkel inloggning på dina enheter. De här apparna beviljas åtkomst till biljett beviljande biljetten i Kerberos, autentiserings biljetten och autentisera användare till tjänster som de har behörighet att komma åt.
-- **Domän sfär mappning** (endast Kerberos): **Lägg till** DNS-suffixet för domänen som ska mappas till din sfär. Använd den här inställningen när DNS-namnen på värdarna inte matchar sfär namnet. Du behöver förmodligen inte skapa den här anpassade domän-till-sfär-mappningen.
-- **PKINIT-certifikat** (endast Kerberos): **Välj** kryptering för offentlig nyckel för inledande autentisering (PKINIT) som kan användas för Kerberos-autentisering. Du kan välja mellan [PKCS](../protect/certficates-pfx-configure.md) -eller [SCEP](../protect/certificates-scep-configure.md) -certifikat som du har lagt till i Intune. Mer information om certifikat finns [i använda certifikat för autentisering i Microsoft Intune](../protect/certificates-configure.md).
+- **Active Directory-platskod** (endast Kerberos): Ange namnet på den Active Directory-plats som Kerberos-tillägget ska använda. Du kanske inte behöver ändra det här värdet eftersom Kerberos-tillägget kan hitta Active Directory-platskoden automatiskt.
+- **Cachenamn** (endast Kerberos): Ange GSS-namnet (Generic Security Services) för Kerberos-cachen. Du behöver förmodligen inte ange det här värdet.  
+- **Meddelande om lösenordskrav** (endast Kerberos): Ange en textversion av organisationens lösenordskrav som ska visas för användarna. Meddelandet visas om du inte har några krav på Active Directory-lösenordskomplexitet eller på minsta längd för lösenord.  
+- **Programpakets-ID:n** (endast Kerberos): **Lägg till** de appsamlings-ID:n som ska använda enkel inloggning på dina enheter. De här apparna beviljas åtkomst till en Kerberos Ticket Granting-biljett, autentiseringsbiljetten och autentiserar användarna till de tjänster för vilka de har åtkomstbehörighet.
+- **Domänsfärsmappning** (endast Kerberos): **Lägg till** DNS-suffixet för den domän som ska mappas till din sfär. Använd den här inställningen när värdarnas DNS-namn inte matchar sfärnamnet. Du behöver förmodligen inte skapa den här anpassade domän-till-sfär-mappningen.
+- **PKINIT-certifikat** (endast Kerberos): **Välj** den kryptering för offentlig nyckel för inledande autentisering (PKINIT) som kan användas för Kerberos-autentisering. Du kan välja mellan [PKCS](../protect/certficates-pfx-configure.md)- eller [SCEP](../protect/certificates-scep-configure.md) -certifikat som du har lagt till i Intune. Mer information om certifikat finns i [Använda certifikat för autentisering i Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="associated-domains"></a>Tillhörande domäner
 
 Med Intune kan du:
 
-- Lägg till många app-to-Domain-associationer.
+- Lägg till många app-till-domän-associationer.
 - Associera många domäner med samma app.
 
 Den här funktionen gäller för:
 
 - macOS 10.15 och senare
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: alla registrerings typer
+### <a name="settings-apply-to-all-enrollment-types"></a>Inställningarna gäller för: Alla registreringstyper
 
-- **App-ID**: Ange appens ID för den app som ska associeras med en webbplats. App-ID: t innehåller Team-ID: t och ett paket-ID: `TeamID.BundleID`.
+- **App-ID**: Ange app-ID:t för den app som ska associeras med en webbplats. App-ID:t innehåller team-ID:t och ett bunt-ID: `TeamID.BundleID`.
 
-  Team-ID: t är en sträng med 10 tecken (bokstäver och siffror) som genereras av Apple för dina Apps-utvecklare, till exempel `ABCDE12345`. [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c) (öppna Apples webbplats) innehåller mer information.
+  Team-ID:t är en sträng med 10 tecken (bokstäver och siffror) som genereras av Apple för dina apputvecklare, t.ex. `ABCDE12345`. [Leta upp ditt team-ID](https://help.apple.com/developer-account/#/dev55c3c710c) (öppnar Apples webbplats) innehåller mer information.
 
-  Bunt-ID: t identifierar appen unikt och är vanligt vis formaterad i omvänd domän namns notation. Till exempel är paket-ID: t för Finder `com.apple.finder`. Om du vill hitta paket-ID: t använder du Apple script i Terminal:
+  Bunt-ID:t identifierar appen unikt och är vanligtvis formaterat i omvänd domännamnsnotation. Bunt-ID:t för Finder är t.ex. `com.apple.finder`. Om du vill hitta bunt-ID:t, så använd AppleScript i Terminal:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domän**: Ange den webbplats domän som ska associeras med en app. Domänen innehåller en tjänst typ och ett fullständigt kvalificerat värdnamn, t. ex. `webcredentials:www.contoso.com`.
+- **Domän**: Ange den webbplatsdomän som ska associeras med en app. Domänen innehåller en tjänsttyp och ett fullständigt kvalificerat värdnamn, t. ex. `webcredentials:www.contoso.com`.
 
-  Du kan matcha alla under domäner i en associerad domän genom att ange `*.` (en asterisk med jokertecken och en punkt) innan domänen börjar. Perioden måste anges. Exakta domäner har högre prioritet än domäner med jokertecken. Därför matchas mönster från överordnade domäner *om* en matchning inte finns i den fullständigt kvalificerade under domänen.
+  Du kan matcha alla underdomäner i en associerad domän genom att ange `*.` (en asterisk som jokertecken och en punkt) framför domänens början. Du måste ange perioden. Exakta domäner har högre prioritet än domäner med jokertecken. Därför matchas mönster från överordnade domäner *om* någon matchning inte finns i den fullständigt kvalificerade underdomänen.
 
-  Tjänst typen kan vara:
+  Tjänsttypen kan vara:
 
   - **authsrv**: Tillägg för enkel inloggning
-  - **AppLink**: Universal Link
-  - **webcredentials**: lösen ord Autofyll
+  - **applink**: Universell länk
+  - **webcredentials**: Autofyll av lösenord
 
 - **Lägg till**: Välj om du vill lägga till dina appar och associerade domäner.
 
 > [!TIP]
-> Du kan felsöka på din macOS-enhet genom att öppna **system inställningar** > **profiler**. Bekräfta att profilen du skapade är i listan enhets profiler. Om den finns med i listan, se till att **konfigurationen för tillhör ande domäner** finns i profilen och att den innehåller rätt app-ID och domäner.
+> Du kan felsöka på din macOS-enhet genom att öppna **Systeminställningar** > **Profiler**. Bekräfta att profilen du skapade finns i enhetens profillista. Om den finns med i listan, såse till att **Associerad domänkonfiguration** finns i profilen och att den innehåller rätt app-ID och domäner.
 
 ## <a name="next-steps"></a>Nästa steg
 
 [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Du kan också konfigurera enhets funktioner på [iOS](ios-device-features-settings.md).
+Du kan också konfigurera enhetsfunktioner på [iOS/iPadOS](ios-device-features-settings.md).

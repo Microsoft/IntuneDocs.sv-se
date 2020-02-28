@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61b703837598ddbe2c0c44874928b4444466c811
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: f3b32268d0b04dee84a737b9a1c768bc4fab7202
+ms.sourcegitcommit: 3964e6697b4d43e2c69a15e97c8d16f8c838645b
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886776"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77556507"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Felsöka BitLocker-principer i Microsoft Intune
 
@@ -39,7 +39,9 @@ Med Microsoft Intune har du följande metoder för att hantera BitLocker på Win
 
 - **Säkerhetsbaslinjer** - [Säkerhetsbaslinjer](security-baselines.md) är kända grupper av inställningar och standardvärden som rekommenderas av relevanta säkerhetsteam som hjälp att skydda Windows-enheter. Olika baslinjekällor, som *MDM-säkerhetsbaslinje* eller *Microsoft Defender Avancerat skydd-baslinje* kan hantera samma inställningar samt olika inställningar för var och en. De kan också hantera samma inställningar som du hanterar med enhetskonfigurationsprinciper. 
 
-Förutom Intune är det möjligt att BitLocker-inställningar hanteras på andra sätt, som grupprincip, eller anges manuellt av en enhetsanvändare.
+Förutom Intune, för maskinvara som är kompatibel med modernt vänteläge och HSTI, när du använder någon av dessa funktioner aktiveras BitLocker-diskkryptering automatiskt när användaren ansluter en enhet till Azure AD. Azure AD tillhandahåller en portal där återställningsnycklar också säkerhetskopieras så att användarna kan hämta sin egen återställningsnyckel för självbetjäning, om det behövs.
+
+Det är också möjligt att BitLocker-inställningar hanteras på andra sätt, som grupprincip, eller anges manuellt av en enhetsanvändare.
 
 Oavsett hur inställningarna tillämpas på en enhet kan BitLocker-principer använda [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) för att konfigurera kryptering på enheten. BitLocker CSP är inbyggt i Windows och när Intune distribuerar en BitLocker-princip till en tilldelad enhet är det BitLocker CSP på enheten som skriver lämpliga värden till Windows-registret så att inställningarna från principen träder i kraft.
 
@@ -103,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Granska enhetens registernyckelkonfiguration
 
-När BitLocker-principen har distribuerats till en enhet kan du visa följande registernyckel på enheten där du kan granska konfigurationen av BitLocker-inställningarna: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Här är ett exempel:
+När BitLocker-principen har distribuerats till en enhet kan du visa följande registernyckel på enheten där du kan granska konfigurationen av BitLocker-inställningarna:  *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Här är ett exempel:
 
 ![BitLocker-registernyckel](./media/troubleshooting-bitlocker-policies/registry.png)
 
@@ -164,6 +166,15 @@ Du bör nu ha en god förståelse för hur du kontrollerar att BitLocker-princip
 
   2. **BitLocker stöds inte på all maskinvara**.
      Även om du har rätt version av Windows är det möjligt att den underliggande enhetsmaskinvaran inte uppfyller kraven för BitLocker-kryptering. Du hittar [systemkraven för BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) i Windows-dokumentationen, men det viktigaste du ska kontrollera är att enheten har ett kompatibelt TPM-chip (1.2 eller senare) och en TCG-kompatibel (Trusted Computing Group) BIOS- eller UEFI-programvara.
+     
+**BitLocker-kryptering utförs inte tyst** – du har konfigurerat en princip för Endpoint Protection med inställningen "Varning för annan diskkryptering" inställd på blockera och krypteringsguiden visas fortfarande:
+
+- **Bekräfta att Windows-versionen stöder tyst kryptering** Detta kräver minst version 1803. Om användaren inte är administratör på enheten än krävs en lägsta version på 1809. Dessutom har 1809 stöd för enheter som inte stöder modernt vänteläge
+
+**En BitLocker-krypterad enhet visas som ej kompatibel med Intunes efterlevnadsprinciper** – problemet uppstår när BitLocker-krypteringen inte är klar. BitLocker-kryptering kan ta lång tid baserat på faktorer som diskstorlek, antal filer och BitLocker-inställningar. När krypteringen är klar visas enheten som Kompatibel. Enheter kan också vara temporärt inkompatibla direkt efter en nyligen genomförd installation av Windows-uppdateringar.
+
+**Enheter krypteras med en 128-bitars algoritm när principen är unik för 256-bitar** – som standard krypterar Windows 10 en enhet med XTS-AES 128-bitars kryptering. I den här handboken beskrivs [hur du ställer in 256-bitars kryptering för BitLocker under autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+
 
 **Exempel på undersökning**
 

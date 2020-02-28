@@ -1,7 +1,7 @@
 ---
-title: Intune-inställningar för iOS Klassrum-appen
+title: Intune-inställningar för iOS-/iPadOS-appen Classroom
 titleSuffix: Microsoft Intune
-description: Läs om vilka Intune-inställningar du kan använda för att styra inställningarna för Classroom-appen på iOS-enheter.
+description: Läs om vilka Intune-inställningar du kan använda för att styra inställningarna för Classroom-appen på iOS-/iPadOS-enheter.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6814b4d98b8512ce95119b05cc299964e486ac64
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 74b9e6818de2853ae22a1fa1bb580b32075dcf19
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784229"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514429"
 ---
-# <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
+# <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Så här konfigurerar du inställningar för iOS-/iPadOS-appen Classroom för Intune
 
 > [!NOTE]
-> Intune stöder för närvarande inte konfiguration av klass rums appen. Den här artikeln gäller endast för användare med befintliga iOS-utbildningsprofiler i Intune.  
+> Intune stöder för närvarande inte konfiguration av appen Classroom. Den här artikeln gäller endast för användare med befintliga iOS-/iPadOS-utbildningsprofiler i Intune.  
 
 ## <a name="introduction"></a>Introduktion
 [Klassrum](https://itunes.apple.com/app/id1085319084) är en app som hjälper lärare att styra undervisningen och kontrollera elevenheterna i klassrummet. Appen möjliggör t.ex. för lärare att:
@@ -39,7 +39,7 @@ ms.locfileid: "74784229"
 - Navigera elevers iPad-enheter till ett bokmärke eller ett kapitel i en bok
 - Visa skärmen från en elevs iPad på en Apple TV
 
-Om du vill konfigurera klassrum på din enhet behöver du skapa och konfigurera en Intune iOS-enhetsprofil för utbildning.
+Om du vill konfigurera klassrum på din enhet behöver du skapa och konfigurera en Intune iOS-/iPadOS-enhetsprofil för utbildning.
 
 ## <a name="before-you-start"></a>Innan du börjar
 
@@ -47,9 +47,9 @@ Tänk på följande innan du börjar konfigurera inställningarna:
 
 - Både lärarens och elevernas iPad-enheter måste registreras i Intune.
 - Kontrollera att du har installerat appen [Apple Klassrum](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) på lärarens enhet. Du kan antingen installera appen manuellt eller använda [Intune-apphantering](../apps/app-management.md).
-- Du måste konfigurera certifikat till att autentisera anslutningar mellan enheter för lärare och studenter (se steg 2, skapa och tilldela en iOS Education-profil i Intune).
+- Du måste konfigurera certifikat till att autentisera anslutningar mellan enheter för lärare och studenter (se steg 2, skapa och tilldela en iOS/iPadOS Education-profil i Intune).
 - Lärarens och elevernas iPad-enheter måste finnas i samma Wi-Fi-nätverk och även ha Bluetooth aktiverat.
-- Appen Klassrum körs på övervakade iPad-enheter som kör iOS 9.3 eller senare.
+- Appen Classroom körs på övervakade iOS-/iPadOS-enheter som kör iOS 9.3 eller senare.
 - I den här versionen stöder Intune hantering av ett 1:1-scenario, där varje elev har sin egen iPad.
 
 
@@ -72,15 +72,15 @@ Du kan importera information till SDS på något av följande sätt:
 - [Läs mer om Microsofts synkronisering av skolinformation](https://sds.microsoft.com/)
 - [Läs mer om licensiering i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
-## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Steg 2 – Skapa och tilldela en iOS-utbildningsprofil i Intune
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Steg 2 – Skapa och tilldela en iOS-/iPadOS-utbildningsprofil i Intune
 
 ### <a name="configure-general-settings"></a>Konfigurera allmänna inställningar
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
-5. I profilfönstret väljer du **Skapa profil**.
-6. Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen i fönstret **Skapa profil**.
+5. I fönstret Profiler väljer du **Skapa profil**.
+6. Ange **Namn** och **Beskrivning** för iOS-/iPadOS-utbildningsprofilen i fönstret **Skapa profil**.
 7. Välj **iOS** i listrutan **Plattform**.
 8. Välj **Utbildning** i listrutan **Profiltyp**.
 9. Välj **Inställningar** > **Konfigurera**.

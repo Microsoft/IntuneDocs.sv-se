@@ -1,12 +1,12 @@
 ---
-title: Samlings-ID:n för iOS för inbyggda appar i Microsoft Intune – Azure | Microsoft Docs
+title: Samlings-ID:n för iOS/iPadOS för inbyggda appar i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Visa en lista över samlings-ID:n för inbyggda iOS-appar. Med dessa samlings-ID:n kan du explicit tillåta appar i profiler och principer för enhetskonfiguration i Microsoft Intune.
+description: Visa en lista över samlings-ID:n för inbyggda iOS och iPadOS-appar. Med dessa samlings-ID:n kan du explicit tillåta appar i profiler och principer för enhetskonfiguration i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e151481b090e1e666bfdb2759015adde6f1d66a9
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
-ms.translationtype: MTE75
+ms.openlocfilehash: 10c6ea8e3afd7bb1f5a583c0088c72fc155cb0f9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691854"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513307"
 ---
-# <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Samlings-ID:n för inbyggda iOS-appar som du kan använda i Intune
+# <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Samlings-ID:n för inbyggda iOS- och iPadOS-appar som du kan använda i Intune
 
-När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyggda apparna i iOS-enheter. I den här artikeln visas samlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar. Se Apples lista över [iOS paket-ID:n](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (öppnar Apples webbplats).
+När du konfigurerar funktioner i iOS/iPadOS-enheter kan du också lägga till de inbyggda apparna i iOS/iPadOS-enheter. I den här artikeln visas samlings-ID:n för några vanliga inbyggda iOS/iPadOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar. Se Apples lista över [iOS/iPadOS-paket-ID:n](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (öppnar Apples webbplats).
 
 ## <a name="bundle-ids"></a>Samlings-ID:n
 
@@ -36,7 +36,7 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.mobilecal         | Kalender     | Apple     |
 | com.apple.camera            | Kamera       | Apple     |
 | com.apple.mobiletimer       | Klocka        | Apple     |
-| com. Apple. clipss             | Klipp        | Apple     |
+| com.apple.clips             | Klipp        | Apple     |
 | com.apple.compass           | Kompass      | Apple     |
 | com.apple.MobileAddressBook | Kontakter     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
@@ -55,7 +55,7 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | E-post         | Apple     |
 | com.apple.Maps              | Kartor         | Apple     |
-| com. Apple. mått           | Åtgärd      | Apple     |
+| com.apple.measure           | Åtgärd      | Apple     |
 | com.apple.MobileSMS         | Meddelanden     | Apple     |
 | com.apple.Music             | Musik        | Apple     |
 | com.apple.news              | Nyheter         | Apple     |
@@ -69,7 +69,7 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.reminders         | Påminnelser    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Inställningar     | Apple     |
-| com. Apple.-genvägar         | Genvägar    | Apple     |
+| com.apple.shortcuts         | Genvägar    | Apple     |
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Aktier       | Apple     |
 | com.apple.tips              | Tips         | Apple     |
@@ -78,8 +78,8 @@ När du konfigurerar funktioner i iOS-enheter kan du också lägga till de inbyg
 | com.apple.VoiceMemos        | VoiceMemos   | Apple     |
 | com.apple.Passbook          | Plånbok       | Apple     |
 | com.apple.Bridge            | Titta på        | Apple     |
-| com.apple.weather           | Väder      | Apple     |      
+| com.apple.weather           | Väder      | Apple     |
 
 ## <a name="next-steps"></a>Nästa steg
 
-Med dessa samlings-ID:n kan du konfigurera [enhetsfunktioner](ios-device-features-settings.md) och [tillåta eller begränsa vissa inställningar](device-restrictions-ios.md) på iOS-enheter.
+Med dessa bunt-ID:n kan du konfigurera [enhetsfunktioner](ios-device-features-settings.md) och [tillåta eller begränsa vissa inställningar](device-restrictions-ios.md) på iOS/iPadOS-enheter.

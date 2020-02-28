@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4f4cd53af06bf6ec47ed14976526116d963690
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7520e5883a89d6cd040be670aedc8436cc40fadb
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502376"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515194"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Förhindra obehörig åtkomst till företagsdata med Microsoft Intune
 
@@ -50,5 +50,5 @@ Du kan dela information om [hur och när man ska skydda dokument och e-postmedde
 
 Som en del av nästa steg kan du lära dig mer om andra sätt att öka skyddet av företagets data, inklusive: 
 
-* Läs om hur du använder [Azure Information Protection på iOS- och Android-enheter](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
+* Läs om hur du kan använda [Azure Information Protection på iOS/iPadOS- och Android-enheter](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
 * För Windows Phone och Mac-datorer kan du lära dig om [delningsapplikationen för Microsoft Rights Management](https://technet.microsoft.com/dn451248).

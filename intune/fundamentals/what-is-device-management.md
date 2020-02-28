@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 3a15bf0bd8ed0a46f330b159e45d0a5d5a4c7059
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058533"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510392"
 ---
 # <a name="device-management-overview"></a>Översikt över enhetshantering
 
@@ -33,7 +33,7 @@ Med hjälp av en enhetshanteringsprovider kan organisationen se till att endast 
 
 Svaret är [Microsoft Intune](what-is-intune.md). Intune erbjuder hantering av mobilenheter (MDM) och hantering av mobilprogram (MAM). Vissa viktiga uppgifter för alla MDM- och MAM-lösningar är att:
 
-- Stödja flera olika mobila miljöer och hantera iOS-, Android-, Windows- och macOS-enheter på ett säkert sätt.
+- Stödja flera olika mobila miljöer och hantera iOS-/iPadOS-, Android-, Windows- och macOS-enheter på ett säkert sätt.
 - Säkerställa att enheter och program är kompatibla med organisationens säkerhetskrav.
 - Skapa principer som hjälper organisationen att skydda data på företagsägda och personliga enheter.
 - Använda en enda enhetlig mobil lösning för att implementera dessa principer och hjälpa till med att hantera enheter, appar, användare och grupper.
@@ -47,7 +47,7 @@ Många organisationer, t.ex. Microsoft, använder Intune för att skydda egna da
 
 Det är vanligt att personer har flera enheter som använder olika plattformar. En medarbetare kan t.ex. använda Surface Pro i arbetet och en Android-mobilenhet privat. Och det är vanligt att en person har åtkomst till företaget resurser, t.ex. Microsoft Outlook och SharePoint, från dessa olika enheter.
 
-Med Intune kan du hantera flera enheter per person och de olika plattformar som körs på varje enhet, t.ex. iOS, macOS, Android och Windows. Intune håller principer och inställningar åtskilda på olika enhetsplattformar. Det gör det enkelt att hantera och visa enheter som hör till en viss plattform.
+Med Intune kan du hantera flera enheter per person och de olika plattformar som körs på varje enhet, t.ex. iOS/iPadOS, macOS, Android och Windows. Intune håller principer och inställningar åtskilda på olika enhetsplattformar. Det gör det enkelt att hantera och visa enheter som hör till en viss plattform.
 
 **[Vanliga scenarier](common-scenarios.md)** är en fantastisk resurs med vilken du kan se hur Intune ger svar på vanliga frågor när du arbetar med mobila enheter. Du hittar scenarier om:  
 
@@ -59,11 +59,11 @@ Mer information om Intune finns i [Vad är Intune](what-is-intune.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrering med tjänster för att säkra och skydda
 
-En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhet och skydd. Intune gör ett bra jobb med att genomföra den här uppgiften genom integration med andra tjänster. Till exempel:
+En viktig uppgift i en enhetshanteringslösning är att tillhandahålla säkerhet och skydd. Intune gör ett bra jobb med att genomföra den här uppgiften genom integration med andra tjänster. Exempel:
 
 - **Microsoft 365** är en viktig komponent när det gäller att förenkla vanliga IT-uppgifter. I Microsoft 365 Administrationscenter skapar du användare och hanterar grupper. Du får även åtkomst till andra tjänster, till exempel Intune och Azure AD.
 
-  Skapa till exempel en grupp för iOS-enheter i Microsoft 365. Använd sedan Intune för att push-överföra principer till den iOS-enhetsgrupp som fokuserar på iOS-funktioner, t.ex. åtkomst till App Store, med hjälp av AirDrop, säkerhetskopiering till iCloud, användning av hjälp av Apples webbfilter och mycket mer.
+  Skapa till exempel en grupp för iOS-/iPadOS-enheter i Microsoft 365. Använd sedan Intune för att push-överföra principer till den iOS-/iPadOS-enhetsgrupp som fokuserar på iOS-/iPadOS-funktioner, t.ex. åtkomst till App Store, med hjälp av AirDrop, säkerhetskopiering till iCloud, användning av hjälp av Apples webbfilter och mycket mer.
 
 - **Windows Defender** innehåller många säkerhetsfunktioner som skyddar Windows 10-enheter. Om du t.ex. använder Intune och Windows Defender tillsammans kan du:
 
@@ -86,7 +86,7 @@ När du har konfigurerat Intune kan välja att enbart arbeta i Azure Portal, ell
 
 I [administrationscentret för Microsoft Endpoint-enhetshantering](https://go.microsoft.com/fwlink/?linkid=2109431) kan du hantera och utföra alla åtgärder för dina mobilenheter. Arbetsytan innehåller de tjänster som används för hantering av enheter, t.ex. Intune och Azure Active Directory, och även för hantering av klientappar.
 
-I administrations centret för enhets hantering kan du:
+I administrationscentret för enhetshantering kan du:
 
 - [Registrera enheter](../enrollment/device-enrollment.md)
 - [Ange enhetsefterlevnad](../protect/device-compliance-get-started.md)
@@ -97,11 +97,11 @@ I administrations centret för enhets hantering kan du:
 - [Hantera roller](role-based-access-control.md)  
 - Hantera programuppdateringar
   - [Hantera Windows 10-uppdateringar](../protect/windows-update-for-business-configure.md)  
-  - [Hantera iOS-uppdateringar](../protect/software-updates-ios.md)  
+  - [Hantera iOS-/iPadOS-uppdateringar](../protect/software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Hantera användare](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Hantera grupper och medlemmar](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Felsök](help-desk-operators.md)
+- [Felsöka](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Nästa steg
 

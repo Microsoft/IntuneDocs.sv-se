@@ -1,11 +1,11 @@
 ---
-title: Konfigurera e-postinställningarna för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se en lista över alla e-postinställningar du kan konfigurera och lägga till för iOS-enheter i Microsoft Intune, till exempel Exchange-servrar, och hämta attribut från Azure Active Directory. Du kan även aktivera SSL, autentisera användare med certifikat eller användarnamn/lösenord och synkronisera e-post på iOS-enheter med hjälp enhetskonfigurationsprofiler i Microsoft Intune.
+title: Konfigurera e-postinställningarna för iOS/iPadOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Se en lista över alla e-postinställningar du kan konfigurera och lägga till för iOS- och iPadOS-enheter i Microsoft Intune, t.ex. Exchange-servrar, och hämta attribut från Azure Active Directory. Du kan även aktivera SSL, autentisera användare med certifikat eller användarnamn/lösenord och synkronisera e-post på iOS/iPadOS-enheter med hjälp enhetskonfigurationsprofiler i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,48 +15,48 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73de0ac94ff02e43fe73ca6357f6008ba71e3b93
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0ea06c50b1da237d4a822e80a8085b3b51913cec
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390823"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512814"
 ---
-# <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Lägga till e-postinställningar för iOS-enheter i Microsoft Intune
+# <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Lägga till e-postinställningar för iOS- och iPadOS-enheter i Microsoft Intune
 
 I Microsoft Intune kan du skapa och konfigurera att e-posten ansluts till en e-postserver, välja hur användare autentiseras, använda S/MIME för kryptering med mera.
 
-Den här artikeln listar och beskriver alla e-postinställningar tillgängliga för enheter som kör iOS. Du kan skapa en enhetskonfigurationsprofil att skicka eller distribuera dessa e-postinställningar till dina iOS-enheter.
+Den här artikeln listar och beskriver alla e-postinställningar tillgängliga för enheter som kör iOS/iPadOS. Du kan skapa en enhetskonfigurationsprofil för att skicka eller distribuera dessa e-postinställningar till dina iOS/iPadOS-enheter.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
 [Skapa en enhetskonfigurationsprofil](../email-settings-configure.md).
 
 > [!NOTE]
-> De här inställningarna är tillgängliga för alla registrerings typer. Mer information om registrerings typerna finns i [iOS-registrering](../ios-enroll.md).
+> De här inställningarna är tillgängliga för alla registreringstyper. Mer information om de olika registreringstyperna finns i [iOS/iPadOS-registrering](../ios-enroll.md).
 
 ## <a name="exchange-activesync-account-settings"></a>Inställningar för Exchange ActiveSync-konto
 
-- **E-postserver**: Ange värdnamnet för din Exchange-server.
+- **E-postserver**: Ange värddatornamnet för din Exchange-server.
 - **Kontonamn**: Ange visningsnamnet för e-postkontot. Namnet visas för användare på deras enheter.
-- **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
-  - **UPN (User Principal Name)** : Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
-  - **Primär SMTP-adress**: Hämtar namnet i e-postadressformat, till exempel `user1@contoso.com`
-  - **sAM-kontonamn**: Kräver domänen, till exempel `domain\user1`. Ange även:  
+- **Användarnamnattribut från AAD**: Namnet är det attribut som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
+  - **User Principal Name**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
+  - **Primär SMTP-adress**: Hämtar namnet i e-postadressformat, som `user1@contoso.com`
+  - **SAM-kontonamn**: Kräver domänen, till exempel `domain\user1`. Ange även:  
     - **Källa för användardomännamn**: Välj **AAD** (Azure Active Directory) eller **Anpassat**.
       - **AAD**: Hämta attribut från Azure AD. Ange även:
-        - **Attribut för användardomännamn från AAD**: Välj att hämta attributet för **Fullständigt domännamn** (`contoso.com`) eller **NetBIOS-namn** (`contoso`) för användaren.
+        - **Attribut för användardomännamn från AAD**: Välj att hämta attributet **Fullständigt domännamn** (`contoso.com`) eller **NetBIOS-namn** (`contoso`) för användaren.
 
-      - **Anpassad**: Hämta attributen från ett eget domän namn. Ange även:
-        - **Anpassat domännamn att använda**: Ange ett värde som Intune använder för domännamnet, till exempel `contoso.com` eller `contoso`.
+      - **Anpassad**: Hämta attributen från ett anpassat domännamn. Ange även:
+        - **Anpassat domännamn som används**: Ange ett värde som Intune använder för domännamnet, exempelvis `contoso.com` eller `contoso`.
 
-- **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska skapas. Alternativen är:
-  - **Användarhuvudnamn**: Använd det fullständiga huvudnamnet som e-postadress, till exempel `user1@contoso.com` eller `user1`.
-  - **Primär SMTP-adress**: Använd den primära SMTP-adressen för att logga in på Exchange, till exempel `user1@contoso.com`.
-- **Autentiseringsmetod**: Välj hur användare ska autentiseras mot e-postservern. Alternativen är:
-  - **Certifikat**: Väljer du en SCEP-klient eller PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen. Det här alternativet ger användarna en säkrare och sömlös upplevelse.
-  - **Användar namn och lösen ord**: användarna uppmanas att ange sitt användar namn och lösen ord.
-  - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+- **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska genereras. Alternativen är:
+  - **Användarens huvudnamn (UPN)** : Använder det fullständiga huvudnamnet som e-postadress, t.ex. `user1@contoso.com` eller `user1`.
+  - **Primär SMTP-adress**: Använder den primära SMTP-adressen för att logga in, t.ex. `user1@contoso.com`, för att logga in på Exchange.
+- **Autentiseringsmetod**: Välj hur användarna ska autentiseras mot e-postservern. Alternativen är:
+  - **Certifikat**: Välj en SCEP-klient eller PKCS-certifikatsprofil som du har skapat tidigare för att autentisera Exchange-anslutningen. Det här alternativet ger användarna en säkrare och smidigare upplevelse.
+  - **Användarnamn och lösenord**: Användarna uppmanas att ange användarnamn och lösenord.
+  - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Mer information finns i [Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
 
   >[!NOTE]
   > Azure-multifaktorautentisering stöds inte.
@@ -82,26 +82,26 @@ Den här artikeln listar och beskriver alla e-postinställningar tillgängliga f
 ## <a name="exchange-activesync-profile-configuration"></a>Konfiguration av Exchange ActiveSync-profil
 
 > [!IMPORTANT]
-> Genom att konfigurera de här inställningarna distribueras en ny profil till enheten, även när en befintlig e-postprofil uppdateras för att inkludera dessa inställningar. Användarna uppmanas att ange sitt lösen ord för Exchange ActiveSync-kontot. De här inställningarna börjar gälla när lösen ordet anges.
+> Genom att konfigurera de här inställningarna distribuerar du en ny profil till enheten, även när en befintlig e-postprofil uppdateras för att inkludera de här inställningarna. Användarna uppmanas att ange sitt lösenord till sitt  Exchange ActiveSync-konto. De här inställningarna börjar gälla när lösenordet har angetts.
 
-- **Exchange-data som ska synkroniseras**: när du använder Exchange ActiveSync väljer du de Exchange-tjänster som synkroniseras på enheten: kalender, kontakter, påminnelser, anteckningar och e-post. Alternativen är:
-  - **Alla data** (standard): synkronisering har Aktiver ATS för alla tjänster.
-  - **Endast e-post**: synkronisering har endast Aktiver ATS för e-post. Synkronisering har inaktiverats för de andra tjänsterna.
-  - **Endast kalender**: synkronisering har Aktiver ATS enbart för kalender. Synkronisering har inaktiverats för de andra tjänsterna.
-  - **Endast kalender och kontakter**: synkronisering är bara aktive rad för kalender och kontakter. Synkronisering har inaktiverats för de andra tjänsterna.
-  - **Endast kontakter**: synkronisering är endast aktive rad för kontakter. Synkronisering har inaktiverats för de andra tjänsterna.
+- **Exchange-data att synkronisera**: När du använder Exchange ActiveSync, så välj de Exchange-tjänster som ska synkroniseras på enheten: kalender, kontakter, påminnelser, anteckningar och e-post. Alternativen är:
+  - **Alla data** (standard): Synkronisering har aktiverats för alla tjänster.
+  - **Endast e-post**: Synkronisering har endast aktiverats för e-post. Synkronisering har inaktiverats för övriga tjänster.
+  - **Endast kalender**: Synkronisering har aktiverats enbart för kalendern. Synkronisering har inaktiverats för övriga tjänster.
+  - **Endast kalender och kontakter**: Synkronisering har bara aktiverats för kalender och kontakter. Synkronisering har inaktiverats för övriga tjänster.
+  - **Endast kontakter**: Synkronisering har bara aktiverats för kontakter. Synkronisering har inaktiverats för övriga tjänster.
 
   Den här funktionen gäller för:  
   - iOS 13.0 och senare
   - iPadOS 13.0 och senare
 
-- **Tillåt användare att ändra synkroniseringsinställningar**: Välj om användarna ska kunna ändra Exchange ActiveSync-inställningarna för Exchange-tjänsterna på enheten: kalender, kontakter, påminnelser, anteckningar och e-post. Alternativen är:
+- **Tillåt användare att ändra synkroniseringsinställningar**: Välj om användarna ska kunna ändra Exchange ActiveSync-inställningarna för enhetens Exchange-tjänster: kalender, kontakter, påminnelser, anteckningar och e-post. Alternativen är:
 
-  - **Ja** (standard): användare kan ändra synkroniseringen för alla tjänster. Om du väljer **Ja** kan du göra ändringar i *alla* tjänster.
-  - **Nej**: användarna kan inte ändra synkroniseringsinställningar för alla tjänster. Om du väljer **inga** blockeras ändringar av *alla* tjänster.
+  - **Ja** (standard): Användare kan ändra synkroniseringen för alla tjänster. Om du väljer **Ja** tillåter du ändringar i *alla* tjänster.
+  - **Nej**: Användarna kan inte ändra synkroniseringsinställningarna för alla tjänster. Om du väljer **Nej** så blockeras ändringar av *alla* tjänster.
 
   > [!TIP]
-  > Om du konfigurerade **Exchange-data till Sync** -inställningen för att endast synkronisera vissa tjänster rekommenderar vi att du väljer **Nej** för den här inställningen. Om du väljer **Nej** förhindras användare från att ändra Exchange-tjänsten som synkroniseras.
+  > Om du konfigurerade inställningen **Exchange-data att synkronisera** till att endast synkronisera vissa tjänster, så rekommenderar vi att du väljer **Nej** för den här inställningen. Om du väljer **Nej** förhindras användare från att ändra den Exchange-tjänst som synkroniseras.
 
   Den här funktionen gäller för:  
   - iOS 13.0 och senare
@@ -109,28 +109,28 @@ Den här artikeln listar och beskriver alla e-postinställningar tillgängliga f
 
 ## <a name="exchange-activesync-email-settings"></a>E-postinställningar för Exchange ActiveSync
 
-- **S/MIME**: s/MIME använder e-postcertifikat som ger extra säkerhet för din e-postkommunikation genom signering, kryptering och dekryptering. När du använder S/MIME med ett e-postmeddelande bekräftar du avsändarens äkthet och meddelandets integritet och sekretess.
+- **S/MIME**: S/MIME använder e-postcertifikat som innebär extra säkerhet för dina e-postmeddelanden genom signering, kryptering och dekryptering. När du använder S/MIME med ett e-postmeddelande bekräftar du avsändarens äkthet och meddelandets integritet och sekretess.
 
   Alternativen är:
 
-  - **Inaktivera S/MIME** (standard): Använd inte ett S/MIME-e-postcertifikat för att signera, kryptera eller dekryptera e-post.
-  - **Aktivera S/MIME**: Tillåter användare att signera och/eller kryptera e-post i den inbyggda e-postappen i iOS. Ange även:
+  - **Inaktivera S/MIME** (standard): Använd inte S/MIME-e-postcertifikat för att signera, kryptera eller dekryptera e-post.
+  - **Aktivera S/MIME**: Tillåter användare att signera och/eller kryptera e-post i den inbyggda e-postappen i iOS/iPadOS. Ange även:
 
-    - **S/MIME-signering aktive rad**: **inaktivera** (standard) tillåter inte att användare signerar meddelandet digitalt. **Aktivera** tillåter användare att digitalt signera utgående e-post för det angivna kontot. Med signering kan användare som får meddelanden vara säkra på att meddelandet kommer från den specifika avsändaren och inte från någon som låtsas vara avsändaren.
-      - **Tillåt att användaren ändrar inställningen**: **Aktivera** tillåter användare att ändra signerings alternativen. **Inaktivera** (standard) förhindrar att användare ändrar signeringen och tvingar användarna att använda den signering som du har konfigurerat.
-      - **Typ av signerings certifikat**: dina alternativ:
-        - **Inte konfigurerad**: Intune uppdaterar eller ändrar inte den här inställningen.
-        - **Ingen**: som administratör tvingar du inte ett speciellt certifikat. Välj det här alternativet så att användarna kan välja sina egna certifikat.
-        - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+    - **S/MIME-signering aktiverad**: **Inaktivera** (standard) tillåter inte att användare signerar meddelanden digitalt. **Aktivera** tillåter användare att digitalt signera utgående e-post för det angivna kontot. Med signering kan användare som får meddelanden vara säkra på att meddelandet kommer från den specifika avsändaren och inte från någon som låtsas vara avsändaren.
+      - **Tillåt användaren att ändra inställningen**: **Aktivera** tillåter användare att ändra signeringsalternativen. **Inaktivera** (standard) förhindrar användarna från att ändra signeringen och tvingar dem att använda den signering som du har konfigurerat.
+      - **Typ av signeringscertifikat**: Dina alternativ:
+        - **Inte konfigurerad**: Intune varken uppdaterar eller ändrar den här inställningen.
+        - **Ingen**: Som administratör framtvingar du inte något speciellt certifikat. Välj det här alternativet om du vill att användarna ska kunna välja sina egna certifikat.
+        - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Mer information finns i [Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
         - **Certifikat**: Välj ett befintligt PKCS- eller SCEP-certifikatprofil som används för signering av e-postmeddelanden.
-      - **Tillåt att användaren ändrar inställningen**: **Aktivera** tillåter användare att ändra signerings certifikatet. **Inaktivera** (standard) förhindrar användare att ändra signeringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat.
+      - **Tillåt att användaren ändrar inställningen**: **Aktivera** tillåter användare att ändra signeringscertifikatet. **Inaktivera** (standard) förhindrar användare att ändra signeringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat.
 
         Den här funktionen gäller för:  
         - iOS 12 och senare
         - iPadOS 12 och senare
 
     - **Kryptera som standard**: **Aktivera** krypterar alla meddelanden som standardbeteende. **Inaktivera** (standard) krypterar inte alla meddelanden som standardbeteende.
-      - **Tillåt användare att ändra inställning**: **Aktivera** tillåter användare att ändra standardkrypteringsbeteendet. **Inaktivera** förhindrar användarna att ändra standardbeteendet för kryptering och tvingar dem att använda den kryptering du har konfigurerat.
+      - **Tillåt användare att ändra inställning**: **Aktivera** tillåter användarna att ändra standardbeteendet för kryptering. **Inaktivera** förhindrar användarna att ändra standardbeteendet för kryptering och tvingar dem att använda den kryptering du har konfigurerat.
 
         Den här funktionen gäller för:  
         - iOS 12 och senare
@@ -142,24 +142,24 @@ Den här artikeln listar och beskriver alla e-postinställningar tillgängliga f
 
       **Inaktivera** (standard) förhindrar att alternativet för kryptering per meddelande visas. Om inställningen **Kryptera som standard** också är aktiverad och kryptering per meddelande aktiveras kan användarna välja bort kryptering per meddelande.
 
-      - **Krypterings certifikat typ**: dina alternativ:
-        - **Inte konfigurerad**: Intune uppdaterar eller ändrar inte den här inställningen.
-        - **Ingen**: som administratör tvingar du inte ett speciellt certifikat. Välj det här alternativet så att användarna kan välja sina egna certifikat.
-        - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Mer information finns [i Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
+      - **Typ av krypteringscertifikat**: Dina alternativ:
+        - **Inte konfigurerad**: Intune varken uppdaterar eller ändrar den här inställningen.
+        - **Ingen**: Som administratör framtvingar du inte något speciellt certifikat. Välj det här alternativet om du vill att användarna ska kunna välja sina egna certifikat.
+        - **Härledd autentiseringsuppgift**: Använd ett certifikat som härletts från en användares smartkort. Mer information finns i [Använd härledda autentiseringsuppgifter i Microsoft Intune](../protect/derived-credentials.md).
         - **Certifikat**: Välj ett befintligt PKCS- eller SCEP-certifikatprofil som används för signering av e-postmeddelanden.
-      - **Tillåt användare att ändra inställning**: **Aktivera** tillåter användare att ändra krypteringscertifikatet. **Inaktivera** (standard) förhindrar användare att ändra krypteringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat.
+      - **Tillåt användare att ändra inställning**: **Aktivera** tillåter användarna att ändra krypteringscertifikatet. **Inaktivera** (standard) förhindrar användare att ändra krypteringscertifikatet och tvingar användare att använda certifikatet du har konfigurerat.
 
         Den här funktionen gäller för:  
         - iOS 12 och senare
         - iPadOS 12 och senare
 
-- **Mängd e-post att synkroniseras**: Välj antalet dagars e-post som du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
-- **Tillåt att meddelanden flyttas till andra e-postkonton**: **Aktivera** (standard) ger användarna möjlighet att flytta e-postmeddelanden mellan olika konton som användarna har konfigurerat på sina enheter.
-- **Tillåt e-postmeddelande från program från tredje part**: **Aktivera** (standard) tillåter användare att välja den här profilen som standardkonto för att skicka e-post. Det tillåter att tredjepartsprogram öppnar e-post i den interna e-postappen, t.ex. bifoga filer till e-post.
-- **Synkronisera senast använda e-postadresser**: **Aktivera** (standard) låter användarna synkronisera listan över e-postadresser som nyligen har använts på enheten med servern.
+- **Antal e-postmeddelanden som ska synkroniseras**: Välj det antal dagar med e-post du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
+- **Tillåt att meddelanden flyttas till andra e-postkonton**: **Aktivera** (standard) tillåter användarna att flytta e-postmeddelanden mellan olika konton som de har konfigurerat på sina enheter.
+- **Tillåt att e-post skickas från tredjepartsprogram**: **Aktivera** (standard) tillåter användarna att välja den här profilen som standardkonto för att skicka e-post. Det tillåter att tredjepartsprogram öppnar e-post i den interna e-postappen, t.ex. bifoga filer till e-post.
+- **Synkronisera nyligen använda e-postadresser**: **Aktivera** (standard) tillåter användarna att synkronisera listan över e-postadresser som har använts nyligen på enheten med servern.
 
 ## <a name="next-steps"></a>Nästa steg
 
 Profilen har skapats, men den gör inte något än. [Tilldela profilen](../device-profile-assign.md) och [övervaka dess status](../device-profile-monitor.md).
 
-Konfigurera e-postinställningar på [Android](../email-settings-android.md)-, [Android Enterprise](../email-settings-android-enterprise.md)-, [Windows 10](email-settings-windows-10.md)-och [Windows Phone 8,1](email-settings-windows-phone-8-1.md) -enheter.
+Konfigurera e-postinställningar på [Android](../email-settings-android.md)-, [Android Enterprise](../email-settings-android-enterprise.md)-, [Windows 10](email-settings-windows-10.md)- och [Windows Phone 8.1](email-settings-windows-phone-8-1.md)-enheter.

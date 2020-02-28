@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c24c120b033a4db0162e985ef185932dd931eda
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 492c90bc1d032b32ebc3a4b8465163085674f245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506918"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511454"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Använda anpassade inställningar för macOS-enheter i Microsoft Intune
 
@@ -32,9 +32,9 @@ När du använder macOS-enheter kan du hämta anpassade inställningar till Intu
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Apple Profile Manager](https://support.apple.com/profile-manager)
 
-Du kan använda dessa verktyg för att exportera inställningar till en konfigurationsprofil. I Intune importerar du den här filen och tilldelar sedan profilen till dina macOS-användare och macOS-enheter. Inställningarna distribueras när de har tilldelats. De skapar också en bas linje eller standard för macOS i din organisation.
+Du kan använda dessa verktyg för att exportera inställningar till en konfigurationsprofil. I Intune importerar du den här filen och tilldelar sedan profilen till dina macOS-användare och macOS-enheter. Inställningarna distribueras så snarat de har tilldelats. De skapar också en baslinje eller standard för macOS i din organisation.
 
-Den här artikeln innehåller rikt linjer om hur du använder Apple Configurator och Apple Profile Manager och beskriver de egenskaper som du kan konfigurera.
+Den här artikeln innehåller riktlinjer om hur man använder Apple Configurator och Apple Profile Manager och beskriver de egenskaper som du kan konfigurera.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -57,12 +57,12 @@ Den här artikeln innehåller rikt linjer om hur du använder Apple Configurator
 ## <a name="custom-configuration-profile-settings"></a>Anpassade inställningar för konfigurationsprofil
 
 - **Anpassat namn på konfigurationsprofil**: Ange ett namn för principen. Det här namnet visas på enheten och i Intune-statusen.
-- **Konfigurationsprofilfil**: Bläddra till konfigurationsprofilen som du skapade med Apple Configurator eller Apple Profile Manager. Filen som du importerade visas i området **Filinnehåll**.
+- **Konfigurationsprofilsfil**: Bläddra till den konfigurationsprofil som du skapade med Apple Configurator eller Apple Profile Manager. Filen som du importerade visas i området **Filinnehåll**.
 
-  Du kan också lägga till tokens till dina `.mobileconfig`-filer. Enhets-token används för att lägga till enhetsspecifika information. Ange till exempel `{{serialnumber}}` om du vill visa serienumret. På enheten visas texten på ungefär samma sätt som `123456789ABC`, som är unik för varje enhet. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceid` eller andra enhetsspecifika värden.
+  Du kan också lägga till enhetstokens till dina `.mobileconfig`-filer. Enhetstoken används för att lägga till enhetsspecifik information. Ange till exempel `{{serialnumber}}` om du vill visa serienumret. På enheten visas texten på ungefär samma sätt som `123456789ABC`, som är unikt för varje enhet. När du anger variabler ska du använda klammerparenteser `{{ }}`. [Token för appkonfiguration](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) innehåller en lista över variabler som kan användas. Du kan också använda `deviceid` eller andra enhetsspecifika värden.
 
   > [!NOTE]
-  > Variablerna är inte validerade i användar gränssnittet och är Skift läges känsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Se till att ange rätt information.
+  > Variablerna är inte validerade i användargränssnittet och är skiftlägeskänsliga. Därför kan du se profiler sparade med felaktiga indata. Om du till exempel anger `{{DeviceID}}` istället för `{{deviceid}}` visas litteralsträngen istället för enhetens unika ID. Se till att du anger rätt information.
 
 Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas i profillistan.
 
@@ -70,4 +70,4 @@ Välj **OK** > **Skapa** för att spara ändringarna. Profilen skapas och visas 
 
 Profilen har skapats, men den gör inte något än. Nu ska du [tilldela profilen](device-profile-assign.md).
 
-Se hur du [skapar profilen på iOS-enheter](../custom-settings-ios.md).
+Se hur du kan [skapa profilen på iOS/iPadOS-enheter](../custom-settings-ios.md).

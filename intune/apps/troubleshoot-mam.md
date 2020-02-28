@@ -17,16 +17,16 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49bf59805476ebbcce3148738e40bfd11e4744eb
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
-ms.translationtype: MTE75
+ms.openlocfilehash: f5d5d62e1e05c8e29de1b5dba91647f2bfc3b186
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839316"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513341"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Felsök hantering av mobilprogram
 
-Det här avsnittet innehåller lösningar på vanliga problem som har uppstått när du använder Intune-appskydd (kallas även MAM eller hantering av mobil program).
+Det här avsnittet innehåller lösningar på vanliga problem som kan uppstå när du använder Intune-appskydd (även kallat MAM eller hantering av mobilprogram).
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](../fundamentals/get-support.md), som beskriver hur du kan få hjälp på fler sätt.
 
@@ -36,13 +36,13 @@ Detta är vanliga problem som IT-administratörer kan uppleva när Intune-princi
 
 | Problem | Beskrivning | Lösning |
 | -- | -- | -- |
-| Principen tillämpas inte på Skype för Business | Appskyddsprincip utan enhetsregistrering som är utförd i Azure Portal tillämpas inte i Skype för företag-appen på iOS- och Android-enheter. | Skype för företag måste konfigureras för modern autentisering.  Följ instruktionerna i [Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) (Aktivera din klient för modern autentisering) för att konfigurera modern autentisering för Skype. |
+| Principen tillämpas inte på Skype för Business | Appskyddsprincip utan enhetsregistrering som är utförd i Azure Portal tillämpas inte i Skype för företag-appen på iOS/iPadOS- och Android-enheter. | Skype för företag måste konfigureras för modern autentisering.  Följ instruktionerna i [Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) (Aktivera din klient för modern autentisering) för att konfigurera modern autentisering för Skype. |
 | Principen för Office-appen tillämpas inte | Appskyddsprinciper tillämpas inte på någon [Office-app som stöds](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) för någon användare. | Kontrollera att användaren är licensierad för Intune och de Office-appar som är avsedda för en distribuerad appskyddsprincip. Det kan ta upp till 8 timmar innan en skyddsprincip för nyligen distribuerade appar tillämpas. |
 | Administratören kan inte konfigurera en appskyddsprincip i Azure Portal | IT-administratörsanvändaren kan inte konfigurera appskyddsprinciper i Azure Portal. | Följande användarroller har åtkomst till Azure Portal: <ul><li>Global administratör, som du kan ställa in i [Microsoft 365 Administrationscenter](https://admin.microsoft.com/)</li><li>Ägare, som du kan ställa in i [Azure-portalen](https://portal.azure.com/).</li><li>Deltagare, som du kan ställa in i [Azure-portalen](https://portal.azure.com/).</li></ul> Se [Rollbaserad administrationskontroll (RBAC) med Microsoft Intune](../fundamentals/role-based-access-control.md) för hjälp med att konfigurera dessa roller.|
 |Användarkonton som saknas i principrapporter om appskydd | Administratörens konsolrapporter visar inte användarkonton som en appskyddsprincip nyligen har distribuerats till. | Om en appskyddsprincip nyligen riktats till en användare, kan det ta upp till 24 timmar innan användaren visas i rapporter som en sådan användare. |
 | Principändringar fungerar inte | Ändringar och uppdateringar till appskyddsprinciper kan ta upp till åtta timmar innan de börjar gälla. | I vissa fall kan slutanvändaren logga ut från appen och logga in igen för att tvinga fram synkronisering med tjänsten. |
-| Appskyddsprincip fungerar inte med DEP | Appskyddsprincipen tillämpas inte på Apple DEP-enheter. | Kontrollera att du använder Användartillhörighet med Apples program för enhetsregistrering (DEP). Användartillhörighet krävs för alla appar som kräver användarautentisering under DEP. <br><br>Se [Registrera iOS-enheter automatiskt med Apples program för enhetsregistrering](../enrollment/device-enrollment-program-enroll-ios.md) för mer information om iOS DEP-registrering.|
-| Dataöverföringsprincip fungerar inte med iOS | Principerna **Tillåt att appen överför data till andra appar** och **Tillåt att appen tar emot data från andra appar** kan inte hantera dataöverföring i iOS. | Se [Hantera dataöverföring mellan iOS-appar i Microsoft Intune](data-transfer-between-apps-manage-ios.md). |
+| Appskyddsprincip fungerar inte med DEP | Appskyddsprincipen tillämpas inte på Apple DEP-enheter. | Kontrollera att du använder Användartillhörighet med Apples program för enhetsregistrering (DEP). Användartillhörighet krävs för alla appar som kräver användarautentisering under DEP. <br><br>Se [Registrera iOS/iPadOS-enheter automatiskt med Apples program för enhetsregistrering](../enrollment/device-enrollment-program-enroll-ios.md) för mer information om iOS/iPadOS DEP-registrering.|
+| Dataöverföringsprincip fungerar inte med iOS/iPadOS | Principerna **Tillåt att appen överför data till andra appar** och **Tillåt att appen tar emot data från andra appar** kan inte hantera dataöverföring i iOS/iPadOS. | Se [Hantera dataöverföring mellan iOS/iPadOS-appar i Microsoft Intune](data-transfer-between-apps-manage-ios.md). |
 
 ## <a name="common-end-user-issues"></a>Vanliga problem för slutanvändare
 
@@ -58,15 +58,15 @@ Vanliga problem för slutanvändare är uppdelade i följande kategorier:
 
 Plattform | Scenario | Förklaring |
 ---| --- | --- |
-iOS | Slutanvändaren kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på **Endast hanterade appar** eller **Inga appar.** Kan inte detta läcka data? | Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför **krypterar Intune "företagets" data innan den delas utanför appen**. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
-iOS | Varför uppmanas slutanvändaren **att installera Microsoft Authenticator-appen** | Detta krävs när app-baserad villkorlig åtkomst används, se [Kräv godkänd klient app](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | Slutanvändaren kan använda iOS/iPadOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på **Endast hanterade appar** eller **Inga appar.** Kan inte detta läcka data? | Intunes appskyddsprincip kan inte styra iOS/iPadOS-resurstillägget utan att hantera enheten. Därför **krypterar Intune "företagets" data innan den delas utanför appen**. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
+iOS | Varför uppmanas slutanvändaren **att installera Microsoft Authenticator-appen** | Detta krävs när appbaserad villkorsstyrd åtkomststyrd används. Mer information finns i [Kräv godkänd klientapp](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Varför **måste slutanvändaren installera företagsportalappen** även om jag använder MAM-appskydd utan att registrera enheter?  | På Android är mycket av appskyddsfunktionaliteten inbyggd i företagsportalappen. **Enhetsregistrering krävs inte, även om företagsportalappen alltid krävs**. För appskydd utan registrering behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
-iOS/Android | App Protection-princip tillämpas inte på utkast-e-post i Outlook-appen | Eftersom Outlook stöder både företags-och personliga kontext, tillämpar den inte MAM på utkastet.
-iOS/Android | App Protection-principen tillämpas inte på nya dokument i WXP (Word, Excel, PowerPoint) | Eftersom WXP stöder både företags-och personliga kontext, tvingar den inte MAM på nya dokument förrän de har sparats på en identifierad företags plats som OneDrive.
-iOS/Android | Appar som inte tillåter Spara som lokal lagring när principen är aktive rad | Appens beteende för den här inställningen styrs av appens utvecklare.
-Android | Android har fler begränsningar än iOS i vad "interna" appar kan komma åt MAM-skyddat innehåll | Android är en öppen plattform och den "interna" app-associationen kan ändras av slutanvändaren till potentiellt osäkra appar. Tillämpa [undantag för data överförings principer](app-protection-policies-exception.md) för att undanta vissa appar.
-Android | Azure Information Protection (AIP) kan spara som PDF när Spara som förhindras | AIP följer MAM-principen för "inaktivera utskrift" när Spara som PDF används.
-iOS | Det går inte att öppna PDF-bilagor i Outlook-appen med "åtgärd tillåts inte | Detta kan inträffa om användaren inte har autentiserats för Acrobat Reader för Intune eller har använt tumavtryck för att autentisera till organisationen. Öppna Acrobat Reader i förväg och autentisera med autentiseringsuppgifter för UPN.
+iOS/Android | Appskyddsprincipen tillämpas inte på e-postutkast i Outlook-appen | Eftersom Outlook stöder både företagskontext och personlig kontext, så tillämpas inte MAM på e-postutkast.
+iOS/Android | Appskyddsprincipen tillämpas inte på nya dokument i WXP (Word, Excel, PowerPoint) | Eftersom WXP stöder både företagskontext och personlig kontext, så påtvingas inte MAM på nya dokument förrän de har sparats på en identifierad företagsplats som OneDrive.
+iOS/Android | Appar som inte tillåter Spara som till lokal lagring när principen har aktiverats | Appbeteendet för den här inställningen styrs av apputvecklaren.
+Android | Android har fler begränsningar än iOS/iPadOS när det gäller vilka "interna" appar som har åtkomst till MAM-skyddat innehåll | Android är en öppen plattform och den "interna" appassociationen kan ändras av slutanvändaren till potentiellt osäkra appar. Undanta vissa appar genom att tillämpa [Undantag för dataöverföringsprinciper](app-protection-policies-exception.md).
+Android | Azure Information Protection (AIP) kan spara som PDF när Spara som stoppas från att användas | AIP följer MAM-principen Inaktivera utskrift när Spara som PDF används.
+iOS | Det går inte att öppna PDF-bilagor i Outlook-appen, och meddelandet ”Åtgärden tillåts inte” visas | Detta kan inträffa om användaren inte har autentiserats för Acrobat Reader för Intune eller har använt tumavtryck för att autentisera till organisationen. Öppna Acrobat Reader i förväg och autentisera med hjälp av UPN-autentiseringsuppgifter.
 
 
 ### <a name="normal-usage-dialogs"></a>Normala dialogrutor vid användning
@@ -91,7 +91,7 @@ Felmeddelande eller dialogruta | Orsak | Åtgärder |
 **Enheten är inte kompatibel**: Den här appen kan inte användas eftersom du använder en jailbrokad enhet. Kontakta IT-administratören om du behöver hjälp. | Intune har upptäckt att användaren finns på en jailbrokad enhet. | Återställ enheten till fabriksinställningarna. Följ [anvisningarna](https://support.apple.com/HT201274) från Apples supportwebbplats.
 **Internetanslutning krävs**: Du måste vara ansluten till Internet för att kunna verifiera att du får använda den här appen. | Enheten är inte ansluten till Internet. | Anslut enheten till ett WiFi- eller datanätverk.
 **Okänt fel**: Försök att starta om appen. Om problemet kvarstår kontaktar du IT-administratören för hjälp. | Ett okänt fel uppstod. | Vänta en stund och försök igen. Om felet kvarstår bör du skapa en [supportbegäran](../fundamentals/get-support.md#create-an-online-support-ticket) med Intune.
-**Försöker få åtkomst till organisationens data**: Arbets- eller skolkontot som du angav har inte åtkomst till den här appen. Du kan behöva logga in med ett annat konto. Kontakta IT-administratören om du behöver hjälp. | Intune identifierar att användaren försökte logga in med ett arbets- eller skolkonto som skiljer sig från det registrerade MAM-kontot för enheten. Endast ett arbets- eller skolkonto kan hanteras av MAM samtidigt per enhet. | Låt användaren logga in med kontot vars användarnamn är ifyllt på inloggningsskärmen. Du kan behöva [Konfigurera inställningen för användar-UPN för Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> Eller låt användaren logga in med nya arbets- eller skolkontot och ta bort det befintliga kontot som MAM registrerat.
+**Försöker få åtkomst till organisationens data**: Arbets- eller skolkontot som du angav har inte åtkomst till den här appen. Du kan behöva logga in med ett annat konto. Kontakta IT-administratören om du behöver hjälp. | Intune identifierar att användaren försökte logga in med ett arbets- eller skolkonto som skiljer sig från det registrerade MAM-kontot för enheten. Endast ett arbets- eller skolkonto kan hanteras av MAM samtidigt per enhet. | Låt användaren logga in med kontot vars användarnamn är ifyllt på inloggningsskärmen. Du kan behöva [konfigurera UPN-användarinställningen för Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> Eller låt användaren logga in med nya arbets- eller skolkontot och ta bort det befintliga kontot som MAM registrerat.
 **Problem med anslutning**: Ett oväntat anslutningsproblem inträffade. Kontrollera anslutningen och försök igen.  |  Ett oväntat fel. | Vänta en stund och försök igen. Om felet kvarstår bör du skapa en [supportbegäran](../fundamentals/get-support.md#create-an-online-support-ticket) med Intune.
 **Varning**: Den här appen kan inte längre användas. Kontakta IT-administratören för mer information. | Det gick inte att validera appens certifikat. | Kontrollera att appversionen är uppdaterad. <br><br> Installera om appen.
 **Fel**: Appen har stött på ett problem och måste stängas. Kontakta IT-administratören om problemet kvarstår. | Det gick inte att läsa MAM-appens PIN-kod från Apple iOS-nyckelringen. | Starta om enheten. Kontrollera att appversionen är uppdaterad. <br><br> Installera om appen.
@@ -112,7 +112,7 @@ Dialogruta/felmeddelande | Orsak | Åtgärder |
 ## <a name="next-steps"></a>Nästa steg
 
 - [Verifiera din konfiguration för hantering av mobilprogram](app-protection-policies-validate.md)
-- Lär dig hur du använder loggfiler för att felsöka Intune-appskydd policy, se [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
+- Lär dig att felsöka Intune-appskyddsprincipen med hjälp av loggfiler. Se [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
 - Ytterligare information om felsökning av Intune information finns i [Använd felsökningsportalen för att hjälpa företagets användare](../fundamentals/help-desk-operators.md). 
 - Lär dig om kända problem i Microsoft Intune. Mer information finns i [Kända problem i Microsoft Intune](../known-issues.md).
 - Behöver du mer hjälp? Se [Ta reda på hur du kan få support för Microsoft Intune](../fundamentals/get-support.md).

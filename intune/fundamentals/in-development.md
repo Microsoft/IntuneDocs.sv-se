@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafe9d3036a727d79de88eda050399138da55675
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
-ms.translationtype: MTE75
+ms.openlocfilehash: 7113552e09a7c7fa145a452e56575bfaf5297c3e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977758"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514580"
 ---
 # <a name="in-development-for-microsoft-intune---february-2020"></a>Under utveckling för Microsoft Intune – februari 2020
 
@@ -65,8 +65,8 @@ Vi uppdaterar Företagsportalappen på Windows-enheter för att visa popup-medde
 Företagsportalappen visar ytterligare statusmeddelanden för appinstallation för slutanvändare. Följande villkor gäller för nya Win32-beroende funktioner:
 - Appen gick inte att installera. Beroenden som definierats av administratören uppfylldes inte.
 
-### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Omdirigera webbklipp till Microsoft Edge på iOS-enheter<!-- 5455276 -->
-Webbklipp, som fungerar som fästa webbappar på iOS-enheter, måste uppdateras. Nyligen distribuerade webbklipp öppnas i Microsoft Edge i stället för Intune Managed Browser om det behövs för att öppna i en skyddad webbläsare. Du måste omdirigera befintliga webbklipp för att se till att de öppnas i Microsoft Edge i stället för Managed Browser.
+### <a name="retarget-web-clips-to-microsoft-edge-on-iosipados-devices---5455276---"></a>Omdirigera webbklipp till Microsoft Edge på iOS/iPadOS-enheter<!-- 5455276 -->
+Webbklipp, som fungerar som fästa webbappar på iOS/iPadOS-enheter, måste uppdateras. Nyligen distribuerade webbklipp öppnas i Microsoft Edge i stället för Intune Managed Browser om det behövs för att öppna i en skyddad webbläsare. Du måste omdirigera befintliga webbklipp för att se till att de öppnas i Microsoft Edge i stället för Managed Browser.
 
 ### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>Förbättringar av användarupplevelsen i företagsportalen för macOS<!-- 5568987 -->
 Vi håller på att förbättra registreringsupplevelsen för macOS-enheter och företagsportalappen för Mac. Du kan förvänta dig följande:
@@ -92,22 +92,22 @@ En ny konfigurationsprofil för macOS-enheter kommer att bli tillgänglig, som k
 Gäller för:
 - macOS
 
-### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-ios-devices----1947932-idready---"></a>VPN-profiler med IKEv2 VPN-anslutningar kan använda Alltid på med iOS-enheter <!-- 1947932 idready -->
-På iOS-enheter kan du skapa en VPN-profil som använder en IKEv2-anslutning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS/iPadOS** för plattformen > **VPN** för profiltypen). I en framtida uppdatering kan du konfigurera Alltid på med IKEv2. När IKEv2 VPN-profiler har konfigurerats ansluter de automatiskt och förblir anslutna (eller återansluter snabbt) till VPN-anslutningen. Den förblir ansluten även när du flyttar mellan nätverk eller startar om enheter.
+### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices----1947932-idready---"></a>VPN-profiler med IKEv2 VPN-anslutningar kan använda Alltid på med iOS/iPadOS-enheter <!-- 1947932 idready -->
+På iOS/iPadOS-enheter kan du skapa en VPN-profil som använder en IKEv2-anslutning (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS/iPadOS** för plattformen > **VPN** för profiltypen). I en framtida uppdatering kan du konfigurera Alltid på med IKEv2. När IKEv2 VPN-profiler har konfigurerats ansluter de automatiskt och förblir anslutna (eller återansluter snabbt) till VPN-anslutningen. Den förblir ansluten även när du flyttar mellan nätverk eller startar om enheter.
 
-På iOS är Alltid på för VPN begränsat till IKEv2-profiler.
+På iOS/iPadOS är Alltid på för VPN begränsat till IKEv2-profiler.
 
-Om du vill se de aktuella IKEv2-inställningarna som du kan konfigurera går du till [Lägg till VPN-inställningar på iOS-enheter i Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
+Om du vill se de aktuella IKEv2-inställningarna som du kan konfigurera går du till [Lägg till VPN-inställningar på iOS/iPadOS-enheter i Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
 Gäller för:
 - iOS
 
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-ios-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Förbättrat användargränssnitt när du skapar konfigurationsprofiler på iOS- och macOS-enheter<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
-När du skapar en profil för iOS- eller macOS-enheter uppdateras funktionen i administrationscentret för slutpunktshantering. Den här ändringen påverkar följande enhetskonfigurationsprofiler (**Enheter** > **Konfigurationsprofiler** > **Skapa profil** > **iOS** eller **macOS** för plattformen):
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Förbättrat användargränssnitt när du skapar konfigurationsprofiler på iOS/iPadOS- och macOS-enheter<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
+När du skapar en profil för iOS/iPadOS- eller macOS-enheter uppdateras funktionen i administrationscentret för slutpunktshantering. Den här ändringen påverkar följande enhetskonfigurationsprofiler (**Enheter** > **Konfigurationsprofiler** > **Skapa profil** > **iOS** eller **macOS** för plattformen):
 
-- Anpassad: iOS, macOS
-- Enhetsfunktioner: iOS, macOS
-- Enhetsbegränsningar: iOS, macOS
+- Anpassad: iOS/iPadOS, macOS
+- Enhetsfunktioner: iOS/iPadOS, macOS
+- Enhetsbegränsningar: iOS/iPadOS, macOS
 - Slutpunktsskydd: macOS
 - Tillägg: macOS
 - Inställningsfil: macOS
@@ -182,8 +182,8 @@ Du kommer att kunna använda härledda autentiseringsuppgifter på fullständigt
 ### <a name="use-antivirus-policy-to-manage-settings-for-microsoft-defender-antivirus-and-the-windows-security-experience--6131401---"></a>Använda antivirusprincipen för att hantera inställningar för Microsoft Defender Antivirus och Windows-säkerhetsupplevelsen<!--6131401 -->
 Från noden *Slutpunktsskydd* kommer du att kunna konfigurera inställningar för **Antivirus**. När du konfigurerar en princip för Antivirus kommer du att definiera inställningar för dina Windows 10-enheter via två profiltyper:
 
-- Microsoft Defender Antivirus: hantera inställningar för molnskydd, undantag för Antivirus, reparation, alternativ för sökning och mycket annat.
-- Windows-säkerhetsupplevelsen: hantera hur användare upplever Windows-säkerhetsinställningar på sina enheter. Du kommer att kunna konfigurera vad slutanvändare kan visa i Microsoft Defender Security Center och vilka meddelanden de får. 
+- Microsoft Defender Antivirus: Hantera inställningar för molnskydd, antivirusundantag, reparation, genomsökningsalternativ och mycket annat.
+- Windows-säkerhetsfunktion: Hantera hur användare upplever Windows säkerhetsinställningar på sina enheter. Du kommer att kunna konfigurera vad slutanvändare kan visa i Microsoft Defender Security Center och vilka meddelanden de får. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Meddelanden

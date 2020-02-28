@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e88741609dc1a351d1971c907cd2e442cfd4b905
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 94ff28cf36457d2d8b20e173508b7c9894a7d5bc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72999510"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510545"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nyheter i den klassiska Intune-portalen – föregående månader
 
@@ -115,7 +115,7 @@ Vi informerar om en förändring som kommer under de kommande månaderna som kom
 
 Du hittar skärmdumpar av föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet på sidan [Nyheter i appens användargränssnitt](whats-new-app-ui.md).
 
-#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plan för ändringar: Intune ändrar Intune-partnerportalens funktion <!-- 1050016 -->
+#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Ändringsplan: Intune ändrar Intune-partnerportalens gränssnitt <!-- 1050016 -->
 
 Vi tar bort sidan Intune-Partner från manage.microsoft.com från och med tjänstuppdateringen i mitten på maj 2017.  
 
@@ -128,7 +128,7 @@ Både [Microsoft Partner Center](https://partnercenter.microsoft.com/) och [Micr
 
 Apple har tillkännagivit att de kommer att framtvinga vissa krav för Application Transport Security (ATS). ATS används för att upprätthålla strängare säkerhet på all kommunikation med appar via HTTPS. Den här ändringen påverkar Intune-kunder som använder iOS-appar i företagsportalen.
 
-Vi har gjort en version av företagsportalens app tillgänglig för iOS genom Apple TestFlight-programmet som genomdriver de nya ATS-kraven. Om du vill prova, så att du kan testa din ATS-kompatibilitet, kan du skicka ett e-post-meddelande till <a href="mailto:CompanyPortalBeta@microsoft.com?subject=Register to TestFlight ATS Company Portal app"> CompanyPortalBeta@microsoft.com </a> med ditt förnamn, efternamn, din e-postadress och företagets namn. Läs [Intunes supportblogg](https://aka.ms/compportalats) för mer information.
+Vi har gjort en version av företagsportalens app tillgänglig för iOS genom Apple TestFlight-programmet som genomdriver de nya ATS-kraven. Om du vill prova, så att du kan testa din ATS-kompatibilitet, kan du skicka ett e-post-meddelande till <a href="mailto:CompanyPortalBeta@microsoft.com?subject=Register to TestFlight ATS Company Portal app">CompanyPortalBeta@microsoft.com</a> med ditt förnamn, efternamn, din e-postadress och företagets namn. Läs [Intunes supportblogg](https://aka.ms/compportalats) för mer information.
 
 ## <a name="march-2017"></a>Mars 2017
 
@@ -149,11 +149,11 @@ Du kan konfigurera EMS-principer för Villkorsstyrd åtkomst baserat på riskbed
 
 Användargränssnittet för företagsportalappen för Android kommer att uppdateras för en mer modern känsla och bättre användarupplevelse. Viktiga uppdateringar är:
 
-- Färger: Företagsportalens flikrubriker är färgade i enligt IT-område.
+- Färger: Företagsportalens flikrubriker har en IT-definierad färganpassning.
 - Appar: På fliken **Appar** har knapparna **Aktuella appar** och **Alla appar** uppdaterats.
-- Sökning: PÅ fliken **Sökning** är **Sökknappen** är nu flytande.
-- Navigeringsappar: **Alla appar** visar en flikvy över **Aktuella**, **Alla** och **Kategorier** för att underlätta navigeringen.
-- Support: Flikarna **Mina enheter** och **Kontakta IT** uppdateras för att göra dem mer läsbara.
+- Sökning: På fliken **Appar** är knappen **Sök** nu flytande.
+- Navigera i appar: **Alla appar** visar en flikvy med **Aktuella**, **Alla** och **Kategorier** för att underlätta navigeringen.
+- Support: Flikarna **Mina enheter** och **Kontakta IT** har uppdaterats för att göra dem mer läsvänliga.
 
 Mer information om dessa ändringar finns i [UI-uppdateringar för Intunes slutanvändarappar](whats-new-app-ui.md).
 
@@ -229,8 +229,8 @@ Windows och Windows Phone-användare som försöker registrera en enhet misslyck
 Från och med mars följer företagsportalsappen för Android [riktlinjer för materialdesign](https://material.io/guidelines/material-design/introduction.html) för att skapa en modernare känsla och ett modernare utseende. Den här förbättrade användarupplevelsen innehåller:
 
 * __Färger__: Flikrubriken kan färgas enligt din anpassade färgpalett.
-* __Gränssnitt__: Knapparna Aktuella appar och Alla appar har uppdaterats på fliken. Sökknappen är nu flytande.
-* __Navigering__: Alla appar visar en flikvy över Aktuella, Alla och Kategorier för att underlätta navigeringen.
+* __Gränssnitt__: Knapparna Aktuella appar och Alla appar har uppdaterats på fliken Appar. Sökknappen är nu flytande.
+* __Navigering__: I Alla appar visas en flikvy över Aktuella, Alla och Kategorier för att underlätta navigeringen.
 * __Tjänst__: Flikarna Mina enheter och Kontakta IT har förbättrad läsbarhet.
 
 Du kan hitta före och efter-bilder på [sidan med UI-uppdateringar](whats-new-app-ui.md).
@@ -361,9 +361,9 @@ Med den nya appen kan användarna dessutom dra nytta av ytterligare plattformsfu
 > [!IMPORTANT]
 > __En uppdatering om Intune och Android for Work__ Även om du kan distribuera Android for Work-appar med åtgärden __Krävs__ kan du bara distribuera appar som __Tillgängliga__ om dina Intune-grupper har migrerats till den nya Azure AD-gruppmiljön.
 
-__Intune App SDK för Cordova-plugin har nu stöd för MAM utan registrering__ Nu kan apputvecklare använda Intune App SDK för Cordova-plugin-programmet för att aktivera MAM-funktioner utan enhetsregistrering i deras Cordova-baserade appar för Android och iOS. Intune App SDK för Cordova-plugin-programmet finns [här](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+__Intune App SDK för Cordova-plugin har nu stöd för MAM utan registrering__ Nu kan apputvecklare använda Intune App SDK för Cordova-plugin-programmet för att aktivera MAM-funktioner utan enhetsregistrering i deras Cordova-baserade appar för Android och iOS/iPadOS. Intune App SDK för Cordova-plugin-programmet finns [här](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
 
-__Intune App SDK Xamarin-komponenten har nu stöd för MAM utan registrering__ Nu kan apputvecklare använda Intune App SDK Xamarin-komponenten för att aktivera MAM-funktioner utan enhetsregistrering i deras Xamarin-baserade appar för Android och iOS. Intune App SDK Xamarin-komponenten finns [här](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+__Intune App SDK Xamarin-komponenten har nu stöd för MAM utan registrering__ Nu kan apputvecklare använda Intune App SDK Xamarin-komponenten för att aktivera MAM-funktioner utan enhetsregistrering i deras Xamarin-baserade appar för Android och iOS/iPadOS. Intune App SDK Xamarin-komponenten finns [här](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
 
 ### <a name="notices"></a>Meddelanden
 

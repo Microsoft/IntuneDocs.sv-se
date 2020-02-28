@@ -1,6 +1,6 @@
 ---
-title: Kompatibilitetsinställningar för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Visa en lista över alla inställningar som du kan använda när du ställer in kompatibilitet för iOS-enheter i Microsoft Intune. Kräv ett e-postmeddelande, kontrollera jailbrokade eller rotade enheter, ange den lägsta och högsta tillåtna operativsystemversionen, ange begränsningar för lösenord, inklusive lösenordslängd och enhetsinaktivitet, begränsa appar och mycket mer.
+title: Kompatibilitetsinställningar för iOS-/iPadOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Visa en lista över alla inställningar som du kan använda när du ställer in kompatibilitet för iOS-/iPadOS-enheter i Microsoft Intune. Kräv ett e-postmeddelande, kontrollera jailbrokade eller rotade enheter, ange den lägsta och högsta tillåtna operativsystemversionen, ange begränsningar för lösenord, inklusive lösenordslängd och enhetsinaktivitet, begränsa appar och mycket mer.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9bcfed67eda96bb4d79317bcc69d21a5f8197bc
-ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
-ms.translationtype: MTE75
+ms.openlocfilehash: 437673878335b04b76c53b13f18acac32213720a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074639"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514038"
 ---
-# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>iOS-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
+# <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>iOS-/iPadOS-inställningar för att markera enheter som kompatibla eller inkompatibla med hjälp av Intune
 
-Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på iOS-enheter i Intune. Som en del av din MDM-lösning för hantering av mobilenheter kan du använda dessa inställningar för att kräva ett e-postmeddelande, markera rotade (jailbreakade) enheter som inkompatibla, ange tillåten hotnivå, ange när lösenord ska upphöra att gälla och mycket mer.
+Den här artikeln innehåller en lista över och beskriver de olika kompatibilitetsinställningar som du kan konfigurera på iOS-/iPadOS-enheter i Intune. Som en del av din MDM-lösning för hantering av mobilenheter kan du använda dessa inställningar för att kräva ett e-postmeddelande, markera rotade (jailbreakade) enheter som inkompatibla, ange tillåten hotnivå, ange när lösenord ska upphöra att gälla och mycket mer.
 
 Den här funktionen gäller för:
 
@@ -57,7 +57,7 @@ Mer information om e-postprofiler finns i [Använda e-postprofiler med Intune f�
   - **Ej konfigurerad** (*standard*) – Ingen kompatibilitetskontroll görs för den här inställningen.
   - **Blockera** – Markera rotade (jailbreakade) enheter som inkompatibla.  
 
-- **Kräv att enheten ligger på eller under enhetens hotnivå** *(iOS 8.0 och senare)*:  
+- **Kräv att enheten ligger på eller under enhetens hotnivå** *(iOS 8.0 och senare)* :  
   Använd den här inställningen för att använda riskbedömningen som ett villkor för efterlevnad. Välj den tillåtna hotnivån:  
   - **Ej konfigurerad** (*standard*) – Ingen kompatibilitetskontroll görs för den här inställningen.
   - **Skyddad** – Det här alternativet är säkrast och innebär att enheten inte kan ha några hot. Om hot på någon nivå identifieras på enheten betraktas den som inkompatibel.
@@ -86,11 +86,11 @@ Mer information om e-postprofiler finns i [Använda e-postprofiler med Intune f�
 ### <a name="password"></a>lösenordsinställning
 
 > [!NOTE]
-> När en efterlevnads- eller konfigurationsprincip används på en iOS-enhet, uppmanas användarna att ange ett lösenord var 15:e minut. Användarna uppmanas kontinuerligt tills ett lösenord anges. När ett lösenord anges för iOS-enheten startar krypteringsprocessen automatiskt. Enheten förblir krypterad tills lösenordet inaktiveras.
+> När en efterlevnads- eller konfigurationsprincip används på en iOS-/iPadOS-enhet, uppmanas användarna att ange ett lösenord var 15:e minut. Användarna uppmanas kontinuerligt tills ett lösenord anges. När ett lösenord anges för iOS-/iPadOS-enheten startar krypteringsprocessen automatiskt. Enheten förblir krypterad tills lösenordet inaktiveras.
 
 - **Kräv ett lösenord för att låsa upp mobila enheter**:  
   - **Ej konfigurerad** (*standard*) – Ingen kompatibilitetskontroll görs för den här inställningen.  
-  - **Kräv** – Användarna måste ange ett lösenord innan de får åtkomst till sina enheter. iOS-enheter som använder lösenord krypteras.
+  - **Kräv** – Användarna måste ange ett lösenord innan de får åtkomst till sina enheter. iOS-/iPadOS-enheter som använder lösenord krypteras.
 
 - **Enkla lösenord**:  
   - **Inte konfigurerad** (*standard*) – Användare kan skapa enkla lösenord som **1234** eller **1111**.
@@ -107,16 +107,16 @@ Mer information om e-postprofiler finns i [Använda e-postprofiler med Intune f�
 
   Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
 
-- **Maximalt antal minuter från det att skärmen låses till dess att ett lösenord måste anges** *(iOS 8.0 och senare)*:  
+- **Maximalt antal minuter från det att skärmen låses till dess att ett lösenord måste anges** *(iOS 8.0 och senare)* :  
   Ange hur lång tid det ska ta efter att skärmen har låsts innan en användare måste ange ett lösenord för att få åtkomst till enheten. Alternativen är *Inte konfigurerat* (standard), *Omedelbart* och från *1 minut* till *4 timmar*.
 
 - **Maximalt antal minuter av inaktivitet innan skärmen låses**:  
   Ange tiden innan enhetens skärm låses vid inaktivitet. Alternativen är *Inte konfigurerat* (standard), *Omedelbart* och från *1 minut* till *15 minuter*.
 
-- **Lösenordets giltighetstid (dagar)**:  
+- **Lösenordets giltighetstid (dagar)** :  
   Ange antalet dagar tills lösenordet upphör att gälla och användaren måste skapa ett nytt. 
 
-- **Antalet tidigare lösenord för att förhindra återanvändning** *(iOS 8.0 och senare)*:   
+- **Antalet tidigare lösenord för att förhindra återanvändning** *(iOS 8.0 och senare)* :   
   Ange antal tidigare använda lösenord som inte får återanvändas.
 
 ### <a name="device-security"></a>Enhetssäkerhet
@@ -125,7 +125,7 @@ Mer information om e-postprofiler finns i [Använda e-postprofiler med Intune f�
   Du kan begränsa appar genom att lägga till deras samlings-ID:n i principen. Om appen är installerad på en enhet markeras enheten som inkompatibel.
 
   - **Appnamn** – Ange ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t.
-  - **Appsamlings-ID** – Ange det unika samlings-ID som tilldelats av appleverantören. Information om hur du hittar paket-ID:t finns i [Hitta paket-ID:t för en iOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (en annan Microsoft-webbplats öppnas).  
+  - **Appsamlings-ID** – Ange det unika samlings-ID som tilldelats av appleverantören. Information om hur du hittar paket-ID:t finns i [Hitta paket-ID:t för en iOS-/iPadOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (en annan Microsoft-webbplats öppnas).  
 
 ## <a name="next-steps"></a>Nästa steg
 

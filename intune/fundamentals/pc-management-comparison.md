@@ -1,7 +1,7 @@
 ---
 title: Jämför hanteringsalternativ för Windows-datorer
 titleSuffix: Microsoft Intune
-description: Registrera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) eller Apple Configurator.
+description: Registrera företagsägda iOS-/iPadOS-enheter med Apples enhetsregistreringsprogram (DEP) eller Apple Configurator.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8fd53e9d12dd38639d204e214aea03d733e584b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: cda9a549cb12ab61da67da91272e9f388d32a2ef
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059200"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514990"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter
 
@@ -35,19 +35,19 @@ Organisationer kan använda Microsoft Intune för att hantera Windows-datorer so
 |--------------|-------------------------------|-------------------------------|
 |**Operativsystem** |Windows 10, Windows 8+, Windows 7, Windows Vista | Windows 10+ |
 |**Intune Portal-support** |[Silverlight-konsolen](https://manage.microsoft.com)|[Azure Portal](https://portal.azure.com) |
-|**Villkorsstyrd åtkomst**|Inte tillgänglig|Tillgänglig <br>[Vad är Villkorsstyrd åtkomst?](../protect/conditional-access.md)|
-|**Massregistrering**|Inte tillgänglig|Tillgänglig <br>[Massregistrering för Windows-enheter](../enrollment/windows-bulk-enroll.md)|
-|**Enhetsprofiler**|Inte tillgänglig|Tillgänglig <br>[Vad är enhetsprofiler i Microsoft Intune?](../configuration/device-profiles.md)|
-|**Registrering utan agent**|Inte tillgänglig |Tillgänglig<br>[Registrera Windows-enheter](../enrollment/windows-enroll.md)|
+|**Villkorsstyrd åtkomst**|Saknas|Tillgänglig <br>[Vad är Villkorsstyrd åtkomst?](../protect/conditional-access.md)|
+|**Massregistrering**|Saknas|Tillgänglig <br>[Massregistrering för Windows-enheter](../enrollment/windows-bulk-enroll.md)|
+|**Enhetsprofiler**|Saknas|Tillgänglig <br>[Vad är enhetsprofiler i Microsoft Intune?](../configuration/device-profiles.md)|
+|**Registrering utan agent**|Saknas |Tillgänglig<br>[Registrera Windows-enheter](../enrollment/windows-enroll.md)|
 |**Hantering av programvaruuppdateringar**| Windows-uppdateringar och appuppdateringar för Microsoft<br>[Hålla Windows-datorerna uppdaterade med programvaruuppdateringar](../keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)|Microsoft Store för företag för både Windows 10- och Microsoft-appar<br> [Konfigurera inställningar för Windows Update för företag](../protect/windows-update-for-business-configure.md) |
 |**Hantering av programlicenser**|Tillgänglig <br>[Hantera licensavtal för Windows-datorprogram](../manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Microsoft Store för företag (endast .appx-appar)<br>[Hantera appar som du har köpt från Microsoft Store för företag](../apps/windows-store-for-business.md)|
 |**Inventering**|Tillgänglig <br>[Visa maskin- och programvaruinventering för Windows-datorer](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Tillgänglig <br>[Så här övervakar du appinformation](../apps/apps-monitor.md)<br>[Vad är enhetshantering](../remote-actions/device-management.md)|
-|**Princip för Windows-brandväggen**|Tillgänglig <br>[Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Tillgänglig <br>[Microsoft Defender-brandvägg](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
+|**Princip för Windows-brandväggen**|Tillgänglig <br>[Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Tillgänglig <br>[Microsoft Defender-brandväggen](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
 |**Skydd mot skadlig kod**|Slutpunktsskydd<br>[Skydda Windows-datorer med Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Microsoft Defender<br>[Aktivera Microsoft Defender](../protect/advanced-threat-protection.md)|
 |**Fjärrhjälp** |TeamViewer<br>[Begära och tillhandahålla hjälp för Windows-datorer](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Fjärradministrera Intune-enheter med TeamViewer](../remote-actions/teamviewer-support.md) |
 |**Appdistribution** | Inte tillgängligt för Microsoft Store för företag,<br>enbart .exe, .appx och multi-file .msi<br>[Lägg till program för Windows-datorer som kör Intune-klientprogramvaran](add-apps-for-windows-pcs-in-microsoft-intune.md)|Tillgängliga för Microsoft Store-appar och branschspecifika appar<br>[Så här lägger du till Windows Store-appar](../apps/store-apps-windows.md)<br>[Så här lägger du till Windows branschspecifika appar (LOB-appar)](../apps/lob-apps-windows.md)|
-|**Appskydd**|Inte tillgänglig|Tillgänglig <br>[Vad är appskyddsprinciper?](../apps/app-protection-policy.md)|
-|**Hälsoattestering**|Inte tillgänglig|Tillgänglig|
+|**Appskydd**|Saknas|Tillgänglig <br>[Vad är appskyddsprinciper?](../apps/app-protection-policy.md)|
+|**Hälsoattestering**|Saknas|Tillgänglig|
 
 
 ## <a name="advantages-of-mdm-windows-pc-management"></a>Fördelarna med MDM-hantering för Windows-datorer

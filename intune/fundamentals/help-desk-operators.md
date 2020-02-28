@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0094cdd12b2594cb60260d768daec8c5bed04c9c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 3812d19122cf4dd85edf00a6fa12d9f2b89529aa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510251"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514599"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -59,9 +59,9 @@ I felsökningsfönstret kan du välja **Välj användare** för att visa informa
 
 Du kan använda fönstret **Felsökning** för att granska användarinformation.
 
-![Fel söknings instrument panel med numrerade områden som beskrivs i följande tabell](./media/help-desk-operators/troubleshooting-dash.png)
+![Instrumentpanel för felsökning med numrerade områden, se beskrivningen i följande tabell](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Område | Namn | Beskrivning |
+| Område | Name | Beskrivning |
 | ---  | ---  | ---         |
 | 1.   | Kontostatus  | Visar status för aktuell Intune-klient som **Aktiv** eller **Inaktiv**.       |
 | 2.   | Val av användare  | Namnet på den valda användaren. Välj en ny användare genom att klicka på **Ändra användare**.       |
@@ -269,7 +269,7 @@ När du väljer en felrad visas mer information.
 
 | Fel | Information |
 |-------------|----------|
-| iOS-timeout eller iOS-fel | En timeout mellan enheten och Intune som beror på att användaren tar för lång tid på sig att slutföra registreringen. |
+| Tidsgräns eller fel i iOS/iPadOS | En timeout mellan enheten och Intune som beror på att användaren tar för lång tid på sig att slutföra registreringen. |
 | Användaren hittades inte eller är inte licensierad | Användaren saknar en licens eller har tagits bort från tjänsten. |
 | Enheten är redan registrerad | Någon har försökt registrera en enhet med hjälp av företagsportalen på en enhet som fortfarande är registrerad av en annan användare. |
 | Inte registrerad i Intune | En registrering gjordes när MDM-utfärdaren (hantering av mobilenheter) för Intune inte hade konfigurerats. |
@@ -286,14 +286,14 @@ När du väljer en felrad visas mer information.
 | Oväntad registreringsmetod för Autopilot | Enheten försökte registrera med en otillåten metod. |
 | Autopilot-enheten har tagits bort | Enheten som försökte registrera har tagits bort från Autopilot för det här kontot. |
 | Enhetstaket har nåtts | Registreringen blockerades på grund av att en administratör har konfigurerat enhetsbegränsningar. |
-| Apple-registrering | Inga iOS-enheter registrerades vid detta tillfälle eftersom ett Apple MDM-pushcertifikat i Intune saknas eller har upphört att gälla. |
+| Apple-registrering | Inga iOS/iPadOS-enheter registrerades vid detta tillfälle eftersom ett Apple MDM-pushcertifikat i Intune saknas eller har upphört att gälla. |
 | Enheten har inte förregistrerats | Enheten har inte förregistrerats som företagsägd och alla personliga registreringar blockerades av en administratör. |
 | Funktionen stöds inte | Användaren försökte antagligen registrera via en metod som inte är kompatibel med din Intune-konfiguration. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Samla in tillgängliga data från mobil enhet
 
 Använd följande resurser för att samla in enhetsdata när du felsöker problem med användarens enheter:
-- [Skicka iOS-registreringsfel till IT-administratören](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Skicka iOS/iPadOS-registreringsfel till IT-administratören](/intune-user-help/send-errors-to-your-it-admin-ios)
 - [Hjälp företagets support att åtgärda enhetsproblem med hjälp av utförlig loggning](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
 - [Skicka Android-loggar till företagets support via en USB-kabel](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 - [Skicka loggar med Android-diagnostikdata till IT-administratören via e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android)

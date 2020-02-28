@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d4517d89e3b7365834e904c815b30a362540906
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
-ms.translationtype: MTE75
+ms.openlocfilehash: 545f287e8b7ee82e2008f239171b22e01714b8c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755603"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514752"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Felsöka enhetsåtgärder i Intune
 
@@ -34,7 +34,7 @@ Microsoft Intune har många åtgärder som hjälper dig att hantera enheter. Den
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Jag klickade på åtgärden ”Inaktivera aktiveringslås” i portalen men inget hände på enheten.
 Detta är förväntat. När du har startat åtgärden Inaktivera aktiveringslås begär Intune en uppdaterad kod från Apple. Du anger koden manuellt i fältet för lösenord när enheten finns på Aktiveringslås-skärmen. Den här koden är bara giltig i 15 dagar, så se till att klicka på åtgärden och kopiera koden innan du utfärdar rensningen.
 
-### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Varför ser jag inte koden för Inaktivera aktiveringslås på bladet för maskinvaruöversikt på min iOS-enhet?
+### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>Varför ser jag inte koden för Inaktivera aktiveringslås på bladet Maskinvaruöversikt på min iOS/iPadOS-enhet?
 De mest sannolika orsakerna är:
 - Koden har upphört att gälla och rensats från tjänsten.
 - Enheten övervakas inte med enhetsbegränsningsprincipen för att tillåta Aktiveringslås.
@@ -43,7 +43,7 @@ Du kan kontrollera koden i Graph Explorer med följande fråga:
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-ios-device"></a>Varför är åtgärden Inaktivera aktiveringslås nedtonad för min iOS-enhet?
+### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-iosipados-device"></a>Varför är åtgärden Inaktivera aktiveringslås nedtonad för min iOS/iPadOS-enhet?
 De mest sannolika orsakerna är: 
 - Koden har upphört att gälla och rensats från tjänsten.
 - Enheten övervakas inte med enhetsbegränsningsprincipen för att tillåta Aktiveringslås.
@@ -90,8 +90,22 @@ Eftersom token för återställning inte har aktiverats på enheten. Så här ak
 3. Slutanvändaren måste acceptera den sekundära prompten för att tillåta återställning av lösenord.
 När de här stegen har slutförts bör du inte längre få det här svaret.
 
-### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-ios-device-when-i-issue-the-remove-passcode-action"></a>Varför uppmanas jag att ange ett nytt lösenord på min iOS-enhet när jag utfärdar åtgärden Ta bort lösenord?
+### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-iosipados-device-when-i-issue-the-remove-passcode-action"></a>Varför uppmanas jag att ange ett nytt lösenord på min iOS/iPadOS-enhet när jag utfärdar åtgärden Ta bort lösenord?
 Eftersom en av dina efterlevnadsprinciper kräver ett lösenord.
+
+
+## <a name="wipe-action"></a>Åtgärden Rensa
+
+### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Jag kan inte starta om en Windows 10-enhet efter att ha använt rensningsåtgärden
+Detta kan inträffa om du har valt **Rensa enheten och fortsätt att rensa även om enheten förlorar ström. Om du väljer det här alternativet måste du vara medveten om att det kan hindra vissa Windows 10-enheter från att starta igen.** på en Windows 10-enhet.
+
+Detta kan bero på att Windows-installationen har drabbats av en större skada som förhindrar operativsystemet från att installeras om. I sådana fall misslyckas processen och lämnar systemet i [Windows återställningsmiljö]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+
+### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Jag kan inte starta om en BitLocker-krypterad enhet efter att ha använt rensningsåtgärden
+Detta kan inträffa om du har valt **Rensa enheten och fortsätt att rensa även om enheten förlorar ström. Om du väljer det här alternativet måste du vara medveten om att det kan hindra vissa Windows 10-enheter från att starta igen.** alternativ på en BitLocker-krypterad enhet.
+
+Lös problemet genom att använda startbara medier när du ska installera om Windows 10 på enheten.
+
 
 ## <a name="next-steps"></a>Nästa steg
 

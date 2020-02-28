@@ -1,6 +1,6 @@
 ---
 title: Fel och statuskoder i Microsoft Intune – Azure | Microsoft Docs
-description: Visa en lista över fel, statuskod, beskrivningar och lösningar vid användning av MDM-hanterade enheter, få åtkomst till företagets resurser, fel på iOS-enheter och OMA-svarsfel i Microsoft Intune.
+description: Visa en lista över fel, statuskod, beskrivningar och lösningar vid användning av MDM-hanterade enheter, få åtkomst till företagets resurser, fel på iOS/iPadOS-enheter och OMA-svarsfel i Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a8ebfcad2bcf485771f26184377aeb2c4bf4e1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: bf31ce5f812603534f30b3b3aa3836ede0be6f6d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509802"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510596"
 ---
 # <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Vanliga felkoder och beskrivningar i Microsoft Intune
 
@@ -36,7 +36,7 @@ Om du behöver supporthjälp kan du läsa informationen om att [få support för
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Installation pågår||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|Väntar på innehåll||
-|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Hämtar innehåll|Möjlig orsak: Jobbstatus 30 visar att en användare misslyckades med att ladda ned en app.<br /><br />Troliga orsaker till detta kan vara:<br /><br />Enheten förlorade internetanslutning medan nedladdningen pågick.<br /><br />Certifikatet som utfärdades för enheten vid registreringen kan ha löpt ut.<br /><br />Lösningar:<br /><br />Starta företagsapparna från kontrollpanelen på enheten för att kontrollera att enhetens certifikat inte har löpt ut. Om det har det måste du omregistrera enheten.<br /><br />Kontrollera att enheten är ansluten till internet och försök att begära appen igen.|
+|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Hämtar innehåll|Trolig orsak: Jobbstatus 30 visar att en användare misslyckades med att ladda ned en app.<br /><br />Troliga orsaker till detta kan vara:<br /><br />Enheten förlorade internetanslutning medan nedladdningen pågick.<br /><br />Certifikatet som utfärdades för enheten vid registreringen kan ha löpt ut.<br /><br />Lösningar:<br /><br />Starta företagsapparna från kontrollpanelen på enheten för att kontrollera att enhetens certifikat inte har löpt ut. Om det har det måste du omregistrera enheten.<br /><br />Kontrollera att enheten är ansluten till internet och försök att begära appen igen.|
 |40 (APP_CI_ENFORCEMENT_IN_PROGRESS_CONTENT_DOWNLOADED)|Nedladdning av innehåll klart||
 |50 (APP_CI_ENFORCEMENT_IN_PROGRESS_INSTALLING)|Installation pågår||
 |60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Ett fel med installationen uppstod|Installationen av appen misslyckades efter nedladdning.<br /><br />Kodsigneringscertifikatet som appen undertecknades med finns inte på enheten.<br /><br />Programmet är beroende av ett ramverk som inte är installerat på enheten.<br /><br />Se till att kodsigneringscertifikatet som appen undertecknats med finns på enheten och kontrollera med administratören att ett sådant certifikat utfärdats för alla företagets registrerade Windows RT-enheter.<br /><br />Om installationsproblemet inte beror på ett saknat ramverk, måste administratören återpublicera programmet genom att paketera ramverket tillsammans med applikationspaketet.<br /><br />Det nedladdade applikationspaketet är inte giltigt, det kan ha skadats, eller är kanske inte kompatibelt med enhetens OS-version.|
@@ -78,7 +78,7 @@ Om du behöver supporthjälp kan du läsa informationen om att [få support för
 |-2016341111|0x87D11389|iOS-enheten har returnerat en oväntad inaktiv status|
 |-2016341112|0x87D11388|iOS-enheten är förnärvarande upptagen|
 
-## <a name="errors-returned-by-ios-devices"></a>iOS-enheterna returnerade fel
+## <a name="errors-returned-by-iosipados-devices"></a>Fel som returneras av iOS/iPadOS-enheter
 
 ### <a name="company-portal-errors"></a>Företagsportalfel
 
@@ -87,7 +87,7 @@ Om du behöver supporthjälp kan du läsa informationen om att [få support för
 |__Internt serverfel__ <br>Det verkar som att du inte kunde kontakta oss på grund av ett internt fel på vår server. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 500|Det här felet beror sannolikt på problem i Intune-tjänsten. Problemet ska lösas hos Intune och beror förmodligen inte på något fel hos kunden.|
 |__Tillfälligt otillgänglig__ <br>Det verkar som det gick inte att nå oss eftersom tjänsten för tillfället är otillgänglig. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 503|Detta beror troligen på ett tillfälligt Intune-tjänstproblem, till exempel att underhåll utförs i tjänsten. Problemet ska lösas hos Intune och beror förmodligen inte på något fel hos kunden.|
 |__Det gick inte att ansluta till servern__ <br>Det verkar som om du inte kan nå oss. Försök igen och kontakta IT-administratören om problemet kvarstår.|Inte associerad med någon HTTP-statuskod|Det går inte att upprätta någon säker anslutning till servern, förmodligen på grund av ett SSL-problem med de certifikat som används. Det här problemet kan bero på kundkonfigurationer som inte är kompatibla med Apples krav för App Transport Security (ATS).|
-|__Något verkar ha gått fel__ <br>Företagsportalens klient kunde inte läsas in. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 400|Fel med en HTTP-statuskod i 400-intervallet som inte har ett mer specifikt felmeddelande visar den här felkoden. Det här är ett klientfel i företagsportalappen för iOS.|
+|__Något verkar ha gått fel__ <br>Företagsportalens klient kunde inte läsas in. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 400|Fel med en HTTP-statuskod i 400-intervallet som inte har ett mer specifikt felmeddelande visar den här felkoden. Det här är ett klientfel i appen Företagsportal för iOS/iPadOS.|
 |__Det går inte att nå servern__ <br>Det verkar som om du inte kan nå oss. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 500|Fel med en HTTP-statuskod i 500-intervallet som inte har ett mer specifikt felmeddelande visar den här felkoden. Det här är ett tjänstfel som uppstår i Intune-tjänsten.|
 
 ### <a name="service-errors"></a>Tjänstfel
@@ -276,7 +276,7 @@ Om du behöver supporthjälp kan du läsa informationen om att [få support för
 |-2016332105|0x87D136B7|4007:Okänt filformat|
 |-2016332106|0x87D136B6|4006:Profilens borttagningsdatum har passerats|
 |-2016332107|0x87D136B5|4005:Lösenordskoden uppfyller inte kraven|
-|-2016332108|0x87D136B4|4004:Användaren avbröt installationen|
+|-2016332108|0x87D136B4|4004: Användaren avbröt installationen|
 |-2016332109|0x87D136B3|4003:Profilen är inte i kö för installation|
 |-2016332110|0x87D136B2|4002:Duplikat UUID|
 |-2016332111|0x87D136B1|4001:Installationsfel|
@@ -305,72 +305,72 @@ Om du behöver supporthjälp kan du läsa informationen om att [få support för
 |Statuskod|Hexadecimal felkod|Felmeddelande|
 |---------------|--------------------------|-----------------|
 |-2016344008|0x87D10838|(1404): Certifikatåtkomst nekades|
-|-2016344009|0x87D10837|(1403): Certifikatet hittades inte|
+|-2016344009|0x87D10837|(1403): Cerifikatet hittades inte|
 |-2016344010|0x87D10836|DCMO(1402): Åtgärden misslyckades|
-|-2016344011|0x87D10835|DCMO(1401): Användaren valde att inte acceptera åtgärden|
-|-2016344012|0x87D10834|DCMO(1400): Klientfel|
-|-2016344108|0x87D107D4|DCMO(1204): Enhetskapacitet är inaktiverat och användaren får inte återaktivera det|
-|-2016344109|0x87D107D3|DCMO(1203): Enhetskapacitet är inaktiverat och användaren får inte återaktivera det|
-|-2016344110|0x87D107D2|DCMO(1202): Enhetsåtgärden genomfördes men enhetskapaciteten är bortkopplad|
-|-2016344111|0xF3FB4D95|DCMO(1201): Enhetsåtgärden genomfördes och enhetskapaciteten är ansluten|
-|-2016344112|0x87D107D0|DCMO(1200): Åtgärden genomfördes|
+|-2016344011|0x87D10835|DCMO(1401): Användaren valde att inte acceptera åtgärden när hen uppmanades till detta|
+|-2016344012|0x87D10834|DCMO(1400): Kundfel|
+|-2016344108|0x87D107D4|DCMO(1204): Enhetskapaciteten är inaktiverad och användaren har tillåtelse att återaktivera den|
+|-2016344109|0x87D107D3|DCMO(1203): Enhetskapaciteten är inaktiverad och användaren har inte tillåtelse att återaktivera den|
+|-2016344110|0x87D107D2|DCMO(1202): Aktiveringen genomfördes korrekt, men enhetskapaciteten är för närvarande frånkopplad|
+|-2016344111|0xF3FB4D95|DCMO(1201): Aktiveringsoperationen genomfördes korrekt och enhetsförmågan är för närvarande ansluten|
+|-2016344112|0x87D107D0|DCMO(1200): Åtgärden genomfördes korrekt|
 |-2016345595|0x87D10205|Syncml(517): Svaret på ett atomiskt kommando var för stort för att få plats i ett enda meddelande.|
 |-2016345596|0x87D10204|Syncml(516): Kommandot fanns i ett atomiskt element och den atomiska åtgärden misslyckades. Detta kommando kunde inte föras tillbaka ordentligt.|
-|-2016345598|0x87D10202|Syncml(514): Kommandot SyncML slutfördes inte på grund av att åtgärden avbröts innan kommandot bearbetades.|
-|-2016345599|0x87D10201|Syncml(513): Mottagaren stöder inte eller vägrar att stödja den angivna versionen av synkroniseringsprotokollet för SyncML som används i SyncML-meddelandet med begäran.|
-|-2016345600|0x87D10200|Syncml(512): Ett programfel inträffade under synkroniseringen.|
-|-2016345601|0x87D101FF|Syncml(511): Ett allvarligt fel inträffade på servern när begäran bearbetades.|
+|-2016345598|0x87D10202|Syncml(514): SyncML-kommandot slutfördes inte korrekt, eftersom åtgärden redan hade avbrutits när kommandot började bearbetas.|
+|-2016345599|0x87D10201|Syncml(513): Mottagaren stöder inte eller vägrar att stödja den angivna versionen av SyncML-synkroniseringsprotokollet som används i SyncML-meddelandebegäran.|
+|-2016345600|0x87D10200|Syncml(512): Ett programfel inträffade under synkroniseringssessionen.|
+|-2016345601|0x87D101FF|Syncml(511): Ett allvarligt fel uppstod i servern när begäran bearbetades.|
 |-2016345602|0x87D101FE|Syncml(510): Ett fel inträffade under behandlingen av begäran. Felet beror på ett fel i mottagarens datalagring|
 |-2016345603|0x87D101FD|Syncml(509): Reserverat för framtida användning.|
-|-2016345604|0x87D101FC|Syncml(508): Ett fel inträffade som kräver en uppdatering av det aktuella synkroniseringstillståndet av klienten med servern.|
-|-2016345605|0x87D101FB|Syncml(507): Felet orsakade att alla SyncML-kommandon inom den atomiska elementtypen misslyckades.|
-|-2016345606|0x87D101FA|Syncml(506): Ett programfel uppstod när begäran bearbetades.|
-|-2016345607|0x87D101F9|Syncml(505): Mottagaren stöder inte eller vägrar att stödja den angivna versionen av SyncML DTD som används i SyncML-meddelandet med begäran.|
-|-2016345608|=0x87D101F8|Syncml(504): När mottagaren var gateway eller proxy togs ett svar inte emot i rätt tid från mottagaren ovanför som är angiven i URI:n (t.ex. HTTP, FTP eller LDAP) eller en annan tilläggsmottagare (t.ex. DNS) som krävdes för att få åtkomst vid försöket att slutföra begäran.|
-|-2016345609|0x87D101F7|Syncml(503): Mottagaren kan inte hantera begäran på grund av en tillfällig överbelastning eller underhåll av mottagaren.|
-|-2016345610|0x87D101F6|Syncml(502): När mottagaren var gateway eller proxy togs ett ogiltigt svar emot från mottagaren ovanför som användes vid ett försök att slutföra begäran.|
-|-2016345611|0x87D101F5|Syncml(501): Mottagaren stöder inte kommandot som krävs för att slutföra begäran.|
-|-2016345612|0x87D101F4|Syncml(500): Mottagaren stötte på ett oväntat tillstånd som förhindrade att begäran slutfördes|
+|-2016345604|0x87D101FC|Syncml(508): Ett fel inträffade som kräver en uppdatering av det aktuella synkroniseringstillståndet för kunden med servern.|
+|-2016345605|0x87D101FB|Syncml(507): Felet gjorde att alla SyncML-kommandon i en atomisk elementtyp misslyckades.|
+|-2016345606|0x87D101FA|Syncml(506): Ett fel inträffade under behandlingen av begäran.|
+|-2016345607|0x87D101F9|Syncml(505): Mottagaren stöder inte eller vägrar att stödja den angivna versionen av SyncML DTD som används på begäran av SyncML-meddelandet.|
+|-2016345608|=0x87D101F8|Syncml(504): Mottagaren, som fungerade som en gateway eller proxy, fick inte svar i tid från den uppströmsmottagare som angetts av URI:n (t.ex. HTTP, FTP, LDAP) eller från någon annan hjälpmottagare (t.ex. DNS) som den behövde tillgång till för att kunna slutföra begäran.|
+|-2016345609|0x87D101F7|Syncml(503): Mottagaren kan för närvarande inte hantera begäran pga tillfällig överbelastning eller underhåll av mottagaren.|
+|-2016345610|0x87D101F6|Syncml(502): Mottagaren, som fungerade som en gateway eller proxy, fick ett ogiltigt svar från den uppströmsmottagare den anslöt till när den försökte uppfylla begäran.|
+|-2016345611|0x87D101F5|Syncml(501): Mottagaren stöder inte det kommando som krävs för att uppfylla begäran.|
+|-2016345612|0x87D101F4|Syncml(500): Mottagaren påträffade ett oväntat villkor som hindrade den från att uppfylla begäran|
 |-2016345684|0x87D101AC|Syncml(428): Flytten misslyckades|
 |-2016345685|0x87D101AB|Syncml(427): Den överordnade kan inte tas bort eftersom den innehåller underordnade.|
-|-2016345686|0x87D101AA|Syncml(426): Delar av objekt accepteras inte.|
-|-2016345687|0x87D101A9|Syncml(425): Det begärda kommandot misslyckades på grund av att avsändaren inte har rätt ACL-behörighet på mottagaren.|
-|-2016345688|0x87D101A8|Syncml(424): Det segmenterade objektet togs emot men storleken för det mottagna objektet överensstämmer inte med storleken som angavs i det första segmentet.|
-|-2016345689|0x87D101A7|Syncml(423): Det begärda kommandot misslyckades på grund av att objektet "Ej permanent borttagen" tidigare togs bort permanent på servern.|
-|-2016345690|0x87D101A6|Syncml(422): Det begärda kommandot misslyckades på servern på grund av att CGI-skriptningen i LocURI var felaktigt formaterad.|
-|-2016345691|0x87D101A5|Syncml(421): Det begärda kommandot misslyckades på servern på grund av att den angivna sökgrammatiken var okänd.|
-|-2016345692|0x87D101A4|Syncml(420): Det finns inte tillräckligt med lagringsutrymme för återstående synkroniseringsdata på mottagaren.|
+|-2016345686|0x87D101AA|Syncml(426): Delobjekt accepteras inte.|
+|-2016345687|0x87D101A9|Syncml(425): Det begärda kommandot misslyckades därför att avsändaren inte har rätt ACL-åtkomst till mottagaren.|
+|-2016345688|0x87D101A8|Syncml(424): Det segmenterade objektet togs emot, men det mottagna objektets storlek överensstämmer inte med storleken som angavs i det första segmentet.|
+|-2016345689|0x87D101A7|Syncml(423): Det begärda kommandot misslyckades eftersom det ej permanent borttagna objektet tidigare togs bort permanent på servern.|
+|-2016345690|0x87D101A6|Syncml(422): Det begärda kommandot misslyckades på servern eftersom CGI-skriptet i LocURI hade ett felaktigt format.|
+|-2016345691|0x87D101A5|Syncml(421): Det begärda kommandot misslyckades på servern eftersom den angivna sökgrammatiken var okänd.|
+|-2016345692|0x87D101A4|Syncml(420): Mottagaren har inget mer lagringsutrymme för återstående synkroniseringsdata.|
 |-2016345693|0x87D101A3|Syncml(419): Klientbegäran skapade en konflikt som löstes genom att serverkommandot vann.|
-|-2016345694|0x87D101A2|Syncml(418): Det begärda kommandot för att placera eller lägga till misslyckades på grund av att målet redan finns.|
-|-2016345695|0x87D101A1|Syncml(417): Begäran misslyckades denna gång och avsändaren bör försöka senare.|
-|-2016345696|0x87D101A0|Syncml(416): Begäran misslyckades på grund av att den angivna byte-storleken i begäran var för stor.|
-|-2016345697|0x87D1019F|Syncml(415): Medietyp eller medieformat stöds inte.|
-|-2016345698|0x87D1019E|Syncml(414): Det begärda kommandot misslyckades på grund av att mål-URI:n är längre än vad som är möjligt att bearbeta med mottagaren.|
+|-2016345694|0x87D101A2|Syncml(418): Det begärda kommandot för att placera eller lägga till misslyckades eftersom målet redan finns.|
+|-2016345695|0x87D101A1|Syncml(417): Begäran misslyckades vid denna tidpunkt och personen som gjorde begäran bör försöka igen senare.|
+|-2016345696|0x87D101A0|Syncml(416): Begäran misslyckades eftersom den angivna bytestorleken i begäran var för stor.|
+|-2016345697|0x87D1019F|Syncml(415): Mediatypen eller -formatet stöds inte.|
+|-2016345698|0x87D1019E|Syncml(414): Det begärda kommandot misslyckades eftersom mål-URI:n är längre än vad mottagaren kan eller vill bearbeta.|
 |-2016345699|0x87D1019D|Syncml(413): Mottagaren vägrar att utföra det begärda kommandot eftersom det begärda objektet är större än vad mottagaren kan eller vill bearbeta.|
-|-2016345700|0x87D1019C|Syncml(412): Det begärda kommandot misslyckades på mottagaren på grund av att det var ofullständigt eller felaktigt formaterat.|
-|-2016345701|0x87D1019B|Syncml(411): Det begärda kommandot måste åtföljas av information om byte-storlek eller längd i metaelementtypen.|
-|-2016345702|0x87D1019A|Syncml(410): Det begärda målet finns inte längre på mottagaren och ingen URI för vidarebefordran är känd.|
-|-2016345703|0x87D10199|Syncml(409): Begäran misslyckades på grund av en uppdateringskonflikt mellan dataversioner på klienten och servern.|
+|-2016345700|0x87D1019C|Syncml(412): Den begärda kommandot misslyckades på mottagaren eftersom det var ofullständigt eller felaktigt utformat.|
+|-2016345701|0x87D1019B|Syncml(411): Det begärda kommandot måste åtföljas av information om bytestorlek eller längd i metaelementtypen.|
+|-2016345702|0x87D1019A|Syncml(410): Det begärda målet finns inte längre hos mottagaren och ingen URI för vidarebefordran är känd.|
+|-2016345703|0x87D10199|Syncml(409): Begäran misslyckades pga en uppdateringskonflikt mellan datauppgifternas klient- och serverversioner.|
 |-2016345704|0x87D10198|Syncml(408): Ett förväntat meddelande togs inte emot inom den nödvändiga tidsperioden.|
 |-2016345705|0x87D10197|Syncml(407): Det begärda kommandot misslyckades eftersom avsändaren måste ange korrekt autentisering.|
-|-2016345706|0x87D10196|Syncml(406): Det begärda kommandot misslyckades på grund av att en valfri funktion i begäran inte stöds.|
+|-2016345706|0x87D10196|Syncml(406): Det begärda kommandot misslyckades eftersom en valfri funktion i begäran saknade stöd.|
 |-2016345707|0x87D10195|Syncml(405): Det begärda kommandot är inte tillåtet på målet.|
-|-2016345708|0x87D10194|Syncml(404): Det begärda målet hittades inte.|
-|-2016345709|0x87D10193|Syncml(403): Det begärda målet misslyckades, men mottagaren förstod det begärda kommandot.|
-|-2016345710|0x87D10192|Syncml(402): Det begärda kommandot misslyckades eftersom korrekt betalning krävs.|
-|-2016345711|0x87D10191|Syncml(401): Det begärda kommandot misslyckades eftersom begäranden måste ange korrekt autentisering.|
-|-2016345712|0x87D10190|Syncml(400): Det gick inte att utföra det begärda kommandot på grund av en felformaterad syntax i kommandot.|
+|-2016345708|0x87D10194|Syncml(404): Det gick inte att hitta det begärda målet.|
+|-2016345709|0x87D10193|Syncml(403): Det begärda kommandot misslyckades, men mottagaren förstod det begärda kommandot.|
+|-2016345710|0x87D10192|Syncml(402): Den begärda kommandot misslyckades eftersom korrekt betalning behövs.|
+|-2016345711|0x87D10191|Syncml(401): Det begärda kommandot misslyckades eftersom personen som begärt det måste genomföra korrekt autentisering.|
+|-2016345712|0x87D10190|Syncml(400): Det gick inte att utföra det begärda kommandot pga felformaterad syntax i kommandot.|
 |-2016345807|0x87D10131|Syncml(305): Åtkomst till det begärda målet måste ske genom den angivna proxy-URI:n.|
 |-2016345808|0x87D10130|SyncML (304): Det begärda SyncML-kommandot utfördes inte på målet.|
-|-2016345809|0x87D1012F|Syncml(303): Det begärda målet finns på en annan URI.|
-|-2016345810|0x87D1012E|Syncml(302): Det begärda målet har tillfälligt flyttats till en annan URI.|
+|-2016345809|0x87D1012F|Syncml(303): Den begärda målet kan hittas på en annan URI.|
+|-2016345810|0x87D1012E|Syncml(302): Den begärda målet har tillfälligt flyttats till en annan URI.|
 |-2016345811|0x87D1012D|Syncml(301): Det begärda målet har en ny URI.|
 |-2016345812|0x87D1012C|Syncml(300): Det begärda målet är ett av flera alternativa begärda mål.|
-|-2016345896|0x87D100D8|Syncml(216): Kommandot fanns i ett atomiskt element och den atomiska åtgärden misslyckades. Kommandot har återställts|
-|-2016345897|0x87D100D7|Syncml(215): Kommandot utfördes inte på grund av en användaråtgärd och användaren godkände inte valet.|
+|-2016345896|0x87D100D8|Syncml(216): Ett kommando fanns i ett atomiskt element och den atomiska åtgärden misslyckades. Kommandot har återställts|
+|-2016345897|0x87D100D7|Syncml(215): Ett kommando utfördes inte, som ett resultat av användarens interaktion och val att inte acceptera alternativet.|
 |-2016345898|0x87D100D6|Syncml(214): Åtgärden avbröts. SyncML-kommandot slutfördes korrekt, men inga fler kommandon kommer att behandlas inom sessionen.|
-|-2016345899|0x87D100D5|Syncml(213): Ett segmenterat objekt godkändes och buffrades.|
-|-2016345900|0x87D100D4|Syncml(212): Autentisering accepterad. Ingen ytterligare autentisering behövs för återstoden av synkroniseringssession. Svarskoden kan bara användas som svar på en förfrågan som innehåller autentiseringsuppgifter.|
+|-2016345899|0x87D100D5|Syncml(213): Ett segmenterat objekt godkändes och buffrades|
+|-2016345900|0x87D100D4|Syncml(212): Autentiseringen godkändes. Ingen ytterligare autentisering behövs för återstoden av synkroniseringssession. Svarskoden kan bara användas som svar på en förfrågan som innehåller autentiseringsuppgifter.|
 |-2016345901|0x87D100D3|Syncml(211): Objektet togs inte bort. Det begärda objektet hittades inte. Det kan ha tagits bort vid ett tidigare tillfälle.|
 |-2016345902|0x87D100D2|Syncml(210): Ta bort utan att arkivera. Svaret visar att de begärda datauppgifterna har tagits bort utan att först arkiveras eftersom denna VALFRIA funktion saknade stöd i implementeringen.|
 |-2016345903|0x87D100D1|Konflikt löst med dubblett. Svaret anger att en uppdateringskonflikt uppstått som sedan löstes genom att en dubblett av klientens data skapades i serverdatabasen. Svaret innehåller både mål- och käll-URI i dubletten i objektet för statusen. Vid tvåvägssynkronisering returneras dessutom ett tilläggskommando med definitionen av den duplicerade informationen.|

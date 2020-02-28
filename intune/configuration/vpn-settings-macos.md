@@ -1,11 +1,11 @@
 ---
 title: Konfigurera VPN-inställningar för macOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller skapa en konfigurations profil för virtuellt privat nätverk (VPN), inklusive anslutnings information, delade tunnlar, anpassade VPN-inställningar med identifierare, nyckel-och värdepar, proxyinställningar med ett konfigurations skript, IP-eller FQDN-adress och TCP-port i Microsoft Intune på enheter som kör macOS.
+description: Lägg till eller skapa en VPN-konfigurationsprofil, inklusive anslutningsinformation, delade tunnlar, anpassade VPN-inställningar med identifierare, nyckel- och värdepar, proxyinställningar med ett konfigurationsskript, IP- eller FQDN-adress och TCP-port i Microsoft Intune på enheter som kör macOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0bb2cb757e944369642807f117683dad3a9805a
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: b20a7eca6f71d46380f9fcdb1674226cc54a104f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206269"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510787"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Lägg till VPN-inställningar för macOS-enheter i Microsoft Intune
 
@@ -35,7 +35,7 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 [Skapa en enhetskonfigurationsprofil](vpn-settings-configure.md).
 
 > [!NOTE]
-> De här inställningarna är tillgängliga för alla registrerings typer. Mer information om registrerings typerna finns i [MacOS-registrering](../enrollment/macos-enroll.md).
+> De här inställningarna är tillgängliga för alla registreringstyper. Mer information om registreringstyperna finns i [macOS-registrering](../enrollment/macos-enroll.md).
 
 ## <a name="base-vpn-settings"></a>Grundläggande VPN-inställningar
 
@@ -53,13 +53,13 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
   - **Anpassat VPN**
 - **Delade tunnlar**: **Aktivera** eller **Inaktivera** det här alternativet för att låta enheterna bestämma vilken anslutning som ska användas beroende på trafiken. En användare på ett hotell kan till exempel använda VPN-anslutningen för att komma åt arbetsfiler, men använda hotellets standardnätverk för vanlig webbsurfning.
 
-<!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
+<!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS/iPadOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
 
 ## <a name="custom-vpn-settings"></a>Anpassade VPN-inställningar
 
 Om du har valt **Anpassat VPN** kan du konfigurera inställningarna ytterligare:
 
-- **VPN-ID**: Ange en identifierare för VPN-appen som du använder. Den här identifieraren tillhandahålls av VPN-providern.
+- **VPN-ID**: Ange en identifierare för den VPN-app som du använder. Den här identifieraren tillhandahålls av din VPN-provider.
 - **Ange nyckel/värdepar för de anpassade VPN-attributen**: Lägg till eller importera **nycklar** och **värden** som anpassar VPN-anslutningen. Dessa värden tillhandahålls vanligtvis av VPN-leverantören.
 
 ## <a name="proxy-settings"></a>Proxyinställningar
@@ -72,4 +72,4 @@ Om du har valt **Anpassat VPN** kan du konfigurera inställningarna ytterligare:
 
 Profilen har skapats, men den gör inte något än. [Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).
 
-Konfigurera VPN-inställningar på [Android](vpn-settings-android.md)-, [Android Enterprise](vpn-settings-android-enterprise.md)-, [iOS](vpn-settings-ios.md)-och [Windows 10](vpn-settings-windows-10.md) -enheter.
+Konfigurera VPN-inställningar på [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md) och [Windows 10](vpn-settings-windows-10.md)-enheter.

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ffcc4a7e48064e6a458126667cf6ab2c4e75777
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: ac670fd5e17462688fdfcde1b047e1071a49353a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502271"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515211"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Skydda Office 365 Exchange Online utan krav på enhetshantering
 
-Om du vill ge anställda åtkomst till sina e-postkonton för arbetet utan att behöva installera ett system för enhetshantering så kan du göra det nu. Du kan ge åtkomst till Office 365 Exchange Online via Intune. Bekräfta att du har licenser för Microsoft 365 eller Azure Active Directory (premium) och Intune för att slutföra de nödvändiga stegen. Anställda behöver ha en [iOS- eller Android-enhet som stöds](../fundamentals/supported-devices-browsers.md). 
+Om du vill ge anställda åtkomst till sina e-postkonton för arbetet utan att behöva installera ett system för enhetshantering så kan du göra det nu. Du kan ge åtkomst till Office 365 Exchange Online via Intune. Bekräfta att du har licenser för Microsoft 365 eller Azure Active Directory (premium) och Intune för att slutföra de nödvändiga stegen. Alla anställda måster ha en [iOS/iPadOS- eller Android-enhet som stöds](../fundamentals/supported-devices-browsers.md). 
 
 Du kan om du vill konfigurera ett system för enhetshantering. Den här typen av appskydd fungerar oberoende av enhetshantering. 
 
@@ -41,7 +41,7 @@ Du kan om du vill konfigurera ett system för enhetshantering. Den här typen av
 
 ## <a name="what-to-tell-employees-and-students"></a>Information till anställda och studenter
 
-* Be dina anställda och studenterna att ladda ned och installera Microsoft Outlook eller Microsoft SharePoint för iOS från Apple App Store eller för Android från Google Play-butiken. 
+* Be dina anställda och dina studenter att ladda ned och installera Microsoft Outlook eller Microsoft SharePoint för iOS/iPadOS från Apple App Store eller för Android från Google Play-butiken. 
 * Om du blockerar åtkomst till appar som inte använder modern autentisering bör du informera de anställda och studenter om den här begränsningen. 
 
 ## <a name="next-steps"></a>Nästa steg

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be66f99006b06dce9f9bfe21eafa9f2be302e7b9
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
-ms.translationtype: MTE75
+ms.openlocfilehash: 13aea23f58c69d5c7e38f77ae7dfa19bd12edd35
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76540987"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511659"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
@@ -50,7 +50,7 @@ Intune tillhandahåller appfelsökningsinformation baserad på de appar som inst
     > Samma app kan tilldelas till flera grupper, men med olika avsedda åtgärder (avsikter) för appen. En löst avsikt för en app kan t.ex. visa **Exkluderad** om appen har exkluderats för en användare under apptilldelningen. Mer information finns i [Lösa konflikter mellan appavsikter](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
     > Om ett installationsfel inträffar för en app som krävs kan varken du eller supporten synkronisera enheten och försöka installera appen igen.
 
-Problemet indikeras i informationen om appinstallationsfel. Du kan använda den här informationen för att komma fram till vilket som är det bästa sättet att lösa problemet på. Mer information om felsökning av problem med appinstallation finns i [Fel vid installation av Android-appar](app-install-error-codes.md#android-app-installation-errors) och [Fel vid installation av iOS-appar](app-install-error-codes.md#ios-app-installation-errors).
+Problemet indikeras i informationen om appinstallationsfel. Du kan använda den här informationen för att komma fram till vilket som är det bästa sättet att lösa problemet på. Mer information om felsökning av problem med appinstallation finns i [Fel vid installation av Android-appar](app-install-error-codes.md#android-app-installation-errors) och [Fel vid installation av iOS-appar](app-install-error-codes.md#ios-and-ipados-app-installation-errors).
 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -65,7 +65,7 @@ Problemet indikeras i informationen om appinstallationsfel. Du kan använda den 
   3. Gå till [Azure Active Directory-användare](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Välj den berörda användaren och klicka på **Enheter**.
   5. Om användaren är över den angivna gränsen tar du bort eventuella inaktuella poster som inte längre behövs.
-- För iOS DEP-enheter kontrollerar du att användaren anges som **Registrerad av användare** i Intune-fönstret för enhetsöversikt. Om NA visas distribuerar du en konfigurationsprincip för Intune-företagsportalen. Mer information finns i [Konfigurera Företagsportalappen](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- För iOS/iPadOS DEP-enheter kontrollerar du att användaren anges som **Registrerad av användare** i Intune-fönstret för enhetsöversikt. Om NA visas distribuerar du en konfigurationsprincip för Intune-företagsportalen. Mer information finns i [Konfigurera Företagsportalappen](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Felsökning av Win32-appinstallationen
 

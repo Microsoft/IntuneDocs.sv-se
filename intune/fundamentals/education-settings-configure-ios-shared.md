@@ -1,7 +1,7 @@
 ---
-title: Intune-inställningar för delade enheter och iOS-appen Classroom
+title: Intune-inställningar för delade enheter och iOS/iPadOS-appen Classroom
 titleSuffix: Microsoft Intune
-description: Läs om vilka Intune-inställningar du kan använda för att styra inställningarna för Classroom-appen på iOS-enheter.
+description: Läs om vilka Intune-inställningar du kan använda för att styra inställningarna för Classroom-appen på iOS-/iPadOS-enheter.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edfd9b8ee8b45952d9c22d5365d09d125ea7710
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 412dc9a12f5a13b5fbd738f3ac1b5b1033a2635b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784263"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514718"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurera Intune-utbildningsinställningar för delade iPad-enheter
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 > [!NOTE]
-> Intune stöder för närvarande inte konfiguration av klass rums appen. Den här artikeln gäller endast för användare med befintliga iOS-utbildningsprofiler i Intune.
+> Intune stöder för närvarande inte konfiguration av appen Classroom. Den här artikeln gäller endast för användare med befintliga iOS-/iPadOS-utbildningsprofiler i Intune.
 
-Intune stöder iOS-appen Classroom. Det är en app som hjälper lärare att stödja utbildning och hantera elevenheter i klassrummet. Utöver appen Classroom stöder Apple möjligheten att konfigurera elevernas iPad-enheter så att flera elever kan dela på en enhet. Det här dokumentet hjälper dig att uppnå det här målet med Intune.
+Intune stöder iOS-/iPadOS-appen Classroom. Det är en app som hjälper lärare att stödja utbildning och hantera elevenheter i klassrummet. Utöver appen Classroom stöder Apple möjligheten att konfigurera elevernas iPad-enheter så att flera elever kan dela på en enhet. Det här dokumentet hjälper dig att uppnå det här målet med Intune.
 
-Information om hur du konfigurerar personliga (1:1) iPad-enheter för användning med appen Classroom finns i [Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune](education-settings-configure-ios.md).
+Information om hur du konfigurerar personliga (1:1) iPad-enheter för användning med appen Classroom finns i [Så här konfigurerar du inställningar för iOS-/iPadOS-appen Classroom för Intune](education-settings-configure-ios.md).
 
 ## <a name="before-you-start"></a>Innan du börjar
 
@@ -64,15 +64,15 @@ Du kan importera information till SDS på något av följande sätt:
 - [Läs mer om licensiering i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
-## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Steg 2 – Skapa och tilldela en iOS-utbildningsprofil i Intune
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Steg 2 – Skapa och tilldela en iOS-/iPadOS-utbildningsprofil i Intune
 
 ### <a name="configure-general-settings"></a>Konfigurera allmänna inställningar
 
 1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
 2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
-5. I profilfönstret väljer du **Skapa profil**.
-6. Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen i fönstret **Skapa profil**.
+5. I fönstret Profiler väljer du **Skapa profil**.
+6. Ange **Namn** och **Beskrivning** för iOS-/iPadOS-utbildningsprofilen i fönstret **Skapa profil**.
 7. Välj **iOS** i listrutan **Plattform**.
 8. Välj **Utbildning** i listrutan **Profiltyp**.
 9. Välj **Inställningar** > **Konfigurera**.
