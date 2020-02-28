@@ -13,6 +13,8 @@
       href: quickstart-create-assign-app-policy.md
 - name: Självstudier
   items:
+    - name: Skydda e-post på hanterade enheter
+      href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Skydda e-post på ohanterade enheter
       href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Konfigurera Slack för att använda Intune
