@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: a5c844377dcd69b6caf5ef9f72fcb8dbb4ef8bd0
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755997"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609309"
 ---
 # <a name="use-device-encryption-with-intune"></a>Använda enhetskryptering med Intune
 
@@ -39,17 +39,30 @@ Intune tillhandahåller också en inbyggd [krypteringsrapport](encryption-monito
 
 Använd Intune för att konfigurera FileVault-diskkryptering på enheter som kör macOS. Använd sedan Intunes krypteringsrapport för att visa krypteringsinformation för de enheterna och för att hantera återställningsnycklar för FileVault-krypterade enheter.
 
-Observera att en användardefinierad enhet måste registreras för att FileVault ska fungera på den. Användaren måste godkänna hanteringsprofilen manuellt i systeminställningarna för att registreringen ska betraktas som användargodkänd. 
+Användargodkänd enhetsregistrering krävs för att FileVault ska fungera på enheten. Användaren måste godkänna hanteringsprofilen manuellt i systeminställningarna för att registreringen ska betraktas som användargodkänd.
 
 FileVault är ett program för kryptering av hela diskar som ingår i macOS. Du kan använda Intune för att konfigurera FileVault på enheter som kör **MacOS 10.13 eller senare**.
 
 Om du vill konfigurera FileVault skapar du en [enhetskonfigurationsprofil](../configuration/device-profile-create.md) för slutpunktsskydd för macOS-plattformen. FileVault-inställningar är en av de tillgängliga inställningskategorierna för macOS-slutpunktsskydd.
 
-När du har skapat en princip för att kryptera enheter med FileVault tillämpas principen på enheter i två steg. Först förbereds enheten så att Intune kan hämta och säkerhetskopiera återställningsnyckeln. Detta kallas deponering eller deposition. När nyckeln har deponerats kan diskkrypteringen starta.
+När du har skapat en princip för att kryptera enheter med FileVault tillämpas principen på enheter i två steg. Först förbereds enheten så att Intune kan hämta och säkerhetskopiera återställningsnyckeln. Den här åtgärden kallas deponering eller deposition. När nyckeln har deponerats kan diskkrypteringen starta.
 
 ![FileVault-inställningar](./media/encrypt-devices/filevault-settings.png)
 
 Mer information om FileVault-inställningen som du kan hantera med Intune finns i [FileVault](endpoint-protection-macos.md#filevault) i Intune-artikeln om inställningar för slutpunktsskydd i macOS.
+
+### <a name="permissions-to-manage-filevault"></a>Behörighet att hantera FileVault
+
+För att kunna hantera FileVault i Intune måste ditt konto ha rätt behörigheter för [rollbaserad åtkomstkontroll](../fundamentals/role-based-access-control.md) (RBAC) i Intune.
+
+Nedan visas de FileVault-behörigheter som ingår i kategorin **Fjärruppgifter** och de inbyggda RBAC-roller som ger behörigheten:
+ 
+- **Hämta FileVault-nyckel**:
+  - Supportavdelningen
+  - Slutpunktssäkerhetshanteraren
+
+- **Rotera FileVault-nyckel**
+  - Supportavdelningen
 
 ### <a name="how-to-configure-macos-filevault"></a>Så här konfigurerar du FileVault för macOS
 
@@ -84,7 +97,7 @@ När Intune har krypterat en macOS-enhet med FileVault kan du visa enhetens pers
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Hämta personlig återställningsnyckel från MEM-krypterade macOS-enheter
 
-Slutanvändarna kommer att kunna hämta sin personliga återställningsnyckel (FileVault Key) med hjälp av iOS-företagsportalappen. Den enhet som har den personliga återställningsnyckeln måste registreras med Intune och krypteras med FileVault via Intune. Med hjälp av iOS-företagsportalappen kan slutanvändaren öppna en webbsida som innehåller den personliga återställningsnyckeln för FileVault. Du kan också hämta återställningsnyckeln från Intune genom att välja **Enheter** > *den krypterade och registrerade macOS-enheten* > **Hämta återställningsnyckel**. 
+Slutanvändarna hämtar sin personliga återställningsnyckel (FileVault Key) med hjälp av iOS-företagsportalappen. Den enhet som har den personliga återställningsnyckeln måste registreras med Intune och krypteras med FileVault via Intune. Med hjälp av iOS-företagsportalappen kan slutanvändaren öppna en webbsida som innehåller den personliga återställningsnyckeln för FileVault. Du kan också hämta återställningsnyckeln från Intune genom att välja **Enheter** > *den krypterade och registrerade macOS-enheten* > **Hämta återställningsnyckel**. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-kryptering för Windows 10
 

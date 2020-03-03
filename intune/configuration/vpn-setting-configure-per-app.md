@@ -1,11 +1,11 @@
 ---
-title: Konfigurera VPN per app för iOS-enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se förutsättningarna, och skapa en grupp för VPN-användare (virtuella privata nätverk), lägg till en SCEP-certifikatsprofil, konfigurera en VPN-profil per app och tilldela vissa appar till VPN-profilen i Microsoft Intune på iOS-enheter. Visar också stegen för att verifiera VPN-anslutningen på enheten.
+title: Konfigurera VPN per app för iOS/iPadOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Se förutsättningarna, och skapa en grupp för VPN-användare (virtuella privata nätverk), lägg till en SCEP-certifikatsprofil, konfigurera en VPN-profil per app och tilldela vissa appar till VPN-profilen i Microsoft Intune på iOS/iPadOS-enheter. Visar också stegen för att verifiera VPN-anslutningen på enheten.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,20 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c9f6dbfb8d6ee4b766abef04595ffca7df4c9dc
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: fd53172a1086f48dc1646e1b8a63de8bec37b934
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206388"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512610"
 ---
-# <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS-enheter i Intune
+# <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app för iOS/iPadOS-enheter i Intune
 
 I Microsoft Intune kan du skapa och använda virtuella privata nätverk (VPN) tilldelade till en app. Den här funktionen kallas för "per app-VPN". Du väljer de hanterade apparna som kan använda ditt VPN på enheter som hanteras av Intune. När du använder en per app-VPN ansluter slutanvändarna automatiskt via VPN och får åtkomst till organisationsresurser, till exempel dokument.
 
 Den här funktionen gäller för:
 
 - iOS 9 och senare
+- iPadOS 13.0 och senare
 
 Kontrollera VPN-leverantörens dokumentation för att se om VPN stöder per app-VPN.
 
@@ -39,7 +40,7 @@ Den här artikeln visar hur du skapar en per app-VPN-profil och tilldelar profil
 Vissa VPN:er tillåter autentisering med användarnamn och lösenord med per app-VPN. Det betyder att användarna måste ange ett användarnamn och lösenord för anslutning till VPN.
 
 > [!IMPORTANT]
-> Per app-VPN stöds inte för IKEv2 VPN-profiler för iOS.
+> Per app-VPN stöds inte för IKEv2 VPN-profiler för iOS/iPadOS.
 
 ## <a name="per-app-vpn-with-zscaler"></a>Per app-VPN med Zscaler
 
@@ -67,23 +68,23 @@ Skapa eller välj en befintlig grupp i Azure Active Directory (AD Azure) för an
 
 ## <a name="create-a-trusted-certificate-profile"></a>Skapa en betrodd certifikatprofil
 
-Importera VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren till en profil som skapats i Intune. Den betrodda certifikatprofilen instruerar iOS-enheten att automatiskt ha förtroende för den certifikatutfärdare som VPN-servern anger.
+Importera VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren till en profil som skapats i Intune. Den betrodda certifikatprofilen instruerar iOS/iPadOS-enheten att automatiskt ha förtroende för den certifikatutfärdare som VPN-servern anger.
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
-    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett exempel på ett bra profilnamn är **iOS trusted certificate VPN profile for entire company** (VPN-profil för betrodda iOS-certifikat för hela företaget).
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett exempel på ett bra profilnamn är **iOS trusted certificate VPN profile for entire company** (VPN-profil för betrodda iOS/iPadOS-certifikat för hela företaget).
     - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Plattform**: Välj **iOS**.
+    - **Plattform**: Välj **iOS/iPadOS**.
     - **Profiltyp**: Välj **Betrott certifikat**.
 4. Välj mappikonen och bläddra till VPN-certifikatet (CER-filen) som du exporterade från VPN-administrationskonsolen. 
 5. Välj **OK** > **Skapa**.
 
-    ![Skapa en profil för betrott certifikat för iOS-enheterna i Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+    ![Skapa en profil för betrott certifikat för iOS/iPadOS-enheterna i Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Skapa en SCEP- eller PKCS-certifikatprofil
 
-Den betrodda rotcertifikatprofilen gör det möjligt för enheten att automatiskt ha förtroende för VPN-servern. SCEP- eller PKCS-certifikatet tillhandahåller autentiseringsuppgifter från iOS VPN-klienten till VPN-servern. Certifikatet tillåter att enheten autentiserar tyst utan att användaren tillfrågas om användarnamn och lösenord. 
+Den betrodda rotcertifikatprofilen gör det möjligt för enheten att automatiskt ha förtroende för VPN-servern. SCEP- eller PKCS-certifikatet tillhandahåller autentiseringsuppgifter från iOS/iPadOS VPN-klienten till VPN-servern. Certifikatet tillåter att enheten autentiserar tyst utan att användaren tillfrågas om användarnamn och lösenord. 
 
 Om du vill konfigurera och tilldela klientautentiseringscertifikatet läser du någon av följande artiklar:
 
@@ -96,28 +97,28 @@ Se till att konfigurera certifikatet för klientautentisering. Du kan ange det h
 
 ## <a name="create-a-per-app-vpn-profile"></a>Skapa profil för VPN per app
 
-VPN-profilen innehåller SCEP- eller PKCS-certifikatet med klientens autentiseringsuppgifter, anslutningsinformation för det virtuella privata nätverket och VPN per app-flaggan för aktivering av funktionen i iOS-appen.
+VPN-profilen innehåller SCEP- eller PKCS-certifikatet med klientens autentiseringsuppgifter, anslutningsinformation för det virtuella privata nätverket och VPN per app-flaggan för aktivering av funktionen i iOS/iPadOS-appen.
 
 1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 2. Ange följande egenskaper:
-    - **Namn**: Ange ett beskrivande namn för den anpassade profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett exempel på ett bra profilnamn är **iOS per-app VPN profile for entire company** (VPN-profil per iOS-app för hela företaget).
+    - **Namn**: Ange ett beskrivande namn för den anpassade profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett exempel på ett bra profilnamn är **iOS/iPadOS per-app VPN profile for entire company** (VPN-profil per iOS/iPadOS-app för hela företaget).
     - **Beskrivning**: Ange en beskrivning av profilen. Denna inställning är valfri, men rekommenderas.
-    - **Plattform**: Välj **iOS**.
+    - **Plattform**: Välj **iOS/iPadOS**.
     - **Profiltyp**: Välj **VPN**.
 3. I **Anslutningstyp** väljer du din VPN-klientapp.
-4. Välj **Bas-VPN**. [iOS VPN-inställningar](vpn-settings-ios.md) listar och beskriver alla inställningar. När du använder per app-VPN ser du till att ange följande egenskaper enligt listan:
+4. Välj **Bas-VPN**. [iOS/iPadOS VPN-inställningar](vpn-settings-ios.md) listar och beskriver alla inställningar. När du använder per app-VPN ser du till att ange följande egenskaper enligt listan:
 
     - **Autentiseringsmetod**: Välj **Certifikat**. 
-    - **Autentiseringscertifikat**: Välj ett befintligt SCEP- eller PKCS-certifikat > **OK**.      
+    - **Autentiseringscertifikat**: Välj ett befintligt SCEP- eller PKCS-certifikat > **OK**.
     - **Delade tunnlar**: Välj **Inaktivera** för att tvinga all trafik att använda VPN-tunneln när VPN-anslutningen är aktiv. 
 
       ![I en per app-VPN-profil anger du en anslutning, en IP-adress eller ett fullständigt domännamn, en autentiseringsmetod samt delade tunnlar i Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
-    Information om de andra inställningarna finns i [iOS VPN-inställningar](vpn-settings-ios.md).
+    Information om de andra inställningarna finns i [iOS/iPadOS VPN-inställningar](vpn-settings-ios.md).
 
 5. Välj **Automatisk VPN** > **Typ av automatiskt virtuellt privat nätverk** > **Per app-VPN**
 
-    ![I Intune anger du Automatisk VPN till per app-VPN på iOS-enheter](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+    ![I Intune anger du Automatisk VPN till per app-VPN på iOS/iPadOS-enheter](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
 6. Välj **OK** > **OK** > **Skapa**.
 
@@ -148,7 +149,7 @@ En association mellan en app och en profil finns kvar tills slutanvändaren beg�
 - Slutanvändaren begärde appinstallationen från Företagsportal, så appen och profilen installeras på enheten.
 - Du tar bort eller ändrar VPN per app-konfigurationen från apptilldelningen.
 
-## <a name="verify-the-connection-on-the-ios-device"></a>Kontrollera anslutningen till iOS-enheten
+## <a name="verify-the-connection-on-the-iosipados-device"></a>Kontrollera anslutningen till iOS/iPadOS-enheten
 
 När VPN per app har konfigurerats och associerats med appen kontrollerar du att anslutningen fungerar från en enhet.
 
@@ -167,5 +168,5 @@ Kontrollera att zero touch-upplevelsen fungerar genom att ansluta utan att behö
 
 ## <a name="next-steps"></a>Nästa steg
 
-- I dokumentationen om [VPN-inställningar för iOS-enheter i Microsoft Intune](vpn-settings-ios.md) finns information om iOS-inställningar.
+- I dokumentationen om [VPN-inställningar för iOS/iPadOS-enheter i Microsoft Intune](vpn-settings-ios.md) finns information om iOS/iPadOS-inställningar.
 - I dokumentationen om hur du [konfigurerar VPN-inställningar i Microsoft Intune](vpn-settings-configure.md) finns information om VPN-inställningar och Intune.

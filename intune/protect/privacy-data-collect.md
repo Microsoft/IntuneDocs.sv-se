@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e93e69b5cce2c54ae07410309b33870dd828f563
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bd204271b9ae3e57e15a101647444913749f4109
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509080"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514242"
 ---
 # <a name="data-collection-in-intune"></a>Datainsamling i Intune
 
@@ -112,7 +112,7 @@ Pseudonymiserade data som samlas in av Intune kan inkludera, men är inte begrä
   - Konto-ID
   - EAS-enhets-ID
   - Plattformsspecifika ID:n
-  - AppleID för iOS-enheter
+  - AppleID för iOS/iPadOS-enheter
   - Mac-adress för Mac-enheter
   - Windows-ID för Windows-enheter
 - Information om hanterat program

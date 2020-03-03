@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09c8a8819c288663936174e9317267c39eac63bc
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 77a4f0ea0ee076907d2a6cd14000c5cf319231e6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437859"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513783"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Skapa undantag till dataöverföringsprincipen Intune-appskydd (APP)
 
@@ -32,13 +32,13 @@ Som administratör kan du skapa undantag till dataöverföringsprincipen Intune-
 >[!WARNING] 
 > Du ansvarar för att göra ändringar i undantagsprincipen för dataöverföring. Tillägg till den här principen tillåter att ohanterade appar (som inte hanteras av Intune) får åtkomst till data som skyddas av hanterade appar. Den här åtkomsten till skyddade data kan resultera i datasäkerhetsläckor. Lägg endast till dataöverföringsundantag för appar som din organisation måste använda, men som saknar stöd för Intunes principer för programskydd. Dessutom bör du bara lägga till undantag för appar som du inte anser utgöra någon risk för dataläckor.
 
-I en Intune-princip för programskydd betyder inställningen **Tillåt att appen överför data till andra appar** till **Principhanterade appar** att appen överför data enbart för appar som hanteras av Intune. Om du vill tillåta dataöverföring till specifika appar som inte har stöd för Intune APP kan du skapa undantag för den här principen med hjälp av **Välj appar att undanta**. Undantag tillåter program som hanteras av Intune att anropa ohanterade program baserat på URL-protokoll (iOS) eller paketnamn (Android). Intune lägger som standard till viktiga ursprungliga program till listan med undantag. 
+I en Intune-princip för programskydd betyder inställningen **Tillåt att appen överför data till andra appar** till **Principhanterade appar** att appen överför data enbart för appar som hanteras av Intune. Om du vill tillåta dataöverföring till specifika appar som inte har stöd för Intune APP kan du skapa undantag för den här principen med hjälp av **Välj appar att undanta**. Undantag tillåter program som hanteras av Intune att anropa ohanterade program baserat på URL-protokoll (iOS/iPadOS) eller paketnamn (Android). Intune lägger som standard till viktiga ursprungliga program till listan med undantag. 
 
 > [!NOTE]
 > Att ändra eller lägga till undantag för dataöverföringsprinciper påverkar inte andra appskyddsprinciper, som till exempel begränsningar för att klippa ut, kopiera och klistra in. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Undantag vid iOS-dataöverföring
-Du kan konfigurera dataöverföringsundantag för en princip med iOS/iPadOS som mål med hjälp av URL-protokoll. Om du vill lägga till ett undantag kan du läsa mer i dokumentationen från apputvecklaren om vilka URL-protokoll som stöds. Mer information om undantag vid iOS/iPadOS-dataöverföring finns i [Principinställningar för iOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+Du kan konfigurera dataöverföringsundantag för en princip med iOS/iPadOS som mål med hjälp av URL-protokoll. Om du vill lägga till ett undantag kan du läsa mer i dokumentationen från apputvecklaren om vilka URL-protokoll som stöds. Mer information om undantag vid iOS/iPadOS-dataöverföring finns i [Principinställningar för iOS/iPadOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > Microsoft har inte en metod för att hitta URL-protokollet för att skapa appundantag för program från tredje part manuellt. 
@@ -71,5 +71,5 @@ Genom att lägga till **Webex**-paketet som ett undantag till MAM-dataöverföri
 ## <a name="next-steps"></a>Nästa steg
 
 - [Skapa och distribuera appskyddsprinciper](app-protection-policies.md)
-- [Principinställningar för iOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions)
+- [Principinställningar för iOS/iPadOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions)
 - [Principinställningar för Android-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-android.md#data-transfer-exemptions)

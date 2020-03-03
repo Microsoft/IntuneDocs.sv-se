@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 91442d262adb1d85217cb73f2f415766b89267af
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207219"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510528"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Använda härledda autentiseringsuppgifter i Microsoft Intune
 
@@ -37,7 +37,7 @@ Härledda autentiseringsuppgifter är en implementering av riktlinjerna från Na
 
 - Intune-administratören anger **Härledda autentiseringsuppgifter** som *autentiseringsmetod* för följande objekt:
 
-  - Vanliga profiltyper som Wi-Fi, VPN och e-post, som innehåller den inbyggda e-postappen för iOS
+  - Vanliga profiltyper som Wi-Fi, VPN och e-post, som innehåller den inbyggda e-postappen för iOS/iPadOS
 
   - Appautentisering
 
@@ -76,7 +76,7 @@ Viktig information om hur du använder olika utfärdare finns i vägledningen f�
 
 Planera för distribution av Intune-företagsportalappen till enheter som ska registreras för en härledd autentiseringsuppgift. Enhetsanvändare använder Företagsportal-appen för att starta processen för registrering av autentiseringsuppgifter.
 
-Information om iOS-enheter finns i [Lägga till iOS-butiksappar till Microsoft Intune](../apps/store-apps-ios.md).
+Information om iOS/iPadOS-enheter finns i [Lägga till iOS/iPadOS-butiksappar till Microsoft Intune](../apps/store-apps-ios.md).
 
 ## <a name="plan-for-derived-credentials"></a>Planera för härledda autentiseringsuppgifter
 
@@ -198,7 +198,7 @@ Utöver att distribuera appen med Intune konfigurerar du ett per-app-VPN för In
 **Slutför följande steg**:
   
 1. Ladda ned [DISA Purebred-programmet](https://cyber.mil/pki-pke/purebred/).
-2. Distribuera DISA Purebred-programmet i Intune.  Se [Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune](../apps/lob-apps-ios.md).
+2. Distribuera DISA Purebred-programmet i Intune.  Se [Lägg till en verksamhetsspecifik app för iOS/iPadOS i Microsoft Intune](../apps/lob-apps-ios.md).
 3. [Skapa ett per-app-VPN](../configuration/vpn-settings-configure.md) för DISA Purebred-programmet.
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>Använda härledda autentiseringsuppgifter för appautentisering samt för S/MIME-signering och -kryptering
@@ -224,7 +224,7 @@ Använd härledda autentiseringsuppgifter för certifikatbaserad autentisering t
 2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande inställningar:
 
-    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är till exempel **Härledd autentiseringsuppgift för iOS-enhetsprofil**.
+    - **Namn**: Ange ett beskrivande namn på profilen. Namnge dina profiler så att du enkelt kan identifiera dem senare. Ett bra profilnamn är till exempel **Härledd autentiseringsuppgift för iOS/iPadOS-enhetsprofil**.
     - **Beskrivning**: Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
     - **Plattform**: Välj **iOS/iPadOS**.
     - **Profiltyp**: Välj **Härledd autentiseringsuppgift**.

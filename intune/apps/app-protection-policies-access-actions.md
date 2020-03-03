@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64faf797c69302e2a5cdbdde090330ab99fcc2e4
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 0425b6a3f2c82f6ad2119286c8697f0eb0fc2f82
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437893"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513919"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Rensar data selektivt med villkorsstyrda startåtgärder för appskyddsprinciper i Intune
 
@@ -122,5 +122,5 @@ När en inställning konfigureras fullständigt visas raden i en skrivskyddad vy
 
 Mer information om Intune-appskyddsprinciper finns här:
 - [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md)
-- [Inställningar för iOS-appskyddsprinciper](app-protection-policy-settings-ios.md)
+- [Inställningar för iOS/iPadOS-appskyddsprinciper](app-protection-policy-settings-ios.md)
 - [Inställningar för Android-appskyddsprinciper i Microsoft Intune](app-protection-policy-settings-android.md) 

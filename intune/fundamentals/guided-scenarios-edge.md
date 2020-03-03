@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88beb8f4791c127b0a225878f5bc43b6dd9b4025
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: 9afb8f431ae301fe74f420c11205a7ed2637434b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839380"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514633"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Guidat scenario – Distribuera Microsoft Edge för mobil 
 
-Genom att följa det här [guidade scenariot](~/fundamentals/guided-scenarios-overview.md) kan du tilldela Microsoft Edge-appen till dina användare på iOS- eller Android-enheter i din organisation. Genom att tilldela den här appen kan användarna sömlöst bläddra bland innehåll med hjälp av sina företagsenheter. 
+Genom att följa det här [guidade scenariot](~/fundamentals/guided-scenarios-overview.md) kan du tilldela Microsoft Edge-appen till dina användare på iOS/iPadOS- eller Android-enheter i din organisation. Genom att tilldela den här appen kan användarna sömlöst bläddra bland innehåll med hjälp av sina företagsenheter. 
 
-Med Microsoft Edge kan användare få ordning och reda på webben med inbyggda funktioner som hjälper dem att konsolidera, organisera och hantera arbetsinnehåll. Användare av iOS- och Android-enheter som loggar in med sina Azure AD-företagskonton i Microsoft Edge-programmet får arbetsplatsens **Favoriter** och webbplatsfilter som du definierar i sin webbläsare.
+Med Microsoft Edge kan användare få ordning och reda på webben med inbyggda funktioner som hjälper dem att konsolidera, organisera och hantera arbetsinnehåll. Användare av iOS/iPadOS- och Android-enheter som loggar in med sina Azure AD-företagskonton i Microsoft Edge-programmet får arbetsplatsens **Favoriter** och webbplatsfilter som du definierar i sin webbläsare.
 
 > [!NOTE]
-> Om du har blockerat användare från att registrera antingen iOS- eller Android-enheter möjliggör detta scenario inte registrering, och användarna behöver då själva installera Edge.
+> Om du har blockerat användare från att registrera antingen iOS/iPadOS- eller Android-enheter möjliggör detta scenario inte registrering, och användarna behöver då själva installera Edge.
 Nedanstående Microsoft Edge-företagsfunktioner som aktiveras med Intune-principer är tillgängliga: 
 
 - **Dubbel identitet** – Användarna kan lägga till både ett arbetskonto och ett personligt konto för surfning. Det finns en fullständig uppdelning mellan de två identiteterna, vilket liknar arkitektur och funktioner i Office 365 och Outlook. Intune-administratörer kommer att kunna ställa in de önskade principerna för en skyddad surfupplevelse på arbetskontot. 
@@ -49,9 +49,9 @@ Nedanstående Microsoft Edge-företagsfunktioner som aktiveras med Intune-princi
 
 ## <a name="step-1---introduction"></a>Steg 1 – Introduktion
 
-Genom att följa det guidade scenariot **Distribuera Microsoft Edge för mobil** konfigurerar du en grundläggande distribution av Microsoft Edge för en vald grupp av iOS- och Android-användare. Den här distributionen implementerar **Dubbla identiteter** och **Hanterade favoriter och genvägar för startsidan**. Dessutom installeras Microsoft Edge-appen automatiskt av Intune på enheter som registreras av de valda användarna. Den här automatiska installationen sker på alla användarstyrda registreringstyper, som omfattar: 
-- iOS-registrering via Företagsportal-appen 
-- iOS-registrering för användartillhörighet via Apple Business Manager 
+Genom att följa det guidade scenariot **Distribuera Microsoft Edge för mobil** konfigurerar du en grundläggande distribution av Microsoft Edge för en vald grupp av iOS/iPadOS- och Android-användare. Den här distributionen implementerar **Dubbla identiteter** och **Hanterade favoriter och genvägar för startsidan**. Dessutom installeras Microsoft Edge-appen automatiskt av Intune på enheter som registreras av de valda användarna. Den här automatiska installationen sker på alla användarstyrda registreringstyper, som omfattar: 
+- iOS/iPadOS-registrering via företagsportalappen 
+- iOS/iPadOS-registrering för användartillhörighet via Apple Business Manager 
 - Äldre Android-registrering via Företagsportal-appen 
 
 Det här guidade scenariot gör automatiskt så att **MyApps** visas i Microsoft Edge-favoriter och konfigurerar webbläsaren med samma varumärke som du har angett för Intune-företagsportalappen. 
@@ -60,13 +60,13 @@ Det här guidade scenariot gör automatiskt så att **MyApps** visas i Microsoft
 Vi frågar dig om de favoriter på arbetsplatsen som dina användare behöver samt de filter du behöver för webbsurfning. Slutför följande uppgifter innan du fortsätter:
 
 - Lägg till användare till Azure AD-grupper. Mer information finns i [Skapa en grundläggande grupp och lägga till medlemmar med hjälp av Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2102458).
-- Registrera iOS- eller Android-enheter i Intune. Mer information finns i [Enhetsregistrering](https://go.microsoft.com/fwlink/?linkid=2102547).
+- Registrera iOS/iPadOS- eller Android-enheter i Intune. Mer information finns i [Enhetsregistrering](https://go.microsoft.com/fwlink/?linkid=2102547).
 - Skapa en lista över arbetsplatsens favoriter som ska läggas till i Microsoft Edge.
 - Skapa en lista över webbplatsfilter som ska framtvingas i Microsoft Edge.
 
 ## <a name="step-2---basics"></a>Steg 2 – Grunderna
 
-I det här steget måste du ange ett namn och en beskrivning för dina nya Microsoft Edge-principer. Dessa principer kan refereras senare om du behöver ändra tilldelningarna och konfigurationerna. Det guidade scenariot lägger till och tilldelar både en Microsoft Edge iOS-app för dina iOS-enheter och en Microsoft Edge Android-app för dina Android-enheter. Det här steget skapar även konfigurationsprinciper för dessa appar.
+I det här steget måste du ange ett namn och en beskrivning för dina nya Microsoft Edge-principer. Dessa principer kan refereras senare om du behöver ändra tilldelningarna och konfigurationerna. Det guidade scenariot lägger till och tilldelar både en Microsoft Edge iOS/iPadOS-app för dina iOS/iPadOS-enheter och en Microsoft Edge Android-app för dina Android-enheter. Det här steget skapar även konfigurationsprinciper för dessa appar.
 
 ## <a name="step-3---configuration"></a>Steg 3 – Konfiguration
 
@@ -74,7 +74,7 @@ I det här steget konfigurerar det guidade scenariot Microsoft Edge till att vis
 
 ## <a name="step-4---assignments"></a>Steg 4 – Tilldelningar
 
-I det här steget kan du välja de användargrupper som du vill inkludera för att få Microsoft Edge mobilkonfigurerat för arbete. Microsoft Edge installeras även på alla iOS- och Android-enheter som registreras av dessa användare.
+I det här steget kan du välja de användargrupper som du vill inkludera för att få Microsoft Edge mobilkonfigurerat för arbete. Microsoft Edge installeras även på alla iOS/iPadOS- och Android-enheter som registreras av dessa användare.
 
 ## <a name="step-5---review--create"></a>Steg 5 – Granska och skapa
 

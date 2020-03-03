@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 267f09c3dc16aab10fbe64f0e8662ee6f7c7ffa0
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: 1d8950e57c2427c522d337807d315ed5c399c0d5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907998"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514089"
 ---
 # <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Självstudie: Genomgång av Intune i Microsoft Endpoint Manager
 
@@ -70,7 +70,7 @@ Följ stegen nedan för att bättre förstå Intune i administrationscentret fö
     
     Med Intune kan du hantera personalens enheter och appar, till exempel hur de kommer åt företagsdata. Enheterna måste först registreras i Intune innan du kan använda MDM-tjänsten. När en enhet registreras utfärdas ett MDM-certifikat till den. Certifikatet används för att kommunicera med Intune-tjänsten. 
 
-    Det finns flera olika metoder för att registrera personalens enheter i Intune. Varje metod påverkas av ägarskapet för enheten (personlig eller företagsägd), enhetstypen (iOS, Windows, Android) och hanteringskraven (återställning, tillhörighet, låsning). Men innan du kan aktivera enhetsregistrering måste du konfigurera Intune-infrastrukturen. I synnerhet kräver registrering av enheter att du [anger en MDM-utfärdare](mdm-authority-set.md). Mer information om hur du förbereder Intune-miljön (klienten) finns i [Konfigurera Intune](setup-steps.md). När Intune-klienten är klar kan du registrera enheter. Mer information om enhetsregistrering finns i [Vad är enhetsregistrering?](../enrollment/device-enrollment.md)
+    Det finns flera olika metoder för att registrera personalens enheter i Intune. Varje metod påverkas av ägarskapet för enheten (personlig eller företagsägd), enhetstypen (iOS/iPadOS, Windows, Android) och hanteringskraven (återställning, tillhörighet, låsning). Men innan du kan aktivera enhetsregistrering måste du konfigurera Intune-infrastrukturen. I synnerhet kräver registrering av enheter att du [anger en MDM-utfärdare](mdm-authority-set.md). Mer information om hur du förbereder Intune-miljön (klienten) finns i [Konfigurera Intune](setup-steps.md). När Intune-klienten är klar kan du registrera enheter. Mer information om enhetsregistrering finns i [Vad är enhetsregistrering?](../enrollment/device-enrollment.md)
 
 3. I navigeringsfönstret väljer du **Enheter** för att se information om de registrerade enheterna i din Intune-klientorganisation. 
 
@@ -117,7 +117,7 @@ Följ stegen nedan för att bättre förstå Intune i administrationscentret fö
     > [!TIP]
     > Om du tidigare använde Intune i Azure-portalen hittade du informationen ovan i portalen genom att logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) och välja **Enhetskonfiguration**.
 
-    Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter och plattformar, bland annat iOS, Android, macOS och Windows. Du kan sedan använda Intune för att tillämpa profilen i din organisation.   
+    Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter och plattformar, bland annat iOS/iPadOS, Android, macOS och Windows. Du kan sedan använda Intune för att tillämpa profilen i din organisation.   
 
     Mer information om enhetskonfiguration finns i [Tillämpa inställningar för funktioner på dina enheter med enhetsprofiler i Microsoft Intune](../configuration/device-profiles.md).
 

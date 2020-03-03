@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89b4516017d7ac8bf1e27134db6a67a0a86b17cb
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 128f615a9551c31e6b0e0de4f1d269083874bf48
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206082"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515126"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -77,7 +77,7 @@ Beskrivningar av statusar för enhetsefterlevnadsprinciper:
   - Enheter som inte har tilldelats någon efterlevnadsprincip och som saknar en utlösare för att kontrollera efterlevnaden
   - Enheter som inte har checkats in sedan efterlevnadsprincipen senast uppdaterades
   - Enheter som inte är associerade till en specifik användare, till exempel:
-    - iOS-enheter som köpts via Apples program för enhetsregistrering (DEP) som inte har någon användartillhörighet
+    - iOS/iPadOS-enheter som köpts via Apples program för enhetsregistrering (DEP) som inte har någon användartillhörighet
     - Dedikerade Android kiosk- eller Android Enterprise-enheter
   - Enheter som har registrerats med ett konto för enhetsregistreringshantering (DEM)
 

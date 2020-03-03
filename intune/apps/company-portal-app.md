@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4c938aba7fde84536af2452f13f6ed030fa1d823
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563642"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576431"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -37,9 +37,9 @@ Microsofts företagsportal för Intune är den plats där användare kan komma �
 > [!Tip]
 > När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar. Observera att användarna måste ha tilldelats en Intune-licens för att få åtkomst till webbplatsen Företagsportal.
 
-Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Gör detta i Intune-portalen genom att välja **Appar** > **Anpassning** och konfigurera sedan de inställningar som krävs.
+Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Det gör du genom att navigera till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), välja **Innehavaradministratör** > **Anpassning** och sedan konfigurera de nödvändiga inställningarna.
 
-När en användare installerar ett iOS-program från företagsportalen får de ett meddelande. Detta inträffar när iOS-appen är länkad till App Store, ett volymköpt program (VPP) eller en verksamhetsspecifik app (LOB). Användaren kan acceptera åtgärden eller tillåta hantering av appen. Meddelandet visar företagets namn. Om företagets namn inte är tillgängligt visas **företagsportalen**. 
+När en användare installerar ett iOS/iPadOS-program från företagsportalen får de ett meddelande. Detta inträffar när iOS/iPadOS-appen är länkad till App Store, ett volymköpt program (VPP) eller en verksamhetsspecifik app (LOB). Användaren kan acceptera åtgärden eller tillåta hantering av appen. Meddelandet visar företagets namn. Om företagets namn inte är tillgängligt visas **företagsportalen**. 
 
 > [!Note]
 > Om du använder Azure Government har slutanvändarna tillgång till apploggar som hjälper dem att avgöra hur de ska dela när de inleder processen för att få hjälp med ett problem. Om du inte använder Azure Government skickar företagsportalen för Windows 10 apploggar direkt till Microsoft när användaren initierar processen för att få hjälp med ett problem. När apploggarna skickas till Microsoft blir det enklare att felsöka och lösa problem. 
@@ -92,11 +92,11 @@ Välj en logotyp som ser bäst ut på vita eller ljusa bakgrunder.
 
 ### <a name="brand-image-for-company-portal"></a>Varumärkesbild för företagsportalen
 
-Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har sparat ändringarna kan du se hur dina konfigurationer kommer att se ut genom att välja **Förhandsgranska inställningarna** högst upp i fönstret i Intune-portalen. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS-enhet, inte på Intune-webbportalen. 
+Visa en varumärkesbild som återspeglar ditt företags varumärke. När du har sparat ändringarna kan du se hur dina konfigurationer kommer att se ut genom att välja **Förhandsgranska inställningarna** högst upp i fönstret i Intune-portalen. Observera att du bara kan förhandsgranska varumärkesbilden på en iOS/iPadOS-enhet, inte på Intune-webbportalen. 
 
 |Fältnamn|Mer information|
 |---|---|
-|**Ladda upp din varumärkesbild**| Med det här alternativet kan du visa en bild på ditt varumärke. I iOS företagsportal visas den som en bakgrundsbild på användarens profilsida.<p><ul><li>Rekommenderad bildbredd: Större än 1125 pkt (måste vara minst 650 pkt)</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
+|**Ladda upp din varumärkesbild**| Med det här alternativet kan du visa en bild på ditt varumärke. I företagsportalen för iOS/iPadOS visas den som en bakgrundsbild på användarens profilsida.<p><ul><li>Rekommenderad bildbredd: Större än 1125 pkt (måste vara minst 650 pkt)</li><li>Maximal bildstorlek: 1,3 MB</li><li>Filtyp: PNG, JPG eller JPEG</li></ul>|
 
 Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på företagsportalen. Här följer några tips på hur du kan hitta, välja ut och optimera bilden för företagsportalen. 
 
@@ -108,7 +108,7 @@ Rätt bild kan skapa förtroende och ge en bra bild av ditt varumärke på före
 
 - Ta bort onödiga metadata. Bildfilen kan innehålla metadata, till exempel kameraprofil, geografisk plats, rubrik, beskrivning och så vidare. Ta bort den här informationen med hjälp av ett bildoptimeringsverktyg för att upprätthålla kvaliteten och uppfylla storleksgränsen för filer. 
 
-När en varumärkesavbildning läggs till eller ändras i Intune ser slutanvändaren eventuellt inte ändringen på iOS-enheter förrän Företagsportalen har identifieras ändringen vid start, och sedan har startats om för att kunna visa varumärkesavbildningen. 
+När en varumärkesavbildning läggs till eller ändras i Intune ser slutanvändaren eventuellt inte ändringen på iOS/iPadOS-enheter förrän företagsportalen har identifierat ändringen vid start, och sedan har startats om för att kunna visa varumärkesavbildningen. 
 
 ### <a name="brand-image-examples"></a>Exempel på varumärkesavbildning
 
@@ -122,20 +122,20 @@ Följande bild visar ett exempel på en iPhone-varumärkesavbildning:
 
 ## <a name="privacy-statement-customization"></a>Anpassning av sekretesspolicy
 
-Du kan anpassa sekretesspolicyn som visas för din organisation på hanterade iOS-enheter. Det här meddelandet visar de objekt som din organisation inte kan visa eller använda på hanterade iOS-enheter.
+Du kan anpassa sekretesspolicyn som visas för din organisation på hanterade iOS/iPadOS-enheter. Det här meddelandet visar de objekt som din organisation inte kan visa eller använda på hanterade iOS/iPadOS-enheter.
 
 Under **Anpassning av företagsportalen** > **Enhetshantering och sekretessaviseringar** kan du:
 
 - Godkänn **Standardinställningen** om du vill använda listan som visas eller
-- Välja **Anpassa** om du vill anpassa listan med de objekt som din organisation inte kan visa eller använda på hanterade iOS-enheter. Du kan använda [markdown](https://daringfireball.net/projects/markdown/) för att lägga till punkter, fet stil, kursiv stil och länkar.
+- Välja **Anpassa** om du vill anpassa listan med de objekt som din organisation inte kan visa eller använda på hanterade iOS/iPadOS-enheter. Du kan använda [markdown](https://daringfireball.net/projects/markdown/) för att lägga till punkter, fet stil, kursiv stil och länkar.
 
 ## <a name="company-portal-derived-credentials-for-ios-devices"></a>Företagsportal-härledda autentiseringsuppgifter för iOS-enheter
-Intune stöder PIV- (Personal Identity Verification) och CAC-härledda (Common Access Card) autentiseringsuppgifter i partnerskap med autentiseringsuppgiftsprovidrarna DISA Purebred, Entrust Datacard och Intercede. Slutanvändare går igenom ytterligare steg efter registreringen av sin iOS-enhet för att verifiera sin identitet i Företagsportal-programmet. Härledda autentiseringsuppgifter aktiveras för användare genom att en autentiseringsuppgiftsprovider först konfigureras för din klientorganisation. Därefter anges en profil som mål som använder härledda autentiseringsuppgifter till användare eller enheter.
+Intune stöder PIV- (Personal Identity Verification) och CAC-härledda (Common Access Card) autentiseringsuppgifter i partnerskap med autentiseringsuppgiftsprovidrarna DISA Purebred, Entrust Datacard och Intercede. Slutanvändare går igenom ytterligare steg efter registreringen av sin iOS/iPadOS-enhet för att verifiera sin identitet i företagsportalappen. Härledda autentiseringsuppgifter aktiveras för användare genom att en autentiseringsuppgiftsprovider först konfigureras för din klientorganisation. Därefter anges en profil som mål som använder härledda autentiseringsuppgifter till användare eller enheter.
 
 > [!NOTE]
 > Användaren får instruktioner om härledda autentiseringsuppgifter baserat på den länk som du har angett via Intune.
 
-Mer information om härledda autentiseringsuppgifter för iOS-enheter finns i [Använda härledda autentiseringsuppgifter i Microsoft Intune](~/protect/derived-credentials.md).
+Mer information om härledda autentiseringsuppgifter för iOS/iPadOS-enheter finns i [Använda härledda autentiseringsuppgifter i Microsoft Intune](~/protect/derived-credentials.md).
 
 ## <a name="dark-mode-for-ios-company-portal"></a>Mörkt läge för iOS-företagsportalen
 
@@ -149,13 +149,13 @@ Följande kortkommandon är tillgängliga i Windows-företagsportalappen.
 
 | Område | Beskrivning | Kortkommando |
 |:------------------:|:--------------:|:-----------------:|
-| Navigeringsmenyn | Navigering | Alt + M |
-|  | Hem | Alt + H |
-|  | Alla appar | Alt + A |
+| Navigeringsmenyn | Navigering | Alt+M |
+|  | Hem | Alt+H |
+|  | Alla appar | Alt+A |
 |  | Installerade appar | Alt+I |
-|  | Skicka feedback | Alt + F |
-|  | Min profil | Alt + U |
-|  | Inställningar | Alt + T |
+|  | Skicka feedback | Alt+F |
+|  | Min profil | Alt+U |
+|  | Inställningar | Alt+T |
 | Start – Enhetspanel | Byt namn | F2 |
 |  | Ta bort | CTRL + D eller ta bort |
 |  | Kontrollera åtkomst | CTRL + M eller F9 |
@@ -177,7 +177,7 @@ Användare kan utföra åtgärder på sina lokala eller fjärranslutna enheter v
 - **Byt namn** – den här åtgärden ändrar enhetsnamnet som användaren kan se i företagsportalen. Namnet ändras inte på den lokala enheten utan endast i företagsportalen.
 - **Synkronisera** – den här åtgärden startar en enhetsincheckning med Intune-tjänsten. Detta visas som **Kontrollera status** i företagsportalen.
 - **Fjärrlåsning** – detta låser enheten och kräver en PIN-kod för att låsa upp den.
-- **Återställ lösenord** – den här åtgärden används för att återställa enhetens lösenord. På iOS-enheter tas lösenordet bort och slutanvändaren måste ange ett nytt lösenord i inställningarna. På Android-enheter som stöds skapas ett nytt lösenord av Intune som visas tillfälligt i företagsportalen.
+- **Återställ lösenord** – den här åtgärden används för att återställa enhetens lösenord. På iOS/iPadOS-enheter tas lösenordet bort och slutanvändaren måste ange ett nytt lösenord i inställningarna. På Android-enheter som stöds skapas ett nytt lösenord av Intune som visas tillfälligt i företagsportalen.
 - **Nyckelåterställning** – Den här åtgärden används för att återställa en personlig återställningsnyckel för krypterade macOS-enheter från företagsportalens webbplats. 
 
 ### <a name="self-service-actions"></a>Självbetjäningsåtgärder
@@ -192,7 +192,7 @@ Vissa plattformar och konfigurationer tillåter inte självbetjäning av enhets�
 | Synkronisera | Tillgänglig | Tillgänglig | Tillgänglig | Tillgänglig |
 | Fjärrlåsning | Endast på Windows Phone | Tillgänglig | Tillgänglig | Tillgänglig |
 | Återställ lösenord | Endast på Windows Phone | Tillgängligt<sup>(8)</sup> | NA | Tillgängligt<sup>(6)</sup> |
-| Återställning av nyckel | NA | NA | Tillgängligt<sup>(2)</sup> | NA |
+| Nyckelåterställning | NA | NA | Tillgängligt<sup>(2)</sup> | NA |
 
 <sup>(1) </sup> **Dra tillbaka** är alltid blockerat på Azure AD-anslutna Windows-enheter.<br>
 <sup>(2) </sup> **Nyckelåterställning** för MacOS är endast tillgängligt via webbportalen.<br>

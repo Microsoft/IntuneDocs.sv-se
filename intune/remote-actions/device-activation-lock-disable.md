@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f67a08ef3cbfae4a801333e5f8ffb5469e723ed
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 65a13c2690f08c2244f31854556a88b6301c6ac5
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438063"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576021"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Inaktivera aktiveringslåset på övervakade iOS/-enheter med Intune
 
@@ -63,7 +63,7 @@ Intune kan begära status för aktiveringslåset för övervakade enheter som k�
 Innan du kan inaktivera aktiveringslåset på enheter måste du aktivera det genom att följa dessa anvisningar:
 
 1. Konfigurera en Intune-begränsningsprofil för iOS/iPadOS med hjälp av informationen i [Så här konfigurerar du inställningar för enhetsbegränsning](/intune-azure/configure-devices/how-to-configure-device-restrictions).
-2. I [inställningarna för enhetsbegränsningar för iOS](../configuration/device-restrictions-ios.md) under de **allmänna** inställningarna aktiverar du alternativet **Aktiveringslås**.
+2. I [inställningarna för enhetsbegränsningar för iOS/iPadOS](../configuration/device-restrictions-ios.md) under de **allmänna** inställningarna aktiverar du alternativet **Aktiveringslås**.
 3. Spara profilen och [tilldela den](../configuration/device-profile-assign.md) till de enheter som du vill ska hantera Inaktivera aktiveringslås.
 
 

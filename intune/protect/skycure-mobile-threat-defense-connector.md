@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be8fbb0bd96891eb3af3157deddfc325ebc5f2b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 884d7f5d4710b44c302598b3c34e704beace240a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508921"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515279"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-anslutningsprogram
 
@@ -41,7 +41,7 @@ Du kan aktivera SEP Mobile-riskbedömning via Intunes efterlevnadsprinciper för
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Hur skyddar Intune och SEP Mobile företagets resurser?
 
-SEP Mobile-appen för Android eller iOS avbildar filsystem, nätverksstackar samt telemetri för enheter och program där det är tillgängligt. Detta skickas sedan till Symantecs molntjänst som utvärderar enhetens risk för mobila hot.
+SEP Mobile-appen för Android eller iOS/iPadOS avbildar filsystem, nätverksstackar samt telemetri för enheter och program där det är tillgängligt. Detta skickas sedan till Symantecs molntjänst som utvärderar enhetens risk för mobila hot.
 
 Intune-enhetens efterlevnadsprincip innehåller en regel för SEP Mobile, som är baserad på SEP Mobiles riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat.
 
@@ -121,7 +121,7 @@ Här är de steg som du måste utföra om du vill integrera Intune med SEP Mobil
 
 - [Konfigurera SEP Mobile-integrering med Intune](skycure-mtd-connector-integration.md)
 
-- [Lägg till och tilldela SEP Mobile-appar, Microsoft Authenticator och konfigurationsprincip för iOS-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Lägg till och tilldela SEP Mobile-appar, Microsoft Authenticator och konfigurationsprincip för iOS/iPadOS-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
 - [Skapa SEP Mobile-enhetens efterlevnadsprincip med Intune](mtd-device-compliance-policy-create.md)
 

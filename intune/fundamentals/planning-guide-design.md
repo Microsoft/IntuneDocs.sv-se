@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: f676a0e39bb5dae32d3032d1703dbb44f6b2e54a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886738"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514973"
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -188,7 +188,7 @@ Vi ska gå igenom dessa områden mer detaljerat.
 
 ### <a name="determine-supported-device-platforms"></a>Fastställa enhetsplattformar som stöds
 
-Du behöver veta vilka enheter som kommer att finnas i miljön och bekräfta om de stöds av Intune eller inte när du skapar utformningen. Intune stöder iOS-, Android- och Windows-plattformar.
+Du behöver veta vilka enheter som kommer att finnas i miljön och bekräfta om de stöds av Intune eller inte när du skapar utformningen. Intune stöder iOS/iPadOS-, Android- och Windows-plattformar.
 
 [Fullständig lista över Intune-enheter som stöds](supported-devices-browsers.md).
 
@@ -296,8 +296,8 @@ Följande är ett exempel på hur du kan dokumentera certifikaten under utformni
 
 | **Typ** | **Profilnamn** | **Enhetsplattform** | **Användningsfall** |   
 |:---:|:---:|:---:|:---:|
-| Rotcertifikatutfärdare | Företagets rotcertifikatutfärdare | Android, iOS, Windows Mobile | Företag, BYOD  |                                                           
-| SCEP | Användarcertifikat | Android, iOS, Windows Mobile | Företag, BYOD |                                                           
+| Rotcertifikatutfärdare | Företagets rotcertifikatutfärdare | Android, iOS/iPadOS, Windows Mobile | Företag, BYOD  |                                                           
+| SCEP | Användarcertifikat | Android, iOS/iPadOS, Windows Mobile | Företag, BYOD |                                                           
 
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för certifikatprofilen.
@@ -311,7 +311,7 @@ Nedan visas ett exempel på en utformning för en Wi-Fi-profil:
 | **Typ** | **Profilnamn** | **Enhetsplattform** | **Användningsfall** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Wi-Fi-profil | Android | Företag, BYOD regionen Asien|
-| Wi-Fi | Nordamerika Wi-Fi-profil | Android, iOS, Windows 10 Mobile | Företag, BYOD regionen Nordamerika |
+| Wi-Fi | Nordamerika Wi-Fi-profil | Android, iOS/iPadOS, Windows 10 Mobile | Företag, BYOD regionen Nordamerika |
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för Wi-Fi-profilen.
 
@@ -323,7 +323,7 @@ Nedan visas ett exempel på dokumentering av utformningen av en VPN-profil.
 
 | **Typ** | **Profilnamn** | **Enhetsplattform** | **Användningsfall** |
 |:---:|:---:|:---:|:---:|
-| VPN | VPN Cisco, valfri anslutningsprofil | Android, iOS, Windows 10 Mobile | Företag, BYOD Nordamerika och Tyskland|
+| VPN | VPN Cisco, valfri anslutningsprofil | Android, iOS/iPadOS, Windows 10 Mobile | Företag, BYOD Nordamerika och Tyskland|
 | VPN | Pulse Secure | Android | Företag, BYOD regionen Asien |
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för VPN-profilen.
@@ -374,7 +374,7 @@ Appskyddsprinciper minimerar dataförlust genom att definiera hur programmet han
 | **Program** | **Syfte** | **Plattformar** | **Användningsfall** | **Appskyddsprincip** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Tillgänglig | iOS | Företag – chefer | Får inte vara be jailbrokad, kryptera filer |                                                         
-| Word | Tillgänglig | iOS, Android – Samsung Knox, inte Knox, Windows 10 Mobile | Företag, BYOD | Får inte vara be jailbrokad, kryptera filer |                                                         
+| Word | Tillgänglig | iOS/iPadOS, Android – Samsung Knox, inte Knox, Windows 10 Mobile | Företag, BYOD | Får inte vara be jailbrokad, kryptera filer |                                                         
 
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för appskyddsprincipen.
@@ -388,7 +388,7 @@ Nedan visas ett exempel på hur du utformar en efterlevnadsprincip:
 
 | **Principnamn** | **Enhetsplattform** | **Inställningar** | **Målgrupp** |
 |:---:|:---:|:---:|:---:|
-| Policy för efterlevnad | iOS, Android – Samsung Knox, inte Knox, Windows 10 Mobile | PIN-kod – krävs, får inte vara jailbrokad | Företag, BYOD |
+| Policy för efterlevnad | iOS/iPadOS, Android – Samsung Knox, inte Knox, Windows 10 Mobile | PIN-kod – krävs, får inte vara jailbrokad | Företag, BYOD |
 
 
 Du kan [ladda ned en mall med tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera behoven för efterlevnadsprincipen.
@@ -404,8 +404,8 @@ Här visas ett exempel på hur du kan dokumentera principer för villkorlig åtk
 
 | **Tjänst** | **Plattformar för modern autentisering** | **Grundläggande autentisering** | **Användningsfall** |
 |:---:|:---:|:---:|:---:|
-| Exchange online | iOS, Android | Blockera icke-kompatibla enheter på plattformar som stöds av Intune | Företag, BYOD |
-| SharePoint Online | iOS, Android |  | Företag, BYOD |
+| Exchange online | iOS/iPadOS, Android | Blockera icke-kompatibla enheter på plattformar som stöds av Intune | Företag, BYOD |
+| SharePoint Online | iOS/iPadOS, Android |  | Företag, BYOD |
 
 Du kan [ladda ned en mall för tabellen ovan](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) för att identifiera dina behov av principer för villkorlig åtkomst.
 

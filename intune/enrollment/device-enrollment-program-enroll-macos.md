@@ -1,7 +1,7 @@
 ---
-title: Registrera macOS-enheter – Programmet för enhetsregistrering eller Apple School Manager
+title: Registrera macOS-enheter – Apple Business Manager eller Apple School Manager
 titleSuffix: ''
-description: Läs hur du registrerar företagsägda macOS-enheter med programmet för enhetsregistrering.
+description: Lär dig hur du registrerar företagsägda macOS-enheter.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d55139a106599664f801a6bf73b0e0e8db24b57a
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6ef08ea65a4976bcf77154108e415634dbae8e05
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414498"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514344"
 ---
-# <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Registrera macOS-enheter automatiskt med Programmet för enhetsregistrering eller Apple School Manager
+# <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Registrera macOS-enheter automatiskt med Apple Business Manager eller Apple School Manager
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Du kan konfigurera Intune-registrering av macOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com) eller [Apple School Manager](https://school.apple.com/). Du kan använda endera av dessa registreringsmetoder för ett stort antal enheter utan att behöva röra dem. Du kan leverera macOS-enheter direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i Intune-hanteringen.
+Du kan konfigurera Intune-registrering av macOS-enheter som köpts via Apples [Apple Business Manager](https://business.apple.com/) eller [Apple School Manager](https://school.apple.com/). Du kan använda endera av dessa registreringsmetoder för ett stort antal enheter utan att behöva röra dem. Du kan leverera macOS-enheter direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i Intune-hanteringen.
 
-Om du vill konfigurera registrering kan du använda både Intunes och Apples DEP-portaler. Du kan skapa registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
+Om du vill konfigurera registrering kan du använda både Intunes och Apples portaler. Du kan skapa registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
-Varken DEP-registrering eller Apple School Manager fungerar dock med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
+Varken Apple Business Manager-registrering eller Apple School Manager fungerar dock med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**

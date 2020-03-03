@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d33e0ff6bbe407d9838f97214f37d042a2e261
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6e00a2d3c245c1297f2ea28ab0184369e7d92980
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414705"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513953"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -92,20 +92,20 @@ I följande fyra avsnitt beskrivs de alternativ som är tillgängliga i fönstre
   - [Övervaka appar](apps-monitor.md).
 - **Appkonfigurationsprinciper**: Välj det här alternativet om du vill ange inställningar som kan krävas när en användare kör en app. Mer information finns i:
   - [Appkonfigurationsprinciper för Intune](app-configuration-policies-overview.md).
-    - [Konfigurationsprinciper för iOS-appar](app-configuration-policies-use-ios.md).
+    - [Konfigurationsprinciper för iOS/iPadOS-appar](app-configuration-policies-use-ios.md).
     - [Konfigurationsprinciper för Android-appar](app-configuration-policies-use-android.md).
 - **Appskyddsprinciper**: Välj det här alternativet för att koppla inställningar till en app och skydda de data som företaget använder. Du kan till exempel begränsa möjligheterna för en app att kommunicera med andra appar eller du kan kräva att användaren anger en PIN-kod för att få åtkomst till en företagsapp. Mer information finns i:
   - [Appskyddsprinciper](app-protection-policies.md).
 - **Selektiv radering av app**: Välj det här alternativet för att ta bort enbart företagsdata från en vald användares enhet. Mer information finns i:
   - [Appselektiv rensning](apps-selective-wipe.md).
 - **Etableringsprofiler för iOS-app**: iOS/iPadOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla. Mer information finns i:
-  - [iOS-appetableringsprofiler](app-provisioning-profile-ios.md).
+  - [iOS/iPadOS-appetableringsprofiler](app-provisioning-profile-ios.md).
 
 Mer information om det här avsnittet finns [Hantera appar](app-management.md).
 
 ### <a name="monitor"></a>Övervakare
 - **Applicenser**: Visa, tilldela och övervaka volyminköpta appar från appbutiker. Mer information finns i:
-  - [Volyminköpsprogram för iOS-appar (VPP)](vpp-apps-ios.md).
+  - [Volyminköpsprogram för iOS/iPadOS-appar (VPP)](vpp-apps-ios.md).
   - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md).
 - **Identifierade appar**: Visa appar som har tilldelats av Intune eller installerats på en enhet. Mer information finns i [Appar som identifieras i Intune](app-discovered-apps.md).
 - **Status för appinstallation**: Visa status för en apptilldelning som du har skapat. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
@@ -116,7 +116,7 @@ Mer information om det här avsnittet finns [Övervaka appar](apps-monitor.md).
 
 ### <a name="set-up"></a>Konfigurera
 - **iOS VPP-token**: Tillämpa och visa dina licenser för iOS/iPadOS-volymköpsprogrammet (VPP). Mer information finns i:
-  - [Volyminköpta iOS-appar](vpp-apps-ios.md)
+  - [Volyminköpta iOS/iPadOS-appar](vpp-apps-ios.md)
 - **Windows företagscertifikat**: Tillämpa eller visa status för ett kodsigneringscertifikat som används för att distribuera verksamhetsspecifika appar till dina hanterade Windows-enheter.
 - **Windows Symantec-certifikat**: Tillämpa eller visa status för ett Symantec-kodsigneringscertifikat som behövs för att distribuera XAP- och WP8.x appx-filer till Windows 10 Mobile-enheter.
 - **Microsoft Store för företag**: Konfigurera integration till Microsoft Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser. Mer information finns i:

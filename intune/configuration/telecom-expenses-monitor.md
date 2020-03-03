@@ -1,12 +1,12 @@
 ---
 title: Konfigurera en tjänst för kostnadsuppföljning av telekommunikation i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Integrera Microsoft Intune med Saaswedo-tjänsten för kostnadsuppföljning av telekommunikation för att övervaka dataanvändning och ange tröskelvärden eller begränsningar på Android- och iOS-enheter.
+description: Integrera Microsoft Intune med Saaswedo-tjänsten för kostnadsuppföljning av telekommunikation för att övervaka dataanvändning och ange tröskelvärden eller begränsningar på Android-, iOS- och iPadOS-enheter.
 keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,16 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c97a3ad329ce0e431c6dc8ef318306e4e002f36
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: e6c4d08d1010654a16e13981a0d3353b2418524a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207119"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512882"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
-
-
 
 Med Intune kan du hantera telekomutgifter från dataanvändning på företagsägda mobilenheter. Intune kan integreras med Saaswedos [kostnadsuppföljningstjänst för telekommunikation Datalert](http://datalert.biz/get-started). Datalert är en programvara för kostnadsuppföljning av telekommunikation som låter dig hantera telekommunikationens dataanvändning. Den hjälper dig att undvika kostsam och oväntad överförbrukning av data och nätverksväxling för dina Intune-hanterade enheter.
 
@@ -51,6 +49,7 @@ Om du vill använda Datalert-tjänsten med Intune finns det vissa konfigurations
   [Android-versioner som har stöd för Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (öppnar Samsung webbplats) visar en lista över de Knox-versioner som stöds.
 
 - iOS 8.0 och senare
+- iPadOS 13.0 och senare
 
 ## <a name="prerequisites"></a>Krav
 
@@ -136,11 +135,11 @@ Dessa kategorier visas för användare under registreringen ([registrera Android
 
 #### <a name="add-the-datalert-app-to-intune"></a>Lägg till Datalert-appen i Intune
 
-Följande steg lägger till Datalert-appen. I detta exempel används iOS. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
+Följande steg lägger till Datalert-appen. I detta exempel används iOS/iPadOS. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
 
 1. Välj **Appar** > **Alla appar** > **Lägg till** i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Välj din **Apptyp**. För iOS väljer du till exempel **Store-app – iOS**.
+2. Välj din **Apptyp**. För iOS/iPadOS väljer du till exempel **Store-app – iOS/iPadOS**.
 
 3. I **Sök App Store** skriver du **Datalert** för att hitta Datalert-appen.
 
@@ -178,7 +177,7 @@ Tjänsten Datalert är nu aktiv. Den börjar övervaka dataanvändningen och ina
 
 För slutanvändarupplevelsen kan följande artiklar vara användbara:
 
-- [Registrera iOS-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [Registrera iOS/iPadOS-enheten i kostnadshanteringsprogrammet för telekomtjänster](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
 - [Registrera Android-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turn-off-the-datalert-service"></a>Stänga av tjänsten Datalert

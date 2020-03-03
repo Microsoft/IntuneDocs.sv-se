@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7018e2ab4290219c752f44b4b391822438461e8e
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: d2f984392983d81bc64edb7206469babdb806d63
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415098"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609301"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -55,11 +55,120 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också hitta [viktig
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-february-24-2020"></a>Den vecka som börjar den 24 februari 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Apphantering
+
+#### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>Förbättringar av användarupplevelsen i företagsportalen för macOS<!-- 5568987 -->
+Vi har förbättrat registreringsupplevelsen för macOS-enheter och företagsportalappen för Mac. Du kommer att se följande:
+- En bättre Microsoft **AutoUpdate**-upplevelse under registreringen som ser till att användarna har den senaste versionen av företagsportalen.
+- En bättre kompatibilitetskontroll under registreringen.
+- Stöd för kopierade incident-ID:n så att användarna snabbare kan skicka fel från sina enheter till företagets supportteam.
+
+Mer information om registrering och företagsportalappen för Mac finns i [Registrera din macOS-enhet med hjälp av företagsportalappen](/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+
+<!-- ########################## -->
+## <a name="week-of-february-17-2020-2002-service-release"></a>Den vecka som börjar den 17 februari 2020 (tjänstversionen 2002)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Apphantering
+
+#### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424618---"></a>Appen Microsoft Defender Avancerat skydd (ATP) för macOS<!-- 5424618 -->
+Intune tillhandahåller ett enkelt sätt att distribuera appen Microsoft Defender Avancerat skydd (ATP) för macOS till hanterade Mac-enheter. Mer information finns i [Add Microsoft Defender ATP to macOS devices using Microsoft Intune](~/apps/apps-advanced-threat-protection-macos.md) (Lägga till Microsoft Defender ATP i macOS-enheter med Microsoft Intune) och [Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (Microsoft Defender Avancerat skydd för Mac).  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Enhetskonfiguration
+
+#### <a name="enable-network-access-control-nac-with-cisco-anyconnect-vpn-on-ios-devices---4860111----"></a>Aktivera nätverksåtkomstkontroll med Cisco AnyConnect VPN på iOS-enheter<!-- 4860111  -->
+På iOS-enheter kan du skapa en VPN-profil och använda olika anslutningstyper, inklusive Cisco AnyConnect (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** som plattform > **VPN** som profiltyp > **Cisco AnyConnect** som anslutningstyp). 
+
+Du kan aktivera nätverksåtkomstkontroll med Cisco AnyConnect. Gör så här för att använda funktionen:
+
+1. I [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) använder du anvisningarna i **Configuring Microsoft Intune as an MDM Server** (Konfigurera Microsoft Intune som en MDM-server) för att konfigurera Cisco Identity Services Engine (ISE) i Azure.
+2. I enhetskonfigurationsprofilen för Intune väljer du inställningen **Aktivera nätverksåtkomstkontroll**.
+
+Om du vill se alla tillgängliga VPN-inställningar går du till [Konfigurera VPN-inställningar på iOS-enheter](../configuration/vpn-settings-ios.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Enhetsregistrering
+
+#### <a name="serial-number-on-the-apple-mdm-push-certificate-page--5947765----"></a>Serienummer på sidan för Apple MDM-pushcertifikat<!--5947765  -->
+Nu visas serienumret på sidan för Apple MDM-pushcertifikat. Serienumret behövs för att få åtkomst till Apple MDM-pushcertifikatet om åtkomsten till det Apple-ID som skapade certifikatet skulle förloras. Om du vill visa serienumret går du till **Devices (Enheter)** > **iOS** > **iOS enrollment (iOS-registrering)** > **Apple MDM Push certificate (Apple MDM-pushcertifikat)**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Enhetshantering
+
+#### <a name="new-update-schedule-options-for-pushing-os-updates-to-enrolled-iosipados-devices--5879689----"></a>Nya alternativ för uppdateringsschemat för att skicka OS-uppdateringar till registrerade iOS/iPadOS-enheter<!--5879689  -->
+Du kan använda följande alternativ när du schemalägger operativsystemsuppdateringar för iOS/iPadOS-enheter. Detta gäller för enheter som använde registreringstypen Apple Business Manager eller Apple School Manager.
+- Uppdatera vid nästa incheckning
+- Uppdatera under schemalagd tid
+- Uppdatera utanför schemalagd tid
+
+För de två sista alternativen kan du skapa flera tidsperioder.
+
+Om du vill se de nya alternativen går du till MEM > **Devices (Enheter)** > **iOS** > **Update policies for iOS/iPadOS (Uppdateringsprinciper för iOS/iPadOS)** > **Create profile (Skapa profil)**.
+
+#### <a name="choose-which-iosipados-updates-to-push-to-enrolled-devices--5879689----"></a>Välja vilka iOS/iPadOS-uppdateringar som ska skickas till registrerade enheter<!--5879689  -->
+Du kan välja en specifik iOS/iPadOS-uppdatering (med undantag för den senaste uppdateringen) som ska skickas till enheter som har registrerats med hjälp av antingen Apple Business Manager eller Apple School Manager. För dessa enheter måste en enhetskonfigurationsprincip anges för att fördröja programuppdateringens synlighet ett antal dagar. Om du vill se den här funktionen går du till MEM > **Devices (Enheter)** > **iOS** > **Update policies for iOS/iPadOS (Uppdateringsprinciper för iOS/iPadOS)** > **Create profile (Skapa profil)**.
+
+### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Listan Alla enheter har förbättrad sökning, sortering och filtrering<!--6179023-->
+Prestanda, sökning, sortering och filtrering har förbättrats för listan Alla enheter.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Enhetssäkerhet
+
+#### <a name="improved-intune-reporting-experience---3791418-----"></a>Förbättrad rapporteringsupplevelse i Intune<!-- 3791418   -->
+Intune har nu en förbättrad rapporteringsupplevelse, inklusive nya rapporttyper, bättre rapportorganisation, mer fokuserade vyer, förbättrade rapportfunktioner samt mer konsekventa och tidsrelevanta data. Rapporteringsupplevelsen kommer att flyttas från allmänt tillgänglig förhandsversion till GA (allmän tillgänglighet). Dessutom tillhandahåller GA-versionen lokaliseringsstöd, felkorrigeringar, designförbättringar och aggregerade enhetsefterlevnadsdata på paneler i [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+
+De nya rapporttyperna fokuserar på följande:
+- **Drift** – tillhandahåller färska poster med fokus på driftproblem. 
+- **Organisation** – innehåller en bred sammanfattning av det övergripande läget.
+- **Historisk** – visar mönster och trender under en viss tidsperiod.
+- **Specialist** – låter dig använda rådata för att skapa dina egna anpassade rapporter.
+
+Den första uppsättningen nya rapporter fokuserar på enhetsefterlevnad. Mer information finns i [Blogg – Rapporteringsramverk i Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) och [Intune-rapporter](~/fundamentals/reports.md).
+
+#### <a name="consolidated-the-location-of-security-baselines-in-the-ui---6177074-----"></a>Platsen för säkerhetsbaslinjer i användargränssnittet har konsoliderats<!-- 6177074   -->
+Vi har konsoliderat sökvägarna till [säkerhetsbaslinjer](../protect/security-baselines.md) i administrationscentret för Microsoft Endpoint Manager genom att ta bort *Säkerhetsbaslinjer* från flera platser i användargränssnittet. Nu använder du följande sökväg för att nå säkerhetsbaslinjer:  **Slutpunktssäkerhet** > **Säkerhetsbaslinjer**.
+
+#### <a name="expanded-support-for-imported-pkcs-certificates---6044197-wnready---"></a>Utökat stöd för importerade PKCS-certifikat<!-- 6044197 WNReady -->
+Vi har utökat stödet för användning av [importerade PKCS-certifikat](../protect/certificates-imported-pfx-configure.md#supported-platforms) för att stödja *fullständigt hanterade Android Enterprise-enheter*. Normalt används import av PFX-certifikat för S/MIME-krypteringsscenarier, där användaren måste ha krypteringscertifikat på alla sina enheter för att e-postkrypteringen ska kunna utföras.
+
+Import av PFX-certifikat stöds för följande plattformar:
+- Android – enhetsadministratör
+- Android Enterprise – fullständigt hanterad
+- Android Enterprise – arbetsprofil
+- iOS
+- Mac
+- Windows 10
+
+#### <a name="view-the-endpoint-security-configuration-for-devices---6206460----"></a>Visa konfiguration av slutpunktssäkerhet för enheter<!-- 6206460  -->
+Vi har ändrat namnet på det alternativ i administrationscentret för Microsoft Endpoint Manager som visar de [slutpunktssäkerhetsinställningar som gäller för en viss enhet](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). Namnet på det här alternativet har ändrats till **Konfiguration av slutpunktssäkerhet** eftersom det visar tillämpliga säkerhetsbaslinjer och ytterligare principer som skapats utanför säkerhetsbaslinjerna. Tidigare hette det här alternativet *Säkerhetsbaslinjer*. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>Rollbaserad åtkomstkontroll
+
+#### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Användargränssnittsändringar i Intune-roller kommer<!--5801612   -->
+Användargränssnittet för [Microsoft Endpoint Manager-administrationscenter](https://go.microsoft.com/fwlink/?linkid=2109431) > **Innehavaradministratör** > **Roller** har fått en mer användarvänlig och intuitiv design. De här funktionerna tillhandahåller samma inställningar och information som du använder nu, men de nya funktionerna använder en guideliknande process.
+
+<!-- ########################## -->
+## <a name="week-of-february-17-2020"></a>Den vecka som börjar den 17 februari 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Apphantering
+
+#### <a name="microsofts-new-office-app---5859926---"></a>Microsofts nya Office-app<!-- 5859926 -->
+Microsofts nya Office-app är nu allmänt tillgänglig för hämtning och användning. Med Office-appen kan du arbeta i Word, Excel och PowerPoint från en enda app. Du kan använda en appskyddsprincip för appen för att skydda åtkomsten till data.
+
+Mer information finns i [How to enable Intune app protection policies with the Office mobile preview app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493) (Aktivera appskyddsprinciper i Intune med förhandsversionen av Office-appen).
+
+<!-- ########################## -->
 ## <a name="week-of-february-10-2020"></a>Den vecka som börjar den 10 februari 2020
 
-### <a name="windows-7-ends-extended-support---3042987--"></a>Utökad support för Windows 7 avslutas <!--3042987-->
+### <a name="windows-7-ends-extended-support--3042987---"></a>Utökad support för Windows 7 avslutas<!--3042987 -->
 Utökad support för Windows 7 avslutades den 14 januari 2020. Inaktuella Intunes stöd för enheter som kör Windows 7 avslutas på samma gång. Teknisk hjälp och automatiska uppdateringar som hjälper till att skydda din dator är inte längre tillgängliga. Du bör uppgradera till Windows 10. Mer information finns i blogginlägget [Planera för förändring](https://aka.ms/Windows7_Intune).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Apphantering
@@ -137,7 +246,6 @@ Följande information finns nu på sidan **Översikt** för enheter:
 - Minneskapacitet (mängden fysisk lagring på enheten) 
 - CPU-arkitektur
 
-
 #### <a name="ios-bypass-activation-lock-remote-action-renamed-to-disable-activation-lock---5904591----"></a>iOS-fjärråtgärden Kringå aktiveringslås har bytt namn till att Inaktivera aktiveringslås <!--5904591  -->
 Fjärråtgärden **Kringå aktiveringslås** har bytt namn till **Inaktivera aktiveringslås**. Mer information finns i [Inaktivera iOS-aktiveringslås med Intune](../remote-actions/device-activation-lock-bypass.md).
 
@@ -145,7 +253,6 @@ Fjärråtgärden **Kringå aktiveringslås** har bytt namn till **Inaktivera akt
 Intune har nu stöd för registrerade Autopilot-enheter genom [distribution av funktionsuppdateringar i Windows 10](../protect/windows-update-for-business-configure.md#windows-10-feature-updates).
 
 Policyer för funktionsuppdateringar för Windows 10 kan inte tillämpas samtidigt som Autopilot-välkomstprogrammet körs och tillämpas endast vid den första Windows Update-genomsökningen när en enhet har etablerats färdigt (detta tar vanligtvis en dag).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
@@ -295,13 +402,12 @@ Vi har förbättrat upplevelsen på en delad enhet med flera användare som är 
 - [Översikt över enhetskompatibilitet för Intune](../protect/device-compliance-get-started.md)
 
 #### <a name="use-pkcs-certificate-profiles-to-provision-devices-with-certificates---2317124-2317130-2317139-2340517-2340528-2340529----"></a>Använd PKCS-certifikatsprofiler för att etablera enheter med certifikat<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
-Du kan nu använda PKCS-certifikatprofiler för att utfärda certifikat till *enheter* som kör Android for Work, iOS och Windows, när de är kopplade till profiler som till exempel Wi-Fi och VPN. Tidigare har de tre plattformarna endast haft stöd för användarbaserade certifikat, med enhetsbaserad support som är begränsad till macOS.
+Du kan nu använda PKCS-certifikatprofiler för att utfärda certifikat till *enheter* som kör Android for Work, iOS/iPadOS och Windows, när de är kopplade till profiler som till exempel Wi-Fi och VPN. Tidigare har de tre plattformarna endast haft stöd för användarbaserade certifikat, med enhetsbaserad support som är begränsad till macOS.
 
 > [!NOTE]
 > PKCS-certifikatprofiler stöds inte med Wi-Fi-profiler. Använd i stället SCEP-certifikatsprofiler när du använder en [EAP-typ](../configuration/wi-fi-settings-windows.md#enterprise-profile).
 
 Om du vill använda ett enhetsbaserat certifikat medan du [skapar en PKCS-certifikatfil](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) för de plattformar som stöds ska du välja **Inställningar**. Du ser nu inställningen för **Certifikattyp**, som stöder alternativen för Enhet eller Användare.
-
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -313,7 +419,6 @@ En ny centraliserad upplevelse av granskningsloggen samlar nu in granskningslogg
 #### <a name="scope-tag-information-included-in-audit-log-activity-details--5763534---"></a>Information om omfångstaggar som ingår i granskningsloggens aktivitetsinformation<!--5763534 -->
 Granskningsloggens aktivitetsinformation innehåller nu information om omfångstaggar (för Intune-objekt som stöder omfångstaggar). Mer information om gransknings loggar finns [Använda granskningsloggar för att spåra och övervaka händelser](monitor-audit-logs.md).
 
-
 <!-- ########################## -->
 ## <a name="week-of-december-2-2019"></a>Veckan som börjar med 2 december 2019
 
@@ -324,7 +429,6 @@ Configuration Manager-kunder med Software Assurance kan få Intune-samhantering 
 - Enheter på andra plattformar kräver fortfarande fullständiga Intune-licenser.
 
 Mer information finns i [Licensvillkor](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
-
 
 <!-- ########################## -->
 ## <a name="week-of-november-18-2019-1911-service-release"></a>Veckan den 18 november 2019 (1911 Service Release)
@@ -452,7 +556,6 @@ Intune har nu stöd för distribution av SCEP-enhetscertifikat till dedikerade A
 #### <a name="intune-audit-logs-for-business-to-business-collaboration--5670211---"></a>Granskningsloggar i Intune för samarbete mellan företag<!--5670211 -->
 Samarbete mellan företag (B2B) gör att du på ett säkert sätt kan dela ditt företags program och tjänster med gästanvändare från en annan organisation, samtidigt som du behåller kontrollen över dina egna företagsdata. Intune stöder nu granskningsloggar för B2B-gästanvändare. Till exempel, när gästanvändare gör ändringar kommer Intune att kunna fånga dessa data via granskningsloggar. Mer information finns i [Vad är gästanvändaråtkomst i Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b)
 
-
 <!-- ########################## -->
 ## <a name="week-of-november-11-2019"></a>Veckan som börjar den 11 november 2019  
 
@@ -469,7 +572,6 @@ Företagsportalen för macOS-registrering har en enklare registreringsprocess so
 
 #### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Webbappar som startas från Windows företagsportalapp<!-- 5030972 -->
 Slutanvändare kan nu starta webbappar direkt från Windows företagsportalapp. Slutanvändare kan välja webbappen och sedan välja alternativet **Öppna i webbläsare**. Den publicerade webbadressen öppnas direkt i webbläsaren. Den här funktionen kommer att distribueras under nästa vecka. Mer information om hur du lägger till webbappar finns i [Lägga till webbappar i Microsoft Intune](~/apps/web-app.md).  
-
 
 #### <a name="new-assignment-type-column-in-company-portal-for-windows-10----5459950----"></a>Tilldelningstyp – ny kolumn i Företagsportal för Windows 10 <!-- 5459950  -->
 Kolumnen Företagsportal > **Installerade appar** > **Tilldelningstyp** har bytt namn till **Krävs av din organisation**.  I denna kolumn visas värdet **Ja** eller **Nej** för att indikera om organisationen klassat en app som obligatorisk eller valfri. Förändringarna föranleddes av att många enhetsanvändare uttryckte förvirring kring apparnas natur. Dina användare hittar mer information om hur man installerar appar från företagsportalen i [Installera och dela appar på din enhet](/intune-user-help/install-apps-cpapp-windows). Mer information om hur du konfigurerar företagsportalappen för dina användare finns i [Så här konfigurerar du Microsoft Intune-företagsportalappen](~/apps/company-portal-app.md).  
@@ -490,3 +592,5 @@ Information om tidigare månader finns i [Nyhetsarkiv](whats-new-archive.md).
 ## <a name="notices"></a>Meddelanden
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
+
+

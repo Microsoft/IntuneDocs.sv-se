@@ -1,12 +1,12 @@
 ---
 title: Konfigurera e-postinställningar i Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Skapa en e-postprofil i Microsoft Intune och distribuera profilen till Android Enterprise-, iOS- och Windows-enheter. Använd en e-postprofil för att konfigurera vanliga e-postinställningar, inklusive en e-postserver och autentiseringsmetod metod för att ansluta till företagets e-post på enheter som du hanterar.
+description: Skapa en e-postprofil i Microsoft Intune och distribuera profilen till Android Enterprise-, iOS-, iPadOS- och Windows-enheter. Använd en e-postprofil för att konfigurera vanliga e-postinställningar, inklusive en e-postserver och autentiseringsmetod metod för att ansluta till företagets e-post på enheter som du hanterar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 110db564dce5ad68d3c2a26b85e60ecbe99e7335
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 908a20098917540e6f823d94c6643d15f13ecf68
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059433"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511093"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Lägg till e-postinställningar på enheter med Intune
 
@@ -32,6 +32,7 @@ Du kan använda e-postprofiler för att konfigurera de inbyggda e-postinställni
 - Android Samsung Knox Standard 4.0 och senare
 - Android enterprise
 - iOS 8.0 och senare
+- iPadOS 13.0 och senare
 - Windows Phone 8.1 och senare
 - Windows 10 Desktop och Windows 10 Mobile
 
@@ -89,7 +90,7 @@ Du kan skydda e-postprofiler med hjälp av följande alternativ:
 
 Om användaren redan konfigurerat ett e-postkonto, tilldelas e-postprofilen på olika sätt, beroende på plattformen.
 
-- **iOS**: En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. E-postprofildubbletten blockerar tilldelningen av en Intune-profil. I det här fallet meddelar företagsportalen användaren om att denne inte uppfyller kraven och uppmanar slutanvändaren att ta bort den manuellt konfigurerade profilen. Om du vill förhindra det här sceneriet bör du be slutanvändarna registrera sig *innan* de installerar någon e-postprofil, så att Intune kan konfigurera profilen.
+- **iOS/iPadOS**: En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. E-postprofildubbletten blockerar tilldelningen av en Intune-profil. I det här fallet meddelar företagsportalen användaren om att denne inte uppfyller kraven och uppmanar slutanvändaren att ta bort den manuellt konfigurerade profilen. Om du vill förhindra det här sceneriet bör du be slutanvändarna registrera sig *innan* de installerar någon e-postprofil, så att Intune kan konfigurera profilen.
 
 - **Windows:** En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av slutanvändaren.
 

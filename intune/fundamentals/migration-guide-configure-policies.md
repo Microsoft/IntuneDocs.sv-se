@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191be009f8d9e6fc448126834ef48f0bc6e2edc4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c8e4671790b72583219f1df64a0ef3491d707ea7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505339"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515041"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurera principer för enhetsefterlevnad och apphantering vid migrering till Microsoft Intune
 
@@ -60,11 +60,11 @@ Resursåtkomstprofiler tillhandahåller registrerade enheter med certifikat och 
 
 Du måste skapa en enhetskonfigurationsprofil om du vill framtvinga inställningar på enhetsnivå, som t.ex. avser inaktivering av kamera, App Store, konfiguration av enappsläge, startsidan och annat. Lär dig mer om [enhetsprofiler](../configuration/device-profiles.md).
 
-#### <a name="directly-import-ios-configuration-profiles-optional"></a>Direktimport av iOS-konfigurationsprofiler (valfritt)
+#### <a name="directly-import-iosipados-configuration-profiles-optional"></a>Direktimport av iOS/iPadOS-konfigurationsprofiler (valfritt)
 
 - **Apple Configurator-profiler för iOS (iOS 7.1 och senare):** Om den befintliga MDM-lösningen använder Apple Configurator-profiler (.mobileconfig-filer), kan Intune importera dem direkt som anpassade konfigurationsprinciper.
 
-- **iOS-konfigurationsprinciper för mobilappar:** Om din befintliga MDM-lösning använder iOS-konfigurationsprinciper för mobila program, kan Intune importera dem direkt förutsatt att de uppfyller det XML-format för egenskapslistor som anges av Apple.
+- **iOS-konfigurationsprinciper för mobilappar:** Om din befintliga MDM-lösning använder iOS/iPadOS-konfigurationsprinciper för mobila program, kan Intune importera dem direkt förutsatt att de uppfyller det XML-format för egenskapslistor som anges av Apple.
 
 - Lär dig hur du lägger till en anpassad princip för [iOS](../configuration/custom-settings-ios.md).
 

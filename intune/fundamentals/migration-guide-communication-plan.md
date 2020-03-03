@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f617e85e78ac5436567790d416c988742a2abe4c
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: c880251d59810dc02446020ed02fd6049878262c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956229"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515024"
 ---
 # <a name="plan-communications"></a>Planera kommunikation
 
@@ -52,7 +52,7 @@ Vi har skapat korta, stegvisa videofilmer för att hjälpa dina användare att e
 
 - [Registrera Android-enheten](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
 - [Registrera Android-arbetsprofilenheter](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
-- [Registrera din iOS-enhet](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Registrera din iOS/iPadOS-enhet](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 - [Registrera din macOS-enhet](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
 - [Registrera Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
@@ -61,5 +61,5 @@ Vi har skapat korta, stegvisa videofilmer för att hjälpa dina användare att e
 Intune har ytterligare resurser som du kan använda för att underlätta användarnas enhetsregistrering:
 
 - [Informera slutanvändare om Microsoft Intune](end-user-educate.md) beskriver registreringsstegen baserat på OS-mobilplattform.
-- I [Intune device enrollment for IT administrators](../enrollment/device-enrollment.md) (Intune-enhetsregistrering för IT-administratörer) beskrivs hur du registrerar Android-, iOS- och Mac-enheter i Intune.
-- Dela appen Företagsportal med dina Android-, iOS- och Windows-användare.
+- I [Intune-enhetsregistrering för IT-administratörer](../enrollment/device-enrollment.md) beskrivs hur du registrerar Android-, iOS/iPadOS- och Mac-enheter i Intune.
+- Dela företagsportalappen med dina Android-, iOS/iPadOS- och Windows-användare.

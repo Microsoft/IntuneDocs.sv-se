@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9deee0dca675d7fd95445131ed98ea195972c6ac
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: c134eb1fc413a32f2a27034d8c3a993f18f8a9c9
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74409863"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576267"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Självstudie: Skydda e-post i Exchange Online på hanterade enheter
 
@@ -45,7 +45,7 @@ Du behöver en testklient med följande prenumerationer för den här självstud
 
 - En Office 365 Business-prenumeration med Exchange ([kostnadsfri utvärderingsversion](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
-Innan du börjar måste du skapa en testenhetsprofil för iOS-enheter genom att följa stegen i [Snabbstart: Skapa en e-postenhetsprofil för iOS](../configuration/quickstart-email-profile.md).
+Innan du börjar måste du skapa en testenhetsprofil för iOS-enheter genom att följa stegen i [Snabbstart: Skapa en e-postenhetsprofil för iOS/iPadOS](../configuration/quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Logga in i Intune
 
@@ -162,7 +162,7 @@ Nu ska vi skapa en princip för villkorlig åtkomst som kräver att alla enhetsp
 
 ## <a name="try-it-out"></a>Prova nu
 
-Enligt de principer som du har skapat kommer en iOS-enhet som försöker logga in på e-post i Office 365 behöva registreras i Intune och använda Outlook-mobilappen för iOS. Försök logga in på Exchange Online med autentiseringsuppgifter för en användare i testklienten för att testa det här scenariot på en iOS-enhet. Du uppmanas att registrera enheten och installera Outlook-mobilappen.
+Enligt de principer som du har skapat kommer en iOS-enhet som försöker logga in på e-post i Office 365 behöva registreras i Intune och använda Outlook-mobilappen för iOS/iPadOS. Försök logga in på Exchange Online med autentiseringsuppgifter för en användare i testklienten för att testa det här scenariot på en iOS-enhet. Du uppmanas att registrera enheten och installera Outlook-mobilappen.
 
 1. Om du vill testa på en iPhone går du till **Inställningar** > **Lösenord och konton** > **Lägg till konto** > **Exchange**.
 

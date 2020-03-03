@@ -1,11 +1,11 @@
 ---
 title: Använd anpassade enhetsinställningar i Microsoft Intune – Azure | Microsoft Docs
-description: Lägg till eller skapa en profil för att använda anpassade inställningar på enheter som kör Windows Phone, Windows 8.1, Windows 10 och senare, Android, Android Enterprise, macOS eller iOS med Microsoft Intune
+description: Du kan lägga till eller skapa en profil om du vill använda anpassade inställningar på enheter som kör Windows Phone, Windows 8.1, Windows 10 och senare, Android, Android Enterprise, macOS eller iOS/iPadOS med Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c815a2c911dba6d17fc864b446122931fa88e91
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d2ca5a120e50819208743564279a5d16c6b4aa2f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73755376"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511522"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Skapa en profil med anpassade inställningar i Intune
 
 ## <a name="what-are-custom-profiles"></a>Vad är anpassade profiler
 
-Microsoft Intune innehåller många inbyggda inställningar för att styra olika funktioner på en enhet. Du kan också skapa anpassade profiler. Anpassade profiler är användbara om du vill använda enhetsinställningar och funktioner som inte är inbyggda i Intune. Dessa profiler innehåller funktioner och inställningar som du kan styra på enheter i din organisation. Du kan till exempel skapa en anpassad profil som anger samma funktioner för alla iOS-enheter.
+Microsoft Intune innehåller många inbyggda inställningar för att styra olika funktioner på en enhet. Du kan också skapa anpassade profiler. Anpassade profiler är användbara om du vill använda enhetsinställningar och funktioner som inte är inbyggda i Intune. Dessa profiler innehåller funktioner och inställningar som du kan styra på enheter i din organisation. Du kan till exempel skapa en anpassad profil som anger samma funktioner för alla iOS/iPadOS-enheter.
 
 Mer information om konfigurationsprofiler finns i [Vad är Microsoft Intune-enhetsprofiler?](device-profiles.md) 
 
-Den här artikeln innehåller länkar med anvisningar för att skapa anpassade profiler för Android, Android Enterprise, iOS, macOS och Windows.
+Den här artikeln innehåller länkar med anvisningar för att skapa anpassade profiler för Android, Android Enterprise, iOS/iPadOS, macOS och Windows.
 
 ## <a name="available-platforms"></a>Tillgängliga plattformar
 

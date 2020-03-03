@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdc704d1971dfcc46ee2c3f5550e201d7a8e89fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1cdfc7d42d3bffe1abe21deddfe146af953b150a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505185"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514956"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementera din Microsoft Intune-plan
 
@@ -39,7 +39,7 @@ De huvudsakliga kraven för ett fristående Intune är:
 
 - Office 365-prenumeration (för Office-appar och appar som hanteras av en appskyddsprincip)
 
-- Apple APNs-certifikat (för att aktivera hantering av iOS-enhetsplattform)
+- Apple APNs-certifikat (för att aktivera hantering av iOS/iPadOS-enhetsplattform)
 
 - Azure AD Connect (för katalogsynkronisering)
 
@@ -88,7 +88,7 @@ Innan du kan börja installera, konfigurera, hantera och registrera enheter med 
 
 ### <a name="task-6-enable-device-platforms"></a>Uppgift 6: Aktivera enhetsplattformar
 
-De flesta enhetsplattformar är aktiverade som standard, förutom Apple-enheter (iOS och Mac). Innan iOS-enheter kan registreras och hanteras i Intune måste enhetsplattformen vara aktiverad. Om du vill aktivera dessa enheter måste du skapa ett MDM-pushcertifikat och lägga till det i Intune.
+De flesta enhetsplattformar är aktiverade som standard, förutom Apple-enheter (iOS/iPadOS och Mac). Innan iOS/iPadOS-enheter kan registreras och hanteras i Intune måste enhetsplattformen vara aktiverad. Om du vill aktivera dessa enheter måste du skapa ett MDM-pushcertifikat och lägga till det i Intune.
 
 - Läs mer om [hur du aktiverar Apple-enheter för registrering](../enrollment/apple-mdm-push-certificate-get.md).
 
@@ -130,7 +130,7 @@ Intune stöder villkorlig åtkomst för Exchange Online, Exchange On-Premises, S
 
 ### <a name="task-13-enroll-devices"></a>Uppgift 13: Registrera enheter
 
-Intune stöder enhetsplattformarna iOS, Mac OS, Android, Windows och Windows Mobile. Registrera mobila enhetsplattformar efter behov baserat på användningsfall och krav för Intune-distributionen.
+Intune stöder enhetsplattformarna iOS/iPadOS, Mac OS, Android, Windows och Windows Mobile. Registrera mobila enhetsplattformar efter behov baserat på användningsfall och krav för Intune-distributionen.
 
 - Läs mer om att [registrera enheter](../enrollment/device-enrollment.md).
 

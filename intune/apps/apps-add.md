@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dc262dc67c967ffd2c6525c4370df8e9fa0e4dff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755280"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511845"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune 
 
@@ -52,7 +52,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | --- | --- | --- |
 | Android Store-appar  | Store-app  | Välj **Android** som **apptyp** och ange appens webbadress på Google Play. |
 | Android Enterprise-appar  | Store-app  | Välj **Android** som **apptyp** och ange appens hanterade webbadress på Google Play. <sup>1</sup> |
-| iOS Store-appar  | Store-app  | Välj **iOS** som **apptyp**, sök efter appen och välj appen i Intune. |
+| Store-appar för iOS/iPadOS  | Store-app  | Välj **iOS** som **apptyp**, sök efter appen och välj appen i Intune. |
 | Windows Phone 8.1 Store-appar  | Store-app  | Välj **Windows Phone 8.1** som **apptyp** och ange appens webbadress på Microsoft Store. |
 | Microsoft Store-appar  | Store-app  | Välj **Windows** som **apptyp** och ange appens webbadress på Microsoft Store. |
 | Google Play-appar som hanteras | Store-app  | Välj **Hanterad Google Play** som **apptyp**, sök efter appen och välj appen i Intune. |
@@ -61,10 +61,10 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | Microsoft Edge version 77 och senare för Windows 10 | Store-app | Välj **Windows 10** under **Microsoft Edge, version 77 och senare** som **apptyp**. |
 | Microsoft Edge version 77 och senare för Windows 10 | Store-app | Välj **macOS** under **Microsoft Edge, version 77 och senare** som **apptyp**. |
 | Verksamhetsspecifika appar för Android | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Android-installationsfil med tillägget **.apk**.  |
-| iOS LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en iOS-installationsfil med tillägget **.ipa**.  |
+| Verksamhetsspecifika appar för iOS/iPadOS | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en iOS/iPadOS-installationsfil med tillägget **.ipa**.  |
 | Windows Phone LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Windows Phone-installationsfil med tillägget **.xap**.  |
 | Verksamhetsspecifika Windows-appar | Verksamhetsspecifik app | Välj **Branschspecifik** app som apptyp, välj **Appaketfil** och ange sedan en Windows-installationsfil med tillägget **.msi**, **.appx**, **.appxbundle**, **.msix** eller **.msixbundle**. |
-| Inbyggd iOS-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
+| Inbyggd iOS/iPadOS-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Inbyggd Android-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Webbappar  | Webbapp  | Välj **Webblänk** som **apptyp** och ange sedan en giltig URL som pekar till webbappen.  |
 | Android Enterprise-systemprogram  | Store-app  | Välj **Android Enterprise-systemapp** som **apptyp** och ange sedan appens namn, utgivare och paketfil.  |
@@ -77,7 +77,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 Du kan lägga till en app i Microsoft Intune genom att välja **Appar** > **Alla appar** > **Lägg till**. Fönstret **Välj apptyp** visas där du kan välja **Apptyp**. 
 
 >[!TIP]
-> En verksamhetsspecifik app är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en iOS LOB-app lägger du till programmet genom att välja **Branschspecifik app** som **Apptyp** i fönstret **Välj apptyp**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
+> En verksamhetsspecifik app är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en verksamhetsspecifik iOS/iPadOS-app lägger du till appen genom att välja **Branschspecifik app** som **Apptyp** i fönstret **Välj apptyp**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
 
 ## <a name="assess-app-requirements"></a>Utvärdera appkrav
 Som IT-administratör ska du inte bara bestämma vilka appar gruppen måste använda, utan du ska även bestämma vilka funktioner som behövs för varje grupp och undergrupp. För varje app ska du besluta vilka plattformar som behövs, vilka användargrupper som behöver appen, vilka konfigurationsprinciper som ska gälla för grupperna och vilka skyddsprinciper som ska gälla.  
@@ -109,8 +109,8 @@ Använd [guiden för planering, utformning och implementering för distribution 
 ### <a name="determine-the-type-of-app-for-your-solution"></a>Bestämma typ av app för en lösning
 
 Du kan välja bland följande app-typer:
-- **Appar från butiken**: Appar som har laddats upp till antingen Microsoft Store, iOS Store eller Android Store kallas för butiksappar. En store-apps provider underhåller och tillhandahåller uppdateringar för appen. Du väljer appen i Store-listan och lägger till den med hjälp av Intune som en app som är tillgänglig för användarna.
-- **Appar som har skrivits internt (verksamhetsspecifika)** : Appar som har skapats internt kallas för verksamhetsspecifika appar (LOB). Funktionerna i den här apptypen har skapats för någon av plattformarna som stöds av Intune, som Windows, iOS, macOS eller Android. Din organisation skapar och förser dig med uppdateringar som en separat fil. Du ger användarna uppdateringar för appen genom att lägga till och distribuera uppdateringarna med Intune.
+- **Appar från butiken**: Appar som har laddats upp till antingen Microsoft Store, iOS/iPadOS Store eller Android Store kallas för Store-appar. En store-apps provider underhåller och tillhandahåller uppdateringar för appen. Du väljer appen i Store-listan och lägger till den med hjälp av Intune som en app som är tillgänglig för användarna.
+- **Appar som har skrivits internt (verksamhetsspecifika)** : Appar som har skapats internt kallas för verksamhetsspecifika appar (LOB). Funktionerna i den här apptypen har skapats för någon av plattformarna som stöds av Intune, som Windows, iOS/iPadOS, macOS eller Android. Din organisation skapar och förser dig med uppdateringar som en separat fil. Du ger användarna uppdateringar för appen genom att lägga till och distribuera uppdateringarna med Intune.
 - **Appar på webben**: Webbappar är klientserverprogram. Servern tillhandahåller webbappen, som inkluderar användargränssnitt, innehåll och funktioner. Dessutom erbjuder moderna webbtjänstplattformar dessutom vanligen säkerhet, belastningsutjämning och andra förmåner. Den här typen av app underhålls separat på webben. Du använder Intune för att peka på den här apptypen. Du tilldelar också vilka användargrupper som ska kunna få åtkomst till den här appen. Observera att Android inte har stöd för webbappar.
 
 När du bestämmer vilka appar som krävs för din organisation behov, bör du överväga hur apparna integrerar med molntjänster, vilka data apparna kan få åtkomst till, om apparna är tillgängliga för BYOD-användare och om apparna kräver internetåtkomst.
@@ -128,7 +128,7 @@ Intune-hanterade appar kan även aktivera appskydd utan att kräva registrering.
 
 ### <a name="understanding-licensed-apps"></a>Förstå licensierade appar
 Utöver att förstå webbappar, Store-appar och verksamhetsspecifika appar bör du också vara medveten om destinationen för appar för volymköpsprogram och licensierade appar som: 
-- **Apples volyminköpsprogram för företag (iOS)** : I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag. Mer information finns i [Hantera volyminköpta iOS-appar](vpp-apps-ios.md).
+- **Apples volyminköpsprogram för företag (iOS)** : I iOS/iPadOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag. Mer information finns i [Hantera volyminköpta iOS/iPadOS-appar](vpp-apps-ios.md).
 - **Android-arbetsprofil**: Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till vanliga Android-enheter. Alla appar som du installerar för Android-arbetsprofiler kommer från den hanterade Google Play-butiken. Du använder Intune för att bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
 - **Microsoft Store för företag (Windows 10)** : I Microsoft Store för företag kan du söka efter och köpa appar till din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program i Azure-portalen. Mer information finns i [Hantera appar från Microsoft Store för företag](windows-store-for-business.md).
 
@@ -139,7 +139,7 @@ Utöver att förstå webbappar, Store-appar och verksamhetsspecifika appar bör 
 Tänk på följande innan du börjar lägga till och tilldela appar:
 
 - När du lägger till och tilldelar en app från en butik måste din användare ha ett konto med den butiken för att kunna installera appen.
-- Vissa appar eller objekt som du tilldelar kan vara beroende av inbyggda iOS-appar. Om du till exempel tilldelar en bok från iOS Store måste appen iBooks finnas på enheten. Om du har tagit bort den inbyggda iBooks-appen, kan du inte använda Intune för att återinföra den.
+- Vissa appar eller objekt som du tilldelar kan vara beroende av inbyggda iOS/iPadOS-appar. Om du till exempel tilldelar en bok från iOS/iPadOS Store måste appen iBooks finnas på enheten. Om du har tagit bort den inbyggda iBooks-appen, kan du inte använda Intune för att återinföra den.
 
 > [!IMPORTANT]
 > Om du ändrar namnet på appen via Intune i Azure Portal när du har distribuerat och installerat den kan du inte längre använda appen som mål i dina kommandon.
@@ -153,7 +153,7 @@ Krav för lagringsutrymme i molnet:
 - Den maximala filstorleken för en fil som du överför är 8 GB.
 
   > [!NOTE]
-  > Windows verksamhetsspecifika appar (LOB), inklusive Win32, Windows Universal AppX, Windows Universal AppX-paket, Windows Universal MSI X och Windows Universal MSI X-paket, har en maximal storleksgräns på 8 GB per app. Alla andra LOB-appar, inklusive LOB-appar för iOS, har en maximal storleksgräns på 2 GB per app.
+  > Windows verksamhetsspecifika appar (LOB), inklusive Win32, Windows Universal AppX, Windows Universal AppX-paket, Windows Universal MSI X och Windows Universal MSI X-paket, har en maximal storleksgräns på 8 GB per app. Alla andra verksamhetsspecifika appar, inklusive verksamhetsspecifika appar för iOS/iPadOS, har en maximal storleksgräns på 2 GB per app.
 
 ## <a name="create-and-edit-categories-for-apps"></a>Skapa och redigera kategorier för appar
 

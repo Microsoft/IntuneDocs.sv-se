@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 514baf3395a2cad9682e6c070b8615f320cc214c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0f543d38b6688b03126e8fb7d5666c1383b2fc0f
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801465"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576492"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrera Check Point SandBlast Mobile med Intune
 
@@ -74,7 +74,7 @@ Check Point SandBlast-appauktoriseringsprocessen består av följande steg:
 
 4. Välj **Microsoft Intune** i listrutan **MDM Service** (MDM-tjänst).
 
-5. När du har angett Microsoft Intune som MDM-tjänsten visas fönstret **Microsoft Intune Configuration** (Microsoft Intune-konfiguration). Välj **Add to my organization** (Lägg till i min organisation) för respektive enhetsplattform – iOS, Android och Windows – för att ge Check Point SandBlast Mobile tillstånd att kommunicera med Intune och Azure AD.
+5. När du har angett Microsoft Intune som MDM-tjänst visas fönstret **Microsoft Intune Configuration** (Microsoft Intune-konfiguration). Välj **Add to my organization** (Lägg till i min organisation) för respektive enhetsplattform – iOS/iPadOS, Android och Windows – för att ge Check Point SandBlast Mobile tillstånd att kommunicera med Intune och Azure AD.
 
     ![Bild som visar Check Point MTD Intune-konfiguration](./media/checkpoint-sandblast-mobile-mtd-connector-integration/checkpoint-MTD-1.PNG)
 

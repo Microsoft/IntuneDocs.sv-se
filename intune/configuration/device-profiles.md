@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 951d3df8b842f1a0e76f875ea9fc7921c413494f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206626"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513085"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Tillämpa funktioner och inställningar på dina enheter med enhetsprofiler i Microsoft Intune
 
 
 
-Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter och plattformar, till exempel iOS, Android och Windows. Använd sedan Intune för att tillämpa eller ”tilldela” profilen till enheterna.
+Microsoft Intune innehåller inställningar och funktioner som du kan aktivera eller inaktivera på olika enheter i din organisation. Dessa inställningar och funktioner läggs till i ”konfigurationsprofiler”. Du kan skapa profiler för olika enheter och plattformar, till exempel iOS/iPadOS, Android och Windows. Använd sedan Intune för att tillämpa eller ”tilldela” profilen till enheterna.
 
 Använd dessa konfigurationsprofiler som en del av din lösning för hantering av mobilenheter till att utföra olika uppgifter. Några profilexempel:
 
 - På Windows 10-enheter använder du en profilmall som blockerar ActiveX-kontroller i Internet Explorer.
-- Tillåt användare på iOS- och macOS-enheter att använda AirPrint-skrivare i organisationen.
+- Tillåt användare på iOS/iPadOS- och macOS-enheter att använda AirPrint-skrivare i organisationen.
 - Tillåt eller förhindra åtkomst till Bluetooth på enheten.
 - Skapa en WiFi- eller VPN-profil som ger olika enheter åtkomst till företagsnätverket.
 - Hantera programuppdateringar, till exempel när de installeras.
@@ -67,7 +67,7 @@ Den här funktionen stöder:
 
 ## <a name="custom-profile"></a>Anpassad profil
 
-Med [Anpassade inställningar](custom-settings-configure.md) kan administratörer tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan ange OMA-URI-värden på Android-enheter. På iOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator.
+Med [Anpassade inställningar](custom-settings-configure.md) kan administratörer tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan ange OMA-URI-värden på Android-enheter. På iOS/iPadOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator.
 
 Den här funktionen stöder:
 
@@ -89,7 +89,7 @@ Den här funktionen stöder:
 
 ## <a name="device-features"></a>Enhetsfunktioner
 
-[Enhetsfunktioner](device-features-configure.md) styr funktioner på iOS- och macOS-enheter, t.ex. AirPrint, meddelanden och låsskärmsmeddelanden.
+[Enhetsfunktioner](device-features-configure.md) styr funktioner på iOS/iPadOS- och macOS-enheter, t.ex. AirPrint, meddelanden och låsskärmsmeddelanden.
 
 Den här funktionen stöder:
 
@@ -106,7 +106,7 @@ Den här funktionen stöder:
 
 ## <a name="device-restrictions"></a>Enhetsbegränsningar
 
-[Enhetsbegränsningar](device-restrictions-configure.md) styr säkerhet, maskinvara, delning av data och fler inställningar på enheter. Du kan till exempel skapa en profil för enhetsbegränsningar som förhindrar användare av iOS-enheter från att använda kameran på enheten. 
+[Enhetsbegränsningar](device-restrictions-configure.md) styr säkerhet, maskinvara, delning av data och fler inställningar på enheter. Du kan till exempel skapa en profil för enhetsbegränsningar som förhindrar användare av iOS/iPadOS-enheter från att använda kameran på enheten. 
 
 Den här funktionen stöder:
 
@@ -129,7 +129,7 @@ Den här funktionen stöder:
 
 Konfigurationsalternativen [Utbildningsinställningar – Windows 10](education-settings-configure.md) för [appen Windows Take a Test](https://education.microsoft.com/gettrained/win10takeatest). När du konfigurerar dessa alternativ kan inga andra appar köras på enheten förrän provet har slutförts.
 
-I [Utbildningsinställningar – iOS](../fundamentals/education-settings-configure-ios-shared.md) används iOS-appen Classroom som hjälp för och stöd till elevernas enheter i klassrummet. Du kan konfigurera iPad-enheter så att många elever kan dela en enda enhet.
+I [Utbildningsinställningar – iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) används iOS/iPadOS-appen Classroom som hjälp för och stöd till elevernas enheter i klassrummet. Du kan konfigurera iPad-enheter så att många elever kan dela en enda enhet.
 
 ## <a name="email"></a>E-post
 
@@ -186,7 +186,7 @@ Den här funktionen stöder:
 
 - Windows 10 och senare
 
-Inställningar för helskärmsläge finns också som enhetsbegränsningar för [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) och [iOS](device-restrictions-ios.md#kiosk).
+Inställningar för helskärmsläge finns också som enhetsbegränsningar för [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) och [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -219,7 +219,7 @@ Den här funktionen stöder:
 
 ## <a name="update-policies"></a>Uppdateringsprinciper
 
-I [Uppdateringsprinciper för iOS](../protect/software-updates-ios.md) visas hur du skapar och tilldelar iOS-principer för installering av programuppdateringar på iOS-enheterna. Du kan också granska installationsstatusen.
+I [Uppdateringsprinciper för iOS/iPadOS](../protect/software-updates-ios.md) visas hur du skapar och tilldelar iOS/iPadOS-principer för installering av programuppdateringar på iOS/iPadOS-enheterna. Du kan också granska installationsstatusen.
 
 Se [Leveransoptimering](delivery-optimization-windows.md) för uppdateringsprinciper på Windows-enheter. 
 

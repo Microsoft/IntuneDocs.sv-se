@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/10/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4db1a1a74c1a19f310aba0f1c10ed5d01869073f
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: 02fa3acdaf0dc450afee97dfaaf5870166013356
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258138"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569531"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurera och använda importerade PKCS-certifikat med Intune
 
@@ -31,6 +31,17 @@ Microsoft Intune stöder användningen av importerade PKCS-certifikat (certifika
 S/MIME-kryptering är utmanande eftersom e-post krypteras med ett specifikt certifikat. Du måste ha den privata nyckeln för certifikatet som krypterade e-postmeddelandet på enheten där du läser e-postmeddelandet så att den kan dekrypteras. Krypteringscertifikat förnyas regelbundet, vilket betyder att du kanske behöver din krypteringshistorik på alla dina enheter för att se till att du kan läsa äldre e-post.  Eftersom samma certifikat måste användas på olika enheter kan du inte använda [SCEP](certificates-scep-configure.md)- eller [PKCS](certficates-pfx-configure.md)-certifikatprofiler för detta ändamål eftersom dessa certifikatleveransmekanismer levererar unika certifikat per enhet.
 
 Mer information om användning av S/MIME med Intune finns i [Använda S/MIME för att kryptera e-post](certificates-s-mime-encryption-sign.md).
+
+## <a name="supported-platforms"></a>Plattformar som stöds
+
+Intune stöder import av PFX-certifikat för följande plattformar:
+
+- Android – enhetsadministratör
+- Android Enterprise – fullständigt hanterad
+- Android Enterprise – arbetsprofil
+- iOS
+- Mac
+- Windows 10
 
 ## <a name="requirements"></a>Krav
 
@@ -49,6 +60,8 @@ Om du vill använda importerade PKCS-certifikat med Intune behöver du följande
 - **Windows Server**:
 
   Du använder Windows Server som värd för PFX-certifikatanslutningsappen för Microsoft Intune.  Anslutningsappen används för att bearbeta begäranden för certifikat som importerats till Intune.
+  
+  Anslutningsappen måste ha åtkomst till samma portar som för hanterade enheter. Dessa beskrivs i vår [information om slutpunkter för enheter](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune stöder installation av *Microsoft Intune Certificate Connector* på samma server som *PFX-certifikatanslutningsappen för Microsoft Intune*.
 

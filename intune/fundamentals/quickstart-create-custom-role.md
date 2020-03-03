@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c61449e17b96151d2717365e5193fd6c4bdaae3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5b38df90e47e709e02f12a6ccdab68714d04ca93
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509892"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575872"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Snabbstart: Skapa och tilldela en anpassad roll
 
@@ -77,4 +77,4 @@ I den här snabbstarten har du skapat en anpassad säkerhetsåtgärdsroll och ti
 Om du vill följa den här serien med Intune-snabbstarter fortsätter du till nästa snabbstart.
 
 > [!div class="nextstepaction"]
-> [Snabbstart: Skapa en e-postenhetsprofil för iOS](../configuration/quickstart-email-profile.md)
+> [Snabbstart: Skapa en e-postenhetsprofil för iOS/iPadOS](../configuration/quickstart-email-profile.md)

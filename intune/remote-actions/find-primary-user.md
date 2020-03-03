@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbafca746c43dada6281ffbfe1e34f01afa8ab91
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 7ff03682ab406b92e3ea7f1e416188119913cc87
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413682"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569463"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Hitta den primära användaren av en Intune-enhet
 
 Primär användare, även kallat mappning mellan användare och enhet, är en egenskap för varje enhet i Intune. En Intune-enhet kan ha noll eller en primär användare tilldelad. När det inte finns någon primär användare tilldelad, kallas enheten en ”delad enhet”.
 
-## <a name="how-to-find-a-devices-primary-user"></a>Så här hittar du en enhets primära användare
+## <a name="find-a-devices-primary-user"></a>Hitta en enhets primära användare
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Enheter** > välj en enhet.
@@ -38,7 +38,7 @@ Primär användare, även kallat mappning mellan användare och enhet, är en eg
 Egenskapen Primär användare används för att mappa en licensierad Intune-användare till sina enheter i
 - Företagsportalsappen
 - webbplatsen för slutanvändare
-- IT-processer som felsökningsidorna i Microsoft Azure-portalen. Dessa sidor mappar användarkonton till enheter med hjälp av den primära användaren.    
+- IT-processer som felsökningsidorna i Microsoft Azure-portalen. Dessa sidor mappar användarkonton till enheter med hjälp av den primära användaren. 
 
 ### <a name="company-portal-app"></a>Företagsportalappen
 Företagsportalappen förväntar sig att det användarkonto som har loggat in på företagsportalen är den primära användaren på den aktuella enheten. Om en annan användare har tilldelats som primär användare, visas en varning i företagsportalen:

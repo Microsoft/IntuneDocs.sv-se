@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2f1be7a2457cca7da62883370c9e273168c6a29
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c550fba45e5e6b16e49e7103fde40de1e08ba55
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502438"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576473"
 ---
 # <a name="data-intune-sends-to-apple"></a>Data som Intune skickar till Apple
 
@@ -59,7 +59,7 @@ I följande tabell visas de data som Microsoft Intune skickar från en enhet til
 | ASM/DEP | profile_status | Status för profilinstallationen. Möjliga värden: **tom**, **tilldelad**, **push-överförd** eller **borttagen**. |
 | ASM/DEP | profile_uuid | Unikt ID för den tilldelade profilen. |
 | ASM/DEP | device_assigned_by | E-postadress till den person som tilldelade enheten. |
-| ASM/DEP | os | Enhetens operativsystem: iOS, OSX eller tvOS. Den här nyckeln är giltig i X-Server-Protocol-Version 2 eller senare. |
+| ASM/DEP | os | Enhetens operativsystem: iOS/iPadOS, OSX eller tvOS. Den här nyckeln är giltig i X-Server-Protocol-Version 2 eller senare. |
 | ASM/DEP | device_family | Enhetens Apple-produktfamilj: iPad, iPhone, iPod, Mac eller AppleTV. Den här nyckeln är giltig i X-Server-Protocol-Version 2 eller senare. |
 | ASM/DEP | profile_name | Sträng. Ett läsbart namn för profilen. |
 | ASM/DEP | support_phone_number | Valfritt. Sträng. Supportens telefonnummer för organisationen. |

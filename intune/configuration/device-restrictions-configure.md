@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c86252030a4baf957077cd889386bb8016554f1
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 53985a9af523ecf60efda5c5c651161c132e326c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206575"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511229"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurera inställningar för enhetsbegränsningar i Microsoft Intune
 
 
 
-Intune innehåller principer för begränsning av enheter som hjälper administratörer att kontrollera Android-, iOS-, macOS-, och Windows-enheter. Med dessa begränsningar kan du kontrollera en mängd olika inställningar och funktioner för att skydda din organisations resurser. Administratörerna kan exempelvis:
+Intune innehåller principer för begränsning av enheter som hjälper administratörer att kontrollera Android-, iOS/iPadOS-, macOS-, och Windows-enheter. Med dessa begränsningar kan du kontrollera en mängd olika inställningar och funktioner för att skydda din organisations resurser. Administratörerna kan exempelvis:
 
 - Tillåt eller blockera enhetens kamera
 - Kontrollera åtkomst till Google Play, App Store, dokumentvisning och spel
@@ -44,7 +44,7 @@ Den här artikeln beskriver hur du skapar en enhetsbegränsningsprofil. Artikeln
 2. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil**.
 3. Ange följande egenskaper:
 
-    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett exempel på ett bra principnamn är **iOS: Blockera kameran på enheterna**.
+    - **Namn**: Ange ett beskrivande namn på principen. Namnge dina principer så att du enkelt kan identifiera dem senare. Ett exempel på ett bra principnamn är **iOS/iPadOS: Blockera kameran på enheterna**.
     - **Beskrivning**: Ange en beskrivning av principen. Denna inställning är valfri, men rekommenderas.
     - **Plattform**: Välj plattform för dina enheter. Alternativen är:  
 

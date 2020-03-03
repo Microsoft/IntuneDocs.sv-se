@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237eca2f8e00f00fda5fa3cf401be87de9602743
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 183e8cc5924f6ce1f002225150d808841924e20c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956264"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514650"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 
@@ -34,7 +34,7 @@ Du kan lägga till följande typer av grupper:
 - **Tilldelade grupper** – Lägg manuellt till användare eller enheter i en statisk grupp. 
 - **Dynamiska grupper** (kräver Azure AD Premium) – Lägg automatiskt till användare eller enheter i användargrupper eller enhetsgrupper baserat på ett uttryck som du skapar.
 
-  Till exempel när en användare läggs till med en chefstitel, läggs användaren automatiskt till i användargruppen **Alla chefer**. Eller när en enhet har operativsystemet iOS, läggs enheten automatiskt till i enhetsgruppen **Alla iOS-enheter**.
+  Till exempel när en användare läggs till med en chefstitel, läggs användaren automatiskt till i användargruppen **Alla chefer**. Eller när en enhet har operativsystemet iOS/iPadOS, läggs enheten automatiskt till i enhetsgruppen **Alla iOS/iPadOS-enheter**.
 
 ## <a name="add-a-new-group"></a>Lägg till en ny grupp
 
@@ -47,7 +47,7 @@ Använd följande anvisningar för att skapa en ny grupp.
 
 3. Välj något av följande alternativ i **Grupptyp**:
 
-    - **Säkerhet**: Säkerhetsgrupper definierar vem som har åtkomst till resurser. Vi rekommenderar att du använder detta för dina grupper i Intune. Du kan till exempel skapa grupper för användare, t.ex. **Alla anställda i Charlotte** eller **Distansarbetare**. Du kan också skapa grupper för enheter, till exempel **Alla iOS-enheter** eller **Alla Windows 10 Student-enheter**.
+    - **Säkerhet**: Säkerhetsgrupper definierar vem som har åtkomst till resurser. Vi rekommenderar att du använder detta för dina grupper i Intune. Du kan till exempel skapa grupper för användare, t.ex. **Alla anställda i Charlotte** eller **Distansarbetare**. Du kan också skapa grupper för enheter, till exempel **Alla iOS/iPadOS-enheter** eller **Alla Windows 10 Student-enheter**.
 
         > [!TIP]
         > De användare och grupper som skapas visas också i [Administrationscenter för Microsoft 365](https://admin.microsoft.com), Administrationscenter för Azure Active Directory och [Microsoft Intune i Azure-portalen](https://go.microsoft.com/fwlink/?linkid=2090973). I din organisationsklient kan du skapa och hantera grupper inom alla dessa områden.

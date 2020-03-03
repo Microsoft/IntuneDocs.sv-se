@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d302db46510b664aec5b0a71fd8b19985e29be37
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 48bfe727615f5165fc70ed2e08f98f01203dc895
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206133"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514837"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Använda principuppsättningar för att gruppera samlingar av hanteringsobjekt
 
@@ -52,7 +52,7 @@ Du kan inkludera följande hanteringsobjekt i en principuppsättning:
 När du skapar en principuppsättning skapar du en enskild tilldelningsenhet och hanterar associationer mellan olika objekt. En principuppsättning är en referens till objekt som är externa för den. Ändringar i de inkluderade objekten påverkar även principuppsättningen. När du har skapat en principuppsättning kan du visa och redigera objekt och tilldelningar flera gånger. 
 
 > [!NOTE]
-> Principuppsättningar stöder inställningar för Windows, Android, macOS och iOS, och de kan tilldelas plattformsoberoende.
+> Principuppsättningar stöder inställningar för Windows, Android, macOS och iOS/iPadOS, och de kan tilldelas plattformsoberoende.
 
 ## <a name="how-to-create-a-policy-set"></a>Så här skapar du en principuppsättning
 
@@ -82,15 +82,15 @@ Principuppsättningar är en ny funktion i version 1910 och har följande kända
 - När en principuppsättning skapas gäller att om en omfångsbegränsad administratör försöker skapa en principuppsättning utan att välja några omfångstaggar, så misslyckas valideringen när sidan **Granska och skapa** visas, och ett fel visas i statusfältet. Administratören måste växla till en annan sida i processen och sedan gå tillbaka till sidan **Granska och skapa**. Då aktiveras alternativet **Skapa**.  
  
 - Följande typer av appar stöds för närvarande av principuppsättningar:
-    - iOS Store-app
-    - Verksamhetsspecifik iOS-app
-    - Hanterad verksamhetsspecifik iOS-app
+    - Store-app för iOS/iPadOS
+    - Verksamhetsspecifik iOS/iPadOS-app
+    - Hanterad verksamhetsspecifik iOS/iPadOS-app
     - Android Store-app
     - Verksamhetsspecifik Android-app
     - Hanterad verksamhetsspecifik Android-app
     - Office 365 ProPlus Suite (Windows 10)
     - Webblänk
-    - Inbyggd iOS-app
+    - Inbyggd iOS/iPadOS-app
     - Inbyggd Android-app
 
 - Det finns inte stöd för att ange en tilldelning av principuppsättning för **Alla användare** till **Autopilot-profil**.
@@ -103,18 +103,18 @@ Principuppsättningar är en ny funktion i version 1910 och har följande kända
 
 - MAM-principtyper som stöder principuppsättningar omfattar följande: 
     - MAM WIP (Windows) MDM-riktat skydd för hanterad app 
-    - MAM iOS-riktat skydd för hanterad app
+    - MAM iOS/iPadOS-riktat skydd för hanterad app
     - MAM Android-riktat skydd för hanterad app
-    - MAM iOS-riktad konfiguration av hanterad app
+    - MAM iOS/iPadOS-riktad konfiguration av hanterad app
     - MAM Android-riktad konfiguration av hanterad app
 
 - MAM-principtyper som inte stöder principuppsättningar omfattar följande: 
     - MAM WIP (Windows)-riktat skydd för hanterad app
 
 - MAM bearbetar tilldelningar av principuppsättning som direkta tilldelningar för följande principtyper:
-    - MAM iOS-riktat skydd för hanterad app
+    - MAM iOS/iPadOS-riktat skydd för hanterad app
     - MAM Android-riktat skydd för hanterad app
-    - MAM iOS-riktad konfiguration av hanterad app
+    - MAM iOS/iPadOS-riktad konfiguration av hanterad app
     - MAM Android-riktad konfiguration av hanterad app
 
     Om en princip läggs till i en principuppsättning som distribueras till en grupp visas gruppen som direkt tilldelad i arbetsbelastningen, inte ”tilldelad via principuppsättningen”. Resultatet av detta är att MAM inte bearbetar borttagningar av grupptilldelningar som kommer från principuppsättningar.

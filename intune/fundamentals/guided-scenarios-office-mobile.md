@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 0232855773626693d848f77e561c51d281739215
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691811"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514616"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Guidat scenario – Skydda Microsoft Office-mobilappar 
 
-Genom att följa det här guidade scenariot i enhetshanteringsportalen kan du aktivera grundläggande Intune-appskydd på iOS-enheter och Android-enheter.
+Genom att följa det här guidade scenariot i enhetshanteringsportalen kan du aktivera grundläggande Intune-appskydd på iOS/iPadOS-enheter och Android-enheter.
 
 Det appskydd som du aktiverar kommer att framtvinga följande åtgärder: 
 - Kryptera arbetsfiler.
@@ -51,7 +51,7 @@ Du kan använda appskyddsprinciper för att förhindra att användare sparar arb
 
 Appbaserad, villkorsstyrd åtkomst och klientapphantering lägger till ett säkerhetslager genom att se till att enbart klientappar som stöder Intunes appskyddsprinciper kommer åt Exchange Online och andra Office 365-tjänster.
 
-Du kan blockera inbyggda e-postappar i iOS och Android genom att bara tillåta att Microsoft Outlook-appen får åtkomst till Exchange Online. Dessutom kan du blockera appar där Intunes appskyddsprinciper inte har tillämpats för åtkomst till SharePoint Online.
+Du kan blockera inbyggda e-postappar i iOS/iPadOS och Android genom att bara tillåta att Microsoft Outlook-appen får åtkomst till Exchange Online. Dessutom kan du blockera appar där Intunes appskyddsprinciper inte har tillämpats för åtkomst till SharePoint Online.
 
 I det här exemplet har administratören tillämpat appskyddsprinciper på Outlook-appen, följt av en regel för villkorlig åtkomst som lägger till Outlook-appen i en lista med godkända appar som kan användas för att få åtkomst till företagets e-post.
 
@@ -69,7 +69,7 @@ Du behöver följande Intune-administratörsbehörigheter:
 
 Genom att följa det guidade scenariot för **Intune-appskydd** förhindrar du att data delas eller avslöjas utanför organisationen. 
 
-Tilldelade iOS- och Android-användare måste ange en PIN-kod varje gång de öppnar en Office-app. Efter 5 misslyckade PIN-försök måste användarna återställa PIN-koden. Om du redan kräver en PIN-kod för enheten påverkas inte användarna.
+Tilldelade iOS/iPadOS- och Android-användare måste ange en PIN-kod varje gång de öppnar en Office-app. Efter 5 misslyckade PIN-försök måste användarna återställa PIN-koden. Om du redan kräver en PIN-kod för enheten påverkas inte användarna.
 
 ### <a name="what-you-will-need-to-continue"></a>Det här behöver du för att fortsätta
 
@@ -86,7 +86,7 @@ I det här steget måste du ange ett **Prefix** och en **Beskrivning** för din 
 
 ## <a name="step-3---apps"></a>Steg 3 – Appar
 
-För att hjälpa dig att komma igång väljer det här guidade scenariot följande mobilappar att skydda på iOS- och Android-enheter:
+För att hjälpa dig att komma igång väljer det här guidade scenariot följande mobilappar att skydda på iOS/iPadOS- och Android-enheter:
 - Microsoft Excel 
 - Microsoft Word 
 - Microsoft Teams 

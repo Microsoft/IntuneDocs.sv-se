@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad363785888a92d1e8be4f2d28690278a2efaae9
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: 3cd153a4c602ba49a5b5135d1d6cb32a61f2668d
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966308"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576509"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Skapa och tilldela SCEP-certifikatprofiler i Intune
 
@@ -60,7 +60,7 @@ När du har [konfigurerat din infrastruktur](certificates-scep-configure.md) fö
 
    - **Certifikattyp**:
 
-     *(Gäller för:  Android, Android Enterprise, iOS, macOS, Windows 8.1 och senare samt Windows 10 och senare.)*
+     *(Gäller för:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1 och senare samt Windows 10 och senare.)*
 
      Välj en typ beroende på hur du kommer att använda certifikatprofilen:
 
@@ -280,7 +280,7 @@ Tilldela SCEP-certifikatprofiler på samma sätt som du [distribuerar enhetsprof
 - Även om du skapar och tilldelar den betrodda certifikatprofilen och SCEP-certifikatprofilen separat måste båda tilldelas. Om inte båda är installerade på en enhet misslyckas SCEP-certifikatprincipen. Se till att alla betrodda rotcertifikatprofiler också distribueras till samma grupper som SCEP-profilen.
 
 > [!NOTE]
-> När en SCEP-profil är associerad med en profil på enheter med iOS, t.ex. en Wi-Fi eller VPN-profil, tar enheten emot ett certifikat för var och en av de ytterligare profilerna. Detta resulterar i att iOS-enheten har flera certifikat som levereras av SCEP-certifikatbegäran.  Om ett enskilt certifikat önskas måste du använda PKCS-certifikat i stället för SCEP-certifikat.  Detta beror på skillnader i hur SCEP- och PKCS-certifikat levereras till enheter.
+> När en SCEP-profil är associerad med en profil på enheter med iOS/iPadOS, t.ex. en Wi-Fi- eller VPN-profil, tar enheten emot ett certifikat för var och en av de ytterligare profilerna. Detta resulterar i att iOS/iPadOS-enheten har flera certifikat som levereras av SCEP-certifikatbegäran.  Om ett enskilt certifikat önskas måste du använda PKCS-certifikat i stället för SCEP-certifikat.  Detta beror på skillnader i hur SCEP- och PKCS-certifikat levereras till enheter.
 
 ## <a name="next-steps"></a>Nästa steg
 

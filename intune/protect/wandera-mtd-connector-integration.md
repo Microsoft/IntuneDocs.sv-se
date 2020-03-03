@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e565f40aac2a2b97f547a5b68a70a887d9e820ae
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: d90e3757ced90bea21e4033b6baa93bfa201b1f2
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207476"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514225"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrera Wandera Mobile Threat Protection med Intune  
 
@@ -91,7 +91,7 @@ Följande stycken och procedurer vägleder dig genom den här processen.
 Om du behöver mer information om den här processen från Wandera kan du logga in på Wandera [RADAR](https://radar.wandera.com/login). Gå till **Inställningar** > **EMM-integrering**, välj fliken **App Push** och välj sedan **Microsoft Intune**. Fliken App Push uppdateras med anvisningar som är specika för Intune.  
 
 ### <a name="add-the-wandera-apps"></a>Lägg till Wandera-appar  
-Skapa klientappar i Intune för att distribuera Wandera-appen till Android- och iOS-enheter. Se [Lägg till MTD-appar](mtd-apps-ios-app-configuration-policy-add-assign.md) för specifika procedurer och anpassad information för Wandera-appar.  
+Skapa klientappar i Intune för att distribuera Wandera-appen till Android- och iOS/iPadOS-enheter. Se [Lägg till MTD-appar](mtd-apps-ios-app-configuration-policy-add-assign.md) för specifika procedurer och anpassad information för Wandera-appar.  
 
 När du har skapat apparna kan du återvända hit för att skapa synkroniseringsgruppen och tilldela appar.
 
@@ -105,14 +105,14 @@ När du har skapat apparna kan du återvända hit för att skapa synkroniserings
 
    ![konfigurera synkroniseringsgruppen](./media/wandera-mtd-connector-integration/configure-sync-group.png)
 
-3. Välj **Medlemmar** och tilldela grupper som innehåller Android och iOS-enheter som du vill använda med Wandera.
+3. Välj **Medlemmar** och tilldela grupper som innehåller Android och iOS/iPadOS-enheter som du vill använda med Wandera.
 
 4. Spara gruppen genom att välja **Skapa**.
 
 Mer information finns i [Distribuera appar](../apps/apps-deploy.md)
 
 ### <a name="assign-the-wandera-apps-to-the-synchronization-group"></a>Tilldela Wandera-appararna till synkroniseringsgruppen  
-Upprepa följande procedur för Wandera-appen som du skapat för iOS och Android.
+Upprepa följande procedur för Wandera-appen som du skapat för iOS/iPadOS och Android.
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** och välj Wandera-appen.

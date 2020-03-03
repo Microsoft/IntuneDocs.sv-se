@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fa80697f24167e2a9634bd506e9548ca654129f
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: bd1aaa545f11f7eaaa591f2057f4a6c8946fac4a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547085"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514174"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Tvinga fram kompatibilitet för Microsoft Defender ATP med villkorlig åtkomst i Intune
 
@@ -62,7 +62,7 @@ Om du vill använda Microsoft Defender ATP med Intune måste du ha följande kon
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) och åtkomst till Microsoft Defender Security Center (ATP-portal)
 
 > [!NOTE]
-> Microsoft Defender ATP stöds inte med Intune-appskyddsprinciper för iOS och Android.
+> Microsoft Defender ATP stöds inte med Intune-appskyddsprinciper för iOS/iPadOS och Android.
 
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Aktivera Microsoft Defender ATP i Intune
 

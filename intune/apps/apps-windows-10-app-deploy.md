@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 7251a2db0c36db9d01e51ca8fc62bd4e072d80e6
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912572"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609222"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Windows 10-appdistribution med hjälp av Microsoft Intune 
 
@@ -44,18 +44,19 @@ Verksamhetsspecifika appar (LOB) och Microsoft Store för företag-appar är de 
 
 Vissa apptyper stöds baserat på den version av Windows 10 som användarna kör. Följande tabell innehåller apptyp och support för Windows 10.
 
-| Typ av app | Hem | Pro | Företag | Enterprise | Utbildning | S-Mode | Hololense | SurfaceHub | WCOS | Mobiltelefon |
+| Typ av app | Hem | Pro | Företag | Enterprise | Utbildning | S-Mode | HoloLens<sup>1 | Surface Hub | WCOS | Mobiltelefon |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  .MSI | Nej | Ja | Ja | Ja | Ja | Nej | Nej | Nej | Nej | Nej |
 | .IntuneWin | Nej | Ja | Ja | Ja | Ja | 19H2+ | Nej | Nej | Nej | Nej |
-| Office C2R | Nej | Ja | Ja | Ja | Ja | Nej | Nej | Nej | Nej | Nej |
+| Office C2R | Nej | Ja | Ja | Ja | Ja | RS4+ | Nej | Nej | Nej | Nej |
 | VERKSAMHETSSPECIFIK: APPX/MSIX | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja |
 | MSFB Offline | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja |
-| MSFB Online | Ja | Ja | Ja | Ja | Ja | Ja | RS4+ | Ja | Ja | Ja |
-| Web Apps | Ja | Ja | Ja | Ja | Ja | Ja | Ja<sup>1 | Ja<sup>1 | Ja | Ja |
+| MSFB Online | Ja | Ja | Ja | Ja | Ja | Ja | RS4+ | Nej | Ja | Ja |
+| Web Apps | Ja | Ja | Ja | Ja | Ja | Ja | Ja<sup>2 | Ja<sup>2 | Ja | Ja<sup>2 |
 | Store-länk | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja | Ja |
 
-<sup>1</sup> Starta endast från företagsportalen.
+<sup>1</sup> Om du vill låsa upp apphantering måste du uppgradera din HoloLens-enhet till [Holographic for Business](../fundamentals/windows-holographic-for-business.md).<br />
+<sup>2</sup> Starta endast från företagsportalen.
 
 > [!NOTE]
 > Alla typer av Windows-appar kräver registrering.

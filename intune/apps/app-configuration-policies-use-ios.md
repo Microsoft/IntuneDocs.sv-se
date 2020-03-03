@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 02/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: af3c4e05a47e015384716588a28a6074898e2f6a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438012"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513970"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Lägg till konfigurationsprinciper för hanterade iOS/iPadOS-mobilappar
 
@@ -43,7 +43,7 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 > [!TIP]
 > Den här principen är för närvarande endast tillgänglig för enheter som kör iOS/iPadOS 8.0 och senare. Den stöder följande appinstallationstyper:
 >
-> - **Hanterade iOS-appar från App Store**
+> - **Hanterade iOS/iPadOS-appar från App Store**
 > - **App-paket för iOS**
 >
 > Mer information om appinstallationstyper finns i [Så här lägger du till en app i Microsoft Intune](apps-add.md). Mer information om hur du bygger in app config i ditt .ipa-appaket för hanterade enheter finns i konfiguration av hanterade appar i dokumentationen för [iOS Developer](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
@@ -108,9 +108,10 @@ Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för
 
 Använd följande nyckel-/värdepar för iOS/iPadOS-enheter:
 
-| **Nyckel** | IntuneMAMAllowedAccountsOnly |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Värden** | <ul><li>**Aktiverad**: Det enda kontot som tillåts är det hanterade användarkonto som definierats av nyckeln [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Inaktiverad** (eller ett värde som inte är en skiftlägesokänslig matchning till **Aktiverad**): Alla konton tillåts.</li></ul> |.
+| **Nyckel** | **Värden** |
+|----|----|
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Aktiverad**: Det enda kontot som tillåts är det hanterade användarkonto som definierats av nyckeln [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Inaktiverad** (eller ett värde som inte är en skiftlägesokänslig matchning till **Aktiverad**): Alla konton tillåts.</li></ul> |
+| IntuneMAMUPN | <ul><li>UPN för det konto som tillåts att logga in på appen.</li><li> För Intune-registrerade enheter, kan <code>{{userprincipalname}}</code>-token användas för att representera det registrerade användarkontot.</li></ul>  |
 
    > [!NOTE]
    > Du måste använda OneDrive för iOS 10.34 eller senare, Outlook för iOS 2.99.0 eller senare, eller Edge för iOS 44.8.7 eller senare. Appen måste vara riktad mot [Intunes appskyddsprinciper](app-protection-policy.md) när endast konfigurerade organisationskonton med flera identiteter tillåts.
@@ -181,7 +182,7 @@ Dessutom stöder Intune följande typer av token i egenskapslistan:
 - \{\{serialnumberlast4digits\}\} – till exempel **G5V2** (för iOS/iPadOS-enheter)
 - \{\{aaddeviceid\}\} – till exempel **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
-## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurera företagsportalappen så att den stöder iOS DEP-enheter
+## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Konfigurera företagsportalappen så att den stöder iOS/iPadOS DEP-enheter
 
 DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med App Store-versionen av företagsportalappen. Du kan dock, med hjälp av följande steg, konfigurera företagsportalsappen så att den stöder iOS/iPadOS DEP-enheter.
 
@@ -204,7 +205,7 @@ DEP-registreringar (Apples enhetsregistreringsprogram) är inte kompatibla med A
 3. Distribuera företagsportalen till enheter där appkonfigurationsprincipen är riktad mot de önskade grupperna. Se till att endast distribuera principen till enhetsgrupper som redan är DEP-registrerade.
 4. Be slutanvändarna att logga in på företagsportalappen när den installeras automatiskt.
 
-## <a name="monitor-ios--app-configuration-status-per-device"></a>Övervaka konfigurationsstatus för iOS-appar per enhet 
+## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Övervaka konfigurationsstatus för iOS/iPadOS-appar per enhet 
 När en konfigurationsprincip har tilldelats kan du övervaka iOS/iPadOS-appens konfigurationsstatus för varje hanterad enhet. Gå till **Microsoft Intune** i Azure Portal och välj **Enheter** > **Alla enheter**. Om du vill visa ett fönster för enheten väljer du en specifik enhet från listan med hanterade enheter. Välj **Appkonfiguration** i enhetens fönster.  
 
 ## <a name="additional-information"></a>Ytterligare information

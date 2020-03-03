@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 138bf192f5244eb6e44a6be96af3cc15c47bdc76
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755399"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609197"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Lägg till Google Play för företag-appar till Android enterprise-enheter med Intune
 
@@ -80,20 +80,6 @@ Det finns två sätt att söka efter och godkänna hanterade Google Play Store-a
 9. Klicka på **Välj** för att välja appen.
 10. Klicka på **Synkronisera** i längst upp på bladet för att synkronisera med tjänsten Managed Google Play.
 11. Klicka på **Uppdatera** för att uppdatera applistan och visa den nyligen tillagda appen.
-
-### <a name="add-additional-app-settings-to-a-managed-google-play-store-app"></a>Lägg till ytterligare appinställningar till en Managed Google Play Store-app
-1. Om du behöver lägga till ytterligare information om appar väljer du appen från applistan.
-2. Klicka på **Egenskaper** > **Redigera** bredvid **Appinformation**. Sidan **Appinformation** visas.
-3. Lägg till information om appen i fönstret **Appinformation**:
-    - **Kategori**: Du kan även välja en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
-    - **Visa denna som en aktuell app i företagsportalen**: Välj det här alternativet för att tydligt visa appsviten på företagsportalens huvudsida när användarna söker efter appar.
-    - **Webbadress till information**: Du kan välja att ange en webbadress till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Sekretesswebbadress**: Du kan välja att ange en webbadress till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
-    - **Ägare**: Alternativt kan du ange ett namn på appens ägare, t.ex. *Personalavdelningen*.
-    - **Kommentarer**: Alternativt kanske du vill ange kommentarer till appen.
-4. Klicka på **Granska och spara** för att visa sidan **Granska och spara**. 
-5. När du är klar klickar du på **Spara** för att uppdatera appen i Intune.
 
 ### <a name="add-a-managed-google-play-store-app-in-the-managed-google-play-console-alternative"></a>Lägg till en hanterad Google Play Store-app i konsolen för Google Play för företag (alternativ)
 Om du vill synkronisera en hanterad Google Play-app med Intune i stället för att lägga till den direkt med hjälp av Intune kan du använda följande steg.
@@ -238,6 +224,9 @@ För Managed Google Play-appar som distribueras till Android Enterprise-arbetspr
 
 ## <a name="delete-managed-google-play-apps"></a>Radera hanterade Google Play-appar
 Du kommer att kunna ta bort hanterade Google Play-appar från Microsoft Intune om nödvändigt. Om du vill ta bort en hanterad Google Play-app öppnar du Microsoft Intune i Azure Portal och väljer **Appar** > **Alla appar**. Från listan över appar väljer du ellipserna (...) till höger om den hanterade Google Play-appen och väljer sedan **Ta bort** från den visade listan. När du tar bort en hanterad Google Play-app från applistan blir den hanterade Google Play-appen automatiskt ej godkänd.
+
+> [!NOTE]
+> Om en app är ej godkänd eller har tagits bort från den hanterade Google Play-butiken tas den inte bort från listan över appar i Intune-klienten. På så sätt kan du fortfarande rikta en avinstallationsprincip till användare även om appen är ej godkänd.
 
 ## <a name="android-enterprise-system-apps"></a>Android Enterprise-systemprogram
 

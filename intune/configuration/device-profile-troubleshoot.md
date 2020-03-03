@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 21497716f17ced83bdcc1952cb952151f993bb7b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812349"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511335"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Vanliga frågor, problem och lösningar med enhetsprinciper och profiler i Microsoft Intune
 
@@ -36,11 +36,11 @@ Du kan undvika det här problemet genom att ställa in gäst-Wi-Fi. Om inte för
 
 Ytterligare rekommendationer:  
 
-- Om Wi-Fi-nätverket som du ansluter till använder ett lösenord eller en lösenfras, ser du till att du kan ansluta direkt till Wi-Fi-routern. Du kan testa med en iOS-enhet.
+- Om Wi-Fi-nätverket som du ansluter till använder ett lösenord eller en lösenfras, ser du till att du kan ansluta direkt till Wi-Fi-routern. Du kan testa med en iOS/iPadOS-enhet.
 - När du har lyckats ansluta till Wi-Fi-slutpunkten (Wi-Fi-routern) noterar du SSID och autentiseringsuppgifter som används (det här värdet är lösenordet eller lösenfrasen).
 - Ange SSID och autentiseringsuppgifter (lösenord eller lösenfras) i fältet I förväg delad nyckel. 
 - Distribuera till en testgrupp som har ett begränsat antal användare, gärna endast till IT-avdelningen. 
-- Synkronisera iOS-enheten mot Intune. Registrera om du inte redan har gjort det. 
+- Synkronisera iOS/iPadOS-enheten mot Intune. Registrera om du inte redan har gjort det. 
 - Testa att ansluta till samma Wi-Fi-slutpunkt (som nämns i det första steget) igen.
 - Distribuera till större grupper och till slut till alla förväntade användare i organisationen. 
 
@@ -54,7 +54,7 @@ Om enheten inte checkar in för att hämta principen eller profilen efter den f�
 
 | Plattform | Uppdateringscykel|
 | --- | --- |
-| iOS | Ungefär var 8:e timme |
+| iOS/iPadOS | Ungefär var 8:e timme |
 | macOS | Ungefär var 8:e timme |
 | Android | Ungefär var 8:e timme |
 | Windows 10-datorer som registrerats som enheter | Ungefär var 8:e timme |
@@ -65,7 +65,7 @@ Om enheten nyligen har registrerats sker efterlevnads-, icke-efterlevnads- och k
 
 | Plattform | Frekvens |
 | --- | --- |
-| iOS | Var 15:e minut i 1 timmar och därefter var omkring 8:e timme |  
+| iOS/iPadOS | Var 15:e minut i 1 timmar och därefter var omkring 8:e timme |  
 | macOS | Var 15:e minut i 1 timmar och därefter var omkring 8:e timme | 
 | Android | Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
 | Windows 10-datorer som registrerats som enheter | Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan omkring var 8:e timme | 
@@ -102,7 +102,7 @@ Konflikter uppstår om två profilinställningar är likadana. Anta att du har k
 
 En princip distribueras till appen och börjar gälla. En andra princip distribueras. I det här scenariot får den första principen företräde och fortsätter att tillämpas. Den andra principen visar en konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående princip, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
 
-## <a name="what-happens-when-ios-custom-policies-conflict"></a>Vad händer om anpassade iOS-principer är i konflikt med varandra?
+## <a name="what-happens-when-iosipados-custom-policies-conflict"></a>Vad händer om anpassade iOS/iPadOS-principer är i konflikt med varandra?
 
 Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-principer (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
 
@@ -144,7 +144,7 @@ När du tar bort en profil, eller när du tar bort en enhet från en grupp som h
     - Tillåt NFC
     - Tillåt Wi-Fi
 
-  - **iOS**: Alla inställningar tas bort, utom:
+  - **iOS/iPadOS**: Alla inställningar tas bort, utom:
   
     - Tillåt röstroaming
     - Tillåt dataroaming
@@ -156,7 +156,7 @@ När Windows Phone-enheter är konfigurerade tillåts inte att säkerheten minsk
 
 Om du vill ändra profilen till ett mindre säkert värde återställer du säkerhetsprinciperna. I Windows 8.1. sveper du till exempel från höger på skrivbordet och väljer **Inställningar** > **Kontrollpanelen**. Välj appleten **Användarkonton** . Längst ned i den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper**. Markera den och välj sedan **Återställ principer**.
 
-Andra MDM-enheter, som Android, Windows Phone 8.1 och senare, iOS och Windows 10, kan behöva dras tillbaka och sedan registreras på nytt i Intune för att du ska kunna tillämpa en mindre begränsande profil.
+Andra MDM-enheter, som Android, Windows Phone 8.1 och senare, iOS/iPadOS och Windows 10, kan behöva dras tillbaka och sedan registreras på nytt i Intune för att du ska kunna tillämpa en mindre begränsande profil.
 
 ## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Vissa inställningar i en Windows 10-profil returnerar ”ej tillämpligt”
 

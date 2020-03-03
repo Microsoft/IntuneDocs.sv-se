@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6167c48dcfd6b29749dca8d0378ff31ca239b154
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415364"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473760"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Registrera iOS/iPadOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -77,6 +77,9 @@ Du kan använda Apple Business Manager- eller Apple School Manager-portalen till
     ![Hämta en registreringsprogramtoken.](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. Välj **Jag godkänner** för att ge Microsoft behörighet att skicka information om användare och enhet till Apple.
+
+> [!NOTE]
+> När du kommit förbi steg 2 och ska ladda ned certifikatet för den offentliga Intune-nyckeln, ska du inte stänga guiden eller navigera från sidan. Om du gör det ogiltigförklaras certifikatet du har laddat ned. I så fall måste du utföra den här processen på nytt. Då blir också knappen Skapa och fliken Granska + skapa nedtonad, och du kan inte slutföra processen.
 
    ![Skärmbild av rutan Registreringsprogramtoken i arbetsytan för Apple-certifikat. Nedladdning av offentlig nyckel.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 

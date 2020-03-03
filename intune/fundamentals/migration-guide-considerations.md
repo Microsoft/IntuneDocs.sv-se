@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86cef30c31b53c6bfd1873390fb7546cbeab2a53
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 936e4836938ddddc8e795d85de5a449ee77edaa4
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510033"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515007"
 ---
 # <a name="special-migration-considerations"></a>Särskilda överväganden vid migrering
 
@@ -32,7 +32,7 @@ Det finns särskilda migreringsöverväganden som kan vara relevanta beroende p�
 
 Apples program för enhetsregistrering (DEP) ställer in enhetskonfigurationer som användaren inte kan ta bort. Om du vill bevara de avancerade hanteringsfunktionerna i DEP måste du återställa enheten till dess ursprungliga tillstånd genom en att rensa den innan du registrerar den i Intune.
 
-Om du vill fortsätta att hantera enheter i Intune med DEP måste du [konfigurera registrering av iOS-enheter med DEP](../enrollment/device-enrollment-program-enroll-ios.md).
+Om du vill fortsätta att hantera enheter i Intune med DEP måste du [konfigurera registrering av iOS/iPadOS-enheter med DEP](../enrollment/device-enrollment-program-enroll-ios.md).
 
 
 ## <a name="next-steps"></a>Nästa steg

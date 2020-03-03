@@ -14,15 +14,15 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 681b4f690d03cd21c5a430e02cb0f3584d2e680e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ec7d4b8d83935b961d05e2e6fd22dd2d3f7e4086
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510117"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514531"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Hantera versioner av operativsystem med Intune
-På moderna bärbara och stationära plattformar, viktiga uppdateringar, korrigeringar och nya versioner snabbt. Du har kontroller för att fullständigt hantera uppdateringar och korrigeringar i Windows, men för andra plattformar som iOS och Android krävs att slutanvändarna deltar i processen.  Microsoft Intune har funktioner som hjälper dig att strukturera versionshanteringen av operativsystem på olika plattformar.
+På moderna bärbara och stationära plattformar, viktiga uppdateringar, korrigeringar och nya versioner snabbt. Du har kontroller för att fullständigt hantera uppdateringar och korrigeringar i Windows, men för andra plattformar som iOS/iPadOS och Android krävs att slutanvändarna deltar i processen.  Microsoft Intune har funktioner som hjälper dig att strukturera versionshanteringen av operativsystem på olika plattformar.
 
 Intune kan hjälpa dig att hantera dessa vanliga scenarier: 
 - Fastställa vilka operativsystemversioner som finns på slutanvändarenheterna

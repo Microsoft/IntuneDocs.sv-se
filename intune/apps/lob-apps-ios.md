@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7c0a7dfa4337983c12ada2d0f415c771bd0548
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 507c7ecff9715ebf9f24567c735592f3f255ccc9
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755195"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609173"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
 
@@ -31,10 +31,13 @@ ms.locfileid: "76755195"
 
 Informationen i den här artikeln visar hur du lägger till en verksamhetsspecifik app för iOS i Microsoft Intune. En verksamhetsspecifik app är en app som du lägger till i Intune från en IPA-appinstallationsfil. Den här typen av app skrivs vanligtvis inom företaget. Du måste först gå med i iOS Developer Enterprise-programmet. Mer information om hur du gör detta finns på [Apples webbplats](https://developer.apple.com/programs/ios/enterprise/).
 
->[!NOTE]
->Användare av iOS-enheter kan ta bort några av de inbyggda iOS-apparna såsom Stocks och Maps. Du kan inte använda Intune för att distribuera om dessa appar. Om användarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
+> [!NOTE]
+> Användare av iOS-enheter kan ta bort några av de inbyggda iOS-apparna såsom Stocks och Maps. Du kan inte använda Intune för att distribuera om dessa appar. Om användarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
 >
->iOS LOB-appar har en maximal storleksgräns på 4 GB per app.
+> iOS LOB-appar har en maximal storleksgräns på 4 GB per app.
+
+> [!NOTE]
+> Paketidentifierare (till exempel *com.contoso.app*) ska vara unika identifierare för en app. Om du till exempel installerar en betaversion av en verksamhetsspecifik app för testning vid sidan av produktionsversionen, måste betaversionen ha en annan unik identifierare (till exempel *com.contoso.app-beta*). Annars kommer betaversionen överlappa produktionsversionen och behandlas som en uppgradering. Att byta namn på IPA-filen påverkar inte det här beteendet.
 
 ## <a name="select-the-app-type"></a>Välj apptyp
 
@@ -47,7 +50,7 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
 
 ### <a name="select-the-app-package-file"></a>Välj appaketfilen
 
-1. Klicka på **Välj appaketfil** fönstret **Lägg till app**. 
+1. I fönstret **Lägg till app** klickar du på **Välj appaketfil**. 
 2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en installationsfil för iOS med tillägget **.ipa**.
    Appinformationen visas.
 3. När du är klar väljer du **OK** i fönstret **Appaketfil** för att lägga till appen.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3deb9f3c96a4c2c2de72b7016aca855f679bbd7
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: ceb4d2354ca073cf05f526df7638aebf8f16d5b7
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755143"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569497"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows i Microsoft Intune
 
@@ -32,20 +32,20 @@ ms.locfileid: "76755143"
 En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinstallationsfil. Den här typen av app skrivs vanligtvis inom företaget. I följande steg finns riktlinjer som hjälper dig att lägga till en Windows LOB-app i Microsoft Intune.
 
 > [!IMPORTANT]
-> När du distribuerar Win32-appar med hjälp av en installationsfil med tillägget *.msi* kan du överväga att använda [tillägget Intune-hantering](../apps/intune-management-extension.md). Om du blandar installationen av Win32-appar och verksamhetsspecifika appar under autopilotregistreringen, kan det hända att appen inte kan installeras.  
+> När du distribuerar Win32-appar med hjälp av en installationsfil med tillägget .msi (som paketerats i en .intunewin-fil med verktyget för konvertering av innehåll) kan du överväga att använda [Intune-hanteringstillägget](../apps/intune-management-extension.md). Om du blandar installationen av Win32-appar och verksamhetsspecifika appar under autopilotregistreringen, kan det hända att appen inte kan installeras.  
 
 ## <a name="select-the-app-type"></a>Välj typ av app
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
-3. I fönstret **Välj apptyp** väljer du **Branschspecifik app** under **Övriga** typer av appar.
+3. Välj **Branschspecifik app** under **Övriga** apptyper i fönstret **Välj apptyp**.
 4. Klicka på **Välj**. Stegen **Lägg till app** visas.
 
-## <a name="step-1---app-information"></a>Steg 1 – information om app
+## <a name="step-1---app-information"></a>Steg 1 – Appinformation
 
 ### <a name="select-the-app-package-file"></a>Välj appaketfilen
 
-1. I fönstret **Lägg till app** klickar du på **Välj appaketfilen**. 
+1. I fönstret **Lägg till app** klickar du på **Välj appaketfil**. 
 2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en fil för Windows-installationen med tillägget **.msi**, **.appx** eller **.appxbundle**.
    Appens information visas.
 
@@ -56,7 +56,7 @@ En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinst
 
 ### <a name="set-app-information"></a>Konfigurera appinformation
 
-1. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
+1. Lägg till information om appen i fönstret **Appinformation**. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
     - **Namn**: Ange namnet på appen så som det visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna på företagsportalen.
     - **Beskrivning**: Ange beskrivningen av appen. Beskrivningen visas i företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.

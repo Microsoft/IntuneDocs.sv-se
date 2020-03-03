@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 777267f10edac5bbdbe23ceb3068d4366a8df7b7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d5a51d82551795ed8ad5c740d5fb852ff292e1b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509941"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514922"
 ---
 # <a name="develop-a-rollout-plan"></a>Utveckla en distributionsplan
 
@@ -58,7 +58,7 @@ Efter en lyckad pilotdistribution är du redo att påbörja en fullständig drif
 
 - **Geografi** <br/>I den här alternativet sker distributionen till alla användare inom ett visst geografiskt område, t.ex. samma kontinent, land/region eller företagsbyggnad. Med den här typen av stegvis distribution kan du fokusera på den specifika användarplatsen. På så vis kan du använda en mer [assisterad](#user-assisted-enrollment) metod, eftersom antalet platser som distribuerar Intune samtidigt minskas. Eftersom det är möjligt att olika avdelningar eller användarfall befinner sig på samma plats kan olika användarfall distribueras samtidigt.
 
-- **Plattform** <br/>Den här distributionstypen innebär att distribuera liknande plattformar samtidigt. Ett exempel kan vara alla iOS-enheter den första månaden, följt av Android, följt av Windows. Den här typen av stegvis distribution förenklar supporten eftersom supportavdelningen bara behöver stödja en plattform i taget.
+- **Plattform** <br/>Den här distributionstypen innebär att distribuera liknande plattformar samtidigt. Ett exempel kan vara alla iOS/iPadOS-enheter den första månaden, följt av Android, följt av Windows. Den här typen av stegvis distribution förenklar supporten eftersom supportavdelningen bara behöver stödja en plattform i taget.
 
 Följande är ett exempel på en Intune-distributionsplan som innehåller målgrupper och tidslinjer:
 

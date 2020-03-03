@@ -1,6 +1,6 @@
 ---
 title: Beskrivning av Microsoft Intune-tjänsten
-description: Microsoft Intune är en molnbaserad tjänst som hjälper dig att hantera Windows-, iOS-, Mac OS X-, Android- och Windows Mobile-enheter.
+description: Microsoft Intune är en molnbaserad tjänst som hjälper dig att hantera Windows-, iOS/iPadOS-, Mac OS X-, Android- och Windows Mobile-enheter.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7744fe217f39436e91f90fdf567f469c01986da4
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 2b65276ed2da827017406c67838afd89a766b2dc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885674"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515075"
 ---
 # <a name="microsoft-intune-service-description"></a>Beskrivning av Microsoft Intune-tjänsten
 

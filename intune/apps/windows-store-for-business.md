@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c1627ba89ad50b2053187a20fee6cbc7a9064e8
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 6faaa800d8dedc53ab20f1dae2c3049132642b7d
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562501"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609155"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du volymköpta appar från Microsoft Store för företag med Microsoft Intune
 
@@ -48,7 +48,7 @@ Granska följande information innan du börjar synkronisera och tilldela appar f
 - Både online- och offlinelicensierade appar som du har köpt från Microsoft Store för företag synkroniseras i Intune-portalen. Du kommer sedan att kunna distribuera apparna till enhetsgrupper eller användargrupper. 
 - Online-appinstallationer hanteras i butiken.
 - Kostnadsfria offlineappar kan också synkroniseras till Intune. Dessa appar installeras av Intune och inte av butiken.
-- För användning av den här funktionen måste enheterna vara anslutna till Active Directory Domain Services eller arbetsplatsanslutna.
+- För användning av den här funktionen måste enheterna vara anslutna till Active Directory Domain Services, Azure AD-anslutna eller arbetsplatsanslutna.
 - Registrerade enheter måste använda 1511-versionen av Windows 10 eller senare.
 
 Relaterade uppsättningar och offlinelicensierade appar som synkroniseras från Microsoft Store för företag kommer dessutom nu konsolideras till en enda appost i användargränssnittet. All distributionsinformation från enskilda paket migreras till den enda posten. Om du vill visa relaterade uppsättningar i Azure Portal, så välj **Applicenser** i fönstret **Appar**.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
-ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
+ms.openlocfilehash: 3d8ee4ec6a5bcb29a51b68cff7b840823b678636
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556410"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569293"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Övervaka säkerhetsbaslinje och profil i Microsoft Intune
 
@@ -106,6 +106,18 @@ Du kan sortera per kategori-vyn efter varje kolumn genom att välja uppåt-nedå
 
    ![Se de olika alternativen för övervakare för en profil för säkerhetsbaslinjer](./media/security-baselines-monitor/monitor-status-options.png)
 
+## <a name="view-endpoint-security-configurations-per-device"></a>Visa konfiguration av slutpunktssäkerhet per enhet
+
+Visa information om de säkerhetskonfigurationer som gäller för en enskild enhet. Detta kan hjälpa dig att isolera inställningar som är felkonfigurerade.
+
+1. Logga in på [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Gå till **Enheter** > **Alla enheter** och välj den enhet du vill visa.
+
+3. I kategorin *Övervakare* väljer du **Konfiguration av slutpunktssäkerhet** för att visa en lista över säkerhetskonfigurationer som gäller för enheten.
+
+4. Du kan välja en konfiguration för slutpunktssäkerhet om du vill visa mer information om utvärderingen av den säkerhetskonfigurationen på enheten.
+
 ## <a name="troubleshoot-using-per-setting-status"></a>Felsök med hjälp av status per inställning
 
 Du har distribuerat en säkerhetsbaslinje, men distributionsstatusen visar ett fel. I följande steg får du vägledning om hur du felsöker felet.
@@ -135,6 +147,7 @@ På Windows 10-enheter finns det en inbyggd rapport för MDM-diagnostikinformati
 [Diagnostisera fel i MDM i Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ger mer information om den här inbyggda rapporten.
 
 > [!TIP]
+>
 > - Vissa inställningar visar även GUID. Du kan söka efter detta GUID i det lokala registret (regedit) för alla inställda värden.
 > - Loggboken kan också innehålla viss felinformation om den problematiska inställningen (**Loggboken** > **Applikationer och tjänsteloggar** >  **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 

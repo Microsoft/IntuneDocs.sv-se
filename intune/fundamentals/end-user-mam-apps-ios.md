@@ -1,6 +1,6 @@
 ---
-title: iOS-appar med appskyddsprinciper
-description: Det här avsnittet beskriver vad som händer när din iOS-app hanteras av appskyddsprinciper.
+title: iOS/iPadOS-appar med appskyddsprinciper
+description: Det här avsnittet beskriver vad som händer när din iOS/iPadOS-app hanteras av appskyddsprinciper.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 165ce160339647e396b9cfc3a8374f21c77665f8
-ms.sourcegitcommit: f9dc50642efa8656054ef67f9335b9b46b655f93
+ms.openlocfilehash: c854811a9deb938613af872f3cf86244ab9121b3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606629"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514667"
 ---
-# <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
+# <a name="what-to-expect-when-your-iosipados-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS/iPadOS-app hanteras av appskyddsprinciper
 
 Intunes appskyddsprinciper tillämpas på appar som används för arbete eller skola. Det innebär att när dina anställda och studenter använder sina appar i ett personligt sammanhang, kan de se till att upplevelsen blir likadan. I arbets- eller skolsammanhang kan de däremot få meddelanden om att fatta kontobeslut, uppdatera inställningar eller kontakta dig för hjälp. Använd den här artikeln för att lära dig vad dina användare upplever när de försöker komma åt och använda Intune-skyddade appar.  
 
@@ -34,7 +34,7 @@ Om enheten **inte har registrerats i Intune** uppmanas användarna att starta om
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
-<!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
+<!---  ![Screenshot of the iOS/iPadOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
 För enheter som **har registrerats för hantering i Intune** ser användaren ett meddelande som anger att appen nu hanteras.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71ccea34694bde8ea80a779b36ef612fcefb1add
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 97177f91edea1205f6e8349ee1a7194d0f5300e5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510208"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514548"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Hur skiljer sig Intune for Education åt från den fullständiga hanteringsupplevelsen i Intune?
 
@@ -29,7 +29,7 @@ Med Intune for Education kan dina lärare och elever vara produktiva samtidigt s
 
 ![Intune for Education-konsolen jämförd med Intune-konsolen.](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
-Med Intune for Education kan du hantera Windows 10- och iOS-enheter med hjälp av de fullständiga MDM-funktionerna i Intune. Med den fullständiga enhetshanteringen kan du hantera Windows-, iOS- och Android-enheter.  
+Med Intune for Education kan du hantera Windows 10- och iOS/iPadOS-enheter med hjälp av de fullständiga MDM-funktionerna i Intune. Med den fullständiga enhetshanteringen kan du hantera Windows-, iOS/iPadOS- och Android-enheter.  
 
 Intune for Education kan användas separat eller tillsammans med den [fullständiga enhetshanteringen i Intune](what-is-intune.md). Det kan också användas tillsammans med resten av verktygen i [Microsoft Education](https://microsoft.com/education), vilket gör det enkelt att använda Intune for Education med andra bra utbildningsverktyg från Microsoft.  
 

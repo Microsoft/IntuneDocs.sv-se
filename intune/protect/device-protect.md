@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c18b6bcc8ec6e8d78862c0368c920fd3d79ce2b5
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 49c629039c08c892c7d6b19422d79c9eb1a8d760
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755586"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510477"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Skydda enheter med Microsoft Intune
 
@@ -43,7 +43,7 @@ När en enhet behöver [tas bort från Intune-hanteringen](../remote-actions/dev
 
 ## <a name="require-devices-to-be-compliant"></a>Kräv att enheter är kompatibla
 I Intune finns [efterlevnadsprinciper för enheter](device-compliance-get-started.md) som gör att du kan utvärdera (och i vissa fall reparera) enheter som inte uppfyller de regler som du anger. Du kan t.ex. få rapporter om:
-- jailbrokade iOS-enheter
+- jailbrokade iOS/iPadOS-enheter
 - krypterade eller inte krypterade enheter
 - hälsotillståndet för Windows 10-enheter (som bestäms av tjänsten Hälsoattestering).
 
@@ -60,7 +60,7 @@ I Intune finns flera funktioner som hjälper dig att skydda appar och deras data
 Med Intune kan du integrera [Windows Hello för företag](windows-hello.md), som är en alternativ inloggningsmetod för Windows 10 och senare som använder Active Directory eller ett Azure Active Directory-konto i stället för ett lösenord, smartkort eller virtuellt smartkort.
 
 ## <a name="disable-activation-lock-on-ios-devices"></a>Inaktivera aktiveringslåset på iOS-enheter
-Aktiveringslåset är en funktion som skyddar användarnas enheter. Funktionen kräver att användarna anger sina Apple-ID:n och lösenord innan de kan radera eller återaktivera enheter. Den här funktionen kan dock leda till problem om användaren t.ex. lämnar företaget utan att ta bort låset. [Inaktivera aktiveringslås för iOS](../remote-actions/device-activation-lock-disable.md) kan hjälpa genom att ta bort låset från de övervakade iOS-enheterna så att du kan allokera eller radera dem.
+Aktiveringslåset är en funktion som skyddar användarnas enheter. Funktionen kräver att användarna anger sina Apple-ID:n och lösenord innan de kan radera eller återaktivera enheter. Den här funktionen kan dock leda till problem om användaren t.ex. lämnar företaget utan att ta bort låset. [Inaktivera aktiveringslås för iOS/iPadOS](../remote-actions/device-activation-lock-disable.md) kan hjälpa genom att ta bort låset från de övervakade iOS/iPadOS-enheterna så att du kan allokera eller radera dem.
 
 ## <a name="next-steps"></a>Nästa steg
 

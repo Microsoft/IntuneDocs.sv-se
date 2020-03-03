@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9b56ba1515608afb6c2a0d151f5412711d49e57
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: b83367bb2f1d3622a1fc4e11eedd88f3f26ee8dd
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886713"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510613"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel i Intune
 
@@ -44,7 +44,7 @@ Den här funktionen stöder:
 
 - Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen längre ned i den här artikeln.
 - Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
-- För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator.
+- För iOS/iPadOS konfigurerar du profilen med Apple Configurator på en Mac-dator.
 - PSK kräver en sträng med 64 hexadecimala siffror eller en lösenfras med 8 till 63 utskrivbara ASCII-tecken. Vissa tecken, till exempel asterisk (*), stöds inte.
 
 ## <a name="create-a-custom-profile"></a>Skapa en anpassad profil

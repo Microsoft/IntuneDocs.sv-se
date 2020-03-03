@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5092fa37f0bf6bd1320fa06fa58ac5e36f55aa3c
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 63fa9f461fc9884d8c21e40cb4b5e3831f3b4b03
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410190"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576522"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Använda certifikat för autentisering i Microsoft Intune
 
@@ -38,7 +38,7 @@ Använd certifikat med Intune för att autentisera dina användare till program 
 
 Du distribuerar de här certifikaten genom att skapa och tilldela certifikatprofiler till enheter.
 
-Varje enskild certifikatprofil som du skapar stöder en enda plattform. Om du till exempel använder PKCS-certifikat skapar du en PKCS-certifikatprofil för Android och en separat PKCS-certifikatfil för iOS. Om du även använder SCEP-certifikat för dessa två plattformar skapar du en SCEP-certifikatprofil för Android och en annan för iOS.
+Varje enskild certifikatprofil som du skapar stöder en enda plattform. Om du till exempel använder PKCS-certifikat skapar du en PKCS-certifikatprofil för Android och en separat PKCS-certifikatfil för iOS/iPadOS. Om du även använder SCEP-certifikat för dessa två plattformar skapar du en SCEP-certifikatprofil för Android och en annan för iOS/iPadOS.
 
 ### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>Allmänna överväganden när du använder en Microsoft-certifikatutfärdare
 
@@ -83,7 +83,7 @@ När du använder en certifikatutfärdare från tredje part (inte Microsoft):
 | Android enterprise <br> – Fullständigt hanterad (enhetsägare)   | ![Stöds](./media/certificates-configure/green-check.png) |   | ![Stöds](./media/certificates-configure/green-check.png) |   |
 | Android enterprise <br> – Dedikerad (enhetsägare)   | ![Stöds](./media/certificates-configure/green-check.png)  |   | ![Stöds](./media/certificates-configure/green-check.png)  |   |
 | Android enterprise <br> – Arbetsprofil    | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
-| iOS                   | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) | ![Stöds](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Stöds](./media/certificates-configure/green-check.png) |  ![Stöds](./media/certificates-configure/green-check.png) |![Stöds](./media/certificates-configure/green-check.png)|![Stöds](./media/certificates-configure/green-check.png)|
 | Windows Phone 8.1     |![Stöds](./media/certificates-configure/green-check.png)  |  | ![Stöds](./media/certificates-configure/green-check.png)| ![Stöds](./media/certificates-configure/green-check.png) |
 | Windows 8.1 och senare |![Stöds](./media/certificates-configure/green-check.png)  |  |![Stöds](./media/certificates-configure/green-check.png) |   |

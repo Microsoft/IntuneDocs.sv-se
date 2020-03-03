@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7a6914e8174023704cfc593ec08a525ec5889f3
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 7d1a55f758be50c342a5c8851106f0c37e6aec50
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437910"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513732"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -74,21 +74,21 @@ När du skapar en appskyddsprincip för iOS/iPad-appar och Android-appar följer
     Den här sidan innehåller inställningar för DLP-kontroller (dataförlustskydd), däribland begränsningar för att klippa ut, kopiera, klistra in och spara som. De här inställningarna avgör hur användarna interagerar med data i de appar som den här appskyddsprincipen gäller för.
 
     **Inställningar för dataskydd**:<br>
-    - **Dataskydd för iOS/iPadOS** – mer information finns i [Inställningar för iOS-appskyddsprincip – dataskydd](~/apps/app-protection-policy-settings-ios.md#data-protection).
+    - **Dataskydd för iOS/iPadOS** – mer information finns i [Inställningar för iOS/iPadOS-appskyddsprincip – dataskydd](~/apps/app-protection-policy-settings-ios.md#data-protection).
     - **Dataskydd för Android** – mer information finns i [Inställningar för Android-appskyddsprincip – dataskydd](~/apps/app-protection-policy-settings-android.md#data-protection).
 
 7. Klicka på **Nästa** för att visa sidan **Åtkomstkrav**.<br>
     Den här sidan innehåller inställningar som gör att du kan konfigurera de krav för PIN-kod och autentiseringsuppgifter som användarna måste uppfylla för att få åtkomst till appar i en arbetskontext. 
  
     **Inställningar för åtkomstkrav**:<br>
-    - **Åtkomstkrav för iOS/iPadOS** – mer information finns i [Inställningar för iOS-appskyddsprincip – åtkomstkrav](~/apps/app-protection-policy-settings-ios.md#access-requirements).
+    - **Åtkomstkrav för iOS/iPadOS** – mer information finns i [Inställningar för iOS/iPadOS-appskyddsprincip – åtkomstkrav](~/apps/app-protection-policy-settings-ios.md#access-requirements).
     - **Åtkomstkrav för Android** – mer information finns i [Inställningar för Android-appskyddsprincip – åtkomstkrav](~/apps/app-protection-policy-settings-android.md#access-requirements).
 
 8. Klicka på **Nästa** för att visa sidan **Villkorsstyrd start**.<br>
     Den här sidan innehåller inställningar med vilka du anger krav för inloggningssäkerhet för din appskyddsprincip. Välj en **inställning** och ange det **värde** som användare måste uppfylla för att logga in på företagsappen. Välj sedan den **Åtgärd** som du vill vidta om användarna inte uppfyller dina krav. I vissa fall kan flera åtgärder konfigureras för en och samma inställning.
 
     **Inställningar för villkorsstyrd start**:<br>
-    - **Villkorsstyrd start för iOS/iPadOS** – mer information finns i [Inställningar för iOS-appskyddsprincip – villkorsstyrd start](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
+    - **Villkorsstyrd start för iOS/iPadOS** – mer information finns i [Inställningar för iOS/iPadOS-appskyddsprincip – villkorsstyrd start](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
     - **Villkorsstyrd start för Android** – mer information finns i [Inställningar för Android-appskyddsprincip – villkorsstyrd start](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 9. Klicka på **Nästa** för att visa sidan **Tilldelningar**.<br>
@@ -180,7 +180,7 @@ Om du vill skapa de här principerna, så gå till **Appar** > **Appskyddsprinci
 > [!NOTE]
 > I Android-enheter uppmanas användarna att installera Intune-företagsportalappen oavsett vilken typ av enhet som valts. Om du till exempel väljer Android Enterprise kommer användare med ohanterade Android-enheter fortfarande att frågas.
 
-För iOS-krävs ytterligare appkonfigurationsinställningar för att rikta in appinställningar (APP) till appar på Intune-registrerade enheter:
+För iOS/iPadOS krävs ytterligare appkonfigurationsinställningar för att rikta in appinställningar (APP) till appar på Intune-registrerade enheter:
 
 - **IntuneMAMUPN** måste konfigureras för alla MDM-hanterade program. Mer information finns i [Hantera dataöverföring mellan iOS/iPadOS-appar med Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** måste konfigureras för alla tredjeparts och verksamhetsspecifika MDM-hanterade program. **IntuneMAMDeviceID** ska konfigureras till enhetens ID-token. Exempelvis `key=IntuneMAMDeviceID, value={{deviceID}}`. Mer information finns i [Lägg till appkonfigurationsprinciper för hanterade iOS/iPadOS-enheter](app-configuration-policies-use-ios.md).
@@ -192,7 +192,7 @@ För iOS-krävs ytterligare appkonfigurationsinställningar för att rikta in ap
 ## <a name="policy-settings"></a>Principinställningar
 Välj någon av följande länkar om du vill se en fullständig lista med principinställningar för iOS/iPadOS och Android:
 
-- [iOS-principer](app-protection-policy-settings-ios.md)
+- [iOS/iPadOS-principer](app-protection-policy-settings-ios.md)
 - [Android-principer](app-protection-policy-settings-android.md)
 
 ## <a name="next-steps"></a>Nästa steg

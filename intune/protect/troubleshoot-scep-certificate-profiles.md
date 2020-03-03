@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
-ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
+ms.openlocfilehash: 4496a5bbc6d5ee5134dc4e6a795494710ea6865d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034251"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515228"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Översikt för felsökning av SCEP-certifikatprofiler i Microsoft Intune
 
@@ -123,9 +123,9 @@ Du kan också [Ladda upp och skicka loggarna med e-post](/intune-user-help/send-
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Loggar för iOS- och iPadOS-enheter
 
-För enheter som kör iOS eller iPadOS använder du felsökningsloggar och **Xcode** som körs på en Mac-dator:
+För enheter som kör iOS/iPadOS använder du felsökningsloggar och **Xcode** som körs på en Mac-dator:
 
-1. Anslut iOS-enheten till Mac och gå sedan till **Program** > **Verktyg** för att öppna konsolprogrammet. 
+1. Anslut iOS/iPadOS-enheten till Mac och gå sedan till **Program** > **Verktyg** för att öppna konsolprogrammet. 
 
 2. Under **Åtgärd** väljer du **Inkludera informationsmeddelanden** och **Inkludera felsökningsmeddelanden**.
 

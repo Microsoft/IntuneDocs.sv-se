@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66acf4d8b88097c3262f44493ab72b3900781eed
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8a9c74281df61fbf81914461286353d49b89a4f9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504974"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510753"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Skicka data till lagring, händelsehubbar eller logganalys i Intune (förhandsversion)
 
 Microsoft Intune innehåller inbyggda loggar med information om din miljö:
 
-- **Granskningsloggar** visar information om olika händelser eller aktiviteter som sker i Intune.
+- **Granskningsloggar** visar en förteckning över aktiviteter som genererar en ändring i Intune, till exempel skapa, uppdatera (redigera), ta bort, tilldela och fjärråtgärder.
 - **Arbetsloggar (förhandsversion)** visar information om användare och enheter som har registrerats korrekt (eller misslyckats) samt information om icke-kompatibla enheter.
 - **Organisationsloggar för enhetsefterlevnad (förhandsversion)** visar en organisationsrapport för enhetsefterlevnad i Intune samt information om icke-kompatibla enheter.
 
@@ -59,10 +59,11 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
 
 ## <a name="send-logs-to-azure-monitor"></a>Skicka loggar till Azure Monitor
 
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Under **Övervakning** väljer du **Diagnostikinställningar**. Första gången du öppnar den ska du aktivera den. Annars lägger du till en inställning.
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Välj **Rapporter** > **Diagnostikinställningar**. Första gången du öppnar den ska du aktivera den. Annars lägger du till en inställning.
 
-    ![Aktivera diagnostikinställningar i Intune för att skicka loggar till Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
+    > [!div class="mx-imgBorder"]
+    > ![Aktivera diagnostikinställningar i Intune för att skicka loggar till Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
 
 3. Ange följande egenskaper:
 
@@ -104,7 +105,8 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
 
     När du är klar ser inställningarna ut ungefär som följande inställningar: 
 
-    ![Exempelbild som skickar Intune-granskningsloggar till ett Azure storage-konto](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
+    > [!div class="mx-imgBorder"]
+    > ![Exempelbild som skickar Intune-granskningsloggar till ett Azure-lagringskonto](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
 4. **Spara** ändringarna. Inställningarna visas i listan. När den har skapats kan du ändra inställningarna genom att välja **Redigera inställning** > **Spara**.
 
@@ -112,14 +114,7 @@ Beroende på var du vill dirigera granskningsloggdata, behöver du någon av fö
 
 Du kan även exportera spårningsloggar i andra delar av Intune, däribland registrering, efterlevnad, konfiguration, enheter, klientappar och mer.
 
-Så här exporterar du till exempel spårningsloggarna vid användning av enhetsefterlevnad:
-
-1. Logga in på [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Välj **Enhetsefterlevnad** > **Övervaka** > **Spårningsloggar**:
-
-    ![Välj spårningslogg för att dirigera Intune-data till Azure Monitor-lagring, händelsehubbar eller analys](./media/review-logs-using-azure-monitor/audit-logs-under-monitor-in-compliance.png)
-
-3. Välj **Inställningar för exportera data**. Om det inte är aktiverat kan du aktivera **Diagnostikinställningar**. Du kan även välja att skicka loggarna enligt beskrivningen i [skicka loggar till Azure Monitor](#send-logs-to-azure-monitor) (i den här artikeln).
+Mer information finns i [Använda granskningsloggar för att spåra och övervaka händelser](monitor-audit-logs.md). Du kan välja att skicka granskningsloggarna enligt beskrivningen i [Skicka loggar till Azure Monitor](#send-logs-to-azure-monitor) (i den här artikeln).
 
 ## <a name="cost-considerations"></a>Kostnadsöverväganden
 

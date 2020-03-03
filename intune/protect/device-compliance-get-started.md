@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413653"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515177"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune
 
@@ -95,9 +95,9 @@ Intune innehåller också en uppsättning inbyggda efterlevnadsprincipinställni
 
 
 > [!NOTE]
-> Förbättrad identifiering av upplåsning för iOS-enheter har tillfälligt inaktiverats i Intune.
+> Förbättrad identifiering av upplåsning för iOS/iPadOS-enheter har tillfälligt inaktiverats i Intune.
 
-- **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad kommer iOS-enheter checka in till Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarens platsdata lagras inte av Intune.
+- **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad checkar iOS/iPadOS-enheter in oftare på Intune. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarens platsdata lagras inte av Intune.
 
   När du aktiverar den här inställningen kräver den följande av enheter:
   - Aktivera platstjänster på operativsystemsnivå.

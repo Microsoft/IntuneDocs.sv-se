@@ -1,11 +1,11 @@
 ---
 title: Felsöka och granska WiFi-enhetens profilloggar i Microsoft Intune – Azure | Microsoft Docs
-description: Förstå och felsöka problem i konfigurationsprofilen för WiFi på Android-, iOS- och Windows-enheter i Microsoft Intune. Granska loggar och se några vanliga problem och möjliga lösningar.
+description: Förstå och felsöka problem i konfigurationsprofilen för Wi-Fi på Android-, iOS/iPadOS- och Windows-enheter i Microsoft Intune. Granska loggar och se några vanliga problem och möjliga lösningar.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: db663f96f1e4fe84c506395b98c52956069e5426
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547973"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512831"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Felsöka WiFi-enhetens konfigurationsprofiler i Microsoft Intune
 
-I Intune kan du skapa enhetskonfigurationsprofiler som innehåller anslutningsinställningar för ditt WiFi-nätverk. Använd de här inställningarna när du ansluter användarnas Android-, iOS- och Windows-enheter till organisationens nätverk.
+I Intune kan du skapa enhetskonfigurationsprofiler som innehåller anslutningsinställningar för ditt WiFi-nätverk. Använd de här inställningarna när du ansluter användarnas Android-, iOS/iPadOS- och Windows-enheter till organisationens nätverk.
 
 Den här artikeln visar hur en WiFi-profil ser ut när den tillämpas på enheter. Den innehåller också information om loggar, vanliga problem och mycket annat. Använd artikeln när du felsöker dina WiFi-profiler.
 
@@ -100,25 +100,25 @@ Följande logg visar sökresultaten och att WiFi-profilen har tillämpats:
 
 ```
 
-## <a name="ios"></a>iOS
+## <a name="iosipados"></a>iOS/iPadOS
 
 När WiFi-profilen har installerats på enheten visas den i **Hanteringsprofil**:
 
 > [!div class="mx-imgBorder"]
-> ![Hanteringsprofil på iOS-enhet](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+> ![Hanteringsprofil på iOS/iPadOS-enhet i Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
 
 > [!div class="mx-imgBorder"]
-> ![WiFi-anslutningen visas som ett WiFi-nätverk på iOS-enheten](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+> ![Wi-Fi-anslutningen visas som ett Wi-Fi-nätverk på iOS/iPadOS-enheten i Intune](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
 
-### <a name="review-the-ios-console-and-device-logs"></a>Granska iOS-konsolen och enhetsloggarna
+### <a name="review-the-iosipados-console-and-device-logs"></a>Granska iOS/iPadOS-konsolen och enhetsloggarna
 
-På iOS-enheter innehåller företagsportalens applogg inte någon information om WiFi-profiler. Om du vill se installationsinformation för dina WiFi-profiler använder du konsolen eller enhetsloggarna:
+På iOS/iPadOS-enheter innehåller företagsportalens applogg inte någon information om Wi-Fi-profiler. Om du vill se installationsinformation för dina WiFi-profiler använder du konsolen eller enhetsloggarna:
 
-1. Anslut iOS-enheten till Mac. Gå till **Program** > **Verktyg** och öppna konsolappen.
+1. Anslut iOS/iPadOS-enheten till Mac. Gå till **Program** > **Verktyg** och öppna konsolappen.
 2. Under **Åtgärd** väljer du **Inkludera informationsmeddelanden** och **Inkludera felsökningsmeddelanden**:
 
     > [!div class="mx-imgBorder"]
-    > ![Inkludera informationsmeddelanden och inkludera felsökningsmeddelanden i iOS-konsolappen](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    > ![Inkludera informationsmeddelanden och inkludera felsökningsmeddelanden i iOS/iPadOS-konsolappen](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
 
 3. Återskapa scenariot och spara loggarna i en textfil:
 
@@ -263,7 +263,7 @@ Det här problemet beror vanligtvis på något utanför Intune. Följande uppgif
 
 - Mer information om WiFi-profiler i Microsoft Intune finns i följande artiklar:
 
-  - Lägga till WiFi-inställningar för enheter som kör [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md) samt [Windows 10 och senare](wi-fi-settings-windows.md).
+  - Lägga till Wi-Fi-inställningar för enheter som kör [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md) samt [Windows 10 och senare](wi-fi-settings-windows.md).
   - [Supporttips – Så här konfigurerar du NDES för SCEP-certifikatdistributioner i Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125)
   - Felsök [distribution av SCEP-certifikatprofil](https://support.microsoft.com/help/4526725/troubleshooting-scep-profile-deployment-to-android-devices-in-intune) och [NDES-konfiguration](https://support.microsoft.com/help/4459540/troubleshoot-ndes-configuration-for-use-with-intune).
 

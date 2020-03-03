@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 563b117583f8b8c1f4da08d5d4e3399d5939bf97
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fd2f03edeb1e402401911ab2c80fa0d699e2628c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504367"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514888"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Pradeo Mobile Threat Defense-anslutningsapp med Intune
 
@@ -30,7 +30,7 @@ Du kan konfigurera principer för villkorlig åtkomst baserat på Pradeos riskbe
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Hur skyddar Intune och Pradeo företagets resurser?
 
-Pradeo-appen för Android och iOS samlar in tillgängliga telemetridata om filsystem, nätverksstackar, enheter och program. Dessa data skickas sedan till Pradeo-molntjänsten för bedömning av risken för mobila hot på enheten.
+Pradeo-appen för Android och iOS/iPadOS samlar in tillgängliga telemetridata om filsystem, nätverksstackar, enheter och program. Dessa data skickas sedan till Pradeo-molntjänsten för bedömning av risken för mobila hot på enheten.
 
 Intune-enhetens efterlevnadsprincip innehåller en regel för Pradeo Mobile Threat Defense, som är baserad på Pradeos riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat. Om enheten inte bedöms uppfylla efterlevnadskraven nekas användarna åtkomst till företagsresurser som Exchange Online och SharePoint Online. Användarna får också instruktioner från Pradeo-appen som är installerad på deras enheter, som hjälper dem att åtgärda problemet så att de kan komma åt företagets resurser igen.
 

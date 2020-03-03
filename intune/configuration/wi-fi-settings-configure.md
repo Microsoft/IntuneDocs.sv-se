@@ -1,11 +1,11 @@
 ---
 title: Skapa en Wi-Fi-profil för enheter i Microsoft Intune – Azure | Microsoft Docs
-description: Se stegen för att skapa en konfigurationsprofil för Wi-Fi-enheter i Microsoft Intune. Skapa profiler för Android, Android Enterprise, Android Kiosk, iOS, macOS, Windows 10 och senare, samt Windows Holographic for Business. Använd de här profilerna till att skapa en Wi-Fi-anslutning som ska använda certifikat, välja en EAP-typ, välja en autentiseringsmetod, aktivera en proxy och mycket mer.
+description: Se stegen för att skapa en konfigurationsprofil för Wi-Fi-enheter i Microsoft Intune. Skapa profiler för Android, Android Enterprise, Android Kiosk, iOS, iPadOS, macOS, Windows 10 och senare, samt Windows Holographic for Business. Använd de här profilerna till att skapa en Wi-Fi-anslutning som ska använda certifikat, välja en EAP-typ, välja en autentiseringsmetod, aktivera en proxy och mycket mer.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47eae4d2e662be85de2831666f944e57ba674417
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3110998970eeaf654ab57397ec827090a4103f34
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206116"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512338"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Lägga till och använda Wi-Fi-inställningar på dina enheter i Microsoft Intune
 
 Wi-Fi är ett trådlöst nätverk som används av många mobila enheter för att få åtkomst till nätverket. Microsoft Intune innehåller inbyggda Wi-Fi-inställningar som kan distribueras till användare och enheter i din organisation. Den här gruppen med inställningar kallas en ”profil” och kan tilldelas till olika användare och grupper. När den har tilldelats får användare tillgång till organisationens Wi-Fi-nätverk, utan att de behöver konfigurera något själva.
 
-Anta till exempel att du installerar ett nytt Wi-Fi-nätverk som heter Contoso Wi-Fi. Du vill sedan konfigurera att alla iOS-enheter kan ansluta till nätverket. Så här ser processen ut:
+Anta till exempel att du installerar ett nytt Wi-Fi-nätverk som heter Contoso Wi-Fi. Du vill sedan konfigurera att alla iOS/iPadOS-enheter kan ansluta till nätverket. Så här ser processen ut:
 
 1. Skapa en Wi-Fi-profil som innehåller inställningar som ansluter till det trådlösa nätverket Contoso Wi-Fi.
-2. Tilldela profilen till en grupp som innehåller alla användare av iOS-enheter.
+2. Tilldela profilen till en grupp som innehåller alla användare av iOS/iPadOS-enheter.
 3. Det nya nätverket Contoso Wi-Fi visas i listan med trådlösa nätverk på användarnas enheter. De kan sedan ansluta till nätverket med hjälp av den autentiseringsmetod som du har valt.
 
 Den här artikeln visar stegen för att skapa en Wi-Fi-profil. Den innehåller även länkar som beskriver de olika inställningarna för varje plattform.
@@ -42,6 +42,7 @@ Wi-Fi-profiler stöder följande enhetsplattformar:
 - Android 4 och senare
 - Android Enterprise och Kiosk
 - iOS 8.0 och senare
+- iPadOS 13.0 och senare
 - macOS X 10.11 och senare
 - Windows 10 och senare, Windows 10 Mobile och Windows Holographic for Business
 

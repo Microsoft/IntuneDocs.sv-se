@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 02/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28f8a2cc43e4ca210a391151383633da457c056
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: ea115810d604ce7ad49bd23b40951ee3f3da67fc
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437927"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609254"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Operativsystem och webbläsare som stöds i Intune
 
@@ -32,6 +32,9 @@ Granska de operativsystem och webbläsare som stöds innan du installerar Micros
 Hjälp med att installera Intune på din enhet finns i [Användning av hanterade enheter för att få jobbet gjort](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) och [Bandbreddsanvändning i Intune-nätverk](network-bandwidth-use.md).
 
 Mer information om stöd för tjänstens konfigurationsprovider finns i [Referens för CSP (Configuration Service Provider)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+
+> [!NOTE]
+> Intune kräver nu Android 5.x (Lollipop) eller högre för att program och enheter ska få åtkomst till företagsresurser via företagsportalappen för Android och Intune App SDK för Android. Detta krav gäller INTE för Polycom Android-baserade Teams-enheter som kör version 4.4. Dessa enheter kommer att fortsätta stödjas. 
 
 ## <a name="intune-supported-operating-systems"></a>Operativsystem som stöds i Intune
 

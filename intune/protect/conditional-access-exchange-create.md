@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d04897d38c1b46f27fe86e72ecfa6856aa9eece2
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 4962b4c75460b129f9df7729b5a34485d8ee0760
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755697"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576065"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
 
@@ -63,12 +63,12 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera att följande
 ### <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 
 - Windows Phone 8.1 och senare
-- Intern e-postapp för iOS.
+- Den interna e-postappen för iOS/iPadOS.
 - EAS-e-postklienter som Gmail på Android 4 eller senare.
 - EAS-e-postklienter på **Android-arbetsprofilenheter:** Endast **Gmail** och **Nine Work for Android Enterprise** i **arbetsprofilen** stöds på Android-arbetsprofilenheter. För villkorlig åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för Gmail eller Nine Work for Android Enterprise-appen och distribuera de apparna som en nödvändig installation.
 
 > [!NOTE]
-> Microsoft Outlook för Android och iOS stöds inte via den lokala Exchange-anslutningsappen. Om du vill dra nytta av principerna för villkorsstyrd åtkomst för Azure Active Directory och Intune-appskydd med Outlook för iOS och Android för dina lokala postlådor bör du läsa [Använda modern hybridautentisering med Outlook för iOS och Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook för Android och iOS/iPadOS stöds inte via den lokala Exchange-anslutningsappen. Om du vill dra nytta av principerna för villkorsstyrd åtkomst för Azure Active Directory och Intune-appskydd med Outlook för iOS/iPadOS och Android för dina lokala postlådor bör du läsa [Använda modern hybridautentisering med Outlook för iOS/iPadOS och Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Stöd för datorer
 

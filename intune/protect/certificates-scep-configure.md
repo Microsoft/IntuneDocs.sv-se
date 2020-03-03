@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: c454ae6184f4d2a7c3c31f3c61d2cf4331ac187c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966393"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514106"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurera infrastrukturen för att stödja SCEP med Intune
 
@@ -148,7 +148,7 @@ Följande avsnitt kräver kunskaper om Windows Server 2012 R2 eller senare samt 
        > [!IMPORTANT]
        > Lägg endast till de programprinciper som du behöver. Bekräfta dina val med säkerhetsadministratörerna.
 
-     - För iOS- och macOS-certifikatmallar redigerar du även **Nyckelanvändning** och ser till att **Signaturen är bevis för ursprung** inte är markerat.
+     - För iOS/iPadOS- och macOS-certifikatmallar redigerar du även **Nyckelanvändning** och ser till att **Signaturen är bevis för ursprung** inte är markerat.
 
      ![Mall, fliken för tillägg](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
@@ -217,7 +217,7 @@ När du har [skapat SCEP-certifikatmallen](#create-the-scep-certificate-template
 Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock konfigurera certifikatutfärdaren så att den tillåter att beställaren anger ett annat värde, och det värdet kan anges från Intune-konsolen.
 
 > [!IMPORTANT]
-> För iOS och macOS ska du alltid använda ett värde som anges i mallen.
+> För iOS/iPadOS och macOS ska du alltid använda ett värde som anges i mallen.
 
 #### <a name="to-configure-a-value-that-can-be-set-from-within-the-intune-console"></a>Så konfigurerar du ett värde som kan anges i Intune-konsolen
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b67e3b14fd94376fb6dacad88fa58ddc460a6bc5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f056f665ebee0d1e2315129a4fe739b2c490ca98
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73057586"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514854"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense-integrering med Intune
 
@@ -50,7 +50,7 @@ Om Intune är aktiverat samlar det in information om appinventering från både 
 Den här tjänsten kräver anmälan; som standard delas ingen information om appinventering. En Intune-administratör måste aktivera **appsynkronisering för iOS-enheter** i inställningarna för Mobile Threat Defense-anslutningsprogrammet innan någon information om appinventering delas.
 
 **Appinventering**  
-Om du aktiverar appsynkronisering för iOS-enheter skickas inventeringar från både företagsägda och personligt ägda iOS-enheter till din MTD-tjänstleverantör. Data i appinventeringen omfattar:
+Om du aktiverar appsynkronisering för iOS/iPadOS-enheter skickas inventeringar från både företagsägda och personligt ägda iOS/iPadOS-enheter till din MTD-tjänstleverantör. Data i appinventeringen omfattar:
 
 - App-ID
 - Appversion

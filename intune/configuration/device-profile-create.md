@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8748639f0407de7b1bb83f646b7decf8c838766
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 6dff94a9bfeb21f09b8a8c629e10ba562d7e642b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206677"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511437"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
@@ -87,7 +87,7 @@ Den här artikeln:
 
      Om du till exempel väljer **iOS/iPadOS** som plattform, ser alternativen för profiltypen ut ungefär så här:
 
-     ![Skapa iOS-profil i Intune](./media/device-profile-create/create-device-profile.png)
+     ![Skapa iOS/iPadOS-profil i Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Välj **OK** > **Skapa** när du är klar för att spara dina ändringar. Profilen skapas och visas i listan.
 
@@ -171,10 +171,10 @@ När du skapar profiler bör du tänka på följande rekommendationer:
   **Profilnamn**: Adminmall – konfigurationsprofil för OneDrive för alla Windows 10-användare  
   **Profilbeskrivning**: Mallprofil för OneDrive-administratör som innehåller minimi- och basinställningar för alla Windows 10-användare. Skapad av user@contoso.com för att hindra användare från att dela organisationsdata till personliga OneDrive-konton.
 
-  **Profilnamn**: VPN-profil för alla iOS-användare  
-  **Profilbeskrivning**: VPN-profil som innehåller minimi- och basinställningar för alla iOS-användare som ansluter sig till Contosos VPN. Skapas av user@contoso.com så att användarna autentiseras automatiskt på VPN i stället för att uppmana användarna att ange sina användarnamn och lösenord.
+  **Profilnamn**: VPN-profil för alla iOS/iPadOS-användare  
+  **Profilbeskrivning**: VPN-profil som innehåller minimi- och basinställningar för alla iOS/iPadOS-användare som ansluter sig till Contosos VPN. Skapas av user@contoso.com så att användarna autentiseras automatiskt på VPN i stället för att uppmana användarna att ange sina användarnamn och lösenord.
 
-- Skapa din profil efter dess uppgift, till exempel konfigurera Microsoft Edge-inställningar, aktivera Microsoft Defender Antivirus-inställningar, blockera olåsta enheter och så vidare.
+- Skapa din profil efter dess uppgift, till exempel konfigurera Microsoft Edge-inställningar, aktivera Microsoft Defender Antivirus-inställningar, blockera olåsta iOS/iPadOS-enheter och så vidare.
 
 - Skapa profiler som gäller för vissa grupper, till exempel marknadsföring, försäljning, IT-administratörer eller enligt plats eller skolsystem.
 

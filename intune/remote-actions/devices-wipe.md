@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 41a46bd400c5901f0352709f6057bddac262ff9e
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415518"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609372"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
@@ -47,7 +47,7 @@ Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter
 
 Alternativet **Behåll registreringstillstånd och användarkonto** är endast tillgängligt för Windows 10 version 1709 eller senare.
 
-Med alternativet **Utför skyddad rensning** säkerställer du att rensningsåtgärden inte kan kringgås genom att enheten stängs av. En skyddad rensning försöker återställa enheten tills den har lyckats. I vissa konfigurationer kan den här åtgärden medföra att enheten inte kan startas om.
+Med alternativet **Utför skyddad rensning** säkerställer du att rensningsåtgärden inte kan kringgås genom att enheten stängs av. En skyddad rensning försöker återställa enheten tills den har lyckats. I vissa konfigurationer kan den här åtgärden medföra att enheten [inte kan startas om](troubleshoot-device-actions.md#wipe-action).
 
 MDM-principer kommer att tillämpas igen nästa gång enheten ansluter till Intune.
 
@@ -196,6 +196,9 @@ Följ dessa steg om du vill ta bort en Apples DEP-enhet från hantering av Intun
 5. Välj **Tilldela om**.
 
     ![Skärmbild för Tilldela om Apple](./media/devices-wipe/apple-reassign.png)
+
+## <a name="device-states"></a>Enhetstillstånd
+En beskrivning av enhetstillstånden finns i [managementStates-samlingen](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
 
 ## <a name="fresh-start"></a>Börja om på nytt
 

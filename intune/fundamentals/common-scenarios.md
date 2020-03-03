@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0e2e2101706b9b9afa77553244a438a2299903b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 67d9b5df39311d58571f875b8d41c16088010fad
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414027"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514310"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Vanliga sätt att använda Microsoft Intune
 
@@ -35,7 +35,7 @@ Nedan följer korta introduktioner till de sex vanligaste scenarierna som förli
 >Vill du veta hur Microsofts IT-avdelning använder Intune för ge åtkomst till företagsresurser på mobila enheter, samtidigt som företagets data skyddas? [Läs denna tekniska fallstudie](https://www.microsoft.com/itshowcase/Article/Content/588) för att få reda på hur Microsoft IT använder Intune och andra tjänster för att hantera identitet, enheter, appar och data.  
 
 >[!IMPORTANT]
->Vi vill säkerställa att mobila enheter är uppdaterade med hänsyn till de senaste ”Trident”-attackerna på iOS-enheter. Därför har vi publicerat blogginlägget [Kontrollera att mobila enheter är uppdaterade med hjälp av Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Här hittar du information om hur Intune kan hjälpa dig att hålla dina enheter skyddade och uppdaterade.
+>Vi vill säkerställa att mobila enheter är uppdaterade med hänsyn till de senaste ”Trident”-attackerna på iOS/iPadOS-enheter. Därför har vi publicerat blogginlägget [Kontrollera att mobila enheter är uppdaterade med hjälp av Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Här hittar du information om hur Intune kan hjälpa dig att hålla dina enheter skyddade och uppdaterade.
 
 ## <a name="protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Skydda lokal e-post och lokala data så att det går att komma åt dem på ett säkert sätt från mobila enheter
 

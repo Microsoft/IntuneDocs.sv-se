@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd0a4b0c5e0b4cbaa7ef43ec40cddb3ab30d3070
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: f5045e78eaca19e5a78468c7c4b6698e4e1a5019
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415487"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511556"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Självstudie: Konfigurera Slack till att använda Intune för EMM och appkonfiguration
 
@@ -32,8 +32,8 @@ Slack är en samarbetsapp som du kan använda med Microsoft Intune.
 I de här självstudierna får du:
 > [!div class="checklist"]
 > - Ange Intune som Enterprise Mobility Management (EMM)-provider i din Slack Enterprise Grid. Du kommer att kunna begränsa åtkomsten till din Grid-plans arbetsytor till Intune-hanterade enheter.
-> - Skapa appkonfigurationsprinciper för att hantera Slack för EMM-appen i iOS och Slack-appen för Androids arbetsprofilenheter.
-> - Skapa efterlevnadsprinciper för Intune-enheter för att ange de villkor som Android- och iOS-enheter måste uppfylla för att anses vara kompatibla.
+> - Skapa appkonfigurationsprinciper för att hantera Slack för EMM-appen i iOS/iPadOS och Slack-appen för Android-arbetsprofilenheter.
+> - Skapa efterlevnadsprinciper för Intune-enheter för att ange de villkor som Android- och iOS/iPadOS-enheter måste uppfylla för att anses vara kompatibla.
 
 Om du inte har en Intune-prenumeration [kan du registrera dig för ett kostnadsfritt utvärderingskonto](../fundamentals/free-trial-sign-up.md).
 
@@ -51,10 +51,10 @@ Du aktiverar EMM för din Slack Enterprise Grid-plan genom att följa [Slacks in
 Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) som global administratör eller Intune-tjänstadministratör. Om du har skapat en prenumeration för en Intune-utvärdering, är det konto som du skapade prenumerationen med den globala administratören.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Konfigurera Slack för EMM på iOS-enheter
-Lägg till iOS-appen Slack för EMM till Intune-klienten och skapa en appkonfigurationsprincip för att möjliggöra för dina organisationers iOS-användare att få åtkomst till Slack med Intune som EMM-provider.
+Lägg till iOS/iPadOS-appen Slack för EMM till Intune-klienten och skapa en appkonfigurationsprincip för att möjliggöra för dina organisationers iOS/iPadOS-användare att få åtkomst till Slack med Intune som EMM-provider.
 
 ### <a name="add-slack-for-emm-to-intune"></a>Lägg till Slack för EMM i Intune
-Lägg till Slack för EMM som en hanterad iOS-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på Android-enheter.
+Lägg till Slack för EMM som en hanterad iOS/iPadOS-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på Android-enheter.
 1. Välj **Appar** > **Alla appar** > **Lägg till** i administrationscentret.
 2. Under **Apptyp** väljer du **iOS**-Store-appen.
 3. Välj **Sök i App Store**. Ange sökorden ”Slack för EMM” och välj appen. Klicka på **Välj** i **Sök i App Store**-fönstret.
@@ -84,7 +84,7 @@ Lägg till en appkonfigurationsprincip till Slack för EMM iOS/iPadOS. Appkonfig
 12. Klicka på **Spara**.
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>(Valfritt) Skapa en iOS-enhetsefterlevnadsprincip
-Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel. I den här självstudien skapar vi en enhetsefterlevnadsprincip för iOS-enheter. Efterlevnadspolicyer är plattformsspecifika så du måste skapa en separat princip för dina Slack-användare på Android-enheter.
+Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel. I den här självstudien skapar vi en enhetsefterlevnadsprincip för iOS/iPadOS-enheter. Efterlevnadspolicyer är plattformsspecifika så du måste skapa en separat princip för dina Slack-användare på Android-enheter.
 1. I administrationscentret väljer du **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
 2. Vid Namn anger du ”Test av iOS-efterlevnadsprincip”.
 3. I Beskrivning anger du ”Test av iOS-efterlevnadsprincip”.
@@ -105,7 +105,7 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 Lägg till det hanterade Google Play-kontot för Slack till din Intune-klient och skapa en appkonfigurationsprincip för att möjliggöra för dina organisationers Android-användare att få åtkomst till Slack med Intune som EMM-provider.
 
 ### <a name="add-slack-to-intune"></a>Lägga till Slack i Intune
-Lägg till Slack som en hanterad Google Play-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på iOS-enheter.
+Lägg till Slack som en hanterad Google Play-app i Intune och tilldela dina Slack-användare. Appar är plattformsspecifika så du måste lägga till en separat Intune-app för dina Slack-användare på iOS/iPadOS-enheter.
 1. Välj **Appar** > **Alla appar** > **Lägg till** i Intune.
 2. Under Apptyp väljer du **Store-app – Hanterat Google Play-konto**.
 3. Välj **Hanterat Google Play-konto – Godkänn**. Ange sökorden ”Slack för EMM” och välj appen.
@@ -120,7 +120,7 @@ Lägg till Slack som en hanterad Google Play-app i Intune och tilldela dina Slac
 10. Klicka på **Spara**.
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Lägga till en appkonfigurationsprincip för Slack
-Lägg till en appkonfigurationsprincip för Slack. Appkonfigurationsprinciper för hanterade enheter är plattformsspecifika, så du måste lägga till en separat princip för dina Slack-användare på iOS-enheter.
+Lägg till en appkonfigurationsprincip för Slack. Appkonfigurationsprinciper för hanterade enheter är plattformsspecifika, så du måste lägga till en separat princip för dina Slack-användare på iOS/iPadOS-enheter.
 1. Gå till Intune och välj **Appar** > **Appkonfigurationsprinciper** > **Lägg till**.
 2. Ange Test av appkonfigurationsprincip för Slack vid Namn.
 3. Under Registreringstyp för enhet väljer du **Hanterade enheter**.
@@ -136,7 +136,7 @@ Lägg till en appkonfigurationsprincip för Slack. Appkonfigurationsprinciper f�
 12. Klicka på **Spara**.
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>(Valfritt) Skapa en Android-enhetsefterlevnadsprincip
-Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel. I de här självstudierna skapar vi en enhetsefterlevnadsprincip för Android-enheter. Efterlevnadspolicyer är plattformsspecifika så måste du skapa en separat princip för dina Slack-användare på iOS-enheter.
+Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som en enhet måste uppfylla för att anses vara kompatibel. I de här självstudierna skapar vi en enhetsefterlevnadsprincip för Android-enheter. Efterlevnadspolicyer är plattformsspecifika så måste du skapa en separat princip för dina Slack-användare på iOS/iPadOS-enheter.
 1. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip** i Intune.
 2. Vid Namn anger du ”Test av Android-efterlevnadsprincip”.
 3. Vid Beskrivning anger du ”Test av Android-efterlevnadsprincip”.
@@ -155,13 +155,13 @@ Konfigurera en efterlevnadsprincip för Intune-enheter som anger de villkor som 
 
 ## <a name="launch-slack"></a>Starta Slack
 
-Med de principer som du just har skapat måste alla iOS- eller Android-arbetsprofilenheter som försöker logga in till en av dina arbetsytor vara Intune-registrerade. Försök starta Slack för EMM på en Intune-registrerad iOS-enhet eller starta Slack på en Intune-registrerad Android-arbetsprofilenhet för att testa det här scenariot. 
+Med de principer som du just har skapat måste alla iOS/iPadOS- eller Android-arbetsprofilenheter som försöker logga in till en av dina arbetsytor vara Intune-registrerade. Försök starta Slack för EMM på en Intune-registrerad iOS/iPadOS-enhet eller starta Slack på en Intune-registrerad Android-arbetsprofilenhet för att testa det här scenariot. 
 
 ## <a name="next-steps"></a>Nästa steg
 
 I de här självstudierna har du
 - angett Intune som Enterprise Mobility Management (EMM)-provider i din Slack Enterprise Grid. 
-- skapat appkonfigurationsprinciper för att hantera Slack för EMM-appen i iOS och Slack-appen för Android-arbetsprofilenheter.
-- skapat efterlevnadsprinciper för Intune-enheter för att ange de villkor som Android- och iOS-enheter måste uppfylla för att anses vara kompatibla.
+- skapat appkonfigurationsprinciper för att hantera Slack för EMM-appen i iOS/iPadOS och Slack-appen för Android-arbetsprofilenheter.
+- skapat efterlevnadsprinciper för Intune-enheter för att ange de villkor som Android- och iOS/iPadOS-enheter måste uppfylla för att anses vara kompatibla.
 
 Mer information om appkonfigurationsprinciper finns i [Appkonfigurationsprinciper för Microsoft Intune](app-configuration-policies-overview.md). Mer information om enhetsefterlevnadspolicyer finns i [Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune](../protect/device-compliance-get-started.md).

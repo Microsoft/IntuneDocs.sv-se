@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: elocholi
+ms.reviewer: jinyoon
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01dae8f6c90155e649211ab226cf24eeade29b42
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 9dab1025e283ed1591c22b03ed4e3a61d40a20c3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946690"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515092"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
@@ -92,19 +92,17 @@ Så här ansluter du Intune till Jamf Pro:
 
 6. Välj **API-behörigheter** under **Hantera**. 
 
-7. På sidan API-behörigheter väljer du **Lägg till en behörighet** för att lägga till en ny behörighet. På sidan **Begär API-behörigheter** väljer du **Intune** och väljer sedan **Programbehörigheter**. Markera enbart kryssrutan för **update_device_attributes**.
+7. På sidan API-behörigheter tar du bort alla behörigheter från den här appen genom att välja ikonen **...** bredvid varje befintlig behörighet. Observera att detta är obligatoriskt. Integreringen misslyckas om det finns oväntade extra behörigheter i den här appregistreringen.
 
-8. Vänta några minuter på att den nya behörigheten ska börja att gälla. Välj sedan **Bevilja administratörsgodkännande för _\<din klientorganisation>_**. Autentisera ditt konto i det nya fönstret och ge programmet åtkomst genom att följa instruktionerna.  
+8. Nu ska vi lägga till behörigheter för att uppdatera enhetsattribut. Längst upp till vänster på sidan **API-behörigheter** väljer du **Lägg till en behörighet** för att lägga till en ny behörighet. 
 
-9. Du kan behöva vänta ytterligare några minuter på att administratörsmedgivandet börjar att gälla.
+9. På sidan **Begär API-behörigheter** väljer du **Intune** och väljer sedan **Programbehörigheter**. Markera enbart kryssrutan för **update_device_attributes** och spara den nya behörigheten.
 
-10. Uppdatera genom att klicka på knappen **Uppdatera** överst på sidan. Kontrollera att ett administratörsmedgivande har beviljats för behörigheten **update_device_attributes**. 
+10. Bevilja sedan administratörsgodkännande för den här appen genom att välja **Bevilja administratörsgodkännande för _\<din klientorganisation>_** längst upp till vänster på sidan **API-behörigheter**. Du kan behöva autentisera ditt konto i det nya fönstret och ge programmet åtkomst genom att följa instruktionerna.  
 
-11. Ta bort administratörsmedgivandet från behörigheten **User.Read** genom att välja menyn **...** och **Återkalla administratörsmedgivande**.
+11. Uppdatera genom att klicka på knappen **Uppdatera** överst på sidan. Kontrollera att ett administratörsmedgivande har beviljats för behörigheten **update_device_attributes**. 
 
-12. Du måste också ta bort behörigheten **User.Read**. Välj menyn **...** med **User.Read** och välj **Ta bort behörighet**. 
-
-8. När appen har registrerats ska API-behörigheterna bara innehålla en behörighet med namnet **update_device_attributes** och bör visas på följande sätt:
+12. När appen har registrerats ska API-behörigheterna bara innehålla en behörighet med namnet **update_device_attributes** och bör visas på följande sätt:
 
    ![Lyckade behörigheter](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 

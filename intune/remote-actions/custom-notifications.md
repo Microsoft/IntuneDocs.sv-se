@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 412dc631f2092d1eb7d9a7332b903a4742472202
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 5195ee83efb68cea061e69f5cad49e9d43458450
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413890"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609368"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Skicka anpassade meddelanden i Intune  
 
@@ -53,40 +53,42 @@ Om du har företagsportalappen öppen på en Android-enhet liknar meddelandet f�
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Vanliga scenarier för att skicka anpassade meddelanden  
 
 - Meddela alla anställda om en ändring i schemat, till exempel om nedstängning av en byggnad på grund av dåligt väder.
-- Skicka ett meddelande till användaren av en enskild enhet för att kommunicera en brådskande begäran, till exempel att starta om enheten för att slutföra installationen av en uppdatering. 
+- Skicka ett meddelande till användaren av en enskild enhet för att kommunicera en brådskande begäran, till exempel att starta om enheten för att slutföra installationen av en uppdatering.
 
 ## <a name="considerations-for-using-custom-notifications"></a>Att tänka på när du använder anpassade meddelanden
 
-**Enhetskonfiguration** 
+**Enhetskonfiguration**
 
-- Företagsportalappen eller Microsoft Intune-appen måste vara installerad på enheten innan användarna kan ta emot anpassade meddelanden. De måste också ha konfigurerat behörigheter som tillåter att företagsportalappen eller Microsoft Intune-appen skickar push-meddelanden. Om det behövs kan företagsportalappen och Microsoft Intune-appen uppmana användarna att tillåta aviseringar.  
-- Google Play Services är ett obligatoriskt beroende i Android.  
+- Företagsportalappen eller Microsoft Intune-appen måste vara installerad på enheten innan användarna kan ta emot anpassade meddelanden. De måste också ha konfigurerat behörigheter som tillåter att företagsportalappen eller Microsoft Intune-appen skickar push-meddelanden. Om det behövs kan företagsportalappen och Microsoft Intune-appen uppmana användarna att tillåta aviseringar.
+- Google Play Services är ett obligatoriskt beroende i Android.
 - Enheten måste vara MDM-registrerad.
 
 **Behörigheter**:
+
 - Om du vill skicka meddelanden till grupper måste ditt konto har följande RBAC-behörighet i Intune: *Organisation* > **Uppdatering**.
 - Om du vill skicka meddelanden till en enhet måste ditt konto har följande RBAC-behörighet i Intune: *Fjärruppgifter* > **Skicka anpassade meddelanden**.
 
-**Skapa meddelanden**:  
-- Om du vill skapa ett meddelande använder du ett konto som har tilldelats en Intune-roll som har behörigheten **Uppdatera** för **Organisation**. Information om hur du tilldelar behörigheter till en användare finns i [Rolltilldelningar](../fundamentals/role-based-access-control.md#role-assignments)  
+**Skapa meddelanden**:
+ 
+- Om du vill skapa ett meddelande använder du ett konto som har tilldelats en Intune-roll som har rätt behörighet enligt beskrivningen i föregående avsnitt (*Behörigheter*). Information om hur du tilldelar behörigheter till en användare finns i [Rolltilldelningar](../fundamentals/role-based-access-control.md#role-assignments).
 - Anpassade meddelanden är begränsade till rubriker med högst 50 tecken och meddelanden med högst 500 tecken.  
-- Intune sparar inte skickade meddelanden. Om du vill skicka ett meddelande igen måste du återskapa meddelandet.  
+- Intune sparar inte text från anpassade meddelanden som skickats tidigare. Om du vill skicka ett meddelande igen måste du återskapa meddelandet.  
+- Du kan bara skicka upp till 25 meddelanden till grupper per timme. Den här begränsningen finns på klientnivån. Den här begränsningen gäller inte när du skickar meddelanden till enskilda enheter.
 - Du kan bara skicka upp till 25 meddelanden till grupper per timme. Den här begränsningen finns på klientnivån. Den här begränsningen gäller inte när du skickar meddelanden till enskilda användare.
-- När du skickar meddelanden till enskilda enheter kan du bara skicka upp till 10 meddelanden per timme till samma enhet. 
-- Du kan skicka meddelanden till flera användare eller enheter genom att tilldela meddelandet till grupper. När du använder grupper kan varje meddelande vara direkt riktat till 25 grupper. Kapslade grupper räknas inte mot den här summan.  
-
-  Grupper kan innehålla användare eller enheter, men meddelanden skickas endast till användare, och till alla iOS/iPadOS- eller Android-enheter som användaren har registrerat.  
+- När du skickar meddelanden till enskilda enheter kan du bara skicka upp till 10 meddelanden per timme till samma enhet.
+- Du kan skicka meddelanden till användare i grupper. När du skickar meddelanden till grupper kan varje meddelande vara direkt riktat till 25 grupper. Kapslade grupper räknas inte mot den här summan. När du skickar ett meddelande till en grupp riktas meddelandena endast till användarna i gruppen, och de skickas till alla iOS- eller Android-enheter som användaren har registrerat. Enheter i gruppen ignoreras.
 - Du kan skicka meddelanden till en enskild enhet. I stället för att använda grupper väljer du en enhet och använder sedan en fjärransluten [enhetsåtgärd](device-management.md#available-device-actions) för att skicka det anpassade meddelandet.  
 
-**Leverans**:  
-- Intune skickar meddelandet till användarnas företagsportalapp eller Microsoft Intune-appen, som sedan skapar push-meddelandet. Användarna behöver inte vara inloggade i appen för att meddelandet ska kunna push-överföras till enheten.  
-- Varken Intune, företagsportalappen eller Microsoft Intune-appen kan garantera att ett anpassat meddelande levereras. Anpassade meddelanden kan visas efter flera timmars fördröjning, eller kanske inte alls. Därför bör de inte användas för brådskande meddelanden.  
-- Anpassade meddelanden från Intune visas på enheter som vanliga push-meddelanden. Om appen Företagsportal är öppen på en iOS/iPadOS-enhet när den tar emot meddelandet visas meddelandet i appen i stället för som ett push-meddelande.  
+**Leverans**:
+
+- Intune skickar meddelandet till användarnas företagsportalapp eller Microsoft Intune-appen, som sedan skapar push-meddelandet. Användarna behöver inte vara inloggade i appen för att meddelandet ska kunna push-överföras till enheten, men enheten måste ha registrerats av målanvändaren.
+- Intune, företagsportalappen och Microsoft Intune-appen kan inte garantera att ett anpassat meddelande levereras. Anpassade meddelanden kan visas efter flera timmars fördröjning, eller kanske inte alls. Därför bör de inte användas för brådskande meddelanden.  
+- Anpassade meddelanden från Intune visas på enheter som vanliga push-meddelanden. Om företagsportalappen är öppen på en iOS-enhet när meddelandet mottas visas meddelandet i appen och inte som ett push-meddelande i systemet.  
 - Anpassade meddelanden kan visas på låsskärmar på både iOS/iPadOS- och Android-enheter, beroende på enhetsinställningarna.  
 - Andra appar kan ha åtkomst till data i dina anpassade meddelanden på Android-enheter. Använd dem inte för känslig kommunikation.  
 - Användare av en enhet som nyligen har avregistrerats eller användare som har tagits bort från en grupp kan fortfarande få ett anpassat meddelande som skickas till den gruppen senare.  Om du lägger till en användare i en grupp efter att ett anpassat meddelande har skickats till gruppen, kan den nyligen tillagda användaren på motsvarande sätt ta emot det meddelande som skickades tidigare.  
 
-## <a name="send-a-custom-notification-to-groups"></a>Skicka ett anpassat meddelande till grupper  
+## <a name="send-a-custom-notification-to-groups"></a>Skicka ett anpassat meddelande till grupper
 
 1. Logga in på [Administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå till **Administration av klientorganisation** > **Anpassade meddelanden**.  
 
@@ -96,7 +98,7 @@ Om du har företagsportalappen öppen på en Android-enhet liknar meddelandet f�
 
    ![Skapa ett anpassat meddelande](./media/custom-notifications/custom-notifications.png)  
 
-3. På fliken **Tilldelningar** väljer du de grupper som du vill skicka det här anpassade meddelandet till och väljer sedan Nästa för att fortsätta.  
+3. På fliken **Tilldelningar** väljer du de grupper som du vill skicka det här anpassade meddelandet till och väljer sedan Nästa för att fortsätta. Om du skickar ett meddelande till en grupp riktas meddelandet endast till användarna i den gruppen. Meddelandet skickas till alla iOS- och Android-enheter som användaren har registrerat.
 
 4. På fliken **Granska + skapa** granskar du informationen och när du vill skicka meddelandet väljer du **Skapa**.  
 
@@ -104,9 +106,9 @@ Intune bearbetar meddelanden som du skapar direkt. Den enda bekräftelsen på at
 
 ![Bekräftelse av ett skickat meddelande](./media/custom-notifications/notification-sent.png)  
 
-Intune spårar inte de anpassade meddelanden som du skickar, och enheterna loggar inte mottagandet utanför enhetens meddelandecenter.  
+Intune spårar inte de anpassade meddelanden som du skickar, och enheterna loggar inte mottagandet utanför enhetens meddelandecenter. Meddelandet kan finnas i en temporär diagnostiklogg om en användare begär support i företagsportalappen eller Intune-appen.
 
-## <a name="send-a-custom-notification-to-a-single-device"></a>Skicka ett anpassat meddelande till en enskild enhet  
+## <a name="send-a-custom-notification-to-a-single-device"></a>Skicka ett anpassat meddelande till en enskild enhet
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) med ett konto som har behörighet att skapa och skicka meddelanden och gå sedan till **Enheter** > **Alla enheter**.
 
@@ -123,7 +125,7 @@ Intune spårar inte de anpassade meddelanden som du skickar, och enheterna logga
 
 Intune bearbetar meddelandet direkt. Den enda bekräftelse på att meddelandet har skickats är den Intune-avisering du får i konsolen, som visar texten för meddelandet du har skickat.  
 
-## <a name="receive-a-custom-notification"></a>Ta emot ett anpassat meddelande  
+## <a name="receive-a-custom-notification"></a>Ta emot ett anpassat meddelande
 
 På en enhet ser användarna anpassade meddelanden som skickas av Intune som ett push-standardmeddelande från företagsportalappen eller Microsoft Intune-appen. Dessa meddelanden liknar de push-meddelanden som användarna tar emot från andra appar på enheten.  
 
@@ -131,6 +133,6 @@ Om appen Företagsportal är öppen när ett meddelande tas emot på en iOS/iPad
 
 Meddelandet är kvar tills användaren stänger det.  
 
-## <a name="next-steps"></a>Nästa steg  
+## <a name="next-steps"></a>Nästa steg
 
 [Hantera enheter](device-management.md)

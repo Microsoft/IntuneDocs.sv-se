@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2daa7428cf8677f9e1a2b11db2b3ce65e2df8bc4
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: f2baf60fed2c6010e5ae0784cda166ac4fabfd57
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755008"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511743"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Lägg till iOS Store-appar i Microsoft Intune
 
@@ -32,11 +32,11 @@ ms.locfileid: "76755008"
 Informationen i den här artikeln visar hur du lägger till iOS Store-appar i Microsoft Intune. iOS Store-appar är appar som Intune installerar på dina användares enheter. En användare är en del av ditt företags arbetsstyrka. iOS Store-appar uppdateras automatiskt.
 
 >[!NOTE]
->Även om användare av iOS-enheter kan ta bort några av de inbyggda iOS-apparna som Aktier och Kartor, kan du inte använda Intune för att distribuera dessa appar igen. Om dina användarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
+>Även om användare av iOS/iPadOS-enheter kan ta bort några av de inbyggda iOS/iPadOS-apparna som Aktier och Kartor, kan du inte använda Intune för att distribuera dessa appar igen. Om dina användarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
 
 ## <a name="before-you-start"></a>Innan du börjar
 
-Du kan endast tilldela appar med den här metoden om de är gratis i App Store. Om du vill tilldela betalappar med hjälp av Intune bör du använda [volyminköpsprogrammet för iOS](vpp-apps-ios.md).
+Du kan endast tilldela appar med den här metoden om de är gratis i App Store. Om du vill tilldela betalappar med hjälp av Intune bör du använda [volyminköpsprogrammet för iOS/iPadOS](vpp-apps-ios.md).
 
 >[!NOTE]
 >När du arbetar med Microsoft Intune, rekommenderar vi att du använder antingen webbläsaren Google Chrome eller Microsoft Edge.

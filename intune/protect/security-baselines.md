@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 43e104d9f32f6b6204ffc3bd461bb06764543e3c
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548140"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569276"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Använd baslinjer för säkerhet för att konfigurera Windows 10-enheter i Intune
 
@@ -142,7 +142,7 @@ Vanliga uppgifter när du arbetar med säkerhetsbaslinjer är:
 
    ![Granska baslinjen](./media/security-baselines/review.png)
 
-9. När du har skapat profilen kan du redigera den genom att gå till **Enhetssäkerhet** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**. Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.
+9. När du har skapat profilen kan du redigera den genom att gå till **Slutpunktsskydd** > **Säkerhetsbaslinjer**, välja den baslinjetyp du konfigurerat och sedan välja **Profiler**. Välj profilen i listan över tillgängliga profiler och välj sedan **Egenskaper**. Du kan redigera inställningarna från alla tillgängliga konfigurationsflikar och välja **Granska + spara** för att genomföra ändringarna.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Ändra baslinjeversionen för en profil
 
@@ -214,7 +214,7 @@ Egentligen inte. Microsofts säkerhetsteam har kontakt med organisationer, som e
 
 - Microsoft fortsätter att publicera säkerhetsbaslinjer för grupprinciper (GPO:er) och [verktyg för säkerhetsefterlevnad](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) på samma sätt som vi har gjort under många år. Dessa baslinjer används av många organisationer. Rekommendationerna i dessa baslinjer kommer från Microsoft-säkerhetsteamets samverkan med företagskunder och externa myndigheter, bland annat DoD (Department of Defense) och NIST (National Institute of Standards and Technology). Vi delar våra rekommendationer och baslinjer med dessa organisationer. Organisationerna har också egna rekommendationer som avspeglar Microsofts rekommendationer. Eftersom hantering av mobilenheter (MDM) fortsätter att växa i molnet, har Microsoft skapat motsvarande MDM-rekommendationer för dessa grupprincipbaslinjer. Dessa ytterligare baslinjer är inbyggda i Microsoft Intune och innehåller efterlevnadsrapporter för användare, grupper och enheter som följer (eller inte följer) baslinjen.
 
-- Många kunder använder Intunes baslinjerekommendationer som utgångspunkt, och anpassar dem sedan för att uppfylla sina IT- och säkerhetskrav. Microsofts Windows 10 RS5 **MDM-säkerhetsbaslinje** är den första baslinjen som lanseras. Den här baslinjen har utformats som en allmän infrastruktur där kunderna kommer att kunna importera andra säkerhetsbaslinjer som baseras på CIS, NIST och andra standarder. För närvarande är den tillgänglig för Windows och kommer även att finnas för iOS och Android så småningom.
+- Många kunder använder Intunes baslinjerekommendationer som utgångspunkt, och anpassar dem sedan för att uppfylla sina IT- och säkerhetskrav. Microsofts Windows 10 RS5 **MDM-säkerhetsbaslinje** är den första baslinjen som lanseras. Den här baslinjen har utformats som en allmän infrastruktur där kunderna kommer att kunna importera andra säkerhetsbaslinjer som baseras på CIS, NIST och andra standarder. För närvarande är den tillgänglig för Windows och kommer även att finnas för iOS/iPadOS och Android så småningom.
 
 - Att migrera från lokala Active Directory-grupprinciper till en ren molnlösning med hjälp av Azure Active Directory (AD) och Microsoft Intune kan kännas övermäktigt. Som hjälp finns en grupp principmallar som ingår i [Verktyg för säkerhetsefterlevnad](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) som kan hantera hybrid AD- och Azure AD-anslutna enheter. Dessa enheter kan hämta MDM-inställningar från molnet (Intune) och grupprincipinställningar från lokala domänkontrollanter när det behövs.
 

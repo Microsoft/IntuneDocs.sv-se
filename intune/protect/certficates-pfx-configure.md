@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d35d7470508b610f850ca7f9f394e0d26bec677
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: 99983b2d2776e72232c65fcfb12d8075061d804b
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258104"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609340"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
@@ -66,7 +66,7 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
   Microsoft Intune Certificate Connector har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
 
 - **PFX-certifikatanslutningsprogram för Microsoft Intune**:  
-  Om du planerar att använda S/MIME-kryptering för e-post använder du Intune-portalen för att ladda ned *PFX-anslutningsappen* som stöder import av PFX-certifikat.  Gå till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för importerade PFX-certifikat*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet **PfxCertificateConnectorBootstrapper.exe**. 
+  Om du planerar att använda S/MIME-kryptering för e-post använder du Intune-portalen för att ladda ned *PFX-anslutningsappen* som stöder import av PFX-certifikat.  Gå till **Enhetskonfiguration** > **Certifikatanslutningsappar** > **Lägg till** och följer *stegen för att installera anslutningsapp för importerade PFX-certifikat*. Använd nedladdningslänken i portalen för att påbörja nedladdningen av installationsprogrammet **PfxCertificateConnectorBootstrapper.exe**.
 
   Varje Intune-klient har stöd för en enda instans av den här anslutningen. Du kan installera den här anslutningen på samma server som en instans av Microsoft Intune Certificate Connector.
 
@@ -79,10 +79,12 @@ Om du vill använda PKCS-certifikat med Intune behöver du följande infrastrukt
   Mer information finns i [Nätverksslutpunkter för Microsoft Intune](../fundamentals/intune-endpoints.md) och [Krav för Intune-nätverkskonfiguration och bandbredd](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
-  Du använder en Windows Server som värd för:
+  Använd Windows Server som värd för:
 
   - Microsoft Intune-certifikatanslutningsapp – för scenarier med autentisering och S/MIME-signering av e-post
   - PFX-certifikatanslutningsapp för Microsoft Intune – för scenarier med S/MIME-kryptering av e-post.
+
+  Anslutningsappar måste ha åtkomst till samma portar som för hanterade enheter. Dessa beskrivs i vår [information om slutpunkter för enheter](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune stöder installation av *PFX-certifikatanslutningsappen* på samma server som *Microsoft Intune Certificate Connector*.
   
@@ -124,7 +126,7 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
 9. I **Tillägg**, bekräftar du att du ser krypterar filsystem, säker e-post och klientautentisering under **användningsprinciper**.
 
     > [!IMPORTANT]
-    > För iOS-certifikatmallar: uppdatera **Nyckelanvändning** på fliken **Tillägg** och kontrollera att **Signaturen är bevis för ursprung** inte har markerats.
+    > För iOS/iPadOS-certifikatmallar: uppdatera **Nyckelanvändning** på fliken **Tillägg** och kontrollera att **Signaturen är bevis för ursprung** inte har markerats.
 
 10. I **säkerhet** lägger du till datorkontot för den server där du installerar Microsoft Intune Certificate Connector. Ge det här kontot **läs-** och **registrera**-behörigheter.
 11. Välj **Tillämpa** > **OK** för att spara certifikatmallen. Stäng **konsolen för certfikatmallar**.
@@ -208,12 +210,13 @@ För en enhet ska autentiseras med VPN, Wi-Fi eller andra resurser behöver enhe
    |------------|------------|------------|
    |**Tröskelvärde för förnyelse (%)**        |<ul><li>Alla         |20 % rekommenderas  | 
    |**Certifikatets giltighetsperiod**  |<ul><li>Alla         |Om du inte har ändrat certifikatmallen kan det här alternativet anges till ett år. |
-   |**Nyckellagringsprovider (KSP)**   |<ul><li>Windows 10  | För Windows väljer du var du vill lagra nycklarna på enheten. |
+   |**Nyckellagringsprovider (KSP)**   |<ul><li>Windows 10  |För Windows väljer du var du vill lagra nycklarna på enheten. |
    |**Certifikatutfärdare**      |<ul><li>Alla         |Visar det interna fullständiga domännamnet (FQDN) för din Enterprise-CA.  |
    |**Namn på certifikatutfärdare** |<ul><li>Alla         |Anger namnet på din Enterprise-CA, till exempel ”Contoso Certification Authority”. |
+   |**Certifikatmallens namn**    |<ul><li>Alla         |Visar namnet på certifikatmallen. |
    |**Certifikattyp**             |<ul><li>Android Enterprise (*Arbetsprofil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 och senare|Välj en typ: <ul><li> Certifikat av typen **Användare** kan innehålla både användarattribut och enhetsattribut i certifikatets ämne och SAN. </il><li>**Enhetscertifikat** kan endast innehålla enhetsattribut i certifikatets ämne och SAN. Använd Enhet för scenarier såsom användarlösa enheter, till exempel kiosker eller andra delade enheter.  <br><br> Det här valet påverkar ämnesnamnets format. |
-   |**Ämnesnamnets format**          |<ul><li>Alla         |För de flesta plattformar anger du det här alternativet som **Eget namn** om inget annat krävs.<br><br>För följande plattformar bestäms ämnesnamnets format av certifikattypen: <ul><li>Android Enterprise (*Arbetsprofil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 och senare</li></ul>  <p> Se [Ämnesnamnets format](#subject-name-format) senare i den här artikeln. |
-   |**Alternativt namn för certifikatmottagare**     |<ul><li>Alla         |Ange det här alternativet som **Användarens huvudnamn** om inget annat krävs. |
+   |**Ämnesnamnets format**          |<ul><li>Alla         |Mer information om hur du konfigurerar ämnesnamnets format finns i [Ämnesnamnets format](#subject-name-format) längre fram i den här artikeln.  <br><br> För de flesta plattformar använder du alternativet **Eget namn** om inget annat krävs. <br><br>För följande plattformar bestäms ämnesnamnets format av certifikattypen: <ul><li>Android Enterprise (*Arbetsprofil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 och senare</li></ul>  <p>  |
+   |**Alternativt namn för certifikatmottagare**     |<ul><li>Alla         |Välj **Användarens huvudnamn** som *attribut* (om inget annat krävs), konfigurera ett motsvarande *värde* och klicka sedan på **Lägg till**. <br><br>Mer information finns i [Ämnesnamnets format](#subject-name-format) senare i den här artikeln.|
    |**Förbättrad nyckelanvändning**           |<ul><li> Android-enhetsadministratör </li><li>Android Enterprise (*Enhetsägare*, *Arbetsprofil*) </li><li>Windows 10 |Certifikat kräver vanligtvis *Klientautentisering* så att användaren eller enheten kan autentisera till en server. |
    |**Tillåt alla appar att komma åt privat nyckel** |<ul><li>macOS  |Ange till **Aktivera** för att ge appar som är konfigurerade för den associerade Mac-enheten åtkomst till den privata nyckeln för PKCS-certifikat. <br><br> Mer information om den här inställningen finns i *AllowAllAppsAccess* avsnittet Certifikatnyttolast i [referensen för konfigurationsprofil](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) i Apple-utvecklardokumentationen. |
    |**Rotcertifikat**             |<ul><li>Android-enhetsadministratör </li><li>Android Enterprise (*Enhetsägare*, *Arbetsprofil*) |Välj en certifikatprofil för en rotcertifikatutfärdare som tidigare har tilldelats. |
@@ -284,8 +287,6 @@ Plattformar:
   > - Enhetsegenskaper som används i *ämnet* eller *SAN* för ett enhetscertifikat, till exempel **IMEI**, **SerialNumber** och **FullyQualifiedDomainName**, är egenskaper som kan förfalskas av en person med åtkomst till enheten.
   > - En enhet måste ha stöd för alla variabler som anges i en certifikatprofil för att den profilen ska installeras på den enheten.  Om till exempel **{{IMEI}}** används i ämnesnamnet för en SCEP-profil och tilldelas till en enhet som inte har något IMEI-nummer kommer profilen inte att installeras.  
  
-
-
 ## <a name="whats-new-for-connectors"></a>Nyheter för anslutningsappar
 
 Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. När vi uppdaterar en anslutningsapp kan du läsa om ändringarna här.
@@ -303,7 +304,7 @@ Uppdateringar för de två certifikatanslutningsapparna släpps regelbundet. Nä
 - **PFX-certifikatanslutningsprogram för Microsoft Intune – version 6.1905.0.402**  
   Ändringar i den här versionen:  
   - Avsökningsintervallet för anslutningsappen har minskats från 5 minuter till 30 sekunder.
- 
+
 ### <a name="april-2-2019"></a>2 april 2019
 
 - **Intune-certifikatanslutningsapp – version 6.1904.1.0**  

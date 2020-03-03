@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ebae46fd4935c3070319f16d35d5b53888e94c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3f432ab20170dc702d2014bbac68ced06e51082e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505169"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514905"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifiera hantering av mobila enheter för användningsscenarier
 
@@ -79,15 +79,15 @@ Du måste nu identifiera de organisationsgrupper som är kopplade till varje anv
 
 Nästa steg är att identifiera de mobila enhetsplattformar som är kopplade till respektive användningsfall. Det kan finnas mer än en.
 
-Ditt fallscenario för företagsanvändning stöder kanske iOS- och Android Samsung Knox-enhetsplattformar. Din BYOD-princip kan innehålla stöd för ytterligare plattformar för mobila enheter, t.ex. Android (inte Samsung Knox) och Windows 10 Mobile. Utifrån föregående exempel har vi kopplat plattformar för mobila enheter till respektive användningsfallsscenario.
+Ditt fallscenario för företagsanvändning stöder kanske iOS/iPadOS- och Android Samsung Knox-enhetsplattformar. Din BYOD-princip kan innehålla stöd för ytterligare plattformar för mobila enheter, t.ex. Android (inte Samsung Knox) och Windows 10 Mobile. Utifrån föregående exempel har vi kopplat plattformar för mobila enheter till respektive användningsfallsscenario.
 
 | **Användningsfall** | **Underanvändningsfall** | **Grupper** | **Enhetsplattformar** |   
 |:---:|:---:|:---:|:---:|
-| Företag | Informationsarbetare | Personalavdelning, ekonomi | iOS |                                                           
-| Företag | Chefer | Personalavdelning, ekonomi | iOS |                                                           
+| Företag | Informationsarbetare | Personalavdelning, ekonomi | iOS/iPadOS |                                                           
+| Företag | Chefer | Personalavdelning, ekonomi | iOS/iPadOS |                                                           
 | Företag | Helskärmsläge | Återförsäljning | Android |
-| BYOD | Informationsarbetare | Marknadsföring, försäljning | iOS |                                                           
-| BYOD | Chefer | Marknadsföring, försäljning | iOS |
+| BYOD | Informationsarbetare | Marknadsföring, försäljning | iOS/iPadOS |                                                           
+| BYOD | Chefer | Marknadsföring, försäljning | iOS/iPadOS |
 
 ## <a name="next-steps"></a>Nästa steg
 

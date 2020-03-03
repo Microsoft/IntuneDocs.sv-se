@@ -1,7 +1,7 @@
 ---
 title: Hantera volyminköpta Apple-appar
 titleSuffix: Microsoft Intune
-description: Läs mer om synkronisering av volyminköpta appar från iOS och MacOs App Store i Microsoft Intune och hantering och spårning av deras användning.
+description: Läs mer om synkronisering av volyminköpta appar från iOS/iPadOS och MacOs App Store i Microsoft Intune och hantering och spårning av deras användning.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
-ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.openlocfilehash: 9127ee06bc2125f476c18e9b8e46a127e48d0245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77051634"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513409"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS- och MacOS-appar som har köpts via ett Apples volymköpsprogram med Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Apple låter dig köpa flera licenser för en app som du vill använda i din organisation på iOS-och macOS-enheter med hjälp av [Apple Business Manager](https://business.apple.com/) eller [Apple School Manager](https://school.apple.com/). Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet. Genom att köpa app-licenser kan du effektivt hantera appar i företaget och behålla ägarskapet och kontrollen över de appar du köpt. 
+Apple låter dig köpa flera licenser för en app som du vill använda i din organisation på iOS/iPadOS- och macOS-enheter med hjälp av [Apple Business Manager](https://business.apple.com/) eller [Apple School Manager](https://school.apple.com/). Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet. Genom att köpa app-licenser kan du effektivt hantera appar i företaget och behålla ägarskapet och kontrollen över de appar du köpt. 
 
 Microsoft Intune hjälper dig att hantera appar som du har köpt via det här programmet genom att:
 
@@ -38,13 +38,13 @@ Microsoft Intune hjälper dig att hantera appar som du har köpt via det här pr
 - Spåra hur många licenser som är tillgängliga och har använts för köpta appar.
 - Hjälper dig att installera det antal som motsvarar det antal licenser som du äger.
 
-Du kan dessutom synkronisera, hantera och tilldela böcker som du har köpt från Apple Business Manager med Intune till iOS-enheter. Mer information finns i [Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram](vpp-ebooks-ios.md).
+Du kan dessutom synkronisera, hantera och tilldela böcker som du har köpt från Apple Business Manager med Intune till iOS/iPadOS-enheter. Mer information finns i [Så här hanterar du e-böcker i iOS/iPadOS som du har köpt via ett volymköpsprogram](vpp-ebooks-ios.md).
 
 ## <a name="what-are-location-tokens"></a>Vad är en platstoken?
 En platstoken kallas även VPP-token. Den här typen av token används för att tilldela och hantera licenser som köpts med hjälp av Apple Business Manager. Innehållshanterare kan köpa och associera licenser med de platstoken som de har behörighet till i Apple Business Manager. Dessa platstoken laddas sedan ned från Apple Business Manager och laddas upp i Microsoft Intune. Microsoft Intune stöder överföring av flera platstoken per klient. Varje token är giltig i ett år.
 
 ## <a name="how-are-purchased-apps-licensed"></a>Hur licensieras köpta appar?
-Grupper kan tilldelas köpta appar med två typer av licenser som Apple erbjuder för iOS- och macOS-enheter.
+Grupper kan tilldelas köpta appar med två typer av licenser som Apple erbjuder för iOS/iPadOS- och macOS-enheter.
 
 |   | Enhetslicensiering | Användarlicensiering |
 |-----|------------------|----------------|
@@ -156,9 +156,9 @@ Slutanvändaren får prompter för VPP-appinstallation i ett antal scenarier. Va
 
 ## <a name="revoking-app-licenses"></a>Återkalla applicenser
 
-Du kan återkalla alla associerade iOS eller macOs VPP-applicenser (volyminköpsprogram) baserat på en viss enhet, användare eller app.  Men det finns vissa skillnader mellan iOS- och macOS-plattformarna. 
+Du kan återkalla alla associerade iOS/iPadOS eller macOS VPP-applicenser (volyminköpsprogram) baserat på en viss enhet, användare eller app.  Men det finns vissa skillnader mellan iOS/iPadOS- och macOS-plattformarna. 
 
-|   | iOS | macOS |
+|   | iOS/iPadOS | macOS |
 |-----|------------------|----------------|
 | **Ta bort apptilldelning** | När du tar bort en app som har tilldelats till en användare, frigör Intune användarens eller enhetens licens och avinstallerar appen från enheten. | När du tar bort en app som en användare har tilldelats, så frigör Intune användarens eller enhetens licens. Appen avinstalleras inte från enheten. |
 | **Återkalla applicens** | När du återkallar en applicens återtas applicensen från användaren eller enheten. Du måste ändra tilldelningen till **Avinstallera** om du vill ta bort appen från enheten. | När du återkallar en applicens återtas applicensen från användaren eller enheten. MacOS-appen med återkallad licens fortsätter att vara användbar på enheten, men kan inte uppdateras förrän en licens har tilldelats till användaren eller enheten på nytt. Enligt Apple tas dessa appar bort efter en 30 dagar lång betänketid. Apple tillhandahåller dock inget sätt för Intune att ta bort appen med hjälp av tilldelningsåtgärden Avinstallera.
@@ -184,14 +184,14 @@ Du kan förnya en Apple VPP-token genom att ladda ned en ny token från Apple Bu
 
 ## <a name="deleting-a-vpp-app"></a>Ta bort en VPP-app
 
-Du kan för närvarande inte ta bort en iOS VPP-app från Microsoft Intune.
+Du kan för närvarande inte ta bort en iOS/iPadOS VPP-app från Microsoft Intune.
 
 ## <a name="assigning-custom-role-permissions-for-vpp"></a>Tilldela anpassade rollbehörigheter för VPP
 
 Åtkomst till Apple VPP-token och VPP-appar kan kontrolleras oberoende av de behörigheter som tilldelats anpassade administratörsroller i Intune.
 
 * Om du vill låta en anpassad Intune-roll hantera Apple VPP-token, så måste du tilldela behörigheter för **Hanterade appar** under **Appar** > **Apple VPP-token**.
-* Om du vill låta en anpassad Intune-roll hantera appar som har köpts med iOS VPP-token, så måste du tilldela behörigheter för **Mobilappar** under **Appar** > **Alla appar**. 
+* Om du vill låta en anpassad Intune-roll hantera appar som har köpts med iOS/iPadOS VPP-token, så måste du tilldela behörigheter för **Mobilappar** under **Appar** > **Alla appar**. 
 
 ## <a name="additional-information"></a>Ytterligare information
 

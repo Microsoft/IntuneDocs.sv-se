@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4cffafd4145ab536157ea55c732ac27bec29538
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1b740ed1e16f60b15991f1aa450e623cd20b62ea
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801612"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515143"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense-anslutningsapp för Intune
 
@@ -33,7 +33,7 @@ Du kan konfigurera principer för villkorlig åtkomst baserat på Check Point Sa
 
 ## <a name="how-do-intune-and-check-point-sandblast-mobile-help-protect-your-company-resources"></a>Hur hjälper Intune och Check Point SandBlast Mobile dig att skydda dina företagsresurser?
 
-Check Point Sandblast Mobile-appen för Android och iOS samlar in tillgängliga telemetridata om filsystem, nätverksstackar, enheter och program. Dessa data skickas sedan till Check Point SandBlast-molntjänsten för bedömning av risken för mobila hot på enheten.
+Check Point Sandblast Mobile-appen för Android och iOS/iPadOS samlar in tillgängliga telemetridata om filsystem, nätverksstackar, enheter och program. Dessa data skickas sedan till Check Point SandBlast-molntjänsten för bedömning av risken för mobila hot på enheten.
 
 Intunes efterlevnadsprincip för enheter innehåller en regel för Check Point SandBlast Mobile Threat Defense, som baseras på Check Point SandBlasts riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat. Om enheten inte bedöms uppfylla efterlevnadskraven nekas användarna åtkomst till företagsresurser som Exchange Online och SharePoint Online. Användarna får också instruktioner från Check Point SandBlast Mobile-appen som är installerad på deras enheter, som hjälper dem att åtgärda problemet så att de kan komma åt företagets resurser igen.
 

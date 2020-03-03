@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57467d3d073666c1c22ac0a412f68a258d5b3d75
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbc4e1cc8cf7bd578690bf3e34353a60ec67cdab
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414078"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514735"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
@@ -126,7 +126,7 @@ Om du inte har lagt till företagsportalappen i listan **Tillåtna appar** eller
 
 Lägg till appen Företagsportal i listan **Tillåtna appar** eller **Undanta appar** i WIP-appskyddsprincipen (Windows Information Protection). Mer information finns i [Skapa och distribuera en WIP-appskyddsprincip med Intune](../apps/windows-information-protection-policy-create.md).
 
-## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Godkänna en iOS-företagsapp (verksamhetsspecifik app) på din iOS-enhet 
+## <a name="approve-a-iosipados-company-app-line-of-business-app-on-your-iosipados-device"></a>Godkänna en iOS/iPadOS-företagsapp (verksamhetsspecifik app) på din iOS/iPadOS-enhet 
 
 ### <a name="where-it-appears"></a>Var det visas
 
@@ -136,7 +136,7 @@ iOS-appar som har utvecklats av din organisation och som inte är tillgängliga 
 
 ### <a name="what-it-means"></a>Betydelse
 
-Det här meddelandet innebär att du behöver ändra dina iOS-enhetsinställningar för att kunna godkänna och installera en app som har utvecklats av ditt företag på iOS-enheten.
+Det här meddelandet innebär att du behöver ändra dina iOS/iPadOS-enhetsinställningar för att kunna godkänna och installera en app som har utvecklats av ditt företag på iOS/iPadOS-enheten.
 
 När du installerar sådana appar med hjälp av företagsportalen och startar appen, följer du stegen nedan för att godkänna appen när du har hämtat den:
 

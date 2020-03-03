@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0bb0bd1f0df3aeb4185542d424bd3ffffe42cd
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: 257b15879f6df5763c407904a2c2b46319d64fb7
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036549"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473741"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Självstudie: Använda Autopilot till att registrera Windows-enheter i Intune
 
@@ -91,7 +91,7 @@ Nu ska du skapa en enhetsgrupp där du placerar de Autopilot-enheter som du nyss
 När du har skapat en enhetsgrupp, måste du skapa en distributionsprofil så att du kan konfigurera Autopilot-enheterna.
 
 1. I [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) väljer du **Enheter** > **Windows** > **Windows-registrering** > **Distributionsprofiler** > **Skapa profil**.
-2. På sidan **Grundinställningar** vid **Namn**, anger du *Autopilot-profil*. I **Beskrivning** anger du *Testprofil för Autopilot-enheter*.
+2. På sidan **Grundinställningar** anger du *Autopilot-profil* som **namn**. I **Beskrivning** anger du *Testprofil för Autopilot-enheter*.
 3. Ange **Omvandla alla målenheter till Autopilot** som **Ja**. Den här inställningen ser till att alla enheter i listan blir registrerade med Autopilots distributionstjänst. Det kan ta upp till 48 timmar för registreringen att bearbetas.
 4. Välj **Nästa**.
 5. På sidan **Välkomstupplevelse (OOBE)** för **Distributionsläge** väljer du **Användarbaserat**. Enheter med den här profilen är associerade med användaren som registrerar enheten. Autentiseringsuppgifter krävs för att registrera enheten.

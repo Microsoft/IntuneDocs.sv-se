@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef9810f9414af4d1f57fa71189a6960b491800c0
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 2a1ba4a5e6096f77c87560554fd2c9cd601a33e4
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414892"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511726"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -81,7 +81,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Sträng | %upn% |
 
 > [!NOTE]  
-> Om du distribuerar en appkonfigurationsprincip för hanterade enheter i Outlook för iOS med alternativet ”Använda konfigurationsdesigner” och aktiverar **Tillåt endast arbets- eller skolkonton** konfigureras konfigurationsnyckeln IntuneMAMUPN automatiskt i bakgrunden för principen. Mer information finns i vanliga frågor och svar för [Ny appkonfigurationsprincip för Outlook för iOS och Android – allmän appkonfiguration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+> Om du distribuerar en appkonfigurationsprincip för hanterade enheter i Outlook för iOS/iPadOS med alternativet ”Använda konfigurationsdesigner” och aktiverar **Tillåt endast arbets- eller skolkonton** konfigureras konfigurationsnyckeln IntuneMAMUPN automatiskt i bakgrunden för principen. Mer information finns i vanliga frågor och svar för [Ny appkonfigurationsprincip för Outlook för iOS och Android – allmän appkonfiguration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Exempel 2: Upplevelse för slutanvändaren

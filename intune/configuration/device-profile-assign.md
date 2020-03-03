@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: c6678c3fbc247ac0595775c0ccc72c7bdb9c55e1
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812373"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513103"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
@@ -89,7 +89,7 @@ För att sammanfatta använder du enhetsgrupper när du inte bryr dig om vem som
 
 ### <a name="user-groups"></a>Användargrupper
 
-Profilinställningar som tillämpas på användargrupper följer alltid med användaren och går sedan till användaren när de loggar in på olika enheter. Det är normalt att användarna har många enheter, till exempel en Surface Pro för arbete och en personlig iOS-enhet. Och det är vanligt att en person får åtkomst till e-post och andra organisationsresurser från dessa enheter.
+Profilinställningar som tillämpas på användargrupper följer alltid med användaren och går sedan till användaren när de loggar in på olika enheter. Det är vanligt att användare har många enheter, till exempel en Surface Pro för arbete och en personlig iOS/iPadOS-enhet. Och det är vanligt att en person får åtkomst till e-post och andra organisationsresurser från dessa enheter.
 
 Exempel:
 

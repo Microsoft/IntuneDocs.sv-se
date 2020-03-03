@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899e2d2dc8458d0909f01e9dfcc1056874ef0fa7
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 317f39b28909196d03ef5e7c68c7980f5fdfea3f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437978"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512219"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Kvarhållningsperioden för appskyddsdata är 90 dagar. Alla appinstanser som ha
    ![Skärmbild av panelen Sammanfattning i fönstret för hantering av mobilprogram i Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
 - **Tilldelade användare**: Det totala antalet tilldelade användare i företaget som använder en app som är associerad med en princip i en arbetskontext och är skyddade och licensierade, samt de tilldelade användare som är oskyddade och olicensierade.
-- **Flaggade användare**: Antalet användare som har problem med sina enheter. Upplåsta (iOS) och rotade (Android) enheter rapporteras under **Flaggade användare**. Även användare med enheter som är flaggade av Googles SafetyNet-kontroll för enhetsattestering (om det är aktiverat av IT-administratören) rapporteras här. 
+- **Flaggade användare**: Antalet användare som har problem med sina enheter. Upplåsta (iOS/iPadOS) och rotade (Android) enheter rapporteras under **Flaggade användare**. Även användare med enheter som är flaggade av Googles SafetyNet-kontroll för enhetsattestering (om det är aktiverat av IT-administratören) rapporteras här. 
 - **Användare med potentiellt skadliga appar**: Antalet användare som kan ha en skadlig app på en Android-enhet som identifieras av Google Play Protect. 
 - **Användarstatus för iOS** och **Användarstatus för Android**: Antal användare som har använt en app som har en princip tilldelad till dem i en arbetskontext för den relaterade plattformen. Den här informationen visar antalet användare som hanteras av principen, samt antalet användare som använder en app som ingen princip i en arbetskontext inriktar sig på. Du kan välja att lägga till dessa användare i principen.
 - **De viktigaste skyddade iOS/iPadOS-apparna** och **De viktigaste skyddade Android-apparna**: Den här informationen, som baseras på de mest använda iOS/iPadOS- och Android-apparna, visar antalet skyddade och oskyddade appar efter plattform.
@@ -61,7 +61,7 @@ Kvarhållningsperioden för appskyddsdata är 90 dagar. Alla appinstanser som ha
 Du kommer till den detaljerade vyn av sammanfattningen genom att välja panelen **Flaggade användare** och panelen **Användare med potentiellt skadliga appar**.
 
 ### <a name="flagged-users"></a>Flaggade användare
-I den detaljerade vyn visas felmeddelandet, appen som användes när felet inträffade, enhetens operativsystem och en tidsstämpel. Felet är vanligt i jailbrokade (iOS) eller rotade (Android) enheter. Användare med enheter som har flaggats av den villkorsstyrda startkontrollen ”SafetyNet-enhetsbestyrkande” visas här med den orsak som rapporterades av Google. För att en användare ska kunna tas bort från rapporten måste status för själva enheten ha ändrats, vilket inträffar efter nästa kontroll av rotidentifiering (eller kontroll av jailbreak/SafetyNet) som rapporterar ett positivt resultat. Om enheten är helt åtgärdad sker uppdateringen av rapporten Flaggade användare när fönstret läses in på nytt.
+I den detaljerade vyn visas felmeddelandet, appen som användes när felet inträffade, enhetens operativsystem och en tidsstämpel. Felet är vanligt i jailbrokade (iOS/iPadOS) eller rotade (Android) enheter. Användare med enheter som har flaggats av den villkorsstyrda startkontrollen ”SafetyNet-enhetsbestyrkande” visas här med den orsak som rapporterades av Google. För att en användare ska kunna tas bort från rapporten måste status för själva enheten ha ändrats, vilket inträffar efter nästa kontroll av rotidentifiering (eller kontroll av jailbreak/SafetyNet) som rapporterar ett positivt resultat. Om enheten är helt åtgärdad sker uppdateringen av rapporten Flaggade användare när fönstret läses in på nytt.
 
 ### <a name="users-with-potentially-harmful-apps"></a>Användare med potentiellt skadliga appar
 Användare med enheter som är flaggade av den villkorsstyrda startkontrollen **Kräv genomsökning efter hot i appar** visas här med den hotkategori som rapporterades av Google. Om det finns appar i den här rapporten som distribueras via Intune, kontaktar du appens utvecklare eller slutar tilldela appen till användarna. I den detaljerade vyn visas:
@@ -170,7 +170,7 @@ Följ de här stegen om du vill skapa en appskyddsfil i . csv-format eller en ap
     ![Skärmbild av bekräftelserutan Spara rapport](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS/iPadOS-modell. I Intune når du dessa fält genom att välja **Appar** > **Appskyddsstatus** > **Appskyddsrapport: iOS/iPadOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodellen (Android och iOS) och **lägsta tillåtna version för Android-säkerhetsuppdateringar**.   
+> Intune ger ytterligare fält för enhetsrapportering inklusive appregistrerings-ID, Android-tillverkare, modell och version av säkerhetsuppdatering samt iOS/iPadOS-modell. I Intune når du dessa fält genom att välja **Appar** > **Appskyddsstatus** > **Appskyddsrapport: iOS/iPadOS, Android**. Dessutom kan du via dessa parametrar konfigurera listan **Tillåt** för enhetens tillverkare (Android), listan **Tillåt** för enhetsmodellen (Android och iOS/iPadOS) och **lägsta tillåtna version för Android-säkerhetsuppdateringar**.   
  
 ## <a name="see-also"></a>Se även
 - [Hantera dataöverföring mellan iOS/iPadOS-appar](data-transfer-between-apps-manage-ios.md)

@@ -15,24 +15,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adea17c0e013d922c0bc3ccf06ed590828bd79dd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 15147a1d9ffd82e2f900d15c4a9d2b4d23ad23e3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801496"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515160"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-översikt för att signera och kryptera e-post i Intune
 
 E-postcertifikat, som även kallas S/MIME-certifikat, ger extra säkerhet för dina e-postmeddelanden med hjälp av kryptering och dekryptering. Microsoft Intune kan använda S/MIME-certifikat för att signera och kryptera e-postmeddelanden till mobila enheter som kör följande plattformar:
 
 - Android
-- iOS
+- iOS/iPadOS
 - macOS
 - Windows 10 och senare
 - Windows Phone
 
-På iOS-enheter kan du skapa en Intune-hanterad e-postprofil som använder S/MIME och certifikat för att signera och kryptera inkommande och utgående e-post. Andra plattformar har kanske men inte nödvändigtvis stöd för S/MIME. Om det stöds installerar du certifikat som använder S/MIME-signering och -kryptering. En slutanvändare aktiverar sedan S/MIME i sitt e-postprogram.
+På iOS/iPadOS-enheter kan du skapa en Intune-hanterad e-postprofil som använder S/MIME och certifikat för att signera och kryptera inkommande och utgående e-post. Andra plattformar har kanske men inte nödvändigtvis stöd för S/MIME. Om det stöds installerar du certifikat som använder S/MIME-signering och -kryptering. En slutanvändare aktiverar sedan S/MIME i sitt e-postprogram.
 
 Mer information om S/MIME-signering och -kryptering för e-post med Exchange finns på sidan om [S/MIME för signering och kryptering av meddelanden](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
@@ -44,13 +44,13 @@ Certifikat som används för signering gör att klientens e postapp kan kommunic
 
 För att använda signeringscertifikat skapar du en mall på din certifikatutfärdare (CA) som fokuserar på signering. På Microsoft Active Directory-certifikatutfärdare visar sidan om att [konfigurera certifikatmall för server](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) hur du skapar certifikatmallar.
 
-Signeringscertifikat i Intune använder PKCS-certifikat. [Konfigurera och använda PKCS-certifikat](certficates-pfx-configure.md) beskriver hur du distribuerar och använder PKCS-certifikat i din Intune-miljö. De här stegen innefattar:
+Signeringscertifikat i Intune använder PKCS-certifikat. [Konfigurera och använda PKCS-certifikat](certficates-pfx-configure.md) beskriver hur du distribuerar och använder PKCS-certifikat i din Intune-miljö. Dessa steg omfattar:
 
 - Ladda ned och installera Microsoft Intune-certifikatanslutningsappen för att stödja PKCS-certifikatbegäranden.
 - Skapa en profil för betrott rotcertifikat för dina enheter. Det här steget omfattar användning av betrodda rotcertifikat och mellanliggande certifikat för certifikatutfärdaren och sedan distribuering av profilen till enheter.
 - Skapa en PKCS-certifikatprofil med hjälp av den certifikatmall som du skapade. Den här profilen utfärdar signeringscertifikat till enheter och distribuerar PKCS-certifikatprofilen till enheter.
 
-Du kan även importera ett signeringscertifikat för en viss användare. Signeringscertifikatet distribueras på alla enheter som en användare registrerar. Om du vill importera certifikat till Intune använder du [PowerShell-cmdletar i GitHub](https://github.com/Microsoft/Intune-Resource-Access). Om du vill distribuera ett PKCS-certifikat som importerats i Intune för användning för signering av e-post följer du stegen i [Konfigurera och använda PKCS-certifikat med Intune](certficates-pfx-configure.md). De här stegen innefattar:
+Du kan även importera ett signeringscertifikat för en viss användare. Signeringscertifikatet distribueras på alla enheter som en användare registrerar. Om du vill importera certifikat till Intune använder du [PowerShell-cmdletar i GitHub](https://github.com/Microsoft/Intune-Resource-Access). Om du vill distribuera ett PKCS-certifikat som importerats i Intune för användning för signering av e-post följer du stegen i [Konfigurera och använda PKCS-certifikat med Intune](certficates-pfx-configure.md). Dessa steg omfattar:
 
 - Ladda ned och installera PFX-certifikatanslutningsappen för Microsoft Intune. Den här anslutningsappen tillhandahåller importerade PKCS-certifikat till enheter.
 - Importera S/MIME-e-postsigneringscertifikat till Intune.
@@ -66,7 +66,7 @@ Det rekommenderas att e-postkrypteringscertifikat inte skapas i Intune. Intune h
 
 Om du vill distribuera S/MIME-certifikat med hjälp av Intune måste du importera alla krypteringscertifikat för en användare till Intune. Intune distribuerar sedan alla de certifikaten till varje enhet som en användare registrerar. Om du vill importera certifikat till Intune använder du [PowerShell-cmdletar i GitHub](https://github.com/Microsoft/Intune-Resource-Access).
 
-Om du vill distribuera ett PKCS-certifikat som importerats i Intune för användning för kryptering av e-post följer du stegen i [Konfigurera och använda PKCS-certifikat med Intune](certficates-pfx-configure.md). De här stegen innefattar:
+Om du vill distribuera ett PKCS-certifikat som importerats i Intune för användning för kryptering av e-post följer du stegen i [Konfigurera och använda PKCS-certifikat med Intune](certficates-pfx-configure.md). Dessa steg omfattar:
 
 - Ladda ned och installera PFX-certifikatanslutningsappen för Microsoft Intune. Den här anslutningsappen tillhandahåller importerade PKCS-certifikat till enheter.
 - Importera S/MIME-e-postkrypteringscertifikat till Intune.
@@ -77,7 +77,7 @@ Om du vill distribuera ett PKCS-certifikat som importerats i Intune för använd
 
 ## <a name="smime-email-profiles"></a>S/MIME-e-postprofiler
 
-När du har skapat certifikatprofiler för S/MIME-signering och kryptering kan du [aktivera S/MIME för intern iOS-e-post](../configuration/email-settings-ios.md).
+När du har skapat certifikatprofiler för S/MIME-signering och kryptering kan du [aktivera S/MIME för intern iOS/iPadOS-e-post](../configuration/email-settings-ios.md).
 
 ## <a name="next-steps"></a>Nästa steg
 

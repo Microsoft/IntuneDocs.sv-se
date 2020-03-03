@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e1f95e2bd81d974d900acbcb0f785bb7966eaa
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2bd5b26073611d9ff974d4a53f7794919e8672c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563707"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513545"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Övervaka appinformation och tilldelningar med Microsoft Intune
 
@@ -50,7 +50,7 @@ Avsnittet **Essentials** innehåller följande information om appen:
  | **Appinformation**            | **Beskrivning**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Utgivare**          | Appens utgivare.                                            |
-| **Operativsystem**   | Appens operativsystem (Windows, iOS, Android, o.s.v.). |
+| **Operativsystem**   | Appens operativsystem (Windows, iOS/iPadOS, Android, o.s.v.). |
 | **Skapad**             | Datum och tid då versionen skapades. <b>**Obs**! Datumvärdet uppdateras när en IT-administratör ändrar appens metadata, till exempel appkategori eller appbeskrivning.                        |
 | **Tilldelade**           | Om appen har tilldelats (**Ja** eller **Nej**).                  |
 
@@ -76,7 +76,7 @@ En statuslista för enheten visas när du väljer **Installationsstatus för enh
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Enhetsnamn**      | Namnet på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgänglig för några andra enheter.                                                                       |
 | **Användarnamn**        | Användarens namn.                                                                                                                                                                                                                                      |
-| **Plattform**         | Enhetens operativsystem (Windows, iOS, Android, o.s.v.).                                                                                                                                                                                           |
+| **Plattform**         | Enhetens operativsystem (Windows, iOS/iPadOS, Android, o.s.v.).                                                                                                                                                                                           |
 | **Version**          | Appens versionsnummer. För verksamhetsspecifika appar (LOB) och Microsoft Store-appar för företag visas appens fullständiga versionsnummer. Det fullständiga versionsnumret identifierar en specifik version av appen. Numret visas som _Version_(_Build_). Exempelvis 2.2(2.2.17560800). Inga versioner visas för Store-standardappar. |
 | **Status**           | Appens status.                                                                                                                                                                                                                                     |
 | **Statusinformation**   | Information om statusen.                                                                                                                                                                                                                                     |

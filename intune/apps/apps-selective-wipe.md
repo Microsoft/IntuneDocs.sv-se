@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c0ca82b434b83937c7962b2676ce3c2a12c1424
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 1f6992aa93e1ca5a095b1e92a16a07bd0eb1c2f5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564010"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513647"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
@@ -32,7 +32,7 @@ ms.locfileid: "74564010"
 Om en enhet tappas bort eller blir stulen eller om medarbetaren som använder enheten slutar på företaget vill du förmodligen ta bort företagets appdata från enheten. Men du kanske inte vill ta bort personliga data på enheten, särskilt inte om enheten ägs av medarbetaren.
 
 >[!NOTE]
-> iOS, Android och Windows 10 är de plattformar som för närvarande stöder rensning av företagsdata på Intune-hanterade appar. Intune-hanterade appar är program som innehåller Intune APP-SDK:n och har ett licensierat användarkonto för organisationen. Distribution av programskyddsprinciper krävs inte för att aktivera selektiv radering av app.
+> iOS/iPadOS, Android och Windows 10 är de plattformar som för närvarande stöder rensning av företagsdata på Intune-hanterade appar. Intune-hanterade appar är program som innehåller Intune APP-SDK:n och har ett licensierat användarkonto för organisationen. Distribution av programskyddsprinciper krävs inte för att aktivera selektiv radering av app.
 
 Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran genom att följa stegen i det här avsnittet. När begäran har slutförts tas företagsdata bort från appen nästa gång den körs på enheten. Utöver att skapa en rensningsbegäran kan du konfigurera en selektiv rensning av organisationens data som en ny åtgärd när villkoren för åtkomstinställningar för appskyddsprinciper inte uppfylls. Den här funktionen gör att du kan skydda och ta bort känsliga organisationsdata från appar baserat på förkonfigurerade kriterier.
 

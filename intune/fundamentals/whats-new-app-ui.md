@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e38e4f8552b6ef217d264cfa74597bda5c665ab
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: aab10058fe507a956bb793902e6f7b09d8579966
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125055"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576542"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 
@@ -59,7 +59,7 @@ Företagsportalen för macOS-registrering har en enklare registreringsprocess so
 ## <a name="week-of-october-28-2019"></a>Veckan då den 28 oktober 2019 infaller  
 
 ### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Förbättrad utformning av checklistan i företagsportalappen för Android <!-- 5550857 -->  
-Checklistan för inställningar i företagsportalappen för Android har uppdaterats med en enklare design och nya ikoner. Ändringarna ligger i linje med de senaste uppdateringarna som gjorts i företagsportalappen för iOS. De uppdaterade registreringsstegen finns i [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) och [Registrera din Android-enhet](/intune-user-help/enroll-device-android-company-portal).  
+Checklistan för inställningar i företagsportalappen för Android har uppdaterats med en enklare design och nya ikoner. Ändringarna ligger i linje med de senaste uppdateringarna som gjorts i företagsportalappen för iOS/iPadOS. De uppdaterade registreringsstegen finns i [Registrera med Android-arbetsprofilen](/intune-user-help/enroll-device-android-work-profile) och [Registrera din Android-enhet](/intune-user-help/enroll-device-android-company-portal).  
 
 Den uppdaterade checklistan för registrering med Android-arbetsprofilen visas på följande skärmar:
 
@@ -216,7 +216,7 @@ Intunes företagsportalapp för Windows 10 har uppdaterats med [Fluent Design-sy
 ## <a name="week-of-april-2-2018"></a>Veckan 2 april 2018
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Uppdatering av användarupplevelsen för företagsportalappen för iOS <!-- 1412866 -->
-Vi har släppt en större uppdatering av användarupplevelsen i företagsportalappen för iOS. Uppdateringen är en fullständig visuell omarbetning som ger appen en modernare design. Vi har bevarat appens funktionalitet men förbättrat användarvänligheten och tillgängligheten.  
+Vi har släppt en större uppdatering av användarupplevelsen i företagsportalappen för iOS/iPadOS. Uppdateringen är en fullständig visuell omarbetning som ger appen en modernare design. Vi har bevarat appens funktionalitet men förbättrat användarvänligheten och tillgängligheten.  
 
 Andra nyheter:
 - Stöd för iPhone X.
@@ -267,7 +267,7 @@ Om du har aktiverat [Mappning av enhetsgrupp](../enrollment/device-group-mapping
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Förbättringar av arbetsflödet för enhetskonfiguration i företagsportalen för iOS i version 2.9.0 <!-- 1417174 -->
 
-Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappen för iOS. Språket är mer användarvänligt och vi har kombinerat skärmar där det är möjligt. Vi har också gjort språket mer specifikt för ditt företag genom att använda företagsnamnet genomgående i installationstexten.
+Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappen för iOS/iPadOS. Språket är mer användarvänligt och vi har kombinerat skärmar där det är möjligt. Vi har också gjort språket mer specifikt för ditt företag genom att använda företagsnamnet genomgående i installationstexten.
 
 > [!NOTE]
 > Vi använder företagets namn som du har angett i Azure Portal i **Microsoft Intune** > **Klientappar** > **Logotyp för företagsportalen** > **Företagsnamn**. Om du inte har angett det här värdet, använder vi det klientnamn som ställts in i **Azure Active Directory** > **egenskaper** > **namn**. Om du inte har angett något företagsnamn i företagsportalsanpassningen och inte vill att ditt klientnamn ska visas, rekommenderar vi att du anger företagets namn i företagsportalens anpassningsflik. Om du inte vill att den här strängen ska visas i rubriken till företagsportalen, kan du avmarkera kryssrutan visa företagets namn bredvid logotypen.
@@ -303,7 +303,7 @@ Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur d
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Sökförbättringar på företagsportalwebbplatsen <!-- 1331697 -->
 Vi förbättrar appsökfunktionerna och börjar med [företagsportalwebbplatsen](https://portal.manage.microsoft.com). Sökningar utförs nu även på appkategorier, utöver fälten Namn och Beskrivning. Resultaten sorteras i fallande relevansordning som standard. 
 
-Även iOS-användare får denna ändring, eftersom företagsportalwebbplatsen också används som en del av företagsportalappen för iOS. Företagsportalapparna för Android och Windows får liknande uppdateringar under de kommande månaderna.
+Även iOS-användare får denna ändring eftersom företagsportalwebbplatsen också används som en del av företagsportalappen för iOS/iPadOS. Företagsportalapparna för Android och Windows får liknande uppdateringar under de kommande månaderna.
 
 Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur det fungerar via länken "Feedback" längst ned på företagsportalwebbplatsen.
 
@@ -407,7 +407,7 @@ Sidan med appinformation i företagsportalappen för Android visar nu de appkate
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggningsfunktion i företagsportalappar för alla plattformar <!--User Story 1132123-->
 
-Vi informerar om en förändring som kommer under de kommande månaderna som kommer att förbättra inloggningen för Intune-företagsappar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
+Vi presenterar en ändring under de kommande månaderna som förbättrar inloggningen för Intune-företagsportalens appar för Android, iOS/iPadOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
 
 Nedan kan du se den tidigare inloggningen, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet.
 

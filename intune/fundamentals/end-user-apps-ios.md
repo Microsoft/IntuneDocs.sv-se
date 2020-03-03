@@ -1,6 +1,6 @@
 ---
-title: Så får dina iOS-användare sina appar
-description: Metoder för att göra iOS-appar tillgängliga för slutanvändare
+title: Så får dina iOS/iPadOS-användare sina appar
+description: Metoder för att göra iOS/iPadOS-appar tillgängliga för slutanvändare
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06cc977ce8b0b892e1020436f89ada4a40bac3f2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 344c2e3f3ed53852aa6b749c9ebf6d451dd313ff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73413986"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514395"
 ---
-# <a name="how-your-ios-users-get-their-apps"></a>Så får dina iOS-användare sina appar
+# <a name="how-your-iosipados-users-get-their-apps"></a>Så får dina iOS/iPadOS-användare sina appar
 
 Använd informationen för att förstå hur och var dina slutanvändare får de appar som du distribuerar via Microsoft Intune.
 
@@ -34,9 +34,9 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Hanterade appar** – Appar som kan hanteras med principer och har blivit "omslutna" av Intune eller skapats med Intune App Software Development Kit (SDK). De här apparna kan hanteras av Intune och appskyddsprinciper kan tillämpas på dem.
 
-**Ohanterade appar** – appar som användare kan ladda ned från iOS App Store som inte är integrerade med Intune App SDK. Intune har ingen kontroll över distribution, hantering eller selektiv rensning av dessa appar.  
+**Ohanterade appar** – appar som användare kan ladda ned från iOS/iPadOS App Store som inte är integrerade med Intune App SDK. Intune har ingen kontroll över distribution, hantering eller selektiv rensning av dessa appar.  
 
-Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade appbutiks-appar listas i företagsportalsappen. För att undvika problemet visar panelerna i företagsportalsappen för iOS användarna flera vyer på en och samma plats (företagsportalens webbplats) för alla deras appar.
+Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade appbutiks-appar listas i företagsportalsappen. För att undvika problemet visar panelerna i företagsportalsappen för iOS/iPadOS användarna flera vyer på en och samma plats (företagsportalens webbplats) för alla deras appar.
 
 Registrerade användare får sina appar genom att trycka på följande paneler på skärmen Appar i företagsportalappen:
 

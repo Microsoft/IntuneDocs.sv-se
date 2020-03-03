@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46a23ca18e385fa085afb59a654290702465a0ce
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 57a1e1c9c8a03fae67f2a4a25b6b4f16a20a8ec7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414039"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514463"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Översikt över livscykeln för hantering av mobila enheter (MDM) i Microsoft Intune
 
@@ -30,7 +30,7 @@ Alla enheter du hanterar har en *livscykel*. Intune kan hjälpa dig att hantera 
 
 ## <a name="enroll"></a>Registrera
 
-Dagens strategier för hantering av mobila enheter (MDM) omfattar många olika telefoner, surfplattor och datorer (iOS, Android, Windows och Mac OS X). Om du behöver kunna hantera enheten, vilket ofta är fallet för företagsägda enheter, är det första steget att [konfigurera registrering av enheter](../enrollment/device-enrollment.md). Du kan även hantera Windows-datorer genom att registrera dem med Intune (MDM) eller genom att [installera Intune-klientprogrammet](../manage-windows-pcs-with-microsoft-intune.md).
+Dagens strategier för hantering av mobila enheter (MDM) omfattar många olika telefoner, surfplattor och datorer (iOS/iPadOS, Android, Windows och Mac OS X). Om du behöver kunna hantera enheten, vilket ofta är fallet för företagsägda enheter, är det första steget att [konfigurera registrering av enheter](../enrollment/device-enrollment.md). Du kan även hantera Windows-datorer genom att registrera dem med Intune (MDM) eller genom att [installera Intune-klientprogrammet](../manage-windows-pcs-with-microsoft-intune.md).
 
 ## <a name="configure"></a>Konfigurera
 

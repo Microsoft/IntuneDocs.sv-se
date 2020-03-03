@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4ff350bd8c1c16eedd30a6b7af4f3927bce3c3e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9d0fe5634e5af6ef4c6f19e067131f151733c0b5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508765"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515245"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-anslutning med Intune
 
@@ -33,7 +33,7 @@ Du kan konfigurera principer för villkorlig åtkomst baserat på Zimperiums ris
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Hur skyddar Intune och Zimperium företagets resurser?
 
-Zimperium-appen för Android och iOS samlar in tillgängliga telemetridata om filsystem, nätverksstackar, enheter och program. Dessa data skickas sedan till Zimperium-molntjänsten för bedömning av risken för mobila hot på enheten.
+Zimperium-appen för Android och iOS/iPadOS samlar in tillgängliga telemetridata om filsystem, nätverksstackar, enheter och program. Dessa data skickas sedan till Zimperium-molntjänsten för bedömning av risken för mobila hot på enheten.
 
 Intune-enhetens efterlevnadsprincip innehåller en regel för Zimperium Mobile Threat Defense, som är baserad på Zimperiums riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat. Om enheten inte bedöms uppfylla efterlevnadskraven nekas användarna åtkomst till företagsresurser som Exchange Online och SharePoint Online. Användarna får också instruktioner från Zimperium-appen som är installerad på deras enheter, som hjälper dem att åtgärda problemet så att de kan komma åt företagets resurser igen.
 
