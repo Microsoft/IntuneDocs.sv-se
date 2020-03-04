@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 313d9f470e9467cc80bae9c2400d4cc64aacc7ea
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: c0cfe99f022a5e5448bdee453fb0210f6b7195fc
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886762"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181829"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nyheter i Microsoft Intune – föregående månader
 
@@ -187,7 +187,7 @@ Intune-registreringen och företagsportalen har nu stöd för iOS-versionerna 11
 När du byter namn på en Windows-enhet måste du följa nya regler:
 - 15 tecken eller mindre (måste vara mindre än eller lika med 63 byte exklusive avslutande NULL)
 - Inte null eller en tom sträng
-- Tillåten ASCII: bokstäver (a-z, A-Z), siffror (0-9) och bindestreck
+- Tillåten ASCII: Bokstäver (a–z, A–Z), siffror (0–9) och bindestreck
 - Tillåten Unicode: tecken > = 0x80, måste vara en giltig UTF8, måste vara IDN-mappningsbara (det vill säga att RtlIdnToNameprepUnicode lyckas; se RFC 3492)
 - Namn får inte enbart innehålla siffror
 - Inga blanksteg i namnet
@@ -341,7 +341,7 @@ I Intune kan du skapa principer för att köra övervakade iOS-enheter som en ki
 
 I den här uppdateringen finns det nya inställningar du kan styra:
 - **Röststyrning**: Aktiverar röststyrning på enheten i helskärmsläge.
-- **Ändring av röststyrning**: Tillåt att användare ändrar inställningen för röststyrning på enheten i helskärmsläge.
+- **Ändring av röststyrning**: Tillåt användare att ändra inställningen för Röststyrning på enheten i helskärmsläge.
 
 Om du vill se de aktuella inställningarna går du till [inställningar för iOS i helskärmsläge](../configuration/device-restrictions-ios.md#kiosk).
 
@@ -407,7 +407,7 @@ Gäller för:
 ### <a name="device-enrollment"></a>Enhetsregistrering
 
 #### <a name="new-tenants-will-default-away-from-android-device-administrator-management---4869790-----"></a>Nya klientorganisationer använder som standard inte Android-enhetsadministratörshantering<!-- 4869790   -->
-Androids enhetsadministratörsfunktioner har ersatts av Android Enterprise. Vi rekommenderar därför att du använder Android Enterprise för nya registreringar i stället. I en framtida uppdatering måste nya klientorganisationer slutföra följande nödvändiga steg i Android-registreringen för att kunna använda enhetsadministratörshantering: Gå till **Intune** > **Enhetsregistrering** > **Android-registrering** > **Privata och företagsägda enheter med enhetsadministratörsbehörighet** > **Använd enhetsadministratör för att hantera enheter**.
+Androids enhetsadministratörsfunktioner har ersatts av Android Enterprise. Vi rekommenderar därför att du använder Android Enterprise för nya registreringar i stället. I en framtida uppdatering måste nya klientorganisationer slutföra följande nödvändiga steg i Android-registrering för att använda enhetsadministratörshantering: Gå till **Intune** > **Enhetsregistrering** > **Android-registrering** > **Personal and corporate-owned devices with device administration privileges** (Personliga och företagsägda enheter med enhetsadministratörsbehörighet)  > **Use device administrator to manage devices** (Använd enhetsadministratör för att hantera enheter).
 
 Befintliga klienter får ingen förändring i sina miljöer.
 
@@ -526,7 +526,7 @@ I Intune kan du styra funktioner och inställningar i ett helskärmsläge på di
 I den här uppdateringen läggs följande funktioner till:
 
 - **Dedikerade enheter** > **Multi-app**: Den **virtuella hemknappen** kan visas genom att svepa upp på enheten eller flyta på skärmen så att användarna kan flytta den.
-- **Särskilda enheter** > **Flera appar**: Med **Åtkomst till ficklampa** kan användare använda ficklampan. 
+- **Dedikerade enheter** > **Multi-app**: Med **Åtkomst till ficklampa** kan användare använda ficklampan. 
 - **Dedikerade enheter** > **Multi-app**: **Kontroll av medievolym** gör att användare kan kontrollera enhetens medievolym med ett skjutreglage. 
 - **Dedikerade enheter** > **Multi-app**:  **Aktivera en skärmsläckare**, ladda upp en anpassad avbildning och kontrollera när skärmsläckaren visas.
 
@@ -580,9 +580,9 @@ Du kan skapa profiler för att begränsa inställningar på enheter som kör iOS
 
 - På **iOS** > **Enhetsbegränsningar** finns det vissa ändringar:
 
-  - **Inbyggda appar** > **Hitta min iPhone (endast övervakat)** : Ny inställning som blockerar den här funktionen i Hitta min-appfunktionen. 
-  - **Inbyggda appar** > **Hitta mina vänner (endast övervakat)** : Ny inställning som blockerar den här funktionen i Hitta min-appfunktionen. 
-  - **Trådlöst** > **Ändring av wifi-tillstånd (endast övervakat)** : Ny inställning som hindrar användare från att aktivera eller inaktivera Wi-Fi på enheten.
+  - **Inbyggda appar** > **Hitta min iPhone (endast övervakat)** : Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
+  - **Inbyggda appar** > **Hitta mina vänner (endast övervakat)** : Ny inställning som blockerar den här funktionen i funktionen Hitta min app. 
+  - **Trådlös** > **Ändring av Wi-Fi-tillstånd (endast övervakat)** : Ny inställning som förhindrar att användare aktiverar eller inaktiverar Wi-Fi på enheten.
   - **Tangentbord och ordlista** > **QuickPath (endast övervakat)** : Ny inställning som blockerar QuickPath-funktionen.
   - **Moln och lagring**: **Aktivitetsfortsättning** har bytt namn till **Handoff**.
 
@@ -1002,7 +1002,7 @@ Gäller för: Windows 10 och senare
 #### <a name="prevent-end-users-from-modifying-their-personal-hotspot-and-disable-siri-server-logging-on-ios-devices---4097904-----"></a>Förhindra slutanvändare från att ändra sin Internetdelning och inaktivera Siri-serverloggning på iOS-enheter<!-- 4097904   -->  
 Du kan skapa en enhetsbegränsningsprofil på en iOS-enhet (**Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp). Den här uppdateringen innehåller nya inställningar som du kan konfigurera:
 
-- **Inbyggda appar**: Loggning på serversidan av Siri-kommandon
+- **Inbyggda appar**: Loggning på serversidan av Siri kommandon
 - **Trådlöst**: Användarmodifiering av internetdelning (endast övervakat)
 
 Om du vill se de här inställningarna går du till [inbyggda app-inställningar för iOS](../configuration/device-restrictions-ios.md#built-in-apps) och [trådlösa inställningar för iOS](../configuration/device-restrictions-ios.md#wireless).
@@ -1444,7 +1444,7 @@ Se följande för en lista över dessa inställningar:
 
 - [Inställningar för enheter med Windows 10 (och senare) som ska köras med helskärmsläge](../configuration/kiosk-settings-windows.md)
 - [Enhetsbegränsningar för Microsoft Edge-webbläsaren](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser)
-- [Enhetsbegränsningar för favoriter och sökning](../configuration/device-restrictions-windows-10.md##favorites-and-search)
+- [Enhetsbegränsningar för favoriter och sökning](../configuration/device-restrictions-windows-10.md#favorites-and-search)
 
 Gäller för: Windows 10 och senare
 
@@ -1639,7 +1639,7 @@ När du skapar en profil för iOS-enheter kan du lägga till inställningar för
 [Inställningar för att visa meddelanden på låsskärmen](../configuration/ios-device-features-settings.md#lock-screen-message) visar en lista över inställningarna.
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices---2827760--"></a>Nya inställningar för enhetsbegränsning av App Store, dokumentvisning och spel har lagts till i iOS-enheter<!-- 2827760-->
-Under **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattformen > **Enhetsbegränsningar** för profiltypen > **App Store, dokumentvisning, spel** har följande inställningar lagts till: Tillåt hanterade appar att skriva kontakter till ohanterade kontaktkonton Tillåt ohanterade appar att läsa från hanterade kontaktkonton Du ser de här inställningarna under [begränsningar för iOS-enheter](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
+I **Enhetskonfiguration** > **Profiler** > **Skapa profil** > **iOS** för plattform > **Enhetsbegränsningar** för profiltyp > **App Store, dokumentvisning, spel** läggs följande inställningar till: Tillåt hanterade appar att skriva kontakter till ohanterade kontaktkonton Tillåt ohanterade appar att läsa från hanterade kontaktkonton Om du vill se de här inställningarna går du till [iOS-enhetsbegränsningar](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices---3201839-3201843---"></a>Inställningar för nytt meddelande, tips och keyguard för Android Enterprise-enhetsägarenheter<!-- 3201839 3201843 -->
 Den här uppdateringen innehåller flera nya funktioner på Android Enterprise-enheter vid körning som enhetsägare. Om du vill använda dessa funktioner, gå till **Enhetskonfiguration** > **Profiler** > **Skapa profil** > i **Plattform**, välj **Android Enterprise** > i **Profiltyp**, välj **Endast enhetens ägare** > **Enhetsbegränsningar**.
@@ -1702,7 +1702,7 @@ Inställningen **Dela kontakter via Bluetooth** har inte stöd för hantering av
 
 Om du vill se den aktuella listan över inställningar, gå till [Inställningar för Android Enterprise-enheter för att tillåta eller begränsa funktioner](../configuration/device-restrictions-android-for-work.md).
 
-Gäller för: Android Enterprise-enhetens ägare
+Gäller för: Ägare av Android Enterprise-enhet
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -3056,7 +3056,7 @@ Du kan exempelvis lägga till Webex-paketet som ett undantag till MAM-dataöverf
 En inställning i principen för Windows informationsskydd innebär att du nu kan kontrollera om krypterade data i Windows informationsskydd ingår i Windows-sökresultaten. Ange den här appens skyddsprincipalternativ genom att välja **Tillåt att Windows Search-indexeraren söker efter krypterade objekt**  i **Avancerade inställningar** för Windows informationsskyddsprincip. Appens skyddsprincip måste anges för *Windows 10*-plattformen och apprincipen **Registreringsstatus** måste anges som **Med registrering**. Mer information finns i [Tillåt att Windows Search-indexeraren söker efter krypterade objekt](../apps/windows-information-protection-policy-create.md#allow-windows-search-indexer-to-search-encrypted-items).
 
 #### <a name="configuring-a-self-updating-mobile-msi-app---1740840---"></a>Konfigurera en MSI-mobilapp med automatisk uppdatering<!-- 1740840 -->
-Du kan konfigurera att en känd MSI-mobilapp med automatisk uppdatering ignorerar versionskontrollen. Den här funktionen är användbar för att undvika konkurrenstillstånd. Den här typen av konkurrenstillstånd kan exempelvis uppstå när appen uppdateras automatiskt av apputvecklaren och även uppdateras av Intune. Båda två kan försöka framtvinga en version av appen på Windows-klienten, vilket kan skapa en konflikt. För dessa automatiskt uppdaterade MSI-appar kan du konfigurera inställningen **Ignore app version** (Ignorera appversion) på bladet **Appinformation**. När den här inställningen växlas till **Ja** kommer Microsoft Intune ignorera den appversion som är installerad på Windows-klienten.
+Du kan konfigurera att en känd MSI-mobilapp med automatisk uppdatering ignorerar versionskontrollen. Den här funktionen är användbar för att undvika konkurrenstillstånd. Den här typen av konkurrenstillstånd kan exempelvis uppstå när appen uppdateras automatiskt av apputvecklaren och även uppdateras av Intune. Båda två kan försöka framtvinga en version av appen på Windows-klienten, vilket kan skapa en konflikt. För dessa automatiskt uppdaterade MSI-appar kan du konfigurera inställningen **Ignorera appversion** på bladet **Appinformation**. När den här inställningen växlas till **Ja** kommer Microsoft Intune ignorera den appversion som är installerad på Windows-klienten.
 
 #### <a name="related-sets-of-app-licenses-supported-in-intune---1864117---"></a>Relaterade uppsättningar med applicenser stöds i Intune<!-- 1864117 -->
 Intune i Azure-portalen stöder nu relaterade uppsättningar med applicenser som ett enskilt appobjekt i användargränssnittet. Dessutom konsolideras alla offlinelicensierade appar från Microsoft Store för företag till en enda appinmatning och eventuella distributionsuppgifter från de enskilda paketen migreras över till den enda inmatningen. Om du vill se relaterade uppsättningar applicenser i Azure-portalen väljer du **Applicenser** på bladet **Klientappar**.

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ee253b50ea525f7d156c77a83f486cf990da030
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: f82a64cdb66528e3e1d3a81fd6119c4a99dff504
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517464"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782260"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense-anslutning i Intune  
 
@@ -32,6 +32,8 @@ Styr åtkomsten från mobila enheter till företagsresurser med villkorlig åtko
 
 Du kan konfigurera principer för *villkorlig åtkomst* baserat på Wanderas riskbedömning som aktiveras via Intunes principer för enhetsefterlevnad. Riskbedömningspolicyn kan tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot.  
 
+> [!NOTE]
+> Den här Mobile Threat Defense-leverantören stöds inte för oregistrerade enheter.
 
 ## <a name="how-do-intune-and-wandera-mobile-threat-defense-help-protect-your-company-resources"></a>Hur skyddar Intune och Wandera Mobile Threat Defense företagets resurser?  
 

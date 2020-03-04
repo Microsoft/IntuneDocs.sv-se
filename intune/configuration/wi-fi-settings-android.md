@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 02/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea0a60537bb488d3280990747d3e337e73fddc0
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
-ms.translationtype: MTE75
+ms.openlocfilehash: 955d9931779752e8736435555db7f7aba777b430
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754566"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652410"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Lägga till Wi-Fi-inställningar för enheter som kör Android i Microsoft Intune
 
@@ -57,19 +57,6 @@ Den här artikeln beskriver dessa inställningar.
 
     - **Identitetssekretess (yttre identitet)** : Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
-    - **Proxyinställningar**: Ange den proxykonfiguration som används av din organisation. Alternativen är:
-
-      - **Ingen** – Du använder inte en proxyserver.
-      - **Automatiskt** – Välj det här alternativet om du vill att inställningen *Webbadress till proxyserver* ska vara tillgänglig, som du använder för att ange proxyservern eller en PAC-fil (Proxy Auto-Configuration) som innehåller en lista över dina proxyservrar.
-
-    - **Webbadress till proxyserver**: Den här inställningen är tillgänglig när du anger *Proxyinställningar* som *Automatiskt*. Ange ett av följande alternativ för att dirigera enheter till proxyservern:
-
-      - IP-adress. Till exempel `10.0.0.11`
-      - En URL. Exempelvis `http://proxyserver.contoso.com`.
-      - URL:en för en PAC-fil (Proxy Auto-Configuration). Exempel: `http://proxy.contoso.com/proxy.pac`.
-
-      Mer information om PAC-filer finns under [PAC-fil (Proxy Auto-Configuration)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (öppnar en webbplats som inte tillhör Microsoft).
-
   - **EAP-TTLS**: Ange även:
 
     - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket. Det autentiserar anslutningen.
@@ -88,19 +75,6 @@ Den här artikeln beskriver dessa inställningar.
 
       - **Identitetssekretess (yttre identitet)** : Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
 
-    - **Proxyinställningar**: Ange den proxykonfiguration som används av din organisation. Alternativen är:
-
-      - **Ingen** – Du använder inte en proxyserver.
-      - **Automatiskt** – Välj det här alternativet om du vill att inställningen *Webbadress till proxyserver* ska vara tillgänglig, som du använder för att ange proxyservern eller en PAC-fil (Proxy Auto-Configuration) som innehåller en lista över dina proxyservrar.
-
-    - **Webbadress till proxyserver**: Den här inställningen är tillgänglig när du anger *Proxyinställningar* som *Automatiskt*. Ange ett av följande alternativ för att dirigera enheter till proxyservern:
-
-      - IP-adress. Till exempel `10.0.0.11`
-      - En URL. Exempelvis `http://proxyserver.contoso.com`.
-      - URL:en för en PAC-fil (Proxy Auto-Configuration). Exempel: `http://proxy.contoso.com/proxy.pac`.
-
-      Mer information om PAC-filer finns under [PAC-fil (Proxy Auto-Configuration)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (öppnar en webbplats som inte tillhör Microsoft).
-
   - **PEAP**: Ange även:
 
     - **Serverförtroende** - **Rotcertifikat för serververifiering**: Välj en befintlig betrodd rotcertifikatsprofil. Det här certifikatet presenteras för servern när klienten ansluter till nätverket. Det autentiserar anslutningen.
@@ -116,19 +90,6 @@ Den här artikeln beskriver dessa inställningar.
       - **Certifikat**: Välj den SCEP- eller PKCS-profil för klientcertifikatet som även distribueras till enheten. Det här certifikatet är den identitet som presenterades av enheten till servern när anslutningen autentiserades.
 
       - **Identitetssekretess (yttre identitet)** : Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst, t.ex. `anonymous`. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
-
-      - **Proxyinställningar**: Ange den proxykonfiguration som används av din organisation. Alternativen är:
-
-        - **Ingen** – Du använder inte en proxyserver.
-        - **Automatiskt** – Välj det här alternativet om du vill att inställningen *Webbadress till proxyserver* ska vara tillgänglig, som du använder för att ange proxyservern eller en PAC-fil (Proxy Auto-Configuration) som innehåller en lista över dina proxyservrar.
-
-      - **Webbadress till proxyserver**: Den här inställningen är tillgänglig när du anger *Proxyinställningar* som *Automatiskt*. Ange ett av följande alternativ för att dirigera enheter till proxyservern:
-
-        - IP-adress. Till exempel `10.0.0.11`
-        - En URL. Exempelvis `http://proxyserver.contoso.com`.
-        - URL:en för en PAC-fil (Proxy Auto-Configuration). Exempel: `http://proxy.contoso.com/proxy.pac`.
-
-        Mer information om PAC-filer finns under [PAC-fil (Proxy Auto-Configuration)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (öppnar en webbplats som inte tillhör Microsoft).
 
 ## <a name="next-steps"></a>Nästa steg
 

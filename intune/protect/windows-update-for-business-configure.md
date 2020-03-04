@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: c9245ca028bdb5589df8c76b10560d9130a1108c
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886795"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181729"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Hantera Windows 10-programuppdateringar i Intune
 
@@ -77,14 +77,14 @@ Windows 10-uppdateringsringar har stöd för [omfångstaggar](../fundamentals/sc
 
 ### <a name="create-and-assign-update-rings"></a>Skapa och tilldela uppdateringsringar
 
-1. Logga in till [administrationscentret för Microsoft Endpoint Manager]( https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Välj **Enheter** > **Windows** > **Windows 10-uppdateringsringar** > **Skapa**.
 
 3. På fliken *Grundläggande information* anger du ett namn samt en beskrivning (valfritt) och väljer **Nästa**.
-  ![Skapa en uppdateringsring]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. På fliken med **inställningar för uppdateringsringen** konfigurerar du inställningar som passar just ditt företags behov. Information om de tillgängliga inställningarna finns i inställningarna för Windows Update. När du har konfigurerat inställningar för *Uppdatering och Användarupplevelse* väljer du **Nästa**.
+  ![Skapa en uppdateringsring](./media/windows-update-for-business-configure/basics-tab.png)
+
+4. På fliken med **inställningar för uppdateringsringen** konfigurerar du inställningar som passar just ditt företags behov. Information om de tillgängliga inställningarna finns i [Inställningar för Windows Update](../protect/windows-update-settings.md). När du har konfigurerat inställningar för *Uppdatering och Användarupplevelse* väljer du **Nästa**.
 
 5. Under **Omfångstaggar** väljer du **+ Välj omfångstaggar** för att öppna fönstret *Välj taggar* om du vill tillämpa dem på uppdateringsringen. Välj en eller fler taggar och klickar sedan på **Välj** för att lägga till dem i uppdateringsringen och återgå till sidan *Omfångstaggar*.
 

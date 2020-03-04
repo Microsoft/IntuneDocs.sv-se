@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 126ea5a1798252f29e988553edfea462eff2fd7e
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609197"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256466"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Lägg till Google Play för företag-appar till Android enterprise-enheter med Intune
 
@@ -155,9 +155,6 @@ Mer information om privata hanterade Google Play-appar, inklusive vanliga frågo
 Hanterade Google Play-webblänkar kan installeras och hanteras precis som andra Android-appar. När de installeras på en enhet visas de i användarens applista tillsammans med andra appar som de har installerat. När användaren trycker på dem startar de i enhetens webbläsare.
 
 Webblänkar öppnas med Microsoft Edge eller någon annan webbläsarapp som du väljer att distribuera. Se till att distribuera minst en webbläsarapp till enheterna. Annars kommer webblänkarna inte att öppnas korrekt. Alla **Visningsalternativ** som är tillgängliga för webblänkar (fullskärm, fristående och minimalt gränssnitt) fungerar endast i webbläsaren Chrome. 
-
-> [!IMPORTANT]
-> Vid publiceringen av det här dokumentet finns en känd bugg hos GOogle som förhindrar att webblänkar öppnas på enheter med andra webbläsare än Chrome. Google har åtagit sig att åtgärda det här felet.  Detta meddelande kommer att tas bort när Microsoft har bekräftat att Google har publicerat sin korrigering.
 
 1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Välj **Appar** > **Alla appar** > **Lägg till**.
