@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 45bcabf8c7dc932c9415fbd309bf09f53499fbcc
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515177"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781939"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ange regler för enheter som tillåter åtkomst till resurser i din organisation med Intune
 
@@ -93,16 +93,13 @@ Intune innehåller också en uppsättning inbyggda efterlevnadsprincipinställni
 
   Om en enhet inte har en policy för efterlevnad är den kompatibel som standard. Om du använder villkorlig åtkomst med kompatibla principer rekommenderar vi att du ändrar standardinställningen till **Inte kompatibel**. Om en användare inte är kompatibel eftersom ingen princip har tilldelats, visar [företagsportalsappen](../apps/company-portal-app.md)`No compliance policies have been assigned`.
 
-
-> [!NOTE]
-> Förbättrad identifiering av upplåsning för iOS/iPadOS-enheter har tillfälligt inaktiverats i Intune.
-
-- **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad checkar iOS/iPadOS-enheter in oftare på Intune. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarens platsdata lagras inte av Intune.
+- **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad inträffar jailbrokad enhetsstatus oftare på iOS/iPad-enheter. Den här inställningen påverkar endast enheter som är föremål för en efterlevnadsprincip som blockerar jailbrokade enheter. Om den här egenskapen aktiveras används enhetens platstjänster, vilket kan påverka batterianvändningen. Användarens platsdata lagras inte av Intune och används bara för att utlösa upplåsningsidentifiering oftare i bakgrunden. 
 
   När du aktiverar den här inställningen kräver den följande av enheter:
   - Aktivera platstjänster på operativsystemsnivå.
-  - Tillåt att företagsportalen använder platstjänster.
-  - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel. Utvärderingen utlöses genom att företagsportalappen öppnas, eller att enheten fysiskt flyttas minst 500 meter. Om enheten inte flyttas 500 meter inom 72 timmar, måste användaren öppna företagsportalappen för utökad utvärdering av upplåsningen.
+  - Tillåt alltid att företagsportalen använder platstjänster.
+
+  Utvärderingen utlöses genom att företagsportalappen öppnas, eller att enheten fysiskt flyttas ett betydande avstånd – cirka 500 meter eller mer. På iOS 13 och senare kräver den här funktionen att användare väljer ”Tillåt alltid” när enheten ber dem att fortsätta tillåta att företagsportalen använder deras plats i bakgrunden. Om användare inte alltid tillåter åtkomst till platser och har en princip med den här inställningen konfigurerad markeras enheten som inkompatibel. Observera att Intune inte kan garantera att varje betydande platsändring säkerställer en kontroll med upplåsningsdetektering, eftersom detta är beroende av en enhets nätverksanslutning vid den aktuella tidpunkten.
 
 - **Giltighetsperiod för efterlevnadsstatus (dagar)** : Ange inom vilken tidsperiod enheterna ska rapportera status för alla mottagna efterlevnadsprinciper. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar. Minimivärdet är 1 dag.
 

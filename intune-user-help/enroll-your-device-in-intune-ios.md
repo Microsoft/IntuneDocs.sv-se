@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: bd9fd38fdc244bc48333496c2f266ff039e55585
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
-ms.translationtype: MTE75
+ms.openlocfilehash: 92d1ca850d8bb542f0b7fe027ab7af8c12089ef8
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855571"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181763"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Konfigurera iOS-enhetsåtkomst till företagsresurser  
 
@@ -70,25 +70,25 @@ En paus på mer än några minuter under registreringen göra att appen stängs 
 
     ![Exempel på skärmbild av Företagsportal, skärmen ”Konfigurera åtkomst”.](./media/ios-enrollment-checklist-1909.PNG)  
 
-4. Skärmen **Välj enhet och registrerings typ** visas och du uppmanas att ange din enhets typ.  
-    * Tryck **(organisation) äger den här enheten** om du har fått enheten från din organisation. Hoppa sedan över för att [skydda hela enheten](###secure-entire-device) i den här artikeln för att slutföra installationen.  
-    * Knacka på **den här enheten** om du använder en personlig enhet som du har fått från start sidan. Fortsätt sedan till nästa steg.  
+4. Skärmen **Välj enhet och typ av registrering** visas och du får ange din enhetstyp.  
+    * Tryck på **(organisation) äger den här enheten** om du har fått enheten från din organisation. Gå sedan vidare till [Skydda hela enheten](#secure-entire-device) i den här artikeln och slutför konfigurationen.  
+    * Tryck på **Jag äger enheten** om du använder en personlig enhet som du har tagit med hemifrån. Fortsätt sedan till nästa steg.  
 
-    Om du inte ser den här skärmen kan du gå vidare till [säker hel enhet](enroll-your-device-in-intune-ios.md#secure-entire-device) för att slutföra installationen.  
+    Om du inte ser den här skärmen kan du gå vidare till [Skydda hela enheten](#secure-entire-device) och slutföra konfigurationen.  
     
-    ![Exempel skärm bild av Företagsportal, "Välj enhets-och registrerings typ", alternativ för enhets typ.](./media/ios-device-type-1909.PNG)  
+    ![Exempelbild på skärmen ”Välj enhet och typ av registrering” i företagsportalen med olika enhetstypsalternativ.](./media/ios-device-type-1909.PNG)  
 
 
-5. Välj hur du vill skydda data på enheten när den har registrerats.  
-    * Tryck på **säker hel enhet** för att skydda alla appar och data på enheten. Gå sedan till [skydda hela enheten](enroll-your-device-in-intune-ios.md#secure-entire-device) för att slutföra installationen.
-    * Tryck på **säker arbetsrelaterade appar och data endast** för att endast säkra de appar och data som du kommer åt med ditt arbets konto. Gå sedan till [säkra arbetsrelaterade appar och data](enroll-your-device-in-intune-ios.md#secure-work-related-apps-and-data).  
+5. Välj hur du vill skydda data på enheten när den är registrerad.  
+    * Tryck på **Skydda hela enheten** om du vill skydda alla appar och data på enheten. Gå sedan till [Skydda hela enheten](enroll-your-device-in-intune-ios.md#secure-entire-device) för att slutföra konfigurationen.
+    * Tryck på **Skydda endast arbetsrelaterade appar och data** om du bara vill skydda de appar och data som används via arbetskontot. Gå sedan till [Skydda arbetsrelaterade appar och data](enroll-your-device-in-intune-ios.md#secure-work-related-apps-and-data).  
 
-    ![Exempel skärm bild av Företagsportal, "Välj enhets-och registrerings typ", alternativ för registrerings typ.](./media/ios-enrollment-type-1909.PNG)  
+    ![Exempelbild på skärmen ”Välj enhet och typ av registrering” i företagsportalen med olika registreringsalternativ.](./media/ios-enrollment-type-1909.PNG)  
 
 
-### <a name="secure-entire-device"></a>Säker hel enhet  
+### <a name="secure-entire-device"></a>Skydda hela enheten  
 
-1. På skärmen **enhets hantering och sekretess** läser du igenom listan över enhets information som din organisation kan och inte kan se. Tryck sedan på **Fortsätt**.  
+1. Gå igenom listan med enhetsinformation som din organisation kan och inte kan se på skärmen **Enhetshantering och sekretess**. Tryck sedan på **Fortsätt**.  
 
 
  > [!IMPORTANT]
@@ -96,20 +96,20 @@ En paus på mer än några minuter under registreringen göra att appen stängs 
 
 2. Safari öppnar webbplatsen för Företagsportal på enheten. När du uppmanas att ladda ned konfigurationsprofilen trycker du på **Tillåt**. Om du använder en enhet som kör:  
     * iOS 12.2 och senare: När nedladdningen har slutförts trycker du på **Stäng**. Fortsätt därefter till steg 3.  
-    * iOS 12,1 och tidigare: När hämtningen är klar omdirigeras du automatiskt till appen Inställningar. Gå vidare till steg 4.  
+    * iOS 12.1 och tidigare: När nedladdningen är färdig omdirigeras du automatiskt till appen Inställningar. Gå vidare till steg 4.  
  
-    Om du trycker på **Ignorera** av misstag, uppdaterar du sidan. Du uppmanas att öppna appen Företagsportal. När du är klar trycker du på **Hämta igen**.
+    Om du trycker på **Ignorera** av misstag, uppdaterar du sidan. Du uppmanas att öppna appen Företagsportal. Väl där trycker du på **Ladda ned igen**.
 
   > [!NOTE]
   > Du måste installera hanteringsprofilen enligt beskrivningen i nästa steg inom 8 minuter efter nedladdningen. Annars tas profilen bort och du måste börja om registreringen.  
 
-3. När du uppmanas att öppna Företagsportal trycker du på **Öppna**. Läs igenom informationen på skärmen **Installera hanterings profil** .  
+3. När du uppmanas att öppna företagsportalen trycker du på **Öppna**. Läs igenom informationen på skärmen **Så här installerar du hanteringsprofilen**.  
 
-4. Gå till appen Inställningar och tryck på **Registrera i < organisations namn >** eller **profil som hämtats**.  
+4. Öppna appen Inställningar och tryck på **Registrera i <organisationsnamn>** eller **Profilen har laddats ned**.  
 
-    ![Exempel skärm bild av appen Inställningar, registrera dig i alternativet organisation.](./media/enroll-in-organization-ios-1909.PNG)  
+    ![Exempelbild av appen Inställningar, alternativet Registrera i organisation.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Om inga alternativ visas går du till **allmänna** > **profiler & enhets hantering**> **hanterings profil**. Om du fortfarande inte ser någon hanteringsprofil kan du behöva ladda ned den igen.  
+   Om du inte ser några alternativ går du till **Allmänt** > **Profiler och enhetshantering**> **Hanteringsprofil**. Om du fortfarande inte ser någon hanteringsprofil kan du behöva ladda ned den igen.  
 
 5. Tryck på **Installera**.  
     
@@ -128,17 +128,17 @@ En paus på mer än några minuter under registreringen göra att appen stängs 
 > [!Note]
 > Om din organisation övervakar röst- och databegränsningar, eller ger dig en företagsägd enhet, kan du behöva utföra några ytterligare steg. Om du uppmanas att installera appen **Datalert** läser du avsnittet om hur du [registrerar din enhet i kostnadshanteringen för telekommunikation](enroll-your-device-with-telecom-expense-management-ios.md). Om din organisation är en del av Apples program för enhetsregistrering (DEP) tar du reda på [hur du registrerar din företagsägda enhet](enroll-your-device-dep-ios.md).  
 
-### <a name="secure-work-related-apps-and-data"></a>Säkra arbetsrelaterade appar och data  
-1. Skärmen **Ladda ned Microsoft Authenticator** visas (om du redan har autentiseraren ser du inte den här skärmen så gå vidare till steg 2).  
-    1. Tryck på **Hämta från App Store**.
+### <a name="secure-work-related-apps-and-data"></a>Skydda arbetsrelaterade appar och data  
+1. Skärmen **Ladda ned Microsoft Authenticator** visas (om du redan har Authenticator ser du inte den här skärmen, så gå vidare till steg 2).  
+    1. Tryck på **Ladda ned från App Store**.
     2. När App Store öppnas installerar du appen. 
-    3. Gå tillbaka till Företagsportal och tryck på **Fortsätt**.    
+    3. Gå tillbaka till företagsportalen och tryck på **Fortsätt**.    
     
-   När du har installerat Microsoft Authenticator behöver du inte göra något annat med appen. Det behöver bara finnas på enheten. 
+   När du har installerat Microsoft Authenticator behöver du inte göra något mer i appen. Den behöver bara finnas på enheten. 
 
-   ![Exempel skärm bild av Företagsportal, "Ladda ned Microsoft Authenticator"-skärmen.](./media/download-ms-authenticator-1909.PNG)  
+   ![Exempelbild av företagsportalen, skärmen ”Ladda ned Microsoft Authenticator”.](./media/download-ms-authenticator-1909.PNG)  
 
-2. På skärmen **enhets hantering och sekretess** läser du igenom listan över enhets information som din organisation kan och inte kan se. Tryck sedan på **Fortsätt**.  
+2. Gå igenom listan med enhetsinformation som din organisation kan och inte kan se på skärmen **Enhetshantering och sekretess**. Tryck sedan på **Fortsätt**.  
 
 
  > [!IMPORTANT]
@@ -146,37 +146,37 @@ En paus på mer än några minuter under registreringen göra att appen stängs 
 
 3. Safari öppnar webbplatsen för Företagsportal på enheten. När du uppmanas att ladda ned konfigurationsprofilen trycker du på **Tillåt**. Om du använder en enhet som kör:  
     * iOS 12.2 och senare: När nedladdningen har slutförts trycker du på **Stäng**. Fortsätt därefter till steg 4.  
-    * iOS 12,1 och tidigare: När hämtningen är klar omdirigeras du automatiskt till appen Inställningar. Gå vidare till steg 5.  
+    * iOS 12.1 och tidigare: När nedladdningen är färdig omdirigeras du automatiskt till appen Inställningar. Gå vidare till steg 5.  
  
     Om du trycker på **Ignorera** av misstag, uppdaterar du sidan. Du uppmanas att öppna appen Företagsportal. Från appen kan du trycka på **Ladda ned igen**.
 
   > [!NOTE]
   > Du måste installera hanteringsprofilen enligt beskrivningen i nästa steg inom 8 minuter efter nedladdningen. Annars tas profilen bort och du måste börja om registreringen.  
 
-4. När du uppmanas att öppna Företagsportal trycker du på **Öppna**. Läs igenom informationen på skärmen **Installera hanterings profil** . 
+4. När du uppmanas att öppna företagsportalen trycker du på **Öppna**. Läs igenom informationen på skärmen **Så här installerar du hanteringsprofilen**. 
 
-5. Gå till appen Inställningar och tryck på **Registrera i < organisations namn >** eller **profil som hämtats**.  
+5. Öppna appen Inställningar och tryck på **Registrera i <organisationsnamn>** eller **Profilen har laddats ned**.  
 
-    ![Exempel skärm bild av appen Inställningar, registrera dig i alternativet organisation.](./media/enroll-in-organization-ios-1909.PNG)  
+    ![Exempelbild av appen Inställningar, alternativet Registrera i organisation.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Om inga alternativ visas går du till **allmänna** > **profiler & enhets hantering**> **hanterings profil**. Om du fortfarande inte ser någon hanteringsprofil kan du behöva ladda ned den igen.   
+   Om du inte ser några alternativ går du till **Allmänt** > **Profiler och enhetshantering**> **Hanteringsprofil**. Om du fortfarande inte ser någon hanteringsprofil kan du behöva ladda ned den igen.   
 
 
-6. På skärmen **användar registrering** trycker du på **registrera min iPhone**.  
+6. På skärmen **Användarregistrering** trycker du på **Registrera min iPhone**.  
 
-    ![Exempel skärm bild av appen Inställningar, skärm för användar registrering, som markerar knappen Registrera.](./media/user-enrollment-information-1909.PNG)  
+    ![Exempelbild av appen Inställningar, skärmen Användarregistrering, knappen Registrera framhävd.](./media/user-enrollment-information-1909.PNG)  
 
-7. Ange enhetens lösen ord. Tryck sedan på **Installera**.  
+7. Ange enhetslösenordet. Tryck sedan på **Installera**.  
 
-8. På **inloggnings** skärmen anger du lösen ordet för ditt hanterade Apple-ID. I de flesta fall är de här autentiseringsuppgifterna samma som du använder för att logga in på ditt arbets-eller skol konto, om inte din organisation har fått en annan uppsättning autentiseringsuppgifter. 
-9. Tryck på **Logga**in.  
-10. Ett meddelande visas på skärmen efter att profilen har installerats. Kontrol lera att profilen har installerats genom att gå till **profilerna & enhets hantering** inställningar. Du bör se profilen under  **Hantering av mobilenheter.**  
+8. På skärmen **Logga in** anger du lösenordet för ditt hanterade Apple-ID. I de flesta fall är de här autentiseringsuppgifterna samma som de du använder till att logga in på ditt arbets- eller skolkonto, om inte organisationen har försett dig med andra autentiseringsuppgifter. 
+9. Tryck på **Logga in**.  
+10. Du ser ett meddelande på skärmen när profilen har installerats. Kontrollera att profilen har installerats genom att gå till inställningarna för  **Profiler och enhetshantering** . Du bör se profilen under  **Hantering av mobilenheter.**  
 
     ![Exempel på skärmbild av appen Inställningar, inställningar för Profiler och enhetshantering, som visar hanteringsprofilen.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Gå tillbaka till appen Företagsportal. Företagsportalen börjar synkronisera och konfigurera din enhet. Du kan uppmanas att uppdatera ytterligare enhetsinställningar. I så fall trycker du på **Fortsätt**.    
 
-12. Du vet att installationen är klar när alla objekt i listan visas med en grön bockmarkering. Tryck på **färdig**.  
+12. Du vet att installationen är klar när alla objekt i listan visas med en grön bockmarkering. Tryck på  **Klar**.  
 
 ## <a name="it-administrator-support"></a>IT-administratörssupport  
 Om du är IT-administratör och stöter på problem när du registrerar enheter kan du läsa [Felsöka problem med registrering av iOS-enhet i Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). Den här artikeln innehåller vanliga fel, deras orsaker och stegen för att lösa dem.  

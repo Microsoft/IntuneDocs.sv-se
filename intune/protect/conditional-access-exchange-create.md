@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4962b4c75460b129f9df7729b5a34485d8ee0760
-ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.openlocfilehash: 6650c091917ea265783044efd78b19a7e032e6a7
+ms.sourcegitcommit: 5511b4f2b8a3383176a7afe2a22ad5a8d42caf7b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77576065"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169305"
 ---
-# <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
+# <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurera lokal Exchange-åtkomst för Intune
 
 I den här artikeln beskrivs hur du konfigurerar villkorlig åtkomst för Exchange lokalt baserat på enhetsefterlevnad.
 
@@ -62,10 +62,29 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera att följande
 
 ### <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 
-- Windows Phone 8.1 och senare
-- Den interna e-postappen för iOS/iPadOS.
-- EAS-e-postklienter som Gmail på Android 4 eller senare.
-- EAS-e-postklienter på **Android-arbetsprofilenheter:** Endast **Gmail** och **Nine Work for Android Enterprise** i **arbetsprofilen** stöds på Android-arbetsprofilenheter. För villkorlig åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för Gmail eller Nine Work for Android Enterprise-appen och distribuera de apparna som en nödvändig installation.
+- **Windows Phone 8.1 och senare** – om du vill skapa princip för villkorsstyrd åtkomst läser du [Skapa principer för villkorlig åtkomst](../protect/create-conditional-access-intune.md)
+- **Intern e-postapp för iOS/iPadOS** – om du vill skapa princip för villkorsstyrd åtkomst läser du [Skapa principer för villkorlig åtkomst](../protect/create-conditional-access-intune.md)
+- **EAS-e-postklienter såsom Gmail på Android 4 eller senare** – om du vill skapa princip för villkorsstyrd åtkomst läser du [Skapa principer för villkorlig åtkomst](../protect/create-conditional-access-intune.md)
+
+- **EAS-e-postklienter och Android-arbetsprofilenheter** – endast *Gmail* och *Nine Work for Android Enterprise* stöds på Android-arbetsprofilenheter. För villkorsstyrd åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för *Gmail* eller *Nine Work for Android Enterprise*-appen och distribuera de apparna som en nödvändig installation. När du har distribuerat appen kan du konfigurera enhetsbaserad villkorsstyrd åtkomst.
+
+#### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Konfigurera villkorsstyrd åtkomst för Android-arbetsprofilenheter
+
+  1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+  
+  2. Distribuera Gmail- eller Nine Work-appen som **Obligatorisk**.
+
+  3. Välj **Enheter** > **Konfigurationsprofiler** > **Skapa profil** och ange **Namn** och **Beskrivning** för profilen.
+
+  4. Välj **Android Enterprise** i **Plattform** och välj **E-post** i **Profiltyp**.
+
+  5. Konfigurera [inställningarna för e-postprofil](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+
+  6. När du är klar väljer du **OK** > **Skapa** för att spara dina ändringar.
+
+  7. När du har skapat e-postprofilen [tilldelar du den till grupper](https://docs.microsoft.com/intune/device-profile-assign).
+
+  8. Konfigurera [enhetsbaserad villkorsstyrd åtkomst](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
 > Microsoft Outlook för Android och iOS/iPadOS stöds inte via den lokala Exchange-anslutningsappen. Om du vill dra nytta av principerna för villkorsstyrd åtkomst för Azure Active Directory och Intune-appskydd med Outlook för iOS/iPadOS och Android för dina lokala postlådor bör du läsa [Använda modern hybridautentisering med Outlook för iOS/iPadOS och Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).

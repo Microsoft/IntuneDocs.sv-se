@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ee300b7357132e6f9e18ef4528110dfc988dc3
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 11e757d22274a0e1cc327d9037a74e4ffac024dd
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653673"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576338"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -198,15 +198,15 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget. |
-|**-aa**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, dvs. `login.windows.net/common` |
-|**-ac**|(Valfritt) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` detta är det GUID i fältet klient-ID från appens lista i bladet app-registrering. |
-|**-ar**|(Valfritt) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` det här är omdirigerings-URI: n som kon figurer ATS i appens registrering. Detta är vanligt vis URL-protokollet för programmet som Microsoft Authenticator-appen kommer tillbaka till efter att ha tillämpat autentisering. |
+|**-aa**|(Valfritt) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` dvs. `login.windows.net/common` |
+|**-ac**|(Valfritt) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Det här är GUID i fältet Klient-ID från appens post på bladet Appregistrering. |
+|**-ar**|(Valfritt) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Det här är den omdirigerings-URI som har konfigurerats i din appregistrering. Detta är vanligtvis URL-protokollet för det program som Microsoft Authenticator-appen kommer tillbaka till efter asynkron autentisering. |
 |**-v**| (Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel. |
 |**-e**| (Valfri) Använd den här flaggan om du vill att programhanteringsverktyget ska ta bort rättigheter som saknas när appen bearbetas. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements).|
 |**-xe**| (Valfri) Skriver ut information om iOS-tilläggen i appen och vilka rättigheter som krävs för att använda dem. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements). |
 |**-x**| (Valfritt) `<An array of paths to extension provisioning profiles>`. Använd det här alternativet om appen behöver tilläggsetableringsprofiler.|
 |**-b**|(Valfritt) Använd -b utan argument om du vill att den omslutna utdataappen ska ha samma paketversion som indataappen (rekommenderas inte). <br/><br/> Använd `-b <custom bundle version>` om du vill att den omslutna appen ska ha en anpassad CFBundleVersion. Om du väljer att ange en anpassad CFBundleVersion rekommenderar vi att du ökar den inbyggda appens CFBundleVersion med den minst viktiga komponenten, t.ex. 1.0.0 -> 1.0.1. |
-|**-citrix**|Valfritt Ta med Citrix XenMobile app SDK (endast nätverks-variant). Du måste ha [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) installerat för att kunna använda det här alternativet. |
+|**-citrix**|(Valfritt) Inkludera app-SDK för Citrix XenMobile (endast nätverksvariant). Du måste ha [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) installerat för att kunna använda det här alternativet. |
 |**-f**|(Valfri) `<Path to a plist file specifying arguments.>` Använd den här flaggan framför [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-filen om du väljer att använda plist-mallen för att ange resten av IntuneMAMPackager-egenskaperna, t.ex. -i, -o och -p. Mer information finns i Använda en plist för att ange argument. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Använda en plist för att ange argument
@@ -223,12 +223,12 @@ I mappen IntuneMAMPackager/Contents/MacOS öppnar du `Parameters.plist` (en tom 
 | SHA-1-certifikatets hash |Sträng|tomt| Samma som -c|
 | ADAL-utfärdare |Sträng|tomt| Samma som -aa|
 | ADAL-klient-ID |Sträng|tomt| Samma som -ac|
-| ADAL svars-URI |Sträng|tomt| Samma som -ar|
+| ADAL-svars-URI |Sträng|tomt| Samma som -ar|
 | Utförlig aktiverad |Boolesk|falskt| Samma som -v|
 | Ta bort rättigheter som saknas |Boolesk|falskt| Samma som -c|
-| Förhindra uppdatering av standardversion |Bool|falskt| Likvärdigt med att använda -b utan argument|
+| Förhindra uppdatering av standardversion |Boolesk|falskt| Likvärdigt med att använda -b utan argument|
 | Åsidosättning av versionssträng |Sträng|tomt| Anpassad CFBundleVersion för den omslutna utdataappen|
-| Inkludera Citrix XenMobile app SDK (endast nätverks-variant)|Boolesk|falskt| Samma som-Citrix|
+| Inkludera app-SDK för Citrix XenMobile (endast nätverksvariant)|Boolesk|falskt| Samma som -citrix|
 | Sökvägar för tilläggsetableringsprofil |Strängmatris|tomt| En uppsättning med tilläggsetableringsprofiler för appen.
 
 Kör IntuneMAMPackager med plist som enda argument:
@@ -255,7 +255,7 @@ Huvudscenarierna när du måste omsluta dina program på nytt är följande:
 * Programmet har publicerat en ny version. Den tidigare versionen av appen har omslutits och överförts till Intune-konsolen.
 * Intunes programhanteringsverktyg för iOS har publicerat en ny version som möjliggör viktiga felkorrigeringar, eller nya, specifika principfunktioner för skydd av Intune-program. Detta sker efter 6–8 veckor via GitHub-lagringsplatsen för [Microsoft Intunes programhanteringsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-Även om det är möjligt för iOS att omsluta med en annan certifierings-/etableringsprofil än den som ursprungligen användes för att signera appen kommer omslutningen att misslyckas om de berättiganden som specificeras i appen inte inkluderas i den nya etableringsprofilen. Om du använder kommandoradsalternativet ”-e”, som tar bort eventuella berättiganden som saknas från appen för att tvinga omslutningen att inte misslyckas i detta scenario kan det leda till att appen inte fungerar som den ska.
+Även om det är möjligt för iOS/iPadOS att omsluta med en annan certifierings-/etableringsprofil än den som ursprungligen användes för att signera appen kommer omslutningen att misslyckas om de berättiganden som specificeras i appen inte inkluderas i den nya etableringsprofilen. Om du använder kommandoradsalternativet ”-e”, som tar bort eventuella berättiganden som saknas från appen för att tvinga omslutningen att inte misslyckas i detta scenario kan det leda till att appen inte fungerar som den ska.
 
 Här är några metodtips för omslutning på nytt:
 
@@ -289,7 +289,7 @@ Om det inte går att slutföra programhanteringsverktyget visas något av följa
 |Indataappen som du angav är redan omsluten och har den senaste versionen av principmallen.|Programhanteringsverktyget omsluter inte en befintlig omsluten app igen med den senaste versionen av principmallen.|
 |Varning! Du har inte angett någon SHA1-certifikatshash. Kontrollera att den omslutna appen har signerats innan du distribuerar den.|Kontrollera att du har angett ett giltigt SHA1-hashvärde efter kommandoradsflaggan -c. |
 
-### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Samlar in loggar för dina omslutna program från enheten
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Hämta loggar för dina omslutna program från enheten
 Använd följande steg för att hämta loggar för dina omslutna program under felsökningen.
 
 1. Gå till inställningar för iOS-appen på enheten och välj LOB-appen.
@@ -301,9 +301,9 @@ Använd följande steg för att hämta loggar för dina omslutna program under f
 > [!NOTE]
 > Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
 
-### <a name="collecting-crash-logs-from-the-system"></a>Samla in krasch loggar från systemet
+### <a name="collecting-crash-logs-from-the-system"></a>Samla in kraschloggar från systemet
 
-Din app kan logga värdefull information i iOS-konsolen för klient enheter. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget eller själva appen. Använd följande steg för att hämta den här informationen:
+Din app logga kanske värdefull information till iOS-konsolen för klientenheter. Den här informationen är användbar om du har problem med appen och behöver fastställa om problemet har att göra med programhanteringsverktyget eller själva appen. Använd följande steg för att hämta den här informationen:
 
 1. Återskapa problemet genom att köra appen.
 
@@ -419,7 +419,7 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Intunes programhanteringsverktyg för iOS med Citrix MDX mVPN
 
-Den här funktionen är en integrering med Citrix MDX-programhanteringsverktyget för iOS. Integrationen är helt enkelt en extra valfri flagga på kommandoraden, `-citrix`, för Intunes allmänna programhanteringsverktyg.
+Den här funktionen är en integrering med Citrix MDX-programhanteringsverktyget för iOS/iPadOS. Integrationen är helt enkelt en extra valfri flagga på kommandoraden, `-citrix`, för Intunes allmänna programhanteringsverktyg.
 
 ### <a name="requirements"></a>Krav
 

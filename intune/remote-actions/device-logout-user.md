@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e23f95d169a95244abc8669eb9a19150cff8138
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 279b35f2dd7cd515784e86687b7917914ea9cf8c
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413696"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781900"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Logga ut den aktuella användaren från Intune-hanterade iOS/iPadOS-enheter
 
@@ -41,9 +41,8 @@ ms.locfileid: "77413696"
 
 ## <a name="how-to-log-out-the-current-user"></a>Så här loggar du ut den aktuella användaren
 
-1. Logga in till [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter**.
-4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. Välj en iOS/iPadOS-enhet i listan med de enheter du hanterar och välj sedan fjärråtgärden **Logga ut aktuell användare**.
+1. Logga in på [administrationscentret för Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) och välj **Enheter** > **Alla enheter**.
+2. Välj en iOS-/iPad-enhet > **...**  > **Logga ut aktuell användare**.
 
 ## <a name="next-steps"></a>Nästa steg
 

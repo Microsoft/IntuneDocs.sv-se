@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
-ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
+ms.openlocfilehash: a1eca1f8911e9c6aae3b3725cf15f04d954c5f48
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473760"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260324"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Registrera iOS/iPadOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -41,6 +41,8 @@ DEP-registreringar är inte kompatibla med App Store-versionen av företagsporta
 Om du vill aktivera modern autentisering vid registreringen, skickar du appen till enheten med **Installera företagsportalen med VPP** (volyminköpsprogram) i DEP-profilen. Mer information finns i [Registrera iOS/-enheter automatiskt med Apples program för enhetsregistrering](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Om du vill att företagsportalen ska uppdateras automatiskt och erbjuda företagsportalappen på enheter som redan har registrerats med DEP, distribuerar du företagsportalappen via Intune som ett obligatoriskt volyminköpsprogram (VPP) med en [programkonfigurationsprincip](../apps/app-configuration-policies-use-ios.md).
+
+Obs! Vid automatisk enhetsregistrering, när Företagsportal körs i enstaka appläge, visas ett felmeddelande när du klickar på länken ”Läs mer” på grund av läget. När registreringen är färdig kan du visa mer information i Företagsportal när enheten inte längre är i enstaka appläge. 
 
 ## <a name="what-is-supervised-mode"></a>Vad är övervakat läge?
 
@@ -144,7 +146,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 5. Ange om enheter med den här profilen måste registreras med eller utan en tilldelad användare under **Användartillhörighet**.
     - **Registrera med användartillhörighet** – välj det här alternativet för enheter som tillhör användare och som vill använda Intune-företagsportalappen för tjänster som installation av appar. Om du använder ADFS och registreringsprofilen har **Autentisera med företagsportalen i stället för installationsassistenten** inställt på **Nej**, krävs [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints) [Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-    - **Registrera utan användartillhörighet** – välj det här alternativet för enheter som inte är kopplade till en enda användare. Använd det här alternativet för enheter som inte kommer åt lokala användardata. Appar som företagsportalappen fungerar inte.
+    - **Registrera utan användartillhörighet** – välj det här alternativet för enheter som inte är kopplade till en enda användare. Använd det här alternativet för enheter som inte kommer åt lokala användardata. Appar som Företagsportal fungerar inte.
 
 5. Om du väljer **Registrera med användartillhörighet**, kan du låta användare autentisera sig med företagsportalen istället för Apple Installationsassistenten.
 

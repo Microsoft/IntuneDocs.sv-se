@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4270587ab5894d52a7d12b1c2082b7b3298e51
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: df814abf9cdff3eb4d9fbac8183618461b590adb
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413745"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781921"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -39,11 +39,16 @@ Den här artikeln beskriver hur du visar alla dina enheter och deras egenskaper 
    - I **Översikt** visas namnet på enheten och några viktiga egenskaper, bland annat om det är en BYOD-enhet (Bring Your Own Device), när den checkades in och mycket mer. Du kan göra följande på enheten:
       - [Pensionera](devices-wipe.md#retire)
       - [Rensning](devices-wipe.md#wipe)
+      - [Ta bort](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Fjärrlåsning](device-remote-lock.md)
-      - [Synkronisera enhet](device-sync.md)
+      - [Synka](device-sync.md)
       - [Återställ lösenord](device-passcode-reset.md)
       - [Starta om](device-restart.md) (Endast Windows)
       - [Börja om på nytt](device-fresh-start.md) (Endast Windows)
+      - [Autopilot-återställning]() (endast Windows)
+      - [Snabbsökning](../configuration/device-restrictions-windows-10.md) (endast Windows 10)
+      - [Fullständig genomsökning](../configuration/device-restrictions-windows-10.md) (endast Windows 10)
+       - [Byta namn på en enhet](device-rename.md)
       - Starta en fjärrhjälpssession
    - Använd **Egenskaper** för att tilldela en [enhetskategori som du skapar](../enrollment/device-group-mapping.md), samt för att ändra ägarskap för enheten till en personlig enhet eller företagets enhet.
    - **Maskinvara** innehåller mycket information om enheten, till exempel enhets-ID, operativsystem och version, lagringsutrymme och mer information.

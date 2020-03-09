@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
-ms.translationtype: MTE75
+ms.openlocfilehash: e2075ed8328e6a33732e03fbf521d32b2edd6a35
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912683"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575836"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -103,7 +103,7 @@ Den här tabellen visar de inställningar som aktiveras om en app använder app-
 |Blockera skärmdump (endast Android)|X|X|
 |Stöd för MAM utan enhetsregistrering|X|X|
 |Fullständig rensning av appdata|X|X|
-|Selektiv rensning av arbets- och skoldata i scenarier med flera identiteter <br><br>**Obs:** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
+|Selektiv rensning av arbets- och skoldata i scenarier med flera identiteter <br><br>**Obs:** När hanteringsprofilen tas bort i iOS/iPadOS tas även appen bort.|X||
 |Förhindra ”Spara som”|X||
 |Riktad programkonfiguration (eller appkonfiguration via MAM-kanal)|X|X|
 |Stöd för flera identiteter|X||

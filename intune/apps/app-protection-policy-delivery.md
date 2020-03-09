@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0ed343f652c4afe87273eeaa4a2e35b7669056d
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: d26721ff27f380917fec7f4d23c0c5524737a4a3
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839232"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216157"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Förstå leverans och timing för appskyddsprincip
 
@@ -38,6 +38,7 @@ Leverans av programskyddsprincip beror på licenstillståndet och Intune-tjänst
 |    Klientorganisation har inte registrerats    |    Vänta på nästa återförsöksintervall.  Appskydd är inte aktivt för användaren.    |    24 timmar    |    Inträffar när du har inte konfigurerat din klientorganisation för Intune.    |
 |    Användaren är inte licensierad     |    Vänta på nästa återförsöksintervall.  Appskydd är inte aktivt för användaren.     |    12 timmar – på Android-enheter kräver det här intervallet dock Intune APP SDK version 5.6.0 eller senare. Annars är intervallet 24 timmar för Android-enheter.   |    Inträffar när du inte har licensierat användaren för Intune.    |
 |    Användaren har inte tilldelats appskyddsprinciper    |    Vänta på nästa återförsöksintervall.  Appskydd är inte aktivt för användaren.    |    12 timmar        |    Inträffar när du inte har tilldelat APP-inställningar till användaren.    |
+|    Användartilldelade appskyddsprinciper men appen har inte definierats i appskyddsprinciperna   |    Vänta på nästa återförsöksintervall.  Appskydd är inte aktivt för användaren.    |    12 timmar        |    Inträffar när du inte har lagt till appen till APP.    |
 |    Användaren har registrerats för Intune MAM    |    Appskydd tillämpas enligt principinställningar.    Uppdateringar sker baserat på återförsöksintervall    |    Intune-tjänsten definieras baserat på användarbelastning.    Normalt 30 minuter.     |    Inträffar när användaren har registrerats med Intune-tjänsten för MAM-konfiguration.    |
 
 > [!NOTE]

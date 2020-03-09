@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: ''
-ms.date: 12/06/2018
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecb043300578e5eba0613b6fa5f0fb249b1e515c
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: ae445597cfd1afc4650c7a900ee335c939adedce
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692149"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260188"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -57,38 +57,44 @@ För att registrera dig till Intune med KME måste du först registrera ditt fö
 
 ## <a name="create-mdm-profile"></a>Skapa MDM-profil
 
-När ditt företag har registrerats kan du skapa din MDM-profil för Microsoft Intune på Knox-portalen med hjälp av informationen nedan. Du kan skapa MDM-profiler både för Android och Android Enterprise på Knox-portalen. 
+När ditt företag har registrerats kan du skapa din MDM-profil för Microsoft Intune på Knox-portalen med hjälp av informationen nedan. Du kan skapa MDM-profiler både för Android och Android Enterprise på Knox-portalen.
+- Om du vill skapa en Android MDM-profil väljer du **Enhetsadministratör** som profiltyp i Knox-portalen. 
+- Om du vill skapa en Android Enterprise MDM-profil väljer du **Enhetsägare** som profiltyp i Knox-portalen.  
 
-### <a name="for-android-enterprise"></a>För Android Enterprise
+### <a name="for-android"></a>För Android
 
 | Fält för MDM-profil| Obligatoriskt? | Värden | 
 |-------------------|-----------|-------| 
-|URI för MDM-server     | Nej        |Lämna tomt. 
-|Profilnamn       | Ja       |Ange ett önskat profilnamn. 
-|Beskrivning        | Nej        |Ange text som beskriver profilen. 
-|APK för MDM-agenten      | Ja       |https://aka.ms/intune_kme_deviceowner 
-|Aktivera den här appen som en Google-enhetsägare | Ja | Välj det här alternativet för registrering i Android Enterprise. 
-|MDM-stöd      | Ja       |Microsoft Intune 
-|Lämna alla systemappar aktiverade | Nej | Välj det här alternativet för att se till att alla appar är aktiverade och tillgängliga för profilen. Om det här alternativet inte är markerat visas endast en begränsad uppsättning systemappar i enhetens appfält. Appar som exempelvis e-postappen förblir dolda. 
-|Anpassad JSON        | Nej        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Lär dig [hur du skapar en registreringsprofil](android-kiosk-enroll.md). 
-| Lägga till juridiska avtal | Nej | Lämna tomt. 
+|Profilnamn       | Ja       |Ange ett önskat profilnamn. |
+|Beskrivning        | Nej        |Ange text som beskriver profilen. |
+|MDM-information     | Ja        |Välj **Server-URI krävs inte för min MDM**.| 
+|APK för MDM-agenten      | Ja       |https://aka.ms/intune_kme_deviceowner| 
+|Anpassad JSON        | Ja*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Enter Intune enrollment token string"}. Lär dig hur du skapar en registreringstoken för [dedikerade enheter](android-kiosk-enroll.md) och [fullständigt hanterade enheter](android-fully-managed-enroll.md). |
+|Hoppa över installationsguiden  | Nej        |Välj det här alternativet för att hoppa över standardenhetens installationsuppmaning för slutanvändarens räkning.|
+|Tillåt slutanvändaren att avbryta registreringen | Nej | Välj det här alternativet om du vill tillåta användare att avbryta KME.|
+| Sekretesspolicy, licensavtal och användningsvillkor | Nej | Lämna tomt. |
+| Kontaktuppgifter till support | Ja | Välj Redigera för att uppdatera dina kontaktuppgifter |
+|Associera en Knox-licens med den här profilen | Nej | Låt alternativet vara omarkerat. Registrering på Intune med KME kräver inte en Knox-licens.|
 
-### <a name="for-android"></a>För Android
+\* Det här fältet är inte obligatoriskt när du ska skapa profiler i Knox-portalen. Intune kräver dock att du fyller i det här fältet så att profilen kan registrera enheten i Intune.
+
+### <a name="for-android-enterprise"></a>För Android Enterprise
 
 Detaljerade anvisningar finns i [Installationsguiden för Samsung Create-profil](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm).
 
 | Fält för MDM-profil| Obligatoriskt? | Värden |
 |-------------------|-----------|-------|
-|URI för MDM-server     | Nej        |Lämna tomt.
-|Profilnamn       | Ja       |Ange ett önskat profilnamn.
-|description        | Nej        |Ange text som beskriver profilen.
-|APK för MDM-agenten      | Ja       |https://aka.ms/intune_kme
-|Aktivera den här appen som en Google-enhetsägare | Nej | Lämna det här alternativet omarkerat för Android. Detta alternativ gäller endast för Android Enterprise.
-|Hoppa över installationsguiden  | Nej        |Välj det här alternativet för att hoppa över standardenhetens installationsuppmaning för slutanvändarens räkning.
-|Tillåt slutanvändaren att avbryta registreringen | Nej | Välj det här alternativet om du vill tillåta användare att avbryta KME.
-|Anpassad JSON        | Nej        |Lämna tomt.
-| Lägga till juridiska avtal | Nej | Lämna tomt.
-Associera en Knox-licens med den här profilen | Nej | Låt alternativet vara omarkerat. Registrering på Intune med KME kräver inte en Knox-licens.
+|Profilnamn       | Ja       |Ange ett önskat profilnamn.|
+|Beskrivning        | Nej        |Ange text som beskriver profilen.|
+|Välj MDM | Ja | Välj Microsoft Intune. |
+|APK för MDM-agenten      | Ja       |https://aka.ms/intune_kme|
+|URI för MDM-server     | Nej        |Lämna tomt.|
+|Anpassade JSON-data        | Nej        |Lämna tomt.|
+|Dubbel DAR | Nej | Lämna tomt.|
+|QR-kod för registrering | Nej | Du kan lägga till en QR-kod för att påskynda registreringen.|
+|Systemprogram | Ja | Välj alternativet **Lämna alla systemappar aktiverade** för att se till att alla appar är aktiverade och tillgängliga för profilen. Om det här alternativet inte är markerat visas endast en begränsad uppsättning systemappar i enhetens appfält. Appar som exempelvis e-postappen förblir dolda. |
+|Sekretesspolicy, licensavtal och användningsvillkor | Nej | Lämna tomt.|
+|Företagsnamn | Ja | Det här namnet visas under enhetsregistreringen. |
 
 ## <a name="add-devices"></a>Lägg till enheter
 

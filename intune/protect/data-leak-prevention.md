@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 7f7a6203fcf641c41192eec8aaa0835939376d54
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514446"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575930"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Förhindra dataläckage på ohanterade enheter med Microsoft Intune
 
@@ -31,7 +31,7 @@ Om du tillåter åtkomst till företagsdata som tillhandahålls genom Office 365
 
 Appskyddsprinciper som konfigureras med Intune fungerar även på enheter som hanteras med en hanteringslösning för enheter som inte kommer från Microsoft. Personliga data på enheterna berörs inte, endast företagsdata hanteras av IT-avdelningen. 
 
-Du kan ange appskyddsprinciper för Office-mobilappar på enheter som kör Windows, iOS eller Android för att skydda företagsdata. Med de här principerna kan du ange principer som appbaserad PIN-kod eller kryptering av företagsdata, eller mer avancerade inställningar som begränsar hur funktioner för att klippa ut, kopiera, klistra in och spara som används av användarna mellan hanterade och ej hanterade appar. Du kan även fjärrensa företagsdata utan att kräva att användarna registrerar enheter.
+Du kan ange appskyddsprinciper för Office-mobilappar på enheter som kör Windows, iOS/iPadOS eller Android för att skydda företagsdata. Med de här principerna kan du ange principer som appbaserad PIN-kod eller kryptering av företagsdata, eller mer avancerade inställningar som begränsar hur funktioner för att klippa ut, kopiera, klistra in och spara som används av användarna mellan hanterade och ej hanterade appar. Du kan även fjärrensa företagsdata utan att kräva att användarna registrerar enheter.
 
 Intunes appskyddsprinciper fungerar oberoende av enhetshantering. Appskyddsprinciper gör det möjligt att hantera Office-mobilappar på både ej hanterade enheter och Intune-hanterade enheter, samt enheter som hanteras av lösningar som inte kommer från Microsoft MDM.
 
@@ -42,7 +42,7 @@ Följande åtgärdsplan kan användas om du uppfyller följande krav:
 * Företaget är redo för en säker övergång till molnet.
 * Företaget använder Office 365 Exchange Online, SharePoint Online, OneDrive för företag eller Yammer.
 * Företaget har licenser för Microsoft 365, Enterprise Mobility + Security (EMS) eller Azure Information Protection.
-* Företaget tillåter att användarna får åtkomst till företagsdata från företagsägda eller personligt ägda Windows-, iOS- eller Android-enheter.
+* Företaget tillåter att användarna får åtkomst till företagsdata från företagsägda eller personligt ägda Windows-, iOS/iPadOS- eller Android-enheter.
 * Företaget vill inte kräva registrering av personligt ägda enheter i en enhetshanteringstjänst.
 
 ## <a name="action-plan"></a>Åtgärdsplan

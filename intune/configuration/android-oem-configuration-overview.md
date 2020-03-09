@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc568cbadb683f632ffd2365ab7023cd796f231
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc811bcac80f8321284ece8d3860efc7164a270
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886703"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256330"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Använda och hantera Android Enterprise-enheter med OEMConfig i Microsoft Intune
 
@@ -115,7 +115,7 @@ Kontrollera att enheten har stöd för OEMConfig, att rätt OEMConfig-app läggs
 
       - Om du skapar ett tomt (okonfigurerat) paket i Configuration Designer tas det bort när du växlar till JSON-redigeraren.
 
-    - **JSON-redigerare**: När du väljer det här alternativet öppnas en JSON-redigerare med en mall för det fullständiga konfigurationsschemat som är inbäddat i appen. Anpassa mallen med värden för de olika inställningarna i redigeraren. Om du använder **Configuration Designer** för att ändra dina värden skriver JSON-redigeraren över mallen med värden från Configuration Designer.
+    - **JSON-redigerare**: När du väljer det här alternativet öppnas en JSON-redigerare med en mall för det fullständiga konfigurationsschema som är inbäddat i appen. Anpassa mallen med värden för de olika inställningarna i redigeraren. Om du använder **Configuration Designer** för att ändra dina värden skriver JSON-redigeraren över mallen med värden från Configuration Designer.
 
       - Om du uppdaterar en befintlig profil visar JSON-redigeraren de inställningar som senast sparades med profilen.
 
@@ -161,7 +161,8 @@ Jämfört med standardappar expanderar OEMConfig-appar de hanterade konfiguratio
 | Spectralink – enhet | com.spectralink.slnkdevicesettings  |  |
 | Spectralink – loggning | com.spectralink.slnklogger |  |
 | Spectralink – VQO | com.spectralink.slnkvqo |  |
-| HMD Global | com.hmdglobal.app.oemconfig.ironman |  |
+| Seuic | com.seuic.seuicoemconfig | |
+| Unitech Electronics | com.unitech.oemconfig | |
 
 -----------------
 
@@ -169,6 +170,8 @@ Om det finns ett OEMConfig-program för din enhet, men det inte visas i tabellen
 
 > [!NOTE]
 > OEMConfig-appar måste aktiveras av Intune innan de kan konfigureras med OEMConfig-profiler. När en app stöds behöver du inte kontakta Microsoft om hur du konfigurerar den i din klientorganisation. Följ bara anvisningarna på den här sidan.
+>
+> Om en OEMConfig-app fungerar felaktigt kan du kontakta utvecklarna av OEMConfig-appen. Intune ansvarar inte för tekniska problem med de enskilda OEMConfig-apparna.
 
 ## <a name="next-steps"></a>Nästa steg
 

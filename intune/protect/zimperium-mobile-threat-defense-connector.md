@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d0fe5634e5af6ef4c6f19e067131f151733c0b5
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 32ace832e44f1cb6d334f69a0c1f03cb41515b2f
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515245"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782033"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-anslutning med Intune
 
 Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst, baserat på riskbedömning som utförs av Zimperium, en Mobile Threat Defense-lösning (MTD) som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Zimperium-appen.
 
-Du kan konfigurera principer för villkorlig åtkomst baserat på Zimperiums riskbedömning som aktiveras via Intunes principer för enhetsefterlevnad. Riskbedömningspolicyn kan tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot.
+Du kan konfigurera principer för villkorlig åtkomst baserat på Zimperium-riskbedömning. Den aktiveras via Intune-efterlevnadsprinciper för registrerade enheter, som du kan använda för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats. För oregistrerade enheter kan du använda appskyddsprinciper för att framtvinga en blockering eller selektiv rensning baserat på identifierade hot.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Hur skyddar Intune och Zimperium företagets resurser?
 
@@ -108,3 +108,5 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och fö
 - [Skapa en Zimperium-princip för enhetsefterlevnad](mtd-device-compliance-policy-create.md)
 
 - [Aktivera Zimperium MTD-anslutningsprogram](mtd-connector-enable.md)
+
+- [Skapa en MTD-appskyddsprincip](../protect/mtd-app-protection-policy.md)

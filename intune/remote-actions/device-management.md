@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b780f22fd6823499128a3975f1812a1d1f7c032b
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6f5d11cade1e22ca5d306dd1896e8136f9e7c1ed
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413777"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256415"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
@@ -39,7 +39,7 @@ Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och l�
    - **Översikt** visar en visuell ögonblicksbild av de registrerade enheterna och visar även hur många enheter som använder olika plattformar, inklusive Android, iOS/iPadOS och mycket mer.
    - **Alla enheter** visar en lista över de registrerade enheter du hanterar.
 
-     Använd funktionen **Exportera** för att skapa en .csv-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Microsoft Edge, Chrome).
+     Använd funktionen **Exportera** för att skapa en .zip-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Microsoft Edge, Chrome).
 
      Välj valfri enhet för att [visa ytterligare information om enheten](device-inventory.md), inklusive information om maskinvara, installerade appar, status för policy för efterlevnad och mycket mer.
 
@@ -61,7 +61,7 @@ Vilka åtgärder som är tillgängliga beror på enhetsplattformen och enhetens 
   - [Rensning](devices-wipe.md#wipe)
   - [Fjärrlåsning](device-remote-lock.md)
   - [Återställ lösenord](device-passcode-reset.md)
-  - [Inaktivera aktiveringslås](device-activation-lock-bypass.md) (Endast iOS)
+  - [Inaktivera aktiveringslås](device-activation-lock-disable.md) (Endast iOS)
   - [Börja om på nytt](device-fresh-start.md) (Endast Windows)
   - [Borttappat läge](device-lost-mode.md) (Endast iOS)
   - [Hitta enhet](device-locate.md) (Endast iOS)

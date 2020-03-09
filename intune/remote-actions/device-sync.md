@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21167b226556100e7e9920f31f859d6d6ce2a7bb
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: ee3020c2a1dfadb21b55ca29a2295498bf893080
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415532"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781973"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synkronisera enheter för att få de senaste principerna och åtgärderna med Intune
 
@@ -43,7 +43,7 @@ Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart check
 4. I listan med enheter som du hanterar väljer du en enhet för att öppna dess *Översikt*. Välj sedan **Synkronisera**.
 5. Välj **Ja** för att bekräfta.
 
-Välj **Enheter** > **Enhetsåtgärder** om du vill se statusen för synkroniseringsåtgärden.
+Välj **Enheter** > **Övervaka** > **Enhetsåtgärder** om du vill se statusen för synkroniseringsåtgärden.
 
 Du kan hitta incheckningsfrekvensen för Intunes standardprincip i [Uppdatera cykeltider](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 

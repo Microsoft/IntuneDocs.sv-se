@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d473d29536b4ffdcc221c8cf61c63725bae0fa2
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 699665f93d04801223f2fc6e6536d9b675e75242
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653911"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181950"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Android-testguide för Microsoft Intune App SDK
 
 Den här guiden hjälper utvecklare att testa sina Intune-hanterade Android-appar.  
 
 ## <a name="prerequisite-test-accounts"></a>Nödvändiga testkonton
-Du kan skapa nya konton med eller utan data som skapats i förväg. Så här skapar du ett nytt konto:
+Du kan skapa nya konton med eller utan förgenererade data. Så här skapar du ett nytt konto:
 1. Gå till webbplatsen för [Microsoft-demonstrationer ](https://demos.microsoft.com/environments/create/tenant). 
 2. [Konfigurera Intune](../fundamentals/setup-steps.md) för att aktivera hantering av mobilenheter (MDM).
 3. [Skapa användare](../fundamentals/users-add.md).
@@ -38,7 +38,7 @@ Du kan skapa nya konton med eller utan data som skapats i förväg. Så här ska
 
 
 ## <a name="azure-portal-policy-configuration"></a>Konfiguration av Azure-portalprinciper
-[Skapa och tilldela appskyddsprinciper](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview) på [Azure-portalens Intune-blad](../apps/app-protection-policies.md). Du kan också skapa och tilldela din [konfigurations princip för appar](../apps/app-configuration-policies-overview.md) på Intune-bladet.
+[Skapa och tilldela appskyddsprinciper](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview) på [Azure-portalens Intune-blad](../apps/app-protection-policies.md). Du kan även skapa och tilldela din [appkonfigurationsprincip](../apps/app-configuration-policies-overview.md) på Intune-bladet.
 
 > [!NOTE]
 > Om din app inte visas på Azure-portalen kan du ange den som mål med en princip genom att välja alternativet **fler appar** och ange paketnamnet i textrutan.
@@ -54,11 +54,11 @@ Du kan kräva en PIN-kod för åtkomst till företagsresurser. Du kan även till
 1. Konfigurera **Kräv PIN-kod för åtkomst** och **Kräv företagsautentiseringsuppgifter för åtkomst** till **Ja**. Mer information finns i [Inställningar för Android-appskyddsprinciper i Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Bekräfta följande villkor:
     - När appen startar uppmanas du att ange en PIN-kod eller autentiseringsuppgifterna för produktionsanvändaren som användes vid registreringen med företagsportalen.
-    - Om det inte finns någon giltig inloggnings varning kan det bero på ett felaktigt konfigurerat Android-manifest, särskilt värdena för ADAL-integration (Azure Active Directory Authentication Library) (SkipBroker, ClientID och Authority).
+    - Om det inte visas någon giltig inloggningsuppmaning kan det bero på ett felaktigt konfigurerat Android-manifest. Det gäller särskilt värdena för ADAL-integrering (SkipBroker, ClientID och Authority).
     - Om ingen uppmaning visas kan det bero på ett felaktigt integrerat `MAMActivity`-värde. Mer information om `MAMActivity` finns i [utvecklarhandboken för Microsoft Intune App SDK för Android](app-sdk-android.md).
 
 > [!NOTE] 
-> Om det föregående testet inte fungerar kommer följande test troligen också att Miss beta. Granska [SDK](app-sdk-android.md##sdk-integration)- och [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal)-integrering.
+> Om det föregående testet inte fungerar kommer följande test troligen också att misslyckas. Granska [SDK](app-sdk-android.md#sdk-integration)- och [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal)-integrering.
 
 ### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Begränsa överföring och mottagande av data med andra appar
 Du kan styra dataöverföringen mellan företagshanterade program på följande sätt:
@@ -89,7 +89,7 @@ Du kan kryptera data på enheten på följande sätt:
 
 1. Ange **Kryptera appdata** till **Ja**.
 2. Bekräfta följande villkor:
-    - Normalt program beteende påverkas inte.
+    - Normalt programbeteende påverkas inte.
 
 ### <a name="prevent-android-backups"></a>Förhindra Android-säkerhetskopieringar
 Du kan styra säkerhetskopieringen av appar på följande sätt:
@@ -108,9 +108,9 @@ Du kan fjärrensa e-post och dokument som tillhör företaget på hanterade appa
     - Det hanterade innehållet tas bort från appen. Mer information finns i [utvecklarhandboken för Intune App SDK för Android – selektiv rensning](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Stöd för flera identiteter
-Integrering av [stöd för flera identiteter](app-sdk-android.md#multi-identity-optional) är en ändring med hög risk som behöver testas ordentligt. De vanligaste problemen beror på felaktig inställning av identiteten (kontext vs. Threat Level) och spårning av filer (`MAMFileProtectionManager`).
+Integrering av [stöd för flera identiteter](app-sdk-android.md#multi-identity-optional) är en ändring med hög risk som behöver testas ordentligt. De vanligaste problemen beror på felaktig inställning av identiteten (kontext kontra hotnivå) och filspårning (`MAMFileProtectionManager`).
 
-Kontrol lera minimalt att:
+Kontrollera åtminstone att:
 
 - **Spara som**-principen fungerar korrekt för hanterade identiteter.
 - Begränsningar för Kopiera/Klistra tillämpas korrekt, från hanterat till personligt.
@@ -119,7 +119,7 @@ Kontrol lera minimalt att:
 - Villkorlig start krävs när användaren växlar från ett ohanterat till ett hanterat konto (endast första gången).
 
 ### <a name="app-configuration-optional"></a>Appkonfiguration (valfritt)
-Du kan konfigurera beteendet för hanterade appar. Om din app förbrukar några inställningar för appkonfiguration bör du testa att appen korrekt hanterar alla värden som du (i egenskap av administratör) kan ange. Du kan skapa och tilldela [konfigurations principer för appar](../apps/app-configuration-policies-overview.md) i Intune.
+Du kan konfigurera beteendet för hanterade appar. Om din app förbrukar några inställningar för appkonfiguration bör du testa att appen korrekt hanterar alla värden som du (i egenskap av administratör) kan ange. Du kan skapa och tilldela [appkonfigurationsprinciper](../apps/app-configuration-policies-overview.md) i Intune.
 
 ## <a name="next-steps"></a>Nästa steg
 

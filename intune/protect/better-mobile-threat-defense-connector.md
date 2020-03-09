@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,18 +15,18 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a52636a140778f6e78bfe081cda40b36ef2354f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbab3aae2e38e1ce7d3c8c526b706d70e0cf2b2a
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509649"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781214"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Better Mobile Threat Defense-anslutning i Intune
 
 Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst baserat på riskbedömning som utförs av Better Mobile, en MTD-lösning (Mobile Threat Defense) som är integrerad i Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Better Mobile-appen.
 
-Du kan konfigurera principer för villkorlig åtkomst baserat på Better Mobiles riskbedömning. Den aktiveras via Intunes efterlevnadsprinciper för enheter, som du kan använda för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats.
+Du kan konfigurera principer för villkorlig åtkomst baserat på Better Mobiles riskbedömning. Den aktiveras via Intune-efterlevnadsprinciper för registrerade enheter, som du kan använda för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats. För oregistrerade enheter kan du använda appskyddsprinciper för att framtvinga en blockering eller selektiv rensning baserat på identifierade hot.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Hur skyddar Intune och Better Mobile företagets resurser?
 
@@ -105,3 +105,5 @@ Identifiera hot mot ditt nätverk såsom **man-in-the-middle**-angrepp, och för
 - [Skapa en efterlevnadsprincip för enheter med Better Mobile](mtd-device-compliance-policy-create.md)
 
 - [Aktivera Better Mobile MTD-anslutningen](mtd-connector-enable.md)
+
+- [Skapa en MTD-appskyddsprincip](mtd-app-protection-policy.md) 

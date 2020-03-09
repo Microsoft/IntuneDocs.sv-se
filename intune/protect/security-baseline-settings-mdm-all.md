@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abf23bff0d8889b57ab05c55b7e1464d0a9d2436
-ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
-ms.translationtype: MTE75
+ms.openlocfilehash: a46532467f8de7caf8cc88fe60e7a5cbc10ba147
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075798"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256534"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Inställningar för Windows MDM-säkerhetsbaslinjer för Intune
 
@@ -97,7 +97,7 @@ Mer information finns i [CSP – ApplicationManagement](https://docs.microsoft.c
 
   - *Om du aktiverar den här principinställningen*utökas behörigheterna till alla program. Dessa behörigheter är vanligtvis reserverade för program som har tilldelats till användaren (erbjuds på skrivbordet), som har tilldelats datorn (har installerats automatiskt) eller som har gjorts tillgängliga i Lägg till eller ta bort program på Kontrollpanelen. Med den här profilinställningen kan användare installera program som kräver åtkomst till kataloger som användaren kanske inte har behörighet att visa eller ändra, inklusive kataloger i starkt begränsade datorer.
 
-  - *Om du inaktiverar eller inte konfigurerar den här principinställningen* tillämpas den aktuella användarens behörighet vid installation av program som en systemadministratör inte distribuerar eller erbjuder. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. För att den här inställningen ska gälla måste du aktivera den i båda mapparna. Varning! Erfarna användare kan dra nytta av de behörigheter som den här principinställningen ger för att ändra sin behörighet och få permanent åtkomst till begränsade filer och mappar. Det är inte garanterat att användarkonfigurationsversionen av den här principinställningen är säker.  
+  - *Om du inaktiverar eller inte konfigurerar den här principinställningen* tillämpas den aktuella användarens behörighet vid installation av program som en systemadministratör inte distribuerar eller erbjuder. Obs! Den här inställningen visas både i mappen Datorkonfiguration och mappen Användarkonfiguration. För att den här inställningen ska gälla måste du aktivera den i båda mapparna. Varning: Erfarna användare kan dra nytta av de behörigheter som den här policyinställningen ger för att ändra sin behörighet och få permanent åtkomst till begränsade filer och mappar. Det är inte garanterat att användarkonfigurationsversionen av den här principinställningen är säker.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Standard**: Ja
@@ -231,7 +231,7 @@ Mer information finns i avsnittet [CSP-princip – Connectivity](https://docs.mi
   Den här principinställningen konfigurerar säker åtkomst till UNC-sökvägar. Om du aktiverar principen tillåter Windows endast åtkomst till de UNC-sökvägar som angetts efter att ytterligare säkerhetskrav uppfyllts.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067243)
 
-  **Standard**: Konfigurera Windows till att endast tillåta åtkomst till de UNC-sökvägar som angetts efter att ytterligare säkerhetskrav uppfyllts.
+  **Standard**: Ställ in att Windows bara ska tillåta åtkomst till de angivna UNC-sökvägarna efter att ha uppfyllt ytterligare säkerhetskrav.
 
   När *Konfigurera Windows till att endast tillåta åtkomst till de UNC-sökvägar som angetts efter att ytterligare säkerhetskrav uppfyllts* har valts kan du konfigurera *listan över härdade UNC-sökvägar*.
 
@@ -364,7 +364,7 @@ Mer information finns i [CSP-princip – DeviceLock](https://docs.microsoft.com/
   När *Kräv lösenord* är inställt på *Ja*, är följande inställningar tillgängliga.
 
   - **Minsta antal tecken för lösenord**:  
-    Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. För PIN-kod krävs följande för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer. Standardvärdet är 1.  
+    Antalet komplexa elementtyper (versaler och gemener, siffror och skiljetecken) som krävs för en stark PIN-kod eller ett starkt lösenord. För PIN-kod krävs följande för stationära och mobila enheter: 1 – Endast siffror 2 – Siffror och gemener krävs 3 – Siffror, gemener och versaler krävs. Stöds inte med Microsoft-konton för stationära datorer eller domänkonton. 4 – Siffror, gemener, versaler och specialtecken krävs. Stöds inte med stationära datorer.  
     [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067055)
 
     **Standard**: 3
@@ -722,7 +722,7 @@ Mer information finns i [CSP-princip – InternetExplorer](https://docs.microsof
   Med den här principinställningen kan du inaktivera stöd för Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 eller SSL 3.0 i webbläsaren. TLS och SSL är protokoll som skyddar kommunikationen mellan webbläsaren och målservern. När webbläsaren försöker skapa en säker anslutning till målservern kommer webbläsaren och servern att förhandla om vilket protokoll och vilken version de ska använda. Webbläsaren och servern försöker matcha varandras listor över protokoll och versioner som stöds och väljer den bästa matchningen. Om du aktiverar den här principinställningen kommer webbläsaren att förhandla eller inte förhandla om en krypteringstunnel med hjälp av de krypteringsmetoder som du väljer i listrutan. Om du inaktiverar eller låter bli att konfigurera den här principinställningen kan användaren välja vilken krypteringsmetod som ska stödjas av webbläsaren.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Standard**: 2 objekt: TLS v1.1 och TLS v1.2  
+  **Standard**: 2 objekt:  TLS v1.1 och TLS v1.2  
   *Välj nedpilen för att visa de alternativ som du kan välja för den här inställningen.*
 
 ::: zone-end
@@ -1366,9 +1366,9 @@ Mer information finns i [CSP-princip – LocalPoliciesSecurityOptions](https://d
 
   - *Skicka endast NTLMv2-svar* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det; domänkontrollanter accepterar LM-, NTLM- och NTLMv2-autentisering.
 
-  - *Skicka endast NTLMv2-svar/neka LM* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter nekar LM (endast NTLM- och NTLMv2-autentisering accepteras).
+  - *Skicka endast NTLMv2-svar. Neka LM* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter nekar LM (endast NTLM- och NTLMv2-autentisering accepteras).
 
-  - *Skicka endast NTLMv2-svar/neka LM och NTLM* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter nekar LM och NTLM (endast NTLMv2-autentisering accepteras).
+  - *Skicka endast NTLMv2-svar. Neka LM och NTLM* – Klienter använder endast NTLMv2-autentisering och använder NTLMv2-sessionssäkerhet om servern stöder det. Domänkontrollanter nekar LM och NTLM (endast NTLMv2-autentisering accepteras).
 
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067189)
 
@@ -1779,7 +1779,7 @@ Mer information finns i [CSP-princip – RemoteAssistance](https://docs.microsof
 
   - *Om du inte konfigurerar den här principinställningen* kan användarna aktivera eller inaktivera Begärd fjärrhjälp själva i Systemegenskaper på Kontrollpanelen. Användarna kan också konfigurera inställningar för Fjärrhjälp.
 
-  Om du aktiverar den här principinställningen finns det två möjligheter att låta handledare erbjuda fjärrhjälp: Låt handledare endast se datorn och Låt handledare fjärrstyra datorn. Principinställningen Högsta biljettid anger hur länge en fjärrhjälpsinbjudan skapad via e-post eller filöverföring, är giltig. Inställningen Metod för att skicka inbjudningar via e-post anger vilken e-poststandard som ska användas när en fjärrhjälpsinbjudan skickas. Beroende på vilket e-postprogram som används kan du använda protokollet *Mailto* (mottagaren ansluter genom en vanlig Internetlänk) eller protokollet SMAPI (inbjudan bifogas i ett e-postmeddelande). Den här principinställningen är inte tillgänglig i Windows Vista eftersom SMAPI är den enda metod som stöds. Om du aktiverar den här principinställningen bör du även aktivera tillämpliga brandväggsundantag för att tillåta fjärrhjälpkommunikation.  
+  Om du aktiverar den här policyinställningen har du två sätt att tillåta Fjärrhjälp: ”Låt handledare endast se datorn” eller ”Låt handledare fjärrstyra datorn”. Principinställningen Högsta biljettid anger hur länge en fjärrhjälpsinbjudan skapad via e-post eller filöverföring, är giltig. Inställningen Metod för att skicka inbjudningar via e-post anger vilken e-poststandard som ska användas när en fjärrhjälpsinbjudan skickas. Beroende på vilket e-postprogram som används kan du använda protokollet *Mailto* (mottagaren ansluter genom en vanlig Internetlänk) eller protokollet SMAPI (inbjudan bifogas i ett e-postmeddelande). Den här principinställningen är inte tillgänglig i Windows Vista eftersom SMAPI är den enda metod som stöds. Om du aktiverar den här principinställningen bör du även aktivera tillämpliga brandväggsundantag för att tillåta fjärrhjälpkommunikation.  
   [Läs mer](https://go.microsoft.com/fwlink/?linkid=2067198)
 
   **Standard**: Inaktivera Fjärrhjälp

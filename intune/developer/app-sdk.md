@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcb3a9f817b0e765fee79342bcd212f33509209a
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653554"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576332"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Översikt över Microsoft Intune App SDK
 Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att stödja Intune-[appskyddsprinciper](../apps/app-protection-policy.md). När appskyddsprinciper tillämpas på din app kan den hanteras av Intune och identifieras av Intune som en hanterad app. SDK:n arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda SDK:ns API:er för att anpassa din apps beteende till att stödja funktioner som kräver medverkan av din app.
@@ -56,7 +56,7 @@ IT-administratörer kan kräva att slutanvändaren anger en PIN-kod innan de ans
 IT-administratörer kan kräva att användarna loggar in med sina arbets- eller skolkonto för att använda appen. Intune App SDK använder Azure Active Directory för att tillhandahålla enkel inloggning, där de autentiseringsuppgifter som anges återanvänds vid efterföljande inloggningar. Vi stöder även autentisering av identitetshanteringslösningar som är federerade med Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Kontrollera enhetens hälsotillstånd och efterlevnad
-IT-administratörer kan kontrollera enhetens hälsotillstånd och huruvida enheten följer Intunes principer innan slutanvändarna kan komma åt appar. På iOS kontrollerar den här principen om enheten har blivit jailbrokad. På Android kontrollerar den här principen om enheten har blivit rotad.
+IT-administratörer kan kontrollera enhetens hälsotillstånd och huruvida enheten följer Intunes principer innan slutanvändarna kan komma åt appar. I iOS/iOS/iPadOS kontrollerar den här principen om enheten har blivit jailbreakad. På Android kontrollerar den här principen om enheten har blivit rotad.
 
 ### <a name="support-multi-identity"></a>Stödja flera identiteter
 Stöd för flera identiteter är en SDK-funktion som gör att principhanterade konton (företag) och icke-hanterade konton (personliga) kan finnas i samma app.

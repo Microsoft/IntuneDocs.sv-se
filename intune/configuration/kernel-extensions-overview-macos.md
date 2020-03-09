@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 02/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1075054f3812e8c40f38e705a440c46ba09fdd0e
-ms.sourcegitcommit: 11cbd2a9d90dea20f6dc1f54f0a6acbeec3a71d6
-ms.translationtype: MTE75
+ms.openlocfilehash: f8a516ce9dda525d5c7a48fcbc2c799471489d0d
+ms.sourcegitcommit: ff254acb94df88afc3e3e7b878084052adf40745
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76146777"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600240"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Lägg till macOS kernel-tillägg i Intune
+
+> [!NOTE]
+> macOS kernel-tillägg håller på att ersättas med systemtillägg. Mer information finns i [Supporttips: Användning av systemtillägg i stället för kernel-tillägg för macOS Catalina 10.15 i Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
 På macOS-enheter kan du lägga till funktioner på kernelnivå. Dessa funktioner kommer åt delar av operativsystemet som vanliga program inte har åtkomst till. Din organisation kan ha särskilda behov eller krav som inte är tillgängliga i en app, en enhetsfunktion och så vidare. 
 

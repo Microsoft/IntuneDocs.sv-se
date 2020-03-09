@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85b6d49f435ec45a2c6a2b81387ea25a1c15299b
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 19ecbc632b924dda297b3692cabf5345b4724b30
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654081"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575781"
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -249,7 +249,7 @@ Entiteten **enheter** innehåller en lista över registrerade hanterade enheter 
 | rowLastModifiedDateTimeUTC | Datum och tid i UTC när den här enheten senast ändrades i informationslagret.                                                                                                       |
 | manufacturer               | Enhetstillverkaren                                                                                                                                                             |
 | modell                      | Enhetsmodell                                                                                                                                                                    |
-| operatingSystem            | Enhetens operativsystem. Windows, iOS, osv.                                                                                                                                   |
+| operatingSystem            | Enhetens operativsystem. Windows, iOS/iPadOS och så vidare.                                                                                                                                   |
 | isDeleted                  | Binärt tal för att visa om enheten har tagits bort eller inte.                                                                                                                                 |
 | androidSecurityPatchLevel  | Nivå för Android-säkerhetsuppdatering                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
@@ -262,7 +262,7 @@ Entiteten **enheter** innehåller en lista över registrerade hanterade enheter 
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | cellularTechnology         | Enhetens mobilteknik                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| ICCD                       | Integrerat krets korts identifierare                                                                                                                                                     |
+| ICCD                       | Integrated Circuit Card Identifier (identifierare för integrerat kretskort)                                                                                                                                                     |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
